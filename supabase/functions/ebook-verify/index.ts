@@ -289,6 +289,22 @@ serve(async (req) => {
 
       console.log(`[ebook-verify] Email verified for ${lead.email}`);
 
+      // L'adresse confirmée rejoint les abonnés e-mail (table abonnes,
+      // migration 20261020100000), en français, source « ebook » : la
+      // personne a dit oui à un e-mail de Quiz Couple. Une adresse déjà là
+      // n'est pas touchée ; une erreur ici ne gêne pas le téléchargement.
+      try {
+        const emailAbonne = String(lead.email || '').trim().toLowerCase();
+        if (/^[a-z0-9._%+'-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(emailAbonne) && emailAbonne.length <= 254) {
+          const { error: errAbonne } = await supabase
+            .from('abonnes')
+            .upsert({ email: emailAbonne, lang: 'fr', source: 'ebook', statut: 'actif', verifie: true }, { onConflict: 'email', ignoreDuplicates: true });
+          if (errAbonne) console.warn('[ebook-verify] abonnes :', errAbonne.message);
+        }
+      } catch (e) {
+        console.warn('[ebook-verify] abonnes :', String((e as Error)?.message || e));
+      }
+
       if (req.method === 'POST') {
         return new Response(
           JSON.stringify({ success: true, first_name: lead.first_name }),

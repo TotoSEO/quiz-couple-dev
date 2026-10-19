@@ -1,0 +1,93 @@
+{
+  "title": "Conditions générales de vente",
+  "majLe": "Dernière mise à jour : 18 octobre 2026",
+  "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} sur quiz-couple.com. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
+  "liens": {
+    "contact": "page contact",
+    "confidentialite": "politique de confidentialité",
+    "bilan": "évaluation de couple"
+  },
+  "vendeur": {
+    "titre": "Le vendeur",
+    "nom": "Nom :",
+    "statut": "Statut :",
+    "siret": "SIRET :",
+    "adresse": "Adresse :",
+    "email": "E-mail :",
+    "tva": "TVA :",
+    "tvaValeur": "TVA non applicable, article 293 B du Code général des impôts"
+  },
+  "sections": [
+    {
+      "titre": "1. Ce qui est vendu",
+      "p": [
+        "L'évaluation de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté, ou auquel une seule personne répond en indiquant aussi ce que son ou sa partenaire répondrait d'après elle (mode seul(e)). Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
+        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page de l'évaluation."
+      ]
+    },
+    {
+      "titre": "2. Le prix",
+      "p": [
+        "Le rapport complet coûte {{prix}}, TVA non applicable. C'est un paiement unique, sans abonnement. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux. En mode seul(e), le rapport n'est fourni qu'à la personne qui a répondu.",
+        "Le prix est affiché sur la page de l'évaluation avant la première question, et à nouveau avant le paiement."
+      ]
+    },
+    {
+      "titre": "3. La commande et le paiement",
+      "p": [
+        "Le paiement est proposé à chaque partenaire dès qu'il a fini ses propres réponses. Avant de payer, l'acheteur peut indiquer l'adresse e-mail où recevoir le rapport, et il coche une case par laquelle il demande à recevoir le rapport dès qu'il est prêt et reconnaît perdre son droit de rétractation une fois le rapport fourni (voir l'article 5).",
+        "Le paiement se fait sur la page sécurisée de notre prestataire Stripe, par carte bancaire, Apple Pay ou Google Pay. Nous n'avons jamais accès aux données de la carte. Stripe envoie un reçu à l'adresse e-mail donnée au moment du paiement : c'est la confirmation de la commande. Une facture peut être demandée depuis la {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. La fourniture du rapport",
+      "p": [
+        "Le rapport est fabriqué dès que le paiement est confirmé et que les deux partenaires ont fini de répondre (ou, en mode seul(e), que la personne a fini). Il part alors en PDF aux adresses e-mail données, et s'affiche sur la page de l'évaluation pour les deux partenaires, depuis leurs liens personnels, avec un bouton pour télécharger le PDF. Il reste disponible six mois après le paiement, puis l'évaluation est effacée.",
+        "Si le partenaire ne finit pas ses réponses, le rapport ne peut pas être fabriqué : l'acheteur peut alors en demander le remboursement à tout moment depuis la {{contact}}.",
+        "Chacun des deux partenaires peut supprimer l'évaluation avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne pas lieu à un remboursement en dehors de la garantie de l'article 6."
+      ]
+    },
+    {
+      "titre": "5. Le droit de rétractation",
+      "p": [
+        "Le rapport est un contenu numérique. Conformément à l'article L221-28 13° du Code de la consommation, le droit de rétractation de quatorze jours ne s'applique plus une fois le rapport fourni, l'acheteur ayant demandé à le recevoir dès qu'il est prêt et reconnu perdre ce droit avant de payer. Tant que le rapport n'a pas été fourni, l'acheteur peut se rétracter en nous écrivant depuis la {{contact}}, et il est remboursé en entier."
+      ]
+    },
+    {
+      "titre": "6. Satisfaits ou remboursés",
+      "p": [
+        "En plus de ce que prévoit la loi, nous remboursons le rapport pendant {{jours}} jours après le paiement, sans avoir à se justifier : il suffit de nous écrire depuis la {{contact}} en indiquant le prénom des deux partenaires et la date du paiement. Le remboursement se fait sur le moyen de paiement utilisé, dans les quatorze jours qui suivent la demande."
+      ]
+    },
+    {
+      "titre": "7. Ce que l'évaluation est, et ce qu'il n'est pas",
+      "p": [
+        "L'évaluation est un outil pour aider un couple à parler de sa vie à deux. Ce n'est ni un diagnostic, ni une thérapie, ni un avis de professionnel de santé. Les décisions prises à partir du rapport restent celles des partenaires. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
+        "Le service est fourni tel quel. Nous faisons notre possible pour qu'il soit disponible en continu, mais une interruption temporaire (maintenance, panne d'un prestataire) ne peut pas être exclue. Si le rapport payé reste inaccessible de notre fait, il est remboursé."
+      ]
+    },
+    {
+      "titre": "8. Les données personnelles",
+      "p": [
+        "Les réponses de l'évaluation, qui peuvent toucher la vie intime et les convictions, ne sont enregistrées qu'avec l'accord explicite de chaque partenaire et ne servent qu'à l'évaluation. L'adresse e-mail donnée pour recevoir le rapport ne sert qu'à cet envoi. La durée de conservation, vos droits et la liste des prestataires sont détaillés dans notre {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Réclamations et médiation",
+      "mediation": true,
+      "p": [
+        "Pour toute réclamation, écrivez-nous d'abord depuis la {{contact}} ou à l'adresse {{email}} : nous répondons sous quelques jours.",
+        "Si le désaccord persiste, vous pouvez recourir gratuitement au médiateur de la consommation dont nous relevons : {{mediateur}}, dans un délai d'un an après votre réclamation écrite."
+      ],
+      "pSans": [
+        "Pour toute réclamation, écrivez-nous d'abord depuis la {{contact}} ou à l'adresse {{email}} : nous répondons sous quelques jours."
+      ]
+    },
+    {
+      "titre": "10. Le droit applicable",
+      "p": [
+        "Ces conditions sont soumises au droit français. Si vous résidez dans un autre pays de l'Union européenne, vous gardez la protection des règles impératives de votre pays de résidence."
+      ]
+    }
+  ]
+}

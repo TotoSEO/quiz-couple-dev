@@ -1,0 +1,54 @@
+name: Évaluation de couple · base Supabase
+
+# Applique, dans l'ordre, 20261018120000_bilan_couple.sql puis
+# 20261019120000_evaluation_solo.sql par l'API de gestion de Supabase, comme
+# avis-base.yml, avec les secrets déjà là pour les fonctions
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
+#
+# La première crée la table des bilans (fermée à la clé publique), les
+# compteurs de l'entonnoir, le ménage de chaque nuit (pg_cron) et
+# get_bilan_tableau, que l'admin lit par admin-stats. La seconde ajoute le
+# mode seul(e) (colonnes mode et a_percu, bornes, déclencheur du rapport,
+# tableau de l'admin). Elles ne ferment rien d'existant : elles peuvent
+# passer avant comme après la publication du site.
+#
+# Le relancer (« Run workflow ») est toujours sans risque : les migrations
+# sont idempotentes.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261018120000_bilan_couple.sql'
+      - 'supabase/migrations/20261019120000_evaluation_solo.sql'
+      - '.github/workflows/bilan-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: bilan-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Table des bilans, mode seul(e), compteurs et ménage
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # La dernière requête de la migration rend un bilan (lignes, compteurs,
+      # pg_cron présent ou non) : il est affiché dans le journal.
+      - name: Appliquer les migrations
+        run: |
+          for f in supabase/migrations/20261018120000_bilan_couple.sql \
+                   supabase/migrations/20261019120000_evaluation_solo.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            head -c 800 reponse.json; echo
+            if [ "$code" -ge 300 ]; then exit 1; fi
+          done

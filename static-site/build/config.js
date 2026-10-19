@@ -48,6 +48,11 @@ export const ROUTE_SLUGS = {
   testAstroPrenoms: { fr: 'signes-astrologiques-prenoms-compatibilite', en: 'zodiac-signs-names-compatibility', es: 'signos-astrologicos-nombres-compatibilidad', de: 'sternzeichen-vornamen-kompatibilitaet', it: 'segni-zodiacali-nomi-compatibilita' },
   calculatriceAmour: { fr: 'calculatrice-de-l-amour', en: 'love-calculator', es: 'calculadora-del-amor', de: 'liebesrechner', it: 'calcolatrice-dell-amore' },
   compteurCouple: { fr: 'compteur-de-couple', en: 'relationship-counter', es: 'contador-de-pareja', de: 'beziehungszaehler', it: 'contatore-di-coppia' },
+  // Le bilan de couple payant (docs/bilan/CONCEPTION.md). Les mêmes adresses
+  // sont écrites dans CHEMINS de supabase/functions/_shared/bilan/serveur.mjs
+  // (le retour de Stripe), un test vérifie qu'elles ne divergent pas.
+  bilanCouple: { fr: 'evaluation-de-couple', en: 'relationship-assessment', es: 'evaluacion-de-pareja', de: 'beziehungsanalyse', it: 'valutazione-di-coppia' },
+  cgv: { fr: 'conditions-generales-de-vente', en: 'terms-of-sale', es: 'condiciones-generales-de-venta', de: 'agb', it: 'condizioni-generali-di-vendita' },
   testSignesChinois: { fr: 'compatibilite-amoureuse-signes-chinois', en: 'chinese-zodiac-love-compatibility', es: 'compatibilidad-amorosa-signos-chinos', de: 'chinesische-sternzeichen-liebeskompatibilitaet', it: 'compatibilita-amorosa-segni-cinesi' },
   testDateNaissance: { fr: 'compatibilite-amoureuse-date-de-naissance', en: 'birth-date-love-compatibility', es: 'compatibilidad-amorosa-fecha-de-nacimiento', de: 'liebeskompatibilitaet-geburtsdatum', it: 'compatibilita-amorosa-data-di-nascita' },
   testJalousie: { fr: 'test-jalousie-couple', en: 'jealousy-test-couple', es: 'test-celos-pareja', de: 'eifersucht-test-paar', it: 'test-gelosia-coppia' },
@@ -145,6 +150,7 @@ export const QUIZ_FEATURED = {
   testParentalite:   { file: 'baby-shoes-toys',          old: 'test-parentalite',    alt: { fr: 'Petits chaussons de bébé et jouets en bois sur une couverture', en: 'Tiny baby shoes and wooden toys on a blanket', es: 'Pequeños zapatos de bebé y juguetes de madera sobre una manta', de: 'Winzige Babyschuhe und Holzspielzeug auf einer Decke', it: 'Scarpine da neonato e giochi di legno su una coperta' } },
   testEmmenager:     { file: 'moving-in-boxes',          old: null,                  alt: { fr: 'Cartons de déménagement dans un appartement lumineux et vide', en: 'Moving boxes in a bright empty apartment', es: 'Cajas de mudanza en un apartamento luminoso y vacío', de: 'Umzugskartons in einer hellen leeren Wohnung', it: 'Scatole per il trasloco in un appartamento luminoso e vuoto' } },
   calculatriceAmour: { file: 'love-calculator-hearts', old: null, alt: {"fr": "Petite machine à calculer ancienne sur une nappe de lin, un ruban de papier terminé par un cœur rose", "en": "A small vintage adding machine on a linen tablecloth, its paper ribbon ending in a pink paper heart", "es": "Pequeña máquina de calcular antigua sobre un mantel de lino, con una cinta de papel que termina en un corazón rosa", "de": "Kleine alte Rechenmaschine auf einer Leinendecke, deren Papierstreifen in einem rosa Herz endet", "it": "Piccola macchina da calcolo d'epoca su una tovaglia di lino, con un nastro di carta che termina in un cuore rosa"} },
+  bilanCouple: { file: 'couple-check-up', old: null, alt: {"fr": "Deux petits carnets ouverts côte à côte sur une nappe de lin, l'un rose et l'autre lavande, chacun avec son stylo et une liste de cases vides, deux tasses de thé derrière", "en": "Two small open notebooks side by side on a linen tablecloth, one pink and one lavender, each with its own pen and a list of empty tick boxes, two cups of tea behind", "es": "Dos libretas abiertas una al lado de la otra sobre un mantel de lino, una rosa y otra lavanda, cada una con su bolígrafo y una lista de casillas vacías, dos tazas de té detrás", "de": "Zwei kleine aufgeschlagene Notizbücher nebeneinander auf einer Leinentischdecke, eines rosa und eines lavendelfarben, jedes mit eigenem Stift und einer Liste leerer Kästchen, dahinter zwei Tassen Tee", "it": "Due piccoli quaderni aperti uno accanto all'altro su una tovaglia di lino, uno rosa e uno lavanda, ciascuno con la sua penna e un elenco di caselle vuote, due tazze di tè dietro"} },
   compteurCouple: { file: 'couple-day-counter', old: null, alt: {"fr": "Un grand bocal en verre rempli de centaines de petits cœurs en papier rose et lilas, quelques-uns tombés sur la nappe de lin, deux tasses de café côte à côte", "en": "A tall glass jar filled with hundreds of tiny pink and lilac paper hearts, a few spilled on the linen tablecloth, two coffee cups side by side", "es": "Un gran tarro de cristal lleno de cientos de pequeños corazones de papel rosa y lila, algunos caídos sobre el mantel de lino, dos tazas de café juntas", "de": "Ein hohes Glas voll mit hunderten kleinen Papierherzen in Rosa und Lila, ein paar auf die Leinentischdecke gefallen, zwei Kaffeetassen nebeneinander", "it": "Un grande barattolo di vetro pieno di centinaia di piccoli cuori di carta rosa e lilla, alcuni caduti sulla tovaglia di lino, due tazzine da caffè affiancate"} },
   testAstroPrenoms:  { file: 'zodiac-astrology',          old: 'test-astro-prenoms',  alt: { fr: 'Carte astrologique avec les constellations dorées du zodiaque', en: 'Astrology chart with golden zodiac constellations', es: 'Carta astrológica con constelaciones doradas del zodiaco', de: 'Astrologie-Karte mit goldenen Sternzeichen-Konstellationen', it: 'Carta astrologica con costellazioni dorate dello zodiaco' } },
   testSignesChinois: { file: 'chinese-zodiac-wheel',    old: null,                  alt: { fr: "Sur une soie rouge, une roue du zodiaque chinois en bois sculpté avec ses douze animaux, deux petits jetons de laque rouge reliés par un fil rouge posés au centre, quelques pétales de prunier", en: "On red silk, a carved wooden Chinese zodiac wheel with its twelve animals, two small red lacquer tokens tied together by a red thread resting at the centre, a few plum blossom petals", es: "Sobre una seda roja, una rueda del zodiaco chino de madera tallada con sus doce animales, dos pequeñas fichas de laca roja unidas por un hilo rojo en el centro, algunos pétalos de ciruelo", de: "Auf roter Seide ein geschnitztes Holzrad des chinesischen Tierkreises mit seinen zwölf Tieren, in der Mitte zwei kleine rote Lackplättchen, durch einen roten Faden verbunden, ein paar Pflaumenblütenblätter", it: "Su una seta rossa, una ruota dello zodiaco cinese in legno intagliato con i suoi dodici animali, due piccoli gettoni di lacca rossa legati da un filo rosso posati al centro, qualche petalo di pruno" } },
@@ -230,7 +236,7 @@ export const ROUTE_CONFIG = {
   quizKnowledge: { template: 'quiz-knowledge', namespaces: ['quiz-knowledge', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizMost: { template: 'quiz-most', namespaces: ['quiz-most', 'quizzes', 'quizGames', 'gd', 'common'] },
   questionsCouple: { template: 'questions-couple', namespaces: ['quiz-questions-couple', 'quizzes', 'common'] },
-  legalMentions: { template: 'legal', namespaces: ['legal', 'common'] },
+  legalMentions: { template: 'legal', namespaces: ['legal', 'cgv', 'common'] },
   privacy: { template: 'privacy', namespaces: ['legal', 'common'] },
   blog: { template: 'blog-listing', namespaces: ['common'] },
   quizAdo: { template: 'quiz-ado', namespaces: ['quiz-ado', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -239,6 +245,8 @@ export const ROUTE_CONFIG = {
   testAstroPrenoms: { template: 'quiz-astro-prenoms', namespaces: ['quiz-astro-prenoms', 'quizzes', 'common'] },
   calculatriceAmour: { template: 'calculatrice-amour', namespaces: ['calculatrice-amour', 'quizzes', 'common'] },
   compteurCouple: { template: 'compteur-couple', namespaces: ['compteur-couple', 'quizzes', 'common'] },
+  bilanCouple: { template: 'bilan-couple', namespaces: ['bilan', 'quizzes', 'common'] },
+  cgv: { template: 'cgv', namespaces: ['cgv', 'common'] },
   testDateNaissance: { template: 'quiz-date-naissance', namespaces: ['quiz-date-naissance', 'quizzes', 'common'] },
   testSignesChinois: { template: 'quiz-signes-chinois', namespaces: ['quiz-signes-chinois', 'quizzes', 'common'] },
   testJalousie: { template: 'quiz-jalousie', namespaces: ['quiz-jalousie', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -313,6 +321,109 @@ export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIU
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
 
+// ── Le bilan de couple payant ───────────────────────────────────────────
+// Un seul interrupteur (docs/bilan/CONCEPTION.md, « Ce qu'il faut de Thomas
+// avant d'ouvrir »). Tant qu'il est à false : la page existe mais n'est pas
+// indexée ni dans le sitemap, elle n'est dans aucun menu, les liens écrits
+// vers elle dans les textes sont neutralisés à la construction, et les
+// écrans de résultat des tests ne la proposent pas. À passer à true une fois
+// le compte Stripe branché (secrets STRIPE_SECRET_KEY et
+// STRIPE_WEBHOOK_SECRET chez Supabase) et VENDEUR rempli.
+// QC_BILAN=ouvert ou QC_BILAN=ferme force le choix pour une construction.
+export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
+  : process.env.QC_BILAN === 'ferme' ? false
+  : false;
+// Les pages qui envoient vers le bilan, une fois ouvert : l'encart sous le
+// verdict (encartBilan, quiz-engine-core.js) et la bannière au-dessus des
+// cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
+// `score`, un test fait à deux qui rend un chiffre ou un profil ; `projet`,
+// avant une grande étape ; `doute`, quand on se pose des questions sur son
+// couple. L'identifiant part dans l'adresse (?src=resultat-<id> ou
+// ?src=bas-<id>) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
+// d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
+// chacun les réponses de l'autre.
+export const BILAN_ENTREES = {
+  testCouple: { groupe: 'score', id: 'tester-couple' },
+  testCompatibilite: { groupe: 'score', id: 'compatibilite' },
+  testCommonPoints: { groupe: 'score', id: 'points-communs' },
+  quizAmoureux: { groupe: 'score', id: 'amoureux' },
+  quizTypeCouple: { groupe: 'score', id: 'type-couple' },
+  testCompatSexuelle: { groupe: 'score', id: 'compat-sexuelle' },
+  testLangageAmour: { groupe: 'score', id: 'langage-amour' },
+  testEmmenager: { groupe: 'projet', id: 'emmenager' },
+  testMariage: { groupe: 'projet', id: 'mariage' },
+  testParentalite: { groupe: 'projet', id: 'parentalite' },
+  testEstCeLeBon: { groupe: 'projet', id: 'est-ce-le-bon' },
+  testFinCouple: { groupe: 'doute', id: 'fin-couple' },
+  testCoupleSain: { groupe: 'doute', id: 'couple-sain' },
+  testChargeMentale: { groupe: 'doute', id: 'charge-mentale' },
+  testDistance: { groupe: 'doute', id: 'distance' },
+  testDivorce: { groupe: 'doute', id: 'divorce' },
+  testConfiance: { groupe: 'doute', id: 'confiance' },
+  testAmourHabitude: { groupe: 'doute', id: 'amour-habitude' },
+  testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore' },
+  // Depuis le 19 octobre 2026 (Thomas : « on ne va pas compter sur le SEO
+  // pour vendre »), presque toute la famille des tests de couple, les jeux
+  // (groupe `jeu`) et le hub des questions (groupe `questions`) ; le mode
+  // seul(e) permet d'y renvoyer depuis les tests où l'on doute. Toujours
+  // rien depuis l'emprise, la manipulation et l'infidélité.
+  testToxic: { groupe: 'doute', id: 'toxique' },
+  testJalousie: { groupe: 'doute', id: 'jalousie' },
+  testAmourAttachement: { groupe: 'doute', id: 'amour-attachement' },
+  testAimeEncore: { groupe: 'doute', id: 'aime-encore' },
+  testDistanceAime: { groupe: 'doute', id: 'distance-aime' },
+  testDependance: { groupe: 'doute', id: 'dependance' },
+  testAttachement: { groupe: 'score', id: 'attachement' },
+  testAmeSoeur: { groupe: 'score', id: 'ame-soeur' },
+  testCouche: { groupe: 'score', id: 'couche' },
+  testPersonnalite: { groupe: 'score', id: 'personnalite' },
+  testKarmique: { groupe: 'score', id: 'karmique' },
+  testVacances: { groupe: 'projet', id: 'vacances' },
+  quizCoquin: { groupe: 'score', id: 'coquin' },
+  quizKnowledge: { groupe: 'score', id: 'connaissance' },
+  quizGenant: { groupe: 'score', id: 'genant' },
+  quizTuPreferes: { groupe: 'jeu', id: 'tu-preferes' },
+  jeuDilemmes: { groupe: 'jeu', id: 'dilemmes' },
+  jeuQuiDeNous: { groupe: 'jeu', id: 'qui-de-nous' },
+  jeuJamais: { groupe: 'jeu', id: 'jamais' },
+  jeuQuiPourrait: { groupe: 'jeu', id: 'qui-pourrait' },
+  jeuDixMais: { groupe: 'jeu', id: 'dix-mais' },
+  jeuOuiNon: { groupe: 'jeu', id: 'oui-non' },
+  pourContre: { groupe: 'jeu', id: 'pour-contre' },
+  jeuPhrases: { groupe: 'jeu', id: 'phrases' },
+  jeuActionVerite: { groupe: 'jeu', id: 'action-verite' },
+  jeuGages: { groupe: 'jeu', id: 'gages' },
+  jeuPlateau: { groupe: 'jeu', id: 'plateau' },
+  questionsCouple: { groupe: 'questions', id: 'questions-couple' },
+};
+// Les mentions obligatoires d'un vendeur (mentions légales et conditions de
+// vente). Un champ vide n'est pas affiché. L'entreprise de Thomas est une
+// entreprise individuelle (nom de l'entrepreneur suivi de « EI » dans les
+// mentions légales), sans TVA (franchise en base). Pas de médiateur de la
+// consommation : choix de Thomas (18 octobre 2026), la section « Réclamations »
+// des CGV s'écrit alors sans (pSans de {lang}/cgv.json) ; un médiateur se
+// déclare ici, mediateur: { nom, site }, et la phrase revient d'elle-même.
+// La porte e-mail des écrans de résultat (19 octobre 2026, Thomas : « si je
+// récolte des emails tous les jours, je vais pouvoir contacter les gens pour
+// leur promouvoir le test payant, avec des codes de réduction ») : les tests
+// de couple et les quiz à résultat (les groupes score, projet et doute de
+// BILAN_ENTREES), jamais les tests célibataires, les jeux ni les questions.
+// Le body porte data-capture="<id>", capture.js floute le résultat après le
+// titre jusqu'à ce qu'une adresse soit laissée (table abonnes, fonction
+// lead-capture) ; l'id est la source gardée avec l'adresse.
+export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
+  .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
+  .map(([cle, e]) => [cle, e.id]));
+
+export const VENDEUR = {
+  nom: 'Visibilitea',
+  dirigeant: 'Thomas Owaller',
+  statut: { fr: 'Entreprise individuelle (EI) de Thomas Owaller', en: 'Sole proprietorship of Thomas Owaller (French entreprise individuelle)', es: 'Empresa individual de Thomas Owaller (entreprise individuelle francesa)', de: 'Einzelunternehmen von Thomas Owaller (französische entreprise individuelle)', it: 'Impresa individuale di Thomas Owaller (entreprise individuelle francese)' },
+  siret: '940 106 800 00011',
+  adresse: '4 rue de Bruges, 67000 Strasbourg',
+  email: 'infoquizcouple@gmail.com',
+};
+
 // ── La saison du site ────────────────────────────────────────────────────
 // Un habillage léger, posé et retiré d'un seul geste (Thomas, 16 octobre
 // 2026 : « un design Halloween du site, vraiment léger... un truc qui peut
@@ -359,6 +470,8 @@ const ROUTES_JEUX = [
 // common.json, le même partout.
 export const FAMILLES_NAV = {
   tests: [
+    // Le bilan de couple en tête des tests de couple, une fois ouvert.
+    ...(BILAN_OUVERT ? ['bilanCouple'] : []),
     'testCouple', 'testCommonPoints', 'testCompatibilite', 'testCompatSexuelle', 'testDistance',
     'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
     'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
@@ -423,6 +536,9 @@ export function estPageJouable(routeKey) {
 // vient de promettre ferait mauvais genre.
 const ROUTES_SANS_PUB = [
   'admin', 'legalMentions', 'privacy', 'contact', 'ebookConfirm', 'sitemap', '404',
+  // Le bilan est un produit payant : une page de publicité à côté le
+  // dévaloriserait, et ses écrans se succèdent sans fin de page.
+  'bilanCouple', 'cgv',
 ];
 
 export function pagePublicitaire(routeKey) {

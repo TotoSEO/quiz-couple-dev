@@ -85,7 +85,28 @@
     "s9Title": "9. Contact",
     "s9Text": "Pour toute question ou demande d'information concernant le site, passez par notre ",
     "s9Lien": "formulaire de contact",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "L'évaluation de couple",
+    "bilanIntro": "L'évaluation de couple est le seul service du site qui enregistre des réponses à des questions. Voici exactement ce qui est gardé, et pour combien de temps.",
+    "bilanItems": [
+      "<strong>Ce qui est enregistré :</strong> les prénoms des deux partenaires et, s'ils le donnent, leur genre, la situation du couple (vie commune, enfants, etc.) et les réponses de chacun, y compris sur des sujets sensibles au sens de l'article 9 du RGPD (vie sexuelle, convictions religieuses, opinions politiques). Une adresse e-mail seulement si vous en donnez une pour recevoir le rapport. Aucun compte.",
+      "<strong>La base légale :</strong> le consentement explicite que chaque partenaire donne pour ses propres réponses, en cochant une case avant la première question. Il peut être retiré à tout moment en supprimant l'évaluation.",
+      "<strong>Qui les voit :</strong> vous deux, et personne d'autre. Votre partenaire voit vos réponses dans le rapport une fois que vous avez fini tous les deux. Les clés de vos liens personnels ne sont gardées que sous forme d'empreinte, impossible à retourner.",
+      "<strong>Seul(e) :</strong> si vous faites l'évaluation seul(e), ce que vous pensez que votre partenaire répondrait est enregistré avec vos réponses, sous votre seul lien. Votre partenaire n'est ni contacté(e) ni informé(e), et rien ne lui est montré.",
+      "<strong>Combien de temps :</strong> une évaluation non payée est effacée 60 jours après la dernière réponse, une évaluation payée six mois après le paiement, avec le rapport PDF et les adresses e-mail. Chacun des deux peut le supprimer tout de suite depuis le rapport. Seuls des compteurs anonymes (visites de la page, évaluations créées, finies et payées par jour) sont gardés au-delà.",
+      "<strong>Le paiement :</strong> il passe par Stripe (Stripe Payments Europe, Ltd., Dublin, Irlande), qui traite les données de paiement selon sa propre politique de confidentialité. Nous ne voyons jamais votre carte : nous gardons le numéro de la session de paiement, son montant et l'adresse e-mail du reçu, pour vous envoyer le rapport et pouvoir répondre à une demande de remboursement.",
+      "<strong>L'envoi du rapport :</strong> le rapport PDF est gardé dans un espace de stockage privé chez notre hébergeur (Supabase) et envoyé aux adresses données par notre prestataire d'envoi d'e-mails, Resend (Resend, Inc., États-Unis), dans le cadre des clauses contractuelles types de la Commission européenne. Le lien de téléchargement du site n'est valable que quelques minutes.",
+      "<strong>Une empreinte de l'adresse IP :</strong> salée et impossible à retourner, gardée avec l'évaluation pour limiter le nombre d'évaluations créées par heure depuis une même connexion."
+    ],
+    "emailsTitle": "Les e-mails de Quiz Couple",
+    "emailsIntro": "À la fin de certains tests, nous vous proposons de laisser votre adresse e-mail pour voir la suite de vos résultats. C'est aussi ce que fait le formulaire de l'e-book. Voici ce qui en est fait.",
+    "emailsItems": [
+      "<strong>Ce qui est enregistré :</strong> votre adresse e-mail, la langue du site que vous utilisiez, la page d'où vient l'adresse (quel test, ou l'e-book), la date de votre accord, et une empreinte de votre adresse IP (salée, impossible à retourner) pour limiter les abus. Pas de nom, pas de résultat de test.",
+      "<strong>Pourquoi :</strong> vous envoyer, dans votre langue, des conseils pour votre couple, des nouveaux tests, et des offres sur l'évaluation de couple. Jamais de revente ni de partage de votre adresse à qui que ce soit.",
+      "<strong>La base légale :</strong> votre consentement, donné en cochant la case. Vous pouvez le retirer à tout moment : chaque e-mail contient un lien de désinscription en un clic, et nous ne vous écrivons plus.",
+      "<strong>Combien de temps :</strong> tant que vous êtes inscrit(e), puis l'adresse est supprimée au plus tard trois ans après votre dernier e-mail ouvert. Une adresse désinscrite ou qui n'existe plus est supprimée dans les trois mois.",
+      "<strong>Qui l'envoie :</strong> nos e-mails partent par Resend (Resend Inc., États-Unis, clauses contractuelles types de la Commission européenne) depuis une adresse quiz-couple.com ; la liste est hébergée chez Supabase (Union européenne)."
+    ]
   },
   "mentions": {
     "seoTitle": "Mentions Légales | Quiz Couple",

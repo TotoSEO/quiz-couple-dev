@@ -85,7 +85,28 @@
     "s9Title": "9. Kontakt",
     "s9Text": "Für Fragen oder Auskunftswünsche zur Seite nutze bitte unser ",
     "s9Lien": "Kontaktformular",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "Die Beziehungsanalyse",
+    "bilanIntro": "Die Beziehungsanalyse ist der einzige Dienst der Website, der Antworten auf Fragen speichert. Hier steht genau, was gespeichert wird, und wie lange.",
+    "bilanItems": [
+      "<strong>Was gespeichert wird:</strong> die Vornamen beider Partner und, wenn sie es angeben, ihr Geschlecht, die Situation des Paares (Zusammenleben, Kinder usw.) und die Antworten jedes Partners, auch zu sensiblen Themen im Sinne von Artikel 9 DSGVO (Sexualleben, religiöse Überzeugungen, politische Meinungen). Eine E-Mail-Adresse nur, wenn ihr eine angebt, um den Bericht zu erhalten. Kein Konto.",
+      "<strong>Die Rechtsgrundlage:</strong> die ausdrückliche Einwilligung, die jeder Partner für seine eigenen Antworten gibt, indem er vor der ersten Frage ein Häkchen setzt. Sie kann jederzeit widerrufen werden, indem die Analyse gelöscht wird.",
+      "<strong>Wer sie sieht:</strong> ihr beide, und sonst niemand. Dein Partner oder deine Partnerin sieht deine Antworten im Bericht, sobald ihr beide fertig seid. Die Schlüssel eurer persönlichen Links werden nur als Fingerabdruck gespeichert, der sich nicht umkehren lässt.",
+      "<strong>Allein:</strong> wenn du die Analyse allein machst, wird das, was dein Partner oder deine Partnerin deiner Meinung nach antworten würde, mit deinen Antworten gespeichert, nur unter deinem Link. Dein Partner oder deine Partnerin wird weder kontaktiert noch informiert, und es wird ihm oder ihr nichts gezeigt.",
+      "<strong>Wie lange:</strong> Eine nicht bezahlte Analyse wird 60 Tage nach der letzten Antwort gelöscht, eine bezahlte sechs Monate nach der Zahlung, zusammen mit dem PDF-Bericht und den E-Mail-Adressen. Jeder von euch kann ihn sofort im Bericht löschen. Darüber hinaus werden nur anonyme Zähler (Besuche der Seite, erstellte, abgeschlossene und bezahlte Checks pro Tag) aufbewahrt.",
+      "<strong>Die Zahlung:</strong> Sie läuft über Stripe (Stripe Payments Europe, Ltd., Dublin, Irland), das die Zahlungsdaten nach seiner eigenen Datenschutzerklärung verarbeitet. Wir sehen deine Karte nie: Wir speichern die Nummer der Zahlungssitzung, den Betrag und die E-Mail-Adresse der Quittung, um dir den Bericht zu schicken und auf eine Bitte um Erstattung antworten zu können.",
+      "<strong>Der Versand des Berichts:</strong> Der PDF-Bericht wird in einem privaten Speicher bei unserem Hoster (Supabase) aufbewahrt und über unseren E-Mail-Dienstleister Resend (Resend, Inc., USA) an die angegebenen Adressen verschickt, auf Grundlage der Standardvertragsklauseln der Europäischen Kommission. Der Download-Link auf der Website ist nur wenige Minuten gültig.",
+      "<strong>Ein Fingerabdruck der IP-Adresse:</strong> gesalzen und nicht umkehrbar, mit der Analyse gespeichert, um die Zahl der Checks zu begrenzen, die pro Stunde von derselben Verbindung aus erstellt werden."
+    ],
+    "emailsTitle": "E-Mails von Quiz Couple",
+    "emailsIntro": "Am Ende mancher Tests bieten wir dir an, deine E-Mail-Adresse zu hinterlassen, um den Rest deines Ergebnisses zu sehen. Das Formular des E-Books macht dasselbe. Das passiert damit.",
+    "emailsItems": [
+      "<strong>Was gespeichert wird:</strong> deine E-Mail-Adresse, die Sprache der Website, die du benutzt hast, die Seite, von der die Adresse kommt (welcher Test, oder das E-Book), das Datum deiner Einwilligung und ein Fingerabdruck deiner IP-Adresse (gesalzen, nicht umkehrbar), um Missbrauch zu begrenzen. Kein Name, kein Testergebnis.",
+      "<strong>Wozu:</strong> um dir in deiner Sprache Tipps für deine Beziehung, neue Tests und Angebote zur Beziehungsanalyse zu schicken. Deine Adresse wird nie verkauft oder an irgendjemanden weitergegeben.",
+      "<strong>Die Rechtsgrundlage:</strong> deine Einwilligung, die du mit dem Häkchen gibst. Du kannst sie jederzeit widerrufen: Jede E-Mail enthält einen Abmeldelink mit einem Klick, und wir schreiben dir nicht mehr.",
+      "<strong>Wie lange:</strong> solange du angemeldet bist; danach wird die Adresse spätestens drei Jahre nach deiner letzten geöffneten E-Mail gelöscht. Eine abgemeldete oder nicht mehr existierende Adresse wird innerhalb von drei Monaten gelöscht.",
+      "<strong>Wer sie verschickt:</strong> unsere E-Mails gehen über Resend (Resend Inc., USA, Standardvertragsklauseln der Europäischen Kommission) von einer quiz-couple.com-Adresse aus; die Liste liegt bei Supabase (Europäische Union)."
+    ]
   },
   "mentions": {
     "seoTitle": "Impressum | Quiz Couple",

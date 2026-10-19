@@ -1,0 +1,93 @@
+{
+  "title": "Allgemeine Geschäftsbedingungen",
+  "majLe": "Zuletzt aktualisiert: 18. Oktober 2026",
+  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zur {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
+  "liens": {
+    "contact": "Kontaktseite",
+    "confidentialite": "Datenschutzerklärung",
+    "bilan": "Beziehungsanalyse"
+  },
+  "vendeur": {
+    "titre": "Der Verkäufer",
+    "nom": "Name:",
+    "statut": "Rechtsform:",
+    "siret": "SIRET (französische Unternehmensnummer):",
+    "adresse": "Anschrift:",
+    "email": "E-Mail:",
+    "tva": "Umsatzsteuer:",
+    "tvaValeur": "Keine Umsatzsteuer, gemäß Artikel 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung)"
+  },
+  "sections": [
+    {
+      "titre": "1. Was verkauft wird",
+      "p": [
+        "Die Beziehungsanalyse ist ein Fragebogen, den zwei Partner jeweils für sich beantworten, oder den eine Person allein beantwortet und dabei auch angibt, was ihr Partner oder ihre Partnerin ihrer Meinung nach antworten würde (Solo-Modus). Das Beantworten der Fragen ist kostenlos; ohne Kauf gibt es kein Ergebnis.",
+        "Verkauft wird der Bericht: eine vollständige Bestandsaufnahme des Paares auf Grundlage beider Antwortreihen (Übereinstimmung, Klima, Karte der Bereiche, Unterschiede mit beiden Antworten, Leitfäden, um darüber zu reden, Knackpunkte und Unverhandelbares, Warnsignale, Aufgabenverteilung). Der Bericht ist ein digitaler Inhalt: ein PDF-Dokument, das per E-Mail verschickt wird, und dieselbe Fassung zum Ansehen auf der Seite der Analyse."
+      ]
+    },
+    {
+      "titre": "2. Der Preis",
+      "p": [
+        "Der vollständige Bericht kostet {{prix}}, ohne Umsatzsteuer (Kleinunternehmerregelung). Es ist eine einmalige Zahlung, ohne Abo. Eine einzige Zahlung, von einem der beiden Partner, schaltet den Bericht für beide frei. Im Solo-Modus wird der Bericht nur der Person bereitgestellt, die geantwortet hat.",
+        "Der Preis wird auf der Seite der Analyse vor der ersten Frage angezeigt, und noch einmal vor der Zahlung."
+      ]
+    },
+    {
+      "titre": "3. Bestellung und Zahlung",
+      "p": [
+        "Die Zahlung wird jedem Partner angeboten, sobald er seine eigenen Antworten fertig hat. Vor der Zahlung kann der Käufer die E-Mail-Adresse angeben, an die der Bericht gehen soll, und er setzt ein Häkchen, mit dem er verlangt, den Bericht zu erhalten, sobald er fertig ist, und zur Kenntnis nimmt, dass er sein Widerrufsrecht verliert, sobald der Bericht bereitgestellt ist (siehe Artikel 5).",
+        "Die Zahlung erfolgt auf der sicheren Seite unseres Dienstleisters Stripe, per Bankkarte, Apple Pay oder Google Pay. Wir haben nie Zugriff auf die Kartendaten. Stripe schickt eine Quittung an die bei der Zahlung angegebene E-Mail-Adresse: Das ist die Bestellbestätigung. Eine Rechnung kann über die {{contact}} angefordert werden."
+      ]
+    },
+    {
+      "titre": "4. Bereitstellung des Berichts",
+      "p": [
+        "Der Bericht wird erstellt, sobald die Zahlung bestätigt ist und beide Partner fertig geantwortet haben (oder, im Solo-Modus, die Person fertig ist). Er geht dann als PDF an die angegebenen E-Mail-Adressen und erscheint auf der Seite der Analyse für beide Partner, über ihre persönlichen Links, mit einer Schaltfläche zum Herunterladen des PDFs. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird die Analyse gelöscht.",
+        "Wenn der Partner seine Antworten nicht fertigstellt, kann der Bericht nicht erstellt werden: Der Käufer kann dann jederzeit über die {{contact}} die Erstattung verlangen.",
+        "Jeder der beiden Partner kann die Analyse vor Ablauf dieser Frist löschen. Die Löschung erfolgt sofort und endgültig, für beide, und führt außerhalb der Garantie aus Artikel 6 zu keiner Erstattung."
+      ]
+    },
+    {
+      "titre": "5. Das Widerrufsrecht",
+      "p": [
+        "Der Bericht ist ein digitaler Inhalt. Gemäß Artikel 16 Buchstabe m der Richtlinie 2011/83/EU und Artikel L221-28 13° des französischen Verbrauchergesetzbuchs gilt das vierzehntägige Widerrufsrecht nicht mehr, sobald der Bericht bereitgestellt ist, da der Käufer verlangt hat, ihn zu erhalten, sobald er fertig ist, und vor der Zahlung den Verlust dieses Rechts zur Kenntnis genommen hat. Solange der Bericht nicht bereitgestellt ist, kann der Käufer widerrufen, indem er uns über die {{contact}} schreibt, und erhält den vollen Betrag zurück."
+      ]
+    },
+    {
+      "titre": "6. Geld-zurück-Garantie",
+      "p": [
+        "Zusätzlich zu den gesetzlichen Regeln erstatten wir den Bericht innerhalb von {{jours}} Tagen nach der Zahlung, ohne Begründung: Schreibt uns einfach über die {{contact}} mit den Vornamen beider Partner und dem Datum der Zahlung. Die Erstattung erfolgt auf das verwendete Zahlungsmittel, innerhalb von vierzehn Tagen nach der Anfrage."
+      ]
+    },
+    {
+      "titre": "7. Was die Analyse ist, und was nicht",
+      "p": [
+        "Die Analyse ist ein Werkzeug, das einem Paar hilft, über sein gemeinsames Leben zu reden. Er ist weder eine Diagnose noch eine Therapie noch die Meinung einer medizinischen Fachkraft. Entscheidungen, die auf Grundlage des Berichts getroffen werden, bleiben die der Partner. Wenn ihr eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie begleiten.",
+        "Der Dienst wird so bereitgestellt, wie er ist. Wir tun unser Möglichstes, damit er jederzeit verfügbar ist, aber eine vorübergehende Unterbrechung (Wartung, Ausfall eines Dienstleisters) lässt sich nicht ausschließen. Bleibt ein bezahlter Bericht durch unser Verschulden unzugänglich, wird er erstattet."
+      ]
+    },
+    {
+      "titre": "8. Personenbezogene Daten",
+      "p": [
+        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur der Analyse. Die E-Mail-Adresse, die für den Empfang des Berichts angegeben wird, dient nur diesem Versand. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Beschwerden und Schlichtung",
+      "mediation": true,
+      "p": [
+        "Bei Beschwerden schreib uns zuerst über die {{contact}} oder an {{email}}: Wir antworten innerhalb weniger Tage.",
+        "Wenn die Meinungsverschiedenheit bestehen bleibt, kannst du kostenlos die Verbraucherschlichtungsstelle anrufen, der wir angehören: {{mediateur}}, innerhalb eines Jahres nach deiner schriftlichen Beschwerde."
+      ],
+      "pSans": [
+        "Bei Beschwerden schreib uns zuerst über die {{contact}} oder an {{email}}: Wir antworten innerhalb weniger Tage."
+      ]
+    },
+    {
+      "titre": "10. Anwendbares Recht",
+      "p": [
+        "Diese Bedingungen unterliegen französischem Recht. Wenn du in einem anderen Land der Europäischen Union lebst, behältst du den Schutz der zwingenden Vorschriften deines Wohnsitzlandes."
+      ]
+    }
+  ]
+}

@@ -112,7 +112,11 @@
     "quizMortFilmHorreur": "Chi muore per primo (film horror)",
     "quizPossession": "Chi potrebbe essere posseduto",
     "quizSuperVilain": "Quale supercattivo sei",
-    "quizDuoVilains": "Quale duo di supercattivi"
+    "quizDuoVilains": "Quale duo di supercattivi",
+    "bilanCouple": "Valutazione di coppia",
+    "evaluer": "Valutare la coppia",
+    "evaluerSous": "La valutazione completa, in due o da soli",
+    "bilanCoupleDesc": "100 domande ciascuno per conto suo, e un report di 30 pagine"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",
@@ -130,7 +134,8 @@
     "sourcePrefAide": "Un'opzione di Google: i siti che aggiungete compaiono più in alto nei vostri risultati e nelle risposte IA. È collegata al vostro account Google e si può rimuovere in qualsiasi momento.",
     "sourcePrefAideAria": "Che cos'è una fonte preferita?",
     "cookiePrefs": "Gestisci i cookie",
-    "instagram": "Seguici su Instagram"
+    "instagram": "Seguici su Instagram",
+    "cgv": "Condizioni di vendita"
   },
   "buttons": {
     "start": "Inizia",
@@ -176,6 +181,23 @@
     "optional": "opzionale",
     "commentPlaceholder": "Condividi la tua esperienza...",
     "stars": "stelle"
+  },
+  "capture": {
+    "sur": "I tuoi risultati completi",
+    "titre": "Per sbloccare il resto dei tuoi risultati, inserisci la tua e-mail",
+    "texte": "Il dettaglio del tuo risultato, i consigli e il seguito compaiono subito dopo.",
+    "placeholder": "tua@email.it",
+    "consentement": "Accetto di ricevere i consigli e le offerte di Quiz Couple via e-mail. Disiscrizione con un clic, in qualsiasi momento.",
+    "confidentialite": "Privacy",
+    "bouton": "Vedere i miei risultati",
+    "envoi": "Un attimo...",
+    "suggestion": "Volevi dire {{domaine}}?",
+    "erreurs": {
+      "format": "Questo indirizzo e-mail non sembra completo.",
+      "domaine": "Questo indirizzo non può ricevere e-mail. Controlla il dominio.",
+      "jetable": "Gli indirizzi usa e getta non sono accettati.",
+      "consentement": "Spunta la casella per continuare."
+    }
   },
   "blog": {
     "pageTitle": "Blog - Consigli e suggerimenti per coppie | Quiz Couple",

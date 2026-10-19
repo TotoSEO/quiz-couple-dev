@@ -345,6 +345,11 @@
   <% } else { %>
   <link rel="stylesheet" href="/css/styles.css">
   <% } %>
+  <%# La feuille propre à la page (css/pages/<routeKey>.css), mise en ligne :
+      aujourd'hui la page du bilan de couple seulement. %>
+  <% if (typeof cssPage !== 'undefined' && cssPage) { %>
+  <style data-page><%- cssPage %></style>
+  <% } %>
   <%# L'habillage de saison (build/config.js, SAISON ; Halloween 2026) : une
       petite feuille a part, ecrite ici pour ne toucher ni styles.css ni ses
       feuilles critiques, jamais sur l'admin. Le body porte la classe
@@ -386,7 +391,7 @@
     apres le premier affichage : la pastille disparaissait sous les yeux du
     visiteur et tout le hero remontait de 59 px, un decalage que PageSpeed
     comptait (CLS 0,05). Posee ici, elle est la des le premier rendu. %>
-<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %><%= saisonPage ? ' saison-' + saisonPage : '' %>"<%- saisonPage ? ' data-saison="' + saisonPage + '"' : '' %>>
+<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %><%= saisonPage ? ' saison-' + saisonPage : '' %>"<%- saisonPage ? ' data-saison="' + saisonPage + '"' : '' %><%- (typeof bilanChemin !== 'undefined' && bilanChemin) ? ' data-bilan="' + bilanChemin + '" data-bilan-prix="' + bilanPrix + '"' : '' %><%- (typeof bilanEntree !== 'undefined' && bilanEntree) ? ' data-bilan-groupe="' + bilanEntree.groupe + '" data-bilan-id="' + bilanEntree.id + '"' : '' %><%- (typeof captureId !== 'undefined' && captureId) ? ' data-capture="' + captureId + '"' : '' %>>
   <%# Le tableau de bord d'administration est une application plein ecran :
       il porte sa propre barre laterale et n'a que faire de l'en-tete du site. %>
   <% if (routeKey !== 'admin') { %>
@@ -448,6 +453,13 @@
   <script src="/js/obl.js" defer></script>
   <script src="/js/scroll-reveal.js" defer></script>
   <script src="/js/quiz-extras.js" defer></script>
+  <%# La porte e-mail des résultats (capture.js), sur les pages de CAPTURE_PAGES
+      seulement : ses textes dans la langue de la page et le lien vers la
+      confidentialité. %>
+  <% if (typeof captureId !== 'undefined' && captureId) { %>
+  <script>window.__QC_CAPTURE=<%- JSON.stringify({ t: t('common:capture', {}), confidentialite: getLocalizedUrl('privacy', lang) }) %>;</script>
+  <script src="/js/capture.js" defer></script>
+  <% } %>
   <%# Les emplacements de la regie sont poses en dernier, et leurs scripts ne
       partent qu'une fois le document analyse : la page et le moteur de quiz
       ne doivent alors plus rien a un domaine tiers. %>

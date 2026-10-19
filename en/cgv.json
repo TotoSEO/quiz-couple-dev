@@ -1,0 +1,93 @@
+{
+  "title": "Terms of sale",
+  "majLe": "Last updated: 18 October 2026",
+  "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
+  "liens": {
+    "contact": "contact page",
+    "confidentialite": "privacy policy",
+    "bilan": "relationship assessment"
+  },
+  "vendeur": {
+    "titre": "The seller",
+    "nom": "Name:",
+    "statut": "Status:",
+    "siret": "SIRET (French business ID):",
+    "adresse": "Address:",
+    "email": "Email:",
+    "tva": "VAT:",
+    "tvaValeur": "VAT not applicable, article 293 B of the French General Tax Code"
+  },
+  "sections": [
+    {
+      "titre": "1. What is sold",
+      "p": [
+        "The relationship assessment is a questionnaire that two partners each answer separately, or that one person answers alone, also saying what they think their partner would answer (solo mode). Answering the questions is free; no result is given without a purchase.",
+        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document sent by email, and the same version available on the assessment page."
+      ]
+    },
+    {
+      "titre": "2. The price",
+      "p": [
+        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both. In solo mode, the report is only provided to the person who answered.",
+        "The price is shown on the assessment page before the first question, and again before payment."
+      ]
+    },
+    {
+      "titre": "3. Ordering and payment",
+      "p": [
+        "Payment is offered to each partner as soon as they've finished their own answers. Before paying, the buyer can give the email address where they want to receive the report, and ticks a box requesting to receive the report as soon as it is ready and acknowledging that they lose their right of withdrawal once the report has been provided (see article 5).",
+        "Payment is made on the secure page of our provider Stripe, by bank card, Apple Pay or Google Pay. We never have access to card details. Stripe sends a receipt to the email address given at payment: this is the order confirmation. An invoice can be requested from the {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. Providing the report",
+      "p": [
+        "The report is produced as soon as payment is confirmed and both partners have finished answering (or, in solo mode, the person has finished). It is then sent as a PDF to the email addresses given, and shown on the assessment page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the assessment is erased.",
+        "If the partner doesn't finish their answers, the report can't be produced: the buyer can then ask for a refund at any time from the {{contact}}.",
+        "Either partner can delete the assessment before then. Deletion is immediate and permanent, for both, and doesn't lead to a refund outside the guarantee in article 6."
+      ]
+    },
+    {
+      "titre": "5. The right of withdrawal",
+      "p": [
+        "The report is digital content. In accordance with article 16(m) of Directive 2011/83/EU and article L221-28 13° of the French Consumer Code, the fourteen-day right of withdrawal no longer applies once the report has been provided, as the buyer asked to receive it as soon as it was ready and acknowledged losing this right before paying. As long as the report hasn't been provided, the buyer can withdraw by writing to us from the {{contact}}, and is refunded in full."
+      ]
+    },
+    {
+      "titre": "6. Money-back guarantee",
+      "p": [
+        "On top of what the law provides, we refund the report within {{jours}} days of payment, with no need to give a reason: just write to us from the {{contact}} giving both partners' first names and the date of payment. The refund is made to the payment method used, within fourteen days of the request."
+      ]
+    },
+    {
+      "titre": "7. What the assessment is, and what it isn't",
+      "p": [
+        "The assessment is a tool to help a couple talk about their life together. It isn't a diagnosis, a therapy or the opinion of a health professional. Decisions taken on the basis of the report remain the partners' own. If you're going through a difficult time, a couples counsellor or therapist can support you.",
+        "The service is provided as is. We do our best to keep it available at all times, but a temporary interruption (maintenance, a provider outage) can't be ruled out. If a paid report remains inaccessible through our fault, it is refunded."
+      ]
+    },
+    {
+      "titre": "8. Personal data",
+      "p": [
+        "The assessment answers, which may touch on intimate life and beliefs, are only saved with each partner's explicit consent and are only used for the assessment. The email address given to receive the report is only used to send it. How long data is kept, your rights and the list of providers are detailed in our {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Complaints and mediation",
+      "mediation": true,
+      "p": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days.",
+        "If the disagreement continues, you can turn free of charge to the consumer mediator we belong to: {{mediateur}}, within one year of your written complaint."
+      ],
+      "pSans": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days."
+      ]
+    },
+    {
+      "titre": "10. Applicable law",
+      "p": [
+        "These terms are governed by French law. If you live in another country of the European Union, you keep the protection of the mandatory rules of your country of residence."
+      ]
+    }
+  ]
+}

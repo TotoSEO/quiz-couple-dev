@@ -54,6 +54,7 @@
             <button class="admin-tab active" data-tab="trafic" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Trafic</span></button>
             <button class="admin-tab" data-tab="stats" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg><span>Parties</span></button>
             <button class="admin-tab" data-tab="distance" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><span>À distance</span></button>
+            <button class="admin-tab" data-tab="bilan" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Évaluation</span></button>
         <p class="adm-nav-titre">Gestion</p>
             <button class="admin-tab" data-tab="reviews" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span>Avis</span><span class="admin-pastille hidden" data-notif="reviews">!</span></button>
             <button class="admin-tab" data-tab="leads" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>Leads</span><span class="admin-pastille hidden" data-notif="leads">!</span></button>
@@ -378,6 +379,114 @@
           </div>
         </div>
 
+        <%# L'évaluation de couple payante (get_bilan_tableau, par admin-stats) : la page, l'entonnoir, les ventes, les abandons par domaine, les sources, les rapports PDF. Les identifiants sont le contrat de loadBilan (admin.js). %>
+        <div id="admin-bilan-tab" class="hidden">
+          <div class="stats-comp stats-comp--periode" id="admin-bilan-periode" role="group" aria-label="Période">
+            <button class="stats-comp-btn" data-bilan-jours="7" type="button">7 j</button>
+            <button class="stats-comp-btn active" data-bilan-jours="30" type="button">30 j</button>
+            <button class="stats-comp-btn" data-bilan-jours="90" type="button">90 j</button>
+            <button class="stats-comp-btn" data-bilan-jours="365" type="button">1 an</button>
+          </div>
+          <p class="adm-note" id="admin-bilan-note">Chaque étape est comptée le jour où elle arrive (heure de Paris), même si l'évaluation a été supprimée depuis. Les visites ne comptent ni vos propres passages (drapeau posé à la connexion à l'admin) ni les robots. Le chiffre d'affaires est celui des paiements confirmés, avant les frais de Stripe.</p>
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Visites de la page</p>
+              <p class="stats-tete-jour" id="admin-bilan-vues">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-vues-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Évaluations démarrées</p>
+              <p class="stats-tete-jour" id="admin-bilan-crees">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-crees-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">Ventes</p>
+              <p class="stats-tete-jour" id="admin-bilan-payes">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-ca">&nbsp;</p>
+              <p class="stats-tete-total" id="admin-bilan-total"></p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Taux de conversion</p>
+              <p class="stats-tete-jour" id="admin-bilan-conversion">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-conversion-sub">des visites de la page finissent en vente</p>
+            </div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Ventes par jour</h2>
+                <p class="stats-panel-sub">Le nombre de rapports payés chaque jour ; le chiffre d'affaires de la période est sur la vignette. Les évaluations démarrées et les visites de la page s'affichent d'un clic sur leur vignette.</p>
+              </div>
+            </div>
+            <div class="stats-legende" id="admin-bilan-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="admin-bilan-chart" class="stats-canvas adm-canvas--hero"></canvas>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">L'entonnoir</h2>
+                <p class="stats-panel-sub">De la visite au paiement, sur la période. La barre se lit en part des visites ; le pourcentage de droite est celui de l'étape d'avant. Les étapes ne se suivent pas toujours dans cet ordre : le partenaire peut rejoindre avant que le premier ait fini, et on peut payer dès qu'on a fini ses propres réponses.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-entonnoir" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Où les gens s'arrêtent</h2>
+                <p class="stats-panel-sub">Les douze domaines dans l'ordre des questions. Entrés : personnes qui ont répondu à au moins une question du domaine ; finis : à toutes. Bloqués : personnes qui n'ont plus rien fait depuis 24 heures et dont c'est le premier domaine non fini (bilans créés sur la période).</p>
+              </div>
+            </div>
+            <div id="admin-bilan-domaines" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">D'où viennent les visites</h2>
+                <p class="stats-panel-sub">La source est posée par le lien qui mène à la page : l'encart sous le résultat d'un test (« Résultat »), la bannière du bas de page (« Bas de page »), le menu, l'accueil, le pied de page. « Direct » : sans source (Google, lien partagé, adresse tapée).</p>
+              </div>
+            </div>
+            <div id="admin-bilan-sources" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Délais et rapports PDF</h2>
+                <p class="stats-panel-sub">Médianes sur les évaluations créées pendant la période. Les rapports sont fabriqués par le workflow bilan-rapport.yml et partent par e-mail ; un rapport en erreur n'est jamais envoyé.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-delais" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Payés, en attente du partenaire</h2>
+                <p class="stats-panel-sub">Rapports réglés dont l'un des deux n'a pas fini ses réponses : la personne qui a payé peut relancer son partenaire depuis sa page. Au-delà de quatorze jours, un remboursement se fait depuis Stripe.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-attente" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <details class="stats-details">
+            <summary>
+              <span>
+                <span class="stats-details-titre">Jour par jour</span>
+                <span class="stats-details-sub">Toutes les étapes, chaque jour de la période</span>
+              </span>
+              <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="stats-details-corps">
+              <div id="admin-bilan-list" class="stats-list"></div>
+            </div>
+          </details>
+        </div>
+
         <!-- ═══ Avis ═══ -->
         <div id="admin-reviews-tab" class="hidden">
           <div class="stats-tetes">
@@ -425,8 +534,58 @@
 
         <!-- ═══ Leads ═══ -->
         <div id="admin-leads-tab" class="hidden">
+          <%# Les abonnés e-mail (table abonnes, get_abonnes_tableau par admin-stats) :
+              les adresses laissées à la fin des tests (porte des résultats,
+              capture.js) et celles de l'e-book, avec la langue de chacun, par
+              source et par langue, les dernières, et l'export CSV. Les
+              identifiants sont le contrat de loadAbonnes (admin.js). %>
           <div class="adm-toolbar">
-            <h2>Leads</h2>
+            <h2>Abonnés e-mail</h2>
+            <button id="abonnes-export" class="btn btn-cta btn-sm" type="button">Exporter en CSV</button>
+          </div>
+          <p class="adm-note">Les adresses laissées à la fin des tests pour voir le reste de leurs résultats, et celles de l'e-book une fois confirmées. Chaque adresse garde la langue de la personne : l'export CSV (e-mail, langue, source, statut, dates) s'importe dans l'outil d'envoi langue par langue. Une adresse redonnée à la fin d'un autre test compte dans « captures », jamais en double.</p>
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Abonnés</p>
+              <p class="stats-tete-jour" id="abonnes-total">-</p>
+              <p class="stats-tete-sub" id="abonnes-total-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Aujourd'hui</p>
+              <p class="stats-tete-jour" id="abonnes-jour">-</p>
+              <p class="stats-tete-sub" id="abonnes-jour-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">30 derniers jours</p>
+              <p class="stats-tete-jour" id="abonnes-periode">-</p>
+              <p class="stats-tete-sub" id="abonnes-periode-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">Par langue</p>
+              <p class="stats-tete-jour" id="abonnes-langues">-</p>
+              <p class="stats-tete-sub" id="abonnes-langues-sub">&nbsp;</p>
+            </div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Par source</h2>
+                <p class="stats-panel-sub">D'où viennent les adresses : chaque test qui porte la porte des résultats, et l'e-book. Avec la répartition par langue, pour savoir à qui écrire dans quelle langue.</p>
+              </div>
+            </div>
+            <div id="abonnes-sources" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Les cinquante dernières adresses</h2>
+                <p class="stats-panel-sub">Avec leur langue, leur source et leur statut (actif, désinscrit, invalide après un rebond).</p>
+              </div>
+            </div>
+            <div id="abonnes-derniers" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="adm-toolbar">
+            <h2>E-book : demandes et confirmations</h2>
             <button id="leads-refresh" class="btn btn-outline btn-sm" type="button"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg> Actualiser</button>
           </div>
           <div class="adm-table-wrap">

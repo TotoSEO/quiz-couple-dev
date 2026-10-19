@@ -1,0 +1,516 @@
+<%
+  // L'évaluation de couple payante (docs/bilan/CONCEPTION.md) : une page de
+  // vente (`lp` de {lang}/bilan.json), et l'application (js/bilan.js), qui
+  // prend toute la place dès qu'on commence (body.bilan-focus) et parle à la
+  // fonction serveur `bilan`. Le calcul vient de js/bilan-coeur.js, le
+  // rapport de js/bilan-rapport.js (le même gabarit que le PDF), les
+  // questions de /js/data/bilan-<lang>.json, chargé quand l'application
+  // s'ouvre. Les styles de la page de vente (.blp-*) et les retouches des
+  // écrans de l'application sont dans css/pages/bilanCouple.css, mis en ligne
+  // par le gabarit de base (cssPage) ; la base des écrans (.bilan-*) reste
+  // dans styles.css, celle du rapport dans /css/bilan-rapport.css.
+  //
+  // La page de vente (19 octobre 2026, Thomas : « pas encore assez landing
+  // page transactionnelle... un slider, des glissades, une timeline ») : le
+  // haut de page avec le radar du rapport, deux boutons (à deux, seul(e)), le
+  // ruban des douze domaines, les deux façons de faire, le rapport page par
+  // page en curseur (quiz-slider.js), la frise des étapes révélée au
+  // défilement (scroll-reveal.js), la grille des domaines, trois questions à
+  // essayer (bilan-lp.js), pour qui, le comparatif conseiller / IA /
+  // évaluation, la recherche, le prix, la confiance, la FAQ, et une barre
+  // collée en bas sur téléphone. Tout ce qui bouge n'anime que transform et
+  // opacity, rien ne part de l'opacité 0 dans le premier écran, et
+  // prefers-reduced-motion arrête tout.
+  //
+  // La page n'a pas de vocation de référencement (noindex tant que
+  // l'évaluation n'est pas ouverte, et elle est d'abord la destination des
+  // tests du site) : elle est écrite pour convaincre quelqu'un qui arrive d'un
+  // test.
+  const ns = 'bilan';
+  const pageTitle = t('quizzes:bilanCouple.title', 'Évaluation de couple');
+  const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
+  // {{prix}} et {{jours}} dans les textes de la page.
+  const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
+  const L = (k, d) => t(ns + ':lp.' + k, d === undefined ? '' : d);
+  // Le français colle « ? ! : ; » à leur mot.
+  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ') : String(s || '');
+  const e = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const x = (k, d) => e(ins(rp(L(k, d))));
+  const tx = (s) => e(ins(rp(s)));
+  const liste = (k) => { const v = L(k, []); return Array.isArray(v) ? v : []; };
+  const masc = (nom, pose, classe) => (typeof mascotteSvg === 'function' ? mascotteSvg(nom, pose, {}, classe) : '');
+
+  const faqItems = liste('faq.items');
+  const faqEntrees = faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: rp(f.a) } }));
+
+  const baseUrl = 'https://quiz-couple.com';
+  const imageBilan = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
+  const appBilan = {
+    '@context': 'https://schema.org', '@type': 'WebApplication',
+    name: t(ns + ':jsonLd.name', pageTitle),
+    description: t('quizzes:bilanCouple.metaDescription', ''),
+    applicationCategory: 'LifestyleApplication',
+    operatingSystem: 'All',
+    browserRequirements: 'JavaScript',
+    inLanguage: lang,
+    url: canonical,
+    image: imageBilan,
+    about: { '@type': 'Thing', name: t(ns + ':jsonLd.about', '') },
+    offers: { '@type': 'Offer', price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' },
+    author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } }
+  };
+
+  // Les aperçus du rapport : des pages d'un rapport d'exemple (couple
+  // fictif), rendues par bilan/apercus.mjs dans chaque langue (720 px de large).
+  const apercu = (nom) => '/bilan/apercu-' + nom + '-' + lang + '.webp';
+
+  // Tout ce que l'application affiche, dans la langue de la page, avec le
+  // prix et la garantie déjà écrits.
+  const appTextes = JSON.parse(rp(JSON.stringify(t(ns + ':app', {}))));
+  const bilanConfig = {
+    lang,
+    fonction: supabaseUrl + '/functions/v1/bilan',
+    cle: supabaseKey,
+    chemin: getLocalizedPath('bilanCouple', lang),
+    cgv: getLocalizedPath('cgv', lang),
+    contact: getLocalizedPath('contact', lang),
+    prix,
+    garantie: jours,
+    ouvert: !!(typeof bilanOuvert !== 'undefined' && bilanOuvert),
+    apercu: apercu('synthese'),
+    textes: appTextes,
+  };
+
+  // Les douze domaines, dans l'ordre du rapport : titres et noms brefs dans
+  // bilan-questions.json, une phrase par domaine dans lp.domaines.liste.
+  const DOMS = ['quotidien', 'temps', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs', 'disputes', 'confiance', 'intimite', 'meteo'];
+  const domTitre = (id) => t('bilan-questions:domaines.' + id + '.titre', id);
+  const domBref = (id) => t('bilan-questions:domaines.' + id + '.bref', domTitre(id));
+  const domTextes = L('domaines.liste', {}) || {};
+  // Une icône au trait par domaine (24 x 24, trait de 1.8).
+  const ICONES_DOM = {
+    quotidien: '<path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/>',
+    temps: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    entourage: '<circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.5"/><path d="M3 19c.6-3.2 2.5-5 5-5s4.4 1.8 5 5"/><path d="M13.5 18.5c.4-2.4 1.6-3.7 3-3.7s2.7 1.3 3.2 3.7"/>',
+    travail: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/>',
+    argent: '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-1-1.4-1.5-2.5-1.5-1.6 0-2.5.9-2.5 2 0 2.8 5 1.2 5 4 0 1.1-.9 2-2.5 2-1.2 0-2.2-.6-2.6-1.6"/><path d="M12 6.5v1.5M12 16v1.5"/>',
+    logement: '<path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M14 20v-6h-4v6"/><path d="M2 21h20"/>',
+    enfants: '<circle cx="12" cy="7" r="3.5"/><path d="M6 21v-3a6 6 0 0 1 12 0v3"/><path d="M9 14l3 3 3-3"/>',
+    valeurs: '<path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.4 6.7 19.1l1-5.8-4.2-4.1 5.9-.9z"/>',
+    disputes: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/>',
+    confiance: '<path d="M12 3l8 3v6c0 4.6-3.4 8.2-8 9-4.6-.8-8-4.4-8-9V6z"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/>',
+    intimite: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+    meteo: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  };
+  const icone = (chemins, classe) => '<svg class="' + (classe || '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + chemins + '</svg>';
+  const iconesConfiance = [
+    '<circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/>',
+    '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="M3 3l18 18"/>',
+    '<path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/>',
+    '<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+  ];
+  const iconesPour = [ICONES_DOM.logement, ICONES_DOM.disputes, '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/>', ICONES_DOM.intimite];
+  const fleche = '<svg class="blp-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+  const coche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+  // Le radar du haut de page : onze axes (le climat a sa propre partie),
+  // trois formes qui se fondent l'une dans l'autre (opacité seulement).
+  const AXES = DOMS.filter((d) => d !== 'meteo');
+  const RC = { cx: 190, cy: 150, r: 100 };
+  const ang = (i) => -Math.PI / 2 + (2 * Math.PI * i) / AXES.length;
+  const pt = (i, r) => [RC.cx + r * Math.cos(ang(i)), RC.cy + r * Math.sin(ang(i))];
+  const poly = (vals) => vals.map((v, i) => pt(i, RC.r * v / 100).map((n) => n.toFixed(1)).join(',')).join(' ');
+  const FORMES = [[97, 87, 94, 82, 90, 61, 86, 93, 62, 81, 84], [80, 70, 88, 75, 65, 90, 95, 70, 78, 60, 72], [90, 92, 70, 88, 84, 78, 60, 85, 80, 92, 88]];
+  const grilleRadar = [25, 50, 75, 100].map((k) => '<polygon points="' + AXES.map((d, i) => pt(i, RC.r * k / 100).map((n) => n.toFixed(1)).join(',')).join(' ') + '" class="blp-radar-grille' + (k === 100 ? ' blp-radar-grille--bord' : '') + '"/>').join('');
+  const axesRadar = AXES.map((d, i) => { const [px, py] = pt(i, RC.r); return '<line x1="' + RC.cx + '" y1="' + RC.cy + '" x2="' + px.toFixed(1) + '" y2="' + py.toFixed(1) + '" class="blp-radar-axe"/>'; }).join('');
+  const libellesRadar = AXES.map((d, i) => {
+    const c = Math.cos(ang(i)); const s = Math.sin(ang(i));
+    const [lx, ly] = pt(i, RC.r + 18);
+    const anchor = c > 0.25 ? 'start' : c < -0.25 ? 'end' : 'middle';
+    const dy = s > 0.6 ? 8 : s < -0.6 ? -2 : 3;
+    return '<text x="' + lx.toFixed(1) + '" y="' + (ly + dy).toFixed(1) + '" text-anchor="' + anchor + '" class="blp-radar-lib">' + e(domBref(d)) + '</text>';
+  }).join('');
+  const anneauTour = (2 * Math.PI * 26).toFixed(2);
+  const anneauPlein = (2 * Math.PI * 26 * 0.83).toFixed(2);
+
+  // Les trois questions à essayer, telles que Camille les a vues (accords au
+  // féminin, le prénom du partenaire à la place de « {autre} »).
+  const demoQ = liste('demo.questions');
+  const partenaire = L('demo.partenaireNom', 'Julien');
+  const voirPar = (s) => String(s || '').replace(/\{([^|}]*)\|([^|}]*)(?:\|[^}]*)?\}/g, '$2').replace(/\{autre\}/g, partenaire);
+  const qui = t('bilan-questions:qui', []);
+  const demos = demoQ.map((q) => {
+    const d = t('bilan-questions:domaines.' + q.dom + '.questions.' + q.id, null);
+    if (!d) return null;
+    return { domaine: domTitre(q.dom), q: voirPar(d.q), o: (d.o || qui).map(voirPar), pourquoi: voirPar(d.pourquoi || '') };
+  }).filter(Boolean);
+
+  const chiffres = liste('chiffres');
+  const pour = liste('pour.cartes');
+  const pages = liste('rapport.pages');
+  const etapes = liste('etapes.liste');
+  const constats = liste('recherche.constats');
+  const inclus = liste('prix.inclus');
+  const confiance = liste('confiance.points');
+  const comparCols = liste('compar.cols');
+  const comparLignes = liste('compar.lignes');
+  const facons = L('facons', {}) || {};
+%>
+<script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
+<% if (faqEntrees.length) { %>
+<script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
+<% } %>
+
+<div class="blp" data-lang="<%= lang %>">
+
+  <!-- La promesse -->
+  <section class="blp-hero">
+    <div class="blp-wrap blp-hero-grille">
+      <div class="blp-hero-texte">
+        <nav class="blp-ariane" aria-label="Breadcrumb">
+          <a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></span>
+        </nav>
+        <p class="blp-sur"><%- x('badge') %></p>
+        <h1 class="blp-h1"><%- x('titre') %></h1>
+        <p class="blp-lead"><%- x('sousTitre') %></p>
+        <ul class="blp-coches">
+          <% for (const p of liste('points')) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
+        </ul>
+        <div class="blp-ctas">
+          <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
+          <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+        </div>
+        <p class="blp-cta-note"><%- x('ctaNote') %> · <a class="blp-lien" href="#rapport"><%- x('voirExtrait') %></a></p>
+        <div id="bilan-reprise" class="blp-reprise" hidden></div>
+        <noscript><p class="blp-cta-note"><%= lang === 'fr' ? "L'évaluation a besoin de JavaScript pour fonctionner." : 'The assessment needs JavaScript to work.' %></p></noscript>
+      </div>
+      <div class="blp-hero-visuel">
+        <div class="blp-radar-carte">
+          <p class="blp-radar-sur"><%- x('visuel.sur') %></p>
+          <p class="blp-radar-noms"><%- x('visuel.noms') %></p>
+          <svg class="blp-radar" viewBox="0 0 380 300" role="img" aria-label="<%- x('visuel.legende') %>">
+            <%- grilleRadar %><%- axesRadar %>
+            <% FORMES.forEach((f, i) => { %><polygon points="<%= poly(f) %>" class="blp-radar-forme blp-radar-forme--<%= i + 1 %>"/><% }) %>
+            <%- libellesRadar %>
+          </svg>
+          <div class="blp-radar-pied">
+            <div class="blp-anneau" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" class="blp-anneau-fond"/><circle cx="32" cy="32" r="26" class="blp-anneau-trait" stroke-dasharray="<%= anneauPlein %> <%= anneauTour %>" transform="rotate(-90 32 32)"/></svg>
+              <span class="blp-anneau-val">83<small>%</small></span>
+            </div>
+            <p class="blp-radar-lib"><%- x('visuel.alignement') %></p>
+          </div>
+          <%- masc('rose', 'salut', 'blp-masc blp-masc--rose') %>
+          <%- masc('violet', 'mignon', 'blp-masc blp-masc--violet') %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quelques chiffres -->
+  <section class="blp-chiffres" aria-label="<%- x('badge') %>">
+    <div class="blp-wrap blp-chiffres-grille">
+      <% for (const c of chiffres) { %>
+      <div class="blp-chiffre"><p class="blp-chiffre-n"><%= c.n %></p><p class="blp-chiffre-l"><%- tx(c.l) %></p></div>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Le ruban des douze domaines -->
+  <div class="blp-ruban" aria-hidden="true">
+    <% for (const k of [0, 1]) { %>
+    <div class="blp-ruban-piste">
+      <% for (const d of DOMS) { %><span class="blp-ruban-puce"><%- icone(ICONES_DOM[d], 'blp-ruban-ico') %><%- tx(domTitre(d)) %></span><% } %>
+    </div>
+    <% } %>
+  </div>
+
+  <!-- À deux ou seul(e) -->
+  <section class="blp-section blp-facons" id="facons">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('facons.titre') %></h2>
+      <p class="blp-intro"><%- x('facons.intro') %></p>
+      <div class="blp-facons-grille">
+        <% for (const m of ['duo', 'solo']) { const f = facons[m] || {}; %>
+        <article class="blp-facon blp-facon--<%= m %> animate-on-scroll">
+          <div class="blp-facon-persos" aria-hidden="true"><%- m === 'duo' ? masc('rose', 'salut', 'blp-masc-s') + masc('violet', 'mignon', 'blp-masc-s') : masc('rose', 'mignon', 'blp-masc-s') %></div>
+          <p class="blp-facon-sous"><%- tx(f.sous) %></p>
+          <h3 class="blp-facon-titre"><%- tx(f.titre) %></h3>
+          <ul class="blp-coches">
+            <% for (const p of (f.points || [])) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
+          </ul>
+          <button type="button" class="blp-btn<%= m === 'solo' ? ' blp-btn--violet' : '' %>" data-bilan-commencer="<%= m %>"><%- tx(f.cta) %><%- fleche %></button>
+        </article>
+        <% } %>
+      </div>
+      <p class="blp-note blp-centre"><%- x('facons.note') %></p>
+    </div>
+  </section>
+
+  <!-- Le rapport, page par page -->
+  <section class="blp-section blp-rapport" id="rapport">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('rapport.titre') %></h2>
+      <p class="blp-intro"><%- x('rapport.intro') %></p>
+    </div>
+    <div class="blp-wrap blp-wrap--large">
+      <div class="quiz-slider blp-slider" data-slider>
+        <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="quiz-slider__track blp-slider-piste" data-slider-track>
+          <% pages.forEach((p, i) => { %>
+          <figure class="quiz-slide blp-slide">
+            <div class="blp-slide-image"><img src="<%= apercu(p.img) %>" alt="<%- tx(p.titre) %>" width="720" height="1018" loading="<%= i < 2 ? 'eager' : 'lazy' %>" decoding="async"></div>
+            <figcaption class="blp-slide-texte">
+              <p class="blp-slide-num"><%= String(i + 1).padStart(2, '0') %></p>
+              <h3 class="blp-h3"><%- tx(p.titre) %></h3>
+              <p><%- tx(p.texte) %></p>
+            </figcaption>
+          </figure>
+          <% }) %>
+        </div>
+        <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="quiz-slider__pied" aria-hidden="true">
+          <div class="quiz-slider__barre"><span class="quiz-slider__avance"></span></div>
+          <span class="quiz-slider__compteur" data-slider-compteur></span>
+        </div>
+      </div>
+      <p class="blp-legende"><%- x('rapport.legende') %></p>
+    </div>
+  </section>
+
+  <!-- Comment ça se passe : la frise -->
+  <section class="blp-section blp-etapes">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('etapes.titre') %></h2>
+      <ol class="blp-tl">
+        <% etapes.forEach((s, i) => { %>
+        <li class="blp-tl-etape animate-on-scroll">
+          <div class="blp-tl-rail" aria-hidden="true"><span class="blp-tl-num"><%= i + 1 %></span></div>
+          <div class="blp-tl-corps">
+            <p class="blp-tl-duree"><%- tx(s.duree) %></p>
+            <h3 class="blp-h3"><%- tx(s.titre) %></h3>
+            <p><%- tx(s.texte) %></p>
+          </div>
+          <div class="blp-tl-mock blp-tl-mock--<%= i + 1 %>" aria-hidden="true">
+            <% if (i === 0) { %><span class="blp-mock-chip blp-mock-chip--on"><%- tx((facons.duo || {}).titre) %></span><span class="blp-mock-chip"><%- tx((facons.solo || {}).titre) %></span>
+            <% } else if (i === 1) { %><span class="blp-mock-q"></span><span class="blp-mock-opt blp-mock-opt--on"></span><span class="blp-mock-opt"></span><span class="blp-mock-opt"></span>
+            <% } else if (i === 2) { %><span class="blp-mock-prix"><%= prix %></span><span class="blp-mock-cadenas"><%- icone(iconesConfiance[3]) %></span>
+            <% } else { %><span class="blp-mock-page blp-mock-page--1"></span><span class="blp-mock-page blp-mock-page--2"></span><span class="blp-mock-page blp-mock-page--3"></span><% } %>
+          </div>
+        </li>
+        <% }) %>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Les douze domaines -->
+  <section class="blp-section blp-domaines">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('domaines.titre') %></h2>
+      <p class="blp-intro"><%- x('domaines.intro') %></p>
+      <ul class="blp-doms">
+        <% for (const d of DOMS) { %>
+        <li class="blp-dom blp-dom--<%= d %> animate-on-scroll">
+          <span class="blp-dom-ico"><%- icone(ICONES_DOM[d]) %></span>
+          <h3 class="blp-dom-titre"><%- tx(domTitre(d)) %></h3>
+          <p><%- tx(domTextes[d] || '') %></p>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Trois questions à essayer -->
+  <% if (demos.length) { %>
+  <section class="blp-section blp-demo">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('demo.titre') %></h2>
+      <p class="blp-intro"><%- x('demo.intro') %></p>
+      <div class="blp-dqs">
+        <% demos.forEach((d, i) => { %>
+        <article class="blp-dq animate-on-scroll">
+          <p class="blp-dq-dom"><%- tx(d.domaine) %></p>
+          <h3 class="blp-dq-q"><%- tx(d.q) %></h3>
+          <div class="blp-dq-opts" role="group">
+            <% d.o.forEach((o, j) => { %><button type="button" class="blp-dq-opt" data-demo-option aria-pressed="false"><span class="blp-dq-rond" aria-hidden="true"></span><span><%- tx(o) %></span></button><% }) %>
+          </div>
+          <div class="blp-dq-face">
+            <div class="blp-dq-faces">
+              <div class="blp-dq-col blp-dq-col--rose"><p class="blp-dq-qui"><%- x('demo.vous') %></p><p class="blp-dq-rep" data-demo-vous></p></div>
+              <div class="blp-dq-col blp-dq-col--violet"><p class="blp-dq-qui"><%- x('demo.partenaire') %></p><p class="blp-dq-rep blp-dq-rep--attente"><%- x('demo.attente') %></p></div>
+            </div>
+            <% if (d.pourquoi) { %><p class="blp-dq-pourquoi-titre"><%- x('demo.pourquoi') %></p><p class="blp-dq-pourquoi"><%- tx(d.pourquoi) %></p><% } %>
+          </div>
+        </article>
+        <% }) %>
+      </div>
+      <p class="blp-note blp-centre"><%- x('demo.apres') %></p>
+      <p class="blp-note blp-centre"><%- x('demo.fin') %></p>
+      <div class="blp-ctas blp-ctas--centre">
+        <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('demo.cta') %><%- fleche %></button>
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+  <!-- Pour qui -->
+  <section class="blp-section blp-pour">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('pour.titre') %></h2>
+      <p class="blp-intro"><%- x('pour.intro') %></p>
+      <div class="blp-cartes">
+        <% pour.forEach((c, i) => { %>
+        <article class="blp-carte animate-on-scroll">
+          <span class="blp-carte-ico"><%- icone(iconesPour[i % iconesPour.length]) %></span>
+          <h3 class="blp-h3"><%- tx(c.titre) %></h3>
+          <p><%- tx(c.texte) %></p>
+        </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Un conseiller, une IA, ou cette évaluation -->
+  <section class="blp-section blp-compar">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('compar.titre') %></h2>
+      <p class="blp-intro"><%- x('compar.intro') %></p>
+      <div class="blp-tableau" role="table" aria-label="<%- x('compar.titre') %>">
+        <div class="blp-tableau-tete" role="row">
+          <span role="columnheader"></span>
+          <% comparCols.forEach((c, i) => { %><span role="columnheader" class="blp-col blp-col--<%= i + 1 %>"><%- tx(c) %></span><% }) %>
+        </div>
+        <% for (const l of comparLignes) { %>
+        <div class="blp-tableau-ligne" role="row">
+          <span role="rowheader" class="blp-tableau-sujet"><%- tx(l.sujet) %></span>
+          <% (l.c || []).forEach((v, i) => { %><span role="cell" class="blp-col blp-col--<%= i + 1 %>" data-col="<%- tx(comparCols[i] || '') %>"><%- tx(v) %></span><% }) %>
+        </div>
+        <% } %>
+      </div>
+      <p class="blp-conclusion"><%- x('compar.conclusion') %></p>
+    </div>
+  </section>
+
+  <!-- La recherche -->
+  <section class="blp-section blp-recherche">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('recherche.titre') %></h2>
+      <p class="blp-intro"><%- x('recherche.p1') %></p>
+      <ol class="blp-constats">
+        <% for (const c of constats) { %><li class="animate-on-scroll"><%- tx(c) %></li><% } %>
+      </ol>
+      <p class="blp-note"><%- x('recherche.p2') %></p>
+    </div>
+  </section>
+
+  <!-- Le prix -->
+  <section class="blp-section blp-prix-section" id="prix">
+    <div class="blp-wrap">
+      <div class="blp-prix">
+        <div class="blp-prix-tete">
+          <h2 class="blp-h2"><%- x('prix.titre') %></h2>
+          <p class="blp-prix-montant"><%= prix %></p>
+          <p class="blp-prix-unite"><%- x('prix.unite') %></p>
+        </div>
+        <div class="blp-prix-corps">
+          <ul class="blp-coches blp-coches--sombre">
+            <% for (const p of inclus) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
+          </ul>
+          <p class="blp-prix-aide"><%- x('prix.aide') %></p>
+          <% if (jours > 0) { %><p class="blp-garantie"><%- x('prix.garantie') %></p><% } %>
+          <p class="blp-prix-comparaison"><%- x('prix.comparaison') %></p>
+          <div class="blp-ctas">
+            <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
+            <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La confiance -->
+  <section class="blp-section blp-confiance">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('confiance.titre') %></h2>
+      <div class="blp-confiance-grille">
+        <% confiance.forEach((c, i) => { %>
+        <div class="blp-confiance-point animate-on-scroll">
+          <span class="blp-carte-ico"><%- icone(iconesConfiance[i % iconesConfiance.length]) %></span>
+          <h3 class="blp-h3"><%- tx(c.titre) %></h3>
+          <p><%- tx(c.texte) %></p>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions fréquentes -->
+  <section class="blp-section blp-faq">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('faq.titre') %></h2>
+      <div class="blp-faq-liste">
+        <% for (const f of faqItems) { %>
+        <details class="blp-faq-item">
+          <summary><%- tx(f.q) %></summary>
+          <p><%- tx(f.a) %></p>
+        </details>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dernier appel -->
+  <section class="blp-final">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('final.titre') %></h2>
+      <p class="blp-lead"><%- x('final.texte') %></p>
+      <div class="blp-ctas blp-ctas--centre">
+        <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
+        <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+      </div>
+      <p class="blp-cta-note"><%- x('ctaNote') %></p>
+    </div>
+  </section>
+
+  <p class="blp-avertissement blp-wrap"><%- x('avertissement') %></p>
+
+  <!-- La barre collée en bas, sur téléphone, dès que le haut de page est passé -->
+  <div class="blp-colle" id="blp-colle" hidden>
+    <span class="blp-colle-texte"><%- x('colle.texte') %></span>
+    <button type="button" class="blp-btn blp-btn--petit" data-bilan-commencer><%- x('colle.bouton') %><%- fleche %></button>
+  </div>
+</div>
+
+<!-- L'application : masquée tant qu'on n'a pas commencé -->
+<section class="bilan-scene" aria-live="polite">
+  <div class="bilan-scene-barre">
+    <button type="button" class="bilan-scene-retour" data-bilan-quitter>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+      <span><%= t(ns + ':app.accueil.quitter', 'Retour') %></span>
+    </button>
+    <span class="bilan-scene-titre"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></span>
+  </div>
+  <div class="container mx-auto px-4">
+    <div id="bilan-app" class="bilan" data-lang="<%= lang %>">
+      <div class="bilan-carte bilan-chargement">
+        <p><%= t(ns + ':app.chargement', 'Chargement...') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>window.BILAN_CONFIG = <%- JSON.stringify(bilanConfig).replace(/</g, '\\u003c') %>;</script>
+<script src="/js/quiz-slider.js" defer></script>
+<script src="/js/bilan-lp.js" defer></script>
+<script src="/js/mascottes.js" defer></script>
+<script src="/js/bilan-coeur.js" defer></script>
+<script src="/js/bilan-rapport.js" defer></script>
+<script src="/js/bilan.js" defer></script>

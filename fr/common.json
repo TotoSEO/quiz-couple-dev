@@ -114,7 +114,11 @@
     "quizMortFilmHorreur": "Qui meurt en premier (film d'horreur)",
     "quizPossession": "Qui pourrait se faire posséder",
     "quizSuperVilain": "Quel super-vilain es-tu",
-    "quizDuoVilains": "Quel duo de super-vilains"
+    "quizDuoVilains": "Quel duo de super-vilains",
+    "bilanCouple": "Évaluation de couple",
+    "evaluer": "Évaluer son couple",
+    "evaluerSous": "L'évaluation complète, à deux ou seul(e)",
+    "bilanCoupleDesc": "100 questions chacun de son côté, et un rapport de 30 pages"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",
@@ -132,7 +136,8 @@
     "sourcePrefAide": "Une option de Google : les sites que vous ajoutez remontent plus haut dans vos résultats et dans les réponses IA. Le réglage est lié à votre compte Google et se retire à tout moment.",
     "sourcePrefAideAria": "Qu'est-ce qu'une source préférée ?",
     "cookiePrefs": "Gérer mes cookies",
-    "instagram": "Suivez-nous sur Instagram"
+    "instagram": "Suivez-nous sur Instagram",
+    "cgv": "Conditions de vente"
   },
   "buttons": {
     "start": "Commencer",
@@ -178,6 +183,23 @@
     "optional": "optionnel",
     "commentPlaceholder": "Partagez votre expérience...",
     "stars": "étoiles"
+  },
+  "capture": {
+    "sur": "Vos résultats complets",
+    "titre": "Pour déverrouiller le reste de vos résultats, renseignez votre e-mail",
+    "texte": "Le détail de votre résultat, les conseils et la suite s'affichent juste après.",
+    "placeholder": "votre@email.com",
+    "consentement": "J'accepte de recevoir les conseils et offres de Quiz Couple par e-mail. Désinscription en un clic, à tout moment.",
+    "confidentialite": "Confidentialité",
+    "bouton": "Voir mes résultats",
+    "envoi": "Un instant...",
+    "suggestion": "Vous vouliez dire {{domaine}} ?",
+    "erreurs": {
+      "format": "Cette adresse e-mail n'a pas l'air complète.",
+      "domaine": "Cette adresse ne peut pas recevoir d'e-mails. Vérifiez le domaine.",
+      "jetable": "Les adresses jetables ne sont pas acceptées.",
+      "consentement": "Cochez la case pour continuer."
+    }
   },
   "blog": {
     "pageTitle": "Blog - Conseils et astuces pour couples | Quiz Couple",

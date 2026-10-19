@@ -249,6 +249,10 @@
           </div>
         </div>
 
+        <%# L'évaluation de couple (partials/bilan-banniere.ejs), sur les
+            articles qui y renvoient (bilanEntree, posé par generate.js). %>
+        <%- include('../partials/bilan-banniere') %>
+
         <!-- Back to blog link -->
         <div class="mt-8 mb-10">
           <a href="<%= blogUrl %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors">

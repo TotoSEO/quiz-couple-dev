@@ -112,7 +112,11 @@
     "quizMortFilmHorreur": "Quién muere primero (película de terror)",
     "quizPossession": "Quién podría ser poseído",
     "quizSuperVilain": "Qué supervillano eres",
-    "quizDuoVilains": "Qué dúo de supervillanos"
+    "quizDuoVilains": "Qué dúo de supervillanos",
+    "bilanCouple": "Evaluación de pareja",
+    "evaluer": "Evaluar tu pareja",
+    "evaluerSous": "La evaluación completa, en pareja o a solas",
+    "bilanCoupleDesc": "100 preguntas cada uno por su lado, y un informe de 30 páginas"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",
@@ -130,7 +134,8 @@
     "sourcePrefAide": "Una opción de Google: los sitios que añadís aparecen más arriba en vuestros resultados y en las respuestas de IA. Está vinculada a vuestra cuenta de Google y se puede quitar en cualquier momento.",
     "sourcePrefAideAria": "¿Qué es una fuente preferida?",
     "cookiePrefs": "Gestionar las cookies",
-    "instagram": "Síguenos en Instagram"
+    "instagram": "Síguenos en Instagram",
+    "cgv": "Condiciones de venta"
   },
   "buttons": {
     "start": "Empezar",
@@ -176,6 +181,23 @@
     "optional": "opcional",
     "commentPlaceholder": "Comparte tu experiencia...",
     "stars": "estrellas"
+  },
+  "capture": {
+    "sur": "Tus resultados completos",
+    "titre": "Para desbloquear el resto de tus resultados, indica tu e-mail",
+    "texte": "El detalle de tu resultado, los consejos y lo que viene después aparecen justo después.",
+    "placeholder": "tu@email.com",
+    "consentement": "Acepto recibir los consejos y ofertas de Quiz Couple por e-mail. Baja en un clic, cuando quieras.",
+    "confidentialite": "Privacidad",
+    "bouton": "Ver mis resultados",
+    "envoi": "Un momento...",
+    "suggestion": "¿Querías decir {{domaine}}?",
+    "erreurs": {
+      "format": "Esta dirección de e-mail no parece completa.",
+      "domaine": "Esta dirección no puede recibir e-mails. Comprueba el dominio.",
+      "jetable": "No se aceptan direcciones desechables.",
+      "consentement": "Marca la casilla para continuar."
+    }
   },
   "blog": {
     "pageTitle": "Blog - Consejos para parejas | Quiz Couple",

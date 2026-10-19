@@ -1,0 +1,41 @@
+name: Abonnés e-mail · base Supabase
+
+# Applique 20261020100000_abonnes.sql par l'API de gestion de Supabase, comme
+# bilan-base.yml, avec les secrets déjà là (SUPABASE_ACCESS_TOKEN et
+# SUPABASE_PROJECT_REF). La migration crée la table des abonnés e-mail
+# (fermée à la clé publique), reprend les leads de l'e-book vérifiés et crée
+# get_abonnes_tableau pour l'onglet Leads de l'admin. Idempotente : la
+# relancer (« Run workflow ») est sans risque.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261020100000_abonnes.sql'
+      - '.github/workflows/abonnes-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: abonnes-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Table des abonnés et lecture de l'admin
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261020100000_abonnes.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi
