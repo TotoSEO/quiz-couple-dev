@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-19T03:13:30.815Z",
+  "genere_le": "2026-10-19T08:48:10.409Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -1064,72 +1064,6 @@
   "a_corriger": [],
   "hors_grille": [
     {
-      "jour": "2026-11-01",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "midi",
-      "categorie": "statique",
-      "attendue": "tu-preferes"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "soir",
-      "categorie": "pov",
-      "attendue": "tu-preferes"
-    },
-    {
-      "jour": "2026-11-03",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-04",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-04",
-      "creneau": "soir",
-      "categorie": "pov",
-      "attendue": "tu-preferes"
-    },
-    {
-      "jour": "2026-11-05",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-05",
-      "creneau": "midi",
-      "categorie": "statique",
-      "attendue": "tu-preferes"
-    },
-    {
-      "jour": "2026-11-06",
-      "creneau": "matin",
-      "categorie": "pov",
-      "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-06",
-      "creneau": "soir",
-      "categorie": "coquin",
-      "attendue": "tu-preferes"
-    },
-    {
       "jour": "2026-11-07",
       "creneau": "matin",
       "categorie": "pov",
@@ -1140,12 +1074,6 @@
       "creneau": "matin",
       "categorie": "pov",
       "attendue": "baton"
-    },
-    {
-      "jour": "2026-11-08",
-      "creneau": "midi",
-      "categorie": "statique",
-      "attendue": "tu-preferes"
     },
     {
       "jour": "2026-11-09",
@@ -1590,7 +1518,7 @@
       "creneau": "matin",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1644,7 +1572,7 @@
       "creneau": "matin",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1939,20 +1867,20 @@
     {
       "jour": "2026-11-01",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-01",
       "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-01",
@@ -1966,11 +1894,11 @@
     {
       "jour": "2026-11-02",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-02",
@@ -1984,20 +1912,20 @@
     {
       "jour": "2026-11-02",
       "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-03",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-03",
@@ -2020,11 +1948,11 @@
     {
       "jour": "2026-11-04",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-04",
@@ -2038,29 +1966,29 @@
     {
       "jour": "2026-11-04",
       "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-05",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-05",
       "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-05",
@@ -2074,11 +2002,11 @@
     {
       "jour": "2026-11-06",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "echec",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
       "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "erreur": null
     },
     {
       "jour": "2026-11-06",
@@ -2092,11 +2020,11 @@
     {
       "jour": "2026-11-06",
       "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "coquin",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-07",
@@ -2137,11 +2065,11 @@
     {
       "jour": "2026-11-08",
       "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "echec",
-      "texte": null,
-      "erreur": "catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue"
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
     },
     {
       "jour": "2026-11-08",
@@ -2462,7 +2390,7 @@
   "idees": [],
   "prochain_creneau": {
     "connais-tu": {
-      "jour": "2026-10-19",
+      "jour": "2026-10-21",
       "creneau": "midi"
     },
     "tu-preferes": {
@@ -2628,6 +2556,20 @@
       "variante_id": "d657f00d-a17f-4d62-af7f-2eb25019ac2c",
       "releve": "j7",
       "vues": 192,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "70e1484f-b804-4e27-b50f-9f6fd9d5906e",
+      "releve": "j7",
+      "vues": 983,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "e3239beb-56bf-4aa6-bff0-bdb05c40c462",
+      "releve": "j7",
+      "vues": 261,
       "partages": 0,
       "enregistrements": 0
     }
