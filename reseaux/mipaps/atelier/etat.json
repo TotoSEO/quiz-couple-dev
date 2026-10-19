@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-19T03:13:33.192Z",
+  "genere_le": "2026-10-19T08:48:12.830Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,128 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 21,
+  "reserve_jours": 32,
   "a_remplir": [
-    {
-      "jour": "2026-11-09",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-09",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-10",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-11",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-11",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-12",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-13",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-13",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-14",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-14",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-15",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-15",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-16",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-16",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-16",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-18",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-18",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-18",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-19",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-19",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-19",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
     {
       "jour": "2026-11-20",
       "creneau": "matin",
@@ -1432,7 +1312,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1486,7 +1366,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1996,11 +1876,38 @@
     },
     {
       "jour": "2026-11-09",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-09",
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
       "texte": "t'as entendu ce bruit ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2023,11 +1930,38 @@
     },
     {
       "jour": "2026-11-11",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-11",
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
       "texte": "si je t'avais pas rencontré, t'aurais quelqu'un d'autre. je t'en veux.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2050,11 +1984,47 @@
     },
     {
       "jour": "2026-11-13",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-13",
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
       "texte": "je dors pas, j'attends que tu rentres.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'as vu mon message ?",
       "erreur": null
     },
     {
@@ -2068,11 +2038,137 @@
     },
     {
       "jour": "2026-11-15",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-15",
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
       "texte": "avant de dormir, chez nous",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "on mange quoi ce soir ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'es la seule personne avec qui je peux rien faire et trouver ça trop bien.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "je dors mieux quand t'es là. même quand tu prends toute la place.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "pardon pour tout à l'heure. j'avais faim.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "les signes qu'on est ensemble depuis longtemps",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "j'aime bien quand tu me racontes un truc et que tu ris avant la fin",
       "erreur": null
     },
     {
@@ -2136,7 +2232,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-19",
+      "jour": "2026-10-20",
       "creneau": "midi"
     }
   },
@@ -2278,6 +2374,20 @@
       "variante_id": "d657f00d-a17f-4d62-af7f-2eb25019ac2c",
       "releve": "j7",
       "vues": 192,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "70e1484f-b804-4e27-b50f-9f6fd9d5906e",
+      "releve": "j7",
+      "vues": 983,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "e3239beb-56bf-4aa6-bff0-bdb05c40c462",
+      "releve": "j7",
+      "vues": 261,
       "partages": 0,
       "enregistrements": 0
     }
