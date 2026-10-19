@@ -1,0 +1,179 @@
+{
+  "jour": "2026-11-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-116",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le bruit des clés dans la porte : elle s'ennuie sur le canapé ; un bruit de porte, elle se redresse d'un coup ; elle court jusqu'à lui ; câlin et cœurs. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est assise sur le canapé, les yeux plats, elle s'ennuie, la tête sur la patte. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le bruit des clés dans la porte",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Un bruit de porte à 0,4 s : elle se redresse d'un coup, les yeux grands. À 1,2 s elle saute du canapé et court vers la droite, de profil. Il apparaît à 2 s au bord droit, content, les bras ouverts.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "joie",
+                    "signes": [],
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "sprint"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 440
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 2,
+                    "x": 540,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 0.4
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux sont serrés l'un contre l'autre au milieu, yeux fermés, elle accrochée à son cou. Trois cœurs flottent au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 0.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.3,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

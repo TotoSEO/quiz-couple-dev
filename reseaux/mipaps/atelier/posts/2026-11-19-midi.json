@@ -1,0 +1,49 @@
+{
+  "jour": "2026-11-19",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-141",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma : la liste des signes qu'on est ensemble depuis longtemps, tout coché.",
+        "style": "schema",
+        "texte": "les signes qu'on est ensemble depuis longtemps",
+        "schema": {
+          "type": "liste",
+          "lignes": [
+            {
+              "texte": "on parle du dîner pendant le déjeuner",
+              "coche": true
+            },
+            {
+              "texte": "on s'envoie des vidéos toute la journée",
+              "coche": true
+            },
+            {
+              "texte": "on se comprend d'un regard",
+              "coche": true
+            },
+            {
+              "texte": "on se dit encore bonne nuit",
+              "coche": true
+            }
+          ]
+        }
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}
