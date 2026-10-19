@@ -2,287 +2,96 @@
   "jour": "2026-11-06",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-041",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-020",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "« Devine ce que j'ai acheté » : la rose montre un cadeau, le violet saute de joie, c'est pour elle, il boude, puis elle sort un deuxième cadeau pour lui. Aucune bulle.",
-        "titre": "POV: 'guess what I bought'",
-        "plans": [
-          {
-            "description": "Un mur crème et un sol beige, en plein jour. Dès la première image la rose est debout à gauche et tient devant elle un joli cadeau avec un nœud, un sourire malicieux, les joues roses. Le violet, à droite, la regarde, les yeux brillants, la bouche en grand sourire, les mains jointes d'impatience. Une goutte d'excitation et des étincelles flottent au-dessus de lui.",
-            "duree": 3.6,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.6,
-                    "objet": "cadeau",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "brillants",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.5,
-                    "a": 3.6,
-                    "effet": "etincelles"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          },
-          {
-            "description": "Même mur. Le violet saute de joie deux fois, les bras en l'air, les yeux brillants, un « ! » au-dessus de la tête. La rose attend qu'il se calme, puis serre le cadeau contre elle, les yeux fermés de bonheur, la bouche de chat, et fait non de la tête. Le violet s'arrête net en plein saut : ses yeux deviennent plats. Zoom rapide sur lui à 2,6 s.",
-            "duree": 4.0,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.0,
-                    "objet": "cadeau",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "clin",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "mignon",
-                    "de": 1.8,
-                    "a": 4.0
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "saute",
-                    "de": 0,
-                    "a": 2.0,
-                    "fois": 2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.2,
-                    "yeux": "brillants",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 2.2,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.2,
-                    "a": 4.0,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 4.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 2.6,
-                "zoom": 1
-              },
-              {
-                "a": 2.9,
-                "zoom": 1.5,
-                "cible": "violet"
-              }
-            ]
-          },
-          {
-            "description": "Plan large. Le violet boude, les bras croisés du regard, les yeux plats, la bouche en moue, une goutte de gêne sur la tempe. La rose éclate de rire, puis sort de derrière son dos un deuxième petit cadeau et le tend au violet. Ses yeux deviennent brillants, il saute de joie, et des cœurs montent au-dessus d'eux. La caméra se rapproche doucement.",
-            "duree": 4.4,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 2.0,
-                    "objet": "cadeau",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 2.0
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 2.0,
-                    "a": 4.4,
-                    "objet": "cadeau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
-                    "a": 4.4,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "boude",
-                    "de": 0,
-                    "a": 2.0
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.4,
-                    "a": 2.0,
-                    "effet": "goutte"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 4.4,
-                    "yeux": "brillants",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "joie",
-                    "de": 2.6,
-                    "a": 4.4
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.0,
-                    "a": 4.4,
-                    "effet": "coeurs"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.4,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          }
-        ],
+        "idee": "Devant la maison, le soir, elle regarde les oiseaux rentrer au nid et soupire. Lui a l'idée : il ouvre les bras, les ailes se déploient dans un nuage de plumes, il décolle d'un pied, lui tend la main, elle la prend au ralenti, et ils filent dans le ciel du soir, un looping, puis se posent sur un nuage ; assis, la tête l'un contre l'autre ; et ses ailes à elle surgissent, ils éclatent de rire.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "tendre",
+          "recherche": "I Believe I Can Fly"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-ciel",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison en fin de journée : le toit et la cheminée à droite, la porte, le chemin, le grand arbre à gauche. Ils se parlent debout face à face, il gesticule, elle penche la tête et rit. À 1,2 s un vol de cinq oiseaux traverse le ciel de droite à gauche et rentre au nid dans l'arbre ; elle se tourne et les suit du doigt, les yeux en cœur, puis les épaules tombent et elle soupire, la tête baissée : elle voudrait être là-haut. Lui lève la tête vers les oiseaux, sourit, la regarde avec tendresse, et son visage se ferme sur un sourire en coin : il a une idée. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la maison floue derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard posé sur elle. À 1,0 s un sourcil se lève et le sourire devient un sourire en coin, les yeux plissés : l'idée est là ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent qui se lève mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "ailes": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, la caméra se cale large sur lui, elle à droite. Il ouvre les bras en croix, la poitrine en avant, la tête en arrière : deux grandes ailes de plumes jaillissent dans son dos et se déploient d'un coup, onde de choc au sol, poussière, des plumes qui volent partout, l'écran tremble ; elle recule d'un pas, bouche ouverte. Les ailes battent lentement, il se redresse, et ses pieds quittent le herbe : il plane à quelques centimètres du sol, un sourire tranquille, pendant qu'elle le regarde les yeux brillants. "
+            },
+            {
+              "sequence": "exploit",
+              "type": "envol",
+              "description": "Plan d'ensemble, la caméra suit. Il plane jusqu'à elle, les ailes qui battent, et lui tend la main ; elle tend la sienne, et au moment où les doigts se touchent, ralenti huit fois, caméra serrée sur les deux mains, voile bleuté, battement de cœur. Elle est soulevée du sol, poussière, onde ; il bascule à l'horizontale, elle flotte derrière lui accrochée à sa main, les cheveux au vent, et ils filent en diagonale vers le coin haut droit, rémanences, lignes de vitesse, souffle d'air, jusqu'à sortir du cadre."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "ciel",
+                  "looping": true,
+                  "duree": 3.0,
+                  "description": "Transition floue d'une seconde, puis travelling dans le ciel : des nuages sur trois plans qui glissent, la ligne des montagnes tout en bas, un vol d'oiseaux qui passe. Lui à l'horizontale, les ailes qui battent, elle accrochée à sa main qui flotte derrière, tous les deux heureux ; le corps ondule doucement. À mi-chemin, un looping complet : ils tournent ensemble, lignes de vitesse, elle rit aux éclats ; des cœurs montent derrière eux."
+                },
+                {
+                  "decor": "ciel",
+                  "duree": 2.4,
+                  "description": "Transition floue, le ciel encore, plus haut : les nuages sont plus gros et plus près, le soleil à gauche. Ils volent main dans la main, les ailes qui battent lentement, elle le regarde, lui regarde devant, les cœurs montent derrière eux, un deuxième vol d'oiseaux les croise plus bas ; la caméra pousse doucement sur eux pour amener la coupe."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "nuage",
+              "description": "Transition floue d'une seconde : on découvre un grand nuage, le tapis blanc à bosses, un soleil énorme derrière, les sommets des montagnes qui dépassent en dessous. Ils arrivent en vol par la gauche, descendent en douceur ; il se pose accroupi, une main au sol, elle lâche sa main et atterrit à côté, des plumes qui retombent, un peu de poussière de nuage. Ils se redressent et se regardent, elle les joues roses ; la caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large sur le nuage, le soleil à droite. Il fait deux pas et s'assied au bord, elle le rejoint et s'assied contre lui, tous les deux face au soleil, la tête qui se penche vers l'autre. Ils regardent le ciel. Puis, surprise : deux ailes se déploient dans le dos d'elle, des plumes partout, il se tourne, les yeux ronds, elle n'en revient pas non plus, et ils éclatent de rire pendant que des cœurs montent entre eux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "She bought a gift and let him get excited first.\n\nTag your partner.",
+      "legende": "When he wants to fly with you.\n\nSend this to your partner",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

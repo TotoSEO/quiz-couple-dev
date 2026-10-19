@@ -2,279 +2,77 @@
   "jour": "2026-11-03",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-043",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-017",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Il tient le parapluie pour elle : la rose grelotte sous la pluie, le violet arrive avec un parapluie, il s'en sert pour elle et finit mouillé, câlin sous le parapluie. Aucune bulle.",
-        "titre": "POV: holding the umbrella for her",
-        "plans": [
-          {
-            "description": "Une rue de ville en matinée, ciel gris, la pluie tombe. Dès la première image la rose est debout au milieu du trottoir, sans parapluie, les épaules rentrées, les yeux plats, la bouche triste, et elle frissonne ; trois petits points flottent au-dessus de sa tête. À 1 s le violet entre par le bord droit en marchant, un grand parapluie ouvert à la main. La caméra se rapproche doucement.",
-            "duree": 3.8,
-            "decor": "rue",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "tremble",
-                    "de": 0,
-                    "a": 3.8
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "plats",
-                    "bouche": "triste",
-                    "sourcils": "tristes"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.4,
-                    "a": 2.4,
-                    "effet": "points"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": 1100,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.2,
-                    "vers": 700
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "parapluie",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.0,
-                    "a": 3.8,
-                    "cible": "rose"
-                  }
-                ]
-              }
-            ],
-            "ambiance": "pluie",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.8,
-                "zoom": 1.15,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Même rue sous la pluie. Le violet se tient maintenant juste à côté de la rose et tient le parapluie au-dessus de sa tête. Les yeux de la rose s'écarquillent, ses joues rosissent, elle lève les yeux vers lui et sourit timidement ; elle arrête de trembler. Le violet, lui, se retrouve à moitié sous la pluie et une goutte de gêne glisse sur sa tempe, mais il garde un grand sourire. Zoom rapide sur leurs visages à 0,3 s.",
-            "duree": 3.8,
-            "decor": "rue",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "tremble",
-                    "de": 0,
-                    "a": 0.6
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0.3,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.2,
-                    "yeux": "ouverts",
-                    "bouche": "o",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.2,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": 700,
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "parapluie",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.6,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "ambiance": "pluie",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.5,
-                "x": 620,
-                "y": 1100
-              }
-            ]
-          },
-          {
-            "description": "Plan large sous la pluie. La rose se rapproche et pose la tête contre l'épaule du violet : câlin, les deux ferment les yeux de bonheur, joues roses, le parapluie au-dessus d'eux ; des cœurs montent. Le violet rouvre les yeux à 2,4 s, tout heureux, la bouche de chat. La caméra recule doucement pour montrer la rue mouillée.",
-            "duree": 4.2,
-            "decor": "rue",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.4,
-                    "a": 4.2,
-                    "yeux": "fermes",
-                    "bouche": "chat",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": 700,
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.2,
-                    "objet": "parapluie",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.4,
-                    "a": 2.4,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "chat",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "ambiance": "pluie",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1.15,
-                "x": 620,
-                "y": 1100
-              },
-              {
-                "a": 4.2,
-                "zoom": 1,
-                "x": 540,
-                "y": 1050
-              }
-            ]
-          }
-        ],
+        "idee": "Une nuit dans les montagnes, elle montre la lune, les yeux en cœur. Il sourit, puis un sourcil se lève : il sort une corde, fait tournoyer un lasso et le lance au ralenti dans un nuage de fumée, le sol qui se brise ; la boucle file jusqu'à la lune et se referme, la lune ouvre des yeux ronds ; il tire de tout son poids et la lune descend se poser sur la colline dans un grand boum. Ils sautent dessus et s'asseyent côte à côte sur la lune, qui sourit les yeux fermés.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "tendre",
+          "recherche": "Talking to the Moon"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "montagnes",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-lune",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, les montagnes la nuit : les étoiles qui scintillent, et à droite, au-dessus d'elle, une grande lune pâle au visage endormi, un petit sourire, trois cratères, un halo doux. Il parle, elle l'écoute et rit. À 1,2 s elle se tourne vers la lune et tend le bras vers elle, les yeux en cœur. Il lève la tête, sourit, la regarde avec tendresse, joues roses, puis un sourcil se lève et un sourire en coin se dessine : il a une idée. La caméra pousse doucement vers la lune et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur elle. À 1,0 s un sourcil se lève, les yeux se plissent, le sourire devient un sourire en coin : l'idée ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana bougent dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "corde": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, elle à droite le bras encore tendu vers la lune. Sa main passe derrière son dos et ressort avec une corde roulée, pop ; il la soupèse, le sourire en coin, et se plante face à la lune, les poings serrés. La caméra serre un peu sur lui."
+            },
+            {
+              "sequence": "exploit",
+              "type": "lasso",
+              "duree": 6.6,
+              "description": "Plan moyen sur lui, elle à droite qui regarde sans comprendre. Il lève le bras et fait tournoyer le lasso au-dessus de sa tête, trois tours qui sifflent, de plus en plus vite. Le lancer : ralenti onze fois, caméra qui pousse, voile bleuté, battement de cœur ; à l'instant où la corde part, de la fumée jaillit de partout autour de lui, le sol se fissure sous ses pieds en trois fentes, onde de choc, secousse. La caméra s'ouvre en grand : la boucle file en arc vers la lune, lignes de vitesse, et se referme autour d'elle ; la lune ouvre des yeux ronds et la bouche, la corde se tend, craquement. Il se penche en arrière de tout son poids, les pieds plantés, le corps qui vibre, un grondement : la lune descend lentement vers la colline, elle recule d'un pas, bouche bée, et la lune se pose à droite dans un grand boum, poussière, le sol qui tremble, puis sourit les yeux fermés, les joues roses. Il lâche la corde, s'époussette les mains, un clin d'œil ; elle saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large, caméra fixe, la lune posée à droite qui rayonne doucement sur la colline. Il prend son élan et saute dessus, elle le suit d'un bond, et ils s'asseyent côte à côte sur la lune, face à face, les têtes qui se penchent l'une vers l'autre, les joues roses, pendant que des cœurs montent au-dessus d'eux et que la lune sourit. La caméra pousse lentement sur eux trois jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "He got wet so she could stay dry.\n\nSend this to your partner!",
+      "legende": "When he brings you the moon.\n\nSend this to your partner",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }
