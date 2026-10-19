@@ -91,6 +91,15 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
         body: JSON.stringify({ p_evenement: evenement, p_cle: cleCompteur || '', p_montant: montant || 0 }),
       });
     },
+    // La somme des compteurs du jour (heure de Paris, comme bilan_compteurs)
+    // pour des événements donnés : le plafond quotidien des e-mails de lien.
+    async compteDuJour(evenements) {
+      const jour = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Paris' });
+      const r = await appel(racine + '/rest/v1/bilan_compteurs?select=n&jour=eq.' + jour
+        + '&evenement=in.(' + evenements.map(encodeURIComponent).join(',') + ')', { headers: entetes() });
+      const lignes = await r.json();
+      return (Array.isArray(lignes) ? lignes : []).reduce((s, l) => s + (Number(l.n) || 0), 0);
+    },
     async lireFichier(chemin) {
       const r = await appel(racine + '/storage/v1/object/' + BUCKET_RAPPORTS + '/' + cheminFichier(chemin), {
         headers: { apikey: cle, Authorization: 'Bearer ' + cle },
@@ -180,6 +189,7 @@ export function creerStockageMemoire() {
         .sort((x, y) => (y.cree_le || '').localeCompare(x.cree_le || '')).slice(0, 10).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
+    async compteDuJour(evenements) { return compteurs.filter((c) => evenements.includes(c.evenement)).length; },
     async lireFichier(chemin) {
       if (!fichiers.has(chemin)) throw new Error('stockage : fichier absent');
       return fichiers.get(chemin);

@@ -27,6 +27,11 @@ const EBOOK_FILENAME = 'Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf';
 //     restant celle d'un envoi ; et le lien ne change plus d'un e-mail à
 //     l'autre, tous ceux reçus marchent.
 const LIMITE_IP = 10;
+// Plafond global : quarante e-mails de confirmation par vingt-quatre heures,
+// comptés en base (leads.verification_sent_at). Le plan Resend fait cent
+// envois par jour, partagés avec le rapport de l'évaluation payante, qui
+// passe avant tout : dix adresses IP suffisaient à brûler le quota.
+const LIMITE_JOUR = 40;
 const FENETRE_IP_MS = 60 * 60 * 1000;
 const DELAI_RENVOI_MS = 10 * 60 * 1000;
 const PRENOM_MAX = 60;
@@ -123,6 +128,19 @@ serve(async (req) => {
         return new Response(
           JSON.stringify({ success: true }),
           { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
+      // Le plafond du jour, avant d'écrire quoi que ce soit.
+      const depuis = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+      const { count: envoyesJour } = await supabase
+        .from('leads')
+        .select('id', { count: 'exact', head: true })
+        .gte('verification_sent_at', depuis);
+      if ((envoyesJour ?? 0) >= LIMITE_JOUR) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Trop de demandes aujourd\u2019hui, réessayez demain.' }),
+          { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
 

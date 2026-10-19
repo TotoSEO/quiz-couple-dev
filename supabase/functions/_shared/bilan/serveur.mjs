@@ -93,6 +93,12 @@ export const DUREE_LIEN_PDF = 600;
 export const LIENS_PAR_HEURE = 5;          // envois de son lien, par évaluation et par rôle
 export const RETROUVER_PAR_HEURE = 5;      // demandes « retrouver », par adresse IP
 export const RETROUVER_DELAI_MS = 10 * 60e3; // une même adresse : un envoi par dix minutes
+// Et un plafond global par jour, compté en base (bilan_compteurs : lien_envoye,
+// retrouver_envoye, retrouver_aucun) : le plan Resend fait cent envois par
+// jour, et le rapport payé passe avant tout. Les limites par IP vivent en
+// mémoire d'une instance, qu'il suffit de contourner avec plusieurs adresses
+// (audit du 20 octobre 2026). Au-delà, « trop » comme pour la limite horaire.
+export const LIENS_PAR_JOUR = 40;
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -630,6 +636,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et
   // qu'il n'a pas eu le temps de copier son lien, on fait comment ? »)
   const essais = { lien: new Map(), ip: new Map(), adresse: new Map() };
+  // Le plafond quotidien des e-mails de lien. Une lecture qui échoue ne bloque
+  // personne : la disponibilité passe avant le quota.
+  async function plafondLiensAtteint() {
+    if (!stockage.compteDuJour) return false;
+    try {
+      return (await stockage.compteDuJour(['lien_envoye', 'retrouver_envoye', 'retrouver_aucun'])) >= LIENS_PAR_JOUR;
+    } catch (e) {
+      console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
+      return false;
+    }
+  }
   function freiner(table, cle, max, fenetre) {
     const t = maintenant().getTime();
     const liste = (table.get(cle) || []).filter((x) => t - x < fenetre);
@@ -662,6 +679,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!e) return non(400, 'email');
     if (!courriel) return non(503, 'courriel');
     if (!freiner(essais.lien, ligne.id + ':' + role, LIENS_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    if (await plafondLiensAtteint()) return non(429, 'trop');
     let maj = ligne;
     if (!ligne[role + '_email']) maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
     const msg = messageLien({ lang: ligne.lang, liens: [{ ...entreeLien(ligne, role), url: lienDe(ligne, corps.jeton) }], rotation: false });
@@ -687,6 +705,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const lang = LANGUES.includes(corps.lang) ? corps.lang : 'fr';
     if (!courriel) return non(503, 'courriel');
     if (!freiner(essais.ip, ctx?.ip || 'inconnue', RETROUVER_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    if (await plafondLiensAtteint()) return non(429, 'trop');
     if (!freiner(essais.adresse, e, 1, RETROUVER_DELAI_MS)) return ok({ envoye: true });
     const lignes = stockage.trouverParEmail ? await stockage.trouverParEmail(e) : [];
     const liens = [];

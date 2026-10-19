@@ -49,8 +49,13 @@ serve(async (req) => {
     // Tous les statuts sont là (une colonne), pour filtrer dans un tableur.
     const url = new URL(req.url);
     if (req.method === 'GET' && url.searchParams.get('vue') === 'export') {
+      // Une cellule qui commence par = + - @ ou une tabulation serait lue
+      // comme une formule par un tableur (injection CSV : une adresse
+      // « =HYPERLINK(...)@x.fr » passe la forme stricte) : une apostrophe
+      // devant la neutralise, Excel et LibreOffice l'affichent comme du texte.
       const csv = (v: unknown) => {
-        const t = v == null ? '' : String(v);
+        let t = v == null ? '' : String(v);
+        if (/^[=+\-@\t\r]/.test(t)) t = "'" + t;
         return /[",\n\r;]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
       };
       const lignes: string[] = ['email,lang,source,statut,captures,consent_at,created_at'];
