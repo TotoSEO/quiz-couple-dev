@@ -35,7 +35,7 @@
 %>
 <% if (_bilan) { %>
 <section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
-  <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="720" height="1018" loading="lazy" decoding="async"></div>
+  <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
     <p class="qr-bilan-sur"><%= _bb.sur %></p>
     <h3 class="qr-bilan-titre"><%= _bb.titre %></h3>

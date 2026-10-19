@@ -54,7 +54,10 @@
       "creer": "Unseren Check erstellen",
       "manque": "Eine Antwort fehlt.",
       "prenomManque": "Schreib eure beiden Vornamen.",
-      "accordManque": "Setz beide Häkchen, um weiterzumachen."
+      "accordManque": "Setz beide Häkchen, um weiterzumachen.",
+      "email": "Deine E-Mail (optional)",
+      "emailAide": "Um deinen persönlichen Link sofort zu bekommen und deine Antworten wiederzufinden, wenn du die Seite schließt. Dorthin geht später auch der Bericht.",
+      "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus."
     },
     "invitation": {
       "titre": "Lade {{autre}} ein",
@@ -151,10 +154,9 @@
       "emailPlaceholder": "du@email.de",
       "emailAide": "Das PDF geht an diese Adresse, sobald ihr beide fertig seid. Sie wird für nichts anderes verwendet.",
       "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
-      "renonciation": "Ich möchte den Bericht erhalten, sobald er fertig ist, und nehme zur Kenntnis, dass ich mein Widerrufsrecht verliere, sobald der Bericht bereitgestellt ist.",
+      "renonciation": "Ich verlange, dass der Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der 14-tägigen Widerrufsfrist abzuwarten, und bestätige, dass ich mein Widerrufsrecht verliere, sobald er bereitgestellt ist.",
       "renonciationManque": "Setz das Häkchen, um weiterzumachen.",
       "bouton": "Unseren Bericht freischalten · {{prix}}",
-      "garantie": "Geld-zurück-Garantie für {{jours}} Tage: Eine Nachricht über die Kontaktseite genügt.",
       "securite": "Sichere Zahlung über Stripe (Karte, Apple Pay, Google Pay). Wir sehen deine Karte nie.",
       "cgv": "AGB",
       "tva": "Keine Umsatzsteuer, gemäß Art. 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung).",
@@ -543,6 +545,23 @@
     "genres": {
       "f": "Eine Frau",
       "h": "Ein Mann"
+    },
+    "lien": {
+      "titre": "Meinen Link per E-Mail erhalten",
+      "placeholder": "du@email.com",
+      "bouton": "Senden",
+      "aide": "Um deine Antworten wiederzufinden, wenn du diese Seite schließt oder das Handy wechselst.",
+      "envoye": "Erledigt: Dein Link ist in deinem Postfach ({{email}}). Schau auch im Spam-Ordner nach.",
+      "faux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
+      "trop": "Zu viele Sendungen für diese Analyse. Versuche es in einer Stunde noch einmal."
+    },
+    "retrouver": {
+      "titre": "Hast du schon eine Analyse begonnen?",
+      "texte": "Wenn du deine E-Mail-Adresse angegeben hast, schicken wir dir deine Links noch einmal. Der alte Link funktioniert dann nicht mehr.",
+      "placeholder": "du@email.com",
+      "bouton": "Meine Analyse wiederfinden",
+      "envoye": "Wenn eine Analyse mit {{email}} verknüpft ist, kommen deine Links innerhalb einer Minute in dein Postfach. Schau auch im Spam-Ordner nach.",
+      "trop": "Zu viele Anfragen von deiner Verbindung. Versuche es in einer Stunde noch einmal."
     }
   },
   "lp": {
@@ -557,7 +576,7 @@
     "cta": "Analyse beginnen",
     "ctaDuo": "Die Analyse zu zweit machen",
     "ctaSolo": "Sie allein machen",
-    "ctaNote": "Kostenlose Fragen · {{prix}} für den Bericht, am Ende · Zufrieden oder Geld zurück, {{jours}} Tage",
+    "ctaNote": "Kostenlose Fragen · {{prix}} für den Bericht, am Ende · Einmalige Zahlung, kein Abo",
     "voirExtrait": "Den Bericht Seite für Seite ansehen",
     "visuel": {
       "sur": "Beispielbericht · fiktives Paar",
@@ -606,10 +625,11 @@
         ],
         "cta": "Allein beginnen"
       },
-      "note": "Gleicher Preis, gleicher Bericht. Wenn dein Partner oder deine Partnerin eines Tages selbst antworten möchte, ersetzt eine gemeinsame Analyse deine Vermutungen durch die echten Antworten."
+      "note": "Gleicher Preis, gleicher Bericht. Wenn dein Partner oder deine Partnerin eines Tages selbst antworten möchte, ersetzt eine gemeinsame Analyse deine Vermutungen durch die echten Antworten.",
+      "citation": "Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €. Mit der vollständigen Analyse von Quiz Couple anzufangen ist DER richtige erste Schritt."
     },
     "rapport": {
-      "titre": "Der Bericht, Seite für Seite",
+      "titre": "Was steht im Bericht?",
       "intro": "Ein richtiges Dokument mit rund vierzig Seiten, mit seinen Kapiteln, seinen Grafiken und zu jedem Unterschied Gesprächshilfen. Blättert durch.",
       "pages": [
         {
@@ -722,7 +742,7 @@
         }
       ],
       "fin": "Bei den großen Fragen (Kinder, Wohnort, Treue...) kann jeder seine Antwort auch als nicht verhandelbar markieren. Der Bericht fängt dann damit an.",
-      "cta": "Alle 100 Fragen sehen"
+      "cta": "Die 100 Fragen beantworten"
     },
     "pour": {
       "titre": "Für Paare, die klar sehen wollen",
@@ -836,7 +856,6 @@
         "Das PDF per E-Mail und die Online-Version sechs Monate lang",
         "Derselbe Bericht, ob ihr sie zu zweit oder allein macht"
       ],
-      "comparaison": "Zum Vergleich: Eine Sitzung bei einer Paarberatung kostet oft zwischen 80 und 150 €.",
       "garantie": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht genügt."
     },
     "confiance": {
@@ -905,7 +924,7 @@
         },
         {
           "q": "Und wenn uns der Bericht nicht gefällt?",
-          "a": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht über die Kontaktseite genügt, ohne Begründung."
+          "a": "Der Bericht entsteht aus euren Antworten, und manchmal sagt er etwas anderes, als man gehofft hat. Einmal bereitgestellt, wird er nicht erstattet: Er ist ein digitaler Inhalt, und du verlangst vor der Zahlung, ihn sofort zu bekommen. Solange er nicht bereitgestellt ist, kannst du widerrufen und bekommst dein Geld zurück. Und wenn mit der Datei etwas nicht stimmt, kümmern wir uns darum."
         },
         {
           "q": "Was passiert mit unseren Antworten?",

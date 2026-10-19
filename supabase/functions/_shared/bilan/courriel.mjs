@@ -29,6 +29,15 @@ const PREFIXE_FICHIER = {
 };
 
 // L'éditeur, en bas de chaque message.
+// Les conditions générales de vente, par langue : le lien part dans l'e-mail du
+// rapport, avec la confirmation de la renonciation à la rétractation.
+export const CGV = {
+  fr: '/conditions-generales-de-vente/',
+  en: '/en/terms-of-sale/',
+  es: '/es/condiciones-generales-de-venta/',
+  de: '/de/agb/',
+  it: '/it/condizioni-generali-di-vendita/',
+};
 export const EDITEUR = 'Quiz Couple · Visibilitea, entreprise individuelle · 4 rue de Bruges, 67000 Strasbourg · SIRET 940 106 800 00011';
 
 const TEXTES = {
@@ -49,6 +58,7 @@ const TEXTES = {
     noteSolo: 'Ce rapport contient vos réponses et ce que vous pensez de votre relation : il n\'est destiné qu\'à vous.',
     aide: 'Une question, ou un souci avec le fichier ? Répondez simplement à ce message.',
     pied: 'Vous recevez ce message parce que cette adresse a été donnée pour recevoir ce rapport. Nous ne vous écrirons pas d\'autre message.',
+    legal: 'Avant de payer, l\'acheteur a demandé que ce rapport soit fourni dès qu\'il est prêt, sans attendre la fin du délai de rétractation, et a reconnu que son droit de rétractation prend fin à sa fourniture. Ce message en est la confirmation : le rapport est fourni. TVA non applicable, art. 293 B du CGI. Conditions de vente : {cgv}',
   },
   en: {
     sujet: 'Your relationship assessment: the report for {a} and {b}',
@@ -67,6 +77,7 @@ const TEXTES = {
     noteSolo: 'This report contains your answers and what you think of your relationship: it is meant for you alone.',
     aide: 'Any questions, or a problem with the file? Just reply to this email.',
     pied: 'You\'re receiving this email because this address was given to receive this report. We won\'t send you anything else.',
+    legal: 'Before paying, the buyer asked for this report to be provided as soon as it was ready, without waiting for the end of the withdrawal period, and acknowledged that their right of withdrawal ends when it is provided. This message is that confirmation: the report is provided. VAT not applicable, art. 293 B of the French tax code. Terms of sale: {cgv}',
   },
   es: {
     sujet: 'Vuestra evaluación de pareja: el informe de {a} y {b}',
@@ -86,6 +97,7 @@ const TEXTES = {
     noteSolo: 'Este informe contiene tus respuestas y lo que piensas de tu relación: es solo para ti.',
     aide: '¿Alguna pregunta o algún problema con el archivo? Basta con responder a este mensaje.',
     pied: 'Recibes este mensaje porque esta dirección se indicó para recibir este informe. No te enviaremos ningún otro mensaje.',
+    legal: 'Antes de pagar, el comprador pidió que este informe se entregara en cuanto estuviera listo, sin esperar al final del plazo de desistimiento, y reconoció que su derecho de desistimiento termina con la entrega. Este mensaje es esa confirmación: el informe está entregado. IVA no aplicable, art. 293 B del CGI francés. Condiciones de venta: {cgv}',
   },
   de: {
     sujet: 'Eure Beziehungsanalyse: der Bericht von {a} und {b}',
@@ -105,6 +117,7 @@ const TEXTES = {
     noteSolo: 'Dieser Bericht enthält deine Antworten und das, was du über deine Beziehung denkst: Er ist nur für dich bestimmt.',
     aide: 'Eine Frage oder ein Problem mit der Datei? Antwortet einfach auf diese Nachricht.',
     pied: 'Du bekommst diese Nachricht, weil diese Adresse angegeben wurde, um diesen Bericht zu erhalten. Wir schreiben dir sonst nichts.',
+    legal: 'Vor der Zahlung hat der Käufer verlangt, dass dieser Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der Widerrufsfrist abzuwarten, und bestätigt, dass sein Widerrufsrecht mit der Bereitstellung erlischt. Diese Nachricht ist diese Bestätigung: Der Bericht ist bereitgestellt. Keine Umsatzsteuer, Art. 293 B des französischen Steuergesetzbuchs (CGI). Verkaufsbedingungen: {cgv}',
   },
   it: {
     sujet: 'La vostra valutazione di coppia: il report di {a} e {b}',
@@ -124,6 +137,7 @@ const TEXTES = {
     noteSolo: 'Questo report contiene le tue risposte e quello che pensi della tua relazione: è destinato solo a te.',
     aide: 'Una domanda o un problema con il file? Basta rispondere a questo messaggio.',
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per ricevere questo report. Non ti scriveremo nient\'altro.',
+    legal: 'Prima di pagare, l\'acquirente ha chiesto che questo report fosse fornito non appena pronto, senza attendere la fine del periodo di recesso, e ha riconosciuto che il suo diritto di recesso termina con la fornitura. Questo messaggio ne è la conferma: il report è fornito. IVA non applicabile, art. 293 B del CGI francese. Condizioni di vendita: {cgv}',
   },
 };
 
@@ -135,6 +149,73 @@ function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+// L'e-mail qui apporte un lien personnel : à la demande (« Recevoir mon lien
+// par e-mail ») ou pour retrouver une évaluation dont on a perdu le lien
+// (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et qu'il
+// n'a pas eu le temps de copier son lien, on fait comment ? »).
+const TEXTES_LIEN = {
+  fr: {
+    sujet: 'Votre lien pour reprendre votre évaluation de couple',
+    titre: 'Votre lien personnel',
+    intro: 'Voici le lien pour reprendre votre évaluation de couple de {a} et {b}, là où vous en étiez. Gardez ce message : ce lien est la clé de vos réponses, ne le donnez à personne.',
+    introPlusieurs: 'Voici vos liens pour reprendre vos évaluations de couple, là où vous en étiez. Gardez ce message : ces liens sont la clé de vos réponses, ne les donnez à personne.',
+    ligne: '{a} et {b}',
+    ligneSolo: '{a}, seul(e)',
+    bouton: 'Reprendre mon évaluation',
+    nouveau: 'Si vous aviez déjà un lien pour cette évaluation, c\'est celui-ci qui compte désormais : l\'ancien ne fonctionne plus.',
+    aucun: 'Aucune évaluation de couple n\'est liée à cette adresse e-mail. Si vous en avez commencé une, elle a peut-être été faite avec une autre adresse, ou sans en donner : dans ce cas, elle reste ouverte sur le téléphone où vous avez répondu, en revenant sur la page de l\'évaluation.',
+    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com, ou qu\'on a demandé à retrouver une évaluation avec elle. Nous ne vous écrirons pas d\'autre message.',
+  },
+  en: {
+    sujet: 'Your link to pick up your relationship assessment',
+    titre: 'Your personal link',
+    intro: 'Here is the link to pick up the relationship assessment for {a} and {b}, right where you left off. Keep this email: this link is the key to your answers, don\'t give it to anyone.',
+    introPlusieurs: 'Here are your links to pick up your relationship assessments, right where you left off. Keep this email: these links are the key to your answers, don\'t give them to anyone.',
+    ligne: '{a} and {b}',
+    ligneSolo: '{a}, on your own',
+    bouton: 'Pick up my assessment',
+    nouveau: 'If you already had a link for this assessment, this one now replaces it: the old one no longer works.',
+    aucun: 'No relationship assessment is linked to this email address. If you started one, it may have been done with another address, or without giving one: in that case it stays open on the phone you answered from, by going back to the assessment page.',
+    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com, or someone asked to find an assessment with it. We won\'t send you anything else.',
+  },
+  es: {
+    sujet: 'Tu enlace para retomar tu evaluación de pareja',
+    titre: 'Tu enlace personal',
+    intro: 'Aquí tienes el enlace para retomar la evaluación de pareja de {a} y {b}, justo donde la dejaste. Guarda este mensaje: este enlace es la llave de tus respuestas, no se lo des a nadie.',
+    introPlusieurs: 'Aquí tienes tus enlaces para retomar tus evaluaciones de pareja, justo donde las dejaste. Guarda este mensaje: estos enlaces son la llave de tus respuestas, no se los des a nadie.',
+    ligne: '{a} y {b}',
+    ligneSolo: '{a}, a solas',
+    bouton: 'Retomar mi evaluación',
+    nouveau: 'Si ya tenías un enlace para esta evaluación, ahora vale este: el antiguo ya no funciona.',
+    aucun: 'Ninguna evaluación de pareja está vinculada a esta dirección de e-mail. Si empezaste una, quizá la hiciste con otra dirección, o sin dar ninguna: en ese caso sigue abierta en el móvil desde el que respondiste, volviendo a la página de la evaluación.',
+    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com, o porque alguien pidió recuperar una evaluación con ella. No te enviaremos ningún otro mensaje.',
+  },
+  de: {
+    sujet: 'Dein Link, um deine Beziehungsanalyse fortzusetzen',
+    titre: 'Dein persönlicher Link',
+    intro: 'Hier ist der Link, um die Beziehungsanalyse von {a} und {b} genau dort fortzusetzen, wo du aufgehört hast. Bewahre diese Nachricht auf: Dieser Link ist der Schlüssel zu deinen Antworten, gib ihn niemandem.',
+    introPlusieurs: 'Hier sind deine Links, um deine Beziehungsanalysen genau dort fortzusetzen, wo du aufgehört hast. Bewahre diese Nachricht auf: Diese Links sind der Schlüssel zu deinen Antworten, gib sie niemandem.',
+    ligne: '{a} und {b}',
+    ligneSolo: '{a}, allein',
+    bouton: 'Meine Analyse fortsetzen',
+    nouveau: 'Wenn du für diese Analyse schon einen Link hattest, gilt ab jetzt dieser: Der alte funktioniert nicht mehr.',
+    aucun: 'Mit dieser E-Mail-Adresse ist keine Beziehungsanalyse verknüpft. Wenn du eine begonnen hast, wurde sie vielleicht mit einer anderen Adresse gemacht, oder ohne eine anzugeben: Dann bleibt sie auf dem Handy offen, von dem aus du geantwortet hast, wenn du die Seite der Analyse wieder aufrufst.',
+    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde oder jemand damit eine Analyse wiederfinden wollte. Wir schreiben dir sonst nichts.',
+  },
+  it: {
+    sujet: 'Il tuo link per riprendere la tua valutazione di coppia',
+    titre: 'Il tuo link personale',
+    intro: 'Ecco il link per riprendere la valutazione di coppia di {a} e {b}, esattamente dove eri rimasto/a. Conserva questo messaggio: questo link è la chiave delle tue risposte, non darlo a nessuno.',
+    introPlusieurs: 'Ecco i tuoi link per riprendere le tue valutazioni di coppia, esattamente dove eri rimasto/a. Conserva questo messaggio: questi link sono la chiave delle tue risposte, non darli a nessuno.',
+    ligne: '{a} e {b}',
+    ligneSolo: '{a}, da solo/a',
+    bouton: 'Riprendere la mia valutazione',
+    nouveau: 'Se avevi già un link per questa valutazione, da ora vale questo: il vecchio non funziona più.',
+    aucun: 'Nessuna valutazione di coppia è collegata a questo indirizzo e-mail. Se ne hai iniziata una, forse l\'hai fatta con un altro indirizzo, o senza darne uno: in quel caso resta aperta sul telefono da cui hai risposto, tornando sulla pagina della valutazione.',
+    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com, o perché qualcuno ha chiesto di ritrovare una valutazione con esso. Non ti scriveremo nient\'altro.',
+  },
+};
+
 // Une adresse e-mail raisonnable, en minuscules, ou null.
 export function emailPropre(e) {
   if (typeof e !== 'string') return null;
@@ -143,7 +224,9 @@ export function emailPropre(e) {
   if (!/^[^\s@<>()[\]",;:\\]{1,64}@[^\s@<>()[\]",;:\\.]+(\.[^\s@<>()[\]",;:\\.]+)+$/.test(s)) return null;
   const [local, domaine] = s.split('@');
   if (!/\.[a-z]{2,}$/i.test(domaine)) return null;
-  return local + '@' + domaine.toLowerCase();
+  // Tout en minuscules (les fournisseurs ne distinguent pas la casse) : une
+  // adresse se retrouve ainsi par égalité stricte dans la base (retrouver).
+  return (local + '@' + domaine).toLowerCase();
 }
 
 // c•••@gmail.com : pour montrer à quelle adresse le rapport part, sans
@@ -179,8 +262,11 @@ export function messageRapport({ lang, a, b, pages, mode }) {
   const note = solo ? t.noteSolo : t.note;
   const titre = solo && t.titreSolo ? t.titreSolo : t.titre;
   const sujet = remplir(solo ? t.sujetSolo : t.sujet, v);
+  // La confirmation, sur support durable, de la demande d'exécution immédiate
+  // et de la fin du droit de rétractation (L221-13 du Code de la consommation).
+  const legal = remplir(t.legal, { cgv: SITE + (CGV[lang] || CGV.fr) });
   const texte = [
-    remplir(titre, v), '', p1, '', p2, '', t.p3, lien, '', note, '', t.aide, '', '--', t.pied, EDITEUR,
+    remplir(titre, v), '', p1, '', p2, '', t.p3, lien, '', note, '', t.aide, '', '--', t.pied, legal, EDITEUR,
   ].join('\n');
   const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(s)}</p>`;
   const html = `<!doctype html>
@@ -202,6 +288,7 @@ ${para(note, 'color:#5f5366;font-size:14px;')}${para(t.aide, 'color:#5f5366;font
 </td></tr>
 <tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
 <p style="margin:0 0 6px;">${esc(t.pied)}</p>
+<p style="margin:0 0 6px;">${esc(legal)}</p>
 <p style="margin:0;">${esc(EDITEUR)}</p>
 </td></tr>
 </table>
@@ -220,6 +307,48 @@ function enBase64(octets) {
 }
 
 // L'envoi par l'API de Resend. Renvoie { ok, id } ou lève une erreur.
+// { sujet, html, texte } pour un ou plusieurs liens personnels. `liens` :
+// [{ a, b, mode, url }] ; vide quand aucune évaluation ne porte l'adresse
+// (on le dit, plutôt que de laisser attendre un e-mail qui ne vient pas).
+// `rotation` : les liens sont neufs et remplacent les anciens.
+export function messageLien({ lang, liens, rotation }) {
+  const t = TEXTES_LIEN[lang] || TEXTES_LIEN.fr;
+  const l = Array.isArray(liens) ? liens : [];
+  const sujet = t.sujet;
+  const intro = l.length === 0 ? t.aucun : l.length === 1 ? remplir(t.intro, { a: l[0].a, b: l[0].b }) : t.introPlusieurs;
+  const libelle = (x) => remplir(x.mode === 'solo' ? t.ligneSolo : t.ligne, { a: x.a, b: x.b });
+  const texte = [t.titre, '', intro, '']
+    .concat(l.flatMap((x) => [libelle(x) + ' : ' + x.url, '']))
+    .concat(l.length && rotation ? [t.nouveau, ''] : [])
+    .concat(['--', t.pied, EDITEUR]).join('\n');
+  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(s)}</p>`;
+  const blocs = l.map((x) => `<p style="margin:0 0 6px;font-weight:bold;">${esc(libelle(x))}</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 10px;"><tr><td style="border-radius:999px;background:#2b2233;">
+<a href="${esc(x.url)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(t.bouton)}</a>
+</td></tr></table>
+<p style="margin:0 0 20px;font-size:12px;color:#857a8b;word-break:break-all;">${esc(x.url)}</p>`).join('');
+  const html = `<!doctype html>
+<html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
+<body style="margin:0;padding:0;background:#f6f1f4;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f1f4;padding:24px 12px;">
+<tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;color:#2b2233;font-size:16px;line-height:1.55;">
+<tr><td style="height:6px;background:#d96a8f;font-size:0;line-height:0;">&nbsp;</td></tr>
+<tr><td style="padding:28px 28px 8px;">
+<p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
+<h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(t.titre)}</h1>
+${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;font-size:14px;') : ''}
+</td></tr>
+<tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
+<p style="margin:0 0 6px;">${esc(t.pied)}</p>
+<p style="margin:0;">${esc(EDITEUR)}</p>
+</td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+  return { sujet, html, texte };
+}
+
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {
     async envoyer({ a, sujet, html, texte, pieces }) {

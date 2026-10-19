@@ -63,7 +63,11 @@
   };
 
   // Les aperçus du rapport : des pages d'un rapport d'exemple (couple
-  // fictif), rendues par bilan/apercus.mjs dans chaque langue (720 px de large).
+  // fictif), rendues par bilan/apercus.mjs dans chaque langue. 240 px de large
+  // seulement, exprès (19 octobre 2026, Thomas : « ça doit rester affiché en
+  // tout petit et illisible volontairement pour éviter toute copie sans
+  // payer ») : on voit la mise en page, pas le texte, et les images ne
+  // s'ouvrent ni ne se glissent (pointer-events, draggable, bilanCouple.css).
   const apercu = (nom) => '/bilan/apercu-' + nom + '-' + lang + '.webp';
 
   // Tout ce que l'application affiche, dans la langue de la page, avec le
@@ -232,6 +236,8 @@
   <!-- À deux ou seul(e) -->
   <section class="blp-section blp-facons" id="facons">
     <div class="blp-wrap">
+      <%# Le prix d'une séance, en citation (Thomas, 19 octobre 2026 : « cette phrase est super ! Il faudrait la mettre en citation juste avant »). %>
+      <blockquote class="blp-citation"><p><%- x('facons.citation') %></p></blockquote>
       <h2 class="blp-h2"><%- x('facons.titre') %></h2>
       <p class="blp-intro"><%- x('facons.intro') %></p>
       <div class="blp-facons-grille">
@@ -265,7 +271,7 @@
         <div class="quiz-slider__track blp-slider-piste" data-slider-track>
           <% pages.forEach((p, i) => { %>
           <figure class="quiz-slide blp-slide">
-            <div class="blp-slide-image"><img src="<%= apercu(p.img) %>" alt="<%- tx(p.titre) %>" width="720" height="1018" loading="<%= i < 2 ? 'eager' : 'lazy' %>" decoding="async"></div>
+            <div class="blp-slide-image"><img src="<%= apercu(p.img) %>" alt="<%- tx(p.titre) %>" width="240" height="340" loading="<%= i < 2 ? 'eager' : 'lazy' %>" decoding="async" draggable="false"></div>
             <figcaption class="blp-slide-texte">
               <p class="blp-slide-num"><%= String(i + 1).padStart(2, '0') %></p>
               <h3 class="blp-h3"><%- tx(p.titre) %></h3>
@@ -426,7 +432,6 @@
           </ul>
           <p class="blp-prix-aide"><%- x('prix.aide') %></p>
           <% if (jours > 0) { %><p class="blp-garantie"><%- x('prix.garantie') %></p><% } %>
-          <p class="blp-prix-comparaison"><%- x('prix.comparaison') %></p>
           <div class="blp-ctas">
             <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
             <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>

@@ -36,8 +36,8 @@
       "prenomsTitre": "Vos deux prénoms",
       "moi": "Votre prénom",
       "autre": "Le prénom de votre partenaire",
-      "genre": "Pour vous, plutôt",
-      "genreAutre": "Pour votre partenaire, plutôt",
+      "genre": "Vous êtes",
+      "genreAutre": "Votre partenaire est",
       "femme": "Une femme",
       "homme": "Un homme",
       "sansGenre": "Je préfère ne pas le dire",
@@ -54,7 +54,10 @@
       "creer": "Créer notre évaluation",
       "manque": "Il manque une réponse.",
       "prenomManque": "Écrivez vos deux prénoms.",
-      "accordManque": "Cochez les deux cases pour continuer."
+      "accordManque": "Cochez les deux cases pour continuer.",
+      "email": "Votre e-mail (facultatif)",
+      "emailAide": "Pour recevoir tout de suite votre lien personnel et retrouver vos réponses si vous fermez la page. C'est aussi l'adresse où partira le rapport.",
+      "emailFaux": "Cette adresse e-mail n'a pas l'air complète."
     },
     "invitation": {
       "titre": "Invitez {{autre}}",
@@ -79,7 +82,7 @@
       "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
       "situationCorriger": "Corriger",
       "prenom": "Votre prénom",
-      "genre": "Pour vous, plutôt",
+      "genre": "Vous êtes",
       "commencer": "J'accepte et je commence",
       "lienUtilise": "Ce lien d'invitation a déjà été utilisé. Si c'était vous, ouvrez votre lien personnel, ou revenez sur cette page depuis le téléphone où vous avez commencé.",
       "paye": "Bonne nouvelle : {{autre}} a déjà réglé le rapport pour vous deux. Il s'ouvrira dès que vous aurez fini vos réponses."
@@ -151,10 +154,9 @@
       "emailPlaceholder": "votre@email.com",
       "emailAide": "Le PDF partira à cette adresse dès que vous aurez fini tous les deux. Elle ne sert à rien d'autre.",
       "emailFaux": "Cette adresse ne semble pas valide.",
-      "renonciation": "Je demande à recevoir le rapport dès qu'il est prêt et je reconnais perdre mon droit de rétractation une fois le rapport fourni.",
+      "renonciation": "Je demande que le rapport me soit fourni dès qu'il est prêt, sans attendre la fin du délai de rétractation de 14 jours, et je reconnais perdre mon droit de rétractation dès qu'il est fourni.",
       "renonciationManque": "Cochez la case pour continuer.",
       "bouton": "Débloquer notre rapport · {{prix}}",
-      "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message depuis la page contact suffit.",
       "securite": "Paiement sécurisé par Stripe (carte, Apple Pay, Google Pay). Nous ne voyons jamais votre carte.",
       "cgv": "Conditions de vente",
       "tva": "TVA non applicable, art. 293 B du CGI.",
@@ -543,6 +545,23 @@
     "genres": {
       "f": "Une femme",
       "h": "Un homme"
+    },
+    "lien": {
+      "titre": "Recevoir mon lien par e-mail",
+      "placeholder": "votre@email.com",
+      "bouton": "Envoyer",
+      "aide": "Pour retrouver vos réponses si vous fermez cette page ou changez de téléphone.",
+      "envoye": "C'est parti : votre lien est dans votre boîte ({{email}}). Pensez aux indésirables.",
+      "faux": "Cette adresse e-mail n'a pas l'air complète.",
+      "trop": "Trop d'envois pour cette évaluation. Réessayez dans une heure."
+    },
+    "retrouver": {
+      "titre": "Vous aviez déjà commencé une évaluation ?",
+      "texte": "Si vous aviez donné votre adresse e-mail, on vous renvoie vos liens. L'ancien lien ne marchera plus.",
+      "placeholder": "votre@email.com",
+      "bouton": "Retrouver mon évaluation",
+      "envoye": "Si une évaluation est liée à {{email}}, vos liens arrivent dans votre boîte d'ici une minute. Pensez aux indésirables.",
+      "trop": "Trop de demandes depuis votre connexion. Réessayez dans une heure."
     }
   },
   "lp": {
@@ -557,7 +576,7 @@
     "cta": "Commencer l'évaluation",
     "ctaDuo": "Faire l'évaluation à deux",
     "ctaSolo": "La faire seul(e)",
-    "ctaNote": "Questions gratuites · {{prix}} pour le rapport, à la fin · Satisfaits ou remboursés {{jours}} jours",
+    "ctaNote": "Questions gratuites · {{prix}} pour le rapport, à la fin · Paiement unique, sans abonnement",
     "voirExtrait": "Voir le rapport page par page",
     "visuel": {
       "sur": "Rapport d'exemple · couple fictif",
@@ -606,10 +625,11 @@
         ],
         "cta": "Commencer seul(e)"
       },
-      "note": "Même prix, même rapport. Si un jour votre partenaire veut répondre à son tour, une évaluation à deux remplacera vos suppositions par ses réponses."
+      "note": "Même prix, même rapport. Si un jour votre partenaire veut répondre à son tour, une évaluation à deux remplacera vos suppositions par ses réponses.",
+      "citation": "Une séance chez un conseiller conjugal coûte entre 50 et 90 €. Commencer par l'évaluation complète de Quiz Couple, c'est LA bonne première étape."
     },
     "rapport": {
-      "titre": "Le rapport, page par page",
+      "titre": "Que trouve-t-on dans le rapport ?",
       "intro": "Un vrai document d'une quarantaine de pages, avec ses chapitres, ses graphiques et, pour chaque écart, de quoi en parler. Faites défiler.",
       "pages": [
         {
@@ -722,7 +742,7 @@
         }
       ],
       "fin": "Sur les grandes questions (les enfants, le lieu de vie, la fidélité...), chacun peut aussi marquer sa réponse « non négociable ». Le rapport commence alors par là.",
-      "cta": "Voir les 100 questions"
+      "cta": "Faire les 100 questions"
     },
     "pour": {
       "titre": "Pour les couples qui veulent y voir clair",
@@ -836,7 +856,6 @@
         "Le PDF par e-mail et la version en ligne pendant six mois",
         "Le même rapport, que vous la fassiez à deux ou seul(e)"
       ],
-      "comparaison": "Pour comparer, une séance chez un conseiller conjugal coûte souvent entre 50 et 90 €.",
       "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message suffit."
     },
     "confiance": {
@@ -905,7 +924,7 @@
         },
         {
           "q": "Et si le rapport ne nous plaît pas ?",
-          "a": "Vous êtes satisfaits ou remboursés pendant {{jours}} jours : un message depuis la page contact suffit, sans avoir à vous justifier."
+          "a": "Le rapport est fait de vos réponses, et il arrive qu'il dise autre chose que ce qu'on espérait. Une fois fourni, il n'est pas remboursé : c'est un contenu numérique, et vous demandez à le recevoir tout de suite avant de payer. Tant qu'il n'est pas fourni, vous pouvez vous rétracter et être remboursé. Et si le fichier a un problème, on le règle."
         },
         {
           "q": "Que deviennent nos réponses ?",

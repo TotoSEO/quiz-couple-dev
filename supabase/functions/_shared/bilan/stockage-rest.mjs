@@ -66,6 +66,24 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
       const rows = await r.json();
       return rows[0] || null;
     },
+    // Les bilans qui portent cette adresse (adresse du rapport de A ou de B,
+    // ou du reçu Stripe), les dix plus récents : pour renvoyer un lien perdu.
+    // Égalité stricte sur l'adresse en minuscules (emailPropre), jamais un
+    // motif : un `_` d'adresse serait un joker de LIKE.
+    async trouverParEmail(email) {
+      const e = encodeURIComponent(String(email || '').toLowerCase());
+      const r = await appel(base + '?or=(a_email.eq.' + e + ',b_email.eq.' + e + ',paiement_email.eq.' + e + ')&select=*&order=cree_le.desc&limit=10', { headers: entetes() });
+      return r.json();
+    },
+    // Les bilans qui portent cette adresse (adresse du rapport de A ou de B,
+    // ou du reçu Stripe), les dix plus récents : pour renvoyer un lien perdu.
+    // Égalité stricte sur l'adresse en minuscules (emailPropre), jamais un
+    // motif : un `_` d'adresse serait un joker de LIKE.
+    async trouverParEmail(email) {
+      const e = encodeURIComponent(String(email || '').toLowerCase());
+      const r = await appel(base + '?or=(a_email.eq.' + e + ',b_email.eq.' + e + ',paiement_email.eq.' + e + ')&select=*&order=cree_le.desc&limit=10', { headers: entetes() });
+      return r.json();
+    },
     async compter(evenement, cleCompteur, montant) {
       await appel(racine + '/rest/v1/rpc/bilan_compte_evenement', {
         method: 'POST',
@@ -148,6 +166,18 @@ export function creerStockageMemoire() {
     async trouverParIntent(intent) {
       for (const l of lignes.values()) if (l.paiement_intent === intent) return copie(l);
       return null;
+    },
+    async trouverParEmail(email) {
+      const e = String(email || '').toLowerCase();
+      const m = (x) => typeof x === 'string' && x.toLowerCase() === e;
+      return [...lignes.values()].filter((l) => m(l.a_email) || m(l.b_email) || m(l.paiement_email))
+        .sort((x, y) => (y.cree_le || '').localeCompare(x.cree_le || '')).slice(0, 10).map(copie);
+    },
+    async trouverParEmail(email) {
+      const e = String(email || '').toLowerCase();
+      const m = (x) => typeof x === 'string' && x.toLowerCase() === e;
+      return [...lignes.values()].filter((l) => m(l.a_email) || m(l.b_email) || m(l.paiement_email))
+        .sort((x, y) => (y.cree_le || '').localeCompare(x.cree_le || '')).slice(0, 10).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
     async lireFichier(chemin) {

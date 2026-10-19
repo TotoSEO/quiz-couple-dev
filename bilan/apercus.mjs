@@ -35,8 +35,11 @@ const COUPLES = {
 // synthèse de fin.
 const PAGES = ['couverture', 'synthese', 'ouverture', 'carte', 'conversations', 'climat', 'domaines', 'fin'];
 const NOMS = { couverture: 'couverture', synthese: 'synthese', ouverture: 'ouverture', carte: 'carte', conversations: 'conversation', climat: 'climat', domaines: 'domaine', fin: 'fin' };
-// 720 px de large : le curseur les affiche jusqu'à 360 px sur un écran x2.
-const LARGEUR = 720;
+// 240 px de large, exprès (19 octobre 2026, Thomas : « ça doit rester affiché
+// en tout petit et illisible volontairement pour éviter toute copie sans
+// payer ») : la mise en page se devine, le texte ne se lit pas, même ouvert
+// à part. Le curseur les affiche de 110 à 180 px de large.
+const LARGEUR = 240;
 
 function documentApercu(lang, html) {
   return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><style>${feuilleEnLigne()}

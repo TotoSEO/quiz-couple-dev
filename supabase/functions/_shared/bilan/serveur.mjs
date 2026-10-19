@@ -21,7 +21,7 @@
 // rapport ne part qu'à A.
 
 import * as C from './coeur.mjs';
-import { emailPropre, masquerEmail, messageRapport, nomFichier } from './courriel.mjs';
+import { emailPropre, masquerEmail, messageRapport, messageLien, nomFichier } from './courriel.mjs';
 
 export const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
 export const SITE = 'https://quiz-couple.com';
@@ -45,7 +45,6 @@ const PRODUIT = {
     descriptionSolo: 'Le rapport complet de votre évaluation de couple, faite seul(e), en PDF par e-mail et en ligne : votre regard sur votre relation, sujet par sujet, les écarts que vous percevez, vos zones d\'ombre, les signaux de vigilance et par où commencer.',
     mention: 'TVA non applicable, art. 293 B du CGI. Le rapport est fourni dès le paiement confirmé et dès que vous avez fini tous les deux : vous avez demandé l\'exécution immédiate et renoncé au droit de rétractation.',
     mentionSolo: 'TVA non applicable, art. 293 B du CGI. Le rapport est fourni dès le paiement confirmé : vous avez demandé l\'exécution immédiate et renoncé au droit de rétractation.',
-    garantie: 'Satisfaits ou remboursés pendant {jours} jours : il suffit d\'un message depuis la page contact.',
   },
   en: {
     nom: 'Relationship assessment: the full report',
@@ -53,7 +52,6 @@ const PRODUIT = {
     descriptionSolo: 'The full report of your relationship assessment, done on your own, as a PDF by email and online: your view of your relationship topic by topic, the gaps you perceive, your blind spots, the warning signs and where to start.',
     mention: 'VAT not applicable, art. 293 B of the French tax code. The report is provided as soon as payment is confirmed and you have both finished: you asked for immediate performance and waived your right of withdrawal.',
     mentionSolo: 'VAT not applicable, art. 293 B of the French tax code. The report is provided as soon as payment is confirmed: you asked for immediate performance and waived your right of withdrawal.',
-    garantie: 'Money-back guarantee for {jours} days: just send us a message from the contact page.',
   },
   es: {
     nom: 'Evaluación de pareja: el informe completo',
@@ -61,7 +59,6 @@ const PRODUIT = {
     descriptionSolo: 'El informe completo de tu evaluación de pareja, hecha a solas, en PDF por correo y en línea: tu mirada sobre tu relación tema por tema, las diferencias que percibes, tus zonas de sombra, las señales de alerta y por dónde empezar.',
     mention: 'IVA no aplicable, art. 293 B del CGI francés. El informe se entrega en cuanto se confirma el pago y habéis terminado los dos: habéis pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
     mentionSolo: 'IVA no aplicable, art. 293 B del CGI francés. El informe se entrega en cuanto se confirma el pago: has pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
-    garantie: 'Satisfechos o reembolsados durante {jours} días: basta con un mensaje desde la página de contacto.',
   },
   de: {
     nom: 'Beziehungsanalyse: der vollständige Bericht',
@@ -69,7 +66,6 @@ const PRODUIT = {
     descriptionSolo: 'Der vollständige Bericht deiner allein gemachten Beziehungsanalyse, als PDF per E-Mail und online: dein Blick auf deine Beziehung Thema für Thema, die Unterschiede, die du wahrnimmst, deine blinden Flecken, die Warnsignale und womit du anfangen kannst.',
     mention: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht wird geliefert, sobald die Zahlung bestätigt ist und ihr beide fertig seid: Ihr habt die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
     mentionSolo: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht wird geliefert, sobald die Zahlung bestätigt ist: Du hast die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
-    garantie: 'Geld-zurück-Garantie für {jours} Tage: Eine Nachricht über die Kontaktseite genügt.',
   },
   it: {
     nom: 'Valutazione di coppia: il report completo',
@@ -77,7 +73,6 @@ const PRODUIT = {
     descriptionSolo: 'Il report completo della tua valutazione di coppia, fatta da solo o da sola, in PDF via e-mail e online: il tuo sguardo sulla relazione tema per tema, le differenze che percepisci, le tue zone d\'ombra, i segnali d\'allarme e da dove cominciare.',
     mention: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato e avete finito tutti e due: avete chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
     mentionSolo: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato: hai chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
-    garantie: 'Soddisfatti o rimborsati per {jours} giorni: basta un messaggio dalla pagina dei contatti.',
   },
 };
 
@@ -92,6 +87,12 @@ export const CREATIONS_PAR_HEURE = 10;
 export const ENVOIS_MAX = 8;
 // Durée de l'adresse de téléchargement du PDF, en secondes.
 export const DUREE_LIEN_PDF = 600;
+// Les liens perdus (19 octobre 2026) : « Recevoir mon lien par e-mail » depuis
+// l'évaluation ouverte, et « Retrouver mon évaluation » par l'adresse seule.
+// Les limites vivent en mémoire de l'instance, comme dans lead-capture.
+export const LIENS_PAR_HEURE = 5;          // envois de son lien, par évaluation et par rôle
+export const RETROUVER_PAR_HEURE = 5;      // demandes « retrouver », par adresse IP
+export const RETROUVER_DELAI_MS = 10 * 60e3; // une même adresse : un envoi par dix minutes
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -440,8 +441,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const t = PRODUIT[lang];
     const solo = estSolo(ligne);
     const base = SITE + CHEMINS[lang];
-    const message = [solo ? t.mentionSolo : t.mention, C.GARANTIE_JOURS > 0 ? C.remplir(t.garantie, { jours: C.GARANTIE_JOURS }) : '']
-      .filter(Boolean).join(' ');
+    const message = solo ? t.mentionSolo : t.mention;
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
     let session;
     try {
@@ -626,9 +626,100 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return ok(await envoyerA(ligne));
   }
 
+  // ── Les liens perdus ──────────────────────────────────────────────────
+  // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et
+  // qu'il n'a pas eu le temps de copier son lien, on fait comment ? »)
+  const essais = { lien: new Map(), ip: new Map(), adresse: new Map() };
+  function freiner(table, cle, max, fenetre) {
+    const t = maintenant().getTime();
+    const liste = (table.get(cle) || []).filter((x) => t - x < fenetre);
+    if (liste.length >= max) { table.set(cle, liste); return false; }
+    liste.push(t);
+    table.set(cle, liste);
+    if (table.size > 5000) for (const [k, v] of table) if (!v.some((x) => t - x < fenetre)) table.delete(k);
+    return true;
+  }
+  function lienDe(ligne, jeton) {
+    return SITE + (CHEMINS[ligne.lang] || CHEMINS.fr) + '#b=' + ligne.id + '&t=' + jeton;
+  }
+  function entreeLien(ligne, role) {
+    const autre = role === 'a' ? 'b' : 'a';
+    return { a: ligne[role + '_prenom'], b: ligne[autre + '_prenom'], mode: estSolo(ligne) ? 'solo' : 'duo' };
+  }
+
+  // Son propre lien, envoyé à l'adresse donnée. Si la personne n'avait pas
+  // encore d'adresse de rapport, celle-ci le devient ; une adresse déjà
+  // gardée n'est jamais remplacée ici (sinon « retrouver » par la première
+  // adresse ne trouverait plus rien : l'adresse du rapport se change au
+  // paiement ou sur le rapport, action `email`). Le lien est reconstruit
+  // depuis le jeton présenté : la base n'en garde que l'empreinte.
+  async function lien(corps) {
+    const c = await charger(corps);
+    if (c.erreur) return c.erreur;
+    const { ligne, role } = c;
+    if (!ligne[role + '_consent']) return non(403, 'consentement');
+    const e = emailPropre(corps.email) || ligne[role + '_email'] || null;
+    if (!e) return non(400, 'email');
+    if (!courriel) return non(503, 'courriel');
+    if (!freiner(essais.lien, ligne.id + ':' + role, LIENS_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    let maj = ligne;
+    if (!ligne[role + '_email']) maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
+    const msg = messageLien({ lang: ligne.lang, liens: [{ ...entreeLien(ligne, role), url: lienDe(ligne, corps.jeton) }], rotation: false });
+    try {
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+    } catch (err) {
+      console.error('[bilan] lien', String(err && err.message || err).slice(0, 200));
+      return non(502, 'courriel');
+    }
+    await compter('lien_envoye');
+    return ok({ email: e, envoye: true, etat: etatPour(maj, role) });
+  }
+
+  // Retrouver ses évaluations avec la seule adresse e-mail : pour chaque rôle
+  // qui porte l'adresse, un jeton neuf remplace l'ancien (la base ne garde que
+  // des empreintes, l'ancien lien ne peut pas être relu) et tout part en un
+  // e-mail. La réponse est la même qu'il y ait une évaluation ou non ; sans
+  // évaluation, l'e-mail le dit, pour ne pas laisser attendre. Le partenaire
+  // garde son propre lien, intact.
+  async function retrouver(corps, ctx) {
+    const e = emailPropre(corps.email);
+    if (!e) return non(400, 'email');
+    const lang = LANGUES.includes(corps.lang) ? corps.lang : 'fr';
+    if (!courriel) return non(503, 'courriel');
+    if (!freiner(essais.ip, ctx?.ip || 'inconnue', RETROUVER_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    if (!freiner(essais.adresse, e, 1, RETROUVER_DELAI_MS)) return ok({ envoye: true });
+    const lignes = stockage.trouverParEmail ? await stockage.trouverParEmail(e) : [];
+    const liens = [];
+    let langueTrouvee = null;
+    const porte = (x) => typeof x === 'string' && x.toLowerCase() === e;
+    for (const ligne of lignes || []) {
+      const roles = [];
+      if (porte(ligne.a_email)) roles.push('a');
+      if (!estSolo(ligne) && porte(ligne.b_email)) roles.push('b');
+      if (!roles.length && porte(ligne.paiement_email)
+        && (ligne.paiement_role === 'a' || (ligne.paiement_role === 'b' && !estSolo(ligne)))) roles.push(ligne.paiement_role);
+      for (const role of roles) {
+        if (!ligne[role + '_consent']) continue;
+        const jeton = nouveauJeton();
+        await stockage.maj(ligne.id, { [role + '_jeton']: await empreinte(jeton), maj_le: maintenant().toISOString() });
+        liens.push({ ...entreeLien(ligne, role), url: lienDe(ligne, jeton) });
+        if (!langueTrouvee && LANGUES.includes(ligne.lang)) langueTrouvee = ligne.lang;
+      }
+    }
+    const msg = messageLien({ lang: langueTrouvee || lang, liens, rotation: true });
+    try {
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+    } catch (err) {
+      console.error('[bilan] retrouver', String(err && err.message || err).slice(0, 200));
+      return non(502, 'courriel');
+    }
+    await compter(liens.length ? 'retrouver_envoye' : 'retrouver_aucun');
+    return ok({ envoye: true });
+  }
+
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
-    email, pdf, supprimer, envoyer_rapport: envoyerRapport,
+    email, pdf, supprimer, lien, retrouver, envoyer_rapport: envoyerRapport,
   };
 
   async function traiter(corps, ctx) {

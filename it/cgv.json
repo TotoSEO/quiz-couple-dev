@@ -1,6 +1,6 @@
 {
   "title": "Condizioni generali di vendita",
-  "majLe": "Ultimo aggiornamento: 18 ottobre 2026",
+  "majLe": "Ultimo aggiornamento: 20 ottobre 2026",
   "intro": "Queste condizioni si applicano all'acquisto del report completo del {{bilan}} su quiz-couple.com. Tutto il resto del sito è gratuito e non è interessato da nessuna vendita.",
   "liens": {
     "contact": "pagina dei contatti",
@@ -15,14 +15,16 @@
     "adresse": "Indirizzo:",
     "email": "E-mail:",
     "tva": "IVA:",
-    "tvaValeur": "IVA non applicabile, articolo 293 B del Codice generale delle imposte francese"
+    "tvaValeur": "IVA non applicabile, articolo 293 B del Codice generale delle imposte francese",
+    "telephone": "Telefono:"
   },
   "sections": [
     {
       "titre": "1. Cosa si vende",
       "p": [
         "La valutazione di coppia è un questionario a cui due partner rispondono ciascuno per conto suo, o a cui una sola persona risponde indicando anche cosa risponderebbe il suo partner secondo lei (modalità da soli). Rispondere alle domande è gratuito; nessun risultato viene dato senza acquisto.",
-        "Ciò che si vende è il report: una valutazione completa della coppia a partire dalle due serie di risposte (allineamento, clima, mappa delle aree, differenze con le due risposte, guide per parlarne, punti di blocco e non negoziabili, segnali d'allarme, divisione dei ruoli). Il report è un contenuto digitale: un documento PDF inviato per e-mail, e la stessa versione consultabile sulla pagina della valutazione."
+        "Ciò che si vende è il report: una valutazione completa della coppia a partire dalle due serie di risposte (allineamento, clima, mappa delle aree, differenze con le due risposte, guide per parlarne, punti di blocco e non negoziabili, segnali d'allarme, divisione dei ruoli). Il report è un contenuto digitale: un documento PDF inviato per e-mail, e la stessa versione consultabile sulla pagina della valutazione.",
+        "La valutazione è riservata alle persone maggiorenni. Il report è un normale file PDF, leggibile con qualsiasi lettore di PDF, sul telefono come sul computer; la stessa versione si legge sulla pagina della valutazione. A un acquisto si applicano le condizioni online al momento del pagamento."
       ]
     },
     {
@@ -35,7 +37,7 @@
     {
       "titre": "3. Ordine e pagamento",
       "p": [
-        "Il pagamento viene proposto a ciascun partner appena ha finito le proprie risposte. Prima di pagare, l'acquirente può indicare l'indirizzo e-mail a cui ricevere il report, e spunta una casella con cui chiede di ricevere il report appena è pronto e riconosce di perdere il diritto di recesso una volta fornito il report (vedi l'articolo 5).",
+        "Il pagamento viene proposto a ciascun partner non appena ha finito le proprie risposte. Prima di pagare, l'acquirente può indicare l'indirizzo e-mail a cui ricevere il report, e spunta una casella con cui chiede espressamente che il report gli sia fornito non appena pronto, senza attendere la fine del periodo di recesso, e riconosce di perdere il diritto di recesso una volta fornito il report (vedi l'articolo 5). L'e-mail che consegna il report riporta questa richiesta e questo riconoscimento.",
         "Il pagamento avviene sulla pagina sicura del nostro fornitore Stripe, con carta bancaria, Apple Pay o Google Pay. Non abbiamo mai accesso ai dati della carta. Stripe invia una ricevuta all'indirizzo e-mail indicato al momento del pagamento: è la conferma dell'ordine. Si può chiedere una fattura dalla {{contact}}."
       ]
     },
@@ -44,26 +46,30 @@
       "p": [
         "Il report viene preparato appena il pagamento è confermato e i due partner hanno finito di rispondere (o, nella modalità da soli, la persona ha finito). Parte allora in PDF agli indirizzi e-mail indicati, e compare sulla pagina della valutazione per entrambi, dai loro link personali, con un pulsante per scaricare il PDF. Resta disponibile sei mesi dopo il pagamento, poi la valutazione viene cancellata.",
         "Se il partner non finisce le sue risposte, il report non può essere preparato: l'acquirente può allora chiederne il rimborso in qualsiasi momento dalla {{contact}}.",
-        "Ciascuno dei due partner può cancellare la valutazione prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a rimborso al di fuori della garanzia dell'articolo 6."
+        "Ciascuno dei due partner può cancellare la valutazione prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto ad alcun rimborso."
       ]
     },
     {
       "titre": "5. Il diritto di recesso",
       "p": [
-        "Il report è un contenuto digitale. Ai sensi dell'articolo 16, lettera m, della Direttiva 2011/83/UE e dell'articolo L221-28 13° del Codice del consumo francese, il diritto di recesso di quattordici giorni non si applica più una volta fornito il report, poiché l'acquirente ha chiesto di riceverlo appena pronto e ha riconosciuto di perdere questo diritto prima di pagare. Finché il report non è stato fornito, l'acquirente può recedere scrivendoci dalla {{contact}}, e viene rimborsato per intero."
+        "Il report è un contenuto digitale fornito senza supporto materiale. Per questo tipo di contenuto, l'articolo L221-28 13° del Codice del consumo francese (che attua l'articolo 16, lettera m, della direttiva 2011/83/UE) prevede che il diritto di recesso di quattordici giorni non possa più essere esercitato una volta che l'esecuzione è iniziata con il consenso espresso del consumatore e dopo che ha riconosciuto di perdere così tale diritto. È ciò che l'acquirente accetta spuntando la casella prima di pagare.",
+        "Il report è fornito nel momento in cui viene inviato per e-mail o messo a disposizione sulla pagina della valutazione, a seconda di quale evento avviene per primo. Da quell'istante il diritto di recesso è terminato: l'acquisto è definitivo e non può più essere rimborsato a questo titolo.",
+        "Finché il report non è stato fornito, per esempio perché il partner non ha finito di rispondere, l'acquirente può recedere senza motivo entro quattordici giorni dal pagamento, scrivendoci dalla {{contact}}. Viene allora rimborsato per intero, sul mezzo di pagamento usato, entro quattordici giorni."
       ]
     },
     {
-      "titre": "6. Soddisfatti o rimborsati",
+      "titre": "6. Dopo la fornitura del report",
       "p": [
-        "Oltre a quanto previsto dalla legge, rimborsiamo il report entro {{jours}} giorni dal pagamento, senza bisogno di giustificarsi: basta scriverci dalla {{contact}} indicando il nome dei due partner e la data del pagamento. Il rimborso avviene sul mezzo di pagamento utilizzato, entro quattordici giorni dalla richiesta."
+        "Una volta fornito il report, nessun rimborso è dovuto. Il report è costruito a partire dalle risposte date: un risultato che non piace, che sorprende o che non corrisponde all'idea che ci si era fatti della propria relazione non è un difetto del report, e non dà diritto né a un rimborso né a un indennizzo.",
+        "Il report è coperto dalla garanzia legale di conformità dei contenuti digitali (articoli L224-25-12 e seguenti del Codice del consumo francese). Se il file non si apre, se il report è incompleto o se non corrisponde a quanto descritto nell'articolo 1, scrivici dalla {{contact}}: lo correggiamo o lo rigeneriamo senza costi e, se non è possibile, ti rimborsiamo."
       ]
     },
     {
       "titre": "7. Cosa è la valutazione, e cosa non è",
       "p": [
-        "La valutazione è uno strumento per aiutare una coppia a parlare della propria vita a due. Non è una diagnosi, né una terapia, né il parere di un professionista sanitario. Le decisioni prese a partire dal report restano dei partner. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi.",
-        "Il servizio è fornito così com'è. Facciamo il possibile perché sia sempre disponibile, ma non si può escludere un'interruzione temporanea (manutenzione, guasto di un fornitore). Se un report pagato resta inaccessibile per colpa nostra, viene rimborsato."
+        "La valutazione di coppia è uno strumento di informazione e di dialogo. Mette a confronto le risposte dei due partner, o, in modalità da soli, le tue risposte e ciò che pensi sarebbero le sue, e ti propone argomenti di cui parlare. Nessun professionista interviene: non è una diagnosi, né una terapia, né un parere medico, psicologico, legale o finanziario, e nessun risultato ha valore di verità sulla vostra relazione né su ciò che diventerà.",
+        "Le decisioni che prendi nella tua vita a partire dal report, che si tratti di restare insieme, separarvi, sposarvi, avere un figlio, traslocare, questioni di denaro o qualsiasi altra scelta, sono tue e ricadono sotto la tua sola responsabilità. Non garantiamo alcun risultato e non rispondiamo di queste decisioni né delle loro conseguenze. Se attraversi un periodo difficile, un consulente o terapeuta di coppia può accompagnarti; se hai paura del tuo partner, chiama il 1522 (in Italia) o il numero di aiuto del tuo paese.",
+        "Facciamo il possibile perché il servizio sia disponibile in modo continuo, senza poter escludere un'interruzione temporanea (manutenzione, guasto di un fornitore). Se un report pagato resta inaccessibile per causa nostra, lo forniamo di nuovo o lo rimborsiamo. La nostra responsabilità può essere chiamata in causa solo nei casi previsti dalla legge."
       ]
     },
     {
@@ -86,7 +92,7 @@
     {
       "titre": "10. La legge applicabile",
       "p": [
-        "Queste condizioni sono regolate dal diritto francese. Se risiedi in un altro paese dell'Unione europea, mantieni la tutela delle norme imperative del tuo paese di residenza."
+        "Queste condizioni sono soggette al diritto francese. In caso di controversia, e in mancanza di un accordo amichevole, i tribunali competenti sono quelli designati dalla legge; un consumatore può anche rivolgersi al tribunale del luogo in cui risiedeva al momento del pagamento. Se risiedi in un altro paese dell'Unione europea, conservi la protezione delle norme imperative del tuo paese di residenza."
       ]
     }
   ]

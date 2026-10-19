@@ -54,7 +54,10 @@
       "creer": "Create our assessment",
       "manque": "An answer is missing.",
       "prenomManque": "Write both your first names.",
-      "accordManque": "Tick both boxes to continue."
+      "accordManque": "Tick both boxes to continue.",
+      "email": "Your email (optional)",
+      "emailAide": "To get your personal link right away and find your answers again if you close the page. It's also where the report will be sent.",
+      "emailFaux": "This email address doesn't look complete."
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -151,10 +154,9 @@
       "emailPlaceholder": "you@email.com",
       "emailAide": "The PDF will go to this address as soon as you've both finished. It isn't used for anything else.",
       "emailFaux": "This address doesn't look valid.",
-      "renonciation": "I ask to receive the report as soon as it is ready and acknowledge that I lose my right of withdrawal once the report has been provided.",
+      "renonciation": "I ask for the report to be provided as soon as it is ready, without waiting for the end of the 14-day withdrawal period, and I acknowledge that I lose my right of withdrawal once it is provided.",
       "renonciationManque": "Tick the box to continue.",
       "bouton": "Unlock our report · {{prix}}",
-      "garantie": "Money back if you're not satisfied, within {{jours}} days: a message from the contact page is enough.",
       "securite": "Secure payment by Stripe (card, Apple Pay, Google Pay). We never see your card.",
       "cgv": "Terms of sale",
       "tva": "VAT not applicable, art. 293 B of the French General Tax Code.",
@@ -543,6 +545,23 @@
     "genres": {
       "f": "A woman",
       "h": "A man"
+    },
+    "lien": {
+      "titre": "Email me my link",
+      "placeholder": "you@email.com",
+      "bouton": "Send",
+      "aide": "To find your answers again if you close this page or change phones.",
+      "envoye": "Done: your link is in your inbox ({{email}}). Check your spam folder too.",
+      "faux": "This email address doesn't look complete.",
+      "trop": "Too many emails for this assessment. Try again in an hour."
+    },
+    "retrouver": {
+      "titre": "Already started an assessment?",
+      "texte": "If you gave your email address, we'll send your links again. The old link will stop working.",
+      "placeholder": "you@email.com",
+      "bouton": "Find my assessment",
+      "envoye": "If an assessment is linked to {{email}}, your links will reach your inbox within a minute. Check your spam folder too.",
+      "trop": "Too many requests from your connection. Try again in an hour."
     }
   },
   "lp": {
@@ -557,7 +576,7 @@
     "cta": "Start the assessment",
     "ctaDuo": "Take the assessment together",
     "ctaSolo": "Take it on your own",
-    "ctaNote": "Free questions · {{prix}} for the report, at the end · Satisfied or refunded within {{jours}} days",
+    "ctaNote": "Free questions · {{prix}} for the report, at the end · One-off payment, no subscription",
     "voirExtrait": "See the report page by page",
     "visuel": {
       "sur": "Sample report · fictional couple",
@@ -606,10 +625,11 @@
         ],
         "cta": "Start on your own"
       },
-      "note": "Same price, same report. If one day your partner wants to answer too, an assessment done together will replace your assumptions with their answers."
+      "note": "Same price, same report. If one day your partner wants to answer too, an assessment done together will replace your assumptions with their answers.",
+      "citation": "A session with a relationship counsellor costs between £50 and £90. Starting with Quiz Couple's full assessment is THE right first step."
     },
     "rapport": {
-      "titre": "The report, page by page",
+      "titre": "What's in the report?",
       "intro": "A real document of about forty pages, with its chapters, its charts and, for each gap, ways to talk about it. Scroll through.",
       "pages": [
         {
@@ -722,7 +742,7 @@
         }
       ],
       "fin": "On the big questions (children, where to live, fidelity...), each of you can also mark an answer as a deal-breaker. The report then starts there.",
-      "cta": "See all 100 questions"
+      "cta": "Take the 100 questions"
     },
     "pour": {
       "titre": "For couples who want to see clearly",
@@ -836,7 +856,6 @@
         "The PDF by email and the online version for six months",
         "The same report, whether you do it together or on your own"
       ],
-      "comparaison": "For comparison, a session with a relationship counsellor often costs between £50 and £90.",
       "garantie": "Satisfied or refunded within {{jours}} days: one message is enough."
     },
     "confiance": {
@@ -905,7 +924,7 @@
         },
         {
           "q": "What if we don't like the report?",
-          "a": "You're satisfied or refunded within {{jours}} days: a message from the contact page is enough, no need to justify yourself."
+          "a": "The report is made from your answers, and it sometimes says something other than what you hoped. Once provided, it isn't refunded: it's digital content, and you ask to receive it right away before paying. As long as it hasn't been provided, you can withdraw and be refunded. And if there's a problem with the file, we sort it out."
         },
         {
           "q": "What happens to our answers?",

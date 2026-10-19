@@ -29,6 +29,7 @@
   var T = CFG.textes || {};
   var LANG = CFG.lang || 'fr';
   var CLE_LOCALE = 'qc-bilans';
+  var EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
   var SECONDES_PAR_QUESTION = 15;
   var C = null;   // le calcul (window.QCBilanCoeur)
@@ -216,7 +217,51 @@
   });
   var ACTIONS_COMMUNES = {
     accueil: function () { nettoyerUrl(); if (lireListe().length) accueil(); else quitterFocus(); },
+    // « Retrouver mon évaluation » : l'adresse seule ; le serveur renvoie des
+    // liens neufs par e-mail, qu'il y ait une évaluation ou non (l'e-mail le dit).
+    retrouver: function (b) {
+      var input = document.getElementById('bilan-retrouver-email');
+      var etat = document.getElementById('bilan-retrouver-etat');
+      var e = (input && input.value || '').trim();
+      if (!EMAIL_OK.test(e)) { if (etat) etat.textContent = x('lien.faux'); if (input) input.focus(); return; }
+      b.disabled = true;
+      appel('retrouver', { email: e, lang: LANG }).then(function (r) {
+        b.disabled = false;
+        if (etat) etat.textContent = r.statut === 200 ? x('retrouver.envoye', { email: e }) : x(r.json.erreur === 'trop' ? 'retrouver.trop' : 'erreurs.serveur');
+      }).catch(function () { b.disabled = false; if (etat) etat.textContent = x('erreurs.reseau'); });
+    },
   };
+
+  // Les liens perdus (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet
+  // par erreur et qu'il n'a pas eu le temps de copier son lien, on fait
+  // comment ? »). Sur le même appareil, la page retient l'évaluation
+  // (qc-bilans) ; ailleurs, il faut le lien : « Recevoir mon lien par e-mail »
+  // depuis l'évaluation ouverte, et « Retrouver mon évaluation » par l'adresse.
+  function blocLien(email) {
+    return '<div class="bilan-lien-mail">' +
+      '<label class="bilan-label" for="bilan-lien-email">' + x('lien.titre') + '</label>' +
+      '<div class="bilan-lien-ligne"><input id="bilan-lien-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" placeholder="' + x('lien.placeholder') + '" value="' + esc(email || '') + '">' +
+      bouton('envoyerLien', x('lien.bouton'), 'btn-outline btn-sm') + '</div>' +
+      '<p class="bilan-note" id="bilan-lien-etat" aria-live="polite">' + x('lien.aide') + '</p></div>';
+  }
+  function envoyerLien(b, id, jeton) {
+    var input = document.getElementById('bilan-lien-email');
+    var etat = document.getElementById('bilan-lien-etat');
+    var e = (input && input.value || '').trim();
+    if (!EMAIL_OK.test(e)) { if (etat) etat.textContent = x('lien.faux'); if (input) input.focus(); return; }
+    b.disabled = true;
+    appel('lien', { id: id, jeton: jeton, email: e }).then(function (r) {
+      b.disabled = false;
+      if (etat) etat.textContent = r.statut === 200 ? x('lien.envoye', { email: e }) : x(r.json.erreur === 'trop' ? 'lien.trop' : 'erreurs.serveur');
+    }).catch(function () { b.disabled = false; if (etat) etat.textContent = x('erreurs.reseau'); });
+  }
+  function blocRetrouver() {
+    return '<details class="bilan-retrouver"><summary>' + x('retrouver.titre') + '</summary>' +
+      '<p class="bilan-note">' + x('retrouver.texte') + '</p>' +
+      '<div class="bilan-lien-ligne"><input id="bilan-retrouver-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" placeholder="' + x('retrouver.placeholder') + '">' +
+      bouton('retrouver', x('retrouver.bouton'), 'btn-outline btn-sm') + '</div>' +
+      '<p class="bilan-note" id="bilan-retrouver-etat" aria-live="polite"></p></details>';
+  }
 
   function copier(texte, boutonEl, libelleOk) {
     var fait = function () {
@@ -329,7 +374,7 @@
     chargement();
     appel('etat', { id: id, jeton: jeton }).then(function (r) {
       if (r.statut === 404) {
-        afficher(carte('<p class="bilan-alerte">' + x('rejoindre.lienUtilise') + '</p>' +
+        afficher(carte('<p class="bilan-alerte">' + x('rejoindre.lienUtilise') + '</p>' + blocRetrouver() +
           '<div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-outline') + '</div>'));
         return;
       }
@@ -397,7 +442,7 @@
         bouton('oublier', x('accueil.oublier'), 'btn-outline btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
         '</div></li>';
     }).join('');
-    afficher(carte('<h2 class="bilan-titre">' + x('accueil.titre') + '</h2><ul class="bilan-reprises">' + cartes + '</ul>' +
+    afficher(carte('<h2 class="bilan-titre">' + x('accueil.titre') + '</h2><ul class="bilan-reprises">' + cartes + '</ul>' + blocRetrouver() +
       '<p class="bilan-note">' + x('accueil.oublierAide') + '</p>' +
       '<div class="bilan-actions">' + bouton('creer', x('accueil.nouveau'), 'btn-outline') + '</div>', 'bilan-accueil'), true);
     ACTIONS = {
@@ -480,7 +525,7 @@
   }
 
   function creation(etape) {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, situation: {} };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, email: '', situation: {} };
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
     etape = etape || 1;
@@ -496,7 +541,14 @@
         '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
         (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
-        '<p class="bilan-note">' + x('creation.genreAide') + '</p>';
+        '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
+        // L'adresse e-mail, facultative : le lien personnel part tout de suite
+        // (19 octobre 2026, un onglet fermé avant d'avoir copié son lien) et
+        // elle servira au rapport.
+        '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
+        '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" value="' + esc(brouillon.email || '') + '">' +
+        '<p class="bilan-note">' + x('creation.emailAide') + '</p></div>' +
+        blocRetrouver();
     } else if (etape === 2) {
       corps += '<h2 class="bilan-titre">' + x('creation.situationTitre') + '</h2>' +
         '<p class="bilan-texte">' + x('creation.situationAide') + '</p>' + formSituation(brouillon.situation);
@@ -528,6 +580,7 @@
         brouillon.autre = (document.getElementById('bilan-autre').value || '').trim();
         brouillon.genreMoi = lireGenre('g-moi');
         brouillon.genreAutre = lireGenre('g-autre');
+        brouillon.email = (document.getElementById('bilan-email').value || '').trim();
       } else if (etape === 2) {
         brouillon.situation = lireSituation();
       }
@@ -550,6 +603,7 @@
       suivant: function () {
         lireEtape();
         if (etape === 1 && (!brouillon.moi || !brouillon.autre)) return erreur('creation.prenomManque');
+        if (etape === 1 && brouillon.email && !EMAIL_OK.test(brouillon.email)) return erreur('creation.emailFaux');
         if (etape === 2 && !C.situationValide(brouillon.situation)) return erreur('creation.manque');
         creation(etape + 1);
       },
@@ -566,6 +620,14 @@
           if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
+          // L'adresse donnée à la création : le lien personnel part tout de
+          // suite par e-mail, et le serveur la garde pour le rapport.
+          if (brouillon.email) {
+            appel('lien', { id: entree.id, jeton: entree.jeton, email: brouillon.email }).catch(function () {});
+            // L'écran d'invitation s'affiche avant que le serveur ait gardé
+            // l'adresse : on la lui donne pour pré-remplir « Recevoir mon lien ».
+            if (r.json.etat && r.json.etat.moi) r.json.etat.moi.email = brouillon.email;
+          }
           brouillon = null;
           // Seul(e) : personne à inviter, les questions tout de suite.
           if (entree.mode === 'solo') return ouvrir(entree);
@@ -594,6 +656,7 @@
       '<h3 class="bilan-sous-titre">' + x('invitation.monLien') + '</h3>' +
       '<p class="bilan-note">' + x('invitation.monLienAide', { autre: autre }) + '</p>' +
       '<div class="bilan-actions">' + bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline btn-sm') + '</div>' +
+      blocLien(etat && etat.moi && etat.moi.email) +
       '<div class="bilan-actions">' + bouton('commencer', x('invitation.commencer')) + '</div>', 'bilan-invitation');
     afficher(html);
     var message = remplir(tr('invitation.message', ''), { lien: lien });
@@ -603,6 +666,7 @@
       },
       copier: function (b) { copier(lien, b); },
       copierMoi: function (b) { copier(lienPersonnel(entree.id, entree.jeton), b); },
+      envoyerLien: function (b) { envoyerLien(b, entree.id, entree.jeton); },
       qr: function (b) {
         var zone = document.getElementById('bilan-qr');
         if (!zone.hidden) { zone.hidden = true; return; }
@@ -975,10 +1039,12 @@
       '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' +
       '<p class="bilan-texte">' + x('pause.texte') + '</p>' +
       '<div class="bilan-actions">' + bouton('reprendre', x('pause.reprendre')) +
-      bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline') + '</div>', 'bilan-pause'));
+      bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline') + '</div>' +
+      blocLien(session.moi && session.moi.email), 'bilan-pause'));
     ACTIONS = {
       reprendre: function () { S = session; suivante(); },
       copierMoi: function (b) { copier(lienPersonnel(session.id, session.jeton), b); },
+      envoyerLien: function (b) { envoyerLien(b, session.id, session.jeton); },
     };
   }
 
@@ -1054,7 +1120,6 @@
       '<label class="bilan-case"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
-      (CFG.garantie > 0 ? '<p class="bilan-garantie">' + x('paywall.garantie', { jours: CFG.garantie }) + '</p>' : '') +
       '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>' +
       '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>',
       'bilan-offre');

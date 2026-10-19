@@ -422,6 +422,12 @@ export const VENDEUR = {
   siret: '940 106 800 00011',
   adresse: '4 rue de Bruges, 67000 Strasbourg',
   email: 'infoquizcouple@gmail.com',
+  // La LCEN (art. 6-III) et le Code de la consommation (L221-5) demandent un
+  // numéro de téléphone ; vide tant que Thomas n'en donne pas, et alors rien
+  // n'est affiché. Le médiateur de la consommation (L612-1, obligatoire) se
+  // renseigne de même : mediateur: { nom: '...', site: 'https://...' }, et la
+  // section « Réclamations et médiation » des CGV s'écrit alors avec son nom.
+  telephone: '',
 };
 
 // ── La saison du site ────────────────────────────────────────────────────

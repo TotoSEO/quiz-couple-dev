@@ -197,7 +197,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   const payee = stockage.lignes.get(c.id);
   assert.equal(payee.paiement_montant, C.PRIX_CENTIMES);
   assert.equal(payee.paiement_role, 'a');
-  assert.equal(payee.paiement_email, 'Thomas.Paie@exemple.fr');
+  assert.equal(payee.paiement_email, 'thomas.paie@exemple.fr');
   assert.equal(payee.paiement_intent, 'pi_1234567890');
   assert.equal(payee.rapport_statut, null, 'B n\'a pas fini : pas encore de rapport à faire');
 
@@ -247,7 +247,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal((await appel({ action: 'envoyer_rapport', id: c.id })).statut, 403, 'réservé à la fabrique');
   const env = await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true);
   assert.equal(env.json.envoyes, 3, 'adresse du paiement, de A et de B');
-  assert.deepEqual(courriel.envoyes.map((m) => m.a).sort(), ['Thomas.Paie@exemple.fr', 'lea@exemple.fr', 'thomas@exemple.fr'].sort());
+  assert.deepEqual(courriel.envoyes.map((m) => m.a).sort(), ['thomas.paie@exemple.fr', 'lea@exemple.fr', 'thomas@exemple.fr'].sort());
   const m0 = courriel.envoyes[0];
   assert.equal(m0.pieces[0].nom, 'evaluation-de-couple-thomas-et-lea-rose.pdf');
   assert.match(m0.texte, /24 pages/);
@@ -464,4 +464,51 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   assert.match(courriel.envoyes[0].sujet, /votre rapport, Camille/);
   assert.ok(!/Julien/.test(courriel.envoyes[0].sujet));
   assert.match((await appel({ action: 'pdf', ...A })).json.url, /download=evaluation-de-couple-camille\.pdf$/);
+});
+
+test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation » par e-mail', async () => {
+  const { appel, courriel, stockage } = monter();
+  const c = await creerCouple(appel);
+  // Son propre lien, à l'adresse donnée, gardée comme adresse du rapport.
+  let r = await appel({ action: 'lien', id: c.id, jeton: c.jeton, email: ' Camille@Exemple.FR ' });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.equal(r.json.email, 'camille@exemple.fr');
+  assert.equal(courriel.envoyes.length, 1);
+  assert.equal(courriel.envoyes[0].a, 'camille@exemple.fr');
+  assert.ok(courriel.envoyes[0].texte.includes('#b=' + c.id + '&t=' + c.jeton), 'le lien est celui du jeton présenté');
+  assert.ok(courriel.envoyes[0].html.includes('Thomas et Léa'));
+  assert.ok(!/\{[a-z]+\}/i.test(courriel.envoyes[0].html));
+  assert.equal((await stockage.lire(c.id)).a_email, 'camille@exemple.fr');
+  // Sans adresse, celle qui est gardée sert ; cinq envois par heure.
+  for (let i = 0; i < 4; i++) assert.equal((await appel({ action: 'lien', id: c.id, jeton: c.jeton })).statut, 200);
+  assert.equal((await appel({ action: 'lien', id: c.id, jeton: c.jeton })).statut, 429);
+  assert.equal((await appel({ action: 'lien', id: c.id, jeton: 'x'.repeat(30) })).statut, 404, 'jamais sans le jeton');
+  // Retrouver : un lien neuf, l'ancien ne marche plus, le partenaire garde le sien.
+  const avant = courriel.envoyes.length;
+  r = await appel({ action: 'retrouver', email: 'CAMILLE@exemple.fr', lang: 'fr' }, '9.9.9.9');
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.equal(courriel.envoyes.length, avant + 1);
+  const m = courriel.envoyes[avant];
+  assert.equal(m.a, 'camille@exemple.fr');
+  const jetonNeuf = /#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)/.exec(m.texte)[1];
+  assert.notEqual(jetonNeuf, c.jeton);
+  assert.ok(m.texte.includes("l'ancien ne fonctionne plus"));
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: c.jeton })).statut, 404, 'ancien lien révoqué');
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jetonNeuf })).statut, 200, 'nouveau lien ouvert');
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: c.invitation })).statut, 200, 'invitation de B intacte');
+  // Une adresse inconnue : même réponse, et un e-mail qui le dit ; puis dix
+  // minutes avant un second envoi à la même adresse.
+  r = await appel({ action: 'retrouver', email: 'personne@exemple.fr', lang: 'en' }, '9.9.9.9');
+  assert.equal(r.statut, 200);
+  assert.ok(courriel.envoyes[courriel.envoyes.length - 1].texte.includes('No relationship assessment'));
+  const n = courriel.envoyes.length;
+  assert.equal((await appel({ action: 'retrouver', email: 'personne@exemple.fr' }, '9.9.9.9')).statut, 200);
+  assert.equal(courriel.envoyes.length, n, 'pas de second envoi en dix minutes');
+  // Une adresse mal formée : 400 ; cinq demandes par heure et par IP.
+  assert.equal((await appel({ action: 'retrouver', email: 'nimporte' })).statut, 400);
+  for (let i = 0; i < 2; i++) assert.equal((await appel({ action: 'retrouver', email: 'x' + i + '@exemple.fr' }, '9.9.9.9')).statut, 200);
+  assert.equal((await appel({ action: 'retrouver', email: 'y@exemple.fr' }, '9.9.9.9')).statut, 429);
+  // Sans boîte aux lettres : on le dit, rien ne casse.
+  const sans = creerServeur({ stockage: creerStockageMemoire(), stripe: null, courriel: null, sel: 'sel' });
+  assert.equal((await sans.traiter({ action: 'retrouver', email: 'a@b.fr' }, { ip: '1.1.1.1' })).statut, 503);
 });

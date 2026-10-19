@@ -159,8 +159,10 @@ ouverte : on ne peut pas vendre par erreur avant l'étape 3.
   e-mail) et l'erreur s'affiche dans l'admin. Le rapport reste lisible sur
   la page. Après correction, relancer le workflow : il reprend les rapports
   en erreur (trois essais).
-- **Rembourser** (garantie de quatorze jours, `GARANTIE_JOURS`, ou un
-  partenaire qui ne finit jamais) : Stripe > Paiements > le paiement >
+- **Rembourser** (une rétractation avant la fourniture du rapport, un
+  partenaire qui ne finit jamais, un défaut de conformité, ou un geste
+  commercial : il n'y a plus de garantie « satisfait ou remboursé », voir
+  CONCEPTION.md) : Stripe > Paiements > le paiement >
   Rembourser. Le rapport reste ouvert : le but est de garder la confiance,
   pas de reprendre l'accès.
 - **Facture** : si quelqu'un en demande une, Stripe > Paiements > le

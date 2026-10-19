@@ -3264,8 +3264,8 @@ var QuizEngine = (function() {
     var zone = el('section', 'qr-bilan');
     zone.setAttribute('aria-label', t.sur);
     // Une vraie page du rapport d'exemple (bilan/apercus.mjs), dans la langue.
-    var visuel = '<div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-' + esc(BILAN_TEXTES[lang] ? lang : 'fr') +
-      '.webp" alt="" width="720" height="1018" loading="lazy" decoding="async"></div>';
+    var visuel = '<div class="qr-bilan-visuel" aria-hidden="true"><img draggable="false" src="/bilan/apercu-synthese-' + esc(BILAN_TEXTES[lang] ? lang : 'fr') +
+      '.webp" alt="" width="240" height="340" loading="lazy" decoding="async"></div>';
     zone.innerHTML = visuel +
       '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
       '<h3 class="qr-bilan-titre">' + esc(insecables(texte[0])) + '</h3>' +
