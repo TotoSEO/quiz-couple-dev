@@ -6,8 +6,9 @@
   "app": {
     "chargement": "Chargement...",
     "accueil": {
-      "titre": "Vos bilans sur cet appareil",
+      "titre": "Vos évaluations sur cet appareil",
       "avec": "Avec {{autre}}",
+      "seul": "Seul(e)",
       "progression": "{{n}} questions sur {{total}}",
       "invite": "Invitation pas encore acceptée",
       "fini": "Vos réponses sont envoyées",
@@ -16,18 +17,23 @@
       "voir": "Voir le rapport",
       "oublier": "Retirer de cet appareil",
       "oublierConfirmer": "Confirmer : retirer d'ici",
-      "oublierAide": "Le bilan n'est pas supprimé, il disparaît seulement de cet appareil. Gardez votre lien personnel pour le retrouver.",
-      "violence": "Ce bilan montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, il n'est pas fait pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24.",
-      "nouveau": "Commencer un nouveau bilan",
+      "oublierAide": "L'évaluation n'est pas supprimée, elle disparaît seulement de cet appareil. Gardez votre lien personnel pour la retrouver.",
+      "violence": "Cette évaluation montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, elle n'est pas faite pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24.",
+      "nouveau": "Commencer une nouvelle évaluation",
       "pret": "Prêt : il reste à débloquer le rapport",
-      "reprise": "Vous avez un bilan en cours avec {{autre}}.",
+      "reprise": "Vous avez une évaluation en cours avec {{autre}}.",
       "repriseRapport": "Votre rapport avec {{autre}} est disponible.",
       "quitter": "Retour"
     },
     "creation": {
-      "titre": "Votre bilan",
+      "titre": "Votre évaluation",
       "etape": "Étape {{n}} sur 3",
-      "prenomsTitre": "Qui fait le bilan ?",
+      "modeTitre": "Comment faites-vous l'évaluation ?",
+      "modeDuo": "À deux",
+      "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
+      "modeSolo": "Seul(e)",
+      "modeSoloAide": "Vous répondez pour vous, puis vous dites ce que votre partenaire répondrait. Votre partenaire n'est pas prévenu(e) et ne voit rien.",
+      "prenomsTitre": "Vos deux prénoms",
       "moi": "Votre prénom",
       "autre": "Le prénom de votre partenaire",
       "genre": "Pour vous, plutôt",
@@ -40,12 +46,12 @@
       "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? ». Votre partenaire pourra les corriger.",
       "accordTitre": "Avant de commencer",
       "majeur": "J'ai 18 ans ou plus.",
-      "consentement": "J'accepte que mes réponses soient enregistrées pour ce bilan, y compris sur des sujets intimes (vie sexuelle, religion, opinions), et que {{autre}} les voie dans le rapport.",
-      "accordAide": "Votre bilan est gardé 60 jours après votre dernière réponse s'il n'est pas payé, six mois après le paiement sinon, et chacun de vous peut le supprimer à tout moment. Pas de compte à créer.",
+      "consentement": "J'accepte que mes réponses soient enregistrées pour cette évaluation, y compris sur des sujets intimes (vie sexuelle, religion, opinions), et que {{autre}} les voie dans le rapport.",
+      "accordAide": "Votre évaluation est gardée 60 jours après votre dernière réponse si elle n'est pas payée, six mois après le paiement sinon, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
       "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
       "suivant": "Suivant",
       "retour": "Retour",
-      "creer": "Créer notre bilan",
+      "creer": "Créer notre évaluation",
       "manque": "Il manque une réponse.",
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez les deux cases pour continuer."
@@ -58,16 +64,16 @@
       "copie": "Lien copié !",
       "qr": "Afficher le QR code",
       "qrAide": "{{autre}} peut le scanner avec l'appareil photo de son téléphone.",
-      "message": "J'ai commencé notre bilan de couple, à toi de répondre de ton côté : {{lien}}",
-      "messageTitre": "Notre bilan de couple",
+      "message": "J'ai commencé notre évaluation de couple, à toi de répondre de ton côté : {{lien}}",
+      "messageTitre": "Notre évaluation de couple",
       "monLien": "Votre lien personnel",
       "monLienAide": "Il vous permet de reprendre vos réponses sur un autre appareil. Ne le donnez à personne, même pas à {{autre}} : c'est la clé de vos réponses.",
       "copierMonLien": "Copier mon lien",
       "commencer": "Commencer mes réponses",
-      "dejaRejoint": "{{autre}} a rejoint le bilan."
+      "dejaRejoint": "{{autre}} a rejoint l'évaluation."
     },
     "rejoindre": {
-      "titre": "{{autre}} vous propose de faire votre bilan de couple",
+      "titre": "{{autre}} vous propose de faire votre évaluation de couple",
       "texte": "Une centaine de questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
       "duree": "Comptez 25 à 30 minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
       "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
@@ -87,6 +93,12 @@
     },
     "question": {
       "progression": "Question {{n}} sur {{total}}",
+      "vous": "Vous",
+      "percuTitre": "Et {{autre}}, d'après vous ?",
+      "percuAide": "Voici la question telle que {{autre}} la lirait. Quelle serait sa réponse, d'après vous ?",
+      "maReponse": "Votre réponse :",
+      "inconnu": "Je ne sais pas",
+      "inconnuAide": "C'est une réponse comme une autre : le rapport en fera une question à poser.",
       "precedente": "Précédente",
       "suivante": "Suivante",
       "nn": "C'est non négociable pour moi",
@@ -115,7 +127,7 @@
       "payeTitre": "Votre rapport est réglé",
       "payeTexte": "Merci ! Il s'ouvrira ici et partira par e-mail dès que {{autre}} aura fini ses réponses.",
       "relance": "Envoyer un petit rappel à {{autre}}",
-      "relanceMessage": "J'ai fini mes réponses pour notre bilan de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone."
+      "relanceMessage": "J'ai fini mes réponses pour notre évaluation de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone."
     },
     "paywall": {
       "titre": "Votre rapport complet",
@@ -146,15 +158,54 @@
       "securite": "Paiement sécurisé par Stripe (carte, Apple Pay, Google Pay). Nous ne voyons jamais votre carte.",
       "cgv": "Conditions de vente",
       "tva": "TVA non applicable, art. 293 B du CGI.",
-      "ferme": "Le paiement en ligne ouvre très bientôt. Votre bilan est gardé : revenez sur cette page dans quelques jours.",
+      "ferme": "Le paiement en ligne ouvre très bientôt. Votre évaluation est gardée : revenez sur cette page dans quelques jours.",
       "redirection": "Redirection vers le paiement..."
     },
     "paiement": {
       "verification": "Vérification du paiement...",
       "ok": "Paiement confirmé, merci !",
       "attente": "Le paiement n'est pas encore confirmé. Ça peut prendre quelques secondes...",
-      "annule": "Le paiement a été annulé. Votre bilan est toujours là.",
+      "annule": "Le paiement a été annulé. Votre évaluation est toujours là.",
       "erreur": "Impossible de vérifier le paiement pour l'instant. Si vous avez payé, rechargez la page dans une minute."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Vous seul(e) verrez ce rapport. Si vous avez peur de votre partenaire, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+      },
+      "creation": {
+        "autreAide": "Il sert seulement à écrire les questions. Rien ne lui est envoyé.",
+        "soloNote": "Vous faites l'évaluation seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport.",
+        "consentement": "J'accepte que mes réponses soient enregistrées pour cette évaluation, y compris sur des sujets intimes (vie sexuelle, religion, opinions), ainsi que ce que j'imagine des réponses de {{autre}}.",
+        "accordAide": "Votre évaluation est gardée 60 jours après votre dernière réponse si elle n'est pas payée, six mois après le paiement sinon, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
+        "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
+        "creer": "Commencer mon évaluation"
+      },
+      "domaine": {
+        "nb": "{{n}} questions, deux réponses chacune, environ {{min}} min"
+      },
+      "paywall": {
+        "introPret": "Vos réponses sont prêtes, et ce que vous imaginez de celles de {{autre}} aussi. Il ne reste qu'une étape pour découvrir ce que tout ça dit de votre couple.",
+        "contenu": [
+          "Votre alignement et le climat de votre couple, vus par vous, en un coup d'œil",
+          "La carte de vos douze domaines, de l'argent aux enfants",
+          "Vos quatre prochaines conversations, dans l'ordre où les avoir",
+          "Vos zones d'ombre : ce que vous ne savez pas de {{autre}}, prêt à demander",
+          "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
+          "Vos signaux de vigilance dans les disputes",
+          "Qui fait quoi à la maison, vu par vous",
+          "Un PDF d'une quarantaine de pages par e-mail, et le rapport en ligne pendant six mois"
+        ],
+        "prixAide": "Un seul paiement, pas d'abonnement. Votre partenaire n'est pas prévenu(e).",
+        "emailAide": "Le PDF partira à cette adresse dès le paiement. Elle ne sert à rien d'autre."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Supprimer mon évaluation",
+          "supprimerAide": "L'évaluation est effacée tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
+          "supprime": "Votre évaluation est supprimée.",
+          "garde": "Ce rapport reste disponible six mois sur cette page, pour vous seul(e)."
+        }
+      }
     },
     "rapport": {
       "surtitre": "Évaluation de couple",
@@ -472,10 +523,10 @@
         "emailOk": "C'est noté !",
         "emailFaux": "Cette adresse ne semble pas valide.",
         "imprimer": "Imprimer",
-        "supprimer": "Supprimer notre bilan",
+        "supprimer": "Supprimer notre évaluation",
         "supprimerConfirmer": "Confirmer la suppression",
-        "supprimerAide": "Le bilan est effacé pour vous deux, tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
-        "supprime": "Votre bilan est supprimé.",
+        "supprimerAide": "L'évaluation est effacée pour vous deux, tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
+        "supprime": "Votre évaluation est supprimée.",
         "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux."
       }
     },
@@ -484,8 +535,8 @@
     },
     "erreurs": {
       "reseau": "Pas de connexion. Vérifiez votre réseau et réessayez.",
-      "introuvable": "Ce bilan n'existe plus, ou ce lien n'est pas le bon.",
-      "trop": "Trop de bilans ont été créés depuis cette connexion. Réessayez dans une heure.",
+      "introuvable": "Cette évaluation n'existe plus, ou ce lien n'est pas le bon.",
+      "trop": "Trop d'évaluations ont été créées depuis cette connexion. Réessayez dans une heure.",
       "serveur": "Un problème est survenu de notre côté. Réessayez dans un instant.",
       "reessayer": "Réessayer"
     },

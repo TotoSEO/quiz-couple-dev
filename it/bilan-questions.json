@@ -763,7 +763,7 @@
             "Certo, senza esitare",
             "Sì, se è ragionevole",
             "Solo in caso di emergenza",
-            "No, ognuno per sé"
+            "No, non per una cifra importante"
           ],
           "court": "Aiutare la famiglia con i soldi",
           "pourquoi": "In alcune famiglie aiutare i propri è scontato. In altre i soldi non si prestano. Quando i soldi sono in comune, non è più solo la decisione di chi ha la famiglia in questione.",
@@ -1421,10 +1421,10 @@
         "con1": {
           "q": "Guardare il telefono di {autre}, per te, è...",
           "o": [
-            "Normale, non abbiamo niente da nascondere",
-            "Accettabile se lo si chiede",
-            "Non è normale",
-            "Fuori discussione"
+            "Non mi crea nessun problema",
+            "Accettabile se lo si chiede prima",
+            "Preferisco che non si faccia",
+            "No, ognuno il suo telefono"
           ],
           "court": "Il telefono dell'altro",
           "pourquoi": "Per uno, un telefono aperto è una prova di fiducia. Per l'altro, a dimostrarla è proprio un telefono che non si guarda. Lo stesso gesto può quindi rassicurare uno e ferire l'altro.",
@@ -1485,10 +1485,10 @@
         "con5": {
           "q": "La gelosia in una coppia, per te, è...",
           "o": [
-            "Una prova d'amore",
-            "Normale, in piccole dosi",
-            "Un problema da tenere d'occhio",
-            "Tossica"
+            "Un segno che si tiene all'altro",
+            "Comprensibile, in piccole dosi",
+            "Qualcosa da tenere d'occhio",
+            "Un vero problema"
           ],
           "court": "La gelosia",
           "pourquoi": "Per alcuni, un po' di gelosia dimostra che l'altro ci tiene. Per altri, è mancanza di fiducia. Chi la trova lusinghiera può provocare, senza volerlo, chi la vive come una prigione.",
@@ -1501,7 +1501,7 @@
         "con6": {
           "q": "Conoscere i codici e le password di {autre}:",
           "o": [
-            "Normale, condividiamo tutto",
+            "Va da sé, condividiamo tutto",
             "Utile in caso di bisogno",
             "Non necessario",
             "No, sono cose personali"

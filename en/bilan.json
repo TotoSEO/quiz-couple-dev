@@ -8,6 +8,7 @@
     "accueil": {
       "titre": "Your check-ups on this device",
       "avec": "With {{autre}}",
+      "seul": "On your own",
       "progression": "{{n}} questions out of {{total}}",
       "invite": "Invitation not accepted yet",
       "fini": "Your answers are sent",
@@ -27,7 +28,12 @@
     "creation": {
       "titre": "Your check-up",
       "etape": "Step {{n}} of 3",
-      "prenomsTitre": "Who's doing the check-up?",
+      "modeTitre": "How are you doing the assessment?",
+      "modeDuo": "Together",
+      "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
+      "modeSolo": "On your own",
+      "modeSoloAide": "You answer for yourself, then say what your partner would answer. Your partner isn't told and sees nothing.",
+      "prenomsTitre": "Your two first names",
       "moi": "Your first name",
       "autre": "Your partner's first name",
       "genre": "You are",
@@ -87,6 +93,12 @@
     },
     "question": {
       "progression": "Question {{n}} of {{total}}",
+      "vous": "You",
+      "percuTitre": "And {{autre}}, as far as you can tell?",
+      "percuAide": "Here's the question as {{autre}} would read it. What would their answer be, as far as you can tell?",
+      "maReponse": "Your answer:",
+      "inconnu": "I don't know",
+      "inconnuAide": "That's an answer like any other: the report will turn it into a question to ask.",
       "precedente": "Previous",
       "suivante": "Next",
       "nn": "This is non-negotiable for me",
@@ -155,6 +167,45 @@
       "attente": "The payment isn't confirmed yet. It can take a few seconds...",
       "annule": "The payment was cancelled. Your check-up is still here.",
       "erreur": "We can't check the payment right now. If you've paid, reload the page in a minute."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Only you will see this report. If you're afraid of your partner, a domestic abuse helpline can talk with you, free and anonymously."
+      },
+      "creation": {
+        "autreAide": "It's only used to write the questions. Nothing is sent to them.",
+        "soloNote": "You're doing the assessment on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report.",
+        "consentement": "I agree to my answers being stored for this assessment, including on intimate topics (sex life, religion, opinions), along with what I imagine {{autre}}'s answers to be.",
+        "accordAide": "Your assessment is kept for 60 days after your last answer if it isn't paid for, six months after payment otherwise, and you can delete it at any time. No account to create.",
+        "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
+        "creer": "Start my assessment"
+      },
+      "domaine": {
+        "nb": "{{n}} questions, two answers each, about {{min}} min"
+      },
+      "paywall": {
+        "introPret": "Your answers are ready, and so is what you imagine {{autre}}'s to be. One step left to find out what all of it says about your relationship.",
+        "contenu": [
+          "Your alignment and the mood of your relationship, as you see them, at a glance",
+          "The map of your twelve areas, from money to children",
+          "Your next four conversations, in the order to have them",
+          "Your blind spots: what you don't know about {{autre}}, ready to ask",
+          "For each gap: why it matters, questions to talk it through and what's best avoided",
+          "Your warning signs in arguments",
+          "Who does what at home, as you see it",
+          "A PDF of about forty pages by email, and the report online for six months"
+        ],
+        "prixAide": "One payment, no subscription. Your partner isn't told.",
+        "emailAide": "The PDF will go to this address as soon as you've paid. It's used for nothing else."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Delete my assessment",
+          "supprimerAide": "The assessment is erased right away and for good, PDF included. Save the PDF first.",
+          "supprime": "Your assessment has been deleted.",
+          "garde": "This report stays available on this page for six months, for you alone."
+        }
+      }
     },
     "rapport": {
       "surtitre": "Relationship assessment",

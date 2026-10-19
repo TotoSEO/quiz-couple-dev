@@ -8,6 +8,7 @@
     "accueil": {
       "titre": "I vostri check-up su questo dispositivo",
       "avec": "Con {{autre}}",
+      "seul": "Da solo/a",
       "progression": "{{n}} domande su {{total}}",
       "invite": "Invito non ancora accettato",
       "fini": "Le tue risposte sono inviate",
@@ -27,7 +28,12 @@
     "creation": {
       "titre": "Il vostro check-up",
       "etape": "Passo {{n}} di 3",
-      "prenomsTitre": "Chi fa il check-up?",
+      "modeTitre": "Come fate la valutazione?",
+      "modeDuo": "In due",
+      "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
+      "modeSolo": "Da solo/a",
+      "modeSoloAide": "Rispondi per te, poi dici cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
+      "prenomsTitre": "I vostri due nomi",
       "moi": "Il tuo nome",
       "autre": "Il nome del tuo partner",
       "genre": "Tu sei",
@@ -87,6 +93,12 @@
     },
     "question": {
       "progression": "Domanda {{n}} di {{total}}",
+      "vous": "Tu",
+      "percuTitre": "E {{autre}}, secondo te?",
+      "percuAide": "Ecco la domanda come la leggerebbe {{autre}}. Quale sarebbe la sua risposta, secondo te?",
+      "maReponse": "La tua risposta:",
+      "inconnu": "Non lo so",
+      "inconnuAide": "È una risposta come un'altra: il report ne farà una domanda da fare.",
       "precedente": "Precedente",
       "suivante": "Successiva",
       "nn": "Per me non è negoziabile",
@@ -155,6 +167,45 @@
       "attente": "Il pagamento non è ancora confermato. Può volerci qualche secondo...",
       "annule": "Il pagamento è stato annullato. Il vostro check-up è ancora qui.",
       "erreur": "Al momento non riusciamo a verificare il pagamento. Se hai pagato, ricarica la pagina tra un minuto."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Solo tu vedrai questo report. Se hai paura del tuo partner, in Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24."
+      },
+      "creation": {
+        "autreAide": "Serve solo a scrivere le domande. Non gli viene inviato niente.",
+        "soloNote": "Fai la valutazione da solo/a: {{autre}} non viene avvisato, non gli viene inviato niente, e solo tu vedrai il report.",
+        "consentement": "Accetto che le mie risposte siano registrate per questa valutazione, anche su argomenti intimi (vita sessuale, religione, opinioni), insieme a quello che immagino delle risposte di {{autre}}.",
+        "accordAide": "La tua valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento altrimenti, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
+        "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
+        "creer": "Iniziare la mia valutazione"
+      },
+      "domaine": {
+        "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
+      },
+      "paywall": {
+        "introPret": "Le tue risposte sono pronte, e anche quello che immagini di quelle di {{autre}}. Manca un solo passo per scoprire cosa dice tutto questo della vostra coppia.",
+        "contenu": [
+          "Il vostro allineamento e il clima della vostra coppia, visti da te, a colpo d'occhio",
+          "La mappa delle vostre dodici aree, dai soldi ai figli",
+          "Le vostre prossime quattro conversazioni, nell'ordine in cui farle",
+          "Le tue zone d'ombra: quello che non sai di {{autre}}, pronto da chiedere",
+          "Per ogni differenza: perché conta, domande per parlarne e cosa è meglio evitare",
+          "I vostri segnali d'allarme nei litigi",
+          "Chi fa cosa in casa, visto da te",
+          "Un PDF di una quarantina di pagine via e-mail, e il report online per sei mesi"
+        ],
+        "prixAide": "Un solo pagamento, nessun abbonamento. Il tuo partner non viene avvisato.",
+        "emailAide": "Il PDF arriverà a questo indirizzo appena pagato. Non serve a nient'altro."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Cancellare la mia valutazione",
+          "supprimerAide": "La valutazione viene cancellata subito e per sempre, PDF compreso. Salva prima il PDF.",
+          "supprime": "La tua valutazione è stata cancellata.",
+          "garde": "Questo report resta disponibile sei mesi su questa pagina, solo per te."
+        }
+      }
     },
     "rapport": {
       "surtitre": "Valutazione di coppia",

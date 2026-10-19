@@ -613,7 +613,7 @@
             "It doesn't change anything",
             "It might change a few small things",
             "It can create an imbalance",
-            "It would really bother me"
+            "It would bother me a lot"
           ],
           "court": "A pay gap",
           "pourquoi": "A pay gap often changes more than people think: who decides, who pays for what, who feels they owe something. Talking about it while things are fine is much easier than when it's already causing friction.",
@@ -763,7 +763,7 @@
             "Of course, without hesitating",
             "Yes, if it's reasonable",
             "Only in an emergency",
-            "No, each to their own"
+            "No, not for a large sum"
           ],
           "court": "Helping family financially",
           "pourquoi": "In some families, helping your own is a given. In others, money isn't lent. When money is shared, it's no longer only the decision of the person whose family it is.",
@@ -1421,10 +1421,10 @@
         "con1": {
           "q": "Looking at {autre}'s phone, for you, is...",
           "o": [
-            "Normal, we have nothing to hide",
-            "Acceptable if you ask",
-            "Not normal",
-            "Out of the question"
+            "No problem at all",
+            "Acceptable if you ask first",
+            "I'd rather it didn't happen",
+            "No, each to their own phone"
           ],
           "court": "The other's phone",
           "pourquoi": "For one person, an open phone is proof of trust. For the other, it's a phone you don't look at that proves it. So the same gesture can reassure one and hurt the other.",
@@ -1485,10 +1485,10 @@
         "con5": {
           "q": "Jealousy in a couple, for you, is...",
           "o": [
-            "Proof of love",
-            "Normal, in small doses",
-            "A problem to watch",
-            "Toxic"
+            "A sign you care about each other",
+            "Understandable, in small doses",
+            "Something to keep an eye on",
+            "A real problem"
           ],
           "court": "Jealousy",
           "pourquoi": "For some, a bit of jealousy proves you care. For others, it's a lack of trust. Someone who finds it flattering can, without meaning to, provoke someone who experiences it as a prison.",
@@ -1501,7 +1501,7 @@
         "con6": {
           "q": "Knowing {autre}'s codes and passwords:",
           "o": [
-            "Normal, we share everything",
+            "Goes without saying, we share everything",
             "Useful in case of need",
             "Not necessary",
             "No, that's personal"

@@ -8,6 +8,7 @@
     "accueil": {
       "titre": "Vuestros chequeos en este dispositivo",
       "avec": "Con {{autre}}",
+      "seul": "A solas",
       "progression": "{{n}} preguntas de {{total}}",
       "invite": "Invitación todavía sin aceptar",
       "fini": "Tus respuestas están enviadas",
@@ -27,7 +28,12 @@
     "creation": {
       "titre": "Vuestro chequeo",
       "etape": "Paso {{n}} de 3",
-      "prenomsTitre": "¿Quién hace el chequeo?",
+      "modeTitre": "¿Cómo hacéis la evaluación?",
+      "modeDuo": "En pareja",
+      "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
+      "modeSolo": "A solas",
+      "modeSoloAide": "Respondes por ti, y luego dices lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
+      "prenomsTitre": "Vuestros dos nombres",
       "moi": "Tu nombre",
       "autre": "El nombre de tu pareja",
       "genre": "Tú eres",
@@ -87,6 +93,12 @@
     },
     "question": {
       "progression": "Pregunta {{n}} de {{total}}",
+      "vous": "Tú",
+      "percuTitre": "¿Y {{autre}}, según tú?",
+      "percuAide": "Esta es la pregunta tal como la leería {{autre}}. ¿Cuál sería su respuesta, según tú?",
+      "maReponse": "Tu respuesta:",
+      "inconnu": "No lo sé",
+      "inconnuAide": "Es una respuesta como otra cualquiera: el informe la convertirá en una pregunta que hacer.",
       "precedente": "Anterior",
       "suivante": "Siguiente",
       "nn": "Para mí no es negociable",
@@ -155,6 +167,45 @@
       "attente": "El pago todavía no está confirmado. Puede tardar unos segundos...",
       "annule": "El pago se ha cancelado. Vuestro chequeo sigue aquí.",
       "erreur": "No podemos comprobar el pago ahora mismo. Si has pagado, recarga la página dentro de un minuto."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Solo tú verás este informe. Si tienes miedo de tu pareja, en España el 016 atiende gratis y de forma anónima, las 24 horas."
+      },
+      "creation": {
+        "autreAide": "Solo sirve para escribir las preguntas. No se le envía nada.",
+        "soloNote": "Haces la evaluación a solas: {{autre}} no se entera, no se le envía nada, y solo tú verás el informe.",
+        "consentement": "Acepto que mis respuestas se guarden para esta evaluación, también sobre temas íntimos (vida sexual, religión, opiniones), junto con lo que imagino de las respuestas de {{autre}}.",
+        "accordAide": "Tu evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago si se paga, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
+        "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
+        "creer": "Empezar mi evaluación"
+      },
+      "domaine": {
+        "nb": "{{n}} preguntas, dos respuestas cada una, unos {{min}} min"
+      },
+      "paywall": {
+        "introPret": "Tus respuestas están listas, y lo que imaginas de las de {{autre}} también. Solo queda un paso para descubrir lo que todo eso dice de vuestra pareja.",
+        "contenu": [
+          "Vuestra alineación y el clima de vuestra pareja, vistos por ti, de un vistazo",
+          "El mapa de vuestras doce áreas, del dinero a los hijos",
+          "Vuestras cuatro próximas conversaciones, en el orden en que tenerlas",
+          "Tus zonas de sombra: lo que no sabes de {{autre}}, listo para preguntar",
+          "Para cada diferencia: por qué cuenta, preguntas para hablarlo y lo que más vale evitar",
+          "Vuestras señales de alerta en las discusiones",
+          "Quién hace qué en casa, visto por ti",
+          "Un PDF de unas cuarenta páginas por correo, y el informe en línea durante seis meses"
+        ],
+        "prixAide": "Un solo pago, sin suscripción. Tu pareja no se entera.",
+        "emailAide": "El PDF llegará a esta dirección en cuanto pagues. No sirve para nada más."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Borrar mi evaluación",
+          "supprimerAide": "La evaluación se borra ahora mismo y para siempre, PDF incluido. Guarda antes el PDF.",
+          "supprime": "Tu evaluación se ha borrado.",
+          "garde": "Este informe queda disponible seis meses en esta página, solo para ti."
+        }
+      }
     },
     "rapport": {
       "surtitre": "Evaluación de pareja",

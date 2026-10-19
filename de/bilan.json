@@ -8,6 +8,7 @@
     "accueil": {
       "titre": "Eure Checks auf diesem Gerät",
       "avec": "Mit {{autre}}",
+      "seul": "Allein",
       "progression": "{{n}} von {{total}} Fragen",
       "invite": "Einladung noch nicht angenommen",
       "fini": "Deine Antworten sind abgeschickt",
@@ -27,7 +28,12 @@
     "creation": {
       "titre": "Euer Check",
       "etape": "Schritt {{n}} von 3",
-      "prenomsTitre": "Wer macht den Check?",
+      "modeTitre": "Wie macht ihr die Analyse?",
+      "modeDuo": "Zu zweit",
+      "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
+      "modeSolo": "Allein",
+      "modeSoloAide": "Du antwortest für dich und sagst dann, was dein Partner oder deine Partnerin antworten würde. Er oder sie erfährt nichts davon und sieht nichts.",
+      "prenomsTitre": "Eure beiden Vornamen",
       "moi": "Dein Vorname",
       "autre": "Der Vorname deines Partners oder deiner Partnerin",
       "genre": "Du bist",
@@ -87,6 +93,12 @@
     },
     "question": {
       "progression": "Frage {{n}} von {{total}}",
+      "vous": "Du",
+      "percuTitre": "Und {{autre}}, deiner Meinung nach?",
+      "percuAide": "So würde {{autre}} die Frage lesen. Wie würde die Antwort ausfallen, deiner Meinung nach?",
+      "maReponse": "Deine Antwort:",
+      "inconnu": "Weiß ich nicht",
+      "inconnuAide": "Das ist eine Antwort wie jede andere: Der Bericht macht daraus eine Frage, die du stellen kannst.",
       "precedente": "Zurück",
       "suivante": "Weiter",
       "nn": "Das ist für mich nicht verhandelbar",
@@ -155,6 +167,45 @@
       "attente": "Die Zahlung ist noch nicht bestätigt. Das kann ein paar Sekunden dauern...",
       "annule": "Die Zahlung wurde abgebrochen. Euer Check ist noch da.",
       "erreur": "Die Zahlung kann gerade nicht geprüft werden. Wenn du bezahlt hast, lade die Seite in einer Minute neu."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Nur du wirst diesen Bericht sehen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, hilft in Deutschland das Hilfetelefon Gewalt gegen Frauen unter 116 016, kostenlos und anonym, rund um die Uhr."
+      },
+      "creation": {
+        "autreAide": "Er dient nur dazu, die Fragen zu schreiben. Es wird nichts verschickt.",
+        "soloNote": "Du machst die Analyse allein: {{autre}} erfährt nichts davon, es wird nichts verschickt, und nur du wirst den Bericht sehen.",
+        "consentement": "Ich bin einverstanden, dass meine Antworten für diese Analyse gespeichert werden, auch zu intimen Themen (Sexualleben, Religion, Meinungen), zusammen mit dem, was ich mir von den Antworten von {{autre}} vorstelle.",
+        "accordAide": "Deine Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
+        "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
+        "creer": "Meine Analyse beginnen"
+      },
+      "domaine": {
+        "nb": "{{n}} Fragen, je zwei Antworten, etwa {{min}} Min."
+      },
+      "paywall": {
+        "introPret": "Deine Antworten sind fertig, und das, was du dir von denen von {{autre}} vorstellst, auch. Ein Schritt noch, um zu erfahren, was das alles über eure Beziehung sagt.",
+        "contenu": [
+          "Eure Übereinstimmung und das Klima eurer Beziehung, aus deiner Sicht, auf einen Blick",
+          "Die Karte eurer zwölf Bereiche, vom Geld bis zu den Kindern",
+          "Eure nächsten vier Gespräche, in der Reihenfolge, in der ihr sie führen solltet",
+          "Deine blinden Flecken: was du über {{autre}} nicht weißt, fertig zum Fragen",
+          "Zu jedem Unterschied: warum er zählt, Fragen zum Gespräch und was ihr besser vermeidet",
+          "Eure Warnsignale im Streit",
+          "Wer zu Hause was macht, aus deiner Sicht",
+          "Ein PDF mit rund vierzig Seiten per E-Mail, und der Bericht sechs Monate lang online"
+        ],
+        "prixAide": "Eine einzige Zahlung, kein Abo. Dein Partner oder deine Partnerin erfährt nichts davon.",
+        "emailAide": "Das PDF geht gleich nach der Zahlung an diese Adresse. Sie wird für nichts anderes verwendet."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Meine Analyse löschen",
+          "supprimerAide": "Die Analyse wird sofort und endgültig gelöscht, PDF eingeschlossen. Speichere das PDF vorher.",
+          "supprime": "Deine Analyse ist gelöscht.",
+          "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, nur für dich."
+        }
+      }
     },
     "rapport": {
       "surtitre": "Beziehungsanalyse",

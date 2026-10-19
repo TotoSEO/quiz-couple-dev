@@ -613,7 +613,7 @@
             "Ça ne change rien",
             "Ça peut changer quelques petites choses",
             "Ça peut créer un déséquilibre",
-            "Ça me gênerait vraiment"
+            "Ça me gênerait beaucoup"
           ],
           "court": "Un écart de salaire",
           "pourquoi": "Un écart de salaire change souvent plus de choses qu'on ne le croit : qui décide, qui paie quoi, qui se sent redevable. En parler quand tout va bien est bien plus simple qu'au moment où ça coince.",
@@ -763,7 +763,7 @@
             "Bien sûr, sans hésiter",
             "Oui, si c'est raisonnable",
             "Seulement en cas d'urgence",
-            "Non, chacun ses affaires"
+            "Non, pas pour une grosse somme"
           ],
           "court": "Aider sa famille financièrement",
           "pourquoi": "Dans certaines familles, aider les siens est une évidence. Dans d'autres, l'argent ne se prête pas. Quand l'argent est en commun, ce n'est plus seulement la décision de celui dont c'est la famille.",
@@ -1421,10 +1421,10 @@
         "con1": {
           "q": "Regarder le téléphone de {autre}, pour vous, c'est...",
           "o": [
-            "Normal, on n'a rien à se cacher",
-            "Acceptable si on le demande",
-            "Pas normal",
-            "Hors de question"
+            "Ça ne me pose aucun problème",
+            "Acceptable si on demande avant",
+            "Je préfère qu'on ne le fasse pas",
+            "Non, chacun son téléphone"
           ],
           "court": "Le téléphone de l'autre",
           "pourquoi": "Pour l'un, un téléphone ouvert est une preuve de confiance. Pour l'autre, c'est un téléphone qu'on ne regarde pas qui en est une. Le même geste peut donc rassurer l'un et blesser l'autre.",
@@ -1485,10 +1485,10 @@
         "con5": {
           "q": "La jalousie dans un couple, pour vous, c'est...",
           "o": [
-            "Une preuve d'amour",
-            "Normal, à petite dose",
-            "Un problème à surveiller",
-            "Toxique"
+            "Un signe qu'on tient à l'autre",
+            "Compréhensible, à petite dose",
+            "Quelque chose à surveiller",
+            "Un vrai problème"
           ],
           "court": "La jalousie",
           "pourquoi": "Pour certains, un peu de jalousie prouve qu'on tient à l'autre. Pour d'autres, c'est un manque de confiance. Celui qui trouve ça flatteur peut, sans le vouloir, provoquer celui qui la vit comme une prison.",
@@ -1501,7 +1501,7 @@
         "con6": {
           "q": "Connaître les codes et les mots de passe de {autre} :",
           "o": [
-            "Normal, on partage tout",
+            "Ça va de soi, on partage tout",
             "Utile en cas de besoin",
             "Pas nécessaire",
             "Non, c'est personnel"

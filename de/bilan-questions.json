@@ -610,7 +610,7 @@
         "tra6": {
           "q": "Wenn einer von euch viel mehr verdient als der andere, ist das für dich...",
           "o": [
-            "Egal, es ändert nichts",
+            "Es ändert nichts",
             "Es könnte ein paar Kleinigkeiten ändern",
             "Es kann ein Ungleichgewicht schaffen",
             "Es würde mich sehr stören"
@@ -763,7 +763,7 @@
             "Natürlich, ohne Zögern",
             "Ja, wenn es vernünftig ist",
             "Nur im Notfall",
-            "Nein, jeder für sich"
+            "Nein, nicht bei einer großen Summe"
           ],
           "court": "Der Familie finanziell helfen",
           "pourquoi": "In manchen Familien ist es selbstverständlich, den eigenen Leuten zu helfen. In anderen verleiht man kein Geld. Wenn das Geld gemeinsam ist, ist es nicht mehr nur die Entscheidung dessen, um dessen Familie es geht.",
@@ -1421,10 +1421,10 @@
         "con1": {
           "q": "Ins Handy von {autre} schauen ist für dich...",
           "o": [
-            "Normal, wir haben nichts zu verbergen",
-            "Okay, wenn man fragt",
-            "Nicht normal",
-            "Kommt nicht infrage"
+            "Kein Problem für mich",
+            "Okay, wenn man vorher fragt",
+            "Lieber nicht",
+            "Nein, jeder sein Handy"
           ],
           "court": "Das Handy des anderen",
           "pourquoi": "Für den einen ist ein offenes Handy ein Vertrauensbeweis. Für den anderen beweist es gerade ein Handy, in das man nicht schaut. Dieselbe Geste kann also den einen beruhigen und den anderen verletzen.",
@@ -1485,10 +1485,10 @@
         "con5": {
           "q": "Eifersucht in einer Beziehung ist für dich...",
           "o": [
-            "Ein Liebesbeweis",
-            "Normal, in kleinen Dosen",
-            "Ein Problem, auf das man achten sollte",
-            "Toxisch"
+            "Ein Zeichen, dass einem der andere wichtig ist",
+            "Verständlich, in kleinen Dosen",
+            "Etwas, worauf man achten sollte",
+            "Ein echtes Problem"
           ],
           "court": "Eifersucht",
           "pourquoi": "Für die einen beweist ein bisschen Eifersucht, dass einem der andere wichtig ist. Für andere ist es fehlendes Vertrauen. Wer es schmeichelhaft findet, kann ohne Absicht jemanden provozieren, der es als Gefängnis erlebt.",
@@ -1501,7 +1501,7 @@
         "con6": {
           "q": "Die Codes und Passwörter von {autre} kennen:",
           "o": [
-            "Normal, wir teilen alles",
+            "Selbstverständlich, wir teilen alles",
             "Praktisch, für den Notfall",
             "Nicht nötig",
             "Nein, das ist privat"

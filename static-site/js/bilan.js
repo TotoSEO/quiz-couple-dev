@@ -1,14 +1,19 @@
-/* Le bilan de couple : l'application de la page /bilan-de-couple/.
+/* L'évaluation de couple : l'application de la page /evaluation-de-couple/.
    La page est d'abord une présentation ; l'application prend toute la place
    (mode focus, body.bilan-focus) dès qu'on commence ou qu'on arrive par un
-   lien. Chacun répond de son côté, sur son téléphone, à une centaine de
-   questions ; la fonction serveur `bilan` garde les réponses. Aucun résultat
-   avant le paiement : on paie dès qu'on a fini ses propres réponses, le
-   rapport s'ouvre quand les deux ont fini et part en PDF par e-mail. Le
-   calcul est celui du serveur (window.QCBilanCoeur, depuis
-   supabase/functions/_shared/bilan/coeur.mjs), le rapport le même gabarit
-   que le PDF (window.QCBilanRapport, depuis rapport.mjs), les questions
-   arrivent de /js/data/bilan-<lang>.json.
+   lien. Deux façons de la faire (`mode`) : à deux, chacun répond de son
+   côté, sur son téléphone, à une centaine de questions ; seul(e), la
+   personne répond pour elle puis dit ce que l'autre répondrait, ou « je ne
+   sais pas » (percu, C.INCONNU), sans que l'autre soit prévenu(e). La
+   fonction serveur `bilan` garde les réponses. Aucun résultat avant le
+   paiement : on paie dès qu'on a fini ses propres réponses, le rapport
+   s'ouvre quand tout est répondu (les deux à deux, la personne seule en
+   solo) et part en PDF par e-mail. Le calcul est celui du serveur
+   (window.QCBilanCoeur, depuis supabase/functions/_shared/bilan/coeur.mjs),
+   le rapport le même gabarit que le PDF (window.QCBilanRapport, depuis
+   rapport.mjs), les questions arrivent de /js/data/bilan-<lang>.json. En
+   solo, les textes de l'interface qui existent sous `solo.<chemin>` dans
+   {lang}/bilan.json (app.solo) l'emportent sur `<chemin>`.
 
    Chacun accède au bilan par son lien personnel (#b=<id>&t=<clé>), que la
    page range aussi dans localStorage (qc-bilans) pour reprendre sans lien sur
@@ -31,16 +36,28 @@
   var minuteur = null;
   var verifAttente = null;  // la vérification de l'écran d'attente, s'il est affiché
   var S = null;   // la session de réponses en cours
+  var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
+  var modeDemande = null;  // le mode demandé par le bouton de la page ou ?mode=
 
   // ── Textes ──────────────────────────────────────────────────────────────
 
-  function tr(chemin, defaut) {
-    var o = T, parts = chemin.split('.');
+  function lireTexte(o, chemin) {
+    var parts = chemin.split('.');
     for (var i = 0; i < parts.length; i++) {
-      if (o == null || typeof o !== 'object' || !(parts[i] in o)) return defaut;
+      if (o == null || typeof o !== 'object' || !(parts[i] in o)) return undefined;
       o = o[parts[i]];
     }
-    return o == null ? defaut : o;
+    return o;
+  }
+  // En solo, un texte écrit sous `solo.<chemin>` l'emporte.
+  function tr(chemin, defaut) {
+    var v;
+    if (MODE === 'solo') {
+      v = lireTexte(T.solo, chemin);
+      if (v != null) return v;
+    }
+    v = lireTexte(T, chemin);
+    return v == null ? defaut : v;
   }
   function remplir(texte, vars) {
     return String(texte == null ? '' : texte).replace(/\{\{(\w+)\}\}/g, function (m, k) {
@@ -245,6 +262,16 @@
     if (r.q.type === 'qui') return Q.qui.map(function (o) { return C.remplir(o, { autre: autre }); });
     return (texteQ(id).o || []).map(function (o) { return C.remplir(C.accorder(o, genre), { autre: autre }); });
   }
+  // En solo, les réponses qu'on prête à l'autre : les options telles que
+  // l'autre les lirait (accordées à son genre, « {autre} » étant alors la
+  // personne qui répond), et pour « qui fait quoi » des libellés tournés
+  // vers soi (« Surtout {autre} » ... « Surtout vous »), rangés dans le
+  // repère de l'autre, comme sa vraie réponse le serait.
+  function libellesPercu(id) {
+    var r = C.INDEX[id];
+    if (r.q.type === 'qui') return (Q.quiPercu || Q.qui).map(function (o) { return C.remplir(o, { autre: S.autre.prenom }); });
+    return (texteQ(id).o || []).map(function (o) { return C.remplir(C.accorder(o, S.autre.genre), { autre: S.moi.prenom }); });
+  }
   // ── Démarrage ───────────────────────────────────────────────────────────
 
   function charger() {
@@ -273,6 +300,8 @@
     var lien = !!(id && jeton);
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
+    var m = query.get('mode');
+    if (m === 'solo' || m === 'duo') modeDemande = m;
     source();
     if (!lien && !paiement && !annule) {
       // La présentation seule : l'application attend le bouton.
@@ -307,7 +336,7 @@
       if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton); });
       var e = r.json;
       if (e.invite) return rejoindre(e, jeton);
-      var entree = { id: id, jeton: jeton, role: e.role, moi: e.moi.prenom, autre: e.autre.prenom };
+      var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
       garder(entree);
@@ -317,10 +346,13 @@
 
   // Où mener quelqu'un selon l'état du bilan.
   function suiteEtat(entree, etat) {
+    MODE = etat.mode === 'solo' ? 'solo' : 'duo';
+    entree.mode = MODE;
+    var prog = C.progression(etat.situation, etat.moi.reponses, MODE === 'solo' ? (etat.moi.percu || {}) : undefined);
     majEntree(entree.id, entree.role, {
-      moi: etat.moi.prenom, autre: etat.autre.prenom,
-      repondu: C.progression(etat.situation, etat.moi.reponses).repondu,
-      total: C.progression(etat.situation, etat.moi.reponses).total,
+      mode: MODE, moi: etat.moi.prenom, autre: etat.autre.prenom,
+      repondu: prog.repondu,
+      total: prog.total,
       statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
@@ -343,6 +375,7 @@
   // création s'il n'y en a pas.
   function accueil() {
     S = null;
+    MODE = 'duo';
     if (!C || !Q) {
       chargement();
       return preparer().then(accueil).catch(function () { messageErreur('reseau'); });
@@ -357,6 +390,7 @@
         : '';
       return '<li class="bilan-reprise">' +
         '<div><strong>' + x('accueil.avec', { autre: e.autre || '' }) + '</strong>' +
+        (e.mode === 'solo' ? ' <span class="bilan-reprise-mode">' + x('accueil.seul') + '</span>' : '') +
         (statut ? '<span class="bilan-reprise-statut">' + statut + '</span>' : '') + '</div>' +
         '<div class="bilan-reprise-actions">' +
         bouton('reprendre', e.statut === 'resultat' ? x('accueil.voir') : x('accueil.reprendre'), 'btn-cta btn-gradient btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
@@ -432,17 +466,35 @@
     return c && c.value ? c.value : null;
   }
 
+  // Les deux façons de faire l'évaluation : à deux, chacun sur son
+  // téléphone, ou seul(e), en répondant aussi pour l'autre.
+  function champMode(valeur) {
+    return '<div class="bilan-modes" role="radiogroup" aria-label="' + x('creation.modeTitre') + '">' + ['duo', 'solo'].map(function (m) {
+      var persos = m === 'duo' ? duo('salut', 'mignon', 44, 'f', 'h') : (mascotte('rose', 'salut', 44) ? '<div class="bilan-duo" aria-hidden="true">' + mascotte('rose', 'salut', 44) + '</div>' : '');
+      return '<label class="bilan-mode' + (valeur === m ? ' choisi' : '') + '"><input type="radio" name="mode" value="' + m + '"' + (valeur === m ? ' checked' : '') + ' data-change="mode">' +
+        '<span class="bilan-mode-rond" aria-hidden="true"></span>' +
+        '<span class="bilan-mode-texte"><strong>' + x(m === 'duo' ? 'creation.modeDuo' : 'creation.modeSolo') + '</strong>' +
+        '<span>' + x(m === 'duo' ? 'creation.modeDuoAide' : 'creation.modeSoloAide') + '</span></span>' +
+        (persos ? '<span class="bilan-mode-persos">' + persos + '</span>' : '') + '</label>';
+    }).join('') + '</div>';
+  }
+
   function creation(etape) {
-    if (!brouillon) brouillon = { moi: '', autre: '', genreMoi: null, genreAutre: null, situation: {} };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, situation: {} };
+    MODE = brouillon.mode;
+    var solo = brouillon.mode === 'solo';
     etape = etape || 1;
     var corps = '<p class="bilan-etape">' + x('creation.etape', { n: etape }) + '</p>';
     if (etape === 1) {
-      corps += '<h2 class="bilan-titre">' + x('creation.prenomsTitre') + '</h2>' +
+      var aideAutre = tr('creation.autreAide', '');
+      corps += '<h2 class="bilan-titre">' + x('creation.modeTitre') + '</h2>' + champMode(brouillon.mode) +
+        '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
         '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
         '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
         '<div class="bilan-champ"><label for="bilan-autre">' + x('creation.autre') + '</label>' +
-        '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '"></div>' +
+        '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
+        (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
         '<p class="bilan-note">' + x('creation.genreAide') + '</p>';
     } else if (etape === 2) {
@@ -450,6 +502,7 @@
         '<p class="bilan-texte">' + x('creation.situationAide') + '</p>' + formSituation(brouillon.situation);
     } else {
       corps += '<h2 class="bilan-titre">' + x('creation.accordTitre') + '</h2>' +
+        (solo ? '<p class="bilan-info">' + x('creation.soloNote', { autre: brouillon.autre }) + '</p>' : '') +
         '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
         '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement', { autre: brouillon.autre }) + '</span></label>' +
         '<p class="bilan-note">' + x('creation.accordAide') + '</p>' +
@@ -460,9 +513,9 @@
       '<div class="bilan-actions bilan-actions--ecart">' +
       bouton('retour', x('creation.retour'), 'btn-outline') +
       bouton(etape < 3 ? 'suivant' : 'valider', etape < 3 ? x('creation.suivant') : x('creation.creer')) + '</div>';
-    afficher(carte(corps, 'bilan-creation'));
+    afficher(carte(corps, 'bilan-creation' + (solo ? ' bilan-creation--solo' : '')));
     var champ = racine.querySelector('input[type="text"]');
-    if (champ && etape === 1 && !brouillon.moi) champ.focus({ preventScroll: true });
+    if (champ && etape === 1 && !brouillon.moi && !modeDemande) champ.focus({ preventScroll: true });
 
     function erreur(cle) {
       var p = document.getElementById('bilan-erreur');
@@ -480,6 +533,14 @@
       }
     }
     ACTIONS = {
+      // Changer de façon de faire redessine l'étape avec ses textes, sans
+      // perdre ce qui est déjà écrit.
+      mode: function (input) {
+        lireEtape();
+        brouillon.mode = input.value === 'solo' ? 'solo' : 'duo';
+        modeDemande = brouillon.mode;
+        creation(1);
+      },
       retour: function () {
         lireEtape();
         if (etape > 1) creation(etape - 1);
@@ -496,16 +557,18 @@
         if (!document.getElementById('bilan-majeur').checked || !document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
         appel('creer', {
-          lang: LANG, situation: brouillon.situation, src: source(),
+          lang: LANG, mode: brouillon.mode, situation: brouillon.situation, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
           if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
-          var entree = { id: r.json.id, jeton: r.json.jeton, invitation: r.json.invitation, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
+          var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
           brouillon = null;
+          // Seul(e) : personne à inviter, les questions tout de suite.
+          if (entree.mode === 'solo') return ouvrir(entree);
           invitation(entree, r.json.etat);
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
@@ -625,23 +688,31 @@
   // ── Les réponses ────────────────────────────────────────────────────────
 
   function commencerSession(entree, etat, revoir) {
+    MODE = etat.mode === 'solo' ? 'solo' : 'duo';
     S = {
       entree: entree,
       id: entree.id, jeton: entree.jeton, role: etat.role,
+      mode: MODE,
       situation: etat.situation,
       moi: etat.moi, autre: etat.autre,
       reponses: JSON.parse(JSON.stringify(etat.moi.reponses || {})),
+      // En solo, ce que la personne prête à l'autre, question par question
+      // (C.INCONNU pour « je ne sais pas ») ; null à deux.
+      percu: MODE === 'solo' ? JSON.parse(JSON.stringify(etat.moi.percu || {})) : null,
       nn: (etat.moi.nn || []).slice(),
       introsVues: {},
       revoir: !!revoir,
+      // La phase de la question affichée : 'moi' (ma réponse) ou, en solo,
+      // 'autre' (ce que l'autre répondrait).
+      phase: 'moi',
       envoi: { enCours: false, sale: false, fini: false, attente: [] },
     };
     S.liste = C.questionsPour(S.situation, S.reponses);
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
-    // Le créateur qui n'a encore rien répondu et dont l'invitation n'est pas
-    // acceptée commence par l'invitation.
-    if (!revoir && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.invitation && !entree.invitationVue) {
+    // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
+    // n'est pas acceptée commence par l'invitation.
+    if (!revoir && S.mode === 'duo' && etat.role === 'a' && !etat.autre.rejoint && S.index === 0 && entree.invitation && !entree.invitationVue) {
       majEntree(entree.id, entree.role, { invitationVue: true });
       entree.invitationVue = true;
       return invitation(entree, etat);
@@ -649,9 +720,24 @@
     suivante();
   }
 
+  // La première question à laquelle il manque une réponse ; en solo, une
+  // question en a deux (la sienne, puis celle qu'on prête à l'autre), et la
+  // phase s'arrête sur celle qui manque.
   function premierSansReponse() {
-    for (var i = 0; i < S.liste.length; i++) if (!Number.isInteger(S.reponses[S.liste[i].id])) return i;
+    for (var i = 0; i < S.liste.length; i++) {
+      var id = S.liste[i].id;
+      if (!Number.isInteger(S.reponses[id])) { S.phase = 'moi'; return i; }
+      if (S.percu && !Number.isInteger(S.percu[id])) { S.phase = 'autre'; return i; }
+    }
+    S.phase = 'moi';
     return S.liste.length;
+  }
+
+  // La question suivante, à sa première phase.
+  function avancer() {
+    S.index++;
+    S.phase = 'moi';
+    suivante();
   }
 
   function suivante() {
@@ -690,44 +776,74 @@
     var item = S.liste[S.index];
     var id = item.id;
     var r = C.INDEX[id];
-    var v = S.reponses[id];
-    var opts = libellesOptions(id, S.moi.genre, S.autre.prenom);
+    var solo = S.mode === 'solo';
+    var percu = solo && S.phase === 'autre';
+    var v = percu ? S.percu[id] : S.reponses[id];
+    var opts = percu ? libellesPercu(id) : libellesOptions(id, S.moi.genre, S.autre.prenom);
     var total = S.liste.length;
-    var pct = Math.round(S.index / total * 100);
+    var pct = Math.round((S.index + (percu ? 0.5 : 0)) / total * 100);
+    var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
     var options = opts.map(function (o, i) {
       var choisie = v === i;
       return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + i + '">' +
-        '<span class="bilan-option-rond" aria-hidden="true"></span><span>' + esc(ins(o)) + '</span></button>';
+        rond + '<span>' + esc(ins(o)) + '</span></button>';
     }).join('');
+    if (percu) {
+      // « Je ne sais pas » : une réponse à part entière, comptée dans les
+      // zones d'ombre du rapport.
+      options += '<button type="button" class="bilan-option bilan-option--inconnu' + (v === C.INCONNU ? ' choisie' : '') + '" role="radio" aria-checked="' + (v === C.INCONNU) + '" data-action="choisir" data-v="' + C.INCONNU + '">' +
+        rond + '<span>' + x('question.inconnu') + '<small>' + x('question.inconnuAide') + '</small></span></button>';
+    }
     var nn = '';
-    if (r.q.decisif) {
+    if (r.q.decisif && !percu) {
       nn = '<label class="bilan-nn' + (Number.isInteger(v) ? '' : ' inactif') + '"><input type="checkbox" data-change="nn"' +
         (S.nn.indexOf(id) >= 0 ? ' checked' : '') + (Number.isInteger(v) ? '' : ' disabled') + '> <span>' + x('question.nn') + '</span></label>' +
         '<p class="bilan-note">' + x('question.nnAide') + '</p>';
     }
     var avecSuivante = r.q.decisif || S.revoir || Number.isInteger(v);
+    // En solo, l'en-tête dit à qui est la réponse : la sienne, ou celle
+    // qu'on prête à l'autre (avec un rappel de la sienne).
+    var tete = '';
+    if (percu) {
+      var mienne = libellesOptions(id, S.moi.genre, S.autre.prenom)[S.reponses[id]] || '';
+      tete = '<p class="bilan-phase bilan-phase--autre">' + x('question.percuTitre', { autre: S.autre.prenom }) + '</p>' +
+        (mienne ? '<p class="bilan-ma-reponse">' + x('question.maReponse') + ' <strong>' + esc(ins(mienne)) + '</strong></p>' : '');
+    } else if (solo) {
+      tete = '<p class="bilan-phase">' + x('question.vous') + '</p>';
+    }
+    var texteQuestion = percu ? enonce(id, S.autre.genre, S.moi.prenom) : enonce(id, S.moi.genre, S.autre.prenom);
     afficher(carte(
       '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(item.domaine))) + '</span>' +
       '<span>' + x('question.progression', { n: S.index + 1, total: total }) + '</span></div>' +
       '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
-      '<h2 class="bilan-q-texte">' + esc(ins(enonce(id, S.moi.genre, S.autre.prenom))) + '</h2>' +
+      tete +
+      '<h2 class="bilan-q-texte">' + esc(ins(texteQuestion)) + '</h2>' +
+      (percu ? '<p class="bilan-note bilan-q-aide">' + x('question.percuAide', { autre: S.autre.prenom }) + '</p>' : '') +
       '<div class="bilan-options" role="radiogroup">' + options + '</div>' + nn +
       '<div class="bilan-q-pied">' +
-      (S.index > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
+      (S.index > 0 || percu ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
       '<span class="bilan-envoi" id="bilan-envoi" aria-live="polite"></span>' +
       (avecSuivante ? bouton('suivanteQ', x('question.suivante') + ' →', 'btn-cta btn-gradient btn-sm', Number.isInteger(v) ? '' : ' disabled') : '<span></span>') +
       '</div>' +
       '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
-      'bilan-question'), true);
+      'bilan-question' + (percu ? ' bilan-question--percu' : '')), true);
     garderEnVue();
     etatEnvoi();
+    // Après ma réponse : la perception de l'autre en solo, sinon la suite.
+    function apres() {
+      if (solo && !percu) { S.phase = 'autre'; afficherQuestion(); } else avancer();
+    }
     ACTIONS = {
       choisir: function (b) {
         var val = +b.getAttribute('data-v');
-        S.reponses[id] = val;
-        // Une réponse peut ouvrir ou fermer des questions plus loin.
-        S.liste = C.questionsPour(S.situation, S.reponses);
-        S.index = indexDe(id);
+        if (percu) {
+          S.percu[id] = val;
+        } else {
+          S.reponses[id] = val;
+          // Une réponse peut ouvrir ou fermer des questions plus loin.
+          S.liste = C.questionsPour(S.situation, S.reponses);
+          S.index = indexDe(id);
+        }
         sauver(false);
         if (r.q.decisif || S.revoir) { afficherQuestion(); return; }
         racine.querySelectorAll('.bilan-option').forEach(function (o) {
@@ -735,7 +851,9 @@
           o.classList.toggle('choisie', oui);
           o.setAttribute('aria-checked', String(oui));
         });
-        setTimeout(function () { if (S && S.liste[S.index] && S.liste[S.index].id === id) { S.index++; suivante(); } }, 220);
+        setTimeout(function () {
+          if (S && S.liste[S.index] && S.liste[S.index].id === id && S.phase === (percu ? 'autre' : 'moi')) apres();
+        }, 220);
       },
       nn: function (c) {
         var i = S.nn.indexOf(id);
@@ -743,9 +861,13 @@
         if (!c.checked && i >= 0) S.nn.splice(i, 1);
         sauver(false);
       },
-      suivanteQ: function () { if (Number.isInteger(S.reponses[id])) { S.index++; suivante(); } },
+      suivanteQ: function () {
+        if (Number.isInteger(percu ? S.percu[id] : S.reponses[id])) apres();
+      },
       precedente: function () {
+        if (percu) { S.phase = 'moi'; afficherQuestion(); return; }
         S.index = Math.max(0, S.index - 1);
+        S.phase = solo ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
       },
@@ -790,7 +912,7 @@
     e.sale = false;
     var demandeFin = e.fini;
     etatEnvoi('envoi');
-    appel('repondre', { id: session.id, jeton: session.jeton, reponses: session.reponses, nn: session.nn, fini: demandeFin })
+    appel('repondre', { id: session.id, jeton: session.jeton, reponses: session.reponses, nn: session.nn, percu: session.percu || undefined, fini: demandeFin })
       .then(function (r) {
         e.enCours = false;
         if (r.statut === 200) {
@@ -840,13 +962,13 @@
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState !== 'hidden' || !S || !S.envoi.sale || S.envoi.enCours) return;
     S.envoi.sale = false;
-    appel('repondre', { id: S.id, jeton: S.jeton, reponses: S.reponses, nn: S.nn, fini: S.envoi.fini }, true).catch(function () {});
+    appel('repondre', { id: S.id, jeton: S.jeton, reponses: S.reponses, nn: S.nn, percu: S.percu || undefined, fini: S.envoi.fini }, true).catch(function () {});
   });
 
   function pause() {
     var session = S;
     sauver(false);
-    var p = C.progression(session.situation, session.reponses);
+    var p = C.progression(session.situation, session.reponses, session.percu || undefined);
     afficher(carte(
       duo('dort', 'repos', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
@@ -918,7 +1040,7 @@
     if (!paiementOuvert(etat)) {
       return carte('<h3 class="bilan-sous-titre">' + x('paywall.titre') + '</h3><p class="bilan-alerte bilan-alerte--doux">' + x('paywall.ferme') + '</p>', 'bilan-offre');
     }
-    var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(c)) + '</li>'; }).join('');
+    var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(remplir(c, { autre: autre }))) + '</li>'; }).join('');
     var apercu = CFG.apercu ? '<figure class="bilan-apercu"><img src="' + esc(CFG.apercu) + '" alt="" width="600" height="424" loading="lazy" decoding="async">' +
       '<figcaption>' + x('paywall.apercu') + '</figcaption></figure>' : '';
     return carte(
@@ -1065,6 +1187,7 @@
 
   // Les deux ont fini, rien n'est payé : un seul écran, l'offre.
   function aDebloquer(entree, res, message) {
+    MODE = res.mode === 'solo' ? 'solo' : 'duo';
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
@@ -1114,6 +1237,7 @@
   }
 
   function rapport(entree, res, message) {
+    MODE = res.mode === 'solo' ? 'solo' : 'duo';
     feuilleRapport();
     var R = window.QCBilanRapport;
     if (!R) return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
@@ -1233,8 +1357,19 @@
     var go = ev.target.closest('[data-bilan-commencer]');
     if (go) {
       ev.preventDefault();
+      var m = go.getAttribute('data-bilan-commencer');
       compterVue('cta');
       focus(true);
+      // Un bouton qui dit la façon de faire (à deux, seul(e)) mène droit à
+      // la création ; le bouton générique passe par les évaluations de
+      // l'appareil.
+      if (m === 'solo' || m === 'duo') {
+        modeDemande = m;
+        brouillon = null;
+        chargement();
+        preparer().then(function () { creation(1); }).catch(function () { messageErreur('reseau'); });
+        return;
+      }
       accueil();
       return;
     }

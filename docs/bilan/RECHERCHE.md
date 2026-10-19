@@ -295,11 +295,90 @@ Quand un chiffre ne vient que d'articles de presse ou de résumés, c'est
 ## Ce que le calcul en fait
 
 - Les questions de comparaison font l'**indice d'alignement** (l'accord des
-  réponses, pondéré double sur les grandes décisions), comme les scores
-  d'accord de PREPARE/ENRICH.
+  réponses, pondéré par le poids de chaque question, de 1 à 3 : voir
+  « Le poids des questions » ci-dessous), comme les scores d'accord de
+  PREPARE/ENRICH.
 - Les questions d'état font l'**indice de climat** : comment chacun vit la
   relation en ce moment (satisfaction, écoute, soutien, appréciation,
   engagement perçu, réaction aux bonnes nouvelles, et la fréquence des
   attitudes de dispute).
 - Les cinq questions `signal` font la page « Signaux de vigilance » : chaque
   attitude, la fréquence donnée par chacun des deux, sans verdict.
+
+## Le poids des questions
+
+Depuis la version 3 (19 octobre 2026, demande de Thomas : « certaines
+questions peuvent avoir plus de poids que les autres en fonction de
+l'importance de cette dernière »), chaque question porte un `poids` de 1 à 3
+dans `coeur.mjs`. Il sert partout où une moyenne est faite : le score d'un
+domaine est la moyenne des proximités pondérée par le poids, l'alignement la
+moyenne des domaines, le climat la moyenne pondérée des questions d'état, et
+la priorité d'un écart (l'ordre des « quatre prochaines conversations »)
+compte 12 points par unité de poids. Dans le rapport, une question de
+poids 3 porte l'étiquette « Sujet décisif », et les accords sur ces
+questions font le « socle » de la synthèse de fin.
+
+La règle, et ce qui la justifie :
+
+- **3, les sujets qui engagent une vie entière**, ceux que les couples ne
+  peuvent pas « couper en deux » et que les questionnaires prénuptiaux
+  rangent dans les attentes majeures : avoir des enfants et quand (enf1,
+  enf2, enf1b), vivre ensemble et où (log1, log2), devenir propriétaires
+  (log3), déménager loin pour l'autre (log5), vivre à l'étranger (log6), un
+  animal (quo7), accueillir un parent âgé (ent6), transmettre une religion
+  (val2), le mariage ou le PACS (val3), ce qu'est tromper (con2) et le
+  couple ouvert (con7). Ce sont les questions `decisif` : un écart y est
+  « à trancher », et « bloquant » si l'un des deux l'a marqué non
+  négociable.
+- **3 aussi, les mesures les plus solides du climat**, celles que la
+  recherche relie le plus fortement à la satisfaction et à la durée (voir
+  les sections « Communication et disputes », « Intimité » et « Comment
+  vous allez » plus haut) : le mépris dans les disputes (dis9, le signal le
+  plus prédictif chez Gottman), la satisfaction de la vie intime (int7), le
+  bonheur ressenti (met1), se voir ensemble dans dix ans (met7), choisir
+  l'autre à nouveau (met8), se sentir apprécié (met10) et l'engagement perçu
+  de l'autre (met11).
+- **2, les sujets de structure** que les études relient à la satisfaction
+  sans engager toute une vie : la charge mentale et les tâches (quo1, quo2),
+  le temps à deux et pour soi (tps1, tps2, tps7, tps9), les familles (ent1,
+  ent2, ent5), la place du travail et l'argent (tra1 à tra3, tra6, arg1 à
+  arg4, arg6, arg8), le logement actuel et la proximité des familles (log3b,
+  log4), l'éducation (enf3 à enf6, enf8), la religion et les valeurs (val1,
+  val3b, val5, val6), la façon de se disputer (dis1, dis2, dis4 à dis8,
+  dis10 à dis12), la jalousie et l'infidélité (con5, con8), l'intimité
+  (int1 à int3, int6, int8) et le reste du climat (met2 à met6, met9,
+  met12).
+- **1, les goûts et les habitudes** : l'heure du coucher, le rangement, les
+  week-ends, recevoir, les repas (quo3 à quo6, quo8), le téléphone, les
+  loisirs, les sorties, les vacances, les dates à fêter (tps3 à tps6, tps8),
+  les fêtes de fin d'année, les amis, ce qu'on raconte aux proches (ent3,
+  ent4, ent7), gagner beaucoup, raconter sa journée, un projet à deux (tra4,
+  tra5, tra7), 1 000 € tombés du ciel, qui gère les papiers (arg5, arg7), la
+  déco (log7), les grands-parents (enf7), l'écologie, les traditions, la
+  politique (val4, val7, val8), aller se coucher fâchés (dis3), le
+  téléphone de l'autre, les ex, les amitiés proches, les codes (con1, con3,
+  con4, con6), l'initiative et la nouveauté (int4, int5). Un désaccord y est
+  réel, et il peut peser au quotidien, mais il se négocie : il ne doit pas
+  faire baisser l'alignement autant qu'un désaccord sur les enfants.
+
+Le poids ne change rien à la catégorie d'une réponse (accord, proche, écart),
+qui reste la distance entre les deux réponses. Il ne change pas non plus les
+seuils des bandes. Les tests de `coeur.test.mjs` vérifient qu'un écart sur une
+question de poids 3 fait plus baisser le score du domaine qu'un écart de
+poids 1, et que chaque question décisive est bien de poids 3.
+
+## Des réponses sans bonne réponse
+
+Relecture du 19 octobre 2026 (Thomas : « les réponses possibles doivent
+toujours être bien choisies, impartiales ; l'utilisateur ne doit pas avoir à
+choisir entre noir et blanc »). Les questions à échelle ont quatre réponses
+graduées, jamais deux ; aucune réponse ne doit sonner comme la bonne ou la
+mauvaise, ni juger la personne qui la choisit. Cinq séries ont été réécrites
+dans les cinq langues : le téléphone de l'autre (con1, « Normal, on n'a rien
+à se cacher » laissait entendre le contraire pour les autres réponses), la
+jalousie (con5, « Une preuve d'amour » et « Toxique » étaient deux verdicts),
+les codes (con6), l'écart de salaire (tra6) et l'aide à la famille (arg8,
+« chacun ses affaires » jugeait). Les questions d'état gardent leurs
+formulations en « il arrive que » : elles décrivent une fréquence, pas une
+faute.
+

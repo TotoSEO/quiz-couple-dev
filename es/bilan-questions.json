@@ -613,7 +613,7 @@
             "No cambia nada",
             "Puede cambiar algunas cosas pequeñas",
             "Puede crear un desequilibrio",
-            "Me molestaría de verdad"
+            "Me molestaría mucho"
           ],
           "court": "Una diferencia de sueldo",
           "pourquoi": "Una diferencia de sueldo cambia a menudo más cosas de lo que parece: quién decide, quién paga qué, quién se siente en deuda. Hablarlo cuando todo va bien es mucho más fácil que cuando ya chirría.",
@@ -763,7 +763,7 @@
             "Claro, sin dudar",
             "Sí, si es razonable",
             "Solo en caso de urgencia",
-            "No, cada uno lo suyo"
+            "No, no por una cantidad grande"
           ],
           "court": "Ayudar a la familia con dinero",
           "pourquoi": "En algunas familias, ayudar a los tuyos es lo normal. En otras, el dinero no se presta. Cuando el dinero es común, ya no es solo la decisión de quien tiene esa familia.",
@@ -1421,10 +1421,10 @@
         "con1": {
           "q": "Mirar el móvil de {autre}, para ti, es...",
           "o": [
-            "Normal, no tenemos nada que esconder",
-            "Aceptable si se pide",
-            "No es normal",
-            "Ni hablar"
+            "No me supone ningún problema",
+            "Aceptable si se pide antes",
+            "Prefiero que no se haga",
+            "No, cada uno su móvil"
           ],
           "court": "El móvil del otro",
           "pourquoi": "Para uno, un móvil abierto es una prueba de confianza. Para el otro, lo que la demuestra es un móvil que no se mira. El mismo gesto puede tranquilizar a uno y herir al otro.",
@@ -1485,10 +1485,10 @@
         "con5": {
           "q": "Los celos en una pareja, para ti, son...",
           "o": [
-            "Una prueba de amor",
-            "Normales, en pequeñas dosis",
-            "Un problema que hay que vigilar",
-            "Tóxicos"
+            "Una señal de que el otro te importa",
+            "Comprensibles, en pequeñas dosis",
+            "Algo que hay que vigilar",
+            "Un verdadero problema"
           ],
           "court": "Los celos",
           "pourquoi": "Para unos, un poco de celos demuestra que el otro te importa. Para otros, es falta de confianza. Quien lo encuentra halagador puede provocar, sin querer, a quien lo vive como una cárcel.",
@@ -1501,7 +1501,7 @@
         "con6": {
           "q": "Conocer los códigos y contraseñas de {autre}:",
           "o": [
-            "Normal, lo compartimos todo",
+            "Va de suyo, lo compartimos todo",
             "Útil por si hace falta",
             "No es necesario",
             "No, eso es personal"
