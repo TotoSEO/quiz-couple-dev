@@ -339,6 +339,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/evaluation-de-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/evaluation-de-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/relationship-assessment/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/evaluacion-de-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/beziehungsanalyse/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/valutazione-di-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/evaluation-de-couple/"/>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/compatibilite-amoureuse-signes-chinois/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/compatibilite-amoureuse-signes-chinois/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/chinese-zodiac-love-compatibility/"/>
