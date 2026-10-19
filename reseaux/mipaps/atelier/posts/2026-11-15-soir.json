@@ -1,0 +1,158 @@
+{
+  "jour": "2026-11-15",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-136",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Tout ce qu'on se pique : le pull, la couette, la dernière part, et le côté du lit.",
+        "pages": [
+          {
+            "texte": "tout ce qu'on se pique",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "malicieux",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "malicieux",
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le pull",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "pull",
+                  "x": 320,
+                  "y": 290,
+                  "echelle": 1.0
+                },
+                {
+                  "perso": "lui",
+                  "expression": "froid",
+                  "signes": [
+                    "flocons"
+                  ],
+                  "x": 500,
+                  "taille": 230
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la couette",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 300,
+                  "taille": 260
+                },
+                {
+                  "objet": "couette",
+                  "x": 300,
+                  "y": 350,
+                  "echelle": 1.3
+                },
+                {
+                  "perso": "lui",
+                  "expression": "froid",
+                  "bras": "croises",
+                  "x": 500,
+                  "taille": 230
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la dernière part",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "gourmand",
+                  "bras": "pointe",
+                  "x": 230,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "gourmand",
+                  "bras": "pointe",
+                  "x": 420,
+                  "taille": 260
+                },
+                {
+                  "objet": "gateau",
+                  "x": 325,
+                  "y": 340,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le côté du lit",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "lit_fond"
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 320,
+                  "taille": 200
+                },
+                {
+                  "meuble": "lit_couette"
+                }
+              ]
+            },
+            "appel": "c'est quoi chez vous ?"
+          }
+        ]
+      },
+      "legende": "c'est quoi chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "jour": "2026-11-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-109",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les vidéos qu'on s'envoie toute la journée : elle sur son téléphone, une notification, elle rit ; lui pareil ; puis les deux sur le même canapé, chacun sur son téléphone. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est debout, un téléphone à la patte. Une notification sonne à 1 s, elle regarde l'écran et se met à rire. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 354,
+                "y": 340,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "les vidéos qu'on s'envoie toute la journée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 1
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Lui est debout, un téléphone à la patte. Une notification sonne à 1 s, il regarde l'écran et se met à rire.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 286,
+                "y": 340,
+                "echelle": 0.55
+              }
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 1
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux sont assis côte à côte sur le canapé, chacun sur son téléphone, tous les deux en train de rire. Une notification sonne à 1,2 s et l'un puis l'autre se tape le ventre.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "rire",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "rire",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 250,
+                "y": 300,
+                "echelle": 0.45
+              },
+              {
+                "objet": "telephone",
+                "x": 390,
+                "y": 300,
+                "echelle": 0.45
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 1.2
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
