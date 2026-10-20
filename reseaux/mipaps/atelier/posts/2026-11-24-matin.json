@@ -1,0 +1,252 @@
+{
+  "jour": "2026-11-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-122",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Réveiller ta personne en douceur : elle chuchote à son oreille, il dort ; elle tapote son épaule, il dort ; elle saute sur le lit ; il se réveille d'un bond et la serre, elle rit. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il est allongé sous la couette, endormi, des petits zzz au-dessus de lui. Elle est debout à côté, penchée vers lui, la patte devant la bouche, elle chuchote. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 210,
+                    "pose": "debout",
+                    "expression": "malicieux",
+                    "bras": "bouche"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 390,
+                "y": 355,
+                "echelle": 1.1
+              }
+            ],
+            "textes": [
+              {
+                "texte": "réveiller ta personne en douceur",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Elle tapote son épaule, doucement. Il dort toujours, les zzz au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 390,
+                "y": 355,
+                "echelle": 1.1
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle prend son élan à 0,6 s et saute à 1 s au-dessus de lui, les bras en l'air. Il dort toujours.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "malicieux",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1,
+                    "x": 330,
+                    "y": 300,
+                    "pose": "saut",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 360,
+                    "y": 380,
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 390,
+                "y": 355,
+                "echelle": 1.1
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Il se réveille d'un bond à 0,4 s, les yeux grands, puis la serre dans ses bras. Elle rit, les yeux fermés. Trois cœurs flottent au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1,
+                    "x": 390,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g",
+                    "signes": []
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "debout",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1,
+                    "x": 285,
+                    "expression": "rire",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.8,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

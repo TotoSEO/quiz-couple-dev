@@ -1,0 +1,48 @@
+{
+  "jour": "2026-11-25",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-106",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, qui tremble, des flocons, les yeux fixés sur un pull.",
+        "style": "mini",
+        "texte": "t'as pas froid toi ?",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "froid",
+              "bras": "croises",
+              "signes": [
+                "flocons"
+              ],
+              "x": 290,
+              "taille": 290
+            },
+            {
+              "objet": "pull",
+              "x": 470,
+              "y": 340,
+              "echelle": 0.8
+            }
+          ]
+        }
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

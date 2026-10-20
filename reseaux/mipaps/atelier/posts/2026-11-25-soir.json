@@ -1,0 +1,147 @@
+{
+  "jour": "2026-11-25",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-124",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les différents bisous : celui du matin qui pique, sur le front, en vitesse avant de partir, celui qui fait « smack » exprès ; et le bisou esquimau.",
+        "pages": [
+          {
+            "texte": "les types de bisous",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "amour",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "amour",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "celui du matin qui pique",
+            "dessin": {
+              "duo": "bisou"
+            }
+          },
+          {
+            "texte": "celui sur le front",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "amour",
+                  "pose": "penche_d",
+                  "x": 290,
+                  "taille": 270
+                },
+                {
+                  "perso": "elle",
+                  "expression": "emu",
+                  "x": 370,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "celui en vitesse avant de partir",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "joie",
+                  "angle": 90,
+                  "pose": "court",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 420,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "celui qui fait « smack » exprès",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "malicieux",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 420,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le bisou esquimau",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "angle": 90,
+                  "x": 280,
+                  "taille": 270
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "angle": -90,
+                  "x": 360,
+                  "taille": 270
+                }
+              ]
+            },
+            "appel": "c'est lequel chez vous ?"
+          }
+        ]
+      },
+      "legende": "c'est lequel chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
