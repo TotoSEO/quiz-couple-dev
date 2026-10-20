@@ -3206,8 +3206,8 @@ var QuizEngine = (function() {
   // data-bilan-id sur les pages qui y renvoient (BILAN_ENTREES) : sans eux,
   // rien. Le texte dépend du groupe : `score` (un test fait à deux, qui rend
   // un chiffre ou un profil), `projet` (avant une grande étape), `doute`
-  // (quand on se pose des questions). Le lien porte ?src=resultat-<id>, que
-  // l'onglet Bilan de l'admin lit. docs/bilan/CONCEPTION.md.
+  // (quand on se pose des questions). Le lien porte data-bilan-src="resultat-<id>",
+  // que l'onglet Évaluation de l'admin lit. docs/bilan/CONCEPTION.md.
   var BILAN_TEXTES = {
     fr: { sur: 'Évaluation de couple',
           score: ['Et si vous alliez plus loin que ce test ?', 'Un test rapide donne une tendance. L\'évaluation de couple passe toute votre relation en revue, de l\'argent aux enfants, et compare vos deux points de vue sujet par sujet, dans un rapport de 40 pages.'],
@@ -3283,7 +3283,8 @@ var QuizEngine = (function() {
     // Le texte du test quand il en a un (le test de couple, la compatibilité
     // amoureuse), celui du groupe sinon.
     var texte = (t.tests && t.tests[id]) || t[groupe] || t.score;
-    var lien = chemin + (chemin.indexOf('?') < 0 ? '?' : '&') + 'src=resultat-' + encodeURIComponent(id);
+    // La source part par data-bilan-src (audience.js), jamais dans l'adresse.
+    var src = ' data-bilan-src="' + esc('resultat-' + id) + '"';
     var zone = el('section', 'qr-bilan');
     zone.setAttribute('aria-label', t.sur);
     // Une vraie page du rapport d'exemple (bilan/apercus.mjs), dans la langue.
@@ -3296,9 +3297,9 @@ var QuizEngine = (function() {
       '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
       // Deux boutons : à deux, et seul(e) (la page s'ouvre sur les deux façons
       // de faire, le mode seul(e) préselectionné).
-      '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(lien) + '">' + esc(t.bouton) +
+      '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(chemin) + '"' + src + '>' + esc(t.bouton) +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
-      (t.boutonSolo ? '<a class="qr-bilan-bouton qr-bilan-bouton--second" href="' + esc(lien + '&mode=solo#facons') + '">' + esc(t.boutonSolo) + '</a>' : '') + '</div>' +
+      (t.boutonSolo ? '<a class="qr-bilan-bouton qr-bilan-bouton--second" href="' + esc(chemin + '#facons') + '"' + src + ' data-bilan-mode="solo">' + esc(t.boutonSolo) + '</a>' : '') + '</div>' +
       (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
       '</div>';
     return zone;

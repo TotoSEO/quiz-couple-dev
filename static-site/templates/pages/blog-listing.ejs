@@ -11,7 +11,7 @@
   <nav class="blog-category-tabs" aria-label="Categories">
     <a class="blog-category-tab" href="<%= getLocalizedPath('blog', lang) %>" data-category="all"><%= allLabel %></a>
     <% blogCategories.forEach(function(cat) { %>
-    <a class="blog-category-tab" href="<%= getLocalizedPath('blog', lang) %>?category=<%= cat.key %>" data-category="<%= cat.key %>"><%= cat.label %></a>
+    <a class="blog-category-tab" href="<%= getLocalizedPath('blog', lang) %>#<%= cat.key %>" data-category="<%= cat.key %>"><%= cat.label %></a>
     <% }); %>
   </nav>
   <% } %>
@@ -40,26 +40,39 @@
 
 <script>
 (function() {
-  var params = new URLSearchParams(window.location.search);
-  var activeCat = params.get('category') || 'all';
-
-  // Activate the correct tab
+  // Les onglets filtrent la liste sur place. La catégorie est dans le
+  // fragment de l'adresse (#psychologie), jamais en paramètre : une adresse à
+  // paramètre est une page de plus pour Google (20 octobre 2026). Les anciens
+  // liens ?category= sont lus, puis l'adresse est réécrite.
   var tabs = document.querySelectorAll('.blog-category-tab');
-  for (var i = 0; i < tabs.length; i++) {
-    var tab = tabs[i];
-    if (tab.getAttribute('data-category') === activeCat) {
-      tab.classList.add('is-active');
-    }
+  var cards = document.querySelectorAll('.blog-card[data-category]');
+  function connue(cat) {
+    for (var i = 0; i < tabs.length; i++) if (tabs[i].getAttribute('data-category') === cat) return true;
+    return false;
   }
-
-  // Filter cards
-  if (activeCat !== 'all') {
-    var cards = document.querySelectorAll('.blog-card[data-category]');
-    for (var j = 0; j < cards.length; j++) {
-      if (cards[j].getAttribute('data-category') !== activeCat) {
-        cards[j].style.display = 'none';
-      }
-    }
+  function filtrer(cat) {
+    if (!connue(cat)) cat = 'all';
+    for (var i = 0; i < tabs.length; i++) tabs[i].classList.toggle('is-active', tabs[i].getAttribute('data-category') === cat);
+    for (var j = 0; j < cards.length; j++) cards[j].style.display = (cat === 'all' || cards[j].getAttribute('data-category') === cat) ? '' : 'none';
+  }
+  function duFragment() {
+    try { return decodeURIComponent(location.hash.slice(1)) || 'all'; } catch (e) { return 'all'; }
+  }
+  var ancienne = new URLSearchParams(location.search).get('category');
+  if (ancienne) {
+    try { history.replaceState(null, '', location.pathname + (ancienne !== 'all' && connue(ancienne) ? '#' + ancienne : '')); } catch (e) {}
+  }
+  filtrer(ancienne || duFragment());
+  window.addEventListener('hashchange', function () { filtrer(duFragment()); });
+  window.addEventListener('popstate', function () { filtrer(duFragment()); });
+  for (var k = 0; k < tabs.length; k++) {
+    tabs[k].addEventListener('click', function (e) {
+      if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var cat = this.getAttribute('data-category');
+      e.preventDefault();
+      try { history.pushState(null, '', location.pathname + (cat === 'all' ? '' : '#' + cat)); } catch (er) {}
+      filtrer(cat);
+    });
   }
 })();
 </script>

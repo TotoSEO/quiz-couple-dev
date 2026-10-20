@@ -817,7 +817,7 @@
   // Tout vient d'une seule lecture, get_bilan_tableau (migration
   // 20261018120000) : la série jour par jour (visites de la page, clics sur
   // « Commencer », bilans créés, rejoints, finis, paiements), les sources
-  // (?src= des liens du site), les domaines entrés et finis, les arrêts, les
+  // (data-bilan-src des liens du site), les domaines entrés et finis, les arrêts, les
   // délais, l'état des rapports PDF et les payés en attente du partenaire.
   // Les compteurs sont tenus par la fonction bilan et par un déclencheur sur
   // la table bilans : un bilan supprimé reste compté.

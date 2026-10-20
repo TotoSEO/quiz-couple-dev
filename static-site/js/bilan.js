@@ -38,7 +38,7 @@
   var verifAttente = null;  // la vérification de l'écran d'attente, s'il est affiché
   var S = null;   // la session de réponses en cours
   var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
-  var modeDemande = null;  // le mode demandé par le bouton de la page ou ?mode=
+  var modeDemande = null;  // le mode demandé par le bouton de la page ou le lien suivi (arrivee)
 
   // ── Textes ──────────────────────────────────────────────────────────────
 
@@ -365,9 +365,7 @@
     var lien = !!(id && jeton);
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
-    var m = query.get('mode');
-    if (m === 'solo' || m === 'duo') modeDemande = m;
-    source();
+    arrivee(query);
     if (!lien && !paiement && !annule) {
       // La présentation seule : l'application attend le bouton.
       repriseSurLaPage();
@@ -1417,14 +1415,39 @@
     repriseSurLaPage();
   }
 
-  // La source de la visite (?src= posé par les liens du site), gardée le
-  // temps de la session pour la création du bilan.
-  function source() {
-    var q = new URLSearchParams(location.search).get('src');
+  // La source de la visite, gardée le temps de la session pour la création
+  // de l'évaluation. Elle arrive avec le clic sur un lien du site
+  // (data-bilan-src, rangé par audience.js dans qc-bilan-clic), ou par
+  // l'adresse pour les liens écrits avant le 20 octobre 2026 et ceux partis
+  // ailleurs (?src=, ?mode=). L'adresse est alors nettoyée tout de suite :
+  // l'adresse d'une page ne porte jamais de source (voir audience.js).
+  var srcVisite = null;
+  function arrivee(query) {
+    var src = query.get('src'), mode = query.get('mode'), clic = null;
     try {
-      if (q && /^[a-z0-9-]{1,40}$/.test(q)) sessionStorage.setItem('qc-bilan-src', q);
-      return sessionStorage.getItem('qc-bilan-src') || 'direct';
-    } catch (e) { return q && /^[a-z0-9-]{1,40}$/.test(q) ? q : 'direct'; }
+      clic = JSON.parse(localStorage.getItem('qc-bilan-clic') || 'null');
+      localStorage.removeItem('qc-bilan-clic');
+    } catch (e) { clic = null; }
+    var age = clic && typeof clic.t === 'number' ? Date.now() - clic.t : -1;
+    if (age >= 0 && age < 10 * 60 * 1000) {
+      src = src || clic.s;
+      mode = mode || clic.m;
+    }
+    if (src && /^[a-z0-9-]{1,40}$/.test(src)) {
+      srcVisite = src;
+      try { sessionStorage.setItem('qc-bilan-src', src); } catch (e) { /* rien */ }
+    }
+    if (mode === 'solo' || mode === 'duo') modeDemande = mode;
+    if (query.has('src') || query.has('mode')) {
+      var reste = new URLSearchParams(location.search);
+      reste.delete('src');
+      reste.delete('mode');
+      reste = reste.toString();
+      try { history.replaceState(history.state, '', location.pathname + (reste ? '?' + reste : '') + location.hash); } catch (e) { /* rien */ }
+    }
+  }
+  function source() {
+    try { return sessionStorage.getItem('qc-bilan-src') || srcVisite || 'direct'; } catch (e) { return srcVisite || 'direct'; }
   }
   function compterVue(quoi) {
     var cle = 'qc-bilan-' + quoi;

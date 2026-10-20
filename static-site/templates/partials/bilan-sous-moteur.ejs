@@ -6,8 +6,8 @@
   // dont l'entrée porte `sousMoteur` (BILAN_ENTREES, config.js), quand
   // l'évaluation est ouverte. La même carte que la bannière du bas (.qr-bilan,
   // styles.css, variante .qr-bilan--moteur), avec un texte écrit pour le test
-  // de la page, et deux boutons dont les liens portent ?src=moteur-<id> pour
-  // l'onglet Évaluation de l'admin. À l'écran de résultat, la carte s'efface
+  // de la page, et deux boutons dont les liens portent data-bilan-src="moteur-<id>"
+  // pour l'onglet Évaluation de l'admin. À l'écran de résultat, la carte s'efface
   // (CSS) : l'encart sous le verdict prend le relais. Ne rend rien ailleurs.
   const _sm = (typeof bilanEntree !== 'undefined' && bilanEntree && bilanEntree.sousMoteur && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
   const _SM = {
@@ -82,8 +82,8 @@
       <% for (const p of _smT.points) { %><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><%= p %></span></li><% } %>
     </ul>
     <div class="qr-bilan-boutons">
-      <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>"><%= _smT.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>&amp;mode=solo#facons"><%= _smT.boutonSolo %></a>
+      <a class="qr-bilan-bouton" href="<%= bilanChemin %>" data-bilan-src="moteur-<%= _sm.id %>"><%= _smT.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>#facons" data-bilan-src="moteur-<%= _sm.id %>" data-bilan-mode="solo"><%= _smT.boutonSolo %></a>
     </div>
     <p class="qr-bilan-prix"><%- _smPromo ? _smPromo.marque(_smPrix) : _smPrix %></p>
   </div>

@@ -108,9 +108,12 @@
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
 
-  // Le lien vers le bilan de couple porte sa source (?src=), lue dans
-  // l'onglet Bilan de l'admin.
-  const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=accueil' : u; };
+  // Le lien vers l'évaluation de couple dit d'où il part par data-bilan-src
+  // (lu au clic par audience.js, puis dans l'onglet Évaluation de l'admin),
+  // jamais dans l'adresse : une adresse à paramètre est une page de plus pour
+  // Google, et le menu la répétait sur chaque page du site.
+  const urlNav = (k) => getLocalizedUrl(k, lang);
+  const srcNav = (k) => k === 'bilanCouple' ? ' data-bilan-src="accueil"' : '';
   // L'évaluation de couple sur l'accueil (19 octobre 2026, Thomas : « on ne va
   // pas compter sur le SEO pour vendre ») : le troisième bouton du hero, à la
   // place du test de pureté depuis le 20 octobre 2026 (le lien « Nouveau »
@@ -207,7 +210,7 @@
               bouton du test de pureté jusque-là : .btn-eval dans styles.css.
               Le lien porte sa source pour l'onglet Évaluation de l'admin. %>
           <% if (urlEval) { %>
-          <a href="<%= urlEval %>?src=accueil-hero" class="btn btn-eval btn-lg">
+          <a href="<%= urlEval %>" data-bilan-src="accueil-hero" class="btn btn-eval btn-lg">
             <span class="btn-eval-ic" aria-hidden="true"><%- icEval %></span>
             <span class="btn-eval-texte"><%= evaluation.ctaCourt %></span>
           </a>
@@ -415,8 +418,8 @@
           <% }) %>
         </ul>
         <div class="qr-bilan-boutons">
-          <a class="qr-bilan-bouton" href="<%= urlEval %>?src=accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>?src=accueil&amp;mode=solo#facons"><%= evaluation.ctaSolo %></a>
+          <a class="qr-bilan-bouton" href="<%= urlEval %>" data-bilan-src="accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>#facons" data-bilan-src="accueil" data-bilan-mode="solo"><%= evaluation.ctaSolo %></a>
         </div>
       </div>
     </div>
@@ -459,7 +462,7 @@
              const tTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : tTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -513,7 +516,7 @@
              const cTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : cTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--celib">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -568,7 +571,7 @@
              const qTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : qTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -624,7 +627,7 @@
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
              const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%', jeuDixMais: '46 92% 46%' }; %>
-          <a class="jeu-card quiz-slide" href="<%= urlNav(item.routeKey) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
+          <a class="jeu-card quiz-slide" href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
               <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
             </span>
@@ -685,7 +688,7 @@
              const sTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : sTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--speciaux">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">

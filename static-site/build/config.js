@@ -341,8 +341,8 @@ export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
 // cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
 // `score`, un test fait à deux qui rend un chiffre ou un profil ; `projet`,
 // avant une grande étape ; `doute`, quand on se pose des questions sur son
-// couple. L'identifiant part dans l'adresse (?src=resultat-<id> ou
-// ?src=bas-<id>) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
+// couple. L'identifiant part avec le clic (data-bilan-src="resultat-<id>"
+// ou "bas-<id>", lu par audience.js, jamais dans l'adresse) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
 // d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
 // chacun les réponses de l'autre.
 export const BILAN_ENTREES = {
