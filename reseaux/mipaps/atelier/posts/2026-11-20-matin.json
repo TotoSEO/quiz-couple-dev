@@ -1,0 +1,168 @@
+{
+  "jour": "2026-11-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-120",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Quand ta personne a faim : il est grognon, un nuage noir au-dessus de lui ; elle lui demande si ça va, il grogne ; elle sort un gâteau de derrière son dos, il fond. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il est debout, les bras croisés, la bouche de travers, un petit nuage noir au-dessus de la tête. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "pose": "debout",
+                    "expression": "colere",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand ta personne a faim",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle arrive à côté de lui, inquiète, la tête penchée. Lui garde les bras croisés, le nuage noir au-dessus de lui. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "boude",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "inquiet"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ça va ? » « grmbl »",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle sort un morceau de gâteau de derrière son dos à 0,8 s, malicieuse, et le lui tend. Lui ouvre de grands yeux à 1,4 s, le nuage disparaît, des cœurs flottent au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "boude",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "amour",
+                    "bras": "bas",
+                    "signes": []
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "gateau",
+                "x": 330,
+                "y": 335,
+                "echelle": 0.6,
+                "de": 0.8
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 130,
+                "echelle": 0.4,
+                "de": 1.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 150,
+                "echelle": 0.3,
+                "de": 2,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

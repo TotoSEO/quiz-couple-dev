@@ -1,0 +1,44 @@
+{
+  "jour": "2026-11-20",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-108",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui, gourmand, les yeux sur un gâteau.",
+        "style": "mini",
+        "texte": "je peux goûter ?",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "gourmand",
+              "x": 290,
+              "taille": 290
+            },
+            {
+              "objet": "gateau",
+              "x": 470,
+              "y": 335,
+              "echelle": 0.8
+            }
+          ]
+        }
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

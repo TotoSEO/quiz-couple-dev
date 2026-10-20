@@ -1,0 +1,59 @@
+{
+  "jour": "2026-11-21",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-113",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : elle sous la couverture, boudeuse ; lui assis à côté, tendre.",
+        "texte": "même quand je dis laisse-moi, reste un peu",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "boude",
+              "pose": "assis",
+              "y": 380,
+              "angle": 150,
+              "x": 270,
+              "taille": 250
+            },
+            {
+              "perso": "lui",
+              "expression": "amour",
+              "pose": "assis",
+              "y": 380,
+              "x": 430,
+              "taille": 250
+            },
+            {
+              "objet": "coeur",
+              "x": 430,
+              "y": 120,
+              "echelle": 0.45,
+              "flotte": true
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça à ta personne sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
