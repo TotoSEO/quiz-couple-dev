@@ -1,0 +1,49 @@
+name: Supabase · inventaire
+
+# Un état des lieux à lancer à la main (« Run workflow ») quand le tableau
+# de bord Supabase affiche un dépassement et qu'on ne sait pas d'où il
+# vient : taille de la base et des plus grosses tables (schémas public,
+# storage, cron, net), le stockage bucket par bucket et jour par jour, les
+# vingt plus gros fichiers, les fichiers du bucket des rendus que plus aucun
+# post ne référence (le ménage de l'entretien aurait dû les effacer), l'état
+# des déclinaisons, les dernières lignes du journal de l'entretien, et la
+# table des abonnés avec un appel de sa fonction d'admin (l'onglet Leads
+# vide du 20 octobre 2026). Lecture seule : rien n'est modifié. Les requêtes
+# passent par l'API de gestion, comme les migrations de social-base.yml.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inventaire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - name: Inventaire
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          sql "La base" "select pg_size_pretty(pg_database_size(current_database())) as base, (select pg_size_pretty(sum(pg_total_relation_size(c.oid))) from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r') as tables_public"
+          sql "Les quinze plus grosses tables (public, storage, cron, net)" "select n.nspname || '.' || c.relname as table_, pg_size_pretty(pg_total_relation_size(c.oid)) as taille, c.reltuples::bigint as lignes_estimees from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname in ('public', 'storage', 'cron', 'net', 'auth', 'realtime') and c.relkind = 'r' order by pg_total_relation_size(c.oid) desc limit 15"
+          sql "Le stockage, bucket par bucket" "select bucket_id, count(*) as objets, pg_size_pretty(coalesce(sum((metadata->>'size')::bigint), 0)) as taille, min(created_at)::date as depuis, max(created_at)::date as dernier from storage.objects group by 1 order by sum((metadata->>'size')::bigint) desc nulls last"
+          sql "Le stockage, jour par jour (trente derniers jours de dépôt)" "select to_char(created_at, 'YYYY-MM-DD') as jour, bucket_id, count(*) as objets, pg_size_pretty(sum((metadata->>'size')::bigint)) as taille from storage.objects group by 1, 2 order by 1 desc, 2 limit 60"
+          sql "Les vingt plus gros fichiers" "select bucket_id, name, pg_size_pretty((metadata->>'size')::bigint) as taille, created_at::date as le from storage.objects order by (metadata->>'size')::bigint desc nulls last limit 20"
+          sql "Rendus que plus aucune déclinaison ne référence (orphelins)" "select count(*) as orphelins, pg_size_pretty(coalesce(sum((o.metadata->>'size')::bigint), 0)) as taille, min(o.created_at)::date as depuis from storage.objects o where o.bucket_id = 'social-medias' and not exists (select 1 from public.social_variantes v where v.fichiers::text like '%' || o.name || '%')"
+          sql "Rendus encore référencés par une déclinaison" "select count(*) as references, pg_size_pretty(coalesce(sum((o.metadata->>'size')::bigint), 0)) as taille from storage.objects o where o.bucket_id = 'social-medias' and exists (select 1 from public.social_variantes v where v.fichiers::text like '%' || o.name || '%')"
+          sql "Les déclinaisons par statut" "select statut, count(*) as n, count(*) filter (where fichiers_supprimes_le is null and fichiers::text not in ('{}', 'null')) as avec_fichiers, count(*) filter (where fichiers_supprimes_le is not null) as fichiers_supprimes, min(publier_a)::date as de, max(publier_a)::date as a from public.social_variantes group by 1 order by 2 desc"
+          sql "Le journal de l'entretien (dix dernières lignes)" "select * from public.social_journal where source = 'entretien' order by created_at desc limit 10"
+          sql "Les abonnés" "select count(*) as abonnes, count(*) filter (where source = 'ebook') as ebook, count(*) filter (where source <> 'ebook') as porte_des_resultats, max(created_at) as dernier from public.abonnes"
+          sql "La fonction de l'onglet Leads existe et le rôle de service peut l'appeler" "select to_regprocedure('public.get_abonnes_tableau(integer)') as fonction, has_function_privilege('service_role', 'public.get_abonnes_tableau(integer)', 'EXECUTE') as service_role_execute"
+          sql "La fonction de l'onglet Leads répond (400 premiers signes)" "select left(public.get_abonnes_tableau(30)::text, 400) as apercu"
+          rm -f requete.json reponse.json
