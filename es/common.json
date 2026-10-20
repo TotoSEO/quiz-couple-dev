@@ -191,6 +191,11 @@
     "confidentialite": "Privacidad",
     "bouton": "Ver mis resultados",
     "envoi": "Un momento...",
+    "note": "Solo una vez: después, todos los tests, quiz y juegos del sitio se abren sin volver a pedir nada en este dispositivo.",
+    "merci": {
+      "titre": "¡Gracias, tus resultados están desbloqueados!",
+      "texte": "Y no solo aquí: a partir de ahora, todos los tests, quiz y juegos del sitio te dan sus resultados completos sin volver a pedir tu e-mail en este dispositivo."
+    },
     "suggestion": "¿Querías decir {{domaine}}?",
     "erreurs": {
       "format": "Esta dirección de e-mail no parece completa.",

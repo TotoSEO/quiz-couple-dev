@@ -191,6 +191,11 @@
     "confidentialite": "Privacy",
     "bouton": "Vedere i miei risultati",
     "envoi": "Un attimo...",
+    "note": "Una volta sola: poi tutti i test, i quiz e i giochi del sito si aprono senza chiedere più nulla su questo dispositivo.",
+    "merci": {
+      "titre": "Grazie, i tuoi risultati sono sbloccati!",
+      "texte": "E non solo qui: da ora in poi, tutti i test, i quiz e i giochi del sito ti danno i risultati completi senza chiederti di nuovo l'e-mail su questo dispositivo."
+    },
     "suggestion": "Volevi dire {{domaine}}?",
     "erreurs": {
       "format": "Questo indirizzo e-mail non sembra completo.",
