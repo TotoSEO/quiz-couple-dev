@@ -83,3 +83,20 @@ jobs:
           logs "Realtime : les quinze débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'realtime_logs' group by debut order by n desc limit 15"
           logs "Fonctions serveur : par fonction" "select log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'function_edge_logs' group by chemin order by n desc limit 15"
           rm -f reponse.json
+      # Avant de toucher à la mesure d'audience : la passerelle d'API
+      # accepte-t-elle la clé publique en paramètre d'adresse ? Si oui, une
+      # écriture de mesure peut partir en requête « simple » (Content-Type
+      # application/x-www-form-urlencoded, aucun en-tête à nous), sans le
+      # préchargement CORS (OPTIONS) qui double une ligne de log sur cinq.
+      - name: La passerelle accepte-t-elle une requête simple (clé en paramètre, sans préchargement CORS) ?
+        env:
+          URL: ${{ secrets.SUPABASE_URL || 'https://lojvajnnvhatfplevyvy.supabase.co' }}
+          KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then echo "pas de SUPABASE_ANON_KEY dans les secrets : essai sauté"; exit 0; fi
+          essai() { echo; echo "## $1"; shift; curl -sS -o corps.txt -w 'HTTP %{http_code}\n' "$@"; head -c 300 corps.txt; echo; }
+          essai "témoin : clé en en-tête, JSON" -X POST "$URL/rest/v1/rpc/get_quiz_total" -H "apikey: $KEY" -H "Content-Type: application/json" -d '{}'
+          essai "clé en paramètre ?apikey=, corps form-urlencoded vide" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: application/x-www-form-urlencoded" -d ''
+          essai "clé en paramètre, Content-Type text/plain" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: text/plain" -d '{}'
+          essai "sans aucune clé (doit refuser)" -X POST "$URL/rest/v1/rpc/get_quiz_total" -H "Content-Type: application/json" -d '{}'
+          rm -f corps.txt
