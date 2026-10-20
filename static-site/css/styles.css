@@ -13195,7 +13195,7 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
    résultat, jamais la page autour. */
 .qc-flou { filter: blur(7px); opacity: .72; pointer-events: none; user-select: none; transition: filter .45s ease, opacity .45s ease; }
 .qc-flou--ouvre { filter: blur(0); opacity: 1; }
-/* La porte depuis le 21 octobre 2026 : sa largeur vient de l'écran et non de
+/* La porte depuis le 20 octobre 2026 : sa largeur vient de l'écran et non de
    la carte où elle se glisse. Dans le test de couple, elle était posée au fond
    de trois rembourrages : 244 px de large sur un téléphone de 390, 634 px de
    haut, le bouton sur deux lignes et, sur la compatibilité, le champ sous le

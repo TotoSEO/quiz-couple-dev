@@ -3064,7 +3064,7 @@
       ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues', 'abonnes-taux'].forEach(function (id) { ecritAbonnes(id, '—'); });
     });
   }
-  // ── Le taux de capture (21 octobre 2026) ──
+  // ── Le taux de capture (20 octobre 2026) ──
   // Thomas : « pour le nombre de visites peu de gens me laissent leur email ».
   // Les visites ne disent rien : seuls ceux qui arrivent au résultat d'un test
   // à porte la voient. Le dénominateur est donc le nombre d'écrans de résultat

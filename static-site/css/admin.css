@@ -195,7 +195,7 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm .stats-tetes,.adm .trafic-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-bottom:1.25rem;align-items:stretch;}
 /* Une seule tuile (onglet A distance depuis le 20 octobre 2026) : pas etiree sur toute la largeur. */
 .adm .stats-tetes--une{grid-template-columns:minmax(14rem,24rem);}
-/* Cinq tuiles (onglet Leads, taux de capture depuis le 21 octobre 2026) : sur une seule rangée dès 950 px. */
+/* Cinq tuiles (onglet Leads, taux de capture depuis le 20 octobre 2026) : sur une seule rangée dès 950 px. */
 .adm .stats-tetes--cinq{grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));}
 .adm .stats-tetes.stats-tetes--cinq .stats-tete .stats-tete-jour{font-size:clamp(1.55rem,2.3vw,2.1rem);white-space:nowrap;}
 .adm .stats-tete{
