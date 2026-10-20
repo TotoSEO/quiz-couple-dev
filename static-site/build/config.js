@@ -346,8 +346,12 @@ export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
 // d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
 // chacun les réponses de l'autre.
 export const BILAN_ENTREES = {
-  testCouple: { groupe: 'score', id: 'tester-couple' },
-  testCompatibilite: { groupe: 'score', id: 'compatibilite' },
+  // `sousMoteur` : la carte de l'évaluation juste sous le moteur, en plus de
+  // l'encart du résultat et de la bannière du bas (20 octobre 2026, Thomas :
+  // « mettre mieux en avant l'évaluation de couple » sur ces deux tests) ;
+  // partials/bilan-sous-moteur.ejs, inclus par quiz-generic.ejs.
+  testCouple: { groupe: 'score', id: 'tester-couple', sousMoteur: true },
+  testCompatibilite: { groupe: 'score', id: 'compatibilite', sousMoteur: true },
   testCommonPoints: { groupe: 'score', id: 'points-communs' },
   quizAmoureux: { groupe: 'score', id: 'amoureux' },
   quizTypeCouple: { groupe: 'score', id: 'type-couple' },

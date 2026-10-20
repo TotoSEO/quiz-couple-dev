@@ -3214,6 +3214,10 @@ var QuizEngine = (function() {
           projet: ['Avant de vous lancer, vérifiez que vous voulez la même vie', 'Emménager, se marier, avoir un enfant... L\'évaluation de couple passe en revue tout ce qui engage une vie à deux et vous montre où vous êtes d\'accord, et de quoi parler avant de vous engager.'],
           doute: ['Faites le point, à deux ou seul(e)', 'Ce test donne votre ressenti. L\'évaluation de couple compare celui de chacun, sujet par sujet, et vous dit par où commencer. Si l\'autre n\'est pas prêt(e) à en parler, vous pouvez la faire seul(e) : votre partenaire n\'en saura rien.'],
           jeu: ['Vous avez joué ensemble. Et pour parler de ce qui compte ?', 'L\'évaluation de couple pose les vraies questions, de l\'argent aux enfants, chacun de son côté, et vous rend un rapport de 40 pages qui compare vos réponses sujet par sujet.'],
+          // Les deux tests qui portent aussi la carte sous le moteur (20 octobre
+          // 2026) : un texte qui part du résultat qu'on vient de lire.
+          tests: { 'tester-couple': ['Vous avez votre note. Et sur les vrais sujets ?', 'Vingt questions donnent une tendance. L\'évaluation de couple en pose cent, à chacun de son côté : l\'argent, les enfants, où vivre, la fidélité, les disputes... et vous rend un rapport de 40 pages qui compare vos réponses sujet par sujet, avec de quoi en parler.'],
+                   'compatibilite': ['Vous savez à quel point vous vous ressemblez. Voulez-vous la même vie ?', 'Ce test compare vos goûts et vos réactions. L\'évaluation de couple regarde ce qui engage une vie à deux, l\'argent, les enfants, où vivre, la fidélité, et met vos deux points de vue face à face dans un rapport de 40 pages.'] },
           questions: ['Des questions, vous en avez. Et les réponses de l\'autre ?', 'L\'évaluation de couple pose 100 questions précises à chacun de vous, de son côté, et compare vos réponses sujet par sujet dans un rapport de 40 pages.'],
           points: ['100 questions, à deux ou seul(e)', 'Construit à partir de la recherche en psychologie du couple', 'Un rapport PDF de 40 pages, avec des graphiques'],
           bouton: 'Découvrir l\'évaluation', boutonSolo: 'La faire seul(e)', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
@@ -3222,6 +3226,8 @@ var QuizEngine = (function() {
           projet: ['Before you take the leap, check you want the same life', 'Moving in, getting married, having a baby... The relationship assessment goes through everything that shapes a life together and shows you where you agree, and what to talk about before you commit.'],
           doute: ['Take stock, together or on your own', 'This test gives you your own feeling. The relationship assessment compares how each of you sees things, topic by topic, and tells you where to start. If the other isn\'t ready to talk about it, you can do it on your own: your partner won\'t know.'],
           jeu: ['You\'ve played together. What about talking about what matters?', 'The relationship assessment asks the real questions, from money to children, each on your own side, and gives you a 40-page report that compares your answers topic by topic.'],
+          tests: { 'tester-couple': ['You have your score. What about the real topics?', 'Twenty questions give you a trend. The relationship assessment asks a hundred, each on your own side: money, children, where to live, fidelity, arguments... and gives you a 40-page report that compares your answers topic by topic, with ways to talk about them.'],
+                   'compatibilite': ['You know how alike you are. Do you want the same life?', 'This test compares your tastes and reactions. The relationship assessment looks at what shapes a life together, money, children, where to live, fidelity, and puts your two points of view side by side in a 40-page report.'] },
           questions: ['You\'ve got questions. What about the other\'s answers?', 'The relationship assessment asks each of you 100 specific questions, on your own side, and compares your answers topic by topic in a 40-page report.'],
           points: ['100 questions, together or on your own', 'Built on research in couple psychology', 'A 40-page PDF report, with charts'],
           bouton: 'Discover the assessment', boutonSolo: 'Take it on your own', prix: 'Free questions · report {{prix}} for both of you' },
@@ -3230,6 +3236,8 @@ var QuizEngine = (function() {
           projet: ['Antes de dar el paso, comprobad que queréis la misma vida', 'Iros a vivir juntos, casaros, tener un hijo... La evaluación de pareja repasa todo lo que marca una vida en común y os muestra en qué estáis de acuerdo, y de qué hablar antes de comprometeros.'],
           doute: ['Haced balance, en pareja o a solas', 'Este test da tu impresión. La evaluación de pareja compara la de cada uno, tema por tema, y os dice por dónde empezar. Si el otro no está listo para hablarlo, puedes hacerla a solas: tu pareja no se enterará.'],
           jeu: ['Habéis jugado juntos. ¿Y para hablar de lo que cuenta?', 'La evaluación de pareja hace las preguntas de verdad, del dinero a los hijos, cada uno por su lado, y os entrega un informe de 40 páginas que compara vuestras respuestas tema por tema.'],
+          tests: { 'tester-couple': ['Ya tenéis vuestra nota. ¿Y en los temas de verdad?', 'Veinte preguntas dan una tendencia. La evaluación de pareja hace cien, a cada uno por su lado: el dinero, los hijos, dónde vivir, la fidelidad, las discusiones... y os entrega un informe de 40 páginas que compara vuestras respuestas tema por tema, con pistas para hablarlo.'],
+                   'compatibilite': ['Ya sabéis cuánto os parecéis. ¿Queréis la misma vida?', 'Este test compara vuestros gustos y reacciones. La evaluación de pareja mira lo que marca una vida en común, el dinero, los hijos, dónde vivir, la fidelidad, y pone vuestros dos puntos de vista frente a frente en un informe de 40 páginas.'] },
           questions: ['Preguntas, tenéis. ¿Y las respuestas del otro?', 'La evaluación de pareja hace 100 preguntas concretas a cada uno, por su lado, y compara vuestras respuestas tema por tema en un informe de 40 páginas.'],
           points: ['100 preguntas, en pareja o a solas', 'Construido a partir de la investigación en psicología de pareja', 'Un informe en PDF de 40 páginas, con gráficos'],
           bouton: 'Descubrir la evaluación', boutonSolo: 'Hacerla a solas', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
@@ -3238,6 +3246,8 @@ var QuizEngine = (function() {
           projet: ['Bevor ihr den Schritt wagt: Wollt ihr dasselbe Leben?', 'Zusammenziehen, heiraten, ein Kind bekommen... Die Beziehungsanalyse geht alles durch, was ein gemeinsames Leben prägt, und zeigt euch, wo ihr euch einig seid und worüber ihr reden solltet, bevor ihr euch festlegt.'],
           doute: ['Zieht Bilanz, zu zweit oder allein', 'Dieser Test zeigt dein Gefühl. Die Beziehungsanalyse vergleicht die Sicht von euch beiden, Thema für Thema, und sagt euch, womit ihr anfangen könnt. Wenn der andere noch nicht bereit ist, darüber zu reden, kannst du sie allein machen: Dein Partner oder deine Partnerin erfährt nichts davon.'],
           jeu: ['Ihr habt zusammen gespielt. Und reden über das, was zählt?', 'Die Beziehungsanalyse stellt die echten Fragen, vom Geld bis zu den Kindern, jeder für sich, und gibt euch einen Bericht mit 40 Seiten, der eure Antworten Thema für Thema vergleicht.'],
+          tests: { 'tester-couple': ['Ihr habt eure Note. Und bei den großen Themen?', 'Zwanzig Fragen zeigen eine Tendenz. Die Beziehungsanalyse stellt hundert, jedem für sich: Geld, Kinder, Wohnort, Treue, Streit... und gibt euch einen Bericht mit 40 Seiten, der eure Antworten Thema für Thema vergleicht, mit Gesprächshilfen.'],
+                   'compatibilite': ['Ihr wisst, wie ähnlich ihr euch seid. Wollt ihr dasselbe Leben?', 'Dieser Test vergleicht eure Vorlieben und Reaktionen. Die Beziehungsanalyse schaut auf das, was ein gemeinsames Leben prägt, Geld, Kinder, Wohnort, Treue, und stellt eure beiden Sichtweisen in einem Bericht mit 40 Seiten nebeneinander.'] },
           questions: ['Fragen habt ihr. Und die Antworten des anderen?', 'Die Beziehungsanalyse stellt jedem von euch 100 genaue Fragen, für sich, und vergleicht eure Antworten Thema für Thema in einem Bericht mit 40 Seiten.'],
           points: ['100 Fragen, zu zweit oder allein', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit 40 Seiten, mit Grafiken'],
           bouton: 'Die Analyse entdecken', boutonSolo: 'Sie allein machen', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
@@ -3246,6 +3256,8 @@ var QuizEngine = (function() {
           projet: ['Prima del grande passo, verificate di volere la stessa vita', 'Andare a vivere insieme, sposarsi, avere un figlio... La valutazione di coppia passa in rassegna tutto quello che segna una vita a due e vi mostra su cosa siete d\'accordo, e di cosa parlare prima di impegnarvi.'],
           doute: ['Fate il punto, in due o da soli', 'Questo test dà la tua impressione. La valutazione di coppia confronta quella di ciascuno, tema per tema, e vi dice da dove cominciare. Se l\'altro non è pronto a parlarne, puoi farla da solo/a: il tuo partner non ne saprà niente.'],
           jeu: ['Avete giocato insieme. E per parlare di quello che conta?', 'La valutazione di coppia fa le domande vere, dai soldi ai figli, ciascuno per conto suo, e vi dà un report di 40 pagine che confronta le vostre risposte tema per tema.'],
+          tests: { 'tester-couple': ['Avete il vostro voto. E sui temi che contano?', 'Venti domande danno una tendenza. La valutazione di coppia ne fa cento, a ciascuno per conto suo: i soldi, i figli, dove vivere, la fedeltà, i litigi... e vi dà un report di 40 pagine che confronta le vostre risposte tema per tema, con spunti per parlarne.'],
+                   'compatibilite': ['Sapete quanto vi somigliate. Volete la stessa vita?', 'Questo test confronta i vostri gusti e le vostre reazioni. La valutazione di coppia guarda quello che segna una vita a due, i soldi, i figli, dove vivere, la fedeltà, e mette i vostri due punti di vista a confronto in un report di 40 pagine.'] },
           questions: ['Domande ne avete. E le risposte dell\'altro?', 'La valutazione di coppia fa 100 domande precise a ciascuno di voi, per conto suo, e confronta le vostre risposte tema per tema in un report di 40 pagine.'],
           points: ['100 domande, in due o da soli', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di 40 pagine, con grafici'],
           bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
@@ -3257,9 +3269,11 @@ var QuizEngine = (function() {
     var groupe = corps && corps.getAttribute('data-bilan-groupe');
     if (!chemin || !groupe) return null;
     var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
-    var texte = t[groupe] || t.score;
     var prix = corps.getAttribute('data-bilan-prix') || '';
     var id = corps.getAttribute('data-bilan-id') || cle || 'test';
+    // Le texte du test quand il en a un (le test de couple, la compatibilité
+    // amoureuse), celui du groupe sinon.
+    var texte = (t.tests && t.tests[id]) || t[groupe] || t.score;
     var lien = chemin + (chemin.indexOf('?') < 0 ? '?' : '&') + 'src=resultat-' + encodeURIComponent(id);
     var zone = el('section', 'qr-bilan');
     zone.setAttribute('aria-label', t.sur);

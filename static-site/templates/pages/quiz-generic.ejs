@@ -336,6 +336,11 @@
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"><%- include('../partials/quiz-loading', { lang, routeKey }) %></div>
 
+    <%/* L'évaluation de couple juste sous le moteur, sur le test de couple et
+         la compatibilité amoureuse (BILAN_ENTREES.sousMoteur, config.js ;
+         20 octobre 2026). Le partiel ne rend rien ailleurs. */%>
+    <%- include('../partials/bilan-sous-moteur') %>
+
     <%/* « Comment jouer ? » repliable. Ne s'affiche que si la page fournit ses
          étapes : les règles n'ont pas à encombrer l'écran de celui qui a déjà
          compris, mais elles doivent rester à portée de clic. */%>
