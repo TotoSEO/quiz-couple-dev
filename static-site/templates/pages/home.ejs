@@ -226,7 +226,7 @@
         <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
         <div class="hero-stats">
           <div class="hero-stat hero-stat--phare">
-            <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078">3&nbsp;078</span>
+            <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078"<%- (typeof accueilCuit !== 'undefined' && accueilCuit && accueilCuit.quizTotal !== null) ? ' data-total="' + accueilCuit.quizTotal + '"' : '' %>>3&nbsp;078</span>
             <span class="hero-stat-txt"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
           </div>
           <%# Les quatre familles du catalogue, pas deux : les tests célibataires
@@ -917,6 +917,12 @@
     dans styles.css : rien n'est visible au chargement, et les feuilles
     critiques n'ont pas à bouger. %>
 <section class="section-padding" id="instagram-recents" style="display:none" data-suivre="<%= instagramUrl %>">
+  <%# Les trois dernières publications, lues au build (generate.js,
+      fetchAccueilCuit) : home-dynamic.js les dessine sans rien demander à la
+      base ; sans ce bloc, il appelle get_instagram_recents comme avant. %>
+  <% if (typeof accueilCuit !== 'undefined' && accueilCuit && Array.isArray(accueilCuit.instagram)) { %>
+  <script type="application/json" id="ig-recents-cuits"><%- JSON.stringify(accueilCuit.instagram).replace(/</g, '\\u003c') %></script>
+  <% } %>
   <style>
     .ig-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 54rem; margin: 0 auto; }
     .ig-carte { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 1.25rem; overflow: hidden; background: hsl(var(--muted)); box-shadow: 0 14px 34px -14px hsl(var(--primary) / 0.45); text-decoration: none; color: #fff; transition: transform 0.25s ease; }
@@ -958,7 +964,7 @@
 
 <!-- Reviews Section -->
 <section class="section-padding bg-muted/20" id="avis">
-  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
+  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>"<%- (typeof reviewsCuits !== 'undefined' && reviewsCuits) ? ' data-cuit="1"' : '' %> class="hidden"></div>
   <div class="container mx-auto px-4">
     <!-- Header with stats -->
     <div class="text-center mb-8">

@@ -191,6 +191,13 @@
   // Google.
   function loadReviews() {
     if (!reviewsGrid) return;
+    // Note, nombre et vingt derniers avis sont déjà dans le HTML quand la
+    // construction a pu lire la base (data-cuit sur #reviews-config) : on ne
+    // redemande rien, un avis approuvé paraît à la reconstruction suivante,
+    // sept par jour. Les deux lectures ci-dessous ne servent plus qu'à une
+    // page construite sans la base.
+    var configEl = document.getElementById('reviews-config');
+    if (configEl && configEl.dataset.cuit === '1') return;
 
     var entetes = { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY };
 
@@ -354,12 +361,22 @@
     reviewForm = document.getElementById('review-form');
     if (!reviewForm) return;
 
-    // Check IP and disable form if already submitted
-    checkIp().then(function (alreadySubmitted) {
-      if (alreadySubmitted) {
-        showAlreadySubmitted();
-      }
-    });
+    // « Cette adresse a-t-elle déjà laissé un avis ? » coûte une fonction
+    // serveur et une lecture à chaque visite de l'accueil, pour une personne
+    // sur mille qui touche au formulaire : on ne demande qu'au premier geste
+    // dessus (focus ou pointeur), une seule fois.
+    var ipDemandee = false;
+    var demanderIp = function () {
+      if (ipDemandee) return;
+      ipDemandee = true;
+      checkIp().then(function (alreadySubmitted) {
+        if (alreadySubmitted) {
+          showAlreadySubmitted();
+        }
+      });
+    };
+    reviewForm.addEventListener('focusin', demanderIp);
+    reviewForm.addEventListener('pointerdown', demanderIp);
 
     // Star rating
     var starBtns = document.querySelectorAll('#review-stars .star-btn');
