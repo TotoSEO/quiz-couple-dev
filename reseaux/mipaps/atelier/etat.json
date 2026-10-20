@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-20T03:13:36.737Z",
+  "genere_le": "2026-10-20T08:29:06.065Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,128 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 31,
+  "reserve_jours": 39,
   "a_remplir": [
-    {
-      "jour": "2026-11-20",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-20",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-20",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-21",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-21",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-21",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-22",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-22",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-22",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-23",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-23",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-23",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-24",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-24",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-24",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-25",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-25",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-25",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-26",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-26",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-26",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-27",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-27",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-27",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
     {
       "jour": "2026-11-28",
       "creneau": "matin",
@@ -1354,7 +1234,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1408,7 +1288,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2187,6 +2067,222 @@
       "erreur": null
     },
     {
+      "jour": "2026-11-20",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je peux goûter ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "c'est toi qui choisis. non, pas ça.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "même quand je dis laisse-moi, reste un peu",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "avec toi, même faire les courses, c'est bien.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "attends, je finis juste ce truc et j'arrive",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ce qu'on fait le dimanche",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "t'es la seule personne qui sait ce que je veux commander",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'as pas froid toi ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "j'aime bien quand tu fais ta tête de concentré et que tu sais pas que je te regarde.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "la meilleure partie de ma journée, c'est quand tu rentres",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'as pris mon chargeur ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
       "jour": "2026-12-24",
       "creneau": "soir",
       "gabarit": "mipaps-statique",
@@ -2247,7 +2343,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-20",
+      "jour": "2026-10-21",
       "creneau": "midi"
     }
   },
@@ -2433,6 +2529,20 @@
       "vues": 239,
       "partages": 3,
       "enregistrements": 1
+    },
+    {
+      "variante_id": "865a138e-e33f-4051-a0d1-f7a34edeb277",
+      "releve": "j7",
+      "vues": 261,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "c88889d0-b6ae-4fe1-b317-5b56921cba21",
+      "releve": "j7",
+      "vues": 301,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
