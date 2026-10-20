@@ -212,29 +212,29 @@
 
   function construitPanneau(t) {
     var bloc = document.createElement('div');
-    bloc.className = 'qc-porte';
+    bloc.className = 'qc-portail';
     bloc.setAttribute('role', 'group');
 
     // Purement decoratif : masque aux lecteurs d'ecran, qui liraient sinon un
     // emoji sans contexte.
     var macaron = document.createElement('div');
-    macaron.className = 'qc-porte-macaron';
+    macaron.className = 'qc-portail-macaron';
     macaron.setAttribute('aria-hidden', 'true');
     macaron.textContent = '🎁';
 
     // Un paragraphe et non un titre : la page a deja sa hierarchie, en glisser
     // un ici la casserait pour les lecteurs d'ecran.
     var titre = document.createElement('p');
-    titre.className = 'qc-porte-titre';
+    titre.className = 'qc-portail-titre';
     titre.textContent = t.titre;
 
     var note = document.createElement('p');
-    note.className = 'qc-porte-note';
+    note.className = 'qc-portail-note';
     note.textContent = t.note;
 
     var btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'qc-porte-btn';
+    btn.className = 'qc-portail-btn';
     btn.textContent = t.bouton;
 
     bloc.appendChild(macaron);

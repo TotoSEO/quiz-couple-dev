@@ -107,7 +107,7 @@
     testCouple: '💕', testCommonPoints: '🎯', testDistance: '🌍', testToxic: '⚠️',
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testDateNaissance: '📅', testSignesChinois: '🐉', testJalousie: '🫣', testLangageAmour: '💬',
-    testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
+    testAttachement: '🔗', testConfiance: '🤝', bilanCouple: '📋', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
     testAmeSoeur: '💫', testFinCouple: '🪢', testAmourAmitie: '🧭', testCrush: '💘', testAmourAmi: '🧡', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testAimeEncore: '💞', testEmprise: '🔒', testDistanceAime: '📞', testEx: '🕰️', testChargeMentale: '🧠', quizRencontre: '💬', testSuisJeAmoureux: '💗',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
@@ -117,8 +117,12 @@
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
   };
 
+  // La bannière de l'évaluation de couple est partials/bilan-banniere.ejs,
+  // incluse au-dessus des cartes quand la page y renvoie (_bilan) ;
+  // l'évaluation elle-même ne figure jamais parmi les cartes.
+  const _bilan = (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
-    return getLocalizedUrl(k, lang);
+    return getLocalizedUrl(k, lang) && k !== 'bilanCouple';
   }).slice(0, 4);
 
   // Famille de chaque page suggérée (FAMILLES_NAV, la liste du menu) : elle
@@ -186,7 +190,7 @@
   const _relatedArticles = (typeof relatedArticles !== 'undefined' && Array.isArray(relatedArticles)) ? relatedArticles : [];
   const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
 %>
-<% if (_relatedKeys.length > 0) { %>
+<% if (_relatedKeys.length > 0 || _bilan) { %>
 <section class="related-tests-section suite-section" aria-labelledby="suite-titre">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="bloc-entete suite-entete">
@@ -195,6 +199,8 @@
       <span class="bloc-trait" aria-hidden="true"></span>
       <p class="bloc-sous-titre"><%= _sousTitre %></p>
     </div>
+    <%- include('bilan-banniere') %>
+    <% if (_relatedKeys.length > 0) { %>
     <div class="suite-grille">
       <% _relatedKeys.forEach(function (rk, i) {
         const rUrl = getLocalizedUrl(rk, lang);
@@ -227,6 +233,7 @@
       </a>
       <% }); %>
     </div>
+    <% } %>
   </div>
 </section>
 <% } %>

@@ -641,6 +641,9 @@
           statusEl.style.color = 'hsl(142 71% 45%)';
         }
         statusEl.classList.remove('hidden');
+        // L'adresse est donnée avec l'accord e-mails : la porte des résultats
+        // (capture.js, clé qc-abonne) ne la redemandera pas sur cet appareil.
+        try { localStorage.setItem('qc-abonne', JSON.stringify({ at: Date.now(), lang: document.documentElement.lang || 'fr', via: 'ebook' })); } catch (e) { /* navigation privée */ }
         submitBtn.querySelector('span').textContent = 'VÉRIFIEZ VOS E-MAILS !';
         ebookForm.querySelector('#ebook-firstname').disabled = true;
         ebookForm.querySelector('#ebook-email').disabled = true;

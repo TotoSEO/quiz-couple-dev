@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -109,6 +109,51 @@ const FUTURE_BLOG_URLS = new Set();
   }
 }
 
+// Le bilan de couple tant qu'il n'est pas ouvert (BILAN_OUVERT, config.js) :
+// les liens écrits vers lui dans les textes sont neutralisés comme ceux d'un
+// article programmé, et ils reviennent seuls le jour où il ouvre.
+if (!BILAN_OUVERT) {
+  for (const l of LANGUAGES) {
+    const p = getLocalizedPath('bilanCouple', l);
+    if (p) FUTURE_BLOG_URLS.add(p);
+  }
+}
+
+// Le prix du rapport du bilan, lu dans le module partagé avec le serveur
+// (supabase/functions/_shared/bilan/coeur.mjs), écrit dans la langue de la
+// page : « 9,90 € », « €9.90 ».
+const BILAN_COEUR_SRC = path.join(REPO_ROOT, 'supabase', 'functions', '_shared', 'bilan', 'coeur.mjs');
+const BILAN_CONST = (() => {
+  const src = fs.existsSync(BILAN_COEUR_SRC) ? fs.readFileSync(BILAN_COEUR_SRC, 'utf-8') : '';
+  const lis = (nom, defaut) => {
+    const m = src.match(new RegExp('export const ' + nom + ' = (\\d+);'));
+    return m ? Number(m[1]) : defaut;
+  };
+  return { prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0) };
+})();
+if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
+  console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET ou sans adresse (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
+}
+// Les articles de blog renvoient vers l'évaluation (bannière de fin,
+// partials/bilan-banniere.ejs), sauf ceux qui parlent d'emprise, de
+// manipulation, de violence ou d'infidélité : on ne vend pas une évaluation
+// à deux à quelqu'un qui lit ça (même règle que BILAN_ENTREES).
+const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou/i;
+function entreeArticle(articleMeta) {
+  if (!BILAN_OUVERT || !articleMeta) return null;
+  const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
+  return ARTICLE_SANS_BILAN.test(cles) ? null : { groupe: 'article', id: 'article' };
+}
+function prixBilan(lang) {
+  try {
+    const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+    return new Intl.NumberFormat(bcp, { style: 'currency', currency: 'EUR' })
+      .format(BILAN_CONST.prix / 100).replace(/\u202f/g, '\u00a0');
+  } catch (e) {
+    return (BILAN_CONST.prix / 100).toFixed(2) + ' €';
+  }
+}
+
 function stripFutureLinks(html) {
   if (!FUTURE_BLOG_URLS.size) return html;
   return html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (m, attrs, inner) => {
@@ -135,6 +180,9 @@ function empreinteRessources() {
     path.resolve(__dirname, '../js'),
     path.resolve(__dirname, '../css'),
     ...LANGUAGES.map(l => path.resolve(__dirname, `../../${l}`)),
+    // Le calcul, le gabarit et la feuille du rapport du bilan, servis en
+    // /js/bilan-coeur.js, /js/bilan-rapport.js et /css/bilan-rapport.css.
+    path.dirname(BILAN_COEUR_SRC),
   ];
   const h = crypto.createHash('sha1');
   const parcours = (dir) => {
@@ -143,7 +191,7 @@ function empreinteRessources() {
       const p = path.join(dir, nom);
       const st = fs.statSync(p);
       if (st.isDirectory()) { parcours(p); continue; }
-      if (!/\.(js|css|json)$/.test(nom)) continue;
+      if (!/\.(m?js|css|json)$/.test(nom)) continue;
       h.update(path.relative(__dirname, p));
       h.update(fs.readFileSync(p));
     }
@@ -183,6 +231,24 @@ function cssCritiquePour(cle) {
     }
   }
   critiqueCache.set(cle, css);
+  return css;
+}
+// La feuille propre à une page (css/pages/<routeKey>.css), mise en ligne
+// dans le <head> de cette page seulement : la page du bilan de couple a son
+// propre habillage, sans rien ajouter à styles.css ni à ses feuilles
+// critiques.
+const cssPageCache = new Map();
+function cssPagePour(cle) {
+  if (!cle) return '';
+  if (cssPageCache.has(cle)) return cssPageCache.get(cle);
+  const fichier = path.resolve(__dirname, '../css/pages', `${cle}.css`);
+  let css = '';
+  if (fs.existsSync(fichier)) {
+    const r = new CleanCSS({ level: 1 }).minify(fs.readFileSync(fichier, 'utf-8'));
+    if (r.errors && r.errors.length) throw new Error(`[css] pages/${cle}.css : ${r.errors.join(' ; ')}`);
+    css = r.styles;
+  }
+  cssPageCache.set(cle, css);
   return css;
 }
 function bilanCritique() {
@@ -1001,7 +1067,8 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm'];
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
+  if (!BILAN_OUVERT) noindexRoutes.push('bilanCouple');
   const isNoindex = noindexRoutes.includes(routeKey);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -1081,6 +1148,16 @@ async function generatePage(routeKey, lang) {
     };
     title = cqMeta[lang]?.title || cqMeta.fr.title;
     description = cqMeta[lang]?.description || cqMeta.fr.description;
+  } else if (routeKey === 'cgv') {
+    const cgvMeta = {
+      fr: { title: 'Conditions générales de vente - Quiz Couple', description: 'Conditions générales de vente de l\'évaluation de couple de Quiz Couple.' },
+      en: { title: 'Terms of Sale - Quiz Couple', description: 'Terms of sale for the Quiz Couple relationship assessment.' },
+      es: { title: 'Condiciones generales de venta - Quiz Couple', description: 'Condiciones generales de venta de la evaluación de pareja de Quiz Couple.' },
+      de: { title: 'Allgemeine Geschäftsbedingungen - Quiz Couple', description: 'Allgemeine Geschäftsbedingungen für die Beziehungsanalyse von Quiz Couple.' },
+      it: { title: 'Condizioni generali di vendita - Quiz Couple', description: 'Condizioni generali di vendita della valutazione di coppia di Quiz Couple.' },
+    };
+    title = cgvMeta[lang]?.title || cgvMeta.fr.title;
+    description = cgvMeta[lang]?.description || cgvMeta.fr.description;
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
@@ -1313,6 +1390,7 @@ async function generatePage(routeKey, lang) {
     pageJouable: estPageJouable(routeKey),
     pagePublicitaire: pagePublicitaire(routeKey),
     cssCritique: cssCritiquePour(routeKey),
+    cssPage: cssPagePour(routeKey),
     genrePage: genrePageJouable(routeKey),
     pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
@@ -1326,6 +1404,20 @@ async function generatePage(routeKey, lang) {
     getLocalizedUrl,
     mascotteSvg,
     famillesNav: FAMILLES_NAV,
+    // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+    // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+    bilanOuvert: BILAN_OUVERT,
+    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    // Les pages qui renvoient vers le bilan (BILAN_ENTREES) : le groupe du
+    // texte et l'identifiant de la source.
+    bilanEntree: BILAN_OUVERT ? (BILAN_ENTREES[routeKey] || null) : null,
+    // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
+    // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
+    captureId: CAPTURE_PAGES[routeKey] || null,
+    bilanPrix: prixBilan(lang),
+    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanGarantie: BILAN_CONST.garantie,
+    vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
@@ -1478,7 +1570,8 @@ function generateSitemaps() {
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
-    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm'].includes(key)) continue;
+    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
+    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
 
     // Build URL map for available languages
     const urlsByLang = {};
@@ -1602,7 +1695,9 @@ function copyStaticAssets() {
   // photos de destinations du test « où partir en vacances ? ».
   // « produits » porte les visuels Amazon des encarts de resultat, copies chez
   // nous plutot qu'appeles sur le CDN d'Amazon.
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits']) {
+  // « fonts » porte les polices du rapport du bilan (Fraunces et Inter, OFL),
+  // « bilan » les aperçus du rapport montrés sur sa page.
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -1725,6 +1820,13 @@ function copyTranslationData() {
       fs.copyFileSync(pureteSrc, path.join(dataDir, `purete-${lang}.json`));
     }
 
+    // Les questions du bilan de couple et leurs guides (près de 100 Ko) ne
+    // se chargent que quand quelqu'un ouvre l'application du bilan.
+    const bilanSrc = path.join(langDir, 'bilan-questions.json');
+    if (fs.existsSync(bilanSrc)) {
+      fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(JSON.parse(fs.readFileSync(bilanSrc, 'utf-8'))), 'utf-8');
+    }
+
     // Les 200 destinations du test « où partir en vacances ? » ne se
     // chargent que quand quelqu'un lance le questionnaire.
     const vacancesSrc = path.join(langDir, 'vacances.json');
@@ -1769,6 +1871,14 @@ function copyCss() {
         }
       }
     }
+  }
+  // La feuille du rapport du bilan, écrite une seule fois pour l'écran et
+  // pour le PDF (supabase/functions/_shared/bilan/rapport.css).
+  const rapportCss = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport.css');
+  if (fs.existsSync(rapportCss)) {
+    const r = new CleanCSS({ level: 1 }).minify(fs.readFileSync(rapportCss, 'utf-8'));
+    if (r.errors && r.errors.length) throw new Error('[bilan] rapport.css : ' + r.errors.join(' ; '));
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport.css'), r.styles, 'utf-8');
   }
   console.log('[css] CSS files minified to dist/css/');
 }
@@ -1837,6 +1947,34 @@ async function copyJs() {
     console.log('[js] mascottes.js copie depuis reseaux/charte');
   } else {
     console.warn('[js] reseaux/charte/mascottes.js introuvable : pages sans mascottes');
+  }
+
+  // Le calcul du bilan de couple, écrit une seule fois en module pour la
+  // fonction serveur (supabase/functions/_shared/bilan/coeur.mjs) et servi
+  // ici en script classique : les `export` retirés, le tout dans une
+  // fonction, et ce qui était exporté rangé sous window.QCBilanCoeur.
+  if (fs.existsSync(BILAN_COEUR_SRC)) {
+    const src = fs.readFileSync(BILAN_COEUR_SRC, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src.replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] coeur.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-coeur.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanCoeur = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-coeur.js construit (${noms.length} noms exportés)`);
+  }
+  // Le gabarit du rapport, de la même façon : il prend le calcul sur
+  // window.QCBilanCoeur au lieu de l'importer.
+  const rapportSrc = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport.mjs');
+  if (fs.existsSync(rapportSrc)) {
+    const src = fs.readFileSync(rapportSrc, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src
+      .replace(/^import \* as C from '\.\/coeur\.mjs';$/m, 'var C = window.QCBilanCoeur;')
+      .replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] rapport.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapport = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-rapport.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
@@ -2117,6 +2255,15 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+    // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+    bilanOuvert: BILAN_OUVERT,
+    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanEntree: entreeArticle(articleMeta),
+    bilanPrix: prixBilan(lang),
+    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanGarantie: BILAN_CONST.garantie,
+    vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
@@ -2210,6 +2357,14 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+      // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+      bilanOuvert: BILAN_OUVERT,
+      bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+      bilanPrix: prixBilan(lang),
+      bilanPrixCentimes: BILAN_CONST.prix,
+      bilanGarantie: BILAN_CONST.garantie,
+      vendeur: VENDEUR,
       saisonDesQuiz: SAISON_DES_QUIZ,
     saisonDesQuiz: SAISON_DES_QUIZ,
       instagramUrl: INSTAGRAM_URL,

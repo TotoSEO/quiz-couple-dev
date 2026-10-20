@@ -487,5 +487,11 @@
     "shortTitle": "Which supervillain duo are you",
     "metaDescription": "As a couple: the Halloween night heist in 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
     "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
+  },
+  "bilanCouple": {
+    "title": "Relationship Assessment: The Complete Picture of Your Relationship",
+    "shortTitle": "Relationship assessment",
+    "description": "About a hundred specific questions, together or on your own, and a 40-page report that puts the answers side by side, area by area.",
+    "metaDescription": "About a hundred specific questions across twelve areas of life together, as a couple or on your own, and a 40-page PDF report with charts. €9.90 for both of you."
   }
 }

@@ -1,0 +1,15 @@
+{
+  "name": "quiz-couple-bilan",
+  "private": true,
+  "description": "La fabrique du rapport PDF du bilan de couple (workflow bilan-rapport.yml)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "exemples": "node exemples.mjs"
+  },
+  "dependencies": {
+    "hyphen": "1.14.1",
+    "pdfjs-dist": "6.3.289",
+    "playwright-core": "1.56.1"
+  }
+}

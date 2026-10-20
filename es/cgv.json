@@ -1,0 +1,99 @@
+{
+  "title": "Condiciones generales de venta",
+  "majLe": "Última actualización: 20 de octubre de 2026",
+  "intro": "Estas condiciones se aplican a la compra del informe completo del {{bilan}} en quiz-couple.com. Todo lo demás en el sitio es gratis y no está sujeto a ninguna venta.",
+  "liens": {
+    "contact": "página de contacto",
+    "confidentialite": "política de privacidad",
+    "bilan": "evaluación de pareja"
+  },
+  "vendeur": {
+    "titre": "El vendedor",
+    "nom": "Nombre:",
+    "statut": "Estatus:",
+    "siret": "SIRET (número de empresa francés):",
+    "adresse": "Dirección:",
+    "email": "Correo electrónico:",
+    "tva": "IVA:",
+    "tvaValeur": "IVA no aplicable, artículo 293 B del Código General de Impuestos francés",
+    "telephone": "Teléfono:"
+  },
+  "sections": [
+    {
+      "titre": "1. Lo que se vende",
+      "p": [
+        "La evaluación de pareja es un cuestionario que dos miembros de una pareja responden cada uno por su lado, o que una sola persona responde indicando también lo que cree que respondería su pareja (modo a solas). Responder a las preguntas es gratis; no se da ningún resultado sin compra.",
+        "Lo que se vende es el informe: una evaluación completa de la pareja a partir de las dos series de respuestas (alineación, clima, mapa de las áreas, diferencias con las dos respuestas, guías para hablarlas, puntos de bloqueo e innegociables, señales de alerta, reparto de los papeles). El informe es un contenido digital: un documento PDF enviado por correo electrónico, y la misma versión disponible en la página de la evaluación.",
+        "La evaluación está reservada a personas mayores de edad. El informe es un archivo PDF corriente, que se abre con cualquier lector de PDF, en el móvil o en el ordenador; la misma versión se puede leer en la página de la evaluación. Las condiciones que se aplican a una compra son las que están en línea en el momento del pago."
+      ]
+    },
+    {
+      "titre": "2. El precio",
+      "p": [
+        "El informe completo cuesta {{prix}}, IVA no aplicable. Es un pago único, sin suscripción. Un solo pago, hecho por cualquiera de los dos, desbloquea el informe para ambos. En el modo a solas, el informe solo se entrega a la persona que ha respondido.",
+        "El precio se muestra en la página de la evaluación antes de la primera pregunta, y otra vez antes del pago."
+      ]
+    },
+    {
+      "titre": "3. El pedido y el pago",
+      "p": [
+        "El pago se propone a cada miembro de la pareja en cuanto termina sus propias respuestas. Antes de pagar, el comprador puede indicar la dirección de e-mail donde recibir el informe, y marca una casilla con la que pide expresamente que el informe se le entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento, y reconoce que pierde su derecho de desistimiento una vez entregado el informe (ver el artículo 5). El e-mail que entrega el informe recoge esta petición y este reconocimiento.",
+        "El pago se hace en la página segura de nuestro proveedor Stripe, con tarjeta bancaria, Apple Pay o Google Pay. Nunca tenemos acceso a los datos de la tarjeta. Stripe envía un recibo a la dirección de correo indicada en el pago: es la confirmación del pedido. Se puede pedir una factura desde la {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. La entrega del informe",
+      "p": [
+        "El informe se elabora en cuanto se confirma el pago y los dos miembros de la pareja han terminado de responder (o, en el modo a solas, la persona ha terminado). Sale entonces en PDF a las direcciones de correo indicadas, y se muestra en la página de la evaluación para los dos, desde sus enlaces personales, con un botón para descargar el PDF. Sigue disponible seis meses después del pago; después, la evaluación se borra.",
+        "Si la pareja no termina sus respuestas, el informe no se puede elaborar: el comprador puede pedir entonces el reembolso en cualquier momento desde la {{contact}}.",
+        "Cualquiera de los dos puede borrar la evaluación antes de ese plazo. El borrado es inmediato y definitivo, para los dos, y no da derecho a ningún reembolso."
+      ]
+    },
+    {
+      "titre": "5. El derecho de desistimiento",
+      "p": [
+        "El informe es un contenido digital suministrado sin soporte material. Para este tipo de contenido, el artículo L221-28 13° del Código de consumo francés (que aplica el artículo 16, letra m, de la Directiva 2011/83/UE) prevé que el derecho de desistimiento de catorce días ya no puede ejercerse una vez que la ejecución ha comenzado con el consentimiento expreso del consumidor y después de que haya reconocido que pierde así ese derecho. Eso es lo que el comprador acepta al marcar la casilla antes de pagar.",
+        "El informe se entrega en el momento en que se envía por e-mail o se pone a disposición en la página de la evaluación, lo que ocurra primero. A partir de ese instante, el derecho de desistimiento ha terminado: la compra es definitiva y ya no puede reembolsarse por ese motivo.",
+        "Mientras el informe no se haya entregado, por ejemplo porque la otra persona no ha terminado de responder, el comprador puede desistir sin dar motivos, en los catorce días siguientes al pago, escribiéndonos desde la {{contact}}. Se le reembolsa entonces íntegramente, en el medio de pago utilizado, en un plazo de catorce días."
+      ]
+    },
+    {
+      "titre": "6. Después de la entrega del informe",
+      "p": [
+        "Una vez entregado el informe, no se debe ningún reembolso. El informe se construye a partir de las respuestas dadas: un resultado que no gusta, que sorprende o que no coincide con la idea que uno tenía de su relación no es un defecto del informe, y no da derecho ni a reembolso ni a indemnización.",
+        "El informe está cubierto por la garantía legal de conformidad de los contenidos digitales (artículos L224-25-12 y siguientes del Código de consumo francés). Si el archivo no se abre, si el informe está incompleto o si no corresponde a lo que describe el artículo 1, escríbenos desde la {{contact}}: lo corregimos o lo volvemos a generar sin coste y, si no es posible, te reembolsamos."
+      ]
+    },
+    {
+      "titre": "7. Lo que es la evaluación, y lo que no es",
+      "p": [
+        "La evaluación de pareja es una herramienta de información y de conversación. Pone frente a frente las respuestas de los dos, o, en modo individual, tus respuestas y lo que piensas que serían las suyas, y te propone temas de los que hablar. No interviene ningún profesional: no es un diagnóstico, ni una terapia, ni un consejo médico, psicológico, jurídico o financiero, y ningún resultado tiene valor de verdad sobre vuestra relación ni sobre lo que será de ella.",
+        "Las decisiones que tomas en tu vida a partir del informe, ya sea seguir juntos, separaros, casaros, tener un hijo, mudaros, cuestiones de dinero o cualquier otra elección, son tuyas y de tu exclusiva responsabilidad. No garantizamos ningún resultado y no respondemos de esas decisiones ni de sus consecuencias. Si atraviesas un momento difícil, un consejero o terapeuta de pareja puede acompañarte; si tienes miedo de tu pareja, llama al 016 (en España) o al número de ayuda de tu país.",
+        "Hacemos lo posible para que el servicio esté disponible de forma continua, sin poder excluir una interrupción temporal (mantenimiento, avería de un proveedor). Si un informe pagado sigue inaccesible por nuestra culpa, lo entregamos de nuevo o lo reembolsamos. Nuestra responsabilidad solo puede exigirse en las condiciones previstas por la ley."
+      ]
+    },
+    {
+      "titre": "8. Los datos personales",
+      "p": [
+        "Las respuestas de la evaluación, que pueden tocar la vida íntima y las convicciones, solo se guardan con el consentimiento explícito de cada miembro de la pareja y solo sirven para la evaluación. La dirección de correo indicada para recibir el informe solo sirve para ese envío. El plazo de conservación, vuestros derechos y la lista de proveedores se detallan en nuestra {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Reclamaciones y mediación",
+      "mediation": true,
+      "p": [
+        "Para cualquier reclamación, escríbenos primero desde la {{contact}} o a la dirección {{email}}: respondemos en unos días.",
+        "Si el desacuerdo continúa, puedes recurrir gratis al mediador de consumo del que dependemos: {{mediateur}}, en el plazo de un año desde tu reclamación por escrito."
+      ],
+      "pSans": [
+        "Para cualquier reclamación, escríbenos primero desde la {{contact}} o a la dirección {{email}}: respondemos en unos días."
+      ]
+    },
+    {
+      "titre": "10. La ley aplicable",
+      "p": [
+        "Estas condiciones se rigen por el derecho francés. En caso de litigio, y a falta de acuerdo amistoso, los tribunales competentes son los que designa la ley; un consumidor también puede acudir al tribunal del lugar donde residía en el momento del pago. Si resides en otro país de la Unión Europea, conservas la protección de las normas imperativas de tu país de residencia."
+      ]
+    }
+  ]
+}

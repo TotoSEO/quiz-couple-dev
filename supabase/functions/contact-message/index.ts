@@ -105,6 +105,14 @@ serve(async (req) => {
     });
 
     if (dbError) {
+      // Le déclencheur messages_frein (migration 20261020150000) refuse le
+      // sixième message d'une même adresse en une heure, et le centième du
+      // jour, avec le code PT429 : un 429 pour la page, pas une panne.
+      if ((dbError as { code?: string }).code === 'PT429') {
+        return new Response(JSON.stringify({ error: 'Too many requests. Please try again later.' }), {
+          status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
       console.error('DB insert error:', dbError);
       return new Response(JSON.stringify({ error: 'Failed to save message' }), {
         status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },

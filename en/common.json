@@ -112,7 +112,11 @@
     "quizMortFilmHorreur": "Who dies first (horror movie)",
     "quizPossession": "Who could get possessed",
     "quizSuperVilain": "Which supervillain are you",
-    "quizDuoVilains": "Which supervillain duo"
+    "quizDuoVilains": "Which supervillain duo",
+    "bilanCouple": "Relationship assessment",
+    "evaluer": "Assess your relationship",
+    "evaluerSous": "The complete assessment, together or on your own",
+    "bilanCoupleDesc": "100 questions each on your own, and a 30-page report"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",
@@ -130,7 +134,8 @@
     "sourcePrefAide": "A Google setting: the sites you add appear higher in your results and in AI answers. It is tied to your Google account and can be removed at any time.",
     "sourcePrefAideAria": "What is a preferred source?",
     "cookiePrefs": "Manage cookies",
-    "instagram": "Follow us on Instagram"
+    "instagram": "Follow us on Instagram",
+    "cgv": "Terms of sale"
   },
   "buttons": {
     "start": "Start",
@@ -176,6 +181,23 @@
     "optional": "optional",
     "commentPlaceholder": "Share your experience...",
     "stars": "stars"
+  },
+  "capture": {
+    "sur": "Your full results",
+    "titre": "To unlock the rest of your results, enter your email",
+    "texte": "The details of your result, the advice and what comes next appear right after.",
+    "placeholder": "your@email.com",
+    "consentement": "I agree to receive Quiz Couple's tips and offers by email. Unsubscribe in one click, any time.",
+    "confidentialite": "Privacy",
+    "bouton": "See my results",
+    "envoi": "One moment...",
+    "suggestion": "Did you mean {{domaine}}?",
+    "erreurs": {
+      "format": "This email address doesn't look complete.",
+      "domaine": "This address can't receive emails. Check the domain.",
+      "jetable": "Disposable addresses aren't accepted.",
+      "consentement": "Tick the box to continue."
+    }
   },
   "blog": {
     "pageTitle": "Blog - Tips & Advice for Couples | Quiz Couple",
