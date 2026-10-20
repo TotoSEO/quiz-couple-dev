@@ -567,11 +567,11 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "¿Queréis la misma vida, los dos?",
-    "sousTitre": "Una evaluación completa de vuestra relación, construida sobre la investigación en psicología de pareja: 100 preguntas concretas sobre doce áreas de la vida en pareja, y un informe que os dice, tema por tema, dónde coincidís y de qué hay que hablar. En pareja, cada uno por su lado, o a solas si el otro no está listo para hablarlo.",
+    "sousTitre": "100 preguntas sobre doce áreas de la vida en pareja, y un informe de 40 páginas que os dice, tema por tema, dónde coincidís y de qué hay que hablar.",
     "points": [
       "Cada uno responde en su teléfono, sin ver las respuestas del otro",
-      "Preguntas construidas a partir de la investigación en psicología de pareja",
-      "Un informe de 40 páginas, con gráficos y pistas para hablarlo"
+      "Construida sobre la investigación en psicología de pareja",
+      "En pareja, o a solas si el otro no está listo para hablarlo"
     ],
     "cta": "Empezar la evaluación",
     "ctaDuo": "Hacer la evaluación en pareja",

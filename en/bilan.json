@@ -567,11 +567,11 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Do you both want the same life?",
-    "sousTitre": "A complete assessment of your relationship, built on research in couple psychology: 100 specific questions across twelve areas of life together, and a report that tells you, topic by topic, where you meet and what you need to talk about. Together, each on your own side, or on your own if the other isn't ready to talk about it.",
+    "sousTitre": "100 questions across twelve areas of life together, and a 40-page report that tells you, topic by topic, where you meet and what you need to talk about.",
     "points": [
       "You each answer on your own phone, without seeing the other's answers",
-      "Questions built from research in couple psychology",
-      "A 40-page report, with charts and ways to talk things through"
+      "Built on research in couple psychology",
+      "Together, or on your own if the other isn't ready to talk about it"
     ],
     "cta": "Start the assessment",
     "ctaDuo": "Take the assessment together",
