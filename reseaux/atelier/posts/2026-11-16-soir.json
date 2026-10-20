@@ -2,317 +2,61 @@
   "jour": "2026-11-16",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-055",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-036",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "idee": "« Pas de cadeaux cette année » : les deux se le sont dit, et les deux sortent un cadeau de derrière leur dos en même temps. Aucune bulle.",
-        "titre": "POV: \"no gifts this year\"",
-        "plans": [
+        "etiquette": "Vacation edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "description": "Un mur crème et un sol beige, le soir, titre « POV: « no gifts this year » ». Dès la première image la rose est à gauche et le violet à droite, face à face, les mains dans le dos, un grand sourire innocent, les joues roses. Le violet siffle, des petites notes de musique montent au-dessus de lui ; la rose le regarde de haut en bas, un sourcil haut, puis hoche la tête à 2 s. La caméra se rapproche doucement.",
-            "duree": 3.8,
-            "decor": "mur",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "plate",
-                    "sourcils": "hauts"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.8,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 3.8,
-                    "effet": "notes"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.8,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1150
-              }
-            ]
+            "a": "Two weeks at the beach",
+            "b": "Two weeks in a city"
           },
           {
-            "description": "Même mur. À 0,8 s les deux sortent d'un coup une boîte cadeau de derrière leur dos et la tendent vers l'autre, en même temps. Un « ! » apparaît au-dessus de chaque tête, les yeux s'ouvrent grand, les bouches en o, une goutte de gêne chez le violet. Zoom rapide sur la rose à 0,3 s puis sur le violet à 2,4 s.",
-            "duree": 4.0,
-            "decor": "mur",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.0,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 0.8,
-                    "a": 2.6,
-                    "objet": "cadeau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.8,
-                    "a": 4.0,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 4.0,
-                    "effet": "exclamation"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.0,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 0.8,
-                    "a": 2.6,
-                    "objet": "cadeau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.8,
-                    "a": 4.0,
-                    "yeux": "ouverts",
-                    "bouche": "o",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 4.0,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.0,
-                    "a": 4.0,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.45,
-                "x": 420,
-                "y": 1100
-              },
-              {
-                "a": 2.4,
-                "zoom": 1.45,
-                "x": 660,
-                "y": 1100
-              }
-            ]
+            "a": "Plan every day",
+            "b": "No plan at all"
           },
           {
-            "description": "Même mur. Les deux éclatent de rire en tenant chacun son cadeau, le corps secoué, les yeux fermés ; puis ils échangent les boîtes et se sourient, la bouche de chat, des petits cœurs qui montent. La caméra recule lentement.",
-            "duree": 4.2,
-            "decor": "mur",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.2,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 2.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.4,
-                    "yeux": "fermes",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.6,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.2,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 2.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.4,
-                    "yeux": "fermes",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.8,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1100
-              },
-              {
-                "a": 4.2,
-                "zoom": 1,
-                "x": 540,
-                "y": 1050
-              }
-            ]
+            "a": "Hotel breakfast",
+            "b": "Bakery on the corner"
+          },
+          {
+            "a": "One suitcase for two",
+            "b": "One each"
+          },
+          {
+            "a": "Museums and cafes",
+            "b": "Hikes and views"
+          },
+          {
+            "a": "Buy a souvenir",
+            "b": "Take a thousand photos"
           }
         ],
-        "son": {
-          "ambiance": "drole"
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Send this to your partner",
+      "legende": "Vacation edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

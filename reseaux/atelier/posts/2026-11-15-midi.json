@@ -2,154 +2,61 @@
   "jour": "2026-11-15",
   "creneau": "midi",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "statique",
-  "sujet": "sta-013",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-035",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "idee": "Reel statique : les deux arrivent chacun de leur bord, se serrent dans les bras, des cœurs, une phrase tendre s'écrit.",
-        "plans": [
+        "etiquette": "First date, again",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "description": "Un mur crème et un sol beige. Dès la première image la rose entre par le bord gauche et le violet par le bord droit en marchant l'un vers l'autre, les joues roses, un petit sourire. Ils se rejoignent au milieu à 2,3 s et se serrent dans les bras, les yeux fermés de bonheur, des cœurs montent. « with you, i'm home » s'écrit mot à mot en haut à partir de 3 s. À 6,5 s la rose fait sa petite bouche de chat ; à 7 s le violet rouvre des yeux heureux. La caméra se rapproche lentement.",
-            "duree": 11,
-            "decor": "mur",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": 40,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 2.3,
-                    "vers": 440
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.4,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "calin",
-                    "de": 2.3,
-                    "a": 11,
-                    "avec": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.5,
-                    "a": 6.5,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 6.5,
-                    "a": 11,
-                    "yeux": "fermes",
-                    "bouche": "chat",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.0,
-                    "a": 11,
-                    "effet": "coeurs"
-                  }
-                ],
-                "premier": true
-              },
-              {
-                "qui": "violet",
-                "a": 1040,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 2.3,
-                    "vers": 650
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.4,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "calin",
-                    "de": 2.3,
-                    "a": 11,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.5,
-                    "a": 7.0,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 7.0,
-                    "a": 11,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "de": 3.0,
-                "texte": "with you, i'm home",
-                "motAMot": true,
-                "place": "haut",
-                "style": "plume"
-              }
-            ],
-            "camera": [
-              {
-                "a": 2.3,
-                "zoom": 1
-              },
-              {
-                "a": 6,
-                "zoom": 1.1,
-                "x": 540,
-                "y": 1200
-              },
-              {
-                "a": 11,
-                "zoom": 1.22,
-                "x": 540,
-                "y": 1200
-              }
-            ]
+            "a": "Same place as before",
+            "b": "Somewhere new"
+          },
+          {
+            "a": "They plan everything",
+            "b": "You plan everything"
+          },
+          {
+            "a": "Dress up",
+            "b": "Hoodies and sneakers"
+          },
+          {
+            "a": "Dinner first",
+            "b": "Dessert first"
+          },
+          {
+            "a": "Talk for hours",
+            "b": "Do an activity"
+          },
+          {
+            "a": "Walk home together",
+            "b": "Take a cab home"
           }
         ],
-        "son": {
-          "ambiance": "tendre"
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Tag your partner",
+      "legende": "First date, again. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
-        "#couplegoals",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

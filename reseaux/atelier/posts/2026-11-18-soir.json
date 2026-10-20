@@ -2,297 +2,61 @@
   "jour": "2026-11-18",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-060",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-037",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "idee": "Un pique-nique sans raison : le violet sort un gâteau sur le banc, la rose est surprise, croque, rit, ils partagent. Aucune bulle.",
-        "titre": "POV: a picnic for no reason",
-        "plans": [
+        "etiquette": "Kitchen edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "description": "Le parc en plein jour, ciel bleu, un arbre et un banc, titre « POV: a picnic for no reason ». Dès la première image la rose est assise sur le banc à gauche, détendue, et regarde droit devant elle. Le violet, assis à droite, lui tend un gâteau avec un grand sourire, les joues roses, et la regarde. À 1,4 s la rose tourne la tête, voit le gâteau, un « ! » apparaît au-dessus d'elle. La caméra se rapproche doucement.",
-            "duree": 3.8,
-            "decor": "dehors",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "banc-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.4,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.4,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "ouverts",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.4,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.4,
-                    "a": 3.8,
-                    "effet": "exclamation"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "banc-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 0,
-                    "a": 2.4,
-                    "objet": "gateau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.8,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1200
-              }
-            ]
+            "a": "Cook together, big mess",
+            "b": "One cooks, one cleans"
           },
           {
-            "description": "Même banc. La rose prend le gâteau, les yeux brillants, la bouche en grand sourire, et croque une grosse bouchée, les yeux fermés de bonheur. Le violet la regarde faire, fier de lui, la tête un peu penchée, et des petits cœurs montent au-dessus de lui. Zoom rapide sur la rose à 0,3 s.",
-            "duree": 3.8,
-            "decor": "dehors",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "banc-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 0.8,
-                    "cible": "bas"
-                  },
-                  {
-                    "geste": "mange",
-                    "de": 0.8,
-                    "a": 3.8,
-                    "objet": "gateau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.8,
-                    "yeux": "brillants",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.8,
-                    "a": 3.8,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "banc-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 3.8,
-                    "effet": "coeurs"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.5,
-                "x": 440,
-                "y": 1150
-              }
-            ]
+            "a": "Follow the recipe",
+            "b": "Improvise"
           },
           {
-            "description": "Même banc. La rose, les joues pleines, rit, le corps secoué, puis tend un morceau de gâteau au violet qui rit à son tour en l'acceptant. Des étincelles scintillent autour des deux. La caméra recule lentement pour montrer tout le parc.",
-            "duree": 4.4,
-            "decor": "dehors",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "banc-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.4,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 2.2
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 2.2,
-                    "a": 4.4,
-                    "objet": "gateau"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.2,
-                    "yeux": "fermes",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 4.4,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "banc-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.4,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 1.0,
-                    "a": 3.0
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.0,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.0,
-                    "a": 3.0,
-                    "yeux": "fermes",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 3.0,
-                    "a": 4.4,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.4,
-                    "a": 4.4,
-                    "effet": "etincelles"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1150
-              },
-              {
-                "a": 4.4,
-                "zoom": 1,
-                "x": 540,
-                "y": 1050
-              }
-            ]
+            "a": "Taste everything first",
+            "b": "Wait for the plate"
+          },
+          {
+            "a": "Fancy dinner at home",
+            "b": "Pizza on the floor"
+          },
+          {
+            "a": "Bake a cake",
+            "b": "Make fresh pasta"
+          },
+          {
+            "a": "Music while cooking",
+            "b": "Chat while cooking"
           }
         ],
-        "son": {
-          "ambiance": "tendre"
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Send this to your partner",
+      "legende": "Kitchen edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }
