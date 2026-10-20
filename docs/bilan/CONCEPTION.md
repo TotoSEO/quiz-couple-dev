@@ -259,7 +259,10 @@ pas se retourner contre moi »). Ce qui est en place :
 - **Le reste** : majeurs seulement (case à la création et CGV), prix TTC
   avec « TVA non applicable, art. 293 B du CGI » (page, Stripe, CGV, e-mail),
   conditions datées (la version en ligne au paiement s'applique), vendeur
-  identifié (Visibilitea, SIRET, adresse) sur les trois pages légales, droits
+  identifié (Visibilitea, SIRET, adresse) sur les trois pages légales et en
+  dernière page du PDF du rapport (le pied des e-mails ne porte que le nom et
+  le site depuis le 20 octobre 2026, à la demande de Thomas : la confirmation
+  de L221-13 reste complète par la pièce jointe), droits
   RGPD complets dans la confidentialité (limitation, retrait, réclamation à
   la CNIL), consentement explicite pour les données sensibles (article 9),
   traces : `a_consent` / `b_consent`, `renonciation_le`, `envois`.

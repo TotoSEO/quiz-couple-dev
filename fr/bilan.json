@@ -578,6 +578,7 @@
     "ctaSolo": "La faire seul(e)",
     "ctaNote": "Questions gratuites · {{prix}} pour le rapport, à la fin · Paiement unique, sans abonnement",
     "voirExtrait": "Voir le rapport page par page",
+    "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
       "sur": "Rapport d'exemple · couple fictif",
       "noms": "Camille & Julien",

@@ -115,6 +115,22 @@
     '<path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/>',
     '<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
   ];
+  // Les moyens de paiement sous le prix du hero (20 octobre 2026, Thomas :
+  // « le pictogramme carte, apple pay, amazon pay, ça peut rassurer ») : six
+  // vignettes de 46 x 30 dessinées en SVG, fond blanc posé par le CSS pour que
+  // les marques gardent leurs couleurs en thème sombre ; la liste affichée est
+  // MOYENS_PAIEMENT (config.js), passée en `moyensPaiement`.
+  const svgPaiement = (corps) => '<svg viewBox="0 0 46 30" aria-hidden="true" focusable="false">' + corps + '</svg>';
+  const policeMarque = "font-family=\"Arial, Helvetica, sans-serif\"";
+  const PICTOS_PAIEMENT = {
+    visa: { nom: 'Visa', svg: svgPaiement('<text x="23" y="19.6" text-anchor="middle" ' + policeMarque + ' font-weight="800" font-style="italic" font-size="13" letter-spacing=".4" fill="#1a1f71">VISA</text>') },
+    mastercard: { nom: 'Mastercard', svg: svgPaiement('<circle cx="18" cy="15" r="8.5" fill="#eb001b"/><circle cx="28" cy="15" r="8.5" fill="#f79e1b"/><path d="M23 8.13A8.5 8.5 0 0 1 23 21.87A8.5 8.5 0 0 1 23 8.13Z" fill="#ff5f00"/>') },
+    cb: { nom: 'Carte bancaire (CB)', svg: svgPaiement('<defs><linearGradient id="blp-cb-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2cb34a"/><stop offset="1" stop-color="#1b5eab"/></linearGradient></defs><rect x="9" y="5" width="28" height="20" rx="3" fill="url(#blp-cb-grad)"/><text x="23" y="19.4" text-anchor="middle" ' + policeMarque + ' font-weight="700" font-size="11.5" fill="#fff">CB</text>') },
+    applepay: { nom: 'Apple Pay', svg: svgPaiement('<g transform="translate(8.5 7.3) scale(.6)"><path fill="#000" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></g><text x="24" y="19.8" font-family="-apple-system, \'Helvetica Neue\', Arial, sans-serif" font-weight="600" font-size="12.5" letter-spacing="-.2" fill="#000">Pay</text>') },
+    googlepay: { nom: 'Google Pay', svg: svgPaiement('<g transform="translate(6.6 6.6) scale(.7)"><path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></g><text x="25.2" y="19.8" ' + policeMarque + ' font-weight="600" font-size="12.5" letter-spacing="-.2" fill="#3c4043">Pay</text>') },
+    amazonpay: { nom: 'Amazon Pay', svg: svgPaiement('<text x="23" y="13.2" text-anchor="middle" ' + policeMarque + ' font-weight="700" font-size="9.4" letter-spacing="-.3" fill="#232f3e">amazon</text><path d="M13.5 16.3c5.3 3.9 14 3.9 19.6-.3" fill="none" stroke="#f90" stroke-width="1.6" stroke-linecap="round"/><path d="M30.7 15.1l2.6.9-1 2.5" fill="none" stroke="#f90" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><text x="23" y="26.2" text-anchor="middle" ' + policeMarque + ' font-weight="600" font-size="8.6" fill="#232f3e">pay</text>') },
+  };
+  const moyens = (typeof moyensPaiement !== 'undefined' && Array.isArray(moyensPaiement) ? moyensPaiement : []).filter((m) => PICTOS_PAIEMENT[m]);
   const iconesPour = [ICONES_DOM.logement, ICONES_DOM.disputes, '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/>', ICONES_DOM.intimite];
   const fleche = '<svg class="blp-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
   const coche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
@@ -189,6 +205,14 @@
           <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
         </div>
         <p class="blp-cta-note"><%- x('ctaNote') %> · <a class="blp-lien" href="#rapport"><%- x('voirExtrait') %></a></p>
+        <% if (moyens.length) { %>
+        <div class="blp-paiements">
+          <span class="blp-paiements-lib"><%- icone(iconesConfiance[3]) %><%- x('paiements') %></span>
+          <ul class="blp-paiements-liste" role="list">
+            <% for (const m of moyens) { %><li class="blp-paiement" title="<%= PICTOS_PAIEMENT[m].nom %>"><%- PICTOS_PAIEMENT[m].svg %><span class="sr-only"><%= PICTOS_PAIEMENT[m].nom %></span></li><% } %>
+          </ul>
+        </div>
+        <% } %>
         <div id="bilan-reprise" class="blp-reprise" hidden></div>
         <noscript><p class="blp-cta-note"><%= lang === 'fr' ? "L'évaluation a besoin de JavaScript pour fonctionner." : 'The assessment needs JavaScript to work.' %></p></noscript>
       </div>

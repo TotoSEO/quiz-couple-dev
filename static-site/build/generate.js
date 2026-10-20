@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -1448,6 +1448,7 @@ async function generatePage(routeKey, lang) {
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
     bilanPrix: prixBilan(lang),
+    moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: BILAN_CONST.prix,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
@@ -2294,6 +2295,7 @@ async function generateBlogArticle(articleMeta, lang) {
     bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
     bilanEntree: entreeArticle(articleMeta),
     bilanPrix: prixBilan(lang),
+    moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: BILAN_CONST.prix,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
@@ -2395,6 +2397,7 @@ async function generate404Pages() {
       bilanOuvert: BILAN_OUVERT,
       bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
       bilanPrix: prixBilan(lang),
+      moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: BILAN_CONST.prix,
       bilanGarantie: BILAN_CONST.garantie,
       vendeur: VENDEUR,

@@ -124,8 +124,9 @@
   .blp-hero-texte .blp-lead { order: 3; }
   .blp-hero-texte .blp-ctas { order: 4; }
   .blp-hero-texte .blp-cta-note { order: 5; }
-  .blp-hero-texte .blp-reprise { order: 6; }
-  .blp-hero-texte .blp-coches { order: 7; margin: 1.75rem 0 0; }
+  .blp-hero-texte .blp-paiements { order: 6; }
+  .blp-hero-texte .blp-reprise { order: 7; }
+  .blp-hero-texte .blp-coches { order: 8; margin: 1.75rem 0 0; }
 }
 .blp-ariane { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .82rem; color: hsl(var(--muted-foreground)); margin: 0 0 1.5rem; }
 .blp-ariane a { color: inherit; text-decoration: none; }
@@ -139,6 +140,18 @@
 .blp-hero .blp-coches li { color: hsl(var(--foreground)); }
 .blp-cta-note { font-size: .86rem; line-height: 1.6; margin: 1rem 0 0; opacity: .78; }
 .blp-hero .blp-cta-note { color: hsl(var(--muted-foreground)); opacity: 1; }
+/* Les moyens de paiement sous le prix du hero (20 octobre 2026) : le cadenas et
+   « Paiement sécurisé par Stripe », puis six vignettes blanches de 46 x 30 px
+   dessinées dans le gabarit ; le fond reste blanc en thème sombre pour que les
+   marques gardent leurs couleurs. Sur téléphone, le libellé prend sa ligne et
+   les six vignettes tiennent sur la suivante dès 320 px. */
+.blp-paiements { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem; margin: .85rem 0 0; }
+.blp-paiements-lib { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.blp-paiements-lib svg { width: .95rem; height: .95rem; flex: none; }
+.blp-paiements-liste { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+.blp-paiement { display: block; width: 2.875rem; height: 1.875rem; border-radius: .4rem; background: #fff; border: 1px solid hsl(var(--border)); overflow: hidden; }
+.dark .blp-paiement { border-color: hsl(0 0% 100% / .22); }
+.blp-paiement svg { display: block; width: 100%; height: 100%; }
 .blp-reprise {
   margin-top: 1.75rem; padding: 1rem 1.15rem; border-radius: 1.1rem;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem;

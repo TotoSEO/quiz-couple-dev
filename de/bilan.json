@@ -578,6 +578,7 @@
     "ctaSolo": "Sie allein machen",
     "ctaNote": "Kostenlose Fragen · {{prix}} für den Bericht, am Ende · Einmalige Zahlung, kein Abo",
     "voirExtrait": "Den Bericht Seite für Seite ansehen",
+    "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
       "sur": "Beispielbericht · fiktives Paar",
       "noms": "Hannah & Lukas",
