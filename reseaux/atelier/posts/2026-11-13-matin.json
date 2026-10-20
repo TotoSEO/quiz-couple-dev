@@ -2,278 +2,78 @@
   "jour": "2026-11-13",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-052",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-027",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Il ne sait pas garder un secret : le violet cache un cadeau, se trahit avec une phrase, la rose rit. Une seule bulle.",
-        "titre": "POV: he can't keep a surprise",
-        "plans": [
-          {
-            "description": "Un mur crème et un sol beige, en plein jour. Dès la première image le violet est debout à droite, les mains dans le dos, un cadeau avec un nœud qui dépasse derrière lui, les yeux au plafond, une goutte de gêne sur la tempe : il essaie de faire l'innocent. La rose, à gauche, les bras croisés du regard, un sourcil haut, le dévisage.",
-            "duree": 3.6,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "plate",
-                    "sourcils": "hauts"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.6,
-                    "objet": "cadeau",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.6,
-                    "a": 3.6,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          },
-          {
-            "description": "Zoom rapide à 0,3 s sur le violet. Il se dandine, siffle, puis lâche d'un coup « Don't look in the kitchen! » dans une bulle, la bouche ronde, les yeux écarquillés : il vient de se trahir. Une goutte de gêne grossit sur sa tempe et un « ! » apparaît au-dessus de sa tête à 1,8 s.",
-            "duree": 3.4,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.4,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.0,
-                    "yeux": "ouverts",
-                    "bouche": "plate",
-                    "sourcils": "hauts"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.0,
-                    "a": 3.4,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.4,
-                    "objet": "cadeau",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 0.8,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 0.8,
-                    "a": 2.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.8,
-                    "a": 3.4,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.8,
-                    "a": 3.4,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 3.4,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.8,
-                "a": 3.2,
-                "texte": "Don't look in the kitchen!"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.2,
-                "x": 640,
-                "y": 1250
-              }
-            ]
-          },
-          {
-            "description": "Plan large. La rose éclate de rire, la main devant la bouche, les yeux plissés ; le violet, tout rouge, cache son visage derrière le cadeau et boude, les épaules rentrées. À 2,4 s la rose se calme, fait un clin d'œil au violet et lui adresse un petit sourire tendre. Des cœurs montent à la fin. La caméra se rapproche doucement.",
-            "duree": 4.2,
-            "decor": "mur",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "gauche",
-                "gestes": [
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 2.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.2,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.0,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.2,
-                    "objet": "cadeau",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "boude",
-                    "de": 0,
-                    "a": 2.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.4,
-                    "yeux": "plats",
-                    "bouche": "plate",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.2,
-                    "yeux": "ouverts",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          }
-        ],
+        "idee": "Nuit dans la prairie, il promet : « je décrocherai la lune pour toi » ; elle, sur son téléphone, un sourcil levé : « ... ». Gros plan sur lui, la colère monte. Il recule de quatre pas dans l’herbe, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti, fumée, le sol qui se brise ; la boucle s’agrippe à la lune et il tire, les pieds plantés, la lune grossit à vue d’œil au-dessus des collines. Gros plan sur elle au téléphone : grondement, secousses, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
+        "titre": "when he promises u the moon",
+        "heros": "garcon",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "drole",
+          "recherche": "Total Eclipse of the Heart"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "prairie",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "promesse-lune",
+                "replique": "i'd pull the moon down for you",
+                "a": 1.6
+              },
+              "description": "Plan d'ensemble, caméra fixe, la prairie la nuit : les étoiles, le grand arbre, et à droite une grande lune pâle au visage endormi. Lui parle en gesticulant, une bulle au-dessus de sa tête : « i'd pull the moon down for you » ; elle est sur son téléphone, la tête baissée, le pouce qui tapote. À 1,6 s elle lève à peine les yeux vers lui, un sourcil levé, la bouche plate : une bulle « ... », puis elle retourne à son écran. Lui reste la bouche ouverte, surpris, puis ses sourcils se froncent, ses joues rougissent et il se met à trembler de colère. La caméra pousse sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.7
+                },
+                {
+                  "expression": "colere",
+                  "duree": 1.4
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La surprise : yeux ronds, bouche en petit o, un battement de cœur lent. À 0,7 s la colère monte : sourcils en biais, yeux plissés, la bouche à l'envers, les joues rouges, la tête qui tremble ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana claquent dans une montée de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "corde": true,
+              "recul": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, elle à droite toujours sur son téléphone. Il se retourne et fait quatre pas en arrière vers la gauche, lentement, puis se retourne face à la lune ; sa main passe derrière son dos et ressort avec une corde roulée, pop, un sourire en coin mauvais. La caméra serre sur lui."
+            },
+            {
+              "sequence": "exploit",
+              "type": "lasso",
+              "duree": 6.2,
+              "description": "Plan moyen sur lui, la lune en haut à droite, elle entre les deux sur son téléphone. Il lève le bras et fait tournoyer le lasso au-dessus de sa tête, trois tours qui sifflent. Le lancer : ralenti onze fois, caméra qui pousse, voile bleuté, battement de cœur ; à l'instant où la corde part, de la fumée jaillit de partout autour de lui, le sol se fissure sous ses pieds, onde de choc, secousse. La caméra s'ouvre : la boucle fonce en arc par-dessus elle jusqu'à la lune, lignes de vitesse, et se referme autour ; la lune ouvre des yeux ronds et la bouche, la corde se tend, craquement. Il se penche en arrière de tout son poids, les pieds plantés, le corps qui vibre, un grondement qui monte : la lune grossit, grossit, elle se rapproche, elle arrive ; un impact au loin. Elle, toujours sur son téléphone, n'a rien vu."
+            },
+            {
+              "sequence": "chute",
+              "duree": 5.8,
+              "description": "Gros plan sur elle, de trois quarts, le téléphone à la main, le pouce qui tapote. Un grondement sourd ; la caméra tremble un peu, puis plus fort ; elle lève les yeux, surprise, et la tête se renverse vers le ciel : la lune énorme descend sur elle, elle emplit tout le haut de l'image. Coupe sur ses yeux, très gros plan : ils s'écarquillent, et dans chaque pupille la lune se reflète et grossit. On revient sur son visage : les yeux exorbités, la bouche grande ouverte, l'horreur, le tremblement, les secousses de plus en plus fortes, un grondement qui monte ; fondu au noir."
+            }
+          ]
         }
       },
-      "legende": "Tag him",
+      "legende": "When he promises you the moon.\n\nTag your partner",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

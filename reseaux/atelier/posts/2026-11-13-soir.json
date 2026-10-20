@@ -2,271 +2,61 @@
   "jour": "2026-11-13",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "coquin",
-  "sujet": "coq-006",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-034",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "idee": "Coquin en clin d'œil : le dimanche matin, la couette bouge, chaussette et oreiller s'envolent, et à midi les deux sortent la tête en rougissant.",
-        "titre": "POV: Sunday morning plans",
-        "plans": [
+        "etiquette": "Cozy night in edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "description": "La chambre un dimanche matin, lumière dorée, le soleil dans la fenêtre, légende « Sunday, 8 AM ». Dès la première image les deux sont dans le lit, la couette jusqu'au menton, et se regardent en souriant, les joues roses. La rose fait un clin d'œil, le violet rougit, la bouche ronde. La caméra se rapproche lentement.",
-            "duree": 3.6,
-            "decor": "chambre",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "lit-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.4,
-                    "a": 3.6,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "lit-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.8,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "o",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "couette": "calme",
-            "legende": "Sunday, 8 AM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.15,
-                "x": 540,
-                "y": 1100
-              }
-            ]
+            "a": "Candles and music",
+            "b": "Fairy lights and a movie"
           },
           {
-            "description": "Même chambre. La couette se met à bouger à 0,6 s, les deux têtes disparaissent dessous, des cœurs sortent du milieu et la caméra tremble. Une chaussette s'envole en tournant vers le haut à droite, puis un oreiller. Le soleil monte dans la fenêtre.",
-            "duree": 3.8,
-            "decor": "chambre",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "lit-gauche",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.6,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "disparait",
-                    "de": 0.6,
-                    "a": 1.0,
-                    "vers": "bas"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "lit-droite",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.7,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "disparait",
-                    "de": 0.7,
-                    "a": 1.1,
-                    "vers": "bas"
-                  }
-                ]
-              }
-            ],
-            "couette": "bouge",
-            "couetteDe": 0.6,
-            "effets": [
-              {
-                "effet": "coeurs",
-                "de": 1.2,
-                "a": 3.8,
-                "x": 540,
-                "y": 1120
-              }
-            ],
-            "objets": [
-              {
-                "objet": "chaussette",
-                "x": 480,
-                "y": 1200,
-                "de": 1.4,
-                "entree": "aucune",
-                "vol": {
-                  "de": 1.45,
-                  "a": 2.5,
-                  "dx": 520,
-                  "dy": -900,
-                  "tours": 2
-                }
-              },
-              {
-                "objet": "oreiller",
-                "x": 620,
-                "y": 1150,
-                "de": 2.2,
-                "entree": "aucune",
-                "vol": {
-                  "de": 2.25,
-                  "a": 3.5,
-                  "dx": -480,
-                  "dy": -800,
-                  "tours": 1
-                }
-              }
-            ],
-            "camera": [
-              {
-                "a": 0.6,
-                "secousse": 10
-              }
-            ]
+            "a": "Massage for them first",
+            "b": "Massage for you first"
           },
           {
-            "description": "Même chambre, plein soleil, légende « Sunday, noon ». Les deux sont couchés dans le lit, la tête et les petites mains qui dépassent de la couette, les joues très rouges, les yeux heureux et la bouche de chat. À 1,6 s la rose pouffe de rire, la main devant la bouche ; le violet lui fait un clin d'œil. La caméra se rapproche doucement.",
-            "duree": 3.8,
-            "decor": "chambre",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "lit-gauche",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.6,
-                    "yeux": "heureux",
-                    "bouche": "chat",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 1.6,
-                    "a": 3.8
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "lit-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.6,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.6,
-                    "a": 3.8,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "transition": "fondu",
-            "couette": "calme",
-            "legende": "Sunday, noon",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.8,
-                "zoom": 1.25,
-                "x": 540,
-                "y": 1100
-              }
-            ]
+            "a": "Hot chocolate",
+            "b": "Ice cream, in winter"
+          },
+          {
+            "a": "Matching socks",
+            "b": "Matching pajamas"
+          },
+          {
+            "a": "Cook a big dinner",
+            "b": "Order and cuddle"
+          },
+          {
+            "a": "Fall asleep on the couch",
+            "b": "Fall asleep in bed"
           }
         ],
-        "son": {
-          "ambiance": "coquin"
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Send this to your partner",
+      "legende": "Cozy night in edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

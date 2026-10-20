@@ -2,299 +2,61 @@
   "jour": "2026-11-11",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-051",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-032",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "idee": "« On prend juste du lait » : les deux sortent légers, reviennent la nuit chargés d'une plante, de pop-corn, d'un cadeau et d'un ballon. Aucune bulle.",
-        "titre": "POV: 'we're only buying milk'",
-        "plans": [
+        "etiquette": "Road trip edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "description": "Une rue de ville en fin d'après-midi, légende « The plan ». Dès la première image la rose et le violet marchent côte à côte sur le trottoir, légers, les mains vides, un petit sourire ; ils vont acheter du lait. Ils avancent vers la droite d'un pas tranquille et la caméra les suit doucement.",
-            "duree": 3.6,
-            "decor": "rue",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": 150,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.4,
-                    "vers": 700
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": -100,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.4,
-                    "vers": 520
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0.4,
-                    "a": 3.6,
-                    "cible": "rose"
-                  }
-                ]
-              }
-            ],
-            "legende": "The plan",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.1,
-                "x": 600,
-                "y": 1150
-              }
-            ]
+            "a": "You drive, they pick songs",
+            "b": "They drive, you pick songs"
           },
           {
-            "description": "Même rue, la nuit, le lampadaire allumé, légende « What happened ». Les deux reviennent par la droite en marchant vers la gauche, les bras chargés : la rose tient une plante en pot dans une main et un pot de pop-corn dans l'autre, le violet un cadeau avec un nœud et un ballon en forme de cœur. Ils ont les yeux plats et un petit sourire fatigué, le dos voûté.",
-            "duree": 4.4,
-            "decor": "rue",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": 1150,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.6,
-                    "vers": 620
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.4,
-                    "objet": "plante",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.4,
-                    "objet": "popcorn",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 4.4,
-                    "yeux": "plats",
-                    "bouche": "sourire"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": 1350,
-                "gestes": [
-                  {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.8,
-                    "vers": 820
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.4,
-                    "objet": "cadeau",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.4,
-                    "objet": "ballon-coeur",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 4.4,
-                    "yeux": "plats",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.0,
-                    "a": 4.4,
-                    "cible": "rose"
-                  }
-                ]
-              }
-            ],
-            "legende": "What happened",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.4,
-                "zoom": 1.15,
-                "x": 700,
-                "y": 1150
-              }
-            ]
+            "a": "Stop at every view",
+            "b": "Get there before dark"
           },
           {
-            "description": "Zoom rapide à 0,3 s sur les deux visages, toujours dans la rue la nuit, les bras chargés. Ils tournent la tête vers la caméra en même temps, les yeux plats et la bouche plate, une goutte de gêne sur la tempe de chacun. À 2 s le violet sourit d'un air coupable, les joues roses, et la rose lève les yeux au ciel. La caméra reste serrée sur eux.",
-            "duree": 3.8,
-            "decor": "rue",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": 620,
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "plante",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "popcorn",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 2.0,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.6,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.0,
-                    "a": 3.8,
-                    "cible": "haut"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": 820,
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "cadeau",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "ballon-coeur",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 2.0,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.8,
-                    "a": 2.0,
-                    "effet": "goutte"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.5,
-                "x": 720,
-                "y": 1100
-              }
-            ]
+            "a": "Sleep in the car",
+            "b": "Find a tiny motel"
+          },
+          {
+            "a": "Gas station snacks",
+            "b": "A proper restaurant"
+          },
+          {
+            "a": "Plan every stop",
+            "b": "Get lost on purpose"
+          },
+          {
+            "a": "Sing along loudly",
+            "b": "Quiet and window gazing"
           }
         ],
-        "son": {
-          "ambiance": "drole"
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Tag your partner",
+      "legende": "Road trip edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }
