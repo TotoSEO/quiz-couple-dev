@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-039",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Weekend away edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Cabin in the woods",
+            "b": "Room with a sea view"
+          },
+          {
+            "a": "Hike all day",
+            "b": "Spa all day"
+          },
+          {
+            "a": "Pack the night before",
+            "b": "Pack in five minutes"
+          },
+          {
+            "a": "Drive there",
+            "b": "Take the train"
+          },
+          {
+            "a": "Local food stalls",
+            "b": "One fancy dinner"
+          },
+          {
+            "a": "Sleep in till noon",
+            "b": "Sunrise walk"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend away edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
