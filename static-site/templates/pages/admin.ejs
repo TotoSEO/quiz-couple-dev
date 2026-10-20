@@ -121,7 +121,6 @@
               <svg class="adm-spark est-vide" id="adm-spark-lances" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
               <p class="stats-tete-sub">parties commencées, toutes pages</p>
               <p class="stats-tete-total">Total : <strong id="admin-lances-total">-</strong></p>
-              <p class="stats-tete-sub" id="admin-lances-distance"></p>
             </div>
             <div class="stats-tete stats-tete--finis">
               <p class="stats-tete-titre">Terminés aujourd'hui</p>
@@ -273,58 +272,15 @@
             <canvas id="trafic-chart" class="stats-canvas adm-canvas--hero"></canvas>
           </div>
 
-          <div class="adm-duo">
-            <div class="stats-panel">
-              <div class="stats-panel-head">
-                <div>
-                  <h2 class="stats-panel-title">D'où viennent les visites</h2>
-                  <p class="stats-panel-sub">Le site d'origine de la première page. Les visites qui redémarrent après une pause, dont le référent est le site lui-même, ne sont pas comptées ici.</p>
-                </div>
-              </div>
-              <div id="trafic-sources" class="trafic-barres"><p class="stats-movers-vide">Chargement...</p></div>
-            </div>
-            <div class="stats-panel">
-              <div class="stats-panel-head">
-                <div>
-                  <h2 class="stats-panel-title">Profondeur de visite</h2>
-                  <p class="stats-panel-sub">Combien de pages par visite. Une moyenne cache la forme : ici on voit la répartition réelle.</p>
-                </div>
-              </div>
-              <div id="trafic-profondeur" class="trafic-barres"><p class="stats-movers-vide">Chargement...</p></div>
-            </div>
-          </div>
-
+          <%# Depuis le 20 octobre 2026, l'onglet s'arrête aux visites par jour, aux pages vues, aux pages par visite et aux sources (Thomas : « ça ne me sert à rien de savoir combien de visite par page, sauf pour l'évaluation », qui a son onglet). La profondeur de visite, l'entonnoir des pages jouables et la liste de toutes les pages ont été retirés ; leurs fonctions restent en base. %>
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
-                <h2 class="stats-panel-title">Entonnoir des pages jouables</h2>
-                <p class="stats-panel-sub">Les trois nombres portent sur les mêmes visites : celles qui ont vu la page, celles qui ont touché le moteur, celles qui sont allées jusqu'au résultat.</p>
+                <h2 class="stats-panel-title">D'où viennent les visites</h2>
+                <p class="stats-panel-sub">Le site d'origine de la première page. Les visites qui redémarrent après une pause, dont le référent est le site lui-même, ne sont pas comptées ici.</p>
               </div>
             </div>
-            <div class="stats-entetes">
-              <span class="stats-entete-nom">Page</span>
-              <button class="stats-tri" data-tri-ent="visites" style="--col:var(--adm-s-visites);" type="button">Visites <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-ent="lances" style="--col:var(--adm-s-lances);" type="button">Lancés <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-ent="finis" style="--col:var(--adm-s-finis);" type="button">Finis <span class="stats-tri-fleche">▾</span></button>
-            </div>
-            <div id="trafic-entonnoir" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
-          </div>
-
-          <div class="stats-panel">
-            <div class="stats-panel-head">
-              <div>
-                <h2 class="stats-panel-title">Toutes les pages</h2>
-                <p class="stats-panel-sub">« Directes » : les visites qui ont commencé sur cette page, donc arrivées d'un moteur ou d'un lien externe. Le reste est venu par le maillage interne. « Rebond » : parmi les arrivées directes, celles qui sont reparties sans voir une autre page.</p>
-              </div>
-            </div>
-            <div class="stats-entetes trafic-entetes">
-              <span class="stats-entete-nom">Page</span>
-              <button class="stats-tri" data-tri-pages="pages_vues" style="--col:hsl(var(--muted-foreground));" type="button">Vues <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="visites" style="--col:var(--adm-s-visites);" type="button">Visites <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="entrees" style="--col:var(--adm-s-lances);" type="button">Directes <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="rebond" style="--col:var(--adm-s-taux);" type="button">Rebond <span class="stats-tri-fleche">▾</span></button>
-            </div>
-            <div id="trafic-pages" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
+            <div id="trafic-sources" class="trafic-barres"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
 
           <div class="stats-panel">
@@ -341,43 +297,23 @@
         </div>
 
         <!-- ═══ À distance ═══ -->
+        <%# Depuis le 20 octobre 2026, l'onglet ne compte plus que les parties jouées chacun sur son téléphone et arrivées au résultat, en tout et par test (Thomas : « on sait que ça fonctionne maintenant »). Le site n'envoie plus le départ d'une partie, la courbe et la part des lancements ont disparu. Les identifiants sont le contrat de loadDistance (admin.js). %>
         <div id="admin-distance-tab" class="hidden">
           <p class="adm-note" id="admin-distance-note"></p>
-          <div class="stats-tetes">
-            <div class="stats-tete stats-tete--lances">
-              <p class="stats-tete-titre">Lancés, toutes pages</p>
-              <p class="stats-tete-jour" id="admin-distance-lances">-</p>
-              <p class="stats-tete-sub">depuis la mise en service du mode à distance</p>
-            </div>
+          <div class="stats-tetes stats-tetes--une">
             <div class="stats-tete stats-tete--finis">
-              <p class="stats-tete-titre">Lancés à distance</p>
+              <p class="stats-tete-titre">Parties à distance</p>
               <p class="stats-tete-jour" id="admin-distance-total">-</p>
-              <p class="stats-tete-sub">un par téléphone : une partie à deux en fait deux</p>
+              <p class="stats-tete-sub">finies chacun sur son téléphone, depuis la mise en service du mode</p>
               <p class="stats-tete-total" id="admin-distance-fins"></p>
             </div>
-            <div class="stats-tete stats-tete--ratio">
-              <p class="stats-tete-titre">Part à distance</p>
-              <p class="stats-tete-jour" id="admin-distance-part">-</p>
-              <p class="stats-tete-sub" id="admin-distance-detail">des lancements se jouent chacun sur son téléphone</p>
-            </div>
           </div>
 
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
-                <h2 class="stats-panel-title">Évolution quotidienne</h2>
-                <p class="stats-panel-sub">Lancements de toutes les pages, lancements à distance et part à distance, jour par jour depuis la mise en service. Cliquez une vignette pour masquer ou réafficher sa courbe.</p>
-              </div>
-            </div>
-            <div class="stats-legende" id="admin-distance-legende" role="group" aria-label="Courbes affichées"></div>
-            <canvas id="admin-distance-chart" class="stats-canvas adm-canvas--hero"></canvas>
-          </div>
-
-          <div class="stats-panel">
-            <div class="stats-panel-head">
-              <div>
-                <h2 class="stats-panel-title">Par page</h2>
-                <p class="stats-panel-sub">Un lancé à distance compte pour une personne : une partie à deux téléphones en fait deux, comme elle fait deux lancés et deux finis dans l'onglet Parties. Les lancés de chaque page sont comptés depuis la mise en service, pour que la part soit juste. Seules les pages qui proposent le mode à distance apparaissent.</p>
+                <h2 class="stats-panel-title">Par test</h2>
+                <p class="stats-panel-sub">Les parties à distance arrivées au résultat sur chaque page qui propose le mode. Le petit chiffre est le nombre de téléphones arrivés au résultat, deux par partie quand tout va bien.</p>
               </div>
             </div>
             <div id="admin-distance-list" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>

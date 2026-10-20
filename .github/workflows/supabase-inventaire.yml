@@ -99,4 +99,8 @@ jobs:
           essai "clé en paramètre ?apikey=, corps form-urlencoded vide" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: application/x-www-form-urlencoded" -d ''
           essai "clé en paramètre, Content-Type text/plain" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: text/plain" -d '{}'
           essai "sans aucune clé (doit refuser)" -X POST "$URL/rest/v1/rpc/get_quiz_total" -H "Content-Type: application/json" -d '{}'
+          # Une vraie écriture de mesure en requête simple, comme audience.js
+          # l'enverra : une ligne dans article_lectures sous un chemin qui
+          # n'est pas un article (aucun compteur ne la montre). 201 attendu.
+          essai "insertion form-urlencoded dans article_lectures (clé en paramètre, aucun en-tête à nous) : 201 attendu" -X POST "$URL/rest/v1/article_lectures?apikey=$KEY" -H "Content-Type: application/x-www-form-urlencoded" --data-urlencode "visite_id=sonde-passerelle-$(date -u +%s)" --data-urlencode "path=/essai-passerelle-simple/" --data-urlencode "lang=fr"
           rm -f corps.txt

@@ -145,21 +145,13 @@
       window.removeEventListener('scroll', surDefilement);
       document.removeEventListener('visibilitychange', surVisibilite);
       try { if (window.localStorage) localStorage.setItem(cle, visite); } catch (e) {}
+      // En requete simple, par audience.js (voir envoiSimple la-bas) : plus
+      // de prechargement CORS avant la ligne.
       try {
-        fetch(el.dataset.url + '/rest/v1/article_lectures', {
-          method: 'POST',
-          keepalive: true,
-          headers: {
-            'apikey': el.dataset.key,
-            'Authorization': 'Bearer ' + el.dataset.key,
-            'Content-Type': 'application/json',
-            'Prefer': 'return=minimal'
-          },
-          body: JSON.stringify({
-            visite_id: visite,
-            path: chemin,
-            lang: document.documentElement.lang || 'fr'
-          })
+        if (aud.ecrit) aud.ecrit('article_lectures', {
+          visite_id: visite,
+          path: chemin,
+          lang: document.documentElement.lang || 'fr'
         }).catch(function () {});
       } catch (e) {}
     }
