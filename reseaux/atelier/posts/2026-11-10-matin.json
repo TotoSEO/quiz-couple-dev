@@ -2,213 +2,77 @@
   "jour": "2026-11-10",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-045",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-024",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Quand il répond enfin : la rose attend sa réponse à 22 h, s'affale à 23 h 30, le téléphone sonne à 23 h 31, elle saute de joie. Aucune bulle.",
-        "titre": "POV: when he finally replies",
-        "plans": [
-          {
-            "description": "Le salon, la nuit, lumière chaude de la lampe, légende « 10:00 PM ». Dès la première image la rose est assise seule dans le canapé, les genoux repliés, son téléphone à la main, les yeux rivés sur l'écran, la bouche pincée. Trois petits points flottent au-dessus de sa tête : elle attend une réponse. La caméra se rapproche doucement.",
-            "duree": 3.6,
-            "decor": "salon",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "telephone",
-                    "de": 0,
-                    "a": 3.6
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 3.6,
-                    "effet": "points"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "plate"
-                  }
-                ]
-              }
-            ],
-            "legende": "10:00 PM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.15,
-                "x": 500,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Même salon, légende « 11:30 PM ». La rose n'a pas bougé mais elle s'est affalée sur le côté, les yeux plats, la bouche en moue, sourcils tristes, le téléphone toujours à la main ; une goutte de gêne glisse sur sa tempe. À 1,6 s elle soupire et regarde la caméra, comme pour nous prendre à témoin. Zoom rapide sur son visage à 0,3 s.",
-            "duree": 3.6,
-            "decor": "salon",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.6,
-                    "objet": "telephone",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.6,
-                    "yeux": "plats",
-                    "bouche": "triste",
-                    "sourcils": "tristes"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.8,
-                    "a": 3.6,
-                    "effet": "goutte"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.6,
-                    "a": 3.6,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "boude",
-                    "de": 1.0,
-                    "a": 3.6
-                  }
-                ]
-              }
-            ],
-            "legende": "11:30 PM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.6,
-                "x": 500,
-                "y": 1100
-              }
-            ]
-          },
-          {
-            "description": "Même salon, légende « 11:31 PM ». Le téléphone sonne : un « ! » apparaît au-dessus de la rose, ses yeux s'ouvrent grands, ses joues rosissent. Elle lit l'écran, les yeux deviennent des cœurs, elle saute de joie deux fois, les bras en l'air, et des cœurs montent autour d'elle. La caméra se rapproche d'un coup à 0,6 s.",
-            "duree": 4.4,
-            "decor": "salon",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 1.4,
-                    "objet": "telephone",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 1.4,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.0,
-                    "a": 2.2,
-                    "yeux": "coeur",
-                    "bouche": "o",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "joie",
-                    "de": 1.4,
-                    "a": 3.0
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.6,
-                    "a": 4.4,
-                    "effet": "coeurs"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 3.0,
-                    "a": 4.4,
-                    "yeux": "fermes",
-                    "bouche": "chat",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "legende": "11:31 PM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.6,
-                "zoom": 1.3,
-                "x": 500,
-                "y": 1150
-              },
-              {
-                "a": 4.4,
-                "zoom": 1.15,
-                "x": 500,
-                "y": 1150
-              }
-            ]
-          }
-        ],
+        "idee": "Nuit sur la plage, les vagues, les étoiles : il montre la plus brillante. Elle le regarde avec tendresse, puis se concentre, s'accroupit, et part comme une flèche vers le ciel ; au ralenti sa main se referme sur l'étoile. Elle retombe accroupie dans le sable et la lui tend ; il la prend dans ses mains jointes, les yeux qui brillent ; les cœurs montent sous la lune.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "tendre",
+          "recherche": "A Thousand Years"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-etoile",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage la nuit : la mer sombre et ses vagues au fond, deux palmiers, la lune, les étoiles qui scintillent, et une étoile plus grande qui brille en haut à droite avec ses rayons. Elle (nœud rose, queue de cheval) écoute, lui (bandana violet) parle et rit. À 1,2 s il se tourne vers le ciel et tend le bras vers l'étoile, les yeux en cœur. Elle lève la tête, sourit, puis le regarde, attendrie, joues roses ; à 3,1 s son visage se ferme, décidé. La caméra pousse doucement vers l'étoile et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur lui. À 1,0 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers l'étoile ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": false,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière, le bras encore tendu vers le ciel. Elle se plante face à l'étoile, les poings serrés, les genoux qui fléchissent, le regard levé ; le vent soulève la queue de cheval. La caméra serre un peu sur elle : elle va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "attrape",
+              "description": "Plan d'ensemble, l'étoile en haut à droite, le couple en bas. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche vers l'étoile, rémanences, lignes de vitesse presque verticales. Juste avant de l'atteindre, ralenti dix fois, caméra serrée sur sa main et sur l'étoile, voile bleuté, battement de cœur : ses doigts se referment dessus, l'étoile du ciel s'éteint et brille dans sa main (scintillement). Elle retombe accroupie à côté de lui, poussière, se redresse l'étoile à la main, tendre ; il saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "etoile",
+              "fin": "charmeur",
+              "duree": 6.0,
+              "description": "Plan moyen large, caméra fixe, la plage sous la lune. Lui à droite, elle à gauche avec l'étoile qui brille dans sa main, un halo jaune, trois éclats qui tournent. Elle fait un pas vers lui et la lui tend, bras tendu, sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement). Il tend les bras, les yeux en cœur, et la reçoit dans ses mains jointes, la tête penchée dessus, émerveillé (scintillement magique). Les cœurs montent entre eux ; elle sourit, heureuse, les yeux fermés. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "10:00 PM: waiting. 11:31 PM: forgiven.\n\nSend this to your partner",
+      "legende": "Nothing is too high for her.\n\nTag her",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

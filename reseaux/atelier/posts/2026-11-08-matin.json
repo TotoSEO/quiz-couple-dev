@@ -2,261 +2,81 @@
   "jour": "2026-11-08",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-042",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-022",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Il veut cuisiner pour elle : le violet très fier, un grand bruit et la mine défaite, la rose rit, et la pizza finit par régler le problème. Aucune bulle.",
-        "titre": "POV: he wants to cook for you",
-        "plans": [
-          {
-            "description": "Une cuisine en fin de journée, lumière chaude. Dès la première image le violet est derrière le plan de travail à droite, très fier de lui, le torse bombé, un grand sourire, les yeux brillants, des étincelles autour de sa tête : il va cuisiner pour elle. La rose, à gauche, le regarde, touchée, les mains jointes, un petit sourire.",
-            "duree": 3.6,
-            "decor": "cuisine",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "joie",
-                    "de": 0,
-                    "a": 1.6
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "brillants",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.4,
-                    "a": 3.6,
-                    "effet": "etincelles"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          },
-          {
-            "description": "Même cuisine, un peu plus tard. À 0,6 s la caméra tremble fort : le violet a les yeux grands ouverts, la bouche ronde, un « ! » au-dessus de la tête et une goutte de gêne sur la tempe ; quelque chose a mal tourné. La rose, derrière lui, a les yeux plats et la bouche plate, puis éclate de rire, la main devant la bouche. Zoom rapide sur le violet à 0,3 s.",
-            "duree": 3.8,
-            "decor": "cuisine",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 1.4,
-                    "a": 3.8
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.6,
-                    "a": 3.8,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.2,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  },
-                  {
-                    "geste": "tremble",
-                    "de": 0.6,
-                    "a": 3.8
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.5,
-                "x": 700,
-                "y": 1200
-              },
-              {
-                "a": 0.6,
-                "secousse": 14
-              }
-            ]
-          },
-          {
-            "description": "Plan large de la cuisine. Les deux sont maintenant devant le plan de travail, chacun une part de pizza dans la main, qu'ils mangent en riant, les yeux plissés. Le violet, un peu gêné, les joues roses, hausse les épaules ; la rose lui fait un petit clin d'œil et des cœurs montent au-dessus d'eux. La caméra se rapproche doucement.",
-            "duree": 4.2,
-            "decor": "cuisine",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.2,
-                    "objet": "pizza",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "mange",
-                    "de": 0,
-                    "a": 2.0,
-                    "objet": "pizza"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 2.0,
-                    "a": 3.2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 3.2,
-                    "a": 4.2,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.0,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.2,
-                    "objet": "pizza",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "mange",
-                    "de": 0,
-                    "a": 2.0,
-                    "objet": "pizza"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 2.0,
-                    "a": 4.2
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          }
-        ],
+        "idee": "Devant la maison, elle supplie, les mains jointes, un chiot dans sa bulle ; il fait non, bras croisés. Elle : triste, puis l'idée. Le soir même elle le tire par la main avec un clin d'œil et lui montre le jardin : une meute entière qui saute dans tous les sens, un roulement de tambour. Il tremble, spirale au-dessus de la tête, et s'évanouit raide comme une planche au ralenti, les yeux en croix ; elle rit avec un chiot dans les bras, il revient à lui, rires.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "drole",
+          "recherche": "Atomic Dog"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-chien",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison : le toit et la cheminée à droite, la porte, le chemin, le grand arbre à gauche, le soleil. Ils se parlent debout, elle (nœud rose, queue de cheval) gesticule, lui écoute et rit. À 1,2 s elle joint les mains sous le menton et le regarde avec de grands yeux qui brillent : une bulle de pensée pop au-dessus de sa tête, un chiot dedans. Lui croise les bras et fait non de la tête, deux fois, les sourcils froncés. La bulle s'efface ; elle laisse tomber les épaules et soupire, triste. La caméra pousse légèrement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "triste",
+                  "duree": 0.9
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la maison floue derrière. La tristesse : sourcils tristes, bouche à l'envers, le regard vers le sol, presque le silence. À 0,9 s un sourcil se lève, les yeux se plissent, un sourire en coin : elle a une idée ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval bouge dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "surprise",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le soir est tombé, devant la maison sous la lune, les grillons. Elle entre par la gauche en le tirant par la main, un sourire en coin, lui suit sans comprendre ; ils s'arrêtent devant la porte, elle se tourne vers lui et lui parle avec un clin d'œil, la main qui gesticule : « j'ai une surprise pour toi ». Il hausse un sourcil, sceptique. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "jardin",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le jardin de la maison la nuit, la barrière et la niche au fond, l'arbre à droite, les fenêtres allumées. La caméra est serrée sur eux deux à gauche ; elle lève les bras en l'air, ta-da, et la caméra glisse vers la droite pour découvrir la pelouse : neuf chiens qui aboient et sautent dans tous les sens, la langue pendante, les queues qui battent, un roulement de tambour. Lui se fige, les yeux ronds, bouche ouverte, et commence à trembler."
+            },
+            {
+              "sequence": "exploit",
+              "type": "malaise",
+              "duree": 4.2,
+              "description": "Plan moyen sur lui, à gauche, elle à côté, la meute qui saute derrière. Il tremble de plus en plus fort, une spirale de vertige tourne au-dessus de sa tête, ses yeux deviennent des spirales. Il se raidit comme une planche, les bras le long du corps, et bascule en arrière : ralenti dix fois sur la chute, caméra serrée, voile bleuté, une chute de trombone ; il s'écrase au sol dans un nuage de poussière, secousse, les yeux en croix, des étoiles qui tournent autour de sa tête. Elle le regarde, surprise, puis éclate de rire ; un chiot lui saute dans les bras et elle le cajole, la tête penchée dessus. La caméra s'écarte sur la scène."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "reveil",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, la meute qui saute au fond. Lui est toujours à plat, les étoiles autour de la tête. Elle s'approche avec le chiot et s'agenouille près de lui, attendrie. Il sursaute, revient à lui, se redresse assis, les yeux ronds, regarde autour de lui tous ces chiens... et éclate de rire ; elle rit aussi, le chiot aboie, des cœurs montent entre eux. La caméra pousse lentement sur eux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "He wanted to cook. We ordered pizza.\n\nSend this to your partner!",
+      "legende": "When she wants a dog.\n\nSend this to your partner",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }
