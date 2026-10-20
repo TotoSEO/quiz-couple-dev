@@ -56,6 +56,32 @@ jobs:
           sql "Parties à distance par jour (sept derniers jours ; deux lignes par partie)" "select created_at::date as jour, count(*) / 2 as parties from public.salon_parties where created_at >= now() - interval '7 days' group by 1 order by 1 desc"
           rm -f requete.json reponse.json
 
+      # Les droits réels, table par table et rôle par rôle (S, I, U, D =
+      # select, insert, update, delete), les séquences, les droits par défaut
+      # du schéma public (pg_default_acl : ce que Supabase retire le
+      # 30 octobre 2026 pour les tables créées ensuite) et l'exécution des
+      # fonctions par la clé publique. C'est la source de la migration des
+      # droits explicites (20261020180000) : on écrit ce qui est, on ne
+      # devine rien.
+      - name: Les droits de la clé publique et du rôle de service
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          droits() { echo "concat_ws(',', case when has_table_privilege('$1', c.oid, 'SELECT') then 'S' end, case when has_table_privilege('$1', c.oid, 'INSERT') then 'I' end, case when has_table_privilege('$1', c.oid, 'UPDATE') then 'U' end, case when has_table_privilege('$1', c.oid, 'DELETE') then 'D' end) as $1"; }
+          sql "Tables du schéma public : droits par rôle et RLS" "select c.relname as table_, $(droits anon), $(droits authenticated), $(droits service_role), c.relrowsecurity as rls, (select count(*) from pg_policies p where p.schemaname = 'public' and p.tablename = c.relname) as policies from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind in ('r', 'p') order by 1"
+          sql "Séquences du schéma public : usage par rôle" "select c.relname as sequence_, has_sequence_privilege('anon', c.oid, 'USAGE') as anon, has_sequence_privilege('authenticated', c.oid, 'USAGE') as authenticated, has_sequence_privilege('service_role', c.oid, 'USAGE') as service_role from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'S' order by 1"
+          sql "Droits par défaut du schéma public (r = tables, S = séquences, f = fonctions)" "select defaclrole::regrole::text as pour_le_role, coalesce(defaclnamespace::regnamespace::text, '(tous)') as schema_, defaclobjtype as objet, defaclacl::text as acl from pg_default_acl order by 1, 2, 3"
+          sql "Fonctions du schéma public exécutables par la clé publique" "select p.proname || '(' || pg_get_function_identity_arguments(p.oid) || ')' as fonction, has_function_privilege('anon', p.oid, 'EXECUTE') as anon, has_function_privilege('authenticated', p.oid, 'EXECUTE') as authenticated, has_function_privilege('service_role', p.oid, 'EXECUTE') as service_role from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prokind in ('f', 'p') order by 1"
+          rm -f requete.json reponse.json
+
       # Les logs eux-mêmes : une requête ClickHouse sur la table « logs »,
       # filtrée par source (edge_logs = passerelle d'API, postgres_logs,
       # realtime_logs, function_edge_logs, storage_logs...). Vingt-quatre

@@ -23,6 +23,11 @@
 -- Ce script reconstruit la base de juillet 2026. Tout ce qui est venu après
 -- (mesure d'audience, réseaux sociaux, quiz personnalisés, sécurité...) vit
 -- dans supabase/migrations/ : voir RECOVERY.md, §2, pour la suite.
+--
+-- Depuis le 30 octobre 2026, un projet neuf n'accorde plus l'accès API aux
+-- tables du schéma public : les trois tables ci-dessous n'auront aucun droit
+-- (ni anon, ni service_role) tant que la migration
+-- 20261020180000_droits_explicites.sql, dernière de la liste, n'est pas passée.
 -- ============================================================================
 
 

@@ -69,6 +69,19 @@ le SQL Editor, dans l'ordre des noms, chaque migration de `supabase/migrations/`
 Supabase**. Ce dernier referme ce que les anciennes migrations ouvrent à la clé
 publique (statistiques de l'admin, purges).
 
+> ⚠️ **Les droits des tables ne viennent plus tout seuls.** Depuis le 30 octobre
+> 2026, un projet Supabase n'accorde plus l'accès API (select, insert, update,
+> delete pour `anon`, `authenticated` et `service_role`) aux tables créées dans
+> le schéma `public` : sur un projet neuf, RESTORE.sql et les migrations
+> recréent toutes les tables **sans aucun droit**, et le site comme l'admin
+> répondent « permission denied for table » (code 42501). La dernière
+> migration de la liste, `20261020180000_droits_explicites.sql`, écrit les
+> droits de chaque table telle qu'elle les avait en production : elle doit
+> passer en dernier (c'est son nom qui l'y place), et toute migration écrite
+> après elle qui crée une table porte ses propres GRANT (règle dans
+> CLAUDE.md, « Sécurité de la base »). Le workflow **Sécurité · droits
+> explicites des tables** la rejoue sur demande.
+
 > ⚠️ Quelques objets ont été créés à la main dans le tableau de bord et ne sont
 > dans **aucun fichier du dépôt** : les tables `quiz_completions` et
 > `dilemme_votes`, et les fonctions `get_quiz_counts`, `get_quiz_total`,
