@@ -1,0 +1,88 @@
+<%
+  // La carte de l'évaluation de couple juste sous le moteur (20 octobre 2026,
+  // Thomas : « en dessous des encarts de test, du test de compatibilité et du
+  // test de couple, dans toutes les langues, mettre mieux en avant
+  // l'évaluation de couple, avec un bloc juste en dessous ») : sur les pages
+  // dont l'entrée porte `sousMoteur` (BILAN_ENTREES, config.js), quand
+  // l'évaluation est ouverte. La même carte que la bannière du bas (.qr-bilan,
+  // styles.css, variante .qr-bilan--moteur), avec un texte écrit pour le test
+  // de la page, et deux boutons dont les liens portent ?src=moteur-<id> pour
+  // l'onglet Évaluation de l'admin. À l'écran de résultat, la carte s'efface
+  // (CSS) : l'encart sous le verdict prend le relais. Ne rend rien ailleurs.
+  const _sm = (typeof bilanEntree !== 'undefined' && bilanEntree && bilanEntree.sousMoteur && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
+  const _SM = {
+    fr: { sur: 'Évaluation de couple',
+          tests: {
+            'tester-couple': ['Vous voulez savoir où en est votre couple, sujet par sujet ?',
+              'Ce test donne une note en vingt questions. L\'évaluation de couple en pose cent, à chacun de son côté et sans voir les réponses de l\'autre : l\'argent, les enfants, où vivre, la fidélité, les disputes, l\'intimité... Vous recevez un rapport de 40 pages qui compare vos réponses et vous dit de quoi parler en premier.'],
+            'compatibilite': ['Et sur les vrais sujets, êtes-vous d\'accord ?',
+              'Ce test mesure à quel point vous vous ressemblez. L\'évaluation de couple regarde ce qui engage une vie à deux : l\'argent, les enfants, où vivre, la fidélité, les disputes, l\'intimité... Cent questions, chacun de son côté, et un rapport de 40 pages qui met vos réponses face à face.'],
+          },
+          defaut: ['L\'évaluation complète de votre couple', 'Cent questions précises, chacun de son côté, et un rapport de 40 pages qui compare vos réponses sujet par sujet.'],
+          points: ['100 questions, chacun de son côté, à deux ou seul(e)', 'Construite à partir de la recherche en psychologie du couple', 'Un rapport PDF de 40 pages, envoyé par e-mail'],
+          bouton: 'Découvrir l\'évaluation', boutonSolo: 'La faire seul(e)', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+    en: { sur: 'Relationship assessment',
+          tests: {
+            'tester-couple': ['Want to know where your relationship stands, topic by topic?',
+              'This test gives you a score in twenty questions. The relationship assessment asks a hundred, each of you on your own side and without seeing the other\'s answers: money, children, where to live, fidelity, arguments, intimacy... You get a 40-page report that compares your answers and tells you what to talk about first.'],
+            'compatibilite': ['And on the real topics, do you agree?',
+              'This test measures how alike you are. The relationship assessment looks at what shapes a life together: money, children, where to live, fidelity, arguments, intimacy... A hundred questions, each on your own side, and a 40-page report that puts your answers side by side.'],
+          },
+          defaut: ['The complete assessment of your relationship', 'A hundred specific questions, each on your own side, and a 40-page report that compares your answers topic by topic.'],
+          points: ['100 questions, each on your own side, together or alone', 'Built on research in couple psychology', 'A 40-page PDF report, sent by e-mail'],
+          bouton: 'Discover the assessment', boutonSolo: 'Take it on your own', prix: 'Free questions · report {{prix}} for both of you' },
+    es: { sur: 'Evaluación de pareja',
+          tests: {
+            'tester-couple': ['¿Queréis saber cómo está vuestra pareja, tema por tema?',
+              'Este test da una nota en veinte preguntas. La evaluación de pareja hace cien, a cada uno por su lado y sin ver las respuestas del otro: el dinero, los hijos, dónde vivir, la fidelidad, las discusiones, la intimidad... Recibís un informe de 40 páginas que compara vuestras respuestas y os dice de qué hablar primero.'],
+            'compatibilite': ['¿Y en los temas de verdad, estáis de acuerdo?',
+              'Este test mide cuánto os parecéis. La evaluación de pareja mira lo que marca una vida en común: el dinero, los hijos, dónde vivir, la fidelidad, las discusiones, la intimidad... Cien preguntas, cada uno por su lado, y un informe de 40 páginas que pone vuestras respuestas frente a frente.'],
+          },
+          defaut: ['La evaluación completa de vuestra pareja', 'Cien preguntas concretas, cada uno por su lado, y un informe de 40 páginas que compara vuestras respuestas tema por tema.'],
+          points: ['100 preguntas, cada uno por su lado, en pareja o a solas', 'Construida a partir de la investigación en psicología de pareja', 'Un informe en PDF de 40 páginas, enviado por e-mail'],
+          bouton: 'Descubrir la evaluación', boutonSolo: 'Hacerla a solas', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+    de: { sur: 'Beziehungsanalyse',
+          tests: {
+            'tester-couple': ['Wollt ihr wissen, wo eure Beziehung steht, Thema für Thema?',
+              'Dieser Test gibt euch in zwanzig Fragen eine Note. Die Beziehungsanalyse stellt hundert, jedem für sich und ohne die Antworten des anderen zu sehen: Geld, Kinder, Wohnort, Treue, Streit, Intimität... Ihr bekommt einen Bericht mit 40 Seiten, der eure Antworten vergleicht und euch sagt, worüber ihr zuerst reden solltet.'],
+            'compatibilite': ['Und bei den großen Themen, seid ihr euch einig?',
+              'Dieser Test misst, wie ähnlich ihr euch seid. Die Beziehungsanalyse schaut auf das, was ein gemeinsames Leben prägt: Geld, Kinder, Wohnort, Treue, Streit, Intimität... Hundert Fragen, jeder für sich, und ein Bericht mit 40 Seiten, der eure Antworten nebeneinanderstellt.'],
+          },
+          defaut: ['Die vollständige Analyse eurer Beziehung', 'Hundert genaue Fragen, jeder für sich, und ein Bericht mit 40 Seiten, der eure Antworten Thema für Thema vergleicht.'],
+          points: ['100 Fragen, jeder für sich, zu zweit oder allein', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit 40 Seiten, per E-Mail geschickt'],
+          bouton: 'Die Analyse entdecken', boutonSolo: 'Sie allein machen', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+    it: { sur: 'Valutazione di coppia',
+          tests: {
+            'tester-couple': ['Volete sapere a che punto è la vostra coppia, tema per tema?',
+              'Questo test dà un voto in venti domande. La valutazione di coppia ne fa cento, a ciascuno per conto suo e senza vedere le risposte dell\'altro: i soldi, i figli, dove vivere, la fedeltà, i litigi, l\'intimità... Ricevete un report di 40 pagine che confronta le vostre risposte e vi dice di cosa parlare per primo.'],
+            'compatibilite': ['E sui temi che contano, siete d\'accordo?',
+              'Questo test misura quanto vi somigliate. La valutazione di coppia guarda quello che segna una vita a due: i soldi, i figli, dove vivere, la fedeltà, i litigi, l\'intimità... Cento domande, ciascuno per conto suo, e un report di 40 pagine che mette le vostre risposte a confronto.'],
+          },
+          defaut: ['La valutazione completa della vostra coppia', 'Cento domande precise, ciascuno per conto suo, e un report di 40 pagine che confronta le vostre risposte tema per tema.'],
+          points: ['100 domande, ciascuno per conto suo, in due o da soli', 'Costruita a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di 40 pagine, inviato per e-mail'],
+          bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+  };
+  const _smLang = _SM[lang] ? lang : 'fr';
+  const _smT = _SM[_smLang];
+  const _smTexte = _sm ? (_smT.tests[_sm.id] || _smT.defaut) : null;
+  // En français, « ? » reste collé à son mot (espace insécable).
+  const _smInsec = (txt) => _smLang === 'fr' ? String(txt).replace(/ ([?!:;])/g, ' $1') : txt;
+%>
+<% if (_sm) { %>
+<section class="qr-bilan qr-bilan--moteur" aria-label="<%= _smT.sur %>">
+  <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _smLang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
+  <div class="qr-bilan-corps">
+    <p class="qr-bilan-sur"><%= _smT.sur %></p>
+    <h2 class="qr-bilan-titre"><%= _smInsec(_smTexte[0]) %></h2>
+    <p class="qr-bilan-texte"><%= _smInsec(_smTexte[1]) %></p>
+    <ul class="qr-bilan-points">
+      <% for (const p of _smT.points) { %><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><%= p %></span></li><% } %>
+    </ul>
+    <div class="qr-bilan-boutons">
+      <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>"><%= _smT.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>&amp;mode=solo#facons"><%= _smT.boutonSolo %></a>
+    </div>
+    <p class="qr-bilan-prix"><%= _smT.prix.replace('{{prix}}', bilanPrix) %></p>
+  </div>
+</section>
+<% } %>

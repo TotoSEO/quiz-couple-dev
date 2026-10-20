@@ -835,8 +835,8 @@
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
-    var m = /^(resultat|bas)-(.+)$/.exec(src);
-    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : 'Bas de page · ') + m[2];
+    var m = /^(resultat|bas|moteur)-(.+)$/.exec(src);
+    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : 'Bas de page · ') + m[2];
     return src;
   }
   function eurosBilan(centimes) {

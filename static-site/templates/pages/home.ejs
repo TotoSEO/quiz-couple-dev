@@ -112,13 +112,16 @@
   // l'onglet Bilan de l'admin.
   const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=accueil' : u; };
   // L'évaluation de couple sur l'accueil (19 octobre 2026, Thomas : « on ne va
-  // pas compter sur le SEO pour vendre ») : un lien dans le hero et une
-  // section à elle sous le ruban, seulement quand elle est ouverte
-  // (BILAN_OUVERT). Textes `evaluation` de home.json, prix de bilanPrix.
+  // pas compter sur le SEO pour vendre ») : le troisième bouton du hero, à la
+  // place du test de pureté depuis le 20 octobre 2026 (le lien « Nouveau »
+  // qui le doublait sous les boutons est parti le même jour), et une section
+  // à elle sous le ruban, seulement quand elle est ouverte (BILAN_OUVERT).
+  // Textes `evaluation` de home.json, prix de bilanPrix. L'icône est celle du
+  // bouton du menu (header.ejs).
   const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
   const evaluation = t('home:evaluation', {}) || {};
   const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
-  const evalNouveau = String(evaluation.sur || '').split(' · ')[0];
+  const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
   const quizzes = versCartes(famillesNav.quiz);
@@ -196,32 +199,17 @@
         <div class="hero-ctas">
           <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
           <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
-          <%# Le test de pureté a droit à sa place dans le hero : même anneau
-              néon que sa pastille du menu, pour qu'on le reconnaisse. %>
-          <% if (getLocalizedUrl('testPurete', lang)) { %>
-          <a href="<%= getLocalizedUrl('testPurete', lang) %>" class="btn btn-purete btn-lg">
-            <span class="btn-purete-emoji" aria-hidden="true">🌡️</span>
-            <span class="btn-purete-texte"><%= t('quizzes:testPurete.shortTitle', 'Test de pureté') %></span>
+          <%# L'évaluation de couple a la troisième place du hero depuis le
+              20 octobre 2026 (Thomas), avec l'anneau néon qui signait le
+              bouton du test de pureté jusque-là : .btn-eval dans styles.css.
+              Le lien porte sa source pour l'onglet Évaluation de l'admin. %>
+          <% if (urlEval) { %>
+          <a href="<%= urlEval %>?src=accueil-hero" class="btn btn-eval btn-lg">
+            <span class="btn-eval-ic" aria-hidden="true"><%- icEval %></span>
+            <span class="btn-eval-texte"><%= evaluation.ctaCourt %></span>
           </a>
           <% } %>
         </div>
-        <% if (urlEval) { %>
-        <%# Dans le premier écran : ses styles sont écrits ici, les feuilles
-            critiques ne les connaissent pas encore. Aucun fondu depuis
-            l'opacité 0 (LCP). %>
-        <style>
-          .hero-eval { display: inline-flex; align-items: center; gap: .6rem; max-width: 100%; margin-top: 1.1rem; padding: .35rem .95rem .35rem .35rem; border-radius: 999px; font-size: .92rem; font-weight: 700; line-height: 1.25; color: hsl(var(--foreground)); background: hsl(var(--primary) / .1); text-decoration: none; transition: background .2s ease; }
-          .hero-eval:hover, .hero-eval:focus-visible { background: hsl(var(--primary) / .18); color: hsl(var(--foreground)); }
-          .hero-eval-nouveau { flex: none; padding: .25rem .6rem; border-radius: 999px; background: hsl(var(--primary)); color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-          .hero-eval svg { width: 1rem; height: 1rem; flex: none; }
-          @media (prefers-reduced-motion: reduce) { .hero-eval { transition: none; } }
-        </style>
-        <a href="<%= urlEval %>?src=accueil-hero" class="hero-eval">
-          <span class="hero-eval-nouveau"><%= evalNouveau %></span>
-          <span><%= evaluation.ctaCourt %></span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <% } %>
 
         <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
         <div class="hero-stats">
