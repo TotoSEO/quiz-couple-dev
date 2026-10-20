@@ -529,6 +529,42 @@ Le reste de ce qui a changé ce jour-là :
   `get_quiz_total`, `get_dilemme_counts`, `get_dilemme_total`. Ils ne sont
   dans aucun fichier du dépôt (voir RECOVERY.md avant une restauration).
 
+### Les droits des tables ne viennent plus tout seuls (30 octobre 2026)
+
+Supabase accordait d'office l'accès API (select, insert, update, delete pour
+`anon`, `authenticated` et `service_role`) à toute table créée dans le schéma
+`public` ; le 30 octobre 2026 il retire ce réglage de tous les projets. Les
+tables qui existent gardent leurs droits (rien n'a changé pour le site ce
+jour-là) ; une table créée ensuite sans GRANT répond « permission denied for
+table » (code 42501) à PostgREST, au site comme aux fonctions serveur, et un
+projet neuf (RECOVERY.md) recrée toutes les tables sans aucun droit. D'où :
+
+- **Toute migration qui crée une table écrit ses droits dans le même
+  fichier**, après le `CREATE TABLE`, avec le RLS et les règles :
+  ```sql
+  REVOKE ALL ON TABLE public.ma_table FROM PUBLIC, anon, authenticated;
+  GRANT INSERT ON TABLE public.ma_table TO anon;   -- ce que le site écrit avec la clé publique ; SELECT s'il relit la table
+  GRANT ALL ON TABLE public.ma_table TO service_role;  -- fonctions serveur, admin, fabrique, pg_cron
+  ALTER TABLE public.ma_table ENABLE ROW LEVEL SECURITY;
+  ```
+  Une table fermée (admin, paiement, abonnés) n'a que les deux premières
+  lignes et la dernière, comme `bilans`, `abonnes` ou `frein_anon`. Une
+  colonne `bigserial` écrite par la clé publique demanderait en plus `GRANT
+  USAGE ON SEQUENCE` ; nos tables publiques ont des identifiants uuid, les
+  seules séquences sont sur des tables réservées au rôle de service.
+- **`20261020180000_droits_explicites.sql`** écrit pour chaque table
+  existante les droits qu'elle avait en production le 20 octobre 2026 (relevés
+  par l'étape « Les droits de la clé publique et du rôle de service » de
+  `supabase-inventaire.yml`, qui liste tables, séquences, droits par défaut
+  et fonctions), appliquée par `droits-base.yml` (« Sécurité · droits
+  explicites des tables ») : sans effet en production, c'est ce qui rend une
+  restauration possible. Son nom la place en dernier dans un rejeu ; une
+  migration écrite après elle porte ses propres GRANT.
+- Le SQL de Supabase ne touche que les tables et les séquences : l'exécution
+  des fonctions reste accordée d'office à `anon` (d'où les `REVOKE EXECUTE`
+  de la section précédente), à vérifier après le 30 octobre avec la même étape
+  de l'inventaire.
+
 ### L'audit offensif du 20 octobre 2026
 
 Détail dans `docs/securite/AUDIT-2026-10-20.md` (ce qu'un attaquant voit, ce
