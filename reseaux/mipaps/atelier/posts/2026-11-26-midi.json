@@ -1,0 +1,28 @@
+{
+  "jour": "2026-11-26",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-124",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : la tête de concentré, qu'on regarde sans que l'autre le sache.",
+        "style": "declaration",
+        "texte": "j'aime bien quand tu fais ta tête de concentré et que tu sais pas que je te regarde."
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

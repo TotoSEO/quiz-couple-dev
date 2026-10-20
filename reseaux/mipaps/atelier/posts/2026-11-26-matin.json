@@ -1,0 +1,211 @@
+{
+  "jour": "2026-11-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-123",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le câlin « juste 2 secondes » : il doit partir, son sac à la patte ; elle demande un câlin ; il pose son sac, enlève son bonnet ; ils sont assis par terre, toujours en câlin, le sac oublié. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il est prêt à partir, son sac à la patte et un bonnet sur la tête, pressé. Elle est à côté, les pattes jointes, elle demande un câlin avec des yeux de chaton. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "supplie",
+                    "bras": "priere"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 284,
+                "y": 345,
+                "echelle": 0.6
+              },
+              {
+                "objet": "bonnet",
+                "x": 250,
+                "y": 168,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le câlin « juste 2 secondes »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il pose son sac par terre à 0,8 s, puis enlève son bonnet à 1,6 s. Elle sourit, les bras ouverts.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "bas",
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 284,
+                "y": 345,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 284,
+                    "y": 345,
+                    "echelle": 0.6
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 170,
+                    "y": 360,
+                    "echelle": 0.6
+                  }
+                ]
+              },
+              {
+                "objet": "bonnet",
+                "x": 250,
+                "y": 168,
+                "echelle": 0.5,
+                "a": 1.6
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux sont assis par terre, serrés l'un contre l'autre, toujours en câlin, yeux fermés. Le sac est resté oublié sur le côté. Trois cœurs flottent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "assis",
+                    "expression": "calin",
+                    "bras": "tend_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "pose": "assis",
+                    "expression": "calin",
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 150,
+                "y": 360,
+                "echelle": 0.6
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ton amoureux",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "jour": "2026-11-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-138",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Danser dans la cuisine : il met de la musique et danse tout seul ; elle le regarde, blasée ; il lui tend la patte ; les deux dansent. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il danse tout seul, le sourire jusqu'aux oreilles, des notes de musique autour de lui. Elle est à côté, les bras croisés, blasée. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "pose": "debout",
+                    "expression": "blase",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "danser dans la cuisine",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il continue de danser, puis lui tend la patte à 1,6 s, un petit sourire. Elle le regarde, hésite, un sourcil levé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "expression": "malicieux",
+                    "bras": "tend_d",
+                    "signes": []
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "pose": "debout",
+                    "expression": "blase",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "perplexe"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux dansent ensemble, joyeux, des notes de musique partout autour d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "danse",
+                    "expression": "rire",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
