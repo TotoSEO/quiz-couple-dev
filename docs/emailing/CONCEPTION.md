@@ -20,7 +20,7 @@ petite carte. Dès que l'adresse est acceptée, tout se déverrouille en une
 demi-seconde, et l'appareil s'en souvient deux ans (`localStorage`
 `qc-abonne`) : on ne redemande pas à la même personne à chaque test.
 
-**Depuis le 21 octobre 2026** (Thomas : « pour le nombre de visites peu de
+**Depuis le 20 octobre 2026** (Thomas : « pour le nombre de visites peu de
 gens me laissent leur email », « Plus qu'une étape pour découvrir vos
 résultats complets gratuits ! »), la carte dit, de haut en bas : « Vos
 résultats sont prêts » avec une coche verte, une barre presque pleine (une
@@ -105,7 +105,7 @@ RGPD) demande un accord explicite : une case à cocher, pas cochée d'avance,
 qui dit à quoi on s'engage. C'est le strict minimum, et c'est ce qu'il y a :
 une case, une phrase, le lien vers la confidentialité.
 
-Le 21 octobre 2026, Thomas a proposé « En cochant cette case j'accepte les
+Le 20 octobre 2026, Thomas a proposé « En cochant cette case j'accepte les
 politiques de confidentialité », pour ne plus parler d'e-mails. Ce n'est pas
 retenu : accepter une politique de confidentialité n'est pas consentir à
 recevoir des e-mails (la CNIL demande un accord propre à la prospection, et
@@ -158,7 +158,7 @@ confirmation de l'e-book.
 
 ## L'admin
 
-**Le taux de capture** (21 octobre 2026) : une cinquième tuile de l'onglet
+**Le taux de capture** (20 octobre 2026) : une cinquième tuile de l'onglet
 Leads rapporte les nouvelles adresses aux écrans de résultat vus sur les
 pages qui portent la porte (`/<page>/resultat/`, enregistrés par
 resultat-url.js, lus par `get_trafic_pages` dans les cinq langues ; les

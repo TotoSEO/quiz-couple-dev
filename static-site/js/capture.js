@@ -152,7 +152,7 @@
     porte.ouvrir = ouvrir;
   }
 
-  // La porte depuis le 21 octobre 2026 (Thomas : « pour le nombre de visites
+  // La porte depuis le 20 octobre 2026 (Thomas : « pour le nombre de visites
   // peu de gens me laissent leur email », « Plus qu'une étape pour découvrir
   // vos résultats complets gratuits ! ») : « vos résultats sont prêts » et une
   // barre presque pleine au lieu du cadenas, le titre de Thomas, le champ, une
