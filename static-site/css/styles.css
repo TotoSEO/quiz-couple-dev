@@ -11043,9 +11043,15 @@ body { padding-bottom: var(--pub-footer, 0px); }
    Le lien permanent de la plateforme est une pastille flottante posee
    par-dessus la page, en bas a droite. Le pied de page en propose deja
    un, traduit et range avec les autres liens, qui ouvre exactement le
-   meme panneau. On masque donc le sien d'emblee : masque seulement une
-   fois le notre affiche, il apparaissait puis disparaissait a chaque
-   chargement de page, le temps que la plateforme reponde.
+   meme panneau (et mene a la politique de confidentialite tant que la
+   plateforme n'a pas repondu). On masque donc le sien d'emblee : masque
+   seulement une fois le notre affiche, il apparaissait puis disparaissait
+   a chaque chargement de page, le temps que la plateforme reponde. Le
+   20 octobre 2026, The Moneytizer ne voyait « pas le bouton de
+   confidentialite » : c'est cette pastille qu'ils cherchaient ; notre
+   lien du pied de page, jusque-la masque jusqu'a la reponse de la
+   plateforme, est visible des le chargement depuis. Pour leur rendre la
+   pastille, retirer la premiere regle ci-dessous.
 
    Le seul cas ou il doit rester est une page sans notre lien : c'est
    consentement.js qui le signale, avant meme que la plateforme arrive,
