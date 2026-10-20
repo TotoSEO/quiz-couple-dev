@@ -372,6 +372,16 @@ let reviewStatsByQuiz = {};
 // n'existait que dans le balisage, le corps de page ne montrant qu'un tiret et
 // deux conteneurs vides remplis après coup par reviews.js.
 let reviewsRecents = [];
+// L'accueil cuit (20 octobre 2026) : le total des parties du hero et les trois
+// dernières publications Instagram sont lus une fois par construction et
+// écrits dans le HTML, comme les avis. Avant, chaque visite de l'accueil
+// demandait à la base les mille dernières notes, vingt avis, le total et les
+// trois publications : six requêtes et leurs préparations CORS, un quart des
+// 92 000 lignes de logs quotidiennes de la passerelle d'API (Supabase les
+// facture à l'octet, 7 Go en octobre pour 1 Go inclus) et près d'un
+// gigaoctet d'egress par mois pour les seules notes. Sans réponse au build,
+// home-dynamic.js et reviews.js redemandent comme avant.
+let accueilCuit = { quizTotal: null, instagram: null };
 // Les douze derniers avis de chaque page, et le fait que le chargement a
 // réussi : voir avisCuitsPour.
 let reviewsParQuiz = {};
@@ -855,6 +865,24 @@ async function fetchReviewStats() {
     }
   } catch (e) {
     console.warn(`[reviews] Could not fetch review stats: ${e.message}, using defaults`);
+  }
+}
+
+async function fetchAccueilCuit() {
+  try {
+    const v = await appelRpc('get_quiz_total', {});
+    const n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_total != null ? v[0].get_quiz_total : v[0])) : v;
+    if (Number.isFinite(Number(n))) accueilCuit.quizTotal = Number(n);
+    console.log(`[accueil] total des parties cuit : ${accueilCuit.quizTotal}`);
+  } catch (e) {
+    console.warn(`[accueil] get_quiz_total indisponible (${e.message}) : la page le demandera`);
+  }
+  try {
+    const posts = await appelRpc('get_instagram_recents', { p_limit: 3 });
+    if (Array.isArray(posts)) accueilCuit.instagram = posts;
+    console.log(`[accueil] ${Array.isArray(posts) ? posts.length : 0} publications Instagram cuites`);
+  } catch (e) {
+    console.warn(`[accueil] get_instagram_recents indisponible (${e.message}) : la page le demandera`);
   }
 }
 
@@ -1357,6 +1385,11 @@ async function generatePage(routeKey, lang) {
     // dans le corps de la page, sinon Google se réserve d'ignorer le balisage.
     reviewStats,
     reviewsRecents,
+    // Les avis sont cuits quand la base a répondu au build (reviews.js ne
+    // redemande alors rien) ; le total du hero et les publications Instagram
+    // de l'accueil suivent la même règle.
+    reviewsCuits: reviewsRecents.length > 0,
+    accueilCuit,
     // SEO
     title: escapeHtml(title),
     rawTitle: title,
@@ -2407,6 +2440,7 @@ async function main() {
   // Parties par page et lectures par article, écrites dans le HTML
   await fetchCompteursParties();
   await fetchLecturesArticles();
+  await fetchAccueilCuit();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {

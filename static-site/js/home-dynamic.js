@@ -45,7 +45,11 @@
       requestAnimationFrame(frame);
     };
     setCounter(baseline);
-    if (SB_URL && SB_KEY) {
+    // Le total est écrit dans la page au build (data-total) : rien à demander.
+    var totalCuit = counterEl.dataset.total;
+    if (totalCuit !== undefined && totalCuit !== '' && isFinite(Number(totalCuit))) {
+      animateTo(baseline + Number(totalCuit));
+    } else if (SB_URL && SB_KEY) {
       fetch(SB_URL + '/rest/v1/rpc/get_quiz_total', {
         method: 'POST',
         headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
@@ -78,17 +82,27 @@
         (son ? '<span class="ig-son">' + son + '</span>' : '') +
         '</a>';
     };
-    fetch(SB_URL + '/rest/v1/rpc/get_instagram_recents', {
-      method: 'POST',
-      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ p_limit: 3 })
-    })
-      .then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (posts) {
-        if (!Array.isArray(posts) || !posts.length || !igGrille) return;
-        igGrille.innerHTML = posts.map(igCarte).join('');
-        igSection.style.display = '';
+    var afficher = function (posts) {
+      if (!Array.isArray(posts) || !posts.length || !igGrille) return;
+      igGrille.innerHTML = posts.map(igCarte).join('');
+      igSection.style.display = '';
+    };
+    // Les publications sont écrites dans la page au build : on les lit là,
+    // et on ne demande à la base que si le bloc manque.
+    var cuit = document.getElementById('ig-recents-cuits');
+    var postsCuits = null;
+    if (cuit) { try { postsCuits = JSON.parse(cuit.textContent || 'null'); } catch (e) { postsCuits = null; } }
+    if (Array.isArray(postsCuits)) {
+      afficher(postsCuits);
+    } else {
+      fetch(SB_URL + '/rest/v1/rpc/get_instagram_recents', {
+        method: 'POST',
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_limit: 3 })
       })
-      .catch(function () { /* sans Supabase, la section reste masquée */ });
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(afficher)
+        .catch(function () { /* sans Supabase, la section reste masquée */ });
+    }
   }
 })();

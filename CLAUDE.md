@@ -125,6 +125,24 @@ Le build écrit au journal la médiane et le maximum des lectures. Les notes
 s'écrivent sur cinq avec la virgule de la langue (« 4,8/5 », « 4.8/5 » en
 anglais) : bandeau, avis du bas des pages, hero et section avis de l'accueil.
 
+L'accueil est cuit en entier depuis le 20 octobre 2026 (`fetchAccueilCuit`
+dans generate.js, `accueilCuit` et `reviewsCuits` passés aux gabarits) : le
+total des parties du hero (`data-total` sur le compteur, lu par
+home-dynamic.js) et les trois dernières publications Instagram (bloc JSON
+`#ig-recents-cuits`) sont lus une fois par construction, et reviews.js ne
+redemande ni les mille notes ni les vingt avis quand `#reviews-config` porte
+`data-cuit` ; « cette adresse a-t-elle déjà laissé un avis ? » (une fonction
+serveur et une lecture) n'est demandé qu'au premier geste sur le formulaire.
+Avant, chaque visite de l'accueil faisait six requêtes à la base avec leurs
+préparations CORS : les logs de la passerelle d'API de Supabase (92 000
+lignes par jour, facturées à l'octet à partir de 2027, 1 Go inclus sur le
+plan gratuit, 7 Go consommés en octobre) en venaient pour un quart, et les
+mille notes pesaient près d'un gigaoctet d'egress par mois. Sans réponse au
+build, chaque script redemande comme avant. Le workflow « Supabase ·
+inventaire » (`supabase-inventaire.yml`, à lancer à la main) lit la base, le
+stockage, les abonnés et les logs des dernières 24 heures par service et par
+chemin d'API : c'est là qu'on regarde avant de toucher à une requête.
+
 Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 le premier défilement, le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
