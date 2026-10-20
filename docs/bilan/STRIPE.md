@@ -139,8 +139,18 @@ dans les cinq langues.
    et échoue si `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` ou
    `RESEND_API_KEY` manque, vérifie que les fonctions `bilan`,
    `bilan-stripe` et `lead-capture` répondent, que le webhook refuse un
-   événement sans signature, et dit si la page de vente publiée est ouverte
-   ou fermée. À relancer après tout changement de clé.
+   événement sans signature, joue une évaluation fictive jusqu'à la page de
+   paiement (`_shared/bilan/sonde-vente.mjs` : créée, remplie d'un coup,
+   paiement demandé comme le fait la page, adresse `checkout.stripe.com`
+   attendue, puis supprimée ; rien n'est payé, la session Stripe expire
+   seule en 24 heures ; elle laisse une évaluation « sonde » dans les
+   compteurs du jour de l'admin, jamais une vente), et dit si la page de
+   vente publiée est ouverte ou fermée. À relancer après tout changement de
+   clé, et dès que des évaluations finissent sans qu'aucun paiement ne
+   s'ouvre : quand Stripe refuse de créer la session (compte pas encore
+   activé pour les paiements réels, clé révoquée), la page écrit « erreur
+   serveur » et l'admin ne compte rien, la sonde est le seul moyen de le
+   voir.
 4. `static-site/build/config.js` : `BILAN_OUVERT = true`. À la publication
    suivante :
    - la page est indexée et entre dans le plan du site, en tête des tests de
