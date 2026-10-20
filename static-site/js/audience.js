@@ -306,6 +306,32 @@
   }
   document.addEventListener('click', clicInstagram, true);
 
+  // ── Passage vers l'évaluation de couple ─────────────────────────────────
+  // Les liens du site vers l'évaluation disent d'où ils partent
+  // (data-bilan-src : menu, menu-mobile, pied, accueil, accueil-hero,
+  // resultat-<id>, bas-<id>, moteur-<id>) et, pour le bouton « seul(e) », la
+  // façon de faire (data-bilan-mode). Jusqu'au 20 octobre 2026 les deux
+  // étaient dans l'adresse (?src=, ?mode=) : le menu répétait
+  // /evaluation-de-couple/?src=menu sur chaque page du site, et Google avait
+  // indexé cinq de ces adresses malgré la balise canonique. L'adresse reste
+  // donc propre, et la source passe par localStorage (un lien ouvert dans un
+  // nouvel onglet ne reçoit pas le sessionStorage de celui-ci) ; bilan.js la
+  // reprend à l'arrivée si le clic date de moins de dix minutes, puis
+  // l'efface. Pas de filtre des robots ni du propriétaire ici : bilan.js
+  // trie déjà ce qu'il compte.
+  function clicEvaluation(e) {
+    if (e.type === 'auxclick' && e.button !== 1) return;
+    var lien = e.target && e.target.closest ? e.target.closest('a[data-bilan-src]') : null;
+    if (!lien) return;
+    var src = lien.getAttribute('data-bilan-src') || '';
+    if (!/^[a-z0-9-]{1,40}$/.test(src)) return;
+    try {
+      window.localStorage.setItem('qc-bilan-clic', JSON.stringify({ s: src, m: lien.getAttribute('data-bilan-mode') || '', t: Date.now() }));
+    } catch (er) {}
+  }
+  document.addEventListener('click', clicEvaluation, true);
+  document.addEventListener('auxclick', clicEvaluation, true);
+
   // ── Départ ──────────────────────────────────────────────────────────────
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement
   // inventerait des visites qui n'ont jamais eu lieu : on attend que la page
