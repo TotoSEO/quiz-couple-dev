@@ -1,0 +1,53 @@
+<%
+  // La bannière de l'évaluation de couple payante (19 octobre 2026, Thomas :
+  // « on ne va pas compter sur le SEO pour vendre »), une fois ouverte
+  // (BILAN_OUVERT, config.js), sur les pages qui y renvoient (BILAN_ENTREES,
+  // et chaque article de blog hors emprise, manipulation et infidélité) : aux
+  // couleurs de l'encart sous le verdict (.qr-bilan, styles.css), deux boutons
+  // (à deux, seul(e)) dont les liens portent ?src=bas-<id> pour l'onglet Bilan
+  // de l'admin. Incluse par related-tests.ejs (au-dessus des cartes « À faire
+  // ensuite »), par la page des questions de couple et par les articles ; ne
+  // rend rien quand l'évaluation est fermée ou que la page n'y renvoie pas.
+  const _bilan = (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
+  const _BILAN_BAS = {
+    fr: { sur: 'Évaluation de couple', titre: 'L\'évaluation complète de votre couple',
+          texte: '100 questions précises sur l\'argent, les enfants, où vivre, la fidélité... Chacun répond de son côté, ou vous répondez seul(e) si l\'autre n\'est pas prêt(e), et vous recevez un rapport de 40 pages qui compare les réponses, sujet par sujet.',
+          points: ['100 questions, à deux ou seul(e)', 'Construit à partir de la recherche en psychologie du couple', 'Un rapport PDF de 40 pages, avec des graphiques'],
+          bouton: 'Découvrir l\'évaluation', boutonSolo: 'La faire seul(e)', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+    en: { sur: 'Relationship assessment', titre: 'The complete assessment of your relationship',
+          texte: 'About a hundred specific questions on money, children, where to live, fidelity... Each of you answers on your own side, or you answer alone if the other isn\'t ready, and you get a 40-page report that compares the answers, topic by topic.',
+          points: ['100 questions, together or on your own', 'Built on research in couple psychology', 'A 40-page PDF report, with charts'],
+          bouton: 'Discover the assessment', boutonSolo: 'Take it on your own', prix: 'Free questions · report {{prix}} for both of you' },
+    es: { sur: 'Evaluación de pareja', titre: 'La evaluación completa de vuestra pareja',
+          texte: '100 preguntas concretas sobre el dinero, los hijos, dónde vivir, la fidelidad... Cada uno responde por su lado, o respondes a solas si el otro no está listo, y recibís un informe de 40 páginas que compara las respuestas, tema por tema.',
+          points: ['100 preguntas, en pareja o a solas', 'Construido a partir de la investigación en psicología de pareja', 'Un informe en PDF de 40 páginas, con gráficos'],
+          bouton: 'Descubrir la evaluación', boutonSolo: 'Hacerla a solas', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+    de: { sur: 'Beziehungsanalyse', titre: 'Die vollständige Analyse eurer Beziehung',
+          texte: '100 genaue Fragen zu Geld, Kindern, Wohnort, Treue... Jeder antwortet für sich, oder du antwortest allein, wenn der andere noch nicht bereit ist, und ihr bekommt einen Bericht mit 40 Seiten, der die Antworten vergleicht, Thema für Thema.',
+          points: ['100 Fragen, zu zweit oder allein', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit 40 Seiten, mit Grafiken'],
+          bouton: 'Die Analyse entdecken', boutonSolo: 'Sie allein machen', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+    it: { sur: 'Valutazione di coppia', titre: 'La valutazione completa della vostra coppia',
+          texte: '100 domande precise sui soldi, i figli, dove vivere, la fedeltà... Ciascuno risponde per conto suo, o rispondi da solo/a se l\'altro non è pronto, e ricevete un report di 40 pagine che confronta le risposte, tema per tema.',
+          points: ['100 domande, in due o da soli', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di 40 pagine, con grafici'],
+          bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+  };
+  const _bb = _BILAN_BAS[lang] || _BILAN_BAS.fr;
+%>
+<% if (_bilan) { %>
+<section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
+  <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
+  <div class="qr-bilan-corps">
+    <p class="qr-bilan-sur"><%= _bb.sur %></p>
+    <h3 class="qr-bilan-titre"><%= _bb.titre %></h3>
+    <p class="qr-bilan-texte"><%= _bb.texte %></p>
+    <ul class="qr-bilan-points">
+      <% for (const p of _bb.points) { %><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><%= p %></span></li><% } %>
+    </ul>
+    <div class="qr-bilan-boutons">
+      <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=bas-<%= _bilan.id %>"><%= _bb.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>?src=bas-<%= _bilan.id %>&amp;mode=solo#facons"><%= _bb.boutonSolo %></a>
+    </div>
+    <p class="qr-bilan-prix"><%= _bb.prix.replace('{{prix}}', bilanPrix) %></p>
+  </div>
+</section>
+<% } %>

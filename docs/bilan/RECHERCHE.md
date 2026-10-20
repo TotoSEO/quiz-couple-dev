@@ -1,0 +1,422 @@
+# Bilan de couple : la recherche derrière les questions
+
+Document interne. Les sources ne sont citées nulle part sur le site ni dans
+le rapport (demande de Thomas, 18 octobre 2026) ; elles sont ici pour que
+chaque question puisse être justifiée, et pour que ce que dit la page de
+vente reste vrai.
+
+Chaque référence a été vérifiée (titre, revue, année) le 18 octobre 2026.
+Quand un chiffre ne vient que d'articles de presse ou de résumés, c'est
+écrit.
+
+## Ce que la page de vente a le droit de dire
+
+- Les questions s'appuient sur des travaux de recherche publiés en
+  psychologie, en sociologie et en économie du couple : études
+  longitudinales qui suivent des couples pendant des années, méta-analyses
+  qui réunissent des dizaines d'études, thèses, et les questionnaires de
+  préparation au mariage utilisés par les conseillers conjugaux.
+- Le bilan s'appuie sur plus de trente études (34 dans la liste ci-dessous).
+- Les douze domaines reprennent ceux des inventaires de préparation au
+  mariage (communication, résolution des conflits, argent, loisirs,
+  sexualité, enfants et éducation, famille et amis, rôles, valeurs).
+- Les attitudes de dispute repérées par la recherche comme les plus liées à
+  l'usure d'un couple (reproches qui visent la personne, mépris, défense,
+  fermeture) sont mesurées, ainsi que la capacité à se réconcilier.
+- Ce que la page ne doit pas dire : que le bilan est « validé
+  scientifiquement », qu'il prédit une séparation, ou un pourcentage de
+  réussite. Ce n'est pas un test clinique étalonné, c'est un questionnaire
+  construit à partir de la recherche.
+
+## Le cadre général
+
+1. **Olson, PREPARE/ENRICH.** Fowers & Olson (1986), « Predicting marital
+   success with PREPARE: A predictive validity study », *Journal of Marital
+   and Family Therapy* 12(4) ; réplique : Larsen & Olson (1989), même revue.
+   Trois mois avant le mariage, les réponses des deux fiancés distinguent à
+   80-90 % les couples heureux trois ans plus tard des couples séparés.
+   C'est le modèle du bilan : chacun répond de son côté, on compare les
+   deux séries, domaine par domaine. Les domaines (communication, conflits,
+   argent, loisirs, sexualité, enfants, famille et amis, rôles, valeurs)
+   sont repris presque tels quels.
+2. **Joel et al. (2020)**, « Machine learning uncovers the most robust
+   self-report predictors of relationship quality across 43 longitudinal
+   couples studies », *PNAS* 117(32), 19061-19071. Sur 43 études et
+   11 000 couples, les meilleurs prédicteurs de la qualité d'une relation
+   sont propres à la relation : l'engagement perçu du partenaire,
+   l'appréciation, la satisfaction sexuelle, la satisfaction perçue du
+   partenaire, le conflit. D'où met10, met11, int7, met1 et le domaine
+   disputes.
+3. **Le, Dove, Agnew, Korn & Mutso (2010)**, « Predicting nonmarital
+   romantic relationship dissolution: A meta-analytic synthesis »,
+   *Personal Relationships* 17(3), 377-390. 137 études, 37 761 personnes :
+   l'engagement, l'amour, l'inclusion de l'autre dans le soi et la
+   dépendance prédisent le mieux la rupture ; la personnalité, peu. Le
+   bilan parle donc de la relation et des projets, pas de la personnalité.
+4. **Spanier (1976)**, Dyadic Adjustment Scale, *Journal of Marriage and the
+   Family* 38 ; traduction française : Baillargeon, Dubois & Marineau
+   (1986), « Traduction française de l'échelle d'ajustement dyadique »,
+   *Revue canadienne des sciences du comportement* 18. Accord sur les
+   finances, les loisirs, la religion, les amis, les buts, le temps
+   ensemble ; fréquence des disputes ; « regrettez-vous ? ». D'où met5,
+   met8 et l'idée de comparer les accords sujet par sujet.
+5. **Funk & Rogge (2007)**, « Testing the ruler with item response theory »,
+   *Journal of Family Psychology* 21(4), 572-583 (Couples Satisfaction
+   Index). Le « bonheur, tout bien considéré » est l'item qui mesure le
+   mieux la satisfaction : met1.
+
+## Domaine par domaine
+
+### Le quotidien à la maison (quo1 à quo8)
+
+- **Daminger (2019)**, « The Cognitive Dimension of Household Labor »,
+  *American Sociological Review* 84(4), 609-633 ; thèse de doctorat à
+  Harvard (2022), « Thinking Gender: The Cognitive Dimensions of Household
+  Labor ». Anticiper, chercher des solutions, décider, surveiller : un
+  travail invisible, plus souvent porté par les femmes, et source fréquente
+  de conflit parce qu'il est invisible aux deux. D'où quo2 et quo2b
+  (« qui pense à tout ») distincts de quo1 (« qui fait »).
+- **Haicault (1984)**, la notion de « charge mentale » (la gestion de deux
+  espaces-temps imbriqués par les mères qui travaillent), reprise plus tard
+  par Nicole Brais (Université Laval). Origine française du mot.
+- **Carlson, Miller, Sassler & Hanson (2016)**, « The Gendered Division of
+  Housework and Couples' Sexual Relationships: A Re-Examination »,
+  *Journal of Marriage and Family*. Résultats discutés (le communiqué et le
+  résumé ne disent pas la même chose) : on ne s'en sert pas pour une
+  affirmation chiffrée.
+- Les questions « qui » se répondent en « surtout moi » / « surtout
+  l'autre » et la réponse de l'autre est retournée : chacun voit mieux ce
+  qu'il fait, d'où le repérage « chacun pense en faire plus ».
+- **Larson, Crane & Smith (1991)**, « Morning and night couples: The effect
+  of wake and sleep patterns on marital adjustment », *Journal of Marital
+  and Family Therapy* 17, 53-65 ; Gunn et al. (2021), *Sleep Health*
+  (concordance du sommeil et interactions positives). quo4.
+
+### Le temps à deux (tps1 à tps9)
+
+- **Aron, Norman, Aron, McKenna & Heyman (2000)**, « Couples' shared
+  participation in novel and arousing activities and experienced
+  relationship quality », *Journal of Personality and Social Psychology*
+  78(2), 273-284. Les activités nouvelles partagées font baisser l'ennui et
+  montent la qualité de la relation, y compris en laboratoire : tps9.
+- **McDaniel & Coyne (2016)**, « "Technoference": The interference of
+  technology in couple relationships », *Psychology of Popular Media
+  Culture* 5, 85-98. Plus d'interruptions par les écrans, plus de conflits
+  sur les écrans, moins de satisfaction : tps3.
+- **Gottman**, la réponse aux « appels à l'attention » (bids) : se tourner
+  vers l'autre, s'en détourner ou contre lui. Les chiffres qui circulent
+  (86 % contre 33 %) viennent d'ouvrages grand public, pas vérifiés dans
+  l'article de 2004 : ne pas les citer. tps7, met9.
+
+### Famille et amis (ent1 à ent7)
+
+- **Orbuch, Bauermeister, Brown & McKinley (2013)**, « Early family ties and
+  marital stability over 16 years: The context of race and gender »,
+  *Family Relations* 62(2). La proximité avec la belle-famille la première
+  année est liée au risque de divorce, différemment selon le genre : ent1,
+  ent2.
+- **Bryant, Conger & Meehan (2001)**, *Journal of Marriage and Family* :
+  l'influence de la belle-famille sur l'évolution du couple. ent2.
+- **Petronio**, théorie de la gestion de la vie privée (Communication
+  Privacy Management) : ce qu'on raconte aux autres de son couple, et les
+  règles qu'on fixe à deux. ent7.
+
+### Le travail et les ambitions (tra1 à tra7)
+
+- **Bertrand, Kamenica & Pan (2015)**, « Gender identity and relative income
+  within households », *Quarterly Journal of Economics* 130(2), 571-614.
+  Quand la femme gagne plus, les couples sont en moyenne moins satisfaits
+  et divorcent plus : tra6.
+- **Drigotas, Rusbult, Wieselquist & Whitton (1999)**, le « phénomène de
+  Michel-Ange », *Journal of Personality and Social Psychology* : le
+  partenaire qui soutient les projets de l'autre l'aide à devenir qui il
+  veut être. tra3.
+- **Repetti** (années 1980-2000), le report du stress de la journée de
+  travail sur la soirée à la maison : tra5.
+
+### L'argent (arg1 à arg8)
+
+- **Papp, Cummings & Goeke-Morey (2009)**, « For richer, for poorer: Money as
+  a topic of marital conflict in the home », *Family Relations* 58(1),
+  91-103. 748 disputes notées au jour le jour par 100 couples : celles sur
+  l'argent sont plus envahissantes, plus récurrentes et restent plus
+  souvent sans solution.
+- **Dew, Britt & Huston (2012)**, « Examining the relationship between
+  financial issues and divorce », *Family Relations* 61.
+- **Rick, Small & Finkel (2011)**, « Fatal (fiscal) attraction: Spendthrifts
+  and tightwads in marriage », *Journal of Marketing Research*, 228-237.
+  Les économes épousent souvent des dépensiers, et l'écart prédit les
+  disputes d'argent et une moindre satisfaction : arg4, arg5.
+- **Olson et al. (2023)**, essai randomisé sur environ 230 couples : ceux à
+  qui l'on a fait ouvrir un compte commun ont une meilleure qualité de
+  relation deux ans plus tard (référence de presse : UCLA Anderson Review ;
+  revue non vérifiée, ne pas citer de chiffre). arg1.
+- **Garbinsky, Gladstone, Nikolova & Olson (2019)**, « Love, lies, and money:
+  Financial infidelity in romantic relationships », *Journal of Consumer
+  Research*. Cacher des dépenses, un compte : arg3.
+
+### Où et comment vivre (log1 à log7)
+
+- **Stanley, Rhoades & Markman (2006)**, « Sliding versus deciding: Inertia
+  and the premarital cohabitation effect », *Family Relations* 55(4),
+  499-509. Emménager « en glissant » plutôt qu'en décidant ensemble ajoute
+  des contraintes sans engagement : log1.
+- **Mincer (1978)**, « Family migration decisions », *Journal of Political
+  Economy* ; la mobilité d'un couple pour le travail de l'un, au détriment
+  de la carrière de l'autre : log5.
+
+### Les enfants (enf1 à enf14)
+
+- **Thomson (1997)**, « Couple childbearing desires, intentions, and
+  births », *Demography* 34(3), 343-354 ; Thomson & Hoem (1998), même
+  revue. Les désirs d'enfant des deux comptent, et le désaccord pèse sur ce
+  qui arrive ensuite : enf1, enf2.
+- **Doss, Rhoades, Stanley & Markman (2009)**, « The effect of the
+  transition to parenthood on relationship quality: An 8-year prospective
+  study », *Journal of Personality and Social Psychology* 96(3), 601-619.
+  Baisse soudaine et durable de la qualité de la relation après le premier
+  enfant, pour les pères comme pour les mères : enf5, enf6.
+- **Kleven, Landais & Søgaard (2019)**, « Children and gender inequality:
+  Evidence from Denmark », *American Economic Journal: Applied Economics*
+  11(4), 181-209. Un écart de revenus d'environ 20 % entre mères et pères,
+  durable, à l'arrivée des enfants : enf6.
+- **Feinberg (2003)**, « The internal structure and ecological context of
+  coparenting », *Parenting: Science and Practice* 3(2), 95-131. Accord sur
+  l'éducation, partage des tâches, soutien ou sape du rôle de l'autre :
+  enf4, enf5, enf7.
+- **Ganong & Coleman**, travaux sur les familles recomposées : le beau-parent
+  gagne d'abord l'affection avant de poser des règles. enf8.
+- **Doss et al. (2009)**, déjà cité, et **Feinberg (2003)** pour les couples
+  qui ont déjà des enfants : le temps à deux qui disparaît après la naissance
+  (enf2b) et le sentiment de former une équipe de parents, la coparentalité,
+  qui pèse plus sur le couple que le partage des tâches (enf3b).
+- **Agrillo & Nelini (2008)**, « Childfree by choice: a review », *Journal of
+  Cultural Geography* 25(3), 347-363 ; **Blackstone & Stewart (2012)**,
+  « Choosing to be childfree », *Sociology Compass* 6(9), 718-727 ; **Neal &
+  Neal (2022)**, « Prevalence, age of decision, and interpersonal warmth
+  judgements of childfree adults », *Scientific Reports* 12, 11907. La
+  décision de ne pas avoir d'enfant se prend tôt et bouge peu ; ce qui pèse
+  sur le couple, c'est que l'un des deux change (enf9), le projet de vie qui
+  prend la place (enf11) et ce qu'on veut laisser (val2b).
+- **Park (2002)**, « Stigma management among the voluntarily childless »,
+  *Sociological Perspectives* 45(1), 21-45 : la pression de l'entourage et
+  les façons d'y répondre (enf10).
+- **Dykstra & Hagestad (2007)**, « Roads less taken: Developing a nuanced
+  view of older adults without children », *Journal of Family Issues* 28(10),
+  1275-1310 : les personnes âgées sans enfant ne sont pas plus isolées quand
+  elles ont construit un entourage (enf13), et le rôle auprès des enfants des
+  proches ou le soin donné ailleurs (enf12, enf14).
+
+### Les valeurs (val1 à val8, et val2b)
+
+- **Luo & Klohnen (2005)**, « Assortative mating and marital quality in
+  newlyweds: A couple-centered approach », *Journal of Personality and
+  Social Psychology* 88, 304-326 ; **Gaunt (2006)**, « Couple similarity and
+  marital satisfaction: Are similar spouses happier? », *Journal of
+  Personality* 74(5). Les couples se ressemblent surtout sur les valeurs et
+  la religion ; le lien avec la satisfaction est plus net pour la
+  personnalité et les valeurs que pour les attitudes. On ne prétend donc
+  pas qu'un écart de valeurs prédit le malheur : on dit qu'il pèse sur les
+  décisions (transmettre une religion, se marier). val1 à val8.
+- **Stanley & Markman (1992)**, l'engagement comme dévouement et comme
+  contrainte, *Journal of Marriage and the Family* ; l'engagement
+  asymétrique (Stanley et al., 2017). val3, val3b, met11.
+
+### Communication et disputes (dis1 à dis12)
+
+- **Gottman & Levenson (1992, 2000)** ; Gottman (1994). Les « quatre
+  cavaliers » : critique (le reproche qui vise la personne), mépris,
+  attitude défensive, fermeture (stonewalling) ; le mépris est décrit comme
+  le prédicteur le plus fort de la séparation. Les études ont suivi des
+  couples jusqu'à quatorze ans. Réserve : une partie des modèles de
+  prédiction a été construite et testée sur les mêmes échantillons, et une
+  équipe indépendante n'a pas retrouvé tous les résultats ; on parle donc
+  de « signaux » et jamais de prédiction. dis8 à dis11.
+- **La réparation** (repair attempts, Gottman) : ce qui distingue les couples
+  qui durent n'est pas l'absence de disputes mais la capacité à revenir
+  l'un vers l'autre. dis12, dis4.
+- **Le débordement physiologique** (flooding) et la pause de vingt minutes
+  (laboratoire de Gottman ; recommandation clinique, le seuil de 100
+  battements par minute n'est qu'un repère) : dis2, dis11.
+- **Schrodt, Witt & Shimkowski (2014)**, méta-analyse du schéma « l'un
+  insiste, l'autre se retire » (demand/withdraw), *Communication
+  Monographs* : 74 études, plus de 14 000 personnes ; moins de
+  satisfaction, moins d'intimité, quel que soit celui qui insiste. dis2,
+  dis11.
+- **Christensen & Heavey (1990)**, *Journal of Personality and Social
+  Psychology* : l'origine du schéma insister/se retirer.
+- **Cutrona (1990)**, « Stress and social support: In search of optimal
+  matching », *Journal of Social and Clinical Psychology* 9(1), 3-14 ;
+  Cutrona, Shaffer & Wesner (2007), *Journal of Family Psychology* : un
+  soutien qui ne correspond pas au besoin (des conseils quand on veut être
+  écouté) baisse la satisfaction. dis6.
+- **Bolger, Zuckerman & Kessler (2000)**, « Invisible support and adjustment
+  to stress », *Journal of Personality and Social Psychology* 79(6),
+  953-961 : le soutien le plus efficace est souvent celui qu'on ne remarque
+  pas. dis6, met3.
+- Gottman, les problèmes « perpétuels » (environ deux tiers des conflits
+  reviennent sans jamais se régler) : chiffre de vulgarisation, non
+  retrouvé dans un article ; sert seulement à écrire, sans chiffre, que
+  certains désaccords se gèrent plus qu'ils ne se règlent.
+
+### Confiance et fidélité (con1 à con8)
+
+- Les définitions de l'infidélité varient beaucoup d'une personne à l'autre
+  (flirt en ligne, baiser, relation cachée) : con2 compare les deux
+  limites plutôt que de juger.
+- **Shackelford, Buss & Bennett (2002)**, « Forgiveness or breakup: Sex
+  differences in responses to a partner's infidelity », *Cognition and
+  Emotion* : con8.
+- **Conley et al. (2013)**, travaux sur les relations consensuellement non
+  monogames, *Analyses of Social Issues and Public Policy* : con7 posé sans
+  jugement.
+
+### Intimité et tendresse (int1 à int8)
+
+- **Muise, Schimmack & Impett (2016)**, « Sexual frequency predicts greater
+  well-being, but more is not always better », *Social Psychological and
+  Personality Science* 7. Plus de 30 000 personnes ; le lien avec le
+  bien-être plafonne autour d'une fois par semaine. int1 : on compare les
+  envies, on ne fixe pas de norme.
+- **Day, Muise, Joel & Impett (2015)**, « To do it or not to do it? How
+  communally motivated people navigate sexual interdependence dilemmas »,
+  *Personality and Social Psychology Bulletin* : les écarts de désir ne
+  condamnent pas un couple, la façon de les vivre compte. int1, int8.
+- **Mallory, Stanton & Handy (2019)**, « Couples' sexual communication and
+  dimensions of sexual function: A meta-analysis », *Journal of Sex
+  Research* 56(7), 882-898 ; et une méta-analyse de 2022 (*Journal of
+  Family Psychology*, 93 études) : parler de sexualité va avec plus de
+  satisfaction sexuelle et conjugale. int3.
+- **Joel et al. (2020)**, voir plus haut : la satisfaction sexuelle est l'un
+  des cinq meilleurs prédicteurs. int7.
+
+### Comment vous allez (met1 à met12)
+
+- **Gable, Reis, Impett & Asher (2004)**, « What do you do when things go
+  right? The intrapersonal and interpersonal benefits of sharing positive
+  events », *Journal of Personality and Social Psychology* 87(2), 228-245.
+  La réaction aux bonnes nouvelles (enthousiaste et active, ou passive,
+  ou destructrice) est liée à la qualité de la relation, et une étude
+  suivante la trouve plus liée aux ruptures que la réaction aux mauvaises
+  nouvelles : met9.
+- **Gordon, Impett, Kogan, Oveis & Keltner (2012)**, « To have and to hold:
+  Gratitude promotes relationship maintenance in intimate bonds », *Journal
+  of Personality and Social Psychology* 103(2), 257-274 ; **Algoe (2012)**,
+  « Find, remind, and bind », *Social and Personality Psychology Compass*.
+  Se sentir apprécié rend plus reconnaissant, plus attentif et plus
+  engagé : met10.
+- **Joel et al. (2020)** : engagement perçu du partenaire et appréciation en
+  tête des prédicteurs : met10, met11.
+- **Gottman**, les « cartes d'amour » (love maps), connaître le monde
+  intérieur de l'autre : met12.
+- **Reis & Shaver (1988)**, le modèle de l'intimité par la réactivité perçue
+  (se sentir compris, accepté, pris en compte) : met2, met6.
+
+## Ce que le calcul en fait
+
+- Les questions de comparaison font l'**indice d'alignement** (l'accord des
+  réponses, pondéré par le poids de chaque question, de 1 à 3 : voir
+  « Le poids des questions » ci-dessous), comme les scores d'accord de
+  PREPARE/ENRICH.
+- Les questions d'état font l'**indice de climat** : comment chacun vit la
+  relation en ce moment (satisfaction, écoute, soutien, appréciation,
+  engagement perçu, réaction aux bonnes nouvelles, et la fréquence des
+  attitudes de dispute).
+- Les cinq questions `signal` font la page « Signaux de vigilance » : chaque
+  attitude, la fréquence donnée par chacun des deux, sans verdict.
+
+## Cent questions pour tout le monde
+
+Depuis le 19 octobre 2026 (Thomas : « il en faut 100, c'est symbolique »),
+chaque personne répond à exactement cent questions, quelle que soit sa
+situation et quoi qu'elle réponde. La réserve en compte 118 : 90 posées à
+tout le monde, et 28 à condition, par paires. Chaque question qui dépend de
+la situation a sa jumelle dans l'autre cas (quo1 et quo1b selon qu'on vit
+ensemble ou pas, arg7 et arg7b, log3 et log3b, enf1 et enf1b, val3 et
+val3b...) ; sur les enfants, chaque combinaison (enfants ou pas, enfants d'une
+relation précédente ou pas) donne trois questions. Les sept questions qui
+disparaissent quand on répond « Non » à « Avoir des enfants » (enf2 à enf7
+et val2) sont remplacées par sept questions sur la vie sans enfants (enf9 à
+enf14 et val2b, `siRep: { enf1: [3] }`), cachées tant que enf1 n'a pas de
+réponse (`alternative: true` dans coeur.mjs) pour que le total affiché ne
+bouge pas. Le test `coeur.test.mjs` parcourt les 384 situations et les cinq
+réponses possibles à enf1 : 100 à chaque fois. Le domaine « Où et comment
+vivre » reste à six questions, « Comment vous allez » à douze.
+
+## Le poids des questions
+
+Depuis la version 3 (19 octobre 2026, demande de Thomas : « certaines
+questions peuvent avoir plus de poids que les autres en fonction de
+l'importance de cette dernière »), chaque question porte un `poids` de 1 à 3
+dans `coeur.mjs`. Il sert partout où une moyenne est faite : le score d'un
+domaine est la moyenne des proximités pondérée par le poids, l'alignement la
+moyenne des domaines, le climat la moyenne pondérée des questions d'état, et
+la priorité d'un écart (l'ordre des « quatre prochaines conversations »)
+compte 12 points par unité de poids. Dans le rapport, une question de
+poids 3 porte l'étiquette « Sujet décisif », et les accords sur ces
+questions font le « socle » de la synthèse de fin.
+
+La règle, et ce qui la justifie :
+
+- **3, les sujets qui engagent une vie entière**, ceux que les couples ne
+  peuvent pas « couper en deux » et que les questionnaires prénuptiaux
+  rangent dans les attentes majeures : avoir des enfants et quand (enf1,
+  enf2, enf1b), vivre ensemble et où (log1, log2), devenir propriétaires
+  (log3), déménager loin pour l'autre (log5), vivre à l'étranger (log6), un
+  animal (quo7), accueillir un parent âgé (ent6), transmettre une religion
+  (val2), le mariage ou le PACS (val3), ce qu'est tromper (con2) et le
+  couple ouvert (con7). Ce sont les questions `decisif` : un écart y est
+  « à trancher », et « bloquant » si l'un des deux l'a marqué non
+  négociable.
+- **3 aussi, les mesures les plus solides du climat**, celles que la
+  recherche relie le plus fortement à la satisfaction et à la durée (voir
+  les sections « Communication et disputes », « Intimité » et « Comment
+  vous allez » plus haut) : le mépris dans les disputes (dis9, le signal le
+  plus prédictif chez Gottman), la satisfaction de la vie intime (int7), le
+  bonheur ressenti (met1), se voir ensemble dans dix ans (met7), choisir
+  l'autre à nouveau (met8), se sentir apprécié (met10) et l'engagement perçu
+  de l'autre (met11).
+- **2, les sujets de structure** que les études relient à la satisfaction
+  sans engager toute une vie : la charge mentale et les tâches (quo1, quo2),
+  le temps à deux et pour soi (tps1, tps2, tps7, tps9), les familles (ent1,
+  ent2, ent5), la place du travail et l'argent (tra1 à tra3, tra6, arg1 à
+  arg4, arg6, arg8), le logement actuel et la proximité des familles (log3b,
+  log4), l'éducation (enf3 à enf6, enf8), la religion et les valeurs (val1,
+  val3b, val5, val6), la façon de se disputer (dis1, dis2, dis4 à dis8,
+  dis10 à dis12), la jalousie et l'infidélité (con5, con8), l'intimité
+  (int1 à int3, int6, int8) et le reste du climat (met2 à met6, met9,
+  met12).
+- **1, les goûts et les habitudes** : l'heure du coucher, le rangement, les
+  week-ends, recevoir, les repas (quo3 à quo6, quo8), le téléphone, les
+  loisirs, les sorties, les vacances, les dates à fêter (tps3 à tps6, tps8),
+  les fêtes de fin d'année, les amis, ce qu'on raconte aux proches (ent3,
+  ent4, ent7), gagner beaucoup, raconter sa journée, un projet à deux (tra4,
+  tra5, tra7), 1 000 € tombés du ciel, qui gère les papiers (arg5, arg7), la
+  déco (log7), les grands-parents (enf7), l'écologie, les traditions, la
+  politique (val4, val7, val8), aller se coucher fâchés (dis3), le
+  téléphone de l'autre, les ex, les amitiés proches, les codes (con1, con3,
+  con4, con6), l'initiative et la nouveauté (int4, int5). Un désaccord y est
+  réel, et il peut peser au quotidien, mais il se négocie : il ne doit pas
+  faire baisser l'alignement autant qu'un désaccord sur les enfants.
+
+Le poids ne change rien à la catégorie d'une réponse (accord, proche, écart),
+qui reste la distance entre les deux réponses. Il ne change pas non plus les
+seuils des bandes. Les tests de `coeur.test.mjs` vérifient qu'un écart sur une
+question de poids 3 fait plus baisser le score du domaine qu'un écart de
+poids 1, et que chaque question décisive est bien de poids 3.
+
+## Des réponses sans bonne réponse
+
+Relecture du 19 octobre 2026 (Thomas : « les réponses possibles doivent
+toujours être bien choisies, impartiales ; l'utilisateur ne doit pas avoir à
+choisir entre noir et blanc »). Les questions à échelle ont quatre réponses
+graduées, jamais deux ; aucune réponse ne doit sonner comme la bonne ou la
+mauvaise, ni juger la personne qui la choisit. Cinq séries ont été réécrites
+dans les cinq langues : le téléphone de l'autre (con1, « Normal, on n'a rien
+à se cacher » laissait entendre le contraire pour les autres réponses), la
+jalousie (con5, « Une preuve d'amour » et « Toxique » étaient deux verdicts),
+les codes (con6), l'écart de salaire (tra6) et l'aide à la famille (arg8,
+« chacun ses affaires » jugeait). Les questions d'état gardent leurs
+formulations en « il arrive que » : elles décrivent une fréquence, pas une
+faute.
+

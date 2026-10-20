@@ -1,0 +1,99 @@
+{
+  "title": "Terms of sale",
+  "majLe": "Last updated: 20 October 2026",
+  "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
+  "liens": {
+    "contact": "contact page",
+    "confidentialite": "privacy policy",
+    "bilan": "relationship assessment"
+  },
+  "vendeur": {
+    "titre": "The seller",
+    "nom": "Name:",
+    "statut": "Status:",
+    "siret": "SIRET (French business ID):",
+    "adresse": "Address:",
+    "email": "Email:",
+    "tva": "VAT:",
+    "tvaValeur": "VAT not applicable, article 293 B of the French General Tax Code",
+    "telephone": "Phone:"
+  },
+  "sections": [
+    {
+      "titre": "1. What is sold",
+      "p": [
+        "The relationship assessment is a questionnaire that two partners each answer separately, or that one person answers alone, also saying what they think their partner would answer (solo mode). Answering the questions is free; no result is given without a purchase.",
+        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document sent by email, and the same version available on the assessment page.",
+        "The assessment is for adults only. The report is an ordinary PDF file that opens in any PDF reader, on a phone or a computer; the same version can be read on the assessment page. The terms that apply to a purchase are those online at the time of payment."
+      ]
+    },
+    {
+      "titre": "2. The price",
+      "p": [
+        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both. In solo mode, the report is only provided to the person who answered.",
+        "The price is shown on the assessment page before the first question, and again before payment."
+      ]
+    },
+    {
+      "titre": "3. Ordering and payment",
+      "p": [
+        "Payment is offered to each partner as soon as they have finished their own answers. Before paying, the buyer can enter the email address where the report should be sent, and ticks a box by which they expressly request that the report be provided as soon as it is ready, without waiting for the end of the withdrawal period, and acknowledge that they lose their right of withdrawal once the report is provided (see section 5). The email that delivers the report repeats this request and this acknowledgement.",
+        "Payment is made on the secure page of our provider Stripe, by bank card, Apple Pay or Google Pay. We never have access to card details. Stripe sends a receipt to the email address given at payment: this is the order confirmation. An invoice can be requested from the {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. Providing the report",
+      "p": [
+        "The report is produced as soon as payment is confirmed and both partners have finished answering (or, in solo mode, the person has finished). It is then sent as a PDF to the email addresses given, and shown on the assessment page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the assessment is erased.",
+        "If the partner doesn't finish their answers, the report can't be produced: the buyer can then ask for a refund at any time from the {{contact}}.",
+        "Either partner can delete the assessment before then. Deletion is immediate and permanent, for both, and gives no right to any refund."
+      ]
+    },
+    {
+      "titre": "5. The right of withdrawal",
+      "p": [
+        "The report is digital content supplied without a physical medium. For this type of content, Article L221-28 13° of the French Consumer Code (which implements Article 16(m) of Directive 2011/83/EU) provides that the fourteen-day right of withdrawal can no longer be exercised once performance has begun with the consumer's express consent and after they have acknowledged that they thereby lose that right. That is what the buyer accepts by ticking the box before paying.",
+        "The report is provided at the moment it is sent by email or made available on the assessment page, whichever comes first. From that moment the right of withdrawal has ended: the purchase is final and can no longer be refunded on that basis.",
+        "As long as the report has not been provided, for instance because the partner has not finished answering, the buyer may withdraw without giving any reason within fourteen days of payment, by writing to us from the {{contact}}. They are then refunded in full, to the payment method used, within fourteen days."
+      ]
+    },
+    {
+      "titre": "6. After the report is provided",
+      "p": [
+        "Once the report has been provided, no refund is due. The report is built from the answers given: a result you dislike, that surprises you or that doesn't match the idea you had of your relationship is not a defect of the report, and gives no right to a refund or compensation.",
+        "The report is covered by the legal guarantee of conformity for digital content (Articles L224-25-12 and following of the French Consumer Code). If the file won't open, if the report is incomplete or if it doesn't match what section 1 describes, write to us from the {{contact}}: we fix it or produce it again at no cost and, if that isn't possible, we refund you."
+      ]
+    },
+    {
+      "titre": "7. What the assessment is, and what it isn't",
+      "p": [
+        "The relationship assessment is a tool for information and discussion. It sets the two partners' answers side by side, or, in solo mode, your answers and what you think theirs would be, and suggests topics to talk about. No professional is involved: it is not a diagnosis, not therapy and not medical, psychological, legal or financial advice, and no result is a statement of truth about your relationship or about what will become of it.",
+        "The decisions you make in your life based on the report, whether to stay together, separate, marry, have a child, move, spend money or anything else, are yours and your sole responsibility. We guarantee no outcome and are not answerable for those decisions or their consequences. If you are going through a hard time, a couples counsellor or therapist can help; if you are afraid of your partner, call a domestic abuse helpline (0808 2000 247 in the UK, 1-800-799-7233 in the US) or the helpline in your country.",
+        "We do our best to keep the service available at all times, but a temporary interruption (maintenance, a provider outage) cannot be ruled out. If a paid report remains inaccessible through our fault, we provide it again or refund it. Our liability can only be engaged under the conditions provided by law."
+      ]
+    },
+    {
+      "titre": "8. Personal data",
+      "p": [
+        "The assessment answers, which may touch on intimate life and beliefs, are only saved with each partner's explicit consent and are only used for the assessment. The email address given to receive the report is only used to send it. How long data is kept, your rights and the list of providers are detailed in our {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Complaints and mediation",
+      "mediation": true,
+      "p": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days.",
+        "If the disagreement continues, you can turn free of charge to the consumer mediator we belong to: {{mediateur}}, within one year of your written complaint."
+      ],
+      "pSans": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days."
+      ]
+    },
+    {
+      "titre": "10. Applicable law",
+      "p": [
+        "These terms are governed by French law. In the event of a dispute, and failing an amicable solution, the competent courts are those designated by law; a consumer may also bring the matter before the court of the place where they lived at the time of payment. If you live in another country of the European Union, you keep the protection of the mandatory rules of your country of residence."
+      ]
+    }
+  ]
+}

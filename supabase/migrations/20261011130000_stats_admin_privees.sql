@@ -31,7 +31,7 @@ begin
   for f in
     select p.oid::regprocedure from pg_proc p join pg_namespace n on n.oid = p.pronamespace
     where n.nspname = 'public' and p.proname in (
-      'get_instagram_clics',
+      'get_bilan_tableau', 'get_instagram_clics',
       'get_quiz_daily', 'get_quiz_daily_par_quiz', 'get_quiz_daily_total',
       'get_quiz_starts_daily_par_quiz', 'get_quiz_starts_total',
       'get_salon_counts', 'get_salon_counts_depuis', 'get_salon_daily', 'get_salon_total',

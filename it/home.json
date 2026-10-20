@@ -18,6 +18,20 @@
       "totalLabel": "quiz e test svolti"
     }
   },
+  "evaluation": {
+    "sur": "Novità · Valutazione di coppia",
+    "titre": "Volete la stessa vita, tutti e due?",
+    "texte": "100 domande precise su dodici aree della vita a due, costruite sulla ricerca in psicologia di coppia, e un report di 40 pagine che mette le vostre risposte a confronto. In due, ciascuno sul proprio telefono, o da soli se l'altro non è pronto a parlarne.",
+    "points": [
+      "Ciascuno risponde per conto suo, senza vedere le risposte dell'altro",
+      "Un report di 40 pagine, con grafici e spunti per parlarne",
+      "Domande gratuite · {{prix}} per il report, alla fine"
+    ],
+    "ctaDuo": "Fare la valutazione in due",
+    "ctaSolo": "Farla da solo/a",
+    "ctaCourt": "Valutare la coppia",
+    "legende": "Una pagina del report di esempio"
+  },
   "quizSection": {
     "title": "I nostri quiz gratis per",
     "titleHighlight": "coppie",

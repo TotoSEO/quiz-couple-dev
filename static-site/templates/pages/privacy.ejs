@@ -7,7 +7,13 @@
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s1Title', '') %></h2>
       <div class="bg-card rounded-lg p-6 border border-border">
         <ul class="list-none space-y-2 text-foreground">
-          <li><strong><%= t('legal:privacy.s1Name', '') %></strong> <%= t('legal:privacy.s1NameValue', '') %></li>
+          <%# Le responsable du traitement est l'entreprise (VENDEUR, config.js), comme dans les mentions légales et les CGV. %>
+          <% const _v = (typeof vendeur !== 'undefined' && vendeur && vendeur.siret) ? vendeur : null; %>
+          <li><strong><%= t('legal:privacy.s1Name', '') %></strong> <%= _v ? (_v.dirigeant ? _v.dirigeant + ' EI · ' : '') + _v.nom : t('legal:privacy.s1NameValue', '') %></li>
+          <% if (_v) { %><li><strong><%= t('cgv:vendeur.statut', lang === 'fr' ? 'Statut :' : 'Status:') %></strong> <%= _v.statut[lang] || _v.statut.fr %></li>
+          <li><strong><%= t('cgv:vendeur.siret', lang === 'fr' ? 'SIRET :' : 'SIRET:') %></strong> <%= _v.siret %></li>
+          <% if (_v.adresse) { %><li><strong><%= t('cgv:vendeur.adresse', lang === 'fr' ? 'Adresse :' : 'Address:') %></strong> <%= _v.adresse %></li><% } %>
+          <% if (_v.telephone) { %><li><strong><%= t('cgv:vendeur.telephone', lang === 'fr' ? 'Téléphone :' : 'Phone:') %></strong> <a href="tel:<%= _v.telephone.replace(/[^+\d]/g, '') %>" class="text-primary hover:underline"><%= _v.telephone %></a></li><% } %><% } %>
           <li><strong><%= t('legal:privacy.s1Email', '') %></strong> <a href="mailto:infoquizcouple@gmail.com" class="text-primary hover:underline">infoquizcouple@gmail.com</a></li>
           <li><strong><%= t('legal:privacy.s1Website', '') %></strong> quiz-couple.com</li>
         </ul>
@@ -95,9 +101,37 @@
         <li><strong><%= t('legal:privacy.s5Item3Label', '') %></strong> <%= t('legal:privacy.s5Item3Text', '') %></li>
         <li><strong><%= t('legal:privacy.s5Item4Label', '') %></strong> <%= t('legal:privacy.s5Item4Text', '') %></li>
         <li><strong><%= t('legal:privacy.s5Item5Label', '') %></strong> <%= t('legal:privacy.s5Item5Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s5Item6Label', '') %></strong> <%= t('legal:privacy.s5Item6Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s5Item7Label', '') %></strong> <%= t('legal:privacy.s5Item7Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s5Item8Label', '') %></strong> <%= t('legal:privacy.s5Item8Text', '') %></li>
       </ul>
       <p class="text-foreground"><%= t('legal:privacy.s5Outro', '') %></p>
     </section>
+
+    <%# Le bilan de couple (service payant) : ce qui est gardé, pourquoi, combien de temps. %>
+    <% const _bilanPoints = t('legal:privacy.bilanItems', []); %>
+    <% if (typeof bilanOuvert !== 'undefined' && bilanOuvert && Array.isArray(_bilanPoints) && _bilanPoints.length) { %>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.bilanTitle', '') %></h2>
+      <p class="text-foreground mb-4"><%= t('legal:privacy.bilanIntro', '') %></p>
+      <ul class="list-disc pl-6 space-y-2 text-foreground">
+        <% for (const _pt of _bilanPoints) { %><li><%- _pt %></li><% } %>
+      </ul>
+    </section>
+    <% } %>
+
+    <%# Les e-mails (porte des résultats et e-book) : ce qui est gardé, pourquoi,
+        la base légale, la durée, le prestataire. Toujours affichée. %>
+    <% const _emailsPoints = t('legal:privacy.emailsItems', []); %>
+    <% if (Array.isArray(_emailsPoints) && _emailsPoints.length) { %>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.emailsTitle', '') %></h2>
+      <p class="text-foreground mb-4"><%= t('legal:privacy.emailsIntro', '') %></p>
+      <ul class="list-disc pl-6 space-y-2 text-foreground">
+        <% for (const _pt of _emailsPoints) { %><li><%- _pt %></li><% } %>
+      </ul>
+    </section>
+    <% } %>
 
     <% for (let i = 6; i <= 9; i++) { %>
     <section class="mb-10">

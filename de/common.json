@@ -112,7 +112,11 @@
     "quizMortFilmHorreur": "Wer stirbt zuerst (Horrorfilm)",
     "quizPossession": "Wer könnte besessen werden",
     "quizSuperVilain": "Welcher Superschurke bist du",
-    "quizDuoVilains": "Welches Superschurken-Duo"
+    "quizDuoVilains": "Welches Superschurken-Duo",
+    "bilanCouple": "Beziehungsanalyse",
+    "evaluer": "Beziehung analysieren",
+    "evaluerSous": "Die vollständige Analyse, zu zweit oder allein",
+    "bilanCoupleDesc": "100 Fragen, jeder für sich, und ein Bericht mit 30 Seiten"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",
@@ -130,7 +134,8 @@
     "sourcePrefAide": "Eine Google-Einstellung: Die Seiten, die ihr hinzufügt, erscheinen weiter oben in euren Ergebnissen und in den KI-Antworten. Sie hängt an eurem Google-Konto und lässt sich jederzeit entfernen.",
     "sourcePrefAideAria": "Was ist eine bevorzugte Quelle?",
     "cookiePrefs": "Cookies verwalten",
-    "instagram": "Folge uns auf Instagram"
+    "instagram": "Folge uns auf Instagram",
+    "cgv": "AGB"
   },
   "buttons": {
     "start": "Starten",
@@ -176,6 +181,23 @@
     "optional": "optional",
     "commentPlaceholder": "Teile deine Erfahrung...",
     "stars": "Sterne"
+  },
+  "capture": {
+    "sur": "Dein vollständiges Ergebnis",
+    "titre": "Um den Rest deines Ergebnisses freizuschalten, gib deine E-Mail-Adresse ein",
+    "texte": "Die Details deines Ergebnisses, die Tipps und was danach kommt, erscheinen gleich danach.",
+    "placeholder": "deine@email.de",
+    "consentement": "Ich bin einverstanden, Tipps und Angebote von Quiz Couple per E-Mail zu erhalten. Abmeldung mit einem Klick, jederzeit.",
+    "confidentialite": "Datenschutz",
+    "bouton": "Mein Ergebnis ansehen",
+    "envoi": "Einen Moment...",
+    "suggestion": "Meintest du {{domaine}}?",
+    "erreurs": {
+      "format": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
+      "domaine": "Diese Adresse kann keine E-Mails empfangen. Prüfe die Domain.",
+      "jetable": "Wegwerfadressen werden nicht akzeptiert.",
+      "consentement": "Setze das Häkchen, um fortzufahren."
+    }
   },
   "blog": {
     "pageTitle": "Blog - Tipps und Ratschläge für Paare | Quiz Couple",

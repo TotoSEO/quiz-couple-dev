@@ -1,0 +1,57 @@
+<%
+  // Les conditions générales de vente du bilan de couple. Le texte vient de
+  // {lang}/cgv.json, les mentions du vendeur de VENDEUR (config.js) : un
+  // champ vide n'est pas affiché. La page n'est liée (pied de page, écran de
+  // paiement) qu'une fois le bilan ouvert, et n'est jamais indexée.
+  const v = typeof vendeur !== 'undefined' ? vendeur : {};
+  const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '';
+  const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
+  const lien = (route, texte) => '<a class="text-primary hover:underline" href="' + getLocalizedPath(route, lang) + '">' + texte + '</a>';
+  const med = v.mediateur || {};
+  const vars = {
+    nom: escapeHtml(v.nom || ''),
+    prix,
+    jours,
+    email: '<a class="text-primary hover:underline" href="mailto:' + (v.email || '') + '">' + (v.email || '') + '</a>',
+    contact: lien('contact', t('cgv:liens.contact', 'contact')),
+    confidentialite: lien('privacy', t('cgv:liens.confidentialite', 'confidentialité')),
+    bilan: lien('bilanCouple', t('cgv:liens.bilan', 'bilan de couple')),
+    mediateur: med.nom ? escapeHtml(med.nom) + (med.site ? ' (<a class="text-primary hover:underline" href="' + med.site + '" rel="noopener">' + escapeHtml(med.site.replace(/^https?:\/\//, '')) + '</a>)' : '') : '',
+  };
+  const rp = (s) => String(s || '').replace(/\{\{(\w+)\}\}/g, (m, k) => vars[k] !== undefined ? vars[k] : m);
+  const sections = t('cgv:sections', []);
+  const statut = (v.statut && (v.statut[lang] || v.statut.fr)) || '';
+%>
+<section class="container mx-auto px-4 py-12 md:py-16">
+  <article class="max-w-3xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-bold text-foreground mb-4"><%= t('cgv:title', 'Conditions générales de vente') %></h1>
+    <p class="text-sm text-muted-foreground mb-8"><%= t('cgv:majLe', '') %></p>
+    <p class="text-muted-foreground mb-8 leading-relaxed"><%- rp(t('cgv:intro', '')) %></p>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('cgv:vendeur.titre', '') %></h2>
+      <div class="bg-card rounded-lg p-6 border border-border">
+        <ul class="list-none space-y-2 text-foreground">
+          <% if (v.nom) { %><li><strong><%= t('cgv:vendeur.nom', '') %></strong> <%= v.nom %></li><% } %>
+          <% if (statut) { %><li><strong><%= t('cgv:vendeur.statut', '') %></strong> <%= statut %></li><% } %>
+          <% if (v.siret) { %><li><strong><%= t('cgv:vendeur.siret', '') %></strong> <%= v.siret %></li><% } %>
+          <% if (v.adresse) { %><li><strong><%= t('cgv:vendeur.adresse', '') %></strong> <%= v.adresse %></li><% } %>
+          <% if (v.telephone) { %><li><strong><%= t('cgv:vendeur.telephone', '') %></strong> <a class="text-primary hover:underline" href="tel:<%= v.telephone.replace(/[^+\d]/g, '') %>"><%= v.telephone %></a></li><% } %>
+          <% if (v.email) { %><li><strong><%= t('cgv:vendeur.email', '') %></strong> <%- vars.email %></li><% } %>
+          <li><strong><%= t('cgv:vendeur.tva', '') %></strong> <%= t('cgv:vendeur.tvaValeur', '') %></li>
+        </ul>
+      </div>
+    </section>
+
+    <% for (const s of sections) { %>
+    <%# Sans médiateur renseigné, la section de médiation garde son texte sans nom (pSans). %>
+    <% const paras = (s.mediation && !vars.mediateur) ? (s.pSans || []) : (s.p || []); %>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= s.titre %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% for (const p of paras) { %><p><%- rp(p) %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+  </article>
+</section>

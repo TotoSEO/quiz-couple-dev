@@ -1,0 +1,49 @@
+name: Sécurité · frein des écritures publiques
+
+# Applique 20261020150000_frein_ecritures_publiques.sql par l'API de gestion
+# de Supabase, comme bilan-base.yml, avec les secrets déjà là pour les
+# fonctions (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à
+# la main.
+#
+# La migration pose un déclencheur BEFORE INSERT sur chaque table que la clé
+# publique peut écrire (mesure d'audience, votes, profils, pureté, avis) :
+# au-delà d'un rythme par adresse IP et par minute, ou d'un rythme global,
+# l'insertion répond 429. Et cinq messages de contact par heure et par
+# adresse, cent par jour. Elle ne ferme rien d'existant et peut passer avant
+# comme après la publication du site : le site ignore déjà les erreurs de
+# mesure. Idempotente : la relancer (« Run workflow ») est sans risque.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261020150000_frein_ecritures_publiques.sql'
+      - '.github/workflows/securite-frein.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: securite-frein
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Frein par adresse et par minute sur les écritures de la clé publique
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # La dernière requête de la migration rend un bilan (tables freinées,
+      # messages) : il est affiché dans le journal.
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261020150000_frein_ecritures_publiques.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi

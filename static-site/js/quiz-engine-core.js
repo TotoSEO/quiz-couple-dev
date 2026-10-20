@@ -2665,7 +2665,11 @@ var QuizEngine = (function() {
     // page, pas du type de test.
     if (!zones.produits) {
       var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
-      var produits = encartProduits(quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+      var cleQuiz = quizEl ? quizEl.dataset.quiz : '';
+      var langQuiz = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+      // Le bilan de couple payant passe avant les produits affiliés sur les
+      // tests de couple (un seul encart sous le verdict, jamais deux).
+      var produits = encartBilan(cleQuiz, langQuiz) || encartProduits(cleQuiz, langQuiz);
       if (produits) zones.produits = produits;
     }
     // Le pave de la regie (format 2) reste dans le texte, apres la premiere
@@ -3196,6 +3200,87 @@ var QuizEngine = (function() {
   // La zone entiere, ou null quand la page n'a rien a proposer ou n'est pas
   // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
   // que les pages a ecran de resultat propre (tu preferes) appellent.
+  // ── Le bilan de couple, sous le verdict des tests de couple ──────────
+  // Le body porte data-bilan (l'adresse de la page dans la langue) quand
+  // l'évaluation de couple est ouverte (BILAN_OUVERT, config.js), et data-bilan-groupe et
+  // data-bilan-id sur les pages qui y renvoient (BILAN_ENTREES) : sans eux,
+  // rien. Le texte dépend du groupe : `score` (un test fait à deux, qui rend
+  // un chiffre ou un profil), `projet` (avant une grande étape), `doute`
+  // (quand on se pose des questions). Le lien porte ?src=resultat-<id>, que
+  // l'onglet Bilan de l'admin lit. docs/bilan/CONCEPTION.md.
+  var BILAN_TEXTES = {
+    fr: { sur: 'Évaluation de couple',
+          score: ['Et si vous alliez plus loin que ce test ?', 'Un test rapide donne une tendance. L\'évaluation de couple passe toute votre relation en revue, de l\'argent aux enfants, et compare vos deux points de vue sujet par sujet, dans un rapport de 40 pages.'],
+          projet: ['Avant de vous lancer, vérifiez que vous voulez la même vie', 'Emménager, se marier, avoir un enfant... L\'évaluation de couple passe en revue tout ce qui engage une vie à deux et vous montre où vous êtes d\'accord, et de quoi parler avant de vous engager.'],
+          doute: ['Faites le point, à deux ou seul(e)', 'Ce test donne votre ressenti. L\'évaluation de couple compare celui de chacun, sujet par sujet, et vous dit par où commencer. Si l\'autre n\'est pas prêt(e) à en parler, vous pouvez la faire seul(e) : votre partenaire n\'en saura rien.'],
+          jeu: ['Vous avez joué ensemble. Et pour parler de ce qui compte ?', 'L\'évaluation de couple pose les vraies questions, de l\'argent aux enfants, chacun de son côté, et vous rend un rapport de 40 pages qui compare vos réponses sujet par sujet.'],
+          questions: ['Des questions, vous en avez. Et les réponses de l\'autre ?', 'L\'évaluation de couple pose 100 questions précises à chacun de vous, de son côté, et compare vos réponses sujet par sujet dans un rapport de 40 pages.'],
+          points: ['100 questions, à deux ou seul(e)', 'Construit à partir de la recherche en psychologie du couple', 'Un rapport PDF de 40 pages, avec des graphiques'],
+          bouton: 'Découvrir l\'évaluation', boutonSolo: 'La faire seul(e)', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+    en: { sur: 'Relationship assessment',
+          score: ['Want to go further than this test?', 'A quick test gives you a trend. The relationship assessment goes through your whole relationship, from money to children, and compares your two points of view topic by topic, in a 40-page report.'],
+          projet: ['Before you take the leap, check you want the same life', 'Moving in, getting married, having a baby... The relationship assessment goes through everything that shapes a life together and shows you where you agree, and what to talk about before you commit.'],
+          doute: ['Take stock, together or on your own', 'This test gives you your own feeling. The relationship assessment compares how each of you sees things, topic by topic, and tells you where to start. If the other isn\'t ready to talk about it, you can do it on your own: your partner won\'t know.'],
+          jeu: ['You\'ve played together. What about talking about what matters?', 'The relationship assessment asks the real questions, from money to children, each on your own side, and gives you a 40-page report that compares your answers topic by topic.'],
+          questions: ['You\'ve got questions. What about the other\'s answers?', 'The relationship assessment asks each of you 100 specific questions, on your own side, and compares your answers topic by topic in a 40-page report.'],
+          points: ['100 questions, together or on your own', 'Built on research in couple psychology', 'A 40-page PDF report, with charts'],
+          bouton: 'Discover the assessment', boutonSolo: 'Take it on your own', prix: 'Free questions · report {{prix}} for both of you' },
+    es: { sur: 'Evaluación de pareja',
+          score: ['¿Y si fuerais más allá de este test?', 'Un test rápido da una tendencia. La evaluación de pareja repasa toda vuestra relación, del dinero a los hijos, y compara vuestros dos puntos de vista tema por tema, en un informe de 40 páginas.'],
+          projet: ['Antes de dar el paso, comprobad que queréis la misma vida', 'Iros a vivir juntos, casaros, tener un hijo... La evaluación de pareja repasa todo lo que marca una vida en común y os muestra en qué estáis de acuerdo, y de qué hablar antes de comprometeros.'],
+          doute: ['Haced balance, en pareja o a solas', 'Este test da tu impresión. La evaluación de pareja compara la de cada uno, tema por tema, y os dice por dónde empezar. Si el otro no está listo para hablarlo, puedes hacerla a solas: tu pareja no se enterará.'],
+          jeu: ['Habéis jugado juntos. ¿Y para hablar de lo que cuenta?', 'La evaluación de pareja hace las preguntas de verdad, del dinero a los hijos, cada uno por su lado, y os entrega un informe de 40 páginas que compara vuestras respuestas tema por tema.'],
+          questions: ['Preguntas, tenéis. ¿Y las respuestas del otro?', 'La evaluación de pareja hace 100 preguntas concretas a cada uno, por su lado, y compara vuestras respuestas tema por tema en un informe de 40 páginas.'],
+          points: ['100 preguntas, en pareja o a solas', 'Construido a partir de la investigación en psicología de pareja', 'Un informe en PDF de 40 páginas, con gráficos'],
+          bouton: 'Descubrir la evaluación', boutonSolo: 'Hacerla a solas', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+    de: { sur: 'Beziehungsanalyse',
+          score: ['Wollt ihr weiter gehen als dieser Test?', 'Ein kurzer Test zeigt eine Tendenz. Die Beziehungsanalyse geht eure ganze Beziehung durch, vom Geld bis zu den Kindern, und vergleicht eure beiden Sichtweisen Thema für Thema, in einem Bericht mit 40 Seiten.'],
+          projet: ['Bevor ihr den Schritt wagt: Wollt ihr dasselbe Leben?', 'Zusammenziehen, heiraten, ein Kind bekommen... Die Beziehungsanalyse geht alles durch, was ein gemeinsames Leben prägt, und zeigt euch, wo ihr euch einig seid und worüber ihr reden solltet, bevor ihr euch festlegt.'],
+          doute: ['Zieht Bilanz, zu zweit oder allein', 'Dieser Test zeigt dein Gefühl. Die Beziehungsanalyse vergleicht die Sicht von euch beiden, Thema für Thema, und sagt euch, womit ihr anfangen könnt. Wenn der andere noch nicht bereit ist, darüber zu reden, kannst du sie allein machen: Dein Partner oder deine Partnerin erfährt nichts davon.'],
+          jeu: ['Ihr habt zusammen gespielt. Und reden über das, was zählt?', 'Die Beziehungsanalyse stellt die echten Fragen, vom Geld bis zu den Kindern, jeder für sich, und gibt euch einen Bericht mit 40 Seiten, der eure Antworten Thema für Thema vergleicht.'],
+          questions: ['Fragen habt ihr. Und die Antworten des anderen?', 'Die Beziehungsanalyse stellt jedem von euch 100 genaue Fragen, für sich, und vergleicht eure Antworten Thema für Thema in einem Bericht mit 40 Seiten.'],
+          points: ['100 Fragen, zu zweit oder allein', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit 40 Seiten, mit Grafiken'],
+          bouton: 'Die Analyse entdecken', boutonSolo: 'Sie allein machen', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+    it: { sur: 'Valutazione di coppia',
+          score: ['E se andaste oltre questo test?', 'Un test veloce dà una tendenza. La valutazione di coppia passa in rassegna tutta la vostra relazione, dai soldi ai figli, e confronta i vostri due punti di vista tema per tema, in un report di 40 pagine.'],
+          projet: ['Prima del grande passo, verificate di volere la stessa vita', 'Andare a vivere insieme, sposarsi, avere un figlio... La valutazione di coppia passa in rassegna tutto quello che segna una vita a due e vi mostra su cosa siete d\'accordo, e di cosa parlare prima di impegnarvi.'],
+          doute: ['Fate il punto, in due o da soli', 'Questo test dà la tua impressione. La valutazione di coppia confronta quella di ciascuno, tema per tema, e vi dice da dove cominciare. Se l\'altro non è pronto a parlarne, puoi farla da solo/a: il tuo partner non ne saprà niente.'],
+          jeu: ['Avete giocato insieme. E per parlare di quello che conta?', 'La valutazione di coppia fa le domande vere, dai soldi ai figli, ciascuno per conto suo, e vi dà un report di 40 pagine che confronta le vostre risposte tema per tema.'],
+          questions: ['Domande ne avete. E le risposte dell\'altro?', 'La valutazione di coppia fa 100 domande precise a ciascuno di voi, per conto suo, e confronta le vostre risposte tema per tema in un report di 40 pagine.'],
+          points: ['100 domande, in due o da soli', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di 40 pagine, con grafici'],
+          bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+  };
+  var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  function encartBilan(cle, lang) {
+    var corps = document.body;
+    var chemin = corps && corps.getAttribute('data-bilan');
+    var groupe = corps && corps.getAttribute('data-bilan-groupe');
+    if (!chemin || !groupe) return null;
+    var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
+    var texte = t[groupe] || t.score;
+    var prix = corps.getAttribute('data-bilan-prix') || '';
+    var id = corps.getAttribute('data-bilan-id') || cle || 'test';
+    var lien = chemin + (chemin.indexOf('?') < 0 ? '?' : '&') + 'src=resultat-' + encodeURIComponent(id);
+    var zone = el('section', 'qr-bilan');
+    zone.setAttribute('aria-label', t.sur);
+    // Une vraie page du rapport d'exemple (bilan/apercus.mjs), dans la langue.
+    var visuel = '<div class="qr-bilan-visuel" aria-hidden="true"><img draggable="false" src="/bilan/apercu-synthese-' + esc(BILAN_TEXTES[lang] ? lang : 'fr') +
+      '.webp" alt="" width="240" height="340" loading="lazy" decoding="async"></div>';
+    zone.innerHTML = visuel +
+      '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
+      '<h3 class="qr-bilan-titre">' + esc(insecables(texte[0])) + '</h3>' +
+      '<p class="qr-bilan-texte">' + esc(insecables(texte[1])) + '</p>' +
+      '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
+      // Deux boutons : à deux, et seul(e) (la page s'ouvre sur les deux façons
+      // de faire, le mode seul(e) préselectionné).
+      '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(lien) + '">' + esc(t.bouton) +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+      (t.boutonSolo ? '<a class="qr-bilan-bouton qr-bilan-bouton--second" href="' + esc(lien + '&mode=solo#facons') + '">' + esc(t.boutonSolo) + '</a>' : '') + '</div>' +
+      (prix ? '<p class="qr-bilan-prix">' + esc(t.prix.replace('{{prix}}', prix)) + '</p>' : '') +
+      '</div>';
+    return zone;
+  }
+
   function encartProduits(cle, lang, explicites) {
     lang = lang || 'fr';
     var t = PRODUITS_TEXTES[lang];
