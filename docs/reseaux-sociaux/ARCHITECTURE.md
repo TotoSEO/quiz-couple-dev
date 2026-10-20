@@ -385,7 +385,7 @@ enrichie au fil du temps.
 
 | Sortie | Réglages |
 |---|---|
-| Reel | 1080 × 1920, 30 images/s, H.264 High, yuv420p, qualité CRF 18, son AAC 48 kHz stéréo 192 kb/s, « faststart ». Environ 5 à 15 Mo pour 10 à 30 s. |
+| Reel | 1080 × 1920, 30 images/s, H.264 High, yuv420p, qualité CRF 22 (18 jusqu'au 20 octobre 2026 ; mesuré à 44 à 46 dB de PSNR face à un rendu quasi sans perte, pour des fichiers 42 à 46 % plus légers), son AAC 48 kHz stéréo 192 kb/s, « faststart ». Environ 3 à 9 Mo pour 10 à 30 s. |
 | Couverture de reel | JPEG 1080 × 1920, avec le titre dans la partie centrale (la grille du profil affiche un recadrage 3:4). |
 | Image et pages de carrousel | JPEG 1080 × 1350, sRGB, qualité 92. |
 | Vignette pour l'admin | WebP 360 px de large, environ 25 Ko, gardée après publication. |
