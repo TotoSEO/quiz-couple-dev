@@ -46,8 +46,8 @@
       "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“. Dein Partner oder deine Partnerin kann sie korrigieren.",
       "accordTitre": "Bevor es losgeht",
       "majeur": "Ich bin 18 Jahre oder älter.",
-      "consentement": "Ich bin einverstanden, dass meine Antworten für diese Analyse gespeichert werden, auch zu intimen Themen (Sexualleben, Religion, Ansichten), und dass {{autre}} sie im Bericht sieht.",
-      "accordAide": "Euer Check wird 60 Tage nach eurer letzten Antwort aufbewahrt, wenn er nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann ihn jederzeit löschen. Kein Konto nötig.",
+      "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
+      "accordAide": "Deine Antworten, auch zu intimen Themen, dienen nur diesem Bericht, in dem {{autre}} sie neben den eigenen sieht. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie jederzeit löschen. Kein Konto nötig.",
       "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide: Du schaltest ihn frei, sobald du deine Antworten fertig hast.",
       "suivant": "Weiter",
       "retour": "Zurück",
@@ -55,9 +55,10 @@
       "manque": "Eine Antwort fehlt.",
       "prenomManque": "Schreib eure beiden Vornamen.",
       "accordManque": "Setz beide Häkchen, um weiterzumachen.",
-      "email": "Deine E-Mail (optional)",
-      "emailAide": "Um deinen persönlichen Link sofort zu bekommen und deine Antworten wiederzufinden, wenn du die Seite schließt. Dorthin geht später auch der Bericht.",
-      "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus."
+      "email": "Deine E-Mail",
+      "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt.",
+      "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
+      "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Bericht als PDF."
     },
     "invitation": {
       "titre": "Lade {{autre}} ein",
@@ -85,7 +86,8 @@
       "genre": "Du bist",
       "commencer": "Einverstanden, los geht's",
       "lienUtilise": "Dieser Einladungslink wurde schon benutzt. Wenn du das warst, öffne deinen persönlichen Link, oder komm von dem Handy auf diese Seite zurück, auf dem du angefangen hast.",
-      "paye": "Gute Nachricht: {{autre}} hat den Bericht für euch beide schon bezahlt. Er öffnet sich, sobald du deine Antworten fertig hast."
+      "paye": "Gute Nachricht: {{autre}} hat den Bericht für euch beide schon bezahlt. Er öffnet sich, sobald du deine Antworten fertig hast.",
+      "prenomManque": "Schreib deinen Vornamen."
     },
     "domaine": {
       "partie": "Teil {{n}} von {{total}}",
@@ -146,7 +148,7 @@
         "Zu jedem Unterschied: warum er zählt, Fragen, um darüber zu reden, und was ihr besser vermeidet",
         "Eure Warnsignale beim Streiten",
         "Wer was im Haushalt macht, aus der Sicht jedes Einzelnen",
-        "Ein PDF mit rund dreißig Seiten per E-Mail, und der Bericht sechs Monate lang online"
+        "Der vollständige Bericht als PDF, per E-Mail, sobald er fertig ist, und sechs Monate lang online"
       ],
       "prix": "{{prix}} für euch beide",
       "prixAide": "Eine einzige Zahlung, und {{autre}} muss nichts bezahlen. Kein Abo.",
@@ -177,8 +179,8 @@
       "creation": {
         "autreAide": "Er dient nur dazu, die Fragen zu schreiben. Es wird nichts verschickt.",
         "soloNote": "Du machst die Analyse allein: {{autre}} erfährt nichts davon, es wird nichts verschickt, und nur du wirst den Bericht sehen.",
-        "consentement": "Ich bin einverstanden, dass meine Antworten für diese Analyse gespeichert werden, auch zu intimen Themen (Sexualleben, Religion, Meinungen), zusammen mit dem, was ich mir von den Antworten von {{autre}} vorstelle.",
-        "accordAide": "Deine Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
+        "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
+        "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was du dir von den Antworten von {{autre}} vorstellst, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
         "creer": "Meine Analyse beginnen"
       },
@@ -195,7 +197,7 @@
           "Zu jedem Unterschied: warum er zählt, Fragen zum Gespräch und was ihr besser vermeidet",
           "Eure Warnsignale im Streit",
           "Wer zu Hause was macht, aus deiner Sicht",
-          "Ein PDF mit rund vierzig Seiten per E-Mail, und der Bericht sechs Monate lang online"
+          "Der vollständige Bericht als PDF, per E-Mail, sobald er fertig ist, und sechs Monate lang online"
         ],
         "prixAide": "Eine einzige Zahlung, kein Abo. Dein Partner oder deine Partnerin erfährt nichts davon.",
         "emailAide": "Das PDF geht gleich nach der Zahlung an diese Adresse. Sie wird für nichts anderes verwendet."
@@ -516,20 +518,22 @@
         "telecharger": "PDF herunterladen",
         "pdfPrepa": "Euer PDF wird gerade erstellt: Es kommt in ein paar Minuten, per E-Mail und hier.",
         "pdfErreur": "Das PDF verspätet sich. Es wird euch geschickt, sobald es fertig ist, ihr müsst nichts tun.",
-        "envoyeA": "Bericht gesendet an {{emails}}",
-        "envoiA": "Der Bericht wird gesendet an {{emails}}",
-        "emailTitre": "Den Bericht per E-Mail bekommen",
-        "emailAide": "Deine Adresse wird nur verwendet, um dir diesen Bericht zu schicken.",
+        "envoyeA": "Das PDF wurde an {{emails}} geschickt. Wenn es nicht ankommt, schau in den Spam-Ordner.",
+        "envoiA": "Das PDF geht an {{emails}}, sobald es fertig ist. Du musst nichts anfordern.",
+        "emailTitre": "Dein Bericht per E-Mail",
+        "emailAide": "Diese Adresse ersetzt deine für diesen Bericht. Sie wird für nichts anderes verwendet.",
         "emailChamp": "Deine E-Mail-Adresse",
         "emailBouton": "Senden",
-        "emailOk": "Notiert!",
+        "emailOk": "Notiert! Das PDF geht an diese Adresse.",
         "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
         "imprimer": "Drucken",
         "supprimer": "Unseren Check löschen",
         "supprimerConfirmer": "Löschen bestätigen",
         "supprimerAide": "Die Analyse wird für euch beide gelöscht, sofort und endgültig, das PDF eingeschlossen. Denkt daran, das PDF vorher zu speichern.",
         "supprime": "Euer Check wurde gelöscht.",
-        "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide."
+        "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide.",
+        "envoiSans": "Das PDF geht per E-Mail raus, sobald es fertig ist.",
+        "emailAutre": "An eine andere Adresse bekommen"
       }
     },
     "situation": {
@@ -557,7 +561,7 @@
     },
     "retrouver": {
       "titre": "Hast du schon eine Analyse begonnen?",
-      "texte": "Wenn du deine E-Mail-Adresse angegeben hast, schicken wir dir deine Links noch einmal. Der alte Link funktioniert dann nicht mehr.",
+      "texte": "Wir schicken dir deine Links noch einmal an die Adresse vom Anfang. Der alte Link funktioniert dann nicht mehr.",
       "placeholder": "du@email.com",
       "bouton": "Meine Analyse wiederfinden",
       "envoye": "Wenn eine Analyse mit {{email}} verknüpft ist, kommen deine Links innerhalb einer Minute in dein Postfach. Schau auch im Spam-Ordner nach.",

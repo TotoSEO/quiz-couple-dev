@@ -46,8 +46,8 @@
       "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
       "accordTitre": "Antes de empezar",
       "majeur": "Tengo 18 años o más.",
-      "consentement": "Acepto que mis respuestas se guarden para esta evaluación, también sobre temas íntimos (vida sexual, religión, opiniones), y que {{autre}} las vea en el informe.",
-      "accordAide": "Vuestra evaluación se guarda 60 días después de vuestra última respuesta si no está pagado, y seis meses después del pago si lo está, y cualquiera de los dos puede borrarlo en todo momento. No hay que crear ninguna cuenta.",
+      "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+      "accordAide": "Tus respuestas, también sobre temas íntimos, solo sirven para este informe, donde {{autre}} las verá frente a las suyas. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y cualquiera de los dos puede borrarla en todo momento. Sin crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
       "suivant": "Siguiente",
       "retour": "Atrás",
@@ -55,9 +55,10 @@
       "manque": "Falta una respuesta.",
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca las dos casillas para continuar.",
-      "email": "Tu e-mail (opcional)",
-      "emailAide": "Para recibir ahora mismo tu enlace personal y recuperar tus respuestas si cierras la página. También es la dirección a la que llegará el informe.",
-      "emailFaux": "Esta dirección de e-mail no parece completa."
+      "email": "Tu e-mail",
+      "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página.",
+      "emailFaux": "Esta dirección de e-mail no parece completa.",
+      "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el informe en PDF."
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
@@ -85,7 +86,8 @@
       "genre": "Tú eres",
       "commencer": "Acepto y empiezo",
       "lienUtilise": "Este enlace de invitación ya se ha usado. Si fuiste tú, abre tu enlace personal, o vuelve a esta página desde el móvil en el que empezaste.",
-      "paye": "Buena noticia: {{autre}} ya ha pagado el informe para los dos. Se abrirá en cuanto termines tus respuestas."
+      "paye": "Buena noticia: {{autre}} ya ha pagado el informe para los dos. Se abrirá en cuanto termines tus respuestas.",
+      "prenomManque": "Escribe tu nombre."
     },
     "domaine": {
       "partie": "Parte {{n}} de {{total}}",
@@ -146,7 +148,7 @@
         "Para cada diferencia: por qué importa, preguntas para hablarlo y lo que más vale evitar",
         "Vuestras señales de alerta en las discusiones",
         "Quién hace qué en casa, según cada uno",
-        "Un PDF de unas treinta páginas por correo, y el informe en línea durante seis meses"
+        "El informe completo en PDF, enviado por correo en cuanto está listo, y en línea durante seis meses"
       ],
       "prix": "{{prix}} para los dos",
       "prixAide": "Un solo pago, y {{autre}} no tendrá nada que pagar. Sin suscripción.",
@@ -177,8 +179,8 @@
       "creation": {
         "autreAide": "Solo sirve para escribir las preguntas. No se le envía nada.",
         "soloNote": "Haces la evaluación a solas: {{autre}} no se entera, no se le envía nada, y solo tú verás el informe.",
-        "consentement": "Acepto que mis respuestas se guarden para esta evaluación, también sobre temas íntimos (vida sexual, religión, opiniones), junto con lo que imagino de las respuestas de {{autre}}.",
-        "accordAide": "Tu evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago si se paga, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
+        "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+        "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación"
       },
@@ -195,7 +197,7 @@
           "Para cada diferencia: por qué cuenta, preguntas para hablarlo y lo que más vale evitar",
           "Vuestras señales de alerta en las discusiones",
           "Quién hace qué en casa, visto por ti",
-          "Un PDF de unas cuarenta páginas por correo, y el informe en línea durante seis meses"
+          "El informe completo en PDF, enviado por correo en cuanto está listo, y en línea durante seis meses"
         ],
         "prixAide": "Un solo pago, sin suscripción. Tu pareja no se entera.",
         "emailAide": "El PDF llegará a esta dirección en cuanto pagues. No sirve para nada más."
@@ -516,20 +518,22 @@
         "telecharger": "Descargar el PDF",
         "pdfPrepa": "Vuestro PDF se está preparando: llegará en unos minutos, por correo y aquí.",
         "pdfErreur": "El PDF se está retrasando. Os lo enviaremos en cuanto esté listo, no tenéis que hacer nada.",
-        "envoyeA": "Informe enviado a {{emails}}",
-        "envoiA": "El informe se enviará a {{emails}}",
-        "emailTitre": "Recibir el informe por correo",
-        "emailAide": "Tu dirección solo sirve para enviarte este informe.",
+        "envoyeA": "El PDF se ha enviado a {{emails}}. Si no aparece, mira en el correo no deseado.",
+        "envoiA": "El PDF llegará a {{emails}} en cuanto esté listo. No tienes que pedir nada.",
+        "emailTitre": "Tu informe por correo",
+        "emailAide": "Esta dirección sustituye a la tuya para este informe. No sirve para nada más.",
         "emailChamp": "Tu correo electrónico",
         "emailBouton": "Enviar",
-        "emailOk": "¡Anotado!",
+        "emailOk": "¡Anotado! El PDF va a esta dirección.",
         "emailFaux": "Esta dirección no parece válida.",
         "imprimer": "Imprimir",
         "supprimer": "Borrar nuestra evaluación",
         "supprimerConfirmer": "Confirmar el borrado",
         "supprimerAide": "La evaluación se borra para los dos, enseguida y para siempre, PDF incluido. Acordaos de guardar el PDF antes.",
         "supprime": "Vuestra evaluación se ha borrada.",
-        "garde": "Este informe sigue disponible seis meses en esta página, para los dos."
+        "garde": "Este informe sigue disponible seis meses en esta página, para los dos.",
+        "envoiSans": "El PDF saldrá por correo en cuanto esté listo.",
+        "emailAutre": "Recibirlo en otra dirección"
       }
     },
     "situation": {
@@ -557,7 +561,7 @@
     },
     "retrouver": {
       "titre": "¿Ya habías empezado una evaluación?",
-      "texte": "Si diste tu dirección de e-mail, te volvemos a enviar tus enlaces. El enlace antiguo dejará de funcionar.",
+      "texte": "Te volvemos a enviar tus enlaces a la dirección que diste al principio. El enlace antiguo dejará de funcionar.",
       "placeholder": "tu@email.com",
       "bouton": "Recuperar mi evaluación",
       "envoye": "Si hay una evaluación vinculada a {{email}}, tus enlaces llegarán a tu bandeja en un minuto. Mira también en el correo no deseado.",

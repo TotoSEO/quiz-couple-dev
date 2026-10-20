@@ -255,6 +255,13 @@
       if (etat) etat.textContent = r.statut === 200 ? x('lien.envoye', { email: e }) : x(r.json.erreur === 'trop' ? 'lien.trop' : 'erreurs.serveur');
     }).catch(function () { b.disabled = false; if (etat) etat.textContent = x('erreurs.reseau'); });
   }
+  // Le champ de l'adresse e-mail des écrans de départ (création et
+  // acceptation de l'invitation) : obligatoire, c'est là que le PDF part.
+  function champEmailDepart(valeur) {
+    return '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
+      '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" required value="' + esc(valeur || '') + '">' +
+      '<p class="bilan-note">' + x('creation.emailAide') + '</p></div>';
+  }
   function blocRetrouver() {
     return '<details class="bilan-retrouver"><summary>' + x('retrouver.titre') + '</summary>' +
       '<p class="bilan-note">' + x('retrouver.texte') + '</p>' +
@@ -542,12 +549,11 @@
         (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
         '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
-        // L'adresse e-mail, facultative : le lien personnel part tout de suite
-        // (19 octobre 2026, un onglet fermé avant d'avoir copié son lien) et
-        // elle servira au rapport.
-        '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
-        '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" value="' + esc(brouillon.email || '') + '">' +
-        '<p class="bilan-note">' + x('creation.emailAide') + '</p></div>' +
+        // L'adresse e-mail, obligatoire depuis le 20 octobre 2026 (Thomas :
+        // « le PDF doit s'envoyer directement par mail, pas sur demande ») :
+        // le rapport y part tout seul, et elle sert à retrouver l'évaluation
+        // si la page est fermée avant d'avoir copié son lien.
+        champEmailDepart(brouillon.email) +
         blocRetrouver();
     } else if (etape === 2) {
       corps += '<h2 class="bilan-titre">' + x('creation.situationTitre') + '</h2>' +
@@ -556,8 +562,8 @@
       corps += '<h2 class="bilan-titre">' + x('creation.accordTitre') + '</h2>' +
         (solo ? '<p class="bilan-info">' + x('creation.soloNote', { autre: brouillon.autre }) + '</p>' : '') +
         '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
-        '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement', { autre: brouillon.autre }) + '</span></label>' +
-        '<p class="bilan-note">' + x('creation.accordAide') + '</p>' +
+        '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
+        '<p class="bilan-note">' + x('creation.accordAide', { autre: brouillon.autre }) + '</p>' +
         '<p class="bilan-prix-rappel">' + x('creation.prixRappel') + '</p>' +
         '<p class="bilan-note">' + x('accueil.violence') + '</p>';
     }
@@ -603,7 +609,8 @@
       suivant: function () {
         lireEtape();
         if (etape === 1 && (!brouillon.moi || !brouillon.autre)) return erreur('creation.prenomManque');
-        if (etape === 1 && brouillon.email && !EMAIL_OK.test(brouillon.email)) return erreur('creation.emailFaux');
+        if (etape === 1 && !brouillon.email) return erreur('creation.emailManque');
+        if (etape === 1 && !EMAIL_OK.test(brouillon.email)) return erreur('creation.emailFaux');
         if (etape === 2 && !C.situationValide(brouillon.situation)) return erreur('creation.manque');
         creation(etape + 1);
       },
@@ -614,20 +621,16 @@
           lang: LANG, mode: brouillon.mode, situation: brouillon.situation, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
+          email: brouillon.email,
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
-          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
+          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
-          // L'adresse donnée à la création : le lien personnel part tout de
-          // suite par e-mail, et le serveur la garde pour le rapport.
-          if (brouillon.email) {
-            appel('lien', { id: entree.id, jeton: entree.jeton, email: brouillon.email }).catch(function () {});
-            // L'écran d'invitation s'affiche avant que le serveur ait gardé
-            // l'adresse : on la lui donne pour pré-remplir « Recevoir mon lien ».
-            if (r.json.etat && r.json.etat.moi) r.json.etat.moi.email = brouillon.email;
-          }
+          // Le serveur garde l'adresse pour le rapport ; « Recevoir mon lien »
+          // la propose pré-remplie, sans rien envoyer tant qu'on ne le demande pas.
+          if (r.json.etat && r.json.etat.moi) r.json.etat.moi.email = brouillon.email;
           brouillon = null;
           // Seul(e) : personne à inviter, les questions tout de suite.
           if (entree.mode === 'solo') return ouvrir(entree);
@@ -710,9 +713,10 @@
       '<div class="bilan-champ"><label for="bilan-moi">' + x('rejoindre.prenom') + '</label>' +
       '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" value="' + esc(etat.moi.prenom) + '"></div>' +
       '<div class="bilan-champ"><span class="bilan-label">' + x('rejoindre.genre') + '</span>' + champGenre('g-moi', etat.moi.genre) + '</div>' +
+      champEmailDepart('') +
       '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement', { autre: autre }) + '</span></label>' +
-      '<p class="bilan-note">' + x('creation.accordAide') + '</p>' +
+      '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
+      '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
       '<p class="bilan-prix-rappel">' + x('creation.prixRappel') + '</p>' +
       '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
@@ -730,14 +734,17 @@
       },
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
-        if (!prenom) return erreur('creation.prenomManque');
+        if (!prenom) return erreur('rejoindre.prenomManque');
+        var email = (document.getElementById('bilan-email').value || '').trim();
+        if (!email) return erreur('creation.emailManque');
+        if (!EMAIL_OK.test(email)) return erreur('creation.emailFaux');
         if (!document.getElementById('bilan-majeur').checked || !document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         var sit = sitModifiee ? lireSituation() : null;
         if (sit && !C.situationValide(sit)) return erreur('creation.manque');
         b.disabled = true;
-        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), consentement: true, majeur: true })
+        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), email: email, consentement: true, majeur: true })
           .then(function (r) {
-            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur'); }
+            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur'); }
             var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
             garder(entree);
             var change = sit && C.SITUATION.some(function (s) { return sit[s.id] !== etat.situation[s.id]; });
@@ -1153,14 +1160,20 @@
   }
 
   // Le bloc « recevoir le rapport par e-mail », une fois payé.
+  // Le PDF part tout seul aux adresses connues (création, acceptation de
+  // l'invitation, reçu Stripe) : le bloc dit où il est parti ou où il
+  // partira, et ne demande rien. Changer d'adresse reste possible, replié.
   function blocEmail(etat) {
     var r = etat.rapport || {};
     var dest = (r.envoiA || []).join(', ');
-    var ligne = dest ? '<p class="bilan-note">' + x(r.envoye ? 'rapport.ecran.envoyeA' : 'rapport.ecran.envoiA', { emails: dest }) + '</p>' : '';
+    var ligne = dest
+      ? '<p class="bilan-texte bilan-email-etat">' + x(r.envoye ? 'rapport.ecran.envoyeA' : 'rapport.ecran.envoiA', { emails: dest }) + '</p>'
+      : '<p class="bilan-texte bilan-email-etat">' + x('rapport.ecran.envoiSans') + '</p>';
     return '<div class="bilan-email-bloc"><h3 class="bilan-sous-titre">' + x('rapport.ecran.emailTitre') + '</h3>' + ligne +
+      '<details class="bilan-email-autre"><summary>' + x('rapport.ecran.emailAutre') + '</summary>' +
       '<div class="bilan-email-ligne"><input id="bilan-email" class="bilan-input" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="' + x('paywall.emailPlaceholder') + '" value="' + esc(etat.moi.email || '') + '" aria-label="' + x('rapport.ecran.emailChamp') + '">' +
       bouton('email', x('rapport.ecran.emailBouton'), 'btn-outline') + '</div>' +
-      '<p class="bilan-note" id="bilan-email-msg" aria-live="polite">' + x('rapport.ecran.emailAide') + '</p></div>';
+      '<p class="bilan-note" id="bilan-email-msg" aria-live="polite">' + x('rapport.ecran.emailAide') + '</p></details></div>';
   }
   function actionEmail(entree) {
     return function (b) {

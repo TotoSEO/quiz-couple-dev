@@ -468,6 +468,12 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .dark .bilan-scene .bilan-alerte--ok { color: hsl(152 45% 72%); }
 .bilan-scene .bilan-carte--discrete { box-shadow: none; border-width: 2px; border-color: hsl(var(--border)); }
 .bilan-scene .bilan-email-bloc { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px dashed hsl(var(--border)); }
+/* Le PDF part tout seul : le bloc dit où, et « une autre adresse » reste replié. */
+.bilan-scene .bilan-email-etat { margin: .25rem 0 .6rem; padding: .7rem .9rem; border-radius: calc(var(--radius) - .25rem); background: hsl(152 45% 40% / .1); color: hsl(152 45% 24%); font-weight: 600; }
+.dark .bilan-scene .bilan-email-etat { color: hsl(152 45% 74%); }
+.bilan-scene .bilan-email-autre summary { cursor: pointer; font-size: .92rem; font-weight: 600; color: hsl(var(--secondary-texte)); }
+.bilan-scene .bilan-email-autre summary::marker { color: hsl(var(--primary)); }
+.bilan-scene .bilan-email-autre[open] summary { margin-bottom: .6rem; }
 .bilan-scene .bilan-email-ligne { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .6rem; align-items: center; }
 @media (max-width: 420px) { .bilan-scene .bilan-email-ligne { grid-template-columns: minmax(0, 1fr); } }
 .bilan-scene .bilan-erreur-texte { color: hsl(var(--destructive)); font-weight: 600; }

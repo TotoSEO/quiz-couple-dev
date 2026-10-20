@@ -52,7 +52,7 @@ let id = null;
 let jeton = null;
 let code = 1;
 try {
-  const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', situation, src: 'sonde', moi: { prenom: 'Sonde' }, autre: { prenom: 'Sonde' }, consentement: true, majeur: true });
+  const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', situation, src: 'sonde', moi: { prenom: 'Sonde' }, autre: { prenom: 'Sonde' }, email: 'sonde@quiz-couple.com', consentement: true, majeur: true });
   if (c.statut !== 200) throw new Error('creer : ' + c.statut + ' ' + JSON.stringify(c.json));
   id = c.json.id;
   jeton = c.json.jeton;
