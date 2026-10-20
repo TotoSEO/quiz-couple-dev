@@ -567,11 +567,11 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Volete la stessa vita, tutti e due?",
-    "sousTitre": "Una valutazione completa della vostra relazione, costruita sulla ricerca in psicologia di coppia: 100 domande precise su dodici aree della vita insieme, e un report che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare. In due, ciascuno per conto suo, o da soli se l'altro non è pronto a parlarne.",
+    "sousTitre": "100 domande su dodici aree della vita insieme, e un report di 40 pagine che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare.",
     "points": [
       "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
-      "Domande costruite a partire dalla ricerca in psicologia di coppia",
-      "Un report di 40 pagine, con grafici e spunti per parlarne"
+      "Costruita sulla ricerca in psicologia di coppia",
+      "In due, o da soli se l'altro non è pronto a parlarne"
     ],
     "cta": "Iniziare la valutazione",
     "ctaDuo": "Fare la valutazione in due",
