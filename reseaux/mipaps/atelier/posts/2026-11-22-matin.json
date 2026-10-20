@@ -1,0 +1,233 @@
+{
+  "jour": "2026-11-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-119",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La musique dans la voiture : elle met sa chanson, contente ; il change, content ; elle remet la sienne, il fait la tête ; la chanson d'après, ils chantent tous les deux à fond. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont assis côte à côte dans la voiture, face à nous. Elle est contente, des notes de musique au-dessus de sa tête. Lui conduit, content. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "voiture",
+                "x": 320,
+                "y": 345,
+                "echelle": 2.6,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la musique dans la voiture",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Lui change de chanson, content, un petit sourire. Elle fait la moue, les bras croisés.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "malicieux",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "voiture",
+                "x": 320,
+                "y": 345,
+                "echelle": 2.6,
+                "derriere": true
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Elle remet sa chanson, contente. Lui fait la tête, les bras croisés, la bouche de travers.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "voiture",
+                "x": 320,
+                "y": 345,
+                "echelle": 2.6,
+                "derriere": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Une nouvelle chanson démarre à 0,6 s : les deux s'illuminent et chantent à fond, la bouche grande ouverte, des notes de musique autour d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "joie",
+                    "bras": "bas",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "voiture",
+                "x": 320,
+                "y": 345,
+                "echelle": 2.6,
+                "derriere": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

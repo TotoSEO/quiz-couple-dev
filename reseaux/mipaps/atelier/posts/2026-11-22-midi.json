@@ -1,0 +1,28 @@
+{
+  "jour": "2026-11-22",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-132",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : une phrase vraie sur les courses à deux.",
+        "style": "declaration",
+        "texte": "avec toi, même faire les courses, c'est bien."
+      },
+      "legende": "garde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

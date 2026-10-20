@@ -1,0 +1,132 @@
+{
+  "jour": "2026-11-23",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-119",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Choisir un resto à deux : « où tu veux », « non, pas là », « ok, là », « finalement non » ; on mange des pâtes à la maison.",
+        "pages": [
+          {
+            "texte": "choisir un resto à deux",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "pensif",
+                  "bras": "menton",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "pensif",
+                  "bras": "menton",
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« où tu veux »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "signes": [
+                    "question"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« non, pas là »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "perplexe",
+                  "bras": "croises",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« ok, là »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "bras": "pointe",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« finalement non »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "gene",
+                  "bras": "tend",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "dessin": {
+              "elements": [
+                {
+                  "objet": "table",
+                  "x": 320,
+                  "y": 330,
+                  "echelle": 1.2
+                },
+                {
+                  "perso": "lui",
+                  "expression": "gourmand",
+                  "x": 250,
+                  "taille": 230
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 410,
+                  "taille": 230
+                }
+              ]
+            },
+            "appel": "vous aussi ou c'est que nous ?"
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
