@@ -185,15 +185,19 @@
     "stars": "étoiles"
   },
   "capture": {
-    "sur": "Vos résultats complets",
-    "titre": "Pour déverrouiller le reste de vos résultats, renseignez votre e-mail",
-    "texte": "Le détail de votre résultat, les conseils et la suite s'affichent juste après.",
-    "placeholder": "votre@email.com",
-    "consentement": "J'accepte de recevoir les conseils et offres de Quiz Couple par e-mail. Désinscription en un clic, à tout moment.",
+    "sur": "Vos résultats sont prêts",
+    "titre": "Plus qu'une étape pour découvrir vos résultats complets gratuits !",
+    "points": [
+      "L'analyse détaillée de votre résultat",
+      "Nos conseils pour la suite",
+      "Tous les autres tests du site débloqués"
+    ],
+    "placeholder": "Votre adresse e-mail",
+    "consentement": "J'accepte de recevoir les conseils et nouveautés de Quiz Couple par e-mail.",
     "confidentialite": "Confidentialité",
     "bouton": "Voir mes résultats",
     "envoi": "Un instant...",
-    "note": "Une seule fois : ensuite, tous les tests, quiz et jeux du site s'ouvrent sans rien redemander sur cet appareil.",
+    "note": "Pas de spam. Désinscription en un clic.",
     "merci": {
       "titre": "Merci, vos résultats sont débloqués !",
       "texte": "Et pas seulement ici : désormais, tous les tests, quiz et jeux du site vous donnent leurs résultats complets sans redemander votre e-mail sur cet appareil."
@@ -203,7 +207,7 @@
       "format": "Cette adresse e-mail n'a pas l'air complète.",
       "domaine": "Cette adresse ne peut pas recevoir d'e-mails. Vérifiez le domaine.",
       "jetable": "Les adresses jetables ne sont pas acceptées.",
-      "consentement": "Cochez la case pour continuer."
+      "consentement": "Cochez la case pour voir vos résultats."
     }
   },
   "blog": {

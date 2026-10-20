@@ -485,7 +485,7 @@
             <button id="abonnes-export" class="btn btn-cta btn-sm" type="button">Exporter en CSV</button>
           </div>
           <p class="adm-note">Les adresses laissées à la fin des tests pour voir le reste de leurs résultats, et celles de l'e-book une fois confirmées. Chaque adresse garde la langue de la personne : l'export CSV (e-mail, langue, source, statut, dates) s'importe dans l'outil d'envoi langue par langue. Une adresse redonnée à la fin d'un autre test compte dans « captures », jamais en double.</p>
-          <div class="stats-tetes">
+          <div class="stats-tetes stats-tetes--cinq">
             <div class="stats-tete stats-tete--lances">
               <p class="stats-tete-titre">Abonnés</p>
               <p class="stats-tete-jour" id="abonnes-total">-</p>
@@ -506,7 +506,13 @@
               <p class="stats-tete-jour" id="abonnes-langues">-</p>
               <p class="stats-tete-sub" id="abonnes-langues-sub">&nbsp;</p>
             </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Taux de capture</p>
+              <p class="stats-tete-jour" id="abonnes-taux">-</p>
+              <p class="stats-tete-sub" id="abonnes-taux-sub">&nbsp;</p>
+            </div>
           </div>
+          <p class="adm-note" id="abonnes-taux-note">Taux de capture : les nouvelles adresses laissées à la fin des tests, rapportées aux écrans de résultat vus sur les pages qui portent la porte (depuis son lancement, le 19 octobre 2026). C'est un plancher : un appareil qui a déjà donné son adresse voit ses résultats sans porte, et son écran de résultat compte quand même.</p>
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
@@ -803,6 +809,16 @@
   </div>
 </div>
 
+<%# Les pages qui portent la porte e-mail des résultats, par source, avec
+    leurs chemins dans les cinq langues : admin.js rapporte les nouvelles
+    adresses aux écrans de résultat vus sur ces pages (/<page>/resultat/). %>
+<% if (typeof capturePages !== 'undefined' && capturePages) {
+     const _chemins = {};
+     Object.entries(capturePages).forEach(([cle, id]) => {
+       _chemins[id] = (languages || ['fr']).map((l) => getLocalizedPath(cle, l)).filter(Boolean);
+     }); %>
+<script>window.__QC_CAPTURE_CHEMINS=<%- JSON.stringify(_chemins) %>;</script>
+<% } %>
 <script src="/js/admin.js" defer></script>
 <script src="/js/admin-affiliation.js" defer></script>
 <script src="/js/admin-reseaux.js" defer></script>

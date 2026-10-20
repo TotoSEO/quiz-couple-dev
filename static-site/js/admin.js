@@ -3036,21 +3036,92 @@
   // emails du ebook »).
   function ecritAbonnes(id, texte) { var e = document.getElementById(id); if (e) e.textContent = texte; }
   function placeAbonnes(id, html) { var e = document.getElementById(id); if (e) e.innerHTML = html; }
+  // L'onglet s'ouvre par deux chemins à la fois (le clic et le changement
+  // d'onglet appellent tous deux loadLeads) : une seule lecture à la fois.
+  var abonnesEnCours = null;
   function loadAbonnes() {
+    if (abonnesEnCours) return abonnesEnCours;
+    abonnesEnCours = chargeAbonnes();
+    var libere = function () { abonnesEnCours = null; };
+    abonnesEnCours.then(libere, libere);
+    return abonnesEnCours;
+  }
+  function chargeAbonnes() {
     ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) {
       var e = document.getElementById(id);
       if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
     });
-    statsRpc('get_abonnes_tableau', { p_jours: 30 }).then(function (d) {
+    return statsRpc('get_abonnes_tableau', { p_jours: 30 }).then(function (d) {
       if (!d || typeof d !== 'object' || !Array.isArray(d.par_source)) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
-      renderAbonnes(d);
+      renderAbonnes(d, null);
+      return chargeVuesResultat().then(function (vues) { renderAbonnes(d, vues); }, function (e) {
+        ecritAbonnes('abonnes-taux', '—');
+        ecritAbonnes('abonnes-taux-sub', 'écrans de résultat illisibles : ' + (e && e.message ? e.message : e));
+      });
     }).catch(function (e) {
       var msg = '<p class="bil-vide">Abonnés illisibles : ' + esc(e && e.message ? e.message : e) + '. La migration 20261020100000 (abonnes-base.yml) est-elle passée ?</p>';
       ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) { placeAbonnes(id, msg); });
-      ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues'].forEach(function (id) { ecritAbonnes(id, '—'); });
+      ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues', 'abonnes-taux'].forEach(function (id) { ecritAbonnes(id, '—'); });
     });
   }
-  function renderAbonnes(d) {
+  // ── Le taux de capture (21 octobre 2026) ──
+  // Thomas : « pour le nombre de visites peu de gens me laissent leur email ».
+  // Les visites ne disent rien : seuls ceux qui arrivent au résultat d'un test
+  // à porte la voient. Le dénominateur est donc le nombre d'écrans de résultat
+  // vus sur ces pages (chemins /<page>/resultat/ que resultat-url.js enregistre,
+  // lus par get_trafic_pages), dans les cinq langues, et le numérateur les
+  // nouvelles adresses. Les fenêtres ne remontent pas avant le lancement de la
+  // porte (LANCEMENT_PORTE) : avant, il n'y avait rien à laisser. C'est un
+  // plancher : un appareil qui a déjà donné son adresse voit ses résultats
+  // sans porte, et son écran de résultat compte quand même.
+  var LANCEMENT_PORTE = '2026-10-19';
+  var CAPTURE_CHEMINS = (typeof window !== 'undefined' && window.__QC_CAPTURE_CHEMINS) || {};
+  function joursDepuisPorte() {
+    var d0 = new Date(LANCEMENT_PORTE + 'T12:00:00');
+    var auj = new Date(); auj.setHours(12, 0, 0, 0);
+    return Math.max(1, Math.floor((auj.getTime() - d0.getTime()) / 86400000) + 1);
+  }
+  function vuesParSource(rows) {
+    var source = {};
+    Object.keys(CAPTURE_CHEMINS).forEach(function (id) {
+      (CAPTURE_CHEMINS[id] || []).forEach(function (c) { source[c + (c.charAt(c.length - 1) === '/' ? '' : '/') + 'resultat/'] = id; });
+    });
+    var out = { total: 0, parSource: {} };
+    (Array.isArray(rows) ? rows : []).forEach(function (r) {
+      var id = source[r.path];
+      if (!id) return;
+      var n = Number(r.pages_vues) || 0;
+      out.total += n;
+      out.parSource[id] = (out.parSource[id] || 0) + n;
+    });
+    return out;
+  }
+  function chargeVuesResultat() {
+    if (!Object.keys(CAPTURE_CHEMINS).length) return Promise.reject(new Error('pages à porte inconnues (admin construit sans capturePages)'));
+    var depuis = joursDepuisPorte();
+    var fenetres = { jour: 1, semaine: Math.min(7, depuis), periode: Math.min(30, depuis) };
+    var tz = fuseau();
+    var cles = Object.keys(fenetres);
+    // Une lecture par durée : tant que la porte a moins de sept jours, la
+    // semaine et la période ont la même.
+    var durees = cles.map(function (k) { return fenetres[k]; }).filter(function (n, i, t) { return t.indexOf(n) === i; });
+    return Promise.all(durees.map(function (n) {
+      return statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }).then(function (rows) {
+        if (!Array.isArray(rows)) throw new Error((rows && (rows.message || rows.hint)) || 'réponse inattendue');
+        return vuesParSource(rows);
+      });
+    })).then(function (res) {
+      var out = { fenetres: fenetres };
+      cles.forEach(function (k) { out[k] = res[durees.indexOf(fenetres[k])]; });
+      return out;
+    });
+  }
+  function tauxCapture(adresses, vues) {
+    if (!vues) return null;
+    return Math.round(1000 * (Number(adresses) || 0) / vues) / 10;
+  }
+  function pourcentAb(t) { return t === null ? '—' : t.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' %'; }
+  function renderAbonnes(d, vues) {
     ecritAbonnes('abonnes-total', nombreAb(d.total));
     ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
     ecritAbonnes('abonnes-jour', nombreAb(d.aujourd_hui));
@@ -3065,11 +3136,33 @@
     ecritAbonnes('abonnes-langues-sub', langues.map(function (l) { return l.lang.toUpperCase() + ' ' + nombreAb(l.n); }).join(' · ') || 'aucune adresse');
 
     var sources = Array.isArray(d.par_source) ? d.par_source : [];
+    // Le taux : aujourd'hui en grand, la semaine et la période dessous. Les
+    // adresses de la période sont celles des tests seulement (l'e-book n'a
+    // pas d'écran de résultat) ; celles du jour et de la semaine comptent
+    // l'e-book aussi, qui pèse peu.
+    if (vues) {
+      var desTests = sources.reduce(function (a, x) { return x.source === 'ebook' ? a : a + (Number(x.periode) || 0); }, 0);
+      var tJour = tauxCapture(d.aujourd_hui, vues.jour.total);
+      ecritAbonnes('abonnes-taux', pourcentAb(tJour));
+      var tPeriode = pourcentAb(tauxCapture(desTests, vues.periode.total));
+      // Tant que la porte a moins de sept jours, les deux fenêtres se
+      // confondent : une seule mention, « depuis le lancement ».
+      var suite = vues.fenetres.semaine === vues.fenetres.periode
+        ? 'depuis le lancement (' + vues.fenetres.periode + ' j) : ' + tPeriode
+        : '7 j : ' + pourcentAb(tauxCapture(d.sept_jours, vues.semaine.total)) + ' · ' + vues.fenetres.periode + ' j : ' + tPeriode;
+      ecritAbonnes('abonnes-taux-sub', 'aujourd\'hui, sur ' + nombreAb(vues.jour.total) + ' résultats vus · ' + suite);
+    } else {
+      ecritAbonnes('abonnes-taux', '…');
+      ecritAbonnes('abonnes-taux-sub', 'lecture des écrans de résultat');
+    }
+    var colTaux = vues ? '<th>Résultats vus (' + vues.fenetres.periode + ' j)</th><th>Taux</th>' : '';
     placeAbonnes('abonnes-sources', sources.length
-      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Abonnés</th><th>Actifs</th><th>30 jours</th>' +
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Abonnés</th><th>Actifs</th><th>30 jours</th>' + colTaux +
         LANGUES_ABONNES.map(function (l) { return '<th>' + l.toUpperCase() + '</th>'; }).join('') + '</tr></thead><tbody>' +
         sources.map(function (x) {
-          return '<tr><td class="bil-gauche">' + esc(libelleSourceAbonnes(x.source)) + ' <span style="opacity:.55;font-size:.75rem">' + esc(x.source) + '</span></td><td>' + nombreAb(x.n) + '</td><td>' + nombreAb(x.actifs) + '</td><td>' + nombreAb(x.periode) + '</td>' +
+          var vuesSource = vues && x.source !== 'ebook' ? (vues.periode.parSource[x.source] || 0) : null;
+          var cellules = vues ? '<td>' + (vuesSource === null ? '' : nombreAb(vuesSource)) + '</td><td style="white-space:nowrap">' + (vuesSource ? pourcentAb(tauxCapture(x.periode, vuesSource)) : '') + '</td>' : '';
+          return '<tr><td class="bil-gauche">' + esc(libelleSourceAbonnes(x.source)) + ' <span style="opacity:.55;font-size:.75rem">' + esc(x.source) + '</span></td><td>' + nombreAb(x.n) + '</td><td>' + nombreAb(x.actifs) + '</td><td>' + nombreAb(x.periode) + '</td>' + cellules +
             LANGUES_ABONNES.map(function (l) { return '<td>' + (Number(x[l]) ? nombreAb(x[l]) : '') + '</td>'; }).join('') + '</tr>';
         }).join('') + '</tbody></table></div>'
       : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
