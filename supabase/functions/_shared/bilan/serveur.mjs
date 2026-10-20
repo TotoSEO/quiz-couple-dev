@@ -279,6 +279,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
+    // L'adresse e-mail est obligatoire depuis le 20 octobre 2026 (Thomas :
+    // « le PDF doit s'envoyer directement par mail, pas sur demande ») :
+    // c'est là que le rapport part tout seul, et elle permet de retrouver
+    // l'évaluation (action `retrouver`) si le lien est perdu.
+    const ea = emailPropre(corps.email);
+    if (!ea) return non(400, 'email');
 
     const ipHash = await empreinte((ctx?.ip || 'inconnue') + '|' + sel);
     const depuis = new Date(maintenant().getTime() - 3600e3).toISOString();
@@ -298,6 +304,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       src: sourcePropre(corps.src),
       a_prenom: pa, a_genre: genrePropre(corps.moi?.genre),
       b_prenom: pb, b_genre: genrePropre(corps.autre?.genre),
+      a_email: ea,
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
@@ -331,7 +338,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    const champs = {};
+    // Même règle que pour la création : le rapport part aussi à l'adresse de
+    // celui ou celle qui rejoint, sans qu'il ait rien à demander.
+    const eb = emailPropre(corps.email);
+    if (!eb) return non(400, 'email');
+    const champs = { [role + '_email']: eb };
     if (corps.prenom !== undefined) {
       const p = prenomPropre(corps.prenom);
       if (!p) return non(400, 'prenom');
@@ -664,12 +675,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return { a: ligne[role + '_prenom'], b: ligne[autre + '_prenom'], mode: estSolo(ligne) ? 'solo' : 'duo' };
   }
 
-  // Son propre lien, envoyé à l'adresse donnée. Si la personne n'avait pas
-  // encore d'adresse de rapport, celle-ci le devient ; une adresse déjà
-  // gardée n'est jamais remplacée ici (sinon « retrouver » par la première
-  // adresse ne trouverait plus rien : l'adresse du rapport se change au
-  // paiement ou sur le rapport, action `email`). Le lien est reconstruit
-  // depuis le jeton présenté : la base n'en garde que l'empreinte.
+  // Son propre lien, envoyé à l'adresse donnée ou, sans adresse dans la
+  // demande, à celle du rapport. Une adresse de rapport déjà gardée (elle
+  // l'est toujours depuis le 20 octobre 2026, demandée à la création et à
+  // l'acceptation de l'invitation) n'est jamais remplacée ici, sinon
+  // « retrouver » par la première adresse ne trouverait plus rien : elle se
+  // change au paiement ou sur le rapport, action `email`. Le lien est
+  // reconstruit depuis le jeton présenté : la base n'en garde que l'empreinte.
   async function lien(corps) {
     const c = await charger(corps);
     if (c.erreur) return c.erreur;

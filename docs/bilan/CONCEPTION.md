@@ -294,14 +294,19 @@ solution ! » Trois étages :
 1. **Le même appareil** : la page retient chaque évaluation ouverte
    (`qc-bilans` dans localStorage) et propose « Reprendre » en revenant sur
    la page. Un onglet fermé n'y change rien, sauf en navigation privée.
-2. **L'adresse e-mail, facultative, à la création** (champ sous les
-   prénoms) : le lien personnel part tout de suite par e-mail (action
-   `lien`), et l'adresse devient celle du rapport. « Recevoir mon lien » à
-   une autre adresse, plus tard, envoie le lien sans remplacer celle du
-   rapport : sinon « retrouver » par la première adresse ne trouverait plus
-   rien. « Recevoir mon lien par
-   e-mail » est aussi sur l'écran d'invitation et sur l'écran de pause
-   (`blocLien`, bilan.js).
+2. **L'adresse e-mail, demandée à la création et à l'acceptation de
+   l'invitation** (obligatoire depuis le 20 octobre 2026, Thomas : « le PDF
+   doit s'envoyer directement par mail, pas sur demande », « ne met plus
+   l'email en facultatif dans le formulaire de démarrage ») : `creer` et
+   `consentir` la refusent absente ou mal formée (400 `email`), elle devient
+   l'adresse du rapport (`a_email`, `b_email`), et c'est par elle que
+   « retrouver » marche pour tout le monde. Rien ne part à la création : le
+   plan Resend fait cent envois par jour, à garder pour les rapports. Le
+   champ dit ce qu'elle sert : « Le rapport PDF sera envoyé à cette
+   adresse ». « Recevoir mon lien par e-mail » reste à la demande, sur
+   l'écran d'invitation et sur l'écran de pause (`blocLien`, bilan.js), à
+   l'adresse gardée ou à une autre, sans jamais remplacer celle du rapport :
+   sinon « retrouver » par la première adresse ne trouverait plus rien.
 3. **« Retrouver mon évaluation »** (`blocRetrouver` : accueil de
    l'application, première étape de la création, lien d'invitation déjà
    utilisé) : on donne l'adresse seule. L'action `retrouver` cherche les
@@ -381,16 +386,21 @@ Chrome, par le workflow `bilan-rapport.yml` :
    qui échoue n'est jamais envoyé : il passe « en erreur » (admin, et
    workflow en échec, donc e-mail de GitHub).
 4. Le PDF part dans l'espace privé `bilan-rapports`, puis la fonction `bilan`
-   l'envoie par Resend (pièce jointe) à l'acheteur et aux adresses données
-   par chacun. Sur la page, « Télécharger le PDF » passe par un lien signé
-   valable dix minutes.
+   l'envoie par Resend (pièce jointe) à l'acheteur (adresse du reçu Stripe)
+   et aux adresses données par chacun au départ, sans que personne n'ait
+   rien à demander : l'écran du rapport et l'attente payée disent à quelles
+   adresses il est parti ou partira (`blocEmail`, bilan.js), et « le
+   recevoir à une autre adresse » reste replié (action `email`, qui remplace
+   sa propre adresse et renvoie le PDF s'il est prêt). Sur la page,
+   « Télécharger le PDF » passe par un lien signé valable dix minutes.
 
-Vingt rapports d'exemple (cinq langues, quatre cas dont des prénoms de
-trente signes en allemand et un couple d'accord sur rien) passent les mêmes
-contrôles à chaque changement du gabarit ou des textes
-(`bilan-controle.yml`, `node bilan/exemples.mjs <dossier>`). Les aperçus de
-la page de vente sont de vraies pages de ce gabarit
-(`node bilan/apercus.mjs`, dans `public/bilan/`).
+Trente rapports d'exemple (cinq langues, six cas dont des prénoms de trente
+signes en allemand, un couple d'accord sur rien, une évaluation seul(e) et
+une autre à larges zones d'ombre) passent les mêmes contrôles à chaque
+changement du gabarit ou des textes (`bilan-controle.yml`, `node
+bilan/exemples.mjs <dossier>`). Les aperçus de la page de vente sont de
+vraies pages de ce gabarit (`node bilan/apercus.mjs`, dans `public/bilan/`,
+240 px, illisibles exprès).
 
 ## Confidentialité et sécurité
 
@@ -630,10 +640,11 @@ décisifs, forces et chantiers en deux colonnes, feuille de route. Palette
 dataviz validée (accord `#2a8e62`, proche `#dca11c`, écart `#c43d3f`, avec
 des variantes plus sombres pour le texte, et une étiquette sur chaque part :
 jamais la couleur seule). Les aperçus de la page de vente sont des pages
-réelles du rapport d'exemple (`bilan/apercus.mjs`, 720 px : couverture,
-synthèse, ouverture, carte, conversation, climat, domaine, fin). Les trente
-rapports d'exemple (six cas, dont solo et solo à larges zones d'ombre, cinq
-langues) passent les deux contrôles de mise en page.
+réelles du rapport d'exemple (`bilan/apercus.mjs` : couverture, synthèse,
+carte, conversation, climat, domaine, fin). Les trente rapports d'exemple
+(six cas, dont solo et solo à larges zones d'ombre, cinq langues) passent
+les deux contrôles de mise en page. Cette version du gabarit a vécu un jour :
+voir « Le rapport, version 3 du gabarit » plus bas.
 
 ### La page de vente, version transactionnelle
 
@@ -676,3 +687,90 @@ servi par lien signé de dix minutes ; les prénoms et textes libres passent
 par `esc()` dans l'application et le rapport ; le webhook Stripe vérifie la
 signature. Le mode seul(e) n'ouvre aucune porte nouvelle : il n'y a qu'un
 lien, celui de A.
+
+## 20 octobre 2026 : le PDF refait, l'e-mail obligatoire, le consentement court
+
+Thomas, après avoir joué tout le flux et payé : « tout fonctionne
+parfaitement », puis trois demandes.
+
+### Le rapport, version 3 du gabarit
+
+« J'ai pu voir le PDF à quoi il ressemble et mec... ça ne va pas !! C'est
+pas assez clair, les informations sont trop mal étalées et indiquées ! Y'a
+pas assez de séparation entre les questions, les réponses, les choix qui ont
+été faits. [...] je veux un document qui claque ! La personne paye 10 euros
+pour ce document il doit être parfait esthétiquement ! pas un truc flat comme
+actuellement. Et aussi ya des parties qui sont à cheval entre deux pages,
+arrange ça pour que ça soit toujours parfaitement lisible, et sans créer trop
+de blanc / vide. »
+
+`VERSION_RAPPORT = 3`. Ce qui a changé, et pourquoi :
+
+- **L'ouverture d'un chapitre** n'est plus une page pleine : c'est un grand
+  bloc de couleur (numéro géant, titre, une phrase, 52 mm au moins) en haut
+  de la première page du chapitre, suivi tout de suite de l'intro et du
+  contenu. Une page pleine par chapitre laissait la suivante à moitié vide
+  dix fois par rapport (46 pages pour le couple d'exemple, 35 depuis). Le
+  bloc est insécable et reste avec ce qui le suit ; la page nommée
+  `chapitre` de document.mjs n'existe plus, seule la couverture va jusqu'au
+  bord.
+- **La carte de question** sépare enfin les trois choses : un **bandeau de
+  verdict** en couleur pleine (vert foncé Accord, ocre Réponses proches,
+  rouge foncé Écart, avec les étiquettes Point bloquant, À trancher, Sujet
+  décisif, et le domaine à droite), le sujet (avec son numéro en pastille
+  pour une conversation), **la question en citation** (italique, filet à
+  gauche), **les deux réponses** dans deux boîtes à en-tête de la couleur de
+  la personne (son prénom en blanc sur rose ou violet, la réponse en gras
+  dessous), puis **le guide** dans un encart gris sur deux colonnes
+  (pourquoi ça compte à gauche ; pour en parler et à éviter à droite),
+  chaque titre avec son point de couleur.
+- **Les accords d'un domaine** (et « ce qui vous rassemble ») sont des
+  cases cochées sur deux colonnes, le sujet en gras et la réponse commune
+  dessous, au lieu d'une liste à puces.
+- **Les cartes basses** (climat, qui fait quoi, et « comment vous le vivez »
+  dans un domaine) vont par deux quand elles n'ont pas de guide ; celles qui
+  en ont un passent d'abord, en pleine largeur. La carte des domaines met ses
+  onze barres sur deux colonnes : elle tient sur une page.
+- **Les aplats sont pleins**, sans dégradé (couverture, bandeaux de domaine) :
+  Thomas, sur les tuiles du menu, « pas de gradient / fade, ça fait trop
+  IA ».
+- **La pagination** : tout bloc qui ne doit pas se couper porte
+  `break-inside: avoid` (cartes, cases, tuiles, étapes de la feuille de
+  route, bloc des non négociables) ; l'en-tête d'un domaine (bandeau, phrase,
+  titre des accords et les accords jusqu'à six) est un seul bloc insécable :
+  jamais un bandeau en bas de page et sa phrase en haut de la suivante. Les
+  chaînes `break-after: avoid` ont été retirées de l'intro et de l'en-tête :
+  Chrome, pour les respecter, coupait un paragraphe de deux lignes en deux.
+  Le blanc qui reste est celui d'une carte qui ne tient plus en bas de page
+  (50 à 110 mm), le prix d'une carte jamais coupée.
+- Les trente rapports d'exemple passent les deux contrôles ; les aperçus de
+  la page de vente sont refaits.
+
+### L'e-mail obligatoire et le PDF qui part tout seul
+
+« Le PDF doit s'envoyer directement par mail, pas sur demande. Et du coup
+préciser quand la personne rentre son adresse mail que le pdf lui sera envoyé
+à cette adresse, donc ne met plus l'email en facultatif dans le formulaire de
+démarrage. » Détail dans « Les liens perdus » (point 2) et « Le rapport PDF »
+(point 4) : adresse obligatoire à la création et à l'acceptation de
+l'invitation, aucun e-mail à la création, le PDF envoyé par la fabrique à
+toutes les adresses connues, et un écran qui dit où il est parti au lieu de
+le demander. Le dernier point de la liste du paywall ne promet plus « une
+trentaine de pages », mais « le rapport complet en PDF, envoyé par e-mail
+dès qu'il est prêt ».
+
+### Le consentement, au plus court
+
+« Y'a une case à cocher je consens à ce que quiz couple enregistre les
+réponses, sexuelle, amitié, bref, ça peut être mal interprété et devenir un
+point bloquant, donc essaye de mettre le strict minimum genre Je consens à ce
+que mes réponses soient enregistrées UNIQUEMENT dans le but de fournir le
+rapport d'évaluation. » La case dit exactement ça, dans les cinq langues
+(`creation.consentement`, la même en solo). L'information que l'article 9 du
+RGPD demande pour un consentement explicite et éclairé n'a pas disparu, elle
+est passée dans la note sous la case (`creation.accordAide`) : les réponses,
+« y compris sur les sujets intimes », ne servent qu'à ce rapport, où le
+partenaire les verra en face des siennes (en solo : que la personne seule
+verra, avec ce qu'elle imagine des réponses de l'autre), la durée de garde,
+la suppression à tout moment. La case reste une action explicite et distincte
+de la case « 18 ans ou plus ».

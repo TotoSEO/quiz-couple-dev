@@ -2,8 +2,9 @@
 // partagé (supabase/functions/_shared/bilan/rapport.mjs), sa feuille de
 // style avec les polices en data: URI (rien à aller chercher pendant
 // l'impression), les marges A4 et le pied de page dans la langue du rapport.
-// La couverture (première page) et les pages d'ouverture de chapitre (page
-// nommée `chapitre`, posée par .rap-ouv) n'ont ni marge ni pied de page.
+// La couverture (première page) n'a ni marge ni pied de page ; depuis le
+// 20 octobre 2026, l'ouverture d'un chapitre est un bloc en haut de sa
+// première page, dans les marges, plus une page pleine à part.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -50,7 +51,6 @@ function regleDePage(T) {
   @bottom-left { ${pied} }
   @bottom-right { content: counter(page) " / " counter(pages); ${pied} text-align: right; } }
 @page :first { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
-@page chapitre { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
 ${styleDePage(T)}
 html, body { margin: 0; padding: 0; background: #fff; }`;
 }
