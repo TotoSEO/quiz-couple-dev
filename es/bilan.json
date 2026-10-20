@@ -578,6 +578,7 @@
     "ctaSolo": "Hacerla a solas",
     "ctaNote": "Preguntas gratis · {{prix}} por el informe, al final · Pago único, sin suscripción",
     "voirExtrait": "Ver el informe página a página",
+    "paiements": "Pago seguro con Stripe",
     "visuel": {
       "sur": "Informe de ejemplo · pareja ficticia",
       "noms": "Lucía & Pablo",

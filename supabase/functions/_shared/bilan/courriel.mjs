@@ -42,7 +42,6 @@ const PREFIXE_FICHIER = {
   it: 'valutazione-di-coppia',
 };
 
-// L'éditeur, en bas de chaque message.
 // Les conditions générales de vente, par langue : le lien part dans l'e-mail du
 // rapport, avec la confirmation de la renonciation à la rétractation.
 export const CGV = {
@@ -52,7 +51,14 @@ export const CGV = {
   de: '/de/agb/',
   it: '/it/condizioni-generali-di-vendita/',
 };
-export const EDITEUR = 'Quiz Couple · Visibilitea, entreprise individuelle · 4 rue de Bruges, 67000 Strasbourg · SIRET 940 106 800 00011';
+// L'éditeur, en bas de chaque message : le nom de la boîte et le site, rien
+// de plus (Thomas, 20 octobre 2026 : « on peut juste mettre le nom de la boîte
+// et du site »). L'identité complète du vendeur (forme, adresse, SIRET),
+// que la loi veut sur un support durable au moment de la confirmation du
+// contrat (L221-13 et L221-5), est écrite en dernière page du rapport PDF
+// joint à l'e-mail du rapport (`EDITEUR` de bilan/document.mjs), et sur les
+// mentions légales et les CGV du site, dont l'e-mail donne le lien.
+export const EDITEUR = 'Quiz Couple · Visibilitea · quiz-couple.com';
 
 const TEXTES = {
   fr: {

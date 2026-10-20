@@ -418,6 +418,17 @@ export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
   .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
   .map(([cle, e]) => [cle, e.id]));
 
+// Les moyens de paiement dessinés sous le prix, dans le hero de la page de
+// vente (20 octobre 2026, Thomas : « le pictogramme carte, apple pay, amazon
+// pay, ça peut rassurer »). Stripe Checkout propose ce que le tableau de bord
+// Stripe a d'activé : les cartes toujours, Apple Pay et Google Pay d'office sur
+// les appareils qui les ont, Amazon Pay seulement s'il est activé dans
+// Paramètres > Moyens de paiement. On retire d'ici un moyen qui n'est pas
+// activé : un pictogramme qui promet un moyen absent de la page de paiement
+// ferait l'inverse de rassurer. Les dessins sont dans bilan-couple.ejs
+// (PICTOS_PAIEMENT), un nom inconnu ici n'affiche rien.
+export const MOYENS_PAIEMENT = ['visa', 'mastercard', 'cb', 'applepay', 'googlepay', 'amazonpay'];
+
 export const VENDEUR = {
   nom: 'Visibilitea',
   dirigeant: 'Thomas Owaller',

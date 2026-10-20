@@ -578,6 +578,7 @@
     "ctaSolo": "Farla da solo/a",
     "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Pagamento unico, senza abbonamento",
     "voirExtrait": "Vedere il report pagina per pagina",
+    "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",
       "noms": "Giulia & Marco",

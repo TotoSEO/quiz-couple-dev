@@ -578,6 +578,7 @@
     "ctaSolo": "Take it on your own",
     "ctaNote": "Free questions · {{prix}} for the report, at the end · One-off payment, no subscription",
     "voirExtrait": "See the report page by page",
+    "paiements": "Secure payment via Stripe",
     "visuel": {
       "sur": "Sample report · fictional couple",
       "noms": "Emma & Daniel",

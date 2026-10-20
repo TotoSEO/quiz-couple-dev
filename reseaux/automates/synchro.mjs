@@ -34,10 +34,35 @@ const memeContenu = (a, b) =>
   canon(sansSon(a.recette)) === canon(sansSon(b.recette)) && (a.legende || '') === (b.legende || '') && canon(a.hashtags || []) === canon(b.hashtags || []);
 const memeInstant = (a, b) => Date.parse(a) === Date.parse(b);
 
+// Les posts et les déclinaisons à venir sont lus en quelques requêtes au
+// début, puis tenus à jour en mémoire : jusqu'au 20 octobre 2026, chaque
+// passage horaire relisait le post et sa déclinaison et réécrivait le post
+// (trois requêtes par fichier, 17 000 lignes par jour dans les logs de la
+// passerelle de Supabase, un cinquième du total) pour ne rien changer dans
+// l'immense majorité des cas.
+const CHAMPS_POST = ['format', 'gabarit', 'categorie', 'theme'];
+const memePost = (deja, post) =>
+  deja.statut === 'valide' && CHAMPS_POST.every((c) => (deja[c] ?? null) === (post[c] ?? null)) && canon(deja.notes ?? {}) === canon(post.notes ?? {});
+const parPaquets = (liste, taille) => Array.from({ length: Math.ceil(liste.length / taille) }, (_, i) => liste.slice(i * taille, (i + 1) * taille));
+
+async function lireExistant(base, comptes, maintenant) {
+  const fuseaux = new Set(['Europe/Paris', ...comptes.map((c) => c.fuseau).filter(Boolean)]);
+  const jourMin = [...fuseaux].map((f) => aujourdhui(f, maintenant)).sort()[0];
+  const postsExistants = await base.select('social_posts', `select=id,langue,jour,creneau,statut,format,gabarit,categorie,theme,notes&jour=gte.${jourMin}`);
+  const posts = new Map(postsExistants.map((p) => [`${p.langue}|${p.jour}|${p.creneau}`, p]));
+  const variantes = new Map();
+  for (const paquet of parPaquets(postsExistants.map((p) => p.id), 60)) {
+    const lignes = await base.select('social_variantes', `select=id,post_id,langue,statut,recette,legende,hashtags,publier_a,essais,erreur&post_id=in.(${paquet.join(',')})`);
+    for (const v of lignes) variantes.set(`${v.post_id}|${v.langue}`, v);
+  }
+  return { posts, variantes };
+}
+
 export async function synchroniser(base, posts, { maintenant = new Date() } = {}) {
   const bilan = { ecrits: 0, inchanges: 0, refuses: 0, ignores: 0 };
   const melangeGlobal = await base.reglage('melange');
   const comptes = await base.select('social_comptes', 'select=langue,fuseau,melange');
+  const existant = await lireExistant(base, comptes, maintenant);
   for (const { fichier, post } of posts) {
     const fautes = controlerPost(post);
     // le compte du post : celui de sa déclinaison (Quiz Couple écrit en, Les
@@ -79,20 +104,33 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       await base.journal('erreur', 'synchro', `${fichier} refusé : ${fautes.join(' ; ')}`, { fichier, fautes, langue });
       continue;
     }
-    const [deja] = await base.select('social_posts', `select=id,statut&langue=eq.${langue}&jour=eq.${post.jour}&creneau=eq.${post.creneau}`);
+    const clePost = `${langue}|${post.jour}|${post.creneau}`;
+    const deja = existant.posts.get(clePost);
     if (deja && ['suspendu', 'annule'].includes(deja.statut)) {
       bilan.ignores++;
       await base.journal('alerte', 'synchro', `${fichier} : post ${deja.statut} dans l'admin, laissé tel quel`);
       continue;
     }
-    const [ligne] = await base.insert(
-      'social_posts',
-      [{ langue, jour: post.jour, creneau: post.creneau, format: post.format, gabarit: post.gabarit, categorie: post.categorie ?? null, theme: post.theme ?? null, statut: 'valide', notes: post.notes ?? {} }],
-      { conflit: 'langue,jour,creneau' },
-    );
+    let ligne = deja;
+    if (!deja || !memePost(deja, post)) {
+      [ligne] = await base.insert(
+        'social_posts',
+        [{ langue, jour: post.jour, creneau: post.creneau, format: post.format, gabarit: post.gabarit, categorie: post.categorie ?? null, theme: post.theme ?? null, statut: 'valide', notes: post.notes ?? {} }],
+        { conflit: 'langue,jour,creneau' },
+      );
+      existant.posts.set(clePost, ligne);
+    }
     let change = false;
     for (const [langue, v] of Object.entries(post.variantes)) {
-      const [existante] = await base.select('social_variantes', `select=id,statut,recette,legende,hashtags,publier_a,essais,erreur&post_id=eq.${ligne.id}&langue=eq.${langue}`);
+      const cleVariante = `${ligne.id}|${langue}`;
+      const existante = existant.variantes.get(cleVariante);
+      // une écriture met la mémoire à jour, pour un second fichier qui viserait la même place
+      const ecrire = async (valeursEcrites) => {
+        const [l] = existante
+          ? await base.update('social_variantes', `id=eq.${existante.id}`, valeursEcrites)
+          : await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...valeursEcrites }]);
+        if (l) existant.variantes.set(cleVariante, { ...(existante || {}), ...l });
+      };
       const valeurs = { recette: v.recette, legende: v.legende, hashtags: v.hashtags };
       // Une heure de publication écrite dans le post remplace la minute tirée
       // au sort dans le créneau (déclencheur social_variante_heure, qui ne
@@ -101,18 +139,15 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       if (post.publier_a) valeurs.publier_a = new Date(post.publier_a).toISOString();
       if (retiree) {
         const retenue = { ...valeurs, statut: 'echec', erreur: MOTIF_RETRAIT, essais: ESSAIS_RENDU_MAX, fichiers: {} };
-        if (!existante) {
-          await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...retenue }]);
-          change = true;
-        } else if (MODIFIABLES.includes(existante.statut) && !(existante.statut === 'echec' && existante.erreur === MOTIF_RETRAIT)) {
-          await base.update('social_variantes', `id=eq.${existante.id}`, retenue);
+        if (!existante || (MODIFIABLES.includes(existante.statut) && !(existante.statut === 'echec' && existante.erreur === MOTIF_RETRAIT))) {
+          await ecrire(retenue);
           change = true;
         }
         // déjà retenue, ou déjà partie : rien à faire
         continue;
       }
       if (!existante) {
-        await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...valeurs }]);
+        await ecrire(valeurs);
         change = true;
       } else if (MODIFIABLES.includes(existante.statut)) {
         const aRetenter = existante.statut === 'echec' && (existante.essais || 0) < ESSAIS_RENDU_MAX;
@@ -121,7 +156,7 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
           // 2026, chaque synchro remettait toutes les déclinaisons en a_rendre
           // et le rendu refaisait chaque heure tous les posts des 48 h à venir.
           if (valeurs.publier_a && !memeInstant(valeurs.publier_a, existante.publier_a)) {
-            await base.update('social_variantes', `id=eq.${existante.id}`, { publier_a: valeurs.publier_a });
+            await ecrire({ publier_a: valeurs.publier_a });
             change = true;
           }
           // La demande de son a changé (une ambiance posée ou corrigée) : on
@@ -129,13 +164,13 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
           // n'a plus cours ; le fichier rendu, lui, reste bon.
           if (canon(demandeSon(existante.recette)) !== canon(demandeSon(v.recette))) {
             const recette = v.recette?.son ? { ...sansSon(existante.recette), son: v.recette.son } : sansSon(existante.recette);
-            await base.update('social_variantes', `id=eq.${existante.id}`, { recette });
+            await ecrire({ recette });
             change = true;
           }
           continue;
         }
         // la recette change (ou un rendu en échec est retenté) : il faut refaire le rendu
-        await base.update('social_variantes', `id=eq.${existante.id}`, { ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: aRetenter ? existante.essais || 0 : 0 });
+        await ecrire({ ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: aRetenter ? existante.essais || 0 : 0 });
         change = true;
       } else {
         await base.journal('alerte', 'synchro', `${fichier} (${langue}) déjà ${existante.statut}, laissé tel quel`, null, existante.id);
