@@ -130,11 +130,17 @@
           <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
           <%# Revenir sur son choix est une obligation, et ce lien est le seul
-              chemin pour le faire une fois la banniere fermee. Il reste
-              masque tant que la plateforme de consentement n'a pas repondu,
-              c'est consentement.js qui le devoile : un lien qui n'ouvre rien
-              vaut moins que pas de lien du tout. %>
-          <button type="button" data-cmp-ouvrir hidden class="text-left text-sm text-muted-foreground transition-colors hover:text-primary bg-transparent border-0 p-0 cursor-pointer"><%= t('common:footer.cookiePrefs', 'Gérer mes cookies') %></button>
+              chemin pour le faire une fois la banniere fermee (la pastille
+              flottante de la plateforme est masquee, voir styles.css). Il est
+              visible des le chargement depuis le 20 octobre 2026 : masque
+              jusqu'a la reponse de la plateforme, The Moneytizer ne le voyait
+              pas (« le bouton de confidentialite doit normalement etre
+              visible pour l'utilisateur, mais nous ne le voyons pas sur votre
+              site »). consentement.js ouvre le panneau de la plateforme au
+              clic ; tant qu'elle n'a pas repondu, ou sans elle (bloqueur,
+              hors d'Europe), le lien mene a la politique de confidentialite,
+              qui a sa section sur les cookies. %>
+          <a href="<%= urlNav('privacy') %>" data-cmp-ouvrir class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:footer.cookiePrefs', 'Gérer mes cookies') %></a>
         </div>
       </div>
     </div>

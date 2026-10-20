@@ -93,8 +93,14 @@
 
   // ── Rouvrir le panneau depuis le pied de page ──────────────────────────
   // Pouvoir revenir sur son choix est une obligation, et le lien doit rester
-  // atteignable de partout. Il est masque tant que la CMP n'a pas repondu :
-  // un lien qui n'ouvre rien vaut moins que pas de lien du tout.
+  // atteignable de partout. C'est un vrai lien vers la politique de
+  // confidentialite, visible des le chargement : au clic, si la plateforme a
+  // repondu, on ouvre son panneau a la place ; sinon (elle charge encore, un
+  // bloqueur l'a retenue, ou on est hors d'Europe et elle n'a rien a montrer)
+  // la page de confidentialite s'ouvre, avec sa section sur les cookies.
+  // Jusqu'au 20 octobre 2026 le lien restait masque tant que la plateforme
+  // n'avait pas repondu « loaded », et The Moneytizer ne trouvait aucun
+  // bouton de confidentialite sur le site.
   var liens = document.querySelectorAll('[data-cmp-ouvrir]');
 
   // La plateforme pose aussi son propre lien permanent, une pastille
@@ -108,22 +114,20 @@
     return;
   }
 
-  function montrerLiens() {
-    for (var i = 0; i < liens.length; i++) liens[i].hidden = false;
-  }
+  var panneauPret = false;
   window.__tcfapi('ping', 2, function (etat) {
-    if (etat && etat.cmpStatus === 'loaded') montrerLiens();
+    if (etat && etat.cmpStatus === 'loaded') panneauPret = true;
     else if (etat && etat.cmpStatus !== 'error') {
       // Le talon repond « stub » tant que le vrai script n'est pas arrive.
       window.__tcfapi('addEventListener', 2, function (d, bon) {
-        if (bon && d && d.cmpStatus === 'loaded') montrerLiens();
+        if (bon && d && d.cmpStatus === 'loaded') panneauPret = true;
       });
     }
   });
 
   document.addEventListener('click', function (e) {
     var lien = e.target && e.target.closest ? e.target.closest('[data-cmp-ouvrir]') : null;
-    if (!lien) return;
+    if (!lien || !panneauPret) return;
     e.preventDefault();
     try { window.__tcfapi('displayConsentUi', 2, function () {}); } catch (err) {}
   });

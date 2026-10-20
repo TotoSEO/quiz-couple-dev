@@ -146,7 +146,7 @@ chemin d'API : c'est là qu'on regarde avant de toucher à une requête.
 Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 le premier défilement, le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
-`DOMContentLoaded` (le talon `__tcfapi` reste en tête) ; GA part au `load`.
+`DOMContentLoaded` (le talon `__tcfapi` reste en tête), et le lien « Gérer mes cookies » du pied de page est visible dès le chargement depuis le 20 octobre 2026 (un vrai lien vers la confidentialité, que consentement.js détourne vers le panneau de la plateforme une fois qu'elle a répondu ; la pastille flottante de la plateforme reste masquée par `.qc-cmp2-persistent-link` dans styles.css ; The Moneytizer demandait ce jour-là pourquoi « le bouton de confidentialité » n'était pas visible) ; GA part au `load`.
 Les images ont des variantes réduites versionnées à côté de l'original :
 480, 720 et 880 px pour les images de tête (`public/quiz/featured/`,
 originaux de 1200 px), 480, 720 et 1080 px pour les couvertures du blog
