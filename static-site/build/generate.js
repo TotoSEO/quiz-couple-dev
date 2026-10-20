@@ -1447,6 +1447,9 @@ async function generatePage(routeKey, lang) {
     // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
+    // L'admin calcule le taux de capture (onglet Leads) : il lui faut, pour
+    // chaque source de la porte, les chemins de la page dans les cinq langues.
+    capturePages: routeKey === 'admin' ? CAPTURE_PAGES : null,
     bilanPrix: prixBilan(lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: BILAN_CONST.prix,

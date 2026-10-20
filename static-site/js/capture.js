@@ -105,6 +105,16 @@
     });
     var porte = construire();
     tete.insertAdjacentElement('afterend', porte);
+    // La porte prend la largeur de l'écran et déborde de la carte où elle se
+    // glisse : un parent qui coupe ce qui dépasse (la carte rose du résultat
+    // des tests à deux, overflow: hidden) la rognerait. Il la laisse dépasser
+    // tant qu'elle est là (qc-porte-hote, styles.css).
+    var hotes = [];
+    for (var a = porte.parentElement; a && a !== carte.parentElement; a = a.parentElement) {
+      var cs = window.getComputedStyle(a);
+      if (cs.overflowX !== 'visible' || cs.overflowY !== 'visible') hotes.push(a);
+    }
+    hotes.forEach(function (h) { h.classList.add('qc-porte-hote'); });
 
     function ouvrir(enregistre) {
       if (ouverte) return;
@@ -131,7 +141,10 @@
       });
       window.setTimeout(function () {
         floutes.forEach(function (e) { e.classList.remove('qc-flou', 'qc-flou--ouvre'); });
-        if (!merci && porte.parentNode) porte.parentNode.removeChild(porte);
+        if (!merci && porte.parentNode) {
+          porte.parentNode.removeChild(porte);
+          hotes.forEach(function (h) { h.classList.remove('qc-porte-hote'); });
+        }
         document.querySelectorAll('[data-porte]').forEach(function (c) { c.removeAttribute('data-porte'); });
       }, 450);
       try { window.dispatchEvent(new CustomEvent('qc:abonne', { detail: { source: source, enregistre: !!enregistre } })); } catch (e) { /* rien */ }
@@ -139,24 +152,40 @@
     porte.ouvrir = ouvrir;
   }
 
+  // La porte depuis le 21 octobre 2026 (Thomas : « pour le nombre de visites
+  // peu de gens me laissent leur email », « Plus qu'une étape pour découvrir
+  // vos résultats complets gratuits ! ») : « vos résultats sont prêts » et une
+  // barre presque pleine au lieu du cadenas, le titre de Thomas, le champ, une
+  // case courte, le bouton, puis trois choses que l'adresse débloque
+  // (`points`) et « pas de spam ». Elle était coincée dans la largeur de la carte (244 px
+  // sur un téléphone de 390, 634 px de haut, bouton sur deux lignes, champ
+  // sous le pli sur la compatibilité) : la largeur vient maintenant de
+  // l'écran (styles.css, --qc-porte-l).
+  var COCHE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   function construire() {
     var porte = el('div', 'qc-porte');
     porte.setAttribute('role', 'group');
     porte.setAttribute('aria-labelledby', 'qc-porte-titre');
+    var points = Array.isArray(T.points) ? T.points : [];
     porte.innerHTML =
-      '<div class="qc-porte-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></div>' +
-      '<p class="qc-porte-sur">' + esc(tx('sur')) + '</p>' +
+      '<p class="qc-porte-etat">' + COCHE + '<span>' + esc(tx('sur')) + '</span></p>' +
+      '<div class="qc-porte-barre" aria-hidden="true"><span></span></div>' +
       '<h3 class="qc-porte-titre" id="qc-porte-titre">' + esc(tx('titre')) + '</h3>' +
-      '<p class="qc-porte-texte">' + esc(tx('texte')) + '</p>' +
+      (!points.length && tx('texte') ? '<p class="qc-porte-texte">' + esc(tx('texte')) + '</p>' : '') +
       '<form class="qc-porte-form" novalidate>' +
-        '<input class="qc-porte-email" type="email" name="email" autocomplete="email" inputmode="email" spellcheck="false" placeholder="' + esc(tx('placeholder')) + '" aria-label="E-mail" required>' +
+        '<input class="qc-porte-email" type="email" name="email" autocomplete="email" inputmode="email" enterkeyhint="go" spellcheck="false" placeholder="' + esc(tx('placeholder')) + '" aria-label="' + esc(tx('placeholder') || 'E-mail') + '" required>' +
         '<input class="qc-porte-hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">' +
         '<p class="qc-porte-suggestion" hidden><button type="button" class="qc-porte-suggere"></button></p>' +
         '<label class="qc-porte-consent"><input type="checkbox" name="consent"><span>' + esc(tx('consentement')) +
           (CFG.confidentialite ? ' <a href="' + esc(CFG.confidentialite) + '" target="_blank" rel="noopener">' + esc(tx('confidentialite')) + '</a>' : '') + '</span></label>' +
-        '<button type="submit" class="btn btn-cta btn-gradient qc-porte-bouton">' + esc(tx('bouton')) + '</button>' +
+        '<button type="submit" class="btn btn-cta btn-gradient qc-porte-bouton"><span class="qc-porte-bouton-texte">' + esc(tx('bouton')) + '</span>' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>' +
         '<p class="qc-porte-erreur" role="alert" hidden></p>' +
-        (tx('note') ? '<p class="qc-porte-note">' + esc(tx('note')) + '</p>' : '') +
+        // Les trois choses débloquées viennent sous le bouton : au-dessus du
+        // champ, elles le poussaient sous le pli d'un téléphone (barre
+        // d'adresse comprise, 660 px visibles), alors que le titre promet déjà.
+        (points.length ? '<ul class="qc-porte-points">' + points.map(function (p) { return '<li>' + COCHE + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' : '') +
+        (tx('note') ? '<p class="qc-porte-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>' + esc(tx('note')) + '</span></p>' : '') +
       '</form>';
     var form = porte.querySelector('form');
     var email = porte.querySelector('.qc-porte-email');
@@ -166,6 +195,8 @@
     var sugg = porte.querySelector('.qc-porte-suggestion');
     var suggBtn = porte.querySelector('.qc-porte-suggere');
     var bouton = porte.querySelector('.qc-porte-bouton');
+    var boutonTexte = porte.querySelector('.qc-porte-bouton-texte');
+    var caseConsent = porte.querySelector('.qc-porte-consent');
     var proposition = null;
 
     function dire(code) {
@@ -173,7 +204,7 @@
       erreur.textContent = m; erreur.hidden = false;
       porte.classList.remove('qc-porte--secoue'); void porte.offsetWidth; porte.classList.add('qc-porte--secoue');
     }
-    function taire() { erreur.hidden = true; erreur.textContent = ''; }
+    function taire() { erreur.hidden = true; erreur.textContent = ''; caseConsent.classList.remove('qc-porte-consent--manque'); }
     function suggere() {
       var v = email.value.trim().toLowerCase();
       var at = v.lastIndexOf('@');
@@ -190,9 +221,9 @@
       ev.preventDefault();
       var v = email.value.trim();
       if (!v || v.length > 254 || !EMAIL_RE.test(v) || /\s/.test(v)) { dire('format'); email.focus(); return; }
-      if (!consent.checked) { dire('consentement'); consent.focus(); return; }
+      if (!consent.checked) { dire('consentement'); caseConsent.classList.add('qc-porte-consent--manque'); consent.focus(); return; }
       taire();
-      bouton.disabled = true; var libelle = bouton.textContent; bouton.textContent = tx('envoi') || libelle;
+      bouton.disabled = true; var libelle = boutonTexte.textContent; boutonTexte.textContent = tx('envoi') || libelle;
       var corps = { email: v.toLowerCase(), lang: lang, source: source, page: location.pathname, consent: true, hp: hp.value || '' };
       var fini = false;
       var garde = window.setTimeout(function () { if (!fini) { fini = true; porte.ouvrir(false); } }, 8000);
@@ -202,7 +233,9 @@
           if (fini) return; fini = true; window.clearTimeout(garde);
           if (rep.status === 200) { porte.ouvrir(true); return; }
           if (rep.status === 400 && rep.j && rep.j.code && ['format', 'jetable', 'domaine', 'consentement'].indexOf(rep.j.code) >= 0) {
-            dire(rep.j.code); bouton.disabled = false; bouton.textContent = libelle; email.focus(); return;
+            dire(rep.j.code); bouton.disabled = false; boutonTexte.textContent = libelle;
+            if (rep.j.code === 'consentement') { caseConsent.classList.add('qc-porte-consent--manque'); consent.focus(); } else { email.focus(); }
+            return;
           }
           // Autre réponse (IP freinée par la fonction, 429 ; serveur en panne ;
           // fonction absente) : ce n'est pas la faute de la personne, on ouvre,

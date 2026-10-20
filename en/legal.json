@@ -102,7 +102,7 @@
     "emailsIntro": "At the end of some tests, we offer to let you leave your email address to see the rest of your results. The e-book form does the same. Here's what happens with it.",
     "emailsItems": [
       "<strong>What is saved:</strong> your email address, the language of the site you were using, the page the address comes from (which test, or the e-book), the date of your consent, and a fingerprint of your IP address (salted, impossible to reverse) to limit abuse. No name, no test result.",
-      "<strong>Why:</strong> to send you, in your language, tips for your relationship, new tests, and offers on the relationship assessment. Your address is never sold or shared with anyone.",
+      "<strong>Why:</strong> to send you, in your language, tips for your relationship and news from Quiz Couple: new tests, and the relationship assessment with its offers. Your address is never sold or shared with anyone.",
       "<strong>The legal basis:</strong> your consent, given by ticking the box. You can withdraw it at any time: every email contains a one-click unsubscribe link, and we stop writing to you.",
       "<strong>How long:</strong> as long as you're subscribed, then the address is deleted at the latest three years after the last email you opened. An unsubscribed or dead address is deleted within three months.",
       "<strong>Who sends it:</strong> our emails go out through Resend (Resend Inc., United States, European Commission standard contractual clauses) from a quiz-couple.com address; the list is hosted by Supabase (European Union)."
