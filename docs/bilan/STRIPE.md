@@ -195,6 +195,33 @@ l'admin.
   `supabase/functions/_shared/bilan/coeur.mjs`. Le serveur et le site le
   lisent au même endroit (le site à la construction, la fonction au
   déploiement).
+- **Une réduction** (LOVE20, -20 %, depuis le 20 octobre 2026) : créer le
+  code dans Stripe (Produits > Coupons, un coupon en pourcentage, puis un
+  code de promotion), puis écrire ses quatre valeurs dans `coeur.mjs` :
+  `PROMO_CODE` (le code lisible), `PROMO_STRIPE` (l'identifiant `promo_...`
+  du code de promotion), `PROMO_POURCENT` (le même pourcentage que le
+  coupon) et `PROMO_FIN` (le dernier jour, heure de Paris, ou `''` sans
+  fin). La fonction applique le code d'office à la page de paiement
+  (`discounts`) : personne n'a rien à taper, et Stripe montre 9,90 €, la
+  ligne « LOVE20 » et le total réduit. Le site affiche la pastille
+  « -20 % en ce moment » et le prix barré sur la page de vente, l'offre de
+  fin d'évaluation, les encarts des tests, la bannière et l'accueil.
+  Le coupon ne doit pas être limité à un produit : la page de paiement
+  crée son produit à chaque vente (`price_data`), un coupon réservé à un
+  produit du catalogue serait refusé. Si Stripe refuse le code (expiré,
+  désactivé, plafond d'utilisations atteint), la vente n'est jamais
+  bloquée : la page de paiement s'ouvre au prix plein, avec le champ des
+  codes, et l'erreur part au journal de la fonction `bilan`. Pour le
+  vérifier après chaque changement : « Évaluation de couple · santé »
+  (`bilan-sante.yml`), dont la sonde échoue si la réduction affichée n'est
+  pas appliquée. Pour arrêter : `PROMO_POURCENT = 0` ou une date dans
+  `PROMO_FIN` (la reconstruction programmée de 2 h UTC retire l'affichage
+  dans la nuit qui suit ; le serveur garde la réduction douze heures de
+  plus). Garder la
+  date d'expiration du code dans Stripe au moins un jour après `PROMO_FIN`.
+  Le prix barré doit être un prix vraiment pratiqué : le plus bas des
+  trente jours qui précèdent la réduction (article L112-1-1 du Code de la
+  consommation). 9,90 € l'était depuis l'ouverture.
 - **Contestation** (chargeback) : Stripe prévient par e-mail. Répondre avec
   l'heure du paiement (dans Stripe) et la case de renonciation cochée avant
   de payer : sa date est dans `renonciation_le`, table `bilans`, tant que le

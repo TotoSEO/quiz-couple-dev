@@ -229,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "couple"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}}% right now",
+    "avant": "Usual price:",
+    "apres": "Discounted price:",
+    "code": "Code {{code}} applied automatically at checkout"
   }
 }

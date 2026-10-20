@@ -206,11 +206,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return { prenom: ligne[r + '_prenom'], genre: ligne[r + '_genre'] || null };
   }
 
+  // La réduction appliquée à la page de paiement : douze heures de plus que
+  // la fin affichée (coeur.mjs, PROMO_FIN), le temps que le site soit
+  // reconstruit sans elle.
+  const promoActive = () => C.promoEnCours(maintenant(), 12);
+
   // Ce que la page sait du paiement et du rapport.
   function paiementPour(ligne, role) {
     const paye = !!ligne.paye_le;
+    const promo = promoActive();
     return {
-      prix: C.PRIX_CENTIMES,
+      prix: promo ? C.prixPromo() : C.PRIX_CENTIMES,
+      prixBase: C.PRIX_CENTIMES,
+      promo: promo ? { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT } : null,
       garantie: C.GARANTIE_JOURS,
       paiementOuvert: !!stripe,
       paiementTest: !!stripe && stripeTest,
@@ -460,30 +468,47 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const base = SITE + CHEMINS[lang];
     const message = solo ? t.mentionSolo : t.mention;
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
+    const params = (avecPromo) => ({
+      mode: 'payment',
+      locale: lang,
+      client_reference_id: ligne.id,
+      customer_email: email || undefined,
+      success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
+      cancel_url: base + '?annule=1&b=' + ligne.id,
+      // La réduction en cours est appliquée d'office (personne n'a de code à
+      // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
+      // champ des codes ne revient donc que sans réduction.
+      ...(avecPromo
+        ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
+        : { allow_promotion_codes: 'true' }),
+      metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
+      payment_intent_data: { metadata: { bilan: ligne.id, role } },
+      custom_text: { submit: { message } },
+      line_items: [{
+        quantity: 1,
+        price_data: {
+          currency: 'eur',
+          unit_amount: C.PRIX_CENTIMES,
+          product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
+        },
+      }],
+    });
+    let promo = promoActive();
     let session;
     try {
-      session = await stripe.creerSession({
-        mode: 'payment',
-        locale: lang,
-        client_reference_id: ligne.id,
-        customer_email: email || undefined,
-        success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
-        cancel_url: base + '?annule=1&b=' + ligne.id,
-        allow_promotion_codes: 'true',
-        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
-        payment_intent_data: { metadata: { bilan: ligne.id, role } },
-        custom_text: { submit: { message } },
-        line_items: [{
-          quantity: 1,
-          price_data: {
-            currency: 'eur',
-            unit_amount: C.PRIX_CENTIMES,
-            product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
-          },
-        }],
-      });
+      session = await stripe.creerSession(params(promo));
     } catch (e) {
-      return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+      // Un code expiré, désactivé ou à son plafond ne bloque jamais une
+      // vente : on rouvre la page de paiement au prix plein, avec le champ
+      // des codes, et l'erreur part au journal de la fonction.
+      if (!promo) return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+      console.warn('[bilan] réduction ' + C.PROMO_CODE + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
+      promo = false;
+      try {
+        session = await stripe.creerSession(params(false));
+      } catch (e2) {
+        return non(502, 'stripe', { detail: String(e2.message || e2).slice(0, 200) });
+      }
     }
     const champs = {
       renonciation_le: maintenant().toISOString(),
@@ -491,7 +516,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     };
     if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
     await stockage.maj(ligne.id, champs);
-    return ok({ url: session.url });
+    return ok({ url: session.url, promo });
   }
 
   // Une session Stripe payée débloque le bilan qu'elle porte en métadonnée.

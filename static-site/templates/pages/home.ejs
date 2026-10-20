@@ -121,6 +121,9 @@
   const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
   const evaluation = t('home:evaluation', {}) || {};
   const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  // La réduction en cours (bilanPromo, generate.js) : pastille à côté du
+  // surtitre et prix habituel barré devant le prix réduit.
+  const promoEval = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
   const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
@@ -403,12 +406,12 @@
         <img src="/bilan/apercu-synthese-<%= lang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false">
       </div>
       <div class="qr-bilan-corps">
-        <p class="qr-bilan-sur"><%= evaluation.sur %></p>
+        <p class="qr-bilan-sur"><%= evaluation.sur %><% if (promoEval) { %> <span class="promo-pastille"><%= promoEval.badge %></span><% } %></p>
         <h2 class="qr-bilan-titre" id="home-eval-titre"><%= evaluation.titre %></h2>
         <p class="qr-bilan-texte"><%= evaluation.texte %></p>
         <ul class="qr-bilan-points">
           <% (evaluation.points || []).forEach((pt) => { %>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%= String(pt).replace(/\{\{prix\}\}/g, prixEval) %></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%- promoEval ? promoEval.marque(escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval))) : escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval)) %></span></li>
           <% }) %>
         </ul>
         <div class="qr-bilan-boutons">

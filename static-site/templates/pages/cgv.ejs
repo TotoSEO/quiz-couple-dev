@@ -4,7 +4,9 @@
   // champ vide n'est pas affiché. La page n'est liée (pied de page, écran de
   // paiement) qu'une fois le bilan ouvert, et n'est jamais indexée.
   const v = typeof vendeur !== 'undefined' ? vendeur : {};
-  const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '';
+  // Le prix habituel, même pendant une réduction (elle est décrite au
+  // troisième paragraphe de la section du prix, cgv.json).
+  const prix = typeof bilanPrixBase !== 'undefined' ? bilanPrixBase : (typeof bilanPrix !== 'undefined' ? bilanPrix : '');
   const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
   const lien = (route, texte) => '<a class="text-primary hover:underline" href="' + getLocalizedPath(route, lang) + '">' + texte + '</a>';
   const med = v.mediateur || {};

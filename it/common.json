@@ -229,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "coppia"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}}% in questo momento",
+    "avant": "Prezzo abituale:",
+    "apres": "Prezzo scontato:",
+    "code": "Codice {{code}} applicato automaticamente al pagamento"
   }
 }

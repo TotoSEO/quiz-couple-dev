@@ -29,6 +29,13 @@
   const ns = 'bilan';
   const pageTitle = t('quizzes:bilanCouple.title', 'Évaluation de couple');
   const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  // La réduction en cours (PROMO_* de coeur.mjs, promoBilanPour dans
+  // generate.js ; 20 octobre 2026, Thomas : « en ce moment -20% sur le test,
+  // puis le prix de base barré avec le nouveau prix à côté ») : `prix` est
+  // alors le prix réduit, `promo.html` le prix habituel barré suivi du
+  // nouveau, `marque()` le met à la place du prix dans un texte échappé.
+  const promo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
+  const marque = (html) => (promo ? promo.marque(html) : html);
   const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
   // {{prix}} et {{jours}} dans les textes de la page.
   const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
@@ -57,7 +64,7 @@
     url: canonical,
     image: imageBilan,
     about: { '@type': 'Thing', name: t(ns + ':jsonLd.about', '') },
-    offers: { '@type': 'Offer', price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' },
+    offers: Object.assign({ '@type': 'Offer', price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' }, promo && promo.fin ? { priceValidUntil: promo.fin } : {}),
     author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
     publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } }
   };
@@ -82,6 +89,9 @@
     contact: getLocalizedPath('contact', lang),
     prix,
     garantie: jours,
+    // L'offre de l'application montre la même réduction, si le serveur
+    // confirme qu'il l'appliquera (bilan.js, promoAffichee).
+    promo: promo ? { badge: promo.badge, code: promo.codeTexte, prix: promo.prix, html: promo.html } : null,
     ouvert: !!(typeof bilanOuvert !== 'undefined' && bilanOuvert),
     apercu: apercu('synthese'),
     textes: appTextes,
@@ -200,6 +210,9 @@
         <ul class="blp-coches">
           <% for (const p of liste('points')) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
         </ul>
+        <% if (promo) { %>
+        <p class="blp-promo"><span class="promo-pastille"><%= promo.badge %></span><span class="blp-promo-prix"><%- promo.html %></span><span class="blp-promo-unite"><%- x('prix.unite') %></span></p>
+        <% } %>
         <div class="blp-ctas">
           <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
           <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
@@ -332,7 +345,7 @@
           <div class="blp-tl-mock blp-tl-mock--<%= i + 1 %>" aria-hidden="true">
             <% if (i === 0) { %><span class="blp-mock-chip blp-mock-chip--on"><%- tx((facons.duo || {}).titre) %></span><span class="blp-mock-chip"><%- tx((facons.solo || {}).titre) %></span>
             <% } else if (i === 1) { %><span class="blp-mock-q"></span><span class="blp-mock-opt blp-mock-opt--on"></span><span class="blp-mock-opt"></span><span class="blp-mock-opt"></span>
-            <% } else if (i === 2) { %><span class="blp-mock-prix"><%= prix %></span><span class="blp-mock-cadenas"><%- icone(iconesConfiance[3]) %></span>
+            <% } else if (i === 2) { %><span class="blp-mock-prix"><%- promo ? promo.html : e(prix) %></span><span class="blp-mock-cadenas"><%- icone(iconesConfiance[3]) %></span>
             <% } else { %><span class="blp-mock-page blp-mock-page--1"></span><span class="blp-mock-page blp-mock-page--2"></span><span class="blp-mock-page blp-mock-page--3"></span><% } %>
           </div>
         </li>
@@ -448,8 +461,10 @@
       <div class="blp-prix">
         <div class="blp-prix-tete">
           <h2 class="blp-h2"><%- x('prix.titre') %></h2>
-          <p class="blp-prix-montant"><%= prix %></p>
+          <% if (promo) { %><p class="blp-prix-pastille"><span class="promo-pastille"><%= promo.badge %></span></p><% } %>
+          <p class="blp-prix-montant"><%- promo ? promo.html : e(prix) %></p>
           <p class="blp-prix-unite"><%- x('prix.unite') %></p>
+          <% if (promo) { %><p class="blp-prix-code"><%= promo.codeTexte %></p><% } %>
         </div>
         <div class="blp-prix-corps">
           <ul class="blp-coches blp-coches--sombre">
@@ -514,7 +529,12 @@
 
   <!-- La barre collée en bas, sur téléphone, dès que le haut de page est passé -->
   <div class="blp-colle" id="blp-colle" hidden>
+    <% if (promo) { %>
+    <%# Avec une réduction : le nom sur une ligne, le prix barré et le nouveau dessous (« Évaluation de couple » sans le « · » du texte d'origine). %>
+    <span class="blp-colle-texte"><span class="blp-colle-nom"><%- tx(String(L('colle.texte')).split('{{prix}}')[0].replace(/\s*·\s*$/, '')) %></span><span class="blp-colle-prix"><%- promo.html %></span></span>
+    <% } else { %>
     <span class="blp-colle-texte"><%- x('colle.texte') %></span>
+    <% } %>
     <button type="button" class="blp-btn blp-btn--petit" data-bilan-commencer><%- x('colle.bouton') %><%- fleche %></button>
   </div>
 </div>

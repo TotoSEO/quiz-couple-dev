@@ -18,8 +18,13 @@
 // (une évaluation créée, finie, un paiement ouvert, source « sonde »), jamais
 // une vente.
 //
-// Code de sortie 0 si la page Stripe s'ouvre, 1 sinon, avec le détail de la
-// réponse du serveur.
+// Quand une réduction est en cours (coeur.mjs, PROMO_*), la sonde vérifie
+// aussi que Stripe accepte le code : sinon la page affiche le prix barré et
+// Stripe fait payer le prix plein (le serveur rouvre la page de paiement sans
+// la réduction plutôt que de bloquer la vente), et la sonde échoue.
+//
+// Code de sortie 0 si la page Stripe s'ouvre (avec la réduction quand il y en
+// a une), 1 sinon, avec le détail de la réponse du serveur.
 import * as C from './coeur.mjs';
 
 const url = process.argv[2];
@@ -70,6 +75,10 @@ try {
   const lien = String(p.json.url || '');
   if (!/^https:\/\/checkout\.stripe\.com\//.test(lien)) throw new Error('payer : pas d\'adresse Stripe dans la réponse ' + JSON.stringify(p.json).slice(0, 300));
   console.log('page Stripe ouverte : ' + lien.replace(/(checkout\.stripe\.com\/c\/pay\/)[^#?]{12}.*/, '$1…'));
+  if (C.promoEnCours(new Date(), 12)) {
+    if (p.json.promo !== true) throw new Error('réduction ' + C.PROMO_CODE + ' (' + C.PROMO_STRIPE + ') refusée par Stripe : la page de paiement s\'ouvre au prix plein alors que le site affiche -' + C.PROMO_POURCENT + ' %. Vérifier le code dans Stripe (actif, date d\'expiration, plafond, produits) ; le détail est dans les journaux de la fonction bilan.');
+    console.log('réduction ' + C.PROMO_CODE + ' appliquée par Stripe (-' + C.PROMO_POURCENT + ' %)');
+  }
   console.log('✓ le tunnel de vente marche jusqu\'au paiement');
   code = 0;
 } catch (e) {

@@ -31,7 +31,8 @@
       "titre": "2. Il prezzo",
       "p": [
         "Il report completo costa {{prix}}, IVA non applicabile. È un pagamento unico, senza abbonamento. Un solo pagamento, fatto da uno dei due partner, sblocca il report per entrambi. Nella modalità da soli, il report viene fornito solo alla persona che ha risposto.",
-        "Il prezzo è indicato sulla pagina della valutazione prima della prima domanda, e di nuovo prima del pagamento."
+        "Il prezzo è indicato sulla pagina della valutazione prima della prima domanda, e di nuovo prima del pagamento.",
+        "Può essere proposto uno sconto per un periodo limitato. In quel caso è indicato nella pagina della valutazione, con il prezzo abituale barrato, e applicato automaticamente nella pagina di pagamento: l'importo pagato è quello indicato nella pagina di pagamento prima della conferma."
       ]
     },
     {
