@@ -8,8 +8,13 @@ name: Supabase · inventaire
 # post ne référence (le ménage de l'entretien aurait dû les effacer), l'état
 # des déclinaisons, les dernières lignes du journal de l'entretien, et la
 # table des abonnés avec un appel de sa fonction d'admin (l'onglet Leads
-# vide du 20 octobre 2026). Lecture seule : rien n'est modifié. Les requêtes
-# passent par l'API de gestion, comme les migrations de social-base.yml.
+# vide du 20 octobre 2026), les réglages de journalisation de Postgres, et
+# les logs des dernières 24 heures (par service, par chemin d'API, par code
+# de réponse, premières lignes de Postgres et de Realtime : Supabase facture
+# les logs à l'octet, 1 Go inclus sur le plan gratuit, 7 Go consommés en
+# octobre 2026). Lecture seule : rien n'est modifié. Les requêtes passent par
+# l'API de gestion, comme les migrations de social-base.yml ; les logs par
+# son point d'entrée analytics (ClickHouse, fenêtre de 24 h au plus).
 
 on:
   workflow_dispatch:
@@ -46,4 +51,35 @@ jobs:
           sql "Les abonnés" "select count(*) as abonnes, count(*) filter (where source = 'ebook') as ebook, count(*) filter (where source <> 'ebook') as porte_des_resultats, max(created_at) as dernier from public.abonnes"
           sql "La fonction de l'onglet Leads existe et le rôle de service peut l'appeler" "select to_regprocedure('public.get_abonnes_tableau(integer)') as fonction, has_function_privilege('service_role', 'public.get_abonnes_tableau(integer)', 'EXECUTE') as service_role_execute"
           sql "La fonction de l'onglet Leads répond (400 premiers signes)" "select left(public.get_abonnes_tableau(30)::text, 400) as apercu"
+          sql "Les réglages de journalisation de Postgres (ce que Supabase ingère)" "select name, setting from pg_settings where name in ('log_statement', 'log_min_duration_statement', 'log_min_messages', 'log_min_error_statement', 'log_connections', 'log_disconnections', 'log_autovacuum_min_duration', 'log_temp_files', 'log_lock_waits', 'log_checkpoints', 'log_duration') or name like 'pgaudit.%' order by name"
+          sql "Les tâches pg_cron et leur rythme" "select jobname, schedule, active from cron.job order by jobname"
+          sql "Parties à distance par jour (sept derniers jours ; deux lignes par partie)" "select created_at::date as jour, count(*) / 2 as parties from public.salon_parties where created_at >= now() - interval '7 days' group by 1 order by 1 desc"
           rm -f requete.json reponse.json
+
+      # Les logs eux-mêmes : une requête ClickHouse sur la table « logs »,
+      # filtrée par source (edge_logs = passerelle d'API, postgres_logs,
+      # realtime_logs, function_edge_logs, storage_logs...). Vingt-quatre
+      # heures au plus par appel. Le nombre de lignes par source dit d'où vient
+      # le volume ; les chemins d'API disent quelles requêtes du site pèsent.
+      - name: Les logs des dernières 24 heures
+        run: |
+          debut=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:00Z)
+          fin=$(date -u +%Y-%m-%dT%H:%M:00Z)
+          logs() {
+            code=$(curl -sS -G -o reponse.json -w '%{http_code}' \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/analytics/endpoints/logs" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
+              --data-urlencode "sql=$2" --data-urlencode "iso_timestamp_start=$debut" --data-urlencode "iso_timestamp_end=$fin")
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r '(if type == "object" then (.result // .data // []) else . end) as $l | if ($l | length) == 0 then "(aucune ligne)" else ($l[0] | keys_unsorted | join(" | ")), ($l[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          echo "Fenêtre : $debut → $fin"
+          logs "Lignes de log par service, et octets des messages" "select source, count(*) as lignes, sum(length(event_message)) as octets_message from logs group by source order by lignes desc"
+          logs "Passerelle d'API : les trente chemins les plus appelés" "select log_attributes['request.method'] as methode, log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'edge_logs' group by methode, chemin order by n desc limit 30"
+          logs "Passerelle d'API : par code de réponse" "select toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' group by statut order by n desc limit 15"
+          logs "Passerelle d'API : par navigateur ou robot (début du user agent)" "select substring(log_attributes['request.headers.user_agent'], 1, 60) as agent, count(*) as n from logs where source = 'edge_logs' group by agent order by n desc limit 15"
+          logs "Postgres : les vingt débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'postgres_logs' group by debut order by n desc limit 20"
+          logs "Realtime : les quinze débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'realtime_logs' group by debut order by n desc limit 15"
+          logs "Fonctions serveur : par fonction" "select log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'function_edge_logs' group by chemin order by n desc limit 15"
+          rm -f reponse.json
