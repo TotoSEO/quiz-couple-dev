@@ -191,6 +191,11 @@
     "confidentialite": "Privacy",
     "bouton": "See my results",
     "envoi": "One moment...",
+    "note": "Just once: after this, every test, quiz and game on the site opens without asking again on this device.",
+    "merci": {
+      "titre": "Thanks, your results are unlocked!",
+      "texte": "And not just here: from now on, every test, quiz and game on the site gives you its full results without asking for your email again on this device."
+    },
     "suggestion": "Did you mean {{domaine}}?",
     "erreurs": {
       "format": "This email address doesn't look complete.",

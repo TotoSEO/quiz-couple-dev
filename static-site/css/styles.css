@@ -13203,6 +13203,13 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 @keyframes qcPorteSecoue { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
 .qc-porte--secoue { animation: qcPorteSecoue .3s ease; }
 @media (prefers-reduced-motion: reduce) { .qc-flou, .qc-porte { transition: none; } .qc-porte--secoue { animation: none; } }
+/* Sous le bouton : une seule fois pour tout le site. Après l'envoi, la porte
+   devient un mot de merci qui dit ce qui s'ouvre, et reste là. */
+.qc-porte-note { margin: -.15rem 0 0; text-align: center; font-size: .78rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.qc-porte--merci { padding-top: 1.1rem; padding-bottom: 1.1rem; }
+.qc-porte--merci .qc-porte-texte { margin-bottom: 0; }
+.qc-porte-ic--ok { background: hsl(152 45% 42% / .14); color: hsl(152 48% 30%); }
+.dark .qc-porte-ic--ok { color: hsl(152 55% 68%); }
 
 @media print {
   #site-header, body > footer, .quiz-page-hero, .seo-content, .wave-divider,

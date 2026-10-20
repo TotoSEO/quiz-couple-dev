@@ -110,7 +110,20 @@
       if (ouverte) return;
       ouverte = true;
       if (enregistre) retenir();
-      porte.classList.add('qc-porte--ok');
+      // Adresse gardée : la porte devient un mot de merci qui dit ce qu'elle
+      // ouvre (Thomas, 20 octobre 2026 : « il faut leur dire que désormais
+      // ils ont accès à tous les tests du site et leurs résultats ») et reste
+      // affichée ; sans adresse gardée (panne, IP freinée), elle s'efface.
+      var merci = !!(enregistre && tx('merci.titre'));
+      if (merci) {
+        porte.classList.add('qc-porte--merci');
+        porte.innerHTML =
+          '<div class="qc-porte-ic qc-porte-ic--ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>' +
+          '<p class="qc-porte-titre" id="qc-porte-titre" role="status">' + esc(tx('merci.titre')) + '</p>' +
+          '<p class="qc-porte-texte">' + esc(tx('merci.texte')) + '</p>';
+      } else {
+        porte.classList.add('qc-porte--ok');
+      }
       floutes.forEach(function (e) {
         e.classList.add('qc-flou--ouvre');
         e.removeAttribute('aria-hidden');
@@ -118,7 +131,7 @@
       });
       window.setTimeout(function () {
         floutes.forEach(function (e) { e.classList.remove('qc-flou', 'qc-flou--ouvre'); });
-        if (porte.parentNode) porte.parentNode.removeChild(porte);
+        if (!merci && porte.parentNode) porte.parentNode.removeChild(porte);
         document.querySelectorAll('[data-porte]').forEach(function (c) { c.removeAttribute('data-porte'); });
       }, 450);
       try { window.dispatchEvent(new CustomEvent('qc:abonne', { detail: { source: source, enregistre: !!enregistre } })); } catch (e) { /* rien */ }
@@ -143,6 +156,7 @@
           (CFG.confidentialite ? ' <a href="' + esc(CFG.confidentialite) + '" target="_blank" rel="noopener">' + esc(tx('confidentialite')) + '</a>' : '') + '</span></label>' +
         '<button type="submit" class="btn btn-cta btn-gradient qc-porte-bouton">' + esc(tx('bouton')) + '</button>' +
         '<p class="qc-porte-erreur" role="alert" hidden></p>' +
+        (tx('note') ? '<p class="qc-porte-note">' + esc(tx('note')) + '</p>' : '') +
       '</form>';
     var form = porte.querySelector('form');
     var email = porte.querySelector('.qc-porte-email');

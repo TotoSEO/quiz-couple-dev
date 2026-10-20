@@ -191,6 +191,11 @@
     "confidentialite": "Datenschutz",
     "bouton": "Mein Ergebnis ansehen",
     "envoi": "Einen Moment...",
+    "note": "Nur einmal: danach öffnen sich alle Tests, Quiz und Spiele der Seite auf diesem Gerät, ohne noch einmal zu fragen.",
+    "merci": {
+      "titre": "Danke, dein Ergebnis ist freigeschaltet!",
+      "texte": "Und nicht nur hier: ab jetzt zeigen dir alle Tests, Quiz und Spiele der Seite ihre vollständigen Ergebnisse, ohne auf diesem Gerät noch einmal nach deiner E-Mail zu fragen."
+    },
     "suggestion": "Meintest du {{domaine}}?",
     "erreurs": {
       "format": "Diese E-Mail-Adresse sieht nicht vollständig aus.",

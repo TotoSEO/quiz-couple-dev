@@ -193,6 +193,11 @@
     "confidentialite": "Confidentialité",
     "bouton": "Voir mes résultats",
     "envoi": "Un instant...",
+    "note": "Une seule fois : ensuite, tous les tests, quiz et jeux du site s'ouvrent sans rien redemander sur cet appareil.",
+    "merci": {
+      "titre": "Merci, vos résultats sont débloqués !",
+      "texte": "Et pas seulement ici : désormais, tous les tests, quiz et jeux du site vous donnent leurs résultats complets sans redemander votre e-mail sur cet appareil."
+    },
     "suggestion": "Vous vouliez dire {{domaine}} ?",
     "erreurs": {
       "format": "Cette adresse e-mail n'a pas l'air complète.",
