@@ -31,7 +31,8 @@
       "titre": "2. Le prix",
       "p": [
         "Le rapport complet coûte {{prix}}, TVA non applicable. C'est un paiement unique, sans abonnement. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux. En mode seul(e), le rapport n'est fourni qu'à la personne qui a répondu.",
-        "Le prix est affiché sur la page de l'évaluation avant la première question, et à nouveau avant le paiement."
+        "Le prix est affiché sur la page de l'évaluation avant la première question, et à nouveau avant le paiement.",
+        "Une réduction peut être proposée pour une durée limitée. Elle est alors affichée sur la page de l'évaluation, avec le prix habituel barré, et appliquée automatiquement sur la page de paiement : le montant payé est celui qu'affiche la page de paiement avant la validation."
       ]
     },
     {

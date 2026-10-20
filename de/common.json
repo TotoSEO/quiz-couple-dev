@@ -229,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "Paar"
+  },
+  "promoBilan": {
+    "badge": "Aktuell -{{pourcent}} %",
+    "avant": "Normaler Preis:",
+    "apres": "Reduzierter Preis:",
+    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen"
   }
 }

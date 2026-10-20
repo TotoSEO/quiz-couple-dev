@@ -3270,6 +3270,15 @@ var QuizEngine = (function() {
     if (!chemin || !groupe) return null;
     var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
     var prix = corps.getAttribute('data-bilan-prix') || '';
+    // La réduction en cours, posée par la page (generate.js, promoBilanPour) :
+    // pastille à côté du surtitre et prix habituel barré devant le prix réduit.
+    var promo = null;
+    try { promo = JSON.parse(corps.getAttribute('data-bilan-promo') || 'null'); } catch (e) { promo = null; }
+    var lignePrix = prix ? esc(t.prix.replace('{{prix}}', prix)) : '';
+    if (promo && promo.base && prix) {
+      lignePrix = lignePrix.replace(esc(prix), '<span class="prix-promo"><span class="prix-promo-avant"><span class="sr-only">' + esc(promo.avant) + ' </span><s>' + esc(promo.base) + '</s></span> ' +
+        '<span class="prix-promo-apres"><span class="sr-only">' + esc(promo.apres) + ' </span>' + esc(prix) + '</span></span>');
+    }
     var id = corps.getAttribute('data-bilan-id') || cle || 'test';
     // Le texte du test quand il en a un (le test de couple, la compatibilité
     // amoureuse), celui du groupe sinon.
@@ -3281,7 +3290,7 @@ var QuizEngine = (function() {
     var visuel = '<div class="qr-bilan-visuel" aria-hidden="true"><img draggable="false" src="/bilan/apercu-synthese-' + esc(BILAN_TEXTES[lang] ? lang : 'fr') +
       '.webp" alt="" width="240" height="340" loading="lazy" decoding="async"></div>';
     zone.innerHTML = visuel +
-      '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
+      '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + (promo && promo.badge ? ' <span class="promo-pastille">' + esc(promo.badge) + '</span>' : '') + '</p>' +
       '<h3 class="qr-bilan-titre">' + esc(insecables(texte[0])) + '</h3>' +
       '<p class="qr-bilan-texte">' + esc(insecables(texte[1])) + '</p>' +
       '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
@@ -3290,7 +3299,7 @@ var QuizEngine = (function() {
       '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(lien) + '">' + esc(t.bouton) +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
       (t.boutonSolo ? '<a class="qr-bilan-bouton qr-bilan-bouton--second" href="' + esc(lien + '&mode=solo#facons') + '">' + esc(t.boutonSolo) + '</a>' : '') + '</div>' +
-      (prix ? '<p class="qr-bilan-prix">' + esc(t.prix.replace('{{prix}}', prix)) + '</p>' : '') +
+      (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
       '</div>';
     return zone;
   }

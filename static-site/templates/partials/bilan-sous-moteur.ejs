@@ -65,6 +65,9 @@
   const _smLang = _SM[lang] ? lang : 'fr';
   const _smT = _SM[_smLang];
   const _smTexte = _sm ? (_smT.tests[_sm.id] || _smT.defaut) : null;
+  // La réduction en cours (bilanPromo, generate.js) : pastille et prix barré.
+  const _smPromo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
+  const _smPrix = escapeHtml(_smT.prix.replace('{{prix}}', bilanPrix));
   // En français, « ? » reste collé à son mot (espace insécable).
   const _smInsec = (txt) => _smLang === 'fr' ? String(txt).replace(/ ([?!:;])/g, ' $1') : txt;
 %>
@@ -72,7 +75,7 @@
 <section class="qr-bilan qr-bilan--moteur" aria-label="<%= _smT.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _smLang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
-    <p class="qr-bilan-sur"><%= _smT.sur %></p>
+    <p class="qr-bilan-sur"><%= _smT.sur %><% if (_smPromo) { %> <span class="promo-pastille"><%= _smPromo.badge %></span><% } %></p>
     <h2 class="qr-bilan-titre"><%= _smInsec(_smTexte[0]) %></h2>
     <p class="qr-bilan-texte"><%= _smInsec(_smTexte[1]) %></p>
     <ul class="qr-bilan-points">
@@ -82,7 +85,7 @@
       <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>"><%= _smT.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>?src=moteur-<%= _sm.id %>&amp;mode=solo#facons"><%= _smT.boutonSolo %></a>
     </div>
-    <p class="qr-bilan-prix"><%= _smT.prix.replace('{{prix}}', bilanPrix) %></p>
+    <p class="qr-bilan-prix"><%- _smPromo ? _smPromo.marque(_smPrix) : _smPrix %></p>
   </div>
 </section>
 <% } %>

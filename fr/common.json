@@ -231,5 +231,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "couple"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}} % en ce moment",
+    "avant": "Prix habituel :",
+    "apres": "Prix réduit :",
+    "code": "Code {{code}} appliqué automatiquement au paiement"
   }
 }

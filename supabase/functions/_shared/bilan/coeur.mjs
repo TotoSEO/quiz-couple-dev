@@ -22,8 +22,45 @@ export const PRIX_CENTIMES = 990;
 // Stripe ont été retirés ; seul `lp.prix.garantie` (page de vente) reste, et
 // ne s'affiche qu'avec une valeur en jours.
 export const GARANTIE_JOURS = 0;
+// La réduction en cours (20 octobre 2026, Thomas : « j'ai créé un bon de
+// réduction de 20% avec le code LOVE20 [...] Met le en avant sur la page,
+// genre en ce moment -20% sur le test, puis le prix de base barré avec le
+// nouveau prix à côté. Sur la LP, mais aussi à la fin du test »).
+//   PROMO_CODE      le code créé dans Stripe, affiché sur la page ;
+//   PROMO_STRIPE    l'identifiant du code de promotion chez Stripe
+//                   (promo_...), appliqué d'office à la page de paiement
+//                   (serveur.mjs, `discounts`) : personne n'a rien à taper ;
+//   PROMO_POURCENT  la réduction, la même que dans Stripe ; 0 arrête tout ;
+//   PROMO_FIN       le dernier jour, heure de Paris, 'AAAA-MM-JJ' ; '' sans fin.
+// Le site lit ces quatre lignes au build (generate.js) : prix barré, nouveau
+// prix et pastille « -20 % en ce moment » sur la page de vente, l'application,
+// les encarts des tests, la bannière et l'accueil. Le serveur garde la
+// réduction douze heures après la fin, le temps que le site soit reconstruit :
+// personne ne paie plus que le prix affiché. Si Stripe refuse le code (expiré,
+// désactivé, plafond atteint), la page de paiement s'ouvre au prix plein, avec
+// le champ des codes, et la sonde de bilan-sante.yml le signale.
+export const PROMO_CODE = 'LOVE20';
+export const PROMO_STRIPE = 'promo_1UShjWCqyRKQqXWFyb4ADMbH';
+export const PROMO_POURCENT = 20;
+export const PROMO_FIN = '';
 // Durées de conservation, en jours (reprises par la migration et la page).
 export const CONSERVATION = { nonPaye: 60, paye: 183 };
+
+// Le jour d'un instant à Paris, 'AAAA-MM-JJ'.
+export function jourParis(instant) {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
+}
+// Le prix réduit, en centimes (Stripe arrondit de la même façon).
+export function prixPromo() {
+  return PRIX_CENTIMES - Math.round(PRIX_CENTIMES * PROMO_POURCENT / 100);
+}
+// La réduction est-elle en cours à cet instant ? `graceHeures` prolonge la
+// fin (le serveur en donne douze, voir plus haut).
+export function promoEnCours(instant = new Date(), graceHeures = 0, fin = PROMO_FIN) {
+  if (!(PROMO_POURCENT > 0 && PROMO_POURCENT < 100) || !PROMO_STRIPE) return false;
+  if (!fin) return true;
+  return jourParis(new Date(instant.getTime() - graceHeures * 3600e3)) <= fin;
+}
 
 // Les deux façons de faire l'évaluation (Thomas, 19 octobre 2026 : « quand
 // ça va mal dans un couple ou que l'un est fermé à la discussion, ça doit

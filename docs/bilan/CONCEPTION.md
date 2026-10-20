@@ -774,3 +774,42 @@ partenaire les verra en face des siennes (en solo : que la personne seule
 verra, avec ce qu'elle imagine des réponses de l'autre), la durée de garde,
 la suppression à tout moment. La case reste une action explicite et distincte
 de la case « 18 ans ou plus ».
+
+## 20 octobre 2026 au soir : la réduction LOVE20
+
+Thomas : « j'ai créé un bon de réduction de 20% avec le code LOVE20 [...]
+Met le en avant sur la page, genre en ce moment -20% sur le test, puis le
+prix de base barré avec le nouveau prix à côté. Sur la LP, mais aussi à la
+fin du test ».
+
+- **Une seule source** : `PROMO_CODE`, `PROMO_STRIPE`, `PROMO_POURCENT` et
+  `PROMO_FIN` dans `coeur.mjs`, lus par la fonction (paiement) et par le
+  générateur du site (affichage). Le prix réduit est
+  `PRIX_CENTIMES - arrondi(PRIX_CENTIMES × pourcentage)`, 7,92 € pour
+  9,90 €, comme Stripe le calcule.
+- **Le code est appliqué d'office** (`discounts` à la création de la
+  session Checkout) plutôt que laissé à taper : afficher 7,92 € puis
+  demander un code au moment de payer ferait perdre des ventes. Stripe
+  refuse `discounts` et `allow_promotion_codes` ensemble : le champ des
+  codes ne revient que sans réduction en cours.
+- **Jamais de vente bloquée par la réduction** : si Stripe refuse le code,
+  la session est recréée au prix plein, et la sonde de `bilan-sante.yml`
+  échoue pour le dire.
+- **Ce qui s'affiche** : une pastille en aplat jaune (« -20 % en ce
+  moment », `promoBilan` de common.json), le prix habituel barré devant le
+  prix réduit (avec « Prix habituel : » et « Prix réduit : » pour les
+  lecteurs d'écran), sur la page de vente (au-dessus des boutons du haut de
+  page, dans le bloc du prix avec « Code LOVE20 appliqué automatiquement au
+  paiement », dans la barre collée sur téléphone), dans l'offre de fin
+  d'évaluation (seulement si le serveur confirme qu'il applique la
+  réduction, `etat.promo`), dans l'encart sous le verdict des tests, la
+  carte sous le moteur, la bannière du bas des pages et la section de
+  l'accueil. Les textes courts (« Questions gratuites · 7,92 € pour le
+  rapport ») gardent le seul prix réduit, pour ne pas barrer trois fois le
+  même prix dans un écran. Les CGV gardent le prix habituel et disent
+  qu'une réduction peut être affichée puis appliquée au paiement.
+- **Le droit** : le prix barré doit être le plus bas pratiqué dans les
+  trente jours avant la réduction (L112-1-1 du Code de la consommation) ;
+  9,90 € l'est. Une réduction « en ce moment » qui ne finit jamais finit
+  par devenir le vrai prix : mieux vaut lui donner une fin (`PROMO_FIN`).
+

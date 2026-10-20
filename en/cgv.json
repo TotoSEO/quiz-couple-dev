@@ -31,7 +31,8 @@
       "titre": "2. The price",
       "p": [
         "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both. In solo mode, the report is only provided to the person who answered.",
-        "The price is shown on the assessment page before the first question, and again before payment."
+        "The price is shown on the assessment page before the first question, and again before payment.",
+        "A discount may be offered for a limited time. It is then shown on the assessment page, with the usual price crossed out, and applied automatically on the payment page: the amount paid is the one shown on the payment page before you confirm."
       ]
     },
     {

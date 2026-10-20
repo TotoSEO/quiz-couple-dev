@@ -32,12 +32,15 @@
           bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
   };
   const _bb = _BILAN_BAS[lang] || _BILAN_BAS.fr;
+  // La réduction en cours (bilanPromo, generate.js) : pastille et prix barré.
+  const _bbPromo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
+  const _bbPrix = escapeHtml(_bb.prix.replace('{{prix}}', bilanPrix));
 %>
 <% if (_bilan) { %>
 <section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
-    <p class="qr-bilan-sur"><%= _bb.sur %></p>
+    <p class="qr-bilan-sur"><%= _bb.sur %><% if (_bbPromo) { %> <span class="promo-pastille"><%= _bbPromo.badge %></span><% } %></p>
     <h3 class="qr-bilan-titre"><%= _bb.titre %></h3>
     <p class="qr-bilan-texte"><%= _bb.texte %></p>
     <ul class="qr-bilan-points">
@@ -47,7 +50,7 @@
       <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=bas-<%= _bilan.id %>"><%= _bb.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= bilanChemin %>?src=bas-<%= _bilan.id %>&amp;mode=solo#facons"><%= _bb.boutonSolo %></a>
     </div>
-    <p class="qr-bilan-prix"><%= _bb.prix.replace('{{prix}}', bilanPrix) %></p>
+    <p class="qr-bilan-prix"><%- _bbPromo ? _bbPromo.marque(_bbPrix) : _bbPrix %></p>
   </div>
 </section>
 <% } %>

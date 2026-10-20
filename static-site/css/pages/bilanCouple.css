@@ -515,3 +515,49 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-option--inconnu small { display: block; font-weight: 400; font-size: .82rem; color: hsl(var(--muted-foreground)); margin-top: .15rem; }
 .bilan-reprise-mode { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 999px; background: hsl(var(--secondary) / .14); color: hsl(var(--secondary-texte)); vertical-align: .1em; }
 @media (prefers-reduced-motion: reduce) { .bilan-mode { transition: none; } }
+
+/* ── La réduction en cours ───────────────────────────────────────────── */
+/* PROMO_* de coeur.mjs (20 octobre 2026, Thomas : « en ce moment -20% sur le
+   test, puis le prix de base barré avec le nouveau prix à côté. Sur la LP,
+   mais aussi à la fin du test ») : une pastille en aplat, le prix habituel
+   barré, le prix réduit en gras. Écrits ici et non seulement dans
+   styles.css : la ligne du hero est dans le premier écran, et cette feuille
+   est dans la page. Même règles dans styles.css pour les encarts des tests. */
+.blp .sr-only, .bilan-scene .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+.blp .promo-pastille, .bilan-scene .promo-pastille {
+  display: inline-flex; align-items: center; padding: .28rem .7rem; border-radius: 999px;
+  background: hsl(43 96% 58%); color: hsl(286 38% 14%);
+  font: 800 .8rem/1.2 var(--blp-page); letter-spacing: .01em; text-transform: none; white-space: nowrap;
+}
+.blp .prix-promo, .bilan-scene .prix-promo { white-space: nowrap; }
+.blp .prix-promo-avant s, .bilan-scene .prix-promo-avant s { text-decoration-thickness: .08em; opacity: .62; }
+.blp .prix-promo-apres, .bilan-scene .prix-promo-apres { font-weight: 800; }
+/* Le hero : pastille, 9,90 € barré, 7,92 € et « pour le couple », juste
+   au-dessus des boutons (sur téléphone aussi : même ordre que les boutons). */
+.blp-promo { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .7rem; margin: 0 0 1.1rem; }
+.blp-promo-prix { font: 600 1.15rem/1.2 var(--blp-page); color: hsl(var(--foreground)); }
+.blp-promo-prix .prix-promo-avant { font-size: .85em; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.blp-promo-prix .prix-promo-avant s { opacity: 1; }
+.blp-promo-prix .prix-promo-apres { font-size: 1.25em; color: hsl(var(--primary-texte)); }
+.blp-promo-unite { font-size: .86rem; color: hsl(var(--muted-foreground)); }
+@media (max-width: 900px) { .blp-hero-texte .blp-promo { order: 4; } }
+/* Le bloc du prix : le prix réduit en grand, l'habituel barré à côté. */
+.blp-prix-pastille { margin: 0 0 .9rem; }
+.blp-prix-montant .prix-promo { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0 .35em; white-space: normal; }
+.blp-prix-montant .prix-promo-avant { font-size: .42em; font-weight: 600; letter-spacing: 0; }
+.blp-prix-montant .prix-promo-avant s { opacity: .72; }
+.blp-prix-code { margin: .85rem 0 0; font-size: .86rem; font-weight: 600; color: hsl(43 96% 70%); }
+/* La frise et la barre collée. */
+.blp-mock-prix .prix-promo { display: inline-flex; flex-direction: column; align-items: center; gap: .15rem; }
+.blp-mock-prix .prix-promo-avant { font-size: .5em; }
+.blp-colle-nom, .blp-colle-prix { display: block; }
+.blp-colle-prix { margin-top: .1rem; }
+.blp-colle-texte .prix-promo-avant { font-weight: 600; color: hsl(var(--muted-foreground)); }
+.blp-colle-texte .prix-promo-apres { color: hsl(var(--primary-texte)); }
+/* L'offre de l'application, à la fin de ses réponses. */
+.bilan-scene .bilan-prix-pastille { margin: 0 0 .55rem; }
+.bilan-scene .bilan-prix-montant .prix-promo-avant { font-size: .7em; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-prix-montant .prix-promo-avant s { opacity: 1; }
+.bilan-scene .bilan-prix-montant .prix-promo-apres { color: hsl(var(--primary-texte)); }
+.bilan-scene .bilan-prix .bilan-prix-code { font-weight: 600; color: hsl(var(--foreground)); }
+.bilan-scene .bilan-prix-rappel .prix-promo-avant { color: hsl(var(--muted-foreground)); }

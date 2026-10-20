@@ -77,6 +77,19 @@
   }
   // Un texte de l'interface, rempli, prêt à écrire dans le HTML.
   function x(chemin, vars) { return esc(ins(remplir(tr(chemin, ''), vars))); }
+  // La réduction en cours (CFG.promo, écrite par la page à partir de
+  // PROMO_* de coeur.mjs) : le prix habituel barré devant le prix réduit,
+  // à la place du prix dans un texte déjà échappé. `confirme` vient du
+  // serveur (etat.promo) : l'offre ne montre la réduction que si la page de
+  // paiement l'appliquera.
+  function promoAffichee(confirme) {
+    var p = CFG.promo;
+    return p && p.html && p.prix && confirme !== false ? p : null;
+  }
+  function avecPromo(html, confirme) {
+    var p = promoAffichee(confirme);
+    return p ? String(html).replace(esc(p.prix), p.html) : html;
+  }
   function nombre(n) {
     try { return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR').format(n); } catch (e) { return String(n); }
   }
@@ -564,7 +577,7 @@
         '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
         '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
         '<p class="bilan-note">' + x('creation.accordAide', { autre: brouillon.autre }) + '</p>' +
-        '<p class="bilan-prix-rappel">' + x('creation.prixRappel') + '</p>' +
+        '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
         '<p class="bilan-note">' + x('accueil.violence') + '</p>';
     }
     corps += '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
@@ -717,7 +730,7 @@
       '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
       '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
       '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
-      '<p class="bilan-prix-rappel">' + x('creation.prixRappel') + '</p>' +
+      '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
       '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('accepter', x('rejoindre.commencer')) + '</div>', 'bilan-rejoindre');
@@ -1114,6 +1127,9 @@
       return carte('<h3 class="bilan-sous-titre">' + x('paywall.titre') + '</h3><p class="bilan-alerte bilan-alerte--doux">' + x('paywall.ferme') + '</p>', 'bilan-offre');
     }
     var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(remplir(c, { autre: autre }))) + '</li>'; }).join('');
+    // La réduction, seulement si le serveur dit qu'il l'appliquera (une
+    // fonction plus ancienne ne le dit pas : rien n'est affiché).
+    var promo = promoAffichee(etat.promo ? true : false);
     var apercu = CFG.apercu ? '<figure class="bilan-apercu"><img src="' + esc(CFG.apercu) + '" alt="" width="600" height="424" loading="lazy" decoding="async">' +
       '<figcaption>' + x('paywall.apercu') + '</figcaption></figure>' : '';
     return carte(
@@ -1121,7 +1137,10 @@
       '<p class="bilan-offre-intro">' + x(pret ? 'paywall.introPret' : 'paywall.introAttente', { autre: autre }) + '</p>' +
       apercu +
       '<ul class="bilan-offre-liste">' + contenu + '</ul>' +
-      '<div class="bilan-prix"><p class="bilan-prix-montant">' + x('paywall.prix') + '</p>' +
+      '<div class="bilan-prix">' +
+      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '') +
+      '<p class="bilan-prix-montant">' + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
+      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
       '<p class="bilan-note">' + x('paywall.prixAide', { autre: autre }) + '</p></div>' +
       champEmail(etat.moi.email, 'bilan-email-paie') +
       '<label class="bilan-case"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
@@ -1269,7 +1288,7 @@
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
-      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest,
+      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null,
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
     afficher(
