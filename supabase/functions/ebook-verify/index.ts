@@ -16,7 +16,7 @@ const EBOOK_PDF_URL = SITE_URL + '/assets/ebook-astrologie.pdf';
 const EBOOK_FILENAME = 'Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf';
 
 // Garde-fous du formulaire (11 octobre 2026). Jusque-là, la fonction envoyait
-// un e-mail depuis noreply@quiz-couple.com à n'importe quelle adresse, autant
+// un e-mail depuis bonjour@quiz-couple.com à n'importe quelle adresse, autant
 // de fois qu'on la lui donnait, et chaque nouvel envoi changeait le lien : un
 // double clic rendait le premier e-mail inutilisable. Désormais :
 //   • dix demandes par heure et par adresse IP (mémoire de la fonction, qui
@@ -197,7 +197,11 @@ serve(async (req) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'Quiz Couple <noreply@quiz-couple.com>',
+          // Plus de « noreply » (Thomas, 20 octobre 2026 : « ce genre d'email
+          // part cash dans les spam ») : une adresse qui ressemble à quelqu'un,
+          // et une vraie boîte en réponse.
+          from: 'Quiz Couple <bonjour@quiz-couple.com>',
+          reply_to: 'infoquizcouple@gmail.com',
           to: [email],
           subject: 'Confirmez votre e-mail pour accéder à votre E-Book gratuit',
           html: `

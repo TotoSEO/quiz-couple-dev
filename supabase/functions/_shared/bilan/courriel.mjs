@@ -1,7 +1,7 @@
 // L'e-mail qui porte le rapport de l'évaluation de couple en PDF, dans la
 // langue du bilan, et son envoi par Resend (la clé RESEND_API_KEY des
 // fonctions Supabase, déjà là pour les e-mails de l'ebook, depuis la même
-// adresse noreply@quiz-couple.com). JavaScript pur : testé en Node, utilisé
+// famille d'adresses, voir EXPEDITEURS). JavaScript pur : testé en Node, utilisé
 // par la fonction `bilan` (Deno). Les textes `*Solo` servent au rapport
 // d'une évaluation faite seul(e), qui ne part qu'à la personne qui a répondu.
 //
@@ -9,8 +9,22 @@
 // ne dit rien du contenu du rapport : il peut être lu par-dessus l'épaule,
 // sur l'écran verrouillé d'un téléphone.
 
-export const EXPEDITEUR = 'Quiz Couple <noreply@quiz-couple.com>';
+// L'expéditeur dit « résultats » dans la langue du destinataire, plus
+// jamais « noreply » (Thomas, 20 octobre 2026 : « ce genre d'email part
+// cash dans les spam ») ; la réputation se joue sur le domaine, pas sur la
+// partie locale, donc cinq adresses ne coûtent rien chez Resend. Les
+// réponses vont à une vraie boîte : le domaine n'a pas de serveur de
+// courrier, une réponse à l'adresse d'envoi serait rejetée.
+export const EXPEDITEURS = {
+  fr: 'Quiz Couple <resultats@quiz-couple.com>',
+  en: 'Quiz Couple <results@quiz-couple.com>',
+  es: 'Quiz Couple <resultados@quiz-couple.com>',
+  de: 'Quiz Couple <ergebnisse@quiz-couple.com>',
+  it: 'Quiz Couple <risultati@quiz-couple.com>',
+};
+export const EXPEDITEUR = EXPEDITEURS.fr;
 export const REPONDRE_A = 'infoquizcouple@gmail.com';
+export function expediteur(lang) { return EXPEDITEURS[lang] || EXPEDITEUR; }
 
 const SITE = 'https://quiz-couple.com';
 const PAGES = {
@@ -351,12 +365,12 @@ ${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;fo
 
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {
-    async envoyer({ a, sujet, html, texte, pieces }) {
+    async envoyer({ a, sujet, html, texte, pieces, lang }) {
       const r = await f('https://api.resend.com/emails', {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + cle, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: EXPEDITEUR,
+          from: expediteur(lang),
           to: [a],
           reply_to: REPONDRE_A,
           subject: sujet,

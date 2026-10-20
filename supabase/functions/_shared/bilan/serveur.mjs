@@ -175,7 +175,7 @@ function destinataires(ligne) {
 // stripe   : { creerSession(params), lireSession(id) } ou null (paiement fermé)
 // stripeTest : clé de test (sk_test_...) ; la page ouvre alors le paiement
 //              même tant que le bilan n'est pas ouvert, pour l'essayer.
-// courriel : { envoyer({ a, sujet, html, texte, pieces }) } ou null
+// courriel : { envoyer({ a, sujet, html, texte, pieces, lang }) } ou null
 /** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, courriel?: any, sel?: string, maintenant?: () => Date }} options */
 export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date() }) {
 
@@ -562,7 +562,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       if (envois.length >= ENVOIS_MAX) break;
       let reussi = false;
       try {
-        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }] });
+        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }], lang: ligne.lang });
         reussi = true;
         envoyes++;
       } catch (e) {
@@ -684,7 +684,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!ligne[role + '_email']) maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
     const msg = messageLien({ lang: ligne.lang, liens: [{ ...entreeLien(ligne, role), url: lienDe(ligne, corps.jeton) }], rotation: false });
     try {
-      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
     } catch (err) {
       console.error('[bilan] lien', String(err && err.message || err).slice(0, 200));
       return non(502, 'courriel');
@@ -727,7 +727,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     }
     const msg = messageLien({ lang: langueTrouvee || lang, liens, rotation: true });
     try {
-      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: langueTrouvee || lang });
     } catch (err) {
       console.error('[bilan] retrouver', String(err && err.message || err).slice(0, 200));
       return non(502, 'courriel');
