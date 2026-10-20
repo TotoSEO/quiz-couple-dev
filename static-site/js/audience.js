@@ -120,6 +120,10 @@
   window.QCAudience = {
     visite: function () { return exclu() ? null : visite(false); },
     exclu: exclu,
+    // Lu par blog-lectures.js : l'ecriture d'une ligne de mesure en requete
+    // simple (voir envoiSimple). quiz-extras.js a la sienne, pour ne pas
+    // dependre de ce fichier.
+    ecrit: envoiSimple,
     // Lu par blog-lectures.js : le robot et le proprietaire du site n'ont pas
     // a peupler le compteur de lectures. Dupliquer la liste des robots
     // ailleurs, c'est se garantir deux listes qui divergent.
@@ -212,6 +216,33 @@
   // keepalive : la requête doit survivre à un départ immédiat de la page,
   // sinon les visites les plus courtes, justement celles qu'on cherche à
   // mesurer, se perdent en chemin.
+  //
+  // Une « requête simple » au sens de CORS (20 octobre 2026) : la clé
+  // publique passe dans l'adresse (?apikey=, que la passerelle de Supabase
+  // accepte au même titre que l'en-tête) et le corps est encodé comme un
+  // formulaire, que PostgREST lit pour insérer une ligne. Aucun en-tête à
+  // nous (ni apikey, ni Authorization, ni Content-Type JSON, ni Prefer) : le
+  // navigateur n'envoie plus la requête OPTIONS de préchargement avant
+  // chaque écriture. Elle faisait 13 000 lignes par jour dans les logs de la
+  // passerelle, un septième du total, pour rien. Une valeur nulle est omise :
+  // la colonne garde sa valeur par défaut, comme avec un null en JSON. La
+  // même fonction est écrite dans quiz-extras.js, qui ne dépend pas de ce
+  // fichier ; une modification ici en appelle une là-bas.
+  function envoiSimple(table, corps) {
+    var donnees = new URLSearchParams();
+    Object.keys(corps).forEach(function (k) {
+      if (corps[k] !== null && corps[k] !== undefined) donnees.append(k, String(corps[k]));
+    });
+    try {
+      return fetch(URL_SB + '/rest/v1/' + table + '?apikey=' + encodeURIComponent(KEY_SB), {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: donnees.toString()
+      });
+    } catch (e) { return Promise.reject(e); }
+  }
+
   function envoie(cheminVoulu) {
     if (ignorer()) return;
     var pq = document.getElementById('pq-reviews');
@@ -222,19 +253,7 @@
       lang: document.documentElement.lang || 'fr',
       source: source()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/page_views', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e) {}
+    envoiSimple('page_views', corps).catch(function () {});
   }
 
   // ── Clics sur « Ajouter Quiz Couple à mes sources préférées » ───────────
@@ -257,19 +276,7 @@
       lang: document.documentElement.lang || 'fr',
       path: chemin()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/source_pref_clics', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e2) {}
+    envoiSimple('source_pref_clics', corps).catch(function () {});
   }
   document.addEventListener('click', clicSourcePref, true);
 
@@ -295,19 +302,7 @@
       lang: document.documentElement.lang || 'fr',
       path: chemin()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/instagram_clics', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e2) {}
+    envoiSimple('instagram_clics', corps).catch(function () {});
   }
   document.addEventListener('click', clicInstagram, true);
 
