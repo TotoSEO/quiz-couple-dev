@@ -212,9 +212,11 @@ l'admin.
   désactivé, plafond d'utilisations atteint), la vente n'est jamais
   bloquée : la page de paiement s'ouvre au prix plein, avec le champ des
   codes, et l'erreur part au journal de la fonction `bilan`. Pour le
-  vérifier après chaque changement : « Évaluation de couple · santé »
-  (`bilan-sante.yml`), dont la sonde échoue si la réduction affichée n'est
-  pas appliquée. Pour arrêter : `PROMO_POURCENT = 0` ou une date dans
+  vérifier après chaque changement : le bouton « Ouvrir la page Stripe »
+  de l'onglet Évaluation de l'admin (ci-dessous), qui écrit le montant que
+  Stripe demande, ou « Évaluation de couple · santé » (`bilan-sante.yml`),
+  dont la sonde échoue si la réduction affichée n'est pas appliquée ou si
+  le montant calculé par Stripe n'est pas le prix réduit. Pour arrêter : `PROMO_POURCENT = 0` ou une date dans
   `PROMO_FIN` (la reconstruction programmée de 2 h UTC retire l'affichage
   dans la nuit qui suit ; le serveur garde la réduction douze heures de
   plus). Garder la
@@ -222,6 +224,17 @@ l'admin.
   Le prix barré doit être un prix vraiment pratiqué : le plus bas des
   trente jours qui précèdent la réduction (article L112-1-1 du Code de la
   consommation). 9,90 € l'était depuis l'ouverture.
+- **Voir la page de paiement sans faire le test** (21 octobre 2026) : onglet
+  Évaluation de l'admin, « Ouvrir la page Stripe », avec la langue et la
+  façon (à deux ou seul(e)). C'est la même page qu'un client (prix, réduction,
+  textes, moyens de paiement), créée par l'action `apercu_paiement` de la
+  fonction `bilan`, qui demande le jeton de l'admin. Aucune évaluation n'est
+  créée : rien n'entre dans les compteurs ni dans l'entonnoir de l'onglet. La
+  ligne sous le bouton écrit le montant que Stripe demande (7,92 € au lieu
+  de 9,90 €, code LOVE20 appliqué). Stripe garde la session dans « Paiements
+  incomplets » jusqu'à son expiration, 24 heures plus tard. Payer sur cette
+  page serait un vrai paiement, rattaché à aucune évaluation (le webhook
+  l'ignore) : à rembourser depuis Stripe.
 - **Contestation** (chargeback) : Stripe prévient par e-mail. Répondre avec
   l'heure du paiement (dans Stripe) et la case de renonciation cochée avant
   de payer : sa date est dans `renonciation_le`, table `bilans`, tant que le

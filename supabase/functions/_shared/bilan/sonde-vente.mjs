@@ -77,7 +77,10 @@ try {
   console.log('page Stripe ouverte : ' + lien.replace(/(checkout\.stripe\.com\/c\/pay\/)[^#?]{12}.*/, '$1…'));
   if (C.promoEnCours(new Date(), 12)) {
     if (p.json.promo !== true) throw new Error('réduction ' + C.PROMO_CODE + ' (' + C.PROMO_STRIPE + ') refusée par Stripe : la page de paiement s\'ouvre au prix plein alors que le site affiche -' + C.PROMO_POURCENT + ' %. Vérifier le code dans Stripe (actif, date d\'expiration, plafond, produits) ; le détail est dans les journaux de la fonction bilan.');
-    console.log('réduction ' + C.PROMO_CODE + ' appliquée par Stripe (-' + C.PROMO_POURCENT + ' %)');
+    // Le montant que Stripe a calculé pour la page (une fonction d'avant le
+    // 21 octobre 2026 ne le renvoie pas : rien à comparer).
+    if (p.json.total != null && p.json.total !== C.prixPromo()) throw new Error('la page de paiement demande ' + p.json.total + ' centimes au lieu de ' + C.prixPromo() + ' : la réduction ' + C.PROMO_CODE + ' de Stripe ne fait pas ' + C.PROMO_POURCENT + ' % (vérifier le coupon dans Stripe)');
+    console.log('réduction ' + C.PROMO_CODE + ' appliquée par Stripe (-' + C.PROMO_POURCENT + ' %)' + (p.json.total != null ? ' : la page demande ' + (p.json.total / 100).toFixed(2).replace('.', ',') + ' €' : ''));
   }
   console.log('✓ le tunnel de vente marche jusqu\'au paiement');
   code = 0;

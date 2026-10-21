@@ -502,27 +502,51 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!stripe) return non(503, 'paiement_ferme');
     if (corps.renonciation !== true) return non(400, 'renonciation');
     const lang = LANGUES.includes(corps.lang) ? corps.lang : ligne.lang;
-    const t = PRODUIT[lang];
     const solo = estSolo(ligne);
     const base = SITE + CHEMINS[lang];
-    const message = solo ? t.mentionSolo : t.mention;
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
-    const params = (avecPromo) => ({
+    let ouverte;
+    try {
+      ouverte = await ouvrirSession((avecPromo) => sessionStripe({
+        lang, solo, email, avecPromo,
+        reference: ligne.id,
+        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
+        succes: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
+        annule: base + '?annule=1&b=' + ligne.id,
+      }));
+    } catch (e) {
+      return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+    }
+    const { session, promo } = ouverte;
+    const champs = {
+      renonciation_le: maintenant().toISOString(),
+      paiement_session: session.id,
+    };
+    if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
+    await stockage.maj(ligne.id, champs);
+    return ok({ url: session.url, promo, total: totalSession(session) });
+  }
+
+  // La page de paiement de Stripe, la même pour un client (payer) et pour
+  // l'aperçu de l'admin (apercuPaiement) : prix, réduction, textes.
+  function sessionStripe({ lang, solo, email, avecPromo, reference, metadata, succes, annule }) {
+    const t = PRODUIT[lang];
+    return {
       mode: 'payment',
       locale: lang,
-      client_reference_id: ligne.id,
+      client_reference_id: reference || undefined,
       customer_email: email || undefined,
-      success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
-      cancel_url: base + '?annule=1&b=' + ligne.id,
+      success_url: succes,
+      cancel_url: annule,
       // La réduction en cours est appliquée d'office (personne n'a de code à
       // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
       // champ des codes ne revient donc que sans réduction.
       ...(avecPromo
         ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
         : { allow_promotion_codes: 'true' }),
-      metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
-      payment_intent_data: { metadata: { bilan: ligne.id, role } },
-      custom_text: { submit: { message } },
+      metadata,
+      payment_intent_data: { metadata },
+      custom_text: { submit: { message: solo ? t.mentionSolo : t.mention } },
       line_items: [{
         quantity: 1,
         price_data: {
@@ -531,31 +555,48 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
           product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
         },
       }],
-    });
-    let promo = promoActive();
-    let session;
-    try {
-      session = await stripe.creerSession(params(promo));
-    } catch (e) {
-      // Un code expiré, désactivé ou à son plafond ne bloque jamais une
-      // vente : on rouvre la page de paiement au prix plein, avec le champ
-      // des codes, et l'erreur part au journal de la fonction.
-      if (!promo) return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
-      console.warn('[bilan] réduction ' + C.PROMO_CODE + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
-      promo = false;
-      try {
-        session = await stripe.creerSession(params(false));
-      } catch (e2) {
-        return non(502, 'stripe', { detail: String(e2.message || e2).slice(0, 200) });
-      }
-    }
-    const champs = {
-      renonciation_le: maintenant().toISOString(),
-      paiement_session: session.id,
     };
-    if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
-    await stockage.maj(ligne.id, champs);
-    return ok({ url: session.url, promo });
+  }
+
+  // Un code expiré, désactivé ou à son plafond ne bloque jamais une vente :
+  // la page de paiement se rouvre au prix plein, avec le champ des codes, et
+  // l'erreur part au journal de la fonction.
+  async function ouvrirSession(parametres) {
+    const promo = promoActive();
+    try {
+      return { session: await stripe.creerSession(parametres(promo)), promo };
+    } catch (e) {
+      if (!promo) throw e;
+      console.warn('[bilan] réduction ' + C.PROMO_CODE + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
+    }
+    return { session: await stripe.creerSession(parametres(false)), promo: false };
+  }
+
+  // Le montant que Stripe demandera, réduction comprise, tel qu'il le calcule.
+  const totalSession = (session) => (Number.isInteger(session && session.amount_total) ? session.amount_total : null);
+
+  // Réservé à l'admin (jeton vérifié par index.ts) : la page de paiement telle
+  // qu'un client la voit, pour la regarder sans faire les cent questions.
+  // Aucune évaluation n'est créée, donc rien n'entre dans les compteurs de
+  // l'onglet Évaluation ; un paiement fait ici ne débloque rien (le webhook
+  // ne trouve aucune évaluation et l'ignore).
+  async function apercuPaiement(corps, ctx) {
+    if (!ctx?.admin) return non(403, 'admin');
+    if (!stripe) return non(503, 'paiement_ferme');
+    const lang = LANGUES.includes(corps.lang) ? corps.lang : 'fr';
+    const solo = corps.mode === 'solo';
+    const retour = SITE + '/admin/';
+    try {
+      const { session, promo } = await ouvrirSession((avecPromo) => sessionStripe({
+        lang, solo, avecPromo,
+        metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo' },
+        succes: retour,
+        annule: retour,
+      }));
+      return ok({ url: session.url, promo, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: C.PRIX_CENTIMES });
+    } catch (e) {
+      return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+    }
   }
 
   // Une session Stripe payée débloque le bilan qu'elle porte en métadonnée.
@@ -938,6 +979,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
     email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer,
+    apercu_paiement: apercuPaiement,
   };
 
   async function traiter(corps, ctx) {

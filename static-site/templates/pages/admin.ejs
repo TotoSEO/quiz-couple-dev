@@ -329,6 +329,23 @@
             <button class="stats-comp-btn" data-bilan-jours="365" type="button">1 an</button>
           </div>
           <p class="adm-note" id="admin-bilan-note">Chaque étape est comptée le jour où elle arrive (heure de Paris), même si l'évaluation a été supprimée depuis. Les visites ne comptent ni vos propres passages (drapeau posé à la connexion à l'admin) ni les robots. Le chiffre d'affaires est celui des paiements confirmés, avant les frais de Stripe.</p>
+          <%# La page de paiement telle qu'un client la voit, sans faire les cent questions : action apercu_paiement de la fonction bilan (jeton admin), aucune évaluation créée, rien de compté ici (apercuStripe dans admin.js). %>
+          <div class="adm-apercu" id="admin-apercu-stripe">
+            <span class="adm-apercu-titre">Page de paiement Stripe</span>
+            <select id="apercu-stripe-lang" class="afl-select" aria-label="Langue de la page">
+              <option value="fr">Français</option>
+              <option value="en">Anglais</option>
+              <option value="es">Espagnol</option>
+              <option value="de">Allemand</option>
+              <option value="it">Italien</option>
+            </select>
+            <select id="apercu-stripe-mode" class="afl-select" aria-label="Façon de faire l'évaluation">
+              <option value="duo">À deux</option>
+              <option value="solo">Seul(e)</option>
+            </select>
+            <button id="apercu-stripe" class="btn btn-cta btn-sm" type="button">Ouvrir la page Stripe</button>
+            <p class="adm-apercu-msg" id="apercu-stripe-msg" aria-live="polite">La même page qu'un client, réduction comprise, sans faire le test. Rien n'est créé ni compté dans cet onglet. Un paiement fait sur cette page serait un vrai paiement, rattaché à aucune évaluation : à rembourser depuis Stripe.</p>
+          </div>
           <div class="stats-tetes">
             <div class="stats-tete stats-tete--lances">
               <p class="stats-tete-titre">Visites de la page</p>
