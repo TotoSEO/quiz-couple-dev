@@ -1,0 +1,179 @@
+{
+  "jour": "2026-11-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-112",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "L'épisode regardé en douce sans l'autre : elle seule sur le canapé avec du popcorn ; il arrive, elle cache le popcorn ; il lance l'épisode, elle fait la surprise. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est seule sur le canapé, gourmande, un bol de popcorn sur les genoux, les yeux sur la télé. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "gourmand"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.8
+              },
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand tu regardes l'épisode sans ta personne",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il arrive par la droite en marchant de profil et s'arrête près du canapé à 2 s. Elle fait glisser le popcorn derrière elle, l'air innocent, un petit sourire.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 700,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "x": 520,
+                    "pose": "debout",
+                    "expression": "perplexe"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "gourmand"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "ange"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.8,
+                "a": 1.4
+              },
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux sont assis côte à côte sur le canapé. Il lance l'épisode, content. Elle fait la surprise, les yeux grands, la bouche en O, sans bouger.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "surpris"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

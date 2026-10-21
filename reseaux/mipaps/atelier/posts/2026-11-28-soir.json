@@ -1,0 +1,51 @@
+{
+  "jour": "2026-11-28",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-120",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : elle, bras croisés, essaie de ne pas rire ; lui fait une grimace.",
+        "texte": "tu me fais rire même quand j'ai décidé de bouder",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "boude",
+              "bras": "croises",
+              "signes": [
+                "coeurs"
+              ],
+              "x": 250,
+              "taille": 260
+            },
+            {
+              "perso": "lui",
+              "expression": "diable",
+              "x": 420,
+              "taille": 260
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "jour": "2026-11-28",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-144",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma : ce qui nous fait le plus nous disputer, en barres.",
+        "style": "schema",
+        "texte": "ce qui nous fait le plus nous disputer",
+        "schema": {
+          "type": "barres",
+          "barres": [
+            {
+              "texte": "la télé",
+              "valeur": 60
+            },
+            {
+              "texte": "le chauffage",
+              "valeur": 80
+            },
+            {
+              "texte": "on mange quoi",
+              "valeur": 95
+            }
+          ]
+        }
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
