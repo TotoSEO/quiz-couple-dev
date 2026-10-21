@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-27",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-049",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Picnic edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Sandwiches in the park",
+            "b": "Pizza on the grass"
+          },
+          {
+            "a": "Lie on a blanket",
+            "b": "Sit on a bench"
+          },
+          {
+            "a": "Watch the clouds",
+            "b": "Watch the people"
+          },
+          {
+            "a": "Sunny picnic",
+            "b": "Sunset picnic"
+          },
+          {
+            "a": "Fruit and cheese",
+            "b": "Chips and soda"
+          },
+          {
+            "a": "Bring a game",
+            "b": "Bring a book"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Picnic edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

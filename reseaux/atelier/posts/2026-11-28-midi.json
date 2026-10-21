@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-28",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-050",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Dinner date edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Candlelit restaurant",
+            "b": "Street food standing"
+          },
+          {
+            "a": "Share one dessert",
+            "b": "One dessert each"
+          },
+          {
+            "a": "Order the same dish",
+            "b": "Order two and swap"
+          },
+          {
+            "a": "They choose the place",
+            "b": "You choose the place"
+          },
+          {
+            "a": "Sit across",
+            "b": "Sit side by side"
+          },
+          {
+            "a": "Dinner then a walk",
+            "b": "A walk then dinner"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Dinner date edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
