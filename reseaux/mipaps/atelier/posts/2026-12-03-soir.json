@@ -1,0 +1,61 @@
+{
+  "jour": "2026-12-03",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-118",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : lui qui bâille au lit, elle qui le regarde, cœurs.",
+        "texte": "j'adore ta tête quand tu viens de te réveiller",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "baille",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 280,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "amour",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 450,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

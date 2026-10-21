@@ -1,0 +1,48 @@
+{
+  "jour": "2026-12-02",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-143",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma : l'humeur quand l'autre n'est pas là, une courbe qui descend puis remonte d'un coup.",
+        "style": "schema",
+        "texte": "mon humeur quand t'es pas là",
+        "schema": {
+          "type": "courbe",
+          "etiquettes": [
+            "tu pars",
+            "tu rentres"
+          ],
+          "points": [
+            80,
+            60,
+            40,
+            25,
+            15,
+            10,
+            12,
+            15,
+            25,
+            100
+          ],
+          "repere": "tu rentres"
+        }
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "jour": "2026-12-03",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-112",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, blasée mais tendre, elle tend une écharpe.",
+        "style": "mini",
+        "texte": "je t'avais dit de prendre une veste",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "blase",
+              "bras": "tend_d",
+              "x": 280,
+              "taille": 290
+            },
+            {
+              "objet": "echarpe",
+              "x": 410,
+              "y": 330,
+              "echelle": 0.8
+            }
+          ]
+        }
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

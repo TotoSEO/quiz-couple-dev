@@ -1,0 +1,163 @@
+{
+  "jour": "2026-12-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-127",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Quand ça va pas et que ta personne le voit tout de suite : elle est assise, triste, un nuage noir ; il arrive, s'assoit à côté sans rien dire ; il pose sa tête sur son épaule ; elle sourit, un cœur entre eux. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est assise sur le canapé, triste, la tête basse, un petit nuage noir au-dessus d'elle. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "triste",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand ça va pas et que ta personne le voit tout de suite",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Il entre par la droite en marchant de profil, s'arrête près du canapé à 1,8 s, puis s'assoit à côté d'elle à 2,3 s, sans rien dire, l'air inquiet. Elle reste triste, le nuage au-dessus d'elle.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 700,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 440,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "triste",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Il pose sa tête sur son épaule, doucement. Elle sourit, les yeux fermés, le nuage a disparu. Un petit cœur flotte entre eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "calin"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 140,
+                "echelle": 0.45,
+                "de": 0.8,
+                "flotte": true
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

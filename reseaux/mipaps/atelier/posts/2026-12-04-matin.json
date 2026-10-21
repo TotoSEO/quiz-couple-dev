@@ -1,0 +1,191 @@
+{
+  "jour": "2026-12-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-139",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Quand ta personne parle en dormant : il dort, il marmonne ; elle se penche pour écouter ; « pas les cornichons », elle rit sous la couette. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont dans le lit, lui endormi, des zzz au-dessus de lui, elle les yeux fermés aussi. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand ta personne parle en dormant",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "lit_fond",
+              "lit_couette"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il marmonne, une petite bulle apparaît au-dessus de lui à 0,6 s. Elle ouvre un œil à 1,2 s, intriguée, et se penche vers lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "curieux",
+                    "x": 380
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "bulle",
+                "x": 250,
+                "y": 130,
+                "echelle": 0.7,
+                "de": 0.6
+              }
+            ],
+            "meubles": [
+              "lit_fond",
+              "lit_couette"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle rit, la patte devant la bouche pour ne pas le réveiller. Le texte « pas les cornichons » à 0,2 s. Lui dort toujours.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« pas les cornichons »",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "lit_fond",
+              "lit_couette"
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
