@@ -46,8 +46,8 @@
       "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?». Il tuo partner potrà correggerle.",
       "accordTitre": "Prima di iniziare",
       "majeur": "Ho 18 anni o più.",
-      "consentement": "Accetto che le mie risposte vengano salvate per questa valutazione, anche su temi intimi (vita sessuale, religione, opinioni), e che {{autre}} le veda nel report.",
-      "accordAide": "La vostra valutazione viene conservata 60 giorni dopo la vostra ultima risposta se non è pagato, sei mesi dopo il pagamento se lo è, e ciascuno di voi può cancellarlo in qualsiasi momento. Nessun account da creare.",
+      "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+      "accordAide": "Le tue risposte, anche su argomenti intimi, servono solo a questo report, dove {{autre}} le vedrà accanto alle sue. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e ciascuno di voi può cancellarla in qualsiasi momento. Nessun account da creare.",
       "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
       "suivant": "Avanti",
       "retour": "Indietro",
@@ -55,9 +55,10 @@
       "manque": "Manca una risposta.",
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta le due caselle per continuare.",
-      "email": "La tua e-mail (facoltativa)",
-      "emailAide": "Per ricevere subito il tuo link personale e ritrovare le tue risposte se chiudi la pagina. È anche l'indirizzo a cui arriverà il report.",
-      "emailFaux": "Questo indirizzo e-mail non sembra completo."
+      "email": "La tua e-mail",
+      "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina.",
+      "emailFaux": "Questo indirizzo e-mail non sembra completo.",
+      "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il report in PDF."
     },
     "invitation": {
       "titre": "Invita {{autre}}",
@@ -85,7 +86,8 @@
       "genre": "Tu sei",
       "commencer": "Accetto e inizio",
       "lienUtilise": "Questo link d'invito è già stato usato. Se eri tu, apri il tuo link personale, o torna su questa pagina dal telefono su cui hai iniziato.",
-      "paye": "Buona notizia: {{autre}} ha già pagato il report per tutti e due. Si aprirà appena avrai finito le tue risposte."
+      "paye": "Buona notizia: {{autre}} ha già pagato il report per tutti e due. Si aprirà appena avrai finito le tue risposte.",
+      "prenomManque": "Scrivi il tuo nome."
     },
     "domaine": {
       "partie": "Parte {{n}} di {{total}}",
@@ -146,7 +148,7 @@
         "Per ogni differenza: perché conta, domande per parlarne e cosa è meglio evitare",
         "I vostri segnali d'allarme nei litigi",
         "Chi fa cosa in casa, secondo ciascuno",
-        "Un PDF di una trentina di pagine per e-mail, e il report online per sei mesi"
+        "Il report completo in PDF, inviato via e-mail appena è pronto, e online per sei mesi"
       ],
       "prix": "{{prix}} per tutti e due",
       "prixAide": "Un solo pagamento, e {{autre}} non dovrà pagare niente. Nessun abbonamento.",
@@ -177,8 +179,8 @@
       "creation": {
         "autreAide": "Serve solo a scrivere le domande. Non gli viene inviato niente.",
         "soloNote": "Fai la valutazione da solo/a: {{autre}} non viene avvisato, non gli viene inviato niente, e solo tu vedrai il report.",
-        "consentement": "Accetto che le mie risposte siano registrate per questa valutazione, anche su argomenti intimi (vita sessuale, religione, opinioni), insieme a quello che immagino delle risposte di {{autre}}.",
-        "accordAide": "La tua valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento altrimenti, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
+        "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+        "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini delle risposte di {{autre}} servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione"
       },
@@ -195,7 +197,7 @@
           "Per ogni differenza: perché conta, domande per parlarne e cosa è meglio evitare",
           "I vostri segnali d'allarme nei litigi",
           "Chi fa cosa in casa, visto da te",
-          "Un PDF di una quarantina di pagine via e-mail, e il report online per sei mesi"
+          "Il report completo in PDF, inviato via e-mail appena è pronto, e online per sei mesi"
         ],
         "prixAide": "Un solo pagamento, nessun abbonamento. Il tuo partner non viene avvisato.",
         "emailAide": "Il PDF arriverà a questo indirizzo appena pagato. Non serve a nient'altro."
@@ -516,20 +518,22 @@
         "telecharger": "Scarica il PDF",
         "pdfPrepa": "Il vostro PDF è in preparazione: arriverà tra qualche minuto, via e-mail e qui.",
         "pdfErreur": "Il PDF è in ritardo. Ve lo invieremo appena è pronto, non dovete fare niente.",
-        "envoyeA": "Report inviato a {{emails}}",
-        "envoiA": "Il report sarà inviato a {{emails}}",
-        "emailTitre": "Ricevere il report via e-mail",
-        "emailAide": "Il tuo indirizzo serve solo a inviarti questo report.",
+        "envoyeA": "Il PDF è stato inviato a {{emails}}. Se non lo vedi, controlla nella posta indesiderata.",
+        "envoiA": "Il PDF partirà a {{emails}} appena sarà pronto. Non devi chiedere niente.",
+        "emailTitre": "Il tuo report via e-mail",
+        "emailAide": "Questo indirizzo sostituisce il tuo per questo report. Non serve a nient'altro.",
         "emailChamp": "Il tuo indirizzo e-mail",
         "emailBouton": "Invia",
-        "emailOk": "Fatto!",
+        "emailOk": "Fatto! Il PDF va a questo indirizzo.",
         "emailFaux": "Questo indirizzo non sembra valido.",
         "imprimer": "Stampa",
         "supprimer": "Cancella la nostra valutazione",
         "supprimerConfirmer": "Conferma la cancellazione",
         "supprimerAide": "La valutazione viene cancellata per tutti e due, subito e per sempre, PDF compreso. Ricordatevi di salvare il PDF prima.",
         "supprime": "La vostra valutazione è stata cancellata.",
-        "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due."
+        "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due.",
+        "envoiSans": "Il PDF partirà via e-mail appena sarà pronto.",
+        "emailAutre": "Riceverlo a un altro indirizzo"
       }
     },
     "situation": {
@@ -557,7 +561,7 @@
     },
     "retrouver": {
       "titre": "Avevi già iniziato una valutazione?",
-      "texte": "Se avevi dato il tuo indirizzo e-mail, ti rimandiamo i tuoi link. Il vecchio link non funzionerà più.",
+      "texte": "Ti rimandiamo i tuoi link all'indirizzo dato all'inizio. Il vecchio link non funzionerà più.",
       "placeholder": "tu@email.com",
       "bouton": "Ritrovare la mia valutazione",
       "envoye": "Se una valutazione è collegata a {{email}}, i tuoi link arrivano nella tua casella entro un minuto. Controlla anche lo spam.",
@@ -567,17 +571,18 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Volete la stessa vita, tutti e due?",
-    "sousTitre": "Una valutazione completa della vostra relazione, costruita sulla ricerca in psicologia di coppia: 100 domande precise su dodici aree della vita insieme, e un report che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare. In due, ciascuno per conto suo, o da soli se l'altro non è pronto a parlarne.",
+    "sousTitre": "100 domande su dodici aree della vita insieme, e un report di 40 pagine che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare.",
     "points": [
       "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
-      "Domande costruite a partire dalla ricerca in psicologia di coppia",
-      "Un report di 40 pagine, con grafici e spunti per parlarne"
+      "Costruita sulla ricerca in psicologia di coppia",
+      "In due, o da soli se l'altro non è pronto a parlarne"
     ],
     "cta": "Iniziare la valutazione",
     "ctaDuo": "Fare la valutazione in due",
     "ctaSolo": "Farla da solo/a",
     "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Pagamento unico, senza abbonamento",
     "voirExtrait": "Vedere il report pagina per pagina",
+    "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",
       "noms": "Giulia & Marco",

@@ -1,7 +1,7 @@
 // L'e-mail qui porte le rapport de l'évaluation de couple en PDF, dans la
 // langue du bilan, et son envoi par Resend (la clé RESEND_API_KEY des
 // fonctions Supabase, déjà là pour les e-mails de l'ebook, depuis la même
-// adresse noreply@quiz-couple.com). JavaScript pur : testé en Node, utilisé
+// famille d'adresses, voir EXPEDITEURS). JavaScript pur : testé en Node, utilisé
 // par la fonction `bilan` (Deno). Les textes `*Solo` servent au rapport
 // d'une évaluation faite seul(e), qui ne part qu'à la personne qui a répondu.
 //
@@ -9,8 +9,22 @@
 // ne dit rien du contenu du rapport : il peut être lu par-dessus l'épaule,
 // sur l'écran verrouillé d'un téléphone.
 
-export const EXPEDITEUR = 'Quiz Couple <noreply@quiz-couple.com>';
+// L'expéditeur dit « résultats » dans la langue du destinataire, plus
+// jamais « noreply » (Thomas, 20 octobre 2026 : « ce genre d'email part
+// cash dans les spam ») ; la réputation se joue sur le domaine, pas sur la
+// partie locale, donc cinq adresses ne coûtent rien chez Resend. Les
+// réponses vont à une vraie boîte : le domaine n'a pas de serveur de
+// courrier, une réponse à l'adresse d'envoi serait rejetée.
+export const EXPEDITEURS = {
+  fr: 'Quiz Couple <resultats@quiz-couple.com>',
+  en: 'Quiz Couple <results@quiz-couple.com>',
+  es: 'Quiz Couple <resultados@quiz-couple.com>',
+  de: 'Quiz Couple <ergebnisse@quiz-couple.com>',
+  it: 'Quiz Couple <risultati@quiz-couple.com>',
+};
+export const EXPEDITEUR = EXPEDITEURS.fr;
 export const REPONDRE_A = 'infoquizcouple@gmail.com';
+export function expediteur(lang) { return EXPEDITEURS[lang] || EXPEDITEUR; }
 
 const SITE = 'https://quiz-couple.com';
 const PAGES = {
@@ -28,7 +42,6 @@ const PREFIXE_FICHIER = {
   it: 'valutazione-di-coppia',
 };
 
-// L'éditeur, en bas de chaque message.
 // Les conditions générales de vente, par langue : le lien part dans l'e-mail du
 // rapport, avec la confirmation de la renonciation à la rétractation.
 export const CGV = {
@@ -38,7 +51,14 @@ export const CGV = {
   de: '/de/agb/',
   it: '/it/condizioni-generali-di-vendita/',
 };
-export const EDITEUR = 'Quiz Couple · Visibilitea, entreprise individuelle · 4 rue de Bruges, 67000 Strasbourg · SIRET 940 106 800 00011';
+// L'éditeur, en bas de chaque message : le nom de la boîte et le site, rien
+// de plus (Thomas, 20 octobre 2026 : « on peut juste mettre le nom de la boîte
+// et du site »). L'identité complète du vendeur (forme, adresse, SIRET),
+// que la loi veut sur un support durable au moment de la confirmation du
+// contrat (L221-13 et L221-5), est écrite en dernière page du rapport PDF
+// joint à l'e-mail du rapport (`EDITEUR` de bilan/document.mjs), et sur les
+// mentions légales et les CGV du site, dont l'e-mail donne le lien.
+export const EDITEUR = 'Quiz Couple · Visibilitea · quiz-couple.com';
 
 const TEXTES = {
   fr: {
@@ -351,12 +371,12 @@ ${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;fo
 
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {
-    async envoyer({ a, sujet, html, texte, pieces }) {
+    async envoyer({ a, sujet, html, texte, pieces, lang }) {
       const r = await f('https://api.resend.com/emails', {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + cle, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: EXPEDITEUR,
+          from: expediteur(lang),
           to: [a],
           reply_to: REPONDRE_A,
           subject: sujet,

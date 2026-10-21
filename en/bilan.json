@@ -46,8 +46,8 @@
       "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
       "accordTitre": "Before you start",
       "majeur": "I'm 18 or over.",
-      "consentement": "I agree that my answers are saved for this assessment, including on intimate topics (sex life, religion, opinions), and that {{autre}} sees them in the report.",
-      "accordAide": "Your assessment is kept for 60 days after your last answer if it isn't paid for, and six months after payment if it is, and either of you can delete it at any time. No account to create.",
+      "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+      "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
       "suivant": "Next",
       "retour": "Back",
@@ -55,9 +55,10 @@
       "manque": "An answer is missing.",
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue.",
-      "email": "Your email (optional)",
-      "emailAide": "To get your personal link right away and find your answers again if you close the page. It's also where the report will be sent.",
-      "emailFaux": "This email address doesn't look complete."
+      "email": "Your email",
+      "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page.",
+      "emailFaux": "This email address doesn't look complete.",
+      "emailManque": "Enter your email address: that's where the PDF report will be sent."
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -85,7 +86,8 @@
       "genre": "You are",
       "commencer": "I agree, let's start",
       "lienUtilise": "This invitation link has already been used. If it was you, open your personal link, or come back to this page from the phone you started on.",
-      "paye": "Good news: {{autre}} has already paid for the report for both of you. It'll open as soon as you've finished your answers."
+      "paye": "Good news: {{autre}} has already paid for the report for both of you. It'll open as soon as you've finished your answers.",
+      "prenomManque": "Write your first name."
     },
     "domaine": {
       "partie": "Part {{n}} of {{total}}",
@@ -146,7 +148,7 @@
         "For each gap: why it matters, questions to talk about it and what's best avoided",
         "Your warning signs in arguments",
         "Who does what at home, as each of you sees it",
-        "A PDF of around thirty pages by email, and the report online for six months"
+        "The full report as a PDF, emailed as soon as it's ready, and online for six months"
       ],
       "prix": "{{prix}} for both of you",
       "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
@@ -177,8 +179,8 @@
       "creation": {
         "autreAide": "It's only used to write the questions. Nothing is sent to them.",
         "soloNote": "You're doing the assessment on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report.",
-        "consentement": "I agree to my answers being stored for this assessment, including on intimate topics (sex life, religion, opinions), along with what I imagine {{autre}}'s answers to be.",
-        "accordAide": "Your assessment is kept for 60 days after your last answer if it isn't paid for, six months after payment otherwise, and you can delete it at any time. No account to create.",
+        "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+        "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment"
       },
@@ -195,7 +197,7 @@
           "For each gap: why it matters, questions to talk it through and what's best avoided",
           "Your warning signs in arguments",
           "Who does what at home, as you see it",
-          "A PDF of about forty pages by email, and the report online for six months"
+          "The full report as a PDF, emailed as soon as it's ready, and online for six months"
         ],
         "prixAide": "One payment, no subscription. Your partner isn't told.",
         "emailAide": "The PDF will go to this address as soon as you've paid. It's used for nothing else."
@@ -516,20 +518,22 @@
         "telecharger": "Download the PDF",
         "pdfPrepa": "Your PDF is being prepared: it'll arrive in a few minutes, by email and here.",
         "pdfErreur": "The PDF is running late. It will be sent to you as soon as it's ready, you don't need to do anything.",
-        "envoyeA": "Report sent to {{emails}}",
-        "envoiA": "The report will be sent to {{emails}}",
-        "emailTitre": "Get the report by email",
-        "emailAide": "Your address is only used to send you this report.",
+        "envoyeA": "The PDF was sent to {{emails}}. If it doesn't show up, check your spam folder.",
+        "envoiA": "The PDF will go to {{emails}} as soon as it's ready. Nothing to request.",
+        "emailTitre": "Your report by email",
+        "emailAide": "This address replaces yours for this report. It isn't used for anything else.",
         "emailChamp": "Your email address",
         "emailBouton": "Send",
-        "emailOk": "Got it!",
+        "emailOk": "Got it! The PDF is going to this address.",
         "emailFaux": "This address doesn't look valid.",
         "imprimer": "Print",
         "supprimer": "Delete our assessment",
         "supprimerConfirmer": "Confirm deletion",
         "supprimerAide": "The assessment is erased for both of you, right away and for good, PDF included. Remember to keep the PDF first.",
         "supprime": "Your assessment has been deleted.",
-        "garde": "This report stays available on this page for six months, for both of you."
+        "garde": "This report stays available on this page for six months, for both of you.",
+        "envoiSans": "The PDF will go out by email as soon as it's ready.",
+        "emailAutre": "Receive it at another address"
       }
     },
     "situation": {
@@ -557,7 +561,7 @@
     },
     "retrouver": {
       "titre": "Already started an assessment?",
-      "texte": "If you gave your email address, we'll send your links again. The old link will stop working.",
+      "texte": "We'll send your links again to the address you gave at the start. The old link will stop working.",
       "placeholder": "you@email.com",
       "bouton": "Find my assessment",
       "envoye": "If an assessment is linked to {{email}}, your links will reach your inbox within a minute. Check your spam folder too.",
@@ -567,17 +571,18 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Do you both want the same life?",
-    "sousTitre": "A complete assessment of your relationship, built on research in couple psychology: 100 specific questions across twelve areas of life together, and a report that tells you, topic by topic, where you meet and what you need to talk about. Together, each on your own side, or on your own if the other isn't ready to talk about it.",
+    "sousTitre": "100 questions across twelve areas of life together, and a 40-page report that tells you, topic by topic, where you meet and what you need to talk about.",
     "points": [
       "You each answer on your own phone, without seeing the other's answers",
-      "Questions built from research in couple psychology",
-      "A 40-page report, with charts and ways to talk things through"
+      "Built on research in couple psychology",
+      "Together, or on your own if the other isn't ready to talk about it"
     ],
     "cta": "Start the assessment",
     "ctaDuo": "Take the assessment together",
     "ctaSolo": "Take it on your own",
     "ctaNote": "Free questions · {{prix}} for the report, at the end · One-off payment, no subscription",
     "voirExtrait": "See the report page by page",
+    "paiements": "Secure payment via Stripe",
     "visuel": {
       "sur": "Sample report · fictional couple",
       "noms": "Emma & Daniel",

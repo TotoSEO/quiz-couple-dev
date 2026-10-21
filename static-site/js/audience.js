@@ -120,6 +120,10 @@
   window.QCAudience = {
     visite: function () { return exclu() ? null : visite(false); },
     exclu: exclu,
+    // Lu par blog-lectures.js : l'ecriture d'une ligne de mesure en requete
+    // simple (voir envoiSimple). quiz-extras.js a la sienne, pour ne pas
+    // dependre de ce fichier.
+    ecrit: envoiSimple,
     // Lu par blog-lectures.js : le robot et le proprietaire du site n'ont pas
     // a peupler le compteur de lectures. Dupliquer la liste des robots
     // ailleurs, c'est se garantir deux listes qui divergent.
@@ -212,6 +216,33 @@
   // keepalive : la requête doit survivre à un départ immédiat de la page,
   // sinon les visites les plus courtes, justement celles qu'on cherche à
   // mesurer, se perdent en chemin.
+  //
+  // Une « requête simple » au sens de CORS (20 octobre 2026) : la clé
+  // publique passe dans l'adresse (?apikey=, que la passerelle de Supabase
+  // accepte au même titre que l'en-tête) et le corps est encodé comme un
+  // formulaire, que PostgREST lit pour insérer une ligne. Aucun en-tête à
+  // nous (ni apikey, ni Authorization, ni Content-Type JSON, ni Prefer) : le
+  // navigateur n'envoie plus la requête OPTIONS de préchargement avant
+  // chaque écriture. Elle faisait 13 000 lignes par jour dans les logs de la
+  // passerelle, un septième du total, pour rien. Une valeur nulle est omise :
+  // la colonne garde sa valeur par défaut, comme avec un null en JSON. La
+  // même fonction est écrite dans quiz-extras.js, qui ne dépend pas de ce
+  // fichier ; une modification ici en appelle une là-bas.
+  function envoiSimple(table, corps) {
+    var donnees = new URLSearchParams();
+    Object.keys(corps).forEach(function (k) {
+      if (corps[k] !== null && corps[k] !== undefined) donnees.append(k, String(corps[k]));
+    });
+    try {
+      return fetch(URL_SB + '/rest/v1/' + table + '?apikey=' + encodeURIComponent(KEY_SB), {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: donnees.toString()
+      });
+    } catch (e) { return Promise.reject(e); }
+  }
+
   function envoie(cheminVoulu) {
     if (ignorer()) return;
     var pq = document.getElementById('pq-reviews');
@@ -222,19 +253,7 @@
       lang: document.documentElement.lang || 'fr',
       source: source()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/page_views', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e) {}
+    envoiSimple('page_views', corps).catch(function () {});
   }
 
   // ── Clics sur « Ajouter Quiz Couple à mes sources préférées » ───────────
@@ -257,19 +276,7 @@
       lang: document.documentElement.lang || 'fr',
       path: chemin()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/source_pref_clics', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e2) {}
+    envoiSimple('source_pref_clics', corps).catch(function () {});
   }
   document.addEventListener('click', clicSourcePref, true);
 
@@ -295,21 +302,35 @@
       lang: document.documentElement.lang || 'fr',
       path: chemin()
     };
-    try {
-      fetch(URL_SB + '/rest/v1/instagram_clics', {
-        method: 'POST',
-        keepalive: true,
-        headers: {
-          'apikey': KEY_SB,
-          'Authorization': 'Bearer ' + KEY_SB,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(corps)
-      }).catch(function () {});
-    } catch (e2) {}
+    envoiSimple('instagram_clics', corps).catch(function () {});
   }
   document.addEventListener('click', clicInstagram, true);
+
+  // ── Passage vers l'évaluation de couple ─────────────────────────────────
+  // Les liens du site vers l'évaluation disent d'où ils partent
+  // (data-bilan-src : menu, menu-mobile, pied, accueil, accueil-hero,
+  // resultat-<id>, bas-<id>, moteur-<id>) et, pour le bouton « seul(e) », la
+  // façon de faire (data-bilan-mode). Jusqu'au 20 octobre 2026 les deux
+  // étaient dans l'adresse (?src=, ?mode=) : le menu répétait
+  // /evaluation-de-couple/?src=menu sur chaque page du site, et Google avait
+  // indexé cinq de ces adresses malgré la balise canonique. L'adresse reste
+  // donc propre, et la source passe par localStorage (un lien ouvert dans un
+  // nouvel onglet ne reçoit pas le sessionStorage de celui-ci) ; bilan.js la
+  // reprend à l'arrivée si le clic date de moins de dix minutes, puis
+  // l'efface. Pas de filtre des robots ni du propriétaire ici : bilan.js
+  // trie déjà ce qu'il compte.
+  function clicEvaluation(e) {
+    if (e.type === 'auxclick' && e.button !== 1) return;
+    var lien = e.target && e.target.closest ? e.target.closest('a[data-bilan-src]') : null;
+    if (!lien) return;
+    var src = lien.getAttribute('data-bilan-src') || '';
+    if (!/^[a-z0-9-]{1,40}$/.test(src)) return;
+    try {
+      window.localStorage.setItem('qc-bilan-clic', JSON.stringify({ s: src, m: lien.getAttribute('data-bilan-mode') || '', t: Date.now() }));
+    } catch (er) {}
+  }
+  document.addEventListener('click', clicEvaluation, true);
+  document.addEventListener('auxclick', clicEvaluation, true);
 
   // ── Départ ──────────────────────────────────────────────────────────────
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement

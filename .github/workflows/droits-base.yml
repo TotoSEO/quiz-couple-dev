@@ -1,0 +1,50 @@
+name: Sécurité · droits explicites des tables
+
+# Applique 20261020180000_droits_explicites.sql par l'API de gestion de
+# Supabase, comme securite-frein.yml, avec les secrets déjà là
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
+#
+# Le 30 octobre 2026, Supabase cesse d'accorder automatiquement l'accès API
+# (select, insert, update, delete pour anon, authenticated et service_role)
+# aux tables créées ensuite dans le schéma public. Les tables qui existent
+# gardent leurs droits : la migration écrit noir sur blanc ce que chacune a
+# aujourd'hui, pour qu'une restauration sur un projet neuf (RECOVERY.md), où
+# le nouveau réglage s'applique déjà, donne une base qui répond. En
+# production elle ne change rien. Idempotente : la relancer (« Run
+# workflow ») est sans risque.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261020180000_droits_explicites.sql'
+      - '.github/workflows/droits-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: droits-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Droits explicites de chaque table du schéma public
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # La dernière requête de la migration rend le bilan des droits après
+      # passage : il est affiché dans le journal.
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261020180000_droits_explicites.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          jq -r 'if type == "array" and length > 0 then (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) else . end' reponse.json 2>/dev/null | head -80 || head -c 800 reponse.json
+          echo
+          if [ "$code" -ge 300 ]; then exit 1; fi

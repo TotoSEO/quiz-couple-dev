@@ -46,8 +46,8 @@
       "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? ». Votre partenaire pourra les corriger.",
       "accordTitre": "Avant de commencer",
       "majeur": "J'ai 18 ans ou plus.",
-      "consentement": "J'accepte que mes réponses soient enregistrées pour cette évaluation, y compris sur des sujets intimes (vie sexuelle, religion, opinions), et que {{autre}} les voie dans le rapport.",
-      "accordAide": "Votre évaluation est gardée 60 jours après votre dernière réponse si elle n'est pas payée, six mois après le paiement sinon, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
+      "consentement": "Je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
+      "accordAide": "Vos réponses, y compris sur les sujets intimes, ne servent qu'à ce rapport, où {{autre}} les verra en face des siennes. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
       "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
       "suivant": "Suivant",
       "retour": "Retour",
@@ -55,9 +55,10 @@
       "manque": "Il manque une réponse.",
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez les deux cases pour continuer.",
-      "email": "Votre e-mail (facultatif)",
-      "emailAide": "Pour recevoir tout de suite votre lien personnel et retrouver vos réponses si vous fermez la page. C'est aussi l'adresse où partira le rapport.",
-      "emailFaux": "Cette adresse e-mail n'a pas l'air complète."
+      "email": "Votre e-mail",
+      "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle permet aussi de retrouver votre évaluation si vous fermez la page.",
+      "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
+      "emailManque": "Écrivez votre adresse e-mail : c'est là que le rapport PDF sera envoyé."
     },
     "invitation": {
       "titre": "Invitez {{autre}}",
@@ -85,7 +86,8 @@
       "genre": "Vous êtes",
       "commencer": "J'accepte et je commence",
       "lienUtilise": "Ce lien d'invitation a déjà été utilisé. Si c'était vous, ouvrez votre lien personnel, ou revenez sur cette page depuis le téléphone où vous avez commencé.",
-      "paye": "Bonne nouvelle : {{autre}} a déjà réglé le rapport pour vous deux. Il s'ouvrira dès que vous aurez fini vos réponses."
+      "paye": "Bonne nouvelle : {{autre}} a déjà réglé le rapport pour vous deux. Il s'ouvrira dès que vous aurez fini vos réponses.",
+      "prenomManque": "Écrivez votre prénom."
     },
     "domaine": {
       "partie": "Partie {{n}} sur {{total}}",
@@ -146,7 +148,7 @@
         "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
         "Vos signaux de vigilance dans les disputes",
         "Qui fait quoi à la maison, vu par chacun",
-        "Un PDF d'une trentaine de pages par e-mail, et le rapport en ligne pendant six mois"
+        "Le rapport complet en PDF, envoyé par e-mail dès qu'il est prêt, et en ligne pendant six mois"
       ],
       "prix": "{{prix}} pour vous deux",
       "prixAide": "Un seul paiement, et {{autre}} n'aura rien à payer. Pas d'abonnement.",
@@ -177,8 +179,8 @@
       "creation": {
         "autreAide": "Il sert seulement à écrire les questions. Rien ne lui est envoyé.",
         "soloNote": "Vous faites l'évaluation seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport.",
-        "consentement": "J'accepte que mes réponses soient enregistrées pour cette évaluation, y compris sur des sujets intimes (vie sexuelle, religion, opinions), ainsi que ce que j'imagine des réponses de {{autre}}.",
-        "accordAide": "Votre évaluation est gardée 60 jours après votre dernière réponse si elle n'est pas payée, six mois après le paiement sinon, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
+        "consentement": "Je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
+        "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation"
       },
@@ -195,7 +197,7 @@
           "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
           "Vos signaux de vigilance dans les disputes",
           "Qui fait quoi à la maison, vu par vous",
-          "Un PDF d'une quarantaine de pages par e-mail, et le rapport en ligne pendant six mois"
+          "Le rapport complet en PDF, envoyé par e-mail dès qu'il est prêt, et en ligne pendant six mois"
         ],
         "prixAide": "Un seul paiement, pas d'abonnement. Votre partenaire n'est pas prévenu(e).",
         "emailAide": "Le PDF partira à cette adresse dès le paiement. Elle ne sert à rien d'autre."
@@ -516,20 +518,22 @@
         "telecharger": "Télécharger le PDF",
         "pdfPrepa": "Votre PDF est en préparation : il arrive dans quelques minutes, par e-mail et ici.",
         "pdfErreur": "Le PDF a pris du retard. Il vous sera envoyé dès qu'il sera prêt, vous n'avez rien à faire.",
-        "envoyeA": "Rapport envoyé à {{emails}}",
-        "envoiA": "Le rapport sera envoyé à {{emails}}",
-        "emailTitre": "Recevoir le rapport par e-mail",
-        "emailAide": "Votre adresse sert seulement à vous envoyer ce rapport.",
+        "envoyeA": "Le PDF a été envoyé à {{emails}}. S'il n'apparaît pas, regardez dans les indésirables.",
+        "envoiA": "Le PDF partira à {{emails}} dès qu'il sera prêt. Vous n'avez rien à demander.",
+        "emailTitre": "Votre rapport par e-mail",
+        "emailAide": "Cette adresse remplace la vôtre pour ce rapport. Elle ne sert à rien d'autre.",
         "emailChamp": "Votre adresse e-mail",
         "emailBouton": "Envoyer",
-        "emailOk": "C'est noté !",
+        "emailOk": "C'est noté ! Le PDF part à cette adresse.",
         "emailFaux": "Cette adresse ne semble pas valide.",
         "imprimer": "Imprimer",
         "supprimer": "Supprimer notre évaluation",
         "supprimerConfirmer": "Confirmer la suppression",
         "supprimerAide": "L'évaluation est effacée pour vous deux, tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
         "supprime": "Votre évaluation est supprimée.",
-        "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux."
+        "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux.",
+        "envoiSans": "Le PDF partira par e-mail dès qu'il sera prêt.",
+        "emailAutre": "Le recevoir à une autre adresse"
       }
     },
     "situation": {
@@ -557,7 +561,7 @@
     },
     "retrouver": {
       "titre": "Vous aviez déjà commencé une évaluation ?",
-      "texte": "Si vous aviez donné votre adresse e-mail, on vous renvoie vos liens. L'ancien lien ne marchera plus.",
+      "texte": "On vous renvoie vos liens à l'adresse donnée au départ. L'ancien lien ne marchera plus.",
       "placeholder": "votre@email.com",
       "bouton": "Retrouver mon évaluation",
       "envoye": "Si une évaluation est liée à {{email}}, vos liens arrivent dans votre boîte d'ici une minute. Pensez aux indésirables.",
@@ -567,17 +571,18 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Voulez-vous la même vie, tous les deux ?",
-    "sousTitre": "Une évaluation complète de votre relation, construite sur la recherche en psychologie du couple : 100 questions précises sur douze domaines de la vie à deux, et un rapport qui vous dit, sujet par sujet, où vous vous rejoignez et de quoi il faut parler. À deux, chacun de son côté, ou seul(e) si l'autre n'est pas prêt(e) à en parler.",
+    "sousTitre": "100 questions sur douze domaines de la vie à deux, et un rapport de 40 pages qui vous dit, sujet par sujet, où vous vous rejoignez et de quoi il faut parler.",
     "points": [
       "Chacun répond sur son téléphone, sans voir les réponses de l'autre",
-      "Des questions construites à partir de la recherche en psychologie du couple",
-      "Un rapport de 40 pages, avec des graphiques et de quoi en parler"
+      "Construite sur la recherche en psychologie du couple",
+      "À deux, ou seul(e) si l'autre n'est pas prêt(e) à en parler"
     ],
     "cta": "Commencer l'évaluation",
     "ctaDuo": "Faire l'évaluation à deux",
     "ctaSolo": "La faire seul(e)",
     "ctaNote": "Questions gratuites · {{prix}} pour le rapport, à la fin · Paiement unique, sans abonnement",
     "voirExtrait": "Voir le rapport page par page",
+    "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
       "sur": "Rapport d'exemple · couple fictif",
       "noms": "Camille & Julien",

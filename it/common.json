@@ -183,20 +183,29 @@
     "stars": "stelle"
   },
   "capture": {
-    "sur": "I tuoi risultati completi",
-    "titre": "Per sbloccare il resto dei tuoi risultati, inserisci la tua e-mail",
-    "texte": "Il dettaglio del tuo risultato, i consigli e il seguito compaiono subito dopo.",
-    "placeholder": "tua@email.it",
-    "consentement": "Accetto di ricevere i consigli e le offerte di Quiz Couple via e-mail. Disiscrizione con un clic, in qualsiasi momento.",
+    "sur": "I tuoi risultati sono pronti",
+    "titre": "Ancora un passo per scoprire i tuoi risultati completi, gratis!",
+    "points": [
+      "L'analisi dettagliata del tuo risultato",
+      "I nostri consigli per il seguito",
+      "Tutti gli altri test del sito sbloccati"
+    ],
+    "placeholder": "Il tuo indirizzo e-mail",
+    "consentement": "Accetto di ricevere i consigli e le novità di Quiz Couple via e-mail.",
     "confidentialite": "Privacy",
-    "bouton": "Vedere i miei risultati",
+    "bouton": "Vedi i miei risultati",
     "envoi": "Un attimo...",
+    "note": "Niente spam. Disiscrizione con un clic.",
+    "merci": {
+      "titre": "Grazie, i tuoi risultati sono sbloccati!",
+      "texte": "E non solo qui: da ora in poi, tutti i test, i quiz e i giochi del sito ti danno i risultati completi senza chiederti di nuovo l'e-mail su questo dispositivo."
+    },
     "suggestion": "Volevi dire {{domaine}}?",
     "erreurs": {
       "format": "Questo indirizzo e-mail non sembra completo.",
       "domaine": "Questo indirizzo non può ricevere e-mail. Controlla il dominio.",
       "jetable": "Gli indirizzi usa e getta non sono accettati.",
-      "consentement": "Spunta la casella per continuare."
+      "consentement": "Spunta la casella per vedere i tuoi risultati."
     }
   },
   "blog": {
@@ -220,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "coppia"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}}% in questo momento",
+    "avant": "Prezzo abituale:",
+    "apres": "Prezzo scontato:",
+    "code": "Codice {{code}} applicato automaticamente al pagamento"
   }
 }

@@ -31,7 +31,8 @@
       "titre": "2. Der Preis",
       "p": [
         "Der vollständige Bericht kostet {{prix}}, ohne Umsatzsteuer (Kleinunternehmerregelung). Es ist eine einmalige Zahlung, ohne Abo. Eine einzige Zahlung, von einem der beiden Partner, schaltet den Bericht für beide frei. Im Solo-Modus wird der Bericht nur der Person bereitgestellt, die geantwortet hat.",
-        "Der Preis wird auf der Seite der Analyse vor der ersten Frage angezeigt, und noch einmal vor der Zahlung."
+        "Der Preis wird auf der Seite der Analyse vor der ersten Frage angezeigt, und noch einmal vor der Zahlung.",
+        "Für begrenzte Zeit kann ein Rabatt angeboten werden. Er wird dann auf der Seite der Analyse angezeigt, mit durchgestrichenem regulärem Preis, und auf der Zahlungsseite automatisch abgezogen: Bezahlt wird der Betrag, den die Zahlungsseite vor der Bestätigung anzeigt."
       ]
     },
     {

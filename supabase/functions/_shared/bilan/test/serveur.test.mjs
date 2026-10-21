@@ -16,14 +16,19 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
 const SIT = { ensemble: 'oui', duree: '3a10', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
 
-function fauxStripe() {
+function fauxStripe({ refuseCode = false } = {}) {
   const sessions = new Map();
   let n = 0;
   return {
     sessions,
     async creerSession(p) {
+      // Comme Stripe : les deux ensemble sont refusés, et un code périmé aussi.
+      if (p.discounts && p.allow_promotion_codes) { const e = new Error('stripe: You may only specify one of these parameters: allow_promotion_codes, discounts.'); e.statut = 400; throw e; }
+      if (p.discounts && refuseCode) { const e = new Error('stripe: This promotion code cannot be redeemed because it is inactive.'); e.statut = 400; throw e; }
       const id = 'cs_test_' + String(++n).padStart(12, '0');
-      const s = { id, url: 'https://checkout.stripe.com/c/pay/' + id, payment_status: 'unpaid', amount_total: p.line_items[0].price_data.unit_amount, metadata: p.metadata, client_reference_id: p.client_reference_id, params: p };
+      const brut = p.line_items[0].price_data.unit_amount;
+      const montant = p.discounts && p.discounts[0].promotion_code === C.PROMO_STRIPE ? brut - Math.round(brut * C.PROMO_POURCENT / 100) : brut;
+      const s = { id, url: 'https://checkout.stripe.com/c/pay/' + id, payment_status: 'unpaid', amount_total: montant, metadata: p.metadata, client_reference_id: p.client_reference_id, params: p };
       sessions.set(id, s);
       return { id: s.id, url: s.url };
     },
@@ -58,9 +63,9 @@ function fausseBoite() {
 
 function monter(options = {}) {
   const stockage = creerStockageMemoire();
-  const stripe = options.sansStripe ? null : fauxStripe();
+  const stripe = options.sansStripe ? null : fauxStripe(options.stripe || {});
   const courriel = fausseBoite();
-  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel' });
+  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel', ...(options.maintenant ? { maintenant: options.maintenant } : {}) });
   const appel = (corps, ip = '1.2.3.4', interne = false) => traiter(corps, { ip, interne });
   return { stockage, stripe, courriel, traiter, appel, marquerPaye, marquerRembourse };
 }
@@ -69,7 +74,7 @@ async function creerCouple(appel) {
   const r = await appel({
     action: 'creer', lang: 'fr', situation: SIT,
     moi: { prenom: '  Thomas ', genre: 'h' }, autre: { prenom: 'Léa', genre: 'f' },
-    consentement: true, majeur: true,
+    email: 'Thomas@Exemple.fr', consentement: true, majeur: true,
   });
   assert.equal(r.statut, 200, JSON.stringify(r.json));
   return r.json;
@@ -87,10 +92,12 @@ test('les adresses de la page sont celles de config.js', () => {
 
 test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP', async () => {
   const { appel, stockage } = monter();
-  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: { ...SIT, animal: 'peut-être' }, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'situation');
-  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: '' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'prenom');
-  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: false })).json.erreur, 'consentement');
-  assert.equal((await appel({ action: 'creer', lang: 'xx', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'lang');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: { ...SIT, animal: 'peut-être' }, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'situation');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: '' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'prenom');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: false })).json.erreur, 'consentement');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'email', 'sans adresse');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'pas une adresse', consentement: true, majeur: true })).json.erreur, 'email', 'adresse fausse');
+  assert.equal((await appel({ action: 'creer', lang: 'xx', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'lang');
 
   const c = await creerCouple(appel);
   const ligne = stockage.lignes.get(c.id);
@@ -101,9 +108,9 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal(c.etat.autre.rejoint, false);
 
   for (let i = 1; i < CREATIONS_PAR_HEURE; i++) await creerCouple(appel);
-  const trop = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true });
+  const trop = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true });
   assert.equal(trop.statut, 429);
-  const autreIp = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true }, '5.6.7.8');
+  const autreIp = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true }, '5.6.7.8');
   assert.equal(autreIp.statut, 200);
 });
 
@@ -122,9 +129,13 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal(vue.json.paye, false);
   // Sans accord, B ne peut rien écrire.
   assert.equal((await appel({ action: 'repondre', id: c.id, jeton: c.invitation, reponses: { quo3: 1 } })).statut, 403);
+  // Sans adresse e-mail, pas d'accord possible : le rapport doit pouvoir lui partir.
+  assert.equal((await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Léa-Rose', consentement: true, majeur: true })).json.erreur, 'email');
   // B accepte, corrige son prénom, et reçoit une nouvelle clé.
-  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Léa-Rose', genre: 'f', consentement: true, majeur: true });
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: ' Lea@Exemple.fr ', prenom: 'Léa-Rose', genre: 'f', consentement: true, majeur: true });
   assert.equal(ok.statut, 200);
+  assert.equal(stockage.lignes.get(c.id).a_email, 'thomas@exemple.fr', 'adresse de la création, en minuscules');
+  assert.equal(stockage.lignes.get(c.id).b_email, 'lea@exemple.fr', 'adresse donnée en acceptant');
   const B = { id: c.id, jeton: ok.json.jeton };
   assert.notEqual(B.jeton, c.invitation);
   // L'invitation ne sert plus : celui qui l'a envoyée ne peut pas lire les réponses de B.
@@ -195,7 +206,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal((await appel({ action: 'verifier', id: autre.id, jeton: autre.jeton, session: session.id })).json.erreur, 'session');
   assert.equal((await appel({ action: 'verifier', ...A, session: session.id })).json.paye, true);
   const payee = stockage.lignes.get(c.id);
-  assert.equal(payee.paiement_montant, C.PRIX_CENTIMES);
+  assert.equal(payee.paiement_montant, C.promoEnCours() ? C.prixPromo() : C.PRIX_CENTIMES);
   assert.equal(payee.paiement_role, 'a');
   assert.equal(payee.paiement_email, 'thomas.paie@exemple.fr');
   assert.equal(payee.paiement_intent, 'pi_1234567890');
@@ -287,7 +298,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
 test('payer quand les deux ont fini, puis rapport à faire tout de suite', async () => {
   const { appel, stripe, stockage } = monter();
   const c = await creerCouple(appel);
-  const B = (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, consentement: true, majeur: true })).json.jeton;
+  const B = (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'b@exemple.fr', consentement: true, majeur: true })).json.jeton;
   const rep = toutRepondre(SIT, () => 0);
   await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: rep, fini: true });
   await appel({ action: 'repondre', id: c.id, jeton: B, reponses: rep, fini: true });
@@ -297,11 +308,67 @@ test('payer quand les deux ont fini, puis rapport à faire tout de suite', async
   await appel({ action: 'payer', id: c.id, jeton: B, renonciation: true });
   const s = [...stripe.sessions.values()][0];
   assert.equal(s.params.metadata.role, 'b');
-  assert.equal(s.params.customer_email, undefined);
+  assert.equal(s.params.customer_email, 'b@exemple.fr', "l'adresse donnée en acceptant l'invitation");
   stripe.payer(s.id);
   await appel({ action: 'verifier', id: c.id, jeton: B, session: s.id });
   assert.equal(stockage.lignes.get(c.id).rapport_statut, 'a_faire');
   assert.equal((await appel({ action: 'resultat', id: c.id, jeton: c.jeton })).statut, 200);
+});
+
+// Une évaluation à deux où A a fini ses réponses : prête à payer.
+async function pretAPayer(appel) {
+  const c = await creerCouple(appel);
+  await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: toutRepondre(SIT, () => 0), fini: true });
+  return { id: c.id, jeton: c.jeton };
+}
+
+test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Stripe sans bloquer la vente', async () => {
+  assert.ok(/^promo_[A-Za-z0-9]+$/.test(C.PROMO_STRIPE), 'identifiant de code de promotion Stripe');
+  assert.equal(C.prixPromo(), C.PRIX_CENTIMES - Math.round(C.PRIX_CENTIMES * C.PROMO_POURCENT / 100));
+  assert.ok(C.promoEnCours(), 'la réduction est en cours');
+
+  // Appliquée d'office : discounts sans le champ des codes, montant réduit.
+  let m = monter();
+  let A = await pretAPayer(m.appel);
+  const etat = (await m.appel({ action: 'etat', ...A })).json;
+  assert.equal(etat.prix, C.prixPromo());
+  assert.equal(etat.prixBase, C.PRIX_CENTIMES);
+  assert.deepEqual(etat.promo, { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT });
+  let p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
+  assert.equal(p.statut, 200);
+  assert.equal(p.json.promo, true);
+  let s = [...m.stripe.sessions.values()][0];
+  assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+  assert.equal(s.params.allow_promotion_codes, undefined);
+  assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES, 'Stripe affiche le prix plein, puis la réduction');
+  assert.ok(encoderFormulaire(s.params).includes('discounts%5B0%5D%5Bpromotion_code%5D=' + C.PROMO_STRIPE));
+  m.stripe.payer(s.id);
+  await m.appel({ action: 'verifier', ...A, session: s.id });
+  assert.equal(m.stockage.lignes.get(A.id).paiement_montant, C.prixPromo());
+
+  // Code refusé par Stripe (expiré, désactivé, plafond) : la page de paiement
+  // s'ouvre quand même, au prix plein, avec le champ des codes.
+  m = monter({ stripe: { refuseCode: true } });
+  A = await pretAPayer(m.appel);
+  p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
+  assert.equal(p.statut, 200);
+  assert.equal(p.json.promo, false);
+  assert.match(p.json.url, /^https:\/\/checkout\.stripe\.com\//);
+  s = [...m.stripe.sessions.values()][0];
+  assert.equal(s.params.discounts, undefined);
+  assert.equal(s.params.allow_promotion_codes, 'true');
+});
+
+test('la fin de la réduction : jour de Paris, douze heures de grâce côté serveur', () => {
+  const fin = '2026-11-02';
+  // 2 novembre 23 h 30 à Paris (UTC+1) : encore en cours.
+  assert.equal(C.promoEnCours(new Date('2026-11-02T22:30:00Z'), 0, fin), true);
+  // 3 novembre 0 h 30 à Paris : finie pour le site...
+  assert.equal(C.promoEnCours(new Date('2026-11-02T23:30:00Z'), 0, fin), false);
+  // ...gardée douze heures par le serveur, puis finie aussi.
+  assert.equal(C.promoEnCours(new Date('2026-11-02T23:30:00Z'), 12, fin), true);
+  assert.equal(C.promoEnCours(new Date('2026-11-03T11:30:00Z'), 12, fin), false);
+  assert.equal(C.jourParis(new Date('2026-07-01T22:30:00Z')), '2026-07-02', 'heure d\'été');
 });
 
 test('la page vue et son bouton, comptés par source', async () => {
@@ -315,7 +382,7 @@ test('la page vue et son bouton, comptés par source', async () => {
   ]);
   const c = await appel({
     action: 'creer', lang: 'fr', situation: SIT, src: 'encart-tester-couple',
-    moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true,
+    moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true,
   });
   assert.equal(stockage.lignes.get(c.json.id).src, 'encart-tester-couple');
 });
@@ -337,7 +404,7 @@ test('sans clé Stripe, tout marche sauf le paiement', async () => {
   const { appel } = monter({ sansStripe: true });
   const c = await creerCouple(appel);
   assert.equal((await appel({ action: 'etat', id: c.id, jeton: c.jeton })).json.paiementOuvert, false);
-  const B = (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, consentement: true, majeur: true })).json.jeton;
+  const B = (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'b@exemple.fr', consentement: true, majeur: true })).json.jeton;
   const rep = toutRepondre(SIT, () => 0);
   await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: rep, fini: true });
   await appel({ action: 'repondre', id: c.id, jeton: B, reponses: rep, fini: true });
@@ -388,11 +455,11 @@ test('encoderFormulaire suit le format de Stripe', () => {
 
 test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'invitation, figé dès ma fin', async () => {
   const { appel, stripe, stockage, courriel } = monter();
-  assert.equal((await appel({ action: 'creer', lang: 'fr', mode: 'trio', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'mode');
+  assert.equal((await appel({ action: 'creer', lang: 'fr', mode: 'trio', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'mode');
   const c = (await appel({
     action: 'creer', lang: 'fr', mode: 'solo', situation: SIT, src: 'resultat-couple-sain',
     moi: { prenom: 'Camille', genre: 'f' }, autre: { prenom: 'Julien', genre: 'h' },
-    consentement: true, majeur: true,
+    email: 'camille@exemple.fr', consentement: true, majeur: true,
   })).json;
   assert.equal(c.invitation, null, 'aucune clé d\'invitation en solo');
   assert.equal(c.etat.mode, 'solo');
@@ -469,7 +536,11 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
 test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation » par e-mail', async () => {
   const { appel, courriel, stockage } = monter();
   const c = await creerCouple(appel);
-  // Son propre lien, à l'adresse donnée, gardée comme adresse du rapport.
+  // Rien ne part à la création : l'adresse est gardée pour le rapport, et
+  // « Recevoir mon lien » reste à la demande.
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal((await stockage.lire(c.id)).a_email, 'thomas@exemple.fr');
+  // Son propre lien, à une autre adresse : envoyé là, sans remplacer celle du rapport.
   let r = await appel({ action: 'lien', id: c.id, jeton: c.jeton, email: ' Camille@Exemple.FR ' });
   assert.equal(r.statut, 200, JSON.stringify(r.json));
   assert.equal(r.json.email, 'camille@exemple.fr');
@@ -478,18 +549,21 @@ test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation
   assert.ok(courriel.envoyes[0].texte.includes('#b=' + c.id + '&t=' + c.jeton), 'le lien est celui du jeton présenté');
   assert.ok(courriel.envoyes[0].html.includes('Thomas et Léa'));
   assert.ok(!/\{[a-z]+\}/i.test(courriel.envoyes[0].html));
-  assert.equal((await stockage.lire(c.id)).a_email, 'camille@exemple.fr');
+  assert.equal((await stockage.lire(c.id)).a_email, 'thomas@exemple.fr', "l'adresse du rapport ne bouge pas");
   // Sans adresse, celle qui est gardée sert ; cinq envois par heure.
-  for (let i = 0; i < 4; i++) assert.equal((await appel({ action: 'lien', id: c.id, jeton: c.jeton })).statut, 200);
+  for (let i = 0; i < 4; i++) {
+    assert.equal((await appel({ action: 'lien', id: c.id, jeton: c.jeton })).statut, 200);
+    assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'thomas@exemple.fr');
+  }
   assert.equal((await appel({ action: 'lien', id: c.id, jeton: c.jeton })).statut, 429);
   assert.equal((await appel({ action: 'lien', id: c.id, jeton: 'x'.repeat(30) })).statut, 404, 'jamais sans le jeton');
   // Retrouver : un lien neuf, l'ancien ne marche plus, le partenaire garde le sien.
   const avant = courriel.envoyes.length;
-  r = await appel({ action: 'retrouver', email: 'CAMILLE@exemple.fr', lang: 'fr' }, '9.9.9.9');
+  r = await appel({ action: 'retrouver', email: 'THOMAS@exemple.fr', lang: 'fr' }, '9.9.9.9');
   assert.equal(r.statut, 200, JSON.stringify(r.json));
   assert.equal(courriel.envoyes.length, avant + 1);
   const m = courriel.envoyes[avant];
-  assert.equal(m.a, 'camille@exemple.fr');
+  assert.equal(m.a, 'thomas@exemple.fr');
   const jetonNeuf = /#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)/.exec(m.texte)[1];
   assert.notEqual(jetonNeuf, c.jeton);
   assert.ok(m.texte.includes("l'ancien ne fonctionne plus"));

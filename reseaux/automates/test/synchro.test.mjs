@@ -357,3 +357,40 @@ test("une ambiance de son posée ou changée se pose sans refaire le rendu ; une
   assert.equal(refus.refuses, 1);
   assert.ok(b.tables.social_journal.some((j) => j.details?.fautes?.some((f) => /ambiance de son inconnue/.test(f))));
 });
+
+test('un second passage sur une réserve inchangée ne fait que lire : trois lectures, aucune écriture', async () => {
+  const b = base();
+  const posts = [
+    { fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') },
+    { fichier: 'b.json', post: postMipaps('2026-10-12', 'midi') },
+    { fichier: 'c.json', post: postQuiz('2026-10-13', 'soir') },
+  ];
+  await synchroniser(b, posts, { maintenant: MAINTENANT });
+  // Jusqu'au 20 octobre 2026, chaque passage horaire relisait le post et sa
+  // déclinaison et réécrivait le post, trois requêtes par fichier pour ne rien
+  // changer : 17 000 lignes par jour dans les logs de la passerelle de Supabase.
+  const compte = { select: 0, insert: 0, update: 0 };
+  for (const m of Object.keys(compte)) {
+    const orig = b[m].bind(b);
+    b[m] = (...a) => { if (!(m === 'insert' && a[0] === 'social_journal')) compte[m]++; return orig(...a); };
+  }
+  const encore = await synchroniser(b, posts, { maintenant: MAINTENANT });
+  assert.deepEqual(encore, { ecrits: 0, inchanges: 3, refuses: 0, ignores: 0 });
+  // les comptes, les posts à venir, un paquet de déclinaisons
+  assert.deepEqual(compte, { select: 3, insert: 0, update: 0 });
+});
+
+test('un post dont le gabarit change est réécrit, les autres non', async () => {
+  const b = base();
+  const posts = [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }, { fichier: 'b.json', post: postMipaps('2026-10-12', 'midi') }];
+  await synchroniser(b, posts, { maintenant: MAINTENANT });
+  const modifie = { ...postQuiz('2026-10-12', 'midi'), notes: { source: 'idée du soir' } };
+  let ecritures = 0;
+  const orig = b.insert.bind(b);
+  b.insert = (table, ...a) => { if (table === 'social_posts') ecritures++; return orig(table, ...a); };
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: modifie }, posts[1]], { maintenant: MAINTENANT });
+  assert.equal(ecritures, 1);
+  assert.deepEqual(b.tables.social_posts.find((p) => p.langue === 'en').notes, { source: 'idée du soir' });
+  // la note change le post, pas la déclinaison : rien à re-rendre
+  assert.deepEqual(encore, { ecrits: 0, inchanges: 2, refuses: 0, ignores: 0 });
+});

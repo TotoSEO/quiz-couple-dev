@@ -7,14 +7,25 @@
 // de window.QCBilanCoeur). Rien ici ne touche au DOM : on rend une chaîne.
 //
 // La forme (19 octobre 2026, Thomas : « on dirait juste un document Word »,
-// « toutes les pages ont la même gueule ») : une couverture pleine couleur,
-// une page d'ouverture pleine couleur par chapitre (numéro géant, titre en
-// grand, une phrase), des en-têtes de domaine en bandeau sombre avec l'anneau
-// du score, des graphiques en SVG (radar des domaines, barres empilées,
-// haltères du climat, anneau de répartition), et une synthèse de fin
-// différente de celle du début (répartition, forces, chantiers, feuille de
-// route). En mode solo, l'autre est « {nom}, selon vous » et un chapitre
-// compte les zones d'ombre.
+// « toutes les pages ont la même gueule » ; puis le 20 octobre, devant le
+// PDF : « pas assez clair, les informations sont trop mal étalées et
+// indiquées, pas assez de séparation entre les questions, les réponses, les
+// choix qui ont été faits, pas un truc flat, des parties à cheval entre deux
+// pages ») : une couverture pleine couleur ; chaque chapitre commence sur
+// une page neuve par un grand bloc de couleur (numéro géant, titre, une
+// phrase) suivi tout de suite de son contenu (une page pleine par chapitre
+// laissait la suivante à moitié vide) ; chaque carte de question porte un
+// bandeau de verdict en couleur pleine (Accord, Réponses proches, Écart, avec
+// Point bloquant, Sujet décisif, et le domaine), le sujet, la question en
+// citation, les deux réponses dans deux boîtes à en-tête de la couleur de la
+// personne, puis le guide dans un encart (pourquoi ça compte, pour en
+// parler, à éviter) ; les accords d'un domaine sont des cases cochées sur
+// deux colonnes ; des en-têtes de domaine en bandeau de couleur avec l'anneau
+// du score ; des graphiques en SVG (radar des domaines, barres empilées,
+// haltères du climat, anneau de répartition) ; une synthèse de fin différente
+// de celle du début (répartition, forces, chantiers, feuille de route). En
+// mode solo, l'autre est « {nom}, selon vous » et un chapitre compte les
+// zones d'ombre.
 //
 // Règles de mise en page, pour qu'aucun mot ne sorte de sa boîte, dans
 // aucune langue : jamais de position absolue pour du texte (sauf le chiffre
@@ -28,7 +39,7 @@
 
 import * as C from './coeur.mjs';
 
-export const VERSION_RAPPORT = 2;
+export const VERSION_RAPPORT = 3;
 
 const LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
 
@@ -264,62 +275,72 @@ export function rapportHtml(d, T, Q, o) {
 
   // ── Petits blocs ──
 
-  // L'ouverture d'un chapitre : une page pleine couleur dans le PDF, un
-  // bandeau à l'écran. Puis le chapitre lui-même.
+  // Un chapitre : son bloc d'ouverture (numéro géant, titre, une phrase,
+  // sur un aplat de couleur ; en tête de sa première page dans le PDF, en
+  // bandeau à l'écran), puis l'intro et le contenu.
   function chapitre(cle, numero, contenu, intro) {
     const teinte = TEINTES[cle] || 'nuit';
     const num = String(numero).padStart(2, '0');
-    const ouverture = '<section class="rap-ouv rap-ouv--' + teinte + '" data-chap="ouv-' + cle + '" aria-hidden="true">'
-      + '<div class="rap-ouv-deco"><svg viewBox="0 0 300 300" preserveAspectRatio="xMaxYMax slice"><circle cx="210" cy="190" r="150" class="rap-ouv-cercle"/><circle cx="260" cy="120" r="150" class="rap-ouv-cercle"/><circle cx="235" cy="155" r="70" class="rap-ouv-cercle rap-ouv-cercle--plein"/></svg></div>'
-      + '<div class="rap-ouv-corps">'
-      + '<p class="rap-ouv-num">' + num + '</p>'
-      + '<p class="rap-ouv-titre">' + tx('rapport.chapitres.' + cle) + '</p>'
+    return '<section class="rap-chap rap-chap--' + cle + '" data-chap="' + cle + '">'
+      + '<header class="rap-ouv rap-ouv--' + teinte + '" data-chap="ouv-' + cle + '">'
+      + '<div class="rap-ouv-deco" aria-hidden="true"><svg viewBox="0 0 300 300" preserveAspectRatio="xMaxYMax slice"><circle cx="210" cy="190" r="150" class="rap-ouv-cercle"/><circle cx="260" cy="120" r="150" class="rap-ouv-cercle"/><circle cx="235" cy="155" r="70" class="rap-ouv-cercle rap-ouv-cercle--plein"/></svg></div>'
+      + '<p class="rap-ouv-num" aria-hidden="true">' + num + '</p>'
+      + '<div class="rap-ouv-texte"><h2 class="rap-ouv-titre">' + tx('rapport.chapitres.' + cle) + '</h2>'
       + (brut('rapport.ouvertures.' + cle) ? '<p class="rap-ouv-accroche">' + tx('rapport.ouvertures.' + cle, { a: P.a.nom, b: P.b.nom }) + '</p>' : '')
-      + '</div>'
-      + '<p class="rap-ouv-sig">' + tx('rapport.surtitre') + ' · ' + signature + '</p>'
-      + '</section>';
-    return ouverture + '<section class="rap-chap rap-chap--' + cle + '" data-chap="' + cle + '">'
-      + '<div class="rap-chap-tete"><p class="rap-chap-num">' + num + '</p>'
-      + '<h2 class="rap-chap-titre">' + tx('rapport.chapitres.' + cle) + '</h2>'
+      + '</div></header>'
+      + '<div class="rap-chap-corps">'
       + (intro ? '<p class="rap-chap-intro">' + intro + '</p>' : '')
-      + '</div>' + contenu + '</section>';
+      + contenu + '</div></section>';
   }
 
-  function etiquetteCat(item) {
-    const morceaux = ['<span class="rap-tag rap-tag--' + item.cat + '">' + tx('rapport.cat.' + item.cat) + '</span>'];
-    if (item.statut) morceaux.push('<span class="rap-tag rap-tag--' + item.statut + '">' + tx('rapport.statut.' + item.statut) + '</span>');
-    if (item.chacunPlus) morceaux.push('<span class="rap-tag rap-tag--chacun">' + tx('rapport.roles.chacunPlus') + '</span>');
-    if (item.poids === 3) morceaux.push('<span class="rap-tag rap-tag--poids">' + tx('rapport.poidsFort') + '</span>');
-    return '<p class="rap-tags">' + morceaux.join('') + '</p>';
+  // Le bandeau de verdict d'une carte : la catégorie en toutes lettres
+  // (Accord, Réponses proches, Écart), ses étiquettes (point bloquant, à
+  // trancher, chacun plus, sujet décisif), et à droite le domaine ou rien.
+  function bandeCarte(item, droite) {
+    let chips = '<span class="rap-carte-cat">' + tx('rapport.cat.' + item.cat) + '</span>';
+    if (item.statut) chips += '<span class="rap-tag rap-tag--bande">' + tx('rapport.statut.' + item.statut) + '</span>';
+    if (item.chacunPlus) chips += '<span class="rap-tag rap-tag--bande">' + tx('rapport.roles.chacunPlus') + '</span>';
+    if (item.poids === 3) chips += '<span class="rap-tag rap-tag--bande">' + tx('rapport.poidsFort') + '</span>';
+    return '<header class="rap-carte-bande"><p class="rap-carte-verdict">' + chips + '</p>'
+      + (droite ? '<p class="rap-carte-dom">' + droite + '</p>' : '') + '</header>';
   }
 
-  // Les deux réponses côte à côte, chacune sous le prénom de qui l'a donnée.
+  // Les deux réponses côte à côte : un en-tête de la couleur de la personne
+  // avec son prénom, puis sa réponse en gras.
   function deuxReponses(id, nnA, nnB) {
     const col = (p, nn) => '<div class="rap-rep rap-rep--' + p.couleur + '">'
-      + '<p class="rap-rep-qui">' + pastille(p) + nomH(p) + '</p>'
-      + '<p class="rap-rep-texte">' + tl(reponseLue(id, p)) + '</p>'
+      + '<p class="rap-rep-tete">' + nomH(p) + '</p>'
+      + '<div class="rap-rep-corps"><p class="rap-rep-texte">' + tl(reponseLue(id, p)) + '</p>'
       + (nn ? '<p class="rap-rep-nn">' + tx('rapport.nnDe', { nom: p.nom }) + '</p>' : '')
-      + '</div>';
+      + '</div></div>';
     return '<div class="rap-reps">' + col(P.a, nnA) + col(P.b, nnB) + '</div>';
   }
 
+  // Le guide d'une question, dans son encart : pourquoi ça compte, et, en
+  // version complète, les questions pour en parler et ce qu'il vaut mieux
+  // éviter, sur une seconde colonne.
   function guide(id, complet) {
     const t = textQ(id);
-    let html = '';
-    if (t.pourquoi) html += '<div class="rap-guide-bloc"><p class="rap-guide-titre">' + tx('rapport.pourquoi') + '</p><p>' + tl(t.pourquoi) + '</p></div>';
+    const blocs = [];
+    if (t.pourquoi) blocs.push('<div class="rap-guide-bloc rap-guide-bloc--pourquoi"><p class="rap-guide-titre">' + tx('rapport.pourquoi') + '</p><p>' + tl(t.pourquoi) + '</p></div>');
     if (complet && Array.isArray(t.parler) && t.parler.length) {
-      html += '<div class="rap-guide-bloc"><p class="rap-guide-titre">' + tx('rapport.parler') + '</p><ul class="rap-puces">'
-        + t.parler.map((q) => '<li>' + tl(q) + '</li>').join('') + '</ul></div>';
+      blocs.push('<div class="rap-guide-bloc rap-guide-bloc--parler"><p class="rap-guide-titre">' + tx('rapport.parler') + '</p><ul class="rap-puces rap-puces--parler">'
+        + t.parler.map((q) => '<li>' + tl(q) + '</li>').join('') + '</ul></div>');
     }
-    if (complet && t.eviter) html += '<div class="rap-guide-bloc"><p class="rap-guide-titre">' + tx('rapport.eviter') + '</p><p>' + tl(t.eviter) + '</p></div>';
-    return html ? '<div class="rap-guide">' + html + '</div>' : '';
+    if (complet && t.eviter) blocs.push('<div class="rap-guide-bloc rap-guide-bloc--eviter"><p class="rap-guide-titre">' + tx('rapport.eviter') + '</p><p>' + tl(t.eviter) + '</p></div>');
+    if (!blocs.length) return '';
+    return '<div class="rap-guide' + (blocs.length > 1 ? ' rap-guide--complet' : '') + '">' + blocs.join('') + '</div>';
   }
 
-  // Une carte d'écart : la question, les deux réponses, le guide.
-  // mode : 'complet' (tout le guide), 'court' (pourquoi ça compte), ou
-  // 'renvoi' vers la carte complète déjà donnée plus haut.
-  function carteEcart(item, surtitre, mode, renvoi, numero) {
-    mode = mode || 'complet';
+  // Une carte de question : le bandeau de verdict, le sujet (avec son numéro
+  // pour une conversation), la question, les deux réponses, le guide.
+  // o.mode : 'complet' (tout le guide), 'court' (pourquoi ça compte), ou
+  // 'renvoi' vers la carte complète déjà donnée plus haut (o.renvoi) ;
+  // o.droite : ce qui s'écrit à droite du bandeau (le domaine) ; o.sur et
+  // o.numero : le surtitre et le numéro d'une conversation.
+  function carteEcart(item, o) {
+    o = o || {};
+    const mode = o.mode || 'complet';
     let note = '';
     if (item.desequilibre) {
       const p = item.desequilibre === 'a' ? P.a : P.b;
@@ -327,17 +348,32 @@ export function rapportHtml(d, T, Q, o) {
     } else if (item.chacunPlus) {
       note = '<p class="rap-carte-note">' + tx('rapport.roles.chacunPlusTexte') + '</p>';
     }
-    return '<article class="rap-carte rap-carte--' + item.cat + (numero ? ' rap-carte--numero' : '') + '">'
-      + (numero ? '<p class="rap-carte-num" aria-hidden="true">' + numero + '</p>' : '')
+    const titre = (o.sur ? '<p class="rap-carte-sur">' + o.sur + '</p>' : '') + '<h3 class="rap-carte-titre">' + tl(court(item.id)) + '</h3>';
+    return '<article class="rap-carte rap-carte--' + item.cat + '">'
+      + bandeCarte(item, o.droite)
       + '<div class="rap-carte-corps">'
-      + (surtitre ? '<p class="rap-carte-sur">' + surtitre + '</p>' : '')
-      + '<h3 class="rap-carte-titre">' + tl(court(item.id)) + '</h3>'
+      + (o.numero
+        ? '<div class="rap-carte-tete rap-carte-tete--num"><p class="rap-carte-num" aria-hidden="true">' + o.numero + '</p><div>' + titre + '</div></div>'
+        : '<div class="rap-carte-tete">' + titre + '</div>')
       + '<p class="rap-carte-q">' + tl(enonce(item.id)) + '</p>'
-      + etiquetteCat(item)
       + deuxReponses(item.id, item.nnA, item.nnB)
       + note
-      + (mode === 'renvoi' ? '<p class="rap-renvoi">' + renvoi + '</p>' : guide(item.id, mode === 'complet'))
+      + (mode === 'renvoi' ? '<p class="rap-renvoi">' + o.renvoi + '</p>' : guide(item.id, mode === 'complet'))
       + '</div></article>';
+  }
+
+  // Une case cochée : un sujet sur lequel les deux ont répondu pareil (ou,
+  // en solo, une question restée sans réponse pour l'autre, variante
+  // `inconnu`), avec la réponse commune dessous.
+  const COCHE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const POINT = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="#fff"/></svg>';
+  function caseAccord(item, variante, etiquette) {
+    const inconnu = variante === 'inconnu';
+    return '<div class="rap-accord' + (inconnu ? ' rap-accord--inconnu' : '') + '">'
+      + '<span class="rap-accord-coche">' + (inconnu ? POINT : COCHE) + '</span>'
+      + '<div><p class="rap-accord-titre">' + tl(court(item.id)) + '</p>'
+      + '<p class="rap-accord-rep">' + tl(reponseLue(item.id, P.a)) + '</p>'
+      + (etiquette || '') + '</div></div>';
   }
 
   // Une échelle à n crans, avec la place de chacun.
@@ -395,7 +431,7 @@ export function rapportHtml(d, T, Q, o) {
 
   const chapitresListe = ['synthese', 'carte', 'conversations', 'bloquants', ...(solo ? ['ombre'] : []), 'climat', 'signaux', 'roles', 'domaines', 'fin', 'suite'];
   const numeroDe = (cle) => chapitresListe.indexOf(cle) + 1;
-  const lire = '<section class="rap-chap rap-chap--lire" data-chap="lire">'
+  const lire = '<section class="rap-chap rap-chap--lire" data-chap="lire"><div class="rap-chap-corps">'
     + '<div class="rap-chap-tete"><h2 class="rap-chap-titre">' + tx('rapport.lire.titre') + '</h2></div>'
     + '<div class="rap-texte"><p>' + tx('rapport.lire.p1', { a: P.a.nom, b: P.b.nom }) + '</p><p>' + tx('rapport.lire.p2') + '</p><p>' + tx('rapport.lire.p3') + '</p></div>'
     + '<div class="rap-deux-cols">'
@@ -409,7 +445,7 @@ export function rapportHtml(d, T, Q, o) {
     + '</ul></div>'
     + '<div class="rap-encadre"><p class="rap-encadre-titre">' + tx('rapport.lire.sommaire') + '</p><ol class="rap-sommaire">'
     + chapitresListe.map((c, i) => '<li><span class="rap-sommaire-num">' + String(i + 1).padStart(2, '0') + '</span><span>' + tx('rapport.chapitres.' + c) + '</span></li>').join('')
-    + '</ol></div></div></section>';
+    + '</ol></div></div></div></section>';
 
   // ── 1. Synthèse ──
 
@@ -422,11 +458,11 @@ export function rapportHtml(d, T, Q, o) {
   }).join('') + '</ul>';
   const rassemble = analyse.rassemble.length
     ? '<div class="rap-bloc"><h3 class="rap-h3">' + tx('rapport.synthese.rassemble') + '</h3><p class="rap-aide">' + tx('rapport.synthese.rassembleIntro') + '</p>'
-      + '<ul class="rap-puces rap-puces--accord">' + analyse.rassemble.map((id) => '<li><strong>' + tl(court(id)) + '</strong><span class="rap-puce-rep"> · ' + tl(reponseLue(id, P.a)) + '</span></li>').join('') + '</ul></div>'
+      + '<div class="rap-accords">' + analyse.rassemble.map((id) => caseAccord(parId[id])).join('') + '</div></div>'
     : '';
   const synthese = chapitre('synthese', numeroDe('synthese'),
     '<div class="rap-anneaux">'
-    + '<div class="rap-score">' + (analyse.global === null ? '' : anneau(analyse.global, 'encre', brut('rapport.synthese.alignement')))
+    + '<div class="rap-score">' + (analyse.global === null ? '' : anneau(analyse.global, 'align', brut('rapport.synthese.alignement')))
     + '<div class="rap-score-texte"><p class="rap-score-lib">' + tx('rapport.synthese.alignement') + '</p>'
     + '<p class="rap-score-titre">' + tx('rapport.verdicts.' + verdict + '.titre') + '</p>'
     + '<p class="rap-score-desc">' + tx('rapport.verdicts.' + verdict + '.texte') + '</p>'
@@ -470,7 +506,7 @@ export function rapportHtml(d, T, Q, o) {
 
   const conversations = chapitre('conversations', numeroDe('conversations'),
     analyse.conversations.length
-      ? analyse.conversations.map((id, i) => carteEcart(parId[id], tx('rapport.conversations.titre', { n: i + 1 }) + ' · ' + tl(titreDomaine(parId[id].domaine)), 'complet', '', i + 1)).join('')
+      ? analyse.conversations.map((id, i) => carteEcart(parId[id], { sur: tx('rapport.conversations.titre', { n: i + 1 }), droite: tl(titreDomaine(parId[id].domaine)), numero: i + 1 })).join('')
       : '<p class="rap-vide">' + tx('rapport.conversations.aucune') + '</p>',
     tx('rapport.conversations.intro'));
 
@@ -484,9 +520,9 @@ export function rapportHtml(d, T, Q, o) {
       + '</div>';
   };
   const bloquants = chapitre('bloquants', numeroDe('bloquants'),
-    (analyse.bloquants.length ? analyse.bloquants.map((id) => carteEcart(parId[id])).join('')
+    (analyse.bloquants.length ? analyse.bloquants.map((id) => carteEcart(parId[id], { droite: tl(titreDomaine(parId[id].domaine)) })).join('')
       : '<p class="rap-vide">' + tx('rapport.bloquants.aucun') + '</p>')
-    + '<div class="rap-bloc"><h3 class="rap-h3">' + tx('rapport.bloquants.nnTitre') + '</h3><p class="rap-aide">' + tx('rapport.bloquants.nnIntro') + '</p>'
+    + '<div class="rap-bloc rap-bloc--insecable"><h3 class="rap-h3">' + tx('rapport.bloquants.nnTitre') + '</h3><p class="rap-aide">' + tx('rapport.bloquants.nnIntro') + '</p>'
     + (solo ? listeNn(P.a) : '<div class="rap-deux-cols">' + listeNn(P.a) + listeNn(P.b) + '</div>') + '</div>',
     tx('rapport.bloquants.intro'));
 
@@ -522,9 +558,10 @@ export function rapportHtml(d, T, Q, o) {
     const drapeaux = [];
     if (e.ecart) drapeaux.push('<span class="rap-tag rap-tag--ecart">' + tx('rapport.climat.ecart') + '</span>');
     else if (e.attentionA || e.attentionB) drapeaux.push('<span class="rap-tag rap-tag--proche">' + tx('rapport.climat.attention') + '</span>');
-    return '<article class="rap-etat">'
-      + '<h3 class="rap-etat-titre">' + tl(court(e.id)) + '</h3>'
-      + (drapeaux.length ? '<p class="rap-tags">' + drapeaux.join('') + '</p>' : '')
+    const etatCls = e.ecart ? 'ecart' : (e.attentionA || e.attentionB) ? 'attention' : 'ok';
+    return '<article class="rap-etat rap-etat--' + etatCls + '">'
+      + '<div class="rap-etat-tete"><h3 class="rap-etat-titre">' + tl(court(e.id)) + '</h3>'
+      + (drapeaux.length ? '<p class="rap-tags">' + drapeaux.join('') + '</p>' : '') + '</div>'
       + echelle(n, e.a, e.b, null, 'bien')
       + lignesReponses(e.id)
       + ((e.attentionA || e.attentionB || e.ecart) ? guide(e.id, true) : '')
@@ -551,11 +588,21 @@ export function rapportHtml(d, T, Q, o) {
           + '</div>';
       }).join('') + '</div></div>'
     : '';
+  // Les cartes d'état : celles qui appellent un guide (écart, ou l'un des
+  // deux qui ne va pas bien) d'abord, en pleine largeur ; les autres, plus
+  // basses, par deux.
+  function cartesEtats(etats) {
+    const aGuide = (e) => !!(e.ecart || e.attentionA || e.attentionB);
+    const fortes = etats.filter(aGuide);
+    const simples = etats.filter((e) => !aGuide(e));
+    return (fortes.length ? '<div class="rap-etats">' + fortes.map(carteEtat).join('') + '</div>' : '')
+      + (simples.length ? '<div class="rap-etats' + (simples.length > 1 ? ' rap-etats--deux' : '') + '">' + simples.map(carteEtat).join('') + '</div>' : '');
+  }
   const etatsMeteo = analyse.etats.filter((e) => e.domaine === 'meteo');
   const climat = chapitre('climat', numeroDe('climat'),
     halteres
     + '<h3 class="rap-h3 rap-h3--espace">' + tx('rapport.climat.questions') + '</h3>'
-    + legendeDuo + '<p class="rap-aide">' + tx('rapport.climat.sens') + '</p><div class="rap-etats">' + etatsMeteo.map(carteEtat).join('') + '</div>',
+    + legendeDuo + '<p class="rap-aide">' + tx('rapport.climat.sens') + '</p>' + cartesEtats(etatsMeteo),
     tx('rapport.climat.intro'));
 
   // ── 6. Les signaux de vigilance ──
@@ -571,13 +618,11 @@ export function rapportHtml(d, T, Q, o) {
     const etat = etatSignal(s);
     const classe = classeSignal[etat];
     return '<article class="rap-signal rap-signal--' + classe + '">'
-      + '<div class="rap-signal-tete"><h3 class="rap-etat-titre">' + tl(court(s.id)) + '</h3>'
+      + '<div class="rap-etat-tete"><h3 class="rap-etat-titre">' + tl(court(s.id)) + '</h3>'
       + '<p class="rap-tags"><span class="rap-tag rap-tag--' + classe + '">' + tx('rapport.signaux.' + etat) + '</span></p></div>'
       + echelle((t.o || []).length || 4, s.a, s.b, (t.o || []).map((x) => C.accorder(x, null)), 'bien')
-      + '<div class="rap-guide"><div class="rap-guide-bloc"><p>' + tl(t.pourquoi || '') + '</p></div>'
-      + ((etat !== 'rare' && etat !== 'reparationBien' && Array.isArray(t.parler) && t.parler.length)
-        ? '<div class="rap-guide-bloc"><p class="rap-guide-titre">' + tx('rapport.parler') + '</p><ul class="rap-puces">' + t.parler.map((q) => '<li>' + tl(q) + '</li>').join('') + '</ul></div>' : '')
-      + '</div></article>';
+      + guide(s.id, etat !== 'rare' && etat !== 'reparationBien')
+      + '</article>';
   }
   const tableauSignaux = analyse.signaux.length
     ? '<div class="rap-signaux-vue">' + analyse.signaux.map((s) => {
@@ -601,8 +646,8 @@ export function rapportHtml(d, T, Q, o) {
     if (item.chacunPlus) note = '<span class="rap-tag rap-tag--chacun">' + tx('rapport.roles.chacunPlus') + '</span>';
     else if (item.cat === 'accord') note = '<span class="rap-tag rap-tag--accord">' + tx('rapport.roles.accord') + '</span>';
     else note = '<span class="rap-tag rap-tag--' + item.cat + '">' + tx('rapport.cat.' + item.cat) + '</span>';
-    return '<article class="rap-role">'
-      + '<h3 class="rap-etat-titre">' + tl(court(item.id)) + '</h3><p class="rap-tags">' + note + '</p>'
+    return '<article class="rap-role rap-role--' + (item.chacunPlus ? 'chacun' : item.cat) + '">'
+      + '<div class="rap-etat-tete"><h3 class="rap-etat-titre">' + tl(court(item.id)) + '</h3><p class="rap-tags">' + note + '</p></div>'
       + echelle(5, posA, posB, null, 'roles')
       + lignesReponses(item.id)
       + '</article>';
@@ -611,7 +656,7 @@ export function rapportHtml(d, T, Q, o) {
     (quis.length
       ? '<div class="rap-role-axe"><p class="rap-role-bout">' + pastille(P.a) + tx('rapport.roles.surtout', { nom: P.a.nom }) + '</p>'
         + '<p class="rap-role-bout rap-role-bout--droite">' + tx('rapport.roles.surtout', { nom: P.b.nom }) + pastille(P.b) + '</p></div>'
-        + quis.map(ligneRole).join('')
+        + '<div class="rap-etats' + (quis.length > 1 ? ' rap-etats--deux' : '') + '">' + quis.map(ligneRole).join('') + '</div>'
       : '<p class="rap-vide">' + tx('rapport.roles.aucun') + '</p>'),
     tx('rapport.roles.intro', { a: P.a.nom, b: P.b.nom }));
 
@@ -624,7 +669,16 @@ export function rapportHtml(d, T, Q, o) {
         .sort((u, v) => v.prio - u.prio);
       const texteDom = x.bande && Q.domaines[x.id] && Q.domaines[x.id].rapport ? Q.domaines[x.id].rapport[x.bande] : '';
       const inconnusDom = solo ? analyse.inconnus.filter((i) => i.domaine === x.id) : [];
+      const etiquetteNn = (i) => ((i.nnA || i.nnB) ? '<p><span class="rap-tag rap-tag--nn">' + tx('rapport.nnDe', { nom: i.nnA && i.nnB ? P.a.nom + ' & ' + P.b.nom : (i.nnA ? P.a.nom : P.b.nom) }) + '</span></p>' : '');
+      const casesAccord = accords.length
+        ? '<div class="rap-accords">' + accords.map((i) => caseAccord(i, 'accord', etiquetteNn(i))).join('') + '</div>'
+        : '<p class="rap-vide">' + tx('rapport.domaines.accordsAucun') + '</p>';
+      // Jusqu'à six accords (trois rangées), ils restent dans le bloc
+      // insécable de l'en-tête ; au-delà, la grille peut se couper entre
+      // deux rangées, et le bloc insécable reste court.
+      const accordsDansTete = accords.length <= 6;
       return '<div class="rap-dom">'
+        + '<div class="rap-dom-tete">'
         + '<div class="rap-dom-bandeau rap-dom-bandeau--' + (x.bande || 'neutre') + '">'
         + (x.score !== null ? petitAnneau(x.score, x.bande) : '')
         + '<div class="rap-dom-bandeau-texte"><p class="rap-dom-sur">' + tx('rapport.domaines.domaine') + '</p><h3 class="rap-dom-titre">' + tl(titreDomaine(x.id)) + '</h3>'
@@ -634,23 +688,22 @@ export function rapportHtml(d, T, Q, o) {
         + '<p class="rap-barre-compte rap-barre-compte--clair"><span class="rap-compte rap-compte--accord">' + x.accords + '</span><span class="rap-compte rap-compte--proche">' + x.proches + '</span><span class="rap-compte rap-compte--ecart">' + x.ecarts + '</span></p></div>'
         + '</div>'
         + (texteDom ? '<p class="rap-dom-texte">' + tl(texteDom) + '</p>' : '')
-        + '<p class="rap-h4">' + tx('rapport.domaines.accords') + '</p>'
-        + (accords.length ? '<ul class="rap-puces rap-puces--accord">' + accords.map((i) => '<li><strong>' + tl(court(i.id)) + '</strong><span class="rap-puce-rep"> · ' + tl(reponseLue(i.id, P.a)) + '</span>'
-          + ((i.nnA || i.nnB) ? ' <span class="rap-tag rap-tag--nn">' + tx('rapport.nnDe', { nom: i.nnA && i.nnB ? P.a.nom + ' & ' + P.b.nom : (i.nnA ? P.a.nom : P.b.nom) }) + '</span>' : '')
-          + '</li>').join('') + '</ul>'
-          : '<p class="rap-vide">' + tx('rapport.domaines.accordsAucun') + '</p>')
-        + '<p class="rap-h4">' + tx('rapport.domaines.differences') + '</p>'
+        + '<p class="rap-h4 rap-h4--accord">' + tx('rapport.domaines.accords') + '</p>'
+        + (accordsDansTete ? casesAccord : '')
+        + '</div>'
+        + (accordsDansTete ? '' : casesAccord)
+        + '<p class="rap-h4 rap-h4--diff">' + tx('rapport.domaines.differences') + '</p>'
         + (diffs.length ? diffs.map((i) => {
           const conv = analyse.conversations.indexOf(i.id);
-          if (conv >= 0) return carteEcart(i, '', 'renvoi', tx('rapport.domaines.voirConversation', { n: conv + 1 }));
-          if (analyse.bloquants.includes(i.id)) return carteEcart(i, '', 'renvoi', tx('rapport.domaines.voirBloquants'));
-          return carteEcart(i, '', i.cat === 'ecart' || i.chacunPlus ? 'complet' : 'court');
+          if (conv >= 0) return carteEcart(i, { mode: 'renvoi', renvoi: tx('rapport.domaines.voirConversation', { n: conv + 1 }) });
+          if (analyse.bloquants.includes(i.id)) return carteEcart(i, { mode: 'renvoi', renvoi: tx('rapport.domaines.voirBloquants') });
+          return carteEcart(i, { mode: i.cat === 'ecart' || i.chacunPlus ? 'complet' : 'court' });
         }).join('') : '<p class="rap-vide">' + tx('rapport.domaines.differencesAucune') + '</p>')
         + (inconnusDom.length
-          ? '<p class="rap-h4">' + tx('rapport.domaines.inconnus') + '</p><ul class="rap-puces rap-puces--inconnu">'
-            + inconnusDom.map((i) => '<li><strong>' + tl(court(i.id)) + '</strong><span class="rap-puce-rep"> · ' + tl(reponseLue(i.id, P.a)) + '</span></li>').join('') + '</ul>' : '')
+          ? '<p class="rap-h4 rap-h4--inconnu">' + tx('rapport.domaines.inconnus') + '</p><div class="rap-accords">'
+            + inconnusDom.map((i) => caseAccord(i, 'inconnu')).join('') + '</div>' : '')
         + (x.etats.filter((e) => !e.signal).length
-          ? '<p class="rap-h4">' + tx('rapport.domaines.etats') + '</p><div class="rap-etats">' + x.etats.filter((e) => !e.signal).map(carteEtat).join('') + '</div>' : '')
+          ? '<p class="rap-h4 rap-h4--etat">' + tx('rapport.domaines.etats') + '</p>' + cartesEtats(x.etats.filter((e) => !e.signal)) : '')
         + '</div>';
     }).join(''),
     tx('rapport.domaines.intro'));

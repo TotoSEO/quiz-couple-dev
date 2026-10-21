@@ -105,7 +105,17 @@ if (REELS.includes(recette.gabarit)) {
     serveUrl,
     composition,
     codec: 'h264',
-    crf: 18,
+    // CRF 22 depuis le 20 octobre 2026 (18 avant), pour l'egress de Supabase :
+    // Meta télécharge chaque reel jusqu'à trois fois par des liens signés, et
+    // les reels faisaient les trois quarts du volume sortant. Mesuré sur cinq
+    // extraits de 5 s (dragon : dialogue, exploit au ralenti, fin ; dilemmes
+    // avec le grain de papier : ouverture, milieu), face à un rendu quasi sans
+    // perte (CRF 1) : PSNR 43,7 à 45,7 dB et SSIM 0,997 à 0,999 en moyenne,
+    // aucune image sous 40 dB ni sous 0,996, pour des fichiers 42 à 46 % plus
+    // légers ; le CRF 18 faisait 46,5 à 48,7 dB. Instagram recomprime bien
+    // plus fort que cet écart à l'arrivée. Thomas : « ok pour les réels si la
+    // qualité sur insta n'est pas compromise ».
+    crf: 22,
     pixelFormat: 'yuv420p',
     colorSpace: 'bt709',
     audioCodec: 'aac',

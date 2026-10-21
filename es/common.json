@@ -183,20 +183,29 @@
     "stars": "estrellas"
   },
   "capture": {
-    "sur": "Tus resultados completos",
-    "titre": "Para desbloquear el resto de tus resultados, indica tu e-mail",
-    "texte": "El detalle de tu resultado, los consejos y lo que viene después aparecen justo después.",
-    "placeholder": "tu@email.com",
-    "consentement": "Acepto recibir los consejos y ofertas de Quiz Couple por e-mail. Baja en un clic, cuando quieras.",
+    "sur": "Tus resultados están listos",
+    "titre": "¡Solo un paso más para descubrir tus resultados completos gratis!",
+    "points": [
+      "El análisis detallado de tu resultado",
+      "Nuestros consejos para lo que viene",
+      "Todos los demás tests del sitio desbloqueados"
+    ],
+    "placeholder": "Tu dirección de e-mail",
+    "consentement": "Acepto recibir los consejos y novedades de Quiz Couple por e-mail.",
     "confidentialite": "Privacidad",
     "bouton": "Ver mis resultados",
     "envoi": "Un momento...",
+    "note": "Sin spam. Baja en un clic.",
+    "merci": {
+      "titre": "¡Gracias, tus resultados están desbloqueados!",
+      "texte": "Y no solo aquí: a partir de ahora, todos los tests, quiz y juegos del sitio te dan sus resultados completos sin volver a pedir tu e-mail en este dispositivo."
+    },
     "suggestion": "¿Querías decir {{domaine}}?",
     "erreurs": {
       "format": "Esta dirección de e-mail no parece completa.",
       "domaine": "Esta dirección no puede recibir e-mails. Comprueba el dominio.",
       "jetable": "No se aceptan direcciones desechables.",
-      "consentement": "Marca la casilla para continuar."
+      "consentement": "Marca la casilla para ver tus resultados."
     }
   },
   "blog": {
@@ -220,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "pareja"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}} % ahora mismo",
+    "avant": "Precio habitual:",
+    "apres": "Precio rebajado:",
+    "code": "Código {{code}} aplicado automáticamente al pagar"
   }
 }
