@@ -4,10 +4,13 @@ name: Évaluation de couple · santé
 # peut marcher, sans rien créer ni envoyer : les secrets que les fonctions
 # attendent sont-ils posés chez Supabase (noms seulement, jamais les
 # valeurs), les fonctions bilan, bilan-stripe et lead-capture répondent-elles,
-# le webhook refuse-t-il bien un événement sans signature, et la page de
-# vente publiée est-elle ouverte (indexable) ou fermée ? Mode d'emploi dans
-# docs/bilan/STRIPE.md. Le job échoue si un secret manque ou si une fonction
-# ne répond pas comme attendu.
+# le webhook refuse-t-il bien un événement sans signature, la page de vente
+# publiée est-elle ouverte (indexable) ou fermée, et surtout : une évaluation
+# fictive, remplie d'un coup, obtient-elle une page de paiement Stripe
+# (sonde-vente.mjs, l'évaluation est supprimée ensuite, rien n'est payé) ?
+# Mode d'emploi dans docs/bilan/STRIPE.md. Le job échoue si un secret manque,
+# si une fonction ne répond pas comme attendu ou si Stripe refuse d'ouvrir
+# la page de paiement.
 
 on:
   workflow_dispatch:
@@ -20,6 +23,10 @@ jobs:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - uses: supabase/setup-cli@v1
         with:
           version: latest
@@ -52,6 +59,17 @@ jobs:
           # rien, ce qu'on veut. 400 « lien » : elle est là mais refuse la
           # forme de l'appel. Tout autre code est une panne.
           case "$code" in 404) ;; 400) echo "::warning::bilan répond 400 : la forme de la sonde a vieilli";; *) echo "::error::bilan répond $code"; exit 1;; esac
+
+      # Le vrai test : la page écrit « erreur serveur » quand Stripe refuse
+      # de créer la session de paiement (compte pas encore activé pour les
+      # paiements réels, clé révoquée), et rien dans l'admin ne le distingue
+      # d'un client qui ne clique pas. La sonde crée une évaluation à deux,
+      # répond à tout pour la première personne, demande le paiement comme la
+      # page, vérifie l'adresse checkout.stripe.com et supprime l'évaluation.
+      # Elle laisse sa trace dans les compteurs du jour (créée, finie, paiement
+      # ouvert, source « sonde »), jamais une vente.
+      - name: Le paiement s'ouvre (évaluation fictive, supprimée ensuite)
+        run: node supabase/functions/_shared/bilan/sonde-vente.mjs "https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/bilan"
 
       - name: Le webhook Stripe refuse un événement sans signature
         run: |

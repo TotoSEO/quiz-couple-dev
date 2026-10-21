@@ -108,17 +108,26 @@
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
 
-  // Le lien vers le bilan de couple porte sa source (?src=), lue dans
-  // l'onglet Bilan de l'admin.
-  const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=accueil' : u; };
+  // Le lien vers l'évaluation de couple dit d'où il part par data-bilan-src
+  // (lu au clic par audience.js, puis dans l'onglet Évaluation de l'admin),
+  // jamais dans l'adresse : une adresse à paramètre est une page de plus pour
+  // Google, et le menu la répétait sur chaque page du site.
+  const urlNav = (k) => getLocalizedUrl(k, lang);
+  const srcNav = (k) => k === 'bilanCouple' ? ' data-bilan-src="accueil"' : '';
   // L'évaluation de couple sur l'accueil (19 octobre 2026, Thomas : « on ne va
-  // pas compter sur le SEO pour vendre ») : un lien dans le hero et une
-  // section à elle sous le ruban, seulement quand elle est ouverte
-  // (BILAN_OUVERT). Textes `evaluation` de home.json, prix de bilanPrix.
+  // pas compter sur le SEO pour vendre ») : le troisième bouton du hero, à la
+  // place du test de pureté depuis le 20 octobre 2026 (le lien « Nouveau »
+  // qui le doublait sous les boutons est parti le même jour), et une section
+  // à elle sous le ruban, seulement quand elle est ouverte (BILAN_OUVERT).
+  // Textes `evaluation` de home.json, prix de bilanPrix. L'icône est celle du
+  // bouton du menu (header.ejs).
   const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
   const evaluation = t('home:evaluation', {}) || {};
   const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
-  const evalNouveau = String(evaluation.sur || '').split(' · ')[0];
+  // La réduction en cours (bilanPromo, generate.js) : pastille à côté du
+  // surtitre et prix habituel barré devant le prix réduit.
+  const promoEval = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
+  const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
   const quizzes = versCartes(famillesNav.quiz);
@@ -196,37 +205,22 @@
         <div class="hero-ctas">
           <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
           <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
-          <%# Le test de pureté a droit à sa place dans le hero : même anneau
-              néon que sa pastille du menu, pour qu'on le reconnaisse. %>
-          <% if (getLocalizedUrl('testPurete', lang)) { %>
-          <a href="<%= getLocalizedUrl('testPurete', lang) %>" class="btn btn-purete btn-lg">
-            <span class="btn-purete-emoji" aria-hidden="true">🌡️</span>
-            <span class="btn-purete-texte"><%= t('quizzes:testPurete.shortTitle', 'Test de pureté') %></span>
+          <%# L'évaluation de couple a la troisième place du hero depuis le
+              20 octobre 2026 (Thomas), avec l'anneau néon qui signait le
+              bouton du test de pureté jusque-là : .btn-eval dans styles.css.
+              Le lien porte sa source pour l'onglet Évaluation de l'admin. %>
+          <% if (urlEval) { %>
+          <a href="<%= urlEval %>" data-bilan-src="accueil-hero" class="btn btn-eval btn-lg">
+            <span class="btn-eval-ic" aria-hidden="true"><%- icEval %></span>
+            <span class="btn-eval-texte"><%= evaluation.ctaCourt %></span>
           </a>
           <% } %>
         </div>
-        <% if (urlEval) { %>
-        <%# Dans le premier écran : ses styles sont écrits ici, les feuilles
-            critiques ne les connaissent pas encore. Aucun fondu depuis
-            l'opacité 0 (LCP). %>
-        <style>
-          .hero-eval { display: inline-flex; align-items: center; gap: .6rem; max-width: 100%; margin-top: 1.1rem; padding: .35rem .95rem .35rem .35rem; border-radius: 999px; font-size: .92rem; font-weight: 700; line-height: 1.25; color: hsl(var(--foreground)); background: hsl(var(--primary) / .1); text-decoration: none; transition: background .2s ease; }
-          .hero-eval:hover, .hero-eval:focus-visible { background: hsl(var(--primary) / .18); color: hsl(var(--foreground)); }
-          .hero-eval-nouveau { flex: none; padding: .25rem .6rem; border-radius: 999px; background: hsl(var(--primary)); color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-          .hero-eval svg { width: 1rem; height: 1rem; flex: none; }
-          @media (prefers-reduced-motion: reduce) { .hero-eval { transition: none; } }
-        </style>
-        <a href="<%= urlEval %>?src=accueil-hero" class="hero-eval">
-          <span class="hero-eval-nouveau"><%= evalNouveau %></span>
-          <span><%= evaluation.ctaCourt %></span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <% } %>
 
         <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
         <div class="hero-stats">
           <div class="hero-stat hero-stat--phare">
-            <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078">3&nbsp;078</span>
+            <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078"<%- (typeof accueilCuit !== 'undefined' && accueilCuit && accueilCuit.quizTotal !== null) ? ' data-total="' + accueilCuit.quizTotal + '"' : '' %>>3&nbsp;078</span>
             <span class="hero-stat-txt"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
           </div>
           <%# Les quatre familles du catalogue, pas deux : les tests célibataires
@@ -415,17 +409,17 @@
         <img src="/bilan/apercu-synthese-<%= lang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false">
       </div>
       <div class="qr-bilan-corps">
-        <p class="qr-bilan-sur"><%= evaluation.sur %></p>
+        <p class="qr-bilan-sur"><%= evaluation.sur %><% if (promoEval) { %> <span class="promo-pastille"><%= promoEval.badge %></span><% } %></p>
         <h2 class="qr-bilan-titre" id="home-eval-titre"><%= evaluation.titre %></h2>
         <p class="qr-bilan-texte"><%= evaluation.texte %></p>
         <ul class="qr-bilan-points">
           <% (evaluation.points || []).forEach((pt) => { %>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%= String(pt).replace(/\{\{prix\}\}/g, prixEval) %></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%- promoEval ? promoEval.marque(escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval))) : escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval)) %></span></li>
           <% }) %>
         </ul>
         <div class="qr-bilan-boutons">
-          <a class="qr-bilan-bouton" href="<%= urlEval %>?src=accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>?src=accueil&amp;mode=solo#facons"><%= evaluation.ctaSolo %></a>
+          <a class="qr-bilan-bouton" href="<%= urlEval %>" data-bilan-src="accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>#facons" data-bilan-src="accueil" data-bilan-mode="solo"><%= evaluation.ctaSolo %></a>
         </div>
       </div>
     </div>
@@ -468,7 +462,7 @@
              const tTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : tTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -522,7 +516,7 @@
              const cTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : cTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--celib">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -577,7 +571,7 @@
              const qTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : qTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -633,7 +627,7 @@
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
              const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%', jeuDixMais: '46 92% 46%' }; %>
-          <a class="jeu-card quiz-slide" href="<%= urlNav(item.routeKey) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
+          <a class="jeu-card quiz-slide" href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
               <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
             </span>
@@ -694,7 +688,7 @@
              const sTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : sTitle; %>
-          <a href="<%= urlNav(item.routeKey) %>" class="homepage-quiz-card quiz-slide no-underline group">
+          <a href="<%= urlNav(item.routeKey) %>"<%- srcNav(item.routeKey) %> class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--speciaux">
               <div class="quiz-bubble-media">
                 <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
@@ -917,6 +911,12 @@
     dans styles.css : rien n'est visible au chargement, et les feuilles
     critiques n'ont pas à bouger. %>
 <section class="section-padding" id="instagram-recents" style="display:none" data-suivre="<%= instagramUrl %>">
+  <%# Les trois dernières publications, lues au build (generate.js,
+      fetchAccueilCuit) : home-dynamic.js les dessine sans rien demander à la
+      base ; sans ce bloc, il appelle get_instagram_recents comme avant. %>
+  <% if (typeof accueilCuit !== 'undefined' && accueilCuit && Array.isArray(accueilCuit.instagram)) { %>
+  <script type="application/json" id="ig-recents-cuits"><%- JSON.stringify(accueilCuit.instagram).replace(/</g, '\\u003c') %></script>
+  <% } %>
   <style>
     .ig-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 54rem; margin: 0 auto; }
     .ig-carte { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 1.25rem; overflow: hidden; background: hsl(var(--muted)); box-shadow: 0 14px 34px -14px hsl(var(--primary) / 0.45); text-decoration: none; color: #fff; transition: transform 0.25s ease; }
@@ -958,7 +958,7 @@
 
 <!-- Reviews Section -->
 <section class="section-padding bg-muted/20" id="avis">
-  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
+  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>"<%- (typeof reviewsCuits !== 'undefined' && reviewsCuits) ? ' data-cuit="1"' : '' %> class="hidden"></div>
   <div class="container mx-auto px-4">
     <!-- Header with stats -->
     <div class="text-center mb-8">

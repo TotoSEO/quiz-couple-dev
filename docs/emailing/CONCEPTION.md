@@ -16,13 +16,37 @@ le jour où on envoie le premier e-mail.
 s'affiche comme avant : le score (l'anneau, les points) et le titre du
 verdict sont nets. Tout ce qui suit (le texte du verdict, les conseils, le
 reste de la carte) est flouté et inerte, et sous le titre apparaît une
-petite carte : « Pour déverrouiller le reste de vos résultats, renseignez
-votre e-mail », un champ, une case « J'accepte de recevoir les conseils et
-offres de Quiz Couple par e-mail. Désinscription en un clic, à tout
-moment. » avec le lien vers la confidentialité, et un bouton « Voir mes
-résultats ». Dès que l'adresse est acceptée, tout se déverrouille en un
-demi-seconde, et l'appareil s'en souvient six mois (`localStorage`
+petite carte. Dès que l'adresse est acceptée, tout se déverrouille en une
+demi-seconde, et l'appareil s'en souvient deux ans (`localStorage`
 `qc-abonne`) : on ne redemande pas à la même personne à chaque test.
+
+**Depuis le 20 octobre 2026** (Thomas : « pour le nombre de visites peu de
+gens me laissent leur email », « Plus qu'une étape pour découvrir vos
+résultats complets gratuits ! »), la carte dit, de haut en bas : « Vos
+résultats sont prêts » avec une coche verte, une barre presque pleine (une
+couleur unie, 90 %), le titre « Plus qu'une étape pour découvrir vos
+résultats complets gratuits ! », le champ (« Votre adresse e-mail »), la
+case (« J'accepte de recevoir les conseils et nouveautés de Quiz Couple par
+e-mail. » et le lien Confidentialité), le bouton « Voir mes résultats »,
+trois choses que l'adresse débloque (`capture.points` : l'analyse détaillée
+du résultat, les conseils pour la suite, tous les autres tests du site) et
+« Pas de spam. Désinscription en un clic. » Une case oubliée est entourée
+de rouge en plus du message. Avant, la carte disait « Pour déverrouiller le
+reste de vos résultats, renseignez votre e-mail » sous un cadenas, et la
+case faisait trois lignes sur les « conseils et offres ».
+
+La largeur de la carte vient de l'écran et non de la carte de résultat où
+elle se glisse (`--qc-porte-l`, 30rem au plus, 0,75rem du bord de l'écran au
+moins, centrée par des marges négatives) : dans le test de couple elle était
+posée au fond de trois rembourrages, à 244 px de large sur un téléphone de
+390, 634 px de haut et le bouton sur deux lignes. Mesuré à l'arrivée sur le
+résultat (390 x 844) : le champ de la compatibilité amoureuse tombait sous le
+pli, ni le champ ni le bouton n'étaient à l'écran. La porte fait maintenant
+436 à 495 px de haut, les trois coches sont sous le bouton, et le champ est à
+l'écran à l'arrivée sur sept cas sur huit (quatre tests, 390 x 844 et
+390 x 664, la hauteur visible de Safari avec ses barres). Un parent qui coupe
+ce qui dépasse (la carte rose des tests à deux, `overflow: hidden`) reçoit
+`qc-porte-hote` tant que la porte est là, sinon elle était rognée.
 
 Les pages concernées sont celles de `CAPTURE_PAGES` (config.js) : les tests
 de couple et les quiz à résultat, c'est-à-dire les groupes `score`, `projet`
@@ -79,7 +103,27 @@ quand même après huit secondes au plus : la personne a fait sa part.
 Pour écrire à un particulier à des fins commerciales, la loi (L34-5 du CPCE,
 RGPD) demande un accord explicite : une case à cocher, pas cochée d'avance,
 qui dit à quoi on s'engage. C'est le strict minimum, et c'est ce qu'il y a :
-une case, une phrase, le lien vers la confidentialité. Le double opt-in
+une case, une phrase, le lien vers la confidentialité.
+
+Le 20 octobre 2026, Thomas a proposé « En cochant cette case j'accepte les
+politiques de confidentialité », pour ne plus parler d'e-mails. Ce n'est pas
+retenu : accepter une politique de confidentialité n'est pas consentir à
+recevoir des e-mails (la CNIL demande un accord propre à la prospection, et
+une politique se lit, elle ne s'accepte pas), et les adresses ainsi
+recueillies ne pourraient servir à aucun envoi, ce qui est la raison de les
+demander. La case dit donc ce qu'on enverra, en une phrase courte :
+« J'accepte de recevoir les conseils et nouveautés de Quiz Couple par
+e-mail. » Les nouveautés sont les nouveaux tests et l'évaluation de couple
+avec ses offres, ce que la politique de confidentialité écrit en toutes
+lettres (`privacy.emailsItems[1]`, cinq langues). « Pas de spam,
+désinscription en un clic » est passé sous le bouton, où il rassure au lieu
+d'allonger la case.
+
+Ce qui reste possible si le taux ne bouge pas : retirer la case et écrire
+la même phrase sous le bouton (« En validant, vous recevrez aussi nos
+conseils et nouveautés par e-mail »). C'est courant et ça enlève un geste,
+mais c'est plus discutable : l'accord se lit alors dans le clic sur un bouton
+qui sert d'abord à voir ses résultats. La décision est à Thomas. Le double opt-in
 (confirmer par e-mail) est recommandé par la CNIL mais pas obligatoire : on
 ne le fait pas, pour les raisons ci-dessus.
 
@@ -113,6 +157,19 @@ adresse confirmée. La table `leads` reste telle quelle pour le circuit de
 confirmation de l'e-book.
 
 ## L'admin
+
+**Le taux de capture** (20 octobre 2026) : une cinquième tuile de l'onglet
+Leads rapporte les nouvelles adresses aux écrans de résultat vus sur les
+pages qui portent la porte (`/<page>/resultat/`, enregistrés par
+resultat-url.js, lus par `get_trafic_pages` dans les cinq langues ; les
+chemins par source sont écrits dans la page de l'admin au build,
+`capturePages` dans generate.js). Aujourd'hui en grand, sept jours et la
+période dessous, les fenêtres ne remontant pas avant le lancement de la porte
+(`LANCEMENT_PORTE`, 19 octobre 2026) ; le tableau par source a les colonnes
+« Résultats vus » et « Taux ». Les visites ne servent à rien ici : seuls ceux
+qui arrivent au résultat d'un test à porte la voient. Le taux est un
+plancher : un appareil qui a déjà donné son adresse voit ses résultats sans
+porte, et son écran de résultat compte quand même.
 
 L'onglet Leads lit `get_abonnes_tableau` (par `admin-stats`, jamais la clé
 publique) : les totaux (abonnés, actifs, aujourd'hui, sept jours, période),

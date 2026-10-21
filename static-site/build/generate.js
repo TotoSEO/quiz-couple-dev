@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -129,8 +129,28 @@ const BILAN_CONST = (() => {
     const m = src.match(new RegExp('export const ' + nom + ' = (\\d+);'));
     return m ? Number(m[1]) : defaut;
   };
-  return { prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0) };
+  const lisTexte = (nom) => {
+    const m = src.match(new RegExp('export const ' + nom + " = '([^']*)';"));
+    return m ? m[1] : '';
+  };
+  return {
+    prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0),
+    promo: { code: lisTexte('PROMO_CODE'), stripe: lisTexte('PROMO_STRIPE'), pourcent: lis('PROMO_POURCENT', 0), fin: lisTexte('PROMO_FIN') },
+  };
 })();
+// La réduction en cours (PROMO_* dans coeur.mjs, la même que le serveur
+// applique à la page de paiement) : vraie au moment du build, jusqu'au
+// dernier jour PROMO_FIN inclus, heure de Paris. QC_PROMO=aucune la coupe
+// pour un build d'essai.
+const BILAN_PROMO = (() => {
+  const p = BILAN_CONST.promo;
+  if (process.env.QC_PROMO === 'aucune') return null;
+  if (!(p.pourcent > 0 && p.pourcent < 100) || !p.stripe) return null;
+  const jour = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  if (p.fin && jour > p.fin) return null;
+  return { ...p, prix: BILAN_CONST.prix - Math.round(BILAN_CONST.prix * p.pourcent / 100) };
+})();
+if (BILAN_PROMO) console.log(`[bilan] réduction ${BILAN_PROMO.code} en cours : -${BILAN_PROMO.pourcent} %, ${BILAN_PROMO.prix} centimes au lieu de ${BILAN_CONST.prix}${BILAN_PROMO.fin ? ', jusqu\'au ' + BILAN_PROMO.fin : ''}`);
 if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
   console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET ou sans adresse (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
 }
@@ -144,14 +164,49 @@ function entreeArticle(articleMeta) {
   const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
   return ARTICLE_SANS_BILAN.test(cles) ? null : { groupe: 'article', id: 'article' };
 }
-function prixBilan(lang) {
+function formatPrix(centimes, lang) {
   try {
     const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
     return new Intl.NumberFormat(bcp, { style: 'currency', currency: 'EUR' })
-      .format(BILAN_CONST.prix / 100).replace(/\u202f/g, '\u00a0');
+      .format(centimes / 100).replace(/\u202f/g, '\u00a0');
   } catch (e) {
-    return (BILAN_CONST.prix / 100).toFixed(2) + ' €';
+    return (centimes / 100).toFixed(2) + ' €';
   }
+}
+// Le prix payé aujourd'hui (réduit quand une réduction est en cours) et le
+// prix habituel, dans la langue de la page.
+const prixBilanCentimes = () => (BILAN_PROMO ? BILAN_PROMO.prix : BILAN_CONST.prix);
+function prixBilan(lang) { return formatPrix(prixBilanCentimes(), lang); }
+function prixBilanBase(lang) { return formatPrix(BILAN_CONST.prix, lang); }
+// La réduction affichée : pastille (« -20 % en ce moment »), prix habituel
+// barré et prix réduit, textes `promoBilan` de common.json. `html` est le
+// prix barré suivi du nouveau, avec ce qu'en lit un lecteur d'écran ;
+// `marque(texteEchappe)` met ce bloc à la place du prix réduit dans un texte
+// déjà échappé qui le contient (« Questions gratuites · 7,92 € pour le
+// rapport »), et rend le texte tel quel sans réduction.
+const escPromo = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+function promoBilanPour(lang) {
+  if (!BILAN_PROMO) return null;
+  const t = createT(lang);
+  const rp = (s) => String(s || '').replace(/\{\{pourcent\}\}/g, BILAN_PROMO.pourcent).replace(/\{\{code\}\}/g, BILAN_PROMO.code);
+  const prix = prixBilan(lang);
+  const base = prixBilanBase(lang);
+  const avant = rp(t('common:promoBilan.avant', ''));
+  const apres = rp(t('common:promoBilan.apres', ''));
+  const html = '<span class="prix-promo"><span class="prix-promo-avant"><span class="sr-only">' + escPromo(avant) + ' </span><s>' + escPromo(base) + '</s></span> ' +
+    '<span class="prix-promo-apres"><span class="sr-only">' + escPromo(apres) + ' </span>' + escPromo(prix) + '</span></span>';
+  return {
+    pourcent: BILAN_PROMO.pourcent,
+    code: BILAN_PROMO.code,
+    fin: BILAN_PROMO.fin || '',
+    badge: rp(t('common:promoBilan.badge', '')),
+    codeTexte: rp(t('common:promoBilan.code', '')),
+    avant, apres, prix, base, html,
+    marque: (texte) => String(texte).replace(escPromo(prix), html),
+    // Pour l'encart sous le verdict, écrit par quiz-engine-core.js : un
+    // attribut data-bilan-promo du <body>, en JSON échappé.
+    donnees: escPromo(JSON.stringify({ badge: rp(t('common:promoBilan.badge', '')), base, prix, avant, apres })),
+  };
 }
 
 function stripFutureLinks(html) {
@@ -372,6 +427,16 @@ let reviewStatsByQuiz = {};
 // n'existait que dans le balisage, le corps de page ne montrant qu'un tiret et
 // deux conteneurs vides remplis après coup par reviews.js.
 let reviewsRecents = [];
+// L'accueil cuit (20 octobre 2026) : le total des parties du hero et les trois
+// dernières publications Instagram sont lus une fois par construction et
+// écrits dans le HTML, comme les avis. Avant, chaque visite de l'accueil
+// demandait à la base les mille dernières notes, vingt avis, le total et les
+// trois publications : six requêtes et leurs préparations CORS, un quart des
+// 92 000 lignes de logs quotidiennes de la passerelle d'API (Supabase les
+// facture à l'octet, 7 Go en octobre pour 1 Go inclus) et près d'un
+// gigaoctet d'egress par mois pour les seules notes. Sans réponse au build,
+// home-dynamic.js et reviews.js redemandent comme avant.
+let accueilCuit = { quizTotal: null, instagram: null };
 // Les douze derniers avis de chaque page, et le fait que le chargement a
 // réussi : voir avisCuitsPour.
 let reviewsParQuiz = {};
@@ -855,6 +920,24 @@ async function fetchReviewStats() {
     }
   } catch (e) {
     console.warn(`[reviews] Could not fetch review stats: ${e.message}, using defaults`);
+  }
+}
+
+async function fetchAccueilCuit() {
+  try {
+    const v = await appelRpc('get_quiz_total', {});
+    const n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_total != null ? v[0].get_quiz_total : v[0])) : v;
+    if (Number.isFinite(Number(n))) accueilCuit.quizTotal = Number(n);
+    console.log(`[accueil] total des parties cuit : ${accueilCuit.quizTotal}`);
+  } catch (e) {
+    console.warn(`[accueil] get_quiz_total indisponible (${e.message}) : la page le demandera`);
+  }
+  try {
+    const posts = await appelRpc('get_instagram_recents', { p_limit: 3 });
+    if (Array.isArray(posts)) accueilCuit.instagram = posts;
+    console.log(`[accueil] ${Array.isArray(posts) ? posts.length : 0} publications Instagram cuites`);
+  } catch (e) {
+    console.warn(`[accueil] get_instagram_recents indisponible (${e.message}) : la page le demandera`);
   }
 }
 
@@ -1357,6 +1440,11 @@ async function generatePage(routeKey, lang) {
     // dans le corps de la page, sinon Google se réserve d'ignorer le balisage.
     reviewStats,
     reviewsRecents,
+    // Les avis sont cuits quand la base a répondu au build (reviews.js ne
+    // redemande alors rien) ; le total du hero et les publications Instagram
+    // de l'accueil suivent la même règle.
+    reviewsCuits: reviewsRecents.length > 0,
+    accueilCuit,
     // SEO
     title: escapeHtml(title),
     rawTitle: title,
@@ -1414,8 +1502,14 @@ async function generatePage(routeKey, lang) {
     // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
+    // L'admin calcule le taux de capture (onglet Leads) : il lui faut, pour
+    // chaque source de la porte, les chemins de la page dans les cinq langues.
+    capturePages: routeKey === 'admin' ? CAPTURE_PAGES : null,
     bilanPrix: prixBilan(lang),
-    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanPrixBase: prixBilanBase(lang),
+    bilanPromo: promoBilanPour(lang),
+    moyensPaiement: MOYENS_PAIEMENT,
+    bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2261,7 +2355,10 @@ async function generateBlogArticle(articleMeta, lang) {
     bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
     bilanEntree: entreeArticle(articleMeta),
     bilanPrix: prixBilan(lang),
-    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanPrixBase: prixBilanBase(lang),
+    bilanPromo: promoBilanPour(lang),
+    moyensPaiement: MOYENS_PAIEMENT,
+    bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2362,7 +2459,10 @@ async function generate404Pages() {
       bilanOuvert: BILAN_OUVERT,
       bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
       bilanPrix: prixBilan(lang),
-      bilanPrixCentimes: BILAN_CONST.prix,
+      bilanPrixBase: prixBilanBase(lang),
+      bilanPromo: promoBilanPour(lang),
+      moyensPaiement: MOYENS_PAIEMENT,
+      bilanPrixCentimes: prixBilanCentimes(),
       bilanGarantie: BILAN_CONST.garantie,
       vendeur: VENDEUR,
       saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2407,6 +2507,7 @@ async function main() {
   // Parties par page et lectures par article, écrites dans le HTML
   await fetchCompteursParties();
   await fetchLecturesArticles();
+  await fetchAccueilCuit();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {

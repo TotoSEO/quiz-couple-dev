@@ -16,6 +16,27 @@
   var H = { apikey: KEY, 'Authorization': 'Bearer ' + KEY };
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
+  // L'ecriture d'une ligne de mesure en « requete simple » au sens de CORS
+  // (20 octobre 2026) : la cle dans l'adresse, le corps encode comme un
+  // formulaire, aucun en-tete a nous, donc plus de requete OPTIONS de
+  // prechargement avant chaque lancement ou chaque partie finie (13 000
+  // lignes par jour dans les logs de la passerelle de Supabase). Une valeur
+  // nulle est omise. La meme fonction est dans audience.js (envoiSimple),
+  // qui ne se charge pas forcement avant ce fichier ; une modification ici
+  // en appelle une la-bas.
+  function envoiSimple(table, corps) {
+    var donnees = new URLSearchParams();
+    Object.keys(corps).forEach(function (k) {
+      if (corps[k] !== null && corps[k] !== undefined) donnees.append(k, String(corps[k]));
+    });
+    return fetch(URL + '/rest/v1/' + table + '?apikey=' + encodeURIComponent(KEY), {
+      method: 'POST',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: donnees.toString()
+    });
+  }
+
   var UI = {
     fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Votre avis sera visible après validation.', merci: 'Merci infiniment de votre soutien !', insta: 'Suivez-nous sur Instagram ❤️', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)', nomRegle: 'Votre prénom doit faire de 3 à 60 caractères, espaces compris.' },
     en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)', nomRegle: 'Your first name must be 3 to 60 characters long, spaces included.' },
@@ -149,14 +170,7 @@
     // page vue, ni le lancement, ni la partie terminee.
     try { if (window.QCAudience && window.QCAudience.exclu()) return; } catch (e) {}
     var avec = visite ? Object.assign({}, corps, { visite_id: visite }) : corps;
-    function poste(donnees) {
-      return fetch(URL + '/rest/v1/' + table, {
-        method: 'POST',
-        keepalive: true,
-        headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ),
-        body: JSON.stringify(donnees)
-      });
-    }
+    function poste(donnees) { return envoiSimple(table, donnees); }
     // Un refus de la base passait totalement inapercu : la mesure disparaissait
     // sans que rien ne le signale. C'est ainsi qu'une page a pu accumuler des
     // lancements sans une seule partie terminee, alors que le navigateur
@@ -212,16 +226,17 @@
 
   // ── Suivi des parties a distance ──
   // Le salon (salon.js) annonce deux moments par telephone : le depart, quand
-  // les deux sont connectes, et la fin, quand le resultat s'affiche. Une
-  // partie a distance laisse donc deux departs et deux fins, un par personne,
-  // ce qui correspond aux deux lancements et deux completions qu'elle produit
-  // deja par ailleurs. La table salon_parties permet de dire quelle part des
-  // lancements se joue a distance, page par page.
+  // les deux sont connectes, et la fin, quand le resultat s'affiche. Seule la
+  // fin est enregistree depuis le 20 octobre 2026 (Thomas : « on sait que ça
+  // fonctionne maintenant », il ne veut plus qu'un total des parties jouees
+  // a distance et le detail par test) : une ligne par telephone arrive au
+  // resultat, deux par partie quand tout va bien. Le depart partait aussi,
+  // pour la part des lancements joues a distance, que l'admin ne montre plus.
   function watchSalon(slug) {
     document.addEventListener('qc:salon', function (e) {
       var d = (e && e.detail) || {};
-      if (d.etape !== 'depart' && d.etape !== 'fin') return;
-      envoiePartie('salon_parties', { quiz_slug: slug, lang: lang, role: d.role === 'c' ? 'c' : 'j', etape: d.etape });
+      if (d.etape !== 'fin') return;
+      envoiePartie('salon_parties', { quiz_slug: slug, lang: lang, role: d.role === 'c' ? 'c' : 'j', etape: 'fin' });
     });
   }
 

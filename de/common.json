@@ -183,20 +183,29 @@
     "stars": "Sterne"
   },
   "capture": {
-    "sur": "Dein vollständiges Ergebnis",
-    "titre": "Um den Rest deines Ergebnisses freizuschalten, gib deine E-Mail-Adresse ein",
-    "texte": "Die Details deines Ergebnisses, die Tipps und was danach kommt, erscheinen gleich danach.",
-    "placeholder": "deine@email.de",
-    "consentement": "Ich bin einverstanden, Tipps und Angebote von Quiz Couple per E-Mail zu erhalten. Abmeldung mit einem Klick, jederzeit.",
+    "sur": "Dein Ergebnis ist fertig",
+    "titre": "Nur noch ein Schritt bis zu deinem vollständigen Ergebnis, kostenlos!",
+    "points": [
+      "Die ausführliche Auswertung deines Ergebnisses",
+      "Unsere Tipps für danach",
+      "Alle anderen Tests der Seite freigeschaltet"
+    ],
+    "placeholder": "Deine E-Mail-Adresse",
+    "consentement": "Ich möchte Tipps und Neuigkeiten von Quiz Couple per E-Mail erhalten.",
     "confidentialite": "Datenschutz",
     "bouton": "Mein Ergebnis ansehen",
     "envoi": "Einen Moment...",
+    "note": "Kein Spam. Abmeldung mit einem Klick.",
+    "merci": {
+      "titre": "Danke, dein Ergebnis ist freigeschaltet!",
+      "texte": "Und nicht nur hier: ab jetzt zeigen dir alle Tests, Quiz und Spiele der Seite ihre vollständigen Ergebnisse, ohne auf diesem Gerät noch einmal nach deiner E-Mail zu fragen."
+    },
     "suggestion": "Meintest du {{domaine}}?",
     "erreurs": {
       "format": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "domaine": "Diese Adresse kann keine E-Mails empfangen. Prüfe die Domain.",
       "jetable": "Wegwerfadressen werden nicht akzeptiert.",
-      "consentement": "Setze das Häkchen, um fortzufahren."
+      "consentement": "Setze das Häkchen, um dein Ergebnis zu sehen."
     }
   },
   "blog": {
@@ -220,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "Paar"
+  },
+  "promoBilan": {
+    "badge": "Aktuell -{{pourcent}} %",
+    "avant": "Normaler Preis:",
+    "apres": "Reduzierter Preis:",
+    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen"
   }
 }

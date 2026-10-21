@@ -13,8 +13,11 @@ test('le message dans les cinq langues, sans accolade restée', () => {
           assert.ok(!/\{[a-z]+\}/i.test(champ), lang + ' : ' + champ.slice(0, 80));
           assert.ok(champ.includes('Léa'), lang);
         }
-        assert.ok(m.html.includes('SIRET 940 106 800 00011'));
-        assert.ok(m.html.includes('67000 Strasbourg'));
+        // le pied ne porte que le nom de la boîte et le site : l'identité
+        // complète du vendeur est sur le PDF joint et sur les pages légales
+        assert.ok(m.html.includes('Visibilitea') && m.html.includes('quiz-couple.com'), lang);
+        assert.ok(!m.html.includes('SIRET') && !m.texte.includes('SIRET'), lang);
+        assert.ok(!m.html.includes('Strasbourg') && !m.texte.includes('Strasbourg'), lang);
         if (pages) assert.ok(m.texte.includes('24'), lang);
         if (mode === 'solo') assert.ok(!m.sujet.includes('Thomas'), lang + ' : le sujet solo ne nomme que la personne');
       }

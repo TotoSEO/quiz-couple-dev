@@ -22,9 +22,12 @@
   ];
   const homeUrl = getLocalizedUrl('home', lang);
 
-  // Le lien vers le bilan de couple porte sa source (?src=), lue dans
-  // l'onglet Bilan de l'admin.
-  const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=pied' : u; };
+  // Le lien vers l'évaluation de couple dit d'où il part par data-bilan-src
+  // (lu au clic par audience.js, puis dans l'onglet Évaluation de l'admin),
+  // jamais dans l'adresse : une adresse à paramètre est une page de plus pour
+  // Google, et le menu la répétait sur chaque page du site.
+  const urlNav = (k) => getLocalizedUrl(k, lang);
+  const srcNav = (k) => k === 'bilanCouple' ? ' data-bilan-src="pied"' : '';
   const currentYear = new Date().getFullYear();
 
   // Filter out links not available in current language
@@ -80,7 +83,7 @@
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryTests', 'Tests') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerTestLinksFiltered) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
       </div>
@@ -90,7 +93,7 @@
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerQuizLinksFiltered) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
         <%# Tests célibataires : sous les quiz, la colonne la moins remplie,
@@ -98,7 +101,7 @@
         <span class="block mt-8 mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categorySingles', 'Tests célibataires') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerCelibLinksFiltered) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
       </div>
@@ -108,7 +111,7 @@
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryJeux', 'Jeux') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerJeuxLinksFiltered) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
         <%# Quiz spéciaux de saison : sous les jeux, la colonne la moins remplie. %>
@@ -116,7 +119,7 @@
         <span class="block mt-8 mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerSpeciauxLinksFiltered) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
         <% } %>
@@ -127,14 +130,20 @@
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:footer.information', 'Information') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerLegalLinks) { %>
-          <a href="<%= urlNav(link.routeKey) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a>
+          <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
           <%# Revenir sur son choix est une obligation, et ce lien est le seul
-              chemin pour le faire une fois la banniere fermee. Il reste
-              masque tant que la plateforme de consentement n'a pas repondu,
-              c'est consentement.js qui le devoile : un lien qui n'ouvre rien
-              vaut moins que pas de lien du tout. %>
-          <button type="button" data-cmp-ouvrir hidden class="text-left text-sm text-muted-foreground transition-colors hover:text-primary bg-transparent border-0 p-0 cursor-pointer"><%= t('common:footer.cookiePrefs', 'Gérer mes cookies') %></button>
+              chemin pour le faire une fois la banniere fermee (la pastille
+              flottante de la plateforme est masquee, voir styles.css). Il est
+              visible des le chargement depuis le 20 octobre 2026 : masque
+              jusqu'a la reponse de la plateforme, The Moneytizer ne le voyait
+              pas (« le bouton de confidentialite doit normalement etre
+              visible pour l'utilisateur, mais nous ne le voyons pas sur votre
+              site »). consentement.js ouvre le panneau de la plateforme au
+              clic ; tant qu'elle n'a pas repondu, ou sans elle (bloqueur,
+              hors d'Europe), le lien mene a la politique de confidentialite,
+              qui a sa section sur les cookies. %>
+          <a href="<%= urlNav('privacy') %>" data-cmp-ouvrir class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:footer.cookiePrefs', 'Gérer mes cookies') %></a>
         </div>
       </div>
     </div>

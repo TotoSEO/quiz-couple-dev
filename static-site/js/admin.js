@@ -245,6 +245,13 @@
     testLangageAmour: "Langage de l'amour",
     quizTuPreferes: 'Tu préfères',
     quizVraiFaux: 'Vrai ou faux',
+    // Les quiz d'Halloween (octobre 2026) : sans nom ici, la liste de
+    // l'onglet A distance les affichait par leur cle de route.
+    quizSerialKiller: 'Serial killer compatible',
+    quizMortFilmHorreur: 'Qui meurt en premier (film d\'horreur)',
+    quizPossession: 'Qui pourrait se faire posséder',
+    quizSuperVilain: 'Quel super-vilain',
+    quizDuoVilains: 'Duo de super-vilains',
     testAttachement: "Style d'attachement",
     testConfiance: 'Confiance',
     testInfidelite: 'Infidélité',
@@ -665,13 +672,9 @@
       parties_finies_par_jour: statsRpc('get_quiz_daily_total', { p_days: n, p_tz: tz }),
       trafic_resume: statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
       trafic_par_jour: statsRpc('get_trafic_daily', { p_days: n, p_tz: tz }),
-      trafic_pages: statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }),
       trafic_sources: statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
-      trafic_profondeur: statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
-      trafic_entonnoir: statsRpc('get_trafic_entonnoir', { p_days: n, p_tz: tz }),
       sources_google_clics: statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
-      distance_par_jour: statsRpc('get_salon_daily', { p_days: n + 1, p_tz: tz }),
-      distance_depuis_le_debut: chargeSalonParPage(),
+      distance_par_test: chargeSalonParPage(),
       instagram_clics: statsRpc('get_instagram_clics'),
       bilan: statsRpc('get_bilan_tableau', { p_jours: n })
     };
@@ -685,7 +688,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : pages vues, visites, pages, sources, profondeur et entonnoir sur la période. distance_* : mode à distance. instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -763,20 +766,25 @@
   }
 
   // ── Parties a distance ──
-  // Un lance a distance est une personne qui a joue chacun sur son telephone :
-  // une partie en fait deux, comme elle fait deux lances et deux finis. Le
-  // mode n'existe que depuis le 7 septembre 2026 : tout ce que cet onglet
-  // compare (lancements de toutes les pages, part a distance, courbe) part de
-  // cette date, sinon des semaines sans mode a distance ecrasent la part.
-  // La table salon_parties n'existe qu'une fois sa migration passee ; sans
-  // elle, l'onglet le dit et la ligne sous les lances reste vide.
+  // Depuis le 20 octobre 2026, l'onglet ne compte plus que les parties jouees
+  // chacun sur son telephone et arrivees au resultat, en tout et par test
+  // (Thomas : « on sait que ça fonctionne maintenant », il ne veut plus que
+  // ce total et sur quels tests). Le site n'envoie plus que la fin d'une
+  // partie a salon_parties (watchSalon, quiz-extras.js), une ligne par
+  // telephone, deux par partie quand les deux arrivent au resultat : le
+  // nombre de parties affiche est le nombre de telephones divise par deux,
+  // arrondi au-dessus (un seul telephone arrive, c'est quand meme une
+  // partie). La courbe quotidienne, la part des lancements joues a distance
+  // et la ligne sous les lances de l'onglet Parties ont ete retirees ce
+  // jour-la ; get_salon_daily reste en base, plus rien ne la lit.
+  // Le mode n'existe que depuis le 7 septembre 2026 : la lecture part de
+  // cette date. La table salon_parties n'existe qu'une fois sa migration
+  // passee ; sans elle, l'onglet le dit.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
     'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle', 'testDistance',
     'quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'];
   var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
-  var distanceCouchesVues = { lances: true, distance: true, part: true };
-  var _distanceCouches = null;
 
   // Nombre de jours ecoules depuis la mise en service, aujourd'hui compris.
   // Zero tant que la date n'est pas atteinte.
@@ -789,115 +797,27 @@
   function dateDebutDistanceLisible() {
     return new Date(DEBUT_DISTANCE + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
   }
-  // La serie des lancements a distance depuis la mise en service, par jour.
-  // Renvoie { parJour: { iso: { departs, fins } }, departs, fins }.
-  function chargeDistanceParJour() {
-    var jours = joursDepuisDebutDistance();
-    if (!jours) return Promise.resolve({ parJour: {}, departs: 0, fins: 0, aucunJour: true });
-    return statsRpc('get_salon_daily', { p_days: jours + 1, p_tz: fuseau() }).then(function (rows) {
-      if (!Array.isArray(rows)) throw new Error('pas de rpc');
-      var parJour = {}, departs = 0, fins = 0;
-      rows.forEach(function (r) {
-        var k = rowDateKey(r);
-        if (!k || k < DEBUT_DISTANCE) return;
-        var d = Number(r.departs) || 0, f = Number(r.fins) || 0;
-        parJour[k] = { departs: (parJour[k] ? parJour[k].departs : 0) + d, fins: (parJour[k] ? parJour[k].fins : 0) + f };
-        departs += d; fins += f;
-      });
-      return { parJour: parJour, departs: departs, fins: fins };
-    });
-  }
-  // Les lancements de toutes les pages depuis la mise en service, par jour et
-  // par page, a partir de la serie quotidienne des lancements.
-  function chargeLancesDepuisDebut() {
-    var jours = joursDepuisDebutDistance();
-    if (!jours) return Promise.resolve({ parJour: {}, parPage: {}, total: 0 });
-    return statsRpcPages('get_quiz_starts_daily_par_quiz', { p_days: jours + 1, p_tz: fuseau() }).then(function (rows) {
-      if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
-      var parJour = {}, parPage = {}, total = 0;
-      rows.forEach(function (r) {
-        var k = rowDateKey(r), slug = canon(r.quiz_slug);
-        if (!k || k < DEBUT_DISTANCE || !slug) return;
-        var v = rowTotal(r);
-        parJour[k] = (parJour[k] || 0) + v;
-        parPage[slug] = (parPage[slug] || 0) + v;
-        total += v;
-      });
-      return { parJour: parJour, parPage: parPage, total: total };
-    });
-  }
-  // Les lances et finis a distance par page depuis la mise en service. La
-  // fonction bornee a la date a depasse le delai de trois secondes de
-  // Supabase le 7 octobre 2026 (erreur 57014) et l'onglet restait vide : si
-  // elle ne repond pas, on relit les totaux par page sans borne
-  // (get_salon_counts). La table n'existe que depuis la mise en service du
-  // mode, les deux comptes ne different donc que de quelques heures autour
-  // du premier jour. La migration 20261008160000 rend la fonction bornee
-  // rapide ; le repli reste, pour que l'onglet ne soit plus jamais vide.
+  function partiesDistance(telephones) { return Math.ceil((Number(telephones) || 0) / 2); }
+  // Les fins a distance par page depuis la mise en service (la colonne
+  // departs n'est plus alimentee depuis le 20 octobre 2026). La fonction
+  // bornee a la date a depasse le delai de trois secondes de Supabase le
+  // 7 octobre 2026 (erreur 57014) et l'onglet restait vide : si elle ne
+  // repond pas, on relit les totaux par page sans borne (get_salon_counts).
+  // La table n'existe que depuis la mise en service du mode, les deux
+  // comptes ne different donc que de quelques heures autour du premier
+  // jour. La migration 20261008160000 rend la fonction bornee rapide ; le
+  // repli reste, pour que l'onglet ne soit plus jamais vide.
   function chargeSalonParPage() {
     return statsRpc('get_salon_counts_depuis', { p_depuis: DEBUT_DISTANCE, p_tz: fuseau() }).then(function (r) {
       return Array.isArray(r) ? r : statsRpc('get_salon_counts');
     });
   }
 
-  // Sous le total des lances de l'onglet Parties : la part a distance, sur la
-  // seule periode ou le mode existe.
-  function ligneDistance() {
-    var el = document.getElementById('admin-lances-distance');
-    if (!el) return;
-    Promise.all([chargeDistanceParJour(), chargeLancesDepuisDebut()]).then(function (r) {
-      if (r[0].aucunJour) { el.textContent = 'Mode à distance mesuré à partir du ' + dateDebutDistanceLisible(); return; }
-      el.textContent = r[1].total
-        ? r[1].total.toLocaleString('fr-FR') + ' lancés depuis le ' + dateDebutDistanceLisible() + ' · ' + r[0].departs.toLocaleString('fr-FR') + ' à distance (' + pct(r[0].departs, r[1].total) + ' %)'
-        : r[0].departs.toLocaleString('fr-FR') + ' à distance depuis le ' + dateDebutDistanceLisible();
-    }).catch(function () { el.textContent = ''; });
-  }
-  function renderDistanceLegende(couches) {
-    var el = document.getElementById('admin-distance-legende');
-    if (!el) return;
-    el.innerHTML = couches.map(function (c) {
-      var valeur;
-      if (c.cle === 'part') valeur = c.total !== null ? c.total + ' %' : '—';
-      else valeur = c.points.reduce(function (a, p) { return a + (p.total || 0); }, 0).toLocaleString('fr-FR');
-      return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
-        + ' style="--leg:' + c.couleur + '" data-distance-courbe="' + c.cle + '"'
-        + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
-        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
-        + '<span class="stats-leg-val">' + valeur + '</span>'
-        + '</button>';
-    }).join('');
-  }
-  function renderDistanceCourbe(lances, distance) {
-    var cv = document.getElementById('admin-distance-chart');
-    if (!cv) return;
-    var jours = joursDepuisDebutDistance();
-    var points = { lances: [], distance: [], part: [] };
-    for (var i = jours - 1; i >= 0; i--) {
-      var iso = isoNJoursAvant(i);
-      if (iso < DEBUT_DISTANCE) continue;
-      var d = new Date(iso + 'T12:00:00');
-      var label = d.getDate() + '/' + (d.getMonth() + 1);
-      var l = lances.parJour[iso] || 0;
-      var dd = distance.parJour[iso] ? distance.parJour[iso].departs : 0;
-      points.lances.push({ date: d, label: label, total: l });
-      points.distance.push({ date: d, label: label, total: dd });
-      points.part.push({ date: d, label: label, total: l ? Math.min(100, Math.round((dd / l) * 100)) : null });
-    }
-    var partTotale = lances.total ? Math.min(100, Math.round((distance.departs / lances.total) * 100)) : null;
-    var couches = [
-      { cle: 'lances', nom: 'Lancés, toutes pages', couleur: teinte('lances', '#3B82F6'), axe: 'gauche', unite: '', total: null },
-      { cle: 'distance', nom: 'À distance', couleur: teinte('finis', '#EF4E88'), axe: 'gauche', unite: '', total: null },
-      { cle: 'part', nom: 'Part à distance', couleur: teinte('ratio', '#F59E0B'), axe: 'droite', unite: ' %', total: partTotale }
-    ].map(function (c) { c.visible = distanceCouchesVues[c.cle]; c.points = points[c.cle]; return c; });
-    _distanceCouches = couches;
-    renderDistanceLegende(couches);
-    drawChart(cv, couches, {});
-  }
   // ── Bilan de couple ─────────────────────────────────────────────────────
   // Tout vient d'une seule lecture, get_bilan_tableau (migration
   // 20261018120000) : la série jour par jour (visites de la page, clics sur
   // « Commencer », bilans créés, rejoints, finis, paiements), les sources
-  // (?src= des liens du site), les domaines entrés et finis, les arrêts, les
+  // (data-bilan-src des liens du site), les domaines entrés et finis, les arrêts, les
   // délais, l'état des rapports PDF et les payés en attente du partenaire.
   // Les compteurs sont tenus par la fonction bilan et par un déclencheur sur
   // la table bilans : un bilan supprimé reste compté.
@@ -915,8 +835,8 @@
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
-    var m = /^(resultat|bas)-(.+)$/.exec(src);
-    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : 'Bas de page · ') + m[2];
+    var m = /^(resultat|bas|moteur)-(.+)$/.exec(src);
+    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : 'Bas de page · ') + m[2];
     return src;
   }
   function eurosBilan(centimes) {
@@ -1130,74 +1050,52 @@
 
   function loadDistance() {
     var listEl = document.getElementById('admin-distance-list');
-    var elL = document.getElementById('admin-distance-lances');
     var elD = document.getElementById('admin-distance-total');
-    var elP = document.getElementById('admin-distance-part');
+    var elFins = document.getElementById('admin-distance-fins');
     var elNote = document.getElementById('admin-distance-note');
-    var cv = document.getElementById('admin-distance-chart');
-    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
-    if (cv) drawChart(cv, [], { loading: true });
     var depuis = dateDebutDistanceLisible();
-    if (elNote) elNote.textContent = 'Toutes les mesures de cet onglet partent du ' + depuis + ', premier jour du mode à distance.';
+    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    if (elNote) elNote.textContent = 'Les parties jouées chacun sur son téléphone et arrivées au résultat, depuis le ' + depuis + ', premier jour du mode à distance. Une partie se joue sur deux téléphones : les deux arrivent au résultat quand tout va bien, un seul si l\'autre a fermé la page avant.';
     if (!joursDepuisDebutDistance()) {
-      if (elL) elL.textContent = '—'; if (elD) elD.textContent = '—'; if (elP) elP.textContent = '—';
+      if (elD) elD.textContent = '—'; if (elFins) elFins.textContent = '';
       if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">La mesure commence le ' + esc(depuis) + '.</p>';
-      if (cv) drawChart(cv, [], {});
-      var leg0 = document.getElementById('admin-distance-legende'); if (leg0) leg0.innerHTML = '';
       return;
     }
-    Promise.all([
-      chargeLancesDepuisDebut(),
-      chargeDistanceParJour(),
-      chargeSalonParPage(),
-      statsRpc('get_quiz_counts')
-    ]).then(function (r) {
-      var lances = r[0], distance = r[1];
-      if (!Array.isArray(r[2])) throw new Error('pas de rpc');
-      if (elL) elL.textContent = lances.total.toLocaleString('fr-FR');
-      if (elD) elD.textContent = distance.departs.toLocaleString('fr-FR');
-      if (elP) elP.textContent = lances.total ? pct(distance.departs, lances.total) + ' %' : '—';
-      var elFins = document.getElementById('admin-distance-fins');
-      if (elFins) elFins.textContent = distance.fins.toLocaleString('fr-FR') + ' finis à distance';
-      renderDistanceCourbe(lances, distance);
-
-      var dist = {};
-      r[2].forEach(function (x) {
+    chargeSalonParPage().then(function (rows) {
+      if (!Array.isArray(rows)) throw new Error('pas de rpc');
+      var fins = {}, totalFins = 0;
+      rows.forEach(function (x) {
         var c = canon(x.quiz_slug);
-        if (!dist[c]) dist[c] = { departs: 0, fins: 0 };
-        dist[c].departs += Number(x.departs) || 0;
-        dist[c].fins += Number(x.fins) || 0;
+        if (!c) return;
+        var f = Number(x.fins) || 0;
+        fins[c] = (fins[c] || 0) + f;
+        totalFins += f;
       });
       var slugs = PAGES_DISTANCE.slice();
-      Object.keys(dist).forEach(function (k) { if (slugs.indexOf(k) === -1) slugs.push(k); });
+      Object.keys(fins).forEach(function (k) { if (slugs.indexOf(k) === -1) slugs.push(k); });
       var lignes = slugs.map(function (slug) {
-        var d = dist[slug] || { departs: 0, fins: 0 };
-        return { slug: slug, lances: lances.parPage[slug] || 0, departs: d.departs, fins: d.fins };
-      }).sort(function (a, b) { return b.departs - a.departs || b.lances - a.lances; });
-      var max = Math.max(1, lignes.reduce(function (m, l) { return Math.max(m, l.departs); }, 0));
-      var html = '<div class="stats-entetes">'
-        + '<span class="stats-entete-nom">Page</span>'
-        + '<span class="stats-tri" style="--col:var(--adm-s-lances)">Lancés</span>'
-        + '<span class="stats-tri" style="--col:var(--adm-s-finis)">À distance</span>'
-        + '<span class="stats-tri" style="--col:var(--adm-s-taux)">Part</span>'
+        var f = fins[slug] || 0;
+        return { slug: slug, fins: f, parties: partiesDistance(f) };
+      }).sort(function (a, b) { return b.parties - a.parties || b.fins - a.fins; });
+      if (elD) elD.textContent = partiesDistance(totalFins).toLocaleString('fr-FR');
+      if (elFins) elFins.textContent = totalFins.toLocaleString('fr-FR') + ' téléphones arrivés au résultat';
+      var max = Math.max(1, lignes.reduce(function (m, l) { return Math.max(m, l.parties); }, 0));
+      var html = '<div class="stats-entetes stats-entetes--distance">'
+        + '<span class="stats-entete-nom">Test</span>'
+        + '<span class="stats-tri" style="--col:var(--adm-s-finis)">Parties à distance</span>'
         + '</div>';
       html += lignes.map(function (l) {
-        var part = l.lances ? pct(l.departs, l.lances) : null;
-        var bulle = nomQuiz(l.slug) + ' · ' + l.departs.toLocaleString('fr-FR') + ' lancés à distance, ' + l.fins.toLocaleString('fr-FR') + ' finis à distance, sur ' + l.lances.toLocaleString('fr-FR') + ' lancés depuis le ' + depuis;
-        return '<div class="stats-row stats-row--fixe" style="--part:' + Math.round((l.departs / max) * 100) + '%" title="' + esc(bulle) + '">'
+        var bulle = nomQuiz(l.slug) + ' · ' + l.parties.toLocaleString('fr-FR') + ' parties à distance finies, ' + l.fins.toLocaleString('fr-FR') + ' téléphones arrivés au résultat depuis le ' + depuis;
+        return '<div class="stats-row stats-row--distance" style="--part:' + Math.round((l.parties / max) * 100) + '%" title="' + esc(bulle) + '">'
           + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
-          + '<span class="stats-cell stats-cell--lances">' + l.lances.toLocaleString('fr-FR') + '</span>'
-          + '<span class="stats-cell stats-cell--finis">' + l.departs.toLocaleString('fr-FR')
-          + (l.fins ? '<span class="stats-cell-jour" title="Finis à distance">' + l.fins.toLocaleString('fr-FR') + ' finis</span>' : '') + '</span>'
-          + (part === null ? '<span class="stats-cell stats-cell--ratio est-vide">—</span>'
-             : '<span class="stats-cell stats-cell--ratio">' + part + ' %</span>')
+          + '<span class="stats-cell stats-cell--finis">' + l.parties.toLocaleString('fr-FR')
+          + (l.fins ? '<span class="stats-cell-jour" title="Téléphones arrivés au résultat">' + l.fins.toLocaleString('fr-FR') + ' tél.</span>' : '') + '</span>'
           + '</div>';
       }).join('');
       if (listEl) listEl.innerHTML = html;
     }).catch(function () {
       if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les parties à distance ne remontent pas : les fonctions salon_parties ne répondent pas (migration non appliquée, ou délai de trois secondes dépassé).</p>';
-      if (elL) elL.textContent = '-'; if (elD) elD.textContent = '-'; if (elP) elP.textContent = '-';
-      if (cv) drawChart(cv, [], {});
+      if (elD) elD.textContent = '-'; if (elFins) elFins.textContent = '';
     });
   }
 
@@ -1207,7 +1105,6 @@
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_starts_total != null ? v[0].get_quiz_starts_total : v[0])) : v;
       if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
       if (elTotal) elTotal.textContent = Number(n).toLocaleString('fr-FR');
-      ligneDistance();
       return statsRpc('get_quiz_starts_counts');
     }).then(function (rows) {
       if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
@@ -2320,10 +2217,14 @@
   // Le trafic s'ouvre sur la journee en cours : c'est ce qu'on vient voir
   // en premier, les periodes plus longues sont a un clic.
   var traficPeriode = 1;
-  var traficDonnees = null;          // { resume, daily, pages, sources, profondeur, entonnoir }
+  // Depuis le 20 octobre 2026, l'onglet ne lit plus les visites par page,
+  // la profondeur de visite ni l'entonnoir des pages jouables (Thomas : « ça
+  // ne me sert à rien de savoir combien de visite par page, sauf pour
+  // l'évaluation », qui a son onglet). Les fonctions get_trafic_pages,
+  // get_trafic_profondeur et get_trafic_entonnoir restent en base et dans
+  // admin-stats, plus rien ne les appelle.
+  var traficDonnees = null;          // { resume, daily, sources, sourcePref, sourceDaily }
   var traficCouchesVues = { visites: true, vues: true };
-  var traficTriEnt = { col: 'visites', sens: -1 };
-  var traficTriPages = { col: 'pages_vues', sens: -1 };
   var _traficCouches = null;
 
   var TRAFIC_COURBES = [
@@ -2375,16 +2276,13 @@
   function loadTrafic() {
     var tz = fuseau();
     var n = traficPeriode;
-    var vide = { resume: null, daily: [], pages: [], sources: [], profondeur: [], entonnoir: [], sourcePref: [], sourceDaily: [] };
+    var vide = { resume: null, daily: [], sources: [], sourcePref: [], sourceDaily: [] };
     drawChart(document.getElementById('trafic-chart'), [], { loading: true });
     drawChart(document.getElementById('blog-sourcepref-chart'), [], { loading: true });
     Promise.all([
       statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_daily', { p_days: joursCourbeTrafic(), p_tz: tz }),
-      statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
-      statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
-      statsRpc('get_trafic_entonnoir', { p_days: n, p_tz: tz }),
       statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
       statsRpc('get_source_pref_daily', { p_days: joursCourbeTrafic(), p_tz: tz })
     ]).then(function (r) {
@@ -2396,13 +2294,10 @@
       traficDonnees = {
         resume: Array.isArray(r[0]) ? (r[0][0] || null) : null,
         daily: estTab(r[1]),
-        pages: estTab(r[2]),
-        sources: estTab(r[3]),
-        profondeur: estTab(r[4]),
-        entonnoir: estTab(r[5]),
-        sourcePref: estTab(r[6]),
-        sourceDaily: estTab(r[7]),
-        erreurSources: !Array.isArray(r[6])
+        sources: estTab(r[2]),
+        sourcePref: estTab(r[3]),
+        sourceDaily: estTab(r[4]),
+        erreurSources: !Array.isArray(r[3])
       };
       if (!Array.isArray(r[0])) traficDonnees.erreur = true;
       renderTrafic();
@@ -2417,9 +2312,6 @@
     renderTraficKpis();
     renderTraficCourbe();
     renderTraficSources();
-    renderTraficProfondeur();
-    renderTraficEntonnoir();
-    renderTraficPages();
     renderSourceCourbe();
   }
 
@@ -2572,90 +2464,6 @@
     var fusion = Object.keys(par).map(function (k) { return { nom: k, valeur: par[k] }; })
       .sort(function (a, b) { return b.valeur - a.valeur; }).slice(0, 12);
     barres('trafic-sources', fusion, 'hsl(258 70% 55%)');
-  }
-
-  function renderTraficProfondeur() {
-    var l = (traficDonnees ? traficDonnees.profondeur : []).map(function (x) {
-      var n = Number(x.pages);
-      return { nom: n >= 6 ? '6 pages ou plus' : (n + (n > 1 ? ' pages' : ' page')), valeur: Number(x.visites) || 0, ordre: n };
-    }).sort(function (a, b) { return a.ordre - b.ordre; });
-    barres('trafic-profondeur', l, 'hsl(150 55% 42%)');
-  }
-
-  // ── Entonnoir ──────────────────────────────────────────────────────────
-  // Les trois nombres viennent de la meme requete et portent sur les memes
-  // visites : le taux ne peut donc pas depasser 100 % par accident, ce qui
-  // arrivait fatalement quand on rapprochait deux totaux calcules chacun de
-  // son cote.
-  function renderTraficEntonnoir() {
-    var el = document.getElementById('trafic-entonnoir');
-    if (!el) return;
-    var lignes = (traficDonnees ? traficDonnees.entonnoir : []).map(function (x) {
-      var slug = canon(x.route_key);
-      return {
-        slug: slug, nom: nomQuiz(slug),
-        visites: Number(x.visites) || 0,
-        lances: Number(x.lances) || 0,
-        finis: Number(x.finis) || 0
-      };
-    });
-    if (!lignes.length) { messageVide('trafic-entonnoir', traficDonnees && traficDonnees.erreur ? TXT_ERREUR : TXT_ATTENTE); return; }
-    var t = traficTriEnt;
-    lignes.sort(function (a, b) { return (a[t.col] - b[t.col]) * t.sens; });
-    var max = Math.max.apply(null, lignes.map(function (l) { return l[t.col]; })) || 1;
-    el.innerHTML = lignes.map(function (l) {
-      return '<div class="stats-row trafic-ligne" style="--fam:hsl(258 70% 55%);--part:' + (l[t.col] / max) * 100 + '%">'
-        + '<span class="stats-row-name" title="' + esc(l.nom) + '">' + esc(l.nom) + '</span>'
-        + '<span class="stats-cell stats-cell--visites">' + nb(l.visites) + '</span>'
-        + '<span class="stats-cell stats-cell--lances">' + nb(l.lances)
-        + '<span class="stats-cell-jour trafic-sous">' + pct(l.lances, l.visites) + ' %</span></span>'
-        + '<span class="stats-cell stats-cell--finis">' + nb(l.finis)
-        + '<span class="stats-cell-jour trafic-sous">' + pct(l.finis, l.lances) + ' %</span></span>'
-        + '</div>';
-    }).join('');
-    majFleches('[data-tri-ent]', 'triEnt', traficTriEnt);
-  }
-
-  // ── Toutes les pages ───────────────────────────────────────────────────
-  function renderTraficPages() {
-    var el = document.getElementById('trafic-pages');
-    if (!el) return;
-    var lignes = (traficDonnees ? traficDonnees.pages : []).map(function (x) {
-      var visites = Number(x.visites) || 0;
-      var entrees = Number(x.entrees) || 0;
-      return {
-        path: x.path, pages_vues: Number(x.pages_vues) || 0,
-        visites: visites, entrees: entrees,
-        navigation: Math.max(0, visites - entrees),
-        rebond: entrees ? Math.round((Number(x.rebonds) / entrees) * 100) : 0
-      };
-    });
-    if (!lignes.length) { messageVide('trafic-pages', traficDonnees && traficDonnees.erreur ? TXT_ERREUR : TXT_ATTENTE); return; }
-    var t = traficTriPages;
-    lignes.sort(function (a, b) { return (a[t.col] - b[t.col]) * t.sens; });
-    var max = Math.max.apply(null, lignes.map(function (l) { return l[t.col]; })) || 1;
-    el.innerHTML = lignes.map(function (l) {
-      return '<div class="stats-row trafic-ligne" style="--fam:hsl(199 85% 45%);--part:' + (l[t.col] / max) * 100 + '%">'
-        + '<span class="stats-row-name" title="' + esc(l.path) + '">' + esc(l.path) + '</span>'
-        + '<span class="stats-cell stats-cell--vues">' + nb(l.pages_vues) + '</span>'
-        + '<span class="stats-cell stats-cell--visites">' + nb(l.visites) + '</span>'
-        + '<span class="stats-cell stats-cell--lances">' + nb(l.entrees)
-        + '<span class="stats-cell-jour trafic-sous">' + nb(l.navigation) + ' par nav.</span></span>'
-        + '<span class="stats-cell stats-cell--ratio">' + (l.entrees ? l.rebond + ' %' : '—') + '</span>'
-        + '</div>';
-    }).join('');
-    majFleches('[data-tri-pages]', 'triPages', traficTriPages);
-  }
-
-  // Fleche montante ou descendante sur l'en-tete actif, comme dans l'onglet
-  // Stats : sans repere, on ne sait plus dans quel sens la liste est rangee.
-  function majFleches(selecteur, attr, etat) {
-    document.querySelectorAll(selecteur).forEach(function (b) {
-      var actif = b.dataset[attr] === etat.col;
-      b.classList.toggle('est-actif', actif);
-      var f = b.querySelector('.stats-tri-fleche');
-      if (f) f.textContent = actif ? (etat.sens === -1 ? '▾' : '▴') : '▾';
-    });
   }
 
   // ══ Sources préférées Google (dans l'onglet Trafic) ═══════════════════
@@ -3220,46 +3028,147 @@
     var m = { actif: ['Actif', 'hsl(142 71% 45%/0.12)', 'hsl(142 71% 32%)'], desinscrit: ['Désinscrit', 'hsl(var(--muted))', 'hsl(var(--muted-foreground))'], invalide: ['Invalide', 'hsl(0 70% 50%/0.12)', 'hsl(0 70% 40%)'] }[st] || [st, 'hsl(var(--muted))', 'inherit'];
     return '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:' + m[1] + ';color:' + m[2] + ';">' + esc(m[0]) + '</span>';
   }
+  // place() de l'onglet Bilan est une variable locale de son chargeur : d'ici,
+  // elle n'existe pas. Jusqu'au 20 octobre 2026 l'onglet Leads plantait sur
+  // « place is not defined » au premier rendu des abonnés, puis une seconde
+  // fois dans le catch qui voulait écrire l'erreur, et les tuiles restaient à
+  // « - » et « Chargement... » (Thomas : « aucune data ressort, y'a que les
+  // emails du ebook »).
+  function ecritAbonnes(id, texte) { var e = document.getElementById(id); if (e) e.textContent = texte; }
+  function placeAbonnes(id, html) { var e = document.getElementById(id); if (e) e.innerHTML = html; }
+  // L'onglet s'ouvre par deux chemins à la fois (le clic et le changement
+  // d'onglet appellent tous deux loadLeads) : une seule lecture à la fois.
+  var abonnesEnCours = null;
   function loadAbonnes() {
+    if (abonnesEnCours) return abonnesEnCours;
+    abonnesEnCours = chargeAbonnes();
+    var libere = function () { abonnesEnCours = null; };
+    abonnesEnCours.then(libere, libere);
+    return abonnesEnCours;
+  }
+  function chargeAbonnes() {
     ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) {
       var e = document.getElementById(id);
       if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
     });
-    statsRpc('get_abonnes_tableau', { p_jours: 30 }).then(function (d) {
+    return statsRpc('get_abonnes_tableau', { p_jours: 30 }).then(function (d) {
       if (!d || typeof d !== 'object' || !Array.isArray(d.par_source)) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
-      renderAbonnes(d);
+      renderAbonnes(d, null);
+      return chargeVuesResultat().then(function (vues) { renderAbonnes(d, vues); }, function (e) {
+        ecritAbonnes('abonnes-taux', '—');
+        ecritAbonnes('abonnes-taux-sub', 'écrans de résultat illisibles : ' + (e && e.message ? e.message : e));
+      });
     }).catch(function (e) {
       var msg = '<p class="bil-vide">Abonnés illisibles : ' + esc(e && e.message ? e.message : e) + '. La migration 20261020100000 (abonnes-base.yml) est-elle passée ?</p>';
-      ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) { place(id, msg); });
-      ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues'].forEach(function (id) { ecrit(id, '—'); });
+      ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) { placeAbonnes(id, msg); });
+      ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues', 'abonnes-taux'].forEach(function (id) { ecritAbonnes(id, '—'); });
     });
   }
-  function renderAbonnes(d) {
-    ecrit('abonnes-total', nombreAb(d.total));
-    ecrit('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
-    ecrit('abonnes-jour', nombreAb(d.aujourd_hui));
-    ecrit('abonnes-jour-sub', nombreAb(d.sept_jours) + ' sur sept jours');
-    ecrit('abonnes-periode', nombreAb(d.periode));
+  // ── Le taux de capture (20 octobre 2026) ──
+  // Thomas : « pour le nombre de visites peu de gens me laissent leur email ».
+  // Les visites ne disent rien : seuls ceux qui arrivent au résultat d'un test
+  // à porte la voient. Le dénominateur est donc le nombre d'écrans de résultat
+  // vus sur ces pages (chemins /<page>/resultat/ que resultat-url.js enregistre,
+  // lus par get_trafic_pages), dans les cinq langues, et le numérateur les
+  // nouvelles adresses. Les fenêtres ne remontent pas avant le lancement de la
+  // porte (LANCEMENT_PORTE) : avant, il n'y avait rien à laisser. C'est un
+  // plancher : un appareil qui a déjà donné son adresse voit ses résultats
+  // sans porte, et son écran de résultat compte quand même.
+  var LANCEMENT_PORTE = '2026-10-19';
+  var CAPTURE_CHEMINS = (typeof window !== 'undefined' && window.__QC_CAPTURE_CHEMINS) || {};
+  function joursDepuisPorte() {
+    var d0 = new Date(LANCEMENT_PORTE + 'T12:00:00');
+    var auj = new Date(); auj.setHours(12, 0, 0, 0);
+    return Math.max(1, Math.floor((auj.getTime() - d0.getTime()) / 86400000) + 1);
+  }
+  function vuesParSource(rows) {
+    var source = {};
+    Object.keys(CAPTURE_CHEMINS).forEach(function (id) {
+      (CAPTURE_CHEMINS[id] || []).forEach(function (c) { source[c + (c.charAt(c.length - 1) === '/' ? '' : '/') + 'resultat/'] = id; });
+    });
+    var out = { total: 0, parSource: {} };
+    (Array.isArray(rows) ? rows : []).forEach(function (r) {
+      var id = source[r.path];
+      if (!id) return;
+      var n = Number(r.pages_vues) || 0;
+      out.total += n;
+      out.parSource[id] = (out.parSource[id] || 0) + n;
+    });
+    return out;
+  }
+  function chargeVuesResultat() {
+    if (!Object.keys(CAPTURE_CHEMINS).length) return Promise.reject(new Error('pages à porte inconnues (admin construit sans capturePages)'));
+    var depuis = joursDepuisPorte();
+    var fenetres = { jour: 1, semaine: Math.min(7, depuis), periode: Math.min(30, depuis) };
+    var tz = fuseau();
+    var cles = Object.keys(fenetres);
+    // Une lecture par durée : tant que la porte a moins de sept jours, la
+    // semaine et la période ont la même.
+    var durees = cles.map(function (k) { return fenetres[k]; }).filter(function (n, i, t) { return t.indexOf(n) === i; });
+    return Promise.all(durees.map(function (n) {
+      return statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }).then(function (rows) {
+        if (!Array.isArray(rows)) throw new Error((rows && (rows.message || rows.hint)) || 'réponse inattendue');
+        return vuesParSource(rows);
+      });
+    })).then(function (res) {
+      var out = { fenetres: fenetres };
+      cles.forEach(function (k) { out[k] = res[durees.indexOf(fenetres[k])]; });
+      return out;
+    });
+  }
+  function tauxCapture(adresses, vues) {
+    if (!vues) return null;
+    return Math.round(1000 * (Number(adresses) || 0) / vues) / 10;
+  }
+  function pourcentAb(t) { return t === null ? '—' : t.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' %'; }
+  function renderAbonnes(d, vues) {
+    ecritAbonnes('abonnes-total', nombreAb(d.total));
+    ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
+    ecritAbonnes('abonnes-jour', nombreAb(d.aujourd_hui));
+    ecritAbonnes('abonnes-jour-sub', nombreAb(d.sept_jours) + ' sur sept jours');
+    ecritAbonnes('abonnes-periode', nombreAb(d.periode));
     var serie = Array.isArray(d.serie) ? d.serie : [];
     var moyenne = serie.length ? Math.round((serie.reduce(function (a, j) { return a + (Number(j.n) || 0); }, 0) / serie.length) * 10) / 10 : 0;
-    ecrit('abonnes-periode-sub', 'soit ' + moyenne.toLocaleString('fr-FR') + ' par jour en moyenne');
+    ecritAbonnes('abonnes-periode-sub', 'soit ' + moyenne.toLocaleString('fr-FR') + ' par jour en moyenne');
     var langues = Array.isArray(d.par_langue) ? d.par_langue : [];
     var premiere = langues[0];
-    ecrit('abonnes-langues', premiere ? premiere.lang.toUpperCase() + ' ' + Math.round(100 * (Number(premiere.n) || 0) / Math.max(1, Number(d.total) || 0)) + ' %' : '—');
-    ecrit('abonnes-langues-sub', langues.map(function (l) { return l.lang.toUpperCase() + ' ' + nombreAb(l.n); }).join(' · ') || 'aucune adresse');
+    ecritAbonnes('abonnes-langues', premiere ? premiere.lang.toUpperCase() + ' ' + Math.round(100 * (Number(premiere.n) || 0) / Math.max(1, Number(d.total) || 0)) + ' %' : '—');
+    ecritAbonnes('abonnes-langues-sub', langues.map(function (l) { return l.lang.toUpperCase() + ' ' + nombreAb(l.n); }).join(' · ') || 'aucune adresse');
 
     var sources = Array.isArray(d.par_source) ? d.par_source : [];
-    place('abonnes-sources', sources.length
-      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Abonnés</th><th>Actifs</th><th>30 jours</th>' +
+    // Le taux : aujourd'hui en grand, la semaine et la période dessous. Les
+    // adresses de la période sont celles des tests seulement (l'e-book n'a
+    // pas d'écran de résultat) ; celles du jour et de la semaine comptent
+    // l'e-book aussi, qui pèse peu.
+    if (vues) {
+      var desTests = sources.reduce(function (a, x) { return x.source === 'ebook' ? a : a + (Number(x.periode) || 0); }, 0);
+      var tJour = tauxCapture(d.aujourd_hui, vues.jour.total);
+      ecritAbonnes('abonnes-taux', pourcentAb(tJour));
+      var tPeriode = pourcentAb(tauxCapture(desTests, vues.periode.total));
+      // Tant que la porte a moins de sept jours, les deux fenêtres se
+      // confondent : une seule mention, « depuis le lancement ».
+      var suite = vues.fenetres.semaine === vues.fenetres.periode
+        ? 'depuis le lancement (' + vues.fenetres.periode + ' j) : ' + tPeriode
+        : '7 j : ' + pourcentAb(tauxCapture(d.sept_jours, vues.semaine.total)) + ' · ' + vues.fenetres.periode + ' j : ' + tPeriode;
+      ecritAbonnes('abonnes-taux-sub', 'aujourd\'hui, sur ' + nombreAb(vues.jour.total) + ' résultats vus · ' + suite);
+    } else {
+      ecritAbonnes('abonnes-taux', '…');
+      ecritAbonnes('abonnes-taux-sub', 'lecture des écrans de résultat');
+    }
+    var colTaux = vues ? '<th>Résultats vus (' + vues.fenetres.periode + ' j)</th><th>Taux</th>' : '';
+    placeAbonnes('abonnes-sources', sources.length
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Abonnés</th><th>Actifs</th><th>30 jours</th>' + colTaux +
         LANGUES_ABONNES.map(function (l) { return '<th>' + l.toUpperCase() + '</th>'; }).join('') + '</tr></thead><tbody>' +
         sources.map(function (x) {
-          return '<tr><td class="bil-gauche">' + esc(libelleSourceAbonnes(x.source)) + ' <span style="opacity:.55;font-size:.75rem">' + esc(x.source) + '</span></td><td>' + nombreAb(x.n) + '</td><td>' + nombreAb(x.actifs) + '</td><td>' + nombreAb(x.periode) + '</td>' +
+          var vuesSource = vues && x.source !== 'ebook' ? (vues.periode.parSource[x.source] || 0) : null;
+          var cellules = vues ? '<td>' + (vuesSource === null ? '' : nombreAb(vuesSource)) + '</td><td style="white-space:nowrap">' + (vuesSource ? pourcentAb(tauxCapture(x.periode, vuesSource)) : '') + '</td>' : '';
+          return '<tr><td class="bil-gauche">' + esc(libelleSourceAbonnes(x.source)) + ' <span style="opacity:.55;font-size:.75rem">' + esc(x.source) + '</span></td><td>' + nombreAb(x.n) + '</td><td>' + nombreAb(x.actifs) + '</td><td>' + nombreAb(x.periode) + '</td>' + cellules +
             LANGUES_ABONNES.map(function (l) { return '<td>' + (Number(x[l]) ? nombreAb(x[l]) : '') + '</td>'; }).join('') + '</tr>';
         }).join('') + '</tbody></table></div>'
       : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
 
     var derniers = Array.isArray(d.derniers) ? d.derniers : [];
-    place('abonnes-derniers', derniers.length
+    placeAbonnes('abonnes-derniers', derniers.length
       ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">E-mail</th><th>Langue</th><th class="bil-gauche">Source</th><th>Statut</th><th>Captures</th><th>Le</th></tr></thead><tbody>' +
         derniers.map(function (a) {
           return '<tr><td class="bil-gauche">' + esc(a.email) + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
@@ -3701,35 +3610,6 @@
       bilanJours = Number(b.dataset.bilanJours) || 30;
       loadBilan();
     });
-    // La legende de la courbe des parties a distance, meme mecanique.
-    var legDi = document.getElementById('admin-distance-legende');
-    if (legDi) legDi.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-distance-courbe]');
-      if (!b) return;
-      var cle = b.dataset.distanceCourbe;
-      var allumees = Object.keys(distanceCouchesVues).filter(function (k) { return distanceCouchesVues[k]; });
-      if (distanceCouchesVues[cle] && allumees.length === 1) return;
-      distanceCouchesVues[cle] = !distanceCouchesVues[cle];
-      if (_distanceCouches) {
-        _distanceCouches.forEach(function (c) { c.visible = distanceCouchesVues[c.cle]; });
-        renderDistanceLegende(_distanceCouches);
-        drawChart(document.getElementById('admin-distance-chart'), _distanceCouches, {});
-      }
-    });
-    // Tri des deux listes. Recliquer la meme colonne inverse le sens.
-    function brancheTri(selecteur, attr, etat, redessine) {
-      document.querySelectorAll(selecteur).forEach(function (b) {
-        b.addEventListener('click', function () {
-          var col = this.dataset[attr];
-          if (etat.col === col) etat.sens = -etat.sens;
-          else { etat.col = col; etat.sens = -1; }
-          redessine();
-        });
-      });
-    }
-    brancheTri('[data-tri-ent]', 'triEnt', traficTriEnt, renderTraficEntonnoir);
-    brancheTri('[data-tri-pages]', 'triPages', traficTriPages, renderTraficPages);
-
     // ── Légende de la courbe « source préférée » (onglet Trafic) ────────
     // Meme mecanique que la legende du trafic : on allume et on eteint une
     // courbe, sans jamais pouvoir eteindre la derniere.
@@ -3754,14 +3634,6 @@
         return;
       }
       if (currentTab === 'bilan') { dessineBilan(); return; }
-      if (currentTab === 'distance') {
-        if (_distanceCouches) {
-          _distanceCouches.forEach(function (c) { c.couleur = teinte(c.cle === 'part' ? 'ratio' : (c.cle === 'distance' ? 'finis' : 'lances'), c.couleur); });
-          renderDistanceLegende(_distanceCouches);
-          drawChart(document.getElementById('admin-distance-chart'), _distanceCouches, {});
-        }
-        return;
-      }
       if (currentTab !== 'stats') return;
       if (_lastTotalSeries) renderTotalDaily(_lastTotalSeries);
       if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, _lastQuizOpts);

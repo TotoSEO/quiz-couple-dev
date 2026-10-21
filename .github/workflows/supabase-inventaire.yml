@@ -1,0 +1,132 @@
+name: Supabase · inventaire
+
+# Un état des lieux à lancer à la main (« Run workflow ») quand le tableau
+# de bord Supabase affiche un dépassement et qu'on ne sait pas d'où il
+# vient : taille de la base et des plus grosses tables (schémas public,
+# storage, cron, net), le stockage bucket par bucket et jour par jour, les
+# vingt plus gros fichiers, les fichiers du bucket des rendus que plus aucun
+# post ne référence (le ménage de l'entretien aurait dû les effacer), l'état
+# des déclinaisons, les dernières lignes du journal de l'entretien, et la
+# table des abonnés avec un appel de sa fonction d'admin (l'onglet Leads
+# vide du 20 octobre 2026), les réglages de journalisation de Postgres, et
+# les logs des dernières 24 heures (par service, par chemin d'API, par code
+# de réponse, premières lignes de Postgres et de Realtime : Supabase facture
+# les logs à l'octet, 1 Go inclus sur le plan gratuit, 7 Go consommés en
+# octobre 2026). Lecture seule : rien n'est modifié. Les requêtes passent par
+# l'API de gestion, comme les migrations de social-base.yml ; les logs par
+# son point d'entrée analytics (ClickHouse, fenêtre de 24 h au plus).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inventaire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - name: Inventaire
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          sql "La base" "select pg_size_pretty(pg_database_size(current_database())) as base, (select pg_size_pretty(sum(pg_total_relation_size(c.oid))) from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r') as tables_public"
+          sql "Les quinze plus grosses tables (public, storage, cron, net)" "select n.nspname || '.' || c.relname as table_, pg_size_pretty(pg_total_relation_size(c.oid)) as taille, c.reltuples::bigint as lignes_estimees from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname in ('public', 'storage', 'cron', 'net', 'auth', 'realtime') and c.relkind = 'r' order by pg_total_relation_size(c.oid) desc limit 15"
+          sql "Le stockage, bucket par bucket" "select bucket_id, count(*) as objets, pg_size_pretty(coalesce(sum((metadata->>'size')::bigint), 0)) as taille, min(created_at)::date as depuis, max(created_at)::date as dernier from storage.objects group by 1 order by sum((metadata->>'size')::bigint) desc nulls last"
+          sql "Le stockage, jour par jour (trente derniers jours de dépôt)" "select to_char(created_at, 'YYYY-MM-DD') as jour, bucket_id, count(*) as objets, pg_size_pretty(sum((metadata->>'size')::bigint)) as taille from storage.objects group by 1, 2 order by 1 desc, 2 limit 60"
+          sql "Les vingt plus gros fichiers" "select bucket_id, name, pg_size_pretty((metadata->>'size')::bigint) as taille, created_at::date as le from storage.objects order by (metadata->>'size')::bigint desc nulls last limit 20"
+          sql "Rendus que plus aucune déclinaison ne référence (orphelins)" "select count(*) as orphelins, pg_size_pretty(coalesce(sum((o.metadata->>'size')::bigint), 0)) as taille, min(o.created_at)::date as depuis from storage.objects o where o.bucket_id = 'social-medias' and not exists (select 1 from public.social_variantes v where v.fichiers::text like '%' || o.name || '%')"
+          sql "Rendus encore référencés par une déclinaison" "select count(*) as references, pg_size_pretty(coalesce(sum((o.metadata->>'size')::bigint), 0)) as taille from storage.objects o where o.bucket_id = 'social-medias' and exists (select 1 from public.social_variantes v where v.fichiers::text like '%' || o.name || '%')"
+          sql "Les déclinaisons par statut" "select statut, count(*) as n, count(*) filter (where fichiers_supprimes_le is null and fichiers::text not in ('{}', 'null')) as avec_fichiers, count(*) filter (where fichiers_supprimes_le is not null) as fichiers_supprimes, min(publier_a)::date as de, max(publier_a)::date as a from public.social_variantes group by 1 order by 2 desc"
+          sql "Le journal de l'entretien (dix dernières lignes)" "select at, niveau, message from public.social_journal where source = 'entretien' order by at desc limit 10"
+          sql "Les abonnés" "select count(*) as abonnes, count(*) filter (where source = 'ebook') as ebook, count(*) filter (where source <> 'ebook') as porte_des_resultats, max(created_at) as dernier from public.abonnes"
+          sql "La fonction de l'onglet Leads existe et le rôle de service peut l'appeler" "select to_regprocedure('public.get_abonnes_tableau(integer)') as fonction, has_function_privilege('service_role', 'public.get_abonnes_tableau(integer)', 'EXECUTE') as service_role_execute"
+          sql "La fonction de l'onglet Leads répond (400 premiers signes)" "select left(public.get_abonnes_tableau(30)::text, 400) as apercu"
+          sql "Les réglages de journalisation de Postgres (ce que Supabase ingère)" "select name, setting from pg_settings where name in ('log_statement', 'log_min_duration_statement', 'log_min_messages', 'log_min_error_statement', 'log_connections', 'log_disconnections', 'log_autovacuum_min_duration', 'log_temp_files', 'log_lock_waits', 'log_checkpoints', 'log_duration') or name like 'pgaudit.%' order by name"
+          sql "Les tâches pg_cron et leur rythme" "select jobname, schedule, active from cron.job order by jobname"
+          sql "Parties à distance par jour (sept derniers jours ; deux lignes par partie)" "select created_at::date as jour, count(*) / 2 as parties from public.salon_parties where created_at >= now() - interval '7 days' group by 1 order by 1 desc"
+          rm -f requete.json reponse.json
+
+      # Les droits réels, table par table et rôle par rôle (S, I, U, D =
+      # select, insert, update, delete), les séquences, les droits par défaut
+      # du schéma public (pg_default_acl : ce que Supabase retire le
+      # 30 octobre 2026 pour les tables créées ensuite) et l'exécution des
+      # fonctions par la clé publique. C'est la source de la migration des
+      # droits explicites (20261020180000) : on écrit ce qui est, on ne
+      # devine rien.
+      - name: Les droits de la clé publique et du rôle de service
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          droits() { echo "concat_ws(',', case when has_table_privilege('$1', c.oid, 'SELECT') then 'S' end, case when has_table_privilege('$1', c.oid, 'INSERT') then 'I' end, case when has_table_privilege('$1', c.oid, 'UPDATE') then 'U' end, case when has_table_privilege('$1', c.oid, 'DELETE') then 'D' end) as $1"; }
+          sql "Tables du schéma public : droits par rôle et RLS" "select c.relname as table_, $(droits anon), $(droits authenticated), $(droits service_role), c.relrowsecurity as rls, (select count(*) from pg_policies p where p.schemaname = 'public' and p.tablename = c.relname) as policies from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind in ('r', 'p') order by 1"
+          sql "Séquences du schéma public : usage par rôle" "select c.relname as sequence_, has_sequence_privilege('anon', c.oid, 'USAGE') as anon, has_sequence_privilege('authenticated', c.oid, 'USAGE') as authenticated, has_sequence_privilege('service_role', c.oid, 'USAGE') as service_role from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'S' order by 1"
+          sql "Droits par défaut du schéma public (r = tables, S = séquences, f = fonctions)" "select defaclrole::regrole::text as pour_le_role, coalesce(defaclnamespace::regnamespace::text, '(tous)') as schema_, defaclobjtype as objet, defaclacl::text as acl from pg_default_acl order by 1, 2, 3"
+          sql "Fonctions du schéma public exécutables par la clé publique" "select p.proname || '(' || pg_get_function_identity_arguments(p.oid) || ')' as fonction, has_function_privilege('anon', p.oid, 'EXECUTE') as anon, has_function_privilege('authenticated', p.oid, 'EXECUTE') as authenticated, has_function_privilege('service_role', p.oid, 'EXECUTE') as service_role from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prokind in ('f', 'p') order by 1"
+          rm -f requete.json reponse.json
+
+      # Les logs eux-mêmes : une requête ClickHouse sur la table « logs »,
+      # filtrée par source (edge_logs = passerelle d'API, postgres_logs,
+      # realtime_logs, function_edge_logs, storage_logs...). Vingt-quatre
+      # heures au plus par appel. Le nombre de lignes par source dit d'où vient
+      # le volume ; les chemins d'API disent quelles requêtes du site pèsent.
+      - name: Les logs des dernières 24 heures
+        run: |
+          debut=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:00Z)
+          fin=$(date -u +%Y-%m-%dT%H:%M:00Z)
+          logs() {
+            code=$(curl -sS -G -o reponse.json -w '%{http_code}' \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/analytics/endpoints/logs" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
+              --data-urlencode "sql=$2" --data-urlencode "iso_timestamp_start=$debut" --data-urlencode "iso_timestamp_end=$fin")
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r '(if type == "object" then (.result // .data // []) else . end) as $l | if ($l | length) == 0 then "(aucune ligne)" else ($l[0] | keys_unsorted | join(" | ")), ($l[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          echo "Fenêtre : $debut → $fin"
+          logs "Lignes de log par service, et octets des messages" "select source, count(*) as lignes, sum(length(event_message)) as octets_message from logs group by source order by lignes desc"
+          logs "Passerelle d'API : les trente chemins les plus appelés" "select log_attributes['request.method'] as methode, log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'edge_logs' group by methode, chemin order by n desc limit 30"
+          logs "Passerelle d'API : par code de réponse" "select toInt32OrZero(log_attributes['response.status_code']) as statut, count(*) as n from logs where source = 'edge_logs' group by statut order by n desc limit 15"
+          logs "Passerelle d'API : par navigateur ou robot (début du user agent)" "select substring(log_attributes['request.headers.user_agent'], 1, 60) as agent, count(*) as n from logs where source = 'edge_logs' group by agent order by n desc limit 15"
+          logs "Postgres : les vingt débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'postgres_logs' group by debut order by n desc limit 20"
+          logs "Realtime : les quinze débuts de message les plus fréquents" "select substring(event_message, 1, 90) as debut, count(*) as n from logs where source = 'realtime_logs' group by debut order by n desc limit 15"
+          logs "Fonctions serveur : par fonction" "select log_attributes['request.path'] as chemin, count(*) as n from logs where source = 'function_edge_logs' group by chemin order by n desc limit 15"
+          rm -f reponse.json
+      # Avant de toucher à la mesure d'audience : la passerelle d'API
+      # accepte-t-elle la clé publique en paramètre d'adresse ? Si oui, une
+      # écriture de mesure peut partir en requête « simple » (Content-Type
+      # application/x-www-form-urlencoded, aucun en-tête à nous), sans le
+      # préchargement CORS (OPTIONS) qui double une ligne de log sur cinq.
+      - name: La passerelle accepte-t-elle une requête simple (clé en paramètre, sans préchargement CORS) ?
+        env:
+          URL: ${{ secrets.SUPABASE_URL || 'https://lojvajnnvhatfplevyvy.supabase.co' }}
+          KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then echo "pas de SUPABASE_ANON_KEY dans les secrets : essai sauté"; exit 0; fi
+          essai() { echo; echo "## $1"; shift; curl -sS -o corps.txt -w 'HTTP %{http_code}\n' "$@"; head -c 300 corps.txt; echo; }
+          essai "témoin : clé en en-tête, JSON" -X POST "$URL/rest/v1/rpc/get_quiz_total" -H "apikey: $KEY" -H "Content-Type: application/json" -d '{}'
+          essai "clé en paramètre ?apikey=, corps form-urlencoded vide" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: application/x-www-form-urlencoded" -d ''
+          essai "clé en paramètre, Content-Type text/plain" -X POST "$URL/rest/v1/rpc/get_quiz_total?apikey=$KEY" -H "Content-Type: text/plain" -d '{}'
+          essai "sans aucune clé (doit refuser)" -X POST "$URL/rest/v1/rpc/get_quiz_total" -H "Content-Type: application/json" -d '{}'
+          # Une vraie écriture de mesure en requête simple, comme audience.js
+          # l'enverra : une ligne dans article_lectures sous un chemin qui
+          # n'est pas un article (aucun compteur ne la montre). 201 attendu.
+          essai "insertion form-urlencoded dans article_lectures (clé en paramètre, aucun en-tête à nous) : 201 attendu" -X POST "$URL/rest/v1/article_lectures?apikey=$KEY" -H "Content-Type: application/x-www-form-urlencoded" --data-urlencode "visite_id=sonde-passerelle-$(date -u +%s)" --data-urlencode "path=/essai-passerelle-simple/" --data-urlencode "lang=fr"
+          rm -f corps.txt

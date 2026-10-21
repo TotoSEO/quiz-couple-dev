@@ -24,9 +24,12 @@
   ];
   const homeUrl = getLocalizedUrl('home', lang);
 
-  // Le lien vers le bilan de couple porte sa source (?src=), lue dans
-  // l'onglet Bilan de l'admin.
-  const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=menu' : u; };
+  // Le lien vers l'évaluation de couple dit d'où il part par data-bilan-src
+  // (lu au clic par audience.js, puis dans l'onglet Évaluation de l'admin),
+  // jamais dans l'adresse : une adresse à paramètre est une page de plus pour
+  // Google, et le menu la répétait sur chaque page du site.
+  const urlNav = (k) => getLocalizedUrl(k, lang);
+  const srcNav = (k) => k === 'bilanCouple' ? ' data-bilan-src="menu"' : '';
   // Le bouton « Évaluer son couple » (19 octobre 2026, Thomas : « en premier
   // sur mobile, et sur PC à gauche de Test de couple, directement
   // accessible ») : seulement quand l'évaluation est ouverte (BILAN_OUVERT).
@@ -180,7 +183,7 @@
 
           <div class="entete-n1-liens">
             <% for (const link of directLinksFiltered) { %>
-            <a href="<%= urlNav(link.routeKey) %>" class="n1-lien"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+            <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="n1-lien"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
           </div>
 
@@ -238,7 +241,7 @@
           <!-- Onglets bureau -->
           <div class="entete-onglets">
             <% if (urlEval) { %>
-            <a href="<%= urlEval %>?src=menu" class="n2-eval">
+            <a href="<%= urlEval %>" data-bilan-src="menu" class="n2-eval">
               <span class="n2-eval-ic"><%- icEval %></span>
               <%= t('common:nav.evaluer', 'Évaluer son couple') %>
             </a>
@@ -255,7 +258,7 @@
                 <div class="nav-megamenu-inner">
                   <div class="nav-megamenu-grid">
                     <% for (const link of testLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>" class="nav-megamenu-item">
+                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
                       <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                       <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                     </a>
@@ -277,7 +280,7 @@
                 <div class="nav-megamenu-inner">
                   <div class="nav-megamenu-grid">
                     <% for (const link of celibLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>" class="nav-megamenu-item">
+                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
                       <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                       <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                     </a>
@@ -299,7 +302,7 @@
                 <div class="nav-megamenu-inner">
                   <div class="nav-megamenu-grid">
                     <% for (const link of quizLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>" class="nav-megamenu-item">
+                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
                       <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                       <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                     </a>
@@ -327,7 +330,7 @@
                 <div class="nav-megamenu-inner">
                   <div class="nav-megamenu-grid">
                     <% for (const link of jeuLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>" class="nav-megamenu-item">
+                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
                       <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                       <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                     </a>
@@ -359,7 +362,7 @@
                 <div class="nav-megamenu-inner">
                   <div class="nav-megamenu-grid">
                     <% for (const link of speciauxLinksFiltered) { %>
-                    <a href="<%= urlNav(link.routeKey) %>" class="nav-megamenu-item">
+                    <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="nav-megamenu-item">
                       <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                       <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                     </a>
@@ -385,7 +388,7 @@
       <div class="container mx-auto px-4">
         <div class="mobile-nav-inner">
           <% if (urlEval) { %>
-          <a href="<%= urlEval %>?src=menu-mobile" class="mobile-eval">
+          <a href="<%= urlEval %>" data-bilan-src="menu-mobile" class="mobile-eval">
             <span class="mobile-eval-ic"><%- icEval %></span>
             <span>
               <span class="mobile-eval-titre"><%= t('common:nav.evaluer', 'Évaluer son couple') %></span>
@@ -407,7 +410,7 @@
             <div class="mobile-accordion-content hidden">
               <div class="mobile-nav-grid">
                 <% for (const link of testLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>" class="mobile-nav-item">
+                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>
@@ -429,7 +432,7 @@
             <div class="mobile-accordion-content hidden">
               <div class="mobile-nav-grid">
                 <% for (const link of celibLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>" class="mobile-nav-item">
+                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>
@@ -451,7 +454,7 @@
             <div class="mobile-accordion-content hidden">
               <div class="mobile-nav-grid">
                 <% for (const link of quizLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>" class="mobile-nav-item">
+                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>
@@ -476,7 +479,7 @@
             <div class="mobile-accordion-content hidden">
               <div class="mobile-nav-grid">
                 <% for (const link of jeuLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>" class="mobile-nav-item">
+                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>
@@ -502,7 +505,7 @@
             <div class="mobile-accordion-content hidden">
               <div class="mobile-nav-grid">
                 <% for (const link of speciauxLinksFiltered) { %>
-                <a href="<%= urlNav(link.routeKey) %>" class="mobile-nav-item">
+                <a href="<%= urlNav(link.routeKey) %>"<%- srcNav(link.routeKey) %> class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>

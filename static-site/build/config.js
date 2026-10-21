@@ -341,13 +341,17 @@ export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
 // cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
 // `score`, un test fait à deux qui rend un chiffre ou un profil ; `projet`,
 // avant une grande étape ; `doute`, quand on se pose des questions sur son
-// couple. L'identifiant part dans l'adresse (?src=resultat-<id> ou
-// ?src=bas-<id>) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
+// couple. L'identifiant part avec le clic (data-bilan-src="resultat-<id>"
+// ou "bas-<id>", lu par audience.js, jamais dans l'adresse) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
 // d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
 // chacun les réponses de l'autre.
 export const BILAN_ENTREES = {
-  testCouple: { groupe: 'score', id: 'tester-couple' },
-  testCompatibilite: { groupe: 'score', id: 'compatibilite' },
+  // `sousMoteur` : la carte de l'évaluation juste sous le moteur, en plus de
+  // l'encart du résultat et de la bannière du bas (20 octobre 2026, Thomas :
+  // « mettre mieux en avant l'évaluation de couple » sur ces deux tests) ;
+  // partials/bilan-sous-moteur.ejs, inclus par quiz-generic.ejs.
+  testCouple: { groupe: 'score', id: 'tester-couple', sousMoteur: true },
+  testCompatibilite: { groupe: 'score', id: 'compatibilite', sousMoteur: true },
   testCommonPoints: { groupe: 'score', id: 'points-communs' },
   quizAmoureux: { groupe: 'score', id: 'amoureux' },
   quizTypeCouple: { groupe: 'score', id: 'type-couple' },
@@ -417,6 +421,17 @@ export const BILAN_ENTREES = {
 export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
   .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
   .map(([cle, e]) => [cle, e.id]));
+
+// Les moyens de paiement dessinés sous le prix, dans le hero de la page de
+// vente (20 octobre 2026, Thomas : « le pictogramme carte, apple pay, amazon
+// pay, ça peut rassurer »). Stripe Checkout propose ce que le tableau de bord
+// Stripe a d'activé : les cartes toujours, Apple Pay et Google Pay d'office sur
+// les appareils qui les ont, Amazon Pay seulement s'il est activé dans
+// Paramètres > Moyens de paiement. On retire d'ici un moyen qui n'est pas
+// activé : un pictogramme qui promet un moyen absent de la page de paiement
+// ferait l'inverse de rassurer. Les dessins sont dans bilan-couple.ejs
+// (PICTOS_PAIEMENT), un nom inconnu ici n'affiche rien.
+export const MOYENS_PAIEMENT = ['visa', 'mastercard', 'cb', 'applepay', 'googlepay', 'amazonpay'];
 
 export const VENDEUR = {
   nom: 'Visibilitea',

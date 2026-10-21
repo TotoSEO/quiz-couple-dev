@@ -183,20 +183,29 @@
     "stars": "stars"
   },
   "capture": {
-    "sur": "Your full results",
-    "titre": "To unlock the rest of your results, enter your email",
-    "texte": "The details of your result, the advice and what comes next appear right after.",
-    "placeholder": "your@email.com",
-    "consentement": "I agree to receive Quiz Couple's tips and offers by email. Unsubscribe in one click, any time.",
+    "sur": "Your results are ready",
+    "titre": "Just one more step to see your full results, for free!",
+    "points": [
+      "The detailed analysis of your result",
+      "Our advice for what comes next",
+      "Every other test on the site unlocked"
+    ],
+    "placeholder": "Your email address",
+    "consentement": "I agree to receive tips and news from Quiz Couple by email.",
     "confidentialite": "Privacy",
     "bouton": "See my results",
     "envoi": "One moment...",
+    "note": "No spam. Unsubscribe in one click.",
+    "merci": {
+      "titre": "Thanks, your results are unlocked!",
+      "texte": "And not just here: from now on, every test, quiz and game on the site gives you its full results without asking for your email again on this device."
+    },
     "suggestion": "Did you mean {{domaine}}?",
     "erreurs": {
       "format": "This email address doesn't look complete.",
       "domaine": "This address can't receive emails. Check the domain.",
       "jetable": "Disposable addresses aren't accepted.",
-      "consentement": "Tick the box to continue."
+      "consentement": "Tick the box to see your results."
     }
   },
   "blog": {
@@ -220,5 +229,11 @@
   },
   "jsonLd": {
     "aboutDefaut": "couple"
+  },
+  "promoBilan": {
+    "badge": "-{{pourcent}}% right now",
+    "avant": "Usual price:",
+    "apres": "Discounted price:",
+    "code": "Code {{code}} applied automatically at checkout"
   }
 }

@@ -175,7 +175,7 @@ function destinataires(ligne) {
 // stripe   : { creerSession(params), lireSession(id) } ou null (paiement fermé)
 // stripeTest : clé de test (sk_test_...) ; la page ouvre alors le paiement
 //              même tant que le bilan n'est pas ouvert, pour l'essayer.
-// courriel : { envoyer({ a, sujet, html, texte, pieces }) } ou null
+// courriel : { envoyer({ a, sujet, html, texte, pieces, lang }) } ou null
 /** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, courriel?: any, sel?: string, maintenant?: () => Date }} options */
 export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date() }) {
 
@@ -206,11 +206,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return { prenom: ligne[r + '_prenom'], genre: ligne[r + '_genre'] || null };
   }
 
+  // La réduction appliquée à la page de paiement : douze heures de plus que
+  // la fin affichée (coeur.mjs, PROMO_FIN), le temps que le site soit
+  // reconstruit sans elle.
+  const promoActive = () => C.promoEnCours(maintenant(), 12);
+
   // Ce que la page sait du paiement et du rapport.
   function paiementPour(ligne, role) {
     const paye = !!ligne.paye_le;
+    const promo = promoActive();
     return {
-      prix: C.PRIX_CENTIMES,
+      prix: promo ? C.prixPromo() : C.PRIX_CENTIMES,
+      prixBase: C.PRIX_CENTIMES,
+      promo: promo ? { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT } : null,
       garantie: C.GARANTIE_JOURS,
       paiementOuvert: !!stripe,
       paiementTest: !!stripe && stripeTest,
@@ -279,6 +287,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
+    // L'adresse e-mail est obligatoire depuis le 20 octobre 2026 (Thomas :
+    // « le PDF doit s'envoyer directement par mail, pas sur demande ») :
+    // c'est là que le rapport part tout seul, et elle permet de retrouver
+    // l'évaluation (action `retrouver`) si le lien est perdu.
+    const ea = emailPropre(corps.email);
+    if (!ea) return non(400, 'email');
 
     const ipHash = await empreinte((ctx?.ip || 'inconnue') + '|' + sel);
     const depuis = new Date(maintenant().getTime() - 3600e3).toISOString();
@@ -298,6 +312,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       src: sourcePropre(corps.src),
       a_prenom: pa, a_genre: genrePropre(corps.moi?.genre),
       b_prenom: pb, b_genre: genrePropre(corps.autre?.genre),
+      a_email: ea,
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
@@ -331,7 +346,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    const champs = {};
+    // Même règle que pour la création : le rapport part aussi à l'adresse de
+    // celui ou celle qui rejoint, sans qu'il ait rien à demander.
+    const eb = emailPropre(corps.email);
+    if (!eb) return non(400, 'email');
+    const champs = { [role + '_email']: eb };
     if (corps.prenom !== undefined) {
       const p = prenomPropre(corps.prenom);
       if (!p) return non(400, 'prenom');
@@ -449,30 +468,47 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const base = SITE + CHEMINS[lang];
     const message = solo ? t.mentionSolo : t.mention;
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
+    const params = (avecPromo) => ({
+      mode: 'payment',
+      locale: lang,
+      client_reference_id: ligne.id,
+      customer_email: email || undefined,
+      success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
+      cancel_url: base + '?annule=1&b=' + ligne.id,
+      // La réduction en cours est appliquée d'office (personne n'a de code à
+      // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
+      // champ des codes ne revient donc que sans réduction.
+      ...(avecPromo
+        ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
+        : { allow_promotion_codes: 'true' }),
+      metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
+      payment_intent_data: { metadata: { bilan: ligne.id, role } },
+      custom_text: { submit: { message } },
+      line_items: [{
+        quantity: 1,
+        price_data: {
+          currency: 'eur',
+          unit_amount: C.PRIX_CENTIMES,
+          product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
+        },
+      }],
+    });
+    let promo = promoActive();
     let session;
     try {
-      session = await stripe.creerSession({
-        mode: 'payment',
-        locale: lang,
-        client_reference_id: ligne.id,
-        customer_email: email || undefined,
-        success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
-        cancel_url: base + '?annule=1&b=' + ligne.id,
-        allow_promotion_codes: 'true',
-        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
-        payment_intent_data: { metadata: { bilan: ligne.id, role } },
-        custom_text: { submit: { message } },
-        line_items: [{
-          quantity: 1,
-          price_data: {
-            currency: 'eur',
-            unit_amount: C.PRIX_CENTIMES,
-            product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
-          },
-        }],
-      });
+      session = await stripe.creerSession(params(promo));
     } catch (e) {
-      return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+      // Un code expiré, désactivé ou à son plafond ne bloque jamais une
+      // vente : on rouvre la page de paiement au prix plein, avec le champ
+      // des codes, et l'erreur part au journal de la fonction.
+      if (!promo) return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
+      console.warn('[bilan] réduction ' + C.PROMO_CODE + ' refusée par Stripe : ' + String(e.message || e).slice(0, 200));
+      promo = false;
+      try {
+        session = await stripe.creerSession(params(false));
+      } catch (e2) {
+        return non(502, 'stripe', { detail: String(e2.message || e2).slice(0, 200) });
+      }
     }
     const champs = {
       renonciation_le: maintenant().toISOString(),
@@ -480,7 +516,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     };
     if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
     await stockage.maj(ligne.id, champs);
-    return ok({ url: session.url });
+    return ok({ url: session.url, promo });
   }
 
   // Une session Stripe payée débloque le bilan qu'elle porte en métadonnée.
@@ -562,7 +598,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       if (envois.length >= ENVOIS_MAX) break;
       let reussi = false;
       try {
-        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }] });
+        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }], lang: ligne.lang });
         reussi = true;
         envoyes++;
       } catch (e) {
@@ -664,12 +700,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return { a: ligne[role + '_prenom'], b: ligne[autre + '_prenom'], mode: estSolo(ligne) ? 'solo' : 'duo' };
   }
 
-  // Son propre lien, envoyé à l'adresse donnée. Si la personne n'avait pas
-  // encore d'adresse de rapport, celle-ci le devient ; une adresse déjà
-  // gardée n'est jamais remplacée ici (sinon « retrouver » par la première
-  // adresse ne trouverait plus rien : l'adresse du rapport se change au
-  // paiement ou sur le rapport, action `email`). Le lien est reconstruit
-  // depuis le jeton présenté : la base n'en garde que l'empreinte.
+  // Son propre lien, envoyé à l'adresse donnée ou, sans adresse dans la
+  // demande, à celle du rapport. Une adresse de rapport déjà gardée (elle
+  // l'est toujours depuis le 20 octobre 2026, demandée à la création et à
+  // l'acceptation de l'invitation) n'est jamais remplacée ici, sinon
+  // « retrouver » par la première adresse ne trouverait plus rien : elle se
+  // change au paiement ou sur le rapport, action `email`. Le lien est
+  // reconstruit depuis le jeton présenté : la base n'en garde que l'empreinte.
   async function lien(corps) {
     const c = await charger(corps);
     if (c.erreur) return c.erreur;
@@ -684,7 +721,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!ligne[role + '_email']) maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
     const msg = messageLien({ lang: ligne.lang, liens: [{ ...entreeLien(ligne, role), url: lienDe(ligne, corps.jeton) }], rotation: false });
     try {
-      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
     } catch (err) {
       console.error('[bilan] lien', String(err && err.message || err).slice(0, 200));
       return non(502, 'courriel');
@@ -727,7 +764,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     }
     const msg = messageLien({ lang: langueTrouvee || lang, liens, rotation: true });
     try {
-      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte });
+      await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: langueTrouvee || lang });
     } catch (err) {
       console.error('[bilan] retrouver', String(err && err.message || err).slice(0, 200));
       return non(502, 'courriel');
