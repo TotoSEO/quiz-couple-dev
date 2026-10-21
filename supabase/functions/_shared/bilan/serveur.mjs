@@ -117,6 +117,15 @@ export const RELANCE_APRES_H = 24;
 // (jetons_mail : rôle et empreinte), pour ne pas toucher au lien gardé sur le
 // téléphone. Au plus quatre par évaluation, les plus anciens tombent.
 export const JETONS_MAIL_MAX = 4;
+// Ce que la page compte elle-même, en plus de la visite et du clic sur
+// « Commencer » (21 octobre 2026, Thomas devant l'entonnoir : « comment cette
+// stat prend en compte les gens qui répondent seul ? »). Chaque écran du
+// parcours est compté une fois par visite, avec `_solo` en plus pour une
+// évaluation seul(e) ; la clé est la source pour la page et le bouton, la
+// cause pour une erreur du départ, le rôle (a, b) pour l'écran de l'adresse,
+// rien sinon.
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante'];
+const CAUSES_DEPART = ['prenoms', 'accord'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -162,6 +171,7 @@ const non = (statut, erreur, plus) => ({ statut, json: { erreur, ...(plus || {})
 // L'étape d'une personne : le premier domaine qu'elle n'a pas fini, ou
 // « fini ». Les domaines sont posés dans l'ordre.
 function etapeDe(situation, reponses) {
+  if (!C.situationValide(situation)) return 'situation';
   const e = C.etapes(situation, reponses);
   for (const d of C.DOMAINES) {
     const qs = d.questions.filter((q) => C.applicable(q, situation, reponses));
@@ -294,11 +304,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     };
   }
 
-  // La page du bilan vue, ou son bouton « commencer » : comptés par source.
+  // La page du bilan vue, son bouton « commencer » (comptés par source) et
+  // les écrans du parcours (ETAPES_PAGE). La page ne compte qu'une fois par
+  // visite ; `_solo` s'ajoute pour une évaluation seul(e), le total restant
+  // sur l'événement de base, comme cree et cree_solo.
   async function vue(corps) {
-    const quoi = corps?.quoi === 'cta' ? 'cta' : corps?.quoi === 'page' ? 'vue' : null;
+    const quoi = corps?.quoi === 'page' ? 'vue' : corps?.quoi === 'cta' ? 'cta'
+      : ETAPES_PAGE.includes(corps?.quoi) ? corps.quoi : null;
     if (!quoi) return non(400, 'quoi');
-    await compter(quoi, sourcePropre(corps.src));
+    let cle = '';
+    if (quoi === 'vue' || quoi === 'cta') cle = sourcePropre(corps.src);
+    else if (quoi === 'depart_erreur') cle = CAUSES_DEPART.includes(corps.cle) ? corps.cle : 'autre';
+    else if (quoi === 'email_vue') cle = corps.cle === 'b' ? 'b' : 'a';
+    await compter(quoi, cle);
+    if (corps.mode === 'solo' && quoi !== 'vue') await compter(quoi + '_solo', cle);
     return ok({ compte: true });
   }
 
@@ -307,17 +326,21 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!lang) return non(400, 'lang');
     const mode = corps.mode === undefined ? 'duo' : corps.mode;
     if (!C.modeValide(mode)) return non(400, 'mode');
-    if (!C.situationValide(corps.situation)) return non(400, 'situation');
+    // Depuis le 21 octobre 2026, la situation est demandée après la création,
+    // comme les premières questions (action `situation`) : la page de
+    // départ n'a plus que les prénoms et les deux cases. Une page d'avant
+    // l'envoie encore ici.
+    if (corps.situation !== undefined && !C.situationValide(corps.situation)) return non(400, 'situation');
     const pa = prenomPropre(corps.moi?.prenom);
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // L'adresse e-mail est obligatoire depuis le 20 octobre 2026 (Thomas :
-    // « le PDF doit s'envoyer directement par mail, pas sur demande ») :
-    // c'est là que le rapport part tout seul, et elle permet de retrouver
-    // l'évaluation (action `retrouver`) si le lien est perdu.
-    const ea = emailPropre(corps.email);
-    if (!ea) return non(400, 'email');
+    // L'adresse e-mail reste obligatoire (le rapport y part tout seul), mais
+    // depuis le 21 octobre 2026 elle est demandée à la fin de ses propres
+    // questions, juste avant l'offre (`email` avec `fin`) : `repondre` ne
+    // marque pas fini sans elle. Une page d'avant la donne encore ici.
+    const ea = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
+    if (corps.email && !ea) return non(400, 'email');
 
     const ipHash = await empreinte((ctx?.ip || 'inconnue') + '|' + sel);
     const depuis = new Date(maintenant().getTime() - 3600e3).toISOString();
@@ -329,7 +352,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // ne peut ouvrir ce bilan.
     const jetonB = nouveauJeton();
     const quand = maintenant().toISOString();
-    const situation = C.nettoieSituation(corps.situation);
+    const situation = corps.situation === undefined ? {} : C.nettoieSituation(corps.situation);
     const ligne = await stockage.inserer({
       lang,
       mode,
@@ -340,7 +363,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       a_email: ea,
       // La page a montré la phrase qui annonce l'e-mail « rapport prêt » et
       // le rappel, sous le champ de l'adresse.
-      a_rappel: corps.rappel === true,
+      a_rappel: !!ea && corps.rappel === true,
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
@@ -374,11 +397,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // Même règle que pour la création : le rapport part aussi à l'adresse de
-    // celui ou celle qui rejoint, sans qu'il ait rien à demander.
-    const eb = emailPropre(corps.email);
-    if (!eb) return non(400, 'email');
-    const champs = { [role + '_email']: eb, [role + '_rappel']: corps.rappel === true };
+    // Même règle que pour la création : l'adresse est demandée à la fin des
+    // questions ; une page d'avant la donne encore ici.
+    const eb = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
+    if (corps.email && !eb) return non(400, 'email');
+    const champs = {};
+    if (eb) { champs[role + '_email'] = eb; champs[role + '_rappel'] = corps.rappel === true; }
     if (corps.prenom !== undefined) {
       const p = prenomPropre(corps.prenom);
       if (!p) return non(400, 'prenom');
@@ -414,13 +438,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (estVerrouille(ligne)) return non(409, 'verrouille');
+    // Les questions posées dépendent de la situation : sans elle, le compte
+    // des questions serait faux et « fini » arriverait trop tôt.
+    if (!C.situationValide(ligne.situation)) return non(400, 'situation');
     const solo = estSolo(ligne);
     const v = C.valideReponses(corps.reponses, corps.nn, solo ? (corps.percu === undefined ? {} : corps.percu) : undefined);
     if (v.erreur) return non(400, v.erreur);
     const complet = C.complet(ligne.situation, v.reponses, solo ? v.percu : undefined);
     const dejaFini = !!ligne[role + '_fini'];
+    // Fini veut dire : toutes les réponses, et une adresse où envoyer le
+    // rapport (demandée à la fin depuis le 21 octobre 2026).
+    const emailManque = !ligne[role + '_email'];
     let fini = null;
-    if (complet && (corps.fini === true || dejaFini)) {
+    if (complet && (corps.fini === true || dejaFini) && (dejaFini || !emailManque)) {
       fini = dejaFini ? ligne[role + '_fini'] : maintenant().toISOString();
     }
     const avant = C.etapes(ligne.situation, ligne[role + '_reponses'] || {});
@@ -429,7 +459,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       [role + '_reponses']: v.reponses,
       [role + '_nn']: v.nn,
       [role + '_fini']: fini,
-      [role + '_etape']: fini ? 'fini' : etapeDe(ligne.situation, v.reponses),
+      [role + '_etape']: fini ? 'fini' : complet ? 'email' : etapeDe(ligne.situation, v.reponses),
       maj_le: maintenant().toISOString(),
     };
     if (solo) champs.a_percu = v.percu;
@@ -448,6 +478,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return ok({
       fini: !!fini,
       complet,
+      // Tout est répondu mais l'adresse manque : la page la demande, puis
+      // renvoie la fin.
+      emailManque: complet && !fini && emailManque,
       progression: prog,
       etat: etatPour(maj, role),
     });
@@ -701,7 +734,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const e = corps.email === '' || corps.email === null ? null : emailPropre(corps.email);
     if (corps.email && !e) return non(400, 'email');
     if ((ligne.envois || []).length >= ENVOIS_MAX) return non(429, 'trop');
-    const maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
+    const champs = { [role + '_email']: e, maj_le: maintenant().toISOString() };
+    // L'écran de fin des questions montre, sous le champ, la phrase qui
+    // annonce l'e-mail « rapport prêt » et le rappel : la page envoie alors
+    // `rappel: true`, comme à la création avant le 21 octobre 2026.
+    if (e && corps.rappel === true) champs[role + '_rappel'] = true;
+    const maj = await stockage.maj(ligne.id, champs);
     const envoi = e ? await envoyerA(maj) : { envoyes: 0 };
     const relu = envoi.envoyes ? await stockage.lire(ligne.id) : maj;
     return ok({ email: e, envoi, etat: etatPour(relu, role) });

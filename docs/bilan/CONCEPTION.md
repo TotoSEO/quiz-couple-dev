@@ -908,3 +908,72 @@ en retirant les sondes (une évaluation « sonde » par passage de
 si les pages de paiement s'ouvrent sans paiement, la fuite est passée chez
 Stripe (prix, moyens de paiement) ; si elles ne s'ouvrent toujours pas, le
 prochain levier est l'aperçu lui-même (un domaine nommé, par exemple).
+
+## 21 octobre 2026 : le départ en un écran
+
+Le même jour, Thomas devant l'entonnoir : « Seulement 1 personne sur 3
+remplit le formulaire jusqu'au bout pour démarrer l'évaluation. Sans compter
+que sur 85 qui ont commencé seulement 11 sont allés tous les deux jusqu'au
+bout. D'ailleurs comment cette stat prend en compte les gens qui répondent
+seul ? » Il a choisi de mesurer chaque étape et d'alléger le départ en même
+temps.
+
+### Ce que les chiffres ne disaient pas
+
+- « Clic sur Commencer » comptait chaque clic : quelqu'un qui revenait sur
+  la page de vente ou recliquait comptait plusieurs fois. 240 clics, ce
+  n'était pas 240 personnes.
+- « Le premier a fini » comptait aussi les évaluations seul(e), alors que
+  « le partenaire a rejoint » et « le partenaire a fini » ne concernent que
+  les évaluations à deux : 11 était à rapporter aux évaluations à deux, pas
+  aux 85.
+- Entre le clic et la création, trois écrans (prénoms et adresse, sept
+  questions de situation, deux cases) et aucun compte : impossible de dire
+  où les gens partaient.
+
+### Ce qui a changé
+
+- **Un seul écran de départ** : la façon de faire, les deux prénoms et
+  leurs genres, les deux cases (18 ans, consentement), la note RGPD, le prix
+  et le numéro d'aide. Plus d'adresse ni de situation à cet endroit.
+- **La situation, posée comme les premières questions** : une par écran,
+  avec le même dessin qu'une question, « 1 sur 7 », hors du compte des cent.
+  Elle est enregistrée d'un coup à la septième réponse ; le serveur refuse
+  des réponses tant qu'elle manque, parce que les questions posées en
+  dépendent. Celui qui arrive après (le partenaire, ou soi-même sur un autre
+  téléphone) la relit avant sa première question et peut la corriger :
+  l'écran d'acceptation de l'invitation n'a donc plus que le prénom, le
+  genre et les deux cases.
+- **L'adresse e-mail à la fin de ses propres questions**, juste avant
+  l'offre : toujours obligatoire (le serveur ne marque pas « fini » sans
+  elle), le PDF y part toujours tout seul, et la phrase sous le champ
+  annonce l'e-mail « rapport prêt » et le rappel, comme avant. On la donne
+  au moment où elle sert, après avoir vu ce qu'on a fait, au lieu de la
+  donner avant d'avoir vu une seule question.
+- **Ce qu'on perd** : une personne qui part au milieu des questions sans
+  avoir donné d'adresse ne peut plus retrouver son évaluation par e-mail
+  depuis un autre appareil. Sur le même téléphone, la page la garde ; et
+  « Recevoir mon lien par e-mail » reste proposé sur l'écran d'invitation et
+  sur la pause.
+
+### La mesure
+
+Chaque écran est compté une fois par visite par la page (action `vue`) :
+le clic sur « Commencer », l'écran de départ, ses erreurs par cause
+(prénoms manquants, cases pas cochées), l'écran d'invitation du partenaire,
+la première question de situation, l'écran de l'adresse (par rôle), l'offre
+« rapport prêt », l'attente à deux, et le clic sur « Débloquer » sans la case
+cochée. La base compte la situation donnée, la première réponse de chacun et
+le reste comme avant. Pour une évaluation seul(e), chaque compte a son
+double `_solo` ; à deux = total - seul(e). L'entonnoir de l'admin a deux
+colonnes, À deux et Seul(e), qui ne lisent que les jours depuis le
+21 octobre 2026.
+
+### Ce qu'il faut regarder ensuite
+
+Trois jours de chiffres, puis : la part des départs vus qui deviennent des
+évaluations (le formulaire), la part des créées qui donnent leur situation
+(à deux, le créateur peut partir envoyer le lien et ne jamais revenir), la
+part de ceux qui voient l'écran de l'adresse et finissent (si elle tombe,
+l'adresse à la fin coûte des personnes), et les clics sans la case cochée
+(si beaucoup, la case de renonciation bloque le paiement).

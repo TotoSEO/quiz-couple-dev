@@ -831,6 +831,30 @@
     ['disputes', 'La communication et les disputes'], ['confiance', 'La confiance et la fidélité'],
     ['intimite', 'L\'intimité et la tendresse'], ['meteo', 'Comment vous allez']
   ];
+  // Le détail des étapes, seul(e) et à deux, n'est compté que depuis le
+  // nouveau départ du 21 octobre 2026 (un écran, la situation en premières
+  // questions, l'adresse à la fin) : l'entonnoir ne lit que ces jours-là.
+  var DEBUT_ETAPES_BILAN = '2026-10-21';
+  var CLES_ETAPES_BILAN = ['ctas', 'ctas_solo', 'departs', 'departs_solo', 'departs_erreurs', 'departs_erreurs_solo',
+    'crees', 'crees_solo', 'situations_vues', 'situations_vues_solo', 'situations', 'situations_solo',
+    'commences_a', 'commences_a_solo', 'emails_vus', 'emails_vus_solo', 'emails_vus_b', 'finis_a', 'finis_a_solo',
+    'invitations_vues', 'rejoints', 'commences_b', 'finis_b', 'deux_finis', 'attentes_vues', 'offres_vues', 'offres_vues_solo',
+    'cases_manquantes', 'cases_manquantes_solo', 'paiements_ouverts', 'paiements_ouverts_solo', 'payes', 'payes_solo'];
+  // Les étapes d'une personne arrêtée qui ne sont pas des domaines.
+  var ARRETS_HORS_DOMAINES = { situation: 'à la situation, avant la première question', email: 'à l\'écran de l\'adresse, tout répondu', invitation: 'invitation pas acceptée' };
+  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', accord: 'cases pas cochées', autre: 'autre' };
+  // Une colonne de l'entonnoir : chaque barre en part de la première étape,
+  // le pourcentage de droite en part de l'étape d'avant, ou de celle que
+  // l'étape nomme (e[3]) quand elle ouvre une autre suite (le partenaire).
+  function colonneEtapesBilan(titre, etapes, couleurs) {
+    var base = etapes[0][2];
+    return '<div class="bil-colonne"><h3 class="bil-colonne-titre">' + esc(titre) + '</h3>' +
+      (base ? etapes.map(function (e, i) {
+        var avant = !i ? null : e[3] !== undefined ? etapes[e[3]][2] : etapes[i - 1][2];
+        return ligneEtapeBilan(e[0], e[1], e[2], base, avant, couleurs[i] || 'var(--adm-s-finis)');
+      }).join('')
+        : '<p class="bil-vide">Personne n\'a encore commencé de cette façon.</p>') + '</div>';
+  }
   var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple' };
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
@@ -993,28 +1017,63 @@
       ].map(function (c) { c.points = points[c.cle]; c.total = null; return c; });
       dessineBilan();
 
-      // L'entonnoir, en part des visites.
-      var base = tot.vues;
-      var etapes = [
-        ['Visites de la page', 'chaque affichage de la page de vente', tot.vues],
-        ['Clic sur «\u00a0Commencer\u00a0»', 'la page de vente cède la place aux questions', tot.ctas],
-        ['Évaluation créée', 'prénoms, situation et accord donnés', tot.crees],
-        ['Le premier a fini', 'toutes ses questions', tot.finis_a],
-        ['Le partenaire a rejoint', 'invitation ouverte et acceptée', tot.rejoints],
-        ['Le partenaire a fini', 'toutes ses questions', tot.finis_b],
-        ['Paiement ouvert', 'clic sur «\u00a0Débloquer\u00a0» et page Stripe ouverte', tot.paiements_ouverts],
-        ['Rapport payé', 'paiement confirmé par Stripe', tot.payes]
+      // L'entonnoir, à deux et seul(e), depuis le nouveau départ.
+      var serieEtapes = serie.filter(function (j) { return String(j.jour) >= DEBUT_ETAPES_BILAN; });
+      var et = {};
+      CLES_ETAPES_BILAN.concat(['vues']).forEach(function (k) { et[k] = serieEtapes.reduce(function (a, j) { return a + (Number(j[k]) || 0); }, 0); });
+      // Un compte `_solo` s'ajoute toujours à son compte de base : à deux = base - seul(e).
+      var aDeux = function (k) { return Math.max(0, et[k] - (et[k + '_solo'] || 0)); };
+      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)',
+        'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      var duo = [
+        ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', aDeux('ctas')],
+        ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', aDeux('departs')],
+        ['Évaluation créée', 'le formulaire de départ est validé', aDeux('crees')],
+        ['Situation donnée', 'les sept premières questions', aDeux('situations')],
+        ['Le créateur a commencé', 'sa première réponse', aDeux('commences_a')],
+        ['Le créateur a vu l\'écran de l\'adresse', 'toutes ses questions répondues', Math.max(0, aDeux('emails_vus') - et.emails_vus_b)],
+        ['Le créateur a fini', 'adresse donnée', aDeux('finis_a')],
+        ['Invitation ouverte', 'l\'écran d\'accueil du partenaire ; % des évaluations créées', et.invitations_vues, 2],
+        ['Le partenaire a rejoint', 'prénom et les deux cases', et.rejoints],
+        ['Le partenaire a commencé', 'sa première réponse', et.commences_b],
+        ['Le partenaire a fini', 'adresse donnée', et.finis_b],
+        ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', aDeux('offres_vues')],
+        ['Paiement ouvert', 'page Stripe ouverte (on peut payer dès sa propre fin)', aDeux('paiements_ouverts')],
+        ['Rapport payé', 'paiement confirmé par Stripe', aDeux('payes')]
       ];
-      var couleurs = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
-      place('admin-bilan-entonnoir', base
-        ? etapes.map(function (e, i) { return ligneEtapeBilan(e[0], e[1], e[2], base, i ? etapes[i - 1][2] : null, couleurs[i]); }).join('')
-        : '<p class="bil-vide">Aucune visite de la page sur la période.</p>');
+      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      var solo = [
+        ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', et.ctas_solo],
+        ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', et.departs_solo],
+        ['Évaluation créée', 'le formulaire de départ est validé', et.crees_solo],
+        ['Situation donnée', 'les sept premières questions', et.situations_solo],
+        ['A commencé', 'sa première réponse', et.commences_a_solo],
+        ['A vu l\'écran de l\'adresse', 'toutes ses questions répondues', et.emails_vus_solo],
+        ['A fini', 'adresse donnée', et.finis_a_solo],
+        ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', et.offres_vues_solo],
+        ['Paiement ouvert', 'page Stripe ouverte', et.paiements_ouverts_solo],
+        ['Rapport payé', 'paiement confirmé par Stripe', et.payes_solo]
+      ];
+      var erreursDepart = (d.erreurs_depart || []).filter(function (x) { return Number(x.n); });
+      var faitsEtapes = [
+        nombreBilan(et.vues) + ' visites de la page et ' + nombreBilan(et.ctas) + ' clics sur «\u00a0Commencer\u00a0» (' + partBilan(et.ctas, et.vues) + ')',
+        'Erreurs sur l\'écran de départ : ' + (erreursDepart.length ? erreursDepart.map(function (x) { return nombreBilan(x.n) + ' ' + (CAUSES_DEPART_BILAN[x.cause] || x.cause) + (Number(x.solo) ? ' (dont ' + nombreBilan(x.solo) + ' seul(e))' : ''); }).join(', ') : 'aucune'),
+        'Clics sur «\u00a0Débloquer\u00a0» sans la case cochée : ' + nombreBilan(aDeux('cases_manquantes')) + ' à deux, ' + nombreBilan(et.cases_manquantes_solo) + ' seul(e)',
+        'Écran d\'attente vu (à deux, offre repliée) : ' + nombreBilan(et.attentes_vues)
+      ];
+      var debutVu = serie.length && String(serie[0].jour) < DEBUT_ETAPES_BILAN;
+      place('admin-bilan-entonnoir', serieEtapes.length
+        ? '<p class="bil-note-etapes">' + (debutVu ? 'Depuis le 21 octobre 2026, jour du nouveau départ (le 21 mélange l\'ancien et le nouveau). ' : '') +
+          'Le compte «\u00a0à deux\u00a0» est le total moins le compte seul(e).</p>' +
+          '<div class="bil-colonnes">' + colonneEtapesBilan('À deux', duo, cDeux) + colonneEtapesBilan('Seul(e)', solo, cSolo) + '</div>' +
+          '<ul class="bil-faits-etapes">' + faitsEtapes.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>'
+        : '<p class="bil-vide">Le détail des étapes commence le 21 octobre 2026.</p>');
 
       // Les domaines, dans l'ordre des questions.
       var parDom = {};
       (d.domaines || []).forEach(function (x) { parDom[x.domaine] = x; });
-      var arrets = {};
-      (d.arrets || []).forEach(function (x) { arrets[x.etape] = Number(x.n) || 0; });
+      var arrets = {}, arretsSolo = {};
+      (d.arrets || []).forEach(function (x) { arrets[x.etape] = Number(x.n) || 0; arretsSolo[x.etape] = Number(x.solo) || 0; });
       var maxEntres = 0;
       BILAN_DOMAINES.forEach(function (dm) { var x = parDom[dm[0]]; if (x && Number(x.entres) > maxEntres) maxEntres = Number(x.entres); });
       var lignesDom = BILAN_DOMAINES.map(function (dm) {
@@ -1027,7 +1086,9 @@
       var autresArrets = Object.keys(arrets).filter(function (k) { return !BILAN_DOMAINES.some(function (dm) { return dm[0] === k; }); });
       place('admin-bilan-domaines', maxEntres || autresArrets.length
         ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Domaine</th><th>Entrés</th><th>Finis</th><th>Laissés en cours</th><th>Bloqués</th></tr></thead><tbody>' + lignesDom + '</tbody></table></div>' +
-          (autresArrets.length ? '<p class="bil-vide">Autres arrêts : ' + autresArrets.map(function (k) { return esc(k) + ' (' + arrets[k] + ')'; }).join(', ') + '</p>' : '')
+          (autresArrets.length ? '<p class="bil-vide">Autres arrêts : ' + autresArrets.map(function (k) {
+            return esc(ARRETS_HORS_DOMAINES[k] || k) + ' (' + arrets[k] + (arretsSolo[k] ? ', dont ' + arretsSolo[k] + ' seul(e)' : '') + ')';
+          }).join(', ') + '</p>' : '')
         : '<p class="bil-vide">Personne n\'a encore répondu sur la période.</p>');
 
       // Les sources.
