@@ -1,0 +1,188 @@
+{
+  "jour": "2026-12-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-125",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Montrer une vidéo drôle à ta personne : elle tend son téléphone, elle rit d'avance ; il regarde, ne rit pas ; elle pointe l'écran, « attends, là » ; il rit enfin, elle le regarde rire. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle tend son téléphone vers lui, elle sourit déjà, les yeux plissés. Lui regarde l'écran, curieux. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "rire",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 305,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand tu montres une vidéo drôle à ta personne",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il regarde l'écran, le visage de marbre, les yeux plats, sans bouger. Elle pointe l'écran du doigt à 1 s, les yeux grands. Le texte « attends, là » à 1 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "surpris",
+                    "bras": "pointe_devant"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 305,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« attends, là »",
+                "de": 1,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Il éclate de rire enfin, les yeux plissés. Elle le regarde rire, contente, les joues roses. Trois cœurs flottent au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "amour",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 305,
+                "y": 300,
+                "echelle": 0.55
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.2000000000000002,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

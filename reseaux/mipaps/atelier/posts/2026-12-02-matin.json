@@ -1,0 +1,214 @@
+{
+  "jour": "2026-12-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-126",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« Ce soir on se fait une grosse soirée » : ils préparent tout, popcorn, couverture, télé ; 22 h ; les deux dorment sous la couverture, le popcorn pas touché. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux sont debout, contents, des étincelles autour d'eux. Un bol de popcorn, une couverture et une télé apparaissent à côté d'eux. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "joie",
+                    "bras": "leves",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "joie",
+                    "bras": "leves",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 330,
+                "y": 340,
+                "echelle": 0.7,
+                "de": 0.6
+              },
+              {
+                "objet": "couverture",
+                "x": 330,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 1.4
+              },
+              {
+                "objet": "tele",
+                "x": 330,
+                "y": 130,
+                "echelle": 0.7,
+                "de": 2.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ce soir on se fait une grosse soirée »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux sont assis sur le canapé, face à la télé, contents, le bol de popcorn entre eux. Le texte « 22 h » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.8
+              },
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "22 h",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux dorment l'un contre l'autre sous la couverture, la bouche ouverte, des zzz au-dessus d'eux. Le bol de popcorn est resté plein à côté.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 310,
+                "y": 300,
+                "echelle": 1.4
+              },
+              {
+                "objet": "popcorn",
+                "x": 470,
+                "y": 330,
+                "echelle": 0.7
+              },
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

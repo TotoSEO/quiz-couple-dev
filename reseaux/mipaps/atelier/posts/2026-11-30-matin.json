@@ -1,0 +1,195 @@
+{
+  "jour": "2026-11-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-115",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La dernière part : un gâteau entre eux, chacun le pousse vers l'autre ; « prends-la », « non toi » ; elle se retourne une seconde ; la part a disparu, il a la bouche pleine et l'air innocent. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Le gâteau est posé entre eux, une seule part. Les deux le regardent, polis, un sourire gêné. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "pose": "debout",
+                    "expression": "gene"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "gene"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "gateau",
+                "x": 330,
+                "y": 350,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand il reste une seule part",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Le gâteau glisse vers elle à 0,8 s, puis vers lui à 2 s : chacun le pousse vers l'autre, les pattes tendues, polis. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "gateau",
+                "x": 330,
+                "y": 350,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "y": 350,
+                    "echelle": 0.7
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 380,
+                    "y": 350,
+                    "echelle": 0.7
+                  },
+                  {
+                    "a": 2,
+                    "x": 280,
+                    "y": 350,
+                    "echelle": 0.7
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« prends-la » « non toi »",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle se retourne une seconde, de dos. À 1 s la part a disparu. Lui a la bouche pleine, les joues rondes, l'air innocent, un halo au-dessus de la tête. À 2,2 s elle se retourne, perplexe.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "pose": "debout",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "miam",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "debout",
+                    "expression": "content",
+                    "angle": 150
+                  },
+                  {
+                    "a": 2,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "gateau",
+                "x": 330,
+                "y": 350,
+                "echelle": 0.7,
+                "a": 1
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
