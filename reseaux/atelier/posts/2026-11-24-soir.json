@@ -1,0 +1,259 @@
+{
+  "jour": "2026-11-24",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le réveil, la chambre, le matin : le réveil sonne, il se lève, revient avec deux tasses, elle réclame cinq minutes de plus.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une chambre au petit matin, la lumière du jour dans la fenêtre. Les deux dorment côte à côte sous la même couette, la rose à gauche, le violet à droite, les yeux fermés, des petits Z ; des notes de réveil sonnent au-dessus du violet.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "notes"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre, le matin. Le violet est debout à droite du lit, la bouche grande ouverte en un bâillement, les yeux fermés, il s'étire. La rose dort toujours dans le lit à gauche, les petits Z au-dessus d'elle.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "o"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre, un peu plus tard. Le violet est revenu avec une tasse dans chaque main, un grand sourire, les yeux tournés vers la rose. Elle dort encore dans le lit, la bouche en sourire tranquille.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "tasse",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "tasse",
+                        "main": "droite"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre. Le violet, les deux tasses à la main, regarde la rose en riant. La rose, toujours couchée, les yeux fermés et un sourire collé au visage, tire la couette jusqu'au menton.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "tasse",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "tasse",
+                        "main": "droite"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "rit",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "5 more minutes",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "The coffee is getting cold.\n\nTag her",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

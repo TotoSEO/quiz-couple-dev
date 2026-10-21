@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-23",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-045",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Summer edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Beach at sunrise",
+            "b": "Beach at sunset"
+          },
+          {
+            "a": "Ice cream for dinner",
+            "b": "Barbecue at midnight"
+          },
+          {
+            "a": "Swim together",
+            "b": "Nap in the shade"
+          },
+          {
+            "a": "Windows down drive",
+            "b": "Rooftop evening"
+          },
+          {
+            "a": "Matching sunglasses",
+            "b": "Matching flip flops"
+          },
+          {
+            "a": "Camping under stars",
+            "b": "Hotel with a pool"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Summer edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

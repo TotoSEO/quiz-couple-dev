@@ -1,0 +1,48 @@
+{
+  "jour": "2026-11-23",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-020",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Phone edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "Which app does your partner open first?",
+          "Who do they text the most?",
+          "How many unread messages do they have?",
+          "What wallpaper does their phone have?",
+          "Texting or calling for them?",
+          "Which emoji do they use the most?",
+          "Is their phone on silent or loud?",
+          "What song is their ringtone?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
