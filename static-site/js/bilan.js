@@ -363,6 +363,8 @@
     var query = new URLSearchParams(location.search);
     var id = hash.get('b'), jeton = hash.get('t');
     var lien = !!(id && jeton);
+    // Le lien « ne plus recevoir de message » des e-mails : #b=…&t=…&arret=1.
+    var arret = hash.get('arret') === '1';
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
     arrivee(query);
@@ -377,7 +379,7 @@
     preparer().then(function () {
       if (lien) {
         nettoyerUrl();
-        return ouvrirLien(id, jeton);
+        return ouvrirLien(id, jeton, arret);
       }
       if (paiement) return retourPaiement(query.get('b'), query.get('paiement'));
       var e = entreeDe(query.get('b'));
@@ -388,7 +390,7 @@
   }
 
   // Un lien (personnel ou d'invitation) : on demande au serveur qui on est.
-  function ouvrirLien(id, jeton) {
+  function ouvrirLien(id, jeton, arret) {
     chargement();
     appel('etat', { id: id, jeton: jeton }).then(function (r) {
       if (r.statut === 404) {
@@ -403,8 +405,20 @@
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
       garder(entree);
+      if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
-    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton); }); });
+    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton, arret); }); });
+  }
+
+  // « Ne plus recevoir de message sur cette évaluation » (lien des e-mails
+  // « rapport prêt » et du rappel), puis la suite habituelle.
+  function arreterRappels(entree, etat) {
+    appel('rappels', { id: entree.id, jeton: entree.jeton, off: true }).then(function (r) {
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { arreterRappels(entree, etat); });
+      afficher(carte('<p class="bilan-alerte bilan-alerte--ok">' + x('rappels.arret') + '</p>' +
+        '<div class="bilan-actions">' + bouton('continuer', x('rappels.continuer')) + '</div>'));
+      ACTIONS = { continuer: function () { suiteEtat(entree, r.json.etat || etat); } };
+    }).catch(function () { messageErreur('reseau', function () { arreterRappels(entree, etat); }); });
   }
 
   // Où mener quelqu'un selon l'état du bilan.
@@ -633,6 +647,9 @@
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
           email: brouillon.email,
+          // La phrase sous le champ annonce l'e-mail « rapport prêt » et le
+          // rappel : le serveur ne les envoie qu'avec cet accord.
+          rappel: true,
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
@@ -753,7 +770,7 @@
         var sit = sitModifiee ? lireSituation() : null;
         if (sit && !C.situationValide(sit)) return erreur('creation.manque');
         b.disabled = true;
-        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), email: email, consentement: true, majeur: true })
+        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), email: email, rappel: true, consentement: true, majeur: true })
           .then(function (r) {
             if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur'); }
             var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
@@ -1115,38 +1132,75 @@
     return /^[^\s@<>()[\]",;:\\]{1,64}@[^\s@<>()[\]",;:\\.]+(\.[^\s@<>()[\]",;:\\.]+)+$/.test(v) && /\.[a-z]{2,}$/i.test(v) && v.length <= 254;
   }
 
-  // L'offre : ce que contient le rapport, le prix, l'adresse, la case de
-  // renonciation et le bouton. pret : les deux ont fini.
-  // tete : l'en-tête de l'écran « à débloquer » (personnages et titre),
-  // posé dans la même carte que l'offre.
+  // L'aperçu de l'écran « rapport prêt » (resultat 402, apercu) : combien
+  // d'accords, de réponses proches, d'écarts et de sujets décisifs en
+  // désaccord, jamais lesquels (21 octobre 2026, Thomas a accepté cette
+  // entorse à « aucun résultat gratuit »). Un serveur plus ancien n'envoie
+  // rien : l'écran garde alors sa phrase d'avant.
+  function blocApercu(ap, autre) {
+    if (!ap) return '';
+    var tuiles = [['accord', ap.accords, 'accords'], ['proche', ap.proches, 'proches'], ['ecart', ap.ecarts, 'ecarts']];
+    var lignes = [];
+    if (ap.ecarts > 0) lignes.push(x(ap.decisifs === 0 ? 'paywall.apercu.decisifs0' : ap.decisifs === 1 ? 'paywall.apercu.decisifsUn' : 'paywall.apercu.decisifsN', { n: nombre(ap.decisifs) }));
+    if (MODE === 'solo' && ap.inconnus > 0) lignes.push(x(ap.inconnus === 1 ? 'paywall.apercu.inconnusUn' : 'paywall.apercu.inconnusN', { n: nombre(ap.inconnus), autre: autre }));
+    return '<p class="bilan-pret-intro">' + x('paywall.apercu.intro', { autre: autre }) + '</p>' +
+      '<div class="bilan-tuiles">' + tuiles.map(function (t) {
+        return '<div class="bilan-tuile bilan-tuile--' + t[0] + '"><span class="bilan-tuile-n">' + esc(nombre(t[1])) + '</span>' +
+          '<span class="bilan-tuile-l">' + x('paywall.apercu.' + t[2] + (t[1] === 1 ? 'Un' : 'N')) + '</span></div>';
+      }).join('') + '</div>' +
+      (lignes.length ? '<p class="bilan-pret-decisif">' + lignes.join(' ') + '</p>' : '') +
+      '<p class="bilan-pret-quoi">' + x('paywall.apercu.quoi') + '</p>';
+  }
+
+  // Le sommaire du rapport et sa couverture à leurs prénoms : les chapitres
+  // de rapport.mjs (chapitresListe), dans le même ordre.
+  function sommaire(etat) {
+    var cles = ['synthese', 'carte', 'conversations', 'bloquants'].concat(MODE === 'solo' ? ['ombre'] : [])
+      .concat(['climat', 'signaux', 'roles', 'domaines', 'fin', 'suite']);
+    var couv = '<div class="bilan-couv" aria-hidden="true"><p class="bilan-couv-de">' + x('rapport.couverture.de') + '</p>' +
+      '<p class="bilan-couv-noms">' + esc(etat.moi.prenom) + (MODE === 'solo' ? '' : '<span class="bilan-couv-et">' + x('rapport.couverture.et') + '</span>' + esc(etat.autre.prenom)) + '</p>' +
+      '<p class="bilan-couv-marque">Quiz Couple</p></div>';
+    return '<h3 class="bilan-sous-titre">' + x('paywall.sommaire') + '</h3><div class="bilan-sommaire">' + couv +
+      '<ol class="bilan-sommaire-liste">' + cles.map(function (k, i) {
+        return '<li><span class="bilan-sommaire-num">' + (i < 9 ? '0' : '') + (i + 1) + '</span><span>' + x('rapport.chapitres.' + k) + '</span></li>';
+      }).join('') + '</ol></div>';
+  }
+
+  // L'offre. pret : le rapport attend (les deux ont fini, ou la personne
+  // seule) ; l'écran « rapport prêt » met le titre, l'aperçu, le prix, la case
+  // et le bouton dans le premier écran d'un téléphone, et le sommaire dans une
+  // seconde carte (21 octobre 2026 : sur 24 personnes au bout des cent
+  // questions, une seule avait ouvert la page de paiement ; le bouton était à
+  // deux écrans et demi du haut, sous un rapport d'exemple illisible). Sinon,
+  // on a fini et l'autre pas encore : l'offre repliée sous l'attente.
+  // tete : le haut de l'écran « rapport prêt ».
   function offre(etat, pret, tete) {
     var autre = etat.autre.prenom;
     if (!paiementOuvert(etat)) {
       return carte('<h3 class="bilan-sous-titre">' + x('paywall.titre') + '</h3><p class="bilan-alerte bilan-alerte--doux">' + x('paywall.ferme') + '</p>', 'bilan-offre');
     }
-    var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(remplir(c, { autre: autre }))) + '</li>'; }).join('');
     // La réduction, seulement si le serveur dit qu'il l'appliquera (une
     // fonction plus ancienne ne le dit pas : rien n'est affiché).
     var promo = promoAffichee(etat.promo ? true : false);
-    var apercu = CFG.apercu ? '<figure class="bilan-apercu"><img src="' + esc(CFG.apercu) + '" alt="" width="600" height="424" loading="lazy" decoding="async">' +
-      '<figcaption>' + x('paywall.apercu') + '</figcaption></figure>' : '';
-    return carte(
-      (tete || '<p class="bilan-offre-sur">' + x('paywall.titre') + '</p>') +
-      '<p class="bilan-offre-intro">' + x(pret ? 'paywall.introPret' : 'paywall.introAttente', { autre: autre }) + '</p>' +
-      apercu +
-      '<ul class="bilan-offre-liste">' + contenu + '</ul>' +
-      '<div class="bilan-prix">' +
+    var achat = '<div class="bilan-prix">' +
       (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '') +
       '<p class="bilan-prix-montant">' + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
       (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
       '<p class="bilan-note">' + x('paywall.prixAide', { autre: autre }) + '</p></div>' +
-      champEmail(etat.moi.email, 'bilan-email-paie') +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
+      // Sans adresse connue (évaluation d'avant le 20 octobre 2026), le champ
+      // reste ici ; sinon il est replié sous le sommaire.
+      (etat.moi.email ? '' : champEmail('', 'bilan-email-paie')) +
+      '<label class="bilan-case bilan-case--serree"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
-      '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>' +
-      '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>',
-      'bilan-offre');
+      '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>';
+    var suite = sommaire(etat) +
+      (etat.moi.email ? '<details class="bilan-email-autre bilan-offre-email"><summary>' + x('paywall.emailAutre') + '</summary>' + champEmail(etat.moi.email, 'bilan-email-paie') + '</details>' : '') +
+      '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>';
+    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite');
+    return carte('<details class="bilan-offre-plie"><summary><span class="bilan-offre-plie-titre">' + x('paywall.plie') + '</span>' +
+      '<span class="bilan-offre-plie-prix">' + avecPromo(x('paywall.prix'), !!promo) + '</span></summary>' +
+      '<p class="bilan-offre-intro">' + x('paywall.introAttente', { autre: autre }) + '</p>' + achat + suite + '</details>', 'bilan-offre bilan-offre--attente');
   }
 
   function actionsOffre(entree) {
@@ -1216,6 +1270,8 @@
       duo('joie', 'repos', 86, etat.moi.genre, etat.autre.genre) +
       '<h2 class="bilan-titre">' + x(paye ? 'attente.payeTitre' : 'attente.titre') + '</h2>' +
       '<p class="bilan-texte">' + x(paye ? 'attente.payeTexte' : 'attente.texte', { autre: autre }) + '</p>' +
+      // L'e-mail « rapport prêt » partira dès que l'autre aura fini.
+      (!paye && etat.moi.prevenu && etat.moi.email ? '<p class="bilan-prevenu">' + x('attente.prevenu', { email: etat.moi.email, autre: autre }) + '</p>' : '') +
       blocAutre(entree, etat) +
       (paye ? blocEmail(etat) : '') +
       '<p class="bilan-note">' + x('attente.maj') + '</p>', 'bilan-attente') +
@@ -1289,10 +1345,13 @@
       paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null,
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
+    var ap = res.apercu || null;
     afficher(
       (message ? carte('<p class="bilan-alerte bilan-alerte--doux">' + message + '</p>') : '') +
-      offre(etat, true, duo('surprise', 'joie', 86, moi.genre, autre.genre) +
-        '<h2 class="bilan-titre">' + x('paywall.titrePret') + '</h2>'));
+      offre(etat, true,
+        '<p class="bilan-pret-sur">' + x('rapport.surtitre') + '</p>' +
+        '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom, autre: autre.prenom }) + '</h2>' +
+        (ap ? blocApercu(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
     ACTIONS = actionsOffre(entree);
   }
 

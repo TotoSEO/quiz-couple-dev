@@ -561,3 +561,71 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-scene .bilan-prix-montant .prix-promo-apres { color: hsl(var(--primary-texte)); }
 .bilan-scene .bilan-prix .bilan-prix-code { font-weight: 600; color: hsl(var(--foreground)); }
 .bilan-scene .bilan-prix-rappel .prix-promo-avant { color: hsl(var(--muted-foreground)); }
+
+/* ── L'écran « rapport prêt » (21 octobre 2026) ──────────────────────── */
+/* Titre, aperçu chiffré, prix, case et bouton dans le premier écran d'un
+   téléphone ; la couverture et le sommaire dans la carte du dessous. Les
+   tuiles reprennent les couleurs du rapport (accord, proche, écart), en
+   aplats, avec des textes foncés lisibles sur leur fond. */
+.bilan-scene .bilan-offre--pret { padding-top: 1.1rem; }
+.bilan-scene:has(.bilan-offre--pret) .bilan-scene-barre { margin-bottom: .85rem; }
+.bilan-scene .bilan-pret-sur { text-align: center; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 .3rem; }
+.bilan-scene .bilan-pret-titre { font-size: clamp(1.3rem, 5.2vw, 1.7rem); line-height: 1.18; margin: 0 0 .45rem; }
+.bilan-scene .bilan-pret-intro { text-align: center; color: hsl(var(--muted-foreground)); font-size: .86rem; line-height: 1.4; margin: 0 0 .55rem; }
+.bilan-scene .bilan-tuiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: 0 0 .6rem; }
+.bilan-scene .bilan-tuile { display: grid; gap: .15rem; justify-items: center; text-align: center; padding: .5rem .3rem .45rem; border-radius: .85rem; }
+.bilan-scene .bilan-tuile-n { font-family: var(--blp-titre); font-weight: 600; font-size: 1.65rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.bilan-scene .bilan-tuile-l { font-size: .74rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; hyphens: auto; }
+.bilan-scene .bilan-tuile--accord { background: #e3f2ea; color: #1d6644; }
+.bilan-scene .bilan-tuile--proche { background: #fbf0d3; color: #7a5506; }
+.bilan-scene .bilan-tuile--ecart { background: #f8e1e1; color: #9c2b2d; }
+.dark .bilan-scene .bilan-tuile--accord { background: hsl(152 40% 30% / .35); color: #9fdcbd; }
+.dark .bilan-scene .bilan-tuile--proche { background: hsl(42 70% 40% / .3); color: #f2d28a; }
+.dark .bilan-scene .bilan-tuile--ecart { background: hsl(359 50% 40% / .32); color: #f3a9aa; }
+.bilan-scene .bilan-pret-decisif { text-align: center; font-size: .88rem; font-weight: 700; line-height: 1.4; margin: 0 0 .3rem; }
+.bilan-scene .bilan-pret-quoi { text-align: center; font-size: .86rem; line-height: 1.4; color: hsl(var(--muted-foreground)); margin: 0 0 .7rem; }
+/* Pastille et prix sur une ligne quand la place le permet (bureau), le
+   prix réduit sur une seule ligne sur téléphone. */
+.bilan-scene .bilan-offre--pret .bilan-prix { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: .6rem; padding: .55rem .7rem .6rem; margin: 0 0 .55rem; }
+.bilan-scene .bilan-offre--pret .bilan-prix > .bilan-note { flex-basis: 100%; }
+.bilan-scene .bilan-offre--pret .bilan-prix-montant { font-size: 1.3rem; }
+.bilan-scene .bilan-offre--pret .bilan-prix-pastille { margin: 0 0 .2rem; }
+.bilan-scene .bilan-offre--pret .bilan-prix .bilan-note { margin: .15rem 0 0; font-size: .76rem; line-height: 1.35; }
+.bilan-scene .bilan-case--serree { font-size: .78rem; line-height: 1.38; gap: .55rem; margin: .1rem 0 .6rem; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-case--serree input { width: 1.15rem; height: 1.15rem; margin-top: .05rem; }
+.bilan-scene .bilan-offre--pret .bilan-actions { margin-top: 0; }
+.bilan-scene .bilan-offre--pret .bilan-actions + .bilan-note { margin: .55rem 0 0; font-size: .78rem; }
+
+/* La couverture à leurs prénoms et le sommaire : deux cercles en aplat,
+   comme sur la couverture du rapport (rapport.css, .rap-couv). */
+.bilan-scene .bilan-sommaire { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 1.1rem; align-items: start; margin: 0 0 1.1rem; }
+@media (max-width: 420px) { .bilan-scene .bilan-sommaire { grid-template-columns: 6.4rem minmax(0, 1fr); gap: .85rem; } }
+.bilan-scene .bilan-couv { position: relative; overflow: hidden; aspect-ratio: 210 / 297; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: .65rem .6rem .55rem; border-radius: .35rem; background: #2b1d36; color: #fff; box-shadow: 0 14px 30px -16px rgba(42, 33, 48, .7); }
+.bilan-scene .bilan-couv::before, .bilan-scene .bilan-couv::after { content: ''; position: absolute; border-radius: 50%; }
+.bilan-scene .bilan-couv::before { width: 78%; aspect-ratio: 1; top: -12%; right: -18%; background: rgba(198, 79, 123, .55); border: 1px solid rgba(236, 150, 184, .9); }
+.bilan-scene .bilan-couv::after { width: 70%; aspect-ratio: 1; top: 14%; right: -36%; background: rgba(140, 104, 196, .5); border: 1px solid rgba(196, 174, 232, .9); }
+.bilan-scene .bilan-couv > * { position: relative; z-index: 1; }
+.bilan-scene .bilan-couv-de { font-size: .52rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .78; margin: 0 0 .25rem; line-height: 1.25; }
+.bilan-scene .bilan-couv-noms { font-family: var(--blp-titre); font-weight: 500; font-size: .98rem; line-height: 1.1; margin: 0; overflow-wrap: anywhere; }
+.bilan-scene .bilan-couv-et { display: block; font-size: .72em; opacity: .7; margin: .1rem 0; }
+.bilan-scene .bilan-couv-marque { font-size: .52rem; opacity: .6; margin: .55rem 0 0; }
+.bilan-scene .bilan-sommaire-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .32rem; font-size: .86rem; line-height: 1.3; }
+.bilan-scene .bilan-sommaire-liste li { display: grid; grid-template-columns: 1.55rem minmax(0, 1fr); gap: .3rem; }
+.bilan-scene .bilan-sommaire-num { font-weight: 700; color: hsl(var(--primary-texte)); font-variant-numeric: tabular-nums; }
+.bilan-scene .bilan-offre-email { margin: 0 0 1rem; }
+
+/* En attendant l'autre : prévenu par e-mail, et l'offre repliée. */
+.bilan-scene .bilan-prevenu { margin: 0 0 1rem; padding: .7rem .9rem; border-radius: calc(var(--radius) - .25rem); background: hsl(152 45% 40% / .1); color: hsl(152 45% 24%); font-weight: 600; font-size: .92rem; line-height: 1.45; }
+.dark .bilan-scene .bilan-prevenu { color: hsl(152 45% 74%); }
+.bilan-scene .bilan-offre--attente { padding-top: 1rem; padding-bottom: 1rem; }
+.bilan-scene .bilan-offre-plie > summary { position: relative; display: block; padding-right: 2.4rem; cursor: pointer; list-style: none; }
+.bilan-scene .bilan-offre-plie > summary::-webkit-details-marker { display: none; }
+.bilan-scene .bilan-offre-plie > summary::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: grid; place-items: center; background: hsl(var(--primary) / .12); color: hsl(var(--primary-texte)); font-weight: 700; transition: transform .2s ease; }
+.bilan-scene .bilan-offre-plie[open] > summary::after { transform: translateY(-50%) rotate(45deg); }
+.bilan-scene .bilan-offre-plie[open] > summary { margin-bottom: 1rem; }
+.bilan-scene .bilan-offre-plie-titre { display: block; font-weight: 700; line-height: 1.35; }
+.bilan-scene .bilan-offre-plie-prix { display: block; font-size: .9rem; color: hsl(var(--muted-foreground)); margin-top: .15rem; }
+.bilan-scene .bilan-offre-plie-prix .prix-promo-apres { color: hsl(var(--primary-texte)); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { .bilan-scene .bilan-offre-plie > summary::after { transition: none; } }

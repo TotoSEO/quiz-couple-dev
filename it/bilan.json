@@ -56,7 +56,7 @@
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta le due caselle per continuare.",
       "email": "La tua e-mail",
-      "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina.",
+      "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e ad avvisarti quando il tuo report è pronto, con un solo promemoria se il giorno dopo è ancora in attesa.",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
       "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il report in PDF."
     },
@@ -132,14 +132,27 @@
       "payeTitre": "Il vostro report è pagato",
       "payeTexte": "Grazie! Si aprirà qui e partirà per e-mail appena {{autre}} avrà finito le sue risposte.",
       "relance": "Manda un promemoria a {{autre}}",
-      "relanceMessage": "Ho finito le mie risposte per il nostra valutazione di coppia, ti aspetto! Riprendi da dove avevi lasciato, sul tuo telefono."
+      "relanceMessage": "Ho finito le mie risposte per il nostra valutazione di coppia, ti aspetto! Riprendi da dove avevi lasciato, sul tuo telefono.",
+      "prevenu": "Ti scriviamo a {{email}} appena {{autre}} ha finito: puoi chiudere questa pagina."
     },
     "paywall": {
       "titre": "Il vostro report completo",
       "titrePret": "Il vostro report vi aspetta",
       "introAttente": "Puoi sbloccarlo già adesso: si aprirà qui, e partirà per e-mail, appena {{autre}} avrà finito.",
       "introPret": "Le vostre due serie di risposte sono pronte. Manca solo un passaggio per scoprire cosa dicono della vostra coppia.",
-      "apercu": "Estratto di un report di esempio (coppia immaginaria)",
+      "apercu": {
+        "intro": "Le vostre risposte sono state confrontate, domanda per domanda:",
+        "accordsUn": "accordo",
+        "accordsN": "accordi",
+        "prochesUn": "risposta vicina",
+        "prochesN": "risposte vicine",
+        "ecartsUn": "differenza",
+        "ecartsN": "differenze",
+        "decisifs0": "Nessuna differenza sui temi decisivi, quelli che pesano di più in una coppia.",
+        "decisifsUn": "Di cui una su un tema decisivo, uno di quelli che pesano di più in una coppia.",
+        "decisifsN": "Di cui {{n}} su temi decisivi, quelli che pesano di più in una coppia.",
+        "quoi": "Il report vi dice quali, cosa significano per tutti e due e come parlarne."
+      },
       "contenu": [
         "Il vostro allineamento e il clima della vostra coppia, a colpo d'occhio",
         "La mappa delle vostre dodici aree, dai soldi ai figli",
@@ -154,7 +167,7 @@
       "prixAide": "Un solo pagamento, e {{autre}} non dovrà pagare niente. Nessun abbonamento.",
       "emailLabel": "Dove ti mandiamo il report?",
       "emailPlaceholder": "tu@email.it",
-      "emailAide": "Il PDF partirà a questo indirizzo appena avrete finito tutti e due. Non serve a nient'altro.",
+      "emailAide": "Il PDF partirà a questo indirizzo appena avrete finito tutti e due.",
       "emailFaux": "Questo indirizzo non sembra valido.",
       "renonciation": "Chiedo che il report mi sia fornito non appena pronto, senza attendere la fine del periodo di recesso di 14 giorni, e riconosco di perdere il diritto di recesso una volta fornito.",
       "renonciationManque": "Spunta la casella per continuare.",
@@ -163,7 +176,11 @@
       "cgv": "Condizioni di vendita",
       "tva": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese.",
       "ferme": "Il pagamento online apre molto presto. La vostra valutazione è salvata: tornate su questa pagina tra qualche giorno.",
-      "redirection": "Reindirizzamento al pagamento..."
+      "redirection": "Reindirizzamento al pagamento...",
+      "pretTitre": "{{moi}} e {{autre}}, il vostro report è pronto",
+      "sommaire": "Cosa c'è nel vostro report",
+      "emailAutre": "Riceverlo a un altro indirizzo",
+      "plie": "Sbloccare il report adesso"
     },
     "paiement": {
       "verification": "Verifica del pagamento...",
@@ -182,7 +199,8 @@
         "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini delle risposte di {{autre}} servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
-        "creer": "Iniziare la mia valutazione"
+        "creer": "Iniziare la mia valutazione",
+        "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa."
       },
       "domaine": {
         "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
@@ -200,7 +218,15 @@
           "Il report completo in PDF, inviato via e-mail appena è pronto, e online per sei mesi"
         ],
         "prixAide": "Un solo pagamento, nessun abbonamento. Il tuo partner non viene avvisato.",
-        "emailAide": "Il PDF arriverà a questo indirizzo appena pagato. Non serve a nient'altro."
+        "emailAide": "Il PDF arriverà a questo indirizzo appena pagato.",
+        "pretTitre": "{{moi}}, il tuo report è pronto",
+        "apercu": {
+          "intro": "Le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
+          "quoi": "Il report ti dice quali, cosa significano e da dove cominciare.",
+          "inconnusUn": "E un tema su cui non sai cosa risponderebbe {{autre}}.",
+          "inconnusN": "E {{n}} temi su cui non sai cosa risponderebbe {{autre}}."
+        },
+        "sommaire": "Cosa c'è nel tuo report"
       },
       "rapport": {
         "ecran": {
@@ -566,6 +592,10 @@
       "bouton": "Ritrovare la mia valutazione",
       "envoye": "Se una valutazione è collegata a {{email}}, i tuoi link arrivano nella tua casella entro un minuto. Controlla anche lo spam.",
       "trop": "Troppe richieste dalla tua connessione. Riprova tra un'ora."
+    },
+    "rappels": {
+      "arret": "Fatto: non riceverai più messaggi su questa valutazione.",
+      "continuer": "Continua"
     }
   },
   "lp": {

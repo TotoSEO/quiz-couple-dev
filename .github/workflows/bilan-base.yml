@@ -1,7 +1,9 @@
 name: Évaluation de couple · base Supabase
 
 # Applique, dans l'ordre, 20261018120000_bilan_couple.sql,
-# 20261019120000_evaluation_solo.sql puis 20261020120000_bilan_retrouver.sql par l'API de gestion de Supabase, comme
+# 20261019120000_evaluation_solo.sql, 20261020120000_bilan_retrouver.sql puis
+# 20261021120000_bilan_rappels.sql (rapport prêt et rappel : colonnes,
+# bilan_lancer_relance et sa tâche pg_cron) par l'API de gestion de Supabase, comme
 # avis-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
 #
@@ -22,6 +24,7 @@ on:
       - 'supabase/migrations/20261018120000_bilan_couple.sql'
       - 'supabase/migrations/20261019120000_evaluation_solo.sql'
       - 'supabase/migrations/20261020120000_bilan_retrouver.sql'
+      - 'supabase/migrations/20261021120000_bilan_rappels.sql'
       - '.github/workflows/bilan-base.yml'
   workflow_dispatch:
 
@@ -44,7 +47,8 @@ jobs:
         run: |
           for f in supabase/migrations/20261018120000_bilan_couple.sql \
                    supabase/migrations/20261019120000_evaluation_solo.sql \
-                   supabase/migrations/20261020120000_bilan_retrouver.sql; do
+                   supabase/migrations/20261020120000_bilan_retrouver.sql \
+                   supabase/migrations/20261021120000_bilan_rappels.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

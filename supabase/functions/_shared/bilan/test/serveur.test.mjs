@@ -594,3 +594,126 @@ test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation
   const sans = creerServeur({ stockage: creerStockageMemoire(), stripe: null, courriel: null, sel: 'sel' });
   assert.equal((await sans.traiter({ action: 'retrouver', email: 'a@b.fr' }, { ip: '1.1.1.1' })).statut, 503);
 });
+
+// ── Rapport prêt, aperçu chiffré et rappel (21 octobre 2026) ─────────────
+
+const jetonDe = (m) => (m.texte.match(/#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)/) || [])[1];
+
+test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel une seule fois', async () => {
+  let t = new Date('2026-10-21T10:00:00Z');
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const c = (await appel({
+    action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' },
+    email: 'lea@exemple.fr', consentement: true, majeur: true, rappel: true,
+  })).json;
+  const A = { id: c.id, jeton: c.jeton };
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'tom@exemple.fr', consentement: true, majeur: true, rappel: true });
+  const B = { id: c.id, jeton: ok.json.jeton };
+  assert.equal(stockage.lignes.get(c.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).b_rappel, true);
+
+  // A finit : rien ne part, et la page sait qu'elle sera prévenue.
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const fa = await appel({ action: 'repondre', ...A, reponses: ra, nn: [], fini: true });
+  assert.equal(fa.json.fini, true);
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal(fa.json.etat.moi.prevenu, true);
+  // Avant que les deux aient fini, pas d'aperçu.
+  const avant = await appel({ action: 'resultat', ...A });
+  assert.equal(avant.statut, 402);
+  assert.equal(avant.json.apercu, null);
+
+  // B finit : « Tom a fini » part à Léa seulement, avec un lien personnel neuf.
+  const rb = toutRepondre(SIT, (q, id) => (q.type === 'qui' ? 2 : id.charCodeAt(1) % (q.n || 2)));
+  await appel({ action: 'repondre', ...B, reponses: rb, nn: [], fini: true });
+  assert.equal(courriel.envoyes.length, 1);
+  const pret = courriel.envoyes[0];
+  assert.equal(pret.a, 'lea@exemple.fr');
+  assert.equal(pret.sujet, 'Tom a fini : votre rapport est prêt');
+  assert.ok(!/accord|écart/i.test(pret.texte), 'rien du contenu dans l\'e-mail');
+  const jm = jetonDe(pret);
+  assert.ok(jm && jm !== A.jeton);
+  assert.ok(pret.texte.includes('&arret=1'));
+  // Le lien de l'e-mail ouvre l'évaluation de Léa ; celui du téléphone marche toujours.
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jm })).json.role, 'a');
+  assert.equal((await appel({ action: 'etat', ...A })).json.role, 'a');
+  assert.ok(stockage.lignes.get(c.id).pret_mail_le);
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'pret_envoye'));
+
+  // L'aperçu : des comptes, rien d'autre.
+  const r = await appel({ action: 'resultat', ...A });
+  assert.equal(r.statut, 402);
+  const ap = r.json.apercu;
+  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'inconnus', 'proches', 'questions']);
+  assert.ok(Object.values(ap).every((v) => Number.isInteger(v) && v >= 0));
+  assert.ok(ap.accords + ap.proches + ap.ecarts > 50);
+  assert.ok(ap.decisifs <= ap.ecarts);
+  assert.equal(r.json.a.reponses, undefined);
+
+  // Le rappel : réservé à la clé de service, rien avant 24 heures.
+  assert.equal((await appel({ action: 'relancer' })).statut, 403);
+  t = new Date(t.getTime() + 23 * 3600e3);
+  assert.equal((await appel({ action: 'relancer' }, '1.2.3.4', true)).json.relances, 0);
+  t = new Date(t.getTime() + 2 * 3600e3);
+  const rel = await appel({ action: 'relancer' }, '1.2.3.4', true);
+  assert.equal(rel.json.relances, 2);
+  const rappels = courriel.envoyes.slice(1);
+  assert.deepEqual(rappels.map((m) => m.a).sort(), ['lea@exemple.fr', 'tom@exemple.fr']);
+  assert.ok(rappels.every((m) => m.sujet === 'Votre rapport vous attend toujours'));
+  assert.ok(rappels.every((m) => m.texte.includes('C\'est le seul rappel')));
+  // Le lien du rappel de Tom ouvre l'évaluation de Tom.
+  const jt = jetonDe(rappels.find((m) => m.a === 'tom@exemple.fr'));
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jt })).json.role, 'b');
+  // Jamais deux fois.
+  t = new Date(t.getTime() + 48 * 3600e3);
+  assert.equal((await appel({ action: 'relancer' }, '1.2.3.4', true)).json.relances, 0);
+  assert.equal(courriel.envoyes.length, 3);
+  assert.ok(stockage.lignes.get(c.id).jetons_mail.length <= 4);
+});
+
+test('rappels : sans l\'annonce, après « ne plus recevoir », une fois payé, et en solo', async () => {
+  let t = new Date('2026-10-21T10:00:00Z');
+  const { appel, stockage, courriel, stripe } = monter({ maintenant: () => t });
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const deux = async (rappel) => {
+    const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true, ...(rappel ? { rappel: true } : {}) })).json;
+    const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'b@exemple.fr', consentement: true, majeur: true, ...(rappel ? { rappel: true } : {}) });
+    await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: ra, nn: [], fini: true });
+    await appel({ action: 'repondre', id: c.id, jeton: ok.json.jeton, reponses: ra, nn: [], fini: true });
+    return { id: c.id, jeton: c.jeton, jetonB: ok.json.jeton };
+  };
+  // Une évaluation commencée avant l'annonce (page ancienne) : aucun e-mail.
+  const ancienne = await deux(false);
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal((await appel({ action: 'etat', id: ancienne.id, jeton: ancienne.jeton })).json.moi.prevenu, false);
+  // « Ne plus recevoir » depuis le lien : plus de rappel.
+  const arretee = await deux(true);
+  assert.equal(courriel.envoyes.length, 1);
+  const jm = jetonDe(courriel.envoyes[0]);
+  assert.equal((await appel({ action: 'rappels', id: arretee.id, jeton: jm })).statut, 400);
+  const arret = await appel({ action: 'rappels', id: arretee.id, jeton: jm, off: true });
+  assert.equal(arret.json.arret, true);
+  assert.equal(stockage.lignes.get(arretee.id).rappels_off, true);
+  // Payée : pas de rappel.
+  const payee = await deux(true);
+  const p = await appel({ action: 'payer', id: payee.id, jeton: payee.jeton, renonciation: true });
+  stripe.payer(new URL(p.json.url).pathname.split('/').pop());
+  assert.equal((await appel({ action: 'verifier', id: payee.id, jeton: payee.jeton, session: new URL(p.json.url).pathname.split('/').pop() })).json.paye, true);
+  // Seul(e) : le rappel ne part qu'à la personne, aucun e-mail « prêt ».
+  const s = (await appel({ action: 'creer', lang: 'de', mode: 'solo', situation: SIT, moi: { prenom: 'Lea' }, autre: { prenom: 'Tom' }, email: 'lea@exemple.de', consentement: true, majeur: true, rappel: true })).json;
+  const percu = Object.fromEntries(Object.keys(ra).map((id) => [id, ra[id]]));
+  const fs1 = await appel({ action: 'repondre', id: s.id, jeton: s.jeton, reponses: ra, percu, nn: [], fini: true });
+  assert.equal(fs1.json.fini, true);
+  const avantRelance = courriel.envoyes.length;
+  assert.equal(avantRelance, 2, 'un e-mail « prêt » par évaluation à deux annoncée (arrêtée, payée), aucun en solo');
+  const aps = (await appel({ action: 'resultat', id: s.id, jeton: s.jeton })).json.apercu;
+  assert.ok(aps && aps.accords > 0);
+
+  t = new Date(t.getTime() + 25 * 3600e3);
+  const rel = await appel({ action: 'relancer' }, '1.2.3.4', true);
+  const nouveaux = courriel.envoyes.slice(avantRelance);
+  assert.deepEqual(nouveaux.map((m) => m.a).sort(), ['lea@exemple.de']);
+  assert.equal(rel.json.relances, 1);
+  assert.equal(nouveaux[0].sujet, 'Dein Bericht wartet noch auf dich');
+  assert.equal(stockage.lignes.get(ancienne.id).relance_le, null);
+});

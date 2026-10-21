@@ -75,14 +75,19 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
       const r = await appel(base + '?or=(a_email.eq.' + e + ',b_email.eq.' + e + ',paiement_email.eq.' + e + ')&select=*&order=cree_le.desc&limit=10', { headers: entetes() });
       return r.json();
     },
-    // Les bilans qui portent cette adresse (adresse du rapport de A ou de B,
-    // ou du reçu Stripe), les dix plus récents : pour renvoyer un lien perdu.
-    // Égalité stricte sur l'adresse en minuscules (emailPropre), jamais un
-    // motif : un `_` d'adresse serait un joker de LIKE.
-    async trouverParEmail(email) {
-      const e = encodeURIComponent(String(email || '').toLowerCase());
-      const r = await appel(base + '?or=(a_email.eq.' + e + ',b_email.eq.' + e + ',paiement_email.eq.' + e + ')&select=*&order=cree_le.desc&limit=10', { headers: entetes() });
-      return r.json();
+    // Les rapports prêts avant `avantIso` et pas débloqués, dont une adresse
+    // a été donnée sous l'annonce du rappel et qui n'ont jamais été relancés :
+    // le rappel unique (action `relancer`). Fini des deux côtés en duo, de la
+    // personne seule en solo ; le serveur revérifie tout ligne par ligne.
+    async aRelancer(avantIso, limite) {
+      const n = limite || 25;
+      const t = encodeURIComponent(avantIso);
+      const commun = '?paye_le=is.null&relance_le=is.null&rappels_off=is.false&or=(a_rappel.is.true,b_rappel.is.true)&a_fini=lt.' + t;
+      const [solo, duo] = await Promise.all([
+        appel(base + commun + '&mode=eq.solo&select=*&order=a_fini.asc&limit=' + n, { headers: entetes() }).then((r) => r.json()),
+        appel(base + commun + '&mode=eq.duo&b_fini=lt.' + t + '&select=*&order=a_fini.asc&limit=' + n, { headers: entetes() }).then((r) => r.json()),
+      ]);
+      return solo.concat(duo).slice(0, n);
     },
     async compter(evenement, cleCompteur, montant) {
       await appel(racine + '/rest/v1/rpc/bilan_compte_evenement', {
@@ -148,6 +153,7 @@ export function creerStockageMemoire() {
         paiement_role: null, paiement_email: null, renonciation_le: null, rembourse_le: null,
         rapport_statut: null, rapport_maj: null, rapport_chemin: null, rapport_essais: 0,
         rapport_erreur: null, rapport_pages: null, envois: [],
+        a_rappel: false, b_rappel: false, rappels_off: false, jetons_mail: [], pret_mail_le: null, relance_le: null,
         ...copie(ligne),
       };
       lignes.set(id, complete);
@@ -182,11 +188,11 @@ export function creerStockageMemoire() {
       return [...lignes.values()].filter((l) => m(l.a_email) || m(l.b_email) || m(l.paiement_email))
         .sort((x, y) => (y.cree_le || '').localeCompare(x.cree_le || '')).slice(0, 10).map(copie);
     },
-    async trouverParEmail(email) {
-      const e = String(email || '').toLowerCase();
-      const m = (x) => typeof x === 'string' && x.toLowerCase() === e;
-      return [...lignes.values()].filter((l) => m(l.a_email) || m(l.b_email) || m(l.paiement_email))
-        .sort((x, y) => (y.cree_le || '').localeCompare(x.cree_le || '')).slice(0, 10).map(copie);
+    async aRelancer(avantIso, limite) {
+      return [...lignes.values()].filter((l) => !l.paye_le && !l.relance_le && !l.rappels_off
+        && (l.a_rappel || l.b_rappel) && l.a_fini && l.a_fini < avantIso
+        && (l.mode === 'solo' || (l.b_fini && l.b_fini < avantIso)))
+        .sort((x, y) => x.a_fini.localeCompare(y.a_fini)).slice(0, limite || 25).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
     async compteDuJour(evenements) { return compteurs.filter((c) => evenements.includes(c.evenement)).length; },
