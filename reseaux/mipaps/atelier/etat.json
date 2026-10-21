@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-21T03:13:28.298Z",
+  "genere_le": "2026-10-21T08:31:53.781Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,77 +20,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 38,
+  "reserve_jours": 40,
   "a_remplir": [
     {
-      "jour": "2026-11-28",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-28",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-28",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-29",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-29",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-29",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-30",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-30",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
       "jour": "2026-11-30",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-12-01",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-01",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-01",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-12-02",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-02",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-02",
@@ -98,59 +33,9 @@
       "categorie": "mipaps-histoire"
     },
     {
-      "jour": "2026-12-03",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-03",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-03",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-12-04",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-04",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
       "jour": "2026-12-04",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-12-05",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-05",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-05",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-12-06",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-06",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-06",
@@ -1276,7 +1161,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1330,7 +1215,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2298,6 +2183,213 @@
       "erreur": null
     },
     {
+      "jour": "2026-11-28",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ce qui nous fait le plus nous disputer",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "tu me fais rire même quand j'ai décidé de bouder",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "tu m'as manqué. t'étais partie chercher le pain.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "tu prends toute la couette et je dors quand même mieux quand t'es là.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "tu m'écoutes ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "même les jours où je suis pénible, tu me prends dans tes bras",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "mon humeur quand t'es pas là",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je t'avais dit de prendre une veste",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "j'adore ta tête quand tu viens de te réveiller",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'as le droit d'être grognon. je reste.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je vais pas m'endormir tout de suite",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "j'aime bien quand on parle de tout et de rien jusqu'à pas d'heure",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ce que je fais quand t'es pas là",
+      "erreur": null
+    },
+    {
       "jour": "2026-12-24",
       "creneau": "soir",
       "gabarit": "mipaps-statique",
@@ -2358,7 +2450,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-21",
+      "jour": "2026-10-22",
       "creneau": "midi"
     }
   },
@@ -2586,6 +2678,20 @@
       "vues": 52186,
       "partages": 1483,
       "enregistrements": 556
+    },
+    {
+      "variante_id": "d3dcc8dd-2b93-4365-bd0f-772eb49675a7",
+      "releve": "j7",
+      "vues": 460,
+      "partages": 1,
+      "enregistrements": 1
+    },
+    {
+      "variante_id": "d5da4ec2-aaa7-48a2-8c68-1314418d6950",
+      "releve": "j7",
+      "vues": 182,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
