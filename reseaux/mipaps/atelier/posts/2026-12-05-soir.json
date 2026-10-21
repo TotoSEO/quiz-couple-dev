@@ -1,0 +1,67 @@
+{
+  "jour": "2026-12-05",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-121",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : les deux au lit, la lune dehors.",
+        "texte": "j'aime bien quand on parle de tout et de rien jusqu'à pas d'heure",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "content",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 250,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "content",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 400,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            },
+            {
+              "objet": "lune",
+              "x": 325,
+              "y": 70,
+              "echelle": 0.7
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça à ta personne sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

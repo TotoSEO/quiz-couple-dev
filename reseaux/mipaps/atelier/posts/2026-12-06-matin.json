@@ -1,0 +1,178 @@
+{
+  "jour": "2026-12-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-140",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les chatouilles : elle arrive derrière lui en douce, le chatouille, il rit et tombe ; il riposte, les deux par terre, morts de rire. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il est debout, content, de dos à elle, il ne se doute de rien. Elle arrive par la gauche sur la pointe des pattes, malicieuse, un doigt devant la bouche. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "debout",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 290,
+                    "pose": "debout",
+                    "bras": "bouche"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "les chatouilles",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle le chatouille de ses deux pattes à 0,4 s. Il sursaute, éclate de rire, se plie en deux, et tombe à la renverse à 2,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "debout",
+                    "expression": "malicieux",
+                    "bras": "tend"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "pose": "debout",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "rire",
+                    "pose": "boule"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 400,
+                    "y": 380,
+                    "pose": "tombe"
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux sont allongés par terre, côte à côte, ils rient aux éclats, les yeux fermés, des petits cœurs flottent au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 370,
+                    "pose": "allonge",
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 370,
+                    "pose": "allonge",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 230,
+                "y": 210,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 425,
+                "y": 220,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

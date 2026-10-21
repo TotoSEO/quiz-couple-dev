@@ -1,0 +1,202 @@
+{
+  "jour": "2026-12-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-128",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "L'au revoir du soir qui dure : « bon, j'y vais », il marche vers la porte ; il revient pour un bisou ; il repart ; une heure plus tard, il est assis sur le canapé avec elle, l'écharpe encore au cou. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il marche de profil vers la porte, à droite, pressé. Elle est à gauche, contente, elle lui fait coucou de la patte. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 430
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 190,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "coucou"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 520,
+                "y": 260,
+                "echelle": 1.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "l'au revoir du soir qui dure",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Il fait demi-tour et revient vers elle en marchant à 0,4 s, un bisou, un cœur apparaît à 2 s ; il repart vers la porte à 2,6 s en lui faisant signe.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 250,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": 430
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 190,
+                    "pose": "debout",
+                    "expression": "amour",
+                    "bras": "coucou"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 520,
+                "y": 260,
+                "echelle": 1.2
+              },
+              {
+                "objet": "coeur",
+                "x": 215,
+                "y": 130,
+                "echelle": 0.45,
+                "de": 1.8,
+                "a": 3,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux sont assis sur le canapé, bien installés, contents. Il porte encore son écharpe autour du cou. Le texte « 1 h plus tard » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "echarpe",
+                "x": 226,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 140,
+                "echelle": 0.4,
+                "de": 1,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
