@@ -1,0 +1,39 @@
+name: Évaluation de couple · rappel
+
+# Le rappel unique des évaluations dont le rapport est prêt depuis 24 heures
+# et toujours pas débloqué (bilan/relance.mjs, qui appelle l'action interne
+# `relancer` de la fonction bilan ; docs/bilan/CONCEPTION.md).
+#
+# Qui le lance : la base elle-même, par pg_cron deux fois par heure,
+# seulement quand un rappel est dû (bilan_lancer_relance →
+# social_declencher_workflow, le même jeton que l'horloge des réseaux). Le
+# « schedule » ci-dessous n'est qu'un secours. Le relancer à la main est sans
+# risque : un rappel ne part jamais deux fois (relance_le).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '29 */6 * * *'
+
+concurrency:
+  group: bilan-relance
+  cancel-in-progress: false
+
+jobs:
+  rappels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bilan/relance.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rappels
+        run: node bilan/relance.mjs

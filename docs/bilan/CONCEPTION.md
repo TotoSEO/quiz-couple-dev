@@ -813,3 +813,98 @@ fin du test ».
   9,90 € l'est. Une réduction « en ce moment » qui ne finit jamais finit
   par devenir le vrai prix : mieux vaut lui donner une fin (`PROMO_FIN`).
 
+
+## 21 octobre 2026 : la conversion
+
+Thomas, devant l'onglet Bilan de l'admin : 478 visites de la page, 222 clics
+sur « Commencer », 82 évaluations créées, 27 premiers au bout de leurs
+réponses, 16 partenaires venus, 11 au bout, 4 pages de paiement ouvertes et
+une vente, la sienne (son essai de Stripe). « Aucune vente… le taux de
+conversion est trop faible. »
+
+### Ce que disent les chiffres
+
+- Les quatre pages de paiement ouvertes sont deux passages de la sonde de
+  `bilan-sante.yml` (une évaluation fictive menée jusqu'à Stripe), l'essai de
+  Thomas et une seule vraie personne. Sur environ 24 vraies personnes au
+  bout des cent questions, une seule a cliqué sur le bouton de paiement : la
+  fuite est là, pas dans les questions.
+- Sur un téléphone de 390 px, l'écran de fin montrait un titre, un aperçu
+  fictif illisible (l'image de la page de vente), huit puces, le prix, un
+  champ e-mail et la case de renonciation : le bouton était à 1 990 px du
+  haut. Rien ne disait ce que **leurs** réponses donnaient.
+- À deux, le premier qui finit lit « on attend l'autre » sous une offre
+  complète, et personne ne le prévient quand l'autre a fini : il ne revient
+  pas.
+- « 222 clics » compte des clics, pas des personnes ; le premier domaine
+  perd un peu plus d'un tiers de ceux qui l'ouvrent, ce qui reste à suivre.
+
+### Ce qui a changé
+
+- **L'écran « rapport prêt »** (`offre(etat, pret, tete)` dans bilan.js) :
+  dans le premier écran d'un téléphone de 844 px, « Léa et Tom, votre
+  rapport est prêt », trois tuiles (accords, réponses proches, écarts) aux
+  couleurs du rapport, en aplats, la ligne « dont N écarts sur des sujets
+  décisifs », une phrase qui dit ce que le rapport en fait, le prix (réduit
+  et barré quand la réduction court), la case de renonciation en petit et
+  le bouton. Dessous, une seconde carte : la couverture à leurs prénoms, le
+  sommaire des dix chapitres, « le recevoir à une autre adresse » replié et
+  les CGV. L'exemple fictif et les huit puces sont partis. Mesuré : bouton
+  à 741 px du haut à deux, 761 seul(e), 826 en allemand (bouton sur deux
+  lignes) ; sur 664 px (barre de Safari ouverte), le prix et la case sont à
+  l'écran, le bouton juste dessous.
+- **Les chiffres, sans le contenu** : Thomas a choisi de montrer des
+  comptes tirés de leurs vraies réponses plutôt qu'un sujet en clair.
+  `apercuDe` (serveur.mjs) ne rend que des nombres (accords, proches,
+  écarts, sujets décisifs, en solo les « je ne sais pas », le nombre de
+  questions et de conversations), dans la réponse 402 de `resultat` : jamais
+  une question, un domaine ni une réponse. Le principe « aucun résultat
+  gratuit » tient : savoir qu'on a 47 écarts ne dit pas lesquels.
+- **L'attente à deux** : l'offre est repliée sous une ligne « Débloquer le
+  rapport dès maintenant » avec le prix, et une phrase dit « on vous écrit à
+  … dès que Tom a fini : vous pouvez fermer cette page ».
+- **Deux e-mails, et pas plus** (Thomas : un seul rappel) :
+  - « Tom a fini : votre rapport est prêt », au premier, au moment où le
+    second finit (`avertirPret`, appelé par `repondre`), seulement si le
+    rapport n'est pas déjà payé ;
+  - un rappel, 24 heures après que le rapport est prêt, s'il n'est toujours
+    pas débloqué (`relancer`, `RELANCE_APRES_H`), aux deux en duo, à la
+    personne seule en solo, qui dit que c'est le seul.
+  Ni l'un ni l'autre ne contient quoi que ce soit du rapport (la règle en
+  tête de courriel.mjs) : le prix, ce que le rapport contient en général, un
+  lien. Le lien porte un jeton à lui (`jetons_mail`, quatre au plus) : on ne
+  peut pas réécrire le jeton principal sans couper le lien gardé sur le
+  téléphone, la base n'en gardant que l'empreinte. Chaque e-mail a « ne plus
+  recevoir de message sur cette évaluation » (`&arret=1`, action `rappels`),
+  qui coupe aussi ce qui n'est pas encore parti.
+- **Le consentement à ces e-mails** : ce sont des messages sur le service
+  acheté ou en cours, pas de la prospection, mais ils doivent être annoncés.
+  La phrase sous le champ e-mail de la création et de l'invitation les
+  annonce (`creation.emailAide`, `solo.creation.emailAide`), la page envoie
+  alors `rappel: true` et la base le garde (`a_rappel`, `b_rappel`). Les
+  évaluations créées avant n'ont pas vu la phrase : elles ne reçoivent ni
+  l'un ni l'autre. La politique de confidentialité les décrit
+  (`privacy.bilanItems`, cinq langues, mise à jour du 21 octobre 2026).
+- **Le plafond** : le plan Resend fait cent envois par jour, partagés avec
+  les rapports payés. Les deux e-mails comptent dans `bilan_compteurs`
+  (`pret_envoye`, `relance_envoye`) et s'arrêtent à quarante par jour
+  (`RAPPELS_PAR_JOUR`) ; au-delà, le rapport prêt n'est pas annoncé (la
+  personne le voit en revenant) et le rappel attend le passage suivant.
+- **L'horloge du rappel** : pg_cron (`bilan-relance`, à 17 et 47 de chaque
+  heure) appelle `bilan_lancer_relance()`, qui ne lance le workflow
+  `bilan-relance.yml` que si `bilan_relances_dues()` compte au moins un
+  rappel dû ; le workflow appelle l'action interne `relancer` avec la clé de
+  service (`bilan/relance.mjs`), qui revérifie chaque évaluation, en traite
+  25 au plus par passage et pose `relance_le` même quand l'envoi échoue,
+  pour ne jamais relancer deux fois. Le « schedule » du workflow (toutes les
+  six heures) sert de secours. Migration
+  `20261021120000_bilan_rappels.sql`, appliquée par `bilan-base.yml`.
+
+### Ce qu'il faut regarder ensuite
+
+Le taux qui compte est « pages de paiement ouvertes / personnes au bout »,
+en retirant les sondes (une évaluation « sonde » par passage de
+`bilan-sante.yml`). Trois jours de chiffres avant de toucher autre chose :
+si les pages de paiement s'ouvrent sans paiement, la fuite est passée chez
+Stripe (prix, moyens de paiement) ; si elles ne s'ouvrent toujours pas, le
+prochain levier est l'aperçu lui-même (un domaine nommé, par exemple).

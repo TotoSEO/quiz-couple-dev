@@ -56,7 +56,7 @@
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez les deux cases pour continuer.",
       "email": "Votre e-mail",
-      "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle permet aussi de retrouver votre évaluation si vous fermez la page.",
+      "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous prévenir quand votre rapport est prêt, avec un seul rappel s'il attend encore le lendemain.",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le rapport PDF sera envoyé."
     },
@@ -132,14 +132,27 @@
       "payeTitre": "Votre rapport est réglé",
       "payeTexte": "Merci ! Il s'ouvrira ici et partira par e-mail dès que {{autre}} aura fini ses réponses.",
       "relance": "Envoyer un petit rappel à {{autre}}",
-      "relanceMessage": "J'ai fini mes réponses pour notre évaluation de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone."
+      "relanceMessage": "J'ai fini mes réponses pour notre évaluation de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone.",
+      "prevenu": "On vous écrit à {{email}} dès que {{autre}} a fini : vous pouvez fermer cette page."
     },
     "paywall": {
       "titre": "Votre rapport complet",
       "titrePret": "Votre rapport vous attend",
       "introAttente": "Vous pouvez le débloquer dès maintenant : il s'ouvrira ici, et partira par e-mail, dès que {{autre}} aura fini.",
       "introPret": "Vos deux séries de réponses sont prêtes. Il ne reste qu'une étape pour découvrir ce qu'elles disent de votre couple.",
-      "apercu": "Extrait d'un rapport d'exemple (couple fictif)",
+      "apercu": {
+        "intro": "Vos réponses ont été comparées, question par question :",
+        "accordsUn": "accord",
+        "accordsN": "accords",
+        "prochesUn": "réponse proche",
+        "prochesN": "réponses proches",
+        "ecartsUn": "écart",
+        "ecartsN": "écarts",
+        "decisifs0": "Aucun écart sur les sujets décisifs, ceux qui pèsent le plus dans un couple.",
+        "decisifsUn": "Dont un écart sur un sujet décisif, de ceux qui pèsent le plus dans un couple.",
+        "decisifsN": "Dont {{n}} écarts sur des sujets décisifs, ceux qui pèsent le plus dans un couple.",
+        "quoi": "Le rapport vous dit lesquels, ce qu'ils veulent dire pour vous deux et comment en parler."
+      },
       "contenu": [
         "Votre alignement et le climat de votre couple, en un coup d'œil",
         "La carte de vos douze domaines, de l'argent aux enfants",
@@ -154,7 +167,7 @@
       "prixAide": "Un seul paiement, et {{autre}} n'aura rien à payer. Pas d'abonnement.",
       "emailLabel": "Où vous envoyer le rapport ?",
       "emailPlaceholder": "votre@email.com",
-      "emailAide": "Le PDF partira à cette adresse dès que vous aurez fini tous les deux. Elle ne sert à rien d'autre.",
+      "emailAide": "Le PDF partira à cette adresse dès que vous aurez fini tous les deux.",
       "emailFaux": "Cette adresse ne semble pas valide.",
       "renonciation": "Je demande que le rapport me soit fourni dès qu'il est prêt, sans attendre la fin du délai de rétractation de 14 jours, et je reconnais perdre mon droit de rétractation dès qu'il est fourni.",
       "renonciationManque": "Cochez la case pour continuer.",
@@ -163,7 +176,11 @@
       "cgv": "Conditions de vente",
       "tva": "TVA non applicable, art. 293 B du CGI.",
       "ferme": "Le paiement en ligne ouvre très bientôt. Votre évaluation est gardée : revenez sur cette page dans quelques jours.",
-      "redirection": "Redirection vers le paiement..."
+      "redirection": "Redirection vers le paiement...",
+      "pretTitre": "{{moi}} et {{autre}}, votre rapport est prêt",
+      "sommaire": "Ce qu'il y a dans votre rapport",
+      "emailAutre": "Le recevoir à une autre adresse",
+      "plie": "Débloquer le rapport dès maintenant"
     },
     "paiement": {
       "verification": "Vérification du paiement...",
@@ -182,7 +199,8 @@
         "consentement": "Je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
         "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
-        "creer": "Commencer mon évaluation"
+        "creer": "Commencer mon évaluation",
+        "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain."
       },
       "domaine": {
         "nb": "{{n}} questions, deux réponses chacune, environ {{min}} min"
@@ -200,7 +218,14 @@
           "Le rapport complet en PDF, envoyé par e-mail dès qu'il est prêt, et en ligne pendant six mois"
         ],
         "prixAide": "Un seul paiement, pas d'abonnement. Votre partenaire n'est pas prévenu(e).",
-        "emailAide": "Le PDF partira à cette adresse dès le paiement. Elle ne sert à rien d'autre."
+        "emailAide": "Le PDF partira à cette adresse dès le paiement.",
+        "pretTitre": "{{moi}}, votre rapport est prêt",
+        "apercu": {
+          "intro": "Vos réponses ont été comparées à ce que vous pensez que {{autre}} répondrait :",
+          "quoi": "Le rapport vous dit lesquels, ce qu'ils veulent dire et par où commencer.",
+          "inconnusUn": "Et un sujet où vous ne savez pas ce que {{autre}} répondrait.",
+          "inconnusN": "Et {{n}} sujets où vous ne savez pas ce que {{autre}} répondrait."
+        }
       },
       "rapport": {
         "ecran": {
@@ -566,6 +591,10 @@
       "bouton": "Retrouver mon évaluation",
       "envoye": "Si une évaluation est liée à {{email}}, vos liens arrivent dans votre boîte d'ici une minute. Pensez aux indésirables.",
       "trop": "Trop de demandes depuis votre connexion. Réessayez dans une heure."
+    },
+    "rappels": {
+      "arret": "C'est noté : vous ne recevrez plus de message sur cette évaluation.",
+      "continuer": "Continuer"
     }
   },
   "lp": {
