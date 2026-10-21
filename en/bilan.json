@@ -27,7 +27,6 @@
     },
     "creation": {
       "titre": "Your assessment",
-      "etape": "Step {{n}} of 3",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
       "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
@@ -42,23 +41,20 @@
       "homme": "A man",
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
-      "situationTitre": "Your situation",
       "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
-      "accordTitre": "Before you start",
       "majeur": "I'm 18 or over.",
       "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
       "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
-      "suivant": "Next",
       "retour": "Back",
       "creer": "Create our assessment",
-      "manque": "An answer is missing.",
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue.",
       "email": "Your email",
       "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and tells you when your report is ready, with a single reminder if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
-      "emailManque": "Enter your email address: that's where the PDF report will be sent."
+      "emailManque": "Enter your email address: that's where the PDF report will be sent.",
+      "autreDefaut": "your partner"
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -112,6 +108,12 @@
       "enregistre": "Saved",
       "horsLigne": "No connection: your answers will be sent as soon as it's back.",
       "erreur": "Your last answers couldn't be saved. Trying again in a moment..."
+    },
+    "fin": {
+      "titre": "Where should we send your report?",
+      "texte": "Your answers are saved! All that's left is to tell us where to send the report.",
+      "bouton": "Continue",
+      "revenir": "Back to the last question"
     },
     "pause": {
       "titre": "It's saved",
@@ -200,7 +202,8 @@
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
-        "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day."
+        "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
+        "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\"."
       },
       "domaine": {
         "nb": "{{n}} questions, two answers each, about {{min}} min"
@@ -562,7 +565,12 @@
       }
     },
     "situation": {
-      "resume": "Situation"
+      "resume": "Situation",
+      "titre": "Your situation",
+      "progression": "{{n}} of {{total}}",
+      "verifierTitre": "Your situation, before you start",
+      "verifierTexte": "These answers change the questions you get. If one of them isn't right anymore, correct it before you start.",
+      "confirmer": "That's right, let's start"
     },
     "erreurs": {
       "reseau": "No connection. Check your network and try again.",
@@ -893,7 +901,7 @@
       "points": [
         {
           "titre": "No account",
-          "texte": "You each access the assessment through your own link. No password, and an email address only if you want to receive the report."
+          "texte": "You each access the assessment through your own link. No password, and an email address only to send you the report."
         },
         {
           "titre": "Nothing is shown before the end",

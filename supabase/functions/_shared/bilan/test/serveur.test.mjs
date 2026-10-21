@@ -96,7 +96,6 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: { ...SIT, animal: 'peut-être' }, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'situation');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: '' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'prenom');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: false })).json.erreur, 'consentement');
-  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'email', 'sans adresse');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'pas une adresse', consentement: true, majeur: true })).json.erreur, 'email', 'adresse fausse');
   assert.equal((await appel({ action: 'creer', lang: 'xx', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'lang');
 
@@ -115,6 +114,86 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal(autreIp.statut, 200);
 });
 
+// Le départ du 21 octobre 2026 : un seul écran (prénoms et les deux cases),
+// la situation posée comme les premières questions, l'adresse demandée à la
+// fin de ses propres questions, juste avant l'offre.
+test('le départ léger : situation après la création, adresse à la fin', async () => {
+  const { appel, stockage } = monter();
+  const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', moi: { prenom: 'Thomas', genre: 'h' }, autre: { prenom: 'Léa', genre: 'f' }, consentement: true, majeur: true, rappel: true });
+  assert.equal(c.statut, 200, JSON.stringify(c.json));
+  const ligne = () => stockage.lignes.get(c.json.id);
+  assert.deepEqual(ligne().situation, {});
+  assert.equal(ligne().a_email, null);
+  assert.equal(ligne().a_rappel, false, 'pas de rappel sans adresse');
+  assert.equal(ligne().a_etape, 'situation');
+  const A = { id: c.json.id, jeton: c.json.jeton };
+  // Pas de réponse tant que la situation manque : les questions en dépendent.
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: { quo3: 1 } })).json.erreur, 'situation');
+  assert.equal((await appel({ action: 'situation', ...A, situation: { ...SIT, animal: undefined } })).json.erreur, 'situation');
+  const s = await appel({ action: 'situation', ...A, situation: SIT });
+  assert.equal(s.statut, 200);
+  assert.deepEqual(s.json.etat.situation, SIT);
+
+  // B rejoint sans adresse.
+  const okB = await appel({ action: 'consentir', id: c.json.id, jeton: c.json.invitation, prenom: 'Léa', genre: 'f', consentement: true, majeur: true, rappel: true });
+  assert.equal(okB.statut, 200, JSON.stringify(okB.json));
+  assert.equal(ligne().b_email, null);
+  assert.equal((await appel({ action: 'consentir', id: c.json.id, jeton: c.json.invitation, email: 'pas une adresse', consentement: true, majeur: true })).statut, 404, 'invitation usée');
+
+  // Tout répondu, mais sans adresse : pas fini, la page la demande.
+  const ra = toutRepondre(SIT, () => 0);
+  let r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
+  assert.equal(r.json.complet, true);
+  assert.equal(r.json.fini, false);
+  assert.equal(r.json.emailManque, true);
+  assert.equal(ligne().a_etape, 'email');
+  assert.equal(ligne().a_fini, null);
+  // L'adresse de fin, avec la phrase qui annonce l'e-mail « prêt » et le rappel.
+  assert.equal((await appel({ action: 'email', ...A, email: 'pas une adresse', rappel: true })).json.erreur, 'email');
+  const e = await appel({ action: 'email', ...A, email: ' Thomas@Exemple.fr ', rappel: true });
+  assert.equal(e.statut, 200);
+  assert.equal(e.json.envoi.envoyes, 0, 'rien ne part avant le paiement');
+  assert.equal(ligne().a_email, 'thomas@exemple.fr');
+  assert.equal(ligne().a_rappel, true);
+  r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
+  assert.equal(r.json.fini, true);
+  assert.equal(r.json.emailManque, false);
+  assert.equal(ligne().a_etape, 'fini');
+
+  // Une page d'avant donne encore la situation et l'adresse à la création.
+  const ancien = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', rappel: true, consentement: true, majeur: true });
+  assert.equal(ancien.statut, 200);
+  assert.equal(stockage.lignes.get(ancien.json.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'quotidien');
+});
+
+test('les écrans du parcours comptés par la page, seul(e) à part', async () => {
+  const { appel, stockage } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  assert.equal((await appel({ action: 'vue', quoi: 'page', src: 'menu' })).statut, 200);
+  assert.equal((await appel({ action: 'vue', quoi: 'cta', src: 'menu', mode: 'solo' })).statut, 200);
+  assert.equal(n('vue', 'menu'), 1);
+  assert.equal(n('cta', 'menu'), 1);
+  assert.equal(n('cta_solo', 'menu'), 1);
+  for (const quoi of ['depart', 'invitation_vue', 'situation_vue', 'offre_vue', 'attente_vue', 'case_manquante']) {
+    assert.equal((await appel({ action: 'vue', quoi, mode: 'duo' })).statut, 200, quoi);
+    assert.equal(n(quoi, ''), 1, quoi);
+    assert.equal(n(quoi + '_solo'), 0, quoi);
+  }
+  await appel({ action: 'vue', quoi: 'depart_erreur', cle: 'prenoms', mode: 'solo' });
+  await appel({ action: 'vue', quoi: 'depart_erreur', cle: '<script>' });
+  assert.equal(n('depart_erreur', 'prenoms'), 1);
+  assert.equal(n('depart_erreur_solo', 'prenoms'), 1);
+  assert.equal(n('depart_erreur', 'autre'), 1, 'une cause inconnue ne devient pas une clé');
+  await appel({ action: 'vue', quoi: 'email_vue', cle: 'b', mode: 'duo' });
+  await appel({ action: 'vue', quoi: 'email_vue', cle: 'x', mode: 'solo' });
+  assert.equal(n('email_vue', 'b'), 1);
+  assert.equal(n('email_vue', 'a'), 1, 'le rôle, a par défaut');
+  assert.equal(n('email_vue_solo', 'a'), 1);
+  assert.equal((await appel({ action: 'vue', quoi: 'paye' })).statut, 400, 'un événement de la base ne se compte pas depuis la page');
+  assert.equal((await appel({ action: 'vue', quoi: 'vue_solo' })).statut, 400);
+});
+
 test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rapport par e-mail', async () => {
   const { appel, stripe, stockage, courriel } = monter();
   const c = await creerCouple(appel);
@@ -130,8 +209,6 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal(vue.json.paye, false);
   // Sans accord, B ne peut rien écrire.
   assert.equal((await appel({ action: 'repondre', id: c.id, jeton: c.invitation, reponses: { quo3: 1 } })).statut, 403);
-  // Sans adresse e-mail, pas d'accord possible : le rapport doit pouvoir lui partir.
-  assert.equal((await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Léa-Rose', consentement: true, majeur: true })).json.erreur, 'email');
   // B accepte, corrige son prénom, et reçoit une nouvelle clé.
   const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: ' Lea@Exemple.fr ', prenom: 'Léa-Rose', genre: 'f', consentement: true, majeur: true });
   assert.equal(ok.statut, 200);
