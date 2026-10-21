@@ -839,6 +839,53 @@
     if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : 'Bas de page · ') + m[2];
     return src;
   }
+  // ── La page de paiement de Stripe, sans faire le test ──────────────────
+  // Action apercu_paiement de la fonction bilan (jeton admin) : la même
+  // session qu'un client, réduction comprise, sans évaluation derrière, donc
+  // rien dans les compteurs de l'onglet. L'onglet est ouvert dans le geste
+  // (sinon le navigateur bloque la fenêtre), puis envoyé sur Stripe quand
+  // l'adresse arrive.
+  var MESSAGES_APERCU = {
+    403: 'Jeton refusé : reconnecte-toi à l\'admin.',
+    503: 'Paiement fermé : la fonction n\'a pas de clé Stripe.',
+    400: 'La fonction bilan n\'a pas encore cette action : attends la fin du déploiement.'
+  };
+  function apercuStripe() {
+    var bouton = document.getElementById('apercu-stripe');
+    var msg = document.getElementById('apercu-stripe-msg');
+    var montre = function (texte, classe) { msg.textContent = texte; msg.className = 'adm-apercu-msg' + (classe ? ' adm-apercu-msg--' + classe : ''); };
+    var onglet = window.open('', '_blank');
+    bouton.disabled = true;
+    montre('Ouverture de la page Stripe…');
+    fetch(SUPABASE_URL + '/functions/v1/bilan', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json', 'x-admin-token': adminToken },
+      body: JSON.stringify({
+        action: 'apercu_paiement',
+        lang: document.getElementById('apercu-stripe-lang').value,
+        mode: document.getElementById('apercu-stripe-mode').value
+      })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) { return { statut: r.status, json: j || {} }; });
+    }).then(function (r) {
+      if (r.statut !== 200 || !r.json.url) {
+        var e = new Error(MESSAGES_APERCU[r.statut] || ('Stripe a refusé la page (' + r.statut + ') ' + (r.json.detail || r.json.erreur || '')));
+        throw e;
+      }
+      if (onglet && !onglet.closed) { onglet.opener = null; onglet.location.href = r.json.url; }
+      else window.location.href = r.json.url;
+      var total = r.json.total;
+      montre(total == null
+        ? 'Page Stripe ouverte dans un nouvel onglet.'
+        : 'Page Stripe ouverte : elle demande ' + eurosBilan(total) + (r.json.promo
+          ? ' au lieu de ' + eurosBilan(r.json.prixBase) + ' (code ' + r.json.code + ' appliqué).'
+          : ', sans réduction.'), 'ok');
+    }).catch(function (e) {
+      if (onglet && !onglet.closed) onglet.close();
+      montre(e && e.message ? e.message : 'Erreur réseau.', 'erreur');
+    }).then(function () { bouton.disabled = false; });
+  }
+
   function eurosBilan(centimes) {
     return ((Number(centimes) || 0) / 100).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
   }
@@ -3603,6 +3650,8 @@
       bilanCouchesVues[cle] = !bilanCouchesVues[cle];
       dessineBilan();
     });
+    var btnStripe = document.getElementById('apercu-stripe');
+    if (btnStripe) btnStripe.addEventListener('click', apercuStripe);
     var perBi = document.getElementById('admin-bilan-periode');
     if (perBi) perBi.addEventListener('click', function (e) {
       var b = e.target.closest('[data-bilan-jours]');

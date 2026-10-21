@@ -30,7 +30,8 @@ function fauxStripe({ refuseCode = false } = {}) {
       const montant = p.discounts && p.discounts[0].promotion_code === C.PROMO_STRIPE ? brut - Math.round(brut * C.PROMO_POURCENT / 100) : brut;
       const s = { id, url: 'https://checkout.stripe.com/c/pay/' + id, payment_status: 'unpaid', amount_total: montant, metadata: p.metadata, client_reference_id: p.client_reference_id, params: p };
       sessions.set(id, s);
-      return { id: s.id, url: s.url };
+      // Comme Stripe, la session créée porte déjà son montant, réduction comprise.
+      return { id: s.id, url: s.url, amount_total: s.amount_total };
     },
     async lireSession(id) {
       const s = sessions.get(id);
@@ -337,6 +338,7 @@ test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Strip
   let p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
   assert.equal(p.statut, 200);
   assert.equal(p.json.promo, true);
+  assert.equal(p.json.total, C.prixPromo(), 'le montant calculé par Stripe revient à la page et à la sonde');
   let s = [...m.stripe.sessions.values()][0];
   assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
   assert.equal(s.params.allow_promotion_codes, undefined);
@@ -357,6 +359,41 @@ test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Strip
   s = [...m.stripe.sessions.values()][0];
   assert.equal(s.params.discounts, undefined);
   assert.equal(s.params.allow_promotion_codes, 'true');
+});
+
+test('l\'aperçu de la page de paiement pour l\'admin : même page qu\'un client, aucune évaluation', async () => {
+  const m = monter();
+  const avant = m.stockage.lignes.size;
+  // Sans le jeton de l'admin (vérifié par index.ts), rien.
+  const refus = await m.traiter({ action: 'apercu_paiement', lang: 'fr' }, { ip: '1.2.3.4' });
+  assert.equal(refus.statut, 403);
+  assert.equal(m.stripe.sessions.size, 0);
+
+  const r = await m.traiter({ action: 'apercu_paiement', lang: 'de', mode: 'solo' }, { ip: '1.2.3.4', admin: true });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.match(r.json.url, /^https:\/\/checkout\.stripe\.com\//);
+  assert.equal(r.json.promo, true);
+  assert.equal(r.json.total, C.prixPromo());
+  assert.equal(r.json.prixBase, C.PRIX_CENTIMES);
+  const s = [...m.stripe.sessions.values()][0];
+  assert.equal(s.params.locale, 'de');
+  assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+  assert.equal(s.params.client_reference_id, undefined);
+  assert.deepEqual(s.params.metadata, { apercu: 'admin', mode: 'solo' });
+  assert.match(s.params.line_items[0].price_data.product_data.description, /allein|Partner|deine/i);
+  assert.equal(s.params.success_url, 'https://quiz-couple.com/admin/');
+  // Rien en base : ni évaluation, ni compteur, et la même page qu'un client
+  // (prix plein affiché par Stripe, puis la réduction).
+  assert.equal(m.stockage.lignes.size, avant);
+  assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
+
+  // Payée quand même : le webhook ne trouve aucune évaluation à débloquer.
+  m.stripe.payer(s.id);
+  assert.equal(await m.marquerPaye(await m.stripe.lireSession(s.id)), false);
+
+  // Sans clé Stripe : fermé, comme pour un client.
+  const sans = monter({ sansStripe: true });
+  assert.equal((await sans.traiter({ action: 'apercu_paiement' }, { ip: '1.2.3.4', admin: true })).statut, 503);
 });
 
 test('la fin de la réduction : jour de Paris, douze heures de grâce côté serveur', () => {
