@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-20T08:29:06.065Z",
+  "genere_le": "2026-10-21T03:13:28.298Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-20",
+  "aujourdhui": "2026-10-21",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 39,
+  "reserve_jours": 38,
   "a_remplir": [
     {
       "jour": "2026-11-28",
@@ -926,6 +926,21 @@
       "jour": "2027-01-28",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-29",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-29",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-29",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1243,7 +1258,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "j'ai froid. viens.",
       "erreur": null
     },
@@ -1252,7 +1267,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "tu me manques déjà et t'es parti depuis 4 minutes",
       "erreur": null
     },
@@ -1261,7 +1276,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1297,7 +1312,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "tu dors ?",
       "erreur": null
     },
@@ -1306,7 +1321,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "t'es la personne à qui je veux raconter les trucs nuls de ma journée",
       "erreur": null
     },
@@ -2331,11 +2346,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-21",
+      "jour": "2026-10-22",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-20",
+      "jour": "2026-10-22",
       "creneau": "soir"
     },
     "mipaps-histoire": {
@@ -2543,6 +2558,34 @@
       "vues": 301,
       "partages": 0,
       "enregistrements": 0
+    },
+    {
+      "variante_id": "0e3df6b8-8ed8-42cd-9cc6-edfcf1482388",
+      "releve": "j7",
+      "vues": 3,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "69673f42-ba3f-42c5-9586-6c5d54b36b1f",
+      "releve": "j7",
+      "vues": 200,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "94e0eb67-0b18-4464-8c3e-8ee12ae8309a",
+      "releve": "j7",
+      "vues": 64,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "f6e066dc-b501-4874-86db-069c461996a3",
+      "releve": "j7",
+      "vues": 52186,
+      "partages": 1483,
+      "enregistrements": 556
     }
   ]
 }
