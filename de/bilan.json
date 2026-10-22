@@ -27,7 +27,6 @@
     },
     "creation": {
       "titre": "Euer Check",
-      "etape": "Schritt {{n}} von 3",
       "modeTitre": "Wie macht ihr die Analyse?",
       "modeDuo": "Zu zweit",
       "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
@@ -42,23 +41,20 @@
       "homme": "Ein Mann",
       "sansGenre": "Möchte ich nicht sagen",
       "genreAide": "Das dient nur dazu, die Figuren neben euren Namen auszuwählen.",
-      "situationTitre": "Eure Situation",
       "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“. Dein Partner oder deine Partnerin kann sie korrigieren.",
-      "accordTitre": "Bevor es losgeht",
       "majeur": "Ich bin 18 Jahre oder älter.",
       "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
       "accordAide": "Deine Antworten, auch zu intimen Themen, dienen nur diesem Bericht, in dem {{autre}} sie neben den eigenen sieht. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie jederzeit löschen. Kein Konto nötig.",
       "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide: Du schaltest ihn frei, sobald du deine Antworten fertig hast.",
-      "suivant": "Weiter",
       "retour": "Zurück",
       "creer": "Unseren Check erstellen",
-      "manque": "Eine Antwort fehlt.",
       "prenomManque": "Schreib eure beiden Vornamen.",
       "accordManque": "Setz beide Häkchen, um weiterzumachen.",
       "email": "Deine E-Mail",
-      "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt.",
+      "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir sagen dir Bescheid, wenn dein Bericht bereit ist, mit einer einzigen Erinnerung, falls er am nächsten Tag noch wartet.",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
-      "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Bericht als PDF."
+      "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Bericht als PDF.",
+      "autreDefaut": "dein Partner oder deine Partnerin"
     },
     "invitation": {
       "titre": "Lade {{autre}} ein",
@@ -113,6 +109,12 @@
       "horsLigne": "Keine Verbindung: Deine Antworten werden gesendet, sobald sie wieder da ist.",
       "erreur": "Deine letzten Antworten konnten nicht gespeichert werden. Neuer Versuch gleich..."
     },
+    "fin": {
+      "titre": "Wohin sollen wir deinen Bericht schicken?",
+      "texte": "Deine Antworten sind gespeichert! Jetzt fehlt nur noch die Adresse für den Bericht.",
+      "bouton": "Weiter",
+      "revenir": "Zurück zur letzten Frage"
+    },
     "pause": {
       "titre": "Ist gespeichert",
       "texte": "Du kannst die Seite schließen: Deine Antworten bleiben erhalten. Um weiterzumachen, komm von diesem Handy auf diese Seite zurück, oder öffne deinen persönlichen Link auf einem anderen Gerät.",
@@ -132,14 +134,27 @@
       "payeTitre": "Euer Bericht ist bezahlt",
       "payeTexte": "Danke! Er öffnet sich hier und geht per E-Mail raus, sobald {{autre}} mit den Antworten fertig ist.",
       "relance": "{{autre}} kurz erinnern",
-      "relanceMessage": "Ich bin mit meinen Antworten für unsere Beziehungsanalyse fertig, ich warte auf dich! Du machst da weiter, wo du aufgehört hast, auf deinem Handy."
+      "relanceMessage": "Ich bin mit meinen Antworten für unsere Beziehungsanalyse fertig, ich warte auf dich! Du machst da weiter, wo du aufgehört hast, auf deinem Handy.",
+      "prevenu": "Wir schreiben dir an {{email}}, sobald {{autre}} fertig ist: Du kannst diese Seite schließen."
     },
     "paywall": {
       "titre": "Euer vollständiger Bericht",
       "titrePret": "Euer Bericht wartet auf euch",
       "introAttente": "Du kannst ihn jetzt schon freischalten: Er öffnet sich hier und geht per E-Mail raus, sobald {{autre}} fertig ist.",
       "introPret": "Eure beiden Antwortreihen sind fertig. Nur noch ein Schritt, und ihr erfahrt, was sie über eure Beziehung sagen.",
-      "apercu": "Auszug aus einem Beispielbericht (erfundenes Paar)",
+      "apercu": {
+        "intro": "Eure Antworten wurden Frage für Frage verglichen:",
+        "accordsUn": "Überein\u00adstimmung",
+        "accordsN": "Überein\u00adstimmungen",
+        "prochesUn": "ähnliche Antwort",
+        "prochesN": "ähnliche Antworten",
+        "ecartsUn": "Unterschied",
+        "ecartsN": "Unterschiede",
+        "decisifs0": "Kein Unterschied bei den entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
+        "decisifsUn": "Davon einer bei einem entscheidenden Thema, einem von denen, die in einer Beziehung am meisten wiegen.",
+        "decisifsN": "Davon {{n}} bei entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
+        "quoi": "Der Bericht sagt euch, welche es sind, was sie für euch beide bedeuten und wie ihr darüber reden könnt."
+      },
       "contenu": [
         "Eure Übereinstimmung und das Klima in eurer Beziehung, auf einen Blick",
         "Die Karte eurer zwölf Bereiche, vom Geld bis zu den Kindern",
@@ -154,7 +169,7 @@
       "prixAide": "Eine einzige Zahlung, und {{autre}} muss nichts bezahlen. Kein Abo.",
       "emailLabel": "Wohin sollen wir den Bericht schicken?",
       "emailPlaceholder": "du@email.de",
-      "emailAide": "Das PDF geht an diese Adresse, sobald ihr beide fertig seid. Sie wird für nichts anderes verwendet.",
+      "emailAide": "Das PDF geht an diese Adresse, sobald ihr beide fertig seid.",
       "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
       "renonciation": "Ich verlange, dass der Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der 14-tägigen Widerrufsfrist abzuwarten, und bestätige, dass ich mein Widerrufsrecht verliere, sobald er bereitgestellt ist.",
       "renonciationManque": "Setz das Häkchen, um weiterzumachen.",
@@ -163,7 +178,11 @@
       "cgv": "AGB",
       "tva": "Keine Umsatzsteuer, gemäß Art. 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung).",
       "ferme": "Die Online-Zahlung startet sehr bald. Eure Analyse ist gespeichert: Kommt in ein paar Tagen auf diese Seite zurück.",
-      "redirection": "Weiterleitung zur Zahlung..."
+      "redirection": "Weiterleitung zur Zahlung...",
+      "pretTitre": "{{moi}} und {{autre}}, euer Bericht ist bereit",
+      "sommaire": "Was in eurem Bericht steht",
+      "emailAutre": "An eine andere Adresse schicken",
+      "plie": "Den Bericht jetzt freischalten"
     },
     "paiement": {
       "verification": "Zahlung wird geprüft...",
@@ -180,9 +199,11 @@
         "autreAide": "Er dient nur dazu, die Fragen zu schreiben. Es wird nichts verschickt.",
         "soloNote": "Du machst die Analyse allein: {{autre}} erfährt nichts davon, es wird nichts verschickt, und nur du wirst den Bericht sehen.",
         "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
-        "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was du dir von den Antworten von {{autre}} vorstellst, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
+        "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
-        "creer": "Meine Analyse beginnen"
+        "creer": "Meine Analyse beginnen",
+        "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
+        "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“."
       },
       "domaine": {
         "nb": "{{n}} Fragen, je zwei Antworten, etwa {{min}} Min."
@@ -200,7 +221,15 @@
           "Der vollständige Bericht als PDF, per E-Mail, sobald er fertig ist, und sechs Monate lang online"
         ],
         "prixAide": "Eine einzige Zahlung, kein Abo. Dein Partner oder deine Partnerin erfährt nichts davon.",
-        "emailAide": "Das PDF geht gleich nach der Zahlung an diese Adresse. Sie wird für nichts anderes verwendet."
+        "emailAide": "Das PDF geht gleich nach der Zahlung an diese Adresse.",
+        "pretTitre": "{{moi}}, dein Bericht ist bereit",
+        "apercu": {
+          "intro": "Deine Antworten wurden mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
+          "quoi": "Der Bericht sagt dir, welche es sind, was sie bedeuten und womit du anfangen kannst.",
+          "inconnusUn": "Und ein Thema, bei dem du nicht weißt, was {{autre}} antworten würde.",
+          "inconnusN": "Und {{n}} Themen, bei denen du nicht weißt, was {{autre}} antworten würde."
+        },
+        "sommaire": "Was in deinem Bericht steht"
       },
       "rapport": {
         "ecran": {
@@ -537,7 +566,12 @@
       }
     },
     "situation": {
-      "resume": "Situation"
+      "resume": "Situation",
+      "titre": "Eure Situation",
+      "progression": "{{n}} von {{total}}",
+      "verifierTitre": "Eure Situation, bevor es losgeht",
+      "verifierTexte": "Diese Antworten ändern die Fragen, die du bekommst. Wenn eine davon nicht mehr stimmt, korrigiere sie, bevor du anfängst.",
+      "confirmer": "Stimmt so, los geht's"
     },
     "erreurs": {
       "reseau": "Keine Verbindung. Prüf dein Netz und versuch es noch einmal.",
@@ -566,6 +600,10 @@
       "bouton": "Meine Analyse wiederfinden",
       "envoye": "Wenn eine Analyse mit {{email}} verknüpft ist, kommen deine Links innerhalb einer Minute in dein Postfach. Schau auch im Spam-Ordner nach.",
       "trop": "Zu viele Anfragen von deiner Verbindung. Versuche es in einer Stunde noch einmal."
+    },
+    "rappels": {
+      "arret": "Erledigt: Du bekommst keine Nachrichten mehr zu dieser Analyse.",
+      "continuer": "Weiter"
     }
   },
   "lp": {
@@ -864,7 +902,7 @@
       "points": [
         {
           "titre": "Kein Konto",
-          "texte": "Jeder öffnet die Analyse über seinen eigenen Link. Kein Passwort, und eine E-Mail-Adresse nur, wenn ihr den Bericht erhalten wollt."
+          "texte": "Jeder öffnet die Analyse über seinen eigenen Link. Kein Passwort, und eine E-Mail-Adresse nur, um euch den Bericht zu schicken."
         },
         {
           "titre": "Vor dem Ende wird nichts gezeigt",

@@ -813,3 +813,167 @@ fin du test ».
   9,90 € l'est. Une réduction « en ce moment » qui ne finit jamais finit
   par devenir le vrai prix : mieux vaut lui donner une fin (`PROMO_FIN`).
 
+
+## 21 octobre 2026 : la conversion
+
+Thomas, devant l'onglet Bilan de l'admin : 478 visites de la page, 222 clics
+sur « Commencer », 82 évaluations créées, 27 premiers au bout de leurs
+réponses, 16 partenaires venus, 11 au bout, 4 pages de paiement ouvertes et
+une vente, la sienne (son essai de Stripe). « Aucune vente… le taux de
+conversion est trop faible. »
+
+### Ce que disent les chiffres
+
+- Les quatre pages de paiement ouvertes sont deux passages de la sonde de
+  `bilan-sante.yml` (une évaluation fictive menée jusqu'à Stripe), l'essai de
+  Thomas et une seule vraie personne. Sur environ 24 vraies personnes au
+  bout des cent questions, une seule a cliqué sur le bouton de paiement : la
+  fuite est là, pas dans les questions.
+- Sur un téléphone de 390 px, l'écran de fin montrait un titre, un aperçu
+  fictif illisible (l'image de la page de vente), huit puces, le prix, un
+  champ e-mail et la case de renonciation : le bouton était à 1 990 px du
+  haut. Rien ne disait ce que **leurs** réponses donnaient.
+- À deux, le premier qui finit lit « on attend l'autre » sous une offre
+  complète, et personne ne le prévient quand l'autre a fini : il ne revient
+  pas.
+- « 222 clics » compte des clics, pas des personnes ; le premier domaine
+  perd un peu plus d'un tiers de ceux qui l'ouvrent, ce qui reste à suivre.
+
+### Ce qui a changé
+
+- **L'écran « rapport prêt »** (`offre(etat, pret, tete)` dans bilan.js) :
+  dans le premier écran d'un téléphone de 844 px, « Léa et Tom, votre
+  rapport est prêt », trois tuiles (accords, réponses proches, écarts) aux
+  couleurs du rapport, en aplats, la ligne « dont N écarts sur des sujets
+  décisifs », une phrase qui dit ce que le rapport en fait, le prix (réduit
+  et barré quand la réduction court), la case de renonciation en petit et
+  le bouton. Dessous, une seconde carte : la couverture à leurs prénoms, le
+  sommaire des dix chapitres, « le recevoir à une autre adresse » replié et
+  les CGV. L'exemple fictif et les huit puces sont partis. Mesuré : bouton
+  à 741 px du haut à deux, 761 seul(e), 826 en allemand (bouton sur deux
+  lignes) ; sur 664 px (barre de Safari ouverte), le prix et la case sont à
+  l'écran, le bouton juste dessous.
+- **Les chiffres, sans le contenu** : Thomas a choisi de montrer des
+  comptes tirés de leurs vraies réponses plutôt qu'un sujet en clair.
+  `apercuDe` (serveur.mjs) ne rend que des nombres (accords, proches,
+  écarts, sujets décisifs, en solo les « je ne sais pas », le nombre de
+  questions et de conversations), dans la réponse 402 de `resultat` : jamais
+  une question, un domaine ni une réponse. Le principe « aucun résultat
+  gratuit » tient : savoir qu'on a 47 écarts ne dit pas lesquels.
+- **L'attente à deux** : l'offre est repliée sous une ligne « Débloquer le
+  rapport dès maintenant » avec le prix, et une phrase dit « on vous écrit à
+  … dès que Tom a fini : vous pouvez fermer cette page ».
+- **Deux e-mails, et pas plus** (Thomas : un seul rappel) :
+  - « Tom a fini : votre rapport est prêt », au premier, au moment où le
+    second finit (`avertirPret`, appelé par `repondre`), seulement si le
+    rapport n'est pas déjà payé ;
+  - un rappel, 24 heures après que le rapport est prêt, s'il n'est toujours
+    pas débloqué (`relancer`, `RELANCE_APRES_H`), aux deux en duo, à la
+    personne seule en solo, qui dit que c'est le seul.
+  Ni l'un ni l'autre ne contient quoi que ce soit du rapport (la règle en
+  tête de courriel.mjs) : le prix, ce que le rapport contient en général, un
+  lien. Le lien porte un jeton à lui (`jetons_mail`, quatre au plus) : on ne
+  peut pas réécrire le jeton principal sans couper le lien gardé sur le
+  téléphone, la base n'en gardant que l'empreinte. Chaque e-mail a « ne plus
+  recevoir de message sur cette évaluation » (`&arret=1`, action `rappels`),
+  qui coupe aussi ce qui n'est pas encore parti.
+- **Le consentement à ces e-mails** : ce sont des messages sur le service
+  acheté ou en cours, pas de la prospection, mais ils doivent être annoncés.
+  La phrase sous le champ e-mail de la création et de l'invitation les
+  annonce (`creation.emailAide`, `solo.creation.emailAide`), la page envoie
+  alors `rappel: true` et la base le garde (`a_rappel`, `b_rappel`). Les
+  évaluations créées avant n'ont pas vu la phrase : elles ne reçoivent ni
+  l'un ni l'autre. La politique de confidentialité les décrit
+  (`privacy.bilanItems`, cinq langues, mise à jour du 21 octobre 2026).
+- **Le plafond** : le plan Resend fait cent envois par jour, partagés avec
+  les rapports payés. Les deux e-mails comptent dans `bilan_compteurs`
+  (`pret_envoye`, `relance_envoye`) et s'arrêtent à quarante par jour
+  (`RAPPELS_PAR_JOUR`) ; au-delà, le rapport prêt n'est pas annoncé (la
+  personne le voit en revenant) et le rappel attend le passage suivant.
+- **L'horloge du rappel** : pg_cron (`bilan-relance`, à 17 et 47 de chaque
+  heure) appelle `bilan_lancer_relance()`, qui ne lance le workflow
+  `bilan-relance.yml` que si `bilan_relances_dues()` compte au moins un
+  rappel dû ; le workflow appelle l'action interne `relancer` avec la clé de
+  service (`bilan/relance.mjs`), qui revérifie chaque évaluation, en traite
+  25 au plus par passage et pose `relance_le` même quand l'envoi échoue,
+  pour ne jamais relancer deux fois. Le « schedule » du workflow (toutes les
+  six heures) sert de secours. Migration
+  `20261021120000_bilan_rappels.sql`, appliquée par `bilan-base.yml`.
+
+### Ce qu'il faut regarder ensuite
+
+Le taux qui compte est « pages de paiement ouvertes / personnes au bout »,
+en retirant les sondes (une évaluation « sonde » par passage de
+`bilan-sante.yml`). Trois jours de chiffres avant de toucher autre chose :
+si les pages de paiement s'ouvrent sans paiement, la fuite est passée chez
+Stripe (prix, moyens de paiement) ; si elles ne s'ouvrent toujours pas, le
+prochain levier est l'aperçu lui-même (un domaine nommé, par exemple).
+
+## 21 octobre 2026 : le départ en un écran
+
+Le même jour, Thomas devant l'entonnoir : « Seulement 1 personne sur 3
+remplit le formulaire jusqu'au bout pour démarrer l'évaluation. Sans compter
+que sur 85 qui ont commencé seulement 11 sont allés tous les deux jusqu'au
+bout. D'ailleurs comment cette stat prend en compte les gens qui répondent
+seul ? » Il a choisi de mesurer chaque étape et d'alléger le départ en même
+temps.
+
+### Ce que les chiffres ne disaient pas
+
+- « Clic sur Commencer » comptait chaque clic : quelqu'un qui revenait sur
+  la page de vente ou recliquait comptait plusieurs fois. 240 clics, ce
+  n'était pas 240 personnes.
+- « Le premier a fini » comptait aussi les évaluations seul(e), alors que
+  « le partenaire a rejoint » et « le partenaire a fini » ne concernent que
+  les évaluations à deux : 11 était à rapporter aux évaluations à deux, pas
+  aux 85.
+- Entre le clic et la création, trois écrans (prénoms et adresse, sept
+  questions de situation, deux cases) et aucun compte : impossible de dire
+  où les gens partaient.
+
+### Ce qui a changé
+
+- **Un seul écran de départ** : la façon de faire, les deux prénoms et
+  leurs genres, les deux cases (18 ans, consentement), la note RGPD, le prix
+  et le numéro d'aide. Plus d'adresse ni de situation à cet endroit.
+- **La situation, posée comme les premières questions** : une par écran,
+  avec le même dessin qu'une question, « 1 sur 7 », hors du compte des cent.
+  Elle est enregistrée d'un coup à la septième réponse ; le serveur refuse
+  des réponses tant qu'elle manque, parce que les questions posées en
+  dépendent. Celui qui arrive après (le partenaire, ou soi-même sur un autre
+  téléphone) la relit avant sa première question et peut la corriger :
+  l'écran d'acceptation de l'invitation n'a donc plus que le prénom, le
+  genre et les deux cases.
+- **L'adresse e-mail à la fin de ses propres questions**, juste avant
+  l'offre : toujours obligatoire (le serveur ne marque pas « fini » sans
+  elle), le PDF y part toujours tout seul, et la phrase sous le champ
+  annonce l'e-mail « rapport prêt » et le rappel, comme avant. On la donne
+  au moment où elle sert, après avoir vu ce qu'on a fait, au lieu de la
+  donner avant d'avoir vu une seule question.
+- **Ce qu'on perd** : une personne qui part au milieu des questions sans
+  avoir donné d'adresse ne peut plus retrouver son évaluation par e-mail
+  depuis un autre appareil. Sur le même téléphone, la page la garde ; et
+  « Recevoir mon lien par e-mail » reste proposé sur l'écran d'invitation et
+  sur la pause.
+
+### La mesure
+
+Chaque écran est compté une fois par visite par la page (action `vue`) :
+le clic sur « Commencer », l'écran de départ, ses erreurs par cause
+(prénoms manquants, cases pas cochées), l'écran d'invitation du partenaire,
+la première question de situation, l'écran de l'adresse (par rôle), l'offre
+« rapport prêt », l'attente à deux, et le clic sur « Débloquer » sans la case
+cochée. La base compte la situation donnée, la première réponse de chacun et
+le reste comme avant. Pour une évaluation seul(e), chaque compte a son
+double `_solo` ; à deux = total - seul(e). L'entonnoir de l'admin a deux
+colonnes, À deux et Seul(e), qui ne lisent que les jours depuis le
+21 octobre 2026.
+
+### Ce qu'il faut regarder ensuite
+
+Trois jours de chiffres, puis : la part des départs vus qui deviennent des
+évaluations (le formulaire), la part des créées qui donnent leur situation
+(à deux, le créateur peut partir envoyer le lien et ne jamais revenir), la
+part de ceux qui voient l'écran de l'adresse et finissent (si elle tombe,
+l'adresse à la fin coûte des personnes), et les clics sans la case cochée
+(si beaucoup, la case de renonciation bloque le paiement).
