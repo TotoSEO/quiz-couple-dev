@@ -26,14 +26,15 @@ simple de montrer que les risques ont été regardés en face.
 Deux partenaires, chacun sur son téléphone, ou une seule personne en mode
 seul(e), répondent à cent questions sur leur vie à deux. Une fois le
 rapport payé (9,90 €, une fois pour les deux), un rapport d'une quarantaine
-de pages met leurs réponses face à face. Il est montré sur la page et
-envoyé en PDF par e-mail.
+de pages met leurs réponses face à face. Il est montré sur la page et se
+télécharge en PDF ; chaque adresse donnée reçoit par e-mail un lien
+personnel vers lui, jamais le fichier.
 
 - **Responsable** : Visibilitea, entreprise individuelle de Thomas Owaller (Strasbourg).
 - **Sous-traitants** :
   - Supabase : base, stockage du PDF, fonctions ;
   - Stripe : paiement ;
-  - Resend : envoi des e-mails, PDF compris ;
+  - Resend : envoi des e-mails, qui ne portent que des liens ;
   - GitHub Pages : hébergement des pages, sans données de l'évaluation.
 
 ### Les données
@@ -55,7 +56,7 @@ envoyé en PDF par e-mail.
 2. **Réponses** : la situation puis les cent questions, enregistrées au fil de l'eau.
 3. **Fin** : l'adresse e-mail.
 4. **Paiement** (Stripe).
-5. **Rapport** : calculé à la demande ; le PDF est fabriqué dans Chrome par un workflow, rangé dans un stockage privé et envoyé par Resend.
+5. **Rapport** : calculé à la demande ; le PDF est fabriqué dans Chrome par un workflow et rangé dans un stockage privé ; Resend n'envoie qu'un lien personnel par adresse.
 6. **Effacement** : 60 jours après la dernière réponse sans paiement, six mois après le paiement, ou tout de suite à la demande de l'un des deux.
 
 ## 2. Les principes fondamentaux
@@ -73,7 +74,7 @@ envoyé en PDF par e-mail.
   - les autres droits, par le formulaire de contact.
 - **Âge** : 18 ans, déclaré par une case.
 - **Sous-traitance** : Supabase, Stripe et Resend, chacun sous ses conditions et son accord de sous-traitance (à garder avec le registre).
-- **Transferts hors de l'Union** : Resend (États-Unis), clauses contractuelles types. C'est le point le plus sensible : le PDF envoyé en pièce jointe passe par Resend (voir le risque 3).
+- **Transferts hors de l'Union** : Resend (États-Unis), clauses contractuelles types. Depuis le 22 octobre 2026, Resend ne transporte que les prénoms, l'adresse et un lien personnel : le rapport n'y passe plus (voir le risque 3).
 
 ## 3. Les risques
 
@@ -107,18 +108,19 @@ reste.
 - **Ce qui reste** : le service ne peut pas savoir qui répond sous la contrainte.
 - **Gravité et vraisemblance** : grave, limitée. Risque résiduel **modéré**, à garder en tête dans les textes.
 
-### Risque 3 : le PDF passe par un tiers hors de l'Union
+### Risque 3 : le rapport passe par un tiers hors de l'Union
 
-- **Sources** : le PDF part en pièce jointe par Resend (États-Unis) et reste dans les boîtes de réception, chez les fournisseurs de messagerie des personnes.
+- **Sources** : jusqu'au 22 octobre 2026, le PDF partait en pièce jointe par Resend (États-Unis) et restait dans les boîtes de réception, chez les fournisseurs de messagerie des personnes.
 - **Impact** : important. Le rapport entier, réponses sensibles comprises, chez un sous-traitant américain et dans des boîtes de messagerie qu'on ne maîtrise pas.
 - **Mesures en place** :
-  - clauses contractuelles types avec Resend ;
-  - envoi seulement aux adresses données par les personnes elles-mêmes ;
-  - huit envois au plus par évaluation ;
+  - **plus de pièce jointe** (22 octobre 2026, décision de Thomas) : chaque adresse reçoit un lien personnel (un jeton à elle, gardé en empreinte), qui ouvre le rapport sur la page et lance le téléchargement du PDF par un lien signé de dix minutes ;
+  - le PDF ne quitte donc le stockage privé que vers le téléphone ou l'ordinateur de la personne ;
+  - le lien meurt avec l'évaluation, effacée six mois après le paiement ou tout de suite à la demande ;
+  - clauses contractuelles types avec Resend, qui ne voit plus que les prénoms, l'adresse et le lien ;
+  - envoi seulement aux adresses données par les personnes elles-mêmes, huit au plus par évaluation ;
   - les e-mails « rapport prêt » et le rappel ne contiennent rien du rapport.
-- **Ce qui reste** : le contenu sensible passe par Resend. La boîte de réception échappe à l'effacement à six mois.
-- **Gravité et vraisemblance** : importante, limitée. Risque résiduel **modéré**.
-- **Amélioration possible** (voir le plan d'action) : envoyer un lien de téléchargement plutôt que la pièce jointe.
+- **Ce qui reste** : un e-mail transféré donne le lien, donc le rapport, à qui le reçoit. L'e-mail le dit (« ce lien est personnel, ne le transférez pas »). Un PDF téléchargé échappe à l'effacement, comme toute copie que la personne garde.
+- **Gravité et vraisemblance** : importante, négligeable. Risque résiduel **faible**.
 
 ### Risque 4 : des données sur une personne qui n'a rien demandé (mode seul(e))
 
@@ -148,15 +150,14 @@ reste.
 |---|---|---|---|
 | Garder les accords de sous-traitance de Supabase, Stripe et Resend avec le registre | preuve des garanties | Thomas | dès que possible |
 | Vérifier la région du projet Supabase (la politique dit Union européenne) | transferts | Thomas | dès que possible |
-| Envoyer le rapport par un lien de téléchargement (la page, après saisie de l'adresse) plutôt qu'en pièce jointe | risque 3 : le contenu sensible ne passerait plus par Resend ni ne resterait dans les boîtes | à décider par Thomas, qui a voulu le PDF directement par e-mail | à trancher |
+| Envoyer le rapport par un lien de téléchargement plutôt qu'en pièce jointe | risque 3 : le contenu sensible ne passe plus par Resend ni ne reste dans les boîtes | Thomas l'a décidé, mis en place | fait le 22 octobre 2026 |
 | Une sauvegarde de la base (plan payant de Supabase, ou export régulier chiffré) | risque 5 | Thomas | quand les ventes commencent |
 | Relire cette analyse à chaque changement de l'évaluation, et une fois par an | suivi | Thomas | octobre 2027 au plus tard |
 
 ## 5. Validation
 
 Analyse préparée le 22 octobre 2026. Avec les mesures en place, les risques
-résiduels sont jugés acceptables. La troisième action du plan reste une
-décision de Thomas Owaller, responsable du traitement, qui valide
-l'analyse en signant et datant ci-dessous.
+résiduels sont jugés acceptables. Thomas Owaller, responsable du
+traitement, valide l'analyse en signant et datant ci-dessous.
 
 Validé par : ............................ le ....................

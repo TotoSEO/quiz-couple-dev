@@ -339,9 +339,18 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   const env = await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true);
   assert.equal(env.json.envoyes, 3, 'adresse du paiement, de A et de B');
   assert.deepEqual(courriel.envoyes.map((m) => m.a).sort(), ['thomas.paie@exemple.fr', 'lea@exemple.fr', 'thomas@exemple.fr'].sort());
+  // Plus de pièce jointe depuis le 22 octobre 2026 : un lien personnel par
+  // adresse, qui ouvre l'évaluation du bon rôle et lance le PDF.
   const m0 = courriel.envoyes[0];
-  assert.equal(m0.pieces[0].nom, 'evaluation-de-couple-thomas-et-lea-rose.pdf');
+  assert.equal(m0.pieces, undefined, 'aucune pièce jointe');
   assert.match(m0.texte, /24 pages/);
+  for (const m of courriel.envoyes) {
+    const u = m.texte.match(/https:\/\/quiz-couple\.com\/evaluation-de-couple\/#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)&pdf=1/);
+    assert.ok(u, 'le lien de téléchargement dans ' + m.a);
+    const role = (await appel({ action: 'etat', id: c.id, jeton: u[1] })).json.role;
+    assert.equal(role, m.a === 'lea@exemple.fr' ? 'b' : 'a', 'le lien de ' + m.a + ' ouvre son propre rôle');
+    assert.ok(m.html.includes('&amp;pdf=1') && !m.html.includes('rapport-abc'), 'le lien, jamais le chemin du fichier');
+  }
   // Rien n'est renvoyé deux fois.
   assert.equal((await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true)).json.envoyes, 0);
   // B change d'adresse : la nouvelle reçoit le rapport tout de suite.
@@ -643,7 +652,8 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   await stockage.maj(c.id, { rapport_statut: 'pret', rapport_chemin: chemin, rapport_pages: 22 });
   const env = await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true);
   assert.equal(env.json.envoyes, 1);
-  assert.equal(courriel.envoyes[0].pieces[0].nom, 'evaluation-de-couple-camille.pdf');
+  assert.equal(courriel.envoyes[0].pieces, undefined);
+  assert.match(courriel.envoyes[0].texte, /#b=[0-9a-f-]+&t=[A-Za-z0-9_-]+&pdf=1/);
   assert.match(courriel.envoyes[0].sujet, /votre rapport, Camille/);
   assert.ok(!/Julien/.test(courriel.envoyes[0].sujet));
   assert.match((await appel({ action: 'pdf', ...A })).json.url, /download=evaluation-de-couple-camille\.pdf$/);

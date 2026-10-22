@@ -22,7 +22,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 |---|---|---|---|
 | Supabase | base de données, stockage des rapports PDF, fonctions serveur | région du projet, à vérifier (la politique dit Union européenne) | accord de sous-traitance (DPA) de Supabase |
 | Stripe Payments Europe | paiement de l'évaluation | Irlande | conditions de Stripe, DPA inclus |
-| Resend | envoi des e-mails (rapport, rapport prêt, rappel, liens) | États-Unis | clauses contractuelles types |
+| Resend | envoi des e-mails (lien du rapport, rapport prêt, rappel, liens) ; le rapport lui-même n'y passe pas | États-Unis | clauses contractuelles types |
 | GitHub (Pages) | hébergement des pages du site | États-Unis | conditions de GitHub |
 | Google (Analytics 4) | mesure d'audience, seulement avec le consentement | États-Unis | consentement via la plateforme TCF |
 | The Moneytizer et ses partenaires | publicité, personnalisée seulement avec le consentement | UE et ailleurs (`ads.txt`) | consentement via la plateforme TCF |
@@ -51,7 +51,8 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 - **Sécurité** :
   - table fermée à la clé publique ;
   - liens tirés au hasard, gardés en empreinte ;
-  - PDF dans un stockage privé, lien de téléchargement de dix minutes.
+  - PDF dans un stockage privé, lien de téléchargement de dix minutes ;
+  - l'e-mail du rapport ne porte qu'un lien personnel, jamais le PDF (depuis le 22 octobre 2026).
 
 ### 2. Le paiement de l'évaluation
 
@@ -65,7 +66,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 
 ### 3. Les e-mails de l'évaluation
 
-- **Finalité** : envoyer le rapport PDF, dire que le rapport est prêt, un seul rappel 24 heures après, et le lien perdu (« Recevoir mon lien », « Retrouver mon évaluation »).
+- **Finalité** : envoyer le lien personnel du rapport (le PDF n'est plus joint depuis le 22 octobre 2026), dire que le rapport est prêt, un seul rappel 24 heures après, et le lien perdu (« Recevoir mon lien », « Retrouver mon évaluation »).
 - **Données** : l'adresse e-mail et les prénoms. Jamais une réponse.
 - **Base légale** : l'exécution du contrat pour le rapport et les liens. Pour le message « prêt » et le rappel : annoncés sous le champ de l'adresse, avec un lien d'arrêt.
 - **Durée** : celle de l'évaluation.

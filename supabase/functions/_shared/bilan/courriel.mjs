@@ -64,98 +64,103 @@ const TEXTES = {
   fr: {
     sujet: 'Votre évaluation de couple : le rapport de {a} et {b}',
     sujetSolo: 'Votre évaluation de couple : votre rapport, {a}',
-    avant: 'Votre rapport est en pièce jointe, en PDF.',
+    avant: 'Votre rapport est prêt : téléchargez-le en PDF ou lisez-le en ligne.',
     titre: 'Votre rapport est prêt',
-    p1: 'Bonjour, voici l\'évaluation de couple de {a} et {b}, en pièce jointe de ce message (PDF, {pages} pages).',
-    p1SansPages: 'Bonjour, voici l\'évaluation de couple de {a} et {b}, en pièce jointe de ce message (PDF).',
-    p1Solo: 'Bonjour {a}, voici le rapport de votre évaluation de couple, en pièce jointe de ce message (PDF, {pages} pages).',
-    p1SoloSansPages: 'Bonjour {a}, voici le rapport de votre évaluation de couple, en pièce jointe de ce message (PDF).',
+    p1: 'Bonjour, l\'évaluation de couple de {a} et {b} est prête ({pages} pages). Téléchargez-la en PDF avec le bouton ci-dessous, ou lisez-la en ligne.',
+    p1SansPages: 'Bonjour, l\'évaluation de couple de {a} et {b} est prête. Téléchargez-la en PDF avec le bouton ci-dessous, ou lisez-la en ligne.',
+    p1Solo: 'Bonjour {a}, le rapport de votre évaluation de couple est prêt ({pages} pages). Téléchargez-le en PDF avec le bouton ci-dessous, ou lisez-le en ligne.',
+    p1SoloSansPages: 'Bonjour {a}, le rapport de votre évaluation de couple est prêt. Téléchargez-le en PDF avec le bouton ci-dessous, ou lisez-le en ligne.',
     p2: 'Le plus simple est de le lire chacun de son côté, puis d\'en parler ensemble. Si vous ne savez pas par où commencer, ouvrez la partie « Vos quatre prochaines conversations » : ce sont les sujets qui comptent le plus pour vous deux en ce moment.',
     p2Solo: 'Prenez le temps de le lire au calme. Si vous ne savez pas par où commencer, ouvrez la partie « Vos quatre prochaines conversations » : ce sont les sujets par lesquels commencer, quand vous vous sentirez prêt(e) à en parler.',
-    p3: 'Le rapport reste aussi disponible en ligne pendant six mois, depuis le téléphone où vous avez répondu.',
-    bouton: 'Ouvrir l\'évaluation en ligne',
+    p3: 'Ce lien vous est personnel : il ouvre votre évaluation sur n\'importe quel appareil, pendant six mois. Ne le transférez à personne.',
+    bouton: 'Télécharger le rapport (PDF)',
+    enLigne: 'Le lire en ligne',
     note: 'Ce rapport contient vos réponses à tous les deux : gardez-le pour vous deux.',
     noteSolo: 'Ce rapport contient vos réponses et ce que vous pensez de votre relation : il n\'est destiné qu\'à vous.',
-    aide: 'Une question, ou un souci avec le fichier ? Répondez simplement à ce message.',
+    aide: 'Une question, ou un souci avec le téléchargement ? Répondez simplement à ce message.',
     pied: 'Vous recevez ce message parce que cette adresse a été donnée pour recevoir ce rapport. Nous ne vous écrirons pas d\'autre message.',
     legal: 'Avant de payer, l\'acheteur a demandé que ce rapport soit fourni dès qu\'il est prêt, sans attendre la fin du délai de rétractation, et a reconnu que son droit de rétractation prend fin à sa fourniture. Ce message en est la confirmation : le rapport est fourni. TVA non applicable, art. 293 B du CGI. Conditions de vente : {cgv}',
   },
   en: {
     sujet: 'Your relationship assessment: the report for {a} and {b}',
     sujetSolo: 'Your relationship assessment: your report, {a}',
-    avant: 'Your report is attached as a PDF.',
+    avant: 'Your report is ready: download it as a PDF or read it online.',
     titre: 'Your report is ready',
-    p1: 'Hi, here is the relationship assessment for {a} and {b}, attached to this email (PDF, {pages} pages).',
-    p1SansPages: 'Hi, here is the relationship assessment for {a} and {b}, attached to this email (PDF).',
-    p1Solo: 'Hi {a}, here is the report of your relationship assessment, attached to this email (PDF, {pages} pages).',
-    p1SoloSansPages: 'Hi {a}, here is the report of your relationship assessment, attached to this email (PDF).',
+    p1: 'Hi, the relationship assessment for {a} and {b} is ready ({pages} pages). Download it as a PDF with the button below, or read it online.',
+    p1SansPages: 'Hi, the relationship assessment for {a} and {b} is ready. Download it as a PDF with the button below, or read it online.',
+    p1Solo: 'Hi {a}, the report of your relationship assessment is ready ({pages} pages). Download it as a PDF with the button below, or read it online.',
+    p1SoloSansPages: 'Hi {a}, the report of your relationship assessment is ready. Download it as a PDF with the button below, or read it online.',
     p2: 'The easiest way is for each of you to read it on your own first, then talk it through together. If you\'re not sure where to start, go to "Your next four conversations": those are the topics that matter most for the two of you right now.',
     p2Solo: 'Take the time to read it somewhere quiet. If you\'re not sure where to start, go to "Your next four conversations": those are the topics to begin with, whenever you feel ready to talk.',
-    p3: 'The report also stays available online for six months, from the phone you answered on.',
-    bouton: 'Open the assessment online',
+    p3: 'This link is personal: it opens your assessment on any device, for six months. Don\'t forward it to anyone.',
+    bouton: 'Download the report (PDF)',
+    enLigne: 'Read it online',
     note: 'This report contains both of your answers, so keep it between the two of you.',
     noteSolo: 'This report contains your answers and what you think of your relationship: it is meant for you alone.',
-    aide: 'Any questions, or a problem with the file? Just reply to this email.',
+    aide: 'Any questions, or a problem with the download? Just reply to this email.',
     pied: 'You\'re receiving this email because this address was given to receive this report. We won\'t send you anything else.',
     legal: 'Before paying, the buyer asked for this report to be provided as soon as it was ready, without waiting for the end of the withdrawal period, and acknowledged that their right of withdrawal ends when it is provided. This message is that confirmation: the report is provided. VAT not applicable, art. 293 B of the French tax code. Terms of sale: {cgv}',
   },
   es: {
     sujet: 'Vuestra evaluación de pareja: el informe de {a} y {b}',
     sujetSolo: 'Tu evaluación de pareja: tu informe, {a}',
-    avant: 'Vuestro informe va adjunto, en PDF.',
+    avant: 'Vuestro informe está listo: descargadlo en PDF o leedlo en línea.',
     titre: 'Vuestro informe está listo',
     titreSolo: 'Tu informe está listo',
-    p1: 'Hola, aquí tenéis la evaluación de pareja de {a} y {b}, adjunta a este mensaje (PDF, {pages} páginas).',
-    p1SansPages: 'Hola, aquí tenéis la evaluación de pareja de {a} y {b}, adjunta a este mensaje (PDF).',
-    p1Solo: 'Hola, {a}, aquí tienes el informe de tu evaluación de pareja, adjunto a este mensaje (PDF, {pages} páginas).',
-    p1SoloSansPages: 'Hola, {a}, aquí tienes el informe de tu evaluación de pareja, adjunto a este mensaje (PDF).',
+    p1: 'Hola, la evaluación de pareja de {a} y {b} está lista ({pages} páginas). Descargadla en PDF con el botón de abajo, o leedla en línea.',
+    p1SansPages: 'Hola, la evaluación de pareja de {a} y {b} está lista. Descargadla en PDF con el botón de abajo, o leedla en línea.',
+    p1Solo: 'Hola, {a}, el informe de tu evaluación de pareja está listo ({pages} páginas). Descárgalo en PDF con el botón de abajo, o léelo en línea.',
+    p1SoloSansPages: 'Hola, {a}, el informe de tu evaluación de pareja está listo. Descárgalo en PDF con el botón de abajo, o léelo en línea.',
     p2: 'Lo más sencillo es que cada uno lo lea por su lado y luego lo habléis juntos. Si no sabéis por dónde empezar, abrid la parte «Vuestras cuatro próximas conversaciones»: son los temas que más importan para los dos ahora mismo.',
     p2Solo: 'Tómate el tiempo de leerlo con calma. Si no sabes por dónde empezar, abre la parte «Tus cuatro próximas conversaciones»: son los temas por los que empezar, cuando te sientas con ganas de hablar.',
-    p3: 'El informe también sigue disponible en línea durante seis meses, desde el móvil en el que respondisteis.',
-    bouton: 'Abrir la evaluación en línea',
+    p3: 'Este enlace es personal: abre vuestra evaluación en cualquier dispositivo durante seis meses. No lo reenviéis a nadie.',
+    bouton: 'Descargar el informe (PDF)',
+    enLigne: 'Leerlo en línea',
     note: 'Este informe contiene las respuestas de los dos: guardadlo para vosotros.',
     noteSolo: 'Este informe contiene tus respuestas y lo que piensas de tu relación: es solo para ti.',
-    aide: '¿Alguna pregunta o algún problema con el archivo? Basta con responder a este mensaje.',
+    aide: '¿Alguna pregunta o algún problema con la descarga? Basta con responder a este mensaje.',
     pied: 'Recibes este mensaje porque esta dirección se indicó para recibir este informe. No te enviaremos ningún otro mensaje.',
     legal: 'Antes de pagar, el comprador pidió que este informe se entregara en cuanto estuviera listo, sin esperar al final del plazo de desistimiento, y reconoció que su derecho de desistimiento termina con la entrega. Este mensaje es esa confirmación: el informe está entregado. IVA no aplicable, art. 293 B del CGI francés. Condiciones de venta: {cgv}',
   },
   de: {
     sujet: 'Eure Beziehungsanalyse: der Bericht von {a} und {b}',
     sujetSolo: 'Deine Beziehungsanalyse: dein Bericht, {a}',
-    avant: 'Euer Bericht hängt als PDF an.',
+    avant: 'Euer Bericht ist fertig: Ladet ihn als PDF herunter oder lest ihn online.',
     titre: 'Euer Bericht ist fertig',
     titreSolo: 'Dein Bericht ist fertig',
-    p1: 'Hallo, hier ist die Beziehungsanalyse von {a} und {b}, als Anhang dieser Nachricht (PDF, {pages} Seiten).',
-    p1SansPages: 'Hallo, hier ist die Beziehungsanalyse von {a} und {b}, als Anhang dieser Nachricht (PDF).',
-    p1Solo: 'Hallo {a}, hier ist der Bericht deiner Beziehungsanalyse, als Anhang dieser Nachricht (PDF, {pages} Seiten).',
-    p1SoloSansPages: 'Hallo {a}, hier ist der Bericht deiner Beziehungsanalyse, als Anhang dieser Nachricht (PDF).',
+    p1: 'Hallo, die Beziehungsanalyse von {a} und {b} ist fertig ({pages} Seiten). Ladet sie mit dem Button unten als PDF herunter oder lest sie online.',
+    p1SansPages: 'Hallo, die Beziehungsanalyse von {a} und {b} ist fertig. Ladet sie mit dem Button unten als PDF herunter oder lest sie online.',
+    p1Solo: 'Hallo {a}, der Bericht deiner Beziehungsanalyse ist fertig ({pages} Seiten). Lade ihn mit dem Button unten als PDF herunter oder lies ihn online.',
+    p1SoloSansPages: 'Hallo {a}, der Bericht deiner Beziehungsanalyse ist fertig. Lade ihn mit dem Button unten als PDF herunter oder lies ihn online.',
     p2: 'Am einfachsten lest ihn zuerst jeder für sich und sprecht dann gemeinsam darüber. Wenn ihr nicht wisst, wo ihr anfangen sollt, schlagt den Teil „Eure nächsten vier Gespräche“ auf: Das sind die Themen, die euch beiden gerade am wichtigsten sind.',
     p2Solo: 'Nimm dir Zeit, ihn in Ruhe zu lesen. Wenn du nicht weißt, wo du anfangen sollst, schlag den Teil „Deine nächsten vier Gespräche“ auf: Das sind die Themen, mit denen du anfangen kannst, sobald du bereit bist, darüber zu reden.',
-    p3: 'Der Bericht bleibt außerdem sechs Monate lang online verfügbar, auf dem Handy, auf dem ihr geantwortet habt.',
-    bouton: 'Die Analyse online öffnen',
+    p3: 'Dieser Link ist persönlich: Er öffnet eure Analyse sechs Monate lang auf jedem Gerät. Leitet ihn an niemanden weiter.',
+    bouton: 'Bericht herunterladen (PDF)',
+    enLigne: 'Online lesen',
     note: 'Dieser Bericht enthält eure Antworten, die von euch beiden: Behaltet ihn für euch.',
     noteSolo: 'Dieser Bericht enthält deine Antworten und das, was du über deine Beziehung denkst: Er ist nur für dich bestimmt.',
-    aide: 'Eine Frage oder ein Problem mit der Datei? Antwortet einfach auf diese Nachricht.',
+    aide: 'Eine Frage oder ein Problem beim Herunterladen? Antwortet einfach auf diese Nachricht.',
     pied: 'Du bekommst diese Nachricht, weil diese Adresse angegeben wurde, um diesen Bericht zu erhalten. Wir schreiben dir sonst nichts.',
     legal: 'Vor der Zahlung hat der Käufer verlangt, dass dieser Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der Widerrufsfrist abzuwarten, und bestätigt, dass sein Widerrufsrecht mit der Bereitstellung erlischt. Diese Nachricht ist diese Bestätigung: Der Bericht ist bereitgestellt. Keine Umsatzsteuer, Art. 293 B des französischen Steuergesetzbuchs (CGI). Verkaufsbedingungen: {cgv}',
   },
   it: {
     sujet: 'La vostra valutazione di coppia: il report di {a} e {b}',
     sujetSolo: 'La tua valutazione di coppia: il tuo report, {a}',
-    avant: 'Il vostro report è in allegato, in PDF.',
+    avant: 'Il vostro report è pronto: scaricatelo in PDF o leggetelo online.',
     titre: 'Il vostro report è pronto',
     titreSolo: 'Il tuo report è pronto',
-    p1: 'Ciao, ecco la valutazione di coppia di {a} e {b}, in allegato a questo messaggio (PDF, {pages} pagine).',
-    p1SansPages: 'Ciao, ecco la valutazione di coppia di {a} e {b}, in allegato a questo messaggio (PDF).',
-    p1Solo: 'Ciao {a}, ecco il report della tua valutazione di coppia, in allegato a questo messaggio (PDF, {pages} pagine).',
-    p1SoloSansPages: 'Ciao {a}, ecco il report della tua valutazione di coppia, in allegato a questo messaggio (PDF).',
+    p1: 'Ciao, la valutazione di coppia di {a} e {b} è pronta ({pages} pagine). Scaricatela in PDF con il pulsante qui sotto, o leggetela online.',
+    p1SansPages: 'Ciao, la valutazione di coppia di {a} e {b} è pronta. Scaricatela in PDF con il pulsante qui sotto, o leggetela online.',
+    p1Solo: 'Ciao {a}, il report della tua valutazione di coppia è pronto ({pages} pagine). Scaricalo in PDF con il pulsante qui sotto, o leggilo online.',
+    p1SoloSansPages: 'Ciao {a}, il report della tua valutazione di coppia è pronto. Scaricalo in PDF con il pulsante qui sotto, o leggilo online.',
     p2: 'La cosa più semplice è leggerlo ognuno per conto suo e poi parlarne insieme. Se non sapete da dove cominciare, aprite la parte «Le vostre prossime quattro conversazioni»: sono gli argomenti che contano di più per tutti e due in questo momento.',
     p2Solo: 'Prenditi il tempo di leggerlo con calma. Se non sai da dove cominciare, apri la parte «Le tue prossime quattro conversazioni»: sono gli argomenti da cui partire, quando ti sentirai di parlarne.',
-    p3: 'Il report resta disponibile online anche per sei mesi, dal telefono su cui avete risposto.',
-    bouton: 'Apri la valutazione online',
+    p3: 'Questo link è personale: apre la vostra valutazione su qualsiasi dispositivo per sei mesi. Non inoltratelo a nessuno.',
+    bouton: 'Scarica il report (PDF)',
+    enLigne: 'Leggerlo online',
     note: 'Questo report contiene le risposte di tutti e due: tenetelo per voi.',
     noteSolo: 'Questo report contiene le tue risposte e quello che pensi della tua relazione: è destinato solo a te.',
-    aide: 'Una domanda o un problema con il file? Basta rispondere a questo messaggio.',
+    aide: 'Una domanda o un problema con il download? Basta rispondere a questo messaggio.',
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per ricevere questo report. Non ti scriveremo nient\'altro.',
     legal: 'Prima di pagare, l\'acquirente ha chiesto che questo report fosse fornito non appena pronto, senza attendere la fine del periodo di recesso, e ha riconosciuto che il suo diritto di recesso termina con la fornitura. Questo messaggio ne è la conferma: il report è fornito. IVA non applicabile, art. 293 B del CGI francese. Condizioni di vendita: {cgv}',
   },
@@ -163,6 +168,12 @@ const TEXTES = {
 
 function remplir(texte, valeurs) {
   return String(texte).replace(/\{(\w+)\}/g, (tout, cle) => (cle in valeurs ? String(valeurs[cle]) : tout));
+}
+
+// En français, l'espace avant « : ; ! ? » et après « « » est insécable : sans
+// elle, un téléphone envoie les deux-points seuls en début de ligne.
+function insec(s, lang) {
+  return lang === 'fr' ? String(s).replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : String(s);
 }
 
 function esc(s) {
@@ -271,11 +282,18 @@ export function nomFichier(lang, a, b, mode) {
 
 // { sujet, html, texte } pour un rapport. `pages` peut manquer ; `mode`
 // vaut 'solo' pour une évaluation faite seul(e).
-export function messageRapport({ lang, a, b, pages, mode }) {
+// Le rapport ne part plus en pièce jointe (22 octobre 2026, Thomas : « ok
+// met un lien de téléchargement ») : le message porte le lien personnel de la
+// personne (`url`, son propre jeton), qui ouvre l'évaluation et lance le
+// téléchargement du PDF (`&pdf=1`), et le même lien sans ce paramètre pour le
+// lire en ligne. Le contenu sensible ne passe plus par le prestataire d'envoi
+// et ne reste plus dans les boîtes de réception.
+export function messageRapport({ lang, a, b, pages, mode, url }) {
   const t = TEXTES[lang] || TEXTES.fr;
   const solo = mode === 'solo';
   const v = { a, b, pages };
-  const lien = SITE + (PAGES[lang] || PAGES.fr);
+  const enLigne = url || (SITE + (PAGES[lang] || PAGES.fr));
+  const lien = url ? url + '&pdf=1' : enLigne;
   const avecPages = Number.isInteger(pages) && pages > 0;
   const p1 = remplir(solo ? (avecPages ? t.p1Solo : t.p1SoloSansPages) : (avecPages ? t.p1 : t.p1SansPages), v);
   const p2 = solo ? t.p2Solo : t.p2;
@@ -285,10 +303,11 @@ export function messageRapport({ lang, a, b, pages, mode }) {
   // La confirmation, sur support durable, de la demande d'exécution immédiate
   // et de la fin du droit de rétractation (L221-13 du Code de la consommation).
   const legal = remplir(t.legal, { cgv: SITE + (CGV[lang] || CGV.fr) });
+  const dp = lang === 'fr' ? ' : ' : ': ';
   const texte = [
-    remplir(titre, v), '', p1, '', p2, '', t.p3, lien, '', note, '', t.aide, '', '--', t.pied, legal, EDITEUR,
+    remplir(titre, v), '', p1, '', t.bouton + dp + lien, t.enLigne + dp + enLigne, '', p2, '', t.p3, '', note, '', t.aide, '', '--', t.pied, legal, EDITEUR,
   ].join('\n');
-  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(s)}</p>`;
+  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(s, lang))}</p>`;
   const html = `<!doctype html>
 <html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
 <body style="margin:0;padding:0;background:#f6f1f4;">
@@ -300,15 +319,17 @@ export function messageRapport({ lang, a, b, pages, mode }) {
 <tr><td style="padding:28px 28px 8px;">
 <p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
 <h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(titre)}</h1>
-${para(p1)}${para(p2)}${para(t.p3)}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 24px;"><tr><td style="border-radius:999px;background:#2b2233;">
+${para(p1)}
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 10px;"><tr><td style="border-radius:999px;background:#2b2233;">
 <a href="${esc(lien)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(t.bouton)}</a>
 </td></tr></table>
+<p style="margin:0 0 24px;font-size:15px;"><a href="${esc(enLigne)}" style="color:#9b3d66;">${esc(t.enLigne)}</a></p>
+${para(p2)}${para(t.p3, 'color:#5f5366;font-size:14px;')}
 ${para(note, 'color:#5f5366;font-size:14px;')}${para(t.aide, 'color:#5f5366;font-size:14px;')}
 </td></tr>
 <tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
 <p style="margin:0 0 6px;">${esc(t.pied)}</p>
-<p style="margin:0 0 6px;">${esc(legal)}</p>
+<p style="margin:0 0 6px;">${esc(insec(legal, lang))}</p>
 <p style="margin:0;">${esc(EDITEUR)}</p>
 </td></tr>
 </table>
@@ -338,10 +359,10 @@ export function messageLien({ lang, liens, rotation }) {
   const intro = l.length === 0 ? t.aucun : l.length === 1 ? remplir(t.intro, { a: l[0].a, b: l[0].b }) : t.introPlusieurs;
   const libelle = (x) => remplir(x.mode === 'solo' ? t.ligneSolo : t.ligne, { a: x.a, b: x.b });
   const texte = [t.titre, '', intro, '']
-    .concat(l.flatMap((x) => [libelle(x) + ' : ' + x.url, '']))
+    .concat(l.flatMap((x) => [libelle(x) + (lang === 'fr' ? ' : ' : ': ') + x.url, '']))
     .concat(l.length && rotation ? [t.nouveau, ''] : [])
     .concat(['--', t.pied, EDITEUR]).join('\n');
-  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(s)}</p>`;
+  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(s, lang))}</p>`;
   const blocs = l.map((x) => `<p style="margin:0 0 6px;font-weight:bold;">${esc(libelle(x))}</p>
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 10px;"><tr><td style="border-radius:999px;background:#2b2233;">
 <a href="${esc(x.url)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(t.bouton)}</a>
@@ -523,7 +544,7 @@ function messageRappel(quoi, { lang, mode, moi, autre, url, arret, prix, prixBas
     .concat([ligneprix, '', bouton + deuxPoints + url, ''])
     .concat(notes.length ? [notes.join(' '), ''] : [])
     .concat(['--', t.pied, t.arret + deuxPoints + arret, EDITEUR]).join('\n');
-  const para = (x, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(x)}</p>`;
+  const para = (x, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(x, lang))}</p>`;
   const html = `<!doctype html>
 <html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
 <body style="margin:0;padding:0;background:#f6f1f4;">

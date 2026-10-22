@@ -51,9 +51,9 @@
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez les deux cases pour continuer.",
       "email": "Votre e-mail",
-      "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous prévenir quand votre rapport est prêt, avec un seul rappel s'il attend encore le lendemain.",
+      "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous prévenir quand votre rapport est prêt, avec un seul rappel s'il attend encore le lendemain.",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
-      "emailManque": "Écrivez votre adresse e-mail : c'est là que le rapport PDF sera envoyé.",
+      "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
       "autreDefaut": "votre partenaire"
     },
     "invitation": {
@@ -164,13 +164,13 @@
         "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
         "Vos signaux de vigilance dans les disputes",
         "Qui fait quoi à la maison, vu par chacun",
-        "Le rapport complet en PDF, envoyé par e-mail dès qu'il est prêt, et en ligne pendant six mois"
+        "Le rapport complet en PDF, son lien de téléchargement par e-mail dès qu'il est prêt, et en ligne pendant six mois"
       ],
       "prix": "{{prix}} pour vous deux",
       "prixAide": "Un seul paiement, et {{autre}} n'aura rien à payer. Pas d'abonnement.",
       "emailLabel": "Où vous envoyer le rapport ?",
       "emailPlaceholder": "votre@email.com",
-      "emailAide": "Le PDF partira à cette adresse dès que vous aurez fini tous les deux.",
+      "emailAide": "Le lien du PDF partira à cette adresse dès que vous aurez fini tous les deux.",
       "emailFaux": "Cette adresse ne semble pas valide.",
       "renonciation": "Je demande que le rapport me soit fourni dès qu'il est prêt, sans attendre la fin du délai de rétractation de 14 jours, et je reconnais perdre mon droit de rétractation dès qu'il est fourni.",
       "renonciationManque": "Cochez la case pour continuer.",
@@ -203,7 +203,7 @@
         "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation",
-        "emailAide": "Le rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
+        "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
         "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? »."
       },
       "domaine": {
@@ -219,10 +219,10 @@
           "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
           "Vos signaux de vigilance dans les disputes",
           "Qui fait quoi à la maison, vu par vous",
-          "Le rapport complet en PDF, envoyé par e-mail dès qu'il est prêt, et en ligne pendant six mois"
+          "Le rapport complet en PDF, son lien de téléchargement par e-mail dès qu'il est prêt, et en ligne pendant six mois"
         ],
         "prixAide": "Un seul paiement, pas d'abonnement. Votre partenaire n'est pas prévenu(e).",
-        "emailAide": "Le PDF partira à cette adresse dès le paiement.",
+        "emailAide": "Le lien du PDF partira à cette adresse dès le paiement.",
         "pretTitre": "{{moi}}, votre rapport est prêt",
         "apercu": {
           "intro": "Vos réponses ont été comparées à ce que vous pensez que {{autre}} répondrait :",
@@ -545,15 +545,15 @@
       },
       "ecran": {
         "telecharger": "Télécharger le PDF",
-        "pdfPrepa": "Votre PDF est en préparation : il arrive dans quelques minutes, par e-mail et ici.",
-        "pdfErreur": "Le PDF a pris du retard. Il vous sera envoyé dès qu'il sera prêt, vous n'avez rien à faire.",
-        "envoyeA": "Le PDF a été envoyé à {{emails}}. S'il n'apparaît pas, regardez dans les indésirables.",
-        "envoiA": "Le PDF partira à {{emails}} dès qu'il sera prêt. Vous n'avez rien à demander.",
+        "pdfPrepa": "Votre PDF est en préparation : il sera prêt ici dans quelques minutes, et son lien vous arrivera par e-mail.",
+        "pdfErreur": "Le PDF a pris du retard. Son lien vous sera envoyé par e-mail dès qu'il sera prêt, vous n'avez rien à faire.",
+        "envoyeA": "Le lien du PDF a été envoyé à {{emails}}. S'il n'apparaît pas, regardez dans les indésirables.",
+        "envoiA": "Le lien du PDF partira à {{emails}} dès qu'il sera prêt. Vous n'avez rien à demander.",
         "emailTitre": "Votre rapport par e-mail",
         "emailAide": "Cette adresse remplace la vôtre pour ce rapport. Elle ne sert à rien d'autre.",
         "emailChamp": "Votre adresse e-mail",
         "emailBouton": "Envoyer",
-        "emailOk": "C'est noté ! Le PDF part à cette adresse.",
+        "emailOk": "C'est noté ! Le lien du PDF part à cette adresse.",
         "emailFaux": "Cette adresse ne semble pas valide.",
         "imprimer": "Imprimer",
         "supprimer": "Supprimer notre évaluation",
@@ -561,7 +561,7 @@
         "supprimerAide": "L'évaluation est effacée pour vous deux, tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
         "supprime": "Votre évaluation est supprimée.",
         "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux.",
-        "envoiSans": "Le PDF partira par e-mail dès qu'il sera prêt.",
+        "envoiSans": "Le lien du PDF partira par e-mail dès qu'il sera prêt.",
         "emailAutre": "Le recevoir à une autre adresse"
       }
     },
@@ -734,7 +734,7 @@
         {
           "duree": "6 mois en ligne",
           "titre": "Vous le lisez, et vous en parlez",
-          "texte": "Le PDF arrive par e-mail dès que tout est répondu, et le rapport reste en ligne six mois. Il finit par une feuille de route : un sujet par semaine."
+          "texte": "Le lien du PDF arrive par e-mail dès que tout est répondu, et le rapport reste en ligne six mois. Il finit par une feuille de route : un sujet par semaine."
         }
       ]
     },
@@ -893,7 +893,7 @@
         "100 questions sur douze domaines",
         "Le rapport complet, une quarantaine de pages avec ses graphiques",
         "Vos quatre prochaines conversations, avec de quoi les mener",
-        "Le PDF par e-mail et la version en ligne pendant six mois",
+        "Le PDF à télécharger et la version en ligne pendant six mois",
         "Le même rapport, que vous la fassiez à deux ou seul(e)"
       ],
       "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message suffit."
@@ -903,7 +903,7 @@
       "points": [
         {
           "titre": "Pas de compte",
-          "texte": "Chacun accède à l'évaluation par son propre lien. Aucun mot de passe, et une adresse e-mail seulement pour vous envoyer le rapport."
+          "texte": "Chacun accède à l'évaluation par son propre lien. Aucun mot de passe, et une adresse e-mail seulement pour vous envoyer le lien du rapport."
         },
         {
           "titre": "Rien n'est montré avant la fin",
