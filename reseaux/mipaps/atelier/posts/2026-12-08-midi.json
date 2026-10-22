@@ -1,0 +1,28 @@
+{
+  "jour": "2026-12-08",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-125",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : une blague nulle qui sauve une journée pourrie.",
+        "style": "declaration",
+        "texte": "même après une journée pourrie, t'arrives à me faire rire avec une blague nulle."
+      },
+      "legende": "garde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

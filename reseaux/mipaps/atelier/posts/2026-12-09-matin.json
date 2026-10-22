@@ -1,0 +1,183 @@
+{
+  "jour": "2026-12-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-133",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« Juste une petite sieste » : les deux s'allongent sur le canapé ; trois heures plus tard il fait nuit, ils dorment toujours ; ils se réveillent, perdus, « on est quel jour ? ». Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont allongés sur le canapé, côte à côte, contents, un sourire aux lèvres. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« juste une petite sieste »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux dorment profondément sur le canapé, la lune et des étoiles dehors, des zzz au-dessus d'eux. Le texte « 3 h plus tard » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 500,
+                "y": 110,
+                "echelle": 0.6
+              },
+              {
+                "objet": "etoiles",
+                "x": 230,
+                "y": 100,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux se réveillent d'un coup, assis, les cheveux en pétard, perdus, un point d'interrogation au-dessus de chacun. Le texte « on est quel jour ? » à 0,6 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "surpris",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« on est quel jour ? »",
+                "de": 0.6,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
