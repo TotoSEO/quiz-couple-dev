@@ -30,7 +30,8 @@ function fauxStripe({ refuseCode = false } = {}) {
       const montant = p.discounts && p.discounts[0].promotion_code === C.PROMO_STRIPE ? brut - Math.round(brut * C.PROMO_POURCENT / 100) : brut;
       const s = { id, url: 'https://checkout.stripe.com/c/pay/' + id, payment_status: 'unpaid', amount_total: montant, metadata: p.metadata, client_reference_id: p.client_reference_id, params: p };
       sessions.set(id, s);
-      return { id: s.id, url: s.url };
+      // Comme Stripe, la session créée porte déjà son montant, réduction comprise.
+      return { id: s.id, url: s.url, amount_total: s.amount_total };
     },
     async lireSession(id) {
       const s = sessions.get(id);
@@ -95,7 +96,6 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: { ...SIT, animal: 'peut-être' }, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'situation');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: '' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'prenom');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: false })).json.erreur, 'consentement');
-  assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'email', 'sans adresse');
   assert.equal((await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'pas une adresse', consentement: true, majeur: true })).json.erreur, 'email', 'adresse fausse');
   assert.equal((await appel({ action: 'creer', lang: 'xx', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true })).json.erreur, 'lang');
 
@@ -114,6 +114,86 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal(autreIp.statut, 200);
 });
 
+// Le départ du 21 octobre 2026 : un seul écran (prénoms et les deux cases),
+// la situation posée comme les premières questions, l'adresse demandée à la
+// fin de ses propres questions, juste avant l'offre.
+test('le départ léger : situation après la création, adresse à la fin', async () => {
+  const { appel, stockage } = monter();
+  const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', moi: { prenom: 'Thomas', genre: 'h' }, autre: { prenom: 'Léa', genre: 'f' }, consentement: true, majeur: true, rappel: true });
+  assert.equal(c.statut, 200, JSON.stringify(c.json));
+  const ligne = () => stockage.lignes.get(c.json.id);
+  assert.deepEqual(ligne().situation, {});
+  assert.equal(ligne().a_email, null);
+  assert.equal(ligne().a_rappel, false, 'pas de rappel sans adresse');
+  assert.equal(ligne().a_etape, 'situation');
+  const A = { id: c.json.id, jeton: c.json.jeton };
+  // Pas de réponse tant que la situation manque : les questions en dépendent.
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: { quo3: 1 } })).json.erreur, 'situation');
+  assert.equal((await appel({ action: 'situation', ...A, situation: { ...SIT, animal: undefined } })).json.erreur, 'situation');
+  const s = await appel({ action: 'situation', ...A, situation: SIT });
+  assert.equal(s.statut, 200);
+  assert.deepEqual(s.json.etat.situation, SIT);
+
+  // B rejoint sans adresse.
+  const okB = await appel({ action: 'consentir', id: c.json.id, jeton: c.json.invitation, prenom: 'Léa', genre: 'f', consentement: true, majeur: true, rappel: true });
+  assert.equal(okB.statut, 200, JSON.stringify(okB.json));
+  assert.equal(ligne().b_email, null);
+  assert.equal((await appel({ action: 'consentir', id: c.json.id, jeton: c.json.invitation, email: 'pas une adresse', consentement: true, majeur: true })).statut, 404, 'invitation usée');
+
+  // Tout répondu, mais sans adresse : pas fini, la page la demande.
+  const ra = toutRepondre(SIT, () => 0);
+  let r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
+  assert.equal(r.json.complet, true);
+  assert.equal(r.json.fini, false);
+  assert.equal(r.json.emailManque, true);
+  assert.equal(ligne().a_etape, 'email');
+  assert.equal(ligne().a_fini, null);
+  // L'adresse de fin, avec la phrase qui annonce l'e-mail « prêt » et le rappel.
+  assert.equal((await appel({ action: 'email', ...A, email: 'pas une adresse', rappel: true })).json.erreur, 'email');
+  const e = await appel({ action: 'email', ...A, email: ' Thomas@Exemple.fr ', rappel: true });
+  assert.equal(e.statut, 200);
+  assert.equal(e.json.envoi.envoyes, 0, 'rien ne part avant le paiement');
+  assert.equal(ligne().a_email, 'thomas@exemple.fr');
+  assert.equal(ligne().a_rappel, true);
+  r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
+  assert.equal(r.json.fini, true);
+  assert.equal(r.json.emailManque, false);
+  assert.equal(ligne().a_etape, 'fini');
+
+  // Une page d'avant donne encore la situation et l'adresse à la création.
+  const ancien = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', rappel: true, consentement: true, majeur: true });
+  assert.equal(ancien.statut, 200);
+  assert.equal(stockage.lignes.get(ancien.json.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'quotidien');
+});
+
+test('les écrans du parcours comptés par la page, seul(e) à part', async () => {
+  const { appel, stockage } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  assert.equal((await appel({ action: 'vue', quoi: 'page', src: 'menu' })).statut, 200);
+  assert.equal((await appel({ action: 'vue', quoi: 'cta', src: 'menu', mode: 'solo' })).statut, 200);
+  assert.equal(n('vue', 'menu'), 1);
+  assert.equal(n('cta', 'menu'), 1);
+  assert.equal(n('cta_solo', 'menu'), 1);
+  for (const quoi of ['depart', 'invitation_vue', 'situation_vue', 'offre_vue', 'attente_vue', 'case_manquante']) {
+    assert.equal((await appel({ action: 'vue', quoi, mode: 'duo' })).statut, 200, quoi);
+    assert.equal(n(quoi, ''), 1, quoi);
+    assert.equal(n(quoi + '_solo'), 0, quoi);
+  }
+  await appel({ action: 'vue', quoi: 'depart_erreur', cle: 'prenoms', mode: 'solo' });
+  await appel({ action: 'vue', quoi: 'depart_erreur', cle: '<script>' });
+  assert.equal(n('depart_erreur', 'prenoms'), 1);
+  assert.equal(n('depart_erreur_solo', 'prenoms'), 1);
+  assert.equal(n('depart_erreur', 'autre'), 1, 'une cause inconnue ne devient pas une clé');
+  await appel({ action: 'vue', quoi: 'email_vue', cle: 'b', mode: 'duo' });
+  await appel({ action: 'vue', quoi: 'email_vue', cle: 'x', mode: 'solo' });
+  assert.equal(n('email_vue', 'b'), 1);
+  assert.equal(n('email_vue', 'a'), 1, 'le rôle, a par défaut');
+  assert.equal(n('email_vue_solo', 'a'), 1);
+  assert.equal((await appel({ action: 'vue', quoi: 'paye' })).statut, 400, 'un événement de la base ne se compte pas depuis la page');
+  assert.equal((await appel({ action: 'vue', quoi: 'vue_solo' })).statut, 400);
+});
+
 test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rapport par e-mail', async () => {
   const { appel, stripe, stockage, courriel } = monter();
   const c = await creerCouple(appel);
@@ -129,8 +209,6 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal(vue.json.paye, false);
   // Sans accord, B ne peut rien écrire.
   assert.equal((await appel({ action: 'repondre', id: c.id, jeton: c.invitation, reponses: { quo3: 1 } })).statut, 403);
-  // Sans adresse e-mail, pas d'accord possible : le rapport doit pouvoir lui partir.
-  assert.equal((await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Léa-Rose', consentement: true, majeur: true })).json.erreur, 'email');
   // B accepte, corrige son prénom, et reçoit une nouvelle clé.
   const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: ' Lea@Exemple.fr ', prenom: 'Léa-Rose', genre: 'f', consentement: true, majeur: true });
   assert.equal(ok.statut, 200);
@@ -337,6 +415,7 @@ test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Strip
   let p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'fr' });
   assert.equal(p.statut, 200);
   assert.equal(p.json.promo, true);
+  assert.equal(p.json.total, C.prixPromo(), 'le montant calculé par Stripe revient à la page et à la sonde');
   let s = [...m.stripe.sessions.values()][0];
   assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
   assert.equal(s.params.allow_promotion_codes, undefined);
@@ -357,6 +436,41 @@ test('la réduction en cours (LOVE20) : appliquée d\'office, refusée par Strip
   s = [...m.stripe.sessions.values()][0];
   assert.equal(s.params.discounts, undefined);
   assert.equal(s.params.allow_promotion_codes, 'true');
+});
+
+test('l\'aperçu de la page de paiement pour l\'admin : même page qu\'un client, aucune évaluation', async () => {
+  const m = monter();
+  const avant = m.stockage.lignes.size;
+  // Sans le jeton de l'admin (vérifié par index.ts), rien.
+  const refus = await m.traiter({ action: 'apercu_paiement', lang: 'fr' }, { ip: '1.2.3.4' });
+  assert.equal(refus.statut, 403);
+  assert.equal(m.stripe.sessions.size, 0);
+
+  const r = await m.traiter({ action: 'apercu_paiement', lang: 'de', mode: 'solo' }, { ip: '1.2.3.4', admin: true });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.match(r.json.url, /^https:\/\/checkout\.stripe\.com\//);
+  assert.equal(r.json.promo, true);
+  assert.equal(r.json.total, C.prixPromo());
+  assert.equal(r.json.prixBase, C.PRIX_CENTIMES);
+  const s = [...m.stripe.sessions.values()][0];
+  assert.equal(s.params.locale, 'de');
+  assert.deepEqual(s.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+  assert.equal(s.params.client_reference_id, undefined);
+  assert.deepEqual(s.params.metadata, { apercu: 'admin', mode: 'solo' });
+  assert.match(s.params.line_items[0].price_data.product_data.description, /allein|Partner|deine/i);
+  assert.equal(s.params.success_url, 'https://quiz-couple.com/admin/');
+  // Rien en base : ni évaluation, ni compteur, et la même page qu'un client
+  // (prix plein affiché par Stripe, puis la réduction).
+  assert.equal(m.stockage.lignes.size, avant);
+  assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
+
+  // Payée quand même : le webhook ne trouve aucune évaluation à débloquer.
+  m.stripe.payer(s.id);
+  assert.equal(await m.marquerPaye(await m.stripe.lireSession(s.id)), false);
+
+  // Sans clé Stripe : fermé, comme pour un client.
+  const sans = monter({ sansStripe: true });
+  assert.equal((await sans.traiter({ action: 'apercu_paiement' }, { ip: '1.2.3.4', admin: true })).statut, 503);
 });
 
 test('la fin de la réduction : jour de Paris, douze heures de grâce côté serveur', () => {
@@ -593,4 +707,127 @@ test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation
   // Sans boîte aux lettres : on le dit, rien ne casse.
   const sans = creerServeur({ stockage: creerStockageMemoire(), stripe: null, courriel: null, sel: 'sel' });
   assert.equal((await sans.traiter({ action: 'retrouver', email: 'a@b.fr' }, { ip: '1.1.1.1' })).statut, 503);
+});
+
+// ── Rapport prêt, aperçu chiffré et rappel (21 octobre 2026) ─────────────
+
+const jetonDe = (m) => (m.texte.match(/#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)/) || [])[1];
+
+test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel une seule fois', async () => {
+  let t = new Date('2026-10-21T10:00:00Z');
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const c = (await appel({
+    action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' },
+    email: 'lea@exemple.fr', consentement: true, majeur: true, rappel: true,
+  })).json;
+  const A = { id: c.id, jeton: c.jeton };
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'tom@exemple.fr', consentement: true, majeur: true, rappel: true });
+  const B = { id: c.id, jeton: ok.json.jeton };
+  assert.equal(stockage.lignes.get(c.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).b_rappel, true);
+
+  // A finit : rien ne part, et la page sait qu'elle sera prévenue.
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const fa = await appel({ action: 'repondre', ...A, reponses: ra, nn: [], fini: true });
+  assert.equal(fa.json.fini, true);
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal(fa.json.etat.moi.prevenu, true);
+  // Avant que les deux aient fini, pas d'aperçu.
+  const avant = await appel({ action: 'resultat', ...A });
+  assert.equal(avant.statut, 402);
+  assert.equal(avant.json.apercu, null);
+
+  // B finit : « Tom a fini » part à Léa seulement, avec un lien personnel neuf.
+  const rb = toutRepondre(SIT, (q, id) => (q.type === 'qui' ? 2 : id.charCodeAt(1) % (q.n || 2)));
+  await appel({ action: 'repondre', ...B, reponses: rb, nn: [], fini: true });
+  assert.equal(courriel.envoyes.length, 1);
+  const pret = courriel.envoyes[0];
+  assert.equal(pret.a, 'lea@exemple.fr');
+  assert.equal(pret.sujet, 'Tom a fini : votre rapport est prêt');
+  assert.ok(!/accord|écart/i.test(pret.texte), 'rien du contenu dans l\'e-mail');
+  const jm = jetonDe(pret);
+  assert.ok(jm && jm !== A.jeton);
+  assert.ok(pret.texte.includes('&arret=1'));
+  // Le lien de l'e-mail ouvre l'évaluation de Léa ; celui du téléphone marche toujours.
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jm })).json.role, 'a');
+  assert.equal((await appel({ action: 'etat', ...A })).json.role, 'a');
+  assert.ok(stockage.lignes.get(c.id).pret_mail_le);
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'pret_envoye'));
+
+  // L'aperçu : des comptes, rien d'autre.
+  const r = await appel({ action: 'resultat', ...A });
+  assert.equal(r.statut, 402);
+  const ap = r.json.apercu;
+  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'inconnus', 'proches', 'questions']);
+  assert.ok(Object.values(ap).every((v) => Number.isInteger(v) && v >= 0));
+  assert.ok(ap.accords + ap.proches + ap.ecarts > 50);
+  assert.ok(ap.decisifs <= ap.ecarts);
+  assert.equal(r.json.a.reponses, undefined);
+
+  // Le rappel : réservé à la clé de service, rien avant 24 heures.
+  assert.equal((await appel({ action: 'relancer' })).statut, 403);
+  t = new Date(t.getTime() + 23 * 3600e3);
+  assert.equal((await appel({ action: 'relancer' }, '1.2.3.4', true)).json.relances, 0);
+  t = new Date(t.getTime() + 2 * 3600e3);
+  const rel = await appel({ action: 'relancer' }, '1.2.3.4', true);
+  assert.equal(rel.json.relances, 2);
+  const rappels = courriel.envoyes.slice(1);
+  assert.deepEqual(rappels.map((m) => m.a).sort(), ['lea@exemple.fr', 'tom@exemple.fr']);
+  assert.ok(rappels.every((m) => m.sujet === 'Votre rapport vous attend toujours'));
+  assert.ok(rappels.every((m) => m.texte.includes('C\'est le seul rappel')));
+  // Le lien du rappel de Tom ouvre l'évaluation de Tom.
+  const jt = jetonDe(rappels.find((m) => m.a === 'tom@exemple.fr'));
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jt })).json.role, 'b');
+  // Jamais deux fois.
+  t = new Date(t.getTime() + 48 * 3600e3);
+  assert.equal((await appel({ action: 'relancer' }, '1.2.3.4', true)).json.relances, 0);
+  assert.equal(courriel.envoyes.length, 3);
+  assert.ok(stockage.lignes.get(c.id).jetons_mail.length <= 4);
+});
+
+test('rappels : sans l\'annonce, après « ne plus recevoir », une fois payé, et en solo', async () => {
+  let t = new Date('2026-10-21T10:00:00Z');
+  const { appel, stockage, courriel, stripe } = monter({ maintenant: () => t });
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const deux = async (rappel) => {
+    const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', consentement: true, majeur: true, ...(rappel ? { rappel: true } : {}) })).json;
+    const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, email: 'b@exemple.fr', consentement: true, majeur: true, ...(rappel ? { rappel: true } : {}) });
+    await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: ra, nn: [], fini: true });
+    await appel({ action: 'repondre', id: c.id, jeton: ok.json.jeton, reponses: ra, nn: [], fini: true });
+    return { id: c.id, jeton: c.jeton, jetonB: ok.json.jeton };
+  };
+  // Une évaluation commencée avant l'annonce (page ancienne) : aucun e-mail.
+  const ancienne = await deux(false);
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal((await appel({ action: 'etat', id: ancienne.id, jeton: ancienne.jeton })).json.moi.prevenu, false);
+  // « Ne plus recevoir » depuis le lien : plus de rappel.
+  const arretee = await deux(true);
+  assert.equal(courriel.envoyes.length, 1);
+  const jm = jetonDe(courriel.envoyes[0]);
+  assert.equal((await appel({ action: 'rappels', id: arretee.id, jeton: jm })).statut, 400);
+  const arret = await appel({ action: 'rappels', id: arretee.id, jeton: jm, off: true });
+  assert.equal(arret.json.arret, true);
+  assert.equal(stockage.lignes.get(arretee.id).rappels_off, true);
+  // Payée : pas de rappel.
+  const payee = await deux(true);
+  const p = await appel({ action: 'payer', id: payee.id, jeton: payee.jeton, renonciation: true });
+  stripe.payer(new URL(p.json.url).pathname.split('/').pop());
+  assert.equal((await appel({ action: 'verifier', id: payee.id, jeton: payee.jeton, session: new URL(p.json.url).pathname.split('/').pop() })).json.paye, true);
+  // Seul(e) : le rappel ne part qu'à la personne, aucun e-mail « prêt ».
+  const s = (await appel({ action: 'creer', lang: 'de', mode: 'solo', situation: SIT, moi: { prenom: 'Lea' }, autre: { prenom: 'Tom' }, email: 'lea@exemple.de', consentement: true, majeur: true, rappel: true })).json;
+  const percu = Object.fromEntries(Object.keys(ra).map((id) => [id, ra[id]]));
+  const fs1 = await appel({ action: 'repondre', id: s.id, jeton: s.jeton, reponses: ra, percu, nn: [], fini: true });
+  assert.equal(fs1.json.fini, true);
+  const avantRelance = courriel.envoyes.length;
+  assert.equal(avantRelance, 2, 'un e-mail « prêt » par évaluation à deux annoncée (arrêtée, payée), aucun en solo');
+  const aps = (await appel({ action: 'resultat', id: s.id, jeton: s.jeton })).json.apercu;
+  assert.ok(aps && aps.accords > 0);
+
+  t = new Date(t.getTime() + 25 * 3600e3);
+  const rel = await appel({ action: 'relancer' }, '1.2.3.4', true);
+  const nouveaux = courriel.envoyes.slice(avantRelance);
+  assert.deepEqual(nouveaux.map((m) => m.a).sort(), ['lea@exemple.de']);
+  assert.equal(rel.json.relances, 1);
+  assert.equal(nouveaux[0].sujet, 'Dein Bericht wartet noch auf dich');
+  assert.equal(stockage.lignes.get(ancienne.id).relance_le, null);
 });

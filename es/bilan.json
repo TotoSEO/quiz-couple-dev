@@ -27,7 +27,6 @@
     },
     "creation": {
       "titre": "Vuestra evaluación",
-      "etape": "Paso {{n}} de 3",
       "modeTitre": "¿Cómo hacéis la evaluación?",
       "modeDuo": "En pareja",
       "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
@@ -42,23 +41,20 @@
       "homme": "Un hombre",
       "sansGenre": "Prefiero no decirlo",
       "genreAide": "Solo sirve para concordar las preguntas («escuchado» o «escuchada») y para elegir los personajes.",
-      "situationTitre": "Vuestra situación",
       "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
-      "accordTitre": "Antes de empezar",
       "majeur": "Tengo 18 años o más.",
       "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
       "accordAide": "Tus respuestas, también sobre temas íntimos, solo sirven para este informe, donde {{autre}} las verá frente a las suyas. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y cualquiera de los dos puede borrarla en todo momento. Sin crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
-      "suivant": "Siguiente",
       "retour": "Atrás",
       "creer": "Crear nuestra evaluación",
-      "manque": "Falta una respuesta.",
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca las dos casillas para continuar.",
       "email": "Tu e-mail",
-      "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página.",
+      "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para avisarte cuando tu informe esté listo, con un solo recordatorio si al día siguiente sigue esperando.",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
-      "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el informe en PDF."
+      "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el informe en PDF.",
+      "autreDefaut": "tu pareja"
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
@@ -113,6 +109,12 @@
       "horsLigne": "Sin conexión: tus respuestas se enviarán en cuanto vuelva.",
       "erreur": "Tus últimas respuestas no se han podido guardar. Volvemos a intentarlo enseguida..."
     },
+    "fin": {
+      "titre": "¿Dónde te enviamos el informe?",
+      "texte": "¡Tus respuestas están guardadas! Solo falta decirnos dónde enviar el informe.",
+      "bouton": "Continuar",
+      "revenir": "Volver a la última pregunta"
+    },
     "pause": {
       "titre": "Está guardado",
       "texte": "Puedes cerrar la página: tus respuestas se conservan. Para seguir, vuelve a esta página desde este móvil, o abre tu enlace personal en otro dispositivo.",
@@ -132,14 +134,27 @@
       "payeTitre": "Vuestro informe está pagado",
       "payeTexte": "¡Gracias! Se abrirá aquí y saldrá por correo en cuanto {{autre}} termine sus respuestas.",
       "relance": "Enviar un recordatorio a {{autre}}",
-      "relanceMessage": "He terminado mis respuestas de nuestra evaluación de pareja, ¡te espero! Sigues donde lo dejaste, en tu móvil."
+      "relanceMessage": "He terminado mis respuestas de nuestra evaluación de pareja, ¡te espero! Sigues donde lo dejaste, en tu móvil.",
+      "prevenu": "Te escribiremos a {{email}} en cuanto {{autre}} termine: puedes cerrar esta página."
     },
     "paywall": {
       "titre": "Vuestro informe completo",
       "titrePret": "Vuestro informe os espera",
       "introAttente": "Puedes desbloquearlo ya: se abrirá aquí, y saldrá por correo, en cuanto {{autre}} haya terminado.",
       "introPret": "Vuestras dos series de respuestas están listas. Solo queda un paso para descubrir lo que dicen de vuestra pareja.",
-      "apercu": "Extracto de un informe de ejemplo (pareja ficticia)",
+      "apercu": {
+        "intro": "Vuestras respuestas se han comparado, pregunta por pregunta:",
+        "accordsUn": "acuerdo",
+        "accordsN": "acuerdos",
+        "prochesUn": "respuesta cercana",
+        "prochesN": "respuestas cercanas",
+        "ecartsUn": "diferencia",
+        "ecartsN": "diferencias",
+        "decisifs0": "Ninguna diferencia en los temas decisivos, los que más pesan en una pareja.",
+        "decisifsUn": "Entre ellas, una diferencia en un tema decisivo, de los que más pesan en una pareja.",
+        "decisifsN": "Entre ellas, {{n}} diferencias en temas decisivos, los que más pesan en una pareja.",
+        "quoi": "El informe os dice cuáles, qué significan para los dos y cómo hablarlo."
+      },
       "contenu": [
         "Vuestra alineación y el clima de vuestra pareja, de un vistazo",
         "El mapa de vuestras doce áreas, del dinero a los hijos",
@@ -154,7 +169,7 @@
       "prixAide": "Un solo pago, y {{autre}} no tendrá nada que pagar. Sin suscripción.",
       "emailLabel": "¿A dónde te enviamos el informe?",
       "emailPlaceholder": "tu@email.com",
-      "emailAide": "El PDF saldrá a esta dirección en cuanto hayáis terminado los dos. No sirve para nada más.",
+      "emailAide": "El PDF saldrá a esta dirección en cuanto hayáis terminado los dos.",
       "emailFaux": "Esta dirección no parece válida.",
       "renonciation": "Pido que el informe se me entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento de 14 días, y reconozco que pierdo mi derecho de desistimiento una vez entregado.",
       "renonciationManque": "Marca la casilla para continuar.",
@@ -163,7 +178,11 @@
       "cgv": "Condiciones de venta",
       "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
       "ferme": "El pago en línea se abre muy pronto. Vuestra evaluación está guardada: volved a esta página dentro de unos días.",
-      "redirection": "Redirigiendo al pago..."
+      "redirection": "Redirigiendo al pago...",
+      "pretTitre": "{{moi}} y {{autre}}, vuestro informe está listo",
+      "sommaire": "Lo que hay en vuestro informe",
+      "emailAutre": "Recibirlo en otra dirección",
+      "plie": "Desbloquear el informe ya"
     },
     "paiement": {
       "verification": "Comprobando el pago...",
@@ -182,7 +201,9 @@
         "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
         "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
-        "creer": "Empezar mi evaluación"
+        "creer": "Empezar mi evaluación",
+        "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
+        "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?»."
       },
       "domaine": {
         "nb": "{{n}} preguntas, dos respuestas cada una, unos {{min}} min"
@@ -200,7 +221,15 @@
           "El informe completo en PDF, enviado por correo en cuanto está listo, y en línea durante seis meses"
         ],
         "prixAide": "Un solo pago, sin suscripción. Tu pareja no se entera.",
-        "emailAide": "El PDF llegará a esta dirección en cuanto pagues. No sirve para nada más."
+        "emailAide": "El PDF llegará a esta dirección en cuanto pagues.",
+        "pretTitre": "{{moi}}, tu informe está listo",
+        "apercu": {
+          "intro": "Tus respuestas se han comparado con lo que crees que respondería {{autre}}:",
+          "quoi": "El informe te dice cuáles, qué significan y por dónde empezar.",
+          "inconnusUn": "Y un tema en el que no sabes qué respondería {{autre}}.",
+          "inconnusN": "Y {{n}} temas en los que no sabes qué respondería {{autre}}."
+        },
+        "sommaire": "Lo que hay en tu informe"
       },
       "rapport": {
         "ecran": {
@@ -537,7 +566,12 @@
       }
     },
     "situation": {
-      "resume": "Situación"
+      "resume": "Situación",
+      "titre": "Vuestra situación",
+      "progression": "{{n}} de {{total}}",
+      "verifierTitre": "Vuestra situación, antes de empezar",
+      "verifierTexte": "Estas respuestas cambian las preguntas que te hacemos. Si alguna ya no es correcta, corrígela antes de empezar.",
+      "confirmer": "Es correcto, empezamos"
     },
     "erreurs": {
       "reseau": "Sin conexión. Comprueba tu red y vuelve a intentarlo.",
@@ -566,6 +600,10 @@
       "bouton": "Recuperar mi evaluación",
       "envoye": "Si hay una evaluación vinculada a {{email}}, tus enlaces llegarán a tu bandeja en un minuto. Mira también en el correo no deseado.",
       "trop": "Demasiadas solicitudes desde tu conexión. Vuelve a intentarlo dentro de una hora."
+    },
+    "rappels": {
+      "arret": "Hecho: no recibirás más mensajes sobre esta evaluación.",
+      "continuer": "Continuar"
     }
   },
   "lp": {
@@ -864,7 +902,7 @@
       "points": [
         {
           "titre": "Sin cuenta",
-          "texte": "Cada uno accede a la evaluación por su propio enlace. Ninguna contraseña, y una dirección de correo solo si queréis recibir el informe."
+          "texte": "Cada uno accede a la evaluación por su propio enlace. Ninguna contraseña, y una dirección de correo solo para enviaros el informe."
         },
         {
           "titre": "Nada se muestra antes del final",

@@ -27,7 +27,6 @@
     },
     "creation": {
       "titre": "Your assessment",
-      "etape": "Step {{n}} of 3",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
       "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
@@ -42,23 +41,20 @@
       "homme": "A man",
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
-      "situationTitre": "Your situation",
       "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
-      "accordTitre": "Before you start",
       "majeur": "I'm 18 or over.",
       "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
       "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
-      "suivant": "Next",
       "retour": "Back",
       "creer": "Create our assessment",
-      "manque": "An answer is missing.",
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue.",
       "email": "Your email",
-      "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page.",
+      "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and tells you when your report is ready, with a single reminder if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
-      "emailManque": "Enter your email address: that's where the PDF report will be sent."
+      "emailManque": "Enter your email address: that's where the PDF report will be sent.",
+      "autreDefaut": "your partner"
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -113,6 +109,12 @@
       "horsLigne": "No connection: your answers will be sent as soon as it's back.",
       "erreur": "Your last answers couldn't be saved. Trying again in a moment..."
     },
+    "fin": {
+      "titre": "Where should we send your report?",
+      "texte": "Your answers are saved! All that's left is to tell us where to send the report.",
+      "bouton": "Continue",
+      "revenir": "Back to the last question"
+    },
     "pause": {
       "titre": "It's saved",
       "texte": "You can close the page: your answers are kept. To pick up again, come back to this page from this phone, or open your personal link on another device.",
@@ -132,14 +134,27 @@
       "payeTitre": "Your report is paid for",
       "payeTexte": "Thank you! It'll open here and go out by email as soon as {{autre}} has finished their answers.",
       "relance": "Send {{autre}} a little reminder",
-      "relanceMessage": "I've finished my answers for our relationship assessment, I'm waiting for you! You'll pick up where you left off, on your phone."
+      "relanceMessage": "I've finished my answers for our relationship assessment, I'm waiting for you! You'll pick up where you left off, on your phone.",
+      "prevenu": "We'll email you at {{email}} as soon as {{autre}} has finished, so you can close this page."
     },
     "paywall": {
       "titre": "Your full report",
       "titrePret": "Your report is waiting for you",
       "introAttente": "You can unlock it right now: it'll open here, and go out by email, as soon as {{autre}} has finished.",
       "introPret": "Both your sets of answers are ready. There's just one step left to find out what they say about your relationship.",
-      "apercu": "Extract from a sample report (fictional couple)",
+      "apercu": {
+        "intro": "Your answers have been compared, question by question:",
+        "accordsUn": "agreement",
+        "accordsN": "agreements",
+        "prochesUn": "close answer",
+        "prochesN": "close answers",
+        "ecartsUn": "gap",
+        "ecartsN": "gaps",
+        "decisifs0": "No gaps on the decisive topics, the ones that weigh most in a relationship.",
+        "decisifsUn": "Including one gap on a decisive topic, one of those that weigh most in a relationship.",
+        "decisifsN": "Including {{n}} gaps on decisive topics, the ones that weigh most in a relationship.",
+        "quoi": "The report tells you which ones, what they mean for the two of you and how to talk about them."
+      },
       "contenu": [
         "Your alignment and the climate of your relationship, at a glance",
         "The map of your twelve areas, from money to children",
@@ -154,7 +169,7 @@
       "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
       "emailLabel": "Where should we send the report?",
       "emailPlaceholder": "you@email.com",
-      "emailAide": "The PDF will go to this address as soon as you've both finished. It isn't used for anything else.",
+      "emailAide": "The PDF will go to this address as soon as you've both finished.",
       "emailFaux": "This address doesn't look valid.",
       "renonciation": "I ask for the report to be provided as soon as it is ready, without waiting for the end of the 14-day withdrawal period, and I acknowledge that I lose my right of withdrawal once it is provided.",
       "renonciationManque": "Tick the box to continue.",
@@ -163,7 +178,11 @@
       "cgv": "Terms of sale",
       "tva": "VAT not applicable, art. 293 B of the French General Tax Code.",
       "ferme": "Online payment opens very soon. Your assessment is saved: come back to this page in a few days.",
-      "redirection": "Redirecting to payment..."
+      "redirection": "Redirecting to payment...",
+      "pretTitre": "{{moi}} and {{autre}}, your report is ready",
+      "sommaire": "What's in your report",
+      "emailAutre": "Get it at a different address",
+      "plie": "Unlock the report now"
     },
     "paiement": {
       "verification": "Checking the payment...",
@@ -182,7 +201,9 @@
         "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
-        "creer": "Start my assessment"
+        "creer": "Start my assessment",
+        "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
+        "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\"."
       },
       "domaine": {
         "nb": "{{n}} questions, two answers each, about {{min}} min"
@@ -200,7 +221,14 @@
           "The full report as a PDF, emailed as soon as it's ready, and online for six months"
         ],
         "prixAide": "One payment, no subscription. Your partner isn't told.",
-        "emailAide": "The PDF will go to this address as soon as you've paid. It's used for nothing else."
+        "emailAide": "The PDF will go to this address as soon as you've paid.",
+        "pretTitre": "{{moi}}, your report is ready",
+        "apercu": {
+          "intro": "Your answers have been compared with what you think {{autre}} would say:",
+          "quoi": "The report tells you which ones, what they mean and where to start.",
+          "inconnusUn": "And one topic where you don't know what {{autre}} would say.",
+          "inconnusN": "And {{n}} topics where you don't know what {{autre}} would say."
+        }
       },
       "rapport": {
         "ecran": {
@@ -537,7 +565,12 @@
       }
     },
     "situation": {
-      "resume": "Situation"
+      "resume": "Situation",
+      "titre": "Your situation",
+      "progression": "{{n}} of {{total}}",
+      "verifierTitre": "Your situation, before you start",
+      "verifierTexte": "These answers change the questions you get. If one of them isn't right anymore, correct it before you start.",
+      "confirmer": "That's right, let's start"
     },
     "erreurs": {
       "reseau": "No connection. Check your network and try again.",
@@ -566,6 +599,10 @@
       "bouton": "Find my assessment",
       "envoye": "If an assessment is linked to {{email}}, your links will reach your inbox within a minute. Check your spam folder too.",
       "trop": "Too many requests from your connection. Try again in an hour."
+    },
+    "rappels": {
+      "arret": "Done: you won't get any more emails about this assessment.",
+      "continuer": "Continue"
     }
   },
   "lp": {
@@ -864,7 +901,7 @@
       "points": [
         {
           "titre": "No account",
-          "texte": "You each access the assessment through your own link. No password, and an email address only if you want to receive the report."
+          "texte": "You each access the assessment through your own link. No password, and an email address only to send you the report."
         },
         {
           "titre": "Nothing is shown before the end",

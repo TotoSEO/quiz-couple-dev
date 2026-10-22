@@ -9,8 +9,10 @@
 // l'empreinte des adresses IP.
 //
 // La fabrique du PDF (bilan/fabrique.mjs) appelle l'action interne
-// `envoyer_rapport` avec la clé de service en Authorization : c'est la seule
-// action qui la demande.
+// `envoyer_rapport` avec la clé de service en Authorization, et
+// bilan/relance.mjs l'action `relancer` de la même façon. L'admin appelle
+// `apercu_paiement` avec son jeton en x-admin-token (le même que
+// verify-admin fabrique et que admin-stats vérifie).
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 // @ts-ignore module JavaScript partagé avec les tests Node
 import { creerServeur } from "../_shared/bilan/serveur.mjs";
@@ -23,7 +25,7 @@ import { creerCourriel } from "../_shared/bilan/courriel.mjs";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-admin-token',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
 };
 
@@ -55,6 +57,26 @@ async function estInterne(req: Request): Promise<boolean> {
   let diff = 0;
   for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
   return diff === 0;
+}
+
+// Le jeton de l'admin : « horodatageHex.signatureHex », HMAC-SHA256 de
+// l'horodatage avec ADMIN_PASSWORD, valable 24 heures, comme dans
+// admin-stats. crypto.subtle.verify compare en temps constant.
+async function estAdmin(req: Request): Promise<boolean> {
+  const jeton = req.headers.get('x-admin-token') || '';
+  const secret = Deno.env.get('ADMIN_PASSWORD');
+  if (!jeton || !secret) return false;
+  const parts = jeton.split('.');
+  if (parts.length !== 2) return false;
+  const [horodatageHex, signatureHex] = parts;
+  if (!/^[0-9a-f]{1,12}$/i.test(horodatageHex) || !/^[0-9a-f]{64}$/i.test(signatureHex)) return false;
+  const age = Math.floor(Date.now() / 1000) - parseInt(horodatageHex, 16);
+  if (!(age >= -300 && age <= 86400)) return false;
+  const signature = new Uint8Array(32);
+  for (let i = 0; i < 32; i++) signature[i] = parseInt(signatureHex.slice(i * 2, i * 2 + 2), 16);
+  const enc = new TextEncoder();
+  const cle = await crypto.subtle.importKey('raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['verify']);
+  return crypto.subtle.verify('HMAC', cle, signature, enc.encode(horodatageHex));
 }
 
 // Une page qui enregistre chaque réponse fait une centaine d'appels pour un
@@ -95,7 +117,7 @@ serve(async (req: Request) => {
   let corps: unknown;
   try { corps = JSON.parse(texte); } catch { return reponse(400, { erreur: 'json' }); }
   try {
-    const r = await serveur.traiter(corps, { ip, interne: await estInterne(req) });
+    const r = await serveur.traiter(corps, { ip, interne: await estInterne(req), admin: await estAdmin(req) });
     return reponse(r.statut, r.json);
   } catch (e) {
     console.error('[bilan]', e);

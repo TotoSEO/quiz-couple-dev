@@ -184,7 +184,7 @@ const TEXTES_LIEN = {
     bouton: 'Reprendre mon évaluation',
     nouveau: 'Si vous aviez déjà un lien pour cette évaluation, c\'est celui-ci qui compte désormais : l\'ancien ne fonctionne plus.',
     aucun: 'Aucune évaluation de couple n\'est liée à cette adresse e-mail. Si vous en avez commencé une, elle a peut-être été faite avec une autre adresse, ou sans en donner : dans ce cas, elle reste ouverte sur le téléphone où vous avez répondu, en revenant sur la page de l\'évaluation.',
-    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com, ou qu\'on a demandé à retrouver une évaluation avec elle. Nous ne vous écrirons pas d\'autre message.',
+    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com, ou qu\'on a demandé à retrouver une évaluation avec elle.',
   },
   en: {
     sujet: 'Your link to pick up your relationship assessment',
@@ -196,7 +196,7 @@ const TEXTES_LIEN = {
     bouton: 'Pick up my assessment',
     nouveau: 'If you already had a link for this assessment, this one now replaces it: the old one no longer works.',
     aucun: 'No relationship assessment is linked to this email address. If you started one, it may have been done with another address, or without giving one: in that case it stays open on the phone you answered from, by going back to the assessment page.',
-    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com, or someone asked to find an assessment with it. We won\'t send you anything else.',
+    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com, or someone asked to find an assessment with it.',
   },
   es: {
     sujet: 'Tu enlace para retomar tu evaluación de pareja',
@@ -208,7 +208,7 @@ const TEXTES_LIEN = {
     bouton: 'Retomar mi evaluación',
     nouveau: 'Si ya tenías un enlace para esta evaluación, ahora vale este: el antiguo ya no funciona.',
     aucun: 'Ninguna evaluación de pareja está vinculada a esta dirección de e-mail. Si empezaste una, quizá la hiciste con otra dirección, o sin dar ninguna: en ese caso sigue abierta en el móvil desde el que respondiste, volviendo a la página de la evaluación.',
-    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com, o porque alguien pidió recuperar una evaluación con ella. No te enviaremos ningún otro mensaje.',
+    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com, o porque alguien pidió recuperar una evaluación con ella.',
   },
   de: {
     sujet: 'Dein Link, um deine Beziehungsanalyse fortzusetzen',
@@ -220,7 +220,7 @@ const TEXTES_LIEN = {
     bouton: 'Meine Analyse fortsetzen',
     nouveau: 'Wenn du für diese Analyse schon einen Link hattest, gilt ab jetzt dieser: Der alte funktioniert nicht mehr.',
     aucun: 'Mit dieser E-Mail-Adresse ist keine Beziehungsanalyse verknüpft. Wenn du eine begonnen hast, wurde sie vielleicht mit einer anderen Adresse gemacht, oder ohne eine anzugeben: Dann bleibt sie auf dem Handy offen, von dem aus du geantwortet hast, wenn du die Seite der Analyse wieder aufrufst.',
-    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde oder jemand damit eine Analyse wiederfinden wollte. Wir schreiben dir sonst nichts.',
+    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde oder jemand damit eine Analyse wiederfinden wollte.',
   },
   it: {
     sujet: 'Il tuo link per riprendere la tua valutazione di coppia',
@@ -232,7 +232,7 @@ const TEXTES_LIEN = {
     bouton: 'Riprendere la mia valutazione',
     nouveau: 'Se avevi già un link per questa valutazione, da ora vale questo: il vecchio non funziona più.',
     aucun: 'Nessuna valutazione di coppia è collegata a questo indirizzo e-mail. Se ne hai iniziata una, forse l\'hai fatta con un altro indirizzo, o senza darne uno: in quel caso resta aperta sul telefono da cui hai risposto, tornando sulla pagina della valutazione.',
-    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com, o perché qualcuno ha chiesto di ritrovare una valutazione con esso. Non ti scriveremo nient\'altro.',
+    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com, o perché qualcuno ha chiesto di ritrovare una valutazione con esso.',
   },
 };
 
@@ -368,6 +368,194 @@ ${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;fo
 </body></html>`;
   return { sujet, html, texte };
 }
+
+// « Votre rapport est prêt » (au premier qui a fini, quand le second finit)
+// et le rappel unique, 24 heures plus tard s'il n'est pas débloqué (21 octobre
+// 2026). Comme l'e-mail du rapport, rien du contenu : ni accords, ni écarts,
+// ni chiffres, seulement le prix et un lien personnel. Les variantes *Solo
+// servent quand la phrase s'adresse à une seule personne là où la langue
+// distingue (vosotros/tú, ihr/du, voi/tu).
+const TEXTES_RAPPEL = {
+  fr: {
+    sujetPret: '{autre} a fini : votre rapport est prêt',
+    avantPret: 'Il ne reste qu\'à le débloquer, pour vous deux.',
+    titrePret: 'Votre rapport est prêt',
+    p1Pret: 'Bonjour {moi}, {autre} vient de finir ses réponses. Vos deux séries de réponses sont maintenant comparées, question par question, et votre rapport vous attend.',
+    sujetRelance: 'Votre rapport vous attend toujours',
+    avantRelance: 'Vos réponses sont gardées, le rapport n\'attend plus que vous.',
+    titreRelance: 'Votre rapport vous attend',
+    p1Relance: 'Bonjour {moi}, vos réponses et celles de {autre} ont été comparées, et votre rapport n\'est pas encore débloqué.',
+    p1RelanceSolo: 'Bonjour {moi}, vous avez répondu aux cent questions, et votre rapport n\'est pas encore débloqué.',
+    contenu: 'Vous y trouverez vos accords, chacun de vos écarts avec vos deux réponses côte à côte, ce qu\'il vaut mieux savoir avant d\'en parler, et vos quatre prochaines conversations.',
+    contenuSolo: 'Vous y trouverez ce qui vous rapproche, les écarts entre vos réponses et ce que vous imaginez de {autre}, vos zones d\'ombre et par où commencer.',
+    prix: 'Le rapport complet coûte {prix} pour vous deux, en une seule fois.',
+    prixSolo: 'Le rapport complet coûte {prix}, en une seule fois.',
+    prixPromo: 'En ce moment, le rapport complet coûte {prix} au lieu de {prixBase}, pour vous deux, en une seule fois.',
+    prixPromoSolo: 'En ce moment, le rapport complet coûte {prix} au lieu de {prixBase}, en une seule fois.',
+    bouton: 'Voir notre rapport',
+    boutonSolo: 'Voir mon rapport',
+    seul: 'C\'est le seul rappel que nous vous enverrons.',
+    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com.',
+    arret: 'Ne plus recevoir de message sur cette évaluation',
+  },
+  en: {
+    sujetPret: '{autre} has finished: your report is ready',
+    avantPret: 'All that\'s left is to unlock it, for both of you.',
+    titrePret: 'Your report is ready',
+    p1Pret: 'Hi {moi}, {autre} has just finished answering. Your two sets of answers have now been compared, question by question, and your report is waiting for you.',
+    sujetRelance: 'Your report is still waiting for you',
+    avantRelance: 'Your answers are saved, the report is just waiting for you.',
+    titreRelance: 'Your report is waiting',
+    p1Relance: 'Hi {moi}, your answers and {autre}\'s have been compared, and your report hasn\'t been unlocked yet.',
+    p1RelanceSolo: 'Hi {moi}, you answered the hundred questions, and your report hasn\'t been unlocked yet.',
+    contenu: 'Inside you\'ll find where you agree, every difference with both your answers side by side, what\'s worth knowing before you talk about it, and your next four conversations.',
+    contenuSolo: 'Inside you\'ll find what brings you together, the gaps between your answers and what you imagine {autre} would say, your blind spots and where to start.',
+    prix: 'The full report costs {prix} for both of you, in a single payment.',
+    prixSolo: 'The full report costs {prix}, in a single payment.',
+    prixPromo: 'Right now, the full report costs {prix} instead of {prixBase} for both of you, in a single payment.',
+    prixPromoSolo: 'Right now, the full report costs {prix} instead of {prixBase}, in a single payment.',
+    bouton: 'See our report',
+    boutonSolo: 'See my report',
+    seul: 'This is the only reminder we\'ll send you.',
+    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com.',
+    arret: 'Stop emails about this assessment',
+  },
+  es: {
+    sujetPret: '{autre} ha terminado: vuestro informe está listo',
+    avantPret: 'Solo falta desbloquearlo, para los dos.',
+    titrePret: 'Vuestro informe está listo',
+    p1Pret: 'Hola, {moi}: {autre} acaba de terminar sus respuestas. Vuestras dos series de respuestas ya están comparadas, pregunta por pregunta, y vuestro informe os espera.',
+    sujetRelance: 'Vuestro informe sigue esperándoos',
+    sujetRelanceSolo: 'Tu informe sigue esperándote',
+    avantRelance: 'Vuestras respuestas están guardadas, el informe solo espera a que lo abráis.',
+    avantRelanceSolo: 'Tus respuestas están guardadas, el informe solo espera a que lo abras.',
+    titreRelance: 'Vuestro informe os espera',
+    titreRelanceSolo: 'Tu informe te espera',
+    p1Relance: 'Hola, {moi}: tus respuestas y las de {autre} ya están comparadas, y vuestro informe todavía no está desbloqueado.',
+    p1RelanceSolo: 'Hola, {moi}: respondiste a las cien preguntas y tu informe todavía no está desbloqueado.',
+    contenu: 'Encontraréis en qué estáis de acuerdo, cada una de vuestras diferencias con las dos respuestas lado a lado, lo que conviene saber antes de hablarlo y vuestras cuatro próximas conversaciones.',
+    contenuSolo: 'Encontrarás lo que os une, las diferencias entre tus respuestas y lo que imaginas que diría {autre}, tus zonas de sombra y por dónde empezar.',
+    prix: 'El informe completo cuesta {prix} para los dos, en un solo pago.',
+    prixSolo: 'El informe completo cuesta {prix}, en un solo pago.',
+    prixPromo: 'Ahora mismo, el informe completo cuesta {prix} en lugar de {prixBase}, para los dos, en un solo pago.',
+    prixPromoSolo: 'Ahora mismo, el informe completo cuesta {prix} en lugar de {prixBase}, en un solo pago.',
+    bouton: 'Ver nuestro informe',
+    boutonSolo: 'Ver mi informe',
+    seul: 'Es el único recordatorio que te enviaremos.',
+    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com.',
+    arret: 'No recibir más mensajes sobre esta evaluación',
+  },
+  de: {
+    sujetPret: '{autre} ist fertig: euer Bericht ist bereit',
+    avantPret: 'Jetzt müsst ihr ihn nur noch freischalten.',
+    titrePret: 'Euer Bericht ist bereit',
+    p1Pret: 'Hallo {moi}, {autre} hat gerade alle Fragen beantwortet. Eure beiden Antworten sind jetzt Frage für Frage verglichen, und euer Bericht wartet auf euch.',
+    sujetRelance: 'Euer Bericht wartet noch auf euch',
+    sujetRelanceSolo: 'Dein Bericht wartet noch auf dich',
+    avantRelance: 'Eure Antworten sind gespeichert, der Bericht wartet nur noch auf euch.',
+    avantRelanceSolo: 'Deine Antworten sind gespeichert, der Bericht wartet nur noch auf dich.',
+    titreRelance: 'Euer Bericht wartet',
+    titreRelanceSolo: 'Dein Bericht wartet',
+    p1Relance: 'Hallo {moi}, deine Antworten und die von {autre} sind verglichen, und euer Bericht ist noch nicht freigeschaltet.',
+    p1RelanceSolo: 'Hallo {moi}, du hast die hundert Fragen beantwortet, und dein Bericht ist noch nicht freigeschaltet.',
+    contenu: 'Darin findet ihr, worin ihr euch einig seid, jeden eurer Unterschiede mit beiden Antworten nebeneinander, was ihr wissen solltet, bevor ihr darüber redet, und eure nächsten vier Gespräche.',
+    contenuSolo: 'Darin findest du, was euch verbindet, die Unterschiede zwischen deinen Antworten und dem, was du von {autre} erwartest, deine blinden Flecken und womit du anfangen kannst.',
+    prix: 'Der vollständige Bericht kostet {prix} für euch beide, einmalig.',
+    prixSolo: 'Der vollständige Bericht kostet {prix}, einmalig.',
+    prixPromo: 'Gerade kostet der vollständige Bericht {prix} statt {prixBase} für euch beide, einmalig.',
+    prixPromoSolo: 'Gerade kostet der vollständige Bericht {prix} statt {prixBase}, einmalig.',
+    bouton: 'Unseren Bericht ansehen',
+    boutonSolo: 'Meinen Bericht ansehen',
+    seul: 'Das ist die einzige Erinnerung, die wir dir schicken.',
+    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde.',
+    arret: 'Keine Nachrichten mehr zu dieser Analyse',
+  },
+  it: {
+    sujetPret: '{autre} ha finito: il vostro report è pronto',
+    avantPret: 'Ora resta solo da sbloccarlo, per tutti e due.',
+    titrePret: 'Il vostro report è pronto',
+    p1Pret: 'Ciao {moi}, {autre} ha appena finito di rispondere. Le vostre due serie di risposte sono state confrontate, domanda per domanda, e il vostro report vi aspetta.',
+    sujetRelance: 'Il vostro report vi aspetta ancora',
+    sujetRelanceSolo: 'Il tuo report ti aspetta ancora',
+    avantRelance: 'Le vostre risposte sono salvate, il report aspetta solo voi.',
+    avantRelanceSolo: 'Le tue risposte sono salvate, il report aspetta solo te.',
+    titreRelance: 'Il vostro report vi aspetta',
+    titreRelanceSolo: 'Il tuo report ti aspetta',
+    p1Relance: 'Ciao {moi}, le tue risposte e quelle di {autre} sono state confrontate, e il vostro report non è ancora sbloccato.',
+    p1RelanceSolo: 'Ciao {moi}, hai risposto alle cento domande, e il tuo report non è ancora sbloccato.',
+    contenu: 'Dentro troverete su cosa siete d\'accordo, ogni vostra differenza con le due risposte fianco a fianco, quello che è meglio sapere prima di parlarne e le vostre prossime quattro conversazioni.',
+    contenuSolo: 'Dentro troverai cosa vi unisce, le differenze tra le tue risposte e quello che immagini direbbe {autre}, le tue zone d\'ombra e da dove cominciare.',
+    prix: 'Il report completo costa {prix} per tutti e due, in un solo pagamento.',
+    prixSolo: 'Il report completo costa {prix}, in un solo pagamento.',
+    prixPromo: 'In questo momento, il report completo costa {prix} invece di {prixBase}, per tutti e due, in un solo pagamento.',
+    prixPromoSolo: 'In questo momento, il report completo costa {prix} invece di {prixBase}, in un solo pagamento.',
+    bouton: 'Vedere il nostro report',
+    boutonSolo: 'Vedere il mio report',
+    seul: 'È l\'unico promemoria che ti invieremo.',
+    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com.',
+    arret: 'Non ricevere più messaggi su questa valutazione',
+  },
+};
+
+// 7,92 € dans la langue du message (centimes en entrée).
+export function prixEcrit(centimes, lang) {
+  const loc = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  return new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR' }).format((Number(centimes) || 0) / 100);
+}
+
+function messageRappel(quoi, { lang, mode, moi, autre, url, arret, prix, prixBase, promo }) {
+  const t = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
+  const solo = mode === 'solo';
+  const pick = (cle) => (solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
+  const v = { moi, autre, prix: prixEcrit(prix, lang), prixBase: prixEcrit(prixBase, lang) };
+  const pret = quoi === 'pret';
+  const sujet = remplir(pret ? t.sujetPret : pick('sujetRelance'), v);
+  const avant = pret ? t.avantPret : pick('avantRelance');
+  const titre = pret ? t.titrePret : pick('titreRelance');
+  const p1 = remplir(pret ? t.p1Pret : pick('p1Relance'), v);
+  const contenu = pret ? null : remplir(pick('contenu'), v);
+  const ligneprix = remplir(promo ? pick('prixPromo') : pick('prix'), v);
+  const bouton = pick('bouton');
+  const notes = pret ? [] : [t.seul];
+  const deuxPoints = lang === 'fr' ? ' : ' : ': ';
+  const texte = [titre, '', p1, '']
+    .concat(contenu ? [contenu, ''] : [])
+    .concat([ligneprix, '', bouton + deuxPoints + url, ''])
+    .concat(notes.length ? [notes.join(' '), ''] : [])
+    .concat(['--', t.pied, t.arret + deuxPoints + arret, EDITEUR]).join('\n');
+  const para = (x, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(x)}</p>`;
+  const html = `<!doctype html>
+<html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
+<body style="margin:0;padding:0;background:#f6f1f4;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${esc(avant)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f1f4;padding:24px 12px;">
+<tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;color:#2b2233;font-size:16px;line-height:1.55;">
+<tr><td style="height:6px;background:#d96a8f;font-size:0;line-height:0;">&nbsp;</td></tr>
+<tr><td style="padding:28px 28px 8px;">
+<p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
+<h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(titre)}</h1>
+${para(p1)}${contenu ? para(contenu) : ''}${para(ligneprix, 'font-weight:bold;')}
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 24px;"><tr><td style="border-radius:999px;background:#2b2233;">
+<a href="${esc(url)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(bouton)}</a>
+</td></tr></table>
+${notes.map((n) => para(n, 'color:#5f5366;font-size:14px;')).join('')}
+</td></tr>
+<tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
+<p style="margin:0 0 6px;">${esc(t.pied)}</p>
+<p style="margin:0 0 6px;"><a href="${esc(arret)}" style="color:#857a8b;">${esc(t.arret)}</a></p>
+<p style="margin:0;">${esc(EDITEUR)}</p>
+</td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+  return { sujet, html, texte };
+}
+
+// { sujet, html, texte } : le second vient de finir, le rapport attend.
+export function messagePret(o) { return messageRappel('pret', o); }
+// { sujet, html, texte } : le rappel unique, un jour après.
+export function messageRelance(o) { return messageRappel('relance', o); }
 
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {
