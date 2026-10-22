@@ -82,6 +82,33 @@ jobs:
           sql "Fonctions du schéma public exécutables par la clé publique" "select p.proname || '(' || pg_get_function_identity_arguments(p.oid) || ')' as fonction, has_function_privilege('anon', p.oid, 'EXECUTE') as anon, has_function_privilege('authenticated', p.oid, 'EXECUTE') as authenticated, has_function_privilege('service_role', p.oid, 'EXECUTE') as service_role from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prokind in ('f', 'p') order by 1"
           rm -f requete.json reponse.json
 
+      # Les données personnelles (22 octobre 2026, pour le registre des
+      # traitements et les durées de conservation promises par la politique
+      # de confidentialité) : chaque colonne du schéma public dont le nom dit
+      # une adresse IP, une adresse e-mail, un nom ou un téléphone, le nombre
+      # de lignes de sa table, combien la remplissent, et la plus ancienne
+      # ligne. On n'affiche jamais une valeur, seulement des comptes et des
+      # dates.
+      - name: Les données personnelles et leur âge
+        run: |
+          sql() {
+            jq -n --arg q "$2" '{query: $q}' > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo; echo "## $1 (HTTP $code)"
+            if [ "$code" -ge 300 ]; then head -c 800 reponse.json; echo; return 0; fi
+            jq -r 'if length == 0 then "(aucune ligne)" else (.[0] | keys_unsorted | join(" | ")), (.[] | [.[] | tostring] | join(" | ")) end' reponse.json 2>/dev/null || head -c 3000 reponse.json
+          }
+          MOTIF='(^|_)(ip|ip_address|ip_hash|email|emails|mail|prenom|nom|first_name|last_name|name|author_name|phone|telephone|user_agent)($|_)'
+          DATES="array['created_at','cree_le','used_at','inserted_at','consent_at','paye_le']"
+          sql "Colonnes personnelles, table par table" "select c.table_name as table_, string_agg(c.column_name, ', ' order by c.ordinal_position) as colonnes from information_schema.columns c join information_schema.tables t on t.table_schema = c.table_schema and t.table_name = c.table_name and t.table_type = 'BASE TABLE' where c.table_schema = 'public' and c.column_name ~* '$MOTIF' group by 1 order by 1"
+          sql "Leur âge : lignes, colonnes remplies, plus ancienne et plus récente ligne" "with col as (select c.table_name, c.column_name from information_schema.columns c join information_schema.tables t on t.table_schema = c.table_schema and t.table_name = c.table_name and t.table_type = 'BASE TABLE' where c.table_schema = 'public' and c.column_name ~* '$MOTIF'), dat as (select distinct on (x.table_name) x.table_name, x.column_name as col_date from information_schema.columns x where x.table_schema = 'public' and x.column_name = any($DATES) order by x.table_name, array_position($DATES, x.column_name::text)) select col.table_name as table_, col.column_name as colonne, (xpath('/row/n/text()', query_to_xml(format('select count(*) as n from public.%I', col.table_name), false, true, '')))[1]::text as lignes, (xpath('/row/n/text()', query_to_xml(format('select count(%I) as n from public.%I', col.column_name, col.table_name), false, true, '')))[1]::text as remplies, dat.col_date as date_, case when dat.col_date is not null then (xpath('/row/d/text()', query_to_xml(format('select min(%I)::date as d from public.%I where %I is not null', dat.col_date, col.table_name, col.column_name), false, true, '')))[1]::text end as plus_ancienne, case when dat.col_date is not null then (xpath('/row/d/text()', query_to_xml(format('select max(%I)::date as d from public.%I where %I is not null', dat.col_date, col.table_name, col.column_name), false, true, '')))[1]::text end as plus_recente from col left join dat on dat.table_name = col.table_name order by 1, 2"
+          sql "Les abonnés par statut" "select statut, count(*) as n, min(created_at)::date as plus_ancienne, min(desinscrit_le)::date as desinscrit_depuis from public.abonnes group by 1 order by 1"
+          sql "Les évaluations par état (pour la purge de 60 jours et de six mois)" "select case when paye_le is not null then 'payee' else 'non payee' end as etat, count(*) as n, min(maj_le)::date as plus_ancienne_activite, min(paye_le)::date as plus_ancien_paiement from public.bilans group by 1"
+          rm -f requete.json reponse.json
+
       # Les logs eux-mêmes : une requête ClickHouse sur la table « logs »,
       # filtrée par source (edge_logs = passerelle d'API, postgres_logs,
       # realtime_logs, function_edge_logs, storage_logs...). Vingt-quatre

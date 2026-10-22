@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invitez {{autre}}",
       "texte": "Envoyez ce lien à {{autre}}. {{autre}} répondra de son côté, sur son téléphone, sans voir vos réponses, et vous ne verrez pas les siennes avant la fin.",
+      "suite": "Pas besoin d'attendre {{autre}} : commencez vos réponses dès maintenant, chacun avance de son côté.",
       "envoyer": "Envoyer le lien",
       "copier": "Copier le lien",
       "copie": "Lien copié !",
@@ -153,7 +154,7 @@
         "decisifs0": "Aucun écart sur les sujets décisifs, ceux qui pèsent le plus dans un couple.",
         "decisifsUn": "Dont un écart sur un sujet décisif, de ceux qui pèsent le plus dans un couple.",
         "decisifsN": "Dont {{n}} écarts sur des sujets décisifs, ceux qui pèsent le plus dans un couple.",
-        "quoi": "Le rapport vous dit lesquels, ce qu'ils veulent dire pour vous deux et comment en parler."
+        "quoi": "Le rapport vous dit lesquels et comment en parler. Peu de couples prennent un jour le temps de faire ce point : vous venez de le faire, il ne reste qu'à lire le résultat."
       },
       "contenu": [
         "Votre alignement et le climat de votre couple, en un coup d'œil",
@@ -225,7 +226,7 @@
         "pretTitre": "{{moi}}, votre rapport est prêt",
         "apercu": {
           "intro": "Vos réponses ont été comparées à ce que vous pensez que {{autre}} répondrait :",
-          "quoi": "Le rapport vous dit lesquels, ce qu'ils veulent dire et par où commencer.",
+          "quoi": "Le rapport vous dit lesquels et par où commencer. Peu de gens prennent un jour le temps de faire ce point sur leur couple : vous venez de le faire, il ne reste qu'à lire le résultat.",
           "inconnusUn": "Et un sujet où vous ne savez pas ce que {{autre}} répondrait.",
           "inconnusN": "Et {{n}} sujets où vous ne savez pas ce que {{autre}} répondrait."
         }
@@ -884,6 +885,7 @@
       "p2": "L'évaluation n'est pas un test clinique et ne remplace pas un professionnel. C'est un questionnaire sérieux, construit à partir de ce que la recherche sait des couples, pour vous aider à parler des bons sujets."
     },
     "prix": {
+      "accroche": "Les couples oublient trop souvent de faire le point sur leur relation. 30 minutes chacun et quelques euros peuvent vraiment changer les choses.",
       "titre": "Un seul prix, pour vous deux",
       "unite": "pour le couple, en une fois",
       "aide": "Vous ne payez qu'à la fin, une fois vos réponses données. Un seul paiement, par l'un ou l'autre. Pas d'abonnement, pas de compte.",

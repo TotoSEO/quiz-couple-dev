@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Lade {{autre}} ein",
       "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
+      "suite": "Du musst nicht auf {{autre}} warten: Fang jetzt mit deinen Antworten an, jeder antwortet in seinem eigenen Tempo.",
       "envoyer": "Link senden",
       "copier": "Link kopieren",
       "copie": "Link kopiert!",
@@ -153,7 +154,7 @@
         "decisifs0": "Kein Unterschied bei den entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
         "decisifsUn": "Davon einer bei einem entscheidenden Thema, einem von denen, die in einer Beziehung am meisten wiegen.",
         "decisifsN": "Davon {{n}} bei entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
-        "quoi": "Der Bericht sagt euch, welche es sind, was sie für euch beide bedeuten und wie ihr darüber reden könnt."
+        "quoi": "Der Bericht sagt euch, welche es sind und wie ihr darüber redet. Kaum ein Paar nimmt sich je die Zeit dafür, ihr habt es getan."
       },
       "contenu": [
         "Eure Übereinstimmung und das Klima in eurer Beziehung, auf einen Blick",
@@ -225,7 +226,7 @@
         "pretTitre": "{{moi}}, dein Bericht ist bereit",
         "apercu": {
           "intro": "Deine Antworten wurden mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
-          "quoi": "Der Bericht sagt dir, welche es sind, was sie bedeuten und womit du anfangen kannst.",
+          "quoi": "Der Bericht sagt dir, welche es sind und wo du anfängst. Kaum jemand nimmt sich je die Zeit dafür, du hast es getan.",
           "inconnusUn": "Und ein Thema, bei dem du nicht weißt, was {{autre}} antworten würde.",
           "inconnusN": "Und {{n}} Themen, bei denen du nicht weißt, was {{autre}} antworten würde."
         },
@@ -885,6 +886,7 @@
       "p2": "Die Analyse ist kein klinischer Test und ersetzt keine Fachperson. Sie ist ein ernsthafter Fragebogen, aufgebaut auf dem, was die Forschung über Paare weiß, um euch zu helfen, über die richtigen Themen zu reden."
     },
     "prix": {
+      "accroche": "Paare vergessen viel zu oft, eine Bestandsaufnahme ihrer Beziehung zu machen. 30 Minuten pro Person und ein paar Euro können wirklich etwas verändern.",
       "titre": "Ein Preis, für euch beide",
       "unite": "für das Paar, einmalig",
       "aide": "Ihr zahlt erst am Ende, wenn eure Antworten abgegeben sind. Eine einzige Zahlung, von einem von euch. Kein Abo, kein Konto.",

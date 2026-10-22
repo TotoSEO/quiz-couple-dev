@@ -125,7 +125,9 @@ export const JETONS_MAIL_MAX = 4;
 // cause pour une erreur du départ, le rôle (a, b) pour l'écran de l'adresse,
 // rien sinon.
 export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante'];
-const CAUSES_DEPART = ['prenoms', 'accord'];
+// `accord` : les deux cases ensemble, jusqu'au 22 octobre 2026 ; depuis, la
+// case des 18 ans (`majeur`) et celle du consentement sont comptées à part.
+const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 

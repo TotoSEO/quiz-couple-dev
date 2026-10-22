@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invita {{autre}}",
       "texte": "Manda questo link a {{autre}}. {{autre}} risponderà per conto suo, sul proprio telefono, senza vedere le tue risposte, e tu non vedrai le sue fino alla fine.",
+      "suite": "Non serve aspettare {{autre}}: inizia subito le tue risposte, ognuno va avanti per conto suo.",
       "envoyer": "Invia il link",
       "copier": "Copia il link",
       "copie": "Link copiato!",
@@ -153,7 +154,7 @@
         "decisifs0": "Nessuna differenza sui temi decisivi, quelli che pesano di più in una coppia.",
         "decisifsUn": "Di cui una su un tema decisivo, uno di quelli che pesano di più in una coppia.",
         "decisifsN": "Di cui {{n}} su temi decisivi, quelli che pesano di più in una coppia.",
-        "quoi": "Il report vi dice quali, cosa significano per tutti e due e come parlarne."
+        "quoi": "Il report vi dice quali e come parlarne. Poche coppie si prendono mai il tempo di fare questo punto: voi l'avete appena fatto, resta solo da leggere il risultato."
       },
       "contenu": [
         "Il vostro allineamento e il clima della vostra coppia, a colpo d'occhio",
@@ -225,7 +226,7 @@
         "pretTitre": "{{moi}}, il tuo report è pronto",
         "apercu": {
           "intro": "Le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
-          "quoi": "Il report ti dice quali, cosa significano e da dove cominciare.",
+          "quoi": "Il report ti dice quali e da dove cominciare. Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
           "inconnusUn": "E un tema su cui non sai cosa risponderebbe {{autre}}.",
           "inconnusN": "E {{n}} temi su cui non sai cosa risponderebbe {{autre}}."
         },
@@ -885,6 +886,7 @@
       "p2": "La valutazione non è un test clinico e non sostituisce un professionista. È un questionario serio, costruito a partire da quello che la ricerca sa delle coppie, per aiutarvi a parlare degli argomenti giusti."
     },
     "prix": {
+      "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 30 minuti a testa e pochi euro possono cambiare davvero le cose.",
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
       "aide": "Pagate solo alla fine, una volta date le vostre risposte. Un solo pagamento, dell'uno o dell'altro. Nessun abbonamento, nessun account.",

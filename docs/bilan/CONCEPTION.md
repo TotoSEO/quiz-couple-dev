@@ -977,3 +977,34 @@ Trois jours de chiffres, puis : la part des départs vus qui deviennent des
 part de ceux qui voient l'écran de l'adresse et finissent (si elle tombe,
 l'adresse à la fin coûte des personnes), et les clics sans la case cochée
 (si beaucoup, la case de renonciation bloque le paiement).
+
+## 22 octobre 2026 : l'invitation et la promesse
+
+Les chiffres d'un jour et demi de nouveau départ, lus par Thomas :
+
+- **À deux, l'invitation perd presque tout** : 25 évaluations créées, la
+  situation donnée sur 7 seulement. Sur un téléphone, « Commencer mes
+  réponses » était à 992 px du haut, sous le lien personnel ; le premier
+  écran montrait « Copier le lien » en bouton principal. Le créateur
+  envoyait le lien et partait, comme s'il fallait attendre l'autre. Le
+  bouton est maintenant dans le premier écran, en gros, sous une phrase qui
+  dit qu'on n'a pas à attendre.
+- **Le premier domaine filtre** : 107 personnes ont répondu à au moins une
+  question du quotidien, 66 l'ont fini, et presque tous ceux-là vont au
+  bout des cent. On ne touche à rien ici pour l'instant.
+- **À l'offre, personne ne clique** : cinq écrans « rapport prêt » vus
+  depuis le 21 octobre, aucune page de paiement ouverte, et aucun clic sur
+  « Débloquer » sans la case. La case n'est donc pas le frein : on ne tente
+  même pas. C'est la décision de payer qui manque, et l'échantillon reste
+  petit (cinq personnes).
+- **Les cases du départ** : 33 visites ont buté sur les cases, dont 24 en
+  seul(e). Une partie du public du site a moins de 18 ans ; l'erreur dit
+  désormais quelle case manque, pour savoir si c'est l'âge.
+
+Ce qui a changé : le bouton de l'invitation, la phrase de Thomas en
+citation avant le prix de la page de vente et dans la phrase sous les
+chiffres de l'écran « rapport prêt », la cause des cases, et la ligne
+« Situation ouverte » dans l'entonnoir. Restent à trancher par Thomas : un
+aperçu d'un vrai résultat sur l'écran « rapport prêt » (le domaine où le
+couple diverge le plus, par exemple), qui irait plus loin que les seuls
+comptes, et le prix.
