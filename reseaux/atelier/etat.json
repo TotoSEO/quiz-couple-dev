@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-21T08:31:50.915Z",
+  "genere_le": "2026-10-22T03:13:31.844Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-21",
+  "aujourdhui": "2026-10-22",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "baton"
   },
-  "reserve_jours": 39,
+  "reserve_jours": 38,
   "a_remplir": [
     {
       "jour": "2026-11-29",
@@ -959,6 +959,21 @@
       "jour": "2027-01-29",
       "creneau": "soir",
       "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "matin",
+      "categorie": "baton"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "soir",
+      "categorie": "dix-mais"
     }
   ],
   "a_corriger": [],
@@ -1348,7 +1363,7 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -1357,7 +1372,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -1402,7 +1417,7 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -1411,7 +1426,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -2395,8 +2410,8 @@
       "creneau": "midi"
     },
     "tu-preferes": {
-      "jour": "2026-10-21",
-      "creneau": "soir"
+      "jour": "2026-10-22",
+      "creneau": "midi"
     },
     "phrase": {
       "jour": "2026-10-25",
@@ -2415,7 +2430,7 @@
       "creneau": "soir"
     },
     "baton": {
-      "jour": "2026-10-22",
+      "jour": "2026-10-23",
       "creneau": "matin"
     }
   },
@@ -2655,6 +2670,34 @@
       "variante_id": "d5da4ec2-aaa7-48a2-8c68-1314418d6950",
       "releve": "j7",
       "vues": 182,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "6a1ab773-3c5f-4f7f-970a-f25553d70435",
+      "releve": "j7",
+      "vues": 4,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "209f2db0-3893-41e2-be61-ac0e68d18f57",
+      "releve": "j7",
+      "vues": 357,
+      "partages": 5,
+      "enregistrements": 4
+    },
+    {
+      "variante_id": "f8a03964-604b-4912-8530-82d514032ea1",
+      "releve": "j7",
+      "vues": 356,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "f3403f59-9849-4c71-843f-62dbbbcee3e4",
+      "releve": "j7",
+      "vues": 3,
       "partages": 0,
       "enregistrements": 0
     }
