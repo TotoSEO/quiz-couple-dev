@@ -14,20 +14,27 @@
    null dans build/config.js, ou laisser passer la date de fin. */
 /* sur le nav, pas sur le header : #site-header::after est déjà le filet du bas */
 .saison-halloween #site-header > nav::before,
-.saison-halloween #site-header > nav::after { content: ''; position: absolute; pointer-events: none; }
+.saison-halloween #site-header > nav::after,
+.saison-halloween .bandeau-promo::after { content: ''; position: absolute; pointer-events: none; }
 /* la toile dans le coin haut gauche du menu, derrière le logo */
 .saison-halloween #site-header > nav::before {
   left: 0; top: 0; width: 78px; height: 78px; opacity: .6;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%238d7c9a' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M0 0L100.0 0.0M0 0L92.4 38.3M0 0L70.7 70.7M0 0L38.3 92.4M0 0L0.0 100.0M18.0 0.0Q15.9 3.2 16.6 6.9Q13.5 9.0 12.7 12.7Q9.0 13.5 6.9 16.6Q3.2 15.9 0.0 18.0M36.0 0.0Q31.8 6.3 33.3 13.8Q26.9 18.0 25.5 25.5Q18.0 26.9 13.8 33.3Q6.3 31.8 0.0 36.0M54.0 0.0Q47.7 9.5 49.9 20.7Q40.4 27.0 38.2 38.2Q27.0 40.4 20.7 49.9Q9.5 47.7 0.0 54.0M72.0 0.0Q63.6 12.6 66.5 27.6Q53.9 36.0 50.9 50.9Q36.0 53.9 27.6 66.5Q12.6 63.6 0.0 72.0M90.0 0.0Q79.4 15.8 83.1 34.4Q67.3 45.0 63.6 63.6Q45.0 67.3 34.4 83.1Q15.8 79.4 0.0 90.0'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
 }
 /* l'araignée au bout de son fil, qui se balance sous le menu, près de sa toile */
-.saison-halloween #site-header > nav::after {
+.saison-halloween #site-header > nav::after,
+.saison-halloween .bandeau-promo::after {
   top: 100%; left: 46px; width: 28px; height: 76px; margin-top: -1px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 92'%3E %3Cpath d='M17 0V56' stroke='%239a8ba6' stroke-width='1.6'/%3E %3Cg fill='none' stroke='%232a1e36' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M11 64 5 59 2 52M11 69 3 68 0 62M11 74 4 78 2 86M12 79 7 86 8 92M23 64l6-5 3-7M23 69l8-1 3-6M23 74l7 4 2 8M22 79l5 7-1 6'/%3E %3C/g%3E %3Cellipse cx='17' cy='73' rx='9.5' ry='11.5' fill='%232a1e36' stroke='%23cdbfdd' stroke-width='.9'/%3E %3Ccircle cx='17' cy='59' r='5.8' fill='%232a1e36' stroke='%23cdbfdd' stroke-width='.9'/%3E %3Cpath d='M13 70q4 3 8 0' stroke='%236a4f80' stroke-width='1.2' fill='none'/%3E %3Ccircle cx='14.8' cy='58' r='1.5' fill='%23f08a24'/%3E%3Ccircle cx='19.2' cy='58' r='1.5' fill='%23f08a24'/%3E %3C/svg%3E") no-repeat 50% 0 / 100% 100%;
   transform-origin: 50% 0;
   animation: hwBalance 4.6s ease-in-out infinite alternate;
 }
 @keyframes hwBalance { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+/* Pendant une réduction, sur téléphone, la barre de la réduction est juste
+   sous le menu (header.ejs) : l'araignée pend alors sous la barre, jamais sur
+   son texte. */
+.saison-halloween .bandeau-promo { position: relative; z-index: 2; }
+@media (max-width: 1023.98px) { .saison-halloween #site-header:has(+ .bandeau-promo) > nav::after { display: none; } }
 /* la citrouille à côté du nom */
 .saison-halloween .entete-logo::after {
   content: ''; display: inline-block; flex: none; width: 20px; height: 20px; margin-left: 2px;
@@ -50,8 +57,9 @@ html.dark .saison-halloween .quiz-engine::after { background-image: url("data:im
 html.dark .saison-halloween #site-header > nav::before,
 html.dark .saison-halloween .quiz-engine::before { opacity: .45; }
 @media (max-width: 767.98px) {
-  .saison-halloween #site-header > nav::after { left: 40px; width: 22px; height: 60px; }
+  .saison-halloween #site-header > nav::after,
+  .saison-halloween .bandeau-promo::after { left: 40px; width: 22px; height: 60px; }
   .saison-halloween .quiz-engine::before { width: 44px; height: 44px; }
   .saison-halloween .quiz-engine::after { width: 110px; height: 38px; margin-left: -55px; top: -24px; }
 }
-@media (prefers-reduced-motion: reduce) { .saison-halloween #site-header > nav::after { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .saison-halloween #site-header > nav::after, .saison-halloween .bandeau-promo::after { animation: none; } }

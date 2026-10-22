@@ -241,6 +241,8 @@
     "badge": "Aktuell -{{pourcent}} %",
     "avant": "Normaler Preis:",
     "apres": "Reduzierter Preis:",
-    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen"
+    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen",
+    "bandeau": "Gerade jetzt {{remise}} auf die Analyse eurer Beziehung!",
+    "bandeauRemise": "-{{pourcent}} %"
   }
 }
