@@ -620,7 +620,9 @@
       valider: function (b) {
         lire();
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
-        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', 'accord');
+        // La cause dit si c'est l'âge qui arrête (la case des 18 ans) ou le
+        // consentement : le site a beaucoup de visiteurs de moins de 18 ans.
+        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', !brouillon.majeur ? 'majeur' : 'consentement');
         b.disabled = true;
         appel('creer', {
           lang: LANG, mode: brouillon.mode, src: source(),
@@ -652,16 +654,21 @@
       '<p class="bilan-texte">' + x('invitation.texte', { autre: autre }) + '</p>' +
       '<div class="bilan-lien"><input class="bilan-input" type="text" readonly value="' + esc(lien) + '" aria-label="' + x('invitation.copier') + '"></div>' +
       '<div class="bilan-actions">' +
-      (navigator.share ? bouton('partager', x('invitation.envoyer')) : '') +
-      bouton('copier', x('invitation.copier'), navigator.share ? 'btn-outline' : 'btn-cta btn-gradient') +
-      bouton('qr', x('invitation.qr'), 'btn-outline') + '</div>' +
+      (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
+      bouton('copier', x('invitation.copier'), 'btn-outline') +
+      bouton('qr', x('invitation.qr'), 'btn-outline btn-sm') + '</div>' +
       '<div class="bilan-qr" id="bilan-qr" hidden></div>' +
+      // « Commencer mes réponses » dans le premier écran (22 octobre 2026) :
+      // il était sous le lien personnel, à 992 px du haut sur un téléphone, et
+      // 18 créateurs sur 25 n'ont jamais commencé (ils envoyaient le lien et
+      // partaient, comme s'il fallait attendre l'autre).
+      '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
+      bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
       '<hr class="bilan-sep">' +
       '<h3 class="bilan-sous-titre">' + x('invitation.monLien') + '</h3>' +
       '<p class="bilan-note">' + x('invitation.monLienAide', { autre: autre }) + '</p>' +
       '<div class="bilan-actions">' + bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline btn-sm') + '</div>' +
-      blocLien(etat && etat.moi && etat.moi.email) +
-      '<div class="bilan-actions">' + bouton('commencer', x('invitation.commencer')) + '</div>', 'bilan-invitation');
+      blocLien(etat && etat.moi && etat.moi.email), 'bilan-invitation');
     afficher(html);
     var message = remplir(tr('invitation.message', ''), { lien: lien });
     ACTIONS = {

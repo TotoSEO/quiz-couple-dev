@@ -629,3 +629,9 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-scene .bilan-offre-plie-prix { display: block; font-size: .9rem; color: hsl(var(--muted-foreground)); margin-top: .15rem; }
 .bilan-scene .bilan-offre-plie-prix .prix-promo-apres { color: hsl(var(--primary-texte)); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .bilan-scene .bilan-offre-plie > summary::after { transition: none; } }
+
+/* L'invitation à deux (22 octobre 2026) : « Commencer mes réponses » dans le
+   premier écran d'un téléphone, sous les boutons d'envoi du lien. */
+.bilan-invite-suite { margin: 1.1rem 0 .25rem; text-align: center; }
+.bilan-invite-suite p { margin: 0 0 .7rem; font-weight: 600; line-height: 1.45; color: hsl(var(--foreground)); text-wrap: pretty; }
+.blp-citation--prix { margin-bottom: 1.5rem; }

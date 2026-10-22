@@ -185,6 +185,8 @@ test('les écrans du parcours comptés par la page, seul(e) à part', async () =
   assert.equal(n('depart_erreur', 'prenoms'), 1);
   assert.equal(n('depart_erreur_solo', 'prenoms'), 1);
   assert.equal(n('depart_erreur', 'autre'), 1, 'une cause inconnue ne devient pas une clé');
+  await appel({ action: 'vue', quoi: 'depart_erreur', cle: 'majeur', mode: 'duo' });
+  assert.equal(n('depart_erreur', 'majeur'), 1, 'la case des 18 ans, à part');
   await appel({ action: 'vue', quoi: 'email_vue', cle: 'b', mode: 'duo' });
   await appel({ action: 'vue', quoi: 'email_vue', cle: 'x', mode: 'solo' });
   assert.equal(n('email_vue', 'b'), 1);

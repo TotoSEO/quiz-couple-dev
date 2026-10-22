@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invite {{autre}}",
       "texte": "Send this link to {{autre}}. {{autre}} will answer separately, on their own phone, without seeing your answers, and you won't see theirs until the end.",
+      "suite": "No need to wait for {{autre}}: start your answers now, you each go at your own pace.",
       "envoyer": "Send the link",
       "copier": "Copy the link",
       "copie": "Link copied!",
@@ -153,7 +154,7 @@
         "decisifs0": "No gaps on the decisive topics, the ones that weigh most in a relationship.",
         "decisifsUn": "Including one gap on a decisive topic, one of those that weigh most in a relationship.",
         "decisifsN": "Including {{n}} gaps on decisive topics, the ones that weigh most in a relationship.",
-        "quoi": "The report tells you which ones, what they mean for the two of you and how to talk about them."
+        "quoi": "The report tells you which ones and how to talk about them. Few couples ever take the time to do this: you just did, and all that's left is to read what it says."
       },
       "contenu": [
         "Your alignment and the climate of your relationship, at a glance",
@@ -225,7 +226,7 @@
         "pretTitre": "{{moi}}, your report is ready",
         "apercu": {
           "intro": "Your answers have been compared with what you think {{autre}} would say:",
-          "quoi": "The report tells you which ones, what they mean and where to start.",
+          "quoi": "The report tells you which ones and where to start. Few people ever take the time to look at their relationship this closely: you just did, and all that's left is to read what it says.",
           "inconnusUn": "And one topic where you don't know what {{autre}} would say.",
           "inconnusN": "And {{n}} topics where you don't know what {{autre}} would say."
         }
@@ -884,6 +885,7 @@
       "p2": "The assessment isn't a clinical test and doesn't replace a professional. It's a serious questionnaire, built from what research knows about couples, to help you talk about the right topics."
     },
     "prix": {
+      "accroche": "Couples too often forget to take stock of their relationship. 30 minutes each and a few euros can really change things.",
       "titre": "One price, for both of you",
       "unite": "for the couple, in one go",
       "aide": "You only pay at the end, once your answers are in. One payment, by either of you. No subscription, no account.",
