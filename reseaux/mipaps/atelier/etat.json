@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-22T03:13:33.443Z",
+  "genere_le": "2026-10-22T08:33:38.603Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -44,43 +44,8 @@
     },
     {
       "jour": "2026-12-07",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-07",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-07",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-12-08",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-08",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-08",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-12-09",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-09",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-09",
@@ -88,29 +53,9 @@
       "categorie": "mipaps-histoire"
     },
     {
-      "jour": "2026-12-10",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-10",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-10",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
       "jour": "2026-12-11",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-11",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-11",
@@ -121,11 +66,6 @@
       "jour": "2026-12-12",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-12",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-12",
@@ -136,11 +76,6 @@
       "jour": "2026-12-13",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-13",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-12-13",
@@ -1203,7 +1138,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1257,7 +1192,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2405,6 +2340,123 @@
       "erreur": null
     },
     {
+      "jour": "2026-12-07",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ok.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "même après une journée pourrie, t'arrives à me faire rire avec une blague nulle.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "merci de me laisser ton côté du lit quand j'ai froid",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "on se fait un câlin et après je range, promis",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ce que je dis vouloir / ce que je veux",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "t'as le droit de prendre la dernière part. juste toi.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je fais quoi moi quand t'es pas là ?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "avant de partir, chez nous",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "pourquoi je t'appelle",
+      "erreur": null
+    },
+    {
       "jour": "2026-12-24",
       "creneau": "soir",
       "gabarit": "mipaps-statique",
@@ -2465,7 +2517,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-22",
+      "jour": "2026-10-23",
       "creneau": "midi"
     }
   },
@@ -2734,6 +2786,20 @@
       "releve": "j7",
       "vues": 3,
       "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "d6cb2332-ed83-4a84-af75-9cfeca71c0e8",
+      "releve": "j7",
+      "vues": 394,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "2acf8aaa-5a65-4a26-be70-e4c5e99f48db",
+      "releve": "j7",
+      "vues": 323,
+      "partages": 2,
       "enregistrements": 0
     }
   ]
