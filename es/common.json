@@ -241,6 +241,8 @@
     "badge": "-{{pourcent}} % ahora mismo",
     "avant": "Precio habitual:",
     "apres": "Precio rebajado:",
-    "code": "Código {{code}} aplicado automáticamente al pagar"
+    "code": "Código {{code}} aplicado automáticamente al pagar",
+    "bandeau": "¡Ahora mismo, {{remise}} en la evaluación de vuestra pareja!",
+    "bandeauRemise": "-{{pourcent}} %"
   }
 }

@@ -206,7 +206,25 @@ function promoBilanPour(lang) {
     // Pour l'encart sous le verdict, écrit par quiz-engine-core.js : un
     // attribut data-bilan-promo du <body>, en JSON échappé.
     donnees: escPromo(JSON.stringify({ badge: rp(t('common:promoBilan.badge', '')), base, prix, avant, apres })),
+    // La barre sous l'en-tête mobile (partials/header.ejs) : la phrase, déjà
+    // échappée, avec la réduction en pastille.
+    bandeau: escPromo(rp(t('common:promoBilan.bandeau', ''))).replace('{{remise}}',
+      '<span class="bandeau-promo-remise">' + escPromo(rp(t('common:promoBilan.bandeauRemise', ''))) + '</span>'),
   };
+}
+
+// La barre de la réduction sous l'en-tête mobile (header.ejs, 22 octobre
+// 2026, Thomas : « une barre "En ce moment -20% sur l'évaluation de votre
+// couple !" ») : pendant une réduction, sur toutes les pages, sauf la page de
+// vente (la réduction y est déjà en tête), l'admin, le quiz des ados
+// (l'évaluation est réservée aux majeurs) et les pages où l'on ne vend pas
+// l'évaluation : emprise, manipulation, infidélité, et pour les articles la
+// même règle que la bannière du bas (entreeArticle).
+const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite']);
+function bandeauPromoPour(routeKey, articleMeta) {
+  if (!BILAN_OUVERT || !BILAN_PROMO) return false;
+  if (articleMeta) return !!entreeArticle(articleMeta);
+  return !PAGES_SANS_BANDEAU.has(routeKey);
 }
 
 function stripFutureLinks(html) {
@@ -1150,8 +1168,14 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
-  if (!BILAN_OUVERT) noindexRoutes.push('bilanCouple');
+  // La page de l'évaluation de couple est en noindex dans les cinq langues,
+  // ouverte ou non (22 octobre 2026, Thomas : « met la page
+  // /evaluation-de-couple/ et ses variantes traduites en noindex ») : elle se
+  // vend par le maillage du site (menu, encarts, bannières, barre de la
+  // réduction), pas par la recherche. Elle sort aussi des sitemaps
+  // (generateSitemaps) ; les liens du site vers elle restent suivis
+  // (« noindex, follow »).
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv', 'bilanCouple'];
   const isNoindex = noindexRoutes.includes(routeKey);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -1508,6 +1532,7 @@ async function generatePage(routeKey, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
+    bandeauPromo: bandeauPromoPour(routeKey),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -1665,7 +1690,7 @@ function generateSitemaps() {
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
     if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
-    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
+    if (key === 'bilanCouple') continue; // noindex, voir noindexRoutes
 
     // Build URL map for available languages
     const urlsByLang = {};
@@ -2435,6 +2460,7 @@ async function generateBlogArticle(articleMeta, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
+    bandeauPromo: bandeauPromoPour('article', articleMeta),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -2539,6 +2565,7 @@ async function generate404Pages() {
       bilanPrix: prixBilan(lang),
       bilanPrixBase: prixBilanBase(lang),
       bilanPromo: promoBilanPour(lang),
+      bandeauPromo: bandeauPromoPour('404'),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
       bilanGarantie: BILAN_CONST.garantie,
