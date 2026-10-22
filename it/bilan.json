@@ -51,9 +51,9 @@
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta le due caselle per continuare.",
       "email": "La tua e-mail",
-      "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e ad avvisarti quando il tuo report è pronto, con un solo promemoria se il giorno dopo è ancora in attesa.",
+      "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e ad avvisarti quando il tuo report è pronto, con un solo promemoria se il giorno dopo è ancora in attesa.",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
-      "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il report in PDF.",
+      "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il link al report in PDF.",
       "autreDefaut": "il tuo partner"
     },
     "invitation": {
@@ -164,13 +164,13 @@
         "Per ogni differenza: perché conta, domande per parlarne e cosa è meglio evitare",
         "I vostri segnali d'allarme nei litigi",
         "Chi fa cosa in casa, secondo ciascuno",
-        "Il report completo in PDF, inviato via e-mail appena è pronto, e online per sei mesi"
+        "Il report completo in PDF, con il link per scaricarlo via e-mail appena è pronto, e online per sei mesi"
       ],
       "prix": "{{prix}} per tutti e due",
       "prixAide": "Un solo pagamento, e {{autre}} non dovrà pagare niente. Nessun abbonamento.",
       "emailLabel": "Dove ti mandiamo il report?",
       "emailPlaceholder": "tu@email.it",
-      "emailAide": "Il PDF partirà a questo indirizzo appena avrete finito tutti e due.",
+      "emailAide": "Il link al PDF partirà a questo indirizzo appena avrete finito tutti e due.",
       "emailFaux": "Questo indirizzo non sembra valido.",
       "renonciation": "Chiedo che il report mi sia fornito non appena pronto, senza attendere la fine del periodo di recesso di 14 giorni, e riconosco di perdere il diritto di recesso una volta fornito.",
       "renonciationManque": "Spunta la casella per continuare.",
@@ -203,7 +203,7 @@
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione",
-        "emailAide": "Il report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
+        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
         "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?»."
       },
       "domaine": {
@@ -219,10 +219,10 @@
           "Per ogni differenza: perché conta, domande per parlarne e cosa è meglio evitare",
           "I vostri segnali d'allarme nei litigi",
           "Chi fa cosa in casa, visto da te",
-          "Il report completo in PDF, inviato via e-mail appena è pronto, e online per sei mesi"
+          "Il report completo in PDF, con il link per scaricarlo via e-mail appena è pronto, e online per sei mesi"
         ],
         "prixAide": "Un solo pagamento, nessun abbonamento. Il tuo partner non viene avvisato.",
-        "emailAide": "Il PDF arriverà a questo indirizzo appena pagato.",
+        "emailAide": "Il link al PDF arriverà a questo indirizzo appena pagato.",
         "pretTitre": "{{moi}}, il tuo report è pronto",
         "apercu": {
           "intro": "Le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
@@ -546,15 +546,15 @@
       },
       "ecran": {
         "telecharger": "Scarica il PDF",
-        "pdfPrepa": "Il vostro PDF è in preparazione: arriverà tra qualche minuto, via e-mail e qui.",
-        "pdfErreur": "Il PDF è in ritardo. Ve lo invieremo appena è pronto, non dovete fare niente.",
-        "envoyeA": "Il PDF è stato inviato a {{emails}}. Se non lo vedi, controlla nella posta indesiderata.",
-        "envoiA": "Il PDF partirà a {{emails}} appena sarà pronto. Non devi chiedere niente.",
+        "pdfPrepa": "Il vostro PDF è in preparazione: sarà pronto qui tra qualche minuto, e il suo link vi arriverà via e-mail.",
+        "pdfErreur": "Il PDF è in ritardo. Vi invieremo il suo link via e-mail appena è pronto, non dovete fare niente.",
+        "envoyeA": "Il link al PDF è stato inviato a {{emails}}. Se non lo vedi, controlla nella posta indesiderata.",
+        "envoiA": "Il link al PDF partirà a {{emails}} appena sarà pronto. Non devi chiedere niente.",
         "emailTitre": "Il tuo report via e-mail",
         "emailAide": "Questo indirizzo sostituisce il tuo per questo report. Non serve a nient'altro.",
         "emailChamp": "Il tuo indirizzo e-mail",
         "emailBouton": "Invia",
-        "emailOk": "Fatto! Il PDF va a questo indirizzo.",
+        "emailOk": "Fatto! Il link al PDF va a questo indirizzo.",
         "emailFaux": "Questo indirizzo non sembra valido.",
         "imprimer": "Stampa",
         "supprimer": "Cancella la nostra valutazione",
@@ -562,7 +562,7 @@
         "supprimerAide": "La valutazione viene cancellata per tutti e due, subito e per sempre, PDF compreso. Ricordatevi di salvare il PDF prima.",
         "supprime": "La vostra valutazione è stata cancellata.",
         "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due.",
-        "envoiSans": "Il PDF partirà via e-mail appena sarà pronto.",
+        "envoiSans": "Il link al PDF partirà via e-mail appena sarà pronto.",
         "emailAutre": "Riceverlo a un altro indirizzo"
       }
     },
@@ -735,7 +735,7 @@
         {
           "duree": "6 mesi online",
           "titre": "Lo leggete, e ne parlate",
-          "texte": "Il PDF arriva via e-mail appena tutto è stato risposto, e il report resta online sei mesi. Finisce con una tabella di marcia: un argomento a settimana."
+          "texte": "Il link al PDF arriva via e-mail appena tutto è stato risposto, e il report resta online sei mesi. Finisce con una tabella di marcia: un argomento a settimana."
         }
       ]
     },
@@ -894,7 +894,7 @@
         "100 domande su dodici aree",
         "Il report completo, una quarantina di pagine con i suoi grafici",
         "Le vostre prossime quattro conversazioni, con spunti per condurle",
-        "Il PDF via e-mail e la versione online per sei mesi",
+        "Il PDF da scaricare e la versione online per sei mesi",
         "Lo stesso report, che la facciate in due o da soli"
       ],
       "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
@@ -904,7 +904,7 @@
       "points": [
         {
           "titre": "Nessun account",
-          "texte": "Ciascuno accede alla valutazione con il proprio link. Nessuna password, e un indirizzo e-mail solo per mandarvi il report."
+          "texte": "Ciascuno accede alla valutazione con il proprio link. Nessuna password, e un indirizzo e-mail solo per mandarvi il link al report."
         },
         {
           "titre": "Niente viene mostrato prima della fine",

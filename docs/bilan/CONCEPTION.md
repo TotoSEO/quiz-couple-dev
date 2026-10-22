@@ -1023,3 +1023,33 @@ C'est le premier résultat personnel avant le paiement, et le plus visuel.
 Les comptes (accords, réponses proches, écarts) restent dessous. Le bouton
 de paiement passe sous le premier écran d'un téléphone (vers 1 080 px) :
 le radar d'abord, le prix ensuite.
+
+## 22 octobre 2026 : le rapport par un lien, plus en pièce jointe
+
+L'analyse d'impact (`docs/rgpd/AIPD-evaluation.md`, risque 3) relevait que
+le PDF partait en pièce jointe par Resend, aux États-Unis, et restait ensuite
+dans les boîtes de réception, hors de portée de l'effacement à six mois.
+Thomas : « ok met un lien de téléchargement ».
+
+- **L'e-mail du rapport** (`messageRapport`, courriel.mjs) dit que le rapport
+  est prêt, porte un bouton « Télécharger le rapport (PDF) » et un lien « Le
+  lire en ligne », précise que le lien est personnel, valable six mois, à ne
+  pas transférer, et garde la demande de fourniture immédiate et la
+  reconnaissance de la perte du droit de rétractation (L221-13). Plus aucune
+  pièce jointe : `envoyer` sait encore en porter une, plus personne ne lui
+  en donne.
+- **Un lien par adresse** : `envoyerA` tire un jeton de `jetons_mail` au rôle
+  de l'adresse (`destinatairesRoles` : a, b, et l'adresse du reçu Stripe au
+  rôle de celui qui a payé). Le lien du téléphone reste intact, et un
+  e-mail transféré n'ouvre que le rôle de la personne qui l'a reçu.
+  `JETONS_MAIL_MAX` passe à `ENVOIS_MAX + 2` : huit envois du rapport, le
+  « prêt » et le rappel, sans qu'un lien de rapport tombe.
+- **La page** lit `&pdf=1` : le rapport s'affiche, et le téléchargement du PDF
+  part une seule fois (`pdfDemande`), par le même lien signé de dix minutes
+  que le bouton.
+- **Les textes** : « le lien du PDF » partout où le site promettait le PDF par
+  e-mail (cinq langues), CGV (le rapport est fourni quand part l'e-mail qui
+  donne son lien de téléchargement, ou quand il s'affiche sur la page, le
+  premier des deux ; le droit de rétractation prend fin à cet instant, comme
+  avant), politique de confidentialité (Resend ne transporte plus le
+  rapport), registre et analyse d'impact (risque 3 ramené à faible).

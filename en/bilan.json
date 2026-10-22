@@ -51,9 +51,9 @@
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue.",
       "email": "Your email",
-      "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and tells you when your report is ready, with a single reminder if it's still waiting the next day.",
+      "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and tells you when your report is ready, with a single reminder if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
-      "emailManque": "Enter your email address: that's where the PDF report will be sent.",
+      "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
       "autreDefaut": "your partner"
     },
     "invitation": {
@@ -164,13 +164,13 @@
         "For each gap: why it matters, questions to talk about it and what's best avoided",
         "Your warning signs in arguments",
         "Who does what at home, as each of you sees it",
-        "The full report as a PDF, emailed as soon as it's ready, and online for six months"
+        "The full report as a PDF, its download link emailed as soon as it's ready, and online for six months"
       ],
       "prix": "{{prix}} for both of you",
       "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
       "emailLabel": "Where should we send the report?",
       "emailPlaceholder": "you@email.com",
-      "emailAide": "The PDF will go to this address as soon as you've both finished.",
+      "emailAide": "The PDF link will go to this address as soon as you've both finished.",
       "emailFaux": "This address doesn't look valid.",
       "renonciation": "I ask for the report to be provided as soon as it is ready, without waiting for the end of the 14-day withdrawal period, and I acknowledge that I lose my right of withdrawal once it is provided.",
       "renonciationManque": "Tick the box to continue.",
@@ -203,7 +203,7 @@
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
-        "emailAide": "The PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
+        "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
         "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\"."
       },
       "domaine": {
@@ -219,10 +219,10 @@
           "For each gap: why it matters, questions to talk it through and what's best avoided",
           "Your warning signs in arguments",
           "Who does what at home, as you see it",
-          "The full report as a PDF, emailed as soon as it's ready, and online for six months"
+          "The full report as a PDF, its download link emailed as soon as it's ready, and online for six months"
         ],
         "prixAide": "One payment, no subscription. Your partner isn't told.",
-        "emailAide": "The PDF will go to this address as soon as you've paid.",
+        "emailAide": "The PDF link will go to this address as soon as you've paid.",
         "pretTitre": "{{moi}}, your report is ready",
         "apercu": {
           "intro": "Your answers have been compared with what you think {{autre}} would say:",
@@ -545,15 +545,15 @@
       },
       "ecran": {
         "telecharger": "Download the PDF",
-        "pdfPrepa": "Your PDF is being prepared: it'll arrive in a few minutes, by email and here.",
-        "pdfErreur": "The PDF is running late. It will be sent to you as soon as it's ready, you don't need to do anything.",
-        "envoyeA": "The PDF was sent to {{emails}}. If it doesn't show up, check your spam folder.",
-        "envoiA": "The PDF will go to {{emails}} as soon as it's ready. Nothing to request.",
+        "pdfPrepa": "Your PDF is being prepared: it'll be ready here in a few minutes, and its link will arrive by email.",
+        "pdfErreur": "The PDF is running late. Its link will be emailed to you as soon as it's ready, you don't need to do anything.",
+        "envoyeA": "The PDF link was sent to {{emails}}. If it doesn't show up, check your spam folder.",
+        "envoiA": "The PDF link will go to {{emails}} as soon as it's ready. Nothing to request.",
         "emailTitre": "Your report by email",
         "emailAide": "This address replaces yours for this report. It isn't used for anything else.",
         "emailChamp": "Your email address",
         "emailBouton": "Send",
-        "emailOk": "Got it! The PDF is going to this address.",
+        "emailOk": "Got it! The PDF link is going to this address.",
         "emailFaux": "This address doesn't look valid.",
         "imprimer": "Print",
         "supprimer": "Delete our assessment",
@@ -561,7 +561,7 @@
         "supprimerAide": "The assessment is erased for both of you, right away and for good, PDF included. Remember to keep the PDF first.",
         "supprime": "Your assessment has been deleted.",
         "garde": "This report stays available on this page for six months, for both of you.",
-        "envoiSans": "The PDF will go out by email as soon as it's ready.",
+        "envoiSans": "The PDF link will go out by email as soon as it's ready.",
         "emailAutre": "Receive it at another address"
       }
     },
@@ -734,7 +734,7 @@
         {
           "duree": "6 months online",
           "titre": "You read it, and you talk about it",
-          "texte": "The PDF arrives by email as soon as everything is answered, and the report stays online for six months. It ends with a roadmap: one topic a week."
+          "texte": "The PDF link arrives by email as soon as everything is answered, and the report stays online for six months. It ends with a roadmap: one topic a week."
         }
       ]
     },
@@ -893,7 +893,7 @@
         "100 questions across twelve areas",
         "The full report, about forty pages with its charts",
         "Your next four conversations, with ways to lead them",
-        "The PDF by email and the online version for six months",
+        "The PDF to download and the online version for six months",
         "The same report, whether you do it together or on your own"
       ],
       "garantie": "Satisfied or refunded within {{jours}} days: one message is enough."
@@ -903,7 +903,7 @@
       "points": [
         {
           "titre": "No account",
-          "texte": "You each access the assessment through your own link. No password, and an email address only to send you the report."
+          "texte": "You each access the assessment through your own link. No password, and an email address only to send you the link to the report."
         },
         {
           "titre": "Nothing is shown before the end",

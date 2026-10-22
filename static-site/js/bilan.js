@@ -39,6 +39,7 @@
   var S = null;   // la session de réponses en cours
   var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
   var modeDemande = null;  // le mode demandé par le bouton de la page ou le lien suivi (arrivee)
+  var pdfDemande = false;  // le lien de l'e-mail du rapport demande le PDF tout de suite
 
   // ── Textes ──────────────────────────────────────────────────────────────
 
@@ -365,6 +366,9 @@
     var lien = !!(id && jeton);
     // Le lien « ne plus recevoir de message » des e-mails : #b=…&t=…&arret=1.
     var arret = hash.get('arret') === '1';
+    // Le bouton de l'e-mail du rapport (22 octobre 2026, plus de pièce
+    // jointe) : #b=…&t=…&pdf=1 ouvre le rapport et lance le PDF.
+    pdfDemande = hash.get('pdf') === '1';
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
     arrivee(query);
@@ -1562,6 +1566,14 @@
         '<div class="bilan-actions bilan-actions--gauche">' + bouton('supprimer', x('rapport.ecran.supprimer'), 'btn-outline btn-sm') + '</div>' +
         '<p class="bilan-note">' + x('rapport.ecran.supprimerAide') + '</p>', 'bilan-carte--discrete'),
       !!message);
+    if (pdfDemande) {
+      // Une seule fois : revenir sur la page ne relance pas le téléchargement.
+      pdfDemande = false;
+      if (r.pret) setTimeout(function () {
+        var b = racine.querySelector('[data-action="pdf"]');
+        if (b && ACTIONS.pdf) ACTIONS.pdf(b);
+      }, 300);
+    }
     ACTIONS = {
       pdf: function (b) {
         b.disabled = true;
