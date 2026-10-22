@@ -1,0 +1,54 @@
+{
+  "jour": "2026-12-10",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-122",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : lui qui tend une part de gâteau, elle émerveillée.",
+        "texte": "t'as le droit de prendre la dernière part. juste toi.",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "content",
+              "bras": "tend_d",
+              "x": 215,
+              "taille": 260
+            },
+            {
+              "objet": "gateau",
+              "x": 335,
+              "y": 340,
+              "echelle": 0.6
+            },
+            {
+              "perso": "elle",
+              "expression": "emerveille",
+              "x": 455,
+              "taille": 260
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

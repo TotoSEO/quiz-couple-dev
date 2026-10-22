@@ -1,0 +1,43 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-118",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, ennuyée, allongée par terre.",
+        "style": "mini",
+        "texte": "je fais quoi moi quand t'es pas là ?",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "blase",
+              "pose": "allonge",
+              "y": 360,
+              "signes": [
+                "points"
+              ],
+              "x": 320,
+              "taille": 260
+            }
+          ]
+        }
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

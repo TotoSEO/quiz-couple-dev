@@ -1,0 +1,41 @@
+{
+  "jour": "2026-12-13",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-147",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma : pourquoi je t'appelle, en camembert.",
+        "style": "schema",
+        "texte": "pourquoi je t'appelle",
+        "schema": {
+          "type": "camembert",
+          "parts": [
+            {
+              "texte": "te dire un truc",
+              "part": 20
+            },
+            {
+              "texte": "t'entendre",
+              "part": 80
+            }
+          ]
+        }
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

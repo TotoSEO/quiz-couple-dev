@@ -1,0 +1,184 @@
+{
+  "jour": "2026-12-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-130",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Regarder ta personne dormir : elle dort sur le canapé, il la regarde, des cœurs ; elle ouvre un œil, il sursaute ; elle le tire contre elle, câlin. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle dort sur le canapé, allongée, des petits zzz au-dessus d'elle. Il est assis par terre à côté, les yeux brillants, il la regarde dormir, des cœurs flottent. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "assis",
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 150,
+                "echelle": 0.4,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 170,
+                "echelle": 0.3,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "regarder ta personne dormir",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle ouvre un œil à 1 s, un sourire en coin. Il sursaute, les yeux grands, un point d'exclamation au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "malicieux"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "assis",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle le tire contre elle, les deux serrés l'un contre l'autre sur le canapé, yeux fermés, un petit cœur flotte au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "calin"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "calin"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 140,
+                "echelle": 0.4,
+                "de": 0.6,
+                "flotte": true
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
