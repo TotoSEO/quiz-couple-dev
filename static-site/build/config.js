@@ -1302,6 +1302,32 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-10-22T16:30:00+02:00',
   },
   {
+    internalSlug: 'pierre-marie-curie-histoire-amour',
+    category: 'histoires',
+    featuredImage: '/blog/pierre-marie-curie-histoire-amour.webp',
+    slugs: {
+      fr: 'pierre-marie-curie-histoire-amour',
+      en: 'pierre-marie-curie-love-story',
+      es: 'pierre-marie-curie-historia-amor',
+      de: 'pierre-marie-curie-liebesgeschichte',
+      it: 'pierre-marie-curie-storia-amore',
+    },
+    publishedAt: '2026-10-23T08:10:00+02:00',
+  },
+  {
+    internalSlug: 'juliette-drouet-victor-hugo-lettres',
+    category: 'histoires',
+    featuredImage: '/blog/juliette-drouet-victor-hugo-lettres.webp',
+    slugs: {
+      fr: 'juliette-drouet-victor-hugo-lettres',
+      en: 'juliette-drouet-victor-hugo-letters',
+      es: 'juliette-drouet-victor-hugo-cartas',
+      de: 'juliette-drouet-victor-hugo-briefe',
+      it: 'juliette-drouet-victor-hugo-lettere',
+    },
+    publishedAt: '2026-10-24T08:20:00+02:00',
+  },
+  {
     internalSlug: 'homme-toxique-en-amour',
     category: 'psychologie',
     featuredImage: '/blog/homme-toxique-en-amour.webp',
