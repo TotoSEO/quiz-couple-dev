@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-30",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-052",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Coffee date",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Tiny cafe, one table",
+            "b": "Big cafe with sofas"
+          },
+          {
+            "a": "Hot coffee in winter",
+            "b": "Iced coffee in summer"
+          },
+          {
+            "a": "Talk for three hours",
+            "b": "Read side by side"
+          },
+          {
+            "a": "Share a pastry",
+            "b": "Order two"
+          },
+          {
+            "a": "Window seat",
+            "b": "Corner booth"
+          },
+          {
+            "a": "They pay this time",
+            "b": "You pay this time"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Coffee date. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
