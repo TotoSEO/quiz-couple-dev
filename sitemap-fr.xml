@@ -58,7 +58,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/fernbeziehung-quiz/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-distanza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-distance/"/>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1651,6 +1651,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/domande-inizio-relazione/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/questions-debut-de-relation/"/>
     <lastmod>2026-10-20T11:16:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/marie-antoinette-fersen-lettres/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/marie-antoinette-fersen-lettres/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/marie-antoinette-fersen-letters/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/maria-antonieta-fersen-cartas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/marie-antoinette-fersen-briefe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/maria-antonietta-fersen-lettere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/marie-antoinette-fersen-lettres/"/>
+    <lastmod>2026-10-22T16:30:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
