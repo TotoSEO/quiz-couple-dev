@@ -1,0 +1,30 @@
+{
+  "jour": "2026-12-06",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "You've seen me at my worst and you still make me coffee.",
+        "fleurs": "feuillage",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

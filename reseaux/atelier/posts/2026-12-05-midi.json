@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-05",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-057",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "City break",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Rooftop at sunset",
+            "b": "Old town at night"
+          },
+          {
+            "a": "Museum morning",
+            "b": "Market morning"
+          },
+          {
+            "a": "Walk everywhere",
+            "b": "Scooter everywhere"
+          },
+          {
+            "a": "Street food",
+            "b": "Fancy dinner"
+          },
+          {
+            "a": "Plan the route",
+            "b": "Get lost on purpose"
+          },
+          {
+            "a": "Hotel downtown",
+            "b": "Tiny flat outside"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "City break. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
