@@ -1261,13 +1261,32 @@
   // désaccord, jamais lesquels (21 octobre 2026, Thomas a accepté cette
   // entorse à « aucun résultat gratuit »). Un serveur plus ancien n'envoie
   // rien : l'écran garde alors sa phrase d'avant.
+  // Le radar de la synthèse, avant le paiement (22 octobre 2026, Thomas :
+  // « une partie des résultats gratuite, mais vraiment rien, genre juste la
+  // synthèse, le graphique araignée ») : dessiné par le gabarit du rapport
+  // (window.QCBilanRapport.radar) à partir des scores des domaines que le
+  // serveur envoie avec les comptes. Rien de plus : ni chiffre, ni question.
+  function radarApercu(liste) {
+    var R = window.QCBilanRapport;
+    if (!liste || liste.length < 3 || !R || typeof R.radar !== 'function') return '';
+    var bref = function (id) { return (Q && Q.domaines[id] && (Q.domaines[id].bref || Q.domaines[id].titre)) || id; };
+    var dessin = R.radar(liste, bref, remplir(tr('rapport.synthese.radar', ''), {}), true);
+    if (!dessin) return '';
+    var cles = ['fort', 'moyen', 'faible'].map(function (b) {
+      return '<span class="bilan-radar-cle bilan-radar-cle--' + b + '"><span aria-hidden="true"></span>' + x('rapport.carte.bandes.' + b) + '</span>';
+    }).join('');
+    return '<div class="bilan-apercu-radar"><p class="bilan-apercu-radar-titre">' + x('rapport.synthese.radar') + '</p>' + dessin +
+      '<p class="bilan-apercu-radar-cles">' + cles + '</p></div>';
+  }
+
   function blocApercu(ap, autre) {
     if (!ap) return '';
     var tuiles = [['accord', ap.accords, 'accords'], ['proche', ap.proches, 'proches'], ['ecart', ap.ecarts, 'ecarts']];
     var lignes = [];
     if (ap.ecarts > 0) lignes.push(x(ap.decisifs === 0 ? 'paywall.apercu.decisifs0' : ap.decisifs === 1 ? 'paywall.apercu.decisifsUn' : 'paywall.apercu.decisifsN', { n: nombre(ap.decisifs) }));
     if (MODE === 'solo' && ap.inconnus > 0) lignes.push(x(ap.inconnus === 1 ? 'paywall.apercu.inconnusUn' : 'paywall.apercu.inconnusN', { n: nombre(ap.inconnus), autre: autre }));
-    return '<p class="bilan-pret-intro">' + x('paywall.apercu.intro', { autre: autre }) + '</p>' +
+    return radarApercu(ap.radar) +
+      '<p class="bilan-pret-intro">' + x('paywall.apercu.intro', { autre: autre }) + '</p>' +
       '<div class="bilan-tuiles">' + tuiles.map(function (t) {
         return '<div class="bilan-tuile bilan-tuile--' + t[0] + '"><span class="bilan-tuile-n">' + esc(nombre(t[1])) + '</span>' +
           '<span class="bilan-tuile-l">' + x('paywall.apercu.' + t[2] + (t[1] === 1 ? 'Un' : 'N')) + '</span></div>';

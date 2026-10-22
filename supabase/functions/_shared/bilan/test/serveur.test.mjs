@@ -756,12 +756,17 @@ test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel u
   assert.ok(stockage.lignes.get(c.id).pret_mail_le);
   assert.ok(stockage.compteurs.some((x) => x.evenement === 'pret_envoye'));
 
-  // L'aperçu : des comptes, rien d'autre.
+  // L'aperçu : des comptes et le radar des domaines, rien d'autre.
   const r = await appel({ action: 'resultat', ...A });
   assert.equal(r.statut, 402);
   const ap = r.json.apercu;
-  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'inconnus', 'proches', 'questions']);
-  assert.ok(Object.values(ap).every((v) => Number.isInteger(v) && v >= 0));
+  assert.deepEqual(Object.keys(ap).sort(), ['accords', 'conversations', 'decisifs', 'ecarts', 'inconnus', 'proches', 'questions', 'radar']);
+  const { radar, ...comptes } = ap;
+  assert.ok(Object.values(comptes).every((v) => Number.isInteger(v) && v >= 0));
+  // Onze domaines (le climat n'est pas sur le radar), chacun son score et sa bande.
+  assert.equal(radar.length, C.DOMAINES.length - 1);
+  assert.ok(radar.every((d) => Object.keys(d).join() === 'id,score,bande' && C.DOMAINES.some((x) => x.id === d.id) && d.score >= 0 && d.score <= 100 && ['fort', 'moyen', 'faible'].includes(d.bande)));
+  assert.ok(!radar.some((d) => d.id === 'meteo'));
   assert.ok(ap.accords + ap.proches + ap.ecarts > 50);
   assert.ok(ap.decisifs <= ap.ecarts);
   assert.equal(r.json.a.reponses, undefined);

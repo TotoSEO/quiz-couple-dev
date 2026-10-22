@@ -3233,7 +3233,8 @@
   function pourcentAb(t) { return t === null ? '—' : t.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' %'; }
   function renderAbonnes(d, vues) {
     ecritAbonnes('abonnes-total', nombreAb(d.total));
-    ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
+    ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : '') +
+      (d.avec_prenom != null ? ' · ' + nombreAb(d.avec_prenom) + ' avec prénom' : ''));
     ecritAbonnes('abonnes-jour', nombreAb(d.aujourd_hui));
     ecritAbonnes('abonnes-jour-sub', nombreAb(d.sept_jours) + ' sur sept jours');
     ecritAbonnes('abonnes-periode', nombreAb(d.periode));
@@ -3281,7 +3282,7 @@
     placeAbonnes('abonnes-derniers', derniers.length
       ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">E-mail</th><th>Langue</th><th class="bil-gauche">Source</th><th>Statut</th><th>Captures</th><th>Le</th></tr></thead><tbody>' +
         derniers.map(function (a) {
-          return '<tr><td class="bil-gauche">' + esc(a.email) + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
+          return '<tr><td class="bil-gauche">' + esc(a.email) + (a.prenom ? ' <span class="text-muted-foreground">· ' + esc(a.prenom) + '</span>' : '') + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
         }).join('') + '</tbody></table></div>'
       : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
   }

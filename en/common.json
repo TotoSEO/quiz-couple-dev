@@ -191,7 +191,7 @@
       "Every other test on the site unlocked"
     ],
     "placeholder": "Your email address",
-    "consentement": "I agree to receive tips and news from Quiz Couple by email.",
+    "consentement": "I'm 15 or older and I agree to receive tips and news from Quiz Couple by email.",
     "confidentialite": "Privacy",
     "bouton": "See my results",
     "envoi": "One moment...",
@@ -199,6 +199,13 @@
     "merci": {
       "titre": "Thanks, your results are unlocked!",
       "texte": "And not just here: from now on, every test, quiz and game on the site gives you its full results without asking for your email again on this device."
+    },
+    "prenom": {
+      "label": "Your first name (optional)",
+      "aide": "So our emails can start with your name.",
+      "bouton": "Save",
+      "merci": "Got it, {{prenom}}!",
+      "faux": "Just your first name, in letters."
     },
     "suggestion": "Did you mean {{domaine}}?",
     "erreurs": {

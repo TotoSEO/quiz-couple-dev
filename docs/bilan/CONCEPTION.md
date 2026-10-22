@@ -1008,3 +1008,18 @@ chiffres de l'écran « rapport prêt », la cause des cases, et la ligne
 aperçu d'un vrai résultat sur l'écran « rapport prêt » (le domaine où le
 couple diverge le plus, par exemple), qui irait plus loin que les seuls
 comptes, et le prix.
+
+## 22 octobre 2026 : le radar avant le paiement
+
+Thomas accepte de montrer une partie du résultat avant le paiement, « mais
+vraiment rien, genre juste la synthèse tu vois, le graphique araignée ».
+L'écran « rapport prêt » commence donc par le radar des domaines de la
+synthèse : le même dessin que dans le rapport, la forme de leur accord
+domaine par domaine, avec la légende des trois bandes. Ni chiffre par
+domaine, ni question, ni réponse : le serveur envoie l'identifiant, le
+score et la bande de chaque domaine, rien de plus.
+
+C'est le premier résultat personnel avant le paiement, et le plus visuel.
+Les comptes (accords, réponses proches, écarts) restent dessous. Le bouton
+de paiement passe sous le premier écran d'un téléphone (vers 1 080 px) :
+le radar d'abord, le prix ensuite.
