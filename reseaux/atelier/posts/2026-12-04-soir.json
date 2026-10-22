@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-04",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-056",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Money edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Split everything",
+            "b": "Take turns paying"
+          },
+          {
+            "a": "Save for a trip",
+            "b": "Save for a home"
+          },
+          {
+            "a": "One big splurge a year",
+            "b": "Small treats every week"
+          },
+          {
+            "a": "Joint account",
+            "b": "Separate accounts"
+          },
+          {
+            "a": "Budget together",
+            "b": "Spend freely"
+          },
+          {
+            "a": "Gift for no reason",
+            "b": "Gift on the day"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Money edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
