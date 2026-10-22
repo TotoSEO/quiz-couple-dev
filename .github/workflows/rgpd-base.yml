@@ -1,0 +1,43 @@
+name: RGPD · durées de conservation
+
+# Applique 20261022120000_rgpd_conservation.sql par l'API de gestion de
+# Supabase, comme abonnes-base.yml, avec les secrets déjà là
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). La migration crée
+# rgpd_menage() et sa tâche pg_cron de chaque nuit (abonnés désinscrits ou
+# sans contact depuis trois ans, leads de l'e-book, messages de contact,
+# adresses IP des avis), puis fait un premier passage dont le résultat
+# s'affiche dans le journal. Idempotente : la relancer (« Run workflow ») est
+# sans risque.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261022120000_rgpd_conservation.sql'
+      - '.github/workflows/rgpd-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: rgpd-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Ménage des données personnelles
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261022120000_rgpd_conservation.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi
