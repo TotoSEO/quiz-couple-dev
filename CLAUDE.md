@@ -565,6 +565,38 @@ projet neuf (RECOVERY.md) recrée toutes les tables sans aucun droit. D'où :
   de la section précédente), à vérifier après le 30 octobre avec la même étape
   de l'inventaire.
 
+### Les durées de conservation et le registre (22 octobre 2026)
+
+Thomas, en formation : « tout est bon à ce niveau-là ? durée de conservation
+des données et tout ? ». L'inventaire des données personnelles (étape « Les
+données personnelles et leur âge » de `supabase-inventaire.yml` : chaque
+colonne dont le nom dit une IP, une adresse e-mail, un nom ou un téléphone,
+son remplissage et l'âge de ses lignes, jamais une valeur) montrait une
+politique qui promettait plus que la base ne faisait : aucune purge des
+abonnés (543 adresses), aucune durée pour les leads de l'e-book ni pour les
+messages de contact, l'adresse IP des avis gardée pour toujours.
+`rgpd_menage()` (migration `20261022120000_rgpd_conservation.sql`, appliquée
+par `rgpd-base.yml`, pg_cron `rgpd-menage` chaque nuit à 2 h 35 UTC) efface
+désormais :
+
+- les abonnés désinscrits ou invalides trois mois après ;
+- les abonnés actifs trois ans après le dernier contact (`maj_le`, que
+  l'outil d'envoi devra mettre à jour avec les ouvertures) ;
+- les leads jamais confirmés après 30 jours, les autres après trois ans ;
+- les messages de contact après un an ;
+- l'adresse IP d'un avis après six mois.
+
+La politique de confidentialité le dit dans les cinq langues
+(`s2_2ImportantText`, `s2_3ImportantText`, `s6Text`, `emailsItems`). Le
+registre des traitements (article 30, obligatoire ici à cause des données
+sensibles de l'évaluation) est `docs/rgpd/REGISTRE.md`, avec ce qui reste à
+faire : l'analyse d'impact de l'évaluation, les accords de sous-traitance,
+la région du projet Supabase, l'âge de 15 ans pour les e-mails. Une table ou
+une colonne personnelle ajoutée y reçoit sa ligne, et sa durée dans
+`rgpd_menage()`. Les adresses des évaluations ne vont jamais dans une liste
+d'envoi : leur consentement dit « uniquement dans le but de fournir le
+rapport d'évaluation ».
+
 ### L'audit offensif du 20 octobre 2026
 
 Détail dans `docs/securite/AUDIT-2026-10-20.md` (ce qu'un attaquant voit, ce
