@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-01",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-053",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Game night",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Cards",
+            "b": "Board game"
+          },
+          {
+            "a": "Team up against friends",
+            "b": "Play against each other"
+          },
+          {
+            "a": "Loser does the dishes",
+            "b": "Loser gives a massage"
+          },
+          {
+            "a": "Play to win",
+            "b": "Play for fun"
+          },
+          {
+            "a": "Trivia night",
+            "b": "Puzzle night"
+          },
+          {
+            "a": "Snacks on the table",
+            "b": "Snacks on the couch"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Game night. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

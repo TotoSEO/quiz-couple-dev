@@ -1,0 +1,246 @@
+{
+  "jour": "2026-12-01",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le pop-corn au cinéma : les deux assis, il mange, elle regarde le pot vide, il lui tend le dernier grain.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une salle de cinéma dans le noir. Les deux sont assis côte à côte, la rose à gauche, le violet à droite, les yeux sur l'écran, un grand pot de pop-corn tenu par le violet au milieu.",
+                "duree": 2,
+                "decor": "cinema",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "fauteuil-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "fauteuil-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "popcorn",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salle. Le violet mange du pop-corn à pleines poignées, les yeux fermés de bonheur. La rose regarde l'écran, la bouche plate, sans rien dire.",
+                "duree": 2,
+                "decor": "cinema",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "fauteuil-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "fauteuil-droite",
+                    "gestes": [
+                      {
+                        "geste": "mange",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "popcorn"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salle. La rose regarde le pot de pop-corn, vide, les sourcils froncés et la bouche en zigzag. Le violet, la bouche pleine, les yeux grands ouverts, comprend ce qui l'attend.",
+                "duree": 2,
+                "decor": "cinema",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "fauteuil-gauche",
+                    "gestes": [
+                      {
+                        "geste": "fache",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "fauteuil-droite",
+                    "gestes": [
+                      {
+                        "geste": "mange",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "popcorn"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salle. Le violet tend le dernier grain de pop-corn vers la rose, un grand sourire. La rose, attendrie, les yeux brillants, des cœurs au-dessus d'elle.",
+                "duree": 2,
+                "decor": "cinema",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "fauteuil-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "brillants",
+                        "bouche": "sourire",
+                        "rougit": true
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "fauteuil-droite",
+                    "gestes": [
+                      {
+                        "geste": "offre",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "popcorn"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "for u",
+                "cote": "droite"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Next time, two buckets.\n\nSend this to your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
