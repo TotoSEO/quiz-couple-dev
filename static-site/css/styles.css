@@ -13335,6 +13335,10 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 /* La signature d'une citation (<small> après un <br>), sous la phrase. */
 .blog-article blockquote small { display: block; margin-top: .65rem; font-family: var(--font-sans); font-size: .85rem; font-weight: 600; line-height: 1.4; color: hsl(var(--foreground) / .62); }
 .blog-article blockquote small:empty, .blog-article blockquote br:has(+ small) { display: none; }
+/* Portrait d'époque dans un article : en hauteur, centré, pas recadré en 16:9. */
+.blog-portrait { margin: 1.75rem auto; max-width: 18rem; }
+.blog-article .blog-portrait img { width: 100%; height: auto; margin: 0; border-radius: 1rem; }
+.blog-portrait figcaption { margin-top: .6rem; font-size: .85rem; line-height: 1.45; text-align: center; color: hsl(var(--foreground) / .62); }
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
