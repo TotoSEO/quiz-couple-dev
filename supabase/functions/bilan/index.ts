@@ -9,10 +9,10 @@
 // l'empreinte des adresses IP.
 //
 // La fabrique du PDF (bilan/fabrique.mjs) appelle l'action interne
-// `envoyer_rapport` avec la clé de service en Authorization, et
-// bilan/relance.mjs l'action `relancer` de la même façon. L'admin appelle
-// `apercu_paiement` avec son jeton en x-admin-token (le même que
-// verify-admin fabrique et que admin-stats vérifie).
+// `envoyer_rapport` avec la clé de service en Authorization et en
+// x-cle-service, et bilan/relance.mjs l'action `relancer` de la même façon.
+// L'admin appelle `apercu_paiement` avec son jeton en x-admin-token (le même
+// que verify-admin fabrique et que admin-stats vérifie).
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 // @ts-ignore module JavaScript partagé avec les tests Node
 import { creerServeur } from "../_shared/bilan/serveur.mjs";
@@ -43,20 +43,41 @@ const serveur = creerServeur({
   sel: SEL,
 });
 
-// La clé de service, comparée en temps constant.
+// La clé de service, comparée en temps constant. La fabrique et la relance
+// l'envoient en Authorization et dans l'en-tête x-cle-service : selon les clés
+// du projet, la passerelle de Supabase peut réécrire Authorization, l'en-tête
+// dédié arrive tel quel. Sont acceptées SUPABASE_SERVICE_ROLE_KEY et, quand
+// Supabase la fournit, chaque clé de SUPABASE_SECRET_KEYS (objet JSON nom →
+// clé). Jusqu'au 22 octobre 2026, seule Authorization comparée à la clé de
+// service : chaque passage de la relance répondait 403 « interne ».
+const CLES_INTERNES: string[] = (() => {
+  const l = [SERVICE_KEY];
+  try {
+    const brut = Deno.env.get('SUPABASE_SECRET_KEYS');
+    if (brut) for (const v of Object.values(JSON.parse(brut))) if (typeof v === 'string') l.push(v);
+  } catch { /* format inattendu : la clé de service seule */ }
+  return l.filter(Boolean);
+})();
+
+async function empreinte(s: string): Promise<Uint8Array> {
+  return new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)));
+}
+
 async function estInterne(req: Request): Promise<boolean> {
-  const entete = req.headers.get('authorization') || '';
-  if (!entete.startsWith('Bearer ') || !SERVICE_KEY) return false;
-  const enc = new TextEncoder();
-  const [a, b] = await Promise.all([
-    crypto.subtle.digest('SHA-256', enc.encode(entete.slice(7))),
-    crypto.subtle.digest('SHA-256', enc.encode(SERVICE_KEY)),
-  ]);
-  const x = new Uint8Array(a);
-  const y = new Uint8Array(b);
-  let diff = 0;
-  for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
-  return diff === 0;
+  const auth = req.headers.get('authorization') || '';
+  const recues = [auth.startsWith('Bearer ') ? auth.slice(7) : '', req.headers.get('x-cle-service') || ''].filter(Boolean);
+  if (!recues.length || !CLES_INTERNES.length) return false;
+  const attendues = await Promise.all(CLES_INTERNES.map(empreinte));
+  let ok = false;
+  for (const r of recues) {
+    const x = await empreinte(r);
+    for (const y of attendues) {
+      let diff = 0;
+      for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
+      if (diff === 0) ok = true;
+    }
+  }
+  return ok;
 }
 
 // Le jeton de l'admin : « horodatageHex.signatureHex », HMAC-SHA256 de
