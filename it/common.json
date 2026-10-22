@@ -191,7 +191,7 @@
       "Tutti gli altri test del sito sbloccati"
     ],
     "placeholder": "Il tuo indirizzo e-mail",
-    "consentement": "Accetto di ricevere i consigli e le novità di Quiz Couple via e-mail.",
+    "consentement": "Ho almeno 15 anni e accetto di ricevere i consigli e le novità di Quiz Couple via e-mail.",
     "confidentialite": "Privacy",
     "bouton": "Vedi i miei risultati",
     "envoi": "Un attimo...",
@@ -199,6 +199,13 @@
     "merci": {
       "titre": "Grazie, i tuoi risultati sono sbloccati!",
       "texte": "E non solo qui: da ora in poi, tutti i test, i quiz e i giochi del sito ti danno i risultati completi senza chiederti di nuovo l'e-mail su questo dispositivo."
+    },
+    "prenom": {
+      "label": "Il tuo nome (facoltativo)",
+      "aide": "Così le nostre e-mail possono iniziare con il tuo nome.",
+      "bouton": "Salva",
+      "merci": "Fatto, {{prenom}}!",
+      "faux": "Scrivi solo il tuo nome, in lettere."
     },
     "suggestion": "Volevi dire {{domaine}}?",
     "erreurs": {

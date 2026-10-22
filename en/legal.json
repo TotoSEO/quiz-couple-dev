@@ -102,7 +102,7 @@
     "emailsTitle": "Emails from Quiz Couple",
     "emailsIntro": "At the end of some tests, we offer to let you leave your email address to see the rest of your results. The e-book form does the same. Here's what happens with it.",
     "emailsItems": [
-      "<strong>What is saved:</strong> your email address, the language of the site you were using, the page the address comes from (which test, or the e-book), the date of your consent, and a fingerprint of your IP address (salted, impossible to reverse) to limit abuse. No name, no test result.",
+      "<strong>What is saved:</strong> your email address, your first name if you give it (we ask for it, without obligation, once your results are unlocked, so our emails can start with your name), the language of the site you were using, the page the address comes from (which test, or the e-book), the date of your consent, and a fingerprint of your IP address (salted, impossible to reverse) to limit abuse. No surname, no test result. These emails are for people aged 15 or over.",
       "<strong>Why:</strong> to send you, in your language, tips for your relationship and news from Quiz Couple: new tests, and the relationship assessment with its offers. Your address is never sold or shared with anyone.",
       "<strong>The legal basis:</strong> your consent, given by ticking the box. You can withdraw it at any time: every email contains a one-click unsubscribe link, and we stop writing to you.",
       "<strong>How long:</strong> as long as you're subscribed, then the address is deleted three years after your last contact with us (the last time you left your address or opened one of our emails). An unsubscribed or dead address is deleted within three months.",

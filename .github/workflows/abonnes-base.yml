@@ -1,6 +1,8 @@
 name: Abonnés e-mail · base Supabase
 
-# Applique 20261020100000_abonnes.sql par l'API de gestion de Supabase, comme
+# Applique 20261020100000_abonnes.sql puis 20261022140000_abonnes_prenom.sql
+# (le prénom facultatif, sa clé d'une heure, les prénoms de l'e-book repris)
+# par l'API de gestion de Supabase, comme
 # bilan-base.yml, avec les secrets déjà là (SUPABASE_ACCESS_TOKEN et
 # SUPABASE_PROJECT_REF). La migration crée la table des abonnés e-mail
 # (fermée à la clé publique), reprend les leads de l'e-book vérifiés et crée
@@ -12,6 +14,7 @@ on:
     branches: [main]
     paths:
       - 'supabase/migrations/20261020100000_abonnes.sql'
+      - 'supabase/migrations/20261022140000_abonnes_prenom.sql'
       - '.github/workflows/abonnes-base.yml'
   workflow_dispatch:
 
@@ -28,14 +31,16 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      - name: Appliquer la migration
+      - name: Appliquer les migrations
         run: |
-          f=supabase/migrations/20261020100000_abonnes.sql
-          jq -Rs '{query: .}' "$f" > requete.json
-          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
-            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
-            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
-            --data @requete.json)
-          echo "$f : réponse $code"
-          head -c 800 reponse.json; echo
-          if [ "$code" -ge 300 ]; then exit 1; fi
+          for f in supabase/migrations/20261020100000_abonnes.sql \
+                   supabase/migrations/20261022140000_abonnes_prenom.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            head -c 800 reponse.json; echo
+            if [ "$code" -ge 300 ]; then exit 1; fi
+          done

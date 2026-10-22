@@ -116,7 +116,7 @@
     }
     hotes.forEach(function (h) { h.classList.add('qc-porte-hote'); });
 
-    function ouvrir(enregistre) {
+    function ouvrir(enregistre, info) {
       if (ouverte) return;
       ouverte = true;
       if (enregistre) retenir();
@@ -131,6 +131,7 @@
           '<div class="qc-porte-ic qc-porte-ic--ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>' +
           '<p class="qc-porte-titre" id="qc-porte-titre" role="status">' + esc(tx('merci.titre')) + '</p>' +
           '<p class="qc-porte-texte">' + esc(tx('merci.texte')) + '</p>';
+        if (info && info.cle && tx('prenom.label')) champPrenom(porte, info);
       } else {
         porte.classList.add('qc-porte--ok');
       }
@@ -150,6 +151,49 @@
       try { window.dispatchEvent(new CustomEvent('qc:abonne', { detail: { source: source, enregistre: !!enregistre } })); } catch (e) { /* rien */ }
     }
     porte.ouvrir = ouvrir;
+  }
+
+  // Le prénom, facultatif, sur le mot de merci (22 octobre 2026, Thomas :
+  // « oui pour le prénom pour personnaliser les e-mails, et ceux qui n'en ont
+  // pas on laissera vide ») : demandé après coup, pour ne rien retirer à la
+  // porte, et envoyé avec la clé que la réponse de l'adresse vient de rendre
+  // (lead-capture, une heure, une fois). Sans réponse du serveur, on n'insiste
+  // pas : le champ s'efface.
+  var LETTRES = /^[A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ\u0370-\u03ff\u0400-\u04ff][A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ\u0370-\u03ff\u0400-\u04ff '’.-]{0,39}$/;
+  function champPrenom(porte, info) {
+    var bloc = el('form', 'qc-porte-prenom');
+    bloc.setAttribute('novalidate', '');
+    bloc.innerHTML =
+      '<label class="qc-porte-prenom-lib" for="qc-porte-prenom">' + esc(tx('prenom.label')) + '</label>' +
+      '<div class="qc-porte-prenom-ligne"><input id="qc-porte-prenom" class="qc-porte-email" type="text" name="prenom" maxlength="40" autocomplete="given-name" autocapitalize="words" enterkeyhint="done" spellcheck="false">' +
+      '<button type="submit" class="btn btn-outline qc-porte-prenom-bouton">' + esc(tx('prenom.bouton')) + '</button></div>' +
+      '<p class="qc-porte-prenom-etat" aria-live="polite">' + esc(tx('prenom.aide')) + '</p>';
+    porte.appendChild(bloc);
+    var champ = bloc.querySelector('input');
+    var etat = bloc.querySelector('.qc-porte-prenom-etat');
+    var bouton = bloc.querySelector('button');
+    bloc.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var v = champ.value.replace(/\s+/g, ' ').trim();
+      if (!v) { champ.focus(); return; }
+      if (!LETTRES.test(v)) { etat.textContent = tx('prenom.faux'); etat.classList.add('qc-porte-prenom-etat--faux'); champ.focus(); return; }
+      bouton.disabled = true;
+      fetch(FONCTION, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'prenom', email: info.email, cle: info.cle, prenom: v }) })
+        .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j || {} }; }, function () { return { status: r.status, j: {} }; }); })
+        .then(function (rep) {
+          if (rep.status === 200) {
+            bloc.innerHTML = '<p class="qc-porte-prenom-merci">' + esc(tx('prenom.merci', { prenom: rep.j.prenom || v })) + '</p>';
+            return;
+          }
+          if (rep.status === 400 && rep.j.code === 'prenom') {
+            bouton.disabled = false;
+            etat.textContent = tx('prenom.faux'); etat.classList.add('qc-porte-prenom-etat--faux'); champ.focus();
+            return;
+          }
+          if (bloc.parentNode) bloc.parentNode.removeChild(bloc);
+        })
+        .catch(function () { if (bloc.parentNode) bloc.parentNode.removeChild(bloc); });
+    });
   }
 
   // La porte depuis le 20 octobre 2026 (Thomas : « pour le nombre de visites
@@ -231,7 +275,7 @@
         .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j || {} }; }, function () { return { status: r.status, j: {} }; }); })
         .then(function (rep) {
           if (fini) return; fini = true; window.clearTimeout(garde);
-          if (rep.status === 200) { porte.ouvrir(true); return; }
+          if (rep.status === 200) { porte.ouvrir(true, { email: corps.email, cle: rep.j && rep.j.cle }); return; }
           if (rep.status === 400 && rep.j && rep.j.code && ['format', 'jetable', 'domaine', 'consentement'].indexOf(rep.j.code) >= 0) {
             dire(rep.j.code); bouton.disabled = false; boutonTexte.textContent = libelle;
             if (rep.j.code === 'consentement') { caseConsent.classList.add('qc-porte-consent--manque'); consent.focus(); } else { email.focus(); }

@@ -790,8 +790,8 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   // ── Rapport prêt, rappel et « ne plus recevoir » ─────────────────────
 
-  // Les comptes de l'aperçu, tirés de la même analyse que le rapport. Aucun
-  // identifiant de question, aucune réponse, aucun domaine.
+  // Les comptes de l'aperçu, tirés de la même analyse que le rapport, et le
+  // radar des domaines. Aucun identifiant de question, aucune réponse.
   function apercuDe(ligne) {
     const solo = estSolo(ligne);
     const an = C.analyser(
@@ -809,6 +809,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       inconnus: solo ? k.inconnus : 0,
       questions: k.poses,
       conversations: an.conversations.length,
+      // Le radar de la synthèse (22 octobre 2026, Thomas : « une partie des
+      // résultats gratuite, mais vraiment rien, genre juste la synthèse, le
+      // graphique araignée ») : le score de chaque domaine et sa bande, comme
+      // le radar du rapport. Jamais une question ni une réponse.
+      radar: an.domaines.filter((x) => !x.meteo && x.score !== null).map((x) => ({ id: x.id, score: x.score, bande: x.bande })),
     };
   }
 

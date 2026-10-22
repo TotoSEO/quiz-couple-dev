@@ -81,9 +81,10 @@ du site. Pas de délégué à la protection des données (non obligatoire).
   - les dates de l'accord, de l'inscription et de la désinscription ;
   - le nombre de fois où l'adresse a été laissée ;
   - une empreinte salée de l'adresse IP ;
-  - un jeton de désinscription.
-  - Pas de nom.
-- **Base légale** : le consentement (case « J'accepte de recevoir les conseils et nouveautés de Quiz Couple par e-mail »).
+  - un jeton de désinscription ;
+  - le prénom, si la personne le donne : facultatif, demandé une fois les résultats débloqués. Seulement des lettres, et accepté seulement avec la clé d'une heure rendue à l'adresse, pour que personne ne puisse écrire un prénom sur l'adresse d'un autre.
+  - Pas de nom de famille. Les envois doivent prévoir un repli quand le prénom manque.
+- **Base légale** : le consentement (case « J'ai 15 ans ou plus et j'accepte de recevoir les conseils et nouveautés de Quiz Couple par e-mail », âge du consentement seul en France, article 45 de la loi Informatique et Libertés).
 - **Durée** (`rgpd_menage`, pg_cron chaque nuit) :
   - trois ans après le dernier contact (`maj_le`). Quand les envois commenceront, l'outil d'envoi devra y remonter les ouvertures ;
   - trois mois après une désinscription ou une adresse invalide.
@@ -164,10 +165,9 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 
 ## Ce qui reste à faire
 
-- **L'analyse d'impact (AIPD) de l'évaluation de couple.** Deux des critères du Comité européen sont réunis : données sensibles, et évaluation des personnes. La CNIL attend alors en principe une analyse d'impact avant le traitement.
+- **L'analyse d'impact de l'évaluation de couple** est dans `docs/rgpd/AIPD-evaluation.md`, avec son plan d'action. Thomas la valide en la signant.
 - **Les accords de sous-traitance** de Supabase, Stripe et Resend, à télécharger et à garder avec ce registre.
 - **La région du projet Supabase**, à vérifier dans le tableau de bord (Project Settings, General).
-- **L'âge pour les e-mails.** En France, on consent seul à partir de 15 ans (article 45 de la loi Informatique et Libertés). La porte des résultats est sur des tests que font aussi des mineurs : écrire « J'ai 15 ans ou plus » dans la case suffirait.
 - **Avant les premiers envois aux abonnés** :
   - choisir l'outil d'envoi ; s'il ne s'agit pas de Resend, le nommer dans la politique ;
   - mettre le lien de désinscription (`lead-capture?d=<jeton>`) dans chaque e-mail ;

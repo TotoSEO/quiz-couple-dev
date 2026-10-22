@@ -635,3 +635,26 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-invite-suite { margin: 1.1rem 0 .25rem; text-align: center; }
 .bilan-invite-suite p { margin: 0 0 .7rem; font-weight: 600; line-height: 1.45; color: hsl(var(--foreground)); text-wrap: pretty; }
 .blp-citation--prix { margin-bottom: 1.5rem; }
+
+/* Le radar de la synthèse sur l'écran « rapport prêt » (22 octobre 2026) :
+   le dessin du rapport (rapport.mjs, radar), aux couleurs du thème, les
+   points dans la triade accord, proche, écart du rapport. */
+.bilan-scene .bilan-apercu-radar { margin: .1rem auto .7rem; max-width: 24rem; }
+.bilan-scene .bilan-apercu-radar-titre { text-align: center; font-size: .74rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: hsl(var(--muted-foreground)); margin: 0; }
+.bilan-scene .bilan-apercu-radar .rap-radar { margin: 0; }
+.bilan-scene .bilan-apercu-radar svg { display: block; width: 100%; height: auto; overflow: visible; }
+.bilan-scene .bilan-apercu-radar .rap-radar-grille,
+.bilan-scene .bilan-apercu-radar .rap-radar-axe { fill: none; stroke: hsl(var(--border)); stroke-width: 1; }
+.bilan-scene .bilan-apercu-radar .rap-radar-grille--bord { stroke: hsl(var(--muted-foreground) / .5); }
+.bilan-scene .bilan-apercu-radar .rap-radar-forme { fill: hsl(var(--secondary) / .16); stroke: hsl(var(--secondary)); stroke-width: 2.5; stroke-linejoin: round; }
+.bilan-scene .bilan-apercu-radar .rap-radar-point { stroke: hsl(var(--card)); stroke-width: 2; }
+.bilan-scene .bilan-apercu-radar .rap-radar-point--fort { fill: #2a8e62; }
+.bilan-scene .bilan-apercu-radar .rap-radar-point--moyen { fill: #dca11c; }
+.bilan-scene .bilan-apercu-radar .rap-radar-point--faible { fill: #c43d3f; }
+.bilan-scene .bilan-apercu-radar .rap-radar-lib { font-family: inherit; font-size: 15px; font-weight: 600; fill: hsl(var(--foreground)); }
+.bilan-scene .bilan-apercu-radar-cles { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem .9rem; margin: .15rem 0 0; font-size: .76rem; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-radar-cle { display: inline-flex; align-items: center; gap: .35rem; }
+.bilan-scene .bilan-radar-cle > span { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; }
+.bilan-scene .bilan-radar-cle--fort > span { background: #2a8e62; }
+.bilan-scene .bilan-radar-cle--moyen > span { background: #dca11c; }
+.bilan-scene .bilan-radar-cle--faible > span { background: #c43d3f; }

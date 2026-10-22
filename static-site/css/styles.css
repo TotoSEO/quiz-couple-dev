@@ -13293,6 +13293,18 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
   .bilan-option, .bilan-barre > span { transition: none; }
 }
 
+/* Le prénom, facultatif, sur le mot de merci de la porte (22 octobre 2026) :
+   une ligne champ et bouton, sous le texte, et un merci à la place. */
+.qc-porte-prenom { margin: 1rem 0 0; padding-top: .9rem; border-top: 1px dashed hsl(var(--border)); text-align: left; }
+.qc-porte-prenom-lib { display: block; font-size: .86rem; font-weight: 600; margin: 0 0 .4rem; color: hsl(var(--foreground)); }
+.qc-porte-prenom-ligne { display: flex; gap: .5rem; align-items: stretch; }
+.qc-porte .qc-porte-prenom-ligne input.qc-porte-email { flex: 1 1 auto; min-width: 0; }
+.qc-porte .qc-porte-prenom-bouton { flex: none; white-space: nowrap; }
+.qc-porte .qc-porte-prenom-bouton[disabled] { opacity: .7; cursor: wait; }
+.qc-porte-prenom-etat { margin: .4rem 0 0; font-size: .78rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.qc-porte-prenom-etat--faux { color: hsl(var(--destructive, 0 72% 50%)); }
+.qc-porte-prenom-merci { margin: 0; text-align: center; font-weight: 600; color: hsl(var(--foreground)); }
+
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
    ═══════════════════════════════════════════════════════════════════
