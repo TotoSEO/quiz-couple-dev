@@ -625,6 +625,15 @@ export const BLOG_CATEGORIES = {
     de: 'Psychologie',
     it: 'Psicologia',
   },
+  // Les histoires vraies de couples célèbres (22 octobre 2026), écrites pour
+  // Google Discover : un couple, un fait vérifié, des sources citées.
+  histoires: {
+    fr: "Histoires d'amour",
+    en: 'Love stories',
+    es: 'Historias de amor',
+    de: 'Liebesgeschichten',
+    it: "Storie d'amore",
+  },
 };
 
 // Blog article metadata
@@ -1278,6 +1287,19 @@ export const BLOG_ARTICLES = [
       it: 'domande-inizio-relazione',
     },
     publishedAt: '2026-10-20T11:16:00+02:00',
+  },
+  {
+    internalSlug: 'marie-antoinette-fersen-lettres',
+    category: 'histoires',
+    featuredImage: '/blog/marie-antoinette-fersen-lettres.webp',
+    slugs: {
+      fr: 'marie-antoinette-fersen-lettres',
+      en: 'marie-antoinette-fersen-letters',
+      es: 'maria-antonieta-fersen-cartas',
+      de: 'marie-antoinette-fersen-briefe',
+      it: 'maria-antonietta-fersen-lettere',
+    },
+    publishedAt: '2026-10-22T16:30:00+02:00',
   },
   {
     internalSlug: 'homme-toxique-en-amour',
