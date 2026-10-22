@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-21T08:31:53.781Z",
+  "genere_le": "2026-10-22T03:13:33.443Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-21",
+  "aujourdhui": "2026-10-22",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 40,
+  "reserve_jours": 39,
   "a_remplir": [
     {
       "jour": "2026-11-30",
@@ -826,6 +826,21 @@
       "jour": "2027-01-29",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
     }
   ],
   "a_corriger": [],
@@ -1170,7 +1185,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "notre liste de courses",
       "erreur": null
     },
@@ -1179,7 +1194,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1224,7 +1239,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "je t'écris « t'es où ? » alors que t'es dans la pièce d'à côté",
       "erreur": null
     },
@@ -1233,7 +1248,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2438,7 +2453,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-22",
+      "jour": "2026-10-23",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -2446,7 +2461,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-21",
+      "jour": "2026-10-23",
       "creneau": "soir"
     },
     "mipaps-post": {
@@ -2690,6 +2705,34 @@
       "variante_id": "d5da4ec2-aaa7-48a2-8c68-1314418d6950",
       "releve": "j7",
       "vues": 182,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "6a1ab773-3c5f-4f7f-970a-f25553d70435",
+      "releve": "j7",
+      "vues": 4,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "209f2db0-3893-41e2-be61-ac0e68d18f57",
+      "releve": "j7",
+      "vues": 357,
+      "partages": 5,
+      "enregistrements": 4
+    },
+    {
+      "variante_id": "f8a03964-604b-4912-8530-82d514032ea1",
+      "releve": "j7",
+      "vues": 356,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "f3403f59-9849-4c71-843f-62dbbbcee3e4",
+      "releve": "j7",
+      "vues": 3,
       "partages": 0,
       "enregistrements": 0
     }
