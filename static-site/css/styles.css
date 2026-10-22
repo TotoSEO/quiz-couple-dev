@@ -13206,6 +13206,23 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
   .home-eval { padding-top: 3.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .qr-bilan-bouton, .qr-bilan-bouton svg { transition: none; } }
+/* Dans un article de blog (22 octobre 2026, Thomas : « du texte noir,
+   illisible ») : la bannière est dans <article class="blog-article">, et
+   .blog-article p, .blog-article h3, .blog-article li et
+   article a:not(.no-underline), plus précis que les classes du bloc, lui
+   imposaient la couleur, la taille et les marges du texte de l'article :
+   texte sombre sur le fond violet, rose sur le bouton rose. Les mêmes
+   valeurs, un cran plus précises, dans les articles seulement : l'accueil
+   et le bloc sous le moteur ont leurs propres tailles. */
+.blog-article .qr-bilan p.qr-bilan-sur { font-size: .74rem; line-height: 1.4; margin: 0 0 .5rem; color: hsl(var(--qrb-clair)); }
+.blog-article .qr-bilan h3.qr-bilan-titre { font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.22; margin: 0 0 .6rem; color: #fff; }
+.blog-article .qr-bilan p.qr-bilan-texte { font-size: .95rem; line-height: 1.55; margin: 0; color: hsl(0 0% 100% / .8); }
+.blog-article .qr-bilan ul.qr-bilan-points { margin: 1rem 0 1.25rem; }
+.blog-article .qr-bilan .qr-bilan-points li { font-size: .9rem; line-height: 1.4; color: hsl(0 0% 100% / .9); }
+.blog-article .qr-bilan p.qr-bilan-prix { font-size: .82rem; line-height: 1.45; margin: .75rem 0 0; color: hsl(0 0% 100% / .66); }
+/* Le bouton, partout : article a:not(.no-underline) et .seo-content a le
+   passaient en rose souligné sur son fond rose. */
+.qr-bilan a.qr-bilan-bouton, .qr-bilan a.qr-bilan-bouton:hover { color: #fff; text-decoration: none; }
 
 /* La porte e-mail des écrans de résultat (capture.js) : le score et le titre
    restent nets, tout ce qui suit est flouté et inerte, et la carte du
@@ -13304,6 +13321,20 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .qc-porte-prenom-etat { margin: .4rem 0 0; font-size: .78rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
 .qc-porte-prenom-etat--faux { color: hsl(var(--destructive, 0 72% 50%)); }
 .qc-porte-prenom-merci { margin: 0; text-align: center; font-weight: 600; color: hsl(var(--foreground)); }
+
+/* Les chiffres clés d'un article (22 octobre 2026, Thomas : « ça manque de
+   gras et de blocs plus variés ») : une bande de deux à quatre nombres, en
+   aplat, sans dégradé. Qualifiés par .blog-article parce que .blog-article ul
+   et .blog-article li imposent puce, taille et interligne du texte. */
+.blog-chiffres { margin: 1.75rem 0; padding: 1.1rem 1.1rem 1.15rem; border-radius: 1.25rem; background: hsl(var(--primary) / .07); border: 1px solid hsl(var(--primary) / .18); }
+.blog-article p.blog-chiffres-titre { font-family: var(--font-display); font-weight: 800; font-size: .78rem; line-height: 1.3; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 .8rem; }
+.blog-article ul.blog-chiffres-grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 640px) { .blog-article ul.blog-chiffres-grille { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.blog-article .blog-chiffres-grille li { display: flex; flex-direction: column; gap: .3rem; margin: 0; padding: .8rem .85rem; border-radius: .9rem; background: hsl(var(--card)); font-size: .86rem; line-height: 1.35; color: hsl(var(--foreground) / .82); }
+.blog-chiffres-nombre { font-family: var(--font-display); font-weight: 800; font-size: 1.85rem; line-height: 1; letter-spacing: -.01em; color: hsl(var(--primary-texte)); }
+/* La signature d'une citation (<small> après un <br>), sous la phrase. */
+.blog-article blockquote small { display: block; margin-top: .65rem; font-family: var(--font-sans); font-size: .85rem; font-weight: 600; line-height: 1.4; color: hsl(var(--foreground) / .62); }
+.blog-article blockquote small:empty, .blog-article blockquote br:has(+ small) { display: none; }
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
