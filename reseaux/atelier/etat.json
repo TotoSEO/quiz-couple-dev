@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-22T08:33:36.167Z",
+  "genere_le": "2026-10-23T03:13:43.790Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-22",
+  "aujourdhui": "2026-10-23",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "baton"
   },
-  "reserve_jours": 46,
+  "reserve_jours": 45,
   "a_remplir": [
     {
       "jour": "2026-12-07",
@@ -854,6 +854,21 @@
       "jour": "2027-01-30",
       "creneau": "soir",
       "categorie": "dix-mais"
+    },
+    {
+      "jour": "2027-01-31",
+      "creneau": "matin",
+      "categorie": "baton"
+    },
+    {
+      "jour": "2027-01-31",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-31",
+      "creneau": "soir",
+      "categorie": "phrase"
     }
   ],
   "a_corriger": [],
@@ -1270,7 +1285,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -1279,7 +1294,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "carrousel",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "8 questions about our first days",
       "erreur": null
     },
@@ -1324,7 +1339,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: food?",
       "erreur": null
     },
@@ -1333,7 +1348,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "dix-mais",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Bedtime edition. Is she still a 10?",
       "erreur": null
     },
@@ -2514,7 +2529,7 @@
       "creneau": "soir"
     },
     "carrousel": {
-      "jour": "2026-10-22",
+      "jour": "2026-10-29",
       "creneau": "soir"
     },
     "bd": {
@@ -2526,7 +2541,7 @@
       "creneau": "soir"
     },
     "baton": {
-      "jour": "2026-10-23",
+      "jour": "2026-10-24",
       "creneau": "matin"
     }
   },
@@ -2810,6 +2825,34 @@
       "vues": 323,
       "partages": 2,
       "enregistrements": 0
+    },
+    {
+      "variante_id": "96b000d6-956f-4e19-967a-8c0ca0a2b7e7",
+      "releve": "j7",
+      "vues": 217,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "b175a99a-bc8d-4f8d-99b2-ce879cc5ef55",
+      "releve": "j7",
+      "vues": 1,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "e44480a3-e7f8-4130-9019-32627819ebe5",
+      "releve": "j7",
+      "vues": 210,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "7f7414e3-6add-4639-ac65-89a5f28ccc1d",
+      "releve": "j7",
+      "vues": 173,
+      "partages": 1,
+      "enregistrements": 4
     }
   ]
 }
