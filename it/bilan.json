@@ -612,10 +612,9 @@
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
     "sousTitre": "25 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
-    "ctaNote": "Domande gratuite, senza creare un account. Pagate solo alla fine, se volete il report.",
     "soloQuestion": "Il tuo partner non vuole partecipare?",
     "soloLien": "Falla da solo/a",
-    "preuve": "Oltre {{n}} quiz e test svolti su Quiz Couple",
+    "preuve": "{{nom}}, migliaia di visitatori ogni giorno",
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",

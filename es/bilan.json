@@ -612,10 +612,9 @@
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
     "sousTitre": "25 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
-    "ctaNote": "Preguntas gratis, sin crear una cuenta. Solo pagáis al final, si queréis el informe.",
     "soloQuestion": "¿Tu pareja no quiere participar?",
     "soloLien": "Hazla a solas",
-    "preuve": "Más de {{n}} quiz y tests realizados en Quiz Couple",
+    "preuve": "{{nom}}, miles de visitantes cada día",
     "paiements": "Pago seguro con Stripe",
     "visuel": {
       "sur": "Informe de ejemplo · pareja ficticia",

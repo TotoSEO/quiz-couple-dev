@@ -15,10 +15,11 @@
   // d'info, le wording est bon, et sa ligne de flotaison est excellente. Nous,
   // y'a beaucoup beaucoup trop de texte ») : 2 770 mots et 23 000 px de haut
   // sur téléphone avant, douze sections. Le premier écran porte la promesse
-  // (titre, une phrase), la réduction, un seul gros bouton (à deux), la phrase
-  // qui rassure (questions gratuites, sans compte, payé à la fin), le lien
-  // « faites-la seul(e) », les moyens de paiement et le nombre de tests joués
-  // sur le site ; puis les chiffres, le ruban des douze domaines, trois
+  // (titre, une phrase), la réduction, un seul gros bouton (à deux), le lien
+  // « faites-la seul(e) », les moyens de paiement et « Quiz Couple, des
+  // milliers de visiteurs chaque jour » ; le même jour, Thomas a fait retirer
+  // la phrase « Questions gratuites, sans créer de compte... », Amazon Pay et
+  // le dégradé du haut de page, et demandé de l'air entre les blocs ; puis les chiffres, le ruban des douze domaines, trois
   // étapes, le rapport page par page en curseur (quiz-slider.js), les deux
   // façons de faire (#facons, la cible des liens « seul(e) » du site), une
   // question à essayer (bilan-lp.js), le prix, la confiance, huit questions
@@ -190,16 +191,12 @@
   const confiance = liste('confiance.points');
   const facons = L('facons', {}) || {};
 
-  // La preuve sous le bouton : les quiz et tests joués sur tout le site (le
-  // total du hero de l'accueil, lu une fois par construction), arrondi à la
-  // dizaine de milliers inférieure. L'évaluation n'a pas encore d'avis : on
-  // ne cite que ce chiffre-là, qui parle du site et le dit. Sans réponse de
-  // la base au build, la ligne n'est pas écrite.
-  const LOCALE_NOMBRES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
-  const totalSite = (typeof accueilCuit !== 'undefined' && accueilCuit && Number.isFinite(accueilCuit.quizTotal)) ? accueilCuit.quizTotal : 0;
-  const preuve = totalSite >= 10000
-    ? e(ins(L('preuve').replace('{{n}}', new Intl.NumberFormat(LOCALE_NOMBRES[lang] || 'fr-FR').format(Math.floor(totalSite / 10000) * 10000))))
-    : '';
+  // La preuve sous le bouton (23 octobre 2026, Thomas : « ne met pas
+  // 120 000, tu dis, Quiz Couple, des milliers de visiteurs chaque jour ») :
+  // les deux personnages, puis la phrase, « Quiz Couple » en gras. Le site
+  // fait plus de 5 000 visites par jour (mesure d'audience), et l'évaluation
+  // n'a pas encore d'avis à citer.
+  const preuve = e(ins(L('preuve'))).replace('{{nom}}', '<strong>Quiz Couple</strong>');
 %>
 <script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
 <% if (faqEntrees.length) { %>
@@ -221,7 +218,6 @@
         <div class="blp-ctas">
           <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
         </div>
-        <p class="blp-cta-note"><%- x('ctaNote') %></p>
         <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
         <% if (moyens.length) { %>
         <div class="blp-paiements">
@@ -231,7 +227,7 @@
           </ul>
         </div>
         <% } %>
-        <% if (preuve) { %><p class="blp-preuve"><%- icone(ICONES_DOM.intimite) %><span><%- preuve %></span></p><% } %>
+        <p class="blp-preuve"><span class="blp-preuve-persos" aria-hidden="true"><%- masc('rose', 'salut', 'blp-preuve-masc') %><%- masc('violet', 'mignon', 'blp-preuve-masc') %></span><span class="blp-preuve-texte"><%- preuve %></span></p>
         <div id="bilan-reprise" class="blp-reprise" hidden></div>
         <noscript><p class="blp-cta-note"><%= lang === 'fr' ? "L'évaluation a besoin de JavaScript pour fonctionner." : 'The assessment needs JavaScript to work.' %></p></noscript>
       </div>
@@ -462,7 +458,6 @@
       <div class="blp-ctas blp-ctas--centre">
         <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
       </div>
-      <p class="blp-cta-note"><%- x('ctaNote') %></p>
       <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
     </div>
   </section>
