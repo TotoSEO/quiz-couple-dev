@@ -405,6 +405,7 @@
       "questions": {
         "ent1": {
           "q": "Eure Familien (deine und die von {autre}) möchtest du sehen...",
+          "qNeutre": "Eure Familien (deine und die deines Partners oder deiner Partnerin) möchtest du sehen...",
           "o": [
             "Jede Woche",
             "Mehrmals im Monat",
@@ -421,8 +422,15 @@
         },
         "ent2": {
           "q": "Wenn deine Familie {autre} vor dir kritisiert...",
+          "qNeutre": "Wenn deine Familie deinen Partner oder deine Partnerin vor dir kritisiert...",
           "o": [
             "Ich verteidige {autre} sofort",
+            "Ich spreche später mit meiner Familie darüber",
+            "Ich sage in dem Moment nichts",
+            "Ich halte mich raus"
+          ],
+          "oNeutre": [
+            "Ich verteidige meinen Partner oder meine Partnerin sofort",
             "Ich spreche später mit meiner Familie darüber",
             "Ich sage in dem Moment nichts",
             "Ich halte mich raus"
@@ -453,6 +461,7 @@
         },
         "ent4": {
           "q": "Deine Freunde und die von {autre} siehst du am liebsten...",
+          "qNeutre": "Deine Freunde und die deines Partners oder deiner Partnerin siehst du am liebsten...",
           "o": [
             "Alle zusammen, wir mischen",
             "Oft zusammen, manchmal getrennt",
@@ -469,6 +478,7 @@
         },
         "ent5": {
           "q": "Wenn {autre} ohne dich ausgeht (ein Abend, ein Wochenende mit Freunden), findest du das...",
+          "qNeutre": "Wenn dein Partner oder deine Partnerin ohne dich ausgeht (ein Abend, ein Wochenende mit Freunden), findest du das...",
           "o": [
             "Normal, so oft wie gewünscht",
             "Normal, ab und zu",
@@ -691,6 +701,12 @@
             "Ich spreche vorher darüber",
             "Ich entscheide mit {autre}"
           ],
+          "oNeutre": [
+            "Ich kaufe, ohne es zu erwähnen",
+            "Ich sage meinem Partner oder meiner Partnerin Bescheid",
+            "Ich spreche vorher darüber",
+            "Ich entscheide mit meinem Partner oder meiner Partnerin"
+          ],
           "court": "Größere Anschaffungen",
           "pourquoi": "Nicht der Betrag ärgert, sondern den Kauf erst hinterher zu entdecken. Eine gemeinsam festgelegte Grenze verhindert beides: das Gefühl, kontrolliert zu werden, und böse Überraschungen.",
           "parler": [
@@ -877,6 +893,7 @@
         },
         "log5": {
           "q": "Für den Job von {autre} weit wegziehen:",
+          "qNeutre": "Für den Job deines Partners oder deiner Partnerin weit wegziehen:",
           "o": [
             "Ja, ohne Zögern",
             "Ja, wenn es eine große Chance ist",
@@ -1347,6 +1364,7 @@
         },
         "val8": {
           "q": "Dieselben politischen Ansichten wie {autre} zu haben ist...",
+          "qNeutre": "Dieselben politischen Ansichten wie dein Partner oder deine Partnerin zu haben ist...",
           "o": [
             "Unverzichtbar",
             "Besser",
@@ -1375,6 +1393,7 @@
       "questions": {
         "dis1": {
           "q": "Wenn dich etwas an {autre} stört, sagst du es...",
+          "qNeutre": "Wenn dich etwas an deinem Partner oder deiner Partnerin stört, sagst du es...",
           "o": [
             "Sofort",
             "Ziemlich schnell, im richtigen Moment",
@@ -1568,6 +1587,7 @@
       "questions": {
         "con1": {
           "q": "Ins Handy von {autre} schauen ist für dich...",
+          "qNeutre": "Ins Handy deines Partners oder deiner Partnerin schauen ist für dich...",
           "o": [
             "Kein Problem für mich",
             "Okay, wenn man vorher fragt",
@@ -1616,6 +1636,7 @@
         },
         "con4": {
           "q": "Dass {autre} eine sehr enge Freundschaft mit jemandem hat, der {autre} gefallen könnte:",
+          "qNeutre": "Dass dein Partner oder deine Partnerin eine sehr enge Freundschaft mit jemandem hat, der ihm oder ihr gefallen könnte:",
           "o": [
             "Kein Problem",
             "Kommt auf die Person an",
@@ -1648,6 +1669,7 @@
         },
         "con6": {
           "q": "Die Codes und Passwörter von {autre} kennen:",
+          "qNeutre": "Die Codes und Passwörter deines Partners oder deiner Partnerin kennen:",
           "o": [
             "Selbstverständlich, wir teilen alles",
             "Praktisch, für den Notfall",

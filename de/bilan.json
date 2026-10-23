@@ -248,7 +248,7 @@
         "de": "Die Beziehungsanalyse von",
         "et": "und",
         "date": "Bericht erstellt am {{date}}",
-        "chiffres": "{{domaines}} Bereiche · {{questions}} verglichene Fragen",
+        "chiffres": "{{domaines}} Bereiche · {{questions}} Fragen",
         "confidentiel": "Vertraulich: Dieser Bericht enthält eure Antworten, die von euch beiden."
       },
       "lire": {
@@ -427,7 +427,7 @@
         "autant": "Beide gleich",
         "chacunPlus": "Jeder glaubt, mehr zu machen",
         "chacunPlusTexte": "Das ist sehr häufig: Man sieht besser, was man selbst macht, als was der andere macht. Am besten schreibt ihr gemeinsam auf, was jeder übernimmt, ohne Punkte zu zählen.",
-        "desequilibre": "Ihr seid euch einig: Vor allem {{nom}} kümmert sich darum. Passt das für euch beide?",
+        "desequilibre": "Ihr seid euch einig: Es ist vor allem {{nom}}. Passt das für euch beide?",
         "accord": "Ihr seht es gleich.",
         "aucun": "In eurer Analyse gibt es keine Frage dieser Art."
       },
@@ -441,7 +441,11 @@
         "etats": "Wie ihr es erlebt",
         "inconnus": "Was du nicht weißt",
         "voirConversation": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Gespräch {{n}}.",
-        "voirBloquants": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Knackpunkte."
+        "voirBloquants": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Knackpunkte.",
+        "climatBas": "Was das Gefühl angeht, erlebt mindestens einer von euch diesen Teil der Beziehung gerade nicht gut: Mehr dazu weiter unten, unter „{{titre}}“.",
+        "climatBasCourt": "Was das Gefühl angeht, erlebt mindestens einer von euch diesen Teil der Beziehung gerade nicht gut.",
+        "signauxBas": "In der Praxis kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor: Mehr dazu in Kapitel {{n}}, „{{titre}}“.",
+        "signauxBasCourt": "In der Praxis kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor."
       },
       "fin": {
         "intro": "Ihr habt alles gelesen, oder fast. Diese letzte Zusammenfassung wiederholt die erste nicht: Sie zählt eure Antworten anders, hält fest, was trägt und was Arbeit braucht, und schlägt eine Reihenfolge für eure Gespräche vor.",
@@ -523,10 +527,15 @@
           "parDomaineAide": "Für die Bereiche mit Fragen zum Befinden dein Wohlbefinden und das, was du deinem Partner oder deiner Partnerin zuschreibst, auf derselben Linie, von 0 bis 100 %."
         },
         "roles": {
-          "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die erste Markierung ist deine Antwort, die zweite das, was {{b}} deiner Meinung nach antworten würde."
+          "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die erste Markierung ist deine Antwort, die zweite das, was {{b}} deiner Meinung nach antworten würde.",
+          "desequilibre": "Du glaubst, dass ihr euch einig seid: Es ist vor allem {{nom}}. Passt das für euch beide?"
         },
         "domaines": {
-          "intro": "Alle deine Antworten, Bereich für Bereich: zuerst, worin ihr euch deiner Meinung nach einig seid, dann eure vermuteten Unterschiede, vom wichtigsten bis zum kleinsten, und was du nicht weißt."
+          "intro": "Alle deine Antworten, Bereich für Bereich: zuerst, worin ihr euch deiner Meinung nach einig seid, dann eure vermuteten Unterschiede, vom wichtigsten bis zum kleinsten, und was du nicht weißt.",
+          "climatBas": "Was das Gefühl angeht, erlebst du diesen Teil der Beziehung gerade nicht gut, oder du glaubst, dass dein Partner oder deine Partnerin ihn nicht gut erlebt: Mehr dazu weiter unten, unter „{{titre}}“.",
+          "climatBasCourt": "Was das Gefühl angeht, erlebst du diesen Teil der Beziehung gerade nicht gut, oder du glaubst, dass dein Partner oder deine Partnerin ihn nicht gut erlebt.",
+          "signauxBas": "Deiner Meinung nach kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor: Mehr dazu in Kapitel {{n}}, „{{titre}}“.",
+          "signauxBasCourt": "Deiner Meinung nach kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor."
         },
         "fin": {
           "accordsTexte": "Von {{total}} Fragen, bei denen du für deinen Partner oder deine Partnerin antworten konntest, glaubst du {{n}} Mal dieselbe Antwort zu haben, also {{part}} %.",

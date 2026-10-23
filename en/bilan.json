@@ -247,7 +247,7 @@
         "de": "The relationship assessment of",
         "et": "and",
         "date": "Report issued on {{date}}",
-        "chiffres": "{{domaines}} areas · {{questions}} questions compared",
+        "chiffres": "{{domaines}} areas · {{questions}} questions",
         "confidentiel": "Confidential: this report contains both of your answers."
       },
       "lire": {
@@ -259,16 +259,16 @@
         "accord": "You gave the same answer.",
         "proche": "Your answers are close.",
         "ecart": "Your answers are far apart.",
-        "nn": "One of you marked this topic as a deal-breaker.",
+        "nn": "One of you marked this topic as non-negotiable.",
         "poids": "A question that shapes a whole life (a child, where to live, fidelity, the money you share) weighs three times as much as an everyday one in your scores. It carries this label.",
         "sommaire": "In this report",
-        "nnTag": "Deal-breaker"
+        "nnTag": "Non-negotiable"
       },
       "chapitres": {
         "synthese": "Your summary",
         "carte": "The map of your areas",
         "conversations": "Your next four conversations",
-        "bloquants": "Sticking points and deal-breakers",
+        "bloquants": "Sticking points and non-negotiables",
         "ombre": "Your blind spots",
         "climat": "How your relationship feels right now",
         "signaux": "Your warning signs",
@@ -375,7 +375,7 @@
       },
       "bloquants": {
         "intro": "Gaps on questions that one of you marked \"non-negotiable\". These are the first topics to raise, without trying to convince the other that evening: understand first.",
-        "aucun": "No sticking points: none of your gaps is on a topic one of you marked as a deal-breaker.",
+        "aucun": "No sticking points: none of your gaps is on a topic one of you marked as non-negotiable.",
         "nnTitre": "What's non-negotiable for each of you",
         "nnIntro": "The topics where each of you said you couldn't compromise, with their answer.",
         "nnAucun": "Nothing marked."
@@ -426,7 +426,7 @@
         "autant": "Both equally",
         "chacunPlus": "Each thinks they do more",
         "chacunPlusTexte": "It's very common: you see what you do better than what the other does. The best thing is to list together what each of you takes care of, without keeping score.",
-        "desequilibre": "You agree: it's mostly {{nom}} who takes care of it. Is that OK for both of you?",
+        "desequilibre": "You agree: it's mostly {{nom}}. Is that OK for both of you?",
         "accord": "You see it the same way.",
         "aucun": "There's no question of this kind in your assessment."
       },
@@ -440,7 +440,11 @@
         "etats": "How you're experiencing it",
         "inconnus": "What you don't know",
         "voirConversation": "You'll find it further up, with ways to talk about it: conversation {{n}}.",
-        "voirBloquants": "You'll find it further up, with ways to talk about it: sticking points."
+        "voirBloquants": "You'll find it further up, with ways to talk about it: sticking points.",
+        "climatBas": "As for how it feels, at least one of you isn't living this part of the relationship well right now: there's more below, under \"{{titre}}\".",
+        "climatBasCourt": "As for how it feels, at least one of you isn't living this part of the relationship well right now.",
+        "signauxBas": "In practice, some of the arguing habits that wear a couple down are showing up for you right now: there's more in chapter {{n}}, \"{{titre}}\".",
+        "signauxBasCourt": "In practice, some of the arguing habits that wear a couple down are showing up for you right now."
       },
       "fin": {
         "intro": "You've read everything, or nearly. This last summary doesn't repeat the first one: it counts your answers differently, keeps what holds and what needs work, and suggests an order for talking about it.",
@@ -514,7 +518,7 @@
           "intro": "The topics where you think you don't see things the way your partner does, on what matters most, one per area. These are your guesses: each conversation starts by checking whether you guessed right."
         },
         "bloquants": {
-          "intro": "Gaps, as far as you can tell, on questions you marked as deal-breakers. These are the first topics to check with your partner, without trying to convince them that evening: understand first.",
+          "intro": "Gaps, as far as you can tell, on questions you marked as non-negotiable. These are the first topics to check with your partner, without trying to convince them that evening: understand first.",
           "nnIntro": "The topics you said you couldn't compromise on, with your answer."
         },
         "climat": {
@@ -522,10 +526,15 @@
           "parDomaineAide": "For the areas with questions about how you feel, your well-being and the one you attribute to your partner, on the same line, from 0 to 100%."
         },
         "roles": {
-          "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The first marker is your answer, the second what {{b}} would answer, as far as you can tell."
+          "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The first marker is your answer, the second what {{b}} would answer, as far as you can tell.",
+          "desequilibre": "You think you agree: it's mostly {{nom}}. Is that OK for both of you?"
         },
         "domaines": {
-          "intro": "All your answers, area by area: first what you think you agree on, then your presumed differences, from the most important to the smallest, and what you don't know."
+          "intro": "All your answers, area by area: first what you think you agree on, then your presumed differences, from the most important to the smallest, and what you don't know.",
+          "climatBas": "As for how it feels, you're not living this part of the relationship well right now, or you think your partner isn't: there's more below, under \"{{titre}}\".",
+          "climatBasCourt": "As for how it feels, you're not living this part of the relationship well right now, or you think your partner isn't.",
+          "signauxBas": "As far as you can tell, some of the arguing habits that wear a couple down are showing up for you right now: there's more in chapter {{n}}, \"{{titre}}\".",
+          "signauxBasCourt": "As far as you can tell, some of the arguing habits that wear a couple down are showing up for you right now."
         },
         "fin": {
           "accordsTexte": "Out of {{total}} questions where you could answer for your partner, you think you share the same answer {{n}} times, or {{part}}%.",

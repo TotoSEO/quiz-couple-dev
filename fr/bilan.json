@@ -247,7 +247,7 @@
         "de": "L'évaluation de couple de",
         "et": "et",
         "date": "Rapport établi le {{date}}",
-        "chiffres": "{{domaines}} domaines · {{questions}} questions comparées",
+        "chiffres": "{{domaines}} domaines · {{questions}} questions",
         "confidentiel": "Confidentiel : ce rapport contient vos réponses à tous les deux."
       },
       "lire": {
@@ -426,7 +426,7 @@
         "autant": "Autant",
         "chacunPlus": "Chacun pense en faire plus",
         "chacunPlusTexte": "C'est très courant : on voit mieux ce qu'on fait que ce que fait l'autre. Le mieux est de faire la liste ensemble de ce que chacun prend en charge, sans compter les points.",
-        "desequilibre": "Vous êtes d'accord : c'est surtout {{nom}} qui s'en occupe. Est-ce que ça vous va, à tous les deux ?",
+        "desequilibre": "Vous êtes d'accord : c'est surtout {{nom}}. Est-ce que ça vous va, à tous les deux ?",
         "accord": "Vous voyez les choses de la même façon.",
         "aucun": "Aucune question de ce type dans votre évaluation."
       },
@@ -440,7 +440,11 @@
         "etats": "Comment vous le vivez",
         "inconnus": "Ce que vous ne savez pas",
         "voirConversation": "Vous le retrouvez plus haut, avec de quoi en parler : conversation {{n}}.",
-        "voirBloquants": "Vous le retrouvez plus haut, avec de quoi en parler : points bloquants."
+        "voirBloquants": "Vous le retrouvez plus haut, avec de quoi en parler : points bloquants.",
+        "climatBas": "Côté ressenti, au moins l'un de vous vit mal cette partie de la relation en ce moment : c'est détaillé plus bas, dans « {{titre}} ».",
+        "climatBasCourt": "Côté ressenti, au moins l'un de vous vit mal cette partie de la relation en ce moment.",
+        "signauxBas": "Dans les faits, certaines habitudes de dispute qui usent un couple reviennent chez vous en ce moment : c'est détaillé au chapitre {{n}}, « {{titre}} ».",
+        "signauxBasCourt": "Dans les faits, certaines habitudes de dispute qui usent un couple reviennent chez vous en ce moment."
       },
       "fin": {
         "intro": "Vous avez tout lu, ou presque. Cette dernière synthèse ne reprend pas la première : elle compte vos réponses autrement, retient ce qui tient et ce qui demande du travail, et propose un ordre pour en parler.",
@@ -522,10 +526,15 @@
           "parDomaineAide": "Pour les domaines qui ont des questions de ressenti, votre bien-être et celui que vous prêtez à votre partenaire, sur la même ligne, de 0 à 100 %."
         },
         "roles": {
-          "intro": "Sur chaque sujet, la ligne va de « surtout {{a}} » à « surtout {{b}} ». Le premier repère est votre réponse, le second ce que {{b}} répondrait d'après vous."
+          "intro": "Sur chaque sujet, la ligne va de « surtout {{a}} » à « surtout {{b}} ». Le premier repère est votre réponse, le second ce que {{b}} répondrait d'après vous.",
+          "desequilibre": "Vous pensez être d'accord : c'est surtout {{nom}}. Est-ce que ça vous va, à tous les deux ?"
         },
         "domaines": {
-          "intro": "Toutes vos réponses, domaine par domaine : d'abord ce sur quoi vous pensez être d'accord, puis vos différences supposées, de la plus importante à la plus légère, et ce que vous ne savez pas."
+          "intro": "Toutes vos réponses, domaine par domaine : d'abord ce sur quoi vous pensez être d'accord, puis vos différences supposées, de la plus importante à la plus légère, et ce que vous ne savez pas.",
+          "climatBas": "Côté ressenti, vous vivez mal cette partie de la relation en ce moment, ou vous pensez que votre partenaire la vit mal : c'est détaillé plus bas, dans « {{titre}} ».",
+          "climatBasCourt": "Côté ressenti, vous vivez mal cette partie de la relation en ce moment, ou vous pensez que votre partenaire la vit mal.",
+          "signauxBas": "D'après vous, certaines habitudes de dispute qui usent un couple reviennent chez vous en ce moment : c'est détaillé au chapitre {{n}}, « {{titre}} ».",
+          "signauxBasCourt": "D'après vous, certaines habitudes de dispute qui usent un couple reviennent chez vous en ce moment."
         },
         "fin": {
           "accordsTexte": "Sur {{total}} questions où vous avez su répondre pour votre partenaire, vous pensez avoir la même réponse {{n}} fois, soit {{part}} %.",
