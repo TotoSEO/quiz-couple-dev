@@ -609,18 +609,13 @@
   },
   "lp": {
     "badge": "Valutazione di coppia",
-    "titre": "Volete la stessa vita, tutti e due?",
-    "sousTitre": "100 domande su dodici aree della vita insieme, e un report di 40 pagine che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare.",
-    "points": [
-      "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
-      "Costruita sulla ricerca in psicologia di coppia",
-      "In due, o da soli se l'altro non è pronto a parlarne"
-    ],
+    "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
+    "sousTitre": "25 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
-    "ctaDuo": "Fare la valutazione in due",
-    "ctaSolo": "Farla da solo/a",
-    "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Pagamento unico, senza abbonamento",
-    "voirExtrait": "Vedere il report pagina per pagina",
+    "ctaNote": "Domande gratuite, senza creare un account. Pagate solo alla fine, se volete il report.",
+    "soloQuestion": "Il tuo partner non vuole partecipare?",
+    "soloLien": "Falla da solo/a",
+    "preuve": "Oltre {{n}} quiz e test svolti su Quiz Couple",
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",
@@ -630,51 +625,46 @@
     },
     "chiffres": [
       {
+        "n": "100",
+        "l": "domande concrete"
+      },
+      {
         "n": "12",
         "l": "aree della vita a due"
       },
       {
-        "n": "100",
-        "l": "domande circa"
-      },
-      {
         "n": "25 min",
-        "l": "ciascuno, al proprio ritmo"
+        "l": "a testa, al proprio ritmo"
       },
       {
-        "n": "40 pagine",
-        "l": "di report, con grafici"
+        "n": "0 €",
+        "l": "per rispondere alle domande"
       }
     ],
-    "facons": {
-      "titre": "In due, o da soli: funzionano tutte e due",
-      "intro": "La maggior parte delle coppie la fa in due. Ma quando le cose vanno male, o l'altro non ha voglia di parlarne, si può anche fare per conto proprio: rispondi per te, poi dici cosa risponderebbe il tuo partner, e il report ti mostra quello che sai, quello che supponi e quello che non sai.",
-      "duo": {
-        "titre": "In due",
-        "sous": "Ciascuno sul proprio telefono",
-        "points": [
-          "Ciascuno risponde per conto suo, al proprio ritmo",
-          "Nessuno vede le risposte dell'altro prima della fine",
-          "Il report confronta le vostre due serie di risposte, argomento per argomento"
-        ],
-        "cta": "Iniziare in due"
-      },
-      "solo": {
-        "titre": "Da solo/a",
-        "sous": "Senza avvisare il tuo partner",
-        "points": [
-          "Rispondi per te, poi per il tuo partner, secondo te",
-          "Il tuo partner non viene avvisato e non vede niente",
-          "Il report aggiunge le tue zone d'ombra: quello che non sai dell'altro, pronto da chiedere"
-        ],
-        "cta": "Iniziare da solo/a"
-      },
-      "note": "Stesso prezzo, stesso report. Se un giorno il tuo partner vorrà rispondere a sua volta, una valutazione in due sostituirà le tue supposizioni con le sue risposte.",
-      "citation": "Una seduta da un consulente di coppia costa tra 60 e 100 €. Cominciare dalla valutazione completa di Quiz Couple è IL primo passo giusto."
+    "etapes": {
+      "titre": "Come funziona",
+      "liste": [
+        {
+          "duree": "2 min",
+          "titre": "Create la valutazione",
+          "texte": "I vostri due nomi, poi mandi il link al tuo partner."
+        },
+        {
+          "duree": "25 min",
+          "titre": "Ciascuno risponde per conto suo",
+          "texte": "Sul proprio telefono, senza vedere le risposte dell'altro. Potete fare una pausa quando volete."
+        },
+        {
+          "duree": "1 min",
+          "titre": "Ricevete il vostro report",
+          "texte": "{{prix}} per tutti e due, pagati una volta sola. Il report si apre appena avete finito tutti e due, e il link al PDF arriva via e-mail."
+        }
+      ],
+      "note": "Le domande si basano sulla ricerca in psicologia di coppia e sui questionari usati prima di un matrimonio."
     },
     "rapport": {
       "titre": "Cosa c'è nel report?",
-      "intro": "Un vero documento di una quarantina di pagine, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
+      "intro": "Un vero report, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
       "pages": [
         {
           "img": "couverture",
@@ -684,218 +674,86 @@
         {
           "img": "synthese",
           "titre": "La vostra sintesi",
-          "texte": "Due numeri: il vostro allineamento e il clima della vostra coppia. Poi le vostre aree a colpo d'occhio, su un radar."
+          "texte": "Il vostro allineamento, il clima della vostra coppia e le vostre aree su un radar."
         },
         {
           "img": "carte",
           "titre": "La mappa delle vostre aree",
-          "texte": "Una barra per area, da 0 a 100%, con il dettaglio di risposte uguali, vicine e differenze."
+          "texte": "Una barra per area: risposte uguali, vicine e differenze."
         },
         {
           "img": "conversation",
           "titre": "Le vostre prossime quattro conversazioni",
-          "texte": "Gli argomenti da cui partire, le vostre due risposte una accanto all'altra, perché conta, domande per parlarne e cosa è meglio evitare."
+          "texte": "Gli argomenti da cui partire, con domande per parlarne."
         },
         {
           "img": "climat",
           "titre": "Il clima della vostra coppia",
-          "texte": "Come si sente ciascuno di voi nella relazione, area per area, sulla stessa riga."
+          "texte": "Come si sente ciascuno di voi nella relazione, area per area."
         },
         {
           "img": "domaine",
           "titre": "Area per area",
-          "texte": "Tutte le vostre risposte: prima gli accordi, poi le differenze, dalla più importante alla più piccola."
+          "texte": "Tutte le vostre risposte: prima gli accordi, poi le differenze."
         },
         {
           "img": "fin",
           "titre": "Per finire",
-          "texte": "Una seconda sintesi, diversa dalla prima: la ripartizione delle vostre risposte, la vostra base, ciò che regge, ciò che chiede lavoro, e una tabella di marcia."
+          "texte": "Ciò che regge, ciò che chiede lavoro, e una tabella di marcia."
         }
       ],
       "legende": "Pagine di un report di esempio. Giulia e Marco sono una coppia immaginaria."
     },
-    "etapes": {
-      "titre": "Come funziona",
-      "liste": [
-        {
-          "duree": "2 min",
-          "titre": "Create la valutazione",
-          "texte": "I vostri due nomi, sette domande sulla vostra situazione (vivete insieme, avete figli...). In due, mandi il link al tuo partner; da solo/a, inizi subito."
-        },
-        {
-          "duree": "25-30 min",
-          "titre": "Ciascuno risponde per conto suo",
-          "texte": "Sul proprio telefono, al proprio ritmo, in una o più volte: tutto viene salvato. Da solo/a, rispondi due volte a ogni domanda: per te, poi per l'altro, secondo te."
-        },
-        {
-          "duree": "1 min",
-          "titre": "Sbloccate il report",
-          "texte": "Appena hai finito le tue risposte: {{prix}} per tutti e due, con carta, Apple Pay o Google Pay. Le domande, invece, sono gratuite."
-        },
-        {
-          "duree": "6 mesi online",
-          "titre": "Lo leggete, e ne parlate",
-          "texte": "Il link al PDF arriva via e-mail appena tutto è stato risposto, e il report resta online sei mesi. Finisce con una tabella di marcia: un argomento a settimana."
-        }
-      ]
-    },
-    "domaines": {
-      "titre": "Le dodici aree della vita a due",
-      "intro": "Cose concrete, non generalità: le domande parlano del frigo, dell'affitto, dei suoceri e del telefono sul comodino.",
-      "liste": {
-        "quotidien": "Chi fa cosa, chi pensa a cosa, l'ordine, i pasti, l'ora di andare a letto.",
-        "temps": "Il tempo in due, il tempo per sé, le uscite, le piccole attenzioni.",
-        "entourage": "Le vostre famiglie, i vostri amici, le feste di fine anno, un genitore che invecchia.",
-        "travail": "Il posto del lavoro, le ambizioni, una differenza di stipendio, cambiare mestiere.",
-        "argent": "Conto in comune o no, le spese, il risparmio, aiutare la famiglia.",
-        "logement": "Dove vivere tra dieci anni, comprare casa, trasferirsi per l'altro.",
-        "enfants": "Averne, quando, quanti, come crescerli, chi se ne occupa.",
-        "valeurs": "La religione, il matrimonio, l'ecologia, le tradizioni, la politica.",
-        "disputes": "Come litigate, e come fate pace.",
-        "confiance": "Il telefono dell'altro, la gelosia, gli ex, cosa vuol dire tradire.",
-        "intimite": "Il ritmo, la tenerezza, parlarne, la novità.",
-        "meteo": "Come si sente ciascuno di voi nella coppia, in questo momento."
+    "facons": {
+      "citation": "Una seduta da un consulente di coppia costa tra 60 e 100 €. Cominciare dalla valutazione completa di Quiz Couple è IL primo passo giusto.",
+      "titre": "In due, o da soli",
+      "intro": "Se l'altro non ha voglia di parlarne, puoi farla per conto tuo. Stesso prezzo, stesso report.",
+      "duo": {
+        "titre": "In due",
+        "sous": "Ciascuno sul proprio telefono",
+        "points": [
+          "Ciascuno risponde per conto suo, al proprio ritmo",
+          "Il report confronta le vostre risposte, argomento per argomento"
+        ],
+        "cta": "Iniziare in due"
+      },
+      "solo": {
+        "titre": "Da solo/a",
+        "sous": "Senza avvisare il tuo partner",
+        "points": [
+          "Rispondi per te, poi al posto del tuo partner",
+          "Il report ti mostra anche quello che non sai del tuo partner"
+        ],
+        "cta": "Iniziare da solo/a"
       }
     },
     "demo": {
-      "titre": "Provate tre domande",
-      "intro": "Così come vengono poste nella valutazione, qui come le ha viste Giulia. Rispondi per vedere cosa ne fa il report.",
+      "titre": "Provate una domanda",
+      "intro": "Così come viene posta nella valutazione, qui come l'ha vista Giulia. Rispondi per vedere cosa ne fa il report.",
       "partenaireNom": "Marco",
       "vous": "Tu",
       "partenaire": "Marco",
       "attente": "risponde per conto suo",
-      "apres": "Nel report, la tua risposta è messa di fronte a quella del tuo partner, con il perché conta e domande per parlarne.",
+      "apres": "Nel report, la tua risposta è messa di fronte a quella del tuo partner, con domande per parlarne.",
       "pourquoi": "Perché conta",
       "questions": [
         {
           "dom": "quotidien",
           "id": "quo2"
-        },
-        {
-          "dom": "argent",
-          "id": "arg3"
-        },
-        {
-          "dom": "confiance",
-          "id": "con2"
         }
       ],
-      "fin": "Sulle grandi domande (i figli, dove vivere, la fedeltà...), ciascuno può anche segnare la propria risposta come non negoziabile. Il report comincia allora da lì.",
       "cta": "Fare le 100 domande"
-    },
-    "pour": {
-      "titre": "Per le coppie che vogliono vederci chiaro",
-      "intro": "Non c'è bisogno di stare male per fare una valutazione. La maggior parte delle coppie la fa in un momento ben preciso:",
-      "cartes": [
-        {
-          "titre": "Prima di un grande passo",
-          "texte": "Andare a vivere insieme, sposarsi, fare un figlio, comprare insieme. È il momento giusto per verificare che volete la stessa cosa, prima di impegnarvi."
-        },
-        {
-          "titre": "Quando tornano gli stessi litigi",
-          "texte": "Spesso, dietro un litigio che torna, c'è una differenza che nessuno ha mai nominato. Il report la mette sul tavolo, senza accusare nessuno."
-        },
-        {
-          "titre": "Quando vi fate delle domande",
-          "texte": "Vi sentite meno vicini, o non sapete più bene a che punto siete. La valutazione aiuta a dare parole a quello che vive ciascuno, e puoi farla da solo/a se l'altro non è pronto."
-        },
-        {
-          "titre": "Quando va tutto bene",
-          "texte": "Perché duri! Le coppie solide parlano degli argomenti che fanno arrabbiare prima che facciano arrabbiare, e la valutazione gliene dà l'occasione."
-        }
-      ]
-    },
-    "compar": {
-      "titre": "Un consulente, un'IA, o questa valutazione?",
-      "intro": "Tre modi di fare il punto, che non servono alla stessa cosa. Ecco cosa porta ciascuno.",
-      "cols": [
-        "Un consulente di coppia",
-        "Un test generato da un'IA",
-        "La valutazione di coppia"
-      ],
-      "lignes": [
-        {
-          "sujet": "Le domande",
-          "c": [
-            "Quelle di un professionista, nel corso delle sedute",
-            "Inventate nel momento in cui le chiedi, spesso vaghe: «Comunicate bene?»",
-            "Cento, scritte in anticipo e fondate sulla ricerca: «Chi pensa agli appuntamenti dal medico?»"
-          ]
-        },
-        {
-          "sujet": "Chi risponde",
-          "c": [
-            "Voi due, in seduta, uno davanti all'altro",
-            "Una sola persona, che immagina cosa direbbe l'altro",
-            "Ciascuno per conto suo, senza vedere l'altro; oppure tu da solo/a, con le tue zone d'ombra individuate"
-          ]
-        },
-        {
-          "sujet": "Cosa si misura",
-          "c": [
-            "Quello che il professionista osserva e quello che gli raccontate",
-            "Un'impressione generale",
-            "Gli argomenti che impegnano una vita, pesati secondo la loro importanza, e le abitudini di litigio che la ricerca lega al logoramento di una coppia"
-          ]
-        },
-        {
-          "sujet": "Il tempo",
-          "c": [
-            "Più sedute, su settimane o mesi",
-            "Dieci minuti",
-            "25-30 minuti ciascuno, quando volete"
-          ]
-        },
-        {
-          "sujet": "Il prezzo",
-          "c": [
-            "60-100 € a seduta, spesso più sedute",
-            "Gratis, o compreso in un abbonamento",
-            "{{prix}} per tutti e due, una volta"
-          ]
-        },
-        {
-          "sujet": "Il risultato",
-          "c": [
-            "Un accompagnamento nel tempo",
-            "Qualche paragrafo rassicurante",
-            "Un report di 40 pagine: le vostre risposte a confronto, perché conta, e una tabella di marcia"
-          ]
-        },
-        {
-          "sujet": "Le vostre risposte",
-          "c": [
-            "Tra voi e il professionista, tenuto al segreto",
-            "Digitate in una conversazione con un servizio di IA",
-            "Conservate da noi, mai vendute, cancellate al massimo dopo sei mesi"
-          ]
-        }
-      ],
-      "conclusion": "La valutazione non sostituisce un consulente di coppia: vi dà un quadro della vostra relazione, argomento per argomento, per sapere di cosa parlare. Molte coppie la usano proprio come punto di partenza, in due o con un professionista.",
-      "aide": "Scorri la tabella per vedere le tre colonne."
-    },
-    "recherche": {
-      "titre": "Costruito a partire dalla ricerca sulle coppie",
-      "p1": "Le domande non escono dal nulla. Si basano su lavori di ricerca in psicologia e sociologia della coppia: studi che hanno seguito migliaia di coppie per anni, tesi sulla divisione dei lavori di casa e i questionari prematrimoniali che i consulenti di coppia usano da decenni.",
-      "constats": [
-        "Confrontare le risposte di ciascuno, date separatamente, permette di individuare le differenze molto prima che diventino un problema. È il principio dei questionari usati prima di un matrimonio.",
-        "Il modo di litigare pesa più del numero di litigi. Alcuni atteggiamenti precisi logorano una coppia molto più dei disaccordi in sé.",
-        "Sentire che l'altro tiene alla relazione, e sentirsi apprezzati, sono tra gli indicatori più solidi della qualità di una coppia.",
-        "Chi pensa a tutto non è sempre chi fa tutto. Il carico mentale si vede male da dentro, e spesso ognuno pensa di fare di più."
-      ],
-      "p2": "La valutazione non è un test clinico e non sostituisce un professionista. È un questionario serio, costruito a partire da quello che la ricerca sa delle coppie, per aiutarvi a parlare degli argomenti giusti."
     },
     "prix": {
       "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 30 minuti a testa e pochi euro possono cambiare davvero le cose.",
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
-      "aide": "Pagate solo alla fine, una volta date le vostre risposte. Un solo pagamento, dell'uno o dell'altro. Nessun abbonamento, nessun account.",
+      "aide": "Un solo pagamento, dell'uno o dell'altro, alla fine. Nessun abbonamento.",
       "inclus": [
         "100 domande su dodici aree",
-        "Il report completo, una quarantina di pagine con i suoi grafici",
-        "Le vostre prossime quattro conversazioni, con spunti per condurle",
-        "Il PDF da scaricare e la versione online per sei mesi",
-        "Lo stesso report, che la facciate in due o da soli"
+        "Il report completo, online e in PDF",
+        "Gli argomenti da cui partire, con spunti per parlarne",
+        "Lo stesso report, in due o da soli"
       ],
       "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
     },
@@ -904,19 +762,19 @@
       "points": [
         {
           "titre": "Nessun account",
-          "texte": "Ciascuno accede alla valutazione con il proprio link. Nessuna password, e un indirizzo e-mail solo per mandarvi il link al report."
+          "texte": "Un link personale per ciascuno, senza password."
         },
         {
-          "titre": "Niente viene mostrato prima della fine",
-          "texte": "Né tu né il tuo partner vedete le risposte dell'altro prima di aver finito tutti e due. Da solo/a, il tuo partner non viene mai contattato."
+          "titre": "Niente prima della fine",
+          "texte": "Nessuno vede le risposte dell'altro prima che abbiate finito tutti e due."
         },
         {
           "titre": "Cancellato automaticamente",
-          "texte": "Una valutazione non pagata viene cancellata 60 giorni dopo l'ultima risposta, una pagata sei mesi dopo il pagamento. Ciascuno può cancellarla prima, con un clic."
+          "texte": "60 giorni dopo l'ultima risposta senza pagamento, sei mesi dopo il pagamento."
         },
         {
           "titre": "Pagamento sicuro",
-          "texte": "Il pagamento passa da Stripe (carta, Apple Pay, Google Pay). Non vediamo mai la vostra carta."
+          "texte": "Con Stripe: non vediamo mai la vostra carta."
         }
       ]
     },
@@ -924,58 +782,42 @@
       "titre": "Domande frequenti",
       "items": [
         {
-          "q": "Quanto tempo ci vuole per fare la valutazione?",
-          "a": "Contate 25-30 minuti ciascuno, per 100 domande. Niente vi obbliga a fare tutto in una volta: ogni risposta viene salvata, e riprendete da dove eravate."
+          "q": "Quanto tempo ci vuole?",
+          "a": "Contate 25-30 minuti ciascuno. Ogni risposta viene salvata: potete fare una pausa e riprendere più tardi."
         },
         {
-          "q": "Il mio partner vedrà tutte le mie risposte?",
-          "a": "Sì, una volta che avete finito tutti e due: il report mette le vostre due risposte una accanto all'altra, è tutto il senso. Prima, nessuno vede niente."
+          "q": "Il mio partner vedrà le mie risposte?",
+          "a": "Sì, una volta che avete finito tutti e due: il report mette le vostre risposte una accanto all'altra, è tutto il senso. Prima, nessuno vede niente."
         },
         {
           "q": "Perché bisogna pagare per vedere il risultato?",
-          "a": "Perché il risultato è il report: le vostre due serie di risposte confrontate, argomento per argomento, con spunti per parlarne. Le domande sono gratuite, e pagate solo una volta finite le vostre risposte, se volete il report."
-        },
-        {
-          "q": "Si può fare da soli?",
-          "a": "Sì. Rispondi per te, poi dici cosa risponderebbe il tuo partner, o «non lo so». Il report confronta le tue risposte con quello che immagini delle sue, e raccoglie le tue zone d'ombra: gli argomenti su cui non sai, pronti da chiedere. Stesso prezzo, stesso report."
+          "a": "Perché il risultato è il report: le vostre risposte confrontate argomento per argomento, con spunti per parlarne. Le domande sono gratuite, e pagate solo alla fine, se volete il report."
         },
         {
           "q": "Se la faccio da solo/a, il mio partner verrà avvisato?",
-          "a": "No. Non gli viene inviato niente, nessuno lo contatta, e solo tu vedi il report. Il suo nome serve solo a scrivere le domande."
+          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te, poi al suo posto, oppure «non lo so»."
         },
         {
-          "q": "Si può fare la valutazione se non viviamo insieme o non abbiamo figli?",
-          "a": "Sì. All'inizio descrivete la vostra situazione in sette domande, e le domande si adattano: una coppia che non vive ancora insieme risponde su quello che immagina, una coppia senza figli su quello che desidera."
+          "q": "E se non viviamo insieme o non abbiamo figli?",
+          "a": "Funziona lo stesso. All'inizio, sette domande sulla vostra situazione adattano il resto: una coppia che non vive ancora insieme risponde su quello che immagina, per esempio."
         },
         {
-          "q": "E se scopriamo di non essere d'accordo su molte cose?",
-          "a": "È frequente, e non è una brutta notizia: una differenza che si conosce si discute, una che si ignora finisce per tornare come litigio. Il report vi dice da dove cominciare, e come parlarne senza che diventi un processo."
-        },
-        {
-          "q": "Si basa su qualcosa di serio?",
-          "a": "Sì. Le domande si fondano sulla ricerca in psicologia di coppia e sui questionari usati dai consulenti di coppia prima di un matrimonio. La valutazione non è per questo un test clinico: è uno strumento per parlare, non una diagnosi."
-        },
-        {
-          "q": "La valutazione sostituisce una terapia di coppia?",
-          "a": "No. È uno strumento per dare parole a quello che vivete e sapere di cosa parlare. Se attraversate un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi, e il report può servire da punto di partenza."
-        },
-        {
-          "q": "Come funziona il pagamento?",
-          "a": "Con carta, Apple Pay o Google Pay, sulla pagina di pagamento sicura di Stripe. Un solo pagamento di {{prix}} per tutti e due, quando avete finito le vostre risposte. Ricevete una ricevuta via e-mail, e il report appena tutto è stato risposto."
+          "q": "Sostituisce una terapia di coppia?",
+          "a": "No. Le domande si basano sulla ricerca in psicologia di coppia, ma la valutazione è uno strumento per sapere di cosa parlare, non una diagnosi. Il report può anche servire da punto di partenza con un professionista."
         },
         {
           "q": "E se il report non ci piace?",
-          "a": "Il report è fatto delle vostre risposte, e a volte dice qualcosa di diverso da ciò che si sperava. Una volta fornito, non viene rimborsato: è un contenuto digitale, e prima di pagare chiedi di riceverlo subito. Finché non è stato fornito, puoi recedere ed essere rimborsato. E se il file ha un problema, lo sistemiamo."
+          "a": "È fatto delle vostre risposte, e può dire qualcosa di diverso da ciò che speravate. Una volta fornito, non viene rimborsato: prima di pagare, chiedi di riceverlo subito. Finché non è stato fornito, puoi recedere. E se il file ha un problema, lo sistemiamo."
         },
         {
           "q": "Che fine fanno le nostre risposte?",
-          "a": "Servono solo alla vostra valutazione, non vengono mai vendute e non servono a nessuna pubblicità. Vengono cancellate 60 giorni dopo l'ultima risposta se la valutazione non viene pagata, sei mesi dopo il pagamento altrimenti, e ciascuno di voi può cancellare tutto prima."
+          "a": "Servono solo alla vostra valutazione e non vengono mai vendute. Vengono cancellate 60 giorni dopo l'ultima risposta senza pagamento, sei mesi dopo il pagamento altrimenti, e ciascuno di voi può cancellare tutto prima."
         }
       ]
     },
     "final": {
       "titre": "Pronti a fare il punto?",
-      "texte": "Venticinque minuti ciascuno, e saprete su cosa siete d'accordo, e di cosa bisogna parlare. Cominciate quando volete: potete fare una pausa in qualsiasi momento."
+      "texte": "25 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
     },
     "colle": {
       "texte": "Valutazione di coppia · {{prix}}",
