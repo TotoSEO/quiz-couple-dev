@@ -609,18 +609,13 @@
   },
   "lp": {
     "badge": "Beziehungsanalyse",
-    "titre": "Wollt ihr beide dasselbe Leben?",
-    "sousTitre": "100 Fragen zu zwölf Bereichen des gemeinsamen Lebens, und ein Bericht mit 40 Seiten, der euch Thema für Thema sagt, wo ihr euch trefft und worüber ihr reden solltet.",
-    "points": [
-      "Jeder antwortet auf dem eigenen Handy, ohne die Antworten des anderen zu sehen",
-      "Aufgebaut auf der Forschung der Paarpsychologie",
-      "Zu zweit, oder allein, wenn der andere noch nicht bereit ist, darüber zu reden"
-    ],
+    "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
+    "sousTitre": "25 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
-    "ctaDuo": "Die Analyse zu zweit machen",
-    "ctaSolo": "Sie allein machen",
-    "ctaNote": "Kostenlose Fragen · {{prix}} für den Bericht, am Ende · Einmalige Zahlung, kein Abo",
-    "voirExtrait": "Den Bericht Seite für Seite ansehen",
+    "ctaNote": "Kostenlose Fragen, ohne Konto. Ihr zahlt erst am Ende, und nur, wenn ihr den Bericht wollt.",
+    "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
+    "soloLien": "Mach sie allein",
+    "preuve": "Über {{n}} Quizze & Tests auf Quiz Couple gemacht",
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
       "sur": "Beispielbericht · fiktives Paar",
@@ -630,51 +625,46 @@
     },
     "chiffres": [
       {
-        "n": "12",
-        "l": "Bereiche des Lebens zu zweit"
+        "n": "100",
+        "l": "konkrete Fragen"
       },
       {
-        "n": "100",
-        "l": "Fragen, ungefähr"
+        "n": "12",
+        "l": "Bereiche des gemeinsamen Lebens"
       },
       {
         "n": "25 Min.",
         "l": "pro Person, im eigenen Tempo"
       },
       {
-        "n": "40 Seiten",
-        "l": "Bericht, mit Grafiken"
+        "n": "0 €",
+        "l": "für die Fragen"
       }
     ],
-    "facons": {
-      "titre": "Zu zweit oder allein: Beides geht",
-      "intro": "Die meisten Paare machen sie zu zweit. Aber wenn es schlecht läuft, oder der andere nicht darüber reden möchte, kann man sie auch für sich machen: Du antwortest für dich, dann sagst du, was dein Partner oder deine Partnerin antworten würde, und der Bericht zeigt dir, was du weißt, was du vermutest und was du nicht weißt.",
-      "duo": {
-        "titre": "Zu zweit",
-        "sous": "Jeder auf dem eigenen Handy",
-        "points": [
-          "Jeder antwortet für sich, im eigenen Tempo",
-          "Niemand sieht die Antworten des anderen vor dem Ende",
-          "Der Bericht vergleicht eure beiden Antwortreihen, Thema für Thema"
-        ],
-        "cta": "Zu zweit beginnen"
-      },
-      "solo": {
-        "titre": "Allein",
-        "sous": "Ohne deinen Partner oder deine Partnerin einzuweihen",
-        "points": [
-          "Du antwortest für dich, dann für deinen Partner oder deine Partnerin, deiner Meinung nach",
-          "Er oder sie erfährt nichts davon und sieht nichts",
-          "Der Bericht ergänzt deine blinden Flecken: was du über den anderen nicht weißt, fertig zum Fragen"
-        ],
-        "cta": "Allein beginnen"
-      },
-      "note": "Gleicher Preis, gleicher Bericht. Wenn dein Partner oder deine Partnerin eines Tages selbst antworten möchte, ersetzt eine gemeinsame Analyse deine Vermutungen durch die echten Antworten.",
-      "citation": "Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €. Mit der vollständigen Analyse von Quiz Couple anzufangen ist DER richtige erste Schritt."
+    "etapes": {
+      "titre": "So läuft es ab",
+      "liste": [
+        {
+          "duree": "2 Min.",
+          "titre": "Ihr legt die Analyse an",
+          "texte": "Eure beiden Vornamen, dann schickst du deinem Partner oder deiner Partnerin den Link."
+        },
+        {
+          "duree": "25 Min.",
+          "titre": "Jeder antwortet für sich",
+          "texte": "Auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Ihr könnt jederzeit eine Pause machen."
+        },
+        {
+          "duree": "1 Min.",
+          "titre": "Ihr bekommt euren Bericht",
+          "texte": "{{prix}} für euch beide, einmal bezahlt. Der Bericht öffnet sich, sobald ihr beide fertig seid, und der Link zum PDF kommt per E-Mail."
+        }
+      ],
+      "note": "Die Fragen stützen sich auf die Forschung zur Paarpsychologie und auf die Fragebögen, die vor einer Hochzeit verwendet werden."
     },
     "rapport": {
       "titre": "Was steht im Bericht?",
-      "intro": "Ein richtiges Dokument mit rund vierzig Seiten, mit seinen Kapiteln, seinen Grafiken und zu jedem Unterschied Gesprächshilfen. Blättert durch.",
+      "intro": "Ein richtiger Bericht, mit Kapiteln, Grafiken und zu jedem Unterschied Gesprächshilfen. Blättert durch.",
       "pages": [
         {
           "img": "couverture",
@@ -684,218 +674,86 @@
         {
           "img": "synthese",
           "titre": "Eure Zusammenfassung",
-          "texte": "Zwei Zahlen: eure Übereinstimmung und das Klima eurer Beziehung. Dann eure Bereiche auf einen Blick, auf einem Radar."
+          "texte": "Eure Übereinstimmung, das Klima eurer Beziehung und eure Bereiche auf einem Radar."
         },
         {
           "img": "carte",
           "titre": "Die Karte eurer Bereiche",
-          "texte": "Ein Balken pro Bereich, von 0 bis 100 %, mit den gleichen, ähnlichen und unterschiedlichen Antworten im Detail."
+          "texte": "Ein Balken pro Bereich: gleiche, ähnliche und unterschiedliche Antworten."
         },
         {
           "img": "conversation",
           "titre": "Eure nächsten vier Gespräche",
-          "texte": "Die Themen, mit denen ihr anfangt, eure beiden Antworten nebeneinander, warum es zählt, Fragen zum Gespräch und was ihr besser vermeidet."
+          "texte": "Die Themen, mit denen ihr anfangt, mit Fragen fürs Gespräch."
         },
         {
           "img": "climat",
           "titre": "Das Klima eurer Beziehung",
-          "texte": "Wie sich jeder von euch in der Beziehung fühlt, Bereich für Bereich, auf derselben Linie."
+          "texte": "Wie sich jeder von euch in der Beziehung fühlt, Bereich für Bereich."
         },
         {
           "img": "domaine",
           "titre": "Bereich für Bereich",
-          "texte": "Alle eure Antworten: zuerst, worin ihr euch einig seid, dann eure Unterschiede, vom wichtigsten bis zum kleinsten."
+          "texte": "Alle eure Antworten: zuerst, worin ihr euch einig seid, dann die Unterschiede."
         },
         {
           "img": "fin",
           "titre": "Zum Schluss",
-          "texte": "Eine zweite Zusammenfassung, anders als die erste: die Verteilung eurer Antworten, euer Fundament, was trägt, was Arbeit braucht, und ein Fahrplan."
+          "texte": "Was trägt, was Arbeit braucht, und ein Fahrplan."
         }
       ],
       "legende": "Seiten aus einem Beispielbericht. Hannah und Lukas sind ein fiktives Paar."
     },
-    "etapes": {
-      "titre": "So läuft es ab",
-      "liste": [
-        {
-          "duree": "2 Min.",
-          "titre": "Ihr legt die Analyse an",
-          "texte": "Eure beiden Vornamen, sieben Fragen zu eurer Situation (wohnt ihr zusammen, habt ihr Kinder...). Zu zweit schickst du deinem Partner oder deiner Partnerin den Link; allein fängst du sofort an."
-        },
-        {
-          "duree": "25 bis 30 Min.",
-          "titre": "Jeder antwortet für sich",
-          "texte": "Auf dem eigenen Handy, im eigenen Tempo, auf einmal oder in mehreren Etappen: Alles wird gespeichert. Allein beantwortest du jede Frage zweimal: für dich, dann für den anderen, deiner Meinung nach."
-        },
-        {
-          "duree": "1 Min.",
-          "titre": "Ihr schaltet den Bericht frei",
-          "texte": "Sobald du deine Antworten abgeschlossen hast: {{prix}} für euch beide, per Karte, Apple Pay oder Google Pay. Die Fragen selbst sind kostenlos."
-        },
-        {
-          "duree": "6 Monate online",
-          "titre": "Ihr lest ihn, und ihr redet darüber",
-          "texte": "Der Link zum PDF kommt per E-Mail, sobald alles beantwortet ist, und der Bericht bleibt sechs Monate online. Er endet mit einem Fahrplan: ein Thema pro Woche."
-        }
-      ]
-    },
-    "domaines": {
-      "titre": "Die zwölf Bereiche des Lebens zu zweit",
-      "intro": "Konkretes, keine Allgemeinplätze: Die Fragen handeln vom Kühlschrank, von der Miete, von den Schwiegereltern und vom Handy auf dem Nachttisch.",
-      "liste": {
-        "quotidien": "Wer macht was, wer denkt an was, Ordnung, Mahlzeiten, Schlafenszeit.",
-        "temps": "Zeit zu zweit, Zeit für sich, Ausgehen, kleine Aufmerksamkeiten.",
-        "entourage": "Eure Familien, eure Freunde, die Feiertage, ein Elternteil, der älter wird.",
-        "travail": "Der Stellenwert der Arbeit, Ziele, ein Gehaltsunterschied, der Berufswechsel.",
-        "argent": "Gemeinsames Konto oder nicht, Ausgaben, Sparen, der Familie helfen.",
-        "logement": "Wo in zehn Jahren wohnen, Eigentum kaufen, für den anderen umziehen.",
-        "enfants": "Ob, wann, wie viele, wie erziehen, wer sich kümmert.",
-        "valeurs": "Religion, Heirat, Umwelt, Traditionen, Politik.",
-        "disputes": "Wie ihr streitet, und wie ihr euch versöhnt.",
-        "confiance": "Das Handy des anderen, Eifersucht, Ex-Partner, was Betrügen heißt.",
-        "intimite": "Rhythmus, Zärtlichkeit, darüber reden, Neues ausprobieren.",
-        "meteo": "Wie sich jeder von euch gerade in der Beziehung fühlt."
+    "facons": {
+      "citation": "Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €. Mit der vollständigen Analyse von Quiz Couple anzufangen ist DER richtige erste Schritt.",
+      "titre": "Zu zweit oder allein",
+      "intro": "Wenn der andere nicht darüber reden möchte, kannst du sie auch für dich machen. Gleicher Preis, gleicher Bericht.",
+      "duo": {
+        "titre": "Zu zweit",
+        "sous": "Jeder auf dem eigenen Handy",
+        "points": [
+          "Jeder antwortet für sich, im eigenen Tempo",
+          "Der Bericht vergleicht eure Antworten, Thema für Thema"
+        ],
+        "cta": "Zu zweit beginnen"
+      },
+      "solo": {
+        "titre": "Allein",
+        "sous": "Ohne deinen Partner oder deine Partnerin einzuweihen",
+        "points": [
+          "Du antwortest für dich, dann an Stelle des anderen",
+          "Der Bericht zeigt dir auch, was du über den anderen nicht weißt"
+        ],
+        "cta": "Allein beginnen"
       }
     },
     "demo": {
-      "titre": "Probiert drei Fragen aus",
-      "intro": "So, wie sie in der Analyse gestellt werden, hier so, wie Hannah sie gesehen hat. Antworte, um zu sehen, was der Bericht daraus macht.",
+      "titre": "Probiert eine Frage aus",
+      "intro": "So, wie sie in der Analyse gestellt wird, hier so, wie Hannah sie gesehen hat. Antworte, um zu sehen, was der Bericht daraus macht.",
       "partenaireNom": "Lukas",
       "vous": "Du",
       "partenaire": "Lukas",
       "attente": "antwortet für sich",
-      "apres": "Im Bericht steht deine Antwort der deines Partners oder deiner Partnerin gegenüber, mit dem Grund, warum es zählt, und Fragen zum Gespräch.",
+      "apres": "Im Bericht steht deine Antwort der deines Partners oder deiner Partnerin gegenüber, mit Fragen fürs Gespräch.",
       "pourquoi": "Warum es zählt",
       "questions": [
         {
           "dom": "quotidien",
           "id": "quo2"
-        },
-        {
-          "dom": "argent",
-          "id": "arg3"
-        },
-        {
-          "dom": "confiance",
-          "id": "con2"
         }
       ],
-      "fin": "Bei den großen Fragen (Kinder, Wohnort, Treue...) kann jeder seine Antwort auch als nicht verhandelbar markieren. Der Bericht fängt dann damit an.",
       "cta": "Die 100 Fragen beantworten"
-    },
-    "pour": {
-      "titre": "Für Paare, die klar sehen wollen",
-      "intro": "Es muss nicht schlecht laufen, um eine Analyse zu machen. Die meisten Paare machen sie zu einem ganz bestimmten Zeitpunkt:",
-      "cartes": [
-        {
-          "titre": "Vor einem großen Schritt",
-          "texte": "Zusammenziehen, heiraten, ein Kind bekommen, gemeinsam kaufen. Der richtige Moment, um zu prüfen, dass ihr dasselbe wollt, bevor ihr euch bindet."
-        },
-        {
-          "titre": "Wenn dieselben Streits wiederkommen",
-          "texte": "Hinter einem Streit, der immer wiederkommt, steckt oft ein Unterschied, den nie jemand benannt hat. Der Bericht legt ihn auf den Tisch, ohne jemanden zu beschuldigen."
-        },
-        {
-          "titre": "Wenn ihr euch Fragen stellt",
-          "texte": "Ihr fühlt euch weniger nah, oder ihr wisst nicht mehr so recht, wo ihr steht. Die Analyse hilft, in Worte zu fassen, was jeder erlebt, und du kannst sie allein machen, wenn der andere noch nicht bereit ist."
-        },
-        {
-          "titre": "Wenn alles gut läuft",
-          "texte": "Damit es so bleibt! Starke Paare reden über heikle Themen, bevor sie heikel werden, und die Analyse gibt ihnen die Gelegenheit."
-        }
-      ]
-    },
-    "compar": {
-      "titre": "Eine Paarberatung, eine KI oder diese Analyse?",
-      "intro": "Drei Wege, Bilanz zu ziehen, die nicht dasselbe leisten. Das bringt jeder von ihnen.",
-      "cols": [
-        "Eine Paarberatung",
-        "Ein von einer KI erzeugter Test",
-        "Die Beziehungsanalyse"
-      ],
-      "lignes": [
-        {
-          "sujet": "Die Fragen",
-          "c": [
-            "Die einer Fachperson, im Lauf der Sitzungen",
-            "Im Moment der Anfrage erfunden, oft vage: „Kommuniziert ihr gut?“",
-            "Hundert, vorab geschrieben und auf die Forschung gestützt: „Wer denkt an die Arzttermine?“"
-          ]
-        },
-        {
-          "sujet": "Wer antwortet",
-          "c": [
-            "Ihr beide, in der Sitzung, voreinander",
-            "Eine einzige Person, die sich vorstellt, was der andere sagen würde",
-            "Jeder für sich, ohne den anderen zu sehen; oder du allein, mit deinen blinden Flecken benannt"
-          ]
-        },
-        {
-          "sujet": "Was gemessen wird",
-          "c": [
-            "Was die Fachperson beobachtet und was ihr ihr erzählt",
-            "Ein allgemeiner Eindruck",
-            "Die Themen, die ein Leben prägen, nach Bedeutung gewichtet, und die Streitgewohnheiten, die die Forschung mit dem Zermürben eines Paares verbindet"
-          ]
-        },
-        {
-          "sujet": "Die Zeit",
-          "c": [
-            "Mehrere Sitzungen, über Wochen oder Monate",
-            "Zehn Minuten",
-            "25 bis 30 Minuten pro Person, wann ihr wollt"
-          ]
-        },
-        {
-          "sujet": "Der Preis",
-          "c": [
-            "80 bis 150 € pro Sitzung, oft mehrere Sitzungen",
-            "Kostenlos oder in einem Abo enthalten",
-            "{{prix}} für euch beide, einmal"
-          ]
-        },
-        {
-          "sujet": "Das Ergebnis",
-          "c": [
-            "Eine Begleitung über längere Zeit",
-            "Ein paar beruhigende Absätze",
-            "Ein Bericht mit 40 Seiten: eure Antworten nebeneinander, warum es zählt, und ein Fahrplan"
-          ]
-        },
-        {
-          "sujet": "Eure Antworten",
-          "c": [
-            "Zwischen euch und der Fachperson, die zur Verschwiegenheit verpflichtet ist",
-            "In ein Gespräch mit einem KI-Dienst getippt",
-            "Bei uns aufbewahrt, nie verkauft, nach höchstens sechs Monaten gelöscht"
-          ]
-        }
-      ],
-      "conclusion": "Die Analyse ersetzt keine Paarberatung: Sie gibt euch eine Bestandsaufnahme eurer Beziehung, Thema für Thema, damit ihr wisst, worüber ihr reden solltet. Viele Paare nutzen sie genau als Ausgangspunkt, zu zweit oder mit einer Fachperson.",
-      "aide": "Wische die Tabelle, um alle drei Spalten zu sehen."
-    },
-    "recherche": {
-      "titre": "Aufgebaut auf der Forschung über Paare",
-      "p1": "Die Fragen kommen nicht aus dem Nichts. Sie stützen sich auf Forschungsarbeiten aus der Paarpsychologie und der Paarsoziologie: Studien, die Tausende von Paaren über Jahre begleitet haben, Doktorarbeiten über die Aufteilung der Hausarbeit und die Fragebögen zur Ehevorbereitung, mit denen Paarberater seit Jahrzehnten arbeiten.",
-      "constats": [
-        "Wenn man die Antworten beider Partner vergleicht, die getrennt gegeben wurden, sieht man Unterschiede lange bevor sie zum Problem werden. Das ist das Prinzip der Fragebögen, die vor einer Hochzeit eingesetzt werden.",
-        "Wie man streitet, wiegt schwerer als wie oft. Ein paar ganz bestimmte Verhaltensweisen zermürben eine Beziehung viel mehr als die Meinungsverschiedenheiten selbst.",
-        "Das Gefühl, dass dem anderen die Beziehung wichtig ist, und sich geschätzt zu fühlen, gehören zu den verlässlichsten Anzeichen für eine gute Beziehung.",
-        "Wer an alles denkt, ist nicht immer der, der alles macht. Die mentale Last sieht man von innen schlecht, und oft glaubt jeder, mehr zu tun."
-      ],
-      "p2": "Die Analyse ist kein klinischer Test und ersetzt keine Fachperson. Sie ist ein ernsthafter Fragebogen, aufgebaut auf dem, was die Forschung über Paare weiß, um euch zu helfen, über die richtigen Themen zu reden."
     },
     "prix": {
       "accroche": "Paare vergessen viel zu oft, eine Bestandsaufnahme ihrer Beziehung zu machen. 30 Minuten pro Person und ein paar Euro können wirklich etwas verändern.",
       "titre": "Ein Preis, für euch beide",
       "unite": "für das Paar, einmalig",
-      "aide": "Ihr zahlt erst am Ende, wenn eure Antworten abgegeben sind. Eine einzige Zahlung, von einem von euch. Kein Abo, kein Konto.",
+      "aide": "Einmal bezahlt, von einem von euch, am Ende. Kein Abo.",
       "inclus": [
         "100 Fragen zu zwölf Bereichen",
-        "Der vollständige Bericht, rund vierzig Seiten mit Grafiken",
-        "Eure nächsten vier Gespräche, mit Hilfen, sie zu führen",
-        "Das PDF zum Herunterladen und die Online-Version sechs Monate lang",
-        "Derselbe Bericht, ob ihr sie zu zweit oder allein macht"
+        "Der vollständige Bericht, online und als PDF",
+        "Die Themen, mit denen ihr anfangt, mit Gesprächshilfen",
+        "Derselbe Bericht, zu zweit oder allein"
       ],
       "garantie": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht genügt."
     },
@@ -904,19 +762,19 @@
       "points": [
         {
           "titre": "Kein Konto",
-          "texte": "Jeder öffnet die Analyse über seinen eigenen Link. Kein Passwort, und eine E-Mail-Adresse nur, um euch den Link zum Bericht zu schicken."
+          "texte": "Ein persönlicher Link für jeden, ohne Passwort."
         },
         {
-          "titre": "Vor dem Ende wird nichts gezeigt",
-          "texte": "Weder du noch dein Partner oder deine Partnerin sieht die Antworten des anderen, bevor ihr beide fertig seid. Allein wird dein Partner oder deine Partnerin nie kontaktiert."
+          "titre": "Nichts vor dem Ende",
+          "texte": "Niemand sieht die Antworten des anderen, bevor ihr beide fertig seid."
         },
         {
           "titre": "Automatisch gelöscht",
-          "texte": "Eine unbezahlte Analyse wird 60 Tage nach der letzten Antwort gelöscht, eine bezahlte sechs Monate nach der Zahlung. Jeder kann sie vorher mit einem Klick löschen."
+          "texte": "60 Tage nach der letzten Antwort ohne Zahlung, sechs Monate nach der Zahlung."
         },
         {
           "titre": "Sichere Zahlung",
-          "texte": "Die Zahlung läuft über Stripe (Karte, Apple Pay, Google Pay). Wir sehen eure Karte nie."
+          "texte": "Über Stripe: Wir sehen eure Karte nie."
         }
       ]
     },
@@ -924,58 +782,42 @@
       "titre": "Häufige Fragen",
       "items": [
         {
-          "q": "Wie lange dauert die Analyse?",
-          "a": "Rechnet mit 25 bis 30 Minuten pro Person, für 100 Fragen. Nichts zwingt euch, alles auf einmal zu machen: Jede Antwort wird gespeichert, und ihr macht da weiter, wo ihr aufgehört habt."
+          "q": "Wie lange dauert es?",
+          "a": "Rechnet mit 25 bis 30 Minuten pro Person. Jede Antwort wird gespeichert: Ihr könnt eine Pause machen und später weitermachen."
         },
         {
-          "q": "Sieht mein Partner oder meine Partnerin alle meine Antworten?",
-          "a": "Ja, sobald ihr beide fertig seid: Der Bericht stellt eure beiden Antworten nebeneinander, das ist der ganze Sinn. Vorher sieht niemand etwas."
+          "q": "Sieht mein Partner oder meine Partnerin meine Antworten?",
+          "a": "Ja, sobald ihr beide fertig seid: Der Bericht stellt eure Antworten nebeneinander, das ist der ganze Sinn. Vorher sieht niemand etwas."
         },
         {
           "q": "Warum muss man zahlen, um das Ergebnis zu sehen?",
-          "a": "Weil das Ergebnis der Bericht ist: eure beiden Antwortreihen im Vergleich, Thema für Thema, mit Gesprächshilfen. Die Fragen sind kostenlos, und ihr zahlt erst, wenn eure Antworten fertig sind, falls ihr den Bericht wollt."
-        },
-        {
-          "q": "Kann ich sie allein machen?",
-          "a": "Ja. Du antwortest für dich, dann sagst du, was dein Partner oder deine Partnerin antworten würde, oder „weiß ich nicht“. Der Bericht vergleicht deine Antworten mit dem, was du dir von seinen oder ihren vorstellst, und sammelt deine blinden Flecken: die Themen, bei denen du es nicht weißt, fertig zum Fragen. Gleicher Preis, gleicher Bericht."
+          "a": "Weil das Ergebnis der Bericht ist: eure Antworten im Vergleich, Thema für Thema, mit Gesprächshilfen. Die Fragen sind kostenlos, und ihr zahlt erst am Ende, falls ihr den Bericht wollt."
         },
         {
           "q": "Erfährt mein Partner oder meine Partnerin davon, wenn ich sie allein mache?",
-          "a": "Nein. Es wird nichts verschickt, niemand nimmt Kontakt auf, und nur du siehst den Bericht. Der Vorname dient nur dazu, die Fragen zu schreiben."
+          "a": "Nein. Es wird nichts verschickt, und nur du siehst den Bericht. Du antwortest für dich, dann an seiner oder ihrer Stelle, oder mit „weiß ich nicht“."
         },
         {
-          "q": "Geht die Analyse, wenn wir nicht zusammenwohnen oder keine Kinder haben?",
-          "a": "Ja. Am Anfang beschreibt ihr eure Situation in sieben Fragen, und die Fragen passen sich an: Ein Paar, das noch nicht zusammenwohnt, antwortet zu dem, was es sich vorstellt, ein Paar ohne Kinder zu dem, was es sich wünscht."
+          "q": "Und wenn wir nicht zusammenwohnen oder keine Kinder haben?",
+          "a": "Das geht auch. Am Anfang passen sieben Fragen zu eurer Situation den Rest an: Ein Paar, das noch nicht zusammenwohnt, antwortet zum Beispiel zu dem, was es sich vorstellt."
         },
         {
-          "q": "Und wenn wir merken, dass wir uns in vielem nicht einig sind?",
-          "a": "Das kommt oft vor und ist keine schlechte Nachricht: Ein Unterschied, den man kennt, lässt sich besprechen, einer, den man nicht kennt, kommt irgendwann als Streit zurück. Der Bericht sagt euch, womit ihr anfangt, und wie ihr darüber redet, ohne dass es zum Tribunal wird."
-        },
-        {
-          "q": "Steckt etwas Seriöses dahinter?",
-          "a": "Ja. Die Fragen stützen sich auf die Forschung der Paarpsychologie und auf die Fragebögen, die Paarberater vor einer Hochzeit verwenden. Ein klinischer Test ist die Analyse deshalb nicht: Sie ist ein Werkzeug zum Reden, keine Diagnose."
-        },
-        {
-          "q": "Ersetzt die Analyse eine Paartherapie?",
-          "a": "Nein. Sie ist ein Werkzeug, um in Worte zu fassen, was ihr erlebt, und zu wissen, worüber ihr reden solltet. Wenn ihr eine schwere Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie begleiten, und der Bericht kann als Ausgangspunkt dienen."
-        },
-        {
-          "q": "Wie läuft die Zahlung ab?",
-          "a": "Per Karte, Apple Pay oder Google Pay, auf der sicheren Zahlungsseite von Stripe. Eine einzige Zahlung von {{prix}} für euch beide, sobald ihr eure Antworten abgeschlossen habt. Ihr erhaltet eine Quittung per E-Mail, und den Bericht, sobald alles beantwortet ist."
+          "q": "Ersetzt sie eine Paartherapie?",
+          "a": "Nein. Die Fragen stützen sich auf die Forschung zur Paarpsychologie, aber die Analyse ist ein Werkzeug, um zu wissen, worüber ihr reden solltet, keine Diagnose. Der Bericht kann auch ein Ausgangspunkt mit einer Fachperson sein."
         },
         {
           "q": "Und wenn uns der Bericht nicht gefällt?",
-          "a": "Der Bericht entsteht aus euren Antworten, und manchmal sagt er etwas anderes, als man gehofft hat. Einmal bereitgestellt, wird er nicht erstattet: Er ist ein digitaler Inhalt, und du verlangst vor der Zahlung, ihn sofort zu bekommen. Solange er nicht bereitgestellt ist, kannst du widerrufen und bekommst dein Geld zurück. Und wenn mit der Datei etwas nicht stimmt, kümmern wir uns darum."
+          "a": "Er entsteht aus euren Antworten, und er kann etwas anderes sagen, als ihr gehofft habt. Einmal bereitgestellt, wird er nicht erstattet: Vor der Zahlung verlangst du, ihn sofort zu bekommen. Solange er nicht bereitgestellt ist, kannst du widerrufen. Und wenn mit der Datei etwas nicht stimmt, kümmern wir uns darum."
         },
         {
           "q": "Was passiert mit unseren Antworten?",
-          "a": "Sie dienen nur eurer Analyse, werden nie verkauft und nie für Werbung verwendet. Sie werden 60 Tage nach der letzten Antwort gelöscht, wenn die Analyse nicht bezahlt wird, sonst sechs Monate nach der Zahlung, und jeder von euch kann vorher alles löschen."
+          "a": "Sie dienen nur eurer Analyse und werden nie verkauft. Sie werden 60 Tage nach der letzten Antwort gelöscht, wenn nicht bezahlt wird, sonst sechs Monate nach der Zahlung, und jeder von euch kann vorher alles löschen."
         }
       ]
     },
     "final": {
       "titre": "Bereit, Bilanz zu ziehen?",
-      "texte": "Fünfundzwanzig Minuten pro Person, und ihr wisst, worin ihr euch einig seid und worüber ihr reden solltet. Fangt an, wann ihr wollt: Ihr könnt jederzeit eine Pause machen."
+      "texte": "25 Minuten pro Person, und ihr wisst, worin ihr euch einig seid und worüber ihr reden solltet."
     },
     "colle": {
       "texte": "Beziehungsanalyse · {{prix}}",
