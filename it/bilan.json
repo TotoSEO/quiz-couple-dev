@@ -248,7 +248,7 @@
         "de": "La valutazione di coppia di",
         "et": "e",
         "date": "Report redatto il {{date}}",
-        "chiffres": "{{domaines}} aree · {{questions}} domande confrontate",
+        "chiffres": "{{domaines}} aree · {{questions}} domande",
         "confidentiel": "Riservato: questo report contiene le risposte di tutti e due."
       },
       "lire": {
@@ -427,7 +427,7 @@
         "autant": "Tutti e due",
         "chacunPlus": "Ognuno pensa di fare di più",
         "chacunPlusTexte": "È molto comune: si vede meglio quello che si fa che quello che fa l'altro. La cosa migliore è fare insieme la lista di quello di cui si occupa ciascuno, senza contare i punti.",
-        "desequilibre": "Siete d'accordo: è soprattutto {{nom}} a occuparsene. Va bene a tutti e due?",
+        "desequilibre": "Siete d'accordo: è soprattutto {{nom}}. Va bene a tutti e due?",
         "accord": "La vedete allo stesso modo.",
         "aucun": "Nel vostra valutazione non c'è nessuna domanda di questo tipo."
       },
@@ -441,7 +441,11 @@
         "etats": "Come lo vivete",
         "inconnus": "Quello che non sai",
         "voirConversation": "Lo trovate più in alto, con spunti per parlarne: conversazione {{n}}.",
-        "voirBloquants": "Lo trovate più in alto, con spunti per parlarne: punti di blocco."
+        "voirBloquants": "Lo trovate più in alto, con spunti per parlarne: punti di blocco.",
+        "climatBas": "Quanto a come vi sentite, in questo momento almeno uno di voi non vive bene questa parte della relazione: lo trovate più in basso, in «{{titre}}».",
+        "climatBasCourt": "Quanto a come vi sentite, in questo momento almeno uno di voi non vive bene questa parte della relazione.",
+        "signauxBas": "Nella pratica, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento: lo trovate nel capitolo {{n}}, «{{titre}}».",
+        "signauxBasCourt": "Nella pratica, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento."
       },
       "fin": {
         "intro": "Avete letto tutto, o quasi. Quest'ultima sintesi non ripete la prima: conta le vostre risposte in un altro modo, tiene ciò che regge e ciò che chiede lavoro, e propone un ordine per parlarne.",
@@ -523,10 +527,15 @@
           "parDomaineAide": "Per le aree che hanno domande su come vi sentite, il tuo benessere e quello che attribuisci al tuo partner, sulla stessa riga, da 0 a 100%."
         },
         "roles": {
-          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo quello che risponderebbe {{b}} secondo te."
+          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo quello che risponderebbe {{b}} secondo te.",
+          "desequilibre": "Pensi che siate d'accordo: è soprattutto {{nom}}. Va bene a tutti e due?"
         },
         "domaines": {
-          "intro": "Tutte le tue risposte, area per area: prima ciò su cui pensi di essere d'accordo, poi le vostre differenze presunte, dalla più importante alla più piccola, e quello che non sai."
+          "intro": "Tutte le tue risposte, area per area: prima ciò su cui pensi di essere d'accordo, poi le vostre differenze presunte, dalla più importante alla più piccola, e quello che non sai.",
+          "climatBas": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene: lo trovi più in basso, in «{{titre}}».",
+          "climatBasCourt": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene.",
+          "signauxBas": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento: lo trovi nel capitolo {{n}}, «{{titre}}».",
+          "signauxBasCourt": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento."
         },
         "fin": {
           "accordsTexte": "Su {{total}} domande in cui hai saputo rispondere per il tuo partner, pensi di avere la stessa risposta {{n}} volte, cioè il {{part}}%.",

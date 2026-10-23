@@ -39,7 +39,11 @@
 
 import * as C from './coeur.mjs';
 
-export const VERSION_RAPPORT = 3;
+// 4 depuis le 23 octobre 2026 : la relecture du premier rapport vendu
+// (questions sans prénom à deux, accords « c'est surtout l'un des deux » avec
+// les accords, carte triée, parts qui font cent, ressenti sous le texte d'un
+// domaine, étiquette des sujets décisifs sur les accords).
+export const VERSION_RAPPORT = 4;
 
 const LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
 
@@ -101,6 +105,20 @@ function tailleCouverture(a, b) {
 
 const pct = (x) => Math.max(0, Math.min(100, Math.round(x)));
 const f1 = (x) => (Math.round(x * 10) / 10).toFixed(1);
+
+// Des parts entières qui font cent à elles toutes (la méthode du plus fort
+// reste) : arrondies une à une, 36, 34 et 10 sur 80 donnaient 45, 43 et 13 %,
+// soit 101 % (premier rapport vendu, 23 octobre 2026).
+export function partsCent(valeurs) {
+  const total = valeurs.reduce((s, v) => s + v, 0);
+  if (!total) return valeurs.map(() => 0);
+  const brutes = valeurs.map((v) => v * 100 / total);
+  const parts = brutes.map((b) => Math.floor(b));
+  const restes = brutes.map((b, i) => [b - Math.floor(b), i]).sort((x, y) => y[0] - x[0] || x[1] - y[1]);
+  let manque = 100 - parts.reduce((s, v) => s + v, 0);
+  for (let k = 0; manque > 0 && k < restes.length; k++, manque--) parts[restes[k][1]]++;
+  return parts;
+}
 
 // ── Les graphiques, en SVG ───────────────────────────────────────────────
 // Rien que des formes et des libellés brefs : un libellé long irait dans
@@ -169,8 +187,9 @@ export function radar(domaines, brefDe, titre, serre) {
 }
 
 // L'anneau de répartition : accords, proches, écarts, chacun son arc, avec
-// un vide de deux pixels entre deux arcs ; au centre, la part d'accords.
-function anneauRepartition(compte, libelleCentre) {
+// un vide de deux pixels entre deux arcs ; au centre, la part d'accords
+// (`part`, la même que dans la liste à côté).
+function anneauRepartition(compte, libelleCentre, part) {
   const total = compte.accords + compte.proches + compte.ecarts;
   if (!total) return '';
   const r = 54;
@@ -184,7 +203,6 @@ function anneauRepartition(compte, libelleCentre) {
     arcs += '<circle cx="70" cy="70" r="' + r + '" class="rap-don-arc rap-don-arc--' + cle + '" stroke-dasharray="' + longueur.toFixed(2) + ' ' + (tour - longueur).toFixed(2) + '" stroke-dashoffset="' + (-debut).toFixed(2) + '" transform="rotate(-90 70 70)"/>';
     debut += tour * n / total;
   }
-  const part = Math.round(compte.accords / total * 100);
   return '<div class="rap-don" role="img" aria-label="' + esc(libelleCentre) + ' : ' + part + ' %">'
     + '<svg viewBox="0 0 140 140" width="140" height="140" aria-hidden="true"><circle cx="70" cy="70" r="' + r + '" class="rap-don-fond"/>' + arcs + '</svg>'
     + '<p class="rap-don-valeur">' + part + '<span>%</span></p></div>';
@@ -251,8 +269,18 @@ export function rapportHtml(d, T, Q, o) {
   };
   const titreDomaine = (id) => (Q.domaines[id] && Q.domaines[id].titre) || id;
   const brefDomaine = (id) => (Q.domaines[id] && (Q.domaines[id].bref || Q.domaines[id].titre)) || id;
-  // La question telle que A l'a lue (accord neutre).
-  const enonce = (id) => C.remplir(C.accorder(textQ(id).q || '', null), { autre: P.b.nom });
+  // La question, accord neutre. En solo, telle que A l'a lue, avec le prénom
+  // de l'autre. À deux, chacun a lu la sienne (« Quand Julien sort sans
+  // vous » pour l'une, « Quand Camille sort sans vous » pour l'autre) : le
+  // rapport, lu par les deux, écrit la version sans prénom (`qNeutre`). Le
+  // premier rapport vendu (23 octobre 2026) mettait la réponse de B sous la
+  // question de A, qui nommait B : « Quand Camille sort sans vous... Camille :
+  // Difficile ».
+  const enonce = (id) => {
+    const t = textQ(id);
+    if (!solo && t.qNeutre) return C.accorder(t.qNeutre, null);
+    return C.remplir(C.accorder(t.q || '', null), { autre: P.b.nom });
+  };
   const court = (id) => textQ(id).court || enonce(id);
   // La réponse de quelqu'un, écrite pour être lue par les deux (en solo,
   // la réponse de B est ce que A imagine : même texte, accordé au genre de B).
@@ -265,6 +293,55 @@ export function rapportHtml(d, T, Q, o) {
       return C.remplir(Q.quiNeutre[v < 2 ? v : 4 - v], { nom: v < 2 ? p.nom : p.autre.nom });
     }
     return C.remplir(C.accorder((textQ(id).o || [])[v] || '', p.genre), { autre: p.autre.nom });
+  }
+
+  // La réponse commune d'un accord, écrite pour les deux. A et B ont choisi
+  // la même case, mais chacun l'a lue de son côté :
+  //   - une réponse qui nomme l'autre (« Je décide avec Julien ») s'écrit
+  //     sans prénom (`oNeutre`) ;
+  //   - une question miroir (« Dans ma famille », « Dans la famille de
+  //     {autre} ») garde les prénoms, qui disent de quelle famille on parle :
+  //     « ma famille » de A s'écrit avec la case jumelle et le prénom de A ;
+  //   - un accord au genre prend la forme neutre si les deux genres diffèrent.
+  // En solo, la réponse de A telle qu'il l'a lue.
+  function reponseCommune(id) {
+    const r = C.INDEX[id];
+    const v = P.a.rep[id];
+    if (solo || r.q.type === 'qui' || !Number.isInteger(v) || v < 0) return reponseLue(id, P.a);
+    const t = textQ(id);
+    const o = t.o || [];
+    const genre = P.a.genre === P.b.genre ? P.a.genre : null;
+    if (r.q.miroir) {
+      const jumelle = r.q.miroir[v];
+      if (jumelle !== undefined && !/\{autre\}/.test(o[v] || '') && /\{autre\}/.test(o[jumelle] || '')) {
+        return C.remplir(C.accorder(o[jumelle], genre), { autre: P.a.nom });
+      }
+      return C.remplir(C.accorder(o[v] || '', genre), { autre: P.b.nom });
+    }
+    if (Array.isArray(t.oNeutre) && t.oNeutre[v]) return C.accorder(t.oNeutre[v], genre);
+    return C.remplir(C.accorder(o[v] || '', genre), { autre: P.b.nom });
+  }
+
+  // Le texte d'un domaine, tiré de l'accord des réponses. Quand l'un des deux
+  // vit mal ce domaine en ce moment (son ressenti y est sous 50 %), une
+  // seconde phrase le dit et renvoie au détail : sans elle, « Vos envies sont
+  // proches » précédait « Vous vous sentez désirée : pas du tout » (premier
+  // rapport vendu, 23 octobre 2026). Pour les disputes, le ressenti vient des
+  // signaux de vigilance, qui ont leur chapitre. `court` : sans le renvoi,
+  // pour la synthèse de fin.
+  function texteDomaine(x, court) {
+    const base = x.bande && Q.domaines[x.id] && Q.domaines[x.id].rapport ? Q.domaines[x.id].rapport[x.bande] : '';
+    if (!base) return '';
+    let texte = tl(base);
+    if (x.climatA !== null && x.climatB !== null && Math.min(x.climatA, x.climatB) < 50) {
+      const signaux = x.etats.length && x.etats.every((e) => e.signal);
+      if (signaux) {
+        texte += ' ' + tx(court ? 'rapport.domaines.signauxBasCourt' : 'rapport.domaines.signauxBas', { n: numeroDe('signaux'), titre: brut(chemin('rapport.chapitres.signaux')) });
+      } else {
+        texte += ' ' + tx(court ? 'rapport.domaines.climatBasCourt' : 'rapport.domaines.climatBas', { titre: brut(chemin('rapport.domaines.etats')) });
+      }
+    }
+    return texte;
   }
 
   const parId = {};
@@ -369,13 +446,20 @@ export function rapportHtml(d, T, Q, o) {
   // `inconnu`), avec la réponse commune dessous.
   const COCHE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const POINT = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="#fff"/></svg>';
+  // `etiquette` : la ou les étiquettes à poser sous la réponse (non
+  // négociable). Un accord sur un sujet décisif porte aussi l'étiquette
+  // « Sujet décisif », comme le promet la page « Comment lire ce rapport » ;
+  // sans elle, les huit cases de « Ce qui vous rassemble » se lisaient comme
+  // les sujets décisifs, et le socle « 7/8 » de la fin semblait les contredire.
   function caseAccord(item, variante, etiquette) {
     const inconnu = variante === 'inconnu';
+    const decisif = !inconnu && item.poids === 3 ? '<span class="rap-tag rap-tag--poids">' + tx('rapport.poidsFort') + '</span>' : '';
+    const tags = decisif + (etiquette || '');
     return '<div class="rap-accord' + (inconnu ? ' rap-accord--inconnu' : '') + '">'
       + '<span class="rap-accord-coche">' + (inconnu ? POINT : COCHE) + '</span>'
       + '<div><p class="rap-accord-titre">' + tl(court(item.id)) + '</p>'
-      + '<p class="rap-accord-rep">' + tl(reponseLue(item.id, P.a)) + '</p>'
-      + (etiquette || '') + '</div></div>';
+      + '<p class="rap-accord-rep">' + tl(inconnu ? reponseLue(item.id, P.a) : reponseCommune(item.id)) + '</p>'
+      + (tags ? '<p class="rap-accord-tags">' + tags + '</p>' : '') + '</div></div>';
   }
 
   // Une échelle à n crans, avec la place de chacun.
@@ -492,7 +576,12 @@ export function rapportHtml(d, T, Q, o) {
 
   // ── 2. Carte des domaines ──
 
-  const barres = domainesNotes.map((x) => '<div class="rap-barre rap-barre--' + x.bande + '">'
+  // Du domaine le plus accordé au plus discuté, comme l'annonce l'ouverture
+  // du chapitre ; les barres suivaient l'ordre des domaines jusqu'au
+  // 23 octobre 2026. À score égal, l'ordre des domaines.
+  const rangDomaine = (id) => C.DOMAINES.findIndex((dom) => dom.id === id);
+  const domainesTries = domainesNotes.slice().sort((u, v) => v.score - u.score || rangDomaine(u.id) - rangDomaine(v.id));
+  const barres = domainesTries.map((x) => '<div class="rap-barre rap-barre--' + x.bande + '">'
     + '<div class="rap-barre-tete"><p class="rap-barre-nom">' + tl(titreDomaine(x.id)) + '</p>'
     + '<p class="rap-barre-val"><span class="rap-barre-bande">' + tx('rapport.carte.bandes.' + x.bande) + '</span><strong>' + x.score + ' %</strong></p></div>'
     + '<div class="rap-barre-piste"><span class="rap-barre-plein" style="width:' + x.score + '%"></span></div>'
@@ -591,11 +680,12 @@ export function rapportHtml(d, T, Q, o) {
       }).join('') + '</div></div>'
     : '';
   // Les cartes d'état : celles qui appellent un guide (écart, ou l'un des
-  // deux qui ne va pas bien) d'abord, en pleine largeur ; les autres, plus
-  // basses, par deux.
+  // deux qui ne va pas bien) d'abord, en pleine largeur, les écarts en tête
+  // (« Vous ne le vivez pas pareil » avant « À surveiller ») ; les autres,
+  // plus basses, par deux.
   function cartesEtats(etats) {
     const aGuide = (e) => !!(e.ecart || e.attentionA || e.attentionB);
-    const fortes = etats.filter(aGuide);
+    const fortes = etats.filter(aGuide).sort((u, v) => (v.ecart ? 1 : 0) - (u.ecart ? 1 : 0));
     const simples = etats.filter((e) => !aGuide(e));
     return (fortes.length ? '<div class="rap-etats">' + fortes.map(carteEtat).join('') + '</div>' : '')
       + (simples.length ? '<div class="rap-etats' + (simples.length > 1 ? ' rap-etats--deux' : '') + '">' + simples.map(carteEtat).join('') + '</div>' : '');
@@ -667,14 +757,22 @@ export function rapportHtml(d, T, Q, o) {
   const domaines = chapitre('domaines', numeroDe('domaines'),
     analyse.domaines.filter((x) => !x.meteo && (x.items.length || x.etats.length || x.inconnus)).map((x) => {
       const accords = x.items.filter((i) => i.cat === 'accord' && !i.chacunPlus && !i.desequilibre);
-      const diffs = x.items.filter((i) => i.cat !== 'accord' || i.chacunPlus || i.desequilibre)
+      // Les accords sur « qui s'en occupe » où c'est surtout l'un des deux
+      // (« Vous êtes d'accord : c'est surtout Camille ») : des accords, avec
+      // une question à se poser, donc une carte, posée sous les autres accords.
+      // Jusqu'au 23 octobre 2026 ces cartes « Accord » tombaient sous « Vos
+      // différences ».
+      const accordsPenchent = x.items.filter((i) => i.cat === 'accord' && i.desequilibre)
         .sort((u, v) => v.prio - u.prio);
-      const texteDom = x.bande && Q.domaines[x.id] && Q.domaines[x.id].rapport ? Q.domaines[x.id].rapport[x.bande] : '';
+      const diffs = x.items.filter((i) => i.cat !== 'accord' || i.chacunPlus)
+        .sort((u, v) => v.prio - u.prio);
+      const texteDom = texteDomaine(x, false);
       const inconnusDom = solo ? analyse.inconnus.filter((i) => i.domaine === x.id) : [];
-      const etiquetteNn = (i) => ((i.nnA || i.nnB) ? '<p><span class="rap-tag rap-tag--nn">' + tx('rapport.nnDe', { nom: i.nnA && i.nnB ? P.a.nom + ' & ' + P.b.nom : (i.nnA ? P.a.nom : P.b.nom) }) + '</span></p>' : '');
+      const etiquetteNn = (i) => ((i.nnA || i.nnB) ? '<span class="rap-tag rap-tag--nn">' + tx('rapport.nnDe', { nom: i.nnA && i.nnB ? P.a.nom + ' & ' + P.b.nom : (i.nnA ? P.a.nom : P.b.nom) }) + '</span>' : '');
       const casesAccord = accords.length
         ? '<div class="rap-accords">' + accords.map((i) => caseAccord(i, 'accord', etiquetteNn(i))).join('') + '</div>'
-        : '<p class="rap-vide">' + tx('rapport.domaines.accordsAucun') + '</p>';
+        : (accordsPenchent.length ? '' : '<p class="rap-vide">' + tx('rapport.domaines.accordsAucun') + '</p>');
+      const cartesPenchent = accordsPenchent.map((i) => carteEcart(i, { mode: 'court' })).join('');
       // Jusqu'à six accords (trois rangées), ils restent dans le bloc
       // insécable de l'en-tête ; au-delà, la grille peut se couper entre
       // deux rangées, et le bloc insécable reste court.
@@ -689,11 +787,12 @@ export function rapportHtml(d, T, Q, o) {
         + '<div class="rap-dom-pile">' + barreEmpilee(x.accords, x.proches, x.ecarts)
         + '<p class="rap-barre-compte rap-barre-compte--clair"><span class="rap-compte rap-compte--accord">' + x.accords + '</span><span class="rap-compte rap-compte--proche">' + x.proches + '</span><span class="rap-compte rap-compte--ecart">' + x.ecarts + '</span></p></div>'
         + '</div>'
-        + (texteDom ? '<p class="rap-dom-texte">' + tl(texteDom) + '</p>' : '')
+        + (texteDom ? '<p class="rap-dom-texte">' + texteDom + '</p>' : '')
         + '<p class="rap-h4 rap-h4--accord">' + tx('rapport.domaines.accords') + '</p>'
         + (accordsDansTete ? casesAccord : '')
         + '</div>'
         + (accordsDansTete ? '' : casesAccord)
+        + cartesPenchent
         + '<p class="rap-h4 rap-h4--diff">' + tx('rapport.domaines.differences') + '</p>'
         + (diffs.length ? diffs.map((i) => {
           const conv = analyse.conversations.indexOf(i.id);
@@ -713,10 +812,11 @@ export function rapportHtml(d, T, Q, o) {
   // ── 9. Pour finir : la synthèse de fin ──
 
   const total = analyse.compte.accords + analyse.compte.proches + analyse.compte.ecarts;
-  const partAccords = total ? Math.round(analyse.compte.accords / total * 100) : 0;
+  const parts = partsCent([analyse.compte.accords, analyse.compte.proches, analyse.compte.ecarts]);
+  const partAccords = parts[0];
   const lignesRepartition = '<ul class="rap-repartition">'
-    + [['accord', analyse.compte.accords], ['proche', analyse.compte.proches], ['ecart', analyse.compte.ecarts]].map(([c, n]) =>
-      '<li><span class="rap-compte rap-compte--' + c + '">' + tx('rapport.cat.' + c) + '</span><strong>' + n + '</strong><span class="rap-repartition-part">' + (total ? Math.round(n / total * 100) : 0) + ' %</span></li>').join('')
+    + [['accord', analyse.compte.accords], ['proche', analyse.compte.proches], ['ecart', analyse.compte.ecarts]].map(([c, n], k) =>
+      '<li><span class="rap-compte rap-compte--' + c + '">' + tx('rapport.cat.' + c) + '</span><strong>' + n + '</strong><span class="rap-repartition-part">' + parts[k] + ' %</span></li>').join('')
     + '</ul>';
   // Les accords sur ce qui engage une vie : le socle.
   const socle = analyse.items.filter((i) => i.poids === 3 && i.cat === 'accord').length;
@@ -724,10 +824,10 @@ export function rapportHtml(d, T, Q, o) {
   const colonneDomaines = (ids, cle) => '<div class="rap-fin-col rap-fin-col--' + cle + '"><p class="rap-encadre-titre">' + tx('rapport.fin.' + cle) + '</p>'
     + (ids.length ? ids.map((id) => {
       const x = domaineParId[id];
-      const texteDom = x.bande && Q.domaines[id] && Q.domaines[id].rapport ? Q.domaines[id].rapport[x.bande] : '';
+      const texteDom = texteDomaine(x, true);
       return '<div class="rap-fin-dom"><div class="rap-fin-dom-tete"><p class="rap-fin-dom-nom">' + tl(titreDomaine(id)) + '</p><p class="rap-fin-dom-val">' + x.score + ' %</p></div>'
         + '<div class="rap-barre-piste rap-barre-piste--fine"><span class="rap-barre-plein rap-barre-plein--' + x.bande + '" style="width:' + x.score + '%"></span></div>'
-        + (texteDom ? '<p class="rap-fin-dom-texte">' + tl(texteDom) + '</p>' : '') + '</div>';
+        + (texteDom ? '<p class="rap-fin-dom-texte">' + texteDom + '</p>' : '') + '</div>';
     }).join('') : '<p class="rap-vide">' + tx('rapport.fin.aucun') + '</p>') + '</div>';
   // La feuille de route : une conversation par semaine, puis les points
   // bloquants qui n'y sont pas, puis refaire l'évaluation.
@@ -745,7 +845,7 @@ export function rapportHtml(d, T, Q, o) {
     + '</ol>';
   const fin = chapitre('fin', numeroDe('fin'),
     '<div class="rap-fin-haut">'
-    + '<div class="rap-fin-don">' + anneauRepartition(analyse.compte, brut('rapport.fin.accordsPart'))
+    + '<div class="rap-fin-don">' + anneauRepartition(analyse.compte, brut('rapport.fin.accordsPart'), partAccords)
     + '<div><p class="rap-score-lib">' + tx('rapport.fin.repartition') + '</p>'
     + '<p class="rap-fin-don-texte">' + tx('rapport.fin.accordsTexte', { n: analyse.compte.accords, total, part: partAccords }) + '</p>' + lignesRepartition + '</div></div>'
     + '<div class="rap-fin-socle"><p class="rap-fin-socle-n">' + socle + '<span>/' + lourds + '</span></p><p class="rap-fin-socle-lib">' + tx('rapport.fin.socle') + '</p><p class="rap-aide">' + tx('rapport.fin.socleAide') + '</p></div>'

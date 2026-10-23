@@ -1053,3 +1053,84 @@ Thomas : « ok met un lien de téléchargement ».
   premier des deux ; le droit de rétractation prend fin à cet instant, comme
   avant), politique de confidentialité (Resend ne transporte plus le
   rapport), registre et analyse d'impact (risque 3 ramené à faible).
+
+
+## 23 octobre 2026 : la relecture du premier rapport vendu
+
+La première vente est arrivée le 23 octobre 2026. Thomas a transmis le
+rapport une seule fois, pour une relecture : « je veux que tu analyses le
+rapport qui leur a été envoyé pour t'assurer à 100% qu'il n'y a pas eu
+d'erreurs ou d'incohérences dans les résultats. Si c'est le cas, améliore
+pour les prochains ». Le rapport n'est gardé nulle part, et rien de ce qu'il
+contenait (prénoms, réponses) n'est écrit ici, dans les tests ou dans les
+commits.
+
+**Les calculs étaient justes** : l'alignement (moyenne des douze domaines),
+le ressenti de chacun (moyenne pondérée des questions de ressenti), les
+comptes d'accords, de réponses proches et d'écarts (avec les vingt questions
+de ressenti, ils font bien les cent questions), les questions miroir et la
+bande de chaque domaine. **La présentation, elle, prêtait à confusion à dix
+endroits**, d'où `VERSION_RAPPORT = 4` :
+
+- **La question citée sur une carte** était celle qu'avait lue la première
+  personne, avec le prénom de la seconde (« quand X sort sans vous »), et la
+  réponse de la seconde était posée dessous : elle semblait répondre à une
+  question sur elle-même. À deux, le rapport cite une version sans prénom
+  (`qNeutre` dans `{lang}/bilan-questions.json`, dix questions : « l'autre »,
+  « your partner », « tu pareja », « dein Partner oder deine Partnerin »,
+  « il tuo partner »). En solo, la question garde le prénom, comme la
+  personne l'a lue.
+- **La réponse commune d'un accord** était, elle aussi, celle de la première
+  personne (« Je défends X tout de suite ») : `reponseCommune` écrit la
+  version sans prénom (`oNeutre`), et pour une question miroir (« dans ma
+  famille » d'un côté, « dans la famille de X » de l'autre) la case qui dit
+  de quelle famille il s'agit, avec le bon prénom. Quand les deux genres
+  diffèrent, la forme neutre (« sûr(e) »).
+- **« Vous êtes d'accord : c'est surtout X »** (une question « qui fait
+  quoi » où les deux disent la même chose) arrivait sous « Vos
+  différences », avec un bandeau « Accord » : ces cartes passent avec les
+  accords, avant le titre des différences. La phrase ne dit plus « qui s'en
+  occupe », qui ne collait pas à toutes les questions (« qui fait le premier
+  pas »). En solo : « Vous pensez être d'accord ».
+- **La carte des domaines** annonçait « du plus accordé au plus discuté » et
+  suivait l'ordre des domaines : elle est triée.
+- **Les trois parts de la fin** (accords, proches, écarts) étaient arrondies
+  une à une et pouvaient faire 101 % : `partsCent` (méthode du plus fort
+  reste) les fait toujours tomber sur cent, et le centre de l'anneau reprend
+  la première.
+- **La couverture** disait « 100 questions comparées », alors que vingt
+  d'entre elles sont des questions de ressenti, qui ne se comparent pas :
+  « 100 questions ».
+- **Le texte d'un domaine** vient de l'accord des réponses, et pouvait dire
+  que tout allait bien juste au-dessus d'une carte de ressenti au plus bas.
+  Quand l'un des deux vit mal un domaine (ressenti sous 50 %), une phrase
+  suit le texte et renvoie au détail (`texteDomaine`, `domaines.climatBas`,
+  « Côté ressenti, au moins l'un de vous vit mal cette partie de la
+  relation en ce moment ») ; pour les disputes, dont le ressenti vient des
+  signaux de vigilance, `signauxBas` renvoie au chapitre des signaux (« Dans
+  les faits, certaines habitudes de dispute... »). La synthèse de fin a la
+  version courte, sans renvoi, et le solo sa variante (« ou vous pensez que
+  votre partenaire la vit mal »). Les deux phrases se lisent après un texte
+  positif comme après un texte négatif.
+- **Les cases d'accord** ne portaient pas l'étiquette « Sujet décisif » que
+  promet la page « Comment lire ce rapport » : les huit cases de « Ce qui
+  vous rassemble » se lisaient comme les sujets décisifs, et le socle de la
+  fin (« 7/8 ») semblait les contredire. Elles la portent, à côté de « Non
+  négociable pour X ».
+- **Les cartes de ressenti** d'un domaine mettent les écarts (« Vous ne le
+  vivez pas pareil ») avant les « À surveiller ».
+- **L'anglais** disait tantôt « deal-breaker », tantôt « non-negotiable »
+  pour la même chose : « non-negotiable » partout.
+
+Laissé tel quel : dans le chapitre du climat, les jauges par domaine vont de
+0 à 100 % (le mieux à droite) et les échelles de chaque question ont le mieux
+à gauche ; chacune est expliquée par la phrase juste au-dessus, et chaque
+carte écrit la réponse de chacun en toutes lettres.
+
+Les tests de `bilan/test/rapport.test.mjs` gardent chaque point, sur les
+couples inventés des exemples : aucune carte à deux ne cite un prénom dans
+sa question, les versions neutres existent dans les cinq langues, les parts
+font cent, la carte est triée, aucune carte « Accord » sous « Vos
+différences », la phrase du ressenti apparaît quand il le faut et seulement
+alors, l'étiquette suit le poids. Les trente rapports d'exemple passent les
+deux contrôles de mise en page.

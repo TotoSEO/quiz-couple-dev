@@ -248,7 +248,7 @@
         "de": "La evaluación de pareja de",
         "et": "y",
         "date": "Informe elaborado el {{date}}",
-        "chiffres": "{{domaines}} áreas · {{questions}} preguntas comparadas",
+        "chiffres": "{{domaines}} áreas · {{questions}} preguntas",
         "confidentiel": "Confidencial: este informe contiene las respuestas de los dos."
       },
       "lire": {
@@ -427,7 +427,7 @@
         "autant": "Los dos por igual",
         "chacunPlus": "Cada uno cree que hace más",
         "chacunPlusTexte": "Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro. Lo mejor es hacer juntos la lista de lo que se encarga cada uno, sin llevar la cuenta.",
-        "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
+        "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}}. ¿Os parece bien a los dos?",
         "accord": "Lo veis de la misma manera.",
         "aucun": "No hay ninguna pregunta de este tipo en vuestra evaluación."
       },
@@ -441,7 +441,11 @@
         "etats": "Cómo lo vivís",
         "inconnus": "Lo que no sabes",
         "voirConversation": "Lo encontraréis más arriba, con ideas para hablarlo: conversación {{n}}.",
-        "voirBloquants": "Lo encontraréis más arriba, con ideas para hablarlo: puntos de bloqueo."
+        "voirBloquants": "Lo encontraréis más arriba, con ideas para hablarlo: puntos de bloqueo.",
+        "climatBas": "En cuanto a lo que sentís, ahora mismo al menos uno de los dos no vive bien esta parte de la relación: lo encontraréis más abajo, en «{{titre}}».",
+        "climatBasCourt": "En cuanto a lo que sentís, ahora mismo al menos uno de los dos no vive bien esta parte de la relación.",
+        "signauxBas": "En la práctica, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo: lo encontraréis en el capítulo {{n}}, «{{titre}}».",
+        "signauxBasCourt": "En la práctica, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo."
       },
       "fin": {
         "intro": "Lo habéis leído todo, o casi. Este último resumen no repite el primero: cuenta vuestras respuestas de otra manera, se queda con lo que se sostiene y lo que pide trabajo, y propone un orden para hablarlo.",
@@ -523,10 +527,15 @@
           "parDomaineAide": "En las áreas que tienen preguntas sobre cómo os sentís, tu bienestar y el que le atribuyes a tu pareja, en la misma línea, de 0 a 100 %."
         },
         "roles": {
-          "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». La primera marca es tu respuesta, la segunda lo que respondería {{b}} según tú."
+          "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». La primera marca es tu respuesta, la segunda lo que respondería {{b}} según tú.",
+          "desequilibre": "Crees que estáis de acuerdo: es sobre todo {{nom}}. ¿Os parece bien a los dos?"
         },
         "domaines": {
-          "intro": "Todas tus respuestas, área por área: primero en qué crees estar de acuerdo, luego vuestras diferencias supuestas, de la más importante a la más pequeña, y lo que no sabes."
+          "intro": "Todas tus respuestas, área por área: primero en qué crees estar de acuerdo, luego vuestras diferencias supuestas, de la más importante a la más pequeña, y lo que no sabes.",
+          "climatBas": "En cuanto a lo que sientes, ahora mismo no vives bien esta parte de la relación, o crees que tu pareja no la vive bien: lo encontrarás más abajo, en «{{titre}}».",
+          "climatBasCourt": "En cuanto a lo que sientes, ahora mismo no vives bien esta parte de la relación, o crees que tu pareja no la vive bien.",
+          "signauxBas": "Según tú, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo: lo encontrarás en el capítulo {{n}}, «{{titre}}».",
+          "signauxBasCourt": "Según tú, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo."
         },
         "fin": {
           "accordsTexte": "De {{total}} preguntas en las que has sabido responder por tu pareja, crees tener la misma respuesta {{n}} veces, es decir, el {{part}} %.",
