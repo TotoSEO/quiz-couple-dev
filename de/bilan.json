@@ -612,10 +612,9 @@
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
     "sousTitre": "25 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
-    "ctaNote": "Kostenlose Fragen, ohne Konto. Ihr zahlt erst am Ende, und nur, wenn ihr den Bericht wollt.",
     "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
     "soloLien": "Mach sie allein",
-    "preuve": "Über {{n}} Quizze & Tests auf Quiz Couple gemacht",
+    "preuve": "{{nom}}: Tausende Besucher jeden Tag",
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
       "sur": "Beispielbericht · fiktives Paar",

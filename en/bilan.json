@@ -611,10 +611,9 @@
     "titre": "Take stock of your relationship, without seeing a professional",
     "sousTitre": "25 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
-    "ctaNote": "Free questions, no account needed. You only pay at the end, if you want the report.",
     "soloQuestion": "Your partner doesn't want to take part?",
     "soloLien": "Take it on your own",
-    "preuve": "Over {{n}} quizzes and tests taken on Quiz Couple",
+    "preuve": "{{nom}}: thousands of visitors every day",
     "paiements": "Secure payment via Stripe",
     "visuel": {
       "sur": "Sample report · fictional couple",

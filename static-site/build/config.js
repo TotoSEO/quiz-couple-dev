@@ -430,8 +430,9 @@ export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
 // Paramètres > Moyens de paiement. On retire d'ici un moyen qui n'est pas
 // activé : un pictogramme qui promet un moyen absent de la page de paiement
 // ferait l'inverse de rassurer. Les dessins sont dans bilan-couple.ejs
-// (PICTOS_PAIEMENT), un nom inconnu ici n'affiche rien.
-export const MOYENS_PAIEMENT = ['visa', 'mastercard', 'cb', 'applepay', 'googlepay', 'amazonpay'];
+// (PICTOS_PAIEMENT), un nom inconnu ici n'affiche rien. Amazon Pay est sorti
+// de la liste le 23 octobre 2026, à la demande de Thomas (son dessin reste).
+export const MOYENS_PAIEMENT = ['visa', 'mastercard', 'cb', 'applepay', 'googlepay'];
 
 export const VENDEUR = {
   nom: 'Visibilitea',

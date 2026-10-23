@@ -51,8 +51,8 @@
 .blp-wrap { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
 .blp-wrap--large { max-width: 84rem; }
 .blp-etroit { max-width: 50rem; }
-.blp-section { padding: 5rem 0; }
-@media (max-width: 640px) { .blp-section { padding: 3.25rem 0; } .blp-wrap { padding: 0 1rem; } }
+.blp-section { padding: 5.5rem 0; }
+@media (max-width: 640px) { .blp-section { padding: 4.25rem 0; } .blp-wrap { padding: 0 1.25rem; } }
 .blp-centre { text-align: center; }
 
 .blp-h1, .blp-h2 { font-family: var(--blp-page); font-weight: 700; letter-spacing: -.025em; text-wrap: balance; }
@@ -108,33 +108,23 @@
 
 /* ── La promesse ─────────────────────────────────────────────────────── */
 
-.blp-hero {
-  position: relative; color: hsl(var(--foreground)); padding: 2rem 0 4rem;
-  background:
-    radial-gradient(60rem 30rem at 85% 10%, hsl(var(--secondary) / .16), transparent 60%),
-    radial-gradient(40rem 26rem at 5% 90%, hsl(var(--primary) / .16), transparent 60%),
-    hsl(var(--background));
-}
-.dark .blp-hero {
-  background:
-    radial-gradient(60rem 30rem at 85% 10%, hsl(var(--secondary) / .22), transparent 60%),
-    radial-gradient(40rem 26rem at 5% 90%, hsl(var(--primary) / .18), transparent 60%),
-    hsl(var(--background));
-}
+/* Le haut de page : fond uni, sans dégradé (Thomas, 23 octobre 2026), et de
+   l'air entre chaque élément. */
+.blp-hero { position: relative; color: hsl(var(--foreground)); padding: 3.5rem 0 5rem; background: hsl(var(--background)); }
 .blp-hero-grille { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 3.5rem; align-items: center; }
 @media (max-width: 900px) {
-  .blp-hero-grille { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
-  .blp-hero { padding: 1.25rem 0 3rem; }
+  .blp-hero-grille { grid-template-columns: minmax(0, 1fr); gap: 3.5rem; }
+  .blp-hero { padding: 2rem 0 4rem; }
 }
 /* Le premier écran d'un téléphone (390 x 844) : titre, phrase, prix, bouton,
-   phrase qui rassure, lien « seul(e) » et moyens de paiement. */
+   lien « seul(e) », moyens de paiement et la ligne « Quiz Couple ». */
 @media (max-width: 480px) {
-  .blp-hero .blp-sur { margin-bottom: .6rem; }
-  .blp-hero .blp-lead { margin-bottom: 1.1rem; }
   .blp-ctas .blp-btn--grand { width: 100%; padding-left: 1.25rem; padding-right: 1.25rem; }
 }
-.blp-sur { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 1rem; }
-.blp-hero .blp-lead { color: hsl(var(--muted-foreground)); max-width: 34rem; }
+.blp-sur { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 1.1rem; }
+.blp-hero .blp-h1 { margin-bottom: 1.25rem; }
+.blp-hero .blp-lead { color: hsl(var(--muted-foreground)); max-width: 34rem; margin-bottom: 2rem; }
+.blp-hero .blp-solo { margin-top: 1.25rem; }
 .blp-coches { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: .7rem; }
 .blp-coches li { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .65rem; align-items: start; line-height: 1.5; }
 .blp-coche { width: 1.5rem; height: 1.5rem; border-radius: 50%; display: grid; place-items: center; background: hsl(var(--primary) / .14); color: hsl(var(--primary-texte)); }
@@ -146,15 +136,23 @@
 .blp-final .blp-solo-lien { color: #fff; }
 .blp-prix .blp-solo { color: hsl(0 0% 100% / .75); }
 .blp-prix .blp-solo-lien { color: hsl(var(--blp-rose-clair)); }
-/* Le nombre de quiz et de tests joués sur le site, sous les moyens de paiement. */
-.blp-preuve { display: flex; align-items: center; gap: .45rem; margin: 1rem 0 0; font-size: .86rem; font-weight: 600; line-height: 1.4; color: hsl(var(--foreground) / .8); }
-.blp-preuve svg { width: 1.05rem; height: 1.05rem; flex: none; color: hsl(var(--primary-texte)); fill: hsl(var(--primary) / .18); }
+/* « Quiz Couple, des milliers de visiteurs chaque jour », sous les moyens de
+   paiement : une pastille en aplat, les deux personnages qui se chevauchent,
+   puis la phrase. */
+.blp-preuve { display: inline-flex; align-items: center; gap: .75rem; margin: 1.75rem 0 0; padding: .45rem 1.1rem .45rem .55rem; border-radius: 999px;
+  background: hsl(var(--card)); border: 1px solid hsl(var(--border)); box-shadow: 0 8px 22px -16px hsl(var(--blp-nuit) / .45);
+  font-size: .9rem; line-height: 1.35; color: hsl(var(--foreground) / .85); }
+.blp-preuve strong { font-weight: 800; color: hsl(var(--foreground)); }
+.blp-preuve-persos { display: inline-flex; align-items: flex-end; flex: none; padding: .15rem .4rem 0; border-radius: 999px; background: hsl(var(--primary) / .1); }
+.blp-preuve-masc { display: block; width: 1.75rem; height: auto; }
+.blp-preuve-masc + .blp-preuve-masc { margin-left: -.45rem; }
+.dark .blp-preuve { box-shadow: none; }
 /* Les moyens de paiement sous le prix du hero (20 octobre 2026) : le cadenas et
    « Paiement sécurisé par Stripe », puis six vignettes blanches de 46 x 30 px
    dessinées dans le gabarit ; le fond reste blanc en thème sombre pour que les
    marques gardent leurs couleurs. Sur téléphone, le libellé prend sa ligne et
    les six vignettes tiennent sur la suivante dès 320 px. */
-.blp-paiements { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem; margin: .85rem 0 0; }
+.blp-paiements { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; margin: 2rem 0 0; }
 .blp-paiements-lib { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
 .blp-paiements-lib svg { width: .95rem; height: .95rem; flex: none; }
 .blp-paiements-liste { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
@@ -498,7 +496,7 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .blp .prix-promo-apres, .bilan-scene .prix-promo-apres { font-weight: 800; }
 /* Le hero : pastille, 9,90 € barré, 7,92 € et « pour le couple », juste
    au-dessus des boutons (sur téléphone aussi : même ordre que les boutons). */
-.blp-promo { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .7rem; margin: 0 0 1.1rem; }
+.blp-promo { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .7rem; margin: 0 0 1.5rem; }
 .blp-promo-prix { font: 600 1.15rem/1.2 var(--blp-page); color: hsl(var(--foreground)); }
 .blp-promo-prix .prix-promo-avant { font-size: .85em; font-weight: 600; color: hsl(var(--muted-foreground)); }
 .blp-promo-prix .prix-promo-avant s { opacity: 1; }
