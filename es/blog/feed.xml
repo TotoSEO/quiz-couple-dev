@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 22 Oct 2026 14:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Tras la muerte de Pierre, Marie Curie siguió escribiéndole: la historia de amor de los Curie</title>
+      <link>https://quiz-couple.com/es/blog/pierre-marie-curie-historia-amor/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/pierre-marie-curie-historia-amor/</guid>
+      <pubDate>Fri, 23 Oct 2026 06:10:00 GMT</pubDate>
+      <category>Historias de amor</category>
+      <description>Un encuentro en 1894, una boda sin vestido blanco, dos bicicletas para la luna de miel, el radio y el accidente de 1906. La historia de amor de Pierre y Marie Curie.</description>
+      <media:content url="https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>María Antonieta y Fersen: lo que los rayos X revelaron bajo los tachones de sus cartas</title>
       <link>https://quiz-couple.com/es/blog/maria-antonieta-fersen-cartas/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>Haces todo tú, él nada. O casi. Por qué algunos hombres dejan de esforzarse, cómo reconocerlo, qué significa y qué hacer concretamente.</description>
       <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>12 red flags en una mujer: lo que sientes probablemente tiene nombre</title>
-      <link>https://quiz-couple.com/es/blog/red-flags-en-una-mujer/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/red-flags-en-una-mujer/</guid>
-      <pubDate>Sat, 07 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Algo no cuadra en tu relación pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales en una mujer, la lista completa.</description>
-      <media:content url="https://quiz-couple.com/blog/red-flags-femme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Oct 2026 14:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>After Pierre died, Marie Curie kept writing to him: the Curies&#39; love story</title>
+      <link>https://quiz-couple.com/en/blog/pierre-marie-curie-love-story/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/pierre-marie-curie-love-story/</guid>
+      <pubDate>Fri, 23 Oct 2026 06:10:00 GMT</pubDate>
+      <category>Love stories</category>
+      <description>A meeting in 1894, a wedding with no white dress, two bicycles for a honeymoon, radium, then the accident of 1906. The love story of Pierre and Marie Curie.</description>
+      <media:content url="https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Marie Antoinette and Fersen: what X-rays found under the scribbled-out lines of their letters</title>
       <link>https://quiz-couple.com/en/blog/marie-antoinette-fersen-letters/</link>
@@ -272,15 +281,6 @@
       <category>Relationship</category>
       <description>You do everything, he does nothing. Or close to it. Why some men stop making an effort, how to recognise it, what it means and what to do about it.</description>
       <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>12 Red Flags in a woman: what you&#39;re feeling probably has a name</title>
-      <link>https://quiz-couple.com/en/blog/red-flags-in-a-woman/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/red-flags-in-a-woman/</guid>
-      <pubDate>Sat, 07 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>Something feels off in your relationship but you can&#39;t quite name it? Emotional, behavioural, relational red flags in a woman, the complete list.</description>
-      <media:content url="https://quiz-couple.com/blog/red-flags-femme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

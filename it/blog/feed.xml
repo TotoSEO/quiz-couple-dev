@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Thu, 22 Oct 2026 14:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Dopo la morte di Pierre, Marie Curie ha continuato a scrivergli: la storia d&#39;amore dei Curie</title>
+      <link>https://quiz-couple.com/it/blog/pierre-marie-curie-storia-amore/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/pierre-marie-curie-storia-amore/</guid>
+      <pubDate>Fri, 23 Oct 2026 06:10:00 GMT</pubDate>
+      <category>Storie d&#39;amore</category>
+      <description>Un incontro nel 1894, un matrimonio senza abito bianco, due biciclette per il viaggio di nozze, il radio e l&#39;incidente del 1906. La storia d&#39;amore di Pierre e Marie Curie.</description>
+      <media:content url="https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Maria Antonietta e Fersen: cosa hanno rivelato i raggi X sotto le cancellature delle loro lettere</title>
       <link>https://quiz-couple.com/it/blog/maria-antonietta-fersen-lettere/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>Fai tutto tu, lui niente. O quasi. Perché certi uomini smettono di impegnarsi, come riconoscerlo, cosa significa e cosa fare concretamente.</description>
       <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>12 red flag in una donna: quello che senti ha probabilmente un nome</title>
-      <link>https://quiz-couple.com/it/blog/red-flag-in-una-donna/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/red-flag-in-una-donna/</guid>
-      <pubDate>Sat, 07 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Qualcosa non va nella tua relazione ma non riesci a capire cosa. Red flag emotive, comportamentali, relazionali in una donna, la lista completa.</description>
-      <media:content url="https://quiz-couple.com/blog/red-flags-femme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

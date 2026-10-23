@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 22 Oct 2026 14:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Après la mort de Pierre, Marie Curie a continué de lui écrire : l&#39;histoire d&#39;amour des Curie</title>
+      <link>https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour/</guid>
+      <pubDate>Fri, 23 Oct 2026 06:10:00 GMT</pubDate>
+      <category>Histoires d&#39;amour</category>
+      <description>Une rencontre en 1894, un mariage sans robe blanche, deux vélos pour le voyage de noces, le radium, puis l&#39;accident de 1906. L&#39;histoire d&#39;amour de Pierre et Marie Curie.</description>
+      <media:content url="https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Marie-Antoinette et Fersen : ce que les rayons X ont révélé sous les ratures de leurs lettres</title>
       <link>https://quiz-couple.com/blog/marie-antoinette-fersen-lettres/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Dix activités en couple l&#39;été qui changent des sorties classiques : marché sans liste, baignade en rivière, nuit dehors. Simples et pas chères.</description>
       <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Comment sauver son couple : les étapes quand tout semble perdu</title>
-      <link>https://quiz-couple.com/blog/sauver-son-couple/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/sauver-son-couple/</guid>
-      <pubDate>Tue, 26 May 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Tu sens que ton couple s&#39;effondre ? Voici les étapes concrètes pour sauver ta relation, ou savoir quand il vaut mieux lâcher prise. Guide complet.</description>
-      <media:content url="https://quiz-couple.com/blog/sauver-son-couple.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>
