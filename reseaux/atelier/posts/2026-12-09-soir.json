@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-09",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-061",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Anniversary edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Back to your first date",
+            "b": "A brand new place"
+          },
+          {
+            "a": "A handwritten letter",
+            "b": "A photo book"
+          },
+          {
+            "a": "Weekend away",
+            "b": "Weekend in bed"
+          },
+          {
+            "a": "A big dinner",
+            "b": "A quiet picnic"
+          },
+          {
+            "a": "Dress up",
+            "b": "Pajamas and candles"
+          },
+          {
+            "a": "Same gift each year",
+            "b": "A new surprise each year"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Anniversary edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
