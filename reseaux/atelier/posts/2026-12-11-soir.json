@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-063",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Long distance",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Call every night",
+            "b": "One long call a week"
+          },
+          {
+            "a": "Visit them first",
+            "b": "They visit you first"
+          },
+          {
+            "a": "Watch a movie online",
+            "b": "Play a game online"
+          },
+          {
+            "a": "Send letters",
+            "b": "Send voice notes"
+          },
+          {
+            "a": "Sleep on a call",
+            "b": "Say goodnight and hang up"
+          },
+          {
+            "a": "Count the days",
+            "b": "Plan the next visit"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Long distance. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

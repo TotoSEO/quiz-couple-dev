@@ -1,0 +1,48 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-029",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Secret skills",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "Can your partner cook a real meal?",
+          "Can they whistle?",
+          "Can they dance?",
+          "Can they sing in tune?",
+          "Can they parallel park?",
+          "Can they juggle?",
+          "Can they draw?",
+          "Can they keep a plant alive?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

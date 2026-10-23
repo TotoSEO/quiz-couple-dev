@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-12",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-064",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Bath and shower",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Bubble bath together",
+            "b": "Shower duet"
+          },
+          {
+            "a": "Singing in the shower",
+            "b": "Dancing while brushing"
+          },
+          {
+            "a": "Hot water first",
+            "b": "Towel first"
+          },
+          {
+            "a": "Candles in the bathroom",
+            "b": "Music in the shower"
+          },
+          {
+            "a": "Long bath",
+            "b": "Quick shower"
+          },
+          {
+            "a": "Share a towel",
+            "b": "Two towels"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Bath and shower. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
