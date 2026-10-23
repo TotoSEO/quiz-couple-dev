@@ -1,6 +1,6 @@
 {
   "title": "Terms of sale",
-  "majLe": "Last updated: 20 October 2026",
+  "majLe": "Last updated: 22 October 2026",
   "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
   "liens": {
     "contact": "contact page",
@@ -23,7 +23,7 @@
       "titre": "1. What is sold",
       "p": [
         "The relationship assessment is a questionnaire that two partners each answer separately, or that one person answers alone, also saying what they think their partner would answer (solo mode). Answering the questions is free; no result is given without a purchase.",
-        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document sent by email, and the same version available on the assessment page.",
+        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document, downloaded from the personal link sent by email, and the same version available on the assessment page.",
         "The assessment is for adults only. The report is an ordinary PDF file that opens in any PDF reader, on a phone or a computer; the same version can be read on the assessment page. The terms that apply to a purchase are those online at the time of payment."
       ]
     },
@@ -38,14 +38,14 @@
     {
       "titre": "3. Ordering and payment",
       "p": [
-        "Payment is offered to each partner as soon as they have finished their own answers. Before paying, the buyer can enter the email address where the report should be sent, and ticks a box by which they expressly request that the report be provided as soon as it is ready, without waiting for the end of the withdrawal period, and acknowledge that they lose their right of withdrawal once the report is provided (see section 5). The email that delivers the report repeats this request and this acknowledgement.",
+        "Payment is offered to each partner as soon as they have finished their own answers. Before paying, the buyer can enter the email address where the report should be sent, and ticks a box by which they expressly request that the report be provided as soon as it is ready, without waiting for the end of the withdrawal period, and acknowledge that they lose their right of withdrawal once the report is provided (see section 5). The email that delivers the link to the report repeats this request and this acknowledgement.",
         "Payment is made on the secure page of our provider Stripe, by bank card, Apple Pay or Google Pay. We never have access to card details. Stripe sends a receipt to the email address given at payment: this is the order confirmation. An invoice can be requested from the {{contact}}."
       ]
     },
     {
       "titre": "4. Providing the report",
       "p": [
-        "The report is produced as soon as payment is confirmed and both partners have finished answering (or, in solo mode, the person has finished). It is then sent as a PDF to the email addresses given, and shown on the assessment page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the assessment is erased.",
+        "The report is produced as soon as payment is confirmed and both partners have finished answering (or, in solo mode, the person has finished). Each email address given then receives a personal link to download it as a PDF, and it is shown on the assessment page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the assessment is erased.",
         "If the partner doesn't finish their answers, the report can't be produced: the buyer can then ask for a refund at any time from the {{contact}}.",
         "Either partner can delete the assessment before then. Deletion is immediate and permanent, for both, and gives no right to any refund."
       ]
@@ -54,7 +54,7 @@
       "titre": "5. The right of withdrawal",
       "p": [
         "The report is digital content supplied without a physical medium. For this type of content, Article L221-28 13° of the French Consumer Code (which implements Article 16(m) of Directive 2011/83/EU) provides that the fourteen-day right of withdrawal can no longer be exercised once performance has begun with the consumer's express consent and after they have acknowledged that they thereby lose that right. That is what the buyer accepts by ticking the box before paying.",
-        "The report is provided at the moment it is sent by email or made available on the assessment page, whichever comes first. From that moment the right of withdrawal has ended: the purchase is final and can no longer be refunded on that basis.",
+        "The report is provided at the moment it is made available: when the email giving its download link is sent, or when it is shown on the assessment page, whichever comes first. From that moment the right of withdrawal has ended: the purchase is final and can no longer be refunded on that basis.",
         "As long as the report has not been provided, for instance because the partner has not finished answering, the buyer may withdraw without giving any reason within fourteen days of payment, by writing to us from the {{contact}}. They are then refunded in full, to the payment method used, within fourteen days."
       ]
     },

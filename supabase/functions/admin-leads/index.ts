@@ -58,16 +58,18 @@ serve(async (req) => {
         if (/^[=+\-@\t\r]/.test(t)) t = "'" + t;
         return /[",\n\r;]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
       };
-      const lignes: string[] = ['email,lang,source,statut,captures,consent_at,created_at'];
+      // Le prénom (22 octobre 2026) est vide pour qui ne l'a pas donné : un
+      // e-mail qui l'utilise doit prévoir un repli (« Bonjour, » tout court).
+      const lignes: string[] = ['email,prenom,lang,source,statut,captures,consent_at,created_at'];
       for (let depuis = 0; ; depuis += 1000) {
         const { data, error } = await supabase
           .from('abonnes')
-          .select('email, lang, source, statut, captures, consent_at, created_at')
+          .select('email, prenom, lang, source, statut, captures, consent_at, created_at')
           .order('created_at', { ascending: true })
           .range(depuis, depuis + 999);
         if (error) throw error;
         for (const a of data || []) {
-          lignes.push([a.email, a.lang, a.source, a.statut, a.captures, a.consent_at, a.created_at].map(csv).join(','));
+          lignes.push([a.email, a.prenom, a.lang, a.source, a.statut, a.captures, a.consent_at, a.created_at].map(csv).join(','));
         }
         if (!data || data.length < 1000) break;
       }

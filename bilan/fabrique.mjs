@@ -28,26 +28,34 @@ const PAR_PASSAGE = 25;
 
 const masquer = (v) => { if (v && process.env.GITHUB_ACTIONS) console.log(`::add-mask::${v}`); };
 
+// La clé de service, pour la base et le stockage, et la liste des clés qui
+// peuvent ouvrir l'action interne `envoyer_rapport` : la fonction compare ce
+// qu'elle reçoit à sa variable SUPABASE_SERVICE_ROLE_KEY, qui selon le projet
+// est l'ancienne clé service_role ou une clé secrète (sb_secret_...). Le
+// 22 octobre 2026, la relance, écrite pareil, répondait 403 « interne » à
+// chaque passage avec la première : `envoyer` les essaie toutes.
 async function connexion(env = process.env) {
-  let url = env.SUPABASE_URL;
-  let cle = env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!cle) {
-    const ref = env.SUPABASE_PROJECT_REF;
-    const jeton = env.SUPABASE_ACCESS_TOKEN;
-    if (!ref || !jeton) throw new Error('ni clé service, ni SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF');
-    const r = await fetch(`https://api.supabase.com/v1/projects/${ref}/api-keys?reveal=true`, { headers: { Authorization: `Bearer ${jeton}` } });
-    if (!r.ok) throw new Error(`clés introuvables (${r.status})`);
-    const cles = await r.json();
-    const service = cles.find((k) => k.name === 'service_role') || cles.find((k) => k.type === 'secret');
-    if (!service?.api_key) throw new Error('pas de clé service dans le projet');
-    cle = service.api_key;
-    url = url || `https://${ref}.supabase.co`;
+  if (env.SUPABASE_SERVICE_ROLE_KEY) {
+    const cle = env.SUPABASE_SERVICE_ROLE_KEY;
+    masquer(cle);
+    return { url: env.SUPABASE_URL.replace(/\/$/, ''), cle, candidats: [{ nom: 'SUPABASE_SERVICE_ROLE_KEY', cle }] };
   }
-  masquer(cle);
-  return { url: url.replace(/\/$/, ''), cle };
+  const ref = env.SUPABASE_PROJECT_REF;
+  const jeton = env.SUPABASE_ACCESS_TOKEN;
+  if (!ref || !jeton) throw new Error('ni clé service, ni SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF');
+  const r = await fetch(`https://api.supabase.com/v1/projects/${ref}/api-keys?reveal=true`, { headers: { Authorization: `Bearer ${jeton}` } });
+  if (!r.ok) throw new Error(`clés introuvables (${r.status})`);
+  const cles = await r.json();
+  const candidats = [
+    ...cles.filter((k) => k.name === 'service_role'),
+    ...cles.filter((k) => k.type === 'secret' && k.name !== 'service_role'),
+  ].filter((k) => k.api_key).map((k) => ({ nom: `${k.name} (${k.type || '?'})`, cle: k.api_key }));
+  if (!candidats.length) throw new Error('pas de clé service dans le projet');
+  candidats.forEach((c) => masquer(c.cle));
+  return { url: (env.SUPABASE_URL || `https://${ref}.supabase.co`).replace(/\/$/, ''), cle: candidats[0].cle, candidats };
 }
 
-function client({ url, cle }) {
+function client({ url, cle, candidats }) {
   const entetes = (plus) => ({ apikey: cle, Authorization: `Bearer ${cle}`, ...(plus || {}) });
   async function appel(chemin, options = {}) {
     const r = await fetch(url + chemin, { ...options, headers: entetes(options.headers) });
@@ -58,7 +66,7 @@ function client({ url, cle }) {
     return r;
   }
   const json = async (chemin, options) => (await appel(chemin, options)).json();
-  return { appel, json, url, cle };
+  return { appel, json, url, cle, candidats, interne: 0 };
 }
 
 const iso = (ms) => new Date(Date.now() - ms).toISOString();
@@ -139,14 +147,25 @@ async function effacer(db, chemins) {
 }
 
 async function envoyer(db, id) {
-  const r = await fetch(`${db.url}/functions/v1/bilan`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${db.cle}`, apikey: db.cle, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'envoyer_rapport', id }),
-  });
-  const corps = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(`envoi : ${r.status} ${JSON.stringify(corps).slice(0, 200)}`);
-  return corps;
+  for (let i = db.interne; i < db.candidats.length; i++) {
+    const { nom, cle } = db.candidats[i];
+    const r = await fetch(`${db.url}/functions/v1/bilan`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${cle}`, apikey: cle, 'x-cle-service': cle, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'envoyer_rapport', id }),
+    });
+    const corps = await r.json().catch(() => ({}));
+    if ((r.status === 403 && corps.erreur === 'interne') || r.status === 401) {
+      console.log(`[fabrique] clé ${nom} refusée par la fonction (${r.status})`);
+      continue;
+    }
+    if (!db.annoncee) console.log(`[fabrique] clé acceptée par la fonction : ${nom}`);
+    db.interne = i;
+    db.annoncee = true;
+    if (!r.ok) throw new Error(`envoi : ${r.status} ${JSON.stringify(corps).slice(0, 200)}`);
+    return corps;
+  }
+  throw new Error(`envoi : aucune clé acceptée par la fonction (${db.candidats.map((c) => c.nom).join(', ')})`);
 }
 
 // Les fichiers dont le bilan n'existe plus.

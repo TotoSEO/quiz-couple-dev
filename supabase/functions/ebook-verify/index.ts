@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { prenomPropre } from '../_shared/abonnes/regles.mjs';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -321,6 +322,13 @@ serve(async (req) => {
           const { error: errAbonne } = await supabase
             .from('abonnes')
             .upsert({ email: emailAbonne, lang: 'fr', source: 'ebook', statut: 'actif', verifie: true }, { onConflict: 'email', ignoreDuplicates: true });
+          // Le prénom de la demande, s'il n'y en a pas déjà un (même règle que
+          // la porte des résultats : des lettres seulement).
+          const prenom = prenomPropre(lead.first_name);
+          if (!errAbonne && prenom) {
+            const { error: errPrenom } = await supabase.from('abonnes').update({ prenom }).eq('email', emailAbonne).is('prenom', null);
+            if (errPrenom) console.warn('[ebook-verify] prénom :', errPrenom.message);
+          }
           if (errAbonne) console.warn('[ebook-verify] abonnes :', errAbonne.message);
         }
       } catch (e) {

@@ -51,3 +51,23 @@ test('la page de désinscription est dans la langue et sans injection', () => {
   assert.ok(R.pageDesinscription('xx', false).includes('<html lang="fr">'));
   assert.ok(R.pageDesinscription('fr', false).includes('déjà désinscrite'));
 });
+
+test('le prénom : des lettres seulement, mis en forme quand il est tout en minuscules ou en capitales', () => {
+  assert.equal(R.prenomPropre('  Léa '), 'Léa');
+  assert.equal(R.prenomPropre('thomas'), 'Thomas');
+  assert.equal(R.prenomPropre('MARIE-ÈVE'), 'Marie-Ève');
+  assert.equal(R.prenomPropre("n'golo"), "N'Golo");
+  assert.equal(R.prenomPropre('Jean   Pierre'), 'Jean Pierre');
+  assert.equal(R.prenomPropre('J.-B.'), 'J.-B.');
+  assert.equal(R.prenomPropre('McKenzie'), 'McKenzie', 'une casse mixte reste telle quelle');
+  assert.equal(R.prenomPropre('Zoë'), 'Zoë');
+  assert.equal(R.prenomPropre('Ελένη'), 'Ελένη');
+  for (const faux of ['', ' ', 'Léa2', 'http://x.fr', 'a@b.fr', '<b>', 'Léa!', '-Léa', "Léa--Rose", 'x'.repeat(41), null, undefined, 42]) {
+    assert.equal(R.prenomPropre(faux), null, String(faux));
+  }
+});
+
+test("l'empreinte de la clé du prénom", async () => {
+  const h = await R.empreinte('abc');
+  assert.equal(h, 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+});

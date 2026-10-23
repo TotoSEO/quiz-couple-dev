@@ -116,7 +116,11 @@ export const RELANCE_APRES_H = 24;
 // Les liens personnels écrits dans ces e-mails ont leur propre jeton
 // (jetons_mail : rôle et empreinte), pour ne pas toucher au lien gardé sur le
 // téléphone. Au plus quatre par évaluation, les plus anciens tombent.
-export const JETONS_MAIL_MAX = 4;
+// Depuis le 22 octobre 2026, l'e-mail du rapport porte lui aussi un lien
+// personnel par adresse, valable six mois : la place pour tous les envois du
+// rapport (ENVOIS_MAX) plus le « prêt » et le rappel, pour qu'aucun lien de
+// rapport ne tombe.
+export const JETONS_MAIL_MAX = ENVOIS_MAX + 2;
 // Ce que la page compte elle-même, en plus de la visite et du clic sur
 // « Commencer » (21 octobre 2026, Thomas devant l'entonnoir : « comment cette
 // stat prend en compte les gens qui répondent seul ? »). Chaque écran du
@@ -125,7 +129,9 @@ export const JETONS_MAIL_MAX = 4;
 // cause pour une erreur du départ, le rôle (a, b) pour l'écran de l'adresse,
 // rien sinon.
 export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante'];
-const CAUSES_DEPART = ['prenoms', 'accord'];
+// `accord` : les deux cases ensemble, jusqu'au 22 octobre 2026 ; depuis, la
+// case des 18 ans (`majeur`) et celle du consentement sont comptées à part.
+const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -178,6 +184,24 @@ function etapeDe(situation, reponses) {
     if (qs.length && !e.finis.includes(d.id)) return d.id;
   }
   return 'fini';
+}
+
+// Les adresses où envoyer le rapport, sans doublon, chacune avec le rôle dont
+// elle ouvre l'évaluation : l'adresse du reçu Stripe prend celui du payeur.
+function destinatairesRoles(ligne) {
+  const vues = new Set();
+  const liste = [];
+  const solo = ligne.mode === 'solo';
+  // Les adresses des deux d'abord : si le reçu Stripe est parti à l'adresse
+  // de l'autre, celle-ci reçoit son propre lien, pas celui du payeur.
+  for (const [e, r] of [[ligne.a_email, 'a'], [ligne.b_email, 'b'], [ligne.paiement_email, ligne.paiement_role || 'a']]) {
+    if (!e) continue;
+    const cle = e.toLowerCase();
+    if (vues.has(cle)) continue;
+    vues.add(cle);
+    liste.push({ email: e, role: solo ? 'a' : (r === 'b' ? 'b' : 'a') });
+  }
+  return liste;
 }
 
 // Les adresses où envoyer le rapport, sans doublon.
@@ -689,38 +713,42 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return ok({ paye });
   }
 
-  // Envoie le PDF prêt aux adresses qui ne l'ont pas encore reçu. Appelé par
-  // la fabrique (action interne) juste après avoir rangé le fichier, et par
-  // la page quand quelqu'un donne son adresse après coup.
+  // Envoie le lien du rapport prêt aux adresses qui ne l'ont pas encore
+  // reçu. Appelé par la fabrique (action interne) juste après avoir rangé le
+  // fichier, et par la page quand quelqu'un donne son adresse après coup.
+  // Depuis le 22 octobre 2026, plus de pièce jointe : chaque adresse reçoit
+  // son propre lien (un jeton de jetons_mail, celui de son rôle), qui ouvre
+  // le rapport et lance le téléchargement du PDF.
   async function envoyerA(ligne) {
     if (!ligne.paye_le || ligne.rapport_statut !== 'pret' || !ligne.rapport_chemin) {
       return { envoyes: 0, attente: true };
     }
     const envois = Array.isArray(ligne.envois) ? ligne.envois.slice() : [];
     const deja = new Set(envois.filter((e) => e.ok).map((e) => String(e.email).toLowerCase()));
-    const restants = destinataires(ligne).filter((e) => !deja.has(e.toLowerCase()));
+    const restants = destinatairesRoles(ligne).filter((d) => !deja.has(d.email.toLowerCase()));
     if (!restants.length) return { envoyes: 0 };
     if (!courriel) return { envoyes: 0, erreur: 'courriel' };
     if (envois.length >= ENVOIS_MAX) return { envoyes: 0, erreur: 'trop' };
-    const octets = await stockage.lireFichier(ligne.rapport_chemin);
     const mode = estSolo(ligne) ? 'solo' : 'duo';
-    const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, pages: ligne.rapport_pages, mode });
-    const nom = nomFichier(ligne.lang, ligne.a_prenom, ligne.b_prenom, mode);
+    let jetons = ligne.jetons_mail;
     let envoyes = 0;
     for (const dest of restants) {
       if (envois.length >= ENVOIS_MAX) break;
+      const j = await jetonMail(jetons, dest.role);
+      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, pages: ligne.rapport_pages, mode, url: lienDe(ligne, j.jeton) });
       let reussi = false;
       try {
-        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }], lang: ligne.lang });
+        await courriel.envoyer({ a: dest.email, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
         reussi = true;
         envoyes++;
+        jetons = j.jetons;
       } catch (e) {
         console.error('[bilan] envoi', String(e && e.message || e).slice(0, 200));
       }
-      envois.push({ email: dest, le: maintenant().toISOString(), ok: reussi });
+      envois.push({ email: dest.email, le: maintenant().toISOString(), ok: reussi });
       await compter(reussi ? 'envoi_ok' : 'envoi_echec');
     }
-    await stockage.maj(ligne.id, { envois });
+    await stockage.maj(ligne.id, { envois, jetons_mail: jetons });
     return { envoyes, echecs: restants.length - envoyes };
   }
 
@@ -788,8 +816,8 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   // ── Rapport prêt, rappel et « ne plus recevoir » ─────────────────────
 
-  // Les comptes de l'aperçu, tirés de la même analyse que le rapport. Aucun
-  // identifiant de question, aucune réponse, aucun domaine.
+  // Les comptes de l'aperçu, tirés de la même analyse que le rapport, et le
+  // radar des domaines. Aucun identifiant de question, aucune réponse.
   function apercuDe(ligne) {
     const solo = estSolo(ligne);
     const an = C.analyser(
@@ -807,6 +835,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       inconnus: solo ? k.inconnus : 0,
       questions: k.poses,
       conversations: an.conversations.length,
+      // Le radar de la synthèse (22 octobre 2026, Thomas : « une partie des
+      // résultats gratuite, mais vraiment rien, genre juste la synthèse, le
+      // graphique araignée ») : le score de chaque domaine et sa bande, comme
+      // le radar du rapport. Jamais une question ni une réponse.
+      radar: an.domaines.filter((x) => !x.meteo && x.score !== null).map((x) => ({ id: x.id, score: x.score, bande: x.bande })),
     };
   }
 

@@ -51,14 +51,15 @@
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca las dos casillas para continuar.",
       "email": "Tu e-mail",
-      "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para avisarte cuando tu informe esté listo, con un solo recordatorio si al día siguiente sigue esperando.",
+      "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para avisarte cuando tu informe esté listo, con un solo recordatorio si al día siguiente sigue esperando.",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
-      "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el informe en PDF.",
+      "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
       "autreDefaut": "tu pareja"
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
       "texte": "Envía este enlace a {{autre}}. {{autre}} responderá por su lado, en su móvil, sin ver tus respuestas, y tú no verás las suyas hasta el final.",
+      "suite": "No hace falta esperar a {{autre}}: empieza tus respuestas ya, cada uno avanza por su lado.",
       "envoyer": "Enviar el enlace",
       "copier": "Copiar el enlace",
       "copie": "¡Enlace copiado!",
@@ -153,7 +154,7 @@
         "decisifs0": "Ninguna diferencia en los temas decisivos, los que más pesan en una pareja.",
         "decisifsUn": "Entre ellas, una diferencia en un tema decisivo, de los que más pesan en una pareja.",
         "decisifsN": "Entre ellas, {{n}} diferencias en temas decisivos, los que más pesan en una pareja.",
-        "quoi": "El informe os dice cuáles, qué significan para los dos y cómo hablarlo."
+        "quoi": "El informe os dice cuáles y cómo hablarlo. Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado."
       },
       "contenu": [
         "Vuestra alineación y el clima de vuestra pareja, de un vistazo",
@@ -163,13 +164,13 @@
         "Para cada diferencia: por qué importa, preguntas para hablarlo y lo que más vale evitar",
         "Vuestras señales de alerta en las discusiones",
         "Quién hace qué en casa, según cada uno",
-        "El informe completo en PDF, enviado por correo en cuanto está listo, y en línea durante seis meses"
+        "El informe completo en PDF, con su enlace de descarga por correo en cuanto está listo, y en línea durante seis meses"
       ],
       "prix": "{{prix}} para los dos",
       "prixAide": "Un solo pago, y {{autre}} no tendrá nada que pagar. Sin suscripción.",
       "emailLabel": "¿A dónde te enviamos el informe?",
       "emailPlaceholder": "tu@email.com",
-      "emailAide": "El PDF saldrá a esta dirección en cuanto hayáis terminado los dos.",
+      "emailAide": "El enlace al PDF saldrá a esta dirección en cuanto hayáis terminado los dos.",
       "emailFaux": "Esta dirección no parece válida.",
       "renonciation": "Pido que el informe se me entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento de 14 días, y reconozco que pierdo mi derecho de desistimiento una vez entregado.",
       "renonciationManque": "Marca la casilla para continuar.",
@@ -202,7 +203,7 @@
         "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
-        "emailAide": "El informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
+        "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
         "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?»."
       },
       "domaine": {
@@ -218,14 +219,14 @@
           "Para cada diferencia: por qué cuenta, preguntas para hablarlo y lo que más vale evitar",
           "Vuestras señales de alerta en las discusiones",
           "Quién hace qué en casa, visto por ti",
-          "El informe completo en PDF, enviado por correo en cuanto está listo, y en línea durante seis meses"
+          "El informe completo en PDF, con su enlace de descarga por correo en cuanto está listo, y en línea durante seis meses"
         ],
         "prixAide": "Un solo pago, sin suscripción. Tu pareja no se entera.",
-        "emailAide": "El PDF llegará a esta dirección en cuanto pagues.",
+        "emailAide": "El enlace al PDF llegará a esta dirección en cuanto pagues.",
         "pretTitre": "{{moi}}, tu informe está listo",
         "apercu": {
           "intro": "Tus respuestas se han comparado con lo que crees que respondería {{autre}}:",
-          "quoi": "El informe te dice cuáles, qué significan y por dónde empezar.",
+          "quoi": "El informe te dice cuáles y por dónde empezar. Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.",
           "inconnusUn": "Y un tema en el que no sabes qué respondería {{autre}}.",
           "inconnusN": "Y {{n}} temas en los que no sabes qué respondería {{autre}}."
         },
@@ -545,15 +546,15 @@
       },
       "ecran": {
         "telecharger": "Descargar el PDF",
-        "pdfPrepa": "Vuestro PDF se está preparando: llegará en unos minutos, por correo y aquí.",
-        "pdfErreur": "El PDF se está retrasando. Os lo enviaremos en cuanto esté listo, no tenéis que hacer nada.",
-        "envoyeA": "El PDF se ha enviado a {{emails}}. Si no aparece, mira en el correo no deseado.",
-        "envoiA": "El PDF llegará a {{emails}} en cuanto esté listo. No tienes que pedir nada.",
+        "pdfPrepa": "Vuestro PDF se está preparando: estará listo aquí en unos minutos, y su enlace os llegará por correo.",
+        "pdfErreur": "El PDF se está retrasando. Os enviaremos su enlace por correo en cuanto esté listo, no tenéis que hacer nada.",
+        "envoyeA": "El enlace al PDF se ha enviado a {{emails}}. Si no aparece, mira en el correo no deseado.",
+        "envoiA": "El enlace al PDF llegará a {{emails}} en cuanto esté listo. No tienes que pedir nada.",
         "emailTitre": "Tu informe por correo",
         "emailAide": "Esta dirección sustituye a la tuya para este informe. No sirve para nada más.",
         "emailChamp": "Tu correo electrónico",
         "emailBouton": "Enviar",
-        "emailOk": "¡Anotado! El PDF va a esta dirección.",
+        "emailOk": "¡Anotado! El enlace al PDF va a esta dirección.",
         "emailFaux": "Esta dirección no parece válida.",
         "imprimer": "Imprimir",
         "supprimer": "Borrar nuestra evaluación",
@@ -561,7 +562,7 @@
         "supprimerAide": "La evaluación se borra para los dos, enseguida y para siempre, PDF incluido. Acordaos de guardar el PDF antes.",
         "supprime": "Vuestra evaluación se ha borrada.",
         "garde": "Este informe sigue disponible seis meses en esta página, para los dos.",
-        "envoiSans": "El PDF saldrá por correo en cuanto esté listo.",
+        "envoiSans": "El enlace al PDF saldrá por correo en cuanto esté listo.",
         "emailAutre": "Recibirlo en otra dirección"
       }
     },
@@ -734,7 +735,7 @@
         {
           "duree": "6 meses en línea",
           "titre": "Lo leéis, y lo habláis",
-          "texte": "El PDF llega por correo en cuanto todo está respondido, y el informe queda en línea seis meses. Termina con una hoja de ruta: un tema por semana."
+          "texte": "El enlace al PDF llega por correo en cuanto todo está respondido, y el informe queda en línea seis meses. Termina con una hoja de ruta: un tema por semana."
         }
       ]
     },
@@ -885,6 +886,7 @@
       "p2": "La evaluación no es un test clínico y no sustituye a un profesional. Es un cuestionario serio, construido a partir de lo que la investigación sabe de las parejas, para ayudaros a hablar de los temas adecuados."
     },
     "prix": {
+      "accroche": "Las parejas se olvidan demasiado a menudo de hacer balance de su relación. 30 minutos cada uno y unos pocos euros pueden cambiar las cosas de verdad.",
       "titre": "Un solo precio, para los dos",
       "unite": "para la pareja, de una vez",
       "aide": "Solo pagáis al final, una vez dadas vuestras respuestas. Un solo pago, de uno o del otro. Sin suscripción, sin cuenta.",
@@ -892,7 +894,7 @@
         "100 preguntas sobre doce áreas",
         "El informe completo, unas cuarenta páginas con sus gráficos",
         "Vuestras cuatro próximas conversaciones, con pistas para llevarlas",
-        "El PDF por correo y la versión en línea durante seis meses",
+        "El PDF para descargar y la versión en línea durante seis meses",
         "El mismo informe, la hagáis en pareja o a solas"
       ],
       "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta un mensaje."
@@ -902,7 +904,7 @@
       "points": [
         {
           "titre": "Sin cuenta",
-          "texte": "Cada uno accede a la evaluación por su propio enlace. Ninguna contraseña, y una dirección de correo solo para enviaros el informe."
+          "texte": "Cada uno accede a la evaluación por su propio enlace. Ninguna contraseña, y una dirección de correo solo para enviaros el enlace del informe."
         },
         {
           "titre": "Nada se muestra antes del final",

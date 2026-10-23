@@ -51,14 +51,15 @@
       "prenomManque": "Schreib eure beiden Vornamen.",
       "accordManque": "Setz beide Häkchen, um weiterzumachen.",
       "email": "Deine E-Mail",
-      "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir sagen dir Bescheid, wenn dein Bericht bereit ist, mit einer einzigen Erinnerung, falls er am nächsten Tag noch wartet.",
+      "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir sagen dir Bescheid, wenn dein Bericht bereit ist, mit einer einzigen Erinnerung, falls er am nächsten Tag noch wartet.",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
-      "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Bericht als PDF.",
+      "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Link zum Bericht als PDF.",
       "autreDefaut": "dein Partner oder deine Partnerin"
     },
     "invitation": {
       "titre": "Lade {{autre}} ein",
       "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
+      "suite": "Du musst nicht auf {{autre}} warten: Fang jetzt mit deinen Antworten an, jeder antwortet in seinem eigenen Tempo.",
       "envoyer": "Link senden",
       "copier": "Link kopieren",
       "copie": "Link kopiert!",
@@ -153,7 +154,7 @@
         "decisifs0": "Kein Unterschied bei den entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
         "decisifsUn": "Davon einer bei einem entscheidenden Thema, einem von denen, die in einer Beziehung am meisten wiegen.",
         "decisifsN": "Davon {{n}} bei entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
-        "quoi": "Der Bericht sagt euch, welche es sind, was sie für euch beide bedeuten und wie ihr darüber reden könnt."
+        "quoi": "Der Bericht sagt euch, welche es sind und wie ihr darüber redet. Kaum ein Paar nimmt sich je die Zeit dafür, ihr habt es getan."
       },
       "contenu": [
         "Eure Übereinstimmung und das Klima in eurer Beziehung, auf einen Blick",
@@ -163,13 +164,13 @@
         "Zu jedem Unterschied: warum er zählt, Fragen, um darüber zu reden, und was ihr besser vermeidet",
         "Eure Warnsignale beim Streiten",
         "Wer was im Haushalt macht, aus der Sicht jedes Einzelnen",
-        "Der vollständige Bericht als PDF, per E-Mail, sobald er fertig ist, und sechs Monate lang online"
+        "Der vollständige Bericht als PDF, der Download-Link per E-Mail, sobald er fertig ist, und sechs Monate lang online"
       ],
       "prix": "{{prix}} für euch beide",
       "prixAide": "Eine einzige Zahlung, und {{autre}} muss nichts bezahlen. Kein Abo.",
       "emailLabel": "Wohin sollen wir den Bericht schicken?",
       "emailPlaceholder": "du@email.de",
-      "emailAide": "Das PDF geht an diese Adresse, sobald ihr beide fertig seid.",
+      "emailAide": "Der Link zum PDF geht an diese Adresse, sobald ihr beide fertig seid.",
       "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
       "renonciation": "Ich verlange, dass der Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der 14-tägigen Widerrufsfrist abzuwarten, und bestätige, dass ich mein Widerrufsrecht verliere, sobald er bereitgestellt ist.",
       "renonciationManque": "Setz das Häkchen, um weiterzumachen.",
@@ -202,7 +203,7 @@
         "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
         "creer": "Meine Analyse beginnen",
-        "emailAide": "Der Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
+        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
         "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“."
       },
       "domaine": {
@@ -218,14 +219,14 @@
           "Zu jedem Unterschied: warum er zählt, Fragen zum Gespräch und was ihr besser vermeidet",
           "Eure Warnsignale im Streit",
           "Wer zu Hause was macht, aus deiner Sicht",
-          "Der vollständige Bericht als PDF, per E-Mail, sobald er fertig ist, und sechs Monate lang online"
+          "Der vollständige Bericht als PDF, der Download-Link per E-Mail, sobald er fertig ist, und sechs Monate lang online"
         ],
         "prixAide": "Eine einzige Zahlung, kein Abo. Dein Partner oder deine Partnerin erfährt nichts davon.",
-        "emailAide": "Das PDF geht gleich nach der Zahlung an diese Adresse.",
+        "emailAide": "Der Link zum PDF geht gleich nach der Zahlung an diese Adresse.",
         "pretTitre": "{{moi}}, dein Bericht ist bereit",
         "apercu": {
           "intro": "Deine Antworten wurden mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
-          "quoi": "Der Bericht sagt dir, welche es sind, was sie bedeuten und womit du anfangen kannst.",
+          "quoi": "Der Bericht sagt dir, welche es sind und wo du anfängst. Kaum jemand nimmt sich je die Zeit dafür, du hast es getan.",
           "inconnusUn": "Und ein Thema, bei dem du nicht weißt, was {{autre}} antworten würde.",
           "inconnusN": "Und {{n}} Themen, bei denen du nicht weißt, was {{autre}} antworten würde."
         },
@@ -545,15 +546,15 @@
       },
       "ecran": {
         "telecharger": "PDF herunterladen",
-        "pdfPrepa": "Euer PDF wird gerade erstellt: Es kommt in ein paar Minuten, per E-Mail und hier.",
-        "pdfErreur": "Das PDF verspätet sich. Es wird euch geschickt, sobald es fertig ist, ihr müsst nichts tun.",
-        "envoyeA": "Das PDF wurde an {{emails}} geschickt. Wenn es nicht ankommt, schau in den Spam-Ordner.",
-        "envoiA": "Das PDF geht an {{emails}}, sobald es fertig ist. Du musst nichts anfordern.",
+        "pdfPrepa": "Euer PDF wird gerade erstellt: In ein paar Minuten ist es hier bereit, und der Link kommt per E-Mail.",
+        "pdfErreur": "Das PDF verspätet sich. Der Link kommt per E-Mail, sobald es fertig ist, ihr müsst nichts tun.",
+        "envoyeA": "Der Link zum PDF wurde an {{emails}} geschickt. Wenn er nicht ankommt, schau in den Spam-Ordner.",
+        "envoiA": "Der Link zum PDF geht an {{emails}}, sobald es fertig ist. Du musst nichts anfordern.",
         "emailTitre": "Dein Bericht per E-Mail",
         "emailAide": "Diese Adresse ersetzt deine für diesen Bericht. Sie wird für nichts anderes verwendet.",
         "emailChamp": "Deine E-Mail-Adresse",
         "emailBouton": "Senden",
-        "emailOk": "Notiert! Das PDF geht an diese Adresse.",
+        "emailOk": "Notiert! Der Link zum PDF geht an diese Adresse.",
         "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
         "imprimer": "Drucken",
         "supprimer": "Unseren Check löschen",
@@ -561,7 +562,7 @@
         "supprimerAide": "Die Analyse wird für euch beide gelöscht, sofort und endgültig, das PDF eingeschlossen. Denkt daran, das PDF vorher zu speichern.",
         "supprime": "Euer Check wurde gelöscht.",
         "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide.",
-        "envoiSans": "Das PDF geht per E-Mail raus, sobald es fertig ist.",
+        "envoiSans": "Der Link zum PDF geht per E-Mail raus, sobald es fertig ist.",
         "emailAutre": "An eine andere Adresse bekommen"
       }
     },
@@ -734,7 +735,7 @@
         {
           "duree": "6 Monate online",
           "titre": "Ihr lest ihn, und ihr redet darüber",
-          "texte": "Das PDF kommt per E-Mail, sobald alles beantwortet ist, und der Bericht bleibt sechs Monate online. Er endet mit einem Fahrplan: ein Thema pro Woche."
+          "texte": "Der Link zum PDF kommt per E-Mail, sobald alles beantwortet ist, und der Bericht bleibt sechs Monate online. Er endet mit einem Fahrplan: ein Thema pro Woche."
         }
       ]
     },
@@ -885,6 +886,7 @@
       "p2": "Die Analyse ist kein klinischer Test und ersetzt keine Fachperson. Sie ist ein ernsthafter Fragebogen, aufgebaut auf dem, was die Forschung über Paare weiß, um euch zu helfen, über die richtigen Themen zu reden."
     },
     "prix": {
+      "accroche": "Paare vergessen viel zu oft, eine Bestandsaufnahme ihrer Beziehung zu machen. 30 Minuten pro Person und ein paar Euro können wirklich etwas verändern.",
       "titre": "Ein Preis, für euch beide",
       "unite": "für das Paar, einmalig",
       "aide": "Ihr zahlt erst am Ende, wenn eure Antworten abgegeben sind. Eine einzige Zahlung, von einem von euch. Kein Abo, kein Konto.",
@@ -892,7 +894,7 @@
         "100 Fragen zu zwölf Bereichen",
         "Der vollständige Bericht, rund vierzig Seiten mit Grafiken",
         "Eure nächsten vier Gespräche, mit Hilfen, sie zu führen",
-        "Das PDF per E-Mail und die Online-Version sechs Monate lang",
+        "Das PDF zum Herunterladen und die Online-Version sechs Monate lang",
         "Derselbe Bericht, ob ihr sie zu zweit oder allein macht"
       ],
       "garantie": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht genügt."
@@ -902,7 +904,7 @@
       "points": [
         {
           "titre": "Kein Konto",
-          "texte": "Jeder öffnet die Analyse über seinen eigenen Link. Kein Passwort, und eine E-Mail-Adresse nur, um euch den Bericht zu schicken."
+          "texte": "Jeder öffnet die Analyse über seinen eigenen Link. Kein Passwort, und eine E-Mail-Adresse nur, um euch den Link zum Bericht zu schicken."
         },
         {
           "titre": "Vor dem Ende wird nichts gezeigt",
