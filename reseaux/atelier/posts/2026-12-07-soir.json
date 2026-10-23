@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-07",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-059",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Pet edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "A puppy",
+            "b": "A kitten"
+          },
+          {
+            "a": "Name it after a snack",
+            "b": "Name it after a song"
+          },
+          {
+            "a": "It sleeps on the bed",
+            "b": "It sleeps in its own bed"
+          },
+          {
+            "a": "Walks every morning",
+            "b": "Cuddles every evening"
+          },
+          {
+            "a": "A pet photo shoot",
+            "b": "A pet costume party"
+          },
+          {
+            "a": "Adopt together",
+            "b": "Visit a shelter first"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Pet edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

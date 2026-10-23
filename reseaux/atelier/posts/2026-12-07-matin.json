@@ -1,0 +1,80 @@
+{
+  "jour": "2026-12-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-051",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Nuit devant la maison, assis sur le pas de la porte ; une étoile scintille juste au-dessus du toit, elle la montre du doigt, les yeux en cœur, et joint les mains pour un vœu. Il sourit, tendre, puis se concentre, s'accroupit et part comme une flèche vers le ciel ; au ralenti, sa main se referme sur l'étoile, qui s'éteint là-haut et brille entre ses doigts. Il retombe accroupi sur le perron et la lui tend ; elle la prend dans ses mains jointes, émerveillée, le vœu exaucé ; les cœurs montent sous les étoiles.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "tendre",
+          "recherche": "Starman"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-etoile",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison la nuit : la lune, les étoiles qui scintillent, le toit et la cheminée à droite avec la fenêtre éclairée, le chemin, le grand arbre, et au-dessus du toit une étoile plus grande qui brille avec ses rayons. Elle (nœud rose, queue de cheval) est assise sur le pas de la porte et montre l'étoile du doigt, les yeux en cœur, puis joint les mains pour un vœu ; lui (bandana violet) est debout près d'elle. À 1,2 s il lève la tête, sourit, puis la regarde, attendri, joues roses ; à 3,1 s son visage se ferme, décidé. La caméra pousse doucement vers l'étoile et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage à lui, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur elle. À 1,0 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers l'étoile ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": false,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : lui devant, elle derrière, le bras encore tendu vers le ciel. Il se plante face à l'étoile, les poings serrés, les genoux qui fléchissent, le regard levé ; le vent soulève les pans du bandana. La caméra serre un peu sur lui : il va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "attrape",
+              "description": "Plan d'ensemble, l'étoile en haut à droite, le couple en bas. Il s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, il part comme une flèche vers l'étoile, rémanences, lignes de vitesse presque verticales. Juste avant de l'atteindre, ralenti dix fois, caméra serrée sur sa main et sur l'étoile, voile bleuté, battement de cœur : ses doigts se referment dessus, l'étoile du ciel s'éteint et brille dans sa main (scintillement). Il retombe accroupi à côté d'elle, poussière, se redresse l'étoile à la main, tendre ; elle saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "etoile",
+              "fin": "charmeur",
+              "duree": 6.0,
+              "description": "Plan moyen large, caméra fixe, devant la maison sous la lune. Elle à droite, lui à gauche avec l'étoile qui brille dans sa main, un halo jaune, trois éclats qui tournent. Il fait un pas vers elle et la lui tend, bras tendu, sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement). Elle tend les bras, les yeux en cœur, et la reçoit dans ses mains jointes, la tête penchée dessus, émerveillée (scintillement magique). Les cœurs montent entre eux ; il sourit, heureux, les yeux fermés. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "He went up for the star she wished on.\n\nTag him",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

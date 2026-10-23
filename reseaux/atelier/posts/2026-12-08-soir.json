@@ -1,0 +1,267 @@
+{
+  "jour": "2026-12-08",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-008",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La pluie dans la rue : elle sous le parapluie, lui trempé, elle lui laisse la place, ils se serrent dessous.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une rue sous la pluie. La rose, au milieu, tient un parapluie au-dessus d'elle, un grand sourire. Le violet, à droite, est debout sous la pluie, trempé, les yeux plats, des gouttes sur lui.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "centre",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "parapluie",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. La rose regarde le violet et pousse le parapluie vers lui, le bras tendu. Le violet, la bouche en o et les yeux grands ouverts, est surpris.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "centre",
+                    "gestes": [
+                      {
+                        "geste": "offre",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "parapluie"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. Le violet est au sec sous le parapluie, un petit sourire. La rose, à côté, est trempée, les yeux plats et la bouche plate, des gouttes tombent sur elle.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "centre",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "parapluie",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. Les deux sont serrés sous le parapluie que tient le violet, la rose appuyée contre lui, les yeux fermés de bonheur et des cœurs au-dessus d'eux.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "matin",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "centre",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "parapluie",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "scoot.",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
