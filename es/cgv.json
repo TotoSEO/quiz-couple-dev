@@ -1,6 +1,6 @@
 {
   "title": "Condiciones generales de venta",
-  "majLe": "Última actualización: 20 de octubre de 2026",
+  "majLe": "Última actualización: 22 de octubre de 2026",
   "intro": "Estas condiciones se aplican a la compra del informe completo del {{bilan}} en quiz-couple.com. Todo lo demás en el sitio es gratis y no está sujeto a ninguna venta.",
   "liens": {
     "contact": "página de contacto",
@@ -23,7 +23,7 @@
       "titre": "1. Lo que se vende",
       "p": [
         "La evaluación de pareja es un cuestionario que dos miembros de una pareja responden cada uno por su lado, o que una sola persona responde indicando también lo que cree que respondería su pareja (modo a solas). Responder a las preguntas es gratis; no se da ningún resultado sin compra.",
-        "Lo que se vende es el informe: una evaluación completa de la pareja a partir de las dos series de respuestas (alineación, clima, mapa de las áreas, diferencias con las dos respuestas, guías para hablarlas, puntos de bloqueo e innegociables, señales de alerta, reparto de los papeles). El informe es un contenido digital: un documento PDF enviado por correo electrónico, y la misma versión disponible en la página de la evaluación.",
+        "Lo que se vende es el informe: una evaluación completa de la pareja a partir de las dos series de respuestas (alineación, clima, mapa de las áreas, diferencias con las dos respuestas, guías para hablarlas, puntos de bloqueo e innegociables, señales de alerta, reparto de los papeles). El informe es un contenido digital: un documento PDF, que se descarga desde el enlace personal enviado por correo electrónico, y la misma versión disponible en la página de la evaluación.",
         "La evaluación está reservada a personas mayores de edad. El informe es un archivo PDF corriente, que se abre con cualquier lector de PDF, en el móvil o en el ordenador; la misma versión se puede leer en la página de la evaluación. Las condiciones que se aplican a una compra son las que están en línea en el momento del pago."
       ]
     },
@@ -38,14 +38,14 @@
     {
       "titre": "3. El pedido y el pago",
       "p": [
-        "El pago se propone a cada miembro de la pareja en cuanto termina sus propias respuestas. Antes de pagar, el comprador puede indicar la dirección de e-mail donde recibir el informe, y marca una casilla con la que pide expresamente que el informe se le entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento, y reconoce que pierde su derecho de desistimiento una vez entregado el informe (ver el artículo 5). El e-mail que entrega el informe recoge esta petición y este reconocimiento.",
+        "El pago se propone a cada miembro de la pareja en cuanto termina sus propias respuestas. Antes de pagar, el comprador puede indicar la dirección de e-mail donde recibir el informe, y marca una casilla con la que pide expresamente que el informe se le entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento, y reconoce que pierde su derecho de desistimiento una vez entregado el informe (ver el artículo 5). El e-mail que entrega el enlace del informe recoge esta petición y este reconocimiento.",
         "El pago se hace en la página segura de nuestro proveedor Stripe, con tarjeta bancaria, Apple Pay o Google Pay. Nunca tenemos acceso a los datos de la tarjeta. Stripe envía un recibo a la dirección de correo indicada en el pago: es la confirmación del pedido. Se puede pedir una factura desde la {{contact}}."
       ]
     },
     {
       "titre": "4. La entrega del informe",
       "p": [
-        "El informe se elabora en cuanto se confirma el pago y los dos miembros de la pareja han terminado de responder (o, en el modo a solas, la persona ha terminado). Sale entonces en PDF a las direcciones de correo indicadas, y se muestra en la página de la evaluación para los dos, desde sus enlaces personales, con un botón para descargar el PDF. Sigue disponible seis meses después del pago; después, la evaluación se borra.",
+        "El informe se elabora en cuanto se confirma el pago y los dos miembros de la pareja han terminado de responder (o, en el modo a solas, la persona ha terminado). Cada dirección de correo indicada recibe entonces un enlace personal para descargarlo en PDF, y se muestra en la página de la evaluación para los dos, desde sus enlaces personales, con un botón para descargar el PDF. Sigue disponible seis meses después del pago; después, la evaluación se borra.",
         "Si la pareja no termina sus respuestas, el informe no se puede elaborar: el comprador puede pedir entonces el reembolso en cualquier momento desde la {{contact}}.",
         "Cualquiera de los dos puede borrar la evaluación antes de ese plazo. El borrado es inmediato y definitivo, para los dos, y no da derecho a ningún reembolso."
       ]
@@ -54,7 +54,7 @@
       "titre": "5. El derecho de desistimiento",
       "p": [
         "El informe es un contenido digital suministrado sin soporte material. Para este tipo de contenido, el artículo L221-28 13° del Código de consumo francés (que aplica el artículo 16, letra m, de la Directiva 2011/83/UE) prevé que el derecho de desistimiento de catorce días ya no puede ejercerse una vez que la ejecución ha comenzado con el consentimiento expreso del consumidor y después de que haya reconocido que pierde así ese derecho. Eso es lo que el comprador acepta al marcar la casilla antes de pagar.",
-        "El informe se entrega en el momento en que se envía por e-mail o se pone a disposición en la página de la evaluación, lo que ocurra primero. A partir de ese instante, el derecho de desistimiento ha terminado: la compra es definitiva y ya no puede reembolsarse por ese motivo.",
+        "El informe se entrega en el momento en que se pone a disposición: cuando sale el e-mail con su enlace de descarga, o cuando se muestra en la página de la evaluación, lo que ocurra primero. A partir de ese instante, el derecho de desistimiento ha terminado: la compra es definitiva y ya no puede reembolsarse por ese motivo.",
         "Mientras el informe no se haya entregado, por ejemplo porque la otra persona no ha terminado de responder, el comprador puede desistir sin dar motivos, en los catorce días siguientes al pago, escribiéndonos desde la {{contact}}. Se le reembolsa entonces íntegramente, en el medio de pago utilizado, en un plazo de catorce días."
       ]
     },

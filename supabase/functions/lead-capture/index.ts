@@ -4,7 +4,11 @@
 // e-mail envoyé.
 //
 // POST { email, lang, source, page, consent, hp }
-//   → 200 { ok: true }            adresse enregistrée (ou déjà là : on compte)
+//   → 200 { ok: true, cle }       adresse enregistrée (ou déjà là : on compte) ;
+//                                 `cle` sert une heure, une fois, à donner son prénom
+// POST { action: 'prenom', email, cle, prenom }
+//   → 200 { ok: true, prenom }    le prénom, facultatif, demandé après coup
+//   → 400 { ok: false, code: 'prenom' } / 403 { ok: false, code: 'cle' }
 //   → 400 { ok: false, code }     format, jetable, domaine, consentement, langue, source
 //   → 429 { ok: false, code: 'trop' }
 // GET  ?d=<jeton>[&lang=fr]      → la page de désinscription (HTML)
@@ -23,7 +27,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import {
-  controleEmail, langueValide, sourceValide, pagePropre, hacheIp, pageDesinscription,
+  controleEmail, langueValide, sourceValide, pagePropre, hacheIp, pageDesinscription, prenomPropre, empreinte,
 } from '../_shared/abonnes/regles.mjs';
 
 const corsHeaders = {
@@ -48,6 +52,22 @@ function ipAutorisee(ip: string): boolean {
   liste.push(maintenant); essais.set(ip, liste);
   if (essais.size > 5000) { for (const [k, v] of essais) if (!v.some((t) => maintenant - t < 3600_000)) essais.delete(k); }
   return true;
+}
+
+// Le prénom se donne juste après l'adresse, avec la clé que la réponse vient
+// de rendre : sans elle, n'importe qui pourrait écrire un prénom (ou une
+// insulte) sur l'adresse de quelqu'un d'autre, qui la lirait dans nos e-mails.
+// La base ne garde que l'empreinte de la clé, une heure. Si les colonnes
+// manquent (migration pas encore passée), l'adresse est gardée quand même,
+// simplement sans clé.
+const CLE_DUREE_MS = 3600_000;
+async function poserCle(supabase: ReturnType<typeof createClient>, email: string): Promise<string | null> {
+  const cle = crypto.randomUUID().replace(/-/g, '') + crypto.randomUUID().replace(/-/g, '');
+  const { error } = await supabase.from('abonnes')
+    .update({ prenom_cle: await empreinte(cle), prenom_cle_le: new Date().toISOString() })
+    .eq('email', email);
+  if (error) { console.warn('[lead-capture] clé du prénom :', error.message); return null; }
+  return cle;
 }
 
 function json(code: number, corps: unknown): Response {
@@ -106,6 +126,27 @@ serve(async (req: Request) => {
   // Le pot de miel : un champ invisible qu'une personne ne remplit jamais.
   if (typeof corps.hp === 'string' && corps.hp.trim()) return json(200, { ok: true });
 
+  // ── Le prénom, après coup ──
+  if (corps.action === 'prenom') {
+    if (!ipAutorisee(ip)) return json(429, { ok: false, code: 'trop' });
+    const ctrlP = controleEmail(corps.email);
+    if (!ctrlP.ok) return json(400, { ok: false, code: 'format' });
+    const prenom = prenomPropre(corps.prenom);
+    if (!prenom) return json(400, { ok: false, code: 'prenom' });
+    const cle = typeof corps.cle === 'string' && /^[a-f0-9]{32,64}$/.test(corps.cle) ? corps.cle : null;
+    if (!cle) return json(403, { ok: false, code: 'cle' });
+    const { data: ab } = await supabase.from('abonnes').select('id, prenom_cle, prenom_cle_le').eq('email', ctrlP.email).maybeSingle();
+    const pose = ab && ab.prenom_cle_le ? Date.parse(ab.prenom_cle_le) : NaN;
+    if (!ab || !ab.prenom_cle || ab.prenom_cle !== await empreinte(cle) || !(Date.now() - pose < CLE_DUREE_MS)) {
+      return json(403, { ok: false, code: 'cle' });
+    }
+    const { error } = await supabase.from('abonnes')
+      .update({ prenom, prenom_cle: null, prenom_cle_le: null, maj_le: new Date().toISOString() })
+      .eq('id', ab.id);
+    if (error) { console.error('[lead-capture] prénom :', error.message); return json(500, { ok: false, code: 'serveur' }); }
+    return json(200, { ok: true, prenom });
+  }
+
   const lang = langueValide(typeof corps.lang === 'string' ? corps.lang : '');
   const source = sourceValide(corps.source);
   if (!lang) return json(400, { ok: false, code: 'langue' });
@@ -131,7 +172,7 @@ serve(async (req: Request) => {
     if (existant.statut === 'desinscrit') Object.assign(champs, { statut: 'actif', consent_at: maintenant, desinscrit_le: null });
     const { error } = await supabase.from('abonnes').update(champs).eq('id', existant.id);
     if (error) console.error('[lead-capture] maj :', error.message);
-    return json(200, { ok: true });
+    return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email) });
   }
   const { error } = await supabase.from('abonnes').insert({
     email: ctrl.email, lang, source, page, statut: 'actif', consent_at: maintenant, ip_hash: ipHash,
@@ -143,5 +184,5 @@ serve(async (req: Request) => {
     console.error('[lead-capture] insertion :', error.message);
     return json(500, { ok: false, code: 'serveur' });
   }
-  return json(200, { ok: true });
+  return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email) });
 });

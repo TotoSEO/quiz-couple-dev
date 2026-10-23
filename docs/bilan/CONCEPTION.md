@@ -977,3 +977,79 @@ Trois jours de chiffres, puis : la part des départs vus qui deviennent des
 part de ceux qui voient l'écran de l'adresse et finissent (si elle tombe,
 l'adresse à la fin coûte des personnes), et les clics sans la case cochée
 (si beaucoup, la case de renonciation bloque le paiement).
+
+## 22 octobre 2026 : l'invitation et la promesse
+
+Les chiffres d'un jour et demi de nouveau départ, lus par Thomas :
+
+- **À deux, l'invitation perd presque tout** : 25 évaluations créées, la
+  situation donnée sur 7 seulement. Sur un téléphone, « Commencer mes
+  réponses » était à 992 px du haut, sous le lien personnel ; le premier
+  écran montrait « Copier le lien » en bouton principal. Le créateur
+  envoyait le lien et partait, comme s'il fallait attendre l'autre. Le
+  bouton est maintenant dans le premier écran, en gros, sous une phrase qui
+  dit qu'on n'a pas à attendre.
+- **Le premier domaine filtre** : 107 personnes ont répondu à au moins une
+  question du quotidien, 66 l'ont fini, et presque tous ceux-là vont au
+  bout des cent. On ne touche à rien ici pour l'instant.
+- **À l'offre, personne ne clique** : cinq écrans « rapport prêt » vus
+  depuis le 21 octobre, aucune page de paiement ouverte, et aucun clic sur
+  « Débloquer » sans la case. La case n'est donc pas le frein : on ne tente
+  même pas. C'est la décision de payer qui manque, et l'échantillon reste
+  petit (cinq personnes).
+- **Les cases du départ** : 33 visites ont buté sur les cases, dont 24 en
+  seul(e). Une partie du public du site a moins de 18 ans ; l'erreur dit
+  désormais quelle case manque, pour savoir si c'est l'âge.
+
+Ce qui a changé : le bouton de l'invitation, la phrase de Thomas en
+citation avant le prix de la page de vente et dans la phrase sous les
+chiffres de l'écran « rapport prêt », la cause des cases, et la ligne
+« Situation ouverte » dans l'entonnoir. Restent à trancher par Thomas : un
+aperçu d'un vrai résultat sur l'écran « rapport prêt » (le domaine où le
+couple diverge le plus, par exemple), qui irait plus loin que les seuls
+comptes, et le prix.
+
+## 22 octobre 2026 : le radar avant le paiement
+
+Thomas accepte de montrer une partie du résultat avant le paiement, « mais
+vraiment rien, genre juste la synthèse tu vois, le graphique araignée ».
+L'écran « rapport prêt » commence donc par le radar des domaines de la
+synthèse : le même dessin que dans le rapport, la forme de leur accord
+domaine par domaine, avec la légende des trois bandes. Ni chiffre par
+domaine, ni question, ni réponse : le serveur envoie l'identifiant, le
+score et la bande de chaque domaine, rien de plus.
+
+C'est le premier résultat personnel avant le paiement, et le plus visuel.
+Les comptes (accords, réponses proches, écarts) restent dessous. Le bouton
+de paiement passe sous le premier écran d'un téléphone (vers 1 080 px) :
+le radar d'abord, le prix ensuite.
+
+## 22 octobre 2026 : le rapport par un lien, plus en pièce jointe
+
+L'analyse d'impact (`docs/rgpd/AIPD-evaluation.md`, risque 3) relevait que
+le PDF partait en pièce jointe par Resend, aux États-Unis, et restait ensuite
+dans les boîtes de réception, hors de portée de l'effacement à six mois.
+Thomas : « ok met un lien de téléchargement ».
+
+- **L'e-mail du rapport** (`messageRapport`, courriel.mjs) dit que le rapport
+  est prêt, porte un bouton « Télécharger le rapport (PDF) » et un lien « Le
+  lire en ligne », précise que le lien est personnel, valable six mois, à ne
+  pas transférer, et garde la demande de fourniture immédiate et la
+  reconnaissance de la perte du droit de rétractation (L221-13). Plus aucune
+  pièce jointe : `envoyer` sait encore en porter une, plus personne ne lui
+  en donne.
+- **Un lien par adresse** : `envoyerA` tire un jeton de `jetons_mail` au rôle
+  de l'adresse (`destinatairesRoles` : a, b, et l'adresse du reçu Stripe au
+  rôle de celui qui a payé). Le lien du téléphone reste intact, et un
+  e-mail transféré n'ouvre que le rôle de la personne qui l'a reçu.
+  `JETONS_MAIL_MAX` passe à `ENVOIS_MAX + 2` : huit envois du rapport, le
+  « prêt » et le rappel, sans qu'un lien de rapport tombe.
+- **La page** lit `&pdf=1` : le rapport s'affiche, et le téléchargement du PDF
+  part une seule fois (`pdfDemande`), par le même lien signé de dix minutes
+  que le bouton.
+- **Les textes** : « le lien du PDF » partout où le site promettait le PDF par
+  e-mail (cinq langues), CGV (le rapport est fourni quand part l'e-mail qui
+  donne son lien de téléchargement, ou quand il s'affiche sur la page, le
+  premier des deux ; le droit de rétractation prend fin à cet instant, comme
+  avant), politique de confidentialité (Resend ne transporte plus le
+  rapport), registre et analyse d'impact (risque 3 ramené à faible).

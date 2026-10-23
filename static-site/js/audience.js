@@ -308,7 +308,7 @@
 
   // ── Passage vers l'évaluation de couple ─────────────────────────────────
   // Les liens du site vers l'évaluation disent d'où ils partent
-  // (data-bilan-src : menu, menu-mobile, pied, accueil, accueil-hero,
+  // (data-bilan-src : menu, menu-mobile, bandeau-promo, pied, accueil, accueil-hero,
   // resultat-<id>, bas-<id>, moteur-<id>) et, pour le bouton « seul(e) », la
   // façon de faire (data-bilan-mode). Jusqu'au 20 octobre 2026 les deux
   // étaient dans l'adresse (?src=, ?mode=) : le menu répétait

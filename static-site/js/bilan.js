@@ -39,6 +39,7 @@
   var S = null;   // la session de réponses en cours
   var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
   var modeDemande = null;  // le mode demandé par le bouton de la page ou le lien suivi (arrivee)
+  var pdfDemande = false;  // le lien de l'e-mail du rapport demande le PDF tout de suite
 
   // ── Textes ──────────────────────────────────────────────────────────────
 
@@ -365,6 +366,9 @@
     var lien = !!(id && jeton);
     // Le lien « ne plus recevoir de message » des e-mails : #b=…&t=…&arret=1.
     var arret = hash.get('arret') === '1';
+    // Le bouton de l'e-mail du rapport (22 octobre 2026, plus de pièce
+    // jointe) : #b=…&t=…&pdf=1 ouvre le rapport et lance le PDF.
+    pdfDemande = hash.get('pdf') === '1';
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
     arrivee(query);
@@ -620,7 +624,9 @@
       valider: function (b) {
         lire();
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
-        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', 'accord');
+        // La cause dit si c'est l'âge qui arrête (la case des 18 ans) ou le
+        // consentement : le site a beaucoup de visiteurs de moins de 18 ans.
+        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', !brouillon.majeur ? 'majeur' : 'consentement');
         b.disabled = true;
         appel('creer', {
           lang: LANG, mode: brouillon.mode, src: source(),
@@ -652,16 +658,21 @@
       '<p class="bilan-texte">' + x('invitation.texte', { autre: autre }) + '</p>' +
       '<div class="bilan-lien"><input class="bilan-input" type="text" readonly value="' + esc(lien) + '" aria-label="' + x('invitation.copier') + '"></div>' +
       '<div class="bilan-actions">' +
-      (navigator.share ? bouton('partager', x('invitation.envoyer')) : '') +
-      bouton('copier', x('invitation.copier'), navigator.share ? 'btn-outline' : 'btn-cta btn-gradient') +
-      bouton('qr', x('invitation.qr'), 'btn-outline') + '</div>' +
+      (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
+      bouton('copier', x('invitation.copier'), 'btn-outline') +
+      bouton('qr', x('invitation.qr'), 'btn-outline btn-sm') + '</div>' +
       '<div class="bilan-qr" id="bilan-qr" hidden></div>' +
+      // « Commencer mes réponses » dans le premier écran (22 octobre 2026) :
+      // il était sous le lien personnel, à 992 px du haut sur un téléphone, et
+      // 18 créateurs sur 25 n'ont jamais commencé (ils envoyaient le lien et
+      // partaient, comme s'il fallait attendre l'autre).
+      '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
+      bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
       '<hr class="bilan-sep">' +
       '<h3 class="bilan-sous-titre">' + x('invitation.monLien') + '</h3>' +
       '<p class="bilan-note">' + x('invitation.monLienAide', { autre: autre }) + '</p>' +
       '<div class="bilan-actions">' + bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline btn-sm') + '</div>' +
-      blocLien(etat && etat.moi && etat.moi.email) +
-      '<div class="bilan-actions">' + bouton('commencer', x('invitation.commencer')) + '</div>', 'bilan-invitation');
+      blocLien(etat && etat.moi && etat.moi.email), 'bilan-invitation');
     afficher(html);
     var message = remplir(tr('invitation.message', ''), { lien: lien });
     ACTIONS = {
@@ -1254,13 +1265,32 @@
   // désaccord, jamais lesquels (21 octobre 2026, Thomas a accepté cette
   // entorse à « aucun résultat gratuit »). Un serveur plus ancien n'envoie
   // rien : l'écran garde alors sa phrase d'avant.
+  // Le radar de la synthèse, avant le paiement (22 octobre 2026, Thomas :
+  // « une partie des résultats gratuite, mais vraiment rien, genre juste la
+  // synthèse, le graphique araignée ») : dessiné par le gabarit du rapport
+  // (window.QCBilanRapport.radar) à partir des scores des domaines que le
+  // serveur envoie avec les comptes. Rien de plus : ni chiffre, ni question.
+  function radarApercu(liste) {
+    var R = window.QCBilanRapport;
+    if (!liste || liste.length < 3 || !R || typeof R.radar !== 'function') return '';
+    var bref = function (id) { return (Q && Q.domaines[id] && (Q.domaines[id].bref || Q.domaines[id].titre)) || id; };
+    var dessin = R.radar(liste, bref, remplir(tr('rapport.synthese.radar', ''), {}), true);
+    if (!dessin) return '';
+    var cles = ['fort', 'moyen', 'faible'].map(function (b) {
+      return '<span class="bilan-radar-cle bilan-radar-cle--' + b + '"><span aria-hidden="true"></span>' + x('rapport.carte.bandes.' + b) + '</span>';
+    }).join('');
+    return '<div class="bilan-apercu-radar"><p class="bilan-apercu-radar-titre">' + x('rapport.synthese.radar') + '</p>' + dessin +
+      '<p class="bilan-apercu-radar-cles">' + cles + '</p></div>';
+  }
+
   function blocApercu(ap, autre) {
     if (!ap) return '';
     var tuiles = [['accord', ap.accords, 'accords'], ['proche', ap.proches, 'proches'], ['ecart', ap.ecarts, 'ecarts']];
     var lignes = [];
     if (ap.ecarts > 0) lignes.push(x(ap.decisifs === 0 ? 'paywall.apercu.decisifs0' : ap.decisifs === 1 ? 'paywall.apercu.decisifsUn' : 'paywall.apercu.decisifsN', { n: nombre(ap.decisifs) }));
     if (MODE === 'solo' && ap.inconnus > 0) lignes.push(x(ap.inconnus === 1 ? 'paywall.apercu.inconnusUn' : 'paywall.apercu.inconnusN', { n: nombre(ap.inconnus), autre: autre }));
-    return '<p class="bilan-pret-intro">' + x('paywall.apercu.intro', { autre: autre }) + '</p>' +
+    return radarApercu(ap.radar) +
+      '<p class="bilan-pret-intro">' + x('paywall.apercu.intro', { autre: autre }) + '</p>' +
       '<div class="bilan-tuiles">' + tuiles.map(function (t) {
         return '<div class="bilan-tuile bilan-tuile--' + t[0] + '"><span class="bilan-tuile-n">' + esc(nombre(t[1])) + '</span>' +
           '<span class="bilan-tuile-l">' + x('paywall.apercu.' + t[2] + (t[1] === 1 ? 'Un' : 'N')) + '</span></div>';
@@ -1536,6 +1566,14 @@
         '<div class="bilan-actions bilan-actions--gauche">' + bouton('supprimer', x('rapport.ecran.supprimer'), 'btn-outline btn-sm') + '</div>' +
         '<p class="bilan-note">' + x('rapport.ecran.supprimerAide') + '</p>', 'bilan-carte--discrete'),
       !!message);
+    if (pdfDemande) {
+      // Une seule fois : revenir sur la page ne relance pas le téléchargement.
+      pdfDemande = false;
+      if (r.pret) setTimeout(function () {
+        var b = racine.querySelector('[data-action="pdf"]');
+        if (b && ACTIONS.pdf) ACTIONS.pdf(b);
+      }, 300);
+    }
     ACTIONS = {
       pdf: function (b) {
         b.disabled = true;

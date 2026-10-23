@@ -191,7 +191,7 @@
       "Alle anderen Tests der Seite freigeschaltet"
     ],
     "placeholder": "Deine E-Mail-Adresse",
-    "consentement": "Ich möchte Tipps und Neuigkeiten von Quiz Couple per E-Mail erhalten.",
+    "consentement": "Ich bin mindestens 15 Jahre alt und möchte Tipps und Neuigkeiten von Quiz Couple per E-Mail erhalten.",
     "confidentialite": "Datenschutz",
     "bouton": "Mein Ergebnis ansehen",
     "envoi": "Einen Moment...",
@@ -199,6 +199,13 @@
     "merci": {
       "titre": "Danke, dein Ergebnis ist freigeschaltet!",
       "texte": "Und nicht nur hier: ab jetzt zeigen dir alle Tests, Quiz und Spiele der Seite ihre vollständigen Ergebnisse, ohne auf diesem Gerät noch einmal nach deiner E-Mail zu fragen."
+    },
+    "prenom": {
+      "label": "Dein Vorname (freiwillig)",
+      "aide": "Damit unsere E-Mails mit deinem Namen beginnen.",
+      "bouton": "Speichern",
+      "merci": "Notiert, {{prenom}}!",
+      "faux": "Schreib nur deinen Vornamen, in Buchstaben."
     },
     "suggestion": "Meintest du {{domaine}}?",
     "erreurs": {
@@ -234,6 +241,8 @@
     "badge": "Aktuell -{{pourcent}} %",
     "avant": "Normaler Preis:",
     "apres": "Reduzierter Preis:",
-    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen"
+    "code": "Code {{code}} wird beim Bezahlen automatisch abgezogen",
+    "bandeau": "Gerade jetzt {{remise}} auf die Analyse eurer Beziehung!",
+    "bandeauRemise": "-{{pourcent}} %"
   }
 }

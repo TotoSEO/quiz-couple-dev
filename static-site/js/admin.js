@@ -842,7 +842,7 @@
     'cases_manquantes', 'cases_manquantes_solo', 'paiements_ouverts', 'paiements_ouverts_solo', 'payes', 'payes_solo'];
   // Les étapes d'une personne arrêtée qui ne sont pas des domaines.
   var ARRETS_HORS_DOMAINES = { situation: 'à la situation, avant la première question', email: 'à l\'écran de l\'adresse, tout répondu', invitation: 'invitation pas acceptée' };
-  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', accord: 'cases pas cochées', autre: 'autre' };
+  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'cases pas cochées', autre: 'autre' };
   // Une colonne de l'entonnoir : chaque barre en part de la première étape,
   // le pourcentage de droite en part de l'étape d'avant, ou de celle que
   // l'étape nomme (e[3]) quand elle ouvre une autre suite (le partenaire).
@@ -855,7 +855,7 @@
       }).join('')
         : '<p class="bil-vide">Personne n\'a encore commencé de cette façon.</p>') + '</div>';
   }
-  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple' };
+  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', 'bandeau-promo': 'Barre de la réduction (mobile)', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple' };
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
@@ -1023,12 +1023,13 @@
       CLES_ETAPES_BILAN.concat(['vues']).forEach(function (k) { et[k] = serieEtapes.reduce(function (a, j) { return a + (Number(j[k]) || 0); }, 0); });
       // Un compte `_solo` s'ajoute toujours à son compte de base : à deux = base - seul(e).
       var aDeux = function (k) { return Math.max(0, et[k] - (et[k + '_solo'] || 0)); };
-      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)',
+      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)',
         'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
       var duo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', aDeux('ctas')],
         ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', aDeux('departs')],
         ['Évaluation créée', 'le formulaire de départ est validé', aDeux('crees')],
+        ['Situation ouverte', 'la première question de situation affichée', aDeux('situations_vues')],
         ['Situation donnée', 'les sept premières questions', aDeux('situations')],
         ['Le créateur a commencé', 'sa première réponse', aDeux('commences_a')],
         ['Le créateur a vu l\'écran de l\'adresse', 'toutes ses questions répondues', Math.max(0, aDeux('emails_vus') - et.emails_vus_b)],
@@ -1041,11 +1042,12 @@
         ['Paiement ouvert', 'page Stripe ouverte (on peut payer dès sa propre fin)', aDeux('paiements_ouverts')],
         ['Rapport payé', 'paiement confirmé par Stripe', aDeux('payes')]
       ];
-      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
       var solo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', et.ctas_solo],
         ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', et.departs_solo],
         ['Évaluation créée', 'le formulaire de départ est validé', et.crees_solo],
+        ['Situation ouverte', 'la première question de situation affichée', et.situations_vues_solo],
         ['Situation donnée', 'les sept premières questions', et.situations_solo],
         ['A commencé', 'sa première réponse', et.commences_a_solo],
         ['A vu l\'écran de l\'adresse', 'toutes ses questions répondues', et.emails_vus_solo],
@@ -3231,7 +3233,8 @@
   function pourcentAb(t) { return t === null ? '—' : t.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' %'; }
   function renderAbonnes(d, vues) {
     ecritAbonnes('abonnes-total', nombreAb(d.total));
-    ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
+    ecritAbonnes('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : '') +
+      (d.avec_prenom != null ? ' · ' + nombreAb(d.avec_prenom) + ' avec prénom' : ''));
     ecritAbonnes('abonnes-jour', nombreAb(d.aujourd_hui));
     ecritAbonnes('abonnes-jour-sub', nombreAb(d.sept_jours) + ' sur sept jours');
     ecritAbonnes('abonnes-periode', nombreAb(d.periode));
@@ -3279,7 +3282,7 @@
     placeAbonnes('abonnes-derniers', derniers.length
       ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">E-mail</th><th>Langue</th><th class="bil-gauche">Source</th><th>Statut</th><th>Captures</th><th>Le</th></tr></thead><tbody>' +
         derniers.map(function (a) {
-          return '<tr><td class="bil-gauche">' + esc(a.email) + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
+          return '<tr><td class="bil-gauche">' + esc(a.email) + (a.prenom ? ' <span class="text-muted-foreground">· ' + esc(a.prenom) + '</span>' : '') + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
         }).join('') + '</tbody></table></div>'
       : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
   }

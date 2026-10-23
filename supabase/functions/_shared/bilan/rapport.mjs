@@ -132,7 +132,9 @@ function petitAnneau(valeur, bandeCle) {
 
 // Le radar des domaines : un axe par domaine noté, le polygone des scores,
 // les cercles à 25, 50, 75, 100, et le nom bref de chaque domaine autour.
-function radar(domaines, brefDe, titre) {
+// Exporté : l'écran « rapport prêt » de la page le montre avant le paiement
+// (22 octobre 2026), `serre` y retire le blanc du haut et du bas.
+export function radar(domaines, brefDe, titre, serre) {
   const n = domaines.length;
   if (n < 3) return '';
   const cx = 230;
@@ -162,7 +164,7 @@ function radar(domaines, brefDe, titre) {
     return '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="4.5" class="rap-radar-point rap-radar-point--' + d.bande + '"/>';
   }).join('');
   return '<figure class="rap-radar" role="img" aria-label="' + esc(titre) + '">'
-    + '<svg viewBox="0 0 460 400" aria-hidden="true">' + grille + axes
+    + '<svg viewBox="' + (serre ? '0 36 460 328' : '0 0 460 400') + '" aria-hidden="true">' + grille + axes
     + '<polygon points="' + poly + '" class="rap-radar-forme"/>' + points + libelles + '</svg></figure>';
 }
 

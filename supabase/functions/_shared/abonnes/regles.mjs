@@ -75,6 +75,31 @@ export function pagePropre(p) {
   return v && v.length <= PAGE_MAX && v.startsWith('/') ? v : null;
 }
 
+// Le prénom, facultatif, demandé une fois l'adresse acceptée (22 octobre
+// 2026, Thomas : « pour personnaliser les e-mails, et ceux qui n'en ont pas
+// on laissera vide »). Seulement des lettres, avec espaces, traits d'union,
+// apostrophes et points (« Marie-Ève », « N'Golo », « J.-B. ») : il sera
+// écrit dans des e-mails, et l'adresse peut avoir été laissée par quelqu'un
+// d'autre, donc ni chiffre, ni lien, ni symbole. Tout en minuscules ou tout
+// en capitales, il reçoit une majuscule au début de chaque partie.
+export const PRENOM_MAX = 40;
+const PRENOM_RE = /^[\p{L}\p{M}](?:[\p{L}\p{M}' \u2019.-]*[\p{L}\p{M}.])?$/u;
+export function prenomPropre(brut) {
+  let p = String(brut == null ? '' : brut).normalize('NFC').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim();
+  if (!p || p.length > PRENOM_MAX || !PRENOM_RE.test(p) || /[-'\u2019]{2}|\.\./.test(p)) return null;
+  if (p === p.toLowerCase() || p === p.toUpperCase()) {
+    p = p.toLowerCase().replace(/(^|[\s'\u2019.-])(\p{L})/gu, (m, avant, lettre) => avant + lettre.toUpperCase());
+  }
+  return p;
+}
+
+// L'empreinte d'un texte (la clé qui permet de donner son prénom juste après
+// avoir laissé son adresse) : la base ne garde que ça.
+export async function empreinte(texte) {
+  const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(texte || '')));
+  return Array.from(new Uint8Array(h)).map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
 // L'empreinte d'une adresse IP : salée, impossible à retourner, pour compter
 // sans garder l'adresse (Web Crypto, présent dans Deno comme dans Node).
 export async function hacheIp(ip, sel) {

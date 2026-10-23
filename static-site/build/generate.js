@@ -206,7 +206,25 @@ function promoBilanPour(lang) {
     // Pour l'encart sous le verdict, écrit par quiz-engine-core.js : un
     // attribut data-bilan-promo du <body>, en JSON échappé.
     donnees: escPromo(JSON.stringify({ badge: rp(t('common:promoBilan.badge', '')), base, prix, avant, apres })),
+    // La barre sous l'en-tête mobile (partials/header.ejs) : la phrase, déjà
+    // échappée, avec la réduction en pastille.
+    bandeau: escPromo(rp(t('common:promoBilan.bandeau', ''))).replace('{{remise}}',
+      '<span class="bandeau-promo-remise">' + escPromo(rp(t('common:promoBilan.bandeauRemise', ''))) + '</span>'),
   };
+}
+
+// La barre de la réduction sous l'en-tête mobile (header.ejs, 22 octobre
+// 2026, Thomas : « une barre "En ce moment -20% sur l'évaluation de votre
+// couple !" ») : pendant une réduction, sur toutes les pages, sauf la page de
+// vente (la réduction y est déjà en tête), l'admin, le quiz des ados
+// (l'évaluation est réservée aux majeurs) et les pages où l'on ne vend pas
+// l'évaluation : emprise, manipulation, infidélité, et pour les articles la
+// même règle que la bannière du bas (entreeArticle).
+const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite']);
+function bandeauPromoPour(routeKey, articleMeta) {
+  if (!BILAN_OUVERT || !BILAN_PROMO) return false;
+  if (articleMeta) return !!entreeArticle(articleMeta);
+  return !PAGES_SANS_BANDEAU.has(routeKey);
 }
 
 function stripFutureLinks(html) {
@@ -1150,8 +1168,14 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
-  if (!BILAN_OUVERT) noindexRoutes.push('bilanCouple');
+  // La page de l'évaluation de couple est en noindex dans les cinq langues,
+  // ouverte ou non (22 octobre 2026, Thomas : « met la page
+  // /evaluation-de-couple/ et ses variantes traduites en noindex ») : elle se
+  // vend par le maillage du site (menu, encarts, bannières, barre de la
+  // réduction), pas par la recherche. Elle sort aussi des sitemaps
+  // (generateSitemaps) ; les liens du site vers elle restent suivis
+  // (« noindex, follow »).
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv', 'bilanCouple'];
   const isNoindex = noindexRoutes.includes(routeKey);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -1508,6 +1532,7 @@ async function generatePage(routeKey, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
+    bandeauPromo: bandeauPromoPour(routeKey),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -1665,7 +1690,7 @@ function generateSitemaps() {
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
     if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
-    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
+    if (key === 'bilanCouple') continue; // noindex, voir noindexRoutes
 
     // Build URL map for available languages
     const urlsByLang = {};
@@ -1762,6 +1787,84 @@ function generateSitemaps() {
     `[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)` +
     (sansDate ? ` — ${sansDate} sans lastmod` : '')
   );
+}
+
+// ── Flux RSS du blog (22 octobre 2026) ──────────────────────────────────
+// Un flux par langue, /blog/feed.xml et /<lang>/blog/feed.xml, annoncé dans
+// le <head> de chaque page (base.ejs). C'est ce que lit le bouton « Suivre »
+// de Google Discover : son titre, et le lien de chaque article. Les articles
+// programmés n'y sont pas (BLOG_ARTICLES est déjà filtré), un article
+// réservé au français ne sort que dans le flux français.
+const TITRES_FLUX = {
+  fr: { titre: 'Quiz Couple · Le blog', description: 'Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d\'amour.' },
+  en: { titre: 'Quiz Couple · Blog', description: 'Quiz Couple articles on relationships, psychology and love stories.' },
+  es: { titre: 'Quiz Couple · Blog', description: 'Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.' },
+  de: { titre: 'Quiz Couple · Blog', description: 'Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.' },
+  it: { titre: 'Quiz Couple · Blog', description: 'Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d\'amore.' },
+};
+const FLUX_MAX = 30;
+
+function cheminFlux(lang) {
+  return lang === 'fr' ? '/blog/feed.xml' : `/${lang}/blog/feed.xml`;
+}
+
+function dateRss(publishedAt) {
+  const brut = /^\d{4}-\d{2}-\d{2}$/.test(publishedAt || '') ? `${publishedAt}T08:00:00+02:00` : publishedAt;
+  const t = Date.parse(brut);
+  return Number.isFinite(t) ? new Date(t).toUTCString() : null;
+}
+
+function generateFlux() {
+  for (const lang of LANGUAGES) {
+    const items = [];
+    for (const meta of BLOG_ARTICLES) {
+      if (meta.frOnly && lang !== 'fr') continue;
+      const article = parseArticleTs(path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`))
+        || parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${meta.internalSlug}.ts`));
+      if (!article) continue;
+      const publie = article.publishedAt || meta.publishedAt;
+      const quand = dateRss(publie);
+      if (!quand) continue;
+      const lien = getArticleUrl(meta.slugs[lang] || meta.internalSlug, lang);
+      const image = article.featuredImage || meta.featuredImage;
+      const imageUrl = image ? (image.startsWith('http') ? image : `${BASE_URL}${image}`) : null;
+      const taille = imageUrl ? ogImageSize(imageUrl) : null;
+      const categorie = meta.category && BLOG_CATEGORIES[meta.category]
+        ? (BLOG_CATEGORIES[meta.category][lang] || BLOG_CATEGORIES[meta.category].fr) : null;
+      items.push({
+        t: Date.parse(/^\d{4}-\d{2}-\d{2}$/.test(publie) ? `${publie}T08:00:00+02:00` : publie),
+        xml: '    <item>\n' +
+          `      <title>${escapeHtml(article.title)}</title>\n` +
+          `      <link>${lien}</link>\n` +
+          `      <guid isPermaLink="true">${lien}</guid>\n` +
+          `      <pubDate>${quand}</pubDate>\n` +
+          (categorie ? `      <category>${escapeHtml(categorie)}</category>\n` : '') +
+          `      <description>${escapeHtml(article.metaDescription || article.excerpt || '')}</description>\n` +
+          (imageUrl ? `      <media:content url="${escapeHtml(imageUrl)}" medium="image" type="image/webp" width="${taille.width}" height="${taille.height}"/>\n` : '') +
+          '    </item>\n',
+      });
+    }
+    items.sort((a, b) => b.t - a.t);
+    const garde = items.slice(0, FLUX_MAX);
+    const tf = TITRES_FLUX[lang] || TITRES_FLUX.fr;
+    const soi = `${BASE_URL}${cheminFlux(lang)}`;
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">\n' +
+      '  <channel>\n' +
+      `    <title>${escapeHtml(tf.titre)}</title>\n` +
+      `    <link>${getLocalizedUrl('blog', lang)}</link>\n` +
+      `    <atom:link href="${soi}" rel="self" type="application/rss+xml"/>\n` +
+      `    <description>${escapeHtml(tf.description)}</description>\n` +
+      `    <language>${lang}</language>\n` +
+      (garde.length ? `    <lastBuildDate>${new Date(garde[0].t).toUTCString()}</lastBuildDate>\n` : '') +
+      `    <image>\n      <url>${BASE_URL}/apple-touch-icon.png</url>\n      <title>${escapeHtml(tf.titre)}</title>\n      <link>${getLocalizedUrl('blog', lang)}</link>\n    </image>\n` +
+      garde.map(i => i.xml).join('') +
+      '  </channel>\n</rss>\n';
+    const sortie = path.join(DIST_DIR, cheminFlux(lang));
+    ensureDir(path.dirname(sortie));
+    fs.writeFileSync(sortie, xml);
+  }
+  console.log(`[flux] ${LANGUAGES.length} flux RSS du blog (${FLUX_MAX} articles au plus chacun)`);
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
@@ -2357,6 +2460,7 @@ async function generateBlogArticle(articleMeta, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
+    bandeauPromo: bandeauPromoPour('article', articleMeta),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -2461,6 +2565,7 @@ async function generate404Pages() {
       bilanPrix: prixBilan(lang),
       bilanPrixBase: prixBilanBase(lang),
       bilanPromo: promoBilanPour(lang),
+      bandeauPromo: bandeauPromoPour('404'),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
       bilanGarantie: BILAN_CONST.garantie,
@@ -2521,6 +2626,7 @@ async function main() {
   await copyJs();
   copyTranslationData();
   generateSitemaps();
+  generateFlux();
 
   // Generate all pages
   const results = [];
