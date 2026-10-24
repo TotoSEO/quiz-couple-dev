@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/de/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.</description>
     <language>de</language>
-    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/de/blog/</link>
     </image>
+    <item>
+      <title>Toxischer Mann in der Liebe: die 6 Profile, die schaden (und wie man sie erkennt)</title>
+      <link>https://quiz-couple.com/de/blog/toxischer-mann-in-der-liebe/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/de/blog/toxischer-mann-in-der-liebe/</guid>
+      <pubDate>Sat, 24 Oct 2026 11:37:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Nicht jeder toxische Mann ist ein Narzisst. Die 6 Profile des toxischen Manns in der Liebe, was sie einem antun, und welche sich ändern können.</description>
+      <media:content url="https://quiz-couple.com/blog/homme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Juliette Drouet schrieb Victor Hugo 22.000 Liebesbriefe: ihre Geschichte</title>
       <link>https://quiz-couple.com/de/blog/juliette-drouet-victor-hugo-briefe/</link>
@@ -272,15 +281,6 @@
       <category>Beziehung</category>
       <description>Zehn Sommer-Aktivitäten für Paare, die mit den üblichen Ausflügen brechen: Markt ohne Liste, Baden im Fluss, Nacht draußen, analoge Fotos...</description>
       <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Emotionale Abhängigkeit: Wenn Liebe zum Überlebensbedürfnis wird</title>
-      <link>https://quiz-couple.com/de/blog/emotionale-abhaengigkeit-in-beziehungen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/de/blog/emotionale-abhaengigkeit-in-beziehungen/</guid>
-      <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Beziehung</category>
-      <description>Hast du das Gefühl, ohne den anderen nicht leben zu können? Verlustangst, ständiges Rückversicherungsbedürfnis, Identitätsverlust.</description>
-      <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Uomo tossico in amore: i 6 profili che fanno male (e come riconoscerli)</title>
+      <link>https://quiz-couple.com/it/blog/uomo-tossico-in-amore/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/uomo-tossico-in-amore/</guid>
+      <pubDate>Sat, 24 Oct 2026 11:37:00 GMT</pubDate>
+      <category>Psicologia</category>
+      <description>Non tutti gli uomini tossici sono narcisisti patologici. I 6 profili di uomo tossico in amore, cosa ti fanno vivere, e quali possono cambiare.</description>
+      <media:content url="https://quiz-couple.com/blog/homme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Juliette Drouet ha scritto 22.000 lettere d&#39;amore a Victor Hugo: la loro storia</title>
       <link>https://quiz-couple.com/it/blog/juliette-drouet-victor-hugo-lettere/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>Dieci attività di coppia in estate che cambiano dalle uscite di sempre: mercato senza lista, bagno nel fiume, notte all&#39;aperto, foto analogiche...</description>
       <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Dipendenza affettiva: quando amare diventa un bisogno vitale</title>
-      <link>https://quiz-couple.com/it/blog/dipendenza-affettiva-nella-coppia/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/dipendenza-affettiva-nella-coppia/</guid>
-      <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Hai la sensazione di non poter vivere senza l&#39;altro? Paura dell&#39;abbandono, bisogno costante di rassicurazione, perdita di identità.</description>
-      <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

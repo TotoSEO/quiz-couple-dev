@@ -1598,4 +1598,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://quiz-couple.com/it/blog/uomo-tossico-in-amore/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/homme-toxique-en-amour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/toxic-man-in-love/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/hombre-toxico-en-el-amor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/toxischer-mann-in-der-liebe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/uomo-tossico-in-amore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/homme-toxique-en-amour/"/>
+    <lastmod>2026-10-24T13:37:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

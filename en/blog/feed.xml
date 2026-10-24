@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>Toxic man in love: the 6 profiles that damage (and how to recognise them)</title>
+      <link>https://quiz-couple.com/en/blog/toxic-man-in-love/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/toxic-man-in-love/</guid>
+      <pubDate>Sat, 24 Oct 2026 11:37:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>Not every toxic man is a narcissistic abuser. The 6 profiles of the toxic man in love, what they put you through, and which ones can change.</description>
+      <media:content url="https://quiz-couple.com/blog/homme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Juliette Drouet wrote 22,000 love letters to Victor Hugo: their story</title>
       <link>https://quiz-couple.com/en/blog/juliette-drouet-victor-hugo-letters/</link>
@@ -272,15 +281,6 @@
       <category>Relationship</category>
       <description>Ten summer couple activities that break from the usual outings: a market with no list, river swimming, a night outside, film photos... simple and cheap.</description>
       <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Emotional Dependency: When Love Becomes a Survival Need</title>
-      <link>https://quiz-couple.com/en/blog/emotional-dependency-in-relationships/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/emotional-dependency-in-relationships/</guid>
-      <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>Feel like you can&#39;t live without your partner? Fear of abandonment, constant need for reassurance, loss of identity.</description>
-      <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

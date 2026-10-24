@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Homme toxique en amour : les 6 profils qui abîment (et comment les reconnaître)</title>
+      <link>https://quiz-couple.com/blog/homme-toxique-en-amour/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/homme-toxique-en-amour/</guid>
+      <pubDate>Sat, 24 Oct 2026 11:37:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Tous les hommes toxiques ne sont pas des pervers narcissiques. Les 6 profils d&#39;homme toxique en amour, ce qu&#39;ils font vivre, et lesquels peuvent changer.</description>
+      <media:content url="https://quiz-couple.com/blog/homme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Juliette Drouet a écrit 22 000 lettres d&#39;amour à Victor Hugo : leur histoire</title>
       <link>https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Combien donner pour un mariage en 2026 ? Le barème selon votre lien avec les mariés, les cas particuliers, et comment participer sans se prendre la tête.</description>
       <media:content url="https://quiz-couple.com/blog/cadeau-mariage.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Love bombing : comment savoir si c&#39;est de l&#39;amour ou de la manipulation</title>
-      <link>https://quiz-couple.com/blog/love-bombing/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/love-bombing/</guid>
-      <pubDate>Sun, 02 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Il est parfait, trop vite, trop fort. Amour sincère ou love bombing ? Les 3 phases du cycle, les signes concrets et le test de la limite pour savoir.</description>
-      <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

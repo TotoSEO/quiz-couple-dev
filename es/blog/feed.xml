@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Hombre tóxico en el amor: los 6 perfiles que dañan (y cómo reconocerlos)</title>
+      <link>https://quiz-couple.com/es/blog/hombre-toxico-en-el-amor/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/hombre-toxico-en-el-amor/</guid>
+      <pubDate>Sat, 24 Oct 2026 11:37:00 GMT</pubDate>
+      <category>Psicología</category>
+      <description>No todos los hombres tóxicos son narcisistas. Los 6 perfiles de hombre tóxico en el amor, lo que te hacen vivir y cuáles pueden cambiar.</description>
+      <media:content url="https://quiz-couple.com/blog/homme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Juliette Drouet escribió 22.000 cartas de amor a Victor Hugo: su historia</title>
       <link>https://quiz-couple.com/es/blog/juliette-drouet-victor-hugo-cartas/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>Diez actividades en pareja en verano que rompen con las salidas de siempre: mercado sin lista, baño en el río, noche al aire libre, fotos analógicas...</description>
       <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Dependencia emocional: cuando amar se convierte en una necesidad vital</title>
-      <link>https://quiz-couple.com/es/blog/dependencia-emocional-en-la-pareja/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dependencia-emocional-en-la-pareja/</guid>
-      <pubDate>Tue, 24 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>¿Sientes que no puedes vivir sin tu pareja? Miedo al abandono, necesidad constante de seguridad, pérdida de identidad.</description>
-      <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>
