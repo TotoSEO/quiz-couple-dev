@@ -1,0 +1,79 @@
+{
+  "jour": "2026-12-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-061",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Devant la maison, ils discutent au soleil ; le nuage d'orage arrive en grondant par-dessus le toit et se plante au-dessus d'elle, la pluie à verse, elle claque des dents sous ses mains. Il la regarde, surpris, puis se ferme : accroupi, le bond par-dessus le toit et le coup de pied en plein vol au ralenti qui fait éclater le nuage en étincelles ; le soleil revient d'un coup, les rayons sur la pelouse, les oiseaux. Il retombe accroupi, s'époussette les mains, sourire en coin ; elle l'attrape par le cou et l'embrasse, trempée.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "Have You Ever Seen the Rain"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "jeu": "discussion",
+              "incident": {
+                "type": "pluie",
+                "creature": "nuage",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison au soleil : le toit et la cheminée à droite, la porte, le chemin, le grand arbre à gauche. Ils se parlent debout face à face, il (bandana violet) gesticule, elle (nœud rose) rit. À 1,2 s le vent tourne : un nuage d'orage gris arrive en grondant par-dessus le toit, un visage fâché, des éclairs qui claquent dessous, et vient se planter juste au-dessus d'elle ; la pluie se met à tomber en rideau. Elle lève la tête, surprise, se met les mains sur la tête, les épaules rentrées, et claque des dents en tremblant ; il la regarde, puis regarde le nuage, et son visage se ferme. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage à lui, coupe franche, la pluie qui tombe autour. La surprise d'abord : yeux ronds, bouche en petit o, sourcils hauts, un battement de cœur. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers le nuage ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana claquent dans une rafale qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : lui devant, elle derrière les mains sur la tête, la pluie qui tombe sur le chemin, le nuage au-dessus qui gronde. Il se plante face au nuage, les poings serrés, les genoux qui fléchissent, le regard levé sous les gouttes ; la caméra serre un peu sur lui : il va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "chasse",
+              "duree": 3.6,
+              "description": "Plan d'ensemble, le nuage en haut, le couple en bas sous la pluie. Il s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière qui vole, secousse, il part comme une flèche vers le nuage, rémanences, lignes de vitesse, et arme un coup de pied en plein vol ; juste avant l'impact, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur. Impact de bande dessinée : flash blanc, le nuage crève en étincelles jaunes et en gouttes bleues qui partent en étoile, un anneau blanc, et le ciel est dégagé ; la pluie s'arrête net, les rayons du soleil tournent sur la pelouse, les oiseaux chantent. Il retombe accroupi dans la poussière, se redresse, se tourne vers elle et s'époussette les mains avec un sourire en coin ; elle lève la tête, surprise, et saute de joie en riant."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "rire",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, devant la maison sous le soleil revenu. Il marche vers elle, trois pas tranquilles, et lui fait un clin d'œil charmeur, étincelle, tintement ; elle rit aux éclats et saute sur place, il rit aussi et saute à son tour, et des cœurs montent entre eux pendant qu'ils reprennent leur souffle, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "My boyfriend vs the thunderstorm.\n\nTag him",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
