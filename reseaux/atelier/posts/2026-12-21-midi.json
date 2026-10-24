@@ -20,14 +20,14 @@
           "ambiance": "noel"
         },
         "questions": [
-          "What is your partner's favorite Christmas movie?",
+          "What Christmas movie does your partner love?",
           "Do they open gifts on the 24th or 25th?",
           "What is their dream Christmas gift?",
           "Real tree or fake tree for them?",
           "Do they love wrapping gifts?",
           "What is their favorite Christmas food?",
           "Do they sing along to carols?",
-          "Who do they call first on Christmas?"
+          "Who do they call first?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",
