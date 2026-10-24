@@ -34,6 +34,21 @@ export const heureParis = (instant) => fmt({ hour: '2-digit', minute: '2-digit',
 const jourAvant = (jour, n) => new Date(Date.parse(`${jour}T12:00:00Z`) - n * 86400e3).toISOString().slice(0, 10);
 const morceaux = (liste, n) => Array.from({ length: Math.ceil(liste.length / n) }, (_, i) => liste.slice(i * n, i * n + n));
 const ENVOYEE = ['sent', 'queued', 'in_process'];
+const attendre = (ms) => new Promise((r) => setTimeout(r, ms));
+// Les relectures de la liste du soir quand des contacts y manquent encore :
+// cinq secondes après la première lecture, puis quinze.
+const RELECTURES = [5000, 15000];
+
+async function membresDe(brevo, id) {
+  const dans = new Set();
+  for (let offset = 0; offset < 100000; offset += 500) {
+    const r = await brevo.membresDeLaListe(id, offset);
+    const page = (r && r.contacts) || [];
+    for (const x of page) if (x && x.email) dans.add(String(x.email).toLowerCase());
+    if (page.length < 500) break;
+  }
+  return dans;
+}
 
 async function majLignes(base, ids, valeurs) {
   for (const lot of morceaux(ids, 80)) await base.update('emails_envois', `id=in.(${lot.join(',')})`, valeurs);
@@ -150,7 +165,7 @@ async function dossierDuParcours(brevo) {
 
 // Un e-mail dans une langue : les lignes, les contacts, la liste, la
 // campagne, l'envoi. Rend le nombre de personnes parties et refusées.
-async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal }) {
+async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal, pause }) {
   const lignes = await base.insert('emails_envois',
     membres.map((m) => ({ abonne_id: m.abonne_id, type, angle: m.angle, lang, jour })),
     { conflit: 'abonne_id,type', ignorer: true });
@@ -178,20 +193,25 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
     }
   }
   // La liste relue avant l'envoi : seuls ceux qui y sont vraiment partent.
+  // Brevo peut mettre quelques secondes à montrer un contact qu'il vient
+  // d'ajouter : on relit (RELECTURES). Ceux qui manquent encore sont retirés
+  // de la liste avant la campagne, au cas où ils y seraient quand même :
+  // leur ligne s'efface et ils reviennent dans la file, ils ne doivent donc
+  // pas recevoir l'e-mail ce soir (sinon ils le recevraient deux fois).
   // Beaucoup d'absents, c'est un problème : on arrête sans rien envoyer.
-  const dansLaListe = new Set();
-  for (let offset = 0; offset < 100000; offset += 500) {
-    const r = await brevo.membresDeLaListe(liste.id, offset);
-    const page = (r && r.contacts) || [];
-    for (const x of page) if (x && x.email) dansLaListe.add(String(x.email).toLowerCase());
-    if (page.length < 500) break;
-  }
   const aEnvoyer = retenus.filter((m) => !refuses.includes(m));
+  let dansLaListe = await membresDe(brevo, liste.id);
+  for (const ms of RELECTURES) {
+    if (aEnvoyer.every((m) => dansLaListe.has(m.email))) break;
+    await pause(ms);
+    dansLaListe = await membresDe(brevo, liste.id);
+  }
   const partants = aEnvoyer.filter((m) => dansLaListe.has(m.email));
   const absents = aEnvoyer.length - partants.length;
   if (absents > Math.max(3, Math.ceil(aEnvoyer.length / 10))) {
     throw new Error(`${type} ${lang} : ${absents} contact(s) sur ${aEnvoyer.length} absents de la liste ${liste.id}, passage arrêté`);
   }
+  if (absents) await brevo.retirerDeLaListe(liste.id, aEnvoyer.filter((m) => !partants.includes(m)).map((m) => m.email));
   const ecartes = retenus.filter((m) => !partants.includes(m));
   if (ecartes.length) {
     await supprimerLignes(base, ecartes.map((m) => ligneDe.get(m.abonne_id).id));
@@ -265,7 +285,7 @@ async function reconcilier(base, brevo) {
   return n;
 }
 
-export async function passage({ base, brevo, maintenant = new Date(), mode = REGLAGES.mode, forcer = false, journal = (m) => console.log(m) }) {
+export async function passage({ base, brevo, maintenant = new Date(), mode = REGLAGES.mode, forcer = false, journal = (m) => console.log(m), pause = attendre }) {
   const jour = jourParis(maintenant);
   const bilan = { mode, jour, credits: null, limite: 0, file: 0, envois: {}, refuses: 0 };
   if (mode === 'arret') {
@@ -318,7 +338,7 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
       bilan.envois[cle] = membres.length;
       continue;
     }
-    const r = await envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal });
+    const r = await envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal, pause });
     bilan.envois[cle] = r.envoyes;
     bilan.refuses += r.refuses;
   }

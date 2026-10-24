@@ -340,8 +340,13 @@ que de secours. Dans l'ordre :
    les essais), au plafond et à la montée en charge des premiers soirs, puis par e-mail et par langue : les lignes
    `prepare`, les contacts et leurs champs, mis dans la liste du soir au
    même appel (Brevo répond 400 à un ajout séparé quand le contact y est
-   déjà), la liste relue (seuls ceux qui y sont partent ; plus d'un absent
-   sur dix arrête tout), la campagne, l'envoi, les lignes en `envoye`. La
+   déjà), la liste relue (seuls ceux qui y sont partent ; Brevo peut mettre
+   quelques secondes à montrer un contact qu'il vient d'ajouter, donc on la
+   relit cinq secondes puis quinze secondes après si quelqu'un manque ; un
+   contact toujours absent est retiré de la liste avant la campagne, puisque
+   sa ligne s'efface et qu'il revient dans la file : sinon il recevrait
+   l'e-mail deux fois ; plus d'un absent sur dix arrête tout), la campagne,
+   l'envoi, les lignes en `envoye`. La
    campagne n'a pas de `tag` : l'offre gratuite le refuse (405). Une adresse que Brevo refuse passe en
    `invalide` ; plus d'un refus sur dix, c'est un problème chez nous ou chez
    Brevo, et le passage s'arrête sans rien marquer ;
@@ -364,7 +369,16 @@ Le journal ne contient jamais une adresse.
    `+variante` par famille de test. On vérifie le rendu, les liens, et que
    « Se désinscrire » marche.
 4. Action `blanc` : qui recevrait quoi ce soir, sans rien envoyer.
-5. Une PR passe `mode` à `reel`.
+5. Une PR passe `mode` à `reel`. Fait le 24 octobre 2026 au soir (Thomas :
+   « si tu penses que tout est parfait et fonctionnel à 100 %, fonce ») :
+   `verif` disait « Tout est prêt » (781 `e1` en attente) et le passage à
+   blanc de 18 h 32 prévoyait 100 `e1` ce soir-là (30 en français, 32 en
+   anglais, 18 en espagnol, 14 en italien, 6 en allemand).
+6. Le lendemain, action `verif` : la section « Les derniers envois » donne
+   les comptes de `emails_compteurs` (envoyés, remis, rebonds, plaintes,
+   désinscriptions) et l'état des campagnes du parcours chez Brevo. Des
+   remises à zéro le lendemain veulent dire que le webhook ne revient pas :
+   sans elles, aucun `e2` ne part.
 
 ### Les tests
 

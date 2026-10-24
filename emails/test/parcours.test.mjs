@@ -96,10 +96,16 @@ class FausseBase {
 }
 
 class FauxBrevo {
-  constructor({ credits = 300, refuses = [], horsListe = [], campagnes = {}, contacts = [], listes = [] } = {}) {
+  // horsListe : jamais mis dans la liste ; lents : dans la liste, montrés
+  // à partir de la deuxième lecture ; invisibles : dans la liste, jamais
+  // montrés tant qu'on ne les en retire pas.
+  constructor({ credits = 300, refuses = [], horsListe = [], lents = [], invisibles = [], campagnes = {}, contacts = [], listes = [] } = {}) {
     this.credits = credits;
     this.refuses = new Set(refuses);
     this.horsListe = new Set(horsListe);
+    this.lents = new Set(lents);
+    this.invisibles = new Set(invisibles);
+    this.lectures = new Map();
     this.campagnesConnues = campagnes;
     this.contactsBrevo = contacts;
     this.listesBrevo = listes;
@@ -122,7 +128,15 @@ class FauxBrevo {
     for (const id of listes) if (!this.horsListe.has(email)) this.membres.get(id).push(email);
     return null;
   }
-  async membresDeLaListe(id, offset) { this.note('membresDeLaListe', id, offset); return { contacts: offset ? [] : this.membres.get(id).map((email) => ({ email })) }; }
+  async membresDeLaListe(id, offset) {
+    this.note('membresDeLaListe', id, offset);
+    if (offset) return { contacts: [] };
+    const n = (this.lectures.get(id) || 0) + 1;
+    this.lectures.set(id, n);
+    const vus = this.membres.get(id).filter((e) => !this.invisibles.has(e) && !(n === 1 && this.lents.has(e)));
+    return { contacts: vus.map((email) => ({ email })) };
+  }
+  async retirerDeLaListe(id, emails) { this.note('retirerDeLaListe', id, emails); this.membres.set(id, this.membres.get(id).filter((e) => !emails.includes(e))); return null; }
   async creerCampagne(corps) { this.note('creerCampagne', corps.name); const id = this.prochainId++; this.campagnesCreees.push({ id, ...corps }); return { id }; }
   async envoyerMaintenant(id) { this.note('envoyerMaintenant', id); this.envoyees.push(id); return null; }
   async campagne(id) {
@@ -140,6 +154,8 @@ class FauxBrevo {
 }
 
 const silence = () => {};
+// Les pauses entre deux relectures de la liste, notées sans attendre.
+const pauses = () => { const faites = []; const f = async (ms) => { faites.push(ms); }; f.faites = faites; return f; };
 const candidat = (i, type, lang, source, prenom = null) => ({ abonne_id: `ab-${i}`, email: `p${i}@exemple.fr`, lang, source, prenom, type, priorite: 1 });
 
 test('l\'heure et le jour se lisent à Paris', () => {
@@ -298,14 +314,54 @@ test('un contact que Brevo n\'a pas mis dans la liste ne part pas, et beaucoup d
   const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e2', 'fr', 'mariage'));
   const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
   const brevo = new FauxBrevo({ horsListe: ['p7@exemple.fr'] });
-  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
+  const pause = pauses();
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause });
   assert.equal(b.envois['e2:fr'], 11);
+  assert.deepEqual(pause.faites, [5000, 15000], 'la liste est relue deux fois avant de conclure');
   assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-7'), 'sa ligne est retirée, il reviendra');
   assert.equal(base.t.abonnes.find((a) => a.id === 'ab-7').statut, 'actif', 'son adresse n\'est pas marquée');
+  const retraits = brevo.appels.filter(([nom]) => nom === 'retirerDeLaListe');
+  assert.deepEqual(retraits.map(([, , emails]) => emails), [['p7@exemple.fr']]);
   const base2 = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
   const brevo2 = new FauxBrevo({ horsListe: file.map((c) => c.email) });
-  await assert.rejects(passage({ base: base2, brevo: brevo2, maintenant: SOIR, mode: 'reel', journal: silence }), /absents de la liste/);
+  await assert.rejects(passage({ base: base2, brevo: brevo2, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() }), /absents de la liste/);
   assert.equal(brevo2.campagnesCreees.length, 0);
+});
+
+test('un contact que Brevo montre en retard dans la liste part quand même', async () => {
+  const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e1', 'de', 'compatibilite'));
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const brevo = new FauxBrevo({ lents: ['p3@exemple.fr', 'p8@exemple.fr'] });
+  const pause = pauses();
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause });
+  assert.equal(b.envois['e1:de'], 12);
+  assert.deepEqual(pause.faites, [5000], 'une relecture suffit');
+  assert.ok(!brevo.appels.some(([nom]) => nom === 'retirerDeLaListe'));
+  assert.ok(base.t.emails_envois.filter((l) => l.statut === 'envoye').length === 12);
+});
+
+test('un contact dans la liste que Brevo ne montre pas en est retiré avant la campagne : rien ce soir, il revient dans la file', async () => {
+  const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const brevo = new FauxBrevo({ invisibles: ['p5@exemple.fr'] });
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() });
+  assert.equal(b.envois['e1:fr'], 11);
+  const liste = brevo.campagnesCreees[0].recipients.listIds[0];
+  assert.ok(!brevo.membres.get(liste).includes('p5@exemple.fr'), 'la campagne ne l\'atteint pas');
+  const i = brevo.appels.findIndex(([nom]) => nom === 'retirerDeLaListe');
+  const j = brevo.appels.findIndex(([nom]) => nom === 'creerCampagne');
+  assert.ok(i >= 0 && i < j, 'retiré avant la création de la campagne');
+  assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-5'), 'sa ligne est retirée, il reviendra');
+});
+
+test('sans absent, la liste n\'est lue qu\'une fois et rien n\'attend', async () => {
+  const file = Array.from({ length: 5 }, (_, i) => candidat(i, 'e1', 'it', 'mariage'));
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const brevo = new FauxBrevo();
+  const pause = pauses();
+  await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause });
+  assert.deepEqual(pause.faites, []);
+  assert.equal(brevo.appels.filter(([nom]) => nom === 'membresDeLaListe').length, 1);
 });
 
 test('trop de refus d\'un coup : le passage s\'arrête sans campagne ni adresse marquée', async () => {

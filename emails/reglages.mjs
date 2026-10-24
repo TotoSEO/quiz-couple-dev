@@ -9,7 +9,7 @@
 // si le mode écrit ici ne l'est pas.
 
 export const REGLAGES = {
-  mode: 'arret',
+  mode: 'reel',
   // Le domaine authentifié chez Brevo et l'adresse d'envoi : un sous-domaine,
   // pour que la réputation des campagnes reste séparée de celle de
   // quiz-couple.com, d'où partent les rapports payés (Resend).

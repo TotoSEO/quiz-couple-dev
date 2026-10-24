@@ -1,9 +1,9 @@
 // La vérification du parcours e-mail, en lecture seule (workflow
 // brevo-reglages.yml, action « verif ») : le compte Brevo (domaine,
 // expéditeur, champs, dossier, liste d'essais, webhook), la fonction
-// brevo-webhook et sa clé chez Supabase, le mode écrit dans reglages.mjs
-// et la file du soir. Rien n'est écrit. Le rapport ne montre ni clé ni
-// adresse de contact.
+// brevo-webhook et sa clé chez Supabase, le mode écrit dans reglages.mjs,
+// la file du soir et les derniers envois. Rien n'est écrit. Le rapport ne
+// montre ni clé ni adresse de contact.
 //
 //   BREVO_API_KEY=... [SUPABASE_ACCESS_TOKEN=... SUPABASE_PROJECT_REF=...] node emails/verif.mjs
 
@@ -109,6 +109,31 @@ await etape('La file du soir', async () => {
   info(`e1 en attente : ${file.e1} (dont ${file.e1_recents} de moins de 48 h) · e2 en attente : ${file.e2}`);
   const passages = await base.select('emails_passages', 'select=jour,debut,fin,bilan&order=jour.desc&limit=3');
   for (const p of passages || []) info(`passage du ${p.jour} : ${p.fin ? 'terminé' : 'NON TERMINÉ'} · ${JSON.stringify((p.bilan && p.bilan.envois) || {})}`);
+});
+
+// Ce que Brevo a dit des derniers envois (emails_compteurs, sans adresse),
+// et l'état des dernières campagnes du parcours : de quoi voir, le
+// lendemain d'un soir d'envoi, que les remises reviennent bien par le
+// webhook (sans elles, aucun e2 ne part).
+const EVENEMENTS = { envoye: 'envoyés', remis: 'remis', rebond_doux: 'rebonds doux', rebond_dur: 'rebonds durs', plainte: 'plaintes', desinscription: 'désinscriptions' };
+await etape('Les derniers envois', async () => {
+  if (!avecSupabase) return info('SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF absents : pas lus');
+  const { connexion } = await import('./base.mjs');
+  const base = await connexion();
+  const depuis = new Date(Date.now() - 7 * 86400e3).toISOString().slice(0, 10);
+  const lignes = await base.select('emails_compteurs', `select=jour,type,evenement,n&jour=gte.${depuis}&order=jour.asc`);
+  const parJour = new Map();
+  for (const l of lignes || []) {
+    const cle = `${l.jour} · ${l.type}`;
+    if (!parJour.has(cle)) parJour.set(cle, []);
+    parJour.get(cle).push(`${l.n} ${EVENEMENTS[l.evenement] || l.evenement}`);
+  }
+  if (!parJour.size) info('rien depuis sept jours');
+  for (const [cle, faits] of parJour) info(`${cle} : ${faits.join(', ')}`);
+  const r = await brevo.campagnes({ limite: 50 });
+  const du = ((r && r.campaigns) || []).filter((c) => String(c.name || '').startsWith('Parcours · ')).slice(0, 10);
+  if (!du.length) info('aucune campagne du parcours chez Brevo');
+  for (const c of du) info(`campagne ${c.id} « ${c.name} » : ${c.status}${c.sentDate ? ` (${c.sentDate})` : ''}`);
 });
 
 console.log(`\n${problemes ? problemes + ' point(s) à régler' : 'Tout est prêt.'}`);
