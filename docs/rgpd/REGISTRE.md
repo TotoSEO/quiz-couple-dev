@@ -23,6 +23,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 | Supabase | base de données, stockage des rapports PDF, fonctions serveur | région du projet, à vérifier (la politique dit Union européenne) | accord de sous-traitance (DPA) de Supabase |
 | Stripe Payments Europe | paiement de l'évaluation | Irlande | conditions de Stripe, DPA inclus |
 | Resend | envoi des e-mails (lien du rapport, rapport prêt, rappel, liens) ; le rapport lui-même n'y passe pas | États-Unis | clauses contractuelles types |
+| Brevo (Sendinblue SAS) | envoi des e-mails aux abonnés (parcours e-mail) : adresse, prénom et langue au moment de l'envoi, effacés quand l'adresse n'est plus abonnée | France (UE) | accord de sous-traitance de Brevo |
 | GitHub (Pages) | hébergement des pages du site | États-Unis | conditions de GitHub |
 | Google (Analytics 4) | mesure d'audience, seulement avec le consentement | États-Unis | consentement via la plateforme TCF |
 | The Moneytizer et ses partenaires | publicité, personnalisée seulement avec le consentement | UE et ailleurs (`ads.txt`) | consentement via la plateforme TCF |
@@ -87,8 +88,9 @@ du site. Pas de délégué à la protection des données (non obligatoire).
   - Pas de nom de famille. Les envois doivent prévoir un repli quand le prénom manque.
 - **Base légale** : le consentement (case « J'ai 15 ans ou plus et j'accepte de recevoir les conseils et nouveautés de Quiz Couple par e-mail », âge du consentement seul en France, article 45 de la loi Informatique et Libertés).
 - **Durée** (`rgpd_menage`, pg_cron chaque nuit) :
-  - trois ans après le dernier contact (`maj_le`). Quand les envois commenceront, l'outil d'envoi devra y remonter les ouvertures ;
+  - trois ans après le dernier contact (`maj_le`, la dernière fois que l'adresse a été laissée : les ouvertures ne sont pas suivies) ;
   - trois mois après une désinscription ou une adresse invalide.
+- **Les envois** (parcours e-mail, 24 octobre 2026, `docs/emailing/CONCEPTION.md`) : deux campagnes Brevo, le lendemain puis trois jours après ; jamais pour les adresses de l'e-book. Aucun suivi des ouvertures ni des clics par personne. `emails_envois` garde, par adresse et par e-mail, la date d'envoi et ce que Brevo en a dit (remis, rebond doux, plainte, désinscription), effacé avec l'adresse ou au bout de 13 mois ; un rebond dur supprime l'adresse.
 - **Au 22 octobre 2026** : 543 adresses actives, la plus ancienne du 22 août 2026.
 
 ### 5. Les demandes de l'e-book
@@ -169,7 +171,4 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 - **L'analyse d'impact de l'évaluation de couple** est dans `docs/rgpd/AIPD-evaluation.md`, avec son plan d'action. Thomas la valide en la signant.
 - **Les accords de sous-traitance** de Supabase, Stripe et Resend, à télécharger et à garder avec ce registre.
 - **La région du projet Supabase**, à vérifier dans le tableau de bord (Project Settings, General).
-- **Avant les premiers envois aux abonnés** :
-  - choisir l'outil d'envoi ; s'il ne s'agit pas de Resend, le nommer dans la politique ;
-  - mettre le lien de désinscription (`lead-capture?d=<jeton>`) dans chaque e-mail ;
-  - remonter les ouvertures dans `maj_le`.
+- **Les envois aux abonnés** : Brevo est nommé dans la politique (24 octobre 2026). Garder son accord de sous-traitance avec ce registre, et vérifier dans Brevo que le suivi des ouvertures et des clics est anonymisé pour les contacts sans consentement.

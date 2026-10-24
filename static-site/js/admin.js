@@ -3303,8 +3303,71 @@
       .then(function () { bouton.disabled = false; bouton.textContent = libelle; });
   }
 
+  // ── Le parcours e-mail (24 octobre 2026) ──
+  // Une lecture, get_emails_tableau (par admin-stats) : les comptes de la
+  // période (envoyés, remis, rebonds, plaintes, désinscriptions), les envois
+  // par e-mail, langue et famille de test, la file et les derniers passages.
+  var NOMS_EMAILS = { e1: 'E-mail 1 (le lendemain)', e2: 'E-mail 2 (trois jours après)' };
+  function loadEmails() {
+    ['emails-detail', 'emails-passages'].forEach(function (id) { placeAbonnes(id, '<p class="text-center text-muted-foreground py-6">Chargement...</p>'); });
+    return statsRpc('get_emails_tableau', { p_jours: 30 }).then(function (d) {
+      if (!d || typeof d !== 'object' || !Array.isArray(d.compteurs)) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      renderEmails(d);
+    }).catch(function (e) {
+      var msg = '<p class="bil-vide">Parcours illisible : ' + esc(e && e.message ? e.message : e) + '. La migration 20261024120000 (emails-base.yml) est-elle passée ?</p>';
+      ['emails-detail', 'emails-passages'].forEach(function (id) { placeAbonnes(id, msg); });
+      ['emails-envoyes', 'emails-remis', 'emails-sorties', 'emails-file'].forEach(function (id) { ecritAbonnes(id, '—'); });
+    });
+  }
+  function renderEmails(d) {
+    var c = {};
+    d.compteurs.forEach(function (x) { c[x.type + ':' + x.evenement] = Number(x.n) || 0; });
+    var somme = function (ev) { return (c['e1:' + ev] || 0) + (c['e2:' + ev] || 0); };
+    var envoyes = somme('envoye');
+    var remis = somme('remis');
+    ecritAbonnes('emails-envoyes', nombreAb(envoyes));
+    ecritAbonnes('emails-envoyes-sub', 'e1 ' + nombreAb(c['e1:envoye']) + ' · e2 ' + nombreAb(c['e2:envoye']));
+    ecritAbonnes('emails-remis', envoyes ? Math.round(100 * remis / envoyes) + ' %' : '—');
+    ecritAbonnes('emails-remis-sub', nombreAb(remis) + ' remis · ' + nombreAb(somme('rebond_dur')) + ' rebonds durs · ' + nombreAb(somme('rebond_doux')) + ' doux');
+    var sorties = somme('desinscription') + (c['autre:desinscription'] || 0);
+    var plaintes = somme('plainte') + (c['autre:plainte'] || 0);
+    ecritAbonnes('emails-sorties', nombreAb(sorties));
+    ecritAbonnes('emails-sorties-sub', (envoyes ? (Math.round(1000 * sorties / envoyes) / 10).toLocaleString('fr-FR') + ' % des envois · ' : '') + nombreAb(plaintes) + ' plainte' + (plaintes > 1 ? 's' : '') + ' pour spam');
+    var f = d.file || {};
+    ecritAbonnes('emails-file', nombreAb((Number(f.e1) || 0) + (Number(f.e2) || 0)));
+    ecritAbonnes('emails-file-sub', 'e1 ' + nombreAb(f.e1) + ' (dont ' + nombreAb(f.e1_recents) + ' de moins de 48 h) · e2 ' + nombreAb(f.e2));
+
+    var lignes = {};
+    (d.envois || []).forEach(function (x) {
+      var k = x.type + ':' + x.lang;
+      var l = lignes[k] || (lignes[k] = { type: x.type, lang: x.lang, envoyes: 0, remis: 0, rebonds: 0, plaintes: 0, desinscrits: 0, angles: {} });
+      ['envoyes', 'remis', 'rebonds', 'plaintes', 'desinscrits'].forEach(function (cle) { l[cle] += Number(x[cle]) || 0; });
+      l.angles[x.angle] = (l.angles[x.angle] || 0) + (Number(x.envoyes) || 0);
+    });
+    var rangs = Object.keys(lignes).sort();
+    placeAbonnes('emails-detail', rangs.length
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">E-mail</th><th>Langue</th><th>Envoyés</th><th>Remis</th><th>Rebonds doux</th><th>Plaintes</th><th>Désinscrits</th><th class="bil-gauche">Familles de test</th></tr></thead><tbody>' +
+        rangs.map(function (k) {
+          var l = lignes[k];
+          var angles = Object.keys(l.angles).map(function (a) { return esc(a) + ' ' + nombreAb(l.angles[a]); }).join(' · ');
+          return '<tr><td class="bil-gauche">' + esc(NOMS_EMAILS[l.type] || l.type) + '</td><td>' + esc(String(l.lang).toUpperCase()) + '</td><td>' + nombreAb(l.envoyes) + '</td><td>' + nombreAb(l.remis) + '</td><td>' + nombreAb(l.rebonds) + '</td><td>' + nombreAb(l.plaintes) + '</td><td>' + nombreAb(l.desinscrits) + '</td><td class="bil-gauche">' + angles + '</td></tr>';
+        }).join('') + '</tbody></table></div>'
+      : '<p class="bil-vide">Aucun e-mail envoyé sur la période.</p>');
+
+    var passages = Array.isArray(d.passages) ? d.passages : [];
+    placeAbonnes('emails-passages', passages.length
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Soir</th><th>Mode</th><th>État</th><th>Crédits</th><th class="bil-gauche">Envoyés</th></tr></thead><tbody>' +
+        passages.map(function (p) {
+          var b = p.bilan || {};
+          var envois = Object.keys(b.envois || {}).map(function (k) { return esc(k.replace(':', ' ')) + ' : ' + nombreAb(b.envois[k]); }).join(' · ');
+          return '<tr><td class="bil-gauche">' + esc(p.jour) + '</td><td>' + esc(b.mode || '') + '</td><td>' + (p.fin ? 'terminé' : '<strong>non terminé</strong>') + '</td><td>' + (b.credits == null ? '' : nombreAb(b.credits)) + '</td><td class="bil-gauche">' + (envois || '—') + '</td></tr>';
+        }).join('') + '</tbody></table></div>'
+      : '<p class="bil-vide">Aucun passage pour le moment.</p>');
+  }
+
   function loadLeads() {
     loadAbonnes();
+    loadEmails();
     var tbody = document.getElementById('leads-table-body');
     if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
 

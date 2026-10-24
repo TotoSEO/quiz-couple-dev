@@ -1,0 +1,61 @@
+{
+  "salutation": {
+    "prenom": "Hallo [[prenom]],",
+    "sans": "Hallo,"
+  },
+  "signature": "Thomas von Quiz Couple",
+  "pied": {
+    "pourquoi": "Du bekommst diese E-Mail, weil du am Ende eines Tests auf quiz-couple.com deine Adresse hinterlassen und zugestimmt hast, unsere Tipps und Neuigkeiten zu erhalten.",
+    "desinscription": "Abmelden",
+    "editeur": "Quiz Couple · Visibilitea, 4 rue de Bruges, 67000 Straßburg, Frankreich"
+  },
+  "seance": "Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €.",
+  "e1": {
+    "sujet": "100 Fragen, um Bilanz über eure Beziehung zu ziehen",
+    "apercu": "Jeder antwortet für sich, und ein Bericht zeigt euch, worin ihr euch einig seid und worüber ihr reden solltet.",
+    "intro": {
+      "score": "danke, dass du einen Test auf Quiz Couple gemacht hast, ich hoffe, er hat dir gefallen! So ein Test gibt einen ersten Eindruck, aber er sagt nicht, bei welchen Themen ihr euch einig seid und bei welchen nicht.",
+      "projet": "danke, dass du einen Test auf Quiz Couple gemacht hast, ich hoffe, er hat dir gefallen! Vor einem großen Schritt wie dem Zusammenziehen, der Hochzeit oder einem Kind ist ein guter Moment, um zu prüfen, ob ihr dasselbe wollt.",
+      "doute": "danke, dass du einen Test auf Quiz Couple gemacht hast. Wenn man sich Fragen über die eigene Beziehung stellt, weiß man nicht immer, wo man anfangen soll. Schon in Worte zu fassen, was gut läuft und was weniger gut läuft, hilft viel.",
+      "general": "danke, dass du Quiz Couple folgst! Wenn du weiter gehen willst als mit einem kurzen Test, kannst du hier eure Beziehung genau unter die Lupe nehmen."
+    },
+    "paragraphes": [
+      "**Die Beziehungsanalyse** ist unser ausführlichster Test: 100 konkrete Fragen zu 12 Bereichen des gemeinsamen Lebens, zum Beispiel Geld, Kinder, die Aufteilung der Hausarbeit oder Intimität. Die Fragen stützen sich auf mehr als dreißig veröffentlichte Studien über Paarbeziehungen, von denen einige Paare über Jahre begleitet haben.",
+      "Jeder antwortet auf seinem eigenen Handy, ohne die Antworten des anderen zu sehen. Rechnet mit etwa 25 Minuten pro Person, Pausen sind jederzeit möglich. Am Ende zeigt euch ein vollständiger Bericht, worin ihr euch einig seid, wo eure Antworten auseinandergehen und worüber ihr zuerst reden solltet."
+    ],
+    "bouton": "Die Analyse entdecken",
+    "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
+    "soloLien": "Mach sie allein",
+    "prix": {
+      "promo": "Die Fragen sind kostenlos. Gerade kostet der Bericht ~~[[prixBase]]~~ **[[prix]]** für euch beide (-[[pourcent]] %).",
+      "normal": "Die Fragen sind kostenlos, und der Bericht kostet **[[prix]]** für euch beide."
+    }
+  },
+  "e2": {
+    "sujet": "Geld, Kinder, Haushalt: Seid ihr auf einer Wellenlänge?",
+    "apercu": {
+      "promo": "Was der Bericht euch zeigt, und gerade -[[pourcent]] %.",
+      "normal": "Was der Bericht der Analyse euch zeigt, Bereich für Bereich."
+    },
+    "intro": {
+      "score": "vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das zeigt euch der Bericht am Ende.",
+      "projet": "vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Vor einem großen gemeinsamen Vorhaben zeigt euch der Bericht das hier.",
+      "doute": "vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das zeigt der Bericht, ob ihr sie zu zweit macht oder du allein.",
+      "general": "vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das zeigt euch der Bericht am Ende."
+    },
+    "points": [
+      "**Worin ihr euch einig seid und wo eure Antworten auseinandergehen**, Bereich für Bereich: Geld, Kinder, die Aufteilung der Hausarbeit, Intimität, die Art zu streiten usw.",
+      "**Die entscheidenden Themen**, die in einer Beziehung am meisten wiegen.",
+      "**Eure nächsten vier Gespräche**: die Themen, mit denen ihr anfangt, mit Fragen fürs Gespräch.",
+      "**Das Klima eurer Beziehung**: wie sich jeder von euch in der Beziehung fühlt."
+    ],
+    "solo": "Dein Partner oder deine Partnerin will nicht mitmachen? Du kannst sie allein machen: Du antwortest für dich und dann so, wie dein Partner oder deine Partnerin deiner Meinung nach antworten würde. Er oder sie erhält nichts.",
+    "prix": {
+      "promo": "Gerade kostet der Bericht ~~[[prixBase]]~~ **[[prix]]** für euch beide, also [[prixChacun]] pro Person: weniger als eine Kinokarte. [[seance]]",
+      "normal": "Der Bericht kostet **[[prix]]** für euch beide, also [[prixChacun]] pro Person: weniger als eine Kinokarte. [[seance]]"
+    },
+    "bouton": "Die Analyse machen",
+    "soloLien": "Allein machen",
+    "reprise": "Schon angefangen? Sie wartet auf demselben Handy, genau da, wo du aufgehört hast."
+  }
+}

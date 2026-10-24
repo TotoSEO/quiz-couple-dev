@@ -4,7 +4,9 @@
 //   « blanc » : calcule qui recevrait quoi et l'écrit au journal, sans rien
 //               envoyer ni écrire ;
 //   « reel »  : envoie.
-// On change le mode par une PR, jamais à la main chez Brevo.
+// On change le mode par une PR, jamais à la main chez Brevo. Un passage
+// lancé à la main peut toujours être fait à blanc (--blanc), jamais en réel
+// si le mode écrit ici ne l'est pas.
 
 export const REGLAGES = {
   mode: 'arret',
@@ -14,9 +16,22 @@ export const REGLAGES = {
   domaine: 'mail.quiz-couple.com',
   expediteur: { name: 'Quiz Couple', email: 'bonjour@mail.quiz-couple.com' },
   repondreA: 'infoquizcouple@gmail.com',
-  // Les listes du jour sont rangées là, et supprimées le surlendemain.
+  // Les listes du soir (« AAAA-MM-JJ · e1 · fr · 19:02 ») sont rangées là, et
+  // supprimées après `listesGardees` jours ; la liste « Essais » y vit aussi.
   dossier: 'Parcours Quiz Couple',
-  // Les champs des contacts que nos campagnes utilisent (FIRSTNAME existe
-  // déjà chez Brevo).
-  attributs: ['SALUTATION', 'LANGUE', 'GROUPE', 'SOURCE'],
+  listesGardees: 2,
+  listeEssais: 'Essais',
+  // Les champs des contacts que nos campagnes utilisent. PARCOURS (le soir
+  // du dernier envoi) marque aussi les contacts que le parcours a poussés
+  // chez Brevo : la réconciliation du soir n'efface que ceux-là. La famille
+  // du test n'y va pas : elle ne sert pas à l'envoi.
+  attributs: ['SALUTATION', 'INTRO', 'LANGUE', 'PARCOURS'],
+  // L'envoi du soir : la fenêtre (heure de Paris) où il a le droit de
+  // partir, le plafond d'e-mails par soir, et les crédits Brevo laissés de
+  // côté pour les essais. L'offre gratuite de Brevo donne 300 envois par
+  // jour : au-delà, la file attend le lendemain (l'admin l'affiche), et il
+  // faut l'offre supérieure puis relever `plafond`.
+  fenetre: { de: '18:00', a: '21:00' },
+  plafond: 300,
+  marge: 10,
 };

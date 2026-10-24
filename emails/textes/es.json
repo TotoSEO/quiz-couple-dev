@@ -1,0 +1,61 @@
+{
+  "salutation": {
+    "prenom": "¡Hola, [[prenom]]!",
+    "sans": "¡Hola!"
+  },
+  "signature": "Thomas, de Quiz Couple",
+  "pied": {
+    "pourquoi": "Recibes este correo porque dejaste tu dirección al final de un test en quiz-couple.com y aceptaste recibir nuestros consejos y novedades.",
+    "desinscription": "Darse de baja",
+    "editeur": "Quiz Couple · Visibilitea, 4 rue de Bruges, 67000 Estrasburgo, Francia"
+  },
+  "seance": "Una sesión con un consejero de pareja cuesta entre 50 y 90 €.",
+  "e1": {
+    "sujet": "100 preguntas para hacer balance de vuestra pareja",
+    "apercu": "Cada uno responde por su lado, y un informe os muestra en qué estáis de acuerdo y de qué hablar.",
+    "intro": {
+      "score": "Gracias por hacer un test en Quiz Couple, ¡espero que te haya gustado! Un test así da una idea general, pero no dice en qué temas estáis de acuerdo y en cuáles no.",
+      "projet": "Gracias por hacer un test en Quiz Couple, ¡espero que te haya gustado! Antes de un gran paso, como iros a vivir juntos, casaros o tener un hijo, es un buen momento para comprobar que queréis lo mismo.",
+      "doute": "Gracias por hacer un test en Quiz Couple. Cuando te haces preguntas sobre tu pareja, no siempre sabes por dónde empezar. Poner palabras a lo que va bien y a lo que va peor ya ayuda mucho.",
+      "general": "¡Gracias por seguir a Quiz Couple! Si te apetece ir más allá de un test, aquí tienes una forma de hacer balance de tu pareja en detalle."
+    },
+    "paragraphes": [
+      "**La evaluación de pareja** es nuestro test más completo: 100 preguntas concretas sobre 12 áreas de la vida en pareja, como el dinero, los hijos, el reparto de tareas o la intimidad. Las preguntas se basan en más de treinta estudios publicados sobre la vida en pareja, algunos de los cuales siguieron a parejas durante años.",
+      "Cada uno responde en su teléfono, sin ver las respuestas del otro. Son unos 25 minutos cada uno, y podéis hacer pausas. Al final, un informe completo os muestra en qué estáis de acuerdo, dónde se separan vuestras respuestas y de qué hablar primero."
+    ],
+    "bouton": "Descubrir la evaluación",
+    "soloQuestion": "¿Tu pareja no quiere participar?",
+    "soloLien": "Hazla a solas",
+    "prix": {
+      "promo": "Las preguntas son gratis. Ahora mismo, el informe cuesta ~~[[prixBase]]~~ **[[prix]]** para los dos (-[[pourcent]] %).",
+      "normal": "Las preguntas son gratis, y el informe cuesta **[[prix]]** para los dos."
+    }
+  },
+  "e2": {
+    "sujet": "Dinero, hijos, tareas: ¿estáis en la misma onda?",
+    "apercu": {
+      "promo": "Lo que te muestra el informe, y -[[pourcent]] % ahora mismo.",
+      "normal": "Lo que te muestra el informe de la evaluación, área por área."
+    },
+    "intro": {
+      "score": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que os muestra el informe al final.",
+      "projet": "Hace unos días te hablé de la evaluación de pareja. Antes de un gran proyecto juntos, esto es lo que os muestra el informe.",
+      "doute": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que muestra el informe, tanto si la hacéis los dos como si la haces a solas.",
+      "general": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que os muestra el informe al final."
+    },
+    "points": [
+      "**En qué estáis de acuerdo y dónde se separan vuestras respuestas**, área por área: el dinero, los hijos, el reparto de tareas, la intimidad, la forma de discutir, etc.",
+      "**Los temas decisivos**, los que más pesan en una pareja.",
+      "**Vuestras cuatro próximas conversaciones**: los temas por los que empezar, con preguntas para hablarlo.",
+      "**El clima de vuestra pareja**: cómo se siente cada uno en la relación."
+    ],
+    "solo": "¿Tu pareja no quiere participar? Puedes hacerla a solas: respondes por ti y luego como crees que respondería tu pareja. Tu pareja no recibe nada.",
+    "prix": {
+      "promo": "Ahora mismo, el informe cuesta ~~[[prixBase]]~~ **[[prix]]** para los dos, es decir [[prixChacun]] cada uno: menos que una entrada de cine. [[seance]]",
+      "normal": "El informe cuesta **[[prix]]** para los dos, es decir [[prixChacun]] cada uno: menos que una entrada de cine. [[seance]]"
+    },
+    "bouton": "Hacer la evaluación",
+    "soloLien": "Hacerla a solas",
+    "reprise": "¿Ya la has empezado? Te espera en el mismo teléfono, justo donde la dejaste."
+  }
+}
