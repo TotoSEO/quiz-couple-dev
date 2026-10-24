@@ -249,6 +249,17 @@ du tu préfères par langue, son texte étant dans l'image). Les commentaires
 du gabarit ne partent pas (`sansCommentaires`), sauf ceux qui s'adressent à
 Outlook.
 
+Le pied dit pourquoi la personne reçoit l'e-mail, le nom de l'éditeur
+(« Quiz Couple · Visibilitea ») et trois liens : le site, les mentions
+légales (l'identité complète du vendeur y est) et la désinscription. Jamais
+l'adresse postale (Thomas, 24 octobre 2026 : « c'est mon adresse perso ») :
+la loi française demande l'identité de l'expéditeur et un moyen de se
+désinscrire (L34-5 du Code des postes et des communications électroniques,
+article 20 de la LCEN), et Brevo le seul lien de désinscription. Seule la loi
+américaine (CAN-SPAM) veut une adresse postale dans un e-mail commercial ;
+si un jour une part des envois anglais part vers les États-Unis, une adresse
+de domiciliation ou une boîte postale fera l'affaire.
+
 - `e1` : le titre de la page de vente (« Faites le point sur votre couple,
   sans aller chez un pro »), une phrase écrite pour la famille du test
   (`score`, `projet`, `doute` de `BILAN_ENTREES`, « general » sinon), quatre

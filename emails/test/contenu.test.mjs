@@ -140,6 +140,13 @@ test('la maquette : tout dans la langue, les images du site, les liens des tests
       for (const mot of ['Tests · Quiz · Jeux', 'J’y vais', 'J&#39;y vais', 'aussi sur', 'On se retrouve', 'te font coucou']) assert.ok(!c.html.includes(mot), `${lang} : ${mot}`);
     }
   }
+  // Le pied : le nom de l'éditeur et un lien vers les mentions légales, jamais l'adresse postale.
+  for (const lang of LANGUES) {
+    const c = campagne('e2', lang, SOIR);
+    assert.ok(!/Bruges|67000/.test(c.html), `${lang} : adresse postale dans l'e-mail`);
+    assert.ok(c.html.includes('Quiz Couple · Visibilitea'));
+    assert.match(c.html, /href="https:\/\/quiz-couple\.com\/(?:[a-z]{2}\/)?(?:mentions-legales|legal-notice|aviso-legal|impressum|note-legali)\/"/);
+  }
   // Les images existent bien dans le dossier que le site publie.
   for (const l of LANGUES) assert.ok(readFileSync(new URL(`../../public/email/voir-tu-preferes-${l}.png`, import.meta.url)).length > 1000);
 });
