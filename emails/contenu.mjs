@@ -201,6 +201,10 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
     PIED: `${echapper(ecrire(t.pied.pourquoi))}<br>${echapper(ecrire(t.pied.editeur))}`,
     DESINSCRIPTION_LIEN: '{{ unsubscribe }}',
     DESINSCRIPTION_TEXTE: echapper(ecrire(t.pied.desinscription)),
+    // L'identité complète du vendeur est sur les mentions légales, pas dans
+    // l'e-mail (Thomas, 24 octobre 2026 : « c'est mon adresse perso »).
+    MENTIONS_LIEN: echapper(getLocalizedUrl('legalMentions', lang)),
+    MENTIONS_TEXTE: echapper(ecrire(t.pied.mentions)),
   };
   t.voir.cartes.forEach((c, i) => {
     const n = i + 1;
