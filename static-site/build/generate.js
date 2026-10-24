@@ -1893,8 +1893,10 @@ function copyStaticAssets() {
   // « produits » porte les visuels Amazon des encarts de resultat, copies chez
   // nous plutot qu'appeles sur le CDN d'Amazon.
   // « fonts » porte les polices du rapport du bilan (Fraunces et Inter, OFL),
-  // « bilan » les aperçus du rapport montrés sur sa page.
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan']) {
+  // « bilan » les aperçus du rapport montrés sur sa page, « email » les images
+  // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
+  // sur le site).
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan', 'email']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {

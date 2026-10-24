@@ -34,4 +34,11 @@ export const REGLAGES = {
   fenetre: { de: '18:00', a: '21:00' },
   plafond: 300,
   marge: 10,
+  // La montée en charge (Thomas, 24 octobre 2026 : « il faut vider la base
+  // actuelle sans envoyer 900 mails d'un coup, faut faire par vague pendant
+  // plusieurs jours ») : le premier soir d'envoi réel part au plus à 100, le
+  // deuxième à 150, le troisième à 200, puis au plafond. Le domaine d'envoi
+  // est neuf : les messageries le jugent sur ses premiers envois. Seuls
+  // comptent les soirs où quelque chose est vraiment parti.
+  montee: [100, 150, 200],
 };

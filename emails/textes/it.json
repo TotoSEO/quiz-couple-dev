@@ -1,35 +1,73 @@
 {
   "salutation": {
-    "prenom": "Ciao [[prenom]],",
-    "sans": "Ciao,"
+    "prenom": "Ciao [[prenom]]!",
+    "sans": "Ciao!"
   },
-  "signature": "Thomas, di Quiz Couple",
+  "signature": [
+    "A presto,",
+    "Thomas, di Quiz Couple"
+  ],
+  "pastille": "Test · Quiz · Giochi",
+  "altMascottes": "Le mascotte di Quiz Couple ti salutano",
+  "voir": {
+    "titre": "Altro su [[marque]]",
+    "aller": "Ci vado →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "Qual è il tuo linguaggio dell'amore?",
+        "texte": "30 domande per scoprire come ama ciascuno di voi."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Chi conosce meglio l'altro?",
+        "texte": "Il piccolo duello per vedere chi ascolta di più."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-it.png",
+        "type": "Gioco",
+        "titre": "Preferiresti?",
+        "texte": "100 scelte impossibili da decidere in due."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "Ci vediamo su Instagram?",
+    "texte": "Un piccolo quiz ogni giorno, da fare in due."
+  },
   "pied": {
     "pourquoi": "Ricevi questa e-mail perché hai lasciato il tuo indirizzo alla fine di un test su quiz-couple.com e hai accettato di ricevere i nostri consigli e le nostre novità.",
     "desinscription": "Annulla l'iscrizione",
     "editeur": "Quiz Couple · Visibilitea, 4 rue de Bruges, 67000 Strasburgo, Francia"
   },
-  "seance": "Una seduta da un consulente di coppia costa tra 60 e 100 €.",
   "e1": {
     "sujet": "100 domande per fare il punto sulla vostra coppia",
     "apercu": "Ognuno risponde per conto suo, e un report vi mostra su cosa siete d'accordo e di cosa parlare.",
+    "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
     "intro": {
-      "score": "Grazie per aver fatto un test su Quiz Couple, spero che ti sia piaciuto! Un test così dà un'idea generale, ma non dice su quali temi siete d'accordo e su quali no.",
-      "projet": "Grazie per aver fatto un test su Quiz Couple, spero che ti sia piaciuto! Prima di un grande passo, come andare a vivere insieme, sposarsi o avere un figlio, è il momento giusto per verificare che vogliate le stesse cose.",
-      "doute": "Grazie per aver fatto un test su Quiz Couple. Quando ci si fanno domande sulla propria coppia, non sempre si sa da dove cominciare. Dare un nome a ciò che va bene e a ciò che va meno bene aiuta già molto.",
-      "general": "Grazie di seguire Quiz Couple! Se hai voglia di andare oltre un test, ecco un modo per fare il punto sulla tua coppia nel dettaglio."
+      "score": "Grazie per aver fatto un test su Quiz Couple! Vuoi andare oltre? Ecco il nostro test più completo.",
+      "projet": "Grazie per aver fatto un test su Quiz Couple! Prima di un grande passo, conviene verificare che vogliate le stesse cose.",
+      "doute": "Grazie per aver fatto un test su Quiz Couple. Quando ci si fanno domande sulla propria coppia, dare un nome alle cose aiuta già molto.",
+      "general": "Grazie di seguire Quiz Couple! Vuoi andare oltre un test? Ecco il nostro test più completo."
     },
-    "paragraphes": [
-      "**La valutazione di coppia** è il nostro test più completo: 100 domande concrete su 12 aree della vita a due, come i soldi, i figli, la divisione dei compiti o l'intimità. Le domande si basano su più di trenta studi pubblicati sulla vita di coppia, alcuni dei quali hanno seguito delle coppie per anni.",
-      "Ognuno risponde sul proprio telefono, senza vedere le risposte dell'altro. Ci vogliono circa 25 minuti a testa, e potete fare delle pause. Alla fine, un report completo vi mostra su cosa siete d'accordo, dove le vostre risposte si allontanano e di cosa parlare per primo."
+    "points": [
+      "**100 domande** su 12 aree: soldi, figli, intimità, litigi...",
+      "**Ognuno sul proprio telefono**, senza vedere le risposte dell'altro",
+      "**Basata su più di 30 studi** pubblicati sulla coppia",
+      "**Un report completo**: su cosa siete d'accordo, su cosa no e da dove cominciare"
     ],
+    "solo": "Il tuo partner non vuole? [Falla da solo/a](solo).",
+    "prixPhrase": {
+      "promo": "−[[pourcent]] % con il codice [[code]], applicato automaticamente",
+      "normal": "Per tutti e due, in un solo pagamento"
+    },
     "bouton": "Scopri la valutazione",
-    "soloQuestion": "Il tuo partner non vuole partecipare?",
-    "soloLien": "Falla da solo/a",
-    "prix": {
-      "promo": "Le domande sono gratuite. In questo momento il report costa ~~[[prixBase]]~~ **[[prix]]** per voi due (-[[pourcent]] %).",
-      "normal": "Le domande sono gratuite, e il report costa **[[prix]]** per voi due."
-    }
+    "note": "Le domande sono gratuite: paghi alla fine, una volta sola per tutti e due."
   },
   "e2": {
     "sujet": "Soldi, figli, faccende: siete sulla stessa lunghezza d'onda?",
@@ -37,25 +75,26 @@
       "promo": "Cosa vi mostra il report, e -[[pourcent]] % in questo momento.",
       "normal": "Cosa vi mostra il report della valutazione, area per area."
     },
+    "titre": "La vostra coppia, area per area",
     "intro": {
-      "score": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa vi mostra il report alla fine.",
-      "projet": "Qualche giorno fa ti ho parlato della valutazione di coppia. Prima di un grande progetto insieme, ecco cosa vi mostra il report.",
-      "doute": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa mostra il report, che la facciate in due o che tu la faccia da solo/a.",
-      "general": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa vi mostra il report alla fine."
+      "score": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:",
+      "projet": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:",
+      "doute": "Qualche giorno fa ti ho parlato della valutazione di coppia. In due o da solo/a, ecco cosa scoprirai alla fine:",
+      "general": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:"
     },
     "points": [
-      "**Su cosa siete d'accordo e dove le vostre risposte si allontanano**, area per area: i soldi, i figli, la divisione dei compiti, l'intimità, il modo di litigare, ecc.",
-      "**I temi decisivi**, quelli che pesano di più in una coppia.",
-      "**Le vostre prossime quattro conversazioni**: gli argomenti da cui partire, con domande per parlarne.",
-      "**Il clima della vostra coppia**: come si sente ciascuno di voi nella relazione."
+      "**Su cosa siete d'accordo e su cosa no**, domanda per domanda",
+      "**I temi decisivi**, quelli che pesano di più in una coppia",
+      "**Le vostre prossime 4 conversazioni**, con domande per cominciare",
+      "**Il clima della vostra coppia**, visto da ciascuno di voi",
+      "**[Possibile da solo/a](solo)** se il tuo partner non vuole partecipare"
     ],
-    "solo": "Il tuo partner non vuole partecipare? Puoi farla da solo/a: rispondi per te, poi come pensi che risponderebbe il tuo partner. Il tuo partner non riceve niente.",
-    "prix": {
-      "promo": "In questo momento il report costa ~~[[prixBase]]~~ **[[prix]]** per voi due, cioè [[prixChacun]] a testa: meno di un biglietto del cinema. [[seance]]",
-      "normal": "Il report costa **[[prix]]** per voi due, cioè [[prixChacun]] a testa: meno di un biglietto del cinema. [[seance]]"
+    "deja": "L'hai già cominciata? Ti aspetta proprio dove l'avevi lasciata.",
+    "prixPhrase": {
+      "promo": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema",
+      "normal": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema"
     },
     "bouton": "Fai la valutazione",
-    "soloLien": "Falla da solo/a",
-    "reprise": "L'hai già cominciata? Ti aspetta sullo stesso telefono, proprio dove l'avevi lasciata."
+    "note": "Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €."
   }
 }

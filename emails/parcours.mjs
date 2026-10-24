@@ -13,8 +13,10 @@
 //   4. les désinscriptions faites chez Brevo que le webhook aurait
 //      manquées (contacts du parcours bloqués ces trois derniers jours) ;
 //   5. la file du soir (emails_du_jour), coupée aux crédits de Brevo et au
-//      plafond, puis, par e-mail et par langue : les lignes d'envoi, les
-//      contacts et leurs champs, la liste du soir, la campagne, l'envoi ;
+//      plafond du soir (montée en charge les premiers soirs, puis
+//      REGLAGES.plafond), puis, par e-mail et par langue : les lignes
+//      d'envoi, les contacts et leurs champs, la liste du soir, la campagne,
+//      l'envoi ;
 //   6. le ménage chez Brevo : les listes du parcours plus vieilles que
 //      REGLAGES.listesGardees, et les contacts du parcours que notre base
 //      n'a plus en actif (rebond, désinscription, purge de rgpd_menage).
@@ -128,6 +130,15 @@ async function synchroniserBlocages(base, brevo, maintenant) {
     if (liste.length < 1000) break;
   }
   return n;
+}
+
+// Le plafond de ce soir : celui de la montée en charge tant qu'on n'a pas
+// eu autant de soirs d'envoi réel (REGLAGES.montee), le plafond ensuite.
+export async function plafondDuSoir(base) {
+  const faits = await base.select('emails_passages', 'select=jour,bilan&fin=not.is.null&order=jour.asc&limit=100');
+  const soirs = (faits || []).filter((p) => p && p.bilan && p.bilan.mode === 'reel'
+    && Object.values(p.bilan.envois || {}).some((n) => Number(n) > 0)).length;
+  return soirs < REGLAGES.montee.length ? REGLAGES.montee[soirs] : REGLAGES.plafond;
 }
 
 async function dossierDuParcours(brevo) {
@@ -270,7 +281,8 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
   }
 
   bilan.credits = creditsRestants(await brevo.compte());
-  bilan.limite = Math.max(0, Math.min(REGLAGES.plafond, bilan.credits - REGLAGES.marge));
+  bilan.plafond = await plafondDuSoir(base);
+  bilan.limite = Math.max(0, Math.min(bilan.plafond, bilan.credits - REGLAGES.marge));
 
   let dossier = null;
   if (mode === 'reel') {

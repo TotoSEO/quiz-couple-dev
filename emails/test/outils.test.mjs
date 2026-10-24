@@ -97,7 +97,7 @@ test('essai : brouillons d\'avant effacés, une campagne par e-mail et par langu
   assert.deepEqual(contacts.map(([, e]) => e), ['thomas+e1-fr-score@gmail.com', 'thomas+e1-fr-doute@gmail.com', 'thomas+e2-fr-score@gmail.com', 'thomas+e2-fr-doute@gmail.com']);
   for (const [, , a, listes] of contacts) {
     assert.equal(a.PARCOURS, undefined);
-    assert.equal(a.SALUTATION, 'Bonjour Thomas,');
+    assert.equal(a.SALUTATION, 'Coucou Thomas\u00a0!');
     assert.deepEqual(listes, [4]);
   }
   assert.ok(contacts[1][2].INTRO.includes('questions sur son couple'));
