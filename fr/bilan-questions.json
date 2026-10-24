@@ -405,6 +405,7 @@
       "questions": {
         "ent1": {
           "q": "Voir vos familles (la vôtre et celle de {autre}), vous aimeriez...",
+          "qNeutre": "Voir vos familles (la vôtre et celle de l'autre), vous aimeriez...",
           "o": [
             "Toutes les semaines",
             "Plusieurs fois par mois",
@@ -421,8 +422,15 @@
         },
         "ent2": {
           "q": "Si votre famille critique {autre} devant vous, vous...",
+          "qNeutre": "Si votre famille critique l'autre devant vous, vous...",
           "o": [
             "Je défends {autre} tout de suite",
+            "J'en parle à ma famille plus tard",
+            "Je ne dis rien sur le moment",
+            "Je ne m'en mêle pas"
+          ],
+          "oNeutre": [
+            "Je défends l'autre tout de suite",
             "J'en parle à ma famille plus tard",
             "Je ne dis rien sur le moment",
             "Je ne m'en mêle pas"
@@ -453,6 +461,7 @@
         },
         "ent4": {
           "q": "Vos amis et ceux de {autre}, vous aimez les voir...",
+          "qNeutre": "Vos amis et ceux de l'autre, vous aimez les voir...",
           "o": [
             "Tous ensemble, on mélange",
             "Souvent ensemble, parfois chacun de son côté",
@@ -469,6 +478,7 @@
         },
         "ent5": {
           "q": "Que {autre} sorte sans vous (soirée, week-end entre amis), vous trouvez ça...",
+          "qNeutre": "Que l'autre sorte sans vous (soirée, week-end entre amis), vous trouvez ça...",
           "o": [
             "Normal, aussi souvent que l'envie est là",
             "Normal, de temps en temps",
@@ -691,6 +701,12 @@
             "J'en parle avant",
             "Je décide avec {autre}"
           ],
+          "oNeutre": [
+            "Je le fais sans en parler",
+            "Je préviens l'autre",
+            "J'en parle avant",
+            "Je décide avec l'autre"
+          ],
           "court": "Les gros achats",
           "pourquoi": "Ce n'est pas le montant qui fâche, c'est de découvrir l'achat après coup. Fixer un seuil à deux évite à la fois de se sentir surveillé et les mauvaises surprises.",
           "parler": [
@@ -877,6 +893,7 @@
         },
         "log5": {
           "q": "Déménager loin pour le travail de {autre} :",
+          "qNeutre": "Déménager loin pour le travail de l'autre :",
           "o": [
             "Oui, sans hésiter",
             "Oui, si c'est une belle opportunité",
@@ -1347,6 +1364,7 @@
         },
         "val8": {
           "q": "Avoir les mêmes idées politiques que {autre}, c'est...",
+          "qNeutre": "Avoir les mêmes idées politiques que l'autre, c'est...",
           "o": [
             "Indispensable",
             "Préférable",
@@ -1375,6 +1393,7 @@
       "questions": {
         "dis1": {
           "q": "Quand quelque chose vous dérange chez {autre}, vous le dites...",
+          "qNeutre": "Quand quelque chose vous dérange chez l'autre, vous le dites...",
           "o": [
             "Tout de suite",
             "Assez vite, au bon moment",
@@ -1568,6 +1587,7 @@
       "questions": {
         "con1": {
           "q": "Regarder le téléphone de {autre}, pour vous, c'est...",
+          "qNeutre": "Regarder le téléphone de l'autre, pour vous, c'est...",
           "o": [
             "Ça ne me pose aucun problème",
             "Acceptable si on demande avant",
@@ -1616,6 +1636,7 @@
         },
         "con4": {
           "q": "Que {autre} ait un ami ou une amie très proche, du genre qui pourrait lui plaire :",
+          "qNeutre": "Que l'autre ait un ami ou une amie très proche, du genre qui pourrait lui plaire :",
           "o": [
             "Aucun problème",
             "Ça dépend de la personne",
@@ -1648,6 +1669,7 @@
         },
         "con6": {
           "q": "Connaître les codes et les mots de passe de {autre} :",
+          "qNeutre": "Connaître les codes et les mots de passe de l'autre :",
           "o": [
             "Ça va de soi, on partage tout",
             "Utile en cas de besoin",

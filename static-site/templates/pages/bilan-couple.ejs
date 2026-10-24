@@ -10,22 +10,31 @@
   // par le gabarit de base (cssPage) ; la base des écrans (.bilan-*) reste
   // dans styles.css, celle du rapport dans /css/bilan-rapport.css.
   //
-  // La page de vente (19 octobre 2026, Thomas : « pas encore assez landing
-  // page transactionnelle... un slider, des glissades, une timeline ») : le
-  // haut de page avec le radar du rapport, deux boutons (à deux, seul(e)), le
-  // ruban des douze domaines, les deux façons de faire, le rapport page par
-  // page en curseur (quiz-slider.js), la frise des étapes révélée au
-  // défilement (scroll-reveal.js), la grille des domaines, trois questions à
-  // essayer (bilan-lp.js), pour qui, le comparatif conseiller / IA /
-  // évaluation, la recherche, le prix, la confiance, la FAQ, et une barre
-  // collée en bas sur téléphone. Tout ce qui bouge n'anime que transform et
+  // La page de vente, resserrée le 23 octobre 2026 (Thomas, devant la page
+  // du quiz couple de WeBloom : « Son contenu est bon, synthétique, ya pas trop
+  // d'info, le wording est bon, et sa ligne de flotaison est excellente. Nous,
+  // y'a beaucoup beaucoup trop de texte ») : 2 770 mots et 23 000 px de haut
+  // sur téléphone avant, douze sections. Le premier écran porte la promesse
+  // (titre, une phrase), la réduction, un seul gros bouton (à deux), le lien
+  // « faites-la seul(e) », les moyens de paiement et « Quiz Couple, des
+  // milliers de visiteurs chaque jour » ; le même jour, Thomas a fait retirer
+  // la phrase « Questions gratuites, sans créer de compte... », Amazon Pay et
+  // le dégradé du haut de page, et demandé de l'air entre les blocs ; puis les chiffres, le ruban des douze domaines, trois
+  // étapes, le rapport page par page en curseur (quiz-slider.js), les deux
+  // façons de faire (#facons, la cible des liens « seul(e) » du site), une
+  // question à essayer (bilan-lp.js), le prix, la confiance, huit questions
+  // fréquentes, le dernier appel et la barre collée en bas sur téléphone.
+  // Partis ce jour-là : les coches du haut, le fil d'Ariane, la grille des
+  // domaines, « pour qui », le comparatif conseiller / IA / évaluation et la
+  // section sur la recherche (une phrase sous les étapes et une réponse de la
+  // FAQ la remplacent). Aucun nombre de pages n'est promis : les rapports
+  // d'exemple en font de 27 à 47. Tout ce qui bouge n'anime que transform et
   // opacity, rien ne part de l'opacité 0 dans le premier écran, et
   // prefers-reduced-motion arrête tout.
   //
-  // La page n'a pas de vocation de référencement (noindex tant que
-  // l'évaluation n'est pas ouverte, et elle est d'abord la destination des
-  // tests du site) : elle est écrite pour convaincre quelqu'un qui arrive d'un
-  // test.
+  // La page est en noindex dans les cinq langues (generate.js,
+  // noindexRoutes) : elle est écrite pour convaincre quelqu'un qui arrive d'un
+  // test, pas pour le référencement.
   const ns = 'bilan';
   const pageTitle = t('quizzes:bilanCouple.title', 'Évaluation de couple');
   const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
@@ -102,7 +111,6 @@
   const DOMS = ['quotidien', 'temps', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs', 'disputes', 'confiance', 'intimite', 'meteo'];
   const domTitre = (id) => t('bilan-questions:domaines.' + id + '.titre', id);
   const domBref = (id) => t('bilan-questions:domaines.' + id + '.bref', domTitre(id));
-  const domTextes = L('domaines.liste', {}) || {};
   // Une icône au trait par domaine (24 x 24, trait de 1.8).
   const ICONES_DOM = {
     quotidien: '<path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/>',
@@ -141,7 +149,6 @@
     amazonpay: { nom: 'Amazon Pay', svg: svgPaiement('<text x="23" y="13.2" text-anchor="middle" ' + policeMarque + ' font-weight="700" font-size="9.4" letter-spacing="-.3" fill="#232f3e">amazon</text><path d="M13.5 16.3c5.3 3.9 14 3.9 19.6-.3" fill="none" stroke="#f90" stroke-width="1.6" stroke-linecap="round"/><path d="M30.7 15.1l2.6.9-1 2.5" fill="none" stroke="#f90" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><text x="23" y="26.2" text-anchor="middle" ' + policeMarque + ' font-weight="600" font-size="8.6" fill="#232f3e">pay</text>') },
   };
   const moyens = (typeof moyensPaiement !== 'undefined' && Array.isArray(moyensPaiement) ? moyensPaiement : []).filter((m) => PICTOS_PAIEMENT[m]);
-  const iconesPour = [ICONES_DOM.logement, ICONES_DOM.disputes, '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/>', ICONES_DOM.intimite];
   const fleche = '<svg class="blp-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
   const coche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
@@ -165,7 +172,7 @@
   const anneauTour = (2 * Math.PI * 26).toFixed(2);
   const anneauPlein = (2 * Math.PI * 26 * 0.83).toFixed(2);
 
-  // Les trois questions à essayer, telles que Camille les a vues (accords au
+  // La question à essayer, telle que Camille l'a vue (accords au
   // féminin, le prénom du partenaire à la place de « {autre} »).
   const demoQ = liste('demo.questions');
   const partenaire = L('demo.partenaireNom', 'Julien');
@@ -178,15 +185,18 @@
   }).filter(Boolean);
 
   const chiffres = liste('chiffres');
-  const pour = liste('pour.cartes');
   const pages = liste('rapport.pages');
   const etapes = liste('etapes.liste');
-  const constats = liste('recherche.constats');
   const inclus = liste('prix.inclus');
   const confiance = liste('confiance.points');
-  const comparCols = liste('compar.cols');
-  const comparLignes = liste('compar.lignes');
   const facons = L('facons', {}) || {};
+
+  // La preuve sous le bouton (23 octobre 2026, Thomas : « ne met pas
+  // 120 000, tu dis, Quiz Couple, des milliers de visiteurs chaque jour ») :
+  // les deux personnages, puis la phrase, « Quiz Couple » en gras. Le site
+  // fait plus de 5 000 visites par jour (mesure d'audience), et l'évaluation
+  // n'a pas encore d'avis à citer.
+  const preuve = e(ins(L('preuve'))).replace('{{nom}}', '<strong>Quiz Couple</strong>');
 %>
 <script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
 <% if (faqEntrees.length) { %>
@@ -195,29 +205,20 @@
 
 <div class="blp" data-lang="<%= lang %>">
 
-  <!-- La promesse -->
+  <!-- La promesse : un titre, une phrase, un seul gros bouton -->
   <section class="blp-hero">
     <div class="blp-wrap blp-hero-grille">
       <div class="blp-hero-texte">
-        <nav class="blp-ariane" aria-label="Breadcrumb">
-          <a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></span>
-        </nav>
         <p class="blp-sur"><%- x('badge') %></p>
         <h1 class="blp-h1"><%- x('titre') %></h1>
         <p class="blp-lead"><%- x('sousTitre') %></p>
-        <ul class="blp-coches">
-          <% for (const p of liste('points')) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
-        </ul>
         <% if (promo) { %>
         <p class="blp-promo"><span class="promo-pastille"><%= promo.badge %></span><span class="blp-promo-prix"><%- promo.html %></span><span class="blp-promo-unite"><%- x('prix.unite') %></span></p>
         <% } %>
         <div class="blp-ctas">
-          <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
-          <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+          <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
         </div>
-        <p class="blp-cta-note"><%- x('ctaNote') %> · <a class="blp-lien" href="#rapport"><%- x('voirExtrait') %></a></p>
+        <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
         <% if (moyens.length) { %>
         <div class="blp-paiements">
           <span class="blp-paiements-lib"><%- icone(iconesConfiance[3]) %><%- x('paiements') %></span>
@@ -226,6 +227,7 @@
           </ul>
         </div>
         <% } %>
+        <p class="blp-preuve"><span class="blp-preuve-persos" aria-hidden="true"><%- masc('rose', 'salut', 'blp-preuve-masc') %><%- masc('violet', 'mignon', 'blp-preuve-masc') %></span><span class="blp-preuve-texte"><%- preuve %></span></p>
         <div id="bilan-reprise" class="blp-reprise" hidden></div>
         <noscript><p class="blp-cta-note"><%= lang === 'fr' ? "L'évaluation a besoin de JavaScript pour fonctionner." : 'The assessment needs JavaScript to work.' %></p></noscript>
       </div>
@@ -270,27 +272,31 @@
     <% } %>
   </div>
 
-  <!-- À deux ou seul(e) -->
-  <section class="blp-section blp-facons" id="facons">
-    <div class="blp-wrap">
-      <%# Le prix d'une séance, en citation (Thomas, 19 octobre 2026 : « cette phrase est super ! Il faudrait la mettre en citation juste avant »). %>
-      <blockquote class="blp-citation"><p><%- x('facons.citation') %></p></blockquote>
-      <h2 class="blp-h2"><%- x('facons.titre') %></h2>
-      <p class="blp-intro"><%- x('facons.intro') %></p>
-      <div class="blp-facons-grille">
-        <% for (const m of ['duo', 'solo']) { const f = facons[m] || {}; %>
-        <article class="blp-facon blp-facon--<%= m %> animate-on-scroll">
-          <div class="blp-facon-persos" aria-hidden="true"><%- m === 'duo' ? masc('rose', 'salut', 'blp-masc-s') + masc('violet', 'mignon', 'blp-masc-s') : masc('rose', 'mignon', 'blp-masc-s') %></div>
-          <p class="blp-facon-sous"><%- tx(f.sous) %></p>
-          <h3 class="blp-facon-titre"><%- tx(f.titre) %></h3>
-          <ul class="blp-coches">
-            <% for (const p of (f.points || [])) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
-          </ul>
-          <button type="button" class="blp-btn<%= m === 'solo' ? ' blp-btn--violet' : '' %>" data-bilan-commencer="<%= m %>"><%- tx(f.cta) %><%- fleche %></button>
-        </article>
-        <% } %>
+  <!-- Comment ça marche : trois étapes -->
+  <section class="blp-section blp-etapes">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('etapes.titre') %></h2>
+      <ol class="blp-tl">
+        <% etapes.forEach((s, i) => { %>
+        <li class="blp-tl-etape animate-on-scroll">
+          <div class="blp-tl-rail" aria-hidden="true"><span class="blp-tl-num"><%= i + 1 %></span></div>
+          <div class="blp-tl-corps">
+            <p class="blp-tl-duree"><%- tx(s.duree) %></p>
+            <h3 class="blp-h3"><%- tx(s.titre) %></h3>
+            <p><%- tx(s.texte) %></p>
+          </div>
+          <div class="blp-tl-mock blp-tl-mock--<%= i + 1 %>" aria-hidden="true">
+            <% if (i === 0) { %><span class="blp-mock-chip blp-mock-chip--on"><%- tx((facons.duo || {}).titre) %></span><span class="blp-mock-chip"><%- tx((facons.solo || {}).titre) %></span>
+            <% } else if (i === 1) { %><span class="blp-mock-q"></span><span class="blp-mock-opt blp-mock-opt--on"></span><span class="blp-mock-opt"></span><span class="blp-mock-opt"></span>
+            <% } else { %><span class="blp-mock-prix"><%- promo ? promo.html : e(prix) %></span><span class="blp-mock-cadenas"><%- icone(iconesConfiance[3]) %></span><% } %>
+          </div>
+        </li>
+        <% }) %>
+      </ol>
+      <p class="blp-note blp-centre"><%- x('etapes.note') %></p>
+      <div class="blp-ctas blp-ctas--centre blp-ctas--section">
+        <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
       </div>
-      <p class="blp-note blp-centre"><%- x('facons.note') %></p>
     </div>
   </section>
 
@@ -329,57 +335,38 @@
     </div>
   </section>
 
-  <!-- Comment ça se passe : la frise -->
-  <section class="blp-section blp-etapes">
-    <div class="blp-wrap blp-etroit">
-      <h2 class="blp-h2"><%- x('etapes.titre') %></h2>
-      <ol class="blp-tl">
-        <% etapes.forEach((s, i) => { %>
-        <li class="blp-tl-etape animate-on-scroll">
-          <div class="blp-tl-rail" aria-hidden="true"><span class="blp-tl-num"><%= i + 1 %></span></div>
-          <div class="blp-tl-corps">
-            <p class="blp-tl-duree"><%- tx(s.duree) %></p>
-            <h3 class="blp-h3"><%- tx(s.titre) %></h3>
-            <p><%- tx(s.texte) %></p>
-          </div>
-          <div class="blp-tl-mock blp-tl-mock--<%= i + 1 %>" aria-hidden="true">
-            <% if (i === 0) { %><span class="blp-mock-chip blp-mock-chip--on"><%- tx((facons.duo || {}).titre) %></span><span class="blp-mock-chip"><%- tx((facons.solo || {}).titre) %></span>
-            <% } else if (i === 1) { %><span class="blp-mock-q"></span><span class="blp-mock-opt blp-mock-opt--on"></span><span class="blp-mock-opt"></span><span class="blp-mock-opt"></span>
-            <% } else if (i === 2) { %><span class="blp-mock-prix"><%- promo ? promo.html : e(prix) %></span><span class="blp-mock-cadenas"><%- icone(iconesConfiance[3]) %></span>
-            <% } else { %><span class="blp-mock-page blp-mock-page--1"></span><span class="blp-mock-page blp-mock-page--2"></span><span class="blp-mock-page blp-mock-page--3"></span><% } %>
-          </div>
-        </li>
-        <% }) %>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Les douze domaines -->
-  <section class="blp-section blp-domaines">
+  <!-- À deux ou seul(e) -->
+  <section class="blp-section blp-facons" id="facons">
     <div class="blp-wrap">
-      <h2 class="blp-h2"><%- x('domaines.titre') %></h2>
-      <p class="blp-intro"><%- x('domaines.intro') %></p>
-      <ul class="blp-doms">
-        <% for (const d of DOMS) { %>
-        <li class="blp-dom blp-dom--<%= d %> animate-on-scroll">
-          <span class="blp-dom-ico"><%- icone(ICONES_DOM[d]) %></span>
-          <h3 class="blp-dom-titre"><%- tx(domTitre(d)) %></h3>
-          <p><%- tx(domTextes[d] || '') %></p>
-        </li>
+      <%# Le prix d'une séance, en citation (Thomas, 19 octobre 2026 : « cette phrase est super ! Il faudrait la mettre en citation juste avant »). %>
+      <blockquote class="blp-citation"><p><%- x('facons.citation') %></p></blockquote>
+      <h2 class="blp-h2"><%- x('facons.titre') %></h2>
+      <p class="blp-intro"><%- x('facons.intro') %></p>
+      <div class="blp-facons-grille">
+        <% for (const m of ['duo', 'solo']) { const f = facons[m] || {}; %>
+        <article class="blp-facon blp-facon--<%= m %> animate-on-scroll">
+          <div class="blp-facon-persos" aria-hidden="true"><%- m === 'duo' ? masc('rose', 'salut', 'blp-masc-s') + masc('violet', 'mignon', 'blp-masc-s') : masc('rose', 'mignon', 'blp-masc-s') %></div>
+          <p class="blp-facon-sous"><%- tx(f.sous) %></p>
+          <h3 class="blp-facon-titre"><%- tx(f.titre) %></h3>
+          <ul class="blp-coches">
+            <% for (const p of (f.points || [])) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(p) %></span></li><% } %>
+          </ul>
+          <button type="button" class="blp-btn<%= m === 'solo' ? ' blp-btn--violet' : '' %>" data-bilan-commencer="<%= m %>"><%- tx(f.cta) %><%- fleche %></button>
+        </article>
         <% } %>
-      </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Trois questions à essayer -->
+  <!-- Une question à essayer -->
   <% if (demos.length) { %>
   <section class="blp-section blp-demo">
-    <div class="blp-wrap">
+    <div class="blp-wrap blp-etroit">
       <h2 class="blp-h2"><%- x('demo.titre') %></h2>
       <p class="blp-intro"><%- x('demo.intro') %></p>
       <div class="blp-dqs">
         <% demos.forEach((d, i) => { %>
-        <article class="blp-dq animate-on-scroll">
+        <article class="blp-dq">
           <p class="blp-dq-dom"><%- tx(d.domaine) %></p>
           <h3 class="blp-dq-q"><%- tx(d.q) %></h3>
           <div class="blp-dq-opts" role="group">
@@ -391,69 +378,17 @@
               <div class="blp-dq-col blp-dq-col--violet"><p class="blp-dq-qui"><%- x('demo.partenaire') %></p><p class="blp-dq-rep blp-dq-rep--attente"><%- x('demo.attente') %></p></div>
             </div>
             <% if (d.pourquoi) { %><p class="blp-dq-pourquoi-titre"><%- x('demo.pourquoi') %></p><p class="blp-dq-pourquoi"><%- tx(d.pourquoi) %></p><% } %>
+            <p class="blp-dq-apres"><%- x('demo.apres') %></p>
           </div>
         </article>
         <% }) %>
       </div>
-      <p class="blp-note blp-centre"><%- x('demo.apres') %></p>
-      <p class="blp-note blp-centre"><%- x('demo.fin') %></p>
-      <div class="blp-ctas blp-ctas--centre">
+      <div class="blp-ctas blp-ctas--centre blp-ctas--section">
         <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('demo.cta') %><%- fleche %></button>
       </div>
     </div>
   </section>
   <% } %>
-
-  <!-- Pour qui -->
-  <section class="blp-section blp-pour">
-    <div class="blp-wrap">
-      <h2 class="blp-h2"><%- x('pour.titre') %></h2>
-      <p class="blp-intro"><%- x('pour.intro') %></p>
-      <div class="blp-cartes">
-        <% pour.forEach((c, i) => { %>
-        <article class="blp-carte animate-on-scroll">
-          <span class="blp-carte-ico"><%- icone(iconesPour[i % iconesPour.length]) %></span>
-          <h3 class="blp-h3"><%- tx(c.titre) %></h3>
-          <p><%- tx(c.texte) %></p>
-        </article>
-        <% }) %>
-      </div>
-    </div>
-  </section>
-
-  <!-- Un conseiller, une IA, ou cette évaluation -->
-  <section class="blp-section blp-compar">
-    <div class="blp-wrap">
-      <h2 class="blp-h2"><%- x('compar.titre') %></h2>
-      <p class="blp-intro"><%- x('compar.intro') %></p>
-      <div class="blp-tableau" role="table" aria-label="<%- x('compar.titre') %>"><div class="blp-tableau-defile">
-        <div class="blp-tableau-tete" role="row">
-          <span role="columnheader"></span>
-          <% comparCols.forEach((c, i) => { %><span role="columnheader" class="blp-col blp-col--<%= i + 1 %>"><%- tx(c) %></span><% }) %>
-        </div>
-        <% for (const l of comparLignes) { %>
-        <div class="blp-tableau-ligne" role="row">
-          <span role="rowheader" class="blp-tableau-sujet"><%- tx(l.sujet) %></span>
-          <% (l.c || []).forEach((v, i) => { %><span role="cell" class="blp-col blp-col--<%= i + 1 %>" data-col="<%- tx(comparCols[i] || '') %>"><%- tx(v) %></span><% }) %>
-        </div>
-        <% } %>
-      </div></div>
-      <p class="blp-tableau-aide" aria-hidden="true"><%- x('compar.aide') %></p>
-      <p class="blp-conclusion"><%- x('compar.conclusion') %></p>
-    </div>
-  </section>
-
-  <!-- La recherche -->
-  <section class="blp-section blp-recherche">
-    <div class="blp-wrap blp-etroit">
-      <h2 class="blp-h2"><%- x('recherche.titre') %></h2>
-      <p class="blp-intro"><%- x('recherche.p1') %></p>
-      <ol class="blp-constats">
-        <% for (const c of constats) { %><li class="animate-on-scroll"><%- tx(c) %></li><% } %>
-      </ol>
-      <p class="blp-note"><%- x('recherche.p2') %></p>
-    </div>
-  </section>
 
   <!-- Le prix -->
   <section class="blp-section blp-prix-section" id="prix">
@@ -476,9 +411,9 @@
           <p class="blp-prix-aide"><%- x('prix.aide') %></p>
           <% if (jours > 0) { %><p class="blp-garantie"><%- x('prix.garantie') %></p><% } %>
           <div class="blp-ctas">
-            <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
-            <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+            <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
           </div>
+          <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
         </div>
       </div>
     </div>
@@ -490,7 +425,7 @@
       <h2 class="blp-h2"><%- x('confiance.titre') %></h2>
       <div class="blp-confiance-grille">
         <% confiance.forEach((c, i) => { %>
-        <div class="blp-confiance-point animate-on-scroll">
+        <div class="blp-confiance-point">
           <span class="blp-carte-ico"><%- icone(iconesConfiance[i % iconesConfiance.length]) %></span>
           <h3 class="blp-h3"><%- tx(c.titre) %></h3>
           <p><%- tx(c.texte) %></p>
@@ -521,10 +456,9 @@
       <h2 class="blp-h2"><%- x('final.titre') %></h2>
       <p class="blp-lead"><%- x('final.texte') %></p>
       <div class="blp-ctas blp-ctas--centre">
-        <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('ctaDuo') %><%- fleche %></button>
-        <button type="button" class="blp-btn blp-btn--second" data-bilan-commencer="solo"><%- x('ctaSolo') %></button>
+        <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
       </div>
-      <p class="blp-cta-note"><%- x('ctaNote') %></p>
+      <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
     </div>
   </section>
 

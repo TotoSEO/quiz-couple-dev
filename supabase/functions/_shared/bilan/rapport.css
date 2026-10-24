@@ -363,6 +363,9 @@
 .rap-accord-titre { font-weight: 600; font-size: .94em; line-height: 1.3; }
 .rap-accord-rep { font-size: .86em; color: var(--encre-2); margin-top: .12em; line-height: 1.35; }
 .rap-accord .rap-tag { margin-top: .4em; }
+/* Sous la réponse commune d'un accord : « Sujet décisif » et « Non négociable
+   pour ... », côte à côte, et à la ligne s'ils ne tiennent pas. */
+.rap-accord-tags { display: flex; flex-wrap: wrap; gap: 0 .35em; }
 
 /* ── Carte des domaines ──────────────────────────────────────────────── */
 
