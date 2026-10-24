@@ -47,50 +47,51 @@
     "mentions": "Impressum"
   },
   "e1": {
-    "sujet": "100 Fragen, um Bilanz über eure Beziehung zu ziehen",
-    "apercu": "Jeder antwortet für sich, und ein Bericht zeigt euch, worin ihr euch einig seid und worüber ihr reden solltet.",
+    "sujet": "100 Fragen, um als Paar Bilanz zu ziehen",
+    "apercu": "Jeder antwortet auf seinem Handy, dann zeigt euch ein Bericht, worin ihr euch einig seid.",
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
     "intro": {
-      "score": "Danke für deinen Test auf Quiz Couple! Lust, weiter zu gehen? Hier ist unser ausführlichster Test.",
-      "projet": "Danke für deinen Test auf Quiz Couple! Vor einem großen Schritt lohnt es sich zu prüfen, ob ihr dasselbe wollt.",
-      "doute": "Danke für deinen Test auf Quiz Couple. Wenn man sich Fragen über die eigene Beziehung stellt, hilft es schon viel, sie in Worte zu fassen.",
-      "general": "Danke, dass du Quiz Couple folgst! Lust, weiter zu gehen als mit einem kurzen Test? Hier ist unser ausführlichster Test."
+      "score": "Danke für deinen Test auf Quiz Couple! Wenn du wissen willst, worin ihr euch einig seid und worin nicht, haben wir etwas viel Ausführlicheres gemacht: die Beziehungsanalyse.",
+      "projet": "Danke für deinen Test auf Quiz Couple! Vor einem großen Schritt lohnt es sich zu prüfen, ob ihr beide dasselbe wollt. Genau dafür gibt es die Beziehungsanalyse.",
+      "doute": "Danke für deinen Test auf Quiz Couple. Wenn man sich Fragen über die eigene Beziehung stellt, hilft es schon viel, sie in Worte zu fassen. Dafür gibt es die Beziehungsanalyse.",
+      "general": "Danke, dass du Quiz Couple folgst! Wenn du wissen willst, worin ihr euch einig seid und worin nicht, haben wir unseren ausführlichsten Test gemacht: die Beziehungsanalyse."
     },
     "points": [
       "**100 Fragen** zu 12 Bereichen: Geld, Kinder, Intimität, Streit...",
-      "**Jeder auf seinem Handy**, ohne die Antworten des anderen zu sehen",
-      "**Gestützt auf mehr als 30 veröffentlichte Studien** über Paarbeziehungen",
-      "**Ein vollständiger Bericht**: worin ihr euch einig seid, worin nicht, und womit ihr anfangt"
+      "**Jeder antwortet auf seinem Handy**, ohne die Antworten des anderen zu sehen",
+      "**Fragen auf Grundlage der Forschung**: mehr als 30 veröffentlichte Studien über Paare",
+      "**Am Ende vergleicht ein Bericht** eure Antworten und sagt euch, worüber ihr zuerst reden solltet"
     ],
-    "solo": "Dein Partner oder deine Partnerin will nicht? [Mach sie allein](solo).",
+    "solo": "Dein Partner oder deine Partnerin will nicht mitmachen? [Du kannst die Analyse auch allein machen](solo).",
     "prixPhrase": {
-      "promo": "−[[pourcent]] % mit dem Code [[code]], automatisch abgezogen",
+      "promo": "−[[pourcent]] % gerade, schon beim Bezahlen abgezogen",
       "normal": "Für euch beide, einmalig"
     },
-    "bouton": "Die Analyse entdecken",
-    "note": "Die Fragen sind kostenlos: Du zahlst am Ende, einmal für euch beide."
+    "bouton": "So funktioniert's",
+    "note": "Die Fragen sind kostenlos: Du zahlst am Ende, einmal für euch beide.",
+    "ps": "**PS:** [[accroche]]"
   },
   "e2": {
-    "sujet": "Geld, Kinder, Haushalt: Seid ihr auf einer Wellenlänge?",
+    "sujet": "Gemeinsames Konto oder jeder sein eigenes Geld?",
     "apercu": {
-      "promo": "Was der Bericht euch zeigt, und gerade -[[pourcent]] %.",
-      "normal": "Was der Bericht der Analyse euch zeigt, Bereich für Bereich."
+      "promo": "Eine der 100 Fragen der Beziehungsanalyse, gerade −[[pourcent]] %.",
+      "normal": "Eine der 100 Fragen der Beziehungsanalyse. Was würdest du antworten?"
     },
-    "titre": "Eure Beziehung, Bereich für Bereich",
+    "titre": "Würdet ihr beide dasselbe antworten?",
     "intro": {
-      "score": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das entdeckt ihr am Ende:",
-      "projet": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das entdeckt ihr am Ende:",
-      "doute": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Zu zweit oder allein, das entdeckst du am Ende:",
-      "general": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Das entdeckt ihr am Ende:"
+      "score": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "projet": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "doute": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "general": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:"
     },
+    "exemple": "Jeder antwortet für sich. Wählt ihr dieselbe Antwort, seid ihr euch einig. Antwortet einer „[[reponseA]]“ und der andere „[[reponseB]]“, erklärt euch der Bericht, warum das zählt, und gibt euch Fragen, um darüber zu reden.",
+    "aussi": "Im Bericht findet ihr außerdem:",
     "points": [
-      "**Worin ihr euch einig seid und worin nicht**, Frage für Frage",
-      "**Die entscheidenden Themen**, die in einer Beziehung am meisten wiegen",
-      "**Eure nächsten 4 Gespräche**, mit Fragen für den Einstieg",
-      "**Das Klima eurer Beziehung**, so wie jeder von euch es erlebt",
-      "**[Auch allein möglich](solo)**, wenn dein Partner oder deine Partnerin nicht mitmachen will"
+      "**Die entscheidenden Themen** hervorgehoben: die, die in einer Beziehung am meisten wiegen",
+      "**4 Gespräche, die anstehen**, mit Fragen für den Einstieg",
+      "**Wie jeder von euch** die Beziehung gerade erlebt"
     ],
-    "deja": "Schon angefangen? Sie wartet genau da, wo du aufgehört hast.",
+    "solo": "[Die Analyse geht auch allein](solo), wenn dein Partner oder deine Partnerin nicht mitmachen will.",
     "prixPhrase": {
       "promo": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte",
       "normal": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte"

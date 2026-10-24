@@ -47,50 +47,51 @@
     "mentions": "Legal Notice"
   },
   "e1": {
-    "sujet": "100 questions to take stock of your relationship",
-    "apercu": "You each answer on your own, and a report shows you where you agree and what to talk about.",
+    "sujet": "100 questions to see where you two stand",
+    "apercu": "You each answer on your own phone, then a report shows you where you agree.",
     "titre": "Take stock of your relationship, without seeing a professional",
     "intro": {
-      "score": "Thanks for taking a test on Quiz Couple! Want to go further? Here's our most complete test.",
-      "projet": "Thanks for taking a test on Quiz Couple! Before a big step, it's worth checking you want the same things.",
-      "doute": "Thanks for taking a test on Quiz Couple. When you have questions about your relationship, putting words on them already helps a lot.",
-      "general": "Thanks for following Quiz Couple! Want to go further than a quick test? Here's our most complete test."
+      "score": "Thanks for taking a test on Quiz Couple! If you'd like to know what you two agree on, and what you don't, we've made something much more thorough: the relationship assessment.",
+      "projet": "Thanks for taking a test on Quiz Couple! Before a big step, it's worth checking you both want the same things. That's what the relationship assessment is for.",
+      "doute": "Thanks for taking a test on Quiz Couple. When you have doubts about your relationship, putting them into words already helps a lot. That's what the relationship assessment is for.",
+      "general": "Thanks for following Quiz Couple! If you'd like to know what you two agree on, and what you don't, we've made our most thorough test: the relationship assessment."
     },
     "points": [
       "**100 questions** across 12 areas: money, kids, intimacy, arguments...",
-      "**Each on your own phone**, without seeing the other's answers",
-      "**Built on more than 30 published studies** on relationships",
-      "**A full report**: where you agree, where you don't, and where to start"
+      "**You each answer on your own phone**, without seeing the other's answers",
+      "**Questions grounded in research**: more than 30 published studies on couples",
+      "**At the end, a report** compares your answers and tells you what to talk about first"
     ],
-    "solo": "Your partner doesn't want to? [Take it on your own](solo).",
+    "solo": "Your partner doesn't want to take part? [You can also take the assessment on your own](solo).",
     "prixPhrase": {
-      "promo": "[[pourcent]]% off with the code [[code]], applied automatically",
+      "promo": "[[pourcent]]% off right now, already applied at checkout",
       "normal": "For both of you, in a single payment"
     },
-    "bouton": "Discover the assessment",
-    "note": "The questions are free: you pay at the end, once for both of you."
+    "bouton": "See how it works",
+    "note": "The questions are free: you pay at the end, once for both of you.",
+    "ps": "**PS:** [[accroche]]"
   },
   "e2": {
-    "sujet": "Money, kids, chores: are you on the same page?",
+    "sujet": "Joint account or separate finances?",
     "apercu": {
-      "promo": "What the report shows you, and [[pourcent]]% off right now.",
-      "normal": "What the assessment report shows you, area by area."
+      "promo": "One of the 100 questions in the relationship assessment, [[pourcent]]% off right now.",
+      "normal": "One of the 100 questions in the relationship assessment. What would you answer?"
     },
-    "titre": "Your relationship, area by area",
+    "titre": "Would you two give the same answer?",
     "intro": {
-      "score": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:",
-      "projet": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:",
-      "doute": "A few days ago, I told you about the relationship assessment. Together or on your own, here's what you'll discover at the end:",
-      "general": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:"
+      "score": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "projet": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "doute": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "general": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:"
     },
+    "exemple": "You each answer on your own. If you pick the same answer, that's an agreement. If one of you says “[[reponseA]]” and the other “[[reponseB]]”, the report explains why it matters and gives you questions to talk it through.",
+    "aussi": "The report also gives you:",
     "points": [
-      "**Where you agree and where you don't**, question by question",
-      "**The non-negotiables**, the topics that weigh most in a relationship",
-      "**Your next 4 conversations**, with questions to get you started",
-      "**The mood of your relationship**, as each of you sees it",
-      "**[Possible on your own](solo)** if your partner doesn't want to take part"
+      "**The non-negotiables** highlighted: the topics that weigh most in a relationship",
+      "**4 conversations to have**, with questions to get you started",
+      "**How each of you** feels about the relationship right now"
     ],
-    "deja": "Already started? It's waiting right where you left off.",
+    "solo": "[The assessment also works on your own](solo), if your partner doesn't want to take part.",
     "prixPhrase": {
       "promo": "That's [[prixChacun]] each: less than a cinema ticket",
       "normal": "That's [[prixChacun]] each: less than a cinema ticket"

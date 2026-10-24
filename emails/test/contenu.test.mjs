@@ -54,7 +54,7 @@ test('les prix viennent de l\'évaluation : 9,90 € et 7,92 € avec -20 %, 3,9
   assert.ok(c.html.includes(`>7,92${NBSP}€</div>`));
   assert.ok(c.html.includes(`Soit 3,96${NBSP}€ chacun`));
   const e1 = campagne('e1', 'fr', SOIR, { promo: true });
-  assert.ok(e1.html.includes(`−20${NBSP}% avec le code LOVE20, appliqué automatiquement`));
+  assert.ok(e1.html.includes(`−20${NBSP}% en ce moment, déjà appliqué au paiement`));
   const sans = campagne('e1', 'de', SOIR, { promo: false });
   assert.ok(!sans.html.includes('line-through') && sans.html.includes(`>9,90${NBSP}€</div>`));
 });
@@ -118,7 +118,7 @@ test('typographie : insécables du français, pourcentage des autres langues', (
   assert.equal(typo('entre 50 y 90 €', 'es'), `entre 50 y 90${NBSP}€`);
   assert.equal(typo('entre 60 et 100 €.', 'fr'), `entre 60 et 100${NBSP}€.`);
   const c = campagne('e2', 'fr', SOIR, { promo: true });
-  assert.ok(c.sujet.includes(`tâches${NBSP}:`) && c.sujet.endsWith(`${NBSP}?`));
+  assert.equal(c.sujet, `Compte commun ou chacun son argent${NBSP}?`);
 });
 
 test('verifier refuse un marqueur oublié et une balise de Brevo qu\'on n\'a pas voulue', () => {
@@ -158,4 +158,39 @@ test('pourContact remplit les champs comme Brevo le ferait', () => {
   assert.ok(html.includes('Ciao Giulia!'));
   assert.ok(html.includes('https://exemple.test/desinscription'));
   assert.ok(!html.includes('{{'));
+});
+
+test('l\'e2 montre une vraie question de l\'évaluation, et l\'e1 signe du PS de la page de vente', () => {
+  const lire = (chemin) => JSON.parse(readFileSync(new URL(chemin, import.meta.url), 'utf8'));
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  for (const lang of LANGUES) {
+    const argent = lire(`../../${lang}/bilan-questions.json`).domaines.argent;
+    const q = argent.questions.arg1;
+    const e2 = campagne('e2', lang, SOIR, { promo: true });
+    // La carte : le domaine, la question et ses quatre réponses, telles que l'évaluation les pose.
+    for (const x of [argent.titre, q.q, ...q.o]) assert.ok(e2.html.includes(esc(x)), `${lang} : ${x}`);
+    // L'explication cite la première réponse, et la dernière jusqu'à sa virgule.
+    assert.ok(e2.html.includes(esc(typo(q.o[0], lang))), `${lang} : réponse citée`);
+    assert.ok(e2.html.includes(esc(typo(q.o[3].split(',')[0], lang))), `${lang} : seconde réponse citée`);
+    // Plus de « déjà commencée ? » : l'adresse d'une évaluation ne reçoit pas le parcours.
+    assert.equal(e2.html.split(esc(q.q)).length, 2, `${lang} : la question une seule fois`);
+    // Le PS de l'e1 est la phrase de Thomas sur la page de vente, dans la langue.
+    const accroche = lire(`../../${lang}/bilan.json`).lp.prix.accroche;
+    const e1 = campagne('e1', lang, SOIR, { promo: false });
+    assert.ok(e1.html.includes(esc(typo(accroche, lang))), `${lang} : PS`);
+    assert.ok(!campagne('e2', lang, SOIR).html.includes(esc(typo(accroche, lang))), `${lang} : pas de PS dans l'e2`);
+    // Le code n'est plus écrit dans le ticket : il s'applique tout seul.
+    assert.ok(!campagne('e1', lang, SOIR, { promo: true }).html.includes('LOVE20'), `${lang} : code dans l'e1`);
+  }
+});
+
+test('les textes évitent les formules toutes faites relevées le 24 octobre 2026', () => {
+  const interdits = /Envie d'aller plus loin|longueur d'onde|Want to go further|same page|misma onda|Wellenlänge|lunghezza d'onda|ir más allá|weiter zu gehen|andare oltre/i;
+  for (const type of TYPES) {
+    for (const lang of LANGUES) {
+      const c = campagne(type, lang, SOIR);
+      const intros = ANGLES.map((angle) => attributsContact({ type, lang, angle }, 'x').INTRO).join(' ');
+      assert.ok(!interdits.test(c.sujet + c.apercu + c.html + intros), `${type} ${lang}`);
+    }
+  }
 });
