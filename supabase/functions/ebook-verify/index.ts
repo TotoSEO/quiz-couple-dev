@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { prenomPropre } from '../_shared/abonnes/regles.mjs';
+import { carte, texteCarte } from '../_shared/emails/carte.mjs';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -190,6 +191,24 @@ serve(async (req) => {
       }
 
       const verifyUrl = `${SITE_URL}/confirmation-ebook/?token=${token}`;
+      // La carte commune des e-mails (24 octobre 2026, Thomas : « comme ça on
+      // uniformise les mails ») : les deux personnages, un titre, deux coches,
+      // le bouton. Le prénom passe par la carte, qui l'échappe.
+      const courrier = {
+        lang: 'fr',
+        sujet: 'Confirmez votre e-mail pour accéder à votre E-Book gratuit',
+        avant: 'Un clic, et votre e-book gratuit sur l\'astrologie est à vous.',
+        bonjour: first_name ? `Bonjour ${first_name} !` : 'Bonjour !',
+        alt: 'Les mascottes de Quiz Couple vous font coucou',
+        titre: 'Plus qu\'une étape !',
+        phrase: 'Confirmez votre adresse e-mail, et votre e-book gratuit sur l\'astrologie est à vous.',
+        puces: ['**Les bases de l\'astrologie**, en PDF', '**Gratuit**, à télécharger dès la confirmation'],
+        bouton: 'Confirmer mon adresse',
+        url: verifyUrl,
+        seul: 'Si vous n\'avez pas demandé cet e-book, ignorez simplement ce message.',
+        signature: ['À très vite,', 'Thomas, de Quiz Couple'],
+        pied: 'Vous recevez ce message parce que cette adresse a été donnée pour recevoir l\'e-book de Quiz Couple sur quiz-couple.com.',
+      };
 
       const emailRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -204,31 +223,9 @@ serve(async (req) => {
           from: 'Quiz Couple <bonjour@quiz-couple.com>',
           reply_to: 'infoquizcouple@gmail.com',
           to: [email],
-          subject: 'Confirmez votre e-mail pour accéder à votre E-Book gratuit',
-          html: `
-            <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-              <div style="text-align:center;margin-bottom:2rem;">
-                <img src="${SITE_URL}/assets/logo-quiz-couple.png" alt="Quiz Couple" style="height:40px;">
-              </div>
-              <h1 style="color:#d6336c;font-size:1.5rem;text-align:center;">Plus qu'une étape, ${escapeHtml(first_name)} !</h1>
-              <p style="font-size:1rem;line-height:1.6;color:#333;text-align:center;">
-                Cliquez sur le bouton ci-dessous pour confirmer votre adresse e-mail et accéder immédiatement à votre E-Book gratuit sur l'astrologie.
-              </p>
-              <div style="text-align:center;margin:2rem 0;">
-                <a href="${verifyUrl}"
-                   style="display:inline-block;padding:0.875rem 2rem;background:linear-gradient(135deg,#d6336c,#e8590c);color:white;text-decoration:none;border-radius:0.5rem;font-weight:700;font-size:1rem;">
-                  Confirmer et accéder à mon E-Book
-                </a>
-              </div>
-              <p style="font-size:0.875rem;color:#666;text-align:center;">
-                Si vous n'avez pas demandé cet e-book, ignorez simplement ce message.
-              </p>
-              <hr style="border:none;border-top:1px solid #eee;margin:2rem 0;">
-              <p style="font-size:0.75rem;color:#999;text-align:center;">
-                Quiz Couple, quiz-couple.com
-              </p>
-            </div>
-          `,
+          subject: courrier.sujet,
+          html: carte(courrier),
+          text: texteCarte(courrier),
         }),
       });
 
