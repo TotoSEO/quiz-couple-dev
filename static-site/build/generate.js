@@ -1120,7 +1120,7 @@ async function minifyHtml(html) {
       collapseWhitespace: true,
       removeComments: true,
       // Keep important comments (^!) and the homepage verification token
-      ignoreCustomComments: [/^!/, /cf7a42f54f657854c287ed4d2afdf069/, /e7ff372f614156062a4ada6fb4d18cd9/],
+      ignoreCustomComments: [/^!/, /cf7a42f54f657854c287ed4d2afdf069/],
       minifyCSS: true,
       minifyJS: true,
       removeRedundantAttributes: true,
