@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/de/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.</description>
     <language>de</language>
-    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/de/blog/</link>
     </image>
+    <item>
+      <title>Juliette Drouet schrieb Victor Hugo 22.000 Liebesbriefe: ihre Geschichte</title>
+      <link>https://quiz-couple.com/de/blog/juliette-drouet-victor-hugo-briefe/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/de/blog/juliette-drouet-victor-hugo-briefe/</guid>
+      <pubDate>Sat, 24 Oct 2026 06:20:00 GMT</pubDate>
+      <category>Liebesgeschichten</category>
+      <description>Fünfzig Jahre lang schrieb Juliette Drouet Victor Hugo fast jeden Tag. Sie lebte für ihn fast eingesperrt und folgte ihm ins Exil, nachdem sie ihm das Leben gerettet hatte. Hier ist ihre Geschichte.</description>
+      <media:content url="https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Nach Pierres Tod schrieb Marie Curie ihm weiter: die Liebesgeschichte der Curies</title>
       <link>https://quiz-couple.com/de/blog/pierre-marie-curie-liebesgeschichte/</link>
@@ -272,15 +281,6 @@
       <category>Beziehung</category>
       <description>Hast du das Gefühl, ohne den anderen nicht leben zu können? Verlustangst, ständiges Rückversicherungsbedürfnis, Identitätsverlust.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Mein Freund gibt sich keine Mühe: Was das bedeutet und was man tun kann</title>
-      <link>https://quiz-couple.com/de/blog/freund-gibt-sich-keine-muehe/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/de/blog/freund-gibt-sich-keine-muehe/</guid>
-      <pubDate>Sun, 08 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Beziehung</category>
-      <description>Du machst alles, er nichts. Oder fast nichts. Warum manche Männer aufhören, sich zu bemühen, wie man es erkennt, was es bedeutet und was man konkret tun…</description>
-      <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

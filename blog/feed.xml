@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Juliette Drouet a écrit 22 000 lettres d&#39;amour à Victor Hugo : leur histoire</title>
+      <link>https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres/</guid>
+      <pubDate>Sat, 24 Oct 2026 06:20:00 GMT</pubDate>
+      <category>Histoires d&#39;amour</category>
+      <description>Pendant cinquante ans, Juliette Drouet a écrit à Victor Hugo presque tous les jours. Elle a vécu presque enfermée pour lui, puis l&#39;a suivi en exil après lui avoir sauvé la vie. Voici leur histoire.</description>
+      <media:content url="https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Après la mort de Pierre, Marie Curie a continué de lui écrire : l&#39;histoire d&#39;amour des Curie</title>
       <link>https://quiz-couple.com/blog/pierre-marie-curie-histoire-amour/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Il est parfait, trop vite, trop fort. Amour sincère ou love bombing ? Les 3 phases du cycle, les signes concrets et le test de la limite pour savoir.</description>
       <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>10 activités à faire en couple cet été</title>
-      <link>https://quiz-couple.com/blog/activites-couple-ete/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/activites-couple-ete/</guid>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Dix activités en couple l&#39;été qui changent des sorties classiques : marché sans liste, baignade en rivière, nuit dehors. Simples et pas chères.</description>
-      <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

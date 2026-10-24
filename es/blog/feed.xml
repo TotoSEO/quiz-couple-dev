@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Juliette Drouet escribió 22.000 cartas de amor a Victor Hugo: su historia</title>
+      <link>https://quiz-couple.com/es/blog/juliette-drouet-victor-hugo-cartas/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/juliette-drouet-victor-hugo-cartas/</guid>
+      <pubDate>Sat, 24 Oct 2026 06:20:00 GMT</pubDate>
+      <category>Historias de amor</category>
+      <description>Durante cincuenta años, Juliette Drouet le escribió a Victor Hugo casi todos los días. Vivió casi encerrada por él y luego lo siguió al exilio, después de salvarle la vida. Esta es su historia.</description>
+      <media:content url="https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Tras la muerte de Pierre, Marie Curie siguió escribiéndole: la historia de amor de los Curie</title>
       <link>https://quiz-couple.com/es/blog/pierre-marie-curie-historia-amor/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>¿Sientes que no puedes vivir sin tu pareja? Miedo al abandono, necesidad constante de seguridad, pérdida de identidad.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Mi novio no hace ningún esfuerzo: qué significa y qué hacer</title>
-      <link>https://quiz-couple.com/es/blog/novio-no-hace-esfuerzo/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/novio-no-hace-esfuerzo/</guid>
-      <pubDate>Sun, 08 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Haces todo tú, él nada. O casi. Por qué algunos hombres dejan de esforzarse, cómo reconocerlo, qué significa y qué hacer concretamente.</description>
-      <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

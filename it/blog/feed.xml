@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Fri, 23 Oct 2026 06:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 06:20:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Juliette Drouet ha scritto 22.000 lettere d&#39;amore a Victor Hugo: la loro storia</title>
+      <link>https://quiz-couple.com/it/blog/juliette-drouet-victor-hugo-lettere/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/juliette-drouet-victor-hugo-lettere/</guid>
+      <pubDate>Sat, 24 Oct 2026 06:20:00 GMT</pubDate>
+      <category>Storie d&#39;amore</category>
+      <description>Per cinquant&#39;anni Juliette Drouet ha scritto a Victor Hugo quasi tutti i giorni. Ha vissuto quasi rinchiusa per lui, poi lo ha seguito in esilio dopo avergli salvato la vita. Ecco la loro storia.</description>
+      <media:content url="https://quiz-couple.com/blog/juliette-drouet-victor-hugo-lettres.webp" medium="image" type="image/webp" width="1600" height="900"/>
+    </item>
     <item>
       <title>Dopo la morte di Pierre, Marie Curie ha continuato a scrivergli: la storia d&#39;amore dei Curie</title>
       <link>https://quiz-couple.com/it/blog/pierre-marie-curie-storia-amore/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>Hai la sensazione di non poter vivere senza l&#39;altro? Paura dell&#39;abbandono, bisogno costante di rassicurazione, perdita di identità.</description>
       <media:content url="https://quiz-couple.com/blog/dependance-affective.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Il mio ragazzo non si impegna: cosa significa e cosa fare</title>
-      <link>https://quiz-couple.com/it/blog/ragazzo-non-si-impegna/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/ragazzo-non-si-impegna/</guid>
-      <pubDate>Sun, 08 Mar 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Fai tutto tu, lui niente. O quasi. Perché certi uomini smettono di impegnarsi, come riconoscerlo, cosa significa e cosa fare concretamente.</description>
-      <media:content url="https://quiz-couple.com/blog/copain-ne-fait-pas-effort.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>
