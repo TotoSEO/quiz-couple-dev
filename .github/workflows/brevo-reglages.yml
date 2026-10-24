@@ -1,0 +1,42 @@
+name: E-mails · Brevo
+
+# Le compte Brevo des campagnes du parcours e-mail (emails/, docs/emailing).
+# À lancer à la main (« Run workflow ») :
+#   verif : lit la configuration (domaine, expéditeur, champs, dossier,
+#           webhook) et dit ce qui manque. Rien n'est écrit.
+#
+# Secret : BREVO_API_KEY (Settings > Secrets and variables > Actions).
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'verif'
+        required: true
+        default: 'verif'
+        type: choice
+        options:
+          - verif
+
+concurrency:
+  group: brevo-reglages
+  cancel-in-progress: false
+
+jobs:
+  brevo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            emails
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérification
+        if: inputs.action == 'verif'
+        run: node emails/verif.mjs
