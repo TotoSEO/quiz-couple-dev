@@ -191,7 +191,7 @@ test('en réel : une campagne par e-mail et par langue, les bons champs, les lig
   assert.equal(fr.subject, '100 questions pour faire le point sur votre couple');
   assert.equal(fr.sender.email, REGLAGES.expediteur.email);
   assert.equal(fr.replyTo, REGLAGES.repondreA);
-  assert.equal(fr.tag, 'parcours-e1');
+  assert.equal(fr.tag, undefined, 'l\'offre gratuite de Brevo refuse le champ tag');
   assert.ok(fr.htmlContent.includes('{{ contact.INTRO }}'));
   assert.deepEqual(brevo.envoyees.sort(), brevo.campagnesCreees.map((c) => c.id).sort());
   // Les champs de chaque contact, dans sa langue et pour sa famille de test.

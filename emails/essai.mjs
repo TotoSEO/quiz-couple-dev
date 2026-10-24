@@ -55,7 +55,6 @@ export async function essai({ brevo, adresse, types, langues, angles, prenom, ma
       await brevo.ajouterALaListe(essais.id, destinataires);
       const cree = await brevo.creerCampagne({
         name: `Essai · ${type} · ${lang} · ${maintenant.toISOString().slice(0, 16)}`,
-        tag: `essai-${type}`,
         sender: { name: REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
         replyTo: REGLAGES.repondreA,
         subject: `[Essai ${type} ${lang}] ${c.sujet}`,

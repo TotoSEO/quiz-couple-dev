@@ -185,8 +185,9 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
 
   const partis = partants.map((m) => ligneDe.get(m.abonne_id).id);
   const cree = await brevo.creerCampagne({
+    // Pas de `tag` : l'offre gratuite de Brevo le refuse (405). Le webhook
+    // retrouve l'envoi par le numéro de la campagne.
     name: `Parcours · ${type} · ${lang} · ${jour} ${heure}`,
-    tag: `parcours-${type}`,
     sender: { name: REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
     replyTo: REGLAGES.repondreA,
     subject: c.sujet,
