@@ -1,0 +1,61 @@
+{
+  "salutation": {
+    "prenom": "Bonjour [[prenom]],",
+    "sans": "Bonjour,"
+  },
+  "signature": "Thomas, de Quiz Couple",
+  "pied": {
+    "pourquoi": "Vous recevez cet e-mail parce que vous avez laissé votre adresse à la fin d'un test sur quiz-couple.com, en acceptant de recevoir nos conseils et nouveautés.",
+    "desinscription": "Se désinscrire",
+    "editeur": "Quiz Couple · Visibilitea, 4 rue de Bruges, 67000 Strasbourg"
+  },
+  "seance": "Une séance chez un conseiller conjugal coûte entre 50 et 90 €.",
+  "e1": {
+    "sujet": "100 questions pour faire le point sur votre couple",
+    "apercu": "Chacun répond de son côté, et un rapport vous montre où vous êtes d'accord et de quoi parler.",
+    "intro": {
+      "score": "Merci d'avoir fait un test sur Quiz Couple, j'espère qu'il vous a plu ! Un test comme celui-là donne une idée de l'ensemble, mais il ne dit pas sur quels sujets vous êtes d'accord, et sur lesquels vous ne l'êtes pas.",
+      "projet": "Merci d'avoir fait un test sur Quiz Couple, j'espère qu'il vous a plu ! Avant une grande étape, comme emménager ensemble, se marier ou avoir un enfant, c'est le bon moment pour vérifier que vous voulez les mêmes choses.",
+      "doute": "Merci d'avoir fait un test sur Quiz Couple. Quand on se pose des questions sur son couple, on ne sait pas toujours par où commencer. Mettre des mots sur ce qui va bien et sur ce qui va moins bien, ça aide déjà beaucoup.",
+      "general": "Merci de suivre Quiz Couple ! Si vous avez envie d'aller plus loin qu'un test, voici de quoi faire le point sur votre couple en détail."
+    },
+    "paragraphes": [
+      "**L'évaluation de couple**, c'est notre test le plus complet : 100 questions concrètes sur 12 domaines de la vie à deux, comme l'argent, les enfants, le partage des tâches ou l'intimité. Les questions s'appuient sur plus de trente études publiées sur la vie de couple, dont certaines ont suivi des couples pendant des années.",
+      "Chacun répond sur son téléphone, sans voir les réponses de l'autre. Comptez 25 minutes chacun, et vous pouvez faire des pauses. À la fin, un rapport complet vous montre où vous êtes d'accord, où vos réponses s'éloignent, et de quoi parler en premier."
+    ],
+    "bouton": "Découvrir l'évaluation",
+    "soloQuestion": "Votre partenaire ne veut pas participer ?",
+    "soloLien": "Faites-la seul(e)",
+    "prix": {
+      "promo": "Les questions sont gratuites. En ce moment, le rapport est à ~~[[prixBase]]~~ **[[prix]]** pour vous deux (-[[pourcent]] %).",
+      "normal": "Les questions sont gratuites, et le rapport coûte **[[prix]]** pour vous deux."
+    }
+  },
+  "e2": {
+    "sujet": "Argent, enfants, tâches : êtes-vous sur la même longueur d'onde ?",
+    "apercu": {
+      "promo": "Ce que le rapport vous montre, et -[[pourcent]] % en ce moment.",
+      "normal": "Ce que le rapport de l'évaluation vous montre, domaine par domaine."
+    },
+    "intro": {
+      "score": "Il y a quelques jours, je vous ai parlé de l'évaluation de couple. Voici ce que le rapport vous montre à la fin.",
+      "projet": "Il y a quelques jours, je vous ai parlé de l'évaluation de couple. Avant un grand projet à deux, voici ce que le rapport vous montre.",
+      "doute": "Il y a quelques jours, je vous ai parlé de l'évaluation de couple. Voici ce que le rapport vous montre, que vous la fassiez à deux ou seul(e).",
+      "general": "Il y a quelques jours, je vous ai parlé de l'évaluation de couple. Voici ce que le rapport vous montre à la fin."
+    },
+    "points": [
+      "**Où vous êtes d'accord, et où vos réponses s'éloignent**, domaine par domaine : l'argent, les enfants, le partage des tâches, l'intimité, la façon de vous disputer, etc.",
+      "**Les sujets décisifs**, ceux qui pèsent le plus dans un couple.",
+      "**Vos quatre prochaines conversations** : les sujets par lesquels commencer, avec des questions pour en parler.",
+      "**Le climat de votre couple** : comment chacun de vous se sent dans la relation."
+    ],
+    "solo": "Votre partenaire ne veut pas participer ? Vous pouvez la faire seul(e) : vous répondez pour vous, puis comme votre partenaire répondrait d'après vous. Votre partenaire ne reçoit rien.",
+    "prix": {
+      "promo": "En ce moment, le rapport est à ~~[[prixBase]]~~ **[[prix]]** pour vous deux, soit [[prixChacun]] chacun : moins qu'une place de cinéma. [[seance]]",
+      "normal": "Le rapport coûte **[[prix]]** pour vous deux, soit [[prixChacun]] chacun : moins qu'une place de cinéma. [[seance]]"
+    },
+    "bouton": "Faire l'évaluation",
+    "soloLien": "La faire seul(e)",
+    "reprise": "Vous l'avez déjà commencée ? Elle vous attend sur le même téléphone, là où vous vous étiez arrêté(e)."
+  }
+}

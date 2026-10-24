@@ -45,14 +45,50 @@ export function clientBrevo(cle, { fetch: f = globalThis.fetch, pause = attendre
     return json;
   }
 
+  const enc = encodeURIComponent;
   return {
     appel,
     compte: () => appel('GET', '/account'),
     expediteurs: () => appel('GET', '/senders'),
     domaines: () => appel('GET', '/senders/domains'),
-    domaine: (nom) => appel('GET', '/senders/domains/' + encodeURIComponent(nom)),
-    webhooks: (type) => appel('GET', '/webhooks?type=' + encodeURIComponent(type)),
+    domaine: (nom) => appel('GET', '/senders/domains/' + enc(nom)),
+    // Sans aucun webhook, Brevo répond 400 « Webhook record does not exist ».
+    webhooks: async (type) => {
+      try { return await appel('GET', '/webhooks?type=' + enc(type)); } catch (e) {
+        if (e.statut === 400 || e.statut === 404) return { webhooks: [] };
+        throw e;
+      }
+    },
+    creerWebhook: (corps) => appel('POST', '/webhooks', corps),
+    supprimerWebhook: (id) => appel('DELETE', '/webhooks/' + enc(id)),
     attributs: () => appel('GET', '/contacts/attributes'),
+    creerAttribut: (nom) => appel('POST', '/contacts/attributes/normal/' + enc(nom), { type: 'text' }),
     dossiers: () => appel('GET', '/contacts/folders?limit=50&offset=0'),
+    creerDossier: (nom) => appel('POST', '/contacts/folders', { name: nom }),
+    listesDuDossier: (dossier, offset = 0) => appel('GET', `/contacts/folders/${enc(dossier)}/lists?limit=50&offset=${offset}`),
+    creerListe: (nom, dossier) => appel('POST', '/contacts/lists', { name: nom, folderId: dossier }),
+    supprimerListe: (id) => appel('DELETE', '/contacts/lists/' + enc(id)),
+    // 150 adresses au plus par appel ; la réponse dit qui est entré.
+    ajouterALaListe: (id, emails) => appel('POST', `/contacts/lists/${enc(id)}/contacts/add`, { emails }),
+    // Crée le contact ou met ses champs à jour (jamais sa liste de blocage).
+    contact: (email, attributs) => appel('POST', '/contacts', { email, attributes: attributs, updateEnabled: true }),
+    contacts: ({ limite = 1000, offset = 0, modifieDepuis } = {}) => appel('GET',
+      `/contacts?limit=${limite}&offset=${offset}${modifieDepuis ? '&modifiedSince=' + enc(modifieDepuis) : ''}`),
+    supprimerContact: (email) => appel('DELETE', '/contacts/' + enc(email)),
+    creerCampagne: (corps) => appel('POST', '/emailCampaigns', corps),
+    campagne: (id) => appel('GET', '/emailCampaigns/' + enc(id)),
+    campagnes: ({ statut, limite = 100, offset = 0 } = {}) => appel('GET',
+      `/emailCampaigns?limit=${limite}&offset=${offset}&excludeHtmlContent=true${statut ? '&status=' + enc(statut) : ''}`),
+    envoyerMaintenant: (id) => appel('POST', `/emailCampaigns/${enc(id)}/sendNow`),
+    envoyerEssai: (id, emails) => appel('POST', `/emailCampaigns/${enc(id)}/sendTest`, { emailTo: emails }),
+    supprimerCampagne: (id) => appel('DELETE', '/emailCampaigns/' + enc(id)),
   };
+}
+
+// Les crédits d'envoi qui restent (offre gratuite : 300 par jour). Sans
+// réponse lisible, zéro : on n'envoie rien plutôt que trop.
+export function creditsRestants(compte) {
+  const lignes = (compte && Array.isArray(compte.plan) ? compte.plan : [])
+    .filter((p) => p && p.creditsType === 'sendLimit' && Number.isFinite(Number(p.credits)));
+  return lignes.length ? Math.max(...lignes.map((p) => Math.floor(Number(p.credits)))) : 0;
 }

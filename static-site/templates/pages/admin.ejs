@@ -530,6 +530,55 @@
             </div>
           </div>
           <p class="adm-note" id="abonnes-taux-note">Taux de capture : les nouvelles adresses laissées à la fin des tests, rapportées aux écrans de résultat vus sur les pages qui portent la porte (depuis son lancement, le 19 octobre 2026). C'est un plancher : un appareil qui a déjà donné son adresse voit ses résultats sans porte, et son écran de résultat compte quand même.</p>
+          <%# Le parcours e-mail (emails/, get_emails_tableau par admin-stats) :
+              les deux campagnes Brevo envoyées aux abonnés, ce que Brevo en a
+              dit (remis, rebonds, plaintes, désinscriptions), la file du soir
+              et les derniers passages. Les identifiants sont le contrat de
+              loadEmails (admin.js). %>
+          <div class="adm-toolbar">
+            <h2>Parcours e-mail</h2>
+          </div>
+          <p class="adm-note">Deux e-mails envoyés par Brevo vers 19 h : le premier le lendemain de l'adresse laissée, le second trois jours plus tard s'il a été remis et que l'adresse n'est dans aucune évaluation. Aucun suivi des ouvertures ni des clics par personne (recommandation de la CNIL) : les ventes qui viennent des e-mails sont dans l'onglet Évaluation, sources « email-e1 » et « email-e2 ».</p>
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Envoyés (30 j)</p>
+              <p class="stats-tete-jour" id="emails-envoyes">-</p>
+              <p class="stats-tete-sub" id="emails-envoyes-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Remis</p>
+              <p class="stats-tete-jour" id="emails-remis">-</p>
+              <p class="stats-tete-sub" id="emails-remis-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Désinscriptions</p>
+              <p class="stats-tete-jour" id="emails-sorties">-</p>
+              <p class="stats-tete-sub" id="emails-sorties-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">En attente</p>
+              <p class="stats-tete-jour" id="emails-file">-</p>
+              <p class="stats-tete-sub" id="emails-file-sub">&nbsp;</p>
+            </div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Par e-mail et par langue</h2>
+                <p class="stats-panel-sub">Les envois des trente derniers jours et ce qu'ils sont devenus. Un rebond dur supprime l'adresse ; un rebond doux arrête le parcours sans la supprimer.</p>
+              </div>
+            </div>
+            <div id="emails-detail" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Les derniers passages du soir</h2>
+                <p class="stats-panel-sub">Un passage non terminé s'est arrêté en route : le suivant reprend ce qui n'est pas parti.</p>
+              </div>
+            </div>
+            <div id="emails-passages" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>

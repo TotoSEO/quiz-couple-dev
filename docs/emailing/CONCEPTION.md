@@ -180,21 +180,155 @@ source et date : c'est le fichier à importer dans l'outil d'envoi, par
 langue). La liste de l'e-book (demandes, vérifications, clôture) reste en
 dessous.
 
-## Ce qu'il reste à faire pour envoyer
+## Le parcours e-mail (24 octobre 2026)
 
-Rien n'est envoyé encore : la capture construit la base. Le jour venu :
+Thomas : « une personne vient sur quiz couple, met son mail pour avoir des
+résultats. On a son mail, X jours plus tard, un premier mail lui est envoyé
+[...] Si le mail est reçu mais rien, alors on attend encore X jours et on
+envoi un second mail. Si le mail est reçu et que ça converti, alors ça
+s'arrête au premier mail [...] Réfléchi bien à tout, il ne faut pas que les
+mails qui s'envoient ne soient pas les bons, ou que le tracking n'est pas
+bon. »
 
-1. **L'outil d'envoi.** Resend (cent par jour en gratuit, 20 $ par mois
-   pour cinquante mille) sert déjà aux rapports ; une vraie campagne à des
-   milliers d'adresses demande soit le plan payant, soit un outil fait pour
-   ça (Brevo : trois cents par jour en gratuit, listes, désinscription
-   gérée). L'export CSV par langue marche avec les deux.
-2. **Les rebonds.** Si on envoie par Resend, son webhook `email.bounced`
-   passera l'adresse en `invalide` ; avec un autre outil, on réimporte la
-   liste des rebonds.
-3. **Les e-mails eux-mêmes**, dans les cinq langues : un premier e-mail de
-   bienvenue avec le lien du test fait, puis des conseils, et l'offre sur
-   l'évaluation de couple avec un code (Stripe : « codes promotionnels »
-   activés sur la page de paiement, `allow_promotion_codes`).
-4. **La fréquence.** Pas plus d'un e-mail par semaine ; le lien de
-   désinscription dans chacun, le jeton de la table.
+### Ce qui part, et quand
+
+| E-mail | Quand | À qui |
+|---|---|---|
+| `e1` | le soir, vers 19 h à Paris, au moins 18 heures après l'adresse (le lendemain, ou le surlendemain pour une adresse laissée après 1 h du matin), au plus 60 jours | toute adresse active dont la source n'est pas l'e-book |
+| `e2` | le soir, au moins 66 heures après `e1` (trois jours), au plus 30 jours | seulement si Brevo a dit que `e1` était remis, sans rebond, plainte ni désinscription |
+
+Personne ne reçoit rien dès que son adresse est dans une évaluation (donnée
+par l'une des deux personnes, ou au paiement) : ce sont alors les e-mails de
+l'évaluation qui prennent le relais. Jamais deux e-mails du parcours à moins
+de 44 heures, et jamais deux fois le même : une ligne par adresse et par
+e-mail dans `emails_envois`, unique.
+
+Quand le plafond du soir coupe la file, l'ordre est : `e1` des adresses de
+moins de 48 heures, puis `e2`, puis `e1` des adresses plus anciennes, les
+plus récentes d'abord. L'offre gratuite de Brevo fait 300 envois par jour ;
+à 150 adresses par jour environ, `e1` et `e2` la dépassent vite. La file est
+dans l'admin : quand elle grossit de soir en soir, il faut l'offre
+supérieure de Brevo, puis relever `plafond` dans `emails/reglages.mjs`.
+
+**Les adresses de l'e-book n'entrent pas dans le parcours** : leur case
+disait « me contacte occasionnellement à des fins informationnelles », pas
+des offres. Celle de la porte des résultats dit « les conseils et
+nouveautés de Quiz Couple », et la politique de confidentialité nomme
+l'évaluation de couple avec ses offres.
+
+### Ce que dit chaque e-mail
+
+Les textes sont dans `emails/textes/<langue>.json`, le gabarit dans
+`emails/gabarit.html` (provisoire, en attendant les maquettes que Thomas
+fait préparer : ses marqueurs `[[...]]` sont ceux de `contenu.mjs`).
+
+- `e1` : le merci, un premier paragraphe écrit pour la famille du test
+  (`score`, `projet`, `doute` de `BILAN_ENTREES`, « general » sinon), puis
+  l'évaluation (notre test le plus complet, 100 questions, 12 domaines,
+  plus de trente études publiées, comme la page de vente en a le droit,
+  `docs/bilan/RECHERCHE.md`), chacun sur son téléphone, le rapport, le
+  bouton, « Faites-la seul(e) », le prix.
+- `e2` : ce que montre le rapport (accords et écarts, sujets décisifs,
+  quatre prochaines conversations, climat), la façon seul(e), le prix pour
+  deux et par personne (« moins qu'une place de cinéma ») et la séance chez
+  un conseiller conjugal (le chiffre de la page de vente dans chaque langue),
+  le bouton, et « vous l'avez déjà commencée ? ».
+- Le test lui-même n'est jamais nommé : « A couché avec un(e) autre ? » ou
+  « Couple toxique » dans une boîte de réception, ce serait indiscret.
+- Le prix vient de `coeur.mjs` de l'évaluation, comme sur le site ; la
+  réduction n'est écrite que si elle vaut encore le lendemain de l'envoi.
+- Les liens mènent à la page de l'évaluation de la langue avec
+  `?src=email-e1` ou `email-e2` (et `mode=solo#facons` pour la façon seul(e)) :
+  `bilan.js` les lit puis les retire de l'adresse, et l'onglet Évaluation
+  compte les visites, les évaluations et les ventes par source. Rien dans le
+  lien ne désigne la personne.
+
+Une campagne Brevo par e-mail et par langue ; ce qui change d'une personne à
+l'autre passe par deux champs du contact, remplis par Brevo à l'envoi :
+`SALUTATION` (« Bonjour Julie, » ou « Bonjour, ») et `INTRO` (le premier
+paragraphe de sa famille de test). `LANGUE` et `PARCOURS` (le soir du
+dernier envoi, qui marque les contacts du parcours) servent au tri chez
+Brevo ; la famille du test n'y va pas, elle ne sert pas à l'envoi. Il ne reste dans le HTML envoyé que `{{ contact.SALUTATION }}`,
+`{{ contact.INTRO }}` et `{{ unsubscribe }}` ; `verifier` refuse tout autre
+marqueur (le langage de modèles de Brevo lit `{{`, `{%` et `{#`).
+
+### Le suivi, sans pistage
+
+La recommandation de la CNIL sur les pixels de suivi dans les e-mails
+(contrôles depuis juillet 2026) demande un consentement à part pour suivre
+les ouvertures et les clics d'une personne ; on ne l'a pas demandé. Rien ne
+dépend donc des ouvertures ni des clics :
+
+- **remis, rebonds, plaintes, désinscriptions** : le webhook « marketing »
+  de Brevo (fonction `brevo-webhook`, clé dans l'adresse, secret
+  `BREVO_WEBHOOK_CLE`) appelle `emails_evenement`. Un rebond dur supprime
+  l'adresse (Thomas : « on supprime le mail de la BDD et ça s'arrête
+  là ») ; un rebond doux arrête le parcours sans la supprimer (boîte pleine,
+  serveur indisponible ce soir-là) ; une plainte ou une désinscription la
+  passe en `desinscrit`. Chaque événement a sa colonne dans
+  `emails_envois` : l'ordre d'arrivée ne change rien, un événement reçu
+  deux fois ne compte qu'une. Brevo réessaie un 429 et abandonne tout autre
+  4xx ou 5xx : la fonction répond 429 quand la base ne répond pas.
+- **la conversion** : l'adresse dans une évaluation (ce que la personne a
+  fait elle-même), et les sources `email-e1` et `email-e2` de l'onglet
+  Évaluation.
+- **le filet** : chaque soir, les contacts du parcours bloqués chez Brevo
+  depuis trois jours passent en `desinscrit`, au cas où le webhook en
+  aurait manqué un.
+
+Le réglage de Brevo qui anonymise les ouvertures et les clics des contacts
+sans consentement au suivi doit être activé : sans lui, Brevo suit chaque
+personne pour son propre tableau de bord, même si nous n'en faisons rien.
+
+### L'envoi du soir
+
+`emails/parcours.mjs`, workflow `emails-parcours.yml`, déclenché par pg_cron
+(`emails_lancer`, à 16 h 55 et 17 h 55 UTC : l'un des deux tombe entre
+18 h 30 et 19 h 30 à Paris, été comme hiver) ; l'horaire du workflow ne sert
+que de secours. Dans l'ordre :
+
+1. le mode (`emails/reglages.mjs` : `arret`, `blanc`, `reel`, changé par une
+   PR) et la fenêtre (18 h à 21 h à Paris) ;
+2. le passage du jour (`emails_passages`) : un seul par soir, même en
+   forçant ;
+3. la reprise d'un passage interrompu : une ligne `prepare` sans campagne,
+   ou avec une campagne restée brouillon, s'efface et la personne revient
+   dans la file ; une campagne partie fait passer ses lignes en `envoye` ;
+4. le filet des désinscriptions ;
+5. la file (`emails_du_jour`), coupée aux crédits de Brevo (moins dix pour
+   les essais) et au plafond, puis par e-mail et par langue : les lignes
+   `prepare`, les contacts et leurs champs, la liste du soir, la campagne,
+   l'envoi, les lignes en `envoye`. Une adresse que Brevo refuse passe en
+   `invalide` ; plus d'un refus sur dix, c'est un problème chez nous ou chez
+   Brevo, et le passage s'arrête sans rien marquer ;
+6. le ménage chez Brevo : les listes du soir de plus de deux jours, et les
+   contacts du parcours que notre base n'a plus en actif (rebond,
+   désinscription, purge de `rgpd_menage`). Brevo n'est qu'un tuyau : il ne
+   garde que les adresses abonnées.
+
+Le journal ne contient jamais une adresse.
+
+### Mettre en route
+
+1. Fusion de la PR : `emails-base.yml` applique la migration
+   `20261024120000_emails_parcours.sql`, `deploy-functions.yml` déploie
+   `brevo-webhook`.
+2. `brevo-reglages.yml`, action `installer` : champs, dossier, liste
+   « Essais », clé du webhook chez Supabase et webhook chez Brevo. Puis
+   `verif` : tout doit être « ok ».
+3. Action `essai` : les e-mails arrivent dans la boîte donnée, une adresse
+   `+variante` par famille de test. On vérifie le rendu, les liens, et que
+   « Se désinscrire » marche.
+4. Action `blanc` : qui recevrait quoi ce soir, sans rien envoyer.
+5. Une PR passe `mode` à `reel`.
+
+### Les tests
+
+`node --test emails/test/*.test.mjs` (contenu dans les cinq langues, envoi
+du soir contre une base et un Brevo en mémoire : blanc, réel, passage unique,
+crédits, doublon, refus, reprise, ménage, filet) et
+`node --test supabase/functions/_shared/emails/test/*.test.mjs` (lecture des
+événements). Les règles de la migration (qui reçoit quoi, événements,
+droits) ont été jouées sur un Postgres 16 local. `node emails/apercu.mjs
+<dossier>` écrit les 80 aperçus (deux e-mails, cinq langues, quatre familles,
+avec et sans prénom).

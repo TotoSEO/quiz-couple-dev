@@ -1,0 +1,54 @@
+name: E-mails · envoi du soir
+
+# Le parcours e-mail des abonnés (emails/parcours.mjs, docs/emailing) :
+# vers 19 h à Paris, « e1 » le lendemain de l'adresse laissée, « e2 » trois
+# jours après, par des campagnes Brevo. Ce que fait le passage dépend du
+# mode écrit dans emails/reglages.mjs (arret, blanc, reel).
+#
+# L'horloge est pg_cron (emails_lancer, migration 20261024120000), qui
+# déclenche ce workflow entre 18 h 30 et 19 h 30 quand il y a quelque chose
+# à envoyer ; l'horaire ci-dessous ne sert que de secours (GitHub saute
+# souvent ses départs programmés sur ce dépôt). Un seul passage par soir :
+# le script s'arrête s'il trouve celui du jour.
+#
+# À la main (« Run workflow ») : « forcer » passe outre la fenêtre de 18 h à
+# 21 h et reprend un passage resté sans fin depuis plus d'une heure, jamais
+# un passage terminé.
+
+on:
+  schedule:
+    - cron: '50 17,18 * * *'
+  workflow_dispatch:
+    inputs:
+      forcer:
+        description: 'Hors de la fenêtre du soir, ou pour reprendre un passage interrompu'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: emails-parcours
+  cancel-in-progress: false
+
+jobs:
+  envoyer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            emails
+            static-site/build
+            supabase/functions/_shared/bilan
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Envoi du soir
+        env:
+          FORCER: ${{ inputs.forcer && '--forcer' || '' }}
+        run: node emails/parcours.mjs $FORCER
