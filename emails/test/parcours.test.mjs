@@ -17,7 +17,9 @@ function filtre(requete) {
   const conds = [];
   for (const part of String(requete).split('&')) {
     const [col, expr] = part.split(/=(.*)/s);
-    if (!expr || col === 'select' || col === 'limit') continue;
+    if (!expr || col === 'select' || col === 'limit' || col === 'order') continue;
+    if (expr === 'is.null') { conds.push((r) => r[col] == null); continue; }
+    if (expr === 'not.is.null') { conds.push((r) => r[col] != null); continue; }
     const [op, ...reste] = expr.split('.');
     const val = reste.join('.');
     if (op === 'eq') conds.push((r) => String(r[col]) === val);
@@ -197,12 +199,12 @@ test('en réel : une campagne par e-mail et par langue, les bons champs, les lig
   assert.ok(fr.htmlContent.includes('{{ contact.INTRO }}'));
   assert.deepEqual(brevo.envoyees.sort(), brevo.campagnesCreees.map((c) => c.id).sort());
   // Les champs de chaque contact, dans sa langue et pour sa famille de test.
-  assert.equal(brevo.contactsEcrits.get('p1@exemple.fr').SALUTATION, 'Bonjour Julie,');
+  assert.equal(brevo.contactsEcrits.get('p1@exemple.fr').SALUTATION, 'Coucou Julie\u00a0!');
   assert.ok(brevo.contactsEcrits.get('p1@exemple.fr').INTRO.includes('questions sur son couple'));
   assert.equal(brevo.contactsEcrits.get('p1@exemple.fr').GROUPE, undefined);
-  assert.equal(brevo.contactsEcrits.get('p2@exemple.fr').SALUTATION, 'Bonjour,');
-  assert.ok(brevo.contactsEcrits.get('p2@exemple.fr').INTRO.includes('donne une idée de l'));
-  assert.equal(brevo.contactsEcrits.get('p3@exemple.fr').SALUTATION, 'Hi Emma,');
+  assert.equal(brevo.contactsEcrits.get('p2@exemple.fr').SALUTATION, 'Coucou\u00a0!');
+  assert.ok(brevo.contactsEcrits.get('p2@exemple.fr').INTRO.includes('Envie d\'aller plus loin'));
+  assert.equal(brevo.contactsEcrits.get('p3@exemple.fr').SALUTATION, 'Hi Emma!');
   assert.ok(brevo.contactsEcrits.get('p3@exemple.fr').INTRO.startsWith('A few days ago'));
   // La liste de chaque campagne contient exactement ses destinataires.
   const listeFr = fr.recipients.listIds[0];
@@ -246,6 +248,22 @@ test('les crédits de Brevo coupent la file, avec la marge des essais', async ()
   const vide = new FausseBase({ file });
   const b2 = await passage({ base: vide, brevo: new FauxBrevo({ credits: 3 }), maintenant: SOIR, mode: 'reel', journal: silence });
   assert.equal(b2.file, 0);
+});
+
+test('la montée en charge : 100, 150, 200 les premiers soirs d\'envoi réel, puis le plafond', async () => {
+  const file = Array.from({ length: 400 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const attendus = [100, 150, 200, 290];
+  for (let soir = 0; soir < 4; soir++) {
+    const quand = new Date(SOIR.getTime() + soir * 86400e3);
+    const b = await passage({ base, brevo: new FauxBrevo(), maintenant: quand, mode: 'reel', journal: silence });
+    assert.equal(b.limite, attendus[soir], `soir ${soir + 1}`);
+  }
+  // Un soir sans rien à envoyer ne fait pas avancer la montée.
+  const vide = new FausseBase();
+  vide.t.emails_passages.push({ jour: '2026-10-20', fin: 'x', bilan: { mode: 'reel', envois: {} } });
+  const b = await passage({ base: vide, brevo: new FauxBrevo(), maintenant: SOIR, mode: 'blanc', journal: silence });
+  assert.equal(b.limite, 100);
 });
 
 test('une ligne déjà là (passage concurrent) ne repart pas', async () => {

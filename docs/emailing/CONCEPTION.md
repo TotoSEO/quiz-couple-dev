@@ -210,6 +210,18 @@ plus récentes d'abord. L'offre gratuite de Brevo fait 300 envois par jour ;
 dans l'admin : quand elle grossit de soir en soir, il faut l'offre
 supérieure de Brevo, puis relever `plafond` dans `emails/reglages.mjs`.
 
+Au lancement, la file part avec tout le retard (766 adresses en attente de
+`e1` le 24 octobre 2026). Thomas : « il faut vider la base actuelle sans
+envoyer 900 mails d'un coup, faut faire par vague pendant plusieurs jours
+jusqu'à ce que tout le retard soit rattrapé. » Le plafond s'en charge déjà
+(290 par soir au plus), et les trois premiers soirs réels partent moins
+fort, 100, puis 150, puis 200 (`montee` dans `emails/reglages.mjs`,
+`plafondDuSoir` dans `parcours.mjs`) : le domaine d'envoi est neuf, et les
+messageries le jugent sur ses premiers envois. Seuls comptent les soirs où
+quelque chose est vraiment parti. Avec l'ordre de la file, les adresses du
+jour passent en premier et le retard se vide par le bas, en quatre à cinq
+soirs.
+
 **Les adresses de l'e-book n'entrent pas dans le parcours** : leur case
 disait « me contacte occasionnellement à des fins informationnelles », pas
 des offres. Celle de la porte des résultats dit « les conseils et
@@ -219,20 +231,38 @@ l'évaluation de couple avec ses offres.
 ### Ce que dit chaque e-mail
 
 Les textes sont dans `emails/textes/<langue>.json`, le gabarit dans
-`emails/gabarit.html` (provisoire, en attendant les maquettes que Thomas
-fait préparer : ses marqueurs `[[...]]` sont ceux de `contenu.mjs`).
+`emails/gabarit.html` : la maquette de Claude Design que Thomas a fait
+préparer (ses marqueurs `[[...]]` sont ceux de `contenu.mjs`). Les premiers
+essais avaient un gabarit provisoire et des paragraphes ; Thomas : « Y'a trop
+de texte ! C'est pas assez marketing avec des bullet points rapide et
+tout ! ». D'où, de haut en bas : les deux personnages et leur bulle
+(« Coucou Julie ! »), un titre, une phrase (le champ `INTRO`), quatre ou
+cinq coches de quelques mots avec l'essentiel en gras, une ligne pour la
+façon seul(e), le ticket du prix (le prix habituel barré pendant une
+réduction, et à côté le code ou le prix par personne), le bouton, une
+petite ligne sous le bouton, la signature de Thomas, trois cartes « À voir
+aussi » (langage de l'amour, qui connaît le mieux l'autre, tu préfères) et
+la bande Instagram. Thème clair seul : sans règle sombre, Apple Mail garde
+les couleurs. Le français tutoie, comme la maquette. Les images sont dans
+`public/email/` et servies en `https://quiz-couple.com/email/` (une carte
+du tu préfères par langue, son texte étant dans l'image). Les commentaires
+du gabarit ne partent pas (`sansCommentaires`), sauf ceux qui s'adressent à
+Outlook.
 
-- `e1` : le merci, un premier paragraphe écrit pour la famille du test
-  (`score`, `projet`, `doute` de `BILAN_ENTREES`, « general » sinon), puis
-  l'évaluation (notre test le plus complet, 100 questions, 12 domaines,
-  plus de trente études publiées, comme la page de vente en a le droit,
-  `docs/bilan/RECHERCHE.md`), chacun sur son téléphone, le rapport, le
-  bouton, « Faites-la seul(e) », le prix.
-- `e2` : ce que montre le rapport (accords et écarts, sujets décisifs,
-  quatre prochaines conversations, climat), la façon seul(e), le prix pour
-  deux et par personne (« moins qu'une place de cinéma ») et la séance chez
-  un conseiller conjugal (le chiffre de la page de vente dans chaque langue),
-  le bouton, et « vous l'avez déjà commencée ? ».
+- `e1` : le titre de la page de vente (« Faites le point sur votre couple,
+  sans aller chez un pro »), une phrase écrite pour la famille du test
+  (`score`, `projet`, `doute` de `BILAN_ENTREES`, « general » sinon), quatre
+  coches (100 questions sur 12 domaines, chacun sur son téléphone, plus de
+  trente études publiées, comme la page de vente en a le droit,
+  `docs/bilan/RECHERCHE.md`, le rapport complet), « Fais-la seul(e) », le
+  ticket du prix avec le code de la réduction, le bouton, « les questions
+  sont gratuites, tu paies à la fin ».
+- `e2` : « Votre couple, domaine par domaine », une phrase de sa famille,
+  cinq coches sur ce que montre le rapport (accords et écarts, sujets
+  décisifs, quatre prochaines conversations, climat, la façon seul(e)),
+  « tu l'as déjà commencée ? », le ticket avec le prix par personne
+  (« moins qu'une place de ciné »), le bouton, et la séance chez un
+  conseiller conjugal (le chiffre de la page de vente dans chaque langue).
 - Le test lui-même n'est jamais nommé : « A couché avec un(e) autre ? » ou
   « Couple toxique » dans une boîte de réception, ce serait indiscret.
 - Le prix vient de `coeur.mjs` de l'évaluation, comme sur le site ; la
@@ -245,8 +275,8 @@ fait préparer : ses marqueurs `[[...]]` sont ceux de `contenu.mjs`).
 
 Une campagne Brevo par e-mail et par langue ; ce qui change d'une personne à
 l'autre passe par deux champs du contact, remplis par Brevo à l'envoi :
-`SALUTATION` (« Bonjour Julie, » ou « Bonjour, ») et `INTRO` (le premier
-paragraphe de sa famille de test). `LANGUE` et `PARCOURS` (le soir du
+`SALUTATION` (« Coucou Julie ! » ou « Coucou ! », dans la bulle) et `INTRO`
+(la phrase de sa famille de test). `LANGUE` et `PARCOURS` (le soir du
 dernier envoi, qui marque les contacts du parcours) servent au tri chez
 Brevo ; la famille du test n'y va pas, elle ne sert pas à l'envoi. Il ne reste dans le HTML envoyé que `{{ contact.SALUTATION }}`,
 `{{ contact.INTRO }}` et `{{ unsubscribe }}` ; `verifier` refuse tout autre
@@ -296,7 +326,7 @@ que de secours. Dans l'ordre :
    dans la file ; une campagne partie fait passer ses lignes en `envoye` ;
 4. le filet des désinscriptions ;
 5. la file (`emails_du_jour`), coupée aux crédits de Brevo (moins dix pour
-   les essais) et au plafond, puis par e-mail et par langue : les lignes
+   les essais), au plafond et à la montée en charge des premiers soirs, puis par e-mail et par langue : les lignes
    `prepare`, les contacts et leurs champs, mis dans la liste du soir au
    même appel (Brevo répond 400 à un ajout séparé quand le contact y est
    déjà), la liste relue (seuls ceux qui y sont partent ; plus d'un absent

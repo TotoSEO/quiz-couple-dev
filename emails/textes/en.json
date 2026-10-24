@@ -1,35 +1,73 @@
 {
   "salutation": {
-    "prenom": "Hi [[prenom]],",
-    "sans": "Hi there,"
+    "prenom": "Hi [[prenom]]!",
+    "sans": "Hi there!"
   },
-  "signature": "Thomas, from Quiz Couple",
+  "signature": [
+    "Talk soon,",
+    "Thomas, from Quiz Couple"
+  ],
+  "pastille": "Tests · Quizzes · Games",
+  "altMascottes": "The Quiz Couple mascots waving hello",
+  "voir": {
+    "titre": "More from [[marque]]",
+    "aller": "Let's go →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "What's your love language?",
+        "texte": "30 questions to find out how each of you loves."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Who knows the other best?",
+        "texte": "The little duel to see who listens best."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-en.png",
+        "type": "Game",
+        "titre": "Would you rather?",
+        "texte": "100 impossible choices to settle together."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "See you on Instagram?",
+    "texte": "A little quiz every day, to play together."
+  },
   "pied": {
     "pourquoi": "You're receiving this email because you left your address at the end of a test on quiz-couple.com and agreed to receive our tips and news.",
     "desinscription": "Unsubscribe",
     "editeur": "Quiz Couple · Visibilitea, 4 rue de Bruges, 67000 Strasbourg, France"
   },
-  "seance": "A session with a relationship counsellor costs between £50 and £90.",
   "e1": {
     "sujet": "100 questions to take stock of your relationship",
     "apercu": "You each answer on your own, and a report shows you where you agree and what to talk about.",
+    "titre": "Take stock of your relationship, without seeing a professional",
     "intro": {
-      "score": "Thanks for taking a test on Quiz Couple, I hope you enjoyed it! A test like that gives you a general idea, but it doesn't tell you which topics you agree on and which ones you don't.",
-      "projet": "Thanks for taking a test on Quiz Couple, I hope you enjoyed it! Before a big step, like moving in together, getting married or having a baby, it's a good time to check that you want the same things.",
-      "doute": "Thanks for taking a test on Quiz Couple. When you have questions about your relationship, it's not always easy to know where to start. Putting words on what's going well and what isn't already helps a lot.",
-      "general": "Thanks for following Quiz Couple! If you'd like to go further than a quick test, here's a way to take stock of your relationship in detail."
+      "score": "Thanks for taking a test on Quiz Couple! Want to go further? Here's our most complete test.",
+      "projet": "Thanks for taking a test on Quiz Couple! Before a big step, it's worth checking you want the same things.",
+      "doute": "Thanks for taking a test on Quiz Couple. When you have questions about your relationship, putting words on them already helps a lot.",
+      "general": "Thanks for following Quiz Couple! Want to go further than a quick test? Here's our most complete test."
     },
-    "paragraphes": [
-      "**The relationship assessment** is our most complete test: 100 concrete questions across 12 areas of life together, like money, children, sharing the chores or intimacy. The questions are based on more than thirty published studies on relationships, some of which followed couples for years.",
-      "You each answer on your own phone, without seeing the other's answers. It takes about 25 minutes each, and you can take breaks. At the end, a full report shows you where you agree, where your answers drift apart, and what to talk about first."
+    "points": [
+      "**100 questions** across 12 areas: money, kids, intimacy, arguments...",
+      "**Each on your own phone**, without seeing the other's answers",
+      "**Built on more than 30 published studies** on relationships",
+      "**A full report**: where you agree, where you don't, and where to start"
     ],
+    "solo": "Your partner doesn't want to? [Take it on your own](solo).",
+    "prixPhrase": {
+      "promo": "[[pourcent]]% off with the code [[code]], applied automatically",
+      "normal": "For both of you, in a single payment"
+    },
     "bouton": "Discover the assessment",
-    "soloQuestion": "Your partner doesn't want to take part?",
-    "soloLien": "Take it on your own",
-    "prix": {
-      "promo": "The questions are free. Right now, the report is ~~[[prixBase]]~~ **[[prix]]** for the two of you ([[pourcent]]% off).",
-      "normal": "The questions are free, and the report costs **[[prix]]** for the two of you."
-    }
+    "note": "The questions are free: you pay at the end, once for both of you."
   },
   "e2": {
     "sujet": "Money, kids, chores: are you on the same page?",
@@ -37,25 +75,26 @@
       "promo": "What the report shows you, and [[pourcent]]% off right now.",
       "normal": "What the assessment report shows you, area by area."
     },
+    "titre": "Your relationship, area by area",
     "intro": {
-      "score": "A few days ago, I told you about the relationship assessment. Here's what the report shows you at the end.",
-      "projet": "A few days ago, I told you about the relationship assessment. Before a big plan together, here's what the report shows you.",
-      "doute": "A few days ago, I told you about the relationship assessment. Here's what the report shows you, whether you take it together or on your own.",
-      "general": "A few days ago, I told you about the relationship assessment. Here's what the report shows you at the end."
+      "score": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:",
+      "projet": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:",
+      "doute": "A few days ago, I told you about the relationship assessment. Together or on your own, here's what you'll discover at the end:",
+      "general": "A few days ago, I told you about the relationship assessment. Here's what you'll discover at the end:"
     },
     "points": [
-      "**Where you agree, and where your answers drift apart**, area by area: money, children, sharing the chores, intimacy, the way you argue, and so on.",
-      "**The non-negotiables**, the topics that weigh most in a relationship.",
-      "**Your next four conversations**: the topics to start with, with questions to talk them through.",
-      "**The mood of your relationship**: how each of you feels in it."
+      "**Where you agree and where you don't**, question by question",
+      "**The non-negotiables**, the topics that weigh most in a relationship",
+      "**Your next 4 conversations**, with questions to get you started",
+      "**The mood of your relationship**, as each of you sees it",
+      "**[Possible on your own](solo)** if your partner doesn't want to take part"
     ],
-    "solo": "Your partner doesn't want to take part? You can take it on your own: you answer for yourself, then the way you think your partner would answer. Your partner receives nothing.",
-    "prix": {
-      "promo": "Right now, the report is ~~[[prixBase]]~~ **[[prix]]** for the two of you, so [[prixChacun]] each: less than a cinema ticket. [[seance]]",
-      "normal": "The report costs **[[prix]]** for the two of you, so [[prixChacun]] each: less than a cinema ticket. [[seance]]"
+    "deja": "Already started? It's waiting right where you left off.",
+    "prixPhrase": {
+      "promo": "That's [[prixChacun]] each: less than a cinema ticket",
+      "normal": "That's [[prixChacun]] each: less than a cinema ticket"
     },
     "bouton": "Take the assessment",
-    "soloLien": "Take it on your own",
-    "reprise": "Already started? It's waiting for you on the same phone, right where you left off."
+    "note": "For comparison: a session with a relationship counsellor costs between £50 and £90."
   }
 }

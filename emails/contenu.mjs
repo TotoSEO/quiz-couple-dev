@@ -1,19 +1,25 @@
 // Le contenu des e-mails du parcours (docs/emailing/CONCEPTION.md) : les
-// textes (emails/textes/<langue>.json), le gabarit (emails/gabarit.html),
-// le prix et la réduction (coeur.mjs de l'évaluation, la même source que le
-// site) et les liens vers la page de l'évaluation. Aucun appel réseau.
+// textes (emails/textes/<langue>.json), le gabarit (emails/gabarit.html, la
+// maquette de Claude Design du 24 octobre 2026), le prix et la réduction
+// (coeur.mjs de l'évaluation, la même source que le site) et les liens vers
+// la page de l'évaluation. Aucun appel réseau.
 //
 // Une campagne Brevo par e-mail et par langue ; ce qui change d'une personne
 // à l'autre passe par deux champs du contact, remplis par Brevo à l'envoi :
-// SALUTATION (« Bonjour Julie, » ou « Bonjour, ») et INTRO (le premier
-// paragraphe, écrit pour la famille du test qu'elle a fait : un test à
-// score, un projet, un doute). Les marqueurs [[...]] des textes et du
-// gabarit sont remplis ici ; il ne reste dans le HTML envoyé que ceux de
-// Brevo (MARQUEURS_BREVO), et `verifier` refuse tout le reste.
+// SALUTATION (la bulle des mascottes : « Coucou Julie ! » ou « Coucou ! »)
+// et INTRO (la phrase d'accroche, écrite pour la famille du test qu'elle a
+// fait : un test à score, un projet, un doute). Les marqueurs [[...]] des
+// textes et du gabarit sont remplis ici ; il ne reste dans le HTML envoyé que
+// ceux de Brevo (MARQUEURS_BREVO), et `verifier` refuse tout le reste.
+//
+// Thomas devant les premiers essais (24 octobre 2026) : « Y'a trop de
+// texte ! C'est pas assez marketing avec des bullet points rapides et
+// tout ! » : une phrase d'accroche, quatre ou cinq points cochés, le ticket
+// du prix, le bouton.
 
 import { readFileSync } from 'node:fs';
-import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, getLocalizedUrl } from '../static-site/build/config.js';
-import { PRIX_CENTIMES, PROMO_POURCENT, prixPromo, promoEnCours } from '../supabase/functions/_shared/bilan/coeur.mjs';
+import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, BASE_URL, getLocalizedUrl } from '../static-site/build/config.js';
+import { PRIX_CENTIMES, PROMO_POURCENT, PROMO_CODE, prixPromo, promoEnCours } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
 export const TYPES = ['e1', 'e2'];
 export const ANGLES = ['score', 'projet', 'doute', 'general'];
@@ -23,6 +29,8 @@ export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}
 const lire = (chemin) => readFileSync(new URL(chemin, import.meta.url), 'utf8');
 const TEXTES = Object.fromEntries(LANGUES.map((l) => [l, JSON.parse(lire(`./textes/${l}.json`))]));
 const GABARIT = lire('./gabarit.html');
+// Les images des e-mails, servies par le site (public/email/).
+const IMAGES = `${BASE_URL}/email/`;
 
 // La famille du test d'où vient l'adresse (BILAN_ENTREES : score, projet,
 // doute) ; « general » pour une source inconnue.
@@ -45,6 +53,8 @@ export function typo(texte, lang) {
   let s = String(texte);
   if (lang === 'fr') s = s.replace(/ ([?!:;%»])/g, ' $1').replace(/« /g, '« ');
   else if (lang !== 'en') s = s.replace(/ %/g, ' %');
+  // Un montant ne se sépare pas de son symbole : « 90 € » reste sur une ligne.
+  if (lang !== 'en') s = s.replace(/(\d) €/g, '$1\xa0€');
   return s;
 }
 
@@ -62,6 +72,7 @@ export function prixDu(lang, instant = new Date(), promoForcee) {
   return {
     promo,
     pourcent: PROMO_POURCENT,
+    code: PROMO_CODE,
     prix: formatPrix(centimes, lang),
     prixBase: formatPrix(PRIX_CENTIMES, lang),
     prixChacun: formatPrix(Math.round(centimes / 2), lang),
@@ -81,26 +92,35 @@ export function lien(lang, type, { solo = false } = {}) {
 const echapper = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const remplir = (texte, valeurs) => String(texte).replace(/\[\[(\w+)\]\]/g, (m, k) => (k in valeurs ? String(valeurs[k]) : m));
 
-// **gras** et ~~barré~~, après échappement.
-const COULEUR = '#2b2233';
-const ROSE = '#b02d5a';
-const DOUX = '#6b5c66';
-function enLigne(texte) {
+// Les couleurs de la maquette.
+const ENCRE = '#2b1722';
+const VIOLET = '#6834b2';
+const ROSE = '#b12559';
+const ROSE_PALE = '#fae6ec';
+const DOUX = '#785e6c';
+
+// Après échappement : **gras**, et [texte](solo) ou [texte](evaluation) pour
+// un lien vers la façon seul(e) ou vers la page de l'évaluation.
+function enLigne(texte, liens) {
   return echapper(texte)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/~~(.+?)~~/g, `<s style="color:${DOUX};">$1</s>`);
+    .replace(/\[([^\]]+)\]\((solo|evaluation)\)/g, (m, mot, cible) =>
+      `<a href="${echapper(liens[cible])}" target="_blank" style="color:${VIOLET};font-weight:700;text-decoration:underline;white-space:nowrap;">${mot}</a>`);
 }
 
-const P = `margin:0 0 16px;font-size:16px;line-height:1.6;color:${COULEUR};`;
+const P = `margin:0 0 16px;font-size:17px;line-height:27px;color:${ENCRE};`;
 const paragraphe = (html) => `<p style="${P}">${html}</p>`;
-const bouton = (texte, href) => `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 20px;"><tr><td style="border-radius:999px;background:${ROSE};"><a href="${echapper(href)}" style="display:inline-block;padding:14px 28px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.2;color:#ffffff;text-decoration:none;border-radius:999px;">${echapper(texte)}</a></td></tr></table>`;
-const lienTexte = (texte, href) => `<a class="qc-lien" href="${echapper(href)}" style="color:${ROSE};font-weight:600;text-decoration:underline;">${echapper(texte)}</a>`;
-const petit = (html) => `<p class="qc-doux" style="margin:0 0 16px;font-size:14px;line-height:1.6;color:${DOUX};">${html}</p>`;
-const liste = (points) => `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;">${points.map((x) => `<tr><td class="qc-coeur" valign="top" style="padding:0 10px 10px 0;font-size:16px;line-height:1.6;color:${ROSE};">&#9829;</td><td style="padding:0 0 10px;font-size:16px;line-height:1.6;color:${COULEUR};">${x}</td></tr>`).join('')}</table>`;
+const petit = (html) => `<p style="margin:0 0 16px;font-size:15px;line-height:23px;color:${DOUX};">${html}</p>`;
+// Les points cochés : une pastille rose et sa coche, puis le texte.
+const liste = (points) => `<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:4px 0 18px;">${points.map((x) =>
+  `<tr><td width="34" valign="top" style="width:34px;padding:1px 0 12px;"><div style="width:24px;height:24px;border-radius:12px;background-color:${ROSE_PALE};color:${ROSE};font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;font-weight:800;text-align:center;">&#10003;</div></td>` +
+  `<td valign="top" style="padding:0 0 12px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:25px;color:${ENCRE};">${x}</td></tr>`).join('')}</table>`;
 
 // Ce que Brevo met dans les champs du contact, en texte brut : Brevo les
 // insère tels quels dans le HTML, d'où le retrait de < > & et des marqueurs.
-const brut = (s) => String(s).replace(/[<>&{}]/g, '').replace(/\s+/g, ' ').trim();
+// Les espaces insécables de typo() restent : seuls les autres blancs se
+// replient.
+const brut = (s) => String(s).replace(/[<>&{}]/g, '').replace(/[^\S\xa0]+/g, ' ').trim();
 
 export function salutation(lang, prenom) {
   const t = textes(lang).salutation;
@@ -126,6 +146,18 @@ export function attributsContact({ type, lang, angle, prenom }, jour) {
   };
 }
 
+// Retire un bloc <!--nom-->...<!--/nom--> du gabarit, ou n'en garde que le
+// contenu.
+function bloc(html, nom, garder) {
+  const re = new RegExp(`<!--${nom}-->([\\s\\S]*?)<!--/${nom}-->`, 'g');
+  return html.replace(re, (m, dedans) => (garder ? dedans : ''));
+}
+
+// Les commentaires du gabarit ne partent pas : seuls restent ceux qui
+// s'adressent à Outlook (« <!--[if mso]> », « <!--<![endif]--> »), qui ne
+// commencent jamais par une espace.
+const sansCommentaires = (html) => html.replace(/<!-- [\s\S]*?-->[ \t]*\n?/g, '');
+
 // `promo` (vrai ou faux) force l'une des deux variantes du prix : aperçus
 // et tests ; le soir de l'envoi, la date décide.
 export function campagne(type, lang, instant = new Date(), { promo } = {}) {
@@ -133,40 +165,53 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
   const t = textes(lang);
   const e = t[type];
   const p = prixDu(lang, instant, promo);
-  const v = { prix: p.prix, prixBase: p.prixBase, prixChacun: p.prixChacun, pourcent: p.pourcent, seance: t.seance };
   const variante = p.promo ? 'promo' : 'normal';
+  const v = { prix: p.prix, prixBase: p.prixBase, prixChacun: p.prixChacun, pourcent: p.pourcent, code: p.code };
   const ecrire = (texte) => typo(remplir(texte, v), lang);
+  const liens = { evaluation: lien(lang, type), solo: lien(lang, type, { solo: true }) };
   const sujet = ecrire(e.sujet);
   const apercu = ecrire(typeof e.apercu === 'string' ? e.apercu : e.apercu[variante]);
 
-  const blocs = [];
-  if (type === 'e1') {
-    for (const x of e.paragraphes) blocs.push(paragraphe(enLigne(ecrire(x))));
-    blocs.push(bouton(ecrire(e.bouton), lien(lang, type)));
-    blocs.push(paragraphe(`${echapper(ecrire(e.soloQuestion))} ${lienTexte(ecrire(e.soloLien), lien(lang, type, { solo: true }))}`));
-    blocs.push(petit(enLigne(ecrire(e.prix[variante]))));
-  } else {
-    blocs.push(liste(e.points.map((x) => enLigne(ecrire(x)))));
-    blocs.push(paragraphe(enLigne(ecrire(e.solo))));
-    blocs.push(paragraphe(enLigne(ecrire(e.prix[variante]))));
-    blocs.push(bouton(ecrire(e.bouton), lien(lang, type)));
-    blocs.push(paragraphe(lienTexte(ecrire(e.soloLien), lien(lang, type, { solo: true }))));
-    blocs.push(petit(enLigne(ecrire(e.reprise))));
-  }
+  const corps = [paragraphe('{{ contact.INTRO }}'), liste(e.points.map((x) => enLigne(ecrire(x), liens)))];
+  if (type === 'e1') corps.push(paragraphe(enLigne(ecrire(e.solo), liens)));
+  else corps.push(petit(enLigne(ecrire(e.deja), liens)));
 
-  const html = remplir(GABARIT, {
-    lang,
-    titre: echapper(sujet),
-    apercu: echapper(apercu),
-    salutation: '{{ contact.SALUTATION }}',
-    intro: '{{ contact.INTRO }}',
-    contenu: blocs.join('\n            '),
-    signature: echapper(ecrire(t.signature)),
-    pourquoi: echapper(ecrire(t.pied.pourquoi)),
-    desinscription: echapper(ecrire(t.pied.desinscription)),
-    lienDesinscription: '{{ unsubscribe }}',
-    editeur: echapper(ecrire(t.pied.editeur)),
+  const marque = `<span style="color:${VIOLET};">Quiz&nbsp;Couple</span>`;
+  const valeurs = {
+    LANG: lang,
+    TITRE_PAGE: echapper(sujet),
+    PREHEADER: echapper(apercu),
+    ACCUEIL: getLocalizedUrl('home', lang),
+    PASTILLE: echapper(ecrire(t.pastille)),
+    ALT_MASCOTTES: echapper(ecrire(t.altMascottes)),
+    SALUTATION: '{{ contact.SALUTATION }}',
+    TITRE: echapper(ecrire(e.titre)),
+    CORPS: corps.join('\n'),
+    PRIX_BARRE: echapper(p.prixBase),
+    PRIX: echapper(p.prix),
+    PRIX_PHRASE: echapper(ecrire(e.prixPhrase[variante])),
+    BOUTON_LIEN: echapper(liens.evaluation),
+    BOUTON_TEXTE: echapper(ecrire(e.bouton)),
+    NOTE: echapper(ecrire(e.note)),
+    SIGNATURE: t.signature.map((x) => echapper(ecrire(x))).join('<br>'),
+    VOIR_TITRE: echapper(ecrire(t.voir.titre)).replace('[[marque]]', marque),
+    VOIR_ALLER: echapper(ecrire(t.voir.aller)).replace(/ (\S+)$/, '&nbsp;$1'),
+    INSTA_TITRE: echapper(ecrire(t.instagram.titre)),
+    INSTA_TEXTE: echapper(ecrire(t.instagram.texte)),
+    PIED: `${echapper(ecrire(t.pied.pourquoi))}<br>${echapper(ecrire(t.pied.editeur))}`,
+    DESINSCRIPTION_LIEN: '{{ unsubscribe }}',
+    DESINSCRIPTION_TEXTE: echapper(ecrire(t.pied.desinscription)),
+  };
+  t.voir.cartes.forEach((c, i) => {
+    const n = i + 1;
+    valeurs[`VOIR${n}_LIEN`] = echapper(getLocalizedUrl(c.route, lang));
+    valeurs[`VOIR${n}_IMAGE`] = echapper(IMAGES + c.image);
+    valeurs[`VOIR${n}_TYPE`] = echapper(ecrire(c.type));
+    valeurs[`VOIR${n}_TITRE`] = echapper(ecrire(c.titre));
+    valeurs[`VOIR${n}_TEXTE`] = echapper(ecrire(c.texte));
   });
+  const gabarit = sansCommentaires(bloc(bloc(GABARIT, 'prix', true), 'barre', p.promo));
+  const html = remplir(gabarit, valeurs);
   verifier(html);
   return { type, lang, promo: p.promo, sujet, apercu, html };
 }
