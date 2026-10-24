@@ -1,0 +1,30 @@
+{
+  "jour": "2026-12-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "I sleep better when you're on your side of the bed.",
+        "fleurs": "feuillage",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

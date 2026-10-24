@@ -1,0 +1,84 @@
+{
+  "jour": "2026-12-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "noel-01",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Une semaine avant Noël, dans le salon, assis sur le canapé, elle (le héros) joint les mains sous le menton, les yeux qui brillent : un chiot dans sa bulle de pensée, son cadeau de Noël ; il croise les bras et fait non de la tête, deux fois. Elle laisse tomber les épaules, puis un sourire en coin. Le soir même elle le tire par la main hors du canapé, « j’ai une surprise pour toi », et l’emmène jusqu’au jardin dans la nuit d’hiver : une meute entière qui saute partout, roulement de tambour. Il tremble, la spirale au-dessus de la tête, et s’évanouit raide comme une planche au ralenti, les yeux en croix ; elle rit avec un chiot dans les bras, s’agenouille près de lui ; il revient à lui sous les léchouilles, joyeux Noël en avance.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "Santa Baby"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "salon",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-chien",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, le salon un soir d'hiver : la fenêtre, le cadre au cœur, le lampadaire allumé, le canapé à droite. Ils sont assis côte à côte sur le canapé, elle (nœud rose, queue de cheval) joint les mains sous le menton et le regarde avec de grands yeux qui brillent : une bulle de pensée pop au-dessus de sa tête, un chiot dedans, son cadeau de Noël. Lui (bandana violet) croise les bras et fait non de la tête, deux fois, les sourcils froncés. La bulle s'efface ; elle laisse tomber les épaules et soupire, triste. La caméra pousse légèrement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "triste",
+                  "duree": 0.9
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, le mur du salon derrière. La tristesse : sourcils tristes, bouche à l'envers, le regard vers le sol, presque le silence. À 0,9 s un sourcil se lève, les yeux se plissent, un sourire en coin : elle a une idée ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval bouge dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "surprise",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le soir est tombé, devant la maison sous la lune, les grillons. Elle entre par la gauche en le tirant par la main, un sourire en coin, lui suit sans comprendre ; ils s'arrêtent devant la porte, elle se tourne vers lui et lui parle avec un clin d'œil, la main qui gesticule : « j'ai une surprise pour toi ». Il hausse un sourcil, sceptique. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "jardin",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le jardin de la maison la nuit, la barrière et la niche au fond, l'arbre à droite, les fenêtres allumées. La caméra est serrée sur eux deux à gauche ; elle lève les bras en l'air, ta-da, et la caméra glisse vers la droite pour découvrir la pelouse : neuf chiens qui aboient et sautent dans tous les sens, la langue pendante, les queues qui battent, un roulement de tambour. Lui se fige, les yeux ronds, bouche ouverte, et commence à trembler."
+            },
+            {
+              "sequence": "exploit",
+              "type": "malaise",
+              "duree": 4.2,
+              "description": "Plan moyen sur lui, à gauche, elle à côté, la meute qui saute derrière. Il tremble de plus en plus fort, une spirale de vertige tourne au-dessus de sa tête, ses yeux deviennent des spirales. Il se raidit comme une planche, les bras le long du corps, et bascule en arrière : ralenti dix fois sur la chute, caméra serrée, voile bleuté, une chute de trombone ; il s'écrase au sol dans un nuage de poussière, secousse, les yeux en croix, des étoiles qui tournent autour de sa tête. Elle le regarde, surprise, puis éclate de rire ; un chiot lui saute dans les bras et elle le cajole, la tête penchée dessus. La caméra s'écarte sur la scène."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "reveil",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, la meute qui saute au fond. Lui est toujours à plat, les étoiles autour de la tête. Elle s'approche avec le chiot et s'agenouille près de lui, attendrie. Il sursaute, revient à lui, se redresse assis, les yeux ronds, regarde autour de lui tous ces chiens... et éclate de rire ; elle rit aussi, le chiot aboie, des cœurs montent entre eux. La caméra pousse lentement sur eux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "She asked Santa for a puppy.\n\nTag your partner",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
