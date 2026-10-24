@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import { installer, EVENEMENTS_WEBHOOK } from '../installer.mjs';
 import { essai, adresseVariante } from '../essai.mjs';
 import { REGLAGES } from '../reglages.mjs';
+import { clientBrevo } from '../brevo.mjs';
 
 function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], brouillons = [] } = {}) {
   const b = {
@@ -114,4 +115,21 @@ test('essai refuse une adresse invalide, et s\'arrête sans dossier ni liste d\'
   await assert.rejects(essai({ brevo, adresse: 'pas-une-adresse', types: ['e1'], langues: ['fr'], angles: ['score'], journal: silence }), /invalide/);
   await assert.rejects(essai({ brevo: fauxBrevo(), adresse: 'a@b.fr', types: ['e1'], langues: ['fr'], angles: ['score'], journal: silence }), /installer/);
   assert.deepEqual(brevo.appels, []);
+});
+
+test('le client Brevo retire des contacts d\'une liste par 150, et une liste qui ne les a pas n\'arrête rien', async () => {
+  const appels = [];
+  const statuts = [201, 400, 404];
+  const f = async (url, o) => {
+    appels.push([o.method, url.replace('https://api.brevo.com/v3', ''), JSON.parse(o.body).emails.length]);
+    const status = statuts.shift();
+    return { status, ok: status < 300, text: async () => (status === 201 ? '{"contacts":{}}' : '{"code":"invalid_parameter","message":"refus"}') };
+  };
+  const brevo = clientBrevo('cle', { fetch: f, pause: async () => {} });
+  await brevo.retirerDeLaListe(12, Array.from({ length: 160 }, (_, i) => `p${i}@exemple.fr`));
+  assert.deepEqual(appels, [
+    ['POST', '/contacts/lists/12/contacts/remove', 150],
+    ['POST', '/contacts/lists/12/contacts/remove', 10],
+  ]);
+  await assert.rejects(brevo.retirerDeLaListe(12, ['a@exemple.fr']), /404/);
 });

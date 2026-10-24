@@ -76,6 +76,18 @@ export function clientBrevo(cle, { fetch: f = globalThis.fetch, pause = attendre
     }),
     // Les membres d'une liste, 500 par page.
     membresDeLaListe: (id, offset = 0) => appel('GET', `/contacts/lists/${enc(id)}/contacts?limit=500&offset=${offset}`),
+    // Retire des contacts d'une liste (201), 150 par appel comme pour l'ajout.
+    // Quand aucun d'eux n'y est, Brevo répond 400 (cas absent de sa
+    // documentation) : c'est ce qu'on voulait, on continue.
+    retirerDeLaListe: async (id, emails) => {
+      for (let i = 0; i < emails.length; i += 150) {
+        try {
+          await appel('POST', `/contacts/lists/${enc(id)}/contacts/remove`, { emails: emails.slice(i, i + 150) });
+        } catch (e) {
+          if (e.statut !== 400) throw e;
+        }
+      }
+    },
     contacts: ({ limite = 1000, offset = 0, modifieDepuis } = {}) => appel('GET',
       `/contacts?limit=${limite}&offset=${offset}${modifieDepuis ? '&modifiedSince=' + enc(modifieDepuis) : ''}`),
     supprimerContact: (email) => appel('DELETE', '/contacts/' + enc(email)),
