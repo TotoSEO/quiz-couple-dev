@@ -1118,6 +1118,21 @@
       var etats = [['pret', 'PDF envoyés'], ['a_faire', 'À fabriquer'], ['en_cours', 'En fabrication'], ['erreur', 'En erreur']];
       var html = '<div class="bil-faits">' + faits.map(function (f) { return '<div class="bil-fait"><div class="bil-fait-n">' + esc(f[0]) + '</div><div class="bil-fait-l">' + esc(f[1]) + '</div></div>'; }).join('') + '</div>' +
         '<div class="bil-faits">' + etats.map(function (e) { return '<div class="bil-fait' + (e[0] === 'erreur' && rp.erreur ? ' bil-fait--alerte' : '') + '"><div class="bil-fait-n">' + nombreBilan(rp[e[0]]) + '</div><div class="bil-fait-l">' + esc(e[1]) + '</div></div>'; }).join('') + '</div>';
+      // Les e-mails sur l'évaluation et ce qui a suivi (24 octobre 2026) : le
+      // premier chiffre compte les envois, le second ce que la personne a
+      // fait ensuite. Rien ne vient d'un pistage : seulement les dates de la
+      // base (envoi, paiement, réponses finies).
+      var rl = d.rappels;
+      if (rl) {
+        var mails = [
+          [nombreBilan(rl.prets) + ' → ' + nombreBilan(rl.prets_payes), '« rapport prêt » envoyés → payés ensuite'],
+          [nombreBilan(rl.relances) + ' → ' + nombreBilan(rl.relances_payes), 'rappels du lendemain → payés ensuite'],
+          [nombreBilan(rl.reprises_moi) + ' → ' + nombreBilan(rl.reprises_moi_finies), 'reprises « vos réponses » → finies ensuite'],
+          [nombreBilan(rl.reprises_autre) + ' → ' + nombreBilan(rl.reprises_autre_finies), 'reprises « l\'autre n\'a pas fini » → l\'autre a fini ensuite']
+        ];
+        html += '<p class="bil-fait-l">E-mails sur l\'évaluation (évaluations créées sur la période)</p>' +
+          '<div class="bil-faits">' + mails.map(function (f) { return '<div class="bil-fait"><div class="bil-fait-n">' + esc(f[0]) + '</div><div class="bil-fait-l">' + esc(f[1]) + '</div></div>'; }).join('') + '</div>';
+      }
       if ((d.erreurs || []).length) {
         html += '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Bilan</th><th>Essais</th><th>Le</th><th class="bil-gauche">Erreur</th></tr></thead><tbody>' +
           d.erreurs.map(function (x) { return '<tr><td class="bil-gauche">' + esc(x.id) + '</td><td>' + nombreBilan(x.essais) + '</td><td>' + esc(dateBilan(x.le)) + '</td><td class="bil-gauche bil-erreur">' + esc(x.erreur || '') + '</td></tr>'; }).join('') +
