@@ -297,8 +297,11 @@ que de secours. Dans l'ordre :
 4. le filet des désinscriptions ;
 5. la file (`emails_du_jour`), coupée aux crédits de Brevo (moins dix pour
    les essais) et au plafond, puis par e-mail et par langue : les lignes
-   `prepare`, les contacts et leurs champs, la liste du soir, la campagne,
-   l'envoi, les lignes en `envoye`. Une adresse que Brevo refuse passe en
+   `prepare`, les contacts et leurs champs, mis dans la liste du soir au
+   même appel (Brevo répond 400 à un ajout séparé quand le contact y est
+   déjà), la liste relue (seuls ceux qui y sont partent ; plus d'un absent
+   sur dix arrête tout), la campagne, l'envoi, les lignes en `envoye`. La
+   campagne n'a pas de `tag` : l'offre gratuite le refuse (405). Une adresse que Brevo refuse passe en
    `invalide` ; plus d'un refus sur dix, c'est un problème chez nous ou chez
    Brevo, et le passage s'arrête sans rien marquer ;
 6. le ménage chez Brevo : les listes du soir de plus de deux jours, et les

@@ -21,8 +21,7 @@ function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], 
     creerWebhook: async (corps) => { b.appels.push(['creerWebhook', corps]); return { id: 77 }; },
     campagnes: async () => ({ campaigns: brouillons }),
     supprimerCampagne: async (id) => { b.appels.push(['supprimerCampagne', id]); },
-    contact: async (email, a) => { b.appels.push(['contact', email, a]); },
-    ajouterALaListe: async (id, emails) => { b.appels.push(['ajouterALaListe', id, emails]); return { contacts: { success: emails, failure: [] } }; },
+    contact: async (email, a, listes) => { b.appels.push(['contact', email, a, listes]); },
     creerCampagne: async (corps) => { b.appels.push(['creerCampagne', corps]); return { id: 500 + b.appels.length }; },
     envoyerEssai: async (id, emails) => { b.appels.push(['envoyerEssai', id, emails]); },
   };
@@ -96,9 +95,10 @@ test('essai : brouillons d\'avant effacés, une campagne par e-mail et par langu
   assert.deepEqual(brevo.appels.filter(([x]) => x === 'supprimerCampagne'), [['supprimerCampagne', 11]]);
   const contacts = brevo.appels.filter(([x]) => x === 'contact');
   assert.deepEqual(contacts.map(([, e]) => e), ['thomas+e1-fr-score@gmail.com', 'thomas+e1-fr-doute@gmail.com', 'thomas+e2-fr-score@gmail.com', 'thomas+e2-fr-doute@gmail.com']);
-  for (const [, , a] of contacts) {
+  for (const [, , a, listes] of contacts) {
     assert.equal(a.PARCOURS, undefined);
     assert.equal(a.SALUTATION, 'Bonjour Thomas,');
+    assert.deepEqual(listes, [4]);
   }
   assert.ok(contacts[1][2].INTRO.includes('questions sur son couple'));
   const campagnes = brevo.appels.filter(([x]) => x === 'creerCampagne').map(([, c]) => c);

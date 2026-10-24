@@ -157,7 +157,7 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
   const refuses = [];
   for (const m of retenus) {
     try {
-      await brevo.contact(m.email, attributsContact({ type, lang, angle: m.angle, prenom: m.prenom }, jour));
+      await brevo.contact(m.email, attributsContact({ type, lang, angle: m.angle, prenom: m.prenom }, jour), [liste.id]);
     } catch (e) {
       if (e.statut === 400 && /mail/i.test(e.message)) refuses.push(m);
       else throw e;
@@ -166,13 +166,21 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
       }
     }
   }
-  const echecsListe = new Set();
-  const aAjouter = retenus.filter((m) => !refuses.includes(m));
-  for (const lot of morceaux(aAjouter.map((m) => m.email), 150)) {
-    const r = await brevo.ajouterALaListe(liste.id, lot);
-    for (const e of (r && r.contacts && r.contacts.failure) || []) echecsListe.add(String(e).toLowerCase());
+  // La liste relue avant l'envoi : seuls ceux qui y sont vraiment partent.
+  // Beaucoup d'absents, c'est un problème : on arrête sans rien envoyer.
+  const dansLaListe = new Set();
+  for (let offset = 0; offset < 100000; offset += 500) {
+    const r = await brevo.membresDeLaListe(liste.id, offset);
+    const page = (r && r.contacts) || [];
+    for (const x of page) if (x && x.email) dansLaListe.add(String(x.email).toLowerCase());
+    if (page.length < 500) break;
   }
-  const partants = aAjouter.filter((m) => !echecsListe.has(m.email));
+  const aEnvoyer = retenus.filter((m) => !refuses.includes(m));
+  const partants = aEnvoyer.filter((m) => dansLaListe.has(m.email));
+  const absents = aEnvoyer.length - partants.length;
+  if (absents > Math.max(3, Math.ceil(aEnvoyer.length / 10))) {
+    throw new Error(`${type} ${lang} : ${absents} contact(s) sur ${aEnvoyer.length} absents de la liste ${liste.id}, passage arrêté`);
+  }
   const ecartes = retenus.filter((m) => !partants.includes(m));
   if (ecartes.length) {
     await supprimerLignes(base, ecartes.map((m) => ligneDe.get(m.abonne_id).id));
@@ -200,7 +208,7 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
   await brevo.envoyerMaintenant(cree.id);
   await majLignes(base, partis, { statut: 'envoye', envoye_le: new Date().toISOString() });
   await base.rpc('emails_compter', { p_type: type, p_evenement: 'envoye', p_n: partis.length });
-  journal(`${type} ${lang} : ${partis.length} envoyé(s), campagne ${cree.id}${refuses.length ? `, ${refuses.length} adresse(s) refusée(s) par Brevo` : ''}${echecsListe.size ? `, ${echecsListe.size} hors liste` : ''}.`);
+  journal(`${type} ${lang} : ${partis.length} envoyé(s), campagne ${cree.id}${refuses.length ? `, ${refuses.length} adresse(s) refusée(s) par Brevo` : ''}${absents ? `, ${absents} absente(s) de la liste` : ''}.`);
   return { envoyes: partis.length, refuses: refuses.length };
 }
 

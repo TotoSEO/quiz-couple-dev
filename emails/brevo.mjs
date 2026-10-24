@@ -68,10 +68,14 @@ export function clientBrevo(cle, { fetch: f = globalThis.fetch, pause = attendre
     listesDuDossier: (dossier, offset = 0) => appel('GET', `/contacts/folders/${enc(dossier)}/lists?limit=50&offset=${offset}`),
     creerListe: (nom, dossier) => appel('POST', '/contacts/lists', { name: nom, folderId: dossier }),
     supprimerListe: (id) => appel('DELETE', '/contacts/lists/' + enc(id)),
-    // 150 adresses au plus par appel ; la réponse dit qui est entré.
-    ajouterALaListe: (id, emails) => appel('POST', `/contacts/lists/${enc(id)}/contacts/add`, { emails }),
-    // Crée le contact ou met ses champs à jour (jamais sa liste de blocage).
-    contact: (email, attributs) => appel('POST', '/contacts', { email, attributes: attributs, updateEnabled: true }),
+    // Crée le contact ou met ses champs à jour, et le met dans `listes`
+    // (jamais sa liste de blocage). Un appel séparé d'ajout à une liste
+    // répond 400 pour un contact qui y est déjà : on n'en a pas besoin.
+    contact: (email, attributs, listes) => appel('POST', '/contacts', {
+      email, attributes: attributs, ...(listes && listes.length ? { listIds: listes } : {}), updateEnabled: true,
+    }),
+    // Les membres d'une liste, 500 par page.
+    membresDeLaListe: (id, offset = 0) => appel('GET', `/contacts/lists/${enc(id)}/contacts?limit=500&offset=${offset}`),
     contacts: ({ limite = 1000, offset = 0, modifieDepuis } = {}) => appel('GET',
       `/contacts?limit=${limite}&offset=${offset}${modifieDepuis ? '&modifiedSince=' + enc(modifieDepuis) : ''}`),
     supprimerContact: (email) => appel('DELETE', '/contacts/' + enc(email)),
