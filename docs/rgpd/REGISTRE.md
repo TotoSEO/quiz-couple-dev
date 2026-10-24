@@ -22,7 +22,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 |---|---|---|---|
 | Supabase | base de données, stockage des rapports PDF, fonctions serveur | région du projet, à vérifier (la politique dit Union européenne) | accord de sous-traitance (DPA) de Supabase |
 | Stripe Payments Europe | paiement de l'évaluation | Irlande | conditions de Stripe, DPA inclus |
-| Resend | envoi des e-mails (lien du rapport, rapport prêt, rappel, liens) ; le rapport lui-même n'y passe pas | États-Unis | clauses contractuelles types |
+| Resend | envoi des e-mails (lien du rapport, rapport prêt, rappel, reprise, liens) ; le rapport lui-même n'y passe pas | États-Unis | clauses contractuelles types |
 | Brevo (Sendinblue SAS) | envoi des e-mails aux abonnés (parcours e-mail) : adresse, prénom et langue au moment de l'envoi, effacés quand l'adresse n'est plus abonnée | France (UE) | accord de sous-traitance de Brevo |
 | GitHub (Pages) | hébergement des pages du site | États-Unis | conditions de GitHub |
 | Google (Analytics 4) | mesure d'audience, seulement avec le consentement | États-Unis | consentement via la plateforme TCF |
@@ -67,9 +67,9 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 
 ### 3. Les e-mails de l'évaluation
 
-- **Finalité** : envoyer le lien personnel du rapport (le PDF n'est plus joint depuis le 22 octobre 2026), dire que le rapport est prêt, un seul rappel 24 heures après, et le lien perdu (« Recevoir mon lien », « Retrouver mon évaluation »).
+- **Finalité** : envoyer le lien personnel du rapport (le PDF n'est plus joint depuis le 22 octobre 2026), dire que le rapport est prêt, un seul rappel 24 heures après, une seule reprise 48 heures sans rien de neuf (réponses pas finies, ou l'autre qui n'a pas fini ; depuis le 24 octobre 2026), et le lien perdu (« Recevoir mon lien », « Retrouver mon évaluation »).
 - **Données** : l'adresse e-mail et les prénoms. Jamais une réponse.
-- **Base légale** : l'exécution du contrat pour le rapport et les liens. Pour le message « prêt » et le rappel : annoncés sous le champ de l'adresse, avec un lien d'arrêt.
+- **Base légale** : l'exécution du contrat pour le rapport et les liens. Pour le message « prêt », le rappel et la reprise : annoncés sous le champ de l'adresse (la reprise seulement aux adresses données sous la phrase qui l'annonce, `a_reprise`, `b_reprise`), avec un lien d'arrêt.
 - **Durée** : celle de l'évaluation.
 - **Limite** : ces adresses ne servent à rien d'autre. Le consentement donné dit « uniquement dans le but de fournir le rapport d'évaluation », elles n'entrent donc jamais dans une liste d'envoi de conseils ou de nouveautés.
 

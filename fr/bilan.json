@@ -51,7 +51,7 @@
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez les deux cases pour continuer.",
       "email": "Votre e-mail",
-      "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous prévenir quand votre rapport est prêt, avec un seul rappel s'il attend encore le lendemain.",
+      "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
       "autreDefaut": "votre partenaire"
@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invitez {{autre}}",
       "texte": "Envoyez ce lien à {{autre}}. {{autre}} répondra de son côté, sur son téléphone, sans voir vos réponses, et vous ne verrez pas les siennes avant la fin.",
+      "nouveauLien": "C'est un nouveau lien : l'ancien ne marche plus, envoyez celui-ci à {{autre}}.",
       "suite": "Pas besoin d'attendre {{autre}} : commencez vos réponses dès maintenant, chacun avance de son côté.",
       "envoyer": "Envoyer le lien",
       "copier": "Copier le lien",
@@ -597,7 +598,7 @@
       "titre": "Recevoir mon lien par e-mail",
       "placeholder": "votre@email.com",
       "bouton": "Envoyer",
-      "aide": "Pour retrouver vos réponses si vous fermez cette page ou changez de téléphone.",
+      "aide": "Pour retrouver vos réponses si vous fermez cette page ou changez de téléphone. Si vous ne finissez pas, on vous enverra un seul rappel.",
       "envoye": "C'est parti : votre lien est dans votre boîte ({{email}}). Pensez aux indésirables.",
       "faux": "Cette adresse e-mail n'a pas l'air complète.",
       "trop": "Trop d'envois pour cette évaluation. Réessayez dans une heure."

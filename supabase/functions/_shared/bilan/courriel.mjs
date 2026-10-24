@@ -173,7 +173,9 @@ function remplir(texte, valeurs) {
 // En français, l'espace avant « : ; ! ? » et après « « » est insécable : sans
 // elle, un téléphone envoie les deux-points seuls en début de ligne.
 function insec(s, lang) {
-  return lang === 'fr' ? String(s).replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : String(s);
+  // Un montant ne se sépare pas de son symbole, dans toutes les langues.
+  const x = String(s).replace(/(\d) ([€%])/g, '$1\u00a0$2');
+  return lang === 'fr' ? x.replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : x;
 }
 
 function esc(s) {
@@ -390,193 +392,540 @@ ${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;fo
   return { sujet, html, texte };
 }
 
-// « Votre rapport est prêt » (au premier qui a fini, quand le second finit)
-// et le rappel unique, 24 heures plus tard s'il n'est pas débloqué (21 octobre
-// 2026). Comme l'e-mail du rapport, rien du contenu : ni accords, ni écarts,
-// ni chiffres, seulement le prix et un lien personnel. Les variantes *Solo
-// servent quand la phrase s'adresse à une seule personne là où la langue
-// distingue (vosotros/tú, ihr/du, voi/tu).
+// « Votre rapport est prêt » (au premier qui a fini, quand le second finit),
+// le rappel unique 24 heures plus tard s'il n'est pas débloqué (21 octobre
+// 2026), et depuis le 24 octobre 2026 la reprise : une fois, 48 heures sans
+// rien de neuf, à qui n'a pas fini ses réponses (« moi ») ou, à deux, à qui
+// a fini quand l'autre traîne (« autre »). Thomas : « si la personne a
+// commencé l'évaluation mais ne l'a pas finie, un autre mail ; si elle l'a
+// finie mais pas payé, un mail convaincant : -20 %, X € par personne,
+// comparé à un prix du quotidien », puis devant les premiers essais : « Y'a
+// trop de texte ! C'est pas assez marketing avec des bullet points ».
+// D'où la maquette des e-mails du parcours (emails/gabarit.html) : les deux
+// personnages et leur bulle, un titre, une phrase, des coches courtes, le
+// ticket du prix, le bouton. Comme l'e-mail du rapport, rien du contenu :
+// ni accords, ni écarts, ni chiffres du rapport, seulement ce qu'il contient
+// en général, le prix et un lien personnel. Les variantes *Solo servent
+// quand la phrase s'adresse à une seule personne là où la langue distingue
+// (vosotros/tú, ihr/du, voi/tu).
 const TEXTES_RAPPEL = {
   fr: {
+    bonjour: 'Bonjour {moi} !',
+    alt: 'Les mascottes de Quiz Couple vous font coucou',
+    signature: ['À très vite,', 'Thomas, de Quiz Couple'],
+    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com.',
+    arret: 'Ne plus recevoir de message sur cette évaluation',
+    conseiller: 'Pour comparer : une séance chez un conseiller conjugal coûte entre 50 et 90 €.',
+    chacun: 'Soit {prixChacun} chacun : moins qu\'une place de ciné',
+    ticketSolo: 'En une seule fois, sans abonnement',
+    ticketSoloPromo: '−{pourcent} % en ce moment, appliqué automatiquement',
+    puces: ['**Vos accords et vos écarts**, réponse contre réponse', '**Les sujets décisifs** pour votre couple', '**Vos 4 prochaines conversations**, avec de quoi les commencer', '**En PDF**, et en ligne pendant six mois'],
+    pucesSolo: ['**Ce qui vous rapproche**, et vos écarts', '**Ce que vous imaginez de {autre}**, face à vos réponses', '**Vos zones d\'ombre**, et par où commencer', '**En PDF**, et en ligne pendant six mois'],
     sujetPret: '{autre} a fini : votre rapport est prêt',
     avantPret: 'Il ne reste qu\'à le débloquer, pour vous deux.',
     titrePret: 'Votre rapport est prêt',
-    p1Pret: 'Bonjour {moi}, {autre} vient de finir ses réponses. Vos deux séries de réponses sont maintenant comparées, question par question, et votre rapport vous attend.',
+    p1Pret: '{autre} vient de finir ses réponses : vos deux séries sont comparées, question par question.',
     sujetRelance: 'Votre rapport vous attend toujours',
+    sujetRelancePromo: 'Votre rapport vous attend, à −{pourcent} % en ce moment',
     avantRelance: 'Vos réponses sont gardées, le rapport n\'attend plus que vous.',
     titreRelance: 'Votre rapport vous attend',
-    p1Relance: 'Bonjour {moi}, vos réponses et celles de {autre} ont été comparées, et votre rapport n\'est pas encore débloqué.',
-    p1RelanceSolo: 'Bonjour {moi}, vous avez répondu aux cent questions, et votre rapport n\'est pas encore débloqué.',
-    contenu: 'Vous y trouverez vos accords, chacun de vos écarts avec vos deux réponses côte à côte, ce qu\'il vaut mieux savoir avant d\'en parler, et vos quatre prochaines conversations.',
-    contenuSolo: 'Vous y trouverez ce qui vous rapproche, les écarts entre vos réponses et ce que vous imaginez de {autre}, vos zones d\'ombre et par où commencer.',
-    prix: 'Le rapport complet coûte {prix} pour vous deux, en une seule fois.',
-    prixSolo: 'Le rapport complet coûte {prix}, en une seule fois.',
-    prixPromo: 'En ce moment, le rapport complet coûte {prix} au lieu de {prixBase}, pour vous deux, en une seule fois.',
-    prixPromoSolo: 'En ce moment, le rapport complet coûte {prix} au lieu de {prixBase}, en une seule fois.',
+    p1Relance: 'Vos réponses et celles de {autre} sont comparées. Il ne reste qu\'à ouvrir le rapport.',
+    p1RelanceSolo: 'Vous avez répondu aux cent questions. Il ne reste qu\'à ouvrir le rapport.',
+    citation: 'Peu de couples prennent un jour le temps de faire ce point : vous venez de le faire, il ne reste qu\'à lire le résultat.',
+    citationSolo: 'Peu de gens prennent un jour le temps de faire ce point sur leur couple : vous venez de le faire, il ne reste qu\'à lire le résultat.',
     bouton: 'Voir notre rapport',
     boutonSolo: 'Voir mon rapport',
     seul: 'C\'est le seul rappel que nous vous enverrons.',
-    pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com.',
-    arret: 'Ne plus recevoir de message sur cette évaluation',
+    sujetRepriseMoi: 'Votre évaluation vous attend',
+    avantRepriseMoi: 'Vos réponses sont gardées : vous reprenez là où vous en étiez.',
+    titreRepriseMoi: 'Votre évaluation vous attend',
+    p1RepriseMoi: 'Vous avez répondu à {repondu} questions sur {total}. Vos réponses sont gardées : vous reprenez là où vous en étiez.',
+    p1RepriseDebut: 'Vos cent questions vous attendent : vous pouvez commencer quand vous voulez, à votre rythme.',
+    temps: '**Environ {minutes} minutes** pour finir',
+    autreFini: '**{autre} a déjà fini** : le rapport n\'attend plus que vous',
+    autreEnCours: '**{autre} répond de son côté**, sans voir vos réponses',
+    rienAutre: '**Rien n\'est envoyé à {autre}** : vos réponses restent à vous',
+    gratuit: '**Les questions sont gratuites** : vous ne payez qu\'à la fin, si vous voulez le rapport',
+    boutonRepriseMoi: 'Reprendre mes réponses',
+    boutonRepriseDebut: 'Commencer mes réponses',
+    seulRepriseMoi: 'C\'est le seul rappel que nous vous enverrons pour finir.',
+    sujetRepriseAutre: '{autre} n\'a pas encore fini ses réponses',
+    sujetRepriseInvite: '{autre} n\'a pas encore ouvert l\'invitation',
+    avantRepriseAutre: 'Votre rapport sera prêt dès que {autre} aura fini. Un petit rappel ?',
+    titreRepriseAutre: 'Il ne manque plus que {autre}',
+    p1RepriseAutre: 'Vos réponses sont enregistrées. {autre} en est à {repondu} questions sur {total}.',
+    p1RepriseInvite: 'Vos réponses sont enregistrées, mais {autre} n\'a pas encore ouvert l\'invitation.',
+    unMessage: '**Un petit message suffit** : {autre} reprend sur son téléphone, là où ses réponses s\'étaient arrêtées',
+    renvoyer: '**Renvoyez l\'invitation** depuis votre page, en un geste',
+    pretDeux: '**Le rapport est prêt** dès que vous avez fini tous les deux',
+    onEcrit: '**On vous écrit** à ce moment-là',
+    boutonRepriseAutre: 'Envoyer un rappel à {autre}',
+    boutonRepriseInvite: 'Renvoyer l\'invitation',
+    seulRepriseAutre: 'C\'est le seul message que nous vous enverrons à ce sujet.',
   },
   en: {
+    bonjour: 'Hi {moi}!',
+    alt: 'The Quiz Couple mascots waving hello',
+    signature: ['Talk soon,', 'Thomas, from Quiz Couple'],
+    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com.',
+    arret: 'Stop emails about this assessment',
+    conseiller: 'For comparison: a session with a relationship counsellor costs between £50 and £90.',
+    chacun: 'That\'s {prixChacun} each: less than a cinema ticket',
+    ticketSolo: 'In a single payment, no subscription',
+    ticketSoloPromo: '{pourcent}% off right now, applied automatically',
+    puces: ['**Where you agree and where you don\'t**, answer by answer', '**The non-negotiables** for your relationship', '**Your next 4 conversations**, with ways to start them', '**As a PDF**, and online for six months'],
+    pucesSolo: ['**What brings you together**, and where you differ', '**What you imagine {autre} would say**, next to your answers', '**Your blind spots**, and where to start', '**As a PDF**, and online for six months'],
     sujetPret: '{autre} has finished: your report is ready',
     avantPret: 'All that\'s left is to unlock it, for both of you.',
     titrePret: 'Your report is ready',
-    p1Pret: 'Hi {moi}, {autre} has just finished answering. Your two sets of answers have now been compared, question by question, and your report is waiting for you.',
+    p1Pret: '{autre} has just finished answering: your two sets of answers have been compared, question by question.',
     sujetRelance: 'Your report is still waiting for you',
+    sujetRelancePromo: 'Your report is waiting, {pourcent}% off right now',
     avantRelance: 'Your answers are saved, the report is just waiting for you.',
     titreRelance: 'Your report is waiting',
-    p1Relance: 'Hi {moi}, your answers and {autre}\'s have been compared, and your report hasn\'t been unlocked yet.',
-    p1RelanceSolo: 'Hi {moi}, you answered the hundred questions, and your report hasn\'t been unlocked yet.',
-    contenu: 'Inside you\'ll find where you agree, every difference with both your answers side by side, what\'s worth knowing before you talk about it, and your next four conversations.',
-    contenuSolo: 'Inside you\'ll find what brings you together, the gaps between your answers and what you imagine {autre} would say, your blind spots and where to start.',
-    prix: 'The full report costs {prix} for both of you, in a single payment.',
-    prixSolo: 'The full report costs {prix}, in a single payment.',
-    prixPromo: 'Right now, the full report costs {prix} instead of {prixBase} for both of you, in a single payment.',
-    prixPromoSolo: 'Right now, the full report costs {prix} instead of {prixBase}, in a single payment.',
+    p1Relance: 'Your answers and {autre}\'s have been compared. All that\'s left is to open the report.',
+    p1RelanceSolo: 'You answered the hundred questions. All that\'s left is to open the report.',
+    citation: 'Few couples ever take the time to do this: you just did, and all that\'s left is to read what it says.',
+    citationSolo: 'Few people ever take the time to look at their relationship this closely: you just did, and all that\'s left is to read what it says.',
     bouton: 'See our report',
     boutonSolo: 'See my report',
     seul: 'This is the only reminder we\'ll send you.',
-    pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com.',
-    arret: 'Stop emails about this assessment',
+    sujetRepriseMoi: 'Your assessment is waiting for you',
+    avantRepriseMoi: 'Your answers are saved: you pick up right where you left off.',
+    titreRepriseMoi: 'Your assessment is waiting',
+    p1RepriseMoi: 'You have answered {repondu} questions out of {total}. Your answers are saved: you pick up right where you left off.',
+    p1RepriseDebut: 'Your hundred questions are waiting: start whenever you like, at your own pace.',
+    temps: '**About {minutes} minutes** to finish',
+    autreFini: '**{autre} has already finished**: the report is only waiting for you',
+    autreEnCours: '**{autre} answers separately**, without seeing your answers',
+    rienAutre: '**Nothing is sent to {autre}**: your answers stay yours',
+    gratuit: '**The questions are free**: you only pay at the end, if you want the report',
+    boutonRepriseMoi: 'Continue my answers',
+    boutonRepriseDebut: 'Start my answers',
+    seulRepriseMoi: 'This is the only reminder we\'ll send you about finishing.',
+    sujetRepriseAutre: '{autre} hasn\'t finished answering yet',
+    sujetRepriseInvite: '{autre} hasn\'t opened the invitation yet',
+    avantRepriseAutre: 'Your report will be ready as soon as {autre} has finished. A little reminder?',
+    titreRepriseAutre: 'Only {autre} left',
+    p1RepriseAutre: 'Your answers are saved. {autre} is at {repondu} questions out of {total}.',
+    p1RepriseInvite: 'Your answers are saved, but {autre} hasn\'t opened the invitation yet.',
+    unMessage: '**A quick message is enough**: {autre} picks up on their phone, right where they stopped',
+    renvoyer: '**Send the invitation again** from your page, in one tap',
+    pretDeux: '**The report is ready** as soon as you have both finished',
+    onEcrit: '**We\'ll email you** when it is',
+    boutonRepriseAutre: 'Send {autre} a reminder',
+    boutonRepriseInvite: 'Send the invitation again',
+    seulRepriseAutre: 'This is the only email we\'ll send you about this.',
   },
   es: {
+    bonjour: '¡Hola, {moi}!',
+    alt: 'Las mascotas de Quiz Couple te saludan',
+    signature: ['¡Hasta pronto!', 'Thomas, de Quiz Couple'],
+    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com.',
+    arret: 'No recibir más mensajes sobre esta evaluación',
+    conseiller: 'Para comparar: una sesión con un consejero de pareja cuesta entre 50 y 90 €.',
+    chacun: 'Es decir, {prixChacun} cada uno: menos que una entrada de cine',
+    ticketSolo: 'En un solo pago, sin suscripción',
+    ticketSoloPromo: '−{pourcent} % ahora mismo, aplicado automáticamente',
+    puces: ['**En qué estáis de acuerdo y en qué no**, respuesta por respuesta', '**Los temas decisivos** para vuestra pareja', '**Vuestras 4 próximas conversaciones**, con ideas para empezarlas', '**En PDF**, y en línea durante seis meses'],
+    pucesSolo: ['**Lo que os une**, y vuestras diferencias', '**Lo que imaginas que diría {autre}**, junto a tus respuestas', '**Tus zonas de sombra**, y por dónde empezar', '**En PDF**, y en línea durante seis meses'],
     sujetPret: '{autre} ha terminado: vuestro informe está listo',
     avantPret: 'Solo falta desbloquearlo, para los dos.',
     titrePret: 'Vuestro informe está listo',
-    p1Pret: 'Hola, {moi}: {autre} acaba de terminar sus respuestas. Vuestras dos series de respuestas ya están comparadas, pregunta por pregunta, y vuestro informe os espera.',
+    p1Pret: '{autre} acaba de terminar sus respuestas: vuestras dos series están comparadas, pregunta por pregunta.',
     sujetRelance: 'Vuestro informe sigue esperándoos',
     sujetRelanceSolo: 'Tu informe sigue esperándote',
+    sujetRelancePromo: 'Vuestro informe os espera, con un −{pourcent} % ahora mismo',
+    sujetRelancePromoSolo: 'Tu informe te espera, con un −{pourcent} % ahora mismo',
     avantRelance: 'Vuestras respuestas están guardadas, el informe solo espera a que lo abráis.',
     avantRelanceSolo: 'Tus respuestas están guardadas, el informe solo espera a que lo abras.',
     titreRelance: 'Vuestro informe os espera',
     titreRelanceSolo: 'Tu informe te espera',
-    p1Relance: 'Hola, {moi}: tus respuestas y las de {autre} ya están comparadas, y vuestro informe todavía no está desbloqueado.',
-    p1RelanceSolo: 'Hola, {moi}: respondiste a las cien preguntas y tu informe todavía no está desbloqueado.',
-    contenu: 'Encontraréis en qué estáis de acuerdo, cada una de vuestras diferencias con las dos respuestas lado a lado, lo que conviene saber antes de hablarlo y vuestras cuatro próximas conversaciones.',
-    contenuSolo: 'Encontrarás lo que os une, las diferencias entre tus respuestas y lo que imaginas que diría {autre}, tus zonas de sombra y por dónde empezar.',
-    prix: 'El informe completo cuesta {prix} para los dos, en un solo pago.',
-    prixSolo: 'El informe completo cuesta {prix}, en un solo pago.',
-    prixPromo: 'Ahora mismo, el informe completo cuesta {prix} en lugar de {prixBase}, para los dos, en un solo pago.',
-    prixPromoSolo: 'Ahora mismo, el informe completo cuesta {prix} en lugar de {prixBase}, en un solo pago.',
+    p1Relance: 'Tus respuestas y las de {autre} ya están comparadas. Solo falta abrir el informe.',
+    p1RelanceSolo: 'Respondiste a las cien preguntas. Solo falta abrir el informe.',
+    citation: 'Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado.',
+    citationSolo: 'Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.',
     bouton: 'Ver nuestro informe',
     boutonSolo: 'Ver mi informe',
     seul: 'Es el único recordatorio que te enviaremos.',
-    pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com.',
-    arret: 'No recibir más mensajes sobre esta evaluación',
+    sujetRepriseMoi: 'Tu evaluación te espera',
+    avantRepriseMoi: 'Tus respuestas están guardadas: sigues justo donde lo dejaste.',
+    titreRepriseMoi: 'Tu evaluación te espera',
+    p1RepriseMoi: 'Has respondido a {repondu} preguntas de {total}. Tus respuestas están guardadas: sigues justo donde lo dejaste.',
+    p1RepriseDebut: 'Tus cien preguntas te esperan: puedes empezar cuando quieras, a tu ritmo.',
+    temps: '**Unos {minutes} minutos** para terminar',
+    autreFini: '**{autre} ya ha terminado**: el informe solo te espera a ti',
+    autreEnCours: '**{autre} responde por su lado**, sin ver tus respuestas',
+    rienAutre: '**No se envía nada a {autre}**: tus respuestas son solo tuyas',
+    gratuit: '**Las preguntas son gratis**: solo pagas al final, si quieres el informe',
+    boutonRepriseMoi: 'Seguir con mis respuestas',
+    boutonRepriseDebut: 'Empezar mis respuestas',
+    seulRepriseMoi: 'Es el único recordatorio que te enviaremos para terminar.',
+    sujetRepriseAutre: '{autre} todavía no ha terminado sus respuestas',
+    sujetRepriseInvite: '{autre} todavía no ha abierto la invitación',
+    avantRepriseAutre: 'Vuestro informe estará listo en cuanto {autre} termine. ¿Un pequeño recordatorio?',
+    titreRepriseAutre: 'Solo falta {autre}',
+    p1RepriseAutre: 'Tus respuestas están guardadas. {autre} lleva {repondu} preguntas de {total}.',
+    p1RepriseInvite: 'Tus respuestas están guardadas, pero {autre} todavía no ha abierto la invitación.',
+    unMessage: '**Basta con un mensaje**: {autre} sigue en su móvil, justo donde se quedó',
+    renvoyer: '**Reenvía la invitación** desde tu página, en un gesto',
+    pretDeux: '**El informe está listo** en cuanto hayáis terminado los dos',
+    onEcrit: '**Te escribimos** en ese momento',
+    boutonRepriseAutre: 'Enviar un recordatorio a {autre}',
+    boutonRepriseInvite: 'Reenviar la invitación',
+    seulRepriseAutre: 'Es el único mensaje que te enviaremos sobre esto.',
   },
   de: {
+    bonjour: 'Hallo {moi}!',
+    alt: 'Die Maskottchen von Quiz Couple winken dir zu',
+    signature: ['Bis bald,', 'Thomas von Quiz Couple'],
+    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde.',
+    arret: 'Keine Nachrichten mehr zu dieser Analyse',
+    conseiller: 'Zum Vergleich: Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €.',
+    chacun: 'Also {prixChacun} pro Person: weniger als eine Kinokarte',
+    ticketSolo: 'Einmalig, ohne Abo',
+    ticketSoloPromo: 'Gerade −{pourcent} %, automatisch abgezogen',
+    puces: ['**Worin ihr euch einig seid und worin nicht**, Antwort für Antwort', '**Die entscheidenden Themen** für eure Beziehung', '**Eure nächsten 4 Gespräche**, mit Ideen für den Einstieg', '**Als PDF**, und sechs Monate lang online'],
+    pucesSolo: ['**Was euch verbindet**, und wo ihr verschieden seid', '**Was du von {autre} erwartest**, neben deinen Antworten', '**Deine blinden Flecken**, und womit du anfangen kannst', '**Als PDF**, und sechs Monate lang online'],
     sujetPret: '{autre} ist fertig: euer Bericht ist bereit',
     avantPret: 'Jetzt müsst ihr ihn nur noch freischalten.',
     titrePret: 'Euer Bericht ist bereit',
-    p1Pret: 'Hallo {moi}, {autre} hat gerade alle Fragen beantwortet. Eure beiden Antworten sind jetzt Frage für Frage verglichen, und euer Bericht wartet auf euch.',
+    p1Pret: '{autre} hat gerade alle Fragen beantwortet: Eure beiden Antworten sind Frage für Frage verglichen.',
     sujetRelance: 'Euer Bericht wartet noch auf euch',
     sujetRelanceSolo: 'Dein Bericht wartet noch auf dich',
+    sujetRelancePromo: 'Euer Bericht wartet, gerade mit −{pourcent} %',
+    sujetRelancePromoSolo: 'Dein Bericht wartet, gerade mit −{pourcent} %',
     avantRelance: 'Eure Antworten sind gespeichert, der Bericht wartet nur noch auf euch.',
     avantRelanceSolo: 'Deine Antworten sind gespeichert, der Bericht wartet nur noch auf dich.',
     titreRelance: 'Euer Bericht wartet',
     titreRelanceSolo: 'Dein Bericht wartet',
-    p1Relance: 'Hallo {moi}, deine Antworten und die von {autre} sind verglichen, und euer Bericht ist noch nicht freigeschaltet.',
-    p1RelanceSolo: 'Hallo {moi}, du hast die hundert Fragen beantwortet, und dein Bericht ist noch nicht freigeschaltet.',
-    contenu: 'Darin findet ihr, worin ihr euch einig seid, jeden eurer Unterschiede mit beiden Antworten nebeneinander, was ihr wissen solltet, bevor ihr darüber redet, und eure nächsten vier Gespräche.',
-    contenuSolo: 'Darin findest du, was euch verbindet, die Unterschiede zwischen deinen Antworten und dem, was du von {autre} erwartest, deine blinden Flecken und womit du anfangen kannst.',
-    prix: 'Der vollständige Bericht kostet {prix} für euch beide, einmalig.',
-    prixSolo: 'Der vollständige Bericht kostet {prix}, einmalig.',
-    prixPromo: 'Gerade kostet der vollständige Bericht {prix} statt {prixBase} für euch beide, einmalig.',
-    prixPromoSolo: 'Gerade kostet der vollständige Bericht {prix} statt {prixBase}, einmalig.',
+    p1Relance: 'Deine Antworten und die von {autre} sind verglichen. Jetzt fehlt nur noch, den Bericht zu öffnen.',
+    p1RelanceSolo: 'Du hast die hundert Fragen beantwortet. Jetzt fehlt nur noch, den Bericht zu öffnen.',
+    citation: 'Kaum ein Paar nimmt sich je die Zeit dafür, ihr habt es getan.',
+    citationSolo: 'Kaum jemand nimmt sich je die Zeit dafür, du hast es getan.',
     bouton: 'Unseren Bericht ansehen',
     boutonSolo: 'Meinen Bericht ansehen',
     seul: 'Das ist die einzige Erinnerung, die wir dir schicken.',
-    pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde.',
-    arret: 'Keine Nachrichten mehr zu dieser Analyse',
+    sujetRepriseMoi: 'Deine Analyse wartet auf dich',
+    avantRepriseMoi: 'Deine Antworten sind gespeichert: Du machst genau da weiter, wo du aufgehört hast.',
+    titreRepriseMoi: 'Deine Analyse wartet',
+    p1RepriseMoi: 'Du hast {repondu} von {total} Fragen beantwortet. Deine Antworten sind gespeichert: Du machst genau da weiter, wo du aufgehört hast.',
+    p1RepriseDebut: 'Deine hundert Fragen warten auf dich: Fang an, wann du willst, in deinem Tempo.',
+    temps: '**Etwa {minutes} Minuten** bis zum Ende',
+    autreFini: '**{autre} ist schon fertig**: Der Bericht wartet nur noch auf dich',
+    autreEnCours: '**{autre} antwortet für sich**, ohne deine Antworten zu sehen',
+    rienAutre: '**{autre} bekommt nichts**: Deine Antworten bleiben bei dir',
+    gratuit: '**Die Fragen sind kostenlos**: Du zahlst erst am Ende, wenn du den Bericht willst',
+    boutonRepriseMoi: 'Weiter antworten',
+    boutonRepriseDebut: 'Mit den Antworten beginnen',
+    seulRepriseMoi: 'Das ist die einzige Erinnerung, die wir dir dazu schicken.',
+    sujetRepriseAutre: '{autre} ist mit den Antworten noch nicht fertig',
+    sujetRepriseInvite: '{autre} hat die Einladung noch nicht geöffnet',
+    avantRepriseAutre: 'Euer Bericht ist bereit, sobald {autre} fertig ist. Eine kleine Erinnerung?',
+    titreRepriseAutre: 'Jetzt fehlt nur noch {autre}',
+    p1RepriseAutre: 'Deine Antworten sind gespeichert. {autre} ist bei {repondu} von {total} Fragen.',
+    p1RepriseInvite: 'Deine Antworten sind gespeichert, aber {autre} hat die Einladung noch nicht geöffnet.',
+    unMessage: '**Eine kurze Nachricht reicht**: {autre} macht auf dem Handy einfach weiter',
+    renvoyer: '**Schick die Einladung noch einmal**, mit einem Tipp auf deiner Seite',
+    pretDeux: '**Der Bericht ist bereit**, sobald ihr beide fertig seid',
+    onEcrit: '**Wir schreiben dir**, sobald es so weit ist',
+    boutonRepriseAutre: '{autre} erinnern',
+    boutonRepriseInvite: 'Einladung noch einmal senden',
+    seulRepriseAutre: 'Das ist die einzige Nachricht, die wir dir dazu schicken.',
   },
   it: {
+    bonjour: 'Ciao {moi}!',
+    alt: 'Le mascotte di Quiz Couple ti salutano',
+    signature: ['A presto,', 'Thomas, di Quiz Couple'],
+    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com.',
+    arret: 'Non ricevere più messaggi su questa valutazione',
+    conseiller: 'Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €.',
+    chacun: 'Cioè {prixChacun} a testa: meno di un biglietto del cinema',
+    ticketSolo: 'In un solo pagamento, senza abbonamento',
+    ticketSoloPromo: '−{pourcent} % in questo momento, applicato automaticamente',
+    puces: ['**Su cosa siete d\'accordo e su cosa no**, risposta per risposta', '**I temi decisivi** per la vostra coppia', '**Le vostre prossime 4 conversazioni**, con spunti per cominciare', '**In PDF**, e online per sei mesi'],
+    pucesSolo: ['**Cosa vi unisce**, e dove siete diversi', '**Cosa immagini direbbe {autre}**, accanto alle tue risposte', '**Le tue zone d\'ombra**, e da dove cominciare', '**In PDF**, e online per sei mesi'],
     sujetPret: '{autre} ha finito: il vostro report è pronto',
     avantPret: 'Ora resta solo da sbloccarlo, per tutti e due.',
     titrePret: 'Il vostro report è pronto',
-    p1Pret: 'Ciao {moi}, {autre} ha appena finito di rispondere. Le vostre due serie di risposte sono state confrontate, domanda per domanda, e il vostro report vi aspetta.',
+    p1Pret: '{autre} ha appena finito di rispondere: le vostre due serie di risposte sono confrontate, domanda per domanda.',
     sujetRelance: 'Il vostro report vi aspetta ancora',
     sujetRelanceSolo: 'Il tuo report ti aspetta ancora',
+    sujetRelancePromo: 'Il vostro report vi aspetta, con il −{pourcent} % in questo momento',
+    sujetRelancePromoSolo: 'Il tuo report ti aspetta, con il −{pourcent} % in questo momento',
     avantRelance: 'Le vostre risposte sono salvate, il report aspetta solo voi.',
     avantRelanceSolo: 'Le tue risposte sono salvate, il report aspetta solo te.',
     titreRelance: 'Il vostro report vi aspetta',
     titreRelanceSolo: 'Il tuo report ti aspetta',
-    p1Relance: 'Ciao {moi}, le tue risposte e quelle di {autre} sono state confrontate, e il vostro report non è ancora sbloccato.',
-    p1RelanceSolo: 'Ciao {moi}, hai risposto alle cento domande, e il tuo report non è ancora sbloccato.',
-    contenu: 'Dentro troverete su cosa siete d\'accordo, ogni vostra differenza con le due risposte fianco a fianco, quello che è meglio sapere prima di parlarne e le vostre prossime quattro conversazioni.',
-    contenuSolo: 'Dentro troverai cosa vi unisce, le differenze tra le tue risposte e quello che immagini direbbe {autre}, le tue zone d\'ombra e da dove cominciare.',
-    prix: 'Il report completo costa {prix} per tutti e due, in un solo pagamento.',
-    prixSolo: 'Il report completo costa {prix}, in un solo pagamento.',
-    prixPromo: 'In questo momento, il report completo costa {prix} invece di {prixBase}, per tutti e due, in un solo pagamento.',
-    prixPromoSolo: 'In questo momento, il report completo costa {prix} invece di {prixBase}, in un solo pagamento.',
+    p1Relance: 'Le tue risposte e quelle di {autre} sono confrontate. Resta solo da aprire il report.',
+    p1RelanceSolo: 'Hai risposto alle cento domande. Resta solo da aprire il report.',
+    citation: 'Poche coppie si prendono mai il tempo di fare questo punto: voi l\'avete appena fatto, resta solo da leggere il risultato.',
+    citationSolo: 'Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l\'hai appena fatto, resta solo da leggere il risultato.',
     bouton: 'Vedere il nostro report',
     boutonSolo: 'Vedere il mio report',
     seul: 'È l\'unico promemoria che ti invieremo.',
-    pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com.',
-    arret: 'Non ricevere più messaggi su questa valutazione',
+    sujetRepriseMoi: 'La tua valutazione ti aspetta',
+    avantRepriseMoi: 'Le tue risposte sono salvate: riprendi da dove avevi lasciato.',
+    titreRepriseMoi: 'La tua valutazione ti aspetta',
+    p1RepriseMoi: 'Hai risposto a {repondu} domande su {total}. Le tue risposte sono salvate: riprendi da dove avevi lasciato.',
+    p1RepriseDebut: 'Le tue cento domande ti aspettano: puoi cominciare quando vuoi, con i tuoi tempi.',
+    temps: '**Circa {minutes} minuti** per finire',
+    autreFini: '**{autre} ha già finito**: il report aspetta solo te',
+    autreEnCours: '**{autre} risponde per conto suo**, senza vedere le tue risposte',
+    rienAutre: '**A {autre} non arriva niente**: le tue risposte restano tue',
+    gratuit: '**Le domande sono gratuite**: paghi solo alla fine, se vuoi il report',
+    boutonRepriseMoi: 'Riprendere le mie risposte',
+    boutonRepriseDebut: 'Cominciare le mie risposte',
+    seulRepriseMoi: 'È l\'unico promemoria che ti invieremo per finire.',
+    sujetRepriseAutre: '{autre} non ha ancora finito di rispondere',
+    sujetRepriseInvite: '{autre} non ha ancora aperto l\'invito',
+    avantRepriseAutre: 'Il vostro report sarà pronto appena {autre} avrà finito. Un piccolo promemoria?',
+    titreRepriseAutre: 'Manca solo {autre}',
+    p1RepriseAutre: 'Le tue risposte sono salvate. {autre} è a {repondu} domande su {total}.',
+    p1RepriseInvite: 'Le tue risposte sono salvate, ma {autre} non ha ancora aperto l\'invito.',
+    unMessage: '**Basta un messaggio**: {autre} riprende sul suo telefono, da dove aveva lasciato',
+    renvoyer: '**Rimanda l\'invito** dalla tua pagina, con un tocco',
+    pretDeux: '**Il report è pronto** appena avete finito tutti e due',
+    onEcrit: '**Ti scriviamo** in quel momento',
+    boutonRepriseAutre: 'Mandare un promemoria a {autre}',
+    boutonRepriseInvite: 'Rimandare l\'invito',
+    seulRepriseAutre: 'È l\'unico messaggio che ti invieremo su questo.',
   },
 };
 
 // 7,92 € dans la langue du message (centimes en entrée).
 export function prixEcrit(centimes, lang) {
   const loc = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
-  return new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR' }).format((Number(centimes) || 0) / 100);
+  return new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR' }).format((Number(centimes) || 0) / 100)
+    .replace(/[\u202f\u00a0 ]/g, '\u00a0');
 }
 
-function messageRappel(quoi, { lang, mode, moi, autre, url, arret, prix, prixBase, promo }) {
+// La durée qu'il reste, comptée comme la page de vente (« 25 à 30 minutes »
+// pour cent questions), arrondie à cinq minutes ; une évaluation seul(e)
+// demande deux réponses par question.
+export function minutesRestantes(reste, solo) {
+  const m = Math.max(0, Number(reste) || 0) * (solo ? 0.5 : 0.3);
+  return Math.max(5, Math.round(m / 5) * 5);
+}
+
+// Les couleurs et les polices de la maquette (emails/gabarit.html).
+const M = {
+  encre: '#2b1722', violet: '#6834b2', rose: '#b12559', rosePale: '#fae6ec', roseVif: '#e06c92',
+  doux: '#785e6c', fond: '#fcf6f3', blanc: '#fffffe', bord: '#f0e0e6', bouton: '#804db3', lavande: '#ede6f4',
+  police: '-apple-system,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif',
+  ronde: 'ui-rounded,-apple-system,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif',
+};
+const SITE_IMAGES = SITE + '/email/';
+
+// Après échappement : **gras**.
+const gras = (s, lang) => esc(insec(s, lang)).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const sansGras = (s) => String(s).replace(/\*\*/g, '');
+
+// La vague entre l'en-tête rose et la carte blanche (huit demi-cercles).
+const VAGUE = (() => {
+  const haut = `<td width="12.500%" bgcolor="${M.blanc}" style="background-color:${M.blanc};"><div style="height:12px;background-color:${M.rosePale};"><div style="height:12px;background-color:${M.blanc};border-radius:12px 12px 0 0;border-radius:50% 50% 0 0/100% 100% 0 0;">&#8202;</div></div><div style="height:12px;">&#8202;</div></td>`;
+  const bas = `<td width="12.500%" bgcolor="${M.rosePale}" style="background-color:${M.rosePale};"><div style="height:12px;">&#8202;</div><div style="height:12px;background-color:${M.blanc};"><div style="height:12px;background-color:${M.rosePale};border-radius:0 0 12px 12px;border-radius:0 0 50% 50%/0 0 100% 100%;">&#8202;</div></div></td>`;
+  return `<!--[if !mso]><!--><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;font-size:0;line-height:0;"><tr>${(haut + bas).repeat(4)}</tr></table><!--<![endif]-->`;
+})();
+
+// Le cadre des e-mails de l'évaluation : la carte de la maquette, sans les
+// encarts « À voir aussi » ni Instagram (ce sont des messages sur une
+// évaluation en cours, pas des nouvelles du site).
+function cadre({ lang, sujet, avant, bonjour, alt, titre, phrase, barre, puces, citation, ticket, bouton, url, note, seul, signature, pied, arret, arretUrl }) {
+  const px = 'padding-left:40px;padding-right:40px;';
+  const liste = puces && puces.length ? `<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:4px 0 6px;">${puces.map((x) =>
+    `<tr><td width="34" valign="top" style="width:34px;padding:1px 0 12px;"><div style="width:24px;height:24px;border-radius:12px;background-color:${M.rosePale};color:${M.rose};font-family:${M.police};font-size:14px;line-height:24px;font-weight:800;text-align:center;">&#10003;</div></td>` +
+    `<td valign="top" style="padding:0 0 12px;font-family:${M.police};font-size:17px;line-height:25px;color:${M.encre};">${gras(x, lang)}</td></tr>`).join('')}</table>` : '';
+  const jauge = barre ? `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:2px 0 18px;"><tr>` +
+    `<td width="${barre.pct}%" height="12" bgcolor="${M.bouton}" style="width:${barre.pct}%;height:12px;background-color:${M.bouton};border-radius:6px 0 0 6px;font-size:0;line-height:0;">&#8202;</td>` +
+    `<td height="12" bgcolor="${M.lavande}" style="height:12px;background-color:${M.lavande};border-radius:0 6px 6px 0;font-size:0;line-height:0;">&#8202;</td>` +
+    `<td width="64" align="right" style="width:64px;padding-left:10px;font-family:${M.ronde};font-size:15px;line-height:18px;font-weight:800;color:${M.violet};white-space:nowrap;">${esc(barre.texte)}</td></tr></table>` : '';
+  const cite = citation ? `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:6px 0 4px;"><tr><td style="border-left:4px solid ${M.roseVif};padding:4px 0 4px 16px;font-family:${M.police};font-size:16px;line-height:24px;font-style:italic;color:${M.encre};">${esc(insec(citation, lang))}</td></tr></table>` : '';
+  const prix = ticket ? `<tr><td class="px" style="padding:20px 40px 4px;">
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+<td width="12" valign="middle" bgcolor="${M.roseVif}" style="width:12px;background-color:${M.roseVif};border-radius:18px 0 0 18px;"><!--[if !mso]><!--><div style="width:12px;height:24px;background-color:${M.blanc};border-radius:0 12px 12px 0;font-size:0;line-height:0;">&#8202;</div><!--<![endif]--></td>
+<td width="42%" align="center" valign="middle" bgcolor="${M.roseVif}" style="background-color:${M.roseVif};padding:16px 8px 16px 2px;font-family:${M.ronde};">${ticket.barre ? `<div style="font-size:16px;line-height:20px;font-weight:700;color:#2a1e36;text-decoration:line-through;">${esc(ticket.barre)}</div>` : ''}<div class="prix-big" style="font-size:38px;line-height:44px;font-weight:800;letter-spacing:-0.5px;color:#2a1e36;">${esc(ticket.prix)}</div></td>
+<td valign="middle" bgcolor="${M.rosePale}" style="background-color:${M.rosePale};border-left:3px dashed ${M.blanc};padding:16px 14px 16px 18px;font-family:${M.police};font-size:15px;line-height:21px;font-weight:700;color:${M.encre};">${esc(insec(ticket.phrase, lang))}</td>
+<td width="12" valign="middle" bgcolor="${M.rosePale}" style="width:12px;background-color:${M.rosePale};border-radius:0 18px 18px 0;"><!--[if !mso]><!--><div style="width:12px;height:24px;background-color:${M.blanc};border-radius:12px 0 0 12px;font-size:0;line-height:0;">&#8202;</div><!--<![endif]--></td>
+</tr></table></td></tr>` : '';
+  const html = `<!DOCTYPE html>
+<html lang="${esc(lang)}" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>${esc(sujet)}</title>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark;}
+body{margin:0;padding:0;width:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+img{border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}
+a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important;}
+@media screen and (max-width:620px){
+.page-pad{padding:14px 8px 28px!important;}
+.px{padding-left:24px!important;padding-right:24px!important;}
+.h1{font-size:25px!important;line-height:31px!important;}
+.btn-t{width:100%!important;}
+.btn-a{display:block!important;}
+.duo{width:132px!important;height:89px!important;}
+.duo-td{width:140px!important;}
+.bulle{font-size:17px!important;line-height:22px!important;padding:11px 15px!important;}
+.prix-big{font-size:32px!important;line-height:38px!important;}
+}
+</style>
+</head>
+<body style="margin:0;padding:0;width:100%;background-color:${M.fond};">
+<div lang="${esc(lang)}" dir="ltr" style="background-color:${M.fond};">
+<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${esc(avant)}${'&nbsp;&#847;&zwnj;'.repeat(30)}</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${M.fond}" style="background-color:${M.fond};"><tr>
+<td align="center" class="page-pad" style="padding:24px 16px 40px;">
+<!--[if mso]><table role="presentation" width="600" align="center" cellspacing="0" cellpadding="0" border="0"><tr><td><![endif]-->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;margin:0 auto;">
+<tr><td style="padding:0 6px 16px;font-family:${M.ronde};font-size:21px;line-height:24px;font-weight:800;letter-spacing:-0.2px;"><a href="${esc(SITE + '/' + (lang === 'fr' ? '' : lang + '/'))}" target="_blank" style="text-decoration:none;"><span style="color:${M.rose};">Quiz</span><span style="color:${M.violet};"> Couple</span></a></td></tr>
+<tr><td bgcolor="${M.blanc}" style="background-color:${M.blanc};border:1px solid ${M.bord};border-radius:32px;">
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr><td bgcolor="${M.rosePale}" style="background-color:${M.rosePale};border-radius:31px 31px 0 0;padding:26px 20px 0;">
+<table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;"><tr>
+<td class="duo-td" width="190" valign="bottom" style="width:190px;"><img class="duo" src="${SITE_IMAGES}mascottes-coucou.png" width="180" height="122" alt="${esc(alt)}" style="display:block;width:180px;height:122px;border:0;font-family:${M.police};font-size:14px;line-height:20px;color:${M.rose};"></td>
+<td valign="middle" style="padding:0 0 40px 2px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
+<td class="bulle" bgcolor="${M.blanc}" style="background-color:${M.blanc};border:2px solid #4a3540;border-radius:22px 22px 22px 4px;padding:13px 20px;font-family:${M.ronde};font-size:19px;line-height:24px;font-weight:800;color:${M.rose};">${esc(insec(bonjour, lang))}</td>
+</tr></table></td>
+</tr></table>
+</td></tr>
+<tr><td style="padding:0;font-size:0;line-height:0;">${VAGUE}</td></tr>
+<tr><td class="px" style="padding:26px 40px 16px;"><h1 class="h1" style="margin:0;font-family:${M.ronde};font-size:30px;line-height:36px;font-weight:800;letter-spacing:-0.3px;color:${M.encre};">${esc(insec(titre, lang))}</h1></td></tr>
+<tr><td class="px" style="${px}padding-bottom:4px;font-family:${M.police};font-size:17px;line-height:27px;color:${M.encre};">
+<p style="margin:0 0 16px;">${esc(insec(phrase, lang))}</p>${jauge}${liste}${cite}
+</td></tr>
+${prix}
+<tr><td class="px" align="center" style="padding:26px 40px 0;">
+<table role="presentation" class="btn-t" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr>
+<td align="center" bgcolor="${M.bouton}" style="background-color:${M.bouton};border-radius:999px;mso-padding-alt:16px 36px;"><a href="${esc(url)}" target="_blank" class="btn-a" style="display:inline-block;padding:16px 36px;font-family:${M.ronde};font-size:17px;line-height:22px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:999px;mso-padding-alt:0;">${esc(bouton)}</a></td>
+</tr></table></td></tr>
+${note ? `<tr><td class="px" align="center" style="padding:14px 40px 0;"><span style="display:inline-block;padding:8px 16px;border:1px solid ${M.bord};border-radius:18px;background-color:${M.fond};font-family:${M.police};font-size:14px;line-height:20px;color:${M.doux};">${esc(insec(note, lang))}</span></td></tr>` : ''}
+<tr><td class="px" style="padding:30px 40px 0;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
+<td style="padding:0 8px 0 0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.roseVif};font-size:0;line-height:0;">&#8202;</div></td>
+<td style="padding:0 8px 0 0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.bouton};font-size:0;line-height:0;">&#8202;</div></td>
+<td style="padding:0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.roseVif};font-size:0;line-height:0;">&#8202;</div></td>
+</tr></table></td></tr>
+<tr><td class="px" style="padding:14px 40px ${seul ? '14px' : '34px'};font-family:${M.police};font-size:16px;line-height:24px;font-weight:600;color:${M.encre};">${signature.map((x) => esc(insec(x, lang))).join('<br>')}</td></tr>
+${seul ? `<tr><td class="px" style="padding:0 40px 30px;font-family:${M.police};font-size:14px;line-height:20px;color:${M.doux};">${esc(insec(seul, lang))}</td></tr>` : ''}
+</table>
+</td></tr>
+<tr><td align="center" class="px" style="padding:22px 28px 0;font-family:${M.police};font-size:13px;line-height:19px;color:${M.doux};">
+${esc(insec(pied, lang))}<br>${esc(EDITEUR)}
+<div style="padding-top:8px;"><a href="${esc(arretUrl)}" target="_blank" style="color:${M.violet};text-decoration:underline;">${esc(arret)}</a></div>
+</td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td></tr></table>
+</div>
+</body>
+</html>`;
+  return html;
+}
+
+// Le texte brut, à côté du HTML : même ordre, sans mise en forme.
+function texteBrut({ lang, titre, phrase, barre, puces, citation, ticket, bouton, url, note, seul, signature, pied, arret, arretUrl }) {
+  const dp = lang === 'fr' ? ' : ' : ': ';
+  return [titre, '', phrase]
+    .concat(barre ? [barre.texte] : [])
+    .concat([''])
+    .concat((puces || []).map((x) => '- ' + sansGras(x)))
+    .concat(puces && puces.length ? [''] : [])
+    .concat(citation ? [citation, ''] : [])
+    .concat(ticket ? [(ticket.barre ? ticket.barre + ' → ' : '') + ticket.prix + ' · ' + ticket.phrase, ''] : [])
+    .concat([bouton + dp + url, ''])
+    .concat(note ? [note, ''] : [])
+    .concat(signature)
+    .concat(seul ? ['', seul] : [])
+    .concat(['', '--', pied, arret + dp + arretUrl, EDITEUR])
+    .join('\n');
+}
+
+// quoi : 'pret', 'relance' ou 'reprise'. Pour la reprise, `variante` dit
+// qui n'a pas fini : 'moi' (la personne qui reçoit l'e-mail) ou 'autre'
+// (l'autre, à deux) ; `progression` est celle de qui n'a pas fini
+// ({ repondu, total }), `invite` dit que l'autre n'a pas encore ouvert
+// l'invitation, `autreFini` qu'il a fini (variante 'moi', à deux).
+function messageRappel(quoi, o) {
+  const { lang, mode, moi, autre, url, arret, prix, prixBase, promo } = o;
   const t = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
   const solo = mode === 'solo';
   const pick = (cle) => (solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
-  const v = { moi, autre, prix: prixEcrit(prix, lang), prixBase: prixEcrit(prixBase, lang) };
-  const pret = quoi === 'pret';
-  const sujet = remplir(pret ? t.sujetPret : pick('sujetRelance'), v);
-  const avant = pret ? t.avantPret : pick('avantRelance');
-  const titre = pret ? t.titrePret : pick('titreRelance');
-  const p1 = remplir(pret ? t.p1Pret : pick('p1Relance'), v);
-  const contenu = pret ? null : remplir(pick('contenu'), v);
-  const ligneprix = remplir(promo ? pick('prixPromo') : pick('prix'), v);
-  const bouton = pick('bouton');
-  const notes = pret ? [] : [t.seul];
-  const deuxPoints = lang === 'fr' ? ' : ' : ': ';
-  const texte = [titre, '', p1, '']
-    .concat(contenu ? [contenu, ''] : [])
-    .concat([ligneprix, '', bouton + deuxPoints + url, ''])
-    .concat(notes.length ? [notes.join(' '), ''] : [])
-    .concat(['--', t.pied, t.arret + deuxPoints + arret, EDITEUR]).join('\n');
-  const para = (x, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(x, lang))}</p>`;
-  const html = `<!doctype html>
-<html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
-<body style="margin:0;padding:0;background:#f6f1f4;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${esc(avant)}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f1f4;padding:24px 12px;">
-<tr><td align="center">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;color:#2b2233;font-size:16px;line-height:1.55;">
-<tr><td style="height:6px;background:#d96a8f;font-size:0;line-height:0;">&nbsp;</td></tr>
-<tr><td style="padding:28px 28px 8px;">
-<p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
-<h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(titre)}</h1>
-${para(p1)}${contenu ? para(contenu) : ''}${para(ligneprix, 'font-weight:bold;')}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 24px;"><tr><td style="border-radius:999px;background:#2b2233;">
-<a href="${esc(url)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(bouton)}</a>
-</td></tr></table>
-${notes.map((n) => para(n, 'color:#5f5366;font-size:14px;')).join('')}
-</td></tr>
-<tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
-<p style="margin:0 0 6px;">${esc(t.pied)}</p>
-<p style="margin:0 0 6px;"><a href="${esc(arret)}" style="color:#857a8b;">${esc(t.arret)}</a></p>
-<p style="margin:0;">${esc(EDITEUR)}</p>
-</td></tr>
-</table>
-</td></tr></table>
-</body></html>`;
-  return { sujet, html, texte };
+  const prog = o.progression || { repondu: 0, total: 0 };
+  // Sans situation, le nombre de questions n'est pas encore connu : cent.
+  const reste = Math.max(0, (prog.total || 100) - (prog.repondu || 0));
+  // La réduction : { pourcent } du serveur, ou vrai (les tests, les aperçus).
+  const pourcent = !promo ? '' : promo.pourcent || Math.round(100 * (1 - (Number(prix) || 0) / (Number(prixBase) || 1)));
+  const v = {
+    moi, autre,
+    prix: prixEcrit(prix, lang), prixBase: prixEcrit(prixBase, lang), prixChacun: prixEcrit(Math.round((Number(prix) || 0) / 2), lang),
+    pourcent,
+    repondu: prog.repondu || 0, total: prog.total || 0, minutes: minutesRestantes(reste, solo),
+  };
+  const r = (s) => remplir(s, v);
+  const commun = { lang, bonjour: r(t.bonjour), alt: t.alt, signature: t.signature, pied: t.pied, arret: t.arret, arretUrl: arret, url };
+  let m;
+  if (quoi === 'pret' || quoi === 'relance') {
+    const pret = quoi === 'pret';
+    const ticket = {
+      barre: promo ? v.prixBase : null,
+      prix: v.prix,
+      phrase: solo ? r(promo ? t.ticketSoloPromo : t.ticketSolo) : r(t.chacun),
+    };
+    m = {
+      sujet: r(pret ? t.sujetPret : pick(promo ? 'sujetRelancePromo' : 'sujetRelance')),
+      avant: r(pret ? t.avantPret : pick('avantRelance')),
+      titre: r(pret ? t.titrePret : pick('titreRelance')),
+      phrase: r(pret ? t.p1Pret : pick('p1Relance')),
+      puces: (solo ? t.pucesSolo : t.puces).map(r),
+      citation: pret ? null : r(pick('citation')),
+      ticket,
+      bouton: r(pick('bouton')),
+      note: r(t.conseiller),
+      seul: pret ? null : t.seul,
+    };
+  } else if (o.variante === 'autre') {
+    const invite = !!o.invite;
+    m = {
+      sujet: r(invite ? t.sujetRepriseInvite : t.sujetRepriseAutre),
+      avant: r(t.avantRepriseAutre),
+      titre: r(t.titreRepriseAutre),
+      phrase: r(invite ? t.p1RepriseInvite : t.p1RepriseAutre),
+      barre: !invite && prog.total ? { pct: Math.max(4, Math.min(96, Math.round(100 * prog.repondu / prog.total))), texte: prog.repondu + ' / ' + prog.total } : null,
+      puces: [invite ? t.renvoyer : t.unMessage, t.pretDeux, t.onEcrit].map(r),
+      bouton: r(invite ? t.boutonRepriseInvite : t.boutonRepriseAutre),
+      seul: t.seulRepriseAutre,
+    };
+  } else {
+    const debut = (prog.repondu || 0) < 2 || !prog.total;
+    m = {
+      sujet: r(t.sujetRepriseMoi),
+      avant: r(t.avantRepriseMoi),
+      titre: r(t.titreRepriseMoi),
+      phrase: r(debut ? t.p1RepriseDebut : t.p1RepriseMoi),
+      barre: debut ? null : { pct: Math.max(4, Math.min(96, Math.round(100 * prog.repondu / prog.total))), texte: prog.repondu + ' / ' + prog.total },
+      puces: [t.temps, solo ? t.rienAutre : o.autreFini ? t.autreFini : t.autreEnCours, t.gratuit].map(r),
+      bouton: r(debut ? t.boutonRepriseDebut : t.boutonRepriseMoi),
+      seul: t.seulRepriseMoi,
+    };
+  }
+  const tout = { ...commun, ...m };
+  const sujet = insec(m.sujet, lang);
+  return { sujet, html: cadre({ ...tout, sujet }), texte: texteBrut(tout) };
 }
 
 // { sujet, html, texte } : le second vient de finir, le rapport attend.
 export function messagePret(o) { return messageRappel('pret', o); }
 // { sujet, html, texte } : le rappel unique, un jour après.
 export function messageRelance(o) { return messageRappel('relance', o); }
+// { sujet, html, texte } : la reprise, une fois, 48 heures sans rien de neuf.
+export function messageReprise(o) { return messageRappel('reprise', o); }
 
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {

@@ -47,7 +47,7 @@ on:
         required: false
         default: 'score,projet,doute'
       prenom:
-        description: 'essai : prénom du contact (vide : « Bonjour, »)'
+        description: 'essai : prénom du contact (vide : « Coucou ! »)'
         required: false
         default: 'Thomas'
 

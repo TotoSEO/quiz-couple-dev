@@ -755,8 +755,10 @@ test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel u
   assert.equal(courriel.envoyes.length, 1);
   const pret = courriel.envoyes[0];
   assert.equal(pret.a, 'lea@exemple.fr');
-  assert.equal(pret.sujet, 'Tom a fini : votre rapport est prêt');
-  assert.ok(!/accord|écart/i.test(pret.texte), 'rien du contenu dans l\'e-mail');
+  assert.equal(pret.sujet, 'Tom a fini\u00a0: votre rapport est prêt');
+  // Ce que contient le rapport en général, jamais ses chiffres.
+  assert.ok(!/\d+\s*(accords?|écarts?|réponses proches)/i.test(pret.texte), 'rien du contenu dans l\'e-mail');
+  assert.ok(pret.html.includes('https://quiz-couple.com/email/mascottes-coucou.png'));
   const jm = jetonDe(pret);
   assert.ok(jm && jm !== A.jeton);
   assert.ok(pret.texte.includes('&arret=1'));
@@ -790,7 +792,11 @@ test('rapport prêt : l\'e-mail au premier, l\'aperçu sans contenu, le rappel u
   assert.equal(rel.json.relances, 2);
   const rappels = courriel.envoyes.slice(1);
   assert.deepEqual(rappels.map((m) => m.a).sort(), ['lea@exemple.fr', 'tom@exemple.fr']);
-  assert.ok(rappels.every((m) => m.sujet === 'Votre rapport vous attend toujours'));
+  // Pendant une réduction, le sujet la dit.
+  const sujetRelance = C.promoEnCours(t, 12) ? 'Votre rapport vous attend, à −20\u00a0% en ce moment' : 'Votre rapport vous attend toujours';
+  assert.ok(rappels.every((m) => m.sujet === sujetRelance), rappels[0].sujet);
+  // Le ticket : le prix pour deux et par personne, et la séance chez un conseiller.
+  assert.ok(rappels.every((m) => /chacun\u00a0: moins qu'une place de ciné/.test(m.html.replace(/&#39;/g, "'")) && m.texte.includes('conseiller conjugal')));
   assert.ok(rappels.every((m) => m.texte.includes('C\'est le seul rappel')));
   // Le lien du rappel de Tom ouvre l'évaluation de Tom.
   const jt = jetonDe(rappels.find((m) => m.a === 'tom@exemple.fr'));
@@ -845,6 +851,156 @@ test('rappels : sans l\'annonce, après « ne plus recevoir », une fois payé, 
   const nouveaux = courriel.envoyes.slice(avantRelance);
   assert.deepEqual(nouveaux.map((m) => m.a).sort(), ['lea@exemple.de']);
   assert.equal(rel.json.relances, 1);
-  assert.equal(nouveaux[0].sujet, 'Dein Bericht wartet noch auf dich');
+  assert.equal(nouveaux[0].sujet, C.promoEnCours(t, 12) ? 'Dein Bericht wartet, gerade mit −20\u00a0%' : 'Dein Bericht wartet noch auf dich');
   assert.equal(stockage.lignes.get(ancienne.id).relance_le, null);
+});
+
+// ── La reprise et le nouveau lien d'invitation (24 octobre 2026) ──────────
+
+test('reprise : une fois, 48 heures sans rien de neuf, seulement sous l\'annonce, « moi » puis « autre »', async () => {
+  // L'horloge part de maintenant : le stockage date la création à l'heure réelle.
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const relancer = async () => (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  const c = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' }, consentement: true, majeur: true })).json;
+  const A = { id: c.id, jeton: c.jeton };
+  assert.equal((await appel({ action: 'situation', ...A, situation: SIT })).statut, 200);
+  // « Recevoir mon lien par e-mail », sous la phrase qui annonce un rappel.
+  const l = await appel({ action: 'lien', ...A, email: 'lea@exemple.fr', reprise: true });
+  assert.equal(l.statut, 200);
+  assert.equal(stockage.lignes.get(c.id).a_reprise, true);
+  assert.equal(stockage.lignes.get(c.id).a_email, 'lea@exemple.fr');
+  // L'adresse n'a pas eu l'annonce du « prêt » : la fin des questions la redemandera.
+  assert.equal(l.json.etat.moi.rappel, false);
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const partie = Object.fromEntries(Object.entries(tout).slice(0, 30));
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: partie, nn: [] })).statut, 200);
+  const avant = courriel.envoyes.length;
+  plus(47);
+  assert.equal((await relancer()).reprises, 0, 'rien avant 48 heures');
+  plus(2);
+  assert.equal((await relancer()).reprises, 1);
+  const m = courriel.envoyes[courriel.envoyes.length - 1];
+  assert.equal(courriel.envoyes.length, avant + 1);
+  assert.equal(m.a, 'lea@exemple.fr');
+  assert.equal(m.sujet, 'Votre évaluation vous attend');
+  assert.ok(m.texte.includes('Vous avez répondu à 30 questions sur 100'), m.texte);
+  assert.ok(m.texte.includes('Tom répond de son côté'));
+  assert.ok(m.texte.includes('&arret=1'));
+  assert.ok(stockage.lignes.get(c.id).a_reprise_le);
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'reprise_envoye' && x.cle === 'moi'));
+  // Le lien de l'e-mail ouvre l'évaluation de Léa ; l'e-mail ne compte pas comme une activité.
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jetonDe(m) })).json.role, 'a');
+  plus(72);
+  assert.equal((await relancer()).reprises, 0, 'jamais deux fois');
+
+  // Tom rejoint, finit, et donne son adresse à la fin, sous la phrase qui
+  // annonce le « prêt », le rappel et un mot si Léa tarde à finir.
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, consentement: true, majeur: true });
+  const B = { id: c.id, jeton: ok.json.jeton };
+  const rb = toutRepondre(SIT, (q, id) => (q.type === 'qui' ? 2 : id.charCodeAt(1) % (q.n || 2)));
+  const fin = await appel({ action: 'repondre', ...B, reponses: rb, nn: [], fini: true });
+  assert.equal(fin.json.emailManque, true);
+  const em = await appel({ action: 'email', ...B, email: 'tom@exemple.fr', rappel: true, reprise: true });
+  assert.equal(em.json.etat.moi.rappel, true);
+  assert.equal((await appel({ action: 'repondre', ...B, reponses: rb, nn: [], fini: true })).json.fini, true);
+  plus(49);
+  assert.equal((await relancer()).reprises, 1);
+  const n = courriel.envoyes[courriel.envoyes.length - 1];
+  assert.equal(n.a, 'tom@exemple.fr');
+  assert.equal(n.sujet, 'Léa n\'a pas encore fini ses réponses');
+  assert.ok(n.texte.includes('Léa en est à 30 questions sur 100'));
+  assert.ok(n.html.includes('Envoyer un rappel à Léa'));
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jetonDe(n) })).json.role, 'b');
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'reprise_envoye' && x.cle === 'autre'));
+  plus(72);
+  assert.equal((await relancer()).reprises, 0);
+});
+
+test('reprise : rien sans l\'annonce, ni payé, ni après « ne plus recevoir », ni passé trente jours', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel, stripe } = monter({ maintenant: () => t });
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  // A finit et donne son adresse ; reprise selon la page (avec ou sans l'annonce).
+  const evaluation = async (reprise) => {
+    const c = (await appel({ action: 'creer', lang: 'en', situation: SIT, moi: { prenom: 'Emma' }, autre: { prenom: 'Jack' }, consentement: true, majeur: true })).json;
+    await appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'emma' + reprise + '@exemple.fr', rappel: true, ...(reprise ? { reprise: true } : {}) });
+    await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: tout, nn: [], fini: true });
+    return c;
+  };
+  const ancienne = await evaluation(0);
+  const arretee = await evaluation(1);
+  const payee = await evaluation(2);
+  const invitee = await evaluation(3);
+  assert.equal(stockage.lignes.get(ancienne.id).a_reprise, false);
+  assert.equal((await appel({ action: 'rappels', id: arretee.id, jeton: arretee.jeton, off: true })).statut, 200);
+  const p = await appel({ action: 'payer', id: payee.id, jeton: payee.jeton, renonciation: true });
+  const session = new URL(p.json.url).pathname.split('/').pop();
+  stripe.payer(session);
+  assert.equal((await appel({ action: 'verifier', id: payee.id, jeton: payee.jeton, session })).json.paye, true);
+  const avant = courriel.envoyes.length;
+  plus(49);
+  const r = (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  // Seule l'évaluation annoncée, pas payée, sans arrêt : Jack n'a pas ouvert l'invitation.
+  assert.equal(r.reprises, 1);
+  const m = courriel.envoyes.slice(avant);
+  assert.deepEqual(m.map((x) => x.a), ['emma3@exemple.fr']);
+  assert.equal(m[0].sujet, 'Jack hasn\'t opened the invitation yet');
+  assert.ok(m[0].html.includes('Send the invitation again'));
+  assert.equal(stockage.lignes.get(ancienne.id).a_reprise_le, null);
+  // Trente jours après la création, plus rien (une évaluation annoncée, jamais relancée).
+  const tard = await evaluation(4);
+  stockage.lignes.get(tard.id).cree_le = new Date(t.getTime() - 31 * 86400e3).toISOString();
+  plus(49);
+  assert.equal((await appel({ action: 'relancer' }, '1.2.3.4', true)).json.reprises, 0);
+  assert.equal(stockage.lignes.get(tard.id).a_reprise_le, null);
+  assert.equal(stockage.lignes.get(invitee.id).a_reprise_le !== null, true);
+});
+
+test('inviter : un nouveau lien pour l\'autre, seulement à la créatrice, tant qu\'il n\'a pas accepté', async () => {
+  const { appel } = monter();
+  const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, consentement: true, majeur: true })).json;
+  const r = await appel({ action: 'inviter', id: c.id, jeton: c.jeton });
+  assert.equal(r.statut, 200);
+  const neuf = r.json.invitation;
+  assert.ok(neuf && neuf !== c.invitation);
+  // L'ancien lien ne marche plus, le nouveau ouvre l'invitation.
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: c.invitation })).statut, 404);
+  const e = await appel({ action: 'etat', id: c.id, jeton: neuf });
+  assert.equal(e.json.invite, true);
+  // Celui qui est invité ne peut pas en faire un autre.
+  assert.equal((await appel({ action: 'inviter', id: c.id, jeton: neuf })).statut, 403);
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: neuf, consentement: true, majeur: true });
+  assert.equal(ok.statut, 200);
+  assert.equal((await appel({ action: 'inviter', id: c.id, jeton: c.jeton })).statut, 409);
+  // Seul(e) : pas d'invitation.
+  const s = (await appel({ action: 'creer', lang: 'fr', mode: 'solo', situation: SIT, moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, consentement: true, majeur: true })).json;
+  assert.equal((await appel({ action: 'inviter', id: s.id, jeton: s.jeton })).statut, 403);
+  // Cinq par heure.
+  const d = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Ana' }, autre: { prenom: 'Bo' }, consentement: true, majeur: true }, '5.5.5.5')).json;
+  for (let i = 0; i < 5; i++) assert.equal((await appel({ action: 'inviter', id: d.id, jeton: d.jeton })).statut, 200);
+  assert.equal((await appel({ action: 'inviter', id: d.id, jeton: d.jeton })).statut, 429);
+});
+
+test('reprise : sans les colonnes en base (migration pas encore passée), l\'adresse est quand même gardée', async () => {
+  const stockage = creerStockageMemoire();
+  const maj = stockage.maj.bind(stockage);
+  stockage.maj = async (id, champs) => {
+    if (Object.keys(champs).some((k) => k.endsWith('_reprise'))) throw new Error('base 400 {"code":"PGRST204","message":"Could not find the \'a_reprise\' column of \'bilans\' in the schema cache"}');
+    return maj(id, champs);
+  };
+  const { traiter } = creerServeur({ stockage, stripe: null, courriel: fausseBoite(), sel: 'sel' });
+  const appel = (corps) => traiter(corps, { ip: '1.2.3.4' });
+  const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, consentement: true, majeur: true })).json;
+  const r = await appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', rappel: true, reprise: true });
+  assert.equal(r.statut, 200);
+  assert.equal(stockage.lignes.get(c.id).a_email, 'lea@exemple.fr');
+  assert.equal(stockage.lignes.get(c.id).a_rappel, true);
+  const l = await appel({ action: 'lien', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', reprise: true });
+  assert.equal(l.statut, 200);
+  // Une autre erreur de la base, elle, remonte.
+  stockage.maj = async () => { throw new Error('base 500 panne'); };
+  await assert.rejects(() => appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', rappel: true, reprise: true }), /panne/);
 });

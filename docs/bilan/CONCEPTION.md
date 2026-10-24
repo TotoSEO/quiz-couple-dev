@@ -1134,3 +1134,59 @@ font cent, la carte est triée, aucune carte « Accord » sous « Vos
 différences », la phrase du ressenti apparaît quand il le faut et seulement
 alors, l'étiquette suit le poids. Les trente rapports d'exemple passent les
 deux contrôles de mise en page.
+
+## 24 octobre 2026 : la reprise, et des e-mails qui vendent
+
+Thomas, en décrivant le parcours e-mail : « si la personne a commencé
+l'évaluation mais ne l'a pas finie, un autre mail. Si elle l'a finie mais pas
+payé, un mail convaincant : -20 %, X € par personne, comparé à un prix du
+quotidien ». Puis, devant les premiers essais : « Y'a trop de texte ! C'est
+pas assez marketing avec des bullet points rapide et tout ! ».
+
+**Ce qui part, et à qui.** Le parcours e-mail de Brevo (docs/emailing)
+s'arrête dès que l'adresse est dans une évaluation : c'est la fonction
+`bilan` qui écrit ensuite, par Resend.
+
+| E-mail | Quand | À qui |
+|---|---|---|
+| Rapport prêt | quand le second finit ses réponses | le premier, à deux |
+| Rappel | 24 heures après, s'il n'est pas débloqué | chacun |
+| Reprise « moi » | 48 heures sans rien de neuf, réponses pas finies | qui a donné son adresse par « Recevoir mon lien par e-mail » |
+| Reprise « autre » | 48 heures sans rien de neuf, l'autre pas fini | qui a fini, à deux |
+
+Chaque e-mail part une seule fois par personne, jamais après le paiement ni
+après « ne plus recevoir », et seulement à une adresse donnée sous une phrase
+qui l'annonce : les évaluations d'avant le 24 octobre ne reçoivent pas de
+reprise. La reprise ne part que dans les 30 jours de la création.
+
+**Pourquoi la reprise « autre » compte le plus.** Depuis le 21 octobre,
+l'adresse est demandée à la fin de ses propres questions : quelqu'un qui
+s'arrête en route n'a, en général, pas d'adresse. En revanche, à deux, celle
+qui a fini attend l'autre ; si l'autre traîne, c'est elle qu'on prévient, avec
+un bouton vers sa page, qui envoie un petit message ou renvoie l'invitation.
+Sur un autre appareil, la page n'a pas le lien d'invitation de la création
+(il n'est gardé que dans le navigateur, la base n'en a que l'empreinte) :
+« Renvoyer l'invitation » en demande un nouveau (action `inviter`), et l'ancien
+ne marche plus.
+
+**La forme.** La maquette des e-mails du parcours, sans les encarts « À voir
+aussi » ni Instagram : les deux personnages et leur bulle, un titre, une
+phrase, des coches sur ce que le rapport contient en général (jamais un
+chiffre du rapport), le ticket du prix (barré pendant une réduction, et à
+deux « Soit 3,96 € chacun : moins qu'une place de ciné »), le bouton, et en
+note la séance chez un conseiller conjugal (le chiffre de la page de vente
+dans chaque langue). Le rappel reprend en citation la phrase de l'écran
+« rapport prêt » (« Peu de couples prennent un jour le temps de faire ce
+point : vous venez de le faire, il ne reste qu'à lire le résultat ») et son
+sujet dit la réduction en cours. La reprise « moi » montre la barre de
+progression, les minutes restantes (comptées comme la page de vente, 25 à
+30 minutes pour cent questions, le double seul(e)) et rappelle que les
+questions sont gratuites.
+
+**La mesure.** Rien ne vient d'un pistage : l'onglet Évaluation de l'admin
+lit les dates de la base (`rappels` de `get_bilan_tableau`) et montre, pour
+les évaluations créées sur la période, combien de chaque e-mail sont partis
+et ce que les gens ont fait ensuite : payé après le « prêt » ou le rappel,
+fini ses réponses après la reprise « moi », l'autre a fini après la reprise
+« autre ». La variante d'une reprise se lit à la date : réponses pas finies à
+l'envoi, c'était « moi ».

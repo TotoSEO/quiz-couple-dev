@@ -89,6 +89,21 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
       ]);
       return solo.concat(duo).slice(0, n);
     },
+    // Les évaluations où une reprise est due à quelqu'un (action `relancer`,
+    // 24 octobre 2026) : rien de neuf depuis `avantIso`, créées après
+    // `depuisIso`, pas payées, sans arrêt demandé, et pour a ou b une adresse
+    // donnée sous l'annonce de la reprise, pas encore de reprise, et des
+    // réponses pas finies (les siennes, ou à deux celles de l'autre). La même
+    // règle que bilan_relances_dues() ; le serveur revérifie ligne par ligne.
+    async aReprendre(avantIso, depuisIso, limite) {
+      const n = limite || 25;
+      const a = 'and(a_reprise.is.true,a_reprise_le.is.null,a_email.not.is.null,a_consent.not.is.null,or(a_fini.is.null,and(mode.eq.duo,b_fini.is.null)))';
+      const b = 'and(mode.eq.duo,b_reprise.is.true,b_reprise_le.is.null,b_email.not.is.null,b_consent.not.is.null,or(b_fini.is.null,a_fini.is.null))';
+      const r = await appel(base + '?paye_le=is.null&rappels_off=is.false&maj_le=lt.' + encodeURIComponent(avantIso)
+        + '&cree_le=gt.' + encodeURIComponent(depuisIso) + '&or=(' + a + ',' + b + ')'
+        + '&select=*&order=maj_le.asc&limit=' + n, { headers: entetes() });
+      return r.json();
+    },
     async compter(evenement, cleCompteur, montant) {
       await appel(racine + '/rest/v1/rpc/bilan_compte_evenement', {
         method: 'POST',
@@ -154,6 +169,7 @@ export function creerStockageMemoire() {
         rapport_statut: null, rapport_maj: null, rapport_chemin: null, rapport_essais: 0,
         rapport_erreur: null, rapport_pages: null, envois: [],
         a_rappel: false, b_rappel: false, rappels_off: false, jetons_mail: [], pret_mail_le: null, relance_le: null,
+        a_reprise: false, b_reprise: false, a_reprise_le: null, b_reprise_le: null,
         ...copie(ligne),
       };
       lignes.set(id, complete);
@@ -193,6 +209,13 @@ export function creerStockageMemoire() {
         && (l.a_rappel || l.b_rappel) && l.a_fini && l.a_fini < avantIso
         && (l.mode === 'solo' || (l.b_fini && l.b_fini < avantIso)))
         .sort((x, y) => x.a_fini.localeCompare(y.a_fini)).slice(0, limite || 25).map(copie);
+    },
+    async aReprendre(avantIso, depuisIso, limite) {
+      const duo = (l) => l.mode !== 'solo';
+      const a = (l) => l.a_reprise && !l.a_reprise_le && l.a_email && l.a_consent && (!l.a_fini || (duo(l) && !l.b_fini));
+      const b = (l) => duo(l) && l.b_reprise && !l.b_reprise_le && l.b_email && l.b_consent && (!l.b_fini || !l.a_fini);
+      return [...lignes.values()].filter((l) => !l.paye_le && !l.rappels_off && l.maj_le < avantIso && l.cree_le > depuisIso && (a(l) || b(l)))
+        .sort((x, y) => x.maj_le.localeCompare(y.maj_le)).slice(0, limite || 25).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
     async compteDuJour(evenements) { return compteurs.filter((c) => evenements.includes(c.evenement)).length; },

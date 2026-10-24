@@ -51,7 +51,7 @@
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta le due caselle per continuare.",
       "email": "La tua e-mail",
-      "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e ad avvisarti quando il tuo report è pronto, con un solo promemoria se il giorno dopo è ancora in attesa.",
+      "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto, una volta se {{autre}} tarda a finire, e una sola volta se il giorno dopo è ancora in attesa.",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
       "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il link al report in PDF.",
       "autreDefaut": "il tuo partner"
@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invita {{autre}}",
       "texte": "Manda questo link a {{autre}}. {{autre}} risponderà per conto suo, sul proprio telefono, senza vedere le tue risposte, e tu non vedrai le sue fino alla fine.",
+      "nouveauLien": "È un nuovo link: quello vecchio non funziona più, manda questo a {{autre}}.",
       "suite": "Non serve aspettare {{autre}}: inizia subito le tue risposte, ognuno va avanti per conto suo.",
       "envoyer": "Invia il link",
       "copier": "Copia il link",
@@ -598,7 +599,7 @@
       "titre": "Ricevere il mio link via e-mail",
       "placeholder": "tu@email.com",
       "bouton": "Invia",
-      "aide": "Per ritrovare le tue risposte se chiudi questa pagina o cambi telefono.",
+      "aide": "Per ritrovare le tue risposte se chiudi questa pagina o cambi telefono. Se non finisci, ti manderemo un solo promemoria.",
       "envoye": "Fatto: il tuo link è nella tua casella ({{email}}). Controlla anche lo spam.",
       "faux": "Questo indirizzo e-mail non sembra completo.",
       "trop": "Troppi invii per questa valutazione. Riprova tra un'ora."
