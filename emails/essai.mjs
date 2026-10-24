@@ -49,10 +49,9 @@ export async function essai({ brevo, adresse, types, langues, angles, prenom, ma
         const a = attributsContact({ type, lang, angle, prenom }, jour);
         delete a.PARCOURS; // un contact d'essai n'est pas du parcours
         const dest = adresseVariante(adresse, type, lang, angle);
-        await brevo.contact(dest, a);
+        await brevo.contact(dest, a, [essais.id]);
         destinataires.push(dest);
       }
-      await brevo.ajouterALaListe(essais.id, destinataires);
       const cree = await brevo.creerCampagne({
         name: `Essai · ${type} · ${lang} · ${maintenant.toISOString().slice(0, 16)}`,
         sender: { name: REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },

@@ -94,9 +94,10 @@ class FausseBase {
 }
 
 class FauxBrevo {
-  constructor({ credits = 300, refuses = [], campagnes = {}, contacts = [], listes = [] } = {}) {
+  constructor({ credits = 300, refuses = [], horsListe = [], campagnes = {}, contacts = [], listes = [] } = {}) {
     this.credits = credits;
     this.refuses = new Set(refuses);
+    this.horsListe = new Set(horsListe);
     this.campagnesConnues = campagnes;
     this.contactsBrevo = contacts;
     this.listesBrevo = listes;
@@ -112,13 +113,14 @@ class FauxBrevo {
   async compte() { this.note('compte'); return { plan: [{ type: 'free', credits: this.credits, creditsType: 'sendLimit' }] }; }
   async dossiers() { this.note('dossiers'); return { folders: [{ id: 7, name: REGLAGES.dossier }] }; }
   async creerListe(nom, dossier) { this.note('creerListe', nom, dossier); const id = this.prochainId++; this.membres.set(id, []); this.listesBrevo.push({ id, name: nom }); return { id }; }
-  async contact(email, attributs) {
+  async contact(email, attributs, listes = []) {
     this.note('contact', email);
     if (this.refuses.has(email)) { const e = new Error('POST /contacts : 400 Invalid email address'); e.statut = 400; throw e; }
     this.contactsEcrits.set(email, attributs);
+    for (const id of listes) if (!this.horsListe.has(email)) this.membres.get(id).push(email);
     return null;
   }
-  async ajouterALaListe(id, emails) { this.note('ajouterALaListe', id, emails.length); this.membres.get(id).push(...emails); return { contacts: { success: emails, failure: [] } }; }
+  async membresDeLaListe(id, offset) { this.note('membresDeLaListe', id, offset); return { contacts: offset ? [] : this.membres.get(id).map((email) => ({ email })) }; }
   async creerCampagne(corps) { this.note('creerCampagne', corps.name); const id = this.prochainId++; this.campagnesCreees.push({ id, ...corps }); return { id }; }
   async envoyerMaintenant(id) { this.note('envoyerMaintenant', id); this.envoyees.push(id); return null; }
   async campagne(id) {
@@ -132,7 +134,7 @@ class FauxBrevo {
   async supprimerContact(email) { this.note('supprimerContact', email); this.supprimes.contacts.push(email); return null; }
   async listesDuDossier(dossier, offset) { this.note('listesDuDossier', dossier, offset); return { lists: offset ? [] : this.listesBrevo }; }
   async supprimerListe(id) { this.note('supprimerListe', id); this.supprimes.listes.push(id); return null; }
-  ecrit() { return this.appels.filter(([nom]) => !['compte', 'dossiers', 'contacts', 'listesDuDossier', 'campagne'].includes(nom)); }
+  ecrit() { return this.appels.filter(([nom]) => !['compte', 'dossiers', 'contacts', 'listesDuDossier', 'campagne', 'membresDeLaListe'].includes(nom)); }
 }
 
 const silence = () => {};
@@ -272,6 +274,20 @@ test('une adresse refusée par Brevo passe en invalide, les autres partent', asy
   assert.equal(base.t.abonnes.find((a) => a.id === 'ab-4').statut, 'invalide');
   assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-4'), 'sa ligne est retirée');
   assert.ok(!brevo.membres.get(brevo.campagnesCreees[0].recipients.listIds[0]).includes('p4@exemple.fr'));
+});
+
+test('un contact que Brevo n\'a pas mis dans la liste ne part pas, et beaucoup d\'absents arrêtent tout', async () => {
+  const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e2', 'fr', 'mariage'));
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const brevo = new FauxBrevo({ horsListe: ['p7@exemple.fr'] });
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
+  assert.equal(b.envois['e2:fr'], 11);
+  assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-7'), 'sa ligne est retirée, il reviendra');
+  assert.equal(base.t.abonnes.find((a) => a.id === 'ab-7').statut, 'actif', 'son adresse n\'est pas marquée');
+  const base2 = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+  const brevo2 = new FauxBrevo({ horsListe: file.map((c) => c.email) });
+  await assert.rejects(passage({ base: base2, brevo: brevo2, maintenant: SOIR, mode: 'reel', journal: silence }), /absents de la liste/);
+  assert.equal(brevo2.campagnesCreees.length, 0);
 });
 
 test('trop de refus d\'un coup : le passage s\'arrête sans campagne ni adresse marquée', async () => {
