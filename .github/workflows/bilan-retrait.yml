@@ -1,0 +1,61 @@
+name: Évaluation de couple · retirer un test
+
+# Retire une évaluation de test des chiffres de l'admin : ce qu'elle a compté
+# (bilan_compteurs, chaque compteur à son jour), son PDF et sa ligne
+# (bilan/retrait-test.mjs ; 24 octobre 2026, Thomas : « la première vente
+# c'était moi c'était un test donc tu peux retirer tout ça »). À lancer à la
+# main, dans cet ordre :
+#   lister  : les évaluations payées (identifiant, dates, mode, langue,
+#             source, montant, PDF), sans prénom ni adresse ; avec
+#             « empreintes », signale celles faites avec ces adresses ;
+#   essai   : ce qui serait retiré pour l'identifiant donné, sans rien toucher ;
+#   retirer : le retrait, définitif.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'lister, essai ou retirer'
+        required: true
+        default: 'lister'
+        type: choice
+        options:
+          - lister
+          - essai
+          - retirer
+      id:
+        description: 'essai et retirer : les huit premiers caractères de l''identifiant donné par « lister »'
+        required: false
+        default: ''
+      empreintes:
+        description: 'lister : empreintes SHA-256 d''adresses e-mail en minuscules, séparées par des virgules (signale les évaluations faites avec elles)'
+        required: false
+        default: ''
+
+concurrency:
+  group: bilan-retrait
+  cancel-in-progress: false
+
+jobs:
+  retrait:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bilan/retrait-test.mjs
+            supabase/functions/_shared/bilan/coeur.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Retrait
+        env:
+          ACTION: ${{ inputs.action }}
+          ID: ${{ inputs.id }}
+          EMPREINTES: ${{ inputs.empreintes }}
+        run: node bilan/retrait-test.mjs "$ACTION" "$ID"
