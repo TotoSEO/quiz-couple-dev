@@ -1,0 +1,260 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le cadeau au salon : il le cache derrière lui, elle l'ouvre, une seule chaussette, il est gêné.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Un salon le soir, la lumière de la lampe. Le violet, à droite, cache un cadeau derrière son dos, un grand sourire. La rose, à gauche, sur le canapé, a les yeux brillants et regarde le violet.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "brillants",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "cadeau",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "clin",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. La rose tient le cadeau sur ses genoux et l'ouvre, les yeux grands ouverts, la bouche en o. Le violet la regarde, plein d'espoir.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "cadeau",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. La rose tient une seule chaussette entre deux doigts, les sourcils hauts et la bouche plate. Le violet, à côté, sourit sans rien dire.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "chaussette",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "sourcils": "hauts"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. Le violet, gêné, les joues roses et une goutte au front, se gratte la tête. La rose, la chaussette à la main, le regarde, les sourcils hauts.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "chaussette",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "sourcils": "hauts"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "triste",
+                        "rougit": true
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "the other one is coming",
+                "cote": "droite"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
