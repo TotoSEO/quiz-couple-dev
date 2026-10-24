@@ -1,0 +1,206 @@
+{
+  "jour": "2026-12-22",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-010",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Les ronflements, la nuit : il ronfle, elle le pousse, silence, puis c'est elle qui ronfle.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une chambre la nuit, lumière bleue de la lune. Le violet dort sur le dos, la bouche ouverte, des Z qui montent au-dessus de lui, il ronfle. La rose, éveillée à côté, a les yeux plats et regarde le plafond.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre. La rose, les sourcils froncés, se tourne vers le violet et le pousse. Il dort toujours, les Z au-dessus de lui.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "fache",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre. Le violet s'est tourné sur le côté, la bouche fermée : silence. La rose ferme les yeux, un petit sourire, enfin tranquille.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre, plus tard. La rose dort la bouche ouverte, des Z au-dessus d'elle : c'est elle qui ronfle. Le violet, éveillé, a les yeux plats et regarde le plafond.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

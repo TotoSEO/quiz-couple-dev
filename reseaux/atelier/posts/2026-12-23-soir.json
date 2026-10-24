@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-23",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "noel-05",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Christmas gifts",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "noel"
+        },
+        "dilemmes": [
+          {
+            "a": "One big gift",
+            "b": "Ten small gifts"
+          },
+          {
+            "a": "A gift they asked for",
+            "b": "A total surprise"
+          },
+          {
+            "a": "Unwrap at midnight",
+            "b": "Unwrap in the morning"
+          },
+          {
+            "a": "Wrapped with a bow",
+            "b": "Hidden in a sock"
+          },
+          {
+            "a": "Homemade gift",
+            "b": "Store-bought gift"
+          },
+          {
+            "a": "Give it early",
+            "b": "Wait till the 25th"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Christmas gifts. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
