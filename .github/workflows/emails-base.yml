@@ -2,16 +2,19 @@ name: E-mails · base Supabase
 
 # Applique 20261024120000_emails_parcours.sql (le parcours e-mail des
 # abonnés : envois, comptes, passages du soir, file, événements de Brevo,
-# lecture de l'admin, horloge pg_cron) par l'API de gestion de Supabase,
-# comme abonnes-base.yml, avec les secrets déjà là (SUPABASE_ACCESS_TOKEN et
-# SUPABASE_PROJECT_REF). Idempotente : la relancer (« Run workflow ») est
-# sans risque.
+# lecture de l'admin, horloge pg_cron), puis 20261024190000_emails_ordre.sql
+# (la file du soir, le plus en retard d'abord), par l'API de gestion de
+# Supabase, comme abonnes-base.yml, avec les secrets déjà là
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Idempotentes : la relancer
+# (« Run workflow ») est sans risque, et la seconde repasse toujours après la
+# première, qui réécrit la file à l'ancienne.
 
 on:
   push:
     branches: [main]
     paths:
       - 'supabase/migrations/20261024120000_emails_parcours.sql'
+      - 'supabase/migrations/20261024190000_emails_ordre.sql'
       - '.github/workflows/emails-base.yml'
   workflow_dispatch:
 
@@ -28,14 +31,16 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      - name: Appliquer la migration
+      - name: Appliquer les migrations
         run: |
-          f=supabase/migrations/20261024120000_emails_parcours.sql
-          jq -Rs '{query: .}' "$f" > requete.json
-          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
-            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
-            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
-            --data @requete.json)
-          echo "$f : réponse $code"
-          head -c 800 reponse.json; echo
-          if [ "$code" -ge 300 ]; then exit 1; fi
+          for f in supabase/migrations/20261024120000_emails_parcours.sql \
+                   supabase/migrations/20261024190000_emails_ordre.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            head -c 800 reponse.json; echo
+            if [ "$code" -ge 300 ]; then exit 1; fi
+          done

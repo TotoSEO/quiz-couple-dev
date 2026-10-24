@@ -203,11 +203,21 @@ l'évaluation qui prennent le relais. Jamais deux e-mails du parcours à moins
 de 44 heures, et jamais deux fois le même : une ligne par adresse et par
 e-mail dans `emails_envois`, unique.
 
-Quand le plafond du soir coupe la file, l'ordre est : `e1` des adresses de
-moins de 48 heures, puis `e2`, puis `e1` des adresses plus anciennes, les
-plus récentes d'abord. L'offre gratuite de Brevo fait 300 envois par jour ;
-à 150 adresses par jour environ, `e1` et `e2` la dépassent vite. La file est
-dans l'admin : quand elle grossit de soir en soir, il faut l'offre
+Quand le plafond du soir coupe la file, le plus en retard part d'abord
+(migration `20261024190000_emails_ordre.sql`, 24 octobre 2026, Thomas : « La
+priorité c'est en retard, puis s'ajoutent au quota les nouveaux du jour,
+jusqu'à ce que tout soit rééquilibré ») : chaque e-mail est rangé à son
+échéance, le moment où il pouvait partir, 18 heures après l'adresse laissée
+pour `e1`, 66 heures après `e1` pour `e2`. Jusque-là, les adresses de moins
+de 48 heures passaient en tête, puis `e2`, puis le retard, les plus récentes
+d'abord : simulé sur la file du 24 octobre au soir (686 `e1` en attente,
+environ 120 nouvelles adresses par jour, 97 % de remis), une partie du
+retard aurait attendu près de quatre semaines son premier e-mail ; rangé par
+échéance, plus personne n'attend plus de six jours environ, et la file
+revient à l'équilibre au bout des mêmes trois semaines. Le plafond compte
+tout, `e1` et `e2` ensemble, et jamais plus que les crédits que Brevo dit
+rester ce soir-là moins dix : l'offre gratuite fait 300 envois par jour. La
+file est dans l'admin : quand elle grossit de soir en soir, il faut l'offre
 supérieure de Brevo, puis relever `plafond` dans `emails/reglages.mjs`.
 
 Au lancement, la file part avec tout le retard (766 adresses en attente de
@@ -218,9 +228,9 @@ jusqu'à ce que tout le retard soit rattrapé. » Le plafond s'en charge déjà
 fort, 100, puis 150, puis 200 (`montee` dans `emails/reglages.mjs`,
 `plafondDuSoir` dans `parcours.mjs`) : le domaine d'envoi est neuf, et les
 messageries le jugent sur ses premiers envois. Seuls comptent les soirs où
-quelque chose est vraiment parti. Avec l'ordre de la file, les adresses du
-jour passent en premier et le retard se vide par le bas, en quatre à cinq
-soirs.
+quelque chose est vraiment parti. Le premier soir (24 octobre 2026), 100
+`e1` sont partis à 18 h 55 ; avec les `e2` qui prennent leur place trois
+jours plus tard, le retard se vide en trois semaines environ.
 
 **Les adresses de l'e-book n'entrent pas dans le parcours** : leur case
 disait « me contacte occasionnellement à des fins informationnelles », pas
