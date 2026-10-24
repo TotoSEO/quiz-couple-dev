@@ -45,6 +45,11 @@ jobs:
             emails
             static-site/build
             supabase/functions/_shared/bilan
+            fr
+            en
+            es
+            de
+            it
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

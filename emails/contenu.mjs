@@ -29,6 +29,25 @@ export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}
 const lire = (chemin) => readFileSync(new URL(chemin, import.meta.url), 'utf8');
 const TEXTES = Object.fromEntries(LANGUES.map((l) => [l, JSON.parse(lire(`./textes/${l}.json`))]));
 const GABARIT = lire('./gabarit.html');
+
+// Ce que les e-mails citent de l'évaluation, lu à la source pour ne jamais
+// citer une version périmée (24 octobre 2026, Thomas : « Est-ce que les mots
+// sont bien choisis ? En copywriting, avec des mots humains pas IA ? ») : la
+// question d'exemple de l'e2, une vraie question des cent avec ses réponses,
+// et le PS de l'e1, la phrase de Thomas en haut du prix de la page de vente
+// (`lp.prix.accroche`). Les workflows qui envoient récupèrent donc aussi les
+// dossiers des langues.
+const EXEMPLE = { domaine: 'argent', question: 'arg1', reponseA: 0, reponseB: 3 };
+const EVALUATION = Object.fromEntries(LANGUES.map((l) => {
+  const q = JSON.parse(lire(`../${l}/bilan-questions.json`)).domaines[EXEMPLE.domaine];
+  const question = q.questions[EXEMPLE.question];
+  return [l, {
+    domaine: q.titre,
+    question: question.q,
+    options: question.o,
+    accroche: JSON.parse(lire(`../${l}/bilan.json`)).lp.prix.accroche,
+  }];
+}));
 // Les images des e-mails, servies par le site (public/email/).
 const IMAGES = `${BASE_URL}/email/`;
 
@@ -105,16 +124,30 @@ function enLigne(texte, liens) {
   return echapper(texte)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\[([^\]]+)\]\((solo|evaluation)\)/g, (m, mot, cible) =>
-      `<a href="${echapper(liens[cible])}" target="_blank" style="color:${VIOLET};font-weight:700;text-decoration:underline;white-space:nowrap;">${mot}</a>`);
+      `<a href="${echapper(liens[cible])}" target="_blank" style="color:${VIOLET};font-weight:700;text-decoration:underline;">${mot}</a>`);
 }
 
 const P = `margin:0 0 16px;font-size:17px;line-height:27px;color:${ENCRE};`;
 const paragraphe = (html) => `<p style="${P}">${html}</p>`;
-const petit = (html) => `<p style="margin:0 0 16px;font-size:15px;line-height:23px;color:${DOUX};">${html}</p>`;
 // Les points cochés : une pastille rose et sa coche, puis le texte.
 const liste = (points) => `<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:4px 0 18px;">${points.map((x) =>
   `<tr><td width="34" valign="top" style="width:34px;padding:1px 0 12px;"><div style="width:24px;height:24px;border-radius:12px;background-color:${ROSE_PALE};color:${ROSE};font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;font-weight:800;text-align:center;">&#10003;</div></td>` +
   `<td valign="top" style="padding:0 0 12px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:25px;color:${ENCRE};">${x}</td></tr>`).join('')}</table>`;
+
+// La question d'exemple de l'e2, comme l'évaluation l'affiche : le domaine
+// en pastille, la question, ses quatre réponses avec une case vide.
+function carteExemple(e) {
+  const police = "font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;";
+  const options = e.options.map((o) =>
+    `<tr><td width="30" valign="top" style="width:30px;padding:2px 0 10px;"><div style="width:16px;height:16px;border:2px solid #c9b3bf;border-radius:10px;background-color:#ffffff;"></div></td>` +
+    `<td valign="top" style="padding:0 0 10px;${police}font-size:16px;line-height:22px;color:${ENCRE};">${echapper(o)}</td></tr>`).join('');
+  return `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:2px 0 20px;">` +
+    `<tr><td bgcolor="#fcf6f3" style="padding:18px 18px 8px;border:2px solid #f0e0e6;border-radius:18px;background-color:#fcf6f3;">` +
+    `<div style="display:inline-block;padding:3px 10px;border-radius:999px;background-color:#ede6f4;${police}font-size:12px;line-height:16px;font-weight:700;color:${VIOLET};">${echapper(e.domaine)}</div>` +
+    `<div style="padding:10px 0 12px;${police}font-size:18px;line-height:25px;font-weight:800;color:${ENCRE};">${echapper(e.question)}</div>` +
+    `<table role="presentation" cellspacing="0" cellpadding="0" border="0">${options}</table>` +
+    `</td></tr></table>`;
+}
 
 // Ce que Brevo met dans les champs du contact, en texte brut : Brevo les
 // insère tels quels dans le HTML, d'où le retrait de < > & et des marqueurs.
@@ -166,15 +199,26 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
   const e = t[type];
   const p = prixDu(lang, instant, promo);
   const variante = p.promo ? 'promo' : 'normal';
-  const v = { prix: p.prix, prixBase: p.prixBase, prixChacun: p.prixChacun, pourcent: p.pourcent, code: p.code };
+  const ev = EVALUATION[lang];
+  const v = {
+    prix: p.prix, prixBase: p.prixBase, prixChacun: p.prixChacun, pourcent: p.pourcent, code: p.code,
+    // La seconde réponse est citée jusqu'à sa virgule (« Chacun son argent ») :
+    // la carte juste au-dessus la montre en entier.
+    accroche: ev.accroche, reponseA: ev.options[EXEMPLE.reponseA], reponseB: ev.options[EXEMPLE.reponseB].split(',')[0],
+  };
   const ecrire = (texte) => typo(remplir(texte, v), lang);
   const liens = { evaluation: lien(lang, type), solo: lien(lang, type, { solo: true }) };
   const sujet = ecrire(e.sujet);
   const apercu = ecrire(typeof e.apercu === 'string' ? e.apercu : e.apercu[variante]);
+  const points = liste(e.points.map((x) => enLigne(ecrire(x), liens)));
 
-  const corps = [paragraphe('{{ contact.INTRO }}'), liste(e.points.map((x) => enLigne(ecrire(x), liens)))];
-  if (type === 'e1') corps.push(paragraphe(enLigne(ecrire(e.solo), liens)));
-  else corps.push(petit(enLigne(ecrire(e.deja), liens)));
+  // L'e1 présente l'évaluation ; l'e2 montre une de ses questions, ce que le
+  // rapport en fait, puis le reste du rapport.
+  const corps = type === 'e1'
+    ? [paragraphe('{{ contact.INTRO }}'), points]
+    : [paragraphe('{{ contact.INTRO }}'), carteExemple(ev), paragraphe(enLigne(ecrire(e.exemple), liens)), paragraphe(enLigne(ecrire(e.aussi), liens)), points];
+  corps.push(paragraphe(enLigne(ecrire(e.solo), liens)));
+  const ps = e.ps ? `<div style="padding-top:18px;font-size:15px;line-height:23px;font-weight:400;color:${DOUX};">${enLigne(ecrire(e.ps), liens)}</div>` : '';
 
   const marque = `<span style="color:${VIOLET};">Quiz&nbsp;Couple</span>`;
   const valeurs = {
@@ -193,7 +237,7 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
     BOUTON_LIEN: echapper(liens.evaluation),
     BOUTON_TEXTE: echapper(ecrire(e.bouton)),
     NOTE: echapper(ecrire(e.note)),
-    SIGNATURE: t.signature.map((x) => echapper(ecrire(x))).join('<br>'),
+    SIGNATURE: t.signature.map((x) => echapper(ecrire(x))).join('<br>') + ps,
     VOIR_TITRE: echapper(ecrire(t.voir.titre)).replace('[[marque]]', marque),
     VOIR_ALLER: echapper(ecrire(t.voir.aller)).replace(/ (\S+)$/, '&nbsp;$1'),
     INSTA_TITRE: echapper(ecrire(t.instagram.titre)),

@@ -47,50 +47,51 @@
     "mentions": "Note legali"
   },
   "e1": {
-    "sujet": "100 domande per fare il punto sulla vostra coppia",
-    "apercu": "Ognuno risponde per conto suo, e un report vi mostra su cosa siete d'accordo e di cosa parlare.",
+    "sujet": "100 domande per fare il punto in coppia",
+    "apercu": "Ognuno risponde sul proprio telefono, poi un report vi mostra su cosa siete d'accordo.",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
     "intro": {
-      "score": "Grazie per aver fatto un test su Quiz Couple! Vuoi andare oltre? Ecco il nostro test più completo.",
-      "projet": "Grazie per aver fatto un test su Quiz Couple! Prima di un grande passo, conviene verificare che vogliate le stesse cose.",
-      "doute": "Grazie per aver fatto un test su Quiz Couple. Quando ci si fanno domande sulla propria coppia, dare un nome alle cose aiuta già molto.",
-      "general": "Grazie di seguire Quiz Couple! Vuoi andare oltre un test? Ecco il nostro test più completo."
+      "score": "Grazie per aver fatto un test su Quiz Couple! Se vuoi sapere su cosa siete d'accordo voi due, e su cosa no, abbiamo fatto qualcosa di molto più completo: la valutazione di coppia.",
+      "projet": "Grazie per aver fatto un test su Quiz Couple! Prima di un grande passo, conviene verificare che vogliate tutti e due le stesse cose. A questo serve la valutazione di coppia.",
+      "doute": "Grazie per aver fatto un test su Quiz Couple. Quando ci si fanno domande sulla propria coppia, dare un nome alle cose aiuta già molto. A questo serve la valutazione di coppia.",
+      "general": "Grazie di seguire Quiz Couple! Se vuoi sapere su cosa siete d'accordo voi due, e su cosa no, abbiamo fatto il nostro test più completo: la valutazione di coppia."
     },
     "points": [
       "**100 domande** su 12 aree: soldi, figli, intimità, litigi...",
-      "**Ognuno sul proprio telefono**, senza vedere le risposte dell'altro",
-      "**Basata su più di 30 studi** pubblicati sulla coppia",
-      "**Un report completo**: su cosa siete d'accordo, su cosa no e da dove cominciare"
+      "**Ognuno risponde sul proprio telefono**, senza vedere le risposte dell'altro",
+      "**Domande basate sulla ricerca**: più di 30 studi pubblicati sulla coppia",
+      "**Alla fine, un report** confronta le vostre risposte e vi dice di cosa parlare per prima cosa"
     ],
-    "solo": "Il tuo partner non vuole? [Falla da solo/a](solo).",
+    "solo": "Il tuo partner non vuole partecipare? [Puoi fare la valutazione anche da solo/a](solo).",
     "prixPhrase": {
-      "promo": "−[[pourcent]] % con il codice [[code]], applicato automaticamente",
+      "promo": "−[[pourcent]] % in questo momento, già applicato al pagamento",
       "normal": "Per tutti e due, in un solo pagamento"
     },
-    "bouton": "Scopri la valutazione",
-    "note": "Le domande sono gratuite: paghi alla fine, una volta sola per tutti e due."
+    "bouton": "Scopri come funziona",
+    "note": "Le domande sono gratuite: paghi alla fine, una volta sola per tutti e due.",
+    "ps": "**P.S.** [[accroche]]"
   },
   "e2": {
-    "sujet": "Soldi, figli, faccende: siete sulla stessa lunghezza d'onda?",
+    "sujet": "Conto cointestato o ognuno i suoi soldi?",
     "apercu": {
-      "promo": "Cosa vi mostra il report, e -[[pourcent]] % in questo momento.",
-      "normal": "Cosa vi mostra il report della valutazione, area per area."
+      "promo": "È una delle 100 domande della valutazione di coppia, a −[[pourcent]] % in questo momento.",
+      "normal": "È una delle 100 domande della valutazione di coppia. Tu cosa risponderesti?"
     },
-    "titre": "La vostra coppia, area per area",
+    "titre": "Rispondereste allo stesso modo, voi due?",
     "intro": {
-      "score": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:",
-      "projet": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:",
-      "doute": "Qualche giorno fa ti ho parlato della valutazione di coppia. In due o da solo/a, ecco cosa scoprirai alla fine:",
-      "general": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco cosa scoprirete alla fine:"
+      "score": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "projet": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "doute": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "general": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:"
     },
+    "exemple": "Ognuno risponde per conto suo. Se scegliete la stessa risposta, siete d'accordo. Se uno risponde «[[reponseA]]» e l'altro «[[reponseB]]», il report vi spiega perché conta e vi dà delle domande per parlarne.",
+    "aussi": "Nel report trovate anche:",
     "points": [
-      "**Su cosa siete d'accordo e su cosa no**, domanda per domanda",
-      "**I temi decisivi**, quelli che pesano di più in una coppia",
-      "**Le vostre prossime 4 conversazioni**, con domande per cominciare",
-      "**Il clima della vostra coppia**, visto da ciascuno di voi",
-      "**[Possibile da solo/a](solo)** se il tuo partner non vuole partecipare"
+      "**I temi decisivi** messi in evidenza: quelli che pesano di più in una coppia",
+      "**4 conversazioni da fare**, con domande per cominciare",
+      "**Come ognuno di voi** vive la coppia in questo momento"
     ],
-    "deja": "L'hai già cominciata? Ti aspetta proprio dove l'avevi lasciata.",
+    "solo": "[La valutazione si può fare anche da solo/a](solo), se il tuo partner non vuole partecipare.",
     "prixPhrase": {
       "promo": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema",
       "normal": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema"

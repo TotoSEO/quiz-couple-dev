@@ -208,7 +208,7 @@ test('en réel : une campagne par e-mail et par langue, les bons champs, les lig
   assert.deepEqual(b.envois, { 'e1:fr': 2, 'e2:en': 1 });
   assert.equal(brevo.campagnesCreees.length, 2);
   const fr = brevo.campagnesCreees.find((c) => c.name.includes('e1 · fr'));
-  assert.equal(fr.subject, '100 questions pour faire le point sur votre couple');
+  assert.equal(fr.subject, '100 questions pour faire le point à deux');
   assert.equal(fr.sender.email, REGLAGES.expediteur.email);
   assert.equal(fr.replyTo, REGLAGES.repondreA);
   assert.equal(fr.tag, undefined, 'l\'offre gratuite de Brevo refuse le champ tag');
@@ -219,7 +219,7 @@ test('en réel : une campagne par e-mail et par langue, les bons champs, les lig
   assert.ok(brevo.contactsEcrits.get('p1@exemple.fr').INTRO.includes('questions sur son couple'));
   assert.equal(brevo.contactsEcrits.get('p1@exemple.fr').GROUPE, undefined);
   assert.equal(brevo.contactsEcrits.get('p2@exemple.fr').SALUTATION, 'Coucou\u00a0!');
-  assert.ok(brevo.contactsEcrits.get('p2@exemple.fr').INTRO.includes('Envie d\'aller plus loin'));
+  assert.ok(brevo.contactsEcrits.get('p2@exemple.fr').INTRO.includes('on a fait beaucoup plus complet'));
   assert.equal(brevo.contactsEcrits.get('p3@exemple.fr').SALUTATION, 'Hi Emma!');
   assert.ok(brevo.contactsEcrits.get('p3@exemple.fr').INTRO.startsWith('A few days ago'));
   // La liste de chaque campagne contient exactement ses destinataires.

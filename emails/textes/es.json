@@ -47,50 +47,51 @@
     "mentions": "Aviso legal"
   },
   "e1": {
-    "sujet": "100 preguntas para hacer balance de vuestra pareja",
-    "apercu": "Cada uno responde por su lado, y un informe os muestra en qué estáis de acuerdo y de qué hablar.",
+    "sujet": "100 preguntas para hacer balance en pareja",
+    "apercu": "Cada uno responde en su móvil, y luego un informe os muestra en qué estáis de acuerdo.",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
     "intro": {
-      "score": "¡Gracias por hacer un test en Quiz Couple! ¿Quieres ir más allá? Este es nuestro test más completo.",
-      "projet": "¡Gracias por hacer un test en Quiz Couple! Antes de un gran paso, vale la pena comprobar que queréis lo mismo.",
-      "doute": "Gracias por hacer un test en Quiz Couple. Cuando te haces preguntas sobre tu pareja, ponerles palabras ya ayuda mucho.",
-      "general": "¡Gracias por seguir a Quiz Couple! ¿Quieres ir más allá de un test? Este es nuestro test más completo."
+      "score": "¡Gracias por hacer un test en Quiz Couple! Si quieres saber en qué estáis de acuerdo los dos, y en qué no, hemos hecho algo mucho más completo: la evaluación de pareja.",
+      "projet": "¡Gracias por hacer un test en Quiz Couple! Antes de dar un gran paso, vale la pena comprobar que los dos queréis lo mismo. Para eso sirve la evaluación de pareja.",
+      "doute": "Gracias por hacer un test en Quiz Couple. Cuando te haces preguntas sobre tu pareja, ponerles palabras ya ayuda mucho. Para eso sirve la evaluación de pareja.",
+      "general": "¡Gracias por seguir a Quiz Couple! Si quieres saber en qué estáis de acuerdo los dos, y en qué no, hemos hecho nuestro test más completo: la evaluación de pareja."
     },
     "points": [
       "**100 preguntas** sobre 12 áreas: dinero, hijos, intimidad, discusiones...",
-      "**Cada uno en su teléfono**, sin ver las respuestas del otro",
-      "**Basada en más de 30 estudios** publicados sobre la pareja",
-      "**Un informe completo**: en qué estáis de acuerdo, en qué no y por dónde empezar"
+      "**Cada uno responde en su móvil**, sin ver las respuestas del otro",
+      "**Preguntas basadas en la investigación**: más de 30 estudios publicados sobre la pareja",
+      "**Al final, un informe** compara vuestras respuestas y os dice de qué hablar primero"
     ],
-    "solo": "¿Tu pareja no quiere? [Hazla a solas](solo).",
+    "solo": "¿Tu pareja no quiere participar? [También puedes hacer la evaluación a solas](solo).",
     "prixPhrase": {
-      "promo": "−[[pourcent]] % con el código [[code]], aplicado automáticamente",
+      "promo": "−[[pourcent]] % ahora mismo, ya aplicado al pagar",
       "normal": "Para los dos, en un solo pago"
     },
-    "bouton": "Descubrir la evaluación",
-    "note": "Las preguntas son gratis: pagas al final, una sola vez para los dos."
+    "bouton": "Ver cómo funciona",
+    "note": "Las preguntas son gratis: pagas al final, una sola vez para los dos.",
+    "ps": "**PD:** [[accroche]]"
   },
   "e2": {
-    "sujet": "Dinero, hijos, tareas: ¿estáis en la misma onda?",
+    "sujet": "¿Cuenta común o cada uno su dinero?",
     "apercu": {
-      "promo": "Lo que te muestra el informe, y -[[pourcent]] % ahora mismo.",
-      "normal": "Lo que te muestra el informe de la evaluación, área por área."
+      "promo": "Es una de las 100 preguntas de la evaluación de pareja, con un −[[pourcent]] % ahora mismo.",
+      "normal": "Es una de las 100 preguntas de la evaluación de pareja. ¿Tú qué responderías?"
     },
-    "titre": "Vuestra pareja, área por área",
+    "titre": "¿Responderíais lo mismo los dos?",
     "intro": {
-      "score": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que descubriréis al final:",
-      "projet": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que descubriréis al final:",
-      "doute": "Hace unos días te hablé de la evaluación de pareja. Juntos o a solas, esto es lo que descubrirás al final:",
-      "general": "Hace unos días te hablé de la evaluación de pareja. Esto es lo que descubriréis al final:"
+      "score": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "projet": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "doute": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "general": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:"
     },
+    "exemple": "Cada uno responde por su lado. Si elegís la misma respuesta, es un acuerdo. Si uno responde «[[reponseA]]» y el otro «[[reponseB]]», el informe os explica por qué importa y os da preguntas para hablarlo.",
+    "aussi": "En el informe también encontraréis:",
     "points": [
-      "**En qué estáis de acuerdo y en qué no**, pregunta por pregunta",
-      "**Los temas decisivos**, los que más pesan en una pareja",
-      "**Vuestras 4 próximas conversaciones**, con preguntas para empezar",
-      "**El clima de vuestra pareja**, visto por cada uno",
-      "**[Posible a solas](solo)** si tu pareja no quiere participar"
+      "**Los temas decisivos** destacados: los que más pesan en una pareja",
+      "**4 conversaciones pendientes**, con preguntas para empezar",
+      "**Cómo vive cada uno** la relación ahora mismo"
     ],
-    "deja": "¿Ya la has empezado? Te espera justo donde la dejaste.",
+    "solo": "[La evaluación también se puede hacer a solas](solo), si tu pareja no quiere participar.",
     "prixPhrase": {
       "promo": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine",
       "normal": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine"

@@ -1175,10 +1175,11 @@ phrase, des coches sur ce que le rapport contient en général (jamais un
 chiffre du rapport), le ticket du prix (barré pendant une réduction, et à
 deux « Soit 3,96 € chacun : moins qu'une place de ciné »), le bouton, et en
 note la séance chez un conseiller conjugal (le chiffre de la page de vente
-dans chaque langue). Le rappel reprend en citation la phrase de l'écran
-« rapport prêt » (« Peu de couples prennent un jour le temps de faire ce
-point : vous venez de le faire, il ne reste qu'à lire le résultat ») et son
-sujet dit la réduction en cours. La reprise « moi » montre la barre de
+dans chaque langue). Le rappel met en citation « Le plus long est fait, vous
+avez répondu tous les deux. Il ne reste que la lecture ! » (jusqu'au
+24 octobre 2026 au soir, la phrase de l'écran « rapport prêt », « Peu de
+couples prennent un jour le temps de faire ce point... », une généralité
+qu'on ne peut pas prouver) et son sujet dit la réduction en cours. La reprise « moi » montre la barre de
 progression, les minutes restantes (comptées comme la page de vente, 25 à
 30 minutes pour cent questions, le double seul(e)) et rappelle que les
 questions sont gratuites.

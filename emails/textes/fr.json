@@ -47,50 +47,51 @@
     "mentions": "Mentions légales"
   },
   "e1": {
-    "sujet": "100 questions pour faire le point sur votre couple",
-    "apercu": "Chacun répond de son côté, et un rapport vous montre où vous êtes d'accord et de quoi parler.",
-    "titre": "Faites le point sur votre couple, sans aller chez un pro",
+    "sujet": "100 questions pour faire le point à deux",
+    "apercu": "Chacun répond sur son téléphone, puis un rapport vous montre sur quoi vous êtes d'accord.",
+    "titre": "Faites le point à deux, sans aller chez un pro",
     "intro": {
-      "score": "Merci d'avoir fait un test sur Quiz Couple ! Envie d'aller plus loin ? Voici notre test le plus complet.",
-      "projet": "Merci d'avoir fait un test sur Quiz Couple ! Avant une grande étape, autant vérifier que vous voulez les mêmes choses.",
-      "doute": "Merci d'avoir fait un test sur Quiz Couple. Quand on se pose des questions sur son couple, mettre des mots dessus aide déjà beaucoup.",
-      "general": "Merci de suivre Quiz Couple ! Envie d'aller plus loin qu'un test ? Voici notre test le plus complet."
+      "score": "Merci d'avoir fait un test sur Quiz Couple ! Si tu veux savoir sur quoi vous êtes d'accord tous les deux, et sur quoi vous ne l'êtes pas, on a fait beaucoup plus complet : l'évaluation de couple.",
+      "projet": "Merci d'avoir fait un test sur Quiz Couple ! Avant une grande étape, autant vérifier que vous voulez les mêmes choses tous les deux. C'est à ça que sert l'évaluation de couple.",
+      "doute": "Merci d'avoir fait un test sur Quiz Couple. Quand on se pose des questions sur son couple, mettre des mots dessus aide déjà beaucoup. C'est à ça que sert l'évaluation de couple.",
+      "general": "Merci de suivre Quiz Couple ! Si tu veux savoir sur quoi vous êtes d'accord tous les deux, et sur quoi vous ne l'êtes pas, on a fait notre test le plus complet : l'évaluation de couple."
     },
     "points": [
-      "**100 questions** sur 12 domaines : argent, enfants, intimité, disputes...",
-      "**Chacun sur son téléphone**, sans voir les réponses de l'autre",
-      "**Construite à partir de plus de 30 études** publiées sur le couple",
-      "**Un rapport complet** : vos accords, vos écarts, et par où commencer"
+      "**100 questions** sur 12 domaines : l'argent, les enfants, l'intimité, les disputes...",
+      "**Chacun répond sur son téléphone**, sans voir les réponses de l'autre",
+      "**Des questions qui s'appuient sur la recherche** : plus de 30 études sur le couple",
+      "**À la fin, un rapport** compare vos réponses et vous dit de quoi parler en premier"
     ],
-    "solo": "Ton ou ta partenaire ne veut pas ? [Fais-la seul(e)](solo).",
+    "solo": "Ton ou ta partenaire ne veut pas participer ? [Tu peux aussi faire l'évaluation seul(e)](solo).",
     "prixPhrase": {
-      "promo": "−[[pourcent]] % avec le code [[code]], appliqué automatiquement",
+      "promo": "−[[pourcent]] % en ce moment, déjà appliqué au paiement",
       "normal": "Pour vous deux, en une seule fois"
     },
-    "bouton": "Découvrir l'évaluation",
-    "note": "Les questions sont gratuites : tu paies à la fin, une fois pour vous deux."
+    "bouton": "Voir comment ça marche",
+    "note": "Les questions sont gratuites : tu paies à la fin, une fois pour vous deux.",
+    "ps": "**PS :** [[accroche]]"
   },
   "e2": {
-    "sujet": "Argent, enfants, tâches : êtes-vous sur la même longueur d'onde ?",
+    "sujet": "Compte commun ou chacun son argent ?",
     "apercu": {
-      "promo": "Ce que le rapport vous montre, et -[[pourcent]] % en ce moment.",
-      "normal": "Ce que le rapport de l'évaluation vous montre, domaine par domaine."
+      "promo": "C'est une des 100 questions de l'évaluation de couple, à −[[pourcent]] % en ce moment.",
+      "normal": "C'est une des 100 questions de l'évaluation de couple. Toi, tu réponds quoi ?"
     },
-    "titre": "Votre couple, domaine par domaine",
+    "titre": "Vous répondriez pareil, vous deux ?",
     "intro": {
-      "score": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici ce que vous découvrez à la fin :",
-      "projet": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici ce que vous découvrez à la fin :",
-      "doute": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. À deux ou seul(e), voici ce que tu découvres à la fin :",
-      "general": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici ce que vous découvrez à la fin :"
+      "score": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici une de ses 100 questions :",
+      "projet": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici une de ses 100 questions :",
+      "doute": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici une de ses 100 questions :",
+      "general": "Il y a quelques jours, je t'ai parlé de l'évaluation de couple. Voici une de ses 100 questions :"
     },
+    "exemple": "Chacun répond de son côté. Si vous choisissez la même réponse, c'est un accord. Si l'un répond « [[reponseA]] » et l'autre « [[reponseB]] », le rapport vous explique pourquoi ça compte et vous donne des questions pour en parler.",
+    "aussi": "Dans le rapport, il y a aussi :",
     "points": [
-      "**Vos accords et vos écarts**, question par question",
-      "**Les sujets décisifs**, ceux qui pèsent le plus dans un couple",
-      "**Vos 4 prochaines conversations**, avec des questions pour vous lancer",
-      "**Le climat de votre couple**, vu par chacun de vous",
-      "**[Possible seul(e)](solo)** si ton ou ta partenaire ne veut pas participer"
+      "**Les sujets décisifs** mis en avant : ceux qui pèsent le plus dans un couple",
+      "**4 conversations à avoir**, avec des questions pour vous lancer",
+      "**Comment chacun de vous deux** vit votre couple en ce moment"
     ],
-    "deja": "Déjà commencée ? Elle t'attend là où tu t'étais arrêté(e).",
+    "solo": "[L'évaluation se fait aussi seul(e)](solo), si ton ou ta partenaire ne veut pas.",
     "prixPhrase": {
       "promo": "Soit [[prixChacun]] chacun : moins qu'une place de ciné",
       "normal": "Soit [[prixChacun]] chacun : moins qu'une place de ciné"

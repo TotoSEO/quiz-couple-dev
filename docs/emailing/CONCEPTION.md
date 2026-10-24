@@ -270,20 +270,32 @@ américaine (CAN-SPAM) veut une adresse postale dans un e-mail commercial ;
 si un jour une part des envois anglais part vers les États-Unis, une adresse
 de domiciliation ou une boîte postale fera l'affaire.
 
-- `e1` : le titre de la page de vente (« Faites le point sur votre couple,
-  sans aller chez un pro »), une phrase écrite pour la famille du test
-  (`score`, `projet`, `doute` de `BILAN_ENTREES`, « general » sinon), quatre
-  coches (100 questions sur 12 domaines, chacun sur son téléphone, plus de
-  trente études publiées, comme la page de vente en a le droit,
-  `docs/bilan/RECHERCHE.md`, le rapport complet), « Fais-la seul(e) », le
-  ticket du prix avec le code de la réduction, le bouton, « les questions
-  sont gratuites, tu paies à la fin ».
-- `e2` : « Votre couple, domaine par domaine », une phrase de sa famille,
-  cinq coches sur ce que montre le rapport (accords et écarts, sujets
-  décisifs, quatre prochaines conversations, climat, la façon seul(e)),
-  « tu l'as déjà commencée ? », le ticket avec le prix par personne
-  (« moins qu'une place de ciné »), le bouton, et la séance chez un
-  conseiller conjugal (le chiffre de la page de vente dans chaque langue).
+- `e1` (« 100 questions pour faire le point à deux ») : le titre de la page
+  de vente mis à deux (« Faites le point à deux, sans aller chez un pro »),
+  une phrase écrite pour la famille du test (`score`, `projet`, `doute` de
+  `BILAN_ENTREES`, « general » sinon) qui nomme l'évaluation de couple,
+  quatre coches (100 questions sur 12 domaines, chacun répond sur son
+  téléphone, des questions qui s'appuient sur plus de trente études, comme
+  la page de vente en a le droit, `docs/bilan/RECHERCHE.md`, le rapport qui
+  compare et dit de quoi parler en premier), la façon seul(e), le ticket du
+  prix (« −20 % en ce moment, déjà appliqué au paiement » : le code ne s'écrit
+  plus, il s'applique tout seul), le bouton « Voir comment ça marche », « les
+  questions sont gratuites, tu paies à la fin », la signature et un PS : la
+  phrase de Thomas en haut du prix de la page de vente (`lp.prix.accroche` de
+  `{langue}/bilan.json`, lue à la source).
+- `e2` (« Compte commun ou chacun son argent ? ») : une phrase de rappel,
+  puis une vraie question des cent, telle que l'évaluation la pose (`arg1`,
+  « Votre argent dans le couple, idéalement... », ses quatre réponses en
+  carte, lues dans `{langue}/bilan-questions.json`), ce que le rapport en fait
+  (même réponse, un accord ; « Tout en commun » contre « Chacun son argent »,
+  il explique pourquoi ça compte et donne des questions pour en parler),
+  trois coches sur le reste du rapport (sujets décisifs, quatre conversations
+  à avoir, comment chacun vit le couple), la façon seul(e), le ticket avec le
+  prix par personne (« moins qu'une place de ciné »), le bouton, et la séance
+  chez un conseiller conjugal (le chiffre de la page de vente dans chaque
+  langue). Les workflows qui envoient (`emails-parcours.yml`,
+  `brevo-reglages.yml`) récupèrent donc aussi les dossiers `fr`, `en`, `es`,
+  `de` et `it`.
 - Le test lui-même n'est jamais nommé : « A couché avec un(e) autre ? » ou
   « Couple toxique » dans une boîte de réception, ce serait indiscret.
 - Le prix vient de `coeur.mjs` de l'évaluation, comme sur le site ; la
@@ -302,6 +314,70 @@ dernier envoi, qui marque les contacts du parcours) servent au tri chez
 Brevo ; la famille du test n'y va pas, elle ne sert pas à l'envoi. Il ne reste dans le HTML envoyé que `{{ contact.SALUTATION }}`,
 `{{ contact.INTRO }}` et `{{ unsubscribe }}` ; `verifier` refuse tout autre
 marqueur (le langage de modèles de Brevo lit `{{`, `{%` et `{#`).
+
+### Les mots (24 octobre 2026 au soir)
+
+Thomas, le soir du premier envoi : « Est-ce que tu penses que les mails sont
+parfaits ? Est-ce que les mots sont bien choisis ? En copywriting, avec des
+mots humains pas IA ? ». Ils ne l'étaient pas. Propres, mais écrits comme une
+fiche produit, avec les défauts que la section « Tonalité de rédaction » de
+CLAUDE.md interdit :
+
+- le tutoiement de la bulle (« Coucou Julie ! », « tu paies ») mélangé au
+  vouvoiement du titre et du sujet (« Faites le point sur votre couple »,
+  « êtes-vous ») : on écrit désormais « tu » à la personne et « vous deux »
+  au couple ;
+- des formules toutes faites : « Envie d'aller plus loin ? », « sur la même
+  longueur d'onde » (et leurs équivalents dans les quatre autres langues,
+  qu'un test refuse maintenant) ;
+- les mêmes puces moulées d'un bout à l'autre (« **X**, Y » cinq fois) ;
+- un pronom sans antécédent (« Fais-la seul(e) » sans que l'évaluation soit
+  nommée) et un accord qui ne suivait pas (« notre test le plus complet »,
+  puis « construite ») ;
+- un code de réduction écrit dans le ticket alors qu'il s'applique tout seul
+  (« dois-je le taper ? ») ;
+- rien de concret : aucune question de l'évaluation, aucun exemple de ce que
+  dit le rapport, d'où l'exemple de l'e2 ;
+- une ligne fausse la plupart du temps (« Déjà commencée ? Elle t'attend là
+  où tu t'étais arrêté(e) » : vrai sur le même téléphone seulement, et une
+  adresse donnée à une évaluation ne reçoit pas le parcours).
+
+Dans les e-mails de l'évaluation (Resend), la relance citait « Peu de couples
+prennent un jour le temps de faire ce point... », une généralité qu'on ne
+peut pas prouver : elle dit maintenant « Le plus long est fait, vous avez
+répondu tous les deux. Il ne reste que la lecture ! ». Le « rapport prêt » ne
+parle plus de « vos deux séries », et la puce du solo dit « Ce que {autre}
+répondrait selon vous » (l'allemand disait « ce que tu attends de {autre} »).
+
+### L'onglet Promotions de Gmail
+
+Thomas, le même soir : « c'est relou les mails arrivent dans "promotion" chez
+les gens et pas dans la boîte mail ». Ce qu'on sait :
+
+- Gmail ne publie pas ses règles ; il range chaque message pour chaque
+  destinataire, d'après l'expéditeur, le contenu, la mise en page, les liens
+  et ce que la personne a fait des messages précédents. Un envoi en nombre
+  avec des images, un prix, une réduction, plusieurs liens et un lien de
+  désinscription part presque toujours dans Promotions. Promotions est dans
+  la boîte de réception, ce n'est pas du spam.
+- Brevo écrit lui-même qu'il n'a aucune prise sur l'onglet ; il conseille de
+  demander aux abonnés d'ajouter l'adresse d'envoi à leurs contacts, ou de
+  faire glisser le message dans « Principale » (Gmail propose alors de le
+  faire pour les suivants).
+- Les annotations de l'onglet Promotions (un badge de réduction, une image
+  d'aperçu, en JSON-LD ou en microdonnées) rendent un message plus visible
+  dans Promotions, sans inscription selon la documentation de Google (mise à
+  jour du 8 septembre 2026), mais « The annotation has no effect on the Gmail
+  tab classifier » : elles ne font pas changer d'onglet.
+- Ce qui joue pour l'onglet Principal, d'après les guides des outils d'envoi
+  (pas de Google) : un message qui ressemble à un message de personne à
+  personne, une seule image ou aucune, un seul lien, pas de prix ni de
+  réduction, un expéditeur qui porte un prénom, et des réponses. Rien ne le
+  garantit.
+
+C'est un choix entre la maquette que Thomas a voulue (« plus marketing »,
+donc Promotions) et un e-mail sobre de Thomas, plus personnel ; il reste à
+trancher.
 
 ### Le suivi, sans pistage
 
