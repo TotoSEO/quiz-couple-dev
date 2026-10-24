@@ -855,7 +855,7 @@
       }).join('')
         : '<p class="bil-vide">Personne n\'a encore commencé de cette façon.</p>') + '</div>';
   }
-  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', 'bandeau-promo': 'Barre de la réduction (mobile)', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple' };
+  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', 'bandeau-promo': 'Barre de la réduction (mobile)', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple', 'email-e1': 'E-mail 1 · maquette', 'email-e1-sobre': 'E-mail 1 · sobre', 'email-e2': 'E-mail 2 · maquette', 'email-e2-sobre': 'E-mail 2 · sobre' };
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
@@ -3374,7 +3374,7 @@
       ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Soir</th><th>Mode</th><th>État</th><th>Crédits</th><th class="bil-gauche">Envoyés</th></tr></thead><tbody>' +
         passages.map(function (p) {
           var b = p.bilan || {};
-          var envois = Object.keys(b.envois || {}).map(function (k) { return esc(k.replace(':', ' ')) + ' : ' + nombreAb(b.envois[k]); }).join(' · ');
+          var envois = Object.keys(b.envois || {}).map(function (k) { return esc(k.replace(/:/g, ' ')) + ' : ' + nombreAb(b.envois[k]); }).join(' · ');
           return '<tr><td class="bil-gauche">' + esc(p.jour) + '</td><td>' + esc(b.mode || '') + '</td><td>' + (p.fin ? 'terminé' : '<strong>non terminé</strong>') + '</td><td>' + (b.credits == null ? '' : nombreAb(b.credits)) + '</td><td class="bil-gauche">' + (envois || '—') + '</td></tr>';
         }).join('') + '</tbody></table></div>'
       : '<p class="bil-vide">Aucun passage pour le moment.</p>');

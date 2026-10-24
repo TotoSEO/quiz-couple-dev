@@ -18,6 +18,7 @@
 // du prix, le bouton.
 
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, BASE_URL, getLocalizedUrl } from '../static-site/build/config.js';
 import { PRIX_CENTIMES, PROMO_POURCENT, PROMO_CODE, prixPromo, promoEnCours } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
@@ -25,10 +26,22 @@ export const TYPES = ['e1', 'e2'];
 export const ANGLES = ['score', 'projet', 'doute', 'general'];
 export const LANGUES = LANGUAGES;
 export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}', '{{ unsubscribe }}'];
+// Les deux versions du test A/B (REGLAGES.ab) : « a » la maquette de Claude
+// Design, « b » l'e-mail sobre signé de Thomas (emails/sobre.html).
+export const VERSIONS = ['a', 'b'];
 
 const lire = (chemin) => readFileSync(new URL(chemin, import.meta.url), 'utf8');
 const TEXTES = Object.fromEntries(LANGUES.map((l) => [l, JSON.parse(lire(`./textes/${l}.json`))]));
 const GABARIT = lire('./gabarit.html');
+const SOBRE = lire('./sobre.html');
+
+// La version d'une adresse : la parité du premier octet de son empreinte
+// SHA-256. Une moitié des adresses environ dans chaque version, et toujours la
+// même version pour une même adresse, de l'e1 à l'e2.
+export function versionDe(email) {
+  const h = createHash('sha256').update(String(email || '').trim().toLowerCase()).digest();
+  return h[0] % 2 === 0 ? 'a' : 'b';
+}
 
 // Ce que les e-mails citent de l'évaluation, lu à la source pour ne jamais
 // citer une version périmée (24 octobre 2026, Thomas : « Est-ce que les mots
@@ -100,10 +113,12 @@ export function prixDu(lang, instant = new Date(), promoForcee) {
 
 // La page de l'évaluation, avec la source que l'admin compte (bilan.js,
 // arrivee : `src` et `mode` sont lus puis retirés de l'adresse). Rien qui
-// désigne la personne.
-export function lien(lang, type, { solo = false } = {}) {
+// désigne la personne. La version sobre a sa propre source
+// (`email-e1-sobre`) : c'est ce qui compte ses visites, ses évaluations et
+// ses ventes à part de la maquette.
+export function lien(lang, type, { solo = false, version = 'a' } = {}) {
   const base = getLocalizedUrl('bilanCouple', lang);
-  const q = new URLSearchParams({ src: `email-${type}` });
+  const q = new URLSearchParams({ src: `email-${type}${version === 'b' ? '-sobre' : ''}` });
   if (solo) q.set('mode', 'solo');
   return `${base}?${q}${solo ? '#facons' : ''}`;
 }
@@ -120,11 +135,13 @@ const DOUX = '#785e6c';
 
 // Après échappement : **gras**, et [texte](solo) ou [texte](evaluation) pour
 // un lien vers la façon seul(e) ou vers la page de l'évaluation.
-function enLigne(texte, liens) {
+const LIEN_MAQUETTE = `color:${VIOLET};font-weight:700;text-decoration:underline;`;
+const LIEN_SOBRE = 'color:#1a5fb4;text-decoration:underline;';
+function enLigne(texte, liens, styleLien = LIEN_MAQUETTE) {
   return echapper(texte)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\[([^\]]+)\]\((solo|evaluation)\)/g, (m, mot, cible) =>
-      `<a href="${echapper(liens[cible])}" target="_blank" style="color:${VIOLET};font-weight:700;text-decoration:underline;">${mot}</a>`);
+      `<a href="${echapper(liens[cible])}" target="_blank" style="${styleLien}">${mot}</a>`);
 }
 
 const P = `margin:0 0 16px;font-size:17px;line-height:27px;color:${ENCRE};`;
@@ -191,10 +208,49 @@ function bloc(html, nom, garder) {
 // commencent jamais par une espace.
 const sansCommentaires = (html) => html.replace(/<!-- [\s\S]*?-->[ \t]*\n?/g, '');
 
+// La question d'exemple de l'e2 dans l'e-mail sobre : en gras, ses réponses
+// en tirets, comme on l'écrirait à la main.
+function questionSobre(e) {
+  return `<p style="margin:0 0 16px;padding-left:14px;border-left:3px solid #e6e6e6;"><strong>${echapper(e.question)}</strong>` +
+    e.options.map((o) => `<br>– ${echapper(o)}`).join('') + '</p>';
+}
+
+// La version sobre (« b ») : le même sujet, le même aperçu, la même accroche
+// (le champ INTRO) et le même PS que la maquette, sans image, ticket ni
+// cartes, et un seul lien vers l'évaluation, écrit dans une phrase.
+function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo }) {
+  const s = t.sobre;
+  const enTexte = (x) => enLigne(ecrire(x), liens, LIEN_SOBRE);
+  const p = (html) => `<p style="margin:0 0 16px;">${html}</p>`;
+  const prixEtSolo = p(`${enTexte(s.prix[variante])} ${enTexte(s.solo)}`);
+  const corps = type === 'e1'
+    ? [p('{{ contact.INTRO }}'), p(enTexte(s.e1.texte)), prixEtSolo, p(enTexte(s.e1.lien)), p(enTexte(s.e1.reponse))]
+    : [p('{{ contact.INTRO }}'), questionSobre(ev), p(enTexte(e.exemple)), prixEtSolo, p(enTexte(s.e2.lien))];
+  const html = remplir(sansCommentaires(SOBRE), {
+    LANG: lang,
+    TITRE_PAGE: echapper(sujet),
+    PREHEADER: echapper(apercu),
+    SALUTATION: '{{ contact.SALUTATION }}',
+    CORPS: corps.join('\n'),
+    SIGNATURE: s.signature.map((x) => echapper(ecrire(x))).join('<br>'),
+    PS: e.ps ? `<p style="margin:20px 0 0;">${enTexte(e.ps)}</p>` : '',
+    PIED: `${echapper(ecrire(t.pied.pourquoi))}<br>${echapper(ecrire(t.pied.editeur))}`,
+    DESINSCRIPTION_LIEN: '{{ unsubscribe }}',
+    DESINSCRIPTION_TEXTE: echapper(ecrire(t.pied.desinscription)),
+    MENTIONS_LIEN: echapper(getLocalizedUrl('legalMentions', lang)),
+    MENTIONS_TEXTE: echapper(ecrire(t.pied.mentions)),
+  });
+  verifier(html);
+  return { type, lang, version: 'b', promo, sujet, apercu, html, expediteur: s.expediteur };
+}
+
 // `promo` (vrai ou faux) force l'une des deux variantes du prix : aperçus
-// et tests ; le soir de l'envoi, la date décide.
-export function campagne(type, lang, instant = new Date(), { promo } = {}) {
+// et tests ; le soir de l'envoi, la date décide. `version` : « a » la
+// maquette, « b » l'e-mail sobre (le test A/B, REGLAGES.ab). `expediteur`
+// est le nom d'expéditeur propre à la version, null pour celui des réglages.
+export function campagne(type, lang, instant = new Date(), { promo, version = 'a' } = {}) {
   if (!TYPES.includes(type)) throw new Error(`e-mail inconnu : ${type}`);
+  if (!VERSIONS.includes(version)) throw new Error(`version inconnue : ${version}`);
   const t = textes(lang);
   const e = t[type];
   const p = prixDu(lang, instant, promo);
@@ -207,9 +263,10 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
     accroche: ev.accroche, reponseA: ev.options[EXEMPLE.reponseA], reponseB: ev.options[EXEMPLE.reponseB].split(',')[0],
   };
   const ecrire = (texte) => typo(remplir(texte, v), lang);
-  const liens = { evaluation: lien(lang, type), solo: lien(lang, type, { solo: true }) };
+  const liens = { evaluation: lien(lang, type, { version }), solo: lien(lang, type, { solo: true, version }) };
   const sujet = ecrire(e.sujet);
   const apercu = ecrire(typeof e.apercu === 'string' ? e.apercu : e.apercu[variante]);
+  if (version === 'b') return campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo: p.promo });
   const points = liste(e.points.map((x) => enLigne(ecrire(x), liens)));
 
   // L'e1 présente l'évaluation ; l'e2 montre une de ses questions, ce que le
@@ -261,7 +318,7 @@ export function campagne(type, lang, instant = new Date(), { promo } = {}) {
   const gabarit = sansCommentaires(bloc(bloc(GABARIT, 'prix', true), 'barre', p.promo));
   const html = remplir(gabarit, valeurs);
   verifier(html);
-  return { type, lang, promo: p.promo, sujet, apercu, html };
+  return { type, lang, version: 'a', promo: p.promo, sujet, apercu, html, expediteur: null };
 }
 
 // Le HTML part tel quel chez Brevo : plus aucun marqueur [[...]], et pour

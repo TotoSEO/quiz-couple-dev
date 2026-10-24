@@ -83,6 +83,7 @@ test('installer ne touche à rien quand tout est là, et refait la clé sur dema
 test('les adresses d\'essai : une par variante, dans la même boîte', () => {
   assert.equal(adresseVariante('Thomas@Gmail.com', 'e1', 'fr', 'doute'), 'thomas+e1-fr-doute@gmail.com');
   assert.equal(adresseVariante('thomas+vieux@gmail.com', 'e2', 'en', 'score'), 'thomas+e2-en-score@gmail.com');
+  assert.equal(adresseVariante('thomas@gmail.com', 'e1', 'fr', 'doute', 'b'), 'thomas+e1-fr-doute-b@gmail.com');
 });
 
 test('essai : brouillons d\'avant effacés, une campagne par e-mail et par langue, des contacts sans PARCOURS', async () => {
@@ -104,10 +105,22 @@ test('essai : brouillons d\'avant effacés, une campagne par e-mail et par langu
   assert.ok(contacts[1][2].INTRO.includes('questions sur son couple'));
   const campagnes = brevo.appels.filter(([x]) => x === 'creerCampagne').map(([, c]) => c);
   assert.equal(campagnes.length, 2);
-  assert.ok(campagnes[0].subject.startsWith('[Essai e1 fr] '));
+  assert.ok(campagnes[0].subject.startsWith('[Essai e1 fr a] '));
+  assert.equal(campagnes[0].sender.name, REGLAGES.expediteur.name);
   assert.deepEqual(campagnes[0].recipients, { listIds: [4] });
   const envois = brevo.appels.filter(([x]) => x === 'envoyerEssai');
   assert.deepEqual(envois[0][2], ['thomas+e1-fr-score@gmail.com', 'thomas+e1-fr-doute@gmail.com']);
+});
+
+test('essai des deux versions du test A/B : une campagne par version, l\'e-mail sobre signé de Thomas', async () => {
+  const brevo = fauxBrevo({ dossiers: [{ id: 3, name: REGLAGES.dossier }], listes: [{ id: 4, name: REGLAGES.listeEssais }] });
+  const n = await essai({ brevo, adresse: 'thomas@gmail.com', types: ['e1'], langues: ['fr'], angles: ['score'], prenom: 'Thomas', versions: ['a', 'b'], maintenant: new Date('2026-10-24T17:00:00Z'), journal: silence });
+  assert.equal(n, 2);
+  const campagnes = brevo.appels.filter(([x]) => x === 'creerCampagne').map(([, c]) => c);
+  assert.deepEqual(campagnes.map((c) => c.subject.slice(0, 15)), ['[Essai e1 fr a]', '[Essai e1 fr b]']);
+  assert.deepEqual(campagnes.map((c) => c.sender.name), [REGLAGES.expediteur.name, 'Thomas de Quiz Couple']);
+  assert.ok(campagnes[1].htmlContent.includes('src=email-e1-sobre') && !campagnes[1].htmlContent.includes('<img'));
+  assert.deepEqual(brevo.appels.filter(([x]) => x === 'envoyerEssai').map(([, , d]) => d), [['thomas+e1-fr-score@gmail.com'], ['thomas+e1-fr-score-b@gmail.com']]);
 });
 
 test('essai refuse une adresse invalide, et s\'arrête sans dossier ni liste d\'essais', async () => {

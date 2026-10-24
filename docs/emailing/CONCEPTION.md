@@ -376,8 +376,65 @@ les gens et pas dans la boîte mail ». Ce qu'on sait :
   garantit.
 
 C'est un choix entre la maquette que Thomas a voulue (« plus marketing »,
-donc Promotions) et un e-mail sobre de Thomas, plus personnel ; il reste à
-trancher.
+donc Promotions) et un e-mail sobre de Thomas, plus personnel. Thomas a
+préféré mesurer : c'est le test A/B de la section suivante.
+
+### Le test A/B (25 octobre 2026)
+
+Thomas : « On peut peut-être faire de l'AB test ? Tu envoies 50 % de mail
+promo et 50 % de mails sobres, et on regarde d'ici 3 jours les résultats
+ok ? ».
+
+- **Les deux versions :** « a », la maquette (`gabarit.html`) ; « b », un
+  e-mail sobre signé de Thomas (`sobre.html`, textes `sobre` de
+  `emails/textes/<langue>.json`) : du texte noir sur fond blanc, aucune
+  image, aucun bouton, un seul lien dans le texte (la page de l'évaluation),
+  le prix dit une fois dans une phrase, « Si tu as une question, tu peux
+  répondre directement à cet e-mail », et l'expéditeur « Thomas de Quiz
+  Couple » (Thomas from, von, di) à la même adresse d'envoi. Le sujet et
+  l'aperçu sont les mêmes que ceux de la maquette : seul le corps change, et
+  c'est lui qu'on compare. L'e2 sobre garde la question d'exemple (compte
+  commun ou chacun son argent) et ce que le rapport en fait.
+- **Qui reçoit quoi :** chaque adresse a sa version, tirée de son empreinte
+  (`versionDe` dans contenu.mjs : premier octet du SHA-256 de l'adresse en
+  minuscules, pair « a », impair « b ») : la moitié à peu près de chaque
+  côté (1 009 et 991 sur 2 000 adresses d'essai), la même version pour l'e1
+  et l'e2, rien à garder en base. Un e2 dont l'e1 est parti avant le premier
+  soir du test (le 24 octobre au soir, cent e1 en maquette) reste en
+  maquette (`versionPour` dans parcours.mjs, qui lit la date de l'e1 dans
+  `depuis`).
+- **Les campagnes :** une par e-mail, par langue et par version, sur sa
+  propre liste du soir (« Parcours · e1 · fr · b · 2026-10-25 18:55 ») ;
+  le ménage reconnaît les noms avec et sans version.
+- **Ce qu'on mesure :** les liens de la version sobre portent leur propre
+  source (`?src=email-e1-sobre`, `email-e2-sobre`), comptée par l'onglet
+  Évaluation comme les autres (visites de la page, « Commencer »,
+  évaluations créées, paiements ouverts, ventes, montant) ; et Brevo donne
+  pour chaque campagne ses chiffres d'ensemble (envoyés, remis, ouvertures,
+  clics, désinscriptions, plaintes, rebonds). Avec le suivi anonymisé,
+  Brevo compte toujours les ouvertures et les clics d'une campagne, sans les
+  rattacher à une personne (centre d'aide de Brevo, articles sur le suivi
+  anonymisé et sur la recommandation de la CNIL) : on ne lit que ces
+  totaux.
+- **Le bilan :** section « Le test A/B » de l'action `verif` de
+  brevo-reglages.yml (`emails/ab.mjs`) : une ligne par e-mail et par
+  version, toutes langues et tous soirs confondus depuis `abDepuis`. Une
+  campagne n'est jamais montrée seule : une campagne de trois personnes
+  dirait qui a ouvert.
+- **Ce qu'on peut en conclure au bout de trois jours :** les soirs du 25,
+  26 et 27 octobre font à peu près 275 e1 par version (150, 200, puis 300
+  moins les e2 du 27) ; les e2 du 27 vont tous à la cohorte du 24, en
+  maquette, et les premiers e2 du test partent le 28. Le 28 au matin, on
+  compare donc l'e1 seulement. Les ventes seront trop peu nombreuses pour
+  conclure ; les clics et les visites de la page disent une tendance, et
+  seul un écart net (du simple au double) se lit à cette taille. Les
+  ouvertures sont gonflées par Apple Mail (Brevo les compte à part dans
+  `appleMppOpens`) et ne disent pas l'onglet : personne ne peut savoir dans
+  quel onglet de Gmail chaque e-mail est arrivé. Les réponses à la version
+  sobre arrivent dans infoquizcouple@gmail.com et comptent aussi.
+- **L'arrêter :** une PR qui met `ab: false` et la version retenue dans
+  `version` (reglages.mjs) ; `verif` écrit alors « arrêté » et garde les
+  chiffres du test.
 
 ### Le suivi, sans pistage
 
@@ -402,6 +459,10 @@ dépend donc des ouvertures ni des clics :
 - **le filet** : chaque soir, les contacts du parcours bloqués chez Brevo
   depuis trois jours passent en `desinscrit`, au cas où le webhook en
   aurait manqué un.
+- **le test A/B** : les seuls chiffres d'ouverture et de clic qu'on lit sont
+  les totaux de chaque campagne chez Brevo, additionnés par version (section
+  précédente) ; rien ne se décide pour une personne d'après ce qu'elle a
+  ouvert.
 
 Le réglage de Brevo qui anonymise les ouvertures et les clics des contacts
 sans consentement au suivi doit être activé : sans lui, Brevo suit chaque
@@ -474,5 +535,5 @@ crédits, doublon, refus, reprise, ménage, filet) et
 `node --test supabase/functions/_shared/emails/test/*.test.mjs` (lecture des
 événements). Les règles de la migration (qui reçoit quoi, événements,
 droits) ont été jouées sur un Postgres 16 local. `node emails/apercu.mjs
-<dossier>` écrit les 80 aperçus (deux e-mails, cinq langues, quatre familles,
-avec et sans prénom).
+<dossier>` écrit les 160 aperçus (deux e-mails, cinq langues, quatre
+familles, avec et sans prénom, en maquette et en version sobre).

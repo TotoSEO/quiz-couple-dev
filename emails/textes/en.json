@@ -98,5 +98,25 @@
     },
     "bouton": "Take the assessment",
     "note": "For comparison: a session with a relationship counsellor costs between £50 and £90."
+  },
+  "sobre": {
+    "expediteur": "Thomas from Quiz Couple",
+    "signature": [
+      "Talk soon,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "The questions are free, and the report costs [[prix]] for both of you right now, instead of [[prixBase]].",
+      "normal": "The questions are free, and the report costs [[prix]] for both of you."
+    },
+    "solo": "You can also take the assessment on your own, if your partner doesn't want to.",
+    "e1": {
+      "texte": "You each answer 100 questions on your own phone, without seeing the other's answers. Money, kids, arguments, intimacy... At the end, a report compares your answers and tells you what to talk about first.",
+      "lien": "It's all explained here: [see the relationship assessment](evaluation).",
+      "reponse": "If you have a question, you can simply reply to this email."
+    },
+    "e2": {
+      "lien": "If you feel like it: [take the relationship assessment](evaluation)."
+    }
   }
 }

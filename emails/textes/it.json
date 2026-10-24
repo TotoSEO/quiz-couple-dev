@@ -98,5 +98,25 @@
     },
     "bouton": "Fai la valutazione",
     "note": "Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas di Quiz Couple",
+    "signature": [
+      "A presto,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due in questo momento, invece di [[prixBase]].",
+      "normal": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due."
+    },
+    "solo": "La valutazione si può fare anche da solo/a, se il tuo partner non vuole.",
+    "e1": {
+      "texte": "Rispondete ognuno a 100 domande sul proprio telefono, senza vedere le risposte dell'altro. Soldi, figli, litigi, intimità... Alla fine, un report confronta le vostre risposte e vi dice di cosa parlare per prima cosa.",
+      "lien": "Qui trovi tutto spiegato: [vedi la valutazione di coppia](evaluation).",
+      "reponse": "Se hai una domanda, puoi rispondere direttamente a questa email."
+    },
+    "e2": {
+      "lien": "Se ti va: [fai la valutazione di coppia](evaluation)."
+    }
   }
 }

@@ -5,16 +5,17 @@
 // même boîte (prenom+e1-fr-doute@gmail.com arrive dans prenom@gmail.com),
 // pour que chacune ait ses propres champs. Brevo limite les essais à 50
 // par jour. Les brouillons d'essai de la fois d'avant sont supprimés.
+// `versions` : « a » la maquette, « b » l'e-mail sobre du test A/B.
 //
-//   node emails/essai.mjs <adresse> [types=e1,e2] [langues=fr] [angles=score,projet,doute] [prenom=Thomas]
+//   node emails/essai.mjs <adresse> [types=e1,e2] [langues=fr] [angles=score,projet,doute] [prenom=Thomas] [versions=a]
 
 import { clientBrevo } from './brevo.mjs';
 import { REGLAGES } from './reglages.mjs';
-import { TYPES, LANGUES, ANGLES, campagne, attributsContact } from './contenu.mjs';
+import { TYPES, LANGUES, ANGLES, VERSIONS, campagne, attributsContact } from './contenu.mjs';
 
-export function adresseVariante(adresse, type, lang, angle) {
+export function adresseVariante(adresse, type, lang, angle, version = 'a') {
   const [local, domaine] = String(adresse).split('@');
-  return `${local.split('+')[0]}+${type}-${lang}-${angle}@${domaine}`.toLowerCase();
+  return `${local.split('+')[0]}+${type}-${lang}-${angle}${version === 'b' ? '-b' : ''}@${domaine}`.toLowerCase();
 }
 
 const liste = (texte, permis, defaut) => {
@@ -24,9 +25,9 @@ const liste = (texte, permis, defaut) => {
   return choisis;
 };
 
-export async function essai({ brevo, adresse, types, langues, angles, prenom, maintenant = new Date(), journal = (m) => console.log(m) }) {
+export async function essai({ brevo, adresse, types, langues, angles, prenom, versions = ['a'], maintenant = new Date(), journal = (m) => console.log(m) }) {
   if (!/^[^\s@+]+(\+[^\s@]*)?@[^\s@]+\.[^\s@]+$/.test(String(adresse || ''))) throw new Error('adresse d\'essai invalide');
-  const nombre = types.length * langues.length * angles.length;
+  const nombre = types.length * langues.length * angles.length * versions.length;
 
   const d = await brevo.dossiers();
   const dossier = ((d && d.folders) || []).find((x) => x.name === REGLAGES.dossier);
@@ -43,34 +44,36 @@ export async function essai({ brevo, adresse, types, langues, angles, prenom, ma
   const jour = maintenant.toISOString().slice(0, 10);
   for (const type of types) {
     for (const lang of langues) {
-      const c = campagne(type, lang, maintenant);
-      const destinataires = [];
-      for (const angle of angles) {
-        const a = attributsContact({ type, lang, angle, prenom }, jour);
-        delete a.PARCOURS; // un contact d'essai n'est pas du parcours
-        const dest = adresseVariante(adresse, type, lang, angle);
-        await brevo.contact(dest, a, [essais.id]);
-        destinataires.push(dest);
+      for (const version of versions) {
+        const c = campagne(type, lang, maintenant, { version });
+        const destinataires = [];
+        for (const angle of angles) {
+          const a = attributsContact({ type, lang, angle, prenom }, jour);
+          delete a.PARCOURS; // un contact d'essai n'est pas du parcours
+          const dest = adresseVariante(adresse, type, lang, angle, version);
+          await brevo.contact(dest, a, [essais.id]);
+          destinataires.push(dest);
+        }
+        const cree = await brevo.creerCampagne({
+          name: `Essai · ${type} · ${lang} · ${version} · ${maintenant.toISOString().slice(0, 16)}`,
+          sender: { name: c.expediteur || REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
+          replyTo: REGLAGES.repondreA,
+          subject: `[Essai ${type} ${lang} ${version}] ${c.sujet}`,
+          htmlContent: c.html,
+          recipients: { listIds: [essais.id] },
+          mirrorActive: false,
+          inlineImageActivation: false,
+        });
+        await brevo.envoyerEssai(cree.id, destinataires);
+        journal(`${type} ${lang} ${version} : ${destinataires.length} essai(s) envoyé(s) (${angles.join(', ')})${c.promo ? ', avec la réduction' : ''}.`);
       }
-      const cree = await brevo.creerCampagne({
-        name: `Essai · ${type} · ${lang} · ${maintenant.toISOString().slice(0, 16)}`,
-        sender: { name: REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
-        replyTo: REGLAGES.repondreA,
-        subject: `[Essai ${type} ${lang}] ${c.sujet}`,
-        htmlContent: c.html,
-        recipients: { listIds: [essais.id] },
-        mirrorActive: false,
-        inlineImageActivation: false,
-      });
-      await brevo.envoyerEssai(cree.id, destinataires);
-      journal(`${type} ${lang} : ${destinataires.length} essai(s) envoyé(s) (${angles.join(', ')})${c.promo ? ', avec la réduction' : ''}.`);
     }
   }
   return nombre;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const [adresse, types, langues, angles, prenom] = process.argv.slice(2);
+  const [adresse, types, langues, angles, prenom, versions] = process.argv.slice(2);
   try {
     const n = await essai({
       brevo: clientBrevo(process.env.BREVO_API_KEY),
@@ -79,6 +82,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       langues: liste(langues, LANGUES, ['fr']),
       angles: liste(angles, ANGLES, ['score', 'projet', 'doute']),
       prenom: (prenom || '').trim() || null,
+      versions: liste(versions, VERSIONS, ['a']),
     });
     console.log(`${n} e-mail(s) d'essai envoyé(s).`);
   } catch (e) {

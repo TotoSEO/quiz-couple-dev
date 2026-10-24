@@ -98,5 +98,25 @@
     },
     "bouton": "Hacer la evaluación",
     "note": "Para comparar: una sesión con un consejero de pareja cuesta entre 50 y 90 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas de Quiz Couple",
+    "signature": [
+      "¡Hasta pronto!",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos ahora mismo, en lugar de [[prixBase]].",
+      "normal": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos."
+    },
+    "solo": "La evaluación también se puede hacer a solas, si tu pareja no quiere.",
+    "e1": {
+      "texte": "Cada uno responde a 100 preguntas en su móvil, sin ver las respuestas del otro. Dinero, hijos, discusiones, intimidad... Al final, un informe compara vuestras respuestas y os dice de qué hablar primero.",
+      "lien": "Aquí lo tienes todo explicado: [ver la evaluación de pareja](evaluation).",
+      "reponse": "Si tienes alguna pregunta, puedes responder directamente a este correo."
+    },
+    "e2": {
+      "lien": "Si te apetece: [hacer la evaluación de pareja](evaluation)."
+    }
   }
 }

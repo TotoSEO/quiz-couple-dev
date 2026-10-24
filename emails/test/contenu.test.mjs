@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  TYPES, LANGUES, ANGLES, MARQUEURS_BREVO, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu,
+  TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
 } from '../contenu.mjs';
 import { CAPTURE_PAGES } from '../../static-site/build/config.js';
 
@@ -189,8 +189,60 @@ test('les textes évitent les formules toutes faites relevées le 24 octobre 202
   for (const type of TYPES) {
     for (const lang of LANGUES) {
       const c = campagne(type, lang, SOIR);
+      c.html += campagne(type, lang, SOIR, { version: 'b' }).html;
       const intros = ANGLES.map((angle) => attributsContact({ type, lang, angle }, 'x').INTRO).join(' ');
       assert.ok(!interdits.test(c.sujet + c.apercu + c.html + intros), `${type} ${lang}`);
     }
   }
+});
+
+test('le test A/B : chaque adresse a sa version, la même de l\'e1 à l\'e2, et à peu près une sur deux', () => {
+  assert.equal(versionDe('Lea@Exemple.FR '), versionDe('lea@exemple.fr'));
+  const n = { a: 0, b: 0 };
+  for (let i = 0; i < 4000; i++) n[versionDe(`personne${i}@exemple.fr`)]++;
+  assert.ok(n.a > 1800 && n.b > 1800, JSON.stringify(n));
+  assert.deepEqual(VERSIONS, ['a', 'b']);
+  assert.throws(() => campagne('e1', 'fr', SOIR, { version: 'c' }), /version/);
+});
+
+test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation, signée de Thomas, dans les cinq langues', () => {
+  const lireT = (l) => lireTextes(l);
+  for (const type of TYPES) {
+    for (const lang of LANGUES) {
+      for (const promo of [true, false]) {
+        const c = campagne(type, lang, SOIR, { version: 'b', promo });
+        const t = lireT(lang);
+        assert.equal(c.version, 'b');
+        assert.equal(c.expediteur, t.sobre.expediteur, `${type} ${lang}`);
+        assert.ok(verifier(c.html));
+        for (const m of MARQUEURS_BREVO) assert.ok(c.html.includes(m), `${type} ${lang} ${m}`);
+        assert.match(c.html, new RegExp(`<html lang="${lang}"`));
+        assert.ok(!/<img|line-through|<!--/.test(c.html), `${type} ${lang} : image, prix barré ou commentaire`);
+        // Le même sujet et le même aperçu que la maquette : seul le corps change.
+        const a = campagne(type, lang, SOIR, { promo });
+        assert.equal(c.sujet, a.sujet);
+        assert.equal(c.apercu, a.apercu);
+        assert.equal(a.expediteur, null);
+        // Les liens : l'évaluation une fois (avec la source de la version
+        // sobre), la désinscription et les mentions légales.
+        const liens = [...c.html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
+        assert.equal(liens.length, 3, `${type} ${lang} : ${liens.join(' ')}`);
+        assert.equal(liens.filter((x) => x.includes(`src=email-${type}-sobre`)).length, 1);
+        assert.ok(liens.includes('{{ unsubscribe }}'));
+        // Le prix, dit dans une phrase, et la réduction seulement quand elle vaut.
+        const p = prixDu(lang, SOIR, promo);
+        // Une fois chacun : avec la réduction, « 7,92 € ... au lieu de 9,90 € » ;
+        // sans, le prix habituel seul.
+        const fois = (x) => c.html.split(x).length - 1;
+        assert.equal(fois(p.prix), 1, `${type} ${lang} : prix`);
+        assert.equal(fois(p.prixBase), 1, `${type} ${lang} : prix habituel`);
+      }
+    }
+  }
+  // Le PS de Thomas reste dans l'e1 sobre, la question d'exemple dans l'e2 sobre.
+  const e1 = campagne('e1', 'fr', SOIR, { version: 'b' });
+  assert.ok(e1.html.includes('<strong>PS\u00a0:</strong> Les couples oublient trop souvent'));
+  const e2 = campagne('e2', 'fr', SOIR, { version: 'b' });
+  assert.ok(e2.html.includes('<strong>Votre argent dans le couple, idéalement...</strong><br>– Tout en commun'));
+  assert.ok(e2.html.includes('«\u00a0Tout en commun\u00a0» et l\'autre «\u00a0Chacun son argent\u00a0»'));
 });
