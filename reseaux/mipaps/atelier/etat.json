@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-23T08:29:38.317Z",
+  "genere_le": "2026-10-24T03:14:29.267Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-23",
+  "aujourdhui": "2026-10-24",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 38,
+  "reserve_jours": 37,
   "a_remplir": [
     {
       "jour": "2026-11-30",
@@ -791,6 +791,21 @@
       "jour": "2027-01-31",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1189,7 +1204,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "je t'écris « t'es où ? » alors que t'es dans la pièce d'à côté",
       "erreur": null
     },
@@ -1198,7 +1213,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1243,7 +1258,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "t'es la première personne que j'ai envie d'appeler quand il se passe un truc.",
       "erreur": null
     },
@@ -1252,7 +1267,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2520,7 +2535,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-24",
+      "jour": "2026-10-25",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -2528,7 +2543,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-23",
+      "jour": "2026-10-25",
       "creneau": "soir"
     },
     "mipaps-post": {
@@ -2858,6 +2873,34 @@
       "vues": 1489,
       "partages": 2,
       "enregistrements": 1
+    },
+    {
+      "variante_id": "c4f93dd3-1241-45ab-bf20-52750020a8d1",
+      "releve": "j7",
+      "vues": 1,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "6bf6e469-d82f-4410-9088-ea2be2f904cb",
+      "releve": "j7",
+      "vues": 2020,
+      "partages": 32,
+      "enregistrements": 34
+    },
+    {
+      "variante_id": "3a1d43df-bcfb-4ab3-a49e-6c51e6db7f30",
+      "releve": "j7",
+      "vues": 774,
+      "partages": 5,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "6e5665c3-bda9-4ed6-9b9e-8b2fcc0a9f59",
+      "releve": "j7",
+      "vues": 2,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
