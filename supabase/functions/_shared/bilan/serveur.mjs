@@ -752,7 +752,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     for (const dest of restants) {
       if (envois.length >= ENVOIS_MAX) break;
       const j = await jetonMail(jetons, dest.role);
-      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, pages: ligne.rapport_pages, mode, url: lienDe(ligne, j.jeton) });
+      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, mode, url: lienDe(ligne, j.jeton), moi: ligne[dest.role + '_prenom'] });
       let reussi = false;
       try {
         await courriel.envoyer({ a: dest.email, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });

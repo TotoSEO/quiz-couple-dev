@@ -343,7 +343,8 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   // adresse, qui ouvre l'évaluation du bon rôle et lance le PDF.
   const m0 = courriel.envoyes[0];
   assert.equal(m0.pieces, undefined, 'aucune pièce jointe');
-  assert.match(m0.texte, /24 pages/);
+  // Chacun est salué par son prénom, dans la bulle des personnages.
+  for (const m of courriel.envoyes) assert.ok(m.html.includes(m.a === 'lea@exemple.fr' ? 'Bonjour Léa' : 'Bonjour Thomas'), m.a);
   for (const m of courriel.envoyes) {
     const u = m.texte.match(/https:\/\/quiz-couple\.com\/evaluation-de-couple\/#b=[0-9a-f-]+&t=([A-Za-z0-9_-]+)&pdf=1/);
     assert.ok(u, 'le lien de téléchargement dans ' + m.a);

@@ -1,13 +1,20 @@
-// L'e-mail qui porte le rapport de l'évaluation de couple en PDF, dans la
-// langue du bilan, et son envoi par Resend (la clé RESEND_API_KEY des
-// fonctions Supabase, déjà là pour les e-mails de l'ebook, depuis la même
-// famille d'adresses, voir EXPEDITEURS). JavaScript pur : testé en Node, utilisé
-// par la fonction `bilan` (Deno). Les textes `*Solo` servent au rapport
-// d'une évaluation faite seul(e), qui ne part qu'à la personne qui a répondu.
+// Les e-mails de l'évaluation de couple, dans la langue du bilan, et leur
+// envoi par Resend (la clé RESEND_API_KEY des fonctions Supabase, déjà là pour
+// les e-mails de l'ebook, depuis la même famille d'adresses, voir
+// EXPEDITEURS) : le lien du rapport, le lien personnel (« recevoir mon lien »,
+// « retrouver mon évaluation »), « rapport prêt », le rappel et la reprise.
+// Tous passent par la carte commune des e-mails (../emails/carte.mjs), la
+// maquette des e-mails du parcours Brevo. JavaScript pur : testé en Node,
+// utilisé par la fonction `bilan` (Deno). Les textes `*Solo` servent à une
+// évaluation faite seul(e), qui ne s'adresse qu'à la personne qui a répondu.
 //
 // Un message par adresse, jamais une adresse en copie d'une autre. Le corps
 // ne dit rien du contenu du rapport : il peut être lu par-dessus l'épaule,
 // sur l'écran verrouillé d'un téléphone.
+
+import { SITE, EDITEUR, remplir, insec, carte, texteCarte } from '../emails/carte.mjs';
+
+export { EDITEUR };
 
 // L'expéditeur dit « résultats » dans la langue du destinataire, plus
 // jamais « noreply » (Thomas, 20 octobre 2026 : « ce genre d'email part
@@ -26,7 +33,6 @@ export const EXPEDITEUR = EXPEDITEURS.fr;
 export const REPONDRE_A = 'infoquizcouple@gmail.com';
 export function expediteur(lang) { return EXPEDITEURS[lang] || EXPEDITEUR; }
 
-const SITE = 'https://quiz-couple.com';
 const PAGES = {
   fr: '/evaluation-de-couple/',
   en: '/en/relationship-assessment/',
@@ -51,28 +57,21 @@ export const CGV = {
   de: '/de/agb/',
   it: '/it/condizioni-generali-di-vendita/',
 };
-// L'éditeur, en bas de chaque message : le nom de la boîte et le site, rien
-// de plus (Thomas, 20 octobre 2026 : « on peut juste mettre le nom de la boîte
-// et du site »). L'identité complète du vendeur (forme, adresse, SIRET),
-// que la loi veut sur un support durable au moment de la confirmation du
-// contrat (L221-13 et L221-5), est écrite en dernière page du rapport PDF
-// joint à l'e-mail du rapport (`EDITEUR` de bilan/document.mjs), et sur les
-// mentions légales et les CGV du site, dont l'e-mail donne le lien.
-export const EDITEUR = 'Quiz Couple · Visibilitea · quiz-couple.com';
-
+// L'e-mail du lien du rapport, dans la carte commune depuis le 24 octobre
+// 2026 (Thomas : « tu peux redesigner comme pour les mails marketing les
+// mails d'envois de pdf et tout aussi ? comme ça on uniformise les mails ») :
+// un titre, une phrase, trois coches pour bien le lire, le bouton du PDF et
+// le lien pour le lire en ligne. Le pied garde la confirmation légale.
 const TEXTES = {
   fr: {
     sujet: 'Votre évaluation de couple : le rapport de {a} et {b}',
     sujetSolo: 'Votre évaluation de couple : votre rapport, {a}',
     avant: 'Votre rapport est prêt : téléchargez-le en PDF ou lisez-le en ligne.',
     titre: 'Votre rapport est prêt',
-    p1: 'Bonjour, l\'évaluation de couple de {a} et {b} est prête ({pages} pages). Téléchargez-la en PDF avec le bouton ci-dessous, ou lisez-la en ligne.',
-    p1SansPages: 'Bonjour, l\'évaluation de couple de {a} et {b} est prête. Téléchargez-la en PDF avec le bouton ci-dessous, ou lisez-la en ligne.',
-    p1Solo: 'Bonjour {a}, le rapport de votre évaluation de couple est prêt ({pages} pages). Téléchargez-le en PDF avec le bouton ci-dessous, ou lisez-le en ligne.',
-    p1SoloSansPages: 'Bonjour {a}, le rapport de votre évaluation de couple est prêt. Téléchargez-le en PDF avec le bouton ci-dessous, ou lisez-le en ligne.',
-    p2: 'Le plus simple est de le lire chacun de son côté, puis d\'en parler ensemble. Si vous ne savez pas par où commencer, ouvrez la partie « Vos quatre prochaines conversations » : ce sont les sujets qui comptent le plus pour vous deux en ce moment.',
-    p2Solo: 'Prenez le temps de le lire au calme. Si vous ne savez pas par où commencer, ouvrez la partie « Vos quatre prochaines conversations » : ce sont les sujets par lesquels commencer, quand vous vous sentirez prêt(e) à en parler.',
-    p3: 'Ce lien vous est personnel : il ouvre votre évaluation sur n\'importe quel appareil, pendant six mois. Ne le transférez à personne.',
+    phrase: 'L\'évaluation de {a} et {b} est terminée. Téléchargez le rapport en PDF, ou lisez-le en ligne.',
+    phraseSolo: 'Votre évaluation est terminée. Téléchargez le rapport en PDF, ou lisez-le en ligne.',
+    puces: ['**Lisez-le chacun de votre côté**, puis parlez-en ensemble', '**Par où commencer ?** Par la partie « Vos quatre prochaines conversations »', '**Votre lien est personnel** : il marche six mois, sur n\'importe quel appareil'],
+    pucesSolo: ['**Lisez-le au calme**, à votre rythme', '**Par où commencer ?** Par la partie « Vos quatre prochaines conversations »', '**Votre lien est personnel** : il marche six mois, sur n\'importe quel appareil'],
     bouton: 'Télécharger le rapport (PDF)',
     enLigne: 'Le lire en ligne',
     note: 'Ce rapport contient vos réponses à tous les deux : gardez-le pour vous deux.',
@@ -86,13 +85,10 @@ const TEXTES = {
     sujetSolo: 'Your relationship assessment: your report, {a}',
     avant: 'Your report is ready: download it as a PDF or read it online.',
     titre: 'Your report is ready',
-    p1: 'Hi, the relationship assessment for {a} and {b} is ready ({pages} pages). Download it as a PDF with the button below, or read it online.',
-    p1SansPages: 'Hi, the relationship assessment for {a} and {b} is ready. Download it as a PDF with the button below, or read it online.',
-    p1Solo: 'Hi {a}, the report of your relationship assessment is ready ({pages} pages). Download it as a PDF with the button below, or read it online.',
-    p1SoloSansPages: 'Hi {a}, the report of your relationship assessment is ready. Download it as a PDF with the button below, or read it online.',
-    p2: 'The easiest way is for each of you to read it on your own first, then talk it through together. If you\'re not sure where to start, go to "Your next four conversations": those are the topics that matter most for the two of you right now.',
-    p2Solo: 'Take the time to read it somewhere quiet. If you\'re not sure where to start, go to "Your next four conversations": those are the topics to begin with, whenever you feel ready to talk.',
-    p3: 'This link is personal: it opens your assessment on any device, for six months. Don\'t forward it to anyone.',
+    phrase: 'The assessment for {a} and {b} is complete. Download the report as a PDF, or read it online.',
+    phraseSolo: 'Your assessment is complete. Download the report as a PDF, or read it online.',
+    puces: ['**Read it separately first**, then talk it through together', '**Where to start?** With the part called "Your next four conversations"', '**Your link is personal**: it works for six months, on any device'],
+    pucesSolo: ['**Read it somewhere quiet**, at your own pace', '**Where to start?** With the part called "Your next four conversations"', '**Your link is personal**: it works for six months, on any device'],
     bouton: 'Download the report (PDF)',
     enLigne: 'Read it online',
     note: 'This report contains both of your answers, so keep it between the two of you.',
@@ -105,15 +101,13 @@ const TEXTES = {
     sujet: 'Vuestra evaluación de pareja: el informe de {a} y {b}',
     sujetSolo: 'Tu evaluación de pareja: tu informe, {a}',
     avant: 'Vuestro informe está listo: descargadlo en PDF o leedlo en línea.',
+    avantSolo: 'Tu informe está listo: descárgalo en PDF o léelo en línea.',
     titre: 'Vuestro informe está listo',
     titreSolo: 'Tu informe está listo',
-    p1: 'Hola, la evaluación de pareja de {a} y {b} está lista ({pages} páginas). Descargadla en PDF con el botón de abajo, o leedla en línea.',
-    p1SansPages: 'Hola, la evaluación de pareja de {a} y {b} está lista. Descargadla en PDF con el botón de abajo, o leedla en línea.',
-    p1Solo: 'Hola, {a}, el informe de tu evaluación de pareja está listo ({pages} páginas). Descárgalo en PDF con el botón de abajo, o léelo en línea.',
-    p1SoloSansPages: 'Hola, {a}, el informe de tu evaluación de pareja está listo. Descárgalo en PDF con el botón de abajo, o léelo en línea.',
-    p2: 'Lo más sencillo es que cada uno lo lea por su lado y luego lo habléis juntos. Si no sabéis por dónde empezar, abrid la parte «Vuestras cuatro próximas conversaciones»: son los temas que más importan para los dos ahora mismo.',
-    p2Solo: 'Tómate el tiempo de leerlo con calma. Si no sabes por dónde empezar, abre la parte «Tus cuatro próximas conversaciones»: son los temas por los que empezar, cuando te sientas con ganas de hablar.',
-    p3: 'Este enlace es personal: abre vuestra evaluación en cualquier dispositivo durante seis meses. No lo reenviéis a nadie.',
+    phrase: 'La evaluación de {a} y {b} está terminada. Descargad el informe en PDF, o leedlo en línea.',
+    phraseSolo: 'Tu evaluación está terminada. Descarga el informe en PDF, o léelo en línea.',
+    puces: ['**Leedlo cada uno por su lado**, y luego habladlo juntos', '**¿Por dónde empezar?** Por la parte «Vuestras cuatro próximas conversaciones»', '**Vuestro enlace es personal**: funciona seis meses, en cualquier dispositivo'],
+    pucesSolo: ['**Léelo con calma**, a tu ritmo', '**¿Por dónde empezar?** Por la parte «Vuestras cuatro próximas conversaciones»', '**Tu enlace es personal**: funciona seis meses, en cualquier dispositivo'],
     bouton: 'Descargar el informe (PDF)',
     enLigne: 'Leerlo en línea',
     note: 'Este informe contiene las respuestas de los dos: guardadlo para vosotros.',
@@ -126,20 +120,19 @@ const TEXTES = {
     sujet: 'Eure Beziehungsanalyse: der Bericht von {a} und {b}',
     sujetSolo: 'Deine Beziehungsanalyse: dein Bericht, {a}',
     avant: 'Euer Bericht ist fertig: Ladet ihn als PDF herunter oder lest ihn online.',
+    avantSolo: 'Dein Bericht ist fertig: Lade ihn als PDF herunter oder lies ihn online.',
     titre: 'Euer Bericht ist fertig',
     titreSolo: 'Dein Bericht ist fertig',
-    p1: 'Hallo, die Beziehungsanalyse von {a} und {b} ist fertig ({pages} Seiten). Ladet sie mit dem Button unten als PDF herunter oder lest sie online.',
-    p1SansPages: 'Hallo, die Beziehungsanalyse von {a} und {b} ist fertig. Ladet sie mit dem Button unten als PDF herunter oder lest sie online.',
-    p1Solo: 'Hallo {a}, der Bericht deiner Beziehungsanalyse ist fertig ({pages} Seiten). Lade ihn mit dem Button unten als PDF herunter oder lies ihn online.',
-    p1SoloSansPages: 'Hallo {a}, der Bericht deiner Beziehungsanalyse ist fertig. Lade ihn mit dem Button unten als PDF herunter oder lies ihn online.',
-    p2: 'Am einfachsten lest ihn zuerst jeder für sich und sprecht dann gemeinsam darüber. Wenn ihr nicht wisst, wo ihr anfangen sollt, schlagt den Teil „Eure nächsten vier Gespräche“ auf: Das sind die Themen, die euch beiden gerade am wichtigsten sind.',
-    p2Solo: 'Nimm dir Zeit, ihn in Ruhe zu lesen. Wenn du nicht weißt, wo du anfangen sollst, schlag den Teil „Deine nächsten vier Gespräche“ auf: Das sind die Themen, mit denen du anfangen kannst, sobald du bereit bist, darüber zu reden.',
-    p3: 'Dieser Link ist persönlich: Er öffnet eure Analyse sechs Monate lang auf jedem Gerät. Leitet ihn an niemanden weiter.',
+    phrase: 'Die Beziehungsanalyse von {a} und {b} ist abgeschlossen. Ladet den Bericht als PDF herunter oder lest ihn online.',
+    phraseSolo: 'Deine Beziehungsanalyse ist abgeschlossen. Lade den Bericht als PDF herunter oder lies ihn online.',
+    puces: ['**Lest ihn zuerst jeder für sich**, dann sprecht gemeinsam darüber', '**Wo anfangen?** Mit dem Teil „Eure nächsten vier Gespräche“', '**Euer Link ist persönlich**: Er funktioniert sechs Monate lang, auf jedem Gerät'],
+    pucesSolo: ['**Lies ihn in Ruhe**, in deinem Tempo', '**Wo anfangen?** Mit dem Teil „Eure nächsten vier Gespräche“', '**Dein Link ist persönlich**: Er funktioniert sechs Monate lang, auf jedem Gerät'],
     bouton: 'Bericht herunterladen (PDF)',
     enLigne: 'Online lesen',
     note: 'Dieser Bericht enthält eure Antworten, die von euch beiden: Behaltet ihn für euch.',
     noteSolo: 'Dieser Bericht enthält deine Antworten und das, was du über deine Beziehung denkst: Er ist nur für dich bestimmt.',
     aide: 'Eine Frage oder ein Problem beim Herunterladen? Antwortet einfach auf diese Nachricht.',
+    aideSolo: 'Eine Frage oder ein Problem beim Herunterladen? Antworte einfach auf diese Nachricht.',
     pied: 'Du bekommst diese Nachricht, weil diese Adresse angegeben wurde, um diesen Bericht zu erhalten. Wir schreiben dir sonst nichts.',
     legal: 'Vor der Zahlung hat der Käufer verlangt, dass dieser Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der Widerrufsfrist abzuwarten, und bestätigt, dass sein Widerrufsrecht mit der Bereitstellung erlischt. Diese Nachricht ist diese Bestätigung: Der Bericht ist bereitgestellt. Keine Umsatzsteuer, Art. 293 B des französischen Steuergesetzbuchs (CGI). Verkaufsbedingungen: {cgv}',
   },
@@ -147,15 +140,13 @@ const TEXTES = {
     sujet: 'La vostra valutazione di coppia: il report di {a} e {b}',
     sujetSolo: 'La tua valutazione di coppia: il tuo report, {a}',
     avant: 'Il vostro report è pronto: scaricatelo in PDF o leggetelo online.',
+    avantSolo: 'Il tuo report è pronto: scaricalo in PDF o leggilo online.',
     titre: 'Il vostro report è pronto',
     titreSolo: 'Il tuo report è pronto',
-    p1: 'Ciao, la valutazione di coppia di {a} e {b} è pronta ({pages} pagine). Scaricatela in PDF con il pulsante qui sotto, o leggetela online.',
-    p1SansPages: 'Ciao, la valutazione di coppia di {a} e {b} è pronta. Scaricatela in PDF con il pulsante qui sotto, o leggetela online.',
-    p1Solo: 'Ciao {a}, il report della tua valutazione di coppia è pronto ({pages} pagine). Scaricalo in PDF con il pulsante qui sotto, o leggilo online.',
-    p1SoloSansPages: 'Ciao {a}, il report della tua valutazione di coppia è pronto. Scaricalo in PDF con il pulsante qui sotto, o leggilo online.',
-    p2: 'La cosa più semplice è leggerlo ognuno per conto suo e poi parlarne insieme. Se non sapete da dove cominciare, aprite la parte «Le vostre prossime quattro conversazioni»: sono gli argomenti che contano di più per tutti e due in questo momento.',
-    p2Solo: 'Prenditi il tempo di leggerlo con calma. Se non sai da dove cominciare, apri la parte «Le tue prossime quattro conversazioni»: sono gli argomenti da cui partire, quando ti sentirai di parlarne.',
-    p3: 'Questo link è personale: apre la vostra valutazione su qualsiasi dispositivo per sei mesi. Non inoltratelo a nessuno.',
+    phrase: 'La valutazione di {a} e {b} è completa. Scaricate il report in PDF, o leggetelo online.',
+    phraseSolo: 'La tua valutazione è completa. Scarica il report in PDF, o leggilo online.',
+    puces: ['**Leggetelo ognuno per conto suo**, poi parlatene insieme', '**Da dove cominciare?** Dalla parte «Le vostre prossime quattro conversazioni»', '**Il vostro link è personale**: funziona sei mesi, su qualsiasi dispositivo'],
+    pucesSolo: ['**Leggilo con calma**, con i tuoi tempi', '**Da dove cominciare?** Dalla parte «Le vostre prossime quattro conversazioni»', '**Il tuo link è personale**: funziona sei mesi, su qualsiasi dispositivo'],
     bouton: 'Scarica il report (PDF)',
     enLigne: 'Leggerlo online',
     note: 'Questo report contiene le risposte di tutti e due: tenetelo per voi.',
@@ -166,85 +157,131 @@ const TEXTES = {
   },
 };
 
-function remplir(texte, valeurs) {
-  return String(texte).replace(/\{(\w+)\}/g, (tout, cle) => (cle in valeurs ? String(valeurs[cle]) : tout));
-}
-
-// En français, l'espace avant « : ; ! ? » et après « « » est insécable : sans
-// elle, un téléphone envoie les deux-points seuls en début de ligne.
-function insec(s, lang) {
-  // Un montant ne se sépare pas de son symbole, dans toutes les langues.
-  const x = String(s).replace(/(\d) ([€%])/g, '$1\u00a0$2');
-  return lang === 'fr' ? x.replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : x;
-}
-
-function esc(s) {
-  return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-}
-
 // L'e-mail qui apporte un lien personnel : à la demande (« Recevoir mon lien
 // par e-mail ») ou pour retrouver une évaluation dont on a perdu le lien
 // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et qu'il
-// n'a pas eu le temps de copier son lien, on fait comment ? »).
+// n'a pas eu le temps de copier son lien, on fait comment ? »). Trois formes :
+// un lien, plusieurs (une carte par évaluation), aucun (l'adresse ne porte
+// aucune évaluation, et l'e-mail dit où chercher).
 const TEXTES_LIEN = {
   fr: {
     sujet: 'Votre lien pour reprendre votre évaluation de couple',
+    sujetPlusieurs: 'Vos liens pour reprendre vos évaluations de couple',
+    sujetAucun: 'Aucune évaluation de couple avec cette adresse',
+    avant: 'Gardez ce message : ce lien rouvre vos réponses, là où vous en étiez.',
+    avantPlusieurs: 'Gardez ce message : ces liens rouvrent vos réponses, là où vous en étiez.',
+    avantAucun: 'Aucune évaluation de couple n\'est liée à cette adresse : voici où chercher.',
     titre: 'Votre lien personnel',
-    intro: 'Voici le lien pour reprendre votre évaluation de couple de {a} et {b}, là où vous en étiez. Gardez ce message : ce lien est la clé de vos réponses, ne le donnez à personne.',
-    introPlusieurs: 'Voici vos liens pour reprendre vos évaluations de couple, là où vous en étiez. Gardez ce message : ces liens sont la clé de vos réponses, ne les donnez à personne.',
+    titrePlusieurs: 'Vos liens personnels',
+    titreAucun: 'Aucune évaluation à cette adresse',
+    intro: 'Voici le lien pour reprendre l\'évaluation de couple de {a} et {b}, là où vous en étiez.',
+    introPlusieurs: 'Voici vos liens pour reprendre vos évaluations de couple, là où vous en étiez.',
+    aucun: 'Aucune évaluation de couple n\'est liée à cette adresse e-mail. Il y a deux possibilités :',
+    puces: ['**Gardez ce message** : ce lien est la clé de vos réponses', '**Ne le donnez à personne** : il ouvre vos réponses sans mot de passe', '**Il marche sur n\'importe quel appareil** : téléphone, ordinateur ou tablette'],
+    pucesPlusieurs: ['**Gardez ce message** : ces liens sont la clé de vos réponses', '**Ne les donnez à personne** : ils ouvrent vos réponses sans mot de passe', '**Ils marchent sur n\'importe quel appareil** : téléphone, ordinateur ou tablette'],
+    pucesAucun: ['**Une autre adresse** : l\'évaluation a peut-être été faite avec une autre adresse e-mail', '**Sans adresse** : elle reste ouverte sur le téléphone où vous avez répondu, en revenant sur la page de l\'évaluation'],
     ligne: '{a} et {b}',
     ligneSolo: '{a}, seul(e)',
     bouton: 'Reprendre mon évaluation',
+    boutonAucun: 'Aller à l\'évaluation de couple',
     nouveau: 'Si vous aviez déjà un lien pour cette évaluation, c\'est celui-ci qui compte désormais : l\'ancien ne fonctionne plus.',
-    aucun: 'Aucune évaluation de couple n\'est liée à cette adresse e-mail. Si vous en avez commencé une, elle a peut-être été faite avec une autre adresse, ou sans en donner : dans ce cas, elle reste ouverte sur le téléphone où vous avez répondu, en revenant sur la page de l\'évaluation.',
+    nouveauPlusieurs: 'Si vous aviez déjà des liens pour ces évaluations, ce sont ceux-ci qui comptent désormais : les anciens ne fonctionnent plus.',
     pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com, ou qu\'on a demandé à retrouver une évaluation avec elle.',
   },
   en: {
     sujet: 'Your link to pick up your relationship assessment',
+    sujetPlusieurs: 'Your links to pick up your relationship assessments',
+    sujetAucun: 'No relationship assessment found for this address',
+    avant: 'Keep this email: this link reopens your answers, right where you left off.',
+    avantPlusieurs: 'Keep this email: these links reopen your answers, right where you left off.',
+    avantAucun: 'No relationship assessment is linked to this address: here is where to look.',
     titre: 'Your personal link',
-    intro: 'Here is the link to pick up the relationship assessment for {a} and {b}, right where you left off. Keep this email: this link is the key to your answers, don\'t give it to anyone.',
-    introPlusieurs: 'Here are your links to pick up your relationship assessments, right where you left off. Keep this email: these links are the key to your answers, don\'t give them to anyone.',
+    titrePlusieurs: 'Your personal links',
+    titreAucun: 'No assessment for this address',
+    intro: 'Here is the link to pick up the relationship assessment for {a} and {b}, right where you left off.',
+    introPlusieurs: 'Here are your links to pick up your relationship assessments, right where you left off.',
+    aucun: 'No relationship assessment is linked to this email address. There are two possibilities:',
+    puces: ['**Keep this email**: this link is the key to your answers', '**Don\'t give it to anyone**: it opens your answers without a password', '**It works on any device**: phone, computer or tablet'],
+    pucesPlusieurs: ['**Keep this email**: these links are the key to your answers', '**Don\'t give them to anyone**: they open your answers without a password', '**They work on any device**: phone, computer or tablet'],
+    pucesAucun: ['**Another address**: the assessment may have been done with a different email address', '**No address at all**: it stays open on the phone you answered from, when you go back to the assessment page'],
     ligne: '{a} and {b}',
     ligneSolo: '{a}, on your own',
     bouton: 'Pick up my assessment',
+    boutonAucun: 'Go to the relationship assessment',
     nouveau: 'If you already had a link for this assessment, this one now replaces it: the old one no longer works.',
-    aucun: 'No relationship assessment is linked to this email address. If you started one, it may have been done with another address, or without giving one: in that case it stays open on the phone you answered from, by going back to the assessment page.',
+    nouveauPlusieurs: 'If you already had links for these assessments, these ones now replace them: the old ones no longer work.',
     pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com, or someone asked to find an assessment with it.',
   },
   es: {
     sujet: 'Tu enlace para retomar tu evaluación de pareja',
+    sujetPlusieurs: 'Tus enlaces para retomar tus evaluaciones de pareja',
+    sujetAucun: 'Ninguna evaluación de pareja con esta dirección',
+    avant: 'Guarda este mensaje: este enlace vuelve a abrir tus respuestas, justo donde las dejaste.',
+    avantPlusieurs: 'Guarda este mensaje: estos enlaces vuelven a abrir tus respuestas, justo donde las dejaste.',
+    avantAucun: 'Ninguna evaluación de pareja está vinculada a esta dirección: aquí tienes dónde buscar.',
     titre: 'Tu enlace personal',
-    intro: 'Aquí tienes el enlace para retomar la evaluación de pareja de {a} y {b}, justo donde la dejaste. Guarda este mensaje: este enlace es la llave de tus respuestas, no se lo des a nadie.',
-    introPlusieurs: 'Aquí tienes tus enlaces para retomar tus evaluaciones de pareja, justo donde las dejaste. Guarda este mensaje: estos enlaces son la llave de tus respuestas, no se los des a nadie.',
+    titrePlusieurs: 'Tus enlaces personales',
+    titreAucun: 'Ninguna evaluación con esta dirección',
+    intro: 'Aquí tienes el enlace para retomar la evaluación de pareja de {a} y {b}, justo donde la dejaste.',
+    introPlusieurs: 'Aquí tienes tus enlaces para retomar tus evaluaciones de pareja, justo donde las dejaste.',
+    aucun: 'Ninguna evaluación de pareja está vinculada a esta dirección de e-mail. Hay dos posibilidades:',
+    puces: ['**Guarda este mensaje**: este enlace es la llave de tus respuestas', '**No se lo des a nadie**: abre tus respuestas sin contraseña', '**Funciona en cualquier dispositivo**: móvil, ordenador o tableta'],
+    pucesPlusieurs: ['**Guarda este mensaje**: estos enlaces son la llave de tus respuestas', '**No se los des a nadie**: abren tus respuestas sin contraseña', '**Funcionan en cualquier dispositivo**: móvil, ordenador o tableta'],
+    pucesAucun: ['**Otra dirección**: quizá la evaluación se hizo con otra dirección de e-mail', '**Sin dirección**: sigue abierta en el móvil desde el que respondiste, volviendo a la página de la evaluación'],
     ligne: '{a} y {b}',
     ligneSolo: '{a}, a solas',
     bouton: 'Retomar mi evaluación',
+    boutonAucun: 'Ir a la evaluación de pareja',
     nouveau: 'Si ya tenías un enlace para esta evaluación, ahora vale este: el antiguo ya no funciona.',
-    aucun: 'Ninguna evaluación de pareja está vinculada a esta dirección de e-mail. Si empezaste una, quizá la hiciste con otra dirección, o sin dar ninguna: en ese caso sigue abierta en el móvil desde el que respondiste, volviendo a la página de la evaluación.',
+    nouveauPlusieurs: 'Si ya tenías enlaces para estas evaluaciones, ahora valen estos: los antiguos ya no funcionan.',
     pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com, o porque alguien pidió recuperar una evaluación con ella.',
   },
   de: {
     sujet: 'Dein Link, um deine Beziehungsanalyse fortzusetzen',
+    sujetPlusieurs: 'Deine Links, um deine Beziehungsanalysen fortzusetzen',
+    sujetAucun: 'Keine Beziehungsanalyse zu dieser Adresse',
+    avant: 'Bewahre diese Nachricht auf: Dieser Link öffnet deine Antworten wieder, genau dort, wo du aufgehört hast.',
+    avantPlusieurs: 'Bewahre diese Nachricht auf: Diese Links öffnen deine Antworten wieder, genau dort, wo du aufgehört hast.',
+    avantAucun: 'Mit dieser Adresse ist keine Beziehungsanalyse verknüpft: Hier steht, wo du suchen kannst.',
     titre: 'Dein persönlicher Link',
-    intro: 'Hier ist der Link, um die Beziehungsanalyse von {a} und {b} genau dort fortzusetzen, wo du aufgehört hast. Bewahre diese Nachricht auf: Dieser Link ist der Schlüssel zu deinen Antworten, gib ihn niemandem.',
-    introPlusieurs: 'Hier sind deine Links, um deine Beziehungsanalysen genau dort fortzusetzen, wo du aufgehört hast. Bewahre diese Nachricht auf: Diese Links sind der Schlüssel zu deinen Antworten, gib sie niemandem.',
+    titrePlusieurs: 'Deine persönlichen Links',
+    titreAucun: 'Keine Analyse zu dieser Adresse',
+    intro: 'Hier ist der Link, um die Beziehungsanalyse von {a} und {b} genau dort fortzusetzen, wo du aufgehört hast.',
+    introPlusieurs: 'Hier sind deine Links, um deine Beziehungsanalysen genau dort fortzusetzen, wo du aufgehört hast.',
+    aucun: 'Mit dieser E-Mail-Adresse ist keine Beziehungsanalyse verknüpft. Es gibt zwei Möglichkeiten:',
+    puces: ['**Bewahre diese Nachricht auf**: Dieser Link ist der Schlüssel zu deinen Antworten', '**Gib ihn niemandem**: Er öffnet deine Antworten ohne Passwort', '**Er funktioniert auf jedem Gerät**: Handy, Computer oder Tablet'],
+    pucesPlusieurs: ['**Bewahre diese Nachricht auf**: Diese Links sind der Schlüssel zu deinen Antworten', '**Gib sie niemandem**: Sie öffnen deine Antworten ohne Passwort', '**Sie funktionieren auf jedem Gerät**: Handy, Computer oder Tablet'],
+    pucesAucun: ['**Eine andere Adresse**: Die Analyse wurde vielleicht mit einer anderen E-Mail-Adresse gemacht', '**Ohne Adresse**: Dann bleibt sie auf dem Handy offen, von dem aus du geantwortet hast, wenn du die Seite der Analyse wieder aufrufst'],
     ligne: '{a} und {b}',
     ligneSolo: '{a}, allein',
     bouton: 'Meine Analyse fortsetzen',
+    boutonAucun: 'Zur Beziehungsanalyse',
     nouveau: 'Wenn du für diese Analyse schon einen Link hattest, gilt ab jetzt dieser: Der alte funktioniert nicht mehr.',
-    aucun: 'Mit dieser E-Mail-Adresse ist keine Beziehungsanalyse verknüpft. Wenn du eine begonnen hast, wurde sie vielleicht mit einer anderen Adresse gemacht, oder ohne eine anzugeben: Dann bleibt sie auf dem Handy offen, von dem aus du geantwortet hast, wenn du die Seite der Analyse wieder aufrufst.',
+    nouveauPlusieurs: 'Wenn du für diese Analysen schon Links hattest, gelten ab jetzt diese: Die alten funktionieren nicht mehr.',
     pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde oder jemand damit eine Analyse wiederfinden wollte.',
   },
   it: {
     sujet: 'Il tuo link per riprendere la tua valutazione di coppia',
+    sujetPlusieurs: 'I tuoi link per riprendere le tue valutazioni di coppia',
+    sujetAucun: 'Nessuna valutazione di coppia con questo indirizzo',
+    avant: 'Conserva questo messaggio: questo link riapre le tue risposte, esattamente dove eri rimasto/a.',
+    avantPlusieurs: 'Conserva questo messaggio: questi link riaprono le tue risposte, esattamente dove eri rimasto/a.',
+    avantAucun: 'Nessuna valutazione di coppia è collegata a questo indirizzo: ecco dove cercare.',
     titre: 'Il tuo link personale',
-    intro: 'Ecco il link per riprendere la valutazione di coppia di {a} e {b}, esattamente dove eri rimasto/a. Conserva questo messaggio: questo link è la chiave delle tue risposte, non darlo a nessuno.',
-    introPlusieurs: 'Ecco i tuoi link per riprendere le tue valutazioni di coppia, esattamente dove eri rimasto/a. Conserva questo messaggio: questi link sono la chiave delle tue risposte, non darli a nessuno.',
+    titrePlusieurs: 'I tuoi link personali',
+    titreAucun: 'Nessuna valutazione con questo indirizzo',
+    intro: 'Ecco il link per riprendere la valutazione di coppia di {a} e {b}, esattamente dove eri rimasto/a.',
+    introPlusieurs: 'Ecco i tuoi link per riprendere le tue valutazioni di coppia, esattamente dove eri rimasto/a.',
+    aucun: 'Nessuna valutazione di coppia è collegata a questo indirizzo e-mail. Ci sono due possibilità:',
+    puces: ['**Conserva questo messaggio**: questo link è la chiave delle tue risposte', '**Non darlo a nessuno**: apre le tue risposte senza password', '**Funziona su qualsiasi dispositivo**: telefono, computer o tablet'],
+    pucesPlusieurs: ['**Conserva questo messaggio**: questi link sono la chiave delle tue risposte', '**Non darli a nessuno**: aprono le tue risposte senza password', '**Funzionano su qualsiasi dispositivo**: telefono, computer o tablet'],
+    pucesAucun: ['**Un altro indirizzo**: forse la valutazione è stata fatta con un altro indirizzo e-mail', '**Senza indirizzo**: resta aperta sul telefono da cui hai risposto, tornando sulla pagina della valutazione'],
     ligne: '{a} e {b}',
     ligneSolo: '{a}, da solo/a',
     bouton: 'Riprendere la mia valutazione',
+    boutonAucun: 'Vai alla valutazione di coppia',
     nouveau: 'Se avevi già un link per questa valutazione, da ora vale questo: il vecchio non funziona più.',
-    aucun: 'Nessuna valutazione di coppia è collegata a questo indirizzo e-mail. Se ne hai iniziata una, forse l\'hai fatta con un altro indirizzo, o senza darne uno: in quel caso resta aperta sul telefono da cui hai risposto, tornando sulla pagina della valutazione.',
+    nouveauPlusieurs: 'Se avevi già dei link per queste valutazioni, da ora valgono questi: i vecchi non funzionano più.',
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com, o perché qualcuno ha chiesto di ritrovare una valutazione con esso.',
   },
 };
@@ -282,62 +319,47 @@ export function nomFichier(lang, a, b, mode) {
   return `${prefixe}-${propre(a)}-${et}-${propre(b)}.pdf`;
 }
 
-// { sujet, html, texte } pour un rapport. `pages` peut manquer ; `mode`
-// vaut 'solo' pour une évaluation faite seul(e).
+// { sujet, html, texte } pour un rapport ; `mode` vaut 'solo' pour une
+// évaluation faite seul(e), `moi` est le prénom de la personne qui reçoit
+// l'e-mail (dans la bulle des personnages).
 // Le rapport ne part plus en pièce jointe (22 octobre 2026, Thomas : « ok
 // met un lien de téléchargement ») : le message porte le lien personnel de la
 // personne (`url`, son propre jeton), qui ouvre l'évaluation et lance le
 // téléchargement du PDF (`&pdf=1`), et le même lien sans ce paramètre pour le
 // lire en ligne. Le contenu sensible ne passe plus par le prestataire d'envoi
-// et ne reste plus dans les boîtes de réception.
-export function messageRapport({ lang, a, b, pages, mode, url }) {
+// et ne reste plus dans les boîtes de réception. Le nombre de pages ne s'écrit
+// plus (23 octobre 2026 : nulle part).
+export function messageRapport({ lang, a, b, mode, url, moi }) {
   const t = TEXTES[lang] || TEXTES.fr;
+  const c = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
   const solo = mode === 'solo';
-  const v = { a, b, pages };
+  const pick = (cle) => (solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
+  const v = { a, b };
   const enLigne = url || (SITE + (PAGES[lang] || PAGES.fr));
   const lien = url ? url + '&pdf=1' : enLigne;
-  const avecPages = Number.isInteger(pages) && pages > 0;
-  const p1 = remplir(solo ? (avecPages ? t.p1Solo : t.p1SoloSansPages) : (avecPages ? t.p1 : t.p1SansPages), v);
-  const p2 = solo ? t.p2Solo : t.p2;
-  const note = solo ? t.noteSolo : t.note;
-  const titre = solo && t.titreSolo ? t.titreSolo : t.titre;
-  const sujet = remplir(solo ? t.sujetSolo : t.sujet, v);
+  const qui = moi || (solo ? a : '');
   // La confirmation, sur support durable, de la demande d'exécution immédiate
   // et de la fin du droit de rétractation (L221-13 du Code de la consommation).
-  const legal = remplir(t.legal, { cgv: SITE + (CGV[lang] || CGV.fr) });
-  const dp = lang === 'fr' ? ' : ' : ': ';
-  const texte = [
-    remplir(titre, v), '', p1, '', t.bouton + dp + lien, t.enLigne + dp + enLigne, '', p2, '', t.p3, '', note, '', t.aide, '', '--', t.pied, legal, EDITEUR,
-  ].join('\n');
-  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(s, lang))}</p>`;
-  const html = `<!doctype html>
-<html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
-<body style="margin:0;padding:0;background:#f6f1f4;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${esc(t.avant)}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f1f4;padding:24px 12px;">
-<tr><td align="center">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;color:#2b2233;font-size:16px;line-height:1.55;">
-<tr><td style="height:6px;background:#d96a8f;font-size:0;line-height:0;">&nbsp;</td></tr>
-<tr><td style="padding:28px 28px 8px;">
-<p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
-<h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(titre)}</h1>
-${para(p1)}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 10px;"><tr><td style="border-radius:999px;background:#2b2233;">
-<a href="${esc(lien)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(t.bouton)}</a>
-</td></tr></table>
-<p style="margin:0 0 24px;font-size:15px;"><a href="${esc(enLigne)}" style="color:#9b3d66;">${esc(t.enLigne)}</a></p>
-${para(p2)}${para(t.p3, 'color:#5f5366;font-size:14px;')}
-${para(note, 'color:#5f5366;font-size:14px;')}${para(t.aide, 'color:#5f5366;font-size:14px;')}
-</td></tr>
-<tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
-<p style="margin:0 0 6px;">${esc(t.pied)}</p>
-<p style="margin:0 0 6px;">${esc(insec(legal, lang))}</p>
-<p style="margin:0;">${esc(EDITEUR)}</p>
-</td></tr>
-</table>
-</td></tr></table>
-</body></html>`;
-  return { sujet, html, texte };
+  const cgv = SITE + (CGV[lang] || CGV.fr);
+  const m = {
+    lang,
+    sujet: insec(remplir(pick('sujet'), v), lang),
+    avant: pick('avant'),
+    bonjour: qui ? remplir(c.bonjour, { moi: qui }) : c.bonjourSans,
+    alt: c.alt,
+    titre: pick('titre'),
+    phrase: remplir(pick('phrase'), v),
+    puces: pick('puces'),
+    bouton: t.bouton,
+    url: lien,
+    lien2: { texte: t.enLigne, url: enLigne },
+    note: pick('note'),
+    seul: pick('aide'),
+    signature: c.signature,
+    pied: t.pied,
+    legal: { texte: remplir(t.legal, { cgv }), lien: cgv },
+  };
+  return { sujet: m.sujet, html: carte(m), texte: texteCarte(m) };
 }
 
 function enBase64(octets) {
@@ -349,47 +371,43 @@ function enBase64(octets) {
   return btoa(s);
 }
 
-// L'envoi par l'API de Resend. Renvoie { ok, id } ou lève une erreur.
 // { sujet, html, texte } pour un ou plusieurs liens personnels. `liens` :
-// [{ a, b, mode, url }] ; vide quand aucune évaluation ne porte l'adresse
-// (on le dit, plutôt que de laisser attendre un e-mail qui ne vient pas).
+// [{ a, b, mode, url }], `a` étant le prénom de la personne qui reçoit
+// l'e-mail ; vide quand aucune évaluation ne porte l'adresse (on le dit,
+// plutôt que de laisser attendre un e-mail qui ne vient pas).
 // `rotation` : les liens sont neufs et remplacent les anciens.
 export function messageLien({ lang, liens, rotation }) {
   const t = TEXTES_LIEN[lang] || TEXTES_LIEN.fr;
+  const c = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
   const l = Array.isArray(liens) ? liens : [];
-  const sujet = t.sujet;
-  const intro = l.length === 0 ? t.aucun : l.length === 1 ? remplir(t.intro, { a: l[0].a, b: l[0].b }) : t.introPlusieurs;
   const libelle = (x) => remplir(x.mode === 'solo' ? t.ligneSolo : t.ligne, { a: x.a, b: x.b });
-  const texte = [t.titre, '', intro, '']
-    .concat(l.flatMap((x) => [libelle(x) + (lang === 'fr' ? ' : ' : ': ') + x.url, '']))
-    .concat(l.length && rotation ? [t.nouveau, ''] : [])
-    .concat(['--', t.pied, EDITEUR]).join('\n');
-  const para = (s, style) => `<p style="margin:0 0 16px;${style || ''}">${esc(insec(s, lang))}</p>`;
-  const blocs = l.map((x) => `<p style="margin:0 0 6px;font-weight:bold;">${esc(libelle(x))}</p>
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 10px;"><tr><td style="border-radius:999px;background:#2b2233;">
-<a href="${esc(x.url)}" style="display:inline-block;padding:12px 24px;color:#ffffff;text-decoration:none;font-weight:bold;font-size:15px;">${esc(t.bouton)}</a>
-</td></tr></table>
-<p style="margin:0 0 20px;font-size:12px;color:#857a8b;word-break:break-all;">${esc(x.url)}</p>`).join('');
-  const html = `<!doctype html>
-<html lang="${esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(sujet)}</title></head>
-<body style="margin:0;padding:0;background:#f6f1f4;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f1f4;padding:24px 12px;">
-<tr><td align="center">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;color:#2b2233;font-size:16px;line-height:1.55;">
-<tr><td style="height:6px;background:#d96a8f;font-size:0;line-height:0;">&nbsp;</td></tr>
-<tr><td style="padding:28px 28px 8px;">
-<p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9b5c79;">Quiz Couple</p>
-<h1 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:28px;line-height:1.2;color:#2b2233;">${esc(t.titre)}</h1>
-${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;font-size:14px;') : ''}
-</td></tr>
-<tr><td style="padding:16px 28px 24px;border-top:1px solid #efe6ec;color:#857a8b;font-size:12px;line-height:1.5;">
-<p style="margin:0 0 6px;">${esc(t.pied)}</p>
-<p style="margin:0;">${esc(EDITEUR)}</p>
-</td></tr>
-</table>
-</td></tr></table>
-</body></html>`;
-  return { sujet, html, texte };
+  const prenoms = [...new Set(l.map((x) => x.a).filter(Boolean))];
+  const commun = {
+    lang,
+    bonjour: prenoms.length === 1 ? remplir(c.bonjour, { moi: prenoms[0] }) : c.bonjourSans,
+    alt: c.alt,
+    signature: c.signature,
+    pied: t.pied,
+  };
+  let m;
+  if (!l.length) {
+    m = {
+      sujet: t.sujetAucun, avant: t.avantAucun, titre: t.titreAucun, phrase: t.aucun, puces: t.pucesAucun,
+      bouton: t.boutonAucun, url: SITE + (PAGES[lang] || PAGES.fr),
+    };
+  } else if (l.length === 1) {
+    m = {
+      sujet: t.sujet, avant: t.avant, titre: t.titre, phrase: remplir(t.intro, { a: l[0].a, b: l[0].b }), puces: t.puces,
+      bouton: t.bouton, url: l[0].url, brut: true, note: rotation ? t.nouveau : null,
+    };
+  } else {
+    m = {
+      sujet: t.sujetPlusieurs, avant: t.avantPlusieurs, titre: t.titrePlusieurs, phrase: t.introPlusieurs, puces: t.pucesPlusieurs,
+      blocs: l.map((x) => ({ libelle: libelle(x), bouton: t.bouton, url: x.url })), note: rotation ? t.nouveauPlusieurs : null,
+    };
+  }
+  const tout = { ...commun, ...m, sujet: insec(m.sujet, lang) };
+  return { sujet: tout.sujet, html: carte(tout), texte: texteCarte(tout) };
 }
 
 // « Votre rapport est prêt » (au premier qui a fini, quand le second finit),
@@ -411,6 +429,7 @@ ${para(intro)}${blocs}${l.length && rotation ? para(t.nouveau, 'color:#5f5366;fo
 const TEXTES_RAPPEL = {
   fr: {
     bonjour: 'Bonjour {moi} !',
+    bonjourSans: 'Bonjour !',
     alt: 'Les mascottes de Quiz Couple vous font coucou',
     signature: ['À très vite,', 'Thomas, de Quiz Couple'],
     pied: 'Vous recevez ce message parce que cette adresse a été donnée pour une évaluation de couple sur quiz-couple.com.',
@@ -465,6 +484,7 @@ const TEXTES_RAPPEL = {
   },
   en: {
     bonjour: 'Hi {moi}!',
+    bonjourSans: 'Hi there!',
     alt: 'The Quiz Couple mascots waving hello',
     signature: ['Talk soon,', 'Thomas, from Quiz Couple'],
     pied: 'You\'re receiving this email because this address was given for a relationship assessment on quiz-couple.com.',
@@ -519,6 +539,7 @@ const TEXTES_RAPPEL = {
   },
   es: {
     bonjour: '¡Hola, {moi}!',
+    bonjourSans: '¡Hola!',
     alt: 'Las mascotas de Quiz Couple te saludan',
     signature: ['¡Hasta pronto!', 'Thomas, de Quiz Couple'],
     pied: 'Recibes este mensaje porque esta dirección se indicó para una evaluación de pareja en quiz-couple.com.',
@@ -577,6 +598,7 @@ const TEXTES_RAPPEL = {
   },
   de: {
     bonjour: 'Hallo {moi}!',
+    bonjourSans: 'Hallo!',
     alt: 'Die Maskottchen von Quiz Couple winken dir zu',
     signature: ['Bis bald,', 'Thomas von Quiz Couple'],
     pied: 'Du bekommst diese Nachricht, weil diese Adresse für eine Beziehungsanalyse auf quiz-couple.com angegeben wurde.',
@@ -635,6 +657,7 @@ const TEXTES_RAPPEL = {
   },
   it: {
     bonjour: 'Ciao {moi}!',
+    bonjourSans: 'Ciao!',
     alt: 'Le mascotte di Quiz Couple ti salutano',
     signature: ['A presto,', 'Thomas, di Quiz Couple'],
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com.',
@@ -708,145 +731,6 @@ export function minutesRestantes(reste, solo) {
   return Math.max(5, Math.round(m / 5) * 5);
 }
 
-// Les couleurs et les polices de la maquette (emails/gabarit.html).
-const M = {
-  encre: '#2b1722', violet: '#6834b2', rose: '#b12559', rosePale: '#fae6ec', roseVif: '#e06c92',
-  doux: '#785e6c', fond: '#fcf6f3', blanc: '#fffffe', bord: '#f0e0e6', bouton: '#804db3', lavande: '#ede6f4',
-  police: '-apple-system,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif',
-  ronde: 'ui-rounded,-apple-system,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif',
-};
-const SITE_IMAGES = SITE + '/email/';
-
-// Après échappement : **gras**.
-const gras = (s, lang) => esc(insec(s, lang)).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-const sansGras = (s) => String(s).replace(/\*\*/g, '');
-
-// La vague entre l'en-tête rose et la carte blanche (huit demi-cercles).
-const VAGUE = (() => {
-  const haut = `<td width="12.500%" bgcolor="${M.blanc}" style="background-color:${M.blanc};"><div style="height:12px;background-color:${M.rosePale};"><div style="height:12px;background-color:${M.blanc};border-radius:12px 12px 0 0;border-radius:50% 50% 0 0/100% 100% 0 0;">&#8202;</div></div><div style="height:12px;">&#8202;</div></td>`;
-  const bas = `<td width="12.500%" bgcolor="${M.rosePale}" style="background-color:${M.rosePale};"><div style="height:12px;">&#8202;</div><div style="height:12px;background-color:${M.blanc};"><div style="height:12px;background-color:${M.rosePale};border-radius:0 0 12px 12px;border-radius:0 0 50% 50%/0 0 100% 100%;">&#8202;</div></div></td>`;
-  return `<!--[if !mso]><!--><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;font-size:0;line-height:0;"><tr>${(haut + bas).repeat(4)}</tr></table><!--<![endif]-->`;
-})();
-
-// Le cadre des e-mails de l'évaluation : la carte de la maquette, sans les
-// encarts « À voir aussi » ni Instagram (ce sont des messages sur une
-// évaluation en cours, pas des nouvelles du site).
-function cadre({ lang, sujet, avant, bonjour, alt, titre, phrase, barre, puces, citation, ticket, bouton, url, note, seul, signature, pied, arret, arretUrl }) {
-  const px = 'padding-left:40px;padding-right:40px;';
-  const liste = puces && puces.length ? `<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:4px 0 6px;">${puces.map((x) =>
-    `<tr><td width="34" valign="top" style="width:34px;padding:1px 0 12px;"><div style="width:24px;height:24px;border-radius:12px;background-color:${M.rosePale};color:${M.rose};font-family:${M.police};font-size:14px;line-height:24px;font-weight:800;text-align:center;">&#10003;</div></td>` +
-    `<td valign="top" style="padding:0 0 12px;font-family:${M.police};font-size:17px;line-height:25px;color:${M.encre};">${gras(x, lang)}</td></tr>`).join('')}</table>` : '';
-  const jauge = barre ? `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:2px 0 18px;"><tr>` +
-    `<td width="${barre.pct}%" height="12" bgcolor="${M.bouton}" style="width:${barre.pct}%;height:12px;background-color:${M.bouton};border-radius:6px 0 0 6px;font-size:0;line-height:0;">&#8202;</td>` +
-    `<td height="12" bgcolor="${M.lavande}" style="height:12px;background-color:${M.lavande};border-radius:0 6px 6px 0;font-size:0;line-height:0;">&#8202;</td>` +
-    `<td width="64" align="right" style="width:64px;padding-left:10px;font-family:${M.ronde};font-size:15px;line-height:18px;font-weight:800;color:${M.violet};white-space:nowrap;">${esc(barre.texte)}</td></tr></table>` : '';
-  const cite = citation ? `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:6px 0 4px;"><tr><td style="border-left:4px solid ${M.roseVif};padding:4px 0 4px 16px;font-family:${M.police};font-size:16px;line-height:24px;font-style:italic;color:${M.encre};">${esc(insec(citation, lang))}</td></tr></table>` : '';
-  const prix = ticket ? `<tr><td class="px" style="padding:20px 40px 4px;">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
-<td width="12" valign="middle" bgcolor="${M.roseVif}" style="width:12px;background-color:${M.roseVif};border-radius:18px 0 0 18px;"><!--[if !mso]><!--><div style="width:12px;height:24px;background-color:${M.blanc};border-radius:0 12px 12px 0;font-size:0;line-height:0;">&#8202;</div><!--<![endif]--></td>
-<td width="42%" align="center" valign="middle" bgcolor="${M.roseVif}" style="background-color:${M.roseVif};padding:16px 8px 16px 2px;font-family:${M.ronde};">${ticket.barre ? `<div style="font-size:16px;line-height:20px;font-weight:700;color:#2a1e36;text-decoration:line-through;">${esc(ticket.barre)}</div>` : ''}<div class="prix-big" style="font-size:38px;line-height:44px;font-weight:800;letter-spacing:-0.5px;color:#2a1e36;">${esc(ticket.prix)}</div></td>
-<td valign="middle" bgcolor="${M.rosePale}" style="background-color:${M.rosePale};border-left:3px dashed ${M.blanc};padding:16px 14px 16px 18px;font-family:${M.police};font-size:15px;line-height:21px;font-weight:700;color:${M.encre};">${esc(insec(ticket.phrase, lang))}</td>
-<td width="12" valign="middle" bgcolor="${M.rosePale}" style="width:12px;background-color:${M.rosePale};border-radius:0 18px 18px 0;"><!--[if !mso]><!--><div style="width:12px;height:24px;background-color:${M.blanc};border-radius:12px 0 0 12px;font-size:0;line-height:0;">&#8202;</div><!--<![endif]--></td>
-</tr></table></td></tr>` : '';
-  const html = `<!DOCTYPE html>
-<html lang="${esc(lang)}" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="x-apple-disable-message-reformatting">
-<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark">
-<title>${esc(sujet)}</title>
-<style>
-:root{color-scheme:light dark;supported-color-schemes:light dark;}
-body{margin:0;padding:0;width:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
-img{border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}
-a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important;}
-@media screen and (max-width:620px){
-.page-pad{padding:14px 8px 28px!important;}
-.px{padding-left:24px!important;padding-right:24px!important;}
-.h1{font-size:25px!important;line-height:31px!important;}
-.btn-t{width:100%!important;}
-.btn-a{display:block!important;}
-.duo{width:132px!important;height:89px!important;}
-.duo-td{width:140px!important;}
-.bulle{font-size:17px!important;line-height:22px!important;padding:11px 15px!important;}
-.prix-big{font-size:32px!important;line-height:38px!important;}
-}
-</style>
-</head>
-<body style="margin:0;padding:0;width:100%;background-color:${M.fond};">
-<div lang="${esc(lang)}" dir="ltr" style="background-color:${M.fond};">
-<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${esc(avant)}${'&nbsp;&#847;&zwnj;'.repeat(30)}</div>
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${M.fond}" style="background-color:${M.fond};"><tr>
-<td align="center" class="page-pad" style="padding:24px 16px 40px;">
-<!--[if mso]><table role="presentation" width="600" align="center" cellspacing="0" cellpadding="0" border="0"><tr><td><![endif]-->
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;margin:0 auto;">
-<tr><td style="padding:0 6px 16px;font-family:${M.ronde};font-size:21px;line-height:24px;font-weight:800;letter-spacing:-0.2px;"><a href="${esc(SITE + '/' + (lang === 'fr' ? '' : lang + '/'))}" target="_blank" style="text-decoration:none;"><span style="color:${M.rose};">Quiz</span><span style="color:${M.violet};"> Couple</span></a></td></tr>
-<tr><td bgcolor="${M.blanc}" style="background-color:${M.blanc};border:1px solid ${M.bord};border-radius:32px;">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-<tr><td bgcolor="${M.rosePale}" style="background-color:${M.rosePale};border-radius:31px 31px 0 0;padding:26px 20px 0;">
-<table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;"><tr>
-<td class="duo-td" width="190" valign="bottom" style="width:190px;"><img class="duo" src="${SITE_IMAGES}mascottes-coucou.png" width="180" height="122" alt="${esc(alt)}" style="display:block;width:180px;height:122px;border:0;font-family:${M.police};font-size:14px;line-height:20px;color:${M.rose};"></td>
-<td valign="middle" style="padding:0 0 40px 2px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
-<td class="bulle" bgcolor="${M.blanc}" style="background-color:${M.blanc};border:2px solid #4a3540;border-radius:22px 22px 22px 4px;padding:13px 20px;font-family:${M.ronde};font-size:19px;line-height:24px;font-weight:800;color:${M.rose};">${esc(insec(bonjour, lang))}</td>
-</tr></table></td>
-</tr></table>
-</td></tr>
-<tr><td style="padding:0;font-size:0;line-height:0;">${VAGUE}</td></tr>
-<tr><td class="px" style="padding:26px 40px 16px;"><h1 class="h1" style="margin:0;font-family:${M.ronde};font-size:30px;line-height:36px;font-weight:800;letter-spacing:-0.3px;color:${M.encre};">${esc(insec(titre, lang))}</h1></td></tr>
-<tr><td class="px" style="${px}padding-bottom:4px;font-family:${M.police};font-size:17px;line-height:27px;color:${M.encre};">
-<p style="margin:0 0 16px;">${esc(insec(phrase, lang))}</p>${jauge}${liste}${cite}
-</td></tr>
-${prix}
-<tr><td class="px" align="center" style="padding:26px 40px 0;">
-<table role="presentation" class="btn-t" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr>
-<td align="center" bgcolor="${M.bouton}" style="background-color:${M.bouton};border-radius:999px;mso-padding-alt:16px 36px;"><a href="${esc(url)}" target="_blank" class="btn-a" style="display:inline-block;padding:16px 36px;font-family:${M.ronde};font-size:17px;line-height:22px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:999px;mso-padding-alt:0;">${esc(bouton)}</a></td>
-</tr></table></td></tr>
-${note ? `<tr><td class="px" align="center" style="padding:14px 40px 0;"><span style="display:inline-block;padding:8px 16px;border:1px solid ${M.bord};border-radius:18px;background-color:${M.fond};font-family:${M.police};font-size:14px;line-height:20px;color:${M.doux};">${esc(insec(note, lang))}</span></td></tr>` : ''}
-<tr><td class="px" style="padding:30px 40px 0;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
-<td style="padding:0 8px 0 0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.roseVif};font-size:0;line-height:0;">&#8202;</div></td>
-<td style="padding:0 8px 0 0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.bouton};font-size:0;line-height:0;">&#8202;</div></td>
-<td style="padding:0;"><div style="width:8px;height:8px;border-radius:8px;background-color:${M.roseVif};font-size:0;line-height:0;">&#8202;</div></td>
-</tr></table></td></tr>
-<tr><td class="px" style="padding:14px 40px ${seul ? '14px' : '34px'};font-family:${M.police};font-size:16px;line-height:24px;font-weight:600;color:${M.encre};">${signature.map((x) => esc(insec(x, lang))).join('<br>')}</td></tr>
-${seul ? `<tr><td class="px" style="padding:0 40px 30px;font-family:${M.police};font-size:14px;line-height:20px;color:${M.doux};">${esc(insec(seul, lang))}</td></tr>` : ''}
-</table>
-</td></tr>
-<tr><td align="center" class="px" style="padding:22px 28px 0;font-family:${M.police};font-size:13px;line-height:19px;color:${M.doux};">
-${esc(insec(pied, lang))}<br>${esc(EDITEUR)}
-<div style="padding-top:8px;"><a href="${esc(arretUrl)}" target="_blank" style="color:${M.violet};text-decoration:underline;">${esc(arret)}</a></div>
-</td></tr>
-</table>
-<!--[if mso]></td></tr></table><![endif]-->
-</td></tr></table>
-</div>
-</body>
-</html>`;
-  return html;
-}
-
-// Le texte brut, à côté du HTML : même ordre, sans mise en forme.
-function texteBrut({ lang, titre, phrase, barre, puces, citation, ticket, bouton, url, note, seul, signature, pied, arret, arretUrl }) {
-  const dp = lang === 'fr' ? ' : ' : ': ';
-  return [titre, '', phrase]
-    .concat(barre ? [barre.texte] : [])
-    .concat([''])
-    .concat((puces || []).map((x) => '- ' + sansGras(x)))
-    .concat(puces && puces.length ? [''] : [])
-    .concat(citation ? [citation, ''] : [])
-    .concat(ticket ? [(ticket.barre ? ticket.barre + ' → ' : '') + ticket.prix + ' · ' + ticket.phrase, ''] : [])
-    .concat([bouton + dp + url, ''])
-    .concat(note ? [note, ''] : [])
-    .concat(signature)
-    .concat(seul ? ['', seul] : [])
-    .concat(['', '--', pied, arret + dp + arretUrl, EDITEUR])
-    .join('\n');
-}
-
 // quoi : 'pret', 'relance' ou 'reprise'. Pour la reprise, `variante` dit
 // qui n'a pas fini : 'moi' (la personne qui reçoit l'e-mail) ou 'autre'
 // (l'autre, à deux) ; `progression` est celle de qui n'a pas fini
@@ -917,7 +801,7 @@ function messageRappel(quoi, o) {
   }
   const tout = { ...commun, ...m };
   const sujet = insec(m.sujet, lang);
-  return { sujet, html: cadre({ ...tout, sujet }), texte: texteBrut(tout) };
+  return { sujet, html: carte({ ...tout, sujet }), texte: texteCarte(tout) };
 }
 
 // { sujet, html, texte } : le second vient de finir, le rapport attend.
@@ -927,6 +811,7 @@ export function messageRelance(o) { return messageRappel('relance', o); }
 // { sujet, html, texte } : la reprise, une fois, 48 heures sans rien de neuf.
 export function messageReprise(o) { return messageRappel('reprise', o); }
 
+// L'envoi par l'API de Resend. Renvoie { ok, id } ou lève une erreur.
 export function creerCourriel({ cle, fetch: f = fetch }) {
   return {
     async envoyer({ a, sujet, html, texte, pieces, lang }) {

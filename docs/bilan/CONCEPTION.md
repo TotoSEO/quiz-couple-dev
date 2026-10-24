@@ -1190,3 +1190,39 @@ et ce que les gens ont fait ensuite : payé après le « prêt » ou le rappel,
 fini ses réponses après la reprise « moi », l'autre a fini après la reprise
 « autre ». La variante d'une reprise se lit à la date : réponses pas finies à
 l'envoi, c'était « moi ».
+
+## 24 octobre 2026 au soir : tous les e-mails dans la même carte
+
+Thomas, devant les e-mails du parcours partis le premier soir : « tu peux
+redesigner comme pour les mails marketing les mails d'envois de pdf et tout
+aussi ? comme ça on uniformise les mails ».
+
+Tous les e-mails envoyés par Resend passent désormais par la même carte,
+`supabase/functions/_shared/emails/carte.mjs`, la maquette des e-mails du
+parcours Brevo sans les encarts « À voir aussi » ni Instagram : les deux
+personnages et leur bulle (« Bonjour Léa ! », ou « Bonjour ! » sans prénom),
+un titre, une phrase, des coches courtes, le bouton, la signature, le pied.
+C'était déjà le cas du « prêt », du rappel et de la reprise ; ce sont aussi :
+
+- **le lien du rapport** : « Votre rapport est prêt », une phrase, trois
+  coches pour bien le lire (chacun de son côté puis ensemble, commencer par
+  « Vos quatre prochaines conversations », le lien est personnel et marche
+  six mois), le bouton du PDF et, dessous, « Le lire en ligne » ; la note de
+  confidentialité en pastille ; « une question ? répondez à ce message » sous
+  la signature ; dans le pied, la confirmation de la renonciation à la
+  rétractation, mot pour mot celle d'avant, avec le lien des CGV cliquable
+  (L221-13). Le nombre de pages ne s'écrit plus, comme partout depuis le
+  23 octobre. La bulle porte le prénom de la personne qui reçoit l'e-mail ;
+- **le lien personnel** (« Recevoir mon lien par e-mail », « Retrouver mon
+  évaluation ») : un lien, avec l'adresse en clair sous le bouton pour la
+  recopier sur un autre appareil ; plusieurs, une petite carte par évaluation
+  avec son nom, son bouton et son adresse ; aucun, un e-mail qui dit les deux
+  pistes (une autre adresse, ou la page restée ouverte sur le téléphone) et
+  mène à la page de l'évaluation ;
+- **la confirmation de l'e-book** (ebook-verify), qui avait encore son
+  bouton en dégradé.
+
+Les e-mails transactionnels (rapport, lien, e-book) n'ont pas de lien « ne
+plus recevoir » : ils ne partent qu'une fois, à la demande ou à la livraison.
+Le texte brut suit le même ordre, bulle comprise. Aperçus : un script
+d'aperçus par variante et par langue, relus dans Chromium à 390 et 1 100 px.
