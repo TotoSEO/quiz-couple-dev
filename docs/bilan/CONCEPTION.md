@@ -1226,3 +1226,26 @@ Les e-mails transactionnels (rapport, lien, e-book) n'ont pas de lien « ne
 plus recevoir » : ils ne partent qu'une fois, à la demande ou à la livraison.
 Le texte brut suit le même ordre, bulle comprise. Aperçus : un script
 d'aperçus par variante et par langue, relus dans Chromium à 390 et 1 100 px.
+
+## 24 octobre 2026 : retirer une vente de test
+
+Thomas : « Dans mon admin y'a écrit 3 pdf générés, 3 ventes et tout mais la
+première vente c'était moi c'était un test donc tu peux retirer tout ça stp
+pour pas que ça fausse le reste ».
+
+L'onglet Évaluation lit deux choses : les compteurs du jour
+(`bilan_compteurs`, écrits par le déclencheur `bilans_compte` et par la
+fonction `bilan`, sans identifiant d'évaluation) et les lignes de `bilans`
+(PDF, délais, modes, attente, e-mails). Retirer un test, c'est donc effacer sa
+ligne et son PDF, et décompter ce qu'il a compté, chaque compteur au jour où
+il l'a été : créée, rejointe, finie, premier et second fini, paiement ouvert,
+payée (avec son montant), remboursée, rapport prêt, envois du rapport,
+« rapport prêt », rappel et reprise. La situation, la première réponse et
+les domaines n'ont pas de date dans la ligne : on ne les décompte que si
+toute l'évaluation tient dans une journée. Les visites de la page ne sont
+rattachées à aucune évaluation et restent.
+
+L'outil est `bilan/retrait-test.mjs`, lancé par `bilan-retrait.yml` :
+`lister` (les ventes, sans prénom ni adresse ; avec des empreintes SHA-256
+d'adresses, il signale celles faites avec elles, sans que l'adresse passe par
+le workflow), `essai` (ce qui serait retiré, sans rien toucher), `retirer`.
