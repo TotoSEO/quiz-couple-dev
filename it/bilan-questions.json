@@ -405,6 +405,7 @@
       "questions": {
         "ent1": {
           "q": "Le vostre famiglie (la tua e quella di {autre}), ti piacerebbe vederle...",
+          "qNeutre": "Le vostre famiglie (la tua e quella del tuo partner), ti piacerebbe vederle...",
           "o": [
             "Ogni settimana",
             "Più volte al mese",
@@ -421,8 +422,15 @@
         },
         "ent2": {
           "q": "Se la tua famiglia critica {autre} davanti a te...",
+          "qNeutre": "Se la tua famiglia critica il tuo partner davanti a te...",
           "o": [
             "Difendo {autre} subito",
+            "Ne parlo dopo con la mia famiglia",
+            "Sul momento non dico niente",
+            "Non mi intrometto"
+          ],
+          "oNeutre": [
+            "Difendo il mio partner subito",
             "Ne parlo dopo con la mia famiglia",
             "Sul momento non dico niente",
             "Non mi intrometto"
@@ -453,6 +461,7 @@
         },
         "ent4": {
           "q": "I tuoi amici e quelli di {autre}, ti piace vederli...",
+          "qNeutre": "I tuoi amici e quelli del tuo partner, ti piace vederli...",
           "o": [
             "Tutti insieme, mescoliamo",
             "Spesso insieme, a volte separati",
@@ -469,6 +478,7 @@
         },
         "ent5": {
           "q": "Quando {autre} esce senza di te (una serata, un weekend con gli amici), lo trovi...",
+          "qNeutre": "Quando il tuo partner esce senza di te (una serata, un weekend con gli amici), lo trovi...",
           "o": [
             "Normale, ogni volta che ne ha voglia",
             "Normale, ogni tanto",
@@ -691,6 +701,12 @@
             "Ne parlo prima",
             "Decido con {autre}"
           ],
+          "oNeutre": [
+            "Compro senza dirlo",
+            "Avviso il mio partner",
+            "Ne parlo prima",
+            "Decido con il mio partner"
+          ],
           "court": "I grandi acquisti",
           "pourquoi": "Non è la cifra a dare fastidio, è scoprire l'acquisto dopo. Fissare insieme una soglia evita sia la sensazione di essere controllati sia le brutte sorprese.",
           "parler": [
@@ -877,6 +893,7 @@
         },
         "log5": {
           "q": "Trasferirti lontano per il lavoro di {autre}:",
+          "qNeutre": "Trasferirti lontano per il lavoro del tuo partner:",
           "o": [
             "Sì, senza esitare",
             "Sì, se è una grande occasione",
@@ -1347,6 +1364,7 @@
         },
         "val8": {
           "q": "Avere le stesse idee politiche di {autre} è...",
+          "qNeutre": "Avere le stesse idee politiche del tuo partner è...",
           "o": [
             "Indispensabile",
             "Preferibile",
@@ -1375,6 +1393,7 @@
       "questions": {
         "dis1": {
           "q": "Quando qualcosa di {autre} ti dà fastidio, lo dici...",
+          "qNeutre": "Quando qualcosa del tuo partner ti dà fastidio, lo dici...",
           "o": [
             "Subito",
             "Abbastanza presto, al momento giusto",
@@ -1568,6 +1587,7 @@
       "questions": {
         "con1": {
           "q": "Guardare il telefono di {autre}, per te, è...",
+          "qNeutre": "Guardare il telefono del tuo partner, per te, è...",
           "o": [
             "Non mi crea nessun problema",
             "Accettabile se lo si chiede prima",
@@ -1616,6 +1636,7 @@
         },
         "con4": {
           "q": "Che {autre} abbia un'amicizia molto stretta con qualcuno che potrebbe piacergli o piacerle:",
+          "qNeutre": "Che il tuo partner abbia un'amicizia molto stretta con qualcuno che potrebbe piacergli o piacerle:",
           "o": [
             "Nessun problema",
             "Dipende dalla persona",
@@ -1648,6 +1669,7 @@
         },
         "con6": {
           "q": "Conoscere i codici e le password di {autre}:",
+          "qNeutre": "Conoscere i codici e le password del tuo partner:",
           "o": [
             "Va da sé, condividiamo tutto",
             "Utile in caso di bisogno",
