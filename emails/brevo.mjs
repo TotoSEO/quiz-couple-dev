@@ -93,8 +93,10 @@ export function clientBrevo(cle, { fetch: f = globalThis.fetch, pause = attendre
     supprimerContact: (email) => appel('DELETE', '/contacts/' + enc(email)),
     creerCampagne: (corps) => appel('POST', '/emailCampaigns', corps),
     campagne: (id) => appel('GET', '/emailCampaigns/' + enc(id)),
-    campagnes: ({ statut, limite = 100, offset = 0 } = {}) => appel('GET',
-      `/emailCampaigns?limit=${limite}&offset=${offset}&excludeHtmlContent=true${statut ? '&status=' + enc(statut) : ''}`),
+    // `statistiques` : « globalStats » ajoute à chaque campagne ses chiffres
+    // d'ensemble (campaigns[].statistics.globalStats), jamais par personne.
+    campagnes: ({ statut, limite = 100, offset = 0, statistiques } = {}) => appel('GET',
+      `/emailCampaigns?limit=${limite}&offset=${offset}&excludeHtmlContent=true${statut ? '&status=' + enc(statut) : ''}${statistiques ? '&statistics=' + enc(statistiques) : ''}`),
     envoyerMaintenant: (id) => appel('POST', `/emailCampaigns/${enc(id)}/sendNow`),
     envoyerEssai: (id, emails) => appel('POST', `/emailCampaigns/${enc(id)}/sendTest`, { emailTo: emails }),
     supprimerCampagne: (id) => appel('DELETE', '/emailCampaigns/' + enc(id)),

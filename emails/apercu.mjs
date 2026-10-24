@@ -1,6 +1,7 @@
 // Les aperçus des e-mails du parcours, tels qu'un contact les recevrait :
 // chaque e-mail, chaque langue, chaque famille de test, avec et sans
-// prénom, et une page index.html qui les liste. Rien n'est envoyé.
+// prénom, dans les deux versions du test A/B (« -sobre » pour la version
+// b), et une page index.html qui les liste. Rien n'est envoyé.
 //
 //   node emails/apercu.mjs <dossier> [AAAA-MM-JJTHH:MM:SSZ]
 //
@@ -9,7 +10,7 @@
 
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { TYPES, LANGUES, ANGLES, campagne, attributsContact, pourContact } from './contenu.mjs';
+import { TYPES, LANGUES, ANGLES, VERSIONS, campagne, attributsContact, pourContact } from './contenu.mjs';
 
 const PRENOMS = { fr: 'Julie', en: 'Emma', es: 'Lucía', de: 'Anna', it: 'Giulia' };
 
@@ -17,15 +18,17 @@ export function apercus(dossier, instant = new Date()) {
   mkdirSync(dossier, { recursive: true });
   const jour = instant.toISOString().slice(0, 10);
   const lignes = [];
-  for (const type of TYPES) {
-    for (const lang of LANGUES) {
-      const c = campagne(type, lang, instant);
-      for (const angle of ANGLES) {
-        for (const prenom of [PRENOMS[lang], null]) {
-          const nom = `${type}-${lang}-${angle}${prenom ? '' : '-sans-prenom'}.html`;
-          const attributs = attributsContact({ type, lang, angle, prenom }, jour);
-          writeFileSync(join(dossier, nom), pourContact(c.html, attributs));
-          lignes.push(`<li><a href="${nom}">${nom}</a> · ${c.sujet.replace(/</g, '&lt;')}</li>`);
+  for (const version of VERSIONS) {
+    for (const type of TYPES) {
+      for (const lang of LANGUES) {
+        const c = campagne(type, lang, instant, { version });
+        for (const angle of ANGLES) {
+          for (const prenom of [PRENOMS[lang], null]) {
+            const nom = `${type}-${lang}-${angle}${version === 'b' ? '-sobre' : ''}${prenom ? '' : '-sans-prenom'}.html`;
+            const attributs = attributsContact({ type, lang, angle, prenom }, jour);
+            writeFileSync(join(dossier, nom), pourContact(c.html, attributs));
+            lignes.push(`<li><a href="${nom}">${nom}</a> · ${c.sujet.replace(/</g, '&lt;')}${c.expediteur ? ` · de ${c.expediteur}` : ''}</li>`);
+          }
         }
       }
     }

@@ -16,6 +16,16 @@ export const REGLAGES = {
   domaine: 'mail.quiz-couple.com',
   expediteur: { name: 'Quiz Couple', email: 'bonjour@mail.quiz-couple.com' },
   repondreA: 'infoquizcouple@gmail.com',
+  // Le test A/B (25 octobre 2026, Thomas : « Tu envoies 50 % de mail promo
+  // et 50 % de mails sobres, et on regarde d'ici 3 jours les résultats ») :
+  // `ab` vrai, chaque adresse reçoit la version que donne son empreinte
+  // (`versionDe` dans contenu.mjs), la même pour e1 et e2 : « a » la
+  // maquette, « b » l'e-mail sobre signé de Thomas. `ab` faux, tout le monde
+  // reçoit `version`. Le bilan du test se lit dans l'action « verif » de
+  // brevo-reglages.yml, à partir de `abDepuis` (le premier soir du test).
+  ab: true,
+  version: 'a',
+  abDepuis: '2026-10-25',
   // Les listes du soir (« AAAA-MM-JJ · e1 · fr · 19:02 ») sont rangées là, et
   // supprimées après `listesGardees` jours ; la liste « Essais » y vit aussi.
   dossier: 'Parcours Quiz Couple',

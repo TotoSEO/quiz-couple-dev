@@ -98,5 +98,25 @@
     },
     "bouton": "Faire l'évaluation",
     "note": "Pour comparer : une séance chez un conseiller conjugal coûte entre 50 et 90 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas de Quiz Couple",
+    "signature": [
+      "À très vite,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Les questions sont gratuites, et le rapport coûte [[prix]] pour vous deux en ce moment, au lieu de [[prixBase]].",
+      "normal": "Les questions sont gratuites, et le rapport coûte [[prix]] pour vous deux."
+    },
+    "solo": "L'évaluation se fait aussi seul(e), si ton ou ta partenaire ne veut pas.",
+    "e1": {
+      "texte": "Vous répondez chacun à 100 questions sur votre téléphone, sans voir les réponses de l'autre. Ça parle d'argent, d'enfants, de disputes, d'intimité... À la fin, un rapport compare vos réponses et vous dit de quoi parler en premier.",
+      "lien": "Tout est expliqué ici : [voir l'évaluation de couple](evaluation).",
+      "reponse": "Si tu as une question, tu peux répondre directement à cet e-mail."
+    },
+    "e2": {
+      "lien": "Si ça te tente : [faire l'évaluation de couple](evaluation)."
+    }
   }
 }

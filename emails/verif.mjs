@@ -136,4 +136,31 @@ await etape('Les derniers envois', async () => {
   for (const c of du) info(`campagne ${c.id} « ${c.name} » : ${c.status}${c.sentDate ? ` (${c.sentDate})` : ''}`);
 });
 
+// Le bilan du test A/B (emails/ab.mjs), depuis son premier soir : par e-mail
+// et par version, les chiffres d'ensemble de Brevo et ce que la page de
+// l'évaluation a compté pour la source de chaque version.
+await etape('Le test A/B', async () => {
+  const { bilanAB, texteAB } = await import('./ab.mjs');
+  info(REGLAGES.ab
+    ? `en cours depuis le ${REGLAGES.abDepuis} (a : la maquette, b : l'e-mail sobre)`
+    : `arrêté : tout le monde reçoit la version « ${REGLAGES.version} » ; chiffres depuis le ${REGLAGES.abDepuis}`);
+  const campagnes = [];
+  for (let offset = 0; offset < 5000; offset += 100) {
+    const r = await brevo.campagnes({ statut: 'sent', limite: 100, offset, statistiques: 'globalStats' });
+    const liste = (r && r.campaigns) || [];
+    campagnes.push(...liste);
+    if (liste.length < 100) break;
+  }
+  let compteurs = [];
+  if (avecSupabase) {
+    const { connexion } = await import('./base.mjs');
+    const base = await connexion();
+    compteurs = (await base.select('bilan_compteurs',
+      `select=jour,evenement,cle,n,montant&jour=gte.${REGLAGES.abDepuis}&cle=in.(email-e1,email-e1-sobre,email-e2,email-e2-sobre)`)) || [];
+  } else {
+    info('SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF absents : visites et ventes non lues');
+  }
+  for (const l of bilanAB({ campagnes, compteurs, depuis: REGLAGES.abDepuis })) info(texteAB(l));
+});
+
 console.log(`\n${problemes ? problemes + ' point(s) à régler' : 'Tout est prêt.'}`);

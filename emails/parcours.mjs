@@ -16,7 +16,7 @@
 //      plafond du soir (montée en charge les premiers soirs, puis
 //      REGLAGES.plafond), puis, par e-mail et par langue : les lignes
 //      d'envoi, les contacts et leurs champs, la liste du soir, la campagne,
-//      l'envoi ;
+//      l'envoi ; pendant le test A/B (REGLAGES.ab), une campagne par version ;
 //   6. le ménage chez Brevo : les listes du parcours plus vieilles que
 //      REGLAGES.listesGardees, et les contacts du parcours que notre base
 //      n'a plus en actif (rebond, désinscription, purge de rgpd_menage).
@@ -26,11 +26,22 @@
 import { REGLAGES } from './reglages.mjs';
 import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { connexion } from './base.mjs';
-import { campagne, attributsContact, angleDe, LANGUES, TYPES } from './contenu.mjs';
+import { campagne, attributsContact, angleDe, versionDe, LANGUES, TYPES } from './contenu.mjs';
 
 const fmt = (options) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', ...options });
 export const jourParis = (instant) => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
 export const heureParis = (instant) => fmt({ hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(instant);
+
+// La version d'un e-mail du parcours. Pendant le test A/B, celle que donne
+// l'empreinte de l'adresse (versionDe), la même pour e1 et e2 ; un e2 dont
+// l'e1 est parti avant le premier soir du test (`depuis` : la date de l'e1)
+// reste en « a », la maquette que la personne a déjà reçue. Hors test, la
+// version des réglages pour tout le monde.
+export function versionPour(x, email) {
+  if (!REGLAGES.ab) return REGLAGES.version;
+  if (x.type === 'e2' && x.depuis && jourParis(new Date(x.depuis)) < REGLAGES.abDepuis) return 'a';
+  return versionDe(email);
+}
 const jourAvant = (jour, n) => new Date(Date.parse(`${jour}T12:00:00Z`) - n * 86400e3).toISOString().slice(0, 10);
 const morceaux = (liste, n) => Array.from({ length: Math.ceil(liste.length / n) }, (_, i) => liste.slice(i * n, i * n + n));
 const ENVOYEE = ['sent', 'queued', 'in_process'];
@@ -163,9 +174,10 @@ async function dossierDuParcours(brevo) {
   return notre.id;
 }
 
-// Un e-mail dans une langue : les lignes, les contacts, la liste, la
-// campagne, l'envoi. Rend le nombre de personnes parties et refusées.
-async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal, pause }) {
+// Un e-mail dans une langue et une version : les lignes, les contacts, la
+// liste, la campagne, l'envoi. Rend le nombre de personnes parties et
+// refusées.
+async function envoyerGroupe({ base, brevo, type, lang, version = 'a', membres, c, jour, heure, dossier, journal, pause }) {
   const lignes = await base.insert('emails_envois',
     membres.map((m) => ({ abonne_id: m.abonne_id, type, angle: m.angle, lang, jour })),
     { conflit: 'abonne_id,type', ignorer: true });
@@ -174,7 +186,7 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
   if (!retenus.length) return { envoyes: 0, refuses: 0 };
   const ids = retenus.map((m) => ligneDe.get(m.abonne_id).id);
 
-  const liste = await brevo.creerListe(`${jour} · ${type} · ${lang} · ${heure}`, dossier);
+  const liste = await brevo.creerListe(`${jour} · ${type} · ${lang} · ${version} · ${heure}`, dossier);
   await majLignes(base, ids, { liste_id: liste.id });
 
   // Brevo refuse parfois une adresse que notre contrôle a laissée passer :
@@ -226,8 +238,10 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
   const cree = await brevo.creerCampagne({
     // Pas de `tag` : l'offre gratuite de Brevo le refuse (405). Le webhook
     // retrouve l'envoi par le numéro de la campagne.
-    name: `Parcours · ${type} · ${lang} · ${jour} ${heure}`,
-    sender: { name: REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
+    // La version dans le nom : le bilan du test A/B (verif.mjs) additionne
+    // les statistiques des campagnes par version.
+    name: `Parcours · ${type} · ${lang} · ${version} · ${jour} ${heure}`,
+    sender: { name: c.expediteur || REGLAGES.expediteur.name, email: REGLAGES.expediteur.email },
     replyTo: REGLAGES.repondreA,
     subject: c.sujet,
     htmlContent: c.html,
@@ -239,7 +253,7 @@ async function envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure,
   await brevo.envoyerMaintenant(cree.id);
   await majLignes(base, partis, { statut: 'envoye', envoye_le: new Date().toISOString() });
   await base.rpc('emails_compter', { p_type: type, p_evenement: 'envoye', p_n: partis.length });
-  journal(`${type} ${lang} : ${partis.length} envoyé(s), campagne ${cree.id}${refuses.length ? `, ${refuses.length} adresse(s) refusée(s) par Brevo` : ''}${absents ? `, ${absents} absente(s) de la liste` : ''}.`);
+  journal(`${type} ${lang} ${version} : ${partis.length} envoyé(s), campagne ${cree.id}${refuses.length ? `, ${refuses.length} adresse(s) refusée(s) par Brevo` : ''}${absents ? `, ${absents} absente(s) de la liste` : ''}.`);
   return { envoyes: partis.length, refuses: refuses.length };
 }
 
@@ -250,7 +264,7 @@ async function effacerVieillesListes(brevo, dossier, jour) {
     const r = await brevo.listesDuDossier(dossier, offset);
     const listes = (r && r.lists) || [];
     for (const l of listes) {
-      const m = /^(\d{4}-\d{2}-\d{2}) · e\d · [a-z]{2}(?: · \d{2}:\d{2})?$/.exec(l.name || '');
+      const m = /^(\d{4}-\d{2}-\d{2}) · e\d · [a-z]{2}(?: · [ab])?(?: · \d{2}:\d{2})?$/.exec(l.name || '');
       if (m && m[1] <= limite) aEffacer.push(l.id);
     }
     if (listes.length < 50) break;
@@ -322,23 +336,25 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
   const groupes = new Map();
   for (const x of file) {
     if (!TYPES.includes(x.type) || !LANGUES.includes(x.lang)) continue;
-    const cle = `${x.type}:${x.lang}`;
+    const email = String(x.email).toLowerCase();
+    const version = versionPour(x, email);
+    const cle = `${x.type}:${x.lang}:${version}`;
     if (!groupes.has(cle)) groupes.set(cle, []);
-    groupes.get(cle).push({ abonne_id: x.abonne_id, email: String(x.email).toLowerCase(), prenom: x.prenom, angle: angleDe(x.source) });
+    groupes.get(cle).push({ abonne_id: x.abonne_id, email, prenom: x.prenom, angle: angleDe(x.source) });
   }
   journal(`${heure} à Paris · ${bilan.credits} crédits Brevo · ${file.length} e-mail(s) ce soir (plafond ${bilan.limite}).`);
 
   for (const [cle, membres] of groupes) {
-    const [type, lang] = cle.split(':');
-    const c = campagne(type, lang, maintenant);
+    const [type, lang, version] = cle.split(':');
+    const c = campagne(type, lang, maintenant, { version });
     if (mode === 'blanc') {
       const angles = {};
       for (const m of membres) angles[m.angle] = (angles[m.angle] || 0) + 1;
-      journal(`[blanc] ${type} ${lang} : ${membres.length} (${Object.entries(angles).map(([a, n]) => `${a} ${n}`).join(', ')}) · « ${c.sujet} »${c.promo ? ' · réduction' : ''}`);
+      journal(`[blanc] ${type} ${lang} ${version} : ${membres.length} (${Object.entries(angles).map(([a, n]) => `${a} ${n}`).join(', ')}) · « ${c.sujet} »${c.promo ? ' · réduction' : ''}${c.expediteur ? ` · de « ${c.expediteur} »` : ''}`);
       bilan.envois[cle] = membres.length;
       continue;
     }
-    const r = await envoyerGroupe({ base, brevo, type, lang, membres, c, jour, heure, dossier, journal, pause });
+    const r = await envoyerGroupe({ base, brevo, type, lang, version, membres, c, jour, heure, dossier, journal, pause });
     bilan.envois[cle] = r.envoyes;
     bilan.refuses += r.refuses;
   }

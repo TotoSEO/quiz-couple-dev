@@ -4,8 +4,13 @@
 // Postgres ; ici, la file est donnée telle quelle.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { passage, jourParis, heureParis } from '../parcours.mjs';
+import { passage, jourParis, heureParis, versionPour } from '../parcours.mjs';
 import { REGLAGES } from '../reglages.mjs';
+import { versionDe } from '../contenu.mjs';
+
+// Les tests de la mécanique d'envoi partent avec une seule version (« a »),
+// une campagne par e-mail et par langue ; le test A/B a les siens, en bas.
+REGLAGES.ab = false;
 
 const SOIR = new Date('2026-10-24T17:02:00Z'); // 19 h 02 à Paris
 const MATIN = new Date('2026-10-24T08:00:00Z');
@@ -180,7 +185,7 @@ test('hors de la fenêtre du soir : rien, sauf si on force', async () => {
   assert.equal(b.hors_fenetre, true);
   assert.equal(brevo.appels.length, 0);
   const b2 = await passage({ base, brevo, maintenant: MATIN, mode: 'reel', forcer: true, journal: silence });
-  assert.equal(b2.envois['e1:fr'], 1);
+  assert.equal(b2.envois['e1:fr:a'], 1);
 });
 
 test('à blanc : la file est lue et rendue, rien n\'est écrit ni envoyé', async () => {
@@ -188,10 +193,10 @@ test('à blanc : la file est lue et rendue, rien n\'est écrit ni envoyé', asyn
   const brevo = new FauxBrevo();
   const lignes = [];
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'blanc', journal: (m) => lignes.push(m) });
-  assert.deepEqual(b.envois, { 'e1:fr': 1, 'e2:de': 1 });
+  assert.deepEqual(b.envois, { 'e1:fr:a': 1, 'e2:de:a': 1 });
   assert.equal(base.ecritures, 0);
   assert.deepEqual(brevo.ecrit(), []);
-  assert.ok(lignes.some((l) => l.includes('[blanc] e1 fr : 1 (doute 1)')));
+  assert.ok(lignes.some((l) => l.includes('[blanc] e1 fr a : 1 (doute 1)')));
   assert.ok(!lignes.join('\n').includes('@'), 'aucune adresse au journal');
 });
 
@@ -205,7 +210,7 @@ test('en réel : une campagne par e-mail et par langue, les bons champs, les lig
   const brevo = new FauxBrevo();
   const lignes = [];
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: (m) => lignes.push(m) });
-  assert.deepEqual(b.envois, { 'e1:fr': 2, 'e2:en': 1 });
+  assert.deepEqual(b.envois, { 'e1:fr:a': 2, 'e2:en:a': 1 });
   assert.equal(brevo.campagnesCreees.length, 2);
   const fr = brevo.campagnesCreees.find((c) => c.name.includes('e1 · fr'));
   assert.equal(fr.subject, '100 questions pour faire le point à deux');
@@ -260,7 +265,7 @@ test('les crédits de Brevo coupent la file, avec la marge des essais', async ()
   const brevo = new FauxBrevo({ credits: REGLAGES.marge + 12 });
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
   assert.equal(b.limite, 12);
-  assert.equal(b.envois['e1:fr'], 12);
+  assert.equal(b.envois['e1:fr:a'], 12);
   const vide = new FausseBase({ file });
   const b2 = await passage({ base: vide, brevo: new FauxBrevo({ credits: 3 }), maintenant: SOIR, mode: 'reel', journal: silence });
   assert.equal(b2.file, 0);
@@ -294,7 +299,7 @@ test('une ligne déjà là (passage concurrent) ne repart pas', async () => {
   };
   const brevo = new FauxBrevo();
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
-  assert.equal(b.envois['e1:fr'], 1);
+  assert.equal(b.envois['e1:fr:a'], 1);
   assert.deepEqual([...brevo.contactsEcrits.keys()], ['p2@exemple.fr']);
 });
 
@@ -303,7 +308,7 @@ test('une adresse refusée par Brevo passe en invalide, les autres partent', asy
   const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
   const brevo = new FauxBrevo({ refuses: ['p4@exemple.fr'] });
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
-  assert.equal(b.envois['e1:es'], 11);
+  assert.equal(b.envois['e1:es:a'], 11);
   assert.equal(b.refuses, 1);
   assert.equal(base.t.abonnes.find((a) => a.id === 'ab-4').statut, 'invalide');
   assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-4'), 'sa ligne est retirée');
@@ -316,7 +321,7 @@ test('un contact que Brevo n\'a pas mis dans la liste ne part pas, et beaucoup d
   const brevo = new FauxBrevo({ horsListe: ['p7@exemple.fr'] });
   const pause = pauses();
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause });
-  assert.equal(b.envois['e2:fr'], 11);
+  assert.equal(b.envois['e2:fr:a'], 11);
   assert.deepEqual(pause.faites, [5000, 15000], 'la liste est relue deux fois avant de conclure');
   assert.ok(!base.t.emails_envois.some((l) => l.abonne_id === 'ab-7'), 'sa ligne est retirée, il reviendra');
   assert.equal(base.t.abonnes.find((a) => a.id === 'ab-7').statut, 'actif', 'son adresse n\'est pas marquée');
@@ -334,7 +339,7 @@ test('un contact que Brevo montre en retard dans la liste part quand même', asy
   const brevo = new FauxBrevo({ lents: ['p3@exemple.fr', 'p8@exemple.fr'] });
   const pause = pauses();
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause });
-  assert.equal(b.envois['e1:de'], 12);
+  assert.equal(b.envois['e1:de:a'], 12);
   assert.deepEqual(pause.faites, [5000], 'une relecture suffit');
   assert.ok(!brevo.appels.some(([nom]) => nom === 'retirerDeLaListe'));
   assert.ok(base.t.emails_envois.filter((l) => l.statut === 'envoye').length === 12);
@@ -345,7 +350,7 @@ test('un contact dans la liste que Brevo ne montre pas en est retiré avant la c
   const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
   const brevo = new FauxBrevo({ invisibles: ['p5@exemple.fr'] });
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() });
-  assert.equal(b.envois['e1:fr'], 11);
+  assert.equal(b.envois['e1:fr:a'], 11);
   const liste = brevo.campagnesCreees[0].recipients.listIds[0];
   assert.ok(!brevo.membres.get(liste).includes('p5@exemple.fr'), 'la campagne ne l\'atteint pas');
   const i = brevo.appels.findIndex(([nom]) => nom === 'retirerDeLaListe');
@@ -405,6 +410,7 @@ test('le ménage : vieilles listes du parcours, contacts que la base n\'a plus e
       { id: 3, name: '2026-10-23 · e1 · fr · 18:55' },
       { id: 4, name: 'Essais' },
       { id: 5, name: 'Ma liste à moi' },
+      { id: 6, name: '2026-10-22 · e1 · fr · b · 19:02' },
     ],
     contacts: [
       { email: 'garde@x.fr', emailBlacklisted: false, attributes: { PARCOURS: '2026-10-20' } },
@@ -414,9 +420,9 @@ test('le ménage : vieilles listes du parcours, contacts que la base n\'a plus e
     ],
   });
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
-  assert.deepEqual(brevo.supprimes.listes.sort(), [1, 2]);
+  assert.deepEqual(brevo.supprimes.listes.sort(), [1, 2, 6]);
   assert.deepEqual(brevo.supprimes.contacts.sort(), ['efface@x.fr', 'parti@x.fr']);
-  assert.equal(b.listes_effacees, 2);
+  assert.equal(b.listes_effacees, 3);
   assert.equal(b.contacts_effaces, 2);
 });
 
@@ -431,4 +437,83 @@ test('les désinscriptions faites chez Brevo rattrapent un webhook manqué', asy
   assert.equal(b.desinscriptions_rattrapees, 1);
   assert.deepEqual(base.evenements.map((e) => e.p_email), ['bloque@x.fr']);
   assert.equal(base.t.abonnes.find((a) => a.id === 'a').statut, 'desinscrit');
+});
+
+test('le test A/B : une campagne par version, la même version pour une adresse de l\'e1 à l\'e2, l\'expéditeur et la source de la version sobre', async () => {
+  REGLAGES.ab = true;
+  try {
+    const file = [];
+    for (let i = 1; i <= 12; i++) file.push(candidat(i, 'e1', 'fr', 'tester-couple'));
+    for (let i = 13; i <= 16; i++) file.push(candidat(i, 'e2', 'fr', 'mariage'));
+    const versions = Object.fromEntries(file.map((c) => [c.email, versionDe(c.email)]));
+    assert.ok(Object.values(versions).includes('a') && Object.values(versions).includes('b'), 'les deux versions dans la file d\'essai');
+    const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+    const brevo = new FauxBrevo();
+    const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence });
+    // Une campagne par e-mail et par version, chacune avec exactement ses destinataires.
+    const attendu = {};
+    for (const c of file) attendu[`${c.type}:fr:${versions[c.email]}`] = (attendu[`${c.type}:fr:${versions[c.email]}`] || 0) + 1;
+    assert.deepEqual(b.envois, attendu);
+    assert.equal(brevo.campagnesCreees.length, Object.keys(attendu).length);
+    for (const camp of brevo.campagnesCreees) {
+      const m = /^Parcours · (e[12]) · fr · ([ab]) · /.exec(camp.name);
+      assert.ok(m, camp.name);
+      const [, type, version] = m;
+      const dans = brevo.membres.get(camp.recipients.listIds[0]);
+      assert.ok(dans.length && dans.every((e) => versions[e] === version), `${camp.name} : destinataires de la version`);
+      assert.ok(dans.every((e) => file.find((c) => c.email === e).type === type));
+      if (version === 'b') {
+        assert.equal(camp.sender.name, 'Thomas de Quiz Couple');
+        assert.ok(camp.htmlContent.includes(`src=email-${type}-sobre`));
+        assert.ok(!camp.htmlContent.includes('<img'), 'la version sobre n\'a aucune image');
+      } else {
+        assert.equal(camp.sender.name, REGLAGES.expediteur.name);
+        assert.ok(camp.htmlContent.includes(`src=email-${type}"`) || camp.htmlContent.includes(`src=email-${type}&amp;`));
+        assert.ok(!camp.htmlContent.includes('-sobre'));
+      }
+      assert.equal(camp.sender.email, REGLAGES.expediteur.email);
+    }
+    // Les listes du soir portent la version, et le ménage les reconnaît.
+    assert.ok(brevo.listesBrevo.every((l) => / · [ab] · \d{2}:\d{2}$/.test(l.name)));
+  } finally {
+    REGLAGES.ab = false;
+  }
+});
+
+test('le test A/B à blanc : chaque version a sa ligne au journal, avec l\'expéditeur de la version sobre', async () => {
+  REGLAGES.ab = true;
+  try {
+    const file = [];
+    for (let i = 1; i <= 8; i++) file.push(candidat(i, 'e1', 'de', 'toxique'));
+    const base = new FausseBase({ file });
+    const brevo = new FauxBrevo();
+    const lignes = [];
+    await passage({ base, brevo, maintenant: SOIR, mode: 'blanc', journal: (m) => lignes.push(m) });
+    const journal = lignes.join('\n');
+    if (file.some((c) => versionDe(c.email) === 'a')) assert.match(journal, /\[blanc\] e1 de a : /);
+    if (file.some((c) => versionDe(c.email) === 'b')) assert.match(journal, /\[blanc\] e1 de b : .*de « Thomas von Quiz Couple »/);
+    assert.equal(brevo.ecrit().length, 0, 'rien d\'écrit chez Brevo');
+  } finally {
+    REGLAGES.ab = false;
+  }
+});
+
+test('le test A/B : un e2 dont l\'e1 est parti avant le premier soir du test reste en maquette', () => {
+  REGLAGES.ab = true;
+  try {
+    const emails = Array.from({ length: 40 }, (_, i) => `q${i}@exemple.fr`);
+    const b = emails.find((e) => versionDe(e) === 'b');
+    assert.ok(b, 'une adresse de la version b');
+    // L'e1 du 24 octobre au soir (avant le test) : l'e2 garde la maquette.
+    assert.equal(versionPour({ type: 'e2', depuis: '2026-10-24T16:55:00Z' }, b), 'a');
+    // 23 h 30 UTC le 24, c'est déjà le 25 à Paris : le test avait commencé.
+    assert.equal(versionPour({ type: 'e2', depuis: '2026-10-24T23:30:00Z' }, b), 'b');
+    assert.equal(versionPour({ type: 'e2', depuis: '2026-10-25T17:55:00Z' }, b), 'b');
+    assert.equal(versionPour({ type: 'e1', depuis: '2026-10-20T10:00:00Z' }, b), 'b');
+    for (const e of emails) assert.equal(versionPour({ type: 'e1' }, e), versionDe(e));
+  } finally {
+    REGLAGES.ab = false;
+  }
+  // Hors test, tout le monde reçoit la version des réglages.
+  assert.equal(versionPour({ type: 'e1' }, 'x@exemple.fr'), REGLAGES.version);
 });

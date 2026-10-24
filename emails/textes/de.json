@@ -98,5 +98,25 @@
     },
     "bouton": "Die Analyse machen",
     "note": "Zum Vergleich: Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas von Quiz Couple",
+    "signature": [
+      "Bis bald,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Die Fragen sind kostenlos, und der Bericht kostet gerade [[prix]] für euch beide statt [[prixBase]].",
+      "normal": "Die Fragen sind kostenlos, und der Bericht kostet [[prix]] für euch beide."
+    },
+    "solo": "Die Analyse geht auch allein, wenn dein Partner oder deine Partnerin nicht mitmachen will.",
+    "e1": {
+      "texte": "Ihr beantwortet jeder auf seinem Handy 100 Fragen, ohne die Antworten des anderen zu sehen. Geld, Kinder, Streit, Intimität... Am Ende vergleicht ein Bericht eure Antworten und sagt euch, worüber ihr zuerst reden solltet.",
+      "lien": "Hier ist alles erklärt: [zur Beziehungsanalyse](evaluation).",
+      "reponse": "Wenn du eine Frage hast, antworte einfach auf diese E-Mail."
+    },
+    "e2": {
+      "lien": "Wenn du Lust hast: [die Beziehungsanalyse machen](evaluation)."
+    }
   }
 }
