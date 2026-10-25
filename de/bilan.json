@@ -41,7 +41,6 @@
       "homme": "Ein Mann",
       "sansGenre": "Möchte ich nicht sagen",
       "genreAide": "Das dient nur dazu, die Figuren neben euren Namen auszuwählen.",
-      "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“. Dein Partner oder deine Partnerin kann sie korrigieren.",
       "consentement": "Ich bin 18 Jahre oder älter und willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
       "accordAide": "Deine Antworten, auch zu intimen Themen, dienen nur diesem Bericht, in dem {{autre}} sie neben den eigenen sieht. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie jederzeit löschen. Kein Konto nötig.",
       "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide: Du schaltest ihn frei, sobald du deine Antworten fertig hast.",
@@ -77,8 +76,6 @@
       "titre": "{{autre}} schlägt dir vor, eure Beziehungsanalyse zu machen",
       "texte": "Rund hundert konkrete Fragen zu eurem Leben zu zweit. Du antwortest für dich, ohne die Antworten von {{autre}} zu sehen, und umgekehrt. Wenn ihr beide fertig seid, stellt euer Bericht eure beiden Antworten nebeneinander, Thema für Thema.",
       "duree": "Rechne mit etwa 20 Minuten. Du kannst jederzeit eine Pause machen, alles wird gespeichert.",
-      "situationTitre": "Eure Situation, wie {{autre}} sie beschrieben hat",
-      "situationCorriger": "Korrigieren",
       "prenom": "Dein Vorname",
       "genre": "Du bist",
       "commencer": "Einverstanden, los geht's",
@@ -203,8 +200,7 @@
         "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
         "creer": "Meine Analyse beginnen",
-        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
-        "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“."
+        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet."
       },
       "domaine": {
         "nb": "{{n}} Fragen, je zwei Antworten, etwa {{min}} Min."
@@ -578,10 +574,8 @@
     "situation": {
       "resume": "Situation",
       "titre": "Eure Situation",
-      "progression": "{{n}} von {{total}}",
-      "verifierTitre": "Eure Situation, bevor es losgeht",
-      "verifierTexte": "Diese Antworten ändern die Fragen, die du bekommst. Wenn eine davon nicht mehr stimmt, korrigiere sie, bevor du anfängst.",
-      "confirmer": "Stimmt so, los geht's"
+      "aide": "Deine Antwort passt die folgenden Fragen an.",
+      "deja": "Diese Antwort wurde schon gegeben: Ändere sie, wenn sie nicht stimmt."
     },
     "erreurs": {
       "reseau": "Keine Verbindung. Prüf dein Netz und versuch es noch einmal.",

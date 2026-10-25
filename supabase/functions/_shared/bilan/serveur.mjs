@@ -189,16 +189,19 @@ const estVerrouille = (ligne) => (estSolo(ligne) ? !!ligne.a_fini : !!(ligne.a_f
 const finiLe = (ligne) => (estSolo(ligne) ? ligne.a_fini : (ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini));
 const non = (statut, erreur, plus) => ({ statut, json: { erreur, ...(plus || {}) } });
 
-// L'étape d'une personne : le premier domaine qu'elle n'a pas fini, ou
-// « fini ». Les domaines sont posés dans l'ordre.
+// L'étape d'une personne : le premier domaine qu'elle n'a pas fini, dans
+// l'ordre de passage (C.ORDRE), ou « fini ». Une clé de situation pas encore
+// donnée prend sa valeur par défaut : la clé est demandée à l'entrée du
+// domaine, qui reste l'étape tant qu'il n'est pas fini.
 function etapeDe(situation, reponses) {
-  if (!C.situationValide(situation)) return 'situation';
+  const sit = C.avecDefauts(situation);
   const e = C.etapes(situation, reponses);
-  for (const d of C.DOMAINES) {
-    const qs = d.questions.filter((q) => C.applicable(q, situation, reponses));
-    if (qs.length && !e.finis.includes(d.id)) return d.id;
+  for (const id of C.ORDRE) {
+    const d = C.DOMAINES.find((x) => x.id === id);
+    const qs = d.questions.filter((q) => C.applicable(q, sit, reponses));
+    if (qs.length && !e.finis.includes(id)) return id;
   }
-  return 'fini';
+  return C.situationValide(situation) ? 'fini' : 'situation';
 }
 
 // Les adresses où envoyer le rapport, sans doublon, chacune avec le rôle dont
@@ -467,9 +470,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (ligne.a_fini || ligne.b_fini) return non(409, 'fini');
-    if (!C.situationValide(corps.situation)) return non(400, 'situation');
+    // La page donne la situation clé par clé, juste avant le domaine qui en a
+    // besoin (25 octobre 2026) ; une page d'avant la donne en entier. Les clés
+    // reçues remplacent les mêmes clés, les autres restent.
+    if (!C.situationPartielle(corps.situation)) return non(400, 'situation');
     const maj = await stockage.maj(ligne.id, {
-      situation: C.nettoieSituation(corps.situation),
+      situation: { ...C.nettoieSituation(ligne.situation), ...C.nettoieSituation(corps.situation) },
       maj_le: maintenant().toISOString(),
     });
     return ok({ etat: etatPour(maj, role) });
@@ -481,9 +487,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (estVerrouille(ligne)) return non(409, 'verrouille');
-    // Les questions posées dépendent de la situation : sans elle, le compte
-    // des questions serait faux et « fini » arriverait trop tôt.
-    if (!C.situationValide(ligne.situation)) return non(400, 'situation');
+    // Les réponses arrivent avant que la situation soit complète (elle se
+    // donne au fil des domaines depuis le 25 octobre 2026) : seul « fini »
+    // l'attend, puisque C.complet exige une situation complète.
     const solo = estSolo(ligne);
     const v = C.valideReponses(corps.reponses, corps.nn, solo ? (corps.percu === undefined ? {} : corps.percu) : undefined);
     if (v.erreur) return non(400, v.erreur);

@@ -40,7 +40,7 @@ const LONGS = ['Anna-Katharina Schwarzenberger', 'Maximilian-Alexander Ostermann
 // `inconnu` est la chance que A réponde « je ne sais pas » à une question.
 export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat = 0.75, prenoms, genres = ['f', 'h'], solo = false, inconnu = 0.15 }) {
   const r = hasard(graine);
-  const situation = { ensemble: 'oui', duree: '3a10', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
+  const situation = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
   const A = {};
   const B = {};
   for (let passe = 0; passe < 3; passe++) {

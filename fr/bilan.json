@@ -41,7 +41,6 @@
       "homme": "Un homme",
       "sansGenre": "Je préfère ne pas le dire",
       "genreAide": "Ça sert seulement à accorder les questions (« heureux » ou « heureuse ») et à choisir les personnages.",
-      "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? ». Votre partenaire pourra les corriger.",
       "consentement": "J'ai 18 ans ou plus et je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
       "accordAide": "Vos réponses, y compris sur les sujets intimes, ne servent qu'à ce rapport, où {{autre}} les verra en face des siennes. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
       "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
@@ -77,8 +76,6 @@
       "titre": "{{autre}} vous propose de faire votre évaluation de couple",
       "texte": "100 questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
       "duree": "Comptez une vingtaine de minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
-      "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
-      "situationCorriger": "Corriger",
       "prenom": "Votre prénom",
       "genre": "Vous êtes",
       "commencer": "J'accepte et je commence",
@@ -203,8 +200,7 @@
         "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation",
-        "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
-        "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? »."
+        "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain."
       },
       "domaine": {
         "nb": "{{n}} questions, deux réponses chacune, environ {{min}} min"
@@ -577,10 +573,8 @@
     "situation": {
       "resume": "Situation",
       "titre": "Votre situation",
-      "progression": "{{n}} sur {{total}}",
-      "verifierTitre": "Votre situation, avant de commencer",
-      "verifierTexte": "Ces réponses changent les questions qu'on vous pose. Si l'une d'elles n'est plus juste, corrigez-la avant de commencer.",
-      "confirmer": "C'est bien ça, on commence"
+      "aide": "Votre réponse adapte les questions qui suivent.",
+      "deja": "Cette réponse a déjà été donnée : changez-la si elle n'est pas juste."
     },
     "erreurs": {
       "reseau": "Pas de connexion. Vérifiez votre réseau et réessayez.",

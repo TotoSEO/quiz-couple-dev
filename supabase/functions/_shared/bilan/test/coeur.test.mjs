@@ -12,7 +12,7 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
 const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
 
-const SIT = { ensemble: 'oui', duree: '1a3', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
+const SIT = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
 
 function toutRepondre(situation, choix) {
   const rep = {};
@@ -330,4 +330,53 @@ test('progression et validation en solo : chaque question attend sa perception',
   assert.ok(C.valideReponses({ quo3: 1 }, [], [1]).erreur);
   assert.equal(C.valideReponses({ quo3: 1 }).percu, undefined);
   assert.ok(C.modeValide('solo') && C.modeValide('duo') && !C.modeValide('trio'));
+});
+
+test('l\'ordre de passage : le temps à deux d\'abord, chaque clé de situation juste avant le premier domaine qui en a besoin', () => {
+  // 25 octobre 2026 : 78 arrêts sur 205 dans les sept écrans de situation
+  // posés avant tout, 91 dans le premier domaine, « quotidien ».
+  assert.deepEqual([...C.ORDRE].sort(), C.DOMAINES.map((d) => d.id).sort(), 'chaque domaine une fois');
+  assert.equal(C.ORDRE[0], 'temps');
+  assert.deepEqual(C.clesAvant(C.ORDRE[0], {}), [], 'rien à demander avant la première question');
+  for (const it of C.SITUATION) {
+    const d = C.DOMAINE_DE_CLE[it.id];
+    assert.ok(d, it.id + ' : demandée quelque part');
+    // Aucun domaine plus tôt dans l'ordre n'en dépend.
+    for (const avant of C.ORDRE.slice(0, C.ORDRE.indexOf(d))) assert.ok(!C.CLES_DOMAINE[avant].includes(it.id), it.id + ' avant ' + avant);
+  }
+  // En suivant l'ordre et en donnant chaque clé quand on la demande, toutes
+  // les clés d'un domaine sont connues en y entrant, et chacune n'est
+  // demandée qu'une fois.
+  const sit = {};
+  const vues = [];
+  for (const d of C.ORDRE) {
+    for (const k of C.clesAvant(d, sit)) { assert.ok(!vues.includes(k), k + ' redemandée avant ' + d); vues.push(k); sit[k] = C.SITUATION_DEFAUT[k]; }
+    for (const k of C.CLES_DOMAINE[d]) assert.ok(sit[k], k + ' inconnue en entrant dans ' + d);
+  }
+  assert.deepEqual(vues.sort(), C.SITUATION.map((it) => it.id).sort());
+  // Une référence de siRep vient avant les questions qui en dépendent.
+  const rang = Object.fromEntries(C.questionsPour(SIT, {}, C.ORDRE).map((x, i) => [x.id, i]));
+  for (const d of C.DOMAINES) for (const q of d.questions) for (const ref of Object.keys(q.siRep || {})) {
+    if (rang[q.id] !== undefined) assert.ok(rang[ref] < rang[q.id], ref + ' avant ' + q.id);
+  }
+});
+
+test('la situation au fil des domaines : cent questions à chaque instant, « complet » seulement avec toutes les clés', () => {
+  assert.deepEqual(C.progression({}, {}), { repondu: 0, total: 100 });
+  assert.equal(C.questionsPour(C.avecDefauts({}), {}, C.ORDRE)[0].domaine, 'temps');
+  // Toutes les réponses d'une situation, mais une clé manque : pas complet.
+  const rep = {};
+  for (let p = 0; p < 3; p++) for (const { id } of C.questionsPour(SIT, rep)) if (rep[id] === undefined) rep[id] = 0;
+  assert.ok(C.complet(SIT, rep));
+  const { animal, ...sansAnimal } = SIT;
+  assert.ok(!C.complet(sansAnimal, rep), 'une clé manque');
+  assert.equal(C.progression(sansAnimal, rep).total, 100);
+  // Une situation d'avant porte `duree` : toujours valide, la clé est ignorée.
+  assert.ok(C.situationValide({ ...SIT, duree: '1a3' }));
+  assert.deepEqual(C.nettoieSituation({ ...SIT, duree: '1a3', autre: 'x' }), SIT);
+  // Une partie de situation : au moins une clé connue, chacune permise.
+  assert.ok(C.situationPartielle({ ensemble: 'non' }));
+  assert.ok(C.situationPartielle({ ensemble: 'non', duree: '1a3' }));
+  for (const mauvaise of [{}, { duree: '1a3' }, { ensemble: 'peut-être' }, null, [], 'oui']) assert.ok(!C.situationPartielle(mauvaise), JSON.stringify(mauvaise));
+  assert.deepEqual(C.avecDefauts({ enfants: 'oui', duree: 'x' }), { ...C.SITUATION_DEFAUT, enfants: 'oui' });
 });

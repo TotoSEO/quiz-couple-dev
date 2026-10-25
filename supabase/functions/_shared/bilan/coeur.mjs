@@ -75,17 +75,27 @@ export const MODES = ['duo', 'solo'];
 // La valeur « je ne sais pas » d'une perception, en mode solo.
 export const INCONNU = -1;
 
-// La situation du couple, décrite à la création. Elle change les questions
-// posées, jamais les domaines : on garde les souhaits, on adapte les faits.
+// La situation du couple. Elle change les questions posées, jamais les
+// domaines : on garde les souhaits, on adapte les faits. Depuis le
+// 25 octobre 2026, chaque clé est demandée juste avant le premier domaine qui
+// en a besoin (DOMAINE_DE_CLE), et non plus en bloc avant les cent questions
+// (78 personnes sur 205 s'arrêtaient dans ces sept écrans) ; « depuis
+// combien de temps êtes-vous ensemble », qui ne changeait aucune question ni
+// le rapport, n'est plus posée. Une situation d'avant peut encore porter
+// `duree` : la clé est ignorée.
 export const SITUATION = [
   { id: 'ensemble', valeurs: ['oui', 'non'] },
-  { id: 'duree', valeurs: ['moins1', '1a3', '3a10', 'plus10'] },
   { id: 'engagement', valeurs: ['maries', 'pacses', 'rien'] },
   { id: 'enfants', valeurs: ['oui', 'non'] },
   { id: 'enfantsAvant', valeurs: ['oui', 'non'] },
   { id: 'proprio', valeurs: ['oui', 'non'] },
   { id: 'animal', valeurs: ['oui', 'non'] },
 ];
+
+// Ce qu'on suppose d'une clé pas encore donnée, seulement pour compter et
+// ranger les questions (le total vaut 100 dans toutes les situations) :
+// jamais pour décider qu'une personne a fini (complet).
+export const SITUATION_DEFAUT = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
 
 // Les types :
 //   echelle  réponses rangées d'un bout à l'autre ; proximité = 1 - écart/(n-1)
@@ -285,6 +295,32 @@ DOMAINES.forEach((d, di) => d.questions.forEach((q, qi) => {
   INDEX[q.id] = { q, d, di, qi };
 }));
 
+// L'ordre de passage des domaines dans le questionnaire ; le rapport garde
+// celui de DOMAINES. Le temps à deux ouvre l'évaluation depuis le 25 octobre
+// 2026, avant le quotidien (91 arrêts sur 205 dans ce premier domaine, fini
+// par 134 des 214 personnes qui y étaient entrées) : il ne dépend d'aucune
+// situation, et ses questions parlent de ce qu'on aime faire.
+export const ORDRE = ['temps', 'quotidien', 'entourage', 'travail', 'argent', 'logement', 'enfants', 'valeurs', 'disputes', 'confiance', 'intimite', 'meteo'];
+const DOMAINE_PAR_ID = Object.fromEntries(DOMAINES.map((d) => [d.id, d]));
+
+// Les clés de situation dont dépendent les questions de chaque domaine, et le
+// premier domaine de l'ordre de passage où chacune est demandée.
+export const CLES_DOMAINE = {};
+export const DOMAINE_DE_CLE = {};
+for (const d of DOMAINES) {
+  const cles = new Set();
+  for (const q of d.questions) for (const k of Object.keys(q.si || {})) cles.add(k);
+  CLES_DOMAINE[d.id] = SITUATION.map((it) => it.id).filter((k) => cles.has(k));
+}
+for (const id of ORDRE) for (const k of CLES_DOMAINE[id]) if (!DOMAINE_DE_CLE[k]) DOMAINE_DE_CLE[k] = id;
+
+// Les clés à poser (ou à faire confirmer) en entrant dans un domaine : celles
+// qu'il demande en premier, et celles dont il dépend et qui manquent encore.
+export function clesAvant(domaine, situation) {
+  return SITUATION.map((it) => it.id).filter((k) =>
+    DOMAINE_DE_CLE[k] === domaine || ((CLES_DOMAINE[domaine] || []).includes(k) && !cleValide(k, situation?.[k])));
+}
+
 // Les seuils des verdicts. Global : accord des réponses ; météo : comment
 // les deux vivent le couple en ce moment ; domaine : fort, moyen, faible.
 // Une case d'écart compte encore deux tiers d'accord : des réponses tirées au
@@ -310,19 +346,37 @@ export function modeValide(m) {
 
 // ── La situation ────────────────────────────────────────────────────────
 
-export function situationValide(s) {
-  if (!s || typeof s !== 'object' || Array.isArray(s)) return false;
-  for (const item of SITUATION) {
-    if (!item.valeurs.includes(s[item.id])) return false;
-  }
-  return Object.keys(s).length === SITUATION.length;
+function cleValide(cle, valeur) {
+  const item = SITUATION.find((it) => it.id === cle);
+  return !!item && item.valeurs.includes(valeur);
 }
 
-// Une copie propre, sans clé inconnue.
+// Toutes les clés, chacune avec une valeur permise. Une clé d'avant
+// (`duree`) ne compte pas.
+export function situationValide(s) {
+  if (!s || typeof s !== 'object' || Array.isArray(s)) return false;
+  return SITUATION.every((item) => item.valeurs.includes(s[item.id]));
+}
+
+// Une partie de la situation, comme la page la donne avant un domaine : au
+// moins une clé connue, et chaque clé connue avec une valeur permise.
+export function situationPartielle(s) {
+  if (!s || typeof s !== 'object' || Array.isArray(s)) return false;
+  const cles = Object.keys(s).filter((k) => SITUATION.some((it) => it.id === k));
+  return cles.length > 0 && cles.every((k) => cleValide(k, s[k]));
+}
+
+// Une copie propre : les clés connues qui ont une valeur permise.
 export function nettoieSituation(s) {
   const propre = {};
-  for (const item of SITUATION) propre[item.id] = s[item.id];
+  for (const item of SITUATION) if (s && item.valeurs.includes(s[item.id])) propre[item.id] = s[item.id];
   return propre;
+}
+
+// La situation donnée, complétée par SITUATION_DEFAUT pour les clés qui
+// manquent encore.
+export function avecDefauts(s) {
+  return { ...SITUATION_DEFAUT, ...nettoieSituation(s || {}) };
 }
 
 // ── Quelles questions pour qui ──────────────────────────────────────────
@@ -354,10 +408,11 @@ export function applicable(q, situation, reponses) {
   return true;
 }
 
-// La liste à plat des questions posées à une personne, dans l'ordre.
-export function questionsPour(situation, reponses) {
+// La liste à plat des questions posées à une personne, dans l'ordre des
+// domaines du rapport, ou dans `ordre` (ORDRE pour le questionnaire).
+export function questionsPour(situation, reponses, ordre) {
   const liste = [];
-  for (const d of DOMAINES) {
+  for (const d of (ordre ? ordre.map((id) => DOMAINE_PAR_ID[id]) : DOMAINES)) {
     for (const q of d.questions) {
       if (applicable(q, situation, reponses)) liste.push({ id: q.id, domaine: d.id, q });
     }
@@ -367,9 +422,11 @@ export function questionsPour(situation, reponses) {
 
 // Où en est une personne : les questions posées, celles qui ont une réponse,
 // et, en solo (percu donné), celles qui ont aussi leur perception. Une
-// question compte une fois ; elle est faite quand tout y est.
+// question compte une fois ; elle est faite quand tout y est. Les clés de
+// situation pas encore données prennent leur valeur par défaut : le total
+// vaut 100 dès la création.
 export function progression(situation, reponses, percu) {
-  const liste = questionsPour(situation, reponses);
+  const liste = questionsPour(avecDefauts(situation), reponses);
   let repondu = 0;
   for (const { id } of liste) {
     if (!estReponse(reponses?.[id])) continue;
@@ -379,7 +436,10 @@ export function progression(situation, reponses, percu) {
   return { repondu, total: liste.length };
 }
 
+// Tout est répondu, situation comprise : sans elle, le compte des questions
+// n'est pas sûr.
 export function complet(situation, reponses, percu) {
+  if (!situationValide(situation)) return false;
   const p = progression(situation, reponses, percu);
   return p.total > 0 && p.repondu === p.total;
 }
@@ -390,8 +450,9 @@ export function complet(situation, reponses, percu) {
 export function etapes(situation, reponses) {
   const entres = [];
   const finis = [];
+  const sit = avecDefauts(situation);
   for (const d of DOMAINES) {
-    const qs = d.questions.filter((q) => applicable(q, situation, reponses));
+    const qs = d.questions.filter((q) => applicable(q, sit, reponses));
     if (!qs.length) continue;
     const faits = qs.filter((q) => estReponse(reponses?.[q.id])).length;
     if (faits > 0) entres.push(d.id);

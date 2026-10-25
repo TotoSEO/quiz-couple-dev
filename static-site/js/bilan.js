@@ -31,7 +31,7 @@
   var CLE_LOCALE = 'qc-bilans';
   var EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
-  var SECONDES_PAR_QUESTION = 15;
+  var SECONDES_PAR_QUESTION = 12;
   var C = null;   // le calcul (window.QCBilanCoeur)
   var Q = null;   // les textes des questions
   var minuteur = null;
@@ -410,7 +410,6 @@
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
-      if (ancienne && ancienne.situationVue) entree.situationVue = true;
       garder(entree);
       if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
@@ -436,8 +435,7 @@
     majEntree(entree.id, entree.role, {
       mode: MODE, moi: etat.moi.prenom, autre: etat.autre.prenom,
       repondu: prog.repondu,
-      // Sans situation, le compte des questions n'est pas encore connu.
-      total: C.situationValide(etat.situation) ? prog.total : 0,
+      total: prog.total,
       statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
@@ -706,17 +704,9 @@
 
   // ── Rejoindre (B) ───────────────────────────────────────────────────────
 
-  function resumeSituation(sit) {
-    return '<ul class="bilan-situation">' + C.SITUATION.map(function (s) {
-      var t = Q.situation[s.id];
-      var i = s.valeurs.indexOf(sit[s.id]);
-      return '<li><span>' + esc(ins(t.q)) + '</span> <strong>' + esc(i >= 0 ? t.o[i] : '') + '</strong></li>';
-    }).join('') + '</ul>';
-  }
-
-  // L'écran de l'invitation : le prénom, le genre et les deux cases. La
-  // situation se vérifie juste après, au début des questions
-  // (confirmerSituation), et l'adresse se donne à la fin.
+  // L'écran de l'invitation : le prénom, le genre et la case. La situation
+  // se confirme au fil des domaines (questionSituation), et l'adresse se
+  // donne à la fin.
   function rejoindre(etat, jetonInvitation) {
     var autre = etat.autre.prenom;
     var html = carte(
@@ -776,13 +766,15 @@
       percu: MODE === 'solo' ? JSON.parse(JSON.stringify(etat.moi.percu || {})) : null,
       nn: (etat.moi.nn || []).slice(),
       introsVues: {},
+      // Les clés de situation déjà posées ou confirmées dans cette visite.
+      sitFaites: {},
       revoir: !!revoir,
       // La phase de la question affichée : 'moi' (ma réponse) ou, en solo,
       // 'autre' (ce que l'autre répondrait).
       phase: 'moi',
       envoi: { enCours: false, sale: false, fini: false, attente: [] },
     };
-    S.liste = C.questionsPour(S.situation, S.reponses);
+    S.liste = listeQuestions();
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
     // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
@@ -792,27 +784,69 @@
       entree.invitationVue = true;
       return invitation(entree, etat);
     }
-    // La situation d'abord : les sept questions, ou, si quelqu'un y a déjà
-    // répondu (l'autre, ou soi-même sur un autre appareil), une vérification
-    // avant la première réponse.
-    if (!revoir && !C.situationValide(S.situation)) return questionSituation(0);
-    var gardee = entreeRole(entree.id, entree.role);
-    if (!revoir && S.index === 0 && !entree.situationVue && !(gardee && gardee.situationVue)) return confirmerSituation();
     suivante();
   }
 
-  // ── La situation ────────────────────────────────────────────────────────
-  // Posée comme les premières questions depuis le 21 octobre 2026 : une
-  // question par écran, puis enregistrée d'un coup (action `situation`)
-  // avant les cent questions. Elle n'entre pas dans leur compte.
+  // Les questions de la personne, dans l'ordre de passage (C.ORDRE) ; une clé
+  // de situation pas encore donnée compte avec sa valeur par défaut, et le
+  // total vaut cent dès le départ.
+  function listeQuestions() {
+    return C.questionsPour(C.avecDefauts(S.situation), S.reponses, C.ORDRE);
+  }
 
-  function questionSituation(i) {
-    var item = C.SITUATION[i];
-    var t = Q.situation[item.id];
-    if (!S.sit) S.sit = C.situationValide(S.situation) ? JSON.parse(JSON.stringify(S.situation)) : {};
-    var v = S.sit[item.id];
-    var total = C.SITUATION.length;
-    var pct = Math.round(i / total * 100);
+  // ── La situation ────────────────────────────────────────────────────────
+  // Depuis le 25 octobre 2026, chaque clé est posée juste avant le premier
+  // domaine qui en a besoin (C.clesAvant), et plus en bloc avant les cent
+  // questions (78 personnes sur 205 s'arrêtaient dans ces sept écrans).
+  // Déjà donnée (par l'autre, ou par soi-même sur un autre appareil), elle
+  // s'affiche choisie, à confirmer ou à changer. Elle n'entre pas dans le
+  // compte des cent questions.
+
+  function connue(cle) {
+    return C.SITUATION.some(function (it) { return it.id === cle && it.valeurs.indexOf(S.situation && S.situation[cle]) >= 0; });
+  }
+
+  // Les clés à poser en entrant dans un domaine : aucune en relecture, ni si
+  // la personne y a déjà répondu. Une clé déjà donnée ne se montre (choisie,
+  // à confirmer) que si l'autre a pu la donner : à deux, tant qu'il n'a pas
+  // fini (ensuite la situation ne bouge plus), et pas dans une situation
+  // donnée en entier au départ, avant le 25 octobre 2026 (elle porte encore
+  // la durée), que l'autre relisait avant ses questions.
+  function clesAPoser(dom) {
+    if (S.revoir) return [];
+    var deja = S.liste.some(function (q) { return q.domaine === dom && Number.isInteger(S.reponses[q.id]); });
+    if (deja) return [];
+    var cles = C.clesAvant(dom, S.situation).filter(function (k) { return !S.sitFaites[k]; });
+    var figee = S.mode === 'solo' || (S.autre && S.autre.fini) || (S.situation && S.situation.duree);
+    if (figee) cles = cles.filter(function (k) { return !connue(k); });
+    return cles;
+  }
+
+  // À deux, ce que l'autre a donné de la situation entre-temps, et s'il a
+  // fini : repris de chaque réponse enregistrée (`repondre` rend l'état), et
+  // relu à l'intro d'un domaine qui pose une clé (relireSituation), pour
+  // montrer choisie une réponse que l'autre vient de donner.
+  function majDepuisEtat(session, etat) {
+    if (etat.situation) session.situation = etat.situation;
+    if (etat.autre) session.autre = etat.autre;
+  }
+  // Une lecture qui échoue ou tarde (plus de 4 s) ne bloque rien : on garde
+  // ce qu'on sait, et le serveur fusionne les clés.
+  function relireSituation(session) {
+    var lecture = appel('etat', { id: session.id, jeton: session.jeton }).then(function (r) {
+      if (r.statut === 200 && r.json && r.json.moi) majDepuisEtat(session, r.json);
+    }).catch(function () {});
+    var delai = new Promise(function (fin) { setTimeout(fin, 4000); });
+    return { quand: Date.now(), promesse: Promise.race([lecture, delai]) };
+  }
+
+  function questionSituation(dom, cles, i) {
+    var cle = cles[i];
+    var item = C.SITUATION.filter(function (it) { return it.id === cle; })[0];
+    var t = Q.situation[cle];
+    if (!S.sit) S.sit = {};
+    var dejaDonnee = connue(cle);
+    var v = S.sit[cle] !== undefined ? S.sit[cle] : (dejaDonnee ? S.situation[cle] : undefined);
     var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
     var options = item.valeurs.map(function (val, k) {
       var choisie = v === val;
@@ -820,11 +854,10 @@
         rond + '<span>' + esc(ins(t.o[k])) + '</span></button>';
     }).join('');
     afficher(carte(
-      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + x('situation.titre') + '</span>' +
-      '<span>' + x('situation.progression', { n: i + 1, total: total }) + '</span></div>' +
-      '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(dom))) + '</span>' +
+      '<span>' + x('situation.titre') + '</span></div>' +
       '<h2 class="bilan-q-texte">' + esc(ins(t.q)) + '</h2>' +
-      (i === 0 ? '<p class="bilan-note bilan-q-aide">' + x('creation.situationAide') + '</p>' : '') +
+      '<p class="bilan-note bilan-q-aide">' + x(dejaDonnee ? 'situation.deja' : 'situation.aide', { autre: S.autre.prenom }) + '</p>' +
       '<div class="bilan-options" role="radiogroup">' + options + '</div>' +
       '<div class="bilan-q-pied">' +
       (i > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
@@ -834,65 +867,59 @@
       '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
       'bilan-question bilan-question--situation'), true);
     garderEnVue();
-    compterVue('situation_vue', { mode: S.mode, id: S.id });
+    // Comptée au premier écran de situation de l'évaluation, quand aucune clé
+    // n'est encore donnée : une fois par évaluation, comme « situation »,
+    // que la base compte à la première clé reçue.
+    var vierge = !C.SITUATION.some(function (it) { return connue(it.id); });
+    if (vierge) compterVue('situation_vue', { mode: S.mode, id: S.id });
     var session = S;
     function apres() {
       if (S !== session) return;
-      if (i + 1 < total) questionSituation(i + 1); else enregistrerSituation(session);
+      if (S.sit[cle] === undefined) S.sit[cle] = v;
+      if (i + 1 < cles.length) questionSituation(dom, cles, i + 1); else enregistrerSituation(session, cles);
     }
     ACTIONS = {
       choisir: function (b) {
-        S.sit[item.id] = b.getAttribute('data-v');
+        S.sit[cle] = b.getAttribute('data-v');
         racine.querySelectorAll('.bilan-option').forEach(function (o) {
           var oui = o === b;
           o.classList.toggle('choisie', oui);
           o.setAttribute('aria-checked', String(oui));
         });
         setTimeout(function () {
-          if (racine.querySelector('.bilan-question--situation') && S === session && S.sit[item.id] === b.getAttribute('data-v')) apres();
+          if (racine.querySelector('.bilan-question--situation') && S === session && S.sit[cle] === b.getAttribute('data-v')) apres();
         }, 220);
       },
-      suivanteQ: function () { if (S.sit[item.id]) apres(); },
-      precedente: function () { questionSituation(i - 1); },
-      pause: function () { pause(function () { questionSituation(i); }); },
+      suivanteQ: function () { if (S.sit[cle] || v) apres(); },
+      precedente: function () { questionSituation(dom, cles, i - 1); },
+      pause: function () { pause(function () { questionSituation(dom, cles, i); }); },
     };
   }
 
-  function enregistrerSituation(session) {
-    chargement();
-    appel('situation', { id: session.id, jeton: session.jeton, situation: session.sit }).then(function (r) {
-      // L'un des deux a déjà fini : la situation est figée, l'état dit la suite.
-      if (r.statut === 409) return ouvrir(session.entree);
-      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { enregistrerSituation(session); });
-      session.situation = r.json.etat.situation;
+  // N'envoie que les clés données ou changées ici (action `situation`, que
+  // le serveur fusionne avec les autres), puis reprend les questions.
+  function enregistrerSituation(session, cles) {
+    var change = {};
+    cles.forEach(function (k) {
+      if (session.sit && session.sit[k] !== undefined && session.sit[k] !== (session.situation || {})[k]) change[k] = session.sit[k];
+    });
+    function reprendre() {
+      cles.forEach(function (k) { session.sitFaites[k] = true; });
       session.sit = null;
-      session.entree.situationVue = true;
-      majEntree(session.id, session.role, { situationVue: true });
       S = session;
-      S.liste = C.questionsPour(S.situation, S.reponses);
+      S.liste = listeQuestions();
       S.index = premierSansReponse();
       suivante();
-    }).catch(function () { messageErreur('reseau', function () { enregistrerSituation(session); }); });
-  }
-
-  // Quelqu'un a déjà décrit la situation : on la relit avant la première
-  // question, avec de quoi la corriger.
-  function confirmerSituation() {
-    var invite = S.role === 'b';
-    afficher(carte(
-      '<h2 class="bilan-titre">' + (invite ? x('rejoindre.situationTitre', { autre: S.autre.prenom }) : x('situation.verifierTitre')) + '</h2>' +
-      '<p class="bilan-texte">' + x('situation.verifierTexte') + '</p>' +
-      resumeSituation(S.situation) +
-      '<div class="bilan-actions">' + bouton('confirmer', x('situation.confirmer')) +
-      bouton('corriger', x('rejoindre.situationCorriger'), 'btn-outline') + '</div>', 'bilan-situation-verif'));
-    ACTIONS = {
-      confirmer: function () {
-        S.entree.situationVue = true;
-        majEntree(S.id, S.role, { situationVue: true });
-        suivante();
-      },
-      corriger: function () { questionSituation(0); },
-    };
+    }
+    if (!Object.keys(change).length) return reprendre();
+    chargement();
+    appel('situation', { id: session.id, jeton: session.jeton, situation: change }).then(function (r) {
+      // L'un des deux a déjà fini : la situation est figée, l'état dit la suite.
+      if (r.statut === 409) return ouvrir(session.entree);
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { enregistrerSituation(session, cles); });
+      session.situation = r.json.etat.situation;
+      reprendre();
+    }).catch(function () { messageErreur('reseau', function () { enregistrerSituation(session, cles); }); });
   }
 
   // La première question à laquelle il manque une réponse ; en solo, une
@@ -908,9 +935,15 @@
     return S.liste.length;
   }
 
-  // La question suivante, à sa première phase.
+  // La question suivante, à sa première phase. Hors relecture, ce qui est
+  // déjà répondu se saute : après un retour en arrière, ou dans une
+  // évaluation commencée avant le nouvel ordre des domaines.
   function avancer() {
     S.index++;
+    if (!S.revoir) {
+      while (S.index < S.liste.length && Number.isInteger(S.reponses[S.liste[S.index].id]) &&
+        (!S.percu || Number.isInteger(S.percu[S.liste[S.index].id]))) S.index++;
+    }
     S.phase = 'moi';
     suivante();
   }
@@ -920,11 +953,13 @@
     var item = S.liste[S.index];
     var debutDomaine = S.index === 0 || S.liste[S.index - 1].domaine !== item.domaine;
     if (debutDomaine && !S.introsVues[item.domaine]) return introDomaine(item.domaine);
+    var cles = clesAPoser(item.domaine);
+    if (cles.length) return questionSituation(item.domaine, cles, 0);
     afficherQuestion();
   }
 
   function introDomaine(dom) {
-    var ordre = C.DOMAINES.map(function (d) { return d.id; });
+    var ordre = C.ORDRE;
     var n = ordre.indexOf(dom) + 1;
     var nb = S.liste.filter(function (q) { return q.domaine === dom; }).length;
     var min = Math.max(1, Math.round(nb * SECONDES_PAR_QUESTION / 60));
@@ -941,8 +976,24 @@
       '<p class="bilan-pastille-info">' + x('domaine.nb', { n: nb, min: min }) + '</p>' +
       '<div class="bilan-actions">' + bouton('go', x('domaine.go')) + bouton('pause', x('domaine.pause'), 'btn-outline') + '</div>',
       'bilan-domaine-intro'));
+    // À deux, l'état est relu pendant que l'intro est à l'écran quand le
+    // domaine pose une clé de situation (quatre lectures au plus par
+    // personne), et encore une fois en partant si l'intro est restée plus de
+    // 30 secondes à l'écran.
+    var session = S;
+    var lecture = S.mode === 'duo' && clesAPoser(dom).length ? relireSituation(S) : null;
     ACTIONS = {
-      go: function () { S.introsVues[dom] = true; afficherQuestion(); },
+      go: function (b) {
+        S.introsVues[dom] = true;
+        if (!lecture) return suivante();
+        if (b) b.disabled = true;
+        if (Date.now() - lecture.quand > 30000) lecture = relireSituation(session);
+        var attente = setTimeout(chargement, 200);
+        lecture.promesse.then(function () {
+          clearTimeout(attente);
+          if (S === session) suivante();
+        });
+      },
       pause: function () { pause(); },
     };
   }
@@ -1016,7 +1067,7 @@
         } else {
           S.reponses[id] = val;
           // Une réponse peut ouvrir ou fermer des questions plus loin.
-          S.liste = C.questionsPour(S.situation, S.reponses);
+          S.liste = listeQuestions();
           S.index = indexDe(id);
         }
         sauver(false);
@@ -1095,6 +1146,7 @@
           var p = r.json.progression || {};
           majEntree(session.id, session.role, { repondu: p.repondu, total: p.total, statut: r.json.etat && r.json.etat.verrouille ? 'resultat' : r.json.fini ? 'fini' : 'encours' });
           session.dernierEtat = r.json.etat;
+          if (r.json.etat) majDepuisEtat(session, r.json.etat);
           etatEnvoi(e.sale ? 'envoi' : 'ok');
           if (!e.sale) {
             var a = e.attente; e.attente = [];
@@ -1142,15 +1194,12 @@
 
   function pause(reprise) {
     var session = S;
-    // Pendant la situation, aucune réponse n'est encore partie : le serveur
-    // refuserait des réponses sans situation.
-    var avecSituation = C.situationValide(session.situation);
-    if (avecSituation) sauver(false);
+    sauver(false);
     var p = C.progression(session.situation, session.reponses, session.percu || undefined);
     afficher(carte(
       duo('dort', 'repos', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
-      (avecSituation ? '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' : '') +
+      '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' +
       '<p class="bilan-texte">' + x('pause.texte') + '</p>' +
       '<div class="bilan-actions">' + bouton('reprendre', x('pause.reprendre')) +
       bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline') + '</div>' +
@@ -1177,10 +1226,15 @@
       if (etat && etat.verrouille) return ouvrirResultat(session.entree);
       if (r.json.fini) return attente(session.entree, etat);
       if (r.json.emailManque) { S = session; session.moi.email = null; return ecranEmail(session); }
-      // Il manque encore des réponses (une question ouverte par une autre).
+      // Il manque encore des réponses (une question ouverte par une autre),
+      // ou une clé de situation jamais donnée : on la pose.
       S = session;
-      S.liste = C.questionsPour(S.situation, S.reponses);
+      S.liste = listeQuestions();
       S.index = premierSansReponse();
+      if (S.index >= S.liste.length && !C.situationValide(S.situation)) {
+        var manque = C.SITUATION.map(function (it) { return it.id; }).filter(function (k) { return !connue(k); });
+        return questionSituation(C.DOMAINE_DE_CLE[manque[0]] || C.ORDRE[0], manque, 0);
+      }
       suivante();
     });
   }
