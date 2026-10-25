@@ -1539,3 +1539,37 @@ au moins. Avant : 4 sur 47.
 - **Nommer les domaines des écarts** (« dont l'argent et les enfants ») :
   plus de curiosité, mais c'est un morceau du résultat, au-delà de « juste
   la synthèse ».
+
+## 25 octobre 2026 : la page indexée sur « bilan de couple »
+
+Thomas, en regardant les volumes de recherche : « ya 40 volume de recherche
+sur "bilan de couple pdf" », puis « On va tenter la P1 sur bilan de couple et
+bilan de couple PDF ». La page était en noindex dans les cinq langues depuis
+le 22 octobre, parce qu'elle se vendait par le maillage du site.
+
+- **La page française seule est indexée** (`bilanIndexe` dans generate.js),
+  et seulement ouverte : « index, follow », sans hreflang puisque aucune
+  traduction n'est indexée, dans `sitemap-fr.xml`. Les quatre autres langues
+  restent en noindex et hors des sitemaps, comme Thomas l'avait demandé le
+  22 octobre : la demande du jour porte sur des mots français.
+- **Le title** : « Bilan de couple à faire en ligne | PDF résultats
+  immédiats », les mots de Thomas. La description : « Faites votre bilan de
+  couple en ligne : 100 questions, à deux ou seul(e), sur douze domaines de la
+  vie à deux. Résultats immédiats, en ligne et en PDF. » Le H1 ne change pas
+  (« Faites le point sur votre couple, sans aller chez un pro »).
+- **« Que trouve-t-on dans le bilan ? »** à la place de « … dans le
+  rapport ? ».
+- **Deux sections de texte** après « Vos réponses restent entre vous », en
+  français seulement : « Qu'est-ce qu'un bilan de couple ? » (ce que c'est en
+  général, puis le nôtre, avec la vraie question sur l'argent et ses quatre
+  réponses, et le PDF) et « À quoi ça sert d'évaluer sa relation ? » (parler
+  des sujets avant qu'ils ne fâchent, ce qu'on ne sait pas l'un de l'autre,
+  les moments qui s'y prêtent, et le seul(e)). Aucun lien vers une autre page
+  dans ces textes : la page vend, et un lien sortant ne l'aide pas à se
+  classer.
+- **Ce qui aiderait ensuite** : des liens vers la page depuis les articles et
+  les pages du site qui parlent déjà de faire le point sur son couple, avec
+  une ancre trouvée dans leur texte (« faire le bilan », « faire le point
+  sur votre couple ») ; demander l'indexation de la page dans la Search
+  Console ; suivre « bilan de couple » et « bilan de couple pdf » dans
+  Performances.
