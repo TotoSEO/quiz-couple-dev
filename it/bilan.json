@@ -42,14 +42,13 @@
       "sansGenre": "Preferisco non dirlo",
       "genreAide": "Serve solo ad accordare le domande («ascoltato» o «ascoltata») e a scegliere i personaggi.",
       "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?». Il tuo partner potrà correggerle.",
-      "majeur": "Ho 18 anni o più.",
-      "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+      "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
       "accordAide": "Le tue risposte, anche su argomenti intimi, servono solo a questo report, dove {{autre}} le vedrà accanto alle sue. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e ciascuno di voi può cancellarla in qualsiasi momento. Nessun account da creare.",
       "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
       "retour": "Indietro",
       "creer": "Crea la nostra valutazione",
       "prenomManque": "Scrivi i vostri due nomi.",
-      "accordManque": "Spunta le due caselle per continuare.",
+      "accordManque": "Spunta la casella per continuare.",
       "email": "La tua e-mail",
       "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto, una volta se {{autre}} tarda a finire, e una sola volta se il giorno dopo è ancora in attesa.",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
@@ -77,7 +76,7 @@
     "rejoindre": {
       "titre": "{{autre}} ti propone di fare il vostra valutazione di coppia",
       "texte": "100 domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
-      "duree": "Calcola dai 25 ai 30 minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
+      "duree": "Calcola una ventina di minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
       "situationTitre": "La vostra situazione, come l'ha descritta {{autre}}",
       "situationCorriger": "Correggi",
       "prenom": "Il tuo nome",
@@ -200,7 +199,7 @@
       "creation": {
         "autreAide": "Serve solo a scrivere le domande. Non gli viene inviato niente.",
         "soloNote": "Fai la valutazione da solo/a: {{autre}} non viene avvisato, non gli viene inviato niente, e solo tu vedrai il report.",
-        "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+        "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione",
@@ -620,7 +619,7 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
-    "sousTitre": "25 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
+    "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
     "soloQuestion": "Il tuo partner non vuole partecipare?",
     "soloLien": "Falla da solo/a",
@@ -642,7 +641,7 @@
         "l": "aree della vita a due"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "a testa, al proprio ritmo"
       },
       {
@@ -659,7 +658,7 @@
           "texte": "I vostri due nomi, poi mandi il link al tuo partner."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "Ciascuno risponde per conto suo",
           "texte": "Sul proprio telefono, senza vedere le risposte dell'altro. Potete fare una pausa quando volete."
         },
@@ -754,7 +753,7 @@
       "cta": "Fare le 100 domande"
     },
     "prix": {
-      "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 30 minuti a testa e pochi euro possono cambiare davvero le cose.",
+      "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 20 minuti a testa e pochi euro possono cambiare davvero le cose.",
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
       "aide": "Un solo pagamento, dell'uno o dell'altro, alla fine. Nessun abbonamento.",
@@ -792,7 +791,7 @@
       "items": [
         {
           "q": "Quanto tempo ci vuole?",
-          "a": "Contate 25-30 minuti ciascuno. Ogni risposta viene salvata: potete fare una pausa e riprendere più tardi."
+          "a": "Contate una ventina di minuti ciascuno. Ogni risposta viene salvata: potete fare una pausa e riprendere più tardi."
         },
         {
           "q": "Il mio partner vedrà le mie risposte?",
@@ -826,7 +825,7 @@
     },
     "final": {
       "titre": "Pronti a fare il punto?",
-      "texte": "25 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
+      "texte": "20 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
     },
     "colle": {
       "texte": "Valutazione di coppia · {{prix}}",

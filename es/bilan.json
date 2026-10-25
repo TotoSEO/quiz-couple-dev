@@ -42,14 +42,13 @@
       "sansGenre": "Prefiero no decirlo",
       "genreAide": "Solo sirve para concordar las preguntas («escuchado» o «escuchada») y para elegir los personajes.",
       "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
-      "majeur": "Tengo 18 años o más.",
-      "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+      "consentement": "Tengo 18 años o más y consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
       "accordAide": "Tus respuestas, también sobre temas íntimos, solo sirven para este informe, donde {{autre}} las verá frente a las suyas. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y cualquiera de los dos puede borrarla en todo momento. Sin crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
       "retour": "Atrás",
       "creer": "Crear nuestra evaluación",
       "prenomManque": "Escribe vuestros dos nombres.",
-      "accordManque": "Marca las dos casillas para continuar.",
+      "accordManque": "Marca la casilla para continuar.",
       "email": "Tu e-mail",
       "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
@@ -77,7 +76,7 @@
     "rejoindre": {
       "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
       "texte": "100 preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
-      "duree": "Calcula entre 25 y 30 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
+      "duree": "Calcula unos 20 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
       "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
       "situationCorriger": "Corregir",
       "prenom": "Tu nombre",
@@ -200,7 +199,7 @@
       "creation": {
         "autreAide": "Solo sirve para escribir las preguntas. No se le envía nada.",
         "soloNote": "Haces la evaluación a solas: {{autre}} no se entera, no se le envía nada, y solo tú verás el informe.",
-        "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+        "consentement": "Tengo 18 años o más y consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
         "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
@@ -620,7 +619,7 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
-    "sousTitre": "25 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
+    "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
     "soloQuestion": "¿Tu pareja no quiere participar?",
     "soloLien": "Hazla a solas",
@@ -642,7 +641,7 @@
         "l": "áreas de la vida en pareja"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "cada uno, a su ritmo"
       },
       {
@@ -659,7 +658,7 @@
           "texte": "Escribís vuestros dos nombres, y envías el enlace a tu pareja."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "Cada uno responde por su lado",
           "texte": "En su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
         },
@@ -754,7 +753,7 @@
       "cta": "Hacer las 100 preguntas"
     },
     "prix": {
-      "accroche": "Las parejas se olvidan demasiado a menudo de hacer balance de su relación. 30 minutos cada uno y unos pocos euros pueden cambiar las cosas de verdad.",
+      "accroche": "Las parejas se olvidan demasiado a menudo de hacer balance de su relación. 20 minutos cada uno y unos pocos euros pueden cambiar las cosas de verdad.",
       "titre": "Un solo precio, para los dos",
       "unite": "para la pareja, de una vez",
       "aide": "Un solo pago, de uno o del otro, al final. Sin suscripción.",
@@ -792,7 +791,7 @@
       "items": [
         {
           "q": "¿Cuánto tiempo lleva?",
-          "a": "Contad 25 a 30 minutos cada uno. Cada respuesta queda guardada: podéis hacer una pausa y seguir más tarde."
+          "a": "Contad unos 20 minutos cada uno. Cada respuesta queda guardada: podéis hacer una pausa y seguir más tarde."
         },
         {
           "q": "¿Mi pareja verá mis respuestas?",
@@ -826,7 +825,7 @@
     },
     "final": {
       "titre": "¿Listos para hacer balance?",
-      "texte": "25 minutos cada uno, y sabréis en qué estáis de acuerdo y de qué hay que hablar."
+      "texte": "20 minutos cada uno, y sabréis en qué estáis de acuerdo y de qué hay que hablar."
     },
     "colle": {
       "texte": "Evaluación de pareja · {{prix}}",

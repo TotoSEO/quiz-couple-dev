@@ -42,14 +42,13 @@
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
       "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
-      "majeur": "I'm 18 or over.",
-      "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+      "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
       "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
       "retour": "Back",
       "creer": "Create our assessment",
       "prenomManque": "Write both your first names.",
-      "accordManque": "Tick both boxes to continue.",
+      "accordManque": "Tick the box to continue.",
       "email": "Your email",
       "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
@@ -77,7 +76,7 @@
     "rejoindre": {
       "titre": "{{autre}} would like you to do your relationship assessment together",
       "texte": "100 concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
-      "duree": "Allow 25 to 30 minutes. You can take a break whenever you like, everything is saved.",
+      "duree": "Allow about 20 minutes. You can take a break whenever you like, everything is saved.",
       "situationTitre": "Your situation, as {{autre}} described it",
       "situationCorriger": "Correct",
       "prenom": "Your first name",
@@ -200,7 +199,7 @@
       "creation": {
         "autreAide": "It's only used to write the questions. Nothing is sent to them.",
         "soloNote": "You're doing the assessment on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report.",
-        "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+        "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
@@ -619,7 +618,7 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "25 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
+    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
     "soloQuestion": "Your partner doesn't want to take part?",
     "soloLien": "Take it on your own",
@@ -641,7 +640,7 @@
         "l": "areas of life together"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "each, at your own pace"
       },
       {
@@ -658,7 +657,7 @@
           "texte": "Your two first names, then you send your partner their link."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "You each answer separately",
           "texte": "On your own phone, without seeing the other's answers. You can take a break whenever you like."
         },
@@ -753,7 +752,7 @@
       "cta": "Take the 100 questions"
     },
     "prix": {
-      "accroche": "Couples too often forget to take stock of their relationship. 30 minutes each and a few euros can really change things.",
+      "accroche": "Couples too often forget to take stock of their relationship. 20 minutes each and a few euros can really change things.",
       "titre": "One price, for both of you",
       "unite": "for the couple, in one go",
       "aide": "Paid once, by either of you, at the end. No subscription.",
@@ -791,7 +790,7 @@
       "items": [
         {
           "q": "How long does it take?",
-          "a": "Allow 25 to 30 minutes each. Every answer is saved: you can take a break and pick up later."
+          "a": "Allow about 20 minutes each. Every answer is saved: you can take a break and pick up later."
         },
         {
           "q": "Will my partner see my answers?",
@@ -825,7 +824,7 @@
     },
     "final": {
       "titre": "Ready to take stock?",
-      "texte": "25 minutes each, and you'll know what you agree on and what you need to talk about."
+      "texte": "20 minutes each, and you'll know what you agree on and what you need to talk about."
     },
     "colle": {
       "texte": "Relationship assessment · {{prix}}",

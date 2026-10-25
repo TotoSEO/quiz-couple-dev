@@ -112,10 +112,11 @@ test('rapport prêt, rappel et reprise : cinq langues, rien d\'oublié, rien du 
   const r = messageRelance({ ...base, lang: 'fr', mode: 'duo', moi: 'Léa', autre: 'Tom', promo: { pourcent: 20 } });
   assert.ok(r.html.includes('Soit 3,96\u00a0€ chacun\u00a0: moins qu&#39;une place de ciné'), r.html.slice(r.html.indexOf('Soit'), r.html.indexOf('Soit') + 80));
   assert.ok(r.html.includes('9,90\u00a0€') && r.html.includes('7,92\u00a0€'));
-  assert.equal(minutesRestantes(36, false), 10);
-  assert.equal(minutesRestantes(100, false), 30);
+  assert.equal(minutesRestantes(36, false), 5);
+  assert.equal(minutesRestantes(60, false), 10);
+  assert.equal(minutesRestantes(100, false), 20);
   assert.equal(minutesRestantes(2, false), 5);
-  assert.equal(minutesRestantes(100, true), 50);
+  assert.equal(minutesRestantes(100, true), 40);
   // Un prénom piégé est échappé partout.
   const p = messageReprise({ ...base, lang: 'fr', mode: 'duo', moi: '<b>x</b>', autre: 'Y', variante: 'moi', progression: { repondu: 10, total: 100 } });
   assert.ok(!p.html.includes('<b>x</b>') && p.html.includes('&lt;b&gt;x&lt;/b&gt;'));
