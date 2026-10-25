@@ -42,14 +42,13 @@
       "sansGenre": "Je préfère ne pas le dire",
       "genreAide": "Ça sert seulement à accorder les questions (« heureux » ou « heureuse ») et à choisir les personnages.",
       "situationAide": "Ces réponses changent les questions posées : un couple qui a déjà des enfants n'aura pas « en voulez-vous ? » mais « un autre ? ». Votre partenaire pourra les corriger.",
-      "majeur": "J'ai 18 ans ou plus.",
-      "consentement": "Je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
+      "consentement": "J'ai 18 ans ou plus et je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
       "accordAide": "Vos réponses, y compris sur les sujets intimes, ne servent qu'à ce rapport, où {{autre}} les verra en face des siennes. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et chacun de vous peut la supprimer à tout moment. Pas de compte à créer.",
       "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
       "retour": "Retour",
       "creer": "Créer notre évaluation",
       "prenomManque": "Écrivez vos deux prénoms.",
-      "accordManque": "Cochez les deux cases pour continuer.",
+      "accordManque": "Cochez la case pour continuer.",
       "email": "Votre e-mail",
       "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
@@ -77,7 +76,7 @@
     "rejoindre": {
       "titre": "{{autre}} vous propose de faire votre évaluation de couple",
       "texte": "100 questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
-      "duree": "Comptez 25 à 30 minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
+      "duree": "Comptez une vingtaine de minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
       "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
       "situationCorriger": "Corriger",
       "prenom": "Votre prénom",
@@ -200,7 +199,7 @@
       "creation": {
         "autreAide": "Il sert seulement à écrire les questions. Rien ne lui est envoyé.",
         "soloNote": "Vous faites l'évaluation seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport.",
-        "consentement": "Je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
+        "consentement": "J'ai 18 ans ou plus et je consens à ce que mes réponses soient enregistrées, uniquement dans le but de fournir le rapport d'évaluation.",
         "accordAide": "Vos réponses, y compris sur les sujets intimes, et ce que vous imaginez de celles de {{autre}} ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation",
@@ -619,7 +618,7 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Faites le point sur votre couple, sans aller chez un pro",
-    "sousTitre": "25 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord, et de quoi il faut parler.",
+    "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord, et de quoi il faut parler.",
     "cta": "Commencer l'évaluation",
     "soloQuestion": "Votre partenaire ne veut pas participer ?",
     "soloLien": "Faites-la seul(e)",
@@ -641,7 +640,7 @@
         "l": "domaines de la vie à deux"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "chacun, à son rythme"
       },
       {
@@ -658,7 +657,7 @@
           "texte": "Vos deux prénoms, puis vous envoyez son lien à votre partenaire."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "Chacun répond de son côté",
           "texte": "Sur son téléphone, sans voir les réponses de l'autre. Vous pouvez faire une pause quand vous voulez."
         },
@@ -753,7 +752,7 @@
       "cta": "Faire les 100 questions"
     },
     "prix": {
-      "accroche": "Les couples oublient trop souvent de faire le point sur leur relation. 30 minutes chacun et quelques euros peuvent vraiment changer les choses.",
+      "accroche": "Les couples oublient trop souvent de faire le point sur leur relation. 20 minutes chacun et quelques euros peuvent vraiment changer les choses.",
       "titre": "Un seul prix, pour vous deux",
       "unite": "pour le couple, en une fois",
       "aide": "Payé une seule fois, par l'un ou l'autre, à la fin. Pas d'abonnement.",
@@ -791,7 +790,7 @@
       "items": [
         {
           "q": "Combien de temps faut-il ?",
-          "a": "Comptez 25 à 30 minutes chacun. Chaque réponse est enregistrée : vous pouvez faire une pause et reprendre plus tard."
+          "a": "Comptez une vingtaine de minutes chacun. Chaque réponse est enregistrée : vous pouvez faire une pause et reprendre plus tard."
         },
         {
           "q": "Mon ou ma partenaire verra-t-il mes réponses ?",
@@ -825,7 +824,7 @@
     },
     "final": {
       "titre": "Prêts à faire le point ?",
-      "texte": "25 minutes chacun, et vous saurez sur quoi vous êtes d'accord et de quoi il faut parler."
+      "texte": "20 minutes chacun, et vous saurez sur quoi vous êtes d'accord et de quoi il faut parler."
     },
     "colle": {
       "texte": "Évaluation de couple · {{prix}}",

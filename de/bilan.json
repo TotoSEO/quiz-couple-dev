@@ -42,14 +42,13 @@
       "sansGenre": "Möchte ich nicht sagen",
       "genreAide": "Das dient nur dazu, die Figuren neben euren Namen auszuwählen.",
       "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“. Dein Partner oder deine Partnerin kann sie korrigieren.",
-      "majeur": "Ich bin 18 Jahre oder älter.",
-      "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
+      "consentement": "Ich bin 18 Jahre oder älter und willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
       "accordAide": "Deine Antworten, auch zu intimen Themen, dienen nur diesem Bericht, in dem {{autre}} sie neben den eigenen sieht. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie jederzeit löschen. Kein Konto nötig.",
       "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide: Du schaltest ihn frei, sobald du deine Antworten fertig hast.",
       "retour": "Zurück",
       "creer": "Unseren Check erstellen",
       "prenomManque": "Schreib eure beiden Vornamen.",
-      "accordManque": "Setz beide Häkchen, um weiterzumachen.",
+      "accordManque": "Setz das Häkchen, um weiterzumachen.",
       "email": "Deine E-Mail",
       "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn dein Bericht bereit ist, einmal, falls {{autre}} sich mit dem Antworten Zeit lässt, und ein einziges Mal, falls er am nächsten Tag noch wartet.",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
@@ -77,7 +76,7 @@
     "rejoindre": {
       "titre": "{{autre}} schlägt dir vor, eure Beziehungsanalyse zu machen",
       "texte": "Rund hundert konkrete Fragen zu eurem Leben zu zweit. Du antwortest für dich, ohne die Antworten von {{autre}} zu sehen, und umgekehrt. Wenn ihr beide fertig seid, stellt euer Bericht eure beiden Antworten nebeneinander, Thema für Thema.",
-      "duree": "Rechne mit 25 bis 30 Minuten. Du kannst jederzeit eine Pause machen, alles wird gespeichert.",
+      "duree": "Rechne mit etwa 20 Minuten. Du kannst jederzeit eine Pause machen, alles wird gespeichert.",
       "situationTitre": "Eure Situation, wie {{autre}} sie beschrieben hat",
       "situationCorriger": "Korrigieren",
       "prenom": "Dein Vorname",
@@ -200,7 +199,7 @@
       "creation": {
         "autreAide": "Er dient nur dazu, die Fragen zu schreiben. Es wird nichts verschickt.",
         "soloNote": "Du machst die Analyse allein: {{autre}} erfährt nichts davon, es wird nichts verschickt, und nur du wirst den Bericht sehen.",
-        "consentement": "Ich willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
+        "consentement": "Ich bin 18 Jahre oder älter und willige ein, dass meine Antworten gespeichert werden, ausschließlich um den Analysebericht zu erstellen.",
         "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
         "creer": "Meine Analyse beginnen",
@@ -620,7 +619,7 @@
   "lp": {
     "badge": "Beziehungsanalyse",
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
-    "sousTitre": "25 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
+    "sousTitre": "20 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
     "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
     "soloLien": "Mach sie allein",
@@ -642,7 +641,7 @@
         "l": "Bereiche des gemeinsamen Lebens"
       },
       {
-        "n": "25 Min.",
+        "n": "20 Min.",
         "l": "pro Person, im eigenen Tempo"
       },
       {
@@ -659,7 +658,7 @@
           "texte": "Eure beiden Vornamen, dann schickst du deinem Partner oder deiner Partnerin den Link."
         },
         {
-          "duree": "25 Min.",
+          "duree": "20 Min.",
           "titre": "Jeder antwortet für sich",
           "texte": "Auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Ihr könnt jederzeit eine Pause machen."
         },
@@ -754,7 +753,7 @@
       "cta": "Die 100 Fragen beantworten"
     },
     "prix": {
-      "accroche": "Paare vergessen viel zu oft, eine Bestandsaufnahme ihrer Beziehung zu machen. 30 Minuten pro Person und ein paar Euro können wirklich etwas verändern.",
+      "accroche": "Paare vergessen viel zu oft, eine Bestandsaufnahme ihrer Beziehung zu machen. 20 Minuten pro Person und ein paar Euro können wirklich etwas verändern.",
       "titre": "Ein Preis, für euch beide",
       "unite": "für das Paar, einmalig",
       "aide": "Einmal bezahlt, von einem von euch, am Ende. Kein Abo.",
@@ -792,7 +791,7 @@
       "items": [
         {
           "q": "Wie lange dauert es?",
-          "a": "Rechnet mit 25 bis 30 Minuten pro Person. Jede Antwort wird gespeichert: Ihr könnt eine Pause machen und später weitermachen."
+          "a": "Rechnet mit etwa 20 Minuten pro Person. Jede Antwort wird gespeichert: Ihr könnt eine Pause machen und später weitermachen."
         },
         {
           "q": "Sieht mein Partner oder meine Partnerin meine Antworten?",
@@ -826,7 +825,7 @@
     },
     "final": {
       "titre": "Bereit, Bilanz zu ziehen?",
-      "texte": "25 Minuten pro Person, und ihr wisst, worin ihr euch einig seid und worüber ihr reden solltet."
+      "texte": "20 Minuten pro Person, und ihr wisst, worin ihr euch einig seid und worüber ihr reden solltet."
     },
     "colle": {
       "texte": "Beziehungsanalyse · {{prix}}",

@@ -555,11 +555,13 @@
 
   // Le départ tient en un écran depuis le 21 octobre 2026 (Thomas devant
   // l'entonnoir : 240 clics sur « Commencer », 85 évaluations créées) : la
-  // façon de faire, les prénoms et les deux cases. La situation est posée
+  // façon de faire, les prénoms et la case de l'accord (une seule depuis le
+  // 25 octobre 2026 : « 18 ans ou plus » et le consentement, fusionnés, après
+  // 103 erreurs sur les deux cases en cinq jours). La situation est posée
   // ensuite comme les premières questions (questionSituation), et l'adresse
   // e-mail à la fin de ses propres questions (ecranEmail).
   function creation() {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, majeur: false, consent: false };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false };
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
     var aideAutre = tr('creation.autreAide', '');
@@ -575,7 +577,6 @@
       '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
       '<hr class="bilan-sep">' +
       (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"' + (brouillon.majeur ? ' checked' : '') + '> <span>' + x('creation.majeur') + '</span></label>' +
       '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
       '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
       '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
@@ -606,7 +607,6 @@
       brouillon.autre = (document.getElementById('bilan-autre').value || '').trim();
       brouillon.genreMoi = lireGenre('g-moi');
       brouillon.genreAutre = lireGenre('g-autre');
-      brouillon.majeur = document.getElementById('bilan-majeur').checked;
       brouillon.consent = document.getElementById('bilan-consent').checked;
     }
     ACTIONS = {
@@ -626,9 +626,10 @@
       valider: function (b) {
         lire();
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
-        // La cause dit si c'est l'âge qui arrête (la case des 18 ans) ou le
-        // consentement : le site a beaucoup de visiteurs de moins de 18 ans.
-        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', !brouillon.majeur ? 'majeur' : 'consentement');
+        // Une seule case dit l'âge et le consentement : la cause est
+        // « accord » (de 21 au 25 octobre 2026, deux cases, « majeur » et
+        // « consentement » comptées à part).
+        if (!brouillon.consent) return erreur('creation.accordManque', 'accord');
         b.disabled = true;
         appel('creer', {
           lang: LANG, mode: brouillon.mode, src: source(),
@@ -728,7 +729,6 @@
       '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" value="' + esc(etat.moi.prenom) + '"></div>' +
       '<div class="bilan-champ"><span class="bilan-label">' + x('rejoindre.genre') + '</span>' + champGenre('g-moi', etat.moi.genre) + '</div>' +
       '<hr class="bilan-sep">' +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
       '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
       '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
       '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
@@ -746,7 +746,7 @@
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
         if (!prenom) return erreur('rejoindre.prenomManque');
-        if (!document.getElementById('bilan-majeur').checked || !document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
+        if (!document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
         appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), consentement: true, majeur: true })
           .then(function (r) {

@@ -1250,3 +1250,60 @@ L'outil est `bilan/retrait-test.mjs`, lancé par `bilan-retrait.yml` :
 `lister` (les ventes, sans prénom ni adresse ; avec des empreintes SHA-256
 d'adresses, il signale celles faites avec elles, sans que l'adresse passe par
 le workflow), `essai` (ce qui serait retiré, sans rien toucher), `retirer`.
+
+## 25 octobre 2026 : ce que disent les cinq premiers jours
+
+Thomas : « est-ce que tu arrives à accéder aux données de l'onglet évaluation
+pour analyser ? ». Les chiffres sont lus par le workflow `bilan-chiffres.yml`
+(`bilan/chiffres.mjs`, sans le mot de passe de l'admin), le 25 octobre au
+matin, sur les évaluations créées depuis l'ouverture du 20 octobre.
+
+| Étape | Nombre |
+|---|---|
+| Visites de la page | 1 899 |
+| Clics sur « Commencer » | 620 |
+| Évaluations créées | 291 (156 à deux, 135 seul(e)) |
+| À deux, le partenaire a rejoint | 53 sur 156 |
+| Réponses finies | environ 28 couples, une dizaine de seul(e)s |
+| Pages de paiement ouvertes | 7 |
+| Ventes | 3 (7,92 € chacune) |
+
+- **Qui achète :** les trois ventes sont des couples à deux, en anglais, qui
+  font l'évaluation côte à côte : le partenaire rejoint en une minute
+  (médiane), chacun finit en une vingtaine de minutes (médianes de 22 et 19
+  minutes), et ils paient une fois que les deux ont fini, jamais avant
+  (`payes_avant_fin` à zéro). Environ un couple sur dix qui finit paie ; les
+  trois ventes ont suivi l'e-mail « rapport prêt » (16 envoyés), aucune le
+  rappel du lendemain (12 envoyés).
+- **Où ça casse :** au début. Sur 205 personnes arrêtées depuis plus de
+  24 heures, 78 l'ont fait dans les sept questions de situation et 91 dans le
+  premier domaine, « quotidien » (fini par 134 personnes sur 214 qui y sont
+  entrées) ; chaque domaine suivant est fini à 92-100 %.
+- **Seul(e) :** 135 évaluations, une dizaine finies, aucune vente : deux
+  réponses par question, soit 200, c'est trop long.
+- **Le départ :** 40 % de ceux qui voient l'écran de départ repartent sans
+  créer d'évaluation ; 169 erreurs affichées en cinq jours, dont 103 pour
+  l'une des deux cases (53 l'âge, 50 le consentement) et 33 pour les prénoms.
+- **Les e-mails du parcours :** 100 partis le 24 au soir, 97 remis, aucune
+  plainte, aucune désinscription, aucune visite de la page par leur lien le
+  lendemain matin.
+
+Thomas a validé les quatre propositions (« Ok pour tout ») :
+
+1. **Une seule case au départ** (fait le 25 octobre 2026) : « J'ai 18 ans ou
+   plus et je consens à ce que mes réponses soient enregistrées, uniquement
+   dans le but de fournir le rapport d'évaluation », à la création, en solo
+   et à l'acceptation de l'invitation, cause `accord` quand elle manque.
+   L'âge reste 18 ans : c'est un achat, avec des questions sur l'intimité,
+   et les CGV réservent l'évaluation aux majeurs (les 15 ans de la porte
+   e-mail sont l'âge du consentement seul aux e-mails, une autre règle).
+2. **« Une vingtaine de minutes »** (fait le 25 octobre 2026) au lieu de
+   « 25 à 30 minutes », « 25 minutes » ou « 30 minutes » partout où la page
+   et l'invitation donnent la durée, phrase de Thomas comprise (« 20 minutes
+   chacun et quelques euros… ») ; l'e-mail de reprise compte 0,2 minute par
+   question restante (0,4 en solo).
+3. **Alléger le début :** poser chaque question de situation juste avant le
+   domaine qui en a besoin, et ouvrir sur un domaine plus parlant que
+   « quotidien ».
+4. **Raccourcir le seul :** ne demander ce que l'autre répondrait que pour
+   les sujets décisifs.
