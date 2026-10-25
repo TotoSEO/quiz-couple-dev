@@ -1168,19 +1168,16 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  // La page de l'évaluation de couple : indexée en français seulement, et
-  // seulement ouverte (25 octobre 2026, Thomas : « Enlève le noindex de la
-  // page », pour viser « bilan de couple » et « bilan de couple PDF »). Les
-  // quatre autres langues restent en noindex comme depuis le 22 octobre
-  // (« met la page /evaluation-de-couple/ et ses variantes traduites en
-  // noindex ») : elles se vendent par le maillage du site, et les liens vers
-  // elles restent suivis (« noindex, follow »). Sans traduction indexée, la
-  // page française n'a pas de hreflang, comme un article frOnly, et elle seule
-  // entre dans un sitemap (generateSitemaps).
+  // La page de l'évaluation de couple est indexée dans les cinq langues quand
+  // elle est ouverte (25 octobre 2026, Thomas : « Enlève le noindex de la
+  // page », pour viser « bilan de couple » et « bilan de couple PDF », puis
+  // « les 5 langues doivent être en ligne ! ») ; du 22 au 25 octobre elle
+  // était en noindex partout. Fermée, elle repasse en noindex, hors des
+  // sitemaps (generateSitemaps), et les liens vers elle restent suivis
+  // (« noindex, follow »).
   const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
-  const bilanIndexe = routeKey === 'bilanCouple' && lang === 'fr' && BILAN_OUVERT;
-  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !bilanIndexe);
-  const alternates = isNoindex || routeKey === 'bilanCouple' ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
+  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !BILAN_OUVERT);
+  const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
 
   // Get page title and description
@@ -1693,14 +1690,8 @@ function generateSitemaps() {
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
     if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
-    // L'évaluation : la page française seule, et seulement ouverte (voir
-    // noindexRoutes).
-    if (key === 'bilanCouple') {
-      if (BILAN_OUVERT && slugs.fr !== undefined) {
-        entries.push({ urlsByLang: { fr: url('fr', slugs.fr) }, lastmod: dateLaPlusRecente(gitIndex.dates, fichiersSourceRoute(key)), priority: '0.7', changefreq: 'weekly', frOnly: true });
-      }
-      continue;
-    }
+    // L'évaluation : seulement ouverte (voir noindexRoutes).
+    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
 
     // Build URL map for available languages
     const urlsByLang = {};

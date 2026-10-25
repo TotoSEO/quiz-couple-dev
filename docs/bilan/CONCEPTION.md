@@ -1573,3 +1573,32 @@ le 22 octobre, parce qu'elle se vendait par le maillage du site.
   sur votre couple ») ; demander l'indexation de la page dans la Search
   Console ; suivre « bilan de couple » et « bilan de couple pdf » dans
   Performances.
+
+### Le soir même : les cinq langues
+
+Thomas : « trouve les alternatives dans les autres langues pour bilan de
+couple pdf ! les 5 langues doivent être en ligne ! ». La page est indexée
+dans les cinq langues quand l'évaluation est ouverte, avec son hreflang
+complet et dans les cinq sitemaps.
+
+Chaque langue vise ses propres mots, choisis sur le sens de « bilan de
+couple » et sur les noms des offres comparables (le Couple Checkup de
+PREPARE/ENRICH, le Relationship Checkup de Gottman, les « Beziehungscheck »
+des cabinets allemands), sans prendre ceux d'une autre page du site : le
+test de couple vise déjà « Partnertest » et « Beziehungstest » en allemand,
+et « compatibilité » dans les autres langues. Aucun volume n'a pu être
+mesuré depuis une session de travail, Thomas peut les vérifier dans son outil.
+
+| Langue | Mot visé | Title |
+|---|---|---|
+| fr | bilan de couple | Bilan de couple à faire en ligne \| PDF résultats immédiats |
+| en | relationship assessment | Relationship Assessment Online \| Instant Results + PDF |
+| es | evaluación de pareja | Evaluación de pareja online \| Resultados al instante y PDF |
+| de | Beziehungscheck | Beziehungscheck online \| Ergebnis sofort, auch als PDF |
+| it | bilancio di coppia | Bilancio di coppia online \| Risultati subito e in PDF |
+
+Le H2 du curseur reprend le mot de chaque langue, et les deux sections
+existent dans les cinq langues, écrites dans chacune plutôt que traduites mot
+à mot. Au passage, deux réponses anglaises de la question sur l'argent, que la
+section cite, sont devenues « Separate money, we split the bills » et
+« Separate money, case by case » (« Each our own money » ne se dit pas).

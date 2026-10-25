@@ -742,7 +742,7 @@
       "note": "Le domande si basano sulla ricerca in psicologia di coppia e sui questionari usati prima di un matrimonio."
     },
     "rapport": {
-      "titre": "Cosa c'è nel report?",
+      "titre": "Cosa c'è nel bilancio?",
       "intro": "Un vero report, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
       "pages": [
         {
@@ -856,6 +856,29 @@
           "texte": "Con Stripe: non vediamo mai la vostra carta."
         }
       ]
+    },
+    "definition": {
+      "titre": "Cos'è un bilancio di coppia?",
+      "paragraphes": [
+        "Un bilancio di coppia è un momento che ci si prende per fare il punto sulla propria relazione, per vedere cosa va bene e cosa no. Si può fare da un consulente di coppia, in seduta, oppure da soli con una lista di domande.",
+        "Il bilancio di coppia di Quiz Couple si fa online, ognuno sul proprio telefono. Rispondete a 100 domande concrete su dodici temi della vita a due (i soldi, la quotidianità, i figli, l'intimità, i litigi, ecc.), senza vedere le risposte dell'altro. Per esempio: «I vostri soldi in coppia, idealmente...», con quattro risposte, da «Tutto in comune» a «Ognuno i suoi soldi, caso per caso». Se rispondete allo stesso modo, è un accordo. Se le vostre risposte sono lontane, è una differenza, ed è proprio di queste differenze che vale la pena parlare.",
+        "Quando avete risposto tutti e due, il bilancio completo costa {{prix}} per tutti e due. Si apre subito sulla pagina, e ricevete il vostro bilancio di coppia in PDF per e-mail, da tenere. Le vostre risposte sono una accanto all'altra, domanda per domanda, con domande per parlare di ogni differenza."
+      ]
+    },
+    "utilite": {
+      "titre": "A cosa serve valutare la propria relazione?",
+      "paragraphes": [
+        "Molte coppie parlano di certi argomenti solo quando le cose vanno male: dei soldi dopo una grossa spesa, dei figli il giorno in cui salta fuori la domanda, o della divisione delle faccende nel mezzo di un litigio... Valutare la propria relazione serve proprio a parlarne prima, a mente fredda.",
+        "Il bilancio vi mostra anche quello che non sapete l'uno dell'altro. Ci sono gli argomenti su cui siete d'accordo senza esservelo mai detti, e quelli su cui ognuno pensava che l'altro vedesse le cose allo stesso modo. Spesso sono proprio questi a finire in litigio, quindi vale la pena scoprirli con calma."
+      ],
+      "momentsIntro": "Non c'è un momento perfetto per farlo, ma alcuni si prestano bene:",
+      "moments": [
+        "Prima di andare a vivere insieme",
+        "Prima di sposarvi o di avere un figlio",
+        "Dopo qualche anno insieme",
+        "Quando sentite che qualcosa è cambiato tra voi"
+      ],
+      "solo": "E se il tuo partner non ne ha voglia, puoi farlo da solo o da sola: rispondi per te e, sugli argomenti che contano di più, dici cosa pensi che risponderebbe l'altro."
     },
     "faq": {
       "titre": "Domande frequenti",
