@@ -41,3 +41,6 @@ verify_jwt = false
 
 [functions.lead-capture]
 verify_jwt = false
+
+[functions.brevo-webhook]
+verify_jwt = false

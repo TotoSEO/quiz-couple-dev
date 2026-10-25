@@ -51,7 +51,7 @@
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue.",
       "email": "Your email",
-      "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and tells you when your report is ready, with a single reminder if it's still waiting the next day.",
+      "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
       "autreDefaut": "your partner"
@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invite {{autre}}",
       "texte": "Send this link to {{autre}}. {{autre}} will answer separately, on their own phone, without seeing your answers, and you won't see theirs until the end.",
+      "nouveauLien": "This is a new link: the old one no longer works, so send this one to {{autre}}.",
       "suite": "No need to wait for {{autre}}: start your answers now, you each go at your own pace.",
       "envoyer": "Send the link",
       "copier": "Copy the link",
@@ -597,7 +598,7 @@
       "titre": "Email me my link",
       "placeholder": "you@email.com",
       "bouton": "Send",
-      "aide": "To find your answers again if you close this page or change phones.",
+      "aide": "To find your answers again if you close this page or change phones. If you don't finish, we'll send you a single reminder.",
       "envoye": "Done: your link is in your inbox ({{email}}). Check your spam folder too.",
       "faux": "This email address doesn't look complete.",
       "trop": "Too many emails for this assessment. Try again in an hour."

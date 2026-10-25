@@ -1,0 +1,106 @@
+name: E-mails · Brevo
+
+# Le compte Brevo des campagnes du parcours e-mail (emails/, docs/emailing).
+# À lancer à la main (« Run workflow ») :
+#   verif     : lit la configuration (domaine, expéditeur, champs, dossier,
+#               webhook, fonction et sa clé, file du soir) et dit ce qui
+#               manque, puis le bilan du test A/B par version. Rien n'est
+#               écrit.
+#   installer : crée ce qui manque chez Brevo (champs, dossier, liste
+#               « Essais », webhook) et pose la clé du webhook chez Supabase
+#               (BREVO_WEBHOOK_CLE). Sans risque à relancer.
+#   essai     : envoie les e-mails du parcours en test à « adresse » (une
+#               adresse +variante par famille de test et par version du
+#               test A/B, même boîte). Brevo en permet 50 par jour.
+#   blanc     : un passage du soir à blanc, à n'importe quelle heure : qui
+#               recevrait quoi ce soir, sans rien envoyer ni écrire.
+#
+# Secrets : BREVO_API_KEY, et SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF
+# que le dépôt a déjà.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'verif, installer, essai ou blanc'
+        required: true
+        default: 'verif'
+        type: choice
+        options:
+          - verif
+          - installer
+          - essai
+          - blanc
+      adresse:
+        description: 'essai : adresse qui reçoit les essais'
+        required: false
+        default: 'infoquizcouple@gmail.com'
+      types:
+        description: 'essai : e-mails (e1,e2)'
+        required: false
+        default: 'e1,e2'
+      langues:
+        description: 'essai : langues (fr,en,es,de,it)'
+        required: false
+        default: 'fr'
+      angles:
+        description: 'essai : familles de test (score,projet,doute,general)'
+        required: false
+        default: 'score,projet,doute'
+      prenom:
+        description: 'essai : prénom du contact (vide : « Coucou ! »)'
+        required: false
+        default: 'Thomas'
+      versions:
+        description: 'essai : versions du test A/B (a : la maquette, b : l''e-mail sobre)'
+        required: false
+        default: 'a,b'
+
+concurrency:
+  group: brevo-reglages
+  cancel-in-progress: false
+
+jobs:
+  brevo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      # contenu.mjs lit la configuration du site (pages, adresses) et le prix
+      # de l'évaluation (coeur.mjs)
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            emails
+            static-site/build
+            supabase/functions/_shared/bilan
+            fr
+            en
+            es
+            de
+            it
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérification
+        if: inputs.action == 'verif'
+        run: node emails/verif.mjs
+      - name: Installation
+        if: inputs.action == 'installer'
+        run: node emails/installer.mjs
+      - name: Essais
+        if: inputs.action == 'essai'
+        env:
+          ADRESSE: ${{ inputs.adresse }}
+          TYPES: ${{ inputs.types }}
+          LANGUES: ${{ inputs.langues }}
+          ANGLES: ${{ inputs.angles }}
+          PRENOM: ${{ inputs.prenom }}
+          VERSIONS: ${{ inputs.versions }}
+        run: node emails/essai.mjs "$ADRESSE" "$TYPES" "$LANGUES" "$ANGLES" "$PRENOM" "$VERSIONS"
+      - name: Passage à blanc
+        if: inputs.action == 'blanc'
+        run: node emails/parcours.mjs --blanc --forcer

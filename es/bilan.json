@@ -51,7 +51,7 @@
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca las dos casillas para continuar.",
       "email": "Tu e-mail",
-      "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para avisarte cuando tu informe esté listo, con un solo recordatorio si al día siguiente sigue esperando.",
+      "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
       "autreDefaut": "tu pareja"
@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Invita a {{autre}}",
       "texte": "Envía este enlace a {{autre}}. {{autre}} responderá por su lado, en su móvil, sin ver tus respuestas, y tú no verás las suyas hasta el final.",
+      "nouveauLien": "Es un enlace nuevo: el anterior ya no funciona, envía este a {{autre}}.",
       "suite": "No hace falta esperar a {{autre}}: empieza tus respuestas ya, cada uno avanza por su lado.",
       "envoyer": "Enviar el enlace",
       "copier": "Copiar el enlace",
@@ -598,7 +599,7 @@
       "titre": "Recibir mi enlace por e-mail",
       "placeholder": "tu@email.com",
       "bouton": "Enviar",
-      "aide": "Para recuperar tus respuestas si cierras esta página o cambias de móvil.",
+      "aide": "Para recuperar tus respuestas si cierras esta página o cambias de móvil. Si no terminas, te enviaremos un solo recordatorio.",
       "envoye": "Listo: tu enlace está en tu bandeja ({{email}}). Mira también en el correo no deseado.",
       "faux": "Esta dirección de e-mail no parece completa.",
       "trop": "Demasiados envíos para esta evaluación. Vuelve a intentarlo dentro de una hora."

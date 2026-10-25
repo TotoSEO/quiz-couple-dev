@@ -1,0 +1,122 @@
+{
+  "salutation": {
+    "prenom": "¡Hola, [[prenom]]!",
+    "sans": "¡Hola!"
+  },
+  "signature": [
+    "¡Hasta pronto!",
+    "Thomas, de Quiz Couple"
+  ],
+  "pastille": "Tests · Quiz · Juegos",
+  "altMascottes": "Las mascotas de Quiz Couple te saludan",
+  "voir": {
+    "titre": "Más en [[marque]]",
+    "aller": "Vamos →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "¿Cuál es tu lenguaje del amor?",
+        "texte": "30 preguntas para saber cómo ama cada uno."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "¿Quién conoce mejor al otro?",
+        "texte": "El pequeño duelo para ver quién escucha mejor."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-es.png",
+        "type": "Juego",
+        "titre": "¿Qué preferirías?",
+        "texte": "100 elecciones imposibles para decidir entre los dos."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "¿Nos vemos en Instagram?",
+    "texte": "Un pequeño quiz cada día, para jugar en pareja."
+  },
+  "pied": {
+    "pourquoi": "Recibes este correo porque dejaste tu dirección al final de un test en quiz-couple.com y aceptaste recibir nuestros consejos y novedades.",
+    "desinscription": "Darse de baja",
+    "editeur": "Quiz Couple · Visibilitea",
+    "mentions": "Aviso legal"
+  },
+  "e1": {
+    "sujet": "100 preguntas para hacer balance en pareja",
+    "apercu": "Cada uno responde en su móvil, y luego un informe os muestra en qué estáis de acuerdo.",
+    "titre": "Haced balance de vuestra pareja sin ir a un profesional",
+    "intro": {
+      "score": "¡Gracias por hacer un test en Quiz Couple! Si quieres saber en qué estáis de acuerdo los dos, y en qué no, hemos hecho algo mucho más completo: la evaluación de pareja.",
+      "projet": "¡Gracias por hacer un test en Quiz Couple! Antes de dar un gran paso, vale la pena comprobar que los dos queréis lo mismo. Para eso sirve la evaluación de pareja.",
+      "doute": "Gracias por hacer un test en Quiz Couple. Cuando te haces preguntas sobre tu pareja, ponerles palabras ya ayuda mucho. Para eso sirve la evaluación de pareja.",
+      "general": "¡Gracias por seguir a Quiz Couple! Si quieres saber en qué estáis de acuerdo los dos, y en qué no, hemos hecho nuestro test más completo: la evaluación de pareja."
+    },
+    "points": [
+      "**100 preguntas** sobre 12 áreas: dinero, hijos, intimidad, discusiones...",
+      "**Cada uno responde en su móvil**, sin ver las respuestas del otro",
+      "**Preguntas basadas en la investigación**: más de 30 estudios publicados sobre la pareja",
+      "**Al final, un informe** compara vuestras respuestas y os dice de qué hablar primero"
+    ],
+    "solo": "¿Tu pareja no quiere participar? [También puedes hacer la evaluación a solas](solo).",
+    "prixPhrase": {
+      "promo": "−[[pourcent]] % ahora mismo, ya aplicado al pagar",
+      "normal": "Para los dos, en un solo pago"
+    },
+    "bouton": "Ver cómo funciona",
+    "note": "Las preguntas son gratis: pagas al final, una sola vez para los dos.",
+    "ps": "**PD:** [[accroche]]"
+  },
+  "e2": {
+    "sujet": "¿Cuenta común o cada uno su dinero?",
+    "apercu": {
+      "promo": "Es una de las 100 preguntas de la evaluación de pareja, con un −[[pourcent]] % ahora mismo.",
+      "normal": "Es una de las 100 preguntas de la evaluación de pareja. ¿Tú qué responderías?"
+    },
+    "titre": "¿Responderíais lo mismo los dos?",
+    "intro": {
+      "score": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "projet": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "doute": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:",
+      "general": "Hace unos días te hablé de la evaluación de pareja. Esta es una de sus 100 preguntas:"
+    },
+    "exemple": "Cada uno responde por su lado. Si elegís la misma respuesta, es un acuerdo. Si uno responde «[[reponseA]]» y el otro «[[reponseB]]», el informe os explica por qué importa y os da preguntas para hablarlo.",
+    "aussi": "En el informe también encontraréis:",
+    "points": [
+      "**Los temas decisivos** destacados: los que más pesan en una pareja",
+      "**4 conversaciones pendientes**, con preguntas para empezar",
+      "**Cómo vive cada uno** la relación ahora mismo"
+    ],
+    "solo": "[La evaluación también se puede hacer a solas](solo), si tu pareja no quiere participar.",
+    "prixPhrase": {
+      "promo": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine",
+      "normal": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine"
+    },
+    "bouton": "Hacer la evaluación",
+    "note": "Para comparar: una sesión con un consejero de pareja cuesta entre 50 y 90 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas de Quiz Couple",
+    "signature": [
+      "¡Hasta pronto!",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos ahora mismo, en lugar de [[prixBase]].",
+      "normal": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos."
+    },
+    "solo": "La evaluación también se puede hacer a solas, si tu pareja no quiere.",
+    "e1": {
+      "texte": "Cada uno responde a 100 preguntas en su móvil, sin ver las respuestas del otro. Dinero, hijos, discusiones, intimidad... Al final, un informe compara vuestras respuestas y os dice de qué hablar primero.",
+      "lien": "Aquí lo tienes todo explicado: [ver la evaluación de pareja](evaluation).",
+      "reponse": "Si tienes alguna pregunta, puedes responder directamente a este correo."
+    },
+    "e2": {
+      "lien": "Si te apetece: [hacer la evaluación de pareja](evaluation)."
+    }
+  }
+}
