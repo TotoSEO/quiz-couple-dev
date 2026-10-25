@@ -742,7 +742,7 @@
       "note": "Las preguntas se apoyan en la investigación en psicología de pareja y en los cuestionarios que se usan antes de una boda."
     },
     "rapport": {
-      "titre": "¿Qué hay en el informe?",
+      "titre": "¿Qué incluye la evaluación?",
       "intro": "Un informe de verdad, con sus capítulos, sus gráficos y, para cada diferencia, pistas para hablarlo. Desliza.",
       "pages": [
         {
@@ -856,6 +856,29 @@
           "texte": "Con Stripe: nunca vemos vuestra tarjeta."
         }
       ]
+    },
+    "definition": {
+      "titre": "¿Qué es una evaluación de pareja?",
+      "paragraphes": [
+        "Una evaluación de pareja es un momento que uno se toma para hacer balance de su relación, para ver lo que va bien y lo que falla. Se puede hacer con un terapeuta de pareja, en consulta, o por tu cuenta con una lista de preguntas.",
+        "La evaluación de pareja de Quiz Couple se hace en línea, cada uno en su teléfono. Respondéis a 100 preguntas concretas sobre doce temas de la vida en pareja (el dinero, el día a día, los hijos, la intimidad, las discusiones, etc.), sin ver las respuestas del otro. Por ejemplo: «Vuestro dinero en pareja, idealmente...», con cuatro respuestas, de «Todo en común» a «Cada uno su dinero, caso por caso». Si respondéis lo mismo, es un acuerdo. Si vuestras respuestas están lejos la una de la otra, es una diferencia, y de esas diferencias es de lo que más vale la pena hablar.",
+        "Cuando habéis respondido los dos, la evaluación completa cuesta {{prix}} para los dos. Se abre en la página al momento, y recibís vuestra evaluación en PDF por correo, para guardarla. Vuestras respuestas aparecen una al lado de la otra, pregunta por pregunta, con preguntas para hablar de cada diferencia."
+      ]
+    },
+    "utilite": {
+      "titre": "¿Para qué sirve evaluar la relación?",
+      "paragraphes": [
+        "Muchas parejas solo hablan de ciertos temas cuando las cosas van mal: del dinero después de un gasto grande, de los hijos el día que sale la pregunta, o del reparto de las tareas en medio de una discusión... Evaluar la relación sirve precisamente para hablarlo antes, con la cabeza fría.",
+        "La evaluación también os muestra lo que no sabéis el uno del otro. Están los temas en los que estáis de acuerdo sin habéroslo dicho nunca, y aquellos en los que cada uno creía que el otro veía las cosas igual. Muchas veces son estos últimos los que acaban en discusión, así que vale la pena descubrirlos con tranquilidad."
+      ],
+      "momentsIntro": "No hay un momento ideal para hacerla, pero algunos se prestan bien:",
+      "moments": [
+        "Antes de iros a vivir juntos",
+        "Antes de casaros o de tener un hijo",
+        "Después de unos años juntos",
+        "Cuando notáis que algo ha cambiado entre vosotros"
+      ],
+      "solo": "Y si tu pareja no tiene ganas, puedes hacerla a solas: respondes por ti y, en los temas que más cuentan, dices lo que crees que respondería tu pareja."
     },
     "faq": {
       "titre": "Preguntas frecuentes",

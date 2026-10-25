@@ -738,7 +738,7 @@
       "note": "The questions draw on research in couple psychology and on the questionnaires used before a wedding."
     },
     "rapport": {
-      "titre": "What's in the report?",
+      "titre": "What's in the assessment?",
       "intro": "A real report, with its chapters, its charts and, for each gap, ways to talk about it. Scroll through.",
       "pages": [
         {
@@ -852,6 +852,29 @@
           "texte": "Through Stripe: we never see your card."
         }
       ]
+    },
+    "definition": {
+      "titre": "What is a relationship assessment?",
+      "paragraphes": [
+        "A relationship assessment, sometimes called a couples check-up, is a moment you take to look at where your relationship stands, to see what's going well and what isn't. You can do it with a couples counsellor, in a session, or on your own with a list of questions.",
+        "Quiz Couple's relationship assessment is done online, each of you on your own phone. You answer 100 concrete questions about twelve parts of life as a couple (money, everyday life, children, intimacy, arguments, etc.), without seeing the other's answers. For example: \"Your money as a couple, ideally...\", with four answers, from \"All shared\" to \"Separate money, case by case\". If you both give the same answer, that's an agreement. If your answers are far apart, that's a gap, and the gaps are what's worth talking about.",
+        "Once you've both answered, the full assessment costs {{prix}} for the two of you. It opens on the page straight away, and you get your assessment as a PDF by email, to keep. Your answers sit side by side, question by question, with questions to help you talk about each gap."
+      ]
+    },
+    "utilite": {
+      "titre": "Why assess your relationship?",
+      "paragraphes": [
+        "A lot of couples only talk about some subjects when things go wrong: money after a big purchase, children the day the question comes up, or splitting the chores in the middle of an argument... Assessing your relationship is a way to talk about them before, with a clear head.",
+        "The assessment also shows you what you don't know about each other. There are the subjects where you agree without ever having said so, and the ones where each of you thought the other saw things the same way. Those are often the ones that end in arguments, so it's worth finding them while things are calm."
+      ],
+      "momentsIntro": "There's no perfect time to do it, but some moments lend themselves to it:",
+      "moments": [
+        "Before moving in together",
+        "Before getting married or having a baby",
+        "After a few years together",
+        "When you feel something has changed between you"
+      ],
+      "solo": "And if your partner doesn't feel like it, you can do it on your own: you answer for yourself and, on the topics that matter most, you say what you think your partner would answer."
     },
     "faq": {
       "titre": "Frequently asked questions",

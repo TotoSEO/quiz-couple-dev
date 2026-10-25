@@ -742,7 +742,7 @@
       "note": "Die Fragen stützen sich auf die Forschung zur Paarpsychologie und auf die Fragebögen, die vor einer Hochzeit verwendet werden."
     },
     "rapport": {
-      "titre": "Was steht im Bericht?",
+      "titre": "Was zeigt euch der Beziehungscheck?",
       "intro": "Ein richtiger Bericht, mit Kapiteln, Grafiken und zu jedem Unterschied Gesprächshilfen. Blättert durch.",
       "pages": [
         {
@@ -856,6 +856,29 @@
           "texte": "Über Stripe: Wir sehen eure Karte nie."
         }
       ]
+    },
+    "definition": {
+      "titre": "Was ist ein Beziehungscheck?",
+      "paragraphes": [
+        "Ein Beziehungscheck ist ein Moment, den man sich nimmt, um Bilanz über die eigene Beziehung zu ziehen und zu sehen, was gut läuft und wo es hakt. Man kann ihn bei einer Paarberatung machen, in einer Sitzung, oder für sich mit einer Liste von Fragen.",
+        "Die Beziehungsanalyse von Quiz Couple macht ihr online, jeder auf seinem Handy. Ihr beantwortet 100 konkrete Fragen zu zwölf Themen des Lebens als Paar (Geld, Alltag, Kinder, Intimität, Streit usw.), ohne die Antworten des anderen zu sehen. Zum Beispiel: „Euer Geld als Paar, idealerweise...“, mit vier Antworten, von „Alles gemeinsam“ bis „Jeder sein Geld, von Fall zu Fall“. Wenn ihr gleich antwortet, ist das eine Übereinstimmung. Liegen eure Antworten weit auseinander, ist das ein Unterschied, und genau über diese Unterschiede lohnt es sich zu reden.",
+        "Wenn ihr beide geantwortet habt, kostet die vollständige Analyse {{prix}} für euch beide. Sie öffnet sich sofort auf der Seite, und ihr bekommt euren Beziehungscheck als PDF per E-Mail, zum Aufheben. Eure Antworten stehen nebeneinander, Frage für Frage, mit Fragen, um über jeden Unterschied zu reden."
+      ]
+    },
+    "utilite": {
+      "titre": "Was bringt es, die eigene Beziehung zu analysieren?",
+      "paragraphes": [
+        "Viele Paare reden über manche Themen erst, wenn es schon kracht: über Geld nach einer großen Ausgabe, über Kinder an dem Tag, an dem die Frage aufkommt, oder über die Hausarbeit mitten in einem Streit... Die eigene Beziehung zu analysieren heißt genau, vorher darüber zu reden, mit klarem Kopf.",
+        "Die Analyse zeigt euch auch, was ihr voneinander nicht wisst. Es gibt die Themen, bei denen ihr euch einig seid, ohne es je ausgesprochen zu haben, und die, bei denen jeder dachte, der andere sehe es genauso. Oft sind es genau diese, die im Streit enden, deshalb lohnt es sich, sie zu entdecken, solange alles ruhig ist."
+      ],
+      "momentsIntro": "Den perfekten Zeitpunkt gibt es nicht, aber manche Momente passen gut:",
+      "moments": [
+        "Bevor ihr zusammenzieht",
+        "Bevor ihr heiratet oder ein Kind bekommt",
+        "Nach ein paar Jahren zusammen",
+        "Wenn ihr merkt, dass sich zwischen euch etwas verändert hat"
+      ],
+      "solo": "Und wenn dein Partner oder deine Partnerin keine Lust hat, kannst du sie allein machen: Du antwortest für dich und sagst bei den wichtigsten Themen, was der oder die andere deiner Meinung nach antworten würde."
     },
     "faq": {
       "titre": "Häufige Fragen",
