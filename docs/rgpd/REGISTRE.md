@@ -166,9 +166,29 @@ du site. Pas de délégué à la protection des données (non obligatoire).
 - **Finalité** : jouer à deux sur deux téléphones.
 - **Données** : les prénoms et les réponses, qui passent par un canal Supabase Realtime sans être enregistrés. Seule la fin d'une partie est comptée, sans rien qui identifie.
 
+### 13. Les célibataires de l'évaluation seul(e)
+
+Depuis le 25 octobre 2026, le départ de l'évaluation seul(e) demande « Où en
+êtes-vous ? » (en couple, c'est compliqué, célibataire). La réponse n'est
+qu'un compteur anonyme par jour (`bilan_compteurs`, `statut_solo`). Un
+célibataire ne crée pas d'évaluation : il répond à une petite enquête.
+
+- **Finalité** : savoir si une évaluation payante pour célibataires vaut la peine d'être faite, et ce qu'elle devrait contenir ; prévenir, une seule fois, ceux qui le demandent le jour où elle sort.
+- **Données** (`bilan_celib`, action `celib` de la fonction `bilan`) :
+  - les sujets cochés parmi huit, une idée en texte libre (300 signes au plus), la langue du site et la date ;
+  - l'adresse e-mail, facultative, une seule ligne par adresse (une nouvelle réponse remplace l'ancienne), et la date de l'accord ;
+  - la date de l'e-mail qui annonce l'évaluation (`notifie_le`), une fois envoyé.
+  - Pas de prénom, pas d'adresse IP enregistrée (la limite de dix réponses par heure et par connexion vit en mémoire de la fonction, avec quatre cents par jour en tout).
+- **Base légale** : le consentement pour l'adresse (case « J'ai 15 ans ou plus et j'accepte de recevoir un e-mail de Quiz Couple le jour où l'évaluation pour célibataires sera prête »), qui ne vaut que pour cet e-mail-là : l'adresse ne va ni dans les abonnés ni dans le parcours e-mail. Le reste de l'enquête est anonyme.
+- **Durée** (`rgpd_menage`) :
+  - l'adresse et la date de l'accord sont effacées 30 jours après l'e-mail de l'annonce ;
+  - la réponse entière, adresse comprise, est effacée un an après la dernière réponse (`maj_le`).
+- **Qui la voit** : l'onglet Évaluation de l'admin montre les comptes et les idées, jamais une adresse (`get_bilan_celib`).
+
 ## Ce qui reste à faire
 
 - **L'analyse d'impact de l'évaluation de couple** est dans `docs/rgpd/AIPD-evaluation.md`, avec son plan d'action. Thomas la valide en la signant.
 - **Les accords de sous-traitance** de Supabase, Stripe et Resend, à télécharger et à garder avec ce registre.
 - **La région du projet Supabase**, à vérifier dans le tableau de bord (Project Settings, General).
+- **L'e-mail des célibataires** : le jour où l'évaluation pour célibataires sort, les adresses de `bilan_celib` (et celles-là seulement) reçoivent un seul e-mail, puis `notifie_le` est posé pour que `rgpd_menage` les efface trente jours après. Il faut un export de ces adresses, réservé à la clé de service, à écrire ce jour-là.
 - **Les envois aux abonnés** : Brevo est nommé dans la politique (24 octobre 2026). Garder son accord de sous-traitance avec ce registre, et vérifier dans Brevo que le suivi des ouvertures et des clics est anonymisé pour les contacts sans consentement.

@@ -111,6 +111,15 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
         body: JSON.stringify({ p_evenement: evenement, p_cle: cleCompteur || '', p_montant: montant || 0 }),
       });
     },
+    // La réponse d'un célibataire (table bilan_celib, fermée à la clé
+    // publique) : une même adresse garde une seule ligne, mise à jour.
+    async enregistrerCelib(ligne) {
+      await appel(racine + '/rest/v1/bilan_celib?on_conflict=email', {
+        method: 'POST',
+        headers: entetes({ Prefer: 'resolution=merge-duplicates,return=minimal' }),
+        body: JSON.stringify(ligne),
+      });
+    },
     // La somme des compteurs du jour (heure de Paris, comme bilan_compteurs)
     // pour des événements donnés : le plafond quotidien des e-mails de lien.
     async compteDuJour(evenements) {
@@ -152,11 +161,13 @@ export function creerStockageMemoire() {
   const lignes = new Map();
   const fichiers = new Map();
   const compteurs = [];
+  const celib = [];
   const copie = (x) => (x ? JSON.parse(JSON.stringify(x)) : null);
   return {
     lignes,
     fichiers,
     compteurs,
+    celib,
     async inserer(ligne) {
       const id = crypto.randomUUID();
       const complete = {
@@ -218,6 +229,11 @@ export function creerStockageMemoire() {
         .sort((x, y) => x.maj_le.localeCompare(y.maj_le)).slice(0, limite || 25).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
+    async enregistrerCelib(ligne) {
+      const i = ligne.email ? celib.findIndex((x) => x.email === ligne.email) : -1;
+      if (i >= 0) celib[i] = { ...celib[i], ...copie(ligne) };
+      else celib.push({ cree_le: ligne.maj_le, ...copie(ligne) });
+    },
     async compteDuJour(evenements) { return compteurs.filter((c) => evenements.includes(c.evenement)).length; },
     async lireFichier(chemin) {
       if (!fichiers.has(chemin)) throw new Error('stockage : fichier absent');

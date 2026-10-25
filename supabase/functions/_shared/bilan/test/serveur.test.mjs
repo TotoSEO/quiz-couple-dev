@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as C from '../coeur.mjs';
-import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, empreinte } from '../serveur.mjs';
+import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, empreinte } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
 import { verifierSignature, signer, encoderFormulaire } from '../stripe.mjs';
 
@@ -1019,4 +1019,66 @@ test('reprise : sans les colonnes en base (migration pas encore passée), l\'adr
   // Une autre erreur de la base, elle, remonte.
   stockage.maj = async () => { throw new Error('base 500 panne'); };
   await assert.rejects(() => appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', rappel: true, reprise: true }), /panne/);
+});
+
+test('« Où en êtes-vous ? » au départ seul(e) : compté par réponse, jamais en double', async () => {
+  const { appel, stockage } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  for (const cle of C.STATUTS_SOLO) {
+    assert.equal((await appel({ action: 'vue', quoi: 'statut_solo', cle, mode: 'solo' })).statut, 200, cle);
+    assert.equal(n('statut_solo', cle), 1, cle);
+  }
+  await appel({ action: 'vue', quoi: 'statut_solo', cle: 'marie', mode: 'solo' });
+  assert.equal(n('statut_solo', 'autre'), 1, 'une réponse inconnue ne devient pas une clé');
+  assert.equal(n('statut_solo_solo'), 0, 'la question n\'existe qu\'en solo : pas de second compte');
+});
+
+test('les célibataires : sujets, idée, adresse avec la case, une ligne par adresse', async () => {
+  const { appel, stockage, courriel } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  // Ce qui est refusé.
+  assert.equal((await appel({ action: 'celib', lang: 'xx', interets: ['point'] })).statut, 400, 'langue');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: [] })).statut, 400, 'aucun sujet');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['pirate', 42] })).statut, 400, 'aucun sujet connu');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'], email: 'pas une adresse', consentement: true })).statut, 400, 'adresse');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'], email: 'lea@exemple.fr' })).statut, 400, 'adresse sans la case');
+  assert.equal(stockage.celib.length, 0, 'rien d\'enregistré pour une réponse refusée');
+  // Sans adresse : les sujets connus seulement, sans doublon, l'idée nettoyée.
+  const r = await appel({ action: 'celib', lang: 'fr', interets: ['point', 'point', 'pirate', 'rupture'], autre: '  une <b>idée</b>\u0000 sur\n\nla confiance  ' + 'x'.repeat(400) });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.deepEqual(r.json, { enregistre: true, email: false });
+  assert.equal(stockage.celib.length, 1);
+  const l0 = stockage.celib[0];
+  assert.deepEqual(l0.interets, ['point', 'rupture']);
+  assert.equal(l0.email, null);
+  assert.equal(l0.consent_at, null);
+  assert.ok(l0.autre.startsWith('une b idée /b sur la confiance x'), l0.autre);
+  assert.equal(l0.autre.length, 300);
+  assert.ok(!/[<>\u0000\n]/.test(l0.autre));
+  assert.equal(n('celib', ''), 1);
+  // Avec l'adresse et la case : gardée en minuscules, avec la date de l'accord.
+  const e = await appel({ action: 'celib', lang: 'en', interets: ['profil'], email: ' Lea@Exemple.FR ', consentement: true });
+  assert.equal(e.statut, 200);
+  assert.equal(e.json.email, true);
+  const l1 = stockage.celib.find((x) => x.email === 'lea@exemple.fr');
+  assert.ok(l1 && l1.consent_at, 'adresse et accord');
+  assert.equal(l1.autre, null);
+  assert.equal(n('celib', 'email'), 1);
+  // La même adresse une seconde fois : une seule ligne, la dernière réponse.
+  await appel({ action: 'celib', lang: 'en', interets: ['envie', 'confiance'], email: 'lea@exemple.fr', consentement: true });
+  assert.equal(stockage.celib.filter((x) => x.email === 'lea@exemple.fr').length, 1);
+  assert.deepEqual(stockage.celib.find((x) => x.email === 'lea@exemple.fr').interets, ['envie', 'confiance']);
+  assert.equal(courriel.envoyes.length, 0, 'rien n\'est envoyé aujourd\'hui');
+});
+
+test('les célibataires : dix réponses par heure et par connexion, un plafond par jour', async () => {
+  const { appel, stockage } = monter();
+  for (let i = 0; i < CELIB_PAR_HEURE; i++) {
+    assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '9.9.9.9')).statut, 200, 'réponse ' + (i + 1));
+  }
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '9.9.9.9')).statut, 429);
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '8.8.8.8')).statut, 200, 'une autre connexion');
+  // Le plafond du jour, compté en base, pour toutes les connexions.
+  while (stockage.compteurs.filter((x) => x.evenement === 'celib').length < CELIB_PAR_JOUR) stockage.compteurs.push({ evenement: 'celib', cle: '', montant: 0 });
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '7.7.7.7')).statut, 429);
 });

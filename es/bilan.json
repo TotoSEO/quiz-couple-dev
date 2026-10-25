@@ -52,7 +52,13 @@
       "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
-      "autreDefaut": "tu pareja"
+      "autreDefaut": "tu pareja",
+      "statutTitre": "¿Cuál es tu situación?",
+      "statuts": {
+        "couple": "En pareja",
+        "complique": "Es complicado",
+        "celib": "Soltero/a"
+      }
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
@@ -608,6 +614,34 @@
     "rappels": {
       "arret": "Hecho: no recibirás más mensajes sobre esta evaluación.",
       "continuer": "Continuar"
+    },
+    "celib": {
+      "titre": "Estamos preparando una evaluación para solteros",
+      "texte": "Esta está pensada para parejas: compara lo que viven dos personas juntas. Para los solteros estamos preparando una evaluación completa, ¡y nos gustaría construirla contigo!",
+      "question": "¿Qué te interesaría más? Marca todo lo que te llame la atención.",
+      "sujets": {
+        "point": "Saber en qué punto estoy en mi vida amorosa",
+        "schemas": "Entender qué se repite en mis relaciones",
+        "profil": "Saber qué tipo de persona me conviene",
+        "blocages": "Entender qué me frena para conocer a alguien",
+        "rencontres": "Mejorar a la hora de conocer gente",
+        "rupture": "Pasar página después de una ruptura",
+        "envie": "Saber qué quiero de verdad: algo serio o no",
+        "confiance": "Recuperar la confianza en mí en el amor"
+      },
+      "autre": "¿Otra idea? (opcional)",
+      "email": "Tu correo electrónico, para enterarte el día que salga (opcional)",
+      "consentement": "Tengo 15 años o más y acepto recibir un e-mail de Quiz Couple el día que la evaluación para solteros esté lista.",
+      "emailAide": "Tu dirección solo sirve para eso: un único e-mail, ese día. Se borra un mes después, y como muy tarde en un año.",
+      "confidentialite": "Privacidad",
+      "envoyer": "Enviar mis respuestas",
+      "choixManque": "Marca al menos un tema.",
+      "consentManque": "Marca la casilla para que podamos escribirte, o deja la dirección vacía.",
+      "merciTitre": "¡Gracias, apuntado!",
+      "merci": "Tus respuestas nos ayudarán a elegir qué incluirá la evaluación para solteros.",
+      "merciEmail": "Te escribiremos a {{email}} el día que salga. Mientras tanto, tus respuestas nos ayudarán a elegir qué incluirá.",
+      "testsTitre": "Mientras tanto, nuestros tests para solteros son gratis:",
+      "fermer": "Cerrar"
     }
   },
   "lp": {

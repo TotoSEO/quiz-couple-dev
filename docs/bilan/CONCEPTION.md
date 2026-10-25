@@ -1347,3 +1347,54 @@ Thomas a validé les quatre propositions (« Ok pour tout ») :
   situation de l'évaluation (une fois par évaluation), « Situation
   commencée » à la première clé reçue par la base ; les deux viennent
   désormais après la première réponse dans l'entonnoir.
+
+## 25 octobre 2026 : les célibataires de l'évaluation seul(e)
+
+Thomas, devant les 135 évaluations seul(e) sans une vente : « les gens qui
+font le test seul, c'est qui ces gens ? Car nous on est parti du principe que
+c'était des gens en couple dont le partenaire n'avait pas envie de faire le
+test ou n'est pas là ». Personne ne le savait : le départ ne demandait rien.
+Sa décision, le même jour : « On mesure la part de célibataires pour voir si
+ça vaut le coup de créer un test payant pour les célibataires », leur dire
+qu'il n'y a pas encore d'évaluation pour eux, leur demander ce qui les
+intéresserait, et garder l'adresse de ceux qui veulent être prévenus.
+
+- **La question** : au départ seul(e), « Où en êtes-vous ? » (En couple,
+  C'est compliqué, Célibataire ; `C.STATUTS_SOLO`), avant les prénoms. Le
+  formulaire n'apparaît qu'avec « En couple » ou « C'est compliqué » ; à
+  deux, rien ne change. Chaque réponse est comptée une fois par visite
+  (`compterVue('statut_solo', { cle })`, action `vue`, sans second compte
+  `_solo`, la question n'existant qu'en solo), et l'admin en montre la
+  répartition.
+- **Un célibataire ne crée pas d'évaluation.** La page lui dit que celle-ci
+  compare ce que vivent deux personnes, qu'une évaluation pour célibataires
+  est en préparation et qu'on aimerait la construire avec lui, puis lui
+  demande ce qui l'intéresserait le plus parmi huit sujets
+  (`C.SUJETS_CELIB` : savoir où il en est, ce qui se répète dans ses
+  histoires, le genre de personne qui lui correspond, ce qui le bloque pour
+  rencontrer quelqu'un, mieux faire des rencontres, tourner la page après
+  une rupture, savoir ce qu'il veut, reprendre confiance), une autre idée en
+  texte libre, et l'adresse où le prévenir, facultative, avec sa case
+  (« J'ai 15 ans ou plus et j'accepte de recevoir un e-mail de Quiz Couple le
+  jour où l'évaluation pour célibataires sera prête »). Le merci propose les
+  quatre tests célibataires du site, gratuits.
+- **Le stockage** : action `celib` de la fonction `bilan`, table
+  `bilan_celib` (migration `20261025140000_bilan_celib.sql`, appliquée par
+  `bilan-base.yml`), fermée à la clé publique, une ligne par réponse et une
+  seule par adresse (la dernière réponse remplace la précédente). Dix
+  réponses par heure et par connexion, quatre cents par jour en tout. Rien
+  n'est envoyé aujourd'hui.
+- **L'adresse ne sert qu'à cet e-mail-là** : elle ne va ni dans `abonnes` ni
+  dans le parcours de Brevo, dont la case parle d'autre chose. Le jour où
+  l'évaluation pour célibataires sort, on écrit l'export (clé de service
+  seulement) et on pose `notifie_le` après l'envoi ; `rgpd_menage()` efface
+  l'adresse trente jours après, et toute la réponse un an après la dernière
+  (politique de confidentialité, `privacy.bilanItems`, et registre).
+- **Ce qu'on lira** : l'onglet Évaluation, panneau « Seul(e) : où en
+  sont-ils ? » (`get_bilan_celib` par admin-stats) : la part de chaque
+  réponse, le classement des sujets, les autres idées, le nombre d'adresses
+  en liste d'attente. Ce qui décide d'une évaluation pour célibataires : la
+  part de célibataires parmi ceux qui choisissent seul(e), et combien
+  laissent leur adresse. Elle devra être autre chose que les tests
+  célibataires gratuits du site, sinon elle n'a pas d'intérêt ; un sujet
+  que personne ne coche peut aussi dire quel test gratuit retirer.

@@ -52,7 +52,13 @@
       "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn dein Bericht bereit ist, einmal, falls {{autre}} sich mit dem Antworten Zeit lässt, und ein einziges Mal, falls er am nächsten Tag noch wartet.",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Link zum Bericht als PDF.",
-      "autreDefaut": "dein Partner oder deine Partnerin"
+      "autreDefaut": "dein Partner oder deine Partnerin",
+      "statutTitre": "Wie ist deine Situation?",
+      "statuts": {
+        "couple": "In einer Beziehung",
+        "complique": "Es ist kompliziert",
+        "celib": "Single"
+      }
     },
     "invitation": {
       "titre": "Lade {{autre}} ein",
@@ -608,6 +614,34 @@
     "rappels": {
       "arret": "Erledigt: Du bekommst keine Nachrichten mehr zu dieser Analyse.",
       "continuer": "Weiter"
+    },
+    "celib": {
+      "titre": "Eine Analyse für Singles ist in Arbeit",
+      "texte": "Diese hier ist für Paare gedacht: Sie vergleicht, was zwei Menschen zusammen erleben. Für Singles bereiten wir eine vollständige Analyse vor, und wir würden sie gern mit dir zusammen aufbauen!",
+      "question": "Was würde dich am meisten interessieren? Kreuz alles an, was dich anspricht.",
+      "sujets": {
+        "point": "Wissen, wo ich in meinem Liebesleben stehe",
+        "schemas": "Verstehen, was sich in meinen Beziehungen wiederholt",
+        "profil": "Wissen, welcher Mensch zu mir passt",
+        "blocages": "Verstehen, was mich davon abhält, jemanden kennenzulernen",
+        "rencontres": "Besser darin werden, Leute kennenzulernen",
+        "rupture": "Nach einer Trennung einen Schlussstrich ziehen",
+        "envie": "Wissen, was ich wirklich will: etwas Ernstes oder nicht",
+        "confiance": "In der Liebe wieder Selbstvertrauen finden"
+      },
+      "autre": "Eine andere Idee? (freiwillig)",
+      "email": "Deine E-Mail-Adresse, damit wir dir Bescheid geben, wenn sie erscheint (freiwillig)",
+      "consentement": "Ich bin mindestens 15 Jahre alt und möchte eine E-Mail von Quiz Couple bekommen, sobald die Analyse für Singles fertig ist.",
+      "emailAide": "Deine Adresse dient nur dazu: eine einzige E-Mail, an diesem Tag. Einen Monat danach wird sie gelöscht, spätestens nach einem Jahr.",
+      "confidentialite": "Datenschutz",
+      "envoyer": "Antworten senden",
+      "choixManque": "Kreuz mindestens ein Thema an.",
+      "consentManque": "Kreuz das Kästchen an, damit wir dir schreiben dürfen, oder lass die Adresse leer.",
+      "merciTitre": "Danke, ist notiert!",
+      "merci": "Deine Antworten helfen uns zu entscheiden, was in die Analyse für Singles kommt.",
+      "merciEmail": "Wir schreiben dir an {{email}}, sobald sie erscheint. Bis dahin helfen uns deine Antworten zu entscheiden, was hineinkommt.",
+      "testsTitre": "Bis dahin sind unsere Tests für Singles kostenlos:",
+      "fermer": "Schließen"
     }
   },
   "lp": {

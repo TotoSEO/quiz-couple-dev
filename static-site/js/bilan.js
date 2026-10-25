@@ -559,37 +559,49 @@
   // ensuite comme les premières questions (questionSituation), et l'adresse
   // e-mail à la fin de ses propres questions (ecranEmail).
   function creation() {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false, celib: null };
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
+    // Seul(e), « Où en êtes-vous ? » d'abord (25 octobre 2026) : le formulaire
+    // n'apparaît qu'une fois la réponse donnée, et un célibataire voit à la
+    // place ce qu'on lui prépare (panneauCelib).
+    var statut = solo ? brouillon.statut : 'couple';
     var aideAutre = tr('creation.autreAide', '');
     var corps = '<h2 class="bilan-titre">' + x('creation.modeTitre') + '</h2>' + champMode(brouillon.mode) +
-      '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
-      '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
-      '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
-      '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
-      '<div class="bilan-champ"><label for="bilan-autre">' + x('creation.autre') + '</label>' +
-      '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
-      (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
-      '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
-      '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
-      '<hr class="bilan-sep">' +
-      (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
-      '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
-      '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
-      '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
-      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-      '<div class="bilan-actions bilan-actions--ecart">' +
-      bouton('retour', x('creation.retour'), 'btn-outline') +
-      bouton('valider', x('creation.creer')) + '</div>' +
-      blocRetrouver();
+      (solo ? '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.statutTitre') + '</h3>' + champStatut(statut) : '');
+    if (statut === 'celib') {
+      corps += panneauCelib();
+    } else if (statut) {
+      corps += '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
+        '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
+        '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
+        '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
+        '<div class="bilan-champ"><label for="bilan-autre">' + x('creation.autre') + '</label>' +
+        '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
+        (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
+        '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
+        '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
+        '<hr class="bilan-sep">' +
+        (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
+        '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
+        '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
+        '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
+        '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
+        '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+        '<div class="bilan-actions bilan-actions--ecart">' +
+        bouton('retour', x('creation.retour'), 'btn-outline') +
+        bouton('valider', x('creation.creer')) + '</div>';
+    } else {
+      corps += '<div class="bilan-actions bilan-actions--ecart">' + bouton('retour', x('creation.retour'), 'btn-outline') + '</div>';
+    }
+    corps += blocRetrouver();
     afficher(carte(corps, 'bilan-creation' + (solo ? ' bilan-creation--solo' : '')));
     compterVue('depart', { mode: brouillon.mode });
     var champ = racine.querySelector('input[type="text"]');
     if (champ && !brouillon.moi && !modeDemande) champ.focus({ preventScroll: true });
     // Les phrases sous les cases nomment le partenaire dès qu'on l'écrit.
-    document.getElementById('bilan-autre').addEventListener('input', function () {
+    var champAutre = document.getElementById('bilan-autre');
+    if (champAutre) champAutre.addEventListener('input', function () {
       var nom = this.value.trim() || tr('creation.autreDefaut', '');
       racine.querySelectorAll('.bilan-nom-autre').forEach(function (n) { n.textContent = nom; });
     });
@@ -600,12 +612,25 @@
       p.hidden = false;
       if (cause) compterVue('depart_erreur', { mode: brouillon.mode, cle: cause });
     }
+    // Ce qui est à l'écran passe dans le brouillon : rien n'est perdu quand
+    // on change de façon de faire ou de réponse à « Où en êtes-vous ? ».
     function lire() {
-      brouillon.moi = (document.getElementById('bilan-moi').value || '').trim();
-      brouillon.autre = (document.getElementById('bilan-autre').value || '').trim();
-      brouillon.genreMoi = lireGenre('g-moi');
-      brouillon.genreAutre = lireGenre('g-autre');
-      brouillon.consent = document.getElementById('bilan-consent').checked;
+      var valeur = function (id) { var e = document.getElementById(id); return e ? (e.value || '').trim() : null; };
+      if (document.getElementById('bilan-moi')) {
+        brouillon.moi = valeur('bilan-moi');
+        brouillon.autre = valeur('bilan-autre');
+        brouillon.genreMoi = lireGenre('g-moi');
+        brouillon.genreAutre = lireGenre('g-autre');
+        brouillon.consent = document.getElementById('bilan-consent').checked;
+      }
+      if (document.getElementById('bilan-celib-email')) {
+        brouillon.celib = {
+          interets: [].map.call(racine.querySelectorAll('input[name="celib-sujet"]:checked'), function (c) { return c.value; }),
+          autre: valeur('bilan-celib-autre'),
+          email: valeur('bilan-celib-email'),
+          consent: document.getElementById('bilan-celib-consent').checked,
+        };
+      }
     }
     ACTIONS = {
       // Changer de façon de faire redessine l'écran avec ses textes, sans
@@ -614,6 +639,13 @@
         lire();
         brouillon.mode = input.value === 'solo' ? 'solo' : 'duo';
         modeDemande = brouillon.mode;
+        creation();
+      },
+      // « Où en êtes-vous ? », comptée une fois par visite et par réponse.
+      statut: function (input) {
+        lire();
+        brouillon.statut = STATUTS_SOLO.indexOf(input.value) >= 0 ? input.value : null;
+        if (brouillon.statut) compterVue('statut_solo', { cle: brouillon.statut });
         creation();
       },
       retour: function () {
@@ -645,7 +677,76 @@
           invitation(entree, r.json.etat);
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
+      // Un célibataire : au moins un sujet ; l'adresse est facultative, mais
+      // si elle est là, la case qui dit à quoi elle sert doit être cochée.
+      envoyerCelib: function (b) {
+        lire();
+        var c = brouillon.celib;
+        if (!c.interets.length) return erreur('celib.choixManque');
+        if (c.email && !emailValide(c.email)) return erreur('creation.emailFaux');
+        if (c.email && !c.consent) return erreur('celib.consentManque');
+        b.disabled = true;
+        appel('celib', {
+          lang: LANG, interets: c.interets, autre: c.autre || undefined,
+          email: c.email || undefined, consentement: c.email ? true : undefined,
+        }).then(function (r) {
+          b.disabled = false;
+          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
+          merciCelib(c.email);
+        }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
+      },
     };
+  }
+
+  // « Où en êtes-vous ? » au départ seul(e) : en couple, c'est compliqué, ou
+  // célibataire (C.STATUTS_SOLO).
+  var STATUTS_SOLO = ['couple', 'complique', 'celib'];
+  function champStatut(valeur) {
+    return '<div class="bilan-genres bilan-statuts" role="radiogroup" aria-label="' + x('creation.statutTitre') + '">' + STATUTS_SOLO.map(function (s) {
+      return '<label class="bilan-pastille"><input type="radio" name="statut" value="' + s + '"' + (valeur === s ? ' checked' : '') + ' data-change="statut"> <span>' + x('creation.statuts.' + s) + '</span></label>';
+    }).join('') + '</div>';
+  }
+
+  // Le célibataire : l'évaluation compare ce que vit un couple. On lui dit
+  // qu'une évaluation pour célibataires se prépare, on lui demande ce qui
+  // l'intéresserait (C.SUJETS_CELIB), et, s'il le veut, où le prévenir.
+  function panneauCelib() {
+    var c = brouillon.celib || { interets: [], autre: '', email: '', consent: false };
+    var sujets = (C && C.SUJETS_CELIB) || [];
+    return '<div class="bilan-celib">' +
+      '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('celib.titre') + '</h3>' +
+      '<p class="bilan-texte">' + x('celib.texte') + '</p>' +
+      '<fieldset class="bilan-celib-sujets"><legend class="bilan-label">' + x('celib.question') + '</legend>' +
+      sujets.map(function (s) {
+        return '<label class="bilan-case"><input type="checkbox" name="celib-sujet" value="' + s + '"' + (c.interets.indexOf(s) >= 0 ? ' checked' : '') + '> <span>' + x('celib.sujets.' + s) + '</span></label>';
+      }).join('') + '</fieldset>' +
+      '<div class="bilan-champ"><label for="bilan-celib-autre">' + x('celib.autre') + '</label>' +
+      '<input id="bilan-celib-autre" class="bilan-input" type="text" maxlength="300" autocomplete="off" value="' + esc(c.autre || '') + '"></div>' +
+      '<hr class="bilan-sep">' +
+      '<div class="bilan-champ"><label for="bilan-celib-email">' + x('celib.email') + '</label>' +
+      '<input id="bilan-celib-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" value="' + esc(c.email || '') + '"></div>' +
+      '<label class="bilan-case"><input type="checkbox" id="bilan-celib-consent"' + (c.consent ? ' checked' : '') + '> <span>' + x('celib.consentement') + '</span></label>' +
+      '<p class="bilan-note">' + x('celib.emailAide') + (CFG.confidentialite ? ' <a href="' + esc(CFG.confidentialite) + '">' + x('celib.confidentialite') + '</a>' : '') + '</p>' +
+      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+      '<div class="bilan-actions bilan-actions--ecart">' +
+      bouton('retour', x('creation.retour'), 'btn-outline') +
+      bouton('envoyerCelib', x('celib.envoyer')) + '</div>' +
+      '</div>';
+  }
+
+  function merciCelib(email) {
+    brouillon = null;
+    var liens = (CFG.celibTests || []).map(function (t) {
+      return '<li><a href="' + esc(t.url) + '">' + esc(ins(t.titre)) + '</a></li>';
+    }).join('');
+    var rose = mascotte('rose', 'joie', 76);
+    afficher(carte(
+      (rose ? '<div class="bilan-duo" aria-hidden="true">' + rose + '</div>' : '') +
+      '<h2 class="bilan-titre">' + x('celib.merciTitre') + '</h2>' +
+      '<p class="bilan-texte">' + (email ? x('celib.merciEmail', { email: email }) : x('celib.merci')) + '</p>' +
+      (liens ? '<h3 class="bilan-sous-titre">' + x('celib.testsTitre') + '</h3><ul class="bilan-celib-tests">' + liens + '</ul>' : '') +
+      '<div class="bilan-actions">' + bouton('fermer', x('celib.fermer'), 'btn-outline') + '</div>', 'bilan-celib-merci'));
+    ACTIONS = { fermer: function () { quitterFocus(); } };
   }
 
   // ── Invitation ──────────────────────────────────────────────────────────

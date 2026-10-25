@@ -1,11 +1,14 @@
 // Les chiffres de l'onglet Évaluation de l'admin et ceux du parcours e-mail,
 // lus avec la clé de service plutôt qu'avec le mot de passe de l'admin
 // (25 octobre 2026, Thomas : « est-ce que tu arrives à accéder aux données de
-// l'onglet évaluation pour analyser ? ») : get_bilan_tableau et
-// get_emails_tableau, les mêmes lectures que l'admin, écrites au journal.
+// l'onglet évaluation pour analyser ? ») : get_bilan_tableau,
+// get_bilan_celib (« Où en êtes-vous ? » au départ seul(e) et l'enquête des
+// célibataires, 25 octobre 2026) et get_emails_tableau, les mêmes lectures
+// que l'admin, écrites au journal.
 // Lecture seule. Rien de personnel : l'adresse des évaluations payées en
-// attente du partenaire (attente[].email) est retirée, et get_emails_tableau
-// ne rend que des comptes. Lancé à la main par bilan-chiffres.yml :
+// attente du partenaire (attente[].email) est retirée, une adresse tapée dans
+// une idée de célibataire aussi, et get_emails_tableau ne rend que des
+// comptes. Lancé à la main par bilan-chiffres.yml :
 //
 //   node bilan/chiffres.mjs [jours]      (30 par défaut, ou JOURS)
 //
@@ -16,6 +19,13 @@ import { connexion } from '../emails/base.mjs';
 export function sansAdresse(tableau) {
   for (const a of (tableau && tableau.attente) || []) delete a.email;
   return tableau;
+}
+
+// Les idées des célibataires sont du texte libre : une adresse e-mail que
+// quelqu'un y aurait tapée ne sort pas au journal.
+export function ideesSansAdresse(celib) {
+  for (const a of (celib && celib.autres) || []) a.texte = String(a.texte || '').replace(/[^\s@]+@[^\s@]+/g, '[adresse]');
+  return celib;
 }
 
 // Une journée par ligne, sans ses compteurs à zéro : trente jours de
@@ -37,6 +47,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const l of serieCompacte(serie)) console.log('  ' + l);
   console.log('\nLe reste du tableau :');
   console.log(JSON.stringify(reste, null, 1));
+  try {
+    const celib = ideesSansAdresse(await base.rpc('get_bilan_celib', { p_jours: jours }));
+    console.log(`\nSeul(e) : « Où en êtes-vous ? » et l'enquête des célibataires, ${jours} derniers jours (get_bilan_celib) :`);
+    console.log(JSON.stringify(celib, null, 1));
+  } catch (e) {
+    console.log(`\nSeul(e), les célibataires : ${e.message}`);
+  }
   try {
     const emails = await base.rpc('get_emails_tableau', { p_jours: jours });
     console.log(`\nParcours e-mail, ${jours} derniers jours (get_emails_tableau) :`);

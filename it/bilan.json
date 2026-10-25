@@ -52,7 +52,13 @@
       "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto, una volta se {{autre}} tarda a finire, e una sola volta se il giorno dopo è ancora in attesa.",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
       "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il link al report in PDF.",
-      "autreDefaut": "il tuo partner"
+      "autreDefaut": "il tuo partner",
+      "statutTitre": "Qual è la tua situazione?",
+      "statuts": {
+        "couple": "In coppia",
+        "complique": "È complicato",
+        "celib": "Single"
+      }
     },
     "invitation": {
       "titre": "Invita {{autre}}",
@@ -608,6 +614,34 @@
     "rappels": {
       "arret": "Fatto: non riceverai più messaggi su questa valutazione.",
       "continuer": "Continua"
+    },
+    "celib": {
+      "titre": "Stiamo preparando una valutazione per single",
+      "texte": "Questa è pensata per le coppie: confronta quello che vivono due persone insieme. Per i single stiamo preparando una valutazione completa, e ci piacerebbe costruirla insieme a te!",
+      "question": "Cosa ti interesserebbe di più? Spunta tutto quello che fa per te.",
+      "sujets": {
+        "point": "Capire a che punto sono nella mia vita sentimentale",
+        "schemas": "Capire cosa si ripete nelle mie storie",
+        "profil": "Sapere che tipo di persona fa per me",
+        "blocages": "Capire cosa mi blocca nel conoscere qualcuno",
+        "rencontres": "Migliorare nel conoscere nuove persone",
+        "rupture": "Voltare pagina dopo una rottura",
+        "envie": "Capire cosa voglio: una storia seria o no",
+        "confiance": "Ritrovare fiducia in me stesso/a in amore"
+      },
+      "autre": "Un'altra idea? (facoltativo)",
+      "email": "Il tuo indirizzo e-mail, per essere avvisato/a il giorno in cui esce (facoltativo)",
+      "consentement": "Ho almeno 15 anni e accetto di ricevere un'e-mail da Quiz Couple il giorno in cui la valutazione per single sarà pronta.",
+      "emailAide": "Il tuo indirizzo serve solo a questo: un'unica e-mail, quel giorno. Viene cancellato un mese dopo, e al più tardi entro un anno.",
+      "confidentialite": "Privacy",
+      "envoyer": "Invia le mie risposte",
+      "choixManque": "Spunta almeno un tema.",
+      "consentManque": "Spunta la casella perché possiamo scriverti, oppure lascia vuoto l'indirizzo.",
+      "merciTitre": "Grazie, preso nota!",
+      "merci": "Le tue risposte ci aiuteranno a scegliere cosa conterrà la valutazione per single.",
+      "merciEmail": "Ti scriveremo a {{email}} il giorno in cui esce. Nel frattempo, le tue risposte ci aiuteranno a scegliere cosa conterrà.",
+      "testsTitre": "Nel frattempo, i nostri test per single sono gratuiti:",
+      "fermer": "Chiudi"
     }
   },
   "lp": {

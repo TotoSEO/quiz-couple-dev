@@ -619,3 +619,18 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 .bilan-scene .bilan-radar-cle--fort > span { background: #2a8e62; }
 .bilan-scene .bilan-radar-cle--moyen > span { background: #dca11c; }
 .bilan-scene .bilan-radar-cle--faible > span { background: #c43d3f; }
+
+/* Le départ seul(e) : « Où en êtes-vous ? » et, pour un célibataire, le
+   sondage de l'évaluation pour célibataires (25 octobre 2026). Les choix
+   reprennent les pastilles et les cases du reste de l'application. */
+.bilan-celib-sujets { border: 0; padding: 0; margin: .25rem 0 .5rem; min-width: 0; }
+.bilan-celib-sujets legend { padding: 0; margin-bottom: .25rem; }
+.bilan-celib-sujets .bilan-case { margin: .55rem 0; }
+.bilan-celib .bilan-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.bilan-celib-tests { list-style: none; padding: 0; margin: .5rem 0 1.25rem; display: grid; gap: .5rem; }
+.bilan-celib-tests a {
+  display: block; padding: .75rem .95rem; border: 1px solid hsl(var(--border)); border-radius: .85rem;
+  font-weight: 600; text-decoration: none; color: hsl(var(--primary-texte)); background: hsl(var(--card));
+  transition: border-color .15s ease;
+}
+.bilan-celib-tests a:hover, .bilan-celib-tests a:focus-visible { border-color: hsl(var(--primary)); }

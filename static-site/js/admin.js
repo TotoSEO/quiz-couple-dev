@@ -676,7 +676,8 @@
       sources_google_clics: statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
       distance_par_test: chargeSalonParPage(),
       instagram_clics: statsRpc('get_instagram_clics'),
-      bilan: statsRpc('get_bilan_tableau', { p_jours: n })
+      bilan: statsRpc('get_bilan_tableau', { p_jours: n }),
+      bilan_celibataires: statsRpc('get_bilan_celib', { p_jours: n })
     };
     var cles = Object.keys(lots);
     Promise.all(cles.map(function (k) {
@@ -688,7 +689,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres), depuis le 25 octobre 2026, sans aucune adresse. Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -964,6 +965,55 @@
     renderBilanLegende(_bilanCouches);
     drawChart(document.getElementById('admin-bilan-chart'), _bilanCouches, {});
   }
+  // « Où en êtes-vous ? » au départ seul(e), et ce que les célibataires
+  // voudraient dans une évaluation pour eux (25 octobre 2026, migration
+  // 20261025140000, get_bilan_celib par admin-stats). Sa propre lecture : si
+  // la migration manque, le reste de l'onglet s'affiche quand même.
+  var SUJETS_CELIB_ADMIN = {
+    point: 'Savoir où j\'en suis dans ma vie amoureuse',
+    schemas: 'Comprendre ce qui se répète dans mes histoires',
+    profil: 'Savoir quel genre de personne me correspond',
+    blocages: 'Comprendre ce qui me bloque pour rencontrer quelqu\'un',
+    rencontres: 'Mieux m\'y prendre pour faire des rencontres',
+    rupture: 'Tourner la page après une rupture',
+    envie: 'Savoir ce que je veux vraiment : une histoire sérieuse ou pas',
+    confiance: 'Reprendre confiance en moi en amour'
+  };
+  function loadBilanCelib() {
+    var el = document.getElementById('admin-bilan-celib');
+    if (!el) return;
+    el.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    statsRpc('get_bilan_celib', { p_jours: bilanJours }).then(function (d) {
+      if (!d || typeof d !== 'object' || !d.statuts) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      var st = d.statuts || {};
+      var couple = Number(st.couple) || 0, complique = Number(st.complique) || 0, celib = Number(st.celib) || 0;
+      var tous = couple + complique + celib;
+      var tuiles = [[couple, 'En couple'], [complique, 'C\'est compliqué'], [celib, 'Célibataire']];
+      var html = tous
+        ? '<div class="bil-faits">' + tuiles.map(function (t) {
+          return '<div class="bil-fait"><div class="bil-fait-n">' + nombreBilan(t[0]) + ' <small>' + partBilan(t[0], tous) + '</small></div><div class="bil-fait-l">' + esc(t[1]) + '</div></div>';
+        }).join('') + '</div>'
+        : '<p class="bil-vide">Personne n\'a encore répondu à «\u00a0Où en êtes-vous\u00a0?\u00a0» sur la période.</p>';
+      var reponses = Number(d.reponses) || 0;
+      html += '<p class="bil-fait-l">Ce qui intéresserait les célibataires : ' + nombreBilan(reponses) + ' réponse' + (reponses > 1 ? 's' : '') +
+        ' sur la période, ' + nombreBilan(d.avec_email) + ' avec une adresse · ' + nombreBilan(d.liste_attente) + ' adresse' + (Number(d.liste_attente) > 1 ? 's' : '') + ' en liste d\'attente, toutes périodes</p>';
+      var interets = d.interets || [];
+      html += reponses && interets.length
+        ? interets.map(function (i) {
+          return ligneEtapeBilan(SUJETS_CELIB_ADMIN[i.id] || i.id, '', Number(i.n) || 0, reponses, reponses, 'var(--adm-s-lances)');
+        }).join('')
+        : '<p class="bil-vide">Aucune réponse de célibataire sur la période.</p>';
+      var autres = d.autres || [];
+      if (autres.length) {
+        html += '<p class="bil-fait-l">Leurs autres idées</p><div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Idée</th><th>Langue</th><th>Le</th></tr></thead><tbody>' +
+          autres.map(function (a) { return '<tr><td class="bil-gauche">' + esc(a.texte || '') + '</td><td>' + esc(a.lang || '') + '</td><td>' + esc(dateBilan(a.le)) + '</td></tr>'; }).join('') +
+          '</tbody></table></div>';
+      }
+      el.innerHTML = html;
+    }).catch(function (e) {
+      el.innerHTML = '<p class="text-center text-muted-foreground py-6">Ces chiffres ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261025140000 est-elle appliquée, et admin-stats déployée avec get_bilan_celib ?</p>';
+    });
+  }
   function loadBilan() {
     var ids = ['admin-bilan-entonnoir', 'admin-bilan-domaines', 'admin-bilan-sources', 'admin-bilan-delais', 'admin-bilan-attente', 'admin-bilan-list'];
     ids.forEach(function (id) { var e = document.getElementById(id); if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
@@ -973,6 +1023,7 @@
       b.classList.toggle('active', Number(b.dataset.bilanJours) === bilanJours);
     });
     drawChart(document.getElementById('admin-bilan-chart'), [], { loading: true });
+    loadBilanCelib();
     statsRpc('get_bilan_tableau', { p_jours: bilanJours }).then(function (d) {
       if (!d || typeof d !== 'object' || !Array.isArray(d.serie)) {
         throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');

@@ -75,6 +75,14 @@ export const MODES = ['duo', 'solo'];
 // La valeur « je ne sais pas » d'une perception, en mode solo.
 export const INCONNU = -1;
 
+// Où en est la personne qui choisit l'évaluation seul(e) (25 octobre 2026,
+// Thomas : « les gens qui font le test seul, c'est qui ces gens ? ») : la
+// réponse est comptée, et un célibataire ne crée pas d'évaluation (elle
+// compare ce que vit un couple) mais dit ce qui l'intéresserait dans une
+// évaluation pour célibataires, parmi SUJETS_CELIB, avant qu'on la fasse.
+export const STATUTS_SOLO = ['couple', 'complique', 'celib'];
+export const SUJETS_CELIB = ['point', 'schemas', 'profil', 'blocages', 'rencontres', 'rupture', 'envie', 'confiance'];
+
 // La situation du couple. Elle change les questions posées, jamais les
 // domaines : on garde les souhaits, on adapte les faits. Depuis le
 // 25 octobre 2026, chaque clé est demandée juste avant le premier domaine qui
