@@ -157,7 +157,7 @@
         "decisifs0": "Aucun écart sur les sujets décisifs, ceux qui pèsent le plus dans un couple.",
         "decisifsUn": "Dont un écart sur un sujet décisif, de ceux qui pèsent le plus dans un couple.",
         "decisifsN": "Dont {{n}} écarts sur des sujets décisifs, ceux qui pèsent le plus dans un couple.",
-        "quoi": "Le rapport vous dit lesquels et comment en parler. Peu de couples prennent un jour le temps de faire ce point : vous venez de le faire, il ne reste qu'à lire le résultat."
+        "quoi": "Peu de couples prennent un jour le temps de faire ce point : vous venez de le faire, il ne reste qu'à lire le résultat."
       },
       "contenu": [
         "Votre alignement et le climat de votre couple, en un coup d'œil",
@@ -170,7 +170,7 @@
         "Le rapport complet en PDF, son lien de téléchargement par e-mail dès qu'il est prêt, et en ligne pendant six mois"
       ],
       "prix": "{{prix}} pour vous deux",
-      "prixAide": "Un seul paiement, et {{autre}} n'aura rien à payer. Pas d'abonnement.",
+      "prixAide": "Un seul paiement débloque le rapport pour vous deux, sans abonnement.",
       "emailLabel": "Où vous envoyer le rapport ?",
       "emailPlaceholder": "votre@email.com",
       "emailAide": "Le lien du PDF partira à cette adresse dès que vous aurez fini tous les deux.",
@@ -178,7 +178,7 @@
       "renonciation": "Je demande que le rapport me soit fourni dès qu'il est prêt, sans attendre la fin du délai de rétractation de 14 jours, et je reconnais perdre mon droit de rétractation dès qu'il est fourni.",
       "renonciationManque": "Cochez la case pour continuer.",
       "bouton": "Débloquer notre rapport · {{prix}}",
-      "securite": "Paiement sécurisé par Stripe (carte, Apple Pay, Google Pay). Nous ne voyons jamais votre carte.",
+      "securite": "Paiement sécurisé par Stripe. Nous ne voyons jamais votre carte.",
       "cgv": "Conditions de vente",
       "tva": "TVA non applicable, art. 293 B du CGI.",
       "ferme": "Le paiement en ligne ouvre très bientôt. Votre évaluation est gardée : revenez sur cette page dans quelques jours.",
@@ -186,7 +186,26 @@
       "pretTitre": "{{moi}} et {{autre}}, votre rapport est prêt",
       "sommaire": "Ce qu'il y a dans votre rapport",
       "emailAutre": "Le recevoir à une autre adresse",
-      "plie": "Débloquer le rapport dès maintenant"
+      "plie": "Débloquer le rapport dès maintenant",
+      "accroche": "Vous n'avez pas encore vu ce que {{autre}} a répondu.",
+      "points": {
+        "reponses": "Toutes les réponses de {{autre}} à côté des vôtres, question par question",
+        "ecartsN": "Pour vos {{n}} écarts : pourquoi ça compte, et comment en parler sans vous disputer",
+        "ecartsUn": "Pour votre écart : pourquoi ça compte, et comment en parler sans vous disputer",
+        "ecarts0": "Pour chaque différence, même petite : pourquoi ça compte, et comment en parler",
+        "accords": "Ce qui vous rassemble, domaine par domaine",
+        "conversationsN": "Vos {{n}} prochaines conversations, dans l'ordre où les avoir",
+        "conversationsUn": "Votre prochaine conversation, et comment l'aborder",
+        "climat": "Le climat de votre couple, et qui fait quoi à la maison, vu par chacun",
+        "pdf": "Le rapport complet en PDF, à garder, et en ligne pendant six mois"
+      },
+      "chacunSr": "Soit {{chacun}} chacun.",
+      "cine": "Moins qu'une place de ciné par personne.",
+      "conseiller": "Pour comparer : une séance chez un conseiller conjugal coûte entre 50 et 90 €.",
+      "immediat": "Le rapport s'ouvre ici dès le paiement, pour vous deux, et le lien du PDF part par e-mail.",
+      "moyens": "Moyens de paiement acceptés",
+      "colle": "Votre rapport",
+      "colleBouton": "Débloquer"
     },
     "paiement": {
       "verification": "Vérification du paiement...",
@@ -230,15 +249,27 @@
           "Qui fait quoi à la maison, vu par vous",
           "Le rapport complet en PDF, son lien de téléchargement par e-mail dès qu'il est prêt, et en ligne pendant six mois"
         ],
-        "prixAide": "Un seul paiement, pas d'abonnement. Votre partenaire n'est pas prévenu(e).",
+        "prixAide": "Un seul paiement, sans abonnement. Votre partenaire n'est pas prévenu(e).",
         "emailAide": "Le lien du PDF partira à cette adresse dès le paiement.",
         "pretTitre": "{{moi}}, votre rapport est prêt",
         "apercu": {
           "intro": "Sur les sujets qui comptent le plus, vos réponses ont été comparées à ce que vous pensez que {{autre}} répondrait :",
-          "quoi": "Le rapport vous dit lesquels et par où commencer. Peu de gens prennent un jour le temps de faire ce point sur leur couple : vous venez de le faire, il ne reste qu'à lire le résultat.",
+          "quoi": "Peu de gens prennent un jour le temps de faire ce point sur leur couple : vous venez de le faire, il ne reste qu'à lire le résultat.",
           "inconnusUn": "Et un sujet où vous ne savez pas ce que {{autre}} répondrait.",
           "inconnusN": "Et {{n}} sujets où vous ne savez pas ce que {{autre}} répondrait."
-        }
+        },
+        "prix": "{{prix}}",
+        "bouton": "Débloquer mon rapport · {{prix}}",
+        "accroche": "Le rapport vous dit où vous en êtes avec {{autre}}, et par où commencer.",
+        "points": {
+          "reponses": "Vos réponses face à ce que vous pensez que {{autre}} répondrait",
+          "ecartsN": "Pour vos {{n}} écarts : pourquoi ça compte, et comment en parler avec {{autre}}",
+          "ecartsUn": "Pour votre écart : pourquoi ça compte, et comment en parler avec {{autre}}",
+          "ecarts0": "Pour chaque différence, même petite : pourquoi ça compte, et comment en parler avec {{autre}}",
+          "ombreN": "Vos zones d'ombre : {{n}} sujets où vous ne savez pas ce que pense {{autre}}",
+          "ombreUn": "Votre zone d'ombre : un sujet où vous ne savez pas ce que pense {{autre}}"
+        },
+        "immediat": "Le rapport s'ouvre ici dès le paiement, et le lien du PDF part par e-mail."
       },
       "rapport": {
         "ecran": {

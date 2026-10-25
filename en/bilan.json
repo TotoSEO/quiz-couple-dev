@@ -157,7 +157,7 @@
         "decisifs0": "No gaps on the decisive topics, the ones that weigh most in a relationship.",
         "decisifsUn": "Including one gap on a decisive topic, one of those that weigh most in a relationship.",
         "decisifsN": "Including {{n}} gaps on decisive topics, the ones that weigh most in a relationship.",
-        "quoi": "The report tells you which ones and how to talk about them. Few couples ever take the time to do this: you just did, and all that's left is to read what it says."
+        "quoi": "Few couples ever take the time to do this: you just did, and all that's left is to read what it says."
       },
       "contenu": [
         "Your alignment and the climate of your relationship, at a glance",
@@ -170,7 +170,7 @@
         "The full report as a PDF, its download link emailed as soon as it's ready, and online for six months"
       ],
       "prix": "{{prix}} for both of you",
-      "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
+      "prixAide": "One payment unlocks the report for both of you, no subscription.",
       "emailLabel": "Where should we send the report?",
       "emailPlaceholder": "you@email.com",
       "emailAide": "The PDF link will go to this address as soon as you've both finished.",
@@ -178,7 +178,7 @@
       "renonciation": "I ask for the report to be provided as soon as it is ready, without waiting for the end of the 14-day withdrawal period, and I acknowledge that I lose my right of withdrawal once it is provided.",
       "renonciationManque": "Tick the box to continue.",
       "bouton": "Unlock our report · {{prix}}",
-      "securite": "Secure payment by Stripe (card, Apple Pay, Google Pay). We never see your card.",
+      "securite": "Secure payment by Stripe. We never see your card.",
       "cgv": "Terms of sale",
       "tva": "VAT not applicable, art. 293 B of the French General Tax Code.",
       "ferme": "Online payment opens very soon. Your assessment is saved: come back to this page in a few days.",
@@ -186,7 +186,26 @@
       "pretTitre": "{{moi}} and {{autre}}, your report is ready",
       "sommaire": "What's in your report",
       "emailAutre": "Get it at a different address",
-      "plie": "Unlock the report now"
+      "plie": "Unlock the report now",
+      "accroche": "You haven't seen what {{autre}} answered yet.",
+      "points": {
+        "reponses": "All of {{autre}}'s answers next to yours, question by question",
+        "ecartsN": "For your {{n}} gaps: why they matter, and how to talk about them without arguing",
+        "ecartsUn": "For your gap: why it matters, and how to talk about it without arguing",
+        "ecarts0": "For every difference, even a small one: why it matters, and how to talk about it",
+        "accords": "What you have in common, area by area",
+        "conversationsN": "Your next {{n}} conversations, in the order to have them",
+        "conversationsUn": "Your next conversation, and how to start it",
+        "climat": "The climate of your relationship, and who does what at home, as each of you sees it",
+        "pdf": "The full report as a PDF to keep, and online for six months"
+      },
+      "chacunSr": "That's {{chacun}} each.",
+      "cine": "Less than a cinema ticket each.",
+      "conseiller": "For comparison: a session with a relationship counsellor costs between £50 and £90.",
+      "immediat": "The report opens here as soon as you've paid, for both of you, and the PDF link goes out by email.",
+      "moyens": "Accepted payment methods",
+      "colle": "Your report",
+      "colleBouton": "Unlock"
     },
     "paiement": {
       "verification": "Checking the payment...",
@@ -235,10 +254,22 @@
         "pretTitre": "{{moi}}, your report is ready",
         "apercu": {
           "intro": "On the topics that matter most, your answers have been compared with what you think {{autre}} would say:",
-          "quoi": "The report tells you which ones and where to start. Few people ever take the time to look at their relationship this closely: you just did, and all that's left is to read what it says.",
+          "quoi": "Few people ever take the time to look at their relationship this closely: you just did, and all that's left is to read what it says.",
           "inconnusUn": "And one topic where you don't know what {{autre}} would say.",
           "inconnusN": "And {{n}} topics where you don't know what {{autre}} would say."
-        }
+        },
+        "prix": "{{prix}}",
+        "bouton": "Unlock my report · {{prix}}",
+        "accroche": "The report tells you where you stand with {{autre}}, and where to start.",
+        "points": {
+          "reponses": "Your answers next to what you think {{autre}} would say",
+          "ecartsN": "For your {{n}} gaps: why they matter, and how to talk about them with {{autre}}",
+          "ecartsUn": "For your gap: why it matters, and how to talk about it with {{autre}}",
+          "ecarts0": "For every difference, even a small one: why it matters, and how to talk about it with {{autre}}",
+          "ombreN": "Your blind spots: {{n}} topics where you don't know what {{autre}} thinks",
+          "ombreUn": "Your blind spot: one topic where you don't know what {{autre}} thinks"
+        },
+        "immediat": "The report opens here as soon as you've paid, and the PDF link goes out by email."
       },
       "rapport": {
         "ecran": {

@@ -94,6 +94,12 @@
   function nombre(n) {
     try { return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR').format(n); } catch (e) { return String(n); }
   }
+  // Un prix en centimes, écrit comme le site l'écrit (formatPrix de generate.js).
+  function prixEcrit(centimes) {
+    try {
+      return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR', { style: 'currency', currency: 'EUR' }).format(centimes / 100).replace(/[  ]/g, ' ');
+    } catch (e) { return (centimes / 100).toFixed(2) + ' €'; }
+  }
 
 
   // ── Les personnages ─────────────────────────────────────────────────────
@@ -188,6 +194,7 @@
   }
   function afficher(html, garderPosition) {
     arreterMinuteur();
+    if (obsColle) { obsColle.disconnect(); obsColle = null; }
     racine.innerHTML = html;
     if (garderPosition) return;
     var haut = racine.getBoundingClientRect().top;
@@ -1489,6 +1496,94 @@
       '<p class="bilan-pret-quoi">' + x('paywall.apercu.quoi') + '</p>';
   }
 
+  // Ce que contient le rapport, avec leurs chiffres (25 octobre 2026 : 39
+  // couples avaient vu l'écran « rapport prêt », 3 avaient payé ; le sommaire
+  // était dans la carte du dessous, et rien ne disait dans la première ce
+  // qu'on achetait). À deux, l'accroche est ce qu'on n'a pas encore vu : les
+  // réponses de l'autre. Rien du contenu, seulement les comptes de l'aperçu.
+  function blocPoints(ap, autre) {
+    var v = { autre: autre };
+    var points = [x('paywall.points.reponses', v)];
+    if (ap.ecarts > 1) points.push(x('paywall.points.ecartsN', { n: nombre(ap.ecarts), autre: autre }));
+    else if (ap.ecarts === 1) points.push(x('paywall.points.ecartsUn', v));
+    else if (ap.proches > 0) points.push(x('paywall.points.ecarts0', v));
+    else points.push(x('paywall.points.accords', v));
+    if (MODE === 'solo' && ap.inconnus > 0) points.push(x(ap.inconnus === 1 ? 'paywall.points.ombreUn' : 'paywall.points.ombreN', { n: nombre(ap.inconnus), autre: autre }));
+    if (ap.conversations > 1) points.push(x('paywall.points.conversationsN', { n: nombre(ap.conversations) }));
+    else if (ap.conversations === 1) points.push(x('paywall.points.conversationsUn'));
+    if (MODE !== 'solo') points.push(x('paywall.points.climat'));
+    points.push(x('paywall.points.pdf'));
+    return '<div class="bilan-inclus"><h3 class="bilan-inclus-titre">' + x('paywall.accroche', v) + '</h3>' +
+      '<ul class="bilan-inclus-liste">' + points.map(function (p) { return '<li>' + p + '</li>'; }).join('') + '</ul></div>';
+  }
+
+  // Le prix. À deux, partagé en deux colonnes, une par personne avec son
+  // personnage (25 octobre 2026, Thomas : « le prix divisé par deux en
+  // colonne pour montrer que quand on divise par deux (vu que c'est un
+  // couple) ça fait à peine plus de 3€ ») ; seul(e), le prix seul. La moitié
+  // vient du prix que la page affiche (CFG.prixCentimes, celui des textes),
+  // pour que les deux colonnes fassent toujours le total écrit dessous.
+  function blocPrix(etat, promo) {
+    var c = CFG.prixCentimes || etat.prix || 0;
+    var deux = MODE !== 'solo' && c > 0;
+    var html = '<div class="bilan-prix' + (deux ? ' bilan-prix--deux' : '') + '">' +
+      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '');
+    if (deux) {
+      var chacun = prixEcrit(Math.round(c / 2));
+      var part = function (p, rang) {
+        var nom = perso(p.genre, rang);
+        return '<span class="bilan-part bilan-part--' + nom + '">' + mascotte(nom, 'joie', 58) +
+          '<span class="bilan-part-nom">' + esc(p.prenom) + '</span><span class="bilan-part-prix">' + esc(chacun) + '</span></span>';
+      };
+      html += '<div class="bilan-partage" aria-hidden="true">' + part(etat.moi, 0) + '<span class="bilan-part-plus">+</span>' + part(etat.autre, 1) + '</div>' +
+        '<p class="bilan-note bilan-prix-cine"><span class="sr-only">' + x('paywall.chacunSr', { chacun: chacun }) + ' </span>' + x('paywall.cine') + '</p>';
+    }
+    return html +
+      '<p class="bilan-prix-montant">' + (deux ? '<span class="bilan-prix-egal" aria-hidden="true">=</span> ' : '') + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
+      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
+      '<p class="bilan-note">' + x('paywall.prixAide', { autre: etat.autre.prenom }) + '</p></div>' +
+      '<p class="bilan-note bilan-centre bilan-prix-conseiller">' + x('paywall.conseiller') + '</p>';
+  }
+
+  // Sous le bouton : le paiement par Stripe, les moyens de paiement de la
+  // page de vente (CFG.paiements, dessinés par bilan-couple.ejs) et ce qui se
+  // passe une fois payé.
+  var CADENAS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
+  function blocConfiance(pret) {
+    var moyens = Array.isArray(CFG.paiements) ? CFG.paiements : [];
+    return '<div class="bilan-confiance"><p class="bilan-confiance-ligne">' + CADENAS + '<span>' + x('paywall.securite') + '</span></p>' +
+      (moyens.length ? '<ul class="bilan-moyens" role="list" aria-label="' + x('paywall.moyens') + '">' + moyens.map(function (m) {
+        return '<li class="bilan-moyen" title="' + esc(m.nom) + '">' + m.svg + '<span class="sr-only">' + esc(m.nom) + '</span></li>';
+      }).join('') + '</ul>' : '') +
+      (pret ? '<p class="bilan-note bilan-centre bilan-immediat">' + x('paywall.immediat') + '</p>' : '') + '</div>';
+  }
+
+  // La barre collée de l'écran « rapport prêt » : visible tant
+  // que le bloc d'achat (prix, case, bouton) n'est pas à l'écran, et un appui
+  // y descend. Elle ne paie pas elle-même : la case de la renonciation doit
+  // être cochée avant.
+  var obsColle = null;
+  function barreColle(promo) {
+    return '<div class="bilan-colle" id="bilan-colle" hidden><span class="bilan-colle-texte"><span class="bilan-colle-nom">' + x('paywall.colle') + '</span>' +
+      '<span class="bilan-colle-prix">' + (promo ? promo.html : esc(CFG.prix || '')) + '</span></span>' +
+      bouton('versAchat', x('paywall.colleBouton'), 'btn-cta btn-gradient btn-sm') + '</div>';
+  }
+  function surveillerColle() {
+    if (obsColle) { obsColle.disconnect(); obsColle = null; }
+    var colle = document.getElementById('bilan-colle');
+    var achat = document.getElementById('bilan-achat');
+    if (!colle || !achat || !('IntersectionObserver' in window)) return;
+    obsColle = new IntersectionObserver(function (entrees) {
+      colle.hidden = entrees[entrees.length - 1].isIntersecting;
+    }, { threshold: 0 });
+    obsColle.observe(achat);
+  }
+  function versAchat() {
+    var achat = document.getElementById('bilan-achat');
+    if (!achat) return;
+    try { achat.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { achat.scrollIntoView(true); }
+  }
+
   // Le sommaire du rapport et sa couverture à leurs prénoms : les chapitres
   // de rapport.mjs (chapitresListe), dans le même ordre.
   function sommaire(etat) {
@@ -1519,22 +1614,18 @@
     // La réduction, seulement si le serveur dit qu'il l'appliquera (une
     // fonction plus ancienne ne le dit pas : rien n'est affiché).
     var promo = promoAffichee(etat.promo ? true : false);
-    var achat = '<div class="bilan-prix">' +
-      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '') +
-      '<p class="bilan-prix-montant">' + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
-      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
-      '<p class="bilan-note">' + x('paywall.prixAide', { autre: autre }) + '</p></div>' +
+    var achat = '<div class="bilan-achat" id="bilan-achat">' + blocPrix(etat, promo) +
       // Sans adresse connue (évaluation d'avant le 20 octobre 2026), le champ
       // reste ici ; sinon il est replié sous le sommaire.
       (etat.moi.email ? '' : champEmail('', 'bilan-email-paie')) +
       '<label class="bilan-case bilan-case--serree"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
-      '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>';
+      blocConfiance(pret) + '</div>';
     var suite = sommaire(etat) +
       (etat.moi.email ? '<details class="bilan-email-autre bilan-offre-email"><summary>' + x('paywall.emailAutre') + '</summary>' + champEmail(etat.moi.email, 'bilan-email-paie') + '</details>' : '') +
       '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>';
-    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite');
+    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + barreColle(promo);
     return carte('<details class="bilan-offre-plie"><summary><span class="bilan-offre-plie-titre">' + x('paywall.plie') + '</span>' +
       '<span class="bilan-offre-plie-prix">' + avecPromo(x('paywall.prix'), !!promo) + '</span></summary>' +
       '<p class="bilan-offre-intro">' + x('paywall.introAttente', { autre: autre }) + '</p>' + achat + suite + '</details>', 'bilan-offre bilan-offre--attente');
@@ -1542,6 +1633,7 @@
 
   function actionsOffre(entree, mode) {
     return {
+      versAchat: versAchat,
       payer: function (b) {
         var err = document.getElementById('bilan-erreur');
         var montre = function (cle) { err.textContent = ins(remplir(tr(cle, ''), {})); err.hidden = false; };
@@ -1696,7 +1788,7 @@
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
-      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null,
+      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null, prix: res.prix,
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
     var ap = res.apercu || null;
@@ -1705,9 +1797,10 @@
       offre(etat, true,
         '<p class="bilan-pret-sur">' + x('rapport.surtitre') + '</p>' +
         '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom, autre: autre.prenom }) + '</h2>' +
-        (ap ? blocApercu(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
+        (ap ? blocApercu(ap, autre.prenom) + blocPoints(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
     compterVue('offre_vue', { mode: MODE, id: entree.id });
     ACTIONS = actionsOffre(entree, MODE);
+    surveillerColle();
   }
 
   function retourPaiement(id, session) {
