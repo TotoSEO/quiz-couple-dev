@@ -96,6 +96,12 @@
     chemin: getLocalizedPath('bilanCouple', lang),
     cgv: getLocalizedPath('cgv', lang),
     contact: getLocalizedPath('contact', lang),
+    confidentialite: getLocalizedPath('privacy', lang),
+    // Les tests gratuits proposés au célibataire qui a répondu au sondage de
+    // l'évaluation seul(e) (25 octobre 2026), avec leur nom du menu.
+    celibTests: ['testCelibataire', 'testPretRelation', 'testDureeCelibat', 'testTrouverAmour']
+      .map((r) => ({ url: getLocalizedPath(r, lang), titre: t('common:nav.' + r, '') }))
+      .filter((x) => x.titre),
     prix,
     garantie: jours,
     // L'offre de l'application montre la même réduction, si le serveur

@@ -52,7 +52,13 @@
       "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
-      "autreDefaut": "votre partenaire"
+      "autreDefaut": "votre partenaire",
+      "statutTitre": "Où en êtes-vous ?",
+      "statuts": {
+        "couple": "En couple",
+        "complique": "C'est compliqué",
+        "celib": "Célibataire"
+      }
     },
     "invitation": {
       "titre": "Invitez {{autre}}",
@@ -607,6 +613,34 @@
     "rappels": {
       "arret": "C'est noté : vous ne recevrez plus de message sur cette évaluation.",
       "continuer": "Continuer"
+    },
+    "celib": {
+      "titre": "Pour les célibataires, une évaluation est en préparation",
+      "texte": "Celle-ci est faite pour un couple : elle compare ce que vivent deux personnes ensemble. Pour les célibataires, on prépare une évaluation complète, et on aimerait la construire avec vous !",
+      "question": "Qu'est-ce qui vous intéresserait le plus ? Cochez tout ce qui vous parle.",
+      "sujets": {
+        "point": "Savoir où j'en suis dans ma vie amoureuse",
+        "schemas": "Comprendre ce qui se répète dans mes histoires",
+        "profil": "Savoir quel genre de personne me correspond",
+        "blocages": "Comprendre ce qui me bloque pour rencontrer quelqu'un",
+        "rencontres": "Mieux m'y prendre pour faire des rencontres",
+        "rupture": "Tourner la page après une rupture",
+        "envie": "Savoir ce que je veux vraiment : une histoire sérieuse ou pas",
+        "confiance": "Reprendre confiance en moi en amour"
+      },
+      "autre": "Une autre idée ? (facultatif)",
+      "email": "Votre adresse e-mail, pour être prévenu(e) le jour où elle sort (facultatif)",
+      "consentement": "J'ai 15 ans ou plus et j'accepte de recevoir un e-mail de Quiz Couple le jour où l'évaluation pour célibataires sera prête.",
+      "emailAide": "Votre adresse ne sert qu'à ça : un seul e-mail, ce jour-là. Elle est effacée un mois après, et au plus tard dans un an.",
+      "confidentialite": "Confidentialité",
+      "envoyer": "Envoyer mes réponses",
+      "choixManque": "Cochez au moins un sujet.",
+      "consentManque": "Cochez la case pour qu'on puisse vous écrire, ou laissez l'adresse vide.",
+      "merciTitre": "Merci, c'est noté !",
+      "merci": "Vos réponses vont nous aider à choisir ce que contiendra l'évaluation pour célibataires.",
+      "merciEmail": "On vous écrit à {{email}} le jour où elle sort. D'ici là, vos réponses vont nous aider à choisir ce qu'elle contiendra.",
+      "testsTitre": "En attendant, nos tests pour célibataires sont gratuits :",
+      "fermer": "Fermer"
     }
   },
   "lp": {

@@ -52,7 +52,13 @@
       "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
-      "autreDefaut": "your partner"
+      "autreDefaut": "your partner",
+      "statutTitre": "What's your situation?",
+      "statuts": {
+        "couple": "In a relationship",
+        "complique": "It's complicated",
+        "celib": "Single"
+      }
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -607,6 +613,34 @@
     "rappels": {
       "arret": "Done: you won't get any more emails about this assessment.",
       "continuer": "Continue"
+    },
+    "celib": {
+      "titre": "An assessment for singles is on its way",
+      "texte": "This one is made for couples: it compares what two people live together. For singles, we're preparing a complete assessment, and we'd love to build it with you!",
+      "question": "What would interest you most? Tick everything that speaks to you.",
+      "sujets": {
+        "point": "Knowing where I stand in my love life",
+        "schemas": "Understanding what keeps repeating in my relationships",
+        "profil": "Knowing what kind of person suits me",
+        "blocages": "Understanding what holds me back from meeting someone",
+        "rencontres": "Getting better at meeting people",
+        "rupture": "Moving on after a breakup",
+        "envie": "Knowing what I really want: something serious, or not",
+        "confiance": "Getting my confidence back in love"
+      },
+      "autre": "Another idea? (optional)",
+      "email": "Your email address, to hear the day it comes out (optional)",
+      "consentement": "I'm 15 or older and I agree to receive one email from Quiz Couple the day the assessment for singles is ready.",
+      "emailAide": "Your address is used for that alone: a single email, on that day. It's deleted a month later, and within a year at the latest.",
+      "confidentialite": "Privacy",
+      "envoyer": "Send my answers",
+      "choixManque": "Tick at least one topic.",
+      "consentManque": "Tick the box so we can write to you, or leave the address empty.",
+      "merciTitre": "Thanks, got it!",
+      "merci": "Your answers will help us choose what goes into the assessment for singles.",
+      "merciEmail": "We'll write to {{email}} the day it comes out. Until then, your answers will help us choose what goes into it.",
+      "testsTitre": "In the meantime, our tests for singles are free:",
+      "fermer": "Close"
     }
   },
   "lp": {

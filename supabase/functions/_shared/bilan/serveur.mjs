@@ -141,7 +141,14 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // évaluation seul(e) ; la clé est la source pour la page et le bouton, la
 // cause pour une erreur du départ, le rôle (a, b) pour l'écran de l'adresse,
 // rien sinon.
-export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante'];
+// `statut_solo` (25 octobre 2026) : la réponse à « Où en êtes-vous ? » au
+// départ seul(e), la clé dans C.STATUTS_SOLO.
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo'];
+// Les réponses des célibataires (action `celib`) : par adresse IP et par
+// heure, en mémoire de l'instance, et un plafond global par jour, compté en
+// base (`celib`), pour qu'une boucle ne remplisse pas la table.
+export const CELIB_PAR_HEURE = 10;
+export const CELIB_PAR_JOUR = 400;
 // `accord` : la case de l'accord, jusqu'au 22 octobre 2026 (deux cases
 // comptées ensemble) et depuis le 25 octobre 2026 (une seule case, « 18 ans
 // ou plus » et le consentement) ; entre les deux, la case des 18 ans
@@ -361,9 +368,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     let cle = '';
     if (quoi === 'vue' || quoi === 'cta') cle = sourcePropre(corps.src);
     else if (quoi === 'depart_erreur') cle = CAUSES_DEPART.includes(corps.cle) ? corps.cle : 'autre';
+    else if (quoi === 'statut_solo') cle = C.STATUTS_SOLO.includes(corps.cle) ? corps.cle : 'autre';
     else if (quoi === 'email_vue') cle = corps.cle === 'b' ? 'b' : 'a';
     await compter(quoi, cle);
-    if (corps.mode === 'solo' && quoi !== 'vue') await compter(quoi + '_solo', cle);
+    if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo') await compter(quoi + '_solo', cle);
     return ok({ compte: true });
   }
 
@@ -1066,7 +1074,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // ── Les liens perdus ──────────────────────────────────────────────────
   // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et
   // qu'il n'a pas eu le temps de copier son lien, on fait comment ? »)
-  const essais = { lien: new Map(), ip: new Map(), adresse: new Map(), inviter: new Map() };
+  const essais = { lien: new Map(), ip: new Map(), adresse: new Map(), inviter: new Map(), celib: new Map() };
   // Le plafond quotidien des e-mails de lien. Une lecture qui échoue ne bloque
   // personne : la disponibilité passe avant le quota.
   async function plafondLiensAtteint() {
@@ -1174,10 +1182,49 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return ok({ envoye: true });
   }
 
+  // Un célibataire qui a choisi l'évaluation seul(e) (25 octobre 2026,
+  // Thomas : mesurer leur part avant de leur faire une évaluation payante, et
+  // leur demander ce qui les intéresserait) : au moins un sujet de
+  // C.SUJETS_CELIB, une idée à lui s'il en a une, et, s'il le veut, l'adresse
+  // où le prévenir le jour où l'évaluation pour célibataires sort, avec la
+  // case qui le dit. Rien ne lui est envoyé aujourd'hui ; une même adresse
+  // garde une seule ligne, la dernière réponse.
+  async function celib(corps, ctx) {
+    const lang = LANGUES.includes(corps.lang) ? corps.lang : null;
+    if (!lang) return non(400, 'lang');
+    const interets = [...new Set(Array.isArray(corps.interets) ? corps.interets : [])]
+      .filter((i) => C.SUJETS_CELIB.includes(i));
+    if (!interets.length) return non(400, 'interets');
+    const autre = typeof corps.autre === 'string'
+      ? corps.autre.replace(/[\u0000-\u001f\u007f<>]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300)
+      : '';
+    let email = null;
+    if (corps.email !== undefined && corps.email !== null && corps.email !== '') {
+      email = emailPropre(corps.email);
+      if (!email) return non(400, 'email');
+      if (corps.consentement !== true) return non(400, 'consentement');
+    }
+    if (!freiner(essais.celib, ctx?.ip || 'inconnue', CELIB_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    if (stockage.compteDuJour) {
+      try {
+        if ((await stockage.compteDuJour(['celib'])) >= CELIB_PAR_JOUR) return non(429, 'trop');
+      } catch (e) {
+        console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
+      }
+    }
+    const quand = maintenant().toISOString();
+    await stockage.enregistrerCelib({
+      lang, interets, autre: autre || null, email,
+      consent_at: email ? quand : null, maj_le: quand,
+    });
+    await compter('celib', email ? 'email' : '');
+    return ok({ enregistre: true, email: !!email });
+  }
+
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
     email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer, inviter,
-    apercu_paiement: apercuPaiement,
+    apercu_paiement: apercuPaiement, celib,
   };
 
   async function traiter(corps, ctx) {

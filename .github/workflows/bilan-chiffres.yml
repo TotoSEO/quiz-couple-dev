@@ -1,7 +1,8 @@
 name: Évaluation de couple · chiffres de l'admin
 
-# Les chiffres de l'onglet Évaluation de l'admin (get_bilan_tableau) et ceux
-# du parcours e-mail (get_emails_tableau), écrits au journal pour être lus
+# Les chiffres de l'onglet Évaluation de l'admin (get_bilan_tableau, et
+# get_bilan_celib pour les célibataires du départ seul(e)) et ceux du
+# parcours e-mail (get_emails_tableau), écrits au journal pour être lus
 # sans le mot de passe de l'admin (bilan/chiffres.mjs ; 25 octobre 2026).
 # À lancer à la main. Lecture seule : rien n'est écrit en base, et aucune
 # adresse e-mail ni aucun prénom ne sort au journal.
