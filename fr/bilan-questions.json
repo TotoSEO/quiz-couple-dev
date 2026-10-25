@@ -26,6 +26,15 @@
         "Non"
       ]
     },
+    "duree": {
+      "q": "Depuis combien de temps êtes-vous ensemble ?",
+      "o": [
+        "Moins d'un an",
+        "Entre un et trois ans",
+        "Entre trois et dix ans",
+        "Plus de dix ans"
+      ]
+    },
     "engagement": {
       "q": "Êtes-vous mariés ou pacsés ?",
       "o": [

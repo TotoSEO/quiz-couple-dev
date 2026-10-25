@@ -26,6 +26,15 @@
         "No"
       ]
     },
+    "duree": {
+      "q": "Da quanto tempo state insieme?",
+      "o": [
+        "Meno di un anno",
+        "Da uno a tre anni",
+        "Da tre a dieci anni",
+        "Più di dieci anni"
+      ]
+    },
     "engagement": {
       "q": "Siete sposati o uniti civilmente?",
       "o": [
