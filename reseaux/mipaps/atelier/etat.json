@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-24T08:05:15.379Z",
+  "genere_le": "2026-10-25T03:13:15.172Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-24",
+  "aujourdhui": "2026-10-25",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 37,
+  "reserve_jours": 36,
   "a_remplir": [
     {
       "jour": "2026-11-30",
@@ -806,6 +806,21 @@
       "jour": "2027-02-01",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-02-02",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-02-02",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-02-02",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
     }
   ],
   "a_corriger": [],
@@ -1231,16 +1246,16 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": "à faire aujourd'hui",
-      "erreur": null
+      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
     },
     {
       "jour": "2026-10-24",
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "même fâchée, je veux que tu restes à côté",
       "erreur": null
     },
@@ -1285,7 +1300,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "ton pull est mieux sur moi",
       "erreur": null
     },
@@ -1294,7 +1309,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2535,11 +2550,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-25",
+      "jour": "2026-10-26",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-24",
+      "jour": "2026-10-27",
       "creneau": "soir"
     },
     "mipaps-histoire": {
@@ -2915,6 +2930,34 @@
       "vues": 222,
       "partages": 0,
       "enregistrements": 0
+    },
+    {
+      "variante_id": "aff317c3-0af4-44c9-a401-a05d0944a880",
+      "releve": "j7",
+      "vues": 2,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "28d8d1a4-8328-4876-9b22-f9b4c071c942",
+      "releve": "j7",
+      "vues": 421,
+      "partages": 10,
+      "enregistrements": 3
+    },
+    {
+      "variante_id": "b17f22ea-4215-4c7d-8f64-8d8bd0318e03",
+      "releve": "j7",
+      "vues": 213,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "e3078a28-2594-4bfa-95e1-6590a949e2ae",
+      "releve": "j7",
+      "vues": 170,
+      "partages": 0,
+      "enregistrements": 2
     }
   ]
 }
