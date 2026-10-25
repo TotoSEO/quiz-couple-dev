@@ -3,8 +3,8 @@
     "badge": "Numérologie, astrologie et zodiaque chinois",
     "title": "Êtes-vous compatible selon votre date de naissance ?",
     "highlight": "date de naissance",
-    "description": "Deux dates, et tout se déduit : votre chemin de vie, votre signe solaire, votre signe chinois. Trois lectures différentes du même jour, croisées pour dessiner ce qui vous relie et ce qui vous demande un peu de travail.",
-    "subtitle": "Aucune inscription, aucun e-mail. Le résultat s'affiche tout de suite."
+    "description": "Entrez vos deux dates de naissance : le test en tire votre chemin de vie, votre signe astrologique et votre signe chinois, puis compare vos deux profils. Vous voyez ce qui vous rapproche, et ce qui demande un peu plus d'efforts.",
+    "subtitle": "Pas besoin de vous inscrire ni de donner votre e-mail, le résultat s'affiche tout de suite."
   },
   "form": {
     "titre": "Vos deux dates de naissance",
@@ -166,14 +166,14 @@
   },
   "suite": {
     "titre": "Allez plus loin avec vos prénoms",
-    "texte": "Votre date de naissance dit ce que vous avez reçu en arrivant. Votre prénom, lui, dit comment vous vous reliez aux autres au quotidien. C'est la deuxième moitié de la lecture, et elle change souvent l'interprétation du résultat que vous venez d'obtenir.",
+    "texte": "Le test prénom et signe astrologique part de vos deux prénoms, lus avec la numérologie, et de vos deux signes. Il ne demande aucune date, et son résultat se lit très bien à côté de celui-ci.",
     "bouton": "Faire le test prénom et signe astrologique"
   },
   "section1": {
     "title": "Ce qu'une date de naissance peut dire d'un couple",
-    "p1": "Vous connaissez la date de naissance de votre partenaire par cœur. C'est probablement l'une des rares informations que vous n'oublierez jamais. Et pourtant, la plupart des gens ne s'en servent que pour souffler des bougies une fois par an, alors que trois traditions différentes y lisent, chacune à sa façon, un tempérament complet.",
-    "p2": "La numérologie y voit un chiffre, le <strong>chemin de vie</strong>, qui résume la manière dont une personne avance. L'astrologie occidentale y lit un signe solaire, donc une façon d'aimer. L'astrologie chinoise y lit une année lunaire, donc un rythme. Ces trois lectures ne disent pas la même chose, et c'est précisément pour ça qu'on les croise ici plutôt que d'en choisir une seule.",
-    "p3": "Résultat : un score global, trois scores détaillés, et surtout des explications qui vous concernent tous les deux. Si vous cherchez plutôt un questionnaire à remplir à deux, le <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité amoureuse</a> en vingt questions répond à la même envie par un tout autre chemin."
+    "p1": "Ce test de compatibilité part d'une seule information : vos deux dates de naissance. Une date de naissance, on s'en sert surtout pour souhaiter un anniversaire, mais trois traditions y lisent aussi un caractère : la numérologie, l'astrologie occidentale et l'astrologie chinoise. Le test passe vos deux dates dans les trois.",
+    "p2": "La numérologie en tire un chiffre, le <strong>chemin de vie</strong>, qui dit comment une personne avance dans la vie. L'astrologie occidentale regarde le jour et le mois pour trouver votre signe, et l'astrologie chinoise regarde l'année pour trouver votre animal. Ces trois lectures ne disent pas la même chose, et c'est justement pour ça qu'on les regarde toutes les trois.",
+    "p3": "À la fin, vous avez un score global, un score pour chacune des trois lectures et des explications qui parlent de vous deux. Si vous cherchez plutôt <a href=\"/test-compatibilite-amoureuse/\">un questionnaire à remplir à deux</a>, il y a aussi un test en vingt questions sur votre façon de voir la vie à deux."
   },
   "section2": {
     "title": "Le chemin de vie, le chiffre caché dans votre date de naissance",
@@ -248,7 +248,7 @@
         "Qu'on l'aime pour lui, pas pour ce qu'il donne"
       ]
     ],
-    "tip": "Deux chemins de vie identiques ne garantissent rien du tout. Deux 5 ensemble, c'est deux personnes qui veulent partir, et parfois pas dans la même direction."
+    "tip": "Avoir le même chemin de vie ne garantit rien. Deux 5 ensemble, par exemple, ce sont deux personnes qui ont besoin de bouger, et pas forcément dans la même direction."
   },
   "section3": {
     "title": "Le signe astrologique, le ciel du jour de votre naissance",
@@ -256,12 +256,12 @@
     "sub1Title": "Les quatre éléments, la vraie clé de lecture",
     "sub1Text": "Avant même de comparer signe par signe, on regarde les éléments. Le <strong>Feu</strong> (Bélier, Lion, Sagittaire) fonce. La <strong>Terre</strong> (Taureau, Vierge, Capricorne) construit. L'<strong>Air</strong> (Gémeaux, Balance, Verseau) échange. L'<strong>Eau</strong> (Cancer, Scorpion, Poissons) ressent. Le Feu et l'Air s'alimentent, la Terre et l'Eau se comprennent, et les couples qui mélangent deux familles éloignées ont plus à traduire l'un pour l'autre.",
     "p2": "Attention aux dates charnières. Si votre date tombe un 20 ou un 21, vous êtes peut-être du signe d'avant : les bornes bougent légèrement d'une année à l'autre. Notre calcul utilise les dates de référence les plus courantes, celles que vous trouverez dans la quasi-totalité des almanachs.",
-    "p3": "Si votre signe vous intéresse en particulier, on a écrit un article complet pour chacun des douze. Celui sur la <a href=\"/blog/compatibilite-amoureuse-balance/\">compatibilité amoureuse de la Balance</a> ou celui sur le <a href=\"/blog/compatibilite-amoureuse-scorpion/\">Scorpion</a> entrent bien plus dans le détail que ce que peut afficher un calculateur."
+    "p3": "Si votre signe vous intéresse en particulier, il y a un article complet pour chacun des douze. Celui sur <a href=\"/blog/compatibilite-amoureuse-balance/\">ce que cherche la Balance en amour</a> ou celui sur <a href=\"/blog/compatibilite-amoureuse-scorpion/\">qui peut tenir avec un Scorpion</a> vont beaucoup plus loin que ce qu'un calculateur peut afficher."
   },
   "section4": {
-    "title": "Le signe chinois, celui que presque personne ne calcule correctement",
+    "title": "Le signe chinois, qui dépend du nouvel an lunaire",
     "p1": "Ici, c'est l'année qui parle. Douze animaux, un par année, et un cycle qui recommence. Sauf que l'année chinoise ne commence pas le 1er janvier : elle démarre au nouvel an lunaire, qui tombe entre le 21 janvier et le 21 février selon les années. Toutes les personnes nées en janvier et dans la première moitié de février appartiennent donc à l'animal de l'année précédente.",
-    "p2": "C'est l'erreur la plus fréquente des calculateurs en ligne, et elle concerne près d'un dixième de la population. Notre outil utilise les <strong>vraies dates du nouvel an chinois</strong>, année par année, de 1924 à 2043. Quelqu'un né le 1er janvier 2000 n'est pas Dragon, il est Lapin de Terre.",
+    "p2": "Ça concerne à peu près une personne sur dix : toutes celles qui sont nées entre le 1er janvier et le nouvel an chinois. Le test utilise donc les <strong>vraies dates du nouvel an chinois</strong>, année par année, de 1924 à 2043. Par exemple, quelqu'un qui est né le 1er janvier 2000 n'est pas Dragon, il est Lapin de Terre.",
     "sub1Title": "Les quatre triangles d'affinité",
     "tableHeaders": [
       "Triangle",
@@ -296,28 +296,28 @@
   },
   "section5": {
     "title": "Pourquoi croiser trois lectures au lieu d'une seule",
-    "p1": "Parce qu'aucune des trois ne suffit. Le signe solaire est trop populaire pour être précis : douze cases pour huit milliards de personnes, ça fait des cases très larges. Le chemin de vie est plus fin mais il ignore complètement le tempérament. Le signe chinois donne un rythme, pas une façon d'aimer.",
-    "p2": "Croisées, elles se corrigent. Deux signes solaires réputés incompatibles peuvent avoir des chemins de vie qui s'emboîtent parfaitement, et vous le verrez tout de suite dans les trois barres du résultat. C'est aussi pour ça qu'on affiche le détail plutôt qu'un pourcentage seul : le chiffre global ne vaut rien sans ce qui le compose.",
-    "tip": "Un score élevé sur un axe et bas sur un autre est le cas le plus fréquent, et souvent le plus intéressant à lire. C'est là que se logent les vraies dynamiques de couple."
+    "p1": "Parce qu'aucune ne suffit toute seule. Le signe astrologique range huit milliards de personnes dans douze cases, ce qui fait des cases très larges. Le chemin de vie est plus précis, mais il ne dit rien du tempérament. Et le signe chinois donne surtout un rythme, plus qu'une façon d'aimer.",
+    "p2": "Ensemble, elles se complètent. Deux signes réputés incompatibles peuvent avoir des chemins de vie qui s'accordent très bien, et vous le voyez tout de suite dans les trois barres du résultat. C'est pour ça qu'on affiche le détail plutôt qu'un pourcentage seul : sans lui, on ne sait pas d'où vient le score.",
+    "tip": "Le cas le plus fréquent, c'est un score haut sur une lecture et bas sur une autre. C'est souvent le résultat le plus intéressant à lire à deux."
   },
   "section6": {
     "title": "Et si le score est bas ?",
-    "p1": "Alors il ne se passe rien. Vraiment. Aucun de ces trois systèmes n'a jamais prédit une rupture, et aucun n'a jamais empêché une histoire de durer trente ans. Ce que dit un score bas, c'est que vos deux tempéraments ne s'accordent pas spontanément, donc que vous devrez mettre en mots ce que d'autres couples se transmettent sans y penser.",
-    "p2": "Beaucoup de gens arrivent sur ce genre de page avec une question derrière la tête, et ce n'est pas vraiment une question d'astrologie. Si c'est votre cas, le <a href=\"/test-couple-sain/\">test de couple sain</a> ou le <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a> parlent de ce qui se passe entre vous aujourd'hui, pas de ce que disaient les astres le jour de votre naissance.",
-    "tip": "Faites le test à deux plutôt que chacun dans son coin. Le résultat compte moins que la conversation qu'il déclenche, et c'est vrai pour à peu près tous les tests de ce site."
+    "p1": "Il ne se passe rien de grave ! Aucun de ces trois systèmes n'a jamais prédit une rupture, et aucun n'a jamais empêché un couple de durer trente ans. Un score bas veut juste dire que vos deux tempéraments ne s'accordent pas tout seuls, et que vous aurez parfois à dire avec des mots ce que d'autres couples comprennent sans se parler.",
+    "p2": "Beaucoup de gens arrivent sur ce genre de page avec une autre question en tête, et ce n'est pas une question d'astrologie. Si c'est votre cas, mieux vaut un test sur <a href=\"/test-couple-sain/\">la façon dont vous vous traitez au quotidien</a>, ou un test qui vous aide à y voir clair dans <a href=\"/test-amour-ou-habitude/\">ce que vous ressentez encore</a>. Ceux-là parlent de ce qui se passe entre vous aujourd'hui, pas de ce que disaient les astres le jour de votre naissance.",
+    "tip": "Faites le test à deux, sur le même écran. Lire les trois barres ensemble, c'est souvent ce qui lance la discussion."
   },
   "faq": {
     "title": "Vos questions sur la compatibilité par date de naissance",
     "q1": "Comment calculer la compatibilité amoureuse avec une date de naissance ?",
     "a1": "Il y a trois calculs différents, et notre outil fait les trois. Le chemin de vie s'obtient en additionnant tous les chiffres de la date puis en réduisant le total. Le signe astrologique se lit sur le jour et le mois. Le signe chinois se lit sur l'année lunaire, qui ne commence pas le 1er janvier. On compare ensuite les deux profils sur chacun de ces trois axes.",
     "q2": "Faut-il connaître l'heure de naissance ?",
-    "a2": "Non, et c'est volontaire. L'heure sert à calculer l'ascendant et les maisons astrologiques, ce qui relève du thème natal complet et demande une lecture professionnelle. Ici, la date seule suffit pour les trois systèmes utilisés. Personne n'a besoin d'aller chercher un extrait d'acte de naissance.",
+    "a2": "Non. L'heure sert à calculer l'ascendant et les maisons astrologiques, c'est-à-dire un thème natal complet, qui demande une lecture beaucoup plus longue. Ici, la date seule suffit pour les trois calculs.",
     "q3": "Mon signe chinois n'est pas celui que je croyais, pourquoi ?",
     "a3": "Parce que la date concernée tombe probablement en janvier ou début février. L'année chinoise commence au nouvel an lunaire, entre le 21 janvier et le 21 février. Quelqu'un né le 20 janvier 1990 appartient encore à l'année du Serpent 1989, pas à celle du Cheval. Notre calcul intègre la date exacte du nouvel an pour chaque année.",
     "q4": "Un score de 40 % veut dire qu'on va se séparer ?",
     "a4": "Non. Ce chiffre mesure un accord entre deux tempéraments symboliques, pas la solidité d'une relation. Il ne connaît ni votre histoire, ni vos efforts, ni ce que vous avez traversé ensemble. Prenez-le comme une grille de lecture qui montre où l'entente est naturelle et où elle se travaille.",
     "q5": "Quelle différence avec votre test prénom et signe astrologique ?",
-    "a5": "Celui-ci part uniquement des dates et croise trois systèmes. L'autre part des prénoms et du signe que vous choisissez vous-même, et lit la numérologie des lettres. Les deux se complètent bien : la date dit ce que vous avez reçu, le prénom dit comment vous vous présentez aux autres. Faire les deux prend cinq minutes en tout.",
+    "a5": "Celui-ci part uniquement de vos dates et croise trois calculs. Le test <a href=\"/signes-astrologiques-prenoms-compatibilite/\">par les prénoms et les signes</a> part de vos prénoms, lus avec la numérologie des lettres, et des signes que vous choisissez dans une liste. Les deux se complètent bien, et faire les deux prend cinq minutes en tout. Et pour <a href=\"/calculatrice-de-l-amour/\">comparer deux prénoms sans astrologie</a>, il y a aussi la calculatrice de l'amour.",
     "q6": "Les résultats sont-ils enregistrés quelque part ?",
     "a6": "Non. Tout le calcul se fait dans votre navigateur, les dates ne partent nulle part et rien n'est conservé après la fermeture de la page. Vous pouvez refaire le test autant de fois que vous voulez, avec autant de dates que vous voulez."
   }

@@ -956,6 +956,34 @@ Exemples réels, tous validés :
   l'URL préfixée par la langue hors FR (`/en/…`, `/es/…`, `/de/…`, `/it/…`).
 - Aucun lien mort : passer le contrôle sur `dist/` après construction.
 
+### Les pages de compatibilité : un angle chacune
+
+Revu le 25 octobre 2026 avec la Search Console (Thomas : « il ne faut pas en
+booster une en dépit des deux autres »). Quatre pages répondent à « est-ce
+qu'on est compatibles ? », chacune avec ses propres requêtes, où elle est
+déjà entre la première et la quatrième place ; elles ne se disputent que
+« compatibilité prénom » (calculatrice et prénoms-signes) :
+
+- **La calculatrice de l'amour :** les prénoms seuls, un pourcentage
+  (« test de compatibilité prénom pourcentage »).
+- **Prénoms et signes astrologiques :** les prénoms passés par la
+  numérologie (40 %) et les signes choisis dans une liste (60 %). C'est elle
+  qui sort sur « compatibilité amoureuse » tout court.
+- **Date de naissance :** deux dates, d'où chemin de vie, signe et signe
+  chinois.
+- **Le test de compatibilité en vingt questions :** « test de compatibilité
+  amoureuse ».
+
+Les trois outils se renvoient l'un à l'autre avec une ancre qui dit ce que
+fait la page visée (« deux prénoms suffisent », « partir de vos deux dates
+de naissance », « par les prénoms et les signes »), jamais son titre ni
+« compatibilité amoureuse ». Aucun des trois n'écrit « test de compatibilité
+amoureuse » en toutes lettres : c'est la requête du test en vingt questions.
+Un exemple chiffré dans le texte se refait avec le vrai calcul, dans chaque
+langue : la calculatrice compte les lettres du mot amour de la langue, et
+« Thomas » et « Elisa » donnent 59 % en français, en anglais et en allemand,
+mais 54 % en espagnol et 64 % en italien.
+
 ## Le frein sur les mauvaises notes
 
 Une note de quatre ou cinq étoiles arrive presque toujours avec un mot. Une

@@ -2,17 +2,17 @@
   "hero": {
     "badge": "50 Fragen · gratis · ohne Anmeldung",
     "titre": "Reinheitstest",
-    "titreAccent": "für Paare",
+    "titreAccent": "allein oder als Paar",
     "accroche": "Wie weit seid ihr wirklich gegangen?",
-    "description": "Fünfzig Fragen, eine Punktzahl von maximal 899, und eine Antwort, die ihr euren Eltern nicht unbedingt zeigen wollt. Macht ihn allein und schickt eure Punktzahl dann an eure Partnerin oder euren Partner zum Vergleichen."
+    "description": "Der Reinheitstest besteht aus 50 Fragen zu dem, was ihr schon gemacht habt: Partys, Ex-Partner, Lügen, Sex und so weiter. Macht ihn allein für die eigene Punktzahl oder zu zweit für eure Beziehung, und vergleicht danach!"
   },
   "cta": "Test starten",
   "sections": {
     "s1": {
       "titre": "Was ist ein Reinheitstest genau?",
-      "lead": "Eine lange Liste mit Dingen, die Menschen tun. Ihr kreuzt an, was ihr schon gemacht habt. Je mehr Kreuze, desto höher die Punktzahl und desto weniger « rein » seid ihr.",
-      "p1": "Das Format geistert seit Jahrzehnten über amerikanische Campus und ist in den sozialen Netzwerken explodiert, weil es genau das liefert, was alle an einem <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">Partyspiel</a> suchen: eine Zahl zum Vergleichen. Keine Deutung, kein psychologisches Profil, nur eine Zahl, die man in ein Gespräch werfen kann.",
-      "p2": "Die Version vor euch ist für Paare geschrieben. Keine Fragen zu Studentenverbindungen oder geschwänzten Vorlesungen: hier geht es um Ex-Partner, Lügen, Abende, die entglitten sind, Dinge, die man verschwiegen hat, und Dinge, die man zu zweit gemacht hat.",
+      "lead": "Ein Reinheitstest ist eine lange Liste mit Dingen, die Menschen tun, und ihr kreuzt an, was ihr schon gemacht habt. Je mehr Kreuze, desto höher die Punktzahl, und desto weniger „rein“ seid ihr.",
+      "p1": "Der bekannteste ist der Rice Purity Test von der Rice University in Texas, der längst durch die sozialen Netzwerke gegangen ist. Dass das Prinzip als <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">Partyspiel</a> so gut funktioniert, liegt vor allem daran, dass am Ende eine Zahl steht, die man mit Freunden oder mit dem Freund oder der Freundin vergleichen kann.",
+      "p2": "Unsere Version hat zwei Modi. Allein geht es um euch selbst: eure Ex-Partner, eure Lügen, Abende, die entglitten sind, oder das, was ihr jemandem verschwiegen habt. Zu zweit geht es um eure Beziehung, um das, was ihr zusammen gemacht habt, und um das, was ihr euch verschwiegen habt.",
       "chiffres": [
         {
           "val": "50",
@@ -32,11 +32,11 @@
         }
       ],
       "sub1Titre": "Warum es zu zweit so gut funktioniert",
-      "sub1P1": "Weil eine Punktzahl verglichen wird. Ihr macht den Test für euch, schickt euer Ergebnis, und das Gespräch beginnt von allein. In neun von zehn Fällen dreht sich das eigentliche Gespräch nicht um die Punktzahl, sondern um die eine Frage, bei der jemand gestockt hat, und von da landet man schnell bei <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">Fragen, die man sich sonst nie stellt</a>."
+      "sub1P1": "Eine Punktzahl lässt sich leicht vergleichen. Jeder macht den Test für sich, ihr schickt euch die Ergebnisse, und das Gespräch beginnt von allein. Meistens redet man weniger über die Zahl als über die Frage, bei der jemand gestockt hat, und von da landet man schnell bei <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">Fragen, die man sich sonst nie stellt</a>."
     },
     "s2": {
       "titre": "Wie eure Punktzahl berechnet wird",
-      "p1": "Nicht jede Frage ist gleich viele Punkte wert, und darin liegt der ganze Sinn. Eine flache Skala, bei der jedes Kreuz einen Punkt gibt, liefert allen dasselbe Ergebnis: ein dicker Haufen in der Mitte, niemand an den Rändern, und eine Zahl, die nichts aussagt.",
+      "p1": "Nicht jede Frage ist gleich viele Punkte wert. Wenn jedes Kreuz einen Punkt bringen würde, hätte fast jeder eine mittlere Punktzahl, und das Ergebnis würde nicht viel aussagen. Zum Beispiel:",
       "tableau": {
         "titre": "Drei Antworten, drei Gewichte",
         "entete": [
@@ -80,7 +80,7 @@
           "texte": "Hier werden nicht mehr zwei Menschen bewertet, sondern eine Geschichte: was ihr zusammen gemacht habt, wo ihr es gemacht habt, und was ihr voreinander verschwiegen habt. Die Antworten werden laut gesagt, was diesen Modus deutlich gefährlicher macht."
         }
       ],
-      "p2": "Der Paarmodus und der <a class=\"pu-lien-int\" href=\"{{testCouple}}\">klassische Paartest</a> kommen sich nicht in die Quere: der eine misst, was ihr getan habt, der andere, wo die Beziehung heute steht. Beide hintereinander ergeben zwei sehr verschiedene Lesarten desselben Paares.",
+      "p2": "Der Paarmodus ist keine Wiederholung des Paartests: Der eine misst, was ihr zusammen gemacht habt, der andere, <a class=\"pu-lien-int\" href=\"{{testCouple}}\">wo eure Beziehung heute steht</a>. Wer beide hintereinander macht, bekommt zwei sehr verschiedene Blicke auf dasselbe Paar.",
       "encart": {
         "titre": "Ein Rat vor dem Start des Paarmodus",
         "texte": "Manche Fragen verlangen, Dinge laut auszusprechen, die nie gesagt wurden. Wenn das Thema zwischen euch noch heiß ist, macht den Solomodus jeder für sich und vergleicht nur die Punktzahlen. Die Zahl reicht, um das Gespräch zu starten, ohne jemanden zu Details zu zwingen."
@@ -99,7 +99,7 @@
         "📱 <strong>Digitales Leben</strong>: Nacktfotos, geheime Accounts, Nachrichten beim Aufwachen",
         "🚨 <strong>Verbotenes</strong>: Diebstahl, Dummheiten, Erwischtwerden"
       ],
-      "sub1P1": "Die Kategorie, die am meisten wehtut, ist fast nie die erwartete. Es sind die Lügen, die die meisten Punktzahlen hochtreiben, nicht der Sex.",
+      "sub1P1": "Die Aufschlüsselung hält oft Überraschungen bereit: Man kann beim Sex vernünftig abschneiden und bei den Lügen den Zähler sprengen, oder umgekehrt.",
       "sub2Titre": "Die sechs Kategorien im Paarmodus",
       "liste2": [
         "🔥 <strong>Sex</strong>: was ihr versucht habt, und wo",
@@ -109,33 +109,33 @@
         "🚨 <strong>Grenzüberschreitung</strong>: Casino, verbotene Orte, gemeinsame Lügen",
         "🤐 <strong>Geheimnisse</strong>: was die andere Person immer noch nicht weiß"
       ],
-      "sub2P1": "Es ist die Kategorie der Geheimnisse, die Paare unterscheidet. Zwei Paare mit exakt derselben Vergangenheit können hundert Punkte auseinanderliegen, allein danach, was sie sich gesagt haben."
+      "sub2P1": "Die Kategorie Geheimnisse zählt, was einer dem anderen verschwiegen hat. Deshalb können zwei Paare, die ungefähr dasselbe erlebt haben, sehr unterschiedliche Punktzahlen bekommen."
     },
     "s5": {
       "titre": "Ist eine hohe Punktzahl schlimm?",
-      "citation": "Eine hohe Punktzahl sagt nicht, dass ihr gute oder schlechte Menschen seid. Sie sagt, dass ihr Dinge getan habt.",
-      "p1": "Manche davon sind Partyerinnerungen, andere sind Fehler, und der Test unterscheidet nicht: er zählt, mehr nicht. Die Deutung überlässt er euch.",
-      "p2": "Interessant wird das Ergebnis, wenn zwei Menschen es vergleichen. Dreihundert Punkte Abstand zwischen zwei Partnern sind an sich kein Problem, erklären aber oft Spannungen, die sich vorher nicht benennen ließen. Umgekehrt beruhigen zwei sehr ähnliche Punktzahlen mehr als jeder <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">Kompatibilitätstest</a>.",
+      "citation": "Eine hohe Punktzahl heißt nur, dass ihr schon einiges erlebt habt, nicht, dass ihr schlechte Menschen seid.",
+      "p1": "Manches sind Partyerinnerungen, manches sind Fehler, und der Test macht keinen Unterschied zwischen beidem: Er zählt Punkte zusammen. Was die Zahl bedeutet, entscheidet ihr.",
+      "p2": "Interessant wird das Ergebnis, wenn zwei Menschen es vergleichen. Dreihundert Punkte Abstand zwischen zwei Partnern sind an sich kein Problem, erklären aber manchmal Spannungen, die man vorher nicht benennen konnte. Umgekehrt heißen zwei ähnliche Punktzahlen noch nicht, dass ihr euch bei <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">euren Werten und euren Plänen</a> einig seid: Der Reinheitstest schaut nur auf die Vergangenheit.",
       "encart": {
         "titre": "Und wenn die Punktzahl der anderen Person wehtut",
-        "texte": "Das kommt vor. Der Test spricht von einer ganzen Vergangenheit, die größtenteils vor euch stattgefunden hat. Was zählt, ist nicht die Zahl, sondern was die Person euch dahinter zu erzählen bereit ist."
+        "texte": "Das kommt vor. Der Test spricht von einer ganzen Vergangenheit, und das meiste davon ist oft vor euch passiert. Am meisten hilft, was die Person bereit ist, euch hinter der Zahl zu erzählen."
       }
     }
   },
   "faq": {
     "titre": "Die Fragen, die uns gestellt werden",
     "q1": "Ist der Reinheitstest kostenlos?",
-    "a1": "Ja, vollständig. Kein Konto anzulegen, keine E-Mail anzugeben, keine Bezahlversion, die das echte Ergebnis freischaltet. Ihr antwortet, ihr bekommt eure Punktzahl, fertig.",
+    "a1": "Ja, vollständig. Es gibt kein Konto, keine E-Mail-Adresse und keine Bezahlversion: Ihr beantwortet die Fragen, und am Ende erscheint eure Punktzahl.",
     "q2": "Werden meine Antworten irgendwo gespeichert?",
     "a2": "Nein. Keine einzelne Antwort wird gespeichert. Nur die Endpunktzahl wird erfasst, ohne irgendetwas, das zu euch zurückführt, und sie dient allein dazu, den Durchschnitt und die Kurve auf der Seite zu berechnen.",
     "q3": "Wie lange dauert das?",
-    "a3": "Fünf bis sieben Minuten für die fünfzig Fragen im Solomodus. Zu zweit dauert es länger, weil ihr mindestens dreimal anhalten und reden werdet, und darum geht es ja auch ein bisschen.",
+    "a3": "Fünf bis sieben Minuten für die fünfzig Fragen im Solomodus. Zu zweit dauert es länger, weil ihr bestimmt anhaltet, um darüber zu reden!",
     "q4": "Was ist eine gute Punktzahl?",
     "a4": "Es gibt keine. Die meisten liegen zwischen 25 und 40 % des Maximums, also bei etwa 250 bis 350 Punkten. Darunter seid ihr sehr brav, darüber habt ihr eine Vorgeschichte, aber keines von beiden ist besser.",
     "q5": "Kann man zu mehr als zweit spielen?",
     "a5": "Der Paarmodus ist für zwei gedacht. Nichts hindert eine ganze Runde daran, den Solomodus jeder für sich zu machen und die Punktzahlen danach zu vergleichen: das ist sogar die beste Verwendung des Tests, wenn ihr zu mehreren seid.",
     "q6": "Ab welchem Alter?",
-    "a6": "Der Test fragt vor dem Start nach eurem Alter. Unter 16 Jahren wird eine Version für alle ausgeliefert, und das <a href=\"/de/teenager-paar-quiz/\">Teenager-Paar-Quiz</a> passt vermutlich besser: sie lässt die Fragen zu explizitem Sex und Drogen weg und behält alles, was mit Lügen, Familie, Partys und Geheimnissen zu tun hat."
+    "a6": "Der Test fragt vor dem Start nach eurem Alter. Unter 16 Jahren wechselt er zu einer Version für alle, die die Fragen zu explizitem Sex und Drogen weglässt und alles behält, was mit Lügen, Familie, Partys und Geheimnissen zu tun hat. Für ein Teenager-Paar passt das <a href=\"/de/teenager-paar-quiz/\">Teenager-Paar-Quiz</a> vermutlich besser."
   },
   "suite": {
     "titre": "Direkt danach",
@@ -238,10 +238,10 @@
     "hero_jauge_moyenne": "Durchschnitt"
   },
   "meta": {
-    "titre": "Reinheitstest für Paare | Online & kostenlos",
-    "description": "Reinheitstest für Paare: 50 Fragen, eine Punktzahl von maximal 899 und die Aufschlüsselung nach Kategorie. Allein oder zu zweit, dann mit dem Partner vergleichen. Gratis, ohne Anmeldung."
+    "titre": "Reinheitstest: 50 Fragen, allein oder als Paar | Kostenlos",
+    "description": "Der Reinheitstest in 50 Fragen: allein für die eigene Punktzahl oder zu zweit für die eurer Beziehung. Ergebnis nach Kategorien. Kostenlos, ohne Anmeldung."
   },
   "jsonLd": {
-    "about": "Reinheitstest für Paare"
+    "about": "Reinheitstest"
   }
 }

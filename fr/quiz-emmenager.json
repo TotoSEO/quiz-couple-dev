@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Gratuit \u2022 Sans inscription \u2022 10 min",
+    "badge": "Gratuit • Sans inscription • 10 min",
     "title": "Test vie en couple | Pouvez-vous emménager ensemble ?",
     "titleHighlight": "emménager",
     "intro1": "Vous dormez déjà chez l'un ou l'autre 5 soirs par semaine. Vous avez une brosse à dents chez lui, il a un tiroir chez vous. À ce stade, la question n'est plus \"est-ce qu'on s'aime assez pour habiter ensemble\" mais plutôt : <strong>est-ce qu'on est capables de partager 60m² sans s'entretuer ?</strong>",
@@ -14,7 +14,6 @@
     "s1p1": "Tout le monde vous dit que c'est \"l'étape d'après\". Après quelques mois de relation, la question tombe. \"Et si on prenait un appart ?\" Ça a l'air simple. Ça ne l'est pas.",
     "s1p2": "Vivre ensemble, c'est passer de la version \"meilleur de soi\" (celle qu'on montre en date) à la version \"complète\" (celle qui ronfle, qui laisse la lumière allumée et qui mange des céréales à 23h). C'est un <strong>crash test grandeur nature</strong> pour votre couple. Et contrairement à ce qu'on croit, les ruptures post-emménagement ne viennent presque jamais des gros sujets. Elles viennent des micro-frictions quotidiennes qui s'accumulent sans qu'on ose en parler.",
     "s1p3": "Le tube de dentifrice. La température de la chambre. Le volume de la musique le matin. Ridicule ? Oui. Mais au bout de 6 mois, un tube de dentifrice mal rebouché peut devenir le symbole de tout ce que vous n'avez pas dit.",
-
     "s2Title": "Les 6 sujets que personne n'aborde (et qui font tout capoter)",
     "s2r1Title": "L'argent, au quotidien",
     "s2r1Text": "Pas \"on partagera\". Concrètement. Qui paie quoi ? Compte joint ou pas ? 50/50 ou au prorata des revenus ? Qu'est-ce qui se passe si l'un des deux perd son job ? En France, le loyer moyen pour un deux-pièces en ville tourne autour de 700-900 €. Ajoutez les charges, l'électricité, Internet, les courses. Ça monte vite. Les couples qui posent les chiffres à plat avant de signer le bail désamorcent la plupart des disputes d'argent avant même qu'elles n'existent : ce n'est pas le montant qui fâche, c'est la surprise.",
@@ -28,33 +27,28 @@
     "s2r5Text": "Votre appart, c'est aussi celui de l'autre. Son meilleur pote qui débarque le dimanche sans prévenir, votre sœur qui reste \"juste une nuit\" et repart 4 jours plus tard... Chez soi, c'est un refuge. Quand ce refuge est envahi sans votre accord, ça crée du ressentiment. Posez les règles ensemble.",
     "s2r6Title": "La question \"et si ça ne marche pas ?\"",
     "s2r6Text": "Personne ne veut y penser. Mais c'est un peu comme l'assurance : c'est idiot de ne pas en avoir sous prétexte qu'on n'en aura \"sûrement pas besoin\". Qui reste dans l'appart si on se sépare ? Le bail est à quel nom ? Qu'est-ce qui se passe avec les meubles achetés ensemble ? Parler de ça ne porte pas malheur. Ça vous protège tous les deux.",
-
     "s3Title": "Vivre ensemble après combien de temps de relation ?",
     "s3p1": "6 mois. 1 an. 2 ans. Tout le monde a un avis. La réalité, c'est qu'il n'y a pas de chiffre magique.",
     "s3p2": "C'est ce que vous avez vécu ensemble qui pèse, pas le nombre de mois au compteur. Un couple qui s'est vu 3 fois par semaine pendant 2 ans a passé moins de temps ensemble qu'un couple qui vivait quasiment sous le même toit au bout de 6 mois. Le vrai critère, c'est : avez-vous déjà traversé un conflit sérieux ? Avez-vous vu l'autre en mode \"pas au top\" (malade, stressé, fatigué, de mauvaise humeur pendant 3 jours d'affilée) ? Si la réponse est non, vous ne connaissez que la version vitrine. Et emménager avec une version vitrine, c'est se préparer à des surprises.",
     "s3p3": "Un couple <a href=\"/quiz-amoureux/\">amoureux</a>, c'est bien. Un couple amoureux qui sait ce qui l'attend au quotidien, c'est mieux.",
-
     "s4Title": "Emménager pour les bonnes raisons (et pas pour les mauvaises)",
     "s4p1": "Les bonnes raisons : vous voulez construire un quotidien ensemble, vous avez testé et ça fonctionne, vous êtes sur la même longueur d'onde sur les sujets pratiques, et l'envie est sincère des deux côtés.",
     "s4p2": "Les mauvaises raisons (et elles sont plus courantes qu'on le pense) :",
     "s4p3": "<strong>\"Ça coûtera moins cher à deux.\"</strong> C'est vrai. Mais emménager pour diviser le loyer, c'est un projet de colocation, pas un projet de couple. Si c'est la motivation principale, c'est un signal d'alerte.",
     "s4p4": "<strong>\"Ça fait 2 ans, il est temps.\"</strong> Le calendrier social n'a rien à voir avec votre calendrier émotionnel. Certains couples emménagent à 8 mois et ça roule. D'autres attendent 4 ans et c'est le bon choix. <a href=\"/blog/peur-de-l-engagement/\">La pression du \"il faut avancer\"</a> a détruit plus de couples qu'elle n'en a aidé.",
-    "s4p5": "<strong>\"On verra bien comment ça se passe.\"</strong> L'optimisme, c'est sympa. La préparation, c'est mieux. Les couples qui <a href=\"/questions-couple/\">savent résoudre leurs problèmes</a> avant qu'ils ne deviennent des bombes à retardement sont ceux qui durent sous le même toit.",
-
+    "s4p5": "<strong>\"On verra bien comment ça se passe.\"</strong> L'optimisme, c'est sympa, mais la préparation, c'est mieux. Les couples qui durent sous le même toit sont souvent ceux qui ont pris le temps de <a href=\"/questions-couple/\">se poser les bonnes questions en couple</a> avant de signer le bail : l'argent, le ménage, le besoin de calme, les amis qui passent sans prévenir, etc.",
     "s5Title": "Les 3 premiers mois : ce que personne ne vous dit",
     "s5p1": "Les 3 premiers mois de cohabitation, c'est la période d'ajustement. Pas la lune de miel qu'on vous vend. Concrètement, voilà à quoi vous attendre.",
     "s5p2": "<strong>Le mois 1</strong>, c'est l'excitation. Tout est nouveau. Vous décorez, vous faites les courses ensemble, vous cuisinez en amoureux. C'est mignon.",
     "s5p3": "<strong>Le mois 2</strong>, les habitudes se posent. Et les premières frictions avec. Pourquoi il y a toujours de la vaisselle dans l'évier ? Pourquoi elle met 45 minutes dans la salle de bain le matin ? C'est normal. C'est l'adaptation.",
     "s5p4": "<strong>Le mois 3</strong>, c'est le moment de vérité. L'excitation est retombée, la réalité est là. Si vous arrivez à passer ce cap en communiquant (même maladroitement), vous êtes sur la bonne voie. Si les non-dits s'accumulent, c'est le moment d'en parler. Pas dans 6 mois. Maintenant.",
     "s5p5": "Un conseil que les couples installés donnent toujours : gardez des moments \"chacun de son côté\" même quand vous vivez ensemble. Voir vos amis seul(e), garder un hobby perso, sortir sans l'autre. Ce n'est pas un manque d'amour. C'est ce qui vous permet de <a href=\"/quiz-couple-marrant/\">garder de la légèreté dans votre couple</a> au lieu de transformer votre relation en cohabitation fonctionnelle.",
-
     "s6Title": "Checklist pratique avant d'emménager",
     "s6p1": "Au-delà du test, voici les points concrets à régler avant de poser vos cartons au même endroit :",
     "s6p2": "<strong>Le budget.</strong> Faites un tableur (oui, un vrai). Loyer, charges, courses, sorties, épargne. Mettez les chiffres en face. Si c'est tendu avant même d'emménager, ça ne va pas se résoudre tout seul une fois que le bail est signé.",
     "s6p3": "<strong>Le bail.</strong> Au nom de qui ? Les deux noms sur le bail = les deux responsables du loyer. Un seul nom = l'autre n'a aucun droit sur le logement en cas de séparation. C'est à réfléchir.",
     "s6p4": "<strong>Les meubles.</strong> Qui apporte quoi ? Qu'est-ce qu'on achète ensemble ? Gardez en tête qu'un canapé acheté à deux, c'est un sujet de négo potentiel en cas de rupture.",
     "s6p5": "<strong>Les règles de base.</strong> Pas un contrat signé devant notaire. Juste un accord verbal sur les trucs qui comptent : propreté, invités, bruit, espace perso. Ça peut se faire autour d'une pizza. L'important c'est que ce soit dit.",
-
     "faqTitle": "Questions fréquentes sur la vie à deux",
     "faq": [
       {

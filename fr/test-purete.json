@@ -2,17 +2,17 @@
   "hero": {
     "badge": "50 questions · gratuit · sans inscription",
     "titre": "Test de pureté",
-    "titreAccent": "spécial couple",
+    "titreAccent": "seul ou en couple",
     "accroche": "Jusqu'où vous êtes allés, vraiment ?",
-    "description": "Cinquante questions, un score sur 899, et une réponse que vous n'aurez pas forcément envie de montrer à vos parents. Faites-le seul, puis envoyez votre score à votre partenaire pour comparer."
+    "description": "Le test de pureté, c'est 50 questions sur ce que vous avez déjà fait : soirées, ex, mensonges, sexe, etc. Faites-le seul pour avoir votre score perso, ou à deux pour noter votre couple, puis comparez avec votre partenaire !"
   },
   "cta": "Commencer le test",
   "sections": {
     "s1": {
       "titre": "C'est quoi un test de pureté ?",
-      "lead": "Une longue liste de choses que les gens font. Vous cochez celles que vous avez déjà faites. Plus vous cochez, plus le score monte, moins vous êtes « pur ».",
-      "p1": "Le format traîne sur les campus américains depuis des décennies et il a explosé sur les réseaux, parce qu'il produit exactement ce que tout le monde cherche dans un <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">jeu de soirée</a> : un chiffre à comparer. Pas d'interprétation, pas de profil psychologique, juste un nombre que vous pouvez balancer dans une conversation.",
-      "p2": "La version que vous avez sous les yeux est écrite pour les couples. Pas de questions sur les fraternités ni sur les amphis séchés : on parle d'ex, de mensonges, de soirées qui ont dérapé, de choses cachées au partenaire et de trucs faits à deux.",
+      "lead": "Un test de pureté, c'est une longue liste de choses que les gens font, et vous cochez celles que vous avez déjà faites. Plus vous cochez de cases, plus votre score monte, et moins vous êtes « pur ».",
+      "p1": "Le plus connu, le Rice Purity Test, vient de l'université Rice, au Texas, et il a fait le tour des réseaux sociaux. Si le principe marche aussi bien en <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">jeu de soirée</a>, c'est surtout parce qu'on obtient un chiffre qu'on peut comparer avec ses amis, ou avec son copain ou sa copine.",
+      "p2": "Notre version a deux modes. En solo, les questions portent sur vous : vos ex, vos mensonges, les soirées qui ont dérapé ou encore ce que vous avez caché à quelqu'un. À deux, elles portent sur votre couple, sur ce que vous avez fait ensemble et sur ce que vous vous êtes caché.",
       "chiffres": [
         {
           "val": "50",
@@ -32,11 +32,11 @@
         }
       ],
       "sub1Titre": "Pourquoi ça marche aussi bien à deux",
-      "sub1P1": "Parce qu'un score, ça se compare. Vous faites le test dans votre coin, vous envoyez votre résultat, et la conversation démarre toute seule. Dans neuf cas sur dix, la vraie discussion ne porte pas sur le score, mais sur la question qui a fait tiquer, et de là on finit vite sur des <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">questions qu'on ne se pose jamais</a>."
+      "sub1P1": "Un score, ça se compare facilement. Vous faites le test chacun dans votre coin, vous vous envoyez vos résultats, et la discussion part toute seule. La plupart du temps, on parle moins du chiffre que de la question qui a fait tiquer, et de là on arrive vite à des <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">questions qu'on ne se pose jamais</a>."
     },
     "s2": {
       "titre": "Comment votre score est calculé",
-      "p1": "Toutes les questions ne valent pas le même nombre de points, et c'est tout l'intérêt. Un barème plat où chaque case coche un point donne le même résultat à tout le monde : un gros paquet au milieu, personne aux extrêmes, et un chiffre qui ne dit rien.",
+      "p1": "Toutes les questions ne valent pas le même nombre de points. Si chaque case cochée rapportait un point, presque tout le monde finirait avec un score moyen, et le résultat ne voudrait plus dire grand-chose. Par exemple :",
       "tableau": {
         "titre": "Trois réponses, trois poids",
         "entete": [
@@ -80,7 +80,7 @@
           "texte": "On ne note plus deux personnes, on note une histoire : ce que vous avez fait ensemble, où vous l'avez fait, et ce que vous vous êtes caché. Les réponses se disent à voix haute, ce qui rend le mode nettement plus dangereux."
         }
       ],
-      "p2": "Le mode couple et le <a class=\"pu-lien-int\" href=\"{{testCouple}}\">test de couple classique</a> ne se marchent pas dessus : l'un mesure ce que vous avez fait, l'autre où en est la relation aujourd'hui. Les faire à la suite donne deux lectures très différentes du même couple.",
+      "p2": "Le mode couple ne fait pas doublon avec le test de couple : l'un mesure ce que vous avez fait ensemble, l'autre <a class=\"pu-lien-int\" href=\"{{testCouple}}\">où en est votre relation aujourd'hui</a>. Les faire à la suite donne deux lectures très différentes du même couple.",
       "encart": {
         "titre": "Un conseil avant de lancer le mode couple",
         "texte": "Certaines questions demandent de dire tout haut des choses qui n'ont jamais été dites. Si le sujet est encore chaud entre vous, faites le mode solo chacun de votre côté et ne comparez que les scores. Le chiffre suffit à lancer la discussion sans obliger personne à détailler."
@@ -99,7 +99,7 @@
         "📱 <strong>Vie numérique</strong> : nudes, comptes secrets, messages du réveil",
         "🚨 <strong>Interdits</strong> : vols, bêtises, flagrants délits"
       ],
-      "sub1P1": "La catégorie qui fait le plus mal n'est presque jamais celle qu'on attend. Ce sont les mensonges qui font grimper le plus de scores, pas le sexe.",
+      "sub1P1": "Le détail réserve souvent des surprises : on peut avoir un score raisonnable sur le sexe et faire exploser le compteur sur les mensonges, ou l'inverse.",
       "sub2Titre": "Les six catégories du mode couple",
       "liste2": [
         "🔥 <strong>Sexe</strong> : ce que vous avez tenté, et où",
@@ -109,32 +109,32 @@
         "🚨 <strong>Transgression</strong> : casino, lieux interdits, mensonges à deux",
         "🤐 <strong>Secrets</strong> : ce que l'autre ne sait toujours pas"
       ],
-      "sub2P1": "C'est la catégorie secrets qui départage les couples. Deux couples avec exactement le même passé peuvent finir à cent points d'écart, uniquement selon ce qu'ils se sont dit."
+      "sub2P1": "La catégorie secrets note ce que l'un a caché à l'autre. Du coup, deux couples qui ont vécu à peu près les mêmes choses peuvent finir avec des scores très différents."
     },
     "s5": {
       "titre": "Un score élevé, c'est grave ?",
-      "citation": "Un score haut ne dit pas que vous êtes quelqu'un de bien ou de mal. Il dit que vous avez fait des choses.",
-      "p1": "Certaines sont des souvenirs de soirée, d'autres sont des erreurs, et le test ne fait pas la différence : il compte, c'est tout. La lecture, c'est vous qui la faites.",
-      "p2": "Là où le résultat devient intéressant, c'est quand deux personnes le comparent. Trois cents points d'écart entre deux partenaires, ce n'est pas un problème en soi, mais ça explique souvent des tensions qu'on n'arrivait pas à nommer. À l'inverse, deux scores très proches rassurent plus que n'importe quel <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">test de compatibilité</a>.",
+      "citation": "Un score élevé veut juste dire que vous avez vécu pas mal de choses, pas que vous êtes quelqu'un de mal.",
+      "p1": "Il y a des souvenirs de soirée et il y a des erreurs, et le test ne fait pas la différence entre les deux : il additionne des points. C'est à vous de voir ce que le chiffre raconte.",
+      "p2": "Là où le résultat devient intéressant, c'est quand deux personnes le comparent. Trois cents points d'écart entre deux partenaires, ce n'est pas un problème en soi, mais ça explique parfois des tensions qu'on n'arrivait pas à nommer. En revanche, deux scores proches ne veulent pas dire que vous êtes d'accord sur <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">vos valeurs et vos projets</a> : le test de pureté ne regarde que le passé.",
       "encart": {
         "titre": "Et si le score de l'autre fait mal",
-        "texte": "Ça arrive. Le test parle de tout un passé, dont la plus grande partie s'est déroulée avant vous. Ce qui compte n'est pas le chiffre, c'est ce que la personne accepte de vous raconter derrière."
+        "texte": "Ça arrive. Le test parle de tout un passé, et la plus grande partie s'est souvent passée avant vous. Le plus utile, c'est ce que la personne accepte de vous raconter derrière le chiffre."
       }
     }
   },
   "faq": {
     "q1": "Le test de pureté est gratuit ?",
-    "a1": "Oui, entièrement. Pas de compte à créer, pas d'e-mail à donner, pas de version payante qui débloquerait le vrai résultat. Vous répondez, vous avez votre score, c'est fini.",
+    "a1": "Oui, entièrement. Il n'y a ni compte à créer, ni e-mail à donner, ni version payante : vous répondez aux questions et votre score s'affiche à la fin.",
     "q2": "Mes réponses sont enregistrées quelque part ?",
     "a2": "Non. Aucune réponse individuelle n'est stockée. Seul le score final est enregistré, sans rien qui permette de remonter à vous, et il ne sert qu'à calculer la moyenne et la courbe affichées sur la page.",
     "q3": "Combien de temps ça prend ?",
-    "a3": "Cinq à sept minutes pour les cinquante questions en solo. En couple c'est plus long, parce que vous allez vous arrêter pour discuter au moins trois fois, et c'est un peu le but.",
+    "a3": "Cinq à sept minutes pour les cinquante questions en solo. En couple, c'est plus long, parce que vous allez forcément vous arrêter pour en discuter !",
     "q4": "C'est quoi un bon score ?",
     "a4": "Il n'y en a pas. La majorité des gens se situent entre 25 et 40 % du maximum, soit un résultat autour de 250 à 350 points. En dessous vous êtes très sage, au-dessus vous avez un passif, mais aucun des deux n'est mieux que l'autre.",
     "q5": "On peut le faire à plus de deux ?",
     "a5": "Le mode couple est prévu pour deux. Rien n'empêche en revanche toute une bande de faire le mode solo chacun de son côté et de comparer les scores après : c'est même le meilleur usage du test quand vous êtes plusieurs.",
     "q6": "À partir de quel âge ?",
-    "a6": "Le test demande votre âge avant de commencer. En dessous de 16 ans, une version tout public est servie, et le <a href=\"/quiz-couple-ado/\">quiz de couple ado</a> est sans doute plus adapté : elle retire les questions sur le sexe explicite et les drogues, et garde tout ce qui touche aux mensonges, à la famille, aux soirées et aux secrets.",
+    "a6": "Le test demande votre âge avant de commencer. En dessous de 16 ans, il passe à une version tout public, qui retire les questions sur le sexe explicite et les drogues et garde tout ce qui touche aux mensonges, à la famille, aux soirées et aux secrets. Pour un couple d'ados, le <a href=\"/quiz-couple-ado/\">quiz de couple ado</a> est sans doute plus adapté.",
     "titre": "Les questions qu'on nous pose"
   },
   "suite": {
@@ -174,8 +174,8 @@
     ]
   },
   "meta": {
-    "titre": "Test de pureté spécial couple | En ligne & gratuit",
-    "description": "Test de pureté couple : 50 questions, un score sur 899, et le détail par catégorie. Faites-le seul ou à deux, puis comparez avec votre partenaire. Gratuit, sans inscription."
+    "titre": "Test de pureté : 50 questions, seul ou en couple | Gratuit",
+    "description": "Le test de pureté en 50 questions : seul, pour avoir votre score perso, ou à deux, pour celui de votre couple. Résultat détaillé par catégorie. Gratuit, sans inscription."
   },
   "moteur": {
     "noscript": "Ce test a besoin de JavaScript pour fonctionner. Activez-le puis rechargez la page.",
@@ -242,6 +242,6 @@
     "hero_jauge_moyenne": "Score moyen"
   },
   "jsonLd": {
-    "about": "test de pureté en couple"
+    "about": "test de pureté"
   }
 }
