@@ -634,3 +634,17 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
   transition: border-color .15s ease;
 }
 .bilan-celib-tests a:hover, .bilan-celib-tests a:focus-visible { border-color: hsl(var(--primary)); }
+
+/* Seul(e), en couple : ce que l'évaluation seul(e) apporte, avant les
+   prénoms (25 octobre 2026, l'autre n'étant imaginé(e) que sur les sujets
+   qui comptent le plus). */
+.bilan-apport { margin: 1.1rem 0 .25rem; padding: .9rem 1rem; border-radius: .9rem; background: hsl(var(--secondary) / .08); }
+.bilan-apport-titre { margin: 0 0 .5rem; font-weight: 700; color: hsl(var(--foreground)); }
+.bilan-apport-liste { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
+.bilan-apport-liste li { position: relative; padding-left: 1.65rem; line-height: 1.5; }
+.bilan-apport-liste li::before {
+  content: '✓'; position: absolute; left: 0; top: .12em; width: 1.15rem; height: 1.15rem; border-radius: 50%;
+  display: grid; place-items: center; font-size: .72rem; font-weight: 800;
+  background: hsl(var(--primary) / .16); color: hsl(var(--primary-texte));
+}
+.bilan-apport .bilan-note { margin: .6rem 0 0; }

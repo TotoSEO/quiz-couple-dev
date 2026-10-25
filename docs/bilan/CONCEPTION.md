@@ -1398,3 +1398,50 @@ intéresserait, et garder l'adresse de ceux qui veulent être prévenus.
   laissent leur adresse. Elle devra être autre chose que les tests
   célibataires gratuits du site, sinon elle n'a pas d'intérêt ; un sujet
   que personne ne coche peut aussi dire quel test gratuit retirer.
+
+## 25 octobre 2026 : l'évaluation seul(e), en couple, raccourcie
+
+La quatrième proposition du matin, validée avec les trois autres (« Ok pour
+tout »), et la demande de Thomas le même jour : « améliore l'évaluation je
+suis en couple mais je la fais seul ». En solo, chaque question demandait
+deux réponses, la sienne puis celle qu'on prête à l'autre : deux cents
+écrans. Sur 135 évaluations seul(e), une dizaine étaient allées au bout, et
+les arrêts se groupaient dans le premier domaine, là où l'écran « selon
+vous » apparaît pour la première fois.
+
+- **La règle** (`C.percuDemande`) : dans chaque domaine, les sujets décisifs,
+  puis les questions qui pèsent le plus, dans l'ordre du domaine, jusqu'à
+  trois (`PERCU_PAR_DOMAINE`). Selon la situation, 34 à 38 perceptions au
+  lieu de 100, soit 134 à 138 écrans au lieu de 200 (136 dans la situation
+  par défaut). Toutes les questions décisives restent demandées, dans toutes
+  les situations (test sur les 96 situations et les réponses à enf1).
+- **Les autres options regardées** : les seuls sujets décisifs (8 à 13
+  perceptions, 108 à 113 écrans, mais sept domaines sans aucune comparaison
+  dans certaines situations), les questions de poids 3 (115 à 120 écrans).
+  Trois par domaine garde une comparaison partout, radar compris.
+- **Le parcours** : la page ne montre « Et selon vous, que répondrait X ? »
+  que sur ces questions (`percuDemandee`), y compris en revenant en arrière.
+  `progression` et `complet` n'attendent la perception que là. Une
+  évaluation commencée avant garde ses perceptions, toutes comparées, et ne
+  demande ensuite que celles qui manquent parmi les nouvelles.
+- **Le rapport garde tous ses chapitres**, et aucune réponse ne disparaît :
+  une réponse sans perception est rangée dans son domaine, sous « Vos autres
+  réponses », sans comparaison ; les « qui s'en occupe » restent au chapitre
+  des rôles avec le seul repère de la personne ; une question d'état compte
+  dans son climat et ses signaux (le climat prêté à l'autre ne compte que
+  les questions où on l'a imaginé(e)). La part d'ombre se calcule sur les
+  perceptions demandées, la couverture compte toujours cent questions.
+  Le rapport d'exemple seul(e) passe de 34 à 28 pages ; `solo-ombre` garde
+  une perception partout, pour vérifier les évaluations d'avant.
+- **Le départ dit ce que le seul apporte** (`apportSolo`) : le regard sur
+  les douze domaines, là où on pense être d'accord avec l'autre sur les
+  sujets qui comptent le plus, et ses zones d'ombre ; cent questions,
+  environ 25 minutes, avec la pause possible. Les textes qui disaient
+  « puis à la place de l'autre » partout (carte du mode seul(e), page de
+  vente, FAQ, aperçu de l'écran « rapport prêt », « Comment lire ce
+  rapport », zones d'ombre, rôles) disent « sur les sujets qui comptent le
+  plus ». La FAQ ne parle plus de « sept questions au début » (six, posées
+  au fil des domaines depuis le matin).
+- **Ce qu'il faut regarder ensuite** : la part de seul(e)s qui vont au bout,
+  dans l'entonnoir de l'onglet Évaluation (colonne Seul(e)), et les arrêts
+  par domaine.
