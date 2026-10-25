@@ -1602,3 +1602,86 @@ existent dans les cinq langues, écrites dans chacune plutôt que traduites mot
 à mot. Au passage, deux réponses anglaises de la question sur l'argent, que la
 section cite, sont devenues « Separate money, we split the bills » et
 « Separate money, case by case » (« Each our own money » ne se dit pas).
+
+## 25 octobre 2026 au soir : l'adresse au départ, pour la reprise
+
+Thomas : « je viens de capter mais en fait on a pas de campagne mail pour les
+gens qui ont commencé le bilan mais qui ne sont pas allés au bout ? Il
+faudrait faire en sorte que les gens qui commencent le bilan doivent rentrer
+leur mail, comme ça s'ils ne finissent pas on peut les retarget non ? ou alors
+c'est déjà le cas ».
+
+### Ce qui existait, et pourquoi rien n'est parti
+
+L'e-mail de reprise existe depuis le 24 octobre (`messageReprise` : 48 heures
+sans rien de neuf, une seule fois par personne, la variante « moi » à qui n'a
+pas fini, celle du tout début sous deux réponses). Il ne part qu'à une adresse
+donnée sous la phrase qui l'annonce (`a_reprise`, `b_reprise`). Or depuis le
+21 octobre l'adresse se donnait à la fin de ses propres questions, où il n'y
+a plus rien à reprendre : seuls ceux qui avaient tapé leur adresse dans
+« Recevoir mon lien par e-mail » pouvaient la recevoir. L'export du
+25 octobre à 13 h disait `reprises_moi : 0`.
+
+Sur le même export, depuis le 21 octobre : près de 230 évaluations créées,
+39 finies par leur créateur, donc 190 arrêtées sans adresse. Les arrêts :
+85 dans les écrans de situation, 94 dans le premier domaine (alors « le
+quotidien »), 14 dans « le temps à deux », le reste éparpillé. Près de neuf
+arrêts sur dix tombent dans les premières minutes.
+
+### Pourquoi au départ, et pas après le premier domaine
+
+- **Une adresse demandée après le premier domaine** aurait manqué près de
+  neuf arrêts sur dix.
+- **Ce que le champ coûte** : le 20 octobre, l'adresse était obligatoire à la
+  création (et le départ avait plus d'écrans), et 19 créateurs ont fini pour
+  172 clics sur « Commencer » (11 %, alors que les clics étaient comptés à
+  chaque clic ce jour-là, la vraie part était donc plus haute). Du 22 au
+  25 octobre, sans adresse au départ : 29 pour 345 (8,4 %). Le champ retirait
+  surtout des curieux qui ne seraient pas allés au bout. Les nombres sont
+  petits, mais rien ne dit qu'il coûte des évaluations finies.
+- **L'adresse est obligatoire de toute façon** pour recevoir le rapport :
+  quiconque finit la donne.
+
+### Ce qui a changé
+
+- Le champ de l'adresse est sur l'écran de départ (à deux, et seul(e) en
+  couple), sous les prénoms et les genres, avant la case, et sur l'écran de
+  l'invitation du partenaire. Il est obligatoire. La phrase dessous
+  (`creation.emailAideDepart`, `solo.creation.emailAideDepart`) dit tous les
+  e-mails qui partiront : le lien du rapport, le « prêt », une fois si l'on
+  s'arrête en route ou si l'autre tarde, une fois si le rapport attend encore
+  le lendemain, et que l'adresse ne sert à rien d'autre.
+- La page envoie `email`, `rappel: true` et `reprise: true` à `creer` et à
+  `consentir` ; le serveur pose `a_reprise` ou `b_reprise`.
+- Un domaine mal tapé (gmial.com, hotmial.com…) se corrige d'un geste, avec
+  la table de la porte des résultats (capture.js).
+- L'écran de l'adresse à la fin ne sert plus qu'à une évaluation créée sans
+  adresse, par une page ouverte avant la mise en ligne.
+- **Les plafonds d'envoi** : jusque-là, la reprise partageait avec le « prêt »
+  et le rappel un plafond de quarante e-mails par jour. Avec une quarantaine
+  de reprises attendues chaque jour, elle l'aurait vidé dès le matin, et le
+  « prêt » du soir, l'e-mail qui vend (3 ventes pour 16 envoyés), ne serait
+  pas parti. La reprise a désormais son plafond à elle (`REPRISES_PAR_JOUR`,
+  quarante) et passe après tout le reste : plus aucune dès que l'évaluation a
+  envoyé soixante e-mails dans la journée, tous genres confondus
+  (`ENVOIS_AVANT_RESERVE`), pour que le plan Resend (cent par jour) garde
+  toujours la place du lien d'un rapport payé. Des compteurs illisibles la
+  retiennent jusqu'au passage suivant. Les plus récentes partent d'abord :
+  quand le plafond en retient, ce sont les plus anciennes qui attendent, et
+  une reprise ne part jamais des jours après sa date.
+- Dans l'admin, les erreurs du départ comptent l'adresse vide (`email`) et mal
+  écrite (`email_faux`), et la ligne « écran de l'adresse » a quitté
+  l'entonnoir (son compte, qui ne concerne plus que les anciennes
+  évaluations, est écrit dessous).
+
+### Ce qu'il faut regarder
+
+- Dans l'onglet Évaluation, la part des écrans de départ qui deviennent une
+  évaluation (55 à 60 % avant), les erreurs `email` et `email_faux`, et
+  surtout les créateurs qui finissent, rapportés aux clics sur « Commencer ».
+- Sous « Délais, rapports PDF et e-mails » : les reprises envoyées
+  (`reprises_moi`), celles qui ont été suivies d'une évaluation finie ou
+  payée.
+- Si le champ coûte trop au départ (moins d'évaluations créées et moins de
+  créateurs au bout pour autant de clics), le repli est l'adresse demandée
+  après le premier domaine, pour sauvegarder sa progression.

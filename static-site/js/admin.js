@@ -845,7 +845,7 @@
     'cases_manquantes', 'cases_manquantes_solo', 'paiements_ouverts', 'paiements_ouverts_solo', 'payes', 'payes_solo'];
   // Les étapes d'une personne arrêtée qui ne sont pas des domaines.
   var ARRETS_HORS_DOMAINES = { situation: 'à la situation, avant la première question', email: 'à l\'écran de l\'adresse, tout répondu', invitation: 'invitation pas acceptée' };
-  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'case de l\'accord pas cochée', autre: 'autre' };
+  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', email: 'adresse e-mail vide', email_faux: 'adresse e-mail mal écrite', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'case de l\'accord pas cochée', autre: 'autre' };
   // Une colonne de l'entonnoir : chaque barre en part de la première étape,
   // le pourcentage de droite en part de l'étape d'avant, ou de celle que
   // l'étape nomme (e[3]) quand elle ouvre une autre suite (le partenaire).
@@ -1079,35 +1079,36 @@
       // Depuis le 25 octobre 2026, la situation se donne au fil des domaines :
       // la première clé arrive après le premier domaine (« Le temps à deux »),
       // donc après la première réponse.
-      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)',
+      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)',
         'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      // Depuis le 25 octobre 2026, l'adresse se donne au départ : l'écran de
+      // l'adresse à la fin ne concerne plus que les évaluations créées sans
+      // elle, son compte est sous l'entonnoir.
       var duo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', aDeux('ctas')],
-        ['Écran de départ vu', 'façon de faire, prénoms et la case', aDeux('departs')],
+        ['Écran de départ vu', 'façon de faire, prénoms, adresse e-mail et la case', aDeux('departs')],
         ['Évaluation créée', 'le formulaire de départ est validé', aDeux('crees')],
         ['Le créateur a commencé', 'sa première réponse', aDeux('commences_a')],
         ['Situation ouverte', 'la première question de situation affichée, avant «\u00a0Le quotidien\u00a0»', aDeux('situations_vues')],
         ['Situation commencée', 'la première réponse de situation, par l\'un ou l\'autre', aDeux('situations')],
-        ['Le créateur a vu l\'écran de l\'adresse', 'toutes ses questions répondues', Math.max(0, aDeux('emails_vus') - et.emails_vus_b)],
-        ['Le créateur a fini', 'adresse donnée', aDeux('finis_a')],
+        ['Le créateur a fini', 'toutes ses réponses, et son adresse', aDeux('finis_a')],
         ['Invitation ouverte', 'l\'écran d\'accueil du partenaire ; % des évaluations créées', et.invitations_vues, 2],
-        ['Le partenaire a rejoint', 'prénom et la case', et.rejoints],
+        ['Le partenaire a rejoint', 'prénom, adresse e-mail et la case', et.rejoints],
         ['Le partenaire a commencé', 'sa première réponse', et.commences_b],
-        ['Le partenaire a fini', 'adresse donnée', et.finis_b],
+        ['Le partenaire a fini', 'toutes ses réponses, et son adresse', et.finis_b],
         ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', aDeux('offres_vues')],
         ['Paiement ouvert', 'page Stripe ouverte (on peut payer dès sa propre fin)', aDeux('paiements_ouverts')],
         ['Rapport payé', 'paiement confirmé par Stripe', aDeux('payes')]
       ];
-      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
       var solo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', et.ctas_solo],
-        ['Écran de départ vu', 'façon de faire, prénoms et la case', et.departs_solo],
+        ['Écran de départ vu', 'façon de faire, prénoms, adresse e-mail et la case', et.departs_solo],
         ['Évaluation créée', 'le formulaire de départ est validé', et.crees_solo],
         ['A commencé', 'sa première réponse', et.commences_a_solo],
         ['Situation ouverte', 'la première question de situation affichée, avant «\u00a0Le quotidien\u00a0»', et.situations_vues_solo],
         ['Situation commencée', 'la première réponse de situation', et.situations_solo],
-        ['A vu l\'écran de l\'adresse', 'toutes ses questions répondues', et.emails_vus_solo],
-        ['A fini', 'adresse donnée', et.finis_a_solo],
+        ['A fini', 'toutes ses réponses, et son adresse', et.finis_a_solo],
         ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', et.offres_vues_solo],
         ['Paiement ouvert', 'page Stripe ouverte', et.paiements_ouverts_solo],
         ['Rapport payé', 'paiement confirmé par Stripe', et.payes_solo]
@@ -1117,12 +1118,14 @@
         nombreBilan(et.vues) + ' visites de la page et ' + nombreBilan(et.ctas) + ' clics sur «\u00a0Commencer\u00a0» (' + partBilan(et.ctas, et.vues) + ')',
         'Erreurs sur l\'écran de départ : ' + (erreursDepart.length ? erreursDepart.map(function (x) { return nombreBilan(x.n) + ' ' + (CAUSES_DEPART_BILAN[x.cause] || x.cause) + (Number(x.solo) ? ' (dont ' + nombreBilan(x.solo) + ' seul(e))' : ''); }).join(', ') : 'aucune'),
         'Clics sur «\u00a0Débloquer\u00a0» sans la case cochée : ' + nombreBilan(aDeux('cases_manquantes')) + ' à deux, ' + nombreBilan(et.cases_manquantes_solo) + ' seul(e)',
+        'Écran de l\'adresse à la fin des questions (évaluations créées sans adresse, avant le 25 octobre 2026 au soir) : ' + nombreBilan(Math.max(0, aDeux('emails_vus') - et.emails_vus_b)) + ' créateurs à deux, ' + nombreBilan(et.emails_vus_b) + ' partenaires, ' + nombreBilan(et.emails_vus_solo) + ' seul(e)',
         'Écran d\'attente vu (à deux, offre repliée) : ' + nombreBilan(et.attentes_vues)
       ];
       var debutVu = serie.length && String(serie[0].jour) < DEBUT_ETAPES_BILAN;
       place('admin-bilan-entonnoir', serieEtapes.length
         ? '<p class="bil-note-etapes">' + (debutVu ? 'Depuis le 21 octobre 2026, jour du nouveau départ (le 21 mélange l\'ancien et le nouveau). ' : '') +
           'Jusqu\'au 25 octobre 2026, la situation se donnait en bloc avant la première réponse ; depuis, au fil des domaines, après la première réponse. ' +
+          'Du 21 au 25 octobre 2026, l\'adresse e-mail se donnait à la fin de ses propres questions ; depuis le 25 au soir, au départ, pour la reprise. ' +
           'Le compte «\u00a0à deux\u00a0» est le total moins le compte seul(e).</p>' +
           '<div class="bil-colonnes">' + colonneEtapesBilan('À deux', duo, cDeux) + colonneEtapesBilan('Seul(e)', solo, cSolo) + '</div>' +
           '<ul class="bil-faits-etapes">' + faitsEtapes.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>'

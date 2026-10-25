@@ -95,13 +95,16 @@ export function creerStockageRest({ url, cle, fetch: f = fetch }) {
     // donnée sous l'annonce de la reprise, pas encore de reprise, et des
     // réponses pas finies (les siennes, ou à deux celles de l'autre). La même
     // règle que bilan_relances_dues() ; le serveur revérifie ligne par ligne.
+    // Les plus récentes d'abord (25 octobre 2026) : quand le plafond du jour
+    // retient des reprises, ce sont les plus anciennes qui attendent, et une
+    // reprise ne part jamais des jours après la date prévue pour toutes.
     async aReprendre(avantIso, depuisIso, limite) {
       const n = limite || 25;
       const a = 'and(a_reprise.is.true,a_reprise_le.is.null,a_email.not.is.null,a_consent.not.is.null,or(a_fini.is.null,and(mode.eq.duo,b_fini.is.null)))';
       const b = 'and(mode.eq.duo,b_reprise.is.true,b_reprise_le.is.null,b_email.not.is.null,b_consent.not.is.null,or(b_fini.is.null,a_fini.is.null))';
       const r = await appel(base + '?paye_le=is.null&rappels_off=is.false&maj_le=lt.' + encodeURIComponent(avantIso)
         + '&cree_le=gt.' + encodeURIComponent(depuisIso) + '&or=(' + a + ',' + b + ')'
-        + '&select=*&order=maj_le.asc&limit=' + n, { headers: entetes() });
+        + '&select=*&order=maj_le.desc&limit=' + n, { headers: entetes() });
       return r.json();
     },
     async compter(evenement, cleCompteur, montant) {
@@ -226,7 +229,7 @@ export function creerStockageMemoire() {
       const a = (l) => l.a_reprise && !l.a_reprise_le && l.a_email && l.a_consent && (!l.a_fini || (duo(l) && !l.b_fini));
       const b = (l) => duo(l) && l.b_reprise && !l.b_reprise_le && l.b_email && l.b_consent && (!l.b_fini || !l.a_fini);
       return [...lignes.values()].filter((l) => !l.paye_le && !l.rappels_off && l.maj_le < avantIso && l.cree_le > depuisIso && (a(l) || b(l)))
-        .sort((x, y) => x.maj_le.localeCompare(y.maj_le)).slice(0, limite || 25).map(copie);
+        .sort((x, y) => y.maj_le.localeCompare(x.maj_le)).slice(0, limite || 25).map(copie);
     },
     async compter(evenement, cle, montant) { compteurs.push({ evenement, cle: cle || '', montant: montant || 0 }); },
     async enregistrerCelib(ligne) {

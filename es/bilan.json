@@ -50,6 +50,8 @@
       "accordManque": "Marca la casilla para continuar.",
       "email": "Tu e-mail",
       "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
+      "emailAideDepart": "El enlace a tu informe en PDF irá a esta dirección, y te permite recuperar tu evaluación si cierras la página. Te escribiremos cuando el informe esté listo, una vez si lo dejas a medias o si {{autre}} tarda en terminar, y una vez si al día siguiente sigue esperando. No se usa para nada más.",
+      "emailSuggestion": "¿Querías decir {{email}}?",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
       "autreDefaut": "tu pareja",
@@ -226,6 +228,7 @@
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
         "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
+        "emailAideDepart": "El enlace a tu informe en PDF irá a esta dirección, y te permite recuperar tu evaluación si cierras la página. Te escribiremos una vez si lo dejas a medias, y una vez si al día siguiente tu informe sigue esperando. No se usa para nada más.",
         "apportTitre": "Lo que te aporta la evaluación a solas",
         "apport": [
           "Tu mirada sobre las doce áreas de vuestra pareja, del día a día a la intimidad",

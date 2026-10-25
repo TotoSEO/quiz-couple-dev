@@ -50,6 +50,8 @@
       "accordManque": "Cochez la case pour continuer.",
       "email": "Votre e-mail",
       "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
+      "emailAideDepart": "Le lien de votre rapport PDF partira à cette adresse, et elle vous permet de retrouver votre évaluation si vous fermez la page. On vous écrira quand le rapport sera prêt, une fois si vous vous arrêtez en route ou si {{autre}} tarde à finir, et une fois s'il attend encore le lendemain. Elle ne sert à rien d'autre.",
+      "emailSuggestion": "Vous vouliez dire {{email}} ?",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
       "autreDefaut": "votre partenaire",
@@ -226,6 +228,7 @@
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation",
         "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
+        "emailAideDepart": "Le lien de votre rapport PDF partira à cette adresse, et elle vous permet de retrouver votre évaluation si vous fermez la page. On vous écrira une fois si vous vous arrêtez en route, et une fois si votre rapport attend encore le lendemain. Elle ne sert à rien d'autre.",
         "apportTitre": "Ce que l'évaluation seul(e) vous apporte",
         "apport": [
           "Votre regard sur les douze domaines de votre couple, du quotidien à l'intimité",

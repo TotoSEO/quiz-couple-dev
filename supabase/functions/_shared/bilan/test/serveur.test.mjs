@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as C from '../coeur.mjs';
-import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, empreinte } from '../serveur.mjs';
+import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, REPRISES_PAR_JOUR, ENVOIS_AVANT_RESERVE, RAPPELS_PAR_JOUR, empreinte } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
 import { verifierSignature, signer, encoderFormulaire } from '../stripe.mjs';
 
@@ -1025,6 +1025,138 @@ test('reprise : sans les colonnes en base (migration pas encore passée), l\'adr
   // Une autre erreur de la base, elle, remonte.
   stockage.maj = async () => { throw new Error('base 500 panne'); };
   await assert.rejects(() => appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', rappel: true, reprise: true }), /panne/);
+});
+
+// ── L'adresse au départ (25 octobre 2026) ────────────────────────────────
+
+test('adresse au départ : la reprise part à qui s\'arrête en route, créatrice comme partenaire', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const relancer = async () => (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  // Léa donne son adresse en créant, sous la phrase qui annonce les e-mails.
+  const r = await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' }, email: 'Lea@Exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  assert.equal(r.statut, 200);
+  const c = r.json;
+  assert.equal(stockage.lignes.get(c.id).a_email, 'lea@exemple.fr');
+  assert.equal(stockage.lignes.get(c.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).a_reprise, true);
+  // La fin des questions ne la redemandera pas.
+  assert.equal(c.etat.moi.email, 'lea@exemple.fr');
+  assert.equal(c.etat.moi.rappel, true);
+  // Tom accepte l'invitation avec la sienne.
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Tom', genre: 'h', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  assert.equal(ok.statut, 200);
+  assert.equal(stockage.lignes.get(c.id).b_email, 'tom@exemple.fr');
+  assert.equal(stockage.lignes.get(c.id).b_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).b_reprise, true);
+  assert.equal(ok.json.etat.moi.rappel, true);
+  // Une adresse fausse est refusée, rien n'est enregistré.
+  const autre = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Ana' }, autre: { prenom: 'Bo' }, consentement: true, majeur: true })).json;
+  assert.equal((await appel({ action: 'consentir', id: autre.id, jeton: autre.invitation, prenom: 'Bo', email: 'bo@', rappel: true, reprise: true, consentement: true, majeur: true })).statut, 400);
+  assert.equal(stockage.lignes.get(autre.id).b_consent, null);
+  // Aucun des deux ne répond : 48 heures plus tard, chacun reçoit la reprise
+  // du tout début, une seule fois.
+  const avant = courriel.envoyes.length;
+  plus(47);
+  assert.equal((await relancer()).reprises, 0);
+  plus(2);
+  assert.equal((await relancer()).reprises, 2);
+  const m = courriel.envoyes.slice(avant);
+  assert.deepEqual(m.map((x) => x.a).sort(), ['lea@exemple.fr', 'tom@exemple.fr']);
+  for (const x of m) {
+    assert.equal(x.sujet, 'Votre évaluation vous attend');
+    assert.ok(x.texte.includes('Vos cent questions vous attendent'), x.texte);
+  }
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jetonDe(m.find((x) => x.a === 'tom@exemple.fr')) })).json.role, 'b');
+  plus(72);
+  assert.equal((await relancer()).reprises, 0, 'jamais deux fois');
+  // Une page ouverte avant la mise en ligne crée sans adresse : pas de reprise.
+  const ancienne = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Zoé' }, autre: { prenom: 'Max' }, consentement: true, majeur: true })).json;
+  assert.equal(stockage.lignes.get(ancienne.id).a_reprise, false);
+  assert.equal(ancienne.etat.moi.email, null);
+});
+
+test('reprise : son propre plafond, et jamais au détriment du « prêt » ni du rapport payé', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const relancer = async () => (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const creer = async (prenom, ip) => (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom }, autre: { prenom: 'Tom' }, email: prenom.toLowerCase() + '@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true }, ip)).json;
+  const compteurs = (evenement, n) => { for (let i = 0; i < n; i++) stockage.compteurs.push({ evenement, cle: '', montant: 0 }); };
+  const vider = () => { stockage.compteurs.length = 0; };
+  // Deux évaluations arrêtées, l'une plus récente que l'autre.
+  const vieille = await creer('Ana', '1.1.1.1');
+  plus(5);
+  const recente = await creer('Bea', '2.2.2.2');
+  plus(49);
+  // Il ne reste qu'une reprise possible dans la journée : la plus récente
+  // passe d'abord.
+  compteurs('reprise_envoye', REPRISES_PAR_JOUR - 1);
+  const avant = courriel.envoyes.length;
+  const r = await relancer();
+  assert.equal(r.reprises, 1);
+  assert.equal(r.plafond, true);
+  assert.deepEqual(courriel.envoyes.slice(avant).map((x) => x.a), ['bea@exemple.fr']);
+  assert.ok(stockage.lignes.get(recente.id).a_reprise_le);
+  assert.equal(stockage.lignes.get(vieille.id).a_reprise_le, null);
+  // Le « prêt » et le rappel ont leur plafond à eux : plein, il ne retient
+  // pas la reprise.
+  vider();
+  compteurs('pret_envoye', RAPPELS_PAR_JOUR);
+  assert.equal((await relancer()).reprises, 1);
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'ana@exemple.fr');
+  // Le plafond des reprises plein, le « prêt » part toujours : Ana finit,
+  // Tom accepte, finit, et Ana est prévenue.
+  vider();
+  compteurs('reprise_envoye', REPRISES_PAR_JOUR);
+  assert.equal((await appel({ action: 'repondre', id: vieille.id, jeton: vieille.jeton, reponses: tout, nn: [], fini: true })).json.fini, true);
+  const ok = await appel({ action: 'consentir', id: vieille.id, jeton: vieille.invitation, prenom: 'Tom', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  const avantPret = courriel.envoyes.length;
+  assert.equal((await appel({ action: 'repondre', id: vieille.id, jeton: ok.json.jeton, reponses: tout, nn: [], fini: true })).json.fini, true);
+  const pret = courriel.envoyes.slice(avantPret);
+  assert.deepEqual(pret.map((x) => x.a), ['ana@exemple.fr']);
+  assert.equal(pret[0].sujet, 'Tom a fini\u00a0: votre rapport est prêt');
+  // La réserve du jour : soixante e-mails de l'évaluation, tous genres
+  // confondus, et plus aucune reprise.
+  const troisieme = await creer('Cleo', '3.3.3.3');
+  plus(49);
+  vider();
+  compteurs('envoi_ok', ENVOIS_AVANT_RESERVE - 10);
+  compteurs('lien_envoye', 10);
+  const avantReserve = courriel.envoyes.length;
+  const rr = await relancer();
+  assert.equal(rr.reprises, 0);
+  assert.equal(rr.plafond, true);
+  // Le rappel d'Ana et de Tom, prêts depuis plus d'un jour, part, lui.
+  assert.equal(rr.relances, 2);
+  assert.ok(!courriel.envoyes.slice(avantReserve).some((x) => x.a === 'cleo@exemple.fr'));
+  assert.equal(stockage.lignes.get(troisieme.id).a_reprise_le, null, 'elle attend le lendemain');
+  // Le lendemain, elle part.
+  vider();
+  assert.equal((await relancer()).reprises, 1);
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'cleo@exemple.fr');
+});
+
+test('reprise : des compteurs illisibles la retiennent, le « prêt » part quand même', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, email: 'lea@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true })).json;
+  plus(49);
+  stockage.compteDuJour = async () => { throw new Error('base 500 panne'); };
+  const avant = courriel.envoyes.length;
+  const r = (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  assert.equal(r.reprises, 0);
+  assert.equal(courriel.envoyes.length, avant);
+  assert.equal(stockage.lignes.get(c.id).a_reprise_le, null);
+  // Le « prêt » ne dépend pas de ces compteurs-là pour partir.
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: tout, nn: [], fini: true });
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Tom', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  await appel({ action: 'repondre', id: c.id, jeton: ok.json.jeton, reponses: tout, nn: [], fini: true });
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'lea@exemple.fr');
 });
 
 test('« Où en êtes-vous ? » au départ seul(e) : compté par réponse, jamais en double', async () => {
