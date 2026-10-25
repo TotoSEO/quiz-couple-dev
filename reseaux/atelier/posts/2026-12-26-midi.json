@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-074",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Movie choices",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Their favorite again",
+            "b": "A brand new movie"
+          },
+          {
+            "a": "Subtitles on",
+            "b": "Subtitles off"
+          },
+          {
+            "a": "Talk during the movie",
+            "b": "Total silence"
+          },
+          {
+            "a": "Popcorn for two",
+            "b": "One bucket each"
+          },
+          {
+            "a": "Cinema seats",
+            "b": "Couch and blanket"
+          },
+          {
+            "a": "Stay for the credits",
+            "b": "Leave right away"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Movie choices. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

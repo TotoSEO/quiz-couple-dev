@@ -1,0 +1,30 @@
+{
+  "jour": "2026-12-27",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "noel-10",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "This year, my favorite gift was you, again.",
+        "fleurs": "feuillage",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "jour": "2026-12-26",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "dix-mais",
+  "sujet": "noel-11",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "He's a 10 but...",
+            "accroche": "Christmas edition. Is he still a 10?",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Un intérieur de Noël le soir. Le violet, à droite près du sapin, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
+                "duree": 2,
+                "decor": "noel",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "violet",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "hauts",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "question",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-sapin",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "clin",
+                        "bouche": "sourire",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "etincelles",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ],
+                "moment": "soir"
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he plays Christmas songs from November 1st"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he shakes every present to guess what's inside"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he wraps your gift in a supermarket bag"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he eats the whole advent calendar on December 1st"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he gives you socks every year"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he regifts the candle his aunt gave him"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he leaves you alone with his family all day"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he spent Christmas Eve texting his ex"
+          },
+          {
+            "type": "fin",
+            "texte": "What's he now, out of 10?",
+            "bouton": "Full game: link in bio",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "violet",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "points",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "rougit": true,
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "goutte",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "hashtags": [
+        "#hesa10but",
+        "#redflags",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

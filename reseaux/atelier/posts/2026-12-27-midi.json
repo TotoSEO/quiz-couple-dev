@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-27",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-075",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Sweet tooth",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Chocolate",
+            "b": "Candy"
+          },
+          {
+            "a": "Share one cake",
+            "b": "Two slices, two forks"
+          },
+          {
+            "a": "Dessert first",
+            "b": "Dessert for breakfast"
+          },
+          {
+            "a": "Ice cream in winter",
+            "b": "Hot cake in summer"
+          },
+          {
+            "a": "Bake it together",
+            "b": "Buy it together"
+          },
+          {
+            "a": "The last bite for you",
+            "b": "The last bite for them"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Sweet tooth. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
