@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-25T03:13:15.172Z",
+  "genere_le": "2026-10-25T08:23:04.416Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -1264,7 +1264,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1318,7 +1318,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2562,7 +2562,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-25",
+      "jour": "2026-10-26",
       "creneau": "midi"
     }
   },
@@ -2958,6 +2958,20 @@
       "vues": 170,
       "partages": 0,
       "enregistrements": 2
+    },
+    {
+      "variante_id": "7b399295-1ee6-4ec0-96e9-4e4c1fc6f7d3",
+      "releve": "j7",
+      "vues": 912,
+      "partages": 3,
+      "enregistrements": 1
+    },
+    {
+      "variante_id": "7b74d7f8-6d0c-4941-b5ae-fb739ccc9d10",
+      "releve": "j7",
+      "vues": 1647,
+      "partages": 9,
+      "enregistrements": 3
     }
   ]
 }
