@@ -49,8 +49,11 @@
   // {{prix}} et {{jours}} dans les textes de la page.
   const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
   const L = (k, d) => t(ns + ':lp.' + k, d === undefined ? '' : d);
-  // Le français colle « ? ! : ; » à leur mot.
-  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ') : String(s || '');
+  // Le français colle « ? ! : ; » et l'ouverture des guillemets à leur mot par
+  // une espace insécable, comme ins() de bilan.js (jusqu'au 25 octobre 2026,
+  // le remplacement remettait une espace ordinaire, et un « ? » pouvait partir
+  // seul à la ligne).
+  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : String(s || '');
   const e = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const x = (k, d) => e(ins(rp(L(k, d))));
   const tx = (s) => e(ins(rp(s)));
