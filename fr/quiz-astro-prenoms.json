@@ -3,8 +3,8 @@
     "badge": "Astrologie & Numérologie",
     "title": "Compatibilité amoureuse par prénom et signe astrologique",
     "highlight": "Compatibilité amoureuse",
-    "description": "Deux prénoms. Deux signes. Et quelque part entre les étoiles et les lettres de vos noms, quelque chose qui ressemble à une réponse. Ce test croise deux lectures millénaires, l'astrologie et la numérologie, pour dessiner une image de votre compatibilité.",
-    "subtitle": "Entrez vos prénoms et vos signes. Le reste appartient aux astres."
+    "description": "Écrivez vos deux prénoms et choisissez vos deux signes astrologiques : le test calcule votre compatibilité amoureuse en pourcentage. Les signes sont comparés avec l'astrologie et les prénoms avec la numérologie, et vous voyez le détail des deux.",
+    "subtitle": "Gratuit, sans inscription, et le résultat s'affiche tout de suite."
   },
   "form": {
     "name1Placeholder": "Prénom de la personne 1",
@@ -40,42 +40,42 @@
     "tryAgain": "Tester un autre couple"
   },
   "section1": {
-    "title": "Ce que ce test révèle",
-    "p1": "La compatibilité amoureuse est l'une des questions les plus anciennes que l'humanité se pose. Avant les applis de rencontre, avant les tests de personnalité, avant même les psychologues, il y avait les astres et les nombres. Deux systèmes de lecture du monde qui, chacun à sa façon, cherchent à comprendre pourquoi certaines personnes s'attirent comme des aimants, et d'autres se heurtent sans jamais vraiment se trouver.",
-    "p2": "Ce test réunit les deux. <strong>Pas pour décider à votre place.</strong> Mais pour poser un regard différent sur ce qui se joue entre deux personnes."
+    "title": "Comment ce test calcule votre compatibilité",
+    "p1": "Ce test se fait à deux, ou tout seul en pensant à quelqu'un. Il vous demande quatre choses : vos deux prénoms et vos deux signes astrologiques. Les signes sont comparés deux à deux avec l'astrologie (un Bélier avec une Balance, par exemple), et les prénoms avec la numérologie, qui donne un chiffre à chaque lettre.",
+    "p2": "Le score final mélange les deux : <strong>60 % pour les signes et 40 % pour les prénoms</strong>. À côté, vous voyez le score des signes et celui des prénoms, chacun avec un petit texte. Du coup, on sait tout de suite d'où vient le résultat."
   },
   "section2": {
-    "title": "La numérologie des prénoms : quand les lettres vibrent",
-    "p1": "En numérologie, chaque lettre de l'alphabet porte un chiffre. A vaut 1, B vaut 2, C vaut 3, et ainsi de suite jusqu'à 9, puis on recommence. Cette correspondance est l'une des plus anciennes de la tradition ésotérique occidentale, remontant aux travaux de Pythagore au VIe siècle avant notre ère. L'idée est simple mais profonde, <strong>chaque prénom est une fréquence</strong>.",
-    "p2": "Pour calculer la compatibilité entre deux prénoms, on additionne les valeurs de chaque lettre, on réduit le total à un chiffre entre 1 et 9 (sauf les \"nombres maîtres\" 11 et 22, qui gardent leur puissance propre), et on compare. Le 1 porte l'élan, l'indépendance. Le 2 cherche l'harmonie, la fusion. Le 5 veut la liberté. Deux chiffres qui se complètent créent un couple équilibré.",
-    "tip": "La numérologie des prénoms ne tient pas compte de l'orthographe exacte, elle capte la vibration des sons et des lettres. Si vous utilisez un surnom, <a href=\"/calculatrice-de-l-amour/\">testez les deux versions</a> : les résultats peuvent différer."
+    "title": "La numérologie des prénoms, lettre par lettre",
+    "p1": "En numérologie, chaque lettre vaut un chiffre de 1 à 9. A vaut 1, B vaut 2, et ainsi de suite jusqu'à I, qui vaut 9. On recommence à 1 avec J, puis encore avec S. C'est la table qu'on appelle « de Pythagore », la plus utilisée. On additionne les lettres du prénom, puis les chiffres du total, jusqu'à n'en garder qu'un. Par exemple : Léa, c'est L = 3, E = 5 et A = 1, donc 9. Tom, c'est T = 2, O = 6 et M = 4, donc 12, et 1 + 2 = 3. Léa porte le 9 et Tom le 3.",
+    "p2": "Il y a une exception : quand le total tombe sur 11 ou 22, on s'arrête là. Ce sont les « nombres maîtres ». Chaque nombre a sa réputation : le 1 décide, le 2 cherche l'harmonie, le 5 a besoin de liberté, le 9 pense aux autres, etc. Le test compare ensuite vos deux nombres avec une grille de compatibilité. Un 3 et un 6, par exemple, s'entendent très bien, alors qu'un 4 et un 5 beaucoup moins.",
+    "tip": "Le calcul prend les lettres comme vous les écrivez, sans les accents. « Zoé » et « Zoe » donnent donc le même nombre, mais pas « Mathieu » et « Matthieu » (5 et 7). Et si vous ne connaissez pas encore son signe, <a href=\"/calculatrice-de-l-amour/\">deux prénoms suffisent</a> pour la calculatrice de l'amour, qui donne un pourcentage sans aucune astrologie."
   },
   "section3": {
-    "title": "L'astrologie et les signes : l'empreinte du ciel à la naissance",
-    "p1": "Le signe astrologique ne se calcule pas, il s'hérite. C'est la position du Soleil <a href=\"/compatibilite-amoureuse-date-de-naissance/\">au moment de la naissance</a> qui le détermine. <strong>Douze signes. Quatre éléments.</strong> Le Feu (Bélier, Lion, Sagittaire), impulsif, passionné. La Terre (Taureau, Vierge, Capricorne), solide, patient. L'Air (Gémeaux, Balance, Verseau), vif, communicatif. L'Eau (Cancer, Scorpion, Poissons), profond, intuitif.",
-    "p2": "La compatibilité astrologique s'analyse d'abord à travers ces éléments. Un signe Feu et un signe Air se nourrissent mutuellement. Un signe Terre et un signe Eau se comprennent instinctivement. <strong>Mais les opposés attirent aussi.</strong>",
+    "title": "Les signes astrologiques et leurs quatre éléments",
+    "p1": "Votre signe astrologique, c'est la position du Soleil le jour de votre naissance. Il dépend du jour et du mois, et ici vous le choisissez vous-même dans la liste. Si vous préférez <a href=\"/compatibilite-amoureuse-date-de-naissance/\">partir de vos deux dates de naissance</a>, un autre test trouve vos signes tout seul, et y ajoute votre chemin de vie et votre signe chinois.",
+    "p2": "Les douze signes sont rangés en quatre familles, les éléments : le <strong>Feu</strong> (Bélier, Lion, Sagittaire), la <strong>Terre</strong> (Taureau, Vierge, Capricorne), l'<strong>Air</strong> (Gémeaux, Balance, Verseau) et l'<strong>Eau</strong> (Cancer, Scorpion, Poissons). En astrologie, c'est par là qu'on commence quand on compare deux signes. Le Feu et l'Air vont bien ensemble, tout comme la Terre et l'Eau. Deux signes du même élément ont en général les mêmes besoins.",
     "subtitle": "Les grandes affinités entre signes",
-    "p3": "Les signes du même élément partagent une compréhension naturelle. Les signes en carré créent de la friction, pas nécessairement destructrice. Les signes en opposition incarnent le paradoxe de l'attraction des contraires : <strong>deux moitiés d'un même axe</strong>."
+    "p3": "Les signes opposés dans le zodiaque, comme le Bélier et la Balance ou le Cancer et le Capricorne, ont certains des meilleurs scores du test, souvent 8 ou 9 sur 10 : chacun a ce qui manque à l'autre. Les signes « en carré », séparés par trois cases, comme le Lion et le Scorpion, ont la réputation de se heurter, et leurs scores tournent entre 3 et 5. En tout, le test a un score et un texte pour chacune des 144 combinaisons."
   },
   "section4": {
     "title": "Pourquoi croiser les deux lectures ?",
-    "p1": "L'astrologie parle de ce qu'on a reçu en naissant. La numérologie parle de ce qu'on porte dans notre prénom. <strong>Les deux lectures se complètent parce qu'elles ne disent pas la même chose.</strong>",
-    "p2": "Votre signe solaire dit comment vous aimez, en profondeur. Votre nombre de prénom dit comment vous vous reliez. Un Lion dont le prénom porte le chiffre 2 sera très différent d'un Lion dont le prénom porte le 1. Le signe donne le caractère ; le prénom nuance la façon dont ce caractère se déploie en relation.",
-    "tip": "Un score élevé ne garantit pas une relation facile. Un score plus bas n'est pas une condamnation : c'est une invitation à comprendre où l'effort portera ses fruits."
+    "p1": "Parce qu'elles ne regardent pas du tout la même chose. Votre signe dépend du jour de votre naissance, votre prénom a été choisi par vos parents, et l'un n'a rien à voir avec l'autre. Deux Lions peuvent très bien avoir des prénoms aux nombres opposés, et un couple que les signes disent compliqué peut avoir deux prénoms qui s'accordent très bien.",
+    "p2": "C'est pour ça que le résultat affiche trois scores. Prenez Emma, Balance, et Hugo, Lion : leurs signes s'entendent bien (80 %), leurs prénoms beaucoup moins (40 %), et le score global tombe à 64 %. Sans le détail, on ne saurait pas que ce sont les prénoms qui font baisser la note...",
+    "tip": "Un bon score ne garantit pas une relation facile, et un score bas ne veut pas dire que ça ne marchera pas. Regardez plutôt lequel des deux scores tire le résultat vers le bas, et parlez-en ensemble."
   },
   "section5": {
     "title": "Ce que ces chiffres ne peuvent pas dire",
-    "p1": "Ni la numérologie ni l'astrologie ne peuvent prédire si une relation va durer. <strong>Elles offrent un éclairage.</strong> Une grille de lecture. Une façon de nommer ce qu'on ressent parfois sans pouvoir l'expliquer.",
-    "p2": "Ce test est un point de départ, pas un verdict. Il peut ouvrir une conversation, confirmer une intuition, ou simplement offrir quelques minutes de plaisir. Pour une mesure qui repose sur vos réponses plutôt que sur vos dates de naissance, le <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité amoureuse</a> pose vingt questions à chacun de vous.",
-    "tip": "Si vous faites ce test avec votre partenaire, les résultats peuvent être un excellent point de départ pour une conversation sur vos différences et vos complémentarités."
+    "p1": "Ni l'astrologie ni la numérologie ne peuvent dire si votre couple va durer. Prenez le résultat comme un jeu, et comme une occasion de parler de vos caractères : « toi, tu es bien un Lion », « moi, un 9 ? Ça m'étonne », etc.",
+    "p2": "Si vous voulez un résultat qui parte de votre vie à deux, il faut passer par des questions. Il existe un test qui vous pose vingt questions à chacun sur <a href=\"/test-compatibilite-amoureuse/\">le mariage, les enfants, l'argent ou les vacances</a>, puis qui compare vos réponses.",
+    "tip": "Faites-le à deux sur le même téléphone, puis recommencez avec vos surnoms : le score des prénoms change souvent !"
   },
   "faq": {
     "title": "Questions fréquentes",
-    "q1": "La compatibilité astrologique est-elle vraiment fiable ?",
-    "a1": "L'astrologie ne prédit pas l'avenir avec précision. Ce qu'elle fait, et ce depuis des millénaires, c'est décrire des tempéraments, des façons d'être, des modes de relation. Que ce soit utile et éclairant pour beaucoup de gens, c'est indéniable.",
+    "q1": "La compatibilité astrologique est-elle fiable ?",
+    "a1": "Pas au sens scientifique : rien ne montre qu'un signe ou un prénom permette de prédire si un couple va durer. L'astrologie et la numérologie décrivent des caractères, et beaucoup de gens s'y reconnaissent, au moins en partie. Prenez le score comme un jeu, et les textes comme une bonne occasion d'en parler.",
     "q2": "Faut-il utiliser son prénom complet ou son surnom ?",
-    "a2": "En numérologie, le prénom civil est considéré comme la vibration de fond. Le surnom reflète la vibration sociale. Les deux sont intéressants. Testez les deux et voyez lequel vous parle le plus.",
-    "q3": "Mon signe est \"incompatible\" avec celui de mon partenaire, on est foutus ?",
-    "a3": "Non. Absolument pas. La compatibilité entre signes est une tendance, pas une règle. <strong>Ce sont les gens qui font les relations</strong>, pas les étoiles."
+    "a2": "Les deux marchent, mais ils ne donnent pas forcément le même score, puisque chaque lettre compte. En numérologie, on part en général du prénom de l'état civil. Si tout le monde vous appelle « Alex » et pas « Alexandre », essayez aussi avec « Alex » : le nombre passe de 3 à 6.",
+    "q3": "Mon signe est « incompatible » avec celui de mon partenaire, on est foutus ?",
+    "a3": "Non ! Le test ne dit jamais que deux signes sont incompatibles, il donne un score plus ou moins haut. Et des couples qui durent, il y en a avec toutes les combinaisons de signes. Lisez plutôt le texte du résultat : il dit où vous êtes différents, et c'est souvent le point de départ d'une bonne discussion."
   }
 }

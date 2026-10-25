@@ -238,7 +238,7 @@
   },
   "suite": {
     "titre": "Et après les chiffres ?",
-    "texte": "Un compteur dit combien de temps. Il ne dit pas comment ça va. Si vous vous demandez si c'est encore de l'amour ou déjà une habitude, on a un test pour ça : vingt questions et un résultat honnête.",
+    "texte": "Un compteur dit depuis combien de temps vous êtes ensemble, pas comment ça se passe entre vous. Si vous vous demandez si c'est encore de l'amour ou déjà une habitude, il y a un test en vingt questions pour ça.",
     "bouton": "Faire le test amour ou habitude"
   },
   "section1": {
@@ -263,7 +263,7 @@
     "title": "Depuis quand compte-t-on ? La question du premier jour",
     "p1": "La principale difficulté, la plupart du temps, ce n'est pas le calcul, c'est la date. Est-ce qu'on compte à partir du premier rendez-vous, du premier baiser, du soir où l'un a dit « je t'aime », ou du jour où on a décidé qu'on était officiellement ensemble ? Il n'y a pas de bonne réponse, et les deux membres d'un couple n'ont d'ailleurs pas toujours la même en tête.",
     "p2": "Notre conseil : prenez la date que vous fêtez déjà, celle qui vous vient quand on vous pose la question. Si vous n'en avez pas, choisissez-la ensemble, maintenant, et tranchez une bonne fois. Beaucoup de couples retiennent le premier baiser, parce que c'est un moment précis, alors que « on s'est mis ensemble » est souvent plus flou. Ceux qui se sont rencontrés sur une appli prennent parfois la date du premier message, ce qui rallonge le compteur de quelques semaines, et personne ne s'en plaint.",
-    "p3": "Certains couples comptent plutôt à partir du jour où ils ont <a href=\"/test-habiter-vivre-ensemble/\">posé leurs cartons dans le même appartement</a> : pour eux, c'est là que la vie à deux a commencé pour de bon. Si vous vous êtes séparés puis remis ensemble, à vous de voir : certains repartent de zéro, d'autres gardent la première date parce que c'est là que tout a commencé. Le compteur ne juge pas, il compte. Et quand on hésite entre deux dates, c'est peut-être qu'on ne sait plus très bien <a href=\"/test-amour-ou-habitude/\">si c'est encore de l'amour ou déjà une habitude</a>... ce qui est une autre question, et on a un test pour ça.",
+    "p3": "Certains couples comptent plutôt à partir du jour où ils ont <a href=\"/test-habiter-vivre-ensemble/\">posé leurs cartons dans le même appartement</a> : pour eux, c'est là que la vie à deux a commencé pour de bon. Si vous vous êtes séparés puis remis ensemble, à vous de voir : certains repartent de zéro, d'autres gardent la première date parce que c'est là que tout a commencé. Et quand on hésite entre deux dates, c'est peut-être qu'on ne sait plus très bien <a href=\"/test-amour-ou-habitude/\">si c'est encore de l'amour ou déjà une habitude</a>... ce qui est une autre question, et on a un test pour ça.",
     "tip": "Notez la date choisie quelque part, dans le compteur pour commencer. Dans dix ans, le souvenir des débuts sera moins net, et le chiffre sera toujours là."
   },
   "section4": {
