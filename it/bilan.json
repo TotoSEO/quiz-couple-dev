@@ -157,7 +157,7 @@
         "decisifs0": "Nessuna differenza sui temi decisivi, quelli che pesano di più in una coppia.",
         "decisifsUn": "Di cui una su un tema decisivo, uno di quelli che pesano di più in una coppia.",
         "decisifsN": "Di cui {{n}} su temi decisivi, quelli che pesano di più in una coppia.",
-        "quoi": "Il report vi dice quali e come parlarne. Poche coppie si prendono mai il tempo di fare questo punto: voi l'avete appena fatto, resta solo da leggere il risultato."
+        "quoi": "Poche coppie si prendono mai il tempo di fare questo punto: voi l'avete appena fatto, resta solo da leggere il risultato."
       },
       "contenu": [
         "Il vostro allineamento e il clima della vostra coppia, a colpo d'occhio",
@@ -170,7 +170,7 @@
         "Il report completo in PDF, con il link per scaricarlo via e-mail appena è pronto, e online per sei mesi"
       ],
       "prix": "{{prix}} per tutti e due",
-      "prixAide": "Un solo pagamento, e {{autre}} non dovrà pagare niente. Nessun abbonamento.",
+      "prixAide": "Un solo pagamento sblocca il report per tutti e due, senza abbonamento.",
       "emailLabel": "Dove ti mandiamo il report?",
       "emailPlaceholder": "tu@email.it",
       "emailAide": "Il link al PDF partirà a questo indirizzo appena avrete finito tutti e due.",
@@ -178,7 +178,7 @@
       "renonciation": "Chiedo che il report mi sia fornito non appena pronto, senza attendere la fine del periodo di recesso di 14 giorni, e riconosco di perdere il diritto di recesso una volta fornito.",
       "renonciationManque": "Spunta la casella per continuare.",
       "bouton": "Sblocca il nostro report · {{prix}}",
-      "securite": "Pagamento sicuro con Stripe (carta, Apple Pay, Google Pay). Non vediamo mai la tua carta.",
+      "securite": "Pagamento sicuro con Stripe. Non vediamo mai la tua carta.",
       "cgv": "Condizioni di vendita",
       "tva": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese.",
       "ferme": "Il pagamento online apre molto presto. La vostra valutazione è salvata: tornate su questa pagina tra qualche giorno.",
@@ -186,7 +186,26 @@
       "pretTitre": "{{moi}} e {{autre}}, il vostro report è pronto",
       "sommaire": "Cosa c'è nel vostro report",
       "emailAutre": "Riceverlo a un altro indirizzo",
-      "plie": "Sbloccare il report adesso"
+      "plie": "Sbloccare il report adesso",
+      "accroche": "Non hai ancora visto cosa ha risposto {{autre}}.",
+      "points": {
+        "reponses": "Tutte le risposte di {{autre}} accanto alle tue, domanda per domanda",
+        "ecartsN": "Per le vostre {{n}} differenze: perché contano, e come parlarne senza litigare",
+        "ecartsUn": "Per la vostra differenza: perché conta, e come parlarne senza litigare",
+        "ecarts0": "Per ogni differenza, anche piccola: perché conta, e come parlarne",
+        "accords": "Quello che vi unisce, area per area",
+        "conversationsN": "Le vostre prossime {{n}} conversazioni, nell'ordine in cui farle",
+        "conversationsUn": "La vostra prossima conversazione, e come cominciarla",
+        "climat": "Il clima della vostra coppia, e chi fa cosa in casa, secondo ciascuno",
+        "pdf": "Il report completo in PDF da tenere, e online per sei mesi"
+      },
+      "chacunSr": "Cioè {{chacun}} a testa.",
+      "cine": "Meno di un biglietto del cinema a testa.",
+      "conseiller": "Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €.",
+      "immediat": "Il report si apre qui appena hai pagato, per tutti e due, e il link al PDF parte per e-mail.",
+      "moyens": "Metodi di pagamento accettati",
+      "colle": "Il vostro report",
+      "colleBouton": "Sblocca"
     },
     "paiement": {
       "verification": "Verifica del pagamento...",
@@ -235,11 +254,26 @@
         "pretTitre": "{{moi}}, il tuo report è pronto",
         "apercu": {
           "intro": "Sugli argomenti che contano di più, le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
-          "quoi": "Il report ti dice quali e da dove cominciare. Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
+          "quoi": "Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
           "inconnusUn": "E un tema su cui non sai cosa risponderebbe {{autre}}.",
           "inconnusN": "E {{n}} temi su cui non sai cosa risponderebbe {{autre}}."
         },
-        "sommaire": "Cosa c'è nel tuo report"
+        "sommaire": "Cosa c'è nel tuo report",
+        "prix": "{{prix}}",
+        "bouton": "Sblocca il mio report · {{prix}}",
+        "accroche": "Il report ti dice a che punto sei con {{autre}}, e da dove cominciare.",
+        "points": {
+          "reponses": "Le tue risposte accanto a quello che pensi risponderebbe {{autre}}",
+          "ecartsN": "Per le tue {{n}} differenze: perché contano, e come parlarne con {{autre}}",
+          "ecartsUn": "Per la tua differenza: perché conta, e come parlarne con {{autre}}",
+          "ecarts0": "Per ogni differenza, anche piccola: perché conta, e come parlarne con {{autre}}",
+          "ombreN": "Le tue zone d'ombra: {{n}} temi su cui non sai cosa pensa {{autre}}",
+          "ombreUn": "La tua zona d'ombra: un tema su cui non sai cosa pensa {{autre}}",
+          "conversationsN": "Le tue prossime {{n}} conversazioni, nell'ordine in cui farle",
+          "conversationsUn": "La tua prossima conversazione, e come cominciarla"
+        },
+        "immediat": "Il report si apre qui appena hai pagato, e il link al PDF parte per e-mail.",
+        "colle": "Il tuo report"
       },
       "rapport": {
         "ecran": {

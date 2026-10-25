@@ -103,6 +103,8 @@
       .map((r) => ({ url: getLocalizedPath(r, lang), titre: t('common:nav.' + r, '') }))
       .filter((x) => x.titre),
     prix,
+    // Le même prix en centimes : l'écran « rapport prêt » le partage en deux.
+    prixCentimes: typeof bilanPrixCentimes !== 'undefined' ? bilanPrixCentimes : null,
     garantie: jours,
     // L'offre de l'application montre la même réduction, si le serveur
     // confirme qu'il l'appliquera (bilan.js, promoAffichee).
@@ -155,6 +157,11 @@
     amazonpay: { nom: 'Amazon Pay', svg: svgPaiement('<text x="23" y="13.2" text-anchor="middle" ' + policeMarque + ' font-weight="700" font-size="9.4" letter-spacing="-.3" fill="#232f3e">amazon</text><path d="M13.5 16.3c5.3 3.9 14 3.9 19.6-.3" fill="none" stroke="#f90" stroke-width="1.6" stroke-linecap="round"/><path d="M30.7 15.1l2.6.9-1 2.5" fill="none" stroke="#f90" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><text x="23" y="26.2" text-anchor="middle" ' + policeMarque + ' font-weight="600" font-size="8.6" fill="#232f3e">pay</text>') },
   };
   const moyens = (typeof moyensPaiement !== 'undefined' && Array.isArray(moyensPaiement) ? moyensPaiement : []).filter((m) => PICTOS_PAIEMENT[m]);
+  // Les mêmes vignettes sous le bouton de paiement de l'application
+  // (bilan.js, blocConfiance), avec un dégradé à elles : celui du haut de page
+  // reste dans le DOM une fois la page de vente masquée, et une référence
+  // url(#...) vers un dégradé masqué ne se peint pas.
+  bilanConfig.paiements = moyens.map((m) => ({ nom: PICTOS_PAIEMENT[m].nom, svg: PICTOS_PAIEMENT[m].svg.replace(/blp-cb-grad/g, 'bilan-cb-grad') }));
   const fleche = '<svg class="blp-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
   const coche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 

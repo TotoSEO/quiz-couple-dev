@@ -1445,3 +1445,97 @@ vous » apparaît pour la première fois.
 - **Ce qu'il faut regarder ensuite** : la part de seul(e)s qui vont au bout,
   dans l'entonnoir de l'onglet Évaluation (colonne Seul(e)), et les arrêts
   par domaine.
+
+## 25 octobre 2026 : l'écran « rapport prêt » revu
+
+Thomas, devant l'onglet Évaluation : « 39 personnes ont vu l'écran "rapport
+prêt" (en couple), mais seulement 3 ont payé », et l'idée du prix « divisé
+par deux en colonne […] vu que c'est un couple ».
+
+### Ce que disent les chiffres
+
+Du 21 au 25 octobre 2026 : 47 écrans « rapport prêt » vus (8 seul(e), 39 à
+deux, chaque partenaire comptant une fois), 4 pages de paiement ouvertes,
+3 ventes, 4 clics sur « Débloquer » sans la case cochée. Stripe convertit 3
+pages sur 4 : on s'arrête avant le clic, sur l'écran lui-même. Les e-mails
+ne rattrapent pas : 16 « votre rapport est prêt » envoyés pour 3 ventes, 13
+rappels pour aucune.
+
+### Ce qui freinait, en se mettant à leur place
+
+- **La curiosité était satisfaite** : le radar et les trois tuiles donnent
+  une réponse (« 72 accords, 8 écarts, ça va »), et rien ne disait ce qui
+  manquait encore.
+- **On ne voyait pas ce qu'on achetait** : le sommaire était dans la carte
+  du dessous ; la première ne montrait qu'un prix.
+- **Le prix sans repère** : 7,92 € sans rien à côté, ni par personne, ni
+  face à une séance chez un conseiller.
+- **La confiance** : une ligne grise pour Stripe, aucun moyen de paiement
+  dessiné, rien sur ce qui se passe après le paiement.
+- **Le bouton loin** : vers 1 080 px, sous le radar, exprès depuis le
+  22 octobre.
+- **Un défaut en solo** : le prix disait « pour vous deux » et le bouton
+  « Débloquer notre rapport ».
+
+### Ce qui a changé
+
+- **L'accroche** (`paywall.accroche`) : à deux, « Vous n'avez pas encore vu
+  ce que X a répondu. » C'est vrai pour tout le monde, chacun répond de son
+  côté, et c'est ce que le rapport apporte de plus que le radar. Seul(e) :
+  « Le rapport vous dit où vous en êtes avec X, et par où commencer. »
+- **Ce que contient le rapport, chiffré** (`blocPoints`, `paywall.points`) :
+  les réponses de l'autre à côté des siennes, « Pour vos 8 écarts : pourquoi
+  ça compte, et comment en parler sans vous disputer », « Vos 4 prochaines
+  conversations », le climat et qui fait quoi (à deux), les zones d'ombre
+  (seul(e)), le PDF à garder. Seulement les comptes de l'aperçu, jamais un
+  contenu, comme depuis le 21 octobre.
+- **Le prix partagé** (`blocPrix`) : à deux, les deux personnages, leur
+  prénom et leur moitié en grand (3,96 € + 3,96 €), « Moins qu'une place de
+  ciné par personne. », puis le total sous un trait, la réduction et « Un
+  seul paiement débloque le rapport pour vous deux, sans abonnement. » (la
+  phrase d'avant, « X n'aura rien à payer », contredisait la colonne de X).
+  La moitié vient du prix affiché par la page (`CFG.prixCentimes`), pour que
+  les deux colonnes fassent toujours le total écrit dessous. Dessous, la
+  séance chez un conseiller (50 à 90 €, la même phrase que les e-mails).
+- **La confiance sous le bouton** (`blocConfiance`) : le cadenas, « Paiement
+  sécurisé par Stripe », les cinq moyens de paiement de la page de vente
+  (`CFG.paiements`, dessinés par le gabarit, dégradé de la CB renommé) et
+  « Le rapport s'ouvre ici dès le paiement, pour vous deux, et le lien du PDF
+  part par e-mail. » (pas sur l'offre repliée de l'attente, où ce serait
+  faux).
+- **La barre collée** (`barreColle`, `surveillerColle`) : « Votre rapport »,
+  le prix barré et le nouveau, et « Débloquer », tant que le bloc d'achat
+  n'est pas à l'écran ; un appui y descend (le bouton de paiement est alors
+  dans l'écran, même sur 360 x 640). Elle ne paie pas elle-même : la case de
+  la renonciation se coche avant. Bande en bas sur téléphone, pastille
+  flottante sur ordinateur.
+- **Le solo** : « 7,92 € » et « Débloquer mon rapport · 7,92 € ».
+- **Ce qui n'a pas bougé** : le radar d'abord, la case et son texte mot pour
+  mot (l'e-mail du rapport la reprend), le sommaire dans la carte du
+  dessous, aucun résultat de plus avant le paiement.
+
+Le bouton est maintenant vers 1 630 px sur un téléphone de 390 x 844 (1 410
+en solo), la barre le remplace dans le premier écran. Vérification :
+`scratchpad/pret/paiement.mjs <lang> <largeur> <hauteur> <theme> duo|solo`
+(barre, descente, case manquante, page de paiement) et
+`scratchpad/pret/attente.mjs` (l'offre repliée), contre le site construit
+et la fonction en mémoire.
+
+### Ce qu'il faut regarder ensuite
+
+Les pages de paiement ouvertes rapportées aux écrans « rapport prêt » vus,
+à deux et seul(e), dans l'entonnoir de l'onglet Évaluation, sur une semaine
+au moins. Avant : 4 sur 47.
+
+### Laissé à Thomas
+
+- **La case de la renonciation** : son texte fait peur (« je reconnais
+  perdre mon droit de rétractation »), mais il reprend L221-28 13° et l'e-mail
+  du rapport le répète mot pour mot. Une phrase au-dessus qui dit pourquoi
+  elle est là (« le rapport vous est fourni tout de suite après le
+  paiement ») est possible sans toucher au texte.
+- **Une vraie date de fin de la réduction** (`PROMO_FIN`) : « jusqu'au
+  31 octobre » pousse à payer maintenant, à condition que ce soit vrai.
+- **Nommer les domaines des écarts** (« dont l'argent et les enfants ») :
+  plus de curiosité, mais c'est un morceau du résultat, au-delà de « juste
+  la synthèse ».

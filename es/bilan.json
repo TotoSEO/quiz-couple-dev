@@ -157,7 +157,7 @@
         "decisifs0": "Ninguna diferencia en los temas decisivos, los que más pesan en una pareja.",
         "decisifsUn": "Entre ellas, una diferencia en un tema decisivo, de los que más pesan en una pareja.",
         "decisifsN": "Entre ellas, {{n}} diferencias en temas decisivos, los que más pesan en una pareja.",
-        "quoi": "El informe os dice cuáles y cómo hablarlo. Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado."
+        "quoi": "Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado."
       },
       "contenu": [
         "Vuestra alineación y el clima de vuestra pareja, de un vistazo",
@@ -170,7 +170,7 @@
         "El informe completo en PDF, con su enlace de descarga por correo en cuanto está listo, y en línea durante seis meses"
       ],
       "prix": "{{prix}} para los dos",
-      "prixAide": "Un solo pago, y {{autre}} no tendrá nada que pagar. Sin suscripción.",
+      "prixAide": "Un solo pago desbloquea el informe para los dos, sin suscripción.",
       "emailLabel": "¿A dónde te enviamos el informe?",
       "emailPlaceholder": "tu@email.com",
       "emailAide": "El enlace al PDF saldrá a esta dirección en cuanto hayáis terminado los dos.",
@@ -178,7 +178,7 @@
       "renonciation": "Pido que el informe se me entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento de 14 días, y reconozco que pierdo mi derecho de desistimiento una vez entregado.",
       "renonciationManque": "Marca la casilla para continuar.",
       "bouton": "Desbloquear nuestro informe · {{prix}}",
-      "securite": "Pago seguro con Stripe (tarjeta, Apple Pay, Google Pay). Nunca vemos tu tarjeta.",
+      "securite": "Pago seguro con Stripe. Nunca vemos tu tarjeta.",
       "cgv": "Condiciones de venta",
       "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
       "ferme": "El pago en línea se abre muy pronto. Vuestra evaluación está guardada: volved a esta página dentro de unos días.",
@@ -186,7 +186,26 @@
       "pretTitre": "{{moi}} y {{autre}}, vuestro informe está listo",
       "sommaire": "Lo que hay en vuestro informe",
       "emailAutre": "Recibirlo en otra dirección",
-      "plie": "Desbloquear el informe ya"
+      "plie": "Desbloquear el informe ya",
+      "accroche": "Todavía no has visto lo que ha respondido {{autre}}.",
+      "points": {
+        "reponses": "Todas las respuestas de {{autre}} junto a las tuyas, pregunta por pregunta",
+        "ecartsN": "Para vuestras {{n}} diferencias: por qué importan, y cómo hablarlas sin discutir",
+        "ecartsUn": "Para vuestra diferencia: por qué importa, y cómo hablarla sin discutir",
+        "ecarts0": "Para cada diferencia, aunque sea pequeña: por qué importa, y cómo hablarla",
+        "accords": "Lo que os une, área por área",
+        "conversationsN": "Vuestras {{n}} próximas conversaciones, en el orden en que tenerlas",
+        "conversationsUn": "Vuestra próxima conversación, y cómo empezarla",
+        "climat": "El clima de vuestra pareja, y quién hace qué en casa, según cada uno",
+        "pdf": "El informe completo en PDF para guardar, y en línea durante seis meses"
+      },
+      "chacunSr": "Es decir, {{chacun}} cada uno.",
+      "cine": "Menos que una entrada de cine por persona.",
+      "conseiller": "Para comparar: una sesión con un consejero de pareja cuesta entre 50 y 90 €.",
+      "immediat": "El informe se abre aquí nada más pagar, para los dos, y el enlace al PDF sale por correo.",
+      "moyens": "Medios de pago aceptados",
+      "colle": "Vuestro informe",
+      "colleBouton": "Desbloquear"
     },
     "paiement": {
       "verification": "Comprobando el pago...",
@@ -235,11 +254,26 @@
         "pretTitre": "{{moi}}, tu informe está listo",
         "apercu": {
           "intro": "En los temas que más cuentan, tus respuestas se han comparado con lo que crees que respondería {{autre}}:",
-          "quoi": "El informe te dice cuáles y por dónde empezar. Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.",
+          "quoi": "Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.",
           "inconnusUn": "Y un tema en el que no sabes qué respondería {{autre}}.",
           "inconnusN": "Y {{n}} temas en los que no sabes qué respondería {{autre}}."
         },
-        "sommaire": "Lo que hay en tu informe"
+        "sommaire": "Lo que hay en tu informe",
+        "prix": "{{prix}}",
+        "bouton": "Desbloquear mi informe · {{prix}}",
+        "accroche": "El informe te dice en qué punto estás con {{autre}}, y por dónde empezar.",
+        "points": {
+          "reponses": "Tus respuestas frente a lo que crees que respondería {{autre}}",
+          "ecartsN": "Para tus {{n}} diferencias: por qué importan, y cómo hablarlas con {{autre}}",
+          "ecartsUn": "Para tu diferencia: por qué importa, y cómo hablarla con {{autre}}",
+          "ecarts0": "Para cada diferencia, aunque sea pequeña: por qué importa, y cómo hablarla con {{autre}}",
+          "ombreN": "Tus zonas de sombra: {{n}} temas en los que no sabes lo que piensa {{autre}}",
+          "ombreUn": "Tu zona de sombra: un tema en el que no sabes lo que piensa {{autre}}",
+          "conversationsN": "Tus {{n}} próximas conversaciones, en el orden en que tenerlas",
+          "conversationsUn": "Tu próxima conversación, y cómo empezarla"
+        },
+        "immediat": "El informe se abre aquí nada más pagar, y el enlace al PDF sale por correo.",
+        "colle": "Tu informe"
       },
       "rapport": {
         "ecran": {

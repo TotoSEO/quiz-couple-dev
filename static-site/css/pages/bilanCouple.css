@@ -648,3 +648,63 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
   background: hsl(var(--primary) / .16); color: hsl(var(--primary-texte));
 }
 .bilan-apport .bilan-note { margin: .6rem 0 0; }
+
+/* ── L'écran « rapport prêt », revu le 25 octobre 2026 ───────────────── */
+/* 39 couples l'avaient vu, 3 avaient payé, et sur 4 pages de paiement
+   ouvertes, 3 ventes : on s'arrêtait sur l'écran. Sous l'aperçu chiffré :
+   ce qu'on n'a pas encore vu et ce que contient le rapport, avec ses chiffres
+   (.bilan-inclus) ; le prix partagé en deux colonnes, une par personne avec
+   son personnage (.bilan-partage), puis le total ; la séance chez un
+   conseiller pour comparer ; sous le bouton, le cadenas, les moyens de
+   paiement de la page de vente et ce qui se passe une fois payé ; et une
+   barre collée en bas tant que l'achat n'est pas à l'écran (.bilan-colle,
+   une pastille flottante sur ordinateur). Aplats, sans dégradé. */
+.bilan-scene .bilan-inclus { margin: .35rem 0 1rem; padding: .95rem 1rem 1rem; border-radius: 1rem; background: hsl(var(--secondary) / .08); }
+.bilan-scene .bilan-inclus-titre { font-family: var(--blp-titre); font-weight: 600; font-size: 1.12rem; line-height: 1.28; text-align: center; margin: 0 0 .75rem; color: hsl(var(--foreground)); overflow-wrap: break-word; }
+.bilan-scene .bilan-inclus-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.bilan-scene .bilan-inclus-liste li { position: relative; padding-left: 1.75rem; font-size: .9rem; line-height: 1.42; overflow-wrap: break-word; hyphens: auto; }
+.bilan-scene .bilan-inclus-liste li::before {
+  content: '✓'; position: absolute; left: 0; top: .1em; width: 1.2rem; height: 1.2rem; border-radius: 50%;
+  display: grid; place-items: center; font-size: .72rem; font-weight: 800; background: hsl(var(--secondary)); color: #fff;
+}
+.bilan-scene .bilan-achat { scroll-margin-top: .75rem; }
+/* Le prix partagé : les deux personnages, leur prénom et leur moitié, un
+   « + » entre les deux, puis le total sous un trait. */
+.bilan-scene .bilan-offre .bilan-prix--deux { display: block; padding: .8rem .9rem .85rem; }
+.bilan-scene .bilan-partage { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; gap: 0 .35rem; max-width: 19rem; margin: .1rem auto 0; }
+.bilan-scene .bilan-part { display: grid; justify-items: center; gap: .05rem; min-width: 0; }
+.bilan-scene .bilan-part .bilan-masc { display: block; height: 3.6rem; width: auto; margin: 0 0 .2rem; }
+.bilan-scene .bilan-part-nom { max-width: 100%; font-size: .82rem; font-weight: 700; line-height: 1.25; color: hsl(var(--foreground)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bilan-scene .bilan-part-prix { font-family: var(--blp-titre); font-weight: 600; font-size: 1.7rem; line-height: 1.05; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bilan-scene .bilan-part--rose .bilan-part-prix { color: hsl(var(--primary-texte)); }
+.bilan-scene .bilan-part--violet .bilan-part-prix { color: hsl(var(--secondary-texte)); }
+.bilan-scene .bilan-part-plus { font-family: var(--blp-titre); font-size: 1.5rem; font-weight: 600; line-height: 1.05; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-offre .bilan-prix .bilan-prix-cine { margin: .4rem 0 .6rem; font-size: .8rem; font-weight: 600; color: hsl(var(--foreground)); }
+.bilan-scene .bilan-offre .bilan-prix--deux .bilan-prix-montant { font-size: 1.3rem; padding-top: .55rem; border-top: 2px dashed hsl(var(--primary) / .35); }
+.bilan-scene .bilan-prix-egal { font-weight: 500; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-offre .bilan-prix-conseiller { margin: -.1rem 0 .8rem; font-size: .78rem; line-height: 1.4; }
+/* La confiance, sous le bouton. */
+.bilan-scene .bilan-confiance { display: grid; justify-items: center; gap: .45rem; margin: .75rem 0 0; }
+.bilan-scene .bilan-confiance-ligne { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; margin: 0; font-size: .8rem; font-weight: 600; line-height: 1.35; color: hsl(var(--muted-foreground)); text-align: center; }
+.bilan-scene .bilan-confiance-ligne svg { width: 1rem; height: 1rem; flex: none; color: #2a8e62; }
+.dark .bilan-scene .bilan-confiance-ligne svg { color: #8fd4b2; }
+.bilan-scene .bilan-moyens { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+.bilan-scene .bilan-moyen { display: block; width: 2.875rem; height: 1.875rem; border-radius: .4rem; background: #fff; border: 1px solid hsl(var(--border)); overflow: hidden; }
+.dark .bilan-scene .bilan-moyen { border-color: hsl(0 0% 100% / .22); }
+.bilan-scene .bilan-moyen svg { display: block; width: 100%; height: 100%; }
+.bilan-scene .bilan-offre .bilan-immediat { margin: .1rem 0 0; font-size: .78rem; line-height: 1.4; }
+/* La barre collée. */
+.bilan-colle { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  padding: .6rem 1rem calc(.6rem + env(safe-area-inset-bottom)); background: hsl(var(--card)); border-top: 1px solid hsl(var(--border));
+  box-shadow: 0 -10px 30px -16px hsl(var(--foreground) / .35); }
+.bilan-colle[hidden] { display: none; }
+.bilan-colle-texte { min-width: 0; font-size: .9rem; line-height: 1.25; }
+.bilan-colle-nom, .bilan-colle-prix { display: block; font-weight: 700; }
+.bilan-colle-prix .prix-promo-avant { font-weight: 600; color: hsl(var(--muted-foreground)); }
+.bilan-colle-prix .prix-promo-apres { color: hsl(var(--primary-texte)); }
+.bilan-colle .btn { flex: none; }
+/* Sur un grand écran, une pastille flottante au milieu plutôt qu'une bande. */
+@media (min-width: 900px) {
+  .bilan-colle { left: 50%; right: auto; bottom: 1rem; width: min(34rem, calc(100% - 2rem)); transform: translateX(-50%);
+    padding: .6rem .7rem .6rem 1.1rem; border: 1px solid hsl(var(--border)); border-radius: 1rem; box-shadow: 0 18px 40px -18px hsl(var(--foreground) / .45); }
+}

@@ -157,7 +157,7 @@
         "decisifs0": "Kein Unterschied bei den entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
         "decisifsUn": "Davon einer bei einem entscheidenden Thema, einem von denen, die in einer Beziehung am meisten wiegen.",
         "decisifsN": "Davon {{n}} bei entscheidenden Themen, die in einer Beziehung am meisten wiegen.",
-        "quoi": "Der Bericht sagt euch, welche es sind und wie ihr darüber redet. Kaum ein Paar nimmt sich je die Zeit dafür, ihr habt es getan."
+        "quoi": "Kaum ein Paar nimmt sich je die Zeit dafür. Ihr habt es getan, jetzt müsst ihr es nur noch lesen."
       },
       "contenu": [
         "Eure Übereinstimmung und das Klima in eurer Beziehung, auf einen Blick",
@@ -170,7 +170,7 @@
         "Der vollständige Bericht als PDF, der Download-Link per E-Mail, sobald er fertig ist, und sechs Monate lang online"
       ],
       "prix": "{{prix}} für euch beide",
-      "prixAide": "Eine einzige Zahlung, und {{autre}} muss nichts bezahlen. Kein Abo.",
+      "prixAide": "Eine einzige Zahlung schaltet den Bericht für euch beide frei, ohne Abo.",
       "emailLabel": "Wohin sollen wir den Bericht schicken?",
       "emailPlaceholder": "du@email.de",
       "emailAide": "Der Link zum PDF geht an diese Adresse, sobald ihr beide fertig seid.",
@@ -178,7 +178,7 @@
       "renonciation": "Ich verlange, dass der Bericht bereitgestellt wird, sobald er fertig ist, ohne das Ende der 14-tägigen Widerrufsfrist abzuwarten, und bestätige, dass ich mein Widerrufsrecht verliere, sobald er bereitgestellt ist.",
       "renonciationManque": "Setz das Häkchen, um weiterzumachen.",
       "bouton": "Unseren Bericht freischalten · {{prix}}",
-      "securite": "Sichere Zahlung über Stripe (Karte, Apple Pay, Google Pay). Wir sehen deine Karte nie.",
+      "securite": "Sichere Zahlung über Stripe. Wir sehen deine Karte nie.",
       "cgv": "AGB",
       "tva": "Keine Umsatzsteuer, gemäß Art. 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung).",
       "ferme": "Die Online-Zahlung startet sehr bald. Eure Analyse ist gespeichert: Kommt in ein paar Tagen auf diese Seite zurück.",
@@ -186,7 +186,26 @@
       "pretTitre": "{{moi}} und {{autre}}, euer Bericht ist bereit",
       "sommaire": "Was in eurem Bericht steht",
       "emailAutre": "An eine andere Adresse schicken",
-      "plie": "Den Bericht jetzt freischalten"
+      "plie": "Den Bericht jetzt freischalten",
+      "accroche": "Du hast noch nicht gesehen, was {{autre}} geantwortet hat.",
+      "points": {
+        "reponses": "Alle Antworten von {{autre}} neben deinen, Frage für Frage",
+        "ecartsN": "Zu euren {{n}} Unterschieden: warum sie zählen und wie ihr darüber redet, ohne zu streiten",
+        "ecartsUn": "Zu eurem Unterschied: warum er zählt und wie ihr darüber redet, ohne zu streiten",
+        "ecarts0": "Zu jedem Unterschied, auch einem kleinen: warum er zählt und wie ihr darüber redet",
+        "accords": "Was euch verbindet, Bereich für Bereich",
+        "conversationsN": "Eure nächsten {{n}} Gespräche, in der Reihenfolge, in der ihr sie führen solltet",
+        "conversationsUn": "Euer nächstes Gespräch, und wie ihr es anfangt",
+        "climat": "Das Klima in eurer Beziehung, und wer zu Hause was macht, aus der Sicht von euch beiden",
+        "pdf": "Der vollständige Bericht als PDF zum Aufheben, und sechs Monate lang online"
+      },
+      "chacunSr": "Also {{chacun}} pro Person.",
+      "cine": "Weniger als eine Kinokarte pro Person.",
+      "conseiller": "Zum Vergleich: Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €.",
+      "immediat": "Der Bericht öffnet sich hier gleich nach der Zahlung, für euch beide, und der Link zum PDF geht per E-Mail raus.",
+      "moyens": "Akzeptierte Zahlungsarten",
+      "colle": "Euer Bericht",
+      "colleBouton": "Freischalten"
     },
     "paiement": {
       "verification": "Zahlung wird geprüft...",
@@ -235,11 +254,26 @@
         "pretTitre": "{{moi}}, dein Bericht ist bereit",
         "apercu": {
           "intro": "Bei den wichtigsten Themen wurden deine Antworten mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
-          "quoi": "Der Bericht sagt dir, welche es sind und wo du anfängst. Kaum jemand nimmt sich je die Zeit dafür, du hast es getan.",
+          "quoi": "Kaum jemand nimmt sich je die Zeit dafür. Du hast es getan, jetzt musst du es nur noch lesen.",
           "inconnusUn": "Und ein Thema, bei dem du nicht weißt, was {{autre}} antworten würde.",
           "inconnusN": "Und {{n}} Themen, bei denen du nicht weißt, was {{autre}} antworten würde."
         },
-        "sommaire": "Was in deinem Bericht steht"
+        "sommaire": "Was in deinem Bericht steht",
+        "prix": "{{prix}}",
+        "bouton": "Meinen Bericht freischalten · {{prix}}",
+        "accroche": "Der Bericht sagt dir, wo du mit {{autre}} stehst und wo du anfängst.",
+        "points": {
+          "reponses": "Deine Antworten neben dem, was {{autre}} deiner Meinung nach antworten würde",
+          "ecartsN": "Zu deinen {{n}} Unterschieden: warum sie zählen und wie du mit {{autre}} darüber redest",
+          "ecartsUn": "Zu deinem Unterschied: warum er zählt und wie du mit {{autre}} darüber redest",
+          "ecarts0": "Zu jedem Unterschied, auch einem kleinen: warum er zählt und wie du mit {{autre}} darüber redest",
+          "ombreN": "Deine blinden Flecken: {{n}} Themen, bei denen du nicht weißt, was {{autre}} denkt",
+          "ombreUn": "Dein blinder Fleck: ein Thema, bei dem du nicht weißt, was {{autre}} denkt",
+          "conversationsN": "Deine nächsten {{n}} Gespräche, in der Reihenfolge, in der du sie führen solltest",
+          "conversationsUn": "Dein nächstes Gespräch, und wie du es anfängst"
+        },
+        "immediat": "Der Bericht öffnet sich hier gleich nach der Zahlung, und der Link zum PDF geht per E-Mail raus.",
+        "colle": "Dein Bericht"
       },
       "rapport": {
         "ecran": {
