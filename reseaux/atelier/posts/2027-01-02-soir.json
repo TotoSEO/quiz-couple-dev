@@ -1,0 +1,171 @@
+{
+  "jour": "2027-01-02",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "dix-mais",
+  "sujet": "an-07",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "She's a 10 but...",
+            "accroche": "New Year edition. Is she still a 10?",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Les deux sur un trait de sol. La rose, à gauche, fait un clin d'œil avec un grand sourire, entourée d'étincelles : c'est elle, le 10. Le violet, à droite, la regarde, sourcils hauts et bouche plate, sans rien au-dessus de la tête (plus grand qu'elle, un effet y toucherait l'accroche).",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "clin",
+                        "bouche": "sourire",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "etincelles",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "rose",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "hauts",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she writes 25 resolutions and forgets them by the 3rd"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she falls asleep at 11:50 on New Year's Eve"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she writes last year's date until March"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she films the whole countdown for her story"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she makes you go to a party where you know nobody"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she texts \"happy new year\" to everyone except you"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she leaves you alone at midnight to find her friends"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but she kisses someone else at midnight \"as a joke\""
+          },
+          {
+            "type": "fin",
+            "texte": "What's she now, out of 10?",
+            "bouton": "Full game: link in bio",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Même trait de sol. Le violet, à droite, les yeux plats et la bouche plate : il n'est pas convaincu. La rose, à gauche, rougit, les yeux grands ouverts et la bouche en o, prise sur le fait.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "rougit": true,
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "rose",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "hashtags": [
+        "#shesa10but",
+        "#redflags",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

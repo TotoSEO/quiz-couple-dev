@@ -1,0 +1,158 @@
+{
+  "jour": "2026-12-31",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "carrousel",
+  "sujet": "an-03",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "New Year's Eve",
+            "accroche": "8 questions before midnight",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Le parc la nuit du Nouvel An : la rose et le violet sont assis sur le banc et lèvent la tête, la bouche en o, des feux d'artifice et des confettis au-dessus d'eux.",
+                "duree": 2,
+                "decor": "dehors",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "banc-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "feux"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "banc-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "confettis"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "1",
+            "question": "What was our best day this year?"
+          },
+          {
+            "type": "page",
+            "numero": "2",
+            "question": "What do you want us to try next year?"
+          },
+          {
+            "type": "page",
+            "numero": "3",
+            "question": "What did you learn about me this year?"
+          },
+          {
+            "type": "page",
+            "numero": "4",
+            "question": "What are you proud of this year?"
+          },
+          {
+            "type": "page",
+            "numero": "5",
+            "question": "What do you want us to leave behind in this year?"
+          },
+          {
+            "type": "page",
+            "numero": "6",
+            "question": "What is one thing you want us to do more of?"
+          },
+          {
+            "type": "page",
+            "numero": "7",
+            "question": "What is your wish for us next year?"
+          },
+          {
+            "type": "page",
+            "numero": "8",
+            "question": "Where do you see us next New Year's Eve?"
+          },
+          {
+            "type": "fin",
+            "texte": "Want more questions for tonight?",
+            "bouton": "Link in bio",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "salue",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "joie",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Answer these before midnight.\n\nSend this to your partner",
+      "hashtags": [
+        "#couplequestions",
+        "#datenight",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
