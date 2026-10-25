@@ -26,15 +26,6 @@
         "No"
       ]
     },
-    "duree": {
-      "q": "How long have you been together?",
-      "o": [
-        "Less than a year",
-        "One to three years",
-        "Three to ten years",
-        "More than ten years"
-      ]
-    },
     "engagement": {
       "q": "Are you married or in a civil partnership?",
       "o": [

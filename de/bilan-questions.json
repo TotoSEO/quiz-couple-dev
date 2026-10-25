@@ -26,15 +26,6 @@
         "Nein"
       ]
     },
-    "duree": {
-      "q": "Wie lange seid ihr schon zusammen?",
-      "o": [
-        "Weniger als ein Jahr",
-        "Ein bis drei Jahre",
-        "Drei bis zehn Jahre",
-        "Mehr als zehn Jahre"
-      ]
-    },
     "engagement": {
       "q": "Seid ihr verheiratet oder in einer eingetragenen Partnerschaft?",
       "o": [

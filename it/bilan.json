@@ -41,7 +41,6 @@
       "homme": "Un uomo",
       "sansGenre": "Preferisco non dirlo",
       "genreAide": "Serve solo ad accordare le domande («ascoltato» o «ascoltata») e a scegliere i personaggi.",
-      "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?». Il tuo partner potrà correggerle.",
       "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
       "accordAide": "Le tue risposte, anche su argomenti intimi, servono solo a questo report, dove {{autre}} le vedrà accanto alle sue. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e ciascuno di voi può cancellarla in qualsiasi momento. Nessun account da creare.",
       "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
@@ -77,8 +76,6 @@
       "titre": "{{autre}} ti propone di fare il vostra valutazione di coppia",
       "texte": "100 domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
       "duree": "Calcola una ventina di minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
-      "situationTitre": "La vostra situazione, come l'ha descritta {{autre}}",
-      "situationCorriger": "Correggi",
       "prenom": "Il tuo nome",
       "genre": "Tu sei",
       "commencer": "Accetto e inizio",
@@ -203,8 +200,7 @@
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione",
-        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
-        "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?»."
+        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa."
       },
       "domaine": {
         "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
@@ -578,10 +574,8 @@
     "situation": {
       "resume": "Situazione",
       "titre": "La vostra situazione",
-      "progression": "{{n}} di {{total}}",
-      "verifierTitre": "La vostra situazione, prima di iniziare",
-      "verifierTexte": "Queste risposte cambiano le domande che ti facciamo. Se una non è più giusta, correggila prima di iniziare.",
-      "confirmer": "È giusto, iniziamo"
+      "aide": "La tua risposta adatta le domande che seguono.",
+      "deja": "Questa risposta è già stata data: cambiala se non è giusta."
     },
     "erreurs": {
       "reseau": "Nessuna connessione. Controlla la rete e riprova.",

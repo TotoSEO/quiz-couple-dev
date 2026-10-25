@@ -105,10 +105,13 @@ c'est sûr », c'est l'écart le plus important de tout le bilan. Le couple qui
 décoche le domaine ne le découvrirait jamais. Le principe est donc de garder
 les **souhaits** et d'adapter les **faits**.
 
-À la création, sept questions décrivent la situation du couple : vivez-vous
-ensemble, depuis combien de temps, mariés ou pacsés, enfants ensemble,
-enfants d'une autre relation, propriétaires, animal. Elles changent les
-questions posées, jamais les domaines :
+Six questions décrivent la situation du couple : vivez-vous ensemble,
+mariés ou pacsés, enfants ensemble, enfants d'une autre relation,
+propriétaires, animal (jusqu'au 25 octobre 2026, une septième demandait
+depuis combien de temps, sans rien changer aux questions ni au rapport, et
+les sept étaient posées à la création ; depuis, chacune vient juste avant le
+premier domaine qui en a besoin, voir « La situation au fil des domaines »).
+Elles changent les questions posées, jamais les domaines :
 
 - un couple qui ne vit pas ensemble n'a pas « qui fait les tâches ? » mais
   « si vous viviez ensemble demain, qui ferait quoi ? », et a « vivre
@@ -1302,8 +1305,45 @@ Thomas a validé les quatre propositions (« Ok pour tout ») :
    et l'invitation donnent la durée, phrase de Thomas comprise (« 20 minutes
    chacun et quelques euros… ») ; l'e-mail de reprise compte 0,2 minute par
    question restante (0,4 en solo).
-3. **Alléger le début :** poser chaque question de situation juste avant le
-   domaine qui en a besoin, et ouvrir sur un domaine plus parlant que
-   « quotidien ».
+3. **Alléger le début** (fait le 25 octobre 2026) : chaque question de
+   situation juste avant le domaine qui en a besoin, et le temps à deux en
+   premier domaine ; détail dans la section qui suit.
 4. **Raccourcir le seul :** ne demander ce que l'autre répondrait que pour
    les sujets décisifs.
+
+### La situation au fil des domaines (25 octobre 2026)
+
+- **L'ordre de passage** (`ORDRE` de coeur.mjs) commence par le temps à deux
+  et le temps pour soi : ses neuf questions ne dépendent d'aucune situation
+  et parlent de ce qu'on aime faire ensemble, là où le quotidien commençait
+  par les tâches ménagères. Le rapport, l'admin et le PDF gardent l'ordre de
+  `DOMAINES` ; l'entonnoir de l'onglet Évaluation range les domaines dans
+  l'ordre de passage.
+- **Chaque clé de situation est posée une fois, juste avant le premier
+  domaine qui en a besoin** (`DOMAINE_DE_CLE`, calculé d'après les `si` des
+  questions) : vivre ensemble et l'animal avant le quotidien, propriétaires
+  avant le logement, les deux questions d'enfants avant les enfants, mariés
+  ou pacsés avant les valeurs. Une clé dont un domaine dépend et qui
+  manquerait encore y est aussi posée (`clesAvant`). Les écrans gardent le
+  dessin d'une question, avec le titre du domaine, et ne comptent pas dans
+  les cent.
+- **Le total vaut 100 dès la première question** : une clé pas encore
+  donnée compte avec sa valeur par défaut (`SITUATION_DEFAUT`), et chaque
+  combinaison donne cent questions. Le serveur accepte des réponses sans
+  situation, fusionne les clés reçues avec celles déjà là (`situation`,
+  `situationPartielle`) et ne marque fini qu'avec la situation complète.
+- **À deux**, celui qui arrive à un domaine dont l'autre a déjà donné la clé
+  la voit choisie, avec « Cette réponse a déjà été donnée : changez-la si
+  elle n'est pas juste. » La page reprend la situation de chaque réponse
+  enregistrée et relit l'état à l'intro d'un domaine qui pose une clé (une
+  lecture, quatre au plus par personne). Une fois que l'un des deux a fini,
+  la situation est figée, et l'autre n'a plus rien à confirmer : le
+  récapitulatif « telle que X l'a décrite », montré au partenaire avant sa
+  première question, a disparu.
+- **Seul(e), et dans une évaluation commencée avant ce jour**, une clé connue
+  n'est jamais redemandée. Une évaluation de l'ancien ordre reprend au
+  temps à deux, puis saute ce qui est déjà répondu.
+- **La mesure** : « Situation ouverte » est compté au premier écran de
+  situation de l'évaluation (une fois par évaluation), « Situation
+  commencée » à la première clé reçue par la base ; les deux viennent
+  désormais après la première réponse dans l'entonnoir.

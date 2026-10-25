@@ -41,7 +41,6 @@
       "homme": "A man",
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
-      "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
       "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
       "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
@@ -77,8 +76,6 @@
       "titre": "{{autre}} would like you to do your relationship assessment together",
       "texte": "100 concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
       "duree": "Allow about 20 minutes. You can take a break whenever you like, everything is saved.",
-      "situationTitre": "Your situation, as {{autre}} described it",
-      "situationCorriger": "Correct",
       "prenom": "Your first name",
       "genre": "You are",
       "commencer": "I agree, let's start",
@@ -203,8 +200,7 @@
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
-        "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
-        "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\"."
+        "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day."
       },
       "domaine": {
         "nb": "{{n}} questions, two answers each, about {{min}} min"
@@ -577,10 +573,8 @@
     "situation": {
       "resume": "Situation",
       "titre": "Your situation",
-      "progression": "{{n}} of {{total}}",
-      "verifierTitre": "Your situation, before you start",
-      "verifierTexte": "These answers change the questions you get. If one of them isn't right anymore, correct it before you start.",
-      "confirmer": "That's right, let's start"
+      "aide": "Your answer adjusts the questions that follow.",
+      "deja": "This answer has already been given: change it if it isn't right."
     },
     "erreurs": {
       "reseau": "No connection. Check your network and try again.",

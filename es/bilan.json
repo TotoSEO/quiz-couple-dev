@@ -41,7 +41,6 @@
       "homme": "Un hombre",
       "sansGenre": "Prefiero no decirlo",
       "genreAide": "Solo sirve para concordar las preguntas («escuchado» o «escuchada») y para elegir los personajes.",
-      "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
       "consentement": "Tengo 18 años o más y consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
       "accordAide": "Tus respuestas, también sobre temas íntimos, solo sirven para este informe, donde {{autre}} las verá frente a las suyas. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y cualquiera de los dos puede borrarla en todo momento. Sin crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
@@ -77,8 +76,6 @@
       "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
       "texte": "100 preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
       "duree": "Calcula unos 20 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
-      "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
-      "situationCorriger": "Corregir",
       "prenom": "Tu nombre",
       "genre": "Tú eres",
       "commencer": "Acepto y empiezo",
@@ -203,8 +200,7 @@
         "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
-        "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
-        "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?»."
+        "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando."
       },
       "domaine": {
         "nb": "{{n}} preguntas, dos respuestas cada una, unos {{min}} min"
@@ -578,10 +574,8 @@
     "situation": {
       "resume": "Situación",
       "titre": "Vuestra situación",
-      "progression": "{{n}} de {{total}}",
-      "verifierTitre": "Vuestra situación, antes de empezar",
-      "verifierTexte": "Estas respuestas cambian las preguntas que te hacemos. Si alguna ya no es correcta, corrígela antes de empezar.",
-      "confirmer": "Es correcto, empezamos"
+      "aide": "Tu respuesta adapta las preguntas que vienen.",
+      "deja": "Esta respuesta ya está dada: cámbiala si no es correcta."
     },
     "erreurs": {
       "reseau": "Sin conexión. Comprueba tu red y vuelve a intentarlo.",

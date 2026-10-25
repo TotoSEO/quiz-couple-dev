@@ -14,7 +14,7 @@ import { verifierSignature, signer, encoderFormulaire } from '../stripe.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
-const SIT = { ensemble: 'oui', duree: '3a10', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
+const SIT = { ensemble: 'oui', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
 
 function fauxStripe({ refuseCode = false } = {}) {
   const sessions = new Map();
@@ -117,7 +117,7 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
 // Le départ du 21 octobre 2026 : un seul écran (prénoms et les deux cases),
 // la situation posée comme les premières questions, l'adresse demandée à la
 // fin de ses propres questions, juste avant l'offre.
-test('le départ léger : situation après la création, adresse à la fin', async () => {
+test('le départ léger : situation au fil des domaines, adresse à la fin', async () => {
   const { appel, stockage } = monter();
   const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', moi: { prenom: 'Thomas', genre: 'h' }, autre: { prenom: 'Léa', genre: 'f' }, consentement: true, majeur: true, rappel: true });
   assert.equal(c.statut, 200, JSON.stringify(c.json));
@@ -125,12 +125,27 @@ test('le départ léger : situation après la création, adresse à la fin', asy
   assert.deepEqual(ligne().situation, {});
   assert.equal(ligne().a_email, null);
   assert.equal(ligne().a_rappel, false, 'pas de rappel sans adresse');
-  assert.equal(ligne().a_etape, 'situation');
+  assert.equal(ligne().a_etape, 'temps', 'le temps à deux ouvre l\'évaluation');
   const A = { id: c.json.id, jeton: c.json.jeton };
-  // Pas de réponse tant que la situation manque : les questions en dépendent.
-  assert.equal((await appel({ action: 'repondre', ...A, reponses: { quo3: 1 } })).json.erreur, 'situation');
-  assert.equal((await appel({ action: 'situation', ...A, situation: { ...SIT, animal: undefined } })).json.erreur, 'situation');
-  const s = await appel({ action: 'situation', ...A, situation: SIT });
+  // Des réponses avant toute situation (25 octobre 2026) : enregistrées,
+  // comptées sur cent, jamais complètes.
+  const r0 = await appel({ action: 'repondre', ...A, reponses: { tps1: 1 } });
+  assert.equal(r0.statut, 200, JSON.stringify(r0.json));
+  assert.equal(r0.json.complet, false);
+  assert.deepEqual(r0.json.progression, { repondu: 1, total: 100 });
+  // La situation clé par clé, avant le domaine qui en a besoin, fusionnée
+  // avec ce qui est déjà là ; une valeur inconnue, rien, ou seulement une clé
+  // d'avant sont refusés.
+  for (const mauvaise of [{ animal: 'peut-être' }, {}, { duree: '1a3' }, 'oui']) {
+    assert.equal((await appel({ action: 'situation', ...A, situation: mauvaise })).json.erreur, 'situation', JSON.stringify(mauvaise));
+  }
+  const s1 = await appel({ action: 'situation', ...A, situation: { ensemble: 'oui', animal: 'oui' } });
+  assert.deepEqual(s1.json.etat.situation, { ensemble: 'oui', animal: 'oui' });
+  assert.equal(ligne().a_etape, 'temps');
+  const s2 = await appel({ action: 'situation', ...A, situation: { animal: 'non' } });
+  assert.deepEqual(s2.json.etat.situation, { ensemble: 'oui', animal: 'non' }, 'une clé redonnée remplace l\'ancienne');
+  // Une page d'avant donne les sept clés d'un coup, dont `duree`, ignorée.
+  const s = await appel({ action: 'situation', ...A, situation: { ...SIT, duree: '3a10' } });
   assert.equal(s.statut, 200);
   assert.deepEqual(s.json.etat.situation, SIT);
 
@@ -164,7 +179,7 @@ test('le départ léger : situation après la création, adresse à la fin', asy
   const ancien = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', rappel: true, consentement: true, majeur: true });
   assert.equal(ancien.statut, 200);
   assert.equal(stockage.lignes.get(ancien.json.id).a_rappel, true);
-  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'quotidien');
+  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'temps');
 });
 
 test('les écrans du parcours comptés par la page, seul(e) à part', async () => {
@@ -201,7 +216,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   const c = await creerCouple(appel);
   const A = { id: c.id, jeton: c.jeton };
   assert.equal(stockage.lignes.get(c.id).src, 'direct');
-  assert.equal(stockage.lignes.get(c.id).a_etape, 'quotidien');
+  assert.equal(stockage.lignes.get(c.id).a_etape, 'temps');
 
   // B ouvre l'invitation : on lui présente le bilan, sans aucune réponse.
   const vue = await appel({ action: 'etat', id: c.id, jeton: c.invitation });

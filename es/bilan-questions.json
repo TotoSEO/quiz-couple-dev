@@ -26,15 +26,6 @@
         "No"
       ]
     },
-    "duree": {
-      "q": "¿Cuánto tiempo lleváis juntos?",
-      "o": [
-        "Menos de un año",
-        "Entre uno y tres años",
-        "Entre tres y diez años",
-        "Más de diez años"
-      ]
-    },
     "engagement": {
       "q": "¿Estáis casados o sois pareja de hecho?",
       "o": [
