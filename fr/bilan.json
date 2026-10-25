@@ -738,7 +738,7 @@
       "note": "Les questions s'appuient sur la recherche en psychologie du couple et sur les questionnaires utilisés avant un mariage."
     },
     "rapport": {
-      "titre": "Que trouve-t-on dans le rapport ?",
+      "titre": "Que trouve-t-on dans le bilan ?",
       "intro": "Un vrai rapport, avec ses chapitres, ses graphiques et, pour chaque écart, de quoi en parler. Faites défiler.",
       "pages": [
         {
@@ -852,6 +852,29 @@
           "texte": "Par Stripe : nous ne voyons jamais votre carte."
         }
       ]
+    },
+    "definition": {
+      "titre": "Qu'est-ce qu'un bilan de couple ?",
+      "paragraphes": [
+        "Un bilan de couple, c'est un moment qu'on prend pour faire le point sur sa relation, pour voir ce qui va bien et ce qui coince. On peut le faire chez un conseiller conjugal, en séance, ou de son côté avec une liste de questions.",
+        "Le bilan de couple de Quiz Couple se fait en ligne, chacun sur son téléphone. Vous répondez à 100 questions concrètes sur douze sujets de la vie à deux (l'argent, le quotidien, les enfants, l'intimité, les disputes, etc.), sans voir les réponses de l'autre. Par exemple : « Votre argent dans le couple, idéalement... », avec quatre réponses, de « Tout en commun » à « Chacun son argent, on voit au cas par cas ». Si vous répondez pareil, c'est un accord. Si vos réponses sont loin l'une de l'autre, c'est un écart, et c'est de ces écarts qu'il vaut mieux parler.",
+        "Quand vous avez répondu tous les deux, le bilan complet coûte {{prix}} pour vous deux. Il s'affiche tout de suite sur la page, et vous recevez votre bilan de couple en PDF par e-mail, à garder. Vos réponses y sont côte à côte, question par question, avec pour chaque écart des questions pour en parler."
+      ]
+    },
+    "utilite": {
+      "titre": "À quoi ça sert d'évaluer sa relation ?",
+      "paragraphes": [
+        "Beaucoup de couples ne parlent de certains sujets que quand ça va mal : l'argent après une grosse dépense, les enfants le jour où la question tombe, ou encore le partage des tâches au milieu d'une dispute... Évaluer sa relation, ça sert justement à en parler avant, à tête reposée.",
+        "Le bilan vous montre aussi ce que vous ne savez pas l'un de l'autre. Il y a les sujets où vous êtes d'accord sans vous l'être jamais dit, et ceux où chacun pensait que l'autre voyait les choses comme lui. Ce sont souvent ces derniers qui finissent en dispute, du coup ça vaut le coup de les découvrir à froid."
+      ],
+      "momentsIntro": "Il n'y a pas de moment idéal pour le faire, mais certains s'y prêtent bien :",
+      "moments": [
+        "Avant d'emménager ensemble",
+        "Avant de vous marier ou d'avoir un enfant",
+        "Après quelques années ensemble",
+        "Quand vous sentez que quelque chose a changé entre vous"
+      ],
+      "solo": "Et si votre partenaire n'en a pas envie, vous pouvez le faire seul(e) : vous répondez pour vous et, sur les sujets qui comptent le plus, vous dites ce que l'autre répondrait d'après vous."
     },
     "faq": {
       "titre": "Questions fréquentes",

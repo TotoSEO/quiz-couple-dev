@@ -49,8 +49,11 @@
   // {{prix}} et {{jours}} dans les textes de la page.
   const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
   const L = (k, d) => t(ns + ':lp.' + k, d === undefined ? '' : d);
-  // Le français colle « ? ! : ; » à leur mot.
-  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ') : String(s || '');
+  // Le français colle « ? ! : ; » et l'ouverture des guillemets à leur mot par
+  // une espace insécable, comme ins() de bilan.js (jusqu'au 25 octobre 2026,
+  // le remplacement remettait une espace ordinaire, et un « ? » pouvait partir
+  // seul à la ligne).
+  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : String(s || '');
   const e = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const x = (k, d) => e(ins(rp(L(k, d))));
   const tx = (s) => e(ins(rp(s)));
@@ -447,6 +450,33 @@
       </div>
     </div>
   </section>
+
+  <%# Le bilan de couple (25 octobre 2026, Thomas : « ya 40 volume de
+      recherche sur "bilan de couple pdf" », « On va tenter la P1 sur bilan de
+      couple et bilan de couple PDF ») : deux sections de texte, en français
+      seulement, la seule langue où la page est indexée (noindexRoutes dans
+      generate.js). Le test porte sur la langue et non sur les textes : t()
+      prend le texte français quand une langue n'a pas la clé. %>
+  <% const definition = lang === 'fr' ? L('definition', null) : null; const utilite = lang === 'fr' ? L('utilite', null) : null; %>
+  <% if (definition && definition.titre) { %>
+  <section class="blp-section blp-savoir">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- tx(definition.titre) %></h2>
+      <% for (const p of (definition.paragraphes || [])) { %><p class="blp-savoir-p"><%- tx(p) %></p><% } %>
+      <% if (utilite && utilite.titre) { %>
+      <h2 class="blp-h2 blp-savoir-h2"><%- tx(utilite.titre) %></h2>
+      <% for (const p of (utilite.paragraphes || [])) { %><p class="blp-savoir-p"><%- tx(p) %></p><% } %>
+      <% if ((utilite.moments || []).length) { %>
+      <p class="blp-savoir-p"><%- tx(utilite.momentsIntro) %></p>
+      <ul class="blp-coches blp-savoir-moments">
+        <% for (const m of utilite.moments) { %><li><span class="blp-coche"><%- coche %></span><span><%- tx(m) %></span></li><% } %>
+      </ul>
+      <% } %>
+      <% if (utilite.solo) { %><p class="blp-savoir-p"><%- tx(utilite.solo) %></p><% } %>
+      <% } %>
+    </div>
+  </section>
+  <% } %>
 
   <!-- Questions fréquentes -->
   <section class="blp-section blp-faq">

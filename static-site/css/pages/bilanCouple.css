@@ -359,6 +359,15 @@
   .blp-confiance-point p:last-child { font-size: .88rem; }
 }
 
+/* ── Le bilan de couple : deux sections de texte (25 octobre 2026) ──── */
+/* « Qu'est-ce qu'un bilan de couple ? » et « À quoi ça sert d'évaluer sa
+   relation ? », en français seulement, pour la recherche « bilan de couple »
+   et « bilan de couple PDF ». Une colonne de lecture, les moments en coches. */
+.blp-savoir { border-top: 1px solid hsl(var(--border)); }
+.blp-savoir-h2 { margin-top: 3rem; }
+.blp-savoir-p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 1rem; max-width: 46rem; }
+.blp-savoir-moments { margin: 0 0 1.25rem; }
+
 /* ── Questions fréquentes ────────────────────────────────────────────── */
 
 .blp-faq-liste { display: grid; gap: .75rem; }
