@@ -658,6 +658,16 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 }
 .bilan-apport .bilan-note { margin: .6rem 0 0; }
 
+/* L'adresse au départ (25 octobre 2026) : sous le champ, la proposition d'un
+   domaine mal tapé (gmial.com), un lien qu'on touche pour corriger. */
+.bilan-suggestion { margin: .45rem 0 0; }
+.bilan-suggestion-btn {
+  appearance: none; background: none; border: 0; padding: .3rem 0; margin: 0;
+  font: inherit; font-size: .92rem; font-weight: 600; text-align: left; cursor: pointer;
+  color: hsl(var(--primary-texte)); text-decoration: underline; text-underline-offset: 3px;
+}
+.bilan-suggestion-btn:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; border-radius: .25rem; }
+
 /* ── L'écran « rapport prêt », revu le 25 octobre 2026 ───────────────── */
 /* 39 couples l'avaient vu, 3 avaient payé, et sur 4 pages de paiement
    ouvertes, 3 ventes : on s'arrêtait sur l'écran. Sous l'aperçu chiffré :

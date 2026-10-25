@@ -280,10 +280,53 @@
   }
   // Le champ de l'adresse e-mail de la fin des questions : obligatoire,
   // c'est là que le PDF part.
-  function champEmailFin(valeur, autre) {
+  // Le champ de son adresse : au départ (création, invitation acceptée)
+  // depuis le 25 octobre 2026, à la fin des questions pour une évaluation
+  // créée sans elle. `aide`, déjà échappée, dit tous les e-mails qui
+  // partiront à cette adresse.
+  function champEmailMoi(valeur, aide) {
     return '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
       '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" required value="' + esc(valeur || '') + '">' +
-      '<p class="bilan-note">' + x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }) + '</p></div>';
+      '<p class="bilan-suggestion" id="bilan-email-sugg" hidden><button type="button" class="bilan-suggestion-btn"></button></p>' +
+      '<p class="bilan-note">' + aide + '</p></div>';
+  }
+  function champEmailFin(valeur, autre) {
+    return champEmailMoi(valeur, x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }));
+  }
+  // Un domaine mal tapé (gmial.com) : la page propose le bon, comme la porte
+  // des résultats (capture.js). L'adresse du départ sert à toute
+  // l'évaluation, rapport et reprise compris : une faute la perdrait.
+  var FAUTES_EMAIL = {
+    'gmial.com': 'gmail.com', 'gmal.com': 'gmail.com', 'gamil.com': 'gmail.com', 'gnail.com': 'gmail.com', 'gmail.co': 'gmail.com', 'gmail.cm': 'gmail.com', 'gmail.fr': 'gmail.com', 'gmaill.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmail.con': 'gmail.com', 'gmail.comm': 'gmail.com', 'googlemail.fr': 'googlemail.com',
+    'hotmal.com': 'hotmail.com', 'hotmai.com': 'hotmail.com', 'hotmail.co': 'hotmail.com', 'hotmail.cm': 'hotmail.com', 'hotmail.con': 'hotmail.com', 'hotmial.com': 'hotmail.com', 'hotmail.fe': 'hotmail.fr', 'hotmil.fr': 'hotmail.fr', 'hotmai.fr': 'hotmail.fr',
+    'outlok.com': 'outlook.com', 'outloo.com': 'outlook.com', 'outlook.co': 'outlook.com', 'outlook.cm': 'outlook.com', 'outlook.f': 'outlook.fr', 'outllok.fr': 'outlook.fr',
+    'yaho.com': 'yahoo.com', 'yahooo.com': 'yahoo.com', 'yahoo.co': 'yahoo.com', 'yaho.fr': 'yahoo.fr', 'yahou.fr': 'yahoo.fr',
+    'orang.fr': 'orange.fr', 'oranje.fr': 'orange.fr', 'orange.f': 'orange.fr', 'wanado.fr': 'wanadoo.fr', 'wanadoo.f': 'wanadoo.fr', 'laposte.ne': 'laposte.net', 'laposte.fr': 'laposte.net', 'lapost.net': 'laposte.net', 'free.f': 'free.fr', 'sfr.f': 'sfr.fr', 'icloud.co': 'icloud.com', 'iclou.com': 'icloud.com', 'live.f': 'live.fr', 'live.co': 'live.com',
+    'gmx.d': 'gmx.de', 'web.d': 'web.de', 'libero.i': 'libero.it', 'alice.i': 'alice.it', 'virgilio.i': 'virgilio.it'
+  };
+  function surveillerEmail() {
+    var champ = document.getElementById('bilan-email');
+    var zone = document.getElementById('bilan-email-sugg');
+    if (!champ || !zone) return;
+    var btn = zone.querySelector('button');
+    var proposition = null;
+    function suggere() {
+      var v = (champ.value || '').trim().toLowerCase();
+      var at = v.lastIndexOf('@');
+      var dom = at > 0 ? v.slice(at + 1) : '';
+      proposition = FAUTES_EMAIL[dom] ? v.slice(0, at + 1) + FAUTES_EMAIL[dom] : null;
+      if (proposition) btn.textContent = ins(remplir(tr('creation.emailSuggestion', ''), { email: proposition }));
+      zone.hidden = !proposition;
+    }
+    champ.addEventListener('input', suggere);
+    champ.addEventListener('blur', suggere);
+    btn.addEventListener('click', function () {
+      if (!proposition) return;
+      champ.value = proposition;
+      zone.hidden = true;
+      champ.focus();
+    });
+    suggere();
   }
   function blocRetrouver() {
     return '<details class="bilan-retrouver"><summary>' + x('retrouver.titre') + '</summary>' +
@@ -560,13 +603,18 @@
 
   // Le départ tient en un écran depuis le 21 octobre 2026 (Thomas devant
   // l'entonnoir : 240 clics sur « Commencer », 85 évaluations créées) : la
-  // façon de faire, les prénoms et la case de l'accord (une seule depuis le
-  // 25 octobre 2026 : « 18 ans ou plus » et le consentement, fusionnés, après
-  // 103 erreurs sur les deux cases en cinq jours). La situation est posée
-  // ensuite comme les premières questions (questionSituation), et l'adresse
-  // e-mail à la fin de ses propres questions (ecranEmail).
+  // façon de faire, les prénoms, l'adresse e-mail et la case de l'accord
+  // (une seule depuis le 25 octobre 2026 : « 18 ans ou plus » et le
+  // consentement, fusionnés, après 103 erreurs sur les deux cases en cinq
+  // jours). La situation est posée ensuite comme les premières questions
+  // (questionSituation). L'adresse était demandée à la fin de ses propres
+  // questions du 21 au 25 octobre 2026 ; elle revient au départ (Thomas : « il
+  // faudrait que les gens qui commencent le bilan doivent rentrer leur mail,
+  // comme ça s'ils ne finissent pas on peut les retarget ») : sur près de
+  // 230 évaluations commencées, 190 s'étaient arrêtées sans adresse, et la
+  // reprise n'avait pu partir à personne.
   function creation() {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, consent: false, celib: null };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, email: '', consent: false, celib: null };
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
     // Seul(e), « Où en êtes-vous ? » d'abord (25 octobre 2026) : le formulaire
@@ -589,6 +637,9 @@
         (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
         '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
+        // La phrase sous le champ annonce le « prêt », la reprise et le
+        // rappel : la page envoie `rappel` et `reprise` à la création.
+        champEmailMoi(brouillon.email, avecNomAutre('creation.emailAideDepart')) +
         '<hr class="bilan-sep">' +
         (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
         '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
@@ -604,6 +655,7 @@
     }
     corps += blocRetrouver();
     afficher(carte(corps, 'bilan-creation' + (solo ? ' bilan-creation--solo' : '')));
+    surveillerEmail();
     compterVue('depart', { mode: brouillon.mode });
     var champ = racine.querySelector('input[type="text"]');
     if (champ && !brouillon.moi && !modeDemande) champ.focus({ preventScroll: true });
@@ -629,6 +681,7 @@
         brouillon.autre = valeur('bilan-autre');
         brouillon.genreMoi = lireGenre('g-moi');
         brouillon.genreAutre = lireGenre('g-autre');
+        brouillon.email = valeur('bilan-email');
         brouillon.consent = document.getElementById('bilan-consent').checked;
       }
       if (document.getElementById('bilan-celib-email')) {
@@ -664,6 +717,10 @@
       valider: function (b) {
         lire();
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
+        // L'adresse, comptée à part : vide (« email ») ou mal écrite
+        // (« email_faux »), pour voir ce que le champ coûte au départ.
+        if (!brouillon.email) { erreur('creation.emailManque', 'email'); return document.getElementById('bilan-email').focus(); }
+        if (!emailValide(brouillon.email)) { erreur('creation.emailFaux', 'email_faux'); return document.getElementById('bilan-email').focus(); }
         // Une seule case dit l'âge et le consentement : la cause est
         // « accord » (de 21 au 25 octobre 2026, deux cases, « majeur » et
         // « consentement » comptées à part).
@@ -673,10 +730,11 @@
           lang: LANG, mode: brouillon.mode, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
+          email: brouillon.email, rappel: true, reprise: true,
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
-          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
+          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
           brouillon = null;
@@ -827,9 +885,9 @@
 
   // ── Rejoindre (B) ───────────────────────────────────────────────────────
 
-  // L'écran de l'invitation : le prénom, le genre et la case. La situation
-  // se confirme au fil des domaines (questionSituation), et l'adresse se
-  // donne à la fin.
+  // L'écran de l'invitation : le prénom, le genre, l'adresse (depuis le
+  // 25 octobre 2026, comme au départ) et la case. La situation se confirme au
+  // fil des domaines (questionSituation).
   function rejoindre(etat, jetonInvitation) {
     var autre = etat.autre.prenom;
     var html = carte(
@@ -841,6 +899,7 @@
       '<div class="bilan-champ"><label for="bilan-moi">' + x('rejoindre.prenom') + '</label>' +
       '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" value="' + esc(etat.moi.prenom) + '"></div>' +
       '<div class="bilan-champ"><span class="bilan-label">' + x('rejoindre.genre') + '</span>' + champGenre('g-moi', etat.moi.genre) + '</div>' +
+      champEmailMoi('', x('creation.emailAideDepart', { autre: autre })) +
       '<hr class="bilan-sep">' +
       '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
       '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
@@ -854,16 +913,21 @@
       p.textContent = ins(remplir(tr(cle, ''), {}));
       p.hidden = false;
     }
+    surveillerEmail();
     compterVue('invitation_vue', { mode: 'duo', id: etat.id });
     ACTIONS = {
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
+        var champ = document.getElementById('bilan-email');
+        var email = (champ.value || '').trim();
         if (!prenom) return erreur('rejoindre.prenomManque');
+        if (!email) { erreur('creation.emailManque'); return champ.focus(); }
+        if (!emailValide(email)) { erreur('creation.emailFaux'); return champ.focus(); }
         if (!document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
-        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), consentement: true, majeur: true })
+        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), email: email, rappel: true, reprise: true, consentement: true, majeur: true })
           .then(function (r) {
-            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur'); }
+            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur'); }
             var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
             garder(entree);
             ouvrir(entree);
@@ -1347,8 +1411,9 @@
 
   function terminer() {
     var session = S;
-    // L'adresse où envoyer le rapport, demandée ici depuis le 21 octobre
-    // 2026 : sans elle, le serveur ne marque pas fini.
+    // L'adresse où envoyer le rapport, demandée ici du 21 au 25 octobre
+    // 2026, au départ depuis : sans elle, le serveur ne marque pas fini, et
+    // une évaluation créée sans adresse la donne ici.
     // Une adresse venue de « Recevoir mon lien par e-mail » n'a pas eu, sous
     // son champ, la phrase qui annonce le « prêt » et le rappel (`rappel`
     // faux) : la fin la redemande, préremplie (24 octobre 2026).
@@ -1387,6 +1452,7 @@
       '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
       '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
     compterVue('email_vue', { mode: session.mode, id: session.id, cle: session.role });
+    surveillerEmail();
     var champ = document.getElementById('bilan-email');
     function erreur(cle) {
       var p = document.getElementById('bilan-erreur');

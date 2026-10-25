@@ -50,6 +50,8 @@
       "accordManque": "Tick the box to continue.",
       "email": "Your email",
       "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
+      "emailAideDepart": "The link to your PDF report will go to this address, and it lets you find your assessment again if you close the page. We'll email you when the report is ready, once if you stop partway or {{autre}} is slow to finish, and once if it's still waiting the next day. It isn't used for anything else.",
+      "emailSuggestion": "Did you mean {{email}}?",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
       "autreDefaut": "your partner",
@@ -226,6 +228,7 @@
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
         "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
+        "emailAideDepart": "The link to your PDF report will go to this address, and it lets you find your assessment again if you close the page. We'll email you once if you stop partway, and once if your report is still waiting the next day. It isn't used for anything else.",
         "apportTitre": "What the solo assessment gives you",
         "apport": [
           "Your view of the twelve areas of your relationship, from everyday life to intimacy",

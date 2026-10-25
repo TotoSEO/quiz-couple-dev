@@ -121,11 +121,26 @@ export const RELANCE_APRES_H = 24;
 // heures, dans les REPRISE_JOURS jours qui suivent sa création. À qui n'a
 // pas fini ses réponses (variante « moi »), ou, à deux, à qui a fini quand
 // l'autre n'a pas fini (« autre »). Seulement à une adresse donnée sous une
-// phrase qui l'annonce (a_reprise, b_reprise : l'adresse de la fin des
-// questions, ou celle de « Recevoir mon lien par e-mail »), dans le même
-// plafond quotidien que le « prêt » et le rappel.
+// phrase qui l'annonce (a_reprise, b_reprise : l'adresse du départ depuis le
+// 25 octobre 2026, celle de la fin des questions avant, ou celle de
+// « Recevoir mon lien par e-mail »), dans le même plafond quotidien que le
+// « prêt » et le rappel jusqu'au 25 octobre 2026.
 export const REPRISE_APRES_H = 48;
 export const REPRISE_JOURS = 30;
+// Depuis le 25 octobre 2026, l'adresse se donne au départ (Thomas : « il
+// faudrait que les gens qui commencent le bilan doivent rentrer leur mail,
+// comme ça s'ils ne finissent pas on peut les retarget ») : la reprise peut
+// partir à tous ceux qui s'arrêtent en route, une quarantaine par jour. Elle a
+// donc son propre plafond, hors de celui du « prêt » et du rappel, qu'elle
+// vidait sinon dès le matin, et elle passe après tout le reste : plus aucune
+// reprise dès que l'évaluation a envoyé ENVOIS_AVANT_RESERVE e-mails dans la
+// journée, tous genres confondus, pour qu'il reste toujours de la place pour
+// le lien d'un rapport payé.
+export const REPRISES_PAR_JOUR = 40;
+export const ENVOIS_AVANT_RESERVE = 60;
+// Ce que l'évaluation envoie par Resend, compté jour par jour dans
+// bilan_compteurs.
+const ENVOIS_DU_JOUR = ['pret_envoye', 'relance_envoye', 'reprise_envoye', 'lien_envoye', 'retrouver_envoye', 'retrouver_aucun', 'envoi_ok', 'envoi_echec'];
 // Les liens personnels écrits dans ces e-mails ont leur propre jeton
 // (jetons_mail : rôle et empreinte), pour ne pas toucher au lien gardé sur le
 // téléphone. Au plus quatre par évaluation, les plus anciens tombent.
@@ -153,7 +168,7 @@ export const CELIB_PAR_JOUR = 400;
 // comptées ensemble) et depuis le 25 octobre 2026 (une seule case, « 18 ans
 // ou plus » et le consentement) ; entre les deux, la case des 18 ans
 // (`majeur`) et celle du consentement étaient comptées à part.
-const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord'];
+const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord', 'email', 'email_faux'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -389,10 +404,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // L'adresse e-mail reste obligatoire (le rapport y part tout seul), mais
-    // depuis le 21 octobre 2026 elle est demandée à la fin de ses propres
-    // questions, juste avant l'offre (`email` avec `fin`) : `repondre` ne
-    // marque pas fini sans elle. Une page d'avant la donne encore ici.
+    // L'adresse e-mail reste obligatoire (le rapport y part tout seul) :
+    // `repondre` ne marque pas fini sans elle. Du 21 au 25 octobre 2026, elle
+    // était demandée à la fin de ses propres questions, juste avant l'offre
+    // (action `email`) ; depuis, la page la demande de nouveau ici, au départ,
+    // pour que la reprise puisse partir à qui s'arrête en route. Une page
+    // ouverte avant la mise en ligne crée encore sans elle.
     const ea = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !ea) return non(400, 'email');
 
@@ -416,8 +433,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       b_prenom: pb, b_genre: genrePropre(corps.autre?.genre),
       a_email: ea,
       // La page a montré la phrase qui annonce l'e-mail « rapport prêt » et
-      // le rappel, sous le champ de l'adresse.
+      // le rappel, sous le champ de l'adresse, et depuis le 25 octobre 2026
+      // la reprise (un mot si l'on s'arrête en route).
       a_rappel: !!ea && corps.rappel === true,
+      a_reprise: !!ea && corps.reprise === true,
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
@@ -451,12 +470,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // Même règle que pour la création : l'adresse est demandée à la fin des
-    // questions ; une page d'avant la donne encore ici.
+    // Même règle que pour la création : depuis le 25 octobre 2026, la page
+    // demande l'adresse ici, sous la phrase qui annonce le « prêt », le
+    // rappel et la reprise ; une page d'avant la laisse pour la fin.
     const eb = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !eb) return non(400, 'email');
     const champs = {};
-    if (eb) { champs[role + '_email'] = eb; champs[role + '_rappel'] = corps.rappel === true; }
+    if (eb) {
+      champs[role + '_email'] = eb;
+      champs[role + '_rappel'] = corps.rappel === true;
+      if (corps.reprise === true) champs[role + '_reprise'] = true;
+    }
     if (corps.prenom !== undefined) {
       const p = prenomPropre(corps.prenom);
       if (!p) return non(400, 'prenom');
@@ -468,7 +492,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     champs[role + '_consent'] = maintenant().toISOString();
     champs[role + '_etape'] = etapeDe(ligne.situation, ligne[role + '_reponses'] || {});
     champs.maj_le = champs[role + '_consent'];
-    const maj = await stockage.maj(ligne.id, champs);
+    const maj = await majSure(ligne.id, champs);
     return ok({ jeton, etat: etatPour(maj, role) });
   }
 
@@ -900,10 +924,24 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   async function plafondRappelsAtteint() {
     if (!stockage.compteDuJour) return false;
     try {
-      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye', 'reprise_envoye'])) >= RAPPELS_PAR_JOUR;
+      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye'])) >= RAPPELS_PAR_JOUR;
     } catch (e) {
       console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
       return false;
+    }
+  }
+
+  // La reprise passe après tout le reste : son plafond à elle, puis la
+  // réserve du jour. Des compteurs illisibles la retiennent (elle repartira
+  // au passage suivant) au lieu de risquer le lien d'un rapport payé.
+  async function plafondReprisesAtteint() {
+    if (!stockage.compteDuJour) return false;
+    try {
+      if ((await stockage.compteDuJour(['reprise_envoye'])) >= REPRISES_PAR_JOUR) return true;
+      return (await stockage.compteDuJour(ENVOIS_DU_JOUR)) >= ENVOIS_AVANT_RESERVE;
+    } catch (e) {
+      console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
+      return true;
     }
   }
 
@@ -1010,7 +1048,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       for (const role of ['a', 'b']) {
         const variante = varianteReprise(ligne, role, avant, depuis);
         if (!variante) continue;
-        if (await plafondRappelsAtteint()) {
+        if (await plafondReprisesAtteint()) {
           if (Object.keys(champs).length) await stockage.maj(ligne.id, { ...champs, jetons_mail: jetons });
           return { reprises, plafond: true };
         }
