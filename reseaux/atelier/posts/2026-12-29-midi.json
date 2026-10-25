@@ -23,15 +23,15 @@
         "dilemmes": [
           {
             "a": "Groceries together",
-            "b": "Groceries alone, fast"
+            "b": "Groceries alone"
           },
           {
             "a": "One cart",
-            "b": "Two carts, a race"
+            "b": "Two carts"
           },
           {
             "a": "Cook what you bought",
-            "b": "Snack what you bought"
+            "b": "Snack on it"
           },
           {
             "a": "A written list",
@@ -39,11 +39,11 @@
           },
           {
             "a": "The big pack",
-            "b": "Only what we need"
+            "b": "Only the basics"
           },
           {
             "a": "Weekend market",
-            "b": "Late-night supermarket"
+            "b": "Late-night store"
           }
         ],
         "fin": {

@@ -34,12 +34,12 @@
             "b": "Sun all day"
           },
           {
-            "a": "Windows open all day",
-            "b": "Windows open at night"
+            "a": "Windows open",
+            "b": "Windows closed"
           },
           {
-            "a": "Spring cleaning together",
-            "b": "A spring trip together"
+            "a": "Spring cleaning",
+            "b": "A spring trip"
           },
           {
             "a": "Wake up at sunrise",

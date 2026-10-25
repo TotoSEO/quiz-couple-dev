@@ -20,14 +20,14 @@
           "ambiance": "jeu"
         },
         "questions": [
-          "What does your partner spend too much on?",
-          "Saver or spender?",
-          "What was their last impulse buy?",
+          "Your partner's biggest splurge?",
+          "Are they a saver or a spender?",
+          "Their last impulse buy?",
           "Do they check the price first?",
-          "What would they never pay full price for?",
+          "What would they never buy?",
           "Do they keep every receipt?",
-          "What is their favorite splurge?",
-          "What would they buy with a surprise 100 dollars?"
+          "What is their dream splurge?",
+          "What would they buy with 100 dollars?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",

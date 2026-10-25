@@ -20,14 +20,14 @@
           "ambiance": "jeu"
         },
         "questions": [
-          "What is your partner's idea of a perfect date?",
+          "What is your partner's perfect date?",
           "Candles or a picnic?",
-          "What is the most romantic thing you did for them?",
-          "Do they like surprises?",
-          "Which song makes them feel romantic?",
+          "The most romantic thing you did?",
+          "Are they into big surprises?",
+          "Which song feels romantic to them?",
           "Flowers or chocolates for them?",
-          "Which place would they pick for a first kiss?",
-          "What is their favorite love movie?"
+          "Their dream first-kiss spot?",
+          "Their favorite love movie?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",
