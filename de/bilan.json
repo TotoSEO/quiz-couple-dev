@@ -51,7 +51,7 @@
       "prenomManque": "Schreib eure beiden Vornamen.",
       "accordManque": "Setz beide Häkchen, um weiterzumachen.",
       "email": "Deine E-Mail",
-      "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir sagen dir Bescheid, wenn dein Bericht bereit ist, mit einer einzigen Erinnerung, falls er am nächsten Tag noch wartet.",
+      "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt. Wir schreiben dir, wenn dein Bericht bereit ist, einmal, falls {{autre}} sich mit dem Antworten Zeit lässt, und ein einziges Mal, falls er am nächsten Tag noch wartet.",
       "emailFaux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "emailManque": "Schreib deine E-Mail-Adresse: Dorthin geht der Link zum Bericht als PDF.",
       "autreDefaut": "dein Partner oder deine Partnerin"
@@ -59,6 +59,7 @@
     "invitation": {
       "titre": "Lade {{autre}} ein",
       "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
+      "nouveauLien": "Das ist ein neuer Link: Der alte funktioniert nicht mehr, schick {{autre}} diesen hier.",
       "suite": "Du musst nicht auf {{autre}} warten: Fang jetzt mit deinen Antworten an, jeder antwortet in seinem eigenen Tempo.",
       "envoyer": "Link senden",
       "copier": "Link kopieren",
@@ -598,7 +599,7 @@
       "titre": "Meinen Link per E-Mail erhalten",
       "placeholder": "du@email.com",
       "bouton": "Senden",
-      "aide": "Um deine Antworten wiederzufinden, wenn du diese Seite schließt oder das Handy wechselst.",
+      "aide": "Um deine Antworten wiederzufinden, wenn du diese Seite schließt oder das Handy wechselst. Wenn du nicht fertig wirst, schicken wir dir eine einzige Erinnerung.",
       "envoye": "Erledigt: Dein Link ist in deinem Postfach ({{email}}). Schau auch im Spam-Ordner nach.",
       "faux": "Diese E-Mail-Adresse sieht nicht vollständig aus.",
       "trop": "Zu viele Sendungen für diese Analyse. Versuche es in einer Stunde noch einmal."

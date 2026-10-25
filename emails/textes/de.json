@@ -1,0 +1,122 @@
+{
+  "salutation": {
+    "prenom": "Hallo [[prenom]]!",
+    "sans": "Hallo!"
+  },
+  "signature": [
+    "Bis bald,",
+    "Thomas von Quiz Couple"
+  ],
+  "pastille": "Tests · Quiz · Spiele",
+  "altMascottes": "Die Maskottchen von Quiz Couple winken dir zu",
+  "voir": {
+    "titre": "Mehr auf [[marque]]",
+    "aller": "Los geht's →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "Was ist deine Liebessprache?",
+        "texte": "30 Fragen, um herauszufinden, wie jeder von euch liebt."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Wer kennt den anderen besser?",
+        "texte": "Das kleine Duell: Wer hört besser zu?"
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-de.png",
+        "type": "Spiel",
+        "titre": "Was würdest du lieber?",
+        "texte": "100 unmögliche Entscheidungen für euch zwei."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "Sehen wir uns auf Instagram?",
+    "texte": "Jeden Tag ein kleines Quiz für euch zwei."
+  },
+  "pied": {
+    "pourquoi": "Du bekommst diese E-Mail, weil du am Ende eines Tests auf quiz-couple.com deine Adresse hinterlassen und zugestimmt hast, unsere Tipps und Neuigkeiten zu erhalten.",
+    "desinscription": "Abmelden",
+    "editeur": "Quiz Couple · Visibilitea",
+    "mentions": "Impressum"
+  },
+  "e1": {
+    "sujet": "100 Fragen, um als Paar Bilanz zu ziehen",
+    "apercu": "Jeder antwortet auf seinem Handy, dann zeigt euch ein Bericht, worin ihr euch einig seid.",
+    "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
+    "intro": {
+      "score": "Danke für deinen Test auf Quiz Couple! Wenn du wissen willst, worin ihr euch einig seid und worin nicht, haben wir etwas viel Ausführlicheres gemacht: die Beziehungsanalyse.",
+      "projet": "Danke für deinen Test auf Quiz Couple! Vor einem großen Schritt lohnt es sich zu prüfen, ob ihr beide dasselbe wollt. Genau dafür gibt es die Beziehungsanalyse.",
+      "doute": "Danke für deinen Test auf Quiz Couple. Wenn man sich Fragen über die eigene Beziehung stellt, hilft es schon viel, sie in Worte zu fassen. Dafür gibt es die Beziehungsanalyse.",
+      "general": "Danke, dass du Quiz Couple folgst! Wenn du wissen willst, worin ihr euch einig seid und worin nicht, haben wir unseren ausführlichsten Test gemacht: die Beziehungsanalyse."
+    },
+    "points": [
+      "**100 Fragen** zu 12 Bereichen: Geld, Kinder, Intimität, Streit...",
+      "**Jeder antwortet auf seinem Handy**, ohne die Antworten des anderen zu sehen",
+      "**Fragen auf Grundlage der Forschung**: mehr als 30 veröffentlichte Studien über Paare",
+      "**Am Ende vergleicht ein Bericht** eure Antworten und sagt euch, worüber ihr zuerst reden solltet"
+    ],
+    "solo": "Dein Partner oder deine Partnerin will nicht mitmachen? [Du kannst die Analyse auch allein machen](solo).",
+    "prixPhrase": {
+      "promo": "−[[pourcent]] % gerade, schon beim Bezahlen abgezogen",
+      "normal": "Für euch beide, einmalig"
+    },
+    "bouton": "So funktioniert's",
+    "note": "Die Fragen sind kostenlos: Du zahlst am Ende, einmal für euch beide.",
+    "ps": "**PS:** [[accroche]]"
+  },
+  "e2": {
+    "sujet": "Gemeinsames Konto oder jeder sein eigenes Geld?",
+    "apercu": {
+      "promo": "Eine der 100 Fragen der Beziehungsanalyse, gerade −[[pourcent]] %.",
+      "normal": "Eine der 100 Fragen der Beziehungsanalyse. Was würdest du antworten?"
+    },
+    "titre": "Würdet ihr beide dasselbe antworten?",
+    "intro": {
+      "score": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "projet": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "doute": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:",
+      "general": "Vor ein paar Tagen habe ich dir von der Beziehungsanalyse erzählt. Hier ist eine ihrer 100 Fragen:"
+    },
+    "exemple": "Jeder antwortet für sich. Wählt ihr dieselbe Antwort, seid ihr euch einig. Antwortet einer „[[reponseA]]“ und der andere „[[reponseB]]“, erklärt euch der Bericht, warum das zählt, und gibt euch Fragen, um darüber zu reden.",
+    "aussi": "Im Bericht findet ihr außerdem:",
+    "points": [
+      "**Die entscheidenden Themen** hervorgehoben: die, die in einer Beziehung am meisten wiegen",
+      "**4 Gespräche, die anstehen**, mit Fragen für den Einstieg",
+      "**Wie jeder von euch** die Beziehung gerade erlebt"
+    ],
+    "solo": "[Die Analyse geht auch allein](solo), wenn dein Partner oder deine Partnerin nicht mitmachen will.",
+    "prixPhrase": {
+      "promo": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte",
+      "normal": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte"
+    },
+    "bouton": "Die Analyse machen",
+    "note": "Zum Vergleich: Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas von Quiz Couple",
+    "signature": [
+      "Bis bald,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Die Fragen sind kostenlos, und der Bericht kostet gerade [[prix]] für euch beide statt [[prixBase]].",
+      "normal": "Die Fragen sind kostenlos, und der Bericht kostet [[prix]] für euch beide."
+    },
+    "solo": "Die Analyse geht auch allein, wenn dein Partner oder deine Partnerin nicht mitmachen will.",
+    "e1": {
+      "texte": "Ihr beantwortet jeder auf seinem Handy 100 Fragen, ohne die Antworten des anderen zu sehen. Geld, Kinder, Streit, Intimität... Am Ende vergleicht ein Bericht eure Antworten und sagt euch, worüber ihr zuerst reden solltet.",
+      "lien": "Hier ist alles erklärt: [zur Beziehungsanalyse](evaluation).",
+      "reponse": "Wenn du eine Frage hast, antworte einfach auf diese E-Mail."
+    },
+    "e2": {
+      "lien": "Wenn du Lust hast: [die Beziehungsanalyse machen](evaluation)."
+    }
+  }
+}

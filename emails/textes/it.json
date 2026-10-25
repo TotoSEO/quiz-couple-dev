@@ -1,0 +1,122 @@
+{
+  "salutation": {
+    "prenom": "Ciao [[prenom]]!",
+    "sans": "Ciao!"
+  },
+  "signature": [
+    "A presto,",
+    "Thomas, di Quiz Couple"
+  ],
+  "pastille": "Test · Quiz · Giochi",
+  "altMascottes": "Le mascotte di Quiz Couple ti salutano",
+  "voir": {
+    "titre": "Altro su [[marque]]",
+    "aller": "Ci vado →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "Qual è il tuo linguaggio dell'amore?",
+        "texte": "30 domande per scoprire come ama ciascuno di voi."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Chi conosce meglio l'altro?",
+        "texte": "Il piccolo duello per vedere chi ascolta di più."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-it.png",
+        "type": "Gioco",
+        "titre": "Preferiresti?",
+        "texte": "100 scelte impossibili da decidere in due."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "Ci vediamo su Instagram?",
+    "texte": "Un piccolo quiz ogni giorno, da fare in due."
+  },
+  "pied": {
+    "pourquoi": "Ricevi questa e-mail perché hai lasciato il tuo indirizzo alla fine di un test su quiz-couple.com e hai accettato di ricevere i nostri consigli e le nostre novità.",
+    "desinscription": "Annulla l'iscrizione",
+    "editeur": "Quiz Couple · Visibilitea",
+    "mentions": "Note legali"
+  },
+  "e1": {
+    "sujet": "100 domande per fare il punto in coppia",
+    "apercu": "Ognuno risponde sul proprio telefono, poi un report vi mostra su cosa siete d'accordo.",
+    "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
+    "intro": {
+      "score": "Grazie per aver fatto un test su Quiz Couple! Se vuoi sapere su cosa siete d'accordo voi due, e su cosa no, abbiamo fatto qualcosa di molto più completo: la valutazione di coppia.",
+      "projet": "Grazie per aver fatto un test su Quiz Couple! Prima di un grande passo, conviene verificare che vogliate tutti e due le stesse cose. A questo serve la valutazione di coppia.",
+      "doute": "Grazie per aver fatto un test su Quiz Couple. Quando ci si fanno domande sulla propria coppia, dare un nome alle cose aiuta già molto. A questo serve la valutazione di coppia.",
+      "general": "Grazie di seguire Quiz Couple! Se vuoi sapere su cosa siete d'accordo voi due, e su cosa no, abbiamo fatto il nostro test più completo: la valutazione di coppia."
+    },
+    "points": [
+      "**100 domande** su 12 aree: soldi, figli, intimità, litigi...",
+      "**Ognuno risponde sul proprio telefono**, senza vedere le risposte dell'altro",
+      "**Domande basate sulla ricerca**: più di 30 studi pubblicati sulla coppia",
+      "**Alla fine, un report** confronta le vostre risposte e vi dice di cosa parlare per prima cosa"
+    ],
+    "solo": "Il tuo partner non vuole partecipare? [Puoi fare la valutazione anche da solo/a](solo).",
+    "prixPhrase": {
+      "promo": "−[[pourcent]] % in questo momento, già applicato al pagamento",
+      "normal": "Per tutti e due, in un solo pagamento"
+    },
+    "bouton": "Scopri come funziona",
+    "note": "Le domande sono gratuite: paghi alla fine, una volta sola per tutti e due.",
+    "ps": "**P.S.** [[accroche]]"
+  },
+  "e2": {
+    "sujet": "Conto cointestato o ognuno i suoi soldi?",
+    "apercu": {
+      "promo": "È una delle 100 domande della valutazione di coppia, a −[[pourcent]] % in questo momento.",
+      "normal": "È una delle 100 domande della valutazione di coppia. Tu cosa risponderesti?"
+    },
+    "titre": "Rispondereste allo stesso modo, voi due?",
+    "intro": {
+      "score": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "projet": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "doute": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:",
+      "general": "Qualche giorno fa ti ho parlato della valutazione di coppia. Ecco una delle sue 100 domande:"
+    },
+    "exemple": "Ognuno risponde per conto suo. Se scegliete la stessa risposta, siete d'accordo. Se uno risponde «[[reponseA]]» e l'altro «[[reponseB]]», il report vi spiega perché conta e vi dà delle domande per parlarne.",
+    "aussi": "Nel report trovate anche:",
+    "points": [
+      "**I temi decisivi** messi in evidenza: quelli che pesano di più in una coppia",
+      "**4 conversazioni da fare**, con domande per cominciare",
+      "**Come ognuno di voi** vive la coppia in questo momento"
+    ],
+    "solo": "[La valutazione si può fare anche da solo/a](solo), se il tuo partner non vuole partecipare.",
+    "prixPhrase": {
+      "promo": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema",
+      "normal": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema"
+    },
+    "bouton": "Fai la valutazione",
+    "note": "Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €."
+  },
+  "sobre": {
+    "expediteur": "Thomas di Quiz Couple",
+    "signature": [
+      "A presto,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due in questo momento, invece di [[prixBase]].",
+      "normal": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due."
+    },
+    "solo": "La valutazione si può fare anche da solo/a, se il tuo partner non vuole.",
+    "e1": {
+      "texte": "Rispondete ognuno a 100 domande sul proprio telefono, senza vedere le risposte dell'altro. Soldi, figli, litigi, intimità... Alla fine, un report confronta le vostre risposte e vi dice di cosa parlare per prima cosa.",
+      "lien": "Qui trovi tutto spiegato: [vedi la valutazione di coppia](evaluation).",
+      "reponse": "Se hai una domanda, puoi rispondere direttamente a questa email."
+    },
+    "e2": {
+      "lien": "Se ti va: [fai la valutazione di coppia](evaluation)."
+    }
+  }
+}

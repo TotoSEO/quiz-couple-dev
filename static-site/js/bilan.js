@@ -264,17 +264,19 @@
     var e = (input && input.value || '').trim();
     if (!EMAIL_OK.test(e)) { if (etat) etat.textContent = x('lien.faux'); if (input) input.focus(); return; }
     b.disabled = true;
-    appel('lien', { id: id, jeton: jeton, email: e }).then(function (r) {
+    // `reprise` : la phrase sous le champ (lien.aide) annonce un seul rappel
+    // si les réponses ne sont pas finies (24 octobre 2026).
+    appel('lien', { id: id, jeton: jeton, email: e, reprise: true }).then(function (r) {
       b.disabled = false;
       if (etat) etat.textContent = r.statut === 200 ? x('lien.envoye', { email: e }) : x(r.json.erreur === 'trop' ? 'lien.trop' : 'erreurs.serveur');
     }).catch(function () { b.disabled = false; if (etat) etat.textContent = x('erreurs.reseau'); });
   }
   // Le champ de l'adresse e-mail de la fin des questions : obligatoire,
   // c'est là que le PDF part.
-  function champEmailFin(valeur) {
+  function champEmailFin(valeur, autre) {
     return '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
       '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" required value="' + esc(valeur || '') + '">' +
-      '<p class="bilan-note">' + x('creation.emailAide') + '</p></div>';
+      '<p class="bilan-note">' + x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }) + '</p></div>';
   }
   function blocRetrouver() {
     return '<details class="bilan-retrouver"><summary>' + x('retrouver.titre') + '</summary>' +
@@ -656,6 +658,7 @@
       duo('salut', 'surprise', 80, etat && etat.moi.genre, etat && etat.autre.genre) +
       '<h2 class="bilan-titre">' + x('invitation.titre', { autre: autre }) + '</h2>' +
       '<p class="bilan-texte">' + x('invitation.texte', { autre: autre }) + '</p>' +
+      (entree.invitationNeuve ? '<p class="bilan-note">' + x('invitation.nouveauLien', { autre: autre }) + '</p>' : '') +
       '<div class="bilan-lien"><input class="bilan-input" type="text" readonly value="' + esc(lien) + '" aria-label="' + x('invitation.copier') + '"></div>' +
       '<div class="bilan-actions">' +
       (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
@@ -1163,7 +1166,10 @@
     var session = S;
     // L'adresse où envoyer le rapport, demandée ici depuis le 21 octobre
     // 2026 : sans elle, le serveur ne marque pas fini.
-    if (!session.moi.email) return ecranEmail(session);
+    // Une adresse venue de « Recevoir mon lien par e-mail » n'a pas eu, sous
+    // son champ, la phrase qui annonce le « prêt » et le rappel (`rappel`
+    // faux) : la fin la redemande, préremplie (24 octobre 2026).
+    if (!session.moi.email || session.moi.rappel === false) return ecranEmail(session);
     afficher(carte('<p class="bilan-centre">' + x('chargement') + '</p>', 'bilan-chargement'), true);
     sauver(true, function (r) {
       if (r.statut === 409) return ouvrirResultat(session.entree);
@@ -1188,7 +1194,7 @@
       duo('joie', 'mignon', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('fin.titre') + '</h2>' +
       '<p class="bilan-texte">' + x('fin.texte', { autre: session.autre.prenom }) + '</p>' +
-      champEmailFin('') +
+      champEmailFin(session.moi.email || '', session.autre.prenom) +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
       '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
@@ -1209,10 +1215,13 @@
         if (!email) return erreur('creation.emailManque');
         if (!emailValide(email)) return erreur('creation.emailFaux');
         b.disabled = true;
-        appel('email', { id: session.id, jeton: session.jeton, email: email, rappel: true }).then(function (r) {
+        // La phrase sous le champ annonce le « prêt », le rappel et, à deux,
+        // un mot si l'autre tarde à finir (`reprise`, 24 octobre 2026).
+        appel('email', { id: session.id, jeton: session.jeton, email: email, rappel: true, reprise: session.mode !== 'solo' }).then(function (r) {
           b.disabled = false;
           if (r.statut !== 200) return erreur(r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
           session.moi.email = r.json.email || email;
+          session.moi.rappel = true;
           terminer();
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
@@ -1245,7 +1254,7 @@
     return '<div class="bilan-autre"><p>' + ligne + '</p>' +
       (etat.autre.rejoint ? '<div class="bilan-barre bilan-barre--autre"><span style="width:' + pct + '%"></span></div>' : '') +
       '<div class="bilan-actions bilan-actions--gauche">' +
-      (!etat.autre.rejoint && entree.invitation ? bouton('renvoyer', x('attente.renvoyer'), 'btn-outline btn-sm')
+      (!etat.autre.rejoint && etat.role === 'a' ? bouton('renvoyer', x('attente.renvoyer'), 'btn-outline btn-sm')
         : etat.autre.rejoint ? bouton('relancer', x('attente.relance', { autre: autre }), 'btn-outline btn-sm') : '') +
       '</div></div>';
   }
@@ -1431,7 +1440,20 @@
     afficher(html);
     if (!paye) compterVue('attente_vue', { mode: etat.mode, id: entree.id });
     var actions = actionsOffre(entree, etat.mode);
-    actions.renvoyer = function () { invitation(entree, etat); };
+    actions.renvoyer = function (b) {
+      if (entree.invitation) return invitation(entree, etat);
+      // Le lien de la création n'est pas sur cet appareil : un nouveau lien,
+      // l'ancien ne marche plus (action `inviter`, 24 octobre 2026).
+      b.disabled = true;
+      appel('inviter', { id: entree.id, jeton: entree.jeton }).then(function (r) {
+        b.disabled = false;
+        if (r.statut !== 200 || !r.json.invitation) return;
+        entree.invitation = r.json.invitation;
+        entree.invitationNeuve = true;
+        majEntree(entree.id, entree.role, { invitation: r.json.invitation });
+        invitation(entree, etat);
+      }).catch(function () { b.disabled = false; });
+    };
     actions.relancer = function (b) { relancer(b, autre); };
     actions.revoir = function () { commencerSession(entree, etat, true); };
     actions.email = actionEmail(entree);

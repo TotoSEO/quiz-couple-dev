@@ -21,7 +21,7 @@
 // rapport ne part qu'à A.
 
 import * as C from './coeur.mjs';
-import { emailPropre, masquerEmail, messageRapport, messageLien, messagePret, messageRelance, nomFichier } from './courriel.mjs';
+import { emailPropre, masquerEmail, messageRapport, messageLien, messagePret, messageRelance, messageReprise, nomFichier } from './courriel.mjs';
 
 export const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
 export const SITE = 'https://quiz-couple.com';
@@ -99,6 +99,8 @@ export const RETROUVER_DELAI_MS = 10 * 60e3; // une même adresse : un envoi par
 // mémoire d'une instance, qu'il suffit de contourner avec plusieurs adresses
 // (audit du 20 octobre 2026). Au-delà, « trop » comme pour la limite horaire.
 export const LIENS_PAR_JOUR = 40;
+// Nouveaux liens d'invitation (action `inviter`), par évaluation et par heure.
+export const INVITATIONS_PAR_HEURE = 5;
 // Les e-mails « votre rapport est prêt » et le rappel (21 octobre 2026,
 // Thomas devant l'entonnoir : 24 personnes au bout des cent questions, une
 // seule a ouvert la page de paiement, et personne n'était prévenu quand le
@@ -113,14 +115,25 @@ export const LIENS_PAR_JOUR = 40;
 // rapport payé compris.
 export const RAPPELS_PAR_JOUR = 40;
 export const RELANCE_APRES_H = 24;
+// La reprise (24 octobre 2026, Thomas : « si la personne a commencé
+// l'évaluation mais ne l'a pas finie, un autre mail ») : une seule fois par
+// personne, quand rien n'a bougé sur l'évaluation depuis REPRISE_APRES_H
+// heures, dans les REPRISE_JOURS jours qui suivent sa création. À qui n'a
+// pas fini ses réponses (variante « moi »), ou, à deux, à qui a fini quand
+// l'autre n'a pas fini (« autre »). Seulement à une adresse donnée sous une
+// phrase qui l'annonce (a_reprise, b_reprise : l'adresse de la fin des
+// questions, ou celle de « Recevoir mon lien par e-mail »), dans le même
+// plafond quotidien que le « prêt » et le rappel.
+export const REPRISE_APRES_H = 48;
+export const REPRISE_JOURS = 30;
 // Les liens personnels écrits dans ces e-mails ont leur propre jeton
 // (jetons_mail : rôle et empreinte), pour ne pas toucher au lien gardé sur le
 // téléphone. Au plus quatre par évaluation, les plus anciens tombent.
 // Depuis le 22 octobre 2026, l'e-mail du rapport porte lui aussi un lien
 // personnel par adresse, valable six mois : la place pour tous les envois du
-// rapport (ENVOIS_MAX) plus le « prêt » et le rappel, pour qu'aucun lien de
-// rapport ne tombe.
-export const JETONS_MAIL_MAX = ENVOIS_MAX + 2;
+// rapport (ENVOIS_MAX) plus le « prêt » (un), le rappel (deux, un par
+// personne) et la reprise (deux), pour qu'aucun lien ne tombe.
+export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // Ce que la page compte elle-même, en plus de la visite et du clic sur
 // « Commencer » (21 octobre 2026, Thomas devant l'entonnoir : « comment cette
 // stat prend en compte les gens qui répondent seul ? »). Chaque écran du
@@ -315,6 +328,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         percu: solo ? (ligne.a_percu || {}) : undefined,
         fini: !!ligne[role + '_fini'],
         email: ligne[role + '_email'] || null,
+        // L'adresse a été donnée sous la phrase qui annonce le « prêt » et le
+        // rappel : sinon la fin des questions la redemande (une adresse venue
+        // de « Recevoir mon lien par e-mail » n'a pas cette phrase).
+        rappel: !!ligne[role + '_rappel'],
         // Prévenu(e) par e-mail quand le rapport est prêt (attente à deux).
         prevenu: prevenu(ligne, role),
       },
@@ -735,7 +752,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     for (const dest of restants) {
       if (envois.length >= ENVOIS_MAX) break;
       const j = await jetonMail(jetons, dest.role);
-      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, pages: ligne.rapport_pages, mode, url: lienDe(ligne, j.jeton) });
+      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, mode, url: lienDe(ligne, j.jeton), moi: ligne[dest.role + '_prenom'] });
       let reussi = false;
       try {
         await courriel.envoyer({ a: dest.email, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
@@ -750,6 +767,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     }
     await stockage.maj(ligne.id, { envois, jetons_mail: jetons });
     return { envoyes, echecs: restants.length - envoyes };
+  }
+
+  // Une adresse ne se perd jamais pour une information en plus : si la base
+  // n'a pas encore les colonnes de la reprise (migration pas encore passée
+  // quand la fonction est déjà déployée), l'adresse est gardée sans elles.
+  async function majSure(id, champs) {
+    try {
+      return await stockage.maj(id, champs);
+    } catch (e) {
+      const sans = Object.fromEntries(Object.entries(champs).filter(([k]) => !/_reprise$/.test(k)));
+      if (Object.keys(sans).length === Object.keys(champs).length || !/PGRST204|_reprise/.test(String(e && e.message))) throw e;
+      console.error('[bilan] reprise', String(e && e.message || e).slice(0, 200));
+      return stockage.maj(id, sans);
+    }
   }
 
   // L'adresse où recevoir le rapport. Chacun ne règle que la sienne.
@@ -767,7 +798,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // annonce l'e-mail « rapport prêt » et le rappel : la page envoie alors
     // `rappel: true`, comme à la création avant le 21 octobre 2026.
     if (e && corps.rappel === true) champs[role + '_rappel'] = true;
-    const maj = await stockage.maj(ligne.id, champs);
+    // Depuis le 24 octobre 2026, la phrase annonce aussi la reprise (un mot
+    // si l'autre tarde à finir) : la page envoie alors `reprise: true`.
+    if (e && corps.reprise === true) champs[role + '_reprise'] = true;
+    const maj = await majSure(ligne.id, champs);
     const envoi = e ? await envoyerA(maj) : { envoyes: 0 };
     const relu = envoi.envoyes ? await stockage.lire(ligne.id) : maj;
     return ok({ email: e, envoi, etat: etatPour(relu, role) });
@@ -850,7 +884,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   async function plafondRappelsAtteint() {
     if (!stockage.compteDuJour) return false;
     try {
-      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye'])) >= RAPPELS_PAR_JOUR;
+      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye', 'reprise_envoye'])) >= RAPPELS_PAR_JOUR;
     } catch (e) {
       console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
       return false;
@@ -867,19 +901,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   function prixPour(ligne) {
     const p = paiementPour(ligne, 'a');
-    return { prix: p.prix, prixBase: p.prixBase, promo: !!p.promo };
+    return { prix: p.prix, prixBase: p.prixBase, promo: p.promo ? { pourcent: p.promo.pourcent } : null };
   }
 
-  async function envoyerRappel(ligne, role, quoi, jetons) {
+  async function envoyerRappel(ligne, role, quoi, jetons, reprise) {
     const autre = role === 'a' ? 'b' : 'a';
     const solo = estSolo(ligne);
     const j = await jetonMail(jetons, role);
     const url = lienDe(ligne, j.jeton);
-    const fabrique = quoi === 'pret' ? messagePret : messageRelance;
+    const fabrique = quoi === 'pret' ? messagePret : quoi === 'reprise' ? messageReprise : messageRelance;
     const msg = fabrique({
       lang: ligne.lang, mode: solo ? 'solo' : 'duo',
       moi: ligne[role + '_prenom'], autre: ligne[autre + '_prenom'],
       url, arret: url + '&arret=1', ...prixPour(ligne),
+      ...(reprise || {}),
     });
     await courriel.envoyer({ a: ligne[role + '_email'], sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
     return j.jetons;
@@ -928,7 +963,85 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // Une seule fois, même quand un envoi a raté : jamais deux rappels.
       await stockage.maj(ligne.id, { jetons_mail: jetons, relance_le: maintenant().toISOString() });
     }
-    return ok({ relances: envoyes, vus });
+    const reprises = await reprendre();
+    return ok({ relances: envoyes, vus, ...reprises });
+  }
+
+  // Qui reçoit la reprise sur cette ligne, et laquelle : 'moi' quand ses
+  // réponses ne sont pas finies, 'autre' quand, à deux, il a fini et pas
+  // l'autre. null sinon. Les dates sont revérifiées ici, ligne par ligne,
+  // comme stockage.aReprendre et bilan_relances_dues() les filtrent.
+  function varianteReprise(ligne, role, avant, depuis) {
+    if (role === 'b' && estSolo(ligne)) return null;
+    if (ligne.paye_le || ligne.rappels_off || estVerrouille(ligne)) return null;
+    if (!ligne[role + '_reprise'] || !ligne[role + '_email'] || !ligne[role + '_consent'] || ligne[role + '_reprise_le']) return null;
+    if (!(ligne.maj_le < avant) || !(ligne.cree_le > depuis)) return null;
+    if (!ligne[role + '_fini']) return 'moi';
+    const autre = role === 'a' ? 'b' : 'a';
+    return !estSolo(ligne) && !ligne[autre + '_fini'] ? 'autre' : null;
+  }
+
+  async function reprendre() {
+    if (!stockage.aReprendre) return { reprises: 0 };
+    const t = maintenant().getTime();
+    const avant = new Date(t - REPRISE_APRES_H * 3600e3).toISOString();
+    const depuis = new Date(t - REPRISE_JOURS * 86400e3).toISOString();
+    const lignes = await stockage.aReprendre(avant, depuis, 25);
+    let reprises = 0;
+    for (const ligne of lignes || []) {
+      let jetons = ligne.jetons_mail;
+      const champs = {};
+      for (const role of ['a', 'b']) {
+        const variante = varianteReprise(ligne, role, avant, depuis);
+        if (!variante) continue;
+        if (await plafondRappelsAtteint()) {
+          if (Object.keys(champs).length) await stockage.maj(ligne.id, { ...champs, jetons_mail: jetons });
+          return { reprises, plafond: true };
+        }
+        const autre = role === 'a' ? 'b' : 'a';
+        const solo = estSolo(ligne);
+        const qui = variante === 'moi' ? role : autre;
+        const reprise = {
+          variante,
+          progression: C.progression(ligne.situation, ligne[qui + '_reponses'] || {}, solo ? (ligne.a_percu || {}) : undefined),
+          autreFini: !solo && !!ligne[autre + '_fini'],
+          invite: variante === 'autre' && !ligne[autre + '_consent'],
+        };
+        try {
+          jetons = await envoyerRappel(ligne, role, 'reprise', jetons, reprise);
+          reprises++;
+          await compter('reprise_envoye', variante);
+        } catch (e) {
+          console.error('[bilan] reprise', String(e && e.message || e).slice(0, 200));
+        }
+        // Une seule fois, même quand l'envoi a raté.
+        champs[role + '_reprise_le'] = maintenant().toISOString();
+      }
+      // maj_le ne bouge pas : l'e-mail n'est pas une activité de la personne.
+      if (Object.keys(champs).length) await stockage.maj(ligne.id, { ...champs, jetons_mail: jetons });
+    }
+    return { reprises };
+  }
+
+  // Un nouveau lien d'invitation pour l'autre, quand celui de la création
+  // n'est plus sur l'appareil (24 octobre 2026 : la reprise mène à la page
+  // de qui a fini, peut-être depuis un autre téléphone, et dit « renvoyez
+  // l'invitation »). Seulement la personne qui a créé l'évaluation à deux,
+  // tant que l'autre n'a pas accepté. L'ancien lien ne marche plus : la base
+  // n'en garde que l'empreinte, impossible de le renvoyer tel quel.
+  async function inviter(corps) {
+    const c = await charger(corps);
+    if (c.erreur) return c.erreur;
+    const { ligne, role } = c;
+    if (role !== 'a' || estSolo(ligne)) return non(403, 'role');
+    if (!ligne.a_consent) return non(403, 'consentement');
+    if (ligne.b_consent) return non(409, 'deja');
+    if (!freiner(essais.inviter, ligne.id, INVITATIONS_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    const jeton = nouveauJeton();
+    // maj_le bouge : la reprise « l'autre n'a pas ouvert l'invitation » ne
+    // part pas juste après une invitation renvoyée.
+    await stockage.maj(ligne.id, { b_jeton: await empreinte(jeton), maj_le: maintenant().toISOString() });
+    return ok({ invitation: jeton });
   }
 
   // « Ne plus recevoir de message sur cette évaluation », depuis le lien de
@@ -945,7 +1058,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // ── Les liens perdus ──────────────────────────────────────────────────
   // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et
   // qu'il n'a pas eu le temps de copier son lien, on fait comment ? »)
-  const essais = { lien: new Map(), ip: new Map(), adresse: new Map() };
+  const essais = { lien: new Map(), ip: new Map(), adresse: new Map(), inviter: new Map() };
   // Le plafond quotidien des e-mails de lien. Une lecture qui échoue ne bloque
   // personne : la disponibilité passe avant le quota.
   async function plafondLiensAtteint() {
@@ -992,7 +1105,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!freiner(essais.lien, ligne.id + ':' + role, LIENS_PAR_HEURE, 3600e3)) return non(429, 'trop');
     if (await plafondLiensAtteint()) return non(429, 'trop');
     let maj = ligne;
-    if (!ligne[role + '_email']) maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
+    const champs = {};
+    if (!ligne[role + '_email']) champs[role + '_email'] = e;
+    // La phrase sous le champ annonce un seul rappel si les réponses ne sont
+    // pas finies (24 octobre 2026) : la reprise ne part qu'à l'adresse
+    // donnée sous cette phrase, jamais à une autre adresse gardée.
+    if (corps.reprise === true && (ligne[role + '_email'] || e) === e && !ligne[role + '_reprise']) champs[role + '_reprise'] = true;
+    if (Object.keys(champs).length) maj = await majSure(ligne.id, { ...champs, maj_le: maintenant().toISOString() });
     const msg = messageLien({ lang: ligne.lang, liens: [{ ...entreeLien(ligne, role), url: lienDe(ligne, corps.jeton) }], rotation: false });
     try {
       await courriel.envoyer({ a: e, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
@@ -1049,7 +1168,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
-    email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer,
+    email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer, inviter,
     apercu_paiement: apercuPaiement,
   };
 

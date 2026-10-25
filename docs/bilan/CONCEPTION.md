@@ -1134,3 +1134,119 @@ font cent, la carte est triée, aucune carte « Accord » sous « Vos
 différences », la phrase du ressenti apparaît quand il le faut et seulement
 alors, l'étiquette suit le poids. Les trente rapports d'exemple passent les
 deux contrôles de mise en page.
+
+## 24 octobre 2026 : la reprise, et des e-mails qui vendent
+
+Thomas, en décrivant le parcours e-mail : « si la personne a commencé
+l'évaluation mais ne l'a pas finie, un autre mail. Si elle l'a finie mais pas
+payé, un mail convaincant : -20 %, X € par personne, comparé à un prix du
+quotidien ». Puis, devant les premiers essais : « Y'a trop de texte ! C'est
+pas assez marketing avec des bullet points rapide et tout ! ».
+
+**Ce qui part, et à qui.** Le parcours e-mail de Brevo (docs/emailing)
+s'arrête dès que l'adresse est dans une évaluation : c'est la fonction
+`bilan` qui écrit ensuite, par Resend.
+
+| E-mail | Quand | À qui |
+|---|---|---|
+| Rapport prêt | quand le second finit ses réponses | le premier, à deux |
+| Rappel | 24 heures après, s'il n'est pas débloqué | chacun |
+| Reprise « moi » | 48 heures sans rien de neuf, réponses pas finies | qui a donné son adresse par « Recevoir mon lien par e-mail » |
+| Reprise « autre » | 48 heures sans rien de neuf, l'autre pas fini | qui a fini, à deux |
+
+Chaque e-mail part une seule fois par personne, jamais après le paiement ni
+après « ne plus recevoir », et seulement à une adresse donnée sous une phrase
+qui l'annonce : les évaluations d'avant le 24 octobre ne reçoivent pas de
+reprise. La reprise ne part que dans les 30 jours de la création.
+
+**Pourquoi la reprise « autre » compte le plus.** Depuis le 21 octobre,
+l'adresse est demandée à la fin de ses propres questions : quelqu'un qui
+s'arrête en route n'a, en général, pas d'adresse. En revanche, à deux, celle
+qui a fini attend l'autre ; si l'autre traîne, c'est elle qu'on prévient, avec
+un bouton vers sa page, qui envoie un petit message ou renvoie l'invitation.
+Sur un autre appareil, la page n'a pas le lien d'invitation de la création
+(il n'est gardé que dans le navigateur, la base n'en a que l'empreinte) :
+« Renvoyer l'invitation » en demande un nouveau (action `inviter`), et l'ancien
+ne marche plus.
+
+**La forme.** La maquette des e-mails du parcours, sans les encarts « À voir
+aussi » ni Instagram : les deux personnages et leur bulle, un titre, une
+phrase, des coches sur ce que le rapport contient en général (jamais un
+chiffre du rapport), le ticket du prix (barré pendant une réduction, et à
+deux « Soit 3,96 € chacun : moins qu'une place de ciné »), le bouton, et en
+note la séance chez un conseiller conjugal (le chiffre de la page de vente
+dans chaque langue). Le rappel met en citation « Le plus long est fait, vous
+avez répondu tous les deux. Il ne reste que la lecture ! » (jusqu'au
+24 octobre 2026 au soir, la phrase de l'écran « rapport prêt », « Peu de
+couples prennent un jour le temps de faire ce point... », une généralité
+qu'on ne peut pas prouver) et son sujet dit la réduction en cours. La reprise « moi » montre la barre de
+progression, les minutes restantes (comptées comme la page de vente, 25 à
+30 minutes pour cent questions, le double seul(e)) et rappelle que les
+questions sont gratuites.
+
+**La mesure.** Rien ne vient d'un pistage : l'onglet Évaluation de l'admin
+lit les dates de la base (`rappels` de `get_bilan_tableau`) et montre, pour
+les évaluations créées sur la période, combien de chaque e-mail sont partis
+et ce que les gens ont fait ensuite : payé après le « prêt » ou le rappel,
+fini ses réponses après la reprise « moi », l'autre a fini après la reprise
+« autre ». La variante d'une reprise se lit à la date : réponses pas finies à
+l'envoi, c'était « moi ».
+
+## 24 octobre 2026 au soir : tous les e-mails dans la même carte
+
+Thomas, devant les e-mails du parcours partis le premier soir : « tu peux
+redesigner comme pour les mails marketing les mails d'envois de pdf et tout
+aussi ? comme ça on uniformise les mails ».
+
+Tous les e-mails envoyés par Resend passent désormais par la même carte,
+`supabase/functions/_shared/emails/carte.mjs`, la maquette des e-mails du
+parcours Brevo sans les encarts « À voir aussi » ni Instagram : les deux
+personnages et leur bulle (« Bonjour Léa ! », ou « Bonjour ! » sans prénom),
+un titre, une phrase, des coches courtes, le bouton, la signature, le pied.
+C'était déjà le cas du « prêt », du rappel et de la reprise ; ce sont aussi :
+
+- **le lien du rapport** : « Votre rapport est prêt », une phrase, trois
+  coches pour bien le lire (chacun de son côté puis ensemble, commencer par
+  « Vos quatre prochaines conversations », le lien est personnel et marche
+  six mois), le bouton du PDF et, dessous, « Le lire en ligne » ; la note de
+  confidentialité en pastille ; « une question ? répondez à ce message » sous
+  la signature ; dans le pied, la confirmation de la renonciation à la
+  rétractation, mot pour mot celle d'avant, avec le lien des CGV cliquable
+  (L221-13). Le nombre de pages ne s'écrit plus, comme partout depuis le
+  23 octobre. La bulle porte le prénom de la personne qui reçoit l'e-mail ;
+- **le lien personnel** (« Recevoir mon lien par e-mail », « Retrouver mon
+  évaluation ») : un lien, avec l'adresse en clair sous le bouton pour la
+  recopier sur un autre appareil ; plusieurs, une petite carte par évaluation
+  avec son nom, son bouton et son adresse ; aucun, un e-mail qui dit les deux
+  pistes (une autre adresse, ou la page restée ouverte sur le téléphone) et
+  mène à la page de l'évaluation ;
+- **la confirmation de l'e-book** (ebook-verify), qui avait encore son
+  bouton en dégradé.
+
+Les e-mails transactionnels (rapport, lien, e-book) n'ont pas de lien « ne
+plus recevoir » : ils ne partent qu'une fois, à la demande ou à la livraison.
+Le texte brut suit le même ordre, bulle comprise. Aperçus : un script
+d'aperçus par variante et par langue, relus dans Chromium à 390 et 1 100 px.
+
+## 24 octobre 2026 : retirer une vente de test
+
+Thomas : « Dans mon admin y'a écrit 3 pdf générés, 3 ventes et tout mais la
+première vente c'était moi c'était un test donc tu peux retirer tout ça stp
+pour pas que ça fausse le reste ».
+
+L'onglet Évaluation lit deux choses : les compteurs du jour
+(`bilan_compteurs`, écrits par le déclencheur `bilans_compte` et par la
+fonction `bilan`, sans identifiant d'évaluation) et les lignes de `bilans`
+(PDF, délais, modes, attente, e-mails). Retirer un test, c'est donc effacer sa
+ligne et son PDF, et décompter ce qu'il a compté, chaque compteur au jour où
+il l'a été : créée, rejointe, finie, premier et second fini, paiement ouvert,
+payée (avec son montant), remboursée, rapport prêt, envois du rapport,
+« rapport prêt », rappel et reprise. La situation, la première réponse et
+les domaines n'ont pas de date dans la ligne : on ne les décompte que si
+toute l'évaluation tient dans une journée. Les visites de la page ne sont
+rattachées à aucune évaluation et restent.
+
+L'outil est `bilan/retrait-test.mjs`, lancé par `bilan-retrait.yml` :
+`lister` (les ventes, sans prénom ni adresse ; avec des empreintes SHA-256
+d'adresses, il signale celles faites avec elles, sans que l'adresse passe par
+le workflow), `essai` (ce qui serait retiré, sans rien toucher), `retirer`.

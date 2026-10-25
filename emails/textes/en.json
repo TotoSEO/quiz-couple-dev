@@ -1,0 +1,122 @@
+{
+  "salutation": {
+    "prenom": "Hi [[prenom]]!",
+    "sans": "Hi there!"
+  },
+  "signature": [
+    "Talk soon,",
+    "Thomas, from Quiz Couple"
+  ],
+  "pastille": "Tests · Quizzes · Games",
+  "altMascottes": "The Quiz Couple mascots waving hello",
+  "voir": {
+    "titre": "More from [[marque]]",
+    "aller": "Let's go →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "What's your love language?",
+        "texte": "30 questions to find out how each of you loves."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Who knows the other best?",
+        "texte": "The little duel to see who listens best."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-en.png",
+        "type": "Game",
+        "titre": "Would you rather?",
+        "texte": "100 impossible choices to settle together."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "See you on Instagram?",
+    "texte": "A little quiz every day, to play together."
+  },
+  "pied": {
+    "pourquoi": "You're receiving this email because you left your address at the end of a test on quiz-couple.com and agreed to receive our tips and news.",
+    "desinscription": "Unsubscribe",
+    "editeur": "Quiz Couple · Visibilitea",
+    "mentions": "Legal Notice"
+  },
+  "e1": {
+    "sujet": "100 questions to see where you two stand",
+    "apercu": "You each answer on your own phone, then a report shows you where you agree.",
+    "titre": "Take stock of your relationship, without seeing a professional",
+    "intro": {
+      "score": "Thanks for taking a test on Quiz Couple! If you'd like to know what you two agree on, and what you don't, we've made something much more thorough: the relationship assessment.",
+      "projet": "Thanks for taking a test on Quiz Couple! Before a big step, it's worth checking you both want the same things. That's what the relationship assessment is for.",
+      "doute": "Thanks for taking a test on Quiz Couple. When you have doubts about your relationship, putting them into words already helps a lot. That's what the relationship assessment is for.",
+      "general": "Thanks for following Quiz Couple! If you'd like to know what you two agree on, and what you don't, we've made our most thorough test: the relationship assessment."
+    },
+    "points": [
+      "**100 questions** across 12 areas: money, kids, intimacy, arguments...",
+      "**You each answer on your own phone**, without seeing the other's answers",
+      "**Questions grounded in research**: more than 30 published studies on couples",
+      "**At the end, a report** compares your answers and tells you what to talk about first"
+    ],
+    "solo": "Your partner doesn't want to take part? [You can also take the assessment on your own](solo).",
+    "prixPhrase": {
+      "promo": "[[pourcent]]% off right now, already applied at checkout",
+      "normal": "For both of you, in a single payment"
+    },
+    "bouton": "See how it works",
+    "note": "The questions are free: you pay at the end, once for both of you.",
+    "ps": "**PS:** [[accroche]]"
+  },
+  "e2": {
+    "sujet": "Joint account or separate finances?",
+    "apercu": {
+      "promo": "One of the 100 questions in the relationship assessment, [[pourcent]]% off right now.",
+      "normal": "One of the 100 questions in the relationship assessment. What would you answer?"
+    },
+    "titre": "Would you two give the same answer?",
+    "intro": {
+      "score": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "projet": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "doute": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:",
+      "general": "A few days ago, I told you about the relationship assessment. Here's one of its 100 questions:"
+    },
+    "exemple": "You each answer on your own. If you pick the same answer, that's an agreement. If one of you says “[[reponseA]]” and the other “[[reponseB]]”, the report explains why it matters and gives you questions to talk it through.",
+    "aussi": "The report also gives you:",
+    "points": [
+      "**The non-negotiables** highlighted: the topics that weigh most in a relationship",
+      "**4 conversations to have**, with questions to get you started",
+      "**How each of you** feels about the relationship right now"
+    ],
+    "solo": "[The assessment also works on your own](solo), if your partner doesn't want to take part.",
+    "prixPhrase": {
+      "promo": "That's [[prixChacun]] each: less than a cinema ticket",
+      "normal": "That's [[prixChacun]] each: less than a cinema ticket"
+    },
+    "bouton": "Take the assessment",
+    "note": "For comparison: a session with a relationship counsellor costs between £50 and £90."
+  },
+  "sobre": {
+    "expediteur": "Thomas from Quiz Couple",
+    "signature": [
+      "Talk soon,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "The questions are free, and the report costs [[prix]] for both of you right now, instead of [[prixBase]].",
+      "normal": "The questions are free, and the report costs [[prix]] for both of you."
+    },
+    "solo": "You can also take the assessment on your own, if your partner doesn't want to.",
+    "e1": {
+      "texte": "You each answer 100 questions on your own phone, without seeing the other's answers. Money, kids, arguments, intimacy... At the end, a report compares your answers and tells you what to talk about first.",
+      "lien": "It's all explained here: [see the relationship assessment](evaluation).",
+      "reponse": "If you have a question, you can simply reply to this email."
+    },
+    "e2": {
+      "lien": "If you feel like it: [take the relationship assessment](evaluation)."
+    }
+  }
+}
