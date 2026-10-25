@@ -333,7 +333,10 @@ export function rapportHtml(d, T, Q, o) {
     const base = x.bande && Q.domaines[x.id] && Q.domaines[x.id].rapport ? Q.domaines[x.id].rapport[x.bande] : '';
     if (!base) return '';
     let texte = tl(base);
-    if (x.climatA !== null && x.climatB !== null && Math.min(x.climatA, x.climatB) < 50) {
+    // En solo, le ressenti prêté à l'autre peut manquer (aucune question
+    // d'état imaginée dans le domaine) : celui de A suffit.
+    const ressentis = [x.climatA, x.climatB].filter((v) => v !== null);
+    if (ressentis.length && Math.min(...ressentis) < 50) {
       const signaux = x.etats.length && x.etats.every((e) => e.signal);
       if (signaux) {
         texte += ' ' + tx(court ? 'rapport.domaines.signauxBasCourt' : 'rapport.domaines.signauxBas', { n: numeroDe('signaux'), titre: brut(chemin('rapport.chapitres.signaux')) });
@@ -348,7 +351,7 @@ export function rapportHtml(d, T, Q, o) {
   analyse.items.forEach((i) => { parId[i.id] = i; });
   const domaineParId = {};
   analyse.domaines.forEach((x) => { domaineParId[x.id] = x; });
-  const nbQuestions = analyse.items.length + analyse.etats.length + analyse.inconnus.length;
+  const nbQuestions = analyse.compte.repondues;
   const domainesNotes = analyse.domaines.filter((x) => !x.meteo && x.score !== null);
   const signature = esc(P.a.nom) + (solo ? '' : ' <span class="rap-sig-et">&amp;</span> ' + esc(P.b.nom)) + ' · ' + esc(dateLongue(d.finiLe, lang));
 
@@ -443,7 +446,8 @@ export function rapportHtml(d, T, Q, o) {
 
   // Une case cochée : un sujet sur lequel les deux ont répondu pareil (ou,
   // en solo, une question restée sans réponse pour l'autre, variante
-  // `inconnu`), avec la réponse commune dessous.
+  // `inconnu`, ou une question où l'autre n'a pas été imaginé(e), variante
+  // `seule`, au point de la couleur de A), avec la réponse commune dessous.
   const COCHE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const POINT = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="#fff"/></svg>';
   // `etiquette` : la ou les étiquettes à poser sous la réponse (non
@@ -453,12 +457,13 @@ export function rapportHtml(d, T, Q, o) {
   // les sujets décisifs, et le socle « 7/8 » de la fin semblait les contredire.
   function caseAccord(item, variante, etiquette) {
     const inconnu = variante === 'inconnu';
+    const seule = variante === 'seule';
     const decisif = !inconnu && item.poids === 3 ? '<span class="rap-tag rap-tag--poids">' + tx('rapport.poidsFort') + '</span>' : '';
     const tags = decisif + (etiquette || '');
-    return '<div class="rap-accord' + (inconnu ? ' rap-accord--inconnu' : '') + '">'
-      + '<span class="rap-accord-coche">' + (inconnu ? POINT : COCHE) + '</span>'
+    return '<div class="rap-accord' + (inconnu ? ' rap-accord--inconnu' : '') + (seule ? ' rap-accord--seule rap-accord--' + P.a.couleur : '') + '">'
+      + '<span class="rap-accord-coche">' + (inconnu || seule ? POINT : COCHE) + '</span>'
       + '<div><p class="rap-accord-titre">' + tl(court(item.id)) + '</p>'
-      + '<p class="rap-accord-rep">' + tl(inconnu ? reponseLue(item.id, P.a) : reponseCommune(item.id)) + '</p>'
+      + '<p class="rap-accord-rep">' + tl(inconnu || seule ? reponseLue(item.id, P.a) : reponseCommune(item.id)) + '</p>'
       + (tags ? '<p class="rap-accord-tags">' + tags + '</p>' : '') + '</div></div>';
   }
 
@@ -479,10 +484,12 @@ export function rapportHtml(d, T, Q, o) {
   }
 
   // La ligne de chacun sous une échelle : sa couleur, son prénom, sa réponse.
+  // En solo, une question où l'autre n'a pas été imaginé(e) n'a que la
+  // ligne de A.
   function lignesReponses(id) {
     const l = (p) => '<li class="rap-qui-dit">' + pastille(p) + '<span class="rap-qui-dit-texte">' + nomH(p)
       + '<span class="rap-deux-points">' + (lang === 'fr' ? ' : ' : ': ') + '</span>' + tl(reponseLue(id, p)) + '</span></li>';
-    return '<ul class="rap-qui-dits">' + l(P.a) + l(P.b) + '</ul>';
+    return '<ul class="rap-qui-dits">' + l(P.a) + (reponseLue(id, P.b) ? l(P.b) : '') + '</ul>';
   }
 
   const legendeDuo = '<p class="rap-legende-duo"><span class="rap-legende-item">' + pastille(P.a) + nomH(P.a) + '</span>'
@@ -559,7 +566,8 @@ export function rapportHtml(d, T, Q, o) {
     + '<p class="rap-score-desc">' + tx('rapport.meteos.' + temps + '.texte') + '</p>'
     + (analyse.meteoA !== null ? '<ul class="rap-climats">'
       + '<li>' + pastille(P.a) + '<span>' + nomH(P.a) + '<span class="rap-climat-n">' + analyse.meteoA + ' %</span></span></li>'
-      + '<li>' + pastille(P.b) + '<span>' + nomH(P.b) + '<span class="rap-climat-n">' + analyse.meteoB + ' %</span></span></li></ul>' : '')
+      // En solo, sans question d'état imaginée, pas de climat prêté à l'autre.
+      + (analyse.meteoB === null ? '' : '<li>' + pastille(P.b) + '<span>' + nomH(P.b) + '<span class="rap-climat-n">' + analyse.meteoB + ' %</span></span></li>') + '</ul>' : '')
     + '<p class="rap-aide">' + tx('rapport.synthese.climatAide') + '</p></div></div>'
     + '</div>'
     + '<div class="rap-tuiles">' + tuile('accords', analyse.compte.accords) + tuile('proches', analyse.compte.proches)
@@ -665,17 +673,19 @@ export function rapportHtml(d, T, Q, o) {
     ? '<div class="rap-bloc rap-bloc--halteres"><h3 class="rap-h3">' + tx('rapport.climat.parDomaine') + '</h3><p class="rap-aide">' + tx('rapport.climat.parDomaineAide') + '</p>'
       + legendeDuo
       + '<div class="rap-halteres">' + domainesClimat.map((x) => {
+        // En solo, sans question d'état imaginée dans le domaine, le point
+        // de l'autre manque : celui de A reste seul sur la ligne.
         const a = pct(x.climatA);
-        const b = pct(x.climatB);
-        const lo = Math.min(a, b);
-        const hi = Math.max(a, b);
+        const b = x.climatB === null ? null : pct(x.climatB);
+        const lo = b === null ? a : Math.min(a, b);
+        const hi = b === null ? a : Math.max(a, b);
         return '<div class="rap-haltere">'
           + '<p class="rap-haltere-nom">' + tl(x.meteo ? brut('rapport.chapitres.climat') : titreDomaine(x.id)) + '</p>'
           + '<div class="rap-haltere-piste" aria-hidden="true"><span class="rap-haltere-lien" style="left:' + lo + '%;width:' + (hi - lo) + '%"></span>'
           + '<span class="rap-haltere-point rap-haltere-point--' + P.a.couleur + '" style="left:' + a + '%"></span>'
-          + '<span class="rap-haltere-point rap-haltere-point--' + P.b.couleur + '" style="left:' + b + '%"></span></div>'
+          + (b === null ? '' : '<span class="rap-haltere-point rap-haltere-point--' + P.b.couleur + '" style="left:' + b + '%"></span>') + '</div>'
           + '<p class="rap-haltere-val"><span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.a.couleur + '"></span>' + a + ' %</span>'
-          + '<span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.b.couleur + '"></span>' + b + ' %</span></p>'
+          + (b === null ? '' : '<span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.b.couleur + '"></span>' + b + ' %</span>') + '</p>'
           + '</div>';
       }).join('') + '</div></div>'
     : '';
@@ -701,7 +711,7 @@ export function rapportHtml(d, T, Q, o) {
 
   function etatSignal(s) {
     const reparation = s.signal === 'reparation';
-    if (reparation) return (s.a <= 1 && s.b <= 1) ? 'reparationBien' : 'reparationAttention';
+    if (reparation) return (s.a <= 1 && (s.b === null || s.b <= 1)) ? 'reparationBien' : 'reparationAttention';
     return s.alerte ? 'alerte' : s.attention ? 'attention' : 'rare';
   }
   const classeSignal = { rare: 'accord', reparationBien: 'accord', attention: 'proche', reparationAttention: 'proche', alerte: 'ecart' };
@@ -744,18 +754,29 @@ export function rapportHtml(d, T, Q, o) {
       + lignesReponses(item.id)
       + '</article>';
   }
+  // Seul(e), « qui s'en occupe » sans ce que l'autre répondrait (25 octobre
+  // 2026) : le repère de A seul, sans étiquette, après les sujets comparés.
+  const quisSeules = solo ? analyse.seules.filter((i) => i.type === 'qui') : [];
+  function ligneRoleSeule(item) {
+    return '<article class="rap-role">'
+      + '<div class="rap-etat-tete"><h3 class="rap-etat-titre">' + tl(court(item.id)) + '</h3></div>'
+      + echelle(5, item.a, null, null, 'roles')
+      + lignesReponses(item.id)
+      + '</article>';
+  }
+  const nbRoles = quis.length + quisSeules.length;
   const roles = chapitre('roles', numeroDe('roles'),
-    (quis.length
+    (nbRoles
       ? '<div class="rap-role-axe"><p class="rap-role-bout">' + pastille(P.a) + tx('rapport.roles.surtout', { nom: P.a.nom }) + '</p>'
         + '<p class="rap-role-bout rap-role-bout--droite">' + tx('rapport.roles.surtout', { nom: P.b.nom }) + pastille(P.b) + '</p></div>'
-        + '<div class="rap-etats' + (quis.length > 1 ? ' rap-etats--deux' : '') + '">' + quis.map(ligneRole).join('') + '</div>'
+        + '<div class="rap-etats' + (nbRoles > 1 ? ' rap-etats--deux' : '') + '">' + quis.map(ligneRole).join('') + quisSeules.map(ligneRoleSeule).join('') + '</div>'
       : '<p class="rap-vide">' + tx('rapport.roles.aucun') + '</p>'),
     tx('rapport.roles.intro', { a: P.a.nom, b: P.b.nom }));
 
   // ── 8. Domaine par domaine ──
 
   const domaines = chapitre('domaines', numeroDe('domaines'),
-    analyse.domaines.filter((x) => !x.meteo && (x.items.length || x.etats.length || x.inconnus)).map((x) => {
+    analyse.domaines.filter((x) => !x.meteo && (x.items.length || x.etats.length || x.inconnus || x.seules.length)).map((x) => {
       const accords = x.items.filter((i) => i.cat === 'accord' && !i.chacunPlus && !i.desequilibre);
       // Les accords sur « qui s'en occupe » où c'est surtout l'un des deux
       // (« Vous êtes d'accord : c'est surtout Camille ») : des accords, avec
@@ -803,6 +824,11 @@ export function rapportHtml(d, T, Q, o) {
         + (inconnusDom.length
           ? '<p class="rap-h4 rap-h4--inconnu">' + tx('rapport.domaines.inconnus') + '</p><div class="rap-accords">'
             + inconnusDom.map((i) => caseAccord(i, 'inconnu')).join('') + '</div>' : '')
+        // Seul(e), les questions où l'autre n'a pas été imaginé(e) (25 octobre
+        // 2026) : la réponse de A, sans comparaison.
+        + (x.seules.length
+          ? '<p class="rap-h4 rap-h4--seule">' + tx('rapport.solo.domaines.seules') + '</p><p class="rap-aide">' + tx('rapport.solo.domaines.seulesAide', { nom: P.b.nom }) + '</p><div class="rap-accords">'
+            + x.seules.map((i) => caseAccord(i, 'seule')).join('') + '</div>' : '')
         + (x.etats.filter((e) => !e.signal).length
           ? '<p class="rap-h4 rap-h4--etat">' + tx('rapport.domaines.etats') + '</p>' + cartesEtats(x.etats.filter((e) => !e.signal)) : '')
         + '</div>';

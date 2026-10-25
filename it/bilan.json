@@ -31,7 +31,7 @@
       "modeDuo": "In due",
       "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
       "modeSolo": "Da solo/a",
-      "modeSoloAide": "Rispondi per te, poi dici cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
+      "modeSoloAide": "Rispondi per te e, sugli argomenti che contano di più, dici anche cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
       "prenomsTitre": "I vostri due nomi",
       "moi": "Il tuo nome",
       "autre": "Il nome del tuo partner",
@@ -206,7 +206,14 @@
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione",
-        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa."
+        "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
+        "apportTitre": "Cosa ti dà la valutazione da solo/a",
+        "apport": [
+          "Il tuo sguardo sulle dodici aree della vostra coppia, dalla vita di tutti i giorni all'intimità",
+          "Sugli argomenti che contano di più, dove pensi di essere d'accordo con {{autre}}, e dove no",
+          "Gli argomenti su cui non sai cosa pensa {{autre}}: spesso sono le conversazioni da fare"
+        ],
+        "apportNote": "100 domande, circa 25 minuti. Puoi fare una pausa e riprendere più tardi."
       },
       "domaine": {
         "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
@@ -227,7 +234,7 @@
         "emailAide": "Il link al PDF arriverà a questo indirizzo appena pagato.",
         "pretTitre": "{{moi}}, il tuo report è pronto",
         "apercu": {
-          "intro": "Le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
+          "intro": "Sugli argomenti che contano di più, le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
           "quoi": "Il report ti dice quali e da dove cominciare. Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
           "inconnusUn": "E un tema su cui non sai cosa risponderebbe {{autre}}.",
           "inconnusN": "E {{n}} temi su cui non sai cosa risponderebbe {{autre}}."
@@ -384,7 +391,7 @@
         "nnAucun": "Niente di segnato."
       },
       "ombre": {
-        "intro": "Hai risposto per te, poi hai detto cosa risponderebbe {{nom}}. Quando non lo sapevi, l'hai detto: questo capitolo raccoglie quegli argomenti. Non sono problemi, sono domande da fare.",
+        "intro": "Sugli argomenti che contano di più, hai detto cosa risponderebbe {{nom}}. Quando non lo sapevi, l'hai detto: questo capitolo raccoglie quegli argomenti. Non sono problemi, sono domande da fare.",
         "part": "La tua parte d'ombra",
         "bandes": {
           "peu": {
@@ -505,7 +512,7 @@
         "inconnuTag": "Non lo so",
         "inconnuLire": "Non sapevi cosa risponderebbe il tuo partner: l'argomento è messo tra le tue zone d'ombra.",
         "lire": {
-          "p1": "Hai risposto da solo o da sola, in due tempi: prima per te, poi dicendo cosa risponderebbe {{b}} secondo te. Questo report mette le due cose a confronto, argomento per argomento: dove sei sicuro o sicura di pensarla allo stesso modo, dove sai che non vedete le cose nello stesso modo, e dove non lo sai.",
+          "p1": "Hai risposto da solo o da sola: a tutte le domande per te e, sugli argomenti che contano di più, anche a cosa risponderebbe {{b}} secondo te. Questo report mette le due cose a confronto su quegli argomenti: dove sei sicuro o sicura di pensarla allo stesso modo, dove sai che non vedete le cose nello stesso modo, e dove non lo sai. Le tue altre risposte sono in ogni area.",
           "p3": "Leggilo prima per te. Poi, se {{b}} è d'accordo a parlarne, le quattro conversazioni e le tue zone d'ombra dicono da dove cominciare. E se un giorno {{b}} vorrà rispondere a sua volta, una valutazione in due sostituirà le tue ipotesi con le sue risposte."
         },
         "synthese": {
@@ -529,7 +536,7 @@
           "parDomaineAide": "Per le aree che hanno domande su come vi sentite, il tuo benessere e quello che attribuisci al tuo partner, sulla stessa riga, da 0 a 100%."
         },
         "roles": {
-          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo quello che risponderebbe {{b}} secondo te.",
+          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo, quando ti è stato chiesto, quello che risponderebbe {{b}} secondo te.",
           "desequilibre": "Pensi che siate d'accordo: è soprattutto {{nom}}. Va bene a tutti e due?"
         },
         "domaines": {
@@ -537,7 +544,9 @@
           "climatBas": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene: lo trovi più in basso, in «{{titre}}».",
           "climatBasCourt": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene.",
           "signauxBas": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento: lo trovi nel capitolo {{n}}, «{{titre}}».",
-          "signauxBasCourt": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento."
+          "signauxBasCourt": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento.",
+          "seules": "Le tue altre risposte",
+          "seulesAide": "Per queste domande non ti è stato chiesto cosa risponderebbe {{nom}}: ecco semplicemente la tua risposta."
         },
         "fin": {
           "accordsTexte": "Su {{total}} domande in cui hai saputo rispondere per il tuo partner, pensi di avere la stessa risposta {{n}} volte, cioè il {{part}}%.",
@@ -757,7 +766,7 @@
         "titre": "Da solo/a",
         "sous": "Senza avvisare il tuo partner",
         "points": [
-          "Rispondi per te, poi al posto del tuo partner",
+          "Rispondi per te, e al posto del tuo partner sugli argomenti chiave",
           "Il report ti mostra anche quello che non sai del tuo partner"
         ],
         "cta": "Iniziare da solo/a"
@@ -831,11 +840,11 @@
         },
         {
           "q": "Se la faccio da solo/a, il mio partner verrà avvisato?",
-          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te, poi al suo posto, oppure «non lo so»."
+          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te e, sugli argomenti che contano di più, al suo posto, oppure «non lo so»."
         },
         {
           "q": "E se non viviamo insieme o non abbiamo figli?",
-          "a": "Funziona lo stesso. All'inizio, sette domande sulla vostra situazione adattano il resto: una coppia che non vive ancora insieme risponde su quello che immagina, per esempio."
+          "a": "Funziona lo stesso. Sei domande sulla vostra situazione, poste nel corso della valutazione, adattano il resto: una coppia che non vive ancora insieme risponde su quello che immagina, per esempio."
         },
         {
           "q": "Sostituisce una terapia di coppia?",

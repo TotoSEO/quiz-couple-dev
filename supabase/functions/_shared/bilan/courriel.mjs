@@ -725,10 +725,11 @@ export function prixEcrit(centimes, lang) {
 
 // La durée qu'il reste, comptée comme la page de vente (« 20 minutes » pour
 // cent questions : la médiane de ceux qui finissent, relevée le 25 octobre
-// 2026), arrondie à cinq minutes ; une évaluation seul(e) demande deux
-// réponses par question.
+// 2026), arrondie à cinq minutes ; une évaluation seul(e) ajoute ce que
+// l'autre répondrait sur 34 à 38 questions (C.percuDemande, depuis le
+// 25 octobre 2026 ; avant, sur toutes) : environ 1,36 écran par question.
 export function minutesRestantes(reste, solo) {
-  const m = Math.max(0, Number(reste) || 0) * (solo ? 0.4 : 0.2);
+  const m = Math.max(0, Number(reste) || 0) * (solo ? 0.27 : 0.2);
   return Math.max(5, Math.round(m / 5) * 5);
 }
 

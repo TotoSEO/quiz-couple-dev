@@ -572,7 +572,8 @@
     if (statut === 'celib') {
       corps += panneauCelib();
     } else if (statut) {
-      corps += '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
+      corps += (solo ? apportSolo() : '') +
+        '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
         '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
         '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
         '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
@@ -696,6 +697,20 @@
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
     };
+  }
+
+  // Seul(e), en couple : ce que l'évaluation seul(e) apporte, avant les
+  // prénoms (25 octobre 2026). Le prénom de l'autre s'y écrit dès qu'on le
+  // tape, comme dans les notes sous la case.
+  function apportSolo() {
+    var points = tr('creation.apport', []);
+    if (!Array.isArray(points) || !points.length) return '';
+    var nom = '<span class="bilan-nom-autre">' + esc(brouillon.autre || tr('creation.autreDefaut', '')) + '</span>';
+    return '<div class="bilan-apport"><p class="bilan-apport-titre">' + x('creation.apportTitre') + '</p>' +
+      '<ul class="bilan-apport-liste">' + points.map(function (p) {
+        return '<li>' + esc(ins(remplir(p, { autre: '\u0001' }))).split('\u0001').join(nom) + '</li>';
+      }).join('') + '</ul>' +
+      '<p class="bilan-note">' + x('creation.apportNote') + '</p></div>';
   }
 
   // « Où en êtes-vous ? » au départ seul(e) : en couple, c'est compliqué, ou
@@ -1023,14 +1038,24 @@
     }).catch(function () { messageErreur('reseau', function () { enregistrerSituation(session, cles); }); });
   }
 
+  // Seul(e), ce que l'autre répondrait n'est demandé que sur une partie des
+  // questions (C.percuDemande : les sujets décisifs, et au moins trois
+  // questions par domaine ; 25 octobre 2026, deux cents écrans, c'était trop
+  // long). Une perception déjà donnée, dans une évaluation commencée avant ce
+  // jour, reste à sa place et se modifie comme avant.
+  function percuDemandee(id) {
+    if (!S.percu) return false;
+    return Number.isInteger(S.percu[id]) || C.percuDemande(S.situation, S.reponses).has(id);
+  }
+
   // La première question à laquelle il manque une réponse ; en solo, une
-  // question en a deux (la sienne, puis celle qu'on prête à l'autre), et la
-  // phase s'arrête sur celle qui manque.
+  // question peut en avoir deux (la sienne, puis celle qu'on prête à
+  // l'autre), et la phase s'arrête sur celle qui manque.
   function premierSansReponse() {
     for (var i = 0; i < S.liste.length; i++) {
       var id = S.liste[i].id;
       if (!Number.isInteger(S.reponses[id])) { S.phase = 'moi'; return i; }
-      if (S.percu && !Number.isInteger(S.percu[id])) { S.phase = 'autre'; return i; }
+      if (S.percu && !Number.isInteger(S.percu[id]) && percuDemandee(id)) { S.phase = 'autre'; return i; }
     }
     S.phase = 'moi';
     return S.liste.length;
@@ -1043,7 +1068,7 @@
     S.index++;
     if (!S.revoir) {
       while (S.index < S.liste.length && Number.isInteger(S.reponses[S.liste[S.index].id]) &&
-        (!S.percu || Number.isInteger(S.percu[S.liste[S.index].id]))) S.index++;
+        (!S.percu || Number.isInteger(S.percu[S.liste[S.index].id]) || !percuDemandee(S.liste[S.index].id))) S.index++;
     }
     S.phase = 'moi';
     suivante();
@@ -1156,9 +1181,10 @@
       'bilan-question' + (percu ? ' bilan-question--percu' : '')), true);
     garderEnVue();
     etatEnvoi();
-    // Après ma réponse : la perception de l'autre en solo, sinon la suite.
+    // Après ma réponse : la perception de l'autre en solo, quand elle est
+    // demandée, sinon la suite.
     function apres() {
-      if (solo && !percu) { S.phase = 'autre'; afficherQuestion(); } else avancer();
+      if (solo && !percu && percuDemandee(id)) { S.phase = 'autre'; afficherQuestion(); } else avancer();
     }
     ACTIONS = {
       choisir: function (b) {
@@ -1194,7 +1220,7 @@
       precedente: function () {
         if (percu) { S.phase = 'moi'; afficherQuestion(); return; }
         S.index = Math.max(0, S.index - 1);
-        S.phase = solo ? 'autre' : 'moi';
+        S.phase = solo && percuDemandee(S.liste[S.index].id) ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
       },
@@ -1384,7 +1410,7 @@
       precedente: function () {
         S = session;
         S.index = Math.max(0, S.liste.length - 1);
-        S.phase = S.mode === 'solo' ? 'autre' : 'moi';
+        S.phase = S.mode === 'solo' && percuDemandee(S.liste[S.index].id) ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
       },

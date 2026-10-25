@@ -14,6 +14,13 @@ const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
 
 const SIT = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
 
+// Les 96 situations possibles.
+function toutesLesSituations() {
+  const valeurs = C.SITUATION.map((x) => x.valeurs);
+  const combos = valeurs.reduce((acc, v) => acc.flatMap((a) => v.map((x) => [...a, x])), [[]]);
+  return combos.map((combo) => Object.fromEntries(C.SITUATION.map((x, i) => [x.id, combo[i]])));
+}
+
 function toutRepondre(situation, choix) {
   const rep = {};
   // Deux passes : une réponse peut ouvrir ou fermer d'autres questions.
@@ -312,16 +319,21 @@ test('mode solo : la perception remplace l\'autre, « je ne sais pas » fait une
   assert.equal(duo.ombre, null);
 });
 
-test('progression et validation en solo : chaque question attend sa perception', () => {
+test('progression et validation en solo : la perception n\'est attendue que là où elle est demandée', () => {
   const rep = toutRepondre(SIT, () => 0);
   const total = C.progression(SIT, rep).total;
-  assert.equal(C.progression(SIT, rep, {}).repondu, 0);
+  const demande = C.percuDemande(SIT, rep);
+  assert.equal(C.progression(SIT, rep, {}).repondu, total - demande.size);
   assert.equal(C.progression(SIT, rep, {}).total, total);
   const percu = {};
-  for (const id of Object.keys(rep)) percu[id] = C.INCONNU;
+  for (const id of demande) percu[id] = C.INCONNU;
   assert.equal(C.progression(SIT, rep, percu).repondu, total);
   assert.ok(C.complet(SIT, rep, percu));
   assert.ok(!C.complet(SIT, rep, {}));
+  // Une évaluation commencée avant le 25 octobre 2026, une perception partout.
+  const partout = {};
+  for (const id of Object.keys(rep)) partout[id] = 0;
+  assert.ok(C.complet(SIT, rep, partout));
   assert.ok(C.complet(SIT, rep), 'en duo, les réponses suffisent');
   assert.deepEqual(C.valideReponses({ quo3: 1 }, [], { quo3: -1 }).percu, { quo3: -1 });
   assert.ok(C.valideReponses({ quo3: 1 }, [], { quo3: -2 }).erreur);
@@ -379,4 +391,60 @@ test('la situation au fil des domaines : cent questions à chaque instant, « co
   assert.ok(C.situationPartielle({ ensemble: 'non', duree: '1a3' }));
   for (const mauvaise of [{}, { duree: '1a3' }, { ensemble: 'peut-être' }, null, [], 'oui']) assert.ok(!C.situationPartielle(mauvaise), JSON.stringify(mauvaise));
   assert.deepEqual(C.avecDefauts({ enfants: 'oui', duree: 'x' }), { ...C.SITUATION_DEFAUT, enfants: 'oui' });
+});
+
+test('seul(e) : ce que l\'autre répondrait, demandé sur les sujets décisifs et au moins trois questions par domaine', () => {
+  // 25 octobre 2026 : deux écrans par question, deux cents en tout, et une
+  // dizaine de seul(e)s au bout sur 135.
+  for (const sit of toutesLesSituations()) {
+    for (const enf1 of [undefined, 0, 1, 2, 3]) {
+      if (enf1 !== undefined && sit.enfants === 'oui') continue;
+      const rep = enf1 === undefined ? {} : { enf1 };
+      const liste = C.questionsPour(sit, rep);
+      const demande = C.percuDemande(sit, rep);
+      assert.ok(demande.size >= 34 && demande.size <= 38, JSON.stringify(sit) + ' ' + enf1 + ' : ' + demande.size);
+      for (const d of C.DOMAINES) {
+        const qs = liste.filter((x) => x.domaine === d.id);
+        const decisives = qs.filter((x) => x.q.decisif);
+        for (const x of decisives) assert.ok(demande.has(x.id), x.id + ' décisive, toujours demandée');
+        assert.equal(qs.filter((x) => demande.has(x.id)).length, Math.min(qs.length, Math.max(C.PERCU_PAR_DOMAINE, decisives.length)), d.id);
+      }
+      for (const id of demande) assert.ok(liste.some((x) => x.id === id), id + ' posée');
+    }
+  }
+});
+
+test('seul(e) : les réponses sans perception restent au rapport, et le ressenti de A compte toutes ses réponses', () => {
+  const rep = toutRepondre(SIT, (q) => (q.type === 'etat' ? q.n - 1 : 0));
+  const demande = C.percuDemande(SIT, rep);
+  const percu = {};
+  for (const id of demande) percu[id] = C.INDEX[id].q.type === 'etat' ? 0 : rep[id];
+  percu.arg1 = C.INCONNU;
+  const an = C.analyser(SIT, { reponses: rep, percu }, null, 'solo');
+  const total = Object.keys(rep).length;
+  assert.equal(an.compte.repondues, total, 'toutes les réponses de A');
+  assert.equal(an.compte.poses, demande.size, 'comparées ou inconnues');
+  assert.equal(an.ombre, Math.round(1 / demande.size * 100), 'la part d\'ombre, sur les perceptions demandées');
+  for (const i of an.items) assert.ok(demande.has(i.id), i.id + ' comparée sans perception');
+  for (const x of an.seules) {
+    assert.ok(!demande.has(x.id) && C.INDEX[x.id].q.type !== 'etat', x.id);
+    assert.ok(an.domaines.find((d) => d.id === x.domaine).seules.includes(x));
+  }
+  assert.equal(an.items.length + an.seules.length + an.etats.length + an.inconnus.length, total, 'rien ne se perd');
+  const etatsSeuls = an.etats.filter((e) => e.b === null);
+  assert.ok(etatsSeuls.length > 0 && etatsSeuls.every((e) => !demande.has(e.id) && e.bienB === null && !e.ecart && !e.attentionB));
+  // A va au plus mal partout (dernière case), et imagine l'autre au mieux.
+  assert.equal(an.meteoA, 0);
+  assert.equal(an.meteoB, 100);
+  const meteo = an.domaines.find((d) => d.id === 'meteo');
+  assert.equal(meteo.climatA, 0);
+  assert.equal(meteo.climatB, 100, 'l\'autre : seulement les questions où A l\'a imaginé(e)');
+  // Les signaux de A, tous, même sans perception.
+  const signaux = C.DOMAINES.flatMap((d) => d.questions).filter((q) => q.signal).map((q) => q.id);
+  assert.deepEqual(an.signaux.map((x) => x.id).sort(), signaux.sort());
+  assert.ok(an.signaux.every((x) => x.alerte), 'la case la plus inquiétante chez A suffit');
+  // À deux, rien ne change : pas de réponse seule.
+  const duo = C.analyser(SIT, { reponses: rep }, { reponses: rep }, 'duo');
+  assert.equal(duo.seules.length, 0);
+  assert.equal(duo.compte.repondues, duo.compte.poses);
 });

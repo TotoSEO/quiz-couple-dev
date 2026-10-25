@@ -31,7 +31,7 @@
       "modeDuo": "Zu zweit",
       "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
       "modeSolo": "Allein",
-      "modeSoloAide": "Du antwortest für dich und sagst dann, was dein Partner oder deine Partnerin antworten würde. Er oder sie erfährt nichts davon und sieht nichts.",
+      "modeSoloAide": "Du antwortest für dich und sagst bei den wichtigsten Themen auch, was dein Partner oder deine Partnerin antworten würde. Er oder sie erfährt nichts davon und sieht nichts.",
       "prenomsTitre": "Eure beiden Vornamen",
       "moi": "Dein Vorname",
       "autre": "Der Vorname deines Partners oder deiner Partnerin",
@@ -206,7 +206,14 @@
         "accordAide": "Deine Antworten, auch zu intimen Themen, und das, was {{autre}} deiner Meinung nach antworten würde, dienen nur diesem Bericht, den nur du siehst. Die Analyse wird 60 Tage nach deiner letzten Antwort aufbewahrt, wenn sie nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und du kannst sie jederzeit löschen. Kein Konto nötig.",
         "prixRappel": "Die Fragen sind kostenlos. Der vollständige Bericht kostet {{prix}}: Du schaltest ihn frei, sobald du deine Antworten abgeschlossen hast.",
         "creer": "Meine Analyse beginnen",
-        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet."
+        "emailAide": "Der Link zu deinem Bericht als PDF geht an diese Adresse. Mit ihr findest du deine Analyse auch wieder, wenn du die Seite schließt, und wir schicken dir eine einzige Erinnerung, falls dein Bericht am nächsten Tag noch wartet.",
+        "apportTitre": "Was dir die Analyse allein bringt",
+        "apport": [
+          "Dein Blick auf die zwölf Bereiche eurer Beziehung, vom Alltag bis zur Intimität",
+          "Bei den wichtigsten Themen: wo {{autre}} deiner Meinung nach so denkt wie du, und wo nicht",
+          "Die Themen, bei denen du nicht weißt, was {{autre}} denkt: oft die Gespräche, die noch anstehen"
+        ],
+        "apportNote": "100 Fragen, etwa 25 Minuten. Du kannst eine Pause machen und später weitermachen."
       },
       "domaine": {
         "nb": "{{n}} Fragen, je zwei Antworten, etwa {{min}} Min."
@@ -227,7 +234,7 @@
         "emailAide": "Der Link zum PDF geht gleich nach der Zahlung an diese Adresse.",
         "pretTitre": "{{moi}}, dein Bericht ist bereit",
         "apercu": {
-          "intro": "Deine Antworten wurden mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
+          "intro": "Bei den wichtigsten Themen wurden deine Antworten mit dem verglichen, was {{autre}} deiner Meinung nach antworten würde:",
           "quoi": "Der Bericht sagt dir, welche es sind und wo du anfängst. Kaum jemand nimmt sich je die Zeit dafür, du hast es getan.",
           "inconnusUn": "Und ein Thema, bei dem du nicht weißt, was {{autre}} antworten würde.",
           "inconnusN": "Und {{n}} Themen, bei denen du nicht weißt, was {{autre}} antworten würde."
@@ -384,7 +391,7 @@
         "nnAucun": "Nichts markiert."
       },
       "ombre": {
-        "intro": "Du hast für dich geantwortet und dann gesagt, was {{nom}} antworten würde. Wo du es nicht wusstest, hast du es gesagt: Dieses Kapitel sammelt diese Themen. Das sind keine Probleme, das sind Fragen, die du stellen kannst.",
+        "intro": "Bei den wichtigsten Themen hast du gesagt, was {{nom}} antworten würde. Wo du es nicht wusstest, hast du es gesagt: Dieses Kapitel sammelt diese Themen. Das sind keine Probleme, das sind Fragen, die du stellen kannst.",
         "part": "Dein Anteil an blinden Flecken",
         "bandes": {
           "peu": {
@@ -505,7 +512,7 @@
         "inconnuTag": "Weiß nicht",
         "inconnuLire": "Du wusstest nicht, was dein Partner oder deine Partnerin antworten würde: Das Thema steht bei deinen blinden Flecken.",
         "lire": {
-          "p1": "Du hast allein geantwortet, in zwei Schritten: zuerst für dich, dann mit dem, was {{b}} deiner Meinung nach antworten würde. Dieser Bericht stellt beides einander gegenüber, Thema für Thema: wo du sicher bist, gleich zu denken, wo du weißt, dass ihr die Dinge nicht gleich seht, und wo du es nicht weißt.",
+          "p1": "Du hast allein geantwortet: alle Fragen für dich und bei den wichtigsten Themen auch das, was {{b}} deiner Meinung nach antworten würde. Dieser Bericht stellt beides bei diesen Themen einander gegenüber: wo du sicher bist, gleich zu denken, wo du weißt, dass ihr die Dinge nicht gleich seht, und wo du es nicht weißt. Deine weiteren Antworten stehen im jeweiligen Bereich.",
           "p3": "Lies ihn zuerst für dich. Wenn {{b}} dann bereit ist, darüber zu reden, zeigen die vier Gespräche und deine blinden Flecken, womit ihr anfangen könnt. Und wenn {{b}} eines Tages selbst antworten möchte, ersetzt eine gemeinsame Analyse deine Vermutungen durch seine oder ihre Antworten."
         },
         "synthese": {
@@ -529,7 +536,7 @@
           "parDomaineAide": "Für die Bereiche mit Fragen zum Befinden dein Wohlbefinden und das, was du deinem Partner oder deiner Partnerin zuschreibst, auf derselben Linie, von 0 bis 100 %."
         },
         "roles": {
-          "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die erste Markierung ist deine Antwort, die zweite das, was {{b}} deiner Meinung nach antworten würde.",
+          "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die erste Markierung ist deine Antwort, die zweite, wenn du danach gefragt wurdest, das, was {{b}} deiner Meinung nach antworten würde.",
           "desequilibre": "Du glaubst, dass ihr euch einig seid: Es ist vor allem {{nom}}. Passt das für euch beide?"
         },
         "domaines": {
@@ -537,7 +544,9 @@
           "climatBas": "Was das Gefühl angeht, erlebst du diesen Teil der Beziehung gerade nicht gut, oder du glaubst, dass dein Partner oder deine Partnerin ihn nicht gut erlebt: Mehr dazu weiter unten, unter „{{titre}}“.",
           "climatBasCourt": "Was das Gefühl angeht, erlebst du diesen Teil der Beziehung gerade nicht gut, oder du glaubst, dass dein Partner oder deine Partnerin ihn nicht gut erlebt.",
           "signauxBas": "Deiner Meinung nach kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor: Mehr dazu in Kapitel {{n}}, „{{titre}}“.",
-          "signauxBasCourt": "Deiner Meinung nach kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor."
+          "signauxBasCourt": "Deiner Meinung nach kommen einige der Streitgewohnheiten, die ein Paar zermürben, bei euch gerade vor.",
+          "seules": "Deine weiteren Antworten",
+          "seulesAide": "Bei diesen Fragen wurdest du nicht gefragt, was {{nom}} antworten würde: Hier steht einfach deine Antwort."
         },
         "fin": {
           "accordsTexte": "Von {{total}} Fragen, bei denen du für deinen Partner oder deine Partnerin antworten konntest, glaubst du {{n}} Mal dieselbe Antwort zu haben, also {{part}} %.",
@@ -757,7 +766,7 @@
         "titre": "Allein",
         "sous": "Ohne deinen Partner oder deine Partnerin einzuweihen",
         "points": [
-          "Du antwortest für dich, dann an Stelle des anderen",
+          "Du antwortest für dich und bei den wichtigsten Themen an Stelle des anderen",
           "Der Bericht zeigt dir auch, was du über den anderen nicht weißt"
         ],
         "cta": "Allein beginnen"
@@ -831,11 +840,11 @@
         },
         {
           "q": "Erfährt mein Partner oder meine Partnerin davon, wenn ich sie allein mache?",
-          "a": "Nein. Es wird nichts verschickt, und nur du siehst den Bericht. Du antwortest für dich, dann an seiner oder ihrer Stelle, oder mit „weiß ich nicht“."
+          "a": "Nein. Es wird nichts verschickt, und nur du siehst den Bericht. Du antwortest für dich und bei den wichtigsten Themen an seiner oder ihrer Stelle, oder mit „weiß ich nicht“."
         },
         {
           "q": "Und wenn wir nicht zusammenwohnen oder keine Kinder haben?",
-          "a": "Das geht auch. Am Anfang passen sieben Fragen zu eurer Situation den Rest an: Ein Paar, das noch nicht zusammenwohnt, antwortet zum Beispiel zu dem, was es sich vorstellt."
+          "a": "Das geht auch. Sechs Fragen zu eurer Situation, im Lauf der Analyse gestellt, passen den Rest an: Ein Paar, das noch nicht zusammenwohnt, antwortet zum Beispiel zu dem, was es sich vorstellt."
         },
         {
           "q": "Ersetzt sie eine Paartherapie?",

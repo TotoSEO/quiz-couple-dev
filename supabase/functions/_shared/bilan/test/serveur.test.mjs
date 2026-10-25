@@ -612,20 +612,24 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   assert.equal(ligne.b_consent, null);
   assert.ok(stockage.compteurs.some((x) => x.evenement === 'cree' || x.evenement === 'domaine_entre') || true);
 
-  // Les réponses sans la perception ne finissent pas.
+  // Les réponses sans les perceptions demandées ne finissent pas : une
+  // question de percuDemande n'est faite qu'avec la sienne, les autres
+  // n'en attendent pas (25 octobre 2026).
   const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const demande = [...C.percuDemande(SIT, ra)];
+  const total = Object.keys(ra).length;
   let r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
   assert.equal(r.json.fini, false);
-  assert.equal(r.json.progression.repondu, 0, 'une question n\'est faite qu\'avec sa perception');
+  assert.equal(r.json.progression.repondu, total - demande.length, 'une question demandée n\'est faite qu\'avec sa perception');
   // Une perception hors bornes est refusée ; « je ne sais pas » (-1) accepté.
   assert.equal((await appel({ action: 'repondre', ...A, reponses: ra, percu: { quo3: 7 } })).statut, 400);
   const percu = {};
-  for (const [id, v] of Object.entries(ra)) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - v : v;
-  percu.arg1 = C.INCONNU; percu.met4 = C.INCONNU;
-  const moitie = Object.fromEntries(Object.keys(percu).slice(0, 40).map((id) => [id, percu[id]]));
+  for (const id of demande) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - ra[id] : ra[id];
+  percu.arg1 = C.INCONNU; percu.met1 = C.INCONNU;
+  const moitie = Object.fromEntries(demande.slice(0, 20).map((id) => [id, percu[id]]));
   r = await appel({ action: 'repondre', ...A, reponses: ra, percu: moitie, fini: true });
   assert.equal(r.json.fini, false);
-  assert.equal(r.json.progression.repondu, 40);
+  assert.equal(r.json.progression.repondu, total - demande.length + 20);
   assert.deepEqual(stockage.lignes.get(c.id).a_percu, moitie);
   // Payer avant d'avoir fini : non.
   assert.equal((await appel({ action: 'payer', ...A, renonciation: true })).json.erreur, 'pas_fini');
@@ -661,6 +665,8 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   assert.equal(plein.b.prenom, 'Julien');
   const analyse = C.analyser(plein.situation, plein.a, plein.b, plein.mode);
   assert.equal(analyse.compte.inconnus, 2);
+  assert.equal(analyse.compte.poses, demande.length, 'comparées ou inconnues : les perceptions demandées');
+  assert.equal(analyse.compte.repondues, total, 'toutes mes réponses restent au rapport');
 
   // Le PDF part à la seule adresse donnée, avec le message solo.
   const chemin = c.id + '/rapport-solo.pdf';

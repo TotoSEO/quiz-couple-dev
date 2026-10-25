@@ -116,7 +116,7 @@ test('rapport prêt, rappel et reprise : cinq langues, rien d\'oublié, rien du 
   assert.equal(minutesRestantes(60, false), 10);
   assert.equal(minutesRestantes(100, false), 20);
   assert.equal(minutesRestantes(2, false), 5);
-  assert.equal(minutesRestantes(100, true), 40);
+  assert.equal(minutesRestantes(100, true), 25, 'seul(e) : cent questions et une trentaine de perceptions');
   // Un prénom piégé est échappé partout.
   const p = messageReprise({ ...base, lang: 'fr', mode: 'duo', moi: '<b>x</b>', autre: 'Y', variante: 'moi', progression: { repondu: 10, total: 100 } });
   assert.ok(!p.html.includes('<b>x</b>') && p.html.includes('&lt;b&gt;x&lt;/b&gt;'));
