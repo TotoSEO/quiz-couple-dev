@@ -1,0 +1,270 @@
+{
+  "jour": "2026-12-29",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Qui cuisine : il cuisine, de la fumée, elle sent, l'assiette toute noire, puis la pizza sur le canapé.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une cuisine le soir. Le violet, à droite, tient une assiette, fier, un point d'exclamation au-dessus de la tête, de la fumée plein la pièce. La rose, à gauche, le regarde, les yeux plats et la bouche plate.",
+                "duree": 2,
+                "decor": "cuisine",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "assiette",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "exclamation"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même cuisine. La rose se penche et renifle, les sourcils hauts, la bouche en o. Le violet, à côté, sourit toujours, sûr de lui.",
+                "duree": 2,
+                "decor": "cuisine",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "sourcils": "hauts"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "assiette",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même cuisine. L'assiette est toute noire. Le violet la tient devant lui, la bouche à l'envers et une goutte au front ; la rose la regarde, les yeux plats, trois petits points au-dessus de la tête.",
+                "duree": 2,
+                "decor": "cuisine",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "points"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "assiette",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "triste"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Un salon le soir. Les deux sont assis sur le canapé, chacun avec une part de pizza à la main, les yeux heureux et un grand sourire.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "pizza",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "pizza",
+                        "main": "droite"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "don't tell my mom.",
+                "cote": "droite"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

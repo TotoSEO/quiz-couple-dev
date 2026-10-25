@@ -1,0 +1,64 @@
+{
+  "jour": "2026-12-29",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-077",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Shopping edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Groceries together",
+            "b": "Groceries alone, fast"
+          },
+          {
+            "a": "One cart",
+            "b": "Two carts, a race"
+          },
+          {
+            "a": "Cook what you bought",
+            "b": "Snack what you bought"
+          },
+          {
+            "a": "A written list",
+            "b": "No list at all"
+          },
+          {
+            "a": "The big pack",
+            "b": "Only what we need"
+          },
+          {
+            "a": "Weekend market",
+            "b": "Late-night supermarket"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Shopping edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
