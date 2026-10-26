@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-25T08:23:01.747Z",
+  "genere_le": "2026-10-26T03:13:56.255Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-25",
+  "aujourdhui": "2026-10-26",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "baton"
   },
-  "reserve_jours": 57,
+  "reserve_jours": 56,
   "a_remplir": [
     {
       "jour": "2026-12-21",
@@ -539,6 +539,21 @@
       "jour": "2027-02-02",
       "creneau": "soir",
       "categorie": "bd"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "matin",
+      "categorie": "baton"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "soir",
+      "categorie": "tu-preferes"
     }
   ],
   "a_corriger": [],
@@ -1036,7 +1051,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: movie night?",
       "erreur": null
     },
@@ -1045,7 +1060,7 @@
       "creneau": "soir",
       "gabarit": "citation",
       "categorie": "phrase",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Of all the places I could be, next to you is my favorite.",
       "erreur": null
     },
@@ -1090,7 +1105,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: powers?",
       "erreur": null
     },
@@ -1099,7 +1114,7 @@
       "creneau": "soir",
       "gabarit": "bd",
       "categorie": "bd",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2843,7 +2858,7 @@
       "creneau": "soir"
     },
     "phrase": {
-      "jour": "2026-10-25",
+      "jour": "2026-11-01",
       "creneau": "soir"
     },
     "carrousel": {
@@ -2859,7 +2874,7 @@
       "creneau": "soir"
     },
     "baton": {
-      "jour": "2026-10-26",
+      "jour": "2026-10-27",
       "creneau": "matin"
     }
   },
@@ -3269,6 +3284,34 @@
       "vues": 1647,
       "partages": 9,
       "enregistrements": 3
+    },
+    {
+      "variante_id": "739d8676-89aa-49b7-92a6-ec68d40e90af",
+      "releve": "j7",
+      "vues": 9,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "08057411-45e8-449d-8502-41e36e60cd76",
+      "releve": "j7",
+      "vues": 2502,
+      "partages": 41,
+      "enregistrements": 18
+    },
+    {
+      "variante_id": "b0c8c41e-9e98-40b6-9faf-789c7fca705d",
+      "releve": "j7",
+      "vues": 305,
+      "partages": 3,
+      "enregistrements": 1
+    },
+    {
+      "variante_id": "49bb8ad1-d0d5-4331-9c4e-2e0e21f03fe4",
+      "releve": "j7",
+      "vues": 3,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
