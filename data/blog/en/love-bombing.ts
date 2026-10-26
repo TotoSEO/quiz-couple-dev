@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. Devaluation: the floor gives way",
           content: `<p>Then it stops. Rarely in one clean break, more often in steps. Messages thin out. Compliments turn into remarks. What he adored about you starts to irritate him: your spontaneity becomes unpredictability, your independence becomes coldness, your eye for detail becomes heaviness.</p>
 <p>And you, mechanically, look for what you did. You don't look for what changed in him, you look for your own mistake, because you were put on a pedestal and you want to climb back up. That's the heart of the mechanism: <strong>devaluation only works because idealisation came first.</strong> Without the summit, there's no fall.</p>
-<p>This is the phase where a relationship concretely tips into toxicity. If you recognise that tipping point, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> helps put words to what changed.</p>`,
+<p>This is the phase where a relationship concretely tips into toxicity. If you recognise that tipping point, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> helps put words to what changed. And if you're still at the beginning and want to know whether <a href="/en/red-flag-test/">this person ticks other boxes than speed</a>, twenty questions weigh each one by how serious it is.</p>`,
         },
         {
           id: 'phase-rejection-return',

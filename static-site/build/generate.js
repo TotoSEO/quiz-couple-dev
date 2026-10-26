@@ -656,6 +656,8 @@ const GD_QUESTION_PREFIXES = {
   // Le crush garçon d'abord : la page montre la série « il », celle qu'une
   // fille qui pense à un garçon verra, et le balisage Quiz reprend la même.
   crush: ['crushH', 'crushF'],
+  // Le test red flag : la série « homme » d'abord, comme pour le crush.
+  'red-flag': ['redFlagH', 'redFlagF'],
   ex: ['exH', 'exF'],
   'charge-mentale': ['chargeMentale'],
   // Les jeux rangent leurs cartes par ambiance ou par thème : on prend la

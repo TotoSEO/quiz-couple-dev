@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'y-si-es-el-momento',
       title: "¿Y después de estas 60 preguntas?",
-      content: `<p>Si has hecho aunque sea la mitad de todo esto a lo largo de las semanas, ya sabes lo esencial: cómo funciona esta persona, qué busca y si vuestras direcciones encajan. Es ya bastante más de lo que saben la mayoría de las parejas en la misma fase.</p>
+      content: `<p>Si has hecho aunque sea la mitad de todo esto a lo largo de las semanas, ya sabes lo esencial: cómo funciona esta persona, qué busca y si vuestras direcciones encajan. Es ya bastante más de lo que saben la mayoría de las parejas en la misma fase. Y si, en alguna de esas respuestas, algo te ha chirriado sin que sepas decir qué, <a href="/es/test-red-flag/">veinte preguntas sobre lo que esta persona hace, no sobre lo que dice</a>, pesan cada señal según su gravedad.</p>
 <p>Queda la pregunta que las preguntas no resuelven: lo que sientes TÚ. El apego que sube, ¿es amistad que desborda, atracción de paso o el inicio de lo bueno de verdad? En algún momento hay que planteárselo con franqueza.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Amistad que desborda o inicio de amor?</p>

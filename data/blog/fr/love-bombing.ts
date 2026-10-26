@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La dévaluation : le sol se dérobe",
           content: `<p>Puis ça s'arrête. Rarement d'un coup net, plutôt par paliers. Les messages s'espacent. Les compliments deviennent des remarques. Ce qu'il adorait chez toi commence à l'agacer : ta spontanéité devient de l'imprévisibilité, ton indépendance devient de la froideur, ton attention aux détails devient de la lourdeur.</p>
 <p>Et toi, mécaniquement, tu cherches ce que tu as fait. Tu ne cherches pas ce qui s'est passé chez lui, tu cherches ton erreur à toi, parce qu'on t'a mise sur un piédestal et que tu veux y remonter. C'est le cœur du mécanisme : <strong>la dévaluation ne fonctionne que parce que l'idéalisation a existé avant.</strong> Sans le sommet, il n'y a pas de chute.</p>
-<p>Cette phase est celle où une relation bascule concrètement dans la toxicité. Si tu reconnais cette bascule, le <a href="/test-couple-toxique/">test du couple toxique</a> aide à mettre des mots sur ce qui a changé.</p>`,
+<p>Cette phase est celle où une relation bascule concrètement dans la toxicité. Si tu reconnais cette bascule, le <a href="/test-couple-toxique/">test du couple toxique</a> aide à mettre des mots sur ce qui a changé. Et si tu en es encore au début, et que tu veux savoir si <a href="/test-red-flag/">cette personne coche d'autres signes que la vitesse</a>, vingt questions pèsent chacun selon sa gravité.</p>`,
         },
         {
           id: 'phase-rejet-retour',

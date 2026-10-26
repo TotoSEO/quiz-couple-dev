@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La svalutazione: il pavimento sparisce",
           content: `<p>Poi si ferma. Raramente di netto, più spesso per gradi. I messaggi si diradano. I complimenti diventano osservazioni. Ciò che adorava di te comincia a infastidirlo: la tua spontaneità diventa imprevedibilità, la tua indipendenza diventa freddezza, la tua attenzione ai dettagli diventa pesantezza.</p>
 <p>E tu, meccanicamente, cerchi cosa hai fatto. Non cerchi cosa è successo a lui, cerchi il tuo errore, perché ti hanno messa su un piedistallo e vuoi risalirci. È il cuore del meccanismo: <strong>la svalutazione funziona solo perché prima c'è stata l'idealizzazione.</strong> Senza la vetta non c'è caduta.</p>
-<p>Questa è la fase in cui una relazione scivola concretamente nella tossicità. Se riconosci questo passaggio, il <a href="/it/test-relazione-tossica/">test della relazione tossica</a> aiuta a dare un nome a ciò che è cambiato.</p>`,
+<p>Questa è la fase in cui una relazione scivola concretamente nella tossicità. Se riconosci questo passaggio, il <a href="/it/test-relazione-tossica/">test della relazione tossica</a> aiuta a dare un nome a ciò che è cambiato. E se sei ancora all'inizio e vuoi sapere se <a href="/it/test-red-flag/">questa persona mostra altri segnali oltre alla velocità</a>, venti domande pesano ciascuno in base alla gravità.</p>`,
         },
         {
           id: 'fase-rifiuto-ritorno',

@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'et-si-c-est-le-bon-moment',
       title: "Et après ces 60 questions ?",
-      content: `<p>Si tu as posé ne serait-ce que la moitié de tout ça au fil des semaines, tu sais déjà l'essentiel : comment cette personne fonctionne, ce qu'elle cherche, et si vos directions s'accordent. C'est déjà beaucoup plus que ce que savent la plupart des couples au même stade.</p>
+      content: `<p>Si tu as posé ne serait-ce que la moitié de tout ça au fil des semaines, tu sais déjà l'essentiel : comment cette personne fonctionne, ce qu'elle cherche, et si vos directions s'accordent. C'est déjà beaucoup plus que ce que savent la plupart des couples au même stade. Et si, au fil de ces réponses, quelque chose t'a fait tiquer sans que tu arrives à dire quoi, <a href="/test-red-flag/">vingt questions sur ce que cette personne fait, pas sur ce qu'elle dit</a>, pèsent chaque signe selon sa gravité.</p>
 <p>Reste la question que les questions ne règlent pas : ce que TOI tu ressens. L'attachement qui monte, est-ce que c'est de l'amitié qui déborde, de l'attirance qui passe, ou le début du vrai truc ? À un moment, il faut se la poser franchement.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Amitié qui déborde ou début d'amour ?</p>

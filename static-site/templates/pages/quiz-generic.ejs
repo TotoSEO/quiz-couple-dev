@@ -189,6 +189,9 @@
     'amour-ou-attachement': 'attache',
     'je-l-aime-encore': 'jeLaime',
     'pret-nouvelle-relation': 'pretRelation',
+    // Le test red flag : deux séries, une par genre de la personne ; le
+    // balisage reprend celle de l'homme, chargée en premier.
+    'red-flag': 'redFlagH',
     'type-couple': 'typeCouple',
     // les quiz spéciaux d'Halloween (16 octobre 2026)
     'serial-killer': 'serialKiller', 'film-horreur': 'filmHorreur', 'possession': 'possession',
@@ -280,7 +283,10 @@
         <ol>
           <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
           <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
-          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+          <%# Le fil d'Ariane prend le titre court quand la page en a un : le title
+              d'une page peut porter une barre ou une accroche qui n'ont rien à
+              faire dans un chemin (« Test red flag | Cette personne en a-t-elle ? »). %>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:' + routeKey + '.shortTitle', quizTitle) %></li>
         </ol>
       </nav>
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>

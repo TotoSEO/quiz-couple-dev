@@ -24,6 +24,7 @@ export const ROUTE_SLUGS = {
   testCompatibilite: { fr: 'test-compatibilite-amoureuse', en: 'love-compatibility-test', es: 'test-compatibilidad-amorosa', de: 'liebeskompatibilitaet-test', it: 'test-compatibilita-amorosa' },
   testDistance: { fr: 'quiz-couple-distance', en: 'long-distance-relationship-quiz', es: 'quiz-pareja-distancia', de: 'fernbeziehung-quiz', it: 'quiz-coppia-distanza' },
   testToxic: { fr: 'test-couple-toxique', en: 'toxic-relationship-test', es: 'test-relacion-toxica', de: 'toxische-beziehung-test', it: 'test-relazione-tossica' },
+  testRedFlag: { fr: 'test-red-flag', en: 'red-flag-test', es: 'test-red-flag', de: 'red-flag-test', it: 'test-red-flag' },
   testPervers: { fr: 'test-pervers-narcissique', en: 'narcissistic-partner-test', es: 'test-pareja-narcisista', de: 'narzisstischer-partner-test', it: 'test-partner-narcisista' },
   testAmourHabitude: { fr: 'test-amour-ou-habitude', en: 'love-or-habit-test', es: 'test-amor-o-costumbre', de: 'liebe-oder-gewohnheit-test', it: 'test-amore-o-abitudine' },
   testAmourAttachement: { fr: 'test-amour-ou-attachement', en: 'love-or-attachment-test', es: 'test-amor-o-apego', de: 'liebe-oder-bindung-test', it: 'test-amore-o-attaccamento' },
@@ -132,6 +133,7 @@ export const QUIZ_FEATURED = {
   testCompatibilite: { file: 'love-letter-heart',          old: null,                  alt: { fr: "Lettre d'amour et cœur rouge évoquant la compatibilité amoureuse d'un couple", en: 'Love letter and red heart evoking a couple\'s love compatibility', es: 'Carta de amor y corazón rojo que evoca la compatibilidad amorosa', de: 'Liebesbrief und rotes Herz als Sinnbild der Liebeskompatibilität', it: "Lettera d'amore e cuore rosso che evoca la compatibilità amorosa" } },
   testDistance:      { file: 'long-distance-map',         old: 'test-distance',       alt: { fr: 'Carte du monde avec deux épingles reliées par un fil rouge', en: 'World map with two pins linked by a red thread', es: 'Mapa del mundo con dos alfileres unidos por un hilo rojo', de: 'Weltkarte mit zwei durch einen roten Faden verbundenen Nadeln', it: 'Mappa del mondo con due spilli uniti da un filo rosso' } },
   testToxic:         { file: 'wilted-rose',               old: 'test-toxic',          alt: { fr: 'Rose rouge fanée posée sur une surface grise et froide', en: 'Wilted red rose lying on a cold grey surface', es: 'Rosa roja marchita sobre una superficie gris y fría', de: 'Verwelkte rote Rose auf kalter grauer Oberfläche', it: 'Rosa rossa appassita su una fredda superficie grigia' } },
+  testRedFlag:       { file: 'red-flag-loupe',            old: null,                  alt: { fr: "La mascotte rose, l'air sceptique, examine à la loupe la mascotte violette qui sourit avec des cœurs dans les yeux, entourée de petits drapeaux rouges plantés dans le sol", en: 'The pink mascot, looking sceptical, inspects with a magnifying glass the purple mascot, who smiles with hearts in its eyes, surrounded by little red flags planted in the ground', es: 'La mascota rosa, con cara de escéptica, examina con una lupa a la mascota morada, que sonríe con corazones en los ojos, rodeada de banderitas rojas clavadas en el suelo', de: 'Das rosa Maskottchen schaut skeptisch durch eine Lupe auf das lila Maskottchen, das mit Herzen in den Augen lächelt, umgeben von kleinen roten Fahnen im Boden', it: 'La mascotte rosa, con aria scettica, esamina con una lente la mascotte viola che sorride con i cuori negli occhi, circondata da piccole bandierine rosse piantate nel terreno' } },
   testPervers:       { file: 'masquerade-mask',           old: null,                  alt: { fr: 'Masque de théâtre blanc à deux visages sur fond sombre, symbole de la double personnalité', en: 'White two-faced theatre mask on a dark background, symbol of a double personality', es: 'Máscara de teatro blanca de dos caras sobre fondo oscuro, símbolo de la doble personalidad', de: 'Weiße zweigesichtige Theatermaske auf dunklem Hintergrund, Symbol der Doppelpersönlichkeit', it: 'Maschera teatrale bianca a due volti su sfondo scuro, simbolo della doppia personalità' } },
   testAmourHabitude:  { file: 'two-slippers-bed',            old: null,                  alt: { fr: "Deux paires de chaussons côte à côte au pied d'un lit fait, une rose et une lavande, dans la lumière du matin", en: "Two pairs of slippers side by side at the foot of a made bed, one pink and one lavender, in the morning light", es: "Dos pares de pantuflas una junto a la otra al pie de una cama hecha, unas rosas y otras lavanda, con la luz de la mañana", de: "Zwei Paar Hausschuhe nebeneinander am Fußende eines gemachten Betts, eines rosa und eines lavendelfarben, im Morgenlicht", it: "Due paia di pantofole affiancate ai piedi di un letto rifatto, un paio rosa e uno lavanda, nella luce del mattino" } },
   testAmourAttachement: { file: 'amour-ou-attachement',   old: null,                  alt: { fr: "Une rose ancienne rose poudré posée sur du lin clair, à côté d'un cordon de coton lavande enroulé et noué serré", en: 'A dusty pink garden rose lying on pale linen, next to a coiled lavender cotton cord tied in a tight knot', es: 'Una rosa de jardín rosa empolvado sobre lino claro, junto a un cordón de algodón lavanda enrollado y atado con un nudo apretado', de: 'Eine altrosa Gartenrose auf hellem Leinen, daneben eine aufgerollte lavendelfarbene Baumwollkordel mit einem festen Knoten', it: 'Una rosa da giardino rosa antico posata su lino chiaro, accanto a un cordone di cotone lavanda arrotolato e stretto in un nodo' } },
@@ -222,6 +224,7 @@ export const ROUTE_CONFIG = {
   testCompatibilite: { template: 'quiz-compatibilite', namespaces: ['quiz-compatibilite', 'quizzes', 'quizGames', 'gd', 'common'] },
   testDistance: { template: 'quiz-distance', namespaces: ['quiz-distance', 'quizzes', 'quizGames', 'gd', 'common'] },
   testToxic: { template: 'quiz-toxic', namespaces: ['quiz-toxic', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testRedFlag: { template: 'quiz-red-flag', namespaces: ['quiz-red-flag', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPervers: { template: 'quiz-pervers-narcissique', namespaces: ['quiz-pervers-narcissique', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAmourHabitude: { template: 'quiz-amour-habitude', namespaces: ['quiz-amour-habitude', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAmourAttachement: { template: 'quiz-amour-attachement', namespaces: ['quiz-amour-attachement', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -375,6 +378,7 @@ export const BILAN_ENTREES = {
   // seul(e) permet d'y renvoyer depuis les tests où l'on doute. Toujours
   // rien depuis l'emprise, la manipulation et l'infidélité.
   testToxic: { groupe: 'doute', id: 'toxique' },
+  testRedFlag: { groupe: 'doute', id: 'red-flag' },
   testJalousie: { groupe: 'doute', id: 'jalousie' },
   testAmourAttachement: { groupe: 'doute', id: 'amour-attachement' },
   testAimeEncore: { groupe: 'doute', id: 'aime-encore' },
@@ -498,7 +502,7 @@ export const FAMILLES_NAV = {
     // Le bilan de couple en tête des tests de couple, une fois ouvert.
     ...(BILAN_OUVERT ? ['bilanCouple'] : []),
     'testCouple', 'testCommonPoints', 'testCompatibilite', 'testCompatSexuelle', 'testDistance',
-    'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
+    'testFinCouple', 'testToxic', 'testRedFlag', 'testPervers', 'testEmprise',
     'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
     'testJeLaimeEncore', 'testCoupleSain', 'testMariage', 'testDivorce',
     'testParentalite', 'testEmmenager', 'calculatriceAmour', 'compteurCouple',
@@ -1649,6 +1653,8 @@ export const QUIZ_RELATED_ARTICLES = {
   testCompatibilite: ['comment-savoir-si-cest-le-bon', 'sauver-son-couple', 'manque-communication-couple'],
   testDistance:     ['manque-communication-couple', 'sauver-son-couple'],
   testToxic:        ['choses-pas-accepter-couple', 'red-flags-homme', 'red-flags-femme', 'femme-malheureuse-en-couple'],
+  // Le test red flag : les deux listes, le love bombing et les signes d'une relation toxique.
+  testRedFlag:      ['red-flags-homme', 'red-flags-femme', 'love-bombing', 'relation-toxique-signes'],
   testPervers:      ['red-flags-homme', 'red-flags-femme', 'dependance-affective', 'choses-pas-accepter-couple'],
   testAmourHabitude:['comment-savoir-si-cest-le-bon', 'copain-ne-fait-pas-effort', 'sauver-son-couple', 'femme-malheureuse-en-couple', 'dependance-affective', 'manque-communication-couple'],
   testAmourAttachement: ['dependance-affective', 'sauver-son-couple', 'arreter-ou-continuer-relation', 'attachement-anxieux'],
