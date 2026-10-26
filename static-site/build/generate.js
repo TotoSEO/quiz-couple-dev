@@ -1168,15 +1168,15 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  // La page de l'évaluation de couple est en noindex dans les cinq langues,
-  // ouverte ou non (22 octobre 2026, Thomas : « met la page
-  // /evaluation-de-couple/ et ses variantes traduites en noindex ») : elle se
-  // vend par le maillage du site (menu, encarts, bannières, barre de la
-  // réduction), pas par la recherche. Elle sort aussi des sitemaps
-  // (generateSitemaps) ; les liens du site vers elle restent suivis
+  // La page de l'évaluation de couple est indexée dans les cinq langues quand
+  // elle est ouverte (25 octobre 2026, Thomas : « Enlève le noindex de la
+  // page », pour viser « bilan de couple » et « bilan de couple PDF », puis
+  // « les 5 langues doivent être en ligne ! ») ; du 22 au 25 octobre elle
+  // était en noindex partout. Fermée, elle repasse en noindex, hors des
+  // sitemaps (generateSitemaps), et les liens vers elle restent suivis
   // (« noindex, follow »).
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv', 'bilanCouple'];
-  const isNoindex = noindexRoutes.includes(routeKey);
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
+  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !BILAN_OUVERT);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
 
@@ -1690,7 +1690,8 @@ function generateSitemaps() {
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
     if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
-    if (key === 'bilanCouple') continue; // noindex, voir noindexRoutes
+    // L'évaluation : seulement ouverte (voir noindexRoutes).
+    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
 
     // Build URL map for available languages
     const urlsByLang = {};

@@ -3,8 +3,8 @@
     "badge": "Numerologie, Astrologie und chinesisches Tierkreiszeichen",
     "title": "Passt ihr laut eurem Geburtsdatum zusammen?",
     "highlight": "Geburtsdatum",
-    "description": "Zwei Daten, und alles andere ergibt sich daraus: eure Lebenszahl, euer Sternzeichen, euer chinesisches Zeichen. Drei verschiedene Lesarten desselben Tages, verknüpft, um zu zeigen, was euch verbindet und was etwas Arbeit verlangt.",
-    "subtitle": "Keine Anmeldung, keine E-Mail. Das Ergebnis erscheint sofort."
+    "description": "Gebt eure beiden Geburtsdaten ein: Der Test ermittelt daraus eure Lebenszahl, euer Sternzeichen und euer chinesisches Sternzeichen und vergleicht dann eure beiden Profile. Ihr seht, was euch verbindet und wo es etwas mehr Mühe braucht.",
+    "subtitle": "Ihr müsst euch nicht anmelden und keine E-Mail angeben, das Ergebnis erscheint sofort."
   },
   "form": {
     "titre": "Eure beiden Geburtsdaten",
@@ -166,14 +166,14 @@
   },
   "suite": {
     "titre": "Geht weiter mit euren Vornamen",
-    "texte": "Euer Geburtsdatum sagt, was ihr bei eurer Ankunft mitbekommen habt. Euer Vorname sagt, wie ihr euch im Alltag mit anderen verbindet. Das ist die zweite Hälfte der Lesung, und sie verändert oft die Deutung des Ergebnisses, das ihr gerade erhalten habt.",
+    "texte": "Der Test mit Vorname und Sternzeichen geht von euren beiden Vornamen aus, gelesen mit der Numerologie, und von euren beiden Sternzeichen. Er fragt nach keinem Datum, und sein Ergebnis lässt sich sehr gut neben diesem lesen.",
     "bouton": "Den Test mit Vorname und Sternzeichen machen"
   },
   "section1": {
     "title": "Was ein Geburtsdatum über ein Paar sagen kann",
-    "p1": "Ihr kennt das Geburtsdatum eures Partners auswendig. Es ist wahrscheinlich eine der wenigen Angaben, die ihr nie vergessen werdet. Und doch nutzen die meisten Menschen es nur, um einmal im Jahr Kerzen auszupusten, während drei verschiedene Traditionen darin jeweils ein vollständiges Temperament lesen.",
-    "p2": "Die Numerologie sieht darin eine Zahl, die <strong>Lebenszahl</strong>, die zusammenfasst, wie ein Mensch vorangeht. Die westliche Astrologie liest ein Sonnenzeichen, also eine Art zu lieben. Die chinesische Astrologie liest ein Mondjahr, also einen Rhythmus. Diese drei Lesarten sagen nicht dasselbe, und genau deshalb verknüpfen wir sie hier, statt eine einzige auszuwählen.",
-    "p3": "Das Ergebnis: eine Gesamtwertung, drei Einzelwertungen und vor allem Erklärungen, die euch beide betreffen. Wenn ihr lieber einen Fragebogen zu zweit ausfüllt, beantwortet der <a href=\"/de/liebeskompatibilitaet-test/\">Liebeskompatibilitätstest</a> mit zwanzig Fragen dasselbe Bedürfnis auf einem ganz anderen Weg."
+    "p1": "Dieser Test geht von einer einzigen Angabe aus: euren beiden Geburtsdaten. Meistens braucht man ein Geburtsdatum nur, um zum Geburtstag zu gratulieren, aber drei Traditionen lesen darin auch einen Charakter: die Numerologie, die westliche Astrologie und die chinesische Astrologie. Der Test lässt eure beiden Daten durch alle drei laufen.",
+    "p2": "Die Numerologie macht daraus eine Zahl, die <strong>Lebenszahl</strong>, die sagt, wie ein Mensch durchs Leben geht. Die westliche Astrologie schaut auf Tag und Monat, um euer Sternzeichen zu finden, und die chinesische Astrologie auf das Jahr, um euer Tier zu finden. Diese drei Lesarten sagen nicht dasselbe, und genau deshalb schauen wir uns alle drei an.",
+    "p3": "Am Ende habt ihr eine Gesamtwertung, eine Wertung für jede der drei Lesarten und Erklärungen, die von euch beiden handeln. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-test/\">einen Fragebogen zu zweit ausfüllt</a>, gibt es auch einen Test mit zwanzig Fragen dazu, wie ihr euer Leben als Paar seht."
   },
   "section2": {
     "title": "Die Lebenszahl, die verborgene Zahl in eurem Geburtsdatum",
@@ -248,7 +248,7 @@
         "Für sich selbst geliebt zu werden, nicht für das Geben"
       ]
     ],
-    "tip": "Zwei identische Lebenszahlen garantieren überhaupt nichts. Zwei Fünfen zusammen, das sind zwei Menschen, die losziehen wollen, und manchmal nicht in dieselbe Richtung."
+    "tip": "Dieselbe Lebenszahl garantiert gar nichts. Zwei Fünfen zusammen sind zum Beispiel zwei Menschen, die in Bewegung bleiben müssen, und nicht immer in dieselbe Richtung."
   },
   "section3": {
     "title": "Das Sternzeichen, der Himmel am Tag eurer Geburt",
@@ -256,12 +256,12 @@
     "sub1Title": "Die vier Elemente, der eigentliche Schlüssel",
     "sub1Text": "Noch bevor man Zeichen für Zeichen vergleicht, schaut man auf die Elemente. Das <strong>Feuer</strong> (Widder, Löwe, Schütze) prescht vor. Die <strong>Erde</strong> (Stier, Jungfrau, Steinbock) baut auf. Die <strong>Luft</strong> (Zwillinge, Waage, Wassermann) tauscht sich aus. Das <strong>Wasser</strong> (Krebs, Skorpion, Fische) fühlt. Feuer und Luft nähren einander, Erde und Wasser verstehen sich, und Paare aus zwei weit entfernten Familien müssen einander mehr übersetzen.",
     "p2": "Achtung bei den Grenzdaten. Wer am 20. oder 21. geboren ist, gehört womöglich zum vorherigen Zeichen: Die Grenzen verschieben sich von Jahr zu Jahr leicht. Unsere Berechnung nutzt die gängigsten Referenzdaten, die in nahezu jedem Kalender stehen.",
-    "p3": "Wenn euch euer Zeichen besonders interessiert, haben wir zu jedem der zwölf einen ausführlichen Artikel geschrieben. Der Artikel zur <a href=\"/de/blog/liebeskompatibilitaet-waage/\">Liebeskompatibilität der Waage</a> oder der zum <a href=\"/de/blog/liebeskompatibilitaet-skorpion/\">Skorpion</a> gehen weit mehr ins Detail als ein Rechner es anzeigen kann."
+    "p3": "Wenn euch euer Zeichen besonders interessiert, gibt es zu jedem der zwölf einen ausführlichen Artikel. Der über <a href=\"/de/blog/liebeskompatibilitaet-waage/\">das, was die Waage in der Liebe sucht</a>, oder der darüber, <a href=\"/de/blog/liebeskompatibilitaet-skorpion/\">wer mit einem Skorpion mithalten kann</a>, gehen viel weiter, als es ein Rechner je könnte."
   },
   "section4": {
-    "title": "Das chinesische Zeichen, das fast niemand richtig berechnet",
+    "title": "Das chinesische Sternzeichen, das vom Mondneujahr abhängt",
     "p1": "Hier spricht das Jahr. Zwölf Tiere, eines pro Jahr, und ein Zyklus, der von vorn beginnt. Nur beginnt das chinesische Jahr nicht am 1. Januar: Es startet am Mondneujahr, das je nach Jahr zwischen dem 21. Januar und dem 21. Februar liegt. Alle im Januar und in der ersten Februarhälfte Geborenen gehören daher zum Tier des Vorjahres.",
-    "p2": "Das ist der häufigste Fehler von Online-Rechnern, und er betrifft fast ein Zehntel der Bevölkerung. Unser Werkzeug nutzt die <strong>echten Daten des chinesischen Neujahrs</strong>, Jahr für Jahr, von 1924 bis 2043. Wer am 1. Januar 2000 geboren wurde, ist kein Drache, sondern ein Hase mit dem Element Erde.",
+    "p2": "Das betrifft ungefähr jeden zehnten Menschen: alle, die zwischen dem 1. Januar und dem chinesischen Neujahr geboren sind. Deshalb nutzt der Test die <strong>echten Daten des chinesischen Neujahrs</strong>, Jahr für Jahr, von 1924 bis 2043. Wer zum Beispiel am 1. Januar 2000 geboren wurde, ist kein Drache, sondern ein Hase mit dem Element Erde.",
     "sub1Title": "Die vier Dreiecke der Verbundenheit",
     "tableHeaders": [
       "Dreieck",
@@ -296,28 +296,28 @@
   },
   "section5": {
     "title": "Warum drei Lesarten statt einer einzigen",
-    "p1": "Weil keine der drei allein genügt. Das Sonnenzeichen ist zu populär, um genau zu sein: zwölf Schubladen für acht Milliarden Menschen ergeben sehr breite Schubladen. Die Lebenszahl ist feiner, ignoriert aber das Temperament völlig. Das chinesische Zeichen gibt einen Rhythmus, keine Art zu lieben.",
-    "p2": "Verknüpft korrigieren sie einander. Zwei angeblich unvereinbare Sonnenzeichen können Lebenszahlen haben, die perfekt ineinandergreifen, und ihr seht es sofort an den drei Balken des Ergebnisses. Auch deshalb zeigen wir die Aufschlüsselung statt eines einzelnen Prozentwerts: Die Gesamtzahl ist nichts wert ohne das, woraus sie besteht.",
-    "tip": "Ein hoher Wert auf einer Achse und ein niedriger auf einer anderen ist der häufigste Fall und oft der interessanteste. Genau dort sitzen die echten Paardynamiken."
+    "p1": "Weil keine allein genügt. Das Sternzeichen verteilt acht Milliarden Menschen auf zwölf Schubladen, und das sind sehr breite Schubladen. Die Lebenszahl ist genauer, sagt aber nichts über das Temperament. Und das chinesische Zeichen gibt eher einen Rhythmus als eine Art zu lieben.",
+    "p2": "Zusammen ergänzen sie sich. Zwei angeblich unvereinbare Sternzeichen können Lebenszahlen haben, die sehr gut zusammenpassen, und ihr seht es sofort an den drei Balken des Ergebnisses. Deshalb zeigen wir die Einzelwerte statt eines einzigen Prozentwerts: Ohne sie weiß man nicht, woher die Wertung kommt.",
+    "tip": "Am häufigsten ist ein hoher Wert bei einer Lesart und ein niedriger bei einer anderen. Genau so ein Ergebnis liest man zu zweit oft am spannendsten."
   },
   "section6": {
     "title": "Und wenn die Wertung niedrig ist?",
-    "p1": "Dann passiert nichts. Wirklich. Keines dieser drei Systeme hat je eine Trennung vorhergesagt, und keines hat je verhindert, dass eine Geschichte dreißig Jahre hält. Eine niedrige Wertung sagt, dass eure Temperamente nicht von selbst zusammenpassen, ihr also in Worte fassen müsst, was andere Paare unausgesprochen weitergeben.",
-    "p2": "Viele Menschen landen mit einer Frage im Hinterkopf auf so einer Seite, und es ist eigentlich keine Frage der Astrologie. Wenn das auf euch zutrifft: Der <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a> oder der <a href=\"/de/liebe-oder-gewohnheit-test/\">Test Liebe oder Gewohnheit</a> sprechen über das, was heute zwischen euch passiert, nicht über das, was die Sterne am Tag eurer Geburt sagten.",
-    "tip": "Macht den Test lieber zu zweit als allein. Das Ergebnis zählt weniger als das Gespräch, das es auslöst, und das gilt für so gut wie jeden Test auf dieser Seite."
+    "p1": "Dann passiert nichts Schlimmes! Keines dieser drei Systeme hat je eine Trennung vorhergesagt, und keines hat je verhindert, dass ein Paar dreißig Jahre zusammenbleibt. Eine niedrige Wertung heißt nur, dass eure Temperamente nicht von selbst zusammenpassen und ihr manchmal aussprechen müsst, was andere Paare ohne Worte verstehen.",
+    "p2": "Viele Menschen landen mit einer anderen Frage im Kopf auf so einer Seite, und es ist keine Frage der Astrologie. Wenn das auf euch zutrifft, passt ein Test besser, der fragt, <a href=\"/de/gesunde-beziehung-test/\">wie ihr im Alltag miteinander umgeht</a>, oder einer, der klärt, <a href=\"/de/liebe-oder-gewohnheit-test/\">was ihr noch füreinander empfindet</a>. Die sprechen über das, was heute zwischen euch passiert, nicht über das, was die Sterne am Tag eurer Geburt sagten.",
+    "tip": "Macht den Test zu zweit, am selben Bildschirm. Die drei Balken gemeinsam anzuschauen bringt das Gespräch oft von allein in Gang."
   },
   "faq": {
     "title": "Eure Fragen zur Kompatibilität nach Geburtsdatum",
     "q1": "Wie berechnet man Liebeskompatibilität aus einem Geburtsdatum?",
     "a1": "Es gibt drei verschiedene Rechnungen, und unser Werkzeug macht alle drei. Die Lebenszahl entsteht, indem man alle Ziffern des Datums addiert und die Summe dann reduziert. Das Sternzeichen liest man an Tag und Monat ab. Das chinesische Zeichen liest man am Mondjahr ab, das nicht am 1. Januar beginnt. Anschließend werden die beiden Profile auf jeder dieser drei Achsen verglichen.",
     "q2": "Muss man die Geburtsstunde kennen?",
-    "a2": "Nein, und das ist Absicht. Die Uhrzeit dient dazu, den Aszendenten und die astrologischen Häuser zu berechnen, was zum vollständigen Geburtshoroskop gehört und eine fachkundige Deutung verlangt. Hier genügt das Datum allein für die drei verwendeten Systeme. Niemand muss eine Geburtsurkunde heraussuchen.",
+    "a2": "Nein. Die Uhrzeit braucht man für den Aszendenten und die astrologischen Häuser, also für ein vollständiges Geburtshoroskop, das eine viel längere Deutung verlangt. Hier genügt das Datum allein für alle drei Berechnungen.",
     "q3": "Mein chinesisches Zeichen ist nicht das, das ich dachte, warum?",
     "a3": "Weil ihr vermutlich im Januar oder Anfang Februar geboren seid. Das chinesische Jahr beginnt am Mondneujahr, zwischen dem 21. Januar und dem 21. Februar. Wer am 20. Januar 1990 geboren wurde, gehört noch zum Schlangenjahr 1989 und nicht zum Pferdejahr. Unsere Berechnung berücksichtigt das genaue Neujahrsdatum jedes Jahres.",
     "q4": "Bedeutet eine Wertung von 40 %, dass wir uns trennen werden?",
     "a4": "Nein. Diese Zahl misst die Übereinstimmung zweier symbolischer Temperamente, nicht die Stabilität einer Beziehung. Sie kennt weder eure Geschichte noch eure Mühe noch das, was ihr gemeinsam durchgestanden habt. Nehmt sie als Raster, das zeigt, wo Verständnis von selbst entsteht und wo daran gearbeitet wird.",
     "q5": "Worin unterscheidet sich das von eurem Test mit Vorname und Sternzeichen?",
-    "a5": "Dieser hier geht allein von den Daten aus und verknüpft drei Systeme. Der andere geht von den Vornamen und dem Zeichen aus, das ihr selbst wählt, und liest die Numerologie der Buchstaben. Beide ergänzen sich gut: Das Datum sagt, was ihr mitbekommen habt, der Vorname sagt, wie ihr euch anderen zeigt. Beide zusammen dauern fünf Minuten.",
+    "a5": "Dieser hier geht nur von euren Daten aus und verknüpft drei Berechnungen. Der Test <a href=\"/de/sternzeichen-vornamen-kompatibilitaet/\">mit Vornamen und Sternzeichen</a> geht von euren Vornamen aus, gelesen mit der Numerologie der Buchstaben, und von den Sternzeichen, die ihr aus einer Liste wählt. Beide ergänzen sich gut, und zusammen dauern sie fünf Minuten. Und um <a href=\"/de/liebesrechner/\">zwei Vornamen ganz ohne Astrologie zu vergleichen</a>, gibt es noch den Liebesrechner.",
     "q6": "Werden die Ergebnisse irgendwo gespeichert?",
     "a6": "Nein. Die gesamte Berechnung läuft in eurem Browser, die Daten gehen nirgendwohin und nach dem Schließen der Seite bleibt nichts erhalten. Ihr könnt den Test so oft wiederholen, wie ihr wollt, mit so vielen Daten, wie ihr wollt."
   }

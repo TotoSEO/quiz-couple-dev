@@ -69,16 +69,16 @@
   },
   "suite": {
     "titre": "¿Y si hacéis el test de verdad?",
-    "texte": "Este porcentaje es un juego, cuenta letras. Si queréis medir lo que importa de verdad, tenemos un <a href=\"/es/test-compatibilidad-amorosa/\">test de compatibilidad de veinte preguntas</a> para hacer en pareja: valores, proyectos, dinero, día a día. Ahí el resultado sí significa algo.",
+    "texte": "Este porcentaje es un juego, cuenta letras. Si queréis medir lo que importa de verdad, hay un test de veinte preguntas para hacer en pareja, sobre <a href=\"/es/test-compatibilidad-amorosa/\">el dinero, los hijos, el día a día o la fidelidad</a>. Ahí el resultado sí significa algo.",
     "bouton": "Hacer el test de 20 preguntas",
     "autresTitre": "También os pueden gustar estas calculadoras:",
     "autresEtiquette": "Calculadora"
   },
   "section1": {
     "title": "¿Qué es una calculadora del amor?",
-    "p1": "Una calculadora del amor es una herramienta pequeña donde escribes dos nombres y obtienes un porcentaje. Por ejemplo: escribes «Thomas» y «Elisa», y la herramienta responde 59 %. Ya está. Sin preguntas que rellenar, sin registro, un segundo y listo.",
+    "p1": "Una calculadora del amor es una herramienta pequeña donde escribes dos nombres y obtienes un porcentaje. Por ejemplo: escribes «Thomas» y «Elisa», y la herramienta responde 54 %. No hay preguntas que rellenar ni registro, y el resultado sale en un segundo.",
     "p2": "La idea viene de las primerísimas webs, de cuando la gente se mandaba enlaces por correo. Nunca ha cambiado: se comparan las letras de dos nombres y sale un número. Así que sirve sobre todo para divertirse, para empezar una conversación, o para escribir el nombre de tu crush a ver qué sale.",
-    "p3": "La nuestra hace lo mismo, con dos diferencias. Primero te enseña el detalle del cálculo en lugar de sacar un número de la nada. Y segundo no dice que sea científica: es un juego de letras, y lo decimos."
+    "p3": "La nuestra hace lo mismo, con dos diferencias. Primero, te enseña el detalle del cálculo en lugar de sacar un número de la nada. Y segundo, no se presenta como algo científico: es un juego con las letras de vuestros nombres."
   },
   "section2": {
     "title": "Cómo funciona nuestra calculadora del amor",
@@ -89,7 +89,7 @@
   },
   "section3": {
     "title": "¿El porcentaje significa algo?",
-    "p1": "La respuesta honesta es no, y hay que decirlo claro. Tu nombre no lo elegiste tú, y no dice nada de cómo quieres, cómo discutes o cómo haces planes. Dos personas con un 38 % pueden pasar treinta años juntas, dos personas con un 97 % pueden dejarlo en seis meses.",
+    "p1": "No. Tu nombre no lo elegiste tú, y no dice nada de cómo quieres, cómo discutes o cómo haces planes. Dos personas con un 38 % pueden pasar treinta años juntas, y dos personas con un 97 % pueden dejarlo en seis meses.",
     "p2": "Lo que el número sí hace bien es abrir una conversación. Escribes los dos nombres, os reís del resultado, probáis con los apodos, y de una cosa se pasa a otra hasta hablar de temas más serios. Así es como suelen <a href=\"/es/preguntas-pareja/\">aparecer las buenas preguntas en una conversación</a>, sin haberlas preparado.",
     "p3": "Si queréis un número que se apoye en algo real, hay que responder preguntas sobre vuestra vida en pareja, no sobre vuestros nombres. Es lo que hace nuestro test de veinte preguntas, y es un ejercicio completamente distinto."
   },
@@ -101,7 +101,7 @@
   "section5": {
     "title": "Vuestro resultado es bajo, ¿y qué?",
     "p1": "Primero, probad con vuestros apodos. La calculadora mira las letras, así que «Tom» y «Lisa» no dan lo mismo que «Thomas» y «Elisa». Muchas parejas encuentran su mejor resultado con los nombres cariñosos que usan de verdad.",
-    "p2": "Después, acordaos de dónde sale el número. Un resultado bajo significa que vuestros nombres no tienen muchas letras en común y que sus ritmos se separan. No dice nada más. Si la pregunta de fondo os ronda, <a href=\"/es/test-compatibilidad-amorosa/\">veinte preguntas sobre vuestros valores y vuestros proyectos</a> os enseñarán infinitamente más que un cálculo sobre letras.",
+    "p2": "Después, acordaos de dónde sale el número. Un resultado bajo significa que vuestros nombres no tienen muchas letras en común y que sus ritmos se separan. No dice nada más. Si la pregunta de fondo os ronda, <a href=\"/es/test-compatibilidad-amorosa/\">veinte preguntas sobre vuestros valores y vuestros proyectos</a> os enseñarán mucho más que un cálculo sobre letras.",
     "p3": "Y si queréis seguir en el terreno del juego, tenemos otras dos herramientas del mismo espíritu: la <a href=\"/es/signos-astrologicos-nombres-compatibilidad/\">compatibilidad por nombres y signos del zodiaco</a>, y el <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">cruce de las dos fechas de nacimiento</a>. Y para los que ya están en pareja, también se puede <a href=\"/es/contador-de-pareja/\">contar los días desde el principio de la historia</a>, al día cada mañana."
   },
   "faq": {
@@ -115,9 +115,9 @@
     "q4": "¿Cómo consigo un porcentaje más alto?",
     "a4": "Probando otras formas de escribir vuestros nombres. Las parejas que más suben comparten muchas letras, tienen una proporción de vocales parecida y una longitud similar. Por eso los apodos cortos suelen dar mejores resultados que los nombres completos.",
     "q5": "¿El resultado tiene base científica?",
-    "a5": "Ninguna, y preferimos escribirlo negro sobre blanco. Es un juego de letras, con una parte de numerología que es una tradición y no una ciencia. Para medir una compatibilidad de verdad hay que hacer preguntas sobre la vida en pareja, que es lo que hace nuestro test de veinte preguntas.",
+    "a5": "Ninguna. Es un juego de letras, con una parte de numerología que es una tradición y no una ciencia. Para medir una compatibilidad de verdad hay que hacer preguntas sobre la vida en pareja, que es lo que hace nuestro test de veinte preguntas.",
     "q6": "¿Qué diferencia hay con vuestro test de compatibilidad amorosa?",
-    "a6": "Los separa todo. La calculadora mira dos nombres y devuelve un número en un segundo. El test de compatibilidad os hace veinte preguntas a cada uno sobre el dinero, los hijos, el ritmo de vida y la fidelidad, y luego compara vuestras respuestas. Uno es un juego, el otro es un cuestionario de pareja de verdad.",
+    "a6": "Son dos cosas muy distintas. La calculadora mira dos nombres y devuelve un número en un segundo. El test de compatibilidad os hace veinte preguntas a cada uno sobre el dinero, los hijos, el ritmo de vida y la fidelidad, y luego compara vuestras respuestas. Uno es un juego, el otro es un cuestionario de pareja de verdad.",
     "q7": "¿Guardáis los nombres que escribo?",
     "a7": "No. El cálculo se hace entero en tu navegador, no se envía ni se guarda nada en ningún sitio. Puedes escribir el nombre de tu crush tranquilamente."
   },

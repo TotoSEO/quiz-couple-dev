@@ -31,7 +31,7 @@
   var CLE_LOCALE = 'qc-bilans';
   var EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
-  var SECONDES_PAR_QUESTION = 15;
+  var SECONDES_PAR_QUESTION = 12;
   var C = null;   // le calcul (window.QCBilanCoeur)
   var Q = null;   // les textes des questions
   var minuteur = null;
@@ -93,6 +93,12 @@
   }
   function nombre(n) {
     try { return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR').format(n); } catch (e) { return String(n); }
+  }
+  // Un prix en centimes, écrit comme le site l'écrit (formatPrix de generate.js).
+  function prixEcrit(centimes) {
+    try {
+      return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR', { style: 'currency', currency: 'EUR' }).format(centimes / 100).replace(/[  ]/g, ' ');
+    } catch (e) { return (centimes / 100).toFixed(2) + ' €'; }
   }
 
 
@@ -188,6 +194,7 @@
   }
   function afficher(html, garderPosition) {
     arreterMinuteur();
+    if (obsColle) { obsColle.disconnect(); obsColle = null; }
     racine.innerHTML = html;
     if (garderPosition) return;
     var haut = racine.getBoundingClientRect().top;
@@ -273,10 +280,53 @@
   }
   // Le champ de l'adresse e-mail de la fin des questions : obligatoire,
   // c'est là que le PDF part.
-  function champEmailFin(valeur, autre) {
+  // Le champ de son adresse : au départ (création, invitation acceptée)
+  // depuis le 25 octobre 2026, à la fin des questions pour une évaluation
+  // créée sans elle. `aide`, déjà échappée, dit tous les e-mails qui
+  // partiront à cette adresse.
+  function champEmailMoi(valeur, aide) {
     return '<div class="bilan-champ bilan-champ--email"><label for="bilan-email">' + x('creation.email') + '</label>' +
       '<input id="bilan-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" required value="' + esc(valeur || '') + '">' +
-      '<p class="bilan-note">' + x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }) + '</p></div>';
+      '<p class="bilan-suggestion" id="bilan-email-sugg" hidden><button type="button" class="bilan-suggestion-btn"></button></p>' +
+      '<p class="bilan-note">' + aide + '</p></div>';
+  }
+  function champEmailFin(valeur, autre) {
+    return champEmailMoi(valeur, x('creation.emailAide', { autre: autre || tr('creation.autreDefaut', '') }));
+  }
+  // Un domaine mal tapé (gmial.com) : la page propose le bon, comme la porte
+  // des résultats (capture.js). L'adresse du départ sert à toute
+  // l'évaluation, rapport et reprise compris : une faute la perdrait.
+  var FAUTES_EMAIL = {
+    'gmial.com': 'gmail.com', 'gmal.com': 'gmail.com', 'gamil.com': 'gmail.com', 'gnail.com': 'gmail.com', 'gmail.co': 'gmail.com', 'gmail.cm': 'gmail.com', 'gmail.fr': 'gmail.com', 'gmaill.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmail.con': 'gmail.com', 'gmail.comm': 'gmail.com', 'googlemail.fr': 'googlemail.com',
+    'hotmal.com': 'hotmail.com', 'hotmai.com': 'hotmail.com', 'hotmail.co': 'hotmail.com', 'hotmail.cm': 'hotmail.com', 'hotmail.con': 'hotmail.com', 'hotmial.com': 'hotmail.com', 'hotmail.fe': 'hotmail.fr', 'hotmil.fr': 'hotmail.fr', 'hotmai.fr': 'hotmail.fr',
+    'outlok.com': 'outlook.com', 'outloo.com': 'outlook.com', 'outlook.co': 'outlook.com', 'outlook.cm': 'outlook.com', 'outlook.f': 'outlook.fr', 'outllok.fr': 'outlook.fr',
+    'yaho.com': 'yahoo.com', 'yahooo.com': 'yahoo.com', 'yahoo.co': 'yahoo.com', 'yaho.fr': 'yahoo.fr', 'yahou.fr': 'yahoo.fr',
+    'orang.fr': 'orange.fr', 'oranje.fr': 'orange.fr', 'orange.f': 'orange.fr', 'wanado.fr': 'wanadoo.fr', 'wanadoo.f': 'wanadoo.fr', 'laposte.ne': 'laposte.net', 'laposte.fr': 'laposte.net', 'lapost.net': 'laposte.net', 'free.f': 'free.fr', 'sfr.f': 'sfr.fr', 'icloud.co': 'icloud.com', 'iclou.com': 'icloud.com', 'live.f': 'live.fr', 'live.co': 'live.com',
+    'gmx.d': 'gmx.de', 'web.d': 'web.de', 'libero.i': 'libero.it', 'alice.i': 'alice.it', 'virgilio.i': 'virgilio.it'
+  };
+  function surveillerEmail() {
+    var champ = document.getElementById('bilan-email');
+    var zone = document.getElementById('bilan-email-sugg');
+    if (!champ || !zone) return;
+    var btn = zone.querySelector('button');
+    var proposition = null;
+    function suggere() {
+      var v = (champ.value || '').trim().toLowerCase();
+      var at = v.lastIndexOf('@');
+      var dom = at > 0 ? v.slice(at + 1) : '';
+      proposition = FAUTES_EMAIL[dom] ? v.slice(0, at + 1) + FAUTES_EMAIL[dom] : null;
+      if (proposition) btn.textContent = ins(remplir(tr('creation.emailSuggestion', ''), { email: proposition }));
+      zone.hidden = !proposition;
+    }
+    champ.addEventListener('input', suggere);
+    champ.addEventListener('blur', suggere);
+    btn.addEventListener('click', function () {
+      if (!proposition) return;
+      champ.value = proposition;
+      zone.hidden = true;
+      champ.focus();
+    });
+    suggere();
   }
   function blocRetrouver() {
     return '<details class="bilan-retrouver"><summary>' + x('retrouver.titre') + '</summary>' +
@@ -410,7 +460,6 @@
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
-      if (ancienne && ancienne.situationVue) entree.situationVue = true;
       garder(entree);
       if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
@@ -436,8 +485,7 @@
     majEntree(entree.id, entree.role, {
       mode: MODE, moi: etat.moi.prenom, autre: etat.autre.prenom,
       repondu: prog.repondu,
-      // Sans situation, le compte des questions n'est pas encore connu.
-      total: C.situationValide(etat.situation) ? prog.total : 0,
+      total: prog.total,
       statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
@@ -555,42 +603,65 @@
 
   // Le départ tient en un écran depuis le 21 octobre 2026 (Thomas devant
   // l'entonnoir : 240 clics sur « Commencer », 85 évaluations créées) : la
-  // façon de faire, les prénoms et les deux cases. La situation est posée
-  // ensuite comme les premières questions (questionSituation), et l'adresse
-  // e-mail à la fin de ses propres questions (ecranEmail).
+  // façon de faire, les prénoms, l'adresse e-mail et la case de l'accord
+  // (une seule depuis le 25 octobre 2026 : « 18 ans ou plus » et le
+  // consentement, fusionnés, après 103 erreurs sur les deux cases en cinq
+  // jours). La situation est posée ensuite comme les premières questions
+  // (questionSituation). L'adresse était demandée à la fin de ses propres
+  // questions du 21 au 25 octobre 2026 ; elle revient au départ (Thomas : « il
+  // faudrait que les gens qui commencent le bilan doivent rentrer leur mail,
+  // comme ça s'ils ne finissent pas on peut les retarget ») : sur près de
+  // 230 évaluations commencées, 190 s'étaient arrêtées sans adresse, et la
+  // reprise n'avait pu partir à personne.
   function creation() {
-    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', moi: '', autre: '', genreMoi: null, genreAutre: null, majeur: false, consent: false };
+    if (!brouillon) brouillon = { mode: modeDemande === 'solo' ? 'solo' : 'duo', statut: null, moi: '', autre: '', genreMoi: null, genreAutre: null, email: '', consent: false, celib: null };
     MODE = brouillon.mode;
     var solo = brouillon.mode === 'solo';
+    // Seul(e), « Où en êtes-vous ? » d'abord (25 octobre 2026) : le formulaire
+    // n'apparaît qu'une fois la réponse donnée, et un célibataire voit à la
+    // place ce qu'on lui prépare (panneauCelib).
+    var statut = solo ? brouillon.statut : 'couple';
     var aideAutre = tr('creation.autreAide', '');
     var corps = '<h2 class="bilan-titre">' + x('creation.modeTitre') + '</h2>' + champMode(brouillon.mode) +
-      '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
-      '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
-      '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
-      '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
-      '<div class="bilan-champ"><label for="bilan-autre">' + x('creation.autre') + '</label>' +
-      '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
-      (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
-      '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
-      '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
-      '<hr class="bilan-sep">' +
-      (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"' + (brouillon.majeur ? ' checked' : '') + '> <span>' + x('creation.majeur') + '</span></label>' +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
-      '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
-      '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
-      '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
-      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-      '<div class="bilan-actions bilan-actions--ecart">' +
-      bouton('retour', x('creation.retour'), 'btn-outline') +
-      bouton('valider', x('creation.creer')) + '</div>' +
-      blocRetrouver();
+      (solo ? '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.statutTitre') + '</h3>' + champStatut(statut) : '');
+    if (statut === 'celib') {
+      corps += panneauCelib();
+    } else if (statut) {
+      corps += (solo ? apportSolo() : '') +
+        '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.prenomsTitre') + '</h3>' +
+        '<div class="bilan-champ"><label for="bilan-moi">' + x('creation.moi') + '</label>' +
+        '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" autocomplete="given-name" value="' + esc(brouillon.moi) + '"></div>' +
+        '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genre') + '</span>' + champGenre('g-moi', brouillon.genreMoi) + '</div>' +
+        '<div class="bilan-champ"><label for="bilan-autre">' + x('creation.autre') + '</label>' +
+        '<input id="bilan-autre" class="bilan-input" type="text" maxlength="30" autocomplete="off" value="' + esc(brouillon.autre) + '">' +
+        (aideAutre ? '<p class="bilan-note">' + esc(ins(aideAutre)) + '</p>' : '') + '</div>' +
+        '<div class="bilan-champ"><span class="bilan-label">' + x('creation.genreAutre') + '</span>' + champGenre('g-autre', brouillon.genreAutre) + '</div>' +
+        '<p class="bilan-note">' + x('creation.genreAide') + '</p>' +
+        // La phrase sous le champ annonce le « prêt », la reprise et le
+        // rappel : la page envoie `rappel` et `reprise` à la création.
+        champEmailMoi(brouillon.email, avecNomAutre('creation.emailAideDepart')) +
+        '<hr class="bilan-sep">' +
+        (solo ? '<p class="bilan-info">' + avecNomAutre('creation.soloNote') + '</p>' : '') +
+        '<label class="bilan-case"><input type="checkbox" id="bilan-consent"' + (brouillon.consent ? ' checked' : '') + '> <span>' + x('creation.consentement') + '</span></label>' +
+        '<p class="bilan-note">' + avecNomAutre('creation.accordAide') + '</p>' +
+        '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
+        '<p class="bilan-note">' + x('accueil.violence') + '</p>' +
+        '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+        '<div class="bilan-actions bilan-actions--ecart">' +
+        bouton('retour', x('creation.retour'), 'btn-outline') +
+        bouton('valider', x('creation.creer')) + '</div>';
+    } else {
+      corps += '<div class="bilan-actions bilan-actions--ecart">' + bouton('retour', x('creation.retour'), 'btn-outline') + '</div>';
+    }
+    corps += blocRetrouver();
     afficher(carte(corps, 'bilan-creation' + (solo ? ' bilan-creation--solo' : '')));
+    surveillerEmail();
     compterVue('depart', { mode: brouillon.mode });
     var champ = racine.querySelector('input[type="text"]');
     if (champ && !brouillon.moi && !modeDemande) champ.focus({ preventScroll: true });
     // Les phrases sous les cases nomment le partenaire dès qu'on l'écrit.
-    document.getElementById('bilan-autre').addEventListener('input', function () {
+    var champAutre = document.getElementById('bilan-autre');
+    if (champAutre) champAutre.addEventListener('input', function () {
       var nom = this.value.trim() || tr('creation.autreDefaut', '');
       racine.querySelectorAll('.bilan-nom-autre').forEach(function (n) { n.textContent = nom; });
     });
@@ -601,13 +672,26 @@
       p.hidden = false;
       if (cause) compterVue('depart_erreur', { mode: brouillon.mode, cle: cause });
     }
+    // Ce qui est à l'écran passe dans le brouillon : rien n'est perdu quand
+    // on change de façon de faire ou de réponse à « Où en êtes-vous ? ».
     function lire() {
-      brouillon.moi = (document.getElementById('bilan-moi').value || '').trim();
-      brouillon.autre = (document.getElementById('bilan-autre').value || '').trim();
-      brouillon.genreMoi = lireGenre('g-moi');
-      brouillon.genreAutre = lireGenre('g-autre');
-      brouillon.majeur = document.getElementById('bilan-majeur').checked;
-      brouillon.consent = document.getElementById('bilan-consent').checked;
+      var valeur = function (id) { var e = document.getElementById(id); return e ? (e.value || '').trim() : null; };
+      if (document.getElementById('bilan-moi')) {
+        brouillon.moi = valeur('bilan-moi');
+        brouillon.autre = valeur('bilan-autre');
+        brouillon.genreMoi = lireGenre('g-moi');
+        brouillon.genreAutre = lireGenre('g-autre');
+        brouillon.email = valeur('bilan-email');
+        brouillon.consent = document.getElementById('bilan-consent').checked;
+      }
+      if (document.getElementById('bilan-celib-email')) {
+        brouillon.celib = {
+          interets: [].map.call(racine.querySelectorAll('input[name="celib-sujet"]:checked'), function (c) { return c.value; }),
+          autre: valeur('bilan-celib-autre'),
+          email: valeur('bilan-celib-email'),
+          consent: document.getElementById('bilan-celib-consent').checked,
+        };
+      }
     }
     ACTIONS = {
       // Changer de façon de faire redessine l'écran avec ses textes, sans
@@ -618,6 +702,13 @@
         modeDemande = brouillon.mode;
         creation();
       },
+      // « Où en êtes-vous ? », comptée une fois par visite et par réponse.
+      statut: function (input) {
+        lire();
+        brouillon.statut = STATUTS_SOLO.indexOf(input.value) >= 0 ? input.value : null;
+        if (brouillon.statut) compterVue('statut_solo', { cle: brouillon.statut });
+        creation();
+      },
       retour: function () {
         lire();
         if (lireListe().length) accueil();
@@ -626,18 +717,24 @@
       valider: function (b) {
         lire();
         if (!brouillon.moi || !brouillon.autre) return erreur('creation.prenomManque', 'prenoms');
-        // La cause dit si c'est l'âge qui arrête (la case des 18 ans) ou le
-        // consentement : le site a beaucoup de visiteurs de moins de 18 ans.
-        if (!brouillon.majeur || !brouillon.consent) return erreur('creation.accordManque', !brouillon.majeur ? 'majeur' : 'consentement');
+        // L'adresse, comptée à part : vide (« email ») ou mal écrite
+        // (« email_faux »), pour voir ce que le champ coûte au départ.
+        if (!brouillon.email) { erreur('creation.emailManque', 'email'); return document.getElementById('bilan-email').focus(); }
+        if (!emailValide(brouillon.email)) { erreur('creation.emailFaux', 'email_faux'); return document.getElementById('bilan-email').focus(); }
+        // Une seule case dit l'âge et le consentement : la cause est
+        // « accord » (de 21 au 25 octobre 2026, deux cases, « majeur » et
+        // « consentement » comptées à part).
+        if (!brouillon.consent) return erreur('creation.accordManque', 'accord');
         b.disabled = true;
         appel('creer', {
           lang: LANG, mode: brouillon.mode, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
+          email: brouillon.email, rappel: true, reprise: true,
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
-          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
+          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
           var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
           brouillon = null;
@@ -646,7 +743,90 @@
           invitation(entree, r.json.etat);
         }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
       },
+      // Un célibataire : au moins un sujet ; l'adresse est facultative, mais
+      // si elle est là, la case qui dit à quoi elle sert doit être cochée.
+      envoyerCelib: function (b) {
+        lire();
+        var c = brouillon.celib;
+        if (!c.interets.length) return erreur('celib.choixManque');
+        if (c.email && !emailValide(c.email)) return erreur('creation.emailFaux');
+        if (c.email && !c.consent) return erreur('celib.consentManque');
+        b.disabled = true;
+        appel('celib', {
+          lang: LANG, interets: c.interets, autre: c.autre || undefined,
+          email: c.email || undefined, consentement: c.email ? true : undefined,
+        }).then(function (r) {
+          b.disabled = false;
+          if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur');
+          merciCelib(c.email);
+        }).catch(function () { b.disabled = false; erreur('erreurs.reseau'); });
+      },
     };
+  }
+
+  // Seul(e), en couple : ce que l'évaluation seul(e) apporte, avant les
+  // prénoms (25 octobre 2026). Le prénom de l'autre s'y écrit dès qu'on le
+  // tape, comme dans les notes sous la case.
+  function apportSolo() {
+    var points = tr('creation.apport', []);
+    if (!Array.isArray(points) || !points.length) return '';
+    var nom = '<span class="bilan-nom-autre">' + esc(brouillon.autre || tr('creation.autreDefaut', '')) + '</span>';
+    return '<div class="bilan-apport"><p class="bilan-apport-titre">' + x('creation.apportTitre') + '</p>' +
+      '<ul class="bilan-apport-liste">' + points.map(function (p) {
+        return '<li>' + esc(ins(remplir(p, { autre: '\u0001' }))).split('\u0001').join(nom) + '</li>';
+      }).join('') + '</ul>' +
+      '<p class="bilan-note">' + x('creation.apportNote') + '</p></div>';
+  }
+
+  // « Où en êtes-vous ? » au départ seul(e) : en couple, c'est compliqué, ou
+  // célibataire (C.STATUTS_SOLO).
+  var STATUTS_SOLO = ['couple', 'complique', 'celib'];
+  function champStatut(valeur) {
+    return '<div class="bilan-genres bilan-statuts" role="radiogroup" aria-label="' + x('creation.statutTitre') + '">' + STATUTS_SOLO.map(function (s) {
+      return '<label class="bilan-pastille"><input type="radio" name="statut" value="' + s + '"' + (valeur === s ? ' checked' : '') + ' data-change="statut"> <span>' + x('creation.statuts.' + s) + '</span></label>';
+    }).join('') + '</div>';
+  }
+
+  // Le célibataire : l'évaluation compare ce que vit un couple. On lui dit
+  // qu'une évaluation pour célibataires se prépare, on lui demande ce qui
+  // l'intéresserait (C.SUJETS_CELIB), et, s'il le veut, où le prévenir.
+  function panneauCelib() {
+    var c = brouillon.celib || { interets: [], autre: '', email: '', consent: false };
+    var sujets = (C && C.SUJETS_CELIB) || [];
+    return '<div class="bilan-celib">' +
+      '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('celib.titre') + '</h3>' +
+      '<p class="bilan-texte">' + x('celib.texte') + '</p>' +
+      '<fieldset class="bilan-celib-sujets"><legend class="bilan-label">' + x('celib.question') + '</legend>' +
+      sujets.map(function (s) {
+        return '<label class="bilan-case"><input type="checkbox" name="celib-sujet" value="' + s + '"' + (c.interets.indexOf(s) >= 0 ? ' checked' : '') + '> <span>' + x('celib.sujets.' + s) + '</span></label>';
+      }).join('') + '</fieldset>' +
+      '<div class="bilan-champ"><label for="bilan-celib-autre">' + x('celib.autre') + '</label>' +
+      '<input id="bilan-celib-autre" class="bilan-input" type="text" maxlength="300" autocomplete="off" value="' + esc(c.autre || '') + '"></div>' +
+      '<hr class="bilan-sep">' +
+      '<div class="bilan-champ"><label for="bilan-celib-email">' + x('celib.email') + '</label>' +
+      '<input id="bilan-celib-email" class="bilan-input" type="email" maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" value="' + esc(c.email || '') + '"></div>' +
+      '<label class="bilan-case"><input type="checkbox" id="bilan-celib-consent"' + (c.consent ? ' checked' : '') + '> <span>' + x('celib.consentement') + '</span></label>' +
+      '<p class="bilan-note">' + x('celib.emailAide') + (CFG.confidentialite ? ' <a href="' + esc(CFG.confidentialite) + '">' + x('celib.confidentialite') + '</a>' : '') + '</p>' +
+      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+      '<div class="bilan-actions bilan-actions--ecart">' +
+      bouton('retour', x('creation.retour'), 'btn-outline') +
+      bouton('envoyerCelib', x('celib.envoyer')) + '</div>' +
+      '</div>';
+  }
+
+  function merciCelib(email) {
+    brouillon = null;
+    var liens = (CFG.celibTests || []).map(function (t) {
+      return '<li><a href="' + esc(t.url) + '">' + esc(ins(t.titre)) + '</a></li>';
+    }).join('');
+    var rose = mascotte('rose', 'joie', 76);
+    afficher(carte(
+      (rose ? '<div class="bilan-duo" aria-hidden="true">' + rose + '</div>' : '') +
+      '<h2 class="bilan-titre">' + x('celib.merciTitre') + '</h2>' +
+      '<p class="bilan-texte">' + (email ? x('celib.merciEmail', { email: email }) : x('celib.merci')) + '</p>' +
+      (liens ? '<h3 class="bilan-sous-titre">' + x('celib.testsTitre') + '</h3><ul class="bilan-celib-tests">' + liens + '</ul>' : '') +
+      '<div class="bilan-actions">' + bouton('fermer', x('celib.fermer'), 'btn-outline') + '</div>', 'bilan-celib-merci'));
+    ACTIONS = { fermer: function () { quitterFocus(); } };
   }
 
   // ── Invitation ──────────────────────────────────────────────────────────
@@ -705,17 +885,9 @@
 
   // ── Rejoindre (B) ───────────────────────────────────────────────────────
 
-  function resumeSituation(sit) {
-    return '<ul class="bilan-situation">' + C.SITUATION.map(function (s) {
-      var t = Q.situation[s.id];
-      var i = s.valeurs.indexOf(sit[s.id]);
-      return '<li><span>' + esc(ins(t.q)) + '</span> <strong>' + esc(i >= 0 ? t.o[i] : '') + '</strong></li>';
-    }).join('') + '</ul>';
-  }
-
-  // L'écran de l'invitation : le prénom, le genre et les deux cases. La
-  // situation se vérifie juste après, au début des questions
-  // (confirmerSituation), et l'adresse se donne à la fin.
+  // L'écran de l'invitation : le prénom, le genre, l'adresse (depuis le
+  // 25 octobre 2026, comme au départ) et la case. La situation se confirme au
+  // fil des domaines (questionSituation).
   function rejoindre(etat, jetonInvitation) {
     var autre = etat.autre.prenom;
     var html = carte(
@@ -727,8 +899,8 @@
       '<div class="bilan-champ"><label for="bilan-moi">' + x('rejoindre.prenom') + '</label>' +
       '<input id="bilan-moi" class="bilan-input" type="text" maxlength="30" value="' + esc(etat.moi.prenom) + '"></div>' +
       '<div class="bilan-champ"><span class="bilan-label">' + x('rejoindre.genre') + '</span>' + champGenre('g-moi', etat.moi.genre) + '</div>' +
+      champEmailMoi('', x('creation.emailAideDepart', { autre: autre })) +
       '<hr class="bilan-sep">' +
-      '<label class="bilan-case"><input type="checkbox" id="bilan-majeur"> <span>' + x('creation.majeur') + '</span></label>' +
       '<label class="bilan-case"><input type="checkbox" id="bilan-consent"> <span>' + x('creation.consentement') + '</span></label>' +
       '<p class="bilan-note">' + x('creation.accordAide', { autre: autre }) + '</p>' +
       '<p class="bilan-prix-rappel">' + avecPromo(x('creation.prixRappel')) + '</p>' +
@@ -741,16 +913,21 @@
       p.textContent = ins(remplir(tr(cle, ''), {}));
       p.hidden = false;
     }
+    surveillerEmail();
     compterVue('invitation_vue', { mode: 'duo', id: etat.id });
     ACTIONS = {
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
+        var champ = document.getElementById('bilan-email');
+        var email = (champ.value || '').trim();
         if (!prenom) return erreur('rejoindre.prenomManque');
-        if (!document.getElementById('bilan-majeur').checked || !document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
+        if (!email) { erreur('creation.emailManque'); return champ.focus(); }
+        if (!emailValide(email)) { erreur('creation.emailFaux'); return champ.focus(); }
+        if (!document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
-        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), consentement: true, majeur: true })
+        appel('consentir', { id: etat.id, jeton: jetonInvitation, prenom: prenom, genre: lireGenre('g-moi'), email: email, rappel: true, reprise: true, consentement: true, majeur: true })
           .then(function (r) {
-            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : 'erreurs.serveur'); }
+            if (r.statut !== 200) { b.disabled = false; return erreur(r.statut === 409 ? 'rejoindre.lienUtilise' : r.json.erreur === 'email' ? 'creation.emailFaux' : 'erreurs.serveur'); }
             var entree = { id: etat.id, jeton: r.json.jeton, role: etat.role, moi: prenom, autre: autre, statut: 'encours' };
             garder(entree);
             ouvrir(entree);
@@ -776,13 +953,15 @@
       percu: MODE === 'solo' ? JSON.parse(JSON.stringify(etat.moi.percu || {})) : null,
       nn: (etat.moi.nn || []).slice(),
       introsVues: {},
+      // Les clés de situation déjà posées ou confirmées dans cette visite.
+      sitFaites: {},
       revoir: !!revoir,
       // La phase de la question affichée : 'moi' (ma réponse) ou, en solo,
       // 'autre' (ce que l'autre répondrait).
       phase: 'moi',
       envoi: { enCours: false, sale: false, fini: false, attente: [] },
     };
-    S.liste = C.questionsPour(S.situation, S.reponses);
+    S.liste = listeQuestions();
     S.index = revoir ? 0 : premierSansReponse();
     if (S.index > 0 && S.index < S.liste.length) S.introsVues[S.liste[S.index].domaine] = !!revoir;
     // À deux, le créateur qui n'a encore rien répondu et dont l'invitation
@@ -792,27 +971,69 @@
       entree.invitationVue = true;
       return invitation(entree, etat);
     }
-    // La situation d'abord : les sept questions, ou, si quelqu'un y a déjà
-    // répondu (l'autre, ou soi-même sur un autre appareil), une vérification
-    // avant la première réponse.
-    if (!revoir && !C.situationValide(S.situation)) return questionSituation(0);
-    var gardee = entreeRole(entree.id, entree.role);
-    if (!revoir && S.index === 0 && !entree.situationVue && !(gardee && gardee.situationVue)) return confirmerSituation();
     suivante();
   }
 
-  // ── La situation ────────────────────────────────────────────────────────
-  // Posée comme les premières questions depuis le 21 octobre 2026 : une
-  // question par écran, puis enregistrée d'un coup (action `situation`)
-  // avant les cent questions. Elle n'entre pas dans leur compte.
+  // Les questions de la personne, dans l'ordre de passage (C.ORDRE) ; une clé
+  // de situation pas encore donnée compte avec sa valeur par défaut, et le
+  // total vaut cent dès le départ.
+  function listeQuestions() {
+    return C.questionsPour(C.avecDefauts(S.situation), S.reponses, C.ORDRE);
+  }
 
-  function questionSituation(i) {
-    var item = C.SITUATION[i];
-    var t = Q.situation[item.id];
-    if (!S.sit) S.sit = C.situationValide(S.situation) ? JSON.parse(JSON.stringify(S.situation)) : {};
-    var v = S.sit[item.id];
-    var total = C.SITUATION.length;
-    var pct = Math.round(i / total * 100);
+  // ── La situation ────────────────────────────────────────────────────────
+  // Depuis le 25 octobre 2026, chaque clé est posée juste avant le premier
+  // domaine qui en a besoin (C.clesAvant), et plus en bloc avant les cent
+  // questions (78 personnes sur 205 s'arrêtaient dans ces sept écrans).
+  // Déjà donnée (par l'autre, ou par soi-même sur un autre appareil), elle
+  // s'affiche choisie, à confirmer ou à changer. Elle n'entre pas dans le
+  // compte des cent questions.
+
+  function connue(cle) {
+    return C.SITUATION.some(function (it) { return it.id === cle && it.valeurs.indexOf(S.situation && S.situation[cle]) >= 0; });
+  }
+
+  // Les clés à poser en entrant dans un domaine : aucune en relecture, ni si
+  // la personne y a déjà répondu. Une clé déjà donnée ne se montre (choisie,
+  // à confirmer) que si l'autre a pu la donner : à deux, tant qu'il n'a pas
+  // fini (ensuite la situation ne bouge plus), et pas dans une situation
+  // donnée en entier au départ, avant le 25 octobre 2026 (elle porte encore
+  // la durée), que l'autre relisait avant ses questions.
+  function clesAPoser(dom) {
+    if (S.revoir) return [];
+    var deja = S.liste.some(function (q) { return q.domaine === dom && Number.isInteger(S.reponses[q.id]); });
+    if (deja) return [];
+    var cles = C.clesAvant(dom, S.situation).filter(function (k) { return !S.sitFaites[k]; });
+    var figee = S.mode === 'solo' || (S.autre && S.autre.fini) || (S.situation && S.situation.duree);
+    if (figee) cles = cles.filter(function (k) { return !connue(k); });
+    return cles;
+  }
+
+  // À deux, ce que l'autre a donné de la situation entre-temps, et s'il a
+  // fini : repris de chaque réponse enregistrée (`repondre` rend l'état), et
+  // relu à l'intro d'un domaine qui pose une clé (relireSituation), pour
+  // montrer choisie une réponse que l'autre vient de donner.
+  function majDepuisEtat(session, etat) {
+    if (etat.situation) session.situation = etat.situation;
+    if (etat.autre) session.autre = etat.autre;
+  }
+  // Une lecture qui échoue ou tarde (plus de 4 s) ne bloque rien : on garde
+  // ce qu'on sait, et le serveur fusionne les clés.
+  function relireSituation(session) {
+    var lecture = appel('etat', { id: session.id, jeton: session.jeton }).then(function (r) {
+      if (r.statut === 200 && r.json && r.json.moi) majDepuisEtat(session, r.json);
+    }).catch(function () {});
+    var delai = new Promise(function (fin) { setTimeout(fin, 4000); });
+    return { quand: Date.now(), promesse: Promise.race([lecture, delai]) };
+  }
+
+  function questionSituation(dom, cles, i) {
+    var cle = cles[i];
+    var item = C.SITUATION.filter(function (it) { return it.id === cle; })[0];
+    var t = Q.situation[cle];
+    if (!S.sit) S.sit = {};
+    var dejaDonnee = connue(cle);
+    var v = S.sit[cle] !== undefined ? S.sit[cle] : (dejaDonnee ? S.situation[cle] : undefined);
     var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
     var options = item.valeurs.map(function (val, k) {
       var choisie = v === val;
@@ -820,11 +1041,10 @@
         rond + '<span>' + esc(ins(t.o[k])) + '</span></button>';
     }).join('');
     afficher(carte(
-      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + x('situation.titre') + '</span>' +
-      '<span>' + x('situation.progression', { n: i + 1, total: total }) + '</span></div>' +
-      '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(titreDomaine(dom))) + '</span>' +
+      '<span>' + x('situation.titre') + '</span></div>' +
       '<h2 class="bilan-q-texte">' + esc(ins(t.q)) + '</h2>' +
-      (i === 0 ? '<p class="bilan-note bilan-q-aide">' + x('creation.situationAide') + '</p>' : '') +
+      '<p class="bilan-note bilan-q-aide">' + x(dejaDonnee ? 'situation.deja' : 'situation.aide', { autre: S.autre.prenom }) + '</p>' +
       '<div class="bilan-options" role="radiogroup">' + options + '</div>' +
       '<div class="bilan-q-pied">' +
       (i > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
@@ -834,83 +1054,93 @@
       '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
       'bilan-question bilan-question--situation'), true);
     garderEnVue();
-    compterVue('situation_vue', { mode: S.mode, id: S.id });
+    // Comptée au premier écran de situation de l'évaluation, quand aucune clé
+    // n'est encore donnée : une fois par évaluation, comme « situation »,
+    // que la base compte à la première clé reçue.
+    var vierge = !C.SITUATION.some(function (it) { return connue(it.id); });
+    if (vierge) compterVue('situation_vue', { mode: S.mode, id: S.id });
     var session = S;
     function apres() {
       if (S !== session) return;
-      if (i + 1 < total) questionSituation(i + 1); else enregistrerSituation(session);
+      if (S.sit[cle] === undefined) S.sit[cle] = v;
+      if (i + 1 < cles.length) questionSituation(dom, cles, i + 1); else enregistrerSituation(session, cles);
     }
     ACTIONS = {
       choisir: function (b) {
-        S.sit[item.id] = b.getAttribute('data-v');
+        S.sit[cle] = b.getAttribute('data-v');
         racine.querySelectorAll('.bilan-option').forEach(function (o) {
           var oui = o === b;
           o.classList.toggle('choisie', oui);
           o.setAttribute('aria-checked', String(oui));
         });
         setTimeout(function () {
-          if (racine.querySelector('.bilan-question--situation') && S === session && S.sit[item.id] === b.getAttribute('data-v')) apres();
+          if (racine.querySelector('.bilan-question--situation') && S === session && S.sit[cle] === b.getAttribute('data-v')) apres();
         }, 220);
       },
-      suivanteQ: function () { if (S.sit[item.id]) apres(); },
-      precedente: function () { questionSituation(i - 1); },
-      pause: function () { pause(function () { questionSituation(i); }); },
+      suivanteQ: function () { if (S.sit[cle] || v) apres(); },
+      precedente: function () { questionSituation(dom, cles, i - 1); },
+      pause: function () { pause(function () { questionSituation(dom, cles, i); }); },
     };
   }
 
-  function enregistrerSituation(session) {
-    chargement();
-    appel('situation', { id: session.id, jeton: session.jeton, situation: session.sit }).then(function (r) {
-      // L'un des deux a déjà fini : la situation est figée, l'état dit la suite.
-      if (r.statut === 409) return ouvrir(session.entree);
-      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { enregistrerSituation(session); });
-      session.situation = r.json.etat.situation;
+  // N'envoie que les clés données ou changées ici (action `situation`, que
+  // le serveur fusionne avec les autres), puis reprend les questions.
+  function enregistrerSituation(session, cles) {
+    var change = {};
+    cles.forEach(function (k) {
+      if (session.sit && session.sit[k] !== undefined && session.sit[k] !== (session.situation || {})[k]) change[k] = session.sit[k];
+    });
+    function reprendre() {
+      cles.forEach(function (k) { session.sitFaites[k] = true; });
       session.sit = null;
-      session.entree.situationVue = true;
-      majEntree(session.id, session.role, { situationVue: true });
       S = session;
-      S.liste = C.questionsPour(S.situation, S.reponses);
+      S.liste = listeQuestions();
       S.index = premierSansReponse();
       suivante();
-    }).catch(function () { messageErreur('reseau', function () { enregistrerSituation(session); }); });
+    }
+    if (!Object.keys(change).length) return reprendre();
+    chargement();
+    appel('situation', { id: session.id, jeton: session.jeton, situation: change }).then(function (r) {
+      // L'un des deux a déjà fini : la situation est figée, l'état dit la suite.
+      if (r.statut === 409) return ouvrir(session.entree);
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { enregistrerSituation(session, cles); });
+      session.situation = r.json.etat.situation;
+      reprendre();
+    }).catch(function () { messageErreur('reseau', function () { enregistrerSituation(session, cles); }); });
   }
 
-  // Quelqu'un a déjà décrit la situation : on la relit avant la première
-  // question, avec de quoi la corriger.
-  function confirmerSituation() {
-    var invite = S.role === 'b';
-    afficher(carte(
-      '<h2 class="bilan-titre">' + (invite ? x('rejoindre.situationTitre', { autre: S.autre.prenom }) : x('situation.verifierTitre')) + '</h2>' +
-      '<p class="bilan-texte">' + x('situation.verifierTexte') + '</p>' +
-      resumeSituation(S.situation) +
-      '<div class="bilan-actions">' + bouton('confirmer', x('situation.confirmer')) +
-      bouton('corriger', x('rejoindre.situationCorriger'), 'btn-outline') + '</div>', 'bilan-situation-verif'));
-    ACTIONS = {
-      confirmer: function () {
-        S.entree.situationVue = true;
-        majEntree(S.id, S.role, { situationVue: true });
-        suivante();
-      },
-      corriger: function () { questionSituation(0); },
-    };
+  // Seul(e), ce que l'autre répondrait n'est demandé que sur une partie des
+  // questions (C.percuDemande : les sujets décisifs, et au moins trois
+  // questions par domaine ; 25 octobre 2026, deux cents écrans, c'était trop
+  // long). Une perception déjà donnée, dans une évaluation commencée avant ce
+  // jour, reste à sa place et se modifie comme avant.
+  function percuDemandee(id) {
+    if (!S.percu) return false;
+    return Number.isInteger(S.percu[id]) || C.percuDemande(S.situation, S.reponses).has(id);
   }
 
   // La première question à laquelle il manque une réponse ; en solo, une
-  // question en a deux (la sienne, puis celle qu'on prête à l'autre), et la
-  // phase s'arrête sur celle qui manque.
+  // question peut en avoir deux (la sienne, puis celle qu'on prête à
+  // l'autre), et la phase s'arrête sur celle qui manque.
   function premierSansReponse() {
     for (var i = 0; i < S.liste.length; i++) {
       var id = S.liste[i].id;
       if (!Number.isInteger(S.reponses[id])) { S.phase = 'moi'; return i; }
-      if (S.percu && !Number.isInteger(S.percu[id])) { S.phase = 'autre'; return i; }
+      if (S.percu && !Number.isInteger(S.percu[id]) && percuDemandee(id)) { S.phase = 'autre'; return i; }
     }
     S.phase = 'moi';
     return S.liste.length;
   }
 
-  // La question suivante, à sa première phase.
+  // La question suivante, à sa première phase. Hors relecture, ce qui est
+  // déjà répondu se saute : après un retour en arrière, ou dans une
+  // évaluation commencée avant le nouvel ordre des domaines.
   function avancer() {
     S.index++;
+    if (!S.revoir) {
+      while (S.index < S.liste.length && Number.isInteger(S.reponses[S.liste[S.index].id]) &&
+        (!S.percu || Number.isInteger(S.percu[S.liste[S.index].id]) || !percuDemandee(S.liste[S.index].id))) S.index++;
+    }
     S.phase = 'moi';
     suivante();
   }
@@ -920,11 +1150,13 @@
     var item = S.liste[S.index];
     var debutDomaine = S.index === 0 || S.liste[S.index - 1].domaine !== item.domaine;
     if (debutDomaine && !S.introsVues[item.domaine]) return introDomaine(item.domaine);
+    var cles = clesAPoser(item.domaine);
+    if (cles.length) return questionSituation(item.domaine, cles, 0);
     afficherQuestion();
   }
 
   function introDomaine(dom) {
-    var ordre = C.DOMAINES.map(function (d) { return d.id; });
+    var ordre = C.ORDRE;
     var n = ordre.indexOf(dom) + 1;
     var nb = S.liste.filter(function (q) { return q.domaine === dom; }).length;
     var min = Math.max(1, Math.round(nb * SECONDES_PAR_QUESTION / 60));
@@ -941,8 +1173,24 @@
       '<p class="bilan-pastille-info">' + x('domaine.nb', { n: nb, min: min }) + '</p>' +
       '<div class="bilan-actions">' + bouton('go', x('domaine.go')) + bouton('pause', x('domaine.pause'), 'btn-outline') + '</div>',
       'bilan-domaine-intro'));
+    // À deux, l'état est relu pendant que l'intro est à l'écran quand le
+    // domaine pose une clé de situation (quatre lectures au plus par
+    // personne), et encore une fois en partant si l'intro est restée plus de
+    // 30 secondes à l'écran.
+    var session = S;
+    var lecture = S.mode === 'duo' && clesAPoser(dom).length ? relireSituation(S) : null;
     ACTIONS = {
-      go: function () { S.introsVues[dom] = true; afficherQuestion(); },
+      go: function (b) {
+        S.introsVues[dom] = true;
+        if (!lecture) return suivante();
+        if (b) b.disabled = true;
+        if (Date.now() - lecture.quand > 30000) lecture = relireSituation(session);
+        var attente = setTimeout(chargement, 200);
+        lecture.promesse.then(function () {
+          clearTimeout(attente);
+          if (S === session) suivante();
+        });
+      },
       pause: function () { pause(); },
     };
   }
@@ -1004,9 +1252,10 @@
       'bilan-question' + (percu ? ' bilan-question--percu' : '')), true);
     garderEnVue();
     etatEnvoi();
-    // Après ma réponse : la perception de l'autre en solo, sinon la suite.
+    // Après ma réponse : la perception de l'autre en solo, quand elle est
+    // demandée, sinon la suite.
     function apres() {
-      if (solo && !percu) { S.phase = 'autre'; afficherQuestion(); } else avancer();
+      if (solo && !percu && percuDemandee(id)) { S.phase = 'autre'; afficherQuestion(); } else avancer();
     }
     ACTIONS = {
       choisir: function (b) {
@@ -1016,7 +1265,7 @@
         } else {
           S.reponses[id] = val;
           // Une réponse peut ouvrir ou fermer des questions plus loin.
-          S.liste = C.questionsPour(S.situation, S.reponses);
+          S.liste = listeQuestions();
           S.index = indexDe(id);
         }
         sauver(false);
@@ -1042,7 +1291,7 @@
       precedente: function () {
         if (percu) { S.phase = 'moi'; afficherQuestion(); return; }
         S.index = Math.max(0, S.index - 1);
-        S.phase = solo ? 'autre' : 'moi';
+        S.phase = solo && percuDemandee(S.liste[S.index].id) ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
       },
@@ -1095,6 +1344,7 @@
           var p = r.json.progression || {};
           majEntree(session.id, session.role, { repondu: p.repondu, total: p.total, statut: r.json.etat && r.json.etat.verrouille ? 'resultat' : r.json.fini ? 'fini' : 'encours' });
           session.dernierEtat = r.json.etat;
+          if (r.json.etat) majDepuisEtat(session, r.json.etat);
           etatEnvoi(e.sale ? 'envoi' : 'ok');
           if (!e.sale) {
             var a = e.attente; e.attente = [];
@@ -1142,15 +1392,12 @@
 
   function pause(reprise) {
     var session = S;
-    // Pendant la situation, aucune réponse n'est encore partie : le serveur
-    // refuserait des réponses sans situation.
-    var avecSituation = C.situationValide(session.situation);
-    if (avecSituation) sauver(false);
+    sauver(false);
     var p = C.progression(session.situation, session.reponses, session.percu || undefined);
     afficher(carte(
       duo('dort', 'repos', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
-      (avecSituation ? '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' : '') +
+      '<p class="bilan-texte">' + x('pause.progression', { n: p.repondu, total: p.total }) + '</p>' +
       '<p class="bilan-texte">' + x('pause.texte') + '</p>' +
       '<div class="bilan-actions">' + bouton('reprendre', x('pause.reprendre')) +
       bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline') + '</div>' +
@@ -1164,8 +1411,9 @@
 
   function terminer() {
     var session = S;
-    // L'adresse où envoyer le rapport, demandée ici depuis le 21 octobre
-    // 2026 : sans elle, le serveur ne marque pas fini.
+    // L'adresse où envoyer le rapport, demandée ici du 21 au 25 octobre
+    // 2026, au départ depuis : sans elle, le serveur ne marque pas fini, et
+    // une évaluation créée sans adresse la donne ici.
     // Une adresse venue de « Recevoir mon lien par e-mail » n'a pas eu, sous
     // son champ, la phrase qui annonce le « prêt » et le rappel (`rappel`
     // faux) : la fin la redemande, préremplie (24 octobre 2026).
@@ -1177,10 +1425,15 @@
       if (etat && etat.verrouille) return ouvrirResultat(session.entree);
       if (r.json.fini) return attente(session.entree, etat);
       if (r.json.emailManque) { S = session; session.moi.email = null; return ecranEmail(session); }
-      // Il manque encore des réponses (une question ouverte par une autre).
+      // Il manque encore des réponses (une question ouverte par une autre),
+      // ou une clé de situation jamais donnée : on la pose.
       S = session;
-      S.liste = C.questionsPour(S.situation, S.reponses);
+      S.liste = listeQuestions();
       S.index = premierSansReponse();
+      if (S.index >= S.liste.length && !C.situationValide(S.situation)) {
+        var manque = C.SITUATION.map(function (it) { return it.id; }).filter(function (k) { return !connue(k); });
+        return questionSituation(C.DOMAINE_DE_CLE[manque[0]] || C.ORDRE[0], manque, 0);
+      }
       suivante();
     });
   }
@@ -1199,6 +1452,7 @@
       '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
       '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
     compterVue('email_vue', { mode: session.mode, id: session.id, cle: session.role });
+    surveillerEmail();
     var champ = document.getElementById('bilan-email');
     function erreur(cle) {
       var p = document.getElementById('bilan-erreur');
@@ -1229,7 +1483,7 @@
       precedente: function () {
         S = session;
         S.index = Math.max(0, S.liste.length - 1);
-        S.phase = S.mode === 'solo' ? 'autre' : 'moi';
+        S.phase = S.mode === 'solo' && percuDemandee(S.liste[S.index].id) ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
       },
@@ -1308,6 +1562,94 @@
       '<p class="bilan-pret-quoi">' + x('paywall.apercu.quoi') + '</p>';
   }
 
+  // Ce que contient le rapport, avec leurs chiffres (25 octobre 2026 : 39
+  // couples avaient vu l'écran « rapport prêt », 3 avaient payé ; le sommaire
+  // était dans la carte du dessous, et rien ne disait dans la première ce
+  // qu'on achetait). À deux, l'accroche est ce qu'on n'a pas encore vu : les
+  // réponses de l'autre. Rien du contenu, seulement les comptes de l'aperçu.
+  function blocPoints(ap, autre) {
+    var v = { autre: autre };
+    var points = [x('paywall.points.reponses', v)];
+    if (ap.ecarts > 1) points.push(x('paywall.points.ecartsN', { n: nombre(ap.ecarts), autre: autre }));
+    else if (ap.ecarts === 1) points.push(x('paywall.points.ecartsUn', v));
+    else if (ap.proches > 0) points.push(x('paywall.points.ecarts0', v));
+    else points.push(x('paywall.points.accords', v));
+    if (MODE === 'solo' && ap.inconnus > 0) points.push(x(ap.inconnus === 1 ? 'paywall.points.ombreUn' : 'paywall.points.ombreN', { n: nombre(ap.inconnus), autre: autre }));
+    if (ap.conversations > 1) points.push(x('paywall.points.conversationsN', { n: nombre(ap.conversations) }));
+    else if (ap.conversations === 1) points.push(x('paywall.points.conversationsUn'));
+    if (MODE !== 'solo') points.push(x('paywall.points.climat'));
+    points.push(x('paywall.points.pdf'));
+    return '<div class="bilan-inclus"><h3 class="bilan-inclus-titre">' + x('paywall.accroche', v) + '</h3>' +
+      '<ul class="bilan-inclus-liste">' + points.map(function (p) { return '<li>' + p + '</li>'; }).join('') + '</ul></div>';
+  }
+
+  // Le prix. À deux, partagé en deux colonnes, une par personne avec son
+  // personnage (25 octobre 2026, Thomas : « le prix divisé par deux en
+  // colonne pour montrer que quand on divise par deux (vu que c'est un
+  // couple) ça fait à peine plus de 3€ ») ; seul(e), le prix seul. La moitié
+  // vient du prix que la page affiche (CFG.prixCentimes, celui des textes),
+  // pour que les deux colonnes fassent toujours le total écrit dessous.
+  function blocPrix(etat, promo) {
+    var c = CFG.prixCentimes || etat.prix || 0;
+    var deux = MODE !== 'solo' && c > 0;
+    var html = '<div class="bilan-prix' + (deux ? ' bilan-prix--deux' : '') + '">' +
+      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '');
+    if (deux) {
+      var chacun = prixEcrit(Math.round(c / 2));
+      var part = function (p, rang) {
+        var nom = perso(p.genre, rang);
+        return '<span class="bilan-part bilan-part--' + nom + '">' + mascotte(nom, 'joie', 58) +
+          '<span class="bilan-part-nom">' + esc(p.prenom) + '</span><span class="bilan-part-prix">' + esc(chacun) + '</span></span>';
+      };
+      html += '<div class="bilan-partage" aria-hidden="true">' + part(etat.moi, 0) + '<span class="bilan-part-plus">+</span>' + part(etat.autre, 1) + '</div>' +
+        '<p class="bilan-note bilan-prix-cine"><span class="sr-only">' + x('paywall.chacunSr', { chacun: chacun }) + ' </span>' + x('paywall.cine') + '</p>';
+    }
+    return html +
+      '<p class="bilan-prix-montant">' + (deux ? '<span class="bilan-prix-egal" aria-hidden="true">=</span> ' : '') + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
+      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
+      '<p class="bilan-note">' + x('paywall.prixAide', { autre: etat.autre.prenom }) + '</p></div>' +
+      '<p class="bilan-note bilan-centre bilan-prix-conseiller">' + x('paywall.conseiller') + '</p>';
+  }
+
+  // Sous le bouton : le paiement par Stripe, les moyens de paiement de la
+  // page de vente (CFG.paiements, dessinés par bilan-couple.ejs) et ce qui se
+  // passe une fois payé.
+  var CADENAS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
+  function blocConfiance(pret) {
+    var moyens = Array.isArray(CFG.paiements) ? CFG.paiements : [];
+    return '<div class="bilan-confiance"><p class="bilan-confiance-ligne">' + CADENAS + '<span>' + x('paywall.securite') + '</span></p>' +
+      (moyens.length ? '<ul class="bilan-moyens" role="list" aria-label="' + x('paywall.moyens') + '">' + moyens.map(function (m) {
+        return '<li class="bilan-moyen" title="' + esc(m.nom) + '">' + m.svg + '<span class="sr-only">' + esc(m.nom) + '</span></li>';
+      }).join('') + '</ul>' : '') +
+      (pret ? '<p class="bilan-note bilan-centre bilan-immediat">' + x('paywall.immediat') + '</p>' : '') + '</div>';
+  }
+
+  // La barre collée de l'écran « rapport prêt » : visible tant
+  // que le bloc d'achat (prix, case, bouton) n'est pas à l'écran, et un appui
+  // y descend. Elle ne paie pas elle-même : la case de la renonciation doit
+  // être cochée avant.
+  var obsColle = null;
+  function barreColle(promo) {
+    return '<div class="bilan-colle" id="bilan-colle" hidden><span class="bilan-colle-texte"><span class="bilan-colle-nom">' + x('paywall.colle') + '</span>' +
+      '<span class="bilan-colle-prix">' + (promo ? promo.html : esc(CFG.prix || '')) + '</span></span>' +
+      bouton('versAchat', x('paywall.colleBouton'), 'btn-cta btn-gradient btn-sm') + '</div>';
+  }
+  function surveillerColle() {
+    if (obsColle) { obsColle.disconnect(); obsColle = null; }
+    var colle = document.getElementById('bilan-colle');
+    var achat = document.getElementById('bilan-achat');
+    if (!colle || !achat || !('IntersectionObserver' in window)) return;
+    obsColle = new IntersectionObserver(function (entrees) {
+      colle.hidden = entrees[entrees.length - 1].isIntersecting;
+    }, { threshold: 0 });
+    obsColle.observe(achat);
+  }
+  function versAchat() {
+    var achat = document.getElementById('bilan-achat');
+    if (!achat) return;
+    try { achat.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { achat.scrollIntoView(true); }
+  }
+
   // Le sommaire du rapport et sa couverture à leurs prénoms : les chapitres
   // de rapport.mjs (chapitresListe), dans le même ordre.
   function sommaire(etat) {
@@ -1338,22 +1680,18 @@
     // La réduction, seulement si le serveur dit qu'il l'appliquera (une
     // fonction plus ancienne ne le dit pas : rien n'est affiché).
     var promo = promoAffichee(etat.promo ? true : false);
-    var achat = '<div class="bilan-prix">' +
-      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '') +
-      '<p class="bilan-prix-montant">' + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
-      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
-      '<p class="bilan-note">' + x('paywall.prixAide', { autre: autre }) + '</p></div>' +
+    var achat = '<div class="bilan-achat" id="bilan-achat">' + blocPrix(etat, promo) +
       // Sans adresse connue (évaluation d'avant le 20 octobre 2026), le champ
       // reste ici ; sinon il est replié sous le sommaire.
       (etat.moi.email ? '' : champEmail('', 'bilan-email-paie')) +
       '<label class="bilan-case bilan-case--serree"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
-      '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>';
+      blocConfiance(pret) + '</div>';
     var suite = sommaire(etat) +
       (etat.moi.email ? '<details class="bilan-email-autre bilan-offre-email"><summary>' + x('paywall.emailAutre') + '</summary>' + champEmail(etat.moi.email, 'bilan-email-paie') + '</details>' : '') +
       '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>';
-    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite');
+    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + barreColle(promo);
     return carte('<details class="bilan-offre-plie"><summary><span class="bilan-offre-plie-titre">' + x('paywall.plie') + '</span>' +
       '<span class="bilan-offre-plie-prix">' + avecPromo(x('paywall.prix'), !!promo) + '</span></summary>' +
       '<p class="bilan-offre-intro">' + x('paywall.introAttente', { autre: autre }) + '</p>' + achat + suite + '</details>', 'bilan-offre bilan-offre--attente');
@@ -1361,6 +1699,7 @@
 
   function actionsOffre(entree, mode) {
     return {
+      versAchat: versAchat,
       payer: function (b) {
         var err = document.getElementById('bilan-erreur');
         var montre = function (cle) { err.textContent = ins(remplir(tr(cle, ''), {})); err.hidden = false; };
@@ -1515,7 +1854,7 @@
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
-      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null,
+      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null, prix: res.prix,
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
     var ap = res.apercu || null;
@@ -1524,9 +1863,10 @@
       offre(etat, true,
         '<p class="bilan-pret-sur">' + x('rapport.surtitre') + '</p>' +
         '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom, autre: autre.prenom }) + '</h2>' +
-        (ap ? blocApercu(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
+        (ap ? blocApercu(ap, autre.prenom) + blocPoints(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
     compterVue('offre_vue', { mode: MODE, id: entree.id });
     ACTIONS = actionsOffre(entree, MODE);
+    surveillerColle();
   }
 
   function retourPaiement(id, session) {

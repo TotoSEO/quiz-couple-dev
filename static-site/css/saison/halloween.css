@@ -30,11 +30,11 @@
   animation: hwBalance 4.6s ease-in-out infinite alternate;
 }
 @keyframes hwBalance { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
-/* Pendant une réduction, sur téléphone, la barre de la réduction est juste
-   sous le menu (header.ejs) : l'araignée pend alors sous la barre, jamais sur
-   son texte. */
+/* Pendant une réduction, sur téléphone, la barre de la réduction est dans
+   l'en-tête, sous le menu (header.ejs) : l'araignée pend alors sous la barre,
+   jamais sur son texte, et reste collée avec elle. */
 .saison-halloween .bandeau-promo { position: relative; z-index: 2; }
-@media (max-width: 1023.98px) { .saison-halloween #site-header:has(+ .bandeau-promo) > nav::after { display: none; } }
+@media (max-width: 1023.98px) { .saison-halloween #site-header:has(> .bandeau-promo) > nav::after { display: none; } }
 /* la citrouille à côté du nom */
 .saison-halloween .entete-logo::after {
   content: ''; display: inline-block; flex: none; width: 20px; height: 20px; margin-left: 2px;

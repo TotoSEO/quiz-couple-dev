@@ -2,17 +2,17 @@
   "hero": {
     "badge": "50 preguntas · gratis · sin registro",
     "titre": "Test de pureza",
-    "titreAccent": "para parejas",
+    "titreAccent": "solo o en pareja",
     "accroche": "¿Hasta dónde habéis llegado de verdad?",
-    "description": "Cincuenta preguntas, una puntuación sobre 899 y una respuesta que no siempre querrás enseñar a tus padres. Hazlo solo y luego manda tu puntuación a tu pareja para comparar."
+    "description": "El test de pureza son 50 preguntas sobre lo que ya has hecho: fiestas, ex, mentiras, sexo, etc. Hazlo solo para tener tu puntuación, o en pareja para puntuar vuestra relación, ¡y luego compara con tu pareja!"
   },
   "cta": "Empezar el test",
   "sections": {
     "s1": {
       "titre": "¿Qué es exactamente un test de pureza?",
-      "lead": "Una lista larga de cosas que la gente hace. Marcas las que ya has hecho. Cuantas más marcas, más sube la puntuación y menos « puro » eres.",
-      "p1": "El formato lleva décadas rondando los campus estadounidenses y explotó en las redes, porque produce exactamente lo que todo el mundo busca en un <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">juego de fiesta</a>: una cifra que comparar. Sin interpretación, sin perfil psicológico, solo un número que puedes soltar en una conversación.",
-      "p2": "La versión que tienes delante está escrita para parejas. Nada de preguntas sobre fraternidades ni clases saltadas: aquí se habla de ex, de mentiras, de noches que se torcieron, de cosas ocultadas a la pareja y de cosas hechas entre dos.",
+      "lead": "Un test de pureza es una lista larga de cosas que la gente hace, y tú marcas las que ya has hecho. Cuantas más casillas marcas, más sube tu puntuación, y menos «puro» eres.",
+      "p1": "El más conocido, el Rice Purity Test, viene de la Universidad Rice, en Texas, y ha dado la vuelta a las redes sociales. Si funciona tan bien como <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">juego de fiesta</a>, es sobre todo porque te da una cifra que puedes comparar con tus amigos o con tu novio o novia.",
+      "p2": "Nuestra versión tiene dos modos. En solitario, las preguntas tratan de ti: tus ex, tus mentiras, las noches que se torcieron o lo que le has ocultado a alguien. En pareja, tratan de vuestra relación, de lo que habéis hecho juntos y de lo que os habéis ocultado.",
       "chiffres": [
         {
           "val": "50",
@@ -32,11 +32,11 @@
         }
       ],
       "sub1Titre": "Por qué funciona tan bien en pareja",
-      "sub1P1": "Porque una puntuación se compara. Haces el test por tu cuenta, mandas tu resultado y la conversación arranca sola. Nueve de cada diez veces la conversación de verdad no va sobre la puntuación, sino sobre la pregunta que hizo dudar, y de ahí se acaba en <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">preguntas que nunca os hacéis</a>."
+      "sub1P1": "Una puntuación se compara fácil. Cada uno hace el test por su cuenta, os mandáis los resultados y la conversación arranca sola. La mayoría de las veces se habla menos de la cifra que de la pregunta que hizo dudar, y de ahí se llega rápido a <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">preguntas que nunca os hacéis</a>."
     },
     "s2": {
       "titre": "Cómo se calcula tu puntuación",
-      "p1": "No todas las preguntas valen los mismos puntos, y ahí está la gracia. Un baremo plano en el que cada casilla suma un punto da el mismo resultado a todo el mundo: un montón en el centro, nadie en los extremos y una cifra que no dice nada.",
+      "p1": "No todas las preguntas valen los mismos puntos. Si cada casilla marcada valiera un punto, casi todo el mundo acabaría con una puntuación media y el resultado no querría decir gran cosa. Por ejemplo:",
       "tableau": {
         "titre": "Tres respuestas, tres pesos",
         "entete": [
@@ -80,7 +80,7 @@
           "texte": "Ya no se puntúa a dos personas, se puntúa una historia: lo que habéis hecho juntos, dónde lo habéis hecho y lo que os habéis ocultado. Las respuestas se dicen en voz alta, lo que hace este modo bastante más peligroso."
         }
       ],
-      "p2": "El modo en pareja y el <a class=\"pu-lien-int\" href=\"{{testCouple}}\">test de pareja clásico</a> no se pisan: uno mide lo que habéis hecho, el otro dónde está la relación hoy. Hacerlos seguidos da dos lecturas muy distintas de la misma pareja.",
+      "p2": "El modo en pareja no repite el test de pareja: uno mide lo que habéis hecho juntos, el otro <a class=\"pu-lien-int\" href=\"{{testCouple}}\">en qué punto está vuestra relación hoy</a>. Hacerlos seguidos da dos lecturas muy distintas de la misma pareja.",
       "encart": {
         "titre": "Un consejo antes de lanzar el modo en pareja",
         "texte": "Algunas preguntas obligan a decir en voz alta cosas que nunca se han dicho. Si el tema todavía quema entre vosotros, haced el modo solo cada uno por su lado y comparad únicamente las puntuaciones. La cifra basta para arrancar la conversación sin obligar a nadie a dar detalles."
@@ -99,7 +99,7 @@
         "📱 <strong>Vida digital</strong>: nudes, cuentas secretas, mensajes al despertar",
         "🚨 <strong>Prohibido</strong>: robos, tonterías, pillajes"
       ],
-      "sub1P1": "La categoría que más duele casi nunca es la que se espera. Son las mentiras las que más suben la puntuación, no el sexo.",
+      "sub1P1": "El detalle suele dar sorpresas: puedes tener una puntuación razonable en sexo y disparar el contador en mentiras, o al revés.",
       "sub2Titre": "Las seis categorías del modo en pareja",
       "liste2": [
         "🔥 <strong>Sexo</strong>: lo que habéis probado, y dónde",
@@ -109,33 +109,33 @@
         "🚨 <strong>Transgresión</strong>: casino, sitios prohibidos, mentiras a dúo",
         "🤐 <strong>Secretos</strong>: lo que el otro sigue sin saber"
       ],
-      "sub2P1": "Es la categoría de los secretos la que separa a las parejas. Dos parejas con exactamente el mismo pasado pueden acabar a cien puntos de distancia, solo por lo que se han contado."
+      "sub2P1": "La categoría de los secretos puntúa lo que uno le ha ocultado al otro. Por eso dos parejas que han vivido más o menos lo mismo pueden acabar con puntuaciones muy distintas."
     },
     "s5": {
       "titre": "¿Una puntuación alta es grave?",
-      "citation": "Una puntuación alta no dice que seas buena o mala persona. Dice que has hecho cosas.",
-      "p1": "Algunas son recuerdos de fiesta, otras son errores, y el test no distingue: cuenta, y ya está. La lectura la haces tú.",
-      "p2": "Donde el resultado se pone interesante es cuando dos personas lo comparan. Trescientos puntos de diferencia entre dos no son un problema en sí, pero suelen explicar tensiones que no se sabían nombrar. Al revés, dos puntuaciones muy cercanas tranquilizan más que cualquier <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">test de compatibilidad</a>.",
+      "citation": "Una puntuación alta solo quiere decir que has vivido bastantes cosas, no que seas mala persona.",
+      "p1": "Hay recuerdos de fiesta y hay errores, y el test no distingue entre los dos: suma puntos. Eres tú quien decide qué dice la cifra.",
+      "p2": "Donde el resultado se pone interesante es cuando dos personas lo comparan. Trescientos puntos de diferencia entre dos no son un problema en sí, pero a veces explican tensiones que no se sabían nombrar. En cambio, dos puntuaciones cercanas no quieren decir que estéis de acuerdo en <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">vuestros valores y vuestros proyectos</a>: el test de pureza solo mira el pasado.",
       "encart": {
         "titre": "Y si la puntuación del otro duele",
-        "texte": "Pasa. El test habla de todo un pasado, y la mayor parte ocurrió antes de ti. Lo que cuenta no es la cifra, es lo que la persona acepta contarte detrás."
+        "texte": "Pasa. El test habla de todo un pasado, y la mayor parte suele haber ocurrido antes de ti. Lo más útil es lo que la persona acepta contarte detrás de la cifra."
       }
     }
   },
   "faq": {
     "titre": "Las preguntas que nos hacen",
     "q1": "¿El test de pureza es gratis?",
-    "a1": "Sí, del todo. Sin cuenta que crear, sin correo que dar, sin versión de pago que desbloquee el resultado de verdad. Respondes, tienes tu puntuación, se acabó.",
+    "a1": "Sí, del todo. No hay cuenta que crear, ni correo que dar, ni versión de pago: respondes a las preguntas y tu puntuación aparece al final.",
     "q2": "¿Se guardan mis respuestas en algún sitio?",
     "a2": "No. No se almacena ninguna respuesta individual. Solo se registra la puntuación final, sin nada que permita llegar hasta ti, y sirve únicamente para calcular la media y la curva que se ven en la página.",
     "q3": "¿Cuánto se tarda?",
-    "a3": "De cinco a siete minutos las cincuenta preguntas en solitario. En pareja es más largo, porque vais a parar a hablar al menos tres veces, y un poco de eso se trata.",
+    "a3": "De cinco a siete minutos para las cincuenta preguntas en solitario. En pareja es más largo, porque seguro que vais a parar para comentarlo.",
     "q4": "¿Qué es una buena puntuación?",
     "a4": "No la hay. La mayoría se sitúa entre el 25 y el 40 % del máximo, o sea un resultado de unos 250 a 350 puntos. Por debajo eres muy formal, por encima tienes historial, pero ninguno de los dos es mejor.",
     "q5": "¿Se puede jugar entre más de dos?",
     "a5": "El modo en pareja está pensado para dos. Nada impide en cambio que todo un grupo haga el modo solo cada uno por su lado y compare las puntuaciones después: es incluso el mejor uso del test cuando sois varios.",
     "q6": "¿A partir de qué edad?",
-    "a6": "El test pregunta tu edad antes de empezar. Por debajo de 16 años se sirve una versión para todos los públicos, y el <a href=\"/es/quiz-pareja-adolescentes/\">quiz de pareja para adolescentes</a> encaja seguramente mejor: retira las preguntas sobre sexo explícito y drogas, y conserva todo lo que toca las mentiras, la familia, las fiestas y los secretos."
+    "a6": "El test pregunta tu edad antes de empezar. Por debajo de 16 años pasa a una versión para todos los públicos, que quita las preguntas sobre sexo explícito y drogas y conserva todo lo que tiene que ver con las mentiras, la familia, las fiestas y los secretos. Para una pareja de adolescentes, el <a href=\"/es/quiz-pareja-adolescentes/\">quiz de pareja para adolescentes</a> encaja seguramente mejor."
   },
   "suite": {
     "titre": "Para hacer justo después",
@@ -238,10 +238,10 @@
     "hero_jauge_moyenne": "Puntuación media"
   },
   "meta": {
-    "titre": "Test de pureza para parejas | Online y gratis",
-    "description": "Test de pureza en pareja: 50 preguntas, puntuación sobre 899 y el detalle por categoría. Hazlo solo o en pareja y compara con tu pareja. Gratis, sin registro."
+    "titre": "Test de pureza: 50 preguntas, solo o en pareja | Gratis",
+    "description": "El test de pureza en 50 preguntas: hazlo solo para tener tu propia puntuación, o en pareja para la de vuestra relación. Resultado por categoría. Gratis, sin registro."
   },
   "jsonLd": {
-    "about": "test de pureza en pareja"
+    "about": "test de pureza"
   }
 }

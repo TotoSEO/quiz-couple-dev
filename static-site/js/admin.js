@@ -676,7 +676,8 @@
       sources_google_clics: statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
       distance_par_test: chargeSalonParPage(),
       instagram_clics: statsRpc('get_instagram_clics'),
-      bilan: statsRpc('get_bilan_tableau', { p_jours: n })
+      bilan: statsRpc('get_bilan_tableau', { p_jours: n }),
+      bilan_celibataires: statsRpc('get_bilan_celib', { p_jours: n })
     };
     var cles = Object.keys(lots);
     Promise.all(cles.map(function (k) {
@@ -688,7 +689,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres), depuis le 25 octobre 2026, sans aucune adresse. Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -824,8 +825,10 @@
   var bilanJours = 30;
   var bilanCouchesVues = { payes: true, crees: false, vues: false };
   var _bilanCouches = null;
+  // Dans l'ordre de passage du questionnaire (C.ORDRE de coeur.mjs) : le
+  // temps à deux ouvre l'évaluation depuis le 25 octobre 2026.
   var BILAN_DOMAINES = [
-    ['quotidien', 'Le quotidien à la maison'], ['temps', 'Le temps à deux et pour soi'],
+    ['temps', 'Le temps à deux et pour soi'], ['quotidien', 'Le quotidien à la maison'],
     ['entourage', 'Famille et amis'], ['travail', 'Le travail et les ambitions'], ['argent', 'L\'argent'],
     ['logement', 'Où et comment vivre'], ['enfants', 'Les enfants'], ['valeurs', 'Les valeurs'],
     ['disputes', 'La communication et les disputes'], ['confiance', 'La confiance et la fidélité'],
@@ -842,7 +845,7 @@
     'cases_manquantes', 'cases_manquantes_solo', 'paiements_ouverts', 'paiements_ouverts_solo', 'payes', 'payes_solo'];
   // Les étapes d'une personne arrêtée qui ne sont pas des domaines.
   var ARRETS_HORS_DOMAINES = { situation: 'à la situation, avant la première question', email: 'à l\'écran de l\'adresse, tout répondu', invitation: 'invitation pas acceptée' };
-  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'cases pas cochées', autre: 'autre' };
+  var CAUSES_DEPART_BILAN = { prenoms: 'prénoms manquants', email: 'adresse e-mail vide', email_faux: 'adresse e-mail mal écrite', majeur: 'case des 18 ans pas cochée', consentement: 'case du consentement pas cochée', accord: 'case de l\'accord pas cochée', autre: 'autre' };
   // Une colonne de l'entonnoir : chaque barre en part de la première étape,
   // le pourcentage de droite en part de l'étape d'avant, ou de celle que
   // l'étape nomme (e[3]) quand elle ouvre une autre suite (le partenaire).
@@ -962,6 +965,55 @@
     renderBilanLegende(_bilanCouches);
     drawChart(document.getElementById('admin-bilan-chart'), _bilanCouches, {});
   }
+  // « Où en êtes-vous ? » au départ seul(e), et ce que les célibataires
+  // voudraient dans une évaluation pour eux (25 octobre 2026, migration
+  // 20261025140000, get_bilan_celib par admin-stats). Sa propre lecture : si
+  // la migration manque, le reste de l'onglet s'affiche quand même.
+  var SUJETS_CELIB_ADMIN = {
+    point: 'Savoir où j\'en suis dans ma vie amoureuse',
+    schemas: 'Comprendre ce qui se répète dans mes histoires',
+    profil: 'Savoir quel genre de personne me correspond',
+    blocages: 'Comprendre ce qui me bloque pour rencontrer quelqu\'un',
+    rencontres: 'Mieux m\'y prendre pour faire des rencontres',
+    rupture: 'Tourner la page après une rupture',
+    envie: 'Savoir ce que je veux vraiment : une histoire sérieuse ou pas',
+    confiance: 'Reprendre confiance en moi en amour'
+  };
+  function loadBilanCelib() {
+    var el = document.getElementById('admin-bilan-celib');
+    if (!el) return;
+    el.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    statsRpc('get_bilan_celib', { p_jours: bilanJours }).then(function (d) {
+      if (!d || typeof d !== 'object' || !d.statuts) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      var st = d.statuts || {};
+      var couple = Number(st.couple) || 0, complique = Number(st.complique) || 0, celib = Number(st.celib) || 0;
+      var tous = couple + complique + celib;
+      var tuiles = [[couple, 'En couple'], [complique, 'C\'est compliqué'], [celib, 'Célibataire']];
+      var html = tous
+        ? '<div class="bil-faits">' + tuiles.map(function (t) {
+          return '<div class="bil-fait"><div class="bil-fait-n">' + nombreBilan(t[0]) + ' <small>' + partBilan(t[0], tous) + '</small></div><div class="bil-fait-l">' + esc(t[1]) + '</div></div>';
+        }).join('') + '</div>'
+        : '<p class="bil-vide">Personne n\'a encore répondu à «\u00a0Où en êtes-vous\u00a0?\u00a0» sur la période.</p>';
+      var reponses = Number(d.reponses) || 0;
+      html += '<p class="bil-fait-l">Ce qui intéresserait les célibataires : ' + nombreBilan(reponses) + ' réponse' + (reponses > 1 ? 's' : '') +
+        ' sur la période, ' + nombreBilan(d.avec_email) + ' avec une adresse · ' + nombreBilan(d.liste_attente) + ' adresse' + (Number(d.liste_attente) > 1 ? 's' : '') + ' en liste d\'attente, toutes périodes</p>';
+      var interets = d.interets || [];
+      html += reponses && interets.length
+        ? interets.map(function (i) {
+          return ligneEtapeBilan(SUJETS_CELIB_ADMIN[i.id] || i.id, '', Number(i.n) || 0, reponses, reponses, 'var(--adm-s-lances)');
+        }).join('')
+        : '<p class="bil-vide">Aucune réponse de célibataire sur la période.</p>';
+      var autres = d.autres || [];
+      if (autres.length) {
+        html += '<p class="bil-fait-l">Leurs autres idées</p><div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Idée</th><th>Langue</th><th>Le</th></tr></thead><tbody>' +
+          autres.map(function (a) { return '<tr><td class="bil-gauche">' + esc(a.texte || '') + '</td><td>' + esc(a.lang || '') + '</td><td>' + esc(dateBilan(a.le)) + '</td></tr>'; }).join('') +
+          '</tbody></table></div>';
+      }
+      el.innerHTML = html;
+    }).catch(function (e) {
+      el.innerHTML = '<p class="text-center text-muted-foreground py-6">Ces chiffres ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261025140000 est-elle appliquée, et admin-stats déployée avec get_bilan_celib ?</p>';
+    });
+  }
   function loadBilan() {
     var ids = ['admin-bilan-entonnoir', 'admin-bilan-domaines', 'admin-bilan-sources', 'admin-bilan-delais', 'admin-bilan-attente', 'admin-bilan-list'];
     ids.forEach(function (id) { var e = document.getElementById(id); if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
@@ -971,6 +1023,7 @@
       b.classList.toggle('active', Number(b.dataset.bilanJours) === bilanJours);
     });
     drawChart(document.getElementById('admin-bilan-chart'), [], { loading: true });
+    loadBilanCelib();
     statsRpc('get_bilan_tableau', { p_jours: bilanJours }).then(function (d) {
       if (!d || typeof d !== 'object' || !Array.isArray(d.serie)) {
         throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
@@ -1023,35 +1076,39 @@
       CLES_ETAPES_BILAN.concat(['vues']).forEach(function (k) { et[k] = serieEtapes.reduce(function (a, j) { return a + (Number(j[k]) || 0); }, 0); });
       // Un compte `_solo` s'ajoute toujours à son compte de base : à deux = base - seul(e).
       var aDeux = function (k) { return Math.max(0, et[k] - (et[k + '_solo'] || 0)); };
-      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)',
+      // Depuis le 25 octobre 2026, la situation se donne au fil des domaines :
+      // la première clé arrive après le premier domaine (« Le temps à deux »),
+      // donc après la première réponse.
+      var cDeux = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)',
         'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      // Depuis le 25 octobre 2026, l'adresse se donne au départ : l'écran de
+      // l'adresse à la fin ne concerne plus que les évaluations créées sans
+      // elle, son compte est sous l'entonnoir.
       var duo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', aDeux('ctas')],
-        ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', aDeux('departs')],
+        ['Écran de départ vu', 'façon de faire, prénoms, adresse e-mail et la case', aDeux('departs')],
         ['Évaluation créée', 'le formulaire de départ est validé', aDeux('crees')],
-        ['Situation ouverte', 'la première question de situation affichée', aDeux('situations_vues')],
-        ['Situation donnée', 'les sept premières questions', aDeux('situations')],
         ['Le créateur a commencé', 'sa première réponse', aDeux('commences_a')],
-        ['Le créateur a vu l\'écran de l\'adresse', 'toutes ses questions répondues', Math.max(0, aDeux('emails_vus') - et.emails_vus_b)],
-        ['Le créateur a fini', 'adresse donnée', aDeux('finis_a')],
+        ['Situation ouverte', 'la première question de situation affichée, avant «\u00a0Le quotidien\u00a0»', aDeux('situations_vues')],
+        ['Situation commencée', 'la première réponse de situation, par l\'un ou l\'autre', aDeux('situations')],
+        ['Le créateur a fini', 'toutes ses réponses, et son adresse', aDeux('finis_a')],
         ['Invitation ouverte', 'l\'écran d\'accueil du partenaire ; % des évaluations créées', et.invitations_vues, 2],
-        ['Le partenaire a rejoint', 'prénom et les deux cases', et.rejoints],
+        ['Le partenaire a rejoint', 'prénom, adresse e-mail et la case', et.rejoints],
         ['Le partenaire a commencé', 'sa première réponse', et.commences_b],
-        ['Le partenaire a fini', 'adresse donnée', et.finis_b],
+        ['Le partenaire a fini', 'toutes ses réponses, et son adresse', et.finis_b],
         ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', aDeux('offres_vues')],
         ['Paiement ouvert', 'page Stripe ouverte (on peut payer dès sa propre fin)', aDeux('paiements_ouverts')],
         ['Rapport payé', 'paiement confirmé par Stripe', aDeux('payes')]
       ];
-      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      var cSolo = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
       var solo = [
         ['Clic sur «\u00a0Commencer\u00a0»', 'une fois par visite ; le bouton dit la façon de faire', et.ctas_solo],
-        ['Écran de départ vu', 'façon de faire, prénoms et les deux cases', et.departs_solo],
+        ['Écran de départ vu', 'façon de faire, prénoms, adresse e-mail et la case', et.departs_solo],
         ['Évaluation créée', 'le formulaire de départ est validé', et.crees_solo],
-        ['Situation ouverte', 'la première question de situation affichée', et.situations_vues_solo],
-        ['Situation donnée', 'les sept premières questions', et.situations_solo],
         ['A commencé', 'sa première réponse', et.commences_a_solo],
-        ['A vu l\'écran de l\'adresse', 'toutes ses questions répondues', et.emails_vus_solo],
-        ['A fini', 'adresse donnée', et.finis_a_solo],
+        ['Situation ouverte', 'la première question de situation affichée, avant «\u00a0Le quotidien\u00a0»', et.situations_vues_solo],
+        ['Situation commencée', 'la première réponse de situation', et.situations_solo],
+        ['A fini', 'toutes ses réponses, et son adresse', et.finis_a_solo],
         ['Offre vue', 'l\'écran «\u00a0rapport prêt\u00a0»', et.offres_vues_solo],
         ['Paiement ouvert', 'page Stripe ouverte', et.paiements_ouverts_solo],
         ['Rapport payé', 'paiement confirmé par Stripe', et.payes_solo]
@@ -1061,11 +1118,14 @@
         nombreBilan(et.vues) + ' visites de la page et ' + nombreBilan(et.ctas) + ' clics sur «\u00a0Commencer\u00a0» (' + partBilan(et.ctas, et.vues) + ')',
         'Erreurs sur l\'écran de départ : ' + (erreursDepart.length ? erreursDepart.map(function (x) { return nombreBilan(x.n) + ' ' + (CAUSES_DEPART_BILAN[x.cause] || x.cause) + (Number(x.solo) ? ' (dont ' + nombreBilan(x.solo) + ' seul(e))' : ''); }).join(', ') : 'aucune'),
         'Clics sur «\u00a0Débloquer\u00a0» sans la case cochée : ' + nombreBilan(aDeux('cases_manquantes')) + ' à deux, ' + nombreBilan(et.cases_manquantes_solo) + ' seul(e)',
+        'Écran de l\'adresse à la fin des questions (évaluations créées sans adresse, avant le 25 octobre 2026 au soir) : ' + nombreBilan(Math.max(0, aDeux('emails_vus') - et.emails_vus_b)) + ' créateurs à deux, ' + nombreBilan(et.emails_vus_b) + ' partenaires, ' + nombreBilan(et.emails_vus_solo) + ' seul(e)',
         'Écran d\'attente vu (à deux, offre repliée) : ' + nombreBilan(et.attentes_vues)
       ];
       var debutVu = serie.length && String(serie[0].jour) < DEBUT_ETAPES_BILAN;
       place('admin-bilan-entonnoir', serieEtapes.length
         ? '<p class="bil-note-etapes">' + (debutVu ? 'Depuis le 21 octobre 2026, jour du nouveau départ (le 21 mélange l\'ancien et le nouveau). ' : '') +
+          'Jusqu\'au 25 octobre 2026, la situation se donnait en bloc avant la première réponse ; depuis, au fil des domaines, après la première réponse. ' +
+          'Du 21 au 25 octobre 2026, l\'adresse e-mail se donnait à la fin de ses propres questions ; depuis le 25 au soir, au départ, pour la reprise. ' +
           'Le compte «\u00a0à deux\u00a0» est le total moins le compte seul(e).</p>' +
           '<div class="bil-colonnes">' + colonneEtapesBilan('À deux', duo, cDeux) + colonneEtapesBilan('Seul(e)', solo, cSolo) + '</div>' +
           '<ul class="bil-faits-etapes">' + faitsEtapes.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>'

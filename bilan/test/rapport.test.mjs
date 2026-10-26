@@ -261,3 +261,48 @@ test('un accord sur un sujet décisif porte son étiquette', () => {
   }
   assert.ok(decisifs > 0);
 });
+
+test('seul(e), l\'autre imaginé(e) sur une partie des questions : toutes les réponses restent, rangées à leur place', () => {
+  // 25 octobre 2026 : la perception n'est demandée que sur C.percuDemande.
+  for (const lang of LANGUES) {
+    const T = lire(lang, 'bilan.json').app;
+    const Q = lire(lang, 'bilan-questions.json');
+    const d = couple({ lang, graine: 17, solo: true, inconnu: 0.15, genres: ['h', 'f'] });
+    const demande = C.percuDemande(d.situation, d.a.reponses);
+    assert.deepEqual(Object.keys(d.a.percu).sort(), [...demande].sort(), 'le jeu d\'essai suit la règle');
+    const { html, analyse } = rapportHtml(d, T, Q, { format: 'ecran' });
+    assert.equal(analyse.compte.repondues, Object.keys(d.a.reponses).length);
+    assert.ok(analyse.seules.length > 40, 'des réponses sans perception : ' + analyse.seules.length);
+    // Chaque réponse sans perception est écrite dans son domaine.
+    const cases = (html.match(/rap-accord--seule/g) || []).length;
+    assert.equal(cases, analyse.seules.length, lang + ' : une case par réponse seule');
+    assert.ok(html.includes(T.rapport.solo.domaines.seules.replace(/'/g, '&#39;')) || html.includes(T.rapport.solo.domaines.seules), lang + ' : le titre « vos autres réponses »');
+    // « Qui s'en occupe » : comparées ou non, toutes dans le chapitre des
+    // rôles, sauf celles restées en « je ne sais pas » (zones d'ombre).
+    const roles = html.split('data-chap="roles"')[1].split('data-chap="domaines"')[0];
+    const quis = Object.keys(d.a.reponses).filter((id) => C.INDEX[id].q.type === 'qui' && d.a.percu[id] !== C.INCONNU);
+    assert.equal((roles.match(/<article class="rap-role/g) || []).length, quis.length, lang + ' : un rôle par question « qui »');
+    // Une carte d'état sans perception n'a que la ligne de A.
+    const seulEtat = analyse.etats.find((e) => e.b === null);
+    assert.ok(seulEtat, 'au moins une question d\'état sans perception');
+    // La couverture compte toutes les questions.
+    assert.match(html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '), /100/);
+  }
+});
+
+test('seul(e), « je ne sais pas » à toutes les questions d\'état demandées : aucun climat prêté à l\'autre, rien de cassé', () => {
+  for (const lang of LANGUES) {
+    const T = lire(lang, 'bilan.json').app;
+    const Q = lire(lang, 'bilan-questions.json');
+    const d = couple({ lang, graine: 23, solo: true, inconnu: 0, genres: ['f', 'h'] });
+    for (const id of Object.keys(d.a.percu)) if (C.INDEX[id].q.type === 'etat') d.a.percu[id] = C.INCONNU;
+    for (const format of ['pdf', 'ecran']) {
+      const { html, analyse } = rapportHtml(d, T, Q, { format, couper: format === 'pdf' ? couperPour(lang) : undefined });
+      assert.equal(analyse.meteoB, null);
+      assert.ok(analyse.meteoA !== null);
+      const texte = html.replace(/<[^>]+>/g, ' ');
+      assert.ok(!/\b(undefined|NaN|null)\b|\[object/.test(texte), `${lang} ${format}`);
+      assert.ok(!/left:(NaN|null)/.test(html), `${lang} ${format} : un point sans place`);
+    }
+  }
+});

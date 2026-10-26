@@ -52,7 +52,7 @@ function toutRepondre(situation) {
   return rep;
 }
 
-const situation = { ensemble: 'oui', duree: '1a3', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
+const situation = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
 let id = null;
 let jeton = null;
 let code = 1;

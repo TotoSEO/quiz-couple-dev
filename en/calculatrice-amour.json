@@ -69,16 +69,16 @@
   },
   "suite": {
     "titre": "How about the real test?",
-    "texte": "This percentage is a game, it counts letters. If you want to measure what actually matters, we have a <a href=\"/en/love-compatibility-test/\">compatibility test in twenty questions</a> to take together: values, plans, money, everyday life. That score does mean something.",
+    "texte": "This percentage is a game, it counts letters. If you want to measure what actually matters, there's a twenty-question test to take together, about <a href=\"/en/love-compatibility-test/\">money, kids, everyday life or faithfulness</a>. That score does mean something.",
     "bouton": "Take the 20-question test",
     "autresTitre": "You might also like these calculators:",
     "autresEtiquette": "Calculator"
   },
   "section1": {
     "title": "What is a love calculator?",
-    "p1": "A love calculator is a small tool where you type two names and get a percentage. For example: you write \"Thomas\" and \"Elisa\", and the tool answers 59%. That's it. No questions to fill in, no sign-up, one second and it's done.",
+    "p1": "A love calculator is a small tool where you type two names and get a percentage. For example: you write \"Thomas\" and \"Elisa\", and the tool answers 59%. There are no questions to fill in and no sign-up, and the result comes in a second.",
     "p2": "The idea goes back to the very first websites, back when people sent each other links by email. It has never changed: you compare the letters of two names and you get a number out of it. So it's mostly there for fun, to start a conversation, or to type your crush's name and see what comes up.",
-    "p3": "Ours does the same thing, with two differences. First it shows you the detail of the calculation instead of pulling a number out of nowhere. Second it doesn't claim to be scientific: it's a game with letters, and we say so."
+    "p3": "Ours does the same thing, with two differences. First, it shows you the detail of the calculation instead of pulling a number out of nowhere. Second, it doesn't pretend to be scientific: it's a game played with the letters of your names."
   },
   "section2": {
     "title": "How our love calculator works",
@@ -89,7 +89,7 @@
   },
   "section3": {
     "title": "Does the percentage mean anything?",
-    "p1": "The honest answer is no, and that needs saying plainly. You did not choose your name, and it says nothing about how you love, how you argue or how you make plans. Two people at 38% can spend thirty years together, two people at 97% can split up in six months.",
+    "p1": "No. You did not choose your name, and it says nothing about how you love, how you argue or how you make plans. Two people at 38% can spend thirty years together, and two people at 97% can split up in six months.",
     "p2": "What the number does well, on the other hand, is open a conversation. You type the two names, you laugh at the result, you try the nicknames, and one thing leading to another you start talking about more serious things. That is often how <a href=\"/en/couple-questions/\">the good questions turn up in a conversation</a>, without anyone having prepared them.",
     "p3": "If you want a number based on something real, you have to answer questions about your life together, not about your names. That is what our twenty-question test does, and it is a completely different exercise."
   },
@@ -101,7 +101,7 @@
   "section5": {
     "title": "Your score is low, so what?",
     "p1": "First, try it with your nicknames. The calculator looks at letters, so \"Tom\" and \"Lisa\" don't give the same thing as \"Thomas\" and \"Elisa\". Plenty of couples find their best score with the pet names they actually use.",
-    "p2": "Then remember where the number comes from. A low score means your names don't have many letters in common and their rhythms differ. It says nothing more. If the real question is nagging at you, <a href=\"/en/love-compatibility-test/\">twenty questions about your values and your plans</a> will teach you infinitely more than a calculation on letters.",
+    "p2": "Then remember where the number comes from. A low score means your names don't have many letters in common and their rhythms differ. It says nothing more. If the real question is nagging at you, <a href=\"/en/love-compatibility-test/\">twenty questions about your values and your plans</a> will teach you a lot more than a calculation on letters.",
     "p3": "And if you want to stay on the playful side, we have two other tools in the same spirit: <a href=\"/en/zodiac-signs-names-compatibility/\">compatibility from names and star signs</a>, and <a href=\"/en/birth-date-love-compatibility/\">the crossing of your two birth dates</a>. And for those already in a couple, you can also <a href=\"/en/relationship-counter/\">count the days since the story began</a>, updated every morning."
   },
   "faq": {
@@ -115,9 +115,9 @@
     "q4": "How do I get a higher percentage?",
     "a4": "By trying other ways of writing your names. The pairs that climb highest share a lot of letters, have a similar share of vowels and a similar length. That's why short nicknames often give better scores than full names.",
     "q5": "Does the score have a scientific basis?",
-    "a5": "None at all, and we would rather write that in black and white. It's a game with letters, with a bit of numerology that is a tradition and not a science. To measure real compatibility you have to ask questions about life together, which is what our twenty-question test does.",
+    "a5": "None at all. It's a game with letters, with a bit of numerology that is a tradition and not a science. To measure real compatibility you have to ask questions about life together, which is what our twenty-question test does.",
     "q6": "What's the difference with your love compatibility test?",
-    "a6": "Everything separates them. The calculator looks at two names and returns a number in one second. The compatibility test asks each of you twenty questions about money, children, pace of life and faithfulness, then compares your answers. One is a game, the other is a real couple's questionnaire.",
+    "a6": "They're two very different things. The calculator looks at two names and returns a number in one second. The compatibility test asks each of you twenty questions about money, children, pace of life and faithfulness, then compares your answers. One is a game, the other is a real couple's questionnaire.",
     "q7": "Do you keep the names I type?",
     "a7": "No. The calculation happens entirely in your browser, nothing is sent or saved anywhere. You can type your crush's name without worrying."
   },

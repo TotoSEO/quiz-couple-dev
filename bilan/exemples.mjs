@@ -37,10 +37,12 @@ const LONGS = ['Anna-Katharina Schwarzenberger', 'Maximilian-Alexander Ostermann
 
 // pareil : la chance que B réponde comme A ; voisin : à une case. En solo
 // (`solo`), les réponses de B deviennent ce que A imagine (a.percu), et
-// `inconnu` est la chance que A réponde « je ne sais pas » à une question.
-export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat = 0.75, prenoms, genres = ['f', 'h'], solo = false, inconnu = 0.15 }) {
+// `inconnu` est la chance que A réponde « je ne sais pas » à une question ;
+// `partout` : une perception à chaque question, comme avant le 25 octobre
+// 2026 (sinon, seulement celles de C.percuDemande).
+export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat = 0.75, prenoms, genres = ['f', 'h'], solo = false, inconnu = 0.15, partout = false }) {
   const r = hasard(graine);
-  const situation = { ensemble: 'oui', duree: '3a10', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
+  const situation = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
   const A = {};
   const B = {};
   for (let passe = 0; passe < 3; passe++) {
@@ -68,7 +70,8 @@ export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat 
   const p = prenoms || PRENOMS[lang] || PRENOMS.fr;
   if (solo) {
     const percu = {};
-    for (const id of Object.keys(A)) percu[id] = r() < inconnu ? C.INCONNU : B[id];
+    const demande = C.percuDemande(situation, A);
+    for (const id of Object.keys(A)) if (partout || demande.has(id)) percu[id] = r() < inconnu ? C.INCONNU : B[id];
     return {
       lang,
       mode: 'solo',
@@ -95,7 +98,7 @@ export function jeuxDEssai(lang) {
     { nom: 'proches', d: couple({ lang, graine: 3, pareil: 0.92, voisin: 0.08, climat: 0.95, genres: ['h', 'f'] }) },
     { nom: 'eloignes', d: couple({ lang, graine: 5, pareil: 0.05, voisin: 0.1, climat: 0.1, genres: ['f', 'f'] }) },
     { nom: 'solo', d: couple({ lang, graine: 17, solo: true, inconnu: 0.15, genres: ['h', 'f'] }) },
-    { nom: 'solo-ombre', d: couple({ lang, graine: 19, solo: true, inconnu: 0.45, pareil: 0.35, voisin: 0.25, climat: 0.5, prenoms: LONGS, genres: [null, null] }) },
+    { nom: 'solo-ombre', d: couple({ lang, graine: 19, solo: true, partout: true, inconnu: 0.45, pareil: 0.35, voisin: 0.25, climat: 0.5, prenoms: LONGS, genres: [null, null] }) },
   ];
 }
 

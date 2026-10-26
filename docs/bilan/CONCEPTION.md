@@ -105,10 +105,13 @@ c'est sûr », c'est l'écart le plus important de tout le bilan. Le couple qui
 décoche le domaine ne le découvrirait jamais. Le principe est donc de garder
 les **souhaits** et d'adapter les **faits**.
 
-À la création, sept questions décrivent la situation du couple : vivez-vous
-ensemble, depuis combien de temps, mariés ou pacsés, enfants ensemble,
-enfants d'une autre relation, propriétaires, animal. Elles changent les
-questions posées, jamais les domaines :
+Six questions décrivent la situation du couple : vivez-vous ensemble,
+mariés ou pacsés, enfants ensemble, enfants d'une autre relation,
+propriétaires, animal (jusqu'au 25 octobre 2026, une septième demandait
+depuis combien de temps, sans rien changer aux questions ni au rapport, et
+les sept étaient posées à la création ; depuis, chacune vient juste avant le
+premier domaine qui en a besoin, voir « La situation au fil des domaines »).
+Elles changent les questions posées, jamais les domaines :
 
 - un couple qui ne vit pas ensemble n'a pas « qui fait les tâches ? » mais
   « si vous viviez ensemble demain, qui ferait quoi ? », et a « vivre
@@ -1250,3 +1253,435 @@ L'outil est `bilan/retrait-test.mjs`, lancé par `bilan-retrait.yml` :
 `lister` (les ventes, sans prénom ni adresse ; avec des empreintes SHA-256
 d'adresses, il signale celles faites avec elles, sans que l'adresse passe par
 le workflow), `essai` (ce qui serait retiré, sans rien toucher), `retirer`.
+
+## 25 octobre 2026 : ce que disent les cinq premiers jours
+
+Thomas : « est-ce que tu arrives à accéder aux données de l'onglet évaluation
+pour analyser ? ». Les chiffres sont lus par le workflow `bilan-chiffres.yml`
+(`bilan/chiffres.mjs`, sans le mot de passe de l'admin), le 25 octobre au
+matin, sur les évaluations créées depuis l'ouverture du 20 octobre.
+
+| Étape | Nombre |
+|---|---|
+| Visites de la page | 1 899 |
+| Clics sur « Commencer » | 620 |
+| Évaluations créées | 291 (156 à deux, 135 seul(e)) |
+| À deux, le partenaire a rejoint | 53 sur 156 |
+| Réponses finies | environ 28 couples, une dizaine de seul(e)s |
+| Pages de paiement ouvertes | 7 |
+| Ventes | 3 (7,92 € chacune) |
+
+- **Qui achète :** les trois ventes sont des couples à deux, en anglais, qui
+  font l'évaluation côte à côte : le partenaire rejoint en une minute
+  (médiane), chacun finit en une vingtaine de minutes (médianes de 22 et 19
+  minutes), et ils paient une fois que les deux ont fini, jamais avant
+  (`payes_avant_fin` à zéro). Environ un couple sur dix qui finit paie ; les
+  trois ventes ont suivi l'e-mail « rapport prêt » (16 envoyés), aucune le
+  rappel du lendemain (12 envoyés).
+- **Où ça casse :** au début. Sur 205 personnes arrêtées depuis plus de
+  24 heures, 78 l'ont fait dans les sept questions de situation et 91 dans le
+  premier domaine, « quotidien » (fini par 134 personnes sur 214 qui y sont
+  entrées) ; chaque domaine suivant est fini à 92-100 %.
+- **Seul(e) :** 135 évaluations, une dizaine finies, aucune vente : deux
+  réponses par question, soit 200, c'est trop long.
+- **Le départ :** 40 % de ceux qui voient l'écran de départ repartent sans
+  créer d'évaluation ; 169 erreurs affichées en cinq jours, dont 103 pour
+  l'une des deux cases (53 l'âge, 50 le consentement) et 33 pour les prénoms.
+- **Les e-mails du parcours :** 100 partis le 24 au soir, 97 remis, aucune
+  plainte, aucune désinscription, aucune visite de la page par leur lien le
+  lendemain matin.
+
+Thomas a validé les quatre propositions (« Ok pour tout ») :
+
+1. **Une seule case au départ** (fait le 25 octobre 2026) : « J'ai 18 ans ou
+   plus et je consens à ce que mes réponses soient enregistrées, uniquement
+   dans le but de fournir le rapport d'évaluation », à la création, en solo
+   et à l'acceptation de l'invitation, cause `accord` quand elle manque.
+   L'âge reste 18 ans : c'est un achat, avec des questions sur l'intimité,
+   et les CGV réservent l'évaluation aux majeurs (les 15 ans de la porte
+   e-mail sont l'âge du consentement seul aux e-mails, une autre règle).
+2. **« Une vingtaine de minutes »** (fait le 25 octobre 2026) au lieu de
+   « 25 à 30 minutes », « 25 minutes » ou « 30 minutes » partout où la page
+   et l'invitation donnent la durée, phrase de Thomas comprise (« 20 minutes
+   chacun et quelques euros… ») ; l'e-mail de reprise compte 0,2 minute par
+   question restante (0,4 en solo).
+3. **Alléger le début** (fait le 25 octobre 2026) : chaque question de
+   situation juste avant le domaine qui en a besoin, et le temps à deux en
+   premier domaine ; détail dans la section qui suit.
+4. **Raccourcir le seul :** ne demander ce que l'autre répondrait que pour
+   les sujets décisifs.
+
+### La situation au fil des domaines (25 octobre 2026)
+
+- **L'ordre de passage** (`ORDRE` de coeur.mjs) commence par le temps à deux
+  et le temps pour soi : ses neuf questions ne dépendent d'aucune situation
+  et parlent de ce qu'on aime faire ensemble, là où le quotidien commençait
+  par les tâches ménagères. Le rapport, l'admin et le PDF gardent l'ordre de
+  `DOMAINES` ; l'entonnoir de l'onglet Évaluation range les domaines dans
+  l'ordre de passage.
+- **Chaque clé de situation est posée une fois, juste avant le premier
+  domaine qui en a besoin** (`DOMAINE_DE_CLE`, calculé d'après les `si` des
+  questions) : vivre ensemble et l'animal avant le quotidien, propriétaires
+  avant le logement, les deux questions d'enfants avant les enfants, mariés
+  ou pacsés avant les valeurs. Une clé dont un domaine dépend et qui
+  manquerait encore y est aussi posée (`clesAvant`). Les écrans gardent le
+  dessin d'une question, avec le titre du domaine, et ne comptent pas dans
+  les cent.
+- **Le total vaut 100 dès la première question** : une clé pas encore
+  donnée compte avec sa valeur par défaut (`SITUATION_DEFAUT`), et chaque
+  combinaison donne cent questions. Le serveur accepte des réponses sans
+  situation, fusionne les clés reçues avec celles déjà là (`situation`,
+  `situationPartielle`) et ne marque fini qu'avec la situation complète.
+- **À deux**, celui qui arrive à un domaine dont l'autre a déjà donné la clé
+  la voit choisie, avec « Cette réponse a déjà été donnée : changez-la si
+  elle n'est pas juste. » La page reprend la situation de chaque réponse
+  enregistrée et relit l'état à l'intro d'un domaine qui pose une clé (une
+  lecture, quatre au plus par personne). Une fois que l'un des deux a fini,
+  la situation est figée, et l'autre n'a plus rien à confirmer : le
+  récapitulatif « telle que X l'a décrite », montré au partenaire avant sa
+  première question, a disparu.
+- **Seul(e), et dans une évaluation commencée avant ce jour**, une clé connue
+  n'est jamais redemandée. Une évaluation de l'ancien ordre reprend au
+  temps à deux, puis saute ce qui est déjà répondu.
+- **La mesure** : « Situation ouverte » est compté au premier écran de
+  situation de l'évaluation (une fois par évaluation), « Situation
+  commencée » à la première clé reçue par la base ; les deux viennent
+  désormais après la première réponse dans l'entonnoir.
+
+## 25 octobre 2026 : les célibataires de l'évaluation seul(e)
+
+Thomas, devant les 135 évaluations seul(e) sans une vente : « les gens qui
+font le test seul, c'est qui ces gens ? Car nous on est parti du principe que
+c'était des gens en couple dont le partenaire n'avait pas envie de faire le
+test ou n'est pas là ». Personne ne le savait : le départ ne demandait rien.
+Sa décision, le même jour : « On mesure la part de célibataires pour voir si
+ça vaut le coup de créer un test payant pour les célibataires », leur dire
+qu'il n'y a pas encore d'évaluation pour eux, leur demander ce qui les
+intéresserait, et garder l'adresse de ceux qui veulent être prévenus.
+
+- **La question** : au départ seul(e), « Où en êtes-vous ? » (En couple,
+  C'est compliqué, Célibataire ; `C.STATUTS_SOLO`), avant les prénoms. Le
+  formulaire n'apparaît qu'avec « En couple » ou « C'est compliqué » ; à
+  deux, rien ne change. Chaque réponse est comptée une fois par visite
+  (`compterVue('statut_solo', { cle })`, action `vue`, sans second compte
+  `_solo`, la question n'existant qu'en solo), et l'admin en montre la
+  répartition.
+- **Un célibataire ne crée pas d'évaluation.** La page lui dit que celle-ci
+  compare ce que vivent deux personnes, qu'une évaluation pour célibataires
+  est en préparation et qu'on aimerait la construire avec lui, puis lui
+  demande ce qui l'intéresserait le plus parmi huit sujets
+  (`C.SUJETS_CELIB` : savoir où il en est, ce qui se répète dans ses
+  histoires, le genre de personne qui lui correspond, ce qui le bloque pour
+  rencontrer quelqu'un, mieux faire des rencontres, tourner la page après
+  une rupture, savoir ce qu'il veut, reprendre confiance), une autre idée en
+  texte libre, et l'adresse où le prévenir, facultative, avec sa case
+  (« J'ai 15 ans ou plus et j'accepte de recevoir un e-mail de Quiz Couple le
+  jour où l'évaluation pour célibataires sera prête »). Le merci propose les
+  quatre tests célibataires du site, gratuits.
+- **Le stockage** : action `celib` de la fonction `bilan`, table
+  `bilan_celib` (migration `20261025140000_bilan_celib.sql`, appliquée par
+  `bilan-base.yml`), fermée à la clé publique, une ligne par réponse et une
+  seule par adresse (la dernière réponse remplace la précédente). Dix
+  réponses par heure et par connexion, quatre cents par jour en tout. Rien
+  n'est envoyé aujourd'hui.
+- **L'adresse ne sert qu'à cet e-mail-là** : elle ne va ni dans `abonnes` ni
+  dans le parcours de Brevo, dont la case parle d'autre chose. Le jour où
+  l'évaluation pour célibataires sort, on écrit l'export (clé de service
+  seulement) et on pose `notifie_le` après l'envoi ; `rgpd_menage()` efface
+  l'adresse trente jours après, et toute la réponse un an après la dernière
+  (politique de confidentialité, `privacy.bilanItems`, et registre).
+- **Ce qu'on lira** : l'onglet Évaluation, panneau « Seul(e) : où en
+  sont-ils ? » (`get_bilan_celib` par admin-stats) : la part de chaque
+  réponse, le classement des sujets, les autres idées, le nombre d'adresses
+  en liste d'attente. Ce qui décide d'une évaluation pour célibataires : la
+  part de célibataires parmi ceux qui choisissent seul(e), et combien
+  laissent leur adresse. Elle devra être autre chose que les tests
+  célibataires gratuits du site, sinon elle n'a pas d'intérêt ; un sujet
+  que personne ne coche peut aussi dire quel test gratuit retirer.
+
+## 25 octobre 2026 : l'évaluation seul(e), en couple, raccourcie
+
+La quatrième proposition du matin, validée avec les trois autres (« Ok pour
+tout »), et la demande de Thomas le même jour : « améliore l'évaluation je
+suis en couple mais je la fais seul ». En solo, chaque question demandait
+deux réponses, la sienne puis celle qu'on prête à l'autre : deux cents
+écrans. Sur 135 évaluations seul(e), une dizaine étaient allées au bout, et
+les arrêts se groupaient dans le premier domaine, là où l'écran « selon
+vous » apparaît pour la première fois.
+
+- **La règle** (`C.percuDemande`) : dans chaque domaine, les sujets décisifs,
+  puis les questions qui pèsent le plus, dans l'ordre du domaine, jusqu'à
+  trois (`PERCU_PAR_DOMAINE`). Selon la situation, 34 à 38 perceptions au
+  lieu de 100, soit 134 à 138 écrans au lieu de 200 (136 dans la situation
+  par défaut). Toutes les questions décisives restent demandées, dans toutes
+  les situations (test sur les 96 situations et les réponses à enf1).
+- **Les autres options regardées** : les seuls sujets décisifs (8 à 13
+  perceptions, 108 à 113 écrans, mais sept domaines sans aucune comparaison
+  dans certaines situations), les questions de poids 3 (115 à 120 écrans).
+  Trois par domaine garde une comparaison partout, radar compris.
+- **Le parcours** : la page ne montre « Et selon vous, que répondrait X ? »
+  que sur ces questions (`percuDemandee`), y compris en revenant en arrière.
+  `progression` et `complet` n'attendent la perception que là. Une
+  évaluation commencée avant garde ses perceptions, toutes comparées, et ne
+  demande ensuite que celles qui manquent parmi les nouvelles.
+- **Le rapport garde tous ses chapitres**, et aucune réponse ne disparaît :
+  une réponse sans perception est rangée dans son domaine, sous « Vos autres
+  réponses », sans comparaison ; les « qui s'en occupe » restent au chapitre
+  des rôles avec le seul repère de la personne ; une question d'état compte
+  dans son climat et ses signaux (le climat prêté à l'autre ne compte que
+  les questions où on l'a imaginé(e)). La part d'ombre se calcule sur les
+  perceptions demandées, la couverture compte toujours cent questions.
+  Le rapport d'exemple seul(e) passe de 34 à 28 pages ; `solo-ombre` garde
+  une perception partout, pour vérifier les évaluations d'avant.
+- **Le départ dit ce que le seul apporte** (`apportSolo`) : le regard sur
+  les douze domaines, là où on pense être d'accord avec l'autre sur les
+  sujets qui comptent le plus, et ses zones d'ombre ; cent questions,
+  environ 25 minutes, avec la pause possible. Les textes qui disaient
+  « puis à la place de l'autre » partout (carte du mode seul(e), page de
+  vente, FAQ, aperçu de l'écran « rapport prêt », « Comment lire ce
+  rapport », zones d'ombre, rôles) disent « sur les sujets qui comptent le
+  plus ». La FAQ ne parle plus de « sept questions au début » (six, posées
+  au fil des domaines depuis le matin).
+- **Ce qu'il faut regarder ensuite** : la part de seul(e)s qui vont au bout,
+  dans l'entonnoir de l'onglet Évaluation (colonne Seul(e)), et les arrêts
+  par domaine.
+
+## 25 octobre 2026 : l'écran « rapport prêt » revu
+
+Thomas, devant l'onglet Évaluation : « 39 personnes ont vu l'écran "rapport
+prêt" (en couple), mais seulement 3 ont payé », et l'idée du prix « divisé
+par deux en colonne […] vu que c'est un couple ».
+
+### Ce que disent les chiffres
+
+Du 21 au 25 octobre 2026 : 47 écrans « rapport prêt » vus (8 seul(e), 39 à
+deux, chaque partenaire comptant une fois), 4 pages de paiement ouvertes,
+3 ventes, 4 clics sur « Débloquer » sans la case cochée. Stripe convertit 3
+pages sur 4 : on s'arrête avant le clic, sur l'écran lui-même. Les e-mails
+ne rattrapent pas : 16 « votre rapport est prêt » envoyés pour 3 ventes, 13
+rappels pour aucune.
+
+### Ce qui freinait, en se mettant à leur place
+
+- **La curiosité était satisfaite** : le radar et les trois tuiles donnent
+  une réponse (« 72 accords, 8 écarts, ça va »), et rien ne disait ce qui
+  manquait encore.
+- **On ne voyait pas ce qu'on achetait** : le sommaire était dans la carte
+  du dessous ; la première ne montrait qu'un prix.
+- **Le prix sans repère** : 7,92 € sans rien à côté, ni par personne, ni
+  face à une séance chez un conseiller.
+- **La confiance** : une ligne grise pour Stripe, aucun moyen de paiement
+  dessiné, rien sur ce qui se passe après le paiement.
+- **Le bouton loin** : vers 1 080 px, sous le radar, exprès depuis le
+  22 octobre.
+- **Un défaut en solo** : le prix disait « pour vous deux » et le bouton
+  « Débloquer notre rapport ».
+
+### Ce qui a changé
+
+- **L'accroche** (`paywall.accroche`) : à deux, « Vous n'avez pas encore vu
+  ce que X a répondu. » C'est vrai pour tout le monde, chacun répond de son
+  côté, et c'est ce que le rapport apporte de plus que le radar. Seul(e) :
+  « Le rapport vous dit où vous en êtes avec X, et par où commencer. »
+- **Ce que contient le rapport, chiffré** (`blocPoints`, `paywall.points`) :
+  les réponses de l'autre à côté des siennes, « Pour vos 8 écarts : pourquoi
+  ça compte, et comment en parler sans vous disputer », « Vos 4 prochaines
+  conversations », le climat et qui fait quoi (à deux), les zones d'ombre
+  (seul(e)), le PDF à garder. Seulement les comptes de l'aperçu, jamais un
+  contenu, comme depuis le 21 octobre.
+- **Le prix partagé** (`blocPrix`) : à deux, les deux personnages, leur
+  prénom et leur moitié en grand (3,96 € + 3,96 €), « Moins qu'une place de
+  ciné par personne. », puis le total sous un trait, la réduction et « Un
+  seul paiement débloque le rapport pour vous deux, sans abonnement. » (la
+  phrase d'avant, « X n'aura rien à payer », contredisait la colonne de X).
+  La moitié vient du prix affiché par la page (`CFG.prixCentimes`), pour que
+  les deux colonnes fassent toujours le total écrit dessous. Dessous, la
+  séance chez un conseiller (50 à 90 €, la même phrase que les e-mails).
+- **La confiance sous le bouton** (`blocConfiance`) : le cadenas, « Paiement
+  sécurisé par Stripe », les cinq moyens de paiement de la page de vente
+  (`CFG.paiements`, dessinés par le gabarit, dégradé de la CB renommé) et
+  « Le rapport s'ouvre ici dès le paiement, pour vous deux, et le lien du PDF
+  part par e-mail. » (pas sur l'offre repliée de l'attente, où ce serait
+  faux).
+- **La barre collée** (`barreColle`, `surveillerColle`) : « Votre rapport »,
+  le prix barré et le nouveau, et « Débloquer », tant que le bloc d'achat
+  n'est pas à l'écran ; un appui y descend (le bouton de paiement est alors
+  dans l'écran, même sur 360 x 640). Elle ne paie pas elle-même : la case de
+  la renonciation se coche avant. Bande en bas sur téléphone, pastille
+  flottante sur ordinateur.
+- **Le solo** : « 7,92 € » et « Débloquer mon rapport · 7,92 € ».
+- **Ce qui n'a pas bougé** : le radar d'abord, la case et son texte mot pour
+  mot (l'e-mail du rapport la reprend), le sommaire dans la carte du
+  dessous, aucun résultat de plus avant le paiement.
+
+Le bouton est maintenant vers 1 630 px sur un téléphone de 390 x 844 (1 410
+en solo), la barre le remplace dans le premier écran. Vérification :
+`scratchpad/pret/paiement.mjs <lang> <largeur> <hauteur> <theme> duo|solo`
+(barre, descente, case manquante, page de paiement) et
+`scratchpad/pret/attente.mjs` (l'offre repliée), contre le site construit
+et la fonction en mémoire.
+
+### Ce qu'il faut regarder ensuite
+
+Les pages de paiement ouvertes rapportées aux écrans « rapport prêt » vus,
+à deux et seul(e), dans l'entonnoir de l'onglet Évaluation, sur une semaine
+au moins. Avant : 4 sur 47.
+
+### Laissé à Thomas
+
+- **La case de la renonciation** : son texte fait peur (« je reconnais
+  perdre mon droit de rétractation »), mais il reprend L221-28 13° et l'e-mail
+  du rapport le répète mot pour mot. Une phrase au-dessus qui dit pourquoi
+  elle est là (« le rapport vous est fourni tout de suite après le
+  paiement ») est possible sans toucher au texte.
+- **Une vraie date de fin de la réduction** (`PROMO_FIN`) : « jusqu'au
+  31 octobre » pousse à payer maintenant, à condition que ce soit vrai.
+- **Nommer les domaines des écarts** (« dont l'argent et les enfants ») :
+  plus de curiosité, mais c'est un morceau du résultat, au-delà de « juste
+  la synthèse ».
+
+## 25 octobre 2026 : la page indexée sur « bilan de couple »
+
+Thomas, en regardant les volumes de recherche : « ya 40 volume de recherche
+sur "bilan de couple pdf" », puis « On va tenter la P1 sur bilan de couple et
+bilan de couple PDF ». La page était en noindex dans les cinq langues depuis
+le 22 octobre, parce qu'elle se vendait par le maillage du site.
+
+- **La page française seule est indexée** (`bilanIndexe` dans generate.js),
+  et seulement ouverte : « index, follow », sans hreflang puisque aucune
+  traduction n'est indexée, dans `sitemap-fr.xml`. Les quatre autres langues
+  restent en noindex et hors des sitemaps, comme Thomas l'avait demandé le
+  22 octobre : la demande du jour porte sur des mots français.
+- **Le title** : « Bilan de couple à faire en ligne | PDF résultats
+  immédiats », les mots de Thomas. La description : « Faites votre bilan de
+  couple en ligne : 100 questions, à deux ou seul(e), sur douze domaines de la
+  vie à deux. Résultats immédiats, en ligne et en PDF. » Le H1 ne change pas
+  (« Faites le point sur votre couple, sans aller chez un pro »).
+- **« Que trouve-t-on dans le bilan ? »** à la place de « … dans le
+  rapport ? ».
+- **Deux sections de texte** après « Vos réponses restent entre vous », en
+  français seulement : « Qu'est-ce qu'un bilan de couple ? » (ce que c'est en
+  général, puis le nôtre, avec la vraie question sur l'argent et ses quatre
+  réponses, et le PDF) et « À quoi ça sert d'évaluer sa relation ? » (parler
+  des sujets avant qu'ils ne fâchent, ce qu'on ne sait pas l'un de l'autre,
+  les moments qui s'y prêtent, et le seul(e)). Aucun lien vers une autre page
+  dans ces textes : la page vend, et un lien sortant ne l'aide pas à se
+  classer.
+- **Ce qui aiderait ensuite** : des liens vers la page depuis les articles et
+  les pages du site qui parlent déjà de faire le point sur son couple, avec
+  une ancre trouvée dans leur texte (« faire le bilan », « faire le point
+  sur votre couple ») ; demander l'indexation de la page dans la Search
+  Console ; suivre « bilan de couple » et « bilan de couple pdf » dans
+  Performances.
+
+### Le soir même : les cinq langues
+
+Thomas : « trouve les alternatives dans les autres langues pour bilan de
+couple pdf ! les 5 langues doivent être en ligne ! ». La page est indexée
+dans les cinq langues quand l'évaluation est ouverte, avec son hreflang
+complet et dans les cinq sitemaps.
+
+Chaque langue vise ses propres mots, choisis sur le sens de « bilan de
+couple » et sur les noms des offres comparables (le Couple Checkup de
+PREPARE/ENRICH, le Relationship Checkup de Gottman, les « Beziehungscheck »
+des cabinets allemands), sans prendre ceux d'une autre page du site : le
+test de couple vise déjà « Partnertest » et « Beziehungstest » en allemand,
+et « compatibilité » dans les autres langues. Aucun volume n'a pu être
+mesuré depuis une session de travail, Thomas peut les vérifier dans son outil.
+
+| Langue | Mot visé | Title |
+|---|---|---|
+| fr | bilan de couple | Bilan de couple à faire en ligne \| PDF résultats immédiats |
+| en | relationship assessment | Relationship Assessment Online \| Instant Results + PDF |
+| es | evaluación de pareja | Evaluación de pareja online \| Resultados al instante y PDF |
+| de | Beziehungscheck | Beziehungscheck online \| Ergebnis sofort, auch als PDF |
+| it | bilancio di coppia | Bilancio di coppia online \| Risultati subito e in PDF |
+
+Le H2 du curseur reprend le mot de chaque langue, et les deux sections
+existent dans les cinq langues, écrites dans chacune plutôt que traduites mot
+à mot. Au passage, deux réponses anglaises de la question sur l'argent, que la
+section cite, sont devenues « Separate money, we split the bills » et
+« Separate money, case by case » (« Each our own money » ne se dit pas).
+
+## 25 octobre 2026 au soir : l'adresse au départ, pour la reprise
+
+Thomas : « je viens de capter mais en fait on a pas de campagne mail pour les
+gens qui ont commencé le bilan mais qui ne sont pas allés au bout ? Il
+faudrait faire en sorte que les gens qui commencent le bilan doivent rentrer
+leur mail, comme ça s'ils ne finissent pas on peut les retarget non ? ou alors
+c'est déjà le cas ».
+
+### Ce qui existait, et pourquoi rien n'est parti
+
+L'e-mail de reprise existe depuis le 24 octobre (`messageReprise` : 48 heures
+sans rien de neuf, une seule fois par personne, la variante « moi » à qui n'a
+pas fini, celle du tout début sous deux réponses). Il ne part qu'à une adresse
+donnée sous la phrase qui l'annonce (`a_reprise`, `b_reprise`). Or depuis le
+21 octobre l'adresse se donnait à la fin de ses propres questions, où il n'y
+a plus rien à reprendre : seuls ceux qui avaient tapé leur adresse dans
+« Recevoir mon lien par e-mail » pouvaient la recevoir. L'export du
+25 octobre à 13 h disait `reprises_moi : 0`.
+
+Sur le même export, depuis le 21 octobre : près de 230 évaluations créées,
+39 finies par leur créateur, donc 190 arrêtées sans adresse. Les arrêts :
+85 dans les écrans de situation, 94 dans le premier domaine (alors « le
+quotidien »), 14 dans « le temps à deux », le reste éparpillé. Près de neuf
+arrêts sur dix tombent dans les premières minutes.
+
+### Pourquoi au départ, et pas après le premier domaine
+
+- **Une adresse demandée après le premier domaine** aurait manqué près de
+  neuf arrêts sur dix.
+- **Ce que le champ coûte** : le 20 octobre, l'adresse était obligatoire à la
+  création (et le départ avait plus d'écrans), et 19 créateurs ont fini pour
+  172 clics sur « Commencer » (11 %, alors que les clics étaient comptés à
+  chaque clic ce jour-là, la vraie part était donc plus haute). Du 22 au
+  25 octobre, sans adresse au départ : 29 pour 345 (8,4 %). Le champ retirait
+  surtout des curieux qui ne seraient pas allés au bout. Les nombres sont
+  petits, mais rien ne dit qu'il coûte des évaluations finies.
+- **L'adresse est obligatoire de toute façon** pour recevoir le rapport :
+  quiconque finit la donne.
+
+### Ce qui a changé
+
+- Le champ de l'adresse est sur l'écran de départ (à deux, et seul(e) en
+  couple), sous les prénoms et les genres, avant la case, et sur l'écran de
+  l'invitation du partenaire. Il est obligatoire. La phrase dessous
+  (`creation.emailAideDepart`, `solo.creation.emailAideDepart`) dit tous les
+  e-mails qui partiront : le lien du rapport, le « prêt », une fois si l'on
+  s'arrête en route ou si l'autre tarde, une fois si le rapport attend encore
+  le lendemain, et que l'adresse ne sert à rien d'autre.
+- La page envoie `email`, `rappel: true` et `reprise: true` à `creer` et à
+  `consentir` ; le serveur pose `a_reprise` ou `b_reprise`.
+- Un domaine mal tapé (gmial.com, hotmial.com…) se corrige d'un geste, avec
+  la table de la porte des résultats (capture.js).
+- L'écran de l'adresse à la fin ne sert plus qu'à une évaluation créée sans
+  adresse, par une page ouverte avant la mise en ligne.
+- **Les plafonds d'envoi** : jusque-là, la reprise partageait avec le « prêt »
+  et le rappel un plafond de quarante e-mails par jour. Avec une quarantaine
+  de reprises attendues chaque jour, elle l'aurait vidé dès le matin, et le
+  « prêt » du soir, l'e-mail qui vend (3 ventes pour 16 envoyés), ne serait
+  pas parti. La reprise a désormais son plafond à elle (`REPRISES_PAR_JOUR`,
+  quarante) et passe après tout le reste : plus aucune dès que l'évaluation a
+  envoyé soixante e-mails dans la journée, tous genres confondus
+  (`ENVOIS_AVANT_RESERVE`), pour que le plan Resend (cent par jour) garde
+  toujours la place du lien d'un rapport payé. Des compteurs illisibles la
+  retiennent jusqu'au passage suivant. Les plus récentes partent d'abord :
+  quand le plafond en retient, ce sont les plus anciennes qui attendent, et
+  une reprise ne part jamais des jours après sa date.
+- Dans l'admin, les erreurs du départ comptent l'adresse vide (`email`) et mal
+  écrite (`email_faux`), et la ligne « écran de l'adresse » a quitté
+  l'entonnoir (son compte, qui ne concerne plus que les anciennes
+  évaluations, est écrit dessous).
+
+### Ce qu'il faut regarder
+
+- Dans l'onglet Évaluation, la part des écrans de départ qui deviennent une
+  évaluation (55 à 60 % avant), les erreurs `email` et `email_faux`, et
+  surtout les créateurs qui finissent, rapportés aux clics sur « Commencer ».
+- Sous « Délais, rapports PDF et e-mails » : les reprises envoyées
+  (`reprises_moi`), celles qui ont été suivies d'une évaluation finie ou
+  payée.
+- Si le champ coûte trop au départ (moins d'évaluations créées et moins de
+  créateurs au bout pour autant de clics), le repli est l'adresse demandée
+  après le premier domaine, pour sauvegarder sa progression.

@@ -3,8 +3,8 @@
     "badge": "Astrologie & Numerologie",
     "title": "Liebeskompatibilität nach Vorname und Sternzeichen",
     "highlight": "Liebeskompatibilität",
-    "description": "Zwei Vornamen. Zwei Sternzeichen. Und irgendwo zwischen den Sternen und den Buchstaben eurer Namen etwas, das einer Antwort ähnelt. Dieser Test vereint zwei jahrtausendealte Deutungen, die Astrologie und die Numerologie, um ein Bild eurer Kompatibilität zu zeichnen.",
-    "subtitle": "Gebt eure Vornamen und eure Sternzeichen ein. Den Rest überlasst den Sternen."
+    "description": "Gebt eure beiden Vornamen ein und wählt eure beiden Sternzeichen: Der Test berechnet eure Liebeskompatibilität in Prozent. Die Sternzeichen werden mit der Astrologie verglichen, die Vornamen mit der Numerologie, und ihr seht beide Werte einzeln.",
+    "subtitle": "Kostenlos, ohne Anmeldung, und das Ergebnis erscheint sofort."
   },
   "form": {
     "name1Placeholder": "Vorname von Person 1",
@@ -40,42 +40,42 @@
     "tryAgain": "Ein anderes Paar testen"
   },
   "section1": {
-    "title": "Was dieser Test verrät",
-    "p1": "Die Liebeskompatibilität ist eine der ältesten Fragen, die sich die Menschheit stellt. Vor den Dating-Apps, vor den Persönlichkeitstests, noch vor den Psychologen, gab es die Sterne und die Zahlen. Zwei Systeme zur Deutung der Welt, die auf ihre jeweils eigene Art versuchen zu verstehen, warum sich manche Menschen wie Magnete anziehen und andere aneinanderprallen, ohne sich je wirklich zu finden.",
-    "p2": "Dieser Test vereint beide. <strong>Nicht um für euch zu entscheiden.</strong> Sondern um einen anderen Blick auf das zu werfen, was zwischen zwei Menschen geschieht."
+    "title": "So berechnet der Test eure Kompatibilität",
+    "p1": "Diesen Test macht man zu zweit, oder allein mit jemandem im Kopf. Er fragt nach vier Dingen: euren beiden Vornamen und euren beiden Sternzeichen. Die Sternzeichen werden paarweise mit der Astrologie verglichen (zum Beispiel ein Widder mit einer Waage), die Vornamen mit der Numerologie, die jedem Buchstaben eine Zahl gibt.",
+    "p2": "Das Endergebnis mischt beides: <strong>60 % für die Sternzeichen und 40 % für die Vornamen</strong>. Daneben seht ihr den Wert der Sternzeichen und den der Vornamen, jeweils mit einem kurzen Text. So wisst ihr sofort, woher das Ergebnis kommt."
   },
   "section2": {
-    "title": "Die Numerologie der Vornamen: Wenn Buchstaben schwingen",
-    "p1": "In der Numerologie trägt jeder Buchstabe des Alphabets eine Zahl. A steht für 1, B für 2, C für 3, und so weiter bis 9, dann beginnt es von vorn. Diese Zuordnung ist eine der ältesten der westlichen esoterischen Tradition und geht auf die Arbeiten von Pythagoras im 6. Jahrhundert v. Chr. zurück. Die Idee ist einfach, aber tiefgründig: <strong>Jeder Vorname ist eine Frequenz</strong>.",
-    "p2": "Um die Kompatibilität zwischen zwei Vornamen zu berechnen, addiert man die Werte jedes Buchstabens, reduziert die Summe auf eine einzelne Ziffer zwischen 1 und 9 (außer den „Meisterzahlen“ 11 und 22, die ihre eigene Kraft behalten) und vergleicht. Die 1 trägt Antrieb und Unabhängigkeit. Die 2 sucht Harmonie und Verschmelzung. Die 5 will Freiheit. Zwei Zahlen, die sich ergänzen, schaffen ein ausgewogenes Paar.",
-    "tip": "Die Numerologie der Vornamen hängt nicht von der genauen Schreibweise ab, sie erfasst die Schwingung der Klänge und Buchstaben. Wenn ihr einen Spitznamen verwendet, <a href=\"/de/liebesrechner/\">testet beide Versionen</a>: Die Ergebnisse können unterschiedlich ausfallen."
+    "title": "Die Numerologie der Vornamen, Buchstabe für Buchstabe",
+    "p1": "In der Numerologie ist jeder Buchstabe eine Zahl von 1 bis 9 wert. A ist 1, B ist 2, und so weiter bis I, das 9 ist. Danach geht es mit J wieder bei 1 los, und noch einmal mit S. Das ist die sogenannte „pythagoreische“ Tabelle, die am häufigsten benutzt wird. Man zählt die Buchstaben des Vornamens zusammen, dann die Ziffern der Summe, bis nur noch eine übrig bleibt. Ein Beispiel: Mia ist M = 4, I = 9 und A = 1, also 14, und 1 + 4 = 5. Ben ist B = 2, E = 5 und N = 5, also 12, und 1 + 2 = 3. Mia trägt die 5 und Ben die 3.",
+    "p2": "Es gibt eine Ausnahme: Ergibt die Summe 11 oder 22, hört man dort auf. Das sind die „Meisterzahlen“. Jede Zahl hat ihren Ruf: Die 1 entscheidet, die 2 sucht Harmonie, die 5 braucht Freiheit, die 9 denkt an andere, und so weiter. Danach vergleicht der Test eure beiden Zahlen mit einer Kompatibilitätstabelle. Eine 3 und eine 6 verstehen sich zum Beispiel sehr gut, eine 4 und eine 5 deutlich weniger.",
+    "tip": "Die Rechnung nimmt die Buchstaben so, wie ihr sie schreibt, ohne Umlautpunkte und Akzente. „Jörg“ und „Jorg“ ergeben also dieselbe Zahl, „Lukas“ und „Lucas“ aber nicht (1 und 11). Und kennt ihr ein Sternzeichen noch nicht, <a href=\"/de/liebesrechner/\">reichen auch zwei Vornamen</a>: Der Liebesrechner gibt dann ganz ohne Astrologie einen Prozentwert aus."
   },
   "section3": {
-    "title": "Astrologie und die Sternzeichen: Der Abdruck des Himmels bei der Geburt",
-    "p1": "Das Sternzeichen wird nicht berechnet, es wird vererbt. Es wird durch die Position der Sonne <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">zum Zeitpunkt der Geburt</a> bestimmt. <strong>Zwölf Zeichen. Vier Elemente.</strong> Feuer (Widder, Löwe, Schütze), impulsiv, leidenschaftlich. Erde (Stier, Jungfrau, Steinbock), beständig, geduldig. Luft (Zwillinge, Waage, Wassermann), lebhaft, kommunikativ. Wasser (Krebs, Skorpion, Fische), tiefgründig, intuitiv.",
-    "p2": "Die astrologische Kompatibilität wird zunächst über diese Elemente analysiert. Ein Feuerzeichen und ein Luftzeichen nähren sich gegenseitig. Ein Erdzeichen und ein Wasserzeichen verstehen sich instinktiv. <strong>Aber auch Gegensätze ziehen sich an.</strong>",
+    "title": "Die Sternzeichen und ihre vier Elemente",
+    "p1": "Euer Sternzeichen ist der Stand der Sonne am Tag eurer Geburt. Es hängt vom Tag und vom Monat ab, und hier wählt ihr es selbst aus der Liste. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">von euren beiden Geburtsdaten ausgeht</a>, findet ein anderer Test eure Sternzeichen selbst und rechnet noch eure Lebenszahl und euer chinesisches Sternzeichen dazu.",
+    "p2": "Die zwölf Zeichen verteilen sich auf vier Familien, die Elemente: <strong>Feuer</strong> (Widder, Löwe, Schütze), <strong>Erde</strong> (Stier, Jungfrau, Steinbock), <strong>Luft</strong> (Zwillinge, Waage, Wassermann) und <strong>Wasser</strong> (Krebs, Skorpion, Fische). In der Astrologie fängt man damit an, wenn man zwei Zeichen vergleicht. Feuer und Luft passen gut zusammen, genau wie Erde und Wasser. Zwei Zeichen desselben Elements haben meistens dieselben Bedürfnisse.",
     "subtitle": "Die großen Affinitäten zwischen den Sternzeichen",
-    "p3": "Sternzeichen desselben Elements teilen ein natürliches Verständnis. Zeichen im Quadrat erzeugen Reibung, nicht unbedingt zerstörerische. Zeichen in Opposition verkörpern das Paradox der Anziehung der Gegensätze: <strong>zwei Hälften derselben Achse</strong>."
+    "p3": "Zeichen, die sich im Tierkreis gegenüberliegen, wie Widder und Waage oder Krebs und Steinbock, bekommen im Test einige der besten Werte, oft 8 oder 9 von 10: Jeder hat, was dem anderen fehlt. Zeichen „im Quadrat“, die drei Felder auseinanderliegen, wie Löwe und Skorpion, gelten als schwierig, und ihre Werte liegen zwischen 3 und 5. Insgesamt hat der Test für jede der 144 Kombinationen einen Wert und einen Text."
   },
   "section4": {
     "title": "Warum beide Deutungen kombinieren?",
-    "p1": "Die Astrologie spricht von dem, was man bei der Geburt mitbekommen hat. Die Numerologie spricht von dem, was man in seinem Vornamen trägt. <strong>Die beiden Deutungen ergänzen sich, weil sie nicht dasselbe sagen.</strong>",
-    "p2": "Euer Sonnenzeichen sagt, wie ihr liebt, in der Tiefe. Eure Vornamenzahl sagt, wie ihr euch verbindet. Ein Löwe, dessen Vorname die Zahl 2 trägt, wird sich stark von einem Löwen unterscheiden, dessen Vorname die 1 trägt. Das Zeichen gibt den Charakter; der Vorname nuanciert, wie sich dieser Charakter in einer Beziehung entfaltet.",
-    "tip": "Ein hoher Wert garantiert keine einfache Beziehung. Ein niedrigerer Wert ist kein Urteil: Er ist eine Einladung zu verstehen, wo sich Einsatz lohnen wird."
+    "p1": "Weil sie sich ganz verschiedene Dinge anschauen. Euer Sternzeichen hängt vom Tag eurer Geburt ab, eure Vornamen haben eure Eltern ausgesucht, und das eine hat mit dem anderen nichts zu tun. Zwei Löwen können Vornamen mit ganz unterschiedlichen Zahlen haben, und ein Paar, das laut Sternzeichen schwierig ist, kann zwei Vornamen haben, die sehr gut zusammenpassen.",
+    "p2": "Deshalb zeigt das Ergebnis drei Werte. Nehmt Mia, Waage, und Noah, Löwe: Ihre Sternzeichen verstehen sich gut (80 %), ihre Vornamen viel weniger (40 %), und der Gesamtwert fällt auf 64 %. Ohne die Einzelwerte wüsstet ihr nicht, dass es die Vornamen sind, die den Wert nach unten ziehen...",
+    "tip": "Ein guter Wert garantiert keine einfache Beziehung, und ein niedriger Wert heißt nicht, dass es nicht klappt. Schaut lieber, welcher der beiden Werte das Ergebnis nach unten zieht, und redet darüber."
   },
   "section5": {
     "title": "Was diese Zahlen nicht sagen können",
-    "p1": "Weder die Numerologie noch die Astrologie können vorhersagen, ob eine Beziehung Bestand haben wird. <strong>Sie bieten Orientierung.</strong> Einen Deutungsrahmen. Eine Möglichkeit, das zu benennen, was man manchmal spürt, ohne es erklären zu können.",
-    "p2": "Dieser Test ist ein Ausgangspunkt, kein Urteil. Er kann ein Gespräch eröffnen, eine Intuition bestätigen oder einfach ein paar Minuten Vergnügen bereiten. Für eine Auswertung, die auf euren Antworten beruht statt auf euren Geburtsdaten, stellt der <a href=\"/de/liebeskompatibilitaet-test/\">Liebeskompatibilitätstest</a> jedem von euch zwanzig Fragen.",
-    "tip": "Wenn ihr diesen Test mit eurem Partner macht, können die Ergebnisse ein hervorragender Ausgangspunkt für ein Gespräch über eure Unterschiede und Ergänzungen sein."
+    "p1": "Weder die Astrologie noch die Numerologie können sagen, ob eure Beziehung hält. Nehmt das Ergebnis als Spiel, und als Anlass, über eure Charaktere zu reden: „Du bist so ein typischer Löwe“, „Ich, eine 9? Das überrascht mich“, und so weiter.",
+    "p2": "Wenn ihr ein Ergebnis wollt, das von eurem Alltag als Paar ausgeht, braucht es Fragen. Es gibt einen Test, der jedem von euch zwanzig Fragen zu <a href=\"/de/liebeskompatibilitaet-test/\">Heirat, Kindern, Geld oder Urlaub</a> stellt und dann eure Antworten vergleicht.",
+    "tip": "Macht ihn zu zweit am selben Handy und probiert es danach mit euren Spitznamen: Der Wert der Vornamen ändert sich oft!"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "q1": "Ist die astrologische Kompatibilität wirklich zuverlässig?",
-    "a1": "Die Astrologie sagt die Zukunft nicht präzise voraus. Was sie tut, und das seit Jahrtausenden, ist Temperamente, Seinsweisen und Beziehungsmuster zu beschreiben. Dass sie für viele Menschen nützlich und erhellend ist, lässt sich nicht leugnen.",
+    "q1": "Ist die astrologische Kompatibilität zuverlässig?",
+    "a1": "Nicht im wissenschaftlichen Sinn: Nichts zeigt, dass ein Sternzeichen oder ein Vorname vorhersagen kann, ob ein Paar zusammenbleibt. Astrologie und Numerologie beschreiben Charaktere, und viele Menschen erkennen sich darin zumindest teilweise wieder. Nehmt den Wert als Spiel und die Texte als guten Anlass, darüber zu reden.",
     "q2": "Soll man den vollständigen Vornamen oder den Spitznamen verwenden?",
-    "a2": "In der Numerologie gilt der bürgerliche Vorname als Grundschwingung. Der Spitzname spiegelt die soziale Schwingung wider. Beide sind aufschlussreich. Testet beide und schaut, welcher euch mehr anspricht.",
+    "a2": "Beides geht, aber nicht immer mit demselben Wert, weil jeder Buchstabe zählt. In der Numerologie geht man meistens vom Vornamen in der Geburtsurkunde aus. Wird jemand von allen „Alex“ statt „Alexander“ genannt, lohnt sich ein zweiter Versuch mit „Alex“: Die Zahl springt von 3 auf 6.",
     "q3": "Mein Sternzeichen ist „inkompatibel“ mit dem meines Partners, sind wir verloren?",
-    "a3": "Nein. Ganz und gar nicht. Die Kompatibilität zwischen Sternzeichen ist eine Tendenz, keine Regel. <strong>Es sind die Menschen, die Beziehungen gestalten</strong>, nicht die Sterne."
+    "a3": "Nein! Der Test sagt nie, dass zwei Sternzeichen nicht zusammenpassen, er gibt nur einen höheren oder niedrigeren Wert. Und Paare, die halten, gibt es mit jeder Kombination von Sternzeichen. Lest lieber den Text im Ergebnis: Er zeigt, wo ihr verschieden seid, und genau da fängt oft ein gutes Gespräch an."
   }
 }
