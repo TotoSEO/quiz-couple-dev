@@ -3,145 +3,136 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-in-a-woman',
-  title: "12 Red Flags in a woman: what you're feeling probably has a name",
-  metaTitle: "12 Red Flags in a Woman: The Complete List",
-  metaDescription: "Something feels off in your relationship but you can't quite name it? Emotional, behavioural, relational red flags in a woman, the complete list.",
-  featuredImage: '',
-  featuredImageAlt: "A row of small red marker flags planted in grass, the nearest one sharp and the rest blurred",
+  title: "Red flags in a woman: the list of 12 signs to take seriously",
+  metaTitle: "Red Flags in a Woman: The List of 12 Signs",
+  metaDescription: "The list of 12 red flags in a woman, from the quietest to the most serious, with an everyday example for each one and what it means for what comes next.",
+  featuredImage: '/blog/red-flags-femme.webp',
+  featuredImageAlt: "A row of small red flags planted in the grass, the first in focus and the others blurred",
   publishedAt: '2026-03-07',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "A red flag isn't a character flaw. It's a repeated relational pattern that, over time, makes a relationship exhausting, unbalanced, or toxic.",
-  introduction: `<p>There's a lot of talk about red flags in men. Far less about women, either because the subject gets handled with kid gloves, or because the articles that do exist are so carefully worded that they end up saying nothing. This article isn't here to put women down. It's here for the men (and women) who feel something in their relationship without being able to name it clearly.</p>
-<p><strong>A red flag isn't a character flaw.</strong> It isn't "she's annoying" or "she's too emotional". It's a repeated relational pattern that, over time, makes a relationship exhausting, unbalanced, or toxic. That distinction matters. We need it to avoid both excusing everything and pathologising everything.</p>`,
+  excerpt: "A red flag isn't a character flaw, it's a behaviour that keeps coming back and ends up wearing you down. Here are the 12 to know in a woman.",
+  introduction: `<p>People talk a lot about red flags in a man, much less about the ones you can see in a girl or a woman. Yet they exist just the same, and the men who live with them often take longer to put a name on them. A red flag isn't a character flaw, it's not "she's a pain" or "she's too emotional". It's a behaviour that keeps coming back, that you let slide once, then ten times, and that ends up making the relationship exhausting.</p>
+<p>If you're here, it's probably because you feel something in your relationship without managing to put words on it. Here is the list of the 12 red flags in a woman, with an example for each and what it means. You can read in order, or jump straight to the one that speaks to you.</p>`,
   quickSummary: [
-    "Emotional red flags: she runs hot and cold, her moods become your responsibility, she turns your vulnerabilities against you.",
-    "Behavioural red flags: arguments always end with you at fault, uncontrollable jealousy, rules that shift without warning.",
-    "Relational red flags are the most insidious: gradual isolation, your needs have no room, erosion of your self-confidence.",
-    "A red flag is distinguished from an ordinary difficulty by repetition and the absence of self-reflection.",
-    "If several boxes are ticked and things don't change, the discomfort you carry deserves to be taken seriously.",
+    "A red flag is a behaviour that keeps coming back, not a bad week.",
+    "The most common ones: she blows hot and cold, her mood becomes your problem, arguments always end up being your fault.",
+    "The most serious ones: she cuts you off from the people you love, and you feel guilty for having a life outside of her.",
+    "What sets it apart from a rough patch: the repetition, and what she does when you bring it up.",
+    "The most telling sign: you've felt worse about yourself since you got together.",
   ],
   sections: [
     {
-      id: 'red-flags-at-a-glance',
-      title: "Red flags at a glance",
-      content: `<p>Here they all are, in the order we cover them. Tap the one that speaks to you to jump straight to it.</p>
+      id: 'the-list-of-12-red-flags',
+      title: "The list of 12 red flags in a woman",
+      content: `<p>Here they all are. Click on the one that speaks to you to jump straight to the explanation.</p>
 
 <ol class="blog-liste-reperes">
-<li><a href="#hot-and-cold">She runs hot and cold</a></li>
-<li><a href="#her-moods-your-responsibility">Her moods become your responsibility</a></li>
-<li><a href="#uses-your-vulnerabilities">She uses your vulnerabilities against you</a></li>
-<li><a href="#disproportionate-crises">Emotional crises are disproportionate and unpredictable</a></li>
-<li><a href="#arguments-same-place">Arguments always end in the same place</a></li>
-<li><a href="#jealousy-beyond-reasonable">Jealousy goes beyond what's reasonable</a></li>
-<li><a href="#all-exes-were-monsters">She talks about all her exes like they were monsters</a></li>
-<li><a href="#rules-shift">The rules shift depending on her mood</a></li>
-<li><a href="#your-needs-no-room">Your needs have no room</a></li>
-<li><a href="#pulls-you-away">She gradually pulls you away from your people</a></li>
-<li><a href="#guilty-for-existing">You feel guilty for existing outside of her</a></li>
-<li><a href="#feel-worse">You feel worse about yourself since being with her</a></li>
+<li><a href="#hot-and-cold">She blows hot and cold</a></li>
+<li><a href="#her-mood-becomes-your-problem">Her mood becomes your problem</a></li>
+<li><a href="#she-uses-what-you-told-her">She uses what you confided in her against you</a></li>
+<li><a href="#the-outbursts-are-out-of-proportion">The outbursts are out of proportion</a></li>
+<li><a href="#arguments-always-your-fault">Arguments always end up being your fault</a></li>
+<li><a href="#her-jealousy-goes-too-far">Her jealousy goes beyond what's reasonable</a></li>
+<li><a href="#all-her-exes-were-monsters">All her exes were "monsters"</a></li>
+<li><a href="#the-rules-change">The rules change depending on the day</a></li>
+<li><a href="#your-needs-come-last">Your needs always come last</a></li>
+<li><a href="#she-cuts-you-off">She cuts you off from the people you love</a></li>
+<li><a href="#guilty-for-having-a-life">You feel guilty for having a life outside of her</a></li>
+<li><a href="#you-feel-worse-about-yourself">You've felt worse about yourself since you got together</a></li>
 </ol>
 
-<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
-<tr><td>Every conflict is somehow your fault</td><td>She never questions herself. Ever.</td><td>Serious</td></tr>
-<tr><td>She runs hot and cold</td><td>Emotional instability or a test of your attachment.</td><td>Watch closely</td></tr>
-<tr><td>She isolates you from your people</td><td>Gradual isolation, usually framed as love.</td><td>Very serious</td></tr>
-<tr><td>Your needs don't exist</td><td>The relationship revolves around her. Always.</td><td>Serious</td></tr>
-<tr><td>She uses your vulnerabilities against you</td><td>What you confided becomes a weapon in arguments.</td><td>Very serious</td></tr>
-<tr><td>The rules keep changing without warning</td><td>You never know where you stand. That's intentional.</td><td>Watch closely</td></tr>
-<tr><td>All her exes were terrible</td><td>In her story, she's never been wrong. Ever.</td><td>Watch closely</td></tr>
-<tr><td>Jealousy is constant and uncontrollable</td><td>A need for control, not love.</td><td>Serious</td></tr>
-<tr><td>She makes you feel guilty for your own needs</td><td>Emotional manipulation, conscious or not.</td><td>Serious</td></tr>
-<tr><td>You're permanently walking on eggshells</td><td>Her mood structures the entire relationship.</td><td>Serious</td></tr>
-</tbody></table></div>`,
+<p>They come in three families: what she does with your feelings, what she simply does, and what the relationship turns into over time. The last ones on the list are the biggest.</p>`,
     },
     {
-      id: 'emotional-red-flags',
-      title: "Emotional red flags",
-      content: `<p>These are usually the first to appear, and the hardest to identify because they arrive wrapped in an intensity that can be mistaken for passion. Love can be intense without being unstable. That difference matters.</p>`,
+      id: 'what-she-does-with-your-feelings',
+      title: "What she does with your feelings",
+      content: `<p>These are often the first to show up, and the hardest to see, because they come with an intensity that you mistake for passion. Love can be intense without being unstable.</p>`,
       subsections: [
         {
           id: 'hot-and-cold',
-          title: "She runs hot and cold",
-          content: `<p>One week she's there, present, warm, fully in. The next, distant, cold, gone without explanation. And you spend your time analysing what you did wrong. Spoiler: usually nothing. This cycle creates a kind of dependency, because the relief when things go back to "good" is proportional to the anxiety you had to get through first. That's the anxious attachment pattern, and once you're in it, getting out is hard. If you recognise this, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> can help you see where things really stand.</p>`,
+          title: "1. She blows hot and cold",
+          content: `<p>One week she's there, present, all in. The next, distant, cold, with no explanation. And you spend your time looking for what you did wrong, and most of the time, nothing. This cycle creates a dependency, because the relief when things "turn nice again" is as big as the anxiety you had to get through.</p>
+<p>If the start of the relationship was very intense, messages all day long, "I've never felt this before", it's also worth asking whether <a href="/en/blog/love-bombing-signs/">that dazzling start was love or something else</a>. And once you're caught in the hot and cold, an <a href="/en/attachment-style-test/">anxious attachment</a> sets in: you watch for her approval, and it's hard to get out.</p>`,
         },
         {
-          id: 'her-moods-your-responsibility',
-          title: "Her moods become your responsibility",
-          content: `<p>You come home from work and you assess her mood before saying anything. You choose your words based on how she seems tonight. You avoid certain subjects because it's "not the right time". That's not consideration, that's relational survival. <strong>Managing someone else's moods full-time is a load you don't have to carry alone.</strong> A healthy partner manages their own emotional states, or at least doesn't offload them onto you.</p>`,
+          id: 'her-mood-becomes-your-problem',
+          title: "2. Her mood becomes your problem",
+          content: `<p>You come home from work and you gauge her mood before opening your mouth. You pick your words depending on how she is tonight, you avoid certain subjects because "it's not the right time". That's not tact, that's survival. Managing someone's mood all the time is a load you don't have to carry: a healthy partner handles her own states, or at least doesn't make you carry them.</p>`,
         },
         {
-          id: 'uses-your-vulnerabilities',
-          title: "She uses your vulnerabilities against you",
-          content: `<p>You told her about something that hurt you growing up, an insecurity you carry, a fear you don't usually admit to. And now, in arguments, it comes back. Not to help you move forward, but to hit where it hurts. This is one of the clearest forms of disrespect in a relationship, because it turns trust into an exploitable weakness. If you're no longer sure you can talk about yourself without it being used against you later, that's a real problem.</p>`,
+          id: 'she-uses-what-you-told-her',
+          title: "3. She uses what you confided in her against you",
+          content: `<p>You told her about a childhood wound, an insecurity, a fear you don't admit to anyone. And now, in arguments, it comes back. Not to help you, but to hit where it hurts. It's one of the clearest signs, because <a href="/en/blog/narcissistic-woman-signs/">what you confided in her becomes a weapon</a>. If you no longer know whether you can talk about yourself without it being turned against you, that's a real problem.</p>`,
         },
         {
-          id: 'disproportionate-crises',
-          title: "Emotional crises are disproportionate and unpredictable",
-          content: `<p>An offhand remark triggers a storm. A minor irritation becomes an existential crisis about the state of your relationship. You never know which version of her you'll come home to, or what will set things off. Chronic emotional unpredictability isn't a personality trait to silently accept, it's a signal that something in the dynamic isn't right.</p>`,
+          id: 'the-outbursts-are-out-of-proportion',
+          title: "4. The outbursts are out of proportion",
+          content: `<p>A harmless remark sets off a storm. Being twenty minutes late becomes a questioning of the whole relationship. You never know which version you're going to find, or what's going to make things go off the rails. Everyone has bad days. What counts is how often: when you're walking on eggshells every week, it's no longer a character trait, it's the relationship revolving around her explosions.</p>`,
         },
       ],
     },
     {
-      id: 'behavioural-red-flags',
-      title: "Behavioural red flags",
-      content: `<p>These are often easier to see in hindsight. In the moment, each behaviour taken separately seems manageable. It's the accumulation and the repetition that create the problem.</p>`,
+      id: 'what-she-simply-does',
+      title: "What she does, plain and simple",
+      content: `<p>These are easier to see with some distance. In the moment, each behaviour taken on its own seems manageable. It's the accumulation that makes the problem.</p>`,
       subsections: [
         {
-          id: 'arguments-same-place',
-          title: "Arguments always end in the same place",
-          content: `<p>Whatever the starting point, you consistently end up justifying yourself, apologising, or doing the consoling. A disagreement about the dishes becomes a challenge to how much you love her. A discussion about holidays ends with your "misplaced priorities". <strong>When every disagreement ends with you in the wrong, that's not a coincidence.</strong> It's a pattern. For a concrete list of behaviours worth recognising for what they are, the article on <a href="/en/blog/things-not-accept-relationship/">things not to accept in a relationship</a> covers this in detail.</p>`,
+          id: 'arguments-always-your-fault',
+          title: "5. Arguments always end up being your fault",
+          content: `<p>Whatever the subject at the start, you end up justifying yourself, apologising or consoling her. The argument about the dishes becomes a trial about the way you love, the discussion about the holidays ends on your "priorities". When every disagreement ends with you in the role of the guilty one, it's no coincidence, and <a href="/en/blog/things-not-accept-relationship/">apologising every time without knowing why</a> is not something you should put up with for long.</p>`,
         },
         {
-          id: 'jealousy-beyond-reasonable',
-          title: "Jealousy goes beyond what's reasonable",
-          content: `<p>A bit of jealousy, everyone knows it, it's normal. What we're talking about here is something else: checking who you're seeing, reading your messages, making a scene because you replied to a comment online, interrogating every outing like you're a suspect by default. Jealousy at that level doesn't come from love, it comes from a need for control. And that need for control, over time, spreads. It never stays limited to where it started.</p>`,
+          id: 'her-jealousy-goes-too-far',
+          title: "6. Her jealousy goes beyond what's reasonable",
+          content: `<p>A bit of jealousy, everyone knows that. Here we're talking about something else: she controls who you see, she reads your messages, she makes a scene because you replied to a comment, she questions you about every night out as if you were a suspect by default. <a href="/en/blog/pathological-jealousy/">Jealousy at that level</a> doesn't come from love, it comes from a need for control. And the need for control, over time, spreads: it never stays where it started.</p>`,
         },
         {
-          id: 'all-exes-were-monsters',
-          title: "She talks about all her exes like they were monsters",
-          content: `<p>In her version, every ex was toxic, dishonest, cowardly, or unstable. She has never left someone without serious cause, never had any responsibility in a breakup, never made a mistake in a relationship. That's statistically unlikely. Someone who sees no fault in themselves across all their past relationships won't behave differently with you. That's not a judgement, it's an observation about how change works: it requires acknowledging something first.</p>`,
+          id: 'all-her-exes-were-monsters',
+          title: "7. All her exes were \"monsters\"",
+          content: `<p>In her story, every ex was toxic, a liar, a coward or unstable. She never had her share in a breakup, never made a mistake. That's unlikely. Someone who sees no fault of her own in her past relationships isn't going to start with you, because to change, you first have to acknowledge something.</p>`,
         },
         {
-          id: 'rules-shift',
-          title: "The rules shift depending on her mood",
-          content: `<p>Yesterday it was fine, today it isn't. She told you seeing your friends on Friday was okay, now it's proof you don't care about her. You do exactly what she asked last week, and suddenly it's not enough. This shifting of rules isn't spontaneity, it's a way of keeping you in a state of permanent uncertainty where you can never quite "get it right".</p>`,
+          id: 'the-rules-change',
+          title: "8. The rules change depending on the day",
+          content: `<p>Yesterday, seeing your friends on Friday was fine. Today, it's proof that you don't care about her. You do exactly what she asked you last week, and now it's not enough anymore. That's not spontaneity, it's a way of keeping you in uncertainty, where you can never "do it right".</p>`,
         },
       ],
+      tip: "Something that helps when you're unsure: write down on your phone, every time, what happened and how you felt, with the date. Reading the list back a month later says more than memory, which tends to make excuses.",
     },
     {
-      id: 'relationship-dynamic-red-flags',
-      title: "Red flags in the relationship dynamic",
-      content: `<p>The hardest to see because they settle in gradually, almost imperceptibly. You adapt along the way, and that's exactly how they become invisible.</p>`,
+      id: 'the-biggest-red-flags',
+      title: "The biggest red flags in a woman",
+      content: `<p>The last four are the hardest to see, because they settle in little by little. You adapt to them as you go, and that's how they become invisible.</p>`,
       subsections: [
         {
-          id: 'your-needs-no-room',
-          title: "Your needs have no room",
-          content: `<p>You're hungry but she wants to finish the conversation. You're tired but she needs to talk right now. You want a quiet weekend but her plans take priority. Taken separately, each of these moments looks like a normal compromise. But if you're honest about the pattern, if your needs consistently come after hers without that ever being acknowledged or reciprocated, the relationship is running in one direction. A couple works both ways.</p>`,
+          id: 'your-needs-come-last',
+          title: "9. Your needs always come last",
+          content: `<p>You're hungry, but she wants to finish this conversation. You're exhausted, but she needs to talk now. You want a quiet weekend, but her wishes come first. Taken one by one, these moments look like normal compromises. But if you honestly add them up and your needs always come after hers, without it ever being acknowledged, the relationship runs one way.</p>`,
         },
         {
-          id: 'pulls-you-away',
-          title: "She gradually pulls you away from your people",
-          content: `<p>It starts with comments about your friends, "they're a bad influence" or "they don't really respect you". Then tension every time you spend time without her. Then a quiet guilt that makes you prefer cancelling to dealing with the fallout when you get home. A few months later: you see less of the people who mattered to you, and she's become your main social anchor. Isolation in a relationship almost never looks like isolation at first. It looks like love.</p>`,
+          id: 'she-cuts-you-off',
+          title: "10. She cuts you off from the people you love",
+          content: `<p>It starts with comments about your friends, "they're a bad influence", "they don't respect you". Then tension every time you go out without her. Then a silent guilt that makes you prefer to cancel rather than deal with the consequences when you get back. A few months later, you see the people who mattered less, and she has become pretty much your only company. It's the biggest red flag on the list, because that's how <a href="/en/coercive-control-test/">coercive control</a> begins: isolate first, the rest comes after.</p>`,
         },
         {
-          id: 'guilty-for-existing',
-          title: "You feel guilty for existing outside of her",
-          content: `<p>Taking time for yourself has become complicated. A hobby, friends, work you care about, a passion, even a quiet moment alone at home, all of it generates tension that needs managing. You start wondering whether you're allowed to have a life outside the relationship. You don't owe anyone a justification for existing. If that's a question you're regularly asking yourself, something isn't right. The article on <a href="/en/blog/red-flags-in-a-man/">red flags in a man</a> describes this exact same dynamic from the other side, and seeing both perspectives often helps clarify things.</p>`,
+          id: 'guilty-for-having-a-life',
+          title: "11. You feel guilty for having a life outside of her",
+          content: `<p>A hobby, friends, a job you find interesting, even an evening alone at home: all of it creates a tension you have to manage. You start wondering whether you're allowed to have a life outside the relationship. You don't have to justify existing. If that's a question you ask yourself often, something is wrong.</p>`,
         },
         {
-          id: 'feel-worse',
-          title: "You feel worse about yourself since being with her",
-          content: `<p>This might be the most telling signal of all. Before, you had a certain confidence in yourself. You knew what you were worth, what you wanted, how you worked. Now you doubt yourself on things you never questioned before. You apologise more often. You justify more. You wonder if you're "good enough" for her. That erosion of self-worth doesn't happen by accident in a relationship. It's built, comment by comment, argument by argument, until it starts to seem normal.</p>`,
+          id: 'you-feel-worse-about-yourself',
+          title: "12. You've felt worse about yourself since you got together",
+          content: `<p>This may be the most telling sign. Before, you knew what you were worth and what you wanted. Today, you doubt yourself about things you never used to question, you apologise more often, you wonder whether you're "good enough" for her. It doesn't come from nowhere: one remark after another, the relationship has chipped away at your confidence. And when on top of that you end up doubting what you saw or heard, that has a name: <a href="/en/blog/gaslighting-signs/">gaslighting</a>.</p>`,
         },
       ],
     },
     {
-      id: 'now-what',
-      title: "A few thoughts on this list, and what comes next",
-      content: `<p>Recognising several of these behaviours in someone doesn't automatically make her a bad person. Some of these patterns come from old wounds, from defence mechanisms built long before you, from things that can be worked on with time and genuine will. <strong>What separates a red flag from a passing difficulty is repetition and the absence of self-reflection.</strong></p>
-<p>Does she acknowledge the problem when you bring it up calmly? Do things actually change, even slightly, or do you live in permanent anticipation of a change that never comes? Do you feel better or worse about yourself than before the relationship started?</p>
-<p>If several boxes are ticked and the honest answers to those questions weigh on you, trust what you feel. The discomfort you're carrying deserves to be taken seriously.</p>
-<a href="/en/blog/red-flags-in-a-man/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">Red flags in a man: the list of 13 signs to take seriously</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      id: 'what-now',
+      title: "You recognised several of them: what now?",
+      content: `<p>First, recognising two or three of these behaviours doesn't make her a bad person. Some come from old wounds, from reflexes built before you, from things that can be worked on with time. What makes a red flag is the repetition, and above all what she does when you bring it up calmly. Does she acknowledge the problem? Do things change, even a little, or are you waiting for a change that never comes? Do you feel better or worse than before this relationship?</p>
+<p>If several boxes are ticked and the honest answers to those questions weigh on you, trust what you feel. To see things more clearly, you can <a href="/en/toxic-relationship-test/">answer twenty questions about your relationship</a>: it helps to put words on it, and to tell whether you're dealing with unpleasant or with toxic. And if what you recognised is mostly the last signs on the list, the article about <a href="/en/blog/toxic-woman-in-love/">what a toxic woman puts you through day to day</a> describes how it develops, and how people get out.</p>
+<a href="/en/blog/red-flags-in-a-man/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read next</span><span class="blog-read-also-title">Red flags in a man: the list of 13 signs to take seriously</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

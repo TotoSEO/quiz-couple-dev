@@ -3,144 +3,135 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-femme',
-  title: "Les 12 red flags chez une femme : ce que tu ressens a probablement un nom",
-  metaTitle: "Les 12 red flags chez une femme : la liste complète",
-  metaDescription: "La liste des 12 red flags chez une femme, classés par niveau d'alerte. Ce que chaque signal veut dire, et à partir de quand il faut s'en inquiéter.",
-  featuredImage: '',
+  title: "Red flag chez une femme : la liste des 12 signes à prendre au sérieux",
+  metaTitle: "Red flag chez une femme : la liste des 12 signes",
+  metaDescription: "La liste des 12 red flags chez une femme, du plus discret au plus grave, avec un exemple de tous les jours pour chacun et ce que ça veut dire pour la suite.",
+  featuredImage: '/blog/red-flags-femme.webp',
   featuredImageAlt: "Rangée de petits fanions rouges plantés dans l'herbe, le premier net et les suivants flous",
   publishedAt: '2026-03-07',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Un red flag, ce n'est pas un défaut de caractère. C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique.",
-  introduction: `<p>On parle beaucoup des red flags masculins. Moins souvent de ceux côté féminin, soit parce que le sujet est traité avec des pincettes, soit parce que les articles existants sont écrits avec tant de précautions qu'ils finissent par ne rien dire. Cet article n'est pas là pour charger les femmes. Il est là pour les hommes (et les femmes) qui ressentent quelque chose dans leur relation sans arriver à le nommer clairement.</p>
-<p><strong>Un red flag, ce n'est pas un défaut de caractère.</strong> Ce n'est pas "elle est chiante" ou "elle est trop émotive". C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique. La nuance compte. On en a besoin pour éviter à la fois de tout excuser et de tout pathologiser.</p>`,
+  excerpt: "Un red flag, ce n'est pas un défaut de caractère, c'est un comportement qui revient et qui finit par t'user. Voici les 12 à connaître chez une femme.",
+  introduction: `<p>On parle beaucoup des red flags chez un homme, beaucoup moins de ceux qu'on peut voir chez une fille ou une femme. Pourtant, ça existe pareil, et les hommes qui les vivent mettent souvent plus de temps à les nommer. Un red flag, ce n'est pas un défaut de caractère, ce n'est pas « elle est chiante » ou « elle est trop émotive ». C'est un comportement qui revient, qu'on laisse passer une fois, puis dix, et qui finit par rendre la relation épuisante.</p>
+<p>Si tu es là, c'est sûrement que tu ressens quelque chose dans ton couple sans arriver à mettre des mots dessus. Voici la liste des 12 red flags chez une femme, avec un exemple pour chacun et ce que ça veut dire. Tu peux lire dans l'ordre, ou aller directement à celui qui te parle.</p>`,
   quickSummary: [
-    "Les red flags émotionnels : elle souffle le chaud et le froid, son humeur devient ta responsabilité, elle retourne tes confidences contre toi.",
-    "Les red flags comportementaux : les conflits finissent toujours avec toi en faute, jalousie incontrôlable, règles qui changent sans prévenir.",
-    "Les red flags relationnels sont les plus insidieux : isolement progressif, tes besoins n'ont pas de place, érosion de ta confiance en toi.",
-    "Un red flag se distingue d'une difficulté ordinaire par la répétition et l'absence de remise en question.",
-    "Si tu coches plusieurs cases et que les choses ne changent pas, l'inconfort que tu portes mérite d'être pris au sérieux.",
+    "Un red flag, c'est un comportement qui revient, pas une mauvaise semaine.",
+    "Les plus courants : elle souffle le chaud et le froid, son humeur devient ton problème, les disputes finissent toujours par être de ta faute.",
+    "Les plus graves : elle te coupe de tes proches, et tu te sens coupable d'avoir une vie en dehors d'elle.",
+    "Ce qui fait la différence avec une difficulté passagère : la répétition, et ce qu'elle fait quand tu lui en parles.",
+    "Le signe le plus parlant : tu te sens moins bien dans ta peau depuis que vous êtes ensemble.",
   ],
   sections: [
     {
       id: 'red-flags-en-un-coup-d-oeil',
       title: "La liste des 12 red flags chez une femme",
-      content: `<p>Les voici tous, dans l'ordre où on les traite. Clique sur celui qui te parle pour aller directement à l'explication.</p>
+      content: `<p>Les voici tous. Clique sur celui qui te parle pour aller directement à l'explication.</p>
 
 <ol class="blog-liste-reperes">
 <li><a href="#chaud-et-froid">Elle souffle le chaud et le froid</a></li>
-<li><a href="#son-humeur-ta-responsabilite">Son humeur devient ta responsabilité</a></li>
-<li><a href="#utilise-tes-failles">Elle utilise tes failles contre toi</a></li>
-<li><a href="#crises-disproportionnees">Les crises sont disproportionnées et imprévisibles</a></li>
-<li><a href="#conflits-toujours-ta-faute">Les conflits finissent toujours au même endroit</a></li>
-<li><a href="#jalousie-deraisonnable">La jalousie dépasse ce qui est raisonnable</a></li>
-<li><a href="#tous-ses-ex-sont-des-monstres">Elle parle de tous ses ex comme s'ils étaient tous des monstres</a></li>
-<li><a href="#regles-changent">Les règles changent selon l'humeur du jour</a></li>
-<li><a href="#tes-besoins-pas-de-place">Tes besoins n'ont pas de place</a></li>
-<li><a href="#coupe-de-tes-proches">Elle te coupe progressivement de tes proches</a></li>
-<li><a href="#coupable-d-exister">Tu te sens coupable d'exister en dehors d'elle</a></li>
+<li><a href="#son-humeur-ta-responsabilite">Son humeur devient ton problème</a></li>
+<li><a href="#utilise-tes-failles">Elle utilise ce que tu lui as confié contre toi</a></li>
+<li><a href="#crises-disproportionnees">Les crises sont disproportionnées</a></li>
+<li><a href="#conflits-toujours-ta-faute">Les disputes finissent toujours par être de ta faute</a></li>
+<li><a href="#jalousie-deraisonnable">Sa jalousie dépasse ce qui est raisonnable</a></li>
+<li><a href="#tous-ses-ex-sont-des-monstres">Tous ses ex étaient des « monstres »</a></li>
+<li><a href="#regles-changent">Les règles changent selon le jour</a></li>
+<li><a href="#tes-besoins-pas-de-place">Tes besoins passent toujours après</a></li>
+<li><a href="#coupe-de-tes-proches">Elle te coupe de tes proches</a></li>
+<li><a href="#coupable-d-exister">Tu te sens coupable d'avoir une vie en dehors d'elle</a></li>
 <li><a href="#moins-bien-dans-ta-peau">Tu te sens moins bien dans ta peau depuis que vous êtes ensemble</a></li>
 </ol>
 
-<div><table><thead><tr><th>Le signal</th><th>Ce que ça veut souvent dire</th><th>Niveau d'alerte</th></tr></thead><tbody>
-<tr><td>Les conflits sont toujours de ta faute</td><td>Elle ne se remet jamais en question. Jamais.</td><td>Sérieux</td></tr>
-<tr><td>Elle souffle le chaud et le froid</td><td>Instabilité émotionnelle ou test de ton attachement.</td><td>À surveiller</td></tr>
-<tr><td>Elle te coupe de tes proches</td><td>Isolement progressif, souvent présenté comme de l'amour.</td><td>Très sérieux</td></tr>
-<tr><td>Tes besoins n'existent pas</td><td>La relation tourne autour d'elle. Toujours.</td><td>Sérieux</td></tr>
-<tr><td>Elle utilise tes failles contre toi</td><td>Ce que tu lui as confié devient une arme dans les disputes.</td><td>Très sérieux</td></tr>
-<tr><td>Les règles changent sans prévenir</td><td>Tu ne sais jamais sur quel pied danser. C'est voulu.</td><td>À surveiller</td></tr>
-<tr><td>Elle parle mal de tous ses ex</td><td>Dans son histoire, elle n'a jamais eu tort. Jamais.</td><td>À surveiller</td></tr>
-<tr><td>La jalousie est permanente et incontrôlable</td><td>Besoin de contrôle, pas de l'amour.</td><td>Sérieux</td></tr>
-<tr><td>Elle te fait sentir coupable de tes propres besoins</td><td>Manipulation émotionnelle consciente ou non.</td><td>Sérieux</td></tr>
-<tr><td>Tu marches sur des œufs en permanence</td><td>Son humeur structure toute la relation.</td><td>Sérieux</td></tr>
-</tbody></table></div>`,
+<p>Ils vont par trois familles : ce qu'elle fait de tes émotions, ce qu'elle fait tout court, et ce que la relation devient avec le temps. Les derniers de la liste sont les plus gros.</p>`,
     },
     {
       id: 'red-flags-emotionnels',
-      title: "Les red flags émotionnels",
-      content: `<p>Ce sont souvent les premiers à apparaître, et les plus difficiles à identifier parce qu'ils arrivent enveloppés dans une intensité qu'on peut confondre avec de la passion. L'amour peut être intense sans être instable. La différence est importante.</p>`,
+      title: "Ce qu'elle fait de tes émotions",
+      content: `<p>Ce sont souvent les premiers à arriver, et les plus difficiles à voir, parce qu'ils se présentent avec une intensité qu'on prend pour de la passion. L'amour peut être intense sans être instable.</p>`,
       subsections: [
         {
           id: 'chaud-et-froid',
-          title: "Elle souffle le chaud et le froid",
-          content: `<p>Une semaine elle est là, présente, affectueuse, entière. La suivante, distante, froide, absente sans explication. Et toi, tu passes ton temps à analyser ce que tu as fait de travers. Spoiler : souvent rien. Ce cycle crée une forme de dépendance, parce que le soulagement quand ça "revient au beau" est proportionnel à l'anxiété qu'il a fallu traverser. C'est le schéma de l'<a href="/test-style-attachement-couple/">attachement anxieux</a>, et une fois dedans, c'est difficile d'en sortir. Si tu reconnais ce pattern, l'article sur le <a href="/test-couple-toxique/">test couple toxique</a> peut t'aider à voir où tu en es.</p>`,
+          title: "1. Elle souffle le chaud et le froid",
+          content: `<p>Une semaine elle est là, présente, entière. La suivante, distante, froide, sans explication. Et toi, tu passes ton temps à chercher ce que tu as fait de travers, et la plupart du temps, rien. Ce cycle crée une dépendance, parce que le soulagement quand ça « revient au beau » est à la hauteur de l'angoisse qu'il a fallu traverser.</p>
+<p>Si le début de la relation a été très intense, des messages toute la journée, des « je n'ai jamais ressenti ça », il y a aussi de quoi se demander si <a href="/blog/love-bombing/">ce début en fanfare était de l'amour ou autre chose</a>. Et une fois pris dans le chaud et le froid, c'est l'<a href="/test-style-attachement-couple/">attachement anxieux</a> qui s'installe : on guette son approbation, et on a du mal à en sortir.</p>`,
         },
         {
           id: 'son-humeur-ta-responsabilite',
-          title: "Son humeur devient ta responsabilité",
-          content: `<p>Tu rentres du boulot et tu évalues son humeur avant de parler. Tu choisis tes mots en fonction de comment elle est ce soir. Tu évites certains sujets parce que "c'est pas le bon moment". Ce n'est pas de la considération, c'est de la survie relationnelle. <strong>Gérer l'humeur de quelqu'un en permanence, c'est une charge que tu n'as pas à porter seul.</strong> Un partenaire sain gère ses propres états émotionnels, ou du moins ne te les fait pas porter.</p>`,
+          title: "2. Son humeur devient ton problème",
+          content: `<p>Tu rentres du boulot et tu évalues son humeur avant d'ouvrir la bouche. Tu choisis tes mots selon comment elle est ce soir, tu évites certains sujets parce que « c'est pas le bon moment ». Ce n'est pas de la délicatesse, c'est de la survie. Gérer l'humeur de quelqu'un en permanence, c'est une charge que tu n'as pas à porter : un partenaire sain gère ses propres états, ou au moins ne te les fait pas porter.</p>`,
         },
         {
           id: 'utilise-tes-failles',
-          title: "Elle utilise tes failles contre toi",
-          content: `<p>Tu lui as parlé de quelque chose qui t'avait blessé dans l'enfance, d'une insécurité que tu portes, d'une peur que tu n'as pas l'habitude d'avouer. Et maintenant, dans les disputes, ça revient. Pas pour t'aider à avancer, mais pour toucher là où ça fait mal. C'est une des formes les plus claires de manque de respect dans une relation, parce que <a href="/blog/femme-perverse-narcissique-signes/">ça transforme la confiance en vulnérabilité exploitable</a>. Si tu ne sais plus si tu peux lui parler de toi sans que ça soit retourné contre toi, c'est un problème réel.</p>`,
+          title: "3. Elle utilise ce que tu lui as confié contre toi",
+          content: `<p>Tu lui as parlé d'une blessure d'enfance, d'un complexe, d'une peur que tu n'avoues à personne. Et maintenant, dans les disputes, ça revient. Pas pour t'aider, pour toucher là où ça fait mal. C'est l'un des signes les plus nets, parce que <a href="/blog/femme-perverse-narcissique-signes/">ce que tu lui as confié devient une arme</a>. Si tu ne sais plus si tu peux lui parler de toi sans que ça soit retourné contre toi, c'est un vrai problème.</p>`,
         },
         {
           id: 'crises-disproportionnees',
-          title: "Les crises sont disproportionnées et imprévisibles",
-          content: `<p>Une remarque anodine déclenche une tempête. Une petite contrariété devient une crise existentielle sur l'état de votre relation. Tu ne sais jamais quelle version tu vas retrouver ni pour quelle raison les choses vont déraper. L'imprévisibilité émotionnelle chronique n'est pas un trait de caractère à accepter en silence, c'est un signal que quelque chose ne va pas dans la dynamique.</p>`,
+          title: "4. Les crises sont disproportionnées",
+          content: `<p>Une remarque anodine déclenche une tempête. Un retard de vingt minutes devient une remise en question de toute la relation. Tu ne sais jamais quelle version tu vas retrouver, ni pour quelle raison ça va déraper. Tout le monde a des mauvais jours. Ce qui compte, c'est la fréquence : quand tu marches sur des œufs toutes les semaines, ce n'est plus un trait de caractère, c'est la relation qui tourne autour de ses explosions.</p>`,
         },
       ],
     },
     {
       id: 'red-flags-comportementaux',
-      title: "Les red flags comportementaux",
-      content: `<p>Ceux-là, on les voit souvent mieux en prenant du recul. Sur le moment, chaque comportement pris séparément semble gérable. C'est l'accumulation et la répétition qui font le problème.</p>`,
+      title: "Ce qu'elle fait tout court",
+      content: `<p>Ceux-là se voient mieux avec du recul. Sur le moment, chaque comportement pris à part semble gérable. C'est l'accumulation qui fait le problème.</p>`,
       subsections: [
         {
           id: 'conflits-toujours-ta-faute',
-          title: "Les conflits finissent toujours au même endroit",
-          content: `<p>Peu importe le sujet de départ, tu te retrouves systématiquement en position de te justifier, de t'excuser, ou de consoler. La dispute sur la vaisselle devient une remise en question de ta façon d'aimer. La discussion sur les vacances finit sur tes supposées "priorités mal placées". <strong>Quand chaque désaccord se termine avec toi dans le rôle du fautif, ce n'est pas une coïncidence.</strong> C'est un pattern. Si tu veux creuser ce sujet, cet article sur les <a href="/blog/choses-pas-accepter-couple/">choses à ne pas accepter dans un couple</a> liste des comportements concrets qui méritent d'être reconnus pour ce qu'ils sont.</p>`,
+          title: "5. Les disputes finissent toujours par être de ta faute",
+          content: `<p>Peu importe le sujet de départ, tu finis par te justifier, t'excuser ou la consoler. La dispute sur la vaisselle devient un procès sur ta façon d'aimer, la discussion sur les vacances finit sur tes « priorités ». Quand chaque désaccord se termine avec toi dans le rôle du fautif, ce n'est pas un hasard, et <a href="/blog/choses-pas-accepter-couple/">s'excuser à chaque fois sans savoir pourquoi</a> n'est pas quelque chose qu'on doit accepter longtemps.</p>`,
         },
         {
           id: 'jalousie-deraisonnable',
-          title: "La jalousie dépasse ce qui est raisonnable",
-          content: `<p>Un peu de jalousie, tout le monde connaît, c'est normal. Ce dont on parle ici c'est autre chose : contrôler qui tu vois, lire tes messages, faire une scène parce que tu as répondu à un commentaire en ligne, t'interroger sur chaque sortie comme si tu étais suspect par défaut. <a href="/blog/jalousie-maladive/">La jalousie à ce niveau ne vient pas de l'amour</a>, elle vient d'un besoin de contrôle. Et le besoin de contrôle, sur la durée, s'étend. Il ne se limite jamais au domaine où il a commencé.</p>`,
+          title: "6. Sa jalousie dépasse ce qui est raisonnable",
+          content: `<p>Un peu de jalousie, tout le monde connaît. Là, on parle d'autre chose : elle contrôle qui tu vois, elle lit tes messages, elle fait une scène parce que tu as répondu à un commentaire, elle t'interroge sur chaque sortie comme si tu étais suspect par défaut. <a href="/blog/jalousie-maladive/">La jalousie à ce niveau-là</a> ne vient pas de l'amour, elle vient d'un besoin de contrôle. Et le besoin de contrôle, avec le temps, s'étend : il ne reste jamais là où il a commencé.</p>`,
         },
         {
           id: 'tous-ses-ex-sont-des-monstres',
-          title: "Elle parle de tous ses ex comme s'ils étaient tous des monstres",
-          content: `<p>Dans son récit, chaque ex était toxique, menteur, lâche ou instable. Elle n'a jamais quitté personne sans raison grave, n'a jamais eu sa part de responsabilité dans une rupture, n'a jamais fait d'erreur dans une relation. C'est statistiquement improbable. Quelqu'un qui ne se reconnaît aucun tort dans ses histoires passées ne va pas se comporter différemment avec toi. Ce n'est pas un jugement, c'est une observation sur comment fonctionne le changement : il demande de reconnaître quelque chose d'abord.</p>`,
+          title: "7. Tous ses ex étaient des « monstres »",
+          content: `<p>Dans son récit, chaque ex était toxique, menteur, lâche ou instable. Elle n'a jamais eu sa part dans une rupture, jamais fait d'erreur. C'est peu probable. Quelqu'un qui ne se reconnaît aucun tort dans ses histoires passées ne va pas commencer avec toi, parce que pour changer, il faut d'abord reconnaître quelque chose.</p>`,
         },
         {
           id: 'regles-changent',
-          title: "Les règles changent selon l'humeur du jour",
-          content: `<p>Hier c'était acceptable, aujourd'hui ça ne l'est plus. Elle t'avait dit que voir tes amis le vendredi c'était bien, maintenant c'est une preuve que tu ne tiens pas à elle. Tu fais exactement ce qu'elle t'avait demandé la semaine dernière, et c'est désormais insuffisant. Cette instabilité des règles n'est pas de la spontanéité, c'est une façon de te maintenir dans un état d'incertitude permanente où tu ne peux jamais vraiment "bien faire".</p>`,
+          title: "8. Les règles changent selon le jour",
+          content: `<p>Hier, voir tes amis le vendredi, c'était bien. Aujourd'hui, c'est la preuve que tu ne tiens pas à elle. Tu fais exactement ce qu'elle t'avait demandé la semaine dernière, et maintenant ce n'est plus assez. Ce n'est pas de la spontanéité, c'est une façon de te garder dans l'incertitude, où tu ne peux jamais « bien faire ».</p>`,
         },
       ],
+      tip: "Un truc qui aide quand tu doutes : note sur ton téléphone, à chaque fois, ce qui s'est passé et ce que tu as ressenti, avec la date. Relire la liste un mois plus tard dit plus que la mémoire, qui a tendance à excuser.",
     },
     {
       id: 'red-flags-dynamique-couple',
-      title: "Les red flags dans la dynamique de couple",
-      content: `<p>Les plus difficiles à voir parce qu'ils s'installent progressivement, presque imperceptiblement. On s'y adapte au fur et à mesure, et c'est exactement comme ça qu'ils deviennent invisibles.</p>`,
+      title: "Les plus gros red flags chez une femme",
+      content: `<p>Les quatre derniers sont les plus difficiles à voir, parce qu'ils s'installent petit à petit. On s'y adapte au fur et à mesure, et c'est comme ça qu'ils deviennent invisibles.</p>`,
       subsections: [
         {
           id: 'tes-besoins-pas-de-place',
-          title: "Tes besoins n'ont pas de place",
-          content: `<p>Tu as faim mais elle veut finir cette conversation. Tu es fatigué mais elle a besoin de parler maintenant. Tu veux un week-end calme mais ses envies priment. Pris séparément, chacun de ces moments ressemble à un compromis normal. Mais si tu fais le bilan honnêtement, si tes besoins passent systématiquement après les siens sans que ça soit jamais reconnu ni compensé, c'est que la relation fonctionne à sens unique. Un couple, ça circule dans les deux sens.</p>`,
+          title: "9. Tes besoins passent toujours après",
+          content: `<p>Tu as faim, mais elle veut finir cette conversation. Tu es crevé, mais elle a besoin de parler maintenant. Tu veux un week-end calme, mais ses envies priment. Pris un par un, ces moments ressemblent à des compromis normaux. Mais si tu fais le compte honnêtement et que tes besoins passent toujours après les siens, sans que ce soit jamais reconnu, la relation marche à sens unique.</p>`,
         },
         {
           id: 'coupe-de-tes-proches',
-          title: "Elle te coupe progressivement de tes proches",
-          content: `<p>Ça commence par des remarques sur tes amis, "ils t'influencent mal" ou "ils ne te respectent pas vraiment". Puis des tensions chaque fois que tu passes du temps sans elle. Puis une culpabilisation silencieuse qui fait que tu préfères annuler plutôt que de gérer les conséquences au retour. Le résultat, quelques mois plus tard : tu vois moins les gens qui comptaient pour toi, et elle est devenue ton principal point d'ancrage social. L'isolement dans une relation ne ressemble presque jamais à de l'isolement au début. Ça ressemble à de l'amour.</p>`,
+          title: "10. Elle te coupe de tes proches",
+          content: `<p>Ça commence par des remarques sur tes amis, « ils t'influencent mal », « ils ne te respectent pas ». Puis des tensions à chaque fois que tu sors sans elle. Puis une culpabilité silencieuse qui fait que tu préfères annuler plutôt que de gérer les conséquences au retour. Quelques mois plus tard, tu vois moins les gens qui comptaient, et elle est devenue à peu près ta seule compagnie. C'est le plus gros red flag de la liste, parce que c'est comme ça que commence <a href="/test-emprise-psychologique/">l'emprise</a> : d'abord isoler, le reste vient après.</p>`,
         },
         {
           id: 'coupable-d-exister',
-          title: "Tu te sens coupable d'exister en dehors d'elle",
-          content: `<p>Prendre du temps pour toi devient compliqué. Un hobby, des amis, du travail qui t'intéresse, une passion, même un moment de solitude à la maison, tout ça génère une tension qu'il faut gérer. Tu commences à te demander si tu as le droit d'avoir une vie en dehors de la relation. Tu n'as pas à te justifier d'exister. Si c'est une question que tu te poses régulièrement, quelque chose ne va pas. L'article sur les <a href="/blog/red-flags-homme/">red flags chez un homme</a> décrit exactement ce même mécanisme depuis l'autre côté, et voir les deux perspectives aide souvent à y voir plus clair.</p>`,
+          title: "11. Tu te sens coupable d'avoir une vie en dehors d'elle",
+          content: `<p>Un hobby, des amis, un travail qui t'intéresse, même une soirée seul à la maison : tout ça crée une tension qu'il faut gérer. Tu commences à te demander si tu as le droit d'avoir une vie en dehors du couple. Tu n'as pas à te justifier d'exister. Si c'est une question que tu te poses souvent, quelque chose ne va pas.</p>`,
         },
         {
           id: 'moins-bien-dans-ta-peau',
-          title: "Tu te sens moins bien dans ta peau depuis que vous êtes ensemble",
-          content: `<p>C'est peut-être le signal le plus parlant de tous. Avant, tu avais une certaine confiance en toi. Tu savais ce que tu valais, ce que tu voulais, comment tu fonctionnais. Et là, tu doutes de toi sur des choses que tu ne remettais pas en question avant. Tu t'excuses plus souvent. Tu justifies davantage. Tu te demandes si tu es "assez bien" pour elle. Cette érosion de l'estime de soi ne se produit pas par hasard dans une relation. Elle se construit, commentaire après commentaire, dispute après dispute, jusqu'à ce qu'elle semble normale.</p>`,
+          title: "12. Tu te sens moins bien dans ta peau depuis que vous êtes ensemble",
+          content: `<p>C'est peut-être le signe le plus parlant. Avant, tu savais ce que tu valais et ce que tu voulais. Aujourd'hui, tu doutes de toi sur des choses que tu ne remettais pas en question, tu t'excuses plus souvent, tu te demandes si tu es « assez bien » pour elle. Ça ne vient pas de nulle part : une remarque après l'autre, c'est la relation qui a grignoté ta confiance. Et quand en plus tu finis par douter de ce que tu as vu ou entendu, ça a un nom : <a href="/blog/gaslighting/">le gaslighting</a>.</p>`,
         },
       ],
     },
     {
       id: 'et-maintenant',
-      title: "Quelques points sur cette liste, et après",
-      content: `<p>Reconnaître plusieurs de ces comportements chez quelqu'un ne fait pas automatiquement d'elle une mauvaise personne. Certains de ces patterns viennent de blessures anciennes, de mécanismes de défense construits avant toi, de choses qui se travaillent avec du temps et de la volonté. <strong><a href="/blog/femme-toxique-en-amour/">Ce qui distingue un red flag d'une difficulté passagère, c'est la répétition et l'absence de remise en question.</a></strong></p>
-<p>Est-ce qu'elle reconnaît le problème quand tu le soulèves calmement ? Est-ce que les choses changent, même un peu, ou tu vis dans l'attente d'un changement qui ne vient jamais ? Est-ce que tu te sens mieux ou moins bien dans cette relation qu'avant qu'elle commence ?</p>
-<p>Si plusieurs cases sont cochées et que les réponses honnêtes à ces questions te pèsent, fais confiance à ce que tu ressens. L'inconfort que tu portes mérite d'être pris au sérieux.</p>
+      title: "Tu en as reconnu plusieurs : et maintenant ?",
+      content: `<p>D'abord, reconnaître deux ou trois de ces comportements ne fait pas d'elle une mauvaise personne. Certains viennent de blessures anciennes, de réflexes construits avant toi, de choses qui se travaillent avec du temps. Ce qui fait un red flag, c'est la répétition, et surtout ce qu'elle fait quand tu lui en parles calmement. Est-ce qu'elle reconnaît le problème ? Est-ce que les choses changent, même un peu, ou est-ce que tu attends un changement qui ne vient jamais ? Est-ce que tu te sens mieux ou moins bien qu'avant cette relation ?</p>
+<p>Si plusieurs cases sont cochées et que les réponses honnêtes à ces questions te pèsent, fais confiance à ce que tu ressens. Pour y voir plus clair, tu peux <a href="/test-couple-toxique/">répondre à vingt questions sur votre relation</a> : ça aide à mettre des mots, et à mesurer si on est dans le désagréable ou dans le toxique. Et si ce que tu as reconnu, ce sont surtout les derniers signes de la liste, l'article sur <a href="/blog/femme-toxique-en-amour/">ce qu'une femme toxique fait subir au quotidien</a> décrit comment ça évolue, et comment on en sort.</p>
 <a href="/blog/red-flags-homme/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Red flag chez un homme : la liste des 13 signes à prendre au sérieux</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
