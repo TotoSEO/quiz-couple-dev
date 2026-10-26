@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-jungfrau',
-  title: `Liebeskompatibilität der Jungfrau: Perfektion gesucht, Menschlichkeit gefunden`,
-  metaTitle: `Liebeskompatibilität Jungfrau: Wer erfüllt ihre hohen Ansprüche?`,
-  metaDescription: `Die Jungfrau analysiert alles, auch die Liebe. Erfahren Sie, welche Sternzeichen ihre Tiefe zu schätzen wissen und welche an ihrem Perfektionismus…`,
+  title: `Liebeskompatibilität der Jungfrau: Mit welchen Zeichen passt es?`,
+  metaTitle: `Jungfrau: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Die Jungfrau mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Jungfrau und Jungfrau zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Astrologisches Symbol der Jungfrau, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Die Jungfrau analysiert alles, auch die Liebe. Welche Sternzeichen wissen ihre Tiefe wirklich zu schätzen?`,
-  introduction: `<p>Die Jungfrau wird oft missverstanden. Man hält sie für kühl, zu kritisch, zu anspruchsvoll. Dabei ist das Gegenteil der Fall: <strong>Die Jungfrau liebt so sorgfältig, weil sie es so ernst meint</strong>. Wenn sie an einer Beziehung etwas auszusetzen hat, ist das keine Nörgelei, es ist der Versuch, etwas Gutes noch besser zu machen. Nicht jeder versteht das. Aber die Zeichen, die es verstehen, erleben eine Partnerin von seltener Hingabe. Möchten Sie wissen, ob Ihre Kombination zu diesen gehört? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Merkur regiert auch die Jungfrau, aber anders als bei den Zwillingen äußert sich das hier nicht in sprudelnder Gesprächigkeit, sondern in Präzision. Die Jungfrau beobachtet, bevor sie spricht. Sie analysiert, bevor sie fühlt. Und wenn sie sich dann einlässt, tut sie es mit einer Gründlichkeit, die beeindruckend ist, und manchmal einschüchternd.</p>
-<p>In der Liebe ist die größte Stärke der Jungfrau auch ihre größte Schwäche: Sie sieht alles. Jede kleine Geste, jedes Versäumnis, jedes Detail. Das macht sie zur aufmerksamsten Partnerin des Tierkreises, aber auch zur kritischsten.</p>`,
+  excerpt: `Die Jungfrau mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Die Jungfrau macht keine großen Erklärungen. Sie weiß noch, wie du deinen Kaffee magst, sie bereitet vor, was nötig ist, an dem Tag, an dem es dir schlecht geht, sie regelt die Dinge im Hintergrund, damit dein Leben ein bisschen einfacher ist. Ihre Liebe steht in den Details, und man muss hinsehen können.</p>
+<p>Die Zeichen, die das von selbst verstehen, sind die, bei denen sie sich öffnet. Die anderen finden sie distanziert, ohne je zu wissen, was sie verpasst haben. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Steinbock bieten die Stabilität und Ernsthaftigkeit, die die Jungfrau braucht.`,
     `Der Krebs ergänzt sie emotional, er gibt ihr die Wärme, die sie sich selbst selten erlaubt.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'praezision-trifft-auf-leidenschaft',
-      title: `Wenn Präzision auf Leidenschaft trifft`,
-      content: `<p>Der Stier (9/10) ist für die Jungfrau ein Geschenk. Beide sind Erdzeichen, beide schätzen Verlässlichkeit, beide zeigen Liebe durch Taten statt durch große Worte. Wo die Jungfrau sich in Details verliert, holt der Stier sie mit seiner bodenständigen Gelassenheit zurück. <strong>Es ist eine Beziehung, die leise funktioniert, und gerade deshalb so stark ist.</strong></p>
-<p>Der Steinbock (9/10) teilt ihren Ehrgeiz und ihre Disziplin. Zusammen sind sie ein unschlagbares Team, im Leben wie in der Liebe. Die Herausforderung liegt darin, dass beide dazu neigen, die Beziehung wie ein Projekt zu behandeln. Raum für Spontaneität und Leichtigkeit muss bewusst geschaffen werden.</p>
-<p>Der Krebs (8/10) bringt etwas in die Jungfrau-Welt, das dort oft fehlt: emotionale Wärme ohne Bedingungen. Der Krebs akzeptiert die Jungfrau so, wie sie ist, mit all ihren Listen, Plänen und kleinen Sorgen. Und die Jungfrau gibt dem Krebs im Gegenzug die praktische Stabilität, die seine Gefühlswelt braucht.</p>
-<p>Schwierig wird es mit dem Schützen (4/10) und dem Widder (4/10). <strong>Beide stürmen durchs Leben mit einer Spontaneität, die die Jungfrau nicht als befreiend, sondern als beunruhigend empfindet.</strong> Der Schütze findet ihre Vorsicht langweilig, der Widder ihre Bedächtigkeit hinderlich. Diese Beziehungen können existieren, aber sie erfordern von beiden Seiten ein Maß an Kompromissbereitschaft, das nicht selbstverständlich ist.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Die Jungfrau mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Jungfrau (Erde) und Fische (Wasser) sind Gegensätze, ergänzen sich aber wunderschön. Der sensible Fisch macht den Alltag der Jungfrau weicher, und die Jungfrau bietet dem Fisch Halt.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zur Jungfrau in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zur Jungfrau?`,
+          content: `<p>Am besten verstehen sich mit der Jungfrau der Stier, der Skorpion und der Steinbock (9/10). Am schwierigsten sind dagegen die Paare mit dem Wassermann (2/10), dann dem Widder, den Zwillingen, dem Löwen, der Waage und dem Schützen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Jungfrau und Jungfrau: passt das zusammen?`,
+          content: `<p>8/10. Zwei Jungfrauen verstehen sich von Natur aus. Sie teilen den Sinn für Organisation und einen kritischen Geist. Ihr Paar ist strukturiert und verlässlich.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

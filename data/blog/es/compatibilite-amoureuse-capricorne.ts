@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-capricornio',
-  title: `Compatibilidad amorosa de Capricornio: los signos que entienden su forma de querer`,
-  metaTitle: `Compatibilidad amorosa de Capricornio: amor lento pero sólido`,
-  metaDescription: `Capricornio no dice "te quiero" a la ligera. Cuando lo dice, es para siempre. Descubre qué signos entienden esa forma de amar y cuáles se impacientan.`,
+  title: `Compatibilidad amorosa de Capricornio: ¿con qué signos funciona?`,
+  metaTitle: `Capricornio: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Capricornio con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Capricornio juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Símbolo astrológico de Capricornio, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Capricornio no dice "te quiero" a la ligera. Cuando lo dice, es para siempre. ¿Qué signos entienden esa forma de amar?`,
-  introduction: `<p>Capricornio tiene fama de frío. Es injusto. Lo que ocurre es que <strong>Capricornio no muestra lo que siente hasta que está seguro de que es real</strong>. No se lanza al vacío emocional, primero comprueba que hay suelo firme debajo. Eso puede parecer contención, pero en realidad es una forma de respeto: hacia sí mismo y hacia la otra persona. Si quieres saber cómo encaja tu signo con esta forma de amar, <a href="/es/signos-astrologicos-nombres-compatibilidad/">prueba nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
-<p>Regido por Saturno, el planeta de la disciplina y el tiempo, Capricornio entiende el amor como una construcción. No como un rayo que te cae encima, sino como algo que se edifica día a día, decisión a decisión, acto a acto. Para algunos signos, eso es exactamente lo que necesitan. Para otros, es demasiado lento.</p>
-<p>Cuando Capricornio ama de verdad, lo hace con una solidez que pocos signos pueden igualar. <strong>No es llamativo. No es dramático. Pero es inquebrantable.</strong> El reto está en encontrar a alguien que sepa leer ese amor silencioso sin interpretarlo como indiferencia.</p>`,
+  excerpt: `Capricornio con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Capricornio tiene fama de frío en el amor. No es frío, es serio, y en un mundo donde el amor se trata a menudo como un entretenimiento, eso pasa por distancia. No se enamora fácilmente, pero cuando elige a alguien, no da marcha atrás.</p>
+<p>Lo que espera no es pasión ciega, es alguien con quien contar, que cumpla sus promesas y que no desaparezca cuando la cosa se complica. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Tauro y Virgo: las uniones de Tierra donde todo encaja sin forzar. Sólidas, fiables, duraderas.`,
     `Cáncer, su opuesto, le ofrece la calidez emocional que a él le cuesta expresar.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'las-uniones-que-resisten-el-tiempo',
-      title: `Las uniones que resisten el tiempo y las que se impacientan`,
-      content: `<p>Tauro (9/10) y Virgo (9/10) son sus compañeros naturales de elemento. Los tres signos de Tierra comparten un enfoque pragmático del amor: valoran la constancia, la lealtad y los compromisos cumplidos. Con Tauro, la relación es un remanso de paz compartida. Con Virgo, una construcción minuciosa donde cada pieza encaja.</p>
-<p>Cáncer (9/10), su opuesto zodiacal, le complementa de una forma inesperada. Donde Capricornio aporta estructura y dirección, Cáncer aporta calor y protección emocional. <strong>Juntos, crean el hogar que ambos necesitan</strong>, uno que es tanto sólido como acogedor. Es una de esas combinaciones donde los opuestos realmente se atraen y se nutren.</p>
-<p>Escorpio (8/10) es otra asociación que funciona con profundidad. Ambos son reservados, intensos a su manera, y respetan la privacidad del otro. La relación se construye lentamente, pero sobre cimientos que rara vez se agrietan.</p>
-<p>Aries (3/10) y Sagitario (3/10) son las combinaciones más difíciles. Ambos signos de Fuego funcionan a una velocidad que Capricornio no entiende, y que, francamente, le exaspera. Aries quiere resultados inmediatos; Capricornio sabe que lo bueno tarda. Sagitario quiere libertad sin límites; Capricornio necesita marcos y compromisos. No es que estas relaciones sean imposibles, pero <strong>requieren una tolerancia al modo del otro que rara vez viene de forma natural</strong>.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Capricornio con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Excelente equilibrio. Capricornio ancla a la realidad los sueños de Piscis, y Piscis aporta la compasión y ternura que Capricornio necesita para relajarse.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Capricornio en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Capricornio?`,
+          content: `<p>Los signos que mejor se entienden con Capricornio son Tauro, Cáncer y Virgo (9/10). En cambio, las parejas más difíciles son con Acuario (2/10), luego Leo, Libra y Sagitario (3/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Capricornio juntos: ¿funciona?`,
+          content: `<p>8/10. Se entienden a la perfección y comparten metas. Asociación sólida basada en el esfuerzo conjunto, aunque deben vigilar no caer en el exceso de rutina o frialdad.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

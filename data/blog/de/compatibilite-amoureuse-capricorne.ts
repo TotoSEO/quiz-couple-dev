@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-steinbock',
-  title: `Liebeskompatibilität des Steinbocks: Langsam, beständig, und tiefer als gedacht`,
-  metaTitle: `Liebeskompatibilität Steinbock: Wer erreicht sein Herz?`,
-  metaDescription: `Der Steinbock liebt leise, aber dafür auf Dauer. Erfahren Sie, welche Sternzeichen seine reservierte Art als Stärke erkennen, und welche daran verzweifeln.`,
+  title: `Liebeskompatibilität des Steinbocks: Mit welchen Zeichen passt es?`,
+  metaTitle: `Steinbock: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Steinbock mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Steinbock und Steinbock zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Astrologisches Symbol des Steinbocks, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Steinbock liebt leise, aber dafür auf Dauer. Welche Sternzeichen erkennen seine reservierte Art als Stärke?`,
-  introduction: `<p>Der Steinbock gilt als das nüchternste Zeichen des Tierkreises. Und ja, er wird selten beim ersten Date sein Herz auf den Tisch legen. Aber wer das für Gefühlskälte hält, irrt sich gewaltig. <strong>Der Steinbock liebt mit einer Tiefe und Beständigkeit, die die meisten anderen Zeichen nicht aufbringen können</strong>, er zeigt es nur anders. Nicht durch große Gesten und leidenschaftliche Erklärungen. Sondern durch Verlässlichkeit, Loyalität und die stille Entscheidung, jeden Tag aufs Neue da zu sein. Passt Ihr Zeichen zu diesem Liebesstil? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Saturn regiert den Steinbock, der Planet der Disziplin, der Struktur, der Verantwortung. In der Liebe bedeutet das: Der Steinbock baut Beziehungen wie Häuser. Fundament zuerst, dann die Mauern, dann das Dach. Wer versucht, die Reihenfolge umzudrehen, wird ihn verlieren. Er braucht Zeit. Und wer ihm diese Zeit gibt, wird mit einer Partnerschaft belohnt, die Jahrzehnte überdauern kann.</p>
-<p>Seine größte Herausforderung? Zuzulassen, dass Verletzlichkeit keine Schwäche ist, sondern die Voraussetzung für echte Nähe.</p>`,
+  excerpt: `Der Steinbock mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Der Steinbock gilt in der Liebe als kalt. Er ist nicht kalt, er ist ernst, und in einer Welt, in der Liebe oft wie eine Unterhaltung behandelt wird, geht das als Distanz durch. Er verliebt sich nicht leicht, aber wenn er jemanden gewählt hat, macht er keinen Rückzieher.</p>
+<p>Was er erwartet, ist keine blinde Leidenschaft, sondern jemand, auf den er zählen kann, der seine Versprechen hält und nicht verschwindet, wenn es kompliziert wird. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Jungfrau teilen seine Erdverbundenheit, diese Beziehungen sind wie Fels in der Brandung.`,
     `Der Skorpion versteht seine Intensität, weil er selbst so tief empfindet, nur lauter.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'das-fundament-und-der-sturm',
-      title: `Das Fundament und der Sturm`,
-      content: `<p>Der Stier (9/10) ist für den Steinbock wie ein Spiegel, der nur die besten Seiten zeigt. Beide sind Erdzeichen, beide schätzen Beständigkeit, beide bauen lieber, als zu träumen. <strong>Es ist eine Verbindung, die von außen vielleicht unspektakulär wirkt, aber von innen eine Festung ist.</strong> Was sie beachten müssen: dass Routine nicht zur Rut wird und Stabilität nicht zur Starre.</p>
-<p>Die Jungfrau (9/10) bringt eine intellektuelle Tiefe mit, die den Steinbock fasziniert. Beide analysieren, bevor sie handeln. Beide planen voraus. Beide nehmen die Liebe ernst. Die Gefahr liegt in der gemeinsamen Tendenz zur Selbstkritik, hier müssen beide lernen, auch mal fünfe gerade sein zu lassen.</p>
-<p>Der Skorpion (8/10) überrascht vielleicht auf den ersten Blick als starker Match, aber die Chemie zwischen diesen beiden ist tiefgründig. Beide verstecken ihre wahren Gefühle hinter einer kontrollierten Fassade. Wenn sie sich gegenseitig öffnen, entsteht eine Verbindung von seltener Ehrlichkeit und Intensität.</p>
-<p>Schwieriger wird es mit dem Widder (4/10) und den Zwillingen (4/10). Der Widder will alles sofort, der Steinbock niemals. Die Zwillinge wechseln Richtung, Plan und Meinung schneller, als der Steinbock „Strategie" sagen kann. <strong>Es sind Verbindungen, die dem Steinbock das Gefühl geben, auf Sand zu bauen, und genau das ist sein Albtraum.</strong> Nicht unmöglich, aber eine Dauerprüfung für beide Seiten.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Steinbock mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Steinbock (Erde) und Fische (Wasser) ergänzen sich gut. Pragmatismus stabilisiert Träumerei.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Steinbock in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Steinbock?`,
+          content: `<p>Am besten verstehen sich mit dem Steinbock der Stier, der Krebs und die Jungfrau (9/10). Am schwierigsten sind dagegen die Paare mit dem Wassermann (2/10), dann dem Löwen, der Waage und dem Schützen (3/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Steinbock und Steinbock: passt das zusammen?`,
+          content: `<p>8/10. Zwei Steinböcke verstehen einander perfekt. Sie arbeiten hart an gemeinsamen Langzeitzielen, es mag aber an Spontanität fehlen.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

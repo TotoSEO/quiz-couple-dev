@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-virgo',
-  title: `Compatibilidad amorosa de Virgo: quién sabe leer entre sus líneas`,
-  metaTitle: `Compatibilidad amorosa de Virgo: el amor en todas sus facetas`,
-  metaDescription: `Virgo ama en silencio, con hechos, con detalles que nadie más percibe. ¿Qué signos saben interpretar ese amor discreto?`,
+  title: `Compatibilidad amorosa de Virgo: ¿con qué signos funciona?`,
+  metaTitle: `Virgo: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Virgo con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Virgo juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Símbolo astrológico de Virgo, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Virgo ama en silencio, con hechos, con detalles que nadie más percibe. ¿Qué signos saben interpretar ese amor discreto?`,
-  introduction: `<p>Virgo no lanza grandes señales. No hace declaraciones rimbombantes. Lo que hace es recordar cómo te gusta el café, preparar exactamente lo que necesitas el día en que estás mal, organizar las cosas entre bambalinas para que tu vida sea un poco más fluida de lo que era. <strong>Su amor se lee en los detalles, y hay que saber mirar.</strong> Para saber si tu signo y tu nombre hablan el mismo idioma que Virgo, prueba <a href="/es/signos-astrologicos-nombres-compatibilidad/">el test de compatibilidad amorosa por signo y nombre</a>.</p>
-<p>Gobernado por Mercurio al igual que Géminis, pero de una forma radicalmente distinta, Virgo es analítico, preciso, atento. Piensa antes de actuar. Sopesa las palabras antes de pronunciarlas. Ese rigor que algunos confunden con frialdad es en realidad una forma de respeto: no dice lo que no piensa y no promete lo que no puede cumplir.</p>
-<p>En el amor, Virgo necesita una pareja que aprecie esa honestidad, <strong>que no le pida ser más demostrativo de lo que es</strong>, pero que sepa reconocer el valor de lo que ofrece en lo concreto. Los signos que lo entienden de forma natural son aquellos con quienes se abre de verdad. Los demás le encuentran distante, sin llegar a saber nunca lo que se han perdido.</p>`,
+  excerpt: `Virgo con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Virgo no hace grandes declaraciones. Se acuerda de cómo te gusta el café, prepara lo que hace falta el día que estás mal, arregla las cosas entre bastidores para que tu vida sea un poco más sencilla. Su amor se lee en los detalles, y hay que saber mirar.</p>
+<p>Los signos que lo entienden de forma natural son aquellos con los que se abre. Los demás lo encuentran distante, sin saber qué se han perdido. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Tauro, Capricornio y Escorpio: sus uniones más sólidas, cada una por razones diferentes.`,
     `Con Piscis, su opuesto, hay una fascinación recíproca que puede volverse muy hermosa.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'mejores-asociaciones-y-malentendidos',
-      title: `Sus mejores asociaciones, y los malentendidos más frecuentes`,
-      content: `<p>Con Tauro (9/10) y Capricornio (9/10), Virgo encuentra compañeros que hablan el mismo idioma: el de los hechos concretos, la fiabilidad, los compromisos cumplidos. Estas uniones no hacen ruido, pero duran.</p>
-<p>Escorpio (9/10) es una compatibilidad menos obvia pero igual de profunda. Escorpio va al fondo de las cosas, exactamente como Virgo, solo que por un camino diferente (lo emocional frente a lo racional). Juntos, construyen una intimidad real, basada en la confianza mutua y una exigencia compartida.</p>
-<p>Con Piscis (8/10), su opuesto, la relación es más compleja pero potencialmente muy bella. <strong>Piscis aporta a Virgo lo que le falta: imaginación, ternura, la capacidad de soltar el control.</strong> Virgo aporta a Piscis lo que necesita: estructura y un anclaje en lo real. Cuando funciona, es una de las parejas más complementarias del zodiaco.</p>
-<p>Acuario (2/10) representa la asociación más difícil para Virgo. Sus modos de pensar, pragmático frente a idealista, chocan en casi todo. No es insuperable, pero exige una voluntad que ambos signos no siempre tienen.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Virgo con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Opuestos complementarios. Piscis aporta imaginación e indulgencia, mientras que Virgo organiza el lado práctico de la vida de Piscis. Buena sintonía.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Virgo en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Virgo?`,
+          content: `<p>Los signos que mejor se entienden con Virgo son Tauro, Escorpio y Capricornio (9/10). En cambio, las parejas más difíciles son con Acuario (2/10), luego Aries, Géminis, Leo, Libra y Sagitario (4/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Virgo juntos: ¿funciona?`,
+          content: `<p>8/10. Gran armonía en los detalles y la organización. Pareja estructurada, aunque deben evitar caer en la crítica constante entre ellos.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

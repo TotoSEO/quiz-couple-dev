@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-cancer',
-  title: `Compatibilidad amorosa de Cáncer: a quién puede abrirle el corazón`,
-  metaTitle: `Compatibilidad amorosa de Cáncer: las uniones que le colman`,
-  metaDescription: `Cáncer lo da todo en el amor, quizá incluso demasiado. ¿Qué signos saben recibir ese amor sin abusar de él?`,
+  title: `Compatibilidad amorosa de Cáncer: ¿con qué signos funciona?`,
+  metaTitle: `Cáncer: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Cáncer con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Cáncer juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Símbolo astrológico de Cáncer, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Cáncer lo da todo en el amor, quizá incluso demasiado. ¿Qué signos saben recibir ese amor sin abusar de él?`,
-  introduction: `<p>Detrás del caparazón, porque siempre hay uno, Cáncer es uno de los signos más profundamente afectivos del zodiaco. Lo que entrega en el amor, cuando se siente seguro, supera lo que muchos otros signos son capaces de ofrecer. <strong>Una presencia total. Una memoria afectiva extraordinaria.</strong> El arte de percibir lo que el otro necesita antes incluso de que lo haya formulado. Para descubrir cómo tu signo y tu nombre se combinan con Cáncer, prueba <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestro análisis de compatibilidad astrológica</a>.</p>
-<p>Gobernado por la Luna, Cáncer es cíclico por naturaleza. Hay días en que desborda afecto, y días en que se repliega sobre sí mismo sin explicación. Su pareja ideal es aquella que entiende ese ritmo, que no lo interpreta como rechazo, que no fuerza las puertas cuando están cerradas, pero que está ahí cuando vuelven a abrirse.</p>
-<p>En el amor, Cáncer no busca aventura. Busca un hogar. No necesariamente cuatro paredes y un jardín, <strong>más bien un espacio emocional donde poder ser él mismo sin tener que defenderse</strong>. Los signos que pueden ofrecerle eso son aquellos con los que realmente florece. Los demás generan, a menudo sin querer, una inseguridad que le cierra por completo.</p>`,
+  excerpt: `Cáncer con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Detrás del caparazón, porque siempre hay uno, Cáncer es uno de los signos que más dan en el amor. Cuando se siente seguro, está ahí por completo: se acuerda de todo, siente lo que necesitas antes de que lo digas. Y hay días en que se encierra en sí mismo sin avisar, algo que la otra persona suele tomar por rechazo.</p>
+<p>Lo que busca no es aventura, es un sitio donde pueda ser él mismo sin defenderse. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Escorpio, Tauro y Capricornio: tres asociaciones sólidas, cada una por una razón distinta.`,
     `Con Piscis, es una burbuja de dulzura, cuidado con perder pie en la realidad.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'mejores-y-peores-asociaciones',
-      title: `Lo que revelan sus mejores y peores asociaciones`,
-      content: `<p>La compatibilidad Cáncer-Escorpio (9/10) es una de las más intuitivas del zodiaco. Estos dos signos de Agua se entienden sin necesidad de explicarlo todo, que es exactamente lo que Cáncer necesita. Escorpio, por su parte, encuentra en Cáncer una fidelidad y una profundidad emocional que le reconfortan.</p>
-<p>Con Capricornio (9/10), su opuesto, Cáncer encuentra algo diferente pero igual de valioso: estructura. Capricornio no es demostrativo, pero está ahí, fiable, sólido. Y para un Cáncer que a veces teme que el amor desaparezca de un día para otro, esa constancia vale oro.</p>
-<p>En el polo opuesto, Acuario (2/10) es probablemente su asociación más difícil. Acuario es racional donde Cáncer es emotivo. Valora la libertad donde Cáncer busca el apego. <strong>No es que uno sea mejor que el otro, es que sus necesidades fundamentales apuntan en direcciones opuestas.</strong> Leo (3/10) plantea un problema similar: su necesidad de estar en el centro de atención puede eclipsar involuntariamente a Cáncer, que prefiere construir en la intimidad antes que bajo los focos.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Cáncer con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Armonía excepcional. Ambos comparten gran empatía y dulzura. Cáncer aporta el nido seguro y Piscis la magia y el romance. Es una pareja cómplice y soñadora.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Cáncer en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Cáncer?`,
+          content: `<p>Los signos que mejor se entienden con Cáncer son Tauro, Escorpio y Capricornio (9/10). En cambio, las parejas más difíciles son con Acuario (2/10), luego Leo (3/10), luego Aries, Géminis, Libra y Sagitario (4/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Cáncer juntos: ¿funciona?`,
+          content: `<p>8/10. Relación muy profunda en el plano emocional. Dos Cáncer comparten una enorme empatía y una necesidad común de seguridad afectiva, lo que crea una gran armonía. Construyen juntos un hogar cálido y protector. Deben cuidar de no encerrarse demasiado en su mundo emocional.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'taurus-love-compatibility',
-  title: `Taurus love compatibility: what the stars say about their love stories`,
-  metaTitle: `Taurus love compatibility: solid romance or dead end?`,
-  metaDescription: `Taurus loves deeply, loyally, and for the long haul. But not every sign is built for that rhythm. Discover who truly works, and who doesn't.`,
+  title: `Taurus love compatibility: which signs does it work with?`,
+  metaTitle: `Taurus Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Taurus with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Taurus partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Taurus astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Taurus loves deeply, loyally, and for the long haul. But not every sign is built for that rhythm.`,
-  introduction: `<p>Ask a Taurus what they want in love. They'll tell you, maybe not in these exact words, something that sounds like <em>consistency</em>. Not boring routine, not mechanical repetition. But the certainty that tomorrow, the other person will still be there. That what was built together won't vanish at the first storm. If you want to see whether your sign-and-name combination lives up to that promise, try <a href="/en/zodiac-signs-names-compatibility/">our zodiac and name compatibility tool</a>.</p>
-<p>Venus rules this sign. And contrary to what you might expect, Venus in Taurus isn't primarily about romance and grand declarations, <strong>it's about tangible pleasure, physical presence, accessible beauty</strong>. A good meal shared. A comfortable sofa. The warmth of someone you truly know. That's what Taurus calls love.</p>
-<p>This search for solidity isn't fear. It's a choice. And the signs that understand that, who don't need the relationship to be constantly reinventing itself to feel alive, are the ones Taurus genuinely thrives with.</p>`,
+  excerpt: `Taurus with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Ask a Taurus what they want in love and they'll answer something like "someone who stays". Not routine, not boredom: the certainty that tomorrow, the other person will still be there. For them, love is a good meal shared, a comfortable sofa and the warmth of someone they know by heart.</p>
+<p>Not every sign can take that kind of steadiness: some need things to move, and Taurus needs things to hold. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus with Taurus, Virgo, or Capricorn: some of the most enduring unions in the zodiac. Sometimes a little too safe.`,
     `With Cancer, it's velvet, two signs that want exactly the same things.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'unions-that-last-and-those-that-stall',
-      title: `The unions that last, and the ones that stall`,
-      content: `<p>Two Tauruses together (9/10) is the promise of a stable home and absolute loyalty. The risk? That neither one ever takes the initiative to change anything, even when change is needed. <strong>Their combined stubbornness can make disagreements painfully slow to resolve.</strong></p>
-<p>With Virgo and Capricorn (9/10 each), Taurus finds partners who share their core values: hard work, reliability, building for the long term. These unions may lack the cinematic romance of a Hollywood love story, but they hold.</p>
-<p>On the opposite end, Gemini (3/10), Aquarius (3/10), and Sagittarius (3/10) represent pairings that often start from genuine attraction but quickly run into fundamentally incompatible needs. Taurus wants to put down roots. These three signs want, to varying degrees, the freedom to keep moving. That's not a judgment, it's simply a mismatch in rhythm that demands enormous effort to overcome.</p>
-<p>Cancer (9/10) deserves special mention: it's perhaps the most naturally harmonious match for Taurus. Both signs are looking for the same thing, a warm home, a love that protects, and they find each other without having to force it. If you're a Taurus-Cancer pair, there's a good chance you've already noticed how effortlessly things flow between you.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Taurus with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Taurus (Earth) and Pisces (Water) complement each other well. The solid Taurus reassures the sensitive Pisces, who in turn brings poetry and tenderness to Taurus. They share a deep love for comfort and gentleness: the relationship is often very affectionate. Taurus stabilizes Pisces' dreams, and Pisces expands Taurus' imagination. Together, they can build a highly harmonious emotional cocoon.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Taurus in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Taurus?`,
+          content: `<p>The signs that get along best with Taurus are Taurus, Cancer, Virgo and Capricorn (9/10). On the other hand, the hardest matches are with Gemini, Sagittarius and Aquarius (3/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Taurus together: does it work?`,
+          content: `<p>9/10. Two Tauruses together (Fixed Earth, ruled by Venus) share great affinity. They both love material comfort, gentleness, and loyalty. The Taurus-Taurus couple builds a solid home: each understands the other's needs (financial security, physical affection, stability). Their mutual stubbornness can cause some conflicts, but their patience often makes up for this refusal to yield. Ultimately, they find comfort in each other, forming a very stable and lasting bond.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

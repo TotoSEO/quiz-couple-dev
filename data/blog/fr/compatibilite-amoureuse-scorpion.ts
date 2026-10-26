@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-scorpion',
-  title: `Compatibilité amoureuse du Scorpion : l'amour sans demi-mesures`,
-  metaTitle: `Compatibilité amoureuse Scorpion : qui survit à son intensité ?`,
-  metaDescription: `Le Scorpion aime sans demi-mesure, et il attend la même chose. Quels signes peuvent soutenir cette intensité ? Analyse complète, signe par signe.`,
+  title: `Compatibilité amoureuse du Scorpion : avec quels signes ça marche ?`,
+  metaTitle: `Scorpion : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Scorpion avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Scorpions ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Symbole astrologique du Scorpion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Scorpion aime sans demi-mesure, et il attend la même chose. Quels signes peuvent soutenir cette intensité ?`,
-  introduction: `<p>Si vous avez déjà aimé un Scorpion, ou si vous en êtes un, vous savez que l'amour, pour ce signe, n'est pas une légèreté. <strong>Ce n'est pas une case à cocher, ni une expérience parmi d'autres.</strong> C'est quelque chose qui engage tout : les émotions, le corps, la loyauté, les failles les plus profondes. Le Scorpion ne fait pas les choses à moitié, et il attend la même profondeur de l'autre. Envie de savoir si vous êtes à la hauteur de cette intensité ? <a href="/signes-astrologiques-prenoms-compatibilite/">Calculez votre compatibilité amoureuse par signe et prénom</a>.</p>
-<p>Gouverné par Mars et Pluton, le Scorpion est un signe de transformation. Il entre dans une relation avec l'intention, consciente ou non, de la changer, lui, l'autre, ou les deux. Ses histoires d'amour sont rarement anodines. Elles laissent des traces, même quand elles finissent. <strong>Parfois surtout quand elles finissent.</strong></p>
-<p>Ce que le Scorpion cherche en amour, c'est quelqu'un capable de le rejoindre dans les profondeurs, pas quelqu'un qui reste à la surface en attendant qu'il remonte. Il tient parfois à distance pour tester, pour voir si l'autre reste malgré tout. Ce n'est pas de la manipulation. C'est de l'auto-protection chez quelqu'un qui a appris que tous ne sont pas capables de tenir la promesse implicite d'un amour total.</p>`,
+  excerpt: `Le Scorpion avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Si vous avez déjà aimé un Scorpion, vous savez que pour lui, l'amour n'est pas une légèreté. Il y met tout : les émotions, le corps, la loyauté, ses failles les plus profondes. Et il attend la même chose de l'autre. Il lui arrive de tenir à distance pour voir si l'autre reste quand même : ce n'est pas de la manipulation, c'est de la protection.</p>
+<p>Ce qu'il cherche, c'est quelqu'un qui ne reste pas à la surface, et qui ne part pas quand ça devient difficile. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Cancer, Vierge, Capricorne : ses trois unions les plus profondes et les plus durables.`,
     `Avec les Poissons, il crée une connexion émotionnelle que peu d'autres associations atteignent.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'qui-peut-vraiment-tenir-avec-un-scorpion',
-      title: `Qui peut tenir avec un Scorpion`,
-      content: `<p>Le Cancer (9/10) est sans doute sa compatibilité la plus intuitive. Ces deux signes d'Eau n'ont pas besoin de tout expliquer, ils se comprennent à un niveau que les mots n'atteignent pas toujours. Le Cancer apporte au Scorpion une douceur protectrice, et le Scorpion donne au Cancer la profondeur émotionnelle dont il a soif.</p>
-<p>La Vierge (9/10) est une compatibilité moins évidente mais tout aussi solide. Ce qui unit ces deux signes, c'est leur sérieux commun face à l'engagement. Ni l'un ni l'autre ne s'engage à la légère, et quand ils s'engagent, c'est pour construire quelque chose qui dure.</p>
-<p>Avec le Verseau (3/10), le Scorpion se heurte à une incompatibilité de fond. <strong>Le Verseau rationalise là où le Scorpion ressent.</strong> Il prend de la distance là où le Scorpion cherche la fusion. Ces deux façons d'être ne se rencontrent presque jamais au milieu, et la frustration que ça génère est souvent plus forte que l'attraction initiale.</p>
-<p>Deux Scorpions ensemble (8/10) ? Une relation extraordinairement intense, riche de complicité, et de conflits tout aussi intenses. Ils se comprennent mieux que quiconque. Ils savent aussi exactement sur quels boutons appuyer quand ça ne va pas. L'équilibre de ce couple tient à leur capacité à ne pas transformer leur connaissance mutuelle en arme.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Scorpion avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons acceptent la profondeur du Scorpion sans en avoir peur, ce qui est rare. Ils lui offrent un endroit où poser son intensité. Lui leur offre une protection réelle. Le risque est qu'il prenne toutes les décisions et qu'ils le laissent faire sans jamais rien dire.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Scorpion en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Scorpion ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Scorpion sont le Cancer et la Vierge (9/10), puis le Taureau, le Scorpion, le Capricorne et les Poissons (8/10). À l'inverse, les couples les plus difficiles sont avec le Verseau (3/10), puis les Gémeaux, le Lion, la Balance et le Sagittaire (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Scorpions ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux Scorpions, c'est une intimité que personne d'autre ne pourra comprendre, et un rapport de force permanent. Ils se disent tout ou ne se disent rien, sans milieu. Le jour où la confiance se fissure, la reconquête prend des mois. Peu de couples sont aussi soudés, et peu se punissent aussi bien.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

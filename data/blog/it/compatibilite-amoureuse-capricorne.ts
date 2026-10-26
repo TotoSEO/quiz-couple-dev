@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-capricorno',
-  title: `Compatibilità amorosa del Capricorno: l'amore come progetto a lungo termine`,
-  metaTitle: `Compatibilità amorosa Capricorno: chi merita la sua serietà?`,
-  metaDescription: `Il Capricorno non perde tempo con storie senza futuro. Cerca un partner che costruisca con lui, non che lo distragga.`,
+  title: `Compatibilità amorosa del Capricorno: con quali segni funziona?`,
+  metaTitle: `Capricorno: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Il Capricorno con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Capricorno insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Simbolo astrologico del Capricorno, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Il Capricorno non perde tempo con storie senza futuro. Cerca un partner che costruisca con lui, non che lo distragga.`,
-  introduction: `<p>Il Capricorno non si innamora per caso. Si innamora per scelta, una scelta ponderata, ragionata, presa dopo aver valutato se l'altro è davvero compatibile con la vita che sta costruendo. Non è romantico? Forse no, nel senso classico. Ma <strong>il Capricorno offre qualcosa di più raro del romanticismo: l'affidabilità assoluta</strong>. Se vi dice che ci sarà, ci sarà. Punto. Per verificare se il vostro legame ha questa solidità, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la compatibilità tra i vostri segni zodiacali e nomi</a>.</p>
-<p>Governato da Saturno, il pianeta della disciplina e del tempo, il Capricorno vive l'amore con la stessa pazienza che mette in tutto il resto. Non ha fretta. Non ha bisogno di colpi di fulmine o di emozioni vertiginose. Ha bisogno di sapere che quello che sta costruendo durerà. Che l'altro non si stancherà alla prima difficoltà. Che il progetto comune, perché per il Capricorno l'amore è un progetto, ha delle fondamenta solide.</p>
-<p>Questa serietà può spaventare chi è abituato a relazioni leggere. Ma chi la sa apprezzare trova nel Capricorno un partner che non tradisce, non si arrende, e migliora con il tempo, come il vino buono.</p>`,
+  excerpt: `Il Capricorno con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Il Capricorno ha fama di essere freddo in amore. Non è freddo, è serio, e in un mondo dove l'amore si tratta spesso come un passatempo, questo passa per distanza. Non si innamora facilmente, ma quando sceglie qualcuno, non torna indietro.</p>
+<p>Quello che si aspetta non è passione cieca, è qualcuno su cui contare, che mantiene le promesse e che non sparisce quando si complica. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Vergine sono le sue compatibilità naturali, Terra con Terra, costruzione condivisa.`,
     `Lo Scorpione lo attrae con la sua profondità e la sua serietà di fronte all'impegno.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'le-combinazioni-che-costruiscono-e-quelle-che-crollano',
-      title: `Le combinazioni che costruiscono, e quelle che crollano`,
-      content: `<p>Il Toro (9/10) è il partner che il Capricorno non deve mai convincere della bontà dei suoi piani. Entrambi segni di Terra, condividono la stessa visione: l'amore è qualcosa che si costruisce mattone dopo mattone, con pazienza e costanza. <strong>Non servono fuochi d'artificio, serve che le fondamenta tengano.</strong> E con il Toro, tengono sempre.</p>
-<p>La Vergine (9/10) aggiunge a questa solidità una cura per i dettagli che il Capricorno, spesso concentrato sul quadro generale, tende a trascurare. È una complementarità perfetta: lui disegna l'architettura, lei si assicura che ogni finestra sia al posto giusto. Insieme, sono praticamente inarrestabili.</p>
-<p>Lo Scorpione (8/10) funziona perché entrambi prendono l'amore dannatamente sul serio. Non ci sono giochi, non ci sono ambiguità. Quando uno Scorpione e un Capricorno si impegnano, lo fanno con una determinazione che pochi altri segni possono eguagliare. L'unica sfida è che entrambi possono essere testardi, e quando due testardi si scontrano, le riconciliazioni richiedono tempo.</p>
-<p>L'Ariete (4/10) e i Gemelli (4/10) rappresentano le associazioni più faticose. L'Ariete vuole tutto e subito, il Capricorno preferisce pianificare. I Gemelli cambiano idea ogni cinque minuti, il Capricorno ha deciso la sua direzione da anni. I Pesci (7/10) sono una sorpresa positiva: il loro opposto zodiacale porta nella vita del Capricorno una poesia e una morbidezza che lui non sapeva di desiderare. Non sempre è facile, ma quando funziona, è una delle combinazioni più belle dello zodiaco.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Il Capricorno con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Eccellente equilibrio. Il Capricorno ancora alla realtà i sogni dei Pesci, e i Pesci portano tenerezza.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sul Capricorno in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con il Capricorno?`,
+          content: `<p>I segni che vanno più d'accordo con il Capricorno sono il Toro, il Cancro e la Vergine (9/10). Al contrario, le coppie più difficili sono con l'Acquario (2/10), poi il Leone, la Bilancia e il Sagittario (3/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Capricorno insieme: funziona?`,
+          content: `<p>8/10. Si capiscono alla perfezione e condividono obiettivi. Associazione solida basata sullo sforzo congiunto.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

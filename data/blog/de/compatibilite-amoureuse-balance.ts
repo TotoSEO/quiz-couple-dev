@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-waage',
-  title: `Liebeskompatibilität der Waage: Harmonie um jeden Preis, oder echte Partnerschaft?`,
-  metaTitle: `Liebeskompatibilität Waage: Wer bringt sie ins Gleichgewicht?`,
-  metaDescription: `Die Waage sucht Harmonie, Schönheit und einen Partner auf Augenhöhe. Erfahren Sie, welche Sternzeichen ihr das bieten können, und welche…`,
+  title: `Liebeskompatibilität der Waage: Mit welchen Zeichen passt es?`,
+  metaTitle: `Waage: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Die Waage mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Waage und Waage zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Astrologisches Symbol der Waage, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Die Waage sucht Harmonie, Schönheit und einen Partner auf Augenhöhe. Welche Zeichen bringen sie ins Gleichgewicht?`,
-  introduction: `<p>Die Waage ist das Zeichen der Partnerschaft schlechthin. Nicht weil sie ohne Beziehung nicht existieren kann, sondern weil <strong>sie sich selbst am besten im Spiegel eines anderen erkennt</strong>. Die Waage denkt in Wir, nicht in Ich. Das macht sie zur einfühlsamsten Partnerin, die man sich wünschen kann. Es macht sie aber auch anfällig dafür, sich selbst zu verlieren, wenn die Beziehung aus dem Gleichgewicht gerät. Um herauszufinden, ob Ihre Kombination zu einer echten Balance findet, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Venus regiert die Waage, und hier zeigt sich die romantischste Seite dieses Planeten. Schönheit, Ästhetik, Eleganz in der Kommunikation: Die Waage will nicht nur geliebt werden, sie will, dass die Liebe selbst schön ist. Streit empfindet sie nicht als reinigendes Gewitter, sondern als Bedrohung. Und das ist ihre Achillesferse: <strong>Die Angst vor Konflikten kann dazu führen, dass wichtige Dinge ungesagt bleiben.</strong></p>
-<p>Wer also passt zu jemandem, der die Harmonie über alles stellt? Und wer stört dieses empfindliche Gleichgewicht?</p>`,
+  excerpt: `Die Waage mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Die Waage gilt als unentschlossen. Es ist nicht so, dass sie Entscheidungen ausweicht, sie sucht die richtige, die niemanden verletzt. Sie denkt fast von Natur aus zu zweit, was sie aufmerksam macht, und auch zu jemandem, der die eigenen Bedürfnisse vergisst, während er das Gleichgewicht sucht.</p>
+<p>Was sie will, ist jemand, bei dem sie sich wohlfühlt, und der manchmal für sie entscheiden kann, ohne sie zu drängen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Zwillinge und Wassermann sind Seelenverwandte, Luft versteht Luft ohne große Erklärungen.`,
     `Der Löwe gibt der Waage die Wärme und Richtung, die sie braucht, ohne sie zu erdrücken.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'das-gleichgewicht-zwischen-kopf-und-herz',
-      title: `Das Gleichgewicht zwischen Kopf und Herz`,
-      content: `<p>Die Zwillinge (9/10) sind ein natürlicher Match für die Waage. Beide sind Luftzeichen, beide lieben den intellektuellen Austausch, beide haben einen ausgeprägten Sinn für Humor und Leichtigkeit. Was diese Verbindung so besonders macht: <strong>Keiner der beiden erwartet vom anderen eine emotionale Schwere, die dem anderen nicht liegt.</strong> Die Liebe darf hier leicht sein, und sie ist trotzdem echt.</p>
-<p>Der Wassermann (8/10) bietet der Waage etwas, das sie fasziniert: eine kompromisslose Individualität. Der Wassermann macht sein eigenes Ding, und die Waage bewundert genau das, weil sie selbst oft damit kämpft, ihre eigene Meinung gegen die Erwartungen anderer zu behaupten. Von ihm lernt sie, dass man geliebt werden kann, ohne es allen recht zu machen.</p>
-<p>Der Löwe (8/10) bringt Feuer in die Waage-Welt. Seine Großzügigkeit, seine Wärme, sein Charisma, all das zieht die Waage magisch an. Sie wiederum gibt ihm die diplomatische Eleganz, die seine manchmal etwas robuste Art abfedert.</p>
-<p>Schwierig wird es mit dem Steinbock (4/10), der die Beziehung oft als Arbeit betrachtet und wenig Raum für die romantische Leichtigkeit lässt, die die Waage braucht. Auch der Krebs (5/10) kann eine Herausforderung sein: Seine emotionale Intensität kann die Waage überfordern, die Konflikte lieber umgeht als durchlebt. <strong>Und der Widder (9/10), ihr direktes Gegenüber im Tierkreis, ist gleichzeitig ihre größte Anziehung und ihre größte Prüfung.</strong> Wo sie abwägt, stürmt er los. Wo sie diplomatisch ist, ist er direkt. Es knistert, aber es kracht auch.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Die Waage mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Waage (Luft) und Fische (Wasser) haben unterschiedliche emotionale Erwartungen. Die Waage hat oft Mühe, die stark emotionale Natur des Fisches zu verstehen.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zur Waage in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zur Waage?`,
+          content: `<p>Am besten verstehen sich mit der Waage die Zwillinge und der Wassermann (9/10), dann der Widder und der Löwe (8/10). Am schwierigsten sind dagegen die Paare mit dem Steinbock (3/10), dann dem Krebs, der Jungfrau, dem Skorpion und den Fischen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Waage und Waage: passt das zusammen?`,
+          content: `<p>7/10. Natürliche Harmonie zwischen zwei Waagen. Beide suchen Gleichgewicht, Schönheit und Diplomatie in der Beziehung. Sie teilen den Sinn für Ästhetik und vermeiden Konflikte. Allerdings kann die Beziehung unter der doppelten Unentschlossenheit leiden.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'scorpio-love-compatibility',
-  title: `Scorpio love compatibility: love without half measures`,
-  metaTitle: `Scorpio love compatibility: who can survive their intensity?`,
-  metaDescription: `Scorpio loves without compromise, and expects the same in return. Which signs can handle that depth? Our complete, sign-by-sign analysis, no punches…`,
+  title: `Scorpio love compatibility: which signs does it work with?`,
+  metaTitle: `Scorpio Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Scorpio with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Scorpio partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Scorpio astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Scorpio loves without compromise, and expects the same in return. Which signs can handle that depth?`,
-  introduction: `<p>If you've ever loved a Scorpio, or if you are one, you know that love, for this sign, is not something casual. <strong>It's not a box to tick, not just another experience among many.</strong> It's something that engages everything: emotions, body, loyalty, the deepest vulnerabilities. Scorpio doesn't do things by halves, and they expect the same depth from the other person. Want to know if you're up to the challenge? <a href="/en/zodiac-signs-names-compatibility/">Calculate your love compatibility by sign and name</a>.</p>
-<p>Ruled by Mars and Pluto, Scorpio is a sign of transformation. They enter a relationship with the intention, conscious or not, of changing it, themselves, the other person, or both. Their love stories are rarely forgettable. They leave marks, even when they end. <strong>Especially when they end.</strong></p>
-<p>What Scorpio looks for in love is someone capable of meeting them in the depths, not someone who stays at the surface waiting for them to come back up. They sometimes keep people at arm's length to test them, to see if the other person stays anyway. That isn't manipulation. It's self-protection from someone who has learned that not everyone can keep the implicit promise of all-or-nothing love.</p>`,
+  excerpt: `Scorpio with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>If you've ever loved a Scorpio, you know that for them, love is nothing light. They put everything into it: emotions, body, loyalty, their deepest flaws. And they expect the same from the other person. Sometimes they keep their distance to see whether the other person stays anyway: it isn't manipulation, it's protection.</p>
+<p>What they're looking for is someone who doesn't stay on the surface, and who doesn't leave when things get hard. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Cancer, Virgo, Capricorn: their three deepest and most lasting unions.`,
     `With Pisces, they create an emotional connection few other pairings can match.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'who-can-truly-stand-with-a-scorpio',
-      title: `Who can truly stand with a Scorpio`,
-      content: `<p>Cancer (9/10) is arguably their most intuitive match. These two Water signs don't need to explain everything, they understand each other at a level words can't always reach. Cancer gives Scorpio a protective tenderness, and Scorpio gives Cancer the emotional depth they crave.</p>
-<p>Virgo (9/10) is a less obvious match but just as solid. What unites these two signs is their shared seriousness about commitment. Neither one commits lightly, and when they do, it's to build something that endures.</p>
-<p>With Aquarius (3/10), Scorpio runs into a fundamental incompatibility. <strong>Aquarius rationalizes where Scorpio feels.</strong> Aquarius takes distance where Scorpio seeks fusion. These two ways of being almost never meet in the middle, and the frustration that creates is often stronger than the initial attraction.</p>
-<p>Two Scorpios together (8/10)? An extraordinarily intense relationship, rich in complicity, and in equally intense conflict. They understand each other better than anyone. They also know exactly which buttons to push when things go wrong. The balance in this couple hinges on their ability not to turn their mutual understanding into a weapon.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Scorpio with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Scorpio (Water) and Pisces (Water) share beautiful emotional complicity. The two Water signs intuitively understand each other's emotions. The soothing, empathetic Pisces gives Scorpio moral support, and Scorpio offers Pisces security and passion. Their relationship is very intimate.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Scorpio in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Scorpio?`,
+          content: `<p>The signs that get along best with Scorpio are Cancer and Virgo (9/10), then Taurus, Scorpio, Capricorn and Pisces (8/10). On the other hand, the hardest matches are with Aquarius (3/10), then Gemini, Leo, Libra and Sagittarius (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Scorpio together: does it work?`,
+          content: `<p>8/10. Two Scorpios together live an extremely intense relationship. They understand each other naturally and share the same passions and mysteries. Their complicity is great because they don't hesitate to dive deeply into mutual emotions. However, their shared jealousy and stubbornness can create intense conflicts. If they communicate openly, their union can be very strong.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

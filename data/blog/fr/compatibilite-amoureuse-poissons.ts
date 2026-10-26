@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-poissons',
-  title: `Compatibilité amoureuse des Poissons : l'amour comme un océan`,
-  metaTitle: `Compatibilité amoureuse Poissons : qui peut plonger avec eux ?`,
-  metaDescription: `Les Poissons aiment avec une profondeur que peu de signes comprennent. Quels partenaires savent naviguer dans leurs eaux ? Analyse signe par signe.`,
+  title: `Compatibilité amoureuse des Poissons : avec quels signes ça marche ?`,
+  metaTitle: `Poissons : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Les Poissons avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Poissons ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Symbole astrologique des Poissons, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Les Poissons aiment avec une profondeur que peu de signes comprennent. Quels partenaires savent naviguer dans leurs eaux ?`,
-  introduction: `<p>Les Poissons sont le dernier signe du zodiaque, et d'une certaine manière, ils portent en eux un peu de tous les autres. <strong>Leur sensibilité n'est pas une faiblesse. C'est un radar émotionnel que rien ne trompe.</strong> Ils perçoivent ce que les autres cachent, ressentent ce que les autres refusent de nommer, et aiment avec une intensité qui peut être aussi belle que déstabilisante. Pour savoir si votre signe peut naviguer dans ces profondeurs, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité amoureuse par signe et prénom</a>.</p>
-<p>Gouvernés par Neptune, planète de l'imaginaire et de la dissolution des frontières, les Poissons vivent l'amour comme une immersion totale. Ils ne font pas la différence entre aimer quelqu'un et se fondre dans cette personne, ce qui fait d'eux des partenaires extraordinairement dévoués, mais aussi vulnérables aux relations déséquilibrées.</p>
-<p>Ce que les Poissons cherchent en amour, c'est quelqu'un qui les comprend sans qu'ils aient à tout expliquer. <strong>Quelqu'un qui ne se moque pas de leur sensibilité, qui ne leur dit pas « tu exagères » quand ils pleurent, et qui accepte que l'amour ne se résume pas à de la logique.</strong> En retour, les Poissons offrent une empathie et une douceur que peu de signes peuvent égaler.</p>`,
+  excerpt: `Les Poissons avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Les Poissons sont le dernier signe du zodiaque, et ils ont un peu de tous les autres en eux. Leur sensibilité, c'est un radar : ils perçoivent ce que les autres cachent, et ils aiment avec une intensité qui peut être aussi belle que déstabilisante. Ils ne font pas bien la différence entre aimer quelqu'un et se fondre en lui.</p>
+<p>Ce qu'ils cherchent, c'est quelqu'un qui les comprend sans qu'ils aient à tout expliquer, et qui ne leur dit pas « tu exagères » quand ils pleurent. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Cancer, Scorpion, Taureau : les trois partenaires qui comprennent et protègent leur sensibilité.`,
     `Avec la Vierge, leur opposé, ils forment un couple complémentaire, intuition contre analyse.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'qui-sait-aimer-un-poissons',
-      title: `Qui sait aimer un Poissons`,
-      content: `<p>Le Cancer (9/10) est son partenaire le plus naturel. Ces deux signes d'Eau se comprennent instinctivement, ils n'ont pas besoin de mots pour savoir ce que l'autre ressent. Le Cancer apporte aux Poissons la sécurité émotionnelle dont ils ont besoin, et les Poissons offrent au Cancer une profondeur spirituelle qui l'apaise. <strong>C'est l'une des associations les plus tendres du zodiaque.</strong></p>
-<p>Le Scorpion (9/10) partage avec les Poissons une intensité émotionnelle rare. Ces deux signes ne font pas les choses à moitié, quand ils s'engagent, c'est entièrement. Le Scorpion protège les Poissons avec une férocité qui les rassure, et les Poissons adoucissent le Scorpion avec une gentillesse qui le désarme.</p>
-<p>Le Taureau (8/10) offre aux Poissons quelque chose d'essentiel : un ancrage. Là où les Poissons flottent, le Taureau tient bon. Sa solidité rassure les Poissons sans les étouffer, et la créativité des Poissons enchante le Taureau sans le déstabiliser.</p>
-<p>La Vierge (7/10), leur opposé zodiacal, est une association surprenante. La Vierge est analytique là où les Poissons sont intuitifs. Elle organise là où ils improvisent. <strong>Mais cette complémentarité peut créer un équilibre remarquable, la Vierge structure le chaos des Poissons, et les Poissons rappellent à la Vierge que la vie ne se résume pas à des listes.</strong></p>
-<p>Le Gémeaux (4/10) est une compatibilité fragile. Le Gémeaux change d'avis, de sujet et parfois d'humeur trop vite pour les Poissons, qui ont besoin de constance émotionnelle. Les Poissons se sentent souvent perdus face à la légèreté du Gémeaux, qu'ils interprètent comme de l'indifférence.</p>
-<p>Deux Poissons ensemble (6/10) ? Un océan de tendresse et de compréhension mutuelle, mais qui peut manquer de structure. Sans un minimum d'ancrage pratique, ce couple risque de dériver ensemble, trop absorbé par ses émotions pour gérer le quotidien.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Les Poissons avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Deux Poissons, c'est une bulle rare, sensible, où l'on se comprend sans parler. C'est aussi un couple sans personne pour tenir le gouvernail : les factures attendent, les décisions traînent, et les difficultés sont contournées plutôt que réglées. Ils ont besoin d'un ancrage extérieur, un travail, une famille, quelque chose de solide.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur les Poissons en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec les Poissons ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec les Poissons sont le Cancer (9/10), puis le Taureau, la Vierge, le Scorpion et le Capricorne (8/10). À l'inverse, les couples les plus difficiles sont avec le Verseau (2/10), puis le Sagittaire (3/10), puis les Gémeaux, le Lion et la Balance (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Poissons ensemble, ça donne quoi ?`,
+          content: `<p>7/10. Deux Poissons, c'est une bulle rare, sensible, où l'on se comprend sans parler. C'est aussi un couple sans personne pour tenir le gouvernail : les factures attendent, les décisions traînent, et les difficultés sont contournées plutôt que réglées. Ils ont besoin d'un ancrage extérieur, un travail, une famille, quelque chose de solide.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

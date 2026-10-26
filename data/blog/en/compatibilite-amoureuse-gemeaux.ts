@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'gemini-love-compatibility',
-  title: `Gemini love compatibility: the signs that embrace their dual nature`,
-  metaTitle: `Gemini love compatibility: who can keep up with them?`,
-  metaDescription: `Gemini changes their mind like the wind, and they love it. But in love, who actually gets them? Our honest, sign-by-sign compatibility breakdown.`,
+  title: `Gemini love compatibility: which signs does it work with?`,
+  metaTitle: `Gemini Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Gemini with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Gemini partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Gemini astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Gemini changes their mind like the wind, and they love it. But in love, who actually gets them?`,
-  introduction: `<p>There is one thing Gemini hates more than anything: feeling boxed in. In a label, in a routine, in a version of themselves that someone else decided for them. <strong>Gemini aren't unstable, they're multifaceted.</strong> And not everyone can tell the difference. If you want to <a href="/en/zodiac-signs-names-compatibility/">test your astrological compatibility with your partner</a>, it's the best way to know whether your pairing can work.</p>
-<p>Ruled by Mercury, the planet of communication and intellect, Gemini falls in love with the mind before falling in love with the body. What attracts them? A conversation that takes an unexpected turn. A perspective that catches them off guard. Someone who can jump between three different topics in ten minutes without losing the thread, and who enjoys it just as much as they do.</p>
-<p>In love, Gemini often get a bad reputation. People call them flaky, evasive, impossible to hold on to. The truth is more nuanced: <strong>they're faithful to what stimulates them</strong>. The moment a relationship stops feeding them intellectually, something disconnects. That's not frivolity. That's how they're wired.</p>`,
+  excerpt: `Gemini with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>If there's one thing Gemini hates, it's feeling boxed in: in a category, in a routine, in an idea of themselves that someone else decided for them. People call them unstable; they're more like several people at once. They fall in love with a mind before they fall in love with a body, and the day the conversation stops, something switches off.</p>
+<p>So the signs that suit them are the ones that don't try to pin them down. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Libra and Aquarius: their two great Air matches, the conversation never ends with them.`,
     `Sagittarius, their opposite, fascinates them just as much as it frustrates them. Often simultaneously.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'where-gemini-truly-belongs',
-      title: `Where Gemini truly finds their place`,
-      content: `<p>Libra and Aquarius (9/10 each) are their most natural partners. Same Air element, same need for mental stimulation, same relaxed approach to freedom within a relationship. With them, Gemini doesn't have to justify their need for space, it's understood from the start.</p>
-<p>Sagittarius (9/10) is a different story. It's Gemini's zodiac opposite, and as often happens with opposites, the attraction is real and complex. Where Gemini flits between ideas, Sagittarius hunts for deeper meaning. They can complement each other beautifully, or irritate each other profoundly, depending on the day. <strong>This relationship never leaves anyone indifferent.</strong></p>
-<p>At the other end of the spectrum, Taurus (3/10) and Capricorn (4/10) are tough pairings for Gemini. Not because those signs are lesser, but because what they value in love (stability, roots, predictability) is exactly what Gemini instinctively avoids. The frustration tends to be mutual and quick to set in.</p>
-<p>One last thought: if you're a Gemini who sees yourself in this portrait, know that your best strategy in love isn't finding the "perfectly compatible" sign. It's finding someone who accepts that you contain multitudes, and who finds that fascinating rather than exhausting.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Gemini with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Gemini (Air) and Pisces (Water) have a hard time meshing. The dreamy, introverted Pisces can feel overwhelmed by Gemini's energy, and Gemini may find Pisces too emotional. Their relationship requires a great effort of empathy: Gemini must listen to Pisces with more depth, and Pisces must accept Gemini's need for variety.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Gemini in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Gemini?`,
+          content: `<p>The signs that get along best with Gemini are Libra, Sagittarius and Aquarius (9/10). On the other hand, the hardest matches are with Taurus (3/10), then Cancer, Virgo, Scorpio, Capricorn and Pisces (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Gemini together: does it work?`,
+          content: `<p>8/10. Two Geminis together share many common traits. As Mutable Air signs, they love to discuss, exchange ideas, and live new experiences. Their compatibility is high because they understand each other's thirst for freedom and novelty. They energize their couple with humor and creativity. Warning: they must make sure to ground themselves occasionally to prevent the relationship from becoming too superficial.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

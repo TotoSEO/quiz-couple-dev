@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-balance',
-  title: `Compatibilité amoureuse de la Balance : les signes qui l'aident à s'ancrer`,
-  metaTitle: `Compatibilité amoureuse Balance : qui l'aide à choisir ?`,
-  metaDescription: `La Balance cherche l'harmonie, parfois au point de ne jamais trancher. Quels signes lui donnent envie de se décider, et lesquels compliquent tout.`,
+  title: `Compatibilité amoureuse de la Balance : avec quels signes ça marche ?`,
+  metaTitle: `Balance : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `La Balance avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Balances ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Symbole astrologique de la Balance, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `La Balance cherche l'harmonie en amour, parfois au point de ne jamais trancher. Quels signes lui donnent envie de se décider ?`,
-  introduction: `<p>La Balance a une réputation d'indécise. Ce n'est pas tout à fait faux, mais ce n'est pas toute la vérité non plus. <strong>Elle ne cherche pas à éviter les choix. Elle cherche le choix juste.</strong> Celui qui ne blesse personne, qui préserve l'harmonie, qui respecte les deux côtés de l'équation. Parfois, ce choix n'existe pas, et c'est là que la Balance reste suspendue, à peser une balance imaginaire. Si vous vous demandez si votre signe est celui qui peut l'aider à s'ancrer, <a href="/signes-astrologiques-prenoms-compatibilite/">notre outil de compatibilité signes et prénoms</a> vous donne la réponse.</p>
-<p>Gouvernée par Vénus comme le Taureau, mais avec une tonalité très différente, la Balance est tournée vers l'autre. Elle pense en duo presque naturellement, ce qui fait d'elle un partenaire attentionné et généreux, mais aussi quelqu'un qui peut perdre de vue ses propres besoins dans sa quête d'équilibre.</p>
-<p>En amour, la Balance cherche avant tout quelqu'un avec qui elle se sent bien, pas menacée, pas jugée, pas forcée. <strong>Elle a besoin de douceur, d'esthétique partagée, de conversations qui vont quelque part.</strong> Et elle a besoin, même si elle ne le dit pas, que l'autre prenne parfois les décisions à sa place, avec délicatesse, sans la brusquer.</p>`,
+  excerpt: `La Balance avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>La Balance a une réputation d'indécise. Ce n'est pas qu'elle évite les choix, c'est qu'elle cherche le choix juste, celui qui ne blesse personne. Elle pense en duo presque naturellement, ce qui en fait quelqu'un d'attentionné, et quelqu'un qui peut oublier ses propres besoins à force de chercher l'équilibre.</p>
+<p>Ce qu'elle veut, c'est quelqu'un avec qui elle se sent bien, et qui sait décider parfois à sa place, sans la brusquer. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Gémeaux, Verseau, Sagittaire : les partenaires avec qui les conversations ne s'arrêtent jamais.`,
     `Le Bélier, son opposé, l'attire par sa franchise et sa spontanéité, ce qu'elle a du mal à être elle-même.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'ce-que-ses-compatibilites-revelent',
-      title: `Ce que ses compatibilités révèlent sur ce qu'elle cherche`,
-      content: `<p>Avec le Gémeaux et le Verseau (9/10 chacun), la Balance trouve une légèreté intellectuelle qui lui convient parfaitement. Ces deux signes d'Air ne la submergent pas émotionnellement, ils échangent avec elle, sur un pied d'égalité, sans jamais lui imposer leur vision.</p>
-<p>Le Bélier (8/10 à 9/10), son opposé zodiacal, est une histoire plus complexe. Tout oppose la Balance et le Bélier sur le papier. Et pourtant, ou peut-être justement à cause de ça, quelque chose fonctionne souvent entre eux. <strong>Le Bélier fait pour la Balance ce qu'elle n'arrive pas à faire pour elle-même : il décide, il fonce, il tranche.</strong> Et la Balance, qui l'observe, se retrouve à l'admirer pour exactement ce qui lui manque.</p>
-<p>Le Capricorne (3/10) est son association la plus ingrate. Pas parce que le Capricorne est un mauvais partenaire, mais parce que sa sévérité, son rapport austère à la vie, son peu de goût pour les conversations légères créent chez la Balance une forme d'inconfort permanent. Elle se sent jugée, même quand ce n'est pas le cas.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `La Balance avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Deux personnes qui fuient le conflit, ça donne une relation sans une seule dispute et sans un seul problème réglé. Les Poissons attendent qu'elle devine, elle attend qu'ils demandent. Personne ne parle, tout le monde est déçu. C'est joli au début, et flou très vite.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur la Balance en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec la Balance ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec la Balance sont les Gémeaux et le Verseau (9/10), puis le Bélier, le Lion et la Balance (8/10). À l'inverse, les couples les plus difficiles sont avec le Capricorne (3/10), puis le Cancer, la Vierge, le Scorpion et les Poissons (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Balances ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux personnes qui veulent la même chose, l'accord, et qui n'osent donc jamais s'y opposer. La vie est douce, polie, agréable. Elle est aussi paralysée : le restaurant du vendredi soir se décide en quarante minutes. Ce couple tient très bien, à condition que l'un des deux accepte de jouer celui qui tranche.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

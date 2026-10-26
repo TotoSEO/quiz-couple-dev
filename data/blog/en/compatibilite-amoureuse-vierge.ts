@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'virgo-love-compatibility',
-  title: `Virgo love compatibility: who knows how to read between their lines?`,
-  metaTitle: `Virgo love compatibility: love in all its quiet depth`,
-  metaDescription: `Virgo loves in silence, through actions, through details no one else notices. Which signs can read that quiet devotion? Our full compatibility analysis.`,
+  title: `Virgo love compatibility: which signs does it work with?`,
+  metaTitle: `Virgo Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Virgo with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Virgo partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Virgo astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Virgo loves in silence, through actions, through details no one else notices. Which signs can read that quiet devotion?`,
-  introduction: `<p>Virgo doesn't send grand signals. They don't make sweeping declarations. What they do is remember how you take your coffee, prepare exactly what you need on the day you're struggling, and quietly organize things in the background so your life runs a little smoother than it did before. <strong>Their love shows up in the details, and you have to know where to look.</strong> To find out whether your sign and name speak the same language as Virgo, try <a href="/en/zodiac-signs-names-compatibility/">the zodiac and name compatibility test</a>.</p>
-<p>Ruled by Mercury like Gemini, but in a fundamentally different way, Virgo is analytical, precise, attentive. They think before they act. They weigh their words before speaking. That rigour some mistake for coldness is actually a form of respect: they don't say what they don't mean, and they don't promise what they can't deliver.</p>
-<p>In love, Virgo needs a partner who appreciates that honesty, <strong>who doesn't ask them to be more demonstrative than they are</strong>, but who recognizes the value of what they give in concrete, everyday ways. The signs that naturally understand this are the ones Virgo truly opens up to. The rest find them distant, never knowing what they missed.</p>`,
+  excerpt: `Virgo with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Virgo doesn't make grand declarations. They remember how you take your coffee, they prepare what's needed on the day you're not doing well, they sort things out behind the scenes so your life is a little simpler. Their love shows in the details, and you have to know where to look.</p>
+<p>The signs that understand this naturally are the ones they open up to. The others find them distant, without ever knowing what they missed. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus, Capricorn, Scorpio: their strongest unions, each for different reasons.`,
     `With Pisces, their opposite, there's a mutual fascination that can become something beautiful.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'strongest-matches-and-common-misunderstandings',
-      title: `Their strongest matches, and the most common misunderstandings`,
-      content: `<p>With Taurus (9/10) and Capricorn (9/10), Virgo finds partners who speak the same language: one of concrete actions, reliability, and promises kept. These unions don't make a lot of noise, but they last.</p>
-<p>Scorpio (9/10) is a less obvious match but equally deep. Scorpio gets to the bottom of things, just like Virgo, only through a different path (emotional rather than rational). Together, they build genuine intimacy based on mutual trust and a shared standard of excellence.</p>
-<p>With Pisces (8/10), their opposite, the relationship is more complex but potentially gorgeous. <strong>Pisces brings Virgo what they lack: imagination, softness, the ability to let go.</strong> Virgo brings Pisces what they need: structure and an anchor in reality. When it works, it's one of the most complementary couples in the zodiac.</p>
-<p>Aquarius (2/10) is the hardest match for Virgo. Their ways of thinking, pragmatic versus idealistic, clash on nearly everything. It's not impossible, but it demands a willingness that neither sign always has.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Virgo with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Virgo (Earth) and Pisces (Water) are opposites, but this polarity creates beautiful complementarity. The dreamy, sensitive Pisces softens Virgo's daily life, who in return offers Pisces solid, concrete support. They share immense mutual respect. Pisces brings imagination to Virgo's plans, and Virgo helps Pisces organize their dreams. Their union can be highly harmonious if each values the other.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Virgo in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Virgo?`,
+          content: `<p>The signs that get along best with Virgo are Taurus, Scorpio and Capricorn (9/10). On the other hand, the hardest matches are with Aquarius (2/10), then Aries, Gemini, Leo, Libra and Sagittarius (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Virgo together: does it work?`,
+          content: `<p>8/10. Two Virgos naturally understand each other. They share a sense of organization and a critical mind (which they try to use positively). Their couple is highly structured and reliable. They love planning their shared future and work hard to build it. The only risk: their mutual tendency to analyze can push them to criticize one another. However, their mutual aid and devotion make their relationship very stable.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-belier',
-  title: `Compatibilité amoureuse du Bélier : les signes qui l'enflamment (et ceux qui l'éteignent)`,
-  metaTitle: `Compatibilité amoureuse Bélier : qui lui résiste ?`,
-  metaDescription: `Le Bélier tombe vite amoureux et s'emballe encore plus vite. Quels signes tiennent vraiment le rythme avec lui, et lesquels feront long feu ?`,
+  title: `Compatibilité amoureuse du Bélier : avec quels signes ça marche ?`,
+  metaTitle: `Bélier : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Bélier avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Béliers ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Symbole astrologique du Bélier, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Bélier tombe vite amoureux, s'emballe encore plus vite, et déchante parfois. Quels signes tiennent le rythme ?`,
-  introduction: `<p>Le Bélier n'est pas du genre à attendre. Il veut, il fonce, il aime, et si l'autre ne suit pas le rythme, il passe à autre chose. Ce n'est pas de la superficialité. C'est juste que <strong>le Bélier vit à une vitesse que tout le monde ne peut pas soutenir</strong>. Et en amour, cette énergie est à double tranchant : elle embrase les débuts de relation comme peu d'autres signes, mais elle peut aussi consumer une histoire avant qu'elle n'ait eu le temps de s'installer. Pour savoir si votre duo résiste à cette intensité, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité astrologique et prénom</a> en quelques clics.</p>
-<p>Régi par Mars, la planète de l'action et du désir, le Bélier cherche un partenaire qui lui donne de la résistance, pas quelqu'un qui capitule à la première tension, mais quelqu'un qui lui répond, qui le challenge, qui ne s'efface pas. La complicité, pour lui, ça se construit dans le mouvement. Pas dans la tranquillité.</p>
-<p>Alors, qui peut vraiment tenir la route à ses côtés ? Voici ce que les astres, et un peu de bon sens, ont à dire sur chacune de ses combinaisons.</p>`,
+  excerpt: `Le Bélier avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Le Bélier n'attend pas. Il veut, il fonce, il aime, et si l'autre ne suit pas le rythme, il passe à autre chose. Ce n'est pas qu'il s'en fiche : c'est qu'il vit vite, et que tout le monde ne tient pas ce rythme-là. En amour, ça donne des débuts en feu d'artifice, et parfois des histoires qui s'éteignent avant d'avoir eu le temps de s'installer.</p>
+<p>Ce qu'il cherche, c'est quelqu'un qui lui répond, qui ne s'écrase pas à la première tension et qui ne s'efface pas non plus. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Le Lion et la Balance sont ses meilleurs partenaires, pour des raisons opposées.`,
     `Avec un autre Bélier, c'est du feu. Au sens propre.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'ce-que-le-belier-attend-en-amour',
-      title: `Ce que le Bélier attend en amour`,
-      content: `<p>Avant de regarder les chiffres signe par signe, il y a quelque chose à comprendre sur le Bélier : <strong>il a besoin d'être surpris</strong>. Un partenaire prévisible, qui dit toujours oui, qui ne pousse jamais dans ses retranchements, ça l'ennuie. Rapidement. Ce que le Bélier appelle "la passion", c'est souvent cette tension productive entre deux volontés qui ne se ressemblent pas tout à fait.</p>
-<p>Ses meilleures compatibilités sont donc rarement avec des signes qui lui ressemblent à 100%. Le Lion (9/10) le stimule parce qu'il lui tient tête avec le même orgueil. La Balance (9/10), son opposé zodiacal, le fascine précisément parce qu'elle fonctionne à l'envers de lui, là où il fonce, elle pèse le pour et le contre. Là où il dit ce qu'il pense, elle cherche le mot juste. Cette différence, pour le Bélier, c'est de l'attraction.</p>
-<p>À l'inverse, les associations les plus compliquées pour lui sont celles qui demandent qu'il ralentisse sans lui offrir quelque chose en échange de cet effort. Le Cancer (4/10) lui demande de gérer des émotions qu'il ne sait pas toujours lire. La Vierge (4/10) lui demande de réfléchir avant d'agir, ce qui va à l'encontre de tout ce qu'il est. Ces relations peuvent fonctionner, mais elles ne viennent jamais naturellement.</p>
-<p>Une chose à retenir si vous êtes Bélier ou si vous aimez un Bélier : <strong>ses défauts en amour sont les mêmes que ses qualités</strong>. L'impulsivité qui rend le début de relation électrisant est aussi ce qui peut faire imploser la suite. Ce n'est pas une fatalité, c'est juste un terrain à travailler.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Bélier avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons absorbent tout, y compris la brusquerie du Bélier, et ne disent rien. C'est confortable pour lui et destructeur pour eux. Il finit par croire que tout va bien parce qu'on ne lui reproche rien. Le jour où ça sort, il tombe de haut.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Bélier en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Bélier ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Bélier sont le Lion, la Balance et le Sagittaire (9/10). À l'inverse, les couples les plus difficiles sont avec le Cancer et la Vierge (4/10), puis le Taureau et le Capricorne (5/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Béliers ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux personnes qui décident vite et qui veulent toutes les deux mener. Les débuts sont électriques, les week-ends bien remplis, et la première vraie dispute arrive au bout de trois semaines. Ça dure si chacun a son terrain à lui, un sport, un projet, quelque chose où il gagne sans avoir à battre l'autre.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

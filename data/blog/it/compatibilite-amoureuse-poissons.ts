@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-pesci',
-  title: `Compatibilità amorosa dei Pesci: l'amore come immersione totale`,
-  metaTitle: `Compatibilità amorosa Pesci: chi sa nuotare con loro?`,
-  metaDescription: `I Pesci amano con un'intensità emotiva che pochi altri segni raggiungono. Ma non tutti sanno nuotare in acque così profonde.`,
+  title: `Compatibilità amorosa dei Pesci: con quali segni funziona?`,
+  metaTitle: `Pesci: compatibilità amorosa con i 12 segni`,
+  metaDescription: `I Pesci con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Pesci insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Simbolo astrologico dei Pesci, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `I Pesci amano con un'intensità emotiva che pochi altri segni raggiungono. Ma non tutti sanno nuotare in acque così profonde.`,
-  introduction: `<p>I Pesci non amano, si immergono. Quando un Pesci si innamora, non lo fa con la testa. Lo fa con l'anima, con l'immaginazione, con ogni fibra della sua sensibilità. <strong>L'amore per i Pesci non è un capitolo della vita, è il libro intero.</strong> E questa dedizione totale è sia la loro forza più grande che la loro vulnerabilità più scoperta. Per capire se il vostro legame ha la profondità che i Pesci cercano, <a href="/it/segni-zodiacali-nomi-compatibilita/">scoprite la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governati da Nettuno, il pianeta dei sogni e dell'intuizione, i Pesci vivono l'amore come un'esperienza quasi mistica. Non si accontentano di una relazione funzionale, vogliono un legame che trascenda il quotidiano, che abbia una dimensione poetica. Questo non vuol dire che vivano fuori dalla realtà, anche se a volte ci vanno vicini. Vuol dire che hanno bisogno che l'amore li faccia sentire qualcosa di speciale, non ordinario, non meccanico, non scontato.</p>
-<p>Il rischio? Idealizzare il partner fino a non vederlo più per quello che è. Ma quando i Pesci trovano qualcuno che merita davvero quella devozione, creano un legame di una bellezza rara.</p>`,
+  excerpt: `I Pesci con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>I Pesci sono l'ultimo segno dello zodiaco, e portano dentro un po' di tutti gli altri. La loro sensibilità è un radar: percepiscono quello che gli altri nascondono, e amano con un'intensità che può essere tanto bella quanto destabilizzante. Non distinguono bene tra amare qualcuno e fondersi in lui.</p>
+<p>Quello che cercano è qualcuno che li capisca senza dover spiegare tutto, e che non dica «stai esagerando» quando piangono. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Cancro e Scorpione sono le loro combinazioni più naturali, Acqua con Acqua, emozioni che non serve spiegare.`,
     `Il Toro li ancora alla realtà con dolcezza, offrendo la stabilità che a volte gli manca.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'chi-sa-amare-i-pesci-come-meritano',
-      title: `Chi sa amare i Pesci come meritano`,
-      content: `<p>Il Cancro (9/10) è probabilmente il partner più naturale per i Pesci. Entrambi segni d'Acqua, si muovono nello stesso oceano emotivo senza dover mai spiegare perché una canzone li ha fatti piangere o perché oggi hanno bisogno di silenzio. <strong>Con il Cancro, i Pesci si sentono finalmente a casa, emotivamente, completamente.</strong> Il rischio è che entrambi si perdano nelle emozioni senza che nessuno dei due riporti la coppia alla realtà pratica.</p>
-<p>Lo Scorpione (9/10) offre qualcosa che i Pesci adorano: l'intensità. Dove il Cancro è caldo e protettivo, lo Scorpione è profondo e trasformativo. Con lo Scorpione, i Pesci scoprono che le emozioni possono essere ancora più profonde di quello che immaginavano. È una relazione che lascia il segno, nel senso migliore.</p>
-<p>Il Toro (8/10) porta nella vita dei Pesci qualcosa di cui hanno disperatamente bisogno: radici. La stabilità del Toro non soffoca la sensibilità dei Pesci, la contiene, la protegge, le dà un posto sicuro dove crescere. È la combinazione di chi sogna e chi costruisce, e quando funziona, è poesia.</p>
-<p>I Gemelli (3/10) e il Sagittario (4/10) rappresentano le sfide più impegnative. I Gemelli sono troppo veloci, troppo razionali, troppo in superficie per la profondità dei Pesci. Il Sagittario è troppo diretto, troppo poco disposto a fermarsi nello spazio emotivo che i Pesci richiedono. Il Capricorno (7/10), loro opposto zodiacale, è una combinazione sorprendente: la struttura del Capricorno e il sogno dei Pesci possono creare un equilibrio bellissimo, lui costruisce le pareti, lei le riempie di colore.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `I Pesci con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Enorme complicità emotiva e immaginazione condivisa. Si fondono nel mondo dei sogni, pur col rischio di disconnettersi dalla realtà pratica.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sui Pesci in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con i Pesci?`,
+          content: `<p>I segni che vanno più d'accordo con i Pesci sono il Cancro (9/10), poi il Toro, la Vergine, lo Scorpione, il Capricorno e i Pesci (8/10). Al contrario, le coppie più difficili sono con l'Acquario (2/10), poi il Sagittario (3/10), poi i Gemelli, il Leone e la Bilancia (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Pesci insieme: funziona?`,
+          content: `<p>8/10. Enorme complicità emotiva e immaginazione condivisa. Si fondono nel mondo dei sogni, pur col rischio di disconnettersi dalla realtà pratica.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-widder',
-  title: `Liebeskompatibilität des Widders: Welche Sternzeichen entfachen sein Feuer, und welche es löschen`,
-  metaTitle: `Liebeskompatibilität Widder: Wer hält mit ihm Schritt?`,
-  metaDescription: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Erfahren Sie, welche Sternzeichen sein Tempo mitgehen können…`,
+  title: `Liebeskompatibilität des Widders: Mit welchen Zeichen passt es?`,
+  metaTitle: `Widder: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Widder mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Widder und Widder zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Astrologisches Symbol des Widders, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Welche Sternzeichen können sein Tempo mitgehen?`,
-  introduction: `<p>Der Widder ist nicht der Typ, der wartet. Er will, er stürmt los, er liebt, und wenn der andere nicht mithält, zieht er weiter. Das ist keine Oberflächlichkeit. Es ist einfach so, dass <strong>der Widder in einem Tempo lebt, das nicht jeder durchhält</strong>. Und in der Liebe ist diese Energie ein zweischneidiges Schwert: Sie entfacht den Anfang einer Beziehung wie kaum ein anderes Zeichen, kann aber eine Geschichte auch verzehren, bevor sie sich überhaupt entfalten konnte. Um herauszufinden, ob Ihre Kombination dieser Intensität standhält, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre astrologische Kompatibilität mit Vornamen</a> in wenigen Klicks.</p>
-<p>Regiert von Mars, dem Planeten der Tat und des Verlangens, sucht der Widder einen Partner, der ihm Widerstand bietet, nicht jemanden, der bei der ersten Spannung aufgibt, sondern jemanden, der ihm antwortet, ihn herausfordert, sich nicht zurückzieht. Nähe entsteht für ihn in Bewegung. Nicht in der Ruhe.</p>
-<p>Also, wer kann wirklich an seiner Seite bestehen? Hier ist, was die Sterne, und ein gesunder Menschenverstand, zu jeder seiner Kombinationen sagen.</p>`,
+  excerpt: `Der Widder mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Der Widder wartet nicht. Er will, er legt los, er liebt, und wenn der andere nicht mitkommt, zieht er weiter. Nicht, dass es ihm egal wäre: Er lebt schnell, und nicht jeder hält dieses Tempo aus. In der Liebe heißt das Anfänge wie ein Feuerwerk, und manchmal Geschichten, die erlöschen, bevor sie Zeit hatten, sich zu setzen.</p>
+<p>Was er sucht, ist jemand, der ihm Paroli bietet, der bei der ersten Spannung nicht einknickt und auch nicht verschwindet. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Löwe und Waage sind seine besten Partner, aus völlig gegensätzlichen Gründen.`,
     `Mit einem anderen Widder wird es feurig. Im wahrsten Sinne des Wortes.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'was-der-widder-in-der-liebe-wirklich-braucht',
-      title: `Was der Widder in der Liebe braucht`,
-      content: `<p>Bevor wir die Kompatibilität Zeichen für Zeichen betrachten, gibt es etwas Grundlegendes über den Widder zu verstehen: <strong>Er braucht Überraschungen</strong>. Ein vorhersehbarer Partner, der immer Ja sagt, der ihn nie an seine Grenzen bringt, das langweilt ihn. Und zwar schnell. Was der Widder „Leidenschaft" nennt, ist oft genau diese produktive Spannung zwischen zwei Willenskräften, die nicht ganz deckungsgleich sind.</p>
-<p>Seine besten Kompatibilitäten bestehen deshalb selten mit Zeichen, die ihm zu hundert Prozent ähneln. Der Löwe (9/10) stimuliert ihn, weil er ihm mit dem gleichen Stolz die Stirn bietet. Die Waage (9/10), sein zodiakalisches Gegenüber, fasziniert ihn gerade, weil sie genau umgekehrt funktioniert, wo er losstürmt, wägt sie ab. Wo er sagt, was er denkt, sucht sie das richtige Wort. Dieser Unterschied ist für den Widder pure Anziehungskraft.</p>
-<p>Umgekehrt sind die kompliziertesten Verbindungen jene, die von ihm verlangen, langsamer zu werden, ohne ihm im Gegenzug etwas dafür zu bieten. Der Krebs (4/10) erwartet von ihm, Gefühle zu handhaben, die er nicht immer lesen kann. Die Jungfrau (4/10) verlangt, dass er nachdenkt, bevor er handelt, was gegen alles geht, was ihn ausmacht. Diese Beziehungen können funktionieren, aber sie kommen nie von selbst.</p>
-<p>Eine Sache, die man sich merken sollte, egal ob man Widder ist oder einen Widder liebt: <strong>Seine Schwächen in der Liebe sind dieselben wie seine Stärken</strong>. Die Impulsivität, die den Beziehungsanfang elektrisierend macht, kann auch den Rest zum Implodieren bringen. Das ist kein Schicksal, es ist einfach ein Feld, an dem man arbeiten muss.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Widder mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Widder (Feuer) und Fische (Wasser) bilden eine zutiefst emotionale Kombination. Zusammen können sie große Leidenschaft und gegenseitige Hingabe erleben. Der sonst so aggressive Widder lässt sich von der Hingabe des Fisches erweichen, der sich völlig investiert. Sie können eine intensive Chemie erzeugen: Der Fisch tröstet den Widder, der im Gegenzug Lebendigkeit bringt. Da ihre Elemente jedoch gegensätzlich sind (Feuer vs. Wasser), erfordert die Beziehung viel Verständnis: Ohne wahre Liebe können ihre Unterschiede (die Eile des Widders vs. die Träumerei des Fisches) zu Spannungen führen.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Widder in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Widder?`,
+          content: `<p>Am besten verstehen sich mit dem Widder der Löwe, die Waage und der Schütze (9/10). Am schwierigsten sind dagegen die Paare mit dem Krebs und der Jungfrau (4/10), dann dem Stier und dem Steinbock (5/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Widder und Widder: passt das zusammen?`,
+          content: `<p>8/10. Zwei Widder (zwei vom Mars beherrschte Feuerzeichen) bilden ein extrem leidenschaftliches Duo. Ihre Beziehung ist sehr „leidenschaftlich und explosiv“, voller Energie und Spontanität. Sie leben ihre Liebe intensiv, aber ihre Impulsivität und ihr ähnliches Ego führen häufig zu Konflikten. Ihre Verbindung ist aufregend, aber sie müssen lernen, ihr Temperament zu zügeln, damit die Beziehung von Dauer ist.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

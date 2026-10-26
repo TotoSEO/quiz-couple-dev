@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-loewe',
-  title: `Liebeskompatibilität des Löwen: Welche Zeichen seinem Feuer gewachsen sind`,
-  metaTitle: `Liebeskompatibilität Löwe: Wer verdient seine königliche Treue?`,
-  metaDescription: `Der Löwe liebt mit Leidenschaft und erwartet Gleiches zurück. Doch nicht jedes Zeichen spielt dieses Spiel mit.`,
+  title: `Liebeskompatibilität des Löwen: Mit welchen Zeichen passt es?`,
+  metaTitle: `Löwe: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Löwe mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Löwe und Löwe zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Astrologisches Symbol des Löwen, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Löwe liebt mit Leidenschaft und erwartet Gleiches zurück. Doch nicht jedes Zeichen spielt dieses Spiel mit.`,
-  introduction: `<p>Man sagt oft, der Löwe sei eitel. Das greift zu kurz. Was er in der Liebe wirklich sucht, ist Gegenseitigkeit, nur eben eine sehr sichtbare Gegenseitigkeit. Er muss spüren, dass seine Anwesenheit zählt, dass der andere ihn sieht, dass das, was er in die Beziehung einbringt, anerkannt wird. <strong>Das ist keine Eitelkeit. Es ist seine Sprache der Liebe.</strong> Neugierig, ob Ihr Zeichen dem Löwen gewachsen ist? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Entdecken Sie Ihre astrologische Kompatibilität</a>.</p>
-<p>Regiert von der Sonne, strahlt der Löwe, und er braucht einen Partner, der dieses Licht nicht zu überdecken versucht, sondern der an seiner Seite leuchten kann, ohne in einen Wettbewerb zu geraten. Der Unterschied ist subtil, aber entscheidend. Jemand, der vor ihm zurückweicht, langweilt ihn. Jemand, der seinen Platz einnehmen will, erschöpft ihn. Das Ideal ist jemand mit eigenem Glanz, der seinen bewundert und seinen eigenen zurückstrahlt.</p>
-<p>In der Liebe ist der Löwe großzügig, beschützend, leidenschaftlich. Wenn er liebt, dann mit vollem Einsatz. <strong>Seine Geschichten sind nie gewöhnlich.</strong> Problematisch wird es, wenn diese Intensität nicht erwidert wird, oder wenn der Partner nicht weiß, wie er dem Löwen in dessen eigener Sprache zeigen kann, dass die Liebe da ist.</p>`,
+  excerpt: `Der Löwe mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Man sagt oft, der Löwe denke nur an sich. Es ist einfacher als das: Er muss sehen, dass seine Anwesenheit zählt, dass der andere ihn ansieht, dass das, was er einbringt, anerkannt wird. Das ist keine Eitelkeit, das ist seine Art zu lieben. Wer sich vor ihm klein macht, langweilt ihn, wer seinen Platz will, erschöpft ihn.</p>
+<p>Ideal ist jemand mit eigenem Licht, der seines im Gegenzug bewundert. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Schütze und Widder teilen seine Feuerenergie, ihre Beziehungen sind selten lauwarm.`,
     `Die Waage bringt ihm, was er allein nicht findet: Sanftheit und Besonnenheit.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'verbindungen-die-ihn-erheben-und-die-ihn-daempfen',
-      title: `Verbindungen, die ihn erheben, und die ihn dämpfen`,
-      content: `<p>Der Schütze (9/10) ist vielleicht sein natürlichster Partner. Gleicher Schwung, gleicher Appetit auf das Leben, gleiche Unfähigkeit, sich mit etwas Lauwarmen zufriedenzugeben. Zusammen erschaffen sie etwas authentisch Leuchtendes, ohne dass einer sich für den anderen zurücknehmen muss.</p>
-<p>Die Waage (8/10) funktioniert anders, aber ebenso gut. Sie bringt dem Löwen etwas, das er allein schwer findet: Abstand in Konflikten, Sanftheit, die Fähigkeit, Ecken abzurunden, ohne die Substanz zu verlieren. Der Löwe wiederum gibt der Waage die Wärme und Richtung, die ihr manchmal fehlt.</p>
-<p>Der Widder (9/10) sorgt für ein elektrisches Zusammenspiel, zwei Feuerzeichen, die sich gegenseitig anfeuern. Die Herausforderung: Beide wollen führen, keiner will nachgeben. Wenn sie lernen, abwechselnd das Steuer zu übernehmen, ist diese Kombination kaum zu schlagen.</p>
-<p>Der Steinbock (3/10) ist die Verbindung, die am häufigsten hakt. <strong>Nicht weil der Steinbock nicht tief lieben kann, sondern weil er diese Liebe selten so ausdrückt, wie der Löwe sie braucht.</strong> Der Löwe liest Liebe in sichtbaren Gesten, gesprochenen Worten, Demonstrationen. Der Steinbock drückt sie durch Beständigkeit aus, durch stille Gegenwart, durch das schlichte Dasein. Diese beiden Sprachen können sich endlos verfehlen.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Löwe mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Löwe (Feuer) und Fische (Wasser) haben sehr unterschiedliche Herangehensweisen an die Liebe. Der extravagante Löwe kann den sensiblen Fisch überwältigen. Damit es funktioniert, muss der Löwe sanfter werden und der Fisch bestimmender.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Löwen in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Löwen?`,
+          content: `<p>Am besten verstehen sich mit dem Löwen der Widder und der Schütze (9/10), dann die Zwillinge, der Löwe, die Waage und der Wassermann (8/10). Am schwierigsten sind dagegen die Paare mit dem Krebs und dem Steinbock (3/10), dann dem Stier, der Jungfrau, dem Skorpion und den Fischen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Löwe und Löwe: passt das zusammen?`,
+          content: `<p>8/10. Feuer und Feuer. Zwei Löwen zusammen bilden ein glanzvolles Duo: viel Leidenschaft, geteiltes Charisma und ein aufregendes Leben. Sie stimulieren sich gegenseitig und glänzen gemeinsam in der Gesellschaft. Allerdings müssen sie Ego-Konflikte und den Kampf um Aufmerksamkeit im Zaum halten.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

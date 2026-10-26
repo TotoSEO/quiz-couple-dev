@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-skorpion',
-  title: `Liebeskompatibilität des Skorpions: Zwischen Hingabe und Abgrund`,
-  metaTitle: `Liebeskompatibilität Skorpion: Wer übersteht seine Intensität?`,
-  metaDescription: `Der Skorpion liebt absolut, oder gar nicht. Erfahren Sie, welche Sternzeichen diese Tiefe aushalten und welche daran zerbrechen.`,
+  title: `Liebeskompatibilität des Skorpions: Mit welchen Zeichen passt es?`,
+  metaTitle: `Skorpion: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Skorpion mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Skorpion und Skorpion zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Astrologisches Symbol des Skorpions, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Skorpion liebt absolut, oder gar nicht. Welche Sternzeichen halten seine Intensität aus?`,
-  introduction: `<p>Über den Skorpion kursieren mehr Klischees als über jedes andere Zeichen. Manipulativ, eifersüchtig, rachsüchtig, die Liste ist lang und meistens unfair. Was näher an der Wahrheit liegt: <strong>Der Skorpion erlebt Gefühle mit einer Intensität, die die meisten anderen Zeichen nicht einmal ansatzweise kennen</strong>. In der Liebe bedeutet das eine Hingabe, die transformativ sein kann. Aber auch eine Eifersucht, die ersticken kann, wenn sie nicht in gesunde Bahnen gelenkt wird. Neugierig, ob Ihr Zeichen dieser Kraft standhält? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Pluto und Mars regieren den Skorpion, Transformation und Aktion, Tiefe und Trieb. In einer Beziehung will der Skorpion nicht an der Oberfläche bleiben. Er will alles wissen, alles spüren, alles teilen. Halbe Sachen sind für ihn schlimmer als gar nichts. <strong>Wer sich auf einen Skorpion einlässt, bekommt nicht nur einen Partner, sondern eine Erfahrung, die einen verändert.</strong></p>
-<p>Die Frage ist: Wer ist bereit für diese Art von Liebe? Und wer sollte besser auf Abstand bleiben?</p>`,
+  excerpt: `Der Skorpion mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Wer schon einmal einen Skorpion geliebt hat, weiß, dass Liebe für ihn nichts Leichtes ist. Er gibt alles hinein: die Gefühle, den Körper, die Loyalität, seine tiefsten Wunden. Und er erwartet dasselbe vom anderen. Manchmal hält er Abstand, um zu sehen, ob der andere trotzdem bleibt: Das ist keine Manipulation, das ist Schutz.</p>
+<p>Was er sucht, ist jemand, der nicht an der Oberfläche bleibt und nicht geht, wenn es schwierig wird. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Krebs und Fische verstehen seine emotionale Tiefe, Wasser erkennt Wasser.`,
     `Der Stier als Gegenüber im Tierkreis bietet die sinnliche Beständigkeit, die den Skorpion erdet.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'tiefe-verbindungen-und-gefaehrliche-anziehung',
-      title: `Tiefe Verbindungen und gefährliche Anziehung`,
-      content: `<p>Der Krebs (8/10) bietet dem Skorpion etwas Seltenes: emotionales Verständnis ohne Urteil. Beide sind Wasserzeichen, beide empfinden tief, beide brauchen Sicherheit. Der Krebs gibt dem Skorpion die Geborgenheit, in der er seine Mauern fallen lassen kann. <strong>Und der Skorpion gibt dem Krebs die Intensität, nach der er sich insgeheim sehnt.</strong></p>
-<p>Die Fische (9/10) sind die vielleicht tiefste Verbindung für den Skorpion. Hier treffen sich zwei Zeichen, die die unsichtbaren Strömungen des Lebens spüren. Die Fische bringen eine Sanftheit mit, die den Skorpion beruhigt, ohne ihn zu schwächen. Es ist eine Beziehung, die von außen oft schwer zu verstehen ist, aber von innen fühlt sie sich an wie Schicksal.</p>
-<p>Der Stier (8/10) ist das zodiakalische Gegenüber des Skorpions, und wie bei allen Gegensatzpaaren gibt es hier eine magnetische Anziehung. Der Stier bietet Sinnlichkeit, Beständigkeit, Treue. Alles, was der Skorpion braucht. Die Herausforderung: Beide sind unfassbar stur. Wenn sie sich in etwas festbeißen, gibt keiner nach.</p>
-<p>Der Löwe (4/10) und der Wassermann (4/10) sind die schwierigsten Verbindungen. Der Löwe will im Rampenlicht stehen, ein Platz, den der Skorpion lieber von den Schatten aus kontrolliert. Der Wassermann besteht auf seiner Unabhängigkeit, genau das, was den Skorpion am meisten verunsichert. <strong>Es sind keine unmöglichen Beziehungen, aber sie erfordern eine Reife, die nicht jedem gegeben ist.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Skorpion mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Skorpion (Wasser) und Fische (Wasser) teilen eine wunderschöne emotionale Komplizenschaft und verstehen einander intuitiv.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Skorpion in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Skorpion?`,
+          content: `<p>Am besten verstehen sich mit dem Skorpion der Krebs und die Jungfrau (9/10), dann der Stier, der Skorpion, der Steinbock und die Fische (8/10). Am schwierigsten sind dagegen die Paare mit dem Wassermann (3/10), dann den Zwillingen, dem Löwen, der Waage und dem Schützen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Skorpion und Skorpion: passt das zusammen?`,
+          content: `<p>8/10. Zwei Skorpione erleben eine extrem intensive Beziehung. Sie verstehen einander natürlich, aber gemeinsame Eifersucht kann zu intensiven Konflikten führen.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

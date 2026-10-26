@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-sagittario',
-  title: `Compatibilità amorosa del Sagittario: l'amore come avventura senza mappa`,
-  metaTitle: `Compatibilità amorosa Sagittario: chi tiene il suo passo?`,
-  metaDescription: `Il Sagittario vive l'amore come un'avventura, e non tutti sono pronti a partire senza sapere la destinazione.`,
+  title: `Compatibilità amorosa del Sagittario: con quali segni funziona?`,
+  metaTitle: `Sagittario: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Il Sagittario con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Sagittario insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Simbolo astrologico del Sagittario, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Il Sagittario vive l'amore come un'avventura, e non tutti sono pronti a partire senza sapere la destinazione.`,
-  introduction: `<p>Il Sagittario è il segno che vi proporrà un viaggio improvvisato il venerdì sera, che cambierà programma tre volte prima di pranzo e che, nonostante tutto, vi farà sentire che ogni momento con lui è un regalo. <strong>Non è disorganizzazione, è che il Sagittario vive con l'urgenza di chi sa che il mondo è troppo grande per restare fermi.</strong> E in amore, questa filosofia si traduce in un bisogno profondo di un partner che condivida la sua sete di libertà. Per vedere se il vostro legame regge a questo ritmo, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governato da Giove, il pianeta dell'espansione, il Sagittario porta in amore la stessa energia che mette in tutto il resto: entusiasmo contagioso, ottimismo quasi irrazionale, e una sincerità che a volte taglia più di quanto vorrebbe. Il Sagittario non mente, e se qualcosa non va, ve lo dirà. Senza filtri, senza diplomazia. È un pregio e un difetto nello stesso gesto.</p>
-<p>La sfida per chi ama un Sagittario è capire la differenza tra libertà e fuga. Il Sagittario non scappa da voi, ha solo bisogno di spazio per respirare. E il partner che capisce questa differenza è quello che resterà.</p>`,
+  excerpt: `Il Sagittario con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Il Sagittario non sta fermo, non per instabilità, ma perché ha sete di vivere. Non scappa dall'impegno, scappa dalla noia, e per lui la noia comincia quando la routine si installa senza che nessuno la metta in discussione. Dice quello che pensa, senza filtri: con lui sai sempre a che punto sei.</p>
+<p>Quello che vuole è un compagno di viaggio, in senso letterale e figurato. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Ariete e Leone sono i compagni d'avventura ideali, Fuoco con Fuoco, nessuno frena l'altro.`,
     `L'Acquario lo capisce a livello profondo: entrambi amano la libertà più di ogni altra cosa.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'con-chi-il-sagittario-vola-e-con-chi-si-schianta',
-      title: `Con chi il Sagittario vola, e con chi si schianta`,
-      content: `<p>L'Ariete (9/10) è il partner che non ha bisogno di spiegazioni. Entrambi segni di Fuoco, si lanciano nella relazione con la stessa energia esplosiva. <strong>Con l'Ariete, il Sagittario trova qualcuno che non solo accetta il suo ritmo, ma lo rilancia.</strong> Le discussioni possono essere accese, ma si risolvono in fretta, nessuno dei due ha voglia di perdere tempo con i rancori.</p>
-<p>Il Leone (9/10) aggiunge un elemento che il Sagittario adora: il dramma positivo. Con il Leone, ogni uscita diventa un evento, ogni viaggio un'epopea. La relazione è calda, generosa, piena di risate. L'unico punto di tensione è quando il Leone chiede esclusività assoluta e il Sagittario ha bisogno dei suoi spazi.</p>
-<p>L'Acquario (8/10) è una compatibilità più mentale che emotiva, ma non per questo meno forte. L'Acquario capisce il bisogno di indipendenza del Sagittario perché è lo stesso, e non lo giudica. Insieme, costruiscono una relazione non convenzionale che funziona proprio perché non segue le regole di nessuno.</p>
-<p>La Vergine (3/10) rappresenta la sfida più ardua. La Vergine vuole pianificare, controllare, ottimizzare, tutto ciò che il Sagittario vive come un freno. I Pesci (4/10) pongono un problema diverso: la loro emotività profonda richiede una delicatezza che il Sagittario, con la sua franchezza, non sempre riesce a offrire. I Gemelli (7/10), suo opposto zodiacale, creano una dinamica affascinante: la curiosità li unisce, ma l'incostanza di entrambi può rendere difficile costruire qualcosa di solido sul lungo periodo.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Il Sagittario con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Mancanza di connessione naturale. L'onestà brutale del Sagittario ferisce l'ipersensibile Pesci.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sul Sagittario in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con il Sagittario?`,
+          content: `<p>I segni che vanno più d'accordo con il Sagittario sono l'Ariete, i Gemelli e il Leone (9/10). Al contrario, le coppie più difficili sono con il Toro, il Capricorno e i Pesci (3/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Sagittario insieme: funziona?`,
+          content: `<p>8/10. Fuoco e Fuoco. Coppia energica e ottimista. Vivono l'avventura insieme e condividono un grande entusiasmo.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

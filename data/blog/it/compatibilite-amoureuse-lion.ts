@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-leone',
-  title: `Compatibilità amorosa del Leone: amare sotto i riflettori`,
-  metaTitle: `Compatibilità amorosa Leone: chi brilla al suo fianco?`,
-  metaDescription: `Il Leone ama in grande, con gesti, con passione, con orgoglio. Ma ha bisogno di un partner che non si lasci eclissare.`,
+  title: `Compatibilità amorosa del Leone: con quali segni funziona?`,
+  metaTitle: `Leone: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Il Leone con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Leone insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Simbolo astrologico del Leone, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Il Leone ama in grande, con gesti, con passione, con orgoglio. Ma ha bisogno di un partner che non si lasci eclissare.`,
-  introduction: `<p>Il Leone non fa niente in piccolo, tantomeno amare. Quando si innamora, lo fa con tutto, i gesti, le parole, i grandi piani per il futuro. È il segno che vi porterà fiori un martedì qualunque, che vi presenterà a tutti i suoi amici dopo due settimane, che trasformerà ogni anniversario in un evento. <strong>Il Leone non ama in silenzio. Ama sotto i riflettori, e vuole che il mondo lo sappia.</strong> Per scoprire se questa energia trova il suo equilibrio nel vostro legame, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governato dal Sole, il Leone ha bisogno di essere al centro. Non per egoismo, o almeno, non solo per quello, ma perché la sua identità si costruisce nella relazione con gli altri. Essere ammirato, riconosciuto, apprezzato: per il Leone non è vanità, è ossigeno. E il partner giusto è quello che sa dargli questa luce senza perdere la propria.</p>
-<p>La vera domanda per chi ama un Leone non è "riesci a sopportare il suo ego?", è "riesci a brillare accanto a lui senza sentirti in ombra?"</p>`,
+  excerpt: `Il Leone con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Si dice spesso che il Leone pensi solo a sé. È più semplice di così: ha bisogno di vedere che la sua presenza conta, che l'altro lo guarda, che quello che porta viene riconosciuto. Non è vanità, è il suo modo di amare. Chi si cancella davanti a lui lo annoia, chi vuole prendere il suo posto lo sfinisce.</p>
+<p>L'ideale è qualcuno con una luce propria, che ammiri la sua in cambio. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Ariete e Sagittario sono i partner che lo capiscono al volo, Fuoco con Fuoco, senza compromessi.`,
     `La Bilancia lo affascina con la sua eleganza e il suo equilibrio, creando una coppia da copertina.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'chi-brilla-con-il-leone-e-chi-si-spegne',
-      title: `Chi brilla con il Leone, e chi si spegne`,
-      content: `<p>L'Ariete (9/10) è il partner che riesce a tenere testa al Leone senza farlo sentire minacciato. Entrambi segni di Fuoco, condividono la stessa energia esplosiva e lo stesso bisogno di vivere intensamente. <strong>Insieme, sono la coppia che entra in una stanza e la accende.</strong> L'unica insidia è la competizione: se entrambi vogliono avere ragione, la conversazione diventa un campo di battaglia.</p>
-<p>Il Sagittario (9/10) porta una dimensione diversa: l'avventura. Con il Sagittario, il Leone scopre che l'amore può essere anche libertà, esplorazione, risata. È una relazione che non si prende troppo sul serio, e proprio per questo funziona.</p>
-<p>La Bilancia (8/10) seduce il Leone con l'arma più efficace: l'ammirazione sincera. La Bilancia sa apprezzare la grandiosità del Leone senza sentirsi schiacciata, e in cambio gli offre l'eleganza e la diplomazia che lui a volte non ha. È una coppia che funziona socialmente come poche altre.</p>
-<p>Lo Scorpione (4/10) rappresenta una delle sfide più intense. L'attrazione è magnetica, due segni dominanti che si riconoscono a distanza, ma la convivenza quotidiana è un braccio di ferro. Il Leone vuole essere ammirato; lo Scorpione non ammira nessuno gratuitamente. Il Toro (5/10) pone un problema simile ma diverso: la sua testardaggine silenziosa può frustrare il Leone, abituato a ottenere attenzione con facilità. Quando queste coppie funzionano, è perché entrambi hanno imparato che l'amore non è una gara.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Il Leone con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Il Leone rischia di opprimere il sensibile Pesci. Hanno modi molto diversi di vivere l'amore.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sul Leone in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con il Leone?`,
+          content: `<p>I segni che vanno più d'accordo con il Leone sono l'Ariete e il Sagittario (9/10), poi i Gemelli, il Leone, la Bilancia e l'Acquario (8/10). Al contrario, le coppie più difficili sono con il Cancro e il Capricorno (3/10), poi il Toro, la Vergine, lo Scorpione e i Pesci (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Leone insieme: funziona?`,
+          content: `<p>8/10. Fuoco e Fuoco. Duo sgargiante: molta passione e carisma condiviso. La vita è eccitante, ma attenzione ai conflitti di ego.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

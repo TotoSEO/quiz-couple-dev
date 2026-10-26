@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-cancro',
-  title: `Compatibilità amorosa del Cancro: l'amore come rifugio (o come campo minato)`,
-  metaTitle: `Compatibilità amorosa Cancro: chi merita la sua fiducia?`,
-  metaDescription: `Il Cancro ama con tutto sé stesso e costruisce nidi emotivi per chi gli sta accanto. Ma non tutti i segni sanno abitare quello spazio.`,
+  title: `Compatibilità amorosa del Cancro: con quali segni funziona?`,
+  metaTitle: `Cancro: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Il Cancro con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Cancro insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Simbolo astrologico del Cancro, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Il Cancro ama con tutto sé stesso e costruisce nidi emotivi per chi gli sta accanto. Ma non tutti i segni sanno abitare quello spazio.`,
-  introduction: `<p>Il Cancro non ama a metà. Quando si apre a qualcuno, e ci mette tempo, perché la sua corazza esiste per un motivo, lo fa con una generosità emotiva che pochi altri segni possono eguagliare. <strong>Cucinare per voi, ricordare ogni dettaglio di una conversazione di tre mesi fa, preoccuparsi del vostro stato d'animo prima ancora che voi ne siate consapevoli</strong>: ecco come ama un Cancro. Per verificare se il vostro legame ha questa profondità, <a href="/it/segni-zodiacali-nomi-compatibilita/">scoprite la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governato dalla Luna, il Cancro vive l'amore attraverso le emozioni, non come concetto, ma come esperienza quotidiana e concreta. Il suo bisogno fondamentale è sentirsi al sicuro. Non protetto nel senso fisico, ma emotivamente. Sapere che l'altro non sparirà, non lo ridicolizzerà, non userà le sue vulnerabilità contro di lui.</p>
-<p>E qui sta il punto: non tutti i segni capiscono cosa significa davvero offrire sicurezza emotiva. Alcuni ci riescono naturalmente. Altri, con le migliori intenzioni, finiscono per ferire il Cancro proprio dove è più vulnerabile.</p>`,
+  excerpt: `Il Cancro con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Dietro la corazza, perché ce n'è sempre una, il Cancro è uno dei segni che danno di più in amore. Quando si sente al sicuro, c'è tutto intero: si ricorda di tutto, sente di cosa hai bisogno prima che tu l'abbia detto. E ci sono giorni in cui si chiude in sé stesso senza preavviso, cosa che l'altro prende spesso per un rifiuto.</p>
+<p>Quello che cerca non è l'avventura, è un posto dove può essere sé stesso senza difendersi. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Scorpione sono le sue combinazioni più forti, sicurezza emotiva e profondità.`,
     `Con i Pesci si crea una connessione quasi telepatica, fatta di sensibilità condivisa.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'chi-sa-abitare-il-mondo-emotivo-del-cancro',
-      title: `Chi sa abitare il mondo emotivo del Cancro`,
-      content: `<p>Il Toro (9/10) è probabilmente il partner più rassicurante per il Cancro. Entrambi cercano stabilità, un focolare, qualcosa di concreto su cui poggiare. <strong>Il Toro non ha paura della profondità emotiva del Cancro, semplicemente la accoglie, senza drammi.</strong> Questa combinazione produce relazioni che durano decenni, costruite su una fiducia silenziosa ma solidissima.</p>
-<p>Lo Scorpione (9/10) offre qualcosa di diverso: l'intensità. Il Cancro e lo Scorpione si riconoscono istintivamente. Entrambi segni d'Acqua, vivono le emozioni come correnti profonde, non come onde di superficie. Il rischio? Che l'intensità diventi possessività. Ma quando questa coppia trova il suo equilibrio, crea un legame che pochi altri possono raggiungere.</p>
-<p>I Pesci (9/10) completano il trittico d'Acqua con una connessione quasi mistica. Con i Pesci, il Cancro si sente finalmente capito senza dover spiegare. Il pericolo è che entrambi si perdano nelle emozioni senza che nessuno dei due riporti la coppia alla realtà.</p>
-<p>All'opposto, l'Ariete (4/10) e il Sagittario (4/10) rappresentano le sfide più ardue. Non per cattiveria, ma perché il loro modo di amare è veloce, diretto, poco incline a sostare nello spazio emotivo di cui il Cancro ha bisogno. Il Cancro si sente trascurato; l'Ariete o il Sagittario si sentono soffocati. È un circolo vizioso che richiede una maturità notevole da entrambe le parti per essere spezzato.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Il Cancro con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Armonia eccezionale. Entrambi condividono grande empatia e dolcezza. È una coppia complice e sognatrice.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sul Cancro in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con il Cancro?`,
+          content: `<p>I segni che vanno più d'accordo con il Cancro sono il Toro, lo Scorpione e il Capricorno (9/10). Al contrario, le coppie più difficili sono con l'Acquario (2/10), poi il Leone (3/10), poi l'Ariete, i Gemelli, la Bilancia e il Sagittario (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Cancro insieme: funziona?`,
+          content: `<p>8/10. Relazione molto profonda sul piano emotivo. Condividono empatia e bisogno di sicurezza, il che crea una grande armonia.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

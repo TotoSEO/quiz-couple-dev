@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'cancer-love-compatibility',
-  title: `Cancer love compatibility: who can they truly open their heart to?`,
-  metaTitle: `Cancer love compatibility: the unions that fulfil them`,
-  metaDescription: `Cancer gives everything in love, sometimes too much. Which signs know how to receive that love without taking advantage? Our full compatibility analysis.`,
+  title: `Cancer love compatibility: which signs does it work with?`,
+  metaTitle: `Cancer Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Cancer with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Cancer partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Cancer astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Cancer gives everything in love, sometimes too much. Which signs know how to receive that love without taking advantage?`,
-  introduction: `<p>Behind the shell, because there always is one, Cancer is one of the most deeply affectionate signs in the zodiac. What they give in love, when they feel safe, goes beyond what most other signs are capable of offering. <strong>A total presence. An extraordinary emotional memory.</strong> The ability to sense what the other person needs before they've even said it. To discover how your sign and name align with Cancer, try <a href="/en/zodiac-signs-names-compatibility/">our astrological compatibility tool</a>.</p>
-<p>Ruled by the Moon, Cancer is cyclical by nature. There are days when they overflow with affection, and days when they retreat inward without explanation. Their ideal partner is one who understands this rhythm, who doesn't interpret it as rejection, who doesn't force the door when it's closed, but who is there when it opens again.</p>
-<p>In love, Cancer isn't looking for adventure. They're looking for a home. Not necessarily four walls and a garden, <strong>more like an emotional space where they can be themselves without having to defend who they are</strong>. The signs that can offer that are the ones Cancer truly blossoms with. The others create, often unintentionally, an insecurity that shuts them down completely.</p>`,
+  excerpt: `Cancer with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Behind the shell, because there's always one, Cancer is one of the signs that give the most in love. When they feel safe, they're there completely: they remember everything, they sense what you need before you've said it. And there are days when they withdraw into themselves without warning, which the other person often takes for rejection.</p>
+<p>What they're looking for isn't adventure, it's a place where they can be themselves without having to defend themselves. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Scorpio, Taurus, Capricorn: three solid matches, each for a different reason.`,
     `With Pisces, it's a cocoon of tenderness, just be careful not to lose touch with reality.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'best-and-hardest-pairings',
-      title: `What their best and hardest pairings reveal`,
-      content: `<p>Cancer-Scorpio (9/10) is one of the most intuitive compatibilities in the zodiac. These two Water signs understand each other without needing to explain everything, which is exactly what Cancer needs. Scorpio, in return, finds in Cancer a loyalty and emotional depth that deeply reassures them.</p>
-<p>With Capricorn (9/10), their opposite, Cancer finds something different but equally precious: structure. Capricorn isn't demonstrative, but they're there, reliable, solid. And for a Cancer who sometimes fears that love could disappear overnight, that constancy is worth its weight in gold.</p>
-<p>On the flip side, Aquarius (2/10) is probably their most difficult pairing. Aquarius is rational where Cancer is emotional. Aquarius values freedom where Cancer craves attachment. <strong>It's not that one is better than the other, it's that their fundamental needs point in opposite directions.</strong> Leo (3/10) poses a similar challenge: Leo's need to be the centre of attention can unintentionally overshadow Cancer, who prefers to build in intimacy rather than in the spotlight.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Cancer with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Cancer (Water) and Pisces (Water) get along very well. Both Water signs share deep empathy and gentleness. The securing, maternal Cancer brings support and comfort to Pisces, and the imaginative, altruistic Pisces brings romance and devotion to Cancer. Their relationship is very tender: they mutually nourish their dreams and loyalty, forming a close-knit, protective couple.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Cancer in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Cancer?`,
+          content: `<p>The signs that get along best with Cancer are Taurus, Scorpio and Capricorn (9/10). On the other hand, the hardest matches are with Aquarius (2/10), then Leo (3/10), then Aries, Gemini, Libra and Sagittarius (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Cancer together: does it work?`,
+          content: `<p>8/10. A deeply emotional relationship. Two Cancers share immense empathy and a mutual need for security, creating great harmony. They build a warm and protective home together. However, they should be careful not to become too insular in their emotional world.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-scorpione',
-  title: `Compatibilità amorosa dello Scorpione: l'amore senza mezze misure`,
-  metaTitle: `Compatibilità amorosa Scorpione: chi regge la sua intensità?`,
-  metaDescription: `Lo Scorpione ama senza mezze misure, e pretende lo stesso dall'altro. Quali segni possono reggere questa intensità?`,
+  title: `Compatibilità amorosa dello Scorpione: con quali segni funziona?`,
+  metaTitle: `Scorpione: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Lo Scorpione con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Scorpione insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Simbolo astrologico dello Scorpione, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Lo Scorpione ama senza mezze misure, e pretende lo stesso dall'altro. Quali segni possono reggere questa intensità?`,
-  introduction: `<p>Se avete mai amato uno Scorpione, o se lo siete, sapete che l'amore, per questo segno, non è una leggerezza. <strong>Non è una casella da spuntare, né un'esperienza tra le altre.</strong> È qualcosa che coinvolge tutto: le emozioni, il corpo, la lealtà, le fragilità più profonde. Lo Scorpione non fa le cose a metà, e pretende la stessa profondità dall'altro. Volete sapere se siete all'altezza di questa intensità? <a href="/it/segni-zodiacali-nomi-compatibilita/">Calcolate la vostra compatibilità amorosa tra segni e nomi</a>.</p>
-<p>Governato da Marte e Plutone, lo Scorpione è un segno di trasformazione. Entra in una relazione con l'intenzione, consapevole o meno, di cambiarla, sé stesso, l'altro, o entrambi. Le sue storie d'amore non sono mai banali. Lasciano un segno, anche quando finiscono. <strong>Soprattutto quando finiscono.</strong></p>
-<p>Quello che lo Scorpione cerca in amore è qualcuno capace di raggiungerlo nelle profondità, non qualcuno che resta in superficie aspettando che risalga. A volte tiene a distanza per mettere alla prova, per vedere se l'altro resta nonostante tutto. Non è manipolazione. È autoprottezione in qualcuno che ha imparato che non tutti sono capaci di mantenere la promessa implicita di un amore totale.</p>`,
+  excerpt: `Lo Scorpione con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Se avete mai amato uno Scorpione, sapete che per lui l'amore non è una cosa leggera. Ci mette tutto: le emozioni, il corpo, la lealtà, le sue ferite più profonde. E si aspetta lo stesso dall'altro. A volte tiene le distanze per vedere se l'altro resta lo stesso: non è manipolazione, è protezione.</p>
+<p>Quello che cerca è qualcuno che non resti in superficie, e che non se ne vada quando diventa difficile. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Cancro, Vergine, Capricorno: le tre unioni più profonde e durature per lo Scorpione.`,
     `Con i Pesci crea una connessione emotiva che poche altre combinazioni raggiungono.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'chi-puo-davvero-reggere-con-uno-scorpione',
-      title: `Chi può reggere con uno Scorpione`,
-      content: `<p>Il Cancro (9/10) è probabilmente la compatibilità più istintiva dello Scorpione. Entrambi segni d'Acqua, non hanno bisogno di spiegare tutto, si capiscono a un livello che le parole non sempre raggiungono. Il Cancro offre allo Scorpione una dolcezza protettiva, e lo Scorpione dà al Cancro la profondità emotiva di cui ha sete.</p>
-<p>La Vergine (9/10) è una compatibilità meno ovvia ma altrettanto solida. Quello che unisce questi due segni è la loro serietà comune di fronte all'impegno. Né l'uno né l'altra si impegna alla leggera, e quando lo fanno, è per costruire qualcosa che duri.</p>
-<p>Con l'Acquario (3/10), lo Scorpione si scontra con un'incompatibilità di fondo. <strong>L'Acquario razionalizza dove lo Scorpione sente.</strong> Prende distanza dove lo Scorpione cerca la fusione. Questi due modi di essere non si incontrano quasi mai a metà strada, e la frustrazione che ne nasce è spesso più forte dell'attrazione iniziale.</p>
-<p>Due Scorpioni insieme (8/10)? Una relazione straordinariamente intensa, ricca di complicità, e di conflitti altrettanto intensi. Si capiscono meglio di chiunque altro. Ma sanno anche esattamente quali tasti premere quando le cose non vanno. L'equilibrio di questa coppia dipende dalla loro capacità di non trasformare la conoscenza reciproca in un'arma.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Lo Scorpione con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Magnifica complicità. Due segni molto intuitivi che creano una connessione fusionale e dolcissima.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sullo Scorpione in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con lo Scorpione?`,
+          content: `<p>I segni che vanno più d'accordo con lo Scorpione sono il Cancro e la Vergine (9/10), poi il Toro, lo Scorpione, il Capricorno e i Pesci (8/10). Al contrario, le coppie più difficili sono con l'Acquario (3/10), poi i Gemelli, il Leone, la Bilancia e il Sagittario (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Scorpione insieme: funziona?`,
+          content: `<p>8/10. Intensità allo stato puro. Forte osmosi emotiva, ma gli eccessi di gelosia e testardaggine vanno controllati.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

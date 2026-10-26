@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-vierge',
-  title: `Compatibilité amoureuse de la Vierge : qui sait lire entre ses lignes ?`,
-  metaTitle: `Compatibilité amoureuse Vierge : l'amour sous toutes ses facettes`,
-  metaDescription: `La Vierge aime en silence, en actes, en détails que personne ne remarque. Quels signes savent lire cet amour discret ? Analyse de ses compatibilités.`,
+  title: `Compatibilité amoureuse de la Vierge : avec quels signes ça marche ?`,
+  metaTitle: `Vierge : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `La Vierge avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Vierges ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Symbole astrologique de la Vierge, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `La Vierge aime en silence, en actes, en détails que personne d'autre ne remarque. Quels signes savent lire cet amour discret ?`,
-  introduction: `<p>La Vierge n'envoie pas de grands signes. Elle ne fait pas de déclarations fracassantes. Ce qu'elle fait, c'est se souvenir de ce que vous aimez dans votre café, préparer exactement ce dont vous avez besoin le jour où vous allez mal, organiser les choses en coulisses pour que votre vie soit un peu plus fluide qu'elle ne l'était. <strong>Son amour se lit dans les détails, et il faut savoir regarder.</strong> Pour savoir si votre signe et votre prénom parlent le même langage que la Vierge, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">le test de compatibilité amoureuse par signe et prénom</a>.</p>
-<p>Gouvernée par Mercure comme les Gémeaux, mais d'une façon radicalement différente, la Vierge est analytique, précise, attentive. Elle réfléchit avant d'agir. Elle pèse les mots avant de les dire. Cette rigueur que certains prennent pour de la froideur est en réalité une forme de respect : elle ne dit pas ce qu'elle ne pense pas, et elle ne promet pas ce qu'elle ne peut pas tenir.</p>
-<p>En amour, la Vierge a besoin d'un partenaire qui apprécie cette honnêteté, <strong>qui ne lui demande pas d'être plus démonstrative qu'elle n'est</strong>, mais qui sait reconnaître la valeur de ce qu'elle donne concrètement. Les signes qui le comprennent naturellement sont ceux avec qui elle s'ouvre vraiment. Les autres la trouvent distante, sans jamais savoir ce qu'ils ont raté.</p>`,
+  excerpt: `La Vierge avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>La Vierge ne fait pas de grandes déclarations. Elle se souvient de comment vous aimez votre café, elle prépare ce qu'il faut le jour où vous allez mal, elle arrange les choses en coulisses pour que votre vie soit un peu plus simple. Son amour se lit dans les détails, et il faut savoir regarder.</p>
+<p>Les signes qui comprennent ça naturellement sont ceux avec qui elle s'ouvre. Les autres la trouvent distante, sans savoir ce qu'ils ont raté. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Taureau, Capricorne, Scorpion : ses unions les plus solides, chacune pour des raisons différentes.`,
     `Avec les Poissons, son opposé, c'est une fascination réciproque qui peut devenir très belle.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'meilleures-associations-et-malentendus',
-      title: `Ses meilleures associations, et les malentendus les plus fréquents`,
-      content: `<p>Avec le Taureau (9/10) et le Capricorne (9/10), la Vierge trouve des partenaires qui parlent le même langage : celui des actes concrets, de la fiabilité, des engagements tenus. Ces unions ne font pas de bruit, mais elles durent.</p>
-<p>Le Scorpion (9/10) est une compatibilité moins évidente mais tout aussi profonde. Le Scorpion va au fond des choses, exactement comme la Vierge, juste par un chemin différent (l'émotionnel plutôt que le rationnel). Ensemble, ils construisent une intimité réelle, basée sur la confiance mutuelle et une exigence partagée.</p>
-<p>Avec les Poissons (8/10), son opposé, la relation est plus complexe mais potentiellement très belle. <strong>Le Poissons apporte à la Vierge ce qui lui manque : de l'imagination, de la douceur, la capacité de lâcher prise.</strong> La Vierge apporte au Poissons ce dont il a besoin : de la structure et un ancrage dans le réel. Quand ça fonctionne, c'est l'un des couples les plus complémentaires du zodiaque.</p>
-<p>Le Verseau (2/10) représente l'association la plus difficile pour la Vierge. Leurs modes de pensée, pragmatique vs idéaliste, se heurtent sur presque tout. Ce n'est pas insurmontable, mais ça demande une volonté que les deux signes n'ont pas toujours.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `La Vierge avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons apportent ce que la Vierge ne sait pas produire, une souplesse, une façon de laisser aller. Elle leur apporte le cadre qui leur manque. C'est une opposition qui fonctionne souvent, à condition qu'elle renonce à les corriger et qu'ils renoncent à tout attendre d'elle.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur la Vierge en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec la Vierge ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec la Vierge sont le Taureau, le Scorpion et le Capricorne (9/10). À l'inverse, les couples les plus difficiles sont avec le Verseau (2/10), puis le Bélier, les Gémeaux, le Lion, la Balance et le Sagittaire (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Vierges ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux personnes qui remarquent tout, y compris ce que l'autre n'a pas fait. La maison est impeccable et l'atmosphère peut devenir étouffante. Ils se comprennent parfaitement sur la méthode et s'usent sur l'exigence : à deux, l'anxiété ne se calme pas, elle se confirme.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',
