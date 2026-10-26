@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-wassermann',
-  title: `Liebeskompatibilität des Wassermanns: Freigeist mit Herz, wenn man ihn lässt`,
-  metaTitle: `Liebeskompatibilität Wassermann: Wer versteht seine Freiheit?`,
-  metaDescription: `Der Wassermann liebt anders als alle anderen, unkonventionell, frei und auf seine eigene Art tief. Erfahren Sie, welche Zeichen damit umgehen können.`,
+  title: `Liebeskompatibilität des Wassermanns: Mit welchen Zeichen passt es?`,
+  metaTitle: `Wassermann: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Wassermann mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Wassermann und Wassermann zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Astrologisches Symbol des Wassermanns, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Wassermann liebt anders als alle anderen, unkonventionell, frei und auf seine eigene Art tief.`,
-  introduction: `<p>Der Wassermann ist das Zeichen, das am häufigsten als „beziehungsunfähig" abgestempelt wird. Und am häufigsten zu Unrecht. <strong>Der Wassermann kann lieben, er weigert sich nur, es auf die herkömmliche Art zu tun</strong>. Er braucht keinen Partner, der sein halbes Ich ist. Er braucht jemanden, der sein ganzes eigenes Ich hat, und neben ihm wächst, statt an ihm zu kleben. Um herauszufinden, ob Ihre Konstellation diese Freiheit zulässt, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Uranus und Saturn regieren den Wassermann, Revolution und Struktur, Zukunft und Tradition. Dieses Spannungsfeld erklärt vieles: Der Wassermann will das System brechen, aber er braucht ein Fundament, von dem aus er bricht. In der Liebe bedeutet das: Er will eine Beziehung, die ihm Sicherheit gibt, ohne ihm Ketten anzulegen. <strong>Eine hohe Anforderung, aber nicht unmöglich für die richtigen Zeichen.</strong></p>
-<p>Die größte Ironie beim Wassermann: Er ist das humanitärste Zeichen im Tierkreis, liebt die Menschheit als Ganzes, und tut sich trotzdem schwer mit der Intimität zu zweit. Wer das versteht, hat den Schlüssel zu seinem Herzen.</p>`,
+  excerpt: `Der Wassermann mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Der Wassermann ist wohl das am meisten missverstandene Zeichen in der Liebe. Man nennt ihn distanziert, unnahbar, bindungsunfähig. Dabei liebt er, nur nicht so, wie man es ihm vorschreibt: keine Verschmelzung, kein „du bist alles für mich“. Er will einen Partner, der zuerst ein Freund ist, mit dem er um drei Uhr morgens die Welt neu erfinden kann, und er braucht Luft, um zum anderen zurückzukommen.</p>
+<p>Wer ihn festhalten will, verliert ihn. Wer ihn frei lässt, bekommt ihn zurück. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Zwillinge und Waage sind seine natürlichen Verbündeten, intellektuell, leicht und ohne Erstickungsgefahr.`,
     `Der Schütze teilt seinen Freiheitsdrang und seine Abenteuerlust.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'freiheit-und-naehe-das-ewige-paradox',
-      title: `Freiheit und Nähe: das ewige Paradox`,
-      content: `<p>Die Zwillinge (9/10) sind für den Wassermann ein Glücksgriff. Beide brauchen geistige Stimulation, beide hassen Routine, beide können stundenlang über Ideen reden, die kein anderes Zeichen interessieren würden. <strong>Es ist eine Beziehung, die im Kopf beginnt, und erst von dort ins Herz wandert.</strong> Und genau so mag es der Wassermann.</p>
-<p>Die Waage (8/10) bringt eine diplomatische Wärme mit, die dem manchmal eckigen Wassermann guttut. Sie glättet, wo er provoziert. Sie verbindet, wo er sich isoliert. Und sie tut das alles, ohne seine Unabhängigkeit zu bedrohen, weil sie selbst genug Eigenständigkeit mitbringt.</p>
-<p>Der Schütze (8/10) ist ein Partner auf Augenhöhe: Beide blicken nach vorn, beide wollen die Welt verstehen, beide brauchen Freiheit wie die Luft zum Atmen. Die Gefahr? Dass beide so beschäftigt mit ihren individuellen Abenteuern sind, dass sie vergessen, auch gemeinsame zu schaffen.</p>
-<p>Der Stier (3/10) und der Skorpion (4/10) stellen den Wassermann vor seine härtesten Prüfungen. Der Stier will Beständigkeit und Besitz, zwei Konzepte, die den Wassermann nervös machen. Der Skorpion fordert emotionale Tiefe und Exklusivität, und interpretiert die Distanz des Wassermanns als Gleichgültigkeit, was sie nicht ist. <strong>Diese Verbindungen scheitern selten an mangelnder Anziehung, sie scheitern an fundamental verschiedenen Definitionen dessen, was Liebe bedeutet.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Wassermann mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Fische (Wasser) funktionieren unterschiedlich und erfordern große Anstrengungen für ein Auskommen.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Wassermann in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Wassermann?`,
+          content: `<p>Am besten verstehen sich mit dem Wassermann die Zwillinge und die Waage (9/10), dann der Widder, der Löwe, der Schütze und der Wassermann (8/10). Am schwierigsten sind dagegen die Paare mit dem Krebs, der Jungfrau, dem Steinbock und den Fischen (2/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Wassermann und Wassermann: passt das zusammen?`,
+          content: `<p>8/10. Ein äußerst intellektuelles, unabhängiges und humanistisches Duo. Zwei Wassermänner teilen idealistische Projekte und gewähren sich gegenseitig die Freiheit, die beide als lebenswichtig erachten.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

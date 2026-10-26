@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-vergine',
-  title: `Compatibilità amorosa della Vergine: l'amore nei dettagli`,
-  metaTitle: `Compatibilità amorosa Vergine: chi sa apprezzare la sua cura?`,
-  metaDescription: `La Vergine ama con attenzione, precisione e dedizione silenziosa. Ma non tutti i segni capiscono questo linguaggio.`,
+  title: `Compatibilità amorosa della Vergine: con quali segni funziona?`,
+  metaTitle: `Vergine: compatibilità amorosa con i 12 segni`,
+  metaDescription: `La Vergine con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Vergine insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Simbolo astrologico della Vergine, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `La Vergine ama con attenzione, precisione e dedizione silenziosa. Ma non tutti i segni capiscono questo linguaggio.`,
-  introduction: `<p>La Vergine non vi dirà "ti amo" con un mazzo di rose rosse. Ve lo dirà riordinando il vostro armadio, ricordandosi quella cosa che vi serviva, preparando il caffè esattamente come piace a voi. <strong>L'amore della Vergine è nei dettagli, ed è proprio lì che molti non lo vedono.</strong> Se volete capire se il vostro partner sa riconoscere questo linguaggio, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governata da Mercurio, la Vergine è un segno che analizza tutto, compreso l'amore. Non per rovinarlo, ma per capirlo. Prima di lasciarsi andare, ha bisogno di sapere che il terreno è solido. Che l'altro è affidabile. Che i conti tornano, non solo quelli del cuore ma anche quelli della quotidianità. Per questo la Vergine può sembrare fredda all'inizio. In realtà, sta solo raccogliendo dati prima di investire tutto.</p>
-<p>Il partner giusto per la Vergine non è quello che la travolge con la passione, è quello che la rassicura con la coerenza. E che ha la pazienza di aspettare che si apra, perché quando lo fa, la Vergine ama con una dedizione che pochi altri segni possono offrire.</p>`,
+  excerpt: `La Vergine con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>La Vergine non fa grandi dichiarazioni. Si ricorda di come prendi il caffè, prepara quello che serve il giorno in cui stai male, sistema le cose dietro le quinte perché la tua vita sia un po' più semplice. Il suo amore si legge nei dettagli, e bisogna saper guardare.</p>
+<p>I segni che lo capiscono da soli sono quelli con cui si apre. Gli altri la trovano distante, senza sapere cosa si sono persi. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Capricorno sono le sue compatibilità più solide, Terra con Terra, concreti fino in fondo.`,
     `Con lo Scorpione nasce un legame profondo, basato su lealtà reciproca e serietà.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'le-compatibilita-che-costruiscono-e-quelle-che-destabilizzano',
-      title: `Le compatibilità che costruiscono, e quelle che destabilizzano`,
-      content: `<p>Il Toro (9/10) e la Vergine si capiscono senza bisogno di grandi spiegazioni. Entrambi segni di Terra, condividono un approccio pragmatico alla vita e all'amore. <strong>Non servono dichiarazioni epiche, bastano gesti concreti e una presenza costante.</strong> Questa coppia costruisce relazioni solide come case di pietra: niente fronzoli, ma una solidità che resiste al tempo.</p>
-<p>Il Capricorno (9/10) porta la stessa affidabilità del Toro, con un'ambizione in più. La Vergine ammira la determinazione del Capricorno, e il Capricorno apprezza la capacità della Vergine di curare ogni dettaglio. Insieme, sono una macchina perfetta, il rischio è dimenticare che una relazione ha bisogno anche di momenti di pura leggerezza.</p>
-<p>Lo Scorpione (9/10) è una compatibilità che sorprende. La Vergine, apparentemente razionale, e lo Scorpione, apparentemente tutto emozione, trovano un punto d'incontro nella serietà con cui entrambi prendono l'impegno. Nessuno dei due gioca con i sentimenti dell'altro. Quando si impegnano, lo fanno sul serio.</p>
-<p>Il Sagittario (3/10) e i Gemelli (4/10) rappresentano le sfide più grandi. Il Sagittario è troppo imprevedibile, troppo "vediamo dove ci porta il vento" per una Vergine che ha bisogno di un piano. I Gemelli, pur condividendo lo stesso pianeta reggente, usano Mercurio in modo opposto: dove la Vergine organizza, i Gemelli improvvisano. Il Cancro (8/10) merita una nota a parte: la sua dolcezza disarma la Vergine e la invita a mollare il controllo, un po' alla volta. È una relazione che cresce lentamente, e proprio per questo dura.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `La Vergine con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Opposti complementari. I Pesci portano immaginazione e indulgenza, la Vergine organizza il lato pratico.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sulla Vergine in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con la Vergine?`,
+          content: `<p>I segni che vanno più d'accordo con la Vergine sono il Toro, lo Scorpione e il Capricorno (9/10). Al contrario, le coppie più difficili sono con l'Acquario (2/10), poi l'Ariete, i Gemelli, il Leone, la Bilancia e il Sagittario (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Vergine insieme: funziona?`,
+          content: `<p>8/10. Grande armonia nei dettagli e nell'organizzazione. Coppia strutturata, anche se devono evitare le critiche reciproche.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

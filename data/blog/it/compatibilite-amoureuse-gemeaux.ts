@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-gemelli',
-  title: `Compatibilità amorosa dei Gemelli: l'amore come conversazione infinita`,
-  metaTitle: `Compatibilità amorosa Gemelli: chi riesce a non annoiarli?`,
-  metaDescription: `I Gemelli hanno bisogno di un partner che li stimoli mentalmente prima ancora che emotivamente. Scopri quali segni riescono a tenere vivo il dialogo…`,
+  title: `Compatibilità amorosa dei Gemelli: con quali segni funziona?`,
+  metaTitle: `Gemelli: compatibilità amorosa con i 12 segni`,
+  metaDescription: `I Gemelli con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Gemelli insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Simbolo astrologico dei Gemelli, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `I Gemelli hanno bisogno di un partner che li stimoli mentalmente prima ancora che emotivamente. Quali segni ci riescono?`,
-  introduction: `<p>Innamorarsi di un Gemelli è facile. Tenerlo è un altro paio di maniche. Non perché sia infedele per natura, questo è un cliché che andrebbe pensionato, ma perché <strong>i Gemelli hanno un bisogno quasi fisico di novità mentale</strong>. Se la conversazione si spegne, se la routine prende il sopravvento senza niente a ravvivarla, il Gemelli non litigherà. Semplicemente, comincerà a guardare altrove. Per scoprire se il vostro legame ha le carte in regola, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governati da Mercurio, il pianeta della comunicazione, i Gemelli vivono l'amore come un dialogo. Il partner ideale per loro è qualcuno con cui parlare per ore senza che la conversazione diventi prevedibile. Qualcuno che porti idee nuove, prospettive diverse, una leggerezza intelligente. Non vogliono un'ancora, vogliono un compagno di viaggio.</p>
-<p>Ecco, segno per segno, chi riesce a tenere acceso quel dialogo, e chi lo spegne senza nemmeno rendersene conto.</p>`,
+  excerpt: `I Gemelli con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Se c'è una cosa che i Gemelli odiano, è sentirsi chiusi: in una casella, in una routine, in un'idea di sé che l'altro ha deciso al posto loro. Li dicono instabili, sono piuttosto più persone in una. Si innamorano di una mente prima che di un corpo, e il giorno in cui la conversazione si ferma, qualcosa si spegne.</p>
+<p>Quindi i segni che vanno bene per loro sono quelli che non provano a fissarli. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Bilancia e Acquario sono le sue anime gemelle intellettuali, aria incontra aria.`,
     `Con l'Ariete nasce una complicità immediata, fatta di ritmo e di sfide reciproche.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'le-connessioni-che-funzionano-e-quelle-che-stridono',
-      title: `Le connessioni che funzionano, e quelle che stridono`,
-      content: `<p>La Bilancia (9/10) è forse il partner più naturale per i Gemelli. Entrambi segni d'Aria, condividono l'amore per il dialogo, per l'estetica, per una vita sociale ricca. <strong>Con la Bilancia, i Gemelli trovano qualcuno che capisce il loro bisogno di leggerezza senza giudicarlo.</strong> L'unico rischio è che nessuno dei due prenda mai decisioni definitive, e la relazione resti sospesa in un eterno "vediamo".</p>
-<p>L'Acquario (9/10) offre qualcosa di diverso: una stimolazione intellettuale che rasenta la complicità telepatica. Questi due segni possono passare ore a discutere di idee improbabili e sentirsi perfettamente compresi. Il legame emotivo può essere meno tradizionale, ma è autentico a modo suo.</p>
-<p>Con la Vergine (4/10), il problema non è la mancanza di intelligenza, entrambi sono governati da Mercurio, dopo tutto. È che la Vergine usa quell'intelligenza per organizzare, controllare, pianificare. E i Gemelli vivono tutto questo come una gabbia. I Pesci (4/10) pongono una sfida diversa: il loro mondo emotivo è così profondo e sfumato che i Gemelli, abituati a stare in superficie con agilità, si sentono inadeguati. Non è colpa di nessuno, è un'incompatibilità di linguaggio.</p>
-<p>L'Ariete (8/10) funziona sorprendentemente bene: il suo fuoco accende la curiosità dei Gemelli, e la velocità dei Gemelli non spaventa l'Ariete. Due Gemelli insieme (7/10)? Un circo magnifico, pieno di idee e di caos, che funziona finché entrambi accettano che qualcuno, ogni tanto, deve occuparsi anche delle cose noiose.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `I Gemelli con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Incastro difficile. Il Pesci sognatore e introverso si sente superato dall'energia loquace dei Gemelli. Richiede grande empatia.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sui Gemelli in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con i Gemelli?`,
+          content: `<p>I segni che vanno più d'accordo con i Gemelli sono la Bilancia, il Sagittario e l'Acquario (9/10). Al contrario, le coppie più difficili sono con il Toro (3/10), poi il Cancro, la Vergine, lo Scorpione, il Capricorno e i Pesci (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Gemelli insieme: funziona?`,
+          content: `<p>8/10. Condividono molti punti in comune. Amano chiacchierare, scambiare idee e vivere nuove esperienze. Dinamizzano la coppia con umorismo, pur dovendo evitare la superficialità.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

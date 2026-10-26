@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-krebs',
-  title: `Liebeskompatibilität des Krebses: Wer darf hinter seine schützende Schale?`,
-  metaTitle: `Liebeskompatibilität Krebs: Wer erreicht sein verwundbares Herz?`,
-  metaDescription: `Der Krebs liebt intensiv und schützend, doch nicht jedes Zeichen versteht seine emotionale Tiefe. Finden Sie heraus, welche Verbindungen blühen…`,
+  title: `Liebeskompatibilität des Krebses: Mit welchen Zeichen passt es?`,
+  metaTitle: `Krebs: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Krebs mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Krebs und Krebs zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Astrologisches Symbol des Krebses, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Krebs liebt intensiv und schützend, doch nicht jedes Zeichen versteht seine emotionale Tiefe.`,
-  introduction: `<p>Wer den Krebs oberflächlich kennt, hält ihn vielleicht für überempfindlich. Wer ihn wirklich kennt, weiß: <strong>Der Krebs empfindet nicht zu viel, er empfindet nur ehrlicher als die meisten</strong>. In der Liebe bedeutet das eine Hingabe, die selten ist. Eine Fürsorge, die fast bedingungslos wirkt. Aber auch eine Verletzlichkeit, die das falsche Gegenüber gnadenlos ausnutzen kann. Um herauszufinden, ob Ihr Sternzeichen diese Tiefe versteht, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">prüfen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Der Mond regiert den Krebs, und damit auch seine Gefühlswelt, die wie Ebbe und Flut schwankt. In einer Beziehung braucht er vor allem eines: emotionale Sicherheit. Nicht Luxus, nicht Abenteuer, nicht ständige Bestätigung. Einfach die Gewissheit, dass der andere bleibt. Dass die Liebe ein sicherer Hafen ist und kein offenes Meer ohne Kompass.</p>
-<p>Das klingt simpel. Ist es aber nicht. Denn der Krebs testet diese Sicherheit ständig, manchmal bewusst, oft unbewusst. Und die Zeichen, die diese Tests bestehen, ohne genervt oder überfordert zu reagieren, sind die, mit denen er wahres Glück finden kann.</p>`,
+  excerpt: `Der Krebs mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Hinter dem Panzer, denn einen gibt es immer, ist der Krebs eines der Zeichen, die in der Liebe am meisten geben. Wenn er sich sicher fühlt, ist er ganz da: Er erinnert sich an alles, er spürt, was du brauchst, bevor du es gesagt hast. Und es gibt Tage, an denen er sich ohne Vorwarnung in sich zurückzieht, was der andere oft für Ablehnung hält.</p>
+<p>Was er sucht, ist kein Abenteuer, sondern ein Ort, an dem er er selbst sein kann, ohne sich verteidigen zu müssen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Fische schaffen die emotionale Sicherheit, die der Krebs über alles braucht.`,
     `Der Skorpion versteht seine Intensität, weil er selbst genauso tief empfindet.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'der-sichere-hafen-und-das-offene-meer',
-      title: `Der sichere Hafen und das offene Meer`,
-      content: `<p>Der Stier (9/10) ist für den Krebs wie ein Anker in stürmischer See. Beide wollen Sicherheit, beide bauen gern ein gemeinsames Zuhause, beide zeigen Liebe durch konkrete Taten statt große Worte. <strong>Es ist eine Verbindung, die sich anfühlt wie nach Hause kommen, vom ersten Tag an.</strong></p>
-<p>Die Fische (9/10) erreichen den Krebs auf einer Ebene, die kaum ein anderes Zeichen kennt: der emotionalen Intuition. Diese beiden verstehen sich oft ohne Worte. Was der Krebs fühlt, fühlen die Fische mit, und umgekehrt. Die Gefahr? Dass beide so tief in ihren Gefühlen versinken, dass sie den Kontakt zur praktischen Realität verlieren.</p>
-<p>Der Skorpion (8/10) bringt eine Intensität mit, die den Krebs nicht abschreckt, sondern anzieht. Hier treffen sich zwei Wasserzeichen, die wissen, was emotionale Tiefe bedeutet. Die Herausforderung liegt in der Eifersucht, die auf beiden Seiten schnell aufflammen kann.</p>
-<p>Schwieriger wird es mit dem Widder (4/10) und dem Schützen (4/10). Beide sind Feuerzeichen, die Freiheit und Spontaneität über alles schätzen, genau die Dinge, die den Krebs verunsichern. Der Widder hat keine Geduld für emotionale Tiefgänge, und der Schütze kann die Bedürfnisse des Krebses schnell als Einengung empfinden. <strong>Diese Kombinationen scheitern selten an mangelnder Zuneigung, sondern an grundverschiedenen Sprachen der Liebe.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Krebs mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Krebs (Wasser) und Fische (Wasser) verstehen sich sehr gut. Beide Wasserzeichen teilen tiefe Empathie und Sanftmut. Der mütterliche Krebs bringt dem Fisch Halt und Trost, und der einfallsreiche, altruistische Fisch bringt Romantik und Hingabe. Sie bilden ein eng verbundenes, beschützendes Paar.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Krebs in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Krebs?`,
+          content: `<p>Am besten verstehen sich mit dem Krebs der Stier, der Skorpion und der Steinbock (9/10). Am schwierigsten sind dagegen die Paare mit dem Wassermann (2/10), dann dem Löwen (3/10), dann dem Widder, den Zwillingen, der Waage und dem Schützen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Krebs und Krebs: passt das zusammen?`,
+          content: `<p>8/10. Zwei Krebse teilen eine sehr tiefe emotionale Beziehung. Beide sind empathisch und sehnen sich nach Sicherheit, was eine große Harmonie schafft. Sie bauen zusammen ein warmes und beschützendes Zuhause auf. Sie sollten jedoch darauf achten, sich nicht zu sehr in ihrer emotionalen Welt einzuschließen.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

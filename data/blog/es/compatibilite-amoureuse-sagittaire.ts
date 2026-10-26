@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-sagitario',
-  title: `Compatibilidad amorosa de Sagitario: los signos que no le cortan las alas`,
-  metaTitle: `Compatibilidad amorosa de Sagitario: quién le sigue sin frenarlo`,
-  metaDescription: `Sagitario necesita libertad como necesita respirar. Pero eso no significa que no quiera amar. Descubre qué signos saben acompañarle sin ponerle cadenas.`,
+  title: `Compatibilidad amorosa de Sagitario: ¿con qué signos funciona?`,
+  metaTitle: `Sagitario: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Sagitario con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Sagitario juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Símbolo astrológico de Sagitario, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Sagitario necesita libertad como necesita respirar. Pero eso no significa que no quiera amar. ¿Qué signos le acompañan sin ponerle cadenas?`,
-  introduction: `<p>Hay un malentendido enorme con Sagitario: se cree que no quiere comprometerse. No es eso. Lo que ocurre es que <strong>Sagitario necesita que el compromiso no se sienta como una jaula</strong>. Quiere explorar, crecer, descubrir, y quiere hacerlo con alguien al lado, no solo. Pero si siente que la relación le obliga a quedarse quieto, a renunciar a lo que le hace vibrar, se irá. No por falta de amor, por exceso de necesidad de vivir. Descubre si vuestros signos y nombres están alineados con <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestra herramienta de compatibilidad astrológica</a>.</p>
-<p>Regido por Júpiter, el planeta de la expansión y la abundancia, Sagitario piensa en grande. En el amor y en todo lo demás. No se conforma con relaciones que solo funcionan, quiere relaciones que signifiquen algo, que le enseñen algo, que le lleven a algún sitio. Si la historia es plana, aunque sea cómoda, se le queda pequeña.</p>
-<p>Su generosidad es real: cuando ama, comparte todo lo que tiene y lo que sabe. <strong>Su honestidad es total, a veces demasiado.</strong> Dice lo que piensa sin filtro, y no todos los signos están preparados para esa franqueza. Los que sí, encuentran en Sagitario un compañero de viaje incomparable.</p>`,
+  excerpt: `Sagitario con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Sagitario no para quieto, no por inestabilidad, sino porque tiene sed de vivir. No huye del compromiso, huye del aburrimiento, y para él el aburrimiento empieza cuando la rutina se instala sin que nadie la cuestione. Dice lo que piensa, sin filtro: con él, siempre sabes a qué atenerte.</p>
+<p>Lo que quiere es un compañero de viaje, en sentido literal y figurado. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Aries y Leo: fuego con fuego. Relaciones intensas, vibrantes, que nunca se estancan.`,
     `Géminis, su opuesto, le estimula intelectualmente como nadie, si ambos aceptan sus diferencias.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'los-companeros-que-le-hacen-volar',
-      title: `Los compañeros que le hacen volar y los que le atan`,
-      content: `<p>Aries (9/10) y Leo (9/10) son sus aliados de Fuego, con ellos la conexión es inmediata, eléctrica, llena de energía compartida. Los tres entienden que el amor tiene que ser una aventura, no una obligación. Juntos, se empujan mutuamente a ir más lejos sin que ninguno se sienta arrastrado.</p>
-<p>Géminis (9/10), su opuesto zodiacal, es una de sus relaciones más estimulantes. Ambos son curiosos, habladores, necesitan variedad. El riesgo es que <strong>ninguno de los dos quiera anclar la relación en algo concreto</strong>, pero cuando encuentran ese punto de apoyo, la combinación es brillante.</p>
-<p>Acuario (8/10) comparte con Sagitario el amor por la libertad y las ideas grandes. Es una relación donde ambos se sienten respirar, donde nadie le pide al otro que sea menos de lo que es. Quizá les falte algo de profundidad emocional, pero lo compensan con un respeto mutuo genuino.</p>
-<p>Tauro (3/10) y Virgo (4/10) son las asociaciones más complicadas. No porque estos signos sean malos compañeros, sino porque su forma de amar (constante, metódica, anclada) choca frontalmente con la de Sagitario. El Tauro quiere echar raíces donde Sagitario quiere echar a volar. Virgo le pide planificación donde Sagitario prefiere improvisar. Son choques de ritmo difíciles de resolver sin que alguno de los dos renuncie a parte de lo que es.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Sagitario con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Falta de conexión natural. La excesiva franqueza de Sagitario hiere al hipersensible Piscis, y las emociones de Piscis agotan a Sagitario.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Sagitario en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Sagitario?`,
+          content: `<p>Los signos que mejor se entienden con Sagitario son Aries, Géminis y Leo (9/10). En cambio, las parejas más difíciles son con Tauro, Capricornio y Piscis (3/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Sagitario juntos: ¿funciona?`,
+          content: `<p>8/10. Fuego y Fuego. Dos Sagitarios juntos forman una pareja enérgica y optimista. Viven la aventura juntos, compartiendo un gran entusiasmo por los viajes, la exploración y la libertad. Deben cuidar de no caer en la dispersión o la falta de compromiso.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

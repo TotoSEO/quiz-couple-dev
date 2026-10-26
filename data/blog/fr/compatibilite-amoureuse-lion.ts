@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-lion',
-  title: `Compatibilité amoureuse du Lion : les signes à la hauteur de son feu`,
-  metaTitle: `Compatibilité amoureuse Lion : qui mérite sa loyauté royale ?`,
-  metaDescription: `Le Lion aime avec panache et attend qu'on le lui rende. Quelles unions l'épanouissent vraiment, et lesquelles finissent par l'éteindre ?`,
+  title: `Compatibilité amoureuse du Lion : avec quels signes ça marche ?`,
+  metaTitle: `Lion : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Lion avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Lions ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Symbole astrologique du Lion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Lion aime avec panache et attend qu'on lui rende. Mais tous les signes ne jouent pas ce jeu-là.`,
-  introduction: `<p>On dit souvent que le Lion est égotiste. C'est réducteur. Ce qu'il cherche vraiment en amour, c'est de la réciprocité, juste une réciprocité très visible. Il a besoin de savoir que sa présence compte, que l'autre le voit, que ce qu'il apporte à la relation est reconnu. <strong>Ce n'est pas de la vanité. C'est son langage de l'amour.</strong> Curieux de savoir si votre signe est à la hauteur du Lion ? <a href="/signes-astrologiques-prenoms-compatibilite/">Découvrez votre compatibilité astrologique complète</a>.</p>
-<p>Gouverné par le Soleil, le Lion rayonne, et il a besoin d'un partenaire qui ne tente pas de couvrir cette lumière, mais qui peut briller à ses côtés sans entrer en compétition. La différence est subtile mais capitale. Quelqu'un qui s'efface devant lui l'ennuie. Quelqu'un qui veut prendre sa place l'épuise. L'idéal, c'est quelqu'un qui a sa propre lumière, et qui admire la sienne en retour.</p>
-<p>En amour, le Lion est généreux, protecteur, passionné. Quand il aime, il le fait à fond. <strong>Ses histoires ne sont jamais banales.</strong> Ce qui peut devenir un problème, c'est quand cette intensité n'est pas partagée, ou quand le partenaire ne sait pas comment lui montrer, dans son propre langage, que l'amour est bien là.</p>`,
+  excerpt: `Le Lion avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>On dit souvent que le Lion ne pense qu'à lui. C'est plus simple que ça : il a besoin de voir que sa présence compte, que l'autre le regarde, que ce qu'il apporte est reconnu. Ce n'est pas de la vanité, c'est sa façon d'aimer. Quelqu'un qui s'efface devant lui l'ennuie, quelqu'un qui veut prendre sa place l'épuise.</p>
+<p>L'idéal, c'est quelqu'un qui a sa propre lumière et qui admire la sienne en retour. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Sagittaire et Bélier partagent son énergie de Feu, leurs relations sont rarement tièdes.`,
     `La Balance lui apporte ce qu'il n'a pas : de la douceur et du recul.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'les-unions-qui-le-subliment',
-      title: `Les unions qui le subliment et celles qui le diminuent`,
-      content: `<p>Le Sagittaire (9/10) est peut-être son partenaire le plus naturel. Même élan, même appétit pour la vie, même incapacité à se contenter de quelque chose de tiède. Ensemble, ils créent quelque chose d'authentiquement lumineux, sans que l'un ait à s'effacer pour l'autre.</p>
-<p>La Balance (8/10) fonctionne différemment mais tout aussi bien. Elle apporte au Lion ce qu'il a du mal à trouver seul : du recul, de la douceur dans les conflits, une façon d'arrondir les angles sans perdre la substance. Le Lion, de son côté, donne à la Balance la chaleur et la direction dont elle manque parfois.</p>
-<p>Le Capricorne (3/10) est l'association qui coince le plus souvent. <strong>Pas parce que le Capricorne n'est pas capable d'aimer profondément, mais parce qu'il exprime rarement cet amour de la façon dont le Lion en a besoin.</strong> Le Lion lit l'amour dans les gestes visibles, les mots dits, les démonstrations. Le Capricorne l'exprime dans la durée, dans la présence discrète, dans le fait d'être là sans faire de bruit. Ces deux langages peuvent se manquer indéfiniment.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Lion avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons admirent le Lion sans réserve, ce qui le comble au début. Puis il se lasse d'un miroir qui ne renvoie jamais de contradiction. Eux se sentent écrasés sans savoir le dire. Le déséquilibre s'installe doucement et personne ne le nomme.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Lion en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Lion ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Lion sont le Bélier et le Sagittaire (9/10), puis les Gémeaux, la Balance et le Verseau (8/10). À l'inverse, les couples les plus difficiles sont avec le Cancer et le Capricorne (3/10), puis le Taureau, la Vierge, le Scorpion et les Poissons (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Lions ensemble, ça donne quoi ?`,
+          content: `<p>7/10. Deux Lions, c'est une maison chaleureuse, généreuse, où l'on reçoit beaucoup. C'est aussi deux personnes qui veulent la même place. Tant qu'ils brillent dans des domaines différents, tout va bien. Le jour où ils visent la même chose, la générosité se transforme en compétition.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

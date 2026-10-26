@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-verseau',
-  title: `Compatibilité amoureuse du Verseau : l'amour en toute liberté`,
-  metaTitle: `Compatibilité amoureuse Verseau : qui peut aimer sans posséder ?`,
-  metaDescription: `Le Verseau aime autrement, avec distance, intelligence et liberté. Quels signes comprennent cette façon d'aimer ? Notre analyse complète, sans compromis.`,
+  title: `Compatibilité amoureuse du Verseau : avec quels signes ça marche ?`,
+  metaTitle: `Verseau : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Verseau avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Verseaux ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Symbole astrologique du Verseau, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Verseau aime autrement, avec distance, intelligence et liberté. Quels signes comprennent cette façon d'aimer ?`,
-  introduction: `<p>Le Verseau est probablement le signe le plus incompris en amour. On le dit distant, détaché, incapable de s'engager vraiment. <strong>La réalité est plus nuancée : le Verseau aime, mais il refuse d'aimer comme on lui dit d'aimer.</strong> Il ne veut pas du modèle classique, la fusion, la dépendance, les « tu es tout pour moi ». Il veut un amour qui respecte son individualité. Pour vérifier si votre signe peut comprendre cette approche, <a href="/signes-astrologiques-prenoms-compatibilite/">essayez notre outil de compatibilité par signe et prénom</a>.</p>
-<p>Gouverné par Uranus, planète de la rupture et de l'innovation, le Verseau voit l'amour comme un espace de liberté partagée, pas comme une cage confortable. Il veut un partenaire qui soit d'abord un ami, un complice intellectuel, quelqu'un avec qui il peut refaire le monde à 3h du matin sans jamais s'ennuyer.</p>
-<p>Ce qui déroute les autres signes chez le Verseau, c'est son besoin d'espace. <strong>Ce n'est pas du désintérêt, c'est une condition de survie émotionnelle.</strong> Le Verseau a besoin de se retrouver seul pour revenir vers l'autre avec quelque chose à offrir. Si vous essayez de le retenir, il partira. Si vous le laissez libre, il reviendra toujours.</p>`,
+  excerpt: `Le Verseau avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Le Verseau est sans doute le signe le plus mal compris en amour. On le dit distant, détaché, incapable de s'engager. En fait, il aime, mais pas comme on lui dit d'aimer : pas de fusion, pas de « tu es tout pour moi ». Il veut un partenaire qui soit d'abord un ami, avec qui refaire le monde à trois heures du matin, et il a besoin d'air pour revenir vers l'autre.</p>
+<p>Si vous essayez de le retenir, il s'éloigne. Si vous le laissez libre, il revient. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Gémeaux, Balance, Sagittaire : ses trois partenaires les plus harmonieux et stimulants.`,
     `Avec le Lion, son opposé, l'attraction est magnétique, mais les conflits aussi.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'qui-peut-aimer-un-verseau-sans-le-perdre',
-      title: `Qui peut aimer un Verseau sans le perdre`,
-      content: `<p>Le Gémeaux (9/10) est son âme sœur intellectuelle. Ces deux signes d'Air fonctionnent sur la même fréquence, rapide, curieuse, jamais monotone. Ils peuvent passer des heures à parler, à débattre, à imaginer des projets impossibles. <strong>C'est l'association la plus légère du zodiaque, au meilleur sens du terme.</strong></p>
-<p>La Balance (9/10) partage avec le Verseau un amour de l'harmonie et de la conversation. Ce couple fonctionne parce que la Balance ne cherche pas à posséder le Verseau, elle cherche à le comprendre. Et le Verseau, en retour, offre à la Balance une perspective originale qui l'aide à sortir de ses hésitations.</p>
-<p>Le Sagittaire (8/10) est un compagnon d'aventure idéal. Ces deux signes partagent un amour de la liberté et une allergie à la routine. Ensemble, ils vivent une relation où chacun pousse l'autre à aller plus loin, sans jamais chercher à le retenir.</p>
-<p>Le Lion (6/10), son opposé zodiacal, exerce sur le Verseau une fascination complexe. Le Lion veut être au centre ; le Verseau refuse tout centralisme. Le Lion demande de l'admiration ; le Verseau n'admire que les idées. <strong>Quand ça fonctionne, c'est électrique. Quand ça ne fonctionne pas, c'est épuisant.</strong></p>
-<p>Le Taureau (3/10) est sans doute sa compatibilité la plus laborieuse. Le Taureau a besoin de stabilité, de présence physique, de routines rassurantes, tout ce que le Verseau vit comme une prison. L'incompréhension entre ces deux signes est souvent profonde et rarement résolue.</p>
-<p>Deux Verseaux ensemble (7/10) ? Un couple brillant, stimulant, plein d'idées, mais qui peut manquer de chaleur émotionnelle. Le risque : deux individus qui vivent en parallèle plutôt qu'ensemble, chacun dans sa bulle intellectuelle.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Verseau avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons ressentent, le Verseau conceptualise. Ils attendent qu'il devine ce qu'ils n'ont pas dit, il attend qu'on formule clairement. Chacun trouve l'autre à côté de la plaque. C'est l'association la moins évidente de tout le zodiaque pour le Verseau.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Verseau en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Verseau ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Verseau sont les Gémeaux et la Balance (9/10), puis le Bélier, le Lion, le Sagittaire et le Verseau (8/10). À l'inverse, les couples les plus difficiles sont avec le Cancer, la Vierge, le Capricorne et les Poissons (2/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Verseaux ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux Verseaux, c'est une maison pleine d'amis, de projets et de discussions jusqu'à trois heures du matin. Personne ne s'accroche à personne. Ce qui manque leur manque à tous les deux sans qu'ils l'admettent : les moments où l'on se dit simplement qu'on tient à l'autre.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

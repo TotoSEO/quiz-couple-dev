@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-acuario',
-  title: `Compatibilidad amorosa de Acuario: los signos que aman sin asfixiar`,
-  metaTitle: `Compatibilidad amorosa de Acuario: amar sin perder la libertad`,
-  metaDescription: `Acuario ama a su manera, con espacio, independencia y una mente que no para. ¿Qué signos entienden esa forma de querer sin tomárselo como indiferencia?`,
+  title: `Compatibilidad amorosa de Acuario: ¿con qué signos funciona?`,
+  metaTitle: `Acuario: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Acuario con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Acuario juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Símbolo astrológico de Acuario, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Acuario ama a su manera, con espacio, independencia y una mente que no para. ¿Qué signos entienden esa forma de querer?`,
-  introduction: `<p>Acuario es el signo más difícil de descifrar en el amor. No porque no sienta, sino porque <strong>lo que siente no se parece a lo que la mayoría espera del amor</strong>. No es posesivo, no es dependiente, no necesita hablar por teléfono cada noche ni saber dónde estás a cada momento. Y eso, para muchos signos, resulta desconcertante. Para saber si tu forma de amar es compatible con la suya, <a href="/es/signos-astrologicos-nombres-compatibilidad/">prueba nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
-<p>Regido por Urano, el planeta de la innovación y la ruptura, Acuario funciona fuera de las normas, incluidas las normas del amor. No le interesa la relación convencional si no tiene sentido para él. Lo que le importa es la conexión intelectual, la libertad de ser quien es, y la certeza de que el otro no intenta cambiarlo.</p>
-<p>Eso no significa que Acuario no ame profundamente. Lo hace. Pero <strong>su forma de amar se parece más a un compañerismo profundo que a un romance cinematográfico</strong>. Es el signo que te dejará ser tú mismo sin pedirte nada a cambio, y que espera, silenciosamente, que hagas lo mismo por él.</p>`,
+  excerpt: `Acuario con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Acuario es seguramente el signo peor entendido en el amor. Dicen que es distante, desapegado, incapaz de comprometerse. En realidad quiere, pero no como le dicen que quiera: nada de fusión, nada de «lo eres todo para mí». Quiere una pareja que sea antes que nada un amigo, con quien arreglar el mundo a las tres de la mañana, y necesita aire para volver hacia el otro.</p>
+<p>Si intentas retenerlo, se aleja. Si lo dejas libre, vuelve. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Géminis y Libra: los compañeros de Aire que le entienden sin intentar retenerle.`,
     `Leo, su opuesto, le fascina por su calidez, pero el choque de voluntades es real.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'los-signos-que-respiran-con-el',
-      title: `Los signos que respiran con él y los que le comprimen`,
-      content: `<p>Géminis (9/10) y Libra (9/10) son sus aliados naturales de Aire. Con ellos, la relación se construye sobre conversaciones que no terminan, ideas compartidas y un respeto absoluto por la individualidad del otro. No hay drama innecesario, no hay escenas de celos, no hay necesidad de demostrar nada, y para Acuario, eso es el paraíso.</p>
-<p>Sagitario (8/10) comparte con Acuario el amor por la libertad y las ideas grandes. Ambos necesitan sentir que la relación les hace más grandes, no más pequeños. <strong>Es una de esas parejas que funciona precisamente porque ninguno de los dos intenta poseer al otro.</strong></p>
-<p>Leo (7/10), su opuesto, le atrae magnéticamente. Leo tiene la calidez humana que a Acuario a veces le falta, y Acuario tiene la perspectiva intelectual que Leo necesita para no caer en el exceso. El reto es que Leo necesita demostraciones de amor visibles, y Acuario no siempre sabe, o quiere, darlas.</p>
-<p>Tauro (3/10) y Escorpio (3/10) representan las combinaciones más difíciles. Tauro quiere seguridad y presencia constante, exactamente lo que Acuario no puede prometer. Escorpio exige una entrega emocional total que a Acuario le resulta asfixiante. No es que estos signos no puedan amarse, es que <strong>sus formas de amar son tan distintas que traducir la una a la otra se convierte en un trabajo a tiempo completo</strong>.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Acuario con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Acuario valora la abstracción y la racionalidad, mientras que Piscis vive puramente a través de sus profundas y soñadoras emociones. Falta de sintonía.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Acuario en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Acuario?`,
+          content: `<p>Los signos que mejor se entienden con Acuario son Géminis y Libra (9/10), luego Aries, Leo, Sagitario y Acuario (8/10). En cambio, las parejas más difíciles son con Cáncer, Virgo, Capricornio y Piscis (2/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Acuario juntos: ¿funciona?`,
+          content: `<p>8/10. Dúo sumamente intelectual, independiente y humanista. Comparten proyectos idealistas y se otorgan mutuamente la libertad que ambos consideran vital.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

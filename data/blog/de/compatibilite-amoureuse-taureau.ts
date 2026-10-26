@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-stier',
-  title: `Liebeskompatibilität des Stiers: Was die Sterne über seine Liebesgeschichten verraten`,
-  metaTitle: `Liebeskompatibilität Stier: Solide Liebe oder Sackgasse?`,
-  metaDescription: `Der Stier liebt tief, treu, und oft sehr lange. Doch nicht jedes Sternzeichen ist für dieses Tempo gemacht. Wir verraten, mit wem es wirklich funktioniert.`,
+  title: `Liebeskompatibilität des Stiers: Mit welchen Zeichen passt es?`,
+  metaTitle: `Stier: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Stier mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Stier und Stier zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Astrologisches Symbol des Stiers, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Stier liebt tief, treu, und oft sehr lange. Doch nicht jedes Sternzeichen ist für dieses Tempo gemacht.`,
-  introduction: `<p>Fragen Sie einen Stier, was er in der Liebe sucht. Er wird Ihnen, vielleicht nicht mit genau diesen Worten, etwas sagen, das nach <em>Beständigkeit</em> klingt. Nicht langweilige Routine, nicht mechanische Wiederholung. Sondern die Gewissheit, dass der andere morgen noch da sein wird. Dass das, was gemeinsam aufgebaut wurde, nicht beim ersten Sturm verschwindet. Wenn Sie herausfinden möchten, ob Ihre Sternzeichen-Vornamen-Kombination hält, was sie verspricht, probieren Sie <a href="/de/sternzeichen-vornamen-kompatibilitaet/">unser Tool zur Kompatibilität zwischen Sternzeichen und Vornamen</a>.</p>
-<p>Es ist Venus, die dieses Zeichen regiert. Und anders als man vielleicht denkt, spricht Venus beim Stier nicht zuerst von Romantik und großen Erklärungen, <strong>sie spricht von konkretem Genuss, von körperlicher Nähe, von greifbarer Schönheit</strong>. Ein gutes gemeinsames Essen. Ein bequemes Sofa. Die Wärme eines Menschen, den man wirklich kennt. Das nennt der Stier Liebe.</p>
-<p>Diese Suche nach Solidität ist keine Angst. Es ist eine bewusste Entscheidung. Und die Zeichen, die das verstehen, die nicht brauchen, dass sich die Beziehung ständig neu erfindet, um zu existieren, sind diejenigen, mit denen der Stier wirklich aufblüht.</p>`,
+  excerpt: `Der Stier mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Frag einen Stier, was er in der Liebe sucht, und er antwortet so etwas wie „jemanden, der bleibt“. Keine Routine, keine Langeweile: die Gewissheit, dass der andere morgen noch da ist. Für ihn ist Liebe ein gutes Essen zu zweit, ein bequemes Sofa und die Wärme von jemandem, den man in- und auswendig kennt.</p>
+<p>Diese Beständigkeit hält nicht jedes Zeichen aus: Manche brauchen Bewegung, und der Stier braucht Halt. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier x Stier, Jungfrau oder Steinbock: die dauerhaftesten Verbindungen im Tierkreis. Manchmal etwas zu brav.`,
     `Mit dem Krebs ist es wie Samt, zwei Zeichen, die genau dasselbe wollen.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'verbindungen-die-halten-und-die-versanden',
-      title: `Verbindungen, die halten, und die versanden`,
-      content: `<p>Zwei Stiere zusammen (9/10), das ist das Versprechen eines stabilen Zuhauses und absoluter Treue. Das Risiko? Dass niemand jemals die Initiative ergreift, etwas zu verändern, selbst wenn es nötig wäre. <strong>Ihre kombinierte Sturheit kann Meinungsverschiedenheiten besonders zäh machen.</strong></p>
-<p>Mit der Jungfrau und dem Steinbock (jeweils 9/10) findet der Stier Partner, die seine Grundwerte teilen: Arbeit, Verlässlichkeit, langfristiger Aufbau. Diese Verbindungen haben vielleicht nicht den romantischen Glanz einer Filmgeschichte, aber sie halten.</p>
-<p>Am anderen Ende stehen die Zwillinge (3/10), der Wassermann (3/10) und der Schütze (3/10), Verbindungen, die oft mit einer echten Anziehung beginnen, aber schnell an grundlegend verschiedenen Bedürfnissen scheitern. Der Stier will sich verankern. Diese drei Zeichen wollen auf unterschiedliche Weise frei bleiben, sich zu bewegen. Das ist kein Urteil, es ist schlicht eine Rhythmus-Inkompatibilität, die gewaltige Anstrengungen erfordert, um überwunden zu werden.</p>
-<p>Der Krebs (9/10) verdient besondere Erwähnung: Es ist vielleicht die natürlichste Harmonie für den Stier. Beide Zeichen suchen dasselbe, ein warmes Zuhause, eine Liebe, die beschützt, und sie finden sich, ohne sich verbiegen zu müssen. Wenn Sie Stier und Krebs sind, stehen die Chancen gut, dass Sie längst bemerkt haben, wie mühelos alles zwischen Ihnen fließt.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Stier mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Stier (Erde) und Fische (Wasser) ergänzen sich gut. Der solide Stier beruhigt den sensiblen Fisch, der im Gegenzug Poesie und Zärtlichkeit zum Stier bringt. Sie teilen eine tiefe Liebe für Komfort und Sanftmut: Die Beziehung ist oft sehr liebevoll. Der Stier stabilisiert die Träume des Fisches, und der Fisch erweitert die Vorstellungskraft des Stiers. Zusammen können sie einen sehr harmonischen emotionalen Kokon aufbauen.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Stier in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Stier?`,
+          content: `<p>Am besten verstehen sich mit dem Stier der Stier, der Krebs, die Jungfrau und der Steinbock (9/10). Am schwierigsten sind dagegen die Paare mit den Zwillingen, dem Schützen und dem Wassermann (3/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Stier und Stier: passt das zusammen?`,
+          content: `<p>9/10. Zwei Stiere zusammen (feste Erde, beherrscht von Venus) teilen eine sehr große Affinität. Beide lieben materiellen Komfort, Sanftmut und Loyalität. Das Stier-Stier-Paar baut ein solides Zuhause auf: Jeder versteht die Bedürfnisse des anderen (finanzielle Sicherheit, körperliche Zärtlichkeit, Stabilität). Ihre gegenseitige Sturheit kann zu Konflikten führen, aber ihre Geduld gleicht diese Nachgiebigkeit oft aus. Letztendlich finden sie Trost beieinander und bilden eine sehr stabile und dauerhafte Bindung.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

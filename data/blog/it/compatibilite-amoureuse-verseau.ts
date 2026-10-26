@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-acquario',
-  title: `Compatibilità amorosa dell'Acquario: l'amore secondo le proprie regole`,
-  metaTitle: `Compatibilità amorosa Acquario: chi accetta il suo amore?`,
-  metaDescription: `L'Acquario ama a modo suo, e quel modo non somiglia a nessun altro. Scopri quali segni capiscono la sua libertà e quali tentano invano di cambiarlo.`,
+  title: `Compatibilità amorosa dell'Acquario: con quali segni funziona?`,
+  metaTitle: `Acquario: compatibilità amorosa con i 12 segni`,
+  metaDescription: `L'Acquario con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Acquario insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Simbolo astrologico dell'Acquario, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `L'Acquario ama a modo suo, e quel modo non somiglia a nessun altro. Quali segni capiscono la sua libertà?`,
-  introduction: `<p>Se cercate un partner convenzionale, l'Acquario non fa per voi. E non per provocazione, è che <strong>l'Acquario vive l'amore come un'estensione della propria libertà, non come una rinuncia ad essa</strong>. Il giorno in cui sentirà che una relazione lo limita, non litigherà. Si allontanerà. Silenziosamente, ma inesorabilmente. Per scoprire se il vostro legame sa rispettare questo bisogno, <a href="/it/segni-zodiacali-nomi-compatibilita/">fate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governato da Urano, il pianeta dell'innovazione e della rottura degli schemi, l'Acquario porta in amore un approccio che disorienta molti. Non è il tipo da dichiarazioni romantiche classiche. Non è il tipo da gelosie possessive. Il suo modo di dire "ti amo" è condividere un'idea alle tre di notte, portarvi a una mostra che non avreste mai scelto, discutere di filosofia fino all'alba. Il suo amore è cerebrale prima che emotivo, e chi non lo capisce lo scambia per freddezza.</p>
-<p>Ma l'Acquario non è freddo. È semplicemente selettivo. E quando trova qualcuno che capisce il suo linguaggio, si apre con una profondità che sorprende chi lo credeva distaccato.</p>`,
+  excerpt: `L'Acquario con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>L'Acquario è forse il segno più frainteso in amore. Lo dicono distante, distaccato, incapace di impegnarsi. In realtà ama, ma non come gli dicono di amare: niente fusione, niente «sei tutto per me». Vuole un partner che sia prima di tutto un amico, con cui rifare il mondo alle tre di notte, e ha bisogno d'aria per tornare verso l'altro.</p>
+<p>Se provi a trattenerlo, si allontana. Se lo lasci libero, torna. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Gemelli e Bilancia sono le sue anime gemelle, Aria con Aria, libertà condivisa.`,
     `Il Sagittario lo capisce al volo: entrambi mettono l'indipendenza prima di tutto.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'chi-capisce-l-acquario-e-chi-cerca-di-cambiarlo',
-      title: `Chi capisce l'Acquario, e chi cerca di cambiarlo`,
-      content: `<p>I Gemelli (9/10) sono forse l'unico segno che capisce intuitivamente il modo in cui l'Acquario funziona. Entrambi segni d'Aria, condividono l'amore per le idee, per la conversazione stimolante, per una relazione che non diventi mai una gabbia. <strong>Con i Gemelli, l'Acquario può essere completamente sé stesso, e questa è la cosa più romantica che gli si possa offrire.</strong></p>
-<p>La Bilancia (9/10) porta qualcosa di complementare: l'armonia. Dove l'Acquario può essere tagliente e provocatorio, la Bilancia arrotonda gli spigoli con grazia. Non è sottomissione, è equilibrio. E l'Acquario, che spesso vive fuori dalle regole, apprezza avere accanto qualcuno che sa navigare il mondo sociale con eleganza.</p>
-<p>Il Sagittario (8/10) condivide con l'Acquario la cosa più importante: il rispetto per la libertà altrui. Questi due segni non si soffocano a vicenda. Si incontrano quando ne hanno voglia, si danno spazio quando serve, e non si offendono se l'altro ha bisogno di tempo per sé. È un amore poco ortodosso ma profondamente autentico.</p>
-<p>Il Toro (3/10) e lo Scorpione (3/10) rappresentano le sfide più impegnative. Il Toro vuole stabilità e routine, due parole che all'Acquario provocano orticaria. Lo Scorpione chiede una fusione emotiva che l'Acquario vive come invasione del proprio spazio interiore. Non è impossibile, ma richiede che entrambi rinuncino a qualcosa di fondamentale, e questo raramente funziona a lungo. L'Ariete (7/10) è una sorpresa positiva: la sua energia diretta e il suo anticonformismo parlano lo stesso linguaggio dell'Acquario, creando una coppia dinamica e mai noiosa.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `L'Acquario con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">L'Acquario valora l'astrazione, mentre i Pesci vivono attraverso le loro profonde emozioni. Mancanza di sintonia.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sull'Acquario in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con l'Acquario?`,
+          content: `<p>I segni che vanno più d'accordo con l'Acquario sono i Gemelli e la Bilancia (9/10), poi l'Ariete, il Leone, il Sagittario e l'Acquario (8/10). Al contrario, le coppie più difficili sono con il Cancro, la Vergine, il Capricorno e i Pesci (2/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Acquario insieme: funziona?`,
+          content: `<p>8/10. Duo estremamente intellettuale, indipendente e umanista. Condividono progetti e si concedono la massima libertà.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

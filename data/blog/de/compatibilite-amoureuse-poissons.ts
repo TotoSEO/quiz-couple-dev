@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-fische',
-  title: `Liebeskompatibilität der Fische: Zwischen Traum und Wirklichkeit, wer hält sie an Land?`,
-  metaTitle: `Liebeskompatibilität Fische: Wer verdient ihre Hingabe?`,
-  metaDescription: `Die Fische lieben ohne Grenzen, und genau das kann zum Problem werden. Erfahren Sie, welche Sternzeichen sie tragen und welche sie untergehen lassen.`,
+  title: `Liebeskompatibilität der Fische: Mit welchen Zeichen passt es?`,
+  metaTitle: `Fische: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Die Fische mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Fische und Fische zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Astrologisches Symbol der Fische, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Die Fische lieben ohne Grenzen, und genau das kann zum Problem werden. Welche Zeichen tragen sie wirklich?`,
-  introduction: `<p>Die Fische sind das letzte Zeichen des Tierkreises, und in gewisser Weise das weiseste. Sie tragen die Erfahrungen aller elf Zeichen vor ihnen in sich und haben ein Einfühlungsvermögen, das manchmal übermenschlich wirkt. <strong>In der Liebe bedeutet das: Die Fische geben alles. Bedingungslos. Grenzenlos. Und genau da liegt das Problem.</strong> Denn nicht jeder Partner ist es wert, dass man sich so restlos hingibt. Möchten Sie wissen, ob Ihre Kombination die Fische trägt oder ertränkt? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Neptun regiert die Fische, der Planet der Träume, der Intuition, der Illusion. Das macht sie zu den romantischsten, kreativsten, einfühlsamsten Partnern im ganzen Tierkreis. Aber es macht sie auch anfällig für Selbsttäuschung: Sie sehen im Partner oft nicht das, was er ist, sondern das, was er sein könnte. <strong>Diese Fähigkeit zur Verklärung ist ihre größte Gabe und ihre größte Gefahr zugleich.</strong></p>
-<p>Was die Fische in der Liebe brauchen, ist überraschend konkret: Jemanden mit beiden Füßen auf dem Boden, der sie sanft in der Realität verankert, ohne ihre Träume zu zerstören.</p>`,
+  excerpt: `Die Fische mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Die Fische sind das letzte Zeichen des Tierkreises, und sie tragen ein bisschen von allen anderen in sich. Ihre Sensibilität ist ein Radar: Sie spüren, was andere verbergen, und sie lieben mit einer Intensität, die so schön wie verstörend sein kann. Sie unterscheiden nicht gut zwischen jemanden lieben und in jemandem aufgehen.</p>
+<p>Was sie suchen, ist jemand, der sie versteht, ohne dass sie alles erklären müssen, und der nicht „du übertreibst“ sagt, wenn sie weinen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Krebs und Skorpion verstehen ihre emotionale Sprache, Wasser spricht zu Wasser.`,
     `Der Stier bietet die Erdung, die die Fische dringend brauchen, ohne ihre Fantasie zu ersticken.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'zwischen-ozean-und-anker',
-      title: `Zwischen Ozean und Anker`,
-      content: `<p>Der Krebs (9/10) ist vielleicht der natürlichste Partner der Fische. Beide sind Wasserzeichen, beide empfinden tief, beide drücken Liebe durch Fürsorge und emotionale Präsenz aus. <strong>Es ist eine Beziehung, die sich anfühlt wie ein warmes Bad, vertraut, beruhigend, und genau richtig.</strong> Die einzige Gefahr: dass beide sich so sehr in ihre gemeinsame Gefühlswelt zurückziehen, dass die Außenwelt zur Nebensache wird.</p>
-<p>Der Skorpion (9/10) bringt eine Intensität mit, die die Fische nicht abschreckt, sondern fasziniert. Der Skorpion schützt, was er liebt, und die Fische brauchen genau diesen Schutz. Im Gegenzug schenken sie dem Skorpion eine Sanftheit und Akzeptanz, die seine harten Kanten abrundet. Zusammen bilden sie eines der tiefgründigsten Paare des Tierkreises.</p>
-<p>Der Stier (8/10) überrascht als starker Match, aber die Logik ist klar: Die Fische brauchen Boden unter den Füßen, und niemand liefert das zuverlässiger als der Stier. Seine Sinnlichkeit, seine Ruhe, seine Treue, all das gibt den Fischen die Sicherheit, in der sie aufblühen können, ohne sich zu verlieren.</p>
-<p>Die Zwillinge (4/10) und der Schütze (5/10) stellen die Fische vor ihre größten Herausforderungen. Die Zwillinge sind zu schnell, zu rational, zu oberflächlich für die emotionale Tiefe der Fische. Der Schütze ist zu direkt und kann mit seiner unverblümten Ehrlichkeit das sensible Fische-Herz verletzen, ohne es zu wollen. <strong>Es sind Verbindungen, die auf dem Papier spannend klingen, aber im Alltag oft an der schieren Verschiedenheit der emotionalen Sprachen scheitern.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Die Fische mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Eine enorme emotionale Komplizenschaft und geteilte Phantasie. Zwei Fische verschmelzen leicht in der Welt der Träume und der Kreativität, laufen aber Gefahr, den Kontakt zur praktischen Realität zu verlieren.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zu den Fischen in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zu den Fischen?`,
+          content: `<p>Am besten verstehen sich mit den Fischen der Krebs (9/10), dann der Stier, die Jungfrau, der Skorpion, der Steinbock und die Fische (8/10). Am schwierigsten sind dagegen die Paare mit dem Wassermann (2/10), dann dem Schützen (3/10), dann den Zwillingen, dem Löwen und der Waage (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Fische und Fische: passt das zusammen?`,
+          content: `<p>8/10. Eine enorme emotionale Komplizenschaft und geteilte Phantasie. Zwei Fische verschmelzen leicht in der Welt der Träume und der Kreativität, laufen aber Gefahr, den Kontakt zur praktischen Realität zu verlieren.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

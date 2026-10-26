@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-bilancia',
-  title: `Compatibilità amorosa della Bilancia: l'eterna ricerca dell'equilibrio a due`,
-  metaTitle: `Compatibilità amorosa Bilancia: chi completa la sua armonia?`,
-  metaDescription: `La Bilancia cerca l'armonia in tutto, specialmente in amore. Ma trovare un partner che non la squilibri è più difficile di quanto sembri.`,
+  title: `Compatibilità amorosa della Bilancia: con quali segni funziona?`,
+  metaTitle: `Bilancia: compatibilità amorosa con i 12 segni`,
+  metaDescription: `La Bilancia con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Bilancia insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Simbolo astrologico della Bilancia, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `La Bilancia cerca l'armonia in tutto, specialmente in amore. Ma trovare chi non la squilibri è più difficile di quanto sembri.`,
-  introduction: `<p>La Bilancia è il segno che vive l'amore come un'arte. Non nel senso poetico e sdolcinato, nel senso che <strong>per la Bilancia, una relazione è qualcosa che va curato, bilanciato, reso bello</strong>. Una cena a lume di candela non è un cliché: è un modo di onorare il rapporto. Una conversazione profonda a fine giornata non è un optional: è il collante che tiene tutto insieme. Per capire se il vostro partner condivide questa visione, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>Governata da Venere, come il Toro, ma in modo completamente diverso. Dove il Toro cerca il piacere concreto, la Bilancia cerca l'armonia delle forme, la bellezza di un gesto, l'eleganza di una parola detta al momento giusto. In amore, questo si traduce in un bisogno profondo di reciprocità. La Bilancia dà, ma ha bisogno di ricevere. Ascolta, ma ha bisogno di essere ascoltata.</p>
-<p>Il suo tallone d'Achille? L'indecisione. La Bilancia pesa ogni opzione con tale scrupolo che a volte rischia di non scegliere mai. E in amore, non scegliere è già una scelta, spesso quella sbagliata.</p>`,
+  excerpt: `La Bilancia con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>La Bilancia ha fama di indecisa. Non è che eviti le scelte, è che cerca la scelta giusta, quella che non ferisce nessuno. Pensa in due quasi per natura, il che la rende premurosa, e anche qualcuno che può dimenticare i propri bisogni a forza di cercare l'equilibrio.</p>
+<p>Quello che vuole è qualcuno con cui sta bene, e che sappia decidere a volte al posto suo, senza forzarla. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Gemelli e Acquario sono i partner che la capiscono al primo sguardo, armonia d'Aria.`,
     `Con il Leone forma una coppia magnetica, fatta di ammirazione reciproca e presenza scenica.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'le-affinita-che-ispirano-e-quelle-che-frustrano',
-      title: `Le affinità che ispirano, e quelle che frustrano`,
-      content: `<p>I Gemelli (9/10) sono il partner più naturale della Bilancia. Entrambi segni d'Aria, condividono l'amore per la conversazione, per la vita sociale, per l'esplorazione intellettuale. <strong>Con i Gemelli, la Bilancia non deve mai spiegare perché ha bisogno di leggerezza, è semplicemente il loro modo di essere insieme.</strong> L'unico rischio è che la relazione resti troppo in superficie, senza mai affrontare le questioni che contano davvero.</p>
-<p>L'Acquario (9/10) offre una connessione più cerebrale ma altrettanto potente. L'Acquario non giudica l'indecisione della Bilancia, la capisce come una forma di riflessione. E la Bilancia apprezza l'originalità dell'Acquario senza sentirsi destabilizzata. È una coppia che funziona perché nessuno dei due chiede all'altro di essere diverso da quello che è.</p>
-<p>L'Ariete (8/10) è il jolly. Come opposto zodiacale, rappresenta tutto ciò che la Bilancia non è, diretto, impulsivo, senza filtri. Eppure l'attrazione è innegabile. L'Ariete forza la Bilancia a prendere posizione, a smettere di soppesare e agire. Può essere liberatorio o devastante, dipende dalla maturità di entrambi.</p>
-<p>Il Cancro (4/10) e il Capricorno (5/10) rappresentano sfide diverse ma ugualmente impegnative. Il Cancro è troppo emotivamente intenso per la Bilancia, che preferisce gestire i sentimenti con grazia piuttosto che viverli crudi. Il Capricorno è troppo rigido, troppo "bianco o nero" per un segno che vive nelle sfumature. Queste relazioni possono funzionare, ma richiedono che entrambi escano dalla propria zona di comfort.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `La Bilancia con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Modi diversi di vivere l'affetto. La Bilancia è equilibrata e razionale; i Pesci pura emozione.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sulla Bilancia in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con la Bilancia?`,
+          content: `<p>I segni che vanno più d'accordo con la Bilancia sono i Gemelli e l'Acquario (9/10), poi l'Ariete e il Leone (8/10). Al contrario, le coppie più difficili sono con il Capricorno (3/10), poi il Cancro, la Vergine, lo Scorpione e i Pesci (4/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Bilancia insieme: funziona?`,
+          content: `<p>7/10. Armonia naturale. Cercano l'equilibrio, ma la relazione può mancare di decisione (doppia indecisione).</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

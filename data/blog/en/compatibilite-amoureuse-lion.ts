@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'leo-love-compatibility',
-  title: `Leo love compatibility: the signs worthy of their fire`,
-  metaTitle: `Leo love compatibility: who deserves their royal loyalty?`,
-  metaDescription: `Leo loves with flair and expects it in return. But not every sign plays that game. Discover which unions truly let them shine, and which dim their light.`,
+  title: `Leo love compatibility: which signs does it work with?`,
+  metaTitle: `Leo Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Leo with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Leo partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Leo astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Leo loves with flair and expects it in return. But not every sign plays that game.`,
-  introduction: `<p>People often say Leo is egotistical. That's reductive. What they actually want in love is reciprocity, just a very visible kind of reciprocity. They need to know their presence matters, that the other person truly sees them, that what they bring to the relationship is acknowledged. <strong>That's not vanity. That's their love language.</strong> Curious whether your sign is up to the task? <a href="/en/zodiac-signs-names-compatibility/">Discover your full astrological compatibility</a>.</p>
-<p>Ruled by the Sun, Leo radiates, and they need a partner who doesn't try to cover that light, but who can shine alongside them without turning it into a competition. The distinction is subtle but critical. Someone who fades into the background bores them. Someone who tries to take their place exhausts them. The ideal is someone who has their own light, and who admires Leo's in return.</p>
-<p>In love, Leo is generous, protective, passionate. When they love, they go all in. <strong>Their stories are never mundane.</strong> Where it can become a problem is when that intensity isn't reciprocated, or when the partner doesn't know how to show, in Leo's own language, that the love is real.</p>`,
+  excerpt: `Leo with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>People often say Leo only thinks about themselves. It's simpler than that: they need to see that their presence matters, that the other person looks at them, that what they bring is recognised. It's not vanity, it's their way of loving. Someone who fades into the background bores them, someone who wants to take their place wears them out.</p>
+<p>The ideal is someone with their own light who admires theirs in return. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Sagittarius and Aries share their Fire energy, these relationships are rarely lukewarm.`,
     `Libra brings what Leo lacks: softness and perspective.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'unions-that-elevate-and-diminish',
-      title: `The unions that elevate them and the ones that dim their light`,
-      content: `<p>Sagittarius (9/10) is perhaps their most natural partner. Same drive, same appetite for life, same inability to settle for anything tepid. Together, they create something authentically luminous, without either one having to step aside for the other.</p>
-<p>Libra (8/10) works differently but equally well. Libra brings Leo what they struggle to find alone: perspective, gentleness in conflict, a way of smoothing the edges without losing the substance. Leo, in turn, gives Libra the warmth and direction they sometimes lack.</p>
-<p>Capricorn (3/10) is the pairing that stalls most often. <strong>Not because Capricorn can't love deeply, but because they rarely express that love in the way Leo needs to receive it.</strong> Leo reads love through visible gestures, spoken words, demonstrations. Capricorn expresses it through endurance, quiet presence, the act of simply being there without making noise. These two love languages can miss each other indefinitely.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Leo with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Leo (Fire) and Pisces (Water) have very different approaches to love. The flamboyant Leo can overwhelm the sensitive Pisces. Pisces, meanwhile, may seem too impressionable or distant to Leo. For this relationship to work, Leo must adopt more gentleness, and Pisces more assertiveness. Without these adjustments, compatibility remains limited.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Leo in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Leo?`,
+          content: `<p>The signs that get along best with Leo are Aries and Sagittarius (9/10), then Gemini, Leo, Libra and Aquarius (8/10). On the other hand, the hardest matches are with Cancer and Capricorn (3/10), then Taurus, Virgo, Scorpio and Pisces (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Leo together: does it work?`,
+          content: `<p>8/10. Fire and Fire. Two Leos together create a dazzling duo: lots of passion, shared charisma, and an exciting life. They stimulate each other and shine together in society. However, they must manage ego clashes and the competition for attention.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'libra-love-compatibility',
-  title: `Libra love compatibility: the signs that help them find their anchor`,
-  metaTitle: `Libra love compatibility: who helps them choose?`,
-  metaDescription: `Libra craves harmony in love, sometimes to the point of never deciding. Discover which signs finally make them want to commit, and which ones complicate…`,
+  title: `Libra love compatibility: which signs does it work with?`,
+  metaTitle: `Libra Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Libra with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Libra partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Libra astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Libra craves harmony in love, sometimes to the point of never deciding. Which signs make them want to commit?`,
-  introduction: `<p>Libra has a reputation for being indecisive. That's not entirely wrong, but it's not the whole truth either. <strong>They're not trying to avoid choices. They're searching for the right choice.</strong> The one that doesn't hurt anyone, that preserves harmony, that respects both sides of the equation. Sometimes that choice doesn't exist, and that's when Libra stays suspended, weighing an invisible scale. If you're wondering whether your sign is the one that can help Libra find their footing, <a href="/en/zodiac-signs-names-compatibility/">our zodiac and name compatibility tool</a> has the answer.</p>
-<p>Ruled by Venus like Taurus, but with a very different flavour, Libra is oriented toward the other person. They think in terms of partnership almost instinctively, which makes them an attentive, generous partner, but also someone who can lose sight of their own needs in the pursuit of balance.</p>
-<p>In love, Libra is looking above all for someone they feel at ease with, not threatened, not judged, not pressured. <strong>They need gentleness, shared aesthetics, conversations that go somewhere.</strong> And they need, even if they won't say it out loud, for the other person to sometimes make decisions for them, with care, without bulldozing.</p>`,
+  excerpt: `Libra with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Libra has a reputation for being indecisive. It's not that they avoid choices, it's that they look for the right one, the one that hurts nobody. They think as a pair almost naturally, which makes them attentive, and also someone who can forget their own needs while searching for balance.</p>
+<p>What they want is someone they feel good with, who knows how to decide for them sometimes, without rushing them. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Gemini, Aquarius, Sagittarius: the partners whose conversations never run dry.`,
     `Aries, their opposite, draws them in with a frankness and spontaneity they struggle to embody themselves.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'what-their-compatibilities-reveal',
-      title: `What their compatibilities reveal about what they need`,
-      content: `<p>With Gemini and Aquarius (9/10 each), Libra finds an intellectual lightness that suits them perfectly. These two Air signs don't overwhelm them emotionally, they exchange with Libra on equal footing, without ever imposing their worldview.</p>
-<p>Aries (8/10 to 9/10), their zodiac opposite, is a more complicated story. On paper, everything separates Libra and Aries. And yet, or maybe precisely because of that, something often clicks between them. <strong>Aries does for Libra what they can't do for themselves: they decide, they charge forward, they make the call.</strong> And Libra, watching from the sidelines, finds themselves admiring Aries for exactly the quality they lack.</p>
-<p>Capricorn (3/10) is their most thankless pairing. Not because Capricorn is a bad partner, but because their severity, their austere approach to life, their distaste for light conversation creates in Libra a persistent sense of discomfort. Libra feels judged, even when they're not.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Libra with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Libra (Air) and Pisces (Water) have different emotional expectations. The balanced Libra may struggle to understand Pisces' highly emotional nature. The dreamy Pisces may judge Libra as too rational or hesitant. Their relationship works if both compromise: Libra must show more empathy, and Pisces must learn to communicate needs more explicitly.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Libra in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Libra?`,
+          content: `<p>The signs that get along best with Libra are Gemini and Aquarius (9/10), then Aries and Leo (8/10). On the other hand, the hardest matches are with Capricorn (3/10), then Cancer, Virgo, Scorpio and Pisces (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Libra together: does it work?`,
+          content: `<p>7/10. Natural harmony between two Libras. Both seek balance, beauty, and diplomacy in the relationship. They share a taste for aesthetics and avoid conflict. However, the relationship may lack decisiveness, as both tend toward indecision.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

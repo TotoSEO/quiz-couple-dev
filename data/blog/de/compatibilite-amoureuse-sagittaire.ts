@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-schuetze',
-  title: `Liebeskompatibilität des Schützen: Freiheit, Fernweh und die Suche nach dem großen Ganzen`,
-  metaTitle: `Liebeskompatibilität Schütze: Wer begleitet ihn auf seiner Reise?`,
-  metaDescription: `Der Schütze liebt die Freiheit, und trotzdem die Liebe. Erfahren Sie, welche Sternzeichen ihn begleiten können, ohne ihn einzuengen.`,
+  title: `Liebeskompatibilität des Schützen: Mit welchen Zeichen passt es?`,
+  metaTitle: `Schütze: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Der Schütze mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Schütze und Schütze zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Astrologisches Symbol des Schützen, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Der Schütze liebt die Freiheit, und trotzdem die Liebe. Welche Sternzeichen können ihn begleiten, ohne ihn einzuengen?`,
-  introduction: `<p>Der Schütze hat einen Ruf, der ihm vorauseilt: unverbindlich, rastlos, immer auf dem Sprung. Doch wer nur das sieht, verpasst das Wesentliche. <strong>Der Schütze sucht nicht Unverbindlichkeit, er sucht Bedeutung</strong>. Er will eine Liebe, die größer ist als der Alltag. Eine, die ihn inspiriert, die ihn wachsen lässt, die ihm das Gefühl gibt, dass das Leben ein Abenteuer ist, das man zu zweit noch besser besteht. Passt Ihr Zeichen zu diesem Anspruch? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Jupiter regiert den Schützen, der Planet der Expansion, der Großzügigkeit, des Optimismus. In der Liebe äußert sich das als Begeisterungsfähigkeit, die ansteckend ist, und als Ehrlichkeit, die manchmal wehtut. Der Schütze lügt ungern. Und wenn er die Wahrheit sagt, nimmt er selten ein Blatt vor den Mund. Das ist erfrischend, bis es nicht mehr ist.</p>
-<p>Sein größtes Paradox in der Liebe: Er braucht einen festen Hafen, will aber nie vor Anker liegen. Wer das versteht und akzeptiert, hat die beste Voraussetzung für eine Beziehung mit ihm.</p>`,
+  excerpt: `Der Schütze mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Der Schütze hält nicht still, nicht aus Unbeständigkeit, sondern weil er Hunger aufs Leben hat. Er flieht nicht vor der Bindung, er flieht vor der Langeweile, und für ihn beginnt die Langeweile, wenn sich die Routine einnistet, ohne dass jemand sie infrage stellt. Er sagt, was er denkt, ohne Filter: Bei ihm weißt du immer, woran du bist.</p>
+<p>Was er will, ist ein Reisegefährte, im wörtlichen wie im übertragenen Sinn. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Widder und Löwe teilen sein Feuer, diese Verbindungen sind voller Energie und Abenteuergeist.`,
     `Der Wassermann versteht seinen Freiheitsdrang wie kein anderes Zeichen.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'abenteuer-zu-zweit-und-einsame-reisen',
-      title: `Abenteuer zu zweit und einsame Reisen`,
-      content: `<p>Der Widder (8/10) ist ein natürlicher Verbündeter des Schützen. Beide lieben Aktion, beide hassen Stillstand, beide leben im Hier und Jetzt. Zusammen stürzen sie sich in ein Abenteuer nach dem anderen, und genau das hält die Beziehung lebendig. <strong>Was sie lernen müssen: Dass auch ruhige Momente ihren Wert haben.</strong></p>
-<p>Der Löwe (9/10) bringt eine Wärme und Großzügigkeit mit, die den Schützen zutiefst beeindruckt. Beide sind Feuerzeichen, beide lieben das Leben in vollen Zügen. Der Unterschied: Der Löwe will bewundert werden, der Schütze will frei sein. Wenn beide das respektieren, entsteht eine der strahlendsten Verbindungen des Tierkreises.</p>
-<p>Der Wassermann (8/10) versteht intuitiv, was der Schütze braucht: Raum. Kein Wassermann wird je versuchen, jemanden einzusperren, und genau das macht ihn für den Schützen so attraktiv. Hier treffen sich zwei unabhängige Geister, die nebeneinander wachsen, statt sich aneinander festzuklammern.</p>
-<p>Die Jungfrau (4/10) und die Fische (5/10) stellen den Schützen vor seine größten Herausforderungen. Die Jungfrau findet seine Spontaneität chaotisch, seine Ehrlichkeit taktlos, seinen Optimismus naiv. Die Fische wiederum sind so empfindsam, dass die unverblümte Art des Schützen sie leicht verletzen kann. <strong>Beide Kombinationen können funktionieren, aber nur, wenn der Schütze bereit ist, eine Sensibilität zu entwickeln, die ihm nicht in die Wiege gelegt wurde.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Der Schütze mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Schütze (Feuer) und Fische (Wasser) haben wenig natürliche Kompatibilität und bedürfen enormer Kompromisse.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zum Schützen in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zum Schützen?`,
+          content: `<p>Am besten verstehen sich mit dem Schützen der Widder, die Zwillinge und der Löwe (9/10). Am schwierigsten sind dagegen die Paare mit dem Stier, dem Steinbock und den Fischen (3/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Schütze und Schütze: passt das zusammen?`,
+          content: `<p>8/10. Feuer und Feuer. Zwei Schützen bilden ein energiegeladenes und optimistisches Paar. Sie erleben gemeinsam Abenteuer und teilen große Begeisterung für Reisen, Entdeckungen und Freiheit. Sie sollten darauf achten, nicht in Zerstreuung oder mangelndes Engagement zu verfallen.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

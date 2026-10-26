@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'capricorn-love-compatibility',
-  title: `Capricorn love compatibility: love as a commitment`,
-  metaTitle: `Capricorn love compatibility: who deserves their loyalty?`,
-  metaDescription: `Capricorn doesn't commit lightly, and when they do, it's to build something real. Which signs share that vision? Our complete, sign-by-sign analysis.`,
+  title: `Capricorn love compatibility: which signs does it work with?`,
+  metaTitle: `Capricorn Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Capricorn with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Capricorn partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Capricorn astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Capricorn doesn't commit lightly, and when they do, it's to build something real. Which signs share that vision?`,
-  introduction: `<p>Capricorn has a reputation for being cold in love. That's a misunderstanding. <strong>They're not cold, they're serious.</strong> And in a world where love is often treated as entertainment, their seriousness can read as distance. But those who have been loved by a Capricorn know: once they choose someone, they don't turn back. Want to find out if your sign is compatible with that kind of solidity? <a href="/en/zodiac-signs-names-compatibility/">Calculate your love compatibility by sign and name</a>.</p>
-<p>Ruled by Saturn, the planet of discipline and time, Capricorn builds relationships the way they build everything else: with patience, rigour, and a long-term vision. They don't fall in love easily, but when they do, it's with a depth few signs can match.</p>
-<p>What Capricorn expects from a partner isn't blind passion, it's reliability. <strong>They want someone they can count on, someone who keeps their promises, someone who doesn't disappear when things get hard.</strong> For them, love is proven over time, not through declarations.</p>`,
+  excerpt: `Capricorn with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Capricorn has a reputation for being cold in love. They aren't cold, they're serious, and in a world where love is often treated as entertainment, that passes for distance. They don't fall in love easily, but when they choose someone, they don't go back.</p>
+<p>What they expect isn't blind passion, it's someone they can count on, who keeps their promises and doesn't disappear when things get complicated. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus, Virgo, Scorpio: their three most solid and enduring unions.`,
     `With Cancer, their opposite, they form a complementary couple, stability meets emotion.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'strongest-alliances-and-friction-points',
-      title: `Their strongest alliances, and their friction points`,
-      content: `<p>Taurus (9/10) is arguably their most natural partner. These two Earth signs share the same values: stability, patience, a taste for things done well. Together, they build something tangible, a home, a family, a project, and they do it with a solidity other couples envy.</p>
-<p>Virgo (9/10) understands Capricorn in a way few signs can. Their intelligence runs along the same lines, analytical, pragmatic, oriented toward improvement. They don't get lost in unnecessary drama. <strong>It's a couple that works because both have their feet on the ground, and they like it that way.</strong></p>
-<p>Scorpio (8/10) brings Capricorn an emotional depth they sometimes struggle to express on their own. Scorpio pushes Capricorn to go beyond the surface, to name what they feel. And Capricorn gives Scorpio the structure and security they need to lower their guard.</p>
-<p>Cancer (7/10), their zodiac opposite, is a pairing of contrasts. Cancer feels everything intensely; Capricorn analyses before feeling. But together, they can create a remarkable balance, if Cancer accepts Capricorn's emotional reserve, and if Capricorn accepts Cancer's emotional tides.</p>
-<p>Aries (3/10) is a difficult match. Aries wants everything, right now, Capricorn prefers to take their time. <strong>Aries's impatience exasperates Capricorn, and Capricorn's slowness frustrates Aries.</strong> The two can admire each other from a distance, but living together demands compromises neither enjoys making.</p>
-<p>Two Capricorns together (7/10)? A serious, structured, ambitious relationship, but one that risks lacking lightness. This couple needs to learn to laugh together, to let go sometimes, to remember that love can't be reduced to a shared project.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Capricorn with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Capricorn (Earth) and Pisces (Water) complement each other well. The pragmatic Capricorn stabilizes Pisces' dreams, while Pisces brings empathy and imagination to Capricorn. They share a deep sense of responsibility.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Capricorn in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Capricorn?`,
+          content: `<p>The signs that get along best with Capricorn are Taurus, Cancer and Virgo (9/10). On the other hand, the hardest matches are with Aquarius (2/10), then Leo, Libra and Sagittarius (3/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Capricorn together: does it work?`,
+          content: `<p>8/10. Two Capricorns together understand each other perfectly. They have the same ambitions and methods: work, organization, and discipline are at the core of their couple. They support each other to reach long-term goals. The relationship is very solid, though it may lack spontaneity.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

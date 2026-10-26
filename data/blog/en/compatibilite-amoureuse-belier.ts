@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'aries-love-compatibility',
-  title: `Aries love compatibility: the signs that ignite them (and the ones that burn out)`,
-  metaTitle: `Aries love compatibility: who can keep up?`,
-  metaDescription: `Aries falls fast, loves hard, and moves on quickly when the spark dies. Find out which zodiac signs can truly match their fire, and which ones fizzle out.`,
+  title: `Aries love compatibility: which signs does it work with?`,
+  metaTitle: `Aries Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Aries with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Aries partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Aries astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Aries falls fast, loves hard, and moves on quickly when the spark dies. Which signs can truly keep up?`,
-  introduction: `<p>Aries doesn't wait around. They want, they chase, they love, and if the other person can't match their pace, they're already looking ahead. That's not shallowness. It's just that <strong>Aries operates at a speed most people simply can't sustain</strong>. In love, this energy cuts both ways: it makes the early days of a relationship electrifying like few other signs can, but it can also consume a story before it ever has time to settle. To see whether your pairing can handle this intensity, <a href="/en/zodiac-signs-names-compatibility/">check your astrological and name compatibility</a> in just a few clicks.</p>
-<p>Ruled by Mars, the planet of action and desire, Aries needs a partner who pushes back, not someone who gives in at the first sign of tension, but someone who answers, who challenges, who doesn't fade into the background. For Aries, real connection is built through movement. Not through quiet comfort.</p>
-<p>So who can actually go the distance alongside them? Here's what the stars, and a healthy dose of common sense, have to say about each of their pairings.</p>`,
+  excerpt: `Aries with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Aries doesn't wait. They want, they go for it, they love, and if the other person doesn't keep up, they move on. It's not that they don't care: they live fast, and not everyone can keep that pace. In love, that means beginnings like fireworks, and sometimes stories that burn out before they've had time to settle.</p>
+<p>What they're looking for is someone who answers back, who doesn't cave at the first tension and doesn't fade away either. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Leo and Libra are their best matches, for completely different reasons.`,
     `Two Aries together is pure fire. Literally.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'what-aries-truly-needs-in-love',
-      title: `What Aries truly needs in love`,
-      content: `<p>Before looking at the sign-by-sign scores, there's something fundamental to understand about Aries: <strong>they need to be surprised</strong>. A predictable partner who always says yes, who never pushes them to their limits, that bores them. Fast. What Aries calls "passion" is often that productive tension between two wills that don't quite align.</p>
-<p>Their strongest matches are rarely with signs that mirror them completely. Leo (9/10) stimulates Aries because Leo stands their ground with the same fierce pride. Libra (9/10), their zodiac opposite, fascinates them precisely because Libra operates in reverse, where Aries charges ahead, Libra weighs every angle. Where Aries speaks their mind, Libra searches for the perfect word. For Aries, that difference is pure attraction.</p>
-<p>On the other end, the hardest pairings for Aries are the ones that ask them to slow down without offering something in return for that effort. Cancer (4/10) asks Aries to manage emotions they don't always know how to read. Virgo (4/10) asks them to think before acting, which goes against everything they are. These relationships can work, but they never come naturally.</p>
-<p>One thing to remember if you are an Aries or you love one: <strong>their flaws in love are the same as their strengths</strong>. The impulsiveness that makes the beginning of a relationship thrilling is the same thing that can blow it apart later. That's not fate, it's just terrain that needs work.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Aries with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Aries (Fire) and Pisces (Water) form a deeply emotional combination. Together, they can experience great passion and mutual devotion. Aries, usually aggressive, is softened by the devotion of Pisces, who invests themselves completely. They can create an intense chemistry: Pisces comforts Aries, who in turn brings liveliness. However, since their elements are opposite (Fire vs. Water), the relationship requires a lot of understanding: without true love, their differences (Aries' haste vs. Pisces' daydreaming) can cause tension.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Aries in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Aries?`,
+          content: `<p>The signs that get along best with Aries are Leo, Libra and Sagittarius (9/10). On the other hand, the hardest matches are with Cancer and Virgo (4/10), then Taurus and Capricorn (5/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Aries together: does it work?`,
+          content: `<p>8/10. Two Aries (two Fire signs ruled by Mars) form an extremely passionate duo. Their relationship is very &quot;passionate and explosive,&quot; full of energy and spontaneity. They live their love intensely, but their impulsiveness and matching egos frequently cause conflicts. Their union is exciting, but they must learn to calm their impulses for the relationship to last.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

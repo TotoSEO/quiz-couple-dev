@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-piscis',
-  title: `Compatibilidad amorosa de Piscis: los signos que navegan sus aguas profundas`,
-  metaTitle: `Compatibilidad amorosa de Piscis: quién se sumerge con él`,
-  metaDescription: `Piscis ama con todo su ser, a veces hasta perderse. ¿Qué signos saben nadar en sus aguas profundas sin ahogarse ni ahogarle?`,
+  title: `Compatibilidad amorosa de Piscis: ¿con qué signos funciona?`,
+  metaTitle: `Piscis: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Piscis con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Piscis juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Símbolo astrológico de Piscis, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Piscis ama con todo su ser, a veces hasta perderse. ¿Qué signos saben nadar en sus aguas profundas sin ahogarse?`,
-  introduction: `<p>Piscis es el último signo del zodiaco, y lleva consigo algo de todos los demás. Esa acumulación le convierte en uno de los signos más empáticos, intuitivos y emocionalmente complejos que existen. <strong>En el amor, Piscis no se entrega: se disuelve.</strong> Se funde con el otro hasta que no queda claro dónde termina uno y empieza el otro. Para algunos, eso es abrumador. Para los signos adecuados, es el amor más profundo que jamás experimentarán. Descubre cómo encajáis con <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
-<p>Regido por Neptuno, el planeta de los sueños y la ilusión, Piscis vive a medio camino entre la realidad y un mundo interior que solo él habita completamente. Su pareja ideal es alguien que respete ese mundo interior, que no intente sacarlo a la fuerza de ahí, pero que le ofrezca una mano firme cuando necesite volver a pisar tierra.</p>
-<p>En el amor, Piscis es sacrificado, a veces demasiado. <strong>Da más de lo que recibe con una frecuencia preocupante.</strong> Y el mayor riesgo para él no es enamorarse de la persona equivocada, sino perderse en la historia al punto de olvidar quién es fuera de ella.</p>`,
+  excerpt: `Piscis con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Piscis es el último signo del zodiaco, y lleva un poco de todos los demás dentro. Su sensibilidad es un radar: percibe lo que los demás esconden, y quiere con una intensidad que puede ser tan bonita como desestabilizante. No distingue bien entre querer a alguien y fundirse con esa persona.</p>
+<p>Lo que busca es alguien que lo entienda sin tener que explicarlo todo, y que no le diga «estás exagerando» cuando llora. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Cáncer y Escorpio: las uniones de Agua donde Piscis se siente comprendido sin palabras.`,
     `Virgo, su opuesto, le ofrece el ancla que necesita para no perderse.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'las-uniones-que-le-sostienen',
-      title: `Las uniones que le sostienen y las que le desdibujan`,
-      content: `<p>Cáncer (9/10) y Escorpio (9/10) son sus compañeros de Agua, y las relaciones más intuitivas que puede vivir. Con Cáncer, hay una ternura compartida que convierte la relación en un refugio emocional. Ambos se cuidan, se protegen, se entienden sin necesidad de explicaciones. Con Escorpio, la conexión es más intensa: ambos operan a niveles emocionales que otros signos ni siquiera perciben, y juntos alcanzan una intimidad que roza lo trascendental.</p>
-<p>Virgo (8/10), su opuesto zodiacal, le complementa de una forma esencial. Donde Piscis sueña, Virgo organiza. Donde Piscis se pierde en la emoción, Virgo pone estructura. <strong>No es que Virgo le cambie, es que le da un marco dentro del cual su creatividad y su sensibilidad pueden existir sin destruirle.</strong> Es una de las combinaciones de opuestos más bellas del zodiaco.</p>
-<p>Tauro (8/10) le ofrece algo parecido pero por otro camino: la seguridad del mundo físico. Un hogar estable, una presencia constante, la certeza de que hay alguien sólido a su lado. Para un signo que a veces se siente a la deriva, esa solidez es un regalo.</p>
-<p>Géminis (3/10) y Sagitario (4/10) son las asociaciones más complicadas. No porque no haya atracción, sino porque la volatilidad de estos signos genera en Piscis una inseguridad constante. Géminis cambia de tema cuando Piscis quiere profundizar. Sagitario busca nuevos horizontes cuando Piscis necesita echar raíces emocionales. Son ritmos que rara vez se sincronizan sin un esfuerzo enorme por ambas partes.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Piscis con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Tienen una enorme complicidad emocional e imaginación compartida. Los dos se fusionan fácilmente en el mundo de los sueños y la creatividad, aunque corren el riesgo de desconectarse un poco de la realidad práctica.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Piscis en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Piscis?`,
+          content: `<p>Los signos que mejor se entienden con Piscis son Cáncer (9/10), luego Tauro, Virgo, Escorpio, Capricornio y Piscis (8/10). En cambio, las parejas más difíciles son con Acuario (2/10), luego Sagitario (3/10), luego Géminis, Leo y Libra (4/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Piscis juntos: ¿funciona?`,
+          content: `<p>8/10. Tienen una enorme complicidad emocional e imaginación compartida. Los dos se fusionan fácilmente en el mundo de los sueños y la creatividad, aunque corren el riesgo de desconectarse un poco de la realidad práctica.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

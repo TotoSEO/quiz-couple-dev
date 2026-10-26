@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-cancer',
-  title: `Compatibilité amoureuse du Cancer : à qui peut-il ouvrir son cœur ?`,
-  metaTitle: `Compatibilité amoureuse Cancer : les unions qui le comblent`,
-  metaDescription: `Le Cancer donne tout en amour, peut-être même trop. Quels signes savent recevoir cet amour sans en abuser ? Notre analyse complète de ses compatibilités.`,
+  title: `Compatibilité amoureuse du Cancer : avec quels signes ça marche ?`,
+  metaTitle: `Cancer : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Cancer avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Cancers ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Symbole astrologique du Cancer, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Cancer donne tout en amour, peut-être même trop. Quels signes savent recevoir cet amour sans en abuser ?`,
-  introduction: `<p>Derrière la carapace, parce qu'il y en a toujours une, le Cancer est l'un des signes les plus profondément affectifs du zodiaque. Ce qu'il donne en amour, quand il se sent en sécurité, dépasse ce que beaucoup d'autres signes sont capables d'offrir. <strong>Une présence totale. Une mémoire affective extraordinaire.</strong> L'art de sentir ce dont l'autre a besoin avant même qu'il l'ait formulé. Pour découvrir comment votre signe et votre prénom s'accordent avec le Cancer, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">notre analyse de compatibilité astrologique</a>.</p>
-<p>Gouverné par la Lune, le Cancer est cyclique par nature. Il y a des jours où il déborde d'affection, et des jours où il rentre en lui-même sans explication. Son partenaire idéal est celui qui comprend ce rythme, qui ne l'interprète pas comme du rejet, qui ne force pas les portes quand elles sont fermées, mais qui est là quand elles se rouvrent.</p>
-<p>En amour, le Cancer ne cherche pas l'aventure. Il cherche un foyer. Pas nécessairement quatre murs et un jardin, <strong>plutôt un espace émotionnel où il peut être lui-même sans avoir à se défendre</strong>. Les signes qui peuvent lui offrir ça sont ceux avec qui il s'épanouit vraiment. Les autres créent, souvent sans le vouloir, une insécurité qui le ferme complètement.</p>`,
+  excerpt: `Le Cancer avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Derrière la carapace, parce qu'il y en a toujours une, le Cancer est l'un des signes qui donnent le plus en amour. Quand il se sent en sécurité, il est là tout entier : il se souvient de tout, il sent ce dont vous avez besoin avant que vous l'ayez dit. Et il y a des jours où il rentre en lui-même sans prévenir, ce que l'autre prend souvent pour du rejet.</p>
+<p>Ce qu'il cherche, ce n'est pas l'aventure, c'est un endroit où il peut être lui-même sans se défendre. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Scorpion, Taureau, Capricorne : trois associations solides, chacune pour une raison différente.`,
     `Avec les Poissons, c'est une bulle de douceur, attention à ne pas perdre pied dans la réalité.`,
@@ -23,15 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'meilleures-et-moins-bonnes-associations',
-      title: `Ce que révèlent ses meilleures et moins bonnes associations`,
-      content: `<p>La compatibilité Cancer-Scorpion (9/10) est l'une des plus intuitives du zodiaque. Ces deux signes d'Eau se comprennent sans avoir besoin de tout expliquer, ce qui est exactement ce dont le Cancer a besoin. Le Scorpion, de son côté, trouve dans le Cancer une fidélité et une profondeur émotionnelle qui le rassurent.</p>
-<p>Avec le Capricorne (9/10), son opposé, le Cancer trouve quelque chose de différent mais tout aussi précieux : de la structure. Le Capricorne n'est pas démonstratif, mais il est là, fiable, solide. Et pour un Cancer qui a parfois peur que l'amour disparaisse du jour au lendemain, cette constance vaut de l'or.</p>
-<p>À l'opposé, le Verseau (2/10) est probablement son association la plus difficile. Le Verseau est rationnel là où le Cancer est émotif. Il valorise la liberté là où le Cancer cherche l'attachement. <strong>Ce n'est pas que l'un est mieux que l'autre, c'est juste que leurs besoins fondamentaux pointent dans des directions opposées.</strong> Le Lion (3/10) pose un problème similaire : son besoin d'être au centre de l'attention peut involontairement éclipser le Cancer, qui préfère construire dans l'intimité plutôt que dans la lumière.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Cancer avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -153,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Le Cancer et les Poissons se comprennent avant de parler, et c'est autant une chance qu'un piège. Personne n'exprime son besoin, chacun attend que l'autre devine, et les non-dits s'accumulent dans une atmosphère très douce. Ce couple tient très bien tant que l'un des deux accepte de nommer les choses.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Cancer en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Cancer ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Cancer sont le Taureau, le Scorpion et le Capricorne (9/10). À l'inverse, les couples les plus difficiles sont avec le Verseau (2/10), puis le Lion (3/10), puis le Bélier, les Gémeaux, la Balance et le Sagittaire (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Cancers ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux personnes qui devinent l'humeur de l'autre à la façon dont il pose ses clés. C'est une intimité rare, et une chambre d'écho redoutable : quand l'un va mal, l'autre va mal aussi, et personne ne tient la barre. Ils ont besoin de quelqu'un d'extérieur, un ami, une famille, pour ne pas tourner en vase clos.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

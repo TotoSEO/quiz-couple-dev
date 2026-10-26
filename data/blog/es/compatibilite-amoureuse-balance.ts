@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-libra',
-  title: `Compatibilidad amorosa de Libra: el signo que busca el equilibrio perfecto en pareja`,
-  metaTitle: `Compatibilidad amorosa de Libra: con quién encuentra la armonía`,
-  metaDescription: `Libra necesita armonía en el amor como otros necesitan aire para respirar. ¿Qué signos saben dársela sin anularle?`,
+  title: `Compatibilidad amorosa de Libra: ¿con qué signos funciona?`,
+  metaTitle: `Libra: compatibilidad amorosa con los 12 signos`,
+  metaDescription: `Libra con cada uno de los 12 signos: una nota sobre 10, lo que funciona y lo que chirría en cada pareja, y qué pasa con dos Libra juntos.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Símbolo astrológico de Libra, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Libra necesita armonía en el amor como otros necesitan aire para respirar. ¿Qué signos saben dársela sin anularle?`,
-  introduction: `<p>Libra no soporta los conflictos, o, más exactamente, no soporta los conflictos que no llevan a nada. Discutir por discutir le resulta agotador. Lo que busca en el amor es un espacio donde las cosas fluyan, donde las diferencias se resuelvan con inteligencia y no con gritos. <strong>Eso no le convierte en superficial. Le convierte en alguien que sabe lo que quiere: paz con profundidad.</strong> ¿Quieres saber si tu signo y tu nombre armonizan con Libra? <a href="/es/signos-astrologicos-nombres-compatibilidad/">Prueba nuestra herramienta de compatibilidad astrológica</a>.</p>
-<p>Gobernado por Venus, al igual que Tauro, pero de una forma mucho más aérea, Libra se enamora de la belleza en todas sus formas: un rostro, una idea, una conversación bien construida. Para Libra, la estética no es un capricho, es una necesidad. Y eso se refleja en cómo elige pareja: busca a alguien que le resulte bello no solo por fuera, sino por dentro.</p>
-<p>Su mayor fortaleza en el amor es también su mayor debilidad: <strong>la capacidad de ver siempre los dos lados de todo</strong>. Eso le hace un compañero empático y justo, pero también alguien que tarda en tomar decisiones. Y en el amor, a veces, dudar demasiado es perder.</p>`,
+  excerpt: `Libra con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
+  introduction: `<p>Libra tiene fama de indecisa. No es que evite las decisiones, es que busca la decisión justa, la que no hiere a nadie. Piensa en pareja casi por naturaleza, lo que la hace atenta, y también alguien que puede olvidar sus propias necesidades a fuerza de buscar el equilibrio.</p>
+<p>Lo que quiere es alguien con quien se sienta bien, y que sepa decidir a veces por ella, sin presionarla. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Géminis y Acuario: los dos signos de Aire que le entienden sin esfuerzo.`,
     `Aries, su opuesto, le atrae con una fuerza magnética, pero la convivencia es otro cantar.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'las-parejas-que-le-equilibran',
-      title: `Las parejas que le equilibran y las que le desestabilizan`,
-      content: `<p>Géminis (9/10) y Acuario (9/10) son sus aliados naturales. Mismo elemento Aire, misma agilidad mental, mismo gusto por la conversación como forma de conexión. Con ellos, Libra se siente comprendido de inmediato, no tiene que traducir lo que piensa ni justificar su forma de amar.</p>
-<p>Leo (8/10) funciona sorprendentemente bien con Libra. Leo aporta la determinación y la calidez que a Libra a veces le faltan, y Libra ofrece a Leo la elegancia y la perspectiva que le impiden caer en el exceso. <strong>Son dos signos que se admiran mutuamente, y la admiración es, para ambos, una forma de amor.</strong></p>
-<p>Aries (8/10), su opuesto zodiacal, le fascina por su capacidad de actuar sin titubear, exactamente lo contrario de Libra. La atracción inicial puede ser explosiva, pero la convivencia exige que ambos aprendan a habitar la zona del otro sin frustrarse.</p>
-<p>Cáncer (4/10) y Capricornio (4/10) son las combinaciones que más se atascan. No porque haya incompatibilidad profunda de valores, sino porque el lenguaje emocional de estos signos no se traduce fácilmente al de Libra. Cáncer necesita seguridad emocional constante; Capricornio, resultados tangibles. Libra, en cambio, necesita ligereza y diálogo. Cuando no se encuentran estos idiomas, la relación se vuelve un esfuerzo continuo.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilidad signo por signo`,
+      title: `Libra con cada uno de los 12 signos`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Diferentes formas de vivir el afecto. Libra es equilibrada y racional; Piscis es pura emoción y sueño. Requieren ceder bastante para entenderse.</p>
 </div>`,
+    },
+    {
+      id: 'preguntas-frecuentes',
+      title: `Preguntas frecuentes sobre Libra en el amor`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signo-mas-compatible',
+          title: `¿Qué signo es el más compatible con Libra?`,
+          content: `<p>Los signos que mejor se entienden con Libra son Géminis y Acuario (9/10), luego Aries y Leo (8/10). En cambio, las parejas más difíciles son con Capricornio (3/10), luego Cáncer, Virgo, Escorpio y Piscis (4/10). El detalle de cada pareja está en las fichas de arriba.</p>`,
+        },
+        {
+          id: 'dos-juntos',
+          title: `Dos Libra juntos: ¿funciona?`,
+          content: `<p>7/10. Armonía natural entre dos Libras. Ambos buscan el equilibrio, la belleza y la diplomacia en la relación. Comparten el gusto por la estética y evitan los conflictos. Sin embargo, la relación puede carecer de decisión, ya que ambos tienden a la indecisión.</p>`,
+        },
+        {
+          id: 'si-nuestros-signos-no-son-compatibles',
+          title: `¿Y si nuestros signos no son compatibles?`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+        },
+      ],
     },
     {
       id: 'descubre-mas',

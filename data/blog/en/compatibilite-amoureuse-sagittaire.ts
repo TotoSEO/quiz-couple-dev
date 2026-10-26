@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'sagittarius-love-compatibility',
-  title: `Sagittarius love compatibility: love as an adventure`,
-  metaTitle: `Sagittarius love compatibility: who can match their pace?`,
-  metaDescription: `Sagittarius needs freedom, movement, and meaning. Which signs can journey alongside them without holding them back? Our complete, sign-by-sign analysis.`,
+  title: `Sagittarius love compatibility: which signs does it work with?`,
+  metaTitle: `Sagittarius Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Sagittarius with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Sagittarius partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Sagittarius astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Sagittarius needs freedom, movement, and meaning. Which signs can journey alongside them without holding them back?`,
-  introduction: `<p>Sagittarius is the sign of people who can't sit still, not out of restlessness, but out of a hunger to live fully. <strong>They don't flee commitment. They flee boredom.</strong> And for them, boredom starts wherever routine settles in unchallenged. If you're wondering whether your sign can match that pace, <a href="/en/zodiac-signs-names-compatibility/">test your love compatibility by sign and name</a>.</p>
-<p>Ruled by Jupiter, the planet of expansion and optimism, Sagittarius sees love as an adventure for two, not a contract. They want to grow with the other person, explore together, laugh together, and above all never stop learning together. <strong>A partner who tells them "we've always done it this way" is a partner they'll eventually leave.</strong></p>
-<p>What makes Sagittarius both endearing and sometimes hard to follow is their brutal honesty. They say what they think, without filters, without calculation. That bluntness can sting, but it has the merit of never leaving anything ambiguous. With a Sagittarius, you always know where you stand. The question is: can you handle it?</p>`,
+  excerpt: `Sagittarius with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Sagittarius can't sit still, not out of instability, but because they're hungry for life. They don't run from commitment, they run from boredom, and for them boredom starts when routine settles in without anyone questioning it. They say what they think, no filter: with them, you always know where you stand.</p>
+<p>What they want is a travel companion, literally and figuratively. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Aries, Leo, Aquarius: their three most natural and enthusiastic matches.`,
     `With Gemini, their opposite, they form an intellectually stimulating but sometimes unstable duo.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'best-compatibilities-and-limits',
-      title: `Their best compatibilities, and their limits`,
-      content: `<p>Aries (9/10) is their most natural partner. These two Fire signs share the same energy, the same taste for action, the same impatience with slowness. Together, they move fast, sometimes too fast, but they never get bored. <strong>It's the pairing most likely to last if both accept the need to slow down now and then.</strong></p>
-<p>Leo (8/10) brings Sagittarius a warmth and loyalty that steadies them without smothering. Leo admires Sagittarius's freedom, and Sagittarius admires Leo's strength. Their rapport is often instant, and their social life, enviable.</p>
-<p>Aquarius (8/10) shares with Sagittarius a love of independence and intellectual stimulation. This couple works because neither one seeks to possess the other, they choose each other every day, freely.</p>
-<p>Virgo (4/10) is a tough compatibility. What Virgo sees as necessary organization, Sagittarius experiences as constraint. And what Sagittarius considers spontaneity, Virgo sees as irresponsibility. <strong>The misunderstanding is structural, not circumstantial.</strong></p>
-<p>Gemini (7/10), their zodiac opposite, is a fascinating pairing. Both share an insatiable curiosity and a love of words. But where Sagittarius hunts for meaning, Gemini hunts for variety, and that gap can create disconnects over time.</p>
-<p>Two Sagittarians together (7/10)? The enthusiasm is infectious, projects fly in every direction, but who handles the everyday? This couple needs a shared anchor to keep from drifting apart.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Sagittarius with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Sagittarius (Fire) and Pisces (Water) have little natural compatibility. The frank, extroverted Sagittarius can hurt the hypersensitive Pisces, and the overly dreamy Pisces can seem passive to Sagittarius. Their relationship demands major compromise efforts.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Sagittarius in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Sagittarius?`,
+          content: `<p>The signs that get along best with Sagittarius are Aries, Gemini and Leo (9/10). On the other hand, the hardest matches are with Taurus, Capricorn and Pisces (3/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Sagittarius together: does it work?`,
+          content: `<p>8/10. Fire and Fire. Two Sagittarians form an energetic and optimistic couple. They experience adventure together and share great enthusiasm for travel, discovery, and freedom. They should be careful not to fall into scattered energy or lack of commitment.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

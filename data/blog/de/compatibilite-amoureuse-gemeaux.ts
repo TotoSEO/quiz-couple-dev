@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-zwillinge',
-  title: `Liebeskompatibilität der Zwillinge: Zwischen Schmetterlingen und Fluchtinstinkt`,
-  metaTitle: `Liebeskompatibilität Zwillinge: Wer fängt diesen Luftgeist ein?`,
-  metaDescription: `Zwillinge lieben die Abwechslung, auch in der Liebe. Erfahren Sie, welche Sternzeichen sie langfristig fesseln und welche nur ein kurzes Abenteuer bleiben.`,
+  title: `Liebeskompatibilität der Zwillinge: Mit welchen Zeichen passt es?`,
+  metaTitle: `Zwillinge: Liebeskompatibilität mit allen 12 Sternzeichen`,
+  metaDescription: `Die Zwillinge mit jedem der 12 Sternzeichen: eine Note von 10, was passt und was hakt in jedem Paar, und wie es mit Zwillinge und Zwillinge zusammen aussieht.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Astrologisches Symbol der Zwillinge, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Zwillinge lieben die Abwechslung, auch in der Liebe. Welche Sternzeichen fesseln sie wirklich langfristig?`,
-  introduction: `<p>Über Zwillinge heißt es gern, sie seien sprunghaft. Das ist nicht ganz fair. Was näher an der Wahrheit liegt: <strong>Zwillinge brauchen geistige Anregung wie andere Luft zum Atmen</strong>. Sobald die Gespräche flach werden und die Neugier nachlässt, wird es für sie schwer. Nicht weil sie nicht lieben können, sondern weil ihr Verstand ständig in Bewegung ist und einen Partner braucht, der da mitgeht. Finden Sie heraus, ob Ihre Konstellation diesen Anspruch erfüllt: <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
-<p>Merkur, ihr Herrscherplanet, steht für Kommunikation, Neugier und Vielseitigkeit. In der Liebe bedeutet das: Ein Zwilling will reden, diskutieren, lachen, provozieren, und das am besten alles in einer einzigen Unterhaltung. Wer das als oberflächlich abtut, hat nicht verstanden, dass für Zwillinge der Austausch selbst die intimste Form der Verbindung ist.</p>
-<p>Die Frage ist also nicht, ob Zwillinge beziehungsfähig sind. Sondern: Wer ist bereit, sich auf diese Art von Beziehung einzulassen, eine, die nie stillsteht?</p>`,
+  excerpt: `Die Zwillinge mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
+  introduction: `<p>Wenn es etwas gibt, was Zwillinge hassen, dann ist es das Gefühl, eingesperrt zu sein: in eine Schublade, in eine Routine, in ein Bild von sich, das der andere für sie entschieden hat. Man nennt sie unbeständig, dabei sind sie eher mehrere auf einmal. Sie verlieben sich in einen Kopf, bevor sie sich in einen Körper verlieben, und an dem Tag, an dem das Gespräch aufhört, schaltet etwas ab.</p>
+<p>Die Zeichen, die zu ihnen passen, sind also die, die nicht versuchen, sie festzunageln. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Waage und Wassermann verstehen das Zwillings-Tempo intuitiv, Luft trifft auf Luft.`,
     `Der Widder bringt das Feuer, das die Zwillinge zum Funkeln bringt.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'geistige-funken-und-emotionale-stolpersteine',
-      title: `Geistige Funken und emotionale Stolpersteine`,
-      content: `<p>Die Waage (9/10) ist ein Traumpartner für Zwillinge. Beide sind Luftzeichen, beide lieben den Dialog, beide haben ein natürliches Gespür für Ästhetik und Harmonie. Was die Waage zusätzlich mitbringt, ist eine Ruhe, die den manchmal rastlosen Zwilling sanft erdet, ohne ihn einzuengen.</p>
-<p>Der Wassermann (8/10) funktioniert auf einer anderen Ebene, aber ebenso gut. Hier treffen sich zwei unabhängige Geister, die einander den Freiraum lassen, den beide brauchen. <strong>Es ist eine Beziehung, die auf gegenseitigem Respekt vor der Eigenständigkeit des anderen basiert</strong>, und genau das macht sie für Zwillinge so attraktiv.</p>
-<p>Mit dem Widder (8/10) entsteht eine knisternde Dynamik: Der Widder handelt, die Zwillinge denken, und zusammen kommen sie schneller voran als jeder für sich. Die Gefahr liegt darin, dass beide so schnell unterwegs sind, dass sie vergessen, innezuhalten und wirklich tief zu gehen.</p>
-<p>Die schwierigsten Verbindungen sind der Skorpion (4/10) und die Fische (5/10). Der Skorpion will emotionale Tiefe und absolute Hingabe, Dinge, die Zwillinge nicht gern auf Kommando liefern. Die Fische wiederum sind so feinfühlig, dass die direkte Art der Zwillinge sie leicht verletzen kann, ohne dass es beabsichtigt wäre. <strong>Es sind keine unmöglichen Kombinationen, aber sie verlangen von den Zwillingen etwas, das nicht in ihrer Natur liegt: Langsamkeit.</strong></p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Kompatibilität Zeichen für Zeichen`,
+      title: `Die Zwillinge mit jedem der 12 Sternzeichen`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Zwillinge (Luft) und Fische (Wasser) passen nur schwer zusammen. Der verträumte, introvertierte Fisch kann sich von der Energie des Zwillings überwältigt fühlen, und der Zwilling empfindet den Fisch möglicherweise als zu emotional. Ihre Beziehung erfordert große Einfühlungsvermögen: Der Zwilling muss dem Fisch mit mehr Tiefe zuhören, und der Fisch muss das Bedürfnis des Zwillings nach Abwechslung akzeptieren.</p>
 </div>`,
+    },
+    {
+      id: 'haeufige-fragen',
+      title: `Häufige Fragen zu den Zwillingen in der Liebe`,
+      content: ``,
+      subsections: [
+        {
+          id: 'bestes-sternzeichen',
+          title: `Welches Sternzeichen passt am besten zu den Zwillingen?`,
+          content: `<p>Am besten verstehen sich mit den Zwillingen die Waage, der Schütze und der Wassermann (9/10). Am schwierigsten sind dagegen die Paare mit dem Stier (3/10), dann dem Krebs, der Jungfrau, dem Skorpion, dem Steinbock und den Fischen (4/10). Die Details zu jedem Paar stehen in den Karten oben.</p>`,
+        },
+        {
+          id: 'zwei-zusammen',
+          title: `Zwillinge und Zwillinge: passt das zusammen?`,
+          content: `<p>8/10. Zwei Zwillinge zusammen haben viele Gemeinsamkeiten. Als bewegliche Luftzeichen lieben sie es zu diskutieren, Ideen auszutauschen und neue Erfahrungen zu machen. Ihre Kompatibilität ist hoch, da sie den Durst des anderen nach Freiheit und Neuheit verstehen. Sie beleben ihre Partnerschaft durch Humor und Kreativität. Achtung: Sie müssen darauf achten, sich gelegentlich zu erden, damit die Beziehung nicht zu oberflächlich bleibt.</p>`,
+        },
+        {
+          id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
+          title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+        },
+      ],
     },
     {
       id: 'mehr-entdecken',

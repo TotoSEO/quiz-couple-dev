@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'pisces-love-compatibility',
-  title: `Pisces love compatibility: love as an ocean`,
-  metaTitle: `Pisces love compatibility: who can dive in with them?`,
-  metaDescription: `Pisces loves with a depth few signs understand. Which partners can navigate their waters? Our complete, sign-by-sign analysis.`,
+  title: `Pisces love compatibility: which signs does it work with?`,
+  metaTitle: `Pisces Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Pisces with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Pisces partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Pisces astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Pisces loves with a depth few signs understand. Which partners can navigate their waters?`,
-  introduction: `<p>Pisces is the last sign of the zodiac, and in a way, they carry a piece of every other sign within them. <strong>Their sensitivity isn't a weakness. It's an emotional radar that nothing can fool.</strong> They perceive what others hide, feel what others refuse to name, and love with an intensity that can be as beautiful as it is destabilizing. To find out whether your sign can navigate those depths, <a href="/en/zodiac-signs-names-compatibility/">test your love compatibility by sign and name</a>.</p>
-<p>Ruled by Neptune, the planet of imagination and dissolved boundaries, Pisces lives love as a total immersion. They don't draw a line between loving someone and merging with that person, which makes them extraordinarily devoted partners, but also vulnerable to unbalanced relationships.</p>
-<p>What Pisces looks for in love is someone who understands them without needing everything spelled out. <strong>Someone who doesn't mock their sensitivity, who doesn't tell them "you're overreacting" when they cry, and who accepts that love can't be reduced to logic.</strong> In return, Pisces offers an empathy and a gentleness few signs can match.</p>`,
+  excerpt: `Pisces with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Pisces is the last sign of the zodiac, and they carry a little of all the others in them. Their sensitivity is a radar: they pick up what others hide, and they love with an intensity that can be as beautiful as it is unsettling. They don't really tell the difference between loving someone and melting into them.</p>
+<p>What they're looking for is someone who understands them without having everything explained, and who doesn't say "you're overreacting" when they cry. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Cancer, Scorpio, Taurus: the three partners who understand and protect their sensitivity.`,
     `With Virgo, their opposite, they form a beautifully complementary couple, intuition meets analysis.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'who-knows-how-to-love-a-pisces',
-      title: `Who knows how to love a Pisces`,
-      content: `<p>Cancer (9/10) is their most natural partner. These two Water signs understand each other instinctively, they don't need words to know what the other is feeling. Cancer gives Pisces the emotional security they need, and Pisces offers Cancer a spiritual depth that brings them peace. <strong>It's one of the most tender pairings in the zodiac.</strong></p>
-<p>Scorpio (9/10) shares with Pisces a rare emotional intensity. These two signs don't do anything halfway, when they commit, it's completely. Scorpio protects Pisces with a fierceness that reassures them, and Pisces softens Scorpio with a kindness that disarms them.</p>
-<p>Taurus (8/10) offers Pisces something essential: an anchor. Where Pisces floats, Taurus stands firm. Taurus's solidity reassures Pisces without suffocating them, and Pisces's creativity enchants Taurus without unsettling them.</p>
-<p>Virgo (7/10), their zodiac opposite, is a surprising match. Virgo is analytical where Pisces is intuitive. Virgo organizes where Pisces improvises. <strong>But that complementarity can create a remarkable balance, Virgo structures Pisces's chaos, and Pisces reminds Virgo that life can't be reduced to lists.</strong></p>
-<p>Gemini (4/10) is a fragile compatibility. Gemini shifts opinions, topics, and sometimes moods too quickly for Pisces, who need emotional constancy. Pisces often feels lost in the face of Gemini's lightness, interpreting it as indifference.</p>
-<p>Two Pisces together (6/10)? An ocean of tenderness and mutual understanding, but one that can lack structure. Without a minimum of practical grounding, this couple risks drifting together, too absorbed in their emotions to manage everyday life.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Pisces with each of the 12 signs`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Enormous emotional complicity and shared imagination. Two Pisces easily merge into the world of dreams and creativity, though they risk disconnecting from practical reality.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Pisces in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Pisces?`,
+          content: `<p>The signs that get along best with Pisces are Cancer (9/10), then Taurus, Virgo, Scorpio, Capricorn and Pisces (8/10). On the other hand, the hardest matches are with Aquarius (2/10), then Sagittarius (3/10), then Gemini, Leo and Libra (4/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Pisces together: does it work?`,
+          content: `<p>8/10. Enormous emotional complicity and shared imagination. Two Pisces easily merge into the world of dreams and creativity, though they risk disconnecting from practical reality.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

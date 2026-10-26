@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-gemeaux',
-  title: `Compatibilité amoureuse des Gémeaux : les signes qui comprennent leur double nature`,
-  metaTitle: `Compatibilité amoureuse Gémeaux : qui peut le suivre ?`,
-  metaDescription: `Le Gémeaux change d'avis comme de chemise, et il aime ça. Mais en amour, qui arrive vraiment à le suivre ? Nos analyses signe par signe.`,
+  title: `Compatibilité amoureuse des Gémeaux : avec quels signes ça marche ?`,
+  metaTitle: `Gémeaux : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Les Gémeaux avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Gémeaux ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Symbole astrologique des Gémeaux, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Gémeaux change d'avis comme de chemise, et il aime ça. Mais en amour, qui arrive vraiment à le comprendre ?`,
-  introduction: `<p>Il y a une chose que le Gémeaux déteste plus que tout : se sentir enfermé. Dans une case, dans une routine, dans une définition de lui-même que l'autre aurait décidée à sa place. <strong>Les Gémeaux ne sont pas instables, ils sont multiples.</strong> Et cette nuance, tout le monde n'arrive pas à la faire. D'ailleurs, si vous voulez <a href="/signes-astrologiques-prenoms-compatibilite/">tester votre compatibilité astrologique avec votre partenaire</a>, c'est le meilleur moyen de savoir si votre duo peut fonctionner.</p>
-<p>Régi par Mercure, la planète de la communication et de l'intellect, le Gémeaux tombe amoureux de l'esprit avant de tomber amoureux du corps. Ce qui l'attire ? Une conversation qui part dans une direction inattendue. Un point de vue qui le surprend. Quelqu'un qui peut parler de trois sujets différents en dix minutes sans perdre le fil, et qui s'en réjouit autant que lui.</p>
-<p>En amour, les Gémeaux ont souvent mauvaise réputation. On les dit inconstants, fuyants, impossibles à retenir. La réalité est plus subtile : <strong>ils sont fidèles à ce qui les stimule</strong>. Le jour où une relation cesse de les nourrir intellectuellement, quelque chose se déconnecte en eux. Ce n'est pas de la légèreté. C'est leur façon de fonctionner.</p>`,
+  excerpt: `Les Gémeaux avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>S'il y a une chose que le Gémeaux déteste, c'est se sentir enfermé : dans une case, dans une routine, dans une idée de lui que l'autre aurait décidée à sa place. On le dit instable, il est plutôt multiple. Il tombe amoureux d'un esprit avant de tomber amoureux d'un corps, et le jour où la conversation s'arrête, quelque chose se déconnecte.</p>
+<p>Du coup, les signes qui lui vont sont ceux qui n'essaient pas de le fixer. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Balance et Verseau : ses deux grandes compatibilités Air, la conversation n'a jamais de fin avec eux.`,
     `Le Sagittaire, son opposé, le fascine autant qu'il l'agace. Souvent les deux en même temps.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'avec-qui-les-gemeaux-trouvent-leur-place',
-      title: `Avec qui les Gémeaux trouvent leur place`,
-      content: `<p>La Balance et le Verseau (9/10 chacun) sont leurs partenaires les plus naturels. Même élément Air, même besoin de stimulation mentale, même rapport détendu à la liberté dans la relation. Avec eux, le Gémeaux n'a pas à justifier son besoin d'espace, il est compris d'emblée.</p>
-<p>Le Sagittaire (9/10) est un cas à part. C'est l'opposé zodiacal des Gémeaux, et comme souvent avec les opposés, l'attraction est réelle et complexe. Là où le Gémeaux papillonne entre les idées, le Sagittaire cherche le sens profond. Ils peuvent se compléter magnifiquement, ou s'irriter profondément selon les jours. <strong>Cette relation ne laisse jamais indifférent.</strong></p>
-<p>À l'autre bout du spectre, le Taureau (3/10) et le Capricorne (4/10) représentent des associations difficiles pour les Gémeaux. Pas parce que ces signes sont moins bien, mais parce que ce qu'ils cherchent en amour (stabilité, ancrage, prévisibilité) est exactement ce que le Gémeaux fuit. La frustration est souvent réciproque et rapide à s'installer.</p>
-<p>Une dernière chose : si vous êtes Gémeaux et que vous vous reconnaissez dans ce portrait, sachez que votre meilleure stratégie en amour n'est pas de trouver le signe "parfaitement compatible". C'est de trouver quelqu'un qui accepte que vous soyez plusieurs, et qui trouve ça fascinant plutôt qu'épuisant.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Les Gémeaux avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons ressentent ce que le Gémeaux analyse. Il explique, ils pleurent, et il ne comprend pas le rapport. Ils attendent qu'il devine, il attend qu'on lui dise. Personne n'est de mauvaise foi, mais ils ne parlent pas la même langue.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur les Gémeaux en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec les Gémeaux ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec les Gémeaux sont la Balance, le Sagittaire et le Verseau (9/10). À l'inverse, les couples les plus difficiles sont avec le Taureau (3/10), puis le Cancer, la Vierge, le Scorpion, le Capricorne et les Poissons (4/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Gémeaux ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Ils parlent, tout le temps, et ne s'ennuient jamais. Chacun laisse à l'autre la liberté de changer d'avis, ce qui est reposant quand on la refuse partout ailleurs. Le point faible est connu des deux : quand un sujet devient grave, ils font une blague et passent à autre chose.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

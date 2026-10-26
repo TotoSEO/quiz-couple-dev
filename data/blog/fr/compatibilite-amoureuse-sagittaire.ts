@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-sagittaire',
-  title: `Compatibilité amoureuse du Sagittaire : l'amour comme une aventure`,
-  metaTitle: `Compatibilité amoureuse Sagittaire : qui peut suivre son rythme ?`,
-  metaDescription: `Le Sagittaire a besoin de liberté, de mouvement et de sens. Quels signes peuvent l'accompagner sans le freiner ? Notre analyse complète, signe par signe.`,
+  title: `Compatibilité amoureuse du Sagittaire : avec quels signes ça marche ?`,
+  metaTitle: `Sagittaire : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Sagittaire avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Sagittaires ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Symbole astrologique du Sagittaire, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Sagittaire a besoin de liberté, de mouvement et de sens. Quels signes peuvent l'accompagner sans le freiner ?`,
-  introduction: `<p>Le Sagittaire est le signe de ceux qui ne tiennent pas en place, pas par instabilité, mais par soif de vivre. <strong>Il ne fuit pas l'engagement. Il fuit l'ennui.</strong> Et pour lui, l'ennui commence là où la routine s'installe sans que personne ne la remette en question. Si vous vous demandez si votre signe peut suivre ce rythme, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité amoureuse par signe et prénom</a>.</p>
-<p>Gouverné par Jupiter, planète de l'expansion et de l'optimisme, le Sagittaire voit l'amour comme une aventure à deux, pas comme un contrat. Il veut grandir avec l'autre, découvrir ensemble, rire ensemble, et surtout ne jamais cesser d'apprendre ensemble. <strong>Un partenaire qui lui dit « on a toujours fait comme ça » est un partenaire qu'il finira par quitter.</strong></p>
-<p>Ce qui rend le Sagittaire attachant et parfois difficile à suivre, c'est son honnêteté brutale. Il dit ce qu'il pense, sans filtre, sans calcul. Cette franchise peut blesser, mais elle a le mérite de ne jamais laisser planer d'ambiguïté. Avec un Sagittaire, vous savez toujours où vous en êtes. La question est : pouvez-vous le supporter ?</p>`,
+  excerpt: `Le Sagittaire avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Le Sagittaire ne tient pas en place, pas par instabilité, mais parce qu'il a soif de vivre. Il ne fuit pas l'engagement, il fuit l'ennui, et pour lui l'ennui commence quand la routine s'installe sans que personne ne la remette en question. Il dit ce qu'il pense, sans filtre : avec lui, vous savez toujours où vous en êtes.</p>
+<p>Ce qu'il veut, c'est un partenaire de voyage, au sens propre comme au figuré. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Bélier, Lion, Verseau : ses trois compatibilités les plus naturelles et les plus enthousiastes.`,
     `Avec le Gémeaux, son opposé, il forme un duo intellectuellement stimulant mais parfois instable.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'ses-meilleures-compatibilites-et-ses-limites',
-      title: `Ses meilleures compatibilités, et ses limites`,
-      content: `<p>Le Bélier (9/10) est son partenaire le plus naturel. Ces deux signes de Feu partagent la même énergie, le même goût pour l'action, la même impatience face à la lenteur. Ensemble, ils avancent vite, parfois trop vite, mais ils ne s'ennuient jamais. <strong>C'est l'association qui a le plus de chances de durer si les deux acceptent de ralentir de temps en temps.</strong></p>
-<p>Le Lion (8/10) apporte au Sagittaire une chaleur et une loyauté qui le stabilisent sans l'étouffer. Le Lion admire la liberté du Sagittaire, et le Sagittaire admire la force du Lion. Leur complicité est souvent immédiate, et leur vie sociale, enviable.</p>
-<p>Le Verseau (8/10) partage avec le Sagittaire un amour de l'indépendance et de la stimulation intellectuelle. Ce couple fonctionne parce que ni l'un ni l'autre ne cherche à posséder l'autre, ils se choisissent chaque jour, librement.</p>
-<p>La Vierge (4/10) est une compatibilité difficile. Ce que la Vierge perçoit comme de l'organisation nécessaire, le Sagittaire le vit comme une contrainte. Et ce que le Sagittaire considère comme de la spontanéité, la Vierge le voit comme de l'irresponsabilité. <strong>Le malentendu est structurel, pas circonstanciel.</strong></p>
-<p>Le Gémeaux (7/10), son opposé zodiacal, est une association fascinante. Les deux partagent une curiosité insatiable et un amour des mots. Mais là où le Sagittaire cherche du sens, le Gémeaux cherche de la variété, et cette différence peut créer des décalages sur le long terme.</p>
-<p>Deux Sagittaires ensemble (7/10) ? L'enthousiasme est contagieux, les projets fusent dans tous les sens, mais qui s'occupe du quotidien ? Ce couple a besoin de trouver un ancrage commun pour ne pas s'envoler chacun de son côté.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Sagittaire avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Le Sagittaire ne mesure pas la portée de ce qu'il lâche, les Poissons encaissent sans broncher. Il repart léger, persuadé que l'incident est clos. Ce qui l'attend est un retrait progressif qu'il ne verra pas venir et dont il ne comprendra pas la cause.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Sagittaire en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Sagittaire ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Sagittaire sont le Bélier, les Gémeaux et le Lion (9/10). À l'inverse, les couples les plus difficiles sont avec le Taureau, le Capricorne et les Poissons (3/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Sagittaires ensemble, ça donne quoi ?`,
+          content: `<p>8/10. Deux personnes qui refusent qu'on leur dise quoi faire, y compris l'une à l'autre. La liberté est totale et sincère. Ce qui manque est la contrainte : sans un engagement décidé volontairement, cette relation peut durer dix ans sans jamais devenir quelque chose.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

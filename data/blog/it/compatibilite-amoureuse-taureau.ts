@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-toro',
-  title: `Compatibilità amorosa del Toro: cosa dicono le stelle sulle sue storie d'amore`,
-  metaTitle: `Compatibilità amorosa Toro: amore solido o vicolo cieco?`,
-  metaDescription: `Il Toro ama profondamente, con lealtà, e spesso a lungo. Ma non tutti i segni sono fatti per questo ritmo. Scopri con chi funziona davvero.`,
+  title: `Compatibilità amorosa del Toro: con quali segni funziona?`,
+  metaTitle: `Toro: compatibilità amorosa con i 12 segni`,
+  metaDescription: `Il Toro con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Toro insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Simbolo astrologico del Toro, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Il Toro ama profondamente, con lealtà, e spesso a lungo. Ma non tutti i segni sono fatti per questo ritmo.`,
-  introduction: `<p>Chiedete a un Toro cosa cerca in amore. Vi risponderà, forse non con queste parole esatte, qualcosa che somiglia a <em>la costanza</em>. Non la routine noiosa, non la ripetizione meccanica. Ma la certezza che domani l'altro sarà ancora lì. Che quello che è stato costruito insieme non sparirà alla prima turbolenza. Se volete verificare se la vostra combinazione segno-nome mantiene le sue promesse, provate <a href="/it/segni-zodiacali-nomi-compatibilita/">il nostro strumento di compatibilità tra segni zodiacali e nomi</a>.</p>
-<p>È Venere a governare questo segno. E contrariamente a quello che si potrebbe pensare, Venere nel Toro non parla prima di tutto di romanticismo e grandi dichiarazioni, <strong>parla di piacere concreto, di presenza fisica, di bellezza accessibile</strong>. Una buona cena condivisa. Un divano comodo. Il calore di qualcuno che si conosce davvero. Ecco cosa il Toro chiama amore.</p>
-<p>Questa ricerca di solidità non è paura. È una scelta. E i segni che lo capiscono, che non hanno bisogno che la relazione si reinventi costantemente per esistere, sono quelli con cui il Toro fiorisce davvero.</p>`,
+  excerpt: `Il Toro con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>Chiedete a un Toro cosa cerca in amore, vi risponderà qualcosa come «qualcuno che resta». Niente routine, niente noia: la certezza che domani l'altro sarà ancora lì. Per lui l'amore è una buona cena in due, un divano comodo e il calore di qualcuno che conosce a memoria.</p>
+<p>Questa solidità non la reggono tutti i segni: alcuni hanno bisogno che le cose si muovano, e il Toro ha bisogno che tengano. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro x Toro, Vergine o Capricorno: le unioni più durature dello zodiaco. A volte fin troppo tranquille.`,
     `Con il Cancro è velluto puro, due segni che vogliono esattamente la stessa cosa.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'le-unioni-che-durano-e-quelle-che-si-spengono',
-      title: `Le unioni che durano, e quelle che si spengono`,
-      content: `<p>Due Toro insieme (9/10): la promessa di un focolare stabile e di una lealtà assoluta. Il rischio? Che nessuno dei due prenda mai l'iniziativa di cambiare qualcosa, anche quando sarebbe necessario. <strong>La loro testardaggine combinata può rendere i disaccordi particolarmente lunghi da risolvere.</strong></p>
-<p>Con la Vergine e il Capricorno (9/10 ciascuno), il Toro trova partner che condividono i suoi valori di fondo: il lavoro, l'affidabilità, la costruzione sul lungo termine. Queste unioni forse non hanno il lampo romantico delle storie da film, ma reggono.</p>
-<p>All'estremo opposto, i Gemelli (3/10), l'Acquario (3/10) e il Sagittario (3/10) rappresentano combinazioni che spesso partono da un'attrazione reale, ma si scontrano presto con bisogni fondamentalmente incompatibili. Il Toro vuole mettere radici. Questi tre segni vogliono, a gradi diversi, restare liberi di muoversi. Non è un giudizio, è semplicemente un'incompatibilità di ritmo che richiede sforzi colossali per essere superata.</p>
-<p>Il Cancro (9/10) merita una menzione speciale: è forse la combinazione più naturalmente armoniosa per il Toro. Entrambi i segni cercano la stessa cosa, un focolare caldo, un amore che protegge, e si trovano senza doversi forzare. Se siete Toro e Cancro, ci sono buone probabilità che abbiate già notato quanto le cose scorrano facilmente tra voi.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `Il Toro con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Si completano bene. Il Toro tranquillizza il sensibile Pesci, che in cambio porta poesia e tenerezza. Costruiscono un bozzolo emotivo molto armonioso.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sul Toro in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con il Toro?`,
+          content: `<p>I segni che vanno più d'accordo con il Toro sono il Toro, il Cancro, la Vergine e il Capricorno (9/10). Al contrario, le coppie più difficili sono con i Gemelli, il Sagittario e l'Acquario (3/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Toro insieme: funziona?`,
+          content: `<p>9/10. Due Tori (Terra) condividono un'enorme affinità. Amano il comfort materiale, la dolcezza e la lealtà. Costruiscono un focolare solido e si comprendono perfettamente. La loro testardaggine può provocare conflitti, ma la pazienza compensa.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',

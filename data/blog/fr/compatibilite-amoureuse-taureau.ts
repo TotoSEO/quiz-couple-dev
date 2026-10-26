@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-taureau',
-  title: `Compatibilité amoureuse du Taureau : ce que les astres disent de ses histoires d'amour`,
-  metaTitle: `Compatibilité amoureuse Taureau : amour solide ou impasse ?`,
-  metaDescription: `Le Taureau aime profondément, loyalement, et souvent longuement. Tous les signes ne sont pas faits pour ce rythme : on vous dit avec qui ça marche.`,
+  title: `Compatibilité amoureuse du Taureau : avec quels signes ça marche ?`,
+  metaTitle: `Taureau : compatibilité amoureuse avec les 12 signes`,
+  metaDescription: `Le Taureau avec chacun des 12 signes : une note sur 10, ce qui marche et ce qui coince dans chaque couple, et ce que donnent deux Taureaux ensemble.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Symbole astrologique du Taureau, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Le Taureau aime profondément, loyalement, et souvent longuement. Mais tous les signes ne sont pas faits pour ce rythme-là.`,
-  introduction: `<p>Demandez à un Taureau ce qu'il cherche en amour. Il vous dira, peut-être pas avec ces mots exacts, quelque chose qui ressemble à <em>de la constance</em>. Pas de la routine ennuyeuse, pas de la répétition mécanique. Mais la certitude que demain, l'autre sera encore là. Que ce qui a été construit ensemble ne disparaîtra pas à la première turbulence. Si vous voulez vérifier si votre combinaison signe-prénom tient ses promesses, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">notre outil de compatibilité entre signes astrologiques et prénoms</a>.</p>
-<p>C'est Vénus qui gouverne ce signe. Et contrairement à ce qu'on pourrait croire, Vénus chez le Taureau ne parle pas d'abord de romance et de grandes déclarations, <strong>elle parle de plaisir concret, de présence physique, de beauté accessible</strong>. Un bon repas partagé. Un canapé confortable. La chaleur de quelqu'un qu'on connaît vraiment. Voilà ce que le Taureau appelle l'amour.</p>
-<p>Cette recherche de solidité n'est pas de la peur. C'est un choix. Et les signes qui comprennent ça, qui n'ont pas besoin que la relation soit constamment en train de se réinventer pour exister, sont ceux avec qui le Taureau s'épanouit vraiment.</p>`,
+  excerpt: `Le Taureau avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
+  introduction: `<p>Demandez à un Taureau ce qu'il cherche en amour, il vous répondra quelque chose comme « quelqu'un qui reste ». Pas de la routine, pas de l'ennui : la certitude que demain, l'autre sera encore là. Pour lui, l'amour, c'est un bon repas partagé, un canapé confortable et la chaleur de quelqu'un qu'on connaît par cœur.</p>
+<p>Cette solidité, tous les signes ne la supportent pas : certains ont besoin que ça bouge, et le Taureau a besoin que ça tienne. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Taureau x Taureau, Vierge ou Capricorne : les unions les plus durables du zodiaque. Parfois un peu trop sages.`,
     `Avec le Cancer, c'est du velours, deux signes qui veulent exactement la même chose.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'les-unions-qui-durent-et-celles-qui-s-essoufflent',
-      title: `Les unions qui durent, et celles qui s'essoufflent`,
-      content: `<p>Deux Taureaux ensemble (9/10), c'est la promesse d'un foyer stable et d'une loyauté absolue. Le risque ? Que personne ne prenne jamais l'initiative de changer quoi que ce soit, même quand ça serait nécessaire. <strong>Leur entêtement combiné peut rendre les désaccords particulièrement longs à résoudre.</strong></p>
-<p>Avec la Vierge et le Capricorne (9/10 chacun), le Taureau trouve des partenaires qui partagent ses valeurs de fond : le travail, la fiabilité, la construction sur le long terme. Ces unions n'ont peut-être pas la fulgurance romantique des histoires de films, mais elles tiennent.</p>
-<p>À l'opposé, les Gémeaux (3/10), le Verseau (3/10) et le Sagittaire (3/10) représentent des associations qui partent souvent d'une attraction réelle, mais qui se heurtent vite à des besoins fondamentalement incompatibles. Le Taureau veut s'ancrer. Ces trois signes veulent, à des degrés divers, rester libres de bouger. Ce n'est pas un jugement, c'est juste une incompatibilité de rythme qui demande des efforts colossaux pour être surmontée.</p>
-<p>Le Cancer (9/10) mérite une mention particulière : c'est peut-être la combinaison la plus naturellement harmonieuse pour le Taureau. Les deux signes cherchent la même chose, un foyer chaleureux, un amour qui protège, et ils se trouvent sans avoir à se forcer. Si vous êtes Taureau et Cancer, il y a de bonnes chances que vous ayez déjà remarqué à quel point les choses coulaient facilement entre vous.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilité signe par signe`,
+      title: `Le Taureau avec chacun des 12 signes`,
       content: `
 <div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Les Poissons apportent une douceur et une imagination qui manquent au Taureau, et lui leur apporte le sol sous les pieds. C'est une des rares associations où chacun compense un manque réel chez l'autre. À surveiller : le Taureau finit parfois par tout gérer, et le déséquilibre s'installe sans qu'on en parle.</p>
 </div>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: `Questions fréquentes sur le Taureau en amour`,
+      content: ``,
+      subsections: [
+        {
+          id: 'signe-le-plus-compatible',
+          title: `Quel signe est le plus compatible avec le Taureau ?`,
+          content: `<p>Les signes qui s'entendent le mieux avec le Taureau sont le Taureau, le Cancer, la Vierge et le Capricorne (9/10). À l'inverse, les couples les plus difficiles sont avec les Gémeaux, le Sagittaire et le Verseau (3/10). Le détail de chaque couple est dans les fiches ci-dessus.</p>`,
+        },
+        {
+          id: 'deux-ensemble',
+          title: `Deux Taureaux ensemble, ça donne quoi ?`,
+          content: `<p>9/10. Deux personnes qui aiment leur canapé, leur restaurant habituel et leurs habitudes. Personne ne bouscule personne. C'est reposant, c'est durable, et c'est parfois immobile : sans un événement extérieur, ce couple peut passer cinq ans sans rien changer. La vraie difficulté vient quand ils se butent tous les deux sur le même sujet.</p>`,
+        },
+        {
+          id: 'si-nos-signes-ne-sont-pas-compatibles',
+          title: `Et si nos signes ne sont pas compatibles ?`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+        },
+      ],
     },
     {
       id: 'decouvrez-aussi',

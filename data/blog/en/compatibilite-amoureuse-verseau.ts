@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'aquarius-love-compatibility',
-  title: `Aquarius love compatibility: love on their own terms`,
-  metaTitle: `Aquarius love compatibility: who can love without possessing?`,
-  metaDescription: `Aquarius loves differently, with distance, intelligence, and freedom. Which signs understand that approach? Our complete analysis, no compromises.`,
+  title: `Aquarius love compatibility: which signs does it work with?`,
+  metaTitle: `Aquarius Love Compatibility With Each of the 12 Signs`,
+  metaDescription: `Aquarius with each of the 12 zodiac signs: a score out of 10, what works and what grates in each couple, and what two Aquarius partners together look like.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Aquarius astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `Aquarius loves differently, with distance, intelligence, and freedom. Which signs understand that approach?`,
-  introduction: `<p>Aquarius is probably the most misunderstood sign in love. People call them distant, detached, incapable of real commitment. <strong>The reality is more nuanced: Aquarius loves, but they refuse to love the way they're told to love.</strong> They don't want the classic model, the merging, the codependency, the "you're everything to me." They want a love that respects their individuality. To check whether your sign can understand that approach, <a href="/en/zodiac-signs-names-compatibility/">try our zodiac and name compatibility tool</a>.</p>
-<p>Ruled by Uranus, the planet of disruption and innovation, Aquarius sees love as shared freedom, not a comfortable cage. They want a partner who is first and foremost a friend, an intellectual accomplice, someone they can reimagine the world with at 3 a.m. without ever getting bored.</p>
-<p>What throws other signs off about Aquarius is their need for space. <strong>It's not disinterest, it's an emotional survival mechanism.</strong> Aquarius needs to be alone so they can come back to the other person with something to offer. If you try to hold them in place, they'll leave. If you let them be free, they'll always come back.</p>`,
+  excerpt: `Aquarius with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
+  introduction: `<p>Aquarius is probably the most misunderstood sign in love. People call them distant, detached, unable to commit. The truth is they love, just not the way they're told to: no fusion, no "you're everything to me". They want a partner who is a friend first, someone to put the world to rights with at three in the morning, and they need air to come back to the other person.</p>
+<p>Try to hold them and they drift away. Leave them free and they come back. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Gemini, Libra, Sagittarius: their three most harmonious and stimulating partners.`,
     `With Leo, their opposite, the attraction is magnetic, but so are the clashes.`,
@@ -23,18 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'who-can-love-an-aquarius-without-losing-them',
-      title: `Who can love an Aquarius without losing them`,
-      content: `<p>Gemini (9/10) is their intellectual soulmate. These two Air signs operate on the same frequency, fast, curious, never monotonous. They can spend hours talking, debating, dreaming up impossible projects. <strong>It's the lightest pairing in the zodiac, in the best possible sense.</strong></p>
-<p>Libra (9/10) shares with Aquarius a love of harmony and conversation. This couple works because Libra doesn't try to possess Aquarius, they try to understand them. And Aquarius, in return, offers Libra an original perspective that helps pull them out of their own hesitations.</p>
-<p>Sagittarius (8/10) is an ideal adventure companion. These two signs share a love of freedom and an allergy to routine. Together, they live a relationship where each pushes the other further, without ever trying to hold them back.</p>
-<p>Leo (6/10), their zodiac opposite, exerts a complex fascination on Aquarius. Leo wants to be at the centre; Aquarius rejects all centralism. Leo asks for admiration; Aquarius only admires ideas. <strong>When it works, it's electric. When it doesn't, it's exhausting.</strong></p>
-<p>Taurus (3/10) is arguably their most laborious match. Taurus needs stability, physical presence, reassuring routines, everything Aquarius experiences as a prison. The mutual incomprehension between these two signs is often profound and rarely resolved.</p>
-<p>Two Aquarians together (7/10)? A brilliant, stimulating couple, full of ideas, but one that can lack emotional warmth. The risk: two individuals living in parallel rather than together, each in their own intellectual bubble.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Sign-by-sign compatibility`,
+      title: `Aquarius with each of the 12 signs`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -156,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Aquarius (Air) and Pisces (Water) operate differently. The dreamy Pisces may find Aquarius too factual, and Aquarius may perceive Pisces as too emotional. Their harmony demands major efforts.</p>
 </div>`,
+    },
+    {
+      id: 'common-questions',
+      title: `Common questions about Aquarius in love`,
+      content: ``,
+      subsections: [
+        {
+          id: 'most-compatible-sign',
+          title: `Which sign is the most compatible with Aquarius?`,
+          content: `<p>The signs that get along best with Aquarius are Gemini and Libra (9/10), then Aries, Leo, Sagittarius and Aquarius (8/10). On the other hand, the hardest matches are with Cancer, Virgo, Capricorn and Pisces (2/10). The details of each couple are in the cards above.</p>`,
+        },
+        {
+          id: 'two-together',
+          title: `Two Aquarius together: does it work?`,
+          content: `<p>8/10. An extremely intellectual, independent, and humanitarian duo. Two Aquarians share idealistic projects and grant each other the freedom they both consider vital.</p>`,
+        },
+        {
+          id: 'if-our-signs-are-not-compatible',
+          title: `What if our signs aren't compatible?`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+        },
+      ],
     },
     {
       id: 'discover-more',

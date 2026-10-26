@@ -3,17 +3,17 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-ariete',
-  title: `Compatibilità amorosa dell'Ariete: i segni che lo accendono (e quelli che lo spengono)`,
-  metaTitle: `Compatibilità amorosa Ariete: chi riesce a stargli dietro?`,
-  metaDescription: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Scopri quali segni possono davvero tenere il suo ritmo…`,
+  title: `Compatibilità amorosa dell'Ariete: con quali segni funziona?`,
+  metaTitle: `Ariete: compatibilità amorosa con i 12 segni`,
+  metaDescription: `L'Ariete con ciascuno dei 12 segni: un voto su 10, cosa funziona e cosa stride in ogni coppia, e come vanno due Ariete insieme.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Simbolo astrologico dell'Ariete, compatibilità amorosa`,
   publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Quali segni riescono a tenere il passo?`,
-  introduction: `<p>L'Ariete non è il tipo che aspetta. Vuole, si lancia, ama, e se l'altro non sta al passo, va avanti. Non è superficialità. È che <strong>l'Ariete vive a una velocità che non tutti riescono a sostenere</strong>. E in amore, questa energia è un'arma a doppio taglio: incendia gli inizi di una storia come pochi altri segni, ma può anche consumare un rapporto prima ancora che abbia avuto il tempo di radicarsi. Per capire se la vostra coppia regge a questa intensità, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a> in pochi clic.</p>
-<p>Governato da Marte, il pianeta dell'azione e del desiderio, l'Ariete cerca un partner che gli opponga resistenza, non qualcuno che cede alla prima tensione, ma qualcuno che gli risponde, che lo sfida, che non si fa da parte. La complicità, per lui, si costruisce nel movimento. Non nella tranquillità.</p>
-<p>Allora, chi può davvero stargli al passo? Ecco cosa dicono le stelle, e un po' di buon senso, su ciascuna delle sue combinazioni.</p>`,
+  excerpt: `L'Ariete con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
+  introduction: `<p>L'Ariete non aspetta. Vuole, parte, ama, e se l'altro non tiene il ritmo, passa ad altro. Non è che non gliene importi: è che vive veloce, e non tutti reggono quel ritmo. In amore, questo dà inizi da fuochi d'artificio, e a volte storie che si spengono prima di aver avuto il tempo di assestarsi.</p>
+<p>Quello che cerca è qualcuno che gli risponda, che non crolli alla prima tensione e che non sparisca nemmeno. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Leone e Bilancia sono i suoi partner migliori, per ragioni opposte.`,
     `Con un altro Ariete è fuoco puro. In tutti i sensi.`,
@@ -23,16 +23,8 @@ const article: BlogArticleData = {
   ],
   sections: [
     {
-      id: 'cosa-cerca-ariete-in-amore',
-      title: `Cosa cerca l'Ariete in amore`,
-      content: `<p>Prima di guardare i punteggi segno per segno, c'è qualcosa da capire sull'Ariete: <strong>ha bisogno di essere sorpreso</strong>. Un partner prevedibile, che dice sempre sì, che non lo mette mai alla prova, lo annoia. In fretta. Quella che l'Ariete chiama "passione" è spesso quella tensione produttiva tra due volontà che non si somigliano del tutto.</p>
-<p>Le sue migliori compatibilità, quindi, raramente sono con segni che gli assomigliano al cento per cento. Il Leone (9/10) lo stimola perché gli tiene testa con lo stesso orgoglio. La Bilancia (9/10), il suo opposto zodiacale, lo affascina proprio perché funziona al contrario di lui, dove lui si lancia, lei soppesa i pro e i contro. Dove lui dice quello che pensa, lei cerca la parola giusta. Per l'Ariete, questa differenza è pura attrazione.</p>
-<p>All'opposto, le combinazioni più complicate sono quelle che gli chiedono di rallentare senza offrirgli niente in cambio di quello sforzo. Il Cancro (4/10) gli chiede di gestire emozioni che non sempre sa leggere. La Vergine (4/10) gli chiede di riflettere prima di agire, il che va contro tutto ciò che è. Queste relazioni possono funzionare, ma non nascono mai in modo naturale.</p>
-<p>Una cosa da ricordare se siete Ariete o se amate un Ariete: <strong>i suoi difetti in amore sono gli stessi delle sue qualità</strong>. L'impulsività che rende l'inizio della storia elettrizzante è la stessa che può far implodere il seguito. Non è una condanna, è solo un terreno su cui lavorare.</p>`,
-    },
-    {
       id: 'compatibilite-signe-par-signe',
-      title: `Compatibilità segno per segno`,
+      title: `L'Ariete con ciascuno dei 12 segni`,
       content: `
 <div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
@@ -154,6 +146,28 @@ const article: BlogArticleData = {
 </div>
 <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Combinazione profondamente emotiva. L'Ariete si lascia intenerire dalla devozione dei Pesci, che a loro volta vengono rassicurati dalla vivacità dell'Ariete. Avendo elementi contrari (Fuoco vs. Acqua), necessitano di molta comprensione.</p>
 </div>`,
+    },
+    {
+      id: 'domande-frequenti',
+      title: `Domande frequenti sull'Ariete in amore`,
+      content: ``,
+      subsections: [
+        {
+          id: 'segno-piu-compatibile',
+          title: `Qual è il segno più compatibile con l'Ariete?`,
+          content: `<p>I segni che vanno più d'accordo con l'Ariete sono il Leone, la Bilancia e il Sagittario (9/10). Al contrario, le coppie più difficili sono con il Cancro e la Vergine (4/10), poi il Toro e il Capricorno (5/10). Il dettaglio di ogni coppia è nelle schede qui sopra.</p>`,
+        },
+        {
+          id: 'due-insieme',
+          title: `Due Ariete insieme: funziona?`,
+          content: `<p>8/10. Due Arieti (due segni di Fuoco governati da Marte) formano un duo estremamente appassionato. La loro relazione è molto &quot;passionale ed esplosiva&quot;, piena di energia e spontaneità. Vivono intensamente il loro amore, ma la loro impulsività e l'ego simile provocano conflitti frequenti. La loro unione è eccitante, ma devono imparare a calmare gli slanci affinché duri.</p>`,
+        },
+        {
+          id: 'se-i-nostri-segni-non-sono-compatibili',
+          title: `E se i nostri segni non sono compatibili?`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+        },
+      ],
     },
     {
       id: 'scopri-di-piu',
