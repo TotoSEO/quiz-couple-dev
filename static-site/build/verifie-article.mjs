@@ -17,9 +17,10 @@ for (const p of pages) {
   if (!fs.existsSync(file)) { console.log(`KO page absente ${p}`); ko++; continue; }
   const html = fs.readFileSync(file, 'utf8');
   const main = html.split('<main')[1]?.split('</main>')[0] || html;
-  const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
-  const desc = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
-  const h1 = (main.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1]?.replace(/<[^>]+>/g, '').trim() || '';
+  const decode = (s) => s.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+  const title = decode((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '');
+  const desc = decode((html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '');
+  const h1 = decode((main.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1]?.replace(/<[^>]+>/g, '').trim() || '');
   const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map(m => m[1]));
   const hrefs = [...main.matchAll(/href="([^"]+)"/g)].map(m => m[1]);
   const morts = [], ancresMortes = [];
