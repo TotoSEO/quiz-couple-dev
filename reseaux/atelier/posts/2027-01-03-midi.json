@@ -1,0 +1,64 @@
+{
+  "jour": "2027-01-03",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-080",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Photo edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "A photo every day",
+            "b": "One photo a month"
+          },
+          {
+            "a": "Prints on the wall",
+            "b": "Only on phones"
+          },
+          {
+            "a": "Silly faces",
+            "b": "Nice smiles"
+          },
+          {
+            "a": "Selfies together",
+            "b": "Candid shots"
+          },
+          {
+            "a": "A photo booth",
+            "b": "A tripod"
+          },
+          {
+            "a": "Film camera",
+            "b": "Phone camera"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Photo edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

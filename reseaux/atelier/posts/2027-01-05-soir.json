@@ -1,0 +1,225 @@
+{
+  "jour": "2027-01-05",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-012",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La longue journée au salon : elle rentre crevée, il lui tend une tasse, elle s'affale contre lui, les deux endormis sur le canapé.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Un salon le soir. La rose vient de rentrer : debout à gauche, les yeux plats et la bouche plate, les épaules basses, une longue journée. Le violet, assis sur le canapé à droite, la regarde, doux.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. Le violet, debout, tend une tasse à la rose. Elle la regarde, un tout petit sourire qui revient.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "tasse",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. Les deux sont assis sur le canapé, la rose s'affale contre le violet, les yeux fermés, un petit sourire. Le violet sourit, tendre.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "calin",
+                        "de": 0,
+                        "a": 2,
+                        "avec": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon, plus tard. Les deux dorment sur le canapé, côte à côte, des Z au-dessus d'eux. Pas un mot.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "canape-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
