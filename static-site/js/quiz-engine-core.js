@@ -2338,6 +2338,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'suis-je-amoureux', icon: '💗', route: 'testSuisJeAmoureux' },
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
+    { type: 'test', key: 'red-flag', icon: '🚩', route: 'testRedFlag' },
     { type: 'test', key: 'fin-couple', icon: '🪢', route: 'testFinCouple' },
     { type: 'test', key: 'amour-amitie', icon: '🧭', route: 'testAmourAmitie' },
     { type: 'test', key: 'crush', icon: '💘', route: 'testCrush' },
@@ -2448,7 +2449,10 @@ var QuizEngine = (function() {
     // ── Tests d'alerte, faits seul ──────────────────────────────────────
     // Personne ne fait ces tests pour s'amuser. On enchaîne sur la question
     // d'après, jamais sur un jeu.
-    'toxic':           ['testPervers', 'testDivorce', 'testCoupleSain'],
+    'toxic':           ['testRedFlag', 'testPervers', 'testCoupleSain'],
+    // Le red flag appelle la relation telle qu'elle est, puis l'autre face du
+    // doute, puis la question de rester.
+    'red-flag':        ['testToxic', 'testEstCeLeBon', 'testFinCouple'],
     'pervers':         ['testToxic', 'testJalousie', 'testDivorce'],
     'divorce':         ['testFinCouple', 'testAmourHabitude', 'testToxic'],
     'fin-couple':      ['testCouche', 'testToxic', 'testDivorce'],
@@ -2472,7 +2476,7 @@ var QuizEngine = (function() {
     // « Ce que je ressens » appelle « ce qu'il ou elle ressent ».
     'suis-je-amoureux': ['testAmourAmitie', 'testSecret', 'testAttachement'],
     'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
-    'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
+    'crush':           ['testSecret', 'testRedFlag', 'testSuisJeAmoureux'],
     // Le doute sur l'ami appelle la question de l'autre, puis celle du lien.
     'amour-ami':       ['testSecret', 'testAmourAmitie', 'testCrush'],
     // Le célibat qui dure appelle la façon de s'attacher, le manque, puis l'ex.
@@ -3036,6 +3040,7 @@ var QuizEngine = (function() {
     'celibataire': ['nuls'],
     'pret-nouvelle-relation': ['cinqLangages'],
     'est-ce-le-bon': ['autotherapie'],
+    'red-flag': ['autotherapie'],
     'type-couple': ['quiSaitMieux'],
     'amour-habitude': ['wecandoo'],
     // Les deux ecrans dont le contenu est deja pour adultes.

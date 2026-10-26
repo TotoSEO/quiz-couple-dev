@@ -778,5 +778,10 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer about the person as they are today, not the one you hope they'll become.",
     "disclaimer": "This test doesn't decide for you. It puts your answers side by side, and that's often where you see what you already knew. Your answers are not saved."
+  },
+  "red-flag": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer about what this person does, not about what they say they'll do.",
+    "disclaimer": "This test doesn't pin a label on anyone. It counts behaviours, and it gives more weight to the ones that matter: fear, control, a no that isn't heard. Your answers are not saved."
   }
 }

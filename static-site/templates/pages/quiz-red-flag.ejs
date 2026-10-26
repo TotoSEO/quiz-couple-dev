@@ -1,0 +1,7 @@
+<%
+  // Le test red flag (26 octobre 2026) : deux séries de vingt questions, une
+  // par genre de la personne à laquelle on pense, barème pondéré et neuf
+  // paliers, sur le gabarit générique. Les textes sont dans quiz-red-flag.json.
+  var quizType = 'red-flag'; var ns = 'quiz-red-flag'; var totalQ = 20; var sectionCount = 3;
+%>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>

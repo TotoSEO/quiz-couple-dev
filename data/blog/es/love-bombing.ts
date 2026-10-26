@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La devaluación: el suelo desaparece",
           content: `<p>Y entonces se para. Rara vez de golpe, más bien por escalones. Los mensajes se espacian. Los cumplidos se convierten en comentarios. Lo que adoraba de ti empieza a molestarle: tu espontaneidad pasa a ser imprevisibilidad, tu independencia pasa a ser frialdad, tu atención al detalle pasa a ser pesadez.</p>
 <p>Y tú, mecánicamente, buscas qué has hecho. No buscas qué ha pasado en él, buscas tu error, porque te subieron a un pedestal y quieres volver a subir. Ese es el corazón del mecanismo: <strong>la devaluación solo funciona porque antes hubo idealización.</strong> Sin la cima no hay caída.</p>
-<p>Esta fase es aquella en la que una relación bascula de forma concreta hacia la toxicidad. Si reconoces ese punto de inflexión, el <a href="/es/test-relacion-toxica/">test de la relación tóxica</a> ayuda a poner palabras a lo que ha cambiado.</p>`,
+<p>Esta fase es aquella en la que una relación bascula de forma concreta hacia la toxicidad. Si reconoces ese punto de inflexión, el <a href="/es/test-relacion-toxica/">test de la relación tóxica</a> ayuda a poner palabras a lo que ha cambiado. Y si todavía estás al principio y quieres saber si <a href="/es/test-red-flag/">esta persona marca otras casillas además de la velocidad</a>, veinte preguntas pesan cada una según su gravedad.</p>`,
         },
         {
           id: 'fase-rechazo-regreso',

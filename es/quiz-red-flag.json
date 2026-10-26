@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "badge": "Un test para hacer a solas",
+    "title": "Descubre en 20 preguntas si la persona en la que piensas es una red flag",
+    "titleHighlight": "red flag",
+    "description": "Un hombre o una mujer, las preguntas cambian. Veinte situaciones concretas: cómo habla esta persona de sus ex, qué hace cuando dices que no, sus celos, sus enfados, tu gente. <strong>Cada señal pesa según su gravedad</strong>, y el resultado se lee en <strong>nueve niveles</strong>.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo funciona el test red flag?",
+    "intro": "Una red flag es un comportamiento que se repite y que debería alertarte. No un mal día, no un defecto que se pueda discutir. El problema es que desde dentro se ven mal: las excusas una a una, y la suma no la haces nunca. Este test la hace por ti.",
+    "p1": "Empiezas diciendo si la persona en la que piensas es un hombre o una mujer. No es por cumplir: las preguntas cambian. Lo que más se nota en un hombre (su forma de hablar de las mujeres, lo que hace cuando dices que no) y en una mujer (las pruebas, el vacío durante días sin decir por qué) no se parece del todo. Si quieres las listas completas, con un ejemplo de cada una, están en nuestros artículos sobre <a href=\"/es/blog/red-flags-en-un-hombre/\">las red flags en un hombre</a> y sobre <a href=\"/es/blog/red-flags-en-una-mujer/\">las que se notan en una mujer</a>. Aquí no hacemos listas: medimos.",
+    "p2": "Después, veinte preguntas sobre situaciones de todos los días, con cuatro respuestas cada vez, de «nada que señalar» a «es exactamente eso». Respondes sobre lo que esta persona hace, no sobre lo que dice que hará, ni sobre lo que esperas. Sirve tanto para alguien con quien sales desde hace tres semanas como para la persona con la que vives desde hace tres años: las situaciones se eligieron para eso.",
+    "p3": "El test es anónimo, y tus respuestas se quedan en tu navegador. Puedes repetirlo las veces que quieras, para la misma persona dentro de seis meses, o para otra."
+  },
+  "section2": {
+    "title": "Por qué las preguntas no pesan todas lo mismo",
+    "p1": "Decirle «es su trabajo» a un camarero y levantarte la mano no son dos casillas de la misma lista. Por eso cada pregunta del test tiene su peso, de tres a ocho puntos, según lo que dice. Ser seco con los camareros o hablar mal de todas sus ex vale tres puntos como máximo: son señales conocidas, pero solas no dicen gran cosa. Los celos que miran tu móvil, los enfados, las disculpas que nunca llegan, la gente tuya a la que se aparta valen cinco o seis. Y tres preguntas valen ocho: lo que pasa cuando dices que no, la rabia física, y si tienes miedo de su reacción.",
+    "p2": "El total suma 100 puntos. Algunas respuestas cuentan incluso solas: si dices que esta persona ya te ha levantado la mano, el resultado no podrá bajar del último nivel, aunque todo lo demás sea perfecto. Diecinueve buenas respuestas no diluyen esa.",
+    "p3": "El resultado se lee en nueve niveles, de «green flag» a «ya no es una red flag, es un peligro», cada vez con lo que dicen tus respuestas y una cosa que hacer. Nueve en vez de cuatro, porque entre «dos o tres cositas» y «varias señales que van juntas» hay una diferencia real, y justamente es la que se viene a buscar.",
+    "headerScore": "Puntos",
+    "headerLevel": "Nivel",
+    "headerAnalysis": "Qué significa",
+    "row1Score": "0 a 5",
+    "row1Level": "Green flag",
+    "row1Analysis": "Nada de lo que el test busca.",
+    "row2Score": "6 a 13",
+    "row2Level": "Nada alarmante",
+    "row2Analysis": "Defectos corrientes, no un comportamiento que hace daño.",
+    "row3Score": "14 a 25",
+    "row3Level": "Algunas señales débiles",
+    "row3Analysis": "Dos o tres cosas que decir, sin alarmar a nadie.",
+    "row4Score": "26 a 36",
+    "row4Level": "Una red flag, quizá dos",
+    "row4Analysis": "Un comportamiento que se repite y que no es una tontería.",
+    "row5Score": "37 a 48",
+    "row5Level": "Varias red flags",
+    "row5Analysis": "Señales que van juntas y que ya cuestan algo.",
+    "row6Score": "49 a 60",
+    "row6Level": "Red flag confirmada",
+    "row6Analysis": "Una forma de tratarte, no defectos.",
+    "row7Score": "61 a 73",
+    "row7Level": "Una red flag enorme",
+    "row7Analysis": "Control y miedo: has empezado a adaptarte.",
+    "row8Score": "74 a 86",
+    "row8Level": "Una red flag con patas",
+    "row8Analysis": "Una relación que te hace daño.",
+    "row9Score": "87 a 100",
+    "row9Level": "Un peligro",
+    "row9Analysis": "Violencia o un miedo real: no te quedes a solas con ello."
+  },
+  "section3": {
+    "title": "Una red flag no es lo mismo que una relación tóxica",
+    "p1": "Una red flag es una señal: algo que debería hacerte frenar y mirar más de cerca, al principio de una historia o a mitad. Una relación tóxica es cuando esas señales se han convertido en el día a día y ya no sabes si exageras. Si estás ahí, si la pregunta ya no es «¿esta persona tiene red flags?» sino «¿lo que vivo es normal?», lo que necesitas es más bien <a href=\"/es/test-relacion-toxica/\">el test que mide si tu relación es tóxica</a>.",
+    "p2": "Y si lo que te ha traído hasta aquí es un principio demasiado perfecto, las declaraciones desde la primera semana, los mensajes a todas horas, hemos escrito <a href=\"/es/blog/love-bombing-senales/\">cómo distinguir un flechazo del love bombing</a>, con una prueba muy sencilla que cabe en una frase.",
+    "p3": "Al revés, un resultado bajo no lo responde todo. No ser una red flag no es lo mismo que ser la persona adecuada. Si es esa la pregunta que te ronda, <a href=\"/es/test-es-la-persona-adecuada/\">otras veinte preguntas miran si es la persona indicada</a>, y son preguntas completamente distintas."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que se hace la gente",
+    "faq1Q": "¿El test funciona si conozco a esta persona desde hace poco?",
+    "faq1A": "Sí, incluso es el mejor momento. Las veinte situaciones se eligieron para verse desde las primeras semanas: la forma de hablar a los camareros y de sus ex, la reacción a un no, el ritmo del principio, la escucha. Para lo que todavía no has podido observar, responde «nada que señalar»: el test no adivina, cuenta lo que has visto.",
+    "faq2Q": "¿Por qué cambian las preguntas según sea un hombre o una mujer?",
+    "faq2A": "Porque una parte de las red flags no se presenta igual. Las mujeres que cuentan sus malas experiencias hablan mucho de seguridad: el no que no se escucha, la forma en que él habla de las mujeres, el control disfrazado de protección. Los hombres hablan más a menudo de pruebas, de silencios como castigo, del «adivina por qué estoy enfadada». La base es la misma, y algunas preguntas están escritas para uno o para otra. Quién eres tú no cambia nada en las preguntas ni en la puntuación.",
+    "faq3Q": "¿Una sola red flag es grave?",
+    "faq3A": "Depende de cuál, y justamente por eso las preguntas no pesan lo mismo. Una sola señal fuerte, el miedo a su reacción, un no que no se escucha, pesa más que cinco pequeñas. Y en las pequeñas, lo que cuenta es la repetición y la reacción cuando lo hablas. Alguien que escucha el comentario y cambia no es una red flag. Alguien que se ofende y vuelve a hacerlo, sí.",
+    "faq4Q": "¿Se guardan mis respuestas?",
+    "faq4A": "No. Tus respuestas se quedan en tu navegador, no se envía nada y nadie las ve. No hay cuenta ni registro, y puedes repetir el test las veces que quieras.",
+    "faq5Q": "El resultado es alto. ¿Qué hago?",
+    "faq5A": "Primero, relee las preguntas en las que elegiste la última respuesta: son las que han hecho la puntuación, y dicen lo que pasa mejor que un número. Después, háblalo con alguien que no esté en la historia, leyéndole tus respuestas tal cual. Y si una de tus respuestas habla de golpes, de miedo o de un no que no se respeta, no te quedes a solas con ello: en España, el 016 atiende gratis y te dice qué hacer.",
+    "faq6Q": "¿Cuál es la diferencia con el test de relación tóxica?",
+    "faq6A": "Este test mira a una persona: lo que hace, desde el principio si quieres, seas su pareja o todavía no. El test de relación tóxica mira una relación ya instalada: lo que vivís los dos, el miedo, la culpa, la confianza en ti que se desgasta. El primero sirve para decidir si seguir. El segundo, para entender en qué estás ya metido."
+  },
+  "jsonLd": {
+    "about": "detectar las red flags en una persona"
+  }
+}

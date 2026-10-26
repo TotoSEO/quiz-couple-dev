@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. Die Abwertung: der Boden verschwindet",
           content: `<p>Dann hört es auf. Selten mit einem sauberen Schnitt, eher in Stufen. Die Nachrichten werden seltener. Aus Komplimenten werden Bemerkungen. Was er an dir liebte, beginnt ihn zu stören: Deine Spontaneität wird zu Unberechenbarkeit, deine Unabhängigkeit zu Kälte, dein Blick fürs Detail zu Schwerfälligkeit.</p>
 <p>Und du suchst automatisch, was du falsch gemacht hast. Du suchst nicht, was sich bei ihm verändert hat, du suchst deinen eigenen Fehler, weil man dich auf ein Podest gestellt hat und du wieder hinaufwillst. Das ist der Kern des Mechanismus: <strong>Die Abwertung funktioniert nur, weil es vorher die Idealisierung gab.</strong> Ohne Gipfel kein Absturz.</p>
-<p>In dieser Phase kippt eine Beziehung konkret ins Toxische. Wenn du diesen Umschlagpunkt wiedererkennst, hilft der <a href="/de/toxische-beziehung-test/">Test zur toxischen Beziehung</a> dabei, dem Veränderten Worte zu geben.</p>`,
+<p>In dieser Phase kippt eine Beziehung konkret ins Toxische. Wenn du diesen Umschlagpunkt wiedererkennst, hilft der <a href="/de/toxische-beziehung-test/">Test zur toxischen Beziehung</a> dabei, dem Veränderten Worte zu geben. Und wenn du noch ganz am Anfang stehst und wissen willst, ob <a href="/de/red-flag-test/">diese Person außer dem Tempo noch andere Zeichen zeigt</a>, gewichten zwanzig Fragen jedes davon nach seiner Schwere.</p>`,
         },
         {
           id: 'phase-verstossung-rueckkehr',

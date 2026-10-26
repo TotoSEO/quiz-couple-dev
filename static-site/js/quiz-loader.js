@@ -538,6 +538,34 @@
     // ne se devinent pas. Les quinze questions sont posees a chaque fois, le
     // maximum est donc toujours 150 et les quatre paliers tombent sur des
     // bornes fixes. Les deux series partagent leurs paliers, sous « ex ».
+    // ── Test red flag (26 octobre 2026, Thomas) ──
+    // On dit d'abord si la personne a laquelle on pense est un homme ou une
+    // femme, et la serie change : pas seulement les pronoms, une partie des
+    // questions (ce qu'il dit des femmes et ce qu'il fait d'un non d'un cote,
+    // les tests et la tete pendant des jours de l'autre), ecrites d'apres ce
+    // que les gens citent le plus quand on leur demande leurs plus gros red
+    // flags. Bareme explicite dans gd.json : chaque question pese de 3 a 8
+    // selon sa gravite (serveurs et ex : 3 ; jalousie, coleres, excuses,
+    // proches : 5 ou 6 ; le non, la colere physique et la peur : 8), 100
+    // points par serie, neuf paliers partages sous « redFlag » (bornes hautes
+    // des huit premiers : « parfois » a toutes les questions fait 23 points et
+    // reste dans les signaux faibles, « souvent » partout 61, le gros red
+    // flag). Les planchers : une main levee (q9) vaut a elle seule le dernier
+    // palier, la peur de sa reaction (q10) et un non qui ne lache pas (q4)
+    // l'avant-dernier, l'isolement (q13) le septieme, le telephone fouille
+    // (q5), l'explosion (q6) et la surveillance (q17) le sixieme, quoi que
+    // disent les dix-neuf autres reponses. Les deux series repetent les
+    // memes tableaux : verifie-pools.js lit QUIZ_CONFIG par eval, sans
+    // variable libre.
+    'red-flag':       { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'redFlagH', engine: 'solo', totalQ: 20, pool: 20, quizType: 'red-flag', ascending: true, ptsExplicites: true, resultPrefix: 'redFlag',
+        paliers: [5, 13, 25, 36, 48, 60, 73, 86],
+        planchers: [{ q: 9, o: 'd', palier: 9 }, { q: 10, o: 'd', palier: 8 }, { q: 4, o: 'd', palier: 8 }, { q: 13, o: 'd', palier: 7 }, { q: 5, o: 'd', palier: 6 }, { q: 6, o: 'd', palier: 6 }, { q: 17, o: 'd', palier: 6 }] },
+      { id: 'femme', emoji: '👩', prefix: 'redFlagF', engine: 'solo', totalQ: 20, pool: 20, quizType: 'red-flag', ascending: true, ptsExplicites: true, resultPrefix: 'redFlag',
+        paliers: [5, 13, 25, 36, 48, 60, 73, 86],
+        planchers: [{ q: 9, o: 'd', palier: 9 }, { q: 10, o: 'd', palier: 8 }, { q: 4, o: 'd', palier: 8 }, { q: 13, o: 'd', palier: 7 }, { q: 5, o: 'd', palier: 6 }, { q: 6, o: 'd', palier: 6 }, { q: 17, o: 'd', palier: 6 }] }
+    ] },
+
     'ex':             { modes: [
       { id: 'homme', emoji: '👨', prefix: 'exH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' },
       { id: 'femme', emoji: '👩', prefix: 'exF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' }

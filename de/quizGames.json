@@ -778,5 +778,10 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte über den Menschen, wie er heute ist, nicht über den, der er hoffentlich einmal wird.",
     "disclaimer": "Dieser Test entscheidet nicht für dich. Er legt deine Antworten nebeneinander, und oft sieht man genau dort, was man schon wusste. Deine Antworten werden nicht gespeichert."
+  },
+  "red-flag": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte danach, was diese Person tut, nicht danach, was sie sagt, dass sie tun wird.",
+    "disclaimer": "Dieser Test klebt niemandem ein Etikett auf. Er zählt Verhaltensweisen, und er gewichtet die stärker, die zählen: Angst, Kontrolle, ein Nein, das nicht gehört wird. Deine Antworten werden nicht gespeichert."
   }
 }

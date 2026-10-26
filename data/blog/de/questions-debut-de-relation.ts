@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'und-wenn-es-der-richtige-moment-ist',
       title: "Und nach diesen 60 Fragen?",
-      content: `<p>Wenn du auch nur die Hälfte davon im Lauf der Wochen gestellt hast, weißt du schon das Wesentliche: wie dieser Mensch funktioniert, was er sucht, und ob eure Richtungen zusammenpassen. Das ist schon deutlich mehr, als die meisten Paare im selben Stadium wissen.</p>
+      content: `<p>Wenn du auch nur die Hälfte davon im Lauf der Wochen gestellt hast, weißt du schon das Wesentliche: wie dieser Mensch funktioniert, was er sucht, und ob eure Richtungen zusammenpassen. Das ist schon deutlich mehr, als die meisten Paare im selben Stadium wissen. Und wenn dich bei einer dieser Antworten etwas hat stutzen lassen, ohne dass du sagen könntest, was, dann <a href="/de/red-flag-test/">gewichten zwanzig Fragen dazu, was dieser Mensch tut, nicht was er sagt</a>, jedes Zeichen nach seiner Schwere.</p>
 <p>Bleibt die Frage, die Fragen nicht klären: was DU fühlst. Die wachsende Bindung, ist das überfließende Freundschaft, vorbeiziehende Anziehung, oder der Anfang der echten Sache? Irgendwann muss man sie sich offen stellen.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Überfließende Freundschaft oder beginnende Liebe?</p>

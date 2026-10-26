@@ -422,6 +422,12 @@
     "description": "Venti domande su come ti senti con questa persona, i vostri litigi, la fiducia e il futuro che immagini. Il risultato dice se le tue risposte vanno nella stessa direzione, e quale.",
     "metaDescription": "Venti domande sulla fiducia, sui litigi, sulla voglia di rivederlo o rivederla e sul futuro che immagini. Risultato immediato, gratuito e anonimo."
   },
+  "testRedFlag": {
+    "title": "Test red flag | Questa persona ne ha?",
+    "shortTitle": "Test red flag",
+    "description": "Un uomo o una donna: venti domande su quello che questa persona fa, ogni segnale pesato in base alla gravità, e un risultato su nove livelli.",
+    "metaDescription": "Uomo o donna, 20 domande su quello che questa persona fa: gli ex, il no, la gelosia, la rabbia. Ogni segnale pesa in base alla gravità. Gratis e anonimo."
+  },
   "testSignesChinois": {
     "title": "Compatibilità dei segni cinesi in amore: calcolo gratuito",
     "shortTitle": "Compatibilità segni cinesi",

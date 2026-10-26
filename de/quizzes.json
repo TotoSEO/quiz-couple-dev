@@ -422,6 +422,12 @@
     "description": "Zwanzig Fragen dazu, wie du dich mit diesem Menschen fühlst, zu euren Streits, zum Vertrauen und zu der Zukunft, die du dir vorstellst. Das Ergebnis sagt, ob deine Antworten in dieselbe Richtung zeigen, und in welche.",
     "metaDescription": "Zwanzig Fragen zu Vertrauen, Streit, der Lust auf ein Wiedersehen und der Zukunft, die du dir vorstellst. Sofortiges Ergebnis, kostenlos und anonym."
   },
+  "testRedFlag": {
+    "title": "Red-Flag-Test | Hat diese Person welche?",
+    "shortTitle": "Red-Flag-Test",
+    "description": "Ein Mann oder eine Frau: zwanzig Fragen dazu, was diese Person tut, jedes Zeichen nach seiner Schwere gewichtet, und ein Ergebnis auf neun Stufen.",
+    "metaDescription": "Mann oder Frau, 20 Fragen dazu, was diese Person tut: die Ex, ein Nein, Eifersucht, Wut. Jedes Zeichen nach seiner Schwere gewichtet. Kostenlos und anonym."
+  },
   "testSignesChinois": {
     "title": "Chinesische Sternzeichen in der Liebe: passt ihr zusammen?",
     "shortTitle": "Chinesische Sternzeichen",

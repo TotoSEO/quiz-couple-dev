@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "badge": "A test to take alone",
+    "title": "Find out in 20 questions whether the person you're thinking of is a red flag",
+    "titleHighlight": "red flag",
+    "description": "A man or a woman, the questions change. Twenty concrete situations: how this person talks about their exes, what they do when you say no, their jealousy, their anger, the people close to you. <strong>Each sign is weighted by how serious it is</strong>, and the result reads on <strong>nine levels</strong>.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How does the red flag test work?",
+    "intro": "A red flag is a behaviour that keeps coming back and should alert you. Not a bad day, not a flaw you can argue about. The problem is that you see them badly from the inside: you excuse them one by one, and the adding up is something you never do. This test does it for you.",
+    "p1": "You start by saying whether the person you're thinking of is a man or a woman. That isn't for show: the questions change. What people most often notice in a man (the way he talks about women, what he does when you say no) and in a woman (the tests, the silent treatment for days without saying why) don't quite match. If you want the full lists, with an example for each, they're in our articles on <a href=\"/en/blog/red-flags-in-a-man/\">the red flags in a man</a> and on <a href=\"/en/blog/red-flags-in-a-woman/\">the ones people notice in a woman</a>. Here, we don't list: we measure.",
+    "p2": "Then twenty questions about everyday situations, with four answers each time, from \"nothing to report\" to \"that's exactly it\". You answer about what this person does, not what they say they'll do, and not what you hope. It works for someone you've been seeing for three weeks as well as for the person you've lived with for three years: the situations were chosen for that.",
+    "p3": "The test is anonymous, and your answers stay in your browser. You can take it again as many times as you like, for the same person in six months, or for someone else."
+  },
+  "section2": {
+    "title": "Why the questions don't all carry the same weight",
+    "p1": "Saying \"it's their job\" to a waiter and raising a hand to you are not two boxes on the same list. So each question in the test has its own weight, from three to eight points, depending on what it says. Being short with waiters or badmouthing every ex is worth three points at most: these are well-known signs, but on their own they don't say much. The jealousy that goes through your phone, the anger, the apologies that never come, the people close to you being pushed away are worth five or six. And three questions are worth eight: what happens when you say no, physical anger, and whether you're afraid of their reaction.",
+    "p2": "The total comes to 100 points. Some answers even count on their own: if you say this person has already raised their hand to you, the result cannot drop below the last level, even if everything else is perfect. Nineteen good answers don't dilute that one.",
+    "p3": "The result reads on nine levels, from \"green flag\" to \"this isn't a red flag any more, it's a danger\", each time with what your answers say and one thing to do. Nine rather than four, because between \"two or three small things\" and \"several signs that go together\" there's a real difference, and that's exactly the one you came here for.",
+    "headerScore": "Score",
+    "headerLevel": "Level",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 5",
+    "row1Level": "Green flag",
+    "row1Analysis": "None of what the test looks for.",
+    "row2Score": "6 to 13",
+    "row2Level": "Nothing alarming",
+    "row2Analysis": "Ordinary flaws, not a behaviour that does damage.",
+    "row3Score": "14 to 25",
+    "row3Level": "A few weak signals",
+    "row3Analysis": "Two or three things to say, without alarming anyone.",
+    "row4Score": "26 to 36",
+    "row4Level": "A red flag, maybe two",
+    "row4Analysis": "A behaviour that keeps coming back and isn't a trifle.",
+    "row5Score": "37 to 48",
+    "row5Level": "Several red flags",
+    "row5Analysis": "Signs that go together and already cost you something.",
+    "row6Score": "49 to 60",
+    "row6Level": "Red flag confirmed",
+    "row6Analysis": "A way of treating you, not flaws.",
+    "row7Score": "61 to 73",
+    "row7Level": "A big red flag",
+    "row7Analysis": "Control and fear: you've started adapting.",
+    "row8Score": "74 to 86",
+    "row8Level": "A walking red flag",
+    "row8Analysis": "A relationship that is damaging you.",
+    "row9Score": "87 to 100",
+    "row9Level": "A danger",
+    "row9Analysis": "Violence or real fear: don't stay alone with it."
+  },
+  "section3": {
+    "title": "A red flag isn't the same thing as a toxic relationship",
+    "p1": "A red flag is a signal: something that should make you slow down and look closer, at the start of a story or in the middle of it. A toxic relationship is when those signals have become everyday life and you no longer know whether you're exaggerating. If that's where you are, if the question is no longer \"does this person have red flags\" but \"is what I'm living normal\", it's rather <a href=\"/en/toxic-relationship-test/\">the test that measures whether your relationship is toxic</a> that you need.",
+    "p2": "And if what brought you here is a start that was too perfect, declarations in the first week, messages at all hours, we've written about <a href=\"/en/blog/love-bombing-signs/\">how to tell love at first sight from love bombing</a>, with a very simple test that fits in one sentence.",
+    "p3": "The other way round, a low result doesn't answer everything. Not being a red flag isn't the same as being the right person. If that's the question going round in your head, <a href=\"/en/is-this-the-one-test/\">twenty other questions look at whether they're the one</a>, and those are completely different questions."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask",
+    "faq1Q": "Does the test work if I've only known this person for a short time?",
+    "faq1A": "Yes, it's even the best time. The twenty situations were chosen to show from the first weeks: the way they talk to waiters and about their exes, the reaction to a no, the pace at the start, the listening. For what you haven't been able to observe yet, answer \"nothing to report\": the test doesn't guess, it counts what you've seen.",
+    "faq2Q": "Why do the questions change depending on whether it's a man or a woman?",
+    "faq2A": "Because some red flags don't show up the same way. Women who describe their bad experiences talk a lot about safety: the no that isn't heard, the way he talks about women, control dressed up as protection. Men more often talk about tests, punishing silences, the \"guess why I'm upset\". The core is the same, and a few questions are written for one or the other. Who you are changes nothing to the questions or the score.",
+    "faq3Q": "Is one red flag serious?",
+    "faq3A": "It depends which one, and that's exactly why the questions don't carry the same weight. A single heavy sign, fear of their reaction, a no that isn't heard, weighs more than five small ones. And for the small ones, what matters is the repetition and the reaction when you bring it up. Someone who hears the remark and changes isn't a red flag. Someone who takes offence and does it again is.",
+    "faq4Q": "Are my answers saved?",
+    "faq4A": "No. Your answers stay in your browser, nothing is sent and nobody sees them. There's no account and no sign-up, and you can retake the test as many times as you like.",
+    "faq5Q": "The result is high. What do I do?",
+    "faq5A": "First, reread the questions where you chose the last answer: they're the ones that made the score, and they say what's going on better than a number. Then talk to someone who isn't part of the story, reading them your answers as they are. And if one of your answers is about hitting, fear or a no that isn't respected, don't stay alone with it: in the UK the National Domestic Abuse Helpline (0808 2000 247) and in the US the National Domestic Violence Hotline (1-800-799-7233) answer for free and tell you what to do.",
+    "faq6Q": "What's the difference with the toxic relationship test?",
+    "faq6A": "This test looks at a person: what they do, from the very start if you like, whether you're in a relationship with them or not yet. The toxic relationship test looks at an established relationship: what you live as a couple, the fear, the guilt, the confidence in yourself that wears away. The first helps you decide whether to carry on. The second, to understand what you're already in."
+  },
+  "jsonLd": {
+    "about": "spotting the red flags in a person"
+  }
+}
