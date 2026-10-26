@@ -5,6 +5,7 @@
 // Lit chaque post (variantes.fr.recette), vérifie les écrans du plan, écrit
 // OK/KO par fichier et un résumé.
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { bundle } from '@remotion/bundler';
 import { openBrowser, renderStill, selectComposition } from '@remotion/renderer';
@@ -17,7 +18,7 @@ const chromiumOptions = { gl: 'swangle' };
 const puppeteerInstance = await openBrowser('chrome', { browserExecutable, chromiumOptions, logLevel: 'error' });
 const commun = { browserExecutable, chromiumOptions, puppeteerInstance, logLevel: 'error', timeoutInMilliseconds: 60000 };
 const serveUrl = await bundle({ entryPoint: path.join(studio, 'src', 'index.ts') });
-const sortie = path.join(studio, '.verif-lot.png');
+const sortie = path.join(os.tmpdir(), 'verif-lot-' + process.pid + '.png');
 let ko = 0;
 const t0 = Date.now();
 for (const f of fichiers) {
