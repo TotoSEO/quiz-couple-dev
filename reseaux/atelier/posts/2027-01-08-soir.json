@@ -1,0 +1,64 @@
+{
+  "jour": "2027-01-08",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-085",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Rain or shine",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Tea in the rain",
+            "b": "Sun, no plans"
+          },
+          {
+            "a": "One umbrella",
+            "b": "Run and get wet"
+          },
+          {
+            "a": "Storm in bed",
+            "b": "Sunset on a roof"
+          },
+          {
+            "a": "Snow day",
+            "b": "Beach day"
+          },
+          {
+            "a": "Rainy museum",
+            "b": "Sunny picnic"
+          },
+          {
+            "a": "Puddle jumping",
+            "b": "Sandcastles"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Rain or shine. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
