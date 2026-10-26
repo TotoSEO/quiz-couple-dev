@@ -234,7 +234,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
 }
 
 // Les statistiques à sept jours des posts du compte, chacune avec la
-// catégorie, le format et le créneau de son post, et le résumé par
+// catégorie, le format, le créneau et le thème de son post, et le résumé par
 // catégorie (combien de posts relevés, vues médiane, moyenne et maximale,
 // partages et enregistrements en tout, du meilleur au moins bon). Jusqu'au
 // 26 octobre 2026, l'état des deux comptes recevait les vues de tous les
@@ -250,7 +250,7 @@ export async function statistiquesDuCompte(base, langue) {
     ? await parLots([...new Set(lignes.map((l) => l.variante_id))], (ids) => base.select('social_variantes', `select=id,post_id,publie_le&langue=eq.${langue}&id=in.(${ids.join(',')})`))
     : [];
   const posts = variantes.length
-    ? await parLots([...new Set(variantes.map((v) => v.post_id))], (ids) => base.select('social_posts', `select=id,categorie,format,gabarit,jour,creneau,sujet&id=in.(${ids.join(',')})`))
+    ? await parLots([...new Set(variantes.map((v) => v.post_id))], (ids) => base.select('social_posts', `select=id,categorie,format,gabarit,jour,creneau,theme&id=in.(${ids.join(',')})`))
     : [];
   const variante = new Map(variantes.map((v) => [v.id, v]));
   const post = new Map(posts.map((p) => [p.id, p]));
@@ -267,7 +267,7 @@ export async function statistiquesDuCompte(base, langue) {
         gabarit: p.gabarit || null,
         jour: p.jour || null,
         creneau: p.creneau || null,
-        sujet: p.sujet || null,
+        theme: p.theme || null,
       };
     });
   const groupes = new Map();
