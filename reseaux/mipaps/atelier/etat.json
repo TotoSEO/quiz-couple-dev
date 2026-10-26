@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-26T08:49:59.927Z",
+  "genere_le": "2026-10-26T11:54:07.562Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -1315,9 +1315,9 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": "ton pull est mieux sur moi",
-      "erreur": null
+      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
     },
     {
       "jour": "2026-10-26",
@@ -1369,7 +1369,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "ok j'avoue c'est moi qui ai mangé la dernière part",
       "erreur": null
     },
@@ -2583,452 +2583,590 @@
   },
   "statistiques_j7": [
     {
-      "variante_id": "260cd647-003a-4d6d-8587-fa2a5a18024b",
-      "releve": "j7",
-      "vues": 1008,
-      "partages": 5,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "7f6983cd-5218-4f62-890f-eb70d7f76866",
-      "releve": "j7",
-      "vues": 607,
-      "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "eb10d1a0-1926-4af5-b5db-3991cd7193df",
-      "releve": "j7",
-      "vues": 684,
-      "partages": 1,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "0d0a197e-a99f-4114-96d5-709d171a10c0",
-      "releve": "j7",
-      "vues": 78,
-      "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "3e8e2530-1062-47ec-b520-c53d6937fa33",
-      "releve": "j7",
-      "vues": 1451,
-      "partages": 1,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "14f136e6-53c1-493c-b2a7-72af378cee9a",
-      "releve": "j7",
-      "vues": 198,
-      "partages": 2,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "6a7c5685-dc66-43e2-9f5b-003b2c83887c",
-      "releve": "j7",
-      "vues": 1352,
-      "partages": 6,
-      "enregistrements": 1
-    },
-    {
       "variante_id": "eab84977-a61b-4494-9333-60208e43e7df",
       "releve": "j7",
       "vues": 0,
+      "portee": 0,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-17T03:13:00.129046+00:00",
+      "publie_le": "2026-10-09T18:40:11.262+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-09",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "cb1a8b2f-5e5a-419c-8124-7941580e9a2e",
       "releve": "j7",
       "vues": 304,
+      "portee": 272,
+      "likes": 3,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "5ffe51a8-532a-4c30-af2f-5ddb86659275",
-      "releve": "j7",
-      "vues": 218,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-17T07:44:55.008551+00:00",
+      "publie_le": "2026-10-10T04:40:08.824+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-10",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "08ea1aed-714d-45e3-88e8-75724f498eab",
       "releve": "j7",
       "vues": 2,
+      "portee": 2,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "f47c4ea7-e61f-4485-a542-353fa0ea2542",
-      "releve": "j7",
-      "vues": 173,
-      "partages": 1,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "ffad7d32-1461-42af-908b-f13476005a62",
-      "releve": "j7",
-      "vues": 211,
-      "partages": 2,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-18T03:12:20.169837+00:00",
+      "publie_le": "2026-10-10T09:40:09.879+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-10",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "985c5c8b-f448-46c8-9487-21b779e42d29",
       "releve": "j7",
       "vues": 182,
+      "portee": 170,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 2,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "7b06b7fb-e9ad-4697-b1dc-49fe5e3c2e8c",
-      "releve": "j7",
-      "vues": 288,
-      "partages": 1,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-18T03:12:29.839748+00:00",
+      "publie_le": "2026-10-10T15:10:08.58+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-10",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "30c8ec65-c9db-4421-bd35-dff810257482",
       "releve": "j7",
       "vues": 242,
+      "portee": 223,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 1
-    },
-    {
-      "variante_id": "cdcbec6a-af81-4446-bbe2-d0c06bc7847f",
-      "releve": "j7",
-      "vues": 255,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 1,
+      "releve_le": "2026-10-18T07:59:34.235995+00:00",
+      "publie_le": "2026-10-11T05:40:10.494+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-11",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "a6c79621-e0dd-48e2-b664-1fd3a33451b6",
       "releve": "j7",
       "vues": 0,
+      "portee": 0,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-19T03:13:20.760726+00:00",
+      "publie_le": "2026-10-11T10:30:09.702+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-11",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "ec1d8f45-f73a-45f2-bf23-5f4434f82e11",
       "releve": "j7",
       "vues": 0,
+      "portee": 0,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "d657f00d-a17f-4d62-af7f-2eb25019ac2c",
-      "releve": "j7",
-      "vues": 192,
-      "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "70e1484f-b804-4e27-b50f-9f6fd9d5906e",
-      "releve": "j7",
-      "vues": 983,
-      "partages": 1,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-19T03:13:25.181835+00:00",
+      "publie_le": "2026-10-11T15:20:10.454+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-11",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "e3239beb-56bf-4aa6-bff0-bdb05c40c462",
       "releve": "j7",
       "vues": 261,
+      "portee": 231,
+      "likes": 3,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-19T08:48:04.671924+00:00",
+      "publie_le": "2026-10-12T04:50:10.727+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-12",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "0140e182-0915-40f7-89ac-f76b2d14a2e6",
       "releve": "j7",
       "vues": 1,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "851318aa-14d4-4eb5-a12c-f7bdd1cc0cd6",
-      "releve": "j7",
-      "vues": 378,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-20T03:13:22.175878+00:00",
+      "publie_le": "2026-10-12T09:20:09.595+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-12",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "ccbb563e-8a70-4342-8e35-7735b0bc25e6",
       "releve": "j7",
       "vues": 1,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "5fdaef99-a5af-4218-8a1a-2756e541e9a9",
-      "releve": "j7",
-      "vues": 239,
-      "partages": 3,
-      "enregistrements": 1
+      "enregistrements": 0,
+      "releve_le": "2026-10-20T03:13:25.431654+00:00",
+      "publie_le": "2026-10-12T15:00:13.463+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-12",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "865a138e-e33f-4051-a0d1-f7a34edeb277",
       "releve": "j7",
       "vues": 261,
+      "portee": 230,
+      "likes": 1,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "c88889d0-b6ae-4fe1-b317-5b56921cba21",
-      "releve": "j7",
-      "vues": 301,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-20T08:28:58.282504+00:00",
+      "publie_le": "2026-10-13T04:50:08.968+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-13",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "0e3df6b8-8ed8-42cd-9cc6-edfcf1482388",
       "releve": "j7",
       "vues": 3,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-21T03:13:14.573218+00:00",
+      "publie_le": "2026-10-13T10:00:11.464+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-13",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "69673f42-ba3f-42c5-9586-6c5d54b36b1f",
       "releve": "j7",
       "vues": 200,
+      "portee": 186,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 1,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "94e0eb67-0b18-4464-8c3e-8ee12ae8309a",
-      "releve": "j7",
-      "vues": 64,
-      "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "f6e066dc-b501-4874-86db-069c461996a3",
-      "releve": "j7",
-      "vues": 52186,
-      "partages": 1483,
-      "enregistrements": 556
-    },
-    {
-      "variante_id": "d3dcc8dd-2b93-4365-bd0f-772eb49675a7",
-      "releve": "j7",
-      "vues": 460,
-      "partages": 1,
-      "enregistrements": 1
+      "enregistrements": 0,
+      "releve_le": "2026-10-21T03:13:16.03392+00:00",
+      "publie_le": "2026-10-13T14:20:15.037+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-13",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "d5da4ec2-aaa7-48a2-8c68-1314418d6950",
       "releve": "j7",
       "vues": 182,
+      "portee": 166,
+      "likes": 2,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-21T08:31:44.010197+00:00",
+      "publie_le": "2026-10-14T04:10:08.762+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-14",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "6a1ab773-3c5f-4f7f-970a-f25553d70435",
       "releve": "j7",
       "vues": 4,
+      "portee": 2,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "209f2db0-3893-41e2-be61-ac0e68d18f57",
-      "releve": "j7",
-      "vues": 357,
-      "partages": 5,
-      "enregistrements": 4
-    },
-    {
-      "variante_id": "f8a03964-604b-4912-8530-82d514032ea1",
-      "releve": "j7",
-      "vues": 356,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-22T03:13:19.389583+00:00",
+      "publie_le": "2026-10-14T10:00:10.231+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-14",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "f3403f59-9849-4c71-843f-62dbbbcee3e4",
       "releve": "j7",
       "vues": 3,
+      "portee": 2,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-22T03:13:22.617727+00:00",
+      "publie_le": "2026-10-14T14:20:12.557+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-14",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "d6cb2332-ed83-4a84-af75-9cfeca71c0e8",
       "releve": "j7",
       "vues": 394,
+      "portee": 329,
+      "likes": 3,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "2acf8aaa-5a65-4a26-be70-e4c5e99f48db",
-      "releve": "j7",
-      "vues": 323,
-      "partages": 2,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "96b000d6-956f-4e19-967a-8c0ca0a2b7e7",
-      "releve": "j7",
-      "vues": 217,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-22T08:33:26.036861+00:00",
+      "publie_le": "2026-10-15T04:10:11.232+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-15",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "b175a99a-bc8d-4f8d-99b2-ce879cc5ef55",
       "releve": "j7",
       "vues": 1,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-23T03:13:29.653565+00:00",
+      "publie_le": "2026-10-15T10:30:09.638+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-15",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "e44480a3-e7f8-4130-9019-32627819ebe5",
       "releve": "j7",
       "vues": 210,
+      "portee": 198,
+      "likes": 2,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "7f7414e3-6add-4639-ac65-89a5f28ccc1d",
-      "releve": "j7",
-      "vues": 173,
-      "partages": 1,
-      "enregistrements": 4
-    },
-    {
-      "variante_id": "d15c8a83-4e42-4085-b049-a5fa37d3fca6",
-      "releve": "j7",
-      "vues": 335,
-      "partages": 1,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-23T03:13:30.816762+00:00",
+      "publie_le": "2026-10-15T15:10:17.778+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-15",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "ebe4a12a-2a83-4647-bf99-b4bfc8d37b36",
       "releve": "j7",
       "vues": 1489,
+      "portee": 1291,
+      "likes": 14,
+      "commentaires": 0,
       "partages": 2,
-      "enregistrements": 1
+      "enregistrements": 1,
+      "releve_le": "2026-10-23T08:29:29.284669+00:00",
+      "publie_le": "2026-10-16T05:30:11.975+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-16",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "c4f93dd3-1241-45ab-bf20-52750020a8d1",
       "releve": "j7",
       "vues": 1,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "6bf6e469-d82f-4410-9088-ea2be2f904cb",
-      "releve": "j7",
-      "vues": 2020,
-      "partages": 32,
-      "enregistrements": 34
-    },
-    {
-      "variante_id": "3a1d43df-bcfb-4ab3-a49e-6c51e6db7f30",
-      "releve": "j7",
-      "vues": 774,
-      "partages": 5,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-24T03:14:13.019746+00:00",
+      "publie_le": "2026-10-16T09:20:10.586+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-16",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "6e5665c3-bda9-4ed6-9b9e-8b2fcc0a9f59",
       "releve": "j7",
       "vues": 2,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "0e763694-9852-48ee-9199-62d3d046506e",
-      "releve": "j7",
-      "vues": 611,
-      "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-24T03:14:16.396814+00:00",
+      "publie_le": "2026-10-16T15:10:10.78+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-16",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "0f25aade-8b6b-4de0-8b29-97a46f7a6a54",
       "releve": "j7",
       "vues": 222,
+      "portee": 208,
+      "likes": 1,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-24T08:05:02.848489+00:00",
+      "publie_le": "2026-10-17T05:10:09.097+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-17",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "aff317c3-0af4-44c9-a401-a05d0944a880",
       "releve": "j7",
       "vues": 2,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "28d8d1a4-8328-4876-9b22-f9b4c071c942",
-      "releve": "j7",
-      "vues": 421,
-      "partages": 10,
-      "enregistrements": 3
+      "enregistrements": 0,
+      "releve_le": "2026-10-25T03:12:58.242548+00:00",
+      "publie_le": "2026-10-17T10:30:09.527+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-17",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "b17f22ea-4215-4c7d-8f64-8d8bd0318e03",
       "releve": "j7",
       "vues": 213,
+      "portee": 193,
+      "likes": 3,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "e3078a28-2594-4bfa-95e1-6590a949e2ae",
-      "releve": "j7",
-      "vues": 170,
-      "partages": 0,
-      "enregistrements": 2
+      "enregistrements": 0,
+      "releve_le": "2026-10-25T03:13:00.409822+00:00",
+      "publie_le": "2026-10-17T15:00:11.158+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-17",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "7b399295-1ee6-4ec0-96e9-4e4c1fc6f7d3",
       "releve": "j7",
       "vues": 912,
+      "portee": 749,
+      "likes": 10,
+      "commentaires": 0,
       "partages": 3,
-      "enregistrements": 1
-    },
-    {
-      "variante_id": "7b74d7f8-6d0c-4941-b5ae-fb739ccc9d10",
-      "releve": "j7",
-      "vues": 1647,
-      "partages": 9,
-      "enregistrements": 3
+      "enregistrements": 1,
+      "releve_le": "2026-10-25T08:22:51.788967+00:00",
+      "publie_le": "2026-10-18T04:10:09.909+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-18",
+      "creneau": "matin",
+      "theme": null
     },
     {
       "variante_id": "739d8676-89aa-49b7-92a6-ec68d40e90af",
       "releve": "j7",
       "vues": 9,
+      "portee": 2,
+      "likes": 1,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
-    },
-    {
-      "variante_id": "08057411-45e8-449d-8502-41e36e60cd76",
-      "releve": "j7",
-      "vues": 2502,
-      "partages": 41,
-      "enregistrements": 18
-    },
-    {
-      "variante_id": "b0c8c41e-9e98-40b6-9faf-789c7fca705d",
-      "releve": "j7",
-      "vues": 305,
-      "partages": 3,
-      "enregistrements": 1
+      "enregistrements": 0,
+      "releve_le": "2026-10-26T03:13:45.522994+00:00",
+      "publie_le": "2026-10-18T09:40:09.891+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-18",
+      "creneau": "midi",
+      "theme": null
     },
     {
       "variante_id": "49bb8ad1-d0d5-4331-9c4e-2e0e21f03fe4",
       "releve": "j7",
       "vues": 3,
+      "portee": 1,
+      "likes": 0,
+      "commentaires": 0,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "releve_le": "2026-10-26T03:13:48.170822+00:00",
+      "publie_le": "2026-10-18T14:20:10.781+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-18",
+      "creneau": "soir",
+      "theme": null
     },
     {
       "variante_id": "3ead9ea8-48fc-444f-863d-438e04715555",
       "releve": "j7",
       "vues": 2832,
+      "portee": 2110,
+      "likes": 34,
+      "commentaires": 0,
       "partages": 5,
-      "enregistrements": 2
+      "enregistrements": 2,
+      "releve_le": "2026-10-26T08:49:50.220963+00:00",
+      "publie_le": "2026-10-19T04:50:08.846+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-19",
+      "creneau": "matin",
+      "theme": null
     },
     {
-      "variante_id": "fc822cb0-9823-491b-9ab0-fffbf20eb1f9",
+      "variante_id": "c99fe29a-8f9b-491f-bb5c-0420ecba7df4",
       "releve": "j7",
-      "vues": 794,
+      "vues": 8,
+      "portee": 4,
+      "likes": 1,
+      "commentaires": 0,
+      "partages": 1,
+      "enregistrements": 0,
+      "releve_le": "2026-10-26T11:39:55.682337+00:00",
+      "publie_le": "2026-10-19T09:50:09.821+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-19",
+      "creneau": "midi",
+      "theme": null
+    }
+  ],
+  "statistiques_par_categorie": [
+    {
+      "categorie": "mipaps-anime",
+      "posts": 10,
+      "vues_mediane": 283,
+      "vues_moyenne": 710,
+      "vues_max": 2832,
+      "partages": 10,
+      "enregistrements": 5,
+      "likes": 71,
+      "commentaires": 0
+    },
+    {
+      "categorie": "mipaps-statique",
+      "posts": 4,
+      "vues_mediane": 205,
+      "vues_moyenne": 201,
+      "vues_max": 213,
+      "partages": 3,
+      "enregistrements": 0,
+      "likes": 5,
+      "commentaires": 0
+    },
+    {
+      "categorie": "mipaps-histoire",
+      "posts": 6,
+      "vues_mediane": 2,
+      "vues_moyenne": 2,
+      "vues_max": 3,
       "partages": 0,
-      "enregistrements": 0
+      "enregistrements": 0,
+      "likes": 0,
+      "commentaires": 0
+    },
+    {
+      "categorie": "mipaps-post",
+      "posts": 10,
+      "vues_mediane": 2,
+      "vues_moyenne": 3,
+      "vues_max": 9,
+      "partages": 1,
+      "enregistrements": 0,
+      "likes": 2,
+      "commentaires": 0
     }
   ]
 }
