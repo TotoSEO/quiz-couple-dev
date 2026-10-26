@@ -339,7 +339,8 @@ disparaissent quand on répond « Non » à « Avoir des enfants » (enf2 à enf
 et val2) sont remplacées par sept questions sur la vie sans enfants (enf9 à
 enf14 et val2b, `siRep: { enf1: [3] }`), cachées tant que enf1 n'a pas de
 réponse (`alternative: true` dans coeur.mjs) pour que le total affiché ne
-bouge pas. Le test `coeur.test.mjs` parcourt les 384 situations et les cinq
+bouge pas. Le test `coeur.test.mjs` parcourt les 96 situations (384 tant que la
+durée de la relation était demandée, jusqu'au 25 octobre 2026) et les cinq
 réponses possibles à enf1 : 100 à chaque fois. Le domaine « Où et comment
 vivre » reste à six questions, « Comment vous allez » à douze.
 

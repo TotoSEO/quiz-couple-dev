@@ -8,13 +8,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as C from '../coeur.mjs';
-import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, empreinte } from '../serveur.mjs';
+import { creerServeur, traiterWebhook, CHEMINS, CREATIONS_PAR_HEURE, CELIB_PAR_HEURE, CELIB_PAR_JOUR, REPRISES_PAR_JOUR, ENVOIS_AVANT_RESERVE, RAPPELS_PAR_JOUR, empreinte } from '../serveur.mjs';
 import { creerStockageMemoire } from '../stockage-rest.mjs';
 import { verifierSignature, signer, encoderFormulaire } from '../stripe.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
-const SIT = { ensemble: 'oui', duree: '3a10', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
+const SIT = { ensemble: 'oui', engagement: 'pacses', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'oui' };
 
 function fauxStripe({ refuseCode = false } = {}) {
   const sessions = new Map();
@@ -117,7 +117,7 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
 // Le départ du 21 octobre 2026 : un seul écran (prénoms et les deux cases),
 // la situation posée comme les premières questions, l'adresse demandée à la
 // fin de ses propres questions, juste avant l'offre.
-test('le départ léger : situation après la création, adresse à la fin', async () => {
+test('le départ léger : situation au fil des domaines, adresse à la fin', async () => {
   const { appel, stockage } = monter();
   const c = await appel({ action: 'creer', lang: 'fr', mode: 'duo', moi: { prenom: 'Thomas', genre: 'h' }, autre: { prenom: 'Léa', genre: 'f' }, consentement: true, majeur: true, rappel: true });
   assert.equal(c.statut, 200, JSON.stringify(c.json));
@@ -125,12 +125,27 @@ test('le départ léger : situation après la création, adresse à la fin', asy
   assert.deepEqual(ligne().situation, {});
   assert.equal(ligne().a_email, null);
   assert.equal(ligne().a_rappel, false, 'pas de rappel sans adresse');
-  assert.equal(ligne().a_etape, 'situation');
+  assert.equal(ligne().a_etape, 'temps', 'le temps à deux ouvre l\'évaluation');
   const A = { id: c.json.id, jeton: c.json.jeton };
-  // Pas de réponse tant que la situation manque : les questions en dépendent.
-  assert.equal((await appel({ action: 'repondre', ...A, reponses: { quo3: 1 } })).json.erreur, 'situation');
-  assert.equal((await appel({ action: 'situation', ...A, situation: { ...SIT, animal: undefined } })).json.erreur, 'situation');
-  const s = await appel({ action: 'situation', ...A, situation: SIT });
+  // Des réponses avant toute situation (25 octobre 2026) : enregistrées,
+  // comptées sur cent, jamais complètes.
+  const r0 = await appel({ action: 'repondre', ...A, reponses: { tps1: 1 } });
+  assert.equal(r0.statut, 200, JSON.stringify(r0.json));
+  assert.equal(r0.json.complet, false);
+  assert.deepEqual(r0.json.progression, { repondu: 1, total: 100 });
+  // La situation clé par clé, avant le domaine qui en a besoin, fusionnée
+  // avec ce qui est déjà là ; une valeur inconnue, rien, ou seulement une clé
+  // d'avant sont refusés.
+  for (const mauvaise of [{ animal: 'peut-être' }, {}, { duree: '1a3' }, 'oui']) {
+    assert.equal((await appel({ action: 'situation', ...A, situation: mauvaise })).json.erreur, 'situation', JSON.stringify(mauvaise));
+  }
+  const s1 = await appel({ action: 'situation', ...A, situation: { ensemble: 'oui', animal: 'oui' } });
+  assert.deepEqual(s1.json.etat.situation, { ensemble: 'oui', animal: 'oui' });
+  assert.equal(ligne().a_etape, 'temps');
+  const s2 = await appel({ action: 'situation', ...A, situation: { animal: 'non' } });
+  assert.deepEqual(s2.json.etat.situation, { ensemble: 'oui', animal: 'non' }, 'une clé redonnée remplace l\'ancienne');
+  // Une page d'avant donne les sept clés d'un coup, dont `duree`, ignorée.
+  const s = await appel({ action: 'situation', ...A, situation: { ...SIT, duree: '3a10' } });
   assert.equal(s.statut, 200);
   assert.deepEqual(s.json.etat.situation, SIT);
 
@@ -164,7 +179,7 @@ test('le départ léger : situation après la création, adresse à la fin', asy
   const ancien = await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, email: 'a@exemple.fr', rappel: true, consentement: true, majeur: true });
   assert.equal(ancien.statut, 200);
   assert.equal(stockage.lignes.get(ancien.json.id).a_rappel, true);
-  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'quotidien');
+  assert.equal(stockage.lignes.get(ancien.json.id).a_etape, 'temps');
 });
 
 test('les écrans du parcours comptés par la page, seul(e) à part', async () => {
@@ -201,7 +216,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   const c = await creerCouple(appel);
   const A = { id: c.id, jeton: c.jeton };
   assert.equal(stockage.lignes.get(c.id).src, 'direct');
-  assert.equal(stockage.lignes.get(c.id).a_etape, 'quotidien');
+  assert.equal(stockage.lignes.get(c.id).a_etape, 'temps');
 
   // B ouvre l'invitation : on lui présente le bilan, sans aucune réponse.
   const vue = await appel({ action: 'etat', id: c.id, jeton: c.invitation });
@@ -597,20 +612,24 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   assert.equal(ligne.b_consent, null);
   assert.ok(stockage.compteurs.some((x) => x.evenement === 'cree' || x.evenement === 'domaine_entre') || true);
 
-  // Les réponses sans la perception ne finissent pas.
+  // Les réponses sans les perceptions demandées ne finissent pas : une
+  // question de percuDemande n'est faite qu'avec la sienne, les autres
+  // n'en attendent pas (25 octobre 2026).
   const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const demande = [...C.percuDemande(SIT, ra)];
+  const total = Object.keys(ra).length;
   let r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
   assert.equal(r.json.fini, false);
-  assert.equal(r.json.progression.repondu, 0, 'une question n\'est faite qu\'avec sa perception');
+  assert.equal(r.json.progression.repondu, total - demande.length, 'une question demandée n\'est faite qu\'avec sa perception');
   // Une perception hors bornes est refusée ; « je ne sais pas » (-1) accepté.
   assert.equal((await appel({ action: 'repondre', ...A, reponses: ra, percu: { quo3: 7 } })).statut, 400);
   const percu = {};
-  for (const [id, v] of Object.entries(ra)) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - v : v;
-  percu.arg1 = C.INCONNU; percu.met4 = C.INCONNU;
-  const moitie = Object.fromEntries(Object.keys(percu).slice(0, 40).map((id) => [id, percu[id]]));
+  for (const id of demande) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - ra[id] : ra[id];
+  percu.arg1 = C.INCONNU; percu.met1 = C.INCONNU;
+  const moitie = Object.fromEntries(demande.slice(0, 20).map((id) => [id, percu[id]]));
   r = await appel({ action: 'repondre', ...A, reponses: ra, percu: moitie, fini: true });
   assert.equal(r.json.fini, false);
-  assert.equal(r.json.progression.repondu, 40);
+  assert.equal(r.json.progression.repondu, total - demande.length + 20);
   assert.deepEqual(stockage.lignes.get(c.id).a_percu, moitie);
   // Payer avant d'avoir fini : non.
   assert.equal((await appel({ action: 'payer', ...A, renonciation: true })).json.erreur, 'pas_fini');
@@ -646,6 +665,8 @@ test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'i
   assert.equal(plein.b.prenom, 'Julien');
   const analyse = C.analyser(plein.situation, plein.a, plein.b, plein.mode);
   assert.equal(analyse.compte.inconnus, 2);
+  assert.equal(analyse.compte.poses, demande.length, 'comparées ou inconnues : les perceptions demandées');
+  assert.equal(analyse.compte.repondues, total, 'toutes mes réponses restent au rapport');
 
   // Le PDF part à la seule adresse donnée, avec le message solo.
   const chemin = c.id + '/rapport-solo.pdf';
@@ -1004,4 +1025,198 @@ test('reprise : sans les colonnes en base (migration pas encore passée), l\'adr
   // Une autre erreur de la base, elle, remonte.
   stockage.maj = async () => { throw new Error('base 500 panne'); };
   await assert.rejects(() => appel({ action: 'email', id: c.id, jeton: c.jeton, email: 'lea@exemple.fr', rappel: true, reprise: true }), /panne/);
+});
+
+// ── L'adresse au départ (25 octobre 2026) ────────────────────────────────
+
+test('adresse au départ : la reprise part à qui s\'arrête en route, créatrice comme partenaire', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const relancer = async () => (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  // Léa donne son adresse en créant, sous la phrase qui annonce les e-mails.
+  const r = await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Léa', genre: 'f' }, autre: { prenom: 'Tom', genre: 'h' }, email: 'Lea@Exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  assert.equal(r.statut, 200);
+  const c = r.json;
+  assert.equal(stockage.lignes.get(c.id).a_email, 'lea@exemple.fr');
+  assert.equal(stockage.lignes.get(c.id).a_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).a_reprise, true);
+  // La fin des questions ne la redemandera pas.
+  assert.equal(c.etat.moi.email, 'lea@exemple.fr');
+  assert.equal(c.etat.moi.rappel, true);
+  // Tom accepte l'invitation avec la sienne.
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Tom', genre: 'h', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  assert.equal(ok.statut, 200);
+  assert.equal(stockage.lignes.get(c.id).b_email, 'tom@exemple.fr');
+  assert.equal(stockage.lignes.get(c.id).b_rappel, true);
+  assert.equal(stockage.lignes.get(c.id).b_reprise, true);
+  assert.equal(ok.json.etat.moi.rappel, true);
+  // Une adresse fausse est refusée, rien n'est enregistré.
+  const autre = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Ana' }, autre: { prenom: 'Bo' }, consentement: true, majeur: true })).json;
+  assert.equal((await appel({ action: 'consentir', id: autre.id, jeton: autre.invitation, prenom: 'Bo', email: 'bo@', rappel: true, reprise: true, consentement: true, majeur: true })).statut, 400);
+  assert.equal(stockage.lignes.get(autre.id).b_consent, null);
+  // Aucun des deux ne répond : 48 heures plus tard, chacun reçoit la reprise
+  // du tout début, une seule fois.
+  const avant = courriel.envoyes.length;
+  plus(47);
+  assert.equal((await relancer()).reprises, 0);
+  plus(2);
+  assert.equal((await relancer()).reprises, 2);
+  const m = courriel.envoyes.slice(avant);
+  assert.deepEqual(m.map((x) => x.a).sort(), ['lea@exemple.fr', 'tom@exemple.fr']);
+  for (const x of m) {
+    assert.equal(x.sujet, 'Votre évaluation vous attend');
+    assert.ok(x.texte.includes('Vos cent questions vous attendent'), x.texte);
+  }
+  assert.equal((await appel({ action: 'etat', id: c.id, jeton: jetonDe(m.find((x) => x.a === 'tom@exemple.fr')) })).json.role, 'b');
+  plus(72);
+  assert.equal((await relancer()).reprises, 0, 'jamais deux fois');
+  // Une page ouverte avant la mise en ligne crée sans adresse : pas de reprise.
+  const ancienne = (await appel({ action: 'creer', lang: 'fr', moi: { prenom: 'Zoé' }, autre: { prenom: 'Max' }, consentement: true, majeur: true })).json;
+  assert.equal(stockage.lignes.get(ancienne.id).a_reprise, false);
+  assert.equal(ancienne.etat.moi.email, null);
+});
+
+test('reprise : son propre plafond, et jamais au détriment du « prêt » ni du rapport payé', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const relancer = async () => (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  const creer = async (prenom, ip) => (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom }, autre: { prenom: 'Tom' }, email: prenom.toLowerCase() + '@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true }, ip)).json;
+  const compteurs = (evenement, n) => { for (let i = 0; i < n; i++) stockage.compteurs.push({ evenement, cle: '', montant: 0 }); };
+  const vider = () => { stockage.compteurs.length = 0; };
+  // Deux évaluations arrêtées, l'une plus récente que l'autre.
+  const vieille = await creer('Ana', '1.1.1.1');
+  plus(5);
+  const recente = await creer('Bea', '2.2.2.2');
+  plus(49);
+  // Il ne reste qu'une reprise possible dans la journée : la plus récente
+  // passe d'abord.
+  compteurs('reprise_envoye', REPRISES_PAR_JOUR - 1);
+  const avant = courriel.envoyes.length;
+  const r = await relancer();
+  assert.equal(r.reprises, 1);
+  assert.equal(r.plafond, true);
+  assert.deepEqual(courriel.envoyes.slice(avant).map((x) => x.a), ['bea@exemple.fr']);
+  assert.ok(stockage.lignes.get(recente.id).a_reprise_le);
+  assert.equal(stockage.lignes.get(vieille.id).a_reprise_le, null);
+  // Le « prêt » et le rappel ont leur plafond à eux : plein, il ne retient
+  // pas la reprise.
+  vider();
+  compteurs('pret_envoye', RAPPELS_PAR_JOUR);
+  assert.equal((await relancer()).reprises, 1);
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'ana@exemple.fr');
+  // Le plafond des reprises plein, le « prêt » part toujours : Ana finit,
+  // Tom accepte, finit, et Ana est prévenue.
+  vider();
+  compteurs('reprise_envoye', REPRISES_PAR_JOUR);
+  assert.equal((await appel({ action: 'repondre', id: vieille.id, jeton: vieille.jeton, reponses: tout, nn: [], fini: true })).json.fini, true);
+  const ok = await appel({ action: 'consentir', id: vieille.id, jeton: vieille.invitation, prenom: 'Tom', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  const avantPret = courriel.envoyes.length;
+  assert.equal((await appel({ action: 'repondre', id: vieille.id, jeton: ok.json.jeton, reponses: tout, nn: [], fini: true })).json.fini, true);
+  const pret = courriel.envoyes.slice(avantPret);
+  assert.deepEqual(pret.map((x) => x.a), ['ana@exemple.fr']);
+  assert.equal(pret[0].sujet, 'Tom a fini\u00a0: votre rapport est prêt');
+  // La réserve du jour : soixante e-mails de l'évaluation, tous genres
+  // confondus, et plus aucune reprise.
+  const troisieme = await creer('Cleo', '3.3.3.3');
+  plus(49);
+  vider();
+  compteurs('envoi_ok', ENVOIS_AVANT_RESERVE - 10);
+  compteurs('lien_envoye', 10);
+  const avantReserve = courriel.envoyes.length;
+  const rr = await relancer();
+  assert.equal(rr.reprises, 0);
+  assert.equal(rr.plafond, true);
+  // Le rappel d'Ana et de Tom, prêts depuis plus d'un jour, part, lui.
+  assert.equal(rr.relances, 2);
+  assert.ok(!courriel.envoyes.slice(avantReserve).some((x) => x.a === 'cleo@exemple.fr'));
+  assert.equal(stockage.lignes.get(troisieme.id).a_reprise_le, null, 'elle attend le lendemain');
+  // Le lendemain, elle part.
+  vider();
+  assert.equal((await relancer()).reprises, 1);
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'cleo@exemple.fr');
+});
+
+test('reprise : des compteurs illisibles la retiennent, le « prêt » part quand même', async () => {
+  let t = new Date();
+  const plus = (h) => { t = new Date(t.getTime() + h * 3600e3); };
+  const { appel, stockage, courriel } = monter({ maintenant: () => t });
+  const c = (await appel({ action: 'creer', lang: 'fr', situation: SIT, moi: { prenom: 'Léa' }, autre: { prenom: 'Tom' }, email: 'lea@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true })).json;
+  plus(49);
+  stockage.compteDuJour = async () => { throw new Error('base 500 panne'); };
+  const avant = courriel.envoyes.length;
+  const r = (await appel({ action: 'relancer' }, '1.2.3.4', true)).json;
+  assert.equal(r.reprises, 0);
+  assert.equal(courriel.envoyes.length, avant);
+  assert.equal(stockage.lignes.get(c.id).a_reprise_le, null);
+  // Le « prêt » ne dépend pas de ces compteurs-là pour partir.
+  const tout = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: tout, nn: [], fini: true });
+  const ok = await appel({ action: 'consentir', id: c.id, jeton: c.invitation, prenom: 'Tom', email: 'tom@exemple.fr', rappel: true, reprise: true, consentement: true, majeur: true });
+  await appel({ action: 'repondre', id: c.id, jeton: ok.json.jeton, reponses: tout, nn: [], fini: true });
+  assert.equal(courriel.envoyes[courriel.envoyes.length - 1].a, 'lea@exemple.fr');
+});
+
+test('« Où en êtes-vous ? » au départ seul(e) : compté par réponse, jamais en double', async () => {
+  const { appel, stockage } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  for (const cle of C.STATUTS_SOLO) {
+    assert.equal((await appel({ action: 'vue', quoi: 'statut_solo', cle, mode: 'solo' })).statut, 200, cle);
+    assert.equal(n('statut_solo', cle), 1, cle);
+  }
+  await appel({ action: 'vue', quoi: 'statut_solo', cle: 'marie', mode: 'solo' });
+  assert.equal(n('statut_solo', 'autre'), 1, 'une réponse inconnue ne devient pas une clé');
+  assert.equal(n('statut_solo_solo'), 0, 'la question n\'existe qu\'en solo : pas de second compte');
+});
+
+test('les célibataires : sujets, idée, adresse avec la case, une ligne par adresse', async () => {
+  const { appel, stockage, courriel } = monter();
+  const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  // Ce qui est refusé.
+  assert.equal((await appel({ action: 'celib', lang: 'xx', interets: ['point'] })).statut, 400, 'langue');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: [] })).statut, 400, 'aucun sujet');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['pirate', 42] })).statut, 400, 'aucun sujet connu');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'], email: 'pas une adresse', consentement: true })).statut, 400, 'adresse');
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'], email: 'lea@exemple.fr' })).statut, 400, 'adresse sans la case');
+  assert.equal(stockage.celib.length, 0, 'rien d\'enregistré pour une réponse refusée');
+  // Sans adresse : les sujets connus seulement, sans doublon, l'idée nettoyée.
+  const r = await appel({ action: 'celib', lang: 'fr', interets: ['point', 'point', 'pirate', 'rupture'], autre: '  une <b>idée</b>\u0000 sur\n\nla confiance  ' + 'x'.repeat(400) });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.deepEqual(r.json, { enregistre: true, email: false });
+  assert.equal(stockage.celib.length, 1);
+  const l0 = stockage.celib[0];
+  assert.deepEqual(l0.interets, ['point', 'rupture']);
+  assert.equal(l0.email, null);
+  assert.equal(l0.consent_at, null);
+  assert.ok(l0.autre.startsWith('une b idée /b sur la confiance x'), l0.autre);
+  assert.equal(l0.autre.length, 300);
+  assert.ok(!/[<>\u0000\n]/.test(l0.autre));
+  assert.equal(n('celib', ''), 1);
+  // Avec l'adresse et la case : gardée en minuscules, avec la date de l'accord.
+  const e = await appel({ action: 'celib', lang: 'en', interets: ['profil'], email: ' Lea@Exemple.FR ', consentement: true });
+  assert.equal(e.statut, 200);
+  assert.equal(e.json.email, true);
+  const l1 = stockage.celib.find((x) => x.email === 'lea@exemple.fr');
+  assert.ok(l1 && l1.consent_at, 'adresse et accord');
+  assert.equal(l1.autre, null);
+  assert.equal(n('celib', 'email'), 1);
+  // La même adresse une seconde fois : une seule ligne, la dernière réponse.
+  await appel({ action: 'celib', lang: 'en', interets: ['envie', 'confiance'], email: 'lea@exemple.fr', consentement: true });
+  assert.equal(stockage.celib.filter((x) => x.email === 'lea@exemple.fr').length, 1);
+  assert.deepEqual(stockage.celib.find((x) => x.email === 'lea@exemple.fr').interets, ['envie', 'confiance']);
+  assert.equal(courriel.envoyes.length, 0, 'rien n\'est envoyé aujourd\'hui');
+});
+
+test('les célibataires : dix réponses par heure et par connexion, un plafond par jour', async () => {
+  const { appel, stockage } = monter();
+  for (let i = 0; i < CELIB_PAR_HEURE; i++) {
+    assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '9.9.9.9')).statut, 200, 'réponse ' + (i + 1));
+  }
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '9.9.9.9')).statut, 429);
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '8.8.8.8')).statut, 200, 'une autre connexion');
+  // Le plafond du jour, compté en base, pour toutes les connexions.
+  while (stockage.compteurs.filter((x) => x.evenement === 'celib').length < CELIB_PAR_JOUR) stockage.compteurs.push({ evenement: 'celib', cle: '', montant: 0 });
+  assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '7.7.7.7')).statut, 429);
 });

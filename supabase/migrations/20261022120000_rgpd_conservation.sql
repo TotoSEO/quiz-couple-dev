@@ -17,6 +17,10 @@
 --     les autres, trois ans après la demande ;
 --   - messages du formulaire de contact : supprimés un an après l'envoi ;
 --   - adresse IP d'un avis : effacée au bout de six mois (l'avis reste).
+--   - réponses des célibataires à l'évaluation seul(e) (bilan_celib, ajoutée
+--     le 25 octobre 2026) : l'adresse effacée 30 jours après l'e-mail qui
+--     annonce l'évaluation pour célibataires, la réponse entière un an après
+--     sa dernière mise à jour.
 -- Les évaluations de couple ont déjà leur ménage (bilan_menage), les quiz
 -- personnalisés le leur (une semaine), le frein des écritures publiques
 -- efface ses compteurs d'une minute sur l'autre, et verify-admin les essais
@@ -80,6 +84,17 @@ BEGIN
       GET DIAGNOSTICS n = ROW_COUNT;
       bilan := bilan || jsonb_build_object('ip_des_avis', n);
     END IF;
+  END IF;
+
+  IF to_regclass('public.bilan_celib') IS NOT NULL THEN
+    UPDATE public.bilan_celib SET email = NULL, consent_at = NULL
+    WHERE email IS NOT NULL AND notifie_le < now() - interval '30 days';
+    GET DIAGNOSTICS n = ROW_COUNT;
+    bilan := bilan || jsonb_build_object('celib_adresses', n);
+
+    DELETE FROM public.bilan_celib WHERE maj_le < now() - interval '1 year';
+    GET DIAGNOSTICS n = ROW_COUNT;
+    bilan := bilan || jsonb_build_object('celib_reponses', n);
   END IF;
 
   RETURN bilan;

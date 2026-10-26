@@ -121,11 +121,26 @@ export const RELANCE_APRES_H = 24;
 // heures, dans les REPRISE_JOURS jours qui suivent sa création. À qui n'a
 // pas fini ses réponses (variante « moi »), ou, à deux, à qui a fini quand
 // l'autre n'a pas fini (« autre »). Seulement à une adresse donnée sous une
-// phrase qui l'annonce (a_reprise, b_reprise : l'adresse de la fin des
-// questions, ou celle de « Recevoir mon lien par e-mail »), dans le même
-// plafond quotidien que le « prêt » et le rappel.
+// phrase qui l'annonce (a_reprise, b_reprise : l'adresse du départ depuis le
+// 25 octobre 2026, celle de la fin des questions avant, ou celle de
+// « Recevoir mon lien par e-mail »), dans le même plafond quotidien que le
+// « prêt » et le rappel jusqu'au 25 octobre 2026.
 export const REPRISE_APRES_H = 48;
 export const REPRISE_JOURS = 30;
+// Depuis le 25 octobre 2026, l'adresse se donne au départ (Thomas : « il
+// faudrait que les gens qui commencent le bilan doivent rentrer leur mail,
+// comme ça s'ils ne finissent pas on peut les retarget ») : la reprise peut
+// partir à tous ceux qui s'arrêtent en route, une quarantaine par jour. Elle a
+// donc son propre plafond, hors de celui du « prêt » et du rappel, qu'elle
+// vidait sinon dès le matin, et elle passe après tout le reste : plus aucune
+// reprise dès que l'évaluation a envoyé ENVOIS_AVANT_RESERVE e-mails dans la
+// journée, tous genres confondus, pour qu'il reste toujours de la place pour
+// le lien d'un rapport payé.
+export const REPRISES_PAR_JOUR = 40;
+export const ENVOIS_AVANT_RESERVE = 60;
+// Ce que l'évaluation envoie par Resend, compté jour par jour dans
+// bilan_compteurs.
+const ENVOIS_DU_JOUR = ['pret_envoye', 'relance_envoye', 'reprise_envoye', 'lien_envoye', 'retrouver_envoye', 'retrouver_aucun', 'envoi_ok', 'envoi_echec'];
 // Les liens personnels écrits dans ces e-mails ont leur propre jeton
 // (jetons_mail : rôle et empreinte), pour ne pas toucher au lien gardé sur le
 // téléphone. Au plus quatre par évaluation, les plus anciens tombent.
@@ -141,10 +156,19 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // évaluation seul(e) ; la clé est la source pour la page et le bouton, la
 // cause pour une erreur du départ, le rôle (a, b) pour l'écran de l'adresse,
 // rien sinon.
-export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante'];
-// `accord` : les deux cases ensemble, jusqu'au 22 octobre 2026 ; depuis, la
-// case des 18 ans (`majeur`) et celle du consentement sont comptées à part.
-const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord'];
+// `statut_solo` (25 octobre 2026) : la réponse à « Où en êtes-vous ? » au
+// départ seul(e), la clé dans C.STATUTS_SOLO.
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo'];
+// Les réponses des célibataires (action `celib`) : par adresse IP et par
+// heure, en mémoire de l'instance, et un plafond global par jour, compté en
+// base (`celib`), pour qu'une boucle ne remplisse pas la table.
+export const CELIB_PAR_HEURE = 10;
+export const CELIB_PAR_JOUR = 400;
+// `accord` : la case de l'accord, jusqu'au 22 octobre 2026 (deux cases
+// comptées ensemble) et depuis le 25 octobre 2026 (une seule case, « 18 ans
+// ou plus » et le consentement) ; entre les deux, la case des 18 ans
+// (`majeur`) et celle du consentement étaient comptées à part.
+const CAUSES_DEPART = ['prenoms', 'majeur', 'consentement', 'accord', 'email', 'email_faux'];
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -187,16 +211,19 @@ const estVerrouille = (ligne) => (estSolo(ligne) ? !!ligne.a_fini : !!(ligne.a_f
 const finiLe = (ligne) => (estSolo(ligne) ? ligne.a_fini : (ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini));
 const non = (statut, erreur, plus) => ({ statut, json: { erreur, ...(plus || {}) } });
 
-// L'étape d'une personne : le premier domaine qu'elle n'a pas fini, ou
-// « fini ». Les domaines sont posés dans l'ordre.
+// L'étape d'une personne : le premier domaine qu'elle n'a pas fini, dans
+// l'ordre de passage (C.ORDRE), ou « fini ». Une clé de situation pas encore
+// donnée prend sa valeur par défaut : la clé est demandée à l'entrée du
+// domaine, qui reste l'étape tant qu'il n'est pas fini.
 function etapeDe(situation, reponses) {
-  if (!C.situationValide(situation)) return 'situation';
+  const sit = C.avecDefauts(situation);
   const e = C.etapes(situation, reponses);
-  for (const d of C.DOMAINES) {
-    const qs = d.questions.filter((q) => C.applicable(q, situation, reponses));
-    if (qs.length && !e.finis.includes(d.id)) return d.id;
+  for (const id of C.ORDRE) {
+    const d = C.DOMAINES.find((x) => x.id === id);
+    const qs = d.questions.filter((q) => C.applicable(q, sit, reponses));
+    if (qs.length && !e.finis.includes(id)) return id;
   }
-  return 'fini';
+  return C.situationValide(situation) ? 'fini' : 'situation';
 }
 
 // Les adresses où envoyer le rapport, sans doublon, chacune avec le rôle dont
@@ -356,9 +383,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     let cle = '';
     if (quoi === 'vue' || quoi === 'cta') cle = sourcePropre(corps.src);
     else if (quoi === 'depart_erreur') cle = CAUSES_DEPART.includes(corps.cle) ? corps.cle : 'autre';
+    else if (quoi === 'statut_solo') cle = C.STATUTS_SOLO.includes(corps.cle) ? corps.cle : 'autre';
     else if (quoi === 'email_vue') cle = corps.cle === 'b' ? 'b' : 'a';
     await compter(quoi, cle);
-    if (corps.mode === 'solo' && quoi !== 'vue') await compter(quoi + '_solo', cle);
+    if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo') await compter(quoi + '_solo', cle);
     return ok({ compte: true });
   }
 
@@ -376,10 +404,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // L'adresse e-mail reste obligatoire (le rapport y part tout seul), mais
-    // depuis le 21 octobre 2026 elle est demandée à la fin de ses propres
-    // questions, juste avant l'offre (`email` avec `fin`) : `repondre` ne
-    // marque pas fini sans elle. Une page d'avant la donne encore ici.
+    // L'adresse e-mail reste obligatoire (le rapport y part tout seul) :
+    // `repondre` ne marque pas fini sans elle. Du 21 au 25 octobre 2026, elle
+    // était demandée à la fin de ses propres questions, juste avant l'offre
+    // (action `email`) ; depuis, la page la demande de nouveau ici, au départ,
+    // pour que la reprise puisse partir à qui s'arrête en route. Une page
+    // ouverte avant la mise en ligne crée encore sans elle.
     const ea = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !ea) return non(400, 'email');
 
@@ -403,8 +433,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       b_prenom: pb, b_genre: genrePropre(corps.autre?.genre),
       a_email: ea,
       // La page a montré la phrase qui annonce l'e-mail « rapport prêt » et
-      // le rappel, sous le champ de l'adresse.
+      // le rappel, sous le champ de l'adresse, et depuis le 25 octobre 2026
+      // la reprise (un mot si l'on s'arrête en route).
       a_rappel: !!ea && corps.rappel === true,
+      a_reprise: !!ea && corps.reprise === true,
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
@@ -438,12 +470,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // Même règle que pour la création : l'adresse est demandée à la fin des
-    // questions ; une page d'avant la donne encore ici.
+    // Même règle que pour la création : depuis le 25 octobre 2026, la page
+    // demande l'adresse ici, sous la phrase qui annonce le « prêt », le
+    // rappel et la reprise ; une page d'avant la laisse pour la fin.
     const eb = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !eb) return non(400, 'email');
     const champs = {};
-    if (eb) { champs[role + '_email'] = eb; champs[role + '_rappel'] = corps.rappel === true; }
+    if (eb) {
+      champs[role + '_email'] = eb;
+      champs[role + '_rappel'] = corps.rappel === true;
+      if (corps.reprise === true) champs[role + '_reprise'] = true;
+    }
     if (corps.prenom !== undefined) {
       const p = prenomPropre(corps.prenom);
       if (!p) return non(400, 'prenom');
@@ -455,7 +492,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     champs[role + '_consent'] = maintenant().toISOString();
     champs[role + '_etape'] = etapeDe(ligne.situation, ligne[role + '_reponses'] || {});
     champs.maj_le = champs[role + '_consent'];
-    const maj = await stockage.maj(ligne.id, champs);
+    const maj = await majSure(ligne.id, champs);
     return ok({ jeton, etat: etatPour(maj, role) });
   }
 
@@ -465,9 +502,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (ligne.a_fini || ligne.b_fini) return non(409, 'fini');
-    if (!C.situationValide(corps.situation)) return non(400, 'situation');
+    // La page donne la situation clé par clé, juste avant le domaine qui en a
+    // besoin (25 octobre 2026) ; une page d'avant la donne en entier. Les clés
+    // reçues remplacent les mêmes clés, les autres restent.
+    if (!C.situationPartielle(corps.situation)) return non(400, 'situation');
     const maj = await stockage.maj(ligne.id, {
-      situation: C.nettoieSituation(corps.situation),
+      situation: { ...C.nettoieSituation(ligne.situation), ...C.nettoieSituation(corps.situation) },
       maj_le: maintenant().toISOString(),
     });
     return ok({ etat: etatPour(maj, role) });
@@ -479,9 +519,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (estVerrouille(ligne)) return non(409, 'verrouille');
-    // Les questions posées dépendent de la situation : sans elle, le compte
-    // des questions serait faux et « fini » arriverait trop tôt.
-    if (!C.situationValide(ligne.situation)) return non(400, 'situation');
+    // Les réponses arrivent avant que la situation soit complète (elle se
+    // donne au fil des domaines depuis le 25 octobre 2026) : seul « fini »
+    // l'attend, puisque C.complet exige une situation complète.
     const solo = estSolo(ligne);
     const v = C.valideReponses(corps.reponses, corps.nn, solo ? (corps.percu === undefined ? {} : corps.percu) : undefined);
     if (v.erreur) return non(400, v.erreur);
@@ -884,10 +924,24 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   async function plafondRappelsAtteint() {
     if (!stockage.compteDuJour) return false;
     try {
-      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye', 'reprise_envoye'])) >= RAPPELS_PAR_JOUR;
+      return (await stockage.compteDuJour(['pret_envoye', 'relance_envoye'])) >= RAPPELS_PAR_JOUR;
     } catch (e) {
       console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
       return false;
+    }
+  }
+
+  // La reprise passe après tout le reste : son plafond à elle, puis la
+  // réserve du jour. Des compteurs illisibles la retiennent (elle repartira
+  // au passage suivant) au lieu de risquer le lien d'un rapport payé.
+  async function plafondReprisesAtteint() {
+    if (!stockage.compteDuJour) return false;
+    try {
+      if ((await stockage.compteDuJour(['reprise_envoye'])) >= REPRISES_PAR_JOUR) return true;
+      return (await stockage.compteDuJour(ENVOIS_DU_JOUR)) >= ENVOIS_AVANT_RESERVE;
+    } catch (e) {
+      console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
+      return true;
     }
   }
 
@@ -994,7 +1048,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       for (const role of ['a', 'b']) {
         const variante = varianteReprise(ligne, role, avant, depuis);
         if (!variante) continue;
-        if (await plafondRappelsAtteint()) {
+        if (await plafondReprisesAtteint()) {
           if (Object.keys(champs).length) await stockage.maj(ligne.id, { ...champs, jetons_mail: jetons });
           return { reprises, plafond: true };
         }
@@ -1058,7 +1112,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // ── Les liens perdus ──────────────────────────────────────────────────
   // (19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et
   // qu'il n'a pas eu le temps de copier son lien, on fait comment ? »)
-  const essais = { lien: new Map(), ip: new Map(), adresse: new Map(), inviter: new Map() };
+  const essais = { lien: new Map(), ip: new Map(), adresse: new Map(), inviter: new Map(), celib: new Map() };
   // Le plafond quotidien des e-mails de lien. Une lecture qui échoue ne bloque
   // personne : la disponibilité passe avant le quota.
   async function plafondLiensAtteint() {
@@ -1166,10 +1220,49 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     return ok({ envoye: true });
   }
 
+  // Un célibataire qui a choisi l'évaluation seul(e) (25 octobre 2026,
+  // Thomas : mesurer leur part avant de leur faire une évaluation payante, et
+  // leur demander ce qui les intéresserait) : au moins un sujet de
+  // C.SUJETS_CELIB, une idée à lui s'il en a une, et, s'il le veut, l'adresse
+  // où le prévenir le jour où l'évaluation pour célibataires sort, avec la
+  // case qui le dit. Rien ne lui est envoyé aujourd'hui ; une même adresse
+  // garde une seule ligne, la dernière réponse.
+  async function celib(corps, ctx) {
+    const lang = LANGUES.includes(corps.lang) ? corps.lang : null;
+    if (!lang) return non(400, 'lang');
+    const interets = [...new Set(Array.isArray(corps.interets) ? corps.interets : [])]
+      .filter((i) => C.SUJETS_CELIB.includes(i));
+    if (!interets.length) return non(400, 'interets');
+    const autre = typeof corps.autre === 'string'
+      ? corps.autre.replace(/[\u0000-\u001f\u007f<>]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300)
+      : '';
+    let email = null;
+    if (corps.email !== undefined && corps.email !== null && corps.email !== '') {
+      email = emailPropre(corps.email);
+      if (!email) return non(400, 'email');
+      if (corps.consentement !== true) return non(400, 'consentement');
+    }
+    if (!freiner(essais.celib, ctx?.ip || 'inconnue', CELIB_PAR_HEURE, 3600e3)) return non(429, 'trop');
+    if (stockage.compteDuJour) {
+      try {
+        if ((await stockage.compteDuJour(['celib'])) >= CELIB_PAR_JOUR) return non(429, 'trop');
+      } catch (e) {
+        console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
+      }
+    }
+    const quand = maintenant().toISOString();
+    await stockage.enregistrerCelib({
+      lang, interets, autre: autre || null, email,
+      consent_at: email ? quand : null, maj_le: quand,
+    });
+    await compter('celib', email ? 'email' : '');
+    return ok({ enregistre: true, email: !!email });
+  }
+
   const ACTIONS = {
     vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
     email, pdf, supprimer, lien, retrouver, rappels, envoyer_rapport: envoyerRapport, relancer, inviter,
-    apercu_paiement: apercuPaiement,
+    apercu_paiement: apercuPaiement, celib,
   };
 
   async function traiter(corps, ctx) {

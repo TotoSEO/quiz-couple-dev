@@ -3,8 +3,8 @@
     "badge": "Astrología y Numerología",
     "title": "Compatibilidad amorosa por nombre y signo astrológico",
     "highlight": "Compatibilidad amorosa",
-    "description": "Dos nombres. Dos signos. Y en algún lugar entre las estrellas y las letras de vuestros nombres, algo que se parece a una respuesta. Este test cruza dos lecturas milenarias, la astrología y la numerología, para dibujar una imagen de vuestra compatibilidad.",
-    "subtitle": "Introduce vuestros nombres y vuestros signos. El resto les pertenece a los astros."
+    "description": "Escribid vuestros dos nombres y elegid vuestros dos signos del zodiaco: el test calcula vuestra compatibilidad amorosa en porcentaje. Los signos se comparan con la astrología y los nombres con la numerología, y veis el detalle de los dos.",
+    "subtitle": "Gratis, sin registro, y el resultado aparece al momento."
   },
   "form": {
     "name1Placeholder": "Nombre de la persona 1",
@@ -40,42 +40,42 @@
     "tryAgain": "Probar con otra pareja"
   },
   "section1": {
-    "title": "Lo que este test revela",
-    "p1": "La compatibilidad amorosa es una de las preguntas más antiguas que la humanidad se ha planteado. Antes de las aplicaciones de citas, antes de los tests de personalidad, antes incluso de los psicólogos, estaban los astros y los números. Dos sistemas de lectura del mundo que, cada uno a su manera, buscan entender por qué algunas personas se atraen como imanes, y otras chocan sin llegar nunca a encontrarse.",
-    "p2": "Este test reúne ambos. <strong>No para decidir por ti.</strong> Sino para ofrecer una mirada diferente sobre lo que se juega entre dos personas."
+    "title": "Cómo calcula este test vuestra compatibilidad",
+    "p1": "Este test se hace en pareja, o solo pensando en alguien. Os pide cuatro cosas: vuestros dos nombres y vuestros dos signos del zodiaco. Los signos se comparan de dos en dos con la astrología (un Aries con una Libra, por ejemplo), y los nombres con la numerología, que le da un número a cada letra.",
+    "p2": "La puntuación final mezcla las dos cosas: <strong>un 60 % para los signos y un 40 % para los nombres</strong>. Al lado veis la puntuación de los signos y la de los nombres, cada una con un pequeño texto. Así sabéis enseguida de dónde sale el resultado."
   },
   "section2": {
-    "title": "La numerología de los nombres: cuando las letras vibran",
-    "p1": "En numerología, cada letra del alfabeto lleva un número. La A vale 1, la B vale 2, la C vale 3, y así sucesivamente hasta el 9, luego se vuelve a empezar. Esta correspondencia es una de las más antiguas de la tradición esotérica occidental, que se remonta a los trabajos de Pitágoras en el siglo VI a.C. La idea es simple pero profunda: <strong>cada nombre es una frecuencia</strong>.",
-    "p2": "Para calcular la compatibilidad entre dos nombres, se suman los valores de cada letra, se reduce el total a un dígito entre 1 y 9 (excepto los \"números maestros\" 11 y 22, que conservan su poder propio), y se comparan. El 1 lleva el impulso y la independencia. El 2 busca la armonía y la fusión. El 5 quiere la libertad. Dos números que se complementan crean una pareja equilibrada.",
-    "tip": "La numerología de los nombres no depende de la ortografía exacta: capta la vibración de los sonidos y las letras. Si usas un apodo, <a href=\"/es/calculadora-del-amor/\">prueba ambas versiones</a>: los resultados pueden variar."
+    "title": "La numerología de los nombres, letra por letra",
+    "p1": "En numerología, cada letra vale un número del 1 al 9. La A vale 1, la B vale 2, y así hasta la I, que vale 9. Luego se vuelve a empezar por el 1 con la J, y otra vez con la S. Es la tabla llamada «pitagórica», la más usada. Se suman las letras del nombre y luego las cifras del total, hasta quedarse con una sola. Por ejemplo: Ana es A = 1, N = 5 y A = 1, o sea 7. Leo es L = 3, E = 5 y O = 6, o sea 14, y 1 + 4 = 5. Ana lleva el 7 y Leo el 5.",
+    "p2": "Hay una excepción: cuando el total da 11 o 22, se para ahí. Son los «números maestros». Cada número tiene su fama: el 1 decide, el 2 busca la armonía, el 5 necesita libertad, el 9 piensa en los demás, etc. Después, el test compara vuestros dos números con una tabla de compatibilidad. Un 3 y un 6, por ejemplo, se llevan muy bien, mientras que un 4 y un 5, mucho menos.",
+    "tip": "El cálculo toma las letras tal como las escribes, sin las tildes. «Lucía» y «Lucia» dan el mismo número, pero «Cristina» y «Christina» no (3 y 11). Y si todavía no sabes su signo, <a href=\"/es/calculadora-del-amor/\">con dos nombres basta</a> para la calculadora del amor, que da un porcentaje sin nada de astrología."
   },
   "section3": {
-    "title": "La astrología y los signos: la huella del cielo al nacer",
-    "p1": "El signo astrológico no se calcula, se hereda. Es la posición del Sol <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">en el momento del nacimiento</a> la que lo determina. <strong>Doce signos. Cuatro elementos.</strong> El Fuego (Aries, Leo, Sagitario), impulsivo, apasionado. La Tierra (Tauro, Virgo, Capricornio), sólido, paciente. El Aire (Géminis, Libra, Acuario), vivo, comunicativo. El Agua (Cáncer, Escorpio, Piscis), profundo, intuitivo.",
-    "p2": "La compatibilidad astrológica se analiza primero a través de estos elementos. Un signo de Fuego y un signo de Aire se alimentan mutuamente. Un signo de Tierra y un signo de Agua se comprenden instintivamente. <strong>Pero los opuestos también se atraen.</strong>",
+    "title": "Los signos del zodiaco y sus cuatro elementos",
+    "p1": "Tu signo del zodiaco es la posición del Sol el día en que naciste. Depende del día y del mes, y aquí lo eliges tú en la lista. Si preferís <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">partir de vuestras dos fechas de nacimiento</a>, otro test encuentra los signos solo y añade vuestro camino de vida y vuestro signo chino.",
+    "p2": "Los doce signos se reparten en cuatro familias, los elementos: el <strong>Fuego</strong> (Aries, Leo, Sagitario), la <strong>Tierra</strong> (Tauro, Virgo, Capricornio), el <strong>Aire</strong> (Géminis, Libra, Acuario) y el <strong>Agua</strong> (Cáncer, Escorpio, Piscis). En astrología, por ahí se empieza cuando se comparan dos signos. El Fuego y el Aire van bien juntos, igual que la Tierra y el Agua. Dos signos del mismo elemento suelen tener las mismas necesidades.",
     "subtitle": "Las grandes afinidades entre signos",
-    "p3": "Los signos del mismo elemento comparten una comprensión natural. Los signos en cuadratura crean fricción, no necesariamente destructiva. Los signos en oposición encarnan la paradoja de la atracción de los contrarios: <strong>dos mitades de un mismo eje</strong>."
+    "p3": "Los signos opuestos en el zodiaco, como Aries y Libra o Cáncer y Capricornio, tienen algunas de las mejores puntuaciones del test, muchas veces 8 o 9 sobre 10: cada uno tiene lo que le falta al otro. Los signos «en cuadratura», separados por tres casillas, como Leo y Escorpio, tienen fama de chocar, y sus puntuaciones están entre 3 y 5. En total, el test tiene una puntuación y un texto para cada una de las 144 combinaciones."
   },
   "section4": {
     "title": "¿Por qué cruzar ambas lecturas?",
-    "p1": "La astrología habla de lo que recibimos al nacer. La numerología habla de lo que llevamos en nuestro nombre. <strong>Las dos lecturas se complementan porque no dicen lo mismo.</strong>",
-    "p2": "Tu signo solar dice cómo amas, en profundidad. Tu número de nombre dice cómo te conectas. Un Leo cuyo nombre lleva el número 2 será muy diferente de un Leo cuyo nombre lleva el 1. El signo da el carácter; el nombre matiza la forma en que ese carácter se despliega en una relación.",
-    "tip": "Una puntuación alta no garantiza una relación fácil. Una puntuación más baja no es una condena: es una invitación a entender dónde el esfuerzo dará sus frutos."
+    "p1": "Porque no miran para nada lo mismo. Vuestro signo depende del día en que nacisteis, vuestro nombre lo eligieron vuestros padres, y una cosa no tiene nada que ver con la otra. Dos Leo pueden tener nombres con números opuestos, y una pareja que según los signos lo tiene difícil puede tener dos nombres que encajan muy bien.",
+    "p2": "Por eso el resultado muestra tres puntuaciones. Fijaos en Sofía, Libra, y Hugo, Leo: sus signos se llevan bien (80 %), sus nombres mucho menos (40 %), y la puntuación global baja al 64 %. Sin el detalle, no sabríais que son los nombres los que bajan la nota...",
+    "tip": "Una buena puntuación no garantiza una relación fácil, y una puntuación baja no significa que no vaya a funcionar. Mirad más bien cuál de las dos puntuaciones baja el resultado, y hablad de ello."
   },
   "section5": {
     "title": "Lo que estos números no pueden decir",
-    "p1": "Ni la numerología ni la astrología pueden predecir si una relación va a durar. <strong>Ofrecen una luz.</strong> Una forma de leer. Una manera de nombrar lo que a veces sentimos sin poder explicarlo.",
-    "p2": "Este test es un punto de partida, no un veredicto. Puede abrir una conversación, confirmar una intuición o simplemente ofrecer unos minutos de disfrute. Para una medida que se apoya en vuestras respuestas y no en vuestras fechas de nacimiento, el <a href=\"/es/test-compatibilidad-amorosa/\">test de compatibilidad amorosa</a> plantea veinte preguntas a cada uno.",
-    "tip": "Si haces este test con tu pareja, los resultados pueden ser un excelente punto de partida para una conversación sobre vuestras diferencias y complementariedades."
+    "p1": "Ni la astrología ni la numerología pueden decir si vuestra relación va a durar. Tomaos el resultado como un juego, y como una excusa para hablar de vuestra forma de ser: «tú eres muy Leo», «¿yo, un 9? Me sorprende», etc.",
+    "p2": "Si queréis un resultado que parta de vuestra vida en pareja, hacen falta preguntas. Hay un test que os hace veinte preguntas a cada uno sobre <a href=\"/es/test-compatibilidad-amorosa/\">el matrimonio, los hijos, el dinero o las vacaciones</a>, y luego compara vuestras respuestas.",
+    "tip": "Hacedlo juntos en el mismo móvil, y luego volved a probar con vuestros apodos: ¡la puntuación de los nombres cambia a menudo!"
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "q1": "¿Es realmente fiable la compatibilidad astrológica?",
-    "a1": "La astrología no predice el futuro con precisión. Lo que hace, y lo ha hecho durante milenios, es describir temperamentos, formas de ser y modos de relacionarse. Que sea útil y esclarecedor para mucha gente es innegable.",
+    "q1": "¿Es fiable la compatibilidad astrológica?",
+    "a1": "No en un sentido científico: nada demuestra que un signo o un nombre permita predecir si una pareja va a durar. La astrología y la numerología describen caracteres, y mucha gente se reconoce en ellos, al menos en parte. Tomaos la puntuación como un juego, y los textos como una buena excusa para hablar.",
     "q2": "¿Hay que usar el nombre completo o el apodo?",
-    "a2": "En numerología, el nombre de pila se considera la vibración de fondo. El apodo refleja la vibración social. Ambos son interesantes. Prueba los dos y mira cuál te habla más.",
+    "a2": "Los dos sirven, pero no siempre dan la misma puntuación, porque cuenta cada letra. En numerología se suele partir del nombre que aparece en el registro civil. Si todo el mundo te llama «Paco» y no «Francisco», prueba también con «Paco»: el número pasa de 7 a 8.",
     "q3": "Mi signo es \"incompatible\" con el de mi pareja, ¿estamos perdidos?",
-    "a3": "No. En absoluto. La compatibilidad entre signos es una tendencia, no una regla. <strong>Son las personas las que hacen las relaciones</strong>, no las estrellas."
+    "a3": "¡No! El test nunca dice que dos signos sean incompatibles, solo da una puntuación más o menos alta. Y hay parejas que duran con todas las combinaciones de signos. Leed mejor el texto del resultado: dice en qué sois diferentes, y muchas veces es el punto de partida de una buena conversación."
   }
 }

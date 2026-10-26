@@ -822,7 +822,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><%- reasonIcons[i] %></svg>
         </span>
         <h3 class="raison-titre"><%= t('home:whyDoQuiz.reasons.' + reasons[i] + '.title', reasons[i]) %></h3>
-        <p class="raison-texte"><%= t('home:whyDoQuiz.reasons.' + reasons[i] + '.description', '') %></p>
+        <p class="raison-texte"><%- t('home:whyDoQuiz.reasons.' + reasons[i] + '.description', '') %></p>
       </article>
       <% } %>
     </div>

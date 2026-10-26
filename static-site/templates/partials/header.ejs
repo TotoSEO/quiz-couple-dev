@@ -42,7 +42,12 @@
   // "En ce moment -20% sur l'évaluation de votre couple !" ») : pendant une
   // réduction (bilanPromo) et sur les pages que bandeauPromoPour (generate.js)
   // autorise. Elle est dans la page dès le HTML, sans script : rien ne bouge
-  // à l'arrivée. Elle défile avec la page, l'en-tête seul reste collé.
+  // à l'arrivée. Elle est collée avec le menu depuis le 25 octobre 2026
+  // (Thomas : « Le bandeau -20% en dessous du menu sticky n'est pas sticky !
+  // Il doit l'être ») : elle vit dans l'en-tête, après le nav, si bien que
+  // tout ce qui mesure #site-header la compte (le recadrage du moteur dans
+  // quiz-extras.js, la pub au-dessus de la question dans pub.js). Elle
+  // s'efface tant que le menu mobile est ouvert.
   const bandeauPromoVisible = !!(urlEval && typeof bandeauPromo !== 'undefined' && bandeauPromo
     && typeof bilanPromo !== 'undefined' && bilanPromo && bilanPromo.bandeau);
   const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
@@ -181,6 +186,19 @@
     .bandeau-promo > svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; color: hsl(43 96% 58%); }
     .dark .bandeau-promo { background: hsl(266 42% 22%); }
     .dark .bandeau-promo:hover, .dark .bandeau-promo:focus-visible { background: hsl(266 42% 27%); }
+    #site-header:has(#mobile-menu:not(.hidden)) > .bandeau-promo { display: none; }
+    /* Collée, la barre allonge l'en-tête de sa hauteur (62 px sur deux lignes,
+       42 px sur une, à partir d'environ 520 px de large) : les ancres et les
+       scrollIntoView de la page s'arrêtent d'autant plus bas, et les blocs
+       collés du résultat (notation, renvoi, portrait), posés dans styles.css
+       sous l'en-tête seul, descendent d'autant. */
+    @media (max-width: 1023.98px) {
+      html { --barre-promo: 3.9rem; scroll-padding-top: var(--barre-promo); }
+      html .qr-zone--avis, html .qr-rate--collant, html .qr-zone--suite { top: calc(4.5rem + var(--barre-promo)); }
+      html .qr-zone--avis { max-height: calc(100vh - 6rem - var(--barre-promo)); max-height: calc(100dvh - 6rem - var(--barre-promo)); }
+      html .apr-profil-carte { top: calc(5.5rem + var(--barre-promo)); }
+    }
+    @media (min-width: 520px) and (max-width: 1023.98px) { html { --barre-promo: 2.65rem; } }
     @media (min-width: 1024px) { .bandeau-promo { display: none; } }
     <% } %>
   </style>
@@ -579,7 +597,7 @@
       </div>
     </div>
   </nav>
+  <% if (bandeauPromoVisible) { %>
+  <a href="<%= urlEval %>" data-bilan-src="bandeau-promo" class="bandeau-promo"><span><%- bilanPromo.bandeau %></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  <% } %>
 </header>
-<% if (bandeauPromoVisible) { %>
-<a href="<%= urlEval %>" data-bilan-src="bandeau-promo" class="bandeau-promo"><span><%- bilanPromo.bandeau %></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-<% } %>

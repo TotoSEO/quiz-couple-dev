@@ -31,7 +31,7 @@
       "modeDuo": "In due",
       "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
       "modeSolo": "Da solo/a",
-      "modeSoloAide": "Rispondi per te, poi dici cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
+      "modeSoloAide": "Rispondi per te e, sugli argomenti che contano di più, dici anche cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
       "prenomsTitre": "I vostri due nomi",
       "moi": "Il tuo nome",
       "autre": "Il nome del tuo partner",
@@ -41,20 +41,26 @@
       "homme": "Un uomo",
       "sansGenre": "Preferisco non dirlo",
       "genreAide": "Serve solo ad accordare le domande («ascoltato» o «ascoltata») e a scegliere i personaggi.",
-      "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?». Il tuo partner potrà correggerle.",
-      "majeur": "Ho 18 anni o più.",
-      "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+      "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
       "accordAide": "Le tue risposte, anche su argomenti intimi, servono solo a questo report, dove {{autre}} le vedrà accanto alle sue. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e ciascuno di voi può cancellarla in qualsiasi momento. Nessun account da creare.",
       "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
       "retour": "Indietro",
       "creer": "Crea la nostra valutazione",
       "prenomManque": "Scrivi i vostri due nomi.",
-      "accordManque": "Spunta le due caselle per continuare.",
+      "accordManque": "Spunta la casella per continuare.",
       "email": "La tua e-mail",
       "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il tuo report sarà pronto, una volta se {{autre}} tarda a finire, e una sola volta se il giorno dopo è ancora in attesa.",
+      "emailAideDepart": "Il link al tuo report in PDF arriverà a questo indirizzo, e ti permette di ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo quando il report sarà pronto, una volta se ti fermi a metà o se {{autre}} tarda a finire, e una volta se il giorno dopo è ancora in attesa. Non viene usato per nient'altro.",
+      "emailSuggestion": "Intendevi {{email}}?",
       "emailFaux": "Questo indirizzo e-mail non sembra completo.",
       "emailManque": "Scrivi il tuo indirizzo e-mail: è lì che sarà inviato il link al report in PDF.",
-      "autreDefaut": "il tuo partner"
+      "autreDefaut": "il tuo partner",
+      "statutTitre": "Qual è la tua situazione?",
+      "statuts": {
+        "couple": "In coppia",
+        "complique": "È complicato",
+        "celib": "Single"
+      }
     },
     "invitation": {
       "titre": "Invita {{autre}}",
@@ -75,11 +81,9 @@
       "dejaRejoint": "{{autre}} ha accettato l'invito."
     },
     "rejoindre": {
-      "titre": "{{autre}} ti propone di fare il vostra valutazione di coppia",
+      "titre": "{{autre}} ti propone di fare la vostra valutazione di coppia",
       "texte": "100 domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
-      "duree": "Calcola dai 25 ai 30 minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
-      "situationTitre": "La vostra situazione, come l'ha descritta {{autre}}",
-      "situationCorriger": "Correggi",
+      "duree": "Calcola una ventina di minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
       "prenom": "Il tuo nome",
       "genre": "Tu sei",
       "commencer": "Accetto e inizio",
@@ -155,7 +159,7 @@
         "decisifs0": "Nessuna differenza sui temi decisivi, quelli che pesano di più in una coppia.",
         "decisifsUn": "Di cui una su un tema decisivo, uno di quelli che pesano di più in una coppia.",
         "decisifsN": "Di cui {{n}} su temi decisivi, quelli che pesano di più in una coppia.",
-        "quoi": "Il report vi dice quali e come parlarne. Poche coppie si prendono mai il tempo di fare questo punto: voi l'avete appena fatto, resta solo da leggere il risultato."
+        "quoi": "Poche coppie si prendono mai il tempo di fare questo punto: voi l'avete appena fatto, resta solo da leggere il risultato."
       },
       "contenu": [
         "Il vostro allineamento e il clima della vostra coppia, a colpo d'occhio",
@@ -168,7 +172,7 @@
         "Il report completo in PDF, con il link per scaricarlo via e-mail appena è pronto, e online per sei mesi"
       ],
       "prix": "{{prix}} per tutti e due",
-      "prixAide": "Un solo pagamento, e {{autre}} non dovrà pagare niente. Nessun abbonamento.",
+      "prixAide": "Un solo pagamento sblocca il report per tutti e due, senza abbonamento.",
       "emailLabel": "Dove ti mandiamo il report?",
       "emailPlaceholder": "tu@email.it",
       "emailAide": "Il link al PDF partirà a questo indirizzo appena avrete finito tutti e due.",
@@ -176,7 +180,7 @@
       "renonciation": "Chiedo che il report mi sia fornito non appena pronto, senza attendere la fine del periodo di recesso di 14 giorni, e riconosco di perdere il diritto di recesso una volta fornito.",
       "renonciationManque": "Spunta la casella per continuare.",
       "bouton": "Sblocca il nostro report · {{prix}}",
-      "securite": "Pagamento sicuro con Stripe (carta, Apple Pay, Google Pay). Non vediamo mai la tua carta.",
+      "securite": "Pagamento sicuro con Stripe. Non vediamo mai la tua carta.",
       "cgv": "Condizioni di vendita",
       "tva": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese.",
       "ferme": "Il pagamento online apre molto presto. La vostra valutazione è salvata: tornate su questa pagina tra qualche giorno.",
@@ -184,7 +188,26 @@
       "pretTitre": "{{moi}} e {{autre}}, il vostro report è pronto",
       "sommaire": "Cosa c'è nel vostro report",
       "emailAutre": "Riceverlo a un altro indirizzo",
-      "plie": "Sbloccare il report adesso"
+      "plie": "Sbloccare il report adesso",
+      "accroche": "Non hai ancora visto cosa ha risposto {{autre}}.",
+      "points": {
+        "reponses": "Tutte le risposte di {{autre}} accanto alle tue, domanda per domanda",
+        "ecartsN": "Per le vostre {{n}} differenze: perché contano, e come parlarne senza litigare",
+        "ecartsUn": "Per la vostra differenza: perché conta, e come parlarne senza litigare",
+        "ecarts0": "Per ogni differenza, anche piccola: perché conta, e come parlarne",
+        "accords": "Quello che vi unisce, area per area",
+        "conversationsN": "Le vostre prossime {{n}} conversazioni, nell'ordine in cui farle",
+        "conversationsUn": "La vostra prossima conversazione, e come cominciarla",
+        "climat": "Il clima della vostra coppia, e chi fa cosa in casa, secondo ciascuno",
+        "pdf": "Il report completo in PDF da tenere, e online per sei mesi"
+      },
+      "chacunSr": "Cioè {{chacun}} a testa.",
+      "cine": "Meno di un biglietto del cinema a testa.",
+      "conseiller": "Per fare un confronto: una seduta da un consulente di coppia costa tra 60 e 100 €.",
+      "immediat": "Il report si apre qui appena hai pagato, per tutti e due, e il link al PDF parte per e-mail.",
+      "moyens": "Metodi di pagamento accettati",
+      "colle": "Il vostro report",
+      "colleBouton": "Sblocca"
     },
     "paiement": {
       "verification": "Verifica del pagamento...",
@@ -200,12 +223,19 @@
       "creation": {
         "autreAide": "Serve solo a scrivere le domande. Non gli viene inviato niente.",
         "soloNote": "Fai la valutazione da solo/a: {{autre}} non viene avvisato, non gli viene inviato niente, e solo tu vedrai il report.",
-        "consentement": "Acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
+        "consentement": "Ho 18 anni o più e acconsento a che le mie risposte vengano registrate, unicamente per produrre il report di valutazione.",
         "accordAide": "Le tue risposte, anche su argomenti intimi, e quello che immagini che {{autre}} risponderebbe servono solo a questo report, che vedrai solo tu. La valutazione è conservata 60 giorni dopo la tua ultima risposta se non viene pagata, sei mesi dopo il pagamento, e puoi cancellarla in qualsiasi momento. Nessun account da creare.",
         "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}}: lo sblocchi quando hai finito le tue risposte.",
         "creer": "Iniziare la mia valutazione",
         "emailAide": "Il link al tuo report in PDF sarà inviato a questo indirizzo. Serve anche a ritrovare la tua valutazione se chiudi la pagina e a mandarti un solo promemoria se il giorno dopo il tuo report è ancora in attesa.",
-        "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?»."
+        "emailAideDepart": "Il link al tuo report in PDF arriverà a questo indirizzo, e ti permette di ritrovare la tua valutazione se chiudi la pagina. Ti scriveremo una volta se ti fermi a metà, e una volta se il giorno dopo il tuo report è ancora in attesa. Non viene usato per nient'altro.",
+        "apportTitre": "Cosa ti dà la valutazione da solo/a",
+        "apport": [
+          "Il tuo sguardo sulle dodici aree della vostra coppia, dalla vita di tutti i giorni all'intimità",
+          "Sugli argomenti che contano di più, dove pensi di essere d'accordo con {{autre}}, e dove no",
+          "Gli argomenti su cui non sai cosa pensa {{autre}}: spesso sono le conversazioni da fare"
+        ],
+        "apportNote": "100 domande, circa 25 minuti. Puoi fare una pausa e riprendere più tardi."
       },
       "domaine": {
         "nb": "{{n}} domande, due risposte ciascuna, circa {{min}} min"
@@ -226,12 +256,27 @@
         "emailAide": "Il link al PDF arriverà a questo indirizzo appena pagato.",
         "pretTitre": "{{moi}}, il tuo report è pronto",
         "apercu": {
-          "intro": "Le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
-          "quoi": "Il report ti dice quali e da dove cominciare. Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
+          "intro": "Sugli argomenti che contano di più, le tue risposte sono state confrontate con quello che pensi risponderebbe {{autre}}:",
+          "quoi": "Poche persone si prendono mai il tempo di fare il punto sulla propria coppia: tu l'hai appena fatto, resta solo da leggere il risultato.",
           "inconnusUn": "E un tema su cui non sai cosa risponderebbe {{autre}}.",
           "inconnusN": "E {{n}} temi su cui non sai cosa risponderebbe {{autre}}."
         },
-        "sommaire": "Cosa c'è nel tuo report"
+        "sommaire": "Cosa c'è nel tuo report",
+        "prix": "{{prix}}",
+        "bouton": "Sblocca il mio report · {{prix}}",
+        "accroche": "Il report ti dice a che punto sei con {{autre}}, e da dove cominciare.",
+        "points": {
+          "reponses": "Le tue risposte accanto a quello che pensi risponderebbe {{autre}}",
+          "ecartsN": "Per le tue {{n}} differenze: perché contano, e come parlarne con {{autre}}",
+          "ecartsUn": "Per la tua differenza: perché conta, e come parlarne con {{autre}}",
+          "ecarts0": "Per ogni differenza, anche piccola: perché conta, e come parlarne con {{autre}}",
+          "ombreN": "Le tue zone d'ombra: {{n}} temi su cui non sai cosa pensa {{autre}}",
+          "ombreUn": "La tua zona d'ombra: un tema su cui non sai cosa pensa {{autre}}",
+          "conversationsN": "Le tue prossime {{n}} conversazioni, nell'ordine in cui farle",
+          "conversationsUn": "La tua prossima conversazione, e come cominciarla"
+        },
+        "immediat": "Il report si apre qui appena hai pagato, e il link al PDF parte per e-mail.",
+        "colle": "Il tuo report"
       },
       "rapport": {
         "ecran": {
@@ -383,7 +428,7 @@
         "nnAucun": "Niente di segnato."
       },
       "ombre": {
-        "intro": "Hai risposto per te, poi hai detto cosa risponderebbe {{nom}}. Quando non lo sapevi, l'hai detto: questo capitolo raccoglie quegli argomenti. Non sono problemi, sono domande da fare.",
+        "intro": "Sugli argomenti che contano di più, hai detto cosa risponderebbe {{nom}}. Quando non lo sapevi, l'hai detto: questo capitolo raccoglie quegli argomenti. Non sono problemi, sono domande da fare.",
         "part": "La tua parte d'ombra",
         "bandes": {
           "peu": {
@@ -504,7 +549,7 @@
         "inconnuTag": "Non lo so",
         "inconnuLire": "Non sapevi cosa risponderebbe il tuo partner: l'argomento è messo tra le tue zone d'ombra.",
         "lire": {
-          "p1": "Hai risposto da solo o da sola, in due tempi: prima per te, poi dicendo cosa risponderebbe {{b}} secondo te. Questo report mette le due cose a confronto, argomento per argomento: dove sei sicuro o sicura di pensarla allo stesso modo, dove sai che non vedete le cose nello stesso modo, e dove non lo sai.",
+          "p1": "Hai risposto da solo o da sola: a tutte le domande per te e, sugli argomenti che contano di più, anche a cosa risponderebbe {{b}} secondo te. Questo report mette le due cose a confronto su quegli argomenti: dove sei sicuro o sicura di pensarla allo stesso modo, dove sai che non vedete le cose nello stesso modo, e dove non lo sai. Le tue altre risposte sono in ogni area.",
           "p3": "Leggilo prima per te. Poi, se {{b}} è d'accordo a parlarne, le quattro conversazioni e le tue zone d'ombra dicono da dove cominciare. E se un giorno {{b}} vorrà rispondere a sua volta, una valutazione in due sostituirà le tue ipotesi con le sue risposte."
         },
         "synthese": {
@@ -528,7 +573,7 @@
           "parDomaineAide": "Per le aree che hanno domande su come vi sentite, il tuo benessere e quello che attribuisci al tuo partner, sulla stessa riga, da 0 a 100%."
         },
         "roles": {
-          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo quello che risponderebbe {{b}} secondo te.",
+          "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». Il primo segno è la tua risposta, il secondo, quando ti è stato chiesto, quello che risponderebbe {{b}} secondo te.",
           "desequilibre": "Pensi che siate d'accordo: è soprattutto {{nom}}. Va bene a tutti e due?"
         },
         "domaines": {
@@ -536,7 +581,9 @@
           "climatBas": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene: lo trovi più in basso, in «{{titre}}».",
           "climatBasCourt": "Quanto a come ti senti, in questo momento non vivi bene questa parte della relazione, o pensi che il tuo partner non la viva bene.",
           "signauxBas": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento: lo trovi nel capitolo {{n}}, «{{titre}}».",
-          "signauxBasCourt": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento."
+          "signauxBasCourt": "Secondo te, alcune delle abitudini di litigio che logorano una coppia si presentano da voi in questo momento.",
+          "seules": "Le tue altre risposte",
+          "seulesAide": "Per queste domande non ti è stato chiesto cosa risponderebbe {{nom}}: ecco semplicemente la tua risposta."
         },
         "fin": {
           "accordsTexte": "Su {{total}} domande in cui hai saputo rispondere per il tuo partner, pensi di avere la stessa risposta {{n}} volte, cioè il {{part}}%.",
@@ -579,10 +626,8 @@
     "situation": {
       "resume": "Situazione",
       "titre": "La vostra situazione",
-      "progression": "{{n}} di {{total}}",
-      "verifierTitre": "La vostra situazione, prima di iniziare",
-      "verifierTexte": "Queste risposte cambiano le domande che ti facciamo. Se una non è più giusta, correggila prima di iniziare.",
-      "confirmer": "È giusto, iniziamo"
+      "aide": "La tua risposta adatta le domande che seguono.",
+      "deja": "Questa risposta è già stata data: cambiala se non è giusta."
     },
     "erreurs": {
       "reseau": "Nessuna connessione. Controlla la rete e riprova.",
@@ -615,12 +660,40 @@
     "rappels": {
       "arret": "Fatto: non riceverai più messaggi su questa valutazione.",
       "continuer": "Continua"
+    },
+    "celib": {
+      "titre": "Stiamo preparando una valutazione per single",
+      "texte": "Questa è pensata per le coppie: confronta quello che vivono due persone insieme. Per i single stiamo preparando una valutazione completa, e ci piacerebbe costruirla insieme a te!",
+      "question": "Cosa ti interesserebbe di più? Spunta tutto quello che fa per te.",
+      "sujets": {
+        "point": "Capire a che punto sono nella mia vita sentimentale",
+        "schemas": "Capire cosa si ripete nelle mie storie",
+        "profil": "Sapere che tipo di persona fa per me",
+        "blocages": "Capire cosa mi blocca nel conoscere qualcuno",
+        "rencontres": "Migliorare nel conoscere nuove persone",
+        "rupture": "Voltare pagina dopo una rottura",
+        "envie": "Capire cosa voglio: una storia seria o no",
+        "confiance": "Ritrovare fiducia in me stesso/a in amore"
+      },
+      "autre": "Un'altra idea? (facoltativo)",
+      "email": "Il tuo indirizzo e-mail, per essere avvisato/a il giorno in cui esce (facoltativo)",
+      "consentement": "Ho almeno 15 anni e accetto di ricevere un'e-mail da Quiz Couple il giorno in cui la valutazione per single sarà pronta.",
+      "emailAide": "Il tuo indirizzo serve solo a questo: un'unica e-mail, quel giorno. Viene cancellato un mese dopo, e al più tardi entro un anno.",
+      "confidentialite": "Privacy",
+      "envoyer": "Invia le mie risposte",
+      "choixManque": "Spunta almeno un tema.",
+      "consentManque": "Spunta la casella perché possiamo scriverti, oppure lascia vuoto l'indirizzo.",
+      "merciTitre": "Grazie, preso nota!",
+      "merci": "Le tue risposte ci aiuteranno a scegliere cosa conterrà la valutazione per single.",
+      "merciEmail": "Ti scriveremo a {{email}} il giorno in cui esce. Nel frattempo, le tue risposte ci aiuteranno a scegliere cosa conterrà.",
+      "testsTitre": "Nel frattempo, i nostri test per single sono gratuiti:",
+      "fermer": "Chiudi"
     }
   },
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
-    "sousTitre": "25 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
+    "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
     "soloQuestion": "Il tuo partner non vuole partecipare?",
     "soloLien": "Falla da solo/a",
@@ -642,7 +715,7 @@
         "l": "aree della vita a due"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "a testa, al proprio ritmo"
       },
       {
@@ -659,7 +732,7 @@
           "texte": "I vostri due nomi, poi mandi il link al tuo partner."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "Ciascuno risponde per conto suo",
           "texte": "Sul proprio telefono, senza vedere le risposte dell'altro. Potete fare una pausa quando volete."
         },
@@ -672,7 +745,7 @@
       "note": "Le domande si basano sulla ricerca in psicologia di coppia e sui questionari usati prima di un matrimonio."
     },
     "rapport": {
-      "titre": "Cosa c'è nel report?",
+      "titre": "Cosa c'è nel bilancio?",
       "intro": "Un vero report, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
       "pages": [
         {
@@ -730,7 +803,7 @@
         "titre": "Da solo/a",
         "sous": "Senza avvisare il tuo partner",
         "points": [
-          "Rispondi per te, poi al posto del tuo partner",
+          "Rispondi per te, e al posto del tuo partner sugli argomenti chiave",
           "Il report ti mostra anche quello che non sai del tuo partner"
         ],
         "cta": "Iniziare da solo/a"
@@ -754,7 +827,7 @@
       "cta": "Fare le 100 domande"
     },
     "prix": {
-      "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 30 minuti a testa e pochi euro possono cambiare davvero le cose.",
+      "accroche": "Le coppie dimenticano troppo spesso di fare il punto sulla loro relazione. 20 minuti a testa e pochi euro possono cambiare davvero le cose.",
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
       "aide": "Un solo pagamento, dell'uno o dell'altro, alla fine. Nessun abbonamento.",
@@ -787,12 +860,35 @@
         }
       ]
     },
+    "definition": {
+      "titre": "Cos'è un bilancio di coppia?",
+      "paragraphes": [
+        "Un bilancio di coppia è un momento che ci si prende per fare il punto sulla propria relazione, per vedere cosa va bene e cosa no. Si può fare da un consulente di coppia, in seduta, oppure da soli con una lista di domande.",
+        "Il bilancio di coppia di Quiz Couple si fa online, ognuno sul proprio telefono. Rispondete a 100 domande concrete su dodici temi della vita a due (i soldi, la quotidianità, i figli, l'intimità, i litigi, ecc.), senza vedere le risposte dell'altro. Per esempio: «I vostri soldi in coppia, idealmente...», con quattro risposte, da «Tutto in comune» a «Ognuno i suoi soldi, caso per caso». Se rispondete allo stesso modo, è un accordo. Se le vostre risposte sono lontane, è una differenza, ed è proprio di queste differenze che vale la pena parlare.",
+        "Quando avete risposto tutti e due, il bilancio completo costa {{prix}} per tutti e due. Si apre subito sulla pagina, e ricevete il vostro bilancio di coppia in PDF per e-mail, da tenere. Le vostre risposte sono una accanto all'altra, domanda per domanda, con domande per parlare di ogni differenza."
+      ]
+    },
+    "utilite": {
+      "titre": "A cosa serve valutare la propria relazione?",
+      "paragraphes": [
+        "Molte coppie parlano di certi argomenti solo quando le cose vanno male: dei soldi dopo una grossa spesa, dei figli il giorno in cui salta fuori la domanda, o della divisione delle faccende nel mezzo di un litigio... Valutare la propria relazione serve proprio a parlarne prima, a mente fredda.",
+        "Il bilancio vi mostra anche quello che non sapete l'uno dell'altro. Ci sono gli argomenti su cui siete d'accordo senza esservelo mai detti, e quelli su cui ognuno pensava che l'altro vedesse le cose allo stesso modo. Spesso sono proprio questi a finire in litigio, quindi vale la pena scoprirli con calma."
+      ],
+      "momentsIntro": "Non c'è un momento perfetto per farlo, ma alcuni si prestano bene:",
+      "moments": [
+        "Prima di andare a vivere insieme",
+        "Prima di sposarvi o di avere un figlio",
+        "Dopo qualche anno insieme",
+        "Quando sentite che qualcosa è cambiato tra voi"
+      ],
+      "solo": "E se il tuo partner non ne ha voglia, puoi farlo da solo o da sola: rispondi per te e, sugli argomenti che contano di più, dici cosa pensi che risponderebbe l'altro."
+    },
     "faq": {
       "titre": "Domande frequenti",
       "items": [
         {
           "q": "Quanto tempo ci vuole?",
-          "a": "Contate 25-30 minuti ciascuno. Ogni risposta viene salvata: potete fare una pausa e riprendere più tardi."
+          "a": "Contate una ventina di minuti ciascuno. Ogni risposta viene salvata: potete fare una pausa e riprendere più tardi."
         },
         {
           "q": "Il mio partner vedrà le mie risposte?",
@@ -804,11 +900,11 @@
         },
         {
           "q": "Se la faccio da solo/a, il mio partner verrà avvisato?",
-          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te, poi al suo posto, oppure «non lo so»."
+          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te e, sugli argomenti che contano di più, al suo posto, oppure «non lo so»."
         },
         {
           "q": "E se non viviamo insieme o non abbiamo figli?",
-          "a": "Funziona lo stesso. All'inizio, sette domande sulla vostra situazione adattano il resto: una coppia che non vive ancora insieme risponde su quello che immagina, per esempio."
+          "a": "Funziona lo stesso. Sei domande sulla vostra situazione, poste nel corso della valutazione, adattano il resto: una coppia che non vive ancora insieme risponde su quello che immagina, per esempio."
         },
         {
           "q": "Sostituisce una terapia di coppia?",
@@ -826,7 +922,7 @@
     },
     "final": {
       "titre": "Pronti a fare il punto?",
-      "texte": "25 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
+      "texte": "20 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
     },
     "colle": {
       "texte": "Valutazione di coppia · {{prix}}",

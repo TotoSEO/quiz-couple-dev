@@ -31,7 +31,7 @@
       "modeDuo": "En pareja",
       "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
       "modeSolo": "A solas",
-      "modeSoloAide": "Respondes por ti, y luego dices lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
+      "modeSoloAide": "Respondes por ti y, en los temas que más cuentan, dices también lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
       "prenomsTitre": "Vuestros dos nombres",
       "moi": "Tu nombre",
       "autre": "El nombre de tu pareja",
@@ -41,20 +41,26 @@
       "homme": "Un hombre",
       "sansGenre": "Prefiero no decirlo",
       "genreAide": "Solo sirve para concordar las preguntas («escuchado» o «escuchada») y para elegir los personajes.",
-      "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
-      "majeur": "Tengo 18 años o más.",
-      "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+      "consentement": "Tengo 18 años o más y consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
       "accordAide": "Tus respuestas, también sobre temas íntimos, solo sirven para este informe, donde {{autre}} las verá frente a las suyas. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y cualquiera de los dos puede borrarla en todo momento. Sin crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
       "retour": "Atrás",
       "creer": "Crear nuestra evaluación",
       "prenomManque": "Escribe vuestros dos nombres.",
-      "accordManque": "Marca las dos casillas para continuar.",
+      "accordManque": "Marca la casilla para continuar.",
       "email": "Tu e-mail",
       "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
+      "emailAideDepart": "El enlace a tu informe en PDF irá a esta dirección, y te permite recuperar tu evaluación si cierras la página. Te escribiremos cuando el informe esté listo, una vez si lo dejas a medias o si {{autre}} tarda en terminar, y una vez si al día siguiente sigue esperando. No se usa para nada más.",
+      "emailSuggestion": "¿Querías decir {{email}}?",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
-      "autreDefaut": "tu pareja"
+      "autreDefaut": "tu pareja",
+      "statutTitre": "¿Cuál es tu situación?",
+      "statuts": {
+        "couple": "En pareja",
+        "complique": "Es complicado",
+        "celib": "Soltero/a"
+      }
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
@@ -77,9 +83,7 @@
     "rejoindre": {
       "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
       "texte": "100 preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
-      "duree": "Calcula entre 25 y 30 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
-      "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
-      "situationCorriger": "Corregir",
+      "duree": "Calcula unos 20 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
       "prenom": "Tu nombre",
       "genre": "Tú eres",
       "commencer": "Acepto y empiezo",
@@ -155,7 +159,7 @@
         "decisifs0": "Ninguna diferencia en los temas decisivos, los que más pesan en una pareja.",
         "decisifsUn": "Entre ellas, una diferencia en un tema decisivo, de los que más pesan en una pareja.",
         "decisifsN": "Entre ellas, {{n}} diferencias en temas decisivos, los que más pesan en una pareja.",
-        "quoi": "El informe os dice cuáles y cómo hablarlo. Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado."
+        "quoi": "Pocas parejas se toman el tiempo de hacer este balance: vosotros lo habéis hecho, solo queda leer el resultado."
       },
       "contenu": [
         "Vuestra alineación y el clima de vuestra pareja, de un vistazo",
@@ -168,7 +172,7 @@
         "El informe completo en PDF, con su enlace de descarga por correo en cuanto está listo, y en línea durante seis meses"
       ],
       "prix": "{{prix}} para los dos",
-      "prixAide": "Un solo pago, y {{autre}} no tendrá nada que pagar. Sin suscripción.",
+      "prixAide": "Un solo pago desbloquea el informe para los dos, sin suscripción.",
       "emailLabel": "¿A dónde te enviamos el informe?",
       "emailPlaceholder": "tu@email.com",
       "emailAide": "El enlace al PDF saldrá a esta dirección en cuanto hayáis terminado los dos.",
@@ -176,7 +180,7 @@
       "renonciation": "Pido que el informe se me entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento de 14 días, y reconozco que pierdo mi derecho de desistimiento una vez entregado.",
       "renonciationManque": "Marca la casilla para continuar.",
       "bouton": "Desbloquear nuestro informe · {{prix}}",
-      "securite": "Pago seguro con Stripe (tarjeta, Apple Pay, Google Pay). Nunca vemos tu tarjeta.",
+      "securite": "Pago seguro con Stripe. Nunca vemos tu tarjeta.",
       "cgv": "Condiciones de venta",
       "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
       "ferme": "El pago en línea se abre muy pronto. Vuestra evaluación está guardada: volved a esta página dentro de unos días.",
@@ -184,7 +188,26 @@
       "pretTitre": "{{moi}} y {{autre}}, vuestro informe está listo",
       "sommaire": "Lo que hay en vuestro informe",
       "emailAutre": "Recibirlo en otra dirección",
-      "plie": "Desbloquear el informe ya"
+      "plie": "Desbloquear el informe ya",
+      "accroche": "Todavía no has visto lo que ha respondido {{autre}}.",
+      "points": {
+        "reponses": "Todas las respuestas de {{autre}} junto a las tuyas, pregunta por pregunta",
+        "ecartsN": "Para vuestras {{n}} diferencias: por qué importan, y cómo hablarlas sin discutir",
+        "ecartsUn": "Para vuestra diferencia: por qué importa, y cómo hablarla sin discutir",
+        "ecarts0": "Para cada diferencia, aunque sea pequeña: por qué importa, y cómo hablarla",
+        "accords": "Lo que os une, área por área",
+        "conversationsN": "Vuestras {{n}} próximas conversaciones, en el orden en que tenerlas",
+        "conversationsUn": "Vuestra próxima conversación, y cómo empezarla",
+        "climat": "El clima de vuestra pareja, y quién hace qué en casa, según cada uno",
+        "pdf": "El informe completo en PDF para guardar, y en línea durante seis meses"
+      },
+      "chacunSr": "Es decir, {{chacun}} cada uno.",
+      "cine": "Menos que una entrada de cine por persona.",
+      "conseiller": "Para comparar: una sesión con un consejero de pareja cuesta entre 50 y 90 €.",
+      "immediat": "El informe se abre aquí nada más pagar, para los dos, y el enlace al PDF sale por correo.",
+      "moyens": "Medios de pago aceptados",
+      "colle": "Vuestro informe",
+      "colleBouton": "Desbloquear"
     },
     "paiement": {
       "verification": "Comprobando el pago...",
@@ -200,12 +223,19 @@
       "creation": {
         "autreAide": "Solo sirve para escribir las preguntas. No se le envía nada.",
         "soloNote": "Haces la evaluación a solas: {{autre}} no se entera, no se le envía nada, y solo tú verás el informe.",
-        "consentement": "Consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
+        "consentement": "Tengo 18 años o más y consiento que mis respuestas se guarden, únicamente para elaborar el informe de evaluación.",
         "accordAide": "Tus respuestas, también sobre temas íntimos, y lo que imaginas de las de {{autre}} solo sirven para este informe, que solo tú verás. La evaluación se guarda 60 días después de tu última respuesta si no se paga, seis meses después del pago, y puedes borrarla cuando quieras. Sin crear ninguna cuenta.",
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
         "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
-        "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?»."
+        "emailAideDepart": "El enlace a tu informe en PDF irá a esta dirección, y te permite recuperar tu evaluación si cierras la página. Te escribiremos una vez si lo dejas a medias, y una vez si al día siguiente tu informe sigue esperando. No se usa para nada más.",
+        "apportTitre": "Lo que te aporta la evaluación a solas",
+        "apport": [
+          "Tu mirada sobre las doce áreas de vuestra pareja, del día a día a la intimidad",
+          "En los temas que más cuentan, dónde crees estar de acuerdo con {{autre}}, y dónde no",
+          "Los temas en los que no sabes lo que piensa {{autre}}: suelen ser las conversaciones pendientes"
+        ],
+        "apportNote": "100 preguntas, unos 25 minutos. Puedes hacer una pausa y seguir más tarde."
       },
       "domaine": {
         "nb": "{{n}} preguntas, dos respuestas cada una, unos {{min}} min"
@@ -226,12 +256,27 @@
         "emailAide": "El enlace al PDF llegará a esta dirección en cuanto pagues.",
         "pretTitre": "{{moi}}, tu informe está listo",
         "apercu": {
-          "intro": "Tus respuestas se han comparado con lo que crees que respondería {{autre}}:",
-          "quoi": "El informe te dice cuáles y por dónde empezar. Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.",
+          "intro": "En los temas que más cuentan, tus respuestas se han comparado con lo que crees que respondería {{autre}}:",
+          "quoi": "Poca gente se toma el tiempo de hacer este balance: tú lo has hecho, solo queda leer el resultado.",
           "inconnusUn": "Y un tema en el que no sabes qué respondería {{autre}}.",
           "inconnusN": "Y {{n}} temas en los que no sabes qué respondería {{autre}}."
         },
-        "sommaire": "Lo que hay en tu informe"
+        "sommaire": "Lo que hay en tu informe",
+        "prix": "{{prix}}",
+        "bouton": "Desbloquear mi informe · {{prix}}",
+        "accroche": "El informe te dice en qué punto estás con {{autre}}, y por dónde empezar.",
+        "points": {
+          "reponses": "Tus respuestas frente a lo que crees que respondería {{autre}}",
+          "ecartsN": "Para tus {{n}} diferencias: por qué importan, y cómo hablarlas con {{autre}}",
+          "ecartsUn": "Para tu diferencia: por qué importa, y cómo hablarla con {{autre}}",
+          "ecarts0": "Para cada diferencia, aunque sea pequeña: por qué importa, y cómo hablarla con {{autre}}",
+          "ombreN": "Tus zonas de sombra: {{n}} temas en los que no sabes lo que piensa {{autre}}",
+          "ombreUn": "Tu zona de sombra: un tema en el que no sabes lo que piensa {{autre}}",
+          "conversationsN": "Tus {{n}} próximas conversaciones, en el orden en que tenerlas",
+          "conversationsUn": "Tu próxima conversación, y cómo empezarla"
+        },
+        "immediat": "El informe se abre aquí nada más pagar, y el enlace al PDF sale por correo.",
+        "colle": "Tu informe"
       },
       "rapport": {
         "ecran": {
@@ -383,7 +428,7 @@
         "nnAucun": "Nada marcado."
       },
       "ombre": {
-        "intro": "Has respondido por ti, y luego has dicho lo que respondería {{nom}}. Cuando no lo sabías, lo has dicho: este capítulo reúne esos temas. No son problemas, son preguntas que hacer.",
+        "intro": "En los temas que más cuentan, has dicho lo que respondería {{nom}}. Cuando no lo sabías, lo has dicho: este capítulo reúne esos temas. No son problemas, son preguntas que hacer.",
         "part": "Tu parte de sombra",
         "bandes": {
           "peu": {
@@ -504,7 +549,7 @@
         "inconnuTag": "No lo sé",
         "inconnuLire": "No sabías lo que respondería tu pareja: el tema está guardado en tus zonas de sombra.",
         "lire": {
-          "p1": "Has respondido a solas, en dos tiempos: primero por ti, y luego diciendo lo que respondería {{b}} según tú. Este informe pone las dos cosas frente a frente, tema por tema: donde estás seguro o segura de pensar igual, donde sabes que no veis las cosas de la misma manera, y donde no lo sabes.",
+          "p1": "Has respondido a solas: todas las preguntas por ti y, en los temas que más cuentan, también lo que respondería {{b}} según tú. Este informe pone las dos cosas frente a frente en esos temas: donde estás seguro o segura de pensar igual, donde sabes que no veis las cosas de la misma manera, y donde no lo sabes. Tus otras respuestas están en cada área.",
           "p3": "Léelo primero para ti. Después, si {{b}} está de acuerdo en hablarlo, las cuatro conversaciones y tus zonas de sombra dicen por dónde empezar. Y si algún día {{b}} quiere responder también, una evaluación en pareja sustituirá tus hipótesis por sus respuestas."
         },
         "synthese": {
@@ -528,7 +573,7 @@
           "parDomaineAide": "En las áreas que tienen preguntas sobre cómo os sentís, tu bienestar y el que le atribuyes a tu pareja, en la misma línea, de 0 a 100 %."
         },
         "roles": {
-          "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». La primera marca es tu respuesta, la segunda lo que respondería {{b}} según tú.",
+          "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». La primera marca es tu respuesta, la segunda, cuando se te preguntó, lo que respondería {{b}} según tú.",
           "desequilibre": "Crees que estáis de acuerdo: es sobre todo {{nom}}. ¿Os parece bien a los dos?"
         },
         "domaines": {
@@ -536,7 +581,9 @@
           "climatBas": "En cuanto a lo que sientes, ahora mismo no vives bien esta parte de la relación, o crees que tu pareja no la vive bien: lo encontrarás más abajo, en «{{titre}}».",
           "climatBasCourt": "En cuanto a lo que sientes, ahora mismo no vives bien esta parte de la relación, o crees que tu pareja no la vive bien.",
           "signauxBas": "Según tú, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo: lo encontrarás en el capítulo {{n}}, «{{titre}}».",
-          "signauxBasCourt": "Según tú, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo."
+          "signauxBasCourt": "Según tú, algunas de las costumbres de discusión que desgastan a una pareja aparecen en vuestro caso ahora mismo.",
+          "seules": "Tus otras respuestas",
+          "seulesAide": "En estas preguntas no se te preguntó lo que respondería {{nom}}: aquí tienes simplemente tu respuesta."
         },
         "fin": {
           "accordsTexte": "De {{total}} preguntas en las que has sabido responder por tu pareja, crees tener la misma respuesta {{n}} veces, es decir, el {{part}} %.",
@@ -579,10 +626,8 @@
     "situation": {
       "resume": "Situación",
       "titre": "Vuestra situación",
-      "progression": "{{n}} de {{total}}",
-      "verifierTitre": "Vuestra situación, antes de empezar",
-      "verifierTexte": "Estas respuestas cambian las preguntas que te hacemos. Si alguna ya no es correcta, corrígela antes de empezar.",
-      "confirmer": "Es correcto, empezamos"
+      "aide": "Tu respuesta adapta las preguntas que vienen.",
+      "deja": "Esta respuesta ya está dada: cámbiala si no es correcta."
     },
     "erreurs": {
       "reseau": "Sin conexión. Comprueba tu red y vuelve a intentarlo.",
@@ -615,12 +660,40 @@
     "rappels": {
       "arret": "Hecho: no recibirás más mensajes sobre esta evaluación.",
       "continuer": "Continuar"
+    },
+    "celib": {
+      "titre": "Estamos preparando una evaluación para solteros",
+      "texte": "Esta está pensada para parejas: compara lo que viven dos personas juntas. Para los solteros estamos preparando una evaluación completa, ¡y nos gustaría construirla contigo!",
+      "question": "¿Qué te interesaría más? Marca todo lo que te llame la atención.",
+      "sujets": {
+        "point": "Saber en qué punto estoy en mi vida amorosa",
+        "schemas": "Entender qué se repite en mis relaciones",
+        "profil": "Saber qué tipo de persona me conviene",
+        "blocages": "Entender qué me frena para conocer a alguien",
+        "rencontres": "Mejorar a la hora de conocer gente",
+        "rupture": "Pasar página después de una ruptura",
+        "envie": "Saber qué quiero de verdad: algo serio o no",
+        "confiance": "Recuperar la confianza en mí en el amor"
+      },
+      "autre": "¿Otra idea? (opcional)",
+      "email": "Tu correo electrónico, para enterarte el día que salga (opcional)",
+      "consentement": "Tengo 15 años o más y acepto recibir un e-mail de Quiz Couple el día que la evaluación para solteros esté lista.",
+      "emailAide": "Tu dirección solo sirve para eso: un único e-mail, ese día. Se borra un mes después, y como muy tarde en un año.",
+      "confidentialite": "Privacidad",
+      "envoyer": "Enviar mis respuestas",
+      "choixManque": "Marca al menos un tema.",
+      "consentManque": "Marca la casilla para que podamos escribirte, o deja la dirección vacía.",
+      "merciTitre": "¡Gracias, apuntado!",
+      "merci": "Tus respuestas nos ayudarán a elegir qué incluirá la evaluación para solteros.",
+      "merciEmail": "Te escribiremos a {{email}} el día que salga. Mientras tanto, tus respuestas nos ayudarán a elegir qué incluirá.",
+      "testsTitre": "Mientras tanto, nuestros tests para solteros son gratis:",
+      "fermer": "Cerrar"
     }
   },
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
-    "sousTitre": "25 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
+    "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
     "soloQuestion": "¿Tu pareja no quiere participar?",
     "soloLien": "Hazla a solas",
@@ -642,7 +715,7 @@
         "l": "áreas de la vida en pareja"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "cada uno, a su ritmo"
       },
       {
@@ -659,7 +732,7 @@
           "texte": "Escribís vuestros dos nombres, y envías el enlace a tu pareja."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "Cada uno responde por su lado",
           "texte": "En su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
         },
@@ -672,7 +745,7 @@
       "note": "Las preguntas se apoyan en la investigación en psicología de pareja y en los cuestionarios que se usan antes de una boda."
     },
     "rapport": {
-      "titre": "¿Qué hay en el informe?",
+      "titre": "¿Qué incluye la evaluación?",
       "intro": "Un informe de verdad, con sus capítulos, sus gráficos y, para cada diferencia, pistas para hablarlo. Desliza.",
       "pages": [
         {
@@ -730,7 +803,7 @@
         "titre": "A solas",
         "sous": "Sin avisar a tu pareja",
         "points": [
-          "Respondes por ti, y luego en lugar de tu pareja",
+          "Respondes por ti, y en lugar de tu pareja en los temas clave",
           "El informe te muestra también lo que no sabes de tu pareja"
         ],
         "cta": "Empezar a solas"
@@ -754,7 +827,7 @@
       "cta": "Hacer las 100 preguntas"
     },
     "prix": {
-      "accroche": "Las parejas se olvidan demasiado a menudo de hacer balance de su relación. 30 minutos cada uno y unos pocos euros pueden cambiar las cosas de verdad.",
+      "accroche": "Las parejas se olvidan demasiado a menudo de hacer balance de su relación. 20 minutos cada uno y unos pocos euros pueden cambiar las cosas de verdad.",
       "titre": "Un solo precio, para los dos",
       "unite": "para la pareja, de una vez",
       "aide": "Un solo pago, de uno o del otro, al final. Sin suscripción.",
@@ -787,12 +860,35 @@
         }
       ]
     },
+    "definition": {
+      "titre": "¿Qué es una evaluación de pareja?",
+      "paragraphes": [
+        "Una evaluación de pareja es un momento que uno se toma para hacer balance de su relación, para ver lo que va bien y lo que falla. Se puede hacer con un terapeuta de pareja, en consulta, o por tu cuenta con una lista de preguntas.",
+        "La evaluación de pareja de Quiz Couple se hace en línea, cada uno en su teléfono. Respondéis a 100 preguntas concretas sobre doce temas de la vida en pareja (el dinero, el día a día, los hijos, la intimidad, las discusiones, etc.), sin ver las respuestas del otro. Por ejemplo: «Vuestro dinero en pareja, idealmente...», con cuatro respuestas, de «Todo en común» a «Cada uno su dinero, caso por caso». Si respondéis lo mismo, es un acuerdo. Si vuestras respuestas están lejos la una de la otra, es una diferencia, y de esas diferencias es de lo que más vale la pena hablar.",
+        "Cuando habéis respondido los dos, la evaluación completa cuesta {{prix}} para los dos. Se abre en la página al momento, y recibís vuestra evaluación en PDF por correo, para guardarla. Vuestras respuestas aparecen una al lado de la otra, pregunta por pregunta, con preguntas para hablar de cada diferencia."
+      ]
+    },
+    "utilite": {
+      "titre": "¿Para qué sirve evaluar la relación?",
+      "paragraphes": [
+        "Muchas parejas solo hablan de ciertos temas cuando las cosas van mal: del dinero después de un gasto grande, de los hijos el día que sale la pregunta, o del reparto de las tareas en medio de una discusión... Evaluar la relación sirve precisamente para hablarlo antes, con la cabeza fría.",
+        "La evaluación también os muestra lo que no sabéis el uno del otro. Están los temas en los que estáis de acuerdo sin habéroslo dicho nunca, y aquellos en los que cada uno creía que el otro veía las cosas igual. Muchas veces son estos últimos los que acaban en discusión, así que vale la pena descubrirlos con tranquilidad."
+      ],
+      "momentsIntro": "No hay un momento ideal para hacerla, pero algunos se prestan bien:",
+      "moments": [
+        "Antes de iros a vivir juntos",
+        "Antes de casaros o de tener un hijo",
+        "Después de unos años juntos",
+        "Cuando notáis que algo ha cambiado entre vosotros"
+      ],
+      "solo": "Y si tu pareja no tiene ganas, puedes hacerla a solas: respondes por ti y, en los temas que más cuentan, dices lo que crees que respondería tu pareja."
+    },
     "faq": {
       "titre": "Preguntas frecuentes",
       "items": [
         {
           "q": "¿Cuánto tiempo lleva?",
-          "a": "Contad 25 a 30 minutos cada uno. Cada respuesta queda guardada: podéis hacer una pausa y seguir más tarde."
+          "a": "Contad unos 20 minutos cada uno. Cada respuesta queda guardada: podéis hacer una pausa y seguir más tarde."
         },
         {
           "q": "¿Mi pareja verá mis respuestas?",
@@ -804,11 +900,11 @@
         },
         {
           "q": "Si la hago a solas, ¿se enterará mi pareja?",
-          "a": "No. No se le envía nada, y solo tú ves el informe. Respondes por ti, y luego en su lugar, o «no lo sé»."
+          "a": "No. No se le envía nada, y solo tú ves el informe. Respondes por ti y, en los temas que más cuentan, en su lugar, o «no lo sé»."
         },
         {
           "q": "¿Y si no vivimos juntos o no tenemos hijos?",
-          "a": "También funciona. Al principio, siete preguntas sobre vuestra situación adaptan lo que sigue: una pareja que aún no vive junta responde sobre lo que imagina, por ejemplo."
+          "a": "También funciona. Seis preguntas sobre vuestra situación, hechas a lo largo de la evaluación, adaptan lo que sigue: una pareja que aún no vive junta responde sobre lo que imagina, por ejemplo."
         },
         {
           "q": "¿Sustituye a una terapia de pareja?",
@@ -826,7 +922,7 @@
     },
     "final": {
       "titre": "¿Listos para hacer balance?",
-      "texte": "25 minutos cada uno, y sabréis en qué estáis de acuerdo y de qué hay que hablar."
+      "texte": "20 minutos cada uno, y sabréis en qué estáis de acuerdo y de qué hay que hablar."
     },
     "colle": {
       "texte": "Evaluación de pareja · {{prix}}",

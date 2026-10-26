@@ -31,7 +31,7 @@
       "modeDuo": "Together",
       "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
       "modeSolo": "On your own",
-      "modeSoloAide": "You answer for yourself, then say what your partner would answer. Your partner isn't told and sees nothing.",
+      "modeSoloAide": "You answer for yourself, and on the topics that matter most, you also say what your partner would answer. Your partner isn't told and sees nothing.",
       "prenomsTitre": "Your two first names",
       "moi": "Your first name",
       "autre": "Your partner's first name",
@@ -41,20 +41,26 @@
       "homme": "A man",
       "sansGenre": "I'd rather not say",
       "genreAide": "It's only used to pick the characters next to your names.",
-      "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
-      "majeur": "I'm 18 or over.",
-      "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+      "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
       "accordAide": "Your answers, including on intimate topics, are used for this report only, where {{autre}} will see them next to their own. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
       "retour": "Back",
       "creer": "Create our assessment",
       "prenomManque": "Write both your first names.",
-      "accordManque": "Tick both boxes to continue.",
+      "accordManque": "Tick the box to continue.",
       "email": "Your email",
       "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
+      "emailAideDepart": "The link to your PDF report will go to this address, and it lets you find your assessment again if you close the page. We'll email you when the report is ready, once if you stop partway or {{autre}} is slow to finish, and once if it's still waiting the next day. It isn't used for anything else.",
+      "emailSuggestion": "Did you mean {{email}}?",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
-      "autreDefaut": "your partner"
+      "autreDefaut": "your partner",
+      "statutTitre": "What's your situation?",
+      "statuts": {
+        "couple": "In a relationship",
+        "complique": "It's complicated",
+        "celib": "Single"
+      }
     },
     "invitation": {
       "titre": "Invite {{autre}}",
@@ -77,9 +83,7 @@
     "rejoindre": {
       "titre": "{{autre}} would like you to do your relationship assessment together",
       "texte": "100 concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
-      "duree": "Allow 25 to 30 minutes. You can take a break whenever you like, everything is saved.",
-      "situationTitre": "Your situation, as {{autre}} described it",
-      "situationCorriger": "Correct",
+      "duree": "Allow about 20 minutes. You can take a break whenever you like, everything is saved.",
       "prenom": "Your first name",
       "genre": "You are",
       "commencer": "I agree, let's start",
@@ -155,7 +159,7 @@
         "decisifs0": "No gaps on the decisive topics, the ones that weigh most in a relationship.",
         "decisifsUn": "Including one gap on a decisive topic, one of those that weigh most in a relationship.",
         "decisifsN": "Including {{n}} gaps on decisive topics, the ones that weigh most in a relationship.",
-        "quoi": "The report tells you which ones and how to talk about them. Few couples ever take the time to do this: you just did, and all that's left is to read what it says."
+        "quoi": "Few couples ever take the time to do this: you just did, and all that's left is to read what it says."
       },
       "contenu": [
         "Your alignment and the climate of your relationship, at a glance",
@@ -168,7 +172,7 @@
         "The full report as a PDF, its download link emailed as soon as it's ready, and online for six months"
       ],
       "prix": "{{prix}} for both of you",
-      "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
+      "prixAide": "One payment unlocks the report for both of you, no subscription.",
       "emailLabel": "Where should we send the report?",
       "emailPlaceholder": "you@email.com",
       "emailAide": "The PDF link will go to this address as soon as you've both finished.",
@@ -176,7 +180,7 @@
       "renonciation": "I ask for the report to be provided as soon as it is ready, without waiting for the end of the 14-day withdrawal period, and I acknowledge that I lose my right of withdrawal once it is provided.",
       "renonciationManque": "Tick the box to continue.",
       "bouton": "Unlock our report · {{prix}}",
-      "securite": "Secure payment by Stripe (card, Apple Pay, Google Pay). We never see your card.",
+      "securite": "Secure payment by Stripe. We never see your card.",
       "cgv": "Terms of sale",
       "tva": "VAT not applicable, art. 293 B of the French General Tax Code.",
       "ferme": "Online payment opens very soon. Your assessment is saved: come back to this page in a few days.",
@@ -184,7 +188,26 @@
       "pretTitre": "{{moi}} and {{autre}}, your report is ready",
       "sommaire": "What's in your report",
       "emailAutre": "Get it at a different address",
-      "plie": "Unlock the report now"
+      "plie": "Unlock the report now",
+      "accroche": "You haven't seen what {{autre}} answered yet.",
+      "points": {
+        "reponses": "All of {{autre}}'s answers next to yours, question by question",
+        "ecartsN": "For your {{n}} gaps: why they matter, and how to talk about them without arguing",
+        "ecartsUn": "For your gap: why it matters, and how to talk about it without arguing",
+        "ecarts0": "For every difference, even a small one: why it matters, and how to talk about it",
+        "accords": "What you have in common, area by area",
+        "conversationsN": "Your next {{n}} conversations, in the order to have them",
+        "conversationsUn": "Your next conversation, and how to start it",
+        "climat": "The climate of your relationship, and who does what at home, as each of you sees it",
+        "pdf": "The full report as a PDF to keep, and online for six months"
+      },
+      "chacunSr": "That's {{chacun}} each.",
+      "cine": "Less than a cinema ticket each.",
+      "conseiller": "For comparison: a session with a relationship counsellor costs between £50 and £90.",
+      "immediat": "The report opens here as soon as you've paid, for both of you, and the PDF link goes out by email.",
+      "moyens": "Accepted payment methods",
+      "colle": "Your report",
+      "colleBouton": "Unlock"
     },
     "paiement": {
       "verification": "Checking the payment...",
@@ -200,12 +223,19 @@
       "creation": {
         "autreAide": "It's only used to write the questions. Nothing is sent to them.",
         "soloNote": "You're doing the assessment on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report.",
-        "consentement": "I consent to my answers being stored, solely to produce the assessment report.",
+        "consentement": "I'm 18 or over and I consent to my answers being stored, solely to produce the assessment report.",
         "accordAide": "Your answers, including on intimate topics, and what you imagine {{autre}} would answer are used for this report only, which you alone will see. The assessment is kept for 60 days after your last answer if unpaid, six months after payment, and you can delete it at any time. No account to create.",
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
         "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
-        "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\"."
+        "emailAideDepart": "The link to your PDF report will go to this address, and it lets you find your assessment again if you close the page. We'll email you once if you stop partway, and once if your report is still waiting the next day. It isn't used for anything else.",
+        "apportTitre": "What the solo assessment gives you",
+        "apport": [
+          "Your view of the twelve areas of your relationship, from everyday life to intimacy",
+          "On the topics that matter most, where you think you agree with {{autre}}, and where you don't",
+          "The topics where you don't know what {{autre}} thinks: often the conversations worth having"
+        ],
+        "apportNote": "100 questions, about 25 minutes. You can take a break and pick up later."
       },
       "domaine": {
         "nb": "{{n}} questions, two answers each, about {{min}} min"
@@ -226,11 +256,23 @@
         "emailAide": "The PDF link will go to this address as soon as you've paid.",
         "pretTitre": "{{moi}}, your report is ready",
         "apercu": {
-          "intro": "Your answers have been compared with what you think {{autre}} would say:",
-          "quoi": "The report tells you which ones and where to start. Few people ever take the time to look at their relationship this closely: you just did, and all that's left is to read what it says.",
+          "intro": "On the topics that matter most, your answers have been compared with what you think {{autre}} would say:",
+          "quoi": "Few people ever take the time to look at their relationship this closely: you just did, and all that's left is to read what it says.",
           "inconnusUn": "And one topic where you don't know what {{autre}} would say.",
           "inconnusN": "And {{n}} topics where you don't know what {{autre}} would say."
-        }
+        },
+        "prix": "{{prix}}",
+        "bouton": "Unlock my report · {{prix}}",
+        "accroche": "The report tells you where you stand with {{autre}}, and where to start.",
+        "points": {
+          "reponses": "Your answers next to what you think {{autre}} would say",
+          "ecartsN": "For your {{n}} gaps: why they matter, and how to talk about them with {{autre}}",
+          "ecartsUn": "For your gap: why it matters, and how to talk about it with {{autre}}",
+          "ecarts0": "For every difference, even a small one: why it matters, and how to talk about it with {{autre}}",
+          "ombreN": "Your blind spots: {{n}} topics where you don't know what {{autre}} thinks",
+          "ombreUn": "Your blind spot: one topic where you don't know what {{autre}} thinks"
+        },
+        "immediat": "The report opens here as soon as you've paid, and the PDF link goes out by email."
       },
       "rapport": {
         "ecran": {
@@ -382,7 +424,7 @@
         "nnAucun": "Nothing marked."
       },
       "ombre": {
-        "intro": "You answered for yourself, then said what {{nom}} would answer. When you didn't know, you said so: this chapter gathers those topics. They aren't problems, they're questions to ask.",
+        "intro": "On the topics that matter most, you said what {{nom}} would answer. When you didn't know, you said so: this chapter gathers those topics. They aren't problems, they're questions to ask.",
         "part": "Your share of blind spots",
         "bandes": {
           "peu": {
@@ -503,7 +545,7 @@
         "inconnuTag": "Don't know",
         "inconnuLire": "You didn't know what your partner would answer: the topic is filed under your blind spots.",
         "lire": {
-          "p1": "You answered on your own, in two steps: first for yourself, then by saying what {{b}} would answer, as far as you can tell. This report puts the two side by side, topic by topic: where you're sure you think alike, where you know you don't see things the same way, and where you don't know.",
+          "p1": "You answered on your own: every question for yourself and, on the topics that matter most, also what {{b}} would answer, as far as you can tell. This report puts the two side by side on those topics: where you're sure you think alike, where you know you don't see things the same way, and where you don't know. Your other answers are listed in each area.",
           "p3": "Read it for yourself first. Then, if {{b}} is willing to talk about it, the four conversations and your blind spots show where to start. And if one day {{b}} wants to answer too, an assessment done together will replace your guesses with their answers."
         },
         "synthese": {
@@ -527,7 +569,7 @@
           "parDomaineAide": "For the areas with questions about how you feel, your well-being and the one you attribute to your partner, on the same line, from 0 to 100%."
         },
         "roles": {
-          "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The first marker is your answer, the second what {{b}} would answer, as far as you can tell.",
+          "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The first marker is your answer, the second, when you were asked, what {{b}} would answer, as far as you can tell.",
           "desequilibre": "You think you agree: it's mostly {{nom}}. Is that OK for both of you?"
         },
         "domaines": {
@@ -535,7 +577,9 @@
           "climatBas": "As for how it feels, you're not living this part of the relationship well right now, or you think your partner isn't: there's more below, under \"{{titre}}\".",
           "climatBasCourt": "As for how it feels, you're not living this part of the relationship well right now, or you think your partner isn't.",
           "signauxBas": "As far as you can tell, some of the arguing habits that wear a couple down are showing up for you right now: there's more in chapter {{n}}, \"{{titre}}\".",
-          "signauxBasCourt": "As far as you can tell, some of the arguing habits that wear a couple down are showing up for you right now."
+          "signauxBasCourt": "As far as you can tell, some of the arguing habits that wear a couple down are showing up for you right now.",
+          "seules": "Your other answers",
+          "seulesAide": "For these questions, you weren't asked what {{nom}} would answer: here's simply your answer."
         },
         "fin": {
           "accordsTexte": "Out of {{total}} questions where you could answer for your partner, you think you share the same answer {{n}} times, or {{part}}%.",
@@ -578,10 +622,8 @@
     "situation": {
       "resume": "Situation",
       "titre": "Your situation",
-      "progression": "{{n}} of {{total}}",
-      "verifierTitre": "Your situation, before you start",
-      "verifierTexte": "These answers change the questions you get. If one of them isn't right anymore, correct it before you start.",
-      "confirmer": "That's right, let's start"
+      "aide": "Your answer adjusts the questions that follow.",
+      "deja": "This answer has already been given: change it if it isn't right."
     },
     "erreurs": {
       "reseau": "No connection. Check your network and try again.",
@@ -614,12 +656,40 @@
     "rappels": {
       "arret": "Done: you won't get any more emails about this assessment.",
       "continuer": "Continue"
+    },
+    "celib": {
+      "titre": "An assessment for singles is on its way",
+      "texte": "This one is made for couples: it compares what two people live together. For singles, we're preparing a complete assessment, and we'd love to build it with you!",
+      "question": "What would interest you most? Tick everything that speaks to you.",
+      "sujets": {
+        "point": "Knowing where I stand in my love life",
+        "schemas": "Understanding what keeps repeating in my relationships",
+        "profil": "Knowing what kind of person suits me",
+        "blocages": "Understanding what holds me back from meeting someone",
+        "rencontres": "Getting better at meeting people",
+        "rupture": "Moving on after a breakup",
+        "envie": "Knowing what I really want: something serious, or not",
+        "confiance": "Getting my confidence back in love"
+      },
+      "autre": "Another idea? (optional)",
+      "email": "Your email address, to hear the day it comes out (optional)",
+      "consentement": "I'm 15 or older and I agree to receive one email from Quiz Couple the day the assessment for singles is ready.",
+      "emailAide": "Your address is used for that alone: a single email, on that day. It's deleted a month later, and within a year at the latest.",
+      "confidentialite": "Privacy",
+      "envoyer": "Send my answers",
+      "choixManque": "Tick at least one topic.",
+      "consentManque": "Tick the box so we can write to you, or leave the address empty.",
+      "merciTitre": "Thanks, got it!",
+      "merci": "Your answers will help us choose what goes into the assessment for singles.",
+      "merciEmail": "We'll write to {{email}} the day it comes out. Until then, your answers will help us choose what goes into it.",
+      "testsTitre": "In the meantime, our tests for singles are free:",
+      "fermer": "Close"
     }
   },
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "25 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
+    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
     "soloQuestion": "Your partner doesn't want to take part?",
     "soloLien": "Take it on your own",
@@ -641,7 +711,7 @@
         "l": "areas of life together"
       },
       {
-        "n": "25 min",
+        "n": "20 min",
         "l": "each, at your own pace"
       },
       {
@@ -658,7 +728,7 @@
           "texte": "Your two first names, then you send your partner their link."
         },
         {
-          "duree": "25 min",
+          "duree": "20 min",
           "titre": "You each answer separately",
           "texte": "On your own phone, without seeing the other's answers. You can take a break whenever you like."
         },
@@ -671,7 +741,7 @@
       "note": "The questions draw on research in couple psychology and on the questionnaires used before a wedding."
     },
     "rapport": {
-      "titre": "What's in the report?",
+      "titre": "What's in the assessment?",
       "intro": "A real report, with its chapters, its charts and, for each gap, ways to talk about it. Scroll through.",
       "pages": [
         {
@@ -729,7 +799,7 @@
         "titre": "On your own",
         "sous": "Without telling your partner",
         "points": [
-          "You answer for yourself, then in your partner's place",
+          "You answer for yourself, and in your partner's place on the key topics",
           "The report also shows you what you don't know about your partner"
         ],
         "cta": "Start on your own"
@@ -753,7 +823,7 @@
       "cta": "Take the 100 questions"
     },
     "prix": {
-      "accroche": "Couples too often forget to take stock of their relationship. 30 minutes each and a few euros can really change things.",
+      "accroche": "Couples too often forget to take stock of their relationship. 20 minutes each and a few euros can really change things.",
       "titre": "One price, for both of you",
       "unite": "for the couple, in one go",
       "aide": "Paid once, by either of you, at the end. No subscription.",
@@ -786,12 +856,35 @@
         }
       ]
     },
+    "definition": {
+      "titre": "What is a relationship assessment?",
+      "paragraphes": [
+        "A relationship assessment, sometimes called a couples check-up, is a moment you take to look at where your relationship stands, to see what's going well and what isn't. You can do it with a couples counsellor, in a session, or on your own with a list of questions.",
+        "Quiz Couple's relationship assessment is done online, each of you on your own phone. You answer 100 concrete questions about twelve parts of life as a couple (money, everyday life, children, intimacy, arguments, etc.), without seeing the other's answers. For example: \"Your money as a couple, ideally...\", with four answers, from \"All shared\" to \"Separate money, case by case\". If you both give the same answer, that's an agreement. If your answers are far apart, that's a gap, and the gaps are what's worth talking about.",
+        "Once you've both answered, the full assessment costs {{prix}} for the two of you. It opens on the page straight away, and you get your assessment as a PDF by email, to keep. Your answers sit side by side, question by question, with questions to help you talk about each gap."
+      ]
+    },
+    "utilite": {
+      "titre": "Why assess your relationship?",
+      "paragraphes": [
+        "A lot of couples only talk about some subjects when things go wrong: money after a big purchase, children the day the question comes up, or splitting the chores in the middle of an argument... Assessing your relationship is a way to talk about them before, with a clear head.",
+        "The assessment also shows you what you don't know about each other. There are the subjects where you agree without ever having said so, and the ones where each of you thought the other saw things the same way. Those are often the ones that end in arguments, so it's worth finding them while things are calm."
+      ],
+      "momentsIntro": "There's no perfect time to do it, but some moments lend themselves to it:",
+      "moments": [
+        "Before moving in together",
+        "Before getting married or having a baby",
+        "After a few years together",
+        "When you feel something has changed between you"
+      ],
+      "solo": "And if your partner doesn't feel like it, you can do it on your own: you answer for yourself and, on the topics that matter most, you say what you think your partner would answer."
+    },
     "faq": {
       "titre": "Frequently asked questions",
       "items": [
         {
           "q": "How long does it take?",
-          "a": "Allow 25 to 30 minutes each. Every answer is saved: you can take a break and pick up later."
+          "a": "Allow about 20 minutes each. Every answer is saved: you can take a break and pick up later."
         },
         {
           "q": "Will my partner see my answers?",
@@ -803,11 +896,11 @@
         },
         {
           "q": "If I do it on my own, will my partner be told?",
-          "a": "No. Nothing is sent to them, and only you see the report. You answer for yourself, then in their place, or \"I don't know\"."
+          "a": "No. Nothing is sent to them, and only you see the report. You answer for yourself and, on the topics that matter most, in their place, or \"I don't know\"."
         },
         {
           "q": "What if we don't live together, or don't have children?",
-          "a": "It works too. At the start, seven questions about your situation adapt what follows: a couple who don't live together yet answer about what they imagine, for example."
+          "a": "It works too. Six questions about your situation, asked along the way, adapt what follows: a couple who don't live together yet answer about what they imagine, for example."
         },
         {
           "q": "Does it replace couples therapy?",
@@ -825,7 +918,7 @@
     },
     "final": {
       "titre": "Ready to take stock?",
-      "texte": "25 minutes each, and you'll know what you agree on and what you need to talk about."
+      "texte": "20 minutes each, and you'll know what you agree on and what you need to talk about."
     },
     "colle": {
       "texte": "Relationship assessment · {{prix}}",

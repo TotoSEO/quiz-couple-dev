@@ -2,17 +2,17 @@
   "hero": {
     "badge": "50 questions · free · no sign-up",
     "titre": "Purity test",
-    "titreAccent": "for couples",
+    "titreAccent": "solo or as a couple",
     "accroche": "How far have you actually gone?",
-    "description": "Fifty questions, a score out of 899, and an answer you won't necessarily want to show your parents. Take it alone, then send your score to your partner and compare."
+    "description": "The purity test is 50 questions about what you've already done: nights out, exes, lies, sex, and so on. Take it solo for your own score, or together to rate your couple, then compare with your partner!"
   },
   "cta": "Start the test",
   "sections": {
     "s1": {
       "titre": "What is a purity test, exactly?",
-      "lead": "A long list of things people do. You tick the ones you've already done. The more you tick, the higher the score, and the less « pure » you are.",
-      "p1": "The format has been floating around American campuses for decades and it exploded on social media, because it produces exactly what everyone is after in a <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">party game</a>: a number to compare. No interpretation, no psychological profile, just a figure you can drop into a conversation.",
-      "p2": "The version in front of you is written for couples. No questions about fraternities or skipped lectures: this is about exes, lies, nights that got out of hand, things hidden from a partner, and things done together.",
+      "lead": "A purity test is a long list of things people do, and you tick the ones you've already done. The more boxes you tick, the higher your score goes, and the less \"pure\" you are.",
+      "p1": "The best-known one, the Rice Purity Test, comes from Rice University in Texas, and it has been all over social media. If the idea works so well as a <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">party game</a>, it's mostly because you end up with a number you can compare with your friends, or with your boyfriend or girlfriend.",
+      "p2": "Our version has two modes. Solo, the questions are about you: your exes, your lies, the nights that got out of hand, or what you've hidden from someone. As a couple, they're about your relationship, what you've done together and what you've kept from each other.",
       "chiffres": [
         {
           "val": "50",
@@ -32,11 +32,11 @@
         }
       ],
       "sub1Titre": "Why it works so well as a pair",
-      "sub1P1": "Because a score gets compared. You take the test on your own, you send your result, and the conversation starts by itself. Nine times out of ten the real discussion isn't about the score but about the one question that made someone pause, and from there you end up on <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">questions you never ask each other</a>."
+      "sub1P1": "A score is easy to compare. You each take the test on your own, send each other your results, and the conversation starts by itself. Most of the time you end up talking less about the number than about the question that made someone pause, and from there you quickly get to <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">questions you never ask each other</a>."
     },
     "s2": {
       "titre": "How your score is calculated",
-      "p1": "Not every question is worth the same number of points, and that's the whole point. A flat scale where each tick counts for one gives everybody the same result: a big cluster in the middle, nobody at the extremes, and a figure that says nothing.",
+      "p1": "Not every question is worth the same number of points. If every ticked box were worth one point, almost everyone would end up with an average score, and the result wouldn't mean much. For example:",
       "tableau": {
         "titre": "Three answers, three weights",
         "entete": [
@@ -80,7 +80,7 @@
           "texte": "It's no longer two people being scored, it's one story: what you did together, where you did it, and what you kept from each other. Answers are said out loud, which makes this mode considerably more dangerous."
         }
       ],
-      "p2": "The couple mode and the <a class=\"pu-lien-int\" href=\"{{testCouple}}\">standard couple test</a> don't tread on each other: one measures what you've done, the other where the relationship stands today. Taking them back to back gives two very different readings of the same couple.",
+      "p2": "The couple mode doesn't overlap with the couple test: one measures what you've done together, the other <a class=\"pu-lien-int\" href=\"{{testCouple}}\">where your relationship stands today</a>. Doing both back to back gives two very different readings of the same couple.",
       "encart": {
         "titre": "One piece of advice before starting couple mode",
         "texte": "Some questions ask you to say out loud things that have never been said. If the subject is still raw between you, take the solo mode separately and compare nothing but the scores. The number is enough to start the discussion without forcing anyone into detail."
@@ -99,7 +99,7 @@
         "📱 <strong>Online life</strong>: nudes, secret accounts, morning-after messages",
         "🚨 <strong>Off limits</strong>: theft, stupidity, getting caught"
       ],
-      "sub1P1": "The category that hurts most is almost never the expected one. It's lies that push the most scores up, not sex.",
+      "sub1P1": "The breakdown often holds surprises: you can have a reasonable score on sex and blow the counter on lies, or the other way round.",
       "sub2Titre": "The six couple categories",
       "liste2": [
         "🔥 <strong>Sex</strong>: what you've tried, and where",
@@ -109,33 +109,33 @@
         "🚨 <strong>Crossing lines</strong>: casinos, off-limits places, lies told together",
         "🤐 <strong>Secrets</strong>: what the other one still doesn't know"
       ],
-      "sub2P1": "It's the secrets category that separates couples. Two couples with exactly the same past can end up a hundred points apart, purely on what they told each other."
+      "sub2P1": "The secrets category scores what one of you has hidden from the other. So two couples who've lived roughly the same things can end up with very different scores."
     },
     "s5": {
       "titre": "Is a high score bad?",
-      "citation": "A high score doesn't say you're a good person or a bad one. It says you've done things.",
-      "p1": "Some of them are memories from a night out, others are mistakes, and the test doesn't tell them apart: it counts, that's all. The reading is yours to do.",
-      "p2": "Where the result gets interesting is when two people compare it. Three hundred points between two partners isn't a problem in itself, but it often explains tensions nobody could name. The other way round, two very close scores are more reassuring than any <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">compatibility test</a>.",
+      "citation": "A high score just means you've been through quite a lot, not that you're a bad person.",
+      "p1": "Some of it is memories from nights out and some of it is mistakes, and the test doesn't tell them apart: it adds up points. It's up to you to decide what the number says.",
+      "p2": "Where the result gets interesting is when two people compare it. Three hundred points between two partners isn't a problem in itself, but it sometimes explains tensions nobody could put a name on. On the other hand, two close scores don't mean you agree on <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">your values and your plans</a>: the purity test only looks at the past.",
       "encart": {
         "titre": "And if the other person's score hurts",
-        "texte": "It happens. The test covers a whole past, most of which happened before you. What counts isn't the figure, it's what the person agrees to tell you behind it."
+        "texte": "It happens. The test covers a whole past, and most of it often happened before you. What helps most is what the person is willing to tell you behind the number."
       }
     }
   },
   "faq": {
     "titre": "The questions we get asked",
     "q1": "Is the purity test free?",
-    "a1": "Yes, entirely. No account to create, no email to hand over, no paid version that unlocks the real result. You answer, you get your score, that's it.",
+    "a1": "Yes, completely. There's no account to create, no email to give and no paid version: you answer the questions and your score shows up at the end.",
     "q2": "Are my answers stored somewhere?",
     "a2": "No. No individual answer is kept. Only the final score is recorded, with nothing that could point back to you, and it only serves to work out the average and the curve shown on the page.",
     "q3": "How long does it take?",
-    "a3": "Five to seven minutes for the fifty solo questions. As a couple it takes longer, because you'll stop to talk at least three times, and that's rather the point.",
+    "a3": "Five to seven minutes for the fifty questions solo. As a couple it takes longer, because you'll definitely stop to talk about it!",
     "q4": "What counts as a good score?",
     "a4": "There isn't one. Most people land between 25 and 40% of the maximum, so a result around 250 to 350 points. Below that you're very well behaved, above it you have a history, but neither is better than the other.",
     "q5": "Can more than two people play?",
     "a5": "Couple mode is built for two. Nothing stops a whole group from taking the solo mode separately and comparing scores afterwards though: that's the best use of the test when there are several of you.",
     "q6": "What's the minimum age?",
-    "a6": "The test asks your age before it starts. Under 16, an all-audiences version is served, and the <a href=\"/en/teen-couple-quiz/\">teen couple quiz</a> is probably the better fit: it removes the explicit sex and drug questions and keeps everything about lies, family, nights out and secrets."
+    "a6": "The test asks your age before it starts. Under 16, it switches to an all-audiences version, which removes the questions about explicit sex and drugs and keeps everything about lies, family, nights out and secrets. For a teen couple, the <a href=\"/en/teen-couple-quiz/\">teen couple quiz</a> is probably a better fit."
   },
   "suite": {
     "titre": "Do this next",
@@ -238,10 +238,10 @@
     "hero_jauge_moyenne": "Average score"
   },
   "meta": {
-    "titre": "Purity test for couples | Online & free",
-    "description": "Couple purity test: 50 questions, a score out of 899, and the breakdown by category. Take it alone or together, then compare with your partner. Free, no sign-up."
+    "titre": "Purity Test: 50 Questions, Solo or as a Couple | Free",
+    "description": "The purity test in 50 questions: take it solo for your own score, or as a couple for your relationship's. Detailed result by category. Free, no sign-up."
   },
   "jsonLd": {
-    "about": "couple purity test"
+    "about": "purity test"
   }
 }

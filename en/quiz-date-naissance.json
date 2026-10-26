@@ -3,8 +3,8 @@
     "badge": "Numerology, astrology and Chinese zodiac",
     "title": "Are you compatible according to your birth dates?",
     "highlight": "birth dates",
-    "description": "Two dates, and everything else follows: your life path, your star sign, your Chinese sign. Three different readings of the same day, crossed to show what binds you and what takes a bit of work.",
-    "subtitle": "No sign-up, no email. The result appears straight away."
+    "description": "Enter your two birth dates: the test works out your life path number, your star sign and your Chinese sign, then compares your two profiles. You'll see what brings you together, and what takes a bit more effort.",
+    "subtitle": "No need to sign up or give your email, and the result appears straight away."
   },
   "form": {
     "titre": "Your two birth dates",
@@ -166,14 +166,14 @@
   },
   "suite": {
     "titre": "Go further with your first names",
-    "texte": "Your birth date says what you received on arrival. Your first name says how you connect with others day to day. It's the second half of the reading, and it often changes how the result you've just seen should be interpreted.",
+    "texte": "The first name and star sign test starts from your two first names, read with numerology, and from your two signs. It doesn't ask for any date, and its result reads very well next to this one.",
     "bouton": "Take the first name and star sign test"
   },
   "section1": {
     "title": "What a birth date can tell you about a couple",
-    "p1": "You know your partner's birth date by heart. It's probably one of the few pieces of information you'll never forget. And yet most people only use it to blow out candles once a year, while three different traditions each read a complete temperament in it.",
-    "p2": "Numerology sees a number there, the <strong>life path</strong>, which sums up the way a person moves through life. Western astrology reads a sun sign, so a way of loving. Chinese astrology reads a lunar year, so a rhythm. These three readings don't say the same thing, and that's precisely why we cross them here rather than picking just one.",
-    "p3": "The result: an overall score, three detailed scores, and above all explanations that are about the two of you. If you'd rather fill in a questionnaire together, the <a href=\"/en/love-compatibility-test/\">love compatibility test</a> in twenty questions answers the same urge by a completely different route."
+    "p1": "This compatibility test starts from one thing only: your two dates of birth. Most of the time, a birth date is just for wishing someone a happy birthday, but three traditions also read a personality in it: numerology, Western astrology and Chinese astrology. The test runs both your dates through all three.",
+    "p2": "Numerology turns the date into a number, the <strong>life path</strong>, which says how a person moves through life. Western astrology looks at the day and the month to find your sign, and Chinese astrology looks at the year to find your animal. These three readings don't say the same thing, which is exactly why we look at all three.",
+    "p3": "At the end, you get an overall score, a score for each of the three readings and explanations about the two of you. If you'd rather have <a href=\"/en/love-compatibility-test/\">a questionnaire to fill in together</a>, there's also a twenty-question test about how you each see life as a couple."
   },
   "section2": {
     "title": "The life path, the number hidden in your birth date",
@@ -248,7 +248,7 @@
         "To be loved for themselves, not for what they give"
       ]
     ],
-    "tip": "Two identical life paths guarantee nothing at all. Two 5s together means two people who want to leave, and sometimes not in the same direction."
+    "tip": "Having the same life path guarantees nothing. Two 5s together, for example, are two people who need to keep moving, and not always in the same direction."
   },
   "section3": {
     "title": "The star sign, the sky on the day you were born",
@@ -256,12 +256,12 @@
     "sub1Title": "The four elements, the real key",
     "sub1Text": "Before comparing sign by sign, you look at the elements. <strong>Fire</strong> (Aries, Leo, Sagittarius) charges ahead. <strong>Earth</strong> (Taurus, Virgo, Capricorn) builds. <strong>Air</strong> (Gemini, Libra, Aquarius) exchanges. <strong>Water</strong> (Cancer, Scorpio, Pisces) feels. Fire and Air feed each other, Earth and Water understand each other, and couples mixing two distant families have more translating to do for one another.",
     "p2": "Watch out for the cusp dates. If you were born on the 20th or 21st, you might belong to the previous sign: the boundaries shift slightly from one year to the next. Our calculation uses the most common reference dates, the ones you'll find in almost every almanac.",
-    "p3": "If your sign interests you in particular, we've written a full article for each of the twelve. The one on <a href=\"/en/blog/libra-love-compatibility/\">Libra love compatibility</a> or the one on <a href=\"/en/blog/scorpio-love-compatibility/\">Scorpio</a> go into far more detail than any calculator can display."
+    "p3": "If your sign interests you in particular, there's a full article for each of the twelve. The one on <a href=\"/en/blog/libra-love-compatibility/\">what Libra looks for in love</a> or the one on <a href=\"/en/blog/scorpio-love-compatibility/\">who can keep up with a Scorpio</a> go much further than a calculator ever could."
   },
   "section4": {
-    "title": "The Chinese sign, the one almost nobody calculates correctly",
+    "title": "The Chinese sign, which depends on the lunar new year",
     "p1": "Here it's the year that speaks. Twelve animals, one per year, and a cycle that starts over. Except the Chinese year doesn't begin on 1 January: it starts at the lunar new year, which falls between 21 January and 21 February depending on the year. Everyone born in January and the first half of February therefore belongs to the previous year's animal.",
-    "p2": "This is the most frequent mistake made by online calculators, and it affects nearly a tenth of the population. Our tool uses the <strong>real Chinese new year dates</strong>, year by year, from 1924 to 2043. Someone born on 1 January 2000 is not a Dragon, they're an Earth Rabbit.",
+    "p2": "That's roughly one person in ten: everyone born between 1 January and the Chinese new year. So the test uses the <strong>real Chinese new year dates</strong>, year by year, from 1924 to 2043. For example, someone born on 1 January 2000 is not a Dragon, they're an Earth Rabbit.",
     "sub1Title": "The four affinity triangles",
     "tableHeaders": [
       "Triangle",
@@ -296,28 +296,28 @@
   },
   "section5": {
     "title": "Why cross three readings instead of one",
-    "p1": "Because none of the three is enough on its own. The sun sign is too popular to be precise: twelve boxes for eight billion people makes for very wide boxes. The life path is finer but ignores temperament entirely. The Chinese sign gives a rhythm, not a way of loving.",
-    "p2": "Crossed, they correct each other. Two sun signs said to be incompatible can have life paths that fit together perfectly, and you'll see it straight away in the three bars of the result. That's also why we show the detail rather than a lone percentage: the overall figure is worth nothing without what makes it up.",
-    "tip": "A high score on one axis and a low one on another is the most common case, and often the most interesting to read. That's where the real relationship dynamics live."
+    "p1": "Because none of them is enough on its own. Your star sign puts eight billion people into twelve boxes, which makes for very big boxes. The life path is more precise, but it says nothing about temperament. And the Chinese sign gives a rhythm more than a way of loving.",
+    "p2": "Together, they fill in each other's gaps. Two signs said to be incompatible can have life paths that match very well, and you'll see it straight away in the three bars of the result. That's why we show the detail rather than a single percentage: without it, you can't tell where the score comes from.",
+    "tip": "The most common case is a high score on one reading and a low one on another. It's often the most interesting result to read together."
   },
   "section6": {
     "title": "And if the score is low?",
-    "p1": "Then nothing happens. Really. None of these three systems has ever predicted a break-up, and none has ever stopped a story lasting thirty years. What a low score says is that your two temperaments don't align spontaneously, so you'll have to put into words what other couples pass between them without thinking.",
-    "p2": "Plenty of people land on a page like this with a question at the back of their mind, and it isn't really an astrology question. If that's you, the <a href=\"/en/healthy-relationship-test/\">healthy relationship test</a> or the <a href=\"/en/love-or-habit-test/\">love or habit test</a> talk about what's going on between you today, not about what the stars were saying on the day you were born.",
-    "tip": "Take the test together rather than alone. The result matters less than the conversation it starts, and that's true of just about every test on this site."
+    "p1": "Nothing serious happens! None of these three systems has ever predicted a break-up, and none has ever stopped a couple from lasting thirty years. A low score just means your two temperaments don't click on their own, and that you'll sometimes have to put into words what other couples understand without talking.",
+    "p2": "Plenty of people land on a page like this with another question in mind, and it isn't an astrology question. If that's you, you'd be better off with a test about <a href=\"/en/healthy-relationship-test/\">how you treat each other day to day</a>, or one that helps you get clear on <a href=\"/en/love-or-habit-test/\">what you still feel</a>. Those talk about what's going on between you today, not about what the stars were saying on the day you were born.",
+    "tip": "Take the test together, on the same screen. Reading the three bars side by side is often what gets the conversation going."
   },
   "faq": {
     "title": "Your questions about birth date compatibility",
     "q1": "How do you calculate love compatibility from a birth date?",
     "a1": "There are three different calculations, and our tool does all three. The life path comes from adding every digit of the date then reducing the total. The star sign is read from the day and the month. The Chinese sign is read from the lunar year, which doesn't begin on 1 January. The two profiles are then compared on each of these three axes.",
     "q2": "Do you need to know the time of birth?",
-    "a2": "No, and that's deliberate. The time is used to calculate the rising sign and the astrological houses, which belong to a full natal chart and call for a professional reading. Here, the date alone is enough for the three systems used. Nobody needs to dig out a birth certificate.",
+    "a2": "No. The time is used to calculate the rising sign and the astrological houses, in other words a full natal chart, which takes a much longer reading. Here, the date alone is enough for all three calculations.",
     "q3": "My Chinese sign isn't the one I thought, why?",
     "a3": "Because you were probably born in January or early February. The Chinese year begins at the lunar new year, between 21 January and 21 February. Someone born on 20 January 1990 still belongs to the Snake year of 1989, not to the Horse year. Our calculation builds in the exact new year date for every year.",
     "q4": "Does a score of 40% mean we're going to split up?",
     "a4": "No. That figure measures agreement between two symbolic temperaments, not the strength of a relationship. It knows nothing of your history, your efforts, or what you've been through together. Take it as a reading grid that shows where understanding comes naturally and where it has to be worked at.",
     "q5": "How is this different from your first name and star sign test?",
-    "a5": "This one starts from the dates alone and crosses three systems. The other starts from first names and the sign you pick yourself, and reads the numerology of the letters. The two work well together: the date says what you received, the first name says how you present yourself to others. Doing both takes five minutes in total.",
+    "a5": "This one starts from your dates only and crosses three calculations. The test <a href=\"/en/zodiac-signs-names-compatibility/\">based on first names and zodiac signs</a> starts from your names, read with letter numerology, and from the signs you pick from a list. The two work well together, and doing both takes five minutes in total. And to <a href=\"/en/love-calculator/\">compare two first names without any astrology</a>, there's also the love calculator.",
     "q6": "Are the results stored anywhere?",
     "a6": "No. The whole calculation runs in your browser, the dates go nowhere and nothing is kept once you close the page. You can redo the test as often as you like, with as many dates as you like."
   }

@@ -69,16 +69,16 @@
   },
   "suite": {
     "titre": "Wie wäre es mit dem echten Test?",
-    "texte": "Dieser Prozentwert ist ein Spiel, er zählt Buchstaben. Wenn ihr messen wollt, worauf es wirklich ankommt, haben wir einen <a href=\"/de/liebeskompatibilitaet-test/\">Kompatibilitätstest mit zwanzig Fragen</a> für euch beide: Werte, Pläne, Geld, Alltag. Da bedeutet das Ergebnis etwas.",
+    "texte": "Dieser Prozentwert ist ein Spiel, er zählt Buchstaben. Wenn ihr messen wollt, worauf es wirklich ankommt, gibt es einen Test mit zwanzig Fragen für euch beide, zu <a href=\"/de/liebeskompatibilitaet-test/\">Geld, Kindern, Alltag oder Treue</a>. Da bedeutet das Ergebnis etwas.",
     "bouton": "Den Test mit 20 Fragen machen",
     "autresTitre": "Diese Rechner könnten euch auch gefallen:",
     "autresEtiquette": "Rechner"
   },
   "section1": {
     "title": "Was ist ein Liebesrechner?",
-    "p1": "Ein Liebesrechner ist ein kleines Werkzeug, in das du zwei Namen tippst und einen Prozentwert zurückbekommst. Zum Beispiel: du schreibst «Thomas» und «Elisa», und das Werkzeug antwortet 59 %. Das ist alles. Keine Fragen zum Ausfüllen, keine Anmeldung, eine Sekunde und fertig.",
+    "p1": "Ein Liebesrechner ist ein kleines Werkzeug, in das du zwei Namen tippst und einen Prozentwert zurückbekommst. Zum Beispiel: du schreibst «Thomas» und «Elisa», und das Werkzeug antwortet 59 %. Es gibt keine Fragen zum Ausfüllen und keine Anmeldung, und das Ergebnis kommt in einer Sekunde.",
     "p2": "Die Idee stammt aus den allerersten Webseiten, aus der Zeit, als man sich Links per Mail schickte. Geändert hat sie sich nie: man vergleicht die Buchstaben zweier Namen und zieht daraus eine Zahl. Das dient also vor allem dem Spaß, dem Gesprächseinstieg, oder dazu, den Namen des eigenen Crushs einzutippen und zu schauen, was dabei herauskommt.",
-    "p3": "Unserer macht dasselbe, mit zwei Unterschieden. Zuerst zeigt er dir die Rechnung im Detail, statt eine Zahl aus dem Nichts zu ziehen. Und er behauptet nicht, wissenschaftlich zu sein: es ist ein Buchstabenspiel, und das sagen wir auch."
+    "p3": "Unserer macht dasselbe, mit zwei Unterschieden. Erstens zeigt er dir die Rechnung im Detail, statt eine Zahl aus dem Nichts zu ziehen. Zweitens gibt er sich nicht als wissenschaftlich aus: Es ist ein Spiel mit den Buchstaben eurer Namen."
   },
   "section2": {
     "title": "Wie unser Liebesrechner funktioniert",
@@ -89,7 +89,7 @@
   },
   "section3": {
     "title": "Bedeutet der Prozentwert etwas?",
-    "p1": "Die ehrliche Antwort ist nein, und das muss man klar sagen. Deinen Namen hast du dir nicht ausgesucht, und er sagt nichts darüber, wie du liebst, wie du streitest oder wie du Pläne schmiedest. Zwei Menschen bei 38 % können dreißig Jahre zusammen verbringen, zwei Menschen bei 97 % können sich nach sechs Monaten trennen.",
+    "p1": "Nein. Deinen Namen hast du dir nicht ausgesucht, und er sagt nichts darüber, wie du liebst, wie du streitest oder wie du Pläne schmiedest. Zwei Menschen bei 38 % können dreißig Jahre zusammen verbringen, und zwei Menschen bei 97 % können sich nach sechs Monaten trennen.",
     "p2": "Was die Zahl dagegen gut kann, ist ein Gespräch eröffnen. Man tippt die beiden Namen ein, lacht über das Ergebnis, probiert die Spitznamen, und von einem zum anderen redet man plötzlich über ernstere Dinge. So tauchen <a href=\"/de/fragen-fuer-paare/\">die guten Fragen meistens in einem Gespräch auf</a>, ohne dass sie jemand vorbereitet hätte.",
     "p3": "Wenn ihr eine Zahl wollt, die auf etwas Echtem beruht, müsst ihr Fragen zu eurem gemeinsamen Leben beantworten, nicht zu euren Namen. Genau das macht unser Test mit zwanzig Fragen, und das ist eine völlig andere Übung."
   },
@@ -101,7 +101,7 @@
   "section5": {
     "title": "Euer Ergebnis ist niedrig, na und?",
     "p1": "Versucht es zuerst mit euren Spitznamen. Der Rechner schaut auf Buchstaben, also ergeben «Tom» und «Lisa» nicht dasselbe wie «Thomas» und «Elisa». Viele Paare finden ihr bestes Ergebnis mit den Kosenamen, die sie wirklich benutzen.",
-    "p2": "Und denkt daran, woher die Zahl kommt. Ein niedriges Ergebnis heißt, dass eure Namen wenige Buchstaben teilen und dass ihre Rhythmen auseinandergehen. Mehr sagt es nicht. Wenn euch die eigentliche Frage umtreibt, bringen euch <a href=\"/de/liebeskompatibilitaet-test/\">zwanzig Fragen zu euren Werten und euren Plänen</a> unendlich viel mehr als eine Rechnung über Buchstaben.",
+    "p2": "Und denkt daran, woher die Zahl kommt. Ein niedriges Ergebnis heißt, dass eure Namen wenige Buchstaben teilen und dass ihre Rhythmen auseinandergehen. Mehr sagt es nicht. Wenn euch die eigentliche Frage umtreibt, bringen euch <a href=\"/de/liebeskompatibilitaet-test/\">zwanzig Fragen zu euren Werten und euren Plänen</a> viel mehr als eine Rechnung über Buchstaben.",
     "p3": "Und wenn ihr im Spielerischen bleiben wollt, haben wir zwei weitere Werkzeuge im selben Geist: die <a href=\"/de/sternzeichen-vornamen-kompatibilitaet/\">Kompatibilität nach Vornamen und Sternzeichen</a>, und die <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">Verknüpfung eurer beiden Geburtsdaten</a>. Und wer schon ein Paar ist, kann auch <a href=\"/de/beziehungszaehler/\">die Tage seit dem Anfang der Geschichte zählen</a>, jeden Morgen aktualisiert."
   },
   "faq": {
@@ -115,9 +115,9 @@
     "q4": "Wie bekomme ich einen höheren Prozentwert?",
     "a4": "Indem du andere Schreibweisen eurer Namen ausprobierst. Die Paare, die am höchsten steigen, teilen viele Buchstaben, haben einen ähnlichen Vokalanteil und eine ähnliche Länge. Deshalb geben kurze Spitznamen oft bessere Ergebnisse als die vollen Namen.",
     "q5": "Hat das Ergebnis eine wissenschaftliche Grundlage?",
-    "a5": "Überhaupt keine, und das schreiben wir lieber schwarz auf weiß. Es ist ein Buchstabenspiel, mit einem Anteil Numerologie, die eine Tradition ist und keine Wissenschaft. Um echte Kompatibilität zu messen, muss man Fragen zum gemeinsamen Leben stellen, und genau das macht unser Test mit zwanzig Fragen.",
+    "a5": "Überhaupt keine. Es ist ein Buchstabenspiel, mit einem Anteil Numerologie, die eine Tradition ist und keine Wissenschaft. Um echte Kompatibilität zu messen, muss man Fragen zum gemeinsamen Leben stellen, und genau das macht unser Test mit zwanzig Fragen.",
     "q6": "Was ist der Unterschied zu eurem Liebeskompatibilitäts-Test?",
-    "a6": "Alles trennt sie. Der Rechner schaut auf zwei Namen und liefert in einer Sekunde eine Zahl. Der Kompatibilitätstest stellt euch beiden zwanzig Fragen zu Geld, Kindern, Lebensrhythmus und Treue und vergleicht dann eure Antworten. Das eine ist ein Spiel, das andere ein echter Paar-Fragebogen.",
+    "a6": "Das sind zwei sehr verschiedene Dinge. Der Rechner schaut auf zwei Namen und liefert in einer Sekunde eine Zahl. Der Kompatibilitätstest stellt euch beiden zwanzig Fragen zu Geld, Kindern, Lebensrhythmus und Treue und vergleicht dann eure Antworten. Das eine ist ein Spiel, das andere ein echter Paar-Fragebogen.",
     "q7": "Speichert ihr die Namen, die ich eintippe?",
     "a7": "Nein. Die Rechnung läuft vollständig in deinem Browser, nichts wird verschickt oder irgendwo gespeichert. Du kannst den Namen deines Crushs ganz beruhigt eintippen."
   },

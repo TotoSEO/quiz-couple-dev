@@ -66,16 +66,16 @@
   },
   "suite": {
     "titre": "Et si vous faisiez le vrai test ?",
-    "texte": "Ce pourcentage est un jeu, il compte des lettres. Si vous voulez mesurer ce qui compte pour de bon, on a un <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité en vingt questions</a> à faire à deux : valeurs, projets, argent, quotidien. Là, le score veut dire quelque chose.",
+    "texte": "Ce pourcentage est un jeu, il compte des lettres. Si vous voulez mesurer ce qui compte pour de bon, il y a un test en vingt questions à faire à deux, sur <a href=\"/test-compatibilite-amoureuse/\">l'argent, les enfants, le quotidien ou la fidélité</a>. Là, le score veut dire quelque chose.",
     "bouton": "Faire le test en 20 questions",
     "autresTitre": "Vous pourriez aussi aimer ces calculatrices :",
     "autresEtiquette": "Calculatrice"
   },
   "section1": {
     "title": "Qu'est-ce qu'une calculatrice de l'amour ?",
-    "p1": "Une calculatrice de l'amour, c'est un petit outil où vous tapez deux prénoms et où vous obtenez un pourcentage. Par exemple : vous écrivez « Thomas » et « Elisa », et l'outil vous répond 59 %. C'est tout. Pas de questions à remplir, pas d'inscription, une seconde et c'est fait.",
+    "p1": "Une calculatrice de l'amour, c'est un petit outil où vous tapez deux prénoms et où vous obtenez un pourcentage. Par exemple : vous écrivez « Thomas » et « Elisa », et l'outil vous répond 59 %. Il n'y a pas de questions à remplir ni d'inscription, et le résultat arrive en une seconde.",
     "p2": "Le principe date des tout premiers sites web, à l'époque où on s'envoyait des liens par messagerie. L'idée n'a jamais changé : on compare les lettres de deux prénoms et on en tire un chiffre. Du coup, ça sert surtout à s'amuser, à lancer une conversation, ou à taper le prénom de son crush pour voir ce que ça donne.",
-    "p3": "La nôtre fait la même chose, avec deux différences. D'abord elle vous montre le détail du calcul au lieu de sortir un chiffre de nulle part. Ensuite elle ne raconte pas qu'elle est scientifique : c'est un jeu de lettres, et on le dit."
+    "p3": "La nôtre fait la même chose, avec deux différences. D'abord, elle vous montre le détail du calcul au lieu de sortir un chiffre de nulle part. Ensuite, elle ne se fait pas passer pour scientifique : c'est un jeu avec les lettres de vos prénoms."
   },
   "section2": {
     "title": "Comment marche notre calculatrice de l'amour",
@@ -86,7 +86,7 @@
   },
   "section3": {
     "title": "Est-ce que le pourcentage dit quelque chose ?",
-    "p1": "La réponse honnête est non, et il faut le dire clairement. Un prénom, vous ne l'avez pas choisi, et il ne dit rien de votre façon d'aimer, de vous disputer ou de faire des projets. Deux personnes à 38 % peuvent passer trente ans ensemble, deux personnes à 97 % peuvent se quitter en six mois.",
+    "p1": "Non. Un prénom, vous ne l'avez pas choisi, et il ne dit rien de votre façon d'aimer, de vous disputer ou de faire des projets. Deux personnes à 38 % peuvent passer trente ans ensemble, et deux personnes à 97 % peuvent se quitter en six mois.",
     "p2": "Ce que le chiffre fait bien, en revanche, c'est ouvrir une discussion. On tape les deux prénoms, on rigole du résultat, on essaie avec les surnoms, et de fil en aiguille on se met à parler de choses plus sérieuses. C'est souvent comme ça que <a href=\"/questions-couple/\">les bonnes questions arrivent dans une conversation</a>, sans qu'on les ait préparées.",
     "p3": "Si vous voulez un chiffre qui repose sur du réel, il faut répondre à des questions sur votre vie à deux, pas sur vos prénoms. C'est ce que fait notre test en vingt questions, et c'est un exercice complètement différent."
   },
@@ -98,7 +98,7 @@
   "section5": {
     "title": "Votre score est bas, et alors ?",
     "p1": "D'abord, essayez avec vos surnoms. La calculatrice regarde les lettres, donc « Tom » et « Lisa » ne donnent pas la même chose que « Thomas » et « Elisa ». Beaucoup de couples trouvent leur meilleur score avec les petits noms qu'ils utilisent vraiment.",
-    "p2": "Ensuite, rappelez-vous d'où vient le chiffre. Un score bas veut dire que vos prénoms n'ont pas beaucoup de lettres en commun et que leurs rythmes diffèrent. Ça ne dit rien de plus. Si la question de fond vous travaille, <a href=\"/test-compatibilite-amoureuse/\">vingt questions sur vos valeurs et vos projets</a> vous apprendront infiniment plus qu'un calcul sur des lettres.",
+    "p2": "Ensuite, rappelez-vous d'où vient le chiffre. Un score bas veut dire que vos prénoms n'ont pas beaucoup de lettres en commun et que leurs rythmes diffèrent. Ça ne dit rien de plus. Si la question de fond vous travaille, <a href=\"/test-compatibilite-amoureuse/\">vingt questions sur vos valeurs et vos projets</a> vous apprendront beaucoup plus qu'un calcul sur des lettres.",
     "p3": "Et si vous voulez rester sur le terrain du jeu, on a deux autres outils du même esprit : la <a href=\"/signes-astrologiques-prenoms-compatibilite/\">compatibilité par les prénoms et les signes astrologiques</a>, et le <a href=\"/compatibilite-amoureuse-date-de-naissance/\">croisement des deux dates de naissance</a>. Et pour ceux qui sont déjà en couple, on peut aussi <a href=\"/compteur-de-couple/\">compter les jours depuis le début de l'histoire</a>, mis à jour chaque matin."
   },
   "faq": {
@@ -112,9 +112,9 @@
     "q4": "Comment obtenir un pourcentage plus élevé ?",
     "a4": "En essayant d'autres façons d'écrire vos prénoms. Les paires qui montent le plus haut partagent beaucoup de lettres, ont une proportion de voyelles proche et une longueur voisine. C'est pour ça que les surnoms courts donnent souvent de meilleurs scores que les prénoms complets.",
     "q5": "Le score a-t-il une base scientifique ?",
-    "a5": "Aucune, et on préfère l'écrire noir sur blanc. C'est un jeu de lettres, avec une part de numérologie qui est une tradition et pas une science. Pour mesurer une vraie compatibilité, il faut poser des questions sur la vie à deux, ce que fait notre test en vingt questions.",
+    "a5": "Aucune. C'est un jeu de lettres, avec une part de numérologie qui est une tradition et pas une science. Pour mesurer une vraie compatibilité, il faut poser des questions sur la vie à deux, ce que fait notre test en vingt questions.",
     "q6": "Quelle différence avec votre test de compatibilité amoureuse ?",
-    "a6": "Tout les sépare. La calculatrice regarde deux prénoms et rend un chiffre en une seconde. Le test de compatibilité vous pose vingt questions à chacun sur l'argent, les enfants, le rythme de vie et la fidélité, puis compare vos réponses. L'un est un jeu, l'autre est un vrai questionnaire de couple.",
+    "a6": "Ce sont deux choses très différentes. La calculatrice regarde deux prénoms et rend un chiffre en une seconde. Le test de compatibilité vous pose vingt questions à chacun sur l'argent, les enfants, le rythme de vie et la fidélité, puis compare vos réponses. L'un est un jeu, l'autre un vrai questionnaire de couple.",
     "q7": "Est-ce que vous gardez les prénoms que je tape ?",
     "a7": "Non. Le calcul se fait entièrement dans votre navigateur, rien n'est envoyé ni enregistré nulle part. Vous pouvez taper le prénom de votre crush tranquillement."
   },
