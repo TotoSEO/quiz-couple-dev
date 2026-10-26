@@ -3,123 +3,119 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'unhappy-woman-in-relationship-signs',
-  title: "How to Recognize an Unhappy Woman in a Relationship: The Real Signs",
-  metaTitle: "Unhappy Woman in a Relationship: The Real Signs to Spot",
-  metaDescription: "She still smiles, but something has changed. The signs a woman is unhappy in a relationship are often there, you just don't know what to look for.",
-  featuredImage: '',
+  title: "The signs of an unhappy woman in a relationship: how to recognise them",
+  metaTitle: "9 Signs of an Unhappy Woman in a Relationship",
+  metaDescription: "She doesn't cry, she doesn't slam doors, she fades away. The 9 signs of an unhappy woman in a relationship, an example for each one, and what to do next.",
+  featuredImage: '/blog/femme-malheureuse-en-couple.webp',
   featuredImageAlt: "A woman sitting with her back turned on the edge of an unmade bed, a mug in her hands, in a light-filled bedroom",
   publishedAt: '2026-03-01',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "The signs have often been there for a while. You just didn't know what to look for.",
-  introduction: `<p>Most men don't see it coming. Not because they don't care, but because the signs a woman sends when she's unhappy in a relationship don't look like what you'd expect. <strong>It's not necessarily tears or arguments.</strong> It's often quieter than that. More diffuse. Something that gradually fades away, without you being able to put your finger on it.</p>
-<p>If you're reading this, it's probably because you've sensed that something is off. That gut feeling deserves to be taken seriously.</p>`,
+  excerpt: "An unhappy woman in a relationship doesn't shout it. She talks less, goes out more, gets annoyed over small things. The 9 signs to know, and what to do next.",
+  introduction: `<p>An unhappy woman in a relationship rarely looks the way you'd imagine. No tears every night, no slammed doors. Most of the time it's quieter than that: she talks less, she goes out more, she gets annoyed over small things, and one day you realise the last real moment the two of you shared was a long time ago.</p>
+<p>If you're here, it's probably because you can feel that something has changed in her, without being able to say what. Here are the 9 signs of an unhappy woman in a relationship, with an example for each, then what's best to do, and not do, once you've seen them. And if you are the woman in question, the end of the article is for you too.</p>`,
   quickSummary: [
-    "She's stopped fighting. Silence is worse than arguments.",
-    "The irritability is rarely about what she's actually complaining about.",
-    "When couple plans no longer interest her, she's already picturing herself somewhere else.",
-    "Minimizing what she feels shuts every door at once.",
-    "Seeing the signs is already a first step. Knowing what to do with them is the other.",
+    "An unhappy woman in a relationship doesn't shout it: she fades away, little by little.",
+    "The most common signs: she talks less, the tender gestures disappear, she puts her energy elsewhere.",
+    "The most worrying thing isn't the argument, it's the day she stops arguing.",
+    "The two mistakes to avoid: playing it down (\"you're exaggerating\") and panicking with promises that everything will change.",
+    "What works: giving her room to talk, with no interrogation and no defending yourself.",
   ],
   sections: [
     {
-      id: 'signs-at-a-glance',
-      title: "Signs at a Glance",
-      content: `<div><table><thead><tr><th>Sign</th><th>What it actually means</th></tr></thead><tbody>
-<tr><td>She talks less</td><td>Deep conversations have vanished. She answers, but never initiates anymore.</td></tr>
-<tr><td>She avoids physical contact</td><td>No more spontaneous gestures. No tenderness, no intimacy.</td></tr>
-<tr><td>She invests herself elsewhere</td><td>Work, friends, hobbies, anything but the relationship.</td></tr>
-<tr><td>She gets annoyed over nothing</td><td>The irritability isn't the problem. It's the symptom.</td></tr>
-<tr><td>She no longer talks about the future</td><td>Couple plans don't interest her anymore, or she dodges them.</td></tr>
-<tr><td>She seems relieved when you're not around</td><td>Your absence feels good to her. That's rarely a good sign.</td></tr>
-<tr><td>She doesn't ask you for anything anymore</td><td>No more opinions, no more shared decisions. She handles everything alone, and it's deliberate.</td></tr>
-</tbody></table></div>`,
+      id: 'the-9-signs',
+      title: "The 9 signs of an unhappy woman in a relationship",
+      content: `<p>Here they all are. Click on the one that speaks to you to jump straight to the explanation.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#she-talks-less">She talks less, and not in the same way</a></li>
+<li><a href="#the-tender-gestures-are-gone">The tender gestures are gone</a></li>
+<li><a href="#she-puts-her-energy-elsewhere">She puts her energy everywhere except the relationship</a></li>
+<li><a href="#she-gets-annoyed-over-nothing">She gets annoyed by things that never bothered her before</a></li>
+<li><a href="#plans-for-two">Plans for the two of you no longer interest her</a></li>
+<li><a href="#relieved-when-you-are-not-there">She seems relieved when you're not there</a></li>
+<li><a href="#she-no-longer-asks-your-opinion">She no longer asks your opinion</a></li>
+<li><a href="#she-has-stopped-arguing">She has stopped arguing</a></li>
+<li><a href="#she-no-longer-takes-care-of-herself">She no longer takes care of herself, or suddenly much more</a></li>
+</ol>
+
+<p>One of these signs on its own doesn't mean much: everyone has off weeks. It's when several settle in at the same time, and last, that you need to deal with it.</p>`,
     },
     {
-      id: 'why-so-hard-to-see',
-      title: "Why It's So Hard to See",
-      content: `<p>Before getting into the details of each sign, there's something fundamental to understand: <strong>an unhappy woman in a relationship doesn't shout about it</strong>. Not at first, anyway. She's often said it before, one way or another, just not with the words you were expecting. A remark slipped into a conversation, tension after a night that went sideways, a request left unanswered. Those signals get missed. And eventually, she stops sending them altogether.</p>
-<p>That's the moment that's dangerous. Not the arguments. The silence that follows.</p>
-<p>Psychologists call it "emotional disengagement", the stage where a person stops fighting for the relationship because they've decided, consciously or not, that it's no longer worth trying. <strong>At that point, the pain is real but internalized.</strong> It no longer shows up as conflict, it shows up as distance, coldness, absence.</p>
-<a href="/en/blog/breakup-stages-for-men/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">The Stages of a Breakup for Men</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
-    },
-    {
-      id: 'behavioral-signs',
-      title: "The Signs You Can See (If You Look Closely)",
-      content: ``,
+      id: 'what-you-see-day-to-day',
+      title: "What you see day to day",
+      content: `<p>These first five signs can be seen every day, as long as you look. Taken one by one, they pass for tiredness or a rough patch. Put end to end, they tell another story.</p>`,
       subsections: [
         {
-          id: 'conversations-changed',
-          title: "Conversations Have Changed",
-          content: `<p>It's not that she doesn't talk anymore. It's that she doesn't talk the same way. The exchanges that remain revolve around logistics: who's getting groceries, what time are we home, did the cat eat. <strong>The real conversations, what she feels, what she thinks, what's on her mind, have disappeared.</strong> She no longer initiates them. And if you bring one up, she answers briefly, politely, and moves on.</p>
-<p>That kind of withdrawal is rarely a passing mood. It's a woman who has learned not to expect much from those exchanges anymore.</p>`,
+          id: 'she-talks-less',
+          title: "1. She talks less, and not in the same way",
+          content: `<p>She still talks, but about logistics: who's doing the shopping, what time you're getting home, whether the cat has been fed. The real conversations, what she feels, what's on her mind, what she wants to do with her life, have disappeared. She doesn't start them anymore, and if you do, she answers in two sentences, politely, and moves on.</p>
+<p>It's not a bad mood. It's a woman who has stopped expecting anything from those exchanges, and silence between two people who live together is rarely an accident: you go quiet when you get the feeling that talking changes nothing.</p>`,
         },
         {
-          id: 'physical-contact-gone',
-          title: "Physical Contact Has Evaporated",
-          content: `<p>Not just sexual intimacy, though that matters too. The small everyday gestures as well. Holding hands while walking down the street. The morning kiss that wasn't just a formality. Choosing to sit next to you on the couch instead of in the chair across the room. <strong>These gestures don't vanish overnight.</strong> They fade. And one day you realize the last spontaneous hug was... you can't even remember when.</p>
-<p>Physical intimacy in a relationship is almost never a problem in itself. It's a reflection of emotional intimacy. When one goes, the other follows.</p>`,
+          id: 'the-tender-gestures-are-gone',
+          title: "2. The tender gestures are gone",
+          content: `<p>Not just in bed, although that counts. The small gestures too: the hand on your shoulder as she walks past, the morning kiss that wasn't a formality, sitting next to you on the sofa instead of in the armchair across the room. It doesn't stop all at once. It gets rarer, and one day you realise the last spontaneous hug was... you don't know when anymore.</p>
+<p>For many women, physical contact follows the state of the relationship: when she no longer feels close to you, her body says it before she does. For some, it's even <a href="/en/blog/5-love-languages/">their first way of showing they care about someone</a>.</p>`,
         },
         {
-          id: 'energy-invested-elsewhere',
-          title: "She Invests Her Energy Elsewhere, Systematically",
-          content: `<p>Work, nights out with her friends, a new hobby she picked up three months ago that's suddenly taking up all the space. On its own, having a life of your own within a relationship is healthy. <strong>The red flag is when those activities are clearly being used to avoid one-on-one time.</strong> When she comes home late and seems almost relieved to be too tired for a real conversation. When every weekend is organized in a way that never leaves a gap, because in that gap, you might actually have to talk.</p>`,
-          tip: "A woman who \"escapes\" into her activities isn't necessarily running from the relationship. Sometimes, she's just trying to reconnect with a version of herself she feels she lost within the couple. That distinction matters, and it deserves to be explored, not accused.",
+          id: 'she-puts-her-energy-elsewhere',
+          title: "3. She puts her energy everywhere except the relationship",
+          content: `<p>Work, nights out with her friends, a new sport that suddenly takes up all the space. Having a life of your own is healthy. The signal is when those activities are visibly there to avoid being alone together: she comes home late and looks almost pleased to be too tired to talk, every weekend is filled up so there's never an empty moment, because in that empty moment, you might have to say things to each other.</p>`,
+          tip: "A woman who escapes into her activities isn't necessarily running away from the relationship. Sometimes she's just trying to find the person she was before, who she feels she lost along the way. That's something to ask about, not something to hold against her.",
         },
         {
-          id: 'irritability',
-          title: "She Gets Irritated by Things That Never Bothered Her Before",
-          content: `<p>You leave your keys on the wrong counter. You chew too loudly. You leave the light on when you walk out of a room. Things that weren't even on the radar a few months ago. <strong>That irritability isn't about the keys.</strong> It's never about the keys. It's the physical manifestation of accumulated frustration that no longer has a normal outlet, because the real conversation about what's actually wrong never happened.</p>
-<p>Responding to irritability with irritability in return guarantees you'll never get to the real issue.</p>`,
+          id: 'she-gets-annoyed-over-nothing',
+          title: "4. She gets annoyed by things that never bothered her before",
+          content: `<p>Your keys left in the wrong place, the way you chew, the light left on in the hallway. Things that weren't problems six months ago. That irritation is never about the keys: it's a frustration that has built up and comes out there, because the real conversation about what's wrong hasn't happened. Answering annoyance with annoyance is one more argument that never gets to the real subject.</p>`,
         },
         {
-          id: 'no-more-future-plans',
-          title: "Couple Plans No Longer Interest Her",
-          content: `<p>You mention a romantic weekend away, she says "we'll see." You bring up a bigger apartment, a summer vacation, a shared project, she changes the subject or gives a vague answer. <strong>A woman who no longer sees herself in a future with her partner has often already started imagining a future without him</strong>, not necessarily with someone else, but alone. Freer. Different.</p>
-<p>Avoiding shared plans is one of the clearest signals of deep emotional disengagement. Because making plans together requires wanting the relationship to last.</p>`,
+          id: 'plans-for-two',
+          title: "5. Plans for the two of you no longer interest her",
+          content: `<p>You mention a weekend away together, she says "we'll see". You bring up a bigger place, this summer's holiday, a shared project, she changes the subject or stays vague. A woman who no longer pictures a future with her partner has often already started imagining what comes next without him. Not necessarily with someone else: alone, freer, different.</p>
+<p>It's one of the most telling signs, because picturing a future takes wanting the story to last. If <a href="/en/blog/future-questions-for-couples/">questions about the future</a> make her uncomfortable, it's because she doesn't have the answer, or doesn't want to say it.</p>`,
         },
       ],
     },
     {
-      id: 'emotional-signs',
-      title: "What's Happening Inside (That You Can't See Directly)",
-      content: `<p>The behavioral signs are the symptoms. What explains them is often more subtle, and more useful to understand if you truly want to grasp what's going on.</p>`,
+      id: 'what-shows-less',
+      title: "What shows less, and says more",
+      content: `<p>The last four signs are quieter. You notice them with hindsight, over several weeks, and they count more than the first ones.</p>`,
       subsections: [
         {
-          id: 'lonely-together',
-          title: "She Feels Lonely Even When You're Together",
-          content: `<p>This is probably the most painful thing someone can feel in a relationship: being with someone and feeling alone. <strong>Not abandoned, not necessarily unloved, just... unseen.</strong> Not understood. Not heard. A woman going through this doesn't always put it that way, sometimes she can't even articulate it herself. But she feels it, at every meal eaten in silence, every evening spent side by side on separate phones.</p>`,
+          id: 'relieved-when-you-are-not-there',
+          title: "6. She seems relieved when you're not there",
+          content: `<p>You go away for two days for work, and she's lighter on the phone than when you're in the same room. You go out with your friends, and she doesn't ask what time you'll be back. It's not that she wants you to leave: it's that your presence takes effort, and your absence gives her a rest. Said like that, it's hard, but it's one of the most reliable signs on the list.</p>`,
         },
         {
-          id: 'stopped-fighting',
-          title: "She's Stopped Fighting",
-          content: `<p>There's a stage in a struggling relationship where the arguments stop. And it looks like calm, but it's not. <strong>When a woman stops arguing, it doesn't mean she's at peace with the situation.</strong> It means she's decided, somewhere inside, that there's no point in trying. That the arguments go in circles. That nothing changes. That silence is far more concerning than open conflict, because it signals a level of resignation that arguments never reach.</p>`,
+          id: 'she-no-longer-asks-your-opinion',
+          title: "7. She no longer asks your opinion",
+          content: `<p>She used to ask what you thought about a purchase, an invitation, a problem with her mother. Now she decides on her own and tells you afterwards, when she remembers to. From the outside, everything works: the bills are paid, the fridge is full. But the two of you no longer decide anything together, and she's showing you that she no longer needs you for that.</p>`,
         },
         {
-          id: 'self-esteem-dropped',
-          title: "Her Self-Esteem Has Dropped",
-          content: `<p>An unhappy relationship doesn't leave people unscathed. A woman who feels ignored, misunderstood, or constantly criticized ends up internalizing something that looks like shame, or a feeling of not being worth much. <strong>This can show up as a lack of self-care, social withdrawal</strong>, or conversely, a sudden attention to her appearance, as if she's trying to find herself again, or to exist in someone's eyes.</p>`,
-          tip: "If she's suddenly changed her look, started putting more effort into her appearance, or picked up activities she had dropped, it doesn't necessarily mean she's met someone. It's often a sign she's trying to reconnect with who she was before the relationship, or who she wants to be. This return to self can precede a breakup just as much as it can precede a fresh start.",
+          id: 'she-has-stopped-arguing',
+          title: "8. She has stopped arguing",
+          content: `<p>There's a point, in a relationship that's going badly, where the arguments stop. It looks like a lull, and it isn't one. When a woman stops arguing, it's not that she's at peace with the situation: it's that she has decided it's no longer worth it, that nothing ever changes, and that she might as well save her energy.</p>
+<p>That silence is more worrying than any argument, because it means she has let go. Psychologists call it disengagement: she no longer fights for the relationship, she puts up with it while she waits. It's often at this stage that you wonder <a href="/en/is-my-relationship-over-test/">whether it can still be saved or whether it's already over</a>.</p>`,
+        },
+        {
+          id: 'she-no-longer-takes-care-of-herself',
+          title: "9. She no longer takes care of herself, or suddenly much more",
+          content: `<p>An unhappy relationship leaves marks. A woman who feels ignored or constantly criticised ends up not thinking much of herself. It can show as letting herself go: she stops paying attention to herself, sees fewer people, wants fewer things. Or the opposite, a new attention to how she looks, a new haircut, sport, clothes she had stopped wearing, as if she were trying to exist again, for herself or in someone's eyes.</p>`,
+          tip: "If she has changed her look or taken up sport again, it doesn't necessarily mean she has met someone. More often it's a woman trying to find herself again. It can come before a breakup just as it can come before a fresh start together: it all depends on what happens next.",
         },
       ],
     },
     {
       id: 'what-now',
-      title: "So What Do You Do Now?",
-      content: `<p>Recognizing the signs is one thing. The question that follows is often the hardest: is this still salvageable? And if so, how?</p>
-<p>There's no universal answer. A useful starting point is often to answer the same questions separately, which is what the <a href="/en/healthy-relationship-test/">healthy relationship test</a> does: the gap between your two perceptions usually says more than the conversation itself. But there are also very common mistakes men make at this point, and they systematically make things worse.</p>
-<p><strong>Minimizing.</strong> "You're overreacting", "It's all in your head", "You've always been like this." That's the response that shuts every door at once. She may have spent months finding the courage to express something, and if the first reaction is to dismiss it, she won't try again.</p>
-<p><strong>Overreacting.</strong> The opposite, panicking, promising everything will change, pulling out the grand gestures, isn't any better. Because it puts pressure on her to manage your distress on top of her own. And because promises made in a panic rarely have a long shelf life.</p>
-<p>What actually works is simpler to say than to do: <strong>create the conditions for her to really talk.</strong> Not by forcing a "serious discussion" that feels like an interrogation. By being present differently, less time on your phone, more attentive to the small things, able to ask a real question and let her answer without jumping in to defend yourself.</p>
-<p>If the unhappiness runs deep and has been there for a long time, couples therapy can help, not as a last resort, but as a neutral space where both of you can talk without one overwhelming the other. <strong>Suggesting that is saying you take this seriously.</strong> Not that you're giving up.</p>
-<a href="/en/blog/things-not-accept-relationship/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">Things You Should Never Accept in a Relationship</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-
-<p>And when the recurring question stops being how are we doing and becomes is this over, the signs to look at are no longer the same ones: they are in the <a href="/en/is-my-relationship-over-test/">test that places the relationship on an eight-tier scale</a>.</p>`,
-    },
-    {
-      id: 'key-takeaways',
-      title: "Key Takeaways",
-      content: `<p>An unhappy woman in a relationship doesn't always look the way you'd expect. She doesn't necessarily cry. She doesn't slam doors. She fades. She pulls away. She puts her energy elsewhere. And if you don't look beyond the surface, you can miss it entirely until it's too late to do anything about it.</p>
-<p><strong>Seeing the signs is already a form of respect.</strong> It means you're paying attention. That the relationship matters enough for you to ask the question. What you do with that information now, that's where everything plays out.</p>`,
+      title: "So what do you do now?",
+      content: `<p>Recognising the signs is one thing. The question that comes next is harder: can it still be saved, and how? There's no answer that works for everyone, but there are two mistakes almost every man makes at this point, and they make things worse every time.</p>
+<p><strong>Playing it down:</strong> "you're exaggerating", "it's all in your head", "you've always been like this". She may have taken months to find the courage to say something. If the first response is denial, she won't try again.</p>
+<p><strong>Panicking:</strong> the opposite is no better. Promising everything will change, bringing out the big words, crying. It asks her to handle your distress on top of her own, and promises made in a panic rarely last two weeks.</p>
+<p>What works is easier to say than to do: give her room to talk. Not a "serious talk" that feels like an interrogation. Being there differently, less on your phone, able to ask a real question and listen to the answer without cutting in to defend yourself. If you don't know where to start anymore, there are <a href="/en/blog/questions-to-ask-your-girlfriend/">questions that reopen the conversation without forcing it</a>.</p>
+<p>Another starting point, when you can't talk to each other anymore: <a href="/en/healthy-relationship-test/">answering the same questions about the relationship, each on your own side</a>. The gap between your two sets of answers often says more than the discussion itself. And if the unease has been there for a long time, couples therapy isn't an admission of failure: it's a place where both of you can talk without one crushing the other.</p>
+<p><strong>If you're the one who recognises herself in these lines:</strong> what you feel counts, even if nobody around you has noticed. Before deciding anything, there's a way to <a href="/en/blog/stay-or-leave-relationship-signs/">tell whether it's still worth trying</a>, and there are <a href="/en/blog/things-not-accept-relationship/">limits you end up not seeing anymore out of habit</a>.</p>
+<a href="/en/blog/questions-to-get-to-know-each-other/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read next</span><span class="blog-read-also-title">60 questions to get to know each other better, even if you think you know everything</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

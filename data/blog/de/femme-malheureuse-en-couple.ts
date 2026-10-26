@@ -3,123 +3,119 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'unglueckliche-frau-in-beziehung-anzeichen',
-  title: "Unglückliche Frau in der Beziehung: Die wahren Anzeichen",
-  metaTitle: "Unglückliche Frau in der Beziehung: Die Anzeichen",
-  metaDescription: "Sie lächelt noch, aber etwas hat sich verändert. Die Anzeichen, dass eine Frau in der Beziehung unglücklich ist, sind oft schon lange da.",
-  featuredImage: '',
+  title: "Die Anzeichen einer unglücklichen Frau in der Beziehung: wie du sie erkennst",
+  metaTitle: "Die 9 Anzeichen einer unglücklichen Frau in der Beziehung",
+  metaDescription: "Sie weint nicht, knallt keine Türen, zieht sich zurück. Die 9 Anzeichen einer unglücklichen Frau in der Beziehung, mit Beispiel, und was dann zu tun ist.",
+  featuredImage: '/blog/femme-malheureuse-en-couple.webp',
   featuredImageAlt: "Frau mit dem Rücken zur Kamera auf der Kante eines zerwühlten Betts, eine Tasse in den Händen, in einem lichtdurchfluteten Schlafzimmer",
   publishedAt: '2026-03-01',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Die Anzeichen sind oft schon lange da. Man weiß nur nicht, worauf man achten soll.",
-  introduction: `<p>Die meisten Männer sehen es nicht kommen. Nicht weil es ihnen egal wäre, sondern weil die Anzeichen, die eine Frau sendet, wenn es ihr in einer Beziehung schlecht geht, nicht so aussehen, wie man es sich vorstellt. <strong>Es sind nicht unbedingt Tränen oder Streitereien.</strong> Es ist oft leiser. Diffuser. Etwas, das sich schleichend zurückzieht, ohne dass man den Finger darauf legen kann.</p>
-<p>Wenn du diesen Artikel liest, hast du wahrscheinlich gespürt, dass etwas nicht stimmt. Dieses Bauchgefühl verdient es, ernst genommen zu werden.</p>`,
+  excerpt: "Eine unglückliche Frau in der Beziehung schreit es nicht heraus. Sie redet weniger, geht öfter aus, regt sich über Kleinigkeiten auf. Die 9 Anzeichen, und was danach zu tun ist.",
+  introduction: `<p>Eine unglückliche Frau in der Beziehung sieht selten so aus, wie man es sich vorstellt. Keine Tränen jeden Abend, keine knallenden Türen. Meistens ist es leiser: Sie redet weniger, sie geht öfter aus, sie regt sich über Kleinigkeiten auf, und eines Tages merkt man, dass der letzte echte Moment zu zweit lange her ist.</p>
+<p>Wenn du hier bist, dann wahrscheinlich, weil du spürst, dass sich etwas bei ihr verändert hat, ohne sagen zu können, was. Hier sind die 9 Anzeichen einer unglücklichen Frau in der Beziehung, jedes mit einem Beispiel, und danach, was man besser tut, und besser lässt, wenn man sie erkannt hat. Und wenn du selbst die Frau bist, um die es geht: Das Ende des Artikels ist auch für dich.</p>`,
   quickSummary: [
-    "Sie kämpft nicht mehr. Die Stille ist schlimmer als jeder Streit.",
-    "Die Reizbarkeit hat selten etwas mit dem zu tun, worüber sie sich beschwert.",
-    "Wenn gemeinsame Pläne sie nicht mehr interessieren, stellt sie sich ihr Leben bereits anders vor.",
-    "Ihre Gefühle herunterzuspielen verschließt alle Türen auf einmal.",
-    "Die Anzeichen zu sehen ist bereits ein erster Schritt. Zu wissen, was man damit anfängt, ist der nächste.",
+    "Eine unglückliche Frau in der Beziehung schreit es nicht heraus: Sie zieht sich zurück, Stück für Stück.",
+    "Die häufigsten Anzeichen: Sie redet weniger, die zärtlichen Gesten verschwinden, sie steckt ihre Energie woanders hinein.",
+    "Das Beunruhigendste ist nicht der Streit, sondern der Tag, an dem sie aufhört zu streiten.",
+    "Die zwei Fehler, die man vermeiden sollte: herunterspielen („du übertreibst“) und in Panik versprechen, dass sich alles ändert.",
+    "Was hilft: ihr Raum zum Reden lassen, ohne Verhör und ohne sich zu verteidigen.",
   ],
   sections: [
     {
-      id: 'anzeichen-auf-einen-blick',
-      title: "Die Anzeichen auf einen Blick",
-      content: `<div><table><thead><tr><th>Anzeichen</th><th>Was es konkret bedeutet</th></tr></thead><tbody>
-<tr><td>Sie redet weniger</td><td>Die tiefen Gespräche sind verschwunden. Sie antwortet, aber initiiert nichts mehr.</td></tr>
-<tr><td>Sie meidet Körperkontakt</td><td>Keine spontanen Gesten mehr. Keine Zärtlichkeit, keine Intimität.</td></tr>
-<tr><td>Sie investiert ihre Energie woanders</td><td>Arbeit, Freundinnen, Hobbys, alles außer die Beziehung.</td></tr>
-<tr><td>Sie regt sich über Kleinigkeiten auf</td><td>Die Reizbarkeit ist nicht das Problem. Sie ist das Symptom.</td></tr>
-<tr><td>Sie spricht nicht mehr über die Zukunft</td><td>Gemeinsame Pläne interessieren sie nicht mehr, oder sie weicht ihnen aus.</td></tr>
-<tr><td>Sie wirkt erleichtert, wenn du nicht da bist</td><td>Deine Abwesenheit tut ihr gut. Das ist selten ein gutes Zeichen.</td></tr>
-<tr><td>Sie fragt dich nichts mehr</td><td>Keine Meinungen mehr, keine gemeinsamen Entscheidungen. Sie regelt alles allein, und das mit Absicht.</td></tr>
-</tbody></table></div>`,
-    },
-    {
-      id: 'warum-so-schwer-zu-erkennen',
-      title: "Warum es so schwer zu erkennen ist",
-      content: `<p>Bevor wir auf jedes Anzeichen im Detail eingehen, muss man etwas Grundlegendes verstehen: <strong>Eine unglückliche Frau in einer Beziehung schreit es nicht heraus.</strong> Jedenfalls nicht am Anfang. Sie hat es oft schon gesagt, auf die eine oder andere Art, aber nicht mit den Worten, die man erwartet hätte. Eine Bemerkung, beiläufig in ein Gespräch eingestreut, eine Anspannung nach einem Abend, der schlecht gelaufen ist, eine Bitte, die unbeantwortet blieb. Diese Signale übersieht man. Und sie hört irgendwann auf, sie zu senden.</p>
-<p>Genau dieser Moment ist gefährlich. Nicht die Streitereien. Die Stille, die danach kommt.</p>
-<p>Psychologen sprechen von „emotionalem Rückzug", dem Stadium, in dem eine Person aufhört, für die Beziehung zu kämpfen, weil sie bewusst oder unbewusst entschieden hat, dass es sich nicht mehr lohnt, es zu versuchen. <strong>In diesem Stadium ist das Leid real, aber verinnerlicht.</strong> Es äußert sich nicht mehr in Konflikten, es zeigt sich in Distanz, Kälte und Abwesenheit.</p>
-<a href="/de/blog/trennungsphasen-beim-mann/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lesen Sie auch</span><span class="blog-read-also-title">Die Phasen der Trennung beim Mann</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
-    },
-    {
-      id: 'verhaltensanzeichen',
-      title: "Die Anzeichen, die man sehen kann (wenn man genau hinschaut)",
-      content: ``,
-      subsections: [
-        {
-          id: 'gespraeche-veraendert',
-          title: "Die Gespräche haben sich verändert",
-          content: `<p>Es ist nicht so, dass sie nicht mehr redet. Es ist so, dass sie nicht mehr auf die gleiche Weise redet. Die Gespräche, die noch stattfinden, drehen sich um Organisatorisches: Wer kauft ein, wann kommst du nach Hause, hat die Katze schon gefressen. <strong>Die echten Gespräche, was sie fühlt, was sie denkt, was sie beschäftigt, sind verschwunden.</strong> Sie beginnt sie nicht mehr. Und wenn du sie anstößt, antwortet sie kurz, höflich und wechselt das Thema.</p>
-<p>Dieser Rückzug ist selten nur schlechte Laune. Es ist eine Frau, die gelernt hat, von diesen Gesprächen nicht mehr viel zu erwarten.</p>`,
-        },
-        {
-          id: 'koerperkontakt-verschwunden',
-          title: "Der Körperkontakt ist verschwunden",
-          content: `<p>Nicht nur die sexuelle Intimität, auch wenn die zählt. Auch die kleinen alltäglichen Gesten. Händchenhalten auf der Straße. Der Morgenkuss, der keine Formalität war. Die Tatsache, dass sie sich neben dich aufs Sofa setzte statt in den Sessel gegenüber. <strong>Diese Gesten verschwinden nicht von einem Tag auf den anderen.</strong> Sie werden weniger. Und eines Tages merkt man, dass die letzte spontane Umarmung... man weiß nicht mehr, wann das war.</p>
-<p>Körperliche Intimität in einer Beziehung ist fast nie ein eigenständiges Problem. Sie ist der Spiegel der emotionalen Intimität. Wenn die eine geht, folgt die andere.</p>`,
-        },
-        {
-          id: 'energie-woanders-investiert',
-          title: "Sie investiert ihre Energie woanders, systematisch",
-          content: `<p>Die Arbeit, Ausgehen mit Freundinnen, ein neues Hobby, das vor drei Monaten angefangen hat und plötzlich den ganzen Raum einnimmt. An sich ist ein eigenes Leben innerhalb einer Beziehung gesund. <strong>Das Alarmsignal ist, wenn diese Aktivitäten offensichtlich dazu dienen, gemeinsame Momente zu zweit zu vermeiden.</strong> Wenn sie abends spät nach Hause kommt und fast erleichtert wirkt, zu müde für ein echtes Gespräch zu sein. Wenn jedes Wochenende so organisiert ist, dass nie eine Lücke bleibt, weil man in dieser Lücke vielleicht miteinander reden müsste.</p>`,
-          tip: "Eine Frau, die sich in ihre Aktivitäten \"flüchtet\", läuft nicht unbedingt vor der Beziehung davon. Manchmal sucht sie einfach eine Version von sich selbst wieder, die sie im Gefühl hat, in der Beziehung verloren zu haben. Der Unterschied ist wichtig, und verdient es, erkundet statt beschuldigt zu werden.",
-        },
-        {
-          id: 'reizbarkeit',
-          title: "Sie reagiert gereizt auf Dinge, die sie früher nicht gestört haben",
-          content: `<p>Du legst deine Schlüssel auf die falsche Arbeitsplatte. Du kaust zu laut. Du lässt das Licht an, wenn du einen Raum verlässt. Dinge, die vor ein paar Monaten noch kein Problem waren. <strong>Diese Reizbarkeit handelt nicht von den Schlüsseln.</strong> Es geht nie um die Schlüssel. Es ist die körperliche Manifestation einer angestauten Frustration, die keinen normalen Ausdruck mehr findet, weil das eigentliche Gespräch über das, was nicht stimmt, nie stattgefunden hat.</p>
-<p>Auf Reizbarkeit mit Reizbarkeit zu reagieren bedeutet, nie zum eigentlichen Thema vorzudringen.</p>`,
-        },
-        {
-          id: 'gemeinsame-plaene',
-          title: "Gemeinsame Pläne interessieren sie nicht mehr",
-          content: `<p>Du sprichst von einem romantischen Wochenende, sie sagt „mal sehen". Du erwähnst eine größere Wohnung, Urlaub im Sommer, ein gemeinsames Projekt, sie wechselt das Thema oder gibt eine vage Antwort. <strong>Eine Frau, die sich nicht mehr in die Zukunft mit ihrem Partner hineindenkt, hat oft schon begonnen, sich eine Zukunft ohne ihn vorzustellen</strong>, nicht unbedingt mit jemand anderem, sondern allein. Freier. Anders.</p>
-<p>Das Vermeiden gemeinsamer Pläne ist eines der deutlichsten Signale für einen tiefen emotionalen Rückzug. Denn sich eine gemeinsame Zukunft auszumalen setzt voraus, dass man möchte, dass die Beziehung Bestand hat.</p>`,
-        },
-      ],
-    },
-    {
-      id: 'emotionale-anzeichen',
-      title: "Was innerlich passiert (und was man nicht direkt sieht)",
-      content: `<p>Die Verhaltensanzeichen sind die Symptome. Was dahintersteckt, ist oft subtiler, und nützlicher zu verstehen, wenn man wirklich begreifen will, was passiert.</p>`,
-      subsections: [
-        {
-          id: 'einsam-zu-zweit',
-          title: "Sie fühlt sich einsam, obwohl sie nicht allein ist",
-          content: `<p>Es ist wahrscheinlich das Schmerzhafteste, was man in einer Beziehung empfinden kann: mit jemandem zusammen zu sein und sich einsam zu fühlen. <strong>Nicht verlassen, nicht unbedingt ungeliebt, einfach... nicht gesehen.</strong> Nicht verstanden. Nicht gehört. Eine Frau, die das erlebt, formuliert es nicht immer so, manchmal kann sie es selbst nicht in Worte fassen. Aber sie spürt es, bei jeder schweigenden Mahlzeit, bei jedem Abend, an dem jeder für sich auf sein Handy schaut.</p>`,
-        },
-        {
-          id: 'aufgehoert-zu-kaempfen',
-          title: "Sie hat aufgehört zu kämpfen",
-          content: `<p>Es gibt ein Stadium in einer Beziehung, die nicht funktioniert, in dem die Streitereien aufhören. Und das sieht nach Beruhigung aus, aber das ist es nicht. <strong>Wenn eine Frau aufhört zu streiten, heißt das nicht, dass sie mit der Situation im Reinen ist.</strong> Es heißt, dass sie irgendwo entschieden hat, dass es nichts bringt, es weiter zu versuchen. Dass sich die Argumente im Kreis drehen. Dass sich nichts ändert. Diese Stille ist weit besorgniserregender als offene Konflikte, weil sie ein Maß an Resignation anzeigt, das Streitereien nie erreichen.</p>`,
-        },
-        {
-          id: 'selbstwertgefuehl',
-          title: "Ihr Selbstwertgefühl ist gesunken",
-          content: `<p>Eine unglückliche Beziehung geht nicht spurlos an Menschen vorbei. Eine Frau, die sich ignoriert, unverstanden oder ständig kritisiert fühlt, verinnerlicht irgendwann etwas, das Scham ähnelt, oder das Gefühl, nicht viel wert zu sein. <strong>Das kann sich in mangelnder Selbstfürsorge zeigen, in sozialem Rückzug</strong>, oder im Gegenteil in einer plötzlichen Aufmerksamkeit für ihr Äußeres, als ob sie versuche, sich selbst wiederzufinden, oder in den Augen von jemandem zu existieren.</p>`,
-          tip: "Wenn sie plötzlich ihr Aussehen verändert hat, angefangen hat, mehr auf sich zu achten, oder Aktivitäten wieder aufgenommen hat, die sie aufgegeben hatte, ist das nicht unbedingt ein Zeichen dafür, dass sie jemanden kennengelernt hat. Es ist oft ein Zeichen dafür, dass sie versucht, die Person wiederzufinden, die sie vor der Beziehung war, oder die sie sein möchte. Diese Rückkehr zu sich selbst kann einer Trennung genauso vorausgehen wie einem Neuanfang.",
-        },
-      ],
-    },
-    {
-      id: 'was-jetzt',
-      title: "Und was macht man jetzt?",
-      content: `<p>Die Anzeichen zu erkennen ist eine Sache. Die Frage, die danach kommt, ist oft die schwierigste: Ist das noch zu retten? Und wenn ja, wie?</p>
-<p>Eine universelle Antwort gibt es nicht. Ein nützlicher Anfang ist oft, dieselben Fragen getrennt zu beantworten, genau das macht der <a href="/de/gesunde-beziehung-test/">Test gesunde Beziehung</a>: Der Abstand zwischen euren beiden Wahrnehmungen sagt meist mehr als das Gespräch selbst. Aber es gibt auch sehr häufige Fehler, die Männer an diesem Punkt machen und die die Situation systematisch verschlimmern.</p>
-<p><strong>Herunterspielen.</strong> „Du übertreibst", „Das bildest du dir ein", „Du warst schon immer so." Das ist die Antwort, die alle Türen auf einmal zuschlägt. Sie hat vielleicht Monate gebraucht, um den Mut zu finden, etwas auszusprechen, und wenn die erste Reaktion ist, es abzustreiten, wird sie es nicht noch einmal versuchen.</p>
-<p><strong>Überreagieren.</strong> Das Gegenteil, in Panik verfallen, versprechen, dass sich alles ändern wird, große Worte schwingen, ist nicht besser. Denn das setzt sie unter Druck, zusätzlich zu ihrem eigenen Leid auch noch deine Verzweiflung zu managen. Und Versprechen, die in Panik gemacht werden, haben selten eine lange Haltbarkeit.</p>
-<p>Was funktioniert, ist leichter gesagt als getan: <strong>die Bedingungen schaffen, damit sie wirklich reden kann.</strong> Nicht indem man sie zu einem „ernsten Gespräch" zwingt, das sich wie ein Verhör anfühlt. Sondern indem man anders präsent ist, weniger am Handy, aufmerksamer für die kleinen Dinge, in der Lage, eine echte Frage zu stellen und sie antworten zu lassen, ohne sich sofort zu verteidigen.</p>
-<p>Wenn das Unbehagen tief sitzt und seit langem besteht, kann eine Paartherapie helfen, nicht als letzter Ausweg, sondern als neutraler Raum, in dem beide reden können, ohne dass einer den anderen überwältigt. <strong>Das vorzuschlagen bedeutet, dass man die Sache ernst nimmt.</strong> Nicht, dass man aufgibt.</p>
-<a href="/de/blog/grenzen-beziehung-nicht-akzeptieren/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lesen Sie auch</span><span class="blog-read-also-title">Was man in einer Beziehung niemals akzeptieren sollte</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      id: 'die-9-anzeichen',
+      title: "Die 9 Anzeichen einer unglücklichen Frau in der Beziehung",
+      content: `<p>Hier sind alle. Klick auf das, das dir bekannt vorkommt, um direkt zur Erklärung zu springen.</p>
 
-<p>Und wenn die wiederkehrende Frage nicht mehr lautet, wie es läuft, sondern ob es vorbei ist, sind es andere Anzeichen, auf die es ankommt: sie stehen im <a href="/de/ist-meine-beziehung-am-ende-test/">Test, der die Beziehung auf einer Skala mit acht Stufen einordnet</a>.</p>`,
+<ol class="blog-liste-reperes">
+<li><a href="#sie-redet-weniger">Sie redet weniger, und nicht mehr auf dieselbe Art</a></li>
+<li><a href="#die-zaertlichen-gesten-sind-weg">Die zärtlichen Gesten sind weg</a></li>
+<li><a href="#sie-steckt-ihre-energie-woanders-hinein">Sie steckt ihre Energie überall hinein, nur nicht in die Beziehung</a></li>
+<li><a href="#sie-regt-sich-ueber-kleinigkeiten-auf">Sie regt sich über Dinge auf, die sie früher nicht gestört haben</a></li>
+<li><a href="#plaene-zu-zweit">Pläne zu zweit interessieren sie nicht mehr</a></li>
+<li><a href="#erleichtert-wenn-du-nicht-da-bist">Sie wirkt erleichtert, wenn du nicht da bist</a></li>
+<li><a href="#sie-fragt-dich-nicht-mehr-nach-deiner-meinung">Sie fragt dich nicht mehr nach deiner Meinung</a></li>
+<li><a href="#sie-hat-aufgehoert-zu-streiten">Sie hat aufgehört zu streiten</a></li>
+<li><a href="#sie-pflegt-sich-nicht-mehr">Sie pflegt sich nicht mehr, oder plötzlich viel mehr</a></li>
+</ol>
+
+<p>Ein einzelnes dieser Anzeichen sagt nicht viel: Jeder hat mal schlechte Wochen. Wenn sich mehrere gleichzeitig einnisten und bleiben, muss man sich darum kümmern.</p>`,
     },
     {
-      id: 'das-wichtigste',
-      title: "Das Wichtigste zum Mitnehmen",
-      content: `<p>Eine unglückliche Frau in einer Beziehung sieht nicht immer so aus, wie man es sich vorstellt. Sie weint nicht unbedingt. Sie knallt nicht mit den Türen. Sie zieht sich zurück. Sie entfernt sich. Sie steckt ihre Energie woanders hinein. Und wenn man nicht über den Schein hinausblickt, kann man es verpassen, bis es zu spät ist, um noch etwas zu tun.</p>
-<p><strong>Die Anzeichen zu sehen ist bereits eine Form von Respekt.</strong> Es bedeutet, dass man aufmerksam ist. Dass einem die Beziehung genug bedeutet, um sich die Frage zu stellen. Was du mit dieser Information jetzt machst, da entscheidet sich alles.</p>`,
+      id: 'was-man-im-alltag-sieht',
+      title: "Was man im Alltag sieht",
+      content: `<p>Diese ersten fünf Anzeichen sieht man jeden Tag, wenn man hinschaut. Einzeln gehen sie als Müdigkeit oder schlechte Phase durch. Aneinandergereiht erzählen sie etwas anderes.</p>`,
+      subsections: [
+        {
+          id: 'sie-redet-weniger',
+          title: "1. Sie redet weniger, und nicht mehr auf dieselbe Art",
+          content: `<p>Sie redet noch, aber über Organisatorisches: wer einkauft, wann du nach Hause kommst, ob die Katze gefüttert ist. Die echten Gespräche, was sie fühlt, was sie beschäftigt, was sie mit ihrem Leben anfangen will, sind verschwunden. Sie fängt sie nicht mehr an, und wenn du sie anfängst, antwortet sie in zwei Sätzen, höflich, und wechselt das Thema.</p>
+<p>Das ist keine schlechte Laune. Das ist eine Frau, die aufgehört hat, sich von diesen Gesprächen etwas zu erwarten, und Schweigen zwischen zwei Menschen, die zusammenleben, ist selten Zufall: Man verstummt, wenn man das Gefühl hat, dass Reden nichts ändert.</p>`,
+        },
+        {
+          id: 'die-zaertlichen-gesten-sind-weg',
+          title: "2. Die zärtlichen Gesten sind weg",
+          content: `<p>Nicht nur im Bett, auch wenn das zählt. Die kleinen Gesten auch: die Hand auf der Schulter im Vorbeigehen, der Kuss am Morgen, der keine Formsache war, sich neben dich aufs Sofa setzen statt in den Sessel gegenüber. Das hört nicht auf einmal auf. Es wird seltener, und eines Tages merkt man, dass die letzte spontane Umarmung... man weiß nicht mehr, wann das war.</p>
+<p>Bei vielen Frauen folgt die körperliche Nähe dem Zustand der Beziehung: Wenn sie sich dir nicht mehr nah fühlt, sagt ihr Körper es vor ihr. Für manche ist es sogar <a href="/de/blog/5-sprachen-der-liebe/">ihre erste Art zu zeigen, dass ihnen jemand wichtig ist</a>.</p>`,
+        },
+        {
+          id: 'sie-steckt-ihre-energie-woanders-hinein',
+          title: "3. Sie steckt ihre Energie überall hinein, nur nicht in die Beziehung",
+          content: `<p>Die Arbeit, die Abende mit ihren Freundinnen, ein neuer Sport, der plötzlich den ganzen Platz einnimmt. Ein eigenes Leben zu haben ist gesund. Das Signal ist, wenn diese Aktivitäten sichtbar dazu dienen, nicht mit dir allein zu sein: Sie kommt spät nach Hause und wirkt fast froh, zu müde zum Reden zu sein, jedes Wochenende ist vollgepackt, damit nie eine Lücke bleibt, denn in dieser Lücke müsste man sich vielleicht etwas sagen.</p>`,
+          tip: "Eine Frau, die sich in ihre Aktivitäten flüchtet, läuft nicht unbedingt vor der Beziehung davon. Manchmal sucht sie nur die, die sie früher war, und die sie unterwegs verloren zu haben glaubt. Das fragt man, das wirft man ihr nicht vor.",
+        },
+        {
+          id: 'sie-regt-sich-ueber-kleinigkeiten-auf',
+          title: "4. Sie regt sich über Dinge auf, die sie früher nicht gestört haben",
+          content: `<p>Deine Schlüssel am falschen Platz, wie du kaust, das Licht im Flur, das anbleibt. Dinge, die vor sechs Monaten kein Problem waren. Dieser Ärger geht nie um die Schlüssel: Das ist eine angestaute Frustration, die sich dort ein Ventil sucht, weil das echte Gespräch darüber, was nicht stimmt, nicht stattgefunden hat. Auf Gereiztheit mit Gereiztheit zu antworten, ist ein Streit mehr, der nie zum eigentlichen Thema kommt.</p>`,
+        },
+        {
+          id: 'plaene-zu-zweit',
+          title: "5. Pläne zu zweit interessieren sie nicht mehr",
+          content: `<p>Du sprichst von einem Wochenende zu zweit, sie sagt „mal sehen“. Du erwähnst eine größere Wohnung, den Sommerurlaub, ein gemeinsames Projekt, sie wechselt das Thema oder bleibt vage. Eine Frau, die sich keine Zukunft mehr mit ihrem Partner vorstellt, hat oft schon angefangen, sich das Danach ohne ihn auszumalen. Nicht unbedingt mit jemand anderem: allein, freier, anders.</p>
+<p>Das ist eines der deutlichsten Anzeichen, denn sich eine Zukunft vorzustellen setzt voraus, dass man will, dass die Geschichte weitergeht. Wenn <a href="/de/blog/zukunftsfragen-fuer-paare/">Fragen nach der Zukunft</a> ihr unangenehm sind, dann weil sie die Antwort nicht hat, oder sie nicht sagen will.</p>`,
+        },
+      ],
+    },
+    {
+      id: 'was-weniger-auffaellt',
+      title: "Was weniger auffällt, und mehr sagt",
+      content: `<p>Die letzten vier Anzeichen sind leiser. Man bemerkt sie mit Abstand, über mehrere Wochen, und sie zählen mehr als die ersten.</p>`,
+      subsections: [
+        {
+          id: 'erleichtert-wenn-du-nicht-da-bist',
+          title: "6. Sie wirkt erleichtert, wenn du nicht da bist",
+          content: `<p>Du bist zwei Tage beruflich unterwegs, und am Telefon ist sie leichter als wenn ihr im selben Zimmer seid. Du gehst mit deinen Freunden aus, und sie fragt nicht, wann du zurückkommst. Nicht, dass sie will, dass du gehst: Deine Anwesenheit kostet sie Kraft, und deine Abwesenheit erholt sie. So gesagt ist es hart, aber es ist eines der verlässlichsten Anzeichen auf der Liste.</p>`,
+        },
+        {
+          id: 'sie-fragt-dich-nicht-mehr-nach-deiner-meinung',
+          title: "7. Sie fragt dich nicht mehr nach deiner Meinung",
+          content: `<p>Früher hat sie dich gefragt, was du von einem Kauf hältst, von einer Einladung, von einem Ärger mit ihrer Mutter. Jetzt entscheidet sie allein und sagt es dir hinterher, wenn sie daran denkt. Von außen läuft alles: Die Rechnungen sind bezahlt, der Kühlschrank ist voll. Aber ihr entscheidet nichts mehr zu zweit, und sie zeigt dir, dass sie dich dafür nicht mehr braucht.</p>`,
+        },
+        {
+          id: 'sie-hat-aufgehoert-zu-streiten',
+          title: "8. Sie hat aufgehört zu streiten",
+          content: `<p>Es gibt einen Moment in einer Beziehung, der es schlecht geht, in dem die Streits aufhören. Das sieht aus wie eine Ruhepause, und es ist keine. Wenn eine Frau aufhört zu streiten, dann nicht, weil sie ihren Frieden mit der Lage gemacht hat: Sie hat entschieden, dass es nichts mehr bringt, dass sich nie etwas ändert, und dass sie sich die Kraft lieber spart.</p>
+<p>Dieses Schweigen ist beunruhigender als jeder Streit, denn es heißt, dass sie losgelassen hat. Psychologen sprechen von Rückzug: Sie kämpft nicht mehr um die Beziehung, sie erträgt sie und wartet ab. Oft fragt man sich an diesem Punkt, <a href="/de/ist-meine-beziehung-am-ende-test/">ob noch etwas zu retten ist oder ob es schon vorbei ist</a>.</p>`,
+        },
+        {
+          id: 'sie-pflegt-sich-nicht-mehr',
+          title: "9. Sie pflegt sich nicht mehr, oder plötzlich viel mehr",
+          content: `<p>Eine unglückliche Beziehung hinterlässt Spuren. Eine Frau, die sich übersehen oder ständig kritisiert fühlt, hält am Ende nicht mehr viel von sich. Das kann sich im Gehenlassen zeigen: Sie achtet nicht mehr auf sich, trifft weniger Leute, hat auf weniger Lust. Oder umgekehrt in einer neuen Aufmerksamkeit für ihr Aussehen, eine neue Frisur, Sport, Kleider, die sie nicht mehr getragen hat, als wollte sie wieder existieren, für sich selbst oder in den Augen von jemandem.</p>`,
+          tip: "Wenn sie ihr Aussehen verändert hat oder wieder Sport macht, heißt das nicht unbedingt, dass sie jemanden kennengelernt hat. Oft ist es eine Frau, die versucht, sich selbst wiederzufinden. Das kann einer Trennung vorausgehen, genauso wie einem Neuanfang zu zweit: Es hängt davon ab, was danach passiert.",
+        },
+      ],
+    },
+    {
+      id: 'und-jetzt',
+      title: "Und jetzt?",
+      content: `<p>Die Anzeichen zu erkennen ist das eine. Die Frage danach ist schwerer: Ist noch etwas zu retten, und wie? Es gibt keine Antwort, die für alle passt, aber zwei Fehler, die fast alle Männer an diesem Punkt machen, und die es jedes Mal schlimmer machen.</p>
+<p><strong>Herunterspielen:</strong> „du übertreibst“, „das bildest du dir ein“, „du warst schon immer so“. Vielleicht hat sie Monate gebraucht, um den Mut zu finden, etwas zu sagen. Wenn die erste Antwort ein Abstreiten ist, versucht sie es kein zweites Mal.</p>
+<p><strong>In Panik geraten:</strong> das Gegenteil ist nicht besser. Versprechen, dass sich alles ändert, die großen Worte auspacken, weinen. Das verlangt von ihr, deine Not zusätzlich zu ihrer eigenen zu tragen, und Versprechen aus der Panik heraus halten selten zwei Wochen.</p>
+<p>Was hilft, ist leichter gesagt als getan: ihr Raum zum Reden lassen. Kein „ernstes Gespräch“, das sich wie ein Verhör anfühlt. Anders da sein, weniger am Handy, fähig, eine echte Frage zu stellen und die Antwort anzuhören, ohne zu unterbrechen, um dich zu verteidigen. Wenn du nicht mehr weißt, wo du anfangen sollst, gibt es <a href="/de/blog/fragen-an-deine-freundin/">Fragen, die das Gespräch wieder öffnen, ohne es zu erzwingen</a>.</p>
+<p>Ein anderer Ausgangspunkt, wenn ihr nicht mehr miteinander reden könnt: <a href="/de/gesunde-beziehung-test/">jeder für sich dieselben Fragen zur Beziehung beantworten</a>. Der Abstand zwischen euren beiden Antworten sagt oft mehr als das Gespräch selbst. Und wenn das Unbehagen schon lange da ist, ist eine Paartherapie kein Eingeständnis des Scheiterns: Sie ist ein Ort, an dem beide reden können, ohne dass einer den anderen erdrückt.</p>
+<p><strong>Wenn du selbst diejenige bist, die sich in diesen Zeilen wiedererkennt:</strong> Was du fühlst, zählt, auch wenn es niemand um dich herum bemerkt hat. Bevor du irgendetwas entscheidest, gibt es Wege, <a href="/de/blog/beziehung-beenden-oder-weitermachen/">herauszufinden, ob es sich noch lohnt, es zu versuchen</a>, und es gibt <a href="/de/blog/grenzen-beziehung-nicht-akzeptieren/">Grenzen, die man aus Gewohnheit irgendwann nicht mehr sieht</a>.</p>
+<a href="/de/blog/fragen-um-sich-besser-kennenzulernen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">60 Fragen, um euch besser kennenzulernen, auch wenn ihr alles zu wissen glaubt</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };
