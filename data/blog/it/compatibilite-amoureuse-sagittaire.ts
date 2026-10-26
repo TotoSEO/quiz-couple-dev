@@ -165,7 +165,7 @@ const article: BlogArticleData = {
         {
           id: 'se-i-nostri-segni-non-sono-compatibili',
           title: `E se i nostri segni non sono compatibili?`,
-          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è <a href="/it/test-compatibilita-amorosa/">rispondere ognuno a venti domande sulla vostra coppia</a>, e confrontare.</p>`,
+          content: `<p>Questi voti descrivono tendenze, non verdetti: ci sono coppie Toro-Acquario che durano vent'anni e coppie Gemelli-Bilancia che non arrivano a fine estate. Per vedere come va tra voi due, la cosa più semplice è guardare <a href="/it/test-compatibilita-amorosa/">quanto i vostri valori e i vostri caratteri si accordano</a>, rispondendo ognuno per conto suo.</p>`,
         },
       ],
     },

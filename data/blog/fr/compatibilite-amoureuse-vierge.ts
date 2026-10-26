@@ -165,7 +165,7 @@ const article: BlogArticleData = {
         {
           id: 'si-nos-signes-ne-sont-pas-compatibles',
           title: `Et si nos signes ne sont pas compatibles ?`,
-          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de <a href="/test-compatibilite-amoureuse/">répondre chacun à vingt questions sur votre couple</a>, et de comparer.</p>`,
+          content: `<p>Ces notes décrivent des tendances, pas des verdicts : il y a des couples Taureau-Verseau qui durent vingt ans et des couples Gémeaux-Balance qui ne passent pas l'été. Pour voir ce qu'il en est pour vous deux, le plus simple est de regarder <a href="/test-compatibilite-amoureuse/">à quel point vos valeurs et vos caractères s'accordent</a>, en répondant chacun de votre côté.</p>`,
         },
       ],
     },

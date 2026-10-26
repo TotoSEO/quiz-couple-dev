@@ -142,7 +142,7 @@ const article: BlogArticleData = {
 
 <p>Si la réponse est oui, vous traversez quelque chose. Si la réponse est « je ne sais pas »… ou pire, « non, mais au moins ce serait plus simple », alors le problème n'était pas le problème.</p>
 
-<p>Une intuition ne suffit pas à répondre à cette question. Un <a href="/test-est-ce-la-fin-de-mon-couple/">questionnaire qui pèse chaque signe de fin de relation selon sa gravité</a> donne un résultat plus difficile à balayer que le souvenir de la dernière dispute.</p>`,
+<p>Une intuition ne suffit pas à répondre à cette question. Regarder un par un <a href="/test-est-ce-la-fin-de-mon-couple/">les signes qu'un couple touche à sa fin</a> donne un résultat plus difficile à balayer que le souvenir de la dernière dispute.</p>`,
     },
     {
       id: 'ce-qui-nest-pas-un-motif',
@@ -209,9 +209,9 @@ const article: BlogArticleData = {
 
 <p><strong>Parlez à quelqu'un qui ne vous aime pas trop :</strong> vos meilleurs amis vous diront ce que vous voulez entendre. Un thérapeute, un frère un peu rugueux, quelqu'un qui n'a pas d'intérêt dans l'histoire vous sera plus utile.</p>
 
-<p><strong>Et si vous ne savez pas par où commencer la conversation</strong>, le plus simple reste de partir d'un questionnaire que vous remplissez chacun de votre côté avant d'en parler. Répondre séparément puis comparer désamorce beaucoup de choses : ce n'est plus vous contre l'autre, c'est vous deux face à un écart mesuré. Il existe pour ça un <a href="/tester-son-couple/">questionnaire à remplir à deux</a> qui compare vos réponses, et un autre qui mesure plus précisément <a href="/test-couple-sain/">ce qui fait qu'une relation est saine</a>.</p>
+<p><strong>Et si vous ne savez pas par où commencer la conversation</strong>, le plus simple reste de partir d'un questionnaire que vous remplissez chacun de votre côté avant d'en parler. Répondre séparément puis comparer désamorce beaucoup de choses : ce n'est plus vous contre l'autre, c'est vous deux face à un écart mesuré. Pour ça, le plus parlant est de <a href="/tester-son-couple/">mettre vos deux visions du couple côte à côte</a>, puis de mesurer plus précisément <a href="/test-couple-sain/">ce qui fait qu'une relation est saine</a>.</p>
 
-<p>Quand la question qui revient est plus lourde et que le mot séparation est déjà posé sur la table, il existe aussi un <a href="/test-dois-je-divorcer/">questionnaire spécifique sur la décision de divorcer</a>, avec des paliers de résultat pensés pour ce moment-là.</p>`,
+<p>Quand la question qui revient est plus lourde et que <a href="/test-dois-je-divorcer/">le mot divorce est déjà posé sur la table</a>, les signes à regarder ne sont plus les mêmes.</p>`,
     },
     {
       id: 'et-si-on-decide-de-continuer',

@@ -53,7 +53,7 @@ const article: BlogArticleData = {
           id: 'e-sempre-calcolato',
           title: "È sempre calcolato?",
           content: `<p>No, ed è una sfumatura che conta. Alcune persone fanno love bombing senza alcuna strategia consapevole: vivono gli inizi di relazione con un'intensità estrema perché hanno un rapporto ansioso con l'attaccamento, e l'intensità cala da sola. Non è piacevole da vivere, ma non è manipolazione.</p>
-<p>In altre, invece, il love bombing è il primo tassello di un funzionamento molto più ampio, in cui la seduzione serve a prendere il controllo. È un marcatore classico dei profili manipolatori, al punto da comparire quasi sempre nei racconti di relazioni con un narcisista. Se in fondo la tua domanda è questa, il nostro <a href="/it/test-partner-narcisista/">test "sono con un narcisista?"</a> ripercorre queste situazioni una per una.</p>
+<p>In altre, invece, il love bombing è il primo tassello di un funzionamento molto più ampio, in cui la seduzione serve a prendere il controllo. È un marcatore classico dei profili manipolatori, al punto da comparire quasi sempre nei racconti di <a href="/it/test-partner-narcisista/">relazioni con un narcisista</a>.</p>
 <p>In entrambi i casi l'effetto su di te è reale. Ma l'esito non è lo stesso, ed è il resto del ciclo a permettere di distinguerli.</p>`,
         },
       ],
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La svalutazione: il pavimento sparisce",
           content: `<p>Poi si ferma. Raramente di netto, più spesso per gradi. I messaggi si diradano. I complimenti diventano osservazioni. Ciò che adorava di te comincia a infastidirlo: la tua spontaneità diventa imprevedibilità, la tua indipendenza diventa freddezza, la tua attenzione ai dettagli diventa pesantezza.</p>
 <p>E tu, meccanicamente, cerchi cosa hai fatto. Non cerchi cosa è successo a lui, cerchi il tuo errore, perché ti hanno messa su un piedistallo e vuoi risalirci. È il cuore del meccanismo: <strong>la svalutazione funziona solo perché prima c'è stata l'idealizzazione.</strong> Senza la vetta non c'è caduta.</p>
-<p>Questa è la fase in cui una relazione scivola concretamente nella tossicità. Se riconosci questo passaggio, il <a href="/it/test-relazione-tossica/">test della relazione tossica</a> aiuta a dare un nome a ciò che è cambiato. E se sei ancora all'inizio e vuoi sapere se <a href="/it/test-red-flag/">questa persona mostra altri segnali oltre alla velocità</a>, venti domande pesano ciascuno in base alla gravità.</p>`,
+<p>Questa è la fase in cui <a href="/it/test-relazione-tossica/">una relazione scivola nel tossico</a>, ed è spesso lì che si comincia a chiedersi se si sta esagerando. Se sei ancora all'inizio, il ritmo non è l'unico segnale da guardare: <a href="/it/test-red-flag/">i red flag di una persona</a> si vedono anche da come prende un no, da come parla dei suoi ex o da come reagisce a una contrarietà.</p>`,
         },
         {
           id: 'fase-rifiuto-ritorno',

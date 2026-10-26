@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'perdida-identidad',
           title: "La pérdida progresiva de identidad",
           content: `<p>Es uno de los aspectos más insidiosos. No ocurre de golpe. Empiezas adaptando tus gustos. Luego tus horarios. Luego tus amistades. Luego tus opiniones. Al cabo de unos meses, ya no sabes muy bien qué te gusta, qué quieres, qué piensas independientemente del otro.</p>
-<p>No es un compromiso de pareja: es un borrado. Y lo peor es que normalmente solo te das cuenta después de la ruptura, cuando te encuentras frente a ti mismo/a y descubres que ya no sabes quién eres. Si te sientes atrapado/a en esta situación, <a href="/es/test-compatibilidad-pareja/">hacer balance de tu relación</a> puede ayudarte a ver las cosas con más claridad.</p>`,
+<p>No es un compromiso de pareja: es un borrado. Y lo peor es que normalmente solo te das cuenta después de la ruptura, cuando te encuentras frente a ti mismo/a y descubres que ya no sabes quién eres. Si te sientes atrapado/a en esta situación, mirar <a href="/es/test-compatibilidad-pareja/">lo que cada uno responde sobre vuestra relación</a> puede ayudarte a ver las cosas con más claridad.</p>`,
         },
       ],
     },

@@ -142,7 +142,7 @@ const article: BlogArticleData = {
 
 <p>If the answer is yes, you are going through something. If the answer is "I do not know"… or worse, "no, but at least it would be simpler", then the problem was never the problem.</p>
 
-<p>A hunch is not enough to answer that question. A <a href="/en/is-my-relationship-over-test/">questionnaire that weighs each sign of an ending by how serious it is</a> gives you a result that is harder to wave away than the memory of your last argument.</p>`,
+<p>A hunch is not enough to answer that question. Looking one by one at <a href="/en/is-my-relationship-over-test/">the signs that a relationship is coming to an end</a> gives you a result that is harder to wave away than the memory of your last argument.</p>`,
     },
     {
       id: 'not-actually-grounds',
@@ -209,9 +209,9 @@ const article: BlogArticleData = {
 
 <p><strong>Talk to someone who does not love you too much:</strong> your best friends will tell you what you want to hear. A therapist, a slightly blunt sibling, anyone without a stake in the story will be more useful.</p>
 
-<p><strong>And if you do not know how to open the conversation</strong>, the simplest route is a questionnaire you each fill in separately before talking. Answering apart and then comparing defuses a lot: it stops being you against them and becomes the two of you facing a measured gap. There is a <a href="/en/couple-compatibility-test/">questionnaire you fill in as a pair</a> that compares your answers, and another that measures more precisely <a href="/en/healthy-relationship-test/">what makes a relationship healthy</a>.</p>
+<p><strong>And if you do not know how to open the conversation</strong>, the simplest route is a questionnaire you each fill in separately before talking. Answering apart and then comparing defuses a lot: it stops being you against them and becomes the two of you facing a measured gap. For that, the most telling thing is to <a href="/en/couple-compatibility-test/">put your two views of the relationship side by side</a>, then measure more precisely <a href="/en/healthy-relationship-test/">what makes a relationship healthy</a>.</p>
 
-<p>When the question is heavier and the word separation is already on the table, there is also a <a href="/en/should-i-divorce-test/">questionnaire built around the decision to divorce</a>, with result bands written for that specific moment.</p>`,
+<p>When the question is heavier and <a href="/en/should-i-divorce-test/">the word divorce is already on the table</a>, the signs to look at are no longer the same.</p>`,
     },
     {
       id: 'if-you-decide-to-stay',

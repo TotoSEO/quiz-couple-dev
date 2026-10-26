@@ -112,7 +112,7 @@ const article: BlogArticleData = {
 
 <p><strong>«Hay que darle celos para acelerar.»</strong> Eso produce agitación, no apego. La agitación se cae en tres días; el apego se construye por repetición tranquila.</p>
 
-<p><strong>«Si fuera el bueno, sería evidente.»</strong> Para algunos sí, para muchos no. La duda al principio es normal y no dice nada de lo que viene después. Si la pregunta va en el otro sentido, sobre lo que sientes tú, un <a href="/es/test-estoy-enamorado/">cuestionario sobre lo que sientes realmente</a> a veces ayuda más que una noche dándole vueltas.</p>`,
+<p><strong>«Si fuera el bueno, sería evidente.»</strong> Para algunos sí, para muchos no. La duda al principio es normal y no dice nada de lo que viene después. Si la pregunta va en el otro sentido, poner palabras a <a href="/es/test-estoy-enamorado/">lo que sientes tú, amor o simple atracción</a>, a veces ayuda más que una noche dándole vueltas.</p>`,
     },
     {
       id: 'preguntas-frecuentes',
@@ -121,7 +121,7 @@ const article: BlogArticleData = {
 Los márgenes varían enormemente de una persona a otra. Lo más habitual son unas semanas para la comodidad y de dos a cuatro meses para la falta. ¿Un hombre que «lo sabe» a los tres días? Suele estar confundiendo atracción con sentimiento.</p>
 
 <p><strong>¿Cómo saber si siente algo sin preguntárselo?</strong><br>
-Mirando lo que hace cuando no hay nada que ganar: un mensaje sin motivo, un favor sin público. Si la duda persiste y él no dice nada, existe un <a href="/es/test-me-quiere-en-secreto/">cuestionario sobre las señales de un apego no declarado</a> que enumera los indicios concretos.</p>
+Mirando lo que hace cuando no hay nada que ganar: un mensaje sin motivo, un favor sin público. Si la duda persiste y él no dice nada, <a href="/es/test-me-quiere-en-secreto/">las señales de que te quiere en secreto</a> se pueden enumerar, y son concretas.</p>
 
 <p><strong>¿Pueden nacer sentimientos después de la amistad?</strong><br>
 Sí, y es incluso uno de los caminos más sólidos, porque las etapas 2, 3 y 4 ya están superadas. Lo que falta es el vuelco, y suele dispararlo una ausencia.</p>

@@ -112,7 +112,7 @@ const article: BlogArticleData = {
 
 <p><strong>«Bisogna farlo ingelosire per accelerare.»</strong> Questo produce agitazione, non attaccamento. L'agitazione cade in tre giorni; l'attaccamento si costruisce per ripetizione tranquilla.</p>
 
-<p><strong>«Se fosse quello giusto, sarebbe evidente.»</strong> Per alcuni sì, per molti no. Il dubbio all'inizio è normale e non dice niente su quello che viene dopo. Se la domanda va nell'altro senso, su quello che senti tu, un <a href="/it/test-sono-innamorato/">questionario su ciò che provi davvero</a> a volte aiuta più di una notte passata a rigirare il problema.</p>`,
+<p><strong>«Se fosse quello giusto, sarebbe evidente.»</strong> Per alcuni sì, per molti no. Il dubbio all'inizio è normale e non dice niente su quello che viene dopo. Se la domanda va nell'altro senso, mettere parole su <a href="/it/test-sono-innamorato/">quello che provi tu, amore o semplice attrazione</a>, a volte aiuta più di una notte passata a rigirare il problema.</p>`,
     },
     {
       id: 'domande-frequenti',
@@ -121,7 +121,7 @@ const article: BlogArticleData = {
 Le forbici variano enormemente da persona a persona. Quello che ricorre di più sono alcune settimane per l'agio e due o quattro mesi per la mancanza. Un uomo che «lo sa» dopo tre giorni? Di solito confonde attrazione e sentimento.</p>
 
 <p><strong>Come capire se prova qualcosa senza chiederglielo?</strong><br>
-Guardando cosa fa quando non c'è niente da guadagnare: un messaggio senza motivo, un favore senza pubblico. Se il dubbio resta e lui non dice niente, esiste un <a href="/it/mi-ama-in-segreto-test/">questionario sui segnali di un attaccamento non dichiarato</a> che elenca gli indizi concreti.</p>
+Guardando cosa fa quando non c'è niente da guadagnare: un messaggio senza motivo, un favore senza pubblico. Se il dubbio resta e lui non dice niente, <a href="/it/mi-ama-in-segreto-test/">i segnali che ti ama in segreto</a> si possono elencare, e sono concreti.</p>
 
 <p><strong>I sentimenti possono nascere dopo un'amicizia?</strong><br>
 Sì, ed è anzi una delle strade più solide, perché le fasi 2, 3 e 4 sono già superate. Quello che manca è il ribaltamento, e spesso lo innesca un'assenza.</p>

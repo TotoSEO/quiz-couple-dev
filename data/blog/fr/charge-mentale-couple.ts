@@ -99,7 +99,7 @@ const article: BlogArticleData = {
           title: "Le piège de l'habitude installée",
           content: `<p>Au début de la vie commune, le déséquilibre est souvent minime. Puis les premières routines se mettent en place. Puis les enfants arrivent. Et chaque nouvelle responsabilité tombe « naturellement » du même côté. Pas parce qu'il y a eu une discussion. Parce qu'il n'y en a pas eu.</p>
 <p><strong>Le piège, c'est que plus la charge mentale dure, plus elle est difficile à redistribuer.</strong> Parce que « c'est toi qui sais comment on fait ». Parce que « tu y penses de toute façon ». Parce que si tu délègues, tu dois quand même vérifier. Et vérifier, c'est encore de la charge mentale.</p>
-<p>Pour faire le point sur l'équilibre réel de ton couple, <a href="/test-couple-sain/">le test couple sain</a> peut t'aider à objectiver ce que tu ressens.</p>`,
+<p>Pour objectiver ce que tu ressens, <a href="/test-couple-sain/">l'équilibre réel de ton couple</a> se mesure sur bien d'autres points que la liste des courses.</p>`,
         },
       ],
     },
@@ -126,7 +126,7 @@ const article: BlogArticleData = {
           title: "Les disputes qui tournent en boucle",
           content: `<p>Les mêmes disputes, encore et encore. Le lave-vaisselle. Les courses. Les enfants. Et à chaque fois, tu as l'impression de repartir de zéro parce que rien ne change structurellement. <strong>Ces disputes répétitives ne sont pas le problème. Elles sont le symptôme d'un déséquilibre qui n'a jamais été traité à la racine.</strong></p>
 <p>Lui pense que tu te plains pour des broutilles. Toi tu essaies de lui faire comprendre quelque chose qu'il ne voit pas, avec des mots qui ne portent pas, et une frustration qui monte à chaque tentative ratée. Ce schéma-là peut durer des années. Et il finit toujours par produire soit une explosion, soit un désengagement silencieux, celui qui précède les ruptures qu'on ne voyait pas venir.</p>
-<p>Si ça te parle, notre <a href="/quiz-amoureux/">quiz amoureux</a> peut vous aider à ouvrir le dialogue autrement.</p>`,
+<p>Si ça te parle, <a href="/quiz-amoureux/">quelques questions sur votre histoire à deux</a> peuvent aider à ouvrir le dialogue autrement.</p>`,
         },
       ],
     },
@@ -186,7 +186,7 @@ const article: BlogArticleData = {
           title: "Quand c'est un problème de respect, pas d'organisation",
           content: `<p>Il y a un moment où il faut arrêter de traiter la charge mentale comme un problème logistique. Si ton partenaire <strong>voit</strong> que tu es épuisée, <strong>comprend</strong> pourquoi, et <strong>choisit</strong> de ne rien changer, ce n'est plus un problème d'organisation. C'est un problème de respect.</p>
 <p>Un partenaire qui te regarde couler sans bouger, ce n'est pas un partenaire qui « ne comprend pas ». C'est un partenaire qui a décidé que ton confort importait moins que le sien. Et ça, aucune appli de calendrier partagé ne le résoudra.</p>
-<p>Si tu as des enfants et que ce déséquilibre touche aussi la parentalité, <a href="/test-parentalite-couple/">le test parentalité couple</a> peut vous aider à objectiver la situation.</p>
+<p>Si tu as des enfants et que <a href="/test-parentalite-couple/">ce déséquilibre touche aussi la parentalité</a>, ça vaut le coup de le mesurer à part.</p>
 <p>À ce stade, la question n'est plus « comment rééquilibrer la charge mentale ». La question est : est-ce que cette relation te rend heureuse, ou est-ce qu'elle te vide ? Et si la réponse te fait peur, c'est peut-être le moment de lire ceci : <a href="/blog/sauver-son-couple/">comment sauver son couple</a>, pour savoir si c'est encore possible, et si tu le veux vraiment.</p>`,
         },
       ],

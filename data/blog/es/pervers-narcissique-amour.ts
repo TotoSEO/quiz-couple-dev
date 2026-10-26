@@ -195,7 +195,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-es-consciente',
           title: "¿Es consciente de lo que hace?",
-          content: `<p>En parte, sí. Sabe apuntar: los ataques caen siempre en tus puntos sensibles, nunca delante de testigos, lo que supone una forma de cálculo. Pero casi nunca se vive como un verdugo. En su relato interior, ¡la víctima es él! Por eso esperar una toma de conciencia no lleva a ninguna parte, y la única pregunta real sigue siendo lo que vives tú. Si estás en ese punto, nuestro <a href="/es/test-pareja-narcisista/">test «¿tengo una pareja narcisista?»</a> te ayudará a responder con calma.</p>`,
+          content: `<p>En parte, sí. Sabe apuntar: los ataques caen siempre en tus puntos sensibles, nunca delante de testigos, lo que supone una forma de cálculo. Pero casi nunca se vive como un verdugo. En su relato interior, ¡la víctima es él! Por eso esperar una toma de conciencia no lleva a ninguna parte, y la única pregunta real sigue siendo lo que vives tú. Si estás en ese punto, <a href="/es/test-pareja-narcisista/">las señales de que tienes una pareja narcisista</a> se pueden repasar una a una, con calma.</p>`,
         },
         {
           id: 'faq-cuanto-se-tarda',

@@ -142,7 +142,7 @@ const article: BlogArticleData = {
 
 <p>Si la respuesta es sí, estás atravesando algo. Si la respuesta es «no lo sé»… o peor, «no, pero al menos sería más sencillo», entonces el problema nunca fue el problema.</p>
 
-<p>Una intuición no basta para responder a esa pregunta. Un <a href="/es/test-es-el-final-de-mi-relacion/">cuestionario que pesa cada señal de final según su gravedad</a> da un resultado más difícil de descartar que el recuerdo de la última discusión.</p>`,
+<p>Una intuición no basta para responder a esa pregunta. Mirar una a una <a href="/es/test-es-el-final-de-mi-relacion/">las señales de que una relación llega a su fin</a> da un resultado más difícil de descartar que el recuerdo de la última discusión.</p>`,
     },
     {
       id: 'lo-que-no-es-motivo',
@@ -209,9 +209,9 @@ const article: BlogArticleData = {
 
 <p><strong>Habla con alguien que no te quiera demasiado:</strong> tus mejores amigos te dirán lo que quieres oír. Un terapeuta, un hermano algo brusco, cualquiera sin intereses en la historia te será más útil.</p>
 
-<p><strong>Y si no sabes por dónde empezar la conversación</strong>, lo más sencillo es un cuestionario que rellenéis cada uno por separado antes de hablarlo. Responder aparte y luego comparar desactiva muchas cosas: deja de ser tú contra el otro y pasa a ser los dos frente a una diferencia medida. Existe un <a href="/es/test-compatibilidad-pareja/">cuestionario para rellenar en pareja</a> que compara vuestras respuestas, y otro que mide con más precisión <a href="/es/test-relacion-sana/">qué hace que una relación sea sana</a>.</p>
+<p><strong>Y si no sabes por dónde empezar la conversación</strong>, lo más sencillo es un cuestionario que rellenéis cada uno por separado antes de hablarlo. Responder aparte y luego comparar desactiva muchas cosas: deja de ser tú contra el otro y pasa a ser los dos frente a una diferencia medida. Para eso, lo que más dice es <a href="/es/test-compatibilidad-pareja/">poner vuestras dos visiones de la pareja una al lado de la otra</a>, y luego medir con más precisión <a href="/es/test-relacion-sana/">qué hace que una relación sea sana</a>.</p>
 
-<p>Cuando la pregunta pesa más y la palabra separación ya está sobre la mesa, existe también un <a href="/es/test-debo-divorciarme/">cuestionario centrado en la decisión de divorciarse</a>, con tramos de resultado pensados para ese momento.</p>`,
+<p>Cuando la pregunta pesa más y <a href="/es/test-debo-divorciarme/">la palabra divorcio ya está sobre la mesa</a>, las señales que hay que mirar ya no son las mismas.</p>`,
     },
     {
       id: 'si-decides-seguir',

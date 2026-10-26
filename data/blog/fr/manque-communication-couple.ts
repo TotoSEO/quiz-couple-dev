@@ -37,7 +37,7 @@ const article: BlogArticleData = {
           id: 'evitement-sujets',
           title: "Tu évites certains sujets volontairement",
           content: `<p>Tu as un truc qui te tracasse, mais tu ne le dis pas. Parce que « ça va encore partir en dispute ». Parce que « ça ne sert à rien, il/elle ne comprend pas ». Parce que la dernière fois que tu as essayé, tu t'es senti encore plus seul qu'avant d'en parler.</p>
-<p>L'évitement est un mécanisme de protection à court terme qui détruit la relation à long terme. Chaque sujet que tu gardes pour toi crée une distance invisible. Et ces distances s'additionnent. Au bout de quelques mois, tu vis avec quelqu'un à qui tu ne dis plus rien d'important. Si ce schéma te parle, <a href="/tester-son-couple/">faire un point honnête sur ta relation</a> peut t'aider à mesurer où vous en êtes vraiment.</p>`,
+<p>L'évitement est un mécanisme de protection à court terme qui détruit la relation à long terme. Chaque sujet que tu gardes pour toi crée une distance invisible. Et ces distances s'additionnent. Au bout de quelques mois, tu vis avec quelqu'un à qui tu ne dis plus rien d'important. Si ce schéma te parle, comparer <a href="/tester-son-couple/">ce que vous pensez chacun de votre relation</a> peut t'aider à mesurer où vous en êtes vraiment.</p>`,
         },
         {
           id: 'silences-pesants',
@@ -130,7 +130,7 @@ const article: BlogArticleData = {
           title: "Créer des temps dédiés au dialogue",
           content: `<p>Ça peut sembler artificiel, mais c'est exactement le point. Quand la communication est en panne depuis un moment, <strong>elle ne va pas revenir spontanément un mardi soir entre deux épisodes de série.</strong> Il faut lui créer un espace.</p>
 <p>Concrètement : un moment dans la semaine où vous posez les écrans, où personne n'est en train de cuisiner ou de ranger, et où vous vous parlez. Pas forcément de sujets lourds. Parfois juste « comment tu vas, vraiment ? ». La régularité est plus importante que l'intensité. Dix minutes d'attention réelle valent mieux qu'une soirée entière où on tourne autour du pot.</p>
-<p>Et si tu ne sais pas par où commencer, utiliser un support extérieur comme notre <a href="/quiz-qui-connait-mieux-partenaire/">quiz « qui connaît mieux l'autre »</a> peut relancer le dialogue de manière légère et sans pression.</p>`,
+<p>Et si tu ne sais pas par où commencer, un support extérieur, comme vérifier <a href="/quiz-qui-connait-mieux-partenaire/">qui de vous deux connaît le mieux l'autre</a>, peut relancer le dialogue de manière légère et sans pression.</p>`,
         },
       ],
     },
@@ -174,7 +174,7 @@ const article: BlogArticleData = {
           id: 'therapie-de-couple',
           title: "La thérapie de couple : ce que c'est",
           content: `<p>Beaucoup de gens voient la thérapie de couple comme un dernier recours, un aveu d'échec. C'est exactement l'inverse. <strong>C'est un outil pour les couples qui veulent encore se battre pour leur relation.</strong> Les couples qui ont vraiment abandonné ne prennent pas de rendez-vous.</p>
-<p>Un thérapeute de couple ne prend pas parti. Il crée un cadre où chacun peut s'exprimer sans que ça dégénère. Il identifie les patterns de communication toxiques et aide à en construire de nouveaux. Si ton couple ne communique plus et que vos tentatives en autonomie échouent, c'est probablement le meilleur investissement que tu puisses faire. Pas pour « sauver » la relation à tout prix, mais pour comprendre si elle peut fonctionner différemment. Pour faire le point, notre <a href="/test-couple-sain/">test de couple sain</a> peut t'aider à évaluer où vous en êtes objectivement.</p>`,
+<p>Un thérapeute de couple ne prend pas parti. Il crée un cadre où chacun peut s'exprimer sans que ça dégénère. Il identifie les patterns de communication toxiques et aide à en construire de nouveaux. Si ton couple ne communique plus et que vos tentatives en autonomie échouent, c'est probablement le meilleur investissement que tu puisses faire. Pas pour « sauver » la relation à tout prix, mais pour comprendre si elle peut fonctionner différemment. Pour faire le point, <a href="/test-couple-sain/">les bases d'une relation saine</a> se vérifient une par une, et ça aide à évaluer où vous en êtes objectivement.</p>`,
         },
         {
           id: 'quand-le-silence-est-une-reponse',

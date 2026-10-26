@@ -194,7 +194,7 @@ const article: BlogArticleData = {
 <li>Was hörst du gerade, das ich auch hören sollte?</li>
 <li>Wenn ich in einer Stunde bei dir auftauchen würde, was würdest du an deinem Abend ändern?</li>
 </ol>
-<p>Auf Distanz besteht die eigentliche Gefahr nicht darin, keine Themen mehr zu haben, sondern darin, dass alle Gespräche einander gleichen; ein <a href="/de/fernbeziehung-quiz/">Quiz für Fernbeziehungen</a>, jeder an seinem Bildschirm, durchbricht diese Routine besser als ein drittes Videotelefonat in Folge.</p>`,
+<p>Auf Distanz besteht die eigentliche Gefahr nicht darin, keine Themen mehr zu haben, sondern darin, dass alle Gespräche einander gleichen; sich <a href="/de/fernbeziehung-quiz/">Fragen, die für die Distanz gemacht sind</a>, zu stellen, jeder an seinem Bildschirm, durchbricht diese Routine besser als ein drittes Videotelefonat in Folge.</p>`,
     },
     {
       id: 'fuenf-fangfragen',

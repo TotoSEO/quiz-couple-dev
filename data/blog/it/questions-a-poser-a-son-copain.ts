@@ -194,7 +194,7 @@ const article: BlogArticleData = {
 <li>Cosa stai ascoltando in questo periodo che dovrei ascoltare anch'io?</li>
 <li>Se piombassi da te tra un'ora, cosa cambieresti della tua serata?</li>
 </ol>
-<p>A distanza, il rischio vero non è restare senza argomenti, è che tutti gli scambi finiscano per assomigliarsi; un <a href="/it/quiz-coppia-distanza/">quiz pensato per le coppie a distanza</a>, ognuno sul proprio schermo, rompe quella routine meglio di una terza videochiamata di fila.</p>`,
+<p>A distanza, il rischio vero non è restare senza argomenti, è che tutti gli scambi finiscano per assomigliarsi; farsi <a href="/it/quiz-coppia-distanza/">domande pensate per la distanza</a>, ognuno sul proprio schermo, rompe quella routine meglio di una terza videochiamata di fila.</p>`,
     },
     {
       id: 'cinque-domande-scomode',

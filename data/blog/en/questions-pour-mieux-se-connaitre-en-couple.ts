@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/en/who-knows-partner-best-quiz/">Start the challenge</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; To play as a pair</p>
 </div>
-<p>And if these evenings become your ritual, there's enough here for months: the <a href="/en/blog/questions-to-ask-your-boyfriend/">100 questions to ask your boyfriend</a> on one side, the <a href="/en/blog/questions-to-ask-your-girlfriend/">questions to ask your girlfriend</a> on the other.</p>
+<p>And if these evenings become your ritual, there's enough here for months: the <a href="/en/blog/questions-to-ask-your-boyfriend/">questions to ask your boyfriend</a> on one side, the <a href="/en/blog/questions-to-ask-your-girlfriend/">questions to ask your girlfriend</a> on the other.</p>
 <a href="/en/blog/intimate-questions-for-couples/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">65 intimate questions to ask your partner, from the gentlest to the boldest</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

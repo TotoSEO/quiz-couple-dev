@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'e-se-fosse-il-momento',
       title: "E dopo queste 60 domande?",
-      content: `<p>Se hai fatto anche solo la metà di tutto questo nel corso delle settimane, sai già l'essenziale: come funziona questa persona, cosa cerca, e se le vostre direzioni si accordano. È già molto più di quello che sanno la maggior parte delle coppie allo stesso stadio. E se, in una di quelle risposte, qualcosa ti ha fatto storcere il naso senza che tu riesca a dire cosa, <a href="/it/test-red-flag/">venti domande su quello che questa persona fa, non su quello che dice</a>, pesano ogni segnale in base alla gravità.</p>
+      content: `<p>Se hai fatto anche solo la metà di tutto questo nel corso delle settimane, sai già l'essenziale: come funziona questa persona, cosa cerca, e se le vostre direzioni si accordano. È già molto più di quello che sanno la maggior parte delle coppie allo stesso stadio. E se, in una di quelle risposte, qualcosa ti ha fatto storcere il naso senza che tu riesca a dire cosa, forse è che <a href="/it/test-red-flag/">questa persona ha dei red flag</a>: si riconoscono da quello che fa, non da quello che dice.</p>
 <p>Resta la domanda che le domande non risolvono: cosa senti TU. L'attaccamento che sale, è amicizia che trabocca, attrazione di passaggio, o l'inizio della cosa vera? A un certo punto bisogna porsela francamente.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Amicizia che trabocca o inizio d'amore?</p>

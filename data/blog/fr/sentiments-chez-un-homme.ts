@@ -112,7 +112,7 @@ const article: BlogArticleData = {
 
 <p><strong>« Il faut le rendre jaloux pour accélérer. »</strong> Ça produit de l'agitation, pas de l'attachement. L'agitation retombe en trois jours ; l'attachement, lui, se construit par la répétition tranquille.</p>
 
-<p><strong>« Si c'était le bon, ce serait évident. »</strong> Pour certains oui, pour beaucoup non. Le doute au début est banal, et il ne dit rien de la suite. Si la question vous travaille dans l'autre sens, sur ce que vous ressentez vous, un <a href="/test-suis-je-amoureux/">questionnaire sur ce que vous ressentez vraiment</a> aide parfois plus qu'une nuit à retourner le problème.</p>`,
+<p><strong>« Si c'était le bon, ce serait évident. »</strong> Pour certains oui, pour beaucoup non. Le doute au début est banal, et il ne dit rien de la suite. Si la question vous travaille dans l'autre sens, mettre des mots sur <a href="/test-suis-je-amoureux/">ce que vous ressentez vous, amour ou simple attirance</a>, aide parfois plus qu'une nuit à retourner le problème.</p>`,
     },
     {
       id: 'questions-frequentes',
@@ -121,7 +121,7 @@ const article: BlogArticleData = {
 Les fourchettes varient énormément selon les personnes. Ce qui revient le plus souvent, c'est quelques semaines pour le confort, deux à quatre mois pour le manque. Un homme qui « sait » au bout de trois jours ? Il confond en général attirance et sentiment.</p>
 
 <p><strong>Comment savoir s'il ressent quelque chose sans lui demander ?</strong><br>
-En regardant ce qu'il fait quand il n'y a rien à gagner : un message sans raison, un service rendu sans public. Si le doute persiste et qu'il ne dit rien, il existe un <a href="/test-m-aime-t-il-elle-en-secret/">questionnaire sur les signes d'un attachement non déclaré</a> qui liste les indices concrets.</p>
+En regardant ce qu'il fait quand il n'y a rien à gagner : un message sans raison, un service rendu sans public. Si le doute persiste et qu'il ne dit rien, <a href="/test-m-aime-t-il-elle-en-secret/">les signes qu'il vous aime en secret</a> se listent, et ils sont concrets.</p>
 
 <p><strong>Est-ce que les sentiments peuvent naître après l'amitié ?</strong><br>
 Oui, et c'est même l'un des chemins les plus solides, parce que les étapes 2, 3 et 4 sont déjà franchies. Ce qui manque, c'est le basculement, et il se déclenche souvent par une absence.</p>

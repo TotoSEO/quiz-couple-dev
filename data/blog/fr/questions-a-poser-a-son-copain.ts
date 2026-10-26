@@ -195,7 +195,7 @@ const article: BlogArticleData = {
 <li>Qu'est-ce que tu écoutes en ce moment que je devrais écouter aussi ?</li>
 <li>Si je débarquais chez toi dans une heure, tu changerais quoi à ta soirée ?</li>
 </ol>
-<p>À distance, le vrai risque n'est pas de manquer de sujets, c'est que tous les échanges finissent par se ressembler ; un <a href="/quiz-couple-distance/">quiz pensé pour les couples à distance</a>, chacun sur son écran, casse cette routine mieux qu'un troisième appel vidéo de suite.</p>`,
+<p>À distance, le vrai risque n'est pas de manquer de sujets, c'est que tous les échanges finissent par se ressembler ; se poser <a href="/quiz-couple-distance/">des questions faites pour la distance</a>, chacun sur son écran, casse cette routine mieux qu'un troisième appel vidéo de suite.</p>`,
     },
     {
       id: 'cinq-questions-pieges',

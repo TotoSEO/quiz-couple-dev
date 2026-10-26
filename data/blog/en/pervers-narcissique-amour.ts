@@ -195,7 +195,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-is-he-aware',
           title: "Is he aware of what he's doing?",
-          content: `<p>Partly, yes. He knows how to aim: the attacks always land on your sensitive spots, never in front of witnesses, which does imply a form of calculation. But he almost never experiences himself as the aggressor. In his internal story, he's the victim. That's why waiting for him to realise leads nowhere, and why the only real question is what you are living. If you're at that point, our <a href="/en/narcissistic-partner-test/">"am I with a narcissist" test</a> will help you answer calmly.</p>`,
+          content: `<p>Partly, yes. He knows how to aim: the attacks always land on your sensitive spots, never in front of witnesses, which does imply a form of calculation. But he almost never experiences himself as the aggressor. In his internal story, he's the victim. That's why waiting for him to realise leads nowhere, and why the only real question is what you are living. If you're at that point, <a href="/en/narcissistic-partner-test/">the signs that you're with a narcissist</a> can be gone through one by one, calmly.</p>`,
         },
         {
           id: 'faq-recovery-time',

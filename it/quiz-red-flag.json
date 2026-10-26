@@ -9,15 +9,15 @@
   },
   "section1": {
     "title": "Come funziona il test red flag?",
-    "intro": "Un red flag è un comportamento che torna e che dovrebbe metterti in allarme. Non una giornata storta, non un difetto su cui si può discutere. Il problema è che da dentro si vedono male: li si giustifica uno alla volta, e la somma non la si fa mai. Questo test la fa per te.",
-    "p1": "Cominci dicendo se la persona a cui pensi è un uomo o una donna. Non è una formalità: le domande cambiano. Quello che si nota più spesso in un uomo (il modo in cui parla delle donne, cosa fa quando dici di no) e in una donna (le prove, il muso per giorni senza dire perché) non si somiglia del tutto. Se vuoi le liste complete, con un esempio per ciascuno, sono nei nostri articoli sui <a href=\"/it/blog/red-flag-in-un-uomo/\">red flag in un uomo</a> e su <a href=\"/it/blog/red-flag-in-una-donna/\">quelli che si notano in una donna</a>. Qui non facciamo liste: misuriamo.",
+    "intro": "Un red flag è un comportamento che torna e che dovrebbe metterti in allarme. Non una giornata storta, non un difetto su cui si può discutere. Il problema è che da dentro si vedono male. Li si giustifica uno alla volta, e la somma non la si fa mai. È quello che fa il test.",
+    "p1": "Cominci dicendo se la persona a cui pensi è un uomo o una donna. Non è una formalità: le domande cambiano. Quello che si nota più spesso in un uomo (il modo in cui parla delle donne, cosa fa quando dici di no) e in una donna (le prove, il muso per giorni senza dire perché) non si somiglia del tutto. Le liste complete, con un esempio per ciascuno, sono nei nostri articoli sui <a href=\"/it/blog/red-flag-in-un-uomo/\">red flag in un uomo</a> e su <a href=\"/it/blog/red-flag-in-una-donna/\">quelli che si notano in una donna</a>; il test, invece, serve a contare quelli che hai già visto.",
     "p2": "Poi venti domande su situazioni di tutti i giorni, con quattro risposte ogni volta, da «niente da segnalare» a «è esattamente così». Rispondi su quello che questa persona fa, non su quello che dice che farà, e non su quello che speri. Funziona sia per qualcuno che frequenti da tre settimane sia per la persona con cui vivi da tre anni: le situazioni sono state scelte apposta.",
     "p3": "Il test è anonimo, e le tue risposte restano nel tuo browser. Puoi rifarlo tutte le volte che vuoi, per la stessa persona tra sei mesi, o per un'altra."
   },
   "section2": {
     "title": "Perché le domande non hanno tutte lo stesso peso",
     "p1": "Dire «è il loro lavoro» a un cameriere e alzare le mani su di te non sono due caselle della stessa lista. Ogni domanda del test ha quindi il suo peso, da tre a otto punti, in base a quello che dice. Essere secco con i camerieri o parlare male di tutte le ex vale al massimo tre punti: sono segnali conosciuti, ma da soli dicono poco. La gelosia che fruga nel telefono, le sfuriate, le scuse che non arrivano mai, le persone care tenute a distanza valgono cinque o sei. E tre domande valgono otto: cosa succede quando dici di no, la rabbia fisica, e se hai paura della sua reazione.",
-    "p2": "Il totale fa 100 punti. Certe risposte contano perfino da sole: se dici che questa persona ha già alzato le mani su di te, il risultato non potrà scendere sotto l'ultimo livello, anche se tutto il resto è perfetto. Diciannove risposte buone non diluiscono quella.",
+    "p2": "Il totale fa 100 punti. Certe risposte contano perfino da sole: se dici che questa persona ha già alzato le mani su di te, il risultato non potrà scendere sotto l'ultimo livello, anche se tutto il resto è perfetto. Le altre diciannove risposte non cambiano niente a quella.",
     "p3": "Il risultato si legge su nove livelli, da «green flag» a «non è più un red flag, è un pericolo», ogni volta con quello che dicono le tue risposte e una cosa da fare. Nove invece di quattro, perché tra «due o tre piccole cose» e «parecchi segnali che vanno insieme» c'è una differenza vera, ed è proprio quella che si viene a cercare.",
     "headerScore": "Punti",
     "headerLevel": "Livello",
@@ -52,9 +52,9 @@
   },
   "section3": {
     "title": "Un red flag non è la stessa cosa di una relazione tossica",
-    "p1": "Un red flag è un segnale: qualcosa che dovrebbe farti rallentare e guardare più da vicino, all'inizio di una storia o nel mezzo. Una relazione tossica è quando quei segnali sono diventati la quotidianità e non sai più se stai esagerando. Se sei a quel punto, se la domanda non è più «questa persona ha dei red flag?» ma «quello che vivo è normale?», ti serve piuttosto <a href=\"/it/test-relazione-tossica/\">il test che misura se la tua relazione è tossica</a>.",
-    "p2": "E se quello che ti ha portato qui è un inizio troppo perfetto, le dichiarazioni dalla prima settimana, i messaggi a ogni ora, abbiamo scritto <a href=\"/it/blog/love-bombing-segnali/\">come distinguere un colpo di fulmine dal love bombing</a>, con una prova semplicissima che sta in una frase.",
-    "p3": "Al contrario, un risultato basso non risponde a tutto. Non essere un red flag non è la stessa cosa di essere la persona giusta. Se è questa la domanda che ti gira in testa, <a href=\"/it/test-e-la-persona-giusta/\">altre venti domande guardano se è la persona giusta</a>, e sono domande completamente diverse."
+    "p1": "Un red flag è un segnale: qualcosa che dovrebbe farti rallentare e guardare più da vicino, all'inizio di una storia o nel mezzo. Una relazione tossica è quando quei segnali sono diventati la quotidianità e non sai più se stai esagerando. Se sei a quel punto, se la domanda non è più «questa persona ha dei red flag?» ma «quello che vivo è normale?», forse sei già dentro <a href=\"/it/test-relazione-tossica/\">una relazione tossica</a>, e quella si misura in un altro modo.",
+    "p2": "E se quello che ti ha portato qui è un inizio troppo perfetto, le dichiarazioni dalla prima settimana, i messaggi a ogni ora, forse non è un colpo di fulmine ma <a href=\"/it/blog/love-bombing-segnali/\">love bombing</a>, e si verifica con una sola frase.",
+    "p3": "Al contrario, un risultato basso non risponde a tutto. Non essere un red flag non è la stessa cosa di <a href=\"/it/test-e-la-persona-giusta/\">essere la persona giusta</a>, e per quello le domande da farsi sono completamente diverse."
   },
   "seo": {
     "faqTitle": "Le domande che ci si fa",
@@ -69,7 +69,7 @@
     "faq5Q": "Il risultato è alto. Cosa faccio?",
     "faq5A": "Prima rileggi le domande in cui hai scelto l'ultima risposta: sono quelle che hanno fatto il punteggio, e dicono cosa succede meglio di un numero. Poi parlane con qualcuno che non è dentro la storia, leggendogli le tue risposte così come sono. E se una delle tue risposte parla di botte, di paura o di un no che non viene rispettato, non restare solo con questo: in Italia il 1522 risponde gratis e ti dice cosa fare.",
     "faq6Q": "Qual è la differenza con il test della relazione tossica?",
-    "faq6A": "Questo test guarda una persona: quello che fa, fin dall'inizio se vuoi, che tu stia con lei oppure non ancora. Il test della relazione tossica guarda una relazione già avviata: quello che vivete in due, la paura, il senso di colpa, la fiducia in te stesso che si consuma. Il primo serve a decidere se continuare. Il secondo, a capire in cosa ci si trova già."
+    "faq6A": "Questo test guarda una persona: quello che fa, fin dall'inizio se vuoi, che tu stia con lei oppure non ancora. Il test della relazione tossica guarda una relazione già avviata: quello che vivete in due, la paura, il senso di colpa, la fiducia in te stesso che si consuma. Il primo serve a decidere se continuare con qualcuno. Il secondo, a capire quello che si sta già vivendo."
   },
   "jsonLd": {
     "about": "riconoscere i red flag in una persona"

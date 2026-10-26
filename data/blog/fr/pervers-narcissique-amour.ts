@@ -195,7 +195,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-est-il-conscient',
           title: "Est-ce qu'il est conscient de ce qu'il fait ?",
-          content: `<p>En partie, oui. Il sait viser : les attaques tombent toujours sur tes points sensibles, jamais devant témoins, ce qui suppose quand même une forme de calcul. Mais il ne se vit presque jamais comme un bourreau. Dans son récit intérieur, c'est lui la victime ! C'est pour ça qu'attendre une prise de conscience ne mène nulle part, et que la seule vraie question reste ce que toi tu vis. Si tu en es là, notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> t'aidera à y répondre posément.</p>`,
+          content: `<p>En partie, oui. Il sait viser : les attaques tombent toujours sur tes points sensibles, jamais devant témoins, ce qui suppose quand même une forme de calcul. Mais il ne se vit presque jamais comme un bourreau. Dans son récit intérieur, c'est lui la victime ! C'est pour ça qu'attendre une prise de conscience ne mène nulle part, et que la seule vraie question reste ce que toi tu vis. Si tu en es là, <a href="/test-pervers-narcissique/">les signes qu'on est en couple avec un pervers narcissique</a> se passent en revue un par un, posément.</p>`,
         },
         {
           id: 'faq-combien-de-temps-pour-s-en-remettre',

@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/quiz-quien-conoce-mejor-pareja/">Lanzar el reto</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Para jugar en pareja</p>
 </div>
-<p>Y si estas noches se convierten en vuestro ritual, hay para meses: las <a href="/es/blog/preguntas-para-tu-novio/">100 preguntas para hacerle a tu novio</a> por un lado, las <a href="/es/blog/preguntas-para-tu-novia/">preguntas para hacerle a tu novia</a> por el otro.</p>
+<p>Y si estas noches se convierten en vuestro ritual, hay para meses: las <a href="/es/blog/preguntas-para-tu-novio/">preguntas para hacerle a tu novio</a> por un lado, las <a href="/es/blog/preguntas-para-tu-novia/">preguntas para hacerle a tu novia</a> por el otro.</p>
 <a href="/es/blog/preguntas-intimas-pareja/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">65 preguntas íntimas para tu pareja, de las más dulces a las más atrevidas</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

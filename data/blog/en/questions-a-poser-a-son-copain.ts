@@ -194,7 +194,7 @@ const article: BlogArticleData = {
 <li>What are you listening to right now that I should listen to too?</li>
 <li>If I turned up at yours in an hour, what would you change about your evening?</li>
 </ol>
-<p>At a distance, the real risk isn't running out of subjects, it's that every exchange starts to sound the same; a <a href="/en/long-distance-relationship-quiz/">quiz designed for long-distance couples</a>, each on your own screen, breaks that routine better than a third video call in a row.</p>`,
+<p>At a distance, the real risk isn't running out of subjects, it's that every exchange starts to sound the same; asking each other <a href="/en/long-distance-relationship-quiz/">questions made for long distance</a>, each on your own screen, breaks that routine better than a third video call in a row.</p>`,
     },
     {
       id: 'five-trick-questions',

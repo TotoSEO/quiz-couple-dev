@@ -53,7 +53,7 @@ const article: BlogArticleData = {
           id: 'ist-es-immer-berechnend',
           title: "Ist es immer berechnend?",
           content: `<p>Nein, und diese Nuance zählt. Manche Menschen betreiben Love Bombing ohne bewusste Strategie: Sie erleben Beziehungsanfänge in extremer Intensität, weil ihr Verhältnis zur Bindung ängstlich ist, und die Intensität legt sich von selbst. Das ist unangenehm zu erleben, aber es ist keine Manipulation.</p>
-<p>Bei anderen dagegen ist Love Bombing der erste Baustein eines viel größeren Musters, in dem Verführung dazu dient, Kontrolle zu übernehmen. Es ist ein klassischer Marker manipulativer Profile, so sehr, dass es in Berichten über Beziehungen mit einem Narzissten fast immer auftaucht. Wenn das im Kern deine Frage ist, geht unser <a href="/de/narzisstischer-partner-test/">Test „bin ich mit einem Narzissten zusammen"</a> diese Situationen einzeln durch.</p>
+<p>Bei anderen dagegen ist Love Bombing der erste Baustein eines viel größeren Musters, in dem Verführung dazu dient, Kontrolle zu übernehmen. Es ist ein klassischer Marker manipulativer Profile, so sehr, dass es in Berichten über <a href="/de/narzisstischer-partner-test/">Beziehungen mit einem Narzissten</a> fast immer auftaucht.</p>
 <p>In beiden Fällen ist die Wirkung auf dich real. Aber der Ausgang ist nicht derselbe, und es ist der weitere Zyklus, der den Unterschied sichtbar macht.</p>`,
         },
       ],
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. Die Abwertung: der Boden verschwindet",
           content: `<p>Dann hört es auf. Selten mit einem sauberen Schnitt, eher in Stufen. Die Nachrichten werden seltener. Aus Komplimenten werden Bemerkungen. Was er an dir liebte, beginnt ihn zu stören: Deine Spontaneität wird zu Unberechenbarkeit, deine Unabhängigkeit zu Kälte, dein Blick fürs Detail zu Schwerfälligkeit.</p>
 <p>Und du suchst automatisch, was du falsch gemacht hast. Du suchst nicht, was sich bei ihm verändert hat, du suchst deinen eigenen Fehler, weil man dich auf ein Podest gestellt hat und du wieder hinaufwillst. Das ist der Kern des Mechanismus: <strong>Die Abwertung funktioniert nur, weil es vorher die Idealisierung gab.</strong> Ohne Gipfel kein Absturz.</p>
-<p>In dieser Phase kippt eine Beziehung konkret ins Toxische. Wenn du diesen Umschlagpunkt wiedererkennst, hilft der <a href="/de/toxische-beziehung-test/">Test zur toxischen Beziehung</a> dabei, dem Veränderten Worte zu geben. Und wenn du noch ganz am Anfang stehst und wissen willst, ob <a href="/de/red-flag-test/">diese Person außer dem Tempo noch andere Zeichen zeigt</a>, gewichten zwanzig Fragen jedes davon nach seiner Schwere.</p>`,
+<p>In dieser Phase <a href="/de/toxische-beziehung-test/">kippt eine Beziehung ins Toxische</a>, und oft fängt man genau dann an, sich zu fragen, ob man übertreibt. Wenn du noch ganz am Anfang stehst, ist das Tempo nicht das einzige Zeichen, auf das du achten solltest: <a href="/de/red-flag-test/">die Red Flags eines Menschen</a> zeigen sich auch daran, wie er ein Nein aufnimmt, über seine Ex redet oder auf einen Ärger reagiert.</p>`,
         },
         {
           id: 'phase-verstossung-rueckkehr',
