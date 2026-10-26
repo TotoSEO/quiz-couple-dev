@@ -165,7 +165,7 @@ const article: BlogArticleData = {
         {
           id: 'wenn-unsere-sternzeichen-nicht-zusammenpassen',
           title: `Und wenn unsere Sternzeichen nicht zusammenpassen?`,
-          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, <a href="/de/liebeskompatibilitaet-test/">jeder für sich zwanzig Fragen zu eurer Beziehung zu beantworten</a> und zu vergleichen.</p>`,
+          content: `<p>Diese Noten beschreiben Tendenzen, keine Urteile: Es gibt Stier-Wassermann-Paare, die zwanzig Jahre halten, und Zwillinge-Waage-Paare, die den Sommer nicht überstehen. Um zu sehen, wie es bei euch beiden aussieht, ist das Einfachste, nachzusehen, <a href="/de/liebeskompatibilitaet-test/">wie gut eure Werte und Charaktere zusammenpassen</a>, jeder für sich und dann im Vergleich.</p>`,
         },
       ],
     },

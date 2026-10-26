@@ -112,7 +112,7 @@ const article: BlogArticleData = {
 
 <p><strong>"Make him jealous and it will speed things up."</strong> That produces agitation, not attachment. Agitation fades in three days; attachment is built by quiet repetition.</p>
 
-<p><strong>"If he were the one, it would be obvious."</strong> For some yes, for many no. Doubt at the start is ordinary and says nothing about what follows. If the question runs the other way, about what you feel, a <a href="/en/am-i-in-love-test/">questionnaire about what you actually feel</a> sometimes helps more than a night spent turning it over.</p>`,
+<p><strong>"If he were the one, it would be obvious."</strong> For some yes, for many no. Doubt at the start is ordinary and says nothing about what follows. If the question runs the other way, putting words on <a href="/en/am-i-in-love-test/">what you feel yourself, love or mere attraction</a>, sometimes helps more than a night spent turning it over.</p>`,
     },
     {
       id: 'common-questions',
@@ -121,7 +121,7 @@ const article: BlogArticleData = {
 The ranges vary enormously between people. What comes up most often is a few weeks for comfort, two to four months for the absence. A man who "knows" after three days? He is generally confusing attraction with feeling.</p>
 
 <p><strong>How can I tell whether he feels something without asking?</strong><br>
-By watching what he does when there is nothing to gain: a message for no reason, a favour done with no audience. If the doubt persists and he says nothing, there is a <a href="/en/does-he-she-secretly-love-me-test/">questionnaire on the signs of undeclared attachment</a> that lists the concrete clues.</p>
+By watching what he does when there is nothing to gain: a message for no reason, a favour done with no audience. If the doubt persists and he says nothing, <a href="/en/does-he-she-secretly-love-me-test/">the signs that he secretly loves you</a> can be listed, and they are concrete.</p>
 
 <p><strong>Can feelings develop after friendship?</strong><br>
 Yes, and it is one of the most solid routes, because stages 2, 3 and 4 have already been cleared. What is missing is the tipping point, and it is often triggered by an absence.</p>

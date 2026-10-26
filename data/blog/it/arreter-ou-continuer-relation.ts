@@ -142,7 +142,7 @@ const article: BlogArticleData = {
 
 <p>Se la risposta è sì, stai attraversando qualcosa. Se la risposta è «non lo so»… o peggio «no, ma almeno sarebbe più semplice», allora il problema non era il problema.</p>
 
-<p>Un'intuizione non basta a rispondere a questa domanda. Un <a href="/it/test-e-la-fine-della-mia-relazione/">questionario che pesa ogni segnale di fine secondo la sua gravità</a> dà un risultato più difficile da liquidare del ricordo dell'ultimo litigio.</p>`,
+<p>Un'intuizione non basta a rispondere a questa domanda. Guardare uno per uno <a href="/it/test-e-la-fine-della-mia-relazione/">i segnali che una relazione sta finendo</a> dà un risultato più difficile da liquidare del ricordo dell'ultimo litigio.</p>`,
     },
     {
       id: 'non-e-un-motivo',
@@ -209,9 +209,9 @@ const article: BlogArticleData = {
 
 <p><strong>Parla con qualcuno che non ti voglia troppo bene:</strong> i tuoi migliori amici ti diranno quello che vuoi sentirti dire. Un terapeuta, un fratello un po' ruvido, chiunque non abbia interessi nella storia ti sarà più utile.</p>
 
-<p><strong>E se non sai da dove cominciare la conversazione</strong>, la cosa più semplice è un questionario che compilate ciascuno per conto proprio prima di parlarne. Rispondere separatamente e poi confrontare disinnesca molto: non è più tu contro l'altro, siete voi due davanti a uno scarto misurato. Esiste per questo un <a href="/it/test-compatibilita-coppia/">questionario da compilare in due</a> che confronta le vostre risposte, e un altro che misura più precisamente <a href="/it/test-relazione-sana/">cosa rende sana una relazione</a>.</p>
+<p><strong>E se non sai da dove cominciare la conversazione</strong>, la cosa più semplice è un questionario che compilate ciascuno per conto proprio prima di parlarne. Rispondere separatamente e poi confrontare disinnesca molto: non è più tu contro l'altro, siete voi due davanti a uno scarto misurato. Per questo, la cosa che dice di più è <a href="/it/test-compatibilita-coppia/">mettere le vostre due visioni della coppia una accanto all'altra</a>, e poi misurare più precisamente <a href="/it/test-relazione-sana/">cosa rende sana una relazione</a>.</p>
 
-<p>Quando la domanda pesa di più e la parola separazione è già sul tavolo, esiste anche un <a href="/it/test-devo-divorziare/">questionario costruito intorno alla decisione di divorziare</a>, con fasce di risultato pensate per quel momento.</p>`,
+<p>Quando la domanda pesa di più e <a href="/it/test-devo-divorziare/">la parola divorzio è già sul tavolo</a>, i segnali da guardare non sono più gli stessi.</p>`,
     },
     {
       id: 'se-decidi-di-continuare',

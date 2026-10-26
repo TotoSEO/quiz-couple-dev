@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'and-if-its-the-right-moment',
       title: "And after these 60 questions?",
-      content: `<p>If you've asked even half of all that over the weeks, you already know the essentials: how this person works, what they're looking for, and whether your directions line up. That's already far more than most couples know at the same stage. And if, somewhere in those answers, something made you wince without your being able to say what, <a href="/en/red-flag-test/">twenty questions about what this person does, not what they say</a>, weigh each sign by how serious it is.</p>
+      content: `<p>If you've asked even half of all that over the weeks, you already know the essentials: how this person works, what they're looking for, and whether your directions line up. That's already far more than most couples know at the same stage. And if, somewhere in those answers, something made you wince without your being able to say what, it may be that <a href="/en/red-flag-test/">this person has red flags</a>: you spot them in what they do, not in what they say.</p>
 <p>What remains is the question that questions don't settle: what YOU feel. The attachment building up, is it friendship overflowing, attraction passing through, or the start of the real thing? At some point you have to ask yourself straight.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Overflowing friendship or the start of love?</p>

@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'loss-of-identity',
           title: "The Gradual Loss of Identity",
           content: `<p>This is one of the most insidious aspects. It doesn't happen overnight. You start by adapting your tastes. Then your schedule. Then your friendships. Then your opinions. After a few months, you can barely tell what you like, what you want, what you think independently of the other person.</p>
-<p>This isn't relationship compromise, it's erasure. And the worst part is that you usually only realize it after the breakup, when you're face to face with yourself and discover you no longer know who you are. If you feel stuck in this situation, <a href="/en/couple-compatibility-test/">taking stock of your relationship</a> can help you see things more clearly.</p>`,
+<p>This isn't relationship compromise, it's erasure. And the worst part is that you usually only realize it after the breakup, when you're face to face with yourself and discover you no longer know who you are. If you feel stuck in this situation, looking at <a href="/en/couple-compatibility-test/">what each of you answers about your relationship</a> can help you see things more clearly.</p>`,
         },
       ],
     },

@@ -195,7 +195,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-e-consapevole',
           title: "È consapevole di quello che fa?",
-          content: `<p>In parte sì. Sa mirare: gli attacchi cadono sempre sui tuoi punti sensibili, mai davanti a testimoni, il che presuppone una forma di calcolo. Ma quasi mai si vive come un carnefice. Nel suo racconto interiore la vittima è lui. Per questo aspettare una presa di coscienza non porta da nessuna parte, e l'unica vera domanda resta cosa vivi tu. Se sei a quel punto, il nostro <a href="/it/test-partner-narcisista/">test «sono con un narcisista?»</a> ti aiuterà a rispondere con calma.</p>`,
+          content: `<p>In parte sì. Sa mirare: gli attacchi cadono sempre sui tuoi punti sensibili, mai davanti a testimoni, il che presuppone una forma di calcolo. Ma quasi mai si vive come un carnefice. Nel suo racconto interiore la vittima è lui. Per questo aspettare una presa di coscienza non porta da nessuna parte, e l'unica vera domanda resta cosa vivi tu. Se sei a quel punto, <a href="/it/test-partner-narcisista/">i segnali che sei con un narcisista</a> si possono passare in rassegna uno per uno, con calma.</p>`,
         },
         {
           id: 'faq-quanto-tempo-serve',

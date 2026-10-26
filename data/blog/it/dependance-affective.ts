@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'perdita-identita',
           title: "La perdita progressiva di identità",
           content: `<p>È uno degli aspetti più insidiosi. Non succede da un giorno all'altro. Inizi ad adattare i tuoi gusti. Poi i tuoi orari. Poi le tue amicizie. Poi le tue opinioni. Dopo qualche mese, non sai più bene cosa ti piace, cosa vuoi, cosa pensi indipendentemente dall'altro.</p>
-<p>Non è un compromesso di coppia, è una cancellazione. E il peggio è che di solito te ne rendi conto solo dopo la rottura, quando ti ritrovi di fronte a te stesso/a e scopri di non sapere più chi sei. Se ti senti intrappolato/a in questa situazione, <a href="/it/test-compatibilita-coppia/">fare il punto sulla tua relazione</a> può aiutarti a vederci più chiaro.</p>`,
+<p>Non è un compromesso di coppia, è una cancellazione. E il peggio è che di solito te ne rendi conto solo dopo la rottura, quando ti ritrovi di fronte a te stesso/a e scopri di non sapere più chi sei. Se ti senti intrappolato/a in questa situazione, guardare <a href="/it/test-compatibilita-coppia/">quello che rispondete ognuno sulla vostra relazione</a> può aiutarti a vederci più chiaro.</p>`,
         },
       ],
     },

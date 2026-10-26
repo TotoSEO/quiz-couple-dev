@@ -142,7 +142,7 @@ const article: BlogArticleData = {
 
 <p>Wenn die Antwort ja lautet, gehst du durch etwas hindurch. Wenn die Antwort «Ich weiß nicht» lautet… oder schlimmer «Nein, aber es wäre wenigstens einfacher», dann war das Problem nie das Problem.</p>
 
-<p>Ein Bauchgefühl reicht für diese Frage nicht. Ein <a href="/de/ist-meine-beziehung-am-ende-test/">Fragebogen, der jedes Anzeichen eines Endes nach seinem Gewicht bewertet</a>, liefert ein Ergebnis, das sich schwerer beiseiteschieben lässt als die Erinnerung an den letzten Streit.</p>`,
+<p>Ein Bauchgefühl reicht für diese Frage nicht. Sich <a href="/de/ist-meine-beziehung-am-ende-test/">die Anzeichen, dass eine Beziehung zu Ende geht</a>, eines nach dem anderen anzusehen, liefert ein Ergebnis, das sich schwerer beiseiteschieben lässt als die Erinnerung an den letzten Streit.</p>`,
     },
     {
       id: 'kein-trennungsgrund',
@@ -209,9 +209,9 @@ const article: BlogArticleData = {
 
 <p><strong>Sprich mit jemandem, der dich nicht zu sehr mag:</strong> Deine besten Freunde sagen dir, was du hören willst. Eine Therapeutin, ein etwas rauer Bruder, irgendjemand ohne eigenes Interesse an der Geschichte nützt dir mehr.</p>
 
-<p><strong>Und wenn du nicht weißt, wie du das Gespräch beginnen sollst</strong>, ist ein Fragebogen am einfachsten, den ihr getrennt ausfüllt, bevor ihr redet. Getrennt antworten und dann vergleichen nimmt viel Schärfe heraus: Es ist nicht mehr du gegen den anderen, sondern ihr beide vor einem gemessenen Abstand. Es gibt dafür einen <a href="/de/paar-kompatibilitaetstest/">Fragebogen, den ihr zu zweit ausfüllt</a> und der eure Antworten vergleicht, und einen weiteren, der genauer misst, <a href="/de/gesunde-beziehung-test/">was eine Beziehung gesund macht</a>.</p>
+<p><strong>Und wenn du nicht weißt, wie du das Gespräch beginnen sollst</strong>, ist ein Fragebogen am einfachsten, den ihr getrennt ausfüllt, bevor ihr redet. Getrennt antworten und dann vergleichen nimmt viel Schärfe heraus: Es ist nicht mehr du gegen den anderen, sondern ihr beide vor einem gemessenen Abstand. Am aufschlussreichsten ist es dafür, <a href="/de/paar-kompatibilitaetstest/">eure beiden Sichtweisen auf die Beziehung nebeneinanderzulegen</a> und dann genauer zu messen, <a href="/de/gesunde-beziehung-test/">was eine Beziehung gesund macht</a>.</p>
 
-<p>Wenn die Frage schwerer wiegt und das Wort Trennung schon auf dem Tisch liegt, gibt es außerdem einen <a href="/de/scheidungstest/">Fragebogen rund um die Entscheidung zur Scheidung</a>, dessen Ergebnisstufen für genau diesen Moment geschrieben sind.</p>`,
+<p>Wenn die Frage schwerer wiegt und <a href="/de/scheidungstest/">das Wort Scheidung schon auf dem Tisch liegt</a>, sind es nicht mehr dieselben Anzeichen, auf die es ankommt.</p>`,
     },
     {
       id: 'wenn-du-bleibst',

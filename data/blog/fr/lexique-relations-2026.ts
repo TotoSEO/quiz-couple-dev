@@ -67,7 +67,7 @@ const article: BlogArticleData = {
 <p>Un red flag, c'est un signal d'alerte. Quelque chose dans le comportement, les paroles ou les habitudes de quelqu'un qui dit "attention, regardes-y de plus près". Pas forcément rédhibitoire, pas forcément définitif, mais à ne pas ignorer.</p>
 <p>Le vrai intérêt du terme, c'est qu'il a rendu légitime de nommer ses doutes. Avant, quand quelqu'un se comportait d'une façon qui vous mettait mal à l'aise, vous trouviez des excuses ou vous vous disiez que vous étiez trop sensible. Aujourd'hui, vous pouvez dire "c'est un red flag" et la personne en face comprend exactement ce que vous voulez dire.</p>
 <p>La limite, c'est qu'on finit par appeler red flag n'importe quel comportement légèrement irritant. Ne pas rappeler dans l'heure, aimer un film que vous détestez, mettre du ketchup sur les pâtes, certains listent ça comme des signaux d'alerte, ce qui vide un peu le mot de son sens.</p>
-<p>Si vous avez des doutes sur une relation, le <a href="https://quiz-couple.com/test-couple-toxique/">test couple toxique</a> peut vous aider à sortir de votre tête et à regarder les choses en face.</p>
+<p>Si vous avez des doutes sur une relation, regarder en face <a href="/test-couple-toxique/">les signes qu'elle est devenue toxique</a> aide à sortir de votre tête.</p>
 <p>Ce que ça dit de nous : qu'on est plus attentifs aux signaux d'alerte qu'avant. C'est bien. Qu'on est aussi devenus un peu experts en justifications pour éviter d'agir sur ces signaux. C'est moins bien.</p>`,
     },
     {
@@ -91,7 +91,7 @@ const article: BlogArticleData = {
       title: "Ce que ce vocabulaire dit de nous",
       content: `<p>Ces mots ont un point commun. Ils décrivent tous des situations qui existaient avant eux, le ghosting se pratiquait bien avant les smartphones, les signaux d'alerte dans une relation ont toujours existé, les coups de cœur non déclarés aussi. Ce qui a changé, c'est qu'on a maintenant des mots précis pour en parler.</p>
 <p>Et ça change quelque chose. Nommer une chose, c'est la rendre réelle, lui donner du poids, la sortir du domaine du flou où elle pouvait rester indéfiniment. Quand vous pouvez dire "il me ghoste" ou "c'est un red flag", vous pouvez aussi décider quoi faire avec ça.</p>
-<p>La question, c'est ce qu'on fait après avoir nommé. Parce que les mots n'agissent pas à notre place. Si vous reconnaissez des signaux dans votre relation, le <a href="https://quiz-couple.com/test-couple-sain/">test couple sain</a> est un bon point de départ pour voir où vous en êtes vraiment.</p>`,
+<p>La question, c'est ce qu'on fait après avoir nommé. Parce que les mots n'agissent pas à notre place. Si vous reconnaissez des signaux dans votre relation, <a href="/test-couple-sain/">ce qui fait qu'un couple est sain</a> est un bon point de départ pour voir où vous en êtes vraiment.</p>`,
     },
   ],
   conclusion: '',

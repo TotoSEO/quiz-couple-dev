@@ -195,7 +195,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-ist-er-sich-bewusst',
           title: "Ist ihm bewusst, was er tut?",
-          content: `<p>Zum Teil ja. Er kann zielen: die Angriffe treffen immer deine empfindlichen Stellen, nie vor Zeugen, und das setzt eine Form von Kalkül voraus. Aber er erlebt sich fast nie als Täter. In seiner inneren Erzählung ist er das Opfer. Deshalb führt das Warten auf eine Einsicht nirgendwohin, und die einzige echte Frage bleibt, was du erlebst. Wenn du an diesem Punkt bist, hilft dir unser <a href="/de/narzisstischer-partner-test/">Test «bin ich mit einem Narzissten zusammen»</a>, das in Ruhe zu beantworten.</p>`,
+          content: `<p>Zum Teil ja. Er kann zielen: die Angriffe treffen immer deine empfindlichen Stellen, nie vor Zeugen, und das setzt eine Form von Kalkül voraus. Aber er erlebt sich fast nie als Täter. In seiner inneren Erzählung ist er das Opfer. Deshalb führt das Warten auf eine Einsicht nirgendwohin, und die einzige echte Frage bleibt, was du erlebst. Wenn du an diesem Punkt bist, lassen sich <a href="/de/narzisstischer-partner-test/">die Anzeichen, dass du mit einem Narzissten zusammen bist</a>, eines nach dem anderen in Ruhe durchgehen.</p>`,
         },
         {
           id: 'faq-wie-lange-dauert-es',

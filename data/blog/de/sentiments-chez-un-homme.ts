@@ -112,7 +112,7 @@ const article: BlogArticleData = {
 
 <p><strong>«Man muss ihn eifersüchtig machen, damit es schneller geht.»</strong> Das erzeugt Aufregung, keine Bindung. Aufregung fällt nach drei Tagen in sich zusammen; Bindung entsteht durch ruhige Wiederholung.</p>
 
-<p><strong>«Wenn er der Richtige wäre, wäre es offensichtlich.»</strong> Für manche ja, für viele nicht. Zweifel am Anfang sind normal und sagen nichts über das Danach. Wenn die Frage andersherum läuft, also um das, was du selbst empfindest, hilft ein <a href="/de/bin-ich-verliebt-test/">Fragebogen darüber, was du wirklich fühlst</a>, manchmal mehr als eine Nacht des Grübelns.</p>`,
+<p><strong>«Wenn er der Richtige wäre, wäre es offensichtlich.»</strong> Für manche ja, für viele nicht. Zweifel am Anfang sind normal und sagen nichts über das Danach. Wenn die Frage andersherum läuft, hilft es manchmal mehr als eine Nacht des Grübelns, <a href="/de/bin-ich-verliebt-test/">das, was du selbst fühlst, Liebe oder bloße Anziehung</a>, in Worte zu fassen.</p>`,
     },
     {
       id: 'haeufige-fragen',
@@ -121,7 +121,7 @@ const article: BlogArticleData = {
 Die Spannen unterscheiden sich enorm von Person zu Person. Am häufigsten genannt werden ein paar Wochen für das Wohlgefühl und zwei bis vier Monate für das Vermissen. Ein Mann, der es nach drei Tagen «weiß»? Der verwechselt in der Regel Anziehung mit Gefühl.</p>
 
 <p><strong>Wie erkenne ich, ob er etwas empfindet, ohne zu fragen?</strong><br>
-Indem du darauf achtest, was er tut, wenn es nichts zu gewinnen gibt: eine Nachricht ohne Anlass, ein Gefallen ohne Publikum. Wenn der Zweifel bleibt und er nichts sagt, gibt es einen <a href="/de/liebt-er-sie-mich-heimlich-test/">Fragebogen zu den Anzeichen einer unausgesprochenen Bindung</a>, der die konkreten Hinweise auflistet.</p>
+Indem du darauf achtest, was er tut, wenn es nichts zu gewinnen gibt: eine Nachricht ohne Anlass, ein Gefallen ohne Publikum. Wenn der Zweifel bleibt und er nichts sagt, lassen sich <a href="/de/liebt-er-sie-mich-heimlich-test/">die Anzeichen, dass er dich heimlich liebt</a>, auflisten, und sie sind konkret.</p>
 
 <p><strong>Können Gefühle nach einer Freundschaft entstehen?</strong><br>
 Ja, und es ist sogar einer der stabilsten Wege, weil die Phasen 2, 3 und 4 bereits durchlaufen sind. Was fehlt, ist der Umschlag, und der wird oft durch eine Abwesenheit ausgelöst.</p>

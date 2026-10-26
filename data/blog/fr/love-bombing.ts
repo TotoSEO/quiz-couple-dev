@@ -53,7 +53,7 @@ const article: BlogArticleData = {
           id: 'qui-fait-ca',
           title: "Est-ce que c'est toujours calculé ?",
           content: `<p>Non, et c'est une nuance qui compte. Certaines personnes love bombent sans stratégie consciente : elles vivent des débuts de relation dans une intensité extrême parce qu'elles ont un <a href="/blog/attachement-anxieux/">rapport anxieux à l'attachement</a>, et l'intensité retombe d'elle-même. Ce n'est pas agréable à vivre, mais ce n'est pas de la manipulation.</p>
-<p>Chez d'autres, en revanche, le love bombing est la première pièce d'un fonctionnement bien plus large, où la séduction sert à prendre le contrôle. C'est un marqueur classique des <a href="/blog/manipulateur-narcissique/">profils manipulateurs</a>, au point qu'il figure presque systématiquement dans les récits de relations avec un pervers narcissique. Si c'est le fond de ta question, notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> reprend ces situations une par une.</p>
+<p>Chez d'autres, en revanche, le love bombing est la première pièce d'un fonctionnement bien plus large, où la séduction sert à prendre le contrôle. C'est un marqueur classique des <a href="/blog/manipulateur-narcissique/">profils manipulateurs</a>, au point qu'il figure presque systématiquement dans les récits de <a href="/test-pervers-narcissique/">relations avec un pervers narcissique</a>.</p>
 <p>Dans les deux cas, l'effet sur toi est réel. Mais l'issue n'est pas la même, et c'est la suite du cycle qui permet de faire la différence.</p>`,
         },
       ],
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La dévaluation : le sol se dérobe",
           content: `<p>Puis ça s'arrête. Rarement d'un coup net, plutôt par paliers. Les messages s'espacent. Les compliments deviennent des remarques. Ce qu'il adorait chez toi commence à l'agacer : ta spontanéité devient de l'imprévisibilité, ton indépendance devient de la froideur, ton attention aux détails devient de la lourdeur.</p>
 <p>Et toi, mécaniquement, tu cherches ce que tu as fait. Tu ne cherches pas ce qui s'est passé chez lui, tu cherches ton erreur à toi, parce qu'on t'a mise sur un piédestal et que tu veux y remonter. C'est le cœur du mécanisme : <strong>la dévaluation ne fonctionne que parce que l'idéalisation a existé avant.</strong> Sans le sommet, il n'y a pas de chute.</p>
-<p>Cette phase est celle où une relation bascule concrètement dans la toxicité. Si tu reconnais cette bascule, le <a href="/test-couple-toxique/">test du couple toxique</a> aide à mettre des mots sur ce qui a changé. Et si tu en es encore au début, et que tu veux savoir si <a href="/test-red-flag/">cette personne coche d'autres signes que la vitesse</a>, vingt questions pèsent chacun selon sa gravité.</p>`,
+<p>Cette phase est celle où <a href="/test-couple-toxique/">une relation bascule dans la toxicité</a>, et c'est souvent là qu'on commence à se demander si on exagère. Si tu en es encore au tout début, le rythme n'est pas le seul signe à regarder : <a href="/test-red-flag/">les red flags d'une personne</a> se voient aussi à la façon dont elle prend un non, parle de ses ex ou réagit à une contrariété.</p>`,
         },
         {
           id: 'phase-rejet-retour',

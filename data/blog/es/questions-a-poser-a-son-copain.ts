@@ -194,7 +194,7 @@ const article: BlogArticleData = {
 <li>¿Qué estás escuchando ahora que yo debería escuchar también?</li>
 <li>Si apareciera en tu casa dentro de una hora, ¿qué cambiarías de tu noche?</li>
 </ol>
-<p>A distancia, el riesgo real no es quedarse sin temas, es que todos los intercambios acaben pareciéndose; un <a href="/es/quiz-pareja-distancia/">quiz pensado para parejas a distancia</a>, cada uno en su pantalla, rompe esa rutina mejor que una tercera videollamada seguida.</p>`,
+<p>A distancia, el riesgo real no es quedarse sin temas, es que todos los intercambios acaben pareciéndose; haceros <a href="/es/quiz-pareja-distancia/">preguntas pensadas para la distancia</a>, cada uno en su pantalla, rompe esa rutina mejor que una tercera videollamada seguida.</p>`,
     },
     {
       id: 'cinco-preguntas-trampa',

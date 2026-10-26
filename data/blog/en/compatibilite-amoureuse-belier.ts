@@ -165,7 +165,7 @@ const article: BlogArticleData = {
         {
           id: 'if-our-signs-are-not-compatible',
           title: `What if our signs aren't compatible?`,
-          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to <a href="/en/love-compatibility-test/">each answer twenty questions about your relationship</a>, and compare.</p>`,
+          content: `<p>These scores describe tendencies, not verdicts: there are Taurus-Aquarius couples that last twenty years and Gemini-Libra couples that don't make it through the summer. To see where the two of you stand, the simplest thing is to look at <a href="/en/love-compatibility-test/">how well your values and characters fit together</a>, each answering on your own.</p>`,
         },
       ],
     },

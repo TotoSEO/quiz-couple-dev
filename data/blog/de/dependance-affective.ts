@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'identitaetsverlust',
           title: "Der schleichende Identitätsverlust",
           content: `<p>Das ist einer der tückischsten Aspekte. Es passiert nicht über Nacht. Du fängst an, deinen Geschmack anzupassen. Dann deinen Zeitplan. Dann deine Freundschaften. Dann deine Meinungen. Nach ein paar Monaten weißt du kaum noch, was dir gefällt, was du willst, was du unabhängig vom anderen denkst.</p>
-<p>Das ist kein Beziehungskompromiss. Das ist Auslöschung. Und das Schlimmste ist, dass du es meist erst nach der Trennung bemerkst, wenn du dir selbst gegenüberstehst und feststellst, dass du nicht mehr weißt, wer du bist. Wenn du in dieser Situation steckst, kann dir <a href="/de/paar-kompatibilitaetstest/">eine Bestandsaufnahme deiner Beziehung</a> helfen, klarer zu sehen.</p>`,
+<p>Das ist kein Beziehungskompromiss. Das ist Auslöschung. Und das Schlimmste ist, dass du es meist erst nach der Trennung bemerkst, wenn du dir selbst gegenüberstehst und feststellst, dass du nicht mehr weißt, wer du bist. Wenn du in dieser Situation steckst, kann dir <a href="/de/paar-kompatibilitaetstest/">das, was ihr beide über eure Beziehung antwortet</a>, helfen, klarer zu sehen.</p>`,
         },
       ],
     },

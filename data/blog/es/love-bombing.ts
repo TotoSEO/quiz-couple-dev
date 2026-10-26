@@ -53,7 +53,7 @@ const article: BlogArticleData = {
           id: 'siempre-es-calculado',
           title: "¿Siempre es calculado?",
           content: `<p>No, y es un matiz que cuenta. Algunas personas hacen love bombing sin ninguna estrategia consciente: viven los comienzos de relación con una intensidad extrema porque tienen una relación ansiosa con el apego, y la intensidad baja por sí sola. No es agradable de vivir, pero no es manipulación.</p>
-<p>En otras, en cambio, el love bombing es la primera pieza de un funcionamiento mucho más amplio, donde la seducción sirve para tomar el control. Es un marcador clásico de los perfiles manipuladores, hasta el punto de que aparece casi siempre en los relatos de relaciones con un narcisista. Si esa es en el fondo tu pregunta, nuestro <a href="/es/test-pareja-narcisista/">test "¿estoy con un narcisista?"</a> recorre estas situaciones una por una.</p>
+<p>En otras, en cambio, el love bombing es la primera pieza de un funcionamiento mucho más amplio, donde la seducción sirve para tomar el control. Es un marcador clásico de los perfiles manipuladores, hasta el punto de que aparece casi siempre en los relatos de <a href="/es/test-pareja-narcisista/">relaciones con un narcisista</a>.</p>
 <p>En ambos casos el efecto sobre ti es real. Pero el desenlace no es el mismo, y es el resto del ciclo lo que permite distinguirlos.</p>`,
         },
       ],
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. La devaluación: el suelo desaparece",
           content: `<p>Y entonces se para. Rara vez de golpe, más bien por escalones. Los mensajes se espacian. Los cumplidos se convierten en comentarios. Lo que adoraba de ti empieza a molestarle: tu espontaneidad pasa a ser imprevisibilidad, tu independencia pasa a ser frialdad, tu atención al detalle pasa a ser pesadez.</p>
 <p>Y tú, mecánicamente, buscas qué has hecho. No buscas qué ha pasado en él, buscas tu error, porque te subieron a un pedestal y quieres volver a subir. Ese es el corazón del mecanismo: <strong>la devaluación solo funciona porque antes hubo idealización.</strong> Sin la cima no hay caída.</p>
-<p>Esta fase es aquella en la que una relación bascula de forma concreta hacia la toxicidad. Si reconoces ese punto de inflexión, el <a href="/es/test-relacion-toxica/">test de la relación tóxica</a> ayuda a poner palabras a lo que ha cambiado. Y si todavía estás al principio y quieres saber si <a href="/es/test-red-flag/">esta persona marca otras casillas además de la velocidad</a>, veinte preguntas pesan cada una según su gravedad.</p>`,
+<p>Esta fase es aquella en la que <a href="/es/test-relacion-toxica/">una relación bascula hacia lo tóxico</a>, y suele ser el momento en que uno empieza a preguntarse si exagera. Si todavía estás al principio, el ritmo no es la única señal que mirar: <a href="/es/test-red-flag/">las red flags de una persona</a> se ven también en cómo encaja un no, cómo habla de sus ex o cómo reacciona cuando algo le contraría.</p>`,
         },
         {
           id: 'fase-rechazo-regreso',

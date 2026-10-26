@@ -53,7 +53,7 @@ const article: BlogArticleData = {
           id: 'is-it-always-deliberate',
           title: "Is it always deliberate?",
           content: `<p>No, and that nuance matters. Some people love bomb with no conscious strategy: they experience the start of relationships at extreme intensity because their relationship to attachment is anxious, and the intensity fades on its own. It isn't pleasant to live through, but it isn't manipulation.</p>
-<p>For others, love bombing is the opening move of a much wider pattern, where seduction serves to take control. It's a classic marker of manipulative profiles, to the point that it appears in almost every account of a relationship with a narcissist. If that's really what your question is about, our <a href="/en/narcissistic-partner-test/">"am I dating a narcissist" test</a> walks through these situations one by one.</p>
+<p>For others, love bombing is the opening move of a much wider pattern, where seduction serves to take control. It's a classic marker of manipulative profiles, to the point that it appears in almost every account of <a href="/en/narcissistic-partner-test/">a relationship with a narcissist</a>.</p>
 <p>In both cases the effect on you is real. But the outcome is not the same, and it's the rest of the cycle that tells them apart.</p>`,
         },
       ],
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
           title: "2. Devaluation: the floor gives way",
           content: `<p>Then it stops. Rarely in one clean break, more often in steps. Messages thin out. Compliments turn into remarks. What he adored about you starts to irritate him: your spontaneity becomes unpredictability, your independence becomes coldness, your eye for detail becomes heaviness.</p>
 <p>And you, mechanically, look for what you did. You don't look for what changed in him, you look for your own mistake, because you were put on a pedestal and you want to climb back up. That's the heart of the mechanism: <strong>devaluation only works because idealisation came first.</strong> Without the summit, there's no fall.</p>
-<p>This is the phase where a relationship concretely tips into toxicity. If you recognise that tipping point, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> helps put words to what changed. And if you're still at the beginning and want to know whether <a href="/en/red-flag-test/">this person ticks other boxes than speed</a>, twenty questions weigh each one by how serious it is.</p>`,
+<p>This is the phase where <a href="/en/toxic-relationship-test/">a relationship tips into toxicity</a>, and it's often when you start wondering whether you're exaggerating. If you're still at the very beginning, the pace isn't the only sign to look at: <a href="/en/red-flag-test/">a person's red flags</a> also show in the way they take a no, talk about their exes or react when something annoys them.</p>`,
         },
         {
           id: 'phase-rejection-return',

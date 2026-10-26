@@ -57,7 +57,7 @@ const article: BlogArticleData = {
           id: 'perte-identite',
           title: "La perte d'identité progressive",
           content: `<p>C'est un des aspects les plus insidieux. Ça ne se fait pas d'un coup. Tu commences par adapter tes goûts. Puis tes horaires. Puis tes amitiés. Puis tes opinions. Au bout de quelques mois, tu ne sais plus très bien ce que tu aimes, ce que tu veux, ce que tu penses indépendamment de l'autre.</p>
-<p>Ce n'est pas un compromis de couple. C'est un effacement. Et le pire, c'est que <a href="/blog/dependance-affective-rupture/">tu ne t'en rends souvent compte qu'après la rupture</a>, quand tu te retrouves face à toi-même et que tu réalises que tu ne sais plus qui tu es. Si tu te sens dans cette situation, <a href="/tester-son-couple/">faire le point sur ta relation</a> peut t'aider à y voir plus clair.</p>`,
+<p>Ce n'est pas un compromis de couple. C'est un effacement. Et le pire, c'est que <a href="/blog/dependance-affective-rupture/">tu ne t'en rends souvent compte qu'après la rupture</a>, quand tu te retrouves face à toi-même et que tu réalises que tu ne sais plus qui tu es. Si tu te sens dans cette situation, regarder <a href="/tester-son-couple/">ce que vous répondez chacun sur votre couple</a> peut t'aider à y voir plus clair.</p>`,
         },
       ],
     },
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
 <tr><td>Tu cherches la validation en permanence</td><td>Tu sais que tu as de la valeur, avec ou sans lui/elle</td></tr>
 <tr><td>La relation te consume</td><td>La relation t'enrichit</td></tr>
 </tbody></table></div>
-<p>Ce tableau n'est pas là pour te culpabiliser. Il est là pour te donner une grille de lecture. Si tu te reconnais dans la colonne de gauche, ce n'est pas une condamnation, c'est un point de départ. Tu peux d'ailleurs <a href="/test-couple-sain/">vérifier si ta relation repose sur des bases saines</a> pour compléter cette réflexion.</p>`,
+<p>Ce tableau n'est pas là pour te culpabiliser. Il est là pour te donner une grille de lecture. Si tu te reconnais dans la colonne de gauche, ce n'est pas une condamnation, c'est un point de départ. D'ailleurs, pour compléter cette réflexion, <a href="/test-couple-sain/">les bases saines d'une relation</a> se vérifient point par point.</p>`,
     },
     {
       id: 'comment-s-en-sortir',

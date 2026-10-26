@@ -165,7 +165,7 @@ const article: BlogArticleData = {
         {
           id: 'si-nuestros-signos-no-son-compatibles',
           title: `¿Y si nuestros signos no son compatibles?`,
-          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es <a href="/es/test-compatibilidad-amorosa/">responder cada uno a veinte preguntas sobre vuestra relación</a>, y comparar.</p>`,
+          content: `<p>Estas notas describen tendencias, no veredictos: hay parejas Tauro-Acuario que duran veinte años y parejas Géminis-Libra que no pasan del verano. Para ver qué pasa con vosotros dos, lo más sencillo es mirar <a href="/es/test-compatibilidad-amorosa/">hasta qué punto vuestros valores y caracteres encajan</a>, respondiendo cada uno por su lado.</p>`,
         },
       ],
     },

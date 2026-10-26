@@ -35,7 +35,7 @@ const article: BlogArticleData = {
 <li><strong>Tu n'as plus envie de te battre :</strong> tu entends un truc qui t'aurait fait bondir il y a six mois, et tu hausses les épaules.</li>
 </ol>
 <p>Ce dernier signe est le plus trompeur, parce qu'il ressemble à une accalmie. La colère, aussi pénible soit-elle, prouve qu'il reste de l'énergie dans la relation : tu te bats parce que tu veux que ça change. L'indifférence, c'est quand tu as lâché. Et souvent, c'est là que l'autre commence à paniquer, quand il réalise que tu ne réagis plus.</p>
-<p>Si tu te reconnais dans trois de ces lignes ou plus, ce n'est pas de la parano. Pour y voir plus clair, vous pouvez <a href="/tester-son-couple/">répondre à vingt questions chacun de votre côté</a> et comparer, ou, si la vraie question est déjà « est-ce que c'est fini ? », regarder <a href="/test-est-ce-la-fin-de-mon-couple/">où en est la relation sur huit paliers</a>.</p>`,
+<p>Si tu te reconnais dans trois de ces lignes ou plus, ce n'est pas de la parano. Pour y voir plus clair, vous pouvez comparer <a href="/tester-son-couple/">ce que chacun pense de votre couple</a>, ou, si la vraie question est déjà « est-ce que c'est fini ? », regarder <a href="/test-est-ce-la-fin-de-mon-couple/">où en est la relation sur huit paliers</a>.</p>`,
     },
     {
       id: 'pourquoi-les-couples-se-perdent',
