@@ -3372,6 +3372,222 @@
           "They plan a surprise"
         ]
       ]
+    },
+    {
+      "id": "tp-109",
+      "theme": "Snow day edition",
+      "exemples": [
+        [
+          "Sledding at night",
+          "Sledding at dawn"
+        ],
+        [
+          "Snow angels",
+          "A snow fort"
+        ],
+        [
+          "Walk in fresh snow",
+          "Watch it from the window"
+        ]
+      ]
+    },
+    {
+      "id": "tp-110",
+      "theme": "Garden edition",
+      "exemples": [
+        [
+          "Grow tomatoes",
+          "Grow flowers"
+        ],
+        [
+          "A hammock",
+          "A swing bench"
+        ],
+        [
+          "Water the plants at dawn",
+          "Water them at sunset"
+        ]
+      ]
+    },
+    {
+      "id": "tp-111",
+      "theme": "Bookshop edition",
+      "exemples": [
+        [
+          "Pick a book for each other",
+          "Pick your own"
+        ],
+        [
+          "Read the same book",
+          "Read side by side"
+        ],
+        [
+          "A poetry book",
+          "A cookbook"
+        ]
+      ]
+    },
+    {
+      "id": "tp-112",
+      "theme": "Train edition",
+      "exemples": [
+        [
+          "Top bunk",
+          "Bottom bunk"
+        ],
+        [
+          "Night train",
+          "Day train"
+        ],
+        [
+          "Sandwiches from home",
+          "The dining car"
+        ]
+      ]
+    },
+    {
+      "id": "tp-113",
+      "theme": "Museum edition",
+      "exemples": [
+        [
+          "Dinosaurs",
+          "Paintings"
+        ],
+        [
+          "The audio guide",
+          "Make up the stories"
+        ],
+        [
+          "Gift shop first",
+          "Gift shop last"
+        ]
+      ]
+    },
+    {
+      "id": "tp-114",
+      "theme": "Concert edition",
+      "exemples": [
+        [
+          "Front row, crushed",
+          "Back row, dancing"
+        ],
+        [
+          "Their favorite band",
+          "Yours"
+        ],
+        [
+          "Sing every word",
+          "Film the whole thing"
+        ]
+      ]
+    },
+    {
+      "id": "tp-115",
+      "theme": "Spa day edition",
+      "exemples": [
+        [
+          "Massage together",
+          "Massage, one at a time"
+        ],
+        [
+          "Sauna",
+          "Hot tub"
+        ],
+        [
+          "Cucumber on the eyes",
+          "Face mask selfie"
+        ]
+      ]
+    },
+    {
+      "id": "tp-116",
+      "theme": "Market edition",
+      "exemples": [
+        [
+          "Cheese stall first",
+          "Fruit stall first"
+        ],
+        [
+          "Haggle for fun",
+          "Pay and smile"
+        ],
+        [
+          "Flowers for the table",
+          "Bread for the table"
+        ]
+      ]
+    },
+    {
+      "id": "tp-117",
+      "theme": "Bike ride edition",
+      "exemples": [
+        [
+          "Along the river",
+          "Through the forest"
+        ],
+        [
+          "Race to the bridge",
+          "Ride side by side"
+        ],
+        [
+          "A tandem",
+          "Two bikes"
+        ]
+      ]
+    },
+    {
+      "id": "tp-118",
+      "theme": "Soup season",
+      "exemples": [
+        [
+          "Pumpkin soup",
+          "Tomato soup"
+        ],
+        [
+          "Bread on the side",
+          "Cheese on top"
+        ],
+        [
+          "Soup in bed",
+          "Soup by the window"
+        ]
+      ]
+    },
+    {
+      "id": "tp-119",
+      "theme": "Board game edition",
+      "exemples": [
+        [
+          "Monopoly for 4 hours",
+          "Cards for 20 minutes"
+        ],
+        [
+          "Let them win",
+          "Never let them win"
+        ],
+        [
+          "Teams against friends",
+          "You versus them"
+        ]
+      ]
+    },
+    {
+      "id": "tp-120",
+      "theme": "Rooftop edition",
+      "exemples": [
+        [
+          "Rooftop at sunset",
+          "Rooftop at midnight"
+        ],
+        [
+          "Blanket and tea",
+          "Chairs and lemonade"
+        ],
+        [
+          "City lights",
+          "Stars above"
+        ]
+      ]
     }
   ],
   "phrase": [
