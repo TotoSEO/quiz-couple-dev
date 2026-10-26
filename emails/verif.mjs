@@ -136,6 +136,49 @@ await etape('Les derniers envois', async () => {
   for (const c of du) info(`campagne ${c.id} « ${c.name} » : ${c.status}${c.sentDate ? ` (${c.sentDate})` : ''}`);
 });
 
+// Le détail de toutes les campagnes du parcours (celles d'avant le test A/B
+// comprises), et les mêmes chiffres par messagerie : de quoi voir, le
+// lendemain, si les ouvertures et les clics sont comptés et où les e-mails
+// arrivent. Une campagne de moins de dix personnes n'est pas montrée seule
+// (elle dirait qui a ouvert) ; les domaines de moins de dix remis non plus.
+const CHAMPS = ['sent', 'delivered', 'uniqueViews', 'viewed', 'appleMppOpens', 'uniqueClicks', 'clickers', 'unsubscriptions', 'complaints', 'hardBounces', 'softBounces'];
+const ligneStats = (g) => CHAMPS.map((f) => `${f} ${Number((g || {})[f]) || 0}`).join(' · ');
+await etape('Les campagnes du parcours, en détail', async () => {
+  const lire = async (statistiques) => {
+    const tout = [];
+    for (let offset = 0; offset < 5000; offset += 100) {
+      const r = await brevo.campagnes({ statut: 'sent', limite: 100, offset, statistiques });
+      const liste = ((r && r.campaigns) || []).filter((c) => String(c.name || '').startsWith('Parcours · '));
+      tout.push(...liste);
+      if (!r || !r.campaigns || r.campaigns.length < 100) break;
+    }
+    return tout;
+  };
+  const globales = await lire('globalStats');
+  const total = {};
+  const petites = {};
+  for (const c of globales) {
+    const g = (c.statistics && c.statistics.globalStats) || {};
+    for (const f of CHAMPS) total[f] = (total[f] || 0) + (Number(g[f]) || 0);
+    if ((Number(g.sent) || 0) >= 10) info(`campagne ${c.id} « ${c.name} » : ${ligneStats(g)}`);
+    else for (const f of CHAMPS) petites[f] = (petites[f] || 0) + (Number(g[f]) || 0);
+  }
+  if (Object.keys(petites).length) info(`les campagnes de moins de dix personnes, ensemble : ${ligneStats(petites)}`);
+  info(`toutes ensemble : ${ligneStats(total)}`);
+  const parDomaine = {};
+  for (const c of await lire('statsByDomain')) {
+    const s = (c.statistics && c.statistics.statsByDomain) || {};
+    const entrees = Array.isArray(s) ? s.map((x) => [x.domain || x.name || '?', x]) : Object.entries(s);
+    for (const [domaine, g] of entrees) {
+      const d = parDomaine[domaine] || (parDomaine[domaine] = {});
+      for (const f of CHAMPS) d[f] = (d[f] || 0) + (Number((g || {})[f]) || 0);
+    }
+  }
+  const domaines = Object.entries(parDomaine).filter(([, d]) => (d.delivered || 0) >= 10).sort((a, b) => (b[1].delivered || 0) - (a[1].delivered || 0));
+  if (!domaines.length) info('par messagerie : rien (statsByDomain vide, ou moins de dix remis par domaine)');
+  for (const [domaine, d] of domaines) info(`${domaine} : ${ligneStats(d)}`);
+});
+
 // Le bilan du test A/B (emails/ab.mjs), depuis son premier soir : par e-mail
 // et par version, les chiffres d'ensemble de Brevo et ce que la page de
 // l'évaluation a compté pour la source de chaque version.

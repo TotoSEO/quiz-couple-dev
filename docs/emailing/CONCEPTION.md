@@ -224,13 +224,85 @@ Au lancement, la file part avec tout le retard (766 adresses en attente de
 `e1` le 24 octobre 2026). Thomas : « il faut vider la base actuelle sans
 envoyer 900 mails d'un coup, faut faire par vague pendant plusieurs jours
 jusqu'à ce que tout le retard soit rattrapé. » Le plafond s'en charge déjà
-(290 par soir au plus), et les trois premiers soirs réels partent moins
-fort, 100, puis 150, puis 200 (`montee` dans `emails/reglages.mjs`,
-`plafondDuSoir` dans `parcours.mjs`) : le domaine d'envoi est neuf, et les
-messageries le jugent sur ses premiers envois. Seuls comptent les soirs où
-quelque chose est vraiment parti. Le premier soir (24 octobre 2026), 100
-`e1` sont partis à 18 h 55 ; avec les `e2` qui prennent leur place trois
-jours plus tard, le retard se vide en trois semaines environ.
+(290 par soir au plus), et les premiers soirs réels partent moins fort
+(`montee` dans `emails/reglages.mjs`, `plafondDuSoir` dans `parcours.mjs`) :
+le domaine d'envoi est neuf, et les messageries le jugent sur ses premiers
+envois. Seuls comptent les soirs où quelque chose est vraiment parti. Le
+premier soir (24 octobre 2026), 100 `e1` sont partis à 18 h 55, 150 le
+lendemain. La montée prévue était 100, 150, 200 puis le plafond ; depuis le
+26 octobre 2026 elle est 100, 150 pendant cinq soirs, 200 pendant deux, 250
+un soir, puis le plafond (voir « 26 octobre 2026 : le premier audit »).
+
+### 26 octobre 2026 : le premier audit
+
+Thomas : « Analyse toutes les campagnes de mails qui ont été mises en place
+et vérifie que tout soit parfait [...] qu'on exploite bien les quotas
+gratuits journaliers de brevo [...] tu peux même analyser les premiers
+résultats des campagnes. » Ce qui a été lu, le matin du 26 octobre (les
+chiffres viennent de `verif`, de `get_emails_tableau` et de l'onglet
+Évaluation, jamais d'une personne) :
+
+- **Les envois partent et arrivent.** Deux soirs, 250 `e1` (100 puis 150,
+  les deux passages à 18 h 55, l'horloge pg_cron juste après le passage à
+  l'heure d'hiver), 235 remis (94 %), 5 rebonds durs (adresses supprimées),
+  9 rebonds doux, 0 désinscription, 0 plainte. Le webhook renvoie bien les
+  remises, condition des `e2`. 202 des 250 adresses sont chez Gmail.
+- **Les ouvertures.** Premier soir : 20 ouvertures uniques sur 97 remis au
+  bout de 36 heures, dont 9 automatiques d'Apple Mail, soit 11 % de
+  personnes (le français à 16 %, l'anglais à 10 %, l'espagnol à 6 %) : bas,
+  mais c'est l'onglet Promotions d'un domaine inconnu. Deuxième soir : au
+  bout de 13 heures, 4 ouvertures sur 138 remis, toutes automatiques, aucune
+  personne, dans les deux versions du test A/B ; et les rebonds doux sont
+  passés de 1 sur 100 à 8 sur 150, dont 5 chez Gmail. Ce sont les deux signes
+  d'un domaine neuf que Gmail commence à freiner quand le volume monte. D'où
+  le palier à 150 pendant cinq soirs. `verif` donne désormais chaque
+  campagne avec ses chiffres d'ensemble et la somme par messagerie
+  (`statsByDomain`, dix remis au moins), pour relire ça chaque matin ; les
+  raisons des rebonds doux se lisent dans Brevo (statistiques de la
+  campagne), le webhook ne les garde pas.
+- **Les clics : zéro.** Aucun clic sur 235 remis, aucune visite de la page
+  de vente avec une source `email-e1` ou `email-e1-sobre` (le compteur
+  marche : la source est lue dans l'adresse par `arrivee()` et acceptée par
+  `sourcePropre`). Sur 11 ouvertures humaines, un ou deux clics étaient
+  attendus ; trop peu pour conclure sur le texte, assez pour dire que le
+  parcours n'a encore rien rapporté. Le test A/B ne départage rien tant que
+  personne n'ouvre.
+- **Les quotas.** L'offre gratuite de Brevo donne 300 crédits par jour,
+  remis à 300 chaque soir ; le parcours en garde 10 pour les essais. Mais la
+  porte des résultats laisse environ 225 adresses par jour (284 adresses de
+  moins de 48 heures dans la file ce matin, 899 en attente en tout), et
+  chaque adresse appelle deux e-mails : 225 `e1` et environ 210 `e2` par
+  jour, 435 pour 290 possibles. La file ne se résorbe donc jamais sur
+  l'offre gratuite : elle grossit d'environ 150 par jour, et comme
+  `emails_du_jour` sert le plus en retard d'abord (la règle de Thomas du
+  24 octobre, écrite quand on pensait rattraper le retard), les `e1`
+  partiraient à des adresses vieilles d'une semaine pendant que celles de la
+  veille attendent, et les `e2` (échéance à `e1` + 66 h, plus récente que le
+  retard des `e1`) ne partiraient presque jamais. Trois issues, à trancher
+  par Thomas : l'offre Starter de Brevo (plus de plafond journalier ; le
+  palier de 20 000 e-mails par mois suffit, autour de 30 $ par mois d'après
+  les comparateurs, à vérifier sur la page de Brevo), ou rester gratuit en
+  servant d'abord les `e2` dus puis les `e1` les plus récents (les plus
+  vieux sortent de la file après 60 jours sans rien recevoir), ou rester
+  gratuit avec le seul `e1` (225 par jour tiennent dans 290). Rien à payer
+  tant que les e-mails ne produisent pas un clic : d'abord savoir où ils
+  arrivent (Google Postmaster Tools sur quiz-couple.com, que seul Thomas
+  peut ajouter ; deux essais envoyés ce matin dans sa boîte Gmail pour voir
+  l'onglet où ils tombent).
+- **Les e-mails de l'évaluation (Resend, 100 par jour).** Depuis le
+  21 octobre : 18 « rapport prêt », 21 rappels, 3 liens de rapport, 0 reprise
+  (le drapeau `a_reprise` n'existe que depuis le soir du 25 octobre, les
+  premières partent 48 heures plus tard), aucune erreur d'envoi. Les trois
+  ventes ont toutes eu l'e-mail « rapport prêt » avant de payer, aucune
+  n'est venue d'un rappel. Les plafonds (40 rappels et « prêt », 40
+  reprises, 40 liens, réserve à 60 envois tous genres) tiennent sous 100,
+  sauf un cas limite : les confirmations de l'e-book (40 par jour au plus,
+  `ebook-verify`) ne sont pas comptées dans la réserve ; 60 + 40 = 100 un
+  jour de pointe, et le lien d'un rapport payé serait refusé. À corriger si
+  l'e-book repart.
+- **Les textes** ont été relus dans les cinq langues (sujets, aperçus,
+  corps, version sobre, e-mails de Resend) et rendus en aperçu à 420 px :
+  rien à corriger.
 
 **Les adresses de l'e-book n'entrent pas dans le parcours** : leur case
 disait « me contacte occasionnellement à des fins informationnelles », pas

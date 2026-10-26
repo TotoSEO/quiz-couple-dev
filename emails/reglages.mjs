@@ -46,9 +46,14 @@ export const REGLAGES = {
   marge: 10,
   // La montée en charge (Thomas, 24 octobre 2026 : « il faut vider la base
   // actuelle sans envoyer 900 mails d'un coup, faut faire par vague pendant
-  // plusieurs jours ») : le premier soir d'envoi réel part au plus à 100, le
-  // deuxième à 150, le troisième à 200, puis au plafond. Le domaine d'envoi
-  // est neuf : les messageries le jugent sur ses premiers envois. Seuls
-  // comptent les soirs où quelque chose est vraiment parti.
-  montee: [100, 150, 200],
+  // plusieurs jours ») : le premier soir d'envoi réel part au plus à 100,
+  // puis 150 pendant quatre soirs, 200 pendant deux, 250 un soir, puis le
+  // plafond. Le domaine d'envoi est neuf et huit adresses sur dix sont chez
+  // Gmail, qui juge un domaine sur ses premiers envois : le deuxième soir
+  // (150 e-mails), les rebonds doux sont passés de 1 sur 100 à 8 sur 150 et
+  // personne n'avait ouvert le lendemain matin, d'où un palier plus long à
+  // 150 (26 octobre 2026) ; la liste se raccourcit si les chiffres de
+  // « verif » restent bons. Seuls comptent les soirs où quelque chose est
+  // vraiment parti.
+  montee: [100, 150, 150, 150, 150, 150, 200, 200, 250],
 };
