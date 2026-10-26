@@ -1,0 +1,270 @@
+{
+  "jour": "2027-01-12",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-013",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il a oublié, au café : il regarde son téléphone, elle devine, il lui montre une réservation, elle fond.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Un café en journée. Le violet, assis à droite, regarde son téléphone, les yeux plats. La rose, à gauche, l'attend devant sa tasse, les yeux ouverts et la bouche plate.",
+                "duree": 2,
+                "decor": "cafe",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "table-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "table-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même café. La rose, les sourcils hauts et la bouche plate, regarde le violet. Il lève la tête de son téléphone, les yeux ouverts.",
+                "duree": 2,
+                "decor": "cafe",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "table-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "hauts"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "table-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "u forgot, didn't u",
+                "cote": "gauche"
+              }
+            ]
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même café. Le violet tourne son téléphone vers la rose, un clin d'œil et un grand sourire. La rose se penche, les yeux grands ouverts et la bouche en o.",
+                "duree": 2,
+                "decor": "cafe",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "table-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "table-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "droite"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "clin",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même café. La rose fond, les yeux heureux, les joues roses et un grand sourire, des cœurs au-dessus de la tête. Le violet sourit, fier.",
+                "duree": 2,
+                "decor": "cafe",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "table-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "table-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "droite"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "ok u didn't",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
