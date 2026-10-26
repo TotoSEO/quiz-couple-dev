@@ -1,0 +1,64 @@
+{
+  "jour": "2027-01-09",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-086",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Favorite spot",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Your sofa",
+            "b": "Your bed"
+          },
+          {
+            "a": "Kitchen table",
+            "b": "The balcony"
+          },
+          {
+            "a": "Their shoulder",
+            "b": "Their lap"
+          },
+          {
+            "a": "Window seat",
+            "b": "Floor cushions"
+          },
+          {
+            "a": "Morning light",
+            "b": "Candle light"
+          },
+          {
+            "a": "Cozy corner",
+            "b": "Open room"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Favorite spot. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
