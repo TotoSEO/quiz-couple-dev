@@ -194,7 +194,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     melange, posts, variantes, dates: sujetsDates(langue), debut, horizon, categories: categoriesIdee(langue),
     ouvert: (jour, creneau, i) => i > 0 || debutCreneau(compte, creneau) >= minutesMaintenant + MARGE_MIN,
   });
-  const stats = await base.select('social_stats', 'select=variante_id,releve,vues,partages,enregistrements&releve=eq.j7');
+  const stats = await statistiquesDuCompte(base, langue);
   return {
     genere_le: maintenant.toISOString(),
     langue,
@@ -228,8 +228,74 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     recents_et_prevus: posts.map(resume),
     idees: idees.map((i) => ({ ...i, creneau_vise: vises.get(i.id) ?? null })),
     prochain_creneau: prochain,
-    statistiques_j7: stats,
+    statistiques_j7: stats.lignes,
+    statistiques_par_categorie: stats.par_categorie,
   };
+}
+
+// Les statistiques à sept jours des posts du compte, chacune avec la
+// catégorie, le format et le créneau de son post, et le résumé par
+// catégorie (combien de posts relevés, vues médiane, moyenne et maximale,
+// partages et enregistrements en tout, du meilleur au moins bon). Jusqu'au
+// 26 octobre 2026, l'état des deux comptes recevait les vues de tous les
+// posts, sans dire ni lesquels ni de quel compte.
+export async function statistiquesDuCompte(base, langue) {
+  const lignes = await base.select('social_stats', 'select=variante_id,releve,vues,portee,likes,commentaires,partages,enregistrements,releve_le&releve=eq.j7&order=releve_le.asc');
+  const parLots = async (ids, lire) => {
+    const tout = [];
+    for (let i = 0; i < ids.length; i += 80) tout.push(...await lire(ids.slice(i, i + 80)));
+    return tout;
+  };
+  const variantes = lignes.length
+    ? await parLots([...new Set(lignes.map((l) => l.variante_id))], (ids) => base.select('social_variantes', `select=id,post_id,publie_le&langue=eq.${langue}&id=in.(${ids.join(',')})`))
+    : [];
+  const posts = variantes.length
+    ? await parLots([...new Set(variantes.map((v) => v.post_id))], (ids) => base.select('social_posts', `select=id,categorie,format,gabarit,jour,creneau,sujet&id=in.(${ids.join(',')})`))
+    : [];
+  const variante = new Map(variantes.map((v) => [v.id, v]));
+  const post = new Map(posts.map((p) => [p.id, p]));
+  const enrichies = lignes
+    .filter((l) => variante.has(l.variante_id))
+    .map((l) => {
+      const v = variante.get(l.variante_id);
+      const p = post.get(v.post_id) || {};
+      return {
+        ...l,
+        publie_le: v.publie_le || null,
+        categorie: p.categorie || null,
+        format: p.format || null,
+        gabarit: p.gabarit || null,
+        jour: p.jour || null,
+        creneau: p.creneau || null,
+        sujet: p.sujet || null,
+      };
+    });
+  const groupes = new Map();
+  for (const l of enrichies) {
+    const cle = l.categorie || '?';
+    if (!groupes.has(cle)) groupes.set(cle, []);
+    groupes.get(cle).push(l);
+  }
+  const mediane = (xs) => {
+    const t = [...xs].sort((a, b) => a - b);
+    return t.length ? (t.length % 2 ? t[(t.length - 1) / 2] : Math.round((t[t.length / 2 - 1] + t[t.length / 2]) / 2)) : 0;
+  };
+  const somme = (xs) => xs.reduce((a, b) => a + (Number(b) || 0), 0);
+  const par_categorie = [...groupes.entries()].map(([categorie, ls]) => {
+    const vues = ls.map((l) => Number(l.vues) || 0);
+    return {
+      categorie,
+      posts: ls.length,
+      vues_mediane: mediane(vues),
+      vues_moyenne: Math.round(somme(vues) / ls.length),
+      vues_max: Math.max(...vues),
+      partages: somme(ls.map((l) => l.partages)),
+      enregistrements: somme(ls.map((l) => l.enregistrements)),
+      likes: somme(ls.map((l) => l.likes)),
+      commentaires: somme(ls.map((l) => l.commentaires)),
+    };
+  }).sort((a, b) => b.vues_mediane - a.vues_mediane);
+  return { lignes: enrichies, par_categorie };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
