@@ -271,11 +271,12 @@ test('les crédits de Brevo coupent la file, avec la marge des essais', async ()
   assert.equal(b2.file, 0);
 });
 
-test('la montée en charge : 100, 150, 200 les premiers soirs d\'envoi réel, puis le plafond', async () => {
-  const file = Array.from({ length: 400 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
+test('la montée en charge : les paliers de REGLAGES.montee aux premiers soirs d\'envoi réel, puis le plafond', async () => {
+  const file = Array.from({ length: 2000 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
   const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
-  const attendus = [100, 150, 200, 290];
-  for (let soir = 0; soir < 4; soir++) {
+  // 100 le premier soir, 150 pendant cinq soirs, 200 pendant deux, 250, puis 290.
+  const attendus = [100, 150, 150, 150, 150, 150, 200, 200, 250, 290];
+  for (let soir = 0; soir < attendus.length; soir++) {
     const quand = new Date(SOIR.getTime() + soir * 86400e3);
     const b = await passage({ base, brevo: new FauxBrevo(), maintenant: quand, mode: 'reel', journal: silence });
     assert.equal(b.limite, attendus[soir], `soir ${soir + 1}`);
