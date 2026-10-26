@@ -5,3 +5,6 @@ sorties/
 public/musique/mx-*.mp3
 # bruitages Mixkit, préparés par scripts/sons.mjs (jamais redistribués seuls)
 public/sons/mx-*.mp3
+
+# image d'essai du contrôle de mise en page par lot (reseaux/studio/scripts/verifier-lot.mjs)
+.verif-lot*.png
