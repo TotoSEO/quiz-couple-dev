@@ -1,0 +1,325 @@
+{
+  "jour": "2027-01-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-280",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne entend un bruit la nuit | La nuit, la lune ; le lit ; elle se redresse d'un coup, les yeux ronds, apeurée, un point d'exclamation ; lui dort ; elle le secoue ; il grogne. | Elle le pousse hors du lit du côté gauche ; il se lève en traînant, prend la lampe, et avance vers la gauche en tremblant, pas rassuré ; elle, sous l'oreiller, ne regarde plus. | Il revient par la gauche, blasé, le chat dans les bras : c'était lui ; il le pose sur le lit ; elle sort de sous l'oreiller, honteuse, puis rit ; le chat s'installe entre eux ; un cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; elle se redresse d'un coup, les yeux ronds, apeurée, un point d'exclamation ; lui dort ; elle le secoue ; il grogne.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "peur",
+                    "signes": [
+                      "exclamation",
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_g"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "exaspere",
+                    "pose": "allonge"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne entend un bruit la nuit",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 0.4
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle le pousse hors du lit du côté gauche ; il se lève en traînant, prend la lampe, et avance vers la gauche en tremblant, pas rassuré ; elle, sous l'oreiller, ne regarde plus.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 130,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "debout",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "tremble",
+                    "expression": "peur",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 130,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tend_g",
+                    "pattes": "aucune",
+                    "expression": "peur"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tete",
+                    "expression": "panique"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "lampe",
+                "x": 130,
+                "y": 300,
+                "echelle": 0.8,
+                "de": 0.8,
+                "etapes": [
+                  {
+                    "a": 2.2,
+                    "x": 130
+                  },
+                  {
+                    "a": 3.8,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 230,
+                "echelle": 1.0,
+                "de": 1.4
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il revient par la gauche, blasé, le chat dans les bras : c'était lui ; il le pose sur le lit ; elle sort de sous l'oreiller, honteuse, puis rit ; le chat s'installe entre eux ; un cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 180,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content",
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tete",
+                    "pattes": "aucune",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "aucun",
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chat",
+                "x": 180,
+                "y": 300,
+                "echelle": 0.6,
+                "de": 0.2,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 180
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 320,
+                    "y": 335
+                  }
+                ]
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 230,
+                "echelle": 1.0,
+                "a": 2.0
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

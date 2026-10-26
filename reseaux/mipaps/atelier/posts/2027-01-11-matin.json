@@ -1,0 +1,281 @@
+{
+  "jour": "2027-01-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-283",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te pique ton oreiller | La nuit, le lit ; lui dort, la tête sur son oreiller ; elle, à côté, n'en a plus, tâtonne à côté d'elle, surprise, puis regarde l'oreiller de lui, malicieuse. | Elle tire doucement l'oreiller de sous sa tête ; il glisse, sa tête tombe, il se réveille à moitié, confus ; elle s'installe dessus, zen ; il reprend l'oreiller d'un coup. | « 1 h plus tard » en bas. Ils dorment tous les deux la tête sur le même oreiller, au milieu du lit, collés ; des z ; un petit cœur ; plus personne ne se bat.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, le lit ; lui dort, la tête sur son oreiller ; elle, à côté, n'en a plus, tâtonne à côté d'elle, surprise, puis regarde l'oreiller de lui, malicieuse.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tend_d",
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "malicieux",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 250,
+                "y": 265,
+                "echelle": 0.9,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te pique ton oreiller",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle tire doucement l'oreiller de sous sa tête ; il glisse, sa tête tombe, il se réveille à moitié, confus ; elle s'installe dessus, zen ; il reprend l'oreiller d'un coup.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.4,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "zen",
+                    "bras": "aucun"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "dodo",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 250,
+                "y": 265,
+                "echelle": 0.9,
+                "derriere": true,
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": 250
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 394
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 394
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 250
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Ils dorment tous les deux la tête sur le même oreiller, au milieu du lit, collés ; des z ; un petit cœur ; plus personne ne se bat.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 325,
+                "y": 265,
+                "echelle": 1.0,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

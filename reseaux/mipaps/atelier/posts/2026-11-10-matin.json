@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-103",
+  "sujet": "ani-217",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,28 +12,34 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Choisir un film : sur le canapé, il propose, elle refuse ; elle propose, il refuse ; une heure plus tard ils cherchent toujours, la tête dans les mains ; ils dorment l'un sur l'autre. Quatre plans, 15 secondes.",
+        "idee": "nous deux quand on marche pas à la même vitesse | Dehors, un arbre à droite ; les deux entrent par la gauche en marchant main dans la main, au même pas, contents ; ils arrivent au milieu. | Il repart à grands pas vers la droite, décidé ; elle essaie de suivre en courant, essoufflée, puis s'arrête, plante les pattes et croise les bras ; il sort du cadre sans la voir. | Il revient par la droite en courant, désolé ; elle, assise par terre, boude ; il se baisse, la prend sur son dos, et repart en marchant avec elle perchée dessus, contente.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Les deux sont assis sur le canapé face à nous, la télé allumée devant eux. Lui a une idée (une ampoule), elle fait non de la tête, les bras croisés. Le texte à 0,2 s.",
+            "duree": 4,
+            "description": "Dehors, un arbre à droite ; les deux entrent par la gauche en marchant main dans la main, au même pas, contents ; ils arrivent au milieu.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "idee",
-                    "signes": [
-                      "ampoule"
-                    ]
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
+                    "angle": 0
                   }
                 ]
               },
@@ -42,155 +48,59 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "perplexe",
-                    "bras": "croises"
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
+                    "angle": 0
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
               }
             ],
             "textes": [
               {
-                "texte": "quand on doit choisir un film",
+                "texte": "nous deux quand on marche pas à la même vitesse",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
               }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "description": "C'est au tour d'elle : elle a une idée, la patte en l'air. Lui fait la tête, les bras croisés, la bouche de travers.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "boude",
-                    "bras": "croises"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "idee",
-                    "bras": "tend_haut_d",
-                    "signes": [
-                      "ampoule"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux ont la tête dans les mains, les yeux plats, devant la télé. Le texte « 1 h plus tard » à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "fatigue",
-                    "bras": "visage"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "fatigue",
-                    "bras": "visage"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
-              }
-            ],
-            "textes": [
-              {
-                "texte": "1 h plus tard",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux dorment l'un contre l'autre sur le canapé, la tête de l'un sur l'épaule de l'autre, des zzz au-dessus. La télé est toujours allumée.",
+            "description": "Il repart à grands pas vers la droite, décidé ; elle essaie de suivre en courant, essoufflée, puis s'arrête, plante les pattes et croise les bras ; il sort du cadre sans la voir.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 380,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 820
                   }
                 ]
               },
@@ -199,35 +109,137 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 370,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "dodo"
+                    "x": 260,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 380,
+                    "pose": "debout",
+                    "expression": "agace"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "bras": "croises"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il revient par la droite en courant, désolé ; elle, assise par terre, boude ; il se baisse, la prend sur son dos, et repart en marchant avec elle perchée dessus, contente.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 330,
+                    "y": 258,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330
+                  },
+                  {
+                    "a": 4.4,
+                    "x": 640
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "leves",
+                    "expression": "content",
+                    "taille": 270
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.4,
+                    "x": 640
+                  }
+                ]
               }
             ],
-            "meubles": [
-              "canape_fond"
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 420,
+                "y": 110,
+                "echelle": 0.35,
+                "de": 2.6,
+                "flotte": true
+              }
             ]
           }
         ]
       },
-      "legende": "envoie ça sans rien dire",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

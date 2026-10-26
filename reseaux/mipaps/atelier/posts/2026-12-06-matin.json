@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-140",
+  "sujet": "ani-247",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,23 +12,28 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Les chatouilles : elle arrive derrière lui en douce, le chatouille, il rit et tombe ; il riposte, les deux par terre, morts de rire. Trois plans, 11 secondes.",
+        "idee": "toi quand le lit est froid en rentrant des toilettes | La nuit, la lune ; le lit ; lui dort à gauche ; elle se lève de son côté, à droite, en traînant, les yeux fermés, et sort par la droite. | Elle revient par la droite, se recouche de son côté : il est glacé ; elle grelotte, des frissons, des flocons ; elle regarde le côté de lui, bien chaud, malicieuse. | Elle le pousse de son côté chaud vers le côté froid et prend sa place ; il glisse en dormant, se réveille d'un coup, choqué, glacé, des flocons ; elle dort déjà, zen.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est debout, content, de dos à elle, il ne se doute de rien. Elle arrive par la gauche sur la pointe des pattes, malicieuse, un doigt devant la bouche. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui dort à gauche ; elle se lève de son côté, à droite, en traînant, les yeux fermés, et sort par la droite.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "debout",
-                    "expression": "content"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               },
@@ -37,141 +42,228 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "malicieux"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 560,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "pattes": "debout",
+                    "angle": 90
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "marche"
                   },
                   {
                     "a": 2.4,
-                    "x": 290,
-                    "pose": "debout",
-                    "bras": "bouche"
+                    "x": 820
                   }
                 ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "les chatouilles",
+                "texte": "toi quand le lit est froid en rentrant des toilettes",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle le chatouille de ses deux pattes à 0,4 s. Il sursaute, éclate de rire, se plie en deux, et tombe à la renverse à 2,2 s.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 290,
-                    "pose": "debout",
-                    "expression": "malicieux",
-                    "bras": "tend"
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 370,
-                    "pose": "debout",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 0.4,
-                    "expression": "rire",
-                    "pose": "boule"
-                  },
-                  {
-                    "a": 2.2,
-                    "x": 400,
-                    "y": 380,
-                    "pose": "tombe"
-                  }
-                ]
-              }
-            ],
-            "sons": [
-              {
-                "nom": "boing",
-                "a": 2.2
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux sont allongés par terre, côte à côte, ils rient aux éclats, les yeux fermés, des petits cœurs flottent au-dessus d'eux.",
+            "description": "Elle revient par la droite, se recouche de son côté : il est glacé ; elle grelotte, des frissons, des flocons ; elle regarde le côté de lui, bien chaud, malicieuse.",
             "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 560,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "malicieux",
+                    "vers": -1
+                  }
+                ]
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 370,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "allonge",
-                    "expression": "rire"
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
-              },
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle le pousse de son côté chaud vers le côté froid et prend sa place ; il glisse en dormant, se réveille d'un coup, choqué, glacé, des flocons ; elle dort déjà, zen.",
+            "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "y": 370,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.4,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 270,
                     "pose": "allonge",
-                    "expression": "rire"
+                    "expression": "zen",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 420
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 325,
-                "y": 170,
-                "echelle": 0.5,
-                "de": 0.6,
-                "flotte": true
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               },
               {
-                "objet": "coeur",
-                "x": 230,
-                "y": 210,
-                "echelle": 0.32,
-                "de": 1.0,
-                "flotte": true
-              },
-              {
-                "objet": "coeur",
-                "x": 425,
-                "y": 220,
-                "echelle": 0.36,
-                "de": 1.4,
+                "objet": "flocon",
+                "x": 480,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 2.9,
                 "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

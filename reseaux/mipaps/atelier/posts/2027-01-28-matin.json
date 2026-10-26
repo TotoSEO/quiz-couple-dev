@@ -1,0 +1,299 @@
+{
+  "jour": "2027-01-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-303",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne t'écrit depuis la pièce d'à côté | Une porte au milieu ; lui à gauche sur le canapé, le téléphone à la patte ; elle à droite, de l'autre côté de la porte, assise par terre avec le sien ; le téléphone d'elle vibre. | En haut s'écrit le message : « tu me manques » ; elle lit, perplexe, regarde la porte, puis rit ; lui, de son côté, attend la réponse, le téléphone devant les yeux. | Elle se lève, passe la porte, et vient s'asseoir sur lui, le téléphone encore à la patte ; il est ravi ; elle lui montre l'écran : elle a répondu « moi aussi » ; des cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une porte au milieu ; lui à gauche sur le canapé, le téléphone à la patte ; elle à droite, de l'autre côté de la porte, assise par terre avec le sien ; le téléphone d'elle vibre.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 180,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 180,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne t'écrit depuis la pièce d'à côté",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 2.0
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut s'écrit le message : « tu me manques » ; elle lit, perplexe, regarde la porte, puis rit ; lui, de son côté, attend la réponse, le téléphone devant les yeux.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "perplexe",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "vers": -1,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 180,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "attend",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "supplie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 180,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« tu me manques »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se lève, passe la porte, et vient s'asseoir sur lui, le téléphone encore à la patte ; il est ravi ; elle lui montre l'écran : elle a répondu « moi aussi » ; des cœurs.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 500,
+                    "pose": "debout",
+                    "angle": -90
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 250,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "x": 200,
+                    "y": 250,
+                    "taille": 160,
+                    "pose": "assis",
+                    "expression": "content",
+                    "angle": 0,
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 180,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "supplie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.3,
+                    "expression": "joie",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 200,
+                "y": 230,
+                "echelle": 0.5,
+                "de": 2.3
+              },
+              {
+                "objet": "coeur",
+                "x": 220,
+                "y": 110,
+                "echelle": 0.5,
+                "de": 2.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 125,
+                "y": 150,
+                "echelle": 0.32,
+                "de": 3.3,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 315,
+                "y": 160,
+                "echelle": 0.36,
+                "de": 3.7,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

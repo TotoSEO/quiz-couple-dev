@@ -1,0 +1,257 @@
+{
+  "jour": "2027-01-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-292",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne joue avec ta fleur | Le canapé ; elle lit, tranquille ; lui, à côté, tend la patte et touche la fleur sur son oreille ; elle ne dit rien ; il recommence ; elle lève les yeux, blasée. | Il touche encore la fleur ; elle s'agace, une veine ; il recommence, l'air de rien, l'auréole ; elle ferme le livre d'un coup et le fixe ; il sourit. | Elle retire la fleur de son oreille et la pose sur l'oreille de lui ; il reste figé, puis prend la pose, très fier ; elle rit ; il garde la fleur ; des petits cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle lit, tranquille ; lui, à côté, tend la patte et touche la fleur sur son oreille ; elle ne dit rien ; il recommence ; elle lève les yeux, blasée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 270,
+                    "bras": "tend_d",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "livre",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne joue avec ta fleur",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il touche encore la fleur ; elle s'agace, une veine ; il recommence, l'air de rien, l'auréole ; elle ferme le livre d'un coup et le fixe ; il sourit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malicieux",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "bas",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "content",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "agace",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "furieux",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "livre",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 2.6
+              },
+              {
+                "objet": "livre",
+                "x": 540,
+                "y": 350,
+                "echelle": 0.6,
+                "de": 2.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle retire la fleur de son oreille et la pose sur l'oreille de lui ; il reste figé, puis prend la pose, très fier ; elle rit ; il garde la fleur ; des petits cœurs.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "furieux"
+                  },
+                  {
+                    "a": 0.6,
+                    "bras": "tend_g",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "rire",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "fleur",
+                "x": 300,
+                "y": 180,
+                "echelle": 0.4,
+                "de": 1.4
+              },
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 120,
+                "echelle": 0.35,
+                "de": 3.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

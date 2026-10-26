@@ -1,0 +1,246 @@
+{
+  "jour": "2027-02-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-312",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne raconte un ragot sur quelqu'un | Le canapé ; elle, penchée vers lui, raconte tout bas, le doigt sur la bouche, choquée, des petits points partout ; lui écoute, les yeux ronds. | Elle continue, scandalisée, puis morte de rire ; lui fait de grands yeux, hoche la tête, choqué lui aussi, très impliqué ; un point d'interrogation apparaît discrètement au-dessus de lui. | Elle finit, satisfaite, et attend sa réaction ; il hésite, puis demande ; en haut s'écrit « ... et c'est qui, déjà ? » ; elle se fige, une veine, et lui jette le coussin dessus.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle, penchée vers lui, raconte tout bas, le doigt sur la bouche, choquée, des petits points partout ; lui écoute, les yeux ronds.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chut",
+                    "bras": "bouche",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "choque",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "malicieux",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ecoute",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne raconte un ragot sur quelqu'un",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle continue, scandalisée, puis morte de rire ; lui fait de grands yeux, hoche la tête, choqué lui aussi, très impliqué ; un point d'interrogation apparaît discrètement au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "furieux",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "rire",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "choque"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "bravo",
+                    "bras": "applaudit"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle finit, satisfaite, et attend sa réaction ; il hésite, puis demande ; en haut s'écrit « ... et c'est qui, déjà ? » ; elle se fige, une veine, et lui jette le coussin dessus.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "peur",
+                    "bras": "visage"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "coussin",
+                "x": 460,
+                "y": 290,
+                "echelle": 0.8,
+                "a": 2.4
+              },
+              {
+                "objet": "coussin",
+                "x": 460,
+                "y": 290,
+                "echelle": 0.8,
+                "de": 2.4,
+                "etapes": [
+                  {
+                    "a": 2.4,
+                    "x": 460
+                  },
+                  {
+                    "a": 2.9,
+                    "x": 240,
+                    "y": 220
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ... et c'est qui, déjà ? »",
+                "de": 0.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 2.9
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "jour": "2026-12-26",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "noel-003",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux le lendemain de Noël chez la belle-famille | Le canapé ; les deux affalés, K.-O., les yeux en croix, après deux jours de repas de famille ; un bonnet de travers, le plaid par terre ; rien ne bouge. | Le téléphone sonne sur la table ; les deux se redressent, les yeux ronds ; ils se regardent ; en haut s'écrit « on vous attend pour le déjeuner » ; panique. | Les deux se cachent sous le plaid au milieu du canapé, seuls les yeux dépassent ; le téléphone sonne encore ; ils se serrent un peu plus ; le téléphone s'arrête ; deux petits cœurs.",
+        "son": {
+          "ambiance": "noel"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; les deux affalés, K.-O., les yeux en croix, après deux jours de repas de famille ; un bonnet de travers, le plaid par terre ; rien ne bouge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "bonnet",
+                "x": 226,
+                "y": 170,
+                "echelle": 0.8
+              },
+              {
+                "objet": "couverture",
+                "x": 110,
+                "y": 360,
+                "echelle": 1.4,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux le lendemain de Noël chez la belle-famille",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Le téléphone sonne sur la table ; les deux se redressent, les yeux ronds ; ils se regardent ; en haut s'écrit « on vous attend pour le déjeuner » ; panique.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "bonnet",
+                "x": 226,
+                "y": 170,
+                "echelle": 0.8
+              },
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« on vous attend pour le déjeuner »",
+                "de": 1.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonne",
+                "a": 0.3
+              },
+              {
+                "nom": "sonne",
+                "a": 1.1
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux se cachent sous le plaid au milieu du canapé, seuls les yeux dépassent ; le téléphone sonne encore ; ils se serrent un peu plus ; le téléphone s'arrête ; deux petits cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 280,
+                    "expression": "peur",
+                    "pose": "boule",
+                    "taille": 190
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 370,
+                    "expression": "peur",
+                    "pose": "boule",
+                    "taille": 190
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 325,
+                "y": 300,
+                "echelle": 2.6,
+                "de": 1.0
+              },
+              {
+                "objet": "telephone",
+                "x": 520,
+                "y": 290,
+                "echelle": 0.55
+              },
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 150,
+                "echelle": 0.4,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonne",
+                "a": 1.6
+              },
+              {
+                "nom": "sonne",
+                "a": 2.4
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "jour": "2026-12-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-268",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a trop chaud, puis trop froid | Le lit ; elle, allongée, a trop chaud, de la vapeur, repousse le plaid ; lui, à côté, le ramasse et le plie, gentil ; elle se met à grelotter, des frissons. | Il remet le plaid sur elle ; elle a trop chaud, de la vapeur ; il le retire ; elle a trop froid, des flocons ; il le remet ; de plus en plus vite ; il transpire. | Lui est K.-O., allongé en travers du lit, les yeux en croix, le plaid sur la tête ; elle, assise, enfin bien, zen, lui tapote la tête ; un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit ; elle, allongée, a trop chaud, de la vapeur, repousse le plaid ; lui, à côté, le ramasse et le plie, gentil ; elle se met à grelotter, des frissons.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ],
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "aucun"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 394,
+                "y": 330,
+                "echelle": 1.4,
+                "etapes": [
+                  {
+                    "a": 1.0,
+                    "x": 394
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 150,
+                    "y": 250
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a trop chaud, puis trop froid",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il remet le plaid sur elle ; elle a trop chaud, de la vapeur ; il le retire ; elle a trop froid, des flocons ; il le remet ; de plus en plus vite ; il transpire.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tend_d",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 394,
+                "y": 330,
+                "echelle": 1.4,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 330
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "y": 250
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 394,
+                    "y": 330
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 150,
+                    "y": 250
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 394,
+                    "y": 330
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Lui est K.-O., allongé en travers du lit, les yeux en croix, le plaid sur la tête ; elle, assise, enfin bien, zen, lui tapote la tête ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_g",
+                    "expression": "content",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 230,
+                "y": 290,
+                "echelle": 1.2
+              },
+              {
+                "objet": "coeur",
+                "x": 380,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

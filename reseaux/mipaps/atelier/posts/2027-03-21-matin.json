@@ -1,0 +1,286 @@
+{
+  "jour": "2027-03-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-364",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand les invités sont partis | La porte à droite se referme ; les deux, debout, font encore coucou de la patte, le sourire parfait, l'auréole ; la porte claque ; leurs sourires tombent d'un coup. | Ils se laissent tomber par terre, l'un après l'autre, au milieu des tasses et des coussins, les yeux en croix, K.-O. ; elle lève une patte : « on range demain » s'écrit en haut. | Ils dorment par terre, l'un contre l'autre, au milieu du salon, un coussin partagé sous la tête, des z ; la lune à la fenêtre ; un petit cœur ; la vaisselle attendra.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La porte à droite se referme ; les deux, debout, font encore coucou de la patte, le sourire parfait, l'auréole ; la porte claque ; leurs sourires tombent d'un coup.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "content",
+                    "bras": "coucou",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "fatigue",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "content",
+                    "bras": "coucou",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "fatigue",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 120,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "tasse",
+                "x": 180,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 520,
+                "y": 345,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand les invités sont partis",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 2.0
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ils se laissent tomber par terre, l'un après l'autre, au milieu des tasses et des coussins, les yeux en croix, K.-O. ; elle lève une patte : « on range demain » s'écrit en haut.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "tombe",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "tombe",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "leve_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 120,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "tasse",
+                "x": 180,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 520,
+                "y": 345,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« on range demain »",
+                "de": 3.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.1
+              },
+              {
+                "nom": "splat",
+                "a": 1.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils dorment par terre, l'un contre l'autre, au milieu du salon, un coussin partagé sous la tête, des z ; la lune à la fenêtre ; un petit cœur ; la vaisselle attendra.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 335,
+                "y": 330,
+                "echelle": 0.9,
+                "derriere": true
+              },
+              {
+                "objet": "tasse",
+                "x": 180,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 520,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 210,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

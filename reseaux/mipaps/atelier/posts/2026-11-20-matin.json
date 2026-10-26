@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-120",
+  "sujet": "ani-228",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,34 +12,71 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne a faim : il est grognon, un nuage noir au-dessus de lui ; elle lui demande si ça va, il grogne ; elle sort un gâteau de derrière son dos, il fond. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne dit « je gère » | Une lampe penchée à gauche ; lui arrive, fier, les pattes sur les hanches, devant la lampe ; elle, à droite, le regarde faire, perplexe. | Il attrape la lampe, force, concentré ; la lampe lui échappe et tombe par terre avec un bruit ; il reste figé, gêné, une goutte de sueur ; elle est blasée. | Elle vient, le pousse doucement, ramasse la lampe, la pose droite d'un geste, et repart les pattes sur les hanches ; il reste là, bouche bée, puis applaudit.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est debout, les bras croisés, la bouche de travers, un petit nuage noir au-dessus de la tête. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Une lampe penchée à gauche ; lui arrive, fier, les pattes sur les hanches, devant la lampe ; elle, à droite, le regarde faire, perplexe.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "pose": "debout",
-                    "expression": "colere",
-                    "bras": "croises",
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 270,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "hanches",
+                    "expression": "fier",
                     "signes": [
-                      "nuage_noir"
+                      "etincelles"
                     ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "perplexe",
+                    "vers": -1
                   }
                 ]
               }
             ],
+            "objets": [
+              {
+                "objet": "lampe",
+                "x": 160,
+                "y": 300,
+                "echelle": 1.2
+              }
+            ],
             "textes": [
               {
-                "texte": "quand ta personne a faim",
+                "texte": "toi quand ta personne dit « je gère »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -47,68 +84,32 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle arrive à côté de lui, inquiète, la tête penchée. Lui garde les bras croisés, le nuage noir au-dessus de lui. Le texte à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "boude",
-                    "bras": "croises",
-                    "signes": [
-                      "nuage_noir"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "inquiet"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« ça va ? » « grmbl »",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle sort un morceau de gâteau de derrière son dos à 0,8 s, malicieuse, et le lui tend. Lui ouvre de grands yeux à 1,4 s, le nuage disparaît, des cœurs flottent au-dessus de lui.",
+            "description": "Il attrape la lampe, force, concentré ; la lampe lui échappe et tombe par terre avec un bruit ; il reste figé, gêné, une goutte de sueur ; elle est blasée.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "boude",
-                    "bras": "croises",
+                    "x": 270,
+                    "expression": "concentre",
+                    "bras": "tend_g",
                     "signes": [
-                      "nuage_noir"
+                      "sueur"
                     ]
                   },
                   {
                     "a": 1.4,
-                    "expression": "amour",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "gene",
                     "bras": "bas",
-                    "signes": []
+                    "signes": [
+                      "sueur"
+                    ]
                   }
                 ]
               },
@@ -117,51 +118,140 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "malicieux"
+                    "x": 470,
+                    "expression": "perplexe",
+                    "vers": -1
                   },
                   {
-                    "a": 0.8,
-                    "bras": "tend_g"
+                    "a": 2.4,
+                    "expression": "blase"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "gateau",
-                "x": 330,
-                "y": 335,
-                "echelle": 0.6,
-                "de": 0.8
+                "objet": "lampe",
+                "x": 160,
+                "y": 300,
+                "echelle": 1.2,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "y": 300
+                  },
+                  {
+                    "a": 1.6,
+                    "y": 300
+                  },
+                  {
+                    "a": 2.2,
+                    "y": 345
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle vient, le pousse doucement, ramasse la lampe, la pose droite d'un geste, et repart les pattes sur les hanches ; il reste là, bouche bée, puis applaudit.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 470,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  }
+                ]
               },
               {
-                "objet": "coeur",
-                "x": 250,
-                "y": 130,
-                "echelle": 0.4,
-                "de": 1.6,
-                "flotte": true
-              },
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "bravo",
+                    "bras": "applaudit"
+                  }
+                ]
+              }
+            ],
+            "objets": [
               {
-                "objet": "coeur",
-                "x": 300,
-                "y": 150,
-                "echelle": 0.3,
-                "de": 2,
-                "flotte": true
+                "objet": "lampe",
+                "x": 160,
+                "y": 345,
+                "echelle": 1.2,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "y": 345
+                  },
+                  {
+                    "a": 2.0,
+                    "y": 345
+                  },
+                  {
+                    "a": 2.5,
+                    "y": 300
+                  }
+                ]
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

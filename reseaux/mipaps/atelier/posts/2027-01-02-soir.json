@@ -1,0 +1,287 @@
+{
+  "jour": "2027-01-02",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-273",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne veut danser dans le salon | Elle, au milieu, danse, des notes autour d'elle, radieuse ; lui, à droite, assis par terre avec son téléphone, refuse d'un geste, gêné. | Elle vient le chercher, le tire par les pattes ; il se lève en tremblant, tout raide, les joues rouges ; elle le fait tourner ; il se détend un peu, puis rit. | Les deux dansent, collés, les yeux fermés, des notes et des cœurs ; il lui marche sur la patte ; elle fait une grimace, puis rit ; ils continuent, un peu moins vite.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle, au milieu, danse, des notes autour d'elle, radieuse ; lui, à droite, assis par terre avec son téléphone, refuse d'un geste, gêné.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "gene",
+                    "bras": "bas",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "croises",
+                    "expression": "timide"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 480,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.6
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 140,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 380,
+                "y": 120,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne veut danser dans le salon",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle vient le chercher, le tire par les pattes ; il se lève en tremblant, tout raide, les joues rouges ; elle le fait tourner ; il se détend un peu, puis rit.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 0.3,
+                    "x": 290,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 420,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.2,
+                    "angle": 0,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 380,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "pose": "assis",
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "tremble",
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "danse",
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "musique",
+                "x": 250,
+                "y": 140,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 1.4,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux dansent, collés, les yeux fermés, des notes et des cœurs ; il lui marche sur la patte ; elle fait une grimace, puis rit ; ils continuent, un peu moins vite.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "danse",
+                    "expression": "content",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "danse",
+                    "expression": "amour",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "musique",
+                "x": 220,
+                "y": 130,
+                "echelle": 0.6,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 500,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 350,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 255,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.1,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

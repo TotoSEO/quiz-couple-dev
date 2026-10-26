@@ -1,0 +1,268 @@
+{
+  "jour": "2026-12-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-265",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne ramène une fleur sans raison | Elle à droite, assise par terre avec un livre, tranquille ; lui entre par la gauche, les pattes derrière le dos, l'air malicieux, et s'arrête devant elle. | Elle lève les yeux, curieuse ; il sort la fleur de derrière son dos, tout timide, et la lui tend ; elle reste bouche bée, puis ses yeux deviennent des cœurs. | Elle se lève d'un bond, lui saute au cou, la fleur à la patte ; câlin, des cœurs partout ; elle pleure de joie ; lui, un peu étouffé, sourit, gêné et content.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle à droite, assise par terre avec un livre, tranquille ; lui entre par la gauche, les pattes derrière le dos, l'air malicieux, et s'arrête devant elle.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 280,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "timide"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "livre",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.6
+              },
+              {
+                "objet": "fleur",
+                "x": 200,
+                "y": 330,
+                "echelle": 0.5,
+                "de": 1.8,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne ramène une fleur sans raison",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle lève les yeux, curieuse ; il sort la fleur de derrière son dos, tout timide, et la lui tend ; elle reste bouche bée, puis ses yeux deviennent des cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_d",
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "curieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "bouche_bee",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "livre",
+                "x": 520,
+                "y": 350,
+                "echelle": 0.6
+              },
+              {
+                "objet": "fleur",
+                "x": 360,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 1.0
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se lève d'un bond, lui saute au cou, la fleur à la patte ; câlin, des cœurs partout ; elle pleure de joie ; lui, un peu étouffé, sourit, gêné et content.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "saut",
+                    "expression": "joie",
+                    "x": 430
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "expression": "pleure_de_joie"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "gene",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 290,
+                    "pose": "penche_d",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "content",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fleur",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 470,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 1.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 2.1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 2.5,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 0.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

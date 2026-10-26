@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-116",
+  "sujet": "ani-227",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,167 +12,332 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le bruit des clés dans la porte : elle s'ennuie sur le canapé ; un bruit de porte, elle se redresse d'un coup ; elle court jusqu'à lui ; câlin et cœurs. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne fait les boutiques | Lui debout à droite, un sac à la patte, content ; elle entre par la gauche avec un sac, radieuse, le lui tend, et repart par la gauche en courant. | « 1 h plus tard » en bas. Lui, assis par terre entre les sacs, attend, puis s'ennuie, puis pique du nez ; elle revient encore avec un sac, le pose, et repart. | « 3 h plus tard » en bas. Lui, debout, les bras chargés de sacs et un sac sur la tête, blasé ; elle marche devant lui vers la droite avec une petite fleur, ravie ; il la suit en traînant.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est assise sur le canapé, les yeux plats, elle s'ennuie, la tête sur la patte. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Lui debout à droite, un sac à la patte, content ; elle entre par la gauche avec un sac, radieuse, le lui tend, et repart par la gauche en courant.",
             "persos": [
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "blase"
+                    "x": 470,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content",
+                    "bras": "tient"
                   }
                 ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "le bruit des clés dans la porte",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Un bruit de porte à 0,4 s : elle se redresse d'un coup, les yeux grands. À 1,2 s elle saute du canapé et court vers la droite, de profil. Il apparaît à 2 s au bord droit, content, les bras ouverts.",
-            "persos": [
+              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "blase"
-                  },
-                  {
-                    "a": 0.4,
-                    "expression": "surpris",
-                    "signes": [
-                      "exclamation"
-                    ]
-                  },
-                  {
-                    "a": 1.2,
-                    "expression": "joie",
-                    "signes": [],
+                    "x": -140,
                     "y": 380,
                     "taille": 250,
                     "angle": 90,
-                    "pose": "sprint"
+                    "pose": "court",
+                    "expression": "joie",
+                    "bras": "tient"
                   },
                   {
-                    "a": 3.4,
-                    "x": 440
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
+                    "a": 1.4,
+                    "x": 300,
+                    "pose": "debout"
+                  },
                   {
-                    "a": 2,
-                    "x": 540,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_g"
-                  }
-                ]
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ],
-            "sons": [
-              {
-                "nom": "porte",
-                "a": 0.4
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux sont serrés l'un contre l'autre au milieu, yeux fermés, elle accrochée à son cou. Trois cœurs flottent au-dessus d'eux.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
+                    "a": 1.85,
+                    "angle": 0
+                  },
                   {
-                    "a": 0,
-                    "x": 390,
-                    "expression": "calin",
-                    "bras": "tend_g",
-                    "pose": "penche_g"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
+                    "a": 2.0,
+                    "bras": "tend_d"
+                  },
                   {
-                    "a": 0,
-                    "x": 285,
-                    "expression": "calin",
-                    "bras": "tend_d",
-                    "pose": "penche_d"
+                    "a": 2.6,
+                    "x": 300,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": -140
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 150,
+                "objet": "sac",
+                "x": 470,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "sac",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.7,
+                "a": 2.0
+              },
+              {
+                "objet": "sac",
+                "x": 390,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 2.0,
+                "a": 2.6
+              },
+              {
+                "objet": "sac",
+                "x": 410,
+                "y": 340,
+                "echelle": 0.7,
+                "de": 2.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne fait les boutiques",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 1 h plus tard » en bas. Lui, assis par terre entre les sacs, attend, puis s'ennuie, puis pique du nez ; elle revient encore avec un sac, le pose, et repart.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "pose": "assis",
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "fatigue"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 300,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 410,
+                "y": 340,
+                "echelle": 0.7
+              },
+              {
+                "objet": "sac",
+                "x": 540,
+                "y": 340,
+                "echelle": 0.7
+              },
+              {
+                "objet": "sac",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 0.4,
+                "a": 2.4
+              },
+              {
+                "objet": "sac",
+                "x": 360,
+                "y": 345,
+                "echelle": 0.7,
+                "de": 2.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h plus tard » en bas. Lui, debout, les bras chargés de sacs et un sac sur la tête, blasé ; elle marche devant lui vers la droite avec une petite fleur, ravie ; il la suit en traînant.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "blase",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 430,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fleur",
+                "x": 250,
+                "y": 300,
                 "echelle": 0.5,
-                "de": 0.5,
-                "flotte": true
+                "etapes": [
+                  {
+                    "a": 1.0,
+                    "x": 250
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 820
+                  }
+                ]
               },
               {
-                "objet": "coeur",
-                "x": 240,
-                "y": 190,
-                "echelle": 0.32,
-                "de": 0.9,
-                "flotte": true
+                "objet": "sac",
+                "x": 360,
+                "y": 240,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 360
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 750
+                  }
+                ]
               },
               {
-                "objet": "coeur",
-                "x": 435,
-                "y": 200,
-                "echelle": 0.36,
-                "de": 1.3,
-                "flotte": true
+                "objet": "sac",
+                "x": 500,
+                "y": 240,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 500
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 890
+                  }
+                ]
+              },
+              {
+                "objet": "sac",
+                "x": 430,
+                "y": 120,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 430
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça sans rien dire",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

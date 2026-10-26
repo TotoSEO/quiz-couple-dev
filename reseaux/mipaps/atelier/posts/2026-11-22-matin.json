@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-119",
+  "sujet": "ani-231",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,25 +12,25 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La musique dans la voiture : elle met sa chanson, contente ; il change, content ; elle remet la sienne, il fait la tête ; la chanson d'après, ils chantent tous les deux à fond. Quatre plans, 14 secondes.",
+        "idee": "nous deux quand on dit « on y va » chez des amis | Debout tous les deux à droite, près de la porte, les clés à la patte, prêts à partir, contents ; en haut s'écrit « bon, on y va ». | « 1 h plus tard » en bas. Toujours debout au même endroit, ils rient, ils racontent, les bras qui s'agitent ; personne n'a bougé d'un pas. | « 2 h plus tard » en bas. Lui s'est assis par terre contre la porte et dort, des z ; elle raconte encore, radieuse ; elle baisse les yeux sur lui, puis s'assoit à côté et continue.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Les deux sont assis côte à côte dans la voiture, face à nous. Elle est contente, des notes de musique au-dessus de sa tête. Lui conduit, content. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Debout tous les deux à droite, près de la porte, les clés à la patte, prêts à partir, contents ; en haut s'écrit « bon, on y va ».",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
-                    "expression": "content"
+                    "x": 290,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content",
+                    "bras": "tient"
                   }
                 ]
               },
@@ -39,151 +39,128 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
-                    "expression": "joie",
-                    "signes": [
-                      "notes"
-                    ]
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "voiture",
-                "x": 320,
-                "y": 345,
-                "echelle": 2.6,
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
                 "derriere": true
+              },
+              {
+                "objet": "cle",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "la musique dans la voiture",
+                "texte": "nous deux quand on dit « on y va » chez des amis",
                 "de": 0.2,
+                "a": 2.0,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
+              },
+              {
+                "texte": "« bon, on y va »",
+                "de": 2.2,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Lui change de chanson, content, un petit sourire. Elle fait la moue, les bras croisés.",
+            "duree": 4,
+            "description": "« 1 h plus tard » en bas. Toujours debout au même endroit, ils rient, ils racontent, les bras qui s'agitent ; personne n'a bougé d'un pas.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
-                    "expression": "malicieux",
-                    "signes": [
-                      "notes"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
+                    "x": 290,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
                   {
-                    "a": 0,
-                    "x": 414,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
-                    "expression": "boude",
-                    "bras": "croises"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "voiture",
-                "x": 320,
-                "y": 345,
-                "echelle": 2.6,
-                "derriere": true
-              }
-            ]
-          },
-          {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Elle remet sa chanson, contente. Lui fait la tête, les bras croisés, la bouche de travers.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 226,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
-                    "expression": "boude",
-                    "bras": "croises"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
+                    "a": 1.4,
                     "expression": "joie",
-                    "signes": [
-                      "notes"
-                    ]
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "choque",
+                    "bras": "joues"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "voiture",
-                "x": 320,
-                "y": 345,
-                "echelle": 2.6,
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
                 "derriere": true
+              },
+              {
+                "objet": "cle",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Une nouvelle chanson démarre à 0,6 s : les deux s'illuminent et chantent à fond, la bouche grande ouverte, des notes de musique autour d'eux.",
+            "description": "« 2 h plus tard » en bas. Lui s'est assis par terre contre la porte et dort, des z ; elle raconte encore, radieuse ; elle baisse les yeux sur lui, puis s'assoit à côté et continue.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 330,
-                    "taille": 220,
+                    "x": 480,
                     "pose": "assis",
-                    "expression": "boude",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 0.6,
-                    "expression": "joie",
-                    "bras": "bas",
+                    "expression": "dodo",
                     "signes": [
-                      "notes"
+                      "zzz"
                     ]
                   }
                 ]
@@ -193,40 +170,51 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "assis",
+                    "x": 290,
                     "expression": "joie",
-                    "signes": [
-                      "notes"
-                    ]
+                    "bras": "leves"
                   },
                   {
-                    "a": 0.6,
-                    "expression": "rire"
+                    "a": 1.8,
+                    "expression": "surpris",
+                    "vers": 1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 330,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "leves"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "voiture",
-                "x": 320,
-                "y": 345,
-                "echelle": 2.6,
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
                 "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "envoie ça sans rien dire",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

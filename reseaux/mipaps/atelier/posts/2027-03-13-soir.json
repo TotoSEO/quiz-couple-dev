@@ -1,0 +1,265 @@
+{
+  "jour": "2027-03-13",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-355",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on veut un câlin et qu'il fait trop chaud | Un grand soleil, le premier jour chaud ; les deux, rouges, de la vapeur au-dessus de la tête, se regardent, un peu tristes ; ils voudraient un câlin ; ils s'approchent prudemment. | Câlin ; une seconde de bonheur, des cœurs ; puis la vapeur monte d'un coup, les deux deviennent tout rouges, les yeux en croix, et se lâchent en même temps. | Ils s'assoient par terre, loin l'un de l'autre, de chaque côté de l'écran, et se tendent la patte à distance : le bout des pattes se touche, et c'est tout ; un petit cœur au milieu ; le soleil tape.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Un grand soleil, le premier jour chaud ; les deux, rouges, de la vapeur au-dessus de la tête, se regardent, un peu tristes ; ils voudraient un câlin ; ils s'approchent prudemment.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "triste",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 230,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.2,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "triste",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 470,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 400,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.2,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 540,
+                "y": 80,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on veut un câlin et qu'il fait trop chaud",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Câlin ; une seconde de bonheur, des cœurs ; puis la vapeur monte d'un coup, les deux deviennent tout rouges, les yeux en croix, et se lâchent en même temps.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "penche_d",
+                    "bras": "tend_d",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur",
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "expression": "ko",
+                    "x": 240
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur",
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "expression": "ko",
+                    "x": 450
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 540,
+                "y": 80,
+                "echelle": 1.0
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 0.8,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils s'assoient par terre, loin l'un de l'autre, de chaque côté de l'écran, et se tendent la patte à distance : le bout des pattes se touche, et c'est tout ; un petit cœur au milieu ; le soleil tape.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 540,
+                "y": 80,
+                "echelle": 1.0
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.3,
+                "de": 2.4,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

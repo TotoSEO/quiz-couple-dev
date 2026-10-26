@@ -1,0 +1,199 @@
+{
+  "jour": "2027-01-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-282",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te fait essayer son nouveau sport | Elle, au milieu, s'étire de toute sa hauteur, zen, les bras au ciel, parfaitement droite ; lui arrive de la droite, curieux, et se place à côté d'elle pour faire pareil. | Elle se penche d'un côté, tranquille ; il se penche aussi, en forçant, les sueurs ; elle se penche de l'autre côté ; il tremble de partout, les yeux plissés. | Elle finit en boule, zen, parfaite ; lui perd l'équilibre, bascule et s'étale de tout son long, les yeux en croix ; elle rouvre un œil, soupire, et vient se coucher à côté de lui : fin de séance.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle, au milieu, s'étire de toute sa hauteur, zen, les bras au ciel, parfaitement droite ; lui arrive de la droite, curieux, et se place à côté d'elle pour faire pareil.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "etire",
+                    "bras": "leves",
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 450,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "etire",
+                    "bras": "leves",
+                    "expression": "concentre"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te fait essayer son nouveau sport",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle se penche d'un côté, tranquille ; il se penche aussi, en forçant, les sueurs ; elle se penche de l'autre côté ; il tremble de partout, les yeux plissés.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "penche_g",
+                    "bras": "leves",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "penche_g",
+                    "bras": "leves",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "penche_d"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "tremble",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs",
+                      "tremblement"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle finit en boule, zen, parfaite ; lui perd l'équilibre, bascule et s'étale de tout son long, les yeux en croix ; elle rouvre un œil, soupire, et vient se coucher à côté de lui : fin de séance.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "boule",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "blase",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 330,
+                    "pose": "allonge",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "tremble",
+                    "expression": "effort",
+                    "signes": [
+                      "tremblement"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "tombe",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

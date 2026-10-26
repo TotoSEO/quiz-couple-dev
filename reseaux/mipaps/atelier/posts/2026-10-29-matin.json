@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-132",
+  "sujet": "ani-203",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,156 +12,167 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne rentre avec un petit truc pour toi : il arrive, quelque chose caché derrière le dos, timide ; il lui tend un bubble tea ; elle est aux anges ; « j'suis passé devant, j'ai pensé à toi ». Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne dit « t'as vu mon message ? » | Lui au milieu gauche, le téléphone à la patte, les yeux dedans, content ; elle arrive de la droite d'un pas décidé, s'arrête à côté de lui, se tourne vers nous et attend, les bras croisés. | Elle passe de l'attente à l'agacement puis à la colère, une veine sur le front ; lui lève les yeux, surpris, puis gêné, une patte derrière la tête, une goutte de sueur. En haut : « j'allais répondre ». | Il supplie, les pattes jointes ; elle boude, tournée vers le bord ; alors il reprend son téléphone et tape ; le téléphone d'elle vibre à côté d'elle, elle le regarde, blasée : il lui a répondu par message.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est à droite, debout, contente. Il entre du bord gauche en marchant de profil, quelque chose caché derrière lui. Il s'arrête devant elle à 2 s, se tourne vers nous à 2,5 s, timide, les joues rouges. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Lui au milieu gauche, le téléphone à la patte, les yeux dedans, content ; elle arrive de la droite d'un pas décidé, s'arrête à côté de lui, se tourne vers nous et attend, les bras croisés.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 430,
-                    "expression": "content"
-                  },
-                  {
-                    "a": 2.4,
-                    "expression": "curieux"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "content"
+                    "x": 290,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "determine"
                   },
                   {
-                    "a": 2,
-                    "x": 250,
+                    "a": 1.6,
+                    "x": 450,
                     "pose": "debout"
                   },
                   {
-                    "a": 2.5,
-                    "angle": 0,
-                    "expression": "timide",
-                    "signes": [
-                      "rougeur_pleine"
-                    ]
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.3,
+                    "expression": "attend",
+                    "bras": "croises"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "bubble_tea",
-                "x": -140,
-                "y": 340,
-                "echelle": 0.6,
-                "derriere": true,
-                "etapes": [
-                  {
-                    "a": 0.01,
-                    "x": -140,
-                    "y": 340
-                  },
-                  {
-                    "a": 2,
-                    "x": 230,
-                    "y": 340
-                  }
-                ]
+                "objet": "telephone",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.55
               }
             ],
             "textes": [
               {
-                "texte": "le petit truc rapporté sans raison",
+                "texte": "toi quand ta personne dit « t'as vu mon message ? »",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "description": "Il lui tend un bubble tea à bout de patte à 0,4 s, elle ouvre de grands yeux, des étoiles dans le regard, et le prend. Lui, tout fier, attend sa réaction.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "expression": "timide"
-                  },
-                  {
-                    "a": 0.4,
-                    "bras": "tend_d",
-                    "expression": "fier"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 430,
-                    "expression": "curieux"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "emerveille",
-                    "signes": [
-                      "etoiles"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "bubble_tea",
-                "x": 230,
-                "y": 340,
-                "echelle": 0.6,
-                "etapes": [
-                  {
-                    "a": 0.4,
-                    "x": 350,
-                    "y": 336
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 430,
-                    "y": 336
-                  }
-                ]
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle boit son bubble tea, les yeux fermés, aux anges. Lui rayonne à côté, les bras le long du corps. Sa phrase s'écrit mot à mot à partir de 0,8 s, comme si de rien n'était.",
+            "description": "Elle passe de l'attente à l'agacement puis à la colère, une veine sur le front ; lui lève les yeux, surpris, puis gêné, une patte derrière la tête, une goutte de sueur. En haut : « j'allais répondre ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "attend",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "agace"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "colere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.3,
+                    "expression": "surpris",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "gene",
+                    "bras": "tete",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.55,
+                "a": 1.3
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« j'allais répondre »",
+                "de": 1.5,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il supplie, les pattes jointes ; elle boude, tournée vers le bord ; alors il reprend son téléphone et tape ; le téléphone d'elle vibre à côté d'elle, elle le regarde, blasée : il lui a répondu par message.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "expression": "content",
-                    "bras": "bas"
+                    "x": 290,
+                    "expression": "supplie",
+                    "bras": "priere"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "concentre",
+                    "bras": "tient"
                   }
                 ]
               },
@@ -170,36 +181,52 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "expression": "emerveille"
+                    "x": 450,
+                    "expression": "boude",
+                    "vers": 1
                   },
                   {
-                    "a": 0.8,
-                    "expression": "miam"
+                    "a": 3.0,
+                    "expression": "blase",
+                    "vers": -1
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "bubble_tea",
-                "x": 430,
-                "y": 336,
-                "echelle": 0.8
+                "objet": "telephone",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.55,
+                "de": 2.0
+              },
+              {
+                "objet": "telephone",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.55,
+                "de": 2.9
+              },
+              {
+                "objet": "exclamation",
+                "x": 500,
+                "y": 215,
+                "echelle": 0.5,
+                "de": 2.9,
+                "a": 3.9
               }
             ],
-            "textes": [
+            "sons": [
               {
-                "texte": "« j'suis passé devant, j'ai pensé à toi »",
-                "de": 0.8,
-                "place": "haut",
-                "motAMot": true
+                "nom": "notification",
+                "a": 2.9
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

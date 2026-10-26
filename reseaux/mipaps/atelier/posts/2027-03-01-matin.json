@@ -1,0 +1,200 @@
+{
+  "jour": "2027-03-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-341",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « c'est rien, t'inquiète » | Elle, assise par terre à droite, une petite larme, regarde ses pattes ; lui arrive, s'inquiète ; en haut s'écrit « c'est rien, t'inquiète » ; il reste là, sans savoir quoi faire. | Il ne dit rien, vient s'asseoir à côté d'elle, pas trop près ; puis il pose une patte sur son dos ; elle ne bouge pas ; il attend ; elle finit par se laisser aller contre lui. | Les deux assis par terre, elle contre lui, les yeux fermés ; il ne demande rien ; un petit cœur monte ; au bout d'un moment elle sourit un peu, et lui aussi.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle, assise par terre à droite, une petite larme, regarde ses pattes ; lui arrive, s'inquiète ; en haut s'écrit « c'est rien, t'inquiète » ; il reste là, sans savoir quoi faire.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "triste",
+                    "signes": [
+                      "larme"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 250,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "inquiet",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "hesite"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « c'est rien, t'inquiète »",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« c'est rien, t'inquiète »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il ne dit rien, vient s'asseoir à côté d'elle, pas trop près ; puis il pose une patte sur son dos ; elle ne bouge pas ; il attend ; elle finit par se laisser aller contre lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 330,
+                    "pose": "assis",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_d",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "calin"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "triste",
+                    "signes": [
+                      "larme"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 420,
+                    "pose": "penche_g",
+                    "expression": "triste"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux assis par terre, elle contre lui, les yeux fermés ; il ne demande rien ; un petit cœur monte ; au bout d'un moment elle sourit un peu, et lui aussi.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "assis",
+                    "expression": "calin",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "penche_g",
+                    "expression": "triste"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 375,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 1.4,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

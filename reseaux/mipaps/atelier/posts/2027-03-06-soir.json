@@ -1,0 +1,293 @@
+{
+  "jour": "2027-03-06",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-347",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « on fait un tour » à 22 h | La nuit, la lune, un arbre ; elle, bonnet sur la tête, ravie, tire lui par la patte vers la droite ; lui suit en traînant, pas convaincu, en pyjama sous sa veste. | Elle regarde les étoiles, les bras ouverts, émerveillée ; lui regarde ses pattes, puis le ciel, puis grelotte, des frissons ; il se colle à elle pour avoir chaud ; elle lui donne son bonnet. | Les deux assis sur un banc sous la lune, serrés, lui avec le bonnet ; elle pose la tête sur son épaule ; il regarde enfin les étoiles, et sourit ; un petit cœur ; il avait tort, c'était bien.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune, un arbre ; elle, bonnet sur la tête, ravie, tire lui par la patte vers la droite ; lui suit en traînant, pas convaincu, en pyjama sous sa veste.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "emerveille"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "blase",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 210,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "fatigue"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 330,
+                "y": 165,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 330
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « on fait un tour » à 22 h",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "ambiance": "grillons"
+          },
+          {
+            "duree": 4,
+            "description": "Elle regarde les étoiles, les bras ouverts, émerveillée ; lui regarde ses pattes, puis le ciel, puis grelotte, des frissons ; il se colle à elle pour avoir chaud ; elle lui donne son bonnet.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "emerveille",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": -1,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "tend_g",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 210,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ],
+                    "pose": "tremble"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 260,
+                    "pose": "debout",
+                    "expression": "supplie"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 90,
+                "echelle": 0.6
+              },
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 330,
+                "y": 165,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 2.8,
+                    "x": 330
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 260
+                  }
+                ]
+              }
+            ],
+            "ambiance": "grillons"
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux assis sur un banc sous la lune, serrés, lui avec le bonnet ; elle pose la tête sur son épaule ; il regarde enfin les étoiles, et sourit ; un petit cœur ; il avait tort, c'était bien.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 380,
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 90,
+                "echelle": 0.6
+              },
+              {
+                "objet": "banc",
+                "x": 345,
+                "y": 340,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 290,
+                "y": 165,
+                "echelle": 0.9
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 2.4,
+                "flotte": true
+              }
+            ],
+            "ambiance": "grillons"
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

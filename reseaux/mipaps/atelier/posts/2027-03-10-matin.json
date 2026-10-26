@@ -1,0 +1,259 @@
+{
+  "jour": "2027-03-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-351",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne lit ton horoscope | Le canapé ; elle, le téléphone à la patte, lit à voix haute, très sérieuse ; lui, à côté, lève les yeux au ciel ; en haut s'écrit « aujourd'hui, ton signe doit éviter les disputes ». | Il ouvre la bouche pour protester ; elle lève un sourcil ; il réfléchit, des petits points ; il referme la bouche ; l'auréole apparaît au-dessus de sa tête ; il sourit, très sage. | Elle continue de lire : « ... et doit faire la vaisselle pour l'harmonie du foyer » ; il se tourne vers elle, bouche bée ; elle garde son sérieux, puis craque ; il lui jette le coussin, en riant.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle, le téléphone à la patte, lit à voix haute, très sérieuse ; lui, à côté, lève les yeux au ciel ; en haut s'écrit « aujourd'hui, ton signe doit éviter les disputes ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "vers": -1,
+                    "expression": "determine"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "exaspere"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne lit ton horoscope",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« aujourd'hui, ton signe doit éviter les disputes »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il ouvre la bouche pour protester ; elle lève un sourcil ; il réfléchit, des petits points ; il referme la bouche ; l'auréole apparaît au-dessus de sa tête ; il sourit, très sage.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "colere",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ],
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "narquois"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle continue de lire : « ... et doit faire la vaisselle pour l'harmonie du foyer » ; il se tourne vers elle, bouche bée ; elle garde son sérieux, puis craque ; il lui jette le coussin, en riant.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "chante",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire",
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.8,
+                "de": 2.6,
+                "etapes": [
+                  {
+                    "a": 2.6,
+                    "x": 150
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 420,
+                    "y": 220
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ... et doit faire la vaisselle pour l'harmonie du foyer »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 3.2
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

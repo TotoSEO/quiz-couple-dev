@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-144",
+  "sujet": "ani-234",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,120 +12,14 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne te pique ta place au chaud : il se lève du canapé, elle se glisse à sa place ; il revient, la voit, blasé ; il s'assoit à côté d'elle, câlin. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne laisse traîner ses affaires | Lui entre par la gauche, content, laisse tomber un pull par terre en passant, puis une chaussette ; elle, à droite, les ramasse derrière lui et les met dans un carton. | Il se retourne, s'assoit par terre, et pose son écharpe à côté de lui, puis son bonnet ; elle, la veine qui bat, les ramasse encore et les jette dans le carton. | Elle le soulève lui aussi, le porte jusqu'au carton et l'y dépose ; il dépasse du carton, surpris puis content ; elle s'essuie les pattes, fière, les pattes sur les hanches.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 4.2,
-            "description": "Les deux sont assis sur le canapé, lui sous une couverture bien au chaud, elle à côté. À 2 s il se lève, se tourne vers la gauche et s'en va en marchant de profil, sorti du cadre à 4 s. Le texte en haut dès 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 2,
-                    "y": 380,
-                    "taille": 250,
-                    "pose": "debout",
-                    "angle": -90
-                  },
-                  {
-                    "a": 2.5,
-                    "pose": "marche",
-                    "x": 226
-                  },
-                  {
-                    "a": 4,
-                    "x": -140
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "couverture",
-                "x": 226,
-                "y": 300,
-                "echelle": 1.2,
-                "a": 2
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand ta personne se lève du canapé une seconde",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle se glisse à sa place, toute contente, le sourire aux lèvres, sous la couverture.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "malicieux"
-                  },
-                  {
-                    "a": 1.2,
-                    "x": 226,
-                    "expression": "joie"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "couverture",
-                "x": 226,
-                "y": 300,
-                "echelle": 1.2,
-                "de": 1.2
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il revient par la gauche en marchant de profil, s'arrête devant le canapé à 2 s, blasé, les bras croisés, en la voyant installée.",
+            "duree": 4,
+            "description": "Lui entre par la gauche, content, laisse tomber un pull par terre en passant, puis une chaussette ; elle, à droite, les ramasse derrière lui et les met dans un carton.",
             "persos": [
               {
                 "perso": "lui",
@@ -133,16 +27,20 @@
                   {
                     "a": 0,
                     "x": -140,
+                    "y": 380,
+                    "taille": 250,
                     "angle": 90,
                     "pose": "marche",
                     "expression": "content"
                   },
                   {
-                    "a": 2,
-                    "x": 110,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "croises"
+                    "a": 1.6,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
                   }
                 ]
               },
@@ -151,42 +49,90 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "joie"
+                    "x": 470,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g",
+                    "expression": "agace"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "couverture",
-                "x": 226,
-                "y": 300,
-                "echelle": 1.2
+                "objet": "caisse",
+                "x": 540,
+                "y": 330,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pull",
+                "x": 120,
+                "y": 350,
+                "echelle": 0.8,
+                "de": 0.6,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 120
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 540,
+                    "y": 300
+                  },
+                  {
+                    "a": 2.6,
+                    "y": 330
+                  }
+                ]
+              },
+              {
+                "objet": "chaussettes",
+                "x": 220,
+                "y": 360,
+                "echelle": 0.5,
+                "de": 1.2,
+                "etapes": [
+                  {
+                    "a": 2.6,
+                    "x": 220
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 540,
+                    "y": 300
+                  }
+                ]
               }
             ],
-            "meubles": [
-              "canape_fond"
+            "textes": [
+              {
+                "texte": "toi quand ta personne laisse traîner ses affaires",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
             ]
           },
           {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Les deux sont blottis l'un contre l'autre sur le canapé, sous la même couverture, serrés, contents. Un petit cœur flotte.",
+            "duree": 4,
+            "description": "Il se retourne, s'assoit par terre, et pose son écharpe à côté de lui, puis son bonnet ; elle, la veine qui bat, les ramasse encore et les jette dans le carton.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "y": 318,
-                    "taille": 210,
+                    "x": 300,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
                     "pose": "assis",
-                    "expression": "calin"
+                    "expression": "zen"
                   }
                 ]
               },
@@ -195,43 +141,151 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 370,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "rire"
+                    "x": 470,
+                    "expression": "agace"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "exaspere"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "couverture",
-                "x": 320,
-                "y": 300,
-                "echelle": 1.5
+                "objet": "caisse",
+                "x": 540,
+                "y": 330,
+                "echelle": 1.0
               },
               {
-                "objet": "coeur",
-                "x": 320,
-                "y": 130,
-                "echelle": 0.4,
-                "de": 0.5,
-                "flotte": true
+                "objet": "echarpe",
+                "x": 200,
+                "y": 350,
+                "echelle": 0.7,
+                "de": 0.9,
+                "etapes": [
+                  {
+                    "a": 2.0,
+                    "x": 200
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 540,
+                    "y": 300
+                  }
+                ]
+              },
+              {
+                "objet": "bonnet",
+                "x": 390,
+                "y": 350,
+                "echelle": 0.7,
+                "de": 1.4,
+                "etapes": [
+                  {
+                    "a": 2.8,
+                    "x": 390
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 540,
+                    "y": 300
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle le soulève lui aussi, le porte jusqu'au carton et l'y dépose ; il dépasse du carton, surpris puis content ; elle s'essuie les pattes, fière, les pattes sur les hanches.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 330,
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 460
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 380,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 330,
+                    "y": 250,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 540,
+                    "y": 250
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 540,
+                    "y": 330,
+                    "taille": 160,
+                    "pose": "boule",
+                    "expression": "content"
+                  }
+                ]
               }
             ],
-            "meubles": [
-              "canape_fond"
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 540,
+                "y": 345,
+                "echelle": 1.1
+              }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

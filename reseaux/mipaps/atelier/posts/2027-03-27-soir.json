@@ -1,0 +1,265 @@
+{
+  "jour": "2027-03-27",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-373",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne demande ce que tu veux pour ton anniv | Le canapé ; elle, le téléphone à la patte, lui demande ; en haut s'écrit « tu veux quoi pour ton anniversaire ? » ; lui réfléchit une demi-seconde ; « rien » ; elle est blasée. | Elle insiste, les bras levés ; il hausse les épaules, sincère, l'auréole ; elle le pointe du doigt, méfiante ; il lève le pouce : vraiment rien. | « 10 min plus tard » en bas. Il revient avec une lettre pliée en deux, longue comme le bras, et la lui tend, très fier, des étincelles ; elle déplie, déplie, déplie ; la liste touche le sol ; elle est bouche bée.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle, le téléphone à la patte, lui demande ; en haut s'écrit « tu veux quoi pour ton anniversaire ? » ; lui réfléchit une demi-seconde ; « rien » ; elle est blasée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "curieux",
+                    "bras": "tient",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "zen"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne demande ce que tu veux pour ton anniv",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu veux quoi pour ton anniversaire ? »",
+                "de": 1.6,
+                "a": 2.9,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« rien »",
+                "de": 3.1,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle insiste, les bras levés ; il hausse les épaules, sincère, l'auréole ; elle le pointe du doigt, méfiante ; il lève le pouce : vraiment rien.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "exaspere",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "suspicieux",
+                    "bras": "pointe",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "pouce",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 10 min plus tard » en bas. Il revient avec une lettre pliée en deux, longue comme le bras, et la lui tend, très fier, des étincelles ; elle déplie, déplie, déplie ; la liste touche le sol ; elle est bouche bée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "bras": "tient",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 226,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tient",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "bouche_bee"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lettre",
+                "x": 226,
+                "y": 300,
+                "echelle": 0.6,
+                "a": 2.6,
+                "etapes": [
+                  {
+                    "a": 1.4,
+                    "x": 226
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 320
+                  }
+                ]
+              },
+              {
+                "objet": "lettre",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.6,
+                "de": 2.6,
+                "etapes": [
+                  {
+                    "a": 2.6,
+                    "echelle": 0.6
+                  },
+                  {
+                    "a": 3.4,
+                    "echelle": 1.2,
+                    "y": 330
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

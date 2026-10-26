@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-011",
+  "sujet": "ani-211",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,41 +12,59 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Ce soir, c'est moi qui cuisine » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne demande « ça ou ça ? » | Elle au milieu gauche, hésitante, un pull dans chaque patte, un à gauche et un à droite ; lui à droite, content, puis il regarde les deux pulls, curieux. | Il réfléchit, des petits points, puis pointe franchement le pull de gauche, fier de lui ; elle regarde le pull de gauche, puis celui de droite, perplexe. | Elle enfile le pull de droite, celui qu'il n'a pas choisi, et prend la pose, fière ; lui, les bras ballants, bouche bée, puis blasé ; elle lui fait un clin d'œil.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est au milieu, fier, les mains sur les hanches, devant une pizza posée à côté de lui. Des étincelles autour de lui. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Elle au milieu gauche, hésitante, un pull dans chaque patte, un à gauche et un à droite ; lui à droite, content, puis il regarde les deux pulls, curieux.",
             "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "hesite",
+                    "bras": "leves"
+                  }
+                ]
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "expression": "fier",
-                    "bras": "hanches",
-                    "signes": [
-                      "etincelles"
-                    ]
+                    "x": 470,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "curieux",
+                    "vers": -1
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 440,
-                "y": 340,
-                "echelle": 0.7
+                "objet": "pull",
+                "x": 180,
+                "y": 220,
+                "echelle": 0.9
+              },
+              {
+                "objet": "pull",
+                "x": 380,
+                "y": 220,
+                "echelle": 0.9
               }
             ],
             "textes": [
               {
-                "texte": "« ce soir, c'est moi qui cuisine »",
+                "texte": "toi quand ta personne demande « ça ou ça ? »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -55,70 +73,81 @@
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "De la fumée noire monte de la pizza à 0,6 s. Il panique à 1 s, les bras en l'air, qui tremble, des gouttes de sueur.",
+            "description": "Il réfléchit, des petits points, puis pointe franchement le pull de gauche, fier de lui ; elle regarde le pull de gauche, puis celui de droite, perplexe.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "expression": "fier",
-                    "bras": "hanches"
+                    "x": 470,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ],
+                    "vers": -1
                   },
                   {
-                    "a": 1,
-                    "expression": "panique",
-                    "bras": "leves",
-                    "signes": [
-                      "sueur"
-                    ]
+                    "a": 1.6,
+                    "expression": "fier",
+                    "bras": "pointe",
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "hesite",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 440,
-                "y": 340,
-                "echelle": 0.7
+                "objet": "pull",
+                "x": 180,
+                "y": 220,
+                "echelle": 0.9
               },
               {
-                "objet": "nuage",
-                "x": 440,
-                "y": 250,
-                "echelle": 0.8,
-                "de": 0.6
+                "objet": "pull",
+                "x": 380,
+                "y": 220,
+                "echelle": 0.9
               }
-            ],
-            "textes": []
+            ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Elle arrive du bord gauche en marchant de profil, son téléphone à la patte, les yeux plats, sans rien dire. Elle s'arrête à côté de lui à 2 s et se tourne vers nous à 2,5 s, le téléphone levé. Lui la regarde, soulagé. La phrase s'écrit mot à mot à 2,6 s.",
+            "description": "Elle enfile le pull de droite, celui qu'il n'a pas choisi, et prend la pose, fière ; lui, les bras ballants, bouche bée, puis blasé ; elle lui fait un clin d'œil.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "blase"
+                    "x": 280,
+                    "expression": "content",
+                    "bras": "leves"
                   },
                   {
-                    "a": 2,
-                    "x": 380,
-                    "pose": "debout"
+                    "a": 1.0,
+                    "bras": "bas",
+                    "expression": "fier"
                   },
                   {
-                    "a": 2.5,
-                    "angle": 0,
-                    "bras": "tient"
+                    "a": 3.2,
+                    "expression": "clin",
+                    "vers": 1
                   }
                 ]
               },
@@ -127,60 +156,53 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "expression": "panique",
-                    "bras": "leves"
+                    "x": 470,
+                    "expression": "fier",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "bas",
+                    "expression": "bouche_bee"
                   },
                   {
                     "a": 2.6,
-                    "expression": "soulage",
-                    "bras": "bas"
+                    "expression": "blase"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": -140,
-                "y": 350,
-                "echelle": 0.5,
-                "etapes": [
-                  {
-                    "a": 0.01,
-                    "x": -140,
-                    "y": 350
-                  },
-                  {
-                    "a": 2,
-                    "x": 370,
-                    "y": 350
-                  },
-                  {
-                    "a": 2.5,
-                    "x": 380,
-                    "y": 340
-                  }
-                ]
-              }
-            ],
-            "textes": [
+                "objet": "pull",
+                "x": 180,
+                "y": 220,
+                "echelle": 0.9
+              },
               {
-                "texte": "« j'ai commandé. »",
-                "de": 2.6,
-                "place": "haut",
-                "motAMot": true
+                "objet": "pull",
+                "x": 380,
+                "y": 220,
+                "echelle": 0.9,
+                "a": 1.0
+              },
+              {
+                "objet": "pull",
+                "x": 280,
+                "y": 300,
+                "echelle": 1.2,
+                "de": 1.0
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#amoureux"
+        "#amour",
+        "#humour"
       ]
     }
   }

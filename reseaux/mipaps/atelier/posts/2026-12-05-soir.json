@@ -2,65 +2,261 @@
   "jour": "2026-12-05",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-121",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-246",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : les deux au lit, la lune dehors.",
-        "texte": "j'aime bien quand on parle de tout et de rien jusqu'à pas d'heure",
-        "duree": 12,
+        "idee": "toi quand ta personne joue à la console | Le canapé, la télé ; lui, la manette à la patte, concentré, penché en avant ; elle s'assoit à côté, contente, et attend qu'il la regarde ; rien. | Elle vient s'asseoir sur ses genoux, entre lui et l'écran ; il penche la tête pour voir l'écran à côté d'elle, toujours concentré ; elle s'exaspère. | Elle attrape la deuxième manette, s'assoit à côté, et joue ; en quelques secondes elle gagne, triomphante, les bras levés ; lui, la manette qui tombe, choqué.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
-        "dessin": {
-          "elements": [
-            {
-              "meuble": "lit_fond"
-            },
-            {
-              "perso": "lui",
-              "expression": "content",
-              "y": 346,
-              "pose": "debout",
-              "bras": "aucun",
-              "pattes": "aucune",
-              "x": 250,
-              "taille": 200
-            },
-            {
-              "perso": "elle",
-              "expression": "content",
-              "y": 346,
-              "pose": "debout",
-              "bras": "aucun",
-              "pattes": "aucune",
-              "x": 400,
-              "taille": 200
-            },
-            {
-              "meuble": "lit_couette"
-            },
-            {
-              "objet": "lune",
-              "x": 325,
-              "y": 70,
-              "echelle": 0.7
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé ; lui, la manette à la patte, concentré, penché en avant ; elle s'assoit à côté, contente, et attend qu'il la regarde ; rien.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "attend",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 226,
+                "y": 290,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne joue à la console",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle vient s'asseoir sur ses genoux, entre lui et l'écran ; il penche la tête pour voir l'écran à côté d'elle, toujours concentré ; elle s'exaspère.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 250,
+                    "y": 250,
+                    "taille": 160,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "penche_g",
+                    "x": 200
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 200,
+                "y": 290,
+                "echelle": 0.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle attrape la deuxième manette, s'assoit à côté, et joue ; en quelques secondes elle gagne, triomphante, les bras levés ; lui, la manette qui tombe, choqué.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 250,
+                    "taille": 160,
+                    "pose": "assis",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "bras": "tient",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "triomphe",
+                    "bras": "leves",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "choque",
+                    "bras": "bas",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 200,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 2.8
+              },
+              {
+                "objet": "manette",
+                "x": 200,
+                "y": 350,
+                "echelle": 0.6,
+                "de": 2.8
+              },
+              {
+                "objet": "manette",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.6,
+                "de": 0.6,
+                "a": 2.8
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 2.8
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie ça à ta personne sans rien dire",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

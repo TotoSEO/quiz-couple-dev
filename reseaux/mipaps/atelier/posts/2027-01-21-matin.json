@@ -1,0 +1,250 @@
+{
+  "jour": "2027-01-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-295",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne marche pieds nus sur un truc | Lui traverse la pièce en marchant tranquillement vers la droite ; une clé traîne par terre ; il marche dessus, hurle en silence, la patte en l'air, les yeux en croix ; elle, à droite, sursaute. | Il sautille sur une patte, en larmes, puis se laisse tomber par terre, la patte dans les pattes, en pleurant ; elle accourt, inquiète, puis se retient de rire. | Elle le soulève à bout de bras, lui assis sur ses pattes levées, tout penaud, la clé à la patte ; elle l'emporte vers la droite, décidée, comme un blessé de guerre ; il fait le malade.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui traverse la pièce en marchant tranquillement vers la droite ; une clé traîne par terre ; il marche dessus, hurle en silence, la patte en l'air, les yeux en croix ; elle, à droite, sursaute.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "angle": 0,
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation",
+                      "rayons"
+                    ],
+                    "pose": "tremble"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 290,
+                "y": 368,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne marche pieds nus sur un truc",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.7
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il sautille sur une patte, en larmes, puis se laisse tomber par terre, la patte dans les pattes, en pleurant ; elle accourt, inquiète, puis se retient de rire.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "saut",
+                    "expression": "pleure",
+                    "signes": [
+                      "larmes"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "y": 380,
+                    "pose": "tremble"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "assis",
+                    "expression": "sanglote",
+                    "bras": "tient",
+                    "signes": [
+                      "fontaines"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 500,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 400,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.65,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire",
+                    "bras": "bouche"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 290,
+                "y": 368,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 0.1
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle le soulève à bout de bras, lui assis sur ses pattes levées, tout penaud, la clé à la patte ; elle l'emporte vers la droite, décidée, comme un blessé de guerre ; il fait le malade.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "determine",
+                    "bras": "leves",
+                    "taille": 270
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 400,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 402,
+                    "y": 258,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "malade",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 402
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 822
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 430,
+                "y": 240,
+                "echelle": 0.4,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 430
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 850
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

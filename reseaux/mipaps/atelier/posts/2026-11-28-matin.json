@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-113",
+  "sujet": "ani-237",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,24 +12,39 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Je suis prête dans 5 minutes » : elle essaie une tenue, non ; une autre, non ; lui attend assis par terre ; elle repart avec la première, contente ; il se relève, blasé. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne attend un colis | La porte à droite ; elle fait les cent pas devant, regarde l'horloge, attend ; la sonnette retentit, elle sprinte vers la porte, ouvre : rien, déçue. | « le lendemain » en bas. Elle attend encore devant la porte, puis s'assoit par terre, puis se couche en boule devant la porte ; lui lui apporte un coussin, désolé. | La sonnette ; elle bondit, ouvre, et un gros carton est là ; elle saute de joie, le serre dans ses bras avec des cœurs ; lui, derrière, applaudit, puis attend son câlin à lui.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle essaie un pull, se regarde, l'air contente. Lui est assis par terre à droite, patient. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La porte à droite ; elle fait les cent pas devant, regarde l'horloge, attend ; la sonnette retentit, elle sprinte vers la porte, ouvre : rien, déçue.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "joues"
+                    "x": 250,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "decu"
                   }
                 ]
               },
@@ -38,82 +53,73 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 470,
+                    "x": 150,
+                    "y": 380,
+                    "taille": 250,
                     "pose": "assis",
-                    "expression": "content"
+                    "expression": "blase",
+                    "bras": "tient"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pull",
-                "x": 240,
-                "y": 290,
-                "echelle": 1.0
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.55
+              },
+              {
+                "objet": "horloge",
+                "x": 320,
+                "y": 90,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "« je suis prête dans 5 minutes »",
+                "texte": "toi quand ta personne attend un colis",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
               }
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 1.1
+              }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle change de tenue : une écharpe cette fois, elle se regarde, fait non de la tête, perplexe. Lui attend toujours par terre, les yeux plats.",
+            "duree": 4,
+            "description": "« le lendemain » en bas. Elle attend encore devant la porte, puis s'assoit par terre, puis se couche en boule devant la porte ; lui lui apporte un coussin, désolé.",
             "persos": [
               {
                 "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "perplexe",
-                    "bras": "menton"
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
                     "x": 470,
-                    "pose": "assis",
-                    "expression": "blase"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "echarpe",
-                "x": 240,
-                "y": 300,
-                "echelle": 0.9
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Une autre tenue encore, des chaussettes : elle est agacée, les bras croisés, un petit nuage noir. Lui, assis, la tête sur la patte, désespéré.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
+                    "expression": "attend"
+                  },
                   {
-                    "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "vexe",
-                    "bras": "croises",
+                    "a": 1.2,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "boule",
+                    "expression": "deprime",
                     "signes": [
                       "nuage_noir"
                     ]
@@ -125,37 +131,105 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 470,
+                    "x": 150,
                     "pose": "assis",
-                    "expression": "fatigue",
-                    "bras": "menton"
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "desole",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.25,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.4,
+                    "bras": "tend_d"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "chaussettes",
-                "x": 240,
-                "y": 350,
-                "echelle": 0.8
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.8,
+                "de": 1.4,
+                "etapes": [
+                  {
+                    "a": 1.4,
+                    "x": 150
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 420,
+                    "y": 350
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le lendemain",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle remet le pull de la première, contente, les bras en l'air. Lui se relève, blasé, les bras croisés.",
+            "duree": 4.5,
+            "description": "La sonnette ; elle bondit, ouvre, et un gros carton est là ; elle saute de joie, le serre dans ses bras avec des cœurs ; lui, derrière, applaudit, puis attend son câlin à lui.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 240,
-                    "pose": "debout",
+                    "x": 470,
+                    "pose": "boule",
+                    "expression": "deprime"
+                  },
+                  {
+                    "a": 0.5,
+                    "pose": "saut",
                     "expression": "joie",
-                    "bras": "leves"
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "debout",
+                    "expression": "emerveille"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 500,
+                    "bras": "tend_d",
+                    "expression": "amour",
+                    "pose": "penche_d"
                   }
                 ]
               },
@@ -164,35 +238,71 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 470,
-                    "pose": "assis",
-                    "expression": "blase"
+                    "x": 330,
+                    "expression": "content",
+                    "bras": "tend_d"
                   },
                   {
-                    "a": 1.4,
-                    "pose": "debout",
-                    "bras": "croises"
+                    "a": 1.6,
+                    "expression": "bravo",
+                    "bras": "applaudit"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "attend",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 4.0,
+                    "expression": "supplie",
+                    "bras": "priere"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pull",
-                "x": 240,
-                "y": 290,
-                "echelle": 1.0
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 580,
+                "y": 340,
+                "echelle": 1.1,
+                "de": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 540,
+                "y": 170,
+                "echelle": 0.4,
+                "de": 2.2,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 0.3
+              },
+              {
+                "nom": "saut",
+                "a": 0.5
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

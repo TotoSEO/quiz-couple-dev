@@ -1,0 +1,298 @@
+{
+  "jour": "2027-02-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-319",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne lit par-dessus ton épaule | Le canapé ; lui tape un message sur son téléphone, concentré ; elle arrive derrière lui, se penche, et lit par-dessus son épaule, curieuse, l'air de rien. | Il sent un regard, se tourne, elle regarde ailleurs en sifflant, l'auréole ; il reprend ; elle se repenche aussitôt ; il se retourne ; elle siffle ; de plus en plus vite. | Il tape une dernière phrase et lui tend le téléphone ; en haut s'écrit ce qu'il a écrit : « elle lit par-dessus mon épaule, là. » ; elle lit, se fige, bouche bée, puis lui jette le coussin.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; lui tape un message sur son téléphone, concentré ; elle arrive derrière lui, se penche, et lit par-dessus son épaule, curieuse, l'air de rien.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 820,
+                    "y": 380,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 420,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "curieux",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 300,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne lit par-dessus ton épaule",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il sent un regard, se tourne, elle regarde ailleurs en sifflant, l'auréole ; il reprend ; elle se repenche aussitôt ; il se retourne ; elle siffle ; de plus en plus vite.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "suspicieux",
+                    "vers": 1,
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "concentre",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "suspicieux",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "concentre",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "exaspere",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "penche_g",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "penche_g",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "assis",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 300,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il tape une dernière phrase et lui tend le téléphone ; en haut s'écrit ce qu'il a écrit : « elle lit par-dessus mon épaule, là. » ; elle lit, se fige, bouche bée, puis lui jette le coussin.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malicieux",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tend_d",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "peur",
+                    "bras": "visage"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "curieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "furieux",
+                    "bras": "tend_g",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 360,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 500,
+                "y": 290,
+                "echelle": 0.8,
+                "de": 3.3,
+                "etapes": [
+                  {
+                    "a": 3.3,
+                    "x": 500
+                  },
+                  {
+                    "a": 3.9,
+                    "x": 300,
+                    "y": 220
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« elle lit par-dessus mon épaule, là. »",
+                "de": 0.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 3.9
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

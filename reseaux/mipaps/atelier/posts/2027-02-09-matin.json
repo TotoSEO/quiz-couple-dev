@@ -1,0 +1,306 @@
+{
+  "jour": "2027-02-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-317",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a la musique à fond dans son casque | Le canapé ; lui, le casque sur les oreilles, chante à tue-tête sans s'entendre, des notes partout ; elle, à côté, lit, blasée, se bouche une oreille. | Elle se glisse jusqu'à lui et tire un côté du casque vers son oreille ; il sursaute, surpris ; elle écoute ; son visage change : elle aime ; elle se colle à lui pour écouter. | Les deux têtes collées sous le même casque, les yeux fermés, ils chantent ensemble sans s'entendre, des notes partout, et balancent en rythme ; un cœur monte.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; lui, le casque sur les oreilles, chante à tue-tête sans s'entendre, des notes partout ; elle, à côté, lit, blasée, se bouche une oreille.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "exaspere",
+                    "bras": "oreilles_bouchees"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "casque",
+                "x": 226,
+                "y": 160,
+                "echelle": 0.9
+              },
+              {
+                "objet": "livre",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 1.6
+              },
+              {
+                "objet": "musique",
+                "x": 300,
+                "y": 120,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 150,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a la musique à fond dans son casque",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle se glisse jusqu'à lui et tire un côté du casque vers son oreille ; il sursaute, surpris ; elle écoute ; son visage change : elle aime ; elle se colle à lui pour écouter.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 320,
+                    "bras": "tend_g",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "content",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "casque",
+                "x": 270,
+                "y": 160,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 270
+                  }
+                ]
+              },
+              {
+                "objet": "musique",
+                "x": 300,
+                "y": 100,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux têtes collées sous le même casque, les yeux fermés, ils chantent ensemble sans s'entendre, des notes partout, et balancent en rythme ; un cœur monte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "penche_d"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 350,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "penche_g"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "casque",
+                "x": 310,
+                "y": 160,
+                "echelle": 1.1
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 130,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 440,
+                "y": 120,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 310,
+                "y": 90,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

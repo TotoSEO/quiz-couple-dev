@@ -1,0 +1,195 @@
+{
+  "jour": "2027-02-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-327",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne rit de ses propres blagues | Les deux face à face ; elle raconte quelque chose, les bras qui s'agitent, et éclate de rire avant la fin, pliée en deux ; lui attend la chute, poli, un petit sourire. | Elle essaie de finir, n'y arrive pas, pleure de rire, les larmes aux yeux, se tient le ventre ; lui, blasé, les bras croisés, puis sa bouche tremble : il commence à rire aussi. | Les deux morts de rire, pliés en deux l'un sur l'autre, des larmes, sans savoir pourquoi ; elle essaie encore de finir ; il lui fait signe que non, ça ira ; des petits cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux face à face ; elle raconte quelque chose, les bras qui s'agitent, et éclate de rire avant la fin, pliée en deux ; lui attend la chute, poli, un petit sourire.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "mort_de_rire",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "attend"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne rit de ses propres blagues",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle essaie de finir, n'y arrive pas, pleure de rire, les larmes aux yeux, se tient le ventre ; lui, blasé, les bras croisés, puis sa bouche tremble : il commence à rire aussi.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "pleure_de_joie",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "mort_de_rire",
+                    "pose": "penche_g"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "debout",
+                    "expression": "rire",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "blase",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux morts de rire, pliés en deux l'un sur l'autre, des larmes, sans savoir pourquoi ; elle essaie encore de finir ; il lui fait signe que non, ça ira ; des petits cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "mort_de_rire",
+                    "pose": "penche_d"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d",
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "pleure_de_joie",
+                    "pose": "penche_g"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "rire",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "mort_de_rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.9,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

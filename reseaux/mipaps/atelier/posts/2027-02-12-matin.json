@@ -1,0 +1,253 @@
+{
+  "jour": "2027-02-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-320",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on tombe malades en même temps | Le lit ; les deux allongés, malades, le nez rouge, une boîte de mouchoirs entre eux ; ils se regardent, pitoyables ; chacun attend que l'autre se lève. | Il se redresse, décidé, pour aller chercher une tasse ; il retombe ; elle se redresse à son tour ; elle retombe ; ils se regardent, les yeux humides, deux fontaines de larmes. | « 2 h plus tard » en bas. Les deux dorment collés au milieu du lit, le nez rouge, la boîte de mouchoirs sur la tête de lui, des z ; un petit cœur malgré tout.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit ; les deux allongés, malades, le nez rouge, une boîte de mouchoirs entre eux ; ils se regardent, pitoyables ; chacun attend que l'autre se lève.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": 1,
+                    "expression": "supplie"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "vers": -1,
+                    "expression": "supplie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on tombe malades en même temps",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il se redresse, décidé, pour aller chercher une tasse ; il retombe ; elle se redresse à son tour ; elle retombe ; ils se regardent, les yeux humides, deux fontaines de larmes.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "allonge",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "sanglote",
+                    "signes": [
+                      "fontaines"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "allonge",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "sanglote",
+                    "signes": [
+                      "fontaines"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.6
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 1.4
+              },
+              {
+                "nom": "coussin",
+                "a": 2.4
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 h plus tard » en bas. Les deux dorment collés au milieu du lit, le nez rouge, la boîte de mouchoirs sur la tête de lui, des z ; un petit cœur malgré tout.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 290,
+                "y": 250,
+                "echelle": 0.6
+              },
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

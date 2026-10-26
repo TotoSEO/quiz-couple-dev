@@ -1,0 +1,282 @@
+{
+  "jour": "2027-02-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-331",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on change d'heure | Le matin, le lit ; les deux se réveillent, regardent l'horloge au mur, puis le téléphone : pas la même heure ; ils se regardent, confus, deux points d'interrogation. | En haut s'écrit « on a gagné ou perdu une heure ? » ; lui compte sur ses pattes, concentré ; elle compte dans l'autre sens ; ils arrivent à deux réponses différentes et se disputent. | Ils abandonnent, se rallongent tous les deux et se rendorment, par sécurité, des z ; l'horloge et le téléphone ne sont toujours pas d'accord ; un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, le lit ; les deux se réveillent, regardent l'horloge au mur, puis le téléphone : pas la même heure ; ils se regardent, confus, deux points d'interrogation.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 248,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on change d'heure",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut s'écrit « on a gagné ou perdu une heure ? » ; lui compte sur ses pattes, concentré ; elle compte dans l'autre sens ; ils arrivent à deux réponses différentes et se disputent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "concentre",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "pointe",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "colere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "pointe",
+                    "expression": "determine",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "colere"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« on a gagné ou perdu une heure ? »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils abandonnent, se rallongent tous les deux et se rendorment, par sécurité, des z ; l'horloge et le téléphone ne sont toujours pas d'accord ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "colere"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "colere"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 150,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 2.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

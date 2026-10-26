@@ -1,0 +1,244 @@
+{
+  "jour": "2026-12-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-258",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne chante sous la douche | Une porte fermée à gauche ; des notes de musique en sortent, de plus en plus grosses ; elle, assise par terre à droite avec une tasse, lève les yeux, blasée. | Les notes continuent, encore plus grosses ; elle pose la tasse, se bouche les oreilles, puis rit malgré elle ; puis sa patte bat la mesure ; elle se lève. | Elle danse dans le couloir devant la porte, en chantant à son tour, des notes partout ; la porte s'ouvre : lui, de la mousse sur la tête, chante avec elle ; ils dansent tous les deux.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une porte fermée à gauche ; des notes de musique en sortent, de plus en plus grosses ; elle, assise par terre à droite avec une tasse, lève les yeux, blasée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "exaspere",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 110,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "tasse",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 0.4,
+                "a": 1.6,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 230,
+                "y": 120,
+                "echelle": 0.7,
+                "de": 1.4,
+                "a": 2.8,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 190,
+                "y": 180,
+                "echelle": 0.9,
+                "de": 2.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne chante sous la douche",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Les notes continuent, encore plus grosses ; elle pose la tasse, se bouche les oreilles, puis rit malgré elle ; puis sa patte bat la mesure ; elle se lève.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
+                    "expression": "exaspere",
+                    "bras": "oreilles_bouchees"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "expression": "content",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 110,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "tasse",
+                "x": 520,
+                "y": 350,
+                "echelle": 0.5
+              },
+              {
+                "objet": "musique",
+                "x": 210,
+                "y": 150,
+                "echelle": 0.9,
+                "de": 0.2,
+                "a": 1.8,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 240,
+                "y": 110,
+                "echelle": 1.0,
+                "de": 1.6,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle danse dans le couloir devant la porte, en chantant à son tour, des notes partout ; la porte s'ouvre : lui, de la mousse sur la tête, chante avec elle ; ils dansent tous les deux.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "danse",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 430
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 2.0,
+                    "x": 150,
+                    "expression": "chante",
+                    "pose": "danse",
+                    "signes": [
+                      "notes",
+                      "bulles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 70,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "musique",
+                "x": 300,
+                "y": 120,
+                "echelle": 0.8,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 150,
+                "echelle": 0.6,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 230,
+                "y": 170,
+                "echelle": 0.6,
+                "de": 2.4,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 2.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

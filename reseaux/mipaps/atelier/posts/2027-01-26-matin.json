@@ -1,0 +1,221 @@
+{
+  "jour": "2027-01-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-301",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te vole ta place sur le canapé | Le canapé ; lui, bien installé à sa place à gauche, se lève pour aller boire, content, sort par la gauche ; elle, à droite, le suit des yeux, malicieuse. | Elle glisse sur le canapé jusqu'à sa place à lui, tout au chaud, et s'installe, zen, les yeux fermés, l'auréole ; il revient par la gauche, s'arrête, bouche bée. | Il la regarde, réfléchit, puis s'assoit sur ses genoux, de tout son poids, tout content ; elle, écrasée dessous, les yeux en croix ; il prend la télécommande, l'air de rien.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; lui, bien installé à sa place à gauche, se lève pour aller boire, content, sort par la gauche ; elle, à droite, le suit des yeux, malicieuse.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 200,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "angle": -90
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "malicieux",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te vole ta place sur le canapé",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle glisse sur le canapé jusqu'à sa place à lui, tout au chaud, et s'installe, zen, les yeux fermés, l'auréole ; il revient par la gauche, s'arrête, bouche bée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 226,
+                    "expression": "zen",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 140,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.2,
+                    "angle": 0,
+                    "expression": "bouche_bee"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il la regarde, réfléchit, puis s'assoit sur ses genoux, de tout son poids, tout content ; elle, écrasée dessous, les yeux en croix ; il prend la télécommande, l'air de rien.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 140,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 230,
+                    "y": 250,
+                    "taille": 190,
+                    "pose": "assis",
+                    "expression": "content",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "manette",
+                "x": 300,
+                "y": 240,
+                "echelle": 0.5,
+                "de": 2.6
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 1.4
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

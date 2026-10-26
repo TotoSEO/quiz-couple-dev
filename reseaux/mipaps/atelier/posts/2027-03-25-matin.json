@@ -1,0 +1,280 @@
+{
+  "jour": "2027-03-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-370",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on a la même idée en même temps | Le canapé, un dimanche, les deux s'ennuient ; d'un coup, une ampoule au-dessus de chaque tête, exactement au même moment ; ils se tournent l'un vers l'autre, les yeux ronds. | Ils se pointent du doigt en même temps, la bouche ouverte ; ils rient ; ils se lèvent d'un bond ; pas besoin de le dire. | Ils attrapent le sac et les clés et sortent en courant par la droite, main dans la main, radieux ; des cœurs derrière eux ; la porte claque ; le canapé est vide.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, un dimanche, les deux s'ennuient ; d'un coup, une ampoule au-dessus de chaque tête, exactement au même moment ; ils se tournent l'un vers l'autre, les yeux ronds.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on a la même idée en même temps",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tinte",
+                "a": 1.8
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Ils se pointent du doigt en même temps, la bouche ouverte ; ils rient ; ils se lèvent d'un bond ; pas besoin de le dire.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "pointe",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 250,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "saut",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "pointe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 400,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "saut",
+                    "bras": "leves"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils attrapent le sac et les clés et sortent en courant par la droite, main dans la main, radieux ; des cœurs derrière eux ; la porte claque ; le canapé est vide.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 400,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 250,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 250
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "objet": "sac",
+                "x": 400,
+                "y": 300,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 0.8,
+                    "x": 400
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 1.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 420,
+                "y": 170,
+                "echelle": 0.3,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 2.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

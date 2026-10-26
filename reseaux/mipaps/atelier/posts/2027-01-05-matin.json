@@ -1,0 +1,193 @@
+{
+  "jour": "2027-01-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-276",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne répond « ok. » | Lui au milieu, le téléphone à la patte, content ; il lit la réponse ; en haut s'écrit « ok. » ; son visage se décompose, les yeux ronds, une goutte de sueur. | Il relit, panique, fait les cent pas en courant d'un bord à l'autre, le téléphone à la patte, des sueurs, puis se met en boule : qu'est-ce qu'il a fait ? | Elle, de son côté, assise par terre, les deux pattes prises par un carton qu'elle porte, le téléphone coincé contre l'oreille, tranquille, sourit ; en haut : « pardon, j'avais les mains prises ».",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au milieu, le téléphone à la patte, content ; il lit la réponse ; en haut s'écrit « ok. » ; son visage se décompose, les yeux ronds, une goutte de sueur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne répond « ok. »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« ok. »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il relit, panique, fait les cent pas en courant d'un bord à l'autre, le téléphone à la patte, des sueurs, puis se met en boule : qu'est-ce qu'il a fait ?",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "expression": "panique",
+                    "bras": "tient",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 320,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.7,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 180,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.9,
+                    "angle": 0,
+                    "pose": "boule",
+                    "expression": "peur",
+                    "signes": [
+                      "sueurs",
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.55,
+                "a": 0.6
+              },
+              {
+                "objet": "question",
+                "x": 180,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 3.0
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle, de son côté, assise par terre, les deux pattes prises par un carton qu'elle porte, le téléphone coincé contre l'oreille, tranquille, sourit ; en haut : « pardon, j'avais les mains prises ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "porte_haut",
+                    "bras": "porte_haut",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 110,
+                "echelle": 1.0
+              },
+              {
+                "objet": "telephone",
+                "x": 400,
+                "y": 280,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« pardon, j'avais les mains prises »",
+                "de": 0.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

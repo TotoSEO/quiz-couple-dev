@@ -1,0 +1,206 @@
+{
+  "jour": "2027-03-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-367",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on essaie d'avoir une discussion sérieuse | Le canapé ; les deux assis bien droits, face à face, très sérieux ; en haut s'écrit « bon. on parle. » ; lui prend une grande inspiration ; elle hoche la tête, grave. | Il commence, sérieux ; elle le regarde ; sa bouche à elle tremble ; elle pouffe ; il fronce les sourcils ; elle se retient, les pattes sur la bouche ; il craque à son tour. | Les deux morts de rire, pliés en deux ; ils reprennent leur sérieux, bien droits, en même temps ; une seconde ; et ils repartent en fou rire, l'un sur l'autre ; un petit cœur ; la conversation attendra.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; les deux assis bien droits, face à face, très sérieux ; en haut s'écrit « bon. on parle. » ; lui prend une grande inspiration ; elle hoche la tête, grave.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on essaie d'avoir une discussion sérieuse",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« bon, on parle »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il commence, sérieux ; elle le regarde ; sa bouche à elle tremble ; elle pouffe ; il fronce les sourcils ; elle se retient, les pattes sur la bouche ; il craque à son tour.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "agace"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "mort_de_rire",
+                    "pose": "assis"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux morts de rire, pliés en deux ; ils reprennent leur sérieux, bien droits, en même temps ; une seconde ; et ils repartent en fou rire, l'un sur l'autre ; un petit cœur ; la conversation attendra.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "mort_de_rire"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire",
+                    "pose": "penche_d",
+                    "x": 280
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "mort_de_rire"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "pleure_de_joie",
+                    "pose": "penche_g",
+                    "x": 370
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 3.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

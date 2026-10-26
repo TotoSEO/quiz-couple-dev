@@ -2,52 +2,197 @@
   "jour": "2026-10-31",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-111",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-206",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : lui, gourmand, une part de pizza à la patte ; elle fait semblant d'être fâchée.",
-        "texte": "je t'aime même quand tu manges dans mon assiette",
-        "duree": 11,
+        "idee": "nous deux quand on s'est fâchés pour un truc nul | Dos à dos au milieu, les bras croisés, un petit nuage noir au-dessus de chacun ; personne ne bouge, les yeux plissés, chacun regarde son bord. | « 2 min plus tard » en bas. Toujours dos à dos ; elle jette un œil en coin vers lui, puis fait l'indifférente ; lui devient triste, puis jette un œil en coin lui aussi. | Toujours dos à dos, les deux boudent encore ; mais une patte de chacun se tend derrière le dos, vers l'autre, et les deux pattes se trouvent ; un petit cœur monte entre eux.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
-        "dessin": {
-          "elements": [
-            {
-              "perso": "lui",
-              "expression": "gourmand",
-              "x": 250,
-              "taille": 265,
-              "bras": "tient"
-            },
-            {
-              "objet": "pizza",
-              "x": 290,
-              "y": 330,
-              "echelle": 0.5
-            },
-            {
-              "perso": "elle",
-              "expression": "sarcastique",
-              "x": 410,
-              "taille": 262
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dos à dos au milieu, les bras croisés, un petit nuage noir au-dessus de chacun ; personne ne bouge, les yeux plissés, chacun regarde son bord.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "y": 380,
+                    "taille": 260,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_g",
+                    "vers": -1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "y": 380,
+                    "taille": 260,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_d",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on s'est fâchés pour un truc nul",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 2 min plus tard » en bas. Toujours dos à dos ; elle jette un œil en coin vers lui, puis fait l'indifférente ; lui devient triste, puis jette un œil en coin lui aussi.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_g",
+                    "vers": -1,
+                    "taille": 260
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "triste"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "suspicieux",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_d",
+                    "vers": 1,
+                    "taille": 260
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "blase",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Toujours dos à dos, les deux boudent encore ; mais une patte de chacun se tend derrière le dos, vers l'autre, et les deux pattes se trouvent ; un petit cœur monte entre eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_g",
+                    "vers": -1,
+                    "taille": 260
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tend_d",
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "pose": "penche_d",
+                    "vers": 1,
+                    "taille": 260
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g",
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 300,
+                "echelle": 0.3,
+                "de": 2.2,
+                "flotte": true
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie-lui ça",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

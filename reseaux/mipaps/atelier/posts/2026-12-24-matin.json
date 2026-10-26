@@ -1,0 +1,273 @@
+{
+  "jour": "2026-12-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "noel-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux le soir des films de Noël | Le canapé, la télé, des flocons à la fenêtre ; les deux sous le plaid, contents ; elle connaît le film par cœur et mime la scène avant qu'elle arrive ; lui rit. | « à la moitié du film » en bas. Elle pleure d'émotion, les mouchoirs ; lui bâille, pique du nez, se redresse, pique du nez encore ; elle ne voit rien. | « la fin du film » en bas. Elle a tout le plaid enroulé autour d'elle, ravie, les yeux brillants ; lui dort debout, appuyé contre l'accoudoir, des z, sans plaid ; les flocons continuent.",
+        "son": {
+          "ambiance": "noel"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé, des flocons à la fenêtre ; les deux sous le plaid, contents ; elle connaît le film par cœur et mime la scène avant qu'elle arrive ; lui rit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "chante",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "emu",
+                    "bras": "joues"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "flocon",
+                "x": 560,
+                "y": 110,
+                "echelle": 0.35,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 110,
+                "y": 130,
+                "echelle": 0.3,
+                "de": 0.9,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux le soir des films de Noël",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« à la moitié du film » en bas. Elle pleure d'émotion, les mouchoirs ; lui bâille, pique du nez, se redresse, pique du nez encore ; elle ne voit rien.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "emu"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "pleure",
+                    "signes": [
+                      "larmes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "fatigue"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "mouchoirs",
+                "x": 540,
+                "y": 330,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "à la moitié du film",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« la fin du film » en bas. Elle a tout le plaid enroulé autour d'elle, ravie, les yeux brillants ; lui dort debout, appuyé contre l'accoudoir, des z, sans plaid ; les flocons continuent.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 130,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "couverture",
+                "x": 430,
+                "y": 318,
+                "echelle": 2.2
+              },
+              {
+                "objet": "flocon",
+                "x": 560,
+                "y": 110,
+                "echelle": 0.35,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 220,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la fin du film",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

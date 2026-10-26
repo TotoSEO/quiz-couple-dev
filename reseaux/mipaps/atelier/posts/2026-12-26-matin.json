@@ -1,0 +1,323 @@
+{
+  "jour": "2026-12-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-267",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne se lève tôt et toi non | Le lit, le matin tôt, une horloge ; lui se lève plein d'énergie, saute du lit, allume la lampe ; elle, allongée, se cache les yeux, et grogne. | Il traverse la pièce en sifflant, une tasse à la patte, ouvre la fenêtre, chante ; elle enfonce la tête sous l'oreiller, une veine qui bat. | Il repasse près du lit ; une patte sort de sous l'oreiller, l'attrape et le tire dans le lit ; il tombe à côté d'elle, surpris, puis se rendort aussitôt ; elle sourit sous l'oreiller.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit, le matin tôt, une horloge ; lui se lève plein d'énergie, saute du lit, allume la lampe ; elle, allongée, se cache les yeux, et grogne.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "saut",
+                    "bras": "leves",
+                    "pattes": "debout"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "debout",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "visage",
+                    "expression": "exaspere"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "lampe",
+                "x": 90,
+                "y": 240,
+                "echelle": 1.0,
+                "de": 2.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne se lève tôt et toi non",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il traverse la pièce en sifflant, une tasse à la patte, ouvre la fenêtre, chante ; elle enfonce la tête sous l'oreiller, une veine qui bat.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ],
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tete"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "tasse",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": 150
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 520
+                  }
+                ]
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 230,
+                "echelle": 1.0,
+                "de": 1.6
+              },
+              {
+                "objet": "musique",
+                "x": 230,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 0.3,
+                "a": 1.6,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il repasse près du lit ; une patte sort de sous l'oreiller, l'attrape et le tire dans le lit ; il tombe à côté d'elle, surpris, puis se rendort aussitôt ; elle sourit sous l'oreiller.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 520,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 290,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "surpris",
+                    "angle": 0,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tend_g",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "bas",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 230,
+                "echelle": 1.0,
+                "de": 0,
+                "a": 1.2
+              },
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 3.4,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 1.9
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

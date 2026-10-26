@@ -1,0 +1,259 @@
+{
+  "jour": "2027-02-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-334",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne s'endort sur ton épaule dans le bus | Un banc, comme dans un bus ; les deux assis, elle pique du nez, puis pose la tête sur son épaule et s'endort, des z ; lui, content, puis il regarde dehors : c'est son arrêt. | Il hésite, une goutte de sueur, regarde la porte, la regarde elle ; il n'ose pas bouger ; la porte se referme ; il reste assis, résigné, bien droit, les bras le long du corps. | « 3 arrêts plus tard » en bas. Toujours assis, elle dort toujours sur son épaule ; lui regarde défiler la fenêtre, puis la regarde elle, et sourit, les yeux doux ; un petit cœur ; il n'est pas pressé.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Un banc, comme dans un bus ; les deux assis, elle pique du nez, puis pose la tête sur son épaule et s'endort, des z ; lui, content, puis il regarde dehors : c'est son arrêt.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "vers": 1,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 380,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 345,
+                "y": 340,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "fenetre",
+                "x": 540,
+                "y": 170,
+                "echelle": 1.2,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne s'endort sur ton épaule dans le bus",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "ambiance": "moteur"
+          },
+          {
+            "duree": 4,
+            "description": "Il hésite, une goutte de sueur, regarde la porte, la regarde elle ; il n'ose pas bouger ; la porte se referme ; il reste assis, résigné, bien droit, les bras le long du corps.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueur"
+                    ],
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.2,
+                    "vers": -1,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 345,
+                "y": 340,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "fenetre",
+                "x": 540,
+                "y": 170,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "porte",
+                "x": 100,
+                "y": 230,
+                "echelle": 1.5,
+                "derriere": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "portiere",
+                "a": 2.2
+              }
+            ],
+            "ambiance": "moteur"
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 arrêts plus tard » en bas. Toujours assis, elle dort toujours sur son épaule ; lui regarde défiler la fenêtre, puis la regarde elle, et sourit, les yeux doux ; un petit cœur ; il n'est pas pressé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "amour",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 345,
+                "y": 340,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "fenetre",
+                "x": 540,
+                "y": 170,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 180,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 arrêts plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "ambiance": "moteur"
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

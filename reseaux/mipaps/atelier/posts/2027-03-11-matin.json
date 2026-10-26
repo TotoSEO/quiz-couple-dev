@@ -1,0 +1,322 @@
+{
+  "jour": "2027-03-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-352",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne t'appelle depuis l'autre pièce | Une porte au milieu ; lui, à gauche, assis par terre, tranquille, un livre ; en haut s'écrit « tu peux venir ? » ; il se lève, passe la porte vers la droite ; puis « non, rien » ; il revient. | Il se rassoit ; en haut : « viens voir ! » ; il se relève, repasse la porte en courant ; « c'est bon, j'ai trouvé » ; il revient, une veine sur le front ; il se rassoit ; « tu peux... » ; il se relève. | Il revient avec un coussin, s'assoit par terre juste dans l'embrasure de la porte, entre les deux pièces, blasé, le livre sur les genoux ; elle passe la tête, surprise ; il lève le pouce sans la regarder.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une porte au milieu ; lui, à gauche, assis par terre, tranquille, un livre ; en haut s'écrit « tu peux venir ? » ; il se lève, passe la porte vers la droite ; puis « non, rien » ; il revient.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.7,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "livre",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.6,
+                "a": 0.8
+              },
+              {
+                "objet": "livre",
+                "x": 130,
+                "y": 350,
+                "echelle": 0.6,
+                "de": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne t'appelle depuis l'autre pièce",
+                "de": 0.2,
+                "a": 0.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu peux venir ? »",
+                "de": 0.8,
+                "a": 2.1,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« non, rien »",
+                "de": 2.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il se rassoit ; en haut : « viens voir ! » ; il se relève, repasse la porte en courant ; « c'est bon, j'ai trouvé » ; il revient, une veine sur le front ; il se rassoit ; « tu peux... » ; il se relève.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.7,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.0,
+                    "angle": 0,
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "debout",
+                    "expression": "exaspere"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "livre",
+                "x": 130,
+                "y": 350,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« viens voir ! »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« c'est bon, j'ai trouvé »",
+                "de": 1.8,
+                "a": 3.3,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu peux... »",
+                "de": 3.5,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il revient avec un coussin, s'assoit par terre juste dans l'embrasure de la porte, entre les deux pièces, blasé, le livre sur les genoux ; elle passe la tête, surprise ; il lève le pouce sans la regarder.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 340,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.6,
+                    "bras": "pouce"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 3.0,
+                    "x": 520,
+                    "expression": "surpris",
+                    "vers": -1,
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 340,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.8,
+                "de": 1.0,
+                "etapes": [
+                  {
+                    "a": 1.4,
+                    "x": 200
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 340
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 340,
+                    "y": 360
+                  }
+                ]
+              },
+              {
+                "objet": "livre",
+                "x": 340,
+                "y": 300,
+                "echelle": 0.6,
+                "de": 2.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "jour": "2027-01-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-284",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne demande « tu penses à quoi ? » | Le canapé ; lui, le regard dans le vide, pensif, des petits points ; elle le regarde, curieuse, puis la question s'écrit en haut : « tu penses à quoi ? » ; il sursaute. | Il répond, l'air de rien ; en haut : « à rien » ; elle plisse les yeux, soupçonneuse ; il sourit, l'auréole au-dessus de la tête ; elle le fixe. | Une bulle de pensée apparaît au-dessus de lui, avec dedans une manette de jeu, puis une deuxième ; elle regarde la bulle, blasée ; il n'a rien remarqué, tout content.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; lui, le regard dans le vide, pensif, des petits points ; elle le regarde, curieuse, puis la question s'écrit en haut : « tu penses à quoi ? » ; il sursaute.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "curieux",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne demande « tu penses à quoi ? »",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu penses à quoi ? »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il répond, l'air de rien ; en haut : « à rien » ; elle plisse les yeux, soupçonneuse ; il sourit, l'auréole au-dessus de la tête ; elle le fixe.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "curieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "suspicieux"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "« à rien »",
+                "de": 0.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Une bulle de pensée apparaît au-dessus de lui, avec dedans une manette de jeu, puis une deuxième ; elle regarde la bulle, blasée ; il n'a rien remarqué, tout content.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "reveur"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "exaspere"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "pensee",
+                "x": 300,
+                "y": 120,
+                "echelle": 1.6,
+                "de": 0.6
+              },
+              {
+                "objet": "manette",
+                "x": 300,
+                "y": 115,
+                "echelle": 0.6,
+                "de": 1.2
+              },
+              {
+                "objet": "manette",
+                "x": 340,
+                "y": 100,
+                "echelle": 0.4,
+                "de": 2.4
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

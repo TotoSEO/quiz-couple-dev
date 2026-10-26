@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-127",
+  "sujet": "ani-243",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,17 +12,17 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ça va pas et que ta personne le voit tout de suite : elle est assise, triste, un nuage noir ; il arrive, s'assoit à côté sans rien dire ; il pose sa tête sur son épaule ; elle sourit, un cœur entre eux. Trois plans, 12 secondes.",
+        "idee": "nous deux quand on reçoit du monde | La maison en désordre : un pull par terre, un coussin, un sac ; les deux affalés sur le canapé, blasés ; une horloge ; ils se regardent, les yeux ronds : les invités arrivent. | Panique : ils sprintent dans tous les sens, elle ramasse le pull, il attrape le coussin, ils se croisent, se cognent presque, tout disparaît dans un carton. | La sonnette ; les deux debout, bien droits devant la porte, l'auréole au-dessus de la tête, le sourire parfait, les pattes dans le dos, comme si rien ne s'était passé ; derrière, le carton déborde.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est assise sur le canapé, triste, la tête basse, un petit nuage noir au-dessus d'elle. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La maison en désordre : un pull par terre, un coussin, un sac ; les deux affalés sur le canapé, blasés ; une horloge ; ils se regardent, les yeux ronds : les invités arrivent.",
             "persos": [
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
@@ -30,60 +30,123 @@
                     "y": 318,
                     "taille": 210,
                     "pose": "assis",
-                    "expression": "triste",
-                    "signes": [
-                      "nuage_noir"
-                    ]
+                    "expression": "blase"
                   }
                 ]
-              }
-            ],
-            "textes": [
+              },
               {
-                "texte": "quand ça va pas et que ta personne le voit tout de suite",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Il entre par la droite en marchant de profil, s'arrête près du canapé à 1,8 s, puis s'assoit à côté d'elle à 2,3 s, sans rien dire, l'air inquiet. Elle reste triste, le nuage au-dessus d'elle.",
-            "persos": [
-              {
-                "perso": "lui",
+                "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 700,
-                    "y": 380,
-                    "taille": 250,
-                    "angle": -90,
-                    "pose": "marche",
-                    "expression": "inquiet"
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 440,
-                    "pose": "debout"
-                  },
-                  {
-                    "a": 2.3,
                     "x": 414,
                     "y": 318,
                     "taille": 210,
                     "pose": "assis",
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 110,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "coussin",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "horloge",
+                "x": 320,
+                "y": 90,
+                "echelle": 0.7
+              },
+              {
+                "objet": "exclamation",
+                "x": 226,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 2.4,
+                "a": 3.2
+              },
+              {
+                "objet": "exclamation",
+                "x": 414,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 2.4,
+                "a": 3.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on reçoit du monde",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Panique : ils sprintent dans tous les sens, elle ramasse le pull, il attrape le coussin, ils se croisent, se cognent presque, tout disparaît dans un carton.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 440,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "angle": -90
+                  },
+                  {
+                    "a": 0.5,
+                    "pose": "sprint",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 120,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": 90,
+                    "pose": "sprint"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.5,
                     "angle": 0
                   }
                 ]
               },
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
@@ -91,33 +154,88 @@
                     "y": 318,
                     "taille": 210,
                     "pose": "assis",
-                    "expression": "triste",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 200,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "angle": 90
+                  },
+                  {
+                    "a": 0.5,
+                    "pose": "sprint",
+                    "expression": "panique",
                     "signes": [
-                      "nuage_noir"
+                      "sueurs"
                     ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 560,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": -90,
+                    "pose": "sprint"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 160,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.5,
+                    "angle": 0
                   }
                 ]
               }
             ],
             "meubles": [
               "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 110,
+                "y": 350,
+                "echelle": 0.8,
+                "a": 1.6
+              },
+              {
+                "objet": "coussin",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.8,
+                "a": 1.6
+              },
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 345,
+                "echelle": 1.0,
+                "de": 2.8
+              }
             ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Il pose sa tête sur son épaule, doucement. Elle sourit, les yeux fermés, le nuage a disparu. Un petit cœur flotte entre eux.",
+            "description": "La sonnette ; les deux debout, bien droits devant la porte, l'auréole au-dessus de la tête, le sourire parfait, les pattes dans le dos, comme si rien ne s'était passé ; derrière, le carton déborde.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "calin"
+                    "x": 270,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "bras": "bas"
                   }
                 ]
               },
@@ -126,37 +244,54 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 370,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
+                    "x": 430,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "bras": "bas"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 140,
-                "echelle": 0.45,
-                "de": 0.8,
-                "flotte": true
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 120,
+                "y": 345,
+                "echelle": 1.0,
+                "derriere": true
+              },
+              {
+                "objet": "pull",
+                "x": 120,
+                "y": 280,
+                "echelle": 0.6,
+                "derriere": true
               }
             ],
-            "meubles": [
-              "canape_fond"
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 0.3
+              }
             ]
           }
         ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

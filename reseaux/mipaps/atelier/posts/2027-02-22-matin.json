@@ -1,0 +1,289 @@
+{
+  "jour": "2027-02-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-333",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a le hoquet | Lui au milieu, tranquille ; il sursaute d'un coup, un petit bond, un point d'exclamation ; puis encore ; puis encore ; elle, à droite, le regarde, puis rit. | Elle a une idée, une ampoule : elle se place derrière lui, l'air de rien, l'auréole ; il sursaute encore ; elle surgit avec une tête de diable et des cornes ; il hurle de peur, les yeux en croix. | Le hoquet de lui est parti ; elle, très fière, les pattes sur les hanches ; d'un coup c'est elle qui sursaute, un point d'exclamation ; puis encore ; lui, blasé, la regarde faire des petits bonds.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au milieu, tranquille ; il sursaute d'un coup, un petit bond, un point d'exclamation ; puis encore ; puis encore ; elle, à droite, le regarde, puis rit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "y": 355,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "y": 380
+                  },
+                  {
+                    "a": 2.0,
+                    "y": 355,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "y": 380
+                  },
+                  {
+                    "a": 3.2,
+                    "y": 355,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "y": 380,
+                    "expression": "exaspere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a le hoquet",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 0.8
+              },
+              {
+                "nom": "pop",
+                "a": 2.0
+              },
+              {
+                "nom": "pop",
+                "a": 3.2
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle a une idée, une ampoule : elle se place derrière lui, l'air de rien, l'auréole ; il sursaute encore ; elle surgit avec une tête de diable et des cornes ; il hurle de peur, les yeux en croix.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 420,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 380,
+                    "expression": "diable",
+                    "signes": [
+                      "cornes"
+                    ],
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.2,
+                    "y": 355,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "y": 380
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs",
+                      "rayons"
+                    ],
+                    "pose": "tremble"
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "debout",
+                    "expression": "ko"
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.2
+              },
+              {
+                "nom": "tonnerre",
+                "a": 2.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Le hoquet de lui est parti ; elle, très fière, les pattes sur les hanches ; d'un coup c'est elle qui sursaute, un point d'exclamation ; puis encore ; lui, blasé, la regarde faire des petits bonds.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "content",
+                    "bras": "pouce"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "narquois",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "fier",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "y": 355,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.8,
+                    "y": 380
+                  },
+                  {
+                    "a": 2.8,
+                    "y": 355,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "y": 380,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 4.0,
+                    "y": 355,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 4.2,
+                    "y": 380
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.6
+              },
+              {
+                "nom": "pop",
+                "a": 2.8
+              },
+              {
+                "nom": "pop",
+                "a": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

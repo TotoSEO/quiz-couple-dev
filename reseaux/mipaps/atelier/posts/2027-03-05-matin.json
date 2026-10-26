@@ -1,0 +1,276 @@
+{
+  "jour": "2027-03-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-345",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne essaie de te réveiller en douceur | Le matin, le lit ; elle dort profondément, des z ; lui, debout à côté, chuchote, lui tapote l'épaule doucement ; rien ; il lui fait un bisou sur le front ; rien. | Il ouvre la fenêtre, un oiseau chante ; rien ; il lui caresse la tête ; rien ; il lui prend la patte et la secoue un peu ; elle grogne et se retourne, toujours endormie ; il regarde l'horloge. | Il prend une grande inspiration, et hurle ; en haut s'écrit « DEBOUT !!! » en grand ; elle bondit hors du lit, les yeux ronds, les cheveux dressés, furieuse ; il recule, l'auréole, et pointe l'horloge.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, le lit ; elle dort profondément, des z ; lui, debout à côté, chuchote, lui tapote l'épaule doucement ; rien ; il lui fait un bisou sur le front ; rien.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "chut",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_d",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 300,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "debout",
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne essaie de te réveiller en douceur",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il ouvre la fenêtre, un oiseau chante ; rien ; il lui caresse la tête ; rien ; il lui prend la patte et la secoue un peu ; elle grogne et se retourne, toujours endormie ; il regarde l'horloge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "nerveux",
+                    "vers": 1,
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 430,
+                    "expression": "boude",
+                    "pose": "allonge"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oiseau",
+                "x": 560,
+                "y": 180,
+                "echelle": 0.5,
+                "de": 0.6,
+                "a": 2.0
+              }
+            ],
+            "sons": [
+              {
+                "nom": "oiseau",
+                "a": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il prend une grande inspiration, et hurle ; en haut s'écrit « DEBOUT !!! » en grand ; elle bondit hors du lit, les yeux ronds, les cheveux dressés, furieuse ; il recule, l'auréole, et pointe l'horloge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "furieux",
+                    "bras": "leves",
+                    "signes": [
+                      "flammes"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 200,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "bras": "pointe",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "saut",
+                    "y": 300,
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation",
+                      "rayons"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "y": 346,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« DEBOUT !!! »",
+                "de": 0.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

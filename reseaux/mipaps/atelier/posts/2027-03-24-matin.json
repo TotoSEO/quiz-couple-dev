@@ -1,0 +1,282 @@
+{
+  "jour": "2027-03-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-369",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te garde une place | Le canapé ; elle, assise, une patte posée sur la place d'à côté, la garde ; lui est parti chercher quelque chose ; le chat arrive et vise la place ; elle le repousse, gentiment. | Le chat revient à la charge, par l'autre côté ; elle le repousse encore, sans lâcher la place ; le chat, vexé, s'assoit par terre et la fixe ; elle tient bon, la patte toujours posée. | Il revient avec deux tasses, voit la place gardée, et fond ; il s'assoit, elle retire sa patte pile à ce moment-là ; le chat monte sur ses genoux à lui, et tout le monde est content ; un cœur.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle, assise, une patte posée sur la place d'à côté, la garde ; lui est parti chercher quelque chose ; le chat arrive et vise la place ; elle le repousse, gentiment.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "determine"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 150,
+                "y": 345,
+                "echelle": 0.6,
+                "de": 1.2,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 150
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 250,
+                    "y": 300
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 150,
+                    "y": 345
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te garde une place",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Le chat revient à la charge, par l'autre côté ; elle le repousse encore, sans lâcher la place ; le chat, vexé, s'assoit par terre et la fixe ; elle tient bon, la patte toujours posée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 150,
+                "y": 345,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 260,
+                    "y": 300
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 150,
+                    "y": 345
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il revient avec deux tasses, voit la place gardée, et fond ; il s'assoit, elle retire sa patte pile à ce moment-là ; le chat monte sur ses genoux à lui, et tout le monde est content ; un cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 150,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "bas",
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.4,
+                    "x": 150
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 226,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "tasse",
+                "x": 180,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.4,
+                    "x": 180
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 414,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "chat",
+                "x": 150,
+                "y": 345,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 2.4,
+                    "x": 150
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 226,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 160,
+                "echelle": 0.35,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

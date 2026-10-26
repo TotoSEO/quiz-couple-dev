@@ -1,0 +1,243 @@
+{
+  "jour": "2026-12-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-253",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux un soir de décembre | « 17 h » en bas. Les deux à la fenêtre, de dos à moitié, regardent dehors : il fait déjà nuit, la lune ; ils se retournent vers nous, blasés, en même temps. | « 18 h » en bas. Le canapé, les deux sous le plaid avec une tasse chacun, contents, bien au chaud ; elle pose la tête sur son épaule ; des petits cœurs. | « 19 h » en bas. Le lit ; les deux déjà couchés, en pyjama, les yeux fermés, des z ; dehors la lune ; personne ne bouge, c'est l'hiver.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "« 17 h » en bas. Les deux à la fenêtre, de dos à moitié, regardent dehors : il fait déjà nuit, la lune ; ils se retournent vers nous, blasés, en même temps.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "blase",
+                    "dos": true
+                  },
+                  {
+                    "a": 2.0,
+                    "dos": false,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "blase",
+                    "dos": true
+                  },
+                  {
+                    "a": 2.0,
+                    "dos": false,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 350,
+                "y": 150,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "lune",
+                "x": 380,
+                "y": 130,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux un soir de décembre",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "17 h",
+                "de": 2.0,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 18 h » en bas. Le canapé, les deux sous le plaid avec une tasse chacun, contents, bien au chaud ; elle pose la tête sur son épaule ; des petits cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 380,
+                    "pose": "penche_g",
+                    "expression": "amour",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "tasse",
+                "x": 226,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 2.2
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.4,
+                "de": 2.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "18 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 19 h » en bas. Le lit ; les deux déjà couchés, en pyjama, les yeux fermés, des z ; dehors la lune ; personne ne bouge, c'est l'hiver.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "19 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

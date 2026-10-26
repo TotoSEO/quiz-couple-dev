@@ -1,0 +1,347 @@
+{
+  "jour": "2027-02-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-316",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on a « bien fermé la porte » | La porte à droite ; les deux sortent, elle devant avec la valise, lui derrière avec les clés ; il tire la porte, la secoue, vérifie, content ; ils partent vers la gauche. | « au bout de la rue » en bas. Ils marchent ; elle s'arrête net, les yeux ronds ; en haut : « t'as fermé ? » ; lui s'arrête aussi, sûr de lui, puis moins sûr, une goutte de sueur. | Les deux repartent en sprint vers la droite, la valise qui traîne ; devant la porte : elle est fermée ; lui, les pattes sur les hanches, triomphant ; elle, essoufflée, le fusille du regard.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La porte à droite ; les deux sortent, elle devant avec la valise, lui derrière avec les clés ; il tire la porte, la secoue, vérifie, content ; ils partent vers la gauche.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 400,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "concentre",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 520,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "valise",
+                "x": 400,
+                "y": 310,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 400
+                  },
+                  {
+                    "a": 3.0,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "objet": "cle",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 520
+                  },
+                  {
+                    "a": 3.6,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on a « bien fermé la porte »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 0.4
+              },
+              {
+                "nom": "porte",
+                "a": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« au bout de la rue » en bas. Ils marchent ; elle s'arrête net, les yeux ronds ; en haut : « t'as fermé ? » ; lui s'arrête aussi, sûr de lui, puis moins sûr, une goutte de sueur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "angle": 0,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 140,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "angle": 0,
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "panique"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "valise",
+                "x": 260,
+                "y": 310,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 260
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "au bout de la rue",
+                "de": 0.2,
+                "place": "bas"
+              },
+              {
+                "texte": "« t'as fermé ? »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux repartent en sprint vers la droite, la valise qui traîne ; devant la porte : elle est fermée ; lui, les pattes sur les hanches, triomphant ; elle, essoufflée, le fusille du regard.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 140,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 460,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "concentre",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "triomphe",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "panique",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 340,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "essouffle",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "valise",
+                "x": 340,
+                "y": 310,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 340
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 2.2
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

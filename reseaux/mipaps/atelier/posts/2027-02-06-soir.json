@@ -1,0 +1,281 @@
+{
+  "jour": "2027-02-06",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-314",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne regarde un film d'horreur | Le canapé, la télé, la lumière éteinte, la lune à la fenêtre ; lui regarde l'écran, captivé ; elle, à côté, se cache déjà derrière le coussin, les yeux qui dépassent. | Un sursaut à l'écran : elle bondit derrière lui et se cache dans son dos, tremblante ; lui, surpris, puis fier de la protéger, bombe le torse. | Un deuxième sursaut : cette fois c'est lui qui hurle en silence, les yeux en croix ; les deux finissent sous le plaid, seuls les yeux dehors, serrés, tremblants, devant l'écran qu'ils regardent quand même.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé, la lumière éteinte, la lune à la fenêtre ; lui regarde l'écran, captivé ; elle, à côté, se cache déjà derrière le coussin, les yeux qui dépassent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "curieux"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "peur",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.9,
+                "de": 1.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne regarde un film d'horreur",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Un sursaut à l'écran : elle bondit derrière lui et se cache dans son dos, tremblante ; lui, surpris, puis fier de la protéger, bombe le torse.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "peur",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 280,
+                    "y": 300,
+                    "taille": 160,
+                    "pose": "boule",
+                    "expression": "peur",
+                    "signes": [
+                      "tremblement"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "fier",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 480,
+                "y": 340,
+                "echelle": 0.9
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tonnerre",
+                "a": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Un deuxième sursaut : cette fois c'est lui qui hurle en silence, les yeux en croix ; les deux finissent sous le plaid, seuls les yeux dehors, serrés, tremblants, devant l'écran qu'ils regardent quand même.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation",
+                      "sueurs"
+                    ],
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 280,
+                    "expression": "peur",
+                    "pose": "boule",
+                    "taille": 190
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "y": 300,
+                    "taille": 160,
+                    "pose": "boule",
+                    "expression": "peur"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 190,
+                    "expression": "peur",
+                    "signes": [
+                      "tremblement"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "couverture",
+                "x": 325,
+                "y": 300,
+                "echelle": 2.6,
+                "de": 1.8
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tonnerre",
+                "a": 0.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

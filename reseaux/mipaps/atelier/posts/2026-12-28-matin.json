@@ -1,0 +1,273 @@
+{
+  "jour": "2026-12-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-269",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « j'ai pas sommeil » à 2 h | La nuit, la lune ; le lit ; elle dort allongée ; lui, assis, les yeux grands ouverts, plein d'énergie, les bras levés ; en haut s'écrit « j'ai pas sommeil ». | Il parle, des petits points, il a des idées, une ampoule ; elle se met l'oreiller sur la tête ; il parle encore ; elle lui tourne le dos ; il parle toujours. | « 3 min plus tard » en bas. Il s'est endormi d'un coup, allongé, la bouche ouverte, il ronfle ; elle, maintenant, a les yeux grands ouverts, blasée, puis furieuse ; la lune la regarde.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; elle dort allongée ; lui, assis, les yeux grands ouverts, plein d'énergie, les bras levés ; en haut s'écrit « j'ai pas sommeil ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "exaspere",
+                    "pose": "allonge",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "leves",
+                    "expression": "joie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « j'ai pas sommeil » à 2 h",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« j'ai pas sommeil »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il parle, des petits points, il a des idées, une ampoule ; elle se met l'oreiller sur la tête ; il parle encore ; elle lui tourne le dos ; il parle toujours.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "joie",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "chante",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "tete"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 440,
+                    "bras": "bas",
+                    "expression": "boude"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 230,
+                "echelle": 1.0,
+                "de": 0.8,
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 min plus tard » en bas. Il s'est endormi d'un coup, allongé, la bouche ouverte, il ronfle ; elle, maintenant, a les yeux grands ouverts, blasée, puis furieuse ; la lune la regarde.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz",
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "boude"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 0.6,
+                "a": 1.8,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 220,
+                "y": 190,
+                "echelle": 0.5,
+                "de": 2.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

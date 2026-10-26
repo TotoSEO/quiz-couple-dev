@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-123",
+  "sujet": "ani-235",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,24 +12,28 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le câlin « juste 2 secondes » : il doit partir, son sac à la patte ; elle demande un câlin ; il pose son sac, enlève son bonnet ; ils sont assis par terre, toujours en câlin, le sac oublié. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne te fait porter les courses | Dehors ; lui à droite, un sac dans chaque patte, content ; elle entre par la gauche avec deux sacs, lui en tend un, puis l'autre ; il les prend, les bras levés. | Lui tremble sous les sacs, en plein effort, des gouttes de sueur ; elle, les pattes libres, cueille une petite plante en pot au passage, ravie, et la lui pose sur la tête. | Il marche vers la droite, chargé des sacs et de la plante sur la tête, blasé ; elle marche devant lui, légère, les pattes vides, et se retourne pour lui envoyer un cœur.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est prêt à partir, son sac à la patte et un bonnet sur la tête, pressé. Elle est à côté, les pattes jointes, elle demande un câlin avec des yeux de chaton. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Dehors ; lui à droite, un sac dans chaque patte, content ; elle entre par la gauche avec deux sacs, lui en tend un, puis l'autre ; il les prend, les bras levés.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
+                    "x": 450,
                     "expression": "content",
                     "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "leves",
+                    "expression": "surpris"
                   }
                 ]
               },
@@ -38,10 +42,31 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "supplie",
-                    "bras": "priere"
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.0,
+                    "bras": "bas",
+                    "expression": "joie"
                   }
                 ]
               }
@@ -49,105 +74,78 @@
             "objets": [
               {
                 "objet": "sac",
-                "x": 284,
-                "y": 345,
-                "echelle": 0.6
+                "x": 450,
+                "y": 300,
+                "echelle": 0.7
               },
               {
-                "objet": "bonnet",
-                "x": 250,
-                "y": 168,
-                "echelle": 0.5
+                "objet": "sac",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.7,
+                "a": 2.0
+              },
+              {
+                "objet": "sac",
+                "x": 380,
+                "y": 240,
+                "echelle": 0.7,
+                "de": 2.0,
+                "a": 2.4
+              },
+              {
+                "objet": "sac",
+                "x": 380,
+                "y": 240,
+                "echelle": 0.7,
+                "de": 2.4
+              },
+              {
+                "objet": "sac",
+                "x": 520,
+                "y": 240,
+                "echelle": 0.7,
+                "de": 2.4
               }
             ],
             "textes": [
               {
-                "texte": "le câlin « juste 2 secondes »",
+                "texte": "toi quand ta personne te fait porter les courses",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il pose son sac par terre à 0,8 s, puis enlève son bonnet à 1,6 s. Elle sourit, les bras ouverts.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tient"
-                  },
-                  {
-                    "a": 0.8,
-                    "bras": "bas",
-                    "expression": "amour"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_g"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "sac",
-                "x": 284,
-                "y": 345,
-                "echelle": 0.6,
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 284,
-                    "y": 345,
-                    "echelle": 0.6
-                  },
-                  {
-                    "a": 0.8,
-                    "x": 170,
-                    "y": 360,
-                    "echelle": 0.6
-                  }
-                ]
-              },
-              {
-                "objet": "bonnet",
-                "x": 250,
-                "y": 168,
-                "echelle": 0.5,
-                "a": 1.6
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux sont assis par terre, serrés l'un contre l'autre, toujours en câlin, yeux fermés. Le sac est resté oublié sur le côté. Trois cœurs flottent.",
+            "description": "Lui tremble sous les sacs, en plein effort, des gouttes de sueur ; elle, les pattes libres, cueille une petite plante en pot au passage, ravie, et la lui pose sur la tête.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "pose": "assis",
-                    "expression": "calin",
-                    "bras": "tend_g"
+                    "x": 450,
+                    "expression": "effort",
+                    "bras": "leves",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "tremble",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs",
+                      "tremblement"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "blase",
+                    "pose": "debout"
                   }
                 ]
               },
@@ -156,10 +154,18 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 285,
-                    "pose": "assis",
-                    "expression": "calin",
-                    "bras": "tend_d"
+                    "x": 290,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 370,
+                    "bras": "tend_d",
+                    "expression": "malicieux"
                   }
                 ]
               }
@@ -167,44 +173,150 @@
             "objets": [
               {
                 "objet": "sac",
-                "x": 150,
-                "y": 360,
-                "echelle": 0.6
+                "x": 380,
+                "y": 240,
+                "echelle": 0.7
               },
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 150,
-                "echelle": 0.5,
-                "de": 0.6,
-                "flotte": true
+                "objet": "sac",
+                "x": 520,
+                "y": 240,
+                "echelle": 0.7
               },
               {
-                "objet": "coeur",
-                "x": 240,
-                "y": 190,
-                "echelle": 0.32,
+                "objet": "plante",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.6,
                 "de": 1.0,
-                "flotte": true
+                "etapes": [
+                  {
+                    "a": 2.2,
+                    "x": 290
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 450,
+                    "y": 120
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il marche vers la droite, chargé des sacs et de la plante sur la tête, blasé ; elle marche devant lui, légère, les pattes vides, et se retourne pour lui envoyer un cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "blase",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 450,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 380,
+                "y": 240,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 380
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 750
+                  }
+                ]
+              },
+              {
+                "objet": "sac",
+                "x": 520,
+                "y": 240,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 520
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 890
+                  }
+                ]
+              },
+              {
+                "objet": "plante",
+                "x": 450,
+                "y": 120,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 1.2,
+                    "x": 450
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 820
+                  }
+                ]
               },
               {
                 "objet": "coeur",
-                "x": 435,
-                "y": 200,
-                "echelle": 0.36,
-                "de": 1.4,
+                "x": 330,
+                "y": 180,
+                "echelle": 0.35,
+                "de": 2.0,
+                "a": 3.2,
                 "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "tague ton amoureux",
+      "legende": "tague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-124",
+  "sujet": "ani-201",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,34 +12,33 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand le livreur sonne : les deux sur le canapé ; la sonnette, ils se redressent d'un coup ; ils courent ouvrir en même temps et se cognent ; assis par terre, la pizza entre eux, contents. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne prend toute la place dans le lit | Le lit vu de trois quarts, les deux assis dedans côte à côte, contents ; vers une seconde et demie ils ferment les yeux et s'endorment chacun de son côté, bien rangés. | « 1 h plus tard » en bas. Elle glisse vers lui en dormant, puis s'allonge en travers du lit ; lui, poussé, se réveille gêné, une goutte de sueur, et finit en boule tout au bord. | Elle dort en travers du lit, en étoile, la bouche ouverte ; lui en boule tout au bord, blasé, puis fatigué ; vers deux secondes et demie il la regarde et fond, un petit cœur monte.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "meubles": [
-              "canape_fond"
-            ],
-            "description": "Les deux sont assis sur le canapé, côte à côte, l'air de s'ennuyer. La sonnette retentit à 1,2 s : ils se redressent d'un coup, surpris, un point d'exclamation au-dessus de chacun. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Le lit vu de trois quarts, les deux assis dedans côte à côte, contents ; vers une seconde et demie ils ferment les yeux et s'endorment chacun de son côté, bien rangés.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "ennui"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
                   },
                   {
-                    "a": 1.3,
-                    "expression": "surpris",
+                    "a": 1.6,
+                    "expression": "dodo",
                     "signes": [
-                      "exclamation"
+                      "zzz"
                     ]
                   }
                 ]
@@ -49,173 +48,170 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "ennui"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
                   },
                   {
-                    "a": 1.3,
-                    "expression": "surpris",
-                    "signes": [
-                      "exclamation"
-                    ]
+                    "a": 1.9,
+                    "expression": "dodo"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "textes": [
               {
-                "texte": "quand le livreur sonne",
+                "texte": "toi quand ta personne prend toute la place dans le lit",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "sons": [
-              {
-                "nom": "sonnette",
-                "a": 1.2
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "description": "Ils déboulent chacun d'un bord en courant de profil, les yeux brillants, vers la porte d'entrée, dessinée au milieu derrière eux. À 1,8 s ils se cognent doucement, des étoiles autour de leurs têtes, et s'arrêtent, étourdis. Le texte arrive à 0,3 s.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 170,
-                    "angle": 90,
-                    "pose": "court",
-                    "expression": "joie"
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 290,
-                    "pose": "debout",
-                    "expression": "etourdi",
-                    "signes": [
-                      "etoiles"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 470,
-                    "angle": -90,
-                    "pose": "court",
-                    "expression": "joie"
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 380,
-                    "pose": "debout",
-                    "expression": "etourdi",
-                    "signes": [
-                      "etoiles"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« c'est moi qui ouvre ! »",
-                "de": 0.3,
-                "place": "haut"
-              }
-            ],
-            "sons": [
-              {
-                "nom": "tape",
-                "a": 1.8
-              }
-            ],
-            "transition": "coupe",
-            "objets": [
-              {
-                "objet": "porte",
-                "x": 330,
-                "y": 230,
-                "echelle": 1.6,
-                "derriere": true
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux sont assis par terre face à nous, la boîte de pizza ouverte entre eux, chacun une part à la patte, les yeux fermés de bonheur. Deux petits cœurs flottent au-dessus d'eux. Pas de texte : la pizza fait la fin.",
+            "description": "« 1 h plus tard » en bas. Elle glisse vers lui en dormant, puis s'allonge en travers du lit ; lui, poussé, se réveille gêné, une goutte de sueur, et finit en boule tout au bord.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "y": 380,
-                    "taille": 230,
-                    "pose": "assis",
-                    "expression": "miam"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "y": 380,
-                    "taille": 230,
-                    "pose": "assis",
-                    "expression": "miam"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 310,
+                    "pose": "allonge",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 160,
+                    "taille": 170,
+                    "pose": "boule",
+                    "expression": "blase"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle dort en travers du lit, en étoile, la bouche ouverte ; lui en boule tout au bord, blasé, puis fatigué ; vers deux secondes et demie il la regarde et fond, un petit cœur monte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "y": 346,
+                    "taille": 210,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "y": 346,
+                    "taille": 160,
+                    "pose": "boule",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "amour",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 320,
-                "y": 360,
-                "echelle": 1.3
-              },
-              {
                 "objet": "coeur",
-                "x": 335,
-                "y": 150,
-                "echelle": 0.5,
-                "de": 0.6,
-                "flotte": true
-              },
-              {
-                "objet": "coeur",
-                "x": 240,
+                "x": 175,
                 "y": 190,
-                "echelle": 0.32,
-                "de": 1.0,
+                "echelle": 0.4,
+                "de": 2.7,
                 "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "tague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

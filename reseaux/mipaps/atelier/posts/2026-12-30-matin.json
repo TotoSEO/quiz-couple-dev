@@ -1,0 +1,273 @@
+{
+  "jour": "2026-12-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-271",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne t'envoie des vidéos toute la journée | Lui au travail, assis devant son ordinateur, concentré ; son téléphone vibre à côté, un point d'exclamation ; il regarde, rit, revient à l'écran ; ça vibre encore. | « 14 h » en bas. Il essaie de travailler ; ça vibre, ça vibre, ça vibre ; il rit de plus en plus, les larmes aux yeux, le téléphone à la patte, l'ordinateur oublié. | « 18 h » en bas. Elle, chez elle, assise sur le canapé, le téléphone à la patte, fière, des étincelles ; lui rentre par la droite, mort de rire, et s'effondre à côté d'elle, K.-O.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au travail, assis devant son ordinateur, concentré ; son téléphone vibre à côté, un point d'exclamation ; il regarde, rit, revient à l'écran ; ça vibre encore.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "taille": 230
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "rire",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "ordinateur",
+                "x": 300,
+                "y": 330,
+                "echelle": 1.0
+              },
+              {
+                "objet": "telephone",
+                "x": 470,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "exclamation",
+                "x": 500,
+                "y": 280,
+                "echelle": 0.45,
+                "de": 1.0,
+                "a": 2.0
+              },
+              {
+                "objet": "exclamation",
+                "x": 500,
+                "y": 280,
+                "echelle": 0.45,
+                "de": 3.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne t'envoie des vidéos toute la journée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 1.0
+              },
+              {
+                "nom": "notification",
+                "a": 3.0
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 14 h » en bas. Il essaie de travailler ; ça vibre, ça vibre, ça vibre ; il rit de plus en plus, les larmes aux yeux, le téléphone à la patte, l'ordinateur oublié.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "taille": 230
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "mort_de_rire",
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "pleure_de_joie"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "ordinateur",
+                "x": 300,
+                "y": 330,
+                "echelle": 1.0,
+                "a": 0.8
+              },
+              {
+                "objet": "ordinateur",
+                "x": 140,
+                "y": 350,
+                "echelle": 0.8,
+                "de": 0.8
+              },
+              {
+                "objet": "telephone",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.8
+              },
+              {
+                "objet": "exclamation",
+                "x": 350,
+                "y": 230,
+                "echelle": 0.45,
+                "de": 0.4,
+                "a": 1.0
+              },
+              {
+                "objet": "exclamation",
+                "x": 350,
+                "y": 230,
+                "echelle": 0.45,
+                "de": 1.6,
+                "a": 2.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "14 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "notification",
+                "a": 0.4
+              },
+              {
+                "nom": "notification",
+                "a": 1.6
+              },
+              {
+                "nom": "notification",
+                "a": 2.8
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 18 h » en bas. Elle, chez elle, assise sur le canapé, le téléphone à la patte, fière, des étincelles ; lui rentre par la droite, mort de rire, et s'effondre à côté d'elle, K.-O.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier",
+                    "bras": "tient",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "y": 380,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ko",
+                    "angle": 0,
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "18 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

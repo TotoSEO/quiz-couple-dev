@@ -1,0 +1,218 @@
+{
+  "jour": "2027-01-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-290",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on le dit en même temps | Le canapé, les deux côte à côte, tranquilles, chacun regarde devant soi ; ils ouvrent la bouche en même temps ; en haut s'écrit « je t'aime » ; les deux se figent. | Ils se tournent l'un vers l'autre, surpris, deux points d'exclamation ; puis ils rougissent tous les deux ; puis ils éclatent de rire. | Câlin au milieu du canapé, les yeux fermés, des cœurs partout ; ils redisent la phrase ensemble, en haut, mot à mot, et rient encore.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, les deux côte à côte, tranquilles, chacun regarde devant soi ; ils ouvrent la bouche en même temps ; en haut s'écrit « je t'aime » ; les deux se figent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on le dit en même temps",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« je t'aime »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Ils se tournent l'un vers l'autre, surpris, deux points d'exclamation ; puis ils rougissent tous les deux ; puis ils éclatent de rire.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "surpris",
+                    "vers": 1,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "surpris",
+                    "vers": -1,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Câlin au milieu du canapé, les yeux fermés, des cœurs partout ; ils redisent la phrase ensemble, en haut, mot à mot, et rient encore.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_d",
+                    "expression": "calin",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "calin",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 230,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 420,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« je t'aime »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

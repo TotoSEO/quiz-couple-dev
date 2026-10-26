@@ -2,57 +2,251 @@
   "jour": "2026-11-21",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-113",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-230",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : elle sous la couverture, boudeuse ; lui assis à côté, tendre.",
-        "texte": "même quand je dis laisse-moi, reste un peu",
-        "duree": 11,
+        "idee": "toi quand ta personne rentre tard et veut pas te réveiller | La nuit, la lune ; le lit ; elle dort allongée à droite ; lui entre par la gauche sur la pointe des pattes, le doigt sur la bouche, très concentré. | Il avance encore d'un pas et marche sur une chaussette qui traîne ; il glisse, tombe de tout son long avec un grand bruit, les yeux en croix. | Il reste par terre, immobile, l'auréole au-dessus de la tête, l'air de rien ; elle le regarde depuis le lit, furieuse, puis blasée, puis se recouche en lui tournant le dos.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
-        "dessin": {
-          "elements": [
-            {
-              "perso": "elle",
-              "expression": "boude",
-              "pose": "assis",
-              "y": 380,
-              "angle": 150,
-              "x": 270,
-              "taille": 250
-            },
-            {
-              "perso": "lui",
-              "expression": "amour",
-              "pose": "assis",
-              "y": 380,
-              "x": 430,
-              "taille": 250
-            },
-            {
-              "objet": "coeur",
-              "x": 430,
-              "y": 120,
-              "echelle": 0.45,
-              "flotte": true
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; elle dort allongée à droite ; lui entre par la gauche sur la pointe des pattes, le doigt sur la bouche, très concentré.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "chut"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 150,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.0,
+                    "angle": 0,
+                    "bras": "bouche"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne rentre tard et veut pas te réveiller",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Il avance encore d'un pas et marche sur une chaussette qui traîne ; il glisse, tombe de tout son long avec un grand bruit, les yeux en croix.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "expression": "chut",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "pose": "tombe",
+                    "expression": "panique",
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chaussettes",
+                "x": 220,
+                "y": 365,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il reste par terre, immobile, l'auréole au-dessus de la tête, l'air de rien ; elle le regarde depuis le lit, furieuse, puis blasée, puis se recouche en lui tournant le dos.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "pose": "allonge",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.0,
+                    "pose": "allonge",
+                    "expression": "boude",
+                    "x": 420
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chaussettes",
+                "x": 220,
+                "y": 365,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie ça à ta personne sans rien dire",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

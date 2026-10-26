@@ -1,0 +1,332 @@
+{
+  "jour": "2027-02-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-328",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne bronze au premier rayon | Dehors, un grand soleil, un banc ; lui, allongé par terre, les lunettes de soleil, les bras derrière la tête, zen, comme en plein été ; elle arrive, en écharpe et bonnet, et grelotte. | Elle s'assoit sur le banc, emmitouflée, les frissons ; lui, par terre, se retourne pour bronzer de l'autre côté, de la vapeur ; un oiseau se pose à côté de lui ; elle grelotte. | « 1 h plus tard » en bas. Lui, toujours par terre, tout rouge, un coup de soleil, les lunettes de travers, blasé ; elle, sur le banc, lui tend l'écharpe pour qu'il se couvre ; il la prend, honteux.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dehors, un grand soleil, un banc ; lui, allongé par terre, les lunettes de soleil, les bras derrière la tête, zen, comme en plein été ; elle arrive, en écharpe et bonnet, et grelotte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "allonge",
+                    "expression": "zen",
+                    "taille": 260
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 540,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe",
+                    "vers": -1,
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.9
+              },
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 330,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "lunettes",
+                "x": 300,
+                "y": 215,
+                "echelle": 0.6
+              },
+              {
+                "objet": "bonnet",
+                "x": 540,
+                "y": 165,
+                "echelle": 0.9,
+                "de": 0.3
+              },
+              {
+                "objet": "echarpe",
+                "x": 540,
+                "y": 290,
+                "echelle": 0.9,
+                "de": 0.3
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne bronze au premier rayon",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "ambiance": "oiseaux"
+          },
+          {
+            "duree": 4,
+            "description": "Elle s'assoit sur le banc, emmitouflée, les frissons ; lui, par terre, se retourne pour bronzer de l'autre côté, de la vapeur ; un oiseau se pose à côté de lui ; elle grelotte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "allonge",
+                    "expression": "zen",
+                    "taille": 260
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 360,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 540,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 540,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.9
+              },
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 330,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "lunettes",
+                "x": 330,
+                "y": 215,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330
+                  }
+                ]
+              },
+              {
+                "objet": "bonnet",
+                "x": 540,
+                "y": 150,
+                "echelle": 0.9
+              },
+              {
+                "objet": "echarpe",
+                "x": 540,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "oiseau",
+                "x": 200,
+                "y": 350,
+                "echelle": 0.5,
+                "de": 2.4
+              }
+            ],
+            "ambiance": "oiseaux"
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Lui, toujours par terre, tout rouge, un coup de soleil, les lunettes de travers, blasé ; elle, sur le banc, lui tend l'écharpe pour qu'il se couvre ; il la prend, honteux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "pose": "allonge",
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur",
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "honte",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 540,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "narquois",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_g",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.9
+              },
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 330,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "lunettes",
+                "x": 400,
+                "y": 260,
+                "echelle": 0.6,
+                "de": 0,
+                "a": 1.6
+              },
+              {
+                "objet": "bonnet",
+                "x": 540,
+                "y": 150,
+                "echelle": 0.9
+              },
+              {
+                "objet": "echarpe",
+                "x": 540,
+                "y": 290,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 2.2,
+                    "x": 540
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 360,
+                    "y": 300
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "ambiance": "oiseaux"
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

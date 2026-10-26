@@ -1,0 +1,306 @@
+{
+  "jour": "2026-12-19",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-262",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a une nouvelle passion | Lui entre par la gauche, radieux, une plante en pot dans les pattes, et la pose au milieu ; elle, à droite, trouve ça mignon, un petit cœur. | « 1 semaine plus tard » en bas. Il entre encore, avec deux plantes cette fois, les pose à côté de la première ; elle, perplexe, un point d'interrogation. | « 1 mois plus tard » en bas. Des plantes partout, elle est coincée entre deux pots, blasée, une feuille sur la tête ; lui, au milieu de sa jungle, arrose, émerveillé, des cœurs autour.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui entre par la gauche, radieux, une plante en pot dans les pattes, et la pose au milieu ; elle, à droite, trouve ça mignon, un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "bas",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "plante",
+                "x": 260,
+                "y": 300,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 260
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 340,
+                    "y": 345
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 500,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 2.8,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a une nouvelle passion",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 1 semaine plus tard » en bas. Il entre encore, avec deux plantes cette fois, les pose à côté de la première ; elle, perplexe, un point d'interrogation.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "bas",
+                    "expression": "emerveille"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "plante",
+                "x": 340,
+                "y": 345,
+                "echelle": 0.7
+              },
+              {
+                "objet": "plante",
+                "x": 180,
+                "y": 250,
+                "echelle": 0.7,
+                "de": 0,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 180
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 130,
+                    "y": 345
+                  }
+                ]
+              },
+              {
+                "objet": "plante",
+                "x": 330,
+                "y": 250,
+                "echelle": 0.7,
+                "de": 0,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 420,
+                    "y": 345
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 semaine plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 mois plus tard » en bas. Des plantes partout, elle est coincée entre deux pots, blasée, une feuille sur la tête ; lui, au milieu de sa jungle, arrose, émerveillé, des cœurs autour.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "blase",
+                    "taille": 220
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "exaspere"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "emerveille",
+                    "bras": "tient",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "plante",
+                "x": 130,
+                "y": 345,
+                "echelle": 0.9
+              },
+              {
+                "objet": "plante",
+                "x": 400,
+                "y": 345,
+                "echelle": 0.8
+              },
+              {
+                "objet": "plante",
+                "x": 200,
+                "y": 200,
+                "echelle": 0.6
+              },
+              {
+                "objet": "plante",
+                "x": 460,
+                "y": 230,
+                "echelle": 0.6
+              },
+              {
+                "objet": "plante",
+                "x": 560,
+                "y": 345,
+                "echelle": 0.7
+              },
+              {
+                "objet": "plante",
+                "x": 330,
+                "y": 330,
+                "echelle": 0.5,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 mois plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-107",
+  "sujet": "ani-219",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,36 +12,92 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« T'as quoi ? » « rien » : il boude de dos en jetant des regards, elle passe sans rien remarquer, il se met sur son chemin, elle le prend dans ses bras. Quatre plans, 13 secondes.",
+        "idee": "toi quand ta personne ronfle | La nuit, la lune ; le lit ; lui dort allongé à gauche, et des notes de musique sortent de lui à chaque ronflement ; elle, assise à droite, les yeux ouverts, attend, puis s'agace. | Elle se met l'oreiller sur la tête, les pattes dessus ; les notes continuent ; elle le pousse d'un coup, il roule sur le côté sans se réveiller ; silence ; elle souffle, soulagée. | « 2 min plus tard » en bas. Elle s'est rallongée, apaisée ; une note repart de lui, puis deux ; elle rouvre un œil, blasée, et remet l'oreiller sur sa tête.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3,
-            "description": "Il est debout, de trois quarts, les bras croisés, la bouche de travers. Il jette un regard par-dessus l'épaule à 1,8 s. Le texte à 0,2 s.",
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui dort allongé à gauche, et des notes de musique sortent de lui à chaque ronflement ; elle, assise à droite, les yeux ouverts, attend, puis s'agace.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "debout",
-                    "expression": "boude",
-                    "bras": "croises",
-                    "angle": 150
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "attend"
                   },
                   {
-                    "a": 1.8,
-                    "expression": "attend"
+                    "a": 2.0,
+                    "expression": "agace",
+                    "vers": -1
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 0.4,
+                "a": 1.4,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 220,
+                "y": 190,
+                "echelle": 0.5,
+                "de": 1.8,
+                "a": 2.8,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
             "textes": [
               {
-                "texte": "« t’as quoi ? » « rien »",
+                "texte": "toi quand ta personne ronfle",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -49,145 +105,203 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle entre par la gauche en marchant de profil, tranquille, sans le voir. Lui la suit des yeux, perplexe, les bras croisés. Elle s'arrête à droite à 2,6 s.",
+            "duree": 4,
+            "description": "Elle se met l'oreiller sur la tête, les pattes dessus ; les notes continuent ; elle le pousse d'un coup, il roule sur le côté sans se réveiller ; silence ; elle souffle, soulagée.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "content"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
                   },
                   {
-                    "a": 2.6,
-                    "x": 480,
-                    "pose": "debout"
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 300,
-                    "pose": "debout",
-                    "expression": "perplexe",
-                    "bras": "croises",
-                    "angle": 150
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Il se déplace vers elle et se plante juste devant, les bras croisés, boudeur. Elle le regarde, blasée, un sourcil levé.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 300,
-                    "pose": "marche",
-                    "expression": "boude",
-                    "bras": "croises",
-                    "angle": 90
+                    "a": 0.8,
+                    "bras": "tete"
                   },
                   {
-                    "a": 1.2,
-                    "x": 400,
-                    "pose": "debout",
-                    "expression": "boude",
-                    "angle": 0
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 500,
-                    "pose": "debout",
-                    "expression": "blase"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle le prend dans ses bras, les deux serrés au milieu, yeux fermés, trois cœurs flottent au-dessus d'eux.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 385,
-                    "expression": "calin",
+                    "a": 2.0,
                     "bras": "tend_g",
-                    "pose": "penche_g"
+                    "expression": "colere"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "soulage",
+                    "bras": "aucun"
                   }
                 ]
               },
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 285,
-                    "expression": "calin",
-                    "bras": "tend_d",
-                    "pose": "penche_d"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 180,
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 150,
-                "echelle": 0.5,
-                "de": 0.5,
-                "flotte": true
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               },
               {
-                "objet": "coeur",
-                "x": 240,
-                "y": 190,
-                "echelle": 0.32,
-                "de": 0.9,
-                "flotte": true
+                "objet": "oreiller",
+                "x": 394,
+                "y": 215,
+                "echelle": 1.0,
+                "de": 0.8,
+                "a": 2.0
               },
               {
-                "objet": "coeur",
-                "x": 435,
+                "objet": "musique",
+                "x": 200,
                 "y": 200,
-                "echelle": 0.36,
-                "de": 1.3,
+                "echelle": 0.5,
+                "de": 0.3,
+                "a": 1.3,
                 "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 min plus tard » en bas. Elle s'est rallongée, apaisée ; une note repart de lui, puis deux ; elle rouvre un œil, blasée, et remet l'oreiller sur sa tête.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.0,
+                    "bras": "tete",
+                    "expression": "exaspere"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 180,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 140,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 1.2,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 170,
+                "y": 180,
+                "echelle": 0.5,
+                "de": 2.2,
+                "flotte": true
+              },
+              {
+                "objet": "oreiller",
+                "x": 394,
+                "y": 215,
+                "echelle": 1.0,
+                "de": 3.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 3.0
               }
             ]
           }
         ]
       },
-      "legende": "tague-le",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

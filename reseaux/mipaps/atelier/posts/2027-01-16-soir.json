@@ -1,0 +1,207 @@
+{
+  "jour": "2027-01-16",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-289",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne teste des surnoms | Les deux face à face, tranquilles ; elle, contente, essaie ; en haut s'écrit « mon chou » ; il hausse un sourcil ; puis « mon lapin » ; il est blasé. | En haut : « ma crevette » ; il se cache le visage, mort de honte ; « mon caramel mou » ; il se met en boule ; elle rit, ravie, les pattes sur les hanches. | Il se relève, respire, et tente à son tour ; en haut s'écrit « mon pingouin » ; elle se fige, bouche bée ; il est très fier ; elle se met en boule à son tour, morte de honte.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux face à face, tranquilles ; elle, contente, essaie ; en haut s'écrit « mon chou » ; il hausse un sourcil ; puis « mon lapin » ; il est blasé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "perplexe"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "malicieux"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne teste des surnoms",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« mon chou »",
+                "de": 1.8,
+                "a": 2.9,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« mon lapin »",
+                "de": 3.1,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut : « ma crevette » ; il se cache le visage, mort de honte ; « mon caramel mou » ; il se met en boule ; elle rit, ravie, les pattes sur les hanches.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "gene",
+                    "bras": "visage",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "boule",
+                    "expression": "honte"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ma crevette »",
+                "de": 0.3,
+                "a": 1.9,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« mon caramel mou »",
+                "de": 2.1,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il se relève, respire, et tente à son tour ; en haut s'écrit « mon pingouin » ; elle se fige, bouche bée ; il est très fier ; elle se met en boule à son tour, morte de honte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "boule",
+                    "expression": "honte"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "fier",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "bouche_bee",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "pose": "boule",
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« mon pingouin »",
+                "de": 1.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

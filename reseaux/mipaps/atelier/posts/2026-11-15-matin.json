@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-108",
+  "sujet": "ani-223",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,74 +12,27 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Chercher un truc juste devant soi : il cherche ses clés partout, paniqué ; elle arrive et les prend, posées devant lui ; il fait comme s'il le savait, elle est blasée. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne dit « bon, je te laisse » | Chacun de son côté de l'écran, loin l'un de l'autre, le téléphone à la patte, ils rient ; en haut s'écrit « bon, je te laisse » ; personne ne raccroche. | « 10 min plus tard » en bas. Toujours au téléphone, les deux ; elle raconte, joyeuse ; il rit ; elle rit ; il raconte à son tour, les bras qui s'agitent. | « 1 h plus tard » en bas. Elle s'est endormie allongée, le téléphone encore à côté d'elle, des z ; lui parle encore, content, puis s'arrête, surpris du silence, et sourit, tendre ; il garde la ligne.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il tourne sur lui-même, paniqué, de la sueur autour de la tête, il cherche partout. Le texte en haut dès 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 300,
-                    "pose": "debout",
-                    "expression": "panique",
-                    "signes": [
-                      "sueur"
-                    ]
-                  },
-                  {
-                    "a": 1.2,
-                    "miroir": true,
-                    "x": 340
-                  },
-                  {
-                    "a": 2.4,
-                    "miroir": false,
-                    "x": 290
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand tu cherches un truc qui est juste devant toi",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle entre par la gauche en marchant de profil, calme. Elle s'arrête à côté de lui à 2 s et pointe quelque chose du doigt devant lui : des clés apparaissent par terre à 2,2 s. Il reste figé.",
+            "duree": 4,
+            "description": "Chacun de son côté de l'écran, loin l'un de l'autre, le téléphone à la patte, ils rient ; en haut s'écrit « bon, je te laisse » ; personne ne raccroche.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
+                    "x": 190,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
                     "expression": "content"
-                  },
-                  {
-                    "a": 2,
-                    "x": 480,
-                    "pose": "debout",
-                    "expression": "blase"
-                  },
-                  {
-                    "a": 2.2,
-                    "bras": "pointe",
-                    "angle": 0
                   }
                 ]
               },
@@ -88,37 +41,67 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "pose": "debout",
-                    "expression": "choque"
+                    "x": 480,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "cle",
-                "x": 370,
-                "y": 372,
-                "echelle": 0.6,
-                "de": 2.2
+                "objet": "telephone",
+                "x": 190,
+                "y": 300,
+                "echelle": 0.55
+              },
+              {
+                "objet": "telephone",
+                "x": 480,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « bon, je te laisse »",
+                "de": 0.2,
+                "a": 2.0,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« bon, je te laisse »",
+                "de": 2.2,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle prend les clés et les lui tend, blasée. Lui se redresse, un petit sourire malicieux, les pattes sur les hanches, comme s'il le savait depuis le début.",
+            "description": "« 10 min plus tard » en bas. Toujours au téléphone, les deux ; elle raconte, joyeuse ; il rit ; elle rit ; il raconte à son tour, les bras qui s'agitent.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 480,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "tend_g"
+                    "x": 190,
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "ecoute"
                   }
                 ]
               },
@@ -127,35 +110,118 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 290,
-                    "pose": "debout",
-                    "expression": "choque"
+                    "x": 480,
+                    "expression": "rire",
+                    "bras": "tient"
                   },
                   {
-                    "a": 1.2,
-                    "expression": "malicieux",
-                    "bras": "hanches"
+                    "a": 2.6,
+                    "expression": "joie",
+                    "bras": "leves"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "cle",
-                "x": 400,
+                "objet": "telephone",
+                "x": 190,
+                "y": 300,
+                "echelle": 0.55
+              },
+              {
+                "objet": "telephone",
+                "x": 480,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Elle s'est endormie allongée, le téléphone encore à côté d'elle, des z ; lui parle encore, content, puis s'arrête, surpris du silence, et sourit, tendre ; il garde la ligne.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 190,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 100,
                 "y": 330,
-                "echelle": 0.6
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 480,
+                "y": 300,
+                "echelle": 0.55
+              },
+              {
+                "objet": "coeur",
+                "x": 530,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "tague-le",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

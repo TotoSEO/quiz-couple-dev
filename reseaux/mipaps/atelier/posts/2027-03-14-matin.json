@@ -1,0 +1,256 @@
+{
+  "jour": "2027-03-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-356",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te réveille pour dire « je t'aime » | La nuit, la lune ; le lit ; lui dort allongé ; elle, réveillée, le regarde avec des cœurs dans les yeux, puis le secoue doucement ; il grogne, les yeux fermés. | Il ouvre un œil, blasé ; en haut s'écrit « je t'aime » ; il reste figé, puis fond, les yeux en cœur ; elle sourit, satisfaite, et se rallonge aussitôt. | « 2 min plus tard » en bas. Elle dort profondément, des z ; lui, assis dans le lit, tout content, n'arrive plus à dormir, les cœurs toujours dans les yeux ; il la regarde ; la lune aussi.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui dort allongé ; elle, réveillée, le regarde avec des cœurs dans les yeux, puis le secoue doucement ; il grogne, les yeux fermés.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "exaspere",
+                    "pose": "allonge"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "vers": -1,
+                    "signes": [
+                      "coeurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te réveille pour dire « je t'aime »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il ouvre un œil, blasé ; en haut s'écrit « je t'aime » ; il reste figé, puis fond, les yeux en cœur ; elle sourit, satisfaite, et se rallonge aussitôt.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "surpris",
+                    "pose": "allonge"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "allonge",
+                    "expression": "zen"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 190,
+                "echelle": 0.35,
+                "de": 2.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« je t'aime »",
+                "de": 0.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 min plus tard » en bas. Elle dort profondément, des z ; lui, assis dans le lit, tout content, n'arrive plus à dormir, les cœurs toujours dans les yeux ; il la regarde ; la lune aussi.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "content",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 1.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-101",
+  "sujet": "ani-216",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,22 +12,24 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Nous deux au lit : collés sous la couette, il a chaud et se décale, elle se rapproche en dormant, il tombe du lit, elle dort au milieu. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne tire le plaid | Le canapé, les deux assis sous le même plaid, contents, bien au chaud ; elle regarde vers lui en coin, l'air de rien, malicieuse. | Elle tire le plaid vers elle d'un coup ; lui se retrouve découvert, surpris, puis grelotte, des frissons ; il tire à son tour, elle se retrouve découverte et boude. | Elle grimpe sur ses genoux et s'installe sous le plaid avec lui, contente ; lui, d'abord écrasé, puis content ; le plaid revient au milieu, des cœurs montent.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Les deux sont allongés sous la couette, collés l'un contre l'autre, contents, un petit cœur flotte entre eux. Le texte se pose à 0,2 s.",
+            "description": "Le canapé, les deux assis sous le même plaid, contents, bien au chaud ; elle regarde vers lui en coin, l'air de rien, malicieuse.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 330,
-                    "pose": "allonge",
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
                     "expression": "content"
                   }
                 ]
@@ -37,32 +39,34 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 255,
-                    "pose": "allonge",
-                    "expression": "amour"
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "malicieux",
+                    "vers": -1
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "couette",
-                "x": 295,
-                "y": 355,
-                "echelle": 1.5
-              },
-              {
-                "objet": "coeur",
-                "x": 295,
-                "y": 190,
-                "echelle": 0.4,
-                "de": 0.6,
-                "flotte": true
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
               }
             ],
             "textes": [
               {
-                "texte": "nous deux au lit",
+                "texte": "toi quand ta personne tire le plaid",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -70,156 +74,174 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il a chaud, il souffle, la sueur au front, et se décale doucement vers la droite. Elle dort et se rapproche de lui à son tour. Le texte « un peu plus tard » à 0,2 s.",
+            "duree": 4,
+            "description": "Elle tire le plaid vers elle d'un coup ; lui se retrouve découvert, surpris, puis grelotte, des frissons ; il tire à son tour, elle se retrouve découverte et boude.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 330,
-                    "pose": "allonge",
-                    "expression": "fatigue",
-                    "signes": [
-                      "sueur"
-                    ]
-                  },
-                  {
-                    "a": 2,
-                    "x": 375
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 255,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malicieux"
                   },
                   {
-                    "a": 2.2,
-                    "x": 300
+                    "a": 1.4,
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "boude",
+                    "signes": [
+                      "frissons"
+                    ]
                   }
                 ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "couette",
-                "x": 320,
-                "y": 355,
-                "echelle": 1.5
-              }
-            ],
-            "textes": [
-              {
-                "texte": "un peu plus tard",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il est tout au bord du lit, à droite, les yeux grands ouverts. Elle se rapproche encore en dormant. À 2,2 s il bascule et tombe hors du lit.",
-            "persos": [
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "pose": "allonge",
-                    "expression": "choque"
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
                   },
                   {
-                    "a": 2.2,
-                    "x": 475,
-                    "y": 380,
-                    "pose": "tombe",
-                    "expression": "choque",
+                    "a": 0.8,
+                    "expression": "surpris",
                     "signes": [
                       "exclamation"
                     ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
+                  },
                   {
-                    "a": 0,
-                    "x": 300,
-                    "pose": "allonge",
-                    "expression": "dodo",
+                    "a": 1.6,
+                    "expression": "froid",
                     "signes": [
-                      "zzz"
+                      "frissons"
                     ]
                   },
                   {
-                    "a": 2,
-                    "x": 350
+                    "a": 2.6,
+                    "expression": "fier"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "couette",
-                "x": 365,
-                "y": 355,
-                "echelle": 1.5
-              }
-            ],
-            "sons": [
-              {
-                "nom": "tape",
-                "a": 2.4
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6,
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 320
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 440
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 440
+                  },
+                  {
+                    "a": 2.7,
+                    "x": 210
+                  }
+                ]
               }
             ]
           },
           {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Elle dort tranquillement, seule au milieu du lit, les bras en croix, un petit zzz au-dessus de la tête. Un petit cœur flotte.",
+            "duree": 4.5,
+            "description": "Elle grimpe sur ses genoux et s'installe sous le plaid avec lui, contente ; lui, d'abord écrasé, puis content ; le plaid revient au milieu, des cœurs montent.",
             "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "content"
+                  }
+                ]
+              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 310,
-                    "pose": "allonge",
-                    "expression": "dodo",
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "boude",
                     "signes": [
-                      "zzz"
+                      "frissons"
                     ]
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 250,
+                    "y": 250,
+                    "taille": 160,
+                    "expression": "content"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "couette",
-                "x": 310,
-                "y": 355,
-                "echelle": 1.4
+                "objet": "couverture",
+                "x": 210,
+                "y": 318,
+                "echelle": 2.6,
+                "etapes": [
+                  {
+                    "a": 1.0,
+                    "x": 210
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260
+                  }
+                ]
               },
               {
                 "objet": "coeur",
-                "x": 310,
-                "y": 190,
+                "x": 290,
+                "y": 110,
                 "echelle": 0.4,
-                "de": 0.4,
+                "de": 2.8,
                 "flotte": true
               }
             ]
@@ -230,8 +252,8 @@
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

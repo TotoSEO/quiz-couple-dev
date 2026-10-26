@@ -1,0 +1,322 @@
+{
+  "jour": "2026-12-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-256",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne veut une photo de la neige | Dehors, la neige qui tombe, un arbre blanc ; lui, bonnet sur la tête, grelotte ; elle, le téléphone à la patte, émerveillée, le place devant l'arbre d'une poussée. | Elle cadre, il sourit poliment ; elle fait non de la tête, lui fait signe de reculer, encore, encore ; il recule jusqu'à l'arbre en grelottant ; elle n'est toujours pas contente. | « 40 photos plus tard » en bas. Lui est devenu un bonhomme de neige, immobile, couvert de flocons, les yeux en croix ; elle regarde son téléphone, enfin ravie : la photo est parfaite.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dehors, la neige qui tombe, un arbre blanc ; lui, bonnet sur la tête, grelotte ; elle, le téléphone à la patte, émerveillée, le place devant l'arbre d'une poussée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 450,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "emerveille",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d",
+                    "expression": "determine"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 330,
+                "y": 165,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 450
+                  }
+                ]
+              },
+              {
+                "objet": "telephone",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "flocon",
+                "x": 150,
+                "y": 130,
+                "echelle": 0.35,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 420,
+                "y": 110,
+                "echelle": 0.3,
+                "de": 0.7,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne veut une photo de la neige",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle cadre, il sourit poliment ; elle fait non de la tête, lui fait signe de reculer, encore, encore ; il recule jusqu'à l'arbre en grelottant ; elle n'est toujours pas contente.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "perplexe",
+                    "bras": "coucou"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "hesite"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 500
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 530,
+                    "expression": "exaspere",
+                    "signes": [
+                      "frissons",
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 450,
+                "y": 165,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 500
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 530
+                  }
+                ]
+              },
+              {
+                "objet": "telephone",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "flocon",
+                "x": 300,
+                "y": 130,
+                "echelle": 0.35,
+                "de": 0.2,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 40 photos plus tard » en bas. Lui est devenu un bonhomme de neige, immobile, couvert de flocons, les yeux en croix ; elle regarde son téléphone, enfin ravie : la photo est parfaite.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 530,
+                    "expression": "ko",
+                    "pose": "tremble",
+                    "signes": [
+                      "flocons",
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout",
+                    "expression": "ko"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "neige",
+                "x": 530,
+                "y": 350,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 530,
+                "y": 165,
+                "echelle": 0.9
+              },
+              {
+                "objet": "telephone",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 3.0
+              },
+              {
+                "objet": "flocon",
+                "x": 480,
+                "y": 150,
+                "echelle": 0.3,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 580,
+                "y": 220,
+                "echelle": 0.3,
+                "de": 0.9,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "40 photos plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-145",
+  "sujet": "ani-229",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,171 +12,220 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Faire semblant de dormir sur le canapé pour qu'on te porte jusqu'au lit : elle fait semblant, il la soulève, elle ouvre un œil et sourit ; il la pose dans le lit, elle se rendort pour de vrai. Quatre plans, 13 secondes.",
+        "idee": "toi quand ta personne a les mains gelées | Dehors, des flocons ; elle à gauche grelotte, les bras croisés, des frissons ; lui à droite, écharpe autour du cou, tout content, ne se doute de rien. | Elle s'approche, l'air de rien, et lui glisse les deux pattes dans le cou sous l'écharpe ; il ouvre des yeux ronds, bondit sur place, puis grelotte à son tour. | Elle garde les pattes au chaud sur lui, zen, les yeux fermés ; lui tremble, des flocons autour, puis se résigne et la serre contre lui ; un petit cœur monte.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est allongée sur le canapé, les yeux fermés, elle fait semblant de dormir. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Dehors, des flocons ; elle à gauche grelotte, les bras croisés, des frissons ; lui à droite, écharpe autour du cou, tout content, ne se doute de rien.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "dodo",
+                    "x": 270,
+                    "expression": "froid",
+                    "bras": "croises",
                     "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "toi quand tu fais semblant de dormir sur le canapé",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il entre par la droite en marchant de profil vers elle, attendri, et s'arrête à côté d'elle à 2 s, les bras tendus vers elle. À 2,6 s elle ouvre un œil, un petit sourire en coin.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 700,
-                    "angle": -90,
-                    "pose": "marche",
-                    "expression": "amour"
-                  },
-                  {
-                    "a": 2,
-                    "x": 470,
-                    "pose": "debout",
-                    "bras": "tend"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 320,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
+                      "frissons"
                     ]
                   },
                   {
-                    "a": 2.6,
+                    "a": 2.4,
                     "expression": "malicieux",
-                    "signes": []
+                    "vers": 1
                   }
                 ]
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Il la prend dans ses bras, les deux serrés au milieu, elle les yeux fermés avec un petit sourire, lui attendri. Un petit cœur flotte.",
-            "persos": [
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "expression": "amour",
-                    "bras": "tend_g",
-                    "pose": "penche_g"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 285,
-                    "expression": "content",
-                    "bras": "tend_d",
-                    "pose": "penche_d"
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 150,
-                "echelle": 0.4,
-                "de": 0.5,
+                "objet": "echarpe",
+                "x": 450,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "flocon",
+                "x": 150,
+                "y": 130,
+                "echelle": 0.35,
+                "de": 0.3,
                 "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 520,
+                "y": 180,
+                "echelle": 0.3,
+                "de": 0.9,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a les mains gelées",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle est couchée dans le lit sous la couette, endormie pour de vrai, des petits zzz au-dessus d'elle.",
+            "duree": 4,
+            "description": "Elle s'approche, l'air de rien, et lui glisse les deux pattes dans le cou sous l'écharpe ; il ouvre des yeux ronds, bondit sur place, puis grelotte à son tour.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 330,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo",
+                    "x": 270,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 360,
+                    "bras": "tend_d",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "choque",
                     "signes": [
-                      "zzz"
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "y": 320,
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 2.0,
+                    "y": 380,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
                     ]
                   }
                 ]
               }
             ],
-            "meubles": [
-              "lit_fond",
-              "lit_couette"
+            "objets": [
+              {
+                "objet": "echarpe",
+                "x": 450,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "flocon",
+                "x": 150,
+                "y": 130,
+                "echelle": 0.35,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 1.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle garde les pattes au chaud sur lui, zen, les yeux fermés ; lui tremble, des flocons autour, puis se résigne et la serre contre lui ; un petit cœur monte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "expression": "zen",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "froid",
+                    "pose": "tremble",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "blase",
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "echarpe",
+                "x": 450,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "coeur",
+                "x": 405,
+                "y": 160,
+                "echelle": 0.4,
+                "de": 3.2,
+                "flotte": true
+              }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

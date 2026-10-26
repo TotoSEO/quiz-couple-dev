@@ -1,0 +1,261 @@
+{
+  "jour": "2027-01-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-277",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on veut rentrer d'une soirée | Une soirée, des notes de musique, des étoiles ; lui à gauche, elle à droite, loin l'un de l'autre, chacun sourit poliment à quelqu'un qu'on ne voit pas ; leurs regards se croisent. | Un petit signe de tête de lui ; un petit signe de tête d'elle ; sans un mot, chacun recule à petits pas vers le bord, le doigt sur la bouche, l'auréole au-dessus de la tête. | « 20 min plus tard » en bas. Le canapé, chez eux, en pyjama, sous le plaid, chacun sa tasse, les yeux fermés de bonheur ; des cœurs ; la meilleure partie de la soirée.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une soirée, des notes de musique, des étoiles ; lui à gauche, elle à droite, loin l'un de l'autre, chacun sourit poliment à quelqu'un qu'on ne voit pas ; leurs regards se croisent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 170,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "blase",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "musique",
+                "x": 320,
+                "y": 120,
+                "echelle": 0.6,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 110,
+                "echelle": 0.5
+              },
+              {
+                "objet": "musique",
+                "x": 480,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 0.9,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on veut rentrer d'une soirée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Un petit signe de tête de lui ; un petit signe de tête d'elle ; sans un mot, chacun recule à petits pas vers le bord, le doigt sur la bouche, l'auréole au-dessus de la tête.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 170,
+                    "expression": "suspicieux",
+                    "vers": 1
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "chut",
+                    "bras": "bouche",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 170,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "chut",
+                    "bras": "bouche",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 520,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "musique",
+                "x": 320,
+                "y": 120,
+                "echelle": 0.6,
+                "de": 0.2,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 20 min plus tard » en bas. Le canapé, chez eux, en pyjama, sous le plaid, chacun sa tasse, les yeux fermés de bonheur ; des cœurs ; la meilleure partie de la soirée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "tasse",
+                "x": 226,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 225,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.3,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 415,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.7,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

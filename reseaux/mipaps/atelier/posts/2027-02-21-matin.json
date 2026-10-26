@@ -1,0 +1,282 @@
+{
+  "jour": "2027-02-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-332",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on se trompe de côté pour le bisou | Les deux face à face, contents ; ils se penchent pour un bisou, tous les deux du même côté ; leurs têtes se cognent ; deux points d'exclamation. | Ils se redressent, rient, réessaient : de l'autre côté, tous les deux encore ; encore un choc ; ils se frottent le front, blasés ; troisième essai : pareil ; ils abandonnent, dos à dos. | Elle prend sa tête à deux pattes, la tient bien droite, et pose le bisou d'un coup ; il reste figé, les yeux en cœur ; elle, fière, les pattes sur les hanches ; des cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux face à face, contents ; ils se penchent pour un bisou, tous les deux du même côté ; leurs têtes se cognent ; deux points d'exclamation.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "penche_d",
+                    "expression": "bisou",
+                    "x": 390
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on se trompe de côté pour le bisou",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 1.6
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ils se redressent, rient, réessaient : de l'autre côté, tous les deux encore ; encore un choc ; ils se frottent le front, blasés ; troisième essai : pareil ; ils abandonnent, dos à dos.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "debout",
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout",
+                    "expression": "blase",
+                    "bras": "tete"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "debout",
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout",
+                    "expression": "blase",
+                    "bras": "tete"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 1.2
+              },
+              {
+                "nom": "boing",
+                "a": 3.1
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle prend sa tête à deux pattes, la tient bien droite, et pose le bisou d'un coup ; il reste figé, les yeux en cœur ; elle, fière, les pattes sur les hanches ; des cœurs.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "joues",
+                    "x": 390
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "expression": "fier",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "transi",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 2.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 2.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 2.9,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.7
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

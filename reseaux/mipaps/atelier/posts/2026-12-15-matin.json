@@ -1,0 +1,308 @@
+{
+  "jour": "2026-12-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-257",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne range « vite fait » avant de partir | Elle à droite, près de la porte, prête, les clés à la patte ; lui au milieu, sur le point de sortir, voit un coussin de travers et va le remettre ; elle lève les yeux au ciel. | « 10 min plus tard » en bas. Il passe un chiffon partout, la lampe, le carton, à fond, en sueur ; elle s'est assise par terre contre la porte et regarde son téléphone. | « 1 h plus tard » en bas. La maison est impeccable ; lui, fier, les pattes sur les hanches, des étincelles ; elle dort par terre contre la porte, les clés tombées à côté ; il la regarde, gêné.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle à droite, près de la porte, prête, les clés à la patte ; lui au milieu, sur le point de sortir, voit un coussin de travers et va le remettre ; elle lève les yeux au ciel.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "surpris",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 300,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 180,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.65,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "cle",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 110,
+                "y": 340,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne range « vite fait » avant de partir",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 10 min plus tard » en bas. Il passe un chiffon partout, la lampe, le carton, à fond, en sueur ; elle s'est assise par terre contre la porte et regarde son téléphone.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 180,
+                    "expression": "concentre",
+                    "bras": "tend_d",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 180,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 400,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 400,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 250,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.85,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "assis",
+                    "expression": "ennui",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 110,
+                "y": 340,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lampe",
+                "x": 450,
+                "y": 300,
+                "echelle": 1.0
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. La maison est impeccable ; lui, fier, les pattes sur les hanches, des étincelles ; elle dort par terre contre la porte, les clés tombées à côté ; il la regarde, gêné.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "fier",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "surpris",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "gene",
+                    "bras": "tete",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "boule",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "cle",
+                "x": 440,
+                "y": 365,
+                "echelle": 0.5
+              },
+              {
+                "objet": "lampe",
+                "x": 450,
+                "y": 300,
+                "echelle": 1.0,
+                "a": 0.1
+              },
+              {
+                "objet": "etincelles",
+                "x": 150,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 0.3,
+                "a": 1.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

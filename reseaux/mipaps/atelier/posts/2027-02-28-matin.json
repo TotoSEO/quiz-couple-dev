@@ -1,0 +1,300 @@
+{
+  "jour": "2027-02-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-340",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne cherche son téléphone | Elle, au milieu, le téléphone collé à l'oreille, en pleine conversation, cherche partout autour d'elle, paniquée ; en haut s'écrit « je trouve plus mon téléphone !! » ; lui, à droite, la regarde. | Elle soulève un coussin, regarde sous le canapé, court d'un bord à l'autre, toujours le téléphone à l'oreille ; lui, les bras croisés, un sourire en coin, la laisse chercher. | Il s'approche, pointe du doigt l'oreille d'elle ; elle le regarde, confuse, touche son oreille : le téléphone ; elle se fige, puis se cache le visage, morte de honte ; il rit, puis l'embrasse sur le front.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle, au milieu, le téléphone collé à l'oreille, en pleine conversation, cherche partout autour d'elle, paniquée ; en haut s'écrit « je trouve plus mon téléphone !! » ; lui, à droite, la regarde.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "joie",
+                    "bras": "oreille"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 335,
+                "y": 215,
+                "echelle": 0.45
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne cherche son téléphone",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« je trouve plus mon téléphone !! »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle soulève un coussin, regarde sous le canapé, court d'un bord à l'autre, toujours le téléphone à l'oreille ; lui, les bras croisés, un sourire en coin, la laisse chercher.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "panique",
+                    "bras": "oreille"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 290,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 120,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.7,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.1,
+                    "angle": 0,
+                    "bras": "oreille",
+                    "expression": "panique"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "perplexe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "narquois",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 335,
+                "y": 215,
+                "echelle": 0.45,
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 335
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 160
+                  },
+                  {
+                    "a": 1.7,
+                    "x": 160
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 425
+                  }
+                ]
+              },
+              {
+                "objet": "coussin",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.8,
+                "de": 0.8,
+                "a": 1.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il s'approche, pointe du doigt l'oreille d'elle ; elle le regarde, confuse, touche son oreille : le téléphone ; elle se fige, puis se cache le visage, morte de honte ; il rit, puis l'embrasse sur le front.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "narquois"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 480,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 440,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "pointe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.45,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "expression": "panique",
+                    "bras": "oreille"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "honte",
+                    "bras": "visage",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 425,
+                "y": 215,
+                "echelle": 0.45,
+                "a": 2.8
+              },
+              {
+                "objet": "telephone",
+                "x": 440,
+                "y": 350,
+                "echelle": 0.45,
+                "de": 2.8
+              },
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 170,
+                "echelle": 0.3,
+                "de": 3.8,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

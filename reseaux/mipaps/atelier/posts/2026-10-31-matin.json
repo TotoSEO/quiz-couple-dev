@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-029",
+  "sujet": "ani-205",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,26 +12,25 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne s'endort en deux secondes : il dort la bouche ouverte, elle a les yeux grands ouverts ; à 3 h du matin elle lui glisse un oreiller et le couvre ; elle finit par s'endormir contre lui. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne dit « je suis prête » | Lui à droite, les clés à la patte, prêt à partir, content ; elle entre par la gauche en marchant, fière, et s'arrête au milieu gauche, face à nous. | En haut : « j'ai juste les chaussures à mettre ». Elle a une idée, une ampoule, et repart par la gauche en courant ; lui, blasé, finit par s'asseoir par terre et attend. | « 20 min plus tard » en bas. Lui dort assis par terre ; elle revient par la gauche, radieuse, dans une autre tenue, un sac à la patte, et s'arrête devant lui ; il ne bouge pas.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Les deux sont allongés côte à côte. Lui dort, la bouche ouverte, des petits zzz. Elle a les yeux grands ouverts, elle le regarde. Le texte à 0,2 s.",
+            "description": "Lui à droite, les clés à la patte, prêt à partir, content ; elle entre par la gauche en marchant, fière, et s'arrête au milieu gauche, face à nous.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content",
+                    "bras": "tient"
                   }
                 ]
               },
@@ -39,94 +38,122 @@
                 "perso": "elle",
                 "etapes": [
                   {
-                    "a": 0,
-                    "x": 400,
-                    "pose": "allonge",
-                    "expression": "attend"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "dormir à côté de quelqu'un qui s'endort en deux secondes",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Elle se redresse un peu et lui glisse un oreiller sous la tête à 1 s, puis tire la couverture sur lui à 2,2 s. Lui ne bouge pas, il ronfle doucement.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 400,
-                    "pose": "allonge",
-                    "expression": "attend"
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
                   },
                   {
-                    "a": 1,
-                    "expression": "content",
-                    "bras": "tend_g"
+                    "a": 1.8,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "oreiller",
-                "x": 215,
-                "y": 342,
-                "echelle": 0.6,
-                "de": 1.2
-              },
-              {
-                "objet": "couverture",
-                "x": 250,
-                "y": 355,
-                "echelle": 0.9,
-                "de": 2.2
+                "objet": "cle",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "et toi, 3 h du matin, les yeux grands ouverts",
+                "texte": "toi quand ta personne dit « je suis prête »",
                 "de": 0.2,
-                "place": "haut"
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle se rapproche et s'endort contre lui, sous la même couverture. Un petit cœur flotte au-dessus d'eux.",
+            "description": "En haut : « j'ai juste les chaussures à mettre ». Elle a une idée, une ampoule, et repart par la gauche en courant ; lui, blasé, finit par s'asseoir par terre et attend.",
             "persos": [
               {
-                "perso": "lui",
+                "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
                     "x": 290,
-                    "pose": "allonge",
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 290,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "blase",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "assis",
+                    "expression": "attend"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« j'ai juste les chaussures à mettre »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 20 min plus tard » en bas. Lui dort assis par terre ; elle revient par la gauche, radieuse, dans une autre tenue, un sac à la patte, et s'arrête devant lui ; il ne bouge pas.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "assis",
                     "expression": "dodo",
                     "signes": [
                       "zzz"
@@ -138,40 +165,64 @@
                 "perso": "elle",
                 "etapes": [
                   {
-                    "a": 0,
-                    "x": 370,
-                    "pose": "allonge",
-                    "expression": "dodo"
+                    "a": 0.8,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "perplexe",
+                    "vers": 1
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "couverture",
-                "x": 330,
-                "y": 355,
-                "echelle": 1.2
+                "objet": "pull",
+                "x": 290,
+                "y": 300,
+                "echelle": 1.2,
+                "de": 0.8
               },
               {
-                "objet": "coeur",
+                "objet": "sac",
                 "x": 330,
-                "y": 170,
-                "echelle": 0.4,
-                "de": 0.6,
-                "flotte": true
+                "y": 330,
+                "echelle": 0.6,
+                "de": 0.8
               }
             ],
-            "textes": []
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
           }
         ]
       },
-      "legende": "c'est qui chez vous ?",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

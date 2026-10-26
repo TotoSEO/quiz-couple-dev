@@ -1,0 +1,355 @@
+{
+  "jour": "2027-03-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-374",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne réclame un bisou à chaque passage | Le salon ; elle, assise sur le canapé ; lui traverse la pièce de gauche à droite avec une tasse ; au passage elle tend la joue ; il s'arrête, bisou, et continue ; un petit cœur. | Il repasse dans l'autre sens : elle tend la joue ; bisou ; il repasse : la joue ; bisou ; il repasse encore, plus vite, il court presque ; la joue ; bisou ; il commence à fatiguer. | « 20 passages plus tard » en bas. Il rampe à plat ventre pour traverser le salon sans qu'elle le voie ; elle, sans lever les yeux, tend la joue vers le bas ; il soupire, se redresse, bisou ; elle sourit.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le salon ; elle, assise sur le canapé ; lui traverse la pièce de gauche à droite avec une tasse ; au passage elle tend la joue ; il s'arrête, bisou, et continue ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.7,
+                    "angle": 0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.5,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 330,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.5,
+                    "x": 330
+                  },
+                  {
+                    "a": 3.8,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 370,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 1.8,
+                "a": 2.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne réclame un bisou à chaque passage",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.8
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il repasse dans l'autre sens : elle tend la joue ; bisou ; il repasse : la joue ; bisou ; il repasse encore, plus vite, il court presque ; la joue ; bisou ; il commence à fatiguer.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.0,
+                    "angle": 0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.3,
+                    "pose": "debout",
+                    "angle": -90
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": -140
+                  },
+                  {
+                    "a": 2.2,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.2,
+                    "angle": 0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "debout",
+                    "expression": "essouffle",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 370,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 1.1,
+                "a": 1.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 370,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 3.3,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.1
+              },
+              {
+                "nom": "pop",
+                "a": 3.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 20 passages plus tard » en bas. Il rampe à plat ventre pour traverser le salon sans qu'elle le voie ; elle, sans lever les yeux, tend la joue vers le bas ; il soupire, se redresse, bisou ; elle sourit.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "penche_g",
+                    "x": 390,
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 3.8,
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "pose": "rampe",
+                    "expression": "concentre",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "debout",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 414,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 2.0
+              },
+              {
+                "objet": "coeur",
+                "x": 370,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 3.7,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 passages plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 3.7
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

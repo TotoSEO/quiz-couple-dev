@@ -1,0 +1,291 @@
+{
+  "jour": "2027-02-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-311",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on lance le ménage de printemps | Un carton, un pull, un sac, une écharpe, un bonnet par terre ; les deux debout, décidés, les pattes sur les hanches ; en haut s'écrit « aujourd'hui on fait tout ». | « 20 min plus tard » en bas. Elle trouve une vieille lettre dans le carton et s'assoit pour la lire, émue ; il vient voir, s'assoit à côté ; ils lisent ensemble, les yeux brillants. | « 3 h plus tard » en bas. Rien n'a bougé : le pull, le sac, l'écharpe sont toujours par terre ; les deux assis au milieu, entourés de lettres et de photos, morts de rire ; un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Un carton, un pull, un sac, une écharpe, un bonnet par terre ; les deux debout, décidés, les pattes sur les hanches ; en haut s'écrit « aujourd'hui on fait tout ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 120,
+                "y": 345,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pull",
+                "x": 340,
+                "y": 360,
+                "echelle": 0.7
+              },
+              {
+                "objet": "sac",
+                "x": 560,
+                "y": 345,
+                "echelle": 0.7
+              },
+              {
+                "objet": "echarpe",
+                "x": 480,
+                "y": 365,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on lance le ménage de printemps",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« aujourd'hui on fait tout »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 20 min plus tard » en bas. Elle trouve une vieille lettre dans le carton et s'assoit pour la lire, émue ; il vient voir, s'assoit à côté ; ils lisent ensemble, les yeux brillants.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "concentre",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 200,
+                    "pose": "assis",
+                    "expression": "emu",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "effort",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "curieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 320,
+                    "pose": "assis",
+                    "expression": "emu",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 120,
+                "y": 345,
+                "echelle": 1.0
+              },
+              {
+                "objet": "lettre",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.8
+              },
+              {
+                "objet": "pull",
+                "x": 340,
+                "y": 360,
+                "echelle": 0.7,
+                "a": 1.4
+              },
+              {
+                "objet": "pull",
+                "x": 250,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 0,
+                "a": 1.4
+              },
+              {
+                "objet": "sac",
+                "x": 560,
+                "y": 345,
+                "echelle": 0.7
+              },
+              {
+                "objet": "echarpe",
+                "x": 480,
+                "y": 365,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h plus tard » en bas. Rien n'a bougé : le pull, le sac, l'écharpe sont toujours par terre ; les deux assis au milieu, entourés de lettres et de photos, morts de rire ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "assis",
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "emu"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "assis",
+                    "expression": "mort_de_rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 120,
+                "y": 345,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pull",
+                "x": 500,
+                "y": 360,
+                "echelle": 0.7
+              },
+              {
+                "objet": "sac",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "lettre",
+                "x": 270,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "lettre",
+                "x": 400,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 2.8,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

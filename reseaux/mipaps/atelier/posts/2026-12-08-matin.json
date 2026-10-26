@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-136",
+  "sujet": "ani-249",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,56 +12,79 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Essayer de faire peur à ta personne : il se cache derrière la porte ; elle arrive, il saute « bouh », elle ne bronche pas ; elle lui fait « bouh » à son tour, il tombe à la renverse. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne pleure devant un film | Le canapé, la télé ; elle pleure à chaudes larmes, les mouchoirs à côté ; lui, blasé, regarde l'écran, les bras croisés, puis la regarde, un peu inquiet. | Il lui tend la boîte de mouchoirs, gentil ; elle se mouche, le remercie d'un sourire, et replonge dans le film ; lui regarde l'écran à son tour, curieux ; sa lèvre tremble. | Les deux pleurent à grosses larmes devant la télé, deux fontaines, lui encore plus fort qu'elle ; elle lui tend un mouchoir sans quitter l'écran des yeux ; il se mouche bruyamment.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est caché derrière la porte à droite, seul son visage dépasse, malicieux. Elle arrive par la gauche en marchant de profil, tranquille. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Le canapé, la télé ; elle pleure à chaudes larmes, les mouchoirs à côté ; lui, blasé, regarde l'écran, les bras croisés, puis la regarde, un peu inquiet.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 470,
-                    "pose": "debout",
-                    "expression": "malicieux"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "content"
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "pleure",
+                    "signes": [
+                      "larmes"
+                    ]
                   },
                   {
-                    "a": 2.6,
-                    "x": 230,
-                    "pose": "debout"
+                    "a": 2.0,
+                    "expression": "sanglote",
+                    "signes": [
+                      "fontaines"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "inquiet",
+                    "vers": 1,
+                    "bras": "bas"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "porte",
-                "x": 440,
-                "y": 260,
-                "echelle": 1.3,
-                "derriere": true
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "mouchoirs",
+                "x": 540,
+                "y": 330,
+                "echelle": 0.6
               }
             ],
             "textes": [
               {
-                "texte": "essayer de faire peur à ta personne",
+                "texte": "toi quand ta personne pleure devant un film",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -69,31 +92,29 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il saute devant elle à 0,6 s, les bras en l'air, la bouche ouverte. Elle ne bronche pas, les bras croisés, blasée. Le texte « bouh » à 0,6 s.",
+            "duree": 4,
+            "description": "Il lui tend la boîte de mouchoirs, gentil ; elle se mouche, le remercie d'un sourire, et replonge dans le film ; lui regarde l'écran à son tour, curieux ; sa lèvre tremble.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 470,
-                    "pose": "debout",
-                    "expression": "malicieux"
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tend_d"
                   },
                   {
-                    "a": 0.6,
-                    "x": 350,
-                    "y": 320,
-                    "pose": "saut",
-                    "expression": "joie",
-                    "bras": "leves"
+                    "a": 1.6,
+                    "expression": "curieux",
+                    "bras": "bas"
                   },
                   {
-                    "a": 1.4,
-                    "y": 380,
-                    "pose": "debout"
+                    "a": 3.0,
+                    "expression": "triste"
                   }
                 ]
               },
@@ -102,107 +123,137 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 230,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "croises"
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "sanglote"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "emu",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "pleure",
+                    "bras": "bas",
+                    "signes": [
+                      "larmes"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "porte",
-                "x": 440,
-                "y": 260,
-                "echelle": 1.3,
-                "derriere": true
-              }
-            ],
-            "textes": [
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
               {
-                "texte": "« bouh »",
-                "de": 0.6,
-                "place": "haut"
+                "objet": "mouchoirs",
+                "x": 330,
+                "y": 300,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 414
+                  }
+                ]
               }
             ]
           },
           {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Elle se retourne d'un coup et fait « bouh » à son tour à 0,8 s, les bras en l'air. Il fait un bond de surprise et tombe à la renverse à 1,6 s.",
+            "duree": 4.5,
+            "description": "Les deux pleurent à grosses larmes devant la télé, deux fontaines, lui encore plus fort qu'elle ; elle lui tend un mouchoir sans quitter l'écran des yeux ; il se mouche bruyamment.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 0.8,
-                    "x": 290,
-                    "y": 320,
-                    "pose": "saut",
-                    "expression": "joie",
-                    "bras": "leves"
-                  },
-                  {
-                    "a": 1.6,
-                    "y": 380,
-                    "pose": "debout"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 380,
-                    "pose": "debout",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 0.9,
-                    "expression": "choque",
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "sanglote",
                     "signes": [
-                      "exclamation"
+                      "fontaines"
                     ]
                   },
                   {
-                    "a": 1.6,
-                    "x": 490,
-                    "pose": "tombe"
+                    "a": 3.0,
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "pleure",
+                    "signes": [
+                      "larmes"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_g"
                   }
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "« bouh »",
-                "de": 0.8,
-                "place": "haut"
-              }
+            "meubles": [
+              "canape_fond"
             ],
-            "sons": [
+            "objets": [
               {
-                "nom": "boing",
-                "a": 1.6
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "mouchoirs",
+                "x": 414,
+                "y": 300,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 2.2,
+                    "x": 414
+                  },
+                  {
+                    "a": 2.9,
+                    "x": 240
+                  }
+                ]
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "tague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

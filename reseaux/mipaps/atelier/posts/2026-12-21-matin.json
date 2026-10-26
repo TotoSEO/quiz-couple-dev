@@ -1,0 +1,263 @@
+{
+  "jour": "2026-12-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-264",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand ça sonne à la porte | Le canapé, les deux assis, contents ; la sonnette retentit ; les deux ferment les yeux en même temps et font semblant de dormir, des z un peu trop gros. | Ça sonne encore ; lui ouvre un œil en coin ; elle ouvre un œil en coin ; ils se voient ; ils referment les yeux tous les deux, encore plus endormis ; ça sonne encore. | Elle le pousse d'un coup du canapé ; il tombe par terre, surpris ; elle se rendort aussitôt, l'auréole au-dessus de la tête ; il se relève, blasé, et va ouvrir en traînant.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, les deux assis, contents ; la sonnette retentit ; les deux ferment les yeux en même temps et font semblant de dormir, des z un peu trop gros.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand ça sonne à la porte",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 1.0
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ça sonne encore ; lui ouvre un œil en coin ; elle ouvre un œil en coin ; ils se voient ; ils referment les yeux tous les deux, encore plus endormis ; ça sonne encore.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "suspicieux",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 0.4
+              },
+              {
+                "nom": "sonnette",
+                "a": 3.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle le pousse d'un coup du canapé ; il tombe par terre, surpris ; elle se rendort aussitôt, l'auréole au-dessus de la tête ; il se relève, blasé, et va ouvrir en traînant.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "malicieux",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "dodo",
+                    "signes": [
+                      "halo",
+                      "zzz"
+                    ],
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "tombe",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "allonge",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "expression": "blase",
+                    "angle": 90
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.0
+              },
+              {
+                "nom": "sonnette",
+                "a": 2.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

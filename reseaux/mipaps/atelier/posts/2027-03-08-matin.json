@@ -1,0 +1,223 @@
+{
+  "jour": "2027-03-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-349",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne fait semblant d'être fâchée | Lui, à gauche, boude, les bras croisés, tourné vers le bord, un nuage noir trop bien dessiné ; elle, à droite, le regarde, pas dupe, un sourire en coin. | Elle s'approche à pas de loup, et lui chatouille les côtes ; il résiste, les joues gonflées, tremble, puis craque et éclate de rire ; il se reprend aussitôt et boude encore. | Elle recommence ; il craque encore, mort de rire ; il reboude ; elle recommence ; à la fin il abandonne, l'attrape, et c'est elle qu'il chatouille ; elle se tord de rire ; le nuage a disparu.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui, à gauche, boude, les bras croisés, tourné vers le bord, un nuage noir trop bien dessiné ; elle, à droite, le regarde, pas dupe, un sourire en coin.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "vers": -1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "narquois",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne fait semblant d'être fâchée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle s'approche à pas de loup, et lui chatouille les côtes ; il résiste, les joues gonflées, tremble, puis craque et éclate de rire ; il se reprend aussitôt et boude encore.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 450,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 360,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.2,
+                    "angle": 0,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "tremble",
+                    "expression": "effort",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout",
+                    "expression": "mort_de_rire"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "vers": -1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle recommence ; il craque encore, mort de rire ; il reboude ; elle recommence ; à la fin il abandonne, l'attrape, et c'est elle qu'il chatouille ; elle se tord de rire ; le nuage a disparu.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "expression": "rire",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "bas",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "mort_de_rire",
+                    "pose": "penche_g",
+                    "signes": [
+                      "larmes"
+                    ]
+                  },
+                  {
+                    "a": 3.6,
+                    "pose": "tombe",
+                    "expression": "pleure_de_joie"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "mort_de_rire",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 290,
+                    "expression": "malicieux",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 330,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

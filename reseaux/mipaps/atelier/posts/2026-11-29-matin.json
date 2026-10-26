@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-112",
+  "sujet": "ani-239",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,130 +12,103 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "L'épisode regardé en douce sans l'autre : elle seule sur le canapé avec du popcorn ; il arrive, elle cache le popcorn ; il lance l'épisode, elle fait la surprise. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne lit au lit avec la lumière | Le lit, la lampe allumée sur la table de nuit à droite ; elle, assise, un livre à la patte, concentrée ; lui à gauche, allongé, se cache les yeux, puis boude. | Il s'exaspère, une veine ; elle le regarde, désolée, ferme le livre, éteint la lampe ; le noir ; lui soulagé, les yeux fermés, un petit sourire. | « 2 min plus tard » en bas. Elle sort son téléphone sous le drap, la lumière de l'écran sur son visage, hypnotisée ; lui rouvre un œil, blasé, et se met l'oreiller sur la tête.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est seule sur le canapé, gourmande, un bol de popcorn sur les genoux, les yeux sur la télé. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Le lit, la lampe allumée sur la table de nuit à droite ; elle, assise, un livre à la patte, concentrée ; lui à gauche, allongé, se cache les yeux, puis boude.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "gourmand"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "concentre"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "fatigue",
+                    "bras": "visage"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "boude"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "popcorn",
-                "x": 320,
-                "y": 300,
-                "echelle": 0.8
+                "objet": "lampe",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.0
               },
               {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
+                "objet": "livre",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.6
               }
             ],
             "textes": [
               {
-                "texte": "toi quand tu regardes l'épisode sans ta personne",
+                "texte": "toi quand ta personne lit au lit avec la lumière",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
               }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il arrive par la droite en marchant de profil et s'arrête près du canapé à 2 s. Elle fait glisser le popcorn derrière elle, l'air innocent, un petit sourire.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 700,
-                    "angle": -90,
-                    "pose": "marche",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 2,
-                    "x": 520,
-                    "pose": "debout",
-                    "expression": "perplexe"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 320,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "gourmand"
-                  },
-                  {
-                    "a": 1.4,
-                    "expression": "ange"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "popcorn",
-                "x": 320,
-                "y": 300,
-                "echelle": 0.8,
-                "a": 1.4
-              },
-              {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux sont assis côte à côte sur le canapé. Il lance l'épisode, content. Elle fait la surprise, les yeux grands, la bouche en O, sans bouger.",
+            "description": "Il s'exaspère, une veine ; elle le regarde, désolée, ferme le livre, éteint la lampe ; le noir ; lui soulagé, les yeux fermés, un petit sourire.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               },
@@ -144,35 +117,150 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "surpris"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "desole",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "aucun",
+                    "expression": "content"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
+                "objet": "lampe",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.0,
+                "a": 2.4
+              },
+              {
+                "objet": "livre",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 min plus tard » en bas. Elle sort son téléphone sous le drap, la lumière de l'écran sur son visage, hypnotisée ; lui rouvre un œil, blasé, et se met l'oreiller sur la tête.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tient",
+                    "expression": "hypnotise"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.4,
+                    "bras": "tete",
+                    "expression": "exaspere"
+                  }
+                ]
               }
             ],
             "meubles": [
-              "canape_fond"
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.6
+              },
+              {
+                "objet": "oreiller",
+                "x": 248,
+                "y": 215,
+                "echelle": 1.0,
+                "de": 3.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 3.4
+              }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

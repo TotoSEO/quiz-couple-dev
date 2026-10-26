@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-109",
+  "sujet": "ani-221",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,108 +12,183 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Les vidéos qu'on s'envoie toute la journée : elle sur son téléphone, une notification, elle rit ; lui pareil ; puis les deux sur le même canapé, chacun sur son téléphone. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne fait un cauchemar | La nuit, la lune ; le lit ; les deux dorment ; elle tremble dans son sommeil, des gouttes de sueur, puis se réveille d'un coup, les yeux ronds, apeurée ; lui dort. | Elle regarde autour d'elle, inquiète, puis glisse vers lui et le pousse ; il se réveille, confus, un point d'interrogation, puis la voit et s'inquiète ; il se redresse et lui ouvre les bras. | Elle se blottit contre lui, les deux assis dans le lit, le câlin, les yeux fermés ; des cœurs montent ; au bout d'un moment il se rendort assis, le menton sur sa tête à elle, et elle sourit.",
         "son": {
           "ambiance": "tendre"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est debout, un téléphone à la patte. Une notification sonne à 1 s, elle regarde l'écran et se met à rire. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; les deux dorment ; elle tremble dans son sommeil, des gouttes de sueur, puis se réveille d'un coup, les yeux ronds, apeurée ; lui dort.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tient"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
                   },
                   {
-                    "a": 1,
-                    "expression": "rire"
+                    "a": 1.0,
+                    "expression": "peur",
+                    "pose": "allonge",
+                    "signes": [
+                      "sueurs",
+                      "tremblement"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique"
                   }
                 ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 354,
-                "y": 340,
-                "echelle": 0.55
-              }
-            ],
-            "textes": [
-              {
-                "texte": "les vidéos qu'on s'envoie toute la journée",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "sons": [
-              {
-                "nom": "notification",
-                "a": 1
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Lui est debout, un téléphone à la patte. Une notification sonne à 1 s, il regarde l'écran et se met à rire.",
-            "persos": [
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tient"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "rire"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 286,
-                "y": 340,
-                "echelle": 0.55
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               }
             ],
-            "sons": [
+            "textes": [
               {
-                "nom": "notification",
-                "a": 1
+                "texte": "toi quand ta personne fait un cauchemar",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux sont assis côte à côte sur le canapé, chacun sur son téléphone, tous les deux en train de rire. Une notification sonne à 1,2 s et l'un puis l'autre se tape le ventre.",
+            "description": "Elle regarde autour d'elle, inquiète, puis glisse vers lui et le pousse ; il se réveille, confus, un point d'interrogation, puis la voit et s'inquiète ; il se redresse et lui ouvre les bras.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "triste",
+                    "signes": [
+                      "larme"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 1.5,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "inquiet",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.2,
+                    "bras": "leves",
+                    "expression": "calin"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se blottit contre lui, les deux assis dans le lit, le câlin, les yeux fermés ; des cœurs montent ; au bout d'un moment il se rendort assis, le menton sur sa tête à elle, et elle sourit.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "rire",
-                    "bras": "tient"
+                    "x": 260,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tend_d",
+                    "pattes": "aucune",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               },
@@ -122,48 +197,69 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "rire",
-                    "bras": "tient"
+                    "x": 350,
+                    "y": 346,
+                    "taille": 190,
+                    "pose": "debout",
+                    "bras": "tend_g",
+                    "pattes": "aucune",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "amour"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 250,
-                "y": 300,
-                "echelle": 0.45
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               },
               {
-                "objet": "telephone",
-                "x": 390,
-                "y": 300,
-                "echelle": 0.45
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ],
-            "sons": [
+                "objet": "coeur",
+                "x": 305,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
               {
-                "nom": "notification",
-                "a": 1.2
+                "objet": "coeur",
+                "x": 210,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.5,
+                "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "envoie-lui ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

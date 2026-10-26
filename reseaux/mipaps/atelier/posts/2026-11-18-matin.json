@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-114",
+  "sujet": "ani-226",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,26 +12,28 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand on se dispute pour rien : face à face, en colère ; dos à dos, bras croisés, chacun jette un œil ; ils se jettent dans les bras l'un de l'autre. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne te regarde dormir | La nuit, la lune ; le lit ; lui dort allongé, la bouche ouverte, une bulle au nez ; elle, assise à côté, le regarde avec des cœurs dans les yeux. | Elle sort son téléphone, le cadre, et prend une photo de lui en train de dormir ; un petit flash ; il bouge un peu, elle se fige, l'air de rien, l'auréole au-dessus de la tête. | « le lendemain » en bas. Debout, elle lui montre son téléphone, fière : la photo est son nouveau fond d'écran ; lui la découvre, bouche bée, puis mort de honte, en boule ; elle rit.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Les deux sont face à face, en colère, des nuages noirs au-dessus de leurs têtes, les poings sur les hanches. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui dort allongé, la bouche ouverte, une bulle au nez ; elle, assise à côté, le regarde avec des cœurs dans les yeux.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 260,
-                    "pose": "debout",
-                    "expression": "colere",
-                    "bras": "hanches",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
                     "signes": [
-                      "nuage_noir"
+                      "bulle_nez",
+                      "zzz"
                     ]
                   }
                 ]
@@ -41,20 +43,45 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "debout",
-                    "expression": "colere",
-                    "bras": "hanches",
-                    "signes": [
-                      "nuage_noir"
-                    ]
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "malicieux"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 420,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 0.8,
+                "a": 2.4,
+                "flotte": true
+              }
+            ],
             "textes": [
               {
-                "texte": "quand on se dispute pour rien",
+                "texte": "toi quand ta personne te regarde dormir",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -62,111 +89,156 @@
             ]
           },
           {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Ils sont dos à dos, les bras croisés, boudeurs. À 1,6 s lui jette un œil par-dessus son épaule, puis à 2,4 s elle fait pareil.",
+            "duree": 3.5,
+            "description": "Elle sort son téléphone, le cadre, et prend une photo de lui en train de dormir ; un petit flash ; il bouge un peu, elle se fige, l'air de rien, l'auréole au-dessus de la tête.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 270,
-                    "pose": "debout",
-                    "expression": "boude",
-                    "bras": "croises",
-                    "angle": -150
-                  },
-                  {
-                    "a": 1.6,
-                    "expression": "attend"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "debout",
-                    "expression": "boude",
-                    "bras": "croises",
-                    "angle": 150
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "malicieux"
                   },
                   {
-                    "a": 2.4,
-                    "expression": "attend"
+                    "a": 1.6,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
                   }
                 ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 1.6
+              },
+              {
+                "objet": "etincelles",
+                "x": 330,
+                "y": 240,
+                "echelle": 0.5,
+                "de": 1.2,
+                "a": 1.6
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 1.2
               }
             ]
           },
           {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux se jettent dans les bras l'un de l'autre, serrés au milieu, yeux fermés. Trois cœurs flottent au-dessus d'eux.",
+            "duree": 4.5,
+            "description": "« le lendemain » en bas. Debout, elle lui montre son téléphone, fière : la photo est son nouveau fond d'écran ; lui la découvre, bouche bée, puis mort de honte, en boule ; elle rit.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 390,
-                    "expression": "calin",
-                    "bras": "tend_g",
-                    "pose": "penche_g"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 285,
-                    "expression": "calin",
-                    "bras": "tend_d",
-                    "pose": "penche_d"
+                    "x": 290,
+                    "expression": "fier",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "curieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "honte",
+                    "pose": "boule"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 335,
-                "y": 150,
-                "echelle": 0.5,
-                "de": 0.5,
-                "flotte": true
-              },
+                "objet": "telephone",
+                "x": 375,
+                "y": 300,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
               {
-                "objet": "coeur",
-                "x": 240,
-                "y": 190,
-                "echelle": 0.32,
-                "de": 0.9,
-                "flotte": true
-              },
-              {
-                "objet": "coeur",
-                "x": 435,
-                "y": 200,
-                "echelle": 0.36,
-                "de": 1.3,
-                "flotte": true
+                "texte": "le lendemain",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

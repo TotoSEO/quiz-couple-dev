@@ -1,0 +1,370 @@
+{
+  "jour": "2027-03-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-360",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne passe « 5 min » au magasin de brico | Devant une porte de magasin ; lui entre en courant, les yeux qui brillent ; en haut s'écrit « juste 5 min » ; elle, dehors, s'assoit sur le banc, confiante, le téléphone à la patte. | « 1 h plus tard » en bas. Elle, sur le banc, s'ennuie, puis pique du nez, puis dort allongée sur le banc ; il ressort une seconde, radieux, une lampe à la patte, et repart dedans. | « 3 h plus tard » en bas. Il ressort avec trois cartons empilés, une lampe, une plante, fier comme tout ; elle se réveille, regarde la pile, et pointe l'heure sur son téléphone ; il fait l'innocent.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Devant une porte de magasin ; lui entre en courant, les yeux qui brillent ; en haut s'écrit « juste 5 min » ; elle, dehors, s'assoit sur le banc, confiante, le téléphone à la patte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 420,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "banc",
+                "x": 420,
+                "y": 340,
+                "echelle": 1.4,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 420,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne passe « 5 min » au magasin de brico",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« juste 5 min »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 1 h plus tard » en bas. Elle, sur le banc, s'ennuie, puis pique du nez, puis dort allongée sur le banc ; il ressort une seconde, radieux, une lampe à la patte, et repart dedans.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 560,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "banc",
+                "x": 420,
+                "y": 340,
+                "echelle": 1.4,
+                "derriere": true
+              },
+              {
+                "objet": "lampe",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.8,
+                "de": 0.6,
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 820
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 560
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 560
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h plus tard » en bas. Il ressort avec trois cartons empilés, une lampe, une plante, fier comme tout ; elle se réveille, regarde la pile, et pointe l'heure sur son téléphone ; il fait l'innocent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "bras": "porte_haut"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 340,
+                    "taille": 220,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "assis",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.2,
+                    "bras": "pointe",
+                    "expression": "narquois"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "banc",
+                "x": 420,
+                "y": 340,
+                "echelle": 1.4,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 300,
+                "y": 110,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300
+                  }
+                ]
+              },
+              {
+                "objet": "plante",
+                "x": 300,
+                "y": 40,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300
+                  }
+                ]
+              },
+              {
+                "objet": "lampe",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.8,
+                "de": 1.8
+              },
+              {
+                "objet": "telephone",
+                "x": 420,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 2.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

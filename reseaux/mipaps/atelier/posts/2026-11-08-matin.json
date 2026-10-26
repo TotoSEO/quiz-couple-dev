@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-118",
+  "sujet": "ani-215",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,59 +12,65 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand tu racontes ta journée : elle raconte avec les pattes, lui hoche la tête sur son téléphone, « mmh mmh » ; elle s'arrête et le fixe ; il pose le téléphone, le menton dans la patte, « et donc ? ». Trois plans, 11,5 secondes.",
+        "idee": "toi quand ta personne cherche ses clés | Lui traverse la pièce en courant dans un sens puis dans l'autre, paniqué, des gouttes de sueur ; elle, debout à droite, le regarde passer, blasée. | En haut : « t'as pas vu mes clés ? ». Il soulève un coussin, regarde dessous, inquiet ; rien ; il se gratte la tête ; elle, les bras croisés, regarde sa patte à lui, puis pointe du doigt. | Il baisse les yeux : les clés sont dans son autre patte depuis le début ; il devient tout rouge, gêné, une goutte de sueur ; elle rit, puis hausse les épaules, tendre.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Elle est à gauche, pleine d'énergie, elle raconte sa journée avec les pattes en l'air, puis tendues vers lui à 1,5 s. Lui est à droite, les yeux sur son téléphone, concentré, il ne la regarde pas. Le texte se pose à 0,2 s.",
+            "description": "Lui traverse la pièce en courant dans un sens puis dans l'autre, paniqué, des gouttes de sueur ; elle, debout à droite, le regarde passer, blasée.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "expression": "energique",
-                    "bras": "leves"
-                  },
-                  {
-                    "a": 1.5,
-                    "bras": "tend_d",
-                    "expression": "joie"
-                  },
-                  {
-                    "a": 2.8,
-                    "bras": "leves",
-                    "expression": "energique"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "expression": "concentre",
-                    "bras": "tient"
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 520
+                  },
+                  {
+                    "a": 1.7,
+                    "x": 520,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.6,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "blase"
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 468,
-                "y": 346,
-                "echelle": 0.5
-              }
-            ],
             "textes": [
               {
-                "texte": "quand tu racontes ta journée",
+                "texte": "toi quand ta personne cherche ses clés",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -72,121 +78,160 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "coupe",
-            "description": "Lui répond sans lever les yeux de son téléphone, à 0,3 s. Elle s'arrête net à 1,2 s, les bras croisés, et le fixe, un sourcil levé. Il sent le regard à 2,2 s : il lève les yeux, une goutte de sueur.",
+            "duree": 4,
+            "description": "En haut : « t'as pas vu mes clés ? ». Il soulève un coussin, regarde dessous, inquiet ; rien ; il se gratte la tête ; elle, les bras croisés, regarde sa patte à lui, puis pointe du doigt.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "expression": "energique",
-                    "bras": "tend_d"
-                  },
-                  {
-                    "a": 1.2,
-                    "expression": "suspicieux",
-                    "bras": "croises"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "expression": "concentre",
-                    "bras": "tient"
+                    "x": 200,
+                    "expression": "inquiet",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "confus",
+                    "bras": "tete",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "surpris",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "blase",
+                    "bras": "croises"
                   },
                   {
                     "a": 2.2,
-                    "expression": "nerveux",
-                    "signes": [
-                      "sueur"
-                    ]
+                    "expression": "narquois"
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "pointe",
+                    "vers": -1
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 468,
-                "y": 346,
-                "echelle": 0.5
+                "objet": "coussin",
+                "x": 200,
+                "y": 190,
+                "echelle": 0.9,
+                "a": 1.6
+              },
+              {
+                "objet": "coussin",
+                "x": 120,
+                "y": 350,
+                "echelle": 0.9,
+                "de": 1.6
               }
             ],
             "textes": [
               {
-                "texte": "« mmh mmh »",
+                "texte": "« t'as pas vu mes clés ? »",
                 "de": 0.3,
-                "place": "haut"
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Le téléphone a disparu. Lui a le menton dans la patte, tout ouïe, les yeux brillants, un petit cœur au-dessus de lui. Elle reprend son histoire, ravie, les pattes en l'air à 0,8 s. Sa phrase à lui s'écrit mot à mot à 0,4 s.",
+            "description": "Il baisse les yeux : les clés sont dans son autre patte depuis le début ; il devient tout rouge, gêné, une goutte de sueur ; elle rit, puis hausse les épaules, tendre.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "expression": "suspicieux",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "joie",
-                    "bras": "leves"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "expression": "ecoute",
-                    "bras": "menton"
+                    "x": 200,
+                    "expression": "surpris",
+                    "bras": "tient",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur",
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "narquois",
+                    "bras": "pointe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour"
                   }
                 ]
               }
             ],
             "objets": [
               {
+                "objet": "cle",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coussin",
+                "x": 120,
+                "y": 350,
+                "echelle": 0.9
+              },
+              {
                 "objet": "coeur",
                 "x": 440,
-                "y": 150,
+                "y": 170,
                 "echelle": 0.35,
-                "de": 1.2,
+                "de": 3.2,
                 "flotte": true
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« et donc ? »",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

@@ -1,0 +1,283 @@
+{
+  "jour": "2027-02-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-336",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne veut un bisou dans la rue | Dehors, un banc, un arbre ; les deux marchent ; elle s'arrête, se tourne vers lui, la bouche en cœur ; il regarde à gauche, à droite, gêné, les joues rouges. | Elle attend, la bouche en cœur, les yeux fermés ; il hésite, des sueurs, regarde encore autour ; personne ; il se penche très vite et pose un bisou éclair ; puis se redresse, tout raide. | Elle rit, lui prend la patte ; il se cache derrière elle, tout petit, la tête qui dépasse à peine, mort de honte ; elle marche fièrement avec lui collé dans son dos ; ils sortent du cadre.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dehors, un banc, un arbre ; les deux marchent ; elle s'arrête, se tourne vers lui, la bouche en cœur ; il regarde à gauche, à droite, gêné, les joues rouges.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "bisou",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.2,
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 335,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne veut un bisou dans la rue",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "ambiance": "circulation"
+          },
+          {
+            "duree": 4,
+            "description": "Elle attend, la bouche en cœur, les yeux fermés ; il hésite, des sueurs, regarde encore autour ; personne ; il se penche très vite et pose un bisou éclair ; puis se redresse, tout raide.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "expression": "bisou",
+                    "pose": "penche_g"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "content",
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueurs"
+                    ],
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.2,
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.5,
+                    "pose": "debout",
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ],
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 335,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 2.1,
+                "a": 3.0,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 2.1
+              }
+            ],
+            "ambiance": "circulation"
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle rit, lui prend la patte ; il se cache derrière elle, tout petit, la tête qui dépasse à peine, mort de honte ; elle marche fièrement avec lui collé dans son dos ; ils sortent du cadre.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "expression": "rire",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 380,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 300,
+                    "taille": 200,
+                    "pose": "boule"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 300,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "honte"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 740
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 335,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              }
+            ],
+            "ambiance": "circulation"
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

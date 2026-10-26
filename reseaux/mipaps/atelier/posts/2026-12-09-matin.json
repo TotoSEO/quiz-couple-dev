@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-133",
+  "sujet": "ani-250",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,25 +12,119 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Juste une petite sieste » : les deux s'allongent sur le canapé ; trois heures plus tard il fait nuit, ils dorment toujours ; ils se réveillent, perdus, « on est quel jour ? ». Trois plans, 12 secondes.",
+        "idee": "nous deux pour le côté du lit | Le lit vide ; les deux arrivent en même temps, lui par la gauche, elle par la droite, et se jettent sur le même côté, le droit ; ils se cognent, deux points d'exclamation. | Collés sur le même côté, ils se regardent en chiens de faïence ; elle boude ; il boude ; elle le pousse un peu ; il ne bouge pas ; il la pousse ; elle ne bouge pas. | « 1 h plus tard » en bas. Elle dort sur le côté droit, victorieuse, une étincelle ; lui dort en travers du pied du lit, replié, un oreiller sous la tête ; les deux dorment, des z.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Les deux sont allongés sur le canapé, côte à côte, contents, un sourire aux lèvres. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Le lit vide ; les deux arrivent en même temps, lui par la gauche, elle par la droite, et se jettent sur le même côté, le droit ; ils se cognent, deux points d'exclamation.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "angle": 0,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 440,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "angle": 0,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux pour le côté du lit",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 1.7
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Collés sur le même côté, ils se regardent en chiens de faïence ; elle boude ; il boude ; elle le pousse un peu ; il ne bouge pas ; il la pousse ; elle ne bouge pas.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "content"
+                    "x": 380,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "boude",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d"
                   }
                 ]
               },
@@ -39,40 +133,63 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "content"
+                    "x": 430,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "boude",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tend_g",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
                   }
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "« juste une petite sieste »",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
             "meubles": [
-              "canape_fond"
+              "lit_fond"
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux dorment profondément sur le canapé, la lune et des étoiles dehors, des zzz au-dessus d'eux. Le texte « 3 h plus tard » à 0,2 s.",
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Elle dort sur le côté droit, victorieuse, une étincelle ; lui dort en travers du pied du lit, replié, un oreiller sous la tête ; les deux dorment, des z.",
             "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz",
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
                     "x": 250,
-                    "y": 330,
-                    "taille": 220,
+                    "y": 392,
+                    "taille": 160,
                     "pose": "allonge",
                     "expression": "dodo",
                     "signes": [
@@ -80,93 +197,34 @@
                     ]
                   }
                 ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 400,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "dodo"
-                  }
-                ]
               }
+            ],
+            "meubles": [
+              "lit_fond"
             ],
             "objets": [
               {
-                "objet": "lune",
-                "x": 500,
-                "y": 110,
-                "echelle": 0.6
+                "objet": "oreiller",
+                "x": 150,
+                "y": 370,
+                "echelle": 0.7,
+                "derriere": true
               },
               {
-                "objet": "etoiles",
-                "x": 230,
-                "y": 100,
-                "echelle": 0.6
+                "objet": "coeur",
+                "x": 335,
+                "y": 180,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
               }
             ],
             "textes": [
               {
-                "texte": "3 h plus tard",
+                "texte": "1 h plus tard",
                 "de": 0.2,
-                "place": "haut"
+                "place": "bas"
               }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 4.5,
-            "transition": "fondu",
-            "description": "Les deux se réveillent d'un coup, assis, les cheveux en pétard, perdus, un point d'interrogation au-dessus de chacun. Le texte « on est quel jour ? » à 0,6 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "perplexe",
-                    "signes": [
-                      "question"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "surpris",
-                    "signes": [
-                      "question"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« on est quel jour ? »",
-                "de": 0.6,
-                "place": "haut"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           }
         ]
@@ -175,8 +233,8 @@
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

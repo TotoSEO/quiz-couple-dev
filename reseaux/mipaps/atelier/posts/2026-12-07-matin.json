@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-129",
+  "sujet": "ani-248",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,44 +12,69 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne chante sous la douche : il chante fort dans la baignoire ; elle arrive et se bouche les oreilles ; elle finit par chanter avec lui, des notes partout. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne parle en dormant | La nuit, la lune ; le lit ; lui dort allongé, la bouche qui bouge, des petits points sortent de lui ; elle, assise à côté, se réveille et l'écoute, perplexe. | En haut s'écrit ce qu'il marmonne : « non... pas les pingouins... » ; elle se retient de rire, les pattes sur la bouche ; il fronce les sourcils en dormant, inquiet. | Elle se penche et lui répond tout bas, l'air sérieux ; en haut : « t'inquiète, je les ai chassés » ; il sourit dans son sommeil, apaisé ; elle se recouche, fière d'elle.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est dans la baignoire, le sourire jusqu'aux oreilles, il chante à pleine voix, des notes de musique autour de sa tête. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui dort allongé, la bouche qui bouge, des petits points sortent de lui ; elle, assise à côté, se réveille et l'écoute, perplexe.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 320,
-                    "y": 360,
-                    "taille": 220,
-                    "pose": "debout",
-                    "expression": "joie",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
                     "signes": [
-                      "notes"
+                      "points"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "perplexe",
+                    "vers": -1,
+                    "signes": [
+                      "question"
                     ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "baignoire",
-                "x": 320,
-                "y": 350,
-                "echelle": 2.0,
-                "derriere": true
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "quand ta personne chante sous la douche",
+                "texte": "toi quand ta personne parle en dormant",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -58,77 +83,104 @@
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle entre par la gauche en marchant de profil, s'arrête à 2,2 s près de la baignoire et se bouche les oreilles, les yeux plissés. Lui chante toujours, les notes partout.",
+            "description": "En haut s'écrit ce qu'il marmonne : « non... pas les pingouins... » ; elle se retient de rire, les pattes sur la bouche ; il fronce les sourcils en dormant, inquiet.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 2.2,
-                    "x": 150,
-                    "pose": "debout",
-                    "expression": "fatigue",
-                    "bras": "oreilles_bouchees"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 360,
-                    "y": 360,
-                    "taille": 220,
-                    "pose": "debout",
-                    "expression": "joie",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
                     "signes": [
-                      "notes"
+                      "points"
                     ]
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "inquiet",
+                    "pose": "allonge",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "perplexe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire",
+                    "bras": "bouche"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "baignoire",
-                "x": 360,
-                "y": 350,
-                "echelle": 2.0,
-                "derriere": true
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« non, pas les pingouins »",
+                "de": 0.4,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Elle lâche ses oreilles à 1 s, se met à chanter avec lui, les bras en l'air, la bouche grande ouverte. Des notes de musique partout autour d'eux.",
+            "description": "Elle se penche et lui répond tout bas, l'air sérieux ; en haut : « t'inquiète, je les ai chassés » ; il sourit dans son sommeil, apaisé ; elle se recouche, fière d'elle.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 150,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "debout",
-                    "expression": "fatigue",
-                    "bras": "oreilles_bouchees"
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "malicieux",
+                    "vers": -1
                   },
                   {
-                    "a": 1,
-                    "expression": "joie",
-                    "bras": "leves",
-                    "signes": [
-                      "notes"
-                    ]
+                    "a": 0.6,
+                    "x": 330,
+                    "pose": "penche_g",
+                    "expression": "chut"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 394,
+                    "pose": "allonge",
+                    "expression": "fier",
+                    "bras": "bas"
                   }
                 ]
               },
@@ -137,36 +189,54 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 360,
-                    "y": 360,
-                    "taille": 220,
-                    "pose": "debout",
-                    "expression": "joie",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "dodo",
                     "signes": [
-                      "notes"
+                      "zzz"
                     ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "content"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "baignoire",
-                "x": 360,
-                "y": 350,
-                "echelle": 2.0,
-                "derriere": true
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« t'inquiète, je les ai chassés »",
+                "de": 0.8,
+                "place": "haut",
+                "style": "message"
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

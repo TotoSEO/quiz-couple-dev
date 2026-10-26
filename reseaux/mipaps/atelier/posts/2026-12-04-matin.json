@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-139",
+  "sujet": "ani-244",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,30 +12,26 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne parle en dormant : il dort, il marmonne ; elle se penche pour écouter ; « pas les cornichons », elle rit sous la couette. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne fait un câlin trop long | Les deux au milieu, câlin, les yeux fermés, des cœurs qui montent ; elle est contente, lui aussi ; le câlin ne s'arrête pas. | « 5 min plus tard » en bas. Toujours le câlin ; lui n'a pas bougé, ravi ; elle ouvre un œil, attend, regarde l'heure derrière lui, puis s'ennuie. | « 20 min plus tard » en bas. Toujours le câlin ; lui n'a toujours pas bougé ; elle s'est endormie debout dans ses bras, des z ; il la regarde et sourit, un petit cœur.",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "tendre"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Les deux sont dans le lit, lui endormi, des zzz au-dessus de lui, elle les yeux fermés aussi. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Les deux au milieu, câlin, les yeux fermés, des cœurs qui montent ; elle est contente, lui aussi ; le câlin ne s'arrête pas.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 290,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
                   }
                 ]
               },
@@ -44,108 +40,64 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand ta personne parle en dormant",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ],
-            "meubles": [
-              "lit_fond",
-              "lit_couette"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il marmonne, une petite bulle apparaît au-dessus de lui à 0,6 s. Elle ouvre un œil à 1,2 s, intriguée, et se penche vers lui.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo"
-                  },
-                  {
-                    "a": 1.2,
-                    "expression": "curieux",
-                    "x": 380
+                    "x": 400,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "bulle",
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
                 "x": 250,
-                "y": 130,
-                "echelle": 0.7,
-                "de": 0.6
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
               }
             ],
-            "meubles": [
-              "lit_fond",
-              "lit_couette"
+            "textes": [
+              {
+                "texte": "toi quand ta personne fait un câlin trop long",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle rit, la patte devant la bouche pour ne pas le réveiller. Le texte « pas les cornichons » à 0,2 s. Lui dort toujours.",
+            "description": "« 5 min plus tard » en bas. Toujours le câlin ; lui n'a pas bougé, ravi ; elle ouvre un œil, attend, regarde l'heure derrière lui, puis s'ennuie.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 290,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
                   }
                 ]
               },
@@ -154,37 +106,108 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 380,
-                    "y": 346,
-                    "taille": 200,
-                    "pose": "debout",
-                    "bras": "aucun",
-                    "pattes": "aucune",
-                    "expression": "rire"
+                    "x": 400,
+                    "expression": "content",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "attend",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "ennui"
                   }
                 ]
               }
             ],
-            "textes": [
+            "objets": [
               {
-                "texte": "« pas les cornichons »",
-                "de": 0.2,
-                "place": "haut"
+                "objet": "horloge",
+                "x": 540,
+                "y": 110,
+                "echelle": 0.7
               }
             ],
-            "meubles": [
-              "lit_fond",
-              "lit_couette"
+            "textes": [
+              {
+                "texte": "5 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 20 min plus tard » en bas. Toujours le câlin ; lui n'a toujours pas bougé ; elle s'est endormie debout dans ses bras, des z ; il la regarde et sourit, un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "amour",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "dodo",
+                    "bras": "tend_g",
+                    "pose": "penche_g",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 110,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 330,
+                "y": 160,
+                "echelle": 0.4,
+                "de": 2.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

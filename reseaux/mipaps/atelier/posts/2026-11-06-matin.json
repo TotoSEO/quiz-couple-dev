@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-009",
+  "sujet": "ani-212",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,118 +12,27 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le tour complet : ils sont fâchés, il boude de dos ; elle le fait tourner d'une patte ; il revient de face, encore boudeur ; elle lui fait un bisou et il fond. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne demande « tu dors ? » en pleine nuit | La nuit, une lune en haut à droite ; le lit ; lui dort allongé à gauche, des z ; elle, assise à droite, les yeux grands ouverts, attend, puis réfléchit, des petits points. | Elle regarde vers lui, malicieuse, glisse jusqu'à lui et le pousse ; en haut s'écrit « tu dors ? » ; il se redresse d'un coup, les yeux ronds, un point d'exclamation. | Lui, redressé dans le lit, blasé, bien réveillé ; elle s'est rallongée de son côté et dort déjà, des z ; il la regarde, s'ennuie, puis sourit malgré lui ; un petit cœur.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il est à gauche, de dos, les bras croisés, il boude. Elle est à droite, de face, agacée, les bras croisés aussi. Le texte se pose à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "angle": 180,
-                    "expression": "boude",
-                    "bras": "croises"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "expression": "agace",
-                    "bras": "croises"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand on se fait la tête",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle tend la patte vers lui à 0,4 s. Il se laisse tourner, doucement, de dos à profil à 1,4 s puis de face à 2,4 s, toujours boudeur, les bras croisés. Elle le regarde faire, un sourcil levé.",
+            "description": "La nuit, une lune en haut à droite ; le lit ; lui dort allongé à gauche, des z ; elle, assise à droite, les yeux grands ouverts, attend, puis réfléchit, des petits points.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "angle": 180,
-                    "expression": "boude",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 1.4,
-                    "angle": 90
-                  },
-                  {
-                    "a": 2.4,
-                    "angle": 0
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "expression": "agace",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 0.4,
-                    "bras": "pointe",
-                    "expression": "suspicieux"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« je boude, là »",
-                "de": 1.6,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle s'approche d'un pas et lui fait un bisou sur la joue à 0,8 s. Il fond, les yeux qui brillent, des cœurs autour de lui, les bras qui retombent. Pas de texte : le bisou fait la fin.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 270,
-                    "expression": "boude",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "transi",
-                    "bras": "bas",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
                     "signes": [
-                      "coeurs"
+                      "zzz"
                     ]
                   }
                 ]
@@ -133,28 +42,192 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "expression": "suspicieux"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "attend"
                   },
                   {
-                    "a": 0.6,
-                    "x": 340,
-                    "expression": "bisou",
-                    "pose": "penche_g"
+                    "a": 1.8,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
                   }
                 ]
               }
             ],
-            "textes": []
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne demande « tu dors ? » en pleine nuit",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle regarde vers lui, malicieuse, glisse jusqu'à lui et le pousse ; en haut s'écrit « tu dors ? » ; il se redresse d'un coup, les yeux ronds, un point d'exclamation.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "pensif",
+                    "vers": -1
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.1,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« tu dors ? »",
+                "de": 1.9,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Lui, redressé dans le lit, blasé, bien réveillé ; elle s'est rallongée de son côté et dort déjà, des z ; il la regarde, s'ennuie, puis sourit malgré lui ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "ennui",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 190,
+                "echelle": 0.4,
+                "de": 3.2,
+                "flotte": true
+              }
+            ]
           }
         ]
       },
-      "legende": "vous aussi ou c'est que nous ?",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

@@ -1,0 +1,285 @@
+{
+  "jour": "2027-03-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-350",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux devant un truc de notre enfance | Le canapé, la télé ; les deux zappent, blasés ; d'un coup une musique, une émission d'avant : les deux se figent, les yeux ronds, puis les yeux qui brillent, nostalgiques. | Ils chantent le générique ensemble, les bras levés, des notes partout, se regardent, rient ; ils connaissent toutes les paroles ; la télécommande est oubliée. | Les deux debout devant la télé, dansent la chorégraphie du générique, exactement en même temps, concentrés, puis morts de rire ; ils se laissent retomber sur le canapé, l'un sur l'autre ; un cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé ; les deux zappent, blasés ; d'un coup une musique, une émission d'avant : les deux se figent, les yeux ronds, puis les yeux qui brillent, nostalgiques.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "nostalgique",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 226,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "musique",
+                "x": 320,
+                "y": 100,
+                "echelle": 0.5,
+                "de": 1.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux devant un truc de notre enfance",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ils chantent le générique ensemble, les bras levés, des notes partout, se regardent, rient ; ils connaissent toutes les paroles ; la télécommande est oubliée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ],
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": 1,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "signes": [
+                      "notes"
+                    ],
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": -1,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "musique",
+                "x": 150,
+                "y": 120,
+                "echelle": 0.6,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 500,
+                "y": 100,
+                "echelle": 0.6,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "manette",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux debout devant la télé, dansent la chorégraphie du générique, exactement en même temps, concentrés, puis morts de rire ; ils se laissent retomber sur le canapé, l'un sur l'autre ; un cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "danse",
+                    "expression": "concentre",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "pose": "danse",
+                    "expression": "concentre",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "joie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "musique",
+                "x": 160,
+                "y": 120,
+                "echelle": 0.6,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 230,
+                "echelle": 0.35,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 2.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "jour": "2027-01-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-275",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te fait un massage « 2 min » | Elle assise par terre, de dos à moitié, les épaules qui tombent, fatiguée ; lui derrière elle, les pattes sur ses épaules, masse, appliqué ; elle ferme les yeux, zen. | « 30 s plus tard » en bas. Il masse plus mollement, bâille, regarde l'heure ; elle ouvre un œil, soupçonneuse ; il reprend à fond, fatigué, en sueur. | « 2 min plus tard » en bas. Il s'est endormi debout, la tête posée sur son épaule à elle, des z ; elle, les yeux ouverts, blasée ; puis elle sourit et ne bouge plus pour ne pas le réveiller.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle assise par terre, de dos à moitié, les épaules qui tombent, fatiguée ; lui derrière elle, les pattes sur ses épaules, masse, appliqué ; elle ferme les yeux, zen.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "pose": "assis",
+                    "expression": "fatigue",
+                    "taille": 230
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "concentre",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te fait un massage « 2 min »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 30 s plus tard » en bas. Il masse plus mollement, bâille, regarde l'heure ; elle ouvre un œil, soupçonneuse ; il reprend à fond, fatigué, en sueur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "effort",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "taille": 230
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "zen"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 110,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "30 s plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 min plus tard » en bas. Il s'est endormi debout, la tête posée sur son épaule à elle, des z ; elle, les yeux ouverts, blasée ; puis elle sourit et ne bouge plus pour ne pas le réveiller.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "penche_d",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ],
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "taille": 230,
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 110,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 2.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

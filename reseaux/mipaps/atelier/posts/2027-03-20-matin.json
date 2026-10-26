@@ -1,0 +1,198 @@
+{
+  "jour": "2027-03-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-362",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on est têtus tous les deux | Les deux face à face, décidés, les bras croisés, le regard noir ; en haut s'écrit « c'est toi qui t'excuses » ; aucun des deux ne bouge d'un millimètre. | « 1 h plus tard » en bas. Toujours debout face à face, les bras croisés ; ils ont faim, ils bâillent, les yeux qui tombent ; mais personne ne bouge ; une horloge tourne. | « 3 h plus tard » en bas. Les deux dorment debout, face à face, les bras toujours croisés, appuyés l'un contre l'autre front contre front, des z ; un petit cœur ; personne ne s'est excusé.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux face à face, décidés, les bras croisés, le regard noir ; en haut s'écrit « c'est toi qui t'excuses » ; aucun des deux ne bouge d'un millimètre.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on est têtus tous les deux",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« c'est toi qui t'excuses »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 1 h plus tard » en bas. Toujours debout face à face, les bras croisés ; ils ont faim, ils bâillent, les yeux qui tombent ; mais personne ne bouge ; une horloge tourne.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "determine",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "fatigue",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "determine",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "fatigue",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h plus tard » en bas. Les deux dorment debout, face à face, les bras toujours croisés, appuyés l'un contre l'autre front contre front, des z ; un petit cœur ; personne ne s'est excusé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "penche_d",
+                    "expression": "dodo",
+                    "bras": "croises",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "bras": "croises",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

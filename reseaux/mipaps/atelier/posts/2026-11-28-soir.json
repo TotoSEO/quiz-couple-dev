@@ -2,49 +2,289 @@
   "jour": "2026-11-28",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-120",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-238",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : elle, bras croisés, essaie de ne pas rire ; lui fait une grimace.",
-        "texte": "tu me fais rire même quand j'ai décidé de bouder",
-        "duree": 11,
+        "idee": "toi quand ta personne te réveille parce qu'il neige | La nuit, le lit ; lui dort allongé ; elle est debout à la fenêtre à droite, émerveillée, des flocons derrière la vitre ; elle se retourne vers lui, joyeuse, et court le secouer. | Il se redresse, confus, blasé ; elle le tire par la patte hors du lit ; il résiste, se laisse traîner, les yeux fermés ; elle l'emmène vers la droite en tirant. | Dehors, la nuit, la neige qui tombe ; elle, émerveillée, les bras ouverts sous les flocons ; lui, en pyjama, grelotte, des flocons sur la tête ; il la regarde et fond ; un cœur.",
         "son": {
           "ambiance": "tendre"
         },
-        "dessin": {
-          "elements": [
-            {
-              "perso": "elle",
-              "expression": "boude",
-              "bras": "croises",
-              "signes": [
-                "coeurs"
-              ],
-              "x": 250,
-              "taille": 260
-            },
-            {
-              "perso": "lui",
-              "expression": "diable",
-              "x": 420,
-              "taille": 260
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, le lit ; lui dort allongé ; elle est debout à la fenêtre à droite, émerveillée, des flocons derrière la vitre ; elle se retourne vers lui, joyeuse, et court le secouer.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 540,
+                    "expression": "emerveille",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 540,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 400,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.2,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 580,
+                "y": 170,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "flocon",
+                "x": 560,
+                "y": 150,
+                "echelle": 0.3,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 600,
+                "y": 200,
+                "echelle": 0.25,
+                "de": 0.8,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te réveille parce qu'il neige",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il se redresse, confus, blasé ; elle le tire par la patte hors du lit ; il résiste, se laisse traîner, les yeux fermés ; elle l'emmène vers la droite en tirant.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "bras": "tend_d",
+                    "pattes": "debout",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 520
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "joie",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 400,
+                    "angle": 90,
+                    "pose": "tire",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 600
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 580,
+                "y": 170,
+                "echelle": 1.3,
+                "derriere": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Dehors, la nuit, la neige qui tombe ; elle, émerveillée, les bras ouverts sous les flocons ; lui, en pyjama, grelotte, des flocons sur la tête ; il la regarde et fond ; un cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "emerveille",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "joie",
+                    "pose": "danse"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "froid",
+                    "pose": "tremble",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "amour",
+                    "vers": -1,
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "flocon",
+                "x": 150,
+                "y": 130,
+                "echelle": 0.35,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 330,
+                "y": 100,
+                "echelle": 0.3,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 520,
+                "y": 180,
+                "echelle": 0.3,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 220,
+                "y": 220,
+                "echelle": 0.25,
+                "de": 1.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 150,
+                "echelle": 0.4,
+                "de": 2.8,
+                "flotte": true
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-138",
+  "sujet": "ani-236",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,25 +12,27 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Danser dans la cuisine : il met de la musique et danse tout seul ; elle le regarde, blasée ; il lui tend la patte ; les deux dansent. Trois plans, 11 secondes.",
+        "idee": "nous deux quand on dit « demain on va courir » | Les deux debout, décidés, les pattes sur les hanches, des étincelles, prêts à tout ; en haut s'écrit « demain, 7 h, on court ». | « le lendemain, 7 h » en bas. Le lit, le réveil sonne ; les deux se redressent, les yeux ronds ; ils se regardent ; ils se rallongent en même temps et se rendorment. | « la semaine suivante » en bas. Debout, décidés, les pattes sur les hanches, les étincelles ; puis ils se regardent, hésitent, et se tournent vers le lit derrière eux.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Il danse tout seul, le sourire jusqu'aux oreilles, des notes de musique autour de lui. Elle est à côté, les bras croisés, blasée. Le texte en haut dès 0,2 s.",
+            "description": "Les deux debout, décidés, les pattes sur les hanches, des étincelles, prêts à tout ; en haut s'écrit « demain, 7 h, on court ».",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "danse",
-                    "expression": "joie",
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "hanches",
                     "signes": [
-                      "notes"
+                      "etincelles"
                     ]
                   }
                 ]
@@ -40,46 +42,68 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "croises"
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "determine",
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
                   }
                 ]
               }
             ],
             "textes": [
               {
-                "texte": "danser dans la cuisine",
+                "texte": "nous deux quand on dit « demain on va courir »",
                 "de": 0.2,
+                "a": 1.6,
                 "place": "haut",
                 "style": "titre"
+              },
+              {
+                "texte": "« demain, 7 h, on court »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il continue de danser, puis lui tend la patte à 1,6 s, un petit sourire. Elle le regarde, hésite, un sourcil levé.",
+            "duree": 4.5,
+            "description": "« le lendemain, 7 h » en bas. Le lit, le réveil sonne ; les deux se redressent, les yeux ronds ; ils se regardent ; ils se rallongent en même temps et se rendorment.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "danse",
-                    "expression": "joie",
-                    "signes": [
-                      "notes"
-                    ]
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.5,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris"
                   },
                   {
                     "a": 1.6,
-                    "pose": "debout",
-                    "expression": "malicieux",
-                    "bras": "tend_d",
-                    "signes": []
+                    "vers": 1,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
               },
@@ -88,35 +112,85 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
-                    "pose": "debout",
-                    "expression": "blase",
-                    "bras": "croises"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
                   },
                   {
-                    "a": 1.8,
-                    "expression": "perplexe"
+                    "a": 0.5,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.6,
+                    "vers": -1,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
                   }
                 ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le lendemain, 7 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "reveil",
+                "a": 0.2
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux dansent ensemble, joyeux, des notes de musique partout autour d'eux.",
+            "description": "« la semaine suivante » en bas. Debout, décidés, les pattes sur les hanches, les étincelles ; puis ils se regardent, hésitent, et se tournent vers le lit derrière eux.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "danse",
-                    "expression": "joie",
+                    "x": 270,
+                    "expression": "determine",
+                    "bras": "hanches",
                     "signes": [
-                      "notes"
+                      "etincelles"
                     ]
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "hesite",
+                    "vers": 1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "malicieux"
                   }
                 ]
               },
@@ -125,25 +199,42 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "danse",
-                    "expression": "rire",
+                    "x": 450,
+                    "expression": "determine",
+                    "bras": "hanches",
                     "signes": [
-                      "notes"
+                      "etincelles"
                     ]
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "hesite",
+                    "vers": -1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "malicieux"
                   }
                 ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la semaine suivante",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "envoie-lui ça",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

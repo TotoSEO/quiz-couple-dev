@@ -1,0 +1,298 @@
+{
+  "jour": "2027-02-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-330",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand le réveil sonne un dimanche | Le lit, le matin ; le réveil sonne sur le téléphone ; les deux se redressent d'un coup, les yeux ronds, en panique, prêts à sauter du lit. | Ils se regardent ; ils regardent le téléphone ; ils regardent l'horloge au mur ; en bas s'écrit « dimanche » ; leur visage passe de la panique à la fureur, une veine chacun. | Il attrape le téléphone et le jette par-dessus le lit ; il atterrit sur le coussin par terre ; les deux se rallongent en même temps, des z aussitôt ; un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit, le matin ; le réveil sonne sur le téléphone ; les deux se redressent d'un coup, les yeux ronds, en panique, prêts à sauter du lit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.7,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "exclamation",
+                "x": 350,
+                "y": 230,
+                "echelle": 0.4,
+                "de": 0.3,
+                "a": 1.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand le réveil sonne un dimanche",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "reveil",
+                "a": 0.2
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Ils se regardent ; ils regardent le téléphone ; ils regardent l'horloge au mur ; en bas s'écrit « dimanche » ; leur visage passe de la panique à la fureur, une veine chacun.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.0,
+                    "vers": -1,
+                    "expression": "confus"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.0,
+                    "vers": 1,
+                    "expression": "confus"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "dimanche",
+                "de": 1.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il attrape le téléphone et le jette par-dessus le lit ; il atterrit sur le coussin par terre ; les deux se rallongent en même temps, des z aussitôt ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tend_d",
+                    "pattes": "aucune",
+                    "expression": "furieux"
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "bras": "bas",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320
+                  },
+                  {
+                    "a": 0.5,
+                    "x": 110,
+                    "y": 340
+                  }
+                ]
+              },
+              {
+                "objet": "coussin",
+                "x": 110,
+                "y": 365,
+                "echelle": 0.8,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 2.6,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

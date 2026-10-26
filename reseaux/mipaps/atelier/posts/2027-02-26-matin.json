@@ -1,0 +1,237 @@
+{
+  "jour": "2027-02-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-337",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on a dit « ce soir on parle pas boulot » | Le canapé ; les deux assis, décidés, le pouce levé ; en haut s'écrit « ce soir, pas un mot de boulot » ; ils sourient, zen ; puis le silence. | « 2 min plus tard » en bas. Le silence ; lui ouvre la bouche, elle lève la patte : non ; elle ouvre la bouche, il lève la patte : non ; ils se taisent, les joues gonflées, les yeux qui roulent. | Elle se penche vers lui, le doigt sur la bouche ; en haut : « juste un truc, après j'arrête » ; il hoche la tête, soulagé ; les deux parlent boulot en chuchotant, penchés l'un vers l'autre, ravis.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; les deux assis, décidés, le pouce levé ; en haut s'écrit « ce soir, pas un mot de boulot » ; ils sourient, zen ; puis le silence.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "bras": "pouce"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine",
+                    "bras": "pouce"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on a dit « ce soir on parle pas boulot »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« ce soir, pas un mot de boulot »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 2 min plus tard » en bas. Le silence ; lui ouvre la bouche, elle lève la patte : non ; elle ouvre la bouche, il lève la patte : non ; ils se taisent, les joues gonflées, les yeux qui roulent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "idee"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d",
+                    "expression": "chut"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "ennui",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "tend_g",
+                    "expression": "chut"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "idee"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "ennui",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "2 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se penche vers lui, le doigt sur la bouche ; en haut : « juste un truc, après j'arrête » ; il hoche la tête, soulagé ; les deux parlent boulot en chuchotant, penchés l'un vers l'autre, ravis.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 380,
+                    "pose": "penche_g",
+                    "expression": "chut",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 260,
+                    "pose": "penche_d",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "choque",
+                    "bras": "joues"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "« juste un truc, après j'arrête »",
+                "de": 0.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "jour": "2027-02-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-335",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne préfère le chat | Le canapé ; elle, le chat sur les genoux, le caresse, les yeux en cœur ; lui arrive de la droite, content, veut s'asseoir ; elle lui fait signe de ne pas déranger le chat. | Il s'assoit tout au bord ; elle parle au chat, pas à lui ; il devient jaloux, les yeux plissés, puis boude, les bras croisés ; le chat le regarde, l'air de rien. | Il se glisse entre elle et le chat, pose sa tête sur ses genoux à elle, et fait le chat ; elle rit, et le caresse aussi ; le chat, vexé, va s'asseoir sur la tête de lui ; des cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle, le chat sur les genoux, le caresse, les yeux en cœur ; lui arrive de la droite, content, veut s'asseoir ; elle lui fait signe de ne pas déranger le chat.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ],
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 820,
+                    "y": 380,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 500,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "surpris"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 360,
+                "y": 280,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne préfère le chat",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il s'assoit tout au bord ; elle parle au chat, pas à lui ; il devient jaloux, les yeux plissés, puis boude, les bras croisés ; le chat le regarde, l'air de rien.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 480,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "jaloux"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "amour",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "chante",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 360,
+                "y": 280,
+                "echelle": 0.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il se glisse entre elle et le chat, pose sa tête sur ses genoux à elle, et fait le chat ; elle rit, et le caresse aussi ; le chat, vexé, va s'asseoir sur la tête de lui ; des cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "boude"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 390,
+                    "y": 250,
+                    "taille": 170,
+                    "pose": "allonge",
+                    "expression": "supplie"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "chante"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d",
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 360,
+                "y": 280,
+                "echelle": 0.6,
+                "a": 0.8
+              },
+              {
+                "objet": "chat",
+                "x": 420,
+                "y": 320,
+                "echelle": 0.6,
+                "de": 0.8,
+                "etapes": [
+                  {
+                    "a": 0.8,
+                    "x": 420
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 420
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 390,
+                    "y": 150
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 330,
+                "y": 110,
+                "echelle": 0.35,
+                "de": 3.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

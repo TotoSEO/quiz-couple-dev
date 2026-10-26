@@ -1,0 +1,318 @@
+{
+  "jour": "2027-01-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-274",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne prépare la valise pour deux | Une valise ouverte au milieu ; elle fait des allers-retours en courant, un pull, un bonnet, un livre, une écharpe : tout rentre dans la valise ; lui arrive avec une seule chaussette. | Elle appuie sur la valise à deux pattes, en plein effort, ça ne ferme pas ; elle saute dessus ; ça ne ferme toujours pas ; lui regarde, sa chaussette à la patte. | Lui vient s'asseoir sur la valise, tout content, et elle ferme d'un coup ; il reste assis dessus, fier, la chaussette à la patte ; elle, les pattes sur les hanches, hausse les épaules et sourit.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une valise ouverte au milieu ; elle fait des allers-retours en courant, un pull, un bonnet, un livre, une écharpe : tout rentre dans la valise ; lui arrive avec une seule chaussette.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 120,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "determine",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.3,
+                    "x": 300,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 120,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.5,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.7,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 500,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.65,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "valise",
+                "x": 330,
+                "y": 345,
+                "echelle": 1.3
+              },
+              {
+                "objet": "pull",
+                "x": 120,
+                "y": 300,
+                "echelle": 0.6,
+                "de": 0,
+                "a": 1.0
+              },
+              {
+                "objet": "bonnet",
+                "x": 120,
+                "y": 300,
+                "echelle": 0.6,
+                "de": 2.2,
+                "a": 3.4
+              },
+              {
+                "objet": "chaussettes",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 1.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne prépare la valise pour deux",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle appuie sur la valise à deux pattes, en plein effort, ça ne ferme pas ; elle saute dessus ; ça ne ferme toujours pas ; lui regarde, sa chaussette à la patte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "effort",
+                    "bras": "tend_d",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "saut",
+                    "y": 330,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.8,
+                    "y": 380,
+                    "pose": "debout",
+                    "expression": "effort",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "valise",
+                "x": 330,
+                "y": 345,
+                "echelle": 1.3
+              },
+              {
+                "objet": "chaussettes",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ],
+            "sons": [
+              {
+                "nom": "saut",
+                "a": 1.2
+              },
+              {
+                "nom": "coussin",
+                "a": 1.8
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Lui vient s'asseoir sur la valise, tout content, et elle ferme d'un coup ; il reste assis dessus, fier, la chaussette à la patte ; elle, les pattes sur les hanches, hausse les épaules et sourit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 500,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 340,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330,
+                    "y": 300,
+                    "pose": "assis",
+                    "expression": "fier",
+                    "bras": "tient",
+                    "taille": 230
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 200,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "hanches",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "valise",
+                "x": 330,
+                "y": 345,
+                "echelle": 1.3
+              },
+              {
+                "objet": "chaussettes",
+                "x": 330,
+                "y": 260,
+                "echelle": 0.5,
+                "de": 1.8
+              },
+              {
+                "objet": "etincelles",
+                "x": 330,
+                "y": 230,
+                "echelle": 0.5,
+                "de": 2.0,
+                "a": 3.0
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pose",
+                "a": 1.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

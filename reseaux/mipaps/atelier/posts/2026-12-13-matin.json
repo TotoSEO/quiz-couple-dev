@@ -1,0 +1,254 @@
+{
+  "jour": "2026-12-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-255",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a « juste une question » | Lui au milieu, prêt à partir, un sac à la patte ; elle à droite l'appelle d'un signe ; en haut s'écrit « juste une question ». Il revient vers elle, content. | « 20 min plus tard » en bas. Elle parle, les bras qui s'agitent, une idée après l'autre ; lui a posé le sac, écoute, puis regarde l'heure sur son téléphone, inquiet. | « 1 h plus tard » en bas. Lui est assis par terre, le sac sur les genoux, résigné ; elle parle encore, radieuse ; elle s'arrête enfin, le regarde : « bon, à ce soir ! », et l'embrasse.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au milieu, prêt à partir, un sac à la patte ; elle à droite l'appelle d'un signe ; en haut s'écrit « juste une question ». Il revient vers elle, content.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 340,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.05,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "content",
+                    "bras": "coucou"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 250,
+                "y": 300,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 250
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 340
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a « juste une question »",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« juste une question »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 20 min plus tard » en bas. Elle parle, les bras qui s'agitent, une idée après l'autre ; lui a posé le sac, écoute, puis regarde l'heure sur son téléphone, inquiet.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "choque",
+                    "bras": "joues"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 340,
+                    "expression": "ecoute"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tient",
+                    "expression": "inquiet",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 390,
+                "y": 350,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 340,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 1.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Lui est assis par terre, le sac sur les genoux, résigné ; elle parle encore, radieuse ; elle s'arrête enfin, le regarde : « bon, à ce soir ! », et l'embrasse.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 340,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "content",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 430,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "sac",
+                "x": 340,
+                "y": 320,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              },
+              {
+                "texte": "« bon, à ce soir ! »",
+                "de": 2.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

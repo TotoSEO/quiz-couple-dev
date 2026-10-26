@@ -1,0 +1,256 @@
+{
+  "jour": "2027-01-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "nouvelan-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux et la résolution du 1er janvier | Le matin ; les deux debout, décidés, devant une lettre affichée ; en haut s'écrit la résolution : « cette année, on se couche tôt » ; ils se serrent la patte, solennels. | « le soir même » en bas. Le lit, la nuit, la lune ; les deux couchés, les yeux grands ouverts dans la lumière de leur téléphone, chacun le sien, hypnotisés. | « 2 h du matin » en bas. Toujours les deux téléphones allumés ; elle lui montre une vidéo, ils rient ; la lettre de la résolution est tombée par terre, froissée ; l'horloge a dépassé minuit depuis longtemps.",
+        "son": {
+          "ambiance": "nouvel-an"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin ; les deux debout, décidés, devant une lettre affichée ; en haut s'écrit la résolution : « cette année, on se couche tôt » ; ils se serrent la patte, solennels.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "determine",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d",
+                    "expression": "fier"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "determine",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_g",
+                    "expression": "fier"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lettre",
+                "x": 360,
+                "y": 130,
+                "echelle": 0.9
+              },
+              {
+                "objet": "etincelles",
+                "x": 360,
+                "y": 90,
+                "echelle": 0.4,
+                "de": 2.6,
+                "a": 3.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux et la résolution du 1er janvier",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« cette année, on se couche tôt »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« le soir même » en bas. Le lit, la nuit, la lune ; les deux couchés, les yeux grands ouverts dans la lumière de leur téléphone, chacun le sien, hypnotisés.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "hypnotise"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "hypnotise"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 248,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le soir même",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 h du matin » en bas. Toujours les deux téléphones allumés ; elle lui montre une vidéo, ils rient ; la lettre de la résolution est tombée par terre, froissée ; l'horloge a dépassé minuit depuis longtemps.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "hypnotise"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "rire",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tient",
+                    "pattes": "aucune",
+                    "expression": "hypnotise"
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_g",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 270,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 330,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.0
+              },
+              {
+                "objet": "lettre",
+                "x": 110,
+                "y": 365,
+                "echelle": 0.6,
+                "derriere": true
+              },
+              {
+                "objet": "horloge",
+                "x": 150,
+                "y": 110,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h du matin",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

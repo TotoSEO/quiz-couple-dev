@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-115",
+  "sujet": "ani-240",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,140 +12,34 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La dernière part : un gâteau entre eux, chacun le pousse vers l'autre ; « prends-la », « non toi » ; elle se retourne une seconde ; la part a disparu, il a la bouche pleine et l'air innocent. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne est malade | Le lit ; lui, allongé, malade, le nez rouge, une boîte de mouchoirs à côté, se plaint, pleure presque ; elle arrive de la droite avec une tasse fumante, inquiète. | Elle pose la tasse, lui tapote la tête, patiente ; il se plaint encore, supplie, veut un câlin ; elle lève les yeux au ciel, puis se penche et le serre, gentille. | « le lendemain » en bas. Elle, allongée, malade à son tour, le nez rouge, les mouchoirs ; lui, debout, plein d'énergie, lui apporte une tasse, tout fier d'être guéri ; elle le fusille du regard.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Le gâteau est posé entre eux, une seule part. Les deux le regardent, polis, un sourire gêné. Le texte en haut dès 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "gene"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "gene"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "gateau",
-                "x": 330,
-                "y": 350,
-                "echelle": 0.7
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand il reste une seule part",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Le gâteau glisse vers elle à 0,8 s, puis vers lui à 2 s : chacun le pousse vers l'autre, les pattes tendues, polis. Le texte à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_d"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_g"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "gateau",
-                "x": 330,
-                "y": 350,
-                "echelle": 0.7,
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 330,
-                    "y": 350,
-                    "echelle": 0.7
-                  },
-                  {
-                    "a": 0.8,
-                    "x": 380,
-                    "y": 350,
-                    "echelle": 0.7
-                  },
-                  {
-                    "a": 2,
-                    "x": 280,
-                    "y": 350,
-                    "echelle": 0.7
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« prends-la » « non toi »",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle se retourne une seconde, de dos. À 1 s la part a disparu. Lui a la bouche pleine, les joues rondes, l'air innocent, un halo au-dessus de la tête. À 2,2 s elle se retourne, perplexe.",
+            "description": "Le lit ; lui, allongé, malade, le nez rouge, une boîte de mouchoirs à côté, se plaint, pleure presque ; elle arrive de la droite avec une tasse fumante, inquiète.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 240,
-                    "pose": "debout",
-                    "expression": "content"
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade",
+                    "signes": [
+                      "sueur"
+                    ]
                   },
                   {
-                    "a": 1,
-                    "expression": "miam",
+                    "a": 1.6,
+                    "expression": "sanglote",
                     "signes": [
-                      "halo"
+                      "larmes"
                     ]
                   }
                 ]
@@ -154,41 +48,212 @@
                 "perso": "elle",
                 "etapes": [
                   {
-                    "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "content",
-                    "angle": 150
+                    "a": 0.4,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "inquiet",
+                    "bras": "tient"
                   },
                   {
-                    "a": 2,
+                    "a": 2.2,
+                    "x": 500,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
                     "angle": 0
-                  },
-                  {
-                    "a": 2.4,
-                    "expression": "perplexe"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "gateau",
-                "x": 330,
-                "y": 350,
-                "echelle": 0.7,
-                "a": 1
+                "objet": "mouchoirs",
+                "x": 400,
+                "y": 330,
+                "echelle": 0.6
+              },
+              {
+                "objet": "tasse",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne est malade",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle pose la tasse, lui tapote la tête, patiente ; il se plaint encore, supplie, veut un câlin ; elle lève les yeux au ciel, puis se penche et le serre, gentille.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "zen",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 420,
+                    "pose": "penche_g",
+                    "expression": "calin",
+                    "bras": "tend_g"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "debout",
+                    "bras": "priere",
+                    "pattes": "aucune",
+                    "expression": "supplie"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 300,
+                    "expression": "content",
+                    "bras": "aucun"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 400,
+                "y": 330,
+                "echelle": 0.6
+              },
+              {
+                "objet": "tasse",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« le lendemain » en bas. Elle, allongée, malade à son tour, le nez rouge, les mouchoirs ; lui, debout, plein d'énergie, lui apporte une tasse, tout fier d'être guéri ; elle le fusille du regard.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "malade",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "furieux",
+                    "vers": -1,
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "energique",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 150,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 500,
+                "y": 330,
+                "echelle": 0.6
+              },
+              {
+                "objet": "tasse",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.3
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le lendemain",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "tague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

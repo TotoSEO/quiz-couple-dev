@@ -1,0 +1,237 @@
+{
+  "jour": "2026-12-12",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-254",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a froid dans le lit | Le lit, la nuit ; elle grelotte sous les draps, des frissons, en boule ; lui dort à côté, bien au chaud, de la vapeur au-dessus de lui. | Elle se colle à lui, puis passe par-dessus lui et se glisse entre lui et le bord : il est devenu son radiateur ; il se réveille à moitié, gêné, et se décale. | Elle dort collée contre lui, zen, les frissons partis ; lui a chaud, de la vapeur, essaie de pousser le drap d'une patte ; il la regarde, sourit, et la laisse ; un cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit, la nuit ; elle grelotte sous les draps, des frissons, en boule ; lui dort à côté, bien au chaud, de la vapeur au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 190,
+                    "pose": "boule",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz",
+                      "vapeur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a froid dans le lit",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle se colle à lui, puis passe par-dessus lui et se glisse entre lui et le bord : il est devenu son radiateur ; il se réveille à moitié, gêné, et se décale.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 190,
+                    "pose": "boule",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 300,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 200,
+                    "y": 320,
+                    "taille": 170
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 190,
+                    "y": 346,
+                    "pose": "boule",
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 300
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle dort collée contre lui, zen, les frissons partis ; lui a chaud, de la vapeur, essaie de pousser le drap d'une patte ; il la regarde, sourit, et la laisse ; un cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "y": 346,
+                    "taille": 190,
+                    "pose": "boule",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "aucun",
+                    "expression": "amour",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 280,
+                "y": 190,
+                "echelle": 0.4,
+                "de": 2.8,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-126",
+  "sujet": "ani-242",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,93 +12,89 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Ce soir on se fait une grosse soirée » : ils préparent tout, popcorn, couverture, télé ; 22 h ; les deux dorment sous la couverture, le popcorn pas touché. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne demande « combien tu m'aimes ? » | Les deux face à face ; elle, timide, pose la question ; en haut s'écrit « tu m'aimes ? » ; lui répond d'un hochement, content ; elle insiste : « combien ? ». | Il écarte les bras un peu, timide ; elle fait la moue, pas convaincue ; il écarte plus grand, les bras tout ouverts ; elle hausse un sourcil, blasée. | Il s'étire de toute sa hauteur, les bras au ciel, tout entier tendu vers le plafond, les étincelles ; elle fond, les yeux en cœur, et vient se blottir contre lui ; des cœurs.",
         "son": {
           "ambiance": "tendre"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Les deux sont debout, contents, des étincelles autour d'eux. Un bol de popcorn, une couverture et une télé apparaissent à côté d'eux. Le texte en haut dès 0,2 s.",
+            "description": "Les deux face à face ; elle, timide, pose la question ; en haut s'écrit « tu m'aimes ? » ; lui répond d'un hochement, content ; elle insiste : « combien ? ».",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "joie",
-                    "bras": "leves",
-                    "signes": [
-                      "etincelles"
-                    ]
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "joie",
-                    "bras": "leves",
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "pensif",
                     "signes": [
-                      "etincelles"
+                      "points"
                     ]
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "popcorn",
-                "x": 330,
-                "y": 340,
-                "echelle": 0.7,
-                "de": 0.6
-              },
-              {
-                "objet": "couverture",
-                "x": 330,
-                "y": 300,
-                "echelle": 1.0,
-                "de": 1.4
-              },
-              {
-                "objet": "tele",
-                "x": 330,
-                "y": 130,
-                "echelle": 0.7,
-                "de": 2.2
-              }
-            ],
             "textes": [
               {
-                "texte": "« ce soir on se fait une grosse soirée »",
+                "texte": "toi quand ta personne demande « combien tu m'aimes ? »",
                 "de": 0.2,
+                "a": 1.4,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
+              },
+              {
+                "texte": "« tu m'aimes ? »",
+                "de": 1.6,
+                "a": 2.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« combien ? »",
+                "de": 2.8,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux sont assis sur le canapé, face à la télé, contents, le bol de popcorn entre eux. Le texte « 22 h » à 0,2 s.",
+            "duree": 4,
+            "description": "Il écarte les bras un peu, timide ; elle fait la moue, pas convaincue ; il écarte plus grand, les bras tout ouverts ; elle hausse un sourcil, blasée.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
+                    "x": 450,
+                    "expression": "timide",
+                    "bras": "tend"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "leves",
                     "expression": "content"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "determine"
                   }
                 ]
               },
@@ -107,58 +103,48 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
+                    "x": 270,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "boude"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "blase"
                   }
                 ]
               }
-            ],
-            "objets": [
-              {
-                "objet": "popcorn",
-                "x": 320,
-                "y": 290,
-                "echelle": 0.8
-              },
-              {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
-              }
-            ],
-            "textes": [
-              {
-                "texte": "22 h",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Les deux dorment l'un contre l'autre sous la couverture, la bouche ouverte, des zzz au-dessus d'eux. Le bol de popcorn est resté plein à côté.",
+            "description": "Il s'étire de toute sa hauteur, les bras au ciel, tout entier tendu vers le plafond, les étincelles ; elle fond, les yeux en cœur, et vient se blottir contre lui ; des cœurs.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "dodo",
+                    "x": 450,
+                    "expression": "determine",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "etire",
+                    "expression": "effort",
+                    "bras": "leves",
                     "signes": [
-                      "zzz"
+                      "etincelles"
                     ]
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "debout",
+                    "expression": "calin",
+                    "bras": "tend_g"
                   }
                 ]
               },
@@ -167,47 +153,70 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 370,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "dodo"
+                    "x": 270,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "transi"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 270,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "transi"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 360,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.8,
+                    "angle": 0,
+                    "bras": "tend_d",
+                    "pose": "penche_d",
+                    "expression": "amour"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "couverture",
-                "x": 310,
-                "y": 300,
-                "echelle": 1.4
+                "objet": "coeur",
+                "x": 410,
+                "y": 130,
+                "echelle": 0.5,
+                "de": 3.0,
+                "flotte": true
               },
               {
-                "objet": "popcorn",
-                "x": 470,
-                "y": 330,
-                "echelle": 0.7
+                "objet": "coeur",
+                "x": 315,
+                "y": 170,
+                "echelle": 0.32,
+                "de": 3.5,
+                "flotte": true
               },
               {
-                "objet": "tele",
-                "x": 320,
-                "y": 150,
-                "echelle": 0.8
+                "objet": "coeur",
+                "x": 505,
+                "y": 180,
+                "echelle": 0.36,
+                "de": 3.9,
+                "flotte": true
               }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

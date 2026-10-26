@@ -1,0 +1,327 @@
+{
+  "jour": "2027-03-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-361",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux en mode karaoké dans la cuisine | La maison ; elle, une brosse à la patte en guise de micro, chante à tue-tête, des notes partout ; lui arrive, surpris, puis attrape une tasse comme micro et la rejoint. | Les deux chantent et dansent, face à face, dos à dos, en se donnant la réplique, des notes énormes, les yeux fermés, à fond ; le refrain : ils se pointent du doigt. | Trois coups frappés au mur, derrière eux ; les deux se figent, la brosse et la tasse en l'air ; ils se regardent, honteux, et finissent la chanson en chuchotant, penchés l'un vers l'autre, le doigt sur la bouche.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La maison ; elle, une brosse à la patte en guise de micro, chante à tue-tête, des notes partout ; lui arrive, surpris, puis attrape une tasse comme micro et la rejoint.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "chante",
+                    "bras": "tient",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 460,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "joie",
+                    "bras": "tient",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 300,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 460,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 2.2
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 130,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 120,
+                "echelle": 0.5,
+                "de": 1.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux en mode karaoké dans la cuisine",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Les deux chantent et dansent, face à face, dos à dos, en se donnant la réplique, des notes énormes, les yeux fermés, à fond ; le refrain : ils se pointent du doigt.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "danse",
+                    "expression": "chante",
+                    "bras": "tient",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "pointe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "penche_g",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "pose": "danse",
+                    "expression": "chante",
+                    "bras": "tient",
+                    "signes": [
+                      "notes"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "pointe",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "penche_d",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 280,
+                "y": 290,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "musique",
+                "x": 180,
+                "y": 110,
+                "echelle": 0.8,
+                "de": 0.2,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 360,
+                "y": 90,
+                "echelle": 0.7,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 540,
+                "y": 130,
+                "echelle": 0.8,
+                "de": 1.4,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Trois coups frappés au mur, derrière eux ; les deux se figent, la brosse et la tasse en l'air ; ils se regardent, honteux, et finissent la chanson en chuchotant, penchés l'un vers l'autre, le doigt sur la bouche.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "danse",
+                    "expression": "chante",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "expression": "chut",
+                    "bras": "bouche"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "pose": "danse",
+                    "expression": "chante",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 300,
+                    "pose": "penche_d",
+                    "expression": "chut",
+                    "bras": "bouche"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 280,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 2.8
+              },
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 2.8
+              },
+              {
+                "objet": "musique",
+                "x": 350,
+                "y": 120,
+                "echelle": 0.3,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 0.3
+              },
+              {
+                "nom": "tape",
+                "a": 0.55
+              },
+              {
+                "nom": "tape",
+                "a": 0.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -12,26 +12,28 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« On avait dit pas de cadeaux cette année » : chacun cache un cadeau derrière son dos ; ils le sortent en même temps, « toi aussi ? » ; câlin, cœurs et flocons. Trois plans, 11,5 secondes.",
+        "idee": "nous deux quand on avait dit « pas de cadeaux » | Le matin de Noël, des flocons ; les deux face à face, les pattes derrière le dos, l'air de rien, l'auréole au-dessus de la tête ; chacun cache quelque chose. | Il regarde en coin, elle regarde en coin ; il sort son cadeau de derrière son dos, timide ; au même moment elle sort le sien ; les deux figés, surpris, deux points d'exclamation. | Ils éclatent de rire, échangent les cadeaux, les ouvrent en même temps, émerveillés ; câlin au milieu, les deux cadeaux par terre, des cœurs et des flocons.",
         "son": {
           "ambiance": "noel"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Les deux sont face à nous, lui à gauche, elle à droite, chacun avec un cadeau caché derrière le dos, l'air innocent. Des flocons tombent doucement. Ils se jettent un regard en coin à 2 s. Le texte se pose à 0,2 s.",
+            "description": "Le matin de Noël, des flocons ; les deux face à face, les pattes derrière le dos, l'air de rien, l'auréole au-dessus de la tête ; chacun cache quelque chose.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 240,
-                    "expression": "ange"
-                  },
-                  {
-                    "a": 2,
-                    "expression": "malicieux"
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "bras": "bas"
                   }
                 ]
               },
@@ -40,12 +42,14 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "expression": "ange"
-                  },
-                  {
-                    "a": 2,
-                    "expression": "malicieux"
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "bras": "bas"
                   }
                 ]
               }
@@ -53,117 +57,150 @@
             "objets": [
               {
                 "objet": "cadeau",
-                "x": 210,
+                "x": 190,
                 "y": 330,
-                "echelle": 0.5,
+                "echelle": 0.7,
                 "derriere": true
               },
               {
                 "objet": "cadeau",
-                "x": 450,
+                "x": 530,
                 "y": 330,
-                "echelle": 0.5,
+                "echelle": 0.7,
                 "derriere": true
               },
               {
                 "objet": "flocon",
-                "x": 120,
-                "y": 90,
-                "echelle": 0.3,
+                "x": 150,
+                "y": 120,
+                "echelle": 0.35,
+                "de": 0.3,
                 "flotte": true
               },
               {
                 "objet": "flocon",
-                "x": 530,
-                "y": 120,
-                "echelle": 0.25,
+                "x": 540,
+                "y": 150,
+                "echelle": 0.3,
+                "de": 0.8,
                 "flotte": true
               }
             ],
             "textes": [
               {
-                "texte": "« on avait dit pas de cadeaux cette année »",
+                "texte": "nous deux quand on avait dit « pas de cadeaux »",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "coupe",
-            "description": "Au même moment, ils sortent chacun leur cadeau et se le tendent, à 0,4 s. Ils se voient faire, surpris, un point d'exclamation au-dessus de chacun. Le texte arrive à 1,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 240,
-                    "expression": "malicieux",
-                    "bras": "tend_d"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "surpris",
-                    "signes": [
-                      "exclamation"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 420,
-                    "expression": "malicieux",
-                    "bras": "tend_g"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "surpris",
-                    "signes": [
-                      "exclamation"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "cadeau",
-                "x": 300,
-                "y": 320,
-                "echelle": 0.5
-              },
-              {
-                "objet": "cadeau",
-                "x": 360,
-                "y": 320,
-                "echelle": 0.5
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« toi aussi ? »",
-                "de": 1.2,
-                "place": "haut"
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Ils se serrent fort, les yeux fermés, les deux cadeaux posés par terre à leurs pieds. Des cœurs et des flocons flottent autour d'eux. La phrase s'écrit mot à mot à 0,6 s.",
+            "description": "Il regarde en coin, elle regarde en coin ; il sort son cadeau de derrière son dos, timide ; au même moment elle sort le sien ; les deux figés, surpris, deux points d'exclamation.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 285,
+                    "x": 270,
+                    "expression": "suspicieux",
+                    "vers": 1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "timide",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "suspicieux",
+                    "vers": -1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "timide",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cadeau",
+                "x": 270,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 1.2
+              },
+              {
+                "objet": "cadeau",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 1.2
+              },
+              {
+                "objet": "flocon",
+                "x": 330,
+                "y": 120,
+                "echelle": 0.3,
+                "de": 0.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« toi aussi ? »",
+                "de": 2.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils éclatent de rire, échangent les cadeaux, les ouvrent en même temps, émerveillés ; câlin au milieu, les deux cadeaux par terre, des cœurs et des flocons.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "emerveille"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 290,
                     "expression": "calin",
                     "bras": "tend_d",
                     "pose": "penche_d"
@@ -175,8 +212,18 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 395,
-                    "expression": "transi",
+                    "x": 450,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "emerveille"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 400,
+                    "expression": "calin",
                     "bras": "tend_g",
                     "pose": "penche_g"
                   }
@@ -186,46 +233,48 @@
             "objets": [
               {
                 "objet": "cadeau",
-                "x": 200,
-                "y": 360,
-                "echelle": 0.4
+                "x": 270,
+                "y": 300,
+                "echelle": 0.7,
+                "a": 2.4
               },
               {
                 "objet": "cadeau",
-                "x": 480,
-                "y": 360,
-                "echelle": 0.4
+                "x": 450,
+                "y": 300,
+                "echelle": 0.7,
+                "a": 2.4
+              },
+              {
+                "objet": "cadeau",
+                "x": 180,
+                "y": 345,
+                "echelle": 0.7,
+                "de": 2.4
               },
               {
                 "objet": "coeur",
-                "x": 335,
-                "y": 150,
+                "x": 345,
+                "y": 140,
                 "echelle": 0.5,
-                "de": 0.8,
+                "de": 2.8,
                 "flotte": true
               },
               {
                 "objet": "coeur",
-                "x": 240,
-                "y": 190,
+                "x": 250,
+                "y": 180,
                 "echelle": 0.32,
-                "de": 1.2000000000000002,
+                "de": 3.3,
                 "flotte": true
               },
               {
-                "objet": "flocon",
-                "x": 540,
-                "y": 110,
-                "echelle": 0.25,
+                "objet": "coeur",
+                "x": 440,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 3.7,
                 "flotte": true
-              }
-            ],
-            "textes": [
-              {
-                "texte": "joyeux noël, mon amour",
-                "de": 0.6,
-                "place": "haut",
-                "motAMot": true
               }
             ]
           }
@@ -236,7 +285,7 @@
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#noel"
+        "#humour"
       ]
     }
   }

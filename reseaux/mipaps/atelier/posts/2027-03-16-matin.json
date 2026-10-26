@@ -1,0 +1,291 @@
+{
+  "jour": "2027-03-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-358",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne t'embrasse avec son rouge à lèvres | Le matin, près de la porte ; lui est prêt à partir, le sac à la patte ; elle lui fait un bisou sur la joue, puis sur l'autre, puis sur le front ; il part, tout content ; des petits cœurs. | Dehors, dans la rue ; lui marche fièrement, des étincelles, sans se douter de rien ; il croise un reflet dans une fenêtre, s'arrête, se regarde : des cœurs roses partout sur la figure. | Il frotte sa joue à toute vitesse, rouge de honte, une goutte de sueur ; de retour à la maison, elle l'attend, l'air innocent, l'auréole, et lui en fait un autre ; il abandonne et sourit.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, près de la porte ; lui est prêt à partir, le sac à la patte ; elle lui fait un bisou sur la joue, puis sur l'autre, puis sur le front ; il part, tout content ; des petits cœurs.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "joie",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "expression": "joie"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "sac",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 360,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 380,
+                "y": 170,
+                "echelle": 0.3,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne t'embrasse avec son rouge à lèvres",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 0.9
+              },
+              {
+                "nom": "pop",
+                "a": 1.9
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Dehors, dans la rue ; lui marche fièrement, des étincelles, sans se douter de rien ; il croise un reflet dans une fenêtre, s'arrête, se regarde : des cœurs roses partout sur la figure.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ],
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.8,
+                    "vers": 1,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation",
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "fenetre",
+                "x": 540,
+                "y": 180,
+                "echelle": 1.2,
+                "derriere": true
+              },
+              {
+                "objet": "sac",
+                "x": 330,
+                "y": 300,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330
+                  }
+                ]
+              }
+            ],
+            "ambiance": "circulation"
+          },
+          {
+            "duree": 4.5,
+            "description": "Il frotte sa joue à toute vitesse, rouge de honte, une goutte de sueur ; de retour à la maison, elle l'attend, l'air innocent, l'auréole, et lui en fait un autre ; il abandonne et sourit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "honte",
+                    "bras": "joue",
+                    "signes": [
+                      "rougeur_pleine",
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "bas",
+                    "expression": "exaspere",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "content",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "debout",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 360,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 2.6,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "jour": "2027-01-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-293",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne fait des bisous bruyants | Lui au milieu, tranquille ; elle arrive de la droite, lui fait un gros bisou sur la joue, puis un autre, puis un autre ; il est gêné, tout rouge. | Encore un bisou, encore un ; il se laisse faire, les yeux fermés, puis commence à sourire ; elle ne s'arrête plus ; des cœurs partout. | Il se retourne et lui rend tous ses bisous d'un coup, joue, front, joue, joue ; elle, submergée, les yeux en croix, tombe en arrière, K.-O. de bisous ; il est très fier.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au milieu, tranquille ; elle arrive de la droite, lui fait un gros bisou sur la joue, puis un autre, puis un autre ; il est gêné, tout rouge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 410,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.4,
+                    "angle": 0,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 350,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 1.5,
+                "a": 2.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 350,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 2.9,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne fait des bisous bruyants",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.5
+              },
+              {
+                "nom": "pop",
+                "a": 2.9
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Encore un bisou, encore un ; il se laisse faire, les yeux fermés, puis commence à sourire ; elle ne s'arrête plus ; des cœurs partout.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "penche_g",
+                    "expression": "bisou"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 355,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 260,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 0.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 450,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.3,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 0.2
+              },
+              {
+                "nom": "pop",
+                "a": 1.5
+              },
+              {
+                "nom": "pop",
+                "a": 2.9
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il se retourne et lui rend tous ses bisous d'un coup, joue, front, joue, joue ; elle, submergée, les yeux en croix, tombe en arrière, K.-O. de bisous ; il est très fier.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "etourdi",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "x": 440
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 355,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 260,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 1.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 450,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 1.9,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "pop",
+                "a": 1.1
+              },
+              {
+                "nom": "pop",
+                "a": 2.1
+              },
+              {
+                "nom": "splat",
+                "a": 2.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

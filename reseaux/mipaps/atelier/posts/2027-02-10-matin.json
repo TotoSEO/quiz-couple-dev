@@ -1,0 +1,275 @@
+{
+  "jour": "2027-02-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-318",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne demande « et si j'étais un ver ? » | Le lit, le soir ; elle, très sérieuse, se tourne vers lui ; en haut s'écrit la question : « tu m'aimerais si j'étais un ver ? » ; lui, qui allait dormir, ouvre un œil, confus. | Il réfléchit, des petits points, sérieusement ; elle attend, les bras croisés ; il hésite, une goutte de sueur ; en haut s'écrit « ... oui ? » ; elle plisse les yeux. | En haut : « t'as hésité. » ; elle lui tourne le dos et boude, le nuage noir ; lui, paniqué, supplie, les pattes jointes ; il finit par lui faire un câlin par-derrière ; elle boude encore, mais sourit un peu.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4.5,
+            "description": "Le lit, le soir ; elle, très sérieuse, se tourne vers lui ; en haut s'écrit la question : « tu m'aimerais si j'étais un ver ? » ; lui, qui allait dormir, ouvre un œil, confus.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "determine",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne demande « et si j'étais un ver ? »",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu m'aimerais si j'étais un ver ? »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il réfléchit, des petits points, sérieusement ; elle attend, les bras croisés ; il hésite, une goutte de sueur ; en haut s'écrit « ... oui ? » ; elle plisse les yeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "hesite",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "croises",
+                    "pattes": "aucune",
+                    "expression": "attend",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "suspicieux"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« hmm, oui ? »",
+                "de": 2.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "En haut : « t'as hésité. » ; elle lui tourne le dos et boude, le nuage noir ; lui, paniqué, supplie, les pattes jointes ; il finit par lui faire un câlin par-derrière ; elle boude encore, mais sourit un peu.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "suspicieux"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 430,
+                    "expression": "boude",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "narquois"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "priere",
+                    "expression": "supplie"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 340,
+                    "bras": "tend_d",
+                    "pose": "penche_d",
+                    "expression": "calin"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 390,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 3.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« t'as hésité. »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

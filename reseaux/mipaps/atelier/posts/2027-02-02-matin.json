@@ -1,0 +1,276 @@
+{
+  "jour": "2027-02-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-309",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne refuse de demander le chemin | Dehors, un panneau fléché ; lui marche d'un pas décidé vers la droite, elle le suit ; il s'arrête, regarde autour, repart dans l'autre sens, toujours décidé ; elle le suit, blasée. | « 20 min plus tard » en bas. Ils repassent devant le même panneau ; elle le pointe du doigt ; lui fait non de la tête, fier, et repart dans un troisième sens ; elle s'assoit par terre. | Elle se lève, lit le panneau, et part tranquillement dans la bonne direction, vers la gauche ; lui revient en courant, honteux, et la suit à petits pas, la tête basse.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dehors, un panneau fléché ; lui marche d'un pas décidé vers la droite, elle le suit ; il s'arrête, regarde autour, repart dans l'autre sens, toujours décidé ; elle le suit, blasée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.7,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 160,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.5,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 40,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.5,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "panneau_fleche",
+                "x": 540,
+                "y": 260,
+                "echelle": 1.4,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne refuse de demander le chemin",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 20 min plus tard » en bas. Ils repassent devant le même panneau ; elle le pointe du doigt ; lui fait non de la tête, fier, et repart dans un troisième sens ; elle s'assoit par terre.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 160,
+                    "expression": "determine",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 160,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 600,
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 40,
+                    "expression": "blase",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "assis",
+                    "expression": "ennui",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "panneau_fleche",
+                "x": 540,
+                "y": 260,
+                "echelle": 1.4,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se lève, lit le panneau, et part tranquillement dans la bonne direction, vers la gauche ; lui revient en courant, honteux, et la suit à petits pas, la tête basse.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 40,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 40,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 600,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "honte",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 600,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 200,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.4,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "panneau_fleche",
+                "x": 540,
+                "y": 260,
+                "echelle": 1.4,
+                "derriere": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

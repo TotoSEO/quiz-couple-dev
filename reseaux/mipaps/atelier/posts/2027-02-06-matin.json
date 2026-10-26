@@ -1,0 +1,259 @@
+{
+  "jour": "2027-02-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-313",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand tu veux te lever sans réveiller ta personne | La nuit, la lune ; le lit ; elle dort, à moitié sur lui ; lui, les yeux grands ouverts, a envie de se lever ; il regarde la porte, puis elle, puis réfléchit, des petits points. | Il rampe hors du lit au ralenti, à plat ventre, centimètre par centimètre, une goutte de sueur, le doigt sur la bouche ; elle bouge dans son sommeil ; il se fige, l'auréole. | Il est presque à la porte, toujours à plat ventre ; elle, dans le lit, ouvre un œil, le regarde ramper, blasée ; en haut : « tu fais quoi ? » ; il se fige, puis fait semblant de dormir par terre.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; elle dort, à moitié sur lui ; lui, les yeux grands ouverts, a envie de se lever ; il regarde la porte, puis elle, puis réfléchit, des petits points.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "determine"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand tu veux te lever sans réveiller ta personne",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il rampe hors du lit au ralenti, à plat ventre, centimètre par centimètre, une goutte de sueur, le doigt sur la bouche ; elle bouge dans son sommeil ; il se fige, l'auréole.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "rampe",
+                    "expression": "concentre",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 150,
+                    "y": 380,
+                    "taille": 240
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ],
+                    "pose": "rampe"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 100
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 350
+                  },
+                  {
+                    "a": 3.0,
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il est presque à la porte, toujours à plat ventre ; elle, dans le lit, ouvre un œil, le regarde ramper, blasée ; en haut : « tu fais quoi ? » ; il se fige, puis fait semblant de dormir par terre.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 100,
+                    "pose": "rampe",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 70
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz",
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 350,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "porte",
+                "x": 40,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« tu fais quoi ? »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

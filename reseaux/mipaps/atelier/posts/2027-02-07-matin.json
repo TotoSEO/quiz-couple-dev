@@ -1,0 +1,269 @@
+{
+  "jour": "2027-02-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-315",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « je ronfle pas » | Le matin, le lit ; elle, les yeux cernés, le pointe du doigt ; lui, outré, les pattes sur les hanches ; en haut s'écrit « je ronfle pas ! » ; elle lève les yeux au ciel. | « la nuit suivante » en bas. La lune ; il dort, des notes de musique énormes sortent de lui ; elle, réveillée, sort son téléphone et enregistre, un petit sourire en coin. | « le matin » en bas. Elle lui tend le téléphone, le son à fond : des notes sortent de l'écran ; il écoute, bouche bée, puis rouge, puis mort de honte, en boule ; elle, très fière.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, le lit ; elle, les yeux cernés, le pointe du doigt ; lui, outré, les pattes sur les hanches ; en haut s'écrit « je ronfle pas ! » ; elle lève les yeux au ciel.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "pointe",
+                    "pattes": "aucune",
+                    "expression": "fatigue",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "vexe"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « je ronfle pas »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« je ronfle pas ! »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« la nuit suivante » en bas. La lune ; il dort, des notes de musique énormes sortent de lui ; elle, réveillée, sort son téléphone et enregistre, un petit sourire en coin.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "malicieux",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 200,
+                "echelle": 0.7,
+                "de": 0.3,
+                "a": 1.5,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 230,
+                "y": 170,
+                "echelle": 0.9,
+                "de": 1.4,
+                "a": 2.6,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 190,
+                "y": 190,
+                "echelle": 0.8,
+                "de": 2.5,
+                "flotte": true
+              },
+              {
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la nuit suivante",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« le matin » en bas. Elle lui tend le téléphone, le son à fond : des notes sortent de l'écran ; il écoute, bouche bée, puis rouge, puis mort de honte, en boule ; elle, très fière.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "fier",
+                    "bras": "tend_g",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "boule",
+                    "expression": "honte"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 350,
+                "y": 300,
+                "echelle": 0.6
+              },
+              {
+                "objet": "musique",
+                "x": 350,
+                "y": 230,
+                "echelle": 0.5,
+                "de": 0.5,
+                "a": 1.5,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 330,
+                "y": 210,
+                "echelle": 0.6,
+                "de": 1.4,
+                "a": 2.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le matin",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

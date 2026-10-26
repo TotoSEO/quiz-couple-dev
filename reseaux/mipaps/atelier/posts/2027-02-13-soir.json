@@ -1,0 +1,266 @@
+{
+  "jour": "2027-02-13",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-322",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne refuse d'aller chez le médecin | Lui, malade, le nez rouge, sur le canapé, les mouchoirs ; elle, debout, pointe la porte ; il fait non de la tête, décidé ; en haut : « ça va passer tout seul ». | Elle le tire par la patte ; il se cramponne au canapé ; elle tire plus fort, en plein effort ; il glisse du canapé et se retrouve par terre, cramponné au coussin. | Elle le traîne par la patte jusqu'à la porte, lui à plat ventre qui glisse sur le sol, les yeux en croix, le coussin toujours serré ; ils sortent du cadre comme ça ; il a abandonné.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui, malade, le nez rouge, sur le canapé, les mouchoirs ; elle, debout, pointe la porte ; il fait non de la tête, décidé ; en haut : « ça va passer tout seul ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "malade",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "determine",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "inquiet",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 330,
+                "y": 290,
+                "echelle": 0.6
+              },
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne refuse d'aller chez le médecin",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« ça va passer tout seul »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle le tire par la patte ; il se cramponne au canapé ; elle tire plus fort, en plein effort ; il glisse du canapé et se retrouve par terre, cramponné au coussin.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 400,
+                    "bras": "tend_g",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "peur",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 250,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "allonge",
+                    "expression": "panique",
+                    "bras": "tient",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "mouchoirs",
+                "x": 330,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 1.4
+              },
+              {
+                "objet": "coussin",
+                "x": 190,
+                "y": 350,
+                "echelle": 0.8,
+                "de": 1.4
+              },
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "glisse",
+                "a": 1.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle le traîne par la patte jusqu'à la porte, lui à plat ventre qui glisse sur le sol, les yeux en croix, le coussin toujours serré ; ils sortent du cadre comme ça ; il a abandonné.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "effort",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 400,
+                    "angle": 90,
+                    "pose": "tire"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "bras": "tient",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 250,
+                    "pose": "glisse",
+                    "angle": 90
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 680
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 250,
+                "y": 340,
+                "echelle": 0.8,
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 250
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 680
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

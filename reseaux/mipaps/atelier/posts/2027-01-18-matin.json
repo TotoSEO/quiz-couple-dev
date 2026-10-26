@@ -1,0 +1,311 @@
+{
+  "jour": "2027-01-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-291",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux sous la pluie sans parapluie | Dehors, un arbre ; les deux marchent tranquillement vers la droite ; un nuage arrive, la pluie tombe d'un coup ; ils s'arrêtent, les yeux ronds, trempés. | Ils sprintent vers l'arbre, elle devant, lui derrière, paniqués, des gouttes partout ; ils se serrent sous l'arbre, trempés, les frissons. | Sous l'arbre, serrés, ils se regardent, trempés, les cheveux plaqués ; ils éclatent de rire ; câlin sous la pluie, des cœurs ; la pluie continue, ils s'en fichent.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Dehors, un arbre ; les deux marchent tranquillement vers la droite ; un nuage arrive, la pluie tombe d'un coup ; ils s'arrêtent, les yeux ronds, trempés.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 280,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 160,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "nuage",
+                "x": 300,
+                "y": 70,
+                "echelle": 1.0,
+                "de": 1.6
+              },
+              {
+                "objet": "pluie",
+                "x": 300,
+                "y": 170,
+                "echelle": 1.0,
+                "de": 2.0
+              },
+              {
+                "objet": "pluie",
+                "x": 150,
+                "y": 190,
+                "echelle": 0.8,
+                "de": 2.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux sous la pluie sans parapluie",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4,
+            "description": "Ils sprintent vers l'arbre, elle devant, lui derrière, paniqués, des gouttes partout ; ils se serrent sous l'arbre, trempés, les frissons.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 160,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "angle": 0,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 560,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "nuage",
+                "x": 300,
+                "y": 70,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pluie",
+                "x": 250,
+                "y": 190,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pluie",
+                "x": 120,
+                "y": 170,
+                "echelle": 0.8
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4.5,
+            "description": "Sous l'arbre, serrés, ils se regardent, trempés, les cheveux plaqués ; ils éclatent de rire ; câlin sous la pluie, des cœurs ; la pluie continue, ils s'en fichent.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "penche_d",
+                    "bras": "tend_d",
+                    "expression": "calin",
+                    "x": 480
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 560,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "expression": "calin",
+                    "x": 560
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "nuage",
+                "x": 300,
+                "y": 70,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pluie",
+                "x": 220,
+                "y": 190,
+                "echelle": 1.0
+              },
+              {
+                "objet": "pluie",
+                "x": 110,
+                "y": 170,
+                "echelle": 0.8
+              },
+              {
+                "objet": "coeur",
+                "x": 520,
+                "y": 130,
+                "echelle": 0.5,
+                "de": 2.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 425,
+                "y": 170,
+                "echelle": 0.32,
+                "de": 3.1,
+                "flotte": true
+              }
+            ],
+            "ambiance": "pluie"
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

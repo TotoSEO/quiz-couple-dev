@@ -1,0 +1,246 @@
+{
+  "jour": "2027-01-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-299",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a rêvé que tu lui faisais un truc | Le matin, le lit ; elle se réveille d'un coup, furieuse, une veine, et le fusille du regard ; lui, qui dort tranquillement, se réveille sous le regard, confus. | En haut : « t'as oublié mon anniversaire. dans mon rêve. » ; il ouvre des yeux ronds, puis lève les pattes, innocent ; elle lui tourne le dos et boude, le nuage noir. | « le soir » en bas. Elle, sur le canapé, boude encore, les bras croisés ; lui arrive avec une fleur et un gâteau imaginaire de pardon : juste la fleur ; elle rit, le pardonne ; un cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, le lit ; elle se réveille d'un coup, furieuse, une veine, et le fusille du regard ; lui, qui dort tranquillement, se réveille sous le regard, confus.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a rêvé que tu lui faisais un truc",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut : « t'as oublié mon anniversaire. dans mon rêve. » ; il ouvre des yeux ronds, puis lève les pattes, innocent ; elle lui tourne le dos et boude, le nuage noir.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "leves",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "supplie",
+                    "bras": "priere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 430,
+                    "expression": "boude",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "« t'as oublié mon anniversaire. dans mon rêve. »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« le soir » en bas. Elle, sur le canapé, boude encore, les bras croisés ; lui arrive avec une fleur et un gâteau imaginaire de pardon : juste la fleur ; elle rit, le pardonne ; un cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "desole",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d",
+                    "expression": "supplie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "fleur",
+                "x": 260,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0.2,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 260
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 340
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le soir",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

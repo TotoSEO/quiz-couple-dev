@@ -1,0 +1,234 @@
+{
+  "jour": "2027-01-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-285",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne parle à la télé | Le canapé, la télé ; elle, penchée en avant, pointe l'écran, énervée, et crie ; en haut : « mais non, pas là ! » ; lui, à côté, blasé, les bras croisés. | Elle continue, choquée, les pattes sur les joues, puis suppliante vers l'écran ; lui se bouche les oreilles, puis regarde l'écran lui aussi, de plus en plus pris. | Les deux debout devant la télé, hurlent à l'écran ensemble, les bras levés, furieux, une veine chacun ; en haut : « mais ouvre la porte !!! » ; puis ils se rassoient, essoufflés.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé ; elle, penchée en avant, pointe l'écran, énervée, et crie ; en haut : « mais non, pas là ! » ; lui, à côté, blasé, les bras croisés.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "colere",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "furieux",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne parle à la télé",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« mais non, pas là ! »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle continue, choquée, les pattes sur les joues, puis suppliante vers l'écran ; lui se bouche les oreilles, puis regarde l'écran lui aussi, de plus en plus pris.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "choque",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "supplie",
+                    "bras": "priere"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "peur"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "exaspere",
+                    "bras": "oreilles_bouchees"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "curieux",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "inquiet"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux debout devant la télé, hurlent à l'écran ensemble, les bras levés, furieux, une veine chacun ; en haut : « mais ouvre la porte !!! » ; puis ils se rassoient, essoufflés.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "peur"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 400,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "expression": "furieux",
+                    "bras": "leves",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 0.9,
+                    "x": 240,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "expression": "furieux",
+                    "bras": "leves",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« mais ouvre la porte !!! »",
+                "de": 1.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

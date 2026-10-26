@@ -1,0 +1,247 @@
+{
+  "jour": "2026-12-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-252",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand la salle de bain est occupée | Une porte fermée à droite ; elle attend devant, pressée, se dandine d'une patte sur l'autre ; une horloge en haut ; elle frappe à la porte. | En haut : « j'arrive, 2 minutes ! ». Elle s'assoit par terre contre le mur, puis se couche, puis se relève, furieuse, une veine, et frappe encore plus fort. | La porte s'ouvre : lui est assis par terre dans la salle de bain, le téléphone à la patte, tout content, pas du tout prêt ; elle reste figée, bouche bée, puis le sort de là en le tirant.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une porte fermée à droite ; elle attend devant, pressée, se dandine d'une patte sur l'autre ; une horloge en haut ; elle frappe à la porte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "attend",
+                    "pose": "tremble"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "agace"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d",
+                    "expression": "exaspere"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "horloge",
+                "x": 150,
+                "y": 110,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand la salle de bain est occupée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 2.4
+              },
+              {
+                "nom": "tape",
+                "a": 2.8
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut : « j'arrive, 2 minutes ! ». Elle s'assoit par terre contre le mur, puis se couche, puis se relève, furieuse, une veine, et frappe encore plus fort.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "allonge",
+                    "expression": "deprime"
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "debout",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 560,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "horloge",
+                "x": 150,
+                "y": 110,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« j'arrive, 2 minutes ! »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 3.0
+              },
+              {
+                "nom": "tape",
+                "a": 3.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "La porte s'ouvre : lui est assis par terre dans la salle de bain, le téléphone à la patte, tout content, pas du tout prêt ; elle reste figée, bouche bée, puis le sort de là en le tirant.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 560,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 560,
+                    "angle": -90,
+                    "pose": "glisse",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 4.4,
+                    "x": 300
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "determine",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 400,
+                    "angle": -90,
+                    "pose": "tire"
+                  },
+                  {
+                    "a": 4.4,
+                    "x": 150
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 620,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.55,
+                "de": 0.3,
+                "a": 3.0
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 0.2
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

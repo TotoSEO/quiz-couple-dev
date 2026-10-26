@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-004",
+  "sujet": "ani-209",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,22 +12,24 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le bisou raté : il se penche vers elle pour un bisou, elle se tourne au même moment pour regarder le chat, le bisou atterrit sur le côté de sa tête, il est gêné. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne rentre d'une journée nulle | Lui au milieu droit, content, il attend ; elle entre par la gauche en traînant les pattes, un nuage noir au-dessus de la tête, déprimée, et s'arrête loin de lui. | Il la voit, s'inquiète, ouvre grand les bras ; elle marche jusqu'à lui et se laisse tomber dans ses bras ; câlin, les yeux fermés ; le nuage noir s'en va, des cœurs montent. | Il la soulève à bout de bras, elle assise sur ses pattes levées, étonnée puis ravie ; il l'emporte vers la droite en marchant, elle au-dessus de lui ; ils sortent du cadre ensemble.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3,
-            "description": "Les deux sont debout côte à côte, face à nous, lui à gauche, elle à droite. Il la regarde, tendre. Un chat est assis à droite. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Lui au milieu droit, content, il attend ; elle entre par la gauche en traînant les pattes, un nuage noir au-dessus de la tête, déprimée, et s'arrête loin de lui.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "expression": "amour"
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "content"
                   }
                 ]
               },
@@ -35,47 +37,60 @@
                 "perso": "elle",
                 "etapes": [
                   {
-                    "a": 0,
-                    "x": 390,
-                    "expression": "content"
+                    "a": 0.3,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "deprime",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 230,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.85,
+                    "angle": 0
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "chat",
-                "x": 500,
-                "y": 345,
-                "echelle": 0.8
-              }
-            ],
             "textes": [
               {
-                "texte": "le bisou qui finit sur l'oreille",
+                "texte": "toi quand ta personne rentre d'une journée nulle",
                 "de": 0.2,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "coupe",
-            "description": "Il se penche vers elle les yeux fermés pour un bisou à 1 s. Au même moment, elle se tourne de profil vers le chat, curieuse, sans le voir. Le bisou arrive sur son oreille à 2,2 s.",
+            "description": "Il la voit, s'inquiète, ouvre grand les bras ; elle marche jusqu'à lui et se laisse tomber dans ses bras ; câlin, les yeux fermés ; le nuage noir s'en va, des cœurs montent.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "expression": "amour"
+                    "x": 450,
+                    "expression": "inquiet"
                   },
                   {
-                    "a": 1,
-                    "expression": "bisou",
-                    "pose": "penche_d"
+                    "a": 0.8,
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 400,
+                    "bras": "tend_g",
+                    "pose": "penche_g",
+                    "expression": "calin"
                   }
                 ]
               },
@@ -84,47 +99,89 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "expression": "content"
+                    "x": 230,
+                    "expression": "deprime",
+                    "signes": [
+                      "nuage_noir"
+                    ]
                   },
                   {
-                    "a": 1,
+                    "a": 0.8,
+                    "x": 230,
                     "angle": 90,
-                    "expression": "curieux"
+                    "pose": "marche",
+                    "expression": "triste",
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d",
+                    "pose": "penche_d",
+                    "expression": "calin",
+                    "signes": [],
+                    "angle": 0
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "chat",
-                "x": 500,
-                "y": 345,
-                "echelle": 0.8
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 2.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 2.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 3.3,
+                "flotte": true
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il se redresse, gêné, les joues rouges, il regarde ailleurs. Elle regarde toujours le chat, de profil, qui n'a rien remarqué. Le texte à 0,3 s.",
+            "duree": 4.5,
+            "description": "Il la soulève à bout de bras, elle assise sur ses pattes levées, étonnée puis ravie ; il l'emporte vers la droite en marchant, elle au-dessus de lui ; ils sortent du cadre ensemble.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "pose": "penche_d",
-                    "expression": "bisou"
+                    "x": 320,
+                    "taille": 270,
+                    "expression": "determine",
+                    "bras": "leves"
                   },
                   {
-                    "a": 0.6,
-                    "pose": "debout",
-                    "expression": "gene",
-                    "signes": [
-                      "rougeur_pleine"
-                    ]
+                    "a": 1.2,
+                    "x": 320,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 820
                   }
                 ]
               },
@@ -133,37 +190,46 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "angle": 90,
-                    "expression": "curieux"
+                    "x": 322,
+                    "y": 258,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "emerveille"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 322
+                  },
+                  {
+                    "a": 3.6,
+                    "x": 822
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "chat",
-                "x": 500,
-                "y": 345,
-                "echelle": 0.8
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« t'as vu le chat ? »",
-                "de": 0.3,
-                "place": "haut"
+                "objet": "coeur",
+                "x": 420,
+                "y": 120,
+                "echelle": 0.4,
+                "de": 0.6,
+                "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#amoureux"
+        "#amour",
+        "#humour"
       ]
     }
   }

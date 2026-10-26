@@ -1,0 +1,336 @@
+{
+  "jour": "2027-03-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-371",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te montre comment plier les serviettes | Lui, fier, plie un plaid n'importe comment et le pose sur la pile, les pattes sur les hanches ; elle arrive, regarde la pile, et s'arrête net, choquée, une goutte de sueur. | Elle défait le plaid, le replie en quatre gestes précis, très concentrée, et le repose, parfait ; lui regarde, bouche bée, puis prend des notes dans sa tête, des petits points. | Il réessaie, la langue sortie, très appliqué ; il pose son plaid sur la pile : tout de travers ; elle sourit, lui tapote la tête, et le replie derrière lui pendant qu'il va chercher le suivant, tout fier.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui, fier, plie un plaid n'importe comment et le pose sur la pile, les pattes sur les hanches ; elle arrive, regarde la pile, et s'arrête net, choquée, une goutte de sueur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "hanches",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.8,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 480,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.65,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "choque",
+                    "signes": [
+                      "sueur"
+                    ],
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 270,
+                "y": 300,
+                "echelle": 1.0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 150,
+                    "y": 320
+                  }
+                ]
+              },
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 350,
+                "echelle": 1.0,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te montre comment plier les serviettes",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle défait le plaid, le replie en quatre gestes précis, très concentrée, et le repose, parfait ; lui regarde, bouche bée, puis prend des notes dans sa tête, des petits points.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 480,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tient",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 1.65,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "tend_g",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 400,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 320,
+                "echelle": 1.0,
+                "a": 1.6
+              },
+              {
+                "objet": "couverture",
+                "x": 260,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 1.6,
+                "a": 2.6
+              },
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 320,
+                "echelle": 1.0,
+                "de": 2.6
+              },
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 350,
+                "echelle": 1.0,
+                "derriere": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il réessaie, la langue sortie, très appliqué ; il pose son plaid sur la pile : tout de travers ; elle sourit, lui tapote la tête, et le replie derrière lui pendant qu'il va chercher le suivant, tout fier.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "concentre",
+                    "bras": "tient",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 400,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3.8,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_d",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "tient",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 3.8,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 400,
+                "y": 300,
+                "echelle": 1.0,
+                "a": 2.8,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 150,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 320,
+                "echelle": 1.0
+              },
+              {
+                "objet": "couverture",
+                "x": 150,
+                "y": 350,
+                "echelle": 1.0,
+                "derriere": true
+              },
+              {
+                "objet": "couverture",
+                "x": 260,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 2.8
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 170,
+                "echelle": 0.3,
+                "de": 2.0,
+                "a": 3.0,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

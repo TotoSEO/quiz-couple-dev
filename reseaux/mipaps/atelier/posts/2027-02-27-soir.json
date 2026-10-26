@@ -1,0 +1,258 @@
+{
+  "jour": "2027-02-27",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-339",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a « une petite question » à 23 h | La nuit, la lune ; le lit ; lui vient de fermer les yeux, apaisé ; elle, assise, pensive, se tourne vers lui ; en haut s'écrit « tu me vois comment dans dix ans ? » ; il rouvre un œil. | Il se redresse, confus, puis panique : des sueurs, des petits points, les yeux qui tournent ; elle attend, tranquille, le menton dans la patte ; il ouvre la bouche, la referme. | « 3 h du matin » en bas. Elle dort profondément, des z, elle a oublié ; lui, assis dans le lit, les yeux grands ouverts, réfléchit encore, des petits points ; la lune le regarde.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; lui vient de fermer les yeux, apaisé ; elle, assise, pensive, se tourne vers lui ; en haut s'écrit « tu me vois comment dans dix ans ? » ; il rouvre un œil.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "pose": "allonge"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "vers": -1,
+                    "expression": "curieux"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a « une petite question » à 23 h",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu me vois comment dans dix ans ? »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il se redresse, confus, puis panique : des sueurs, des petits points, les yeux qui tournent ; elle attend, tranquille, le menton dans la patte ; il ouvre la bouche, la referme.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "confus",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "nerveux",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs",
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "hesite"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "menton",
+                    "pattes": "aucune",
+                    "expression": "attend",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h du matin » en bas. Elle dort profondément, des z, elle a oublié ; lui, assis dans le lit, les yeux grands ouverts, réfléchit encore, des petits points ; la lune le regarde.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "pensif",
+                    "signes": [
+                      "points",
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "pensee",
+                "x": 230,
+                "y": 120,
+                "echelle": 1.4,
+                "de": 0.4
+              },
+              {
+                "objet": "question",
+                "x": 230,
+                "y": 115,
+                "echelle": 0.5,
+                "de": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h du matin",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

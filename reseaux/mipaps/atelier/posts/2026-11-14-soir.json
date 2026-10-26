@@ -2,49 +2,213 @@
   "jour": "2026-11-14",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-015",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-222",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : un grand lit, elle seule au milieu, triste, l'oreiller de l'autre côté.",
-        "texte": "le lit est trop grand quand t'es pas là",
-        "duree": 12,
+        "idee": "toi quand tu demandes « ça va ? » et qu'elle dit « oui. » | Elle à droite, tournée vers le bord, les bras croisés, un nuage noir, boude ; lui à gauche s'inquiète ; en haut s'écrit « ça va ? » puis « oui. » ; le nuage ne bouge pas. | Il réfléchit, des petits points, hésite, puis s'approche d'elle à petits pas et s'arrête juste à côté, timide ; elle boude toujours, vexée, sans le regarder. | Il ne dit rien et reste là ; elle, toujours fâchée, se laisse aller contre son épaule sans le regarder, les bras croisés, et le nuage noir rétrécit ; il sourit, un petit cœur.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
-        "dessin": {
-          "elements": [
-            {
-              "meuble": "lit_fond"
-            },
-            {
-              "perso": "elle",
-              "expression": "triste",
-              "y": 346,
-              "pose": "debout",
-              "bras": "aucun",
-              "pattes": "aucune",
-              "x": 320,
-              "taille": 200
-            },
-            {
-              "meuble": "lit_couette"
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4.5,
+            "description": "Elle à droite, tournée vers le bord, les bras croisés, un nuage noir, boude ; lui à gauche s'inquiète ; en haut s'écrit « ça va ? » puis « oui. » ; le nuage ne bouge pas.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand tu demandes « ça va ? » et qu'elle dit « oui. »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« ça va ? »",
+                "de": 1.8,
+                "a": 2.9,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« oui. »",
+                "de": 3.1,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il réfléchit, des petits points, hésite, puis s'approche d'elle à petits pas et s'arrête juste à côté, timide ; elle boude toujours, vexée, sans le regarder.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 270,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 360,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "timide"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "boude",
+                    "bras": "croises",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "vexe"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il ne dit rien et reste là ; elle, toujours fâchée, se laisse aller contre son épaule sans le regarder, les bras croisés, et le nuage noir rétrécit ; il sourit, un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "vexe",
+                    "bras": "croises",
+                    "vers": 1,
+                    "signes": [
+                      "nuage_noir"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 440,
+                    "pose": "penche_g",
+                    "expression": "boude"
+                  },
+                  {
+                    "a": 3.0,
+                    "signes": []
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 3.4,
+                "flotte": true
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "tague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#relation"
+        "#humour"
       ]
     }
   }

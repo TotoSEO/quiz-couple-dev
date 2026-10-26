@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-003",
+  "sujet": "ani-210",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,44 +12,73 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Allez, je me lève » : il se lève, va jusqu'à la porte, il fait trop froid, il revient se coucher ; « encore un peu » ; les deux dorment serrés, le réveil sur le côté. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne te montre une vidéo | Elle à gauche, le téléphone à la patte, morte de rire devant son écran ; lui à droite, content, s'approche d'un pas pour voir ; elle lui tend le téléphone. | Il regarde la vidéo, attend que ça devienne drôle, reste blasé, puis fait un sourire poli ; elle, à côté, pleure de rire, les larmes aux yeux, et le regarde pour vérifier qu'il rit. | Elle a une nouvelle idée, une ampoule : encore une vidéo ; lui s'ennuie, puis tombe K.-O. par terre, les yeux en croix, un tourbillon ; elle rit de plus belle avec le téléphone.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3,
-            "description": "Les deux sont allongés côte à côte. Elle dort. Lui a les yeux ouverts, il bâille, l'air fatigué. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Elle à gauche, le téléphone à la patte, morte de rire devant son écran ; lui à droite, content, s'approche d'un pas pour voir ; elle lui tend le téléphone.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "allonge",
-                    "expression": "baille"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 280,
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "mort_de_rire",
+                    "pose": "debout",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "tend_d",
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 440,
+                    "expression": "curieux",
+                    "vers": -1
                   }
                 ]
               }
             ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 280,
+                "y": 300,
+                "echelle": 0.55,
+                "a": 2.6
+              },
+              {
+                "objet": "telephone",
+                "x": 365,
+                "y": 300,
+                "echelle": 0.55,
+                "de": 2.6
+              }
+            ],
             "textes": [
               {
-                "texte": "« allez, je me lève »",
+                "texte": "toi quand ta personne te montre une vidéo",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -58,50 +87,24 @@
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Il se lève à 0,6 s, marche de profil vers la gauche jusqu'à la porte, s'arrête à 2 s, se tourne, hésite, et revient vers le lit en marchant à 2,8 s. Elle dort toujours.",
+            "description": "Il regarde la vidéo, attend que ça devienne drôle, reste blasé, puis fait un sourire poli ; elle, à côté, pleure de rire, les larmes aux yeux, et le regarde pour vérifier qu'il rit.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "allonge",
-                    "expression": "baille"
+                    "x": 440,
+                    "expression": "attend",
+                    "vers": -1
                   },
                   {
-                    "a": 0.6,
-                    "pose": "debout",
-                    "expression": "fatigue"
+                    "a": 1.3,
+                    "expression": "blase"
                   },
                   {
-                    "a": 0.9,
-                    "x": 250,
-                    "angle": -90,
-                    "pose": "marche"
-                  },
-                  {
-                    "a": 2,
-                    "x": 130
-                  },
-                  {
-                    "a": 2.2,
-                    "pose": "debout"
-                  },
-                  {
-                    "a": 2.7,
-                    "x": 130,
-                    "angle": 90,
-                    "expression": "pensif"
-                  },
-                  {
-                    "a": 2.8,
-                    "pose": "marche"
-                  },
-                  {
-                    "a": 3.7,
-                    "x": 250
+                    "a": 2.5,
+                    "expression": "content"
                   }
                 ]
               },
@@ -110,131 +113,95 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 280,
+                    "expression": "pleure_de_joie",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": 1,
+                    "expression": "joie"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "porte",
-                "x": 110,
+                "objet": "telephone",
+                "x": 365,
                 "y": 300,
-                "echelle": 1.3
-              }
-            ],
-            "textes": [
-              {
-                "texte": "il fait trop froid hors de la couette",
-                "de": 0.2,
-                "place": "haut"
+                "echelle": 0.55
               }
             ]
           },
           {
-            "duree": 3,
-            "transition": "fondu",
-            "description": "Il est revenu se coucher, il s'allonge à côté d'elle, les yeux fermés. Elle dort. Le texte à 0,2 s.",
+            "duree": 4.5,
+            "description": "Elle a une nouvelle idée, une ampoule : encore une vidéo ; lui s'ennuie, puis tombe K.-O. par terre, les yeux en croix, un tourbillon ; elle rit de plus belle avec le téléphone.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "allonge",
-                    "expression": "dodo",
+                    "x": 280,
+                    "expression": "idee",
                     "signes": [
-                      "zzz"
-                    ]
+                      "ampoule"
+                    ],
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "mort_de_rire",
+                    "pose": "debout",
+                    "bras": "tient"
                   }
                 ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« allez, encore un peu »",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Les deux dorment serrés l'un contre l'autre, un petit cœur au-dessus d'eux. Le réveil est sur le côté. Pas de texte : on les regarde dormir.",
-            "persos": [
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
+                    "x": 440,
+                    "expression": "ennui"
+                  },
                   {
-                    "a": 0,
-                    "x": 370,
+                    "a": 1.6,
+                    "expression": "etourdi",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
                     "pose": "allonge",
-                    "expression": "dodo"
+                    "expression": "ko"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "horloge",
-                "x": 500,
-                "y": 170,
-                "echelle": 0.6
-              },
-              {
-                "objet": "coeur",
-                "x": 335,
-                "y": 170,
-                "echelle": 0.4,
-                "de": 0.6,
-                "flotte": true
+                "objet": "telephone",
+                "x": 280,
+                "y": 300,
+                "echelle": 0.55
               }
-            ],
-            "textes": []
+            ]
           }
         ]
       },
-      "legende": "c'est qui chez vous ?",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#amoureux"
+        "#amour",
+        "#humour"
       ]
     }
   }

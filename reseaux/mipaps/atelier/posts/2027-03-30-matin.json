@@ -1,0 +1,266 @@
+{
+  "jour": "2027-03-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-376",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on range enfin les décos de Noël | Le salon, fin mars, un soleil à la fenêtre ; une étoile de Noël encore accrochée, une bougie, des étincelles qui pendent ; les deux sur le canapé regardent l'étoile, blasés ; « demain » s'écrit en haut. | « une semaine plus tard » en bas. L'étoile est toujours là ; les deux debout dessous, un carton à la patte, décidés ; lui tend la patte vers l'étoile ; elle l'arrête : elle est jolie, non ? | « en avril » en bas. L'étoile est toujours accrochée ; les deux sur le canapé, en t-shirt, un ventilateur imaginaire, contents, lèvent les yeux vers elle ; en haut : « on la laisse pour l'année prochaine » ; un cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le salon, fin mars, un soleil à la fenêtre ; une étoile de Noël encore accrochée, une bougie, des étincelles qui pendent ; les deux sur le canapé regardent l'étoile, blasés ; « demain » s'écrit en haut.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.7
+              },
+              {
+                "objet": "etoile",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.8
+              },
+              {
+                "objet": "etincelles",
+                "x": 500,
+                "y": 160,
+                "echelle": 0.5
+              },
+              {
+                "objet": "bougie",
+                "x": 560,
+                "y": 290,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on range enfin les décos de Noël",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« demain »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« une semaine plus tard » en bas. L'étoile est toujours là ; les deux debout dessous, un carton à la patte, décidés ; lui tend la patte vers l'étoile ; elle l'arrête : elle est jolie, non ?",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "determine",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_d",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_g",
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "timide"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.7
+              },
+              {
+                "objet": "etoile",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.8
+              },
+              {
+                "objet": "etincelles",
+                "x": 500,
+                "y": 160,
+                "echelle": 0.5
+              },
+              {
+                "objet": "caisse",
+                "x": 300,
+                "y": 345,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "une semaine plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« en avril » en bas. L'étoile est toujours accrochée ; les deux sur le canapé, en t-shirt, un ventilateur imaginaire, contents, lèvent les yeux vers elle ; en haut : « on la laisse pour l'année prochaine » ; un cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 120,
+                "y": 80,
+                "echelle": 0.9
+              },
+              {
+                "objet": "etoile",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.8
+              },
+              {
+                "objet": "etincelles",
+                "x": 500,
+                "y": 160,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 3.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "en avril",
+                "de": 0.2,
+                "place": "bas"
+              },
+              {
+                "texte": "« on la laisse pour l'année prochaine »",
+                "de": 1.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

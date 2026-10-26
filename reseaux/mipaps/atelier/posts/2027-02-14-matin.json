@@ -1,0 +1,294 @@
+{
+  "jour": "2027-02-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-323",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on tente une sieste | Le canapé, l'après-midi, le soleil à la fenêtre ; les deux s'allongent l'un contre l'autre, ferment les yeux, zen ; des z commencent ; il bouge un peu ; elle bouge un peu. | Il se tourne ; elle se retourne ; son bras à lui est coincé ; il le retire ; elle a froid ; elle tire le plaid ; il a chaud ; les deux rouvrent les yeux, exaspérés. | La sonnette, le téléphone, un oiseau à la fenêtre : tout sonne ; les deux, assis bien droits, les yeux grands ouverts, furieux, une veine chacun ; puis ils se regardent et rient ; sieste ratée.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, l'après-midi, le soleil à la fenêtre ; les deux s'allongent l'un contre l'autre, ferment les yeux, zen ; des z commencent ; il bouge un peu ; elle bouge un peu.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 270,
+                    "pose": "penche_d",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.6,
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 370,
+                    "pose": "penche_g",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 380
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on tente une sieste",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il se tourne ; elle se retourne ; son bras à lui est coincé ; il le retire ; elle a froid ; elle tire le plaid ; il a chaud ; les deux rouvrent les yeux, exaspérés.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_d",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "assis",
+                    "expression": "gene",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ],
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "exaspere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "assis",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "exaspere",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.6
+              },
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.4,
+                "de": 1.6,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 320
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 420
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "La sonnette, le téléphone, un oiseau à la fenêtre : tout sonne ; les deux, assis bien droits, les yeux grands ouverts, furieux, une veine chacun ; puis ils se regardent et rient ; sieste ratée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "rire",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "soleil",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.6
+              },
+              {
+                "objet": "telephone",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 0.8
+              },
+              {
+                "objet": "exclamation",
+                "x": 150,
+                "y": 230,
+                "echelle": 0.4,
+                "de": 1.0,
+                "a": 2.0
+              },
+              {
+                "objet": "oiseau",
+                "x": 540,
+                "y": 170,
+                "echelle": 0.5,
+                "de": 1.6
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 0.2
+              },
+              {
+                "nom": "sonne",
+                "a": 1.0
+              },
+              {
+                "nom": "oiseau",
+                "a": 1.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

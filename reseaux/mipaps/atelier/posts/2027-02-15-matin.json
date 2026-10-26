@@ -1,0 +1,316 @@
+{
+  "jour": "2027-02-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-324",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne marche en téléphonant | Lui au téléphone, content, marche de long en large dans la pièce, d'un bord à l'autre ; elle, assise sur le canapé, le suit des yeux, à gauche, à droite, à gauche. | « 10 min plus tard » en bas. Il marche toujours, de plus en plus vite ; elle, les yeux qui suivent, commence à avoir le tournis, une spirale dans les yeux. | Elle a glissé du canapé et gît par terre, K.-O., les yeux en croix ; lui passe par-dessus elle en continuant de marcher et de parler, sans la voir ; puis il s'arrête, la regarde, perplexe.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au téléphone, content, marche de long en large dans la pièce, d'un bord à l'autre ; elle, assise sur le canapé, le suit des yeux, à gauche, à droite, à gauche.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.5,
+                    "x": 150,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.8,
+                    "angle": 90,
+                    "pose": "marche"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.6,
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.5,
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 520
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 520
+                  },
+                  {
+                    "a": 3.5,
+                    "x": 150
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne marche en téléphonant",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 10 min plus tard » en bas. Il marche toujours, de plus en plus vite ; elle, les yeux qui suivent, commence à avoir le tournis, une spirale dans les yeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.4,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 150,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.8,
+                    "angle": 90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 520
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.2,
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "etourdi",
+                    "signes": [
+                      "tourbillon"
+                    ],
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 520
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 520
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 150
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 150
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 520
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle a glissé du canapé et gît par terre, K.-O., les yeux en croix ; lui passe par-dessus elle en continuant de marcher et de parler, sans la voir ; puis il s'arrête, la regarde, perplexe.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "perplexe",
+                    "vers": 1,
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 200
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

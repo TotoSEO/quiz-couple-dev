@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-130",
+  "sujet": "ani-251",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,28 +12,165 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Regarder ta personne dormir : elle dort sur le canapé, il la regarde, des cœurs ; elle ouvre un œil, il sursaute ; elle le tire contre elle, câlin. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne travaille à la maison | Elle assise par terre devant son ordinateur, concentrée ; lui arrive par la droite, content, s'arrête derrière elle et attend qu'elle le regarde ; rien. | Il s'assoit à côté d'elle, supplie, les pattes jointes ; elle lève une patte sans le regarder : chut ; il se couche par terre à côté, tout triste, le menton au sol. | « 1 h plus tard » en bas. Elle ferme l'ordinateur, s'étire, se retourne : il s'est endormi par terre à côté d'elle, en boule, des z ; elle sourit, se couche contre lui ; un cœur.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Elle dort sur le canapé, allongée, des petits zzz au-dessus d'elle. Il est assis par terre à côté, les yeux brillants, il la regarde dormir, des cœurs flottent. Le texte en haut dès 0,2 s.",
+            "description": "Elle assise par terre devant son ordinateur, concentrée ; lui arrive par la droite, content, s'arrête derrière elle et attend qu'elle le regarde ; rien.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
+                    "x": 270,
+                    "y": 380,
+                    "taille": 230,
+                    "pose": "assis",
+                    "expression": "concentre"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "attend",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "ordinateur",
+                "x": 270,
+                "y": 330,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne travaille à la maison",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il s'assoit à côté d'elle, supplie, les pattes jointes ; elle lève une patte sans le regarder : chut ; il se couche par terre à côté, tout triste, le menton au sol.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 0.6,
                     "x": 430,
-                    "y": 330,
-                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "supplie",
+                    "bras": "priere"
+                  },
+                  {
+                    "a": 2.2,
                     "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "expression": "triste",
+                    "taille": 240
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "taille": 230
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "chut",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "concentre",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "ordinateur",
+                "x": 270,
+                "y": 330,
+                "echelle": 1.0
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Elle ferme l'ordinateur, s'étire, se retourne : il s'est endormi par terre à côté d'elle, en boule, des z ; elle sourit, se couche contre lui ; un cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "assis",
+                    "expression": "concentre",
+                    "taille": 230
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "etire",
+                    "expression": "fatigue",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout",
+                    "expression": "surpris",
+                    "vers": 1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 360,
+                    "pose": "allonge",
+                    "expression": "amour"
                   }
                 ]
               },
@@ -42,142 +179,57 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "assis",
-                    "expression": "amour"
+                    "x": 450,
+                    "pose": "boule",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ],
+                    "taille": 230
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "coeur",
-                "x": 250,
-                "y": 150,
-                "echelle": 0.4,
-                "de": 0.8,
-                "flotte": true
+                "objet": "ordinateur",
+                "x": 270,
+                "y": 330,
+                "echelle": 1.0,
+                "a": 1.0
+              },
+              {
+                "objet": "ordinateur",
+                "x": 140,
+                "y": 350,
+                "echelle": 0.8,
+                "de": 1.0
               },
               {
                 "objet": "coeur",
-                "x": 300,
-                "y": 170,
-                "echelle": 0.3,
-                "de": 1.4,
+                "x": 400,
+                "y": 190,
+                "echelle": 0.4,
+                "de": 3.2,
                 "flotte": true
               }
             ],
             "textes": [
               {
-                "texte": "regarder ta personne dormir",
+                "texte": "1 h plus tard",
                 "de": 0.2,
-                "place": "haut",
-                "style": "titre"
+                "place": "bas"
               }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle ouvre un œil à 1 s, un sourire en coin. Il sursaute, les yeux grands, un point d'exclamation au-dessus de lui.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 430,
-                    "y": 330,
-                    "taille": 220,
-                    "pose": "allonge",
-                    "expression": "dodo"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "malicieux"
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "assis",
-                    "expression": "amour"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "choque",
-                    "signes": [
-                      "exclamation"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "meubles": [
-              "canape_fond"
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Elle le tire contre elle, les deux serrés l'un contre l'autre sur le canapé, yeux fermés, un petit cœur flotte au-dessus d'eux.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 270,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "calin"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 370,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "calin"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "coeur",
-                "x": 320,
-                "y": 140,
-                "echelle": 0.4,
-                "de": 0.6,
-                "flotte": true
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           }
         ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

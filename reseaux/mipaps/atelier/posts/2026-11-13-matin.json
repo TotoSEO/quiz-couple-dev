@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-102",
+  "sujet": "ani-220",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,106 +12,36 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Toi quand ta personne dit « j'arrive » : elle est prête devant la porte, le sac à la patte ; 20 minutes plus tard elle est assise par terre, blasée ; il arrive en courant, essoufflé et fier ; elle se relève. Trois plans, 12 secondes.",
+        "idee": "nous deux quand on doit choisir un film | Le canapé, la télé en haut ; lui a une idée, une ampoule ; elle fait la grimace, dégoûtée ; elle a une idée à son tour ; lui fait la grimace. | « 1 h plus tard » en bas. Les deux fatigués, la tête dans les pattes ; lui propose encore, sans conviction ; elle fait non ; elle propose ; il fait non ; les deux soupirent. | « 2 h plus tard » en bas. La télé montre toujours le menu ; les deux dorment l'un contre l'autre au milieu du canapé, des z ; un petit cœur monte ; rien n'a été choisi.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est debout, prête, contente, le sac à la patte, face à nous. Le texte en haut dès 0,2 s.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 320,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tient"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "sac",
-                "x": 354,
-                "y": 345,
-                "echelle": 0.6
-              }
-            ],
-            "textes": [
-              {
-                "texte": "toi quand ta personne dit « j'arrive »",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle est maintenant assise par terre, le sac posé à côté, les yeux plats, blasée. Le texte « 20 min plus tard » à 0,2 s.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 320,
-                    "pose": "assis",
-                    "expression": "blase"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "sac",
-                "x": 410,
-                "y": 350,
-                "echelle": 0.6
-              }
-            ],
-            "textes": [
-              {
-                "texte": "20 min plus tard",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 5,
-            "transition": "fondu",
-            "description": "Il entre par la gauche en courant de profil, essoufflé, des lignes de vitesse. À 2,2 s il s'arrête près d'elle, les mains sur les genoux, puis se redresse, fier, les pattes sur les hanches à 3,2 s. Elle se lève à 3,4 s, blasée, le sac à la patte.",
+            "duree": 4,
+            "description": "Le canapé, la télé en haut ; lui a une idée, une ampoule ; elle fait la grimace, dégoûtée ; elle a une idée à son tour ; lui fait la grimace.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "sprint",
-                    "expression": "essouffle"
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
                   },
                   {
-                    "a": 2.2,
-                    "x": 450,
-                    "pose": "debout"
+                    "a": 1.2,
+                    "expression": "content"
                   },
                   {
-                    "a": 2.8,
-                    "expression": "fier",
-                    "bras": "hanches"
-                  },
-                  {
-                    "a": 2.9,
-                    "angle": 0
+                    "a": 2.6,
+                    "expression": "degoute"
                   }
                 ]
               },
@@ -120,35 +50,189 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
                     "pose": "assis",
-                    "expression": "blase"
+                    "expression": "content"
                   },
                   {
-                    "a": 3.4,
-                    "pose": "debout",
-                    "bras": "tient"
+                    "a": 1.2,
+                    "expression": "degoute"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "sac",
-                "x": 360,
-                "y": 350,
-                "echelle": 0.6
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on doit choisir un film",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 1 h plus tard » en bas. Les deux fatigués, la tête dans les pattes ; lui propose encore, sans conviction ; elle fait non ; elle propose ; il fait non ; les deux soupirent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue",
+                    "bras": "visage"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "hesite",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "decu"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue",
+                    "bras": "visage"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "decu",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "fatigue"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 h plus tard » en bas. La télé montre toujours le menu ; les deux dorment l'un contre l'autre au milieu du canapé, des z ; un petit cœur monte ; rien n'a été choisi.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 230,
+                "echelle": 0.35,
+                "de": 1.5,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

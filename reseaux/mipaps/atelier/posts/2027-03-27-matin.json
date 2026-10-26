@@ -1,0 +1,300 @@
+{
+  "jour": "2027-03-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-372",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te réveille en éternuant | La nuit, la lune ; le lit ; les deux dorment ; lui fronce le nez dans son sommeil, inspire, inspire ; puis éternue d'un coup, un bond, un point d'exclamation ; elle se réveille en sursaut. | Elle le fusille du regard, une veine ; il s'excuse, désolé, les pattes jointes ; elle se recouche en boudant ; il se recouche aussi ; une seconde ; son nez refronce ; il inspire. | Avant qu'il éternue, elle lui plaque l'oreiller sur la figure ; un éternuement étouffé, l'oreiller saute ; elle le garde sur lui, zen, les yeux fermés ; il reste dessous, résigné ; un petit cœur quand même.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; les deux dorment ; lui fronce le nez dans son sommeil, inspire, inspire ; puis éternue d'un coup, un bond, un point d'exclamation ; elle se réveille en sursaut.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "hesite",
+                    "pose": "allonge"
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "y": 320,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.5,
+                    "y": 346,
+                    "expression": "soulage"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "signes": [
+                      "exclamation",
+                      "sueurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te réveille en éternuant",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 2.2
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle le fusille du regard, une veine ; il s'excuse, désolé, les pattes jointes ; elle se recouche en boudant ; il se recouche aussi ; une seconde ; son nez refronce ; il inspire.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "allonge",
+                    "expression": "boude",
+                    "x": 420
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "suspicieux"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "priere",
+                    "pattes": "aucune",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "allonge",
+                    "expression": "zen",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "hesite",
+                    "pose": "allonge"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Avant qu'il éternue, elle lui plaque l'oreiller sur la figure ; un éternuement étouffé, l'oreiller saute ; elle le garde sur lui, zen, les yeux fermés ; il reste dessous, résigné ; un petit cœur quand même.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "suspicieux"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "bras": "tend_g",
+                    "pattes": "aucune",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "hesite"
+                  },
+                  {
+                    "a": 1.2,
+                    "pose": "allonge",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "oreiller",
+                "x": 250,
+                "y": 270,
+                "echelle": 1.0,
+                "de": 0.6,
+                "etapes": [
+                  {
+                    "a": 1.0,
+                    "y": 270
+                  },
+                  {
+                    "a": 1.2,
+                    "y": 240
+                  },
+                  {
+                    "a": 1.5,
+                    "y": 270
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 330,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 3.4,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 0.7
+              },
+              {
+                "nom": "boing",
+                "a": 1.2
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

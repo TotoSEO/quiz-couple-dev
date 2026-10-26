@@ -1,0 +1,314 @@
+{
+  "jour": "2027-01-30",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-306",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne laisse la lumière allumée partout | Trois lampes allumées dans la pièce ; lui passe au milieu, content, en allume une quatrième en passant ; elle, derrière lui, en éteint une, puis une autre, blasée. | Il revient, rallume les deux lampes qu'elle a éteintes, l'air de rien, l'auréole ; elle le suit, les éteint, une veine qui bat ; il en rallume une ; elle l'éteint ; de plus en plus vite. | Elle ramasse toutes les lampes dans un carton, l'une après l'autre, et sort du cadre avec le carton ; lui reste seul dans le noir, debout, une bougie à la patte, tout penaud.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Trois lampes allumées dans la pièce ; lui passe au milieu, content, en allume une quatrième en passant ; elle, derrière lui, en éteint une, puis une autre, blasée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d",
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "bas",
+                    "expression": "agace"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lampe",
+                "x": 110,
+                "y": 300,
+                "echelle": 0.9
+              },
+              {
+                "objet": "lampe",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.9,
+                "a": 1.6
+              },
+              {
+                "objet": "lampe",
+                "x": 580,
+                "y": 300,
+                "echelle": 0.9,
+                "a": 2.6
+              },
+              {
+                "objet": "lampe",
+                "x": 240,
+                "y": 300,
+                "echelle": 0.9,
+                "de": 2.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne laisse la lumière allumée partout",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il revient, rallume les deux lampes qu'elle a éteintes, l'air de rien, l'auréole ; elle le suit, les éteint, une veine qui bat ; il en rallume une ; elle l'éteint ; de plus en plus vite.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.2,
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "agace",
+                    "signes": [
+                      "veine"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "bas",
+                    "expression": "furieux"
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lampe",
+                "x": 110,
+                "y": 300,
+                "echelle": 0.9
+              },
+              {
+                "objet": "lampe",
+                "x": 240,
+                "y": 300,
+                "echelle": 0.9
+              },
+              {
+                "objet": "lampe",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.9,
+                "de": 0.6,
+                "a": 1.2
+              },
+              {
+                "objet": "lampe",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.9,
+                "de": 2.4,
+                "a": 3.0
+              },
+              {
+                "objet": "lampe",
+                "x": 580,
+                "y": 300,
+                "echelle": 0.9,
+                "de": 0.8,
+                "a": 1.4
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle ramasse toutes les lampes dans un carton, l'une après l'autre, et sort du cadre avec le carton ; lui reste seul dans le noir, debout, une bougie à la patte, tout penaud.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.6,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330,
+                    "bras": "porte_haut",
+                    "pose": "porte_haut"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 330,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "honte",
+                    "bras": "tient",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lampe",
+                "x": 110,
+                "y": 300,
+                "echelle": 0.9,
+                "a": 0.8
+              },
+              {
+                "objet": "lampe",
+                "x": 240,
+                "y": 300,
+                "echelle": 0.9,
+                "a": 1.2
+              },
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 110,
+                "echelle": 1.0,
+                "de": 1.6,
+                "etapes": [
+                  {
+                    "a": 2.0,
+                    "x": 330
+                  },
+                  {
+                    "a": 4.0,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "objet": "bougie",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 2.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "jour": "2027-01-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-288",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne t'offre un truc qu'elle voulait | Elle entre par la gauche avec un cadeau, fière, et le tend à lui, qui attend à droite, surpris puis émerveillé ; il le prend. | Il ouvre : une bougie parfumée ; il reste perplexe, un point d'interrogation ; elle, les yeux qui brillent, la regarde, la bougie, pas lui ; elle tend déjà les pattes. | Elle a pris la bougie, l'a posée sur le canapé, s'est installée devant, zen, les yeux fermés, ravie ; lui, debout, tient la boîte vide, résigné, puis hausse les épaules et sourit.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Elle entre par la gauche avec un cadeau, fière, et le tend à lui, qui attend à droite, surpris puis émerveillé ; il le prend.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "emerveille",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cadeau",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 290
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 370
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 450
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne t'offre un truc qu'elle voulait",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il ouvre : une bougie parfumée ; il reste perplexe, un point d'interrogation ; elle, les yeux qui brillent, la regarde, la bougie, pas lui ; elle tend déjà les pattes.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "emerveille",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "tend_d",
+                    "expression": "supplie"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cadeau",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.7,
+                "a": 1.2
+              },
+              {
+                "objet": "bougie",
+                "x": 450,
+                "y": 300,
+                "echelle": 0.7,
+                "de": 1.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle a pris la bougie, l'a posée sur le canapé, s'est installée devant, zen, les yeux fermés, ravie ; lui, debout, tient la boîte vide, résigné, puis hausse les épaules et sourit.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "amour",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "bougie",
+                "x": 300,
+                "y": 290,
+                "echelle": 0.6
+              },
+              {
+                "objet": "cadeau",
+                "x": 200,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

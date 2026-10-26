@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-104",
+  "sujet": "ani-224",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,51 +12,81 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Non merci, j'ai pas faim » : il a une pizza, elle refuse, sereine ; elle regarde la pizza puis lui, « juste pour goûter » ; plus de pizza, elle fait l'ange, il est sidéré. Trois plans, 11 secondes.",
+        "idee": "nous deux quand on range la maison | Elle pousse un gros carton de la gauche vers la droite, en plein effort, des gouttes de sueur ; lui, assis par terre à droite, le téléphone à la patte, content, ne bouge pas. | Elle le fusille du regard, une veine sur le front ; il lève les yeux, surpris, pose le téléphone, se lève d'un bond, décidé, et pointe le carton : il supervise. | Elle soulève le carton au-dessus de sa tête et l'emporte vers la gauche ; lui s'assoit sur le carton suivant, content, et la regarde faire ; elle sort du cadre, blasée.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Lui est debout, content, une pizza à la patte. Elle est à côté, les bras croisés, sereine, le regard droit devant elle. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Elle pousse un gros carton de la gauche vers la droite, en plein effort, des gouttes de sueur ; lui, assis par terre à droite, le téléphone à la patte, content, ne bouge pas.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "gourmand",
-                    "bras": "tient"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "zen",
-                    "bras": "croises"
+                    "x": 120,
+                    "angle": 90,
+                    "pose": "pousse",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.2,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 284,
-                "y": 335,
-                "echelle": 0.6
+                "objet": "caisse",
+                "x": 200,
+                "y": 330,
+                "echelle": 1.1,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 410
+                  }
+                ]
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.55
               }
             ],
             "textes": [
               {
-                "texte": "« non merci, j'ai pas faim »",
+                "texte": "nous deux quand on range la maison",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -64,107 +94,169 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle jette un œil à la pizza à 0,6 s, puis à lui à 1,4 s, l'air gourmand. À 1,8 s elle tend la patte vers la pizza. Le texte « juste pour goûter » à 1,6 s.",
+            "duree": 4,
+            "description": "Elle le fusille du regard, une veine sur le front ; il lève les yeux, surpris, pose le téléphone, se lève d'un bond, décidé, et pointe le carton : il supervise.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tient"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
+                    "x": 330,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ],
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.6,
                     "pose": "debout",
-                    "expression": "zen",
-                    "bras": "croises"
+                    "expression": "determine",
+                    "bras": "hanches"
                   },
                   {
-                    "a": 0.6,
-                    "expression": "gourmand"
-                  },
-                  {
-                    "a": 1.4,
-                    "expression": "malicieux"
-                  },
-                  {
-                    "a": 1.8,
-                    "bras": "tend_g"
+                    "a": 2.6,
+                    "bras": "pointe",
+                    "expression": "fier",
+                    "vers": -1
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 284,
-                "y": 335,
-                "echelle": 0.6
-              }
-            ],
-            "textes": [
+                "objet": "caisse",
+                "x": 410,
+                "y": 330,
+                "echelle": 1.1
+              },
               {
-                "texte": "« juste pour goûter »",
-                "de": 1.6,
-                "place": "haut"
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.55,
+                "a": 0.8
+              },
+              {
+                "objet": "telephone",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.5,
+                "de": 0.8
               }
             ]
           },
           {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Plus de pizza. Elle est sereine, un halo au-dessus de la tête, les pattes jointes. Lui est à côté, sidéré, les yeux grands, un point d'interrogation au-dessus de la tête.",
+            "duree": 4.5,
+            "description": "Elle soulève le carton au-dessus de sa tête et l'emporte vers la gauche ; lui s'assoit sur le carton suivant, content, et la regarde faire ; elle sort du cadre, blasée.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "choque",
-                    "signes": [
-                      "question"
-                    ]
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "ange",
-                    "bras": "priere",
-                    "signes": [
-                      "halo"
-                    ]
+                    "x": 330,
+                    "pose": "porte_haut",
+                    "bras": "porte_haut",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 330,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": -140
                   }
                 ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "fier",
+                    "bras": "pointe",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 480,
+                    "y": 330,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 3.4,
+                    "bras": "pouce"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 110,
+                "echelle": 1.0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 330
+                  },
+                  {
+                    "a": 3.4,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "objet": "caisse",
+                "x": 480,
+                "y": 345,
+                "echelle": 1.1,
+                "derriere": true
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

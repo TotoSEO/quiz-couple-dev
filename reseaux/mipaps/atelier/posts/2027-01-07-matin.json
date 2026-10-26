@@ -1,0 +1,246 @@
+{
+  "jour": "2027-01-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-278",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te garde la place au chaud | La nuit, la lune ; le lit ; elle se lève de son côté en traînant, sort par la droite ; lui, réveillé à moitié, la regarde partir. | Il roule de son côté à elle, s'y installe, les yeux fermés, de la vapeur ; puis il entend la porte, roule à sa place à lui, et fait semblant de dormir, l'auréole. | Elle revient par la droite, grelottante, se recouche : son côté est tout chaud ; elle s'étonne, regarde lui qui « dort », comprend, et fond ; un cœur ; il sourit les yeux fermés.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; le lit ; elle se lève de son côté en traînant, sort par la droite ; lui, réveillé à moitié, la regarde partir.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 560,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "pattes": "debout",
+                    "angle": 90
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "fatigue",
+                    "pose": "allonge",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te garde la place au chaud",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il roule de son côté à elle, s'y installe, les yeux fermés, de la vapeur ; puis il entend la porte, roule à sa place à lui, et fait semblant de dormir, l'auréole.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 394,
+                    "expression": "zen",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 248,
+                    "expression": "dodo",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "sons": [
+              {
+                "nom": "porte",
+                "a": 2.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle revient par la droite, grelottante, se recouche : son côté est tout chaud ; elle s'étonne, regarde lui qui « dort », comprend, et fond ; un cœur ; il sourit les yeux fermés.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 560,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "surpris",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 190,
+                "echelle": 0.4,
+                "de": 3.2,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

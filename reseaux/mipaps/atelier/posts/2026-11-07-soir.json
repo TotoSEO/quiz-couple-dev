@@ -2,51 +2,218 @@
   "jour": "2026-11-07",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "mipaps-statique",
-  "categorie": "mipaps-statique",
-  "sujet": "sta-009",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-214",
   "idee_id": null,
   "variantes": {
     "fr": {
       "recette": {
-        "gabarit": "mipaps-statique",
+        "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : lui rit, elle le regarde, des cœurs.",
-        "texte": "quand tu ris, j'oublie ce que je voulais dire",
-        "duree": 11,
+        "idee": "toi quand ta personne te raconte sa journée | Le canapé ; elle à droite raconte, les bras qui s'agitent, joyeuse puis en colère puis morte de rire ; lui à gauche écoute, tourné vers elle, attentif. | « 20 min plus tard » en bas. Elle raconte encore, choquée puis surprise puis joyeuse ; lui écoute toujours, puis attend, puis fatigue, les yeux qui tombent. | « 1 h plus tard » en bas. Elle raconte toujours ; lui a les yeux en spirale, hypnotisé ; elle s'arrête, le regarde, le pousse d'une patte ; il sursaute et fait oui de la tête, tout content.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
-        "dessin": {
-          "elements": [
-            {
-              "perso": "lui",
-              "expression": "rire",
-              "x": 250,
-              "taille": 265
-            },
-            {
-              "perso": "elle",
-              "expression": "transi",
-              "x": 400,
-              "taille": 262
-            },
-            {
-              "objet": "coeur",
-              "x": 325,
-              "y": 150,
-              "echelle": 0.45
-            }
-          ]
-        }
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; elle à droite raconte, les bras qui s'agitent, joyeuse puis en colère puis morte de rire ; lui à gauche écoute, tourné vers elle, attentif.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.3,
+                    "expression": "colere",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "rire",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ecoute",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te raconte sa journée",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 20 min plus tard » en bas. Elle raconte encore, choquée puis surprise puis joyeuse ; lui écoute toujours, puis attend, puis fatigue, les yeux qui tombent.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "choque",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 1.3,
+                    "expression": "surpris",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ecoute",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "fatigue"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Elle raconte toujours ; lui a les yeux en spirale, hypnotisé ; elle s'arrête, le regarde, le pousse d'une patte ; il sursaute et fait oui de la tête, tout content.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "perplexe",
+                    "vers": -1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.6,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hypnotise",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 2.9,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 3.5,
+                    "expression": "content",
+                    "bras": "pouce"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

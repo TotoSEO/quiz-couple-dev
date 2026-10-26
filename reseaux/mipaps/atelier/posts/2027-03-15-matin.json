@@ -1,0 +1,283 @@
+{
+  "jour": "2027-03-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-357",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand il faut se lever pour éteindre la lumière | Le soir, le canapé, une lampe allumée à droite ; les deux affalés sous le plaid, zen ; ils regardent la lampe, puis se regardent ; personne ne bouge. | En haut s'écrit « vas-y toi » ; lui fait non ; elle fait non ; ils se fixent, les yeux plissés ; ils ferment les yeux tous les deux, faux endormis, l'auréole. | Elle rouvre un œil, attrape le coussin et le lance ; il vole jusqu'à la lampe, la lampe tombe, le noir ; les deux, très fiers, le pouce levé dans le noir ; un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le soir, le canapé, une lampe allumée à droite ; les deux affalés sous le plaid, zen ; ils regardent la lampe, puis se regardent ; personne ne bouge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "lampe",
+                "x": 590,
+                "y": 300,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand il faut se lever pour éteindre la lumière",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "En haut s'écrit « vas-y toi » ; lui fait non ; elle fait non ; ils se fixent, les yeux plissés ; ils ferment les yeux tous les deux, faux endormis, l'auréole.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "suspicieux",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "dodo",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "suspicieux",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "dodo",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "lampe",
+                "x": 590,
+                "y": 300,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« vas-y toi »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle rouvre un œil, attrape le coussin et le lance ; il vole jusqu'à la lampe, la lampe tombe, le noir ; les deux, très fiers, le pouce levé dans le noir ; un petit cœur.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "malicieux",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "fier",
+                    "bras": "pouce"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "fier",
+                    "bras": "pouce"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "coussin",
+                "x": 470,
+                "y": 290,
+                "echelle": 0.8,
+                "de": 0.6,
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 470
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 590,
+                    "y": 290
+                  }
+                ]
+              },
+              {
+                "objet": "lampe",
+                "x": 590,
+                "y": 300,
+                "echelle": 1.0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "y": 300
+                  },
+                  {
+                    "a": 1.4,
+                    "y": 300
+                  },
+                  {
+                    "a": 1.9,
+                    "y": 350
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 3.0,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 1.9
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

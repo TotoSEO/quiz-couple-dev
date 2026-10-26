@@ -1,0 +1,252 @@
+{
+  "jour": "2026-12-31",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "nouvelan-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux le soir du réveillon | « 22 h » en bas. Les deux debout, sur leur trente et un, prêts à faire la fête, des étincelles, une horloge au mur ; ils dansent sur place, joyeux. | « 23 h » en bas. Assis au bord du canapé, ils regardent l'horloge, puis bâillent tous les deux, puis se regardent, puis regardent encore l'horloge. | « minuit » en bas. Des étoiles et des étincelles à la fenêtre ; sur le canapé, les deux dorment l'un sur l'autre sous le plaid, des z ; l'horloge marque minuit ; personne n'a vu.",
+        "son": {
+          "ambiance": "nouvel-an"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "« 22 h » en bas. Les deux debout, sur leur trente et un, prêts à faire la fête, des étincelles, une horloge au mur ; ils dansent sur place, joyeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "joie",
+                    "pose": "danse",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "joie",
+                    "pose": "danse",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              },
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 110,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux le soir du réveillon",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "22 h",
+                "de": 2.0,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 23 h » en bas. Assis au bord du canapé, ils regardent l'horloge, puis bâillent tous les deux, puis se regardent, puis regardent encore l'horloge.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "attend",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "fatigue",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "attend",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "fatigue",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "23 h",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« minuit » en bas. Des étoiles et des étincelles à la fenêtre ; sur le canapé, les deux dorment l'un sur l'autre sous le plaid, des z ; l'horloge marque minuit ; personne n'a vu.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 360,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              },
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.6
+              },
+              {
+                "objet": "etoiles",
+                "x": 120,
+                "y": 110,
+                "echelle": 0.7,
+                "de": 0.3
+              },
+              {
+                "objet": "etincelles",
+                "x": 200,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 0.8,
+                "a": 2.0
+              },
+              {
+                "objet": "etincelles",
+                "x": 440,
+                "y": 180,
+                "echelle": 0.5,
+                "de": 1.4,
+                "a": 2.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "minuit",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

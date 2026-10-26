@@ -1,0 +1,279 @@
+{
+  "jour": "2027-02-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-308",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne te dit « t'es belle » au réveil | Le matin, le lit ; elle se réveille, fatiguée, les yeux à moitié fermés, une bulle au nez ; lui, à côté, déjà réveillé, la regarde avec des cœurs dans les yeux ; en haut : « t'es belle ». | Elle, surprise, puis touchée, les joues roses ; elle attrape son téléphone pour se regarder ; son visage se fige : choc, un point d'exclamation ; elle regarde lui, puis l'écran, puis lui. | Elle lui montre l'écran, la mine défaite ; il regarde, et ses yeux restent des cœurs ; elle éclate de rire, lui jette l'oreiller dessus, et vient se blottir contre lui ; des cœurs.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le matin, le lit ; elle se réveille, fatiguée, les yeux à moitié fermés, une bulle au nez ; lui, à côté, déjà réveillé, la regarde avec des cœurs dans les yeux ; en haut : « t'es belle ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.8,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "fatigue",
+                    "signes": [
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "vers": 1,
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne te dit « t'es belle » au réveil",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« t'es belle »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle, surprise, puis touchée, les joues roses ; elle attrape son téléphone pour se regarder ; son visage se fige : choc, un point d'exclamation ; elle regarde lui, puis l'écran, puis lui.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tient",
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "vers": -1,
+                    "expression": "perplexe"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle lui montre l'écran, la mine défaite ; il regarde, et ses yeux restent des cœurs ; elle éclate de rire, lui jette l'oreiller dessus, et vient se blottir contre lui ; des cœurs.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "tend_g",
+                    "pattes": "aucune",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "rire",
+                    "bras": "aucun"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 330,
+                    "pose": "penche_g",
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "amour",
+                    "vers": 1,
+                    "signes": [
+                      "coeurs"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "calin"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 360,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 1.2
+              },
+              {
+                "objet": "oreiller",
+                "x": 300,
+                "y": 260,
+                "echelle": 0.9,
+                "de": 1.4,
+                "a": 2.2
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 2.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 205,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 3.3,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 395,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 3.7,
+                "flotte": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "coussin",
+                "a": 1.6
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

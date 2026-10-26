@@ -1,0 +1,231 @@
+{
+  "jour": "2026-12-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-266",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « faut qu'on parle » | Lui au milieu, tranquille, le téléphone à la patte ; elle arrive de la droite, sérieuse ; en haut s'écrit « faut qu'on parle » ; il se fige, les yeux vides. | Il passe en revue toute sa vie : panique, sueurs, tremblements, les yeux en spirale ; il se met en boule ; elle réfléchit encore à la formulation, les petits points. | En haut s'écrit la suite : « ... pour les vacances » ; il relève la tête, surpris, puis respire enfin, soulagé, et s'étale de tout son long, K.-O. de soulagement ; elle, perplexe.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui au milieu, tranquille, le téléphone à la patte ; elle arrive de la droite, sérieuse ; en haut s'écrit « faut qu'on parle » ; il se fige, les yeux vides.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "panique",
+                    "bras": "bas",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 450,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 290,
+                "y": 300,
+                "echelle": 0.55,
+                "a": 2.4
+              },
+              {
+                "objet": "telephone",
+                "x": 230,
+                "y": 360,
+                "echelle": 0.5,
+                "de": 2.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « faut qu'on parle »",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« faut qu'on parle »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "splat",
+                "a": 2.5
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il passe en revue toute sa vie : panique, sueurs, tremblements, les yeux en spirale ; il se met en boule ; elle réfléchit encore à la formulation, les petits points.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.0,
+                    "pose": "tremble",
+                    "expression": "peur",
+                    "signes": [
+                      "sueurs",
+                      "tremblement"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "pose": "boule",
+                    "expression": "etourdi",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "En haut s'écrit la suite : « ... pour les vacances » ; il relève la tête, surpris, puis respire enfin, soulagé, et s'étale de tout son long, K.-O. de soulagement ; elle, perplexe.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "boule",
+                    "expression": "peur"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "debout",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 3.0,
+                    "pose": "allonge",
+                    "expression": "ko",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ... pour les vacances »",
+                "de": 0.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

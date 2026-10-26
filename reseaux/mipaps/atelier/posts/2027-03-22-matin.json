@@ -1,0 +1,255 @@
+{
+  "jour": "2027-03-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-366",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux sur le canapé-lit chez des amis | La nuit, la lune ; un canapé, pas un lit ; les deux essaient de s'y allonger ensemble : lui d'abord, puis elle par-dessus ; ça ne rentre pas ; deux points d'exclamation. | Ils essaient autrement : tête-bêche, elle à gauche, lui à droite, les pattes dans la figure de l'autre ; non ; assis tous les deux, la tête en arrière ; non ; lui par terre, elle sur le canapé ; non plus. | « 3 h du matin » en bas. Ils ont fini par trouver : lui allongé sur le canapé, elle allongée sur lui, pile en équilibre, les yeux fermés, des z ; un petit cœur ; ça tient, à peu près.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, la lune ; un canapé, pas un lit ; les deux essaient de s'y allonger ensemble : lui d'abord, puis elle par-dessus ; ça ne rentre pas ; deux points d'exclamation.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 300,
+                    "pose": "allonge",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "pose": "allonge"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330,
+                    "y": 250,
+                    "taille": 170,
+                    "pose": "allonge",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux sur le canapé-lit chez des amis",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ils essaient autrement : tête-bêche, elle à gauche, lui à droite, les pattes dans la figure de l'autre ; non ; assis tous les deux, la tête en arrière ; non ; lui par terre, elle sur le canapé ; non plus.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 318,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 414,
+                    "pose": "assis",
+                    "taille": 210,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330,
+                    "pose": "allonge",
+                    "taille": 200,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 318,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 226,
+                    "pose": "assis",
+                    "taille": 210,
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 250,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "allonge",
+                    "expression": "boude"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 3 h du matin » en bas. Ils ont fini par trouver : lui allongé sur le canapé, elle allongée sur lui, pile en équilibre, les yeux fermés, des z ; un petit cœur ; ça tient, à peu près.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 310,
+                    "y": 250,
+                    "taille": 170,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 320
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 305
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 130,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h du matin",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

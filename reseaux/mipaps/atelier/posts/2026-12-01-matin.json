@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-125",
+  "sujet": "ani-241",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,50 +12,71 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Montrer une vidéo drôle à ta personne : elle tend son téléphone, elle rit d'avance ; il regarde, ne rit pas ; elle pointe l'écran, « attends, là » ; il rit enfin, elle le regarde rire. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne revient de son footing | Elle, tranquille au milieu, lit un livre, zen ; lui entre par la gauche en courant, essoufflé, en sueur, radieux, et vient vers elle les bras ouverts pour un câlin. | Elle lève les yeux, dégoûtée, se bouche le nez et s'enfuit par la droite ; il la poursuit en courant, tout content, les bras toujours ouverts. | Il l'a rattrapée au milieu : câlin, lui ravi, les yeux fermés ; elle, écrasée dedans, les yeux en croix, la langue sortie, K.-O. ; des petits cœurs montent quand même.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle tend son téléphone vers lui, elle sourit déjà, les yeux plissés. Lui regarde l'écran, curieux. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Elle, tranquille au milieu, lit un livre, zen ; lui entre par la gauche en courant, essoufflé, en sueur, radieux, et vient vers elle les bras ouverts pour un câlin.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "content"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "rire",
-                    "bras": "tend_g"
+                    "x": 440,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "zen",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "joie",
+                    "bras": "leves",
+                    "signes": [
+                      "sueurs"
+                    ]
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 305,
+                "objet": "livre",
+                "x": 440,
                 "y": 300,
-                "echelle": 0.55
+                "echelle": 0.6
               }
             ],
             "textes": [
               {
-                "texte": "quand tu montres une vidéo drôle à ta personne",
+                "texte": "toi quand ta personne revient de son footing",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -63,68 +84,83 @@
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il regarde l'écran, le visage de marbre, les yeux plats, sans bouger. Elle pointe l'écran du doigt à 1 s, les yeux grands. Le texte « attends, là » à 1 s.",
+            "duree": 4,
+            "description": "Elle lève les yeux, dégoûtée, se bouche le nez et s'enfuit par la droite ; il la poursuit en courant, tout content, les bras toujours ouverts.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "blase"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_g"
+                    "x": 440,
+                    "expression": "degoute",
+                    "bras": "bouche"
                   },
                   {
-                    "a": 1,
-                    "expression": "surpris",
-                    "bras": "pointe_devant"
+                    "a": 0.8,
+                    "x": 440,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "joie",
+                    "bras": "leves",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 260,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 820
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 305,
-                "y": 300,
-                "echelle": 0.55
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« attends, là »",
-                "de": 1,
-                "place": "haut"
+                "objet": "livre",
+                "x": 440,
+                "y": 360,
+                "echelle": 0.6,
+                "de": 0.8
               }
             ]
           },
           {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Il éclate de rire enfin, les yeux plissés. Elle le regarde rire, contente, les joues roses. Trois cœurs flottent au-dessus d'eux.",
+            "duree": 4.5,
+            "description": "Il l'a rattrapée au milieu : câlin, lui ravi, les yeux fermés ; elle, écrasée dedans, les yeux en croix, la langue sortie, K.-O. ; des petits cœurs montent quand même.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "rire"
+                    "x": 290,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d",
+                    "signes": [
+                      "sueurs"
+                    ]
                   }
                 ]
               },
@@ -133,55 +169,56 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "pose": "debout",
-                    "expression": "amour",
-                    "bras": "tend_g"
+                    "x": 400,
+                    "expression": "ko",
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "blase"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 305,
-                "y": 300,
-                "echelle": 0.55
-              },
-              {
                 "objet": "coeur",
-                "x": 335,
-                "y": 140,
+                "x": 345,
+                "y": 150,
                 "echelle": 0.5,
                 "de": 0.8,
                 "flotte": true
               },
               {
                 "objet": "coeur",
-                "x": 240,
-                "y": 180,
+                "x": 250,
+                "y": 190,
                 "echelle": 0.32,
-                "de": 1.2000000000000002,
+                "de": 1.3,
                 "flotte": true
               },
               {
                 "objet": "coeur",
-                "x": 435,
-                "y": 190,
+                "x": 440,
+                "y": 200,
                 "echelle": 0.36,
-                "de": 1.6,
+                "de": 1.7,
                 "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "envoie-lui ça",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

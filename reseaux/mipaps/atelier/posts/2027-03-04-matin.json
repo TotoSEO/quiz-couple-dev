@@ -1,0 +1,261 @@
+{
+  "jour": "2027-03-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-344",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne veut monter sur tes épaules au concert | Un concert : des notes, des étoiles, la nuit ; les deux dansent, ravis ; elle se dresse sur la pointe des pattes pour voir, n'y arrive pas, et le regarde, suppliante. | Il se baisse, elle grimpe, et le voilà avec elle assise sur ses épaules, les bras en l'air, ravie, qui voit tout ; lui, en dessous, tient bon, les pattes levées, souriant. | « 2 h plus tard » en bas. Elle, toujours sur ses épaules, chante, les bras en l'air ; lui, en dessous, les pattes qui tremblent, des sueurs, les yeux en croix, tient encore ; il tient toujours.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Un concert : des notes, des étoiles, la nuit ; les deux dansent, ravis ; elle se dresse sur la pointe des pattes pour voir, n'y arrive pas, et le regarde, suppliante.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "danse",
+                    "expression": "joie",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 460,
+                    "pose": "danse",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.4,
+                    "pose": "etire",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "expression": "supplie",
+                    "bras": "priere",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 90,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 110,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 200,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 1.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne veut monter sur tes épaules au concert",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "ambiance": "brouhaha"
+          },
+          {
+            "duree": 4,
+            "description": "Il se baisse, elle grimpe, et le voilà avec elle assise sur ses épaules, les bras en l'air, ravie, qui voit tout ; lui, en dessous, tient bon, les pattes levées, souriant.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "assis",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "bras": "leves",
+                    "taille": 270,
+                    "expression": "effort"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 460,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 332,
+                    "y": 258,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "emerveille",
+                    "bras": "leves",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 90,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 110,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 180,
+                "y": 200,
+                "echelle": 0.5,
+                "de": 1.2,
+                "flotte": true
+              }
+            ],
+            "ambiance": "brouhaha"
+          },
+          {
+            "duree": 4.5,
+            "description": "« 2 h plus tard » en bas. Elle, toujours sur ses épaules, chante, les bras en l'air ; lui, en dessous, les pattes qui tremblent, des sueurs, les yeux en croix, tient encore ; il tient toujours.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "bras": "leves",
+                    "taille": 270,
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs"
+                    ],
+                    "pose": "tremble"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon",
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 332,
+                    "y": 258,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "chante",
+                    "bras": "leves",
+                    "signes": [
+                      "notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "etoiles",
+                "x": 150,
+                "y": 90,
+                "echelle": 0.7
+              },
+              {
+                "objet": "musique",
+                "x": 520,
+                "y": 110,
+                "echelle": 0.6,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "musique",
+                "x": 160,
+                "y": 190,
+                "echelle": 0.5,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "ambiance": "brouhaha"
+          }
+        ]
+      },
+      "legende": "envoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

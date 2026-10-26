@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-105",
+  "sujet": "ani-218",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,88 +12,36 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Toi quand t'as toujours froid : elle tremble, lui est en t-shirt ; elle vient se coller à lui, lui prend son pull ; c'est lui qui tremble, elle est ravie. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne demande « j'suis belle ? » | Elle à gauche dans un nouveau pull, timide, prend la pose ; lui à droite, le nez dans son téléphone, content, ne lève pas les yeux ; en haut s'écrit « j'suis belle ? ». | Il lève les yeux, surpris, réfléchit, des petits points, puis lève le pouce, content de lui ; elle attend, puis devient blasée, les bras ballants. | Elle se détourne et boude ; il comprend, panique, court jusqu'à elle et la serre dans ses bras ; elle fait la tête encore une seconde, puis fond ; des cœurs.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle grelotte, les bras croisés, des flocons autour d'elle. Lui est à côté, content, en t-shirt, les pattes sur les hanches. Le texte à 0,2 s.",
+            "duree": 4,
+            "description": "Elle à gauche dans un nouveau pull, timide, prend la pose ; lui à droite, le nez dans son téléphone, content, ne lève pas les yeux ; en haut s'écrit « j'suis belle ? ».",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "froid",
-                    "bras": "croises",
-                    "signes": [
-                      "flocons"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
+                    "x": 280,
+                    "expression": "timide"
+                  },
                   {
-                    "a": 0,
-                    "x": 410,
-                    "pose": "debout",
+                    "a": 2.2,
                     "expression": "content",
                     "bras": "hanches"
                   }
                 ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "t'as toujours froid, ta personne jamais",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle se rapproche de lui en marchant, se colle contre lui à 1,5 s. Il tient un pull à la patte. À 2,2 s elle lui prend le pull, qui glisse vers elle.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "froid",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 1.5,
-                    "x": 340,
-                    "pose": "debout",
-                    "expression": "malicieux",
-                    "bras": "tend_d"
-                  },
-                  {
-                    "a": 2,
-                    "angle": 0
-                  }
-                ]
               },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
+                    "x": 470,
                     "expression": "content",
                     "bras": "tient"
                   }
@@ -103,46 +51,110 @@
             "objets": [
               {
                 "objet": "pull",
-                "x": 445,
-                "y": 310,
-                "echelle": 0.6,
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 445,
-                    "y": 310,
-                    "echelle": 0.6
-                  },
-                  {
-                    "a": 2.2,
-                    "x": 445,
-                    "y": 310,
-                    "echelle": 0.6
-                  },
-                  {
-                    "a": 3,
-                    "x": 345,
-                    "y": 290,
-                    "echelle": 0.9
-                  }
-                ]
+                "x": 280,
+                "y": 300,
+                "echelle": 1.2
+              },
+              {
+                "objet": "telephone",
+                "x": 470,
+                "y": 300,
+                "echelle": 0.55
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne demande « j'suis belle ? »",
+                "de": 0.2,
+                "a": 2.0,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« j'suis belle ? »",
+                "de": 2.2,
+                "place": "haut",
+                "style": "message"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle porte maintenant le pull, ravie, les pattes dans les manches. Lui est à côté en t-shirt et grelotte, des flocons autour de lui, les bras croisés.",
+            "description": "Il lève les yeux, surpris, réfléchit, des petits points, puis lève le pouce, content de lui ; elle attend, puis devient blasée, les bras ballants.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "expression": "surpris",
+                    "vers": -1,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "content",
+                    "bras": "pouce"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "attend",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 280,
+                "y": 300,
+                "echelle": 1.2
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle se détourne et boude ; il comprend, panique, court jusqu'à elle et la serre dans ses bras ; elle fait la tête encore une seconde, puis fond ; des cœurs.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "joie",
-                    "bras": "joues"
+                    "x": 280,
+                    "expression": "boude",
+                    "vers": 1,
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "narquois"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
                   }
                 ]
               },
@@ -151,13 +163,30 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "pose": "debout",
-                    "expression": "froid",
-                    "bras": "croises",
+                    "x": 470,
+                    "expression": "panique",
                     "signes": [
-                      "flocons"
+                      "sueurs"
                     ]
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 470,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 390,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "bras": "tend_g",
+                    "pose": "penche_g",
+                    "expression": "calin"
                   }
                 ]
               }
@@ -165,20 +194,44 @@
             "objets": [
               {
                 "objet": "pull",
-                "x": 250,
-                "y": 290,
-                "echelle": 1.0
+                "x": 280,
+                "y": 300,
+                "echelle": 1.2
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 3.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 3.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 430,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 3.9,
+                "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "envoie ça à la personne qui fait ça",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

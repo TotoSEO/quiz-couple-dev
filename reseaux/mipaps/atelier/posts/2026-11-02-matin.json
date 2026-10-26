@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-028",
+  "sujet": "ani-208",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,103 +12,24 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand t'as faim et qu'il n'y a rien : il hésite, rouvre le frigo au cas où, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne refuse de mettre une veste | Dehors, un petit nuage en haut à droite ; elle à gauche, bonnet sur la tête et écharpe autour du cou, contente ; lui à droite, en t-shirt, les pattes sur les hanches, cool. | « 5 min plus tard » en bas. Des flocons tombent ; lui se met à trembler, des frissons, puis supplie en se tournant vers elle, les pattes jointes ; elle le regarde en coin, narquoise. | Les deux serrés l'un contre l'autre au milieu, la même écharpe enroulée autour des deux cous ; lui a le bonnet, elle sourit ; les flocons continuent, un petit cœur monte.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Il est au milieu, il hésite, des points d'interrogation au-dessus de lui, il se gratte la tête. Il regarde à droite, puis à gauche. Le texte se pose à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 320,
-                    "expression": "hesite",
-                    "signes": [
-                      "question"
-                    ]
-                  },
-                  {
-                    "a": 2,
-                    "expression": "perplexe",
-                    "bras": "menton"
-                  }
-                ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "quand t'as faim mais y a rien dans le frigo",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il ouvre la porte du frigo à droite : il regarde dedans, et son visage s'effondre, les épaules tombent. Le texte à 0,2 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 270,
-                    "expression": "curieux"
-                  },
-                  {
-                    "a": 1.2,
-                    "expression": "deprime"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "porte",
-                "x": 450,
-                "y": 300,
-                "echelle": 1.4
-              }
-            ],
-            "textes": [
-              {
-                "texte": "tu rouvres le frigo, au cas où",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 4.5,
-            "transition": "fondu",
-            "description": "Elle arrive du bord gauche en marchant de profil, une pizza à la patte, et s'arrête devant lui à 2 s, se tourne vers nous à 2,5 s. Il lève les yeux, des étoiles dans le regard, et saute de joie à 3,2 s.",
+            "description": "Dehors, un petit nuage en haut à droite ; elle à gauche, bonnet sur la tête et écharpe autour du cou, contente ; lui à droite, en t-shirt, les pattes sur les hanches, cool.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
+                    "x": 270,
+                    "y": 380,
+                    "taille": 250,
                     "expression": "content"
-                  },
-                  {
-                    "a": 2,
-                    "x": 240,
-                    "pose": "debout"
-                  },
-                  {
-                    "a": 2.5,
-                    "angle": 0,
-                    "expression": "fier",
-                    "bras": "tend_d"
                   }
                 ]
               },
@@ -117,58 +38,226 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "expression": "deprime"
-                  },
-                  {
-                    "a": 2.8,
-                    "expression": "emerveille",
-                    "signes": [
-                      "etoiles"
-                    ]
-                  },
-                  {
-                    "a": 3.2,
-                    "pose": "saut",
-                    "expression": "triomphe"
+                    "x": 450,
+                    "y": 380,
+                    "taille": 250,
+                    "expression": "cool",
+                    "bras": "hanches"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": -140,
-                "y": 350,
-                "echelle": 0.6,
+                "objet": "nuage",
+                "x": 530,
+                "y": 80,
+                "echelle": 0.8
+              },
+              {
+                "objet": "bonnet",
+                "x": 270,
+                "y": 165,
+                "echelle": 0.9
+              },
+              {
+                "objet": "echarpe",
+                "x": 270,
+                "y": 290,
+                "echelle": 0.9
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne refuse de mettre une veste",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 5 min plus tard » en bas. Des flocons tombent ; lui se met à trembler, des frissons, puis supplie en se tournant vers elle, les pattes jointes ; elle le regarde en coin, narquoise.",
+            "persos": [
+              {
+                "perso": "lui",
                 "etapes": [
                   {
-                    "a": 0.01,
-                    "x": -140,
-                    "y": 350
+                    "a": 0,
+                    "x": 450,
+                    "expression": "cool",
+                    "bras": "hanches"
                   },
                   {
-                    "a": 2,
-                    "x": 240,
-                    "y": 350
+                    "a": 0.6,
+                    "expression": "froid",
+                    "pose": "tremble",
+                    "signes": [
+                      "frissons"
+                    ],
+                    "bras": "croises"
                   },
                   {
-                    "a": 2.5,
-                    "x": 345,
-                    "y": 338
+                    "a": 2.2,
+                    "expression": "supplie",
+                    "bras": "priere",
+                    "vers": -1,
+                    "pose": "debout"
                   }
                 ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "narquois",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "bonnet",
+                "x": 270,
+                "y": 165,
+                "echelle": 0.9
+              },
+              {
+                "objet": "echarpe",
+                "x": 270,
+                "y": 290,
+                "echelle": 0.9
+              },
+              {
+                "objet": "flocon",
+                "x": 380,
+                "y": 120,
+                "echelle": 0.35,
+                "de": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 540,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 150,
+                "y": 230,
+                "echelle": 0.3,
+                "de": 1.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "5 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Les deux serrés l'un contre l'autre au milieu, la même écharpe enroulée autour des deux cous ; lui a le bonnet, elle sourit ; les flocons continuent, un petit cœur monte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "timide"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "echarpe",
+                "x": 345,
+                "y": 290,
+                "echelle": 1.7,
+                "de": 0.4
+              },
+              {
+                "objet": "bonnet",
+                "x": 400,
+                "y": 165,
+                "echelle": 0.9,
+                "de": 0.4
+              },
+              {
+                "objet": "flocon",
+                "x": 160,
+                "y": 150,
+                "echelle": 0.3,
+                "de": 0.5,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 520,
+                "y": 110,
+                "echelle": 0.35,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 160,
+                "echelle": 0.4,
+                "de": 2.4,
+                "flotte": true
               }
             ]
           }
         ]
       },
-      "legende": "tu fais ça aussi ?",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#amoureux"
+        "#amour",
+        "#humour"
       ]
     }
   }

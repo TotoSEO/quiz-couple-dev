@@ -1,0 +1,280 @@
+{
+  "jour": "2027-01-09",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-281",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on se croise à 3 h dans le couloir | La nuit, un couloir, une porte à chaque bout ; lui sort de la gauche en traînant, les yeux fermés ; elle sort de la droite pareil ; ils avancent l'un vers l'autre sans se voir. | Ils se rentrent dedans ; les deux sursautent, les yeux ronds, deux points d'exclamation ; ils se reconnaissent, soulagés ; ils rient tout bas, encore à moitié endormis. | Un câlin au milieu du couloir, les yeux fermés, un petit cœur ; puis chacun repart de son côté en traînant, elle vers la gauche, lui vers la droite : ils ont échangé.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La nuit, un couloir, une porte à chaque bout ; lui sort de la gauche en traînant, les yeux fermés ; elle sort de la droite pareil ; ils avancent l'un vers l'autre sans se voir.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 280,
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 410,
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 320,
+                "y": 85,
+                "echelle": 0.6
+              },
+              {
+                "objet": "porte",
+                "x": 60,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on se croise à 3 h dans le couloir",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Ils se rentrent dedans ; les deux sursautent, les yeux ronds, deux points d'exclamation ; ils se reconnaissent, soulagés ; ils rient tout bas, encore à moitié endormis.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "angle": 0
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "angle": 0
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "soulage"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 320,
+                "y": 85,
+                "echelle": 0.6
+              },
+              {
+                "objet": "porte",
+                "x": 60,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 0.3
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Un câlin au milieu du couloir, les yeux fermés, un petit cœur ; puis chacun repart de son côté en traînant, elle vers la gauche, lui vers la droite : ils ont échangé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "penche_d",
+                    "bras": "tend_d",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 290,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 400,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "lune",
+                "x": 320,
+                "y": 85,
+                "echelle": 0.6
+              },
+              {
+                "objet": "porte",
+                "x": 60,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "porte",
+                "x": 580,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 160,
+                "echelle": 0.4,
+                "de": 0.4,
+                "a": 1.8,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

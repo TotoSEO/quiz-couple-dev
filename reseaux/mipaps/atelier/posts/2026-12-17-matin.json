@@ -1,0 +1,311 @@
+{
+  "jour": "2026-12-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-259",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne ouvre la fenêtre en plein hiver | Lui à droite, rouge, de la vapeur au-dessus de la tête, a trop chaud ; il ouvre la fenêtre derrière lui, soulagé ; des flocons entrent ; elle, à gauche sous un plaid, lève les yeux. | Elle grelotte, des frissons, des flocons jusqu'à elle ; elle enfile un bonnet, puis une écharpe, puis se roule en boule dans le plaid ; lui, en t-shirt, respire à pleins poumons, ravi. | Il se retourne enfin vers elle : une boule de plaid avec un bonnet, deux yeux qui dépassent, des flocons dessus ; il ferme la fenêtre, gêné, et vient se glisser dans le plaid avec elle.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui à droite, rouge, de la vapeur au-dessus de la tête, a trop chaud ; il ouvre la fenêtre derrière lui, soulagé ; des flocons entrent ; elle, à gauche sous un plaid, lève les yeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "chaud",
+                    "signes": [
+                      "vapeur"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tend_d",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "soulage",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "surpris",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 560,
+                "y": 170,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "couverture",
+                "x": 230,
+                "y": 300,
+                "echelle": 1.8
+              },
+              {
+                "objet": "flocon",
+                "x": 540,
+                "y": 200,
+                "echelle": 0.3,
+                "de": 2.2,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 500,
+                "y": 140,
+                "echelle": 0.25,
+                "de": 2.8,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne ouvre la fenêtre en plein hiver",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle grelotte, des frissons, des flocons jusqu'à elle ; elle enfile un bonnet, puis une écharpe, puis se roule en boule dans le plaid ; lui, en t-shirt, respire à pleins poumons, ravi.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tete"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "bas",
+                    "expression": "froid",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "pose": "boule",
+                    "taille": 230
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 560,
+                "y": 170,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 230,
+                "y": 150,
+                "echelle": 0.9,
+                "de": 1.2
+              },
+              {
+                "objet": "echarpe",
+                "x": 230,
+                "y": 290,
+                "echelle": 0.9,
+                "de": 2.0
+              },
+              {
+                "objet": "couverture",
+                "x": 230,
+                "y": 300,
+                "echelle": 1.8
+              },
+              {
+                "objet": "flocon",
+                "x": 300,
+                "y": 160,
+                "echelle": 0.3,
+                "de": 0.4,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 400,
+                "y": 220,
+                "echelle": 0.3,
+                "de": 1.0,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il se retourne enfin vers elle : une boule de plaid avec un bonnet, deux yeux qui dépassent, des flocons dessus ; il ferme la fenêtre, gêné, et vient se glisser dans le plaid avec elle.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "pose": "boule",
+                    "taille": 230,
+                    "expression": "froid",
+                    "signes": [
+                      "frissons",
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "gene",
+                    "bras": "tend_d",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 450,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 320,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.4,
+                    "pose": "penche_g",
+                    "expression": "calin",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.45,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fenetre",
+                "x": 560,
+                "y": 170,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 230,
+                "y": 150,
+                "echelle": 0.9
+              },
+              {
+                "objet": "couverture",
+                "x": 260,
+                "y": 300,
+                "echelle": 2.2
+              },
+              {
+                "objet": "coeur",
+                "x": 290,
+                "y": 150,
+                "echelle": 0.4,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

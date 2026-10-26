@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-128",
+  "sujet": "ani-245",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,28 +12,33 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "L'au revoir du soir qui dure : « bon, j'y vais », il marche vers la porte ; il revient pour un bisou ; il repart ; une heure plus tard, il est assis sur le canapé avec elle, l'écharpe encore au cou. Trois plans, 12 secondes.",
+        "idee": "toi quand ta personne voit un chat | Dehors, un arbre ; les deux marchent main dans la main vers la droite ; un chat est assis au pied de l'arbre ; elle s'arrête net, émerveillée, et le montre du doigt. | Elle s'accroupit près du chat, les yeux en cœur ; lui, debout, les bras croisés, blasé, attend ; elle lui tend le chat ; il fait non de la tête, pas convaincu. | Lui, debout, le chat dans les bras, d'abord gêné ; le chat se blottit ; il fond complètement, les yeux en cœur, des cœurs qui montent ; elle, derrière, prend une photo, ravie.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Il marche de profil vers la porte, à droite, pressé. Elle est à gauche, contente, elle lui fait coucou de la patte. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Dehors, un arbre ; les deux marchent main dans la main vers la droite ; un chat est assis au pied de l'arbre ; elle s'arrête net, émerveillée, et le montre du doigt.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
+                    "x": -140,
                     "angle": 90,
                     "pose": "marche",
                     "expression": "content"
                   },
                   {
                     "a": 1.8,
-                    "x": 430
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0
                   }
                 ]
               },
@@ -42,25 +47,46 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 190,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "coucou"
+                    "x": -260,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 210,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0,
+                    "expression": "emerveille",
+                    "bras": "pointe",
+                    "signes": [
+                      "etincelles"
+                    ]
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "porte",
-                "x": 520,
-                "y": 260,
-                "echelle": 1.2
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "chat",
+                "x": 510,
+                "y": 345,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "l'au revoir du soir qui dure",
+                "texte": "toi quand ta personne voit un chat",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -69,81 +95,110 @@
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Il fait demi-tour et revient vers elle en marchant à 0,4 s, un bisou, un cœur apparaît à 2 s ; il repart vers la porte à 2,6 s en lui faisant signe.",
+            "description": "Elle s'accroupit près du chat, les yeux en cœur ; lui, debout, les bras croisés, blasé, attend ; elle lui tend le chat ; il fait non de la tête, pas convaincu.",
             "persos": [
               {
-                "perso": "lui",
+                "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 430,
+                    "x": 210,
+                    "expression": "emerveille"
+                  },
+                  {
+                    "a": 0.3,
+                    "x": 210,
                     "angle": 90,
                     "pose": "marche",
                     "expression": "amour"
                   },
                   {
-                    "a": 1.6,
-                    "x": 250,
+                    "a": 1.4,
+                    "x": 420,
                     "pose": "debout"
                   },
                   {
-                    "a": 2.6,
-                    "pose": "marche",
-                    "expression": "content"
+                    "a": 1.8,
+                    "pose": "assis",
+                    "expression": "amour",
+                    "bras": "tend_g"
                   },
                   {
-                    "a": 3.8,
-                    "x": 430
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.0,
+                    "bras": "tend_d"
                   }
                 ]
               },
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 190,
-                    "pose": "debout",
-                    "expression": "amour",
-                    "bras": "coucou"
+                    "x": 330,
+                    "expression": "blase",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "hesite"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "porte",
-                "x": 520,
-                "y": 260,
-                "echelle": 1.2
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
               },
               {
-                "objet": "coeur",
-                "x": 215,
-                "y": 130,
-                "echelle": 0.45,
-                "de": 1.8,
-                "a": 3,
-                "flotte": true
+                "objet": "chat",
+                "x": 510,
+                "y": 345,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 2.8,
+                    "x": 510
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 380,
+                    "y": 300
+                  }
+                ]
               }
             ]
           },
           {
             "duree": 4.5,
-            "transition": "fondu",
-            "description": "Les deux sont assis sur le canapé, bien installés, contents. Il porte encore son écharpe autour du cou. Le texte « 1 h plus tard » à 0,2 s.",
+            "description": "Lui, debout, le chat dans les bras, d'abord gêné ; le chat se blottit ; il fond complètement, les yeux en cœur, des cœurs qui montent ; elle, derrière, prend une photo, ravie.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 226,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "content"
+                    "x": 330,
+                    "expression": "gene",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "transi"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
                   }
                 ]
               },
@@ -152,50 +207,56 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 414,
-                    "y": 318,
-                    "taille": 210,
-                    "pose": "assis",
-                    "expression": "amour"
+                    "x": 500,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tient",
+                    "expression": "malicieux"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "echarpe",
-                "x": 226,
-                "y": 290,
-                "echelle": 0.9
+                "objet": "arbre",
+                "x": 515,
+                "y": 255,
+                "echelle": 1.3,
+                "derriere": true
+              },
+              {
+                "objet": "chat",
+                "x": 330,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 1.8
               },
               {
                 "objet": "coeur",
-                "x": 320,
+                "x": 380,
                 "y": 140,
                 "echelle": 0.4,
-                "de": 1,
+                "de": 2.8,
                 "flotte": true
               }
-            ],
-            "textes": [
-              {
-                "texte": "1 h plus tard",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ],
-            "meubles": [
-              "canape_fond"
             ]
           }
         ]
       },
-      "legende": "envoie ça à ta personne",
+      "legende": "tague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

@@ -1,0 +1,342 @@
+{
+  "jour": "2027-02-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-338",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a pris toute la salle de bain | Un rebord de lavabo : à gauche, une brosse à dents, celle de lui, toute seule ; à droite, une brosse, une bougie, des lunettes, une fleur, un pot ; il arrive, sa brosse à la patte, et cherche une place. | Il pousse un objet d'un doigt pour se faire une place ; elle arrive derrière lui, les bras croisés, le regard noir ; il remet l'objet, l'auréole, et recule d'un pas. | Il range sa brosse à dents sur sa propre tête, entre les oreilles, et sort fièrement par la gauche ; elle, bouche bée, puis morte de rire ; le rebord reste à elle.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Un rebord de lavabo : à gauche, une brosse à dents, celle de lui, toute seule ; à droite, une brosse, une bougie, des lunettes, une fleur, un pot ; il arrive, sa brosse à la patte, et cherche une place.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 220,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "perplexe",
+                    "signes": [
+                      "question"
+                    ],
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 420,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "bougie",
+                "x": 470,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "lunettes",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "fleur",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.45
+              },
+              {
+                "objet": "plante",
+                "x": 370,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a pris toute la salle de bain",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il pousse un objet d'un doigt pour se faire une place ; elle arrive derrière lui, les bras croisés, le regard noir ; il remet l'objet, l'auréole, et recule d'un pas.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 220,
+                    "expression": "determine",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "surpris",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_d",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 3.0,
+                    "x": 150,
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.8,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "suspicieux",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 520,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.45,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 420,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 300
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 300
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 420
+                  }
+                ]
+              },
+              {
+                "objet": "bougie",
+                "x": 470,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "lunettes",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "fleur",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.45
+              },
+              {
+                "objet": "plante",
+                "x": 370,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il range sa brosse à dents sur sa propre tête, entre les oreilles, et sort fièrement par la gauche ; elle, bouche bée, puis morte de rire ; le rebord reste à elle.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tete"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "bas",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 150,
+                    "angle": -90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 4.2,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 520,
+                    "expression": "furieux"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "mort_de_rire",
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "brosse",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.4
+              },
+              {
+                "objet": "brosse",
+                "x": 150,
+                "y": 150,
+                "echelle": 0.45,
+                "de": 1.4,
+                "etapes": [
+                  {
+                    "a": 2.6,
+                    "x": 150
+                  },
+                  {
+                    "a": 4.2,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "objet": "bougie",
+                "x": 470,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "lunettes",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "fleur",
+                "x": 560,
+                "y": 300,
+                "echelle": 0.45
+              },
+              {
+                "objet": "plante",
+                "x": 370,
+                "y": 300,
+                "echelle": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "jour": "2027-03-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-343",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne a « fini » la vaisselle | Cinq tasses sales alignées à droite ; lui en lave une, concentré, la pose à gauche, bien propre, et s'essuie le front, fier ; en haut s'écrit « c'est bon, j'ai fait la vaisselle ». | Elle arrive de la gauche, regarde la tasse propre, puis les cinq tasses sales, puis lui ; elle lève un sourcil ; lui lève le pouce, très content de lui ; elle est blasée. | Elle pousse les cinq tasses sales vers lui d'un seul geste ; elles glissent toutes jusqu'à ses pattes ; il les regarde, la regarde, soupire, et reprend l'éponge, blasé ; elle part, les pattes sur les hanches.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Cinq tasses sales alignées à droite ; lui en lave une, concentré, la pose à gauche, bien propre, et s'essuie le front, fier ; en haut s'écrit « c'est bon, j'ai fait la vaisselle ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "bras": "tend_g",
+                    "expression": "effort",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "hanches",
+                    "expression": "fier",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.4
+              },
+              {
+                "objet": "tasse",
+                "x": 130,
+                "y": 345,
+                "echelle": 0.5,
+                "de": 1.4
+              },
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 490,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 540,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 590,
+                "y": 345,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne a « fini » la vaisselle",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« c'est bon, j'ai fait la vaisselle »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle arrive de la gauche, regarde la tasse propre, puis les cinq tasses sales, puis lui ; elle lève un sourcil ; lui lève le pouce, très content de lui ; elle est blasée.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "vers": -1,
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.4,
+                    "vers": 1,
+                    "expression": "perplexe"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "fier",
+                    "bras": "hanches"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "pouce",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 130,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 490,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 540,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 590,
+                "y": 345,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle pousse les cinq tasses sales vers lui d'un seul geste ; elles glissent toutes jusqu'à ses pattes ; il les regarde, la regarde, soupire, et reprend l'éponge, blasé ; elle part, les pattes sur les hanches.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 200,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 400,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g",
+                    "expression": "narquois"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 400,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 4.4,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content",
+                    "bras": "pouce"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "surpris",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "blase",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 130,
+                "y": 345,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 345,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 440
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 250
+                  }
+                ]
+              },
+              {
+                "objet": "tasse",
+                "x": 490,
+                "y": 345,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 490
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 290
+                  }
+                ]
+              },
+              {
+                "objet": "tasse",
+                "x": 540,
+                "y": 345,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 540
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 330
+                  }
+                ]
+              },
+              {
+                "objet": "tasse",
+                "x": 590,
+                "y": 345,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 1.8,
+                    "x": 590
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 370
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "nom": "glisse",
+                "a": 1.9
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

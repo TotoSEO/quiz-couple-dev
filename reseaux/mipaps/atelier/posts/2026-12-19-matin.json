@@ -1,0 +1,249 @@
+{
+  "jour": "2026-12-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-261",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne dit « c'est pas grave » | Lui à gauche, désolé, les pattes jointes ; elle à droite, le sourire un peu figé ; en haut s'écrit « c'est pas grave » ; il souffle, soulagé ; un petit nuage apparaît au-dessus d'elle. | « 5 min plus tard » en bas. Le nuage au-dessus d'elle grossit, grossit ; elle boude, les bras croisés ; lui le remarque, inquiet, puis panique à mesure que le nuage prend toute la place. | Le nuage est énorme, il pleut dessous ; elle boude dessous, trempée ; lui arrive avec un parapluie, le tient au-dessus d'elle, et attend, désolé ; elle finit par sourire en coin.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui à gauche, désolé, les pattes jointes ; elle à droite, le sourire un peu figé ; en haut s'écrit « c'est pas grave » ; il souffle, soulagé ; un petit nuage apparaît au-dessus d'elle.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "desole",
+                    "bras": "priere"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "soulage",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "nuage",
+                "x": 450,
+                "y": 130,
+                "echelle": 0.4,
+                "de": 3.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne dit « c'est pas grave »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« c'est pas grave »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 5 min plus tard » en bas. Le nuage au-dessus d'elle grossit, grossit ; elle boude, les bras croisés ; lui le remarque, inquiet, puis panique à mesure que le nuage prend toute la place.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "furieux",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "inquiet",
+                    "vers": 1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "nuage",
+                "x": 450,
+                "y": 130,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "echelle": 0.5
+                  },
+                  {
+                    "a": 1.5,
+                    "echelle": 1.0
+                  },
+                  {
+                    "a": 3.5,
+                    "echelle": 1.8
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "5 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Le nuage est énorme, il pleut dessous ; elle boude dessous, trempée ; lui arrive avec un parapluie, le tient au-dessus d'elle, et attend, désolé ; elle finit par sourire en coin.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "furieux",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "narquois",
+                    "vers": -1
+                  },
+                  {
+                    "a": 3.8,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 270,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 350,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_haut_d",
+                    "expression": "desole"
+                  },
+                  {
+                    "a": 1.85,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "nuage",
+                "x": 450,
+                "y": 110,
+                "echelle": 1.8
+              },
+              {
+                "objet": "pluie",
+                "x": 450,
+                "y": 200,
+                "echelle": 0.9,
+                "de": 0.2
+              },
+              {
+                "objet": "parapluie",
+                "x": 430,
+                "y": 230,
+                "echelle": 2.0,
+                "de": 1.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

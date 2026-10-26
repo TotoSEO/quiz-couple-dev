@@ -1,0 +1,336 @@
+{
+  "jour": "2027-03-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-353",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne garde les cartons « au cas où » | Lui, à gauche, pousse un carton vers la porte pour le jeter, décidé ; elle arrive de la droite en courant, le prend, le serre contre elle, choquée ; en haut : « ça peut servir ». | Il en prend un autre ; elle le récupère ; un autre ; elle le récupère ; les cartons s'empilent derrière elle, de plus en plus haut ; lui, les bras ballants, blasé. | « 1 mois plus tard » en bas. Le salon est plein de cartons ; les deux assis chacun dans un carton, comme dans des fauteuils, le téléphone à la patte, contents ; elle lève le pouce : elle avait raison.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Lui, à gauche, pousse un carton vers la porte pour le jeter, décidé ; elle arrive de la droite en courant, le prend, le serre contre elle, choquée ; en haut : « ça peut servir ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "pousse",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "surpris"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.6,
+                    "x": 820,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 480,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "tend_g",
+                    "expression": "choque"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.8,
+                    "bras": "tient",
+                    "expression": "supplie"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 230,
+                "y": 345,
+                "echelle": 1.0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 410
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 410
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 480,
+                    "y": 300
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne garde les cartons « au cas où »",
+                "de": 0.2,
+                "a": 1.8,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« ça peut servir »",
+                "de": 2.0,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il en prend un autre ; elle le récupère ; un autre ; elle le récupère ; les cartons s'empilent derrière elle, de plus en plus haut ; lui, les bras ballants, blasé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "blase",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 3.0,
+                    "bras": "bas",
+                    "expression": "exaspere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 480,
+                    "expression": "determine",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 1.2,
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 3.0,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 560,
+                "y": 345,
+                "echelle": 1.0
+              },
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 560,
+                    "y": 250
+                  }
+                ]
+              },
+              {
+                "objet": "caisse",
+                "x": 330,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 1.6,
+                "etapes": [
+                  {
+                    "a": 1.6,
+                    "x": 330
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 560,
+                    "y": 155
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 mois plus tard » en bas. Le salon est plein de cartons ; les deux assis chacun dans un carton, comme dans des fauteuils, le téléphone à la patte, contents ; elle lève le pouce : elle avait raison.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 350,
+                    "taille": 170,
+                    "pose": "boule",
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "y": 350,
+                    "taille": 170,
+                    "pose": "boule",
+                    "expression": "fier",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "pouce",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "caisse",
+                "x": 250,
+                "y": 355,
+                "echelle": 1.1
+              },
+              {
+                "objet": "caisse",
+                "x": 430,
+                "y": 355,
+                "echelle": 1.1
+              },
+              {
+                "objet": "caisse",
+                "x": 120,
+                "y": 345,
+                "echelle": 0.9,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 560,
+                "y": 345,
+                "echelle": 0.9,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 340,
+                "y": 250,
+                "echelle": 0.8,
+                "derriere": true
+              },
+              {
+                "objet": "caisse",
+                "x": 560,
+                "y": 250,
+                "echelle": 0.8,
+                "derriere": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 mois plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

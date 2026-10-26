@@ -1,0 +1,296 @@
+{
+  "jour": "2027-03-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-342",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux et la promesse de regarder la suite ensemble | Les deux face à face, la patte levée, solennels ; en haut s'écrit « promis, on regarde la suite ensemble » ; ils se serrent la patte ; chacun part de son côté, l'auréole. | « la nuit » en bas. La lune ; le canapé, la télé éteinte ; lui arrive de la gauche sur la pointe des pattes, le doigt sur la bouche ; elle arrive de la droite pareil ; ils ne se voient pas encore. | Ils tendent la patte vers la télé en même temps, se voient, se figent, deux points d'exclamation ; un silence ; puis ils éclatent de rire et s'installent ensemble, sous le plaid, la télé allumée.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux face à face, la patte levée, solennels ; en haut s'écrit « promis, on regarde la suite ensemble » ; ils se serrent la patte ; chacun part de son côté, l'auréole.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "determine",
+                    "bras": "leve_d"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tend_d",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "bas",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 270,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 3.9,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "determine",
+                    "bras": "leve_d"
+                  },
+                  {
+                    "a": 1.6,
+                    "bras": "tend_g",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 2.4,
+                    "bras": "bas",
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 450,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 3.9,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux et la promesse de regarder la suite ensemble",
+                "de": 0.2,
+                "a": 1.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« promis, on regarde la suite ensemble »",
+                "de": 1.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« la nuit » en bas. La lune ; le canapé, la télé éteinte ; lui arrive de la gauche sur la pointe des pattes, le doigt sur la bouche ; elle arrive de la droite pareil ; ils ne se voient pas encore.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "chut",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 200,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "chut",
+                    "bras": "bouche"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 450,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.8,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la nuit",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils tendent la patte vers la télé en même temps, se voient, se figent, deux points d'exclamation ; un silence ; puis ils éclatent de rire et s'installent ensemble, sous le plaid, la télé allumée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 200,
+                    "expression": "chut",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "vers": 1,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "chut",
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "vers": -1,
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "lune",
+                "x": 560,
+                "y": 90,
+                "echelle": 0.5
+              },
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 318,
+                "echelle": 2.4,
+                "de": 3.0
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 230,
+                "echelle": 0.3,
+                "de": 3.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "jour": "2027-01-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-272",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne « repose juste ses yeux » | Le canapé, la télé ; lui, les yeux fermés, la tête qui penche ; elle, à côté, le regarde, narquoise ; en haut s'écrit « tu dors ? » puis « non, je repose mes yeux ». | Il penche de plus en plus, la bouche ouverte, des z, puis une note de ronflement ; elle sourit, pose son téléphone, et le regarde dormir. | Elle attrape le plaid, le pose doucement sur lui, éteint la télé, et se blottit contre lui ; il dort toujours, les yeux « juste reposés » ; des petits cœurs.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé ; lui, les yeux fermés, la tête qui penche ; elle, à côté, le regarde, narquoise ; en haut s'écrit « tu dors ? » puis « non, je repose mes yeux ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "dodo"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "narquois",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne « repose juste ses yeux »",
+                "de": 0.2,
+                "a": 1.2,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« tu dors ? »",
+                "de": 1.4,
+                "a": 2.4,
+                "place": "haut",
+                "style": "message"
+              },
+              {
+                "texte": "« non, je repose mes yeux »",
+                "de": 2.6,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il penche de plus en plus, la bouche ouverte, des z, puis une note de ronflement ; elle sourit, pose son téléphone, et le regarde dormir.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 250,
+                    "pose": "penche_d",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "signes": [
+                      "zzz",
+                      "bulle_nez"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "narquois",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "amour"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "musique",
+                "x": 190,
+                "y": 190,
+                "echelle": 0.5,
+                "de": 2.4,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle attrape le plaid, le pose doucement sur lui, éteint la télé, et se blottit contre lui ; il dort toujours, les yeux « juste reposés » ; des petits cœurs.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 0.8,
+                    "bras": "tend_g"
+                  },
+                  {
+                    "a": 2.0,
+                    "x": 350,
+                    "pose": "penche_g",
+                    "expression": "content",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_d",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8,
+                "a": 1.6
+              },
+              {
+                "objet": "couverture",
+                "x": 290,
+                "y": 318,
+                "echelle": 2.4,
+                "de": 1.0
+              },
+              {
+                "objet": "coeur",
+                "x": 300,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 2.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 205,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 2.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 395,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 3.3,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

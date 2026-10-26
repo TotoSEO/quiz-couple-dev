@@ -1,0 +1,259 @@
+{
+  "jour": "2027-01-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-297",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand on dit « on range demain » | Le salon, un pull et un coussin par terre ; les deux sur le canapé, détendus ; en haut s'écrit « on range demain » ; ils trinquent du regard, l'auréole. | « le lendemain » en bas. Le pull, le coussin, un sac, une écharpe par terre en plus ; les deux sur le canapé, toujours détendus, l'auréole un peu moins droite ; en haut : « demain ». | « 1 semaine plus tard » en bas. Le salon est une montagne : pull, coussin, sac, écharpe, bonnet, chaussettes ; les deux assis au sommet du tas, zen, les yeux fermés, un petit cœur.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le salon, un pull et un coussin par terre ; les deux sur le canapé, détendus ; en haut s'écrit « on range demain » ; ils trinquent du regard, l'auréole.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 110,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "coussin",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand on dit « on range demain »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« on range demain »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« le lendemain » en bas. Le pull, le coussin, un sac, une écharpe par terre en plus ; les deux sur le canapé, toujours détendus, l'auréole un peu moins droite ; en haut : « demain ».",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 110,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "coussin",
+                "x": 560,
+                "y": 350,
+                "echelle": 0.8
+              },
+              {
+                "objet": "sac",
+                "x": 160,
+                "y": 340,
+                "echelle": 0.7
+              },
+              {
+                "objet": "echarpe",
+                "x": 520,
+                "y": 300,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le lendemain",
+                "de": 0.2,
+                "place": "bas"
+              },
+              {
+                "texte": "« demain »",
+                "de": 1.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 semaine plus tard » en bas. Le salon est une montagne : pull, coussin, sac, écharpe, bonnet, chaussettes ; les deux assis au sommet du tas, zen, les yeux fermés, un petit cœur.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 300,
+                    "taille": 200,
+                    "pose": "assis",
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 300,
+                    "taille": 200,
+                    "pose": "assis",
+                    "expression": "zen"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 180,
+                "y": 350,
+                "echelle": 1.0,
+                "derriere": true
+              },
+              {
+                "objet": "coussin",
+                "x": 460,
+                "y": 350,
+                "echelle": 1.0,
+                "derriere": true
+              },
+              {
+                "objet": "sac",
+                "x": 320,
+                "y": 360,
+                "echelle": 0.9,
+                "derriere": true
+              },
+              {
+                "objet": "echarpe",
+                "x": 240,
+                "y": 370,
+                "echelle": 0.9,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 420,
+                "y": 370,
+                "echelle": 0.8,
+                "derriere": true
+              },
+              {
+                "objet": "coeur",
+                "x": 325,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 2.0,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 semaine plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

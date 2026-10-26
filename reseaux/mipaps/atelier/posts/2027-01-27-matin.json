@@ -1,0 +1,269 @@
+{
+  "jour": "2027-01-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-302",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux quand le chat décide de l'heure du réveil | Le lit, le matin tôt ; les deux dorment ; le chat est assis sur lui et le fixe ; une horloge ; le chat tapote sa tête ; lui grogne sans ouvrir les yeux. | Le chat passe sur elle et s'assoit sur sa tête ; elle se réveille, les yeux ronds ; les deux se regardent, puis regardent l'horloge, puis le chat : 6 h. | « 10 min plus tard » en bas. Les deux debout, en pyjama, les yeux cernés, une tasse chacun, blasés ; dans le lit derrière eux, le chat dort, étalé au milieu, des z ; un petit cœur quand même.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le lit, le matin tôt ; les deux dorment ; le chat est assis sur lui et le fixe ; une horloge ; le chat tapote sa tête ; lui grogne sans ouvrir les yeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "exaspere",
+                    "pose": "allonge"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chat",
+                "x": 250,
+                "y": 290,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux quand le chat décide de l'heure du réveil",
+                "de": 0.2,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Le chat passe sur elle et s'assoit sur sa tête ; elle se réveille, les yeux ronds ; les deux se regardent, puis regardent l'horloge, puis le chat : 6 h.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "surpris",
+                    "pose": "allonge",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "exaspere"
+                  },
+                  {
+                    "a": 2.4,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase",
+                    "vers": 1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chat",
+                "x": 250,
+                "y": 290,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 394,
+                    "y": 240
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "6 h",
+                "de": 2.6,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 10 min plus tard » en bas. Les deux debout, en pyjama, les yeux cernés, une tasse chacun, blasés ; dans le lit derrière eux, le chat dort, étalé au milieu, des z ; un petit cœur quand même.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "expression": "fatigue",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 540,
+                    "expression": "fatigue",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 150,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "tasse",
+                "x": 540,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "chat",
+                "x": 320,
+                "y": 330,
+                "echelle": 0.9
+              },
+              {
+                "objet": "zzz",
+                "x": 370,
+                "y": 280,
+                "echelle": 0.4,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 200,
+                "echelle": 0.35,
+                "de": 3.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

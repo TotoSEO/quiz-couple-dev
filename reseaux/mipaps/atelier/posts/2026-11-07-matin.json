@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-110",
+  "sujet": "ani-213",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,199 +12,255 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Raccroche, toi » « non, toi » : chacun au téléphone, tout timide, des cœurs ; une heure plus tard, les deux endormis, le téléphone encore à la patte. Trois plans, 11 secondes.",
+        "idee": "toi quand ta personne dit « encore 5 min » le matin | Le lit, le réveil sonne, une horloge en haut à droite ; elle se redresse d'un coup, les yeux ronds, puis fatiguée ; lui dort allongé, des z ; en haut s'écrit « encore 5 min ». | « 20 min plus tard » en bas. Elle sort du lit par la droite, se lève, blasée ; lui n'a pas bougé, toujours allongé, une bulle au nez. | « 1 h plus tard » en bas. Elle, debout à droite, habillée, une tasse à la patte, blasée ; lui dort toujours ; d'un coup il se redresse, panique, des rayons autour de lui : il est en retard.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Elle est à droite, au téléphone, toute timide, les joues roses, des petits cœurs autour d'elle. Lui est à gauche, au téléphone aussi, qui sourit bêtement. Chacun chez soi, ils ne se regardent pas. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Le lit, le réveil sonne, une horloge en haut à droite ; elle se redresse d'un coup, les yeux ronds, puis fatiguée ; lui dort allongé, des z ; en haut s'écrit « encore 5 min ».",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 190,
-                    "expression": "content",
-                    "bras": "tient"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 450,
-                    "expression": "timide",
-                    "bras": "tient",
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.5,
+                    "expression": "surpris",
                     "signes": [
-                      "coeurs"
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "fatigue",
+                    "vers": -1
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
                     ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 228,
-                "y": 346,
-                "echelle": 0.5
-              },
-              {
-                "objet": "telephone",
-                "x": 488,
-                "y": 346,
-                "echelle": 0.5
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "« raccroche, toi »",
+                "texte": "toi quand ta personne dit « encore 5 min » le matin",
                 "de": 0.2,
+                "a": 2.2,
                 "place": "haut",
-                "style": "titre"
+                "style": "message"
+              },
+              {
+                "texte": "« encore 5 min »",
+                "de": 2.4,
+                "place": "haut",
+                "style": "message"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "reveil",
+                "a": 0.2
               }
             ]
           },
           {
             "duree": 3.5,
-            "transition": "coupe",
-            "description": "Même image. Lui devient tout timide à son tour à 0,4 s, les joues rouges, des cœurs au-dessus de lui ; elle se cache un peu derrière son téléphone, ravie. Le texte arrive à 0,4 s.",
+            "description": "« 20 min plus tard » en bas. Elle sort du lit par la droite, se lève, blasée ; lui n'a pas bougé, toujours allongé, une bulle au nez.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 190,
-                    "expression": "content",
-                    "bras": "tient"
-                  },
-                  {
-                    "a": 0.4,
-                    "expression": "timide",
-                    "signes": [
-                      "coeurs",
-                      "joues_hachures"
-                    ]
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 450,
-                    "expression": "timide",
-                    "bras": "tient"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "blase"
                   },
                   {
                     "a": 1.2,
-                    "expression": "transi",
-                    "signes": [
-                      "coeurs"
-                    ]
+                    "x": 560,
+                    "y": 380,
+                    "taille": 250,
+                    "pose": "debout",
+                    "bras": "bas",
+                    "pattes": "debout",
+                    "expression": "blase"
                   }
                 ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 228,
-                "y": 346,
-                "echelle": 0.5
               },
-              {
-                "objet": "telephone",
-                "x": 488,
-                "y": 346,
-                "echelle": 0.5
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« non, toi »",
-                "de": 0.4,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 4,
-            "transition": "fondu",
-            "description": "Une heure plus tard : les deux se sont endormis chacun de son côté, assis, la tête qui penche, le téléphone encore contre eux, des petits zzz au-dessus de chacun. Le texte se pose à 0,4 s.",
-            "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 190,
-                    "y": 380,
-                    "taille": 230,
-                    "pose": "assis",
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
                     "expression": "dodo",
-                    "bras": "tient",
                     "signes": [
-                      "zzz"
-                    ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 450,
-                    "y": 380,
-                    "taille": 230,
-                    "pose": "assis",
-                    "expression": "dodo",
-                    "bras": "tient",
-                    "signes": [
-                      "zzz"
+                      "zzz",
+                      "bulle_nez"
                     ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 228,
-                "y": 346,
-                "echelle": 0.5
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 1 h plus tard » en bas. Elle, debout à droite, habillée, une tasse à la patte, blasée ; lui dort toujours ; d'un coup il se redresse, panique, des rayons autour de lui : il est en retard.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 540,
+                    "expression": "blase",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "narquois",
+                    "vers": -1
+                  }
+                ]
               },
               {
-                "objet": "telephone",
-                "x": 488,
-                "y": 346,
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "panique",
+                    "signes": [
+                      "rayons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "lit_fond"
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 545,
+                "y": 85,
+                "echelle": 0.7
+              },
+              {
+                "objet": "tasse",
+                "x": 540,
+                "y": 300,
                 "echelle": 0.5
               }
             ],
             "textes": [
               {
                 "texte": "1 h plus tard",
-                "de": 0.4,
-                "place": "haut"
+                "de": 0.2,
+                "place": "bas"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "boing",
+                "a": 2.6
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#humour"
       ]
     }
   }

@@ -1,0 +1,289 @@
+{
+  "jour": "2027-01-23",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-298",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne « gère les billets » | Une gare, un banc ; les deux arrivent par la gauche avec une valise, elle devant, fière, un billet à la patte ; en haut s'écrit « t'inquiète, je gère ». | Elle regarde le billet de près ; son visage change : surprise, puis choc, puis panique, une goutte de sueur ; lui, derrière, n'a rien vu, regarde l'horloge. | En haut : « c'était hier. » ; lui se fige, bouche bée ; puis les deux assis sur le banc, la valise entre eux, blasés, regardent passer le vide ; elle lui tend le billet, désolée ; il rit.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Une gare, un banc ; les deux arrivent par la gauche avec une valise, elle devant, fière, un billet à la patte ; en haut s'écrit « t'inquiète, je gère ».",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 460,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.25,
+                    "angle": 0
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 330,
+                "echelle": 1.4,
+                "derriere": true
+              },
+              {
+                "objet": "ticket",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0
+              },
+              {
+                "objet": "valise",
+                "x": 460,
+                "y": 310,
+                "echelle": 0.9,
+                "de": 0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne « gère les billets »",
+                "de": 0.2,
+                "a": 1.6,
+                "place": "haut",
+                "style": "titre"
+              },
+              {
+                "texte": "« t'inquiète, je gère »",
+                "de": 1.8,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle regarde le billet de près ; son visage change : surprise, puis choc, puis panique, une goutte de sueur ; lui, derrière, n'a rien vu, regarde l'horloge.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "panique",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 460,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.0,
+                    "vers": 1,
+                    "expression": "attend"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 560,
+                "y": 330,
+                "echelle": 1.4,
+                "derriere": true
+              },
+              {
+                "objet": "ticket",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "valise",
+                "x": 460,
+                "y": 310,
+                "echelle": 0.9
+              },
+              {
+                "objet": "horloge",
+                "x": 540,
+                "y": 100,
+                "echelle": 0.7
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "En haut : « c'était hier. » ; lui se fige, bouche bée ; puis les deux assis sur le banc, la valise entre eux, blasés, regardent passer le vide ; elle lui tend le billet, désolée ; il rit.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "panique",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 480,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "desole"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 460,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "bouche_bee"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 600,
+                    "y": 330,
+                    "taille": 220,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "banc",
+                "x": 540,
+                "y": 330,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "valise",
+                "x": 540,
+                "y": 350,
+                "echelle": 0.9,
+                "de": 1.6
+              },
+              {
+                "objet": "ticket",
+                "x": 300,
+                "y": 300,
+                "echelle": 0.5,
+                "a": 1.6
+              },
+              {
+                "objet": "horloge",
+                "x": 150,
+                "y": 100,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« c'était hier. »",
+                "de": 0.3,
+                "place": "haut",
+                "style": "message"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

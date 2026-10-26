@@ -1,0 +1,326 @@
+{
+  "jour": "2027-02-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-321",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand c'est toi qui es prête en premier | La porte à droite ; elle, prête, un sac à la patte, attend, les bras croisés ; lui passe en courant dans un sens avec une seule chaussette, puis dans l'autre sens avec le pull à moitié mis. | « 10 min plus tard » en bas. Elle, assise par terre contre la porte, le téléphone à la patte ; lui repasse encore, les clés enfin, mais sans son bonnet ; il repart. | « 20 min plus tard » en bas. Il arrive enfin, fier, bonnet, écharpe, clés ; elle se lève, le regarde de haut en bas, et pointe ses pattes : il a oublié ses chaussures ; il baisse les yeux.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "La porte à droite ; elle, prête, un sac à la patte, attend, les bras croisés ; lui passe en courant dans un sens avec une seule chaussette, puis dans l'autre sens avec le pull à moitié mis.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "expression": "attend",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.7,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "sac",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.7
+              },
+              {
+                "objet": "chaussettes",
+                "x": 240,
+                "y": 300,
+                "echelle": 0.5,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 380
+                  },
+                  {
+                    "a": 1.7,
+                    "x": 380
+                  },
+                  {
+                    "a": 3.2,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand c'est toi qui es prête en premier",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "« 10 min plus tard » en bas. Elle, assise par terre contre la porte, le téléphone à la patte ; lui repasse encore, les clés enfin, mais sans son bonnet ; il repart.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "ennui",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "concentre",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.0,
+                    "angle": 0,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 3.6,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "telephone",
+                "x": 500,
+                "y": 300,
+                "echelle": 0.5
+              },
+              {
+                "objet": "cle",
+                "x": 380,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 1.6,
+                "a": 2.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "« 20 min plus tard » en bas. Il arrive enfin, fier, bonnet, écharpe, clés ; elle se lève, le regarde de haut en bas, et pointe ses pattes : il a oublié ses chaussures ; il baisse les yeux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.05,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.2,
+                    "bras": "hanches",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "honte",
+                    "vers": 1,
+                    "bras": "bas",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.6,
+                    "pose": "debout",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 2.6,
+                    "bras": "pointe",
+                    "expression": "narquois",
+                    "vers": -1
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 600,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              },
+              {
+                "objet": "bonnet",
+                "x": 330,
+                "y": 165,
+                "echelle": 0.9,
+                "de": 0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330
+                  }
+                ]
+              },
+              {
+                "objet": "cle",
+                "x": 330,
+                "y": 300,
+                "echelle": 0.5,
+                "de": 0,
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "bas"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

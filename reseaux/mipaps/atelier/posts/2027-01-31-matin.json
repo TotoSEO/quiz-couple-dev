@@ -1,0 +1,259 @@
+{
+  "jour": "2027-01-31",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-307",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "toi quand ta personne veut la télécommande | Le canapé, la télé ; la télécommande est posée juste à côté de lui, à gauche ; elle, tout à droite, la regarde, puis le regarde, suppliante, la patte tendue ; il ne bouge pas, zen. | Elle s'étire de tout son long vers la télécommande, la patte tendue, en plein effort, des sueurs ; il lui manque un rien ; lui regarde la télé, l'air de ne rien voir, l'auréole. | Elle lui passe carrément par-dessus, le corps en travers de lui, attrape la télécommande et se rassoit de l'autre côté, fière ; lui, écrasé au passage, les yeux en croix, puis blasé.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé, la télé ; la télécommande est posée juste à côté de lui, à gauche ; elle, tout à droite, la regarde, puis le regarde, suppliante, la patte tendue ; il ne bouge pas, zen.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "supplie",
+                    "bras": "tend_g",
+                    "vers": -1
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "boude"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toi quand ta personne veut la télécommande",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle s'étire de tout son long vers la télécommande, la patte tendue, en plein effort, des sueurs ; il lui manque un rien ; lui regarde la télé, l'air de ne rien voir, l'auréole.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 350,
+                    "pose": "penche_g",
+                    "bras": "tend_g",
+                    "expression": "effort",
+                    "signes": [
+                      "sueurs"
+                    ]
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "exaspere",
+                    "signes": [
+                      "veine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "zen"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.5
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle lui passe carrément par-dessus, le corps en travers de lui, attrape la télécommande et se rassoit de l'autre côté, fière ; lui, écrasé au passage, les yeux en croix, puis blasé.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 350,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "penche_g",
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 240,
+                    "y": 240,
+                    "taille": 180,
+                    "pose": "allonge",
+                    "expression": "effort"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 130,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fier",
+                    "bras": "tient",
+                    "signes": [
+                      "etincelles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 0.9,
+                    "expression": "ko",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "manette",
+                "x": 150,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 1.8
+              },
+              {
+                "objet": "manette",
+                "x": 130,
+                "y": 290,
+                "echelle": 0.5,
+                "de": 1.8
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-121",
+  "sujet": "ani-232",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,120 +12,27 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le selfie à deux : elle tient le téléphone, il ferme les yeux ; « encore une », elle fait une grimace ; « encore une », il éternue ; elle garde celle où il éternue et ils rient. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne a une nouvelle série | Le canapé, la télé ; lui seul, assis au milieu, hypnotisé par l'écran, les yeux en spirale ; elle entre par la droite, s'assoit à côté de lui, contente ; il ne bouge pas. | Elle lui parle, les bras qui bougent ; rien ; elle agite une patte devant ses yeux ; rien ; elle pose la tête sur son épaule ; rien ; il est toujours hypnotisé. | Elle abandonne, regarde l'écran à son tour, d'abord blasée, puis curieuse, puis les yeux en spirale elle aussi ; les deux hypnotisés, collés, devant la télé.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.5,
-            "description": "Ils sont serrés l'un contre l'autre, elle tient un téléphone à bout de bras au-dessus d'eux, lui a les yeux fermés, zen. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Le canapé, la télé ; lui seul, assis au milieu, hypnotisé par l'écran, les yeux en spirale ; elle entre par la droite, s'assoit à côté de lui, contente ; il ne bouge pas.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "zen"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 390,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_haut_d"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 510,
-                "y": 150,
-                "echelle": 0.5
-              }
-            ],
-            "textes": [
-              {
-                "texte": "le selfie à deux",
-                "de": 0.2,
-                "place": "haut",
-                "style": "titre"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Le texte « encore une » à 0,2 s. Elle fait une grimace, la langue sortie, les yeux de travers. Lui est content, les yeux ouverts.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "content"
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 390,
-                    "pose": "debout",
-                    "expression": "diable",
-                    "bras": "tend_haut_d"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 510,
-                "y": 150,
-                "echelle": 0.5
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« encore une »",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Le texte « encore une » à 0,2 s. Lui éternue à 1,4 s, les yeux fermés, la tête qui bascule, des étincelles. Elle le regarde, surprise.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 1.4,
-                    "expression": "choque",
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hypnotise",
                     "signes": [
-                      "etincelles"
+                      "tourbillon"
                     ]
                   }
                 ]
@@ -134,105 +41,176 @@
                 "perso": "elle",
                 "etapes": [
                   {
-                    "a": 0,
-                    "x": 390,
-                    "pose": "debout",
-                    "expression": "content",
-                    "bras": "tend_haut_d"
+                    "a": 0.3,
+                    "x": 820,
+                    "y": 380,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
                   },
                   {
-                    "a": 1.4,
-                    "expression": "surpris"
+                    "a": 1.8,
+                    "x": 470,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 440,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis"
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 510,
+                "objet": "tele",
+                "x": 320,
                 "y": 150,
-                "echelle": 0.5
+                "echelle": 0.8
               }
             ],
             "textes": [
               {
-                "texte": "« encore une »",
+                "texte": "toi quand ta personne a une nouvelle série",
                 "de": 0.2,
-                "place": "haut"
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux rient aux éclats, serrés l'un contre l'autre, elle regarde l'écran du téléphone. Trois cœurs flottent au-dessus d'eux.",
+            "duree": 4,
+            "description": "Elle lui parle, les bras qui bougent ; rien ; elle agite une patte devant ses yeux ; rien ; elle pose la tête sur son épaule ; rien ; il est toujours hypnotisé.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 250,
-                    "pose": "debout",
-                    "expression": "rire"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "pose": "debout",
-                    "expression": "rire",
-                    "bras": "tend_haut_d"
+                    "x": 440,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "perplexe",
+                    "bras": "coucou"
+                  },
+                  {
+                    "a": 2.4,
+                    "x": 400,
+                    "pose": "penche_g",
+                    "expression": "boude",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hypnotise",
+                    "signes": [
+                      "tourbillon"
+                    ]
                   }
                 ]
               }
             ],
+            "meubles": [
+              "canape_fond"
+            ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 510,
-                "y": 150,
-                "echelle": 0.5
-              },
-              {
-                "objet": "coeur",
+                "objet": "tele",
                 "x": 320,
-                "y": 120,
-                "echelle": 0.5,
-                "de": 0.5,
-                "flotte": true
+                "y": 150,
+                "echelle": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Elle abandonne, regarde l'écran à son tour, d'abord blasée, puis curieuse, puis les yeux en spirale elle aussi ; les deux hypnotisés, collés, devant la télé.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "hypnotise",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
               },
               {
-                "objet": "coeur",
-                "x": 225,
-                "y": 160,
-                "echelle": 0.32,
-                "de": 0.9,
-                "flotte": true
-              },
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hypnotise",
+                    "signes": [
+                      "tourbillon"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
               {
-                "objet": "coeur",
-                "x": 420,
-                "y": 170,
-                "echelle": 0.36,
-                "de": 1.3,
-                "flotte": true
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
               }
             ]
           }
         ]
       },
-      "legende": "tague ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#humour"
       ]
     }
   }

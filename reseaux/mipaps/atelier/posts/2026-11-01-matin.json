@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-020",
+  "sujet": "ani-207",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,21 +12,34 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Les pieds gelés : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pieds glacés sur lui ; il se réveille en sursaut, « ils sont pas si froids » ; il la garde contre lui. Quatre plans, 14 secondes.",
+        "idee": "toi quand ta personne s'endort direct | Le lit, les deux assis dedans, contents, ils viennent de dire bonne nuit ; lui bâille, et s'endort d'un coup, allongé, des z ; elle le regarde, surprise. | En haut : « t'es sérieux ? ». Elle, assise dans le lit, passe de surprise à blasée, puis pensive, des petits points, puis s'ennuie ; lui dort sans bouger. | « 2 h plus tard » en bas. Elle, les yeux grands ouverts dans la lumière de son téléphone ; lui roule vers elle en dormant et s'étale de son côté ; elle le regarde et fond, un petit cœur.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3,
-            "description": "Lui est allongé, bien au chaud sous sa couette, il dort tranquillement, des petits zzz. Le texte se pose à 0,2 s.",
+            "duree": 4,
+            "description": "Le lit, les deux assis dedans, contents, ils viennent de dire bonne nuit ; lui bâille, et s'endort d'un coup, allongé, des z ; elle le regarde, surprise.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.3,
+                    "expression": "baille"
+                  },
+                  {
+                    "a": 2.2,
                     "pose": "allonge",
                     "expression": "dodo",
                     "signes": [
@@ -34,47 +47,72 @@
                     ]
                   }
                 ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "surpris",
+                    "vers": -1
+                  }
+                ]
               }
             ],
-            "objets": [
-              {
-                "objet": "couette",
-                "x": 400,
-                "y": 355,
-                "echelle": 1.1
-              }
+            "meubles": [
+              "lit_fond"
             ],
             "textes": [
               {
-                "texte": "toi, les pieds gelés, et ta personne qui dort au chaud",
+                "texte": "toi quand ta personne s'endort direct",
                 "de": 0.2,
-                "place": "haut"
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
             "duree": 4,
-            "transition": "fondu",
-            "description": "Elle entre du bord gauche en marchant de profil, grelottante, les bras croisés, des flocons autour d'elle. Elle s'arrête à côté du lit à 2 s. Lui dort toujours.",
+            "description": "En haut : « t'es sérieux ? ». Elle, assise dans le lit, passe de surprise à blasée, puis pensive, des petits points, puis s'ennuie ; lui dort sans bouger.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "froid",
-                    "bras": "croises",
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "surpris",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.0,
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 2.0,
+                    "expression": "pensif",
                     "signes": [
-                      "flocons"
+                      "points"
                     ]
                   },
                   {
-                    "a": 2,
-                    "x": 290,
-                    "pose": "debout"
+                    "a": 3.0,
+                    "expression": "ennui"
                   }
                 ]
               },
@@ -83,7 +121,9 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "allonge",
                     "expression": "dodo",
                     "signes": [
@@ -93,86 +133,39 @@
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "couette",
-                "x": 400,
-                "y": 355,
-                "echelle": 1.1
-              }
-            ],
-            "textes": []
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle s'allonge à côté de lui et colle ses pattes glacées contre lui à 1 s. Lui se réveille en sursaut, les yeux grands, des rayons autour de la tête. Elle sourit, les yeux fermés.",
-            "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 300,
-                    "pose": "allonge",
-                    "expression": "malicieux"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "content",
-                    "bras": "tend_d"
-                  }
-                ]
-              },
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 410,
-                    "pose": "allonge",
-                    "expression": "dodo"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "choque",
-                    "signes": [
-                      "rayons"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "couette",
-                "x": 360,
-                "y": 355,
-                "echelle": 1.5
-              }
+            "meubles": [
+              "lit_fond"
             ],
             "textes": [
               {
-                "texte": "« ils sont pas si froids »",
-                "de": 1.6,
+                "texte": "« t'es sérieux ? »",
+                "de": 0.3,
                 "place": "haut",
-                "motAMot": true
+                "style": "message"
               }
             ]
           },
           {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Les deux sont serrés l'un contre l'autre sous la couette, elle blottie contre lui, lui qui la tient du bras, endormis. Un petit cœur flotte.",
+            "duree": 4.5,
+            "description": "« 2 h plus tard » en bas. Elle, les yeux grands ouverts dans la lumière de son téléphone ; lui roule vers elle en dormant et s'étale de son côté ; elle le regarde et fond, un petit cœur.",
             "persos": [
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 315,
-                    "pose": "allonge",
-                    "expression": "dodo"
+                    "x": 394,
+                    "y": 346,
+                    "taille": 200,
+                    "pose": "debout",
+                    "bras": "aucun",
+                    "pattes": "aucune",
+                    "expression": "hypnotise"
+                  },
+                  {
+                    "a": 3.0,
+                    "expression": "amour",
+                    "vers": -1
                   }
                 ]
               },
@@ -181,36 +174,53 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
+                    "x": 248,
+                    "y": 346,
+                    "taille": 200,
                     "pose": "allonge",
                     "expression": "dodo",
                     "signes": [
                       "zzz"
                     ]
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 330
                   }
                 ]
               }
             ],
+            "meubles": [
+              "lit_fond"
+            ],
             "objets": [
               {
-                "objet": "couette",
-                "x": 355,
-                "y": 355,
-                "echelle": 1.4
+                "objet": "telephone",
+                "x": 394,
+                "y": 290,
+                "echelle": 0.5,
+                "a": 3.0
               },
               {
                 "objet": "coeur",
-                "x": 355,
-                "y": 170,
+                "x": 360,
+                "y": 190,
                 "echelle": 0.4,
-                "de": 0.6,
+                "de": 3.2,
                 "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "bas"
               }
             ]
           }
         ]
       },
-      "legende": "tague la personne qui fait ça",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

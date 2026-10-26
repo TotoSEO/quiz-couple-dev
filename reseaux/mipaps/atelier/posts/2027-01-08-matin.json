@@ -1,0 +1,259 @@
+{
+  "jour": "2027-01-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-279",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "nous deux devant nos photos du début | Le canapé ; les deux penchés sur le même téléphone, émus, les yeux brillants ; elle fait défiler ; un petit cœur monte. | Une photo les fait éclater de rire ; une autre les fait rougir ; une autre encore : ils se cachent les yeux tous les deux, morts de honte. | Ils se regardent, les mêmes qu'avant ; il lui prend la patte ; elle pose la tête sur son épaule ; ils regardent la dernière photo, nostalgiques ; des cœurs ; puis elle propose d'en refaire une.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Le canapé ; les deux penchés sur le même téléphone, émus, les yeux brillants ; elle fait défiler ; un petit cœur monte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "emu",
+                    "vers": 1
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "emu",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 330,
+                "y": 290,
+                "echelle": 0.6
+              },
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 170,
+                "echelle": 0.35,
+                "de": 1.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux devant nos photos du début",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Une photo les fait éclater de rire ; une autre les fait rougir ; une autre encore : ils se cachent les yeux tous les deux, morts de honte.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "honte",
+                    "bras": "visage",
+                    "pose": "assis"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "rire",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "timide",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "honte",
+                    "bras": "visage",
+                    "pose": "assis"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 330,
+                "y": 290,
+                "echelle": 0.6,
+                "a": 2.6
+              },
+              {
+                "objet": "telephone",
+                "x": 330,
+                "y": 345,
+                "echelle": 0.6,
+                "de": 2.6
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils se regardent, les mêmes qu'avant ; il lui prend la patte ; elle pose la tête sur son épaule ; ils regardent la dernière photo, nostalgiques ; des cœurs ; puis elle propose d'en refaire une.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "nostalgique",
+                    "vers": 1
+                  },
+                  {
+                    "a": 1.0,
+                    "bras": "tend_d",
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 380,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "nostalgique",
+                    "vers": -1
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 350,
+                    "pose": "penche_g",
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ],
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 350,
+                "y": 290,
+                "echelle": 0.6,
+                "de": 3.2
+              },
+              {
+                "objet": "coeur",
+                "x": 305,
+                "y": 140,
+                "echelle": 0.5,
+                "de": 1.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 210,
+                "y": 180,
+                "echelle": 0.32,
+                "de": 2.1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 400,
+                "y": 190,
+                "echelle": 0.36,
+                "de": 2.5,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}
