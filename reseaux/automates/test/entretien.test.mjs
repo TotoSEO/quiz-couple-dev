@@ -247,3 +247,23 @@ test('la grille du 26 octobre 2026 : un créneau fermé n\'est ni à remplir ni 
   assert.equal(e.reserve_jours, 2);
   assert.equal(await reserve(b, { maintenant: new Date('2026-10-12T03:11:00Z') }), 2);
 });
+
+test("l'état lit les déclinaisons par lots de 80 posts : 370 identifiants dans une seule adresse faisaient couper la connexion", async () => {
+  const jours = Array.from({ length: 100 }, (_, i) => `2026-${String(10 + Math.floor((13 + i - 1) / 31)).padStart(2, '0')}-${String(((13 + i - 1) % 31) + 1).padStart(2, '0')}`);
+  const longs = posts(jours).map((p, n) => ({ ...p, id: `${String(n).padStart(8, '0')}-0000-4000-8000-000000000000` }));
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: melange }],
+    social_posts: longs,
+    social_variantes: longs.map((p) => ({ id: `v-${p.id}`, post_id: p.id, langue: 'en', statut: 'rendu', recette: {}, legende: '' })),
+  });
+  const requetes = [];
+  const select = b.select.bind(b);
+  b.select = (table, requete) => { requetes.push({ table, taille: requete.length }); return select(table, requete); };
+  const e = await etat(b, { maintenant: T0, horizon: 3 });
+  const lots = requetes.filter((r) => r.table === 'social_variantes');
+  assert.equal(lots.length, Math.ceil(longs.length / 80));
+  assert.ok(lots.every((r) => r.taille < 4000), 'une adresse reste sous 4 Ko');
+  assert.equal(e.recents_et_prevus.length, longs.length);
+  assert.ok(e.recents_et_prevus.every((p) => p.statut === 'rendu'), 'chaque post retrouve sa déclinaison');
+});
