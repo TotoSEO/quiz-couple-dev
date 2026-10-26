@@ -27,6 +27,18 @@ const minutesLocales = (fuseau, maintenant) => {
 };
 const debutCreneau = (compte, creneau) => enMinutes((compte?.creneaux || []).find((c) => c.cle === creneau)?.debut || DEBUTS_DEFAUT[creneau]);
 
+// Une liste d'identifiants dans une adresse (`id=in.(...)`) se découpe par
+// lots : le 26 octobre 2026, l'état des mipaps demandait les déclinaisons
+// de 370 posts d'un coup (37 signes par identifiant, 14 Ko d'adresse) et
+// la passerelle de Supabase coupait la connexion (UND_ERR_HEADERS_OVERFLOW),
+// l'entretien s'arrêtait avant d'écrire etat.json et sans envoyer d'alerte.
+export const LOT_IDS = 80;
+export async function parLots(ids, lire, taille = LOT_IDS) {
+  const tout = [];
+  for (let i = 0; i < ids.length; i += taille) tout.push(...await lire(ids.slice(i, i + taille)));
+  return tout;
+}
+
 // Le jeton de Page (connexion Facebook) n'expire pas : on vérifie une fois
 // par semaine qu'il marche encore, et on alerte dès qu'il ne répond plus,
 // pour que Thomas reconnecte le compte dans l'admin avant le prochain post.
@@ -170,7 +182,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
   const melange = melangeDuCompte(compte, await base.reglage('melange'));
   const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&langue=eq.${langue}&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
   const variantes = posts.length
-    ? await base.select('social_variantes', `select=post_id,langue,statut,legende,recette,erreur&post_id=in.(${posts.map((p) => p.id).join(',')})`)
+    ? await parLots(posts.map((p) => p.id), (ids) => base.select('social_variantes', `select=post_id,langue,statut,legende,recette,erreur&post_id=in.(${ids.join(',')})`))
     : [];
   // dès aujourd'hui, pour les créneaux qui laissent le temps d'écrire et de rendre
   const aRemplir = [];
@@ -259,11 +271,6 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
 // posts, sans dire ni lesquels ni de quel compte.
 export async function statistiquesDuCompte(base, langue) {
   const lignes = await base.select('social_stats', 'select=variante_id,releve,vues,portee,likes,commentaires,partages,enregistrements,releve_le&releve=eq.j7&order=releve_le.asc');
-  const parLots = async (ids, lire) => {
-    const tout = [];
-    for (let i = 0; i < ids.length; i += 80) tout.push(...await lire(ids.slice(i, i + 80)));
-    return tout;
-  };
   const variantes = lignes.length
     ? await parLots([...new Set(lignes.map((l) => l.variante_id))], (ids) => base.select('social_variantes', `select=id,post_id,publie_le&langue=eq.${langue}&id=in.(${ids.join(',')})`))
     : [];
