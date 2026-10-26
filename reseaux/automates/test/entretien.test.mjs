@@ -211,3 +211,24 @@ test("l'état des mipaps (fr) suit la grille du compte, ses posts et ses idées,
   assert.deepEqual(qc.recents_et_prevus.map((p) => p.gabarit), ['pov']);
   assert.deepEqual(qc.idees.map((i) => i.id), ['i1']);
 });
+
+test('la grille du 26 octobre 2026 : un créneau fermé n\'est ni à remplir ni compté dans la réserve', async () => {
+  const huit = { matin: null, midi: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: 'tu-preferes', 7: null }, soir: { 1: 'tu-preferes', 2: 'connais-tu', 3: 'tu-preferes', 4: 'tu-preferes', 5: 'connais-tu', 6: 'baton', 7: 'tu-preferes' } };
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: huit }],
+    // lundi 12 et mardi 13 octobre : le soir est pris ; mercredi 14 : rien
+    social_posts: [
+      { id: 'p1', jour: '2026-10-12', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'tu-preferes', categorie: 'tu-preferes' },
+      { id: 'p2', jour: '2026-10-13', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'connais-tu', categorie: 'connais-tu' },
+    ],
+  });
+  // le lundi à 5 h 11 à Paris : les deux soirs sont pris, les matins et midis fermés ne sont pas à remplir ; mercredi soir et samedi midi le sont
+  const e = await etat(b, { maintenant: new Date('2026-10-12T03:11:00Z'), horizon: 5 });
+  assert.deepEqual(e.a_remplir.map((c) => `${c.jour} ${c.creneau} ${c.categorie}`), [
+    '2026-10-14 soir tu-preferes', '2026-10-15 soir tu-preferes', '2026-10-16 soir connais-tu', '2026-10-17 midi tu-preferes', '2026-10-17 soir baton',
+  ]);
+  // la réserve : deux jours couverts (leur seul créneau ouvert a un post), le troisième non
+  assert.equal(e.reserve_jours, 2);
+  assert.equal(await reserve(b, { maintenant: new Date('2026-10-12T03:11:00Z') }), 2);
+});

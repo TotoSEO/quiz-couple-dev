@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categorieAttendue, CATEGORIES_RETIREES, estRetiree, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
+import { categorieAttendue, CATEGORIES_RETIREES, creneauxOuverts, estRetiree, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
 import { TRAMES } from '../../studio/src/baton/realisateur.mjs';
 import { CATEGORIES } from '../lib/controle.mjs';
 import { controlerFin } from '../lib/style.mjs';
@@ -17,30 +17,41 @@ import { controlerFin } from '../lib/style.mjs';
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const SUJETS = JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'atelier', 'sujets.json'), 'utf8'));
 
-test('chaque sujet daté tombe sur un créneau de sa catégorie', () => {
+test('chaque sujet daté encore en vigueur tombe sur un créneau ouvert, de sa catégorie sauf exception écrite (les fêtes remplacent le reel du jour)', () => {
   for (const s of SUJETS.saison.sujets) {
+    if (s.retire) continue;
     assert.ok(CATEGORIES[s.categorie], `${s.id} : catégorie inconnue ${s.categorie}`);
-    assert.equal(categorieAttendue(MELANGE_DEFAUT, s.jour, s.creneau), s.categorie, `${s.id} (${s.jour} ${s.creneau})`);
+    assert.ok(!estRetiree(s.categorie), `${s.id} : catégorie retirée ${s.categorie}`);
+    const attendue = categorieAttendue(MELANGE_DEFAUT, s.jour, s.creneau);
+    assert.notEqual(attendue, null, `${s.id} (${s.jour} ${s.creneau}) : créneau fermé`);
+    if (s.exception) assert.ok(typeof s.exception === 'string' && s.exception.length > 10, `${s.id} : l'exception se justifie`);
+    else assert.equal(attendue, s.categorie, `${s.id} (${s.jour} ${s.creneau})`);
+  }
+  // deux sujets datés ne visent jamais le même créneau
+  const places = new Set();
+  for (const s of SUJETS.saison.sujets.filter((x) => !x.retire)) {
+    const place = `${s.jour} ${s.creneau}`;
+    assert.ok(!places.has(place), `${s.id} : ${place} déjà pris`);
+    places.add(place);
   }
 });
 
-test("la grille met « He's a 10 but... » le samedi soir et la phrase tendre le dimanche soir", () => {
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-17', 'soir'), 'dix-mais');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-18', 'soir'), 'phrase');
-});
-
-test('la grille du 16 octobre 2026 au soir : le bonhomme bâton tous les matins, les dilemmes « Tu préfères » quatre midis et trois soirs, plus aucune animation des mascottes', () => {
-  // la semaine du lundi 19 octobre 2026
-  const semaine = ['2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25'];
-  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'baton', jour);
-  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'midi')), ['connais-tu', 'tu-preferes', 'connais-tu', 'tu-preferes', 'connais-tu', 'tu-preferes', 'tu-preferes']);
-  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'soir')), ['tu-preferes', 'bd', 'tu-preferes', 'carrousel', 'tu-preferes', 'dix-mais', 'phrase']);
-  // Thomas, le 16 octobre 2026 au soir : « les vidéos d'animations avec les deux mascottes ne fonctionnent pas du tout »
-  assert.deepEqual(CATEGORIES_RETIREES, ['pov', 'coquin', 'statique']);
-  for (const jour of semaine) for (const creneau of ['matin', 'midi', 'soir']) assert.ok(!estRetiree(categorieAttendue(MELANGE_DEFAUT, jour, creneau)), `${jour} ${creneau}`);
-  // sept dilemmes par semaine : un par jour, le format du seul reel qui a marché (« Date night edition », 30 000 vues)
-  const dilemmes = semaine.flatMap((j) => ['midi', 'soir'].map((c) => categorieAttendue(MELANGE_DEFAUT, j, c))).filter((c) => c === 'tu-preferes').length;
-  assert.equal(dilemmes, 7);
+test('la grille du 26 octobre 2026 : huit reels par semaine (cinq « Tu préfères », deux « Connais-tu », un bâton), tous les autres créneaux fermés, plus aucun format image', () => {
+  // la semaine du lundi 2 novembre 2026
+  const semaine = ['2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08'];
+  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), null, jour);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'midi')), [null, null, null, null, null, 'tu-preferes', null]);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'soir')), ['tu-preferes', 'connais-tu', 'tu-preferes', 'tu-preferes', 'connais-tu', 'baton', 'tu-preferes']);
+  const ouverts = semaine.flatMap((j) => creneauxOuverts(MELANGE_DEFAUT, j).map((c) => categorieAttendue(MELANGE_DEFAUT, j, c)));
+  assert.equal(ouverts.length, 8);
+  assert.deepEqual([...ouverts].sort(), ['baton', 'connais-tu', 'connais-tu', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes', 'tu-preferes']);
+  // les animations des mascottes (16 octobre 2026) et les formats image (26 octobre 2026) ne partent plus
+  assert.deepEqual(CATEGORIES_RETIREES, ['pov', 'coquin', 'statique', 'bd', 'carrousel', 'dix-mais', 'phrase']);
+  for (const c of ouverts) assert.ok(!estRetiree(c), c);
+  // une grille absente ne ferme rien
+  assert.equal(categorieAttendue(null, '2026-11-02', 'matin'), undefined);
+  assert.deepEqual(creneauxOuverts(null, '2026-11-02'), ['matin', 'midi', 'soir']);
+  assert.equal(categorieAttendue({ midi: 'connais-tu' }, '2026-11-02', 'matin'), undefined);
 });
 
 test("la banque « baton » : une histoire par sujet et par jour, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {

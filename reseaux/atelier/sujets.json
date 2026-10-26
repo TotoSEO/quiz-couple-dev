@@ -3489,12 +3489,12 @@
     }
   ],
   "saison": {
-    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type (depuis le 12 octobre 2026, les sujets datés du jeudi soir sont des carrousels de questions et ceux du samedi soir des « 10 but... », comme la grille). Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis. Depuis le 16 octobre 2026 au soir, tous les matins sont des bonhommes bâton : un sujet daté du matin est une histoire de bâton (heros, trame, son), comme noel-01, noel-06, noel-08, an-02 et an-04.",
+    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque. Depuis le 26 octobre 2026 (huit reels par semaine, rien que des reels : cinq « Tu préfères », deux « Connais-tu », un bâton le samedi soir), un sujet daté tombe sur un créneau ouvert ; sa catégorie est celle de la grille, sauf `exception` écrite (la veille et la nuit de Noël, le 31 décembre et la nuit du Nouvel An, l'histoire de bâton prend la place du reel du jour ; « Our year edition » celle du samedi midi). Les sujets datés des formats image (carrousel, « 10 but... », phrase) portent `retire` : ils ne se prennent plus. Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis. Un sujet daté de bâton est une histoire (heros, trame, son).",
     "sujets": [
       {
         "id": "noel-01",
         "jour": "2026-12-19",
-        "creneau": "matin",
+        "creneau": "soir",
         "categorie": "baton",
         "idee": "Une semaine avant Noël, dans le salon, assis sur le canapé, elle (le héros) joint les mains sous le menton, les yeux qui brillent : un chiot dans sa bulle de pensée, son cadeau de Noël ; il croise les bras et fait non de la tête, deux fois. Elle laisse tomber les épaules, puis un sourire en coin. Le soir même elle le tire par la main hors du canapé, « j’ai une surprise pour toi », et l’emmène jusqu’au jardin dans la nuit d’hiver : une meute entière qui saute partout, roulement de tambour. Il tremble, la spirale au-dessus de la tête, et s’évanouit raide comme une planche au ralenti, les yeux en croix ; elle rit avec un chiot dans les bras, s’agenouille près de lui ; il revient à lui sous les léchouilles, joyeux Noël en avance.",
         "heros": "fille",
@@ -3504,23 +3504,23 @@
       {
         "id": "noel-02",
         "jour": "2026-12-20",
-        "creneau": "midi",
+        "creneau": "soir",
         "categorie": "tu-preferes",
         "theme": "tp-042"
       },
       {
-        "id": "noel-03",
-        "jour": "2026-12-21",
-        "creneau": "midi",
-        "categorie": "connais-tu",
-        "theme": "ct-025"
-      },
-      {
         "id": "noel-04",
-        "jour": "2026-12-22",
-        "creneau": "midi",
+        "jour": "2026-12-21",
+        "creneau": "soir",
         "categorie": "tu-preferes",
         "theme": "tp-014"
+      },
+      {
+        "id": "noel-03",
+        "jour": "2026-12-22",
+        "creneau": "soir",
+        "categorie": "connais-tu",
+        "theme": "ct-025"
       },
       {
         "id": "noel-05",
@@ -3532,12 +3532,31 @@
       {
         "id": "noel-06",
         "jour": "2026-12-24",
-        "creneau": "matin",
+        "creneau": "soir",
         "categorie": "baton",
         "idee": "Veille de Noël devant la maison, elle regarde sa main nue, rêveuse, une bague dans sa bulle de pensée ; il comprend et se ferme, décidé : pas question d’attendre l’an prochain. Pioche sortie de derrière le dos, sprint : la forêt (un tronc), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu’à la grotte où le diamant géant pulse en bleu. Pioche levée, pieds ancrés, le saut et le coup au ralenti : flash, mille éclats, la pierre parfaite qui flotte, le marteau qui sonne trois fois, la bague levée. Retour en courant jusqu’à la porte dans la nuit de Noël, un genou à terre ; elle porte les mains à sa bouche, saute de joie, câlin et cœurs.",
         "heros": "garcon",
         "trame": "diamant",
-        "son": "Mistletoe"
+        "son": "Mistletoe",
+        "exception": "la veille de Noël, l'histoire de bâton prend la place du « Tu préfères » du jeudi soir"
+      },
+      {
+        "id": "noel-08",
+        "jour": "2026-12-25",
+        "creneau": "soir",
+        "categorie": "baton",
+        "idee": "Nuit de Noël dans les montagnes : elle montre l'étoile la plus brillante du ciel, celle qu'il faudrait au sommet du sapin. Il sourit, tendre, puis se concentre, s'accroupit et bondit la décrocher au ralenti ; il retombe à côté d'elle et la lui pose dans les mains, émerveillée. Les cœurs montent dans la nuit de Noël.",
+        "heros": "garcon",
+        "trame": "etoile",
+        "son": "All I Want for Christmas Is You",
+        "exception": "la nuit de Noël, l'histoire de bâton prend la place du « Connais-tu » du vendredi soir"
+      },
+      {
+        "id": "noel-09",
+        "jour": "2026-12-26",
+        "creneau": "midi",
+        "categorie": "tu-preferes",
+        "theme": "tp-044"
       },
       {
         "id": "noel-07",
@@ -3551,24 +3570,8 @@
           "Which gift from me do you still use?",
           "What should we do every Christmas from now on?"
         ],
-        "scene": "table, nuit : bougie, bonnets, flocons à la fenêtre, les deux se sourient"
-      },
-      {
-        "id": "noel-08",
-        "jour": "2026-12-25",
-        "creneau": "matin",
-        "categorie": "baton",
-        "idee": "Nuit de Noël dans les montagnes : elle montre l'étoile la plus brillante du ciel, celle qu'il faudrait au sommet du sapin. Il sourit, tendre, puis se concentre, s'accroupit et bondit la décrocher au ralenti ; il retombe à côté d'elle et la lui pose dans les mains, émerveillée. Les cœurs montent dans la nuit de Noël.",
-        "heros": "garcon",
-        "trame": "etoile",
-        "son": "All I Want for Christmas Is You"
-      },
-      {
-        "id": "noel-09",
-        "jour": "2026-12-25",
-        "creneau": "soir",
-        "categorie": "tu-preferes",
-        "theme": "tp-044"
+        "scene": "table, nuit : bougie, bonnets, flocons à la fenêtre, les deux se sourient",
+        "retire": "2026-10-26"
       },
       {
         "id": "noel-11",
@@ -3588,38 +3591,67 @@
           "but he leaves you alone with his family all day",
           "but he spent Christmas Eve texting his ex"
         ],
-        "scene": "noel : le violet en bonnet, clin d'œil et étincelles ; la rose, sourcils hauts, un point d'interrogation"
+        "scene": "noel : le violet en bonnet, clin d'œil et étincelles ; la rose, sourcils hauts, un point d'interrogation",
+        "retire": "2026-10-26"
       },
       {
         "id": "noel-10",
         "jour": "2026-12-27",
         "creneau": "soir",
         "categorie": "phrase",
-        "texte": "This year, my favorite gift was you, again."
+        "texte": "This year, my favorite gift was you, again.",
+        "retire": "2026-10-26"
       },
       {
         "id": "an-01",
-        "jour": "2026-12-30",
-        "creneau": "midi",
+        "jour": "2026-12-29",
+        "creneau": "soir",
         "categorie": "connais-tu",
         "theme": "ct-038"
       },
       {
+        "id": "an-08",
+        "jour": "2026-12-30",
+        "creneau": "soir",
+        "categorie": "tu-preferes",
+        "theme": "tp-024"
+      },
+      {
         "id": "an-02",
         "jour": "2026-12-31",
-        "creneau": "matin",
+        "creneau": "soir",
         "categorie": "baton",
         "idee": "Le 31 décembre en ville, en fin d’après-midi, ils discutent sous les lampadaires du réveillon qui vient ; le nuage d’orage arrive en grondant au-dessus de la rue et se plante juste au-dessus de lui, la pluie à verse, lui trempé sous ses mains, les dents qui claquent. Elle (le héros) lève les yeux, surprise, puis décidée : accroupie, le bond entre les immeubles et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le ciel se dégage, les derniers rayons du soleil sur la ville. Elle retombe, s’époussette les mains ; il lui saute au cou, trempé, et ils rient : la nuit sera claire pour le feu d’artifice.",
         "heros": "fille",
         "trame": "nuage",
-        "son": "Firework"
+        "son": "Firework",
+        "exception": "le 31 décembre, l'histoire de bâton prend la place du « Tu préfères » du jeudi soir"
       },
       {
-        "id": "an-08",
-        "jour": "2026-12-31",
+        "id": "an-04",
+        "jour": "2027-01-01",
+        "creneau": "soir",
+        "categorie": "baton",
+        "idee": "Nuit du Nouvel An en ville, sous les lampadaires : il regarde passer un vol d'oiseaux au-dessus des immeubles et soupire, il voudrait être là-haut. Elle sourit, un sourcil se lève, et deux grandes ailes se déploient dans son dos dans un nuage de plumes ; elle lui tend la main, il la prend au ralenti, et ils s'envolent au-dessus de la ville, un looping dans les nuages, puis se posent sur un nuage devant le soleil qui se lève sur la première matinée de l'année ; assis côte à côte, et des ailes lui poussent à lui aussi.",
+        "heros": "fille",
+        "trame": "ailes",
+        "son": "Auld Lang Syne",
+        "exception": "la nuit du Nouvel An, l'histoire de bâton prend la place du « Connais-tu » du vendredi soir"
+      },
+      {
+        "id": "an-05",
+        "jour": "2027-01-02",
         "creneau": "midi",
+        "categorie": "connais-tu",
+        "theme_libre": "Our year edition : leur meilleur moment de l'année, le plus drôle, la plus grosse surprise, le voyage, la chanson de l'année...",
+        "exception": "le lendemain du Nouvel An, « Our year edition » prend la place du « Tu préfères » du samedi midi"
+      },
+      {
+        "id": "an-09",
+        "jour": "2027-01-03",
+        "creneau": "soir",
         "categorie": "tu-preferes",
-        "theme": "tp-024"
+        "theme": "tp-106"
       },
       {
         "id": "an-03",
@@ -3633,31 +3665,8 @@
           "What do you want us to try next year?",
           "What did you learn about me this year?"
         ],
-        "scene": "dehors, nuit : feux d'artifice, les deux lèvent la tête, confettis"
-      },
-      {
-        "id": "an-04",
-        "jour": "2027-01-01",
-        "creneau": "matin",
-        "categorie": "baton",
-        "idee": "Nuit du Nouvel An en ville, sous les lampadaires : il regarde passer un vol d'oiseaux au-dessus des immeubles et soupire, il voudrait être là-haut. Elle sourit, un sourcil se lève, et deux grandes ailes se déploient dans son dos dans un nuage de plumes ; elle lui tend la main, il la prend au ralenti, et ils s'envolent au-dessus de la ville, un looping dans les nuages, puis se posent sur un nuage devant le soleil qui se lève sur la première matinée de l'année ; assis côte à côte, et des ailes lui poussent à lui aussi.",
-        "heros": "fille",
-        "trame": "ailes",
-        "son": "Auld Lang Syne"
-      },
-      {
-        "id": "an-05",
-        "jour": "2027-01-01",
-        "creneau": "midi",
-        "categorie": "connais-tu",
-        "theme_libre": "Our year edition : leur meilleur moment de l'année, le plus drôle, la plus grosse surprise, le voyage, la chanson de l'année..."
-      },
-      {
-        "id": "an-09",
-        "jour": "2027-01-01",
-        "creneau": "soir",
-        "categorie": "tu-preferes",
-        "theme": "tp-106"
+        "scene": "dehors, nuit : feux d'artifice, les deux lèvent la tête, confettis",
+        "retire": "2026-10-26"
       },
       {
         "id": "an-07",
@@ -3677,14 +3686,16 @@
           "but she leaves you alone at midnight to find her friends",
           "but she kisses someone else at midnight \"as a joke\""
         ],
-        "scene": "ligne, nuit : la rose, clin d'œil et étincelles, confettis ; le violet, yeux plats"
+        "scene": "ligne, nuit : la rose, clin d'œil et étincelles, confettis ; le violet, yeux plats",
+        "retire": "2026-10-26"
       },
       {
         "id": "an-06",
         "jour": "2027-01-03",
         "creneau": "soir",
         "categorie": "phrase",
-        "texte": "Wherever the new year takes us, I want to go there with you."
+        "texte": "Wherever the new year takes us, I want to go there with you.",
+        "retire": "2026-10-26"
       }
     ]
   },

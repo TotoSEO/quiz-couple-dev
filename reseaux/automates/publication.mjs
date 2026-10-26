@@ -3,7 +3,8 @@
 //     (Instagram met quelques minutes à traiter la vidéo), avec un son
 //     tendance de la bibliothèque Instagram attaché (Audio API).
 //  2. À l'heure prévue, vérifie que le conteneur est prêt et publie.
-//  3. Le reel du matin est repris en story (media_type STORIES) : le conteneur
+//  3. Le premier reel du jour (le matin, ou le premier créneau ouvert par la
+//     grille) est repris en story (media_type STORIES) : le conteneur
 //     part juste après la publication du reel, la story est publiée au passage
 //     suivant, quand Instagram a traité la vidéo (publierStories).
 // Une image ou un carrousel se prépare et se publie dans le même passage.
@@ -19,7 +20,7 @@ import { connexion } from './lib/supabase.mjs';
 import { Instagram } from './lib/instagram.mjs';
 import { PageFacebook } from './lib/facebook.mjs';
 import { legendeFinale } from './lib/controle.mjs';
-import { estRetiree, MOTIF_RETRAIT } from './lib/calendrier.mjs';
+import { estRetiree, MOTIF_RETRAIT, premierCreneauOuvert } from './lib/calendrier.mjs';
 import { VOLUME_MUSIQUE, VOLUME_VIDEO, ambianceDuReel, choisirSon, requetePour, sonsRecents } from './lib/son.mjs';
 
 const AVANCE_REEL_MIN = 60;
@@ -81,7 +82,8 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     console.log('pause générale : rien ne part');
     return bilan;
   }
-  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif,facebook,page_id');
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif,facebook,page_id,melange');
+  const melangeGlobal = await base.reglage('melange');
   const horizon = new Date(maintenant.getTime() + minutes(AVANCE_REEL_MIN)).toISOString();
   const candidates = await base.select(
     'social_variantes',
@@ -190,8 +192,11 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
           permalien: lien,
           publie_le: maintenant.toISOString(),
           erreur: null,
-          // le reel du matin est repris en story
-          story_statut: post.format === 'reel' && post.creneau === 'matin' ? 'a_faire' : null,
+          // le premier reel de la journée est repris en story : celui du
+          // premier créneau que la grille ouvre (le matin jusqu'au 26 octobre
+          // 2026 ; le soir pour Quiz Couple depuis, huit reels par semaine),
+          // le matin quand aucune grille n'est posée
+          story_statut: post.format === 'reel' && post.creneau === creneauStory(compte, melangeGlobal, post.jour) ? 'a_faire' : null,
           // et tout part aussi sur la Page Facebook reliée, si le compte le demande
           fb_statut: compte.facebook && compte.page_id ? 'a_faire' : null,
           fb_erreur: null,
@@ -223,6 +228,13 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
 // La story du matin : le reel publié le matin repart tel quel en story (24 h),
 // deuxième surface sans rien écrire de plus. Un reel de plus de 60 s ne peut
 // pas devenir une story ; les autres créneaux n'en ont pas.
+// Le créneau du reel qui devient la story du jour : le premier que la grille
+// du compte ouvre ; sans grille posée, le matin.
+export function creneauStory(compte, melangeGlobal, jour) {
+  const grille = compte?.melange || melangeGlobal;
+  return (grille && premierCreneauOuvert(grille, jour)) || 'matin';
+}
+
 export async function publierStories(base, { maintenant = new Date(), instagramPour } = {}) {
   const bilan = { conteneurs: 0, publiees: 0, attente: 0, echecs: 0 };
   const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();

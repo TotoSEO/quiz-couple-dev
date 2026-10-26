@@ -223,16 +223,28 @@ de republications ; les anecdotes du couple font les envois en privé.
 
 ## La semaine type (heure de Paris)
 
-| Créneau    | Lun | Mar | Mer | Jeu | Ven | Sam | Dim |
+Huit reels animés par semaine depuis le 26 octobre 2026, et plus rien
+d'autre. Aux vues à sept jours du 9 au 19 octobre, les reels animés
+faisaient 283 vues médianes (2 832 au mieux, le 19 octobre), les reels
+statiques 205, les posts image et les carrousels-histoires **deux vues** :
+sans abonnés, seuls les reels sont poussés par Instagram. Thomas, ce
+jour-là : « le compte insta des mipaps c'est un flop total. Faut vraiment
+arrêter de parler de frites, de pizza, de trucs pas drôles comme ça [...]
+Humour IA vraiment nul » ; décision : reels seulement, et une nouvelle ligne
+(voir « L'effet Barnum » et « Les sujets »).
+
+| Créneau | Lun | Mar | Mer | Jeu | Ven | Sam | Dim |
 |------------|-----|-----|-----|-----|-----|-----|-----|
-| Matin      | reel animé | reel animé | reel animé | reel animé | reel animé | reel animé | reel animé |
-| Midi       | post | post | post | post | post | post | post |
-| Après-midi | histoire | statique | histoire | statique | histoire | statique | histoire |
+| Matin | reel animé | reel animé | reel animé | reel animé | reel animé | reel animé | reel animé |
+| Midi | fermé | fermé | fermé | fermé | fermé | fermé | fermé |
+| Après-midi | fermé | fermé | fermé | fermé | fermé | reel animé | fermé |
 
 La même grille est écrite dans la colonne `melange` du compte fr (migration
-`20261009110000`) et dans `MELANGE_MIPAPS` (`reseaux/automates/lib/calendrier.mjs`).
-Par semaine : 7 reels animés, 7 posts (dont une déclaration et un ou deux
-schémas de bureau), 4 carrousels-histoires, 3 reels statiques.
+`20261026190000`) et dans `MELANGE_MIPAPS` (`reseaux/automates/lib/calendrier.mjs`).
+Un créneau à `null` est fermé : la synchro y retient tout post, l'entretien
+ne le compte ni à remplir ni dans la réserve. Les trois autres catégories
+restent décrites plus bas pour les posts déjà publiés ; `controler.mjs` en
+accepte encore l'écriture, mais aucun créneau ne les prend.
 
 ## Les catégories
 
@@ -263,6 +275,8 @@ Le modèle : `reseaux/studio/recettes/exemples/mipaps-reel.json`.
 
 ### `mipaps-post` : le post de midi (gabarit `mipaps-post`)
 
+**Plus aucun créneau depuis le 26 octobre 2026** (deux vues à sept jours). Gardé pour les posts déjà publiés.
+
 Une image 1080 x 1350, trois styles, à varier dans la semaine :
 
 - **mini** : un texte court en haut et un personnage en grand (une émotion
@@ -279,6 +293,8 @@ Modèles : `mipaps-post-mini.json`, `mipaps-post-declaration.json`,
 
 ### `mipaps-histoire` : le carrousel-histoire (gabarit `mipaps-carrousel`)
 
+**Plus aucun créneau depuis le 26 octobre 2026** (deux vues à sept jours). Gardé pour les posts déjà publiés.
+
 Chaque page est un moment d'une histoire complète : on fait glisser,
 l'histoire avance. De trois à dix pages ; la première accroche (« ce que
 j'imagine quand tu réponds pas »), les suivantes déroulent (« 10 min : il
@@ -290,6 +306,8 @@ C'est le format qui se garde et se renvoie.
 Modèle : `mipaps-carrousel.json`.
 
 ### `mipaps-statique` : le reel statique (gabarit `mipaps-statique`)
+
+**Plus aucun créneau depuis le 26 octobre 2026** (205 vues à sept jours, moins que les reels animés, et une phrase qui s'écrit n'est pas une situation). Gardé pour les posts déjà publiés.
 
 Un dessin qui vit à peine (le corps respire, les yeux clignent, les cœurs
 flottent, le trait tremble), une phrase qui s'écrit mot à mot, 10 à 15

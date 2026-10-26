@@ -357,9 +357,9 @@ test("pas de story pour un reel de midi, ni pour un reel de plus de 60 s", async
 });
 
 test("reel : sans ambiance dans la recette, la catégorie du post choisit les mots de la recherche", async () => {
-  // (une phrase tendre : les animations, catégorie pov, ne partent plus depuis le 16 octobre 2026)
+  // (un reel statique des mipaps, ambiance tendre : les animations des mascottes, catégorie pov, ne partent plus depuis le 16 octobre 2026, les phrases tendres depuis le 26)
   const b = base({ recette: { gabarit: 'citation' } });
-  b.tables.social_posts[0].categorie = 'phrase';
+  b.tables.social_posts[0].categorie = 'mipaps-statique';
   const demandes = [];
   const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
   await publier(b, { maintenant: T0, instagramPour: () => ig });
@@ -373,7 +373,7 @@ test("reel : sans ambiance dans la recette, la catégorie du post choisit les mo
 
 test("reel : l'ambiance écrite dans la recette l'emporte sur la catégorie", async () => {
   const b = base({ recette: { gabarit: 'citation', son: { ambiance: 'triste' } } });
-  b.tables.social_posts[0].categorie = 'phrase';
+  b.tables.social_posts[0].categorie = 'mipaps-statique';
   const demandes = [];
   const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
   await publier(b, { maintenant: T0, instagramPour: () => ig });
@@ -399,4 +399,24 @@ test('reel : une recherche qui ne rend rien retombe sur les tendances, avec une 
   assert.equal(demandes[1], '');
   assert.ok(['S1', 'S2'].includes(ig.appels[0][1].son.id));
   assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /tendances à la place/.test(j.message)));
+});
+
+test('la story reprend le premier reel que la grille ouvre : le soir quand le matin est fermé (huit reels par semaine), le matin sans grille posée', async () => {
+  // lundi 12 octobre 2026 ; la grille du 26 octobre : matin fermé, soir ouvert
+  const grille = { matin: null, midi: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: 'tu-preferes', 7: null }, soir: { 1: 'tu-preferes', 2: 'connais-tu', 3: 'tu-preferes', 4: 'tu-preferes', 5: 'connais-tu', 6: 'baton', 7: 'tu-preferes' } };
+  const soir = base({ creneau: 'soir', publierA: plus(0) });
+  soir.tables.social_reglages = [{ cle: 'melange', valeur: grille }];
+  await publier(soir, { maintenant: T0, instagramPour: () => faux() });
+  assert.equal(soir.tables.social_variantes[0].statut, 'publie');
+  // la story est demandée (et son conteneur part dans le même passage)
+  assert.ok(['a_faire', 'conteneur'].includes(soir.tables.social_variantes[0].story_statut), soir.tables.social_variantes[0].story_statut);
+  const matin = base({ creneau: 'matin', publierA: plus(0) });
+  matin.tables.social_reglages = [{ cle: 'melange', valeur: grille }];
+  await publier(matin, { maintenant: T0, instagramPour: () => faux() });
+  assert.equal(matin.tables.social_variantes[0].statut, 'publie');
+  assert.equal(matin.tables.social_variantes[0].story_statut, null);
+  // sans grille posée : le matin, comme avant
+  const sans = base({ creneau: 'matin', publierA: plus(0) });
+  await publier(sans, { maintenant: T0, instagramPour: () => faux() });
+  assert.ok(['a_faire', 'conteneur'].includes(sans.tables.social_variantes[0].story_statut));
 });
