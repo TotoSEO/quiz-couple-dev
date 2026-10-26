@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-021",
+  "sujet": "tp-006",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Hard mode edition",
-        "accroche": "Would you rather: hard mode",
+        "etiquette": "Superpowers edition",
+        "accroche": "Would you rather: powers?",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "No phone for a week",
-            "b": "No sweets for a month"
+            "a": "Read their mind",
+            "b": "Teleport to them"
           },
           {
-            "a": "Always hungry",
-            "b": "Always sleepy"
+            "a": "Pause time together",
+            "b": "Rewind your best day"
           },
           {
-            "a": "Always cold",
-            "b": "Always hot"
+            "a": "Fly together",
+            "b": "Be invisible together"
           },
           {
-            "a": "Forget our big day",
-            "b": "Forget their birthday"
+            "a": "Talk to animals",
+            "b": "Speak every language"
           },
           {
-            "a": "Never kiss again",
-            "b": "Never hug again"
+            "a": "Never need sleep",
+            "b": "Never get hungry"
           },
           {
-            "a": "Sing karaoke in public",
-            "b": "Dance alone in public"
+            "a": "See the future",
+            "b": "Change the past"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Hard mode edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Would you rather, superpowers edition: which power would you two pick?\n\nComment your A and B!",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

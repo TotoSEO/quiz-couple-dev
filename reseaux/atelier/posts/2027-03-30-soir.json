@@ -1,0 +1,47 @@
+{
+  "jour": "2027-03-30",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-051",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Hard · Childhood",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "questions": [
+          "The street they grew up on?",
+          "Their first stuffed animal's name?",
+          "Their childhood best friend's name?",
+          "Their favorite cartoon?",
+          "Their first job?",
+          "Their childhood nickname?",
+          "The first movie they saw in a cinema?",
+          "Their favorite school subject?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        },
+        "son": {
+          "ambiance": "jeu"
+        }
+      },
+      "legende": "Hard · Childhood: 8 questions about your partner, 5 seconds each. No cheating!\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

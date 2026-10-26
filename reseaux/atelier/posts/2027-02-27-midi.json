@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-27",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-096",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Slow weekend edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Market in the morning",
+            "b": "Bakery in the morning"
+          },
+          {
+            "a": "Read in the park",
+            "b": "Nap in the park"
+          },
+          {
+            "a": "Cook all afternoon",
+            "b": "Walk all afternoon"
+          },
+          {
+            "a": "Pajamas till noon",
+            "b": "Dressed by nine"
+          },
+          {
+            "a": "Board game night",
+            "b": "Puzzle night"
+          },
+          {
+            "a": "Sunday brunch",
+            "b": "Sunday roast"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, slow weekend edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

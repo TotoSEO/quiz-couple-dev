@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-061",
+  "sujet": "tp-048",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Anniversary edition",
+        "etiquette": "Cuddle edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Back to your first date",
-            "b": "A brand new place"
+            "a": "Big spoon tonight",
+            "b": "Little spoon tonight"
           },
           {
-            "a": "A handwritten letter",
-            "b": "A photo book"
+            "a": "Cuddle and sweat",
+            "b": "Cold feet on your legs"
           },
           {
-            "a": "Weekend away",
-            "b": "Weekend in bed"
+            "a": "Head on their chest",
+            "b": "Their head on your lap"
           },
           {
-            "a": "A big dinner",
-            "b": "A quiet picnic"
+            "a": "Hug for a minute",
+            "b": "Hold hands for an hour"
           },
           {
-            "a": "Dress up",
-            "b": "Pajamas and candles"
+            "a": "Cuddle on the couch",
+            "b": "Cuddle in bed"
           },
           {
-            "a": "Same gift each year",
-            "b": "A new surprise each year"
+            "a": "Forehead kisses",
+            "b": "Cheek kisses"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Anniversary edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Cuddle edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

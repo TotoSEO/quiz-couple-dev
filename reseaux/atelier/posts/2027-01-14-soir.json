@@ -1,162 +1,62 @@
 {
   "jour": "2027-01-14",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-013",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-065",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Autumn edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Dreams",
-            "accroche": "8 questions about the life we want",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Un banc dehors la nuit. La rose et le violet sont assis côte à côte et lèvent la tête, les yeux heureux et le sourire aux lèvres, des étincelles au-dessus d'eux.",
-                "duree": 2,
-                "decor": "dehors",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "banc-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "haut"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "etincelles"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "banc-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "haut"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Jump in the leaves",
+            "b": "Pumpkin soup at home"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "What does a perfect ordinary day look like for us?"
+            "a": "Scarf swap",
+            "b": "Hoodie swap"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "Which dream of yours can I help with?"
+            "a": "Forest walk",
+            "b": "Cafe with a view"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "What would you do if nothing could go wrong?"
+            "a": "Apple picking",
+            "b": "Pumpkin carving"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "Where do you see us in five years?"
+            "a": "Hot cider",
+            "b": "Hot chocolate"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "What would our dream house look like?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "What trip would you take with me forever?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "What small dream have you never told me?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "What would you want us to be known for?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Rainy walk",
+            "b": "Cozy blanket"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Answer one tonight, then swap.\n\nSave this for your next date night",
+      "legende": "Autumn edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

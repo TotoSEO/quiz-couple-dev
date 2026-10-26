@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-088",
+  "sujet": "tp-063",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Holiday morning",
+        "etiquette": "Long distance",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Lie in",
-            "b": "Up for croissants"
+            "a": "Call every night",
+            "b": "One long call a week"
           },
           {
-            "a": "Pool first",
-            "b": "Breakfast first"
+            "a": "Visit them first",
+            "b": "They visit you first"
           },
           {
-            "a": "Plan the day",
-            "b": "See what happens"
+            "a": "Watch a movie online",
+            "b": "Play a game online"
           },
           {
-            "a": "Hotel buffet",
-            "b": "Local bakery"
+            "a": "Send letters",
+            "b": "Send voice notes"
           },
           {
-            "a": "Beach all day",
-            "b": "City all day"
+            "a": "Sleep on a call",
+            "b": "Say goodnight and hang up"
           },
           {
-            "a": "Nap at noon",
-            "b": "Swim at noon"
+            "a": "Count the days",
+            "b": "Plan the next visit"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Holiday morning. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Long distance. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

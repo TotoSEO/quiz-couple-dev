@@ -2,61 +2,45 @@
   "jour": "2026-11-20",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-039",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-017",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Weekend away edition",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Weird facts edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Cabin in the woods",
-            "b": "Room with a sea view"
-          },
-          {
-            "a": "Hike all day",
-            "b": "Spa all day"
-          },
-          {
-            "a": "Pack the night before",
-            "b": "Pack in five minutes"
-          },
-          {
-            "a": "Drive there",
-            "b": "Take the train"
-          },
-          {
-            "a": "Local food stalls",
-            "b": "One fancy dinner"
-          },
-          {
-            "a": "Sleep in till noon",
-            "b": "Sunrise walk"
-          }
+        "questions": [
+          "What is your partner's weirdest habit?",
+          "What is their hidden talent?",
+          "Which word do they say all the time?",
+          "What are they weirdly good at?",
+          "What is their strangest fear?",
+          "What do they do when nobody is watching?",
+          "What is their weirdest food combo?",
+          "What do they say in their sleep?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Weekend away edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

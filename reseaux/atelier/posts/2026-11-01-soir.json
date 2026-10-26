@@ -2,27 +2,61 @@
   "jour": "2026-11-01",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "citation",
-  "categorie": "phrase",
-  "sujet": "ph-008",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-023",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "citation",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "texte": "I still smile when I see your name on my phone.",
-        "fleurs": "feuillage",
+        "etiquette": "Fun edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Game night",
+            "b": "Karaoke night"
+          },
+          {
+            "a": "Theme park",
+            "b": "Escape room"
+          },
+          {
+            "a": "Bowling",
+            "b": "Mini golf"
+          },
+          {
+            "a": "Pillow fight",
+            "b": "Water fight"
+          },
+          {
+            "a": "Board games",
+            "b": "Video games"
+          },
+          {
+            "a": "Costume party",
+            "b": "Pajama party"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "For the one whose name still makes you smile.\n\nSave this for later",
+      "legende": "Fun edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
-        "#lovequotes",
-        "#relationshipquotes",
-        "#couplegoals",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

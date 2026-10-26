@@ -1,0 +1,112 @@
+{
+  "jour": "2027-03-13",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-028",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Devant la maison, au soir, il lui raconte sa journée en gesticulant et elle rit ; le dragon surgit derrière le toit, rugit, et c'est LUI qu'il emporte dans ses serres. Elle (le héros) : le choc, le chagrin, une larme, puis le visage qui se ferme. Épée tirée, elle traverse la forêt (un tronc), la falaise (un ravin) et le tapis de nuages (le vide) jusqu'à la tour où il attend, apeuré ; garde, pieds ancrés, le bond au ralenti, le dragon vole en mille éclats. Souffle, épée rangée, trois pas vers lui et elle l'embrasse, les cœurs au sommet.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "epique",
+          "recherche": "Thunderstruck"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "jeu": "discussion",
+              "incident": {
+                "type": "enlevement",
+                "creature": "dragon",
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison au soir : le toit et la cheminée à droite, la porte éclairée, le chemin, le grand arbre à gauche, le ciel orange. Les deux se parlent debout face à face : elle (nœud rose, queue de cheval) écoute, il gesticule en racontant sa journée et elle rit. À 1,3 s le dragon surgit derrière le toit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite, sous le titre ; son ombre glisse sur le chemin jusqu'à eux. Elle lève les yeux, surprise, il se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale secoue l'arbre ; il a peur, elle est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur lui, le saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Elle recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 1.2
+                },
+                {
+                  "expression": "chagrin",
+                  "duree": 1.3
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.3
+                }
+              ],
+              "description": "Très gros plan sur le visage du héros, une fille, coupe franche : la tête remplit l'image. Trois temps. Le choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite, deux battements de cœur lents. À 1,2 s la tête tombe : sourcils tristes, bouche à l'envers, le regard descend vers le sol, une larme perle sous l'œil et coule sur la joue ; le vent tombe, presque le silence. À 2,5 s le visage se relève et se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, et le vent se lève, la queue de cheval claque, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": true,
+              "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, glissement métallique de la lame qui sort du fourreau puis sifflement de la lame, crépitement d'étincelles. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles, le temps de respirer deux fois. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long souffle d'air."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "foret",
+                  "obstacle": "tronc",
+                  "description": "Transition floue d'une seconde depuis le plan d'avant (le temps passe), puis travelling latéral dans la forêt : troncs et feuillages à l'encre devant, arbres gris derrière, le héros sprinte à la même place dans l'image. À 1,45 s un tronc couché arrive sous lui : passe-muraille (mains plantées sur le tronc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course jusqu'à la coupe, qui est elle aussi un flou."
+                },
+                {
+                  "decor": "falaise",
+                  "obstacle": "trou",
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur la falaise : sol rocheux, montagnes au loin. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Souffle d'air au saut, choc sourd à la réception, puis la course continue sous le flou de la coupe suivante."
+                },
+                {
+                  "decor": "pont",
+                  "duree": 2.2,
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur les sept derniers dixièmes la caméra pousse doucement sur lui pour amener la coupe, floue elle aussi."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "tour",
+              "description": "Transition floue d'une seconde : on découvre la tour pendant que l'image se précise. Plan d'ensemble en contre-plongée, la tour sur le tiers droit : il est debout sur la plateforme crénelée, mains jointes, apeuré ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. À 0,9 s l'héroïne déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, glissement), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers elle, yeux rouges, gueule ouverte : rugissement. Il se penche et tend les bras vers elle. Lente poussée de la caméra sur tout le plan."
+            },
+            {
+              "sequence": "preparation",
+              "description": "Plan moyen de profil, caméra fixe sur l'héroïne, la base de la tour derrière. Elle prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis elle plie les jambes lentement, sur une seconde, le buste se penche, les yeux se plissent, la queue de cheval est plaquée en arrière. Elle tient la position, la lame vibre, bourdonnement électrique qui monte, crépitement.",
+              "insert": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied, crépitement électrique."
+            },
+            {
+              "sequence": "exploit",
+              "type": "frappe",
+              "description": "Plan d'ensemble, même cadrage que la tour, la caméra reste large pendant l'envol puis serre d'un coup sur le combat. Détente : elle quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Elle file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Elle s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Elle poursuit en arc, atterrit accroupie sur la plateforme, se redresse, se tourne vers lui, et on tient le plan pendant que les éclats finissent de tomber ; il saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "bouquet",
+              "fin": "charmeur",
+              "description": "Plan moyen large sur la plateforme, caméra fixe : lui à gauche mains jointes, elle à droite. Elle reprend son souffle pendant une seconde et demie, pliée en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; il sourit, soulagé. Elle se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, raclement métallique du fourreau, les étincelles s'éteignent). Elle marche vers lui, trois pas tranquilles, et s'arrête devant lui. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur, scintillement magique. Sourire en coin (sourcil relevé, œil mi-clos, étincelle, tintement de paillettes) ; lui, yeux fermés de bonheur, joues roses, petit saut, puis il se penche vers elle, bras tendus, pendant que des cœurs montent entre eux ; elle sourit, heureuse. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "My girlfriend vs a dragon.\n\nSend this to your partner",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

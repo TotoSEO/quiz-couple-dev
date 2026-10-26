@@ -1,156 +1,62 @@
 {
   "jour": "2026-11-05",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-005",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-026",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Memories edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Childhood",
-            "accroche": "8 questions about little you",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Une plage en plein jour : la rose et le violet sont assis côte à côte dans le sable, près d'un château de sable, les yeux brillants et un grand sourire, comme deux enfants en vacances.",
-                "duree": 2,
-                "decor": "plage",
-                "moment": "midi",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "sable-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "camera"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "brillants",
-                        "bouche": "rire"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "sable-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "camera"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "brillants",
-                        "bouche": "rire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Relive your first date",
+            "b": "Skip to your next trip"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "What did you want to be as a kid?"
+            "a": "A photo album",
+            "b": "A video of your story"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "What was your favorite game?"
+            "a": "Keep every ticket",
+            "b": "Keep every photo"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "Who was your hero?"
+            "a": "Watch old videos",
+            "b": "Read old messages"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "What was your favorite cartoon?"
+            "a": "Retell how you met",
+            "b": "Plan what's next"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "What did you get in trouble for the most?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "What was your first best friend's name?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "What was your favorite meal at home?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "What do you miss most about being a kid?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "A time capsule for later",
+            "b": "A scrapbook for now"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Save this for your next date night",
+      "legende": "Memories edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

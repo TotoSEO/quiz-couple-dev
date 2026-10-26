@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-036",
+  "sujet": "tp-010",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Vacation edition",
-        "accroche": "Would you rather: couple edition",
+        "etiquette": "Honesty edition",
+        "accroche": "Would you rather: tell the truth?",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Two weeks at the beach",
-            "b": "Two weeks in a city"
+            "a": "Know all their secrets",
+            "b": "Keep a few secrets"
           },
           {
-            "a": "Plan every day",
-            "b": "No plan at all"
+            "a": "Always hear the truth",
+            "b": "Only hear nice things"
           },
           {
-            "a": "Hotel breakfast",
-            "b": "Bakery on the corner"
+            "a": "A white lie to be kind",
+            "b": "The blunt truth"
           },
           {
-            "a": "One suitcase for two",
-            "b": "One each"
+            "a": "Share every password",
+            "b": "Keep your phone locked"
           },
           {
-            "a": "Museums and cafes",
-            "b": "Hikes and views"
+            "a": "Know your gift in advance",
+            "b": "Be surprised"
           },
           {
-            "a": "Buy a souvenir",
-            "b": "Take a thousand photos"
+            "a": "Say sorry right away",
+            "b": "Never say I was wrong"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Vacation edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

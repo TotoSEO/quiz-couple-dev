@@ -2,61 +2,45 @@
   "jour": "2026-10-30",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-023",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-011",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Fun edition",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Little things edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Game night",
-            "b": "Karaoke night"
-          },
-          {
-            "a": "Theme park",
-            "b": "Escape room"
-          },
-          {
-            "a": "Bowling",
-            "b": "Mini golf"
-          },
-          {
-            "a": "Pillow fight",
-            "b": "Water fight"
-          },
-          {
-            "a": "Board games",
-            "b": "Video games"
-          },
-          {
-            "a": "Costume party",
-            "b": "Pajama party"
-          }
+        "questions": [
+          "How does your partner take their coffee or tea?",
+          "What's their favorite emoji?",
+          "What photo is on their phone's lock screen?",
+          "Which side of the bed do they sleep on?",
+          "What do they always order at a restaurant?",
+          "What color do they wear the most?",
+          "What is their shoe size?",
+          "Which song is on repeat for them?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Fun edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Little things edition: 8 small questions about your partner. The tiny details count!\n\nComment your score!",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

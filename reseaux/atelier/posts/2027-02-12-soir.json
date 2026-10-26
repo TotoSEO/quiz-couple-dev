@@ -1,0 +1,48 @@
+{
+  "jour": "2027-02-12",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-037",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Talents edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What is your partner proud of?",
+          "What are they best at?",
+          "What would they like to learn?",
+          "Can they sing well?",
+          "Can they draw?",
+          "What can they cook best?",
+          "What is their hidden talent?",
+          "Which skill do they want?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

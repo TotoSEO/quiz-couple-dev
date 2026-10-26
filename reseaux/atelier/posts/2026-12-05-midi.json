@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-057",
+  "sujet": "tp-045",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "City break",
+        "etiquette": "Summer edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Rooftop at sunset",
-            "b": "Old town at night"
+            "a": "Beach at sunrise",
+            "b": "Beach at sunset"
           },
           {
-            "a": "Museum morning",
-            "b": "Market morning"
+            "a": "Ice cream for dinner",
+            "b": "Barbecue at midnight"
           },
           {
-            "a": "Walk everywhere",
-            "b": "Scooter everywhere"
+            "a": "Swim together",
+            "b": "Nap in the shade"
           },
           {
-            "a": "Street food",
-            "b": "Fancy dinner"
+            "a": "Windows down drive",
+            "b": "Rooftop evening"
           },
           {
-            "a": "Plan the route",
-            "b": "Get lost on purpose"
+            "a": "Matching sunglasses",
+            "b": "Matching flip flops"
           },
           {
-            "a": "Hotel downtown",
-            "b": "Tiny flat outside"
+            "a": "Camping under stars",
+            "b": "Hotel with a pool"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "City break. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "Summer edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

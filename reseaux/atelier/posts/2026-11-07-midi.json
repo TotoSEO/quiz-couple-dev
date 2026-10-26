@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-009",
+  "sujet": "tp-008",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Weekend edition",
-        "accroche": "Would you rather: this or that?",
+        "etiquette": "Gifts edition",
+        "accroche": "Would you rather: gifts?",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Lazy Sunday in bed",
-            "b": "Adventure all day"
+            "a": "A handwritten letter",
+            "b": "A surprise gift"
           },
           {
-            "a": "Sleep in",
-            "b": "Watch the sunrise"
+            "a": "Flowers every week",
+            "b": "One big trip a year"
           },
           {
-            "a": "Brunch out",
-            "b": "Brunch at home"
+            "a": "A gift they made",
+            "b": "A gift they bought"
           },
           {
-            "a": "A long walk",
-            "b": "A long nap"
+            "a": "A surprise party",
+            "b": "A quiet dinner"
           },
           {
-            "a": "Game night",
-            "b": "Movie night"
+            "a": "A framed photo of us",
+            "b": "A playlist of our songs"
           },
           {
-            "a": "See family",
-            "b": "Stay just us two"
+            "a": "A gift on your birthday",
+            "b": "A gift for no reason"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Would you rather, weekend edition: what is your perfect Saturday?\n\nComment your A and B!",
+      "legende": "6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

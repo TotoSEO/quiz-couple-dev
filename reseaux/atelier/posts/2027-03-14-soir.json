@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-14",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-108",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Love language edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "A hundred compliments",
+            "b": "One long hug"
+          },
+          {
+            "a": "A love letter",
+            "b": "A love song"
+          },
+          {
+            "a": "They cook for you",
+            "b": "They plan a surprise"
+          },
+          {
+            "a": "Words every day",
+            "b": "Gifts every month"
+          },
+          {
+            "a": "Time together, no phones",
+            "b": "Help with your chores"
+          },
+          {
+            "a": "A kiss on the forehead",
+            "b": "A hand on your back"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, love language edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

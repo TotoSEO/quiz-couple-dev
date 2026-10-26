@@ -1,0 +1,79 @@
+{
+  "jour": "2027-08-28",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-052",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Sur la plage, assis sur le sable au soleil, ils regardent la mer ; le nuage d'orage arrive en grondant au-dessus des vagues et se plante juste au-dessus de lui, la pluie à verse, lui trempé sous ses mains, les dents qui claquent. Elle (le héros) lève la tête, surprise, puis décidée : debout, accroupie, le bond au-dessus de la mer et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le soleil revient, les rayons sur le sable. Elle retombe, s'époussette les mains ; il rit aux éclats, trempé, et elle rit avec lui.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "I Can See Clearly Now"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "jeu": "discussion",
+              "incident": {
+                "type": "pluie",
+                "creature": "nuage",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage au soleil : la mer et ses vagues au fond, deux palmiers, le sable. Ils sont assis sur le sable côte à côte et regardent la mer, il (bandana violet) rit, elle (nœud rose, queue de cheval) lui répond. À 1,2 s le vent tourne : un nuage d'orage gris arrive par le coin haut droit au-dessus des vagues, un visage fâché, des éclairs qui claquent dessous, et vient se planter juste au-dessus de lui ; il gronde, tonnerre, et la pluie se met à tomber en rideau. Il lève la tête, surpris, se met les mains sur la tête et claque des dents en tremblant ; elle le regarde, puis regarde le nuage, et son visage se ferme. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la pluie qui tombe autour. La surprise d'abord : yeux ronds, bouche en petit o, sourcils hauts, un battement de cœur. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers le nuage ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval claque dans une rafale qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière les mains sur la tête, la pluie qui tombe, le nuage au-dessus qui gronde. Elle se plante face au nuage, les poings serrés, les genoux qui fléchissent, le regard levé sous les gouttes ; la caméra serre un peu sur elle : elle va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "chasse",
+              "duree": 3.6,
+              "description": "Plan d'ensemble, le nuage en haut au-dessus de la mer, le couple en bas sous la pluie. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche par-dessus les vagues vers le nuage, rémanences, lignes de vitesse, et arme un coup de pied en plein vol ; juste avant l'impact, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur. Impact de bande dessinée : flash blanc, le nuage crève en étincelles jaunes et en gouttes bleues qui partent en étoile, un anneau blanc, et le ciel est dégagé ; la pluie s'arrête net, les rayons du soleil tournent sur le sable, une mouette crie. Elle retombe accroupie dans la poussière, se redresse, se tourne vers lui et s'époussette les mains avec un clin d'œil ; lui lève la tête, surpris, et saute de joie en riant."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "rire",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, sur la plage sous le soleil revenu. Elle marche vers lui, trois pas tranquilles, et lui fait un clin d'œil charmeur, étincelle, tintement ; il rit aux éclats et saute sur place, elle rit aussi et saute à son tour, et des cœurs montent entre eux pendant qu'ils reprennent leur souffle, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "She kicked the storm cloud for him.\n\nTag her",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

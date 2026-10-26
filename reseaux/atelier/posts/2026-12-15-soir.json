@@ -1,258 +1,46 @@
 {
   "jour": "2026-12-15",
   "creneau": "soir",
-  "format": "image",
-  "gabarit": "bd",
-  "categorie": "bd",
-  "sujet": "bd-009",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-023",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "bd",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "idee": "Le cadeau au salon : il le cache derrière lui, elle l'ouvre, une seule chaussette, il est gêné.",
-        "cases": [
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Un salon le soir, la lumière de la lampe. Le violet, à droite, cache un cadeau derrière son dos, un grand sourire. La rose, à gauche, sur le canapé, a les yeux brillants et regarde le violet.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "brillants",
-                        "bouche": "sourire",
-                        "rougit": true
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-droite",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "cadeau",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "clin",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon. La rose tient le cadeau sur ses genoux et l'ouvre, les yeux grands ouverts, la bouche en o. Le violet la regarde, plein d'espoir.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "cadeau",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "o"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon. La rose tient une seule chaussette entre deux doigts, les sourcils hauts et la bouche plate. Le violet, à côté, sourit sans rien dire.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "chaussette",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "sourcils": "hauts"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon. Le violet, gêné, les joues roses et une goutte au front, se gratte la tête. La rose, la chaussette à la main, le regarde, les sourcils hauts.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "chaussette",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "sourcils": "hauts"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "triste",
-                        "rougit": true
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "goutte"
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "repliques": [
-              {
-                "texte": "the other one is coming",
-                "cote": "droite"
-              }
-            ]
-          }
-        ]
+        "etiquette": "Mood edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What makes your partner angry fast?",
+          "What always makes them laugh?",
+          "What do they do when stressed?",
+          "What cheers them up in a minute?",
+          "How do they act when they're tired?",
+          "What do they do when nervous?",
+          "What makes them cry at a movie?",
+          "What mood are they in at 7am?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
       },
-      "legende": "Send this to your partner",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#couplecomics",
-        "#relationshipcomics",
-        "#couplegoals",
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

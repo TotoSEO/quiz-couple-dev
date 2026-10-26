@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-026",
+  "sujet": "tp-007",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Memories edition",
-        "accroche": "Would you rather: couple edition",
+        "etiquette": "Home life edition",
+        "accroche": "Would you rather: at home?",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Relive your first date",
-            "b": "Skip to your next trip"
+            "a": "Always do the dishes",
+            "b": "Always do the laundry"
           },
           {
-            "a": "A photo album",
-            "b": "A video of your story"
+            "a": "A big bed",
+            "b": "A big sofa"
           },
           {
-            "a": "Keep every ticket",
-            "b": "Keep every photo"
+            "a": "A cozy night in",
+            "b": "A fun night out"
           },
           {
-            "a": "Watch old videos",
-            "b": "Read old messages"
+            "a": "A cat",
+            "b": "A dog"
           },
           {
-            "a": "Retell how you met",
-            "b": "Plan what's next"
+            "a": "A perfectly tidy home",
+            "b": "A cozy messy home"
           },
           {
-            "a": "A time capsule for later",
-            "b": "A scrapbook for now"
+            "a": "Wake up early",
+            "b": "Stay up late"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Memories edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Would you rather, home life edition: who wins the house rules?\n\nComment your A and B!",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

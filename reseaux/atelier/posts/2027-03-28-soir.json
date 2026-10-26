@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-28",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-118",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Soup season edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Pumpkin soup",
+            "b": "Tomato soup"
+          },
+          {
+            "a": "Bread on the side",
+            "b": "Cheese on top"
+          },
+          {
+            "a": "Soup in bed",
+            "b": "Soup by the window"
+          },
+          {
+            "a": "Their grandma's recipe",
+            "b": "Yours"
+          },
+          {
+            "a": "Spicy",
+            "b": "Creamy"
+          },
+          {
+            "a": "A big pot for the week",
+            "b": "Fresh every night"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, soup season edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

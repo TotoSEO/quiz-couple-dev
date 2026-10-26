@@ -1,187 +1,78 @@
 {
   "jour": "2026-11-14",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "dm-005",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-012",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "He's a 10 but...",
-            "accroche": "Date night edition. Is he still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Les deux sur un trait de sol. Le violet, à droite, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "question",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "La nuit en ville, trois bandits masqués surgissent et l'encerclent, lui ; elle (le héros) prend sa garde de karaté et les explose un à un : coup de poing, le premier vole hors de l'image ; coup de pied, le deuxième passe par-dessus elle et s'étale K.-O. ; saut et coup de pied retourné au ralenti, le dernier part dans le décor. Elle se frotte les mains, il lui saute au cou.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "epique",
+          "recherche": "Kung Fu Fighting"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "ville",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "agression",
+                "bandits": 3,
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, la rue la nuit : des immeubles éclairés au loin, deux lampadaires qui font des cônes de lumière, le trottoir. Ils rentrent en se parlant, elle (nœud rose, queue de cheval) gesticule, lui rit. À 1,3 s un impact sourd : trois bandits masqués, bonnet noir, déboulent en sprintant par la droite, poussière, lignes de vitesse, et se plantent devant eux penchés en avant, les mains griffues, en grognant ; l'écran tremble à leur arrivée. Lui recule d'un pas, bras écartés, apeuré, et tremble ; elle lève la tête, surprise, puis son visage se durcit et elle avance d'un pas pour se mettre devant lui. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, le lampadaire derrière. Le choc : yeux ronds écarquillés, bouche en o, sourcils très hauts, un battement de cœur lent. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, le vent se lève et la queue de cheval claque, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "preparation",
+              "duree": 1.9,
+              "description": "Plan moyen de profil, caméra sur elle, les bandits à droite qui se tassent et avancent d'un pas en tremblant de menace. Elle se frotte les mains l'une contre l'autre, un craquement de jointures, puis lève les poings et plie les genoux : la garde de karaté, un souffle. Elle avance d'un pas lent vers eux, le corps qui vibre, le regard fixe ; la caméra serre un peu plus."
+            },
+            {
+              "sequence": "exploit",
+              "type": "karate",
+              "duree": 4.6,
+              "description": "Plan d'ensemble, la caméra suit le combat vers la droite. Elle sprinte, rémanences, et décoche un coup de poing au premier : impact de bande dessinée, l'écran tremble, il part en vol plané hors de l'image par la droite, les yeux en croix. Le deuxième charge ; coup de pied à hauteur de tête, impact, il passe par-dessus elle en vrille et s'étale à plat sur le trottoir à gauche, K.-O., des étoiles qui tournent autour de sa tête. Le troisième avance ; elle saute et part en coup de pied retourné, le corps qui tourne sur lui-même : ralenti onze fois au cœur de la vrille, caméra serrée, voile bleuté, battement de cœur, lignes de vitesse ; impact énorme, onde de choc, secousse, il est propulsé hors de l'image. Elle retombe accroupie, se redresse, se tourne vers lui et s'époussette les mains avec un sourire en coin ; lui, encore sous le choc, lève les bras de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "calin",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, le bandit K.-O. toujours à plat à gauche avec ses étoiles. Elle le regarde, les yeux fermés de bonheur ; il court vers elle et lui saute au cou, poussière, et ils restent enlacés pendant que des cœurs montent entre eux, tous les deux heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he says \"I don't mind\" and then hates the restaurant"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he orders for you without asking"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he's late for everything, even his own birthday party"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he splits the bill down to the last cent"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he answers work emails during your date nights"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he spends the whole dinner on his phone"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he flirts with the waitress, \"just being nice\""
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he's never free on weekends and won't say why"
-          },
-          {
-            "type": "fin",
-            "texte": "What's he now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "points",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "goutte",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "My girlfriend vs three muggers.\n\nTag her",
       "hashtags": [
-        "#hesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

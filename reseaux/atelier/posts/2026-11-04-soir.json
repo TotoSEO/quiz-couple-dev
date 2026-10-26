@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-027",
+  "sujet": "tp-025",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Silly edition",
+        "etiquette": "Mornings edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Talk like a pirate for a day",
-            "b": "Sing every sentence"
+            "a": "Coffee in bed",
+            "b": "Breakfast out"
           },
           {
-            "a": "Swap phones for a day",
-            "b": "Swap clothes for a day"
+            "a": "Wake up early together",
+            "b": "Sleep in together"
           },
           {
-            "a": "Dance in the store",
-            "b": "Sing in the elevator"
+            "a": "A morning cuddle for an hour",
+            "b": "A morning run together"
           },
           {
-            "a": "Prank them",
-            "b": "Get pranked by them"
+            "a": "Make the bed together",
+            "b": "Leave it messy"
           },
           {
-            "a": "Matching onesies",
-            "b": "Matching hats"
+            "a": "A kiss before coffee",
+            "b": "A coffee before the kiss"
           },
           {
-            "a": "Wrestle with pillows",
-            "b": "Race on office chairs"
+            "a": "Sunrise on the balcony",
+            "b": "Cartoons on the couch"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Silly edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "Mornings edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

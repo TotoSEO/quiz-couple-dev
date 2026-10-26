@@ -1,0 +1,47 @@
+{
+  "jour": "2027-03-09",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-045",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Phone edition",
+        "accroche": "Who's more likely to...?",
+        "consigne": "Point at your partner. No talking!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "...to leave the other on read?",
+          "...to send 10 texts in a row?",
+          "...to check the other's location?",
+          "...to fall asleep on a call?",
+          "...to screenshot a chat?",
+          "...to lose the phone in the house?",
+          "...to text from the next room?",
+          "...to have 200 unread messages?"
+        ],
+        "fin": {
+          "question": "Who got pointed at the most? Comment it!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Point at the one who'd do it. 8 situations, 5 seconds each.\n\nSend this to your partner",
+      "hashtags": [
+        "#whosmorelikely",
+        "#couplequiz",
+        "#couplegames",
+        "#quizcouple"
+      ]
+    }
+  }
+}

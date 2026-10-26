@@ -1,0 +1,47 @@
+{
+  "jour": "2027-03-02",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-043",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Lazy Sunday",
+        "accroche": "Who's more likely to...?",
+        "consigne": "Point at your partner. No talking!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "...to stay in pajamas all day?",
+          "...to cancel plans to stay in bed?",
+          "...to take a 3-hour nap?",
+          "...to order breakfast at 2pm?",
+          "...to watch the same show again?",
+          "...to say 'five more minutes'?",
+          "...to forget what day it is?",
+          "...to fall asleep on the sofa?"
+        ],
+        "fin": {
+          "question": "Who got pointed at the most? Comment it!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Point at the one who'd do it. 8 situations, 5 seconds each.\n\nSend this to your partner",
+      "hashtags": [
+        "#whosmorelikely",
+        "#couplequiz",
+        "#couplegames",
+        "#quizcouple"
+      ]
+    }
+  }
+}

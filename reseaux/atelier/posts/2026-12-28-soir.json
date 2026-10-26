@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-076",
+  "sujet": "tp-057",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Apology edition",
+        "etiquette": "City break",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Say sorry first",
-            "b": "Make the first joke"
+            "a": "Rooftop at sunset",
+            "b": "Old town at night"
           },
           {
-            "a": "Fix it before bed",
-            "b": "Fix it over breakfast"
+            "a": "Museum morning",
+            "b": "Market morning"
           },
           {
-            "a": "A hug to make up",
-            "b": "A letter to make up"
+            "a": "Walk everywhere",
+            "b": "Scooter everywhere"
           },
           {
-            "a": "Apologize in person",
-            "b": "Apologize in a text"
+            "a": "Street food",
+            "b": "Fancy dinner"
           },
           {
-            "a": "A sorry snack",
-            "b": "A sorry playlist"
+            "a": "Plan the route",
+            "b": "Get lost on purpose"
           },
           {
-            "a": "Talk it out now",
-            "b": "Cool off first"
+            "a": "Hotel downtown",
+            "b": "Tiny flat outside"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Apology edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "City break. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

@@ -1,223 +1,46 @@
 {
   "jour": "2027-01-05",
   "creneau": "soir",
-  "format": "image",
-  "gabarit": "bd",
-  "categorie": "bd",
-  "sujet": "bd-012",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-026",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "bd",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "idee": "La longue journée au salon : elle rentre crevée, il lui tend une tasse, elle s'affale contre lui, les deux endormis sur le canapé.",
-        "cases": [
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Un salon le soir. La rose vient de rentrer : debout à gauche, les yeux plats et la bouche plate, les épaules basses, une longue journée. Le violet, assis sur le canapé à droite, la regarde, doux.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "devant-gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "canape-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon. Le violet, debout, tend une tasse à la rose. Elle la regarde, un tout petit sourire qui revient.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "devant-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-droite",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "tasse",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon. Les deux sont assis sur le canapé, la rose s'affale contre le violet, les yeux fermés, un petit sourire. Le violet sourit, tendre.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "calin",
-                        "de": 0,
-                        "a": 2,
-                        "avec": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "fermes",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "canape-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "coeurs"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même salon, plus tard. Les deux dorment sur le canapé, côte à côte, des Z au-dessus d'eux. Pas un mot.",
-                "duree": 2,
-                "decor": "salon",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "canape-gauche",
-                    "gestes": [
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "zzz"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "canape-droite",
-                    "gestes": [
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+        "etiquette": "Clothes edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What are your partner's favorite shoes?",
+          "Hoodie or jacket for them?",
+          "Which of your clothes do they steal?",
+          "What is their power outfit?",
+          "Which clothes do they never throw away?",
+          "Dress up or dress down for them?",
+          "What color do they wear the most?",
+          "What is their comfiest outfit?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
       },
-      "legende": "Tag your partner",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#couplecomics",
-        "#relationshipcomics",
-        "#couplegoals",
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

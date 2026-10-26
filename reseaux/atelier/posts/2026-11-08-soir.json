@@ -2,27 +2,61 @@
   "jour": "2026-11-08",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "citation",
-  "categorie": "phrase",
-  "sujet": "ph-010",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-027",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "citation",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "texte": "You're my favorite part of every day, even the hard ones.",
-        "fleurs": "feuillage",
+        "etiquette": "Silly edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Talk like a pirate for a day",
+            "b": "Sing every sentence"
+          },
+          {
+            "a": "Swap phones for a day",
+            "b": "Swap clothes for a day"
+          },
+          {
+            "a": "Dance in the store",
+            "b": "Sing in the elevator"
+          },
+          {
+            "a": "Prank them",
+            "b": "Get pranked by them"
+          },
+          {
+            "a": "Matching onesies",
+            "b": "Matching hats"
+          },
+          {
+            "a": "Wrestle with pillows",
+            "b": "Race on office chairs"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "For the hard days too.\n\nSave this for later",
+      "legende": "Silly edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
-        "#lovequotes",
-        "#relationshipquotes",
-        "#couplegoals",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

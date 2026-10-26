@@ -1,158 +1,62 @@
 {
   "jour": "2026-11-12",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-006",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-009",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Weekend edition",
+        "accroche": "Would you rather: this or that?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Favorites",
-            "accroche": "8 favorites to guess about each other",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Une cuisine en fin de journée : la rose et le violet sont derrière le plan de travail, face à face, un petit sourire en coin et les sourcils hauts, comme deux joueurs avant une partie.",
-                "duree": 2,
-                "decor": "cuisine",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "comptoir-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "sourcils": "hauts"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "comptoir-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "sourire",
-                        "sourcils": "hauts"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Lazy Sunday in bed",
+            "b": "Adventure all day"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "My favorite way to spend a Sunday?"
+            "a": "Sleep in",
+            "b": "Watch the sunrise"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "My favorite thing you cook?"
+            "a": "Brunch out",
+            "b": "Brunch at home"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "My favorite memory of us?"
+            "a": "A long walk",
+            "b": "A long nap"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "My favorite song right now?"
+            "a": "Game night",
+            "b": "Movie night"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "My favorite thing to wear?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "My favorite place to be with you?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "My favorite part of the morning?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "My favorite thing you do without noticing?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "See family",
+            "b": "Stay just us two"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Guess first. Then tell each other.\n\nSave this for your next date night",
+      "legende": "Would you rather, weekend edition: what is your perfect Saturday?\n\nComment your A and B!",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-10",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-104",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Time travel edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Relive your first kiss",
+            "b": "Skip to your next trip"
+          },
+          {
+            "a": "Meet them at 10 years old",
+            "b": "Meet them at 80"
+          },
+          {
+            "a": "Your first date, again",
+            "b": "Your best day, again"
+          },
+          {
+            "a": "See your wedding day",
+            "b": "See your 50th anniversary"
+          },
+          {
+            "a": "Visit your grandparents' first date",
+            "b": "Visit your kids' first date"
+          },
+          {
+            "a": "One day in the past",
+            "b": "One day in the future"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, time travel edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-18",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-090",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Table for two",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "The usual place",
+            "b": "A new place"
+          },
+          {
+            "a": "Share a starter",
+            "b": "Share a dessert"
+          },
+          {
+            "a": "Talk about the day",
+            "b": "Talk about plans"
+          },
+          {
+            "a": "Candles",
+            "b": "Natural light"
+          },
+          {
+            "a": "Order for them",
+            "b": "Order for you"
+          },
+          {
+            "a": "Phones away",
+            "b": "Phones out"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Table for two. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

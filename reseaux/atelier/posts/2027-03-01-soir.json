@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-01",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-098",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Future home edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "A house with a fireplace",
+            "b": "A house with a pool"
+          },
+          {
+            "a": "City flat with a view",
+            "b": "Village house with a garden"
+          },
+          {
+            "a": "Pets first",
+            "b": "Plants first"
+          },
+          {
+            "a": "Big kitchen",
+            "b": "Big bathroom"
+          },
+          {
+            "a": "A reading corner",
+            "b": "A game room"
+          },
+          {
+            "a": "Neighbors you know",
+            "b": "Neighbors you never see"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, future home edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

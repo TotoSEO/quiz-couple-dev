@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-04",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-100",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Hard mode edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "No kisses for a week",
+            "b": "No hugs for a week"
+          },
+          {
+            "a": "Always too hot",
+            "b": "Always too cold"
+          },
+          {
+            "a": "Never eat dessert again",
+            "b": "Never watch a movie again"
+          },
+          {
+            "a": "No music for a month",
+            "b": "No series for a month"
+          },
+          {
+            "a": "Only text, never call",
+            "b": "Only call, never text"
+          },
+          {
+            "a": "Lose your photos",
+            "b": "Lose your playlists"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, hard mode edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

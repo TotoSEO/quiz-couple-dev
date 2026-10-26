@@ -1,0 +1,47 @@
+{
+  "jour": "2027-03-23",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-049",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Hard edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "questions": [
+          "Their blood type?",
+          "Their first teacher's name?",
+          "What time were they born?",
+          "Their shoe size?",
+          "Their first pet's name?",
+          "The street of their first home?",
+          "Their favorite number?",
+          "Their first concert?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        },
+        "son": {
+          "ambiance": "jeu"
+        }
+      },
+      "legende": "Hard edition: 8 questions about your partner, 5 seconds each. No cheating!\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

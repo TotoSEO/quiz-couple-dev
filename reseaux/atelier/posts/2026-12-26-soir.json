@@ -1,188 +1,78 @@
 {
   "jour": "2026-12-26",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "noel-11",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-017",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "He's a 10 but...",
-            "accroche": "Christmas edition. Is he still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Un intérieur de Noël le soir. Le violet, à droite près du sapin, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
-                "duree": 2,
-                "decor": "noel",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "question",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "devant-sapin",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ],
-                "moment": "soir"
-              }
+        "idee": "Une nuit dans les montagnes, elle montre la lune, les yeux en cœur. Il sourit, puis un sourcil se lève : il sort une corde, fait tournoyer un lasso et le lance au ralenti dans un nuage de fumée, le sol qui se brise ; la boucle file jusqu'à la lune et se referme, la lune ouvre des yeux ronds ; il tire de tout son poids et la lune descend se poser sur la colline dans un grand boum. Ils sautent dessus et s'asseyent côte à côte sur la lune, qui sourit les yeux fermés.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "tendre",
+          "recherche": "Talking to the Moon"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "montagnes",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-lune",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, les montagnes la nuit : les étoiles qui scintillent, et à droite, au-dessus d'elle, une grande lune pâle au visage endormi, un petit sourire, trois cratères, un halo doux. Il parle, elle l'écoute et rit. À 1,2 s elle se tourne vers la lune et tend le bras vers elle, les yeux en cœur. Il lève la tête, sourit, la regarde avec tendresse, joues roses, puis un sourcil se lève et un sourire en coin se dessine : il a une idée. La caméra pousse doucement vers la lune et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur elle. À 1,0 s un sourcil se lève, les yeux se plissent, le sourire devient un sourire en coin : l'idée ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana bougent dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "corde": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, elle à droite le bras encore tendu vers la lune. Sa main passe derrière son dos et ressort avec une corde roulée, pop ; il la soupèse, le sourire en coin, et se plante face à la lune, les poings serrés. La caméra serre un peu sur lui."
+            },
+            {
+              "sequence": "exploit",
+              "type": "lasso",
+              "duree": 6.6,
+              "description": "Plan moyen sur lui, elle à droite qui regarde sans comprendre. Il lève le bras et fait tournoyer le lasso au-dessus de sa tête, trois tours qui sifflent, de plus en plus vite. Le lancer : ralenti onze fois, caméra qui pousse, voile bleuté, battement de cœur ; à l'instant où la corde part, de la fumée jaillit de partout autour de lui, le sol se fissure sous ses pieds en trois fentes, onde de choc, secousse. La caméra s'ouvre en grand : la boucle file en arc vers la lune, lignes de vitesse, et se referme autour d'elle ; la lune ouvre des yeux ronds et la bouche, la corde se tend, craquement. Il se penche en arrière de tout son poids, les pieds plantés, le corps qui vibre, un grondement : la lune descend lentement vers la colline, elle recule d'un pas, bouche bée, et la lune se pose à droite dans un grand boum, poussière, le sol qui tremble, puis sourit les yeux fermés, les joues roses. Il lâche la corde, s'époussette les mains, un clin d'œil ; elle saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large, caméra fixe, la lune posée à droite qui rayonne doucement sur la colline. Il prend son élan et saute dessus, elle le suit d'un bond, et ils s'asseyent côte à côte sur la lune, face à face, les têtes qui se penchent l'une vers l'autre, les joues roses, pendant que des cœurs montent au-dessus d'eux et que la lune sourit. La caméra pousse lentement sur eux trois jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he plays Christmas songs from November 1st"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he shakes every present to guess what's inside"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he wraps your gift in a supermarket bag"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he eats the whole advent calendar on December 1st"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he gives you socks every year"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he regifts the candle his aunt gave him"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he leaves you alone with his family all day"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he spent Christmas Eve texting his ex"
-          },
-          {
-            "type": "fin",
-            "texte": "What's he now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "points",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "goutte",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "When he brings you the moon.\n\nSend this to your partner",
       "hashtags": [
-        "#hesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

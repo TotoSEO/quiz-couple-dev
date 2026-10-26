@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-040",
+  "sujet": "tp-034",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Night out edition",
+        "etiquette": "Cozy night in edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Dance till 3am",
-            "b": "Dinner, home by 11"
+            "a": "Candles and music",
+            "b": "Fairy lights and a movie"
           },
           {
-            "a": "Dress up together",
-            "b": "Jeans and a tee"
+            "a": "Massage for them first",
+            "b": "Massage for you first"
           },
           {
-            "a": "Big party",
-            "b": "A table for two"
+            "a": "Hot chocolate",
+            "b": "Ice cream, in winter"
           },
           {
-            "a": "Karaoke night",
-            "b": "Quiet cocktail bar"
+            "a": "Matching socks",
+            "b": "Matching pajamas"
           },
           {
-            "a": "Walk home together",
-            "b": "Late night pizza"
+            "a": "Cook a big dinner",
+            "b": "Order and cuddle"
           },
           {
-            "a": "Be last to leave",
-            "b": "Leave first"
+            "a": "Fall asleep on the couch",
+            "b": "Fall asleep in bed"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Night out edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Cozy night in edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

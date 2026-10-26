@@ -2,27 +2,61 @@
   "jour": "2026-11-29",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "citation",
-  "categorie": "phrase",
-  "sujet": "ph-005",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-038",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "citation",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "texte": "You're the only person I'd share my fries with.",
-        "fleurs": "feuillage",
+        "etiquette": "Bedtime edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Lights out at 10",
+            "b": "Talk till 2am"
+          },
+          {
+            "a": "Same side forever",
+            "b": "Swap sides nightly"
+          },
+          {
+            "a": "Their arm as a pillow",
+            "b": "Your own pillow"
+          },
+          {
+            "a": "Goodnight kiss",
+            "b": "Goodnight text"
+          },
+          {
+            "a": "Cold feet on them",
+            "b": "Warm feet on you"
+          },
+          {
+            "a": "Wake up together",
+            "b": "Wake up apart"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Tag your partner",
+      "legende": "Bedtime edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
-        "#lovequotes",
-        "#relationshipquotes",
-        "#couplegoals",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

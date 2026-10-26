@@ -2,61 +2,45 @@
   "jour": "2026-12-18",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-070",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-024",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Comfort edition",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Favorites, part 2",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Hug for an hour",
-            "b": "A hundred short hugs"
-          },
-          {
-            "a": "Soup when sick",
-            "b": "Blanket when sick"
-          },
-          {
-            "a": "They stay quiet",
-            "b": "They make you laugh"
-          },
-          {
-            "a": "A movie to cry to",
-            "b": "A show to laugh at"
-          },
-          {
-            "a": "Tea and silence",
-            "b": "Snacks and talking"
-          },
-          {
-            "a": "Call them first",
-            "b": "Wait for their call"
-          }
+        "questions": [
+          "What is your partner's favorite season?",
+          "What is their favorite animal?",
+          "Their favorite day of the week?",
+          "Which smell do they love most?",
+          "Their favorite time of day?",
+          "Their favorite color to wear?",
+          "Which fruit do they pick first?",
+          "What is their lucky number?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Comfort edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

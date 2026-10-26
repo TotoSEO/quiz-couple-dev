@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-068",
+  "sujet": "tp-053",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Playlist edition",
+        "etiquette": "Game night",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Their songs all day",
-            "b": "Your songs all day"
+            "a": "Cards",
+            "b": "Board game"
           },
           {
-            "a": "Sing in the car",
-            "b": "Dance in the kitchen"
+            "a": "Team up against friends",
+            "b": "Play against each other"
           },
           {
-            "a": "One song that is yours",
-            "b": "A whole playlist"
+            "a": "Loser does the dishes",
+            "b": "Loser gives a massage"
           },
           {
-            "a": "Shuffle",
-            "b": "Pick every song"
+            "a": "Play to win",
+            "b": "Play for fun"
           },
           {
-            "a": "Old favorites",
-            "b": "New discoveries"
+            "a": "Trivia night",
+            "b": "Puzzle night"
           },
           {
-            "a": "Headphones to share",
-            "b": "Speaker for both"
+            "a": "Snacks on the table",
+            "b": "Snacks on the couch"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Playlist edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Game night. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

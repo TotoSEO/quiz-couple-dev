@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-07",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-102",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Silly edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Talk like a pirate all day",
+            "b": "Sing every sentence"
+          },
+          {
+            "a": "Match outfits for a week",
+            "b": "Swap shoes for a day"
+          },
+          {
+            "a": "Dance in public",
+            "b": "Sing in public"
+          },
+          {
+            "a": "Whisper for a day",
+            "b": "Shout for a day"
+          },
+          {
+            "a": "Walk backwards to the shop",
+            "b": "Hop to the shop"
+          },
+          {
+            "a": "A fake mustache on a date",
+            "b": "A cape on a date"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, silly edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

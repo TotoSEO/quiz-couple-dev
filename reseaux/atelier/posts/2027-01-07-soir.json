@@ -1,163 +1,62 @@
 {
   "jour": "2027-01-07",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-012",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-060",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Birthday edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Missing you",
-            "accroche": "8 questions for when you're apart",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Un banc dehors le soir. La rose est assise à gauche, la bouche à l'envers, un téléphone à la main. Le violet, à droite, la regarde avec tendresse, des cœurs au-dessus de lui.",
-                "duree": 2,
-                "decor": "dehors",
-                "moment": "soir",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "banc-gauche",
-                    "gestes": [
-                      {
-                        "geste": "tient",
-                        "de": 0,
-                        "a": 2,
-                        "objet": "telephone",
-                        "main": "gauche"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "triste"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "banc-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "coeurs"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Surprise party",
+            "b": "Dinner for two"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "What's the first thing you'll do when we're together again?"
+            "a": "Cake for breakfast",
+            "b": "Cake at midnight"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "What do you miss the most right now?"
+            "a": "One gift, well chosen",
+            "b": "Little gifts all day"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "What should I send you tonight?"
+            "a": "Sing loudly",
+            "b": "Hum quietly"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "What song reminds you of me?"
+            "a": "Handmade card",
+            "b": "Big balloons"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "What is your favorite memory of us?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "What do you do when you miss me?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "What do you want us to do next time?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "What would you say if I was there now?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Birthday trip",
+            "b": "Birthday at home"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Answer one tonight, even from far away.\n\nSend this to your partner",
+      "legende": "Birthday edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

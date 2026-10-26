@@ -1,169 +1,82 @@
 {
   "jour": "2026-11-21",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "dm-006",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-013",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "She's a 10 but...",
-            "accroche": "Moving in edition. Is she still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Les deux sur un trait de sol. La rose, à gauche, fait un clin d'œil avec un grand sourire, entourée d'étincelles : c'est elle, le 10. Le violet, à droite, la regarde, sourcils hauts et bouche plate, sans rien au-dessus de la tête (plus grand qu'elle, un effet y toucherait l'accroche).",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "rose",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "Dans la prairie, il joint les mains, les yeux qui brillent, un chiot dans sa bulle de pensée ; elle croise les bras : non, deux fois de la tête. Il baisse la tête, puis un sourire en coin. Le soir il revient la chercher par la main, « une surprise », et l'emmène au jardin : neuf chiens qui aboient et bondissent. Elle tourne de l'œil, se raidit et tombe à la renverse au ralenti ; il rit, un chiot dans les bras, s'agenouille près d'elle ; elle se réveille et éclate de rire.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "Hound Dog"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "prairie",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-chien",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la prairie : le grand arbre à gauche, les collines, des fleurs. Ils se parlent debout, il (bandana violet) gesticule, elle (nœud rose) l'écoute et rit. À 1,2 s il joint les mains sous le menton et la regarde avec de grands yeux qui brillent : une bulle de pensée pop au-dessus de sa tête, un chiot dedans. Elle croise les bras et fait non de la tête, deux fois, les sourcils froncés. La bulle s'efface ; il laisse tomber les épaules et soupire, triste. La caméra pousse légèrement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "triste",
+                  "duree": 0.9
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage à lui, coupe franche, les collines derrière. La tristesse : sourcils tristes, bouche à l'envers, le regard vers le sol, presque le silence. À 0,9 s un sourcil se lève, les yeux se plissent, un sourire en coin : il a une idée ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana bougent dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "surprise",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le soir est tombé, devant la maison sous la lune, les grillons. Il entre par la gauche en la tirant par la main, un sourire en coin, elle suit sans comprendre ; ils s'arrêtent devant la porte, il se tourne vers elle et lui parle avec un clin d'œil, la main qui gesticule : « j'ai une surprise pour toi ». Elle hausse un sourcil, sceptique. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "jardin",
+              "duree": 3.6,
+              "description": "Transition floue d'une seconde : le jardin de la maison la nuit, la barrière et la niche au fond, l'arbre à droite, les fenêtres allumées. La caméra est serrée sur eux deux à gauche ; il lève les bras en l'air, ta-da, et la caméra glisse vers la droite pour découvrir la pelouse : neuf chiens qui aboient et sautent dans tous les sens, la langue pendante, les queues qui battent, un roulement de tambour. Elle se fige, les yeux ronds, bouche ouverte, et commence à trembler."
+            },
+            {
+              "sequence": "exploit",
+              "type": "malaise",
+              "duree": 4.2,
+              "description": "Plan moyen sur elle, à gauche, lui à côté, la meute qui saute derrière. Elle tremble de plus en plus fort, une spirale de vertige tourne au-dessus de sa tête, ses yeux deviennent des spirales. Elle se raidit comme une planche, les bras le long du corps, et bascule en arrière : ralenti dix fois sur la chute, caméra serrée, voile bleuté, une chute de trombone ; elle s'écrase au sol dans un nuage de poussière, secousse, les yeux en croix, des étoiles qui tournent autour de sa tête. Il la regarde, surpris, puis éclate de rire ; un chiot lui saute dans les bras et il le cajole, la tête penchée dessus. La caméra s'écarte sur la scène."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "reveil",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, la meute qui saute au fond. Elle est toujours à plat, les étoiles autour de la tête. Il s'approche avec le chiot et s'agenouille près d'elle, attendri. Elle sursaute, revient à elle, se redresse assise, les yeux ronds, regarde autour d'elle tous ces chiens... et éclate de rire ; il rit aussi, le chiot aboie, des cœurs montent entre eux. La caméra pousse lentement sur eux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she has 14 bottles of shampoo in the shower"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she leaves hair ties everywhere, even in your shoes"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she sings off-key in the shower, very loudly"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she leaves the dishes \"soaking\" for three days"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she puts the empty milk carton back in the fridge"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she moves your stuff and calls it \"organizing\""
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she uses your towel for her 12-step skincare routine"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she never apologizes after a fight"
-          },
-          {
-            "type": "fin",
-            "texte": "What's she now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. Le violet, à droite, les yeux plats et la bouche plate : il n'est pas convaincu. La rose, à gauche, rougit, les yeux grands ouverts et la bouche en o, prise sur le fait.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "rose",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "When he wants a puppy.\n\nTag your partner",
       "hashtags": [
-        "#shesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

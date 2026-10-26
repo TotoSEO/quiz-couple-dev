@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-031",
+  "sujet": "tp-028",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Rainy day edition",
+        "etiquette": "Comfort edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Puzzle on the floor",
-            "b": "Board game at the table"
+            "a": "A hug that lasts an hour",
+            "b": "100 short hugs"
           },
           {
-            "a": "Walk in the rain",
-            "b": "Watch it from bed"
+            "a": "Rainy day inside",
+            "b": "Sunny day outside"
           },
           {
-            "a": "Pancakes for dinner",
-            "b": "Soup and bread"
+            "a": "Warm socks",
+            "b": "A warm blanket"
           },
           {
-            "a": "One umbrella for two",
-            "b": "Two umbrellas, no sharing"
+            "a": "Tea and a book",
+            "b": "Hot chocolate"
           },
           {
-            "a": "Read side by side",
-            "b": "Watch a series"
+            "a": "Quiet company",
+            "b": "Gentle talking"
           },
           {
-            "a": "Bake together",
-            "b": "Order takeout"
+            "a": "Soft music",
+            "b": "Soft rain sounds"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Rainy day edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "Comfort edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

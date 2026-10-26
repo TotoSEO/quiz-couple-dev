@@ -2,61 +2,45 @@
   "jour": "2027-01-08",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-085",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-027",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Rain or shine",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Games edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Tea in the rain",
-            "b": "Sun, no plans"
-          },
-          {
-            "a": "One umbrella",
-            "b": "Run and get wet"
-          },
-          {
-            "a": "Storm in bed",
-            "b": "Sunset on a roof"
-          },
-          {
-            "a": "Snow day",
-            "b": "Beach day"
-          },
-          {
-            "a": "Rainy museum",
-            "b": "Sunny picnic"
-          },
-          {
-            "a": "Puddle jumping",
-            "b": "Sandcastles"
-          }
+        "questions": [
+          "What is your partner's favorite board game?",
+          "Do they cheat at cards?",
+          "What is their favorite video game?",
+          "Do they play to win or for fun?",
+          "Which game do they always lose?",
+          "Do they read the rules first?",
+          "Do they flip the board when losing?",
+          "Are they very competitive at games?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Rain or shine. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

@@ -1,0 +1,80 @@
+{
+  "jour": "2027-07-03",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-044",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Nuit dans les montagnes, la lune énorme posée sur le col ; il tend le bras vers elle, les yeux en cœur. Elle (le héros) sourit, malicieuse, sort une corde de derrière son dos, fait tournoyer le lasso et le lance au ralenti, la fumée partout, la roche qui se fend ; la boucle file et se referme sur la lune, surprise ; elle tire de tout son poids, les pieds plantés, et la lune descend se poser entre les pics dans un grand boum, le sol qui tremble, puis sourit les yeux fermés. Clin d'œil, et ils grimpent s'asseoir dessus, face à face, les joues roses, les cœurs.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "tendre",
+          "recherche": "Harvest Moon"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "montagnes",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-lune",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, les montagnes la nuit : des pics sous les étoiles, des rochers, et à droite, tout près du col, une grande lune pâle au visage endormi, un petit sourire, trois cratères, un halo doux. Elle (nœud rose, queue de cheval) parle, il l'écoute et rit. À 1,2 s il se tourne vers la lune et tend le bras vers elle, les yeux en cœur. Elle lève la tête, sourit, le regarde avec tendresse, joues roses, puis un sourcil se lève et un sourire en coin se dessine : elle a une idée. La caméra pousse doucement vers la lune et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage à elle, coupe franche, les pics derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur lui. À 1,0 s un sourcil se lève, les yeux se plissent, le sourire devient un sourire en coin : l'idée ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval bouge dans un souffle de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "corde": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, lui à droite le bras encore tendu vers la lune. Sa main à elle passe derrière son dos et ressort avec une corde roulée, pop ; elle la soupèse, le sourire en coin, et se plante face à la lune, les poings serrés. La caméra serre un peu sur elle."
+            },
+            {
+              "sequence": "exploit",
+              "type": "lasso",
+              "duree": 6.6,
+              "description": "Plan moyen sur elle, lui à droite qui regarde sans comprendre. Elle lève le bras et fait tournoyer le lasso au-dessus de sa tête, trois tours qui sifflent, de plus en plus vite. Le lancer : ralenti onze fois, caméra qui pousse, voile bleuté, battement de cœur ; à l'instant où la corde part, de la fumée jaillit de partout autour d'elle, le sol se fissure sous ses pieds en trois fentes, onde de choc, secousse. La caméra s'ouvre en grand : la boucle file en arc vers la lune, lignes de vitesse, et se referme autour d'elle ; la lune ouvre des yeux ronds et la bouche, la corde se tend, craquement. Elle se penche en arrière de tout son poids, les pieds plantés, le corps qui vibre, un grondement : la lune descend lentement vers le col, il recule d'un pas, bouche bée, et la lune se pose à droite dans un grand boum, poussière, le sol qui tremble, puis sourit les yeux fermés, les joues roses. Elle lâche la corde, s'époussette les mains, un clin d'œil ; il saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large, caméra fixe, la lune posée à droite qui rayonne doucement sur le col. Elle prend son élan et saute dessus, il la suit d'un bond, et ils s'asseyent côte à côte sur la lune, face à face, les têtes qui se penchent l'une vers l'autre, les joues roses, pendant que des cœurs montent au-dessus d'eux et que la lune sourit. La caméra pousse lentement sur eux trois jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "She brought him the moon.\n\nTag her",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

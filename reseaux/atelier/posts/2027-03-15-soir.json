@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-15",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-109",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Snow day edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Sledding at night",
+            "b": "Sledding at dawn"
+          },
+          {
+            "a": "Snow angels",
+            "b": "A snow fort"
+          },
+          {
+            "a": "Walk in fresh snow",
+            "b": "Watch it from the window"
+          },
+          {
+            "a": "Hot chocolate after",
+            "b": "Mulled cider after"
+          },
+          {
+            "a": "Snow on a mountain",
+            "b": "Snow in the city"
+          },
+          {
+            "a": "Swap scarves",
+            "b": "Swap gloves"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, snow day edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

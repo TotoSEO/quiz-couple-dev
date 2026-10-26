@@ -1,187 +1,77 @@
 {
   "jour": "2026-12-12",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "dm-009",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-016",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "He's a 10 but...",
-            "accroche": "Family edition. Is he still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Les deux sur un trait de sol. Le violet, à droite, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "question",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "Devant la maison, un nuage d’orage vient se planter au-dessus d’eux et les arrose ; il se met les mains sur la tête et claque des dents. Elle (le héros) lève les yeux, surprise, puis décidée : elle s’accroupit, bondit par-dessus le toit jusqu’au nuage et le shoote d’un coup de pied au ralenti ; le nuage crève en étincelles et en gouttes, le soleil revient avec ses rayons sur la pelouse, les oiseaux chantent. Elle retombe, s’époussette les mains, clin d’œil ; il rit aux éclats.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "Here Comes the Sun"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "maison",
+              "jeu": "discussion",
+              "incident": {
+                "type": "pluie",
+                "creature": "nuage",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, devant la maison : le toit et la cheminée à droite, la porte, le chemin, le grand arbre à gauche, le soleil. Ils se parlent debout face à face, elle (nœud rose, queue de cheval) gesticule, il rit. À 1,2 s le vent tourne : un nuage d'orage gris arrive par le coin haut droit, un visage fâché, des éclairs qui claquent dessous, et vient se planter juste au-dessus d'eux ; il gronde, tonnerre, et la pluie se met à tomber en rideau sur eux deux. Ils lèvent la tête, surpris ; il se met les mains sur la tête, les épaules rentrées, et claque des dents en tremblant ; elle le regarde, puis regarde le nuage, et son visage se ferme. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la pluie qui tombe autour. La surprise d'abord : yeux ronds, bouche en petit o, sourcils hauts, un battement de cœur. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers le nuage ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval claque dans une rafale qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière les mains sur la tête, la pluie qui tombe, le nuage au-dessus qui gronde. Elle se plante face au nuage, les poings serrés, les genoux qui fléchissent, le regard levé sous les gouttes ; la caméra serre un peu sur elle : elle va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "chasse",
+              "duree": 3.6,
+              "description": "Plan d'ensemble, le nuage en haut au-dessus du toit, le couple en bas sous la pluie. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche par-dessus le toit vers le nuage, rémanences, lignes de vitesse, et arme un coup de pied en plein vol ; juste avant l'impact, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur. Impact de bande dessinée : flash blanc, le nuage crève en étincelles jaunes et en gouttes bleues qui partent en étoile, un anneau blanc, et le ciel est dégagé ; la pluie s'arrête net, les rayons du soleil tournent sur la pelouse, les oiseaux chantent. Elle retombe accroupie dans la poussière, se redresse, se tourne vers lui et s'époussette les mains avec un clin d'œil ; lui lève la tête, surpris, et saute de joie en riant."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "rire",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, devant la maison sous le soleil revenu. Elle marche vers lui, trois pas tranquilles, et lui fait un clin d'œil charmeur, étincelle, tintement ; il rit aux éclats et saute sur place, elle rit aussi et saute à son tour, et des cœurs montent entre eux pendant qu'ils reprennent leur souffle, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he calls his mom every night, for an hour"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but his mom still does his laundry"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he wants five kids"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he asks his mom before every decision"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he still lives with his parents at 35"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he invites his mom on your vacation"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he hasn't introduced you to his parents after two years"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he lets his family talk badly about you"
-          },
-          {
-            "type": "fin",
-            "texte": "What's he now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "points",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "goutte",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "She fought the storm for him.\n\nTag her",
       "hashtags": [
-        "#hesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

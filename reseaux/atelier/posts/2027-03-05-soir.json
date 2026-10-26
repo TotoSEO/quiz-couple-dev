@@ -1,0 +1,47 @@
+{
+  "jour": "2027-03-05",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-044",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Drama edition",
+        "accroche": "Who's more likely to...?",
+        "consigne": "Point at your partner. No talking!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "...to start a tickle fight?",
+          "...to sulk after losing a game?",
+          "...to say sorry first?",
+          "...to cry at a movie?",
+          "...to slam a door?",
+          "...to laugh mid-argument?",
+          "...to bring up something from 2019?",
+          "...to hug it out?"
+        ],
+        "fin": {
+          "question": "Who got pointed at the most? Comment it!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Point at the one who'd do it. 8 situations, 5 seconds each.\n\nSend this to your partner",
+      "hashtags": [
+        "#whosmorelikely",
+        "#couplequiz",
+        "#couplegames",
+        "#quizcouple"
+      ]
+    }
+  }
+}

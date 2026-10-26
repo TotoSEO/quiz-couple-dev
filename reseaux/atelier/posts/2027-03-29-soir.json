@@ -1,0 +1,64 @@
+{
+  "jour": "2027-03-29",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-119",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Board game edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Monopoly for 4 hours",
+            "b": "Cards for 20 minutes"
+          },
+          {
+            "a": "Let them win",
+            "b": "Never let them win"
+          },
+          {
+            "a": "Teams against friends",
+            "b": "You versus them"
+          },
+          {
+            "a": "Chess",
+            "b": "Checkers"
+          },
+          {
+            "a": "A new game every time",
+            "b": "The same old one"
+          },
+          {
+            "a": "Loser cooks",
+            "b": "Loser cleans"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, board game edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

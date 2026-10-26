@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-047",
+  "sujet": "tp-036",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Phone edition",
+        "etiquette": "Vacation edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "No phone at dinner",
-            "b": "No phone in bed"
+            "a": "Two weeks at the beach",
+            "b": "Two weeks in a city"
           },
           {
-            "a": "Reply in one second",
-            "b": "Reply in one hour"
+            "a": "Plan every day",
+            "b": "No plan at all"
           },
           {
-            "a": "Share your screen time",
-            "b": "Share your camera roll"
+            "a": "Hotel breakfast",
+            "b": "Bakery on the corner"
           },
           {
-            "a": "A good morning text",
-            "b": "A good night text"
+            "a": "One suitcase for two",
+            "b": "One each"
           },
           {
-            "a": "Matching wallpaper",
-            "b": "Private wallpaper"
+            "a": "Museums and cafes",
+            "b": "Hikes and views"
           },
           {
-            "a": "Voice notes",
-            "b": "Long texts"
+            "a": "Buy a souvenir",
+            "b": "Take a thousand photos"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Phone edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Vacation edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

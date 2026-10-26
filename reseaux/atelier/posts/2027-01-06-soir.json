@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-083",
+  "sujet": "tp-059",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Living together",
+        "etiquette": "Pet edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Your place",
-            "b": "Their place"
+            "a": "A puppy",
+            "b": "A kitten"
           },
           {
-            "a": "Huge bed",
-            "b": "Huge kitchen"
+            "a": "Name it after a snack",
+            "b": "Name it after a song"
           },
           {
-            "a": "Plants everywhere",
-            "b": "Books everywhere"
+            "a": "It sleeps on the bed",
+            "b": "It sleeps in its own bed"
           },
           {
-            "a": "Shared closet",
-            "b": "Separate closets"
+            "a": "Walks every morning",
+            "b": "Cuddles every evening"
           },
           {
-            "a": "Dishes right away",
-            "b": "Dishes tomorrow"
+            "a": "A pet photo shoot",
+            "b": "A pet costume party"
           },
           {
-            "a": "One bathroom",
-            "b": "Two bathrooms"
+            "a": "Adopt together",
+            "b": "Visit a shelter first"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Living together. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "Pet edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

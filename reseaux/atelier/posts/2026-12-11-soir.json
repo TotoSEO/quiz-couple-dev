@@ -2,61 +2,45 @@
   "jour": "2026-12-11",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-063",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-022",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Long distance",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Home edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Call every night",
-            "b": "One long call a week"
-          },
-          {
-            "a": "Visit them first",
-            "b": "They visit you first"
-          },
-          {
-            "a": "Watch a movie online",
-            "b": "Play a game online"
-          },
-          {
-            "a": "Send letters",
-            "b": "Send voice notes"
-          },
-          {
-            "a": "Sleep on a call",
-            "b": "Say goodnight and hang up"
-          },
-          {
-            "a": "Count the days",
-            "b": "Plan the next visit"
-          }
+        "questions": [
+          "Which side of the bed does your partner sleep on?",
+          "What is their favorite room?",
+          "Do they make the bed every day?",
+          "Which seat on the couch is theirs?",
+          "What do they do first when they get home?",
+          "Hot or cold house for them?",
+          "What is next to their side of the bed?",
+          "Who does most of the cooking?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Long distance. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

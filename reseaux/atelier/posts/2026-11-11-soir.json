@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-032",
+  "sujet": "tp-029",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Road trip edition",
+        "etiquette": "Lazy Sunday edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "You drive, they pick songs",
-            "b": "They drive, you pick songs"
+            "a": "Breakfast in bed till noon",
+            "b": "Brunch out in pajamas"
           },
           {
-            "a": "Stop at every view",
-            "b": "Get there before dark"
+            "a": "Nap together",
+            "b": "Walk together"
           },
           {
-            "a": "Sleep in the car",
-            "b": "Find a tiny motel"
+            "a": "A whole series in one day",
+            "b": "A whole book, out loud"
           },
           {
-            "a": "Gas station snacks",
-            "b": "A proper restaurant"
+            "a": "Takeout for lunch",
+            "b": "Leftovers for lunch"
           },
           {
-            "a": "Plan every stop",
-            "b": "Get lost on purpose"
+            "a": "Pajamas all day",
+            "b": "Dress up for no reason"
           },
           {
-            "a": "Sing along loudly",
-            "b": "Quiet and window gazing"
+            "a": "Board games at 4pm",
+            "b": "Another nap at 4pm"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Road trip edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "Lazy Sunday edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

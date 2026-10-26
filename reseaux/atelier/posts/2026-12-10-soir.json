@@ -1,163 +1,62 @@
 {
   "jour": "2026-12-10",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-010",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-049",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Picnic edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Love languages",
-            "accroche": "8 questions on how we feel loved",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Le parc en plein jour : la rose et le violet sont assis sur le banc, côte à côte. La rose regarde le violet, les sourcils hauts, un point d'interrogation au-dessus de la tête ; le violet fait un clin d'œil, un grand sourire.",
-                "duree": 2,
-                "decor": "dehors",
-                "moment": "midi",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "banc-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "question"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "banc-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "clin",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Sandwiches in the park",
+            "b": "Pizza on the grass"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "Words or hugs, which one do you need more?"
+            "a": "Lie on a blanket",
+            "b": "Sit on a bench"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "What's a little gesture that means a lot to you?"
+            "a": "Watch the clouds",
+            "b": "Watch the people"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "When did you last feel seen by me?"
+            "a": "Sunny picnic",
+            "b": "Sunset picnic"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "Gifts or time together, which one?"
+            "a": "Fruit and cheese",
+            "b": "Chips and soda"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "Do you need help or a hug when stressed?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "What compliment do you never get tired of?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "What do you wish I did more often?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "What makes you feel closest to me?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Bring a game",
+            "b": "Bring a book"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Take turns, no skipping.\n\nSave this for your next date night",
+      "legende": "Picnic edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

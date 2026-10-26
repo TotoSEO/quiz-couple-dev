@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-08",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-083",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Living together",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Your place",
+            "b": "Their place"
+          },
+          {
+            "a": "Huge bed",
+            "b": "Huge kitchen"
+          },
+          {
+            "a": "Plants everywhere",
+            "b": "Books everywhere"
+          },
+          {
+            "a": "Shared closet",
+            "b": "Separate closets"
+          },
+          {
+            "a": "Dishes right away",
+            "b": "Dishes tomorrow"
+          },
+          {
+            "a": "One bathroom",
+            "b": "Two bathrooms"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Living together. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

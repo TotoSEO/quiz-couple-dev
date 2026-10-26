@@ -1,0 +1,99 @@
+{
+  "jour": "2027-07-24",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-047",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "baton",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Sur la plage au couchant, elle regarde les mouettes tourner au-dessus des vagues et soupire, les mains dans le dos. Il la regarde, un sourire en coin : il ouvre les bras et ses ailes se déploient d'un coup, onde de choc, les plumes sur le sable ; il plane jusqu'à elle, lui tend la main, elle la prend au ralenti et ils décollent au-dessus de la mer ; le ciel orange, un looping au-dessus des vagues, et ils se posent sur un nuage ; assis l'un contre l'autre, et des ailes lui poussent à elle aussi, ils éclatent de rire.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "tendre",
+          "recherche": "Come Fly With Me"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-ciel",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage au couchant : la mer et ses vagues au fond, deux palmiers, le sable, un soleil bas et orange. Ils se parlent debout face à face, il (bandana violet) gesticule, elle (nœud rose, queue de cheval) penche la tête et rit. À 1,2 s des mouettes tournent au-dessus des vagues, de droite à gauche ; elle se tourne et les suit du doigt, les yeux en cœur, puis les épaules tombent et elle soupire, les mains dans le dos : elle voudrait être là-haut. Lui lève la tête vers les mouettes, sourit, la regarde avec tendresse, et son visage se ferme sur un sourire en coin : il a une idée. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la mer floue derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard posé sur elle. À 1,0 s un sourcil se lève et le sourire devient un sourire en coin, les yeux plissés : l'idée est là ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent qui se lève mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "ailes": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, la caméra se cale large sur lui, elle à droite. Il ouvre les bras en croix, la poitrine en avant, la tête en arrière : deux grandes ailes de plumes jaillissent dans son dos et se déploient d'un coup, onde de choc au sol, poussière, des plumes qui volent partout, l'écran tremble ; elle recule d'un pas, bouche ouverte. Les ailes battent lentement, il se redresse, et ses pieds quittent le sable : il plane à quelques centimètres du sol, un sourire tranquille, pendant qu'elle le regarde les yeux brillants. "
+            },
+            {
+              "sequence": "exploit",
+              "type": "envol",
+              "description": "Plan d'ensemble, la caméra suit. Il plane jusqu'à elle, les ailes qui battent, et lui tend la main ; elle tend la sienne, et au moment où les doigts se touchent, ralenti huit fois, caméra serrée sur les deux mains, voile bleuté, battement de cœur. Elle est soulevée du sol, poussière, onde ; il bascule à l'horizontale, elle flotte derrière lui accrochée à sa main, les cheveux au vent, et ils filent en diagonale vers le coin haut droit, rémanences, lignes de vitesse, souffle d'air, jusqu'à sortir du cadre."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "ciel",
+                  "looping": true,
+                  "duree": 3.0,
+                  "description": "Transition floue d'une seconde, puis travelling dans le ciel : des nuages sur trois plans qui glissent, la ligne des montagnes tout en bas, un vol d'oiseaux qui passe. Lui à l'horizontale, les ailes qui battent, elle accrochée à sa main qui flotte derrière, tous les deux heureux ; le corps ondule doucement. À mi-chemin, un looping complet : ils tournent ensemble, lignes de vitesse, elle rit aux éclats ; des cœurs montent derrière eux."
+                },
+                {
+                  "decor": "ciel",
+                  "duree": 2.4,
+                  "description": "Transition floue, le ciel encore, plus haut : les nuages sont plus gros et plus près, le soleil à gauche. Ils volent main dans la main, les ailes qui battent lentement, elle le regarde, lui regarde devant, les cœurs montent derrière eux, un deuxième vol d'oiseaux les croise plus bas ; la caméra pousse doucement sur eux pour amener la coupe."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "nuage",
+              "description": "Transition floue d'une seconde : on découvre un grand nuage, le tapis blanc à bosses, un soleil énorme derrière, les sommets des montagnes qui dépassent en dessous. Ils arrivent en vol par la gauche, descendent en douceur ; il se pose accroupi, une main au sol, elle lâche sa main et atterrit à côté, des plumes qui retombent, un peu de poussière de nuage. Ils se redressent et se regardent, elle les joues roses ; la caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large sur le nuage, le soleil à droite. Il fait deux pas et s'assied au bord, elle le rejoint et s'assied contre lui, tous les deux face au soleil, la tête qui se penche vers l'autre. Ils regardent le ciel. Puis, surprise : deux ailes se déploient dans le dos d'elle, des plumes partout, il se tourne, les yeux ronds, elle n'en revient pas non plus, et ils éclatent de rire pendant que des cœurs montent entre eux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
+        }
+      },
+      "legende": "When he wants her to see the sea from above.\n\nSend this to your partner",
+      "hashtags": [
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

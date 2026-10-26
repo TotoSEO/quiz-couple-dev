@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-20",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-091",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Sunday dinner",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Pasta",
+            "b": "Tacos"
+          },
+          {
+            "a": "Cook together",
+            "b": "Order in"
+          },
+          {
+            "a": "At the table",
+            "b": "On the sofa"
+          },
+          {
+            "a": "Candles on",
+            "b": "Netflix on"
+          },
+          {
+            "a": "Dessert first",
+            "b": "Dessert last"
+          },
+          {
+            "a": "Dishes together",
+            "b": "Dishes tomorrow"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Sunday dinner. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

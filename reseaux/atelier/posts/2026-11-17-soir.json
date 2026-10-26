@@ -1,244 +1,46 @@
 {
   "jour": "2026-11-17",
   "creneau": "soir",
-  "format": "image",
-  "gabarit": "bd",
-  "categorie": "bd",
-  "sujet": "bd-002",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-016",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "bd",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "idee": "La couette, la nuit : les deux dorment, il tire la couette, elle la reprend, chacun finit roulé dans sa moitié, dos à dos, elle : « night. »",
-        "cases": [
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Une chambre la nuit, lumière bleue de la lune. Les deux dorment côte à côte sous la même couette, la rose à gauche et le violet à droite, les yeux fermés, la bouche en sourire tranquille, des petits Z qui montent.",
-                "duree": 2,
-                "decor": "chambre",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "lit-gauche",
-                    "gestes": [
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "zzz"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "lit-droite",
-                    "gestes": [
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "zzz"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même chambre, plus tard dans la nuit. La rose est réveillée, les yeux plats et la bouche plate, une main sur le bord de la couette. Le violet, à droite, a l'air content, enroulé dans la couette, les yeux fermés et un grand sourire.",
-                "duree": 2,
-                "decor": "chambre",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "lit-gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "sourcils": "tristes"
-                      },
-                      {
-                        "geste": "tremble",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "lit-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "fermes",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "repliques": [
-              {
-                "texte": "um. blanket?",
-                "cote": "gauche"
-              }
-            ]
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même chambre, la rose a tout repris et dort enroulée dans la couette, un sourire de bonheur. Le violet est tout au bord du lit, grelotte, les yeux grands ouverts, les dents qui claquent, une goutte de gêne sur le côté.",
-                "duree": 2,
-                "decor": "chambre",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "lit-gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "fermes",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "dort",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "lit-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "triste",
-                        "sourcils": "tristes"
-                      },
-                      {
-                        "geste": "tremble",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "goutte"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "scene": {
-              "t": 1.2,
-              "haut": 420,
-              "echelle": 1.25,
-              "plan": {
-                "description": "Même chambre. Chacun a sa moitié de couette, roulé dans la sienne, dos à dos, les yeux plats et fatigués. La rose, à gauche, tourne un peu la tête vers l'autre, la bouche plate.",
-                "duree": 2,
-                "decor": "chambre",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "lit-gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate"
-                      },
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "lit-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "plats",
-                        "bouche": "plate"
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "repliques": [
-              {
-                "texte": "night.",
-                "cote": "gauche"
-              }
-            ]
-          }
-        ]
+        "etiquette": "School days edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What was your partner's favorite subject?",
+          "What was their worst subject at school?",
+          "Which teacher was their favorite one?",
+          "Class clown or the quiet one?",
+          "What did they usually do at recess?",
+          "What was their go-to school lunch?",
+          "Did they ever skip class?",
+          "What job did they want at ten years old?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
       },
-      "legende": "Tag your partner",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#couplecomics",
-        "#relationshipcomics",
-        "#couplegoals",
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

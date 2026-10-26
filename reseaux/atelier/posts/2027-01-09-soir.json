@@ -1,187 +1,110 @@
 {
   "jour": "2027-01-09",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "dm-011",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-019",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "He's a 10 but...",
-            "accroche": "Money edition. Is he still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Les deux sur un trait de sol. Le violet, à droite, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "question",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "Sur la plage au soleil, le dragon arrive par la mer, rugit au-dessus des palmiers et l'emporte. Lui : le choc, la larme, la vengeance. Il tire l'épée et traverse la ville (un banc), la falaise (un ravin) et le pont ; à la tour, garde, pieds ancrés, le bond au ralenti et le dragon en mille éclats. Souffle, épée rangée, bouquet et clin d'œil charmeur, les cœurs au sommet.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "epique",
+          "recherche": "Immigrant Song"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "jeu": "discussion",
+              "incident": {
+                "type": "enlevement",
+                "creature": "dragon",
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage : la mer et ses vagues au fond, deux palmiers, le sable, le soleil. Les deux se parlent debout face à face : il gesticule de la main droite, elle penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par la mer, coin haut droit, grand, ailes déployées, grognement, rugit au-dessus des palmiers et vient se placer au-dessus d'eux à droite, sous le titre ; son ombre glisse sur le sable jusqu'à eux. Il lève les yeux, surpris, elle se retourne. Le dragon plane sur place (gueule ouverte, yeux rouges), une rafale soulève le sable et le bandana ; elle a peur, il est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur elle, la saisit dans ses serres (l'écran tremble, sable qui vole, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Il recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 1.2
+                },
+                {
+                  "expression": "chagrin",
+                  "duree": 1.3
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.3
+                }
+              ],
+              "description": "Très gros plan sur le visage du héros, coupe franche : la tête remplit l'image. Trois temps. Le choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite, deux battements de cœur lents. À 1,2 s la tête tombe : sourcils tristes, bouche à l'envers, le regard descend vers le sol, une larme perle sous l'œil et coule sur la joue ; le vent tombe, presque le silence. À 2,5 s le visage se relève et se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, et le vent se lève, les pans du bandana claquent, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": true,
+              "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, glissement métallique de la lame qui sort du fourreau puis sifflement de la lame, crépitement d'étincelles. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles, le temps de respirer deux fois. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long souffle d'air."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "ville",
+                  "obstacle": "banc",
+                  "description": "Transition floue d'une seconde depuis le plan d'avant (le temps passe), puis travelling latéral en ville : immeubles à l'encre au loin, le trottoir, le héros sprinte à la même place dans l'image. À 1,45 s un banc se dresse sous lui : passe-muraille (mains plantées sur le banc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course jusqu'à la coupe, qui est elle aussi un flou."
+                },
+                {
+                  "decor": "falaise",
+                  "obstacle": "trou",
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur la falaise : sol rocheux, montagnes au loin. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Souffle d'air au saut, choc sourd à la réception, puis la course continue sous le flou de la coupe suivante."
+                },
+                {
+                  "decor": "pont",
+                  "duree": 2.2,
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur les sept derniers dixièmes la caméra pousse doucement sur lui pour amener la coupe, floue elle aussi."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "tour",
+              "description": "Transition floue d'une seconde : on découvre la tour pendant que l'image se précise. Plan d'ensemble en contre-plongée, la tour sur le tiers droit : elle est debout sur la plateforme crénelée, mains jointes, apeurée ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. À 0,9 s le héros déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, glissement), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers lui, yeux rouges, gueule ouverte : rugissement. Elle se penche et tend les bras vers lui. Lente poussée de la caméra sur tout le plan."
+            },
+            {
+              "sequence": "preparation",
+              "description": "Plan moyen de profil, caméra fixe sur le héros, la base de la tour derrière. Il prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis il plie les jambes lentement, sur une seconde, le buste se penche, les yeux se plissent, le bandana est plaqué en arrière. Il tient la position, la lame vibre, bourdonnement électrique qui monte, crépitement.",
+              "insert": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied, crépitement électrique."
+            },
+            {
+              "sequence": "exploit",
+              "type": "frappe",
+              "description": "Plan d'ensemble, même cadrage que la tour, la caméra reste large pendant l'envol puis serre d'un coup sur le combat. Détente : il quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse, se tourne vers elle, et on tient le plan pendant que les éclats finissent de tomber ; elle saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "bouquet",
+              "fin": "charmeur",
+              "description": "Plan moyen large sur la plateforme, caméra fixe : elle à gauche mains jointes, lui à droite. Il reprend son souffle pendant une seconde et demie, plié en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; elle sourit, soulagée. Il se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, raclement métallique du fourreau, les étincelles s'éteignent). Il marche vers elle, trois pas tranquilles, et s'arrête devant elle. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur, scintillement magique. Sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement de paillettes) ; elle, yeux fermés de bonheur, joues roses, petit saut, puis elle se penche vers lui, bras tendus, pendant que des cœurs montent entre eux ; lui sourit, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he talks about crypto at every meal"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he keeps every receipt \"just in case\""
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he sends you a payment request for half a pizza"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he spends his whole paycheck the day it comes in"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he gets a new phone every year and \"can't afford\" dinner out"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he uses your streaming passwords and never pays"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he borrowed money three months ago and \"forgot\""
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but he lies about where his money goes"
-          },
-          {
-            "type": "fin",
-            "texte": "What's he now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "violet",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "points",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "goutte",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "My boyfriend vs a dragon.\n\nTag him",
       "hashtags": [
-        "#hesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

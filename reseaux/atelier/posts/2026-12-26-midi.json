@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-074",
+  "sujet": "noel-09",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,38 +12,38 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Movie choices",
+        "etiquette": "Christmas night",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
         "son": {
-          "ambiance": "jeu"
+          "ambiance": "noel"
         },
         "dilemmes": [
           {
-            "a": "Their favorite again",
-            "b": "A brand new movie"
+            "a": "Movie under the blanket",
+            "b": "Walk in the snow"
           },
           {
-            "a": "Subtitles on",
-            "b": "Subtitles off"
+            "a": "Leftovers in bed",
+            "b": "One more dessert"
           },
           {
-            "a": "Talk during the movie",
-            "b": "Total silence"
+            "a": "Fall asleep by the tree",
+            "b": "Fall asleep on the sofa"
           },
           {
-            "a": "Popcorn for two",
-            "b": "One bucket each"
+            "a": "Lights on all night",
+            "b": "Candles only"
           },
           {
-            "a": "Cinema seats",
-            "b": "Couch and blanket"
+            "a": "Call the family tonight",
+            "b": "Stay just us two"
           },
           {
-            "a": "Stay for the credits",
-            "b": "Leave right away"
+            "a": "Hot chocolate",
+            "b": "Mulled wine"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Movie choices. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "legende": "Christmas night. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

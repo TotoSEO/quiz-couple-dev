@@ -1,155 +1,76 @@
 {
   "jour": "2026-12-31",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "an-03",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "an-02",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "New Year's Eve",
-            "accroche": "8 questions before midnight",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Le parc la nuit du Nouvel An : la rose et le violet sont assis sur le banc et lèvent la tête, la bouche en o, des feux d'artifice et des confettis au-dessus d'eux.",
-                "duree": 2,
-                "decor": "dehors",
-                "moment": "nuit",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "banc-gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "o"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "feux"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "banc-droite",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "heureux",
-                        "bouche": "sourire"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "confettis"
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "Le 31 décembre en ville, en fin d’après-midi, ils discutent sous les lampadaires du réveillon qui vient ; le nuage d’orage arrive en grondant au-dessus de la rue et se plante juste au-dessus de lui, la pluie à verse, lui trempé sous ses mains, les dents qui claquent. Elle (le héros) lève les yeux, surprise, puis décidée : accroupie, le bond entre les immeubles et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le ciel se dégage, les derniers rayons du soleil sur la ville. Elle retombe, s’époussette les mains ; il lui saute au cou, trempé, et ils rient : la nuit sera claire pour le feu d’artifice.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
+        "son": {
+          "ambiance": "drole",
+          "recherche": "Firework"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "ville",
+              "jeu": "discussion",
+              "incident": {
+                "type": "pluie",
+                "creature": "nuage",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la rue en fin d'après-midi le 31 décembre : des immeubles à l'encre au loin, des guirlandes lumineuses, deux lampadaires, le trottoir. Ils discutent debout sous un lampadaire, il (bandana violet) rit, elle (nœud rose, queue de cheval) lui répond. À 1,2 s le vent tourne : un nuage d'orage gris arrive par le coin haut droit au-dessus de la rue, un visage fâché, des éclairs qui claquent dessous, et vient se planter juste au-dessus de lui ; il gronde, tonnerre, et la pluie se met à tomber en rideau. Il lève la tête, surpris, se met les mains sur la tête et claque des dents en tremblant ; elle le regarde, puis regarde le nuage, et son visage se ferme. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la pluie qui tombe autour. La surprise d'abord : yeux ronds, bouche en petit o, sourcils hauts, un battement de cœur. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers le nuage ; coup de zoom d'accompagnement, impact sourd au loin, la queue de cheval claque dans une rafale qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière les mains sur la tête, la pluie qui tombe, le nuage au-dessus qui gronde. Elle se plante face au nuage, les poings serrés, les genoux qui fléchissent, le regard levé sous les gouttes ; la caméra serre un peu sur elle : elle va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "chasse",
+              "duree": 3.6,
+              "description": "Plan d'ensemble, le nuage en haut au-dessus de la rue, le couple en bas sous la pluie. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche entre les immeubles vers le nuage, rémanences, lignes de vitesse, et arme un coup de pied en plein vol ; juste avant l'impact, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur. Impact de bande dessinée : flash blanc, le nuage crève en étincelles jaunes et en gouttes bleues qui partent en étoile, un anneau blanc, et le ciel est dégagé ; la pluie s'arrête net, les rayons du soleil tournent sur le trottoir, une mouette crie. Elle retombe accroupie dans la poussière, se redresse, se tourne vers lui et s'époussette les mains avec un clin d'œil ; lui lève la tête, surpris, et saute de joie en riant."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "rire",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, dans la rue sous le soleil revenu. Elle marche vers lui, trois pas tranquilles, et lui fait un clin d'œil charmeur, étincelle, tintement ; il rit aux éclats et saute sur place, elle rit aussi et saute à son tour, et des cœurs montent entre eux pendant qu'ils reprennent leur souffle, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "1",
-            "question": "What was our best day this year?"
-          },
-          {
-            "type": "page",
-            "numero": "2",
-            "question": "What do you want us to try next year?"
-          },
-          {
-            "type": "page",
-            "numero": "3",
-            "question": "What did you learn about me this year?"
-          },
-          {
-            "type": "page",
-            "numero": "4",
-            "question": "What are you proud of this year?"
-          },
-          {
-            "type": "page",
-            "numero": "5",
-            "question": "What do you want us to leave behind in this year?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "What is one thing you want us to do more of?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "What is your wish for us next year?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "Where do you see us next New Year's Eve?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Answer these before midnight.\n\nSend this to your partner",
+      "legende": "New Year's Eve. She kicked the storm cloud away for him.\n\nTag her",
       "hashtags": [
-        "#couplequestions",
-        "#datenight",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
         "#couplegoals",
         "#quizcouple"
       ]

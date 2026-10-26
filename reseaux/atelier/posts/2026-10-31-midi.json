@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-007",
+  "sujet": "tp-022",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Home life edition",
-        "accroche": "Would you rather: at home?",
+        "etiquette": "Little gestures",
+        "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Always do the dishes",
-            "b": "Always do the laundry"
+            "a": "Forehead kisses",
+            "b": "Hand holding"
           },
           {
-            "a": "A big bed",
-            "b": "A big sofa"
+            "a": "They play with your hair",
+            "b": "They make you tea"
           },
           {
-            "a": "A cozy night in",
-            "b": "A fun night out"
+            "a": "A note in your bag",
+            "b": "A text just because"
           },
           {
-            "a": "A cat",
-            "b": "A dog"
+            "a": "They pick you up from work",
+            "b": "They wait up for you"
           },
           {
-            "a": "A perfectly tidy home",
-            "b": "A cozy messy home"
+            "a": "A surprise coffee",
+            "b": "A surprise hug"
           },
           {
-            "a": "Wake up early",
-            "b": "Stay up late"
+            "a": "A compliment out loud",
+            "b": "A compliment in writing"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Would you rather, home life edition: who wins the house rules?\n\nComment your A and B!",
+      "legende": "Little gestures edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

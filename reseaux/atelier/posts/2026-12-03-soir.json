@@ -1,163 +1,62 @@
 {
   "jour": "2026-12-03",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "carrousel",
-  "sujet": "car-009",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-041",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "pages": [
+        "etiquette": "Little rituals",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
           {
-            "type": "couverture",
-            "etiquette": "Memories",
-            "accroche": "8 memories for a quiet night",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Le parc en plein jour : la rose et le violet sont assis sur le banc, côte à côte. La rose regarde le violet, les sourcils hauts, un point d'interrogation au-dessus de la tête ; le violet fait un clin d'œil, un grand sourire.",
-                "duree": 2,
-                "decor": "dehors",
-                "moment": "midi",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "banc-gauche",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "violet"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts"
-                      },
-                      {
-                        "geste": "effet",
-                        "de": 0,
-                        "a": 2,
-                        "effet": "question"
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "banc-droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "de": 0,
-                        "a": 2,
-                        "cible": "rose"
-                      },
-                      {
-                        "geste": "visage",
-                        "de": 0,
-                        "a": 2,
-                        "yeux": "clin",
-                        "bouche": "sourire"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Good morning kiss",
+            "b": "Good night kiss"
           },
           {
-            "type": "page",
-            "numero": "1",
-            "question": "The hardest we've ever laughed?"
+            "a": "Same mug every day",
+            "b": "Share one mug"
           },
           {
-            "type": "page",
-            "numero": "2",
-            "question": "Our best day so far?"
+            "a": "I love you at night",
+            "b": "I love you at breakfast"
           },
           {
-            "type": "page",
-            "numero": "3",
-            "question": "A small moment you think about a lot?"
+            "a": "Weekly date night",
+            "b": "Daily five minute chat"
           },
           {
-            "type": "page",
-            "numero": "4",
-            "question": "The first thing you noticed about me?"
+            "a": "Shared playlist",
+            "b": "Shared calendar"
           },
           {
-            "type": "page",
-            "numero": "5",
-            "question": "A trip we should have taken twice?"
-          },
-          {
-            "type": "page",
-            "numero": "6",
-            "question": "The song that takes you straight back to us?"
-          },
-          {
-            "type": "page",
-            "numero": "7",
-            "question": "A meal we still talk about?"
-          },
-          {
-            "type": "page",
-            "numero": "8",
-            "question": "The moment you knew?"
-          },
-          {
-            "type": "fin",
-            "texte": "Want more questions for tonight?",
-            "bouton": "Link in bio",
-            "scene": {
-              "t": 1.4,
-              "plan": {
-                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "salue",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "joie",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "a": "Hug at the door",
+            "b": "Wave from the window"
           }
-        ]
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
       },
-      "legende": "Answer one at a time, no skipping.\n\nSend this to your partner",
+      "legende": "Little rituals. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
+        "#wouldyourather",
         "#couplequestions",
-        "#datenight",
-        "#couplegoals",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

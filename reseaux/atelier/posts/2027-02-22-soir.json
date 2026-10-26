@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-22",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-093",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Forever edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Same song forever",
+            "b": "Never the same song twice"
+          },
+          {
+            "a": "One trip a year, forever",
+            "b": "Flowers every week, forever"
+          },
+          {
+            "a": "Grow old in a city",
+            "b": "Grow old by the sea"
+          },
+          {
+            "a": "Same restaurant every date",
+            "b": "A new one every time"
+          },
+          {
+            "a": "Same side of the bed forever",
+            "b": "Swap sides every night"
+          },
+          {
+            "a": "Forever young",
+            "b": "Forever wise"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, forever edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

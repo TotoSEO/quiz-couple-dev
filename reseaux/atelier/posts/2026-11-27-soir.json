@@ -2,61 +2,45 @@
   "jour": "2026-11-27",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "tu-preferes",
-  "categorie": "tu-preferes",
-  "sujet": "tp-049",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-018",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "tu-preferes",
+        "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Picnic edition",
-        "accroche": "Would you rather: couple edition",
-        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
-        "amorce": "Would you rather...",
+        "etiquette": "Love languages edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "son": {
           "ambiance": "jeu"
         },
-        "dilemmes": [
-          {
-            "a": "Sandwiches in the park",
-            "b": "Pizza on the grass"
-          },
-          {
-            "a": "Lie on a blanket",
-            "b": "Sit on a bench"
-          },
-          {
-            "a": "Watch the clouds",
-            "b": "Watch the people"
-          },
-          {
-            "a": "Sunny picnic",
-            "b": "Sunset picnic"
-          },
-          {
-            "a": "Fruit and cheese",
-            "b": "Chips and soda"
-          },
-          {
-            "a": "Bring a game",
-            "b": "Bring a book"
-          }
+        "questions": [
+          "Does your partner prefer hugs or kind words?",
+          "How do they show they care?",
+          "What makes them feel the most loved?",
+          "Would they rather get a gift or a day out?",
+          "What do they do when they feel ignored?",
+          "What small gesture melts them every time?",
+          "Do they like to hear \"I love you\" often?",
+          "What is their favorite way to be comforted?"
         ],
         "fin": {
-          "question": "Did you pick the same? Comment your A and B!",
+          "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
-          "signature": "More dilemmas on quiz-couple.com"
+          "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Picnic edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
       "hashtags": [
-        "#wouldyourather",
-        "#couplequestions",
         "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
         "#quizcouple"
       ]
     }

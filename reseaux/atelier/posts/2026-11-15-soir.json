@@ -2,27 +2,61 @@
   "jour": "2026-11-15",
   "creneau": "soir",
   "format": "reel",
-  "gabarit": "citation",
-  "categorie": "phrase",
-  "sujet": "ph-012",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-031",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "citation",
+        "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "texte": "I love you even when you steal all the blanket.",
-        "fleurs": "feuillage",
+        "etiquette": "Rainy day edition",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Puzzle on the floor",
+            "b": "Board game at the table"
+          },
+          {
+            "a": "Walk in the rain",
+            "b": "Watch it from bed"
+          },
+          {
+            "a": "Pancakes for dinner",
+            "b": "Soup and bread"
+          },
+          {
+            "a": "One umbrella for two",
+            "b": "Two umbrellas, no sharing"
+          },
+          {
+            "a": "Read side by side",
+            "b": "Watch a series"
+          },
+          {
+            "a": "Bake together",
+            "b": "Order takeout"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Save this for later",
+      "legende": "Rainy day edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
-        "#lovequotes",
-        "#relationshipquotes",
-        "#couplegoals",
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
         "#quizcouple"
       ]
     }

@@ -1,0 +1,47 @@
+{
+  "jour": "2027-02-26",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-042",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Food edition",
+        "accroche": "Who's more likely to...?",
+        "consigne": "Point at your partner. No talking!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "...to steal fries from the other's plate?",
+          "...to say 'I'm not hungry' then eat half?",
+          "...to order dessert first?",
+          "...to burn the pasta?",
+          "...to eat in bed?",
+          "...to finish the snacks before the movie?",
+          "...to cook at midnight?",
+          "...to forget the groceries?"
+        ],
+        "fin": {
+          "question": "Who got pointed at the most? Comment it!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Point at the one who'd do it. 8 situations, 5 seconds each.\n\nSend this to your partner",
+      "hashtags": [
+        "#whosmorelikely",
+        "#couplequiz",
+        "#couplegames",
+        "#quizcouple"
+      ]
+    }
+  }
+}

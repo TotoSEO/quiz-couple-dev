@@ -1,169 +1,97 @@
 {
   "jour": "2026-11-07",
   "creneau": "soir",
-  "format": "carrousel",
-  "gabarit": "carrousel",
-  "categorie": "dix-mais",
-  "sujet": "dm-004",
+  "format": "reel",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-011",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "carrousel",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "pages": [
-          {
-            "type": "couverture",
-            "etiquette": "She's a 10 but...",
-            "accroche": "Phone edition. Is she still a 10?",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Les deux sur un trait de sol. La rose, à gauche, fait un clin d'œil avec un grand sourire, entourée d'étincelles : c'est elle, le 10. Le violet, à droite, la regarde, sourcils hauts et bouche plate, sans rien au-dessus de la tête (plus grand qu'elle, un effet y toucherait l'accroche).",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "clin",
-                        "bouche": "sourire",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "effet",
-                        "effet": "etincelles",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "rose",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "plate",
-                        "sourcils": "hauts",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
+        "idee": "Sur la plage, elle regarde passer un vol d'oiseaux et soupire : elle voudrait voler. Il sourit, et dans son dos deux grandes ailes se déploient d'un coup, des plumes partout ; il plane jusqu'à elle, lui tend la main, elle la prend au ralenti et ils montent dans le ciel, un looping dans les nuages, puis se posent sur un nuage devant le soleil ; assis côte à côte, et des ailes lui poussent à elle aussi.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
+        "son": {
+          "ambiance": "tendre",
+          "recherche": "Up Where We Belong"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-ciel",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage : la mer et ses vagues au fond, deux palmiers, le soleil. Ils se parlent debout face à face, il gesticule, elle penche la tête et rit. À 1,2 s un vol de cinq oiseaux traverse le ciel de droite à gauche, très haut ; elle se tourne et les suit du doigt, les yeux en cœur, puis les épaules tombent et elle soupire, la tête baissée : elle voudrait être là-haut. Lui lève la tête vers les oiseaux, sourit, la regarde avec tendresse, et son visage se ferme sur un sourire en coin : il a une idée. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "malicieux",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, la mer derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard posé sur elle. À 1,0 s un sourcil se lève et le sourire devient un sourire en coin, les yeux plissés : l'idée est là ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent qui se lève mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "ailes": true,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain, la caméra se cale large sur lui, elle à droite. Il ouvre les bras en croix, la poitrine en avant, la tête en arrière : deux grandes ailes de plumes jaillissent dans son dos et se déploient d'un coup, onde de choc au sol, poussière, des plumes qui volent partout, l'écran tremble ; elle recule d'un pas, bouche ouverte. Les ailes battent lentement, il se redresse, et ses pieds quittent le sable : il plane à quelques centimètres du sol, un sourire tranquille, pendant qu'elle le regarde les yeux brillants."
+            },
+            {
+              "sequence": "exploit",
+              "type": "envol",
+              "description": "Plan d'ensemble, la caméra suit. Il plane jusqu'à elle, les ailes qui battent, et lui tend la main ; elle tend la sienne, et au moment où les doigts se touchent, ralenti huit fois, caméra serrée sur les deux mains, voile bleuté, battement de cœur. Elle est soulevée du sol, poussière, onde ; il bascule à l'horizontale, elle flotte derrière lui accrochée à sa main, les cheveux au vent, et ils filent en diagonale vers le coin haut droit, rémanences, lignes de vitesse, souffle d'air, jusqu'à sortir du cadre."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "ciel",
+                  "looping": true,
+                  "duree": 3.0,
+                  "description": "Transition floue d'une seconde, puis travelling dans le ciel : des nuages sur trois plans qui glissent, la ligne des montagnes tout en bas, un vol d'oiseaux qui passe. Lui à l'horizontale, les ailes qui battent, elle accrochée à sa main qui flotte derrière, tous les deux heureux ; le corps ondule doucement. À mi-chemin, un looping complet : ils tournent ensemble, lignes de vitesse, elle rit aux éclats ; des cœurs montent derrière eux."
+                },
+                {
+                  "decor": "ciel",
+                  "duree": 2.4,
+                  "description": "Transition floue, le ciel encore, plus haut : les nuages sont plus gros et plus près, le soleil à gauche. Ils volent main dans la main, les ailes qui battent lentement, elle le regarde, lui regarde devant, les cœurs montent derrière eux, un deuxième vol d'oiseaux les croise plus bas ; la caméra pousse doucement sur eux pour amener la coupe."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "nuage",
+              "description": "Transition floue d'une seconde : on découvre un grand nuage, le tapis blanc à bosses, un soleil énorme derrière, les sommets des montagnes qui dépassent en dessous. Ils arrivent en vol par la gauche, descendent en douceur ; il se pose accroupi, une main au sol, elle lâche sa main et atterrit à côté, des plumes qui retombent, un peu de poussière de nuage. Ils se redressent et se regardent, elle les joues roses ; la caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "assis",
+              "duree": 6.6,
+              "description": "Plan moyen large sur le nuage, le soleil à droite. Il fait deux pas et s'assied au bord, elle le rejoint et s'assied contre lui, tous les deux face au soleil, la tête qui se penche vers l'autre. Ils regardent le ciel. Puis, surprise : deux ailes se déploient dans le dos d'elle, des plumes partout, il se tourne, les yeux ronds, elle n'en revient pas non plus, et ils éclatent de rire pendant que des cœurs montent entre eux. La caméra pousse lentement sur eux deux jusqu'à la fin."
             }
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she has 4,000 unread notifications"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she takes 50 selfies to post one"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she keeps the keyboard sounds on, at full volume"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she sends you 30 videos a day and checks that you watched them"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she screenshots your texts for her group chat"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she posts about your fights on her story"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she watches her ex's stories every day"
-          },
-          {
-            "type": "page",
-            "numero": "10",
-            "question": "but she wants your password \"just in case\""
-          },
-          {
-            "type": "fin",
-            "texte": "What's she now, out of 10?",
-            "bouton": "Full game: link in bio",
-            "scene": {
-              "t": 1.4,
-              "haut": 180,
-              "plan": {
-                "description": "Même trait de sol. Le violet, à droite, les yeux plats et la bouche plate : il n'est pas convaincu. La rose, à gauche, rougit, les yeux grands ouverts et la bouche en o, prise sur le fait.",
-                "duree": 2,
-                "decor": "ligne",
-                "persos": [
-                  {
-                    "qui": "rose",
-                    "a": "gauche",
-                    "gestes": [
-                      {
-                        "geste": "visage",
-                        "yeux": "ouverts",
-                        "bouche": "o",
-                        "rougit": true,
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  },
-                  {
-                    "qui": "violet",
-                    "a": "droite",
-                    "gestes": [
-                      {
-                        "geste": "regarde",
-                        "cible": "rose",
-                        "de": 0,
-                        "a": 2
-                      },
-                      {
-                        "geste": "visage",
-                        "yeux": "plats",
-                        "bouche": "plate",
-                        "de": 0,
-                        "a": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
+          ]
+        }
       },
-      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
+      "legende": "When he wants her to see the sky.\n\nSend this to your partner",
       "hashtags": [
-        "#shesa10but",
-        "#redflags",
-        "#couplequiz",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

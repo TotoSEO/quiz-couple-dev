@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-037",
+  "sujet": "tp-032",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Kitchen edition",
+        "etiquette": "Road trip edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Cook together, big mess",
-            "b": "One cooks, one cleans"
+            "a": "You drive, they pick songs",
+            "b": "They drive, you pick songs"
           },
           {
-            "a": "Follow the recipe",
-            "b": "Improvise"
+            "a": "Stop at every view",
+            "b": "Get there before dark"
           },
           {
-            "a": "Taste everything first",
-            "b": "Wait for the plate"
+            "a": "Sleep in the car",
+            "b": "Find a tiny motel"
           },
           {
-            "a": "Fancy dinner at home",
-            "b": "Pizza on the floor"
+            "a": "Gas station snacks",
+            "b": "A proper restaurant"
           },
           {
-            "a": "Bake a cake",
-            "b": "Make fresh pasta"
+            "a": "Plan every stop",
+            "b": "Get lost on purpose"
           },
           {
-            "a": "Music while cooking",
-            "b": "Chat while cooking"
+            "a": "Sing along loudly",
+            "b": "Quiet and window gazing"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Kitchen edition. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "legende": "Road trip edition. 6 dilemmas, 5 seconds each.\n\nSave this for later",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

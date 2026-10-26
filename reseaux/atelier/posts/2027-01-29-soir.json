@@ -1,0 +1,48 @@
+{
+  "jour": "2027-01-29",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-033",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Pet peeves",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What annoys your partner the most?",
+          "Loud chewing or late people?",
+          "What makes them roll their eyes?",
+          "What sound do they hate?",
+          "What do they hate finding in the kitchen?",
+          "What habit of yours bugs them?",
+          "Do they hate it when you interrupt them?",
+          "What kind of text do they hate to get?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "8 questions, 5 seconds each.\n\nComment your score",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

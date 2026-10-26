@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-064",
+  "sujet": "tp-050",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Bath and shower",
+        "etiquette": "Dinner date edition",
         "accroche": "Would you rather: couple edition",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Bubble bath together",
-            "b": "Shower duet"
+            "a": "Candlelit restaurant",
+            "b": "Street food standing"
           },
           {
-            "a": "Singing in the shower",
-            "b": "Dance while brushing"
+            "a": "Share one dessert",
+            "b": "One dessert each"
           },
           {
-            "a": "Hot water first",
-            "b": "Towel first"
+            "a": "Order the same dish",
+            "b": "Order two and swap"
           },
           {
-            "a": "Candles in the bathroom",
-            "b": "Music in the shower"
+            "a": "They choose the place",
+            "b": "You choose the place"
           },
           {
-            "a": "Long bath",
-            "b": "Quick shower"
+            "a": "Sit across",
+            "b": "Sit side by side"
           },
           {
-            "a": "Share a towel",
-            "b": "Two towels"
+            "a": "Dinner then a walk",
+            "b": "A walk then dinner"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Bath and shower. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "legende": "Dinner date edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

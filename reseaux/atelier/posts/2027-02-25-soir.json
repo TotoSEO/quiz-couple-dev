@@ -1,0 +1,64 @@
+{
+  "jour": "2027-02-25",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-095",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Night sky edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Stars from a rooftop",
+            "b": "Stars from a field"
+          },
+          {
+            "a": "Make a wish",
+            "b": "Count the stars"
+          },
+          {
+            "a": "Blanket on the grass",
+            "b": "Blanket on the car"
+          },
+          {
+            "a": "Watch the sunrise",
+            "b": "Watch the sunset"
+          },
+          {
+            "a": "A shooting star",
+            "b": "A full moon"
+          },
+          {
+            "a": "Camp under the stars",
+            "b": "Hotel with a skylight"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, night sky edition. 6 dilemmas, 5 seconds each.\n\nComment your A and B",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

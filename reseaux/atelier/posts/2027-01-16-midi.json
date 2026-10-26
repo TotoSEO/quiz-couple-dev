@@ -1,0 +1,64 @@
+{
+  "jour": "2027-01-16",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-066",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Takeout night",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Pizza",
+            "b": "Sushi"
+          },
+          {
+            "a": "Eat on the floor",
+            "b": "Eat in bed"
+          },
+          {
+            "a": "Same order every time",
+            "b": "Something new every time"
+          },
+          {
+            "a": "Chopsticks",
+            "b": "A fork"
+          },
+          {
+            "a": "Order for both",
+            "b": "Order separately"
+          },
+          {
+            "a": "Dessert first",
+            "b": "Save room for dessert"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Takeout night. 6 dilemmas, 5 seconds each.\n\nSave this for your next date night",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

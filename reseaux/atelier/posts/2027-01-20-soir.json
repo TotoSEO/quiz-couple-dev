@@ -1,0 +1,64 @@
+{
+  "jour": "2027-01-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-069",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Weekend plans",
+        "accroche": "Would you rather: couple edition",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Stay in all weekend",
+            "b": "Out both days"
+          },
+          {
+            "a": "Friends on Saturday",
+            "b": "Just us on Saturday"
+          },
+          {
+            "a": "Big breakfast Sunday",
+            "b": "Big dinner Sunday"
+          },
+          {
+            "a": "Plan it on Friday",
+            "b": "Decide on Saturday"
+          },
+          {
+            "a": "Cleaning day",
+            "b": "Lazy day"
+          },
+          {
+            "a": "Early start",
+            "b": "Late start"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Weekend plans. 6 dilemmas, 5 seconds each.\n\nSave this for later",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
