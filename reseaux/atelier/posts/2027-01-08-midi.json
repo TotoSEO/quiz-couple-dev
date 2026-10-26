@@ -21,11 +21,11 @@
         },
         "questions": [
           "What is your partner's shoe size?",
-          "Their middle name?",
-          "Their favorite number?",
-          "Their lucky color?",
+          "What is their middle name?",
+          "What is their lucky number?",
+          "What is their best color?",
           "Their first pet's name?",
-          "Their first concert?",
+          "What was their first concert?",
           "Their worst subject at school?",
           "Their biggest fear?"
         ],
