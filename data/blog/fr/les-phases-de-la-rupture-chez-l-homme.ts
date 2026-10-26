@@ -3,19 +3,20 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'les-phases-de-la-rupture-chez-l-homme',
-  title: "Les étapes de la rupture chez l'Homme",
-  metaTitle: "Les phases de la rupture chez l'homme | 6 étapes décryptées",
-  metaDescription: "Découvrez les 6 phases de la rupture chez l'homme : du déni à la reconstruction. Comprendre chaque étape pour mieux traverser une séparation.",
+  title: "Les phases de la rupture chez l'homme : les 6 étapes, et le cycle de celui qui quitte",
+  metaTitle: "Les phases de la rupture chez l'homme : 6 étapes et le cycle",
+  metaDescription: "Les 6 phases de la rupture chez l'homme, du déni à la reconstruction, et le cycle de la psychologie masculine de celui qui quitte, dans l'ordre où ça arrive.",
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: "Homme traversant les phases de la rupture amoureuse",
   publishedAt: '2026-02-21',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Les 6 phases de la rupture chez l'homme : du déni à la reconstruction.",
+  excerpt: "Les 6 phases de la rupture chez l'homme, du déni à la reconstruction, et le cycle de celui qui quitte.",
   introduction: `<p>On entend souvent que les hommes souffrent moins d'une rupture, qu'ils passent à autre chose plus vite. C'est faux. Ils souffrent autant, mais autrement : chez eux, la douleur arrive plus tard. Un homme peut sortir, rire, enchaîner les soirées pendant des semaines... puis s'effondrer trois mois après, un dimanche soir, quand la réalité le rattrape d'un coup.</p>
-<p>Voici les 6 phases qu'un homme traverse après une séparation, dans l'ordre où elles arrivent la plupart du temps. Que vous soyez un homme en pleine rupture ou une femme qui cherche à <a href="/mon-ex-pense-t-il-elle-encore-a-moi/">comprendre comment son ex vit les choses</a>, ces repères aident à savoir où on en est.</p>`,
+<p>Voici les 6 phases qu'un homme traverse quand il est quitté, dans l'ordre où elles arrivent la plupart du temps, puis le cycle de celui qui quitte, celui qu'on appelle sur les réseaux « le cycle de rupture de la psychologie masculine ». Que vous soyez un homme en pleine rupture ou une femme qui cherche à <a href="/mon-ex-pense-t-il-elle-encore-a-moi/">comprendre comment son ex vit les choses</a>, ces repères aident à savoir où on en est.</p>`,
   quickSummary: [
     "Après une rupture, un homme passe par 6 phases : déni, anesthésie, colère, prise de conscience, deuil, reconstruction.",
+    "Quand c'est lui qui quitte, le parcours est différent : soulagement, liberté, creux, nostalgie, regret, puis retour ou page tournée.",
     "La douleur arrive souvent en retard : des semaines de « ça va très bien », puis l'effondrement.",
     "La tristesse est la phase qui guérit. La colère et la fuite ne font que la retarder.",
     "Ces phases n'ont ni ordre strict ni durée type : c'est un repère, pas un calendrier.",
@@ -48,7 +49,7 @@ const article: BlogArticleData = {
       content: `<p>Le déclencheur est souvent un détail : une chanson, un endroit où vous alliez ensemble, un objet retrouvé dans un tiroir. Et d'un coup, ça devient réel. C'est fini, l'autre ne reviendra pas, la vie imaginée ensemble n'aura pas lieu.</p>
 <p>Les questions arrivent alors en rafale : est-ce que c'était de ma faute ? Est-ce que j'aurais pu faire autrement ? Se les poser une fois avec lucidité fait avancer. Se les repasser en boucle tous les soirs, c'est de la rumination, et ça ne mène nulle part.</p>
 <p>C'est aussi le moment où beaucoup veulent recontacter leur ex « pour avoir des réponses ». La plupart du temps, c'est une mauvaise idée : les réponses qu'on cherche viennent rarement de l'autre, elles viennent de soi, avec le temps.</p>
-<a href="/blog/femme-malheureuse-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Comment reconnaître une femme malheureuse en couple : les vrais signes</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/blog/femme-malheureuse-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les signes d'une femme malheureuse en couple : comment la reconnaître</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {
       id: 'phase-5-deuil-reel',
@@ -75,6 +76,20 @@ const article: BlogArticleData = {
 <li><strong>Réapprendre à être seul :</strong> Pas une solitude subie, une solitude choisie. Savoir être bien avec soi-même, c'est la base la plus solide pour construire un jour une <a href="/test-couple-sain/">relation qui fait du bien</a>.</li>
 <li><strong>S'autoriser à vouloir à nouveau :</strong> Pas forcément quelqu'un d'autre tout de suite. Juste se remettre à faire des projets, et regarder devant.</li>
 </ul>`,
+    },
+    {
+      id: 'le-cycle-de-celui-qui-quitte',
+      title: "Et quand c'est lui qui quitte ? Le cycle de rupture de la psychologie masculine",
+      content: `<p>Tout ce qui précède décrit l'homme qui est quitté. Quand c'est lui qui part, le parcours est différent, et c'est celui qu'on appelle sur les réseaux « le cycle de rupture de la psychologie masculine ». Il n'a rien de scientifique, c'est un schéma que beaucoup de femmes ont vu se répéter, et ça se passe souvent comme ça :</p>
+<ol>
+<li><strong>Le soulagement :</strong> Les premiers jours, il se sent léger. Plus de tensions, plus de reproches, il a enfin pris la décision qu'il repoussait depuis des semaines.</li>
+<li><strong>La liberté :</strong> Il sort, il voit ses amis, il profite. De l'extérieur, on dirait qu'il s'en fiche complètement, et c'est ce qui fait le plus mal à celle qui reste.</li>
+<li><strong>Le creux :</strong> Au bout de quelques semaines, la nouveauté retombe. Il rentre dans un appartement vide, il n'a plus personne à qui raconter sa journée, et le silence commence à peser.</li>
+<li><strong>La nostalgie :</strong> Il ne se souvient plus que des bons moments. Les raisons pour lesquelles il est parti s'effacent, et il se demande s'il n'a pas fait une bêtise.</li>
+<li><strong>Le regret :</strong> C'est le moment du « coucou, ça va ? » envoyé un soir, deux ou trois mois après, sans trop savoir ce qu'il veut.</li>
+<li><strong>Le retour, ou la page tournée :</strong> Soit il revient pour de bon, soit ce message n'était qu'un passage, et il finit par avancer sans vous.</li>
+</ol>
+<p>Ce cycle existe, mais il ne dit pas que votre ex va revenir : beaucoup d'hommes passent du soulagement à la page tournée sans jamais faire demi-tour, et un message de regret n'est pas une demande de retour. Si vous attendez ce message, ce qui compte, c'est moins de deviner où il en est que de <a href="/test-m-aime-t-il-encore/">savoir s'il tient encore à vous</a>, et surtout ce que vous, vous voulez.</p>`,
     },
     {
       id: 'pourquoi-differemment',

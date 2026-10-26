@@ -3,19 +3,20 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'breakup-stages-for-men',
-  title: 'The Stages of a Breakup for Men',
-  metaTitle: 'The Stages of a Breakup for Men | 6 Phases Explained',
-  metaDescription: 'Discover the 6 stages of a breakup for men: from denial to rebuilding. Understand each phase to better navigate a separation.',
+  title: "The stages of a breakup for men: the 6 phases, and the cycle of the man who leaves",
+  metaTitle: "Stages of a Breakup for Men: 6 Phases and the Cycle",
+  metaDescription: "The 6 stages of a breakup for men, from denial to rebuilding, and the male psychology breakup cycle of the man who leaves, in the order it usually happens.",
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Man going through the stages of a romantic breakup',
   publishedAt: '2026-02-21',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: 'The 6 stages of a breakup for men: from denial to rebuilding.',
+  excerpt: "The 6 stages of a breakup for men, from denial to rebuilding, and the cycle of the man who leaves.",
   introduction: `<p>You often hear that men suffer less after a breakup, that they move on faster. That's not true. They suffer just as much, only differently: for them, the pain shows up late. A man can go out, laugh, party for weeks... then fall apart three months later, on a Sunday evening, when reality catches up with him all at once.</p>
-<p>Here are the 6 stages a man goes through after a separation, in the order they usually come. Whether you're a man in the middle of a breakup or a woman trying to <a href="/en/does-my-ex-still-think-about-me/">understand how your ex is living through it</a>, these markers help you figure out where things stand.</p>`,
+<p>Here are the 6 stages a man goes through when he's the one being left, in the order they usually come, then the cycle of the man who leaves, the one social media calls "the male psychology breakup cycle". Whether you're a man in the middle of a breakup or a woman trying to <a href="/en/does-my-ex-still-think-about-me/">understand how your ex is living through it</a>, these markers help you figure out where things stand.</p>`,
   quickSummary: [
     'After a breakup, a man goes through 6 stages: denial, numbing, anger, realization, grief, rebuilding.',
+    "When he's the one who leaves, the path is different: relief, freedom, the dip, nostalgia, regret, then coming back or moving on.",
     'The pain often arrives late: weeks of "I\'m doing great," then the crash.',
     'Sadness is the stage that heals. Anger and avoidance only delay it.',
     'These stages have no strict order and no set length: they are a marker, not a timetable.',
@@ -48,7 +49,7 @@ const article: BlogArticleData = {
       content: `<p>The trigger is often a small thing: a song, a place you used to go together, an object found in a drawer. And suddenly it's real. It's over, she's not coming back, the life you pictured together isn't going to happen.</p>
 <p>Then the questions come in waves: was it my fault? Could I have done things differently? Asking them once, honestly, moves you forward. Replaying them every night is rumination, and it leads nowhere.</p>
 <p>This is also when many men want to contact their ex "to get answers." Most of the time, it's a bad idea: the answers you're looking for rarely come from the other person. They come from you, with time.</p>
-<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">How to Recognize an Unhappy Woman in a Relationship: The Real Signs</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">The signs of an unhappy woman in a relationship: how to recognise them</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {
       id: 'phase-5-real-grief',
@@ -75,6 +76,20 @@ const article: BlogArticleData = {
 <li><strong>Relearning how to be alone:</strong> Not loneliness you endure, solitude you choose. Knowing you can be good on your own is the most solid base for one day building a <a href="/en/healthy-relationship-test/">relationship that does you good</a>.</li>
 <li><strong>Allowing yourself to want again:</strong> Not necessarily someone new right away. Just making plans again, and looking forward.</li>
 </ul>`,
+    },
+    {
+      id: 'the-cycle-of-the-man-who-leaves',
+      title: "And when he's the one who leaves? The male psychology breakup cycle",
+      content: `<p>Everything above describes the man who gets left. When he's the one walking away, the path is different, and it's the one social media calls "the male psychology breakup cycle". There's nothing scientific about it, it's a pattern many women have seen repeat itself, and it often goes like this:</p>
+<ol>
+<li><strong>Relief:</strong> In the first days, he feels light. No more tension, no more reproaches, he has finally made the decision he'd been putting off for weeks.</li>
+<li><strong>Freedom:</strong> He goes out, sees his friends, enjoys himself. From the outside, it looks like he couldn't care less, and that's what hurts the one who stays the most.</li>
+<li><strong>The dip:</strong> After a few weeks, the novelty wears off. He comes home to an empty flat, he has nobody to tell about his day, and the silence starts to weigh.</li>
+<li><strong>Nostalgia:</strong> He only remembers the good moments. The reasons he left fade away, and he wonders whether he made a mistake.</li>
+<li><strong>Regret:</strong> This is the "hey, how are you?" sent one evening, two or three months later, without really knowing what he wants.</li>
+<li><strong>Coming back, or moving on:</strong> Either he comes back for good, or that message was just a passing moment, and he ends up moving forward without you.</li>
+</ol>
+<p>This cycle exists, but it doesn't mean your ex is coming back: many men go from relief to moving on without ever turning around, and a message of regret is not a request to get back together. If you're waiting for that message, what matters is less guessing where he's at than <a href="/en/does-he-she-still-love-me-test/">knowing whether he still cares about you</a>, and above all what you want.</p>`,
     },
     {
       id: 'why-differently',
