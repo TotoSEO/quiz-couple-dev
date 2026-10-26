@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { BaseMemoire } from './memoire.mjs';
 import { etat, menage, reserve, verifierJetons } from '../entretien.mjs';
-import { MOTIF_RETRAIT } from '../lib/calendrier.mjs';
+import { MOTIF_RETRAIT, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
 
 const T0 = new Date('2026-10-12T15:00:00Z');
 const melange = { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } };
@@ -39,6 +39,21 @@ test('l\'état liste les créneaux à remplir avec leur catégorie', async () =>
   // 8 h 05 : midi commence dans moins de trois heures, seul l'après-midi reste
   const tard = await etat(b, { maintenant: new Date('2026-10-12T06:05:00Z'), horizon: 0 });
   assert.deepEqual(tard.a_remplir.map((x) => x.creneau), ['soir']);
+});
+
+test('un sujet daté à « exception » (l\'histoire de bâton de la veille de Noël) n\'est pas hors grille, un bâton sur un autre soir de dilemmes l\'est', async () => {
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: MELANGE_DEFAUT }],
+    social_posts: [
+      // jeudi 24 décembre au soir : la grille attend des dilemmes, la banque y date une histoire de bâton (noel-06, exception)
+      { id: 'noel', jour: '2026-12-24', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'baton', categorie: 'baton' },
+      // lundi 28 décembre au soir : dilemmes attendus, un bâton sans sujet daté : à réécrire
+      { id: 'hg', jour: '2026-12-28', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'baton', categorie: 'baton' },
+    ],
+  });
+  const e = await etat(b, { maintenant: new Date('2026-12-20T05:00:00Z'), horizon: 1 });
+  assert.deepEqual(e.hors_grille, [{ jour: '2026-12-28', creneau: 'soir', categorie: 'baton', attendue: 'tu-preferes' }]);
 });
 
 test('l\'état signale les posts hors grille et les fichiers refusés par la synchro', async () => {

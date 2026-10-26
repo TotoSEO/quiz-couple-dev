@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
+import { envoyerAlerte, lignesAlerte } from './lib/alerte-mail.mjs';
 import { ajouterJours, aujourdhui, categorieAttendue, creneauFerme, creneauxOuverts, CRENEAUX, melangeDuCompte, MOTIF_FERME, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
@@ -144,7 +145,8 @@ export const dossierAtelier = (langue) => path.join(path.dirname(fileURLToPath(i
 function sujetsDates(langue = 'en') {
   try {
     const chemin = path.join(dossierAtelier(langue), 'sujets.json');
-    return (JSON.parse(fs.readFileSync(chemin, 'utf8')).saison?.sujets || []).map((s) => ({ jour: s.jour, creneau: s.creneau }));
+    // un sujet retiré ne réserve plus rien ; « exception » : le sujet a le droit de ne pas suivre la grille (l'histoire de bâton de la veille de Noël)
+    return (JSON.parse(fs.readFileSync(chemin, 'utf8')).saison?.sujets || []).filter((s) => !s.retire).map((s) => ({ jour: s.jour, creneau: s.creneau, exception: !!s.exception }));
   } catch {
     return [];
   }
@@ -199,9 +201,12 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
   // les idées de Thomas, dans l'ordre où il les a notées, chacune avec le
   // créneau le plus proche de sa catégorie (lib/idees.mjs) ; une idée sans
   // catégorie laisse la routine choisir, prochain_creneau lui dit où
+  const dates = sujetsDates(langue);
+  // les créneaux des sujets datés à « exception » : leur post ne suit pas la grille, et c'est voulu
+  const exceptions = new Set(dates.filter((d) => d.exception).map((d) => `${d.jour}|${d.creneau}`));
   const idees = await base.select('social_idees', `select=id,texte,source,categorie,created_at&langue=eq.${langue}&utilisee_le=is.null&order=created_at.asc`);
   const { vises, prochain } = viserCreneaux(idees, {
-    melange, posts, variantes, dates: sujetsDates(langue), debut, horizon, categories: categoriesIdee(langue),
+    melange, posts, variantes, dates, debut, horizon, categories: categoriesIdee(langue),
     ouvert: (jour, creneau, i) => i > 0 || debutCreneau(compte, creneau) >= minutesMaintenant + MARGE_MIN,
   });
   const stats = await statistiquesDuCompte(base, langue);
@@ -228,8 +233,11 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     // mascottes (pov, coquin, statique), retirées le 16 octobre 2026, que la
     // synchro retient : celles-là ne partent pas, mais leur créneau reste
     // vide tant que le fichier n'est pas réécrit
+    // (un sujet daté à « exception », l'histoire de bâton de la veille de
+    // Noël sur un créneau de dilemmes, a le droit de ne pas suivre la grille :
+    // la routine ne le réécrit pas)
     hors_grille: posts
-      .filter((p) => p.statut === 'valide' && p.categorie && encorePubliable(p))
+      .filter((p) => p.statut === 'valide' && p.categorie && encorePubliable(p) && !exceptions.has(`${p.jour}|${p.creneau}`))
       .map((p) => ({ jour: p.jour, creneau: p.creneau, categorie: p.categorie, attendue: categorieAttendue(melange, p.jour, p.creneau) }))
       .filter((p) => p.attendue && p.attendue !== p.categorie),
     // fichiers refusés par la synchro ces dernières 24 h, avec leurs fautes :
@@ -316,11 +324,25 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   // un état par compte : --etat <fichier> pour Quiz Couple (en), --etat-fr
   // <fichier> pour Les mipaps ; un compte sans fichier est quand même compté
   const comptes = await base.select('social_comptes', 'select=langue&order=langue.asc');
+  const etats = [];
   for (const { langue } of comptes.length ? comptes : [{ langue: 'en' }]) {
     const e = await etat(base, { langue });
     if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve ${langue} de ${e.reserve_jours} jours seulement`);
     const i = process.argv.indexOf(langue === 'en' ? '--etat' : `--etat-${langue}`);
     if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
     console.log(`${langue} : réserve de ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés, ${e.idees.length} idées de Thomas`);
+    etats.push({ compte: langue, reserve_jours: e.reserve_jours, a_corriger: e.a_corriger.length });
+  }
+  // L'alerte par e-mail (26 octobre 2026, pour les mois sans personne devant
+  // l'admin) : les erreurs des dernières 24 heures (le jeton Meta vérifié
+  // plus haut, une publication ou un rendu refusés) et une réserve sous deux
+  // semaines ; un e-mail par passage au plus, jamais une panne de l'entretien.
+  try {
+    const depuis = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+    const erreurs = await base.select('social_journal', `select=source,message,at&niveau=eq.erreur&at=gte.${depuis}&order=at.desc&limit=100`);
+    const lignes = lignesAlerte({ erreurs, etats });
+    if (lignes.length) await envoyerAlerte(lignes, { journal: (...args) => base.journal(...args) });
+  } catch (e) {
+    console.log(`alerte e-mail : ${e.message}`);
   }
 }

@@ -3,6 +3,8 @@
 // aucun, aucun réel ne fonctionne »). Les sujets datés tombent sur un créneau
 // de leur catégorie dans la grille des mipaps, les identifiants sont uniques,
 // et un sujet libre ne porte ni heure à la minute près ni chute qui commente.
+// Depuis le 26 octobre 2026, les reels animés viennent de la fabrique (ani-201 et
+// suivants) : mêmes règles, et les anciens sujets libres portent « retire ».
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -43,7 +45,8 @@ test('les identifiants des mipaps sont uniques, toutes catégories confondues', 
 test("l'effet Barnum : les sujets de la nouvelle série disent qui fait la bêtise, sans heure à la minute ni chute qui commente", () => {
   const minute = /\b\d{1,2}\s?h\s?(?!00\b|30\b)\d{2}\b/i;
   for (const cat of CATEGORIES) {
-    const barnum = SUJETS[cat].filter((s) => !s.retire && /-1\d\d$/.test(s.id));
+    // la série de l'effet Barnum (101 et suivants) et, pour les reels animés, celle de la fabrique du 26 octobre 2026 (201 et suivants)
+    const barnum = SUJETS[cat].filter((s) => !s.retire && /-[1-3]\d\d$/.test(s.id));
     assert.ok(barnum.length >= 11, `${cat} : ${barnum.length} sujets de l'effet Barnum`);
     for (const s of barnum) {
       assert.ok(['lui', 'elle', 'les deux'].includes(s.qui), `${s.id} : qui (lui, elle, les deux)`);
