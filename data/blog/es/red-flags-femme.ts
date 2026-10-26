@@ -3,144 +3,135 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-en-una-mujer',
-  title: "12 red flags en una mujer: lo que sientes probablemente tiene nombre",
-  metaTitle: "12 red flags en una mujer: la lista completa",
-  metaDescription: "Algo no cuadra en tu relación pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales en una mujer, la lista completa.",
-  featuredImage: '',
-  featuredImageAlt: "Hilera de banderines rojos clavados en la hierba, el primero nítido y los demás desenfocados",
+  title: "Red flags en una mujer: la lista de las 12 señales que hay que tomarse en serio",
+  metaTitle: "Red flags en una mujer: la lista de 12 señales",
+  metaDescription: "La lista de las 12 red flags en una mujer, de la más discreta a la más grave, con un ejemplo del día a día para cada una y lo que significa para lo que viene.",
+  featuredImage: '/blog/red-flags-femme.webp',
+  featuredImageAlt: "Fila de pequeños banderines rojos clavados en la hierba, el primero nítido y los siguientes desenfocados",
   publishedAt: '2026-03-07',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Una red flag no es un defecto de carácter. Es un patrón relacional repetido que, con el tiempo, hace que una relación sea agotadora, desequilibrada o tóxica.",
-  introduction: `<p>Se habla mucho de las red flags masculinas. Mucho menos de las femeninas, bien porque el tema se trata con pinzas, bien porque los artículos que existen están redactados con tantas precauciones que acaban sin decir nada. Este artículo no está aquí para atacar a las mujeres. Está aquí para los hombres (y las mujeres) que sienten algo en su relación sin lograr nombrarlo con claridad.</p>
-<p><strong>Una red flag no es un defecto de carácter.</strong> No es "es pesada" o "es demasiado emotiva". Es un patrón relacional repetido que, con el tiempo, hace que una relación sea agotadora, desequilibrada o tóxica. La matiz importa. La necesitamos para evitar tanto excusarlo todo como patologizarlo todo.</p>`,
+  excerpt: "Una red flag no es un defecto de carácter, es un comportamiento que se repite y que acaba desgastándote. Aquí tienes las 12 que conviene conocer en una mujer.",
+  introduction: `<p>Se habla mucho de las red flags en un hombre, y mucho menos de las que se pueden ver en una chica o en una mujer. Y sin embargo existen igual, y los hombres que las viven suelen tardar más en ponerles nombre. Una red flag no es un defecto de carácter, no es «es una pesada» o «es demasiado emocional». Es un comportamiento que se repite, que dejas pasar una vez, y luego diez, y que acaba haciendo la relación agotadora.</p>
+<p>Si estás aquí, seguramente es porque sientes algo en tu relación sin conseguir ponerle palabras. Aquí tienes la lista de las 12 red flags en una mujer, con un ejemplo para cada una y lo que significa. Puedes leerlas en orden o ir directamente a la que te suene.</p>`,
   quickSummary: [
-    "Las red flags emocionales: da frío y calor alternados, su humor se convierte en tu responsabilidad, usa tus vulnerabilidades en tu contra.",
-    "Las red flags de comportamiento: los conflictos siempre acaban con la culpa en tu lado, celos incontrolables, reglas que cambian sin avisar.",
-    "Las red flags relacionales son las más insidiosas: aislamiento progresivo, tus necesidades no tienen cabida, erosión de tu autoestima.",
-    "Una red flag se distingue de una dificultad ordinaria por la repetición y la ausencia de autocuestionamiento.",
-    "Si tienes varias casillas marcadas y las cosas no cambian, el malestar que cargas merece ser tomado en serio.",
+    "Una red flag es un comportamiento que se repite, no una mala semana.",
+    "Las más frecuentes: sopla frío y caliente, su humor se convierte en tu problema, las discusiones siempre acaban siendo culpa tuya.",
+    "Las más graves: te aleja de tu gente, y te sientes culpable por tener una vida fuera de ella.",
+    "Lo que la distingue de una mala racha: la repetición, y lo que hace cuando se lo dices.",
+    "La señal más clara: te sientes peor contigo mismo desde que estáis juntos.",
   ],
   sections: [
     {
-      id: 'red-flags-de-un-vistazo',
-      title: "Las red flags de un vistazo",
-      content: `<p>Aquí están todos, en el orden en que los tratamos. Toca el que te suene para ir directamente a la explicación.</p>
+      id: 'la-lista-de-las-12-red-flags',
+      title: "La lista de las 12 red flags en una mujer",
+      content: `<p>Aquí están todas. Pulsa en la que te suene para ir directamente a la explicación.</p>
 
 <ol class="blog-liste-reperes">
-<li><a href="#frio-y-calor">Da frío y calor alternados</a></li>
-<li><a href="#su-humor-tu-responsabilidad">Su humor se convierte en tu responsabilidad</a></li>
-<li><a href="#usa-tus-vulnerabilidades">Usa tus vulnerabilidades en tu contra</a></li>
-<li><a href="#crisis-desproporcionadas">Las crisis emocionales son desproporcionadas e impredecibles</a></li>
-<li><a href="#conflictos-mismo-sitio">Los conflictos siempre acaban en el mismo sitio</a></li>
-<li><a href="#celos-mas-alla">Los celos van más allá de lo razonable</a></li>
-<li><a href="#ex-monstruos">Habla de todos sus ex como si fueran monstruos</a></li>
-<li><a href="#reglas-cambian">Las reglas cambian según el humor del día</a></li>
-<li><a href="#necesidades-sin-cabida">Tus necesidades no tienen cabida</a></li>
-<li><a href="#aleja-de-cercanos">Te aleja progresivamente de tus personas cercanas</a></li>
-<li><a href="#culpable-por-existir">Te sientes culpable por existir fuera de ella</a></li>
-<li><a href="#peor-contigo-mismo">Te sientes peor contigo mismo desde que estáis juntos</a></li>
+<li><a href="#frio-y-caliente">Sopla frío y caliente</a></li>
+<li><a href="#su-humor-se-convierte-en-tu-problema">Su humor se convierte en tu problema</a></li>
+<li><a href="#usa-lo-que-le-has-contado">Usa lo que le has confiado en tu contra</a></li>
+<li><a href="#las-crisis-son-desproporcionadas">Las crisis son desproporcionadas</a></li>
+<li><a href="#las-discusiones-siempre-son-culpa-tuya">Las discusiones siempre acaban siendo culpa tuya</a></li>
+<li><a href="#sus-celos-se-pasan">Sus celos pasan de lo razonable</a></li>
+<li><a href="#todos-sus-ex-eran-monstruos">Todos sus ex eran «monstruos»</a></li>
+<li><a href="#las-reglas-cambian">Las reglas cambian según el día</a></li>
+<li><a href="#tus-necesidades-van-despues">Tus necesidades siempre van después</a></li>
+<li><a href="#te-aleja-de-tu-gente">Te aleja de tu gente</a></li>
+<li><a href="#culpable-de-tener-una-vida">Te sientes culpable por tener una vida fuera de ella</a></li>
+<li><a href="#te-sientes-peor-contigo-mismo">Te sientes peor contigo mismo desde que estáis juntos</a></li>
 </ol>
 
-<div><table><thead><tr><th>La señal</th><th>Lo que suele significar</th><th>Nivel de alerta</th></tr></thead><tbody>
-<tr><td>Los conflictos siempre son culpa tuya</td><td>Nunca se cuestiona a sí misma. Nunca.</td><td>Serio</td></tr>
-<tr><td>Da frío y calor alternados</td><td>Inestabilidad emocional o prueba de tu apego.</td><td>Vigilar</td></tr>
-<tr><td>Te aleja de tus personas cercanas</td><td>Aislamiento progresivo, presentado como amor.</td><td>Muy serio</td></tr>
-<tr><td>Tus necesidades no existen</td><td>La relación gira en torno a ella. Siempre.</td><td>Serio</td></tr>
-<tr><td>Usa tus vulnerabilidades en tu contra</td><td>Lo que le confiaste se convierte en arma en las discusiones.</td><td>Muy serio</td></tr>
-<tr><td>Las reglas cambian sin avisar</td><td>Nunca sabes a qué atenerte. Es intencionado.</td><td>Vigilar</td></tr>
-<tr><td>Habla mal de todos sus ex</td><td>En su versión, nunca ha tenido la culpa. Nunca.</td><td>Vigilar</td></tr>
-<tr><td>Los celos son permanentes e incontrolables</td><td>Necesidad de control, no amor.</td><td>Serio</td></tr>
-<tr><td>Te hace sentir culpable por tus propias necesidades</td><td>Manipulación emocional, consciente o no.</td><td>Serio</td></tr>
-<tr><td>Andas de puntillas de forma permanente</td><td>Su humor estructura toda la relación.</td><td>Serio</td></tr>
-</tbody></table></div>`,
+<p>Van en tres familias: lo que hace con tus emociones, lo que hace sin más, y en qué se convierte la relación con el tiempo. Las últimas de la lista son las más gordas.</p>`,
     },
     {
-      id: 'red-flags-emocionales',
-      title: "Las red flags emocionales",
-      content: `<p>Son las primeras en aparecer, y las más difíciles de identificar porque llegan envueltas en una intensidad que puede confundirse con pasión. El amor puede ser intenso sin ser inestable. Esa diferencia importa.</p>`,
+      id: 'lo-que-hace-con-tus-emociones',
+      title: "Lo que hace con tus emociones",
+      content: `<p>Suelen ser las primeras en aparecer, y las más difíciles de ver, porque llegan con una intensidad que se confunde con pasión. El amor puede ser intenso sin ser inestable.</p>`,
       subsections: [
         {
-          id: 'frio-y-calor',
-          title: "Da frío y calor alternados",
-          content: `<p>Una semana está presente, cálida, entera. La siguiente, distante, fría, ausente sin explicación. Y tú pasas el tiempo analizando qué has hecho mal. Spoiler: normalmente nada. Este ciclo crea una forma de dependencia, porque el alivio cuando las cosas "vuelven a estar bien" es proporcional a la ansiedad que tuviste que atravesar. Es el patrón del apego ansioso, y una vez dentro, es difícil salir. Si reconoces este patrón, el <a href="/es/test-relacion-toxica/">test pareja tóxica</a> puede ayudarte a ver dónde estás realmente.</p>`,
+          id: 'frio-y-caliente',
+          title: "1. Sopla frío y caliente",
+          content: `<p>Una semana está ahí, presente, entera. La siguiente, distante, fría, sin explicación. Y tú te pasas el tiempo buscando qué has hecho mal, y la mayoría de las veces, nada. Ese ciclo crea una dependencia, porque el alivio cuando «vuelve el buen tiempo» es tan grande como la angustia que ha habido que atravesar.</p>
+<p>Si el principio de la relación fue muy intenso, mensajes todo el día, «nunca había sentido esto», también hay motivos para preguntarse si <a href="/es/blog/love-bombing-senales/">ese arranque a lo grande era amor u otra cosa</a>. Y una vez atrapado en el frío y caliente, se instala el <a href="/es/test-estilo-apego/">apego ansioso</a>: estás pendiente de su aprobación, y cuesta salir de ahí.</p>`,
         },
         {
-          id: 'su-humor-tu-responsabilidad',
-          title: "Su humor se convierte en tu responsabilidad",
-          content: `<p>Llegas del trabajo y evalúas su humor antes de hablar. Eliges tus palabras según cómo esté esta noche. Evitas ciertos temas porque "no es el momento". Eso no es consideración, es supervivencia relacional. <strong>Gestionar el humor de alguien de forma permanente es una carga que no tienes por qué cargar solo.</strong> Una pareja sana gestiona sus propios estados emocionales, o al menos no te los traspasa.</p>`,
+          id: 'su-humor-se-convierte-en-tu-problema',
+          title: "2. Su humor se convierte en tu problema",
+          content: `<p>Llegas del trabajo y evalúas su humor antes de abrir la boca. Eliges las palabras según cómo esté esta noche, evitas ciertos temas porque «no es el momento». Eso no es delicadeza, es supervivencia. Gestionar el humor de alguien todo el rato es una carga que no tienes por qué llevar: una pareja sana gestiona sus propios estados, o al menos no te los hace cargar a ti.</p>`,
         },
         {
-          id: 'usa-tus-vulnerabilidades',
-          title: "Usa tus vulnerabilidades en tu contra",
-          content: `<p>Le contaste algo que te había dolido en la infancia, una inseguridad que llevas, un miedo que no sueles confesar. Y ahora, en las discusiones, vuelve. No para ayudarte a avanzar, sino para golpear donde duele. Es una de las formas más claras de falta de respeto en una relación, porque convierte la confianza en vulnerabilidad explotable. Si ya no sabes si puedes hablar de ti mismo sin que luego se use en tu contra, es un problema real.</p>`,
+          id: 'usa-lo-que-le-has-contado',
+          title: "3. Usa lo que le has confiado en tu contra",
+          content: `<p>Le hablaste de una herida de la infancia, de un complejo, de un miedo que no le confiesas a nadie. Y ahora, en las discusiones, vuelve a salir. No para ayudarte, sino para dar donde duele. Es una de las señales más claras, porque <a href="/es/blog/mujer-narcisista-senales/">lo que le has confiado se convierte en un arma</a>. Si ya no sabes si puedes hablarle de ti sin que se vuelva en tu contra, es un problema de verdad.</p>`,
         },
         {
-          id: 'crisis-desproporcionadas',
-          title: "Las crisis emocionales son desproporcionadas e impredecibles",
-          content: `<p>Un comentario sin importancia desencadena una tormenta. Una pequeña contrariedad se convierte en una crisis existencial sobre el estado de vuestra relación. Nunca sabes qué versión vas a encontrar ni por qué van a descarrilar las cosas. La imprevisibilidad emocional crónica no es un rasgo de carácter que aceptar en silencio, es una señal de que algo no va bien en la dinámica.</p>`,
+          id: 'las-crisis-son-desproporcionadas',
+          title: "4. Las crisis son desproporcionadas",
+          content: `<p>Un comentario inofensivo desata una tormenta. Un retraso de veinte minutos se convierte en un cuestionamiento de toda la relación. Nunca sabes qué versión te vas a encontrar, ni por qué se va a descarrilar. Todo el mundo tiene días malos. Lo que cuenta es la frecuencia: cuando caminas con pies de plomo todas las semanas, ya no es un rasgo de carácter, es la relación girando alrededor de sus explosiones.</p>`,
         },
       ],
     },
     {
-      id: 'red-flags-de-comportamiento',
-      title: "Las red flags de comportamiento",
-      content: `<p>Estos se ven mejor con perspectiva. En el momento, cada comportamiento por separado parece manejable. Es la acumulación y la repetición lo que crea el problema.</p>`,
+      id: 'lo-que-hace-sin-mas',
+      title: "Lo que hace, sin más",
+      content: `<p>Estas se ven mejor con un poco de distancia. En el momento, cada comportamiento por separado parece manejable. Es la acumulación lo que crea el problema.</p>`,
       subsections: [
         {
-          id: 'conflictos-mismo-sitio',
-          title: "Los conflictos siempre acaban en el mismo sitio",
-          content: `<p>Sea cual sea el punto de partida, acabas sistemáticamente justificándote, disculpándote o consolando. La discusión sobre los platos se convierte en una pregunta sobre tu forma de querer. La conversación sobre las vacaciones termina con tus supuestas "prioridades mal puestas". <strong>Cuando cada desacuerdo termina con la culpa en tu lado, no es casualidad.</strong> Es un patrón. Si quieres profundizar, el artículo sobre las <a href="/es/blog/cosas-no-aceptar-pareja/">cosas que no debes aceptar en pareja</a> lista comportamientos concretos que merecen ser reconocidos por lo que son.</p>`,
+          id: 'las-discusiones-siempre-son-culpa-tuya',
+          title: "5. Las discusiones siempre acaban siendo culpa tuya",
+          content: `<p>Da igual el tema de partida, acabas justificándote, pidiendo perdón o consolándola. La discusión por los platos se convierte en un juicio sobre tu forma de querer, la conversación sobre las vacaciones termina en tus «prioridades». Cuando cada desacuerdo acaba contigo en el papel del culpable, no es casualidad, y <a href="/es/blog/cosas-no-aceptar-pareja/">pedir perdón cada vez sin saber por qué</a> no es algo que haya que aguantar mucho tiempo.</p>`,
         },
         {
-          id: 'celos-mas-alla',
-          title: "Los celos van más allá de lo razonable",
-          content: `<p>Un poco de celos, todos lo conocemos, es normal. De lo que hablamos aquí es otra cosa: controlar con quién quedas, leer tus mensajes, montar una escena porque respondiste a un comentario en redes, interrogarte por cada salida como si fueras sospechoso por defecto. Los celos a ese nivel no vienen del amor, vienen de una necesidad de control. Y esa necesidad de control, con el tiempo, se expande. Nunca se queda limitada al ámbito donde empezó.</p>`,
+          id: 'sus-celos-se-pasan',
+          title: "6. Sus celos pasan de lo razonable",
+          content: `<p>Un poco de celos, todo el mundo los conoce. Aquí hablamos de otra cosa: controla a quién ves, lee tus mensajes, monta una escena porque has respondido a un comentario, te interroga sobre cada salida como si fueras sospechoso por defecto. <a href="/es/blog/celos-patologicos/">Los celos a ese nivel</a> no vienen del amor, vienen de una necesidad de control. Y la necesidad de control, con el tiempo, se extiende: nunca se queda donde empezó.</p>`,
         },
         {
-          id: 'ex-monstruos',
-          title: "Habla de todos sus ex como si fueran monstruos",
-          content: `<p>En su relato, cada ex era tóxico, mentiroso, cobarde o inestable. Nunca ha dejado a nadie sin razón grave, nunca ha tenido su parte de responsabilidad en una ruptura, nunca ha cometido un error en una relación. Estadísticamente improbable. Alguien que no se reconoce ninguna culpa en sus historias pasadas no va a comportarse de forma diferente contigo. No es un juicio, es una observación sobre cómo funciona el cambio: requiere reconocer algo primero.</p>`,
+          id: 'todos-sus-ex-eran-monstruos',
+          title: "7. Todos sus ex eran «monstruos»",
+          content: `<p>En su relato, cada ex era tóxico, mentiroso, cobarde o inestable. Ella nunca tuvo su parte en una ruptura, nunca cometió un error. Es poco probable. Alguien que no reconoce ninguna culpa en sus historias pasadas no va a empezar contigo, porque para cambiar, primero hay que reconocer algo.</p>`,
         },
         {
-          id: 'reglas-cambian',
-          title: "Las reglas cambian según el humor del día",
-          content: `<p>Ayer era aceptable, hoy ya no. Te había dicho que ver a tus amigos el viernes estaba bien, ahora es una prueba de que no le importas. Haces exactamente lo que te pidió la semana pasada, y ya no es suficiente. Esta inestabilidad de las reglas no es espontaneidad, es una forma de mantenerte en un estado de incertidumbre permanente donde nunca puedes "hacerlo bien".</p>`,
+          id: 'las-reglas-cambian',
+          title: "8. Las reglas cambian según el día",
+          content: `<p>Ayer, ver a tus amigos el viernes estaba bien. Hoy es la prueba de que ella no te importa. Haces exactamente lo que te pidió la semana pasada, y ahora ya no es suficiente. Eso no es espontaneidad, es una manera de mantenerte en la incertidumbre, donde nunca puedes «hacerlo bien».</p>`,
         },
       ],
+      tip: "Algo que ayuda cuando dudas: apunta en el móvil, cada vez, lo que ha pasado y lo que has sentido, con la fecha. Releer la lista un mes después dice más que la memoria, que tiende a excusar.",
     },
     {
-      id: 'red-flags-dinamica-pareja',
-      title: "Las red flags en la dinámica de pareja",
-      content: `<p>Las más difíciles de ver porque se instalan progresivamente, de forma casi imperceptible. Te adaptas poco a poco, y es exactamente así como se vuelven invisibles.</p>`,
+      id: 'las-red-flags-mas-gordas',
+      title: "Las red flags más gordas en una mujer",
+      content: `<p>Las cuatro últimas son las más difíciles de ver, porque se instalan poco a poco. Uno se adapta a ellas sobre la marcha, y así es como se vuelven invisibles.</p>`,
       subsections: [
         {
-          id: 'necesidades-sin-cabida',
-          title: "Tus necesidades no tienen cabida",
-          content: `<p>Tienes hambre pero ella quiere terminar esta conversación. Estás cansado pero ella necesita hablar ahora. Quieres un fin de semana tranquilo pero sus ganas tienen prioridad. Por separado, cada uno de estos momentos parece un compromiso normal. Pero si haces balance con honestidad, si tus necesidades pasan sistemáticamente después de las suyas sin que eso sea nunca reconocido ni compensado, la relación funciona en un solo sentido. Una pareja funciona en los dos.</p>`,
+          id: 'tus-necesidades-van-despues',
+          title: "9. Tus necesidades siempre van después",
+          content: `<p>Tienes hambre, pero ella quiere terminar esta conversación. Estás reventado, pero ella necesita hablar ahora. Quieres un fin de semana tranquilo, pero sus ganas mandan. Uno por uno, esos momentos parecen compromisos normales. Pero si haces la cuenta con honestidad y tus necesidades siempre van después de las suyas, sin que nunca se reconozca, la relación funciona en un solo sentido.</p>`,
         },
         {
-          id: 'aleja-de-cercanos',
-          title: "Te aleja progresivamente de tus personas cercanas",
-          content: `<p>Empieza con comentarios sobre tus amigos, "te influyen mal" o "no te respetan de verdad". Luego tensión cada vez que pasas tiempo sin ella. Luego una culpa silenciosa que hace que prefieras cancelar antes que gestionar las consecuencias a la vuelta. Unos meses después: ves menos a las personas que te importaban, y ella se ha convertido en tu principal punto de anclaje social. El aislamiento en una relación casi nunca parece aislamiento al principio. Parece amor.</p>`,
+          id: 'te-aleja-de-tu-gente',
+          title: "10. Te aleja de tu gente",
+          content: `<p>Empieza con comentarios sobre tus amigos, «te influyen mal», «no te respetan». Luego tensiones cada vez que sales sin ella. Luego una culpa silenciosa que hace que prefieras cancelar antes que gestionar las consecuencias al volver. Unos meses después ves menos a la gente que contaba, y ella se ha convertido casi en tu única compañía. Es la red flag más gorda de la lista, porque así es como empieza <a href="/es/test-manipulacion-psicologica-pareja/">la manipulación psicológica</a>: primero aislar, el resto viene después.</p>`,
         },
         {
-          id: 'culpable-por-existir',
-          title: "Te sientes culpable por existir fuera de ella",
-          content: `<p>Tomar tiempo para ti se ha vuelto complicado. Un hobby, amigos, un trabajo que te interesa, una pasión, incluso un momento de soledad en casa, todo eso genera una tensión que hay que gestionar. Empiezas a preguntarte si tienes derecho a tener una vida fuera de la relación. No tienes que justificarte por existir. Si es una pregunta que te haces con regularidad, algo no va bien. El artículo sobre las <a href="/es/blog/red-flags-en-un-hombre/">red flags en un hombre</a> describe exactamente este mismo mecanismo desde el otro lado, y ver las dos perspectivas suele ayudar a ver con más claridad.</p>`,
+          id: 'culpable-de-tener-una-vida',
+          title: "11. Te sientes culpable por tener una vida fuera de ella",
+          content: `<p>Un hobby, amigos, un trabajo que te interesa, incluso una noche solo en casa: todo eso crea una tensión que hay que gestionar. Empiezas a preguntarte si tienes derecho a tener una vida fuera de la pareja. No tienes que justificarte por existir. Si es una pregunta que te haces a menudo, algo no va bien.</p>`,
         },
         {
-          id: 'peor-contigo-mismo',
-          title: "Te sientes peor contigo mismo desde que estáis juntos",
-          content: `<p>Este es quizás el indicador más revelador. Antes tenías una cierta confianza en ti. Sabías lo que valías, lo que querías, cómo funcionabas. Y ahora dudas de ti en cosas que no cuestionabas antes. Te disculpas más a menudo. Te justificas más. Te preguntas si eres "suficientemente bueno" para ella. Esa erosión de la autoestima no ocurre por accidente en una relación. Se construye, comentario a comentario, discusión a discusión, hasta que parece normal.</p>`,
+          id: 'te-sientes-peor-contigo-mismo',
+          title: "12. Te sientes peor contigo mismo desde que estáis juntos",
+          content: `<p>Puede que sea la señal más clara. Antes sabías lo que valías y lo que querías. Hoy dudas de ti en cosas que antes no te cuestionabas, pides perdón más a menudo, te preguntas si eres «suficiente» para ella. No sale de la nada: un comentario tras otro, la relación ha ido royendo tu confianza. Y cuando encima acabas dudando de lo que has visto u oído, eso tiene nombre: <a href="/es/blog/gaslighting-senales/">gaslighting</a>.</p>`,
         },
       ],
     },
     {
       id: 'y-ahora-que',
-      title: "Algunas reflexiones sobre esta lista, y después qué",
-      content: `<p>Reconocer varios de estos comportamientos en alguien no la convierte automáticamente en mala persona. Algunos de estos patrones vienen de heridas antiguas, de mecanismos de defensa construidos antes de ti, de cosas que se trabajan con tiempo y voluntad real. <strong>Lo que distingue una red flag de una dificultad pasajera es la repetición y la ausencia de autocuestionamiento.</strong></p>
-<p>¿Reconoce el problema cuando lo planteas con calma? ¿Las cosas cambian, aunque sea poco, o vives en la espera permanente de un cambio que no llega? ¿Te sientes mejor o peor contigo mismo que antes de que empezara la relación?</p>
-<p>Si tienes varias casillas marcadas y las respuestas honestas a esas preguntas te pesan, confía en lo que sientes. El malestar que cargas merece ser tomado en serio.</p>
+      title: "Has reconocido varias: ¿y ahora qué?",
+      content: `<p>Primero, reconocer dos o tres de estos comportamientos no la convierte en una mala persona. Algunos vienen de heridas antiguas, de reflejos construidos antes de ti, de cosas que se trabajan con tiempo. Lo que hace una red flag es la repetición, y sobre todo lo que hace ella cuando se lo dices con calma. ¿Reconoce el problema? ¿Cambian las cosas, aunque sea un poco, o estás esperando un cambio que nunca llega? ¿Te sientes mejor o peor que antes de esta relación?</p>
+<p>Si hay varias casillas marcadas y las respuestas honestas a esas preguntas te pesan, fíate de lo que sientes. Para verlo más claro, puedes <a href="/es/test-relacion-toxica/">responder a veinte preguntas sobre vuestra relación</a>: ayuda a poner palabras, y a medir si estamos en lo desagradable o en lo tóxico. Y si lo que has reconocido son sobre todo las últimas señales de la lista, el artículo sobre <a href="/es/blog/mujer-toxica-en-el-amor/">lo que una mujer tóxica te hace vivir a diario</a> cuenta cómo evoluciona, y cómo se sale de ahí.</p>
 <a href="/es/blog/red-flags-en-un-hombre/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lee también</span><span class="blog-read-also-title">Red flags en un hombre: la lista de las 13 señales que hay que tomarse en serio</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
