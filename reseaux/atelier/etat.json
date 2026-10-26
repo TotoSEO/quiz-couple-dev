@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-26T11:54:05.085Z",
+  "genere_le": "2026-10-26T17:34:04.551Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -9,433 +9,27 @@
   "aujourdhui": "2026-10-26",
   "melange": {
     "midi": {
-      "1": "connais-tu",
-      "2": "tu-preferes",
-      "3": "connais-tu",
-      "4": "tu-preferes",
-      "5": "connais-tu",
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
       "6": "tu-preferes",
-      "7": "tu-preferes"
+      "7": null
     },
     "soir": {
       "1": "tu-preferes",
-      "2": "bd",
+      "2": "connais-tu",
       "3": "tu-preferes",
-      "4": "carrousel",
-      "5": "tu-preferes",
-      "6": "dix-mais",
-      "7": "phrase"
+      "4": "tu-preferes",
+      "5": "connais-tu",
+      "6": "baton",
+      "7": "tu-preferes"
     },
-    "matin": "baton"
+    "matin": null
   },
-  "reserve_jours": 56,
-  "a_remplir": [
-    {
-      "jour": "2026-12-21",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-22",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-23",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-26",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-27",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-28",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-29",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2026-12-30",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-02",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-03",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-04",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-05",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-06",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-07",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-08",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-09",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-10",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-11",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-12",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-13",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-14",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-15",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-15",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-15",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-16",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-16",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-16",
-      "creneau": "soir",
-      "categorie": "dix-mais"
-    },
-    {
-      "jour": "2027-01-17",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-17",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-17",
-      "creneau": "soir",
-      "categorie": "phrase"
-    },
-    {
-      "jour": "2027-01-18",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-18",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-18",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-19",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-19",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-19",
-      "creneau": "soir",
-      "categorie": "bd"
-    },
-    {
-      "jour": "2027-01-20",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-20",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-20",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-21",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-21",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-21",
-      "creneau": "soir",
-      "categorie": "carrousel"
-    },
-    {
-      "jour": "2027-01-22",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-22",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-22",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-23",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-23",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-23",
-      "creneau": "soir",
-      "categorie": "dix-mais"
-    },
-    {
-      "jour": "2027-01-24",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-24",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-24",
-      "creneau": "soir",
-      "categorie": "phrase"
-    },
-    {
-      "jour": "2027-01-25",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-25",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-25",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-26",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-26",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-26",
-      "creneau": "soir",
-      "categorie": "bd"
-    },
-    {
-      "jour": "2027-01-27",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-27",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-27",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-28",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-28",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-28",
-      "creneau": "soir",
-      "categorie": "carrousel"
-    },
-    {
-      "jour": "2027-01-29",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-29",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-01-29",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-30",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-30",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-30",
-      "creneau": "soir",
-      "categorie": "dix-mais"
-    },
-    {
-      "jour": "2027-01-31",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-01-31",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-01-31",
-      "creneau": "soir",
-      "categorie": "phrase"
-    },
-    {
-      "jour": "2027-02-01",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-02-01",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-02-01",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-02-02",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-02-02",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2027-02-02",
-      "creneau": "soir",
-      "categorie": "bd"
-    },
-    {
-      "jour": "2027-02-03",
-      "creneau": "matin",
-      "categorie": "baton"
-    },
-    {
-      "jour": "2027-02-03",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2027-02-03",
-      "creneau": "soir",
-      "categorie": "tu-preferes"
-    }
-  ],
+  "reserve_jours": 157,
+  "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
   "refuses": [],
@@ -967,7 +561,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -992,10 +586,10 @@
     {
       "jour": "2026-10-27",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "rendu",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1012,12 +606,39 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
       "jour": "2026-10-28",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "matin",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -1026,33 +647,6 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-29",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
-      "statut": "a_rendre",
-      "texte": "8 questions about what's next for us",
-      "erreur": null
-    },
-    {
       "jour": "2026-10-30",
       "creneau": "matin",
       "gabarit": "baton",
@@ -1073,10 +667,10 @@
     {
       "jour": "2026-10-30",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1091,73 +685,73 @@
     {
       "jour": "2026-10-31",
       "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "matin",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "matin",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: at home?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
-      "statut": "a_rendre",
-      "texte": "Food edition. Is he still a 10?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
-      "statut": "a_rendre",
-      "texte": "I still smile when I see your name on my phone.",
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "matin",
-      "gabarit": "baton",
-      "categorie": "baton",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
-      "erreur": null
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1181,10 +775,10 @@
     {
       "jour": "2026-11-03",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1235,10 +829,10 @@
     {
       "jour": "2026-11-05",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 questions about little you",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1262,10 +856,10 @@
     {
       "jour": "2026-11-06",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1283,16 +877,16 @@
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "Would you rather: this or that?",
+      "texte": "Would you rather: gifts?",
       "erreur": null
     },
     {
       "jour": "2026-11-07",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Phone edition. Is she still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1316,10 +910,10 @@
     {
       "jour": "2026-11-08",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "You're my favorite part of every day, even the hard ones.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1370,10 +964,10 @@
     {
       "jour": "2026-11-10",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1424,10 +1018,10 @@
     {
       "jour": "2026-11-12",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 favorites to guess about each other",
+      "texte": "Would you rather: this or that?",
       "erreur": null
     },
     {
@@ -1451,10 +1045,10 @@
     {
       "jour": "2026-11-13",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1472,16 +1066,16 @@
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "Would you rather: A or B?",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
       "jour": "2026-11-14",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Date night edition. Is he still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1505,10 +1099,10 @@
     {
       "jour": "2026-11-15",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "I love you even when you steal all the blanket.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1535,7 +1129,7 @@
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "Would you rather: tell the truth?",
       "erreur": null
     },
     {
@@ -1559,10 +1153,10 @@
     {
       "jour": "2026-11-17",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1613,10 +1207,10 @@
     {
       "jour": "2026-11-19",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 dilemmas to settle tonight",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1640,10 +1234,10 @@
     {
       "jour": "2026-11-20",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1667,10 +1261,10 @@
     {
       "jour": "2026-11-21",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Moving in edition. Is she still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1694,10 +1288,10 @@
     {
       "jour": "2026-11-22",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "You're the first thing I want to tell good news to.",
+      "texte": "Would you rather: A or B?",
       "erreur": null
     },
     {
@@ -1748,10 +1342,10 @@
     {
       "jour": "2026-11-24",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1802,10 +1396,10 @@
     {
       "jour": "2026-11-26",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 confessions, couple edition",
+      "texte": "Would you rather: pets?",
       "erreur": null
     },
     {
@@ -1829,10 +1423,10 @@
     {
       "jour": "2026-11-27",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1856,10 +1450,10 @@
     {
       "jour": "2026-11-28",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Gamer edition. Is he still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1883,10 +1477,10 @@
     {
       "jour": "2026-11-29",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "You're the only person I'd share my fries with.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -1937,10 +1531,10 @@
     {
       "jour": "2026-12-01",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1991,10 +1585,10 @@
     {
       "jour": "2026-12-03",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 memories for a quiet night",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2018,10 +1612,10 @@
     {
       "jour": "2026-12-04",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2045,10 +1639,10 @@
     {
       "jour": "2026-12-05",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Friend group edition. Is she still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2072,10 +1666,10 @@
     {
       "jour": "2026-12-06",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "You've seen me at my worst and you still make me coffee.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2126,10 +1720,10 @@
     {
       "jour": "2026-12-08",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2180,10 +1774,10 @@
     {
       "jour": "2026-12-10",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 questions on how we feel loved",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2207,10 +1801,10 @@
     {
       "jour": "2026-12-11",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2234,10 +1828,10 @@
     {
       "jour": "2026-12-12",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Family edition. Is he still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2261,10 +1855,10 @@
     {
       "jour": "2026-12-13",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "I love that you laugh at my jokes before I finish them.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2315,10 +1909,10 @@
     {
       "jour": "2026-12-15",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2369,10 +1963,10 @@
     {
       "jour": "2026-12-17",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 silly questions, zero logic",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2396,10 +1990,10 @@
     {
       "jour": "2026-12-18",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2423,10 +2017,10 @@
     {
       "jour": "2026-12-19",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Vacation edition. Is she still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2450,10 +2044,10 @@
     {
       "jour": "2026-12-20",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "I sleep better when you're on your side of the bed.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2486,10 +2080,10 @@
     {
       "jour": "2026-12-22",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2531,10 +2125,10 @@
     {
       "jour": "2026-12-24",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "8 questions for Christmas Eve",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2558,10 +2152,10 @@
     {
       "jour": "2026-12-25",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2576,10 +2170,10 @@
     {
       "jour": "2026-12-26",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Christmas edition. Is he still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2594,10 +2188,10 @@
     {
       "jour": "2026-12-27",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "This year, my favorite gift was you, again.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2630,10 +2224,10 @@
     {
       "jour": "2026-12-29",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2675,10 +2269,10 @@
     {
       "jour": "2026-12-31",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "8 questions before midnight",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2702,28 +2296,28 @@
     {
       "jour": "2027-01-01",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": null,
       "erreur": null
     },
     {
       "jour": "2027-01-02",
       "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
       "jour": "2027-01-02",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
-      "texte": "New Year edition. Is she still a 10?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -2738,10 +2332,10 @@
     {
       "jour": "2027-01-03",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "Wherever the new year takes us, I want to go there with you.",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2774,10 +2368,10 @@
     {
       "jour": "2027-01-05",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2810,10 +2404,10 @@
     {
       "jour": "2027-01-07",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 questions for when you're apart",
+      "texte": "Would you rather: couple edition",
       "erreur": null
     },
     {
@@ -2828,51 +2422,6 @@
     {
       "jour": "2027-01-08",
       "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-09",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-09",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "dix-mais",
-      "statut": "a_rendre",
-      "texte": "Money edition. Is he still a 10?",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-10",
-      "creneau": "midi",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-10",
-      "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
-      "statut": "a_rendre",
-      "texte": "If I had to pick again, I'd pick you. Faster this time.",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-11",
-      "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
       "statut": "a_rendre",
@@ -2880,16 +2429,7 @@
       "erreur": null
     },
     {
-      "jour": "2027-01-11",
-      "creneau": "soir",
-      "gabarit": "tu-preferes",
-      "categorie": "tu-preferes",
-      "statut": "a_rendre",
-      "texte": "Would you rather: couple edition",
-      "erreur": null
-    },
-    {
-      "jour": "2027-01-12",
+      "jour": "2027-01-09",
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
@@ -2898,12 +2438,66 @@
       "erreur": null
     },
     {
-      "jour": "2027-01-12",
+      "jour": "2027-01-09",
       "creneau": "soir",
-      "gabarit": "bd",
-      "categorie": "bd",
+      "gabarit": "baton",
+      "categorie": "baton",
       "statut": "a_rendre",
       "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -2936,42 +2530,1110 @@
     {
       "jour": "2027-01-14",
       "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
       "statut": "a_rendre",
-      "texte": "8 questions about the life we want",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-17",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-19",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-21",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-23",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-23",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-28",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-29",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-30",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-31",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-01",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-02",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-04",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-05",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-06",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-06",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-07",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-08",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-09",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-10",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-11",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-12",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-13",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-13",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-14",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-15",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-16",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-17",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-18",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-19",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-20",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: couple edition",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-20",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-21",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-22",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-23",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-24",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-25",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-26",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-27",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-27",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-02-28",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-01",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-02",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-03",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-04",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-05",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-06",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-06",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-07",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-08",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-09",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-10",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-11",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-12",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-13",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-13",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-14",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-15",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-16",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-17",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-18",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-19",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "Who's more likely to...?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-20",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-20",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-21",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-22",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-23",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-24",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-25",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-26",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-27",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-27",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-28",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-29",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-30",
+      "creneau": "soir",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-03-31",
+      "creneau": "soir",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2027-04-03",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-04-10",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-04-17",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-04-24",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-05-01",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-05-08",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-05-15",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-05-22",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-05-29",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-06-05",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-06-12",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-06-19",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-06-26",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-07-03",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-07-10",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-07-17",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-07-24",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-07-31",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-08-07",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-08-14",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-08-21",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-08-28",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-09-04",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-09-11",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-09-18",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-09-25",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-10-02",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-10-09",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-10-16",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-10-23",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-10-30",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-11-06",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2027-11-13",
+      "creneau": "soir",
+      "gabarit": "baton",
+      "categorie": "baton",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     }
   ],
   "idees": [],
   "prochain_creneau": {
     "connais-tu": {
-      "jour": "2026-10-28",
-      "creneau": "midi"
+      "jour": "2026-10-27",
+      "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-10-26",
+      "jour": "2026-10-28",
       "creneau": "soir"
     },
-    "phrase": {
-      "jour": "2026-11-01",
-      "creneau": "soir"
-    },
-    "carrousel": {
-      "jour": "2026-10-29",
-      "creneau": "soir"
-    },
-    "bd": {
-      "jour": "2026-10-27",
-      "creneau": "soir"
-    },
-    "dix-mais": {
+    "phrase": null,
+    "carrousel": null,
+    "bd": null,
+    "dix-mais": null,
+    "baton": {
       "jour": "2026-10-31",
       "creneau": "soir"
-    },
-    "baton": {
-      "jour": "2026-10-27",
-      "creneau": "matin"
     }
   },
   "statistiques_j7": [
@@ -3622,19 +4284,37 @@
       "jour": "2026-10-19",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "2ceca71e-5aca-4fdb-87ad-bd8d088b4a2f",
+      "releve": "j7",
+      "vues": 74587,
+      "portee": 58701,
+      "likes": 1131,
+      "commentaires": 1,
+      "partages": 2778,
+      "enregistrements": 1211,
+      "releve_le": "2026-10-26T17:21:43.29124+00:00",
+      "publie_le": "2026-10-19T14:20:09.795+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-19",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 4,
-      "vues_mediane": 1462,
-      "vues_moyenne": 13830,
-      "vues_max": 52186,
-      "partages": 1536,
-      "enregistrements": 577,
-      "likes": 420,
-      "commentaires": 1
+      "posts": 5,
+      "vues_mediane": 2502,
+      "vues_moyenne": 25981,
+      "vues_max": 74587,
+      "partages": 4314,
+      "enregistrements": 1788,
+      "likes": 1551,
+      "commentaires": 2
     },
     {
       "categorie": "baton",
