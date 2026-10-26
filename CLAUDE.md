@@ -947,6 +947,34 @@ Exemples réels, tous validés :
 | « dès les premiers mois de vie commune » | test emménager ensemble |
 | « deux adultes qui vivent ensemble » | test couple sain |
 | « y penser avant que ce soit fait » | test charge mentale |
+| « les hommes ont des red flags » (dans « …, les hommes ont des red flags différents de ceux des femmes, car… ») | article red flags chez un homme |
+
+Le dernier est l'exemple de Thomas (26 octobre 2026, après le test red flag :
+« tu fais jamais ça ! ») : un bout de la phrase, souvent un groupe nominal
+court, qui dit de quoi parle la cible. Ce jour-là, 487 ancres ont été
+réécrites dans les cinq langues (relevé de tous les liens du texte des pages
+construites, avec les signaux TITRE, NOM, VERBE, PROMO, LONGUE, GENERIQUE ;
+outil dans le scratchpad de la session, à refaire au besoin : extraire les
+`<a>` des `<article>` de `dist/`, comparer l'ancre au title et au H1 de la
+cible). Les formes qui ne passent pas, toutes rencontrées sur le site :
+
+- **le nom de la page cible** collé dans la phrase : « test de couple »,
+  « quiz coquin », « test de confiance », « le quiz du super-vilain qui te
+  ressemble », « la page de nos quiz spéciaux », « nos jeux de couple » ;
+- **« notre test de X »**, « notre quiz « … » » ;
+- **la clause inventée pour vanter la cible** : « questionnaire qui pèse
+  chaque signe selon sa gravité », « vingt questions sur votre quotidien »,
+  « on a de quoi vérifier si vous êtes prêts », « un test qui mesure cet
+  accord-là » ;
+- **« savoir si… »**, « découvrir… », « faire le point sur… » : une action
+  inventée pour accrocher le lien en fin de phrase ;
+- **le mot seul** : « jalousie », « trahison », « efforts », « amoureux ».
+
+Et ce qui passe, parce que la phrase existait déjà : « les signes qu'un couple
+touche à sa fin », « le mot divorce est déjà posé sur la table », « ce qui
+fait qu'une relation est saine », « une jalousie sans élément concret », « les
+questions qu'on n'ose pas trop se poser », « à quel point vos valeurs et vos
+caractères s'accordent ».
 
 ### À vérifier avant de dire que c'est fait
 
