@@ -778,5 +778,10 @@
     "introQuestion": "Prima di cominciare:",
     "introQuote": "Rispondi sulla persona così com'è oggi, non su quella che speri diventi.",
     "disclaimer": "Questo test non decide al posto tuo. Mette le tue risposte una accanto all'altra, ed è spesso lì che si vede quello che si sapeva già. Le tue risposte non vengono salvate."
+  },
+  "red-flag": {
+    "introQuestion": "Prima di cominciare:",
+    "introQuote": "Rispondi su quello che questa persona fa, non su quello che dice che farà.",
+    "disclaimer": "Questo test non appiccica etichette a nessuno. Conta dei comportamenti, e dà più peso a quelli che contano: la paura, il controllo, il no che non viene ascoltato. Le tue risposte non vengono salvate."
   }
 }

@@ -779,5 +779,10 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez sur la personne telle qu'elle est aujourd'hui, pas sur celle que vous espérez qu'elle devienne.",
     "disclaimer": "Ce test ne décide pas à votre place. Il met vos réponses côte à côte, et c'est souvent là qu'on voit ce qu'on savait déjà. Vos réponses ne sont pas enregistrées."
+  },
+  "red-flag": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur ce que cette personne fait, pas sur ce qu'elle dit qu'elle fera.",
+    "disclaimer": "Ce test ne colle une étiquette sur personne. Il compte des comportements, et il pèse plus lourd ceux qui comptent : la peur, le contrôle, le non qu'on n'entend pas. Vos réponses ne sont pas enregistrées."
   }
 }
