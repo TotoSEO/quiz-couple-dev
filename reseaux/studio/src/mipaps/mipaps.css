@@ -81,8 +81,11 @@
   text-wrap: balance;
 }
 .mp-message.is-haut { top: 140px; }
-/* en bas : sous le sol de la scène (1340), une seule ligne tient entre le sol et la bande d'Instagram */
-.mp-message.is-bas { bottom: 0; font-size: 60px; line-height: 1.15; }
+/* en bas : sous le sol de la scène (1340), une seule ligne tient entre le sol et la bande d'Instagram ;
+   posée 56 px au-dessus du bas de la zone, comme la colonne des autres formats, pour ne jamais
+   recouvrir la signature « les mipaps » (34 px, calée en bas à droite sur la même ligne) :
+   « juste 5 min sur le canapé » passait dessus (26 octobre 2026) */
+.mp-message.is-bas { bottom: 56px; font-size: 60px; line-height: 1.15; }
 .mp-message.is-bas.is-grand, .mp-message.is-bas.is-petit, .mp-message.is-bas.is-titre { font-size: 60px; }
 .mp-message.is-titre { font-size: 80px; line-height: 1.1; }
 .mp-message.is-grand { font-size: 80px; line-height: 1.1; }

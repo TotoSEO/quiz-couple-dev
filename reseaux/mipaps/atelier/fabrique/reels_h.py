@@ -184,10 +184,10 @@ reel('ani-366', 'les deux', 'nous deux sur le canapé-lit chez des amis', lieu='
          meubles=['canape_fond'], objets=[O('lune', 560, 90, 0.5), O('coeur', 320, 130, 0.35, de=2.0, flotte=True)], textes=[BAS('3 h du matin')]),
 ])
 
-reel('ani-367', 'les deux', 'nous deux quand on essaie de parler sérieusement', lieu='canapé', plans=[
+reel('ani-367', 'les deux', "nous deux quand on essaie d'avoir une discussion sérieuse", lieu='canapé', plans=[
     plan(4, "Le canapé ; les deux assis bien droits, face à face, très sérieux ; en haut s'écrit « bon. on parle. » ; lui prend une grande inspiration ; elle hoche la tête, grave.",
          [SUR_CANAPE('lui', 260, expression='determine', vers=1), SUR_CANAPE('elle', 380, expression='determine', vers=-1)],
-         meubles=['canape_fond'], textes=[TITRE('nous deux quand on essaie de parler sérieusement', a=1.6), DIT('« bon, on parle »', de=1.8)]),
+         meubles=['canape_fond'], textes=[TITRE("nous deux quand on essaie d'avoir une discussion sérieuse", a=1.6), DIT('« bon, on parle »', de=1.8)]),
     plan(4, "Il commence, sérieux ; elle le regarde ; sa bouche à elle tremble ; elle pouffe ; il fronce les sourcils ; elle se retient, les pattes sur la bouche ; il craque à son tour.",
          [perso('lui', E(0, x=260, y=318, taille=210, pose='assis', expression='determine', bras='tend_d'), E(1.6, expression='agace'), E(3.0, expression='rire')),
           perso('elle', E(0, x=380, y=318, taille=210, pose='assis', expression='determine'), E(0.8, expression='hesite'), E(1.4, expression='rire', bras='bouche'), E(2.4, expression='mort_de_rire', pose='assis'))],

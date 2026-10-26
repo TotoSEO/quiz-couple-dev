@@ -10,11 +10,11 @@ def SUR_CANAPE(nom, x, **k):
     return fixe(nom, x, **d)
 
 
-reel('ani-331', 'les deux', "nous deux au changement d'heure", lieu='matin', plans=[
+reel('ani-331', 'les deux', "nous deux quand on change d'heure", lieu='matin', plans=[
     plan(4, "Le matin, le lit ; les deux se réveillent, regardent l'horloge au mur, puis le téléphone : pas la même heure ; ils se regardent, confus, deux points d'interrogation.",
          [perso('lui', E(0, x=248, y=346, taille=200, pose='allonge', expression='dodo'), E(0.8, pose='debout', bras='aucun', pattes='aucune', expression='content'), E(2.0, expression='confus', signes=['question'])),
           perso('elle', E(0, x=394, y=346, taille=200, pose='allonge', expression='dodo'), E(1.0, pose='debout', bras='aucun', pattes='aucune', expression='content'), E(2.2, expression='confus', signes=['question']))],
-         meubles=['lit_fond'], objets=[O('horloge', 545, 85, 0.7), O('telephone', 248, 290, 0.5, de=0.8)], textes=[TITRE("nous deux au changement d'heure")]),
+         meubles=['lit_fond'], objets=[O('horloge', 545, 85, 0.7), O('telephone', 248, 290, 0.5, de=0.8)], textes=[TITRE("nous deux quand on change d'heure")]),
     plan(4, "En haut s'écrit « on a gagné ou perdu une heure ? » ; lui compte sur ses pattes, concentré ; elle compte dans l'autre sens ; ils arrivent à deux réponses différentes et se disputent.",
          [perso('lui', AU_LIT(248, expression='concentre', signes=['points']), E(1.6, bras='pointe', expression='determine'), E(2.8, expression='colere')),
           perso('elle', AU_LIT(394, expression='pensif', signes=['points']), E(1.8, bras='pointe', expression='determine', vers=-1), E(2.8, expression='colere'))],
@@ -87,7 +87,7 @@ reel('ani-335', 'lui', 'toi quand ta personne préfère le chat', lieu='maison',
 
 reel('ani-336', 'lui', 'toi quand ta personne veut un bisou dans la rue', lieu='dehors', plans=[
     plan(4, "Dehors, un banc, un arbre ; les deux marchent ; elle s'arrête, se tourne vers lui, la bouche en cœur ; il regarde à gauche, à droite, gêné, les joues rouges.",
-         [perso('elle', E(0, x=-140, angle=90, pose='marche', expression='content'), E(1.6, x=380, pose='debout'), E(2.0, angle=0, expression='bisou', pose='penche_g')),
+         [perso('elle', E(0.3, x=-140, angle=90, pose='marche', expression='content'), E(1.6, x=380, pose='debout'), E(2.0, angle=0, expression='bisou', pose='penche_g')),
           perso('lui', E(0, x=-260, angle=90, pose='marche', expression='content'), E(1.6, x=260, pose='debout'), E(2.0, angle=0, expression='gene', signes=['rougeur_pleine']), E(2.6, vers=-1), E(3.2, vers=1))],
          objets=[O('banc', 560, 335, 1.2, derriere=True), O('arbre', 515, 255, 1.3, derriere=True)], textes=[TITRE('toi quand ta personne veut un bisou dans la rue')], ambiance='circulation'),
     plan(4, "Elle attend, la bouche en cœur, les yeux fermés ; il hésite, des sueurs, regarde encore autour ; personne ; il se penche très vite et pose un bisou éclair ; puis se redresse, tout raide.",

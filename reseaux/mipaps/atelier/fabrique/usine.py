@@ -288,7 +288,12 @@ if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     for nom in sorted(n[:-3] for n in os.listdir(os.path.dirname(os.path.abspath(__file__))) if re.match(r'reels_\w+\.py$', n)):
         importlib.import_module(nom)
-    banque = '/home/user/quiz-couple-dev/reseaux/mipaps/atelier/sujets.json'
+    # la banque de l'atelier, à côté du dossier de la fabrique (reseaux/mipaps/atelier/sujets.json)
+    banque = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'sujets.json')
+    if not os.path.exists(banque):
+        banque = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', '..', 'reseaux', 'mipaps', 'atelier', 'sujets.json')
+    if not os.path.exists(banque):
+        banque = '/home/user/quiz-couple-dev/reseaux/mipaps/atelier/sujets.json'
     # les modules de reels importent « usine » : la liste REELS qu'ils remplissent est celle de ce module-là, pas celle de __main__
     import usine as U
     U.fabriquer(dossier, banque=banque, ecrire_banque='--banque' in sys.argv)

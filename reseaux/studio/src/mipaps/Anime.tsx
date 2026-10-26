@@ -70,7 +70,7 @@ export const MipapsAnime: React.FC<{ recette: RecetteMipapsReel; plan: Plan; ver
           </p>
         ))}
       </div>
-      <span className="mp-signature is-reel" data-verif="signature">
+      <span className="mp-signature is-reel" data-verif="signature" data-sans-chevauchement>
         {MARQUE}
       </span>
     </Canevas>
