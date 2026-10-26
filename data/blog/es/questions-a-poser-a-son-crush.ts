@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'preguntas-para-tu-crush',
-  title: "100 preguntas para hacerle a tu crush",
-  metaTitle: "100 preguntas para tu crush | Quiz Couple",
+  title: `100 preguntas para tu crush, por mensaje o en persona`,
+  metaTitle: `100 preguntas para tu crush, por mensaje o en persona`,
   metaDescription: "¿Harta de conversaciones que se apagan? 100 preguntas para hacerle a tu crush, ordenadas por situación: por mensaje, para reír, para flirtear, para ver si encajáis.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Persona joven sonriendo al móvil mientras escribe un mensaje a su crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Lo difícil con un crush es encontrar la pregunta que reaviva la conversación en el momento justo. Aquí tienes 100, ordenadas por situación.",
   introduction: `<p>Conoces ese momento. La conversación da vueltas, se encadenan los «bien, ¿y tú?», y notas que si nadie saca otra cosa, esto va a morir educadamente en un «buenas noches, entonces». Con un crush, cada intercambio cuenta doble. Así que, tarde o temprano, todos acabamos mirando el móvil sin saber qué enviar.</p>

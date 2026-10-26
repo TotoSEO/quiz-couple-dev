@@ -4,11 +4,12 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-son-copain',
   title: "100 questions à poser à son copain, des plus légères aux grandes conversations",
-  metaTitle: "100 questions à poser à son copain | Quiz Couple",
-  metaDescription: "Envie de creuser au-delà du « ça va ? » quotidien ? 100 questions à poser à ton copain, classées par moment et par profondeur, pour des vraies conversations.",
+  metaTitle: `100 questions à poser à son copain, par thème (+ 5 pièges)`,
+  metaDescription: `100 questions à poser à ton copain, par thème et par moment : pour le connaître, sur vous deux, drôles, sentiments, avenir, à distance, et 5 questions pièges.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Jeune couple assis face à face en pleine conversation, elle pose une question en souriant",
   publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Tu connais son plat préféré et son humeur du dimanche soir. Mais est-ce que tu sais ce qui lui fait vraiment peur, ou ce qu'il n'a jamais osé te demander ?",
   introduction: `<p>Vous pouvez passer une soirée entière ensemble et n'échanger que trois phrases utiles : « on mange quoi », « tu as pris les clés », « ça va, toi ? ». Rassure-toi, ce n'est pas un signe que votre couple va mal ! C'est juste ce qui arrive à tous les couples, en fait. Au bout d'un moment, la logistique finit par manger la conversation.</p>
@@ -195,6 +196,18 @@ const article: BlogArticleData = {
 <li>Si je débarquais chez toi dans une heure, tu changerais quoi à ta soirée ?</li>
 </ol>
 <p>À distance, le vrai risque n'est pas de manquer de sujets, c'est que tous les échanges finissent par se ressembler ; un <a href="/quiz-couple-distance/">quiz pensé pour les couples à distance</a>, chacun sur son écran, casse cette routine mieux qu'un troisième appel vidéo de suite.</p>`,
+    },
+    {
+      id: 'cinq-questions-pieges',
+      title: `Cinq questions pièges à poser à son copain (gentilles)`,
+      content: `<p>« Question piège », ici, ça ne veut pas dire le coincer. Ça veut dire une question dont la réponse en dit plus que les mots, parce qu'elle montre ce qu'il retient de toi. Cinq exemples, avec ce que la réponse raconte.</p>
+<ol>
+<li><strong>« Tu te souviens de ce qu'on a mangé à notre premier rendez-vous ? » :</strong> S'il s'en souvient, il garde les débuts précieusement. Sinon, demande-lui ce qu'il a retenu de la soirée à la place : c'est ça, le vrai souvenir.</li>
+<li><strong>« C'est quoi, mon film préféré ? » :</strong> Ça ne teste pas sa mémoire, ça teste son attention. Une réponse à côté n'est pas grave ; une réponse qui tombe juste fait plaisir pour la journée.</li>
+<li><strong>« Qu'est-ce qui te manquerait en premier si je partais un mois ? » :</strong> La réponse spontanée vaut de l'or. « Toi » est trop court : c'est la deuxième phrase qui compte.</li>
+<li><strong>« Qu'est-ce que je t'ai demandé la semaine dernière que tu n'as pas encore fait ? » :</strong> À poser en souriant. S'il trouve tout seul, il écoute plus qu'il n'en a l'air.</li>
+<li><strong>« Qu'est-ce que je dis que tu n'as jamais osé contredire ? » :</strong> La seule qui le fait parler de lui : la réponse te dit où il se retient, et c'est souvent là qu'une conversation utile commence.</li>
+</ol>`,
     },
     {
       id: 'et-apres',

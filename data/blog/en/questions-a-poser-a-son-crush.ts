@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-to-ask-your-crush',
-  title: "100 questions to ask your crush",
-  metaTitle: "100 Questions to Ask Your Crush | Quiz Couple",
+  title: `100 Questions to Ask Your Crush, by Text or in Person`,
+  metaTitle: `100 Questions to Ask Your Crush, by Text or in Person`,
   metaDescription: "Tired of conversations that fizzle out? 100 questions to ask your crush, sorted by situation: by message, to make them laugh, to flirt, to see if it fits.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Young person smiling at their phone while typing a message to their crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "The hard part with a crush is finding the question that revives the conversation at the right moment. Here are 100 of them, sorted by situation.",
   introduction: `<p>You know the moment. The conversation is going round in circles, the «good, you?» pile up, and you can feel that if nobody brings something else, it's going to die politely in a «have a good evening then». With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>

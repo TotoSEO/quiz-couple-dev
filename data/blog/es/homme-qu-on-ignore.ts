@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'que-siente-un-hombre-cuando-lo-ignoras',
-  title: "¿Qué siente un hombre cuando lo ignoras?",
-  metaTitle: "¿Qué siente un hombre cuando lo ignoras? | Quiz Couple",
-  metaDescription: "Lo que pasa por la cabeza de un hombre cuando dejas de contestarle, paso a paso, y por qué casi nunca da el resultado que esperas.",
+  title: "¿Qué siente un hombre cuando lo ignoras? Las 5 fases, una a una",
+  metaTitle: "¿Qué siente un hombre cuando lo ignoras? Las 5 fases",
+  metaDescription: "Lo que siente un hombre cuando lo ignoras, fase por fase: no se entera, duda, se irrita, te escribe y al final desconecta. Y si eso hace que vuelva.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Hombre sentado solo en un sofá por la noche, con el móvil apagado en las manos y la mirada perdida",
   publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Has dejado de contestar y te preguntas qué le hace eso. Pasan cosas bastante concretas, y en un orden bastante previsible.",
   introduction: `<p>Has dejado de contestar. Puede que después de una discusión, puede que porque él ya no hacía ningún esfuerzo, puede que porque alguien te dijo que era la mejor forma de que volviera. Y desde entonces te preguntas qué está pasando por su lado.</p>

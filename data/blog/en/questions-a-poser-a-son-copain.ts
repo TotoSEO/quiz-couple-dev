@@ -4,11 +4,12 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'questions-to-ask-your-boyfriend',
   title: "100 questions to ask your boyfriend, from light to the big conversations",
-  metaTitle: "100 Questions to Ask Your Boyfriend (Beyond \"How Was Your Day?\")",
-  metaDescription: "Want to get past the daily \"you alright?\" 100 questions to ask your boyfriend, sorted by moment and by depth, for conversations that actually go somewhere.",
+  metaTitle: `100 Questions to Ask Your Boyfriend, by Theme (+5 Tricky)`,
+  metaDescription: `100 questions to ask your boyfriend, by theme and by moment: to know him better, about the two of you, funny, feelings, future, distance, and 5 trick questions.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Young couple sitting face to face deep in conversation, she asks a question and smiles",
   publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "You know his favourite meal and his Sunday evening mood. But do you know what genuinely scares him, or what he's never dared ask you?",
   introduction: `<p>You can spend an entire evening together and exchange three useful sentences: "what are we eating", "did you take the keys", "you alright?". Relax, it isn't a sign your relationship is in trouble. It's just what happens to every couple. After a while, logistics end up eating the conversation.</p>
@@ -194,6 +195,18 @@ const article: BlogArticleData = {
 <li>If I turned up at yours in an hour, what would you change about your evening?</li>
 </ol>
 <p>At a distance, the real risk isn't running out of subjects, it's that every exchange starts to sound the same; a <a href="/en/long-distance-relationship-quiz/">quiz designed for long-distance couples</a>, each on your own screen, breaks that routine better than a third video call in a row.</p>`,
+    },
+    {
+      id: 'five-trick-questions',
+      title: `Five trick questions to ask your boyfriend (the kind ones)`,
+      content: `<p>"Trick question" here doesn't mean catching him out. It means a question whose answer says more than the words, because it shows what he keeps of you. Five examples, with what the answer tells you.</p>
+<ol>
+<li><strong>"Do you remember what we ate on our first date?":</strong> If he remembers, he keeps the early days close. If not, ask him what he kept from that evening instead: that's the real memory.</li>
+<li><strong>"What's my favourite film?":</strong> It doesn't test his memory, it tests his attention. A wrong answer isn't a big deal; a right one makes your day.</li>
+<li><strong>"What would you miss first if I went away for a month?":</strong> The spontaneous answer is worth gold. "You" is too short: the second sentence is the one that counts.</li>
+<li><strong>"What did I ask you last week that you still haven't done?":</strong> Ask it with a smile. If he finds it on his own, he listens more than he lets on.</li>
+<li><strong>"What do I say that you've never dared to contradict?":</strong> The only one that makes him talk about himself: the answer tells you where he holds back, and that's often where a useful conversation starts.</li>
+</ol>`,
     },
     {
       id: 'after-question-100',

@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'domande-da-fare-al-tuo-ragazzo',
-  title: "100 domande da fare al tuo ragazzo, dalle più leggere alle grandi conversazioni",
-  metaTitle: "100 domande da fare al tuo ragazzo (oltre al «com'è andata?»)",
-  metaDescription: "Voglia di andare oltre il «tutto bene?» quotidiano? 100 domande da fare al tuo ragazzo, ordinate per momento e profondità, per conversazioni vere.",
+  title: `100 domande da fare al proprio ragazzo, dalle più leggere alle grandi conversazioni`,
+  metaTitle: `100 domande da fare al proprio ragazzo (anche scomode)`,
+  metaDescription: `100 domande da fare al tuo ragazzo, per tema e per momento: per conoscerlo, su voi due, divertenti, sentimenti, futuro, a distanza, e 5 domande scomode ma gentili.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Giovane coppia seduta faccia a faccia mentre conversa, lei fa una domanda e sorride",
   publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Conosci il suo piatto preferito e il suo umore della domenica sera. Ma sai di cosa ha davvero paura, o cosa non ha mai osato chiederti?",
   introduction: `<p>Potete passare un'intera serata insieme e scambiarvi tre frasi utili: «cosa mangiamo», «hai preso le chiavi», «tu tutto bene?». Tranquilla, non è un segno che la vostra storia vada male. È semplicemente quello che succede a tutte le coppie. A un certo punto la logistica si mangia la conversazione.</p>
@@ -194,6 +195,18 @@ const article: BlogArticleData = {
 <li>Se piombassi da te tra un'ora, cosa cambieresti della tua serata?</li>
 </ol>
 <p>A distanza, il rischio vero non è restare senza argomenti, è che tutti gli scambi finiscano per assomigliarsi; un <a href="/it/quiz-coppia-distanza/">quiz pensato per le coppie a distanza</a>, ognuno sul proprio schermo, rompe quella routine meglio di una terza videochiamata di fila.</p>`,
+    },
+    {
+      id: 'cinque-domande-scomode',
+      title: `Cinque domande scomode (ma gentili) da fare al tuo ragazzo`,
+      content: `<p>«Domanda scomoda», qui, non vuol dire metterlo in difficoltà. Vuol dire una domanda la cui risposta dice più delle parole, perché mostra cosa trattiene di te. Cinque esempi, con quello che racconta la risposta.</p>
+<ol>
+<li><strong>«Ti ricordi cosa abbiamo mangiato al nostro primo appuntamento?»:</strong> Se se lo ricorda, tiene da conto gli inizi. Altrimenti chiedigli cosa gli è rimasto di quella sera: è quello il vero ricordo.</li>
+<li><strong>«Qual è il mio film preferito?»:</strong> Non mette alla prova la memoria, mette alla prova l'attenzione. Una risposta sbagliata non è grave; una giusta ti rallegra la giornata.</li>
+<li><strong>«Cosa ti mancherebbe per primo se partissi per un mese?»:</strong> La risposta spontanea vale oro. «Tu» è troppo corto: è la seconda frase che conta.</li>
+<li><strong>«Cosa ti ho chiesto la settimana scorsa che non hai ancora fatto?»:</strong> Da fare sorridendo. Se lo trova da solo, ascolta più di quanto sembri.</li>
+<li><strong>«Cosa dico io che non hai mai osato contraddire?»:</strong> L'unica che lo fa parlare di sé: la risposta ti dice dove si trattiene, ed è spesso lì che comincia una conversazione utile.</li>
+</ol>`,
     },
     {
       id: 'dopo-la-domanda-100',

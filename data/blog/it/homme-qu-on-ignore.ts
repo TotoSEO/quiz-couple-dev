@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'cosa-prova-un-uomo-quando-lo-ignori',
-  title: "Cosa prova un uomo quando lo ignori?",
-  metaTitle: "Cosa prova un uomo quando lo ignori? | Quiz Couple",
-  metaDescription: "Cosa passa per la testa di un uomo quando smetti di rispondergli, passo dopo passo, e perché quasi mai dà il risultato che speri.",
+  title: "Cosa prova un uomo quando lo ignori? Le 5 fasi, una per una",
+  metaTitle: "Cosa prova un uomo quando lo ignori? Le 5 fasi",
+  metaDescription: "Cosa prova un uomo quando lo ignori, fase per fase: non se ne accorge, dubita, si irrita, ti scrive, poi si stacca. E se questo lo fa tornare.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Uomo seduto da solo sul divano di sera, il telefono spento tra le mani e lo sguardo nel vuoto",
   publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Hai smesso di rispondere e ti chiedi cosa gli faccia. Succedono cose piuttosto precise, e in un ordine piuttosto prevedibile.",
   introduction: `<p>Hai smesso di rispondere. Magari dopo una lite, magari perché lui non si impegnava più, magari perché qualcuno ti ha detto che era il modo migliore per farlo tornare. E da allora ti chiedi cosa stia succedendo dalla sua parte.</p>

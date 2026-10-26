@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fragen-an-deinen-crush',
-  title: "100 Fragen an deinen Crush",
-  metaTitle: "100 Fragen an deinen Crush | Quiz Couple",
+  title: `100 Fragen an deinen Crush, per Nachricht oder live`,
+  metaTitle: `100 Fragen an deinen Crush, per Nachricht oder live`,
   metaDescription: "Genug von Gesprächen, die einschlafen? 100 Fragen an deinen Crush, nach Situation sortiert: per Nachricht, zum Lachen, zum Flirten, um zu sehen, ob es passt.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Junge Person lächelt aufs Handy und tippt eine Nachricht an ihren Crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Das Schwierige an einem Crush ist, im richtigen Moment die Frage zu finden, die das Gespräch wieder in Gang bringt. Hier sind 100, nach Situation sortiert.",
   introduction: `<p>Du kennst diesen Moment. Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>

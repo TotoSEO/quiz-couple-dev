@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'homme-qu-on-ignore',
-  title: "Que ressent un homme quand on l'ignore ?",
-  metaTitle: "Que ressent un homme quand on l'ignore ? | Quiz Couple",
-  metaDescription: "Ce qui se passe dans la tête d'un homme qu'on ignore, étape par étape, et pourquoi ça ne donne presque jamais le résultat qu'on espère.",
+  title: "Que ressent un homme quand on l'ignore ? Les 5 étapes, une par une",
+  metaTitle: "Que ressent un homme quand on l'ignore ? Les 5 étapes",
+  metaDescription: "Ce que ressent un homme quand on l'ignore, étape par étape : il ne remarque rien, il doute, il s'agace, il écrit, puis il décroche. Et si ça le fait revenir.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Homme assis seul sur un canapé le soir, son téléphone éteint à la main, le regard dans le vide",
   publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Vous ne répondez plus, et vous vous demandez ce que ça lui fait. Il se passe des choses assez précises, dans un ordre assez prévisible.",
   introduction: `<p>Vous avez arrêté de répondre. Peut-être après une dispute, peut-être parce qu'il ne faisait plus d'efforts, peut-être parce qu'on vous a dit que c'était la meilleure façon de le faire revenir. Et depuis, vous vous demandez ce qui se passe de son côté.</p>
