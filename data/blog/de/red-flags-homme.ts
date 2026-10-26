@@ -3,154 +3,145 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-bei-einem-mann',
-  title: "13 Red Flags bei einem Mann: Was dein Instinkt dir sagen will",
-  metaTitle: "13 Red Flags bei einem Mann: Die vollständige Liste",
-  metaDescription: "Irgendetwas stimmt nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene und beziehungstechnische Red Flags, die vollständige Liste…",
-  featuredImage: '',
-  featuredImageAlt: "Rote Warnflagge im Wind, aus der Untersicht vor hellem Himmel",
+  title: "Red Flags bei einem Mann: die Liste der 13 Warnsignale, die du ernst nehmen solltest",
+  metaTitle: "Red Flags bei einem Mann: die 13 Warnsignale",
+  metaDescription: "Die Liste der 13 Red Flags bei einem Mann, vom leisesten bis zum schwersten Signal, mit einem Beispiel aus dem Alltag und dem, was es für die Beziehung bedeutet.",
+  featuredImage: '/blog/red-flags-homme.webp',
+  featuredImageAlt: "Rote Badeverbotsflagge, die im Wind flattert, von unten gegen einen klaren Himmel fotografiert",
   publishedAt: '2026-03-05',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Red Flags sind selten laute Alarmsignale. Es sind Verhaltensweisen, die du herunterspielst, bis du eines Tages merkst, dass du sie seit Monaten als normal akzeptierst.",
-  introduction: `<p>Du spürst etwas. Ein vages Unbehagen, eine Spannung, die du nicht benennen kannst, eine leise Stimme, die immer wieder auftaucht, und die du immer wieder zum Schweigen bringst, weil du denkst: „Vielleicht übertreibe ich." <strong>Wahrscheinlich nicht.</strong></p>
-<p>Red Flags bei einem Mann sind selten laute Alarmsignale. Es sind Verhaltensweisen, die immer wiederkehren, die du einmal, zweimal, zehnmal herunterspielst... bis du eines Tages merkst, dass du sie seit Monaten als normal akzeptierst. Also geben wir ihnen einen Namen, einer nach dem anderen.</p>`,
+  excerpt: "Eine Red Flag ist selten ein großer Streit. Es ist eine Kleinigkeit, die immer wiederkommt, die man einmal durchgehen lässt, dann zehnmal. Hier sind die 13, die man kennen sollte.",
+  introduction: `<p>Eine Red Flag ist ein Warnsignal in einer Beziehung. Nicht unbedingt eine Szene oder eine Krise: Meistens ist es ein Verhalten, das immer wiederkommt, das man einmal durchgehen lässt, dann zweimal, und das man irgendwann normal findet. Zum Beispiel: Er macht sich über deine Gefühle lustig, er sagt in letzter Minute ab, er redet schlecht über alle seine Ex-Freundinnen.</p>
+<p>Wenn du hier bist, dann wahrscheinlich, weil dich etwas stört und du es nicht in Worte fassen kannst. Hier ist die Liste der 13 Red Flags bei einem Mann, jede mit einem Beispiel aus dem Alltag und dem, was sie bedeutet. Du kannst sie der Reihe nach lesen oder direkt zu der springen, die dir bekannt vorkommt.</p>`,
   quickSummary: [
-    "Emotionale Red Flags: er tut deine Gefühle ab, macht dich für seine Stimmungen verantwortlich, wechselt zwischen heiß und kalt.",
-    "Verhaltensbezogene Red Flags: seine Taten stimmen nicht mit seinen Worten überein, er testet deine Grenzen schrittweise aus.",
-    "In der Öffentlichkeit ist er perfekt. Mit dir ist es eine andere Geschichte.",
-    "Beziehungsbezogene Red Flags sind am schwersten zu erkennen: schrittweise Isolation, unmögliche Gespräche, Erosion deines Selbstwertgefühls.",
-    "Ein oder zwei Punkte reichen nicht, Wiederholung und fehlende Selbstreflexion machen eine echte Red Flag aus.",
+    "Eine Red Flag ist ein Verhalten, das immer wiederkommt, nicht ein schlechter Tag.",
+    "Die häufigsten: Er spielt deine Gefühle herunter, er ist mal warm, mal kalt, er entschuldigt sich nie wirklich.",
+    "Die schwersten: Er entfernt dich von den Menschen, die dir wichtig sind, und er ist charmant zu allen, außer zu dir.",
+    "Ein einzelnes Signal reicht nicht. Es zählt die Wiederholung, und wie er reagiert, wenn du es ansprichst.",
+    "Das deutlichste Signal: Seit ihr zusammen seid, zweifelst du an dir selbst.",
   ],
   sections: [
     {
-      id: 'red-flags-auf-einen-blick',
-      title: "Red Flags auf einen Blick",
-      content: `<p>Hier sind sie alle. Tippe auf den, der dir bekannt vorkommt, um direkt dorthin zu springen.</p>
+      id: 'die-liste-der-13-red-flags',
+      title: "Die Liste der 13 Red Flags bei einem Mann",
+      content: `<p>Hier sind alle. Klick auf die, die dir bekannt vorkommt, um direkt zur Erklärung zu springen.</p>
 
 <ol class="blog-liste-reperes">
-<li><a href="#tut-gefuehle-ab">Er tut deine Gefühle ab</a></li>
-<li><a href="#seine-stimmungen">Seine Stimmungen werden zu deiner Verantwortung</a></li>
-<li><a href="#heiss-und-kalt">Mal heiß, mal kalt, im Dauerzyklus</a></li>
-<li><a href="#entschuldigt-nie">Seine Entschuldigungen sind nie ehrlich gemeint</a></li>
-<li><a href="#taten-vs-worte">Seine Taten stimmen nicht mit seinen Worten überein</a></li>
-<li><a href="#respektiert-grenzen-nicht">Er respektiert nicht, was du ihm klar gesagt hast</a></li>
-<li><a href="#ex-alle-verrueckt">Er spricht über alle Ex-Freundinnen, als wären sie verrückt gewesen</a></li>
-<li><a href="#testet-grenzen">Er testet deine Grenzen schrittweise aus</a></li>
-<li><a href="#zwei-persoenlichkeiten">Zwei Persönlichkeiten: eine öffentlich, eine mit dir</a></li>
-<li><a href="#nimmt-raum-ein">Er nimmt Raum ein, ohne welchen zu lassen</a></li>
-<li><a href="#kannst-nicht-reden">Du kannst nicht mit ihm über das sprechen, was dich stört</a></li>
-<li><a href="#entfernt-von-leuten">Er entfernt dich schrittweise von deinen Leuten</a></li>
-<li><a href="#zweifelst-an-dir">Du zweifelst an dir selbst, seit du mit ihm zusammen bist</a></li>
+<li><a href="#er-spielt-deine-gefuehle-herunter">Er spielt deine Gefühle herunter</a></li>
+<li><a href="#seine-laune-wird-dein-problem">Seine Laune wird dein Problem</a></li>
+<li><a href="#mal-warm-mal-kalt">Er ist mal warm, mal kalt</a></li>
+<li><a href="#er-entschuldigt-sich-nie-wirklich">Er entschuldigt sich nie wirklich</a></li>
+<li><a href="#taten-und-worte">Seine Taten passen nicht zu seinen Worten</a></li>
+<li><a href="#er-ignoriert-eine-grenze">Er ignoriert eine Grenze, die du gesetzt hast</a></li>
+<li><a href="#alle-seine-ex-sind-verrueckt">Alle seine Ex-Freundinnen sind „verrückt“</a></li>
+<li><a href="#er-testet-deine-grenzen">Er testet deine Grenzen Stück für Stück</a></li>
+<li><a href="#charmant-zu-allen-ausser-zu-dir">Er ist charmant zu allen, außer zu dir</a></li>
+<li><a href="#er-nimmt-den-ganzen-platz-ein">Er nimmt den ganzen Platz ein</a></li>
+<li><a href="#unmoeglich-mit-ihm-zu-reden">Es ist unmöglich, mit ihm über Probleme zu reden</a></li>
+<li><a href="#er-entfernt-dich-von-deinen-leuten">Er entfernt dich von den Menschen, die dir wichtig sind</a></li>
+<li><a href="#du-zweifelst-an-dir">Du zweifelst an dir, seit ihr zusammen seid</a></li>
 </ol>
 
-<div><table><thead><tr><th>Das Signal</th><th>Was es oft bedeutet</th><th>Warnstufe</th></tr></thead><tbody>
-<tr><td>Er tut deine Gefühle ab</td><td>Deine Emotionen stören ihn, ihm wäre lieber, du schweigst.</td><td>Ernst</td></tr>
-<tr><td>Alles ist immer deine Schuld</td><td>Er hinterfragt sich selbst nie, niemals.</td><td>Ernst</td></tr>
-<tr><td>Er isoliert dich von deinen Leuten</td><td>Schrittweise Isolation, oft als liebevolle Eifersucht verkleidet.</td><td>Sehr ernst</td></tr>
-<tr><td>Mal heiß, mal kalt</td><td>Emotionale Instabilität oder bewusste Manipulation.</td><td>Beobachten</td></tr>
-<tr><td>Seine Taten stimmen nicht mit seinen Worten überein</td><td>Er sagt das Richtige, und tut, was er will.</td><td>Beobachten</td></tr>
-<tr><td>Er gibt dir die Schuld für seine Stimmungen</td><td>Du trägst seine Launen, er selbst nicht.</td><td>Ernst</td></tr>
-<tr><td>Alle seine Ex-Freundinnen waren „verrückt"</td><td>In seiner Version der Geschichte hatte er noch nie Unrecht.</td><td>Beobachten</td></tr>
-<tr><td>Er respektiert deine Grenzen nicht</td><td>Er testet, wie weit er gehen kann, und geht weiter.</td><td>Ernst</td></tr>
-<tr><td>Charmant in der Öffentlichkeit, anders unter vier Augen</td><td>Zwei Versionen: eine für andere, eine für dich.</td><td>Sehr ernst</td></tr>
-<tr><td>Er nimmt Raum ein, ohne welchen zu lassen</td><td>Seine Bedürfnisse kommen immer zuerst, deine danach.</td><td>Beobachten</td></tr>
-</tbody></table></div>`,
+<p>Sie kommen in drei Familien: was er mit deinen Gefühlen macht, was er einfach tut, und was mit der Zeit aus der Beziehung wird. Die letzten auf der Liste sind die ernstesten.</p>`,
     },
     {
-      id: 'emotionale-red-flags',
-      title: "Emotionale Red Flags",
-      content: `<p>Hier fängt es meistens an: nicht mit etwas Dramatischem, sondern mit einer Art der Interaktion, die dich regelmäßig erschöpft, verwirrt oder mit dem vagen Eindruck zurücklässt, „zu viel" zu sein.</p>`,
+      id: 'was-er-mit-deinen-gefuehlen-macht',
+      title: "Was er mit deinen Gefühlen macht",
+      content: `<p>Hier fängt es meistens an. Nichts Spektakuläres, nur eine Art, auf deine Gefühle zu reagieren, die dich erschöpft zurücklässt, oder mit dem Eindruck, „zu viel“ zu sein.</p>`,
       subsections: [
         {
-          id: 'tut-gefuehle-ab',
-          title: "Er tut deine Gefühle ab",
-          content: `<p>Du erklärst ihm etwas, das dich verletzt hat, und seine Antwort lautet „du bist zu empfindlich", „du dramatisierst" oder „das war doch nur ein Witz". Wenn sich das wiederholt, hat dieser Mechanismus einen Namen, <strong>Gaslighting</strong>, und er funktioniert genau so: Mit der Zeit zweifelst du an deiner eigenen Wahrnehmung der Realität. Am Ende ist das Problem nicht mehr das, was er getan hat, das Problem ist, dass du es gewagt hast, es anzusprechen.</p>
-<p>Ein gesunder Mann versteht vielleicht nicht sofort, warum dich etwas getroffen hat. Aber er hört zu, und er fordert dich nicht auf, still zu sein.</p>`,
+          id: 'er-spielt-deine-gefuehle-herunter',
+          title: "1. Er spielt deine Gefühle herunter",
+          content: `<p>Du sagst ihm, dass dich eine Bemerkung verletzt hat, und er antwortet „du bist zu empfindlich“, „du übertreibst“ oder „das war doch ein Witz“. Damit ist das Thema nicht mehr, was er getan hat, sondern dass du es angesprochen hast.</p>
+<p>Wenn sich das wiederholt, hat es einen Namen: <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a>. Mit der Zeit zweifelst du an dem, was du gesehen und gehört hast. Ein Mann kann durchaus nicht sofort verstehen, warum dich etwas getroffen hat. Der Unterschied ist, dass er zuhört, statt dich zum Schweigen zu bringen.</p>`,
         },
         {
-          id: 'seine-stimmungen',
-          title: "Seine Stimmungen werden zu deiner Verantwortung",
-          content: `<p>Er kommt schlecht gelaunt nach Hause, und irgendwie läufst du auf Eierschalen. Du änderst, was du sagen wolltest, du wartest, bis er „in einer besseren Stimmung" ist, bevor du wichtige Themen ansprichst, du richtest dich nach seinem aktuellen emotionalen Zustand aus.</p>
-<p>Anders gesagt: Du managst seine Gefühle, während er seine eigenen nicht managt. Das ist eine mentale und emotionale Last, die du allein trägst, und wenn du es ansprichst, „jammerst du immer".</p>`,
+          id: 'seine-laune-wird-dein-problem',
+          title: "2. Seine Laune wird dein Problem",
+          content: `<p>Er kommt schlecht gelaunt nach Hause, und du bist diejenige, die sich anpasst: Du gehst auf Zehenspitzen, du verschiebst, was du ihm sagen wolltest, du wartest auf „den richtigen Moment“. Kurz gesagt, du kümmerst dich um seine Laune, statt dass er es tut.</p>
+<p>Und wenn du es ansprichst, „beschwerst du dich ständig“. Das ist eine Last, die du allein trägst, und sie wird mit der Zeit sehr schwer.</p>`,
         },
         {
-          id: 'heiss-und-kalt',
-          title: "Mal heiß, mal kalt, im Dauerzyklus",
-          content: `<p>Eine Woche ist er aufmerksam, warm, präsent. In der nächsten ist er distanziert und kalt, ohne Erklärung. Und du verbringst deine Zeit damit, herauszufinden, was du getan hast, um diesen Wechsel auszulösen. Spoiler: du hast nichts getan. Er ist derjenige, der diese Instabilität schafft, bewusst oder nicht, aber das Ergebnis ist dasselbe: Du läufst auf Eierschalen, suchst ständig seine Bestätigung, und fühlst Erleichterung, wenn er wieder im „warmen" Modus zurückkommt. Das ist der ängstliche Bindungszyklus, den er erzeugt, und wenn man erstmal drin ist, kommt man schwer wieder heraus. Wenn du diese Dynamik bei euch erkennst, kann der <a href="/de/toxische-beziehung-test/">Test toxische Beziehung</a> dir helfen zu sehen, wo du wirklich stehst.</p>`,
+          id: 'mal-warm-mal-kalt',
+          title: "3. Er ist mal warm, mal kalt",
+          content: `<p>In der einen Woche ist er da, aufmerksam, zärtlich. In der nächsten ist er distanziert und kühl, ohne dass du weißt, warum. Also suchst du, was du falsch gemacht haben könntest... und meistens: nichts. Er ist derjenige, der diese Unsicherheit erzeugt, ob bewusst oder nicht.</p>
+<p>So ein Kreislauf führt zu dem, was man eine <a href="/de/bindungsstil-test/">ängstliche Bindung</a> nennt: Du bist jedes Mal erleichtert, wenn er wieder nett wird, und die restliche Zeit wartest du auf seine Zustimmung. Wer einmal drin ist, kommt schwer wieder heraus.</p>`,
         },
         {
-          id: 'entschuldigt-nie',
-          title: "Seine Entschuldigungen sind nie ehrlich gemeint",
-          content: `<p>Oder er tut es auf eine Art, die die Schuld wieder auf dich lenkt: „Es tut mir leid, dass du es so aufgenommen hast", „Tut mir leid, aber du hättest...". Das ist keine Entschuldigung, das ist ein höflicher Gegenangriff. Eine echte Entschuldigung enthält kein „aber".</p>`,
+          id: 'er-entschuldigt-sich-nie-wirklich',
+          title: "4. Er entschuldigt sich nie wirklich",
+          content: `<p>Oder seine Entschuldigungen richten sich gegen dich: „Tut mir leid, dass du das so aufgefasst hast“, „sorry, aber du hättest...“. Das ist keine Entschuldigung, sondern eine höfliche Art, dir die Verantwortung zuzuschieben. Eine Entschuldigung, die zählt, klingt wie „ich hatte Unrecht, es tut mir leid“, ohne ein „aber“ dahinter.</p>`,
         },
       ],
     },
     {
-      id: 'verhaltensbezogene-red-flags',
-      title: "Verhaltensbezogene Red Flags",
-      content: `<p>Diese sind sichtbarer, wenn man weiß, worauf man achten muss. Es geht nicht unbedingt um gewalttätige oder spektakuläre Handlungen: Es sind oft kleine, wiederholte Verhaltensweisen, die einzeln harmlos wirken. Nimmt man sie zusammen, erzählen sie eine andere Geschichte.</p>`,
+      id: 'was-er-einfach-tut',
+      title: "Was er tut, ganz einfach",
+      content: `<p>Diese hier sieht man besser, wenn man weiß, worauf man achten muss. Einzeln betrachtet sind es kleine Verhaltensweisen, die man leicht entschuldigt. Aneinandergereiht erzählen sie eine andere Geschichte.</p>`,
       subsections: [
         {
-          id: 'taten-vs-worte',
-          title: "Seine Taten stimmen nicht mit seinen Worten überein",
-          content: `<p>Er sagt, du bist ihm wichtig, aber er sagt ständig ab. Er sagt, du bedeutest ihm viel, aber er verschwindet, wenn du ihn brauchst. Er sagt, er wird sich ändern, und nichts ändert sich. <strong>Schau auf das, was er tut, nicht auf das, was er sagt:</strong> Worte kosten nichts, während Handlungen seine wahren Prioritäten zeigen.</p>`,
+          id: 'taten-und-worte',
+          title: "5. Seine Taten passen nicht zu seinen Worten",
+          content: `<p>Er sagt, du bist ihm wichtig, und <a href="/de/blog/er-sagt-in-letzter-minute-ab/">er sagt in letzter Minute ab</a>. Er sagt, du zählst, und er verschwindet, wenn du ihn brauchst. Er sagt, er wird sich ändern, und nichts ändert sich. Schau auf das, was er tut, nicht auf das, was er sagt: Worte kosten nichts, Taten zeigen seine wahren Prioritäten.</p>`,
         },
         {
-          id: 'respektiert-grenzen-nicht',
-          title: "Er respektiert nicht, was du ihm klar gesagt hast",
-          content: `<p>Du hast eine Grenze gesetzt. Du hast sie klar, ruhig und eindeutig ausgedrückt. Er hat sie trotzdem überschritten, vielleicht einmal, vielleicht regelmäßig, vielleicht indem er es kleinredet („warum so ein Aufstand"). Eine Grenze ist kein Vorschlag: Ein Mann, der sie trotzdem überschreitet, zeigt dir damit, dass er dich nicht respektiert.</p>`,
+          id: 'er-ignoriert-eine-grenze',
+          title: "6. Er ignoriert eine Grenze, die du gesetzt hast",
+          content: `<p>Du hast ihm klar und ruhig gesagt, dass du dies oder das nicht willst. Er hat es trotzdem getan, einmal oder regelmäßig, manchmal mit einem Lachen („was soll das Theater“). Eine Grenze ist kein Vorschlag. Wer sie wissentlich überschreitet, zeigt dir, wie wenig ihm deine Meinung bedeutet.</p>`,
         },
         {
-          id: 'ex-alle-verrueckt',
-          title: "Er spricht über alle Ex-Freundinnen, als wären sie verrückt gewesen",
-          content: `<p>Eine schwierige Ex, das passiert. Aber wenn alle seine Ex-Freundinnen „instabil", „eifersüchtig", „besitzergreifend" oder „durchgeknallt" waren, ist irgendwann die einzige Konstante in der Gleichung er selbst. Das bedeutet nicht unbedingt, dass er in allem falsch liegt, aber jemand, der keine Verantwortung für vergangene Beziehungen übernimmt, wird sich dir gegenüber nicht anders verhalten.</p>`,
+          id: 'alle-seine-ex-sind-verrueckt',
+          title: "7. Alle seine Ex-Freundinnen sind „verrückt“",
+          content: `<p>Eine schwierige Ex hat jeder mal. Aber wenn alle seine Ex-Freundinnen „labil“, „eifersüchtig“ oder „durchgeknallt“ waren, dann ist das Einzige, was all diese Geschichten gemeinsam haben, er selbst. Jemand, der in seinen früheren Beziehungen keinerlei Verantwortung bei sich sieht, wird damit bei dir nicht plötzlich anfangen.</p>`,
         },
         {
-          id: 'testet-grenzen',
-          title: "Er testet deine Grenzen schrittweise aus",
-          content: `<p>Es fängt klein an: ein Kommentar darüber, wie du dich kleidest, ein Seitenhieb auf eine deiner Freundinnen, eine Frage, mit wem du gestern zusammen warst. Jedes Mal, wenn du nicht reagierst, geht es eine Stufe weiter. Am Anfang ist es selten brutal, es ist schrittweise, fast unmerklich... und wenn du merkst, wie weit es gegangen ist, hat sich die Grenze schon lange verschoben.</p>`,
+          id: 'er-testet-deine-grenzen',
+          title: "8. Er testet deine Grenzen Stück für Stück",
+          content: `<p>Es fängt mit einer Bemerkung über dein Outfit an, einem Witz über eine deiner Freundinnen, einer Frage, mit wem du gestern Abend unterwegs warst. Jedes Mal, wenn du es durchgehen lässt, geht es einen Schritt weiter. Es ist so schleichend, dass man es erst im Nachhinein merkt, an dem Tag, an dem einem klar wird, wie weit es gegangen ist.</p>`,
         },
         {
-          id: 'zwei-persoenlichkeiten',
-          title: "Zwei Persönlichkeiten: eine öffentlich, eine mit dir",
-          content: `<p>Alle mögen ihn: charmant, witzig, rücksichtsvoll mit anderen. Und mit dir ist er kritisch, kalt oder dominant. Dieser Unterschied ist kein Zufall, denn er beweist eine Sache: Er kann sich beherrschen, und er entscheidet sich, es bei dir nicht zu tun. Das ist keine Spontaneität, das ist Verachtung.</p>`,
+          id: 'charmant-zu-allen-ausser-zu-dir',
+          title: "9. Er ist charmant zu allen, außer zu dir",
+          content: `<p>Alle mögen ihn: witzig, aufmerksam, hilfsbereit. Und zu Hause ist er kritisch, kalt, oder er entscheidet alles. Dieser Unterschied sagt etwas ganz Einfaches: Er kann sich benehmen, und er entscheidet sich, es bei dir nicht zu tun. Das ist eines der ernstesten Signale auf dieser Liste.</p>`,
         },
       ],
+      tip: "Etwas, das hilft, wenn du unsicher bist: Schreib jedes Mal auf dein Handy, was er getan hat und wie du dich gefühlt hast, mit Datum. Die Liste nach einem Monat noch einmal zu lesen sagt mehr als die Erinnerung, die gern Ausreden findet.",
     },
     {
-      id: 'beziehungs-red-flags',
-      title: "Red Flags in der Beziehungsdynamik",
-      content: `<p>Diese sind am schwersten zu erkennen, weil sie sich nicht an einem einzelnen Moment zeigen. Man muss einen Schritt zurücktreten und die gesamte Beziehung betrachten, um sie zu sehen.</p>`,
+      id: 'was-aus-der-beziehung-wird',
+      title: "Was mit der Zeit aus der Beziehung wird",
+      content: `<p>Diese vier sind am schwersten zu erkennen, weil man sie nicht an einem Abend sieht. Man muss über mehrere Monate zurückblicken, um sie zu erkennen.</p>`,
       subsections: [
         {
-          id: 'nimmt-raum-ein',
-          title: "Er nimmt Raum ein, ohne welchen zu lassen",
-          content: `<p>Seine Pläne, seine Launen, seine Bedürfnisse, seine Wünsche: All das strukturiert die Beziehung. Deine kommen an zweiter Stelle, und wenn du etwas sagst, bist du „egoistisch" oder „nie zufrieden". Mit der Zeit machst du immer weniger Dinge für dich. Du hast das Gefühl, zu verschwinden... und es ist nicht nur ein Gefühl.</p>`,
+          id: 'er-nimmt-den-ganzen-platz-ein',
+          title: "10. Er nimmt den ganzen Platz ein",
+          content: `<p>Seine Wünsche, seine Pläne, seine Laune, seine Bedürfnisse: Alles dreht sich um ihn. Deine kommen danach, und wenn du das sagst, bist du „egoistisch“ oder „nie zufrieden“. Mit der Zeit machst du immer weniger für dich selbst, und du erkennst dich immer weniger wieder.</p>`,
         },
         {
-          id: 'kannst-nicht-reden',
-          title: "Du kannst nicht mit ihm über das sprechen, was dich stört",
-          content: `<p>Jeder Versuch eines Gesprächs endet entweder in einem Streit, bei dem er die Oberhand behält, in einem Schweigen, das Tage andauert, oder in einer Wendung, bei der du dich am Ende für etwas entschuldigst, das du nicht getan hast. Das Ergebnis: Du vermeidest wichtige Gespräche, du schluckst es runter, es staut sich an. Und er weiß nie etwas, weil du gelernt hast, dass es nichts bringt, es ihm zu sagen.</p>`,
+          id: 'unmoeglich-mit-ihm-zu-reden',
+          title: "11. Es ist unmöglich, mit ihm über Probleme zu reden",
+          content: `<p>Jedes Mal, wenn du ein Thema ansprechen willst, endet es in einem Streit, den er gewinnt, in tagelangem Schweigen, oder in einer <a href="/de/blog/narzisstischer-mann-anzeichen/">Umkehrung, bei der du dich am Ende entschuldigst</a> für etwas, das du nicht getan hast. Also vermeidest du die wichtigen Gespräche und behältst alles für dich. Und er weiß von nichts, weil du gelernt hast, dass es nichts bringt, es ihm zu sagen.</p>`,
         },
         {
-          id: 'entfernt-von-leuten',
-          title: "Er entfernt dich schrittweise von deinen Leuten",
-          content: `<p>Am Anfang kann es wie liebevolle Eifersucht aussehen: „Ich liebe es einfach, wenn wir zusammen sind, ich hätte mir gewünscht, du wärst geblieben." Aber daraus werden Kommentare über deine Freundinnen, Spannungen jedes Mal, wenn du Zeit ohne ihn verbringst, ein stilles schlechtes Gewissen. Ein paar Monate später: Du gehst weniger aus, siehst die Menschen, die dir wichtig waren, seltener, hast dich isoliert. Und er ist zu deiner wichtigsten sozialen Verbindung geworden. Genau dort wollte er hin.</p>`,
+          id: 'er-entfernt-dich-von-deinen-leuten',
+          title: "12. Er entfernt dich von den Menschen, die dir wichtig sind",
+          content: `<p>Am Anfang sieht es aus wie <a href="/de/blog/krankhafte-eifersucht/">liebevolle Eifersucht</a>: „Ich hätte lieber gehabt, dass du heute Abend bei mir bleibst.“ Dann kommen die Bemerkungen über deine Freundinnen, die Spannungen jedes Mal, wenn du ohne ihn ausgehst, die Schuldgefühle, die er dir macht. Ein paar Monate später gehst du weniger aus, du siehst die Menschen, die du magst, seltener, und er ist so ziemlich deine einzige Gesellschaft geworden.</p>
+<p>Das ist die schwerste Red Flag auf der Liste, denn so beginnt <a href="/de/psychische-kontrolle-beziehung-test/">psychische Kontrolle</a>: erst isolieren, der Rest kommt danach.</p>`,
         },
         {
-          id: 'zweifelst-an-dir',
-          title: "Du zweifelst an dir selbst, seit du mit ihm zusammen bist",
-          content: `<p>Das ist vielleicht das aufschlussreichste Signal. Früher hattest du Selbstvertrauen: Du wusstest, was du wolltest, was du wert bist. Jetzt verbringst du deine Zeit damit, dich zu fragen, ob du „zu viel" bist oder „nicht genug", ob du normal reagierst, ob du vernünftig bist. Diese Erosion des Selbstwertgefühls passiert nicht zufällig: Sie baut sich nach und nach auf, eine Bemerkung nach der anderen.</p>`,
+          id: 'du-zweifelst-an-dir',
+          title: "13. Du zweifelst an dir, seit ihr zusammen seid",
+          content: `<p>Das ist vielleicht das deutlichste Signal. Früher wusstest du, was du willst und was du wert bist. Heute fragst du dich ständig, ob du „zu“ dies oder „nicht genug“ das bist, ob du normal reagierst, ob du übertreibst. Das kommt nicht aus dem Nichts: Eine Bemerkung nach der anderen, er ist derjenige, der dein Selbstvertrauen angenagt hat.</p>`,
         },
       ],
     },
     {
       id: 'und-jetzt',
-      title: "Du hast mehrere dieser Punkte erkannt. Und jetzt?",
-      content: `<p>Zunächst: Dass du nach dieser Liste gesucht hast, bedeutet etwas. Ein Teil von dir hat nach einer Bestätigung gesucht, nach Worten für das, was du fühlst. Das ist bereits ein erster Schritt.</p>
-<p>Ein oder zwei Punkte auf einer Liste machen jemanden nicht automatisch zu einem schlechten Partner. Jeder hat blinde Flecken, Verhaltensweisen, an denen er arbeiten muss, schwierige Phasen. <strong>Was eine Red Flag von einem gewöhnlichen Problem unterscheidet, ist die Wiederholung und das Fehlen von Selbstreflexion.</strong> Erkennt er das Problem an, wenn du es ansprichst? Macht er echte Anstrengungen, oder sichtbare Anstrengungen, nur solange, bis du dich beruhigt hast? Ändert sich wirklich etwas, oder lebst du in ständiger Erwartung einer Veränderung, die nie kommt?</p>
-<p>Wenn du mehrere Kästchen ankreuzt und die ehrliche Antwort auf diese Fragen „nein" lautet, vertraue dem, was du fühlst. Dein Instinkt hat dich hierher gebracht, er verdient es, gehört zu werden.</p>
-<a href="/de/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lesen Sie auch</span><span class="blog-read-also-title">Unglückliche Frau in der Beziehung: Die wahren Anzeichen</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      title: "Du hast mehrere wiedererkannt: und jetzt?",
+      content: `<p>Erstens: Ein oder zwei Punkte auf einer Liste machen aus niemandem einen schlechten Partner. Jeder hat Schwächen und schlechte Phasen. Was eine Red Flag ausmacht, ist die Wiederholung, und vor allem seine Reaktion, wenn du es ansprichst. Erkennt er das Problem an? Bemüht er sich dauerhaft, oder nur so lange, bis du dich beruhigt hast? Wenn du mehrere Kästchen ankreuzt und die Antwort Nein ist, kannst du deinem Gefühl vertrauen.</p>
+<p>Um klarer zu sehen, kannst du <a href="/de/toxische-beziehung-test/">zwanzig Fragen zu eurer Beziehung beantworten</a>: Das hilft, Worte für das zu finden, was passiert, und abzuschätzen, ob es unangenehm oder toxisch ist. Und wenn du vor allem die letzten Signale der Liste wiedererkannt hast, die Isolation und die Selbstzweifel, erklärt der Artikel darüber, <a href="/de/blog/toxischer-mann-in-der-liebe/">was ein toxischer Mann einem im Alltag antut</a>, auch, wie man da wieder herauskommt.</p>
+<a href="/de/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">Die Anzeichen einer unglücklichen Frau in der Beziehung</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

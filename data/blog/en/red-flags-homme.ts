@@ -3,154 +3,145 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-in-a-man',
-  title: "13 Red Flags in a man: what your gut is trying to tell you",
-  metaTitle: "13 Red Flags in a Man: The Complete List",
-  metaDescription: "Something feels off but you can't quite name it? Emotional, behavioural, relationship red flags, the complete list to help you see things clearly.",
-  featuredImage: '',
-  featuredImageAlt: "A red warning flag stretched by the wind, shot from below against a bright sky",
+  title: "Red flags in a man: the list of 13 signs to take seriously",
+  metaTitle: "Red Flags in a Man: The List of 13 Signs",
+  metaDescription: "The list of 13 red flags in a man, from the quietest to the most serious, with an everyday example for each one and what it means for what comes next.",
+  featuredImage: '/blog/red-flags-homme.webp',
+  featuredImageAlt: "A red no-swimming flag stretched by the wind, seen from below against a clear sky",
   publishedAt: '2026-03-05',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: "Red flags are rarely loud alarm bells. They're behaviours you brush off until the day you realise you've been normalising them for months.",
-  introduction: `<p>You feel something. A vague discomfort, a tension you can't name, a quiet voice that keeps coming back, and that you keep silencing because "maybe you're overreacting". <strong>You're probably not.</strong></p>
-<p>Red flags in a man are rarely loud alarm bells. They're behaviours that keep coming back, that you brush off once, twice, ten times... until the day you realise you've been normalising them for months. So let's put words on them, one by one.</p>`,
+  excerpt: "A red flag is rarely a big fight. It's a small thing that keeps coming back, that you let slide once, then ten times. Here are the 13 to know.",
+  introduction: `<p>A red flag is a warning sign in a relationship. Not necessarily a scene or a crisis: most of the time, it's a behaviour that keeps coming back, that you let slide once, then twice, and that you end up finding normal. For example: he makes fun of what you feel, he cancels at the last minute, he badmouths every single one of his exes.</p>
+<p>If you're here, it's probably because something is bugging you and you can't quite put words on it. Here is the list of the 13 red flags in a man, each with an everyday example and what it means. You can read in order, or jump straight to the one that speaks to you.</p>`,
   quickSummary: [
-    "Emotional red flags: he dismisses your feelings, makes you responsible for his moods, runs hot and cold.",
-    "Behavioural red flags: his actions don't match his words, he gradually tests your limits.",
-    "In public he's perfect. In private, it's a different story.",
-    "Relationship red flags are the hardest to spot: gradual isolation, impossible conversations, erosion of your self-confidence.",
-    "One or two points aren't enough, repetition and lack of self-reflection are what make a real red flag.",
+    "A red flag is a behaviour that keeps coming back, not a bad day.",
+    "The most common ones: he plays down what you feel, he blows hot and cold, he never truly apologises.",
+    "The most serious ones: he pulls you away from the people you love, and he is charming with everyone except you.",
+    "One sign alone is not enough. What counts is the repetition, and how he reacts when you bring it up.",
+    "The most telling sign: you have been doubting yourself since you got together.",
   ],
   sections: [
     {
-      id: 'red-flags-at-a-glance',
-      title: "Red flags at a glance",
-      content: `<p>Here they all are. Tap the one that speaks to you to jump straight to it.</p>
+      id: 'the-list-of-13-red-flags',
+      title: "The list of 13 red flags in a man",
+      content: `<p>Here they all are. Click on the one that speaks to you to jump straight to the explanation.</p>
 
 <ol class="blog-liste-reperes">
-<li><a href="#dismisses-your-feelings">He dismisses what you feel</a></li>
-<li><a href="#his-moods-your-responsibility">His moods become your responsibility</a></li>
-<li><a href="#hot-and-cold">Hot and cold, on repeat</a></li>
-<li><a href="#never-apologises">He never offers a genuine apology</a></li>
-<li><a href="#actions-vs-words">His actions don't match his words</a></li>
-<li><a href="#doesnt-respect-boundaries">He doesn't respect what you've clearly told him</a></li>
-<li><a href="#exes-all-crazy">He talks about all his exes like they were crazy</a></li>
-<li><a href="#gradually-tests-limits">He gradually tests your limits</a></li>
-<li><a href="#two-personalities">Two personalities: one in public, one with you</a></li>
-<li><a href="#takes-up-space">He takes up space without leaving any</a></li>
-<li><a href="#cant-talk-to-him">You can't talk to him about what bothers you</a></li>
-<li><a href="#pulls-you-away">He gradually pulls you away from your people</a></li>
-<li><a href="#doubting-yourself">You've doubted yourself since being with him</a></li>
+<li><a href="#he-plays-down-what-you-feel">He plays down what you feel</a></li>
+<li><a href="#his-moods-become-your-problem">His moods become your problem</a></li>
+<li><a href="#hot-and-cold">He blows hot and cold</a></li>
+<li><a href="#he-never-truly-apologises">He never truly apologises</a></li>
+<li><a href="#actions-and-words">His actions don't match his words</a></li>
+<li><a href="#he-ignores-a-boundary">He ignores a boundary you have set</a></li>
+<li><a href="#all-his-exes-are-crazy">All his exes are "crazy"</a></li>
+<li><a href="#he-tests-your-limits">He tests your limits bit by bit</a></li>
+<li><a href="#charming-with-everyone-but-you">He is charming with everyone, except you</a></li>
+<li><a href="#he-takes-up-all-the-space">He takes up all the space</a></li>
+<li><a href="#impossible-to-talk-to-him">It's impossible to talk to him about what's wrong</a></li>
+<li><a href="#he-pulls-you-away-from-your-people">He pulls you away from the people you love</a></li>
+<li><a href="#you-doubt-yourself">You doubt yourself since you got together</a></li>
 </ol>
 
-<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
-<tr><td>He dismisses your feelings</td><td>Your emotions inconvenience him, he'd rather you stay quiet.</td><td>Serious</td></tr>
-<tr><td>Everything is always your fault</td><td>He never questions himself, ever.</td><td>Serious</td></tr>
-<tr><td>He isolates you from your people</td><td>Gradual isolation, often disguised as affectionate jealousy.</td><td>Very serious</td></tr>
-<tr><td>He runs hot and cold</td><td>Emotional instability or deliberate manipulation.</td><td>Watch closely</td></tr>
-<tr><td>His actions don't match his words</td><td>He says the right things, and does whatever he wants.</td><td>Watch closely</td></tr>
-<tr><td>He makes you feel guilty for his moods</td><td>You carry his moods, he doesn't.</td><td>Serious</td></tr>
-<tr><td>All his exes were "crazy"</td><td>In his story, he has never once been wrong.</td><td>Watch closely</td></tr>
-<tr><td>He doesn't respect your boundaries</td><td>He tests how far he can go, then keeps going.</td><td>Serious</td></tr>
-<tr><td>Charming in public, different in private</td><td>Two versions: one for others, one for you.</td><td>Very serious</td></tr>
-<tr><td>He takes up space without leaving any</td><td>His needs always come first, yours come after.</td><td>Watch closely</td></tr>
-</tbody></table></div>`,
+<p>They come in three families: what he does with your feelings, what he simply does, and what the relationship turns into over time. The last ones on the list are the most serious.</p>`,
     },
     {
-      id: 'emotional-red-flags',
-      title: "Emotional red flags",
-      content: `<p>This is usually where it starts: not with something spectacular, but with a way of interacting that regularly leaves you exhausted, confused, or with a vague sense that you're "too much".</p>`,
+      id: 'what-he-does-with-your-feelings',
+      title: "What he does with your feelings",
+      content: `<p>This is usually where it starts. Nothing spectacular, just a way of reacting to what you feel that leaves you drained, or with the impression that you are "too much".</p>`,
       subsections: [
         {
-          id: 'dismisses-your-feelings',
-          title: "He dismisses what you feel",
-          content: `<p>You explain something that hurt you, and his response is "you're too sensitive", "you're being dramatic" or "it was just a joke". When it keeps happening, this mechanism has a name, <strong>gaslighting</strong>, and it works exactly like that: over time, you start doubting your own perception of reality. In the end, the problem is no longer what he did, the problem is that you dared to bring it up.</p>
-<p>A healthy man might not immediately understand why something affected you. But he listens, and he doesn't ask you to be quiet.</p>`,
+          id: 'he-plays-down-what-you-feel',
+          title: "1. He plays down what you feel",
+          content: `<p>You tell him a remark hurt you, and he answers "you're too sensitive", "you're being dramatic" or "it was a joke". So the subject is no longer what he did, it's the fact that you brought it up.</p>
+<p>When it keeps happening, it has a name: <a href="/en/blog/gaslighting-signs/">gaslighting</a>. Over time, you end up doubting what you saw and heard. A man may well not understand straight away why something hurt you. The difference is that he listens, instead of asking you to keep quiet.</p>`,
         },
         {
-          id: 'his-moods-your-responsibility',
-          title: "His moods become your responsibility",
-          content: `<p>He comes home in a bad mood, and somehow you're walking on eggshells. You change what you were about to say, you wait until he's "in a better place" before bringing anything up, you organise yourself around his current emotional state.</p>
-<p>In other words: you manage his moods, while he doesn't manage his own. That's a mental and emotional load you carry alone, and if you say anything about it, you're "always complaining".</p>`,
+          id: 'his-moods-become-your-problem',
+          title: "2. His moods become your problem",
+          content: `<p>He comes home in a bad mood, and you're the one who adapts: you walk on eggshells, you put off what you wanted to tell him, you wait for "the right moment". In short, you manage his mood for him.</p>
+<p>And if you point it out, you're "always complaining". It's a load you carry alone, and it ends up weighing a lot.</p>`,
         },
         {
           id: 'hot-and-cold',
-          title: "Hot and cold, on repeat",
-          content: `<p>One week he's present, warm, attentive. The next, distant and cold with no explanation. And you spend your time trying to figure out what you did to trigger the change. Spoiler: you didn't do anything. He's the one creating this instability, consciously or not, but the result is the same: you walk on eggshells, you constantly seek his approval, and you feel relieved when he comes back in "hot" mode. That's the anxious attachment cycle he creates, and once you're in it, getting out is hard. If you recognise this dynamic, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> can help you see where things really stand.</p>`,
+          title: "3. He blows hot and cold",
+          content: `<p>One week he's present, attentive, tender. The next, he's distant and cold, and you have no idea why. So you look for what you might have done wrong... and most of the time, nothing. He's the one creating that instability, whether he's aware of it or not.</p>
+<p>This kind of cycle creates what is called an <a href="/en/attachment-style-test/">anxious attachment</a>: you feel relieved every time he turns nice again, and you spend the rest of the time watching for his approval. Once you're in it, it's hard to get out.</p>`,
         },
         {
-          id: 'never-apologises',
-          title: "He never offers a genuine apology",
-          content: `<p>Or he does it in a way that turns the blame back on you: "I'm sorry you took it that way", "I'm sorry but you should have...". That's not an apology, it's a polite counter-attack. A real apology doesn't contain a "but".</p>`,
+          id: 'he-never-truly-apologises',
+          title: "4. He never truly apologises",
+          content: `<p>Or his apologies are turned against you: "I'm sorry you took it that way", "sorry, but you should have...". That's not an apology, it's a polite way of making you responsible. An apology that holds up sounds like "I was wrong, I'm sorry", with no "but" after it.</p>`,
         },
       ],
     },
     {
-      id: 'behavioural-red-flags',
-      title: "Behavioural red flags",
-      content: `<p>These ones are more visible, if you know what to look for. They're not necessarily violent or dramatic acts: they're often small, repeated behaviours that seem harmless taken one by one. Put together, they tell a different story.</p>`,
+      id: 'what-he-simply-does',
+      title: "What he does, plain and simple",
+      content: `<p>These ones are easier to see, as long as you know what to look for. Taken one by one, they are small behaviours that are easy to excuse. Put end to end, they tell another story.</p>`,
       subsections: [
         {
-          id: 'actions-vs-words',
-          title: "His actions don't match his words",
-          content: `<p>He says you matter to him, but he consistently cancels. He says you're important, but he disappears when you need him. He says he'll change, and nothing changes. <strong>Watch what he does, not what he says:</strong> words cost nothing, while actions show his real priorities.</p>`,
+          id: 'actions-and-words',
+          title: "5. His actions don't match his words",
+          content: `<p>He says he cares about you, and <a href="/en/blog/he-cancelled-last-minute/">he cancels at the last minute</a>. He says you matter, and he disappears when you need him. He says he's going to change, and nothing changes. Look at what he does rather than what he says: words cost nothing, actions show his real priorities.</p>`,
         },
         {
-          id: 'doesnt-respect-boundaries',
-          title: "He doesn't respect what you've clearly told him",
-          content: `<p>You set a boundary. You expressed it clearly, calmly, without ambiguity. He crossed it anyway, maybe once, maybe regularly, maybe while minimising it ("why are you being so difficult"). A boundary is not a suggestion: a man who crosses it anyway is showing you he doesn't respect you.</p>`,
+          id: 'he-ignores-a-boundary',
+          title: "6. He ignores a boundary you have set",
+          content: `<p>You told him clearly, calmly, that you didn't want this or that. He did it anyway, once or regularly, sometimes with a laugh ("what's with the drama"). A boundary is not a suggestion. Someone who crosses it knowingly is showing you how little your opinion counts for him.</p>`,
         },
         {
-          id: 'exes-all-crazy',
-          title: "He talks about all his exes like they were crazy",
-          content: `<p>One difficult ex happens. But if all his exes were "unstable", "jealous", "clingy" or "insane", at some point, the only constant in the equation is him. That doesn't mean he's necessarily wrong about everything, but someone who takes zero responsibility for past relationships won't behave differently with you.</p>`,
+          id: 'all-his-exes-are-crazy',
+          title: "7. All his exes are \"crazy\"",
+          content: `<p>A complicated ex happens to everyone. But if all his exes were "unstable", "jealous" or "nuts", the one thing all those stories have in common is him. Someone who takes no responsibility at all for his past relationships is not going to start doing it with you.</p>`,
         },
         {
-          id: 'gradually-tests-limits',
-          title: "He gradually tests your limits",
-          content: `<p>It starts small: a comment about how you dress, a dig at one of your friends, a question about who you were with yesterday. Each time you don't react, it goes one step further. It's rarely brutal at the start, it's gradual, almost imperceptible... and by the time you realise how far it's gone, the line has been moving for a long time.</p>`,
+          id: 'he-tests-your-limits',
+          title: "8. He tests your limits bit by bit",
+          content: `<p>It starts with a comment on your outfit, a joke about one of your friends, a question about who you were with last night. Every time you let it go, it goes one step further. It's so gradual that you only notice afterwards, the day you realise how far it has gone.</p>`,
         },
         {
-          id: 'two-personalities',
-          title: "Two personalities: one in public, one with you",
-          content: `<p>Everyone loves him: charming, funny, considerate with others. And with you, he's critical, cold, or controlling. That gap isn't incidental, because it proves one thing: he knows how to control himself, and he's choosing not to with you. That's not spontaneity, that's contempt.</p>`,
+          id: 'charming-with-everyone-but-you',
+          title: "9. He is charming with everyone, except you",
+          content: `<p>Everyone loves him: funny, caring, helpful. And at home, he's critical, cold, or he decides everything. That gap says one simple thing: he knows how to behave, and he chooses not to with you. It's one of the most serious signs on this list.</p>`,
         },
       ],
+      tip: "Something that helps when you're unsure: write down on your phone, every time, what he did and how you felt, with the date. Reading the list back a month later says more than memory, which tends to make excuses.",
     },
     {
-      id: 'relationship-dynamic-red-flags',
-      title: "Red flags in the relationship dynamic",
-      content: `<p>These are the hardest to identify, because they don't show on a single episode. You have to step back and look at the whole relationship to spot them.</p>`,
+      id: 'what-the-relationship-turns-into',
+      title: "What the relationship turns into over time",
+      content: `<p>These four are the hardest to see, because you can't spot them in one evening. You need to step back over several months to recognise them.</p>`,
       subsections: [
         {
-          id: 'takes-up-space',
-          title: "He takes up space without leaving any",
-          content: `<p>His plans, his moods, his needs, his wants: that's what structures the relationship. Yours come second, and if you say anything, you're "selfish" or "never satisfied". Over time, you do fewer and fewer things for yourself. You feel yourself disappearing... and it's not just a feeling.</p>`,
+          id: 'he-takes-up-all-the-space',
+          title: "10. He takes up all the space",
+          content: `<p>His wishes, his plans, his moods, his needs: everything revolves around him. Yours come after, and if you say so, you're "selfish" or "never happy". Over time, you do fewer and fewer things for yourself, and you recognise yourself less and less.</p>`,
         },
         {
-          id: 'cant-talk-to-him',
-          title: "You can't talk to him about what bothers you",
-          content: `<p>Every attempt at a conversation either escalates into an argument where he comes out on top, stretches into a silence that lasts days, or flips into a situation where you end up apologising for something you didn't do. The result: you avoid important conversations, you swallow it, it builds up. And he never knows anything, because you've learned that telling him doesn't help.</p>`,
+          id: 'impossible-to-talk-to-him',
+          title: "11. It's impossible to talk to him about what's wrong",
+          content: `<p>Every time you try to raise a subject, it ends in an argument he wins, in a silence that lasts for days, or in a <a href="/en/blog/narcissistic-man-signs/">reversal where you're the one apologising</a> for something you didn't do. So you avoid the important conversations and keep everything to yourself. And he knows nothing about it, since you've learned that telling him is pointless.</p>`,
         },
         {
-          id: 'pulls-you-away',
-          title: "He gradually pulls you away from your people",
-          content: `<p>It can look like affectionate jealousy at first: "I just love being with you, I wish you'd stayed." But it turns into comments about your friends, tension every time you spend time without him, quiet guilt-tripping. A few months later: you go out less, you see the people you loved seeing less, you've isolated yourself. And he's become your main source of social connection. That's exactly where he wanted things to end up.</p>`,
+          id: 'he-pulls-you-away-from-your-people',
+          title: "12. He pulls you away from the people you love",
+          content: `<p>At first, it looks like <a href="/en/blog/pathological-jealousy/">affectionate jealousy</a>: "I'd rather you stayed with me tonight". Then come the comments about your friends, the tension every time you go out without him, the guilt he makes you feel. A few months later, you go out less, you see the people you love less, and he has become pretty much your only company.</p>
+<p>It's the most serious red flag on the list, because that's how <a href="/en/coercive-control-test/">coercive control</a> begins: isolate first, the rest comes after.</p>`,
         },
         {
-          id: 'doubting-yourself',
-          title: "You've doubted yourself since being with him",
-          content: `<p>This might be the most telling signal. You were confident before: you knew what you wanted, what you were worth. Now you spend your time wondering if you're "too much" this or "not enough" that, whether you're reacting normally, whether you're being reasonable. That erosion of self-confidence doesn't happen by accident: it's built little by little, one remark after another.</p>`,
+          id: 'you-doubt-yourself',
+          title: "13. You doubt yourself since you got together",
+          content: `<p>This may be the most telling sign. Before, you knew what you wanted and what you were worth. Today, you keep wondering whether you're "too" this or "not enough" that, whether you react normally, whether you're overreacting. It doesn't come from nowhere: one remark after another, he's the one who chipped away at your confidence.</p>`,
         },
       ],
     },
     {
-      id: 'now-what',
-      title: "You recognised several of these. Now what?",
-      content: `<p>First, the fact that you went looking for this list means something: part of you was looking for confirmation, for words to put on what you feel. That's already a first step.</p>
-<p>One or two points on a list don't automatically make someone a bad partner. Everyone has blind spots, behaviours to work on, rough patches. <strong>What separates a red flag from an ordinary problem is repetition and the absence of self-reflection.</strong> Does he acknowledge the problem when you point it out? Does he make real efforts, or visible ones just long enough for you to calm down? Do things change for good, or do you live in permanent anticipation of a change that never comes?</p>
-<p>If you're ticking several boxes and the honest answer to those questions is "no", trust what you feel. Your instinct brought you here, it deserves to be heard.</p>
-<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">How to Recognize an Unhappy Woman in a Relationship: The Real Signs</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      id: 'what-now',
+      title: "You recognised several of them: what now?",
+      content: `<p>First, one or two points on a list don't make someone a bad partner. Everyone has flaws and rough patches. What makes a red flag is the repetition, and above all his reaction when you bring it up. Does he acknowledge the problem? Does he make efforts that last, or efforts that last until you calm down? If you tick several boxes and the answer is no, you can trust what you feel.</p>
+<p>To see things more clearly, you can <a href="/en/toxic-relationship-test/">answer twenty questions about your relationship</a>: it helps to put words on what's going on, and to tell whether you're dealing with unpleasant or with toxic. And if the signs you recognised are mostly the last ones on the list, the isolation and the self-doubt, the article about <a href="/en/blog/toxic-man-in-love/">what a toxic man puts you through day to day</a> also explains how people get out.</p>
+<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read next</span><span class="blog-read-also-title">The signs of an unhappy woman in a relationship</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };
