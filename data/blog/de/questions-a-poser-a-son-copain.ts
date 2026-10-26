@@ -4,11 +4,12 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'fragen-an-deinen-freund',
   title: "100 Fragen an deinen Freund, von leicht bis zu den großen Gesprächen",
-  metaTitle: "100 Fragen an deinen Freund (jenseits von «wie war dein Tag?»)",
-  metaDescription: "Lust auf mehr als das tägliche «alles gut?» 100 Fragen an deinen Freund, sortiert nach Moment und Tiefe, für Gespräche, die wirklich irgendwohin führen.",
+  metaTitle: `100 Fragen an deinen Freund, nach Thema (+ 5 Fangfragen)`,
+  metaDescription: `100 Fragen an deinen Freund, nach Thema und Moment: zum Kennenlernen, über euch beide, lustige, Gefühle, Zukunft, auf Distanz, und 5 nette Fangfragen.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Junges Paar sitzt sich gegenüber im Gespräch, sie stellt lächelnd eine Frage",
   publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Du kennst sein Lieblingsessen und seine Sonntagabendlaune. Aber weißt du, wovor er wirklich Angst hat, oder was er dich nie zu fragen gewagt hat?",
   introduction: `<p>Ihr könnt einen ganzen Abend zusammen verbringen und drei nützliche Sätze wechseln: «was essen wir», «hast du die Schlüssel», «und dir, alles gut?». Keine Sorge, das ist kein Zeichen, dass es eurer Beziehung schlecht geht. Das passiert schlicht jedem Paar. Irgendwann frisst die Logistik das Gespräch auf.</p>
@@ -194,6 +195,18 @@ const article: BlogArticleData = {
 <li>Wenn ich in einer Stunde bei dir auftauchen würde, was würdest du an deinem Abend ändern?</li>
 </ol>
 <p>Auf Distanz besteht die eigentliche Gefahr nicht darin, keine Themen mehr zu haben, sondern darin, dass alle Gespräche einander gleichen; ein <a href="/de/fernbeziehung-quiz/">Quiz für Fernbeziehungen</a>, jeder an seinem Bildschirm, durchbricht diese Routine besser als ein drittes Videotelefonat in Folge.</p>`,
+    },
+    {
+      id: 'fuenf-fangfragen',
+      title: `Fünf Fangfragen für deinen Freund (die netten)`,
+      content: `<p>„Fangfrage“ heißt hier nicht, ihn zu ertappen. Es heißt eine Frage, deren Antwort mehr sagt als die Worte, weil sie zeigt, was er von dir behält. Fünf Beispiele, mit dem, was die Antwort verrät.</p>
+<ol>
+<li><strong>„Weißt du noch, was wir bei unserem ersten Date gegessen haben?“:</strong> Wenn er es weiß, hütet er die Anfänge. Wenn nicht, frag ihn stattdessen, was ihm von dem Abend geblieben ist: Das ist die echte Erinnerung.</li>
+<li><strong>„Was ist mein Lieblingsfilm?“:</strong> Das testet nicht sein Gedächtnis, sondern seine Aufmerksamkeit. Eine falsche Antwort ist nicht schlimm; eine richtige macht den Tag schön.</li>
+<li><strong>„Was würde dir als Erstes fehlen, wenn ich einen Monat weg wäre?“:</strong> Die spontane Antwort ist Gold wert. „Du“ ist zu kurz: Der zweite Satz zählt.</li>
+<li><strong>„Worum habe ich dich letzte Woche gebeten, was du noch nicht gemacht hast?“:</strong> Mit einem Lächeln fragen. Wenn er von selbst darauf kommt, hört er besser zu, als er zeigt.</li>
+<li><strong>„Was sage ich, dem du nie zu widersprechen gewagt hast?“:</strong> Die einzige, bei der er über sich redet: Die Antwort sagt dir, wo er sich zurückhält, und genau da beginnt oft ein nützliches Gespräch.</li>
+</ol>`,
     },
     {
       id: 'nach-frage-100',

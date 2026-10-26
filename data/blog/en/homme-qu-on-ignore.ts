@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'how-men-feel-when-ignored',
-  title: "How does a man feel when you ignore him?",
-  metaTitle: "How does a man feel when you ignore him? | Quiz Couple",
-  metaDescription: "What goes on in a man's head when you stop answering, step by step, and why it almost never gives you the result you are hoping for.",
+  title: "How does a man feel when you ignore him? The 5 stages, one by one",
+  metaTitle: "How Does a Man Feel When You Ignore Him? The 5 Stages",
+  metaDescription: "What a man feels when you ignore him, stage by stage: he doesn't notice, he doubts, he gets annoyed, he texts, then he switches off. And whether it brings him back.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Man sitting alone on a sofa in the evening, phone switched off in his hands, staring into space",
   publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "You have stopped replying, and you are wondering what it does to him. Quite specific things happen, in a fairly predictable order.",
   introduction: `<p>You have stopped replying. Maybe after an argument, maybe because he had stopped making any effort, maybe because someone told you it was the best way to make him come back. And ever since, you have been wondering what is going on at his end.</p>

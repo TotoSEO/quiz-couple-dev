@@ -4,11 +4,12 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'preguntas-para-tu-novio',
   title: "100 preguntas para hacerle a tu novio, de las ligeras a las grandes conversaciones",
-  metaTitle: "100 preguntas para hacerle a tu novio (más allá del «¿qué tal?»)",
-  metaDescription: "¿Quieres ir más allá del «¿qué tal?» diario? 100 preguntas para hacerle a tu novio, ordenadas por momento y profundidad, para conversaciones de verdad.",
+  metaTitle: `100 preguntas para tu novio, por tema (+ 5 trampa)`,
+  metaDescription: `100 preguntas para tu novio, por tema y por momento: para conocerlo, sobre vosotros, sentimientos, futuro, a distancia, y 5 preguntas trampa con respuesta.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Pareja joven sentada frente a frente conversando, ella hace una pregunta y sonríe",
   publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Conoces su plato favorito y su humor del domingo por la noche. ¿Pero sabes qué le da miedo de verdad, o qué nunca se ha atrevido a pedirte?",
   introduction: `<p>Podéis pasar una noche entera juntos e intercambiar tres frases útiles: «¿qué cenamos?», «¿has cogido las llaves?», «¿qué tal tú?». Tranquila, no es señal de que vuestra relación vaya mal. Es lo que le pasa a todas las parejas, sencillamente. Con el tiempo, la logística acaba comiéndose la conversación.</p>
@@ -194,6 +195,18 @@ const article: BlogArticleData = {
 <li>Si apareciera en tu casa dentro de una hora, ¿qué cambiarías de tu noche?</li>
 </ol>
 <p>A distancia, el riesgo real no es quedarse sin temas, es que todos los intercambios acaben pareciéndose; un <a href="/es/quiz-pareja-distancia/">quiz pensado para parejas a distancia</a>, cada uno en su pantalla, rompe esa rutina mejor que una tercera videollamada seguida.</p>`,
+    },
+    {
+      id: 'cinco-preguntas-trampa',
+      title: `Cinco preguntas trampa para tu novio (de las buenas), con lo que dice cada respuesta`,
+      content: `<p>«Pregunta trampa», aquí, no significa pillarlo. Significa una pregunta cuya respuesta dice más que las palabras, porque muestra lo que guarda de ti. Cinco ejemplos, con lo que cuenta cada respuesta.</p>
+<ol>
+<li><strong>«¿Te acuerdas de lo que comimos en nuestra primera cita?»:</strong> Si se acuerda, guarda los comienzos con cariño. Si no, pregúntale qué se quedó de esa noche: ese es el recuerdo de verdad.</li>
+<li><strong>«¿Cuál es mi película favorita?»:</strong> No pone a prueba su memoria, pone a prueba su atención. Una respuesta equivocada no es grave; una acertada te alegra el día.</li>
+<li><strong>«¿Qué echarías de menos primero si me fuera un mes?»:</strong> La respuesta espontánea vale oro. «A ti» se queda corto: la segunda frase es la que cuenta.</li>
+<li><strong>«¿Qué te pedí la semana pasada que todavía no has hecho?»:</strong> Se pregunta sonriendo. Si lo encuentra él solo, escucha más de lo que parece.</li>
+<li><strong>«¿Qué digo yo que nunca te has atrevido a contradecir?»:</strong> La única que lo hace hablar de él: la respuesta te dice dónde se contiene, y ahí es donde suele empezar una conversación útil.</li>
+</ol>`,
     },
     {
       id: 'despues-de-la-100',

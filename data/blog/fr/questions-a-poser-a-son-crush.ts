@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-son-crush',
-  title: "100 questions à poser à son crush",
-  metaTitle: "100 questions à poser à son crush | Quiz Couple",
+  title: `100 questions à poser à son crush, par message ou en vrai`,
+  metaTitle: `100 questions à poser à son crush, par message ou en vrai`,
   metaDescription: "Marre des conversations qui retombent ? 100 questions à poser à ton crush, classées par situation : par message, pour rire, pour flirter, pour savoir si ça matche.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Deux téléphones face à face reliés par des bulles de conversation et un cœur",
   publishedAt: '2026-09-01T11:34:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Le plus dur avec un crush, c'est de trouver la question qui relance la conversation au bon moment. En voici 100, classées par situation.",
   introduction: `<p>Tu connais ce moment. La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>

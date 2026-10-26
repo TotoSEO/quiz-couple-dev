@@ -3,12 +3,13 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'was-fuehlt-ein-mann-wenn-man-ihn-ignoriert',
-  title: "Was fühlt ein Mann, wenn man ihn ignoriert?",
-  metaTitle: "Was fühlt ein Mann, wenn man ihn ignoriert? | Quiz Couple",
-  metaDescription: "Was im Kopf eines Mannes vorgeht, wenn du nicht mehr antwortest, Schritt für Schritt, und warum es fast nie das Ergebnis bringt, auf das du hoffst.",
+  title: "Was fühlt ein Mann, wenn man ihn ignoriert? Die 5 Phasen, eine nach der anderen",
+  metaTitle: "Was fühlt ein Mann, wenn man ihn ignoriert? Die 5 Phasen",
+  metaDescription: "Was ein Mann fühlt, wenn man ihn ignoriert, Phase für Phase: Er merkt nichts, zweifelt, ärgert sich, schreibt, dann schaltet er ab. Und ob ihn das zurückbringt.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Mann sitzt abends allein auf dem Sofa, das ausgeschaltete Handy in den Händen, der Blick ins Leere",
   publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Du antwortest nicht mehr und fragst dich, was das mit ihm macht. Es passieren ziemlich konkrete Dinge, und zwar in einer ziemlich vorhersehbaren Reihenfolge.",
   introduction: `<p>Du hast aufgehört zu antworten. Vielleicht nach einem Streit, vielleicht weil er sich keine Mühe mehr gegeben hat, vielleicht weil dir jemand gesagt hat, das sei der beste Weg, ihn zurückzuholen. Und seitdem fragst du dich, was auf seiner Seite gerade passiert.</p>
