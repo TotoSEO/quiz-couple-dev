@@ -3,7 +3,9 @@ name: Réseaux · entretien
 # Chaque jour : vérifie le jeton de la Page Facebook, fait le ménage du stockage,
 # relève les statistiques, puis écrit l'état du planning (créneaux à remplir,
 # posts récents, idées, statistiques) sur la branche reseaux-atelier, où la
-# routine Claude le lit avant d'écrire.
+# routine Claude le lit avant d'écrire. Depuis le 26 octobre 2026, il envoie
+# un e-mail (Brevo) quand quelque chose demande une main humaine : jeton Meta
+# qui expire ou refusé, publication ou rendu en échec, réserve sous deux semaines.
 
 on:
   schedule:
@@ -34,6 +36,9 @@ jobs:
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          # l'alerte par e-mail des mois sans surveillance (lib/alerte-mail.mjs) :
+          # l'API transactionnelle de Brevo, la clé des campagnes du parcours
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: node reseaux/automates/entretien.mjs --etat "$RUNNER_TEMP/etat.json" --etat-fr "$RUNNER_TEMP/etat-fr.json"
       # Un état par atelier, chacun sur sa branche : reseaux-atelier pour
       # Quiz Couple, mipaps-atelier pour Les mipaps (créée ici si besoin).

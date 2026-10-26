@@ -387,3 +387,59 @@ Ce qu'ils ont en commun, et que les premiers posts des mipaps n'avaient
 pas : la situation est celle du lecteur, pas celle des personnages ; le
 geste qui fait rire est un geste que tout le monde fait ; et la scène finit
 sur l'image, sans phrase pour l'expliquer.
+
+## Les situations de Devir et de Catana (relevé du 26 octobre 2026)
+
+Ce que font les deux plus gros comptes de BD de couple, relevé sur leurs
+légendes et sur les articles qui les reprennent (Demotivateur, Positivr,
+catanacomics.com) : Instagram est illisible depuis une session de travail,
+ce relevé passe par le texte. On reprend la mécanique et les moments, jamais
+le dessin ; chaque reel de la réserve du 26 octobre 2026 en vient ou vient
+d'un moment de la même famille.
+
+Yehuda Devir, « One of Those Days » : la salle de bain occupée (« Il faut
+vraiment que j'y aille ! Ça fait presque une heure ») ; elle grimpée sur
+son dos (« Oui, oui ! Juste là ») ; « Tu veux un coup de main, chérie ? » à
+la muscu ; « Oh mon cœur, c'est MAGNIFIQUE ! » devant un dessin raté ; elle
+qui le porte quand il a trop de travail (« Repose-moi, je peux bosser ! ») ;
+« Tu me laisses bosser s'il te plaît ? » « Nan... » ; le matin d'anniversaire
+(« Fous-moi la paix ! J'suis vieille ! ») ; « Boucle-la ! » pour la ceinture ;
+la caresse qui l'endort ; les moustiques à deux ; « Je n'ai plus rien à me
+mettre ! » devant une armoire pleine ; ses cheveux à elle partout ; « On ne
+devrait pas prendre une douche, là ? » « On n'a qu'à changer les draps
+demain » ; « Mais t'as pris à peine une gorgée ! » « Oui... mais c'était une
+bonne gorgée ! » ; « Ta nouvelle coiffure est la plus belle chose... » « JE
+SUIS CHAUVE !!! » ; « Tu t'en es souvenu !!! » « Bien sûr » (le rappel du
+téléphone) ; « Chérie, t'es où ? » « Chut !!! » (le nouvel épisode) ; « Quoi ?
+Il gèle dehors !! » (elle sous trois couches) ; « Devine quel jour on est ? »
+« Mardi ? » ; « Mon chéri... je n'arrive pas à dormir... » (lui réveillé) ;
+« Dépêche ! On va être en retard ! » « Je suis prête, j'ai juste à mettre
+mes chaussures ».
+
+Catana Comics : « picking a halloween movie », « when we say 'sleep', we
+mean 'turn off brain and couch scroll' », « he yearns to be a fried egg »,
+les pieds gelés sur lui, la couette volée, elle qui mange ses frites à lui.
+
+Les tweets de couples (HuffPost, septembre et octobre 2026, « Funniest
+Tweets From Couples This Week ») qui ont donné un reel : « My husband picked
+a shirt up off the floor and asked if it was clean. I feel like the floor
+already answered that question » ; « yes, my husband leaves a lot of mugs
+upstairs... it's all part of a very delicately balanced dishes ecosystem » ;
+« My wife asked me if she had any 'annoying' habits and then got all
+offended during the power point presentation » ; « Made it to that level of
+marriage where you get in trouble for being able to fall asleep so fast » ;
+« Me: (stands up) Wife: While you're up… » ; « Husband: 'I'm going to the
+store, do you need anything?' » ; « My wife managed to open a jar of pickles
+herself and I am now nonessential » ; « Welcome to marriage. Here's the new
+way you fold towels » ; « commercial break: Husband silent / quiet dialogue
+scene: Husband: so let me tell you about the history of rockets » ; « I have
+a cold and it's pretty bad but my wife has a husband with a cold and
+apparently that's way worse » ; « Marriage is having separate tubes of
+toothpaste » ; « There are two kinds of people. The ones that pack six days
+before a trip, and the ones that wake up day-of... And they marry each
+other ».
+
+Ce qu'on en garde pour un reel : le moment est minuscule et vécu par tout le
+monde ; la chute, c'est un corps (elle sur son dos, lui sous trois couches,
+elle en étoile sur le lit) ; le texte est ce qui se dit pour de vrai, jamais
+un commentaire.

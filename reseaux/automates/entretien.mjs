@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
+import { envoyerAlerte, lignesAlerte } from './lib/alerte-mail.mjs';
 import { ajouterJours, aujourdhui, categorieAttendue, creneauFerme, creneauxOuverts, CRENEAUX, melangeDuCompte, MOTIF_FERME, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
@@ -316,11 +317,25 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   // un état par compte : --etat <fichier> pour Quiz Couple (en), --etat-fr
   // <fichier> pour Les mipaps ; un compte sans fichier est quand même compté
   const comptes = await base.select('social_comptes', 'select=langue&order=langue.asc');
+  const etats = [];
   for (const { langue } of comptes.length ? comptes : [{ langue: 'en' }]) {
     const e = await etat(base, { langue });
     if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve ${langue} de ${e.reserve_jours} jours seulement`);
     const i = process.argv.indexOf(langue === 'en' ? '--etat' : `--etat-${langue}`);
     if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
     console.log(`${langue} : réserve de ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés, ${e.idees.length} idées de Thomas`);
+    etats.push({ compte: langue, reserve_jours: e.reserve_jours, a_corriger: e.a_corriger.length });
+  }
+  // L'alerte par e-mail (26 octobre 2026, pour les mois sans personne devant
+  // l'admin) : les erreurs des dernières 24 heures (le jeton Meta vérifié
+  // plus haut, une publication ou un rendu refusés) et une réserve sous deux
+  // semaines ; un e-mail par passage au plus, jamais une panne de l'entretien.
+  try {
+    const depuis = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+    const erreurs = await base.select('social_journal', `select=source,message,at&niveau=eq.erreur&at=gte.${depuis}&order=at.desc&limit=100`);
+    const lignes = lignesAlerte({ erreurs, etats });
+    if (lignes.length) await envoyerAlerte(lignes, { journal: (...args) => base.journal(...args) });
+  } catch (e) {
+    console.log(`alerte e-mail : ${e.message}`);
   }
 }

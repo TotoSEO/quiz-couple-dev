@@ -11,217 +11,253 @@
       "id": "ani-124",
       "pilier": "contrastes",
       "qui": "les deux",
-      "idee": "quand le livreur sonne | les deux sur le canapé (canape_fond), la sonnette | ils sprintent ouvrir en même temps et se cognent (étoiles) | chute : assis par terre, la pizza entre eux, contents, sans texte"
+      "idee": "quand le livreur sonne | les deux sur le canapé (canape_fond), la sonnette | ils sprintent ouvrir en même temps et se cognent (étoiles) | chute : assis par terre, la pizza entre eux, contents, sans texte",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-132",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "le petit truc rapporté sans raison | il arrive, quelque chose caché derrière le dos, timide | il tend un bubble tea, elle est aux anges | chute : « j'suis passé devant, j'ai pensé à toi »"
+      "idee": "le petit truc rapporté sans raison | il arrive, quelque chose caché derrière le dos, timide | il tend un bubble tea, elle est aux anges | chute : « j'suis passé devant, j'ai pensé à toi »",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-110",
       "pilier": "manque",
       "qui": "les deux",
-      "idee": "« raccroche, toi » « non, toi » | chacun au téléphone, chez soi, tout timide, des cœurs | lui devient timide à son tour | chute : « 1 h plus tard », les deux endormis, le téléphone encore contre eux"
+      "idee": "« raccroche, toi » « non, toi » | chacun au téléphone, chez soi, tout timide, des cœurs | lui devient timide à son tour | chute : « 1 h plus tard », les deux endormis, le téléphone encore contre eux",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-118",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "quand tu racontes ta journée | elle raconte avec les pattes, énergique ; lui sur son téléphone, « mmh mmh » | elle s'arrête et le fixe, il transpire | chute : il pose le téléphone, le menton dans la patte, « et donc ? »"
+      "idee": "quand tu racontes ta journée | elle raconte avec les pattes, énergique ; lui sur son téléphone, « mmh mmh » | elle s'arrête et le fixe, il transpire | chute : il pose le téléphone, le menton dans la patte, « et donc ? »",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-101",
       "pilier": "tendresse",
       "qui": "elle",
-      "idee": "nous deux au lit | collés sous la couette (meubles lit_fond, lit_couette), câlin, cœurs | « un peu plus tard » : il a chaud, il se décale vers le bord ; elle se rapproche en dormant | elle se rapproche encore, il est tout au bord | chute : il tombe du lit, elle dort tranquille au milieu, sans texte"
+      "idee": "nous deux au lit | collés sous la couette (meubles lit_fond, lit_couette), câlin, cœurs | « un peu plus tard » : il a chaud, il se décale vers le bord ; elle se rapproche en dormant | elle se rapproche encore, il est tout au bord | chute : il tombe du lit, elle dort tranquille au milieu, sans texte",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-103",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "quand on doit choisir un film | les deux sur le canapé (canape_fond), la télé devant | il propose (idée), elle fait non de la tête ; elle propose, il fait la tête | « 1 h plus tard » : toujours en train de chercher, la tête dans les mains | chute : les deux dorment l'un sur l'autre, la télé encore allumée"
+      "idee": "quand on doit choisir un film | les deux sur le canapé (canape_fond), la télé devant | il propose (idée), elle fait non de la tête ; elle propose, il fait la tête | « 1 h plus tard » : toujours en train de chercher, la tête dans les mains | chute : les deux dorment l'un sur l'autre, la télé encore allumée",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-105",
       "pilier": "contrastes",
       "qui": "elle",
-      "idee": "toi quand t'as toujours froid et que ta personne a jamais froid | elle tremble (signes flocons), lui content en t-shirt | elle vient se coller à lui | chute : elle lui a pris son pull (objet pull), c'est lui qui tremble maintenant, elle ravie"
+      "idee": "toi quand t'as toujours froid et que ta personne a jamais froid | elle tremble (signes flocons), lui content en t-shirt | elle vient se coller à lui | chute : elle lui a pris son pull (objet pull), c'est lui qui tremble maintenant, elle ravie",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-107",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "« t'as quoi ? » « rien » | il boude, bras croisés, dos tourné, il jette des regards par-dessus son épaule | elle passe sans rien remarquer | il soupire et se met sur son chemin, toujours boudeur | chute : elle le prend dans ses bras, il fond tout de suite"
+      "idee": "« t'as quoi ? » « rien » | il boude, bras croisés, dos tourné, il jette des regards par-dessus son épaule | elle passe sans rien remarquer | il soupire et se met sur son chemin, toujours boudeur | chute : elle le prend dans ses bras, il fond tout de suite",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-102",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "toi quand ta personne dit « j'arrive » | elle prête devant la porte, sac à la patte, contente | « 20 min plus tard » : assise par terre, blasée | chute : il arrive en courant, essoufflé, fier, un seul pied chaussé ; elle se relève sans un mot"
+      "idee": "toi quand ta personne dit « j'arrive » | elle prête devant la porte, sac à la patte, contente | « 20 min plus tard » : assise par terre, blasée | chute : il arrive en courant, essoufflé, fier, un seul pied chaussé ; elle se relève sans un mot",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-109",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "les vidéos qu'on s'envoie toute la journée | elle sur son téléphone, une notification, elle rit | lui sur son téléphone, une notification, il rit | chute : le plan s'élargit, ils sont sur le même canapé, chacun sur son téléphone, à s'envoyer des vidéos"
+      "idee": "les vidéos qu'on s'envoie toute la journée | elle sur son téléphone, une notification, elle rit | lui sur son téléphone, une notification, il rit | chute : le plan s'élargit, ils sont sur le même canapé, chacun sur son téléphone, à s'envoyer des vidéos",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-108",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "chercher un truc qui est juste devant toi | il cherche ses clés partout, panique (sueur) | elle arrive et prend les clés posées juste devant lui | chute : il fait comme s'il le savait, l'air moqueur, elle blasée"
+      "idee": "chercher un truc qui est juste devant toi | il cherche ses clés partout, panique (sueur) | elle arrive et prend les clés posées juste devant lui | chute : il fait comme s'il le savait, l'air moqueur, elle blasée",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-113",
       "pilier": "contrastes",
       "qui": "elle",
-      "idee": "« je suis prête dans 5 minutes » | elle essaie une tenue, se regarde, non | une autre, non (agace) | lui attend, assis par terre | chute : elle repart avec la première, contente ; lui se relève, blasé"
+      "idee": "« je suis prête dans 5 minutes » | elle essaie une tenue, se regarde, non | une autre, non (agace) | lui attend, assis par terre | chute : elle repart avec la première, contente ; lui se relève, blasé",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-104",
       "pilier": "contrastes",
       "qui": "elle",
-      "idee": "« non merci, j'ai pas faim » | il a une pizza, elle croise les bras, sereine | elle regarde la pizza, puis lui | « juste pour goûter » | chute : plus de pizza, elle l'air d'un ange, lui : « euh, il en reste ? »"
+      "idee": "« non merci, j'ai pas faim » | il a une pizza, elle croise les bras, sereine | elle regarde la pizza, puis lui | « juste pour goûter » | chute : plus de pizza, elle l'air d'un ange, lui : « euh, il en reste ? »",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-111",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "s'endormir devant la série | canapé, ils regardent ; il dort au bout de quelques secondes | elle le secoue, il se réveille d'un coup, « je regarde, je regarde » | chute : il ronfle (zzz), elle lui met la couverture quand même"
+      "idee": "s'endormir devant la série | canapé, ils regardent ; il dort au bout de quelques secondes | elle le secoue, il se réveille d'un coup, « je regarde, je regarde » | chute : il ronfle (zzz), elle lui met la couverture quand même",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-114",
       "pilier": "contrastes",
       "qui": "les deux",
-      "idee": "quand on se dispute pour rien | face à face, colère (nuage noir) | dos à dos, bras croisés | chacun jette un œil par-dessus son épaule | chute : ils se jettent dans les bras l'un de l'autre sans rien dire, cœurs"
+      "idee": "quand on se dispute pour rien | face à face, colère (nuage noir) | dos à dos, bras croisés | chacun jette un œil par-dessus son épaule | chute : ils se jettent dans les bras l'un de l'autre sans rien dire, cœurs",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-112",
       "pilier": "contrastes",
       "qui": "elle",
-      "idee": "l'épisode regardé en douce sans l'autre | elle seule sur le canapé, gourmande, popcorn | il arrive, elle cache le popcorn derrière elle | chute : il lance l'épisode, elle fait la surprise devant un épisode qu'elle a déjà vu"
+      "idee": "l'épisode regardé en douce sans l'autre | elle seule sur le canapé, gourmande, popcorn | il arrive, elle cache le popcorn derrière elle | chute : il lance l'épisode, elle fait la surprise devant un épisode qu'elle a déjà vu",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-115",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "la dernière part | un gâteau entre eux, chacun le pousse vers l'autre, poli | « prends-la » « non toi » | elle se retourne une seconde | chute : la part a disparu, il a la bouche pleine, l'air innocent"
+      "idee": "la dernière part | un gâteau entre eux, chacun le pousse vers l'autre, poli | « prends-la » « non toi » | elle se retourne une seconde | chute : la part a disparu, il a la bouche pleine, l'air innocent",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-116",
       "pilier": "manque",
       "qui": "elle",
-      "idee": "le bruit des clés dans la porte | elle sur le canapé, l'air de s'ennuyer | un bruit de porte, elle se redresse d'un coup | chute : elle court jusqu'à lui, câlin qui la soulève, cœurs"
+      "idee": "le bruit des clés dans la porte | elle sur le canapé, l'air de s'ennuyer | un bruit de porte, elle se redresse d'un coup | chute : elle court jusqu'à lui, câlin qui la soulève, cœurs",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-119",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "la musique dans la voiture | elle met sa chanson (notes), contente | il change, content | elle remet la sienne, il fait la tête | chute : la chanson d'après, ils chantent les deux à fond (notes, chante)"
+      "idee": "la musique dans la voiture | elle met sa chanson (notes), contente | il change, content | elle remet la sienne, il fait la tête | chute : la chanson d'après, ils chantent les deux à fond (notes, chante)",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-145",
       "pilier": "tendresse",
       "qui": "elle",
-      "idee": "faire semblant de dormir pour qu'on te porte jusqu'au lit | elle « dort » sur le canapé | il la soulève et la porte | elle ouvre un œil, sourit | chute : il la pose dans le lit, elle se rendort pour de vrai"
+      "idee": "faire semblant de dormir pour qu'on te porte jusqu'au lit | elle « dort » sur le canapé | il la soulève et la porte | elle ouvre un œil, sourit | chute : il la pose dans le lit, elle se rendort pour de vrai",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-121",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "le selfie à deux | elle tient le téléphone, il ferme les yeux | « encore une » : elle fait une grimace | « encore une » : il éternue | chute : elle garde celle où il éternue, ils rient dessus ensemble"
+      "idee": "le selfie à deux | elle tient le téléphone, il ferme les yeux | « encore une » : elle fait une grimace | « encore une » : il éternue | chute : elle garde celle où il éternue, ils rient dessus ensemble",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-122",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "réveiller ta personne en douceur | elle chuchote près de son oreille, il dort | elle tapote son épaule, il dort | elle saute sur le lit | chute : il se réveille d'un bond et la serre, elle rit"
+      "idee": "réveiller ta personne en douceur | elle chuchote près de son oreille, il dort | elle tapote son épaule, il dort | elle saute sur le lit | chute : il se réveille d'un bond et la serre, elle rit",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-144",
       "pilier": "contrastes",
       "qui": "elle",
-      "idee": "quand ta personne te pique ta place au chaud | il se lève une seconde du canapé | elle se glisse à sa place, toute contente | il revient, la voit, blasé | chute : il s'assoit sur elle, elle rit, câlin"
+      "idee": "quand ta personne te pique ta place au chaud | il se lève une seconde du canapé | elle se glisse à sa place, toute contente | il revient, la voit, blasé | chute : il s'assoit sur elle, elle rit, câlin",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-120",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
+      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-123",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "le câlin « juste 2 secondes » | il doit partir, sac à la patte, elle demande un câlin | il pose son sac | il enlève son bonnet | chute : ils sont assis par terre, toujours en câlin, le sac oublié"
+      "idee": "le câlin « juste 2 secondes » | il doit partir, sac à la patte, elle demande un câlin | il pose son sac | il enlève son bonnet | chute : ils sont assis par terre, toujours en câlin, le sac oublié",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-125",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "montrer une vidéo drôle à ta personne | elle tend son téléphone, elle rit d'avance | il regarde, ne rit pas | elle pointe l'écran, « attends, là » | chute : il rit enfin, elle le regarde rire, contente"
+      "idee": "montrer une vidéo drôle à ta personne | elle tend son téléphone, elle rit d'avance | il regarde, ne rit pas | elle pointe l'écran, « attends, là » | chute : il rit enfin, elle le regarde rire, contente",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-138",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "danser dans la cuisine | il met de la musique (notes) et danse tout seul | elle le regarde, blasée | il lui tend la patte | chute : les deux dansent, des notes partout"
+      "idee": "danser dans la cuisine | il met de la musique (notes) et danse tout seul | elle le regarde, blasée | il lui tend la patte | chute : les deux dansent, des notes partout",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-126",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "« ce soir on se fait une grosse soirée » | ils préparent tout : popcorn, couverture, la télé | « 22 h » | chute : les deux dorment sous la couverture, le popcorn pas touché"
+      "idee": "« ce soir on se fait une grosse soirée » | ils préparent tout : popcorn, couverture, la télé | « 22 h » | chute : les deux dorment sous la couverture, le popcorn pas touché",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-127",
       "pilier": "tendresse",
       "qui": "elle",
-      "idee": "quand ça va pas et que ta personne le voit tout de suite | elle assise, triste, nuage noir | il arrive, s'assoit à côté sans rien dire | il pose sa tête sur son épaule | chute : elle sourit, un cœur entre eux"
+      "idee": "quand ça va pas et que ta personne le voit tout de suite | elle assise, triste, nuage noir | il arrive, s'assoit à côté sans rien dire | il pose sa tête sur son épaule | chute : elle sourit, un cœur entre eux",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-139",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "quand ta personne parle en dormant | il dort | il marmonne, une bulle | elle se penche pour écouter | chute : « ...pas les cornichons... », elle rit sous la couette"
+      "idee": "quand ta personne parle en dormant | il dort | il marmonne, une bulle | elle se penche pour écouter | chute : « ...pas les cornichons... », elle rit sous la couette",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-128",
       "pilier": "manque",
       "qui": "lui",
-      "idee": "l'au revoir du soir qui dure | « bon, j'y vais » : il marche vers la porte (objet porte) | il revient pour un bisou | il repart, revient pour un câlin | chute : « 1 h plus tard », il est assis sur le canapé avec elle, le manteau encore sur le dos"
+      "idee": "l'au revoir du soir qui dure | « bon, j'y vais » : il marche vers la porte (objet porte) | il revient pour un bisou | il repart, revient pour un câlin | chute : « 1 h plus tard », il est assis sur le canapé avec elle, le manteau encore sur le dos",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-140",
       "pilier": "tendresse",
       "qui": "elle",
-      "idee": "les chatouilles | elle arrive derrière lui en douce | elle le chatouille, il rit et tombe | chute : il riposte, les deux par terre, morts de rire"
+      "idee": "les chatouilles | elle arrive derrière lui en douce | elle le chatouille, il rit et tombe | chute : il riposte, les deux par terre, morts de rire",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-129",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "quand ta personne chante sous la douche | lui dans la baignoire (objet baignoire), chante fort (notes) | elle se bouche les oreilles (bras oreilles_bouchees) | chute : elle finit par chanter avec lui, des notes partout"
+      "idee": "quand ta personne chante sous la douche | lui dans la baignoire (objet baignoire), chante fort (notes) | elle se bouche les oreilles (bras oreilles_bouchees) | chute : elle finit par chanter avec lui, des notes partout",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-136",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "essayer de faire peur à ta personne | il se cache derrière la porte, malicieux | elle arrive, il saute « bouh » | elle ne bronche pas, blasée | chute : elle lui fait « bouh » à son tour, il tombe à la renverse"
+      "idee": "essayer de faire peur à ta personne | il se cache derrière la porte, malicieux | elle arrive, il saute « bouh » | elle ne bronche pas, blasée | chute : elle lui fait « bouh » à son tour, il tombe à la renverse",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-133",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "« juste une petite sieste » | les deux s'allongent sur le canapé, « 20 min » | « 3 h plus tard » : il fait nuit, ils dorment toujours | chute : ils se réveillent, perdus, « on est quel jour ? »"
+      "idee": "« juste une petite sieste » | les deux s'allongent sur le canapé, « 20 min » | « 3 h plus tard » : il fait nuit, ils dorment toujours | chute : ils se réveillent, perdus, « on est quel jour ? »",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-130",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "regarder ta personne dormir | elle dort, lui assis à côté la regarde, cœurs | elle ouvre un œil, il sursaute | chute : elle le tire sous la couette, câlin"
+      "idee": "regarder ta personne dormir | elle dort, lui assis à côté la regarde, cœurs | elle ouvre un œil, il sursaute | chute : elle le tire sous la couette, câlin",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-001",
@@ -236,12 +272,14 @@
     {
       "id": "ani-003",
       "pilier": "tendresse",
-      "idee": "« Allez, je me lève » : il se lève, va jusqu'à la porte, il fait trop froid, il revient se coucher ; « encore un peu » ; les deux dorment serrés, le réveil sur le côté. Quatre plans, 14 secondes."
+      "idee": "« Allez, je me lève » : il se lève, va jusqu'à la porte, il fait trop froid, il revient se coucher ; « encore un peu » ; les deux dorment serrés, le réveil sur le côté. Quatre plans, 14 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-004",
       "pilier": "contrastes",
-      "idee": "Le bisou raté : il se penche vers elle pour un bisou, elle se tourne au même moment pour regarder le chat, le bisou atterrit sur le côté de sa tête, il est gêné. Trois plans, 11 secondes."
+      "idee": "Le bisou raté : il se penche vers elle pour un bisou, elle se tourne au même moment pour regarder le chat, le bisou atterrit sur le côté de sa tête, il est gêné. Trois plans, 11 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-005",
@@ -267,7 +305,8 @@
     {
       "id": "ani-009",
       "pilier": "contrastes",
-      "idee": "Le tour complet : ils sont fâchés, il boude de dos ; elle le fait tourner d'une patte ; il revient de face, encore boudeur ; elle lui fait un bisou et il fond. Trois plans, 11 secondes."
+      "idee": "Le tour complet : ils sont fâchés, il boude de dos ; elle le fait tourner d'une patte ; il revient de face, encore boudeur ; elle lui fait un bisou et il fond. Trois plans, 11 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-010",
@@ -277,7 +316,8 @@
     {
       "id": "ani-011",
       "pilier": "contrastes",
-      "idee": "« Ce soir, c'est moi qui cuisine » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes."
+      "idee": "« Ce soir, c'est moi qui cuisine » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-012",
@@ -288,7 +328,8 @@
     {
       "id": "ani-013",
       "pilier": "contrastes",
-      "idee": "La couette : elle la tire à elle, il a froid ; il la reprend, c'est elle qui a froid ; au matin les deux sont serrés sous le même coin. Quatre plans, 13 secondes."
+      "idee": "La couette : elle la tire à elle, il a froid ; il la reprend, c'est elle qui a froid ; au matin les deux sont serrés sous le même coin. Quatre plans, 13 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-014",
@@ -318,12 +359,14 @@
     {
       "id": "ani-019",
       "pilier": "contrastes",
-      "idee": "Encore un épisode : le canapé, le popcorn, 22 h ; 1 h, les yeux plats ; 3 h, il dort, elle regarde encore ; 7 h, le réveil, il part en sprint. Quatre plans, 14 secondes."
+      "idee": "Encore un épisode : le canapé, le popcorn, 22 h ; 1 h, les yeux plats ; 3 h, il dort, elle regarde encore ; 7 h, le réveil, il part en sprint. Quatre plans, 14 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-020",
       "pilier": "tendresse",
-      "idee": "Les pieds gelés : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pieds glacés sur lui ; il se réveille en sursaut, « ils sont pas si froids » ; il la garde contre lui. Quatre plans, 14 secondes."
+      "idee": "Les pieds gelés : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pieds glacés sur lui ; il se réveille en sursaut, « ils sont pas si froids » ; il la garde contre lui. Quatre plans, 14 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-021",
@@ -365,12 +408,14 @@
     {
       "id": "ani-028",
       "pilier": "contrastes",
-      "idee": "Quand t'as faim et qu'il n'y a rien : il hésite, rouvre le frigo au cas où, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes."
+      "idee": "Quand t'as faim et qu'il n'y a rien : il hésite, rouvre le frigo au cas où, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-029",
       "pilier": "tendresse",
-      "idee": "Quand ta personne s'endort en deux secondes : il dort la bouche ouverte, elle a les yeux grands ouverts ; à 3 h du matin elle lui glisse un oreiller et le couvre ; elle finit par s'endormir contre lui. Trois plans, 12 secondes."
+      "idee": "Quand ta personne s'endort en deux secondes : il dort la bouche ouverte, elle a les yeux grands ouverts ; à 3 h du matin elle lui glisse un oreiller et le couvre ; elle finit par s'endormir contre lui. Trois plans, 12 secondes.",
+      "retire": "2026-10-26"
     },
     {
       "id": "ani-030",
@@ -388,6 +433,1044 @@
       "pilier": "tendresse",
       "idee": "le câlin qui arrive des deux côtés | elle entre par la gauche en marchant, lui par la droite | ils se voient : joie, ils accélèrent | ils se cognent doucement au milieu (impact), étourdis | chute : câlin quand même, cœurs, une bosse sur chaque front, sans texte",
       "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-201",
+      "qui": "elle",
+      "lieu": "lit",
+      "idee": "toi quand ta personne prend toute la place dans le lit | Le lit vu de trois quarts, les deux assis dedans côte à côte, contents ; vers une seconde et demie ils ferment les yeux et s'endorment chacun de son côté, bien rangés. | « 1 h plus tard » en bas. Elle glisse vers lui en dormant, puis s'allonge en travers du lit ; lui, poussé, se réveille gêné, une goutte de sueur, et finit en boule tout au bord. | Elle dort en travers du lit, en étoile, la bouche ouverte ; lui en boule tout au bord, blasé, puis fatigué ; vers deux secondes et demie il la regarde et fond, un petit cœur monte."
+    },
+    {
+      "id": "ani-202",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne s'installe sur le canapé | Le canapé, les deux assis chacun à sa place, contents ; vers une seconde et demie il ferme les yeux, zen, et commence à se laisser aller. | « 5 min plus tard » en bas. Il s'allonge de tout son long sur le canapé, zen ; elle, surprise, se fait pousser jusqu'au bord, et reste blasée sur l'accoudoir. | Il dort allongé sur tout le canapé ; elle, blasée au bord, regarde, puis vient s'allonger par-dessus lui, contente ; des cœurs montent, lui sourit sans ouvrir les yeux."
+    },
+    {
+      "id": "ani-203",
+      "qui": "lui",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne dit « t'as vu mon message ? » | Lui au milieu gauche, le téléphone à la patte, les yeux dedans, content ; elle arrive de la droite d'un pas décidé, s'arrête à côté de lui, se tourne vers nous et attend, les bras croisés. | Elle passe de l'attente à l'agacement puis à la colère, une veine sur le front ; lui lève les yeux, surpris, puis gêné, une patte derrière la tête, une goutte de sueur. En haut : « j'allais répondre ». | Il supplie, les pattes jointes ; elle boude, tournée vers le bord ; alors il reprend son téléphone et tape ; le téléphone d'elle vibre à côté d'elle, elle le regarde, blasée : il lui a répondu par message."
+    },
+    {
+      "id": "ani-204",
+      "qui": "elle",
+      "lieu": "lit",
+      "idee": "toi quand ta personne a les pieds gelés | Le lit, les deux assis dedans ; lui zen, les yeux fermés ; elle, à droite, grelotte, des frissons autour d'elle, et regarde vers lui avec une idée en tête. | Elle glisse vers lui sous les draps, l'air de rien ; lui ouvre des yeux ronds, un point d'exclamation, puis panique et fait un bond dans le lit, retombe, les frissons passent sur lui. | Elle, collée à lui, zen et réchauffée ; lui, gelé, des flocons autour, puis il la regarde et fond quand même ; un petit cœur monte entre eux."
+    },
+    {
+      "id": "ani-205",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne dit « je suis prête » | Lui à droite, les clés à la patte, prêt à partir, content ; elle entre par la gauche en marchant, fière, et s'arrête au milieu gauche, face à nous. | En haut : « j'ai juste les chaussures à mettre ». Elle a une idée, une ampoule, et repart par la gauche en courant ; lui, blasé, finit par s'asseoir par terre et attend. | « 20 min plus tard » en bas. Lui dort assis par terre ; elle revient par la gauche, radieuse, dans une autre tenue, un sac à la patte, et s'arrête devant lui ; il ne bouge pas."
+    },
+    {
+      "id": "ani-206",
+      "qui": "les deux",
+      "lieu": "dispute",
+      "idee": "nous deux quand on s'est fâchés pour un truc nul | Dos à dos au milieu, les bras croisés, un petit nuage noir au-dessus de chacun ; personne ne bouge, les yeux plissés, chacun regarde son bord. | « 2 min plus tard » en bas. Toujours dos à dos ; elle jette un œil en coin vers lui, puis fait l'indifférente ; lui devient triste, puis jette un œil en coin lui aussi. | Toujours dos à dos, les deux boudent encore ; mais une patte de chacun se tend derrière le dos, vers l'autre, et les deux pattes se trouvent ; un petit cœur monte entre eux."
+    },
+    {
+      "id": "ani-207",
+      "qui": "lui",
+      "lieu": "lit",
+      "idee": "toi quand ta personne s'endort direct | Le lit, les deux assis dedans, contents, ils viennent de dire bonne nuit ; lui bâille, et s'endort d'un coup, allongé, des z ; elle le regarde, surprise. | En haut : « t'es sérieux ? ». Elle, assise dans le lit, passe de surprise à blasée, puis pensive, des petits points, puis s'ennuie ; lui dort sans bouger. | « 2 h plus tard » en bas. Elle, les yeux grands ouverts dans la lumière de son téléphone ; lui roule vers elle en dormant et s'étale de son côté ; elle le regarde et fond, un petit cœur."
+    },
+    {
+      "id": "ani-208",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne refuse de mettre une veste | Dehors, un petit nuage en haut à droite ; elle à gauche, bonnet sur la tête et écharpe autour du cou, contente ; lui à droite, en t-shirt, les pattes sur les hanches, cool. | « 5 min plus tard » en bas. Des flocons tombent ; lui se met à trembler, des frissons, puis supplie en se tournant vers elle, les pattes jointes ; elle le regarde en coin, narquoise. | Les deux serrés l'un contre l'autre au milieu, la même écharpe enroulée autour des deux cous ; lui a le bonnet, elle sourit ; les flocons continuent, un petit cœur monte."
+    },
+    {
+      "id": "ani-209",
+      "qui": "elle",
+      "lieu": "retrouvailles",
+      "idee": "toi quand ta personne rentre d'une journée nulle | Lui au milieu droit, content, il attend ; elle entre par la gauche en traînant les pattes, un nuage noir au-dessus de la tête, déprimée, et s'arrête loin de lui. | Il la voit, s'inquiète, ouvre grand les bras ; elle marche jusqu'à lui et se laisse tomber dans ses bras ; câlin, les yeux fermés ; le nuage noir s'en va, des cœurs montent. | Il la soulève à bout de bras, elle assise sur ses pattes levées, étonnée puis ravie ; il l'emporte vers la droite en marchant, elle au-dessus de lui ; ils sortent du cadre ensemble."
+    },
+    {
+      "id": "ani-210",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne te montre une vidéo | Elle à gauche, le téléphone à la patte, morte de rire devant son écran ; lui à droite, content, s'approche d'un pas pour voir ; elle lui tend le téléphone. | Il regarde la vidéo, attend que ça devienne drôle, reste blasé, puis fait un sourire poli ; elle, à côté, pleure de rire, les larmes aux yeux, et le regarde pour vérifier qu'il rit. | Elle a une nouvelle idée, une ampoule : encore une vidéo ; lui s'ennuie, puis tombe K.-O. par terre, les yeux en croix, un tourbillon ; elle rit de plus belle avec le téléphone."
+    },
+    {
+      "id": "ani-211",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne demande « ça ou ça ? » | Elle au milieu gauche, hésitante, un pull dans chaque patte, un à gauche et un à droite ; lui à droite, content, puis il regarde les deux pulls, curieux. | Il réfléchit, des petits points, puis pointe franchement le pull de gauche, fier de lui ; elle regarde le pull de gauche, puis celui de droite, perplexe. | Elle enfile le pull de droite, celui qu'il n'a pas choisi, et prend la pose, fière ; lui, les bras ballants, bouche bée, puis blasé ; elle lui fait un clin d'œil."
+    },
+    {
+      "id": "ani-212",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne demande « tu dors ? » en pleine nuit | La nuit, une lune en haut à droite ; le lit ; lui dort allongé à gauche, des z ; elle, assise à droite, les yeux grands ouverts, attend, puis réfléchit, des petits points. | Elle regarde vers lui, malicieuse, glisse jusqu'à lui et le pousse ; en haut s'écrit « tu dors ? » ; il se redresse d'un coup, les yeux ronds, un point d'exclamation. | Lui, redressé dans le lit, blasé, bien réveillé ; elle s'est rallongée de son côté et dort déjà, des z ; il la regarde, s'ennuie, puis sourit malgré lui ; un petit cœur."
+    },
+    {
+      "id": "ani-213",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne dit « encore 5 min » le matin | Le lit, le réveil sonne, une horloge en haut à droite ; elle se redresse d'un coup, les yeux ronds, puis fatiguée ; lui dort allongé, des z ; en haut s'écrit « encore 5 min ». | « 20 min plus tard » en bas. Elle sort du lit par la droite, se lève, blasée ; lui n'a pas bougé, toujours allongé, une bulle au nez. | « 1 h plus tard » en bas. Elle, debout à droite, habillée, une tasse à la patte, blasée ; lui dort toujours ; d'un coup il se redresse, panique, des rayons autour de lui : il est en retard."
+    },
+    {
+      "id": "ani-214",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne te raconte sa journée | Le canapé ; elle à droite raconte, les bras qui s'agitent, joyeuse puis en colère puis morte de rire ; lui à gauche écoute, tourné vers elle, attentif. | « 20 min plus tard » en bas. Elle raconte encore, choquée puis surprise puis joyeuse ; lui écoute toujours, puis attend, puis fatigue, les yeux qui tombent. | « 1 h plus tard » en bas. Elle raconte toujours ; lui a les yeux en spirale, hypnotisé ; elle s'arrête, le regarde, le pousse d'une patte ; il sursaute et fait oui de la tête, tout content."
+    },
+    {
+      "id": "ani-215",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne cherche ses clés | Lui traverse la pièce en courant dans un sens puis dans l'autre, paniqué, des gouttes de sueur ; elle, debout à droite, le regarde passer, blasée. | En haut : « t'as pas vu mes clés ? ». Il soulève un coussin, regarde dessous, inquiet ; rien ; il se gratte la tête ; elle, les bras croisés, regarde sa patte à lui, puis pointe du doigt. | Il baisse les yeux : les clés sont dans son autre patte depuis le début ; il devient tout rouge, gêné, une goutte de sueur ; elle rit, puis hausse les épaules, tendre."
+    },
+    {
+      "id": "ani-216",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne tire le plaid | Le canapé, les deux assis sous le même plaid, contents, bien au chaud ; elle regarde vers lui en coin, l'air de rien, malicieuse. | Elle tire le plaid vers elle d'un coup ; lui se retrouve découvert, surpris, puis grelotte, des frissons ; il tire à son tour, elle se retrouve découverte et boude. | Elle grimpe sur ses genoux et s'installe sous le plaid avec lui, contente ; lui, d'abord écrasé, puis content ; le plaid revient au milieu, des cœurs montent."
+    },
+    {
+      "id": "ani-217",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "nous deux quand on marche pas à la même vitesse | Dehors, un arbre à droite ; les deux entrent par la gauche en marchant main dans la main, au même pas, contents ; ils arrivent au milieu. | Il repart à grands pas vers la droite, décidé ; elle essaie de suivre en courant, essoufflée, puis s'arrête, plante les pattes et croise les bras ; il sort du cadre sans la voir. | Il revient par la droite en courant, désolé ; elle, assise par terre, boude ; il se baisse, la prend sur son dos, et repart en marchant avec elle perchée dessus, contente."
+    },
+    {
+      "id": "ani-218",
+      "qui": "lui",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne demande « j'suis belle ? » | Elle à gauche dans un nouveau pull, timide, prend la pose ; lui à droite, le nez dans son téléphone, content, ne lève pas les yeux ; en haut s'écrit « j'suis belle ? ». | Il lève les yeux, surpris, réfléchit, des petits points, puis lève le pouce, content de lui ; elle attend, puis devient blasée, les bras ballants. | Elle se détourne et boude ; il comprend, panique, court jusqu'à elle et la serre dans ses bras ; elle fait la tête encore une seconde, puis fond ; des cœurs."
+    },
+    {
+      "id": "ani-219",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne ronfle | La nuit, la lune ; le lit ; lui dort allongé à gauche, et des notes de musique sortent de lui à chaque ronflement ; elle, assise à droite, les yeux ouverts, attend, puis s'agace. | Elle se met l'oreiller sur la tête, les pattes dessus ; les notes continuent ; elle le pousse d'un coup, il roule sur le côté sans se réveiller ; silence ; elle souffle, soulagée. | « 2 min plus tard » en bas. Elle s'est rallongée, apaisée ; une note repart de lui, puis deux ; elle rouvre un œil, blasée, et remet l'oreiller sur sa tête."
+    },
+    {
+      "id": "ani-220",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux quand on doit choisir un film | Le canapé, la télé en haut ; lui a une idée, une ampoule ; elle fait la grimace, dégoûtée ; elle a une idée à son tour ; lui fait la grimace. | « 1 h plus tard » en bas. Les deux fatigués, la tête dans les pattes ; lui propose encore, sans conviction ; elle fait non ; elle propose ; il fait non ; les deux soupirent. | « 2 h plus tard » en bas. La télé montre toujours le menu ; les deux dorment l'un contre l'autre au milieu du canapé, des z ; un petit cœur monte ; rien n'a été choisi."
+    },
+    {
+      "id": "ani-221",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne fait un cauchemar | La nuit, la lune ; le lit ; les deux dorment ; elle tremble dans son sommeil, des gouttes de sueur, puis se réveille d'un coup, les yeux ronds, apeurée ; lui dort. | Elle regarde autour d'elle, inquiète, puis glisse vers lui et le pousse ; il se réveille, confus, un point d'interrogation, puis la voit et s'inquiète ; il se redresse et lui ouvre les bras. | Elle se blottit contre lui, les deux assis dans le lit, le câlin, les yeux fermés ; des cœurs montent ; au bout d'un moment il se rendort assis, le menton sur sa tête à elle, et elle sourit."
+    },
+    {
+      "id": "ani-222",
+      "qui": "elle",
+      "lieu": "dispute",
+      "idee": "toi quand tu demandes « ça va ? » et qu'elle dit « oui. » | Elle à droite, tournée vers le bord, les bras croisés, un nuage noir, boude ; lui à gauche s'inquiète ; en haut s'écrit « ça va ? » puis « oui. » ; le nuage ne bouge pas. | Il réfléchit, des petits points, hésite, puis s'approche d'elle à petits pas et s'arrête juste à côté, timide ; elle boude toujours, vexée, sans le regarder. | Il ne dit rien et reste là ; elle, toujours fâchée, se laisse aller contre son épaule sans le regarder, les bras croisés, et le nuage noir rétrécit ; il sourit, un petit cœur."
+    },
+    {
+      "id": "ani-223",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne dit « bon, je te laisse » | Chacun de son côté de l'écran, loin l'un de l'autre, le téléphone à la patte, ils rient ; en haut s'écrit « bon, je te laisse » ; personne ne raccroche. | « 10 min plus tard » en bas. Toujours au téléphone, les deux ; elle raconte, joyeuse ; il rit ; elle rit ; il raconte à son tour, les bras qui s'agitent. | « 1 h plus tard » en bas. Elle s'est endormie allongée, le téléphone encore à côté d'elle, des z ; lui parle encore, content, puis s'arrête, surpris du silence, et sourit, tendre ; il garde la ligne."
+    },
+    {
+      "id": "ani-224",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "nous deux quand on range la maison | Elle pousse un gros carton de la gauche vers la droite, en plein effort, des gouttes de sueur ; lui, assis par terre à droite, le téléphone à la patte, content, ne bouge pas. | Elle le fusille du regard, une veine sur le front ; il lève les yeux, surpris, pose le téléphone, se lève d'un bond, décidé, et pointe le carton : il supervise. | Elle soulève le carton au-dessus de sa tête et l'emporte vers la gauche ; lui s'assoit sur le carton suivant, content, et la regarde faire ; elle sort du cadre, blasée."
+    },
+    {
+      "id": "ani-225",
+      "qui": "les deux",
+      "lieu": "lit",
+      "idee": "nous deux le dimanche | « 10 h » en bas. Le lit, les deux dorment allongés côte à côte, des z partout ; rien ne bouge, à part une bulle au nez. | « midi » en bas. Lui se réveille, bâille, se redresse, regarde l'heure sur son téléphone, puis la regarde dormir, et se rallonge contre elle, zen. | « 16 h » en bas. Les deux assis dans le lit, chacun son téléphone, contents, collés l'un à l'autre ; elle pose la tête contre lui ; un petit cœur ; personne n'est sorti du lit."
+    },
+    {
+      "id": "ani-226",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne te regarde dormir | La nuit, la lune ; le lit ; lui dort allongé, la bouche ouverte, une bulle au nez ; elle, assise à côté, le regarde avec des cœurs dans les yeux. | Elle sort son téléphone, le cadre, et prend une photo de lui en train de dormir ; un petit flash ; il bouge un peu, elle se fige, l'air de rien, l'auréole au-dessus de la tête. | « le lendemain » en bas. Debout, elle lui montre son téléphone, fière : la photo est son nouveau fond d'écran ; lui la découvre, bouche bée, puis mort de honte, en boule ; elle rit."
+    },
+    {
+      "id": "ani-227",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne fait les boutiques | Lui debout à droite, un sac à la patte, content ; elle entre par la gauche avec un sac, radieuse, le lui tend, et repart par la gauche en courant. | « 1 h plus tard » en bas. Lui, assis par terre entre les sacs, attend, puis s'ennuie, puis pique du nez ; elle revient encore avec un sac, le pose, et repart. | « 3 h plus tard » en bas. Lui, debout, les bras chargés de sacs et un sac sur la tête, blasé ; elle marche devant lui vers la droite avec une petite fleur, ravie ; il la suit en traînant."
+    },
+    {
+      "id": "ani-228",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne dit « je gère » | Une lampe penchée à gauche ; lui arrive, fier, les pattes sur les hanches, devant la lampe ; elle, à droite, le regarde faire, perplexe. | Il attrape la lampe, force, concentré ; la lampe lui échappe et tombe par terre avec un bruit ; il reste figé, gêné, une goutte de sueur ; elle est blasée. | Elle vient, le pousse doucement, ramasse la lampe, la pose droite d'un geste, et repart les pattes sur les hanches ; il reste là, bouche bée, puis applaudit."
+    },
+    {
+      "id": "ani-229",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne a les mains gelées | Dehors, des flocons ; elle à gauche grelotte, les bras croisés, des frissons ; lui à droite, écharpe autour du cou, tout content, ne se doute de rien. | Elle s'approche, l'air de rien, et lui glisse les deux pattes dans le cou sous l'écharpe ; il ouvre des yeux ronds, bondit sur place, puis grelotte à son tour. | Elle garde les pattes au chaud sur lui, zen, les yeux fermés ; lui tremble, des flocons autour, puis se résigne et la serre contre lui ; un petit cœur monte."
+    },
+    {
+      "id": "ani-230",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne rentre tard et veut pas te réveiller | La nuit, la lune ; le lit ; elle dort allongée à droite ; lui entre par la gauche sur la pointe des pattes, le doigt sur la bouche, très concentré. | Il avance encore d'un pas et marche sur une chaussette qui traîne ; il glisse, tombe de tout son long avec un grand bruit, les yeux en croix. | Il reste par terre, immobile, l'auréole au-dessus de la tête, l'air de rien ; elle le regarde depuis le lit, furieuse, puis blasée, puis se recouche en lui tournant le dos."
+    },
+    {
+      "id": "ani-231",
+      "qui": "les deux",
+      "lieu": "amis",
+      "idee": "nous deux quand on dit « on y va » chez des amis | Debout tous les deux à droite, près de la porte, les clés à la patte, prêts à partir, contents ; en haut s'écrit « bon, on y va ». | « 1 h plus tard » en bas. Toujours debout au même endroit, ils rient, ils racontent, les bras qui s'agitent ; personne n'a bougé d'un pas. | « 2 h plus tard » en bas. Lui s'est assis par terre contre la porte et dort, des z ; elle raconte encore, radieuse ; elle baisse les yeux sur lui, puis s'assoit à côté et continue."
+    },
+    {
+      "id": "ani-232",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne a une nouvelle série | Le canapé, la télé ; lui seul, assis au milieu, hypnotisé par l'écran, les yeux en spirale ; elle entre par la droite, s'assoit à côté de lui, contente ; il ne bouge pas. | Elle lui parle, les bras qui bougent ; rien ; elle agite une patte devant ses yeux ; rien ; elle pose la tête sur son épaule ; rien ; il est toujours hypnotisé. | Elle abandonne, regarde l'écran à son tour, d'abord blasée, puis curieuse, puis les yeux en spirale elle aussi ; les deux hypnotisés, collés, devant la télé."
+    },
+    {
+      "id": "ani-233",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne veut un bisou au réveil | Le lit, le matin ; lui se penche vers elle, la bouche en cœur, pour un bisou ; elle fait la grimace, dégoûtée, et le repousse d'une patte. | Il est tout triste ; elle pointe la brosse à dents posée à côté ; il comprend, se lève et sort du lit par la gauche, en traînant. | Il revient par la gauche, radieux, la brosse à dents encore à la patte, et saute dans le lit ; elle rit ; il se penche, elle fond, bisou ; des cœurs."
+    },
+    {
+      "id": "ani-234",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne laisse traîner ses affaires | Lui entre par la gauche, content, laisse tomber un pull par terre en passant, puis une chaussette ; elle, à droite, les ramasse derrière lui et les met dans un carton. | Il se retourne, s'assoit par terre, et pose son écharpe à côté de lui, puis son bonnet ; elle, la veine qui bat, les ramasse encore et les jette dans le carton. | Elle le soulève lui aussi, le porte jusqu'au carton et l'y dépose ; il dépasse du carton, surpris puis content ; elle s'essuie les pattes, fière, les pattes sur les hanches."
+    },
+    {
+      "id": "ani-235",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne te fait porter les courses | Dehors ; lui à droite, un sac dans chaque patte, content ; elle entre par la gauche avec deux sacs, lui en tend un, puis l'autre ; il les prend, les bras levés. | Lui tremble sous les sacs, en plein effort, des gouttes de sueur ; elle, les pattes libres, cueille une petite plante en pot au passage, ravie, et la lui pose sur la tête. | Il marche vers la droite, chargé des sacs et de la plante sur la tête, blasé ; elle marche devant lui, légère, les pattes vides, et se retourne pour lui envoyer un cœur."
+    },
+    {
+      "id": "ani-236",
+      "qui": "les deux",
+      "lieu": "sport",
+      "idee": "nous deux quand on dit « demain on va courir » | Les deux debout, décidés, les pattes sur les hanches, des étincelles, prêts à tout ; en haut s'écrit « demain, 7 h, on court ». | « le lendemain, 7 h » en bas. Le lit, le réveil sonne ; les deux se redressent, les yeux ronds ; ils se regardent ; ils se rallongent en même temps et se rendorment. | « la semaine suivante » en bas. Debout, décidés, les pattes sur les hanches, les étincelles ; puis ils se regardent, hésitent, et se tournent vers le lit derrière eux."
+    },
+    {
+      "id": "ani-237",
+      "qui": "elle",
+      "lieu": "maison",
+      "idee": "toi quand ta personne attend un colis | La porte à droite ; elle fait les cent pas devant, regarde l'horloge, attend ; la sonnette retentit, elle sprinte vers la porte, ouvre : rien, déçue. | « le lendemain » en bas. Elle attend encore devant la porte, puis s'assoit par terre, puis se couche en boule devant la porte ; lui lui apporte un coussin, désolé. | La sonnette ; elle bondit, ouvre, et un gros carton est là ; elle saute de joie, le serre dans ses bras avec des cœurs ; lui, derrière, applaudit, puis attend son câlin à lui."
+    },
+    {
+      "id": "ani-238",
+      "qui": "elle",
+      "lieu": "saisons",
+      "idee": "toi quand ta personne te réveille parce qu'il neige | La nuit, le lit ; lui dort allongé ; elle est debout à la fenêtre à droite, émerveillée, des flocons derrière la vitre ; elle se retourne vers lui, joyeuse, et court le secouer. | Il se redresse, confus, blasé ; elle le tire par la patte hors du lit ; il résiste, se laisse traîner, les yeux fermés ; elle l'emmène vers la droite en tirant. | Dehors, la nuit, la neige qui tombe ; elle, émerveillée, les bras ouverts sous les flocons ; lui, en pyjama, grelotte, des flocons sur la tête ; il la regarde et fond ; un cœur."
+    },
+    {
+      "id": "ani-239",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne lit au lit avec la lumière | Le lit, la lampe allumée sur la table de nuit à droite ; elle, assise, un livre à la patte, concentrée ; lui à gauche, allongé, se cache les yeux, puis boude. | Il s'exaspère, une veine ; elle le regarde, désolée, ferme le livre, éteint la lampe ; le noir ; lui soulagé, les yeux fermés, un petit sourire. | « 2 min plus tard » en bas. Elle sort son téléphone sous le drap, la lumière de l'écran sur son visage, hypnotisée ; lui rouvre un œil, blasé, et se met l'oreiller sur la tête."
+    },
+    {
+      "id": "ani-240",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne est malade | Le lit ; lui, allongé, malade, le nez rouge, une boîte de mouchoirs à côté, se plaint, pleure presque ; elle arrive de la droite avec une tasse fumante, inquiète. | Elle pose la tasse, lui tapote la tête, patiente ; il se plaint encore, supplie, veut un câlin ; elle lève les yeux au ciel, puis se penche et le serre, gentille. | « le lendemain » en bas. Elle, allongée, malade à son tour, le nez rouge, les mouchoirs ; lui, debout, plein d'énergie, lui apporte une tasse, tout fier d'être guéri ; elle le fusille du regard."
+    },
+    {
+      "id": "ani-241",
+      "qui": "lui",
+      "lieu": "sport",
+      "idee": "toi quand ta personne revient de son footing | Elle, tranquille au milieu, lit un livre, zen ; lui entre par la gauche en courant, essoufflé, en sueur, radieux, et vient vers elle les bras ouverts pour un câlin. | Elle lève les yeux, dégoûtée, se bouche le nez et s'enfuit par la droite ; il la poursuit en courant, tout content, les bras toujours ouverts. | Il l'a rattrapée au milieu : câlin, lui ravi, les yeux fermés ; elle, écrasée dedans, les yeux en croix, la langue sortie, K.-O. ; des petits cœurs montent quand même."
+    },
+    {
+      "id": "ani-242",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne demande « combien tu m'aimes ? » | Les deux face à face ; elle, timide, pose la question ; en haut s'écrit « tu m'aimes ? » ; lui répond d'un hochement, content ; elle insiste : « combien ? ». | Il écarte les bras un peu, timide ; elle fait la moue, pas convaincue ; il écarte plus grand, les bras tout ouverts ; elle hausse un sourcil, blasée. | Il s'étire de toute sa hauteur, les bras au ciel, tout entier tendu vers le plafond, les étincelles ; elle fond, les yeux en cœur, et vient se blottir contre lui ; des cœurs."
+    },
+    {
+      "id": "ani-243",
+      "qui": "les deux",
+      "lieu": "amis",
+      "idee": "nous deux quand on reçoit du monde | La maison en désordre : un pull par terre, un coussin, un sac ; les deux affalés sur le canapé, blasés ; une horloge ; ils se regardent, les yeux ronds : les invités arrivent. | Panique : ils sprintent dans tous les sens, elle ramasse le pull, il attrape le coussin, ils se croisent, se cognent presque, tout disparaît dans un carton. | La sonnette ; les deux debout, bien droits devant la porte, l'auréole au-dessus de la tête, le sourire parfait, les pattes dans le dos, comme si rien ne s'était passé ; derrière, le carton déborde."
+    },
+    {
+      "id": "ani-244",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne fait un câlin trop long | Les deux au milieu, câlin, les yeux fermés, des cœurs qui montent ; elle est contente, lui aussi ; le câlin ne s'arrête pas. | « 5 min plus tard » en bas. Toujours le câlin ; lui n'a pas bougé, ravi ; elle ouvre un œil, attend, regarde l'heure derrière lui, puis s'ennuie. | « 20 min plus tard » en bas. Toujours le câlin ; lui n'a toujours pas bougé ; elle s'est endormie debout dans ses bras, des z ; il la regarde et sourit, un petit cœur."
+    },
+    {
+      "id": "ani-245",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne voit un chat | Dehors, un arbre ; les deux marchent main dans la main vers la droite ; un chat est assis au pied de l'arbre ; elle s'arrête net, émerveillée, et le montre du doigt. | Elle s'accroupit près du chat, les yeux en cœur ; lui, debout, les bras croisés, blasé, attend ; elle lui tend le chat ; il fait non de la tête, pas convaincu. | Lui, debout, le chat dans les bras, d'abord gêné ; le chat se blottit ; il fond complètement, les yeux en cœur, des cœurs qui montent ; elle, derrière, prend une photo, ravie."
+    },
+    {
+      "id": "ani-246",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne joue à la console | Le canapé, la télé ; lui, la manette à la patte, concentré, penché en avant ; elle s'assoit à côté, contente, et attend qu'il la regarde ; rien. | Elle vient s'asseoir sur ses genoux, entre lui et l'écran ; il penche la tête pour voir l'écran à côté d'elle, toujours concentré ; elle s'exaspère. | Elle attrape la deuxième manette, s'assoit à côté, et joue ; en quelques secondes elle gagne, triomphante, les bras levés ; lui, la manette qui tombe, choqué."
+    },
+    {
+      "id": "ani-247",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand le lit est froid en rentrant des toilettes | La nuit, la lune ; le lit ; lui dort à gauche ; elle se lève de son côté, à droite, en traînant, les yeux fermés, et sort par la droite. | Elle revient par la droite, se recouche de son côté : il est glacé ; elle grelotte, des frissons, des flocons ; elle regarde le côté de lui, bien chaud, malicieuse. | Elle le pousse de son côté chaud vers le côté froid et prend sa place ; il glisse en dormant, se réveille d'un coup, choqué, glacé, des flocons ; elle dort déjà, zen."
+    },
+    {
+      "id": "ani-248",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne parle en dormant | La nuit, la lune ; le lit ; lui dort allongé, la bouche qui bouge, des petits points sortent de lui ; elle, assise à côté, se réveille et l'écoute, perplexe. | En haut s'écrit ce qu'il marmonne : « non... pas les pingouins... » ; elle se retient de rire, les pattes sur la bouche ; il fronce les sourcils en dormant, inquiet. | Elle se penche et lui répond tout bas, l'air sérieux ; en haut : « t'inquiète, je les ai chassés » ; il sourit dans son sommeil, apaisé ; elle se recouche, fière d'elle."
+    },
+    {
+      "id": "ani-249",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne pleure devant un film | Le canapé, la télé ; elle pleure à chaudes larmes, les mouchoirs à côté ; lui, blasé, regarde l'écran, les bras croisés, puis la regarde, un peu inquiet. | Il lui tend la boîte de mouchoirs, gentil ; elle se mouche, le remercie d'un sourire, et replonge dans le film ; lui regarde l'écran à son tour, curieux ; sa lèvre tremble. | Les deux pleurent à grosses larmes devant la télé, deux fontaines, lui encore plus fort qu'elle ; elle lui tend un mouchoir sans quitter l'écran des yeux ; il se mouche bruyamment."
+    },
+    {
+      "id": "ani-250",
+      "qui": "les deux",
+      "lieu": "lit",
+      "idee": "nous deux pour le côté du lit | Le lit vide ; les deux arrivent en même temps, lui par la gauche, elle par la droite, et se jettent sur le même côté, le droit ; ils se cognent, deux points d'exclamation. | Collés sur le même côté, ils se regardent en chiens de faïence ; elle boude ; il boude ; elle le pousse un peu ; il ne bouge pas ; il la pousse ; elle ne bouge pas. | « 1 h plus tard » en bas. Elle dort sur le côté droit, victorieuse, une étincelle ; lui dort en travers du pied du lit, replié, un oreiller sous la tête ; les deux dorment, des z."
+    },
+    {
+      "id": "ani-251",
+      "qui": "elle",
+      "lieu": "maison",
+      "idee": "toi quand ta personne travaille à la maison | Elle assise par terre devant son ordinateur, concentrée ; lui arrive par la droite, content, s'arrête derrière elle et attend qu'elle le regarde ; rien. | Il s'assoit à côté d'elle, supplie, les pattes jointes ; elle lève une patte sans le regarder : chut ; il se couche par terre à côté, tout triste, le menton au sol. | « 1 h plus tard » en bas. Elle ferme l'ordinateur, s'étire, se retourne : il s'est endormi par terre à côté d'elle, en boule, des z ; elle sourit, se couche contre lui ; un cœur."
+    },
+    {
+      "id": "ani-252",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand la salle de bain est occupée | Une porte fermée à droite ; elle attend devant, pressée, se dandine d'une patte sur l'autre ; une horloge en haut ; elle frappe à la porte. | En haut : « j'arrive, 2 minutes ! ». Elle s'assoit par terre contre le mur, puis se couche, puis se relève, furieuse, une veine, et frappe encore plus fort. | La porte s'ouvre : lui est assis par terre dans la salle de bain, le téléphone à la patte, tout content, pas du tout prêt ; elle reste figée, bouche bée, puis le sort de là en le tirant."
+    },
+    {
+      "id": "ani-253",
+      "qui": "les deux",
+      "lieu": "saisons",
+      "idee": "nous deux un soir de décembre | « 17 h » en bas. Les deux à la fenêtre, de dos à moitié, regardent dehors : il fait déjà nuit, la lune ; ils se retournent vers nous, blasés, en même temps. | « 18 h » en bas. Le canapé, les deux sous le plaid avec une tasse chacun, contents, bien au chaud ; elle pose la tête sur son épaule ; des petits cœurs. | « 19 h » en bas. Le lit ; les deux déjà couchés, en pyjama, les yeux fermés, des z ; dehors la lune ; personne ne bouge, c'est l'hiver."
+    },
+    {
+      "id": "ani-254",
+      "qui": "elle",
+      "lieu": "lit",
+      "idee": "toi quand ta personne a froid dans le lit | Le lit, la nuit ; elle grelotte sous les draps, des frissons, en boule ; lui dort à côté, bien au chaud, de la vapeur au-dessus de lui. | Elle se colle à lui, puis passe par-dessus lui et se glisse entre lui et le bord : il est devenu son radiateur ; il se réveille à moitié, gêné, et se décale. | Elle dort collée contre lui, zen, les frissons partis ; lui a chaud, de la vapeur, essaie de pousser le drap d'une patte ; il la regarde, sourit, et la laisse ; un cœur."
+    },
+    {
+      "id": "ani-255",
+      "qui": "lui",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne a « juste une question » | Lui au milieu, prêt à partir, un sac à la patte ; elle à droite l'appelle d'un signe ; en haut s'écrit « juste une question ». Il revient vers elle, content. | « 20 min plus tard » en bas. Elle parle, les bras qui s'agitent, une idée après l'autre ; lui a posé le sac, écoute, puis regarde l'heure sur son téléphone, inquiet. | « 1 h plus tard » en bas. Lui est assis par terre, le sac sur les genoux, résigné ; elle parle encore, radieuse ; elle s'arrête enfin, le regarde : « bon, à ce soir ! », et l'embrasse."
+    },
+    {
+      "id": "ani-256",
+      "qui": "elle",
+      "lieu": "saisons",
+      "idee": "toi quand ta personne veut une photo de la neige | Dehors, la neige qui tombe, un arbre blanc ; lui, bonnet sur la tête, grelotte ; elle, le téléphone à la patte, émerveillée, le place devant l'arbre d'une poussée. | Elle cadre, il sourit poliment ; elle fait non de la tête, lui fait signe de reculer, encore, encore ; il recule jusqu'à l'arbre en grelottant ; elle n'est toujours pas contente. | « 40 photos plus tard » en bas. Lui est devenu un bonhomme de neige, immobile, couvert de flocons, les yeux en croix ; elle regarde son téléphone, enfin ravie : la photo est parfaite."
+    },
+    {
+      "id": "ani-257",
+      "qui": "lui",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne range « vite fait » avant de partir | Elle à droite, près de la porte, prête, les clés à la patte ; lui au milieu, sur le point de sortir, voit un coussin de travers et va le remettre ; elle lève les yeux au ciel. | « 10 min plus tard » en bas. Il passe un chiffon partout, la lampe, le carton, à fond, en sueur ; elle s'est assise par terre contre la porte et regarde son téléphone. | « 1 h plus tard » en bas. La maison est impeccable ; lui, fier, les pattes sur les hanches, des étincelles ; elle dort par terre contre la porte, les clés tombées à côté ; il la regarde, gêné."
+    },
+    {
+      "id": "ani-258",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne chante sous la douche | Une porte fermée à gauche ; des notes de musique en sortent, de plus en plus grosses ; elle, assise par terre à droite avec une tasse, lève les yeux, blasée. | Les notes continuent, encore plus grosses ; elle pose la tasse, se bouche les oreilles, puis rit malgré elle ; puis sa patte bat la mesure ; elle se lève. | Elle danse dans le couloir devant la porte, en chantant à son tour, des notes partout ; la porte s'ouvre : lui, de la mousse sur la tête, chante avec elle ; ils dansent tous les deux."
+    },
+    {
+      "id": "ani-259",
+      "qui": "elle",
+      "lieu": "maison",
+      "idee": "toi quand ta personne ouvre la fenêtre en plein hiver | Lui à droite, rouge, de la vapeur au-dessus de la tête, a trop chaud ; il ouvre la fenêtre derrière lui, soulagé ; des flocons entrent ; elle, à gauche sous un plaid, lève les yeux. | Elle grelotte, des frissons, des flocons jusqu'à elle ; elle enfile un bonnet, puis une écharpe, puis se roule en boule dans le plaid ; lui, en t-shirt, respire à pleins poumons, ravi. | Il se retourne enfin vers elle : une boule de plaid avec un bonnet, deux yeux qui dépassent, des flocons dessus ; il ferme la fenêtre, gêné, et vient se glisser dans le plaid avec elle."
+    },
+    {
+      "id": "ani-260",
+      "qui": "les deux",
+      "lieu": "matin",
+      "idee": "nous deux le lundi matin | « lundi, 7 h » en bas. Les deux près de la porte, un sac chacun, les yeux cernés, un nuage noir au-dessus de chaque tête ; ils se regardent, puis la porte, puis sortent en traînant. | « vendredi, 18 h » en bas. Les deux entrent par la droite en courant, jettent les sacs, et dansent au milieu, des notes, des étincelles, radieux. | « vendredi, 20 h » en bas. Le canapé ; les deux affalés dessous le plaid, endormis, des z ; les sacs par terre ; la soirée du vendredi, c'est ça."
+    },
+    {
+      "id": "ani-261",
+      "qui": "elle",
+      "lieu": "dispute",
+      "idee": "toi quand ta personne dit « c'est pas grave » | Lui à gauche, désolé, les pattes jointes ; elle à droite, le sourire un peu figé ; en haut s'écrit « c'est pas grave » ; il souffle, soulagé ; un petit nuage apparaît au-dessus d'elle. | « 5 min plus tard » en bas. Le nuage au-dessus d'elle grossit, grossit ; elle boude, les bras croisés ; lui le remarque, inquiet, puis panique à mesure que le nuage prend toute la place. | Le nuage est énorme, il pleut dessous ; elle boude dessous, trempée ; lui arrive avec un parapluie, le tient au-dessus d'elle, et attend, désolé ; elle finit par sourire en coin."
+    },
+    {
+      "id": "ani-262",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne a une nouvelle passion | Lui entre par la gauche, radieux, une plante en pot dans les pattes, et la pose au milieu ; elle, à droite, trouve ça mignon, un petit cœur. | « 1 semaine plus tard » en bas. Il entre encore, avec deux plantes cette fois, les pose à côté de la première ; elle, perplexe, un point d'interrogation. | « 1 mois plus tard » en bas. Des plantes partout, elle est coincée entre deux pots, blasée, une feuille sur la tête ; lui, au milieu de sa jungle, arrose, émerveillé, des cœurs autour."
+    },
+    {
+      "id": "ani-263",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne a vu la fin de la série sans toi | Le canapé, la télé ; elle, l'air innocent, l'auréole au-dessus de la tête ; lui lance l'épisode, content ; elle regarde ailleurs, siffle. | Il la regarde, suspicieux ; elle fait l'innocente, puis craque, honteuse, les pattes sur le visage ; il comprend, choqué, un point d'exclamation, puis furieux, une veine. | Elle veut se faire pardonner et commence à raconter ; il se bouche les oreilles et chante fort, la la la, les yeux fermés ; elle rit et lui met la main sur la bouche ; un petit cœur."
+    },
+    {
+      "id": "ani-264",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand ça sonne à la porte | Le canapé, les deux assis, contents ; la sonnette retentit ; les deux ferment les yeux en même temps et font semblant de dormir, des z un peu trop gros. | Ça sonne encore ; lui ouvre un œil en coin ; elle ouvre un œil en coin ; ils se voient ; ils referment les yeux tous les deux, encore plus endormis ; ça sonne encore. | Elle le pousse d'un coup du canapé ; il tombe par terre, surpris ; elle se rendort aussitôt, l'auréole au-dessus de la tête ; il se relève, blasé, et va ouvrir en traînant."
+    },
+    {
+      "id": "ani-265",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne ramène une fleur sans raison | Elle à droite, assise par terre avec un livre, tranquille ; lui entre par la gauche, les pattes derrière le dos, l'air malicieux, et s'arrête devant elle. | Elle lève les yeux, curieuse ; il sort la fleur de derrière son dos, tout timide, et la lui tend ; elle reste bouche bée, puis ses yeux deviennent des cœurs. | Elle se lève d'un bond, lui saute au cou, la fleur à la patte ; câlin, des cœurs partout ; elle pleure de joie ; lui, un peu étouffé, sourit, gêné et content."
+    },
+    {
+      "id": "ani-266",
+      "qui": "lui",
+      "lieu": "dispute",
+      "idee": "toi quand ta personne dit « faut qu'on parle » | Lui au milieu, tranquille, le téléphone à la patte ; elle arrive de la droite, sérieuse ; en haut s'écrit « faut qu'on parle » ; il se fige, les yeux vides. | Il passe en revue toute sa vie : panique, sueurs, tremblements, les yeux en spirale ; il se met en boule ; elle réfléchit encore à la formulation, les petits points. | En haut s'écrit la suite : « ... pour les vacances » ; il relève la tête, surpris, puis respire enfin, soulagé, et s'étale de tout son long, K.-O. de soulagement ; elle, perplexe."
+    },
+    {
+      "id": "ani-267",
+      "qui": "elle",
+      "lieu": "matin",
+      "idee": "toi quand ta personne se lève tôt et toi non | Le lit, le matin tôt, une horloge ; lui se lève plein d'énergie, saute du lit, allume la lampe ; elle, allongée, se cache les yeux, et grogne. | Il traverse la pièce en sifflant, une tasse à la patte, ouvre la fenêtre, chante ; elle enfonce la tête sous l'oreiller, une veine qui bat. | Il repasse près du lit ; une patte sort de sous l'oreiller, l'attrape et le tire dans le lit ; il tombe à côté d'elle, surpris, puis se rendort aussitôt ; elle sourit sous l'oreiller."
+    },
+    {
+      "id": "ani-268",
+      "qui": "lui",
+      "lieu": "lit",
+      "idee": "toi quand ta personne a trop chaud, puis trop froid | Le lit ; elle, allongée, a trop chaud, de la vapeur, repousse le plaid ; lui, à côté, le ramasse et le plie, gentil ; elle se met à grelotter, des frissons. | Il remet le plaid sur elle ; elle a trop chaud, de la vapeur ; il le retire ; elle a trop froid, des flocons ; il le remet ; de plus en plus vite ; il transpire. | Lui est K.-O., allongé en travers du lit, les yeux en croix, le plaid sur la tête ; elle, assise, enfin bien, zen, lui tapote la tête ; un petit cœur."
+    },
+    {
+      "id": "ani-269",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne dit « j'ai pas sommeil » à 2 h | La nuit, la lune ; le lit ; elle dort allongée ; lui, assis, les yeux grands ouverts, plein d'énergie, les bras levés ; en haut s'écrit « j'ai pas sommeil ». | Il parle, des petits points, il a des idées, une ampoule ; elle se met l'oreiller sur la tête ; il parle encore ; elle lui tourne le dos ; il parle toujours. | « 3 min plus tard » en bas. Il s'est endormi d'un coup, allongé, la bouche ouverte, il ronfle ; elle, maintenant, a les yeux grands ouverts, blasée, puis furieuse ; la lune la regarde."
+    },
+    {
+      "id": "ani-270",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne te tient la main en dormant | La nuit, la lune ; le lit ; les deux dorment, elle lui tient la patte dans son sommeil ; il se réveille, les yeux ronds : il a envie de se lever. | Il essaie de retirer sa patte tout doucement ; elle serre plus fort en dormant ; il tire un peu ; elle se rapproche, collée ; il abandonne, résigné, des gouttes de sueur. | « 1 h plus tard » en bas. Il n'a pas bougé, la patte toujours dans la sienne, les yeux grands ouverts, résigné ; il la regarde, et son regard change : des cœurs ; il se rendort en souriant."
+    },
+    {
+      "id": "ani-271",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne t'envoie des vidéos toute la journée | Lui au travail, assis devant son ordinateur, concentré ; son téléphone vibre à côté, un point d'exclamation ; il regarde, rit, revient à l'écran ; ça vibre encore. | « 14 h » en bas. Il essaie de travailler ; ça vibre, ça vibre, ça vibre ; il rit de plus en plus, les larmes aux yeux, le téléphone à la patte, l'ordinateur oublié. | « 18 h » en bas. Elle, chez elle, assise sur le canapé, le téléphone à la patte, fière, des étincelles ; lui rentre par la droite, mort de rire, et s'effondre à côté d'elle, K.-O."
+    },
+    {
+      "id": "ani-272",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne « repose juste ses yeux » | Le canapé, la télé ; lui, les yeux fermés, la tête qui penche ; elle, à côté, le regarde, narquoise ; en haut s'écrit « tu dors ? » puis « non, je repose mes yeux ». | Il penche de plus en plus, la bouche ouverte, des z, puis une note de ronflement ; elle sourit, pose son téléphone, et le regarde dormir. | Elle attrape le plaid, le pose doucement sur lui, éteint la télé, et se blottit contre lui ; il dort toujours, les yeux « juste reposés » ; des petits cœurs."
+    },
+    {
+      "id": "ani-273",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne veut danser dans le salon | Elle, au milieu, danse, des notes autour d'elle, radieuse ; lui, à droite, assis par terre avec son téléphone, refuse d'un geste, gêné. | Elle vient le chercher, le tire par les pattes ; il se lève en tremblant, tout raide, les joues rouges ; elle le fait tourner ; il se détend un peu, puis rit. | Les deux dansent, collés, les yeux fermés, des notes et des cœurs ; il lui marche sur la patte ; elle fait une grimace, puis rit ; ils continuent, un peu moins vite."
+    },
+    {
+      "id": "ani-274",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne prépare la valise pour deux | Une valise ouverte au milieu ; elle fait des allers-retours en courant, un pull, un bonnet, un livre, une écharpe : tout rentre dans la valise ; lui arrive avec une seule chaussette. | Elle appuie sur la valise à deux pattes, en plein effort, ça ne ferme pas ; elle saute dessus ; ça ne ferme toujours pas ; lui regarde, sa chaussette à la patte. | Lui vient s'asseoir sur la valise, tout content, et elle ferme d'un coup ; il reste assis dessus, fier, la chaussette à la patte ; elle, les pattes sur les hanches, hausse les épaules et sourit."
+    },
+    {
+      "id": "ani-275",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne te fait un massage « 2 min » | Elle assise par terre, de dos à moitié, les épaules qui tombent, fatiguée ; lui derrière elle, les pattes sur ses épaules, masse, appliqué ; elle ferme les yeux, zen. | « 30 s plus tard » en bas. Il masse plus mollement, bâille, regarde l'heure ; elle ouvre un œil, soupçonneuse ; il reprend à fond, fatigué, en sueur. | « 2 min plus tard » en bas. Il s'est endormi debout, la tête posée sur son épaule à elle, des z ; elle, les yeux ouverts, blasée ; puis elle sourit et ne bouge plus pour ne pas le réveiller."
+    },
+    {
+      "id": "ani-276",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne répond « ok. » | Lui au milieu, le téléphone à la patte, content ; il lit la réponse ; en haut s'écrit « ok. » ; son visage se décompose, les yeux ronds, une goutte de sueur. | Il relit, panique, fait les cent pas en courant d'un bord à l'autre, le téléphone à la patte, des sueurs, puis se met en boule : qu'est-ce qu'il a fait ? | Elle, de son côté, assise par terre, les deux pattes prises par un carton qu'elle porte, le téléphone coincé contre l'oreille, tranquille, sourit ; en haut : « pardon, j'avais les mains prises »."
+    },
+    {
+      "id": "ani-277",
+      "qui": "les deux",
+      "lieu": "amis",
+      "idee": "nous deux quand on veut rentrer d'une soirée | Une soirée, des notes de musique, des étoiles ; lui à gauche, elle à droite, loin l'un de l'autre, chacun sourit poliment à quelqu'un qu'on ne voit pas ; leurs regards se croisent. | Un petit signe de tête de lui ; un petit signe de tête d'elle ; sans un mot, chacun recule à petits pas vers le bord, le doigt sur la bouche, l'auréole au-dessus de la tête. | « 20 min plus tard » en bas. Le canapé, chez eux, en pyjama, sous le plaid, chacun sa tasse, les yeux fermés de bonheur ; des cœurs ; la meilleure partie de la soirée."
+    },
+    {
+      "id": "ani-278",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne te garde la place au chaud | La nuit, la lune ; le lit ; elle se lève de son côté en traînant, sort par la droite ; lui, réveillé à moitié, la regarde partir. | Il roule de son côté à elle, s'y installe, les yeux fermés, de la vapeur ; puis il entend la porte, roule à sa place à lui, et fait semblant de dormir, l'auréole. | Elle revient par la droite, grelottante, se recouche : son côté est tout chaud ; elle s'étonne, regarde lui qui « dort », comprend, et fond ; un cœur ; il sourit les yeux fermés."
+    },
+    {
+      "id": "ani-279",
+      "qui": "les deux",
+      "lieu": "tendresse",
+      "idee": "nous deux devant nos photos du début | Le canapé ; les deux penchés sur le même téléphone, émus, les yeux brillants ; elle fait défiler ; un petit cœur monte. | Une photo les fait éclater de rire ; une autre les fait rougir ; une autre encore : ils se cachent les yeux tous les deux, morts de honte. | Ils se regardent, les mêmes qu'avant ; il lui prend la patte ; elle pose la tête sur son épaule ; ils regardent la dernière photo, nostalgiques ; des cœurs ; puis elle propose d'en refaire une."
+    },
+    {
+      "id": "ani-280",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne entend un bruit la nuit | La nuit, la lune ; le lit ; elle se redresse d'un coup, les yeux ronds, apeurée, un point d'exclamation ; lui dort ; elle le secoue ; il grogne. | Elle le pousse hors du lit du côté gauche ; il se lève en traînant, prend la lampe, et avance vers la gauche en tremblant, pas rassuré ; elle, sous l'oreiller, ne regarde plus. | Il revient par la gauche, blasé, le chat dans les bras : c'était lui ; il le pose sur le lit ; elle sort de sous l'oreiller, honteuse, puis rit ; le chat s'installe entre eux ; un cœur."
+    },
+    {
+      "id": "ani-281",
+      "qui": "les deux",
+      "lieu": "nuit",
+      "idee": "nous deux quand on se croise à 3 h dans le couloir | La nuit, un couloir, une porte à chaque bout ; lui sort de la gauche en traînant, les yeux fermés ; elle sort de la droite pareil ; ils avancent l'un vers l'autre sans se voir. | Ils se rentrent dedans ; les deux sursautent, les yeux ronds, deux points d'exclamation ; ils se reconnaissent, soulagés ; ils rient tout bas, encore à moitié endormis. | Un câlin au milieu du couloir, les yeux fermés, un petit cœur ; puis chacun repart de son côté en traînant, elle vers la gauche, lui vers la droite : ils ont échangé."
+    },
+    {
+      "id": "ani-282",
+      "qui": "lui",
+      "lieu": "sport",
+      "idee": "toi quand ta personne te fait essayer son nouveau sport | Elle, au milieu, s'étire de toute sa hauteur, zen, les bras au ciel, parfaitement droite ; lui arrive de la droite, curieux, et se place à côté d'elle pour faire pareil. | Elle se penche d'un côté, tranquille ; il se penche aussi, en forçant, les sueurs ; elle se penche de l'autre côté ; il tremble de partout, les yeux plissés. | Elle finit en boule, zen, parfaite ; lui perd l'équilibre, bascule et s'étale de tout son long, les yeux en croix ; elle rouvre un œil, soupire, et vient se coucher à côté de lui : fin de séance."
+    },
+    {
+      "id": "ani-283",
+      "qui": "elle",
+      "lieu": "lit",
+      "idee": "toi quand ta personne te pique ton oreiller | La nuit, le lit ; lui dort, la tête sur son oreiller ; elle, à côté, n'en a plus, tâtonne à côté d'elle, surprise, puis regarde l'oreiller de lui, malicieuse. | Elle tire doucement l'oreiller de sous sa tête ; il glisse, sa tête tombe, il se réveille à moitié, confus ; elle s'installe dessus, zen ; il reprend l'oreiller d'un coup. | « 1 h plus tard » en bas. Ils dorment tous les deux la tête sur le même oreiller, au milieu du lit, collés ; des z ; un petit cœur ; plus personne ne se bat."
+    },
+    {
+      "id": "ani-284",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne demande « tu penses à quoi ? » | Le canapé ; lui, le regard dans le vide, pensif, des petits points ; elle le regarde, curieuse, puis la question s'écrit en haut : « tu penses à quoi ? » ; il sursaute. | Il répond, l'air de rien ; en haut : « à rien » ; elle plisse les yeux, soupçonneuse ; il sourit, l'auréole au-dessus de la tête ; elle le fixe. | Une bulle de pensée apparaît au-dessus de lui, avec dedans une manette de jeu, puis une deuxième ; elle regarde la bulle, blasée ; il n'a rien remarqué, tout content."
+    },
+    {
+      "id": "ani-285",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne parle à la télé | Le canapé, la télé ; elle, penchée en avant, pointe l'écran, énervée, et crie ; en haut : « mais non, pas là ! » ; lui, à côté, blasé, les bras croisés. | Elle continue, choquée, les pattes sur les joues, puis suppliante vers l'écran ; lui se bouche les oreilles, puis regarde l'écran lui aussi, de plus en plus pris. | Les deux debout devant la télé, hurlent à l'écran ensemble, les bras levés, furieux, une veine chacun ; en haut : « mais ouvre la porte !!! » ; puis ils se rassoient, essoufflés."
+    },
+    {
+      "id": "ani-286",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne t'apporte le café au lit | Le matin, le lit ; elle dort ; lui entre par la gauche sur la pointe des pattes, une tasse fumante à la patte, le doigt sur la bouche, très concentré pour ne rien renverser. | Il s'approche du lit, la tasse tendue ; elle ouvre un œil, voit la tasse, et ses yeux deviennent des cœurs ; elle se redresse, ravie, les pattes tendues. | Au moment de la prendre, la tasse bascule ; le café se renverse sur le drap ; les deux figés, bouche bée, une goutte de sueur ; puis ils éclatent de rire ; un cœur quand même."
+    },
+    {
+      "id": "ani-287",
+      "qui": "les deux",
+      "lieu": "sortir",
+      "idee": "nous deux quand on dit « on sort ce soir » | Les deux debout, prêts, un sac, les clés, décidés, des étincelles ; en haut s'écrit « on sort ce soir ! » ; puis ils regardent le canapé. | « juste 5 min sur le canapé » en bas. Les deux assis sur le canapé, encore habillés pour sortir, le sac et les clés sur les genoux ; ils se détendent ; les étincelles s'éteignent. | « 22 h » en bas. Le canapé ; les deux en pyjama sous le plaid, endormis l'un sur l'autre, des z ; le sac et les clés par terre ; des petits cœurs."
+    },
+    {
+      "id": "ani-288",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne t'offre un truc qu'elle voulait | Elle entre par la gauche avec un cadeau, fière, et le tend à lui, qui attend à droite, surpris puis émerveillé ; il le prend. | Il ouvre : une bougie parfumée ; il reste perplexe, un point d'interrogation ; elle, les yeux qui brillent, la regarde, la bougie, pas lui ; elle tend déjà les pattes. | Elle a pris la bougie, l'a posée sur le canapé, s'est installée devant, zen, les yeux fermés, ravie ; lui, debout, tient la boîte vide, résigné, puis hausse les épaules et sourit."
+    },
+    {
+      "id": "ani-289",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne teste des surnoms | Les deux face à face, tranquilles ; elle, contente, essaie ; en haut s'écrit « mon chou » ; il hausse un sourcil ; puis « mon lapin » ; il est blasé. | En haut : « ma crevette » ; il se cache le visage, mort de honte ; « mon caramel mou » ; il se met en boule ; elle rit, ravie, les pattes sur les hanches. | Il se relève, respire, et tente à son tour ; en haut s'écrit « mon pingouin » ; elle se fige, bouche bée ; il est très fier ; elle se met en boule à son tour, morte de honte."
+    },
+    {
+      "id": "ani-290",
+      "qui": "les deux",
+      "lieu": "tendresse",
+      "idee": "nous deux quand on le dit en même temps | Le canapé, les deux côte à côte, tranquilles, chacun regarde devant soi ; ils ouvrent la bouche en même temps ; en haut s'écrit « je t'aime » ; les deux se figent. | Ils se tournent l'un vers l'autre, surpris, deux points d'exclamation ; puis ils rougissent tous les deux ; puis ils éclatent de rire. | Câlin au milieu du canapé, les yeux fermés, des cœurs partout ; ils redisent la phrase ensemble, en haut, mot à mot, et rient encore."
+    },
+    {
+      "id": "ani-291",
+      "qui": "les deux",
+      "lieu": "dehors",
+      "idee": "nous deux sous la pluie sans parapluie | Dehors, un arbre ; les deux marchent tranquillement vers la droite ; un nuage arrive, la pluie tombe d'un coup ; ils s'arrêtent, les yeux ronds, trempés. | Ils sprintent vers l'arbre, elle devant, lui derrière, paniqués, des gouttes partout ; ils se serrent sous l'arbre, trempés, les frissons. | Sous l'arbre, serrés, ils se regardent, trempés, les cheveux plaqués ; ils éclatent de rire ; câlin sous la pluie, des cœurs ; la pluie continue, ils s'en fichent."
+    },
+    {
+      "id": "ani-292",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne joue avec ta fleur | Le canapé ; elle lit, tranquille ; lui, à côté, tend la patte et touche la fleur sur son oreille ; elle ne dit rien ; il recommence ; elle lève les yeux, blasée. | Il touche encore la fleur ; elle s'agace, une veine ; il recommence, l'air de rien, l'auréole ; elle ferme le livre d'un coup et le fixe ; il sourit. | Elle retire la fleur de son oreille et la pose sur l'oreille de lui ; il reste figé, puis prend la pose, très fier ; elle rit ; il garde la fleur ; des petits cœurs."
+    },
+    {
+      "id": "ani-293",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne fait des bisous bruyants | Lui au milieu, tranquille ; elle arrive de la droite, lui fait un gros bisou sur la joue, puis un autre, puis un autre ; il est gêné, tout rouge. | Encore un bisou, encore un ; il se laisse faire, les yeux fermés, puis commence à sourire ; elle ne s'arrête plus ; des cœurs partout. | Il se retourne et lui rend tous ses bisous d'un coup, joue, front, joue, joue ; elle, submergée, les yeux en croix, tombe en arrière, K.-O. de bisous ; il est très fier."
+    },
+    {
+      "id": "ani-295",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne marche pieds nus sur un truc | Lui traverse la pièce en marchant tranquillement vers la droite ; une clé traîne par terre ; il marche dessus, hurle en silence, la patte en l'air, les yeux en croix ; elle, à droite, sursaute. | Il sautille sur une patte, en larmes, puis se laisse tomber par terre, la patte dans les pattes, en pleurant ; elle accourt, inquiète, puis se retient de rire. | Elle le soulève à bout de bras, lui assis sur ses pattes levées, tout penaud, la clé à la patte ; elle l'emporte vers la droite, décidée, comme un blessé de guerre ; il fait le malade."
+    },
+    {
+      "id": "ani-296",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne t'explique sa série | Le canapé ; elle, passionnée, explique, les bras qui dessinent des choses en l'air ; lui écoute, poli, puis fronce les sourcils ; un point d'interrogation. | Elle continue, des petits points partout, une ampoule, encore une idée ; lui est perdu, les yeux en spirale, puis une bulle de pensée au-dessus de lui : un gros point d'interrogation. | « 40 min plus tard » en bas. Elle explique toujours ; la bulle de pensée de lui montre maintenant un lit et des z : il dort les yeux ouverts ; elle s'en rend compte, soupire, puis sourit."
+    },
+    {
+      "id": "ani-297",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on dit « on range demain » | Le salon, un pull et un coussin par terre ; les deux sur le canapé, détendus ; en haut s'écrit « on range demain » ; ils trinquent du regard, l'auréole. | « le lendemain » en bas. Le pull, le coussin, un sac, une écharpe par terre en plus ; les deux sur le canapé, toujours détendus, l'auréole un peu moins droite ; en haut : « demain ». | « 1 semaine plus tard » en bas. Le salon est une montagne : pull, coussin, sac, écharpe, bonnet, chaussettes ; les deux assis au sommet du tas, zen, les yeux fermés, un petit cœur."
+    },
+    {
+      "id": "ani-298",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne « gère les billets » | Une gare, un banc ; les deux arrivent par la gauche avec une valise, elle devant, fière, un billet à la patte ; en haut s'écrit « t'inquiète, je gère ». | Elle regarde le billet de près ; son visage change : surprise, puis choc, puis panique, une goutte de sueur ; lui, derrière, n'a rien vu, regarde l'horloge. | En haut : « c'était hier. » ; lui se fige, bouche bée ; puis les deux assis sur le banc, la valise entre eux, blasés, regardent passer le vide ; elle lui tend le billet, désolée ; il rit."
+    },
+    {
+      "id": "ani-299",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne a rêvé que tu lui faisais un truc | Le matin, le lit ; elle se réveille d'un coup, furieuse, une veine, et le fusille du regard ; lui, qui dort tranquillement, se réveille sous le regard, confus. | En haut : « t'as oublié mon anniversaire. dans mon rêve. » ; il ouvre des yeux ronds, puis lève les pattes, innocent ; elle lui tourne le dos et boude, le nuage noir. | « le soir » en bas. Elle, sur le canapé, boude encore, les bras croisés ; lui arrive avec une fleur et un gâteau imaginaire de pardon : juste la fleur ; elle rit, le pardonne ; un cœur."
+    },
+    {
+      "id": "ani-300",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on monte un meuble | Un gros carton ouvert au milieu, une lampe en pièces ; les deux à genoux devant, concentrés, une notice à la patte ; ils se regardent, confiants, le pouce levé. | « 1 h plus tard » en bas. Lui tient un morceau, elle un autre ; ils ne vont pas ensemble ; il s'énerve, elle s'énerve ; ils finissent dos à dos, furieux, les bras croisés, un nuage chacun. | « 3 h plus tard » en bas. La lampe est montée, debout, un peu de travers ; les deux devant, épuisés, fiers, en sueur, le bras autour de l'autre ; la lampe penche, tombe ; ils ne bougent plus."
+    },
+    {
+      "id": "ani-301",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne te vole ta place sur le canapé | Le canapé ; lui, bien installé à sa place à gauche, se lève pour aller boire, content, sort par la gauche ; elle, à droite, le suit des yeux, malicieuse. | Elle glisse sur le canapé jusqu'à sa place à lui, tout au chaud, et s'installe, zen, les yeux fermés, l'auréole ; il revient par la gauche, s'arrête, bouche bée. | Il la regarde, réfléchit, puis s'assoit sur ses genoux, de tout son poids, tout content ; elle, écrasée dessous, les yeux en croix ; il prend la télécommande, l'air de rien."
+    },
+    {
+      "id": "ani-302",
+      "qui": "les deux",
+      "lieu": "matin",
+      "idee": "nous deux quand le chat décide de l'heure du réveil | Le lit, le matin tôt ; les deux dorment ; le chat est assis sur lui et le fixe ; une horloge ; le chat tapote sa tête ; lui grogne sans ouvrir les yeux. | Le chat passe sur elle et s'assoit sur sa tête ; elle se réveille, les yeux ronds ; les deux se regardent, puis regardent l'horloge, puis le chat : 6 h. | « 10 min plus tard » en bas. Les deux debout, en pyjama, les yeux cernés, une tasse chacun, blasés ; dans le lit derrière eux, le chat dort, étalé au milieu, des z ; un petit cœur quand même."
+    },
+    {
+      "id": "ani-303",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne t'écrit depuis la pièce d'à côté | Une porte au milieu ; lui à gauche sur le canapé, le téléphone à la patte ; elle à droite, de l'autre côté de la porte, assise par terre avec le sien ; le téléphone d'elle vibre. | En haut s'écrit le message : « tu me manques » ; elle lit, perplexe, regarde la porte, puis rit ; lui, de son côté, attend la réponse, le téléphone devant les yeux. | Elle se lève, passe la porte, et vient s'asseoir sur lui, le téléphone encore à la patte ; il est ravi ; elle lui montre l'écran : elle a répondu « moi aussi » ; des cœurs."
+    },
+    {
+      "id": "ani-304",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne dit « devine quoi » | Lui à gauche, tranquille ; elle entre par la droite, en courant, les yeux qui brillent ; en haut s'écrit « devine quoi » ; il se redresse, curieux, puis inquiet. | Il réfléchit à toute vitesse, des petits points, une goutte de sueur, les pires scénarios dans une bulle : un point d'interrogation, un point d'exclamation ; elle attend, ravie, et le laisse mariner. | En haut s'écrit : « rien. je voulais te voir faire cette tête. » ; il reste bouche bée, puis blasé ; elle, morte de rire ; il finit par sourire et l'attrape pour un câlin ; un cœur."
+    },
+    {
+      "id": "ani-305",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on dit « pas de téléphone ce soir » | Les deux debout, décidés, posent chacun leur téléphone dans un carton au milieu, solennels ; ils se serrent la patte ; en haut s'écrit « pas de téléphone ce soir ». | « 10 min plus tard » en bas. Les deux sur le canapé, les pattes sur les genoux, le regard fixé sur le carton ; des gouttes de sueur ; ils tremblent un peu ; personne ne parle. | « 20 min plus tard » en bas. Les deux allongés par terre de chaque côté du carton, la tête contre le carton, déprimés, un nuage noir ; puis ils se voient, rient, et se font un câlin par-dessus le carton."
+    },
+    {
+      "id": "ani-306",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne laisse la lumière allumée partout | Trois lampes allumées dans la pièce ; lui passe au milieu, content, en allume une quatrième en passant ; elle, derrière lui, en éteint une, puis une autre, blasée. | Il revient, rallume les deux lampes qu'elle a éteintes, l'air de rien, l'auréole ; elle le suit, les éteint, une veine qui bat ; il en rallume une ; elle l'éteint ; de plus en plus vite. | Elle ramasse toutes les lampes dans un carton, l'une après l'autre, et sort du cadre avec le carton ; lui reste seul dans le noir, debout, une bougie à la patte, tout penaud."
+    },
+    {
+      "id": "ani-307",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne veut la télécommande | Le canapé, la télé ; la télécommande est posée juste à côté de lui, à gauche ; elle, tout à droite, la regarde, puis le regarde, suppliante, la patte tendue ; il ne bouge pas, zen. | Elle s'étire de tout son long vers la télécommande, la patte tendue, en plein effort, des sueurs ; il lui manque un rien ; lui regarde la télé, l'air de ne rien voir, l'auréole. | Elle lui passe carrément par-dessus, le corps en travers de lui, attrape la télécommande et se rassoit de l'autre côté, fière ; lui, écrasé au passage, les yeux en croix, puis blasé."
+    },
+    {
+      "id": "ani-308",
+      "qui": "elle",
+      "lieu": "matin",
+      "idee": "toi quand ta personne te dit « t'es belle » au réveil | Le matin, le lit ; elle se réveille, fatiguée, les yeux à moitié fermés, une bulle au nez ; lui, à côté, déjà réveillé, la regarde avec des cœurs dans les yeux ; en haut : « t'es belle ». | Elle, surprise, puis touchée, les joues roses ; elle attrape son téléphone pour se regarder ; son visage se fige : choc, un point d'exclamation ; elle regarde lui, puis l'écran, puis lui. | Elle lui montre l'écran, la mine défaite ; il regarde, et ses yeux restent des cœurs ; elle éclate de rire, lui jette l'oreiller dessus, et vient se blottir contre lui ; des cœurs."
+    },
+    {
+      "id": "ani-309",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne refuse de demander le chemin | Dehors, un panneau fléché ; lui marche d'un pas décidé vers la droite, elle le suit ; il s'arrête, regarde autour, repart dans l'autre sens, toujours décidé ; elle le suit, blasée. | « 20 min plus tard » en bas. Ils repassent devant le même panneau ; elle le pointe du doigt ; lui fait non de la tête, fier, et repart dans un troisième sens ; elle s'assoit par terre. | Elle se lève, lit le panneau, et part tranquillement dans la bonne direction, vers la gauche ; lui revient en courant, honteux, et la suit à petits pas, la tête basse."
+    },
+    {
+      "id": "ani-310",
+      "qui": "les deux",
+      "lieu": "saisons",
+      "idee": "nous deux au premier rayon de soleil | Dehors, un banc, un arbre, un grand soleil ; les deux sortent en courant par la gauche, les bras levés, les yeux fermés de bonheur, et s'arrêtent face au soleil. | Assis sur le banc, les yeux fermés, le visage tourné vers le soleil, zen ; elle pose la tête sur son épaule ; un petit cœur ; un oiseau passe. | Un nuage arrive devant le soleil ; la pluie tombe ; les deux ouvrent un œil, regardent le ciel, blasés, puis se regardent ; ils restent là, sous la pluie, serrés ; c'est le premier beau jour quand même."
+    },
+    {
+      "id": "ani-311",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on lance le ménage de printemps | Un carton, un pull, un sac, une écharpe, un bonnet par terre ; les deux debout, décidés, les pattes sur les hanches ; en haut s'écrit « aujourd'hui on fait tout ». | « 20 min plus tard » en bas. Elle trouve une vieille lettre dans le carton et s'assoit pour la lire, émue ; il vient voir, s'assoit à côté ; ils lisent ensemble, les yeux brillants. | « 3 h plus tard » en bas. Rien n'a bougé : le pull, le sac, l'écharpe sont toujours par terre ; les deux assis au milieu, entourés de lettres et de photos, morts de rire ; un petit cœur."
+    },
+    {
+      "id": "ani-312",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne raconte un ragot sur quelqu'un | Le canapé ; elle, penchée vers lui, raconte tout bas, le doigt sur la bouche, choquée, des petits points partout ; lui écoute, les yeux ronds. | Elle continue, scandalisée, puis morte de rire ; lui fait de grands yeux, hoche la tête, choqué lui aussi, très impliqué ; un point d'interrogation apparaît discrètement au-dessus de lui. | Elle finit, satisfaite, et attend sa réaction ; il hésite, puis demande ; en haut s'écrit « ... et c'est qui, déjà ? » ; elle se fige, une veine, et lui jette le coussin dessus."
+    },
+    {
+      "id": "ani-313",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand tu veux te lever sans réveiller ta personne | La nuit, la lune ; le lit ; elle dort, à moitié sur lui ; lui, les yeux grands ouverts, a envie de se lever ; il regarde la porte, puis elle, puis réfléchit, des petits points. | Il rampe hors du lit au ralenti, à plat ventre, centimètre par centimètre, une goutte de sueur, le doigt sur la bouche ; elle bouge dans son sommeil ; il se fige, l'auréole. | Il est presque à la porte, toujours à plat ventre ; elle, dans le lit, ouvre un œil, le regarde ramper, blasée ; en haut : « tu fais quoi ? » ; il se fige, puis fait semblant de dormir par terre."
+    },
+    {
+      "id": "ani-314",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne regarde un film d'horreur | Le canapé, la télé, la lumière éteinte, la lune à la fenêtre ; lui regarde l'écran, captivé ; elle, à côté, se cache déjà derrière le coussin, les yeux qui dépassent. | Un sursaut à l'écran : elle bondit derrière lui et se cache dans son dos, tremblante ; lui, surpris, puis fier de la protéger, bombe le torse. | Un deuxième sursaut : cette fois c'est lui qui hurle en silence, les yeux en croix ; les deux finissent sous le plaid, seuls les yeux dehors, serrés, tremblants, devant l'écran qu'ils regardent quand même."
+    },
+    {
+      "id": "ani-315",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne dit « je ronfle pas » | Le matin, le lit ; elle, les yeux cernés, le pointe du doigt ; lui, outré, les pattes sur les hanches ; en haut s'écrit « je ronfle pas ! » ; elle lève les yeux au ciel. | « la nuit suivante » en bas. La lune ; il dort, des notes de musique énormes sortent de lui ; elle, réveillée, sort son téléphone et enregistre, un petit sourire en coin. | « le matin » en bas. Elle lui tend le téléphone, le son à fond : des notes sortent de l'écran ; il écoute, bouche bée, puis rouge, puis mort de honte, en boule ; elle, très fière."
+    },
+    {
+      "id": "ani-316",
+      "qui": "les deux",
+      "lieu": "sortir",
+      "idee": "nous deux quand on a « bien fermé la porte » | La porte à droite ; les deux sortent, elle devant avec la valise, lui derrière avec les clés ; il tire la porte, la secoue, vérifie, content ; ils partent vers la gauche. | « au bout de la rue » en bas. Ils marchent ; elle s'arrête net, les yeux ronds ; en haut : « t'as fermé ? » ; lui s'arrête aussi, sûr de lui, puis moins sûr, une goutte de sueur. | Les deux repartent en sprint vers la droite, la valise qui traîne ; devant la porte : elle est fermée ; lui, les pattes sur les hanches, triomphant ; elle, essoufflée, le fusille du regard."
+    },
+    {
+      "id": "ani-317",
+      "qui": "lui",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne a la musique à fond dans son casque | Le canapé ; lui, le casque sur les oreilles, chante à tue-tête sans s'entendre, des notes partout ; elle, à côté, lit, blasée, se bouche une oreille. | Elle se glisse jusqu'à lui et tire un côté du casque vers son oreille ; il sursaute, surpris ; elle écoute ; son visage change : elle aime ; elle se colle à lui pour écouter. | Les deux têtes collées sous le même casque, les yeux fermés, ils chantent ensemble sans s'entendre, des notes partout, et balancent en rythme ; un cœur monte."
+    },
+    {
+      "id": "ani-318",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne demande « et si j'étais un ver ? » | Le lit, le soir ; elle, très sérieuse, se tourne vers lui ; en haut s'écrit la question : « tu m'aimerais si j'étais un ver ? » ; lui, qui allait dormir, ouvre un œil, confus. | Il réfléchit, des petits points, sérieusement ; elle attend, les bras croisés ; il hésite, une goutte de sueur ; en haut s'écrit « ... oui ? » ; elle plisse les yeux. | En haut : « t'as hésité. » ; elle lui tourne le dos et boude, le nuage noir ; lui, paniqué, supplie, les pattes jointes ; il finit par lui faire un câlin par-derrière ; elle boude encore, mais sourit un peu."
+    },
+    {
+      "id": "ani-319",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne lit par-dessus ton épaule | Le canapé ; lui tape un message sur son téléphone, concentré ; elle arrive derrière lui, se penche, et lit par-dessus son épaule, curieuse, l'air de rien. | Il sent un regard, se tourne, elle regarde ailleurs en sifflant, l'auréole ; il reprend ; elle se repenche aussitôt ; il se retourne ; elle siffle ; de plus en plus vite. | Il tape une dernière phrase et lui tend le téléphone ; en haut s'écrit ce qu'il a écrit : « elle lit par-dessus mon épaule, là. » ; elle lit, se fige, bouche bée, puis lui jette le coussin."
+    },
+    {
+      "id": "ani-320",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on tombe malades en même temps | Le lit ; les deux allongés, malades, le nez rouge, une boîte de mouchoirs entre eux ; ils se regardent, pitoyables ; chacun attend que l'autre se lève. | Il se redresse, décidé, pour aller chercher une tasse ; il retombe ; elle se redresse à son tour ; elle retombe ; ils se regardent, les yeux humides, deux fontaines de larmes. | « 2 h plus tard » en bas. Les deux dorment collés au milieu du lit, le nez rouge, la boîte de mouchoirs sur la tête de lui, des z ; un petit cœur malgré tout."
+    },
+    {
+      "id": "ani-321",
+      "qui": "lui",
+      "lieu": "sortir",
+      "idee": "toi quand c'est toi qui es prête en premier | La porte à droite ; elle, prête, un sac à la patte, attend, les bras croisés ; lui passe en courant dans un sens avec une seule chaussette, puis dans l'autre sens avec le pull à moitié mis. | « 10 min plus tard » en bas. Elle, assise par terre contre la porte, le téléphone à la patte ; lui repasse encore, les clés enfin, mais sans son bonnet ; il repart. | « 20 min plus tard » en bas. Il arrive enfin, fier, bonnet, écharpe, clés ; elle se lève, le regarde de haut en bas, et pointe ses pattes : il a oublié ses chaussures ; il baisse les yeux."
+    },
+    {
+      "id": "ani-322",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne refuse d'aller chez le médecin | Lui, malade, le nez rouge, sur le canapé, les mouchoirs ; elle, debout, pointe la porte ; il fait non de la tête, décidé ; en haut : « ça va passer tout seul ». | Elle le tire par la patte ; il se cramponne au canapé ; elle tire plus fort, en plein effort ; il glisse du canapé et se retrouve par terre, cramponné au coussin. | Elle le traîne par la patte jusqu'à la porte, lui à plat ventre qui glisse sur le sol, les yeux en croix, le coussin toujours serré ; ils sortent du cadre comme ça ; il a abandonné."
+    },
+    {
+      "id": "ani-323",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux quand on tente une sieste | Le canapé, l'après-midi, le soleil à la fenêtre ; les deux s'allongent l'un contre l'autre, ferment les yeux, zen ; des z commencent ; il bouge un peu ; elle bouge un peu. | Il se tourne ; elle se retourne ; son bras à lui est coincé ; il le retire ; elle a froid ; elle tire le plaid ; il a chaud ; les deux rouvrent les yeux, exaspérés. | La sonnette, le téléphone, un oiseau à la fenêtre : tout sonne ; les deux, assis bien droits, les yeux grands ouverts, furieux, une veine chacun ; puis ils se regardent et rient ; sieste ratée."
+    },
+    {
+      "id": "ani-324",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne marche en téléphonant | Lui au téléphone, content, marche de long en large dans la pièce, d'un bord à l'autre ; elle, assise sur le canapé, le suit des yeux, à gauche, à droite, à gauche. | « 10 min plus tard » en bas. Il marche toujours, de plus en plus vite ; elle, les yeux qui suivent, commence à avoir le tournis, une spirale dans les yeux. | Elle a glissé du canapé et gît par terre, K.-O., les yeux en croix ; lui passe par-dessus elle en continuant de marcher et de parler, sans la voir ; puis il s'arrête, la regarde, perplexe."
+    },
+    {
+      "id": "ani-326",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne ramasse des cailloux | Dehors, un arbre ; les deux se promènent ; elle s'arrête, se baisse, ramasse un caillou, émerveillée, et le lui montre ; il hoche la tête, poli. | « la balade suivante » en bas. Elle a les pattes pleines de cailloux, et lui en tend deux à porter ; il les prend, blasé ; elle en voit un autre plus loin et court dessus. | « à la maison » en bas. Le salon : des cailloux partout par terre, sur le canapé, un sur la tête de lui ; elle, assise au milieu, les range, ravie ; lui marche sur un, saute sur une patte."
+    },
+    {
+      "id": "ani-327",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne rit de ses propres blagues | Les deux face à face ; elle raconte quelque chose, les bras qui s'agitent, et éclate de rire avant la fin, pliée en deux ; lui attend la chute, poli, un petit sourire. | Elle essaie de finir, n'y arrive pas, pleure de rire, les larmes aux yeux, se tient le ventre ; lui, blasé, les bras croisés, puis sa bouche tremble : il commence à rire aussi. | Les deux morts de rire, pliés en deux l'un sur l'autre, des larmes, sans savoir pourquoi ; elle essaie encore de finir ; il lui fait signe que non, ça ira ; des petits cœurs."
+    },
+    {
+      "id": "ani-328",
+      "qui": "lui",
+      "lieu": "saisons",
+      "idee": "toi quand ta personne bronze au premier rayon | Dehors, un grand soleil, un banc ; lui, allongé par terre, les lunettes de soleil, les bras derrière la tête, zen, comme en plein été ; elle arrive, en écharpe et bonnet, et grelotte. | Elle s'assoit sur le banc, emmitouflée, les frissons ; lui, par terre, se retourne pour bronzer de l'autre côté, de la vapeur ; un oiseau se pose à côté de lui ; elle grelotte. | « 1 h plus tard » en bas. Lui, toujours par terre, tout rouge, un coup de soleil, les lunettes de travers, blasé ; elle, sur le banc, lui tend l'écharpe pour qu'il se couvre ; il la prend, honteux."
+    },
+    {
+      "id": "ani-329",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne te laisse un petit mot | Le matin, le lit ; elle dort encore ; lui, habillé, un sac à la patte, pose une lettre pliée sur l'oreiller à côté d'elle, le doigt sur la bouche, et sort sur la pointe des pattes. | Elle se réveille, s'étire, voit la lettre sur l'oreiller, surprise ; elle la prend, la lit ; ses yeux s'embuent, puis deviennent des cœurs ; elle la serre contre elle. | « toute la journée » en bas. Elle, dehors, au travail, dans la rue : la lettre toujours dans la patte, un petit sourire, des cœurs qui la suivent ; le soir, elle la glisse sous son oreiller."
+    },
+    {
+      "id": "ani-330",
+      "qui": "les deux",
+      "lieu": "matin",
+      "idee": "nous deux quand le réveil sonne un dimanche | Le lit, le matin ; le réveil sonne sur le téléphone ; les deux se redressent d'un coup, les yeux ronds, en panique, prêts à sauter du lit. | Ils se regardent ; ils regardent le téléphone ; ils regardent l'horloge au mur ; en bas s'écrit « dimanche » ; leur visage passe de la panique à la fureur, une veine chacun. | Il attrape le téléphone et le jette par-dessus le lit ; il atterrit sur le coussin par terre ; les deux se rallongent en même temps, des z aussitôt ; un petit cœur."
+    },
+    {
+      "id": "ani-331",
+      "qui": "les deux",
+      "lieu": "matin",
+      "idee": "nous deux au changement d'heure | Le matin, le lit ; les deux se réveillent, regardent l'horloge au mur, puis le téléphone : pas la même heure ; ils se regardent, confus, deux points d'interrogation. | En haut s'écrit « on a gagné ou perdu une heure ? » ; lui compte sur ses pattes, concentré ; elle compte dans l'autre sens ; ils arrivent à deux réponses différentes et se disputent. | Ils abandonnent, se rallongent tous les deux et se rendorment, par sécurité, des z ; l'horloge et le téléphone ne sont toujours pas d'accord ; un petit cœur."
+    },
+    {
+      "id": "ani-332",
+      "qui": "les deux",
+      "lieu": "tendresse",
+      "idee": "nous deux quand on se trompe de côté pour le bisou | Les deux face à face, contents ; ils se penchent pour un bisou, tous les deux du même côté ; leurs têtes se cognent ; deux points d'exclamation. | Ils se redressent, rient, réessaient : de l'autre côté, tous les deux encore ; encore un choc ; ils se frottent le front, blasés ; troisième essai : pareil ; ils abandonnent, dos à dos. | Elle prend sa tête à deux pattes, la tient bien droite, et pose le bisou d'un coup ; il reste figé, les yeux en cœur ; elle, fière, les pattes sur les hanches ; des cœurs."
+    },
+    {
+      "id": "ani-333",
+      "qui": "elle",
+      "lieu": "maison",
+      "idee": "toi quand ta personne a le hoquet | Lui au milieu, tranquille ; il sursaute d'un coup, un petit bond, un point d'exclamation ; puis encore ; puis encore ; elle, à droite, le regarde, puis rit. | Elle a une idée, une ampoule : elle se place derrière lui, l'air de rien, l'auréole ; il sursaute encore ; elle surgit avec une tête de diable et des cornes ; il hurle de peur, les yeux en croix. | Le hoquet de lui est parti ; elle, très fière, les pattes sur les hanches ; d'un coup c'est elle qui sursaute, un point d'exclamation ; puis encore ; lui, blasé, la regarde faire des petits bonds."
+    },
+    {
+      "id": "ani-334",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne s'endort sur ton épaule dans le bus | Un banc, comme dans un bus ; les deux assis, elle pique du nez, puis pose la tête sur son épaule et s'endort, des z ; lui, content, puis il regarde dehors : c'est son arrêt. | Il hésite, une goutte de sueur, regarde la porte, la regarde elle ; il n'ose pas bouger ; la porte se referme ; il reste assis, résigné, bien droit, les bras le long du corps. | « 3 arrêts plus tard » en bas. Toujours assis, elle dort toujours sur son épaule ; lui regarde défiler la fenêtre, puis la regarde elle, et sourit, les yeux doux ; un petit cœur ; il n'est pas pressé."
+    },
+    {
+      "id": "ani-335",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne préfère le chat | Le canapé ; elle, le chat sur les genoux, le caresse, les yeux en cœur ; lui arrive de la droite, content, veut s'asseoir ; elle lui fait signe de ne pas déranger le chat. | Il s'assoit tout au bord ; elle parle au chat, pas à lui ; il devient jaloux, les yeux plissés, puis boude, les bras croisés ; le chat le regarde, l'air de rien. | Il se glisse entre elle et le chat, pose sa tête sur ses genoux à elle, et fait le chat ; elle rit, et le caresse aussi ; le chat, vexé, va s'asseoir sur la tête de lui ; des cœurs."
+    },
+    {
+      "id": "ani-336",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne veut un bisou dans la rue | Dehors, un banc, un arbre ; les deux marchent ; elle s'arrête, se tourne vers lui, la bouche en cœur ; il regarde à gauche, à droite, gêné, les joues rouges. | Elle attend, la bouche en cœur, les yeux fermés ; il hésite, des sueurs, regarde encore autour ; personne ; il se penche très vite et pose un bisou éclair ; puis se redresse, tout raide. | Elle rit, lui prend la patte ; il se cache derrière elle, tout petit, la tête qui dépasse à peine, mort de honte ; elle marche fièrement avec lui collé dans son dos ; ils sortent du cadre."
+    },
+    {
+      "id": "ani-337",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux quand on a dit « ce soir on parle pas boulot » | Le canapé ; les deux assis, décidés, le pouce levé ; en haut s'écrit « ce soir, pas un mot de boulot » ; ils sourient, zen ; puis le silence. | « 2 min plus tard » en bas. Le silence ; lui ouvre la bouche, elle lève la patte : non ; elle ouvre la bouche, il lève la patte : non ; ils se taisent, les joues gonflées, les yeux qui roulent. | Elle se penche vers lui, le doigt sur la bouche ; en haut : « juste un truc, après j'arrête » ; il hoche la tête, soulagé ; les deux parlent boulot en chuchotant, penchés l'un vers l'autre, ravis."
+    },
+    {
+      "id": "ani-338",
+      "qui": "elle",
+      "lieu": "matin",
+      "idee": "toi quand ta personne a pris toute la salle de bain | Un rebord de lavabo : à gauche, une brosse à dents, celle de lui, toute seule ; à droite, une brosse, une bougie, des lunettes, une fleur, un pot ; il arrive, sa brosse à la patte, et cherche une place. | Il pousse un objet d'un doigt pour se faire une place ; elle arrive derrière lui, les bras croisés, le regard noir ; il remet l'objet, l'auréole, et recule d'un pas. | Il range sa brosse à dents sur sa propre tête, entre les oreilles, et sort fièrement par la gauche ; elle, bouche bée, puis morte de rire ; le rebord reste à elle."
+    },
+    {
+      "id": "ani-339",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne a « une petite question » à 23 h | La nuit, la lune ; le lit ; lui vient de fermer les yeux, apaisé ; elle, assise, pensive, se tourne vers lui ; en haut s'écrit « tu me vois comment dans dix ans ? » ; il rouvre un œil. | Il se redresse, confus, puis panique : des sueurs, des petits points, les yeux qui tournent ; elle attend, tranquille, le menton dans la patte ; il ouvre la bouche, la referme. | « 3 h du matin » en bas. Elle dort profondément, des z, elle a oublié ; lui, assis dans le lit, les yeux grands ouverts, réfléchit encore, des petits points ; la lune le regarde."
+    },
+    {
+      "id": "ani-340",
+      "qui": "elle",
+      "lieu": "téléphone",
+      "idee": "toi quand ta personne cherche son téléphone | Elle, au milieu, le téléphone collé à l'oreille, en pleine conversation, cherche partout autour d'elle, paniquée ; en haut s'écrit « je trouve plus mon téléphone !! » ; lui, à droite, la regarde. | Elle soulève un coussin, regarde sous le canapé, court d'un bord à l'autre, toujours le téléphone à l'oreille ; lui, les bras croisés, un sourire en coin, la laisse chercher. | Il s'approche, pointe du doigt l'oreille d'elle ; elle le regarde, confuse, touche son oreille : le téléphone ; elle se fige, puis se cache le visage, morte de honte ; il rit, puis l'embrasse sur le front."
+    },
+    {
+      "id": "ani-341",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne dit « c'est rien, t'inquiète » | Elle, assise par terre à droite, une petite larme, regarde ses pattes ; lui arrive, s'inquiète ; en haut s'écrit « c'est rien, t'inquiète » ; il reste là, sans savoir quoi faire. | Il ne dit rien, vient s'asseoir à côté d'elle, pas trop près ; puis il pose une patte sur son dos ; elle ne bouge pas ; il attend ; elle finit par se laisser aller contre lui. | Les deux assis par terre, elle contre lui, les yeux fermés ; il ne demande rien ; un petit cœur monte ; au bout d'un moment elle sourit un peu, et lui aussi."
+    },
+    {
+      "id": "ani-342",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux et la promesse de regarder la suite ensemble | Les deux face à face, la patte levée, solennels ; en haut s'écrit « promis, on regarde la suite ensemble » ; ils se serrent la patte ; chacun part de son côté, l'auréole. | « la nuit » en bas. La lune ; le canapé, la télé éteinte ; lui arrive de la gauche sur la pointe des pattes, le doigt sur la bouche ; elle arrive de la droite pareil ; ils ne se voient pas encore. | Ils tendent la patte vers la télé en même temps, se voient, se figent, deux points d'exclamation ; un silence ; puis ils éclatent de rire et s'installent ensemble, sous le plaid, la télé allumée."
+    },
+    {
+      "id": "ani-343",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne a « fini » la vaisselle | Cinq tasses sales alignées à droite ; lui en lave une, concentré, la pose à gauche, bien propre, et s'essuie le front, fier ; en haut s'écrit « c'est bon, j'ai fait la vaisselle ». | Elle arrive de la gauche, regarde la tasse propre, puis les cinq tasses sales, puis lui ; elle lève un sourcil ; lui lève le pouce, très content de lui ; elle est blasée. | Elle pousse les cinq tasses sales vers lui d'un seul geste ; elles glissent toutes jusqu'à ses pattes ; il les regarde, la regarde, soupire, et reprend l'éponge, blasé ; elle part, les pattes sur les hanches."
+    },
+    {
+      "id": "ani-344",
+      "qui": "elle",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne veut monter sur tes épaules au concert | Un concert : des notes, des étoiles, la nuit ; les deux dansent, ravis ; elle se dresse sur la pointe des pattes pour voir, n'y arrive pas, et le regarde, suppliante. | Il se baisse, elle grimpe, et le voilà avec elle assise sur ses épaules, les bras en l'air, ravie, qui voit tout ; lui, en dessous, tient bon, les pattes levées, souriant. | « 2 h plus tard » en bas. Elle, toujours sur ses épaules, chante, les bras en l'air ; lui, en dessous, les pattes qui tremblent, des sueurs, les yeux en croix, tient encore ; il tient toujours."
+    },
+    {
+      "id": "ani-345",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne essaie de te réveiller en douceur | Le matin, le lit ; elle dort profondément, des z ; lui, debout à côté, chuchote, lui tapote l'épaule doucement ; rien ; il lui fait un bisou sur le front ; rien. | Il ouvre la fenêtre, un oiseau chante ; rien ; il lui caresse la tête ; rien ; il lui prend la patte et la secoue un peu ; elle grogne et se retourne, toujours endormie ; il regarde l'horloge. | Il prend une grande inspiration, et hurle ; en haut s'écrit « DEBOUT !!! » en grand ; elle bondit hors du lit, les yeux ronds, les cheveux dressés, furieuse ; il recule, l'auréole, et pointe l'horloge."
+    },
+    {
+      "id": "ani-346",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne te fait un câlin par-derrière | Lui, de dos à moitié, lave une tasse, concentré ; elle arrive sur la pointe des pattes, le doigt sur la bouche, et vient l'enlacer par-derrière, les yeux fermés. | Il sursaute, la tasse lui échappe et tombe ; il reste figé, surpris ; puis il comprend, sourit, et pose ses pattes sur les siennes ; des petits cœurs montent. | Ils restent comme ça, elle collée dans son dos, les yeux fermés ; la tasse par terre, cassée ; il regarde la tasse, puis hausse les épaules : tant pis ; elle sourit contre son dos."
+    },
+    {
+      "id": "ani-347",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne dit « on fait un tour » à 22 h | La nuit, la lune, un arbre ; elle, bonnet sur la tête, ravie, tire lui par la patte vers la droite ; lui suit en traînant, pas convaincu, en pyjama sous sa veste. | Elle regarde les étoiles, les bras ouverts, émerveillée ; lui regarde ses pattes, puis le ciel, puis grelotte, des frissons ; il se colle à elle pour avoir chaud ; elle lui donne son bonnet. | Les deux assis sur un banc sous la lune, serrés, lui avec le bonnet ; elle pose la tête sur son épaule ; il regarde enfin les étoiles, et sourit ; un petit cœur ; il avait tort, c'était bien."
+    },
+    {
+      "id": "ani-348",
+      "qui": "elle",
+      "lieu": "saisons",
+      "idee": "toi quand ta personne te lève pour un lever de soleil | La nuit encore, le lit ; lui, déjà habillé, bonnet, secoue elle qui dort ; en haut s'écrit « viens voir, dépêche » ; elle grogne, furieuse, et se cache sous l'oreiller. | Dehors, un banc, le ciel encore sombre ; elle, emmitouflée, les yeux fermés, boude, les bras croisés ; lui, à côté, attend, les yeux vers l'horizon ; le soleil commence à monter. | Le soleil monte, le ciel se remplit d'étoiles de lumière ; elle ouvre un œil, puis les deux, bouche bée, puis émerveillée ; elle lui prend la patte sans rien dire ; un cœur ; il avait raison."
+    },
+    {
+      "id": "ani-349",
+      "qui": "lui",
+      "lieu": "dispute",
+      "idee": "toi quand ta personne fait semblant d'être fâchée | Lui, à gauche, boude, les bras croisés, tourné vers le bord, un nuage noir trop bien dessiné ; elle, à droite, le regarde, pas dupe, un sourire en coin. | Elle s'approche à pas de loup, et lui chatouille les côtes ; il résiste, les joues gonflées, tremble, puis craque et éclate de rire ; il se reprend aussitôt et boude encore. | Elle recommence ; il craque encore, mort de rire ; il reboude ; elle recommence ; à la fin il abandonne, l'attrape, et c'est elle qu'il chatouille ; elle se tord de rire ; le nuage a disparu."
+    },
+    {
+      "id": "ani-350",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux devant un truc de notre enfance | Le canapé, la télé ; les deux zappent, blasés ; d'un coup une musique, une émission d'avant : les deux se figent, les yeux ronds, puis les yeux qui brillent, nostalgiques. | Ils chantent le générique ensemble, les bras levés, des notes partout, se regardent, rient ; ils connaissent toutes les paroles ; la télécommande est oubliée. | Les deux debout devant la télé, dansent la chorégraphie du générique, exactement en même temps, concentrés, puis morts de rire ; ils se laissent retomber sur le canapé, l'un sur l'autre ; un cœur."
+    },
+    {
+      "id": "ani-351",
+      "qui": "elle",
+      "lieu": "canapé",
+      "idee": "toi quand ta personne lit ton horoscope | Le canapé ; elle, le téléphone à la patte, lit à voix haute, très sérieuse ; lui, à côté, lève les yeux au ciel ; en haut s'écrit « aujourd'hui, ton signe doit éviter les disputes ». | Il ouvre la bouche pour protester ; elle lève un sourcil ; il réfléchit, des petits points ; il referme la bouche ; l'auréole apparaît au-dessus de sa tête ; il sourit, très sage. | Elle continue de lire : « ... et doit faire la vaisselle pour l'harmonie du foyer » ; il se tourne vers elle, bouche bée ; elle garde son sérieux, puis craque ; il lui jette le coussin, en riant."
+    },
+    {
+      "id": "ani-352",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne t'appelle depuis l'autre pièce | Une porte au milieu ; lui, à gauche, assis par terre, tranquille, un livre ; en haut s'écrit « tu peux venir ? » ; il se lève, passe la porte vers la droite ; puis « non, rien » ; il revient. | Il se rassoit ; en haut : « viens voir ! » ; il se relève, repasse la porte en courant ; « c'est bon, j'ai trouvé » ; il revient, une veine sur le front ; il se rassoit ; « tu peux... » ; il se relève. | Il revient avec un coussin, s'assoit par terre juste dans l'embrasure de la porte, entre les deux pièces, blasé, le livre sur les genoux ; elle passe la tête, surprise ; il lève le pouce sans la regarder."
+    },
+    {
+      "id": "ani-353",
+      "qui": "elle",
+      "lieu": "maison",
+      "idee": "toi quand ta personne garde les cartons « au cas où » | Lui, à gauche, pousse un carton vers la porte pour le jeter, décidé ; elle arrive de la droite en courant, le prend, le serre contre elle, choquée ; en haut : « ça peut servir ». | Il en prend un autre ; elle le récupère ; un autre ; elle le récupère ; les cartons s'empilent derrière elle, de plus en plus haut ; lui, les bras ballants, blasé. | « 1 mois plus tard » en bas. Le salon est plein de cartons ; les deux assis chacun dans un carton, comme dans des fauteuils, le téléphone à la patte, contents ; elle lève le pouce : elle avait raison."
+    },
+    {
+      "id": "ani-354",
+      "qui": "elle",
+      "lieu": "matin",
+      "idee": "toi quand ta personne te pique tes chaussettes | Le matin ; lui, une chaussette à la patte, cherche l'autre partout, perplexe, soulève un coussin ; elle, assise sur le canapé, l'air innocent, l'auréole, les pattes bien cachées sous elle. | Il se retourne vers elle ; elle siffle ; il baisse les yeux : ses deux chaussettes à lui sont à ses pattes à elle, bien trop grandes ; il ouvre des yeux ronds ; elle hausse les épaules, ravie. | Ils finissent assis côte à côte sur le canapé, une chaussette chacun : une à lui, une à elle, dépareillées ; ils regardent leurs pattes, puis se regardent, et rient ; un petit cœur."
+    },
+    {
+      "id": "ani-355",
+      "qui": "les deux",
+      "lieu": "saisons",
+      "idee": "nous deux quand on veut un câlin et qu'il fait trop chaud | Un grand soleil, le premier jour chaud ; les deux, rouges, de la vapeur au-dessus de la tête, se regardent, un peu tristes ; ils voudraient un câlin ; ils s'approchent prudemment. | Câlin ; une seconde de bonheur, des cœurs ; puis la vapeur monte d'un coup, les deux deviennent tout rouges, les yeux en croix, et se lâchent en même temps. | Ils s'assoient par terre, loin l'un de l'autre, de chaque côté de l'écran, et se tendent la patte à distance : le bout des pattes se touche, et c'est tout ; un petit cœur au milieu ; le soleil tape."
+    },
+    {
+      "id": "ani-356",
+      "qui": "lui",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne te réveille pour dire « je t'aime » | La nuit, la lune ; le lit ; lui dort allongé ; elle, réveillée, le regarde avec des cœurs dans les yeux, puis le secoue doucement ; il grogne, les yeux fermés. | Il ouvre un œil, blasé ; en haut s'écrit « je t'aime » ; il reste figé, puis fond, les yeux en cœur ; elle sourit, satisfaite, et se rallonge aussitôt. | « 2 min plus tard » en bas. Elle dort profondément, des z ; lui, assis dans le lit, tout content, n'arrive plus à dormir, les cœurs toujours dans les yeux ; il la regarde ; la lune aussi."
+    },
+    {
+      "id": "ani-357",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux quand il faut se lever pour éteindre la lumière | Le soir, le canapé, une lampe allumée à droite ; les deux affalés sous le plaid, zen ; ils regardent la lampe, puis se regardent ; personne ne bouge. | En haut s'écrit « vas-y toi » ; lui fait non ; elle fait non ; ils se fixent, les yeux plissés ; ils ferment les yeux tous les deux, faux endormis, l'auréole. | Elle rouvre un œil, attrape le coussin et le lance ; il vole jusqu'à la lampe, la lampe tombe, le noir ; les deux, très fiers, le pouce levé dans le noir ; un petit cœur."
+    },
+    {
+      "id": "ani-358",
+      "qui": "elle",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne t'embrasse avec son rouge à lèvres | Le matin, près de la porte ; lui est prêt à partir, le sac à la patte ; elle lui fait un bisou sur la joue, puis sur l'autre, puis sur le front ; il part, tout content ; des petits cœurs. | Dehors, dans la rue ; lui marche fièrement, des étincelles, sans se douter de rien ; il croise un reflet dans une fenêtre, s'arrête, se regarde : des cœurs roses partout sur la figure. | Il frotte sa joue à toute vitesse, rouge de honte, une goutte de sueur ; de retour à la maison, elle l'attend, l'air innocent, l'auréole, et lui en fait un autre ; il abandonne et sourit."
+    },
+    {
+      "id": "ani-359",
+      "qui": "lui",
+      "lieu": "dehors",
+      "idee": "toi quand ta personne te laisse la fenêtre dans le train | Un banc comme dans un train, une fenêtre à droite ; les deux arrivent ; lui s'écarte et lui laisse la place près de la fenêtre, galant ; elle, ravie, s'assoit et regarde dehors, émerveillée. | « 2 min plus tard » en bas. Elle s'est endormie contre la vitre, des z ; lui, de son côté, essaie de regarder dehors par-dessus elle, se penche, se tord le cou, puis renonce. | Il la regarde dormir contre la vitre, et ça lui va très bien ; il sourit, pose son bras autour d'elle ; un petit cœur ; dehors, un oiseau passe, et il est le seul à le voir."
+    },
+    {
+      "id": "ani-360",
+      "qui": "lui",
+      "lieu": "sortir",
+      "idee": "toi quand ta personne passe « 5 min » au magasin de brico | Devant une porte de magasin ; lui entre en courant, les yeux qui brillent ; en haut s'écrit « juste 5 min » ; elle, dehors, s'assoit sur le banc, confiante, le téléphone à la patte. | « 1 h plus tard » en bas. Elle, sur le banc, s'ennuie, puis pique du nez, puis dort allongée sur le banc ; il ressort une seconde, radieux, une lampe à la patte, et repart dedans. | « 3 h plus tard » en bas. Il ressort avec trois cartons empilés, une lampe, une plante, fier comme tout ; elle se réveille, regarde la pile, et pointe l'heure sur son téléphone ; il fait l'innocent."
+    },
+    {
+      "id": "ani-361",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux en mode karaoké dans la cuisine | La maison ; elle, une brosse à la patte en guise de micro, chante à tue-tête, des notes partout ; lui arrive, surpris, puis attrape une tasse comme micro et la rejoint. | Les deux chantent et dansent, face à face, dos à dos, en se donnant la réplique, des notes énormes, les yeux fermés, à fond ; le refrain : ils se pointent du doigt. | Trois coups frappés au mur, derrière eux ; les deux se figent, la brosse et la tasse en l'air ; ils se regardent, honteux, et finissent la chanson en chuchotant, penchés l'un vers l'autre, le doigt sur la bouche."
+    },
+    {
+      "id": "ani-362",
+      "qui": "les deux",
+      "lieu": "dispute",
+      "idee": "nous deux quand on est têtus tous les deux | Les deux face à face, décidés, les bras croisés, le regard noir ; en haut s'écrit « c'est toi qui t'excuses » ; aucun des deux ne bouge d'un millimètre. | « 1 h plus tard » en bas. Toujours debout face à face, les bras croisés ; ils ont faim, ils bâillent, les yeux qui tombent ; mais personne ne bouge ; une horloge tourne. | « 3 h plus tard » en bas. Les deux dorment debout, face à face, les bras toujours croisés, appuyés l'un contre l'autre front contre front, des z ; un petit cœur ; personne ne s'est excusé."
+    },
+    {
+      "id": "ani-363",
+      "qui": "lui",
+      "lieu": "dispute",
+      "idee": "toi quand ta personne dit « tu dors sur le canapé ce soir » | Le soir, la chambre ; elle, furieuse, pointe la porte ; lui, tout triste, un oreiller sous le bras, sort en traînant par la droite ; en haut s'écrit « tu dors sur le canapé ». | La nuit, la lune ; le canapé ; lui, recroquevillé dessus, grelotte, l'oreiller sous la tête, un nuage noir ; dans la chambre à côté, elle, dans le lit, boude, puis se sent triste, puis regarde la porte. | « 2 h plus tard » en bas. Elle arrive sur la pointe des pattes avec le plaid, le pose sur lui, et se glisse sur le canapé contre lui ; il ouvre un œil, surpris ; elle boude encore, mais reste ; un petit cœur."
+    },
+    {
+      "id": "ani-364",
+      "qui": "les deux",
+      "lieu": "amis",
+      "idee": "nous deux quand les invités sont partis | La porte à droite se referme ; les deux, debout, font encore coucou de la patte, le sourire parfait, l'auréole ; la porte claque ; leurs sourires tombent d'un coup. | Ils se laissent tomber par terre, l'un après l'autre, au milieu des tasses et des coussins, les yeux en croix, K.-O. ; elle lève une patte : « on range demain » s'écrit en haut. | Ils dorment par terre, l'un contre l'autre, au milieu du salon, un coussin partagé sous la tête, des z ; la lune à la fenêtre ; un petit cœur ; la vaisselle attendra."
+    },
+    {
+      "id": "ani-366",
+      "qui": "les deux",
+      "lieu": "amis",
+      "idee": "nous deux sur le canapé-lit chez des amis | La nuit, la lune ; un canapé, pas un lit ; les deux essaient de s'y allonger ensemble : lui d'abord, puis elle par-dessus ; ça ne rentre pas ; deux points d'exclamation. | Ils essaient autrement : tête-bêche, elle à gauche, lui à droite, les pattes dans la figure de l'autre ; non ; assis tous les deux, la tête en arrière ; non ; lui par terre, elle sur le canapé ; non plus. | « 3 h du matin » en bas. Ils ont fini par trouver : lui allongé sur le canapé, elle allongée sur lui, pile en équilibre, les yeux fermés, des z ; un petit cœur ; ça tient, à peu près."
+    },
+    {
+      "id": "ani-367",
+      "qui": "les deux",
+      "lieu": "canapé",
+      "idee": "nous deux quand on essaie de parler sérieusement | Le canapé ; les deux assis bien droits, face à face, très sérieux ; en haut s'écrit « bon. on parle. » ; lui prend une grande inspiration ; elle hoche la tête, grave. | Il commence, sérieux ; elle le regarde ; sa bouche à elle tremble ; elle pouffe ; il fronce les sourcils ; elle se retient, les pattes sur la bouche ; il craque à son tour. | Les deux morts de rire, pliés en deux ; ils reprennent leur sérieux, bien droits, en même temps ; une seconde ; et ils repartent en fou rire, l'un sur l'autre ; un petit cœur ; la conversation attendra."
+    },
+    {
+      "id": "ani-369",
+      "qui": "elle",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne te garde une place | Le canapé ; elle, assise, une patte posée sur la place d'à côté, la garde ; lui est parti chercher quelque chose ; le chat arrive et vise la place ; elle le repousse, gentiment. | Le chat revient à la charge, par l'autre côté ; elle le repousse encore, sans lâcher la place ; le chat, vexé, s'assoit par terre et la fixe ; elle tient bon, la patte toujours posée. | Il revient avec deux tasses, voit la place gardée, et fond ; il s'assoit, elle retire sa patte pile à ce moment-là ; le chat monte sur ses genoux à lui, et tout le monde est content ; un cœur."
+    },
+    {
+      "id": "ani-370",
+      "qui": "les deux",
+      "lieu": "tendresse",
+      "idee": "nous deux quand on a la même idée en même temps | Le canapé, un dimanche, les deux s'ennuient ; d'un coup, une ampoule au-dessus de chaque tête, exactement au même moment ; ils se tournent l'un vers l'autre, les yeux ronds. | Ils se pointent du doigt en même temps, la bouche ouverte ; ils rient ; ils se lèvent d'un bond ; pas besoin de le dire. | Ils attrapent le sac et les clés et sortent en courant par la droite, main dans la main, radieux ; des cœurs derrière eux ; la porte claque ; le canapé est vide."
+    },
+    {
+      "id": "ani-371",
+      "qui": "lui",
+      "lieu": "maison",
+      "idee": "toi quand ta personne te montre comment plier les serviettes | Lui, fier, plie un plaid n'importe comment et le pose sur la pile, les pattes sur les hanches ; elle arrive, regarde la pile, et s'arrête net, choquée, une goutte de sueur. | Elle défait le plaid, le replie en quatre gestes précis, très concentrée, et le repose, parfait ; lui regarde, bouche bée, puis prend des notes dans sa tête, des petits points. | Il réessaie, la langue sortie, très appliqué ; il pose son plaid sur la pile : tout de travers ; elle sourit, lui tapote la tête, et le replie derrière lui pendant qu'il va chercher le suivant, tout fier."
+    },
+    {
+      "id": "ani-372",
+      "qui": "elle",
+      "lieu": "nuit",
+      "idee": "toi quand ta personne te réveille en éternuant | La nuit, la lune ; le lit ; les deux dorment ; lui fronce le nez dans son sommeil, inspire, inspire ; puis éternue d'un coup, un bond, un point d'exclamation ; elle se réveille en sursaut. | Elle le fusille du regard, une veine ; il s'excuse, désolé, les pattes jointes ; elle se recouche en boudant ; il se recouche aussi ; une seconde ; son nez refronce ; il inspire. | Avant qu'il éternue, elle lui plaque l'oreiller sur la figure ; un éternuement étouffé, l'oreiller saute ; elle le garde sur lui, zen, les yeux fermés ; il reste dessous, résigné ; un petit cœur quand même."
+    },
+    {
+      "id": "ani-373",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne demande ce que tu veux pour ton anniv | Le canapé ; elle, le téléphone à la patte, lui demande ; en haut s'écrit « tu veux quoi pour ton anniversaire ? » ; lui réfléchit une demi-seconde ; « rien » ; elle est blasée. | Elle insiste, les bras levés ; il hausse les épaules, sincère, l'auréole ; elle le pointe du doigt, méfiante ; il lève le pouce : vraiment rien. | « 10 min plus tard » en bas. Il revient avec une lettre pliée en deux, longue comme le bras, et la lui tend, très fier, des étincelles ; elle déplie, déplie, déplie ; la liste touche le sol ; elle est bouche bée."
+    },
+    {
+      "id": "ani-374",
+      "qui": "lui",
+      "lieu": "tendresse",
+      "idee": "toi quand ta personne réclame un bisou à chaque passage | Le salon ; elle, assise sur le canapé ; lui traverse la pièce de gauche à droite avec une tasse ; au passage elle tend la joue ; il s'arrête, bisou, et continue ; un petit cœur. | Il repasse dans l'autre sens : elle tend la joue ; bisou ; il repasse : la joue ; bisou ; il repasse encore, plus vite, il court presque ; la joue ; bisou ; il commence à fatiguer. | « 20 passages plus tard » en bas. Il rampe à plat ventre pour traverser le salon sans qu'elle le voie ; elle, sans lever les yeux, tend la joue vers le bas ; il soupire, se redresse, bisou ; elle sourit."
+    },
+    {
+      "id": "ani-375",
+      "qui": "lui",
+      "lieu": "matin",
+      "idee": "toi quand ta personne te laisse dormir le dimanche | Le matin, le lit ; elle dort profondément, des z ; lui, debout, le doigt sur la bouche, sort du cadre sur la pointe des pattes ; la porte se ferme sans bruit. | Le salon ; lui range un coussin au ralenti, pose une tasse sans bruit, plie le plaid en retenant son souffle, et marche sur la pointe des pattes pour ne pas faire craquer le sol ; une goutte de sueur. | « midi » en bas. Elle se réveille, s'étire, et trouve le salon impeccable, une tasse fumante posée près d'elle, et lui qui dort sur le canapé, épuisé, des z ; elle sourit, les yeux en cœur."
+    },
+    {
+      "id": "ani-376",
+      "qui": "les deux",
+      "lieu": "maison",
+      "idee": "nous deux quand on range enfin les décos de Noël | Le salon, fin mars, un soleil à la fenêtre ; une étoile de Noël encore accrochée, une bougie, des étincelles qui pendent ; les deux sur le canapé regardent l'étoile, blasés ; « demain » s'écrit en haut. | « une semaine plus tard » en bas. L'étoile est toujours là ; les deux debout dessous, un carton à la patte, décidés ; lui tend la patte vers l'étoile ; elle l'arrête : elle est jolie, non ? | « en avril » en bas. L'étoile est toujours accrochée ; les deux sur le canapé, en t-shirt, un ventilateur imaginaire, contents, lèvent les yeux vers elle ; en haut : « on la laisse pour l'année prochaine » ; un cœur."
+    },
+    {
+      "id": "ani-377",
+      "qui": "les deux",
+      "lieu": "saisons",
+      "idee": "nous deux quand il fait enfin jour à 19 h | « 19 h » en bas. Les deux à la fenêtre, le soleil encore haut dehors ; ils se regardent, émerveillés, les yeux qui brillent : il fait encore jour. | « 20 h » en bas. Dehors, sur un banc, sans manteau, les deux assis au soleil, zen, les yeux fermés ; des oiseaux ; elle pose la tête sur son épaule ; un petit cœur. | « 21 h » en bas. Le soleil se couche enfin, la lune pointe ; les deux toujours sur le banc, un peu frais maintenant, des frissons, serrés l'un contre l'autre ; ils ne rentrent pas ; des étoiles apparaissent."
     }
   ],
   "mipaps-post": [

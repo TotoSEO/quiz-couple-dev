@@ -478,3 +478,43 @@ avec le motif du créneau fermé), rien n'en part. Un fichier retiré de la
 branche retire son post du planning (annulé par la synchro, dix fichiers au
 moins sur la branche) ; un fichier qui revient le fait revivre. La story du
 jour reprend le premier reel que la grille ouvre.
+
+## Un moment, pas une blague, et la fabrique (26 octobre 2026)
+
+Thomas, le 26 octobre 2026 : « le compte insta des mipaps c'est un flop total.
+Faut vraiment arrêter de parler de frites, de pizza, de trucs pas drôles
+comme ça [...] Humour IA vraiment nul. » La règle est dans LIGNE-EDITORIALE,
+« Un moment, pas une blague » : un seul moment que huit couples sur dix ont
+vécu, le texte du début qui le dit au lecteur, la chute dans les corps au
+dernier plan, jamais de bouffe, jamais de chiffre pour faire vrai, les deux
+rôles à tour de rôle. Un reel qui ne passe pas ces huit points ne s'écrit pas.
+
+La réserve est écrite jusqu'au 31 mars 2027 (178 reels, un par créneau
+ouvert, sujets `ani-201` et suivants, cinq sujets datés pour Noël et le
+Nouvel An) par **la fabrique** : `fabrique/usine.py` et `fabrique/reels_*.py`,
+dans ce dossier. Chaque reel y est une scène en Python compact (les étapes
+de chaque personnage, les objets, les textes, la description de chaque plan),
+et `usine.py` en sort les posts JSON et les sujets de la banque :
+
+```bash
+cd reseaux/mipaps/atelier/fabrique
+python3 usine.py ../posts --banque        # les posts manquants et la banque
+node ../../../automates/controler.mjs ../posts/2027-04-*.json
+cd ../../../studio && node scripts/verifier-lot.mjs ../mipaps/atelier/posts 2027-04-01-matin.json ...
+```
+
+`usine.py` ne réécrit pas un fichier existant : il écrit les créneaux ouverts
+dans l'ordre des reels des fichiers `reels_*.py` (lettre par lettre), en
+sautant ceux qu'un fichier occupe déjà, et pose les reels datés à leur date.
+Pour prolonger la réserve : un nouveau fichier `reels_<lettre>.py` avec de
+nouveaux identifiants, les aides de `usine.py` (`fixe`, `entre`, `sort`,
+`marche`, `AU_LIT`, `COEURS`, `TITRE`, `BAS`, `DIT`), puis les deux
+contrôles et une planche (`scripts/planche.mjs`) regardée pour chaque scène
+nouvelle. `scripts/verifier-lot.mjs` passe le contrôle de mise en page du
+studio sur un dossier entier en un seul bundle (quatre secondes par reel au
+lieu de vingt-quatre).
+
+Tant que la réserve tient (jusqu'au 31 mars 2027), `a_remplir` est vide et
+la routine n'a rien à écrire : elle le dit au journal et s'arrête. Quand il
+restera moins de trois semaines, on écrit un nouveau lot avec la fabrique,
+sur `main` (la banque) et sur `mipaps-atelier` (les posts).
