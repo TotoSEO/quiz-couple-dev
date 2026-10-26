@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-25T08:23:04.416Z",
+  "genere_le": "2026-10-26T03:13:57.950Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-25",
+  "aujourdhui": "2026-10-26",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 36,
+  "reserve_jours": 35,
   "a_remplir": [
     {
       "jour": "2026-11-30",
@@ -821,6 +821,21 @@
       "jour": "2027-02-02",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-02-03",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1273,18 +1288,18 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": "t'es la première personne que j'ai envie d'appeler quand il se passe un truc.",
-      "erreur": null
+      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
     },
     {
       "jour": "2026-10-25",
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": null,
-      "erreur": null
+      "erreur": "Instagram /17841424283703541/media_publish : Application request limit reached"
     },
     {
       "jour": "2026-10-26",
@@ -1327,7 +1342,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "j'ai faim mais je veux pas choisir",
       "erreur": null
     },
@@ -1336,7 +1351,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "j'adore quand tu t'endors au milieu d'une phrase",
       "erreur": null
     },
@@ -2550,7 +2565,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-26",
+      "jour": "2026-10-27",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -2558,7 +2573,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-25",
+      "jour": "2026-10-26",
       "creneau": "soir"
     },
     "mipaps-post": {
@@ -2972,6 +2987,34 @@
       "vues": 1647,
       "partages": 9,
       "enregistrements": 3
+    },
+    {
+      "variante_id": "739d8676-89aa-49b7-92a6-ec68d40e90af",
+      "releve": "j7",
+      "vues": 9,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "08057411-45e8-449d-8502-41e36e60cd76",
+      "releve": "j7",
+      "vues": 2502,
+      "partages": 41,
+      "enregistrements": 18
+    },
+    {
+      "variante_id": "b0c8c41e-9e98-40b6-9faf-789c7fca705d",
+      "releve": "j7",
+      "vues": 305,
+      "partages": 3,
+      "enregistrements": 1
+    },
+    {
+      "variante_id": "49bb8ad1-d0d5-4331-9c4e-2e0e21f03fe4",
+      "releve": "j7",
+      "vues": 3,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
