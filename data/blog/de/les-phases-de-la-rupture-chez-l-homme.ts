@@ -3,19 +3,20 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'trennungsphasen-beim-mann',
-  title: 'Die Phasen der Trennung beim Mann',
-  metaTitle: 'Die Phasen der Trennung beim Mann | 6 Stufen erklärt',
-  metaDescription: 'Entdecken Sie die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau. Verstehen Sie jede Phase, um eine Trennung besser zu bewältigen.',
+  title: "Die Phasen der Trennung beim Mann: die 6 Stufen, und der Zyklus des Mannes, der geht",
+  metaTitle: "Trennungsphasen beim Mann: 6 Stufen und der Zyklus",
+  metaDescription: "Die 6 Phasen der Trennung beim Mann, von der Verleugnung bis zum Neuaufbau, und der Zyklus des Mannes, der Schluss macht, so wie es meist abläuft.",
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Mann, der die Phasen einer Trennung durchlebt',
   publishedAt: '2026-02-21',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: 'Die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau.',
+  excerpt: "Die 6 Phasen der Trennung beim Mann, von der Verleugnung bis zum Neuaufbau, und der Zyklus des Mannes, der Schluss macht.",
   introduction: `<p>Man hört oft, dass Männer unter einer Trennung weniger leiden, dass sie schneller weitermachen. Das stimmt nicht. Sie leiden genauso, nur anders: Bei ihnen kommt der Schmerz später. Ein Mann kann wochenlang ausgehen, lachen, eine Party nach der anderen mitnehmen... und drei Monate später zusammenbrechen, an einem Sonntagabend, wenn die Realität ihn mit einem Schlag einholt.</p>
-<p>Hier sind die 6 Phasen, die ein Mann nach einer Trennung durchläuft, in der Reihenfolge, in der sie meistens kommen. Ob du ein Mann mitten in einer Trennung bist oder eine Frau, die <a href="/de/denkt-mein-ex-noch-an-mich/">verstehen will, wie ihr Ex das gerade erlebt</a>: Diese Orientierungspunkte helfen zu wissen, wo man steht.</p>`,
+<p>Hier sind die 6 Phasen, die ein Mann durchläuft, wenn er verlassen wird, in der Reihenfolge, in der sie meistens kommen, und danach der Zyklus des Mannes, der Schluss macht, den man in den sozialen Netzwerken „den Trennungszyklus der männlichen Psychologie" nennt. Ob du ein Mann mitten in einer Trennung bist oder eine Frau, die <a href="/de/denkt-mein-ex-noch-an-mich/">verstehen will, wie ihr Ex das gerade erlebt</a>: Diese Orientierungspunkte helfen zu wissen, wo man steht.</p>`,
   quickSummary: [
     'Nach einer Trennung durchläuft ein Mann 6 Phasen: Verleugnung, Betäubung, Wut, Bewusstwerdung, Trauer, Neuaufbau.',
+    'Wenn er derjenige ist, der geht, sieht der Weg anders aus: Erleichterung, Freiheit, das Loch, Nostalgie, Reue, dann Rückkehr oder Abschluss.',
     'Der Schmerz kommt oft verspätet: wochenlang „mir geht es super", dann der Zusammenbruch.',
     'Die Traurigkeit ist die Phase, die heilt. Wut und Flucht schieben sie nur auf.',
     'Diese Phasen haben weder feste Reihenfolge noch feste Dauer: Sie sind ein Orientierungspunkt, kein Kalender.',
@@ -48,7 +49,7 @@ const article: BlogArticleData = {
       content: `<p>Der Auslöser ist oft eine Kleinigkeit: ein Lied, ein Ort, an den ihr zusammen gegangen seid, ein Gegenstand in einer Schublade. Und auf einmal wird es real. Es ist vorbei, sie kommt nicht zurück, das gemeinsam erträumte Leben wird nicht stattfinden.</p>
 <p>Dann kommen die Fragen in Wellen: War es meine Schuld? Hätte ich etwas anders machen können? Sich diese Fragen einmal ehrlich zu stellen, bringt einen weiter. Sie sich jeden Abend in Dauerschleife vorzuspielen, ist Grübeln, und das führt nirgendwohin.</p>
 <p>Das ist auch der Moment, in dem viele ihre Ex kontaktieren wollen, „um Antworten zu bekommen". Meistens ist das eine schlechte Idee: Die Antworten, die man sucht, kommen selten von der anderen Person. Sie kommen von einem selbst, mit der Zeit.</p>
-<a href="/de/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">Wie man eine unglückliche Frau in einer Beziehung erkennt: Die wahren Anzeichen</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/de/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">Die Anzeichen einer unglücklichen Frau in der Beziehung: wie du sie erkennst</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {
       id: 'phase-5-echte-trauer',
@@ -75,6 +76,20 @@ const article: BlogArticleData = {
 <li><strong>Wieder lernen, allein zu sein:</strong> Keine erlittene Einsamkeit, ein gewähltes Alleinsein. Mit sich selbst gut klarzukommen ist die solideste Basis, um eines Tages eine <a href="/de/gesunde-beziehung-test/">Beziehung aufzubauen, die guttut</a>.</li>
 <li><strong>Sich erlauben, wieder zu wollen:</strong> Nicht unbedingt sofort einen neuen Menschen. Einfach wieder Pläne machen, und nach vorne schauen.</li>
 </ul>`,
+    },
+    {
+      id: 'der-zyklus-des-mannes-der-geht',
+      title: 'Und wenn er derjenige ist, der geht? Der Trennungszyklus der männlichen Psychologie',
+      content: `<p>Alles bisher beschreibt den Mann, der verlassen wird. Wenn er derjenige ist, der geht, sieht der Weg anders aus, und das ist der, den man in den sozialen Netzwerken „den Trennungszyklus der männlichen Psychologie" nennt. Daran ist nichts wissenschaftlich, es ist ein Muster, das viele Frauen sich haben wiederholen sehen, und es läuft oft so ab:</p>
+<ol>
+<li><strong>Die Erleichterung:</strong> In den ersten Tagen fühlt er sich leicht. Keine Spannungen mehr, keine Vorwürfe, er hat endlich die Entscheidung getroffen, die er seit Wochen vor sich hergeschoben hat.</li>
+<li><strong>Die Freiheit:</strong> Er geht aus, trifft seine Freunde, genießt es. Von außen sieht es so aus, als wäre es ihm völlig egal, und genau das tut derjenigen, die zurückbleibt, am meisten weh.</li>
+<li><strong>Das Loch:</strong> Nach ein paar Wochen lässt der Reiz des Neuen nach. Er kommt in eine leere Wohnung, hat niemanden mehr, dem er von seinem Tag erzählen kann, und die Stille fängt an zu drücken.</li>
+<li><strong>Die Nostalgie:</strong> Er erinnert sich nur noch an die guten Momente. Die Gründe, aus denen er gegangen ist, verblassen, und er fragt sich, ob er einen Fehler gemacht hat.</li>
+<li><strong>Die Reue:</strong> Das ist der Moment des „Hey, wie geht's dir?", abgeschickt an einem Abend, zwei oder drei Monate später, ohne genau zu wissen, was er will.</li>
+<li><strong>Die Rückkehr, oder der Abschluss:</strong> Entweder er kommt wirklich zurück, oder diese Nachricht war nur ein Moment, und er geht am Ende ohne dich weiter.</li>
+</ol>
+<p>Diesen Zyklus gibt es, aber er sagt nicht, dass dein Ex zurückkommt: Viele Männer gehen von der Erleichterung direkt zum Abschluss über, ohne je umzukehren, und eine Nachricht aus Reue ist keine Bitte um einen Neuanfang. Wenn du auf diese Nachricht wartest, zählt weniger, zu erraten, wo er gerade steht, als <a href="/de/liebt-er-sie-mich-noch-test/">zu wissen, ob er noch an dir hängt</a>, und vor allem, was du willst.</p>`,
     },
     {
       id: 'warum-anders',

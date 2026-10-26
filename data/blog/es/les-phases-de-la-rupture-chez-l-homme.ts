@@ -3,19 +3,20 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fases-de-la-ruptura-en-el-hombre',
-  title: 'Las etapas de la ruptura en el hombre',
-  metaTitle: 'Las fases de la ruptura en el hombre | 6 etapas explicadas',
-  metaDescription: 'Descubre las 6 fases de la ruptura en el hombre: de la negación a la reconstrucción. Comprende cada etapa para superar mejor una separación.',
+  title: "Las fases de la ruptura en el hombre: las 6 etapas, y el ciclo del que deja",
+  metaTitle: "Las fases de la ruptura en el hombre: 6 etapas y el ciclo",
+  metaDescription: "Las 6 fases de la ruptura en el hombre, de la negación a la reconstrucción, y el ciclo de la psicología masculina del que deja, en el orden en que suele pasar.",
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Hombre atravesando las fases de una ruptura amorosa',
   publishedAt: '2026-02-21',
-  modifiedAt: '2026-08-27',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
-  excerpt: 'Las 6 fases de la ruptura en el hombre: de la negación a la reconstrucción.',
+  excerpt: "Las 6 fases de la ruptura en el hombre, de la negación a la reconstrucción, y el ciclo del que deja.",
   introduction: `<p>Se oye a menudo que los hombres sufren menos con una ruptura, que pasan página más rápido. Es falso. Sufren igual, pero de otra manera: en ellos, el dolor llega más tarde. Un hombre puede salir, reír, encadenar fiestas durante semanas... y derrumbarse tres meses después, un domingo por la noche, cuando la realidad lo alcanza de golpe.</p>
-<p>Aquí tienes las 6 fases que atraviesa un hombre después de una separación, en el orden en que suelen llegar. Tanto si eres un hombre en plena ruptura como si eres una mujer que intenta <a href="/es/mi-ex-todavia-piensa-en-mi/">entender cómo lo está viviendo su ex</a>, estos puntos de referencia ayudan a saber en qué punto se está.</p>`,
+<p>Aquí tienes las 6 fases que atraviesa un hombre cuando lo dejan, en el orden en que suelen llegar, y después el ciclo del que deja, el que en las redes llaman «el ciclo de ruptura de la psicología masculina». Tanto si eres un hombre en plena ruptura como si eres una mujer que intenta <a href="/es/mi-ex-todavia-piensa-en-mi/">entender cómo lo está viviendo su ex</a>, estos puntos de referencia ayudan a saber en qué punto se está.</p>`,
   quickSummary: [
     'Después de una ruptura, un hombre pasa por 6 fases: negación, anestesia, ira, toma de conciencia, duelo, reconstrucción.',
+    'Cuando es él quien deja, el camino es otro: alivio, libertad, bajón, nostalgia, arrepentimiento, y luego vuelta o página pasada.',
     'El dolor suele llegar con retraso: semanas de «estoy genial» y después el derrumbe.',
     'La tristeza es la fase que cura. La ira y la huida solo la retrasan.',
     'Estas fases no tienen ni orden estricto ni duración fija: son una referencia, no un calendario.',
@@ -48,7 +49,7 @@ const article: BlogArticleData = {
       content: `<p>El detonante suele ser un detalle: una canción, un sitio al que ibais juntos, un objeto encontrado en un cajón. Y de golpe, se vuelve real. Se acabó, la otra persona no va a volver, la vida que imaginabais juntos no va a existir.</p>
 <p>Entonces las preguntas llegan en ráfaga: ¿fue culpa mía? ¿Podría haber hecho las cosas de otra manera? Planteárselas una vez, con lucidez, hace avanzar. Repetírselas en bucle cada noche es rumiación, y no lleva a ninguna parte.</p>
 <p>También es el momento en que muchos quieren escribir a su ex «para tener respuestas». La mayoría de las veces es mala idea: las respuestas que uno busca rara vez vienen de la otra persona. Vienen de uno mismo, con el tiempo.</p>
-<a href="/es/blog/mujer-infeliz-en-pareja-senales/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lee también</span><span class="blog-read-also-title">Cómo reconocer a una mujer infeliz en pareja: las verdaderas señales</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/es/blog/mujer-infeliz-en-pareja-senales/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lee también</span><span class="blog-read-also-title">Las señales de una mujer infeliz en pareja: cómo reconocerla</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {
       id: 'fase-5-duelo-real',
@@ -75,6 +76,20 @@ const article: BlogArticleData = {
 <li><strong>Reaprender a estar solo:</strong> No una soledad sufrida, una soledad elegida. Saber estar bien con uno mismo es la base más sólida para construir algún día una <a href="/es/test-relacion-sana/">relación que te haga bien</a>.</li>
 <li><strong>Permitirse querer de nuevo:</strong> No necesariamente otra persona enseguida. Simplemente volver a hacer planes, y mirar hacia delante.</li>
 </ul>`,
+    },
+    {
+      id: 'el-ciclo-del-que-deja',
+      title: '¿Y cuando es él quien deja? El ciclo de ruptura de la psicología masculina',
+      content: `<p>Todo lo anterior describe al hombre al que dejan. Cuando es él quien se va, el camino es distinto, y es el que en las redes llaman «el ciclo de ruptura de la psicología masculina». No tiene nada de científico, es un patrón que muchas mujeres han visto repetirse, y suele pasar así:</p>
+<ol>
+<li><strong>El alivio:</strong> Los primeros días se siente ligero. Se acabaron las tensiones y los reproches, por fin ha tomado la decisión que llevaba semanas aplazando.</li>
+<li><strong>La libertad:</strong> Sale, ve a sus amigos, disfruta. Desde fuera parece que le da completamente igual, y eso es lo que más duele a la que se queda.</li>
+<li><strong>El bajón:</strong> Al cabo de unas semanas, la novedad se apaga. Vuelve a un piso vacío, no tiene a nadie a quien contarle el día, y el silencio empieza a pesar.</li>
+<li><strong>La nostalgia:</strong> Solo se acuerda de los buenos momentos. Las razones por las que se fue se borran, y se pregunta si no habrá cometido una tontería.</li>
+<li><strong>El arrepentimiento:</strong> Es el momento del «hola, ¿qué tal?» enviado una noche, dos o tres meses después, sin saber muy bien lo que quiere.</li>
+<li><strong>La vuelta, o la página pasada:</strong> O vuelve de verdad, o ese mensaje era solo un momento, y acaba por seguir adelante sin ti.</li>
+</ol>
+<p>Este ciclo existe, pero no dice que tu ex vaya a volver: muchos hombres pasan del alivio a la página pasada sin dar nunca media vuelta, y un mensaje de arrepentimiento no es una petición de volver. Si estás esperando ese mensaje, lo que cuenta es menos adivinar en qué punto está él que <a href="/es/test-me-sigue-queriendo/">saber si todavía le importas</a>, y sobre todo lo que quieres tú.</p>`,
     },
     {
       id: 'por-que-diferente',
