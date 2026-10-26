@@ -467,3 +467,14 @@ journaux de plus de trente jours se suppriment au passage.
 S'il n'y a rien à remplir, le journal le dit en une ligne, on le pousse, et
 on s'arrête là. Le bilan de fin de session reprend le journal en cinq
 lignes au plus.
+
+## Huit reels par semaine (26 octobre 2026)
+
+La grille n'ouvre plus que huit créneaux par semaine (voir « La semaine
+type » de LIGNE-EDITORIALE) ; les autres sont fermés (`null` dans le
+réglage `melange`). `a_remplir` ne liste que les créneaux ouverts ; un post
+écrit sur un créneau fermé est retenu par la synchro (déclinaison en échec
+avec le motif du créneau fermé), rien n'en part. Un fichier retiré de la
+branche retire son post du planning (annulé par la synchro, dix fichiers au
+moins sur la branche) ; un fichier qui revient le fait revivre. La story du
+jour reprend le premier reel que la grille ouvre.

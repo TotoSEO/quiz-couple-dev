@@ -15,11 +15,19 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const SUJETS = JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'mipaps', 'atelier', 'sujets.json'), 'utf8'));
 const CATEGORIES = ['mipaps-anime', 'mipaps-post', 'mipaps-histoire', 'mipaps-statique'];
 
-test('chaque sujet daté des mipaps tombe sur un créneau de sa catégorie', () => {
+test('chaque sujet daté des mipaps tombe sur un créneau ouvert de sa catégorie (reels animés seulement depuis le 26 octobre 2026)', () => {
   for (const s of SUJETS.saison.sujets) {
+    if (s.retire) continue;
     assert.ok(CATEGORIES.includes(s.categorie), `${s.id} : catégorie inconnue ${s.categorie}`);
     assert.equal(categorieAttendue(MELANGE_MIPAPS, s.jour, s.creneau), s.categorie, `${s.id} (${s.jour} ${s.creneau})`);
   }
+});
+
+test('la grille des mipaps du 26 octobre 2026 : un reel animé tous les matins et le samedi soir, tout le reste fermé', () => {
+  const semaine = ['2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08'];
+  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_MIPAPS, jour, 'matin'), 'mipaps-anime', jour);
+  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_MIPAPS, jour, 'midi'), null, jour);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_MIPAPS, j, 'soir')), [null, null, null, null, null, 'mipaps-anime', null]);
 });
 
 test('les identifiants des mipaps sont uniques, toutes catégories confondues', () => {

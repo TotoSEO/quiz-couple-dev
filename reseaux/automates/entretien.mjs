@@ -7,11 +7,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
-import { ajouterJours, aujourdhui, categorieAttendue, melangeDuCompte, MOTIF_RETRAIT } from './lib/calendrier.mjs';
+import { ajouterJours, aujourdhui, categorieAttendue, creneauFerme, creneauxOuverts, CRENEAUX, melangeDuCompte, MOTIF_FERME, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
 const JOUR = 86400000;
-const CRENEAUX = ['matin', 'midi', 'soir'];
 // Un créneau d'aujourd'hui n'est proposé à la routine que s'il commence dans
 // plus de trois heures : le temps d'écrire le post et de le rendre (le rendu
 // passe toutes les heures).
@@ -94,16 +93,26 @@ export async function statistiques(base, { maintenant = new Date(), instagramPou
   }
 }
 
-// Jours d'avance : jours consécutifs, à partir d'aujourd'hui, dont les trois
-// créneaux ont un post validé (jusqu'à 120 jours : la réserve peut couvrir
-// toute la banque, écrite d'un coup).
-export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris', langue = 'en' } = {}) {
+// Jours d'avance : jours consécutifs, à partir d'aujourd'hui, dont tous les
+// créneaux que la grille ouvre ont un post validé (jusqu'à 180 jours : la
+// réserve de cinq mois écrite le 26 octobre 2026). Un jour sans créneau
+// ouvert compte comme couvert.
+export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris', langue = 'en', melange } = {}) {
   const debut = aujourdhui(fuseau, maintenant);
   const posts = await base.select('social_posts', `select=jour,creneau,statut&langue=eq.${langue}&jour=gte.${debut}&statut=eq.valide`);
+  let grille = melange;
+  if (grille === undefined) {
+    try {
+      const [compte] = await base.select('social_comptes', `select=melange&langue=eq.${langue}`);
+      grille = melangeDuCompte(compte, await base.reglage('melange'));
+    } catch {
+      grille = null;
+    }
+  }
   let jours = 0;
-  for (let i = 0; i < 120; i++) {
+  for (let i = 0; i < 180; i++) {
     const jour = ajouterJours(debut, i);
-    if (CRENEAUX.every((c) => posts.some((p) => p.jour === jour && p.creneau === c))) jours++;
+    if (creneauxOuverts(grille, jour).every((c) => posts.some((p) => p.jour === jour && p.creneau === c))) jours++;
     else break;
   }
   return jours;
@@ -166,6 +175,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
   for (let i = 0; i <= horizon; i++) {
     const jour = ajouterJours(debut, i);
     for (const creneau of CRENEAUX) {
+      if (creneauFerme(melange, jour, creneau)) continue; // fermé par la grille : rien n'y part
       if (i === 0 && debutCreneau(compte, creneau) < minutesMaintenant + MARGE_MIN) continue;
       if (!posts.some((p) => p.jour === jour && p.creneau === creneau && p.statut !== 'annule')) {
         aRemplir.push({ jour, creneau, categorie: categorieAttendue(melange, jour, creneau) });
@@ -202,7 +212,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     fuseau,
     aujourdhui: debut,
     melange,
-    reserve_jours: await reserve(base, { maintenant, fuseau, langue }),
+    reserve_jours: await reserve(base, { maintenant, fuseau, langue, melange }),
     a_remplir: aRemplir,
     // seulement ce qui peut encore partir : un post dont le créneau est passé
     // ne sera plus publié quoi qu'on en fasse (la publication refuse tout
@@ -210,7 +220,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     // chaque matin pendant trente jours
     // (une déclinaison retenue parce que sa catégorie est retirée de la
     // grille n'est pas à corriger : elle est dans hors_grille, à réécrire)
-    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec' && v.erreur !== MOTIF_RETRAIT) && encorePubliable(p)).map(resume),
+    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec' && ![MOTIF_RETRAIT, MOTIF_FERME].includes(v.erreur)) && encorePubliable(p)).map(resume),
     // posts acceptés par la synchro mais dont la catégorie ne suit plus la
     // grille (elle a changé après leur écriture, comme le mardi soir devenu
     // BD le 8 octobre 2026) : ils partiront tels quels si la routine ne les

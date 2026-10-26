@@ -1317,42 +1317,47 @@
     }
   ],
   "saison": {
-    "note": "Noël et Nouvel An, les seules fêtes du calendrier. À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type. Objets : bonnet, flocons, cadeau, bougie ; au Nouvel An, verres, étoiles, horloge.",
+    "note": "Noël et Nouvel An, les seules fêtes du calendrier. À ces dates et créneaux, le sujet daté remplace celui de la banque ; depuis le 26 octobre 2026 la grille n'a que des reels animés (tous les matins et le samedi soir), un sujet daté est donc un reel animé. Objets : bonnet, flocons, cadeau, bougie ; au Nouvel An, verres, étoiles, horloge.",
     "sujets": [
       {
         "id": "noel-001",
         "jour": "2026-12-24",
-        "creneau": "soir",
-        "categorie": "mipaps-statique",
-        "idee": "Reel statique : les deux sous un plaid sur le canapé, les flocons à la fenêtre ; les films de Noël qu'on regarde chaque année."
+        "creneau": "matin",
+        "categorie": "mipaps-anime",
+        "qui": "les deux",
+        "idee": "Toi quand c'est le soir des films de Noël : les deux sous le plaid devant la télé, les flocons à la fenêtre ; elle connaît la fin et la mime avant, lui s'endort à la moitié ; chute : elle a tout le plaid, lui dort debout contre l'accoudoir. Trois plans, 13 secondes."
       },
       {
         "id": "noel-002",
         "jour": "2026-12-25",
         "creneau": "matin",
         "categorie": "mipaps-anime",
+        "qui": "les deux",
         "idee": "« On avait dit pas de cadeaux cette année » : chacun cache un cadeau derrière son dos ; ils le sortent en même temps, « toi aussi ? » ; câlin, cœurs et flocons. Trois plans, 11,5 secondes."
       },
       {
         "id": "noel-003",
-        "jour": "2026-12-25",
-        "creneau": "midi",
-        "categorie": "mipaps-post",
-        "idee": "Mini : lui, repu et KO, à côté d'une bûche ; le repas de Noël dans la famille de l'autre."
+        "jour": "2026-12-26",
+        "creneau": "soir",
+        "categorie": "mipaps-anime",
+        "qui": "lui",
+        "idee": "Le lendemain du repas de Noël chez ta belle-famille : lui, repu et KO sur le canapé, le ventre en avant ; elle arrive avec une assiette de restes ; il lève une patte pour dire non ; chute : l'autre patte tend déjà vers l'assiette. Trois plans, 12 secondes."
       },
       {
         "id": "nouvelan-001",
         "jour": "2026-12-31",
-        "creneau": "soir",
-        "categorie": "mipaps-statique",
-        "idee": "Reel statique : les deux endormis sous un plaid, l'horloge sur minuit, des étoiles dehors ; la grosse soirée prévue."
+        "creneau": "matin",
+        "categorie": "mipaps-anime",
+        "qui": "les deux",
+        "idee": "La grosse soirée du réveillon : à 22 h les deux sont prêts, habillés, verre à la patte ; à 23 h ils regardent l'horloge, assis au bord du canapé ; chute : à minuit, étoiles dehors, les deux dorment sous le plaid, un verre plein posé à côté. Trois plans, 13 secondes."
       },
       {
         "id": "nouvelan-002",
         "jour": "2027-01-01",
-        "creneau": "midi",
-        "categorie": "mipaps-post",
-        "idee": "Déclaration : la résolution de se coucher plus tôt, prise chaque année à deux."
+        "creneau": "matin",
+        "categorie": "mipaps-anime",
+        "qui": "les deux",
+        "idee": "La résolution du 1er janvier, écrite à deux sur un papier : « se coucher plus tôt » ; le soir même, les deux dans le lit, les yeux grands ouverts dans la lumière du téléphone ; chute : l'horloge a dépassé minuit, le papier par terre. Trois plans, 12 secondes."
       }
     ]
   },

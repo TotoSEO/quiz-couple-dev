@@ -82,7 +82,8 @@ export class BaseMemoire {
     return out;
   }
   async update(table, filtre, valeurs) {
-    const cibles = filtrer(this.t(table), filtre).map((l) => this.t(table).find((x) => x.id === l.id || x.cle === l.cle));
+    // une ligne se retrouve par son identifiant ou sa clé ; jusqu'au 26 octobre 2026, deux lignes sans clé passaient pour la même (undefined === undefined) et la première ligne de la table recevait la mise à jour
+    const cibles = filtrer(this.t(table), filtre).map((l) => this.t(table).find((x) => x === l || (x.id !== undefined && x.id === l.id) || (x.cle !== undefined && x.cle === l.cle)));
     cibles.forEach((l) => Object.assign(l, structuredClone(valeurs)));
     return structuredClone(cibles);
   }

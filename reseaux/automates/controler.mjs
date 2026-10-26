@@ -50,19 +50,25 @@ for (const fichier of process.argv.slice(2)) {
     // appels inventés...) : la porte de l'atelier, pas celle de la synchro
     fautes.push(...controlerStylePost(post));
     const SUJETS = sujetsDe(fichier);
-    const datés = SUJETS.saison?.sujets ?? [];
+    // un sujet daté retiré (les formats image, 26 octobre 2026) ne réserve plus rien
+    const datés = (SUJETS.saison?.sujets ?? []).filter((s) => !s.retire);
     const banque = (categorie) => SUJETS[categorie] ?? [];
-    const attendu = categorieAttendue(estMipaps(fichier) ? MELANGE_MIPAPS : MELANGE_DEFAUT, post.jour, post.creneau);
-    if (attendu && attendu !== post.categorie) fautes.push(`le créneau attend la catégorie ${attendu}`);
-    // les animations des mascottes ne partent plus (16 octobre 2026 au soir,
-    // Thomas : « ça sert à rien de continuer ») : la synchro retiendrait le
-    // post, autant ne pas l'écrire
-    if (estRetiree(post.categorie)) fautes.push(`la catégorie ${post.categorie} (animation des mascottes) est retirée de la grille depuis le 16 octobre 2026 : rien de cette catégorie ne part plus, on écrit ${attendu || 'la catégorie attendue'}`);
-    const nom = `${post.jour}-${post.creneau}.json`;
-    if (path.basename(fichier) !== nom) fautes.push(`le fichier doit s'appeler ${nom}`);
     // le sujet : celui du jour s'il est daté, sinon un sujet libre de la banque
     const date = datés.find((s) => s.jour === post.jour && s.creneau === post.creneau);
     if (date && post.sujet !== date.id) fautes.push(`ce créneau a un sujet daté : ${date.id}`);
+    const attendu = categorieAttendue(estMipaps(fichier) ? MELANGE_MIPAPS : MELANGE_DEFAUT, post.jour, post.creneau);
+    // huit reels par semaine (26 octobre 2026) : un créneau fermé ne prend rien
+    if (attendu === null) fautes.push('ce créneau est fermé par la grille (huit reels par semaine depuis le 26 octobre 2026) : rien n\'y part');
+    // un sujet daté à « exception » (la veille de Noël, l'histoire de bâton à
+    // la place du reel du jour) a le droit de ne pas suivre la grille
+    const exception = date && date.exception && post.sujet === date.id;
+    if (attendu && attendu !== post.categorie && !exception) fautes.push(`le créneau attend la catégorie ${attendu}`);
+    // les animations des mascottes (16 octobre 2026 au soir, Thomas : « ça
+    // sert à rien de continuer ») et les formats image (26 octobre 2026) ne
+    // partent plus : la synchro retiendrait le post, autant ne pas l'écrire
+    if (estRetiree(post.categorie)) fautes.push(`la catégorie ${post.categorie} est retirée de la grille (animations des mascottes le 16 octobre 2026, formats image le 26 octobre 2026) : rien de cette catégorie ne part plus, on écrit ${attendu || 'la catégorie attendue'}`);
+    const nom = `${post.jour}-${post.creneau}.json`;
+    if (path.basename(fichier) !== nom) fautes.push(`le fichier doit s'appeler ${nom}`);
     // une idée de Thomas (admin) tient lieu de sujet : le post porte idee_id
     // et un sujet « idee-<début de l'identifiant> », hors banque
     if (post.idee_id && !/^idee-[0-9a-f]{8}$/.test(post.sujet || '')) fautes.push(`un post tiré d'une idée porte le sujet idee-<huit premiers caractères de idee_id>, pas « ${post.sujet} »`);

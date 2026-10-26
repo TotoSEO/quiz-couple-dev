@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { controlerPost } from './lib/controle.mjs';
-import { aujourdhui, categorieAttendue, estRetiree, melangeDuCompte, MOTIF_RETRAIT } from './lib/calendrier.mjs';
+import { ajouterJours, aujourdhui, categorieAttendue, estRetiree, melangeDuCompte, MOTIF_FERME, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
 // Un rendu en échec est retenté par les synchros suivantes, trois fois en
@@ -94,6 +94,11 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     // lendemain : accepter les posts hors grille « en attendant leur
     // réécriture » les aurait fait partir.
     const retiree = estRetiree(post.categorie);
+    // un créneau fermé par la grille (huit reels par semaine, 26 octobre
+    // 2026) : le post est écrit en base et sa déclinaison retenue, comme pour
+    // une catégorie retirée
+    const fermee = attendu === null;
+    const motifRetenue = retiree ? MOTIF_RETRAIT : MOTIF_FERME;
     for (const langue of Object.keys(post.variantes || {})) {
       if (!comptes.some((c) => c.langue === langue)) fautes.push(`aucun compte pour la langue ${langue}`);
     }
@@ -106,7 +111,10 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     }
     const clePost = `${langue}|${post.jour}|${post.creneau}`;
     const deja = existant.posts.get(clePost);
-    if (deja && ['suspendu', 'annule'].includes(deja.statut)) {
+    // un post suspendu ou annulé dans l'admin reste tel quel ; un post que la
+    // synchro a annulé elle-même (fichier disparu de la branche) revit quand
+    // son fichier revient
+    if (deja && ['suspendu', 'annule'].includes(deja.statut) && deja.notes?.annule_par !== 'synchro') {
       bilan.ignores++;
       await base.journal('alerte', 'synchro', `${fichier} : post ${deja.statut} dans l'admin, laissé tel quel`);
       continue;
@@ -137,9 +145,9 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       // joue que si publier_a est nul) : pour un post qu'on veut voir partir
       // à une heure précise, par exemple un soir où le créneau est déjà passé.
       if (post.publier_a) valeurs.publier_a = new Date(post.publier_a).toISOString();
-      if (retiree) {
-        const retenue = { ...valeurs, statut: 'echec', erreur: MOTIF_RETRAIT, essais: ESSAIS_RENDU_MAX, fichiers: {} };
-        if (!existante || (MODIFIABLES.includes(existante.statut) && !(existante.statut === 'echec' && existante.erreur === MOTIF_RETRAIT))) {
+      if (retiree || fermee) {
+        const retenue = { ...valeurs, statut: 'echec', erreur: motifRetenue, essais: ESSAIS_RENDU_MAX, fichiers: {} };
+        if (!existante || (MODIFIABLES.includes(existante.statut) && !(existante.statut === 'echec' && existante.erreur === motifRetenue))) {
           await ecrire(retenue);
           change = true;
         }
@@ -183,9 +191,29 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     else bilan.inchanges++;
     // une fois par écriture, pas à chaque passage horaire sur un fichier inchangé
     if (retiree && change) await base.journal('alerte', 'synchro', `${fichier} : ${post.categorie} retiré de la grille, rien ne partira tant qu'il n'est pas réécrit en ${attendu || 'la catégorie attendue'}`, { fichier, attendue: attendu, categorie: post.categorie });
+    else if (fermee && change) await base.journal('alerte', 'synchro', `${fichier} : le créneau ${post.creneau} du ${post.jour} est fermé par la grille, rien n'en partira`, { fichier, categorie: post.categorie, langue });
     else if (horsGrille && change) await base.journal('alerte', 'synchro', `${fichier} : ${horsGrille}`, { fichier, attendue: attendu, categorie: post.categorie });
   }
-  await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.inchanges} inchangés, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);
+  // Un fichier retiré de la branche retire son post du planning (statut
+  // annule, notes.annule_par = synchro), pour les jours à venir seulement :
+  // jusqu'au 26 octobre 2026, un post dont le fichier avait disparu restait
+  // « valide » en base et partait quand même. Garde-fou : jamais quand la
+  // branche d'un compte montre moins de dix fichiers (un checkout vide
+  // annulerait toute la réserve). Un fichier qui revient fait revivre le post.
+  for (const compte of comptes) {
+    const fichiers = posts.filter(({ post }) => (post.langue || Object.keys(post.variantes || {})[0]) === compte.langue);
+    if (fichiers.length < 10) continue;
+    const cles = new Set(fichiers.map(({ post }) => `${compte.langue}|${post.jour}|${post.creneau}`));
+    const demain = ajouterJours(aujourdhui(compte.fuseau || 'Europe/Paris', maintenant), 1);
+    for (const [cle, p] of existant.posts) {
+      if (p.langue !== compte.langue || p.statut !== 'valide' || p.jour < demain || cles.has(cle)) continue;
+      await base.update('social_posts', `id=eq.${p.id}`, { statut: 'annule', notes: { ...(p.notes || {}), annule_par: 'synchro', annule_le: maintenant.toISOString() } });
+      existant.posts.set(cle, { ...p, statut: 'annule' });
+      bilan.annules = (bilan.annules || 0) + 1;
+      await base.journal('alerte', 'synchro', `${p.jour} ${p.creneau} (${compte.langue}) : plus de fichier sur la branche, post annulé`, { jour: p.jour, creneau: p.creneau, langue: compte.langue });
+    }
+  }
+  await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.inchanges} inchangés, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés${bilan.annules ? `, ${bilan.annules} annulés (fichier disparu)` : ''}`);
   return bilan;
 }
 

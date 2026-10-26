@@ -58,51 +58,47 @@ dans le lit. Une image qui ne bouge pas est un reel qu'on fait défiler.
 
 ## La semaine type (heure de Paris)
 
-Trois posts par jour, à une minute tirée au sort dans 6 h-8 h, 11 h-13 h et
-16 h-18 h. Le réglage `melange` de Supabase porte cette grille ; la synchro
-accepte avec une alerte un post qui ne la suit plus (la grille a changé
-après son écriture) et le signale à la routine, qui le réécrit ; une
-catégorie retirée, elle, est retenue : rien n'en part.
+Huit reels par semaine depuis le 26 octobre 2026, et rien d'autre. Thomas,
+ce jour-là : il ne reprend sans doute pas l'abonnement Claude, « il faut
+préparer une grande quantité de posts [...] publier un peu moins pour
+préparer une mise en ligne automatisée sans plus aucune intervention de
+Claude pendant plus de 5 mois, à raison de 8 posts par semaine ». Aux vues à
+sept jours du 7 au 19 octobre, seuls les reels sont distribués : dilemmes
+« Tu préfères » 1 462 vues médianes (52 186 pour « Date night edition »,
+1 483 envois), « Connais-tu » 357 (2 694 le 19 octobre, 115 envois),
+bonhomme bâton 1 221 ; phrase tendre 192, « He's a 10 but » 170, carrousel
+126, BD 64. Le réglage `melange` de Supabase porte cette grille (la même
+que `MELANGE_DEFAUT`, lib/calendrier.mjs, et que la migration
+`20261026190000`) ; un créneau à `null` est fermé : la synchro y retient
+tout post, l'entretien ne le compte ni à remplir ni dans la réserve.
 
-| | Matin | Midi | Après-midi |
+| | Matin | Midi | Après-midi (16 h-18 h) |
 |---|---|---|---|
-| Lundi | Bonhomme bâton | Connais-tu | Tu préfères |
-| Mardi | Bonhomme bâton | Tu préfères | BD en quatre cases |
-| Mercredi | Bonhomme bâton | Connais-tu | Tu préfères |
-| Jeudi | Bonhomme bâton | Tu préfères | Carrousel |
-| Vendredi | Bonhomme bâton | Connais-tu | Tu préfères |
-| Samedi | Bonhomme bâton | Tu préfères | « He's a 10 but... » |
-| Dimanche | Bonhomme bâton | Tu préfères | Phrase tendre |
+| Lundi | fermé | fermé | Tu préfères |
+| Mardi | fermé | fermé | Connais-tu |
+| Mercredi | fermé | fermé | Tu préfères |
+| Jeudi | fermé | fermé | Tu préfères |
+| Vendredi | fermé | fermé | Connais-tu |
+| Samedi | fermé | Tu préfères | Bonhomme bâton |
+| Dimanche | fermé | fermé | Tu préfères |
 
-Par semaine : 7 reels du bonhomme bâton (tous les matins depuis le
-16 octobre 2026 au soir, Thomas, devant la promesse de la lune et les
-chiens : « on lance ces animations à raison de une par jour, du coup réduis
-les formats posts classiques »), 7 « Tu préfères » (une édition de dilemmes
-par reel, quatre midis et trois soirs), 3 « Connais-tu ton partenaire ? »
-(les midis du lundi, du mercredi et du vendredi), 1 bande dessinée en
-quatre cases (le mardi soir, depuis le 8 octobre 2026), 1 carrousel de
-questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le format qui se
-garde, « Save this for your next date night »), 1 carrousel « He's a 10
-but... » (le samedi soir, depuis le 12 octobre 2026) et 1 phrase tendre (le
-dimanche soir). Et chaque jour, une **story** reprend le reel du matin
-(voir plus bas).
+Par semaine : 5 « Tu préfères » (une édition de dilemmes par reel), 2
+« Connais-tu ton partenaire ? », 1 reel du bonhomme bâton. Chaque jour, une
+**story** reprend le premier reel que la grille ouvre (le soir, le samedi
+midi). Les formats image (BD, carrousel de questions, « He's a 10 but... »,
+phrase tendre) sont retirés de la grille comme les animations des mascottes
+l'avaient été le 16 octobre 2026 : la synchro retient un post qui les porte,
+`controler.mjs` refuse d'en écrire un. Un fichier retiré de la branche
+retire son post du planning (annulé par la synchro, dix fichiers au moins
+sur la branche) ; un fichier qui revient le fait revivre.
 
-**Plus aucune animation des mascottes depuis le 16 octobre 2026 au soir.**
-Thomas, devant les chiffres des dix premiers jours du compte : « les vidéos
-d'animations avec les deux mascottes ne fonctionnent pas du tout. Ça sert à
-rien de continuer, sur les dizaines qui sont sorties y'en a pas une qui a
-fonctionné. Le seul qui a fait 30 000 vues est le reel dilemmes version date
-night. Je pense qu'il va falloir plutôt se concentrer sur ces reels-là, ceux
-qui sont familiers. » Elles étaient dix par semaine jusqu'au matin du
-16 octobre (POV, minis, phrases à finir, la coquine du vendredi, deux reels
-statiques), trois le soir même après l'arrivée du bonhomme bâton quotidien,
-zéro depuis. Les catégories `pov`, `coquin` et `statique` restent décrites
-plus bas pour comprendre ce qui est parti et parce que leur vocabulaire
-sert encore aux scènes dessinées des BD et des carrousels, mais la synchro
-retient tout post de ces catégories (sa déclinaison est mise en échec, rien
-n'est rendu ni publié) et le contrôle de l'atelier le refuse. Les
-animations déjà écrites pour les semaines suivantes reviennent à la routine
-par `hors_grille`, à réécrire en dilemmes ou en « Connais-tu ».
+Les fêtes : la veille et la nuit de Noël, le 31 décembre et la nuit du
+Nouvel An, l'histoire de bâton datée prend la place du reel du jour (les
+`exception` de `saison.sujets`).
+
+La grille d'avant, pour mémoire : du 16 au 26 octobre 2026, trois posts par
+jour (bâton tous les matins, sept « Tu préfères », trois « Connais-tu »,
+une BD, un carrousel, un « He's a 10 but... », une phrase tendre).
 
 ## Les catégories
 
@@ -250,6 +246,8 @@ Nouvel An, réservées à leur date.
 
 ### `phrase` : phrase tendre (gabarit `citation`)
 
+**Retirée de la grille le 26 octobre 2026** (192 vues à sept jours : un format image n'est pas distribué). Gardée pour les posts déjà publiés.
+
 Une phrase écrite par nous (jamais une citation d'auteur), police plume,
 fleurs au trait. Quatre lignes au plus. Une phrase qu'une personne écrirait
 vraiment à l'autre, avec un détail dedans (« I love how you say my name
@@ -260,6 +258,8 @@ rarement : la recette peut demander une recherche douce à la place
 (`"son": {"recherche": "soft piano"}`).
 
 ### `carrousel` : le carrousel de questions du jeudi soir (gabarit `carrousel`)
+
+**Retirée de la grille le 26 octobre 2026** (126 vues à sept jours). Gardée pour les posts déjà publiés.
 
 Dix pages : une couverture avec l'**étiquette de l'édition** (« For
 tonight », « Deep talk », « Firsts », « Never have I ever »...) et
@@ -274,6 +274,8 @@ et peut renvoyer vers le site. Pas de musique (un carrousel d'images n'en
 a pas par l'API). Treize éditions dans la banque (`carrousel`).
 
 ### `dix-mais` : le « He's a 10 but... » du samedi soir (gabarit `carrousel`)
+
+**Retirée de la grille le 26 octobre 2026** (170 vues à sept jours). Gardée pour les posts déjà publiés.
 
 Le jeu « C'est un 10 mais... » du site, en carrousel (idée de Thomas, 12
 octobre 2026). « He's a 10 but... » est une tendance qu'on retrouve partout
@@ -297,6 +299,8 @@ musique. Légende : la règle du jeu, puis « Comment your number ». Seize
 éditions dans la banque (`dix-mais`), plus une de Noël et une du Nouvel An.
 
 ### `bd` : la bande dessinée en quatre cases du mardi soir (gabarit `bd`)
+
+**Retirée de la grille le 26 octobre 2026** (64 vues à sept jours). Gardée pour les posts déjà publiés.
 
 Le format des planches à quatre cases qui tournent sur Instagram (Amity
 Comics et les comptes du même genre, montrés par Thomas le 8 octobre 2026) :

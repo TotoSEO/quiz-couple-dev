@@ -394,3 +394,63 @@ test('un post dont le gabarit change est réécrit, les autres non', async () =>
   // la note change le post, pas la déclinaison : rien à re-rendre
   assert.deepEqual(encore, { ecrits: 0, inchanges: 2, refuses: 0, ignores: 0 });
 });
+
+// la grille du 26 octobre 2026 : huit reels par semaine, les autres créneaux fermés
+const GRILLE_HUIT = { matin: null, midi: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: 'tu-preferes', 7: null }, soir: { 1: 'tu-preferes', 2: 'connais-tu', 3: 'tu-preferes', 4: 'tu-preferes', 5: 'connais-tu', 6: 'baton', 7: 'tu-preferes' } };
+
+test('un créneau fermé par la grille (huit reels par semaine) : le post est écrit en base, sa déclinaison retenue en échec, une seule alerte', async () => {
+  const { MOTIF_FERME } = await import('../lib/calendrier.mjs');
+  const b = base();
+  b.tables.social_reglages[0].valeur = GRILLE_HUIT;
+  // lundi 12 octobre 2026 à midi : fermé
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
+  assert.deepEqual(bilan, { ecrits: 1, inchanges: 0, refuses: 0, ignores: 0 });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'echec');
+  assert.equal(v.erreur, MOTIF_FERME);
+  assert.equal(v.essais, 3);
+  const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
+  assert.equal(alertes.length, 1);
+  assert.match(alertes[0].message, /a\.json : le créneau midi du 2026-10-12 est fermé par la grille, rien n'en partira/);
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
+  assert.equal(b.tables.social_journal.filter((j) => j.niveau === 'alerte').length, 1);
+  // le même post un lundi soir : ouvert, rendu normalement
+  const ouvert = base();
+  ouvert.tables.social_reglages[0].valeur = GRILLE_HUIT;
+  await synchroniser(ouvert, [{ fichier: 'b.json', post: postQuiz('2026-10-12', 'soir') }], { maintenant: MAINTENANT });
+  assert.equal(ouvert.tables.social_variantes[0].statut, 'a_rendre');
+});
+
+test('un fichier disparu de la branche annule son post à venir (dix fichiers au moins sur la branche), et un fichier qui revient le fait revivre', async () => {
+  const b = base();
+  b.tables.social_reglages[0].valeur = GRILLE_HUIT;
+  // douze lundis, mercredis et jeudis soir à partir du 12 octobre 2026, tous ouverts
+  const jours = ['2026-10-12', '2026-10-14', '2026-10-15', '2026-10-19', '2026-10-21', '2026-10-22', '2026-10-26', '2026-10-28', '2026-10-29', '2026-11-02', '2026-11-04', '2026-11-05'];
+  const fichiers = jours.map((jour) => ({ fichier: `${jour}-soir.json`, post: postQuiz(jour, 'soir') }));
+  await synchroniser(b, fichiers, { maintenant: MAINTENANT });
+  assert.equal(b.tables.social_posts.length, 12);
+  // le fichier du 21 octobre disparaît : son post est annulé par la synchro, les autres restent
+  const sans = fichiers.filter((f) => f.fichier !== '2026-10-21-soir.json');
+  const bilan = await synchroniser(b, sans, { maintenant: MAINTENANT });
+  assert.equal(bilan.annules, 1);
+  const annule = b.tables.social_posts.find((p) => p.jour === '2026-10-21');
+  assert.equal(annule.statut, 'annule');
+  assert.equal(annule.notes.annule_par, 'synchro');
+  assert.equal(b.tables.social_posts.filter((p) => p.statut === 'valide').length, 11);
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /2026-10-21 soir \(en\) : plus de fichier sur la branche, post annulé/.test(j.message)));
+  // le fichier revient : le post revit
+  await synchroniser(b, fichiers, { maintenant: MAINTENANT });
+  assert.equal(b.tables.social_posts.find((p) => p.jour === '2026-10-21').statut, 'valide');
+  assert.equal(b.tables.social_posts.filter((p) => p.statut === 'valide').length, 12);
+  // moins de dix fichiers (un checkout vide ou partiel) : rien n'est annulé
+  const peu = await synchroniser(b, fichiers.slice(0, 3), { maintenant: MAINTENANT });
+  assert.equal(peu.annules, undefined);
+  assert.equal(b.tables.social_posts.filter((p) => p.statut === 'valide').length, 12);
+  // un post annulé dans l'admin (sans la marque de la synchro) reste annulé même si son fichier est là
+  b.tables.social_posts.find((p) => p.jour === '2026-10-22').statut = 'annule';
+  b.tables.social_posts.find((p) => p.jour === '2026-10-22').notes = {};
+  const admin = await synchroniser(b, fichiers, { maintenant: MAINTENANT });
+  assert.equal(admin.ignores, 1);
+  assert.equal(b.tables.social_posts.find((p) => p.jour === '2026-10-22').statut, 'annule');
+});
