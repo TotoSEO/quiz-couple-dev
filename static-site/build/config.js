@@ -127,6 +127,22 @@ export const ROUTE_SLUGS = {
   ebookConfirm: { fr: 'confirmation-ebook' },
 };
 
+// L'image de partage du site (27 octobre 2026) : og:image de l'accueil et de
+// toute page sans image de tête, une par langue, public/og/<fichier>-<lang>.jpg,
+// dessinée par build/image-partage.mjs (les mascottes et « Quiz, tests et
+// jeux pour les couples »). Pour une nouvelle image, on change `fichier` :
+// les réseaux gardent en cache l'image d'une adresse déjà vue.
+export const IMAGE_PARTAGE = {
+  fichier: 'quiz-couple',
+  alt: {
+    fr: "Les deux mascottes de Quiz Couple, l'une rose et l'autre violette, avec le texte « Quiz, tests et jeux pour les couples »",
+    en: 'The two Quiz Couple mascots, one pink and one purple, with the words “Quizzes, tests and games for couples”',
+    es: 'Las dos mascotas de Quiz Couple, una rosa y otra morada, con el texto «Quiz, tests y juegos para parejas»',
+    de: 'Die beiden Maskottchen von Quiz Couple, eines rosa und eines lila, mit dem Text „Quiz, Tests und Spiele für Paare“',
+    it: 'Le due mascotte di Quiz Couple, una rosa e una viola, con la scritta «Quiz, test e giochi per coppie»',
+  },
+};
+
 // Featured images per quiz/test page.
 //   file  → new symbolic photo in public/quiz/featured/<file>.webp (hero + OG + home card)
 //   old   → legacy image in public/quiz/<old>.webp, reused inside the SEO content (or null)

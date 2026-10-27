@@ -16,7 +16,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
@@ -435,6 +435,17 @@ function ogImageSize(ogImageUrl) {
   }
   ogSizeCache.set(rel, size);
   return size;
+}
+
+// L'image de partage du site dans la langue de la page (IMAGE_PARTAGE,
+// config.js, dessinée par build/image-partage.mjs) : l'accueil et toute page
+// sans image de tête. Jusqu'au 27 octobre 2026, c'était og-image.webp, « QUIZ
+// POUR COUPLE » en français pour les cinq langues ; le fichier reste servi
+// pour les aperçus déjà en cache.
+function imagePartage(lang) {
+  const rel = `/og/${IMAGE_PARTAGE.fichier}-${lang}.jpg`;
+  if (!fs.existsSync(path.join(PUBLIC_DIR, rel))) return { url: `${BASE_URL}/og-image.webp`, alt: '' };
+  return { url: `${BASE_URL}${rel}`, alt: IMAGE_PARTAGE.alt[lang] || IMAGE_PARTAGE.alt.fr };
 }
 
 // Review stats fetched from Supabase at build time
@@ -1376,7 +1387,7 @@ async function generatePage(routeKey, lang) {
       name: 'Quiz Couple',
       url: BASE_URL,
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
-      image: `${BASE_URL}/og-image.webp`,
+      image: imagePartage(lang).url,
       description: description,
       sameAs: [INSTAGRAM_URL],
     });
@@ -1486,7 +1497,8 @@ async function generatePage(routeKey, lang) {
     // vers une version perimee des scripts.
     sansCache: routeKey === 'admin',
     // Per-page featured image (hero + OG share + home card). Falls back to the generic OG image.
-    ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
+    ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : imagePartage(lang).url,
+    ogImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : imagePartage(lang).alt,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
     // Les variantes reduites de l'image de tete (480/, 720/ et 880/), quand elles
@@ -1901,7 +1913,7 @@ function copyStaticAssets() {
   // « bilan » les aperçus du rapport montrés sur sa page, « email » les images
   // des e-mails du parcours (emails/gabarit.html les appelle par leur adresse
   // sur le site).
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan', 'email']) {
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan', 'email', 'og']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -2384,7 +2396,7 @@ async function generateBlogArticle(articleMeta, lang) {
       const schemaType = articleMeta.frOnly ? 'NewsArticle' : 'Article';
       const imageUrl = article.featuredImage
         ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
-        : `${BASE_URL}/og-image.webp`;
+        : imagePartage(lang).url;
       const imageSize = ogImageSize(imageUrl);
       // Discover reads datePublished; a bare date is treated as midnight UTC,
       // which back-dates every article by up to two hours in Paris time.
@@ -2444,7 +2456,8 @@ async function generateBlogArticle(articleMeta, lang) {
     alternates: articleAlternates,
     ogImage: article.featuredImage
       ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
-      : `${BASE_URL}/og-image.webp`,
+      : imagePartage(lang).url,
+    ogImageAlt: article.featuredImage ? '' : imagePartage(lang).alt,
     ogType: 'article',
     articlePublishedTime: article.publishedAt,
     articleModifiedTime: article.modifiedAt || article.publishedAt,
@@ -2554,7 +2567,8 @@ async function generate404Pages() {
       canonical,
       alternates: [],
       noindex: 'noindex, follow',
-      ogImage: `${BASE_URL}/og-image.webp`,
+      ogImage: imagePartage(lang).url,
+      ogImageAlt: imagePartage(lang).alt,
       routeKey: '404',
       pagePublicitaire: false,
       pagePath: '/404',
