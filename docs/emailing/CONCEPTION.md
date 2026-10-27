@@ -220,6 +220,24 @@ rester ce soir-là moins dix : l'offre gratuite fait 300 envois par jour. La
 file est dans l'admin : quand elle grossit de soir en soir, il faut l'offre
 supérieure de Brevo, puis relever `plafond` dans `emails/reglages.mjs`.
 
+Depuis le 27 octobre 2026, la file sert d'abord l'anglais, puis le
+français, l'italien et l'allemand, l'espagnol en dernier ; dans une même
+langue, le plus en retard d'abord (migration
+`20261027120000_emails_langues.sql`, appliquée par `emails-base.yml`).
+Thomas, ce jour-là : « ça fait 48h qu'il n'y a eu aucune conversion, alors
+que dimanche on était presque à 8000 visites en une journée », puis « ok
+vas-y » sur cette proposition. Depuis le lancement de l'évaluation, les
+ventes sont toutes en anglais (trois couples sur les six allés au bout dans
+cette langue), aucune en espagnol pour vingt-deux couples allés au bout, et
+sept visiteurs hispanophones sur dix viennent d'Amérique latine, où l'e-mail
+ne peut pas dire le prix de leur région (un abonné a une langue, pas de
+pays). Conséquence sur l'offre gratuite : avec environ 225 adresses par jour,
+dont un bon tiers en espagnol, et deux e-mails par adresse, les quatre autres
+langues remplissent presque à elles seules le plafond du soir, et
+l'espagnol ne reçoit presque plus rien ; un `e1` qui attend plus de 60 jours
+sort de la file sans être parti. Pour remettre l'espagnol dans l'ordre
+commun, une migration réécrit `emails_du_jour` sans le `CASE` de la langue.
+
 Au lancement, la file part avec tout le retard (766 adresses en attente de
 `e1` le 24 octobre 2026). Thomas : « il faut vider la base actuelle sans
 envoyer 900 mails d'un coup, faut faire par vague pendant plusieurs jours
