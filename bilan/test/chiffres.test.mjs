@@ -40,3 +40,17 @@ test("l'analyse compte les visites par langue d'arrivée et l'entonnoir sans lir
   assert.deepEqual(t['es solo'], { creees: 1, a_repondu: 0, a_fini: 0, b_rejoint: 0, b_fini: 0, completes: 0, paiement_ouvert: 0, payees: 0 });
   assert.deepEqual(arretsCreateur(lignes), { temps: 1, aucune: 1 });
 });
+
+test('à deux, le rythme : partenaire arrivé dans l\'heure, le même jour ou un autre jour', async () => {
+  const { rythmeDuo } = await import('../chiffres.mjs');
+  const t = rythmeDuo([
+    { lang: 'en', mode: 'duo', cree_le: '2026-10-24T17:55:00Z', b_consent: '2026-10-24T17:56:00Z', a_fini: '2026-10-24T18:15:00Z', b_fini: '2026-10-24T18:17:00Z', renonciation_le: '2026-10-24T18:18:00Z', paye_le: '2026-10-24T18:19:00Z' },
+    { lang: 'es', mode: 'duo', cree_le: '2026-10-24T02:00:00Z', b_consent: '2026-10-25T20:00:00Z', a_fini: '2026-10-24T02:30:00Z', b_fini: '2026-10-25T20:30:00Z' },
+    { lang: 'es', mode: 'solo', cree_le: '2026-10-24T02:00:00Z' },
+    { lang: 'fr', mode: 'duo', cree_le: '2026-10-24T02:00:00Z' },
+  ]);
+  assert.deepEqual(t, {
+    "en partenaire en moins d'une heure": { rejoints: 1, completes: 1, paiement_ouvert: 1, payees: 1 },
+    'es partenaire un autre jour': { rejoints: 1, completes: 1, paiement_ouvert: 0, payees: 0 },
+  });
+});
