@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-26T17:34:04.551Z",
+  "genere_le": "2026-10-27T03:13:55.452Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-26",
+  "aujourdhui": "2026-10-27",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 157,
+  "reserve_jours": 156,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -615,7 +615,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: powers?",
       "erreur": null
     },
