@@ -54,3 +54,18 @@ test('à deux, le rythme : partenaire arrivé dans l\'heure, le même jour ou un
     'es partenaire un autre jour': { rejoints: 1, completes: 1, paiement_ouvert: 0, payees: 0 },
   });
 });
+
+test('completesDansLOrdre : les évaluations allées au bout, dans l\'ordre, avec ce qui a suivi', async () => {
+  const { completesDansLOrdre } = await import('../chiffres.mjs');
+  const l = completesDansLOrdre([
+    { lang: 'en', mode: 'duo', src: 'accueil', a_fini: '2026-10-24T16:40:00Z', b_fini: '2026-10-24T16:55:00Z', renonciation_le: '2026-10-24T17:10:00Z', paye_le: '2026-10-24T17:19:00Z', paiement_montant: 792 },
+    { lang: 'es', mode: 'duo', src: null, a_fini: '2026-10-23T10:00:00Z', b_fini: null },
+    { lang: 'es', mode: 'solo', src: 'menu', a_fini: '2026-10-22T09:30:00Z' },
+    { lang: 'fr', mode: 'duo', src: 'menu', a_fini: '2026-10-26T20:00:00Z', b_fini: '2026-10-26T19:00:00Z' },
+  ]);
+  assert.deepEqual(l, [
+    '22/10 11:30 · es · solo · source menu',
+    '24/10 18:55 · en · duo · source accueil · paiement ouvert 24/10 19:10 · payée 24/10 19:19 (7.92 €)',
+    '26/10 21:00 · fr · duo · source menu',
+  ]);
+});
