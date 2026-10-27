@@ -29,7 +29,7 @@
       "titre": "Vuestra evaluación",
       "modeTitre": "¿Cómo hacéis la evaluación?",
       "modeDuo": "En pareja",
-      "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
+      "modeDuoAide": "A la vez, cada uno en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
       "modeSolo": "A solas",
       "modeSoloAide": "Respondes por ti y, en los temas que más cuentan, dices también lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
       "prenomsTitre": "Vuestros dos nombres",
@@ -63,21 +63,22 @@
       }
     },
     "invitation": {
-      "titre": "Invita a {{autre}}",
-      "texte": "Envía este enlace a {{autre}}. {{autre}} responderá por su lado, en su móvil, sin ver tus respuestas, y tú no verás las suyas hasta el final.",
+      "ensembleTitre": "¿{{autre}} está contigo ahora?",
+      "ensemble": "Lo mejor es responder a la vez, cada uno en su móvil: {{autre}} solo tiene que escanear este código con la cámara.",
+      "qrLabel": "Código QR del enlace para {{autre}}",
       "nouveauLien": "Es un enlace nuevo: el anterior ya no funciona, envía este a {{autre}}.",
-      "suite": "No hace falta esperar a {{autre}}: empieza tus respuestas ya, cada uno avanza por su lado.",
+      "suite": "Empieza a la vez que {{autre}}: unos veinte minutos cada uno, y descubriréis el informe juntos.",
+      "commencer": "Empezar mis respuestas",
+      "distanceTitre": "¿{{autre}} no está contigo?",
+      "texte": "Envía este enlace a {{autre}}. {{autre}} responderá por su lado, en su móvil, sin ver tus respuestas, y tú no verás las suyas hasta el final.",
       "envoyer": "Enviar el enlace",
       "copier": "Copiar el enlace",
       "copie": "¡Enlace copiado!",
-      "qr": "Mostrar el código QR",
-      "qrAide": "{{autre}} puede escanearlo con la cámara de su móvil.",
       "message": "He empezado nuestra evaluación de pareja, te toca responder por tu lado: {{lien}}",
       "messageTitre": "Nuestra evaluación de pareja",
       "monLien": "Tu enlace personal",
       "monLienAide": "Te permite retomar tus respuestas en otro dispositivo. No se lo des a nadie, ni siquiera a {{autre}}: es la llave de tus respuestas.",
       "copierMonLien": "Copiar mi enlace",
-      "commencer": "Empezar mis respuestas",
       "dejaRejoint": "{{autre}} se ha unido a la evaluación."
     },
     "rejoindre": {
@@ -207,7 +208,12 @@
       "immediat": "El informe se abre aquí nada más pagar, para los dos, y el enlace al PDF sale por correo.",
       "moyens": "Medios de pago aceptados",
       "colle": "Vuestro informe",
-      "colleBouton": "Desbloquear"
+      "colleBouton": "Desbloquear",
+      "region": {
+        "latam": "Precio para Latinoamérica",
+        "avant": "En lugar de",
+        "apres": "Precio para Latinoamérica:"
+      }
     },
     "paiement": {
       "verification": "Comprobando el pago...",
@@ -693,7 +699,7 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
-    "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
+    "sousTitre": "20 minutos juntos, cada uno en su teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
     "soloQuestion": "¿Tu pareja no quiere participar?",
     "soloLien": "Hazla a solas",
@@ -716,7 +722,7 @@
       },
       {
         "n": "20 min",
-        "l": "cada uno, a su ritmo"
+        "l": "juntos, cada uno en su teléfono"
       },
       {
         "n": "0 €",
@@ -729,12 +735,12 @@
         {
           "duree": "2 min",
           "titre": "Empezáis la evaluación",
-          "texte": "Escribís vuestros dos nombres, y envías el enlace a tu pareja."
+          "texte": "Escribís vuestros dos nombres, y tu pareja escanea el código QR de tu pantalla o recibe su enlace."
         },
         {
           "duree": "20 min",
-          "titre": "Cada uno responde por su lado",
-          "texte": "En su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
+          "titre": "Respondéis a la vez",
+          "texte": "Cada uno en su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
         },
         {
           "duree": "1 min",
@@ -792,9 +798,9 @@
       "intro": "Si tu pareja no tiene ganas de hablar del tema, puedes hacerla por tu lado. Mismo precio, mismo informe.",
       "duo": {
         "titre": "En pareja",
-        "sous": "Cada uno en su teléfono",
+        "sous": "A la vez, cada uno en su teléfono",
         "points": [
-          "Cada uno responde por su lado, a su ritmo",
+          "Respondéis juntos, sin ver las respuestas del otro",
           "El informe compara vuestras respuestas, tema por tema"
         ],
         "cta": "Empezar en pareja"

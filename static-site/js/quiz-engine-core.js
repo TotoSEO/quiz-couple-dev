@@ -3219,24 +3219,24 @@ var QuizEngine = (function() {
   var BILAN_TEXTES = {
     fr: { sur: 'Évaluation de couple',
           commun: ['Quiz Couple vous propose l\'évaluation pour couple la plus complète en ligne !', 'Pas besoin d\'aller chez un pro. Faites le point sur votre relation, et vérifiez si vous êtes vraiment solides.'],
-          points: ['Chacun répond sur son téléphone', 'Test conçu sur des recherches en psychologie du couple', 'Vous répondez à la place de l\'autre s\'il ne veut pas participer', 'Résultats immédiats & rapport en ligne + PDF'],
-          bouton: 'Découvrir l\'évaluation', boutonSolo: 'La faire seul(e)', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+          points: ['À faire ensemble, chacun sur son téléphone', 'Test conçu sur des recherches en psychologie du couple', 'Une vingtaine de minutes, sans voir les réponses de l\'autre', 'Résultats immédiats & rapport en ligne + PDF'],
+          bouton: 'Découvrir l\'évaluation', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
     en: { sur: 'Relationship assessment',
           commun: ['Quiz Couple offers the most complete relationship assessment online!', 'No need to see a professional. Take stock of your relationship and check whether you\'re really solid together.'],
-          points: ['Each of you answers on your own phone', 'Test designed on research in couple psychology', 'You answer for your partner if they don\'t want to take part', 'Instant results & online report + PDF'],
-          bouton: 'Discover the assessment', boutonSolo: 'Take it on your own', prix: 'Free questions · report {{prix}} for both of you' },
+          points: ['Do it together, each on your own phone', 'Test designed on research in couple psychology', 'About twenty minutes, without seeing each other\'s answers', 'Instant results & online report + PDF'],
+          bouton: 'Discover the assessment', prix: 'Free questions · report {{prix}} for both of you' },
     es: { sur: 'Evaluación de pareja',
           commun: ['¡Quiz Couple os propone la evaluación de pareja más completa de internet!', 'No hace falta ir a un profesional. Haced balance de vuestra relación y comprobad si sois realmente sólidos.'],
-          points: ['Cada uno responde en su teléfono', 'Test diseñado a partir de investigaciones en psicología de pareja', 'Si el otro no quiere participar, respondes en su lugar', 'Resultados inmediatos e informe en línea + PDF'],
-          bouton: 'Descubrir la evaluación', boutonSolo: 'Hacerla a solas', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+          points: ['Para hacer juntos, cada uno en su teléfono', 'Test diseñado a partir de investigaciones en psicología de pareja', 'Unos veinte minutos, sin ver las respuestas del otro', 'Resultados inmediatos e informe en línea + PDF'],
+          bouton: 'Descubrir la evaluación', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
     de: { sur: 'Beziehungsanalyse',
           commun: ['Quiz Couple bietet euch die umfassendste Beziehungsanalyse im Netz!', 'Ihr müsst dafür nicht zu einer Fachperson gehen. Zieht Bilanz über eure Beziehung und findet heraus, ob ihr wirklich stabil seid.'],
-          points: ['Jeder antwortet auf dem eigenen Handy', 'Test auf Grundlage der Forschung zur Paarpsychologie', 'Will der andere nicht mitmachen, antwortest du an seiner Stelle', 'Sofortige Ergebnisse & Online-Bericht + PDF'],
-          bouton: 'Die Analyse entdecken', boutonSolo: 'Sie allein machen', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+          points: ['Zusammen machen, jeder auf dem eigenen Handy', 'Test auf Grundlage der Forschung zur Paarpsychologie', 'Etwa zwanzig Minuten, ohne die Antworten des anderen zu sehen', 'Sofortige Ergebnisse & Online-Bericht + PDF'],
+          bouton: 'Die Analyse entdecken', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
     it: { sur: 'Valutazione di coppia',
           commun: ['Quiz Couple vi propone la valutazione di coppia più completa online!', 'Non serve andare da un professionista. Fate il punto sulla vostra relazione e verificate se siete davvero solidi.'],
-          points: ['Ciascuno risponde sul proprio telefono', 'Test costruito su ricerche in psicologia di coppia', 'Se l\'altro non vuole partecipare, rispondi al suo posto', 'Risultati immediati & report online + PDF'],
-          bouton: 'Scopri la valutazione', boutonSolo: 'Farla da solo/a', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+          points: ['Da fare insieme, ciascuno sul proprio telefono', 'Test costruito su ricerche in psicologia di coppia', 'Una ventina di minuti, senza vedere le risposte dell\'altro', 'Risultati immediati & report online + PDF'],
+          bouton: 'Scopri la valutazione', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
   };
   var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   function encartBilan(cle, lang) {
@@ -3269,11 +3269,11 @@ var QuizEngine = (function() {
       '<h3 class="qr-bilan-titre">' + esc(insecables(texte[0])) + '</h3>' +
       '<p class="qr-bilan-texte">' + esc(insecables(texte[1])) + '</p>' +
       '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
-      // Deux boutons : à deux, et seul(e) (la page s'ouvre sur les deux façons
-      // de faire, le mode seul(e) préselectionné).
+      // Un seul bouton, vers la page de vente : le second, seul(e), est parti
+      // le 27 octobre 2026 (166 évaluations seul(e), aucune page de paiement
+      // ouverte) ; le seul(e) ne reste proposé que sur la page de vente.
       '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(chemin) + '"' + src + '>' + esc(t.bouton) +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
-      (t.boutonSolo ? '<a class="qr-bilan-bouton qr-bilan-bouton--second" href="' + esc(chemin + '#facons') + '"' + src + ' data-bilan-mode="solo">' + esc(t.boutonSolo) + '</a>' : '') + '</div>' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
       (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
       '</div>';
     return zone;

@@ -21,14 +21,13 @@
   "evaluation": {
     "sur": "Nouveau · Évaluation de couple",
     "titre": "Voulez-vous la même vie, tous les deux ?",
-    "texte": "100 questions précises sur douze domaines de la vie à deux, construites sur la recherche en psychologie du couple, et un rapport complet qui met vos réponses face à face. À deux, chacun sur son téléphone, ou seul(e) si l'autre n'est pas prêt(e) à en parler.",
+    "texte": "100 questions précises sur douze domaines de la vie à deux, construites sur la recherche en psychologie du couple, et un rapport complet qui met vos réponses face à face. À deux, au même moment, chacun sur son téléphone : comptez une vingtaine de minutes.",
     "points": [
-      "Chacun répond de son côté, sans voir les réponses de l'autre",
+      "Chacun répond sur son téléphone, sans voir les réponses de l'autre",
       "Un rapport complet, avec des graphiques et de quoi en parler",
       "Questions gratuites · {{prix}} pour le rapport, à la fin"
     ],
     "ctaDuo": "Faire l'évaluation à deux",
-    "ctaSolo": "La faire seul(e)",
     "ctaCourt": "Évaluer son couple",
     "legende": "Une page du rapport d'exemple"
   },

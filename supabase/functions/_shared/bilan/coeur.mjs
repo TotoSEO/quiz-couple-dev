@@ -62,6 +62,45 @@ export function promoEnCours(instant = new Date(), graceHeures = 0, fin = PROMO_
   return jourParis(new Date(instant.getTime() - graceHeures * 3600e3)) <= fin;
 }
 
+// Le prix de l'Amérique latine (27 octobre 2026, Thomas : « ok vas-y » sur
+// cette proposition) : sur l'écran « rapport prêt », quand le téléphone est
+// réglé sur un fuseau horaire d'Amérique latine (États-Unis, Canada et
+// territoires français exclus), le rapport coûte PRIX_REGIONS.latam au lieu
+// du prix affiché ailleurs, sans réduction ni code par-dessus. Depuis le
+// lancement, vingt-deux couples hispanophones étaient allés au bout des cent
+// questions sans qu'aucun paie, et sept visiteurs hispanophones sur dix
+// viennent d'Amérique latine. 398 centimes, pour que les deux moitiés de
+// l'écran (1,99 € chacun) fassent le total. La page envoie la zone à chaque
+// appel (bilan.js, ZONE) ; le serveur ne retient qu'une zone connue.
+export const PRIX_REGIONS = { latam: 398 };
+const FUSEAUX_LATAM = new Set([
+  // Mexique
+  'America/Mexico_City', 'America/Cancun', 'America/Merida', 'America/Monterrey', 'America/Matamoros',
+  'America/Chihuahua', 'America/Ciudad_Juarez', 'America/Ojinaga', 'America/Mazatlan', 'America/Bahia_Banderas',
+  'America/Hermosillo', 'America/Tijuana', 'America/Ensenada', 'America/Santa_Isabel',
+  // Amérique centrale, Cuba, République dominicaine, Haïti
+  'America/Guatemala', 'America/Belize', 'America/Tegucigalpa', 'America/El_Salvador', 'America/Managua',
+  'America/Costa_Rica', 'America/Panama', 'America/Havana', 'Cuba', 'America/Santo_Domingo', 'America/Port-au-Prince',
+  // Amérique du Sud (hors Guyana, Suriname, Guyane française, Malouines)
+  'America/Bogota', 'America/Caracas', 'America/Guayaquil', 'Pacific/Galapagos', 'America/Lima', 'America/La_Paz',
+  'America/Santiago', 'America/Punta_Arenas', 'Pacific/Easter', 'America/Asuncion', 'America/Montevideo',
+  'America/Buenos_Aires', 'America/Catamarca', 'America/Cordoba', 'America/Jujuy', 'America/Mendoza', 'America/Rosario',
+  'America/Sao_Paulo', 'America/Araguaina', 'America/Bahia', 'America/Belem', 'America/Boa_Vista', 'America/Campo_Grande',
+  'America/Cuiaba', 'America/Eirunepe', 'America/Fortaleza', 'America/Maceio', 'America/Manaus', 'America/Noronha',
+  'America/Porto_Velho', 'America/Recife', 'America/Rio_Branco', 'America/Santarem', 'America/Porto_Acre',
+]);
+// La zone d'un fuseau horaire IANA (Intl.DateTimeFormat().resolvedOptions()
+// .timeZone) : 'latam' ou ''.
+export function zoneDuFuseau(fuseau) {
+  const f = String(fuseau || '');
+  if (FUSEAUX_LATAM.has(f) || /^(America\/Argentina|Mexico|Brazil|Chile)\//.test(f)) return 'latam';
+  return '';
+}
+// Une zone envoyée par la page : seulement une zone qui a son prix.
+export function zoneValide(zone) {
+  return typeof zone === 'string' && Object.prototype.hasOwnProperty.call(PRIX_REGIONS, zone) ? zone : '';
+}
+
 // Les deux façons de faire l'évaluation (Thomas, 19 octobre 2026 : « quand
 // ça va mal dans un couple ou que l'un est fermé à la discussion, ça doit
 // être obligatoire de pouvoir réaliser tout ça seul ») :

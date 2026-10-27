@@ -343,6 +343,11 @@
               <option value="duo">À deux</option>
               <option value="solo">Seul(e)</option>
             </select>
+            <%# Le prix de l'Amérique latine (PRIX_REGIONS de coeur.mjs, 27 octobre 2026). %>
+            <select id="apercu-stripe-zone" class="afl-select" aria-label="Prix demandé">
+              <option value="">Prix habituel</option>
+              <option value="latam">Amérique latine</option>
+            </select>
             <button id="apercu-stripe" class="btn btn-cta btn-sm" type="button">Ouvrir la page Stripe</button>
             <p class="adm-apercu-msg" id="apercu-stripe-msg" aria-live="polite">La même page qu'un client, réduction comprise, sans faire le test. Rien n'est créé ni compté dans cet onglet. Un paiement fait sur cette page serait un vrai paiement, rattaché à aucune évaluation : à rembourser depuis Stripe.</p>
           </div>

@@ -1685,3 +1685,100 @@ arrêts sur dix tombent dans les premières minutes.
 - Si le champ coûte trop au départ (moins d'évaluations créées et moins de
   créateurs au bout pour autant de clics), le repli est l'adresse demandée
   après le premier domaine, pour sauvegarder sa progression.
+
+## 27 octobre 2026 : à deux au même moment, le prix de l'Amérique latine, le seul(e) en retrait
+
+Thomas : « ça fait 48h qu'il n'y a eu aucune conversion, alors que dimanche on
+était presque à 8000 visites en une journée, et hier 6500 ! 14500 visites,
+aucune vente ! et en plus de ça le mailing a démarré, c'est pas normal de
+vendre si peu. Trouve des insights, des choses à améliorer », puis « ok
+vas-y » sur les quatre propositions.
+
+### Ce que disaient les chiffres
+
+Lus par `bilan-chiffres.yml` (`analyse` de `bilan/chiffres.mjs`, découpage
+par langue, façon de faire, source et étape d'arrêt ajouté ce jour-là),
+depuis le lancement du 19 octobre :
+
+| Langue | Visites du site (7 jours) | Évaluations créées | Allées au bout | Page de paiement ouverte | Ventes |
+|---|---|---|---|---|---|
+| Espagnol | 10 000 | 188 | 27 | 2 | 0 |
+| Anglais | 9 730 | 120 | 13 | 3 | 3 |
+| Français | 12 530 | 56 | 6 | 0 | 0 |
+| Italien et allemand | 6 270 | 6 | 0 | 0 | 0 |
+
+- En anglais, trois couples sur les six allés au bout à deux ont payé : la
+  page de paiement fonctionne.
+- L'espagnol fait la moitié des évaluations, sans une vente : vingt-deux
+  couples au bout, deux pages de paiement ouvertes. D'après la Search
+  Console, sept visiteurs hispanophones sur dix viennent d'Amérique latine,
+  où 7,92 € pèse lourd (environ 170 pesos mexicains, payés en euros).
+- Le partenaire arrive dans l'heure ou jamais : sur 204 évaluations à deux,
+  62 partenaires ont rejoint, tous moins d'une heure après la création. Les
+  trois couples qui ont payé ont tout fait d'une traite. L'écran
+  d'invitation disait pourtant « Pas besoin d'attendre X : chacun avance de
+  son côté », et le QR code était caché derrière un petit bouton.
+- Le seul(e) ne vend pas : 166 évaluations, 14 au bout, aucune page de
+  paiement ouverte.
+
+### Ce qui a changé
+
+- **À deux, au même moment** : l'écran d'invitation commence par « X est à
+  côté de vous ? », le QR code en grand dès l'arrivée (sa place réservée,
+  blanc dans les deux thèmes, plus petit et sans les personnages sous
+  700 px de haut pour garder « Commencer » dans le premier écran), puis
+  « Commencez en même temps que X » et le bouton ; « X n'est pas avec
+  vous ? » et le lien à envoyer viennent ensuite. Le code encode le lien
+  d'invitation avec `q=1` : l'arrivée par le code est comptée à part
+  (`invitation_vue`, clé `qr`). La page de vente (sous-titre, chiffre
+  « 20 min », étapes 1 et 2, la façon « À deux ») et le départ
+  (`creation.modeDuoAide`) disent « ensemble, chacun sur son téléphone ».
+- **Le prix de l'Amérique latine** : 3,98 € au lieu de 7,92 € sur l'écran
+  « rapport prêt » et sur l'offre de l'attente, quand le fuseau horaire du
+  téléphone est en Amérique latine (`PRIX_REGIONS`, `zoneDuFuseau` et
+  `zoneValide` de coeur.mjs ; États-Unis, Canada, Porto Rico, Guyana,
+  Suriname, Guyane française et Malouines exclus). 3,98 € plutôt que 3,99 €,
+  pour que les deux moitiés de l'écran (1,99 € chacun) fassent le total.
+  La page envoie `zone` à chaque appel ; le serveur ne retient qu'une zone
+  connue, tant que rien n'est payé, et rend `region` avec le prix. La page
+  affiche la pastille « Precio para Latinoamérica » (« Prix Amérique
+  latine », `paywall.region`), 7,92 € barré et le nouveau prix, dans le
+  bloc du prix, le bouton, la barre collée et l'offre repliée. La page de
+  paiement est créée à ce montant, sans réduction ni champ des codes, avec
+  `zone` en métadonnée ; une session au prix d'une région compte
+  `paiement_region`, et l'écran « rapport prêt » vu à ce prix `offre_vue`
+  avec la clé de la zone. Le prix n'est montré qu'à la fin : la page de
+  vente, le départ et les e-mails gardent 7,92 € (un abonné a une langue,
+  pas de pays). Les CGV disent qu'un prix différent peut s'appliquer selon
+  la région de l'appareil, affiché avant le paiement. L'admin peut ouvrir
+  la page Stripe à ce prix (« Amérique latine » dans l'aperçu).
+- **Le seul(e) en retrait** : la carte sous le moteur, l'encart sous le
+  verdict, la bannière du bas et la section de l'accueil n'ont plus qu'un
+  bouton, vers la page de vente, et leurs textes disent « à deux, chacun sur
+  son téléphone ». Le seul(e) reste sur la page de vente (« Votre partenaire
+  ne veut pas participer ? Faites-la seul(e) ») et dans le choix du départ.
+- **Les e-mails aux anglophones d'abord** : la file du soir range par langue
+  (anglais, français, italien, allemand, espagnol), voir
+  docs/emailing/CONCEPTION.md.
+
+### Ce qu'il faut regarder
+
+`bilan-chiffres.yml` écrit depuis ce jour-là l'entonnoir avant et après la
+mise en ligne (vers 15 h UTC), par langue et par façon de faire, les ventes
+au prix d'une région (`paiement_montant` à 398) et les comptes du jour :
+`invitation_vue` avec et sans la clé `qr`, `offre_vue:latam`,
+`paiement_region:latam`.
+
+- La part des évaluations à deux dont le partenaire rejoint (30 % avant),
+  et la part des arrivées par le QR code.
+- En espagnol, les pages de paiement ouvertes et les ventes à 3,98 €.
+- Si le QR code ne prend pas (presque aucune arrivée `qr`), revenir au lien
+  d'abord ; si la part des partenaires qui rejoignent ne bouge pas, c'est
+  la promesse « à deux au même moment » qui ne passe pas.
+
+### Laissé à Thomas
+
+- **Adaptive Pricing** (Stripe) : la page de paiement affiche alors le prix
+  dans la monnaie du client (pesos, réais…), ce qui rassure plus qu'un
+  montant en euros ; le client paie 2 à 4 % dans le taux de change. Voir
+  STRIPE.md, « Ensuite ».

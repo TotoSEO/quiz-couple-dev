@@ -308,14 +308,18 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // reconstruit sans elle.
   const promoActive = () => C.promoEnCours(maintenant(), 12);
 
-  // Ce que la page sait du paiement et du rapport.
-  function paiementPour(ligne, role) {
+  // Ce que la page sait du paiement et du rapport. `zone` : celle que la page
+  // envoie (coeur.mjs, PRIX_REGIONS) ; tant que rien n'est payé, le prix de
+  // la région remplace le prix et la réduction (`region`, la zone retenue).
+  function paiementPour(ligne, role, zone) {
     const paye = !!ligne.paye_le;
-    const promo = promoActive();
+    const region = paye ? '' : C.zoneValide(zone);
+    const promo = !region && promoActive();
     return {
-      prix: promo ? C.prixPromo() : C.PRIX_CENTIMES,
+      prix: region ? C.PRIX_REGIONS[region] : promo ? C.prixPromo() : C.PRIX_CENTIMES,
       prixBase: C.PRIX_CENTIMES,
       promo: promo ? { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT } : null,
+      region: region || null,
       garantie: C.GARANTIE_JOURS,
       paiementOuvert: !!stripe,
       paiementTest: !!stripe && stripeTest,
@@ -332,7 +336,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     };
   }
 
-  function etatPour(ligne, role) {
+  function etatPour(ligne, role, zone) {
     const autre = role === 'a' ? 'b' : 'a';
     const solo = estSolo(ligne);
     const repAutre = ligne[autre + '_reponses'] || {};
@@ -344,7 +348,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       lang: ligne.lang,
       situation: ligne.situation,
       creeLe: ligne.cree_le,
-      ...paiementPour(ligne, role),
+      ...paiementPour(ligne, role, zone),
       verrouille: estVerrouille(ligne),
       moi: {
         ...personne(ligne, role),
@@ -385,6 +389,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     else if (quoi === 'depart_erreur') cle = CAUSES_DEPART.includes(corps.cle) ? corps.cle : 'autre';
     else if (quoi === 'statut_solo') cle = C.STATUTS_SOLO.includes(corps.cle) ? corps.cle : 'autre';
     else if (quoi === 'email_vue') cle = corps.cle === 'b' ? 'b' : 'a';
+    // Depuis le 27 octobre 2026 : le partenaire arrivé par le QR code de
+    // l'invitation, et l'écran « rapport prêt » vu au prix d'une région. Le
+    // total de l'étape reste la somme de toutes ses clés.
+    else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' ? 'qr' : '';
+    else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
     await compter(quoi, cle);
     if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo') await compter(quoi + '_solo', cle);
     return ok({ compte: true });
@@ -445,7 +454,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       cree_le: quand,
       maj_le: quand,
     });
-    return ok({ id: ligne.id, jeton: jetonA, invitation: mode === 'solo' ? null : jetonB, etat: etatPour(ligne, 'a') });
+    return ok({ id: ligne.id, jeton: jetonA, invitation: mode === 'solo' ? null : jetonB, etat: etatPour(ligne, 'a', corps.zone) });
   }
 
   async function etat(corps) {
@@ -457,11 +466,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // présenter le bilan et demander son accord (et dire si A a déjà payé).
       return ok({
         id: ligne.id, role, invite: true, lang: ligne.lang, situation: ligne.situation,
-        ...paiementPour(ligne, role), rapport: null,
+        ...paiementPour(ligne, role, corps.zone), rapport: null,
         moi: personne(ligne, role), autre: personne(ligne, role === 'a' ? 'b' : 'a'),
       });
     }
-    return ok(etatPour(ligne, role));
+    return ok(etatPour(ligne, role, corps.zone));
   }
 
   async function consentir(corps) {
@@ -493,7 +502,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     champs[role + '_etape'] = etapeDe(ligne.situation, ligne[role + '_reponses'] || {});
     champs.maj_le = champs[role + '_consent'];
     const maj = await majSure(ligne.id, champs);
-    return ok({ jeton, etat: etatPour(maj, role) });
+    return ok({ jeton, etat: etatPour(maj, role, corps.zone) });
   }
 
   async function situation(corps) {
@@ -510,7 +519,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       situation: { ...C.nettoieSituation(ligne.situation), ...C.nettoieSituation(corps.situation) },
       maj_le: maintenant().toISOString(),
     });
-    return ok({ etat: etatPour(maj, role) });
+    return ok({ etat: etatPour(maj, role, corps.zone) });
   }
 
   async function repondre(corps) {
@@ -563,7 +572,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // renvoie la fin.
       emailManque: complet && !fini && emailManque,
       progression: prog,
-      etat: etatPour(maj, role),
+      etat: etatPour(maj, role, corps.zone),
     });
   }
 
@@ -580,7 +589,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       mode: solo ? 'solo' : 'duo',
       lang: ligne.lang,
       situation: ligne.situation,
-      ...paiementPour(ligne, role),
+      ...paiementPour(ligne, role, corps.zone),
       moiFini: !!ligne[role + '_fini'],
       deuxFinis: estVerrouille(ligne),
       moiEmail: ligne[role + '_email'] || null,
@@ -619,15 +628,16 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const solo = estSolo(ligne);
     const base = SITE + CHEMINS[lang];
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
+    const zone = C.zoneValide(corps.zone);
     let ouverte;
     try {
       ouverte = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, email, avecPromo,
+        lang, solo, email, avecPromo, zone,
         reference: ligne.id,
-        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo' },
+        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo', ...(zone ? { zone } : {}) },
         succes: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
         annule: base + '?annule=1&b=' + ligne.id,
-      }));
+      }), !!zone);
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }
@@ -638,13 +648,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     };
     if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
     await stockage.maj(ligne.id, champs);
-    return ok({ url: session.url, promo, total: totalSession(session) });
+    // Les pages de paiement ouvertes au prix d'une région (le paiement, lui,
+    // se lit dans paiement_montant).
+    if (zone) await compter('paiement_region', zone);
+    return ok({ url: session.url, promo, region: zone || null, total: totalSession(session) });
   }
 
   // La page de paiement de Stripe, la même pour un client (payer) et pour
   // l'aperçu de l'admin (apercuPaiement) : prix, réduction, textes.
-  function sessionStripe({ lang, solo, email, avecPromo, reference, metadata, succes, annule }) {
+  function sessionStripe({ lang, solo, email, avecPromo, zone, reference, metadata, succes, annule }) {
     const t = PRODUIT[lang];
+    const region = C.zoneValide(zone);
     return {
       mode: 'payment',
       locale: lang,
@@ -654,9 +668,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       cancel_url: annule,
       // La réduction en cours est appliquée d'office (personne n'a de code à
       // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
-      // champ des codes ne revient donc que sans réduction.
-      ...(avecPromo
-        ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
+      // champ des codes ne revient donc que sans réduction. Le prix d'une
+      // région se paie tel quel, sans l'une ni l'autre.
+      ...(region ? {}
+        : avecPromo ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
         : { allow_promotion_codes: 'true' }),
       metadata,
       payment_intent_data: { metadata },
@@ -665,7 +680,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         quantity: 1,
         price_data: {
           currency: 'eur',
-          unit_amount: C.PRIX_CENTIMES,
+          unit_amount: region ? C.PRIX_REGIONS[region] : C.PRIX_CENTIMES,
           product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
         },
       }],
@@ -675,8 +690,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   // Un code expiré, désactivé ou à son plafond ne bloque jamais une vente :
   // la page de paiement se rouvre au prix plein, avec le champ des codes, et
   // l'erreur part au journal de la fonction.
-  async function ouvrirSession(parametres) {
-    const promo = promoActive();
+  // `sansPromo` : le prix d'une région, qui ne prend pas la réduction.
+  async function ouvrirSession(parametres, sansPromo) {
+    const promo = !sansPromo && promoActive();
     try {
       return { session: await stripe.creerSession(parametres(promo)), promo };
     } catch (e) {
@@ -699,15 +715,16 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!stripe) return non(503, 'paiement_ferme');
     const lang = LANGUES.includes(corps.lang) ? corps.lang : 'fr';
     const solo = corps.mode === 'solo';
+    const zone = C.zoneValide(corps.zone);
     const retour = SITE + '/admin/';
     try {
       const { session, promo } = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, avecPromo,
-        metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo' },
+        lang, solo, avecPromo, zone,
+        metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo', ...(zone ? { zone } : {}) },
         succes: retour,
         annule: retour,
-      }));
-      return ok({ url: session.url, promo, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: C.PRIX_CENTIMES });
+      }), !!zone);
+      return ok({ url: session.url, promo, region: zone || null, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: C.PRIX_CENTIMES });
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }
@@ -844,7 +861,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const maj = await majSure(ligne.id, champs);
     const envoi = e ? await envoyerA(maj) : { envoyes: 0 };
     const relu = envoi.envoyes ? await stockage.lire(ligne.id) : maj;
-    return ok({ email: e, envoi, etat: etatPour(relu, role) });
+    return ok({ email: e, envoi, etat: etatPour(relu, role, corps.zone) });
   }
 
   // Une adresse de téléchargement du PDF, valable dix minutes.
@@ -1106,7 +1123,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (corps.off !== true) return non(400, 'off');
     const maj = ligne.rappels_off ? ligne : await stockage.maj(ligne.id, { rappels_off: true, maj_le: maintenant().toISOString() });
-    return ok({ arret: true, etat: etatPour(maj, role) });
+    return ok({ arret: true, etat: etatPour(maj, role, corps.zone) });
   }
 
   // ── Les liens perdus ──────────────────────────────────────────────────
@@ -1174,7 +1191,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       return non(502, 'courriel');
     }
     await compter('lien_envoye');
-    return ok({ email: e, envoye: true, etat: etatPour(maj, role) });
+    return ok({ email: e, envoye: true, etat: etatPour(maj, role, corps.zone) });
   }
 
   // Retrouver ses évaluations avec la seule adresse e-mail : pour chaque rôle

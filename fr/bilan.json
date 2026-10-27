@@ -29,7 +29,7 @@
       "titre": "Votre évaluation",
       "modeTitre": "Comment faites-vous l'évaluation ?",
       "modeDuo": "À deux",
-      "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
+      "modeDuoAide": "Au même moment, chacun sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
       "modeSolo": "Seul(e)",
       "modeSoloAide": "Vous répondez pour vous, et sur les sujets qui comptent le plus, vous dites aussi ce que votre partenaire répondrait. Votre partenaire n'est pas prévenu(e) et ne voit rien.",
       "prenomsTitre": "Vos deux prénoms",
@@ -63,21 +63,22 @@
       }
     },
     "invitation": {
-      "titre": "Invitez {{autre}}",
-      "texte": "Envoyez ce lien à {{autre}}. {{autre}} répondra de son côté, sur son téléphone, sans voir vos réponses, et vous ne verrez pas les siennes avant la fin.",
+      "ensembleTitre": "{{autre}} est à côté de vous ?",
+      "ensemble": "Le mieux, c'est de répondre en même temps, chacun sur son téléphone : {{autre}} n'a qu'à scanner ce code avec son appareil photo.",
+      "qrLabel": "QR code du lien pour {{autre}}",
       "nouveauLien": "C'est un nouveau lien : l'ancien ne marche plus, envoyez celui-ci à {{autre}}.",
-      "suite": "Pas besoin d'attendre {{autre}} : commencez vos réponses dès maintenant, chacun avance de son côté.",
+      "suite": "Commencez en même temps que {{autre}} : une vingtaine de minutes chacun, et vous découvrirez le rapport ensemble.",
+      "commencer": "Commencer mes réponses",
+      "distanceTitre": "{{autre}} n'est pas avec vous ?",
+      "texte": "Envoyez ce lien à {{autre}}. {{autre}} répondra de son côté, sur son téléphone, sans voir vos réponses, et vous ne verrez pas les siennes avant la fin.",
       "envoyer": "Envoyer le lien",
       "copier": "Copier le lien",
       "copie": "Lien copié !",
-      "qr": "Afficher le QR code",
-      "qrAide": "{{autre}} peut le scanner avec l'appareil photo de son téléphone.",
       "message": "J'ai commencé notre évaluation de couple, à toi de répondre de ton côté : {{lien}}",
       "messageTitre": "Notre évaluation de couple",
       "monLien": "Votre lien personnel",
       "monLienAide": "Il vous permet de reprendre vos réponses sur un autre appareil. Ne le donnez à personne, même pas à {{autre}} : c'est la clé de vos réponses.",
       "copierMonLien": "Copier mon lien",
-      "commencer": "Commencer mes réponses",
       "dejaRejoint": "{{autre}} a rejoint l'évaluation."
     },
     "rejoindre": {
@@ -207,7 +208,12 @@
       "immediat": "Le rapport s'ouvre ici dès le paiement, pour vous deux, et le lien du PDF part par e-mail.",
       "moyens": "Moyens de paiement acceptés",
       "colle": "Votre rapport",
-      "colleBouton": "Débloquer"
+      "colleBouton": "Débloquer",
+      "region": {
+        "latam": "Prix Amérique latine",
+        "avant": "Au lieu de",
+        "apres": "Prix pour l'Amérique latine :"
+      }
     },
     "paiement": {
       "verification": "Vérification du paiement...",
@@ -689,7 +695,7 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Faites le point sur votre couple, sans aller chez un pro",
-    "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord, et de quoi il faut parler.",
+    "sousTitre": "20 minutes ensemble, chacun sur son téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
     "cta": "Commencer l'évaluation",
     "soloQuestion": "Votre partenaire ne veut pas participer ?",
     "soloLien": "Faites-la seul(e)",
@@ -712,7 +718,7 @@
       },
       {
         "n": "20 min",
-        "l": "chacun, à son rythme"
+        "l": "ensemble, chacun sur son téléphone"
       },
       {
         "n": "0 €",
@@ -725,12 +731,12 @@
         {
           "duree": "2 min",
           "titre": "Vous lancez l'évaluation",
-          "texte": "Vos deux prénoms, puis vous envoyez son lien à votre partenaire."
+          "texte": "Vos deux prénoms, puis votre partenaire scanne le QR code de votre écran, ou reçoit son lien."
         },
         {
           "duree": "20 min",
-          "titre": "Chacun répond de son côté",
-          "texte": "Sur son téléphone, sans voir les réponses de l'autre. Vous pouvez faire une pause quand vous voulez."
+          "titre": "Vous répondez en même temps",
+          "texte": "Chacun sur son téléphone, sans voir les réponses de l'autre. Vous pouvez faire une pause quand vous voulez."
         },
         {
           "duree": "1 min",
@@ -788,9 +794,9 @@
       "intro": "Si l'autre n'a pas envie d'en parler, vous pouvez la faire de votre côté. Même prix, même rapport.",
       "duo": {
         "titre": "À deux",
-        "sous": "Chacun sur son téléphone",
+        "sous": "Au même moment, chacun sur son téléphone",
         "points": [
-          "Chacun répond de son côté, à son rythme",
+          "Vous répondez en même temps, sans voir les réponses de l'autre",
           "Le rapport compare vos réponses, sujet par sujet"
         ],
         "cta": "Commencer à deux"

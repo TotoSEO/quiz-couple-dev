@@ -29,7 +29,7 @@
       "titre": "La vostra valutazione",
       "modeTitre": "Come fate la valutazione?",
       "modeDuo": "In due",
-      "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
+      "modeDuoAide": "Nello stesso momento, ciascuno sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
       "modeSolo": "Da solo/a",
       "modeSoloAide": "Rispondi per te e, sugli argomenti che contano di più, dici anche cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
       "prenomsTitre": "I vostri due nomi",
@@ -63,21 +63,22 @@
       }
     },
     "invitation": {
-      "titre": "Invita {{autre}}",
-      "texte": "Manda questo link a {{autre}}. {{autre}} risponderà per conto suo, sul proprio telefono, senza vedere le tue risposte, e tu non vedrai le sue fino alla fine.",
+      "ensembleTitre": "{{autre}} è con te adesso?",
+      "ensemble": "La cosa migliore è rispondere nello stesso momento, ciascuno sul proprio telefono: {{autre}} deve solo inquadrare questo codice con la fotocamera.",
+      "qrLabel": "Codice QR del link per {{autre}}",
       "nouveauLien": "È un nuovo link: quello vecchio non funziona più, manda questo a {{autre}}.",
-      "suite": "Non serve aspettare {{autre}}: inizia subito le tue risposte, ognuno va avanti per conto suo.",
+      "suite": "Inizia in contemporanea con {{autre}}: circa venti minuti a testa, e il report lo scoprirete insieme.",
+      "commencer": "Inizia le mie risposte",
+      "distanceTitre": "{{autre}} non è con te?",
+      "texte": "Manda questo link a {{autre}}. {{autre}} risponderà per conto suo, sul proprio telefono, senza vedere le tue risposte, e tu non vedrai le sue fino alla fine.",
       "envoyer": "Invia il link",
       "copier": "Copia il link",
       "copie": "Link copiato!",
-      "qr": "Mostra il codice QR",
-      "qrAide": "{{autre}} può scansionarlo con la fotocamera del telefono.",
-      "message": "Ho iniziato il nostra valutazione di coppia, tocca a te rispondere per conto tuo: {{lien}}",
-      "messageTitre": "Il nostra valutazione di coppia",
+      "message": "Ho iniziato la nostra valutazione di coppia, tocca a te rispondere per conto tuo: {{lien}}",
+      "messageTitre": "La nostra valutazione di coppia",
       "monLien": "Il tuo link personale",
       "monLienAide": "Ti permette di riprendere le tue risposte su un altro dispositivo. Non darlo a nessuno, nemmeno a {{autre}}: è la chiave delle tue risposte.",
       "copierMonLien": "Copia il mio link",
-      "commencer": "Inizia le mie risposte",
       "dejaRejoint": "{{autre}} ha accettato l'invito."
     },
     "rejoindre": {
@@ -207,7 +208,12 @@
       "immediat": "Il report si apre qui appena hai pagato, per tutti e due, e il link al PDF parte per e-mail.",
       "moyens": "Metodi di pagamento accettati",
       "colle": "Il vostro report",
-      "colleBouton": "Sblocca"
+      "colleBouton": "Sblocca",
+      "region": {
+        "latam": "Prezzo per l'America Latina",
+        "avant": "Invece di",
+        "apres": "Prezzo per l'America Latina:"
+      }
     },
     "paiement": {
       "verification": "Verifica del pagamento...",
@@ -693,7 +699,7 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
-    "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
+    "sousTitre": "20 minuti insieme, ciascuno sul proprio telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
     "soloQuestion": "Il tuo partner non vuole partecipare?",
     "soloLien": "Falla da solo/a",
@@ -716,7 +722,7 @@
       },
       {
         "n": "20 min",
-        "l": "a testa, al proprio ritmo"
+        "l": "insieme, ciascuno sul suo telefono"
       },
       {
         "n": "0 €",
@@ -729,12 +735,12 @@
         {
           "duree": "2 min",
           "titre": "Create la valutazione",
-          "texte": "I vostri due nomi, poi mandi il link al tuo partner."
+          "texte": "I vostri due nomi, poi il tuo partner inquadra il codice QR sul tuo schermo, o riceve il suo link."
         },
         {
           "duree": "20 min",
-          "titre": "Ciascuno risponde per conto suo",
-          "texte": "Sul proprio telefono, senza vedere le risposte dell'altro. Potete fare una pausa quando volete."
+          "titre": "Rispondete nello stesso momento",
+          "texte": "Ciascuno sul proprio telefono, senza vedere le risposte dell'altro. Potete fare una pausa quando volete."
         },
         {
           "duree": "1 min",
@@ -792,9 +798,9 @@
       "intro": "Se l'altro non ha voglia di parlarne, puoi farla per conto tuo. Stesso prezzo, stesso report.",
       "duo": {
         "titre": "In due",
-        "sous": "Ciascuno sul proprio telefono",
+        "sous": "Nello stesso momento, ciascuno sul proprio telefono",
         "points": [
-          "Ciascuno risponde per conto suo, al proprio ritmo",
+          "Rispondete insieme, senza vedere le risposte dell'altro",
           "Il report confronta le vostre risposte, argomento per argomento"
         ],
         "cta": "Iniziare in due"

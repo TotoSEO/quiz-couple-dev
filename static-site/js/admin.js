@@ -892,7 +892,9 @@
       body: JSON.stringify({
         action: 'apercu_paiement',
         lang: document.getElementById('apercu-stripe-lang').value,
-        mode: document.getElementById('apercu-stripe-mode').value
+        mode: document.getElementById('apercu-stripe-mode').value,
+        // Une fonction d'avant le 27 octobre 2026 l'ignore : prix habituel.
+        zone: (document.getElementById('apercu-stripe-zone') || {}).value || undefined
       })
     }).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (j) { return { statut: r.status, json: j || {} }; });
@@ -906,7 +908,9 @@
       var total = r.json.total;
       montre(total == null
         ? 'Page Stripe ouverte dans un nouvel onglet.'
-        : 'Page Stripe ouverte : elle demande ' + eurosBilan(total) + (r.json.promo
+        : 'Page Stripe ouverte : elle demande ' + eurosBilan(total) + (r.json.region
+          ? ', le prix de l\'Amérique latine.'
+          : r.json.promo
           ? ' au lieu de ' + eurosBilan(r.json.prixBase) + ' (code ' + r.json.code + ' appliqué).'
           : ', sans réduction.'), 'ok');
     }).catch(function (e) {
