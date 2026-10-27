@@ -790,6 +790,7 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .rsx-case{position:relative;display:grid;grid-template-columns:2.6rem minmax(0,1fr) auto;gap:.5rem;align-items:start;min-height:4.6rem;padding:.45rem .5rem;border:1px solid var(--adm-line);border-radius:.7rem;background:var(--adm-card);}
 .rsx-case.is-vide{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;border-style:dashed;background:transparent;color:var(--adm-ink-2);font-size:.78rem;}
 .rsx-case.is-vide small{font-size:.7rem;opacity:.8;text-align:center;}
+.rsx-case.is-ferme{border-style:dotted;opacity:.55;}
 .rsx-case.is-echec{border-color:color-mix(in srgb,var(--adm-mauvais) 45%,transparent);}
 .rsx-case.is-suspendu{opacity:.7;}
 .rsx-case-vignette{width:2.6rem;height:3.25rem;border-radius:.45rem;overflow:hidden;background:hsl(var(--muted)/.7);display:grid;place-items:center;font-weight:800;font-size:.8rem;color:var(--adm-ink-2);}
@@ -821,6 +822,9 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
   .rsx-rang{grid-template-columns:1fr;}
   .rsx-rang-jour{flex-direction:row;align-items:baseline;gap:.5rem;padding-top:.5rem;}
   .rsx-case.is-vide{min-height:2.4rem;flex-direction:row;}
+  /* sans en-tête de colonnes, une case « fermé » ne dirait pas quel créneau :
+     chaque jour ne montre que ses créneaux ouverts */
+  .rsx-case.is-ferme{display:none;}
 }
 
 /* ── Onglet Avis ───────────────────────────────────────────────────── */
