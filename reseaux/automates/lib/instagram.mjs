@@ -10,6 +10,17 @@
 export const VERSION = 'v23.0';
 const RACINE = `https://graph.facebook.com/${VERSION}`;
 
+// Les refus de Meta dont le texte brut trompe. Code 4 et sous-code 2207051
+// arrivent avec « Application request limit reached », alors que la
+// référence des codes d'erreur dit « The publishing action is suspected to be
+// spam » : du 24 au 26 octobre 2026, les posts image des mipaps ont été
+// refusés ainsi à chaque essai, et l'alerte disait « limite atteinte ».
+export const SOUS_CODE_SPAM = 2207051;
+const REFUS_LISIBLES = {
+  [SOUS_CODE_SPAM]: "publication refusée, Instagram la soupçonne d'être du spam",
+  2207042: 'limite quotidienne de publication atteinte',
+};
+
 export class Instagram {
   constructor(jeton, igUserId, { fetch: f = fetch } = {}) {
     this.jeton = jeton;
@@ -24,9 +35,15 @@ export class Instagram {
     const donnees = await r.json().catch(() => ({}));
     if (!r.ok || donnees.error) {
       const e = donnees.error || {};
-      const err = new Error(`Instagram ${chemin} : ${e.message || r.status}`);
+      const lisible = REFUS_LISIBLES[e.error_subcode];
+      const detail = lisible ? `${lisible} (code ${e.code}, sous-code ${e.error_subcode} : « ${e.message} »)` : e.message || r.status;
+      const err = new Error(`Instagram ${chemin} : ${detail}`);
       err.code = e.code;
-      err.temporaire = r.status >= 500 || [1, 2, 4, 17, 341].includes(e.code);
+      err.sousCode = e.error_subcode;
+      // un soupçon de spam n'est pas une panne passagère : renvoyer le même
+      // post dix minutes plus tard n'y change rien
+      err.spam = e.error_subcode === SOUS_CODE_SPAM;
+      err.temporaire = !err.spam && (r.status >= 500 || [1, 2, 4, 17, 341].includes(e.code));
       throw err;
     }
     return donnees;

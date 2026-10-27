@@ -207,7 +207,11 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
         await base.journal('info', 'publication', `${post.jour} ${post.creneau} ${v.langue} publié${son}`, { lien, son: v.recette?.son || null }, v.id);
       }
     } catch (e) {
-      const essais = (v.essais || 0) + 1;
+      // Un soupçon de spam (code 4, sous-code 2207051) ne se règle pas en
+      // renvoyant le même post au passage suivant : il est abandonné dès le
+      // premier refus, essais au maximum pour que la synchro ne le remette
+      // pas au rendu (le 26 octobre 2026, trois refus en vingt minutes).
+      const essais = e.spam ? ESSAIS_MAX : (v.essais || 0) + 1;
       const definitif = essais >= ESSAIS_MAX;
       // un échec passager repart du début au passage suivant
       await base.update('social_variantes', `id=eq.${v.id}`, {

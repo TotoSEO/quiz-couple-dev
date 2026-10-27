@@ -61,3 +61,18 @@ test('un jeton refusé par Meta fait échouer la vérification avec le message d
   const f = fauxFetch([{ error: { message: 'Invalid OAuth access token', code: 190 } }]);
   await assert.rejects(verifierJeton('PAGE', '178', f), /Invalid OAuth access token/);
 });
+
+test("le refus pour soupçon de spam dit ce qu'il est, malgré le texte de Meta", async () => {
+  const f = fauxFetch([{ error: { message: 'Application request limit reached', type: 'OAuthException', code: 4, error_subcode: 2207051 } }]);
+  await assert.rejects(new Instagram('PAGE', '178', { fetch: f }).publier('C1'), (e) => {
+    assert.match(e.message, /^Instagram \/178\/media_publish : publication refusée, Instagram la soupçonne d'être du spam/);
+    assert.match(e.message, /code 4, sous-code 2207051/);
+    assert.match(e.message, /Application request limit reached/);
+    assert.equal(e.spam, true);
+    assert.equal(e.temporaire, false);
+    return true;
+  });
+  // un vrai dépassement passager (code 4 sans sous-code) reste passager
+  const g = fauxFetch([{ error: { message: 'Application request limit reached', code: 4 } }]);
+  await assert.rejects(new Instagram('PAGE', '178', { fetch: g }).publier('C1'), (e) => e.spam === false && e.temporaire === true && /: Application request limit reached$/.test(e.message));
+});

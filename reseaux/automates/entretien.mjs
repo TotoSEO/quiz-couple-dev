@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
-import { envoyerAlerte, lignesAlerte } from './lib/alerte-mail.mjs';
+import { derniereAlerte, envoyerAlerte, lignesAlerte } from './lib/alerte-mail.mjs';
 import { ajouterJours, aujourdhui, categorieAttendue, creneauFerme, creneauxOuverts, CRENEAUX, melangeDuCompte, MOTIF_FERME, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
@@ -342,13 +342,17 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   // L'alerte par e-mail (26 octobre 2026, pour les mois sans personne devant
   // l'admin) : les erreurs des dernières 24 heures (le jeton Meta vérifié
-  // plus haut, une publication ou un rendu refusés) et une réserve sous deux
-  // semaines ; un e-mail par passage au plus, jamais une panne de l'entretien.
+  // plus haut, une publication ou un rendu refusés) que la dernière alerte
+  // n'a pas déjà envoyées, et une réserve sous deux semaines rappelée au plus
+  // une fois par jour ; un e-mail par passage au plus, jamais une panne de
+  // l'entretien.
   try {
-    const depuis = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
+    const maintenant = new Date();
+    const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
+    const dernier = await derniereAlerte(base, { maintenant });
     const erreurs = await base.select('social_journal', `select=source,message,at&niveau=eq.erreur&at=gte.${depuis}&order=at.desc&limit=100`);
-    const lignes = lignesAlerte({ erreurs, etats });
-    if (lignes.length) await envoyerAlerte(lignes, { journal: (...args) => base.journal(...args) });
+    const lignes = lignesAlerte({ erreurs, etats, dernier, maintenant });
+    if (lignes.length) await envoyerAlerte(lignes, { maintenant, jusqu_a: maintenant.toISOString(), journal: (...args) => base.journal(...args) });
   } catch (e) {
     console.log(`alerte e-mail : ${e.message}`);
   }
