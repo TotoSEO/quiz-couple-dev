@@ -1782,3 +1782,52 @@ au prix d'une région (`paiement_montant` à 398) et les comptes du jour :
   dans la monnaie du client (pesos, réais…), ce qui rassure plus qu'un
   montant en euros ; le client paie 2 à 4 % dans le taux de change. Voir
   STRIPE.md, « Ensuite ».
+
+## 27 octobre 2026 au soir : l'adresse redevient facultative au départ
+
+Thomas : « je me demande : est-ce qu'on n'aurait pas arrêté d'avoir des
+conversions depuis que tu as mis en place le système de synthèse gratuite ?
+J'ai l'impression qu'on ne fait plus de vente depuis ce jour-là ».
+
+### Ce que disent les dates
+
+Lues par `bilan-retrait.yml` (`lister`) et par `bilan-chiffres.yml`, qui écrit
+depuis ce jour-là une ligne par évaluation allée au bout (`completesDansLOrdre`).
+
+- Le radar est en ligne depuis le 22 octobre à 15 h 36. Les trois ventes sont
+  arrivées après lui : le 23 à 23 h 48, le 24 à 18 h 19 et le 25 à 3 h 54
+  (heure de Paris). Avant le radar, aucune vente. Ce n'est donc pas lui.
+- Seuls les couples anglophones allés au bout à deux paient : un avant le
+  radar (sans vente), quatre du 23 à 14 h au 25 à 4 h (trois ventes), un seul
+  depuis la dernière vente, le 27 à 5 h 42, sans page de paiement ouverte.
+  Tous les autres couples allés au bout depuis sont hispanophones, français
+  ou en seul(e), et aucun de ces groupes n'a jamais payé.
+- Depuis le 25 octobre à 19 h, l'adresse était obligatoire au départ. La part
+  des écrans de départ qui deviennent une évaluation est tombée de 58 % et
+  60 % (23 et 24 octobre) à 29 % (26 octobre) et 35 % (27 octobre jusqu'à
+  18 h), alors que les visites de la page n'avaient pas baissé (449 le 26) ;
+  les couples allés au bout sont passés de 6 à 8 par jour à 3 à 5. La part de
+  ceux qui finissent, parmi ceux qui créent une évaluation, n'a pas bougé :
+  le champ retirait du monde sans retenir de meilleurs couples.
+- Une part de hasard : avec trois ventes en une semaine, deux jours et demi
+  sans vente arrivent environ une fois sur trois sans aucun changement.
+
+### Ce qui a changé
+
+- Au départ et sur l'acceptation de l'invitation, le champ dit « Votre e-mail
+  (facultatif) » (`creation.emailFacultatif`) et sa phrase dit qu'on la
+  demandera à la fin. Une adresse mal écrite est toujours refusée.
+- Sans adresse, l'écran de la fin de ses propres questions la demande,
+  obligatoire, comme du 21 au 25 octobre : le « prêt », qui a amené les
+  ventes, part toujours à tous ceux qui finissent.
+- La reprise ne part qu'à qui a donné son adresse au départ. Pour compenser
+  la moitié des évaluations perdues, il aurait fallu qu'elle ramène un
+  abandon sur cinq ; les e-mails de ce genre en ramènent plutôt un sur dix
+  ou vingt.
+
+### Ce qu'il faut regarder
+
+Dans la série jour par jour de `bilan-chiffres.yml`, la part des écrans de
+départ (`departs`) qui deviennent une évaluation (`crees`), à comparer aux
+58-60 % des 23 et 24 octobre, et la liste des évaluations allées au bout :
+combien de couples anglophones, et ce qui a suivi.

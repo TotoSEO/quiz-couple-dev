@@ -416,9 +416,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // L'adresse e-mail reste obligatoire (le rapport y part tout seul) :
     // `repondre` ne marque pas fini sans elle. Du 21 au 25 octobre 2026, elle
     // était demandée à la fin de ses propres questions, juste avant l'offre
-    // (action `email`) ; depuis, la page la demande de nouveau ici, au départ,
-    // pour que la reprise puisse partir à qui s'arrête en route. Une page
-    // ouverte avant la mise en ligne crée encore sans elle.
+    // (action `email`) ; du 25 au 27 octobre, la page l'exigeait ici, au
+    // départ, pour que la reprise puisse partir à qui s'arrête en route, et
+    // la part des départs qui devenaient une évaluation était tombée de
+    // moitié. Depuis le 27 octobre 2026, elle est facultative ici : sans
+    // elle, la fin des questions la demande.
     const ea = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !ea) return non(400, 'email');
 
@@ -479,9 +481,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (ligne[role + '_consent']) return non(409, 'deja');
     if (corps.consentement !== true || corps.majeur !== true) return non(400, 'consentement');
-    // Même règle que pour la création : depuis le 25 octobre 2026, la page
-    // demande l'adresse ici, sous la phrase qui annonce le « prêt », le
-    // rappel et la reprise ; une page d'avant la laisse pour la fin.
+    // Même règle que pour la création : la page propose l'adresse ici, sous
+    // la phrase qui annonce le « prêt », le rappel et la reprise (obligatoire
+    // du 25 au 27 octobre 2026, facultative depuis) ; sans elle, la fin des
+    // questions la demande.
     const eb = corps.email === undefined || corps.email === null || corps.email === '' ? null : emailPropre(corps.email);
     if (corps.email && !eb) return non(400, 'email');
     const champs = {};
