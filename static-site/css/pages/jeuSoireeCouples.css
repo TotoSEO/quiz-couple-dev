@@ -1,0 +1,234 @@
+/* Le jeu de soirée pour couples (27 octobre 2026) : l'application dans le
+   cadre du moteur (.quiz-engine), les étapes et les exemples de l'article.
+   Mise en ligne dans le <head> de cette seule page (cssPagePour), rien dans
+   styles.css. Les couples ont chacun une couleur (--soiree-c0 à c4) : rose,
+   violet, turquoise, ambre, vert, reprises sur les cartes, les votes, les
+   réponses et le podium. Tout ce qui bouge n'anime que transform et opacity. */
+:root {
+  --soiree-c0: 340 65% 55%;
+  --soiree-c1: 270 45% 52%;
+  --soiree-c2: 190 60% 38%;
+  --soiree-c3: 36 85% 44%;
+  --soiree-c4: 152 55% 36%;
+}
+.dark {
+  --soiree-c0: 340 70% 68%;
+  --soiree-c1: 270 55% 70%;
+  --soiree-c2: 190 60% 58%;
+  --soiree-c3: 38 85% 60%;
+  --soiree-c4: 152 55% 55%;
+}
+
+.soiree { text-align: center; }
+.soiree .soiree-ecran { animation: soireeEntre 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes soireeEntre { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.soiree-titre { font-size: 1.45rem; font-weight: 800; line-height: 1.2; margin: 0 0 0.5rem; }
+.soiree-texte { color: hsl(var(--muted-foreground)); margin: 0 auto 1.25rem; max-width: 34rem; line-height: 1.55; }
+.soiree-duo { display: flex; justify-content: center; align-items: flex-end; gap: 0.35rem; margin: 0 auto 0.75rem; }
+.soiree-duo svg { height: 4.6rem; width: auto; }
+.soiree-duo--petit svg { height: 3rem; }
+
+/* L'accueil : deux grandes tuiles */
+.soiree-choix { display: grid; gap: 0.85rem; margin: 0 auto 1rem; max-width: 34rem; }
+@media (min-width: 560px) { .soiree-choix { grid-template-columns: 1fr 1fr; } }
+.soiree-tuile {
+  display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+  padding: 1.1rem 1rem 1.2rem; border-radius: 1rem; cursor: pointer;
+  border: 2px solid hsl(var(--primary) / 0.35); background: hsl(var(--primary) / 0.08);
+  color: hsl(var(--foreground)); font: inherit; transition: transform 150ms, border-color 150ms;
+}
+.soiree-tuile:hover { transform: translateY(-2px); border-color: hsl(var(--primary)); }
+.soiree-tuile:active { transform: scale(0.98); }
+.soiree-tuile--second { border-color: hsl(var(--secondary) / 0.35); background: hsl(var(--secondary) / 0.08); }
+.soiree-tuile--second:hover { border-color: hsl(var(--secondary)); }
+.soiree-tuile-ic { font-size: 1.9rem; line-height: 1; }
+.soiree-tuile-titre { font-weight: 800; font-size: 1.05rem; }
+.soiree-tuile-aide { font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
+.soiree-minimum { font-size: 0.9rem; color: hsl(var(--muted-foreground)); margin: 0 0 1.25rem; }
+
+/* Un couple seul : la redirection vers les tests à deux */
+.soiree-seul {
+  margin: 1rem auto 0; max-width: 34rem; padding: 1rem 1.1rem; border-radius: 1rem;
+  background: hsl(var(--muted) / 0.55); border: 1.5px dashed hsl(var(--border));
+}
+.soiree-seul-titre { font-weight: 700; margin: 0 0 0.25rem; }
+.soiree-seul-texte { font-size: 0.9rem; color: hsl(var(--muted-foreground)); margin: 0 0 0.75rem; }
+.soiree-liens { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.soiree-liens a {
+  display: inline-block; padding: 0.45rem 0.85rem; border-radius: 999px; font-size: 0.88rem; font-weight: 600;
+  background: hsl(var(--card)); border: 1.5px solid hsl(var(--primary) / 0.4); color: hsl(var(--primary-texte));
+  text-decoration: none; transition: border-color 150ms, transform 150ms;
+}
+.soiree-liens a:hover { border-color: hsl(var(--primary)); transform: translateY(-1px); }
+
+/* Les formulaires (prénom, code) */
+.soiree-form { max-width: 24rem; margin: 0 auto; text-align: left; }
+.soiree-champ { margin: 0 0 0.9rem; }
+.soiree-champ label { display: block; font-weight: 600; font-size: 0.9rem; margin: 0 0 0.3rem; }
+.soiree .soiree-input {
+  width: 100%; font-size: 16px; padding: 0.7rem 0.9rem; border-radius: 0.75rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card)); color: hsl(var(--foreground));
+}
+.soiree .soiree-input:focus { outline: 2px solid hsl(var(--primary) / 0.5); outline-offset: 1px; border-color: hsl(var(--primary)); }
+.soiree .soiree-input--code { text-transform: uppercase; letter-spacing: 0.3em; font-weight: 800; font-size: 1.35rem; text-align: center; font-family: 'Poppins', var(--font-sans, sans-serif); }
+.soiree-radios { display: grid; gap: 0.5rem; margin: 0 0 1rem; }
+@media (min-width: 480px) { .soiree-radios { grid-template-columns: 1fr 1fr; } }
+.soiree-radio {
+  display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.7rem 0.8rem; border-radius: 0.85rem; cursor: pointer;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--muted) / 0.4);
+}
+.soiree-radio input { margin-top: 0.25rem; accent-color: hsl(var(--primary)); }
+.soiree-radio--on { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.08); }
+.soiree-radio-titre { font-weight: 700; display: block; }
+.soiree-radio-aide { font-size: 0.82rem; color: hsl(var(--muted-foreground)); }
+.soiree-erreur { color: hsl(0 70% 45%); font-size: 0.9rem; font-weight: 600; margin: 0 0 0.75rem; }
+.dark .soiree-erreur { color: hsl(0 80% 72%); }
+.soiree-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-top: 0.75rem; }
+.soiree-actions .btn { min-height: 2.9rem; }
+.soiree-lien-retour { background: none; border: 0; color: hsl(var(--muted-foreground)); text-decoration: underline; cursor: pointer; font: inherit; font-size: 0.9rem; padding: 0.5rem; }
+
+/* La salle d'attente */
+.soiree-code-bloc { margin: 0 auto 1rem; max-width: 24rem; }
+.soiree-code-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: hsl(var(--muted-foreground)); font-weight: 700; margin: 0 0 0.25rem; }
+.soiree-code {
+  display: inline-block; font-family: 'Poppins', var(--font-sans, sans-serif); font-weight: 800; font-size: 2.2rem; letter-spacing: 0.28em;
+  padding: 0.35rem 0.9rem 0.35rem 1.18rem; border-radius: 0.9rem; background: hsl(var(--primary) / 0.1); color: hsl(var(--primary-texte));
+}
+.soiree-qr { width: min(11rem, 55vw); aspect-ratio: 1; margin: 0.75rem auto 0.5rem; border-radius: 0.75rem; background: #fff; padding: 0.4rem; }
+.soiree-qr svg { display: block; width: 100%; height: 100%; }
+.soiree-scan { font-size: 0.88rem; color: hsl(var(--muted-foreground)); margin: 0 auto 0.75rem; max-width: 26rem; }
+.soiree-section { margin: 1.4rem auto 0; max-width: 34rem; text-align: left; }
+.soiree-section-titre { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; font-weight: 800; font-size: 1.05rem; margin: 0 0 0.4rem; }
+.soiree-section-aide { font-size: 0.85rem; color: hsl(var(--muted-foreground)); margin: 0 0 0.6rem; }
+.soiree-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.soiree-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.7rem 0.45rem 0.6rem; border-radius: 999px; font: inherit; font-weight: 600; font-size: 0.92rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card)); color: hsl(var(--foreground)); cursor: pointer; transition: border-color 150ms, transform 150ms;
+}
+.soiree-chip:hover { border-color: hsl(var(--primary)); }
+.soiree-chip--choisi { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.12); transform: scale(1.04); }
+.soiree-chip--fixe { cursor: default; }
+.soiree-point { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: hsl(142 60% 45%); flex: 0 0 auto; }
+.soiree-point--hors { background: hsl(var(--muted-foreground) / 0.5); }
+.soiree-chip-mj { font-size: 0.72rem; color: hsl(var(--muted-foreground)); font-weight: 600; }
+.soiree-chip-x {
+  margin-left: 0.15rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; border: 0; background: hsl(var(--muted)); color: hsl(var(--muted-foreground));
+  font: inherit; font-size: 0.8rem; line-height: 1; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+}
+.soiree-chip-x:hover { background: hsl(0 70% 50% / 0.15); color: hsl(0 70% 45%); }
+.soiree-vide { font-size: 0.9rem; color: hsl(var(--muted-foreground)); font-style: italic; }
+.soiree-couples { display: grid; gap: 0.5rem; margin: 0.4rem 0 0; }
+@media (min-width: 560px) { .soiree-couples { grid-template-columns: 1fr 1fr; } }
+.soiree-couple {
+  display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.7rem; border-radius: 0.85rem;
+  border: 1.5px solid hsl(var(--c) / 0.4); background: hsl(var(--c) / 0.08); border-left-width: 6px;
+}
+.soiree-couple-num { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(var(--c)); font-weight: 800; }
+.soiree-couple-noms { font-weight: 700; flex: 1 1 auto; }
+.soiree-couple-noms small { font-weight: 500; color: hsl(var(--muted-foreground)); }
+.soiree-petit-btn { background: none; border: 1px solid hsl(var(--border)); border-radius: 999px; padding: 0.25rem 0.6rem; font: inherit; font-size: 0.78rem; cursor: pointer; color: hsl(var(--muted-foreground)); }
+.soiree-petit-btn:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary-texte)); }
+.soiree-nb { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin: 0.3rem 0 0; }
+.soiree-nb button {
+  padding: 0.6rem 0; border-radius: 0.75rem; border: 1.5px solid hsl(var(--border)); background: hsl(var(--card)); font: inherit; font-weight: 800; cursor: pointer; color: hsl(var(--foreground));
+}
+.soiree-nb button[aria-pressed="true"] { border-color: hsl(var(--primary)); background: hsl(var(--primary)); color: #fff; }
+.soiree-lancer { margin-top: 1.4rem; }
+.soiree-lancer .btn { width: 100%; max-width: 24rem; min-height: 3.2rem; font-size: 1.05rem; }
+.soiree-note { font-size: 0.88rem; color: hsl(var(--muted-foreground)); margin: 0.6rem auto 0; max-width: 30rem; }
+.soiree-attente { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; margin: 0.75rem 0; }
+.soiree-spinner { width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 3px solid hsl(var(--primary) / 0.25); border-top-color: hsl(var(--primary)); animation: soireeTourne 0.9s linear infinite; }
+@keyframes soireeTourne { to { transform: rotate(360deg); } }
+.soiree-partenaire { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 999px; background: hsl(var(--c, var(--primary)) / 0.12); color: hsl(var(--c, var(--primary))); font-weight: 700; margin: 0.5rem 0; }
+
+/* La question */
+.soiree-entete { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0 0 0.9rem; }
+.soiree-compteur { font-size: 0.85rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.soiree-manche { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; background: hsl(var(--secondary) / 0.12); color: hsl(var(--secondary-texte)); }
+.soiree-manche--speciale { background: hsl(36 90% 50% / 0.18); color: hsl(30 80% 36%); }
+.dark .soiree-manche--speciale { color: hsl(38 90% 68%); }
+.soiree-role { font-size: 0.92rem; font-weight: 600; color: hsl(var(--primary-texte)); margin: 0 0 0.6rem; }
+.soiree-q { font-size: 1.35rem; font-weight: 800; line-height: 1.3; margin: 0 0 1.1rem; }
+.soiree-options { display: grid; gap: 0.55rem; max-width: 30rem; margin: 0 auto; }
+.soiree .soiree-option {
+  display: flex; align-items: center; gap: 0.75rem; width: 100%; text-align: left; padding: 0.8rem 0.9rem; border-radius: 0.9rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card)); color: hsl(var(--foreground)); font: inherit; font-weight: 600; cursor: pointer;
+  transition: border-color 150ms, transform 150ms, background 150ms;
+}
+.soiree .soiree-option:hover { border-color: hsl(var(--primary)); transform: translateY(-1px); }
+.soiree .soiree-option:active { transform: scale(0.985); }
+.soiree .soiree-option--choisie { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.1); }
+.soiree .soiree-option[disabled] { cursor: default; opacity: 0.8; }
+.soiree-option-lettre { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; background: hsl(var(--primary) / 0.12); color: hsl(var(--primary-texte)); }
+.soiree-option--couple .soiree-option-lettre { background: hsl(var(--c) / 0.15); color: hsl(var(--c)); }
+.soiree-enregistre { margin: 1rem 0 0; font-weight: 700; color: hsl(142 60% 32%); }
+.dark .soiree-enregistre { color: hsl(142 60% 62%); }
+.soiree-progression { margin: 0.4rem 0 0; font-size: 0.9rem; color: hsl(var(--muted-foreground)); }
+.soiree-mj {
+  margin: 1.2rem auto 0; max-width: 30rem; padding: 0.9rem; border-radius: 1rem; background: hsl(var(--muted) / 0.5); border: 1.5px solid hsl(var(--border));
+}
+.soiree-mj-etat { font-weight: 700; margin: 0 0 0.6rem; }
+.soiree-mj-etat--pret { color: hsl(142 60% 32%); }
+.dark .soiree-mj-etat--pret { color: hsl(142 60% 62%); }
+.soiree-mj-manquent { font-size: 0.85rem; color: hsl(var(--muted-foreground)); margin: 0 0 0.6rem; }
+.soiree-mj .btn { min-height: 2.9rem; }
+.soiree-pulse { animation: soireePulse 1.4s ease-in-out infinite; }
+@keyframes soireePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+
+/* Les réponses révélées */
+.soiree-rev { display: grid; gap: 0.6rem; max-width: 32rem; margin: 0 auto; text-align: left; }
+.soiree-rev-carte {
+  padding: 0.8rem 0.9rem; border-radius: 0.9rem; border: 1.5px solid hsl(var(--c) / 0.35); background: hsl(var(--c) / 0.06); border-left-width: 6px;
+}
+.soiree-rev-carte--moi { box-shadow: 0 8px 24px -12px hsl(var(--c) / 0.6); }
+.soiree-rev-tete { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.35rem 0.5rem; font-weight: 800; margin: 0 0 0.35rem; }
+.soiree-rev-tete .soiree-rev-verdict { margin-left: auto; }
+.soiree-rev-verdict { font-size: 0.8rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; white-space: nowrap; }
+.soiree-rev-verdict--ok { background: hsl(142 60% 40% / 0.15); color: hsl(142 60% 30%); }
+.soiree-rev-verdict--ko { background: hsl(0 70% 50% / 0.12); color: hsl(0 70% 40%); }
+.dark .soiree-rev-verdict--ok { color: hsl(142 60% 65%); }
+.dark .soiree-rev-verdict--ko { color: hsl(0 80% 72%); }
+.soiree-rev-ligne { font-size: 0.92rem; margin: 0.15rem 0; color: hsl(var(--foreground) / 0.9); }
+.soiree-rev-ligne strong { font-weight: 700; }
+.soiree-rev-bonus { font-size: 0.85rem; font-weight: 700; color: hsl(36 85% 36%); margin: 0.3rem 0 0; }
+.dark .soiree-rev-bonus { color: hsl(38 85% 65%); }
+.soiree-rev-resume { font-weight: 700; margin: 0.9rem 0 0.4rem; }
+.soiree-votes { display: grid; gap: 0.45rem; max-width: 30rem; margin: 0 auto; }
+.soiree-vote { display: grid; grid-template-columns: 1fr auto; gap: 0.3rem 0.6rem; align-items: center; padding: 0.55rem 0.75rem; border-radius: 0.8rem; background: hsl(var(--c) / 0.08); border: 1.5px solid hsl(var(--c) / 0.3); text-align: left; }
+.soiree-vote-noms { font-weight: 700; }
+.soiree-vote-n { font-weight: 800; color: hsl(var(--c)); }
+.soiree-vote-barre { grid-column: 1 / -1; height: 0.45rem; border-radius: 999px; background: hsl(var(--c) / 0.15); overflow: hidden; }
+.soiree-vote-barre span { display: block; height: 100%; background: hsl(var(--c)); transform-origin: left; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); }
+.soiree-gagnant { margin: 1rem auto 0; max-width: 30rem; padding: 0.75rem 1rem; border-radius: 0.9rem; background: hsl(36 90% 50% / 0.15); font-weight: 700; }
+.soiree-scores { margin: 1.2rem auto 0; max-width: 30rem; text-align: left; }
+.soiree-scores-titre { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; color: hsl(var(--muted-foreground)); margin: 0 0 0.4rem; }
+.soiree-score { display: flex; align-items: center; gap: 0.6rem; padding: 0.3rem 0; font-weight: 600; }
+.soiree-score-pastille { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: hsl(var(--c)); flex: 0 0 auto; }
+.soiree-score-noms { flex: 1 1 auto; }
+.soiree-score-pts { font-weight: 800; color: hsl(var(--c)); }
+.soiree-derniere { margin: 1.2rem auto 0; max-width: 30rem; padding: 0.9rem; border-radius: 1rem; background: hsl(var(--primary) / 0.08); border: 1.5px solid hsl(var(--primary) / 0.3); }
+.soiree-derniere-titre { font-weight: 800; margin: 0 0 0.6rem; }
+
+/* Le podium */
+.soiree-fin .soiree-fin-sous { color: hsl(var(--muted-foreground)); margin: 0 0 1rem; }
+.soiree-podium { display: grid; gap: 0.6rem; max-width: 30rem; margin: 0 auto; text-align: left; }
+.soiree-rang {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 0.25rem 0.75rem; align-items: center; padding: 0.75rem 0.9rem; border-radius: 1rem;
+  border: 1.5px solid hsl(var(--c) / 0.35); background: hsl(var(--c) / 0.07); border-left-width: 6px;
+}
+.soiree-rang--1 { background: hsl(46 95% 50% / 0.16); border-color: hsl(46 90% 45% / 0.6); }
+.soiree-rang-medaille { font-size: 1.7rem; line-height: 1; grid-row: span 2; }
+.soiree-rang-noms { font-weight: 800; font-size: 1.05rem; }
+.soiree-rang-pts { font-weight: 800; color: hsl(var(--c)); font-size: 1.05rem; white-space: nowrap; }
+.soiree-rang-detail { grid-column: 2 / -1; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
+.soiree-rang-titres { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.2rem; }
+.soiree-titre-badge { font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; background: hsl(36 90% 50% / 0.18); color: hsl(30 80% 34%); }
+.dark .soiree-titre-badge { color: hsl(38 90% 70%); }
+.soiree-fin-actions { margin-top: 1.2rem; }
+
+/* L'article */
+.soiree-etapes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.soiree-etape { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; border-radius: var(--radius); background: hsl(var(--card)); border: 1px solid hsl(var(--border)); }
+.soiree-etape-num { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; background: hsl(var(--primary) / 0.14); color: hsl(var(--primary-texte)); }
+.soiree-exemples { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.soiree-exemples li { padding: 0.7rem 1rem; border-radius: 0.85rem; background: hsl(var(--secondary) / 0.08); border: 1px solid hsl(var(--secondary) / 0.2); font-weight: 600; }

@@ -2410,6 +2410,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
     { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
     { type: 'jeu', key: 'dix-mais', icon: '🔟', route: 'jeuDixMais' },
+    { type: 'jeu', key: 'soiree', icon: '🎉', route: 'jeuSoireeCouples' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -2514,7 +2515,7 @@ var QuizEngine = (function() {
     'marrant':         ['quizGenant', 'quizMost', 'jeuActionVerite'],
     'genant':          ['quizMarrant', 'jeuActionVerite', 'quizMost'],
     'knowledge':       ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
-    'most':            ['jeuActionVerite', 'quizMarrant', 'quizTuPreferes'],
+    'most':            ['jeuSoireeCouples', 'jeuActionVerite', 'quizMarrant'],
     'vrai-faux':       ['quizKnowledge', 'zamours', 'quizMarrant', 'jeuDilemmes'],
     'zamours':         ['quizKnowledge', 'jeuQuiDeNous', 'quizMost'],
     'ado':             ['quizMarrant', 'quizTuPreferes', 'testCouple'],

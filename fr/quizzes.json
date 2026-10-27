@@ -464,6 +464,12 @@
     "metaDescription": "Le jeu « C'est un 10 mais... » en couple : une personne parfaite, un défaut, et chacun redonne sa note de 0 à 10. 60 cartes, en secret ou à distance.",
     "description": "Une personne parfaite, un défaut : chacun redonne sa note de 0 à 10, puis vous comparez."
   },
+  "jeuSoireeCouples": {
+    "title": "Jeu de soirée couples : le jeu à plusieurs couples (4 à 10 joueurs)",
+    "shortTitle": "Jeu de soirée couples",
+    "metaDescription": "Le jeu de soirée pour couples de Quiz Couple : de 2 à 5 couples, chacun sur son téléphone, un maître du jeu, des manches accord et des manches spéciales. Gratuit, sans inscription.",
+    "description": "De 2 à 5 couples, chacun sur son téléphone : quel couple se connaît le mieux ?"
+  },
   "testCompatSexuelle": {
     "title": "Test de compatibilité sexuelle en couple : 20 questions à deux",
     "shortTitle": "Test de compatibilité sexuelle",

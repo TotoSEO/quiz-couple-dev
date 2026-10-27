@@ -69,7 +69,7 @@
     quizMarrant:      ['quizGenant', 'quizMost', 'quizMortFilmHorreur', 'quizTuPreferes'],
     quizGenant:       ['quizMarrant', 'jeuActionVerite', 'quizMost', 'quizTuPreferes'],
     quizKnowledge:    ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
-    quizMost:         ['jeuActionVerite', 'quizMarrant', 'quizTuPreferes', 'quizKnowledge'],
+    quizMost:         ['jeuSoireeCouples', 'jeuActionVerite', 'quizMarrant', 'quizTuPreferes'],
     quizVraiFaux:     ['quizKnowledge', 'zamours', 'quizMarrant', 'jeuDilemmes'],
     zamours:          ['quizKnowledge', 'jeuQuiDeNous', 'quizMost', 'testCommonPoints'],
     quizAdo:          ['quizMarrant', 'quizTuPreferes', 'testCouple', 'quizKnowledge'],
@@ -89,10 +89,12 @@
     jeuDilemmes:      ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
     pourContre:       ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous', 'testCommonPoints'],
     jeuJamais:        ['jeuActionVerite', 'quizGenant', 'quizCoquin', 'quizTuPreferes'],
-    jeuQuiPourrait:   ['jeuQuiDeNous', 'jeuJamais', 'quizTuPreferes', 'quizMost'],
+    jeuQuiPourrait:   ['jeuQuiDeNous', 'jeuSoireeCouples', 'jeuJamais', 'quizTuPreferes'],
     jeuOuiNon:        ['jeuDilemmes', 'jeuDixMais', 'pourContre', 'jeuQuiDeNous'],
     jeuPhrases:       ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge', 'jeuQuiPourrait'],
     jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'jeuJamais', 'quizTuPreferes'],
+    // Le jeu de soirée à plusieurs couples : des jeux qui se jouent aussi en groupe
+    jeuSoireeCouples: ['jeuQuiPourrait', 'quizMost', 'jeuJamais', 'quizTuPreferes'],
 
     // Les quiz spéciaux d'Halloween (16 octobre 2026) : d'un quiz de saison à
     // l'autre, puis un jeu
@@ -113,7 +115,7 @@
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺', quizTentation: '🏝️',
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
-    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟',
+    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟', jeuSoireeCouples: '🎉',
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
   };
 

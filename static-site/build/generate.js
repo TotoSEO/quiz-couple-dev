@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -1298,11 +1298,13 @@ async function generatePage(routeKey, lang) {
       ],
     };
     // Les jeux passent par le hub : le fil d'Ariane balise doit refleter
-    // la navigation reelle de la page.
-    const ROUTES_JEUX = ['quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre'];
+    // la navigation reelle de la page. La liste est celle de config.js
+    // (ROUTES_JEUX, plus le tu preferes, qui est un jeu sans en porter la
+    // cle) : une copie locale de huit jeux oubliait les cinq suivants.
+    const JEUX_DU_HUB = ['quizTuPreferes', ...ROUTES_JEUX];
     if (routeKey === 'blog') {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog, item: canonical });
-    } else if (ROUTES_JEUX.includes(routeKey) && getLocalizedUrl('jeuxCouple', lang)) {
+    } else if (JEUX_DU_HUB.includes(routeKey) && getLocalizedUrl('jeuxCouple', lang)) {
       breadcrumbList.itemListElement.push({
         '@type': 'ListItem', position: 2,
         name: t('quizzes:jeuxCouple.shortTitle', 'Jeux de couple'),

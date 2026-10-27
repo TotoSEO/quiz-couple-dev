@@ -284,6 +284,7 @@
     jeuOuiNon: 'Oui ou non',
     jeuPhrases: 'Phrases à compléter',
     jeuDixMais: "C'est un 10 mais",
+    jeuSoireeCouples: 'Jeu de soirée couples',
     testCrush: 'Amour ou crush',
     testAmourAmi: 'Amoureux de mon meilleur ami',
     quizTentation: 'Tentation',
@@ -353,6 +354,7 @@
     'oui-non': 'jeuOuiNon',
     'phrases': 'jeuPhrases',
     'dix-mais': 'jeuDixMais',
+    'soiree': 'jeuSoireeCouples',
     'parentalite': 'testParentalite',
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
@@ -410,7 +412,7 @@
           'jeuDilemmes', 'pourContre', 'quizTuPreferes', 'jeuJamais',
           'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
           'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais',
-          'jeuPhrases', 'phrases', 'jeuDixMais', 'dix-mais'],
+          'jeuPhrases', 'phrases', 'jeuDixMais', 'dix-mais', 'jeuSoireeCouples', 'soiree'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
            'vrai-faux', 'ado', 'tentation', 'rencontre',
            // les quiz spéciaux d'Halloween (16 octobre 2026)
@@ -3210,7 +3212,8 @@
     confiance: 'Confiance', 'amour-habitude': 'Amour ou habitude', 'je-l-aime-encore': 'Je l\'aime encore ?', toxique: 'Couple toxique', jalousie: 'Jalousie',
     'amour-attachement': 'Amour ou attachement', 'aime-encore': 'M\'aime-t-il encore', 'distance-aime': 'À distance, m\'aime-t-il', dependance: 'Dépendance affective',
     attachement: 'Style d\'attachement', 'ame-soeur': 'Âme sœur', couche: 'Couche-tôt / couche-tard', personnalite: 'Personnalité amoureuse', karmique: 'Relation karmique',
-    vacances: 'Vacances à deux', coquin: 'Quiz coquin', connaissance: 'Connaissance du partenaire', genant: 'Couple gênant'
+    vacances: 'Vacances à deux', coquin: 'Quiz coquin', connaissance: 'Connaissance du partenaire', genant: 'Couple gênant',
+    soiree: 'Jeu de soirée (plusieurs couples)'
   };
   var LANGUES_ABONNES = ['fr', 'en', 'es', 'de', 'it'];
   function libelleSourceAbonnes(src) { return SOURCES_ABONNES[src] || String(src || ''); }

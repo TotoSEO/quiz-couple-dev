@@ -1,0 +1,696 @@
+{
+  "hero": {
+    "badge": "Nuevo • De 2 a 5 parejas • Cada uno en su móvil",
+    "title": "¡El juego de varias parejas de Quiz Couple! Multijugador hasta 10 personas",
+    "titleHighlight": "de varias parejas",
+    "description": "Un juego de fiesta para parejas, pensado para jugar con varias parejas: una persona crea la partida y hace de maestro de ceremonias, los demás entran con un código y cada pareja responde desde su móvil. Hacen falta al menos dos parejas para jugar."
+  },
+  "jsonLd": {
+    "name": "El juego de fiesta para parejas: el multijugador de Quiz Couple"
+  },
+  "app": {
+    "accueil": {
+      "titre": "¿Quién organiza la noche?",
+      "texte": "Una sola persona crea la partida: es el maestro del juego. Los demás entran con el código, cada uno en su móvil, y luego el maestro del juego forma las parejas.",
+      "creer": "Crear una partida",
+      "creerAide": "Soy el maestro del juego",
+      "rejoindre": "Tengo un código",
+      "rejoindreAide": "Alguien ya ha creado la partida",
+      "minimum": "De 2 a 5 parejas, o sea de 4 a 10 jugadores.",
+      "seulTitre": "¿Esta noche solo estáis vosotros dos?",
+      "seulTexte": "Este juego necesita al menos dos parejas. Para dos, estos tests están hechos para vosotros:"
+    },
+    "creer": {
+      "titre": "Eres el maestro del juego",
+      "texte": "Tú formas las parejas, lanzas las preguntas y destapas las respuestas. Puedes jugar al mismo tiempo, o solo dirigir.",
+      "prenom": "Tu nombre",
+      "joue": "Yo también juego",
+      "joueAide": "Estarás en una pareja",
+      "anime": "Solo dirijo",
+      "animeAide": "No respondes",
+      "bouton": "Crear la partida",
+      "prenomRequis": "Escribe tu nombre para crear la partida."
+    },
+    "rejoindre": {
+      "titre": "Entrar en una partida",
+      "texte": "Escribe el código que te ha dado el maestro del juego, y tu nombre.",
+      "code": "Código de la partida",
+      "prenom": "Tu nombre",
+      "bouton": "Entrar",
+      "codeInvalide": "Un código tiene 6 letras o cifras.",
+      "prenomRequis": "Escribe tu nombre para entrar.",
+      "connexion": "Conectando…",
+      "introuvable": "Nadie espera con este código. Compruébalo con el maestro del juego, o pídele que vuelva a crear la partida.",
+      "complete": "La partida ya está completa: 10 jugadores es el máximo.",
+      "commencee": "Esta partida ya ha empezado, ya no se puede entrar.",
+      "erreurReseau": "No se puede conectar. Revisa tu conexión y vuelve a intentarlo."
+    },
+    "salle": {
+      "titre": "¡Partida creada!",
+      "codeLabel": "Código de la partida",
+      "scan": "Que todos escaneen este código QR, o envíales el código o el enlace. Cada uno entra desde su móvil.",
+      "copier": "Copiar el enlace",
+      "copie": "¡Enlace copiado!",
+      "envoyer": "Enviar el enlace",
+      "joueurs": "Jugadores",
+      "aucun": "Todavía no ha llegado nadie. Dales un momento para escanear…",
+      "vous": "tú",
+      "mj": "maestro del juego",
+      "couplesTitre": "Las parejas",
+      "couplesAide": "Toca dos nombres para formar una pareja, o deja que el juego las forme por orden de llegada.",
+      "auto": "Formar las parejas por orden de llegada",
+      "defaire": "Deshacer",
+      "retirer": "Quitar",
+      "sansCouple": "Todavía sin pareja",
+      "couple": "Pareja {{n}}",
+      "nb": "Número de preguntas",
+      "nbAide": "En la última pregunta podrás alargar la partida.",
+      "commencer": "Empezar la partida",
+      "manque": "Hacen falta al menos 2 parejas formadas para empezar.",
+      "pasAssigne": "{{n}} jugador(es) sin pareja: forma las parejas o quítalos.",
+      "unSeul": "Con una sola pareja el juego no tiene sentido: hace falta al menos otra pareja. Para dos, estos tests están hechos para vosotros:",
+      "attente": "Esperando al maestro del juego…",
+      "attenteTexte": "{{mj}} está formando las parejas y empezará en cuanto estéis todos.",
+      "avec": "Juegas con {{nom}}",
+      "pasEncore": "El maestro del juego todavía no te ha puesto en una pareja.",
+      "arrives": "Ya están aquí:"
+    },
+    "partie": {
+      "question": "Pregunta {{n}}/{{total}}",
+      "accord": "Ronda de acuerdo",
+      "speciale": "Ronda especial",
+      "toi": "Responde por ti. ¡{{nom}} tiene que adivinar tu respuesta!",
+      "devine": "¡Adivina lo que va a responder {{nom}}!",
+      "vote": "Todo el mundo vota por una pareja, la suya incluida.",
+      "enregistre": "¡Respuesta guardada!",
+      "attente": "Esperando a los demás… {{n}}/{{total}} han respondido.",
+      "attenteMj": "El maestro del juego destapa las respuestas cuando todos han respondido.",
+      "mjReponses": "{{n}}/{{total}} han respondido",
+      "mjTous": "¡Todos han respondido!",
+      "reveler": "Destapar las respuestas",
+      "revelerQuandMeme": "Destapar sin esperar",
+      "passer": "Saltar esta pregunta",
+      "spectateur": "Tú diriges: los jugadores responden en su móvil.",
+      "manquent": "Faltan: {{noms}}"
+    },
+    "revele": {
+      "titre": "Las respuestas",
+      "accordOui": "Misma respuesta: ¡+1 punto!",
+      "accordNon": "Fallo, no es la misma respuesta.",
+      "serie": "Racha de {{n}}: ¡+1 punto extra!",
+      "aRepondu": "{{nom}} ha respondido: {{r}}",
+      "pensait": "{{nom}} pensaba: {{r}}",
+      "sansReponse": "sin respuesta",
+      "couplesOk": "Las parejas que han acertado",
+      "aucun": "¡Esta vez no ha acertado ninguna pareja!",
+      "tous": "¡Todas las parejas han acertado!",
+      "votes": "{{n}} votos",
+      "gagnant": "{{couple}} se lleva el título «{{titre}}»: ¡+2 puntos!",
+      "egalite": "Empate: +1 punto para {{couples}}.",
+      "aucunVote": "Nadie ha votado.",
+      "suivant": "Siguiente pregunta",
+      "attenteMj": "Esperando a que el maestro del juego pase a la siguiente…",
+      "scores": "Puntuaciones",
+      "derniereTitre": "¡Era la última pregunta!",
+      "prolonger": "Alargar {{n}} preguntas más",
+      "prolongerAide": "Quedan {{n}} preguntas en reserva.",
+      "terminer": "Ver los resultados",
+      "derniereJoueur": "Última pregunta: el maestro del juego puede alargar la partida o mostrar los resultados.",
+      "vote": "1 voto"
+    },
+    "fin": {
+      "titre": "Los resultados de la noche",
+      "sousTitre": "{{n}} preguntas, {{couples}} parejas y un solo podio.",
+      "podium": "El podio",
+      "gagnant": "¡{{couple}} gana la noche!",
+      "egalite": "¡Empate en cabeza: {{couples}}!",
+      "accords": "{{n}} aciertos de {{total}}",
+      "serieMax": "mejor racha: {{n}}",
+      "titres": "Títulos",
+      "aucunTitre": "Ningún título, pero una gran noche",
+      "rejouer": "Volver a jugar con los mismos jugadores",
+      "nouvelle": "Nueva partida",
+      "attenteRejouer": "El maestro del juego puede lanzar otra partida con los mismos jugadores.",
+      "points": "{{n}} pts",
+      "point": "1 pt"
+    },
+    "bandeau": {
+      "mj": "Eres el maestro del juego · código {{code}}",
+      "joueur": "Partida {{code}} · maestro del juego: {{mj}}",
+      "mjParti": "El maestro del juego se ha desconectado. Esperamos a que vuelva…",
+      "mjRevenu": "¡El maestro del juego ha vuelto!",
+      "coupure": "Conexión perdida. Reintentando…",
+      "quitter": "Salir",
+      "quitterTexte": "¿Salir de la partida? Los demás seguirán sin ti.",
+      "annulerTexte": "¿Cancelar la partida para todos?",
+      "oui": "Sí",
+      "non": "No, seguir",
+      "annulee": "El maestro del juego ha cancelado la partida.",
+      "retire": "El maestro del juego te ha quitado de la partida.",
+      "retour": "Volver al juego",
+      "deconnecte": "desconectado/a"
+    },
+    "partage": {
+      "texte": "¡Únete a nuestra partida del juego de varias parejas de Quiz Couple! Código {{code}}: {{lien}}"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "toi": "Por la mañana, al despertar, tú eres más bien:",
+      "lui": "Por la mañana, al despertar, {{nom}} es más bien:",
+      "options": [
+        "De buen humor desde el minuto uno",
+        "Funcional después del café",
+        "Mejor no acercarse antes de mediodía",
+        "Imposible de sacar de la cama"
+      ]
+    },
+    {
+      "id": 2,
+      "toi": "Tu serie del momento, la ves:",
+      "lui": "Su serie del momento, {{nom}} la ve:",
+      "options": [
+        "Un capítulo por noche, con cabeza",
+        "Tres seguidos como mínimo",
+        "Haciendo otra cosa a la vez",
+        "Sin serie en marcha"
+      ]
+    },
+    {
+      "id": 3,
+      "toi": "En el restaurante, pides:",
+      "lui": "En el restaurante, {{nom}} pide:",
+      "options": [
+        "Siempre el mismo plato",
+        "Lo más raro de la carta",
+        "Después de preguntar a toda la mesa",
+        "Un plato, y el tenedor en el plato del otro"
+      ]
+    },
+    {
+      "id": 4,
+      "toi": "Tus vacaciones soñadas:",
+      "lui": "Las vacaciones soñadas de {{nom}}:",
+      "options": [
+        "Una playa y nada más",
+        "Una gran ciudad para visitar",
+        "Montaña y rutas",
+        "Un viaje en coche sin plan"
+      ]
+    },
+    {
+      "id": 5,
+      "toi": "Cuando te sobran 50 €, se van:",
+      "lui": "Cuando a {{nom}} le sobran 50 €, se van:",
+      "options": [
+        "A un restaurante",
+        "A ropa",
+        "A la cuenta de ahorro",
+        "Nunca se sabe adónde"
+      ]
+    },
+    {
+      "id": 6,
+      "toi": "Tu tipo de película favorito:",
+      "lui": "El tipo de película favorito de {{nom}}:",
+      "options": [
+        "Una comedia",
+        "Una de acción",
+        "Una historia de amor",
+        "Una de miedo"
+      ]
+    },
+    {
+      "id": 7,
+      "toi": "En una fiesta, tú estás:",
+      "lui": "En una fiesta, {{nom}} está:",
+      "options": [
+        "En medio de la pista",
+        "En la cocina, charlando",
+        "En el sofá con el gato",
+        "De vuelta a casa antes de medianoche"
+      ]
+    },
+    {
+      "id": 8,
+      "toi": "En el coche, cantas:",
+      "lui": "En el coche, {{nom}} canta:",
+      "options": [
+        "Un éxito de los 2000",
+        "Rap",
+        "Una canción de Disney",
+        "Nada, el silencio está bien"
+      ]
+    },
+    {
+      "id": 9,
+      "toi": "La limpieza, para ti, es:",
+      "lui": "La limpieza, para {{nom}}, es:",
+      "options": [
+        "Un poco cada día",
+        "Un repaso a fondo el fin de semana",
+        "Cuando ya no se ve el suelo",
+        "Cosa del otro"
+      ]
+    },
+    {
+      "id": 10,
+      "toi": "Ante una araña, tu reacción:",
+      "lui": "Ante una araña, la reacción de {{nom}}:",
+      "options": [
+        "Un vaso y una hoja, y fuera",
+        "Aplastada sin pensarlo",
+        "Un grito, ¡y socorro!",
+        "Cambiar de habitación para siempre"
+      ]
+    },
+    {
+      "id": 11,
+      "toi": "Tu desayuno ideal:",
+      "lui": "El desayuno ideal de {{nom}}:",
+      "options": [
+        "Dulce: bollería y mermelada",
+        "Salado: huevos y beicon",
+        "Solo un café",
+        "Un brunch que dura hasta las dos"
+      ]
+    },
+    {
+      "id": 12,
+      "toi": "Cuando llegas tarde:",
+      "lui": "Cuando {{nom}} llega tarde:",
+      "options": [
+        "Un mensaje al momento",
+        "«Llego en 5 minutos»",
+        "Nada, ya se verá",
+        "Nunca llega tarde"
+      ]
+    },
+    {
+      "id": 13,
+      "toi": "Tu mascota ideal:",
+      "lui": "La mascota ideal de {{nom}}:",
+      "options": [
+        "Un perro",
+        "Un gato",
+        "Un pez de colores",
+        "Ninguna, gracias"
+      ]
+    },
+    {
+      "id": 14,
+      "toi": "En el cine, tus palomitas son:",
+      "lui": "En el cine, las palomitas de {{nom}} son:",
+      "options": [
+        "Dulces",
+        "Saladas",
+        "Acabadas antes de que empiece la película",
+        "Cambiadas por M&M's"
+      ]
+    },
+    {
+      "id": 15,
+      "toi": "Tu peor manía en el coche:",
+      "lui": "La peor manía de {{nom}} en el coche:",
+      "options": [
+        "Protestar contra los demás conductores",
+        "Poner la música a tope",
+        "Dar consejos al que conduce",
+        "Dormirse a los cinco minutos"
+      ]
+    },
+    {
+      "id": 16,
+      "toi": "Tu domingo perfecto:",
+      "lui": "El domingo perfecto de {{nom}}:",
+      "options": [
+        "Dormir hasta tarde y pijama",
+        "Una salida con familia o amigos",
+        "Deporte",
+        "Limpieza a fondo y la compra"
+      ]
+    },
+    {
+      "id": 17,
+      "toi": "Tu red social favorita:",
+      "lui": "La red social favorita de {{nom}}:",
+      "options": [
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Ninguna, el móvil se queda en el bolsillo"
+      ]
+    },
+    {
+      "id": 18,
+      "toi": "Cuando te dan una sorpresa:",
+      "lui": "Cuando le dan una sorpresa a {{nom}}:",
+      "options": [
+        "Lágrimas de alegría",
+        "Un grito enorme",
+        "Una sonrisa incómoda",
+        "La sorpresa ya estaba descubierta"
+      ]
+    },
+    {
+      "id": 19,
+      "toi": "En la cocina, eres:",
+      "lui": "En la cocina, {{nom}} es:",
+      "options": [
+        "Un chef de verdad",
+        "Correcto, sin más",
+        "Siempre el mismo plato",
+        "Más de pedir comida"
+      ]
+    },
+    {
+      "id": 20,
+      "toi": "Tu superpoder, si pudieras elegir:",
+      "lui": "El superpoder que elegiría {{nom}}:",
+      "options": [
+        "Volar",
+        "Leer la mente",
+        "Ser invisible",
+        "Parar el tiempo"
+      ]
+    },
+    {
+      "id": 21,
+      "toi": "Tu bebida en el bar:",
+      "lui": "La bebida de {{nom}} en el bar:",
+      "options": [
+        "Una cerveza",
+        "Un cóctel",
+        "Una copa de vino",
+        "Un refresco o un zumo"
+      ]
+    },
+    {
+      "id": 22,
+      "toi": "Pierdes las llaves:",
+      "lui": "{{nom}} pierde las llaves:",
+      "options": [
+        "Nunca",
+        "Una vez al mes",
+        "Una vez a la semana",
+        "Ahora mismo, ¿dónde están?"
+      ]
+    },
+    {
+      "id": 23,
+      "toi": "El deporte y tú:",
+      "lui": "El deporte y {{nom}}:",
+      "options": [
+        "Apuntado/a y constante",
+        "Apuntado/a y nunca va",
+        "Un paseo de vez en cuando",
+        "Alergia total"
+      ]
+    },
+    {
+      "id": 24,
+      "toi": "El regalo que te encantaría recibir:",
+      "lui": "El regalo que le encantaría a {{nom}}:",
+      "options": [
+        "Un fin de semana sorpresa",
+        "Un aparato tecnológico",
+        "Un buen restaurante",
+        "Algo hecho a mano"
+      ]
+    },
+    {
+      "id": 25,
+      "toi": "Tus ex, hoy:",
+      "lui": "Los ex de {{nom}}, hoy:",
+      "options": [
+        "Ni una noticia, nunca",
+        "Un hola de vez en cuando",
+        "Todavía amigos",
+        "Bloqueados en todas partes"
+      ]
+    },
+    {
+      "id": 26,
+      "toi": "En el karaoke, tú eres:",
+      "lui": "En el karaoke, {{nom}} es:",
+      "options": [
+        "El primero/a al micro",
+        "Al micro solo después de dos copas",
+        "Entre el público, a tope",
+        "Imposible de encontrar"
+      ]
+    },
+    {
+      "id": 27,
+      "toi": "En la playa, estás:",
+      "lui": "En la playa, {{nom}} está:",
+      "options": [
+        "Al agua directamente",
+        "En la toalla, tomando el sol",
+        "Bajo la sombrilla con un libro",
+        "En el chiringuito"
+      ]
+    },
+    {
+      "id": 28,
+      "toi": "Tu plato de consuelo:",
+      "lui": "El plato de consuelo de {{nom}}:",
+      "options": [
+        "Pasta",
+        "Pizza",
+        "Un plato de la abuela",
+        "Chocolate, y punto"
+      ]
+    },
+    {
+      "id": 29,
+      "toi": "Para levantarte por la mañana necesitas:",
+      "lui": "Para levantarse por la mañana, {{nom}} necesita:",
+      "options": [
+        "Una alarma, solo una",
+        "Tres alarmas como mínimo",
+        "Alguien que le sacuda",
+        "Nada, en pie antes de la alarma"
+      ]
+    },
+    {
+      "id": 30,
+      "toi": "Tu ropa favorita:",
+      "lui": "La ropa favorita de {{nom}}:",
+      "options": [
+        "Chándal y sudadera",
+        "Vaqueros y camiseta",
+        "Siempre bien vestido/a",
+        "El mismo jersey desde hace diez años"
+      ]
+    },
+    {
+      "id": 31,
+      "toi": "Cuando estás enfermo/a:",
+      "lui": "Cuando {{nom}} está enfermo/a:",
+      "options": [
+        "Al borde de la muerte, según cuenta",
+        "Al trabajo de todas formas",
+        "En la cama con una infusión",
+        "Nunca se pone enfermo/a, sospechoso"
+      ]
+    },
+    {
+      "id": 32,
+      "toi": "Ante un plato malo en el restaurante, tu reacción:",
+      "lui": "Ante un plato malo en el restaurante, la reacción de {{nom}}:",
+      "options": [
+        "Devuelto a la cocina, directo",
+        "Una reseña en Google esa misma noche",
+        "Nada, pero nunca más aquí",
+        "Comido entero de todas formas"
+      ]
+    },
+    {
+      "id": 33,
+      "toi": "Tu lado de la cama:",
+      "lui": "El lado de la cama de {{nom}}:",
+      "options": [
+        "Izquierda",
+        "Derecha",
+        "El medio, en estrella",
+        "Cambia cada noche"
+      ]
+    },
+    {
+      "id": 34,
+      "toi": "Un juego de mesa, y tú eres:",
+      "lui": "Un juego de mesa, y {{nom}} es:",
+      "options": [
+        "Ultracompetitivo/a",
+        "Para reírse",
+        "El que lee las reglas",
+        "Mal perdedor/a"
+      ]
+    },
+    {
+      "id": 35,
+      "toi": "Tu foto de perfil:",
+      "lui": "La foto de perfil de {{nom}}:",
+      "options": [
+        "Un selfi",
+        "Una foto de viaje",
+        "Una foto de los dos",
+        "Un animal o un dibujo"
+      ]
+    },
+    {
+      "id": 36,
+      "toi": "Tu tema de conversación inagotable:",
+      "lui": "El tema de conversación inagotable de {{nom}}:",
+      "options": [
+        "El trabajo",
+        "El deporte",
+        "Los cotilleos",
+        "La comida"
+      ]
+    }
+  ],
+  "speciales": [
+    {
+      "id": 101,
+      "q": "¿Qué pareja es la más fiestera?",
+      "titre": "La pareja más fiestera"
+    },
+    {
+      "id": 102,
+      "q": "¿Qué pareja se besa más en público?",
+      "titre": "La pareja más cariñosa"
+    },
+    {
+      "id": 103,
+      "q": "¿Qué pareja se pelea por el mando?",
+      "titre": "La pareja del mando a distancia"
+    },
+    {
+      "id": 104,
+      "q": "¿Qué pareja llega siempre tarde?",
+      "titre": "La pareja que siempre llega tarde"
+    },
+    {
+      "id": 105,
+      "q": "¿Qué pareja seguirá junta dentro de cincuenta años?",
+      "titre": "La pareja para toda la vida"
+    },
+    {
+      "id": 106,
+      "q": "¿Qué pareja tiene las mejores historias de vacaciones?",
+      "titre": "La pareja de las vacaciones"
+    },
+    {
+      "id": 107,
+      "q": "¿Qué pareja cocina mejor?",
+      "titre": "La pareja de los fogones"
+    },
+    {
+      "id": 108,
+      "q": "¿Qué pareja se parece más?",
+      "titre": "Los gemelos"
+    },
+    {
+      "id": 109,
+      "q": "¿Qué pareja se perdería primero en un viaje en coche?",
+      "titre": "La pareja del GPS"
+    },
+    {
+      "id": 110,
+      "q": "¿Qué pareja sube más fotos juntos?",
+      "titre": "La pareja de Instagram"
+    },
+    {
+      "id": 111,
+      "q": "¿Qué pareja tuvo el encuentro más romántico?",
+      "titre": "La pareja del flechazo"
+    },
+    {
+      "id": 112,
+      "q": "¿Qué pareja se acabaría un bufé ella sola?",
+      "titre": "La pareja golosa"
+    },
+    {
+      "id": 113,
+      "q": "¿Qué pareja ganaría Supervivientes en equipo?",
+      "titre": "La pareja aventurera"
+    },
+    {
+      "id": 114,
+      "q": "¿Qué pareja se duerme primero viendo una película?",
+      "titre": "La pareja marmota"
+    }
+  ],
+  "section1": {
+    "title": "Un juego de fiesta para parejas, para jugar con varias parejas",
+    "p1": "El juego de fiesta para parejas es un juego para cuando se juntan varias parejas: una cena con amigos, un fin de semana en grupo, una noche de vacaciones. Se juega de dos a cinco parejas, o sea de cuatro a diez personas, y cada uno juega desde su propio móvil. No hay nada que instalar: una persona abre esta página, crea la partida, y los demás entran escaneando un código QR o escribiendo un código.",
+    "p2": "La idea es saber qué pareja se conoce mejor. En cada pregunta, en cada pareja, uno responde por sí mismo y el otro tiene que adivinar su respuesta. Por ejemplo: «Por la mañana, al despertar, tú eres más bien: de buen humor desde el minuto uno, funcional después del café, mejor no acercarse antes de mediodía, o imposible de sacar de la cama». Si las dos respuestas coinciden, la pareja suma un punto. Y como todas las parejas juegan a la vez, se ve enseguida quién ha acertado y quién ha fallado… ¡y eso siempre da conversación!",
+    "p3": "Entre pregunta y pregunta hay rondas especiales en las que todo el mundo vota por una pareja: «¿Qué pareja es la más fiestera?», «¿Qué pareja llega siempre tarde?». La pareja con más votos gana dos puntos y un título, que conserva hasta el podio final. Viene a ser la versión con varias parejas de <a href=\"{{quizMost}}\">esas preguntas en las que señaláis cuál de los dos es el más cabezota o el más hablador</a>, solo que aquí son las demás parejas las que os juzgan."
+  },
+  "section2": {
+    "title": "Cómo funciona",
+    "intro": "Así va una partida, del primer escaneo al podio:",
+    "etapes": [
+      {
+        "titre": "Una persona crea la partida",
+        "texte": "Se convierte en el maestro del juego. Puede jugar al mismo tiempo, o solo dirigir si sois un número impar. La página le da un código de seis letras, un código QR y un enlace."
+      },
+      {
+        "titre": "Los demás entran",
+        "texte": "Cada uno escanea el código QR o escribe el código en su móvil, pone su nombre y llega a la sala de espera. Hasta diez jugadores en total."
+      },
+      {
+        "titre": "El maestro del juego forma las parejas",
+        "texte": "Toca dos nombres para juntarlos, o deja que el juego forme las parejas por orden de llegada. También elige el número de preguntas: 10, 20, 30 o 40."
+      },
+      {
+        "titre": "Se juega, y se alarga si se quiere",
+        "texte": "En cada pregunta, todos responden en su móvil, y luego el maestro del juego destapa las respuestas. En la última pregunta puede alargar la partida diez preguntas mientras queden en reserva."
+      }
+    ],
+    "apres": "Al final, cada móvil muestra el podio: los puntos, los aciertos de cada pareja, la mejor racha y los títulos ganados en las rondas especiales. Los resultados se quedan en pantalla, para enseñárselos a toda la mesa."
+  },
+  "section3": {
+    "title": "Dos tipos de rondas",
+    "accordTitre": "Las rondas de acuerdo: ¿os conocéis de verdad?",
+    "accordTexte": "Es el corazón del juego. En cada pareja, uno responde por sí mismo y el otro tiene que adivinar qué ha elegido. Los papeles se intercambian en cada pregunta, así que cada uno adivina por turnos. Un punto por acierto, y un punto extra cuando una pareja encadena tres aciertos seguidos. Las preguntas hablan del día a día, no de grandes temas: el desayuno, el lado de la cama, las llaves perdidas, la reacción ante una araña… O sea, lo que se supone que sabes de la persona con la que vives, ¡y que no siempre sabes!",
+    "specialeTitre": "Las rondas especiales: el voto de las demás parejas",
+    "specialeTexte": "Una de cada cuatro preguntas es una ronda especial. Todo el mundo vota por una pareja, la suya incluida, y la pareja con más votos gana dos puntos y un título. Algunos ejemplos:",
+    "exemples": [
+      "¿Qué pareja es la más fiestera?",
+      "¿Qué pareja se besa más en público?",
+      "¿Qué pareja seguirá junta dentro de cincuenta años?",
+      "¿Qué pareja se perdería primero en un viaje en coche?",
+      "¿Qué pareja se duerme primero viendo una película?"
+    ],
+    "apres": "En caso de empate, las parejas empatadas se reparten un punto y nadie se lleva el título. Los títulos aparecen en el podio final, y por experiencia, es de lo que se sigue hablando al día siguiente."
+  },
+  "seul": {
+    "title": "¿Esta noche solo estáis vosotros dos?",
+    "texte": "Entonces este juego no os va a servir: necesita al menos dos parejas, si no nadie vota y nadie compara. Para dos, lo mejor es <a href=\"{{testCouple}}\">responder por turnos a las mismas preguntas</a> para ver si decís lo mismo, <a href=\"{{testCommonPoints}}\">contar todo lo que tenéis en común</a>, o <a href=\"{{jeuQuiDeNous}}\">señalar cuál de los dos hace qué</a>. Y si solo queréis reíros un rato en el sofá, <a href=\"{{jeuxCouple}}\">los demás juegos</a> se juegan todos en un solo móvil."
+  },
+  "section4": {
+    "title": "Nuestros consejos para que la noche funcione",
+    "p1": "Sacad el juego después de cenar, no antes: las rondas especiales funcionan mejor cuando todos están relajados y las historias de vacaciones ya han salido. Contad unos veinte minutos para 20 preguntas con tres parejas, algo más con cinco, porque siempre se espera al que ha ido a por una botella.",
+    "p2": "El maestro del juego no tiene por qué esperar a todos. Si falta una respuesta, puede destapar sin esperar, y el jugador que llega tarde cuenta como fallo. También puede saltar una pregunta que no le diga nada a nadie. Y si alguien pierde la conexión, recarga la página y recupera su sitio en la partida.",
+    "p3": "Último consejo: con dos parejas también funciona muy bien, pero las rondas especiales acaban muchas veces en empate. Con tres parejas o más siempre hay un voto que decide, y ahí es cuando los títulos se vuelven divertidos."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuántos jugadores hacen falta?",
+    "a1": "Al menos dos parejas, o sea cuatro jugadores, y como mucho cinco parejas, o sea diez jugadores. Si sois un número impar, una persona crea la partida y solo dirige: no responde, pero es quien lanza las preguntas y destapa las respuestas.",
+    "q2": "¿Hay que instalar algo o crear una cuenta?",
+    "a2": "No. Todo pasa en el navegador del móvil. El maestro del juego abre esta página y crea la partida, los demás escanean el código QR o escriben el código. No hay que crear ninguna cuenta.",
+    "q3": "¿Funciona si no estamos en la misma habitación?",
+    "a3": "Sí, el juego va por internet y no por Bluetooth: cada uno puede jugar desde su casa a la vez, en videollamada por ejemplo. Pero donde más gracia tiene es alrededor de una mesa, porque se ve la cara de los que han fallado.",
+    "q4": "¿Cómo se forman las parejas?",
+    "a4": "Las forma el maestro del juego, tocando dos nombres en la sala de espera. También puede dejar que el juego las forme por orden de llegada. Un jugador sin pareja no puede jugar: el maestro del juego tiene que emparejarlo o quitarlo antes de empezar.",
+    "q5": "¿Se puede alargar la partida?",
+    "a5": "Sí. El maestro del juego elige el número de preguntas al principio, 10, 20, 30 o 40, y en la última pregunta la página le propone alargar diez preguntas más, mientras queden en reserva. Una partida se para como mucho en 40 preguntas.",
+    "q6": "¿Por qué hace falta un correo electrónico para ver los resultados?",
+    "a6": "El podio está detrás de una pequeña puerta: cada uno deja su correo en su móvil, una sola vez, y todos los resultados del sitio se desbloquean en ese dispositivo. Lo usamos para enviar las novedades y los consejos de Quiz Couple, y uno se da de baja con un clic."
+  }
+}
