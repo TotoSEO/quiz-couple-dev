@@ -194,7 +194,17 @@
     }
     $('rsx-pause').checked = donnees.reglages && donnees.reglages.pause === true;
     var pastille = document.querySelector('[data-notif="reseaux"]');
-    var echecs = (donnees.posts || []).some(function (p) { return (p.variantes || []).some(function (v) { return v.statut === 'echec'; }); });
+    // la pastille ne s'allume que pour un échec qui demande une main : un post
+    // encore valide, d'aujourd'hui ou à venir, que ni la grille (créneau
+    // fermé) ni le retrait d'une catégorie n'a retenu exprès. Les anciens
+    // posts des mipaps retenus sur les créneaux fermés le 26 octobre 2026
+    // l'auraient laissée allumée en permanence.
+    var aujourdhui = donnees.aujourdhui || jourIso(new Date());
+    var echecs = (donnees.posts || []).some(function (p) {
+      return p.statut === 'valide' && p.jour >= aujourdhui && (p.variantes || []).some(function (v) {
+        return v.statut === 'echec' && !/^(créneau fermé par la grille|catégorie retirée de la grille)/.test(v.erreur || '');
+      });
+    });
     if (pastille) pastille.classList.toggle('hidden', !echecs && (donnees.reserve || 0) >= 7);
     // les clics vers Instagram viennent du site : seul Quiz Couple en a
     $('rsx-clics-tuile').classList.toggle('hidden', langue !== 'en');
