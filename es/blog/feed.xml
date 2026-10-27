@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>60 preguntas sobre el futuro para hacerse en pareja antes de las grandes decisiones</title>
+      <link>https://quiz-couple.com/es/blog/preguntas-sobre-el-futuro-pareja/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/preguntas-sobre-el-futuro-pareja/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:00 GMT</pubDate>
+      <category>Vida en pareja</category>
+      <description>Vivir juntos, casarse, un hijo... Rara vez se falla por falta de amor, pero a menudo por no haberlo hablado. Las 60 preguntas sobre el futuro que hacerse antes.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-avenir-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Hombre tóxico en el amor: los 6 perfiles que dañan (y cómo reconocerlos)</title>
       <link>https://quiz-couple.com/es/blog/hombre-toxico-en-el-amor/</link>
@@ -272,15 +281,6 @@
       <category>Vida en pareja</category>
       <description>Es perfecto, demasiado rápido, demasiado intenso. ¿Amor sincero o love bombing? Las 3 fases del ciclo, las señales concretas y la prueba del límite.</description>
       <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>10 actividades para hacer en pareja este verano</title>
-      <link>https://quiz-couple.com/es/blog/actividades-en-pareja-verano/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/actividades-en-pareja-verano/</guid>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Diez actividades en pareja en verano que rompen con las salidas de siempre: mercado sin lista, baño en el río, noche al aire libre, fotos analógicas...</description>
-      <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

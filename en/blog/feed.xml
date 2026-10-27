@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>60 questions about the future to ask before the big decisions</title>
+      <link>https://quiz-couple.com/en/blog/future-questions-for-couples/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/future-questions-for-couples/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:00 GMT</pubDate>
+      <category>Relationship</category>
+      <description>Moving in, marriage, a child... Couples rarely stall for lack of love, but often for lack of having talked about it. The 60 future questions to ask beforehand.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-avenir-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Toxic man in love: the 6 profiles that damage (and how to recognise them)</title>
       <link>https://quiz-couple.com/en/blog/toxic-man-in-love/</link>
@@ -272,15 +281,6 @@
       <category>Relationship</category>
       <description>He&#39;s perfect, too fast, too much. Genuine love or love bombing? The 3 phases of the cycle, the concrete signs, and the boundary test that settles it.</description>
       <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>10 Summer Activities to Do as a Couple</title>
-      <link>https://quiz-couple.com/en/blog/summer-couple-activities/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/summer-couple-activities/</guid>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>Ten summer couple activities that break from the usual outings: a market with no list, river swimming, a night outside, film photos... simple and cheap.</description>
-      <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

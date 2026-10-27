@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>60 domande sul futuro da farsi in coppia prima delle grandi decisioni</title>
+      <link>https://quiz-couple.com/it/blog/domande-sul-futuro-di-coppia/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/domande-sul-futuro-di-coppia/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:00 GMT</pubDate>
+      <category>Vita di coppia</category>
+      <description>Andare a vivere insieme, sposarsi, un figlio... Raramente si fallisce per mancanza d&#39;amore, spesso per non averne parlato. Le 60 domande sul futuro da farsi prima.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-avenir-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Uomo tossico in amore: i 6 profili che fanno male (e come riconoscerli)</title>
       <link>https://quiz-couple.com/it/blog/uomo-tossico-in-amore/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>È perfetto, troppo in fretta, troppo intenso. Amore sincero o love bombing? Le 3 fasi del ciclo, i segnali concreti e il test del limite.</description>
       <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>10 attività da fare in coppia quest&#39;estate</title>
-      <link>https://quiz-couple.com/it/blog/attivita-di-coppia-in-estate/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/attivita-di-coppia-in-estate/</guid>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Dieci attività di coppia in estate che cambiano dalle uscite di sempre: mercato senza lista, bagno nel fiume, notte all&#39;aperto, foto analogiche...</description>
-      <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

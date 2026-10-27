@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/de/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.</description>
     <language>de</language>
-    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/de/blog/</link>
     </image>
+    <item>
+      <title>60 Zukunftsfragen für Paare vor den großen Entscheidungen</title>
+      <link>https://quiz-couple.com/de/blog/zukunftsfragen-fuer-paare/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/de/blog/zukunftsfragen-fuer-paare/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:00 GMT</pubDate>
+      <category>Beziehung</category>
+      <description>Zusammenziehen, heiraten, ein Kind... Paare scheitern selten an fehlender Liebe, aber oft daran, nie darüber gesprochen zu haben. Die 60 Zukunftsfragen vorher.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-avenir-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Toxischer Mann in der Liebe: die 6 Profile, die schaden (und wie man sie erkennt)</title>
       <link>https://quiz-couple.com/de/blog/toxischer-mann-in-der-liebe/</link>
@@ -272,15 +281,6 @@
       <category>Beziehung</category>
       <description>Er ist perfekt, zu schnell, zu viel. Echte Liebe oder Love Bombing? Die 3 Phasen des Zyklus, die konkreten Anzeichen und der Grenzen-Test.</description>
       <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>10 Aktivitäten für Paare in diesem Sommer</title>
-      <link>https://quiz-couple.com/de/blog/paar-aktivitaeten-im-sommer/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/de/blog/paar-aktivitaeten-im-sommer/</guid>
-      <pubDate>Wed, 29 Jul 2026 06:00:00 GMT</pubDate>
-      <category>Beziehung</category>
-      <description>Zehn Sommer-Aktivitäten für Paare, die mit den üblichen Ausflügen brechen: Markt ohne Liste, Baden im Fluss, Nacht draußen, analoge Fotos...</description>
-      <media:content url="https://quiz-couple.com/blog/activites-couple-ete.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

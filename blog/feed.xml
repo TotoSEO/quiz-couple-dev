@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 24 Oct 2026 11:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>60 questions d&#39;avenir à se poser en couple avant les grandes décisions</title>
+      <link>https://quiz-couple.com/blog/questions-avenir-couple/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/questions-avenir-couple/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:30:00 GMT</pubDate>
+      <category>Vie de couple</category>
+      <description>Emménager, se marier, un enfant... On saute rarement le pas faute d&#39;amour, mais souvent faute d&#39;en avoir parlé. Les 60 questions d&#39;avenir à se poser avant.</description>
+      <media:content url="https://quiz-couple.com/blog/questions-avenir-couple.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Homme toxique en amour : les 6 profils qui abîment (et comment les reconnaître)</title>
       <link>https://quiz-couple.com/blog/homme-toxique-en-amour/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>Onze signaux qui disent d&#39;arrêter, sept qui disent de continuer, et la question qui départage. Sans vous dire quoi faire à votre place.</description>
       <media:content url="https://quiz-couple.com/blog/arreter-ou-continuer-relation.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Cadeau de mariage : combien donner, et comment s&#39;y prendre</title>
-      <link>https://quiz-couple.com/blog/cadeau-mariage-combien-donner/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/cadeau-mariage-combien-donner/</guid>
-      <pubDate>Sun, 09 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Combien donner pour un mariage en 2026 ? Le barème selon votre lien avec les mariés, les cas particuliers, et comment participer sans se prendre la tête.</description>
-      <media:content url="https://quiz-couple.com/blog/cadeau-mariage.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
