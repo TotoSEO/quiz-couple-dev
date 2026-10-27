@@ -66,10 +66,16 @@ const HEURE_ROUTINE = 5 * 60 + 44;
 const MARGE_MIN = 180;
 const ajouterJours = (jour: string, n: number) => { const d = new Date(`${jour}T12:00:00Z`); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const jourDeSemaine = (jour: string) => ((new Date(`${jour}T12:00:00Z`).getUTCDay() + 6) % 7) + 1;
-const categorieAttendue = (melange: any, jour: string, creneau: string): string | null => {
-  const r = melange?.[creneau];
-  if (!r) return null;
-  return typeof r === 'string' ? r : r[String(jourDeSemaine(jour))] ?? null;
+// comme reseaux/automates/lib/calendrier.mjs : null quand la grille ferme le
+// créneau (huit reels par semaine depuis le 26 octobre 2026), undefined quand
+// elle ne dit rien
+const categorieAttendue = (melange: any, jour: string, creneau: string): string | null | undefined => {
+  if (!melange || typeof melange !== 'object' || !(creneau in melange)) return undefined;
+  const r = melange[creneau];
+  if (r === null) return null;
+  if (typeof r === 'string') return r;
+  if (!r || typeof r !== 'object') return undefined;
+  return r[String(jourDeSemaine(jour))];
 };
 const jourLocal = (fuseau: string, d: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: fuseau, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 const minutesLocales = (fuseau: string, d: Date) => {
@@ -225,14 +231,18 @@ serve(async (req) => {
         ouvert: (creneau, i) => i > 0 || debutCreneau(creneau) >= HEURE_ROUTINE + MARGE_MIN,
       });
 
-      // jours d'avance : jours consécutifs à partir d'aujourd'hui dont les trois créneaux sont validés
+      // jours d'avance : jours consécutifs à partir d'aujourd'hui dont chaque
+      // créneau que la grille ouvre a un post validé, comme `reserve` de
+      // reseaux/automates/entretien.mjs. Jusqu'au 27 octobre 2026 il fallait
+      // trois posts par jour : avec huit reels par semaine, l'admin aurait
+      // affiché zéro jour et sa pastille d'alerte pour une réserve de 156.
       const aujourdhui = jourLocal(fuseau, maintenant);
       const valides = await db.from('social_posts').select('jour,creneau').eq('langue', langue).eq('statut', 'valide').gte('jour', aujourdhui);
+      const pris = new Set((valides.data || []).map((p: any) => `${p.jour}|${p.creneau}`));
       let reserve = 0;
-      for (let i = 0; i < 120; i++) {
+      for (let i = 0; i < 180; i++) {
         const j = ajouterJours(aujourdhui, i);
-        const n = (valides.data || []).filter((p) => p.jour === j).length;
-        if (n >= 3) reserve++;
+        if (CRENEAUX.every((c) => categorieAttendue(melange, j, c) === null || pris.has(`${j}|${c}`))) reserve++;
         else break;
       }
 

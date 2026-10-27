@@ -229,9 +229,9 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
   return bilan;
 }
 
-// La story du matin : le reel publié le matin repart tel quel en story (24 h),
-// deuxième surface sans rien écrire de plus. Un reel de plus de 60 s ne peut
-// pas devenir une story ; les autres créneaux n'en ont pas.
+// La story du jour : le premier reel de la journée repart tel quel en story
+// (24 h), deuxième surface sans rien écrire de plus. Un reel de plus de 60 s
+// ne peut pas devenir une story ; les autres reels du jour n'en ont pas.
 // Le créneau du reel qui devient la story du jour : le premier que la grille
 // du compte ouvre ; sans grille posée, le matin.
 export function creneauStory(compte, melangeGlobal, jour) {
@@ -276,11 +276,11 @@ export async function publierStories(base, { maintenant = new Date(), instagramP
         const media = await ig.publier(v.story_conteneur_id);
         await base.update('social_variantes', `id=eq.${v.id}`, { story_statut: 'publie', story_media_id: media.id, story_publie_le: maintenant.toISOString() });
         bilan.publiees++;
-        await base.journal('info', 'publication', `story du matin publiée (${v.langue})`, { media: media.id }, v.id);
+        await base.journal('info', 'publication', `story publiée (${v.langue})`, { media: media.id }, v.id);
       }
     } catch (e) {
       await base.update('social_variantes', `id=eq.${v.id}`, { story_statut: 'echec' });
-      await base.journal('alerte', 'publication', `story du matin non publiée : ${e.message}`, null, v.id);
+      await base.journal('alerte', 'publication', `story non publiée : ${e.message}`, null, v.id);
       bilan.echecs++;
     }
   }
@@ -290,8 +290,8 @@ export async function publierStories(base, { maintenant = new Date(), instagramP
 // La Page Facebook : ce qui vient d'être publié sur Instagram part aussi sur
 // la Page reliée, avec le même jeton de Page (il lui faut pages_manage_posts
 // et publish_video). Reel en reel Facebook, image en photo, carrousel en
-// publication à plusieurs photos, et le reel du matin aussi en story de la
-// Page. Jamais au détriment d'Instagram : la publication Instagram est déjà
+// publication à plusieurs photos, et le reel qui fait la story du jour aussi
+// en story de la Page. Jamais au détriment d'Instagram : la publication Instagram est déjà
 // faite quand on arrive ici, et un échec Facebook ne la touche pas. Trois
 // essais, un par passage, puis « echec » et une erreur au journal.
 const FB_ESSAIS_MAX = 3;
@@ -300,7 +300,7 @@ export async function publierFacebook(base, { maintenant = new Date(), facebookP
   const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
   const lignes = await base.select(
     'social_variantes',
-    `select=id,post_id,langue,fichiers,legende,hashtags,fb_statut,fb_essais,publie_le&fb_statut=eq.a_faire&publie_le=gte.${depuis}`,
+    `select=id,post_id,langue,fichiers,legende,hashtags,fb_statut,fb_essais,story_statut,publie_le&fb_statut=eq.a_faire&publie_le=gte.${depuis}`,
   );
   if (!lignes.length) return bilan;
   const comptes = await base.select('social_comptes', 'select=id,langue,actif,facebook,page_id');
@@ -327,9 +327,12 @@ export async function publierFacebook(base, { maintenant = new Date(), facebookP
       await base.update('social_variantes', `id=eq.${v.id}`, { fb_statut: 'publie', fb_id: r.id, fb_lien: r.lien, fb_erreur: null, fb_publie_le: maintenant.toISOString() });
       bilan.publies++;
       await base.journal('info', 'publication', `${ou} publié sur la Page Facebook`, { lien: r.lien }, v.id);
-      // le reel du matin repart aussi en story de la Page ; un échec ici ne
-      // remet pas le reel en jeu, il est déjà publié
-      if (post.format === 'reel' && post.creneau === 'matin' && Number(v.fichiers?.duree) <= 60) {
+      // le reel qui fait la story du jour sur Instagram (story_statut posé à
+      // la publication, d'après la grille) repart aussi en story de la Page ;
+      // un échec ici ne remet pas le reel en jeu, il est déjà publié. Du 26
+      // au 27 octobre 2026, la Page ne prenait encore que le reel du matin,
+      // et Quiz Couple, qui n'a plus de matin, n'avait plus de story Facebook.
+      if (post.format === 'reel' && v.story_statut && Number(v.fichiers?.duree) <= 60) {
         try {
           const st = await fb.story({ videoUrl: await base.signer(v.fichiers.reel) });
           await base.update('social_variantes', `id=eq.${v.id}`, { fb_story_id: st.id });

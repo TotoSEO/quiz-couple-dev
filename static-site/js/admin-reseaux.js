@@ -35,17 +35,17 @@
     pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel', bd: 'BD', 'dix-mais': "He's a 10 but...", baton: 'Bonhomme bâton',
     'mipaps-anime': 'Reel animé', 'mipaps-statique': 'Reel statique', 'mipaps-histoire': 'Carrousel-histoire', 'mipaps-post': 'Post'
   };
-  // les catégories qu'une idée peut viser, par compte, avec le créneau de la grille
+  // les catégories qu'une idée peut viser, par compte, avec le créneau de la
+  // grille : huit reels par semaine sur chaque compte depuis le 26 octobre
+  // 2026 (les animations des mascottes sont parties le 16 octobre au soir, les
+  // formats image et les carrousels le 26 octobre)
   var CATEGORIES_IDEE = {
-    // les animations des mascottes (pov, statique, coquin) ne sont plus
-    // proposées : retirées de la grille le 16 octobre 2026 au soir
     en: [
-      ['tu-preferes', 'Tu préfères, une édition de dilemmes (midi du mardi, du jeudi, du samedi et du dimanche ; soir du lundi, du mercredi et du vendredi)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi du lundi, du mercredi et du vendredi)'],
-      ['bd', 'BD en quatre cases (mardi soir)'], ['carrousel', 'Carrousel de questions (jeudi soir)'], ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['phrase', 'Phrase tendre (dimanche soir)'],
-      ['baton', 'Bonhomme bâton, « me in my dreams with u » (tous les matins)']
+      ['tu-preferes', 'Tu préfères, une édition de dilemmes (soir du lundi, du mercredi, du jeudi et du dimanche, midi du samedi)'], ['connais-tu', 'Connais-tu ton partenaire ? (soir du mardi et du vendredi)'],
+      ['baton', 'Bonhomme bâton, « me in my dreams with u » (samedi soir)']
     ],
     fr: [
-      ['mipaps-anime', 'Reel animé (matin)'], ['mipaps-post', 'Post : mini, déclaration ou schéma (midi)'], ['mipaps-histoire', 'Carrousel-histoire (soir, lundi, mercredi, vendredi, dimanche)'], ['mipaps-statique', 'Reel statique (soir, mardi, jeudi, samedi)']
+      ['mipaps-anime', 'Reel animé (tous les matins et le samedi soir)']
     ]
   };
   function nomDuPost(p) { return CATEGORIES[p.categorie] || GABARITS[p.gabarit] || p.gabarit; }
@@ -85,10 +85,15 @@
   function jourMoins(n) { return jourIso(new Date(Date.now() - n * 86400000)); }
   function ajouterJours(jour, n) { var d = new Date(jour + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return jourIso(d); }
   function jourDeSemaine(jour) { return ((new Date(jour + 'T12:00:00Z').getUTCDay() + 6) % 7) + 1; }
+  // comme reseaux/automates/lib/calendrier.mjs : null quand la grille ferme le
+  // créneau, undefined quand elle ne dit rien
   function categorieAttendue(melange, jour, creneau) {
-    var r = melange && melange[creneau];
-    if (!r) return null;
-    return typeof r === 'string' ? r : (r[String(jourDeSemaine(jour))] || null);
+    if (!melange || typeof melange !== 'object' || !(creneau in melange)) return undefined;
+    var r = melange[creneau];
+    if (r === null) return null;
+    if (typeof r === 'string') return r;
+    if (!r || typeof r !== 'object') return undefined;
+    return r[String(jourDeSemaine(jour))];
   }
   function nombre(n) { return n == null ? '' : Number(n).toLocaleString('fr-FR'); }
 
@@ -297,8 +302,8 @@
       '<div class="rsx-case-corps">' +
       '<div class="rsx-case-haut"><strong>' + esc(v && v.publier_a ? heureParis(v.publier_a) : '-') + '</strong>' +
       '<span class="rsx-statut rsx-statut--' + statut[1] + '">' + esc(statut[0]) + '</span>' +
-      (v && v.story_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Le reel du matin a aussi été publié en story">+ story</span>' : '') +
-      (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story du matin n\'est pas partie (voir le journal)">story ✕</span>' : '') +
+      (v && v.story_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Le premier reel du jour est aussi parti en story">+ story</span>' : '') +
+      (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story de ce reel n\'est pas partie (voir le journal)">story ✕</span>' : '') +
       (v && v.fb_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Publié aussi sur la Page Facebook">+ Facebook</span>' : '') +
       (v && v.fb_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="' + esc('Pas publié sur la Page Facebook : ' + (v.fb_erreur || 'voir le journal')) + '">Facebook ✕</span>' : '') + '</div>' +
       '<div class="rsx-case-cat">' + esc(nomDuPost(p)) + '</div>' +
@@ -312,6 +317,9 @@
   }
   function caseVide(jour, creneau) {
     var attendue = categorieAttendue(donnees.melange, jour, creneau);
+    // un créneau que la grille ferme (huit reels par semaine depuis le
+    // 26 octobre 2026) : rien n'y part, rien à écrire
+    if (attendue === null) return '<div class="rsx-case is-vide is-ferme"><span>fermé</span></div>';
     return '<div class="rsx-case is-vide"><span>à écrire</span>' + (attendue ? '<small>' + esc(CATEGORIES[attendue] || attendue) + '</small>' : '') + '</div>';
   }
 
@@ -332,7 +340,11 @@
         '<div class="rsx-rang-jour" role="rowheader" title="' + esc(jourLong(jour)) + '">' + esc(jourCourt(jour)) + (jour === aujourdhui ? '<small>aujourd\'hui</small>' : '') + '</div>';
       ORDRE.forEach(function (c) {
         var p = posts.find(function (x) { return x.jour === jour && x.creneau === c; });
-        html += p ? casePost(p) : (jour < aujourdhui ? '<div class="rsx-case is-vide"></div>' : caseVide(jour, c));
+        // un post annulé (par la synchro, quand la grille est passée à huit
+        // reels par semaine) sur un créneau aujourd'hui fermé : la case dit « fermé »
+        if (p && p.statut === 'annule' && jour >= aujourdhui && categorieAttendue(donnees.melange, jour, c) === null) p = null;
+        var fermeHier = jour < aujourdhui && categorieAttendue(donnees.melange, jour, c) === null;
+        html += p ? casePost(p) : (jour < aujourdhui ? '<div class="rsx-case is-vide' + (fermeHier ? ' is-ferme' : '') + '"></div>' : caseVide(jour, c));
       });
       html += '</div>';
     });
@@ -387,15 +399,17 @@
   // parti), puis la synchro la marque utilisée avec le post qui la porte.
   function etatIdee(i) {
     if (i.utilisee_le) return i.post ? 'utilisée : post du ' + quand(i.post) : 'utilisée';
-    if (i.visee) return 'visée : ' + quand(i.visee) + ' (Claude l\'écrit à son passage de 5 h 44)';
-    if (!i.categorie) return 'Claude choisit la catégorie à son prochain passage (5 h 44), puis le créneau le plus proche';
+    // la routine Claude qui écrit les idées est arrêtée depuis le 26 octobre
+    // 2026 au soir ; à sa reprise, ces deux phrases redisent son passage de 5 h 44
+    if (i.visee) return 'visée : ' + quand(i.visee) + ', à écrire quand la routine Claude reprendra (arrêtée depuis le 26 octobre)';
+    if (!i.categorie) return 'la routine Claude choisira la catégorie quand elle reprendra (arrêtée depuis le 26 octobre), puis le créneau le plus proche';
     return 'aucun créneau libre trouvé pour cette catégorie dans les cinq prochaines semaines';
   }
   function rendreIdees() {
     var select = $('rsx-idee-categorie');
     var choix = CATEGORIES_IDEE[langue] || [];
     select.innerHTML = '<option value="">Claude choisit la catégorie</option>' + choix.map(function (c) { return '<option value="' + esc(c[0]) + '">' + esc(c[1]) + '</option>'; }).join('');
-    $('rsx-idee').placeholder = langue === 'fr' ? 'elle lui vole son pull, il a froid, elle est ravie' : 'POV : il rentre avec des fleurs, elle croit qu\'il a fait une bêtise';
+    $('rsx-idee').placeholder = langue === 'fr' ? 'elle lui vole son pull, il a froid, elle est ravie' : 'Tu préfères : une édition « road trip »';
     var idees = donnees.idees || [];
     $('rsx-idees').innerHTML = idees.length ? idees.map(function (i) {
       return '<li><span>' + (i.categorie ? '<small class="rsx-idee-cat">' + esc(CATEGORIES[i.categorie] || i.categorie) + '</small>' : '') +

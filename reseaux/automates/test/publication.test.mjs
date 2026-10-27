@@ -87,6 +87,24 @@ test('Facebook : le reel du matin part aussi sur la Page, puis en story de la Pa
   assert.match(fb.appels[0][1].videoUrl, /a\/reel\.mp4/);
 });
 
+test('Facebook : la story de la Page suit celle du jour sur Instagram, le soir quand la grille ferme le matin', async () => {
+  // lundi 12 octobre 2026, grille du 26 octobre : matin et midi fermés le lundi
+  const grille = { matin: null, midi: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: 'tu-preferes', 7: null }, soir: { 1: 'tu-preferes', 2: 'connais-tu', 3: 'tu-preferes', 4: 'tu-preferes', 5: 'connais-tu', 6: 'baton', 7: 'tu-preferes' } };
+  const soir = base({ facebook: true, creneau: 'soir', publierA: plus(0) });
+  soir.tables.social_reglages = [{ cle: 'melange', valeur: grille }];
+  const fb = fauxFacebook();
+  const r = await publier(soir, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+  assert.deepEqual(r.facebook, { publies: 1, stories: 1, echecs: 0 });
+  assert.deepEqual(fb.appels.map((a) => a[0]), ['reel', 'story']);
+  assert.equal(soir.tables.social_variantes[0].fb_story_id, '99_s');
+  // un reel qui n'est pas celui de la story du jour n'en a pas sur la Page non plus
+  const midi = base({ facebook: true, creneau: 'midi', publierA: plus(0) });
+  const fb2 = fauxFacebook();
+  const r2 = await publier(midi, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb2 });
+  assert.deepEqual(r2.facebook, { publies: 1, stories: 0, echecs: 0 });
+  assert.deepEqual(fb2.appels.map((a) => a[0]), ['reel']);
+});
+
 test('Facebook : une image devient une photo, un carrousel une publication à plusieurs photos, sans story', async () => {
   for (const [format, attendu] of [['image', 'photo'], ['carrousel', 'album']]) {
     const b = base({ facebook: true, format, publierA: plus(0), creneau: 'midi' });
@@ -356,7 +374,7 @@ test('la story du matin : conteneur juste après le reel, publiée au passage su
   assert.equal(r2.stories.publiees, 1);
   assert.equal(v.story_statut, 'publie');
   assert.equal(v.story_media_id, 'M1');
-  assert.ok(b.tables.social_journal.some((j) => /story du matin publiée/.test(j.message)));
+  assert.ok(b.tables.social_journal.some((j) => /story publiée/.test(j.message)));
 });
 
 test("pas de story pour un reel de midi, ni pour un reel de plus de 60 s", async () => {
