@@ -91,6 +91,31 @@
     var p = promoAffichee(confirme);
     return p ? String(html).replace(esc(p.prix), p.html) : html;
   }
+  // Le prix d'une région (coeur.mjs, PRIX_REGIONS ; 27 octobre 2026), que le
+  // serveur confirme (etat.region, etat.prix) d'après la zone du téléphone :
+  // sur l'offre seulement (écran « rapport prêt » et attente), à la place du
+  // prix et de la réduction, avec le prix affiché ailleurs (CFG.prix) barré
+  // devant. `regionOffre` : celui de l'offre affichée, pour le bouton.
+  var regionOffre = null;
+  function prixRegion(etat) {
+    if (!etat || !etat.region || !(etat.prix > 0) || etat.paye) return null;
+    var ecrit = prixEcrit(etat.prix);
+    return {
+      region: etat.region,
+      centimes: etat.prix,
+      prix: ecrit,
+      badge: remplir(tr('paywall.region.' + etat.region, ''), {}),
+      html: '<span class="prix-promo"><span class="prix-promo-avant"><span class="sr-only">' + x('paywall.region.avant') + ' </span><s>' + esc(CFG.prix || '') + '</s></span> ' +
+        '<span class="prix-promo-apres"><span class="sr-only">' + x('paywall.region.apres') + ' </span>' + esc(ecrit) + '</span></span>',
+    };
+  }
+  // Un texte de l'offre déjà échappé, écrit avec CFG.prix : le prix de la
+  // région à sa place, avec le prix barré devant (`barre`) ou seul (bouton).
+  function avecRegion(html, r, barre) {
+    if (!r || !CFG.prix) return html;
+    return String(html).split(esc(CFG.prix)).join(barre ? r.html : esc(r.prix));
+  }
+  function texteBoutonPayer() { return avecRegion(x('paywall.bouton'), regionOffre); }
   function nombre(n) {
     try { return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR').format(n); } catch (e) { return String(n); }
   }
@@ -173,9 +198,20 @@
 
   // ── Le serveur ──────────────────────────────────────────────────────────
 
+  // La zone du téléphone, d'après son fuseau horaire (coeur.mjs,
+  // zoneDuFuseau) : envoyée à chaque appel, le serveur s'en sert pour le prix
+  // d'une région (PRIX_REGIONS, 27 octobre 2026). Rien tant que le calcul
+  // n'est pas chargé.
+  function zoneDuTelephone() {
+    if (!C || typeof C.zoneDuFuseau !== 'function') return '';
+    try { return C.zoneDuFuseau(Intl.DateTimeFormat().resolvedOptions().timeZone); } catch (e) { return ''; }
+  }
+
   function appel(action, donnees, garderVivant) {
     var corps = { action: action };
     for (var k in (donnees || {})) corps[k] = donnees[k];
+    var zone = zoneDuTelephone();
+    if (zone && corps.zone === undefined) corps.zone = zone;
     return fetch(CFG.fonction, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', apikey: CFG.cle || '', Authorization: 'Bearer ' + (CFG.cle || '') },
@@ -416,6 +452,9 @@
     var query = new URLSearchParams(location.search);
     var id = hash.get('b'), jeton = hash.get('t');
     var lien = !!(id && jeton);
+    // Le QR code de l'invitation ajoute q=1 : l'arrivée par le code est
+    // comptée à part (invitation_vue, clé qr).
+    var parQr = hash.get('q') === '1';
     // Le lien « ne plus recevoir de message » des e-mails : #b=…&t=…&arret=1.
     var arret = hash.get('arret') === '1';
     // Le bouton de l'e-mail du rapport (22 octobre 2026, plus de pièce
@@ -435,7 +474,7 @@
     preparer().then(function () {
       if (lien) {
         nettoyerUrl();
-        return ouvrirLien(id, jeton, arret);
+        return ouvrirLien(id, jeton, arret, parQr);
       }
       if (paiement) return retourPaiement(query.get('b'), query.get('paiement'));
       var e = entreeDe(query.get('b'));
@@ -446,7 +485,7 @@
   }
 
   // Un lien (personnel ou d'invitation) : on demande au serveur qui on est.
-  function ouvrirLien(id, jeton, arret) {
+  function ouvrirLien(id, jeton, arret, parQr) {
     chargement();
     appel('etat', { id: id, jeton: jeton }).then(function (r) {
       if (r.statut === 404) {
@@ -454,16 +493,16 @@
           '<div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-outline') + '</div>'));
         return;
       }
-      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton); });
+      if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton, arret, parQr); });
       var e = r.json;
-      if (e.invite) return rejoindre(e, jeton);
+      if (e.invite) return rejoindre(e, jeton, parQr);
       var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
       garder(entree);
       if (arret) return arreterRappels(entree, e);
       suiteEtat(entree, e);
-    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton, arret); }); });
+    }).catch(function () { messageErreur('reseau', function () { ouvrirLien(id, jeton, arret, parQr); }); });
   }
 
   // « Ne plus recevoir de message sur cette évaluation » (lien des e-mails
@@ -831,32 +870,42 @@
 
   // ── Invitation ──────────────────────────────────────────────────────────
 
+  // Le QR code d'abord, en grand et dès l'arrivée (27 octobre 2026, Thomas :
+  // « ok vas-y » sur la proposition) : sur 204 évaluations à deux, les 62
+  // partenaires qui ont rejoint sont tous arrivés dans l'heure, aucun plus
+  // tard, et les trois couples qui ont payé ont tout fait d'une traite.
+  // L'écran disait jusque-là « Pas besoin d'attendre X : chacun avance de son
+  // côté », le QR code caché derrière un petit bouton. Le lien à envoyer
+  // passe en second, pour qui n'est pas ensemble. Le code porte q=1
+  // (demarrer, invitation_vue clé qr).
   function invitation(entree, etat) {
     var lien = lienPersonnel(entree.id, entree.invitation);
     var autre = entree.autre;
     var html = carte(
       duo('salut', 'surprise', 80, etat && etat.moi.genre, etat && etat.autre.genre) +
-      '<h2 class="bilan-titre">' + x('invitation.titre', { autre: autre }) + '</h2>' +
-      '<p class="bilan-texte">' + x('invitation.texte', { autre: autre }) + '</p>' +
+      '<h2 class="bilan-titre">' + x('invitation.ensembleTitre', { autre: autre }) + '</h2>' +
+      '<p class="bilan-texte">' + x('invitation.ensemble', { autre: autre }) + '</p>' +
       (entree.invitationNeuve ? '<p class="bilan-note">' + x('invitation.nouveauLien', { autre: autre }) + '</p>' : '') +
+      '<div class="bilan-qr bilan-qr--grand" id="bilan-qr" role="img" aria-label="' + x('invitation.qrLabel', { autre: autre }) + '"></div>' +
+      // « Commencer mes réponses » reste dans le premier écran (22 octobre
+      // 2026 : sous le lien personnel, à 992 px du haut, 18 créateurs sur 25
+      // n'avaient jamais commencé).
+      '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
+      bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      '<hr class="bilan-sep">' +
+      '<h3 class="bilan-sous-titre">' + x('invitation.distanceTitre', { autre: autre }) + '</h3>' +
+      '<p class="bilan-note">' + x('invitation.texte', { autre: autre }) + '</p>' +
       '<div class="bilan-lien"><input class="bilan-input" type="text" readonly value="' + esc(lien) + '" aria-label="' + x('invitation.copier') + '"></div>' +
       '<div class="bilan-actions">' +
       (navigator.share ? bouton('partager', x('invitation.envoyer'), 'btn-outline') : '') +
-      bouton('copier', x('invitation.copier'), 'btn-outline') +
-      bouton('qr', x('invitation.qr'), 'btn-outline btn-sm') + '</div>' +
-      '<div class="bilan-qr" id="bilan-qr" hidden></div>' +
-      // « Commencer mes réponses » dans le premier écran (22 octobre 2026) :
-      // il était sous le lien personnel, à 992 px du haut sur un téléphone, et
-      // 18 créateurs sur 25 n'ont jamais commencé (ils envoyaient le lien et
-      // partaient, comme s'il fallait attendre l'autre).
-      '<div class="bilan-invite-suite"><p>' + x('invitation.suite', { autre: autre }) + '</p>' +
-      bouton('commencer', x('invitation.commencer'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      bouton('copier', x('invitation.copier'), 'btn-outline') + '</div>' +
       '<hr class="bilan-sep">' +
       '<h3 class="bilan-sous-titre">' + x('invitation.monLien') + '</h3>' +
       '<p class="bilan-note">' + x('invitation.monLienAide', { autre: autre }) + '</p>' +
       '<div class="bilan-actions">' + bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline btn-sm') + '</div>' +
       blocLien(etat && etat.moi && etat.moi.email), 'bilan-invitation');
     afficher(html);
+    dessinerQr(document.getElementById('bilan-qr'), lien + '&q=1');
     var message = remplir(tr('invitation.message', ''), { lien: lien });
     ACTIONS = {
       partager: function () {
@@ -865,22 +914,27 @@
       copier: function (b) { copier(lien, b); },
       copierMoi: function (b) { copier(lienPersonnel(entree.id, entree.jeton), b); },
       envoyerLien: function (b) { envoyerLien(b, entree.id, entree.jeton); },
-      qr: function (b) {
-        var zone = document.getElementById('bilan-qr');
-        if (!zone.hidden) { zone.hidden = true; return; }
-        chargerScript('/js/vendor/qrcode.js', function (err) {
-          if (err || typeof window.qrcode !== 'function') return;
-          try {
-            var q = window.qrcode(0, 'M');
-            q.addData(lien); q.make();
-            zone.innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }) +
-              '<p class="bilan-note">' + x('invitation.qrAide', { autre: autre }) + '</p>';
-            zone.hidden = false;
-          } catch (e) { /* rien */ }
-        });
-      },
       commencer: function () { ouvrir(entree); },
     };
+  }
+
+  // Le QR code d'un lien dans sa zone (place réservée par bilanCouple.css) ;
+  // sans le script, la zone disparaît et le lien reste en dessous.
+  function dessinerQr(zone, texte) {
+    if (!zone) return;
+    var dessiner = function () {
+      try {
+        var q = window.qrcode(0, 'M');
+        q.addData(texte); q.make();
+        zone.innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+      } catch (e) { zone.remove(); }
+    };
+    if (typeof window.qrcode === 'function') return dessiner();
+    chargerScript('/js/vendor/qrcode.js', function (err) {
+      if (!zone.isConnected) return;
+      if (err || typeof window.qrcode !== 'function') return zone.remove();
+      dessiner();
+    });
   }
 
   // ── Rejoindre (B) ───────────────────────────────────────────────────────
@@ -888,7 +942,7 @@
   // L'écran de l'invitation : le prénom, le genre, l'adresse (depuis le
   // 25 octobre 2026, comme au départ) et la case. La situation se confirme au
   // fil des domaines (questionSituation).
-  function rejoindre(etat, jetonInvitation) {
+  function rejoindre(etat, jetonInvitation, parQr) {
     var autre = etat.autre.prenom;
     var html = carte(
       duo('salut', 'mignon', 86, etat.autre.genre, etat.moi.genre) +
@@ -914,7 +968,7 @@
       p.hidden = false;
     }
     surveillerEmail();
-    compterVue('invitation_vue', { mode: 'duo', id: etat.id });
+    compterVue('invitation_vue', { mode: 'duo', id: etat.id, cle: parQr ? 'qr' : '' });
     ACTIONS = {
       accepter: function (b) {
         var prenom = (document.getElementById('bilan-moi').value || '').trim();
@@ -1590,10 +1644,12 @@
   // vient du prix que la page affiche (CFG.prixCentimes, celui des textes),
   // pour que les deux colonnes fassent toujours le total écrit dessous.
   function blocPrix(etat, promo) {
-    var c = CFG.prixCentimes || etat.prix || 0;
+    var r = prixRegion(etat);
+    var c = r ? r.centimes : (CFG.prixCentimes || etat.prix || 0);
     var deux = MODE !== 'solo' && c > 0;
+    var pastille = r ? r.badge : promo ? promo.badge : '';
     var html = '<div class="bilan-prix' + (deux ? ' bilan-prix--deux' : '') + '">' +
-      (promo ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(promo.badge) + '</span></p>' : '');
+      (pastille ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(pastille) + '</span></p>' : '');
     if (deux) {
       var chacun = prixEcrit(Math.round(c / 2));
       var part = function (p, rang) {
@@ -1605,8 +1661,9 @@
         '<p class="bilan-note bilan-prix-cine"><span class="sr-only">' + x('paywall.chacunSr', { chacun: chacun }) + ' </span>' + x('paywall.cine') + '</p>';
     }
     return html +
-      '<p class="bilan-prix-montant">' + (deux ? '<span class="bilan-prix-egal" aria-hidden="true">=</span> ' : '') + avecPromo(x('paywall.prix'), !!promo) + '</p>' +
-      (promo ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
+      '<p class="bilan-prix-montant">' + (deux ? '<span class="bilan-prix-egal" aria-hidden="true">=</span> ' : '') +
+      (r ? avecRegion(x('paywall.prix'), r, true) : avecPromo(x('paywall.prix'), !!promo)) + '</p>' +
+      (promo && !r ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
       '<p class="bilan-note">' + x('paywall.prixAide', { autre: etat.autre.prenom }) + '</p></div>' +
       '<p class="bilan-note bilan-centre bilan-prix-conseiller">' + x('paywall.conseiller') + '</p>';
   }
@@ -1629,9 +1686,9 @@
   // y descend. Elle ne paie pas elle-même : la case de la renonciation doit
   // être cochée avant.
   var obsColle = null;
-  function barreColle(promo) {
+  function barreColle(promo, r) {
     return '<div class="bilan-colle" id="bilan-colle" hidden><span class="bilan-colle-texte"><span class="bilan-colle-nom">' + x('paywall.colle') + '</span>' +
-      '<span class="bilan-colle-prix">' + (promo ? promo.html : esc(CFG.prix || '')) + '</span></span>' +
+      '<span class="bilan-colle-prix">' + (r ? r.html : promo ? promo.html : esc(CFG.prix || '')) + '</span></span>' +
       bouton('versAchat', x('paywall.colleBouton'), 'btn-cta btn-gradient btn-sm') + '</div>';
   }
   function surveillerColle() {
@@ -1680,20 +1737,21 @@
     // La réduction, seulement si le serveur dit qu'il l'appliquera (une
     // fonction plus ancienne ne le dit pas : rien n'est affiché).
     var promo = promoAffichee(etat.promo ? true : false);
+    var r = regionOffre = prixRegion(etat);
     var achat = '<div class="bilan-achat" id="bilan-achat">' + blocPrix(etat, promo) +
       // Sans adresse connue (évaluation d'avant le 20 octobre 2026), le champ
       // reste ici ; sinon il est replié sous le sommaire.
       (etat.moi.email ? '' : champEmail('', 'bilan-email-paie')) +
       '<label class="bilan-case bilan-case--serree"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-      '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      '<div class="bilan-actions">' + bouton('payer', texteBoutonPayer(), 'btn-cta btn-gradient btn-lg') + '</div>' +
       blocConfiance(pret) + '</div>';
     var suite = sommaire(etat) +
       (etat.moi.email ? '<details class="bilan-email-autre bilan-offre-email"><summary>' + x('paywall.emailAutre') + '</summary>' + champEmail(etat.moi.email, 'bilan-email-paie') + '</details>' : '') +
       '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>';
-    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + barreColle(promo);
+    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + barreColle(promo, r);
     return carte('<details class="bilan-offre-plie"><summary><span class="bilan-offre-plie-titre">' + x('paywall.plie') + '</span>' +
-      '<span class="bilan-offre-plie-prix">' + avecPromo(x('paywall.prix'), !!promo) + '</span></summary>' +
+      '<span class="bilan-offre-plie-prix">' + (r ? avecRegion(x('paywall.prix'), r, true) : avecPromo(x('paywall.prix'), !!promo)) + '</span></summary>' +
       '<p class="bilan-offre-intro">' + x('paywall.introAttente', { autre: autre }) + '</p>' + achat + suite + '</details>', 'bilan-offre bilan-offre--attente');
   }
 
@@ -1717,11 +1775,11 @@
           if (r.statut === 200 && r.json.url) { location.href = r.json.url; return; }
           if (r.statut === 200 && r.json.paye) { ouvrir(entree); return; }
           b.disabled = false;
-          b.innerHTML = x('paywall.bouton');
+          b.innerHTML = texteBoutonPayer();
           montre(r.json.erreur === 'paiement_ferme' ? 'paywall.ferme' : 'erreurs.serveur');
         }).catch(function () {
           b.disabled = false;
-          b.innerHTML = x('paywall.bouton');
+          b.innerHTML = texteBoutonPayer();
           montre('erreurs.reseau');
         });
       },
@@ -1854,7 +1912,7 @@
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
-      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null, prix: res.prix,
+      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: res.promo || null, prix: res.prix, region: res.region || null,
       moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
     var ap = res.apercu || null;
@@ -1864,7 +1922,7 @@
         '<p class="bilan-pret-sur">' + x('rapport.surtitre') + '</p>' +
         '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom, autre: autre.prenom }) + '</h2>' +
         (ap ? blocApercu(ap, autre.prenom) + blocPoints(ap, autre.prenom) : '<p class="bilan-offre-intro">' + x('paywall.introPret', { autre: autre.prenom }) + '</p>')));
-    compterVue('offre_vue', { mode: MODE, id: entree.id });
+    compterVue('offre_vue', { mode: MODE, id: entree.id, cle: res.region || '' });
     ACTIONS = actionsOffre(entree, MODE);
     surveillerColle();
   }

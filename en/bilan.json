@@ -29,7 +29,7 @@
       "titre": "Your assessment",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
-      "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
+      "modeDuoAide": "At the same time, each on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
       "modeSolo": "On your own",
       "modeSoloAide": "You answer for yourself, and on the topics that matter most, you also say what your partner would answer. Your partner isn't told and sees nothing.",
       "prenomsTitre": "Your two first names",
@@ -63,21 +63,22 @@
       }
     },
     "invitation": {
-      "titre": "Invite {{autre}}",
-      "texte": "Send this link to {{autre}}. {{autre}} will answer separately, on their own phone, without seeing your answers, and you won't see theirs until the end.",
+      "ensembleTitre": "Is {{autre}} with you right now?",
+      "ensemble": "It works best when you answer at the same time, each on your own phone: {{autre}} just scans this code with their camera.",
+      "qrLabel": "QR code of the link for {{autre}}",
       "nouveauLien": "This is a new link: the old one no longer works, so send this one to {{autre}}.",
-      "suite": "No need to wait for {{autre}}: start your answers now, you each go at your own pace.",
+      "suite": "Start at the same time as {{autre}}: about twenty minutes each, and you'll discover the report together.",
+      "commencer": "Start my answers",
+      "distanceTitre": "{{autre}} isn't with you?",
+      "texte": "Send this link to {{autre}}. {{autre}} will answer separately, on their own phone, without seeing your answers, and you won't see theirs until the end.",
       "envoyer": "Send the link",
       "copier": "Copy the link",
       "copie": "Link copied!",
-      "qr": "Show the QR code",
-      "qrAide": "{{autre}} can scan it with their phone's camera.",
       "message": "I've started our relationship assessment, your turn to answer on your side: {{lien}}",
       "messageTitre": "Our relationship assessment",
       "monLien": "Your personal link",
       "monLienAide": "It lets you pick up your answers on another device. Don't give it to anyone, not even {{autre}}: it's the key to your answers.",
       "copierMonLien": "Copy my link",
-      "commencer": "Start my answers",
       "dejaRejoint": "{{autre}} has joined the assessment."
     },
     "rejoindre": {
@@ -207,7 +208,12 @@
       "immediat": "The report opens here as soon as you've paid, for both of you, and the PDF link goes out by email.",
       "moyens": "Accepted payment methods",
       "colle": "Your report",
-      "colleBouton": "Unlock"
+      "colleBouton": "Unlock",
+      "region": {
+        "latam": "Latin America price",
+        "avant": "Instead of",
+        "apres": "Latin America price:"
+      }
     },
     "paiement": {
       "verification": "Checking the payment...",
@@ -689,7 +695,7 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
+    "sousTitre": "20 minutes together, each on your own phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
     "soloQuestion": "Your partner doesn't want to take part?",
     "soloLien": "Take it on your own",
@@ -712,7 +718,7 @@
       },
       {
         "n": "20 min",
-        "l": "each, at your own pace"
+        "l": "together, each on your own phone"
       },
       {
         "n": "€0",
@@ -725,12 +731,12 @@
         {
           "duree": "2 min",
           "titre": "You start the assessment",
-          "texte": "Your two first names, then you send your partner their link."
+          "texte": "Your two first names, then your partner scans the QR code on your screen, or gets their link."
         },
         {
           "duree": "20 min",
-          "titre": "You each answer separately",
-          "texte": "On your own phone, without seeing the other's answers. You can take a break whenever you like."
+          "titre": "You answer at the same time",
+          "texte": "Each on your own phone, without seeing the other's answers. You can take a break whenever you like."
         },
         {
           "duree": "1 min",
@@ -788,9 +794,9 @@
       "intro": "If your partner doesn't feel like talking about it, you can do it on your side. Same price, same report.",
       "duo": {
         "titre": "Together",
-        "sous": "Each on your own phone",
+        "sous": "At the same time, each on your own phone",
         "points": [
-          "You each answer on your own side, at your own pace",
+          "You answer together, without seeing each other's answers",
           "The report compares your answers, topic by topic"
         ],
         "cta": "Start together"

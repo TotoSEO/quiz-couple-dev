@@ -402,7 +402,8 @@
 
 <% if (urlEval) { %>
 <!-- L'évaluation de couple : la carte des encarts de résultat (.qr-bilan,
-     styles.css), en grand, avec ses deux boutons (à deux, seul·e). -->
+     styles.css), en grand, avec un seul bouton (à deux) depuis le 27 octobre
+     2026 : le seul(e) ne reste proposé que sur la page de vente. -->
 <section class="home-eval" aria-labelledby="home-eval-titre">
   <div class="container mx-auto px-4">
     <div class="qr-bilan qr-bilan--bas qr-bilan--accueil">
@@ -420,7 +421,6 @@
         </ul>
         <div class="qr-bilan-boutons">
           <a class="qr-bilan-bouton" href="<%= urlEval %>" data-bilan-src="accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>#facons" data-bilan-src="accueil" data-bilan-mode="solo"><%= evaluation.ctaSolo %></a>
         </div>
       </div>
     </div>

@@ -601,7 +601,18 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
 @media (prefers-reduced-motion: reduce) { .bilan-scene .bilan-offre-plie > summary::after { transition: none; } }
 
 /* L'invitation à deux (22 octobre 2026) : « Commencer mes réponses » dans le
-   premier écran d'un téléphone, sous les boutons d'envoi du lien. */
+   premier écran d'un téléphone ; depuis le 27 octobre 2026, sous le QR code,
+   affiché en grand dès l'arrivée (bilan.js, invitation), sa place réservée
+   pour que rien ne bouge quand il se dessine. Fond blanc dans les deux thèmes
+   (styles.css, .bilan-qr svg) : un appareil photo lit mal un code inversé. */
+.bilan-qr.bilan-qr--grand { display: block; width: min(13rem, 62vw); aspect-ratio: 1; margin: .9rem auto .1rem; }
+.bilan-qr.bilan-qr--grand svg { display: block; width: 100%; height: 100%; padding: .45rem; }
+/* Un téléphone court (640 px de haut) : les personnages laissent leur place
+   et le code rétrécit, pour garder le code et « Commencer » à l'écran. */
+@media (max-height: 700px) {
+  .bilan-invitation .bilan-duo { display: none; }
+  .bilan-qr.bilan-qr--grand { width: min(10rem, 62vw); margin-top: .6rem; }
+}
 .bilan-invite-suite { margin: 1.1rem 0 .25rem; text-align: center; }
 .bilan-invite-suite p { margin: 0 0 .7rem; font-weight: 600; line-height: 1.45; color: hsl(var(--foreground)); text-wrap: pretty; }
 .blp-citation--prix { margin-bottom: 1.5rem; }

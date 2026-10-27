@@ -21,14 +21,13 @@
   "evaluation": {
     "sur": "Neu · Beziehungsanalyse",
     "titre": "Wollt ihr beide dasselbe Leben?",
-    "texte": "100 genaue Fragen zu zwölf Bereichen des gemeinsamen Lebens, aufgebaut auf der Forschung der Paarpsychologie, und ein vollständiger Bericht, der eure Antworten nebeneinanderstellt. Zu zweit, jeder auf dem eigenen Handy, oder allein, wenn der andere noch nicht bereit ist, darüber zu reden.",
+    "texte": "100 genaue Fragen zu zwölf Bereichen des gemeinsamen Lebens, aufgebaut auf der Forschung der Paarpsychologie, und ein vollständiger Bericht, der eure Antworten nebeneinanderstellt. Zu zweit, gleichzeitig, jeder auf dem eigenen Handy: etwa zwanzig Minuten.",
     "points": [
-      "Jeder antwortet für sich, ohne die Antworten des anderen zu sehen",
+      "Jeder antwortet auf dem eigenen Handy, ohne die Antworten des anderen zu sehen",
       "Ein vollständiger Bericht mit Grafiken und Gesprächshilfen",
       "Kostenlose Fragen · {{prix}} für den Bericht, am Ende"
     ],
     "ctaDuo": "Die Analyse zu zweit machen",
-    "ctaSolo": "Sie allein machen",
     "ctaCourt": "Beziehung analysieren",
     "legende": "Eine Seite aus dem Beispielbericht"
   },

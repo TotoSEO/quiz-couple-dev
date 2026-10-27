@@ -1220,3 +1220,90 @@ test('les célibataires : dix réponses par heure et par connexion, un plafond p
   while (stockage.compteurs.filter((x) => x.evenement === 'celib').length < CELIB_PAR_JOUR) stockage.compteurs.push({ evenement: 'celib', cle: '', montant: 0 });
   assert.equal((await appel({ action: 'celib', lang: 'fr', interets: ['point'] }, '7.7.7.7')).statut, 429);
 });
+
+test('le prix de l\'Amérique latine : d\'après le fuseau du téléphone, sans réduction ni code', async () => {
+  assert.equal(C.zoneDuFuseau('America/Mexico_City'), 'latam');
+  assert.equal(C.zoneDuFuseau('America/Argentina/Buenos_Aires'), 'latam');
+  assert.equal(C.zoneDuFuseau('America/Sao_Paulo'), 'latam');
+  assert.equal(C.zoneDuFuseau('America/Bogota'), 'latam');
+  assert.equal(C.zoneDuFuseau('Mexico/General'), 'latam');
+  for (const f of ['America/New_York', 'America/Los_Angeles', 'America/Toronto', 'America/Puerto_Rico', 'America/Cayenne', 'America/Martinique', 'America/Guyana', 'Europe/Madrid', 'Europe/Paris', '', null, undefined]) {
+    assert.equal(C.zoneDuFuseau(f), '', String(f));
+  }
+  assert.equal(C.zoneValide('latam'), 'latam');
+  for (const z of ['', 'LATAM', 'europe', 'toString', '__proto__', 12, null]) assert.equal(C.zoneValide(z), '', String(z));
+  assert.equal(C.PRIX_REGIONS.latam % 2, 0, 'les deux moitiés de l\'écran font le total');
+
+  const m = monter();
+  const A = await pretAPayer(m.appel);
+  // Sans zone : le prix et la réduction habituels.
+  const normal = (await m.appel({ action: 'etat', ...A })).json;
+  assert.equal(normal.region, null);
+  assert.equal(normal.prix, C.promoEnCours() ? C.prixPromo() : C.PRIX_CENTIMES);
+  // Avec la zone : le prix de la région, sans réduction affichée.
+  const latam = (await m.appel({ action: 'etat', ...A, zone: 'latam' })).json;
+  assert.equal(latam.region, 'latam');
+  assert.equal(latam.prix, C.PRIX_REGIONS.latam);
+  assert.equal(latam.prixBase, C.PRIX_CENTIMES);
+  assert.equal(latam.promo, null);
+  // Une zone inconnue ne change rien.
+  assert.equal((await m.appel({ action: 'etat', ...A, zone: 'europe' })).json.prix, normal.prix);
+  // L'écran « rapport prêt » (402) aussi.
+  const res = await m.appel({ action: 'resultat', ...A, zone: 'latam' });
+  assert.equal(res.statut, 402);
+  assert.equal(res.json.prix, C.PRIX_REGIONS.latam);
+  assert.equal(res.json.region, 'latam');
+
+  // La page de paiement : le montant de la région, ni discounts ni champ des codes.
+  const p = await m.appel({ action: 'payer', ...A, renonciation: true, lang: 'es', zone: 'latam' });
+  assert.equal(p.statut, 200, JSON.stringify(p.json));
+  assert.equal(p.json.region, 'latam');
+  assert.equal(p.json.promo, false);
+  assert.equal(p.json.total, C.PRIX_REGIONS.latam);
+  const s = [...m.stripe.sessions.values()][0];
+  assert.equal(s.params.line_items[0].price_data.unit_amount, C.PRIX_REGIONS.latam);
+  assert.equal(s.params.discounts, undefined);
+  assert.equal(s.params.allow_promotion_codes, undefined);
+  assert.equal(s.params.metadata.zone, 'latam');
+  assert.ok(m.stockage.compteurs.some((c) => c.evenement === 'paiement_region' && c.cle === 'latam'));
+  m.stripe.payer(s.id);
+  await m.appel({ action: 'verifier', ...A, session: s.id });
+  assert.equal(m.stockage.lignes.get(A.id).paiement_montant, C.PRIX_REGIONS.latam);
+  // Payé : plus de prix de région, quelle que soit la zone envoyée.
+  const apres = (await m.appel({ action: 'etat', ...A, zone: 'latam' })).json;
+  assert.equal(apres.paye, true);
+  assert.equal(apres.region, null);
+
+  // Sans zone, la même page qu'avant (réduction appliquée d'office).
+  const m2 = monter();
+  const B = await pretAPayer(m2.appel);
+  await m2.appel({ action: 'payer', ...B, renonciation: true, lang: 'fr', zone: 'mars' });
+  const s2 = [...m2.stripe.sessions.values()][0];
+  assert.equal(s2.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
+  assert.equal(s2.params.metadata.zone, undefined);
+  if (C.promoEnCours()) assert.deepEqual(s2.params.discounts, [{ promotion_code: C.PROMO_STRIPE }]);
+});
+
+test('les comptes du 27 octobre : arrivée par le QR code, écran « rapport prêt » au prix d\'une région', async () => {
+  const m = monter();
+  await m.appel({ action: 'vue', quoi: 'invitation_vue', mode: 'duo', cle: 'qr' });
+  await m.appel({ action: 'vue', quoi: 'invitation_vue', mode: 'duo' });
+  await m.appel({ action: 'vue', quoi: 'invitation_vue', mode: 'duo', cle: 'autre' });
+  await m.appel({ action: 'vue', quoi: 'offre_vue', mode: 'duo', cle: 'latam' });
+  await m.appel({ action: 'vue', quoi: 'offre_vue', mode: 'solo', cle: 'nimporte' });
+  const c = m.stockage.compteurs.map((x) => `${x.evenement}:${x.cle}`);
+  assert.deepEqual(c, ['invitation_vue:qr', 'invitation_vue:', 'invitation_vue:', 'offre_vue:latam', 'offre_vue:', 'offre_vue_solo:']);
+});
+
+test('l\'aperçu de l\'admin au prix de l\'Amérique latine', async () => {
+  const m = monter();
+  const r = await m.traiter({ action: 'apercu_paiement', lang: 'es', zone: 'latam' }, { ip: '1.2.3.4', admin: true });
+  assert.equal(r.statut, 200, JSON.stringify(r.json));
+  assert.equal(r.json.region, 'latam');
+  assert.equal(r.json.promo, false);
+  assert.equal(r.json.total, C.PRIX_REGIONS.latam);
+  const s = [...m.stripe.sessions.values()][0];
+  assert.deepEqual(s.params.metadata, { apercu: 'admin', mode: 'duo', zone: 'latam' });
+  assert.equal(s.params.discounts, undefined);
+  assert.equal(s.params.allow_promotion_codes, undefined);
+});

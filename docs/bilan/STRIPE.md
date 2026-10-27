@@ -224,6 +224,22 @@ l'admin.
   Le prix barré doit être un prix vraiment pratiqué : le plus bas des
   trente jours qui précèdent la réduction (article L112-1-1 du Code de la
   consommation). 9,90 € l'était depuis l'ouverture.
+- **Le prix d'une région** (27 octobre 2026) : `PRIX_REGIONS` dans
+  `coeur.mjs` (`{ latam: 398 }`), montré sur l'écran « rapport prêt » quand
+  le fuseau horaire du téléphone est en Amérique latine (`zoneDuFuseau`).
+  Rien à créer dans Stripe : la page de paiement est créée à ce montant
+  (`price_data`), sans réduction ni champ des codes, avec `zone` en
+  métadonnée. Pour changer le montant, changer le nombre (pair, pour que les
+  deux moitiés de l'écran fassent le total) ; pour arrêter, retirer la ligne
+  `latam` (la page et la fonction ne montrent alors plus que le prix
+  habituel). L'aperçu de l'admin a le choix « Amérique latine ».
+- **Adaptive Pricing** (proposé le 27 octobre 2026, à activer par Thomas) :
+  la page de paiement affiche le montant dans la monnaie du client (pesos,
+  réais…) au lieu de l'euro. Réglage : dashboard.stripe.com/settings/adaptive-pricing.
+  D'après la documentation de Stripe, le client paie 2 à 4 % dans le taux de
+  change, le vendeur rien, et l'argent arrive toujours en euros ; les prix
+  créés à la volée (`price_data`), ceux de la fonction, sont compris. Rien à
+  changer dans le code.
 - **Voir la page de paiement sans faire le test** (21 octobre 2026) : onglet
   Évaluation de l'admin, « Ouvrir la page Stripe », avec la langue et la
   façon (à deux ou seul(e)). C'est la même page qu'un client (prix, réduction,

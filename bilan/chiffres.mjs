@@ -15,6 +15,7 @@
 // Secrets : SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF, comme le retrait
 // d'une vente de test ; en local, SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY.
 import { connexion } from '../emails/base.mjs';
+import { PRIX_REGIONS } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
 export function sansAdresse(tableau) {
   for (const a of (tableau && tableau.attente) || []) delete a.email;
@@ -148,7 +149,7 @@ async function analyse(base, jours) {
   }
   try {
     const depuis = new Date(Date.now() - jours * 86400000).toISOString();
-    const colonnes = 'lang,mode,src,cree_le,a_etape,a_fini,b_consent,b_fini,renonciation_le,paye_le';
+    const colonnes = 'lang,mode,src,cree_le,a_etape,a_fini,b_consent,b_fini,renonciation_le,paye_le,paiement_montant';
     const lignes = [];
     for (let offset = 0; offset < 20000; offset += 1000) {
       const lot = await base.select('bilans', `select=${colonnes}&cree_le=gte.${depuis}&order=cree_le.asc&limit=1000&offset=${offset}`);
@@ -161,6 +162,12 @@ async function analyse(base, jours) {
     tableau('Par langue et façon de faire :', entonnoir(lignes, (l) => `${l.lang} ${l.mode}`));
     tableau('Par source :', entonnoir(lignes, (l) => l.src || 'direct'));
     tableau('Avant et après le 25 octobre au soir :', entonnoir(lignes, (l) => `${l.cree_le < bascule ? 'avant' : 'après'} ${l.mode}`));
+    // Le 27 octobre 2026 vers 15 h UTC, la mise en ligne : l'invitation au
+    // même moment (QR code en grand) et le prix de l'Amérique latine.
+    const bascule27 = '2026-10-27T15:00:00Z';
+    tableau('Avant et après le 27 octobre (QR code en grand, prix Amérique latine) :', entonnoir(lignes, (l) => `${l.cree_le < bascule27 ? 'avant' : 'après'} ${l.lang} ${l.mode}`));
+    const auPrixRegion = Object.fromEntries(Object.entries(PRIX_REGIONS).map(([z, c]) => [z, lignes.filter((l) => l.paye_le && l.paiement_montant === c).length]));
+    console.log('Ventes au prix d\'une région :', JSON.stringify(auPrixRegion));
     console.log('À deux, selon le moment où le partenaire arrive :');
     for (const [k, v] of Object.entries(rythmeDuo(lignes))) console.log(`  ${k.padEnd(36)} ${JSON.stringify(v)}`);
     console.log('Où s\'arrête le créateur, avant le 25 octobre au soir :', JSON.stringify(arretsCreateur(lignes.filter((l) => l.cree_le < bascule))));
@@ -173,6 +180,17 @@ async function analyse(base, jours) {
     console.log('Créations par heure de Paris :', JSON.stringify(heures));
   } catch (e) {
     console.log(`\nÉvaluations par langue : ${e.message}`);
+  }
+  try {
+    // Depuis le 27 octobre 2026 : le partenaire arrivé par le QR code
+    // (invitation_vue, clé qr), l'écran « rapport prêt » vu au prix d'une
+    // région (offre_vue, clé de la zone) et les pages de paiement ouvertes à
+    // ce prix (paiement_region).
+    const cpt = await base.select('bilan_compteurs', 'select=jour,evenement,cle,n&evenement=in.(invitation_vue,offre_vue,paiement_region)&jour=gte.2026-10-27&order=jour.asc');
+    console.log('\nComptes du 27 octobre (QR code, prix d\'une région), jour par jour :');
+    for (const c of cpt) console.log(`  ${c.jour} · ${c.evenement}${c.cle ? ':' + c.cle : ''} · ${c.n}`);
+  } catch (e) {
+    console.log(`\nComptes du 27 octobre : ${e.message}`);
   }
 }
 

@@ -32,6 +32,7 @@ jobs:
           sparse-checkout: |
             bilan/chiffres.mjs
             emails/base.mjs
+            supabase/functions/_shared/bilan/coeur.mjs
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v4
         with:

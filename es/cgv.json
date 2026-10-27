@@ -32,7 +32,8 @@
       "p": [
         "El informe completo cuesta {{prix}}, IVA no aplicable. Es un pago único, sin suscripción. Un solo pago, hecho por cualquiera de los dos, desbloquea el informe para ambos. En el modo a solas, el informe solo se entrega a la persona que ha respondido.",
         "El precio se muestra en la página de la evaluación antes de la primera pregunta, y otra vez antes del pago.",
-        "Puede ofrecerse un descuento durante un tiempo limitado. En ese caso se muestra en la página de la evaluación, con el precio habitual tachado, y se aplica automáticamente en la página de pago: el importe pagado es el que muestra la página de pago antes de confirmar."
+        "Puede ofrecerse un descuento durante un tiempo limitado. En ese caso se muestra en la página de la evaluación, con el precio habitual tachado, y se aplica automáticamente en la página de pago: el importe pagado es el que muestra la página de pago antes de confirmar.",
+        "Puede aplicarse un precio distinto según la región del dispositivo utilizado, por ejemplo en Latinoamérica. Se muestra antes del pago, y el importe pagado es el que indica la página de pago antes de la validación."
       ]
     },
     {

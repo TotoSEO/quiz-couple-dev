@@ -29,7 +29,7 @@
       "titre": "Euer Check",
       "modeTitre": "Wie macht ihr die Analyse?",
       "modeDuo": "Zu zweit",
-      "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
+      "modeDuoAide": "Gleichzeitig, jeder auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
       "modeSolo": "Allein",
       "modeSoloAide": "Du antwortest für dich und sagst bei den wichtigsten Themen auch, was dein Partner oder deine Partnerin antworten würde. Er oder sie erfährt nichts davon und sieht nichts.",
       "prenomsTitre": "Eure beiden Vornamen",
@@ -63,21 +63,22 @@
       }
     },
     "invitation": {
-      "titre": "Lade {{autre}} ein",
-      "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
+      "ensembleTitre": "Ist {{autre}} gerade bei dir?",
+      "ensemble": "Am besten antwortet ihr gleichzeitig, jeder auf dem eigenen Handy: {{autre}} scannt einfach diesen Code mit der Kamera.",
+      "qrLabel": "QR-Code mit dem Link für {{autre}}",
       "nouveauLien": "Das ist ein neuer Link: Der alte funktioniert nicht mehr, schick {{autre}} diesen hier.",
-      "suite": "Du musst nicht auf {{autre}} warten: Fang jetzt mit deinen Antworten an, jeder antwortet in seinem eigenen Tempo.",
+      "suite": "Fang gleichzeitig mit {{autre}} an: etwa zwanzig Minuten pro Person, und ihr entdeckt den Bericht zusammen.",
+      "commencer": "Mit meinen Antworten anfangen",
+      "distanceTitre": "{{autre}} ist nicht bei dir?",
+      "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
       "envoyer": "Link senden",
       "copier": "Link kopieren",
       "copie": "Link kopiert!",
-      "qr": "QR-Code anzeigen",
-      "qrAide": "{{autre}} kann ihn mit der Handykamera scannen.",
       "message": "Ich habe unsere Beziehungsanalyse angefangen, jetzt bist du dran: {{lien}}",
       "messageTitre": "Unsere Beziehungsanalyse",
       "monLien": "Dein persönlicher Link",
       "monLienAide": "Damit kannst du deine Antworten auf einem anderen Gerät fortsetzen. Gib ihn niemandem, auch nicht {{autre}}: Er ist der Schlüssel zu deinen Antworten.",
       "copierMonLien": "Meinen Link kopieren",
-      "commencer": "Mit meinen Antworten anfangen",
       "dejaRejoint": "{{autre}} ist der Analyse beigetreten."
     },
     "rejoindre": {
@@ -207,7 +208,12 @@
       "immediat": "Der Bericht öffnet sich hier gleich nach der Zahlung, für euch beide, und der Link zum PDF geht per E-Mail raus.",
       "moyens": "Akzeptierte Zahlungsarten",
       "colle": "Euer Bericht",
-      "colleBouton": "Freischalten"
+      "colleBouton": "Freischalten",
+      "region": {
+        "latam": "Preis für Lateinamerika",
+        "avant": "Statt",
+        "apres": "Preis für Lateinamerika:"
+      }
     },
     "paiement": {
       "verification": "Zahlung wird geprüft...",
@@ -693,7 +699,7 @@
   "lp": {
     "badge": "Beziehungsanalyse",
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
-    "sousTitre": "20 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
+    "sousTitre": "20 Minuten zusammen, jeder auf dem eigenen Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
     "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
     "soloLien": "Mach sie allein",
@@ -716,7 +722,7 @@
       },
       {
         "n": "20 Min.",
-        "l": "pro Person, im eigenen Tempo"
+        "l": "zusammen, jeder auf seinem Handy"
       },
       {
         "n": "0 €",
@@ -729,12 +735,12 @@
         {
           "duree": "2 Min.",
           "titre": "Ihr legt die Analyse an",
-          "texte": "Eure beiden Vornamen, dann schickst du deinem Partner oder deiner Partnerin den Link."
+          "texte": "Eure beiden Vornamen, dann scannt dein Partner oder deine Partnerin den QR-Code auf deinem Bildschirm oder bekommt den Link."
         },
         {
           "duree": "20 Min.",
-          "titre": "Jeder antwortet für sich",
-          "texte": "Auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Ihr könnt jederzeit eine Pause machen."
+          "titre": "Ihr antwortet gleichzeitig",
+          "texte": "Jeder auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Ihr könnt jederzeit eine Pause machen."
         },
         {
           "duree": "1 Min.",
@@ -792,9 +798,9 @@
       "intro": "Wenn der andere nicht darüber reden möchte, kannst du sie auch für dich machen. Gleicher Preis, gleicher Bericht.",
       "duo": {
         "titre": "Zu zweit",
-        "sous": "Jeder auf dem eigenen Handy",
+        "sous": "Gleichzeitig, jeder auf dem eigenen Handy",
         "points": [
-          "Jeder antwortet für sich, im eigenen Tempo",
+          "Ihr antwortet zusammen, ohne die Antworten des anderen zu sehen",
           "Der Bericht vergleicht eure Antworten, Thema für Thema"
         ],
         "cta": "Zu zweit beginnen"
