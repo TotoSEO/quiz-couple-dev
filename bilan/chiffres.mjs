@@ -162,9 +162,9 @@ async function analyse(base, jours) {
     tableau('Par langue et façon de faire :', entonnoir(lignes, (l) => `${l.lang} ${l.mode}`));
     tableau('Par source :', entonnoir(lignes, (l) => l.src || 'direct'));
     tableau('Avant et après le 25 octobre au soir :', entonnoir(lignes, (l) => `${l.cree_le < bascule ? 'avant' : 'après'} ${l.mode}`));
-    // Le 27 octobre 2026 vers 15 h UTC, la mise en ligne : l'invitation au
+    // Le 27 octobre 2026 vers midi UTC, la mise en ligne : l'invitation au
     // même moment (QR code en grand) et le prix de l'Amérique latine.
-    const bascule27 = '2026-10-27T15:00:00Z';
+    const bascule27 = '2026-10-27T12:00:00Z';
     tableau('Avant et après le 27 octobre (QR code en grand, prix Amérique latine) :', entonnoir(lignes, (l) => `${l.cree_le < bascule27 ? 'avant' : 'après'} ${l.lang} ${l.mode}`));
     const auPrixRegion = Object.fromEntries(Object.entries(PRIX_REGIONS).map(([z, c]) => [z, lignes.filter((l) => l.paye_le && l.paiement_montant === c).length]));
     console.log('Ventes au prix d\'une région :', JSON.stringify(auPrixRegion));

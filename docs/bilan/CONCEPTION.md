@@ -1764,7 +1764,7 @@ depuis le lancement du 19 octobre :
 ### Ce qu'il faut regarder
 
 `bilan-chiffres.yml` écrit depuis ce jour-là l'entonnoir avant et après la
-mise en ligne (vers 15 h UTC), par langue et par façon de faire, les ventes
+mise en ligne (vers midi UTC), par langue et par façon de faire, les ventes
 au prix d'une région (`paiement_montant` à 398) et les comptes du jour :
 `invitation_vue` avec et sans la clé `qr`, `offre_vue:latam`,
 `paiement_region:latam`.
