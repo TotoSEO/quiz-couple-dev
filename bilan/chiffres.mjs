@@ -82,6 +82,25 @@ export function entonnoir(lignes, cle) {
   return t;
 }
 
+// À deux, le rythme de celles qui vont au bout : le partenaire arrivé moins
+// d'une heure après la création (le couple la fait ensemble), plus tard le
+// même jour, ou un autre jour, et ce que chacun de ces cas paie.
+export function rythmeDuo(lignes) {
+  const t = {};
+  const h = (a, b) => (new Date(b) - new Date(a)) / 3600000;
+  for (const l of lignes || []) {
+    if (l.mode === 'solo' || !l.b_consent) continue;
+    const d = h(l.cree_le, l.b_consent);
+    const k = `${l.lang} partenaire ${d < 1 ? 'en moins d\'une heure' : d < 24 ? 'le même jour' : 'un autre jour'}`;
+    const e = (t[k] = t[k] || { rejoints: 0, completes: 0, paiement_ouvert: 0, payees: 0 });
+    e.rejoints++;
+    if (l.a_fini && l.b_fini) e.completes++;
+    if (l.renonciation_le) e.paiement_ouvert++;
+    if (l.paye_le) e.payees++;
+  }
+  return Object.fromEntries(Object.entries(t).sort());
+}
+
 // Où s'arrête la personne qui a créé l'évaluation et n'a pas fini : l'étape
 // gardée dans a_etape (le premier domaine pas fini), « aucune » si elle n'a
 // rien envoyé.
@@ -142,6 +161,8 @@ async function analyse(base, jours) {
     tableau('Par langue et façon de faire :', entonnoir(lignes, (l) => `${l.lang} ${l.mode}`));
     tableau('Par source :', entonnoir(lignes, (l) => l.src || 'direct'));
     tableau('Avant et après le 25 octobre au soir :', entonnoir(lignes, (l) => `${l.cree_le < bascule ? 'avant' : 'après'} ${l.mode}`));
+    console.log('À deux, selon le moment où le partenaire arrive :');
+    for (const [k, v] of Object.entries(rythmeDuo(lignes))) console.log(`  ${k.padEnd(36)} ${JSON.stringify(v)}`);
     console.log('Où s\'arrête le créateur, avant le 25 octobre au soir :', JSON.stringify(arretsCreateur(lignes.filter((l) => l.cree_le < bascule))));
     console.log('Où s\'arrête le créateur, depuis :', JSON.stringify(arretsCreateur(lignes.filter((l) => l.cree_le >= bascule))));
     const heures = {};
