@@ -204,6 +204,26 @@ test('trois échecs : la déclinaison passe en échec, avec alerte', async () =>
   assert.ok(b.tables.social_journal.some((j) => j.niveau === 'erreur'));
 });
 
+test('un refus pour soupçon de spam : abandonné dès le premier essai, sans retenter', async () => {
+  const b = base({ publierA: plus(0) });
+  const ig = faux(['FINISHED']);
+  ig.publier = async (id) => {
+    ig.appels.push(['publier', id]);
+    const e = new Error("Instagram /178/media_publish : publication refusée, Instagram la soupçonne d'être du spam (code 4, sous-code 2207051 : « Application request limit reached »)");
+    e.spam = true;
+    throw e;
+  };
+  await publier(b, { maintenant: plus(0), instagramPour: () => ig });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'echec');
+  assert.equal(v.essais, 3);
+  assert.match(v.erreur, /soupçonne d'être du spam/);
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'erreur' && /spam/.test(j.message)));
+  // le passage suivant n'y touche plus
+  await publier(b, { maintenant: plus(10), instagramPour: () => ig });
+  assert.equal(ig.appels.filter(([quoi]) => quoi === 'publier').length, 1);
+});
+
 test("compte inactif : un post en retard n'est pas compté en échec", async () => {
   const b = base({ actif: false, publierA: plus(-180) });
   const r = await publier(b, { maintenant: T0, instagramPour: () => faux() });
