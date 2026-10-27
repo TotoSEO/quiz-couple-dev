@@ -102,6 +102,25 @@ export function rythmeDuo(lignes) {
   return Object.fromEntries(Object.entries(t).sort());
 }
 
+// Chaque évaluation allée au bout, dans l'ordre où elle l'a été (27 octobre
+// 2026, Thomas : « est-ce qu'on n'aurait pas arrêté d'avoir des conversions
+// depuis que tu as mis en place la synthèse gratuite ? ») : l'heure de Paris
+// où la dernière réponse est arrivée, la langue, la façon de faire, la
+// source, et ce qui a suivi (page de paiement ouverte, vente). Des dates
+// seulement, à mettre en face des mises en ligne.
+const heureParis = (iso) => (iso ? new Intl.DateTimeFormat('fr-FR', {
+  timeZone: 'Europe/Paris', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+}).format(new Date(iso)) : '');
+export function completesDansLOrdre(lignes) {
+  return (lignes || [])
+    .filter((l) => l.a_fini && (l.mode === 'solo' || l.b_fini))
+    .map((l) => ({ l, fin: l.mode === 'solo' ? l.a_fini : (l.a_fini > l.b_fini ? l.a_fini : l.b_fini) }))
+    .sort((x, y) => (x.fin < y.fin ? -1 : x.fin > y.fin ? 1 : 0))
+    .map(({ l, fin }) => `${heureParis(fin)} · ${l.lang} · ${l.mode} · source ${l.src || 'direct'}`
+      + (l.renonciation_le ? ` · paiement ouvert ${heureParis(l.renonciation_le)}` : '')
+      + (l.paye_le ? ` · payée ${heureParis(l.paye_le)}${l.paiement_montant ? ` (${(l.paiement_montant / 100).toFixed(2)} €)` : ''}` : ''));
+}
+
 // Où s'arrête la personne qui a créé l'évaluation et n'a pas fini : l'étape
 // gardée dans a_etape (le premier domaine pas fini), « aucune » si elle n'a
 // rien envoyé.
@@ -168,6 +187,8 @@ async function analyse(base, jours) {
     tableau('Avant et après le 27 octobre (QR code en grand, prix Amérique latine) :', entonnoir(lignes, (l) => `${l.cree_le < bascule27 ? 'avant' : 'après'} ${l.lang} ${l.mode}`));
     const auPrixRegion = Object.fromEntries(Object.entries(PRIX_REGIONS).map(([z, c]) => [z, lignes.filter((l) => l.paye_le && l.paiement_montant === c).length]));
     console.log('Ventes au prix d\'une région :', JSON.stringify(auPrixRegion));
+    console.log('Les évaluations allées au bout, dans l\'ordre (heure de Paris de la dernière réponse) :');
+    for (const l of completesDansLOrdre(lignes)) console.log('  ' + l);
     console.log('À deux, selon le moment où le partenaire arrive :');
     for (const [k, v] of Object.entries(rythmeDuo(lignes))) console.log(`  ${k.padEnd(36)} ${JSON.stringify(v)}`);
     console.log('Où s\'arrête le créateur, avant le 25 octobre au soir :', JSON.stringify(arretsCreateur(lignes.filter((l) => l.cree_le < bascule))));
