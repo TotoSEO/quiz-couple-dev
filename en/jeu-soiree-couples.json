@@ -1,0 +1,696 @@
+{
+  "hero": {
+    "badge": "New • 2 to 5 couples • Everyone on their own phone",
+    "title": "Quiz Couple's multi-couple party game! Multiplayer for up to 10 people",
+    "titleHighlight": "multi-couple party game",
+    "description": "A couples party game made for several couples: one person creates the game and becomes the host, the others join with a code, and each couple answers from their own phone. You need at least two couples to play."
+  },
+  "jsonLd": {
+    "name": "The couples party game: Quiz Couple's multiplayer"
+  },
+  "app": {
+    "accueil": {
+      "titre": "Who's hosting tonight?",
+      "texte": "One person creates the game: that's the host. The others join with the code, each on their own phone, then the host pairs everyone up into couples.",
+      "creer": "Create a game",
+      "creerAide": "I'm the host",
+      "rejoindre": "I have a code",
+      "rejoindreAide": "Someone already created the game",
+      "minimum": "2 to 5 couples, so 4 to 10 players.",
+      "seulTitre": "Just the two of you tonight?",
+      "seulTexte": "This game needs at least two couples. For two, these tests are made for you:"
+    },
+    "creer": {
+      "titre": "You're the host",
+      "texte": "You pair everyone up, launch the questions and reveal the answers. You can play at the same time, or just run the show.",
+      "prenom": "Your first name",
+      "joue": "I'm playing too",
+      "joueAide": "You'll be in a couple",
+      "anime": "I'm only hosting",
+      "animeAide": "You won't answer",
+      "bouton": "Create the game",
+      "prenomRequis": "Enter your first name to create the game."
+    },
+    "rejoindre": {
+      "titre": "Join a game",
+      "texte": "Enter the code the host gave you, and your first name.",
+      "code": "Game code",
+      "prenom": "Your first name",
+      "bouton": "Join",
+      "codeInvalide": "A code is 6 letters or digits.",
+      "prenomRequis": "Enter your first name to join.",
+      "connexion": "Connecting…",
+      "introuvable": "Nobody is waiting on this code. Check it with the host, or ask them to create the game again.",
+      "complete": "The game is already full: 10 players is the maximum.",
+      "commencee": "This game has already started, nobody can join anymore.",
+      "erreurReseau": "Can't connect. Check your connection and try again."
+    },
+    "salle": {
+      "titre": "Game created!",
+      "codeLabel": "Game code",
+      "scan": "Have everyone scan this QR code, or send them the code or the link. Each person joins from their own phone.",
+      "copier": "Copy the link",
+      "copie": "Link copied!",
+      "envoyer": "Send the link",
+      "joueurs": "Players",
+      "aucun": "Nobody has arrived yet. Give them a second to scan…",
+      "vous": "you",
+      "mj": "host",
+      "couplesTitre": "The couples",
+      "couplesAide": "Tap two names to make a couple, or let the game pair people up in order of arrival.",
+      "auto": "Pair up in order of arrival",
+      "defaire": "Undo",
+      "retirer": "Remove",
+      "sansCouple": "Not in a couple yet",
+      "couple": "Couple {{n}}",
+      "nb": "Number of questions",
+      "nbAide": "You'll be able to extend at the last question.",
+      "commencer": "Start the game",
+      "manque": "You need at least 2 couples to start the game.",
+      "pasAssigne": "{{n}} player(s) without a couple: pair them up or remove them.",
+      "unSeul": "With a single couple, the game goes nowhere: you need at least one more couple. For two, these tests are made for you:",
+      "attente": "Waiting for the host…",
+      "attenteTexte": "{{mj}} is pairing everyone up and will start the game as soon as everyone is here.",
+      "avec": "You're playing with {{nom}}",
+      "pasEncore": "The host hasn't put you in a couple yet.",
+      "arrives": "Already here:"
+    },
+    "partie": {
+      "question": "Question {{n}}/{{total}}",
+      "accord": "Match round",
+      "speciale": "Special round",
+      "toi": "Answer for yourself. {{nom}} has to guess your answer!",
+      "devine": "Guess what {{nom}} is going to answer!",
+      "vote": "Everyone votes for a couple, their own included.",
+      "enregistre": "Answer saved!",
+      "attente": "Waiting for the others… {{n}}/{{total}} have answered.",
+      "attenteMj": "The host reveals the answers once everyone has answered.",
+      "mjReponses": "{{n}}/{{total}} have answered",
+      "mjTous": "Everyone has answered!",
+      "reveler": "Reveal the answers",
+      "revelerQuandMeme": "Reveal without waiting",
+      "passer": "Skip this question",
+      "spectateur": "You're hosting: the players answer on their phones.",
+      "manquent": "Still missing: {{noms}}"
+    },
+    "revele": {
+      "titre": "The answers",
+      "accordOui": "Same answer: +1 point!",
+      "accordNon": "Missed, not the same answer.",
+      "serie": "Streak of {{n}}: +1 bonus point!",
+      "aRepondu": "{{nom}} answered: {{r}}",
+      "pensait": "{{nom}} guessed: {{r}}",
+      "sansReponse": "no answer",
+      "couplesOk": "The couples who got it",
+      "aucun": "No couple got it this time!",
+      "tous": "Every couple got it!",
+      "votes": "{{n}} votes",
+      "gagnant": "{{couple}} wins the title “{{titre}}”: +2 points!",
+      "egalite": "It's a tie: +1 point for {{couples}}.",
+      "aucunVote": "Nobody voted.",
+      "suivant": "Next question",
+      "attenteMj": "Waiting for the host to move on…",
+      "scores": "Scores",
+      "derniereTitre": "That was the last question!",
+      "prolonger": "Add {{n}} more questions",
+      "prolongerAide": "{{n}} questions left in the bank.",
+      "terminer": "Show the results",
+      "derniereJoueur": "Last question: the host can extend the game or show the results.",
+      "vote": "1 vote"
+    },
+    "fin": {
+      "titre": "Tonight's results",
+      "sousTitre": "{{n}} questions, {{couples}} couples, and only one podium.",
+      "podium": "The podium",
+      "gagnant": "{{couple}} wins the night!",
+      "egalite": "Tied at the top: {{couples}}!",
+      "accords": "{{n}} matches out of {{total}}",
+      "serieMax": "best streak: {{n}}",
+      "titres": "Titles",
+      "aucunTitre": "No title, but a great night",
+      "rejouer": "Play again with the same players",
+      "nouvelle": "New game",
+      "attenteRejouer": "The host can start another game with the same players.",
+      "points": "{{n}} pts",
+      "point": "1 pt"
+    },
+    "bandeau": {
+      "mj": "You're the host · code {{code}}",
+      "joueur": "Game {{code}} · host: {{mj}}",
+      "mjParti": "The host got disconnected. Waiting for them to come back…",
+      "mjRevenu": "The host is back!",
+      "coupure": "Connection lost. Retrying…",
+      "quitter": "Leave",
+      "quitterTexte": "Leave the game? The others will carry on without you.",
+      "annulerTexte": "Cancel the game for everyone?",
+      "oui": "Yes",
+      "non": "No, keep going",
+      "annulee": "The host cancelled the game.",
+      "retire": "The host removed you from the game.",
+      "retour": "Back to the game",
+      "deconnecte": "offline"
+    },
+    "partage": {
+      "texte": "Join our game of Quiz Couple's multi-couple party game! Code {{code}}: {{lien}}"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "toi": "In the morning, when you wake up, you're:",
+      "lui": "In the morning, when {{nom}} wakes up, {{nom}} is:",
+      "options": [
+        "In a good mood right away",
+        "Functional after coffee",
+        "To be avoided before noon",
+        "Impossible to get out of bed"
+      ]
+    },
+    {
+      "id": 2,
+      "toi": "The show you're watching right now, you watch it:",
+      "lui": "The show {{nom}} is watching right now, {{nom}} watches it:",
+      "options": [
+        "One episode a night, sensibly",
+        "Three in a row minimum",
+        "While doing something else",
+        "No show going on right now"
+      ]
+    },
+    {
+      "id": 3,
+      "toi": "At a restaurant, you order:",
+      "lui": "At a restaurant, {{nom}} orders:",
+      "options": [
+        "Always the same dish",
+        "The weirdest thing on the menu",
+        "After asking the whole table",
+        "One dish, and a fork in the other's plate"
+      ]
+    },
+    {
+      "id": 4,
+      "toi": "Your dream holiday:",
+      "lui": "{{nom}}'s dream holiday:",
+      "options": [
+        "A beach and nothing else",
+        "A big city to explore",
+        "Mountains and hikes",
+        "A road trip with no plan"
+      ]
+    },
+    {
+      "id": 5,
+      "toi": "When you have $50 to spare, it goes:",
+      "lui": "When {{nom}} has $50 to spare, it goes:",
+      "options": [
+        "On a restaurant",
+        "On clothes",
+        "Into savings",
+        "Nobody ever knows where"
+      ]
+    },
+    {
+      "id": 6,
+      "toi": "Your favourite kind of movie:",
+      "lui": "{{nom}}'s favourite kind of movie:",
+      "options": [
+        "A comedy",
+        "An action movie",
+        "A love story",
+        "A scary one"
+      ]
+    },
+    {
+      "id": 7,
+      "toi": "At a party, you're:",
+      "lui": "At a party, {{nom}} is:",
+      "options": [
+        "In the middle of the dance floor",
+        "In the kitchen, chatting",
+        "On the sofa with the cat",
+        "Gone before midnight"
+      ]
+    },
+    {
+      "id": 8,
+      "toi": "In the car, you sing:",
+      "lui": "In the car, {{nom}} sings:",
+      "options": [
+        "A 2000s hit",
+        "Rap",
+        "A Disney song",
+        "Nothing, silence is nice"
+      ]
+    },
+    {
+      "id": 9,
+      "toi": "Cleaning, for you, is:",
+      "lui": "Cleaning, for {{nom}}, is:",
+      "options": [
+        "A little every day",
+        "One big session at the weekend",
+        "When you can't see the floor anymore",
+        "The other one's job"
+      ]
+    },
+    {
+      "id": 10,
+      "toi": "Faced with a spider, your reaction:",
+      "lui": "Faced with a spider, {{nom}}'s reaction:",
+      "options": [
+        "A glass and a sheet of paper, and out it goes",
+        "Squashed without a second thought",
+        "A scream, and help!",
+        "Leave the room forever"
+      ]
+    },
+    {
+      "id": 11,
+      "toi": "Your ideal breakfast:",
+      "lui": "{{nom}}'s ideal breakfast:",
+      "options": [
+        "Sweet: pastries and jam",
+        "Savoury: eggs and bacon",
+        "Just a coffee",
+        "A brunch that lasts until 2 pm"
+      ]
+    },
+    {
+      "id": 12,
+      "toi": "When you're running late:",
+      "lui": "When {{nom}} is running late:",
+      "options": [
+        "A message right away",
+        "“Five minutes away!”",
+        "Nothing, we'll see",
+        "Never late"
+      ]
+    },
+    {
+      "id": 13,
+      "toi": "Your ideal pet:",
+      "lui": "{{nom}}'s ideal pet:",
+      "options": [
+        "A dog",
+        "A cat",
+        "A goldfish",
+        "None, thanks"
+      ]
+    },
+    {
+      "id": 14,
+      "toi": "At the movies, your popcorn is:",
+      "lui": "At the movies, {{nom}}'s popcorn is:",
+      "options": [
+        "Sweet",
+        "Salted",
+        "Gone before the movie starts",
+        "Swapped for M&M's"
+      ]
+    },
+    {
+      "id": 15,
+      "toi": "Your worst habit in the car:",
+      "lui": "{{nom}}'s worst habit in the car:",
+      "options": [
+        "Ranting at other drivers",
+        "Turning the music all the way up",
+        "Giving the driver advice",
+        "Falling asleep within five minutes"
+      ]
+    },
+    {
+      "id": 16,
+      "toi": "Your perfect Sunday:",
+      "lui": "{{nom}}'s perfect Sunday:",
+      "options": [
+        "A lie-in and pyjamas",
+        "A day out with family or friends",
+        "Sport",
+        "A big clean-up and the groceries"
+      ]
+    },
+    {
+      "id": 17,
+      "toi": "Your favourite social network:",
+      "lui": "{{nom}}'s favourite social network:",
+      "options": [
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "None, the phone stays in the pocket"
+      ]
+    },
+    {
+      "id": 18,
+      "toi": "When someone surprises you:",
+      "lui": "When someone surprises {{nom}}:",
+      "options": [
+        "Tears of joy",
+        "A big scream",
+        "An awkward smile",
+        "The surprise was already figured out"
+      ]
+    },
+    {
+      "id": 19,
+      "toi": "In the kitchen, you're:",
+      "lui": "In the kitchen, {{nom}} is:",
+      "options": [
+        "A real chef",
+        "Fine, nothing more",
+        "Always the same dish",
+        "More of a takeaway person"
+      ]
+    },
+    {
+      "id": 20,
+      "toi": "Your superpower, if you could pick:",
+      "lui": "The superpower {{nom}} would pick:",
+      "options": [
+        "Flying",
+        "Reading minds",
+        "Being invisible",
+        "Stopping time"
+      ]
+    },
+    {
+      "id": 21,
+      "toi": "Your drink at the bar:",
+      "lui": "{{nom}}'s drink at the bar:",
+      "options": [
+        "A beer",
+        "A cocktail",
+        "A glass of wine",
+        "A soda or a juice"
+      ]
+    },
+    {
+      "id": 22,
+      "toi": "You lose your keys:",
+      "lui": "{{nom}} loses the keys:",
+      "options": [
+        "Never",
+        "Once a month",
+        "Once a week",
+        "Right now, where are they?"
+      ]
+    },
+    {
+      "id": 23,
+      "toi": "Sport and you:",
+      "lui": "Sport and {{nom}}:",
+      "options": [
+        "Signed up and committed",
+        "Signed up and never there",
+        "A walk now and then",
+        "Totally allergic"
+      ]
+    },
+    {
+      "id": 24,
+      "toi": "The gift you'd love to get:",
+      "lui": "The gift {{nom}} would love to get:",
+      "options": [
+        "A surprise weekend away",
+        "A gadget",
+        "A nice restaurant",
+        "Something handmade"
+      ]
+    },
+    {
+      "id": 25,
+      "toi": "Your exes, today:",
+      "lui": "{{nom}}'s exes, today:",
+      "options": [
+        "No news, ever",
+        "A hello now and then",
+        "Still friends",
+        "Blocked everywhere"
+      ]
+    },
+    {
+      "id": 26,
+      "toi": "At karaoke, you're:",
+      "lui": "At karaoke, {{nom}} is:",
+      "options": [
+        "First on the mic",
+        "On the mic only after two drinks",
+        "In the crowd, going wild",
+        "Nowhere to be found"
+      ]
+    },
+    {
+      "id": 27,
+      "toi": "At the beach, you're:",
+      "lui": "At the beach, {{nom}} is:",
+      "options": [
+        "Straight into the water",
+        "On the towel, tanning",
+        "Under the umbrella with a book",
+        "At the beach bar"
+      ]
+    },
+    {
+      "id": 28,
+      "toi": "Your comfort food:",
+      "lui": "{{nom}}'s comfort food:",
+      "options": [
+        "Pasta",
+        "Pizza",
+        "Grandma's cooking",
+        "Chocolate, and that's it"
+      ]
+    },
+    {
+      "id": 29,
+      "toi": "To get up in the morning, you need:",
+      "lui": "To get up in the morning, {{nom}} needs:",
+      "options": [
+        "One alarm, just one",
+        "Three alarms minimum",
+        "Someone to shake them",
+        "Nothing, up before the alarm"
+      ]
+    },
+    {
+      "id": 30,
+      "toi": "Your favourite outfit:",
+      "lui": "{{nom}}'s favourite outfit:",
+      "options": [
+        "Joggers and a hoodie",
+        "Jeans and a t-shirt",
+        "Always dressed up",
+        "The same jumper for ten years"
+      ]
+    },
+    {
+      "id": 31,
+      "toi": "When you're sick:",
+      "lui": "When {{nom}} is sick:",
+      "options": [
+        "At death's door, to hear it",
+        "At work anyway",
+        "In bed with a herbal tea",
+        "Never sick, which is suspicious"
+      ]
+    },
+    {
+      "id": 32,
+      "toi": "A bad dish at a restaurant, your reaction:",
+      "lui": "A bad dish at a restaurant, {{nom}}'s reaction:",
+      "options": [
+        "Sent straight back to the kitchen",
+        "A Google review that same night",
+        "Nothing, but never again here",
+        "Eaten anyway"
+      ]
+    },
+    {
+      "id": 33,
+      "toi": "Your side of the bed:",
+      "lui": "{{nom}}'s side of the bed:",
+      "options": [
+        "Left",
+        "Right",
+        "The middle, starfish style",
+        "Changes every night"
+      ]
+    },
+    {
+      "id": 34,
+      "toi": "A board game, and you're:",
+      "lui": "A board game, and {{nom}} is:",
+      "options": [
+        "Ultra competitive",
+        "Here for the laughs",
+        "The one who reads the rules",
+        "A sore loser"
+      ]
+    },
+    {
+      "id": 35,
+      "toi": "Your profile picture:",
+      "lui": "{{nom}}'s profile picture:",
+      "options": [
+        "A selfie",
+        "A travel photo",
+        "A photo of the two of you",
+        "An animal or a drawing"
+      ]
+    },
+    {
+      "id": 36,
+      "toi": "The topic you can talk about forever:",
+      "lui": "The topic {{nom}} can talk about forever:",
+      "options": [
+        "Work",
+        "Sport",
+        "Gossip",
+        "Food"
+      ]
+    }
+  ],
+  "speciales": [
+    {
+      "id": 101,
+      "q": "Which couple parties the hardest?",
+      "titre": "The party couple"
+    },
+    {
+      "id": 102,
+      "q": "Which couple kisses the most in public?",
+      "titre": "The most lovey-dovey couple"
+    },
+    {
+      "id": 103,
+      "q": "Which couple fights over the remote?",
+      "titre": "The remote-control couple"
+    },
+    {
+      "id": 104,
+      "q": "Which couple is always late?",
+      "titre": "The always-late couple"
+    },
+    {
+      "id": 105,
+      "q": "Which couple will still be together in fifty years?",
+      "titre": "The couple for life"
+    },
+    {
+      "id": 106,
+      "q": "Which couple has the best holiday stories?",
+      "titre": "The holiday couple"
+    },
+    {
+      "id": 107,
+      "q": "Which couple cooks the best?",
+      "titre": "The kitchen couple"
+    },
+    {
+      "id": 108,
+      "q": "Which couple is the most alike?",
+      "titre": "The twins"
+    },
+    {
+      "id": 109,
+      "q": "Which couple would get lost first on a road trip?",
+      "titre": "The GPS couple"
+    },
+    {
+      "id": 110,
+      "q": "Which couple posts the most photos together?",
+      "titre": "The Instagram couple"
+    },
+    {
+      "id": 111,
+      "q": "Which couple had the most romantic first meeting?",
+      "titre": "The love-at-first-sight couple"
+    },
+    {
+      "id": 112,
+      "q": "Which couple could finish a buffet on their own?",
+      "titre": "The foodie couple"
+    },
+    {
+      "id": 113,
+      "q": "Which couple would win Survivor as a team?",
+      "titre": "The adventurer couple"
+    },
+    {
+      "id": 114,
+      "q": "Which couple falls asleep first during a movie?",
+      "titre": "The sleepyhead couple"
+    }
+  ],
+  "section1": {
+    "title": "A couples party game, made for several couples",
+    "p1": "The couples party game is a game you play when several couples are in the same place: a dinner with friends, a weekend away together, a holiday evening. It's for two to five couples, so four to ten people, and everyone plays from their own phone. There's nothing to install: one person opens this page, creates the game, and the others join by scanning a QR code or typing in a code.",
+    "p2": "The whole idea is to find out which couple knows each other best. On every question, in every couple, one person answers for themselves and the other has to guess their answer. For example: “In the morning, when you wake up, you're: in a good mood right away, functional after coffee, to be avoided before noon, or impossible to get out of bed?” If both answers are the same, the couple scores a point. And since all the couples play at the same time, you see straight away who got it and who got it wrong… which always starts a discussion!",
+    "p3": "Between the questions there are special rounds where everyone votes for a couple: “Which couple parties the hardest?”, “Which couple is always late?”. The couple with the most votes wins two points and a title, which they keep until the final podium. It's a bit like the multi-couple version of <a href=\"{{quizMost}}\">those questions where you point at which one of you is the most stubborn or the most talkative</a>, except here the other couples are the judges."
+  },
+  "section2": {
+    "title": "How it works",
+    "intro": "Here's how a game goes, from the first scan to the podium:",
+    "etapes": [
+      {
+        "titre": "One person creates the game",
+        "texte": "They become the host. They can play at the same time, or only run the show if you're an odd number. The page gives them a six-letter code, a QR code and a link."
+      },
+      {
+        "titre": "The others join",
+        "texte": "Everyone scans the QR code or types the code on their phone, enters their first name, and lands in the waiting room. Up to ten players in total."
+      },
+      {
+        "titre": "The host pairs people up",
+        "texte": "They tap two names to put them together, or let the game pair people up in order of arrival. They also pick the number of questions: 10, 20, 30 or 40."
+      },
+      {
+        "titre": "You play, and extend if you want",
+        "texte": "On every question, everyone answers on their phone, then the host reveals the answers. At the last question, the host can extend the game by ten questions as long as some are left in the bank."
+      }
+    ],
+    "apres": "At the end, every phone shows the podium: the points, each couple's matches, the best streak, and the titles won during the special rounds. The results stay on screen, so you can show them to the whole table."
+  },
+  "section3": {
+    "title": "Two kinds of rounds",
+    "accordTitre": "Match rounds: do you really know each other?",
+    "accordTexte": "This is the heart of the game. In each couple, one person answers for themselves and the other has to guess what they picked. The roles swap on every question, so each of you guesses in turn. One point per match, and a bonus point when a couple gets three matches in a row. The questions are about everyday life, not big topics: breakfast, which side of the bed, lost keys, the reaction to a spider… In other words, the stuff you're supposed to know about the person you live with, and don't always know!",
+    "specialeTitre": "Special rounds: the other couples vote",
+    "specialeTexte": "One question in four is a special round. Everyone votes for a couple, their own included, and the couple with the most votes wins two points and a title. A few examples:",
+    "exemples": [
+      "Which couple parties the hardest?",
+      "Which couple kisses the most in public?",
+      "Which couple will still be together in fifty years?",
+      "Which couple would get lost first on a road trip?",
+      "Which couple falls asleep first during a movie?"
+    ],
+    "apres": "In the event of a tie, the tied couples share a point and nobody gets the title. The titles show up on the final podium, and from experience, that's what everyone is still talking about the next day."
+  },
+  "seul": {
+    "title": "Just the two of you tonight?",
+    "texte": "Then this game won't help you: it needs at least two couples, otherwise nobody votes and nobody compares. For two, the best thing is to <a href=\"{{testCouple}}\">answer the same questions one after the other</a> and see whether you say the same thing, to <a href=\"{{testCommonPoints}}\">count everything you have in common</a>, or to <a href=\"{{jeuQuiDeNous}}\">point at which one of you does what</a>. And if you just want a laugh on the sofa, <a href=\"{{jeuxCouple}}\">the other games</a> all play on a single phone."
+  },
+  "section4": {
+    "title": "Our tips for a night that works",
+    "p1": "Start the game after the meal, not before: the special rounds work better once everyone is relaxed and the holiday stories are already out. Count on about twenty minutes for 20 questions with three couples, a bit more with five couples, because you're always waiting for the one who went to get a bottle.",
+    "p2": "The host doesn't have to wait for everyone. If one answer is missing, they can reveal without waiting, and the late player counts as a miss. They can also skip a question that doesn't speak to anyone. And if someone loses their connection, they reload the page and get their spot back in the game.",
+    "p3": "One last tip: with two couples it works fine too, but the special rounds often end in a tie. With three couples or more, there's always a vote that settles it, and that's when the titles get funny."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How many players do you need?",
+    "a1": "At least two couples, so four players, and at most five couples, so ten players. If you're an odd number, one person creates the game and only hosts: they don't answer, but they launch the questions and reveal the answers.",
+    "q2": "Do you need to install anything or create an account?",
+    "a2": "No. Everything happens in the phone's browser. The host opens this page and creates the game, the others scan the QR code or type the code. There's no account to create.",
+    "q3": "Does it work if you're not in the same room?",
+    "a3": "Yes, the game runs over the internet, not Bluetooth: everyone can play from home at the same time, on a video call for example. But it's still funniest around a table, because you get to see the faces of those who got it wrong.",
+    "q4": "How are the couples formed?",
+    "a4": "The host forms them, by tapping two names in the waiting room. They can also let the game pair people up in order of arrival. A player without a couple can't play: the host has to pair them up or remove them before starting the game.",
+    "q5": "Can you extend the game?",
+    "a5": "Yes. The host picks the number of questions at the start, 10, 20, 30 or 40, and at the last question the page offers to add ten more, as long as some are left in the bank. A game stops at 40 questions at most.",
+    "q6": "Why do you need an email address to see the results?",
+    "a6": "The podium sits behind a small gate: everyone leaves their email address on their own phone, once, and all the results on the site unlock on that device. We use it to send Quiz Couple's news and tips, and you can unsubscribe in one click."
+  }
+}

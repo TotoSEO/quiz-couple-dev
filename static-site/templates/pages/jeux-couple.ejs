@@ -6,6 +6,9 @@
 
   // Les jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
   const jeux = [
+    // Le jeu de soirée pour couples (27 octobre 2026) : le seul à plusieurs
+    // couples, chacun sur son téléphone ; en tête, avec son drapeau.
+    { routeKey: 'jeuSoireeCouples',   cle: 'soiree',           emoji: '🎉', accent: '24 90% 50%',  img: 'soiree-couples-mascottes', multi: true, rang: 14 },
     { routeKey: 'quizTuPreferes',     cle: 'tuPreferes',        emoji: '🤔', accent: '270 45% 58%', img: 'would-you-rather-doors' },
     { routeKey: 'jeuActionVerite',    cle: 'actionVerite',      emoji: '🎲', accent: '340 65% 62%', img: 'conversation-cards' },
     { routeKey: 'jeuActionVeriteHot', cle: 'actionVeriteHot',   emoji: '🌶️', accent: '12 78% 56%',  img: 'naughty-date-night', adultes: true },
@@ -49,7 +52,7 @@
               "description": t(ns + ':jeux.' + j.cle + 'Tagline', ''),
               "url": j.url,
               "isAccessibleForFree": true,
-              "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 2 }
+              "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": j.multi ? 4 : 2, "maxValue": j.multi ? 10 : 2 }
             }
           };
         })
@@ -125,6 +128,7 @@
           <% const srcJeu = '/quiz/featured/' + j.img + '.webp'; %>
           <img src="<%= srcJeu %>"<% if (srcsetImage(srcJeu)) { %> srcset="<%= srcsetImage(srcJeu) %>" sizes="(min-width: 1100px) 252px, (min-width: 640px) calc((100vw - 60px) / 2), calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(j.alt) %>" width="600" height="315" loading="lazy" decoding="async">
           <% if (j.adultes) { %><span class="jeu-card-flag"><%= t(ns + ':jeux.adultes', '18+') %></span><% } %>
+          <% if (j.multi) { %><span class="jeu-card-flag jeu-card-flag--multi"><%= t(ns + ':jeux.multi', '') %></span><% } %>
         </span>
         <span class="jeu-card-corps">
           <span class="jeu-card-emoji" aria-hidden="true"><%= j.emoji %></span>
@@ -175,11 +179,14 @@
             </tr>
           </thead>
           <tbody>
-            <% jeux.forEach(function(j, i) { %>
+            <%# Les lignes du tableau sont numérotées dans l'ordre historique
+                des jeux (row1 à row13) ; un jeu placé en tête de la liste
+                porte son propre rang (rang: 14) pour garder sa ligne. %>
+            <% let rangSuivant = 0; jeux.forEach(function(j) { const rang = j.rang || (++rangSuivant); %>
             <tr>
-              <th scope="row"><%= t(ns + ':section2.row' + (i + 1) + 'Moment', '') %></th>
+              <th scope="row"><%= t(ns + ':section2.row' + rang + 'Moment', '') %></th>
               <td><a href="<%= j.url %>"><%= t(ns + ':jeux.' + j.cle + 'Nom', '') %></a></td>
-              <td><%= t(ns + ':section2.row' + (i + 1) + 'Pourquoi', '') %></td>
+              <td><%= t(ns + ':section2.row' + rang + 'Pourquoi', '') %></td>
             </tr>
             <% }) %>
           </tbody>

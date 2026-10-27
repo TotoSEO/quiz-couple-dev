@@ -105,6 +105,10 @@ export const ROUTE_SLUGS = {
   jeuOuiNon: { fr: 'jeu-oui-non-couple', en: 'yes-or-no-couples-game', es: 'juego-si-o-no-pareja', de: 'ja-oder-nein-paar-spiel', it: 'gioco-si-o-no-coppia' },
   jeuPhrases: { fr: 'phrases-a-completer-couple', en: 'finish-the-sentence-couples-game', es: 'frases-para-completar-pareja', de: 'satz-vervollstaendigen-paarspiel', it: 'frasi-da-completare-coppia' },
   jeuDixMais: { fr: 'jeu-c-est-un-10-mais', en: 'hes-a-10-but-game', es: 'juego-es-un-10-pero', de: 'er-ist-eine-10-aber-spiel', it: 'gioco-e-un-10-ma' },
+  // Le jeu de soirée pour couples (27 octobre 2026) : à plusieurs couples,
+  // chacun sur son téléphone, un maître du jeu. Positionné sur « jeu de
+  // soirée couples ».
+  jeuSoireeCouples: { fr: 'jeu-de-soiree-couples', en: 'couples-party-game', es: 'juego-de-fiesta-para-parejas', de: 'partyspiel-fuer-paare', it: 'gioco-da-serata-per-coppie' },
   // Les quiz spéciaux de saison (16 octobre 2026) : le hub, puis les cinq quiz
   // d'Halloween. Le hub n'a pas de préfixe « quiz » dans sa clé : il n'est pas
   // une page jouable (pas de moteur, pas d'avis, pas de compteur).
@@ -205,6 +209,10 @@ export const QUIZ_FEATURED = {
   jeuOuiNon:         { file: 'oui-non-vote',           old: null,                  alt: { fr: 'Deux cartes de vote face à face, une verte pour le oui et une rouge pour le non', en: 'Two voting cards facing each other, a green one for yes and a red one for no', es: 'Dos tarjetas de voto frente a frente, una verde para el sí y una roja para el no', de: 'Zwei Abstimmungskarten einander gegenüber, eine grüne für Ja und eine rote für Nein', it: 'Due carte per votare una di fronte all\'altra, una verde per il sì e una rossa per il no' } },
   jeuPhrases:        { file: 'deux-bulles-phrase',    old: null,                  alt: { fr: 'Deux bulles de conversation, une rose et une violette, qui finissent chacune par trois points de suspension', en: 'Two speech bubbles, one pink and one purple, each ending in three dots', es: 'Dos bocadillos de conversación, uno rosa y otro morado, que terminan con tres puntos suspensivos', de: 'Zwei Sprechblasen, eine rosa und eine violette, die beide mit drei Punkten enden', it: 'Due fumetti, uno rosa e uno viola, che finiscono entrambi con tre puntini' } },
   jeuDixMais:        { file: 'macaron-fendu',         old: null,                  alt: { fr: "Une boîte de macarons pastel roses et lilas, tous parfaits sauf un, fendu en deux, quelques miettes tombées sur la nappe en lin à côté d'un ruban rose", en: 'A box of pastel pink and lilac macarons, all flawless except one cracked in half, a few crumbs on the linen tablecloth next to a pink ribbon', es: 'Una caja de macarons pastel rosas y lilas, todos perfectos menos uno, partido por la mitad, con unas migas sobre el mantel de lino junto a una cinta rosa', de: 'Eine Schachtel pastellrosa und lila Macarons, alle makellos bis auf einen, der in der Mitte gebrochen ist, daneben ein paar Krümel auf der Leinentischdecke und ein rosa Band', it: 'Una scatola di macaron pastello rosa e lilla, tutti perfetti tranne uno, spezzato a metà, con qualche briciola sulla tovaglia di lino accanto a un nastro rosa' } },
+  // Le jeu de soirée pour couples : trois couples de mascottes autour d'un
+  // téléphone, dessinés avec reseaux/charte/mascottes.js et rendus par
+  // Chromium (pas de générateur d'images depuis une session de travail).
+  jeuSoireeCouples:  { file: 'soiree-couples-mascottes', old: null, alt: { fr: "Trois couples de mascottes, roses et violettes, réunis autour d'une table basse où un téléphone affiche un point d'interrogation, sous une guirlande lumineuse et des confettis", en: 'Three couples of mascots, pink and purple, gathered around a coffee table where a phone shows a question mark, under fairy lights and confetti', es: 'Tres parejas de mascotas, rosas y moradas, reunidas alrededor de una mesa baja donde un móvil muestra un signo de interrogación, bajo una guirnalda de luces y confeti', de: 'Drei Maskottchen-Paare, rosa und lila, um einen Couchtisch versammelt, auf dem ein Handy ein Fragezeichen zeigt, unter einer Lichterkette und Konfetti', it: 'Tre coppie di mascotte, rosa e viola, riunite attorno a un tavolino dove un telefono mostra un punto interrogativo, sotto una ghirlanda di luci e coriandoli' } },
   // Les quiz spéciaux d'Halloween (16 octobre 2026) : des illustrations dessinées pour les pages, jamais une photo de vraie personne ni une image des films
   speciauxCouple:    { file: 'quiz-speciaux-saisons',   old: null, alt: { fr: "Une table de soirée vue de près : une citrouille sculptée, une boule de Noël, une bougie et deux tasses, une rose et une violette, sur des feuilles d'automne", en: 'A close-up of a party table: a carved pumpkin, a Christmas bauble, a candle and two mugs, one pink and one purple, on autumn leaves', es: 'Una mesa de fiesta de cerca: una calabaza tallada, una bola de Navidad, una vela y dos tazas, una rosa y una morada, sobre hojas de otoño', de: 'Ein Partytisch aus der Nähe: ein geschnitzter Kürbis, eine Weihnachtskugel, eine Kerze und zwei Tassen, eine rosa und eine lila, auf Herbstlaub', it: 'Un tavolo da festa da vicino: una zucca intagliata, una pallina di Natale, una candela e due tazze, una rosa e una viola, su foglie autunnali' } },
   quizSerialKiller:  { file: 'halloween-serial-killer', old: null, alt: { fr: "Une ruelle victorienne dans le brouillard, la nuit : un réverbère, l'ombre d'un chapeau haut de forme sur les pavés mouillés, et deux parapluies, un rose et un violet, appuyés contre un mur", en: 'A Victorian alley in the fog at night: a gas lamp, the shadow of a top hat on wet cobblestones, and two umbrellas, one pink and one purple, leaning against a wall', es: 'Un callejón victoriano entre la niebla, de noche: una farola, la sombra de un sombrero de copa sobre los adoquines mojados y dos paraguas, uno rosa y otro morado, apoyados en una pared', de: 'Eine viktorianische Gasse im Nebel bei Nacht: eine Gaslaterne, der Schatten eines Zylinders auf nassem Kopfsteinpflaster und zwei Regenschirme, ein rosa und ein lila, an einer Mauer', it: "Un vicolo vittoriano nella nebbia, di notte: un lampione, l'ombra di un cilindro sui ciottoli bagnati e due ombrelli, uno rosa e uno viola, appoggiati a un muro" } },
@@ -299,6 +307,7 @@ export const ROUTE_CONFIG = {
   jeuOuiNon: { template: 'jeu-oui-non', namespaces: ['jeu-oui-non', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuPhrases: { template: 'jeu-phrases', namespaces: ['jeu-phrases', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuDixMais: { template: 'jeu-dix-mais', namespaces: ['jeu-dix-mais', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuSoireeCouples: { template: 'jeu-soiree-couples', namespaces: ['jeu-soiree-couples', 'quizzes', 'quizGames', 'gd', 'common'] },
   speciauxCouple: { template: 'quiz-speciaux', namespaces: ['quiz-speciaux', 'quizzes', 'common'] },
   quizSerialKiller: { template: 'quiz-serial-killer', namespaces: ['quiz-serial-killer', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizMortFilmHorreur: { template: 'quiz-film-horreur', namespaces: ['quiz-film-horreur', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -399,6 +408,7 @@ export const BILAN_ENTREES = {
   jeuJamais: { groupe: 'jeu', id: 'jamais' },
   jeuQuiPourrait: { groupe: 'jeu', id: 'qui-pourrait' },
   jeuDixMais: { groupe: 'jeu', id: 'dix-mais' },
+  jeuSoireeCouples: { groupe: 'jeu', id: 'soiree' },
   jeuOuiNon: { groupe: 'jeu', id: 'oui-non' },
   pourContre: { groupe: 'jeu', id: 'pour-contre' },
   jeuPhrases: { groupe: 'jeu', id: 'phrases' },
@@ -422,9 +432,16 @@ export const BILAN_ENTREES = {
 // Le body porte data-capture="<id>", capture.js floute le résultat après le
 // titre jusqu'à ce qu'une adresse soit laissée (table abonnes, fonction
 // lead-capture) ; l'id est la source gardée avec l'adresse.
-export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
-  .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
-  .map(([cle, e]) => [cle, e.id]));
+// Le jeu de soirée pour couples est la seule exception parmi les jeux
+// (27 octobre 2026, Thomas : « pour avoir les résultats, il faut qu'ils
+// mettent leur mail, 5 couples c'est 5 adresses voire 10 ! ») : le podium
+// s'affiche sur chaque téléphone derrière la porte, source `soiree`.
+export const CAPTURE_PAGES = {
+  ...Object.fromEntries(Object.entries(BILAN_ENTREES)
+    .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
+    .map(([cle, e]) => [cle, e.id])),
+  jeuSoireeCouples: 'soiree',
+};
 
 // Les moyens de paiement dessinés sous le prix, dans le hero de la page de
 // vente (20 octobre 2026, Thomas : « le pictogramme carte, apple pay, amazon
@@ -482,10 +499,10 @@ export function saisonActive(maintenant = new Date()) {
 // des qu'elles ont de vrais avis, la note structuree. Les tests et les quiz
 // se reconnaissent a leur cle ; les jeux, non, il faut donc les nommer.
 // Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
-const ROUTES_JEUX = [
+export const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
   'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
-  'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
+  'jeuOuiNon', 'jeuPhrases', 'jeuDixMais', 'jeuSoireeCouples',
 ];
 
 // Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
@@ -523,6 +540,7 @@ export const FAMILLES_NAV = {
     'quizVraiFaux', 'zamours', 'quizTentation',
   ],
   jeux: [
+    'jeuSoireeCouples',
     'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
     'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
     'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
@@ -1738,6 +1756,9 @@ export const QUIZ_RELATED_ARTICLES = {
   // C'est un 10 mais : les défauts qu'on pardonne et ceux qu'on ne pardonne
   // pas, donc les red flags et ce qu'on n'accepte pas.
   jeuDixMais:       ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple', 'il-annule-au-dernier-moment'],
+  // Le jeu de soirée pour couples : ce qu'on se demande entre couples, et
+  // les questions qui font parler.
+  jeuSoireeCouples: ['questions-pour-mieux-se-connaitre-en-couple', 'questions-couple-telephone-message', 'questions-intimes-couple', 'activites-couple-ete'],
 };
 // Ajouts sur des entrées déjà existantes : on complète sans réécrire la table,
 // pour que la liste d'origine reste lisible telle qu'elle a été pensée. Le

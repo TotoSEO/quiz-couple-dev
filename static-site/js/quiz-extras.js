@@ -252,7 +252,7 @@
   // mais quatre moteurs autonomes ont leur propre racine. On les nomme ici
   // plutot que d'ecouter le document entier, sinon un clic sur le bandeau
   // cookies ou sur la FAQ passerait pour un lancement.
-  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #vacances-racine, #calc-carte';
+  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #cc-outil, #vacances-racine, #calc-carte, #soiree-app';
 
   function watchStart(slug) {
     var cle = 'qc-start-' + slug;

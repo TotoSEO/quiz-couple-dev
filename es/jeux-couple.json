@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "13 juegos • Gratis • Sin registro",
+    "badge": "14 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Trece juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
+    "description": "Catorce juegos: trece que arrancan en un solo móvil entre los dos, y uno para varias parejas, cada uno en el suyo. Sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "13",
+    "jeux": "14",
     "jeuxLabel": "juegos para dos",
-    "cartes": "470",
+    "cartes": "520",
     "cartesLabel": "cartas, prendas y dilemas",
     "compte": "0",
     "compteLabel": "cuentas que crear"
@@ -84,13 +84,19 @@
     "dixMaisTagline": "Una persona perfecta, un defecto, y cada uno da su nueva nota",
     "dixMaisContenu": "60 defectos para puntuar del 0 al 10, en secreto, cara a cara o a distancia, y luego vuestras notas comparadas",
     "dixMaisDuree": "10 a 30 min",
-    "dixMaisJoueurs": "2 jugadores"
+    "dixMaisJoueurs": "2 jugadores",
+    "soireeNom": "Juego de fiesta para parejas",
+    "soireeTagline": "Varias parejas, un maestro del juego: ¿qué pareja se conoce mejor?",
+    "soireeContenu": "36 preguntas de acuerdo y 14 rondas especiales, cada uno en su móvil, podio al final",
+    "soireeDuree": "20 a 40 min",
+    "soireeJoueurs": "4 a 10 jugadores",
+    "multi": "4 a 10 jugadores"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los trece juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
+    "p3": "Los catorce juegos de esta página se juegan online, gratis, en un solo móvil, salvo el juego de fiesta, donde cada pareja juega en el suyo. Nada que crear, nada que instalar, nada que preparar."
   },
   "section2": {
     "title": "Qué juego elegir según el momento",
@@ -123,7 +129,9 @@
     "row12Moment": "Un aniversario de pareja o una noche de recuerdos",
     "row12Pourquoi": "Cada uno termina la frase a su manera, por ejemplo «El plato que pedimos siempre es…». Con la cuenta atrás respondéis a la vez, y cuando las dos versiones no coinciden, lo normal es acabar riéndoos.",
     "row13Moment": "Una noche con amigos, o los dos en el sofá",
-    "row13Pourquoi": "Cada carta describe a una persona perfecta con un defecto, y cada uno da su nueva nota del 0 al 10. Os reís de las pequeñas manías y, de paso, descubrís lo que el otro no perdonaría nunca."
+    "row13Pourquoi": "Cada carta describe a una persona perfecta con un defecto, y cada uno da su nueva nota del 0 al 10. Os reís de las pequeñas manías y, de paso, descubrís lo que el otro no perdonaría nunca.",
+    "row14Moment": "Una noche con varias parejas",
+    "row14Pourquoi": "El único juego de la página que se juega con varias parejas, cada uno en su móvil: un maestro del juego forma las parejas, cada uno adivina las respuestas del otro, y en las rondas especiales se vota a la pareja más fiestera o a la que siempre llega tarde."
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",
