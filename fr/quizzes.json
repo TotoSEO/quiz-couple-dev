@@ -358,6 +358,18 @@
     "description": "Vingt questions sur ce qui vous a séparés, ce qui a changé depuis et ce que vous cherchez à retrouver, pour savoir si un deuxième essai a des chances de marcher.",
     "metaDescription": "Dois-je me remettre avec mon ex ? 20 questions pour savoir si un deuxième essai a des chances de marcher : ce qui a changé, la confiance, vos proches."
   },
+  "testOublieSonEx": {
+    "title": "A-t-il oublié son ex ? Test en ligne en 20 questions",
+    "shortTitle": "A-t-il oublié son ex ?",
+    "description": "Vingt questions sur ce que votre partenaire fait et dit, pour savoir si son ex prend encore de la place dans sa tête. Une version pour lui, une pour elle.",
+    "metaDescription": "A-t-il oublié son ex, ou a-t-elle oublié le sien ? 20 questions sur ce que votre partenaire fait et dit pour le savoir. Gratuit, anonyme, sans inscription."
+  },
+  "testPourquoiQuitte": {
+    "title": "Pourquoi mon ex m'a quitté(e) ? Test en 20 questions",
+    "shortTitle": "Pourquoi mon ex m'a quitté(e) ?",
+    "description": "Vingt questions sur les derniers mois de votre couple, et la cause qui a le plus pesé dans la rupture, parmi les huit qui reviennent le plus souvent.",
+    "metaDescription": "Pourquoi mon ex m'a quitté(e) ? 20 questions sur les derniers mois de votre couple pour trouver la cause qui a le plus pesé dans la rupture. Gratuit."
+  },
   "testChargeMentale": {
     "title": "Test charge mentale du couple : qui porte quoi ?",
     "shortTitle": "Qui porte la charge mentale ?",

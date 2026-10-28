@@ -346,6 +346,18 @@
     "description": "Twenty questions about what split you up, what has changed since and what you're hoping to get back, to see whether a second try has a chance of working.",
     "metaDescription": "Should I get back with my ex? 20 questions to see whether a second try has a chance of working: what has changed, trust, your friends and family. Free."
   },
+  "testOublieSonEx": {
+    "title": "Is He Over His Ex? Free 20-Question Quiz",
+    "shortTitle": "Is he over his ex?",
+    "description": "Twenty questions about what your partner does and says, to find out whether their ex still takes up space in their mind. One version for him, one for her.",
+    "metaDescription": "Is he over his ex, or is she over hers? 20 questions about what your partner does and says to find out. Free, anonymous, no sign-up."
+  },
+  "testPourquoiQuitte": {
+    "title": "Why Did My Ex Break Up With Me? 20-Question Quiz",
+    "shortTitle": "Why did my ex break up with me?",
+    "description": "Twenty questions about the last months of your relationship, and the cause that weighed the most in the breakup, among the eight most common ones.",
+    "metaDescription": "Why did my ex break up with me? 20 questions about the last months of your relationship to find the cause that weighed the most in the breakup. Free."
+  },
   "testChargeMentale": {
     "title": "Mental Load Test for Couples: Who Carries What?",
     "shortTitle": "Who carries the mental load?",

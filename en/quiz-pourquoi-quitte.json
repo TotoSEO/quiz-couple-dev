@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "badge": "Post-breakup quiz",
+    "title": "Why did my ex break up with me? The quiz to understand the breakup",
+    "titleHighlight": "Why did my ex break up with me",
+    "description": "\"I don't feel the same anymore\", \"I need some space\", or nothing at all... The reason you were given isn't always the whole story. Twenty questions about the last months of your relationship to find <strong>what weighed the most in the breakup</strong>, among the eight causes that come up most often.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "crossLink": {
+    "title": "Mostly wondering whether they'll come back?",
+    "text": "This quiz looks for why it's over. The other one estimates the chances of a comeback, based on how you broke up and what has happened since.",
+    "button": "Will my ex come back?"
+  },
+  "section1": {
+    "title": "Why do people leave someone?",
+    "p1": "The reason an ex gives when they leave is rarely the whole story. \"It's not you, it's me\", \"I need to find myself\"... Those lines are often a way to leave without hurting too much, or without having to explain everything.",
+    "p2": "Researchers asked people who were thinking about leaving their partner why they wanted to, then sorted all the answers: <strong>they found 23 different reasons</strong>. The ones that came up most often: broken trust, personality traits in the other person that had become hard to bear, and a partner who was slowly pulling away. And almost one person in two also had reasons to stay.",
+    "p3": "A much older study had already noticed something simple. It followed 231 student couples in Boston for two years, and <strong>couples where one person was much more invested than the other broke up more often</strong>. When only one of the two is carrying the relationship, it ends up showing.",
+    "p4": "That's why the quiz only asks you once for the \"official\" reason. The rest of the time, it looks at the last months of your relationship, and picks up the cause that comes back the most in your answers."
+  },
+  "section2": {
+    "title": "The eight causes the quiz picks up",
+    "intro": "These are the reasons for breakups that come up most often. The quiz gives each one a percentage, and the highest becomes your result.",
+    "pillar1Title": "The spark had gone out",
+    "pillar1Text": "Less desire, fewer surprises, the feeling of living with a roommate. It's often what's behind an \"I don't feel the same anymore\".",
+    "pillar2Title": "You had drifted apart",
+    "pillar2Text": "Each with your own life, each on your own phone, and less and less to say to each other. Nothing serious, on the surface... until the day one of you notices.",
+    "pillar3Title": "The arguments had worn everything down",
+    "pillar3Text": "The same complaints over and over, words that hurt, sometimes contempt. Psychologist John Gottman, who has been observing couples since the 1970s, sees contempt as the most worrying sign for a relationship.",
+    "pillar4Title": "Not the same life, not the same pace",
+    "pillar4Text": "One of you wanted to move in or have a baby, the other backed off as soon as things got serious. Or you simply didn't want the same life.",
+    "pillar5Title": "Needing space",
+    "pillar5Text": "Texts at all hours, jealousy, the feeling of having to account for everything. When one person feels smothered, leaving becomes the only way to breathe.",
+    "pillar6Title": "Damaged trust",
+    "pillar6Text": "Lies, secrets, cheating, on one side or the other. Once trust is broken, a lot of couples can't put it back together.",
+    "pillar7Title": "Someone else",
+    "pillar7Text": "People often say you don't leave someone for someone else. It's partly true: the new person often shows up <strong>when the relationship was already struggling</strong>, and the quiz also looks at what was going on before.",
+    "pillar8Title": "It wasn't the right time",
+    "pillar8Text": "Stress, studies, a job that takes everything, grief, depression... Sometimes your ex wasn't doing well and couldn't carry a relationship anymore, even with someone they loved.",
+    "tip": "The quiz isn't looking for someone to blame. Several causes often come from both people, and some come from no one: a move, an illness, a bad stretch."
+  },
+  "section3": {
+    "title": "What the breakup doesn't say about you",
+    "intro": "Understanding why it's over helps you move on. As long as you don't turn the reason into a verdict about yourself.",
+    "sub1Title": "It's not necessarily your fault",
+    "sub1P1": "Even when the quiz points to something that comes from you, like jealousy or needing reassurance, <strong>a breakup rarely happens because of one person</strong>. And what didn't work with that person can <a href=\"/en/ready-for-a-new-relationship-test/\">work just fine with someone else</a>.",
+    "sub2Title": "\"It's not you, it's me\"",
+    "sub2P1": "That line annoys everyone, and yet it's sometimes true. When your ex was going through a bad time, the breakup was mostly about them. The quiz picks that up with the cause \"it wasn't the right time\".",
+    "sub3Title": "Understanding helps you let go",
+    "sub3P1": "A 2018 study asked people who had just been through a breakup to <a href=\"/en/how-long-to-get-over-an-ex-test/\">think back on their ex's flaws</a> and on what wasn't working: <strong>their feelings of love went down</strong>, even if their mood dipped a little at the time. Putting words on what wasn't working is also a way to move on faster."
+  },
+  "section4": {
+    "title": "How the quiz finds the cause",
+    "p1": "Each answer weighs on one or two causes, with 1 to 3 points depending on what it says. The same cause can come back across several questions, in different forms: desire fading, boredom, a letter that would talk about love that died out, and so on.",
+    "p2": "At the end, each cause gets a percentage of what it could have received. The highest becomes your result, as long as it's above 30%. If a second cause comes in close behind, the quiz mentions it just below. And if none stands out, it tells you that too: <strong>some breakups don't have a single reason</strong>, but several small ones that add up.",
+    "tip": "The quiz can't read your ex's mind. It picks up, in what you went through, the breakup causes that come up most often among couples who split."
+  },
+  "section5": {
+    "title": "What now?",
+    "p1": "Knowing why it's over doesn't change the breakup, but it changes what you do with it.",
+    "sub1Title": "If you're hoping they'll come back",
+    "sub1P1": "A breakup that came from a bad time or from distance creeping in doesn't have the same chances of being repaired as broken trust or two opposite life plans. What has happened since the breakup matters a lot too.",
+    "sub2Title": "If you want to move on",
+    "sub2P1": "Keep your result in mind the next time you start idealizing your relationship. And if you recognize yourself in a cause that comes from you, like needing reassurance, that's good to know for next time."
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "the reasons behind a breakup",
+    "faq1Q": "Why did my ex break up with me when everything was going well?",
+    "faq1A": "Often, things weren't going that well on your ex's side. The person who leaves has often been pulling away for months without saying so, and has done part of their grieving before the breakup. Sometimes the reason is also outside the relationship: a bad time, stress, depression.",
+    "faq2Q": "My ex left me for someone else. Is it my fault?",
+    "faq2A": "No. Someone who leaves for another person makes a choice, and that choice is theirs. Most of the time, the new person shows up when the relationship was already going less well, which doesn't mean you're responsible for it.",
+    "faq3Q": "Should I ask my ex why they left?",
+    "faq3A": "You can ask once, calmly. But don't count on the answer too much: a lot of people give a reason that hurts less than the real one, or don't know it themselves. And demanding explanations for weeks mostly keeps you from moving on.",
+    "faq4Q": "What does \"it's not you, it's me\" mean?",
+    "faq4A": "Sometimes, that your ex doesn't want to hurt you with the real reason. Sometimes also, that it's true: someone going through a hard time may no longer have the strength for a relationship, even with someone they love.",
+    "faq5Q": "How do you get over a breakup you didn't choose?",
+    "faq5A": "Put some distance between you and your ex, at least for a while: no texts, no checking their stories at night. Surround yourself with people, and let yourself hurt. How long it takes varies a lot from one person to another, and it mostly depends on what you do now.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser, nobody sees them, and there's nothing to sign up for. Only the cause you get, with no personal data, is used to see how the quiz is used."
+  }
+}

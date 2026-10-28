@@ -346,6 +346,18 @@
     "description": "Veinte preguntas sobre lo que os separó, lo que ha cambiado y lo que buscas recuperar, para saber si un segundo intento tiene posibilidades de funcionar.",
     "metaDescription": "¿Debo volver con mi ex? 20 preguntas para saber si un segundo intento puede funcionar: lo que ha cambiado, la confianza, tu gente. Gratis y anónimo."
   },
+  "testOublieSonEx": {
+    "title": "¿Ha olvidado a su ex? Test online de 20 preguntas",
+    "shortTitle": "¿Ha olvidado a su ex?",
+    "description": "Veinte preguntas sobre lo que tu pareja hace y dice, para saber si su ex todavía ocupa sitio en su cabeza. Una versión para él y otra para ella.",
+    "metaDescription": "¿Ha olvidado a su ex? 20 preguntas sobre lo que tu pareja hace y dice para saberlo, en versión para él o para ella. Gratis, anónimo y sin registro."
+  },
+  "testPourquoiQuitte": {
+    "title": "¿Por qué me dejó mi ex? Test de 20 preguntas",
+    "shortTitle": "¿Por qué me dejó mi ex?",
+    "description": "Veinte preguntas sobre los últimos meses de vuestra relación, y la causa que más pesó en la ruptura, entre las ocho más frecuentes.",
+    "metaDescription": "¿Por qué me dejó mi ex? 20 preguntas sobre los últimos meses de vuestra relación para encontrar la causa que más pesó en la ruptura. Gratis."
+  },
   "testChargeMentale": {
     "title": "Test de carga mental en pareja: ¿quién lleva qué?",
     "shortTitle": "¿Quién lleva la carga mental?",
