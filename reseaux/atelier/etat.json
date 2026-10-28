@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-28T03:13:40.531Z",
+  "genere_le": "2026-10-28T09:36:47.496Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -570,9 +570,9 @@
       "creneau": "matin",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": null,
-      "erreur": null
+      "erreur": "créneau passé sans publication"
     },
     {
       "jour": "2026-10-27",
@@ -4356,6 +4356,24 @@
       "jour": "2026-10-20",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "5f4eacee-cf4c-406a-a810-60bae9e775d6",
+      "releve": "j7",
+      "vues": 1445,
+      "portee": 1243,
+      "likes": 9,
+      "commentaires": 0,
+      "partages": 1,
+      "enregistrements": 2,
+      "releve_le": "2026-10-28T09:36:39.792979+00:00",
+      "publie_le": "2026-10-21T04:20:09.791+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-21",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4371,6 +4389,17 @@
       "commentaires": 3
     },
     {
+      "categorie": "baton",
+      "posts": 4,
+      "vues_mediane": 1195,
+      "vues_moyenne": 1208,
+      "vues_max": 1647,
+      "partages": 11,
+      "enregistrements": 5,
+      "likes": 52,
+      "commentaires": 0
+    },
+    {
       "categorie": "coquin",
       "posts": 2,
       "vues_mediane": 1063,
@@ -4380,17 +4409,6 @@
       "enregistrements": 1,
       "likes": 5,
       "commentaires": 1
-    },
-    {
-      "categorie": "baton",
-      "posts": 3,
-      "vues_mediane": 945,
-      "vues_moyenne": 1129,
-      "vues_max": 1647,
-      "partages": 10,
-      "enregistrements": 3,
-      "likes": 43,
-      "commentaires": 0
     },
     {
       "categorie": "pov",
