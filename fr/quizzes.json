@@ -334,6 +334,18 @@
     "description": "15 questions sur ce qu'il ou elle fait, pas sur ce que vous interprétez. Test solo, résultat immédiat.",
     "metaDescription": "Votre ex pense-t-il encore à vous ? 15 questions qui pèsent ses actes plutôt que vos interprétations. Gratuit, anonyme, sans inscription ni e-mail."
   },
+  "testEncoreAmoureuxEx": {
+    "title": "Suis-je encore amoureux(se) de mon ex ? Test en 20 questions",
+    "shortTitle": "Encore amoureux(se) de mon ex ?",
+    "description": "Vingt questions qui mesurent séparément ce que vous ressentez pour votre ex et ce que la rupture vous a enlevé. Deux barres à comparer, cinq résultats possibles.",
+    "metaDescription": "Suis-je encore amoureux de mon ex, ou est-ce juste le manque ? 20 questions pour séparer l'amour pour la personne et le manque de la relation. Gratuit."
+  },
+  "testOublierEx": {
+    "title": "Combien de temps pour oublier son ex ? Test en ligne",
+    "shortTitle": "Combien de temps pour oublier son ex ?",
+    "description": "Vingt questions sur votre histoire, la rupture et vos journées, et une estimation en mois du temps qu'il vous faudra encore pour tourner la page.",
+    "metaDescription": "Combien de temps faut-il pour oublier son ex ? Ce que disent les études, et un test en 20 questions qui estime votre durée en mois. Gratuit et anonyme."
+  },
   "testChargeMentale": {
     "title": "Test charge mentale du couple : qui porte quoi ?",
     "shortTitle": "Qui porte la charge mentale ?",

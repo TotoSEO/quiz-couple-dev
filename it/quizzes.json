@@ -322,6 +322,18 @@
     "description": "15 domande su quello che fa, non su quello che ci leggi tu. Test individuale, risultato immediato.",
     "metaDescription": "Il tuo ex pensa ancora a te? 15 domande che pesano i suoi atti invece delle tue interpretazioni. Gratuito, anonimo, senza registrazione né e-mail."
   },
+  "testEncoreAmoureuxEx": {
+    "title": "Sono ancora innamorato/a del mio ex? Test in 20 domande",
+    "shortTitle": "Ancora innamorato/a del mio ex?",
+    "description": "Venti domande che misurano separatamente quello che provi ancora per il tuo ex e quello che ti ha tolto la rottura. Due barre da confrontare, cinque risultati possibili.",
+    "metaDescription": "Sono ancora innamorato del mio ex o mi manca solo la relazione? 20 domande per separare l'amore per la persona e la mancanza della coppia. Gratis."
+  },
+  "testOublierEx": {
+    "title": "Quanto tempo ci vuole per dimenticare un ex? Test online",
+    "shortTitle": "Quanto tempo per dimenticare un ex?",
+    "description": "Venti domande sulla vostra storia, sulla rottura e sulle tue giornate, e una stima in mesi del tempo che ti serve ancora per voltare pagina.",
+    "metaDescription": "Quanto tempo ci vuole per dimenticare un ex? Cosa dicono gli studi, e un test in 20 domande che stima il tuo tempo in mesi. Gratis e anonimo."
+  },
   "testChargeMentale": {
     "title": "Test del carico mentale di coppia: chi porta cosa?",
     "shortTitle": "Chi porta il carico mentale?",

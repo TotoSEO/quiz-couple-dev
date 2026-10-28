@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Test dopo una rottura",
+    "title": "Quanto tempo ci vuole per dimenticare un ex? Il test in 20 domande",
+    "titleHighlight": "dimenticare un ex",
+    "description": "Questo test stima quanto tempo ti serve ancora per voltare pagina. Guarda la vostra storia, come è finita, come ti senti oggi e cosa fai delle tue giornate. Il risultato ti dà <strong>una durata in mesi</strong> e <strong>quello che ti farebbe guadagnare più tempo</strong>.",
+    "subtitle": "Venti domande, cinque minuti, una stima in mesi",
+    "jumpBtn": "Fai il test"
+  },
+  "crossLink": {
+    "title": "Non sai se lo ami ancora?",
+    "text": "Questo test stima quanto tempo ci vorrà. Se prima ti chiedi se è amore o solo mancanza, l'altro test misura le due cose separatamente.",
+    "button": "Fai il test amore o mancanza"
+  },
+  "section1": {
+    "title": "Quanto tempo ci vuole per dimenticare un ex?",
+    "p1": "Non c'è un numero che valga per tutti. I tempi che si leggono ovunque (tre mesi, un anno, la metà della durata della relazione...) non misurano la stessa cosa, e nessuno tiene conto della tua storia.",
+    "p2": "Quello che mostrano gli studi è soprattutto che dipende da cosa intendiamo per «dimenticare». <strong>Stare meglio arriva abbastanza presto</strong>: anche dopo un divorzio, lo stress è al massimo nell'anno della separazione e poi scende nettamente nei due anni successivi. <strong>Non sentire più alcun legame richiede molto più tempo</strong>: nel 2025 alcuni ricercatori dell'Università dell'Illinois hanno scoperto che servono in media circa quattro anni per staccarsi a metà da un ex, dopo una relazione di almeno due anni.",
+    "p3": "Nel mezzo c'è il momento che interessa a quasi tutti: quando il tuo ex non occupa più spazio nelle tue giornate. Ci pensi ancora ogni tanto, ma non fa più male. È questo il momento che il test cerca di stimare.",
+    "headerScore": "Il numero che si legge",
+    "headerLevel": "Da dove viene",
+    "headerAnalysis": "Cosa misura",
+    "row1Score": "11 settimane",
+    "row1Level": "Uno studio americano del 2007 su 155 giovani",
+    "row1Analysis": "Nessuna durata: i partecipanti si erano lasciati nelle 11 settimane precedenti",
+    "row2Score": "Da uno a due anni",
+    "row2Level": "Circa 430 divorzi e separazioni seguiti in Gran Bretagna (2006)",
+    "row2Analysis": "Il tempo perché lo stress della separazione scenda",
+    "row3Score": "Circa 4 anni",
+    "row3Level": "Uno studio del 2025 su 328 adulti, dopo relazioni di almeno due anni",
+    "row3Analysis": "Il tempo perché il legame con l'ex se ne vada a metà",
+    "row4Score": "La metà della relazione",
+    "row4Level": "Una regola che gira da anni",
+    "row4Analysis": "Niente: nessuno studio la conferma",
+    "tip": "Se vi siete lasciati da qualche settimana e tutto ti sembra insopportabile, è normale. Le prime settimane sono le più dure per tutti, e non dicono molto su quello che verrà dopo."
+  },
+  "section2": {
+    "title": "Come il test stima il tuo tempo",
+    "intro": "Ecco come funziona il nostro test qui sopra: ogni risposta avvicina o allontana il momento in cui avrai voltato pagina.",
+    "p1": "Facciamo due esempi. Chi ha lasciato il partner dopo sei mesi di storia, non ci parla più e vede gli amici tutti i weekend ha buone probabilità di stare bene entro un mese o due. Invece chi è stato lasciato da un giorno all'altro dopo otto anni di convivenza, scrive ancora al suo ex e guarda le sue storie ogni sera, ne ha piuttosto per anni se non cambia niente.",
+    "p2": "Il test fa questo calcolo con le tue venti risposte. Il risultato ti dà una durata in mesi, una forbice e una data approssimativa. Ti mostra anche <strong>quello che ti aiuta, quello che ti frena e quello che ti farebbe guadagnare più tempo</strong>. Alcune risposte non si possono cambiare, come quanto è durata la storia o chi ha lasciato chi. Altre sì, ed è fra queste che il test sceglie cosa proporti.",
+    "pillar1Title": "La vostra storia",
+    "pillar1Text": "Quanto è durata, la convivenza, chi se n'è andato e come è finita.",
+    "pillar2Title": "Dove sei adesso",
+    "pillar2Text": "Quanto spesso ci pensi, cosa provi, la speranza che torni.",
+    "pillar3Title": "Le tue abitudini",
+    "pillar3Text": "Il contatto, i suoi social, i vostri vecchi messaggi, le sue cose a casa tua.",
+    "pillar4Title": "La tua vita intorno",
+    "pillar4Text": "Le persone vicine a te, le tue uscite, il sonno e i tuoi progetti."
+  },
+  "section3": {
+    "title": "Cosa fa durare di più una rottura",
+    "intro": "Le ricerche sulle rotture ritrovano spesso le stesse cose. Alcune non dipendono da te, altre molto di più.",
+    "sub1Title": "Restare in contatto con l'ex",
+    "sub1P1": "È quello che pesa di più. Nello studio dell'Università dell'Illinois, il contatto regolare con l'ex, di persona o online, era <strong>quello che frenava di più il distacco</strong>. Ha senso: ogni messaggio riapre un po' la porta, e ci si rimette ad aspettare il prossimo...",
+    "sub2Title": "Guardare i suoi social",
+    "sub2P1": "Uno studio del 2012 su 464 persone ha misurato quante volte ognuna andava a guardare il profilo Facebook del proprio ex. Più ci andavano, più soffrivano per la rottura, più provavano desiderio e nostalgia per l'ex, e meno erano andate avanti nella loro vita. Non si sa esattamente cosa causi cosa, ma <strong>guardare le sue storie ogni sera non aiuta a voltare pagina</strong>.",
+    "sub3Title": "Essere stati lasciati, soprattutto senza vederlo arrivare",
+    "sub3P1": "Chi se ne va ha spesso fatto una parte del percorso prima della rottura. Chi viene lasciato comincia il suo quel giorno stesso, a volte senza spiegazioni. E quando non si capisce perché è finita, si rivedono le scene in testa cercando la risposta, e questo può durare a lungo.",
+    "sub4Title": "La paura di essere abbandonati",
+    "sub4P1": "Le persone che <a href=\"/it/test-stile-attaccamento/\">hanno spesso paura di essere abbandonate</a> nelle loro relazioni impiegano più tempo a staccarsi, ed è anche quello che ha trovato lo studio del 2025. Chi mantiene più distanza nelle relazioni si allontana più in fretta.",
+    "tip": "Una relazione lunga o la convivenza aggiungono tempo, è vero. Ma il più delle volte, a fare la differenza sono le piccole abitudini che tengono il tuo ex nelle tue giornate."
+  },
+  "section4": {
+    "title": "Cosa aiuta a voltare pagina più in fretta",
+    "intro": "Niente fa sparire una rottura in due settimane. Ma alcune cose fanno guadagnare tempo, e puoi cominciarle già stasera!",
+    "pillar1Title": "Tagliare quello che ti riporta al tuo ex",
+    "pillar1Text": "Smetti di scrivergli e di seguirlo sui social, metti via le foto e i messaggi. Non per forza per sempre, solo finché non si rimargina. Non è contro il tuo ex: è un po' di calma per te.",
+    "pillar2Title": "Ripensare a quello che non andava",
+    "pillar2Text": "Nel 2018 alcuni ricercatori americani hanno chiesto a persone che avevano vissuto una rottura di ripensare ai difetti del loro ex e ai problemi della coppia. I loro sentimenti d'amore calavano, anche se sul momento calava un po' anche l'umore. Pensaci quando la nostalgia ti fa vedere tutto rosa.",
+    "pillar3Title": "Distrarsi",
+    "pillar3Text": "Nello stesso studio, pensare ad altro non faceva calare l'amore, ma tirava su il morale. Le due cose vanno bene insieme: guardi le cose in faccia, poi esci a vedere i tuoi amici.",
+    "pillar4Title": "Ritrovare se stessi",
+    "pillar4Text": "Dopo una rottura, tanti non sanno più bene chi sono senza l'altro. Riprendere un'attività lasciata da parte o fare quello che non si faceva più in coppia: spesso è lì che le cose si sbloccano."
+  },
+  "section5": {
+    "title": "Le false credenze sul dimenticare un ex",
+    "sub1Title": "«Ci vuole la metà della durata della relazione»",
+    "sub1P1": "Questa regola gira da anni, ma niente la conferma. Una storia di otto anni non richiede per forza quattro anni di lutto, e una storia di tre mesi può fare male a lungo quando ci si sono messe tante speranze.",
+    "sub2Title": "«Chiodo scaccia chiodo»",
+    "sub2P1": "Mettersi presto con qualcun altro a volte aiuta a superare il peggio. Ma nello studio dell'Università dell'Illinois, aver trovato un'altra persona non faceva andare via più in fretta il legame con l'ex. Lo stesso per i divorziati britannici: chi si era risposato presto aveva passato una separazione un po' più leggera, ma non aveva un umore migliore due anni dopo.",
+    "sub3Title": "«Ci vogliono undici settimane»",
+    "sub3P1": "Questo numero viene da uno studio americano del 2007 su 155 giovani fra i 18 e i 32 anni. I ricercatori avevano interrogato persone che si erano lasciate nelle undici settimane precedenti, e la maggior parte diceva di aver già imparato qualcosa su se stessa. Le undici settimane descrivevano i partecipanti, non il tempo che serve per stare meglio... ma è diventato il numero che si legge ovunque.",
+    "sub4Title": "«Se penso ancora al mio ex, vuol dire che lo amo ancora»",
+    "sub4P1": "Pensare a qualcuno non è la stessa cosa che amarlo. Una storia che ha contato lascia tracce, che tornano con una canzone o una data. Si può anche sentire la mancanza della vita di coppia <a href=\"/it/test-sono-ancora-innamorato-del-mio-ex/\">senza essere ancora innamorati della persona</a>, e queste due cose non guariscono allo stesso modo."
+  },
+  "section6": {
+    "title": "E se non passa?",
+    "p1": "Se dopo diversi mesi dormi male e non hai più voglia di niente, non è più solo una rottura difficile. <strong>Parlane con il tuo medico o con uno psicologo</strong>: non è un segno di debolezza, e spesso fa guadagnare molto tempo.",
+    "p2": "A volte il problema non è più il tuo ex, ma il vuoto che ha lasciato. Quando <a href=\"/it/blog/dipendenza-affettiva-dopo-una-rottura/\">hai bisogno dell'altro per sentirti esistere</a>, una rottura si vive come un'astinenza, e questo richiede un lavoro a parte.",
+    "p3": "E se hai pensieri cupi, non aspettare: in Italia puoi chiamare Telefono Amico allo 02 2327 2327, e in caso di emergenza il 112."
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si fa"
+  },
+  "jsonLd": {
+    "about": "rottura amorosa e lutto di una relazione",
+    "faq1Q": "Quanto tempo ci vuole in media per dimenticare un ex?",
+    "faq1A": "Non c'è una media che abbia senso per tutti. La maggior parte delle persone sta molto meglio nei due anni dopo una separazione, ma il legame con l'ex impiega di più ad andarsene: circa quattro anni per arrivare a metà, secondo uno studio del 2025 su relazioni di almeno due anni. Il test ti dà una stima a partire dalla tua situazione.",
+    "faq2Q": "È normale pensare ancora al proprio ex dopo un anno?",
+    "faq2A": "Sì, soprattutto dopo una relazione lunga o una rottura che non hai scelto. Quello che conta è come ci pensi: un ricordo che passa non ha niente di preoccupante, una mancanza che ti impedisce di vivere dopo un anno merita che te ne occupi.",
+    "faq3Q": "Perché non riesco a dimenticare il mio ex?",
+    "faq3A": "Il più delle volte, perché qualcosa lo tiene nelle tue giornate: messaggi, i suoi social, la speranza che torni, o una rottura senza spiegazioni che ti fa rivedere le scene. Il test ti mostra cosa ti frena di più.",
+    "faq4Q": "Mettersi con qualcun altro aiuta a dimenticare un ex?",
+    "faq4A": "A volte aiuta a superare il peggio, ma secondo lo studio del 2025 non fa andare via più in fretta il legame con l'ex. Una storia cominciata per riempire un vuoto rischia soprattutto di pagarne il prezzo.",
+    "faq5Q": "Il «no contact» funziona?",
+    "faq5A": "Interrompere i contatti è quello che aiuta di più: il contatto regolare con l'ex è ciò che frena di più il distacco. Però non esiste una durata magica, e i trenta giorni che si leggono ovunque non si basano su niente. Se avete figli, limita gli scambi allo stretto necessario.",
+    "faq6Q": "Le mie risposte vengono salvate?",
+    "faq6A": "No. Le tue risposte restano nel tuo browser. Solo il tipo di risultato, senza alcun dato personale, serve a misurare come viene usato il test."
+  }
+}

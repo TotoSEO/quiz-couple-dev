@@ -466,6 +466,58 @@
 
     'pret-nouvelle-relation': { prefix: 'pretRelation', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pret-nouvelle-relation', ptsExplicites: true, paliers: [25, 45, 62, 75] },
 
+    // Suis-je encore amoureux(se) de mon ex ? Deux axes mesures separement
+    // (AxesQuiz) : l'amour pour la personne (axe a) et le manque de la relation
+    // (axe b : la solitude, l'ego, la nostalgie, la peur d'etre seul). Dix
+    // questions chacun, en alternance ; chaque question pese de 4 a 8 points
+    // selon ce qu'elle dit : « vous diriez oui s'il ou elle revenait » et
+    // « votre ex ou le fait d'etre en couple » valent 8, la facon de vivre seul
+    // avant l'histoire 4. 59 points pour l'amour, 57 pour le manque. Le seuil
+    // bas est a 35 et non 40 : a 32 % d'amour et 37 % de manque, « vous
+    // n'etes plus amoureux » allait trop loin, c'est un melange.
+    'encore-amoureux-ex': { prefix: 'encoreEx', engine: 'axes', totalQ: 20, pool: 20, quizType: 'encore-amoureux-ex',
+                            seuils: { bas: 35, haut: 60, ecart: 15 } },
+
+    // Combien de temps pour oublier son ex ? Une estimation en mois
+    // (DureeQuiz) : chaque reponse multiplie la chance, chaque mois, d'avoir
+    // tourne la page (l'ex ne prend plus de place dans les journees). Les
+    // poids suivent les etudes citees sur la page : le contact avec l'ex
+    // (Chong et Fraley, 2025) et ses reseaux (Marshall, 2012) pesent le plus
+    // parmi les habitudes, etre quitte(e) sans le voir venir et l'espoir d'un
+    // retour parmi le reste. Le temps depuis la rupture corrige l'etat du
+    // moment : tout le monde va tres mal les premieres semaines, et la meme
+    // douleur deux ans apres dit une page qui se tourne lentement. Leviers :
+    // les habitudes et la vie a cote, jamais l'histoire elle-meme. Calage du
+    // 28 octobre 2026 : un profil type (trois ans dont la vie commune, quitte(e)
+    // en le sentant venir, separes depuis un a trois mois, y pense tous les
+    // jours, s'ecrivent encore) donne 10 mois, le meme six mois plus tard et
+    // sans contact 4 mois, une histoire courte qu'on a quittee 3 mois, un
+    // mariage de dix ans rompu sans prevenir, encore en contact, plus de 4 ans.
+    'oublier-ex': { prefix: 'oublierEx', engine: 'duree', totalQ: 20, pool: 20, quizType: 'oublier-ex',
+      paliers: [3, 6, 12, 24], base: 0.09, pente: 0.45, plafond: 48,
+      facteurs: [
+        { m: [1.35, 1.12, 0.92, 0.8, 0.7] },              // 1  duree de l'histoire
+        { m: [1.1, 1.0, 0.88, 0.8] },                     // 2  vie commune
+        { m: [1.3, 1.15, 0.9, 0.72] },                    // 3  qui a rompu
+        { m: [1.12, 1.0, 0.88, 0.8, 0.75] },              // 4  comment ca s'est termine
+        { m: [1.05, 0.88, 0.75] },                        // 5  ruptures a repetition
+        { m: [1.3, 1.12, 0.95, 0.8, 0.68], liste: false }, // 6  depuis la rupture (correction, hors des listes)
+        { m: [1.6, 1.15, 0.85, 0.65] },                   // 7  y pense combien de fois
+        { m: [1.4, 1.08, 0.9, 0.78] },                    // 8  ce qui domine
+        { m: [1.35, 1.05, 0.85, 0.75] },                  // 9  avec quelqu'un d'autre
+        { m: [1.4, 1.0, 0.7, 0.66] },                     // 10 espoir d'un retour
+        { m: [1.4, 1.05, 0.78, 0.62], levier: true },     // 11 contact
+        { m: [1.08, 0.95, 0.85, 0.92] },                  // 12 obligé(e) de le ou la croiser
+        { m: [1.2, 1.0, 0.82, 0.7], levier: true },       // 13 ses reseaux
+        { m: [1.15, 1.0, 0.84, 0.72], levier: true },     // 14 anciens messages et photos
+        { m: [1.1, 1.0, 0.86], levier: true },            // 15 ses affaires
+        { m: [1.15, 1.05, 0.85], levier: true },          // 16 a qui parler
+        { m: [1.15, 1.0, 0.82], levier: true },           // 17 sorties
+        { m: [1.12, 1.0, 0.85], levier: true },           // 18 sommeil, repas, sport
+        { m: [1.15, 1.0, 0.84], levier: true },           // 19 projets
+        { m: [1.08, 1.0, 0.82] }                          // 20 peur d'etre abandonne(e)
+      ] },
+
     // Quel type de couple etes-vous ? Un quiz a remplir ensemble, sur un seul
     // telephone : quinze situations, quatre facons de vivre a deux, le sens
     // des lettres tourne d'une question a l'autre (TYPOLOGIES.typeCouple).
@@ -2841,6 +2893,7 @@
     questions.forEach(function(q) {
       var f = facteurs[q.id - 1];
       q.levier = !!f.levier;
+      q.horsListe = f.liste === false;
       q.facteur = lu('q' + q.id + '_facteur', '');
       q.options.forEach(function(o) {
         var k = lettres.indexOf(o.id);

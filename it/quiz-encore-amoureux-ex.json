@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Test dopo una rottura",
+    "title": "Sono ancora innamorato/a del mio ex o mi manca solo la relazione?",
+    "titleHighlight": "innamorato/a del mio ex",
+    "description": "Questo test misura due cose separatamente: <strong>l'amore che provi ancora per il tuo ex</strong> e <strong>la mancanza della relazione in sé</strong> (le serate insieme, le abitudini, la paura di restare solo). Si può sentire la mancanza della coppia senza essere ancora innamorati della persona... e viceversa. Il risultato ti dice quale delle due parla più forte.",
+    "subtitle": "Venti domande, cinque minuti, gratis e senza registrazione",
+    "jumpBtn": "Fai il test"
+  },
+  "crossLink": {
+    "title": "Ti chiedi soprattutto quando smetterà di fare male?",
+    "text": "Questo test ti dice cosa provi. L'altro stima in mesi quanto tempo ti serve ancora per voltare pagina, e cosa ti farebbe guadagnare più tempo.",
+    "button": "Stimare quanto tempo mi serve"
+  },
+  "section1": {
+    "title": "Come capire se sei ancora innamorato del tuo ex?",
+    "p1": "Dopo una rottura si mescola tutto. Il tuo ex ti manca, ci pensi la sera, basta una canzone per ricaderci dentro... e non sai più bene se è amore o qualcos'altro.",
+    "p2": "Il problema è che <strong>due cose molto diverse danno gli stessi sintomi</strong>. C'è l'amore per la persona: la sua voce, il suo modo di essere, la voglia di riavere proprio lei e non un'altra. E c'è la mancanza della relazione: qualcuno che ti aspetta a casa, le abitudini di coppia, la paura di restare solo, a volte la voglia che il tuo ex se ne penta. Fanno male tutte e due e tutte e due ti fanno pensare al tuo ex, ma non chiedono affatto la stessa cosa.",
+    "p3": "Un esempio semplicissimo. Immagina che domani una persona gentile, simpatica e premurosa ti proponga di uscire insieme. Se quello che ti manca se ne va in gran parte, ti mancava soprattutto la relazione. Se non cambia niente perché è il tuo ex che vuoi, è amore.",
+    "p4": "Per questo il test ti dà <strong>due misure e non un solo voto</strong>. Dieci domande guardano cosa provi per il tuo ex, altre dieci cosa ti ha tolto la rottura, e le due barre si leggono insieme."
+  },
+  "section2": {
+    "title": "I segnali che sei ancora innamorato del tuo ex",
+    "intro": "Alcuni segnali riguardano la persona in sé. Sono quelli che pesano di più nel test, ed ecco i principali.",
+    "pillar1Title": "Diresti di sì se tornasse",
+    "pillar1Text": "Diresti di sì anche con i suoi difetti, e anche con quello che vi ha separati. È il segnale più chiaro, ed è la domanda che conta di più nel test.",
+    "pillar2Title": "Ti batte forte il cuore all'idea di incontrarlo",
+    "pillar2Text": "Un suo messaggio, o anche solo il suo nome in una conversazione, e ti salta la giornata intera.",
+    "pillar3Title": "Immagini ancora un futuro insieme",
+    "pillar3Text": "Pensi ancora ai viaggi che avreste fatto, alla casa che avreste preso insieme. Di solito non si fanno progetti con qualcuno che non si ama più.",
+    "pillar4Title": "Nessuno è alla sua altezza",
+    "pillar4Text": "Paragoni ogni persona che conosci al tuo ex, e perde ogni volta, spesso per dettagli che aveva solo il tuo ex.",
+    "pillar5Title": "Quello che gli succede ti importa ancora",
+    "pillar5Text": "Ti preoccupi ancora per la sua salute o per il suo lavoro, al di là di quello che avete vissuto insieme.",
+    "tip": "Pensare spesso al tuo ex non è un segnale da solo. Dopo una rottura tutti pensano al proprio ex, innamorati o no. Quello che conta è a cosa pensi: a quella persona, o a quello che hai perso."
+  },
+  "section3": {
+    "title": "Quello che sembra amore, ma non lo è",
+    "intro": "La mancanza della relazione prende spesso la faccia del tuo ex, semplicemente perché era lui o lei a occupare quel posto. Ecco cosa si confonde più spesso con l'amore.",
+    "sub1Title": "La solitudine della domenica sera",
+    "sub1P1": "Il tuo ex ti manca soprattutto quando la casa è vuota, e molto meno quando sei in compagnia? Allora ti manca avere qualcuno accanto, più di quella persona in particolare.",
+    "sub2Title": "L'orgoglio ferito",
+    "sub2P1": "Quando ti hanno lasciato, spesso vorresti che l'altro se ne pentisse e tornasse chiedendo scusa, anche se gli diresti di no. E il cervello non aiuta. Nel 2010 l'antropologa Helen Fisher e il suo gruppo hanno esaminato con lo scanner quindici persone appena lasciate che dicevano di essere ancora molto innamorate: davanti alla foto del loro ex, <strong>si attivavano le zone della ricompensa e del desiderio</strong>, le stesse delle dipendenze. Essere rifiutati può far desiderare l'altro ancora di più.",
+    "sub3Title": "La nostalgia che cancella tutto",
+    "sub3P1": "Con il tempo, la memoria tiene soprattutto i bei momenti. I litigi e quello che ti ha fatto andare via sbiadiscono, e resta una storia perfetta che non è mai esistita. Se non ti ricordi più bene perché è finita, ripensa agli ultimi mesi, non ai primi.",
+    "sub4Title": "La paura di restare solo",
+    "sub4P1": "Dopo una rottura, tanti si dicono che non troveranno mai più nessuno. Questa paura fa guardare indietro, verso l'unica persona che già si conosce. Quindi è meno amore per lei che paura dell'ignoto."
+  },
+  "section4": {
+    "title": "I cinque risultati del test",
+    "p1": "Il test non dà un punteggio su cento. Dà due barre, ed è la loro forma a fare il risultato: una può stare davanti all'altra, tutte e due possono essere alte, o tutte e due basse.",
+    "headerScore": "Le tue due barre",
+    "headerLevel": "Il risultato",
+    "headerAnalysis": "Cosa significa",
+    "row1Score": "Tutte e due basse",
+    "row1Level": "Non sei più innamorato",
+    "row1Analysis": "Restano ricordi, non più sentimenti",
+    "row2Score": "La mancanza davanti",
+    "row2Level": "È mancanza, non amore",
+    "row2Analysis": "Quello che ti manca di più è la vita di coppia",
+    "row3Score": "L'amore davanti",
+    "row3Level": "Lo ami ancora",
+    "row3Analysis": "Ti manca quella persona, non la relazione",
+    "row4Score": "Tutte e due alte",
+    "row4Level": "Innamorato e ancora legato",
+    "row4Analysis": "Il mix più doloroso",
+    "row5Score": "Tutte e due a metà",
+    "row5Level": "Un po' di entrambe",
+    "row5Analysis": "I sentimenti si affievoliscono senza sparire",
+    "tip": "Il risultato dice dove sei oggi, e cambia molto nei mesi dopo una rottura. Rifai il test fra qualche settimana: il confronto ti dirà tanto quanto il primo risultato."
+  },
+  "section5": {
+    "title": "Lo ami ancora: e adesso?",
+    "p1": "Essere ancora innamorati del proprio ex non ha niente di strano. I sentimenti non finiscono il giorno in cui finisce la relazione: secondo uno studio dell'Università dell'Illinois pubblicato nel 2025, servono in media <strong>circa quattro anni per staccarsi a metà da un ex</strong>, dopo una relazione di almeno due anni. Quello che conta è cosa fai di questo sentimento.",
+    "sub1Title": "Se la rottura dipendeva da cose che possono cambiare",
+    "sub1P1": "Un brutto periodo, la distanza, un malinteso, un momento in cui uno dei due non stava bene... In questo caso puoi dirlo al tuo ex, una volta, chiaramente, senza nasconderlo fra le allusioni. Prima, guarda cosa fa dalla sua parte: <a href=\"/it/il-mio-ex-pensa-ancora-a-me/\">un messaggio senza pretesto o una proposta di vedersi</a> dicono molto di più delle storie guardate a mezzanotte.",
+    "sub2Title": "Se dipendeva da qualcosa di più profondo",
+    "sub2P1": "Valori che non combaciano, due progetti di vita diversi, un tradimento che ha rotto tutto, o un ex che ti ha detto chiaramente che è finita. Lì l'amore non basta, e tenerlo acceso fa male soprattutto a te. Interrompi i contatti finché non si calma: è <a href=\"/it/quanto-tempo-ci-vuole-per-dimenticare-un-ex/\">quello che aiuta di più a voltare pagina</a>, molto prima dei grandi propositi.",
+    "sub3Title": "Se è soprattutto la mancanza della relazione",
+    "sub3P1": "Allora non scrivere al tuo ex per riempire una serata di solitudine: ritroveresti la stessa storia, con gli stessi problemi. Riempi piuttosto quello che riempiva la coppia: vedi i tuoi amici, organizza qualcosa per le tue serate. E quando starai di nuovo bene da solo, <a href=\"/it/test-pronto-per-una-nuova-relazione/\">lo spazio per qualcuno di nuovo</a> si aprirà da sé!"
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si fa"
+  },
+  "jsonLd": {
+    "about": "sentimenti dopo una rottura",
+    "faq1Q": "È normale essere ancora innamorati del proprio ex?",
+    "faq1A": "Sì. I sentimenti non finiscono con la rottura, e il legame con un ex spesso impiega anni a sparire del tutto. Quello che dovrebbe preoccuparti non è amare ancora il tuo ex, ma mettere la tua vita in pausa aspettando che torni.",
+    "faq2Q": "Come distinguere l'amore dalla mancanza della relazione?",
+    "faq2A": "Fatti una domanda semplice: se domani un'altra persona gentile e premurosa ti proponesse di uscire insieme, quello che ti manca se ne andrebbe? Se sì, ti manca soprattutto la relazione. Se no, perché è il tuo ex che vuoi, è amore. Il test separa le due cose, con dieci domande per parte.",
+    "faq3Q": "Si può amare ancora il proprio ex stando con un'altra persona?",
+    "faq3A": "Sì, succede, soprattutto quando la nuova storia è cominciata poco dopo la rottura. Pensare al tuo ex ogni tanto non è grave. Se fai paragoni in continuazione e il tuo ex è nei tuoi pensieri tutti i giorni, è il segno che il posto non era ancora libero.",
+    "faq4Q": "Perché il mio ex mi manca di più da quando sta con qualcuno?",
+    "faq4A": "Perché vedere qualcuno prendere il tuo posto risveglia la paura di essere stato sostituito, e a volte quella di restare solo. In questo caso parlano spesso la mancanza e l'orgoglio, più forte dell'amore. Lascia passare qualche settimana prima di trarre conclusioni.",
+    "faq5Q": "Bisogna dire al proprio ex che lo si ama ancora?",
+    "faq5A": "Solo se la rottura dipendeva da cose che possono cambiare, e se sei pronto a sentirti dire di no. Diglielo una volta, chiaramente. Se il tuo ex ti ha già detto che è finita, ripeterglielo rischia di fare male soprattutto a te.",
+    "faq6Q": "Le mie risposte vengono salvate?",
+    "faq6A": "No. Le tue risposte restano nel tuo browser. Solo il tipo di risultato, senza alcun dato personale, serve a misurare come viene usato il test."
+  }
+}

@@ -2366,6 +2366,8 @@ var QuizEngine = (function() {
     { type: 'test', key: 'emprise', icon: '🔒', route: 'testEmprise' },
     { type: 'test', key: 'amour-ami', icon: '🧡', route: 'testAmourAmi' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
+    { type: 'test', key: 'encore-amoureux-ex', icon: '🥀', route: 'testEncoreAmoureuxEx' },
+    { type: 'test', key: 'oublier-ex', icon: '🌊', route: 'testOublierEx' },
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
@@ -2489,6 +2491,12 @@ var QuizEngine = (function() {
     // Se sentir pret appelle la question de la rencontre, puis celle de l'ex,
     // puis la facon de s'attacher qu'on emporte avec soi.
     'pret-nouvelle-relation': ['testTrouverAmour', 'testEx', 'testAttachement'],
+    // Après une rupture : ce que fait l'ex appelle ce qu'on ressent soi-même,
+    // puis le temps qu'il faudra ; ce qu'on ressent appelle le temps, puis l'ex ;
+    // le temps appelle ce qu'on ressent, puis la question d'après, la rencontre.
+    'ex':                 ['testEncoreAmoureuxEx', 'testOublierEx', 'testDependance'],
+    'encore-amoureux-ex': ['testOublierEx', 'testEx', 'testPretRelation'],
+    'oublier-ex':         ['testEncoreAmoureuxEx', 'testPretRelation', 'testEx'],
     // Savoir si c'est la bonne personne appelle la solidite du couple, puis
     // ce qui reste de l'amour, puis la question de la fin.
     'est-ce-le-bon': ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple'],
@@ -3040,6 +3048,8 @@ var QuizEngine = (function() {
     'trouver-amour': ['cinqLangages'],
     'celibataire': ['nuls'],
     'pret-nouvelle-relation': ['cinqLangages'],
+    'encore-amoureux-ex': ['dependance'],
+    'oublier-ex': ['dependance'],
     'est-ce-le-bon': ['autotherapie'],
     'red-flag': ['autotherapie'],
     'type-couple': ['quiSaitMieux'],
@@ -7543,11 +7553,13 @@ var QuizEngine = (function() {
     if (v.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-left quiz-reveal-enter', escRiche(v.description)));
 
     // Ce qui joue pour et contre : les trois reponses qui pesent le plus dans
-    // chaque sens, avec une barre proportionnelle a leur poids.
+    // chaque sens, avec une barre proportionnelle a leur poids. Une question
+    // qui ne fait que corriger le calcul (`horsListe`, le temps depuis la
+    // rupture du test sur l'ex) compte dans la duree sans y figurer.
     var poids = [];
     for (var i = 0; i < this.questions.length; i++) {
       var o = this.reponses[i];
-      if (o && o.mult > 0) poids.push({ q: this.questions[i], o: o, c: Math.log(o.mult) });
+      if (o && o.mult > 0 && !this.questions[i].horsListe) poids.push({ q: this.questions[i], o: o, c: Math.log(o.mult) });
     }
     var pour = poids.filter(function(x) { return x.c > 0.04; }).sort(function(a, b) { return b.c - a.c; }).slice(0, 3);
     var contre = poids.filter(function(x) { return x.c < -0.04; }).sort(function(a, b) { return a.c - b.c; }).slice(0, 3);
