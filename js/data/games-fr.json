@@ -325,6 +325,7 @@
     "testCommonPoints": "Test Points Communs",
     "testDistance": "Test Distance",
     "testToxic": "Test Toxique",
+    "testRedFlag": "Test red flag",
     "testCoupleSain": "Test de couple Sain",
     "testMariage": "Test Mariage",
     "testDivorce": "Test Divorce",
@@ -373,6 +374,8 @@
     "testEx": "Test mon ex pense-t-il encore à moi",
     "testEncoreAmoureuxEx": "Test suis-je encore amoureux(se) de mon ex",
     "testOublierEx": "Test combien de temps pour oublier son ex",
+    "testExRevenir": "Test mon ex va-t-il revenir",
+    "testRemettreEx": "Test dois-je me remettre avec mon ex",
     "testChargeMentale": "Test charge mentale du couple",
     "quizRencontre": "Questions de premier rendez-vous",
     "jeuJamais": "Je n'ai jamais",
@@ -777,6 +780,16 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez sur ce que vous vivez en ce moment, pas sur le mois qui a suivi la rupture.",
     "disclaimer": "Ce test ne dit pas si vous allez rencontrer quelqu'un. Il regarde si la place est libre aujourd'hui, et ça bouge d'un mois à l'autre. Vos réponses ne sont pas enregistrées."
+  },
+  "ex-revenir": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur ce qui se passe en ce moment, pas sur ce que vous espérez.",
+    "disclaimer": "Le test estime des chances à partir de situations qui vont souvent avec un retour. Il ne lit pas dans les pensées de votre ex. Vos réponses ne sont pas enregistrées."
+  },
+  "remettre-ex": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez pour vous, pas pour ce que votre ex aimerait entendre.",
+    "disclaimer": "Ce test est un outil de réflexion, il ne remplace pas l'avis d'un professionnel. Vos réponses ne sont pas enregistrées."
   },
   "est-ce-le-bon": {
     "introQuestion": "Avant de commencer :",
