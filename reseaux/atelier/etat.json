@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-27T08:56:43.211Z",
+  "genere_le": "2026-10-28T03:13:40.531Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-27",
+  "aujourdhui": "2026-10-28",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 156,
+  "reserve_jours": 155,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -588,7 +588,7 @@
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -642,7 +642,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: hard mode",
       "erreur": null
     },
@@ -3620,7 +3620,7 @@
   "idees": [],
   "prochain_creneau": {
     "connais-tu": {
-      "jour": "2026-10-27",
+      "jour": "2026-10-30",
       "creneau": "soir"
     },
     "tu-preferes": {
@@ -4320,19 +4320,55 @@
       "jour": "2026-10-20",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "66f2d23a-dae0-4677-ab72-f40099d00ded",
+      "releve": "j7",
+      "vues": 115,
+      "portee": 50,
+      "likes": 0,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 0,
+      "releve_le": "2026-10-28T03:13:31.984399+00:00",
+      "publie_le": "2026-10-20T15:00:12.187+00:00",
+      "categorie": "bd",
+      "format": "image",
+      "gabarit": "bd",
+      "jour": "2026-10-20",
+      "creneau": "soir",
+      "theme": null
+    },
+    {
+      "variante_id": "4e351ee3-2371-4f49-8cb0-689dd255d1ae",
+      "releve": "j7",
+      "vues": 4426,
+      "portee": 3455,
+      "likes": 88,
+      "commentaires": 1,
+      "partages": 116,
+      "enregistrements": 48,
+      "releve_le": "2026-10-28T03:13:36.012652+00:00",
+      "publie_le": "2026-10-20T10:20:08.935+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-20",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 5,
-      "vues_mediane": 2502,
-      "vues_moyenne": 25981,
+      "posts": 6,
+      "vues_mediane": 3464,
+      "vues_moyenne": 22389,
       "vues_max": 74587,
-      "partages": 4314,
-      "enregistrements": 1788,
-      "likes": 1551,
-      "commentaires": 2
+      "partages": 4430,
+      "enregistrements": 1836,
+      "likes": 1639,
+      "commentaires": 3
     },
     {
       "categorie": "coquin",
@@ -4424,10 +4460,10 @@
     },
     {
       "categorie": "bd",
-      "posts": 1,
-      "vues_mediane": 64,
-      "vues_moyenne": 64,
-      "vues_max": 64,
+      "posts": 2,
+      "vues_mediane": 90,
+      "vues_moyenne": 90,
+      "vues_max": 115,
       "partages": 0,
       "enregistrements": 0,
       "likes": 1,
