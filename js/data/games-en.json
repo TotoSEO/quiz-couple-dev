@@ -375,6 +375,8 @@
     "testOublierEx": "How long to get over an ex test",
     "testExRevenir": "Will my ex come back quiz",
     "testRemettreEx": "Should I get back with my ex quiz",
+    "testOublieSonEx": "Is he over his ex quiz",
+    "testPourquoiQuitte": "Why did my ex break up with me quiz",
     "testChargeMentale": "Mental load test for couples",
     "quizRencontre": "First date questions",
     "jeuJamais": "Never Have I Ever",
@@ -789,6 +791,11 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer for yourself, not for what your ex would like to hear.",
     "disclaimer": "This quiz is a tool to help you think, not professional advice. Your answers aren't saved."
+  },
+  "oublie-son-ex": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer based on what you've seen or heard, not on what you imagine.",
+    "disclaimer": "The quiz measures signs, it can't read your partner's mind. Your answers aren't saved."
   },
   "est-ce-le-bon": {
     "introQuestion": "Before you start:",

@@ -375,6 +375,8 @@
     "testOublierEx": "Test ¿cuánto se tarda en olvidar a un ex?",
     "testExRevenir": "Test ¿mi ex volverá?",
     "testRemettreEx": "Test ¿debo volver con mi ex?",
+    "testOublieSonEx": "Test ¿ha olvidado a su ex?",
+    "testPourquoiQuitte": "Test ¿por qué me dejó mi ex?",
     "testChargeMentale": "Test de carga mental en pareja",
     "quizRencontre": "Preguntas de primera cita",
     "jeuJamais": "Yo nunca",
@@ -789,6 +791,11 @@
     "introQuestion": "Antes de empezar:",
     "introQuote": "Responde por ti, no por lo que a tu ex le gustaría oír.",
     "disclaimer": "Este test es una herramienta para reflexionar, no sustituye la opinión de un profesional. Tus respuestas no se guardan."
+  },
+  "oublie-son-ex": {
+    "introQuestion": "Antes de empezar:",
+    "introQuote": "Responde según lo que has visto u oído, no según lo que imaginas.",
+    "disclaimer": "El test mide señales, no lee la mente de tu pareja. Tus respuestas no se guardan."
   },
   "est-ce-le-bon": {
     "introQuestion": "Antes de empezar:",
