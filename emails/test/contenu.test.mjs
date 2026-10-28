@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import {
   TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
 } from '../contenu.mjs';
-import { CAPTURE_PAGES } from '../../static-site/build/config.js';
+import { CAPTURE_PAGES, BILAN_ENTREES } from '../../static-site/build/config.js';
 
 const SOIR = new Date('2026-10-24T17:00:00Z');
 const NBSP = String.fromCharCode(0xa0);
@@ -65,8 +65,14 @@ test('le lien de l\'e-mail ne porte que la source et la façon de faire', () => 
   for (const lang of LANGUES) assert.match(lien(lang, 'e1'), /^https:\/\/quiz-couple\.com\/(?:[a-z]{2}\/)?[a-z-]+\/\?src=email-e1$/);
 });
 
-test('chaque page à porte e-mail a sa famille, une source inconnue prend « general »', () => {
-  for (const id of Object.values(CAPTURE_PAGES)) assert.notEqual(angleDe(id), 'general', id);
+test('chaque page à porte e-mail a sa famille, un jeu et une source inconnue prennent « general »', () => {
+  // Le jeu de soirée (groupe « jeu ») n'est pas un test : « Merci d'avoir
+  // fait un test » sonnerait faux, il prend l'intro générale.
+  for (const [cle, id] of Object.entries(CAPTURE_PAGES)) {
+    if (BILAN_ENTREES[cle].groupe === 'jeu') assert.equal(angleDe(id), 'general', id);
+    else assert.notEqual(angleDe(id), 'general', id);
+  }
+  assert.equal(angleDe('soiree'), 'general');
   assert.equal(angleDe('toxique'), 'doute');
   assert.equal(angleDe('mariage'), 'projet');
   assert.equal(angleDe('tester-couple'), 'score');

@@ -3,9 +3,11 @@ name: E-mails · base Supabase
 # Applique 20261024120000_emails_parcours.sql (le parcours e-mail des
 # abonnés : envois, comptes, passages du soir, file, événements de Brevo,
 # lecture de l'admin, horloge pg_cron), puis 20261024190000_emails_ordre.sql
-# (la file du soir, le plus en retard d'abord) et 20261027120000_emails_langues.sql
+# (la file du soir, le plus en retard d'abord), 20261027120000_emails_langues.sql
 # (l'anglais d'abord, puis le français, l'italien, l'allemand, l'espagnol en
-# dernier), par l'API de gestion de Supabase, comme abonnes-base.yml, avec les
+# dernier) et 20261028120000_emails_recents.sql (les adresses de moins de
+# 48 heures d'abord, puis les « e2 », puis le reste, les plus récents d'abord,
+# la langue en second), par l'API de gestion de Supabase, comme abonnes-base.yml, avec les
 # secrets déjà là (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF).
 # Idempotentes : la relancer (« Run workflow ») est sans risque, et chacune
 # repasse toujours après celles d'avant, qui réécrivent la file à l'ancienne.
@@ -17,6 +19,7 @@ on:
       - 'supabase/migrations/20261024120000_emails_parcours.sql'
       - 'supabase/migrations/20261024190000_emails_ordre.sql'
       - 'supabase/migrations/20261027120000_emails_langues.sql'
+      - 'supabase/migrations/20261028120000_emails_recents.sql'
       - '.github/workflows/emails-base.yml'
   workflow_dispatch:
 
@@ -37,7 +40,8 @@ jobs:
         run: |
           for f in supabase/migrations/20261024120000_emails_parcours.sql \
                    supabase/migrations/20261024190000_emails_ordre.sql \
-                   supabase/migrations/20261027120000_emails_langues.sql; do
+                   supabase/migrations/20261027120000_emails_langues.sql \
+                   supabase/migrations/20261028120000_emails_recents.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

@@ -25,6 +25,7 @@ async function etape(titre, f) {
 
 await etape('Le mode', async () => {
   info(`mode « ${REGLAGES.mode} » (emails/reglages.mjs) · plafond ${REGLAGES.plafond} par soir · fenêtre ${REGLAGES.fenetre.de}-${REGLAGES.fenetre.a}`);
+  if (REGLAGES.retenue) info(`retenue à ${REGLAGES.retenue} par soir : la montée en charge attend qu'on l'enlève`);
 });
 
 await etape('Le compte', async () => {
