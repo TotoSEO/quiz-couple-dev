@@ -158,7 +158,7 @@ if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
 // partials/bilan-banniere.ejs), sauf ceux qui parlent d'emprise, de
 // manipulation, de violence ou d'infidélité : on ne vend pas une évaluation
 // à deux à quelqu'un qui lit ça (même règle que BILAN_ENTREES).
-const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou/i;
+const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou|quitter-quelqu-un/i;
 function entreeArticle(articleMeta) {
   if (!BILAN_OUVERT || !articleMeta) return null;
   const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
