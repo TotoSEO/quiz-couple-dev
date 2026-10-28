@@ -1672,6 +1672,32 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-28T21:45:00+01:00',
   },
+  {
+    internalSlug: 'mon-ex-etait-il-le-bon',
+    category: 'ex',
+    featuredImage: '/blog/mon-ex-etait-il-le-bon.webp',
+    slugs: {
+      fr: 'mon-ex-etait-il-le-bon',
+      en: 'was-my-ex-the-one',
+      es: 'mi-ex-era-el-amor-de-mi-vida',
+      de: 'war-mein-ex-der-richtige',
+      it: 'il-mio-ex-era-quello-giusto',
+    },
+    publishedAt: '2026-10-28T22:20:00+01:00',
+  },
+  {
+    internalSlug: 'se-remettre-ensemble-apres-plusieurs-ruptures',
+    category: 'ex',
+    featuredImage: '/blog/se-remettre-ensemble-apres-plusieurs-ruptures.webp',
+    slugs: {
+      fr: 'se-remettre-ensemble-apres-plusieurs-ruptures',
+      en: 'on-again-off-again-relationship',
+      es: 'relacion-intermitente',
+      de: 'on-off-beziehung',
+      it: 'relazione-tira-e-molla',
+    },
+    publishedAt: '2026-10-28T22:25:00+01:00',
+  },
 ];
 
 // Author data
@@ -1786,13 +1812,13 @@ export const QUIZ_RELATED_ARTICLES = {
   testSecret:       ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon', 'homme-qu-on-ignore', 'il-annule-au-dernier-moment', 'homme-nerveux-devant-une-femme'],
   testCouche:       ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
   testDistanceAime: ['manque-communication-couple', 'sentiments-chez-un-homme', 'arreter-ou-continuer-relation'],
-  testEx:           ['les-phases-de-la-rupture-chez-l-homme', 'rester-ami-avec-son-ex', 'dependance-affective-rupture', 'arreter-ou-continuer-relation', 'homme-qu-on-ignore'],
-  testEncoreAmoureuxEx: ['amour-ou-dependance-affective', 'rester-ami-avec-son-ex', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
-  testOublierEx:    ['les-phases-de-la-rupture-chez-l-homme', 'rester-ami-avec-son-ex', 'sortir-de-la-dependance-affective', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'attachement-anxieux'],
-  testExRevenir:    ['les-phases-de-la-rupture-chez-l-homme', 'quitter-quelqu-un-pour-quelqu-un-d-autre', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
-  testRemettreEx:   ['amour-ou-dependance-affective', 'quitter-quelqu-un-pour-quelqu-un-d-autre', 'red-flags-homme', 'red-flags-femme', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture'],
+  testEx:           ['les-phases-de-la-rupture-chez-l-homme', 'rester-ami-avec-son-ex', 'mon-ex-etait-il-le-bon', 'dependance-affective-rupture', 'arreter-ou-continuer-relation', 'homme-qu-on-ignore'],
+  testEncoreAmoureuxEx: ['mon-ex-etait-il-le-bon', 'amour-ou-dependance-affective', 'rester-ami-avec-son-ex', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
+  testOublierEx:    ['les-phases-de-la-rupture-chez-l-homme', 'mon-ex-etait-il-le-bon', 'rester-ami-avec-son-ex', 'sortir-de-la-dependance-affective', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'attachement-anxieux'],
+  testExRevenir:    ['se-remettre-ensemble-apres-plusieurs-ruptures', 'les-phases-de-la-rupture-chez-l-homme', 'quitter-quelqu-un-pour-quelqu-un-d-autre', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
+  testRemettreEx:   ['se-remettre-ensemble-apres-plusieurs-ruptures', 'mon-ex-etait-il-le-bon', 'amour-ou-dependance-affective', 'quitter-quelqu-un-pour-quelqu-un-d-autre', 'red-flags-homme', 'red-flags-femme', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture'],
   testOublieSonEx:  ['rester-ami-avec-son-ex', 'jalousie-maladive', 'relation-toxique-signes', 'red-flags-homme', 'red-flags-femme', 'amour-ou-dependance-affective'],
-  testPourquoiQuitte: ['quitter-quelqu-un-pour-quelqu-un-d-autre', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'disputes-couple', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
+  testPourquoiQuitte: ['quitter-quelqu-un-pour-quelqu-un-d-autre', 'mon-ex-etait-il-le-bon', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'disputes-couple', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
   testChargeMentale:['charge-mentale-couple', 'disputes-couple', 'manque-communication-couple'],
   // Les deux tests du doute et de l'emprise : les articles qui parlent des
   // sentiments qui s'effacent et de ce qu'on ne doit pas accepter.
