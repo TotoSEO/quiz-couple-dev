@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>«Nadie deja a alguien por otra persona»: ¿verdad o mentira?</title>
+      <link>https://quiz-couple.com/es/blog/dejar-a-alguien-por-otra-persona/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dejar-a-alguien-por-otra-persona/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:45:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>«Nadie deja a alguien por otra persona», «un hombre siempre deja a una mujer por otra»: lo que dicen los estudios, y qué hacer si te pasa a ti.</description>
+      <media:content url="https://quiz-couple.com/blog/quitter-quelqu-un-pour-quelqu-un-d-autre.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>¿Se puede ser amigo de tu ex? Lo que dicen los estudios</title>
+      <link>https://quiz-couple.com/es/blog/se-puede-ser-amigo-de-tu-ex/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/se-puede-ser-amigo-de-tu-ex/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:30:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Ser amigo de tu ex es posible, pero no por cualquier motivo. Las 4 razones que llevan a hacerlo, y las señales de que te impide pasar página.</description>
+      <media:content url="https://quiz-couple.com/blog/rester-ami-avec-son-ex.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>60 preguntas sobre el futuro para hacerse en pareja antes de las grandes decisiones</title>
       <link>https://quiz-couple.com/es/blog/preguntas-sobre-el-futuro-pareja/</link>
@@ -263,24 +281,6 @@
       <category>Vida en pareja</category>
       <description>Las seis etapas por las que pasan los sentimientos de un hombre, lo que los acelera, lo que los bloquea y las señales que no engañan.</description>
       <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Las señales que dicen si hay que dejarlo o seguir en una relación</title>
-      <link>https://quiz-couple.com/es/blog/dejarlo-o-seguir-pareja/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/dejarlo-o-seguir-pareja/</guid>
-      <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Once señales que dicen que hay que parar, siete que dicen que hay que seguir, y la pregunta que las separa. Sin que nadie decida por ti.</description>
-      <media:content url="https://quiz-couple.com/blog/arreter-ou-continuer-relation.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Love bombing: cómo saber si es amor o manipulación</title>
-      <link>https://quiz-couple.com/es/blog/love-bombing-senales/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/love-bombing-senales/</guid>
-      <pubDate>Sun, 02 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Es perfecto, demasiado rápido, demasiado intenso. ¿Amor sincero o love bombing? Las 3 fases del ciclo, las señales concretas y la prueba del límite.</description>
-      <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

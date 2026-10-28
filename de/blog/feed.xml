@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/de/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.</description>
     <language>de</language>
-    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/de/blog/</link>
     </image>
+    <item>
+      <title>„Man verlässt niemanden für jemand anderen“: Stimmt das?</title>
+      <link>https://quiz-couple.com/de/blog/jemanden-fuer-jemand-anderen-verlassen/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/de/blog/jemanden-fuer-jemand-anderen-verlassen/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:45:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>„Man verlässt niemanden für jemand anderen“, „ein Mann geht immer wegen einer anderen“: was Studien dazu sagen, und was du tun kannst, wenn es dich trifft.</description>
+      <media:content url="https://quiz-couple.com/blog/quitter-quelqu-un-pour-quelqu-un-d-autre.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Kann man mit dem Ex befreundet bleiben? Was Studien sagen</title>
+      <link>https://quiz-couple.com/de/blog/mit-dem-ex-befreundet-bleiben/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/de/blog/mit-dem-ex-befreundet-bleiben/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:30:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Mit dem Ex befreundet zu bleiben, geht, aber nicht aus jedem Grund. Die 4 Gründe, warum man es tut, und die Zeichen, dass es dich am Loslassen hindert.</description>
+      <media:content url="https://quiz-couple.com/blog/rester-ami-avec-son-ex.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>60 Zukunftsfragen für Paare vor den großen Entscheidungen</title>
       <link>https://quiz-couple.com/de/blog/zukunftsfragen-fuer-paare/</link>
@@ -263,24 +281,6 @@
       <category>Beziehung</category>
       <description>Die sechs Phasen, die Gefühle bei einem Mann durchlaufen, was sie beschleunigt, was sie blockiert, und die Anzeichen, die nicht täuschen.</description>
       <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Die Anzeichen, die sagen, ob man eine Beziehung beenden oder weitermachen sollte</title>
-      <link>https://quiz-couple.com/de/blog/beziehung-beenden-oder-weitermachen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/de/blog/beziehung-beenden-oder-weitermachen/</guid>
-      <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Beziehung</category>
-      <description>Elf Anzeichen, die für ein Ende sprechen, sieben, die für ein Weitermachen sprechen, und die Frage, die beides trennt.</description>
-      <media:content url="https://quiz-couple.com/blog/arreter-ou-continuer-relation.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Love Bombing: Wie du echte Liebe von Manipulation unterscheidest</title>
-      <link>https://quiz-couple.com/de/blog/love-bombing-anzeichen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/de/blog/love-bombing-anzeichen/</guid>
-      <pubDate>Sun, 02 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Beziehung</category>
-      <description>Er ist perfekt, zu schnell, zu viel. Echte Liebe oder Love Bombing? Die 3 Phasen des Zyklus, die konkreten Anzeichen und der Grenzen-Test.</description>
-      <media:content url="https://quiz-couple.com/blog/love-bombing.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

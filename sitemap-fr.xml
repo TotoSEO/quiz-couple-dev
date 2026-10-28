@@ -1810,4 +1810,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/rester-ami-avec-son-ex/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/se-puede-ser-amigo-de-tu-ex/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/mit-dem-ex-befreundet-bleiben/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/restare-amici-con-l-ex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
+    <lastmod>2026-10-28T21:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/leaving-someone-for-someone-else/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/dejar-a-alguien-por-otra-persona/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/jemanden-fuer-jemand-anderen-verlassen/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/lasciare-qualcuno-per-un-altro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/"/>
+    <lastmod>2026-10-28T21:45:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

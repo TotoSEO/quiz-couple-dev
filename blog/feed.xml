@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 27 Oct 2026 13:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>On ne quitte pas quelqu&#39;un pour quelqu&#39;un d&#39;autre : vrai ou faux ?</title>
+      <link>https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:45:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>« On ne quitte pas quelqu&#39;un pour quelqu&#39;un d&#39;autre », « un homme quitte toujours pour une autre » : ce que disent les études, et que faire si ça vous arrive.</description>
+      <media:content url="https://quiz-couple.com/blog/quitter-quelqu-un-pour-quelqu-un-d-autre.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Peut-on rester ami avec son ex ? Ce que disent les études</title>
+      <link>https://quiz-couple.com/blog/rester-ami-avec-son-ex/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/rester-ami-avec-son-ex/</guid>
+      <pubDate>Wed, 28 Oct 2026 20:30:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Rester ami avec son ex, c&#39;est possible, mais pas pour n&#39;importe quelle raison. Les 4 raisons qui y poussent, et les signes que ça vous empêche d&#39;avancer.</description>
+      <media:content url="https://quiz-couple.com/blog/rester-ami-avec-son-ex.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>60 questions d&#39;avenir à se poser en couple avant les grandes décisions</title>
       <link>https://quiz-couple.com/blog/questions-avenir-couple/</link>
@@ -263,24 +281,6 @@
       <category>Vie de couple</category>
       <description>28 % des couples jugent le trajet des vacances tendu. Les chiffres, les vrais déclencheurs des disputes en vacances, et ce qui les désamorce.</description>
       <media:content url="https://quiz-couple.com/blog/disputes-couple-vacances.webp" medium="image" type="image/webp" width="1200" height="675"/>
-    </item>
-    <item>
-      <title>Les étapes par lesquelles un homme tombe amoureux</title>
-      <link>https://quiz-couple.com/blog/sentiments-chez-un-homme/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/sentiments-chez-un-homme/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Les six étapes par lesquelles passent les sentiments chez un homme, ce qui les accélère, ce qui les bloque, et les signes qui ne trompent pas.</description>
-      <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>Les signaux qui disent s&#39;il faut arrêter ou continuer une relation</title>
-      <link>https://quiz-couple.com/blog/arreter-ou-continuer-relation/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/arreter-ou-continuer-relation/</guid>
-      <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>Onze signaux qui disent d&#39;arrêter, sept qui disent de continuer, et la question qui départage. Sans vous dire quoi faire à votre place.</description>
-      <media:content url="https://quiz-couple.com/blog/arreter-ou-continuer-relation.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>
