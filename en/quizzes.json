@@ -322,6 +322,18 @@
     "description": "15 questions about what they do, not about what you read into it. Solo test, instant result.",
     "metaDescription": "Does your ex still think about you? 15 questions that weigh their actions rather than your interpretations. Free, anonymous, no signup and no email."
   },
+  "testEncoreAmoureuxEx": {
+    "title": "Am I Still in Love With My Ex? 20-Question Quiz",
+    "shortTitle": "Still in love with my ex?",
+    "description": "Twenty questions that measure separately what you still feel for your ex and what the breakup took away from you. Two bars to compare, five possible results.",
+    "metaDescription": "Am I still in love with my ex, or do I just miss being in a relationship? 20 questions that separate love for the person from missing the relationship. Free."
+  },
+  "testOublierEx": {
+    "title": "How Long Does It Take to Get Over an Ex? Free Test",
+    "shortTitle": "How long to get over an ex?",
+    "description": "Twenty questions about your relationship, the breakup and your days, and an estimate in months of how long it will take you to move on.",
+    "metaDescription": "How long does it take to get over an ex? What the research says, and a 20-question test that estimates your own timeline in months. Free and anonymous."
+  },
   "testChargeMentale": {
     "title": "Mental Load Test for Couples: Who Carries What?",
     "shortTitle": "Who carries the mental load?",

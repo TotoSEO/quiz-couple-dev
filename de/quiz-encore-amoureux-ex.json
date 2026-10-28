@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Test nach der Trennung",
+    "title": "Bin ich noch in meinen Ex verliebt, oder vermisse ich nur die Beziehung?",
+    "titleHighlight": "noch in meinen Ex verliebt",
+    "description": "Dieser Test misst zwei Dinge getrennt: <strong>die Liebe, die du noch für deinen Ex empfindest</strong>, und <strong>das Vermissen der Beziehung selbst</strong> (die Abende zu zweit, die Gewohnheiten, die Angst, allein zu sein). Man kann die Beziehung vermissen, ohne noch in die Person verliebt zu sein... und umgekehrt. Das Ergebnis zeigt dir, was von beidem lauter ist.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, kostenlos und ohne Anmeldung",
+    "jumpBtn": "Zum Test"
+  },
+  "crossLink": {
+    "title": "Willst du vor allem wissen, wann es aufhört wehzutun?",
+    "text": "Dieser Test zeigt dir, was du fühlst. Der andere schätzt in Monaten, wie lange du noch brauchst, um darüber hinwegzukommen, und was dir am meisten Zeit sparen würde.",
+    "button": "Schätzen, wie lange es noch dauert"
+  },
+  "section1": {
+    "title": "Woran merkt man, dass man noch in den Ex verliebt ist?",
+    "p1": "Nach einer Trennung geht alles durcheinander. Du vermisst deinen Ex, du denkst abends an ihn oder sie, ein einziges Lied reicht, und du bist wieder mittendrin... und irgendwann weißt du nicht mehr so genau, ob das Liebe ist oder etwas anderes.",
+    "p2": "Das Problem ist, dass <strong>zwei ganz verschiedene Dinge dieselben Symptome machen</strong>. Da ist die Liebe zur Person: ihre Stimme, ihre Art, der Wunsch, genau sie zurückzuhaben und niemand anderen. Und da ist das Vermissen der Beziehung: jemand, der zu Hause auf dich wartet, die kleinen Gewohnheiten zu zweit, die Angst, allein zu bleiben, manchmal der Wunsch, dass dein Ex es bereut. Beides tut weh und beides lässt dich an deinen Ex denken, aber es verlangt überhaupt nicht dasselbe.",
+    "p3": "Ein ganz einfaches Beispiel. Stell dir vor, morgen fragt dich ein netter, lustiger und aufmerksamer Mensch, ob ihr etwas miteinander anfangen wollt. Wenn das Vermissen dann zum großen Teil verschwindet, hat dir vor allem die Beziehung gefehlt. Wenn sich nichts ändert, weil du deinen Ex willst, ist es Liebe.",
+    "p4": "Deshalb gibt dir der Test <strong>zwei Werte statt einer einzigen Note</strong>. Zehn Fragen schauen darauf, was du für deinen Ex empfindest, zehn andere darauf, was dir die Trennung genommen hat, und die beiden Balken liest man zusammen."
+  },
+  "section2": {
+    "title": "Anzeichen, dass du deinen Ex noch liebst",
+    "intro": "Manche Anzeichen haben mit der Person selbst zu tun. Sie zählen im Test am meisten, und das hier sind die wichtigsten.",
+    "pillar1Title": "Du würdest Ja sagen, wenn er oder sie zurückkäme",
+    "pillar1Text": "Du würdest Ja sagen, sogar mit den Macken, und sogar mit dem, was euch auseinandergebracht hat. Das ist das deutlichste Zeichen, und es ist die Frage, die im Test am meisten zählt.",
+    "pillar2Title": "Dein Herz rast bei dem Gedanken, ihm oder ihr zu begegnen",
+    "pillar2Text": "Eine Nachricht von ihm oder ihr, oder nur der Name in einem Gespräch, und dein ganzer Tag ist durcheinander.",
+    "pillar3Title": "Du stellst dir immer noch eine gemeinsame Zukunft vor",
+    "pillar3Text": "Du denkst noch an die Reisen, die ihr gemacht hättet, an die Wohnung, die ihr zusammen genommen hättet. Pläne macht man selten mit jemandem, den man nicht mehr liebt.",
+    "pillar4Title": "Niemand kann ihm oder ihr das Wasser reichen",
+    "pillar4Text": "Du vergleichst jeden neuen Menschen mit deinem Ex, und er verliert jedes Mal, oft wegen Kleinigkeiten, die nur dein Ex hatte.",
+    "pillar5Title": "Was ihm oder ihr passiert, ist dir nicht egal",
+    "pillar5Text": "Du machst dir immer noch Sorgen um seine oder ihre Gesundheit oder den Job, unabhängig davon, was ihr zusammen erlebt habt.",
+    "tip": "Oft an den Ex zu denken, ist für sich allein noch kein Zeichen. Nach einer Trennung denkt jeder an seinen Ex, ob verliebt oder nicht. Es kommt darauf an, woran du denkst: an die Person oder an das, was du verloren hast."
+  },
+  "section3": {
+    "title": "Was nach Liebe aussieht, aber keine ist",
+    "intro": "Das Vermissen der Beziehung trägt oft das Gesicht deines Ex, ganz einfach, weil er oder sie diesen Platz hatte. Das hier wird am häufigsten mit Liebe verwechselt.",
+    "sub1Title": "Die Einsamkeit am Sonntagabend",
+    "sub1P1": "Vermisst du deinen Ex vor allem, wenn die Wohnung leer ist, und viel weniger, wenn Leute um dich herum sind? Dann fehlt dir eher, jemanden bei dir zu haben, als genau diese Person.",
+    "sub2Title": "Das gekränkte Ego",
+    "sub2P1": "Wenn man verlassen wurde, wünscht man sich oft, dass der andere es bereut und sich entschuldigend zurückmeldet, auch wenn man Nein sagen würde. Und das Gehirn hilft nicht gerade. 2010 haben die Anthropologin Helen Fisher und ihr Team fünfzehn Menschen untersucht, die gerade verlassen worden waren und sagten, sie seien noch sehr verliebt: Beim Foto ihres Ex <strong>waren die Bereiche für Belohnung und Verlangen aktiv</strong>, dieselben wie bei einer Sucht. Zurückgewiesen zu werden kann einen Menschen noch begehrenswerter machen.",
+    "sub3Title": "Die Nostalgie, die alles schönfärbt",
+    "sub3P1": "Mit der Zeit behält das Gedächtnis vor allem die schönen Momente. Die Streits und das, was dich zum Gehen gebracht hat, verblassen, und übrig bleibt eine perfekte Geschichte, die es so nie gab. Wenn du nicht mehr so genau weißt, warum es vorbei ist, denk an die letzten Monate, nicht an die ersten.",
+    "sub4Title": "Die Angst, allein zu bleiben",
+    "sub4P1": "Nach einer Trennung sagen sich viele, dass sie nie wieder jemanden finden. Diese Angst lässt einen zurückschauen, zu dem einzigen Menschen, den man schon kennt. Das ist dann weniger Liebe zu ihm oder ihr als Angst vor dem Unbekannten."
+  },
+  "section4": {
+    "title": "Die fünf Ergebnisse des Tests",
+    "p1": "Der Test gibt dir keine Punktzahl von hundert. Er gibt dir zwei Balken, und ihre Form macht das Ergebnis: Einer kann vor dem anderen liegen, beide können hoch sein oder beide niedrig.",
+    "headerScore": "Deine zwei Balken",
+    "headerLevel": "Das Ergebnis",
+    "headerAnalysis": "Was es bedeutet",
+    "row1Score": "Beide niedrig",
+    "row1Level": "Du bist nicht mehr verliebt",
+    "row1Analysis": "Es bleiben Erinnerungen, keine Gefühle",
+    "row2Score": "Vermissen vorn",
+    "row2Level": "Es ist Vermissen, keine Liebe",
+    "row2Analysis": "Dir fehlt vor allem das Leben zu zweit",
+    "row3Score": "Liebe vorn",
+    "row3Level": "Du liebst ihn oder sie noch",
+    "row3Analysis": "Dir fehlt die Person, nicht die Beziehung",
+    "row4Score": "Beide hoch",
+    "row4Level": "Verliebt und nicht losgekommen",
+    "row4Analysis": "Die schmerzhafteste Mischung",
+    "row5Score": "Beide in der Mitte",
+    "row5Level": "Ein bisschen von beidem",
+    "row5Analysis": "Die Gefühle werden leiser, ohne zu verschwinden",
+    "tip": "Das Ergebnis zeigt, wo du heute stehst, und in den Monaten nach einer Trennung verändert es sich stark. Mach den Test in ein paar Wochen noch einmal: Der Vergleich verrät dir genauso viel wie das erste Ergebnis."
+  },
+  "section5": {
+    "title": "Du liebst deinen Ex noch: und jetzt?",
+    "p1": "Noch in den Ex verliebt zu sein, ist nichts Ungewöhnliches. Gefühle hören nicht an dem Tag auf, an dem die Beziehung endet: Laut einer 2025 veröffentlichten Studie der University of Illinois dauert es im Schnitt <strong>rund vier Jahre, bis man sich zur Hälfte von einem Ex gelöst hat</strong>, nach einer Beziehung von mindestens zwei Jahren. Entscheidend ist, was du mit diesem Gefühl machst.",
+    "sub1Title": "Wenn es an Dingen lag, die sich ändern können",
+    "sub1P1": "Eine schlechte Phase, die Entfernung, ein Missverständnis, eine Zeit, in der es einem von euch nicht gut ging... Dann kannst du es deinem Ex sagen, einmal, deutlich, ohne es in Andeutungen zu verstecken. Schau vorher, was er oder sie von sich aus tut: <a href=\"/de/denkt-mein-ex-noch-an-mich/\">eine Nachricht ohne Vorwand oder der Vorschlag, sich zu treffen</a> sagen viel mehr als Storys, die um Mitternacht angeschaut werden.",
+    "sub2Title": "Wenn es an etwas Tieferem lag",
+    "sub2P1": "Werte, die nicht zusammenpassen, zwei verschiedene Lebenspläne, ein Betrug, der alles kaputt gemacht hat, oder ein Ex, der dir klar gesagt hat, dass es vorbei ist. Dann reicht Liebe nicht, und sie am Leben zu halten, tut vor allem dir weh. Brich den Kontakt ab, bis es sich beruhigt hat: Das ist <a href=\"/de/wie-lange-dauert-es-ueber-den-ex-hinwegzukommen/\">das, was am meisten hilft, darüber hinwegzukommen</a>, lange vor allen großen Vorsätzen.",
+    "sub3Title": "Wenn es vor allem das Vermissen ist",
+    "sub3P1": "Dann schreib deinem Ex nicht, um einen einsamen Abend zu füllen: Du würdest dieselbe Beziehung zurückbekommen, mit denselben Problemen. Füll lieber das, was die Beziehung gefüllt hat: Triff deine Freunde, plan etwas für deine Abende. Und wenn du dich allein wieder wohlfühlst, wird <a href=\"/de/bereit-fuer-eine-neue-beziehung-test/\">der Platz für jemand Neuen</a> von ganz allein frei!"
+  },
+  "seo": {
+    "faqTitle": "Fragen, die man sich stellt"
+  },
+  "jsonLd": {
+    "about": "Gefühle nach einer Trennung",
+    "faq1Q": "Ist es normal, noch in den Ex verliebt zu sein?",
+    "faq1A": "Ja. Gefühle hören mit der Trennung nicht auf, und die Bindung an einen Ex braucht oft Jahre, bis sie ganz verschwunden ist. Bedenklich ist nicht, dass du deinen Ex noch liebst, sondern wenn du dein Leben auf Pause stellst und wartest, dass er oder sie zurückkommt.",
+    "faq2Q": "Wie unterscheidet man Liebe vom Vermissen der Beziehung?",
+    "faq2A": "Stell dir eine einfache Frage: Wenn dich morgen ein anderer netter, aufmerksamer Mensch fragen würde, ob ihr etwas miteinander anfangt, wäre das Vermissen dann weg? Wenn ja, fehlt dir vor allem die Beziehung. Wenn nein, weil du deinen Ex willst, ist es Liebe. Der Test trennt beides, mit zehn Fragen auf jeder Seite.",
+    "faq3Q": "Kann man den Ex noch lieben und mit jemand anderem zusammen sein?",
+    "faq3A": "Ja, das kommt vor, vor allem wenn die neue Beziehung kurz nach der Trennung angefangen hat. Ab und zu an den Ex zu denken, ist nicht schlimm. Wenn du ständig vergleichst und dein Ex jeden Tag in deinem Kopf ist, war der Platz noch nicht frei.",
+    "faq4Q": "Warum vermisse ich meinen Ex mehr, seit er oder sie jemanden hat?",
+    "faq4A": "Weil es die Angst weckt, ersetzt worden zu sein, wenn jemand deinen Platz einnimmt, und manchmal auch die Angst, allein zu bleiben. Dann sprechen oft das Vermissen und das Ego lauter als die Liebe. Lass ein paar Wochen vergehen, bevor du Schlüsse ziehst.",
+    "faq5Q": "Sollte man dem Ex sagen, dass man ihn noch liebt?",
+    "faq5A": "Nur wenn die Trennung an Dingen lag, die sich ändern können, und wenn du bereit bist, ein Nein zu hören. Sag es einmal, deutlich. Wenn dein Ex dir schon gesagt hat, dass es vorbei ist, tut es vor allem dir weh, es noch einmal zu sagen.",
+    "faq6Q": "Werden meine Antworten gespeichert?",
+    "faq6A": "Nein. Deine Antworten bleiben in deinem Browser. Nur die Art des Ergebnisses, ohne persönliche Daten, dient dazu, zu messen, wie der Test genutzt wird."
+  }
+}

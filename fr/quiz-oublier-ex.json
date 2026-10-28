@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Test après une rupture",
+    "title": "Combien de temps pour oublier son ex ? Le test en 20 questions",
+    "titleHighlight": "oublier son ex",
+    "description": "Ce test estime le temps qu'il vous faudra encore pour tourner la page. Il regarde votre histoire, la façon dont elle s'est terminée, ce que vous ressentez aujourd'hui et ce que vous faites de vos journées. Le résultat donne <strong>une durée en mois</strong>, et <strong>ce qui vous ferait gagner le plus de temps</strong>.",
+    "subtitle": "Vingt questions, cinq minutes, une estimation en mois",
+    "jumpBtn": "Faire le test"
+  },
+  "crossLink": {
+    "title": "Vous ne savez plus si vous l'aimez encore ?",
+    "text": "Ce test-ci estime le temps qu'il vous faudra. Si vous vous demandez d'abord si c'est de l'amour ou du manque, l'autre test mesure les deux séparément.",
+    "button": "Faire le test amour ou manque"
+  },
+  "section1": {
+    "title": "Combien de temps faut-il pour oublier son ex ?",
+    "p1": "Il n'y a pas de chiffre qui vaut pour tout le monde. Les durées qu'on lit partout (trois mois, un an, la moitié de la durée de la relation...) ne mesurent pas la même chose, et aucune ne tient compte de votre histoire.",
+    "p2": "Ce que montrent les études, c'est surtout que ça dépend de ce qu'on appelle « oublier ». <strong>Aller mieux arrive assez vite</strong> : même après un divorce, le stress est au plus haut l'année de la séparation, puis il baisse nettement dans les deux années qui suivent. <strong>Ne plus être attaché du tout prend beaucoup plus longtemps</strong> : en 2025, des chercheurs de l'université de l'Illinois ont trouvé qu'il faut en moyenne autour de quatre ans pour se détacher à moitié d'un ex, après une histoire d'au moins deux ans.",
+    "p3": "Entre les deux, il y a le moment qui intéresse la plupart des gens : celui où votre ex ne prend plus de place dans vos journées. Vous y pensez encore de temps en temps, mais ça ne fait plus mal. C'est ce moment-là que le test essaie d'estimer.",
+    "headerScore": "Le chiffre qu'on lit",
+    "headerLevel": "D'où il vient",
+    "headerAnalysis": "Ce qu'il mesure",
+    "row1Score": "11 semaines",
+    "row1Level": "Une étude américaine de 2007 sur 155 jeunes adultes",
+    "row1Analysis": "Aucune durée : les participants avaient rompu dans les 11 semaines précédentes",
+    "row2Score": "Un à deux ans",
+    "row2Level": "Le suivi d'environ 430 divorces et séparations en Grande-Bretagne (2006)",
+    "row2Analysis": "Le temps pour que le stress de la séparation retombe",
+    "row3Score": "Environ 4 ans",
+    "row3Level": "Une étude de 2025 sur 328 adultes, après des histoires d'au moins deux ans",
+    "row3Analysis": "Le temps pour que l'attachement à l'ex soit à moitié parti",
+    "row4Score": "La moitié de la relation",
+    "row4Level": "Une règle qui circule depuis des années",
+    "row4Analysis": "Rien : aucune étude ne la confirme",
+    "tip": "Si vous êtes séparé(e) depuis quelques semaines et que tout vous paraît insurmontable, c'est normal. Les premières semaines sont les plus dures pour tout le monde, et elles ne disent pas grand-chose de la suite."
+  },
+  "section2": {
+    "title": "Comment le test estime votre durée",
+    "intro": "Voici comment fonctionne notre test ci-dessus : chaque réponse rapproche ou éloigne le moment où vous aurez tourné la page.",
+    "p1": "Prenons deux exemples. Une personne qui a quitté son ex après six mois d'histoire, qui ne lui parle plus et qui voit ses amis tous les week-ends a de bonnes chances d'aller bien d'ici un mois ou deux. À l'inverse, quelqu'un qui a été quitté du jour au lendemain après huit ans de vie commune, qui écrit encore à son ex et regarde ses stories tous les soirs, en a plutôt pour des années si rien ne change.",
+    "p2": "Le test fait ce calcul avec vos vingt réponses. Le résultat donne une durée en mois, une fourchette et une date approximative. Il montre aussi <strong>ce qui vous aide, ce qui vous retient, et ce qui vous ferait gagner le plus de temps</strong>. Certaines réponses ne se changent pas, comme la durée de votre histoire ou la personne qui a rompu. D'autres si, et c'est parmi elles que le test choisit ce qu'il vous propose.",
+    "pillar1Title": "Votre histoire",
+    "pillar1Text": "Sa durée, la vie commune, qui est parti(e) et comment ça s'est terminé.",
+    "pillar2Title": "Où vous en êtes",
+    "pillar2Text": "Combien de fois vous y pensez, ce que vous ressentez, l'espoir d'un retour.",
+    "pillar3Title": "Vos habitudes",
+    "pillar3Text": "Le contact, ses réseaux, vos anciens messages, ses affaires chez vous.",
+    "pillar4Title": "Votre vie à côté",
+    "pillar4Text": "Vos proches, vos sorties, votre sommeil et vos projets."
+  },
+  "section3": {
+    "title": "Ce qui fait durer une rupture",
+    "intro": "Les recherches sur les ruptures retrouvent souvent les mêmes choses. Certaines ne dépendent pas de vous, d'autres beaucoup plus.",
+    "sub1Title": "Rester en contact avec son ex",
+    "sub1P1": "C'est ce qui pèse le plus. Dans l'étude de l'université de l'Illinois, le contact régulier avec l'ex, en vrai ou en ligne, était <strong>ce qui freinait le plus le détachement</strong>. Ça se comprend : chaque message rouvre un peu la porte, et on se remet à attendre le suivant...",
+    "sub2Title": "Regarder ses réseaux sociaux",
+    "sub2P1": "Une étude de 2012 sur 464 personnes a regardé combien de fois chacune allait voir le profil Facebook de son ex. Plus elles y allaient, plus elles souffraient de la rupture, plus elles avaient de manque et de désir pour leur ex, et moins elles avaient avancé dans leur vie. On ne sait pas exactement ce qui cause quoi, mais <strong>regarder ses stories tous les soirs n'aide pas à passer à autre chose</strong>.",
+    "sub3Title": "Avoir été quitté(e), surtout sans le voir venir",
+    "sub3P1": "Celui qui part a souvent fait une partie du chemin avant la rupture. Celui qui est quitté commence le sien le jour même, parfois sans explication. Et quand on ne comprend pas pourquoi c'est fini, on rejoue les scènes dans sa tête pour trouver la réponse, ce qui peut durer longtemps.",
+    "sub4Title": "La peur d'être abandonné(e)",
+    "sub4P1": "Les personnes qui <a href=\"/test-style-attachement-couple/\">ont souvent peur d'être abandonnées</a> dans leurs histoires mettent plus de temps à se détacher, c'est aussi ce qu'a trouvé l'étude de 2025. Celles qui gardent plus de distance dans leurs relations s'éloignent plus vite.",
+    "tip": "Une histoire longue ou une vie commune ajoutent du temps, c'est vrai. Mais la plupart du temps, ce qui fait la différence, ce sont les petites habitudes qui gardent votre ex dans vos journées."
+  },
+  "section4": {
+    "title": "Ce qui aide à tourner la page plus vite",
+    "intro": "Rien ne fait disparaître une rupture en deux semaines. Mais certaines choses font gagner du temps, et vous pouvez les commencer dès ce soir !",
+    "pillar1Title": "Couper ce qui vous ramène à votre ex",
+    "pillar1Text": "Arrêtez de lui écrire et de suivre ses réseaux, rangez les photos et les messages. Ce n'est pas forcément pour toujours, juste le temps que ça cicatrise. Votre ex n'y est pour rien : c'est un peu de calme pour vous.",
+    "pillar2Title": "Repenser à ce qui n'allait pas",
+    "pillar2Text": "En 2018, des chercheurs américains ont demandé à des personnes qui avaient vécu une rupture de repenser aux défauts de leur ex et aux problèmes du couple. Leurs sentiments amoureux baissaient, même si leur moral baissait un peu aussi sur le moment. Pensez-y quand la nostalgie vous fait tout voir en rose.",
+    "pillar3Title": "Se changer les idées",
+    "pillar3Text": "Dans la même étude, penser à autre chose ne faisait pas baisser l'amour, mais ça remontait le moral. Les deux vont bien ensemble : on regarde les choses en face, puis on sort voir ses amis.",
+    "pillar4Title": "Se retrouver soi-même",
+    "pillar4Text": "Après une rupture, beaucoup de gens ne savent plus trop qui ils sont sans l'autre. Reprendre une activité laissée de côté ou faire ce qu'on ne faisait plus en couple, c'est souvent là que ça se débloque."
+  },
+  "section5": {
+    "title": "Les idées reçues sur l'oubli d'un ex",
+    "sub1Title": "« Il faut la moitié de la durée de la relation »",
+    "sub1P1": "Cette règle circule depuis des années, mais rien ne la confirme. Une histoire de huit ans ne demande pas forcément quatre ans de deuil, et une histoire de trois mois peut faire très mal pendant longtemps quand on y a mis beaucoup d'espoir.",
+    "sub2Title": "« Un de perdu, dix de retrouvés »",
+    "sub2P1": "Se remettre vite en couple aide parfois à passer le plus dur. Mais dans l'étude de l'université de l'Illinois, avoir retrouvé quelqu'un ne faisait pas partir l'attachement à l'ex plus vite. Même chose chez les divorcés britanniques : ceux qui s'étaient remariés vite avaient une période de séparation un peu plus facile, mais pas un meilleur moral deux ans après.",
+    "sub3Title": "« Il faut onze semaines »",
+    "sub3P1": "Ce chiffre vient d'une étude américaine de 2007 sur 155 jeunes de 18 à 32 ans. Les chercheurs avaient interrogé des personnes qui avaient rompu dans les onze semaines précédentes, et la plupart disaient avoir déjà appris des choses sur elles-mêmes. Les onze semaines décrivaient les participants, pas le temps qu'il faut pour aller mieux... mais c'est devenu le chiffre qu'on lit partout.",
+    "sub4Title": "« Si je pense encore à lui ou à elle, c'est que je l'aime encore »",
+    "sub4P1": "Penser à quelqu'un n'est pas la même chose que l'aimer. Une histoire qui a compté laisse des traces, qui reviennent avec une chanson ou une date. On peut aussi regretter la vie à deux <a href=\"/test-suis-je-encore-amoureux-de-mon-ex/\">sans être encore amoureux de la personne</a>, et ces deux choses ne se soignent pas de la même façon."
+  },
+  "section6": {
+    "title": "Et si ça ne passe pas ?",
+    "p1": "Si au bout de plusieurs mois vous dormez mal et n'avez plus goût à rien, ce n'est plus seulement une rupture difficile. <strong>Parlez-en à votre médecin ou à un psychologue</strong> : ce n'est pas un aveu de faiblesse, et ça fait souvent gagner beaucoup de temps.",
+    "p2": "Il arrive aussi que le problème ne soit plus votre ex, mais le vide qu'il ou elle a laissé. Quand on a <a href=\"/blog/dependance-affective-rupture/\">besoin de l'autre pour se sentir exister</a>, une rupture fait l'effet d'un sevrage, et ça demande un travail à part.",
+    "p3": "Et si vous avez des idées noires, n'attendez pas : en France, le 3114 répond jour et nuit, gratuitement."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "rupture amoureuse et deuil d'une relation",
+    "faq1Q": "Combien de temps faut-il en moyenne pour oublier son ex ?",
+    "faq1A": "Il n'y a pas de moyenne qui ait du sens pour tout le monde. La plupart des gens vont nettement mieux dans les deux ans qui suivent une séparation, mais l'attachement à l'ex met plus longtemps à partir : autour de quatre ans pour en être à la moitié, d'après une étude de 2025 sur des histoires d'au moins deux ans. Le test donne une estimation à partir de votre situation.",
+    "faq2Q": "Est-ce normal de penser encore à son ex après un an ?",
+    "faq2A": "Oui, surtout après une histoire longue ou une rupture que vous n'avez pas choisie. Ce qui compte, c'est la façon dont vous y pensez : un souvenir qui passe n'a rien d'inquiétant, un manque qui vous empêche de vivre au bout d'un an mérite qu'on s'en occupe.",
+    "faq3Q": "Pourquoi je n'arrive pas à oublier mon ex ?",
+    "faq3A": "La plupart du temps, parce que quelque chose le ou la garde dans vos journées : des messages, ses réseaux, l'espoir qu'il ou elle revienne, ou une rupture sans explication qui vous fait rejouer les scènes. Le test montre ce qui vous retient le plus.",
+    "faq4Q": "Se remettre en couple aide-t-il à oublier son ex ?",
+    "faq4A": "Ça aide parfois à passer le plus dur, mais d'après l'étude de 2025, ça ne fait pas partir l'attachement à l'ex plus vite. Une histoire commencée pour remplir un vide risque surtout d'en faire les frais.",
+    "faq5Q": "Le « no contact », ça marche ?",
+    "faq5A": "Couper le contact est ce qui aide le plus : le contact régulier avec l'ex est ce qui freine le plus le détachement. Par contre, il n'y a pas de durée magique, et les trente jours qu'on lit partout ne reposent sur rien. Si vous avez des enfants ensemble, gardez les échanges au strict nécessaire.",
+    "faq6Q": "Mes réponses sont-elles enregistrées ?",
+    "faq6A": "Non. Vos réponses restent dans votre navigateur. Seul le type de résultat, sans aucune donnée personnelle, sert à mesurer comment le test est utilisé."
+  }
+}

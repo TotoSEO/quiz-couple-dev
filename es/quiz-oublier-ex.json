@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Test después de una ruptura",
+    "title": "¿Cuánto tiempo se tarda en olvidar a un ex? El test en 20 preguntas",
+    "titleHighlight": "olvidar a un ex",
+    "description": "Este test calcula cuánto tiempo te queda para pasar página. Mira tu historia, cómo terminó, lo que sientes hoy y lo que haces con tus días. El resultado te da <strong>una duración en meses</strong> y <strong>lo que te haría ganar más tiempo</strong>.",
+    "subtitle": "Veinte preguntas, cinco minutos, una estimación en meses",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿No sabes si todavía le quieres?",
+    "text": "Este test calcula cuánto tiempo te queda. Si antes te preguntas si es amor o solo echas de menos la relación, el otro test mide las dos cosas por separado.",
+    "button": "Hacer el test amor o falta"
+  },
+  "section1": {
+    "title": "¿Cuánto tiempo se tarda en olvidar a un ex?",
+    "p1": "No hay una cifra que valga para todo el mundo. Los plazos que se leen por todas partes (tres meses, un año, la mitad de lo que duró la relación...) no miden lo mismo, y ninguno tiene en cuenta tu historia.",
+    "p2": "Lo que muestran los estudios es sobre todo que depende de lo que llamemos «olvidar». <strong>Encontrarse mejor llega bastante rápido</strong>: incluso después de un divorcio, el estrés está en su punto más alto el año de la separación y luego baja claramente en los dos años siguientes. <strong>Dejar de sentir apego del todo tarda mucho más</strong>: en 2025, unos investigadores de la Universidad de Illinois encontraron que hacen falta de media unos cuatro años para desapegarse a medias de un ex, después de una relación de al menos dos años.",
+    "p3": "Entre las dos cosas está el momento que le interesa a casi todo el mundo: cuando tu ex ya no ocupa sitio en tus días. Sigues pensando en esa persona de vez en cuando, pero ya no duele. Ese es el momento que el test intenta calcular.",
+    "headerScore": "La cifra que se lee",
+    "headerLevel": "De dónde viene",
+    "headerAnalysis": "Lo que mide",
+    "row1Score": "11 semanas",
+    "row1Level": "Un estudio estadounidense de 2007 con 155 jóvenes",
+    "row1Analysis": "Ninguna duración: los participantes habían roto en las 11 semanas anteriores",
+    "row2Score": "De uno a dos años",
+    "row2Level": "El seguimiento de unos 430 divorcios y separaciones en Gran Bretaña (2006)",
+    "row2Analysis": "El tiempo que tarda en bajar el estrés de la separación",
+    "row3Score": "Unos 4 años",
+    "row3Level": "Un estudio de 2025 con 328 adultos, tras relaciones de al menos dos años",
+    "row3Analysis": "El tiempo para que el apego al ex se haya ido a medias",
+    "row4Score": "La mitad de la relación",
+    "row4Level": "Una regla que circula desde hace años",
+    "row4Analysis": "Nada: ningún estudio la confirma",
+    "tip": "Si lo dejasteis hace unas semanas y todo te parece insoportable, es normal. Las primeras semanas son las más duras para todo el mundo, y no dicen gran cosa de lo que vendrá después."
+  },
+  "section2": {
+    "title": "Cómo calcula el test tu plazo",
+    "intro": "Así funciona nuestro test de arriba: cada respuesta acerca o aleja el momento en que habrás pasado página.",
+    "p1": "Pongamos dos ejemplos. Alguien que dejó a su pareja tras seis meses de historia, que ya no habla con esa persona y que ve a sus amigos todos los fines de semana tiene muchas posibilidades de estar bien en uno o dos meses. En cambio, alguien a quien dejaron de un día para otro tras ocho años de convivencia, que todavía le escribe a su ex y mira sus historias cada noche, tiene más bien para años si nada cambia.",
+    "p2": "El test hace ese cálculo con tus veinte respuestas. El resultado te da una duración en meses, una horquilla y una fecha aproximada. También te enseña <strong>lo que te ayuda, lo que te frena y lo que te haría ganar más tiempo</strong>. Algunas respuestas no se pueden cambiar, como lo que duró vuestra historia o quién lo dejó. Otras sí, y es entre ellas donde el test elige lo que te propone.",
+    "pillar1Title": "Tu historia",
+    "pillar1Text": "Lo que duró, la convivencia, quién se fue y cómo terminó.",
+    "pillar2Title": "Dónde estás ahora",
+    "pillar2Text": "Cuántas veces piensas en tu ex, lo que sientes, la esperanza de que vuelva.",
+    "pillar3Title": "Tus costumbres",
+    "pillar3Text": "El contacto, sus redes, vuestros mensajes antiguos, sus cosas en tu casa.",
+    "pillar4Title": "Tu vida alrededor",
+    "pillar4Text": "Tu gente, tus salidas, tu sueño y tus proyectos."
+  },
+  "section3": {
+    "title": "Lo que hace que una ruptura dure más",
+    "intro": "Las investigaciones sobre rupturas encuentran a menudo las mismas cosas. Algunas no dependen de ti, otras mucho más.",
+    "sub1Title": "Seguir en contacto con tu ex",
+    "sub1P1": "Es lo que más pesa. En el estudio de la Universidad de Illinois, el contacto regular con el ex, en persona o por internet, era <strong>lo que más frenaba el desapego</strong>. Tiene lógica: cada mensaje vuelve a abrir un poco la puerta, y te pones a esperar el siguiente...",
+    "sub2Title": "Mirar sus redes sociales",
+    "sub2P1": "Un estudio de 2012 con 464 personas miró cuántas veces iba cada una a ver el perfil de Facebook de su ex. Cuanto más iban, más sufrían por la ruptura, más deseo y nostalgia sentían por su ex, y menos habían avanzado en su vida. No se sabe exactamente qué causa qué, pero <strong>mirar sus historias cada noche no ayuda a pasar página</strong>.",
+    "sub3Title": "Que te hayan dejado, sobre todo sin verlo venir",
+    "sub3P1": "Quien se va suele haber hecho parte del camino antes de la ruptura. A quien dejan empieza el suyo ese mismo día, a veces sin explicación. Y cuando no entiendes por qué se ha acabado, repasas las escenas en tu cabeza buscando la respuesta, y eso puede durar mucho tiempo.",
+    "sub4Title": "El miedo a que te abandonen",
+    "sub4P1": "Las personas que <a href=\"/es/test-estilo-apego/\">suelen tener miedo a que las abandonen</a> en sus relaciones tardan más en desapegarse, y eso también lo encontró el estudio de 2025. Las que guardan más distancia en sus relaciones se alejan más rápido.",
+    "tip": "Una relación larga o haber vivido juntos añaden tiempo, es verdad. Pero la mayoría de las veces, lo que marca la diferencia son las pequeñas costumbres que mantienen a tu ex en tus días."
+  },
+  "section4": {
+    "title": "Lo que ayuda a pasar página más rápido",
+    "intro": "Nada hace desaparecer una ruptura en dos semanas. Pero hay cosas que te hacen ganar tiempo, ¡y puedes empezarlas esta misma noche!",
+    "pillar1Title": "Cortar lo que te devuelve a tu ex",
+    "pillar1Text": "Deja de escribirle y de seguir sus redes, guarda las fotos y los mensajes. No tiene por qué ser para siempre, solo hasta que cicatrice. No es nada contra tu ex: es un poco de calma para ti.",
+    "pillar2Title": "Recordar lo que no funcionaba",
+    "pillar2Text": "En 2018, unos investigadores estadounidenses pidieron a personas que habían vivido una ruptura que pensaran en los defectos de su ex y en los problemas de la pareja. Sus sentimientos amorosos bajaban, aunque en el momento su ánimo también bajaba un poco. Tenlo en cuenta cuando la nostalgia te lo pinte todo de color de rosa.",
+    "pillar3Title": "Distraerte",
+    "pillar3Text": "En el mismo estudio, pensar en otra cosa no hacía bajar el amor, pero sí levantaba el ánimo. Las dos cosas van bien juntas: miras las cosas de frente y luego sales a ver a tus amigos.",
+    "pillar4Title": "Reencontrarte contigo",
+    "pillar4Text": "Después de una ruptura, mucha gente ya no sabe muy bien quién es sin la otra persona. Retomar una actividad que habías dejado o hacer lo que ya no hacías en pareja: muchas veces es ahí donde las cosas se desbloquean."
+  },
+  "section5": {
+    "title": "Las ideas falsas sobre olvidar a un ex",
+    "sub1Title": "«Se necesita la mitad de lo que duró la relación»",
+    "sub1P1": "Esta regla circula desde hace años, pero nada la confirma. Una historia de ocho años no exige por fuerza cuatro años de duelo, y una historia de tres meses puede doler mucho tiempo cuando le pusiste muchas ilusiones.",
+    "sub2Title": "«Un clavo saca otro clavo»",
+    "sub2P1": "Empezar pronto otra relación a veces ayuda a pasar lo peor. Pero en el estudio de la Universidad de Illinois, haber encontrado a otra persona no hacía que el apego al ex se fuera más rápido. Lo mismo con los divorciados británicos: los que se volvieron a casar pronto pasaron una separación algo más llevadera, pero no tenían mejor ánimo dos años después.",
+    "sub3Title": "«Hacen falta once semanas»",
+    "sub3P1": "Esa cifra viene de un estudio estadounidense de 2007 con 155 jóvenes de 18 a 32 años. Los investigadores habían preguntado a personas que habían roto en las once semanas anteriores, y la mayoría decía haber aprendido ya cosas sobre sí misma. Las once semanas describían a los participantes, no el tiempo que se tarda en estar mejor... pero se convirtió en la cifra que se lee por todas partes.",
+    "sub4Title": "«Si sigo pensando en mi ex, es que sigo enamorado»",
+    "sub4P1": "Pensar en alguien no es lo mismo que quererle. Una historia que importó deja huellas, que vuelven con una canción o una fecha. También se puede echar de menos la vida en pareja <a href=\"/es/test-sigo-enamorado-de-mi-ex/\">sin seguir enamorado de la persona</a>, y esas dos cosas no se curan de la misma manera."
+  },
+  "section6": {
+    "title": "¿Y si no se pasa?",
+    "p1": "Si al cabo de varios meses duermes mal y nada te apetece, ya no es solo una ruptura difícil. <strong>Háblalo con tu médico o con un psicólogo</strong>: no es ninguna señal de debilidad, y muchas veces hace ganar mucho tiempo.",
+    "p2": "A veces el problema ya no es tu ex, sino el vacío que dejó. Cuando <a href=\"/es/blog/dependencia-emocional-tras-una-ruptura/\">necesitas al otro para sentir que existes</a>, una ruptura se vive como un síndrome de abstinencia, y eso pide un trabajo aparte.",
+    "p3": "Y si tienes pensamientos oscuros, no esperes: en España, el 024 atiende día y noche, gratis. En otros países, llama al número de emergencias."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "ruptura amorosa y duelo de una relación",
+    "faq1Q": "¿Cuánto tiempo se tarda de media en olvidar a un ex?",
+    "faq1A": "No hay una media que tenga sentido para todo el mundo. La mayoría de la gente está mucho mejor en los dos años que siguen a una separación, pero el apego al ex tarda más en irse: unos cuatro años para estar a medio camino, según un estudio de 2025 sobre relaciones de al menos dos años. El test te da una estimación a partir de tu situación.",
+    "faq2Q": "¿Es normal seguir pensando en tu ex después de un año?",
+    "faq2A": "Sí, sobre todo después de una relación larga o de una ruptura que no elegiste. Lo que cuenta es cómo piensas en esa persona: un recuerdo que pasa no tiene nada de preocupante, pero una falta que no te deja vivir al cabo de un año merece que te ocupes de ella.",
+    "faq3Q": "¿Por qué no consigo olvidar a mi ex?",
+    "faq3A": "La mayoría de las veces, porque algo mantiene a tu ex en tus días: mensajes, sus redes, la esperanza de que vuelva, o una ruptura sin explicación que te hace repasar las escenas. El test te enseña lo que más te frena.",
+    "faq4Q": "¿Empezar otra relación ayuda a olvidar a un ex?",
+    "faq4A": "A veces ayuda a pasar lo peor, pero según el estudio de 2025 no hace que el apego al ex se vaya más rápido. Una relación que empieza para llenar un vacío corre sobre todo el riesgo de pagar las consecuencias.",
+    "faq5Q": "¿Funciona el «contacto cero»?",
+    "faq5A": "Cortar el contacto es lo que más ayuda: el contacto regular con el ex es lo que más frena el desapego. Eso sí, no hay una duración mágica, y los treinta días que se leen por todas partes no se basan en nada. Si tenéis hijos, limita los intercambios a lo estrictamente necesario.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador. Solo el tipo de resultado, sin ningún dato personal, sirve para medir cómo se usa el test."
+  }
+}

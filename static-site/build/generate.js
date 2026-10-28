@@ -2741,6 +2741,9 @@ async function main() {
     { from: 'es/resolver-problema-pareja', to: '/es/preguntas-pareja/' },
     { from: 'de/paar-problem-loesen', to: '/de/fragen-fuer-paare/' },
     { from: 'it/risolvere-problema-coppia', to: '/it/domande-coppia/' },
+    // L'ancienne adresse du test « mon ex pense-t-il encore à moi » (au
+    // féminin seulement), encore vue par Google en octobre 2026.
+    { from: 'mon-ex-pense-t-elle-encore-a-moi', to: '/mon-ex-pense-t-il-elle-encore-a-moi/' },
   ];
   for (const { from, to } of REDIRECTS) {
     const redirectDir = path.join(DIST_DIR, from);

@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Post-breakup test",
+    "title": "How long does it take to get over an ex? A 20-question test",
+    "titleHighlight": "get over an ex",
+    "description": "This test estimates how long it will still take you to move on. It looks at your relationship, the way it ended, how you feel today and what you do with your days. The result gives you <strong>an estimate in months</strong>, and <strong>what would save you the most time</strong>.",
+    "subtitle": "Twenty questions, five minutes, an estimate in months",
+    "jumpBtn": "Take the test"
+  },
+  "crossLink": {
+    "title": "Not sure whether you still love them?",
+    "text": "This test estimates how long it will take. If you're first wondering whether it's love or just missing them, the other quiz measures the two separately.",
+    "button": "Take the love or missing quiz"
+  },
+  "section1": {
+    "title": "How long does it take to get over an ex?",
+    "p1": "There's no number that works for everyone. The timelines you read everywhere (three months, a year, half the length of the relationship...) don't measure the same thing, and none of them takes your story into account.",
+    "p2": "What the research mostly shows is that it depends on what you mean by “getting over” someone. <strong>Feeling better comes fairly fast</strong>: even after a divorce, stress peaks in the year of the separation and then drops clearly over the next two years. <strong>Not being attached at all takes much longer</strong>: in 2025, researchers at the University of Illinois found that it takes around four years on average to be halfway detached from an ex, after a relationship of at least two years.",
+    "p3": "In between, there's the moment most people care about: when your ex no longer takes up space in your days. You still think about them now and then, but it doesn't hurt anymore. That's the moment this test tries to estimate.",
+    "headerScore": "The number you read",
+    "headerLevel": "Where it comes from",
+    "headerAnalysis": "What it measures",
+    "row1Score": "11 weeks",
+    "row1Level": "A 2007 American study of 155 young adults",
+    "row1Analysis": "No duration at all: participants had broken up within the previous 11 weeks",
+    "row2Score": "One to two years",
+    "row2Level": "Around 430 divorces and separations followed in Britain (2006)",
+    "row2Analysis": "The time it takes for the stress of the separation to come down",
+    "row3Score": "About 4 years",
+    "row3Level": "A 2025 study of 328 adults, after relationships of at least two years",
+    "row3Analysis": "The time it takes for the attachment to an ex to be half gone",
+    "row4Score": "Half the length of the relationship",
+    "row4Level": "A rule that's been going around for years",
+    "row4Analysis": "Nothing: no study backs it up",
+    "tip": "If you broke up a few weeks ago and everything feels unbearable, that's normal. The first weeks are the hardest for everyone, and they don't say much about what comes next."
+  },
+  "section2": {
+    "title": "How the test estimates your timeline",
+    "intro": "Here's how our test above works: each answer brings the moment you'll have moved on closer, or pushes it further away.",
+    "p1": "Take two examples. Someone who left their partner after six months, doesn't talk to them anymore and sees friends every weekend has a good chance of feeling fine within a month or two. On the other hand, someone who was dumped out of the blue after eight years of living together, who still texts their ex and watches their stories every night, is more likely looking at years if nothing changes.",
+    "p2": "The test runs that calculation with your twenty answers. The result gives you a number of months, a range and an approximate date. It also shows <strong>what helps you, what holds you back, and what would save you the most time</strong>. Some answers can't be changed, like how long you were together or who ended it. Others can, and that's where the test picks what it suggests.",
+    "pillar1Title": "Your relationship",
+    "pillar1Text": "How long it lasted, living together, who left and how it ended.",
+    "pillar2Title": "Where you are now",
+    "pillar2Text": "How often you think about them, what you feel, hoping they'll come back.",
+    "pillar3Title": "Your habits",
+    "pillar3Text": "Contact, their social media, your old texts, their things at your place.",
+    "pillar4Title": "Your life around it",
+    "pillar4Text": "Your friends and family, going out, your sleep and your plans."
+  },
+  "section3": {
+    "title": "What makes a breakup last longer",
+    "intro": "Breakup research keeps finding the same things. Some don't depend on you, others very much do.",
+    "sub1Title": "Staying in touch with your ex",
+    "sub1P1": "This one weighs the most. In the University of Illinois study, regular contact with the ex, in person or online, was <strong>what slowed detachment the most</strong>. It makes sense: every text opens the door a little, and you start waiting for the next one...",
+    "sub2Title": "Checking their social media",
+    "sub2P1": "A 2012 study of 464 people looked at how often each of them checked their ex's Facebook profile. The more they checked, the more they suffered from the breakup, the more they longed for and desired their ex, and the less they had moved forward in their life. We don't know exactly what causes what, but <strong>watching their stories every night doesn't help you move on</strong>.",
+    "sub3Title": "Being dumped, especially without seeing it coming",
+    "sub3P1": "The person who leaves has often done part of the work before the breakup. The person who's left starts theirs on the day itself, sometimes with no explanation. And when you don't understand why it's over, you replay the scenes in your head looking for the answer, which can go on for a long time.",
+    "sub4Title": "The fear of being abandoned",
+    "sub4P1": "People who <a href=\"/en/attachment-style-test/\">are often afraid of being abandoned</a> in their relationships take longer to detach, which is also what the 2025 study found. Those who keep more distance in their relationships drift away faster.",
+    "tip": "A long relationship or living together do add time, that's true. But most of the time, what makes the difference are the small habits that keep your ex in your days."
+  },
+  "section4": {
+    "title": "What helps you move on faster",
+    "intro": "Nothing makes a breakup disappear in two weeks. But some things save you time, and you can start them tonight!",
+    "pillar1Title": "Cut what pulls you back to your ex",
+    "pillar1Text": "Stop texting them and following them, put the photos and messages away. It doesn't have to be forever, just until it heals. It's nothing against your ex: it's a bit of peace for you.",
+    "pillar2Title": "Think back to what wasn't working",
+    "pillar2Text": "In 2018, American researchers asked people who had been through a breakup to think about their ex's flaws and the problems in the relationship. Their love feelings went down, even if their mood dropped a little too in the moment. Keep that in mind when nostalgia paints everything rosy.",
+    "pillar3Title": "Take your mind off it",
+    "pillar3Text": "In the same study, thinking about something else didn't lower love feelings, but it lifted people's mood. The two go well together: you face things head on, then you go out and see your friends.",
+    "pillar4Title": "Find yourself again",
+    "pillar4Text": "After a breakup, a lot of people don't quite know who they are without the other person. Picking up an activity you'd dropped, or doing things you stopped doing as a couple, is often where things get unstuck."
+  },
+  "section5": {
+    "title": "Common myths about getting over an ex",
+    "sub1Title": "“It takes half the length of the relationship”",
+    "sub1P1": "This rule has been going around for years, but nothing backs it up. An eight-year relationship doesn't necessarily mean four years of grieving, and a three-month fling can hurt for a long time when you put a lot of hope into it.",
+    "sub2Title": "“There are plenty more fish in the sea”",
+    "sub2P1": "Getting into a new relationship quickly sometimes helps you through the worst part. But in the University of Illinois study, finding someone new didn't make the attachment to the ex fade any faster. Same thing with British divorcees: those who remarried quickly had a slightly easier time around the separation, but no better mood two years later.",
+    "sub3Title": "“It takes 11 weeks”",
+    "sub3P1": "That number comes from a 2007 American study of 155 people aged 18 to 32. The researchers surveyed people who had broken up within the previous eleven weeks, and most of them said they had already learned things about themselves. The eleven weeks described the participants, not how long it takes to feel better... but it became the number you read everywhere.",
+    "sub4Title": "“If I still think about them, I must still love them”",
+    "sub4P1": "Thinking about someone isn't the same as loving them. A relationship that mattered leaves traces, which come back with a song or a date. You can also miss being in a relationship <a href=\"/en/am-i-still-in-love-with-my-ex-quiz/\">without still being in love with the person</a>, and those two things don't heal the same way."
+  },
+  "section6": {
+    "title": "What if it doesn't pass?",
+    "p1": "If after several months you're sleeping badly and nothing feels worth doing, it's no longer just a hard breakup. <strong>Talk to your doctor or a therapist</strong>: it's not a sign of weakness, and it often saves a lot of time.",
+    "p2": "Sometimes the problem isn't your ex anymore, but the void they left. When you <a href=\"/en/blog/emotional-dependency-after-a-breakup/\">need someone else to feel like you exist</a>, a breakup feels like withdrawal, and that calls for work of its own.",
+    "p3": "And if you're having dark thoughts, don't wait: in the US, call or text 988, and in the UK, Samaritans answer day and night on 116 123."
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "breakups and grieving a relationship",
+    "faq1Q": "How long does it take on average to get over an ex?",
+    "faq1A": "There's no average that makes sense for everyone. Most people feel much better within two years of a separation, but the attachment to an ex takes longer to go: around four years to be halfway there, according to a 2025 study of relationships of at least two years. The test gives you an estimate based on your situation.",
+    "faq2Q": "Is it normal to still think about your ex after a year?",
+    "faq2A": "Yes, especially after a long relationship or a breakup you didn't choose. What matters is how you think about them: a passing memory is nothing to worry about, but missing them so much it stops you from living after a year is worth dealing with.",
+    "faq3Q": "Why can't I get over my ex?",
+    "faq3A": "Most of the time, because something keeps them in your days: texts, their social media, hoping they'll come back, or a breakup with no explanation that makes you replay the scenes. The test shows what's holding you back the most.",
+    "faq4Q": "Does a new relationship help you get over an ex?",
+    "faq4A": "It sometimes helps you through the worst part, but according to the 2025 study, it doesn't make the attachment to your ex fade any faster. A relationship started to fill a void is mostly at risk of paying the price.",
+    "faq5Q": "Does “no contact” work?",
+    "faq5A": "Cutting contact is what helps the most: regular contact with the ex is what slows detachment the most. That said, there's no magic duration, and the thirty days you read everywhere aren't based on anything. If you have children together, keep your exchanges to what's strictly necessary.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser. Only the type of result, with no personal data, is used to measure how the test is used."
+  }
+}

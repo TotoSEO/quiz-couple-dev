@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Post-breakup quiz",
+    "title": "Am I still in love with my ex, or do I just miss being in a relationship?",
+    "titleHighlight": "still in love with my ex",
+    "description": "This quiz measures two things separately: <strong>the love you still feel for your ex</strong>, and <strong>missing the relationship itself</strong> (the evenings together, the routines, the fear of being alone). You can miss being a couple without still loving the person... and the other way around. The result tells you which of the two is louder.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "crossLink": {
+    "title": "Mostly wondering when it'll stop hurting?",
+    "text": "This quiz tells you what you feel. The other one estimates, in months, how long it'll take you to move on, and what would speed things up the most.",
+    "button": "Estimate how long it'll take"
+  },
+  "section1": {
+    "title": "How do you know if you're still in love with your ex?",
+    "p1": "After a breakup, everything gets mixed up. You miss your ex, you think about them at night, one song is enough to pull you right back in... and you're no longer sure whether it's love or something else.",
+    "p2": "The thing is, <strong>two very different things give the same symptoms</strong>. There's love for the person: their voice, the way they are, wanting them back and not someone else. And there's missing the relationship: someone waiting for you at home, the little habits you had as a couple, the fear of being alone, sometimes wanting your ex to regret it. Both hurt and both make you think of your ex, but they don't ask for the same thing at all.",
+    "p3": "Here's a simple example. Imagine someone kind, funny and thoughtful asked you out tomorrow. If most of what you're missing would go away, it was mainly the relationship you missed. If nothing would change because it's your ex you want, that's love.",
+    "p4": "That's why this quiz gives you <strong>two scores instead of one</strong>. Ten questions look at what you feel for your ex, ten others at what the breakup took away from you, and you read the two bars together."
+  },
+  "section2": {
+    "title": "Signs you're still in love with your ex",
+    "intro": "Some signs are about the person themselves. Those are the ones that weigh the most in the quiz, and here are the main ones.",
+    "pillar1Title": "You'd say yes if they came back",
+    "pillar1Text": "You'd say yes even with their flaws, and even with whatever pulled you apart. It's the clearest sign there is, and it's the question that counts the most in the quiz.",
+    "pillar2Title": "Your heart races at the thought of running into them",
+    "pillar2Text": "A text from them, or just their name coming up in a conversation, and your whole day is thrown off.",
+    "pillar3Title": "You still picture a future together",
+    "pillar3Text": "You still think about the trips you would have taken, the apartment you would have moved into. People rarely make plans with someone they no longer love.",
+    "pillar4Title": "Nobody measures up",
+    "pillar4Text": "You compare everyone you meet to your ex, and they lose every time, often over little details that belonged only to your ex.",
+    "pillar5Title": "What happens to them still matters to you",
+    "pillar5Text": "You still worry about their health or their job, beyond whatever you went through together.",
+    "tip": "Thinking about your ex a lot isn't a sign on its own. Everyone thinks about their ex after a breakup, in love or not. What matters is what you think about: them, or what you lost."
+  },
+  "section3": {
+    "title": "What looks like love, but isn't",
+    "intro": "Missing the relationship often wears your ex's face, simply because they were the one in that place. Here's what people most often mistake for love.",
+    "sub1Title": "Sunday-night loneliness",
+    "sub1P1": "Do you miss your ex mostly when the apartment is empty, and a lot less when you're surrounded by people? Then it's having someone around that you miss, more than the person themselves.",
+    "sub2Title": "A bruised ego",
+    "sub2P1": "When you've been dumped, you often want the other person to regret it and come back apologizing, even if you'd say no. And your brain doesn't help. In 2010, anthropologist Helen Fisher and her team scanned fifteen people who had just been rejected and said they were still intensely in love: when they looked at a photo of their ex, <strong>the areas that lit up were the ones linked to reward and craving</strong>, the same ones involved in addiction. Being rejected can make you want someone even more.",
+    "sub3Title": "Nostalgia that erases everything",
+    "sub3P1": "Over time, your memory mostly keeps the good moments. The fights and the reasons you left fade away, and what's left is a perfect story that never existed. If you can't quite remember why it ended, think back to the last few months, not the first ones.",
+    "sub4Title": "The fear of being alone",
+    "sub4P1": "After a breakup, a lot of people tell themselves they'll never find anyone again. That fear makes you look back, toward the only person you already know. So it's less love for them than fear of the unknown."
+  },
+  "section4": {
+    "title": "The five possible results",
+    "p1": "The quiz doesn't give you a score out of a hundred. It gives you two bars, and their shape is what makes the result: one can be ahead of the other, both can be high, or both low.",
+    "headerScore": "Your two bars",
+    "headerLevel": "The result",
+    "headerAnalysis": "What it means",
+    "row1Score": "Both low",
+    "row1Level": "You're not in love anymore",
+    "row1Analysis": "Memories are left, not feelings",
+    "row2Score": "Missing ahead",
+    "row2Level": "It's missing, not love",
+    "row2Analysis": "What you miss most is being a couple",
+    "row3Score": "Love ahead",
+    "row3Level": "You still love them",
+    "row3Analysis": "It's them you miss, not the relationship",
+    "row4Score": "Both high",
+    "row4Level": "In love and hooked",
+    "row4Analysis": "The most painful mix",
+    "row5Score": "Both in the middle",
+    "row5Level": "A bit of both",
+    "row5Analysis": "The feelings are fading without disappearing",
+    "tip": "The result tells you where you are today, and it moves a lot in the months after a breakup. Take the quiz again in a few weeks: comparing the two will tell you as much as the first result."
+  },
+  "section5": {
+    "title": "You still love them: now what?",
+    "p1": "Still being in love with your ex is nothing unusual. Feelings don't stop on the day the relationship does: according to a University of Illinois study published in 2025, it takes <strong>around four years on average to be halfway detached from an ex</strong>, after a relationship of at least two years. What matters is what you do with that feeling.",
+    "sub1Title": "If the breakup came down to things that can change",
+    "sub1P1": "A bad patch, distance, a misunderstanding, a time when one of you wasn't doing well... In that case, you can tell your ex, once, clearly, without burying it in hints. Before that, look at what they're doing on their side: <a href=\"/en/does-my-ex-still-think-about-me/\">a text sent for no reason or an offer to meet up</a> says a lot more than stories watched at midnight.",
+    "sub2Title": "If it came down to something deeper",
+    "sub2P1": "Values that don't fit, two different life plans, cheating that broke everything, or an ex who told you clearly it was over. Then love isn't enough, and keeping it alive mostly hurts you. Cut contact until things settle: it's <a href=\"/en/how-long-to-get-over-an-ex-test/\">what helps the most to move on</a>, long before any big resolution.",
+    "sub3Title": "If it's mostly missing the relationship",
+    "sub3P1": "Then don't text your ex to fill a lonely evening: you'd get the same relationship back, with the same problems. Fill what the relationship used to fill instead: see your friends, plan things for your evenings. And once you feel good on your own again, <a href=\"/en/ready-for-a-new-relationship-test/\">room for someone new</a> will open up by itself!"
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "feelings after a breakup",
+    "faq1Q": "Is it normal to still be in love with your ex?",
+    "faq1A": "Yes. Feelings don't stop with the breakup, and the attachment to an ex often takes years to disappear completely. What should worry you isn't still loving your ex, it's putting your life on hold while you wait for them to come back.",
+    "faq2Q": "How can you tell love from just missing the relationship?",
+    "faq2A": "Ask yourself a simple question: if someone else, kind and thoughtful, asked you out tomorrow, would the missing go away? If yes, it's mainly the relationship you miss. If no, because it's your ex you want, that's love. The quiz separates the two, with ten questions on each side.",
+    "faq3Q": "Can you still love your ex while being with someone else?",
+    "faq3A": "Yes, it happens, especially when the new relationship started soon after the breakup. Thinking of your ex now and then is no big deal. If you keep comparing and your ex is on your mind every day, it's a sign the space wasn't free yet.",
+    "faq4Q": "Why do I miss my ex more now that they're seeing someone?",
+    "faq4A": "Because seeing someone take your place stirs up the fear of having been replaced, and sometimes the fear of being alone. In that case it's often missing and ego talking, louder than love. Give it a few weeks before drawing conclusions.",
+    "faq5Q": "Should you tell your ex you still love them?",
+    "faq5A": "Only if the breakup came down to things that can change, and if you're ready to hear a no. Say it once, clearly. If your ex has already told you it's over, saying it again is likely to hurt you most of all.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser. Only the type of result, with no personal data, is used to measure how the quiz is used."
+  }
+}

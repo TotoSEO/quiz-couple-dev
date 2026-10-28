@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "badge": "Test nach der Trennung",
+    "title": "Wie lange dauert es, über den Ex hinwegzukommen? Der Test mit 20 Fragen",
+    "titleHighlight": "über den Ex hinwegzukommen",
+    "description": "Dieser Test schätzt, wie lange du noch brauchst, um darüber hinwegzukommen. Er schaut auf eure Geschichte, darauf, wie sie zu Ende ging, wie es dir heute geht und was du mit deinen Tagen machst. Das Ergebnis ist <strong>eine Dauer in Monaten</strong>, und <strong>das, was dir am meisten Zeit sparen würde</strong>.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, eine Schätzung in Monaten",
+    "jumpBtn": "Zum Test"
+  },
+  "crossLink": {
+    "title": "Du weißt nicht, ob du ihn oder sie noch liebst?",
+    "text": "Dieser Test schätzt, wie lange es dauert. Wenn du dich zuerst fragst, ob es Liebe ist oder nur Vermissen, misst der andere Test beides getrennt.",
+    "button": "Zum Test Liebe oder Vermissen"
+  },
+  "section1": {
+    "title": "Wie lange dauert es, über den Ex hinwegzukommen?",
+    "p1": "Es gibt keine Zahl, die für alle gilt. Die Zeitangaben, die man überall liest (drei Monate, ein Jahr, halb so lange wie die Beziehung...), messen nicht dasselbe, und keine davon berücksichtigt deine Geschichte.",
+    "p2": "Was die Forschung vor allem zeigt: Es kommt darauf an, was man mit „darüber hinwegkommen“ meint. <strong>Dass es einem besser geht, kommt ziemlich schnell</strong>: Selbst nach einer Scheidung ist der Stress im Jahr der Trennung am höchsten und sinkt in den zwei Jahren danach deutlich. <strong>Gar keine Bindung mehr zu spüren, dauert viel länger</strong>: 2025 haben Forschende der University of Illinois herausgefunden, dass es im Schnitt rund vier Jahre dauert, bis man sich zur Hälfte von einem Ex gelöst hat, nach einer Beziehung von mindestens zwei Jahren.",
+    "p3": "Dazwischen liegt der Moment, der die meisten interessiert: wenn dein Ex keinen Platz mehr in deinen Tagen einnimmt. Du denkst ab und zu noch an ihn oder sie, aber es tut nicht mehr weh. Genau diesen Moment versucht der Test zu schätzen.",
+    "headerScore": "Die Zahl, die man liest",
+    "headerLevel": "Woher sie kommt",
+    "headerAnalysis": "Was sie misst",
+    "row1Score": "11 Wochen",
+    "row1Level": "Eine amerikanische Studie von 2007 mit 155 jungen Erwachsenen",
+    "row1Analysis": "Gar keine Dauer: Die Teilnehmenden hatten sich in den 11 Wochen davor getrennt",
+    "row2Score": "Ein bis zwei Jahre",
+    "row2Level": "Rund 430 Scheidungen und Trennungen, begleitet in Großbritannien (2006)",
+    "row2Analysis": "Die Zeit, bis der Stress der Trennung wieder sinkt",
+    "row3Score": "Etwa 4 Jahre",
+    "row3Level": "Eine Studie von 2025 mit 328 Erwachsenen, nach Beziehungen von mindestens zwei Jahren",
+    "row3Analysis": "Die Zeit, bis die Bindung an den Ex zur Hälfte weg ist",
+    "row4Score": "Halb so lange wie die Beziehung",
+    "row4Level": "Eine Regel, die seit Jahren kursiert",
+    "row4Analysis": "Nichts: Keine Studie bestätigt sie",
+    "tip": "Wenn ihr euch vor ein paar Wochen getrennt habt und dir alles unerträglich vorkommt, ist das normal. Die ersten Wochen sind für alle die härtesten, und sie sagen nicht viel darüber, wie es weitergeht."
+  },
+  "section2": {
+    "title": "Wie der Test deine Dauer schätzt",
+    "intro": "So funktioniert unser Test oben: Jede Antwort bringt den Moment, in dem du darüber hinweg bist, näher oder schiebt ihn weiter weg.",
+    "p1": "Nehmen wir zwei Beispiele. Wer seine Partnerin oder seinen Partner nach sechs Monaten verlassen hat, nicht mehr mit ihr oder ihm redet und jedes Wochenende Freunde trifft, hat gute Chancen, dass es ihm in ein, zwei Monaten gut geht. Wer dagegen nach acht Jahren Zusammenleben von heute auf morgen verlassen wurde, dem Ex noch schreibt und jeden Abend seine Storys anschaut, braucht eher Jahre, wenn sich nichts ändert.",
+    "p2": "Der Test macht diese Rechnung mit deinen zwanzig Antworten. Das Ergebnis ist eine Dauer in Monaten, eine Spanne und ein ungefähres Datum. Er zeigt auch, <strong>was dir hilft, was dich bremst und womit du am meisten Zeit gewinnen würdest</strong>. Manche Antworten lassen sich nicht ändern, zum Beispiel wie lange ihr zusammen wart oder wer Schluss gemacht hat. Andere schon, und unter diesen sucht der Test aus, was er dir vorschlägt.",
+    "pillar1Title": "Eure Geschichte",
+    "pillar1Text": "Wie lange sie gedauert hat, das Zusammenleben, wer gegangen ist und wie es zu Ende ging.",
+    "pillar2Title": "Wo du gerade stehst",
+    "pillar2Text": "Wie oft du an ihn oder sie denkst, was du fühlst, die Hoffnung auf ein Comeback.",
+    "pillar3Title": "Deine Gewohnheiten",
+    "pillar3Text": "Der Kontakt, seine oder ihre Social-Media-Profile, eure alten Nachrichten, die Sachen bei dir zu Hause.",
+    "pillar4Title": "Dein Leben drumherum",
+    "pillar4Text": "Deine Leute, deine Unternehmungen, dein Schlaf und deine Pläne."
+  },
+  "section3": {
+    "title": "Was eine Trennung länger dauern lässt",
+    "intro": "Die Forschung zu Trennungen findet oft dieselben Dinge. Manche hängen nicht von dir ab, andere sehr wohl.",
+    "sub1Title": "Mit dem Ex in Kontakt bleiben",
+    "sub1P1": "Das wiegt am schwersten. In der Studie der University of Illinois war regelmäßiger Kontakt mit dem Ex, persönlich oder online, <strong>das, was das Loslösen am stärksten bremste</strong>. Das leuchtet ein: Jede Nachricht öffnet die Tür ein Stück, und man fängt an, auf die nächste zu warten...",
+    "sub2Title": "Auf seinen oder ihren Profilen nachschauen",
+    "sub2P1": "Eine Studie von 2012 mit 464 Menschen hat erfasst, wie oft jeder Einzelne auf dem Facebook-Profil seines Ex nachgeschaut hat. Je öfter, desto mehr litten sie unter der Trennung, desto mehr Sehnsucht und Verlangen hatten sie nach dem Ex, und desto weniger waren sie in ihrem Leben weitergekommen. Was genau was verursacht, weiß man nicht, aber <strong>jeden Abend seine oder ihre Storys anzuschauen, hilft nicht beim Loslassen</strong>.",
+    "sub3Title": "Verlassen worden zu sein, vor allem ohne es kommen zu sehen",
+    "sub3P1": "Wer geht, hat oft schon einen Teil des Weges vor der Trennung hinter sich. Wer verlassen wird, fängt am selben Tag damit an, manchmal ohne Erklärung. Und wenn man nicht versteht, warum es vorbei ist, spielt man die Szenen im Kopf immer wieder durch, auf der Suche nach der Antwort, und das kann lange dauern.",
+    "sub4Title": "Die Angst, verlassen zu werden",
+    "sub4P1": "Menschen, die <a href=\"/de/bindungsstil-test/\">in Beziehungen oft Angst haben, verlassen zu werden</a>, brauchen länger, um sich zu lösen, das hat auch die Studie von 2025 gezeigt. Wer in Beziehungen mehr Abstand hält, entfernt sich schneller.",
+    "tip": "Eine lange Beziehung oder das Zusammenleben kosten mehr Zeit, das stimmt. Aber meistens machen die kleinen Gewohnheiten den Unterschied, die deinen Ex in deinen Tagen halten."
+  },
+  "section4": {
+    "title": "Was hilft, schneller darüber hinwegzukommen",
+    "intro": "Nichts lässt eine Trennung in zwei Wochen verschwinden. Aber manches spart Zeit, und du kannst noch heute Abend damit anfangen!",
+    "pillar1Title": "Kappen, was dich zum Ex zurückzieht",
+    "pillar1Text": "Hör auf, ihm oder ihr zu schreiben und zu folgen, räum die Fotos und Nachrichten weg. Das muss nicht für immer sein, nur bis es verheilt ist. Es richtet sich nicht gegen deinen Ex: Es ist ein bisschen Ruhe für dich.",
+    "pillar2Title": "An das denken, was nicht lief",
+    "pillar2Text": "2018 haben amerikanische Forschende Menschen nach einer Trennung gebeten, an die Macken ihres Ex und an die Probleme der Beziehung zu denken. Ihre Verliebtheit ließ nach, auch wenn ihre Stimmung im Moment selbst ein bisschen sank. Denk daran, wenn dir die Nostalgie alles rosarot malt.",
+    "pillar3Title": "Sich ablenken",
+    "pillar3Text": "In derselben Studie ließ das Ablenken die Liebe nicht sinken, hob aber die Stimmung. Beides passt gut zusammen: Man schaut den Dingen ins Gesicht und geht danach raus, um Freunde zu treffen.",
+    "pillar4Title": "Wieder zu sich finden",
+    "pillar4Text": "Nach einer Trennung wissen viele nicht mehr so genau, wer sie ohne den anderen sind. Eine Beschäftigung wieder aufnehmen, die man aufgegeben hatte, oder Dinge tun, die man in der Beziehung nicht mehr gemacht hat: Oft löst sich genau da etwas."
+  },
+  "section5": {
+    "title": "Irrtümer über das Hinwegkommen",
+    "sub1Title": "„Man braucht halb so lange, wie die Beziehung gedauert hat“",
+    "sub1P1": "Diese Regel kursiert seit Jahren, aber nichts bestätigt sie. Eine Beziehung von acht Jahren bedeutet nicht zwangsläufig vier Jahre Liebeskummer, und eine Geschichte von drei Monaten kann lange wehtun, wenn man viel Hoffnung hineingesteckt hat.",
+    "sub2Title": "„Eine neue Liebe ist die beste Medizin“",
+    "sub2P1": "Sich schnell auf jemand Neuen einzulassen, hilft manchmal über das Schlimmste hinweg. Aber in der Studie der University of Illinois verschwand die Bindung an den Ex nicht schneller, wenn man jemand Neuen gefunden hatte. Dasselbe bei den britischen Geschiedenen: Wer schnell wieder geheiratet hatte, kam etwas leichter durch die Trennungszeit, war zwei Jahre später aber nicht besser gelaunt.",
+    "sub3Title": "„Es dauert elf Wochen“",
+    "sub3P1": "Diese Zahl stammt aus einer amerikanischen Studie von 2007 mit 155 jungen Menschen zwischen 18 und 32 Jahren. Die Forschenden hatten Menschen befragt, die sich in den elf Wochen davor getrennt hatten, und die meisten sagten, sie hätten schon einiges über sich gelernt. Die elf Wochen beschrieben die Teilnehmenden, nicht die Zeit, bis es einem besser geht... trotzdem ist daraus die Zahl geworden, die man überall liest.",
+    "sub4Title": "„Wenn ich noch an meinen Ex denke, liebe ich ihn noch“",
+    "sub4P1": "An jemanden zu denken, ist nicht dasselbe, wie ihn zu lieben. Eine Beziehung, die wichtig war, hinterlässt Spuren, die mit einem Lied oder einem Datum wiederkommen. Man kann auch das Leben zu zweit vermissen, <a href=\"/de/bin-ich-noch-in-meinen-ex-verliebt-test/\">ohne noch in die Person verliebt zu sein</a>, und diese beiden Dinge heilen nicht auf dieselbe Weise."
+  },
+  "section6": {
+    "title": "Und wenn es nicht vorbeigeht?",
+    "p1": "Wenn du nach mehreren Monaten schlecht schläfst und zu nichts mehr Lust hast, ist es nicht mehr nur eine schwere Trennung. <strong>Sprich mit deiner Ärztin, deinem Arzt oder einer Psychotherapeutin</strong>: Das ist kein Zeichen von Schwäche, und oft spart es viel Zeit.",
+    "p2": "Manchmal ist das Problem nicht mehr dein Ex, sondern die Leere, die er oder sie hinterlassen hat. Wenn du <a href=\"/de/blog/emotionale-abhaengigkeit-nach-der-trennung/\">den anderen brauchst, um dich lebendig zu fühlen</a>, fühlt sich eine Trennung wie ein Entzug an, und das braucht eine eigene Arbeit.",
+    "p3": "Und wenn du dunkle Gedanken hast, warte nicht: In Deutschland ist die TelefonSeelsorge rund um die Uhr kostenlos erreichbar, unter 0800 111 0 111 oder 0800 111 0 222. In Österreich wählst du 142, in der Schweiz 143."
+  },
+  "seo": {
+    "faqTitle": "Fragen, die man sich stellt"
+  },
+  "jsonLd": {
+    "about": "Trennung und Liebeskummer",
+    "faq1Q": "Wie lange dauert es im Schnitt, über den Ex hinwegzukommen?",
+    "faq1A": "Es gibt keinen Durchschnitt, der für alle Sinn ergibt. Den meisten geht es in den zwei Jahren nach einer Trennung deutlich besser, aber die Bindung an den Ex braucht länger: rund vier Jahre bis zur Hälfte, laut einer Studie von 2025 über Beziehungen von mindestens zwei Jahren. Der Test gibt dir eine Schätzung auf Grundlage deiner Situation.",
+    "faq2Q": "Ist es normal, nach einem Jahr noch an den Ex zu denken?",
+    "faq2A": "Ja, vor allem nach einer langen Beziehung oder einer Trennung, die du nicht wolltest. Es kommt darauf an, wie du an ihn oder sie denkst: Eine Erinnerung, die vorbeizieht, ist kein Grund zur Sorge. Ein Vermissen, das dich nach einem Jahr noch am Leben hindert, sollte man ernst nehmen.",
+    "faq3Q": "Warum komme ich nicht über meinen Ex hinweg?",
+    "faq3A": "Meistens, weil etwas deinen Ex in deinen Tagen hält: Nachrichten, seine oder ihre Profile, die Hoffnung auf ein Comeback, oder eine Trennung ohne Erklärung, die dich die Szenen immer wieder durchspielen lässt. Der Test zeigt dir, was dich am meisten bremst.",
+    "faq4Q": "Hilft eine neue Beziehung, über den Ex hinwegzukommen?",
+    "faq4A": "Sie hilft manchmal über das Schlimmste hinweg, aber laut der Studie von 2025 lässt sie die Bindung an den Ex nicht schneller verschwinden. Eine Beziehung, die man anfängt, um eine Leere zu füllen, zahlt dafür oft selbst den Preis.",
+    "faq5Q": "Funktioniert die Kontaktsperre?",
+    "faq5A": "Den Kontakt abzubrechen, hilft am meisten: Regelmäßiger Kontakt mit dem Ex bremst das Loslösen am stärksten. Allerdings gibt es keine magische Dauer, und die dreißig Tage, die man überall liest, haben keine Grundlage. Wenn ihr Kinder habt, beschränkt euch auf das Nötigste.",
+    "faq6Q": "Werden meine Antworten gespeichert?",
+    "faq6A": "Nein. Deine Antworten bleiben in deinem Browser. Nur die Art des Ergebnisses, ohne persönliche Daten, dient dazu, zu messen, wie der Test genutzt wird."
+  }
+}

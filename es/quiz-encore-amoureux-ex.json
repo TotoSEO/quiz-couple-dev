@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Test después de una ruptura",
+    "title": "¿Sigo enamorado/a de mi ex o solo echo de menos la relación?",
+    "titleHighlight": "enamorado/a de mi ex",
+    "description": "Este test mide dos cosas por separado: <strong>el amor que todavía sientes por tu ex</strong> y <strong>la falta que te hace la relación</strong> (las noches juntos, las costumbres, el miedo a quedarte solo). Se puede echar de menos la pareja sin seguir enamorado de la persona... y al revés. El resultado te dice cuál de las dos habla más fuerte.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿Lo que te preguntas es cuándo dejará de doler?",
+    "text": "Este test te dice lo que sientes. El otro calcula, en meses, cuánto tiempo te queda para pasar página y qué te haría ganar más tiempo.",
+    "button": "Calcular cuánto me queda"
+  },
+  "section1": {
+    "title": "¿Cómo saber si sigues enamorado de tu ex?",
+    "p1": "Después de una ruptura, todo se mezcla. Echas de menos a tu ex, piensas en esa persona por la noche, basta una canción para volver a caer... y ya no sabes muy bien si es amor o es otra cosa.",
+    "p2": "El problema es que <strong>dos cosas muy distintas dan los mismos síntomas</strong>. Está el amor por la persona: su voz, su forma de ser, las ganas de recuperarla a ella y no a otra. Y está la falta de la relación: alguien que te espera en casa, las costumbres de pareja, el miedo a quedarte solo, a veces las ganas de que tu ex se arrepienta. Las dos duelen y las dos te hacen pensar en tu ex, pero no piden lo mismo para nada.",
+    "p3": "Un ejemplo muy sencillo. Imagina que mañana una persona amable, divertida y atenta te propone empezar algo. Si lo que echas de menos se va en gran parte, lo que te faltaba era sobre todo la relación. Si no cambia nada porque a quien quieres es a tu ex, es amor.",
+    "p4": "Por eso el test te da <strong>dos medidas y no una sola nota</strong>. Diez preguntas miran lo que sientes por tu ex, otras diez lo que la ruptura te quitó, y las dos barras se leen juntas."
+  },
+  "section2": {
+    "title": "Las señales de que sigues enamorado de tu ex",
+    "intro": "Algunas señales hablan de la persona en sí. Son las que más pesan en el test, y estas son las principales.",
+    "pillar1Title": "Dirías que sí si volviera",
+    "pillar1Text": "Dirías que sí incluso con sus defectos, e incluso con lo que os separó. Es la señal más clara, y es la pregunta que más cuenta en el test.",
+    "pillar2Title": "Se te acelera el corazón con solo pensar en cruzártelo",
+    "pillar2Text": "Un mensaje suyo, o solo su nombre en una conversación, y se te descoloca el día entero.",
+    "pillar3Title": "Todavía imaginas un futuro juntos",
+    "pillar3Text": "Sigues pensando en los viajes que habríais hecho o en el piso que habríais alquilado. Casi nadie hace planes con alguien de quien ya no está enamorado.",
+    "pillar4Title": "Nadie le llega a la suela de los zapatos",
+    "pillar4Text": "Comparas a cada persona que conoces con tu ex, y siempre pierde, muchas veces por detalles que solo tenía tu ex.",
+    "pillar5Title": "Lo que le pasa te sigue importando",
+    "pillar5Text": "Todavía te preocupas por su salud o por su trabajo, más allá de lo que vivisteis juntos.",
+    "tip": "Pensar mucho en tu ex no es una señal por sí sola. Todo el mundo piensa en su ex después de una ruptura, enamorado o no. Lo que cuenta es en qué piensas: en esa persona, o en lo que has perdido."
+  },
+  "section3": {
+    "title": "Lo que parece amor, pero no lo es",
+    "intro": "La falta de la relación suele tomar la cara de tu ex, simplemente porque era quien ocupaba ese lugar. Esto es lo que más se confunde con el amor.",
+    "sub1Title": "La soledad del domingo por la noche",
+    "sub1P1": "¿Echas de menos a tu ex sobre todo cuando el piso está vacío, y mucho menos cuando estás con gente? Entonces lo que te falta es tener a alguien al lado, más que esa persona en concreto.",
+    "sub2Title": "El orgullo herido",
+    "sub2P1": "Cuando te han dejado, muchas veces quieres que la otra persona se arrepienta y vuelva pidiendo perdón, aunque le dirías que no. Y el cerebro no ayuda. En 2010, la antropóloga Helen Fisher y su equipo escanearon a quince personas a las que acababan de dejar y que decían seguir muy enamoradas: delante de la foto de su ex, <strong>las zonas que se activaban eran las de la recompensa y el deseo</strong>, las mismas que en las adicciones. Que te rechacen puede hacer que desees todavía más a esa persona.",
+    "sub3Title": "La nostalgia que lo borra todo",
+    "sub3P1": "Con el tiempo, la memoria se queda sobre todo con los buenos momentos. Las peleas y lo que te hizo irte se borran, y queda una historia perfecta que nunca existió. Si ya no recuerdas muy bien por qué se acabó, piensa en los últimos meses, no en los primeros.",
+    "sub4Title": "El miedo a quedarte solo",
+    "sub4P1": "Después de una ruptura, mucha gente se dice que no volverá a encontrar a nadie. Ese miedo te hace mirar atrás, hacia la única persona que ya conoces. Así que es menos amor por ella que miedo a lo desconocido."
+  },
+  "section4": {
+    "title": "Los cinco resultados del test",
+    "p1": "El test no da una nota sobre cien. Da dos barras, y es su forma la que hace el resultado: una puede ir por delante de la otra, las dos pueden estar altas, o las dos bajas.",
+    "headerScore": "Tus dos barras",
+    "headerLevel": "El resultado",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "Las dos bajas",
+    "row1Level": "Ya no estás enamorado",
+    "row1Analysis": "Quedan recuerdos, ya no sentimientos",
+    "row2Score": "La falta por delante",
+    "row2Level": "Es la falta, no el amor",
+    "row2Analysis": "Lo que más echas de menos es la vida en pareja",
+    "row3Score": "El amor por delante",
+    "row3Level": "Todavía le quieres",
+    "row3Analysis": "Echas de menos a esa persona, no la relación",
+    "row4Score": "Las dos altas",
+    "row4Level": "Enamorado y enganchado",
+    "row4Analysis": "La mezcla más dolorosa",
+    "row5Score": "Las dos a medias",
+    "row5Level": "Un poco de las dos",
+    "row5Analysis": "Los sentimientos se apagan sin desaparecer",
+    "tip": "El resultado dice dónde estás hoy, y cambia mucho en los meses que siguen a una ruptura. Repite el test dentro de unas semanas: la comparación te enseñará tanto como el primer resultado."
+  },
+  "section5": {
+    "title": "Sigues enamorado: ¿y ahora qué?",
+    "p1": "Seguir enamorado de tu ex no tiene nada de raro. Los sentimientos no se acaban el mismo día que la relación: según un estudio de la Universidad de Illinois publicado en 2025, hacen falta de media <strong>unos cuatro años para desapegarse a medias de un ex</strong>, después de una relación de al menos dos años. Lo importante es qué haces con ese sentimiento.",
+    "sub1Title": "Si la ruptura fue por cosas que pueden cambiar",
+    "sub1P1": "Una mala racha, la distancia, un malentendido, una época en la que uno de los dos estaba mal... En ese caso, puedes decírselo a tu ex, una vez, claramente, sin esconderlo entre indirectas. Antes, fíjate en lo que hace por su parte: <a href=\"/es/mi-ex-todavia-piensa-en-mi/\">un mensaje sin excusa o una propuesta para veros</a> dicen mucho más que unas historias vistas a medianoche.",
+    "sub2Title": "Si fue por algo más profundo",
+    "sub2P1": "Valores que no encajan, dos proyectos de vida distintos, una infidelidad que lo rompió todo, o un ex que te dijo claramente que se había acabado. Ahí el amor no basta, y mantenerlo vivo sobre todo te hace daño. Corta el contacto hasta que se calme: es <a href=\"/es/cuanto-tiempo-se-tarda-en-olvidar-a-un-ex/\">lo que más ayuda a pasar página</a>, mucho antes que los grandes propósitos.",
+    "sub3Title": "Si lo que pesa es la falta de la relación",
+    "sub3P1": "Entonces no le escribas a tu ex para llenar una noche de soledad: volverías a la misma historia, con los mismos problemas. Llena mejor lo que llenaba la pareja: queda con tus amigos, prepárate planes para las noches. Y cuando vuelvas a estar bien contigo mismo, <a href=\"/es/test-preparado-para-una-nueva-relacion/\">el hueco para alguien nuevo</a> se abrirá solo. ¡Ya verás!"
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "sentimientos después de una ruptura",
+    "faq1Q": "¿Es normal seguir enamorado de tu ex?",
+    "faq1A": "Sí. Los sentimientos no se acaban con la ruptura, y el apego a un ex suele tardar años en desaparecer del todo. Lo que debería preocuparte no es seguir queriendo a tu ex, sino poner tu vida en pausa esperando a que vuelva.",
+    "faq2Q": "¿Cómo distinguir el amor de echar de menos la relación?",
+    "faq2A": "Hazte una pregunta sencilla: si mañana otra persona amable y atenta te propusiera empezar algo, ¿se te pasaría lo que echas de menos? Si la respuesta es sí, lo que te falta es sobre todo la relación. Si es no, porque a quien quieres es a tu ex, es amor. El test separa las dos cosas, con diez preguntas para cada una.",
+    "faq3Q": "¿Se puede seguir queriendo a un ex estando con otra persona?",
+    "faq3A": "Sí, pasa, sobre todo cuando la nueva relación empezó poco después de la ruptura. Pensar en tu ex de vez en cuando no tiene nada de grave. Si comparas todo el rato y tu ex está en tu cabeza todos los días, es señal de que el hueco todavía no estaba libre.",
+    "faq4Q": "¿Por qué echo más de menos a mi ex desde que sale con alguien?",
+    "faq4A": "Porque ver a alguien ocupar tu lugar despierta el miedo a que te hayan reemplazado, y a veces el miedo a quedarte solo. En ese caso, suelen hablar la falta y el orgullo más fuerte que el amor. Deja pasar unas semanas antes de sacar conclusiones.",
+    "faq5Q": "¿Hay que decirle a tu ex que todavía le quieres?",
+    "faq5A": "Solo si la ruptura fue por cosas que pueden cambiar, y si estás preparado para oír un no. Díselo una vez, claramente. Si tu ex ya te ha dicho que se acabó, repetírselo te hará daño sobre todo a ti.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador. Solo el tipo de resultado, sin ningún dato personal, sirve para medir cómo se usa el test."
+  }
+}
