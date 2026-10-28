@@ -190,7 +190,7 @@
     'je-l-aime-encore': 'jeLaime',
     'pret-nouvelle-relation': 'pretRelation',
     // les tests « ex » (28 octobre 2026)
-    'encore-amoureux-ex': 'encoreEx', 'oublier-ex': 'oublierEx',
+    'encore-amoureux-ex': 'encoreEx', 'oublier-ex': 'oublierEx', 'ex-revenir': 'exRevenir', 'remettre-ex': 'remettreEx',
     // Le test red flag : deux séries, une par genre de la personne ; le
     // balisage reprend celle de l'homme, chargée en premier.
     'red-flag': 'redFlagH',
@@ -311,13 +311,15 @@
         c'est ainsi qu'une partie des pages ecrivent leur H1 en deux moitiers.
       %>
       <% const posSurligne = heroHighlight ? heroTitle.toLowerCase().indexOf(heroHighlight.toLowerCase()) : -1; %>
+      <%# En français, « ? ! : ; » restent collés à leur mot : juste après la partie surlignée, le « ? » passait seul à la ligne sur ordinateur (« Faut-il se remettre avec son ex / ? Le test... »). %>
+      <% const insecH1 = function (s) { return lang === 'fr' ? String(s).replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ') : s; }; %>
       <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
         <% if (posSurligne >= 0) { %>
-          <%= heroTitle.slice(0, posSurligne) %><span class="text-gradient"><%= heroTitle.slice(posSurligne, posSurligne + heroHighlight.length) %></span><%= heroTitle.slice(posSurligne + heroHighlight.length) %>
+          <%= insecH1(heroTitle.slice(0, posSurligne)) %><span class="text-gradient"><%= insecH1(heroTitle.slice(posSurligne, posSurligne + heroHighlight.length)) %></span><%= insecH1(heroTitle.slice(posSurligne + heroHighlight.length)) %>
         <% } else if (heroHighlight) { %>
-          <%= heroTitle %> <span class="text-gradient"><%= heroHighlight %></span>
+          <%= insecH1(heroTitle) %> <span class="text-gradient"><%= insecH1(heroHighlight) %></span>
         <% } else { %>
-          <%= heroTitle %>
+          <%= insecH1(heroTitle) %>
         <% } %>
       </h1>
       <p class="text-lg text-muted-foreground md:text-xl leading-relaxed max-w-2xl mx-auto"><%- t(ns + ':hero.description', '') %></p>

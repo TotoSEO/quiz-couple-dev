@@ -326,6 +326,7 @@
     "testCommonPoints": "Gemeinsamkeiten-Test",
     "testDistance": "Fernbeziehung-Test",
     "testToxic": "Toxisch-Test",
+    "testRedFlag": "Red-Flag-Test",
     "testCoupleSain": "Gesunde Beziehung Test",
     "testMariage": "Heirats-Test",
     "testDivorce": "Scheidungs-Test",
@@ -372,6 +373,8 @@
     "testEx": "Test denkt mein Ex noch an mich",
     "testEncoreAmoureuxEx": "Test: Bin ich noch in meinen Ex verliebt?",
     "testOublierEx": "Test: Wie lange, um über den Ex hinwegzukommen?",
+    "testExRevenir": "Test: Kommt mein Ex zurück?",
+    "testRemettreEx": "Test: Soll ich zu meinem Ex zurück?",
     "testChargeMentale": "Mental-Load-Test für Paare",
     "quizRencontre": "Fragen fürs erste Date",
     "jeuJamais": "Ich hab noch nie",
@@ -776,6 +779,16 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte zu dem, was du gerade lebst, nicht zu dem Monat nach der Trennung.",
     "disclaimer": "Dieser Test sagt nicht, ob du jemanden kennenlernen wirst. Er schaut, ob der Platz heute frei ist, und das ändert sich von Monat zu Monat. Deine Antworten werden nicht gespeichert."
+  },
+  "ex-revenir": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte nach dem, was gerade passiert, nicht nach dem, was du dir erhoffst.",
+    "disclaimer": "Der Test schätzt Chancen anhand von Situationen, die oft mit einem Comeback einhergehen. Er kann nicht die Gedanken deines Ex lesen. Deine Antworten werden nicht gespeichert."
+  },
+  "remettre-ex": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte für dich, nicht für das, was dein Ex gern hören würde.",
+    "disclaimer": "Dieser Test ist ein Werkzeug zum Nachdenken und ersetzt keine professionelle Beratung. Deine Antworten werden nicht gespeichert."
   },
   "est-ce-le-bon": {
     "introQuestion": "Bevor du anfängst:",

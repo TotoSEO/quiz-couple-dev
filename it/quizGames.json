@@ -326,6 +326,7 @@
     "testCommonPoints": "Test Punti Comuni",
     "testDistance": "Test Distanza",
     "testToxic": "Test Tossico",
+    "testRedFlag": "Test red flag",
     "testCoupleSain": "Test di coppia Sana",
     "testMariage": "Test Matrimonio",
     "testDivorce": "Test Divorzio",
@@ -372,6 +373,8 @@
     "testEx": "Test il mio ex pensa ancora a me",
     "testEncoreAmoureuxEx": "Test sono ancora innamorato/a del mio ex",
     "testOublierEx": "Test quanto tempo per dimenticare un ex",
+    "testExRevenir": "Test il mio ex tornerà?",
+    "testRemettreEx": "Test devo tornare con il mio ex?",
     "testChargeMentale": "Test del carico mentale di coppia",
     "quizRencontre": "Domande da primo appuntamento",
     "jeuJamais": "Non ho mai",
@@ -776,6 +779,16 @@
     "introQuestion": "Prima di cominciare:",
     "introQuote": "Rispondi su quello che vivi adesso, non sul mese dopo la rottura.",
     "disclaimer": "Questo test non dice se incontrerai qualcuno. Guarda se il posto è libero oggi, e questo cambia da un mese all'altro. Le tue risposte non vengono salvate."
+  },
+  "ex-revenir": {
+    "introQuestion": "Prima di cominciare:",
+    "introQuote": "Rispondi in base a quello che succede adesso, non a quello che speri.",
+    "disclaimer": "Il test stima delle possibilità a partire da situazioni che spesso accompagnano un ritorno. Non legge nella mente del tuo ex. Le tue risposte non vengono salvate."
+  },
+  "remettre-ex": {
+    "introQuestion": "Prima di cominciare:",
+    "introQuote": "Rispondi per te, non per quello che il tuo ex vorrebbe sentirsi dire.",
+    "disclaimer": "Questo test è uno strumento per riflettere, non sostituisce il parere di un professionista. Le tue risposte non vengono salvate."
   },
   "est-ce-le-bon": {
     "introQuestion": "Prima di cominciare:",

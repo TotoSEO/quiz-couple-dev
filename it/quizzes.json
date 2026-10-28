@@ -334,6 +334,18 @@
     "description": "Venti domande sulla vostra storia, sulla rottura e sulle tue giornate, e una stima in mesi del tempo che ti serve ancora per voltare pagina.",
     "metaDescription": "Quanto tempo ci vuole per dimenticare un ex? Cosa dicono gli studi, e un test in 20 domande che stima il tuo tempo in mesi. Gratis e anonimo."
   },
+  "testExRevenir": {
+    "title": "Il mio ex tornerà? Test in 20 domande",
+    "shortTitle": "Il mio ex tornerà?",
+    "description": "Venti domande sulla vostra rottura, su quello che è successo dopo e sulla vita del tuo ex oggi, per stimare le possibilità di un ritorno.",
+    "metaDescription": "Il mio ex tornerà? 20 domande sulla vostra rottura e su quello che è successo dopo, per stimare le tue possibilità che torni. Gratis e anonimo."
+  },
+  "testRemettreEx": {
+    "title": "Devo tornare con il mio ex? Test in 20 domande",
+    "shortTitle": "Devo tornare con il mio ex?",
+    "description": "Venti domande su quello che vi ha separati, su cosa è cambiato e su cosa vuoi ritrovare, per capire se un secondo tentativo ha possibilità di funzionare.",
+    "metaDescription": "Devo tornare con il mio ex? 20 domande per capire se un secondo tentativo può funzionare: cosa è cambiato, la fiducia, chi ti sta vicino. Gratis e anonimo."
+  },
   "testChargeMentale": {
     "title": "Test del carico mentale di coppia: chi porta cosa?",
     "shortTitle": "Chi porta il carico mentale?",

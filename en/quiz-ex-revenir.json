@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "badge": "Post-breakup quiz",
+    "title": "Will my ex come back? The quiz that estimates your chances",
+    "titleHighlight": "Will my ex come back",
+    "description": "Twenty questions about how you broke up, what's happened since and what your ex's life looks like now. At the end, the quiz tells you <strong>whether a comeback is likely</strong>... or whether your ex has already moved on.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "crossLink": {
+    "title": "Your ex wants to come back and you're not sure?",
+    "text": "This quiz estimates the chances of a comeback. The other one helps you work out whether getting back together would be a good idea, based on what split you up and what has changed since.",
+    "button": "Should I get back with my ex?"
+  },
+  "section1": {
+    "title": "How do you know if your ex will come back?",
+    "p1": "Nobody can know for sure, and sometimes your ex doesn't know yet either. But some situations make a comeback a lot more likely than others, and that's what this quiz looks at.",
+    "p2": "Studies on couples who break up and get back together all point in roughly the same direction: <strong>what happens after the breakup matters at least as much as why it happened</strong>. Are you still talking? Has your ex met someone? Was their decision final, or did it leave room for doubt? In the quiz, those questions weigh more than the reason for the split.",
+    "p3": "And it happens more often than people think. In a US study of 792 young people aged 17 to 24, <strong>44% of those who'd been in a relationship over the previous two years had gotten back together with their ex at least once</strong>. So it's not rare, but it doesn't happen after just any breakup.",
+    "p4": "Picture two couples. The first one breaks up one evening in the middle of a fight, and they keep texting every day. In the second, one of them had been pulling away for months, made the decision alone, then cut contact. Both breakups hurt just as much, but they don't have anywhere near the same chances of ending in a comeback."
+  },
+  "section2": {
+    "title": "Signs your ex will come back",
+    "intro": "Here's what makes a comeback more likely. These are the answers that score the most points in the quiz.",
+    "pillar1Title": "The breakup left room for doubt",
+    "pillar1Text": "A \"break\", an \"I don't know where I am anymore\", a decision made on the spur of the moment... Couples who get back together are often the ones where <strong>the breakup wasn't clear-cut</strong>, even for the person who asked for it.",
+    "pillar2Title": "Your ex hasn't moved on",
+    "pillar2Text": "In a study of 274 people who'd been in an on-and-off relationship, those who hadn't dated anyone else after the breakup were more likely to get back together. And when your ex finds other people not as good as you, that counts too.",
+    "pillar3Title": "You never stopped talking",
+    "pillar3Text": "You still text each other, and not just to pick up your stuff. Above all, look at <strong>who reaches out first</strong>: if it's almost always your ex, that's a good sign. If it's almost always you, a lot less so.",
+    "pillar4Title": "There are still feelings",
+    "pillar4Text": "It's the number one reason for comebacks in the research: <strong>feelings that didn't leave with the breakup</strong>. One line of regret, an \"I miss you\", an evening where you talked about the two of you all count for a lot in the quiz.",
+    "pillar5Title": "What split you up can change",
+    "pillar5Text": "The long distance ending, a hard time passing, a job that took up all the space... When the breakup came from something outside the two of you, that something can go away, and the urge to get back together often comes back with it.",
+    "pillar6Title": "You've broken up and gotten back together before",
+    "pillar6Text": "A couple that has already gotten back together is more likely to do it again, as a US study of more than a thousand couples clearly showed. That's not necessarily good news, more on that below.",
+    "tip": "Watched stories and likes barely count in the score: they cost your ex nothing, so they don't prove much. <a href=\"/en/does-my-ex-still-think-about-me/\">What takes some effort on their part</a>, like texting first or asking to meet up, says a lot more."
+  },
+  "section3": {
+    "title": "What makes a comeback unlikely",
+    "intro": "On the other hand, some situations close the door, at least for a good while. The quiz picks them up, and two of them are enough on their own to bring the result down.",
+    "sub1Title": "A decision made a long time ago",
+    "sub1P1": "When your ex had been pulling away for months before leaving, they've often done a good part of their grieving <strong>before the breakup even happened</strong>. For you, it all starts the day they leave. For them, it's almost over. That's why some people seem to move on so fast.",
+    "sub2Title": "A new relationship that lasts",
+    "sub2P1": "A fling right after the breakup isn't necessarily serious, and sometimes it's mostly a way of not being alone.",
+    "sub2P2": "But if your ex lives with someone, or has been introducing them to everyone for months, the quiz doesn't go above \"slim chances\", whatever your other answers say.",
+    "sub3Title": "A clear request to stop texting",
+    "sub3P1": "Getting blocked for a few days in the heat of anger happens. Getting blocked everywhere, or hearing \"don't text me anymore\", is something else: <strong>it's a request, and it deserves respect</strong>. Pushing at that point will only confirm to your ex that they were right to leave.",
+    "sub4Title": "Two lives heading in different directions",
+    "sub4P1": "One wants kids, the other doesn't. One moves abroad, the other stays. When that's where the breakup comes from, <strong>love doesn't change the problem</strong>: one of you would have to give up something important to them, and that rarely happens."
+  },
+  "section4": {
+    "title": "What your result means",
+    "p1": "Each answer scores points, and the questions don't all weigh the same: from 3 points for how long you were together up to 8 for who reaches out, or whether your ex has talked about regrets. The total goes from 0 to 102 points.",
+    "p2": "Three answers change everything on their own. A serious relationship on their side, or a clear request to stop contacting them, and the result can't go above \"slim chances\". On the other hand, <strong>if your ex has already suggested trying again</strong>, the quiz doesn't go below \"a real chance\".",
+    "headerScore": "Points",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 32",
+    "row1Level": "Very slim chances",
+    "row1Analysis": "Your ex has made up their mind, and nothing since shows any hesitation",
+    "row2Score": "33 to 48",
+    "row2Level": "Slim chances, for now",
+    "row2Analysis": "A few threads remain between you, but nothing is heading toward a comeback",
+    "row3Score": "49 to 62",
+    "row3Level": "The door isn't closed",
+    "row3Analysis": "Signs in both directions, nothing is decided",
+    "row4Score": "63 to 77",
+    "row4Level": "A real chance",
+    "row4Analysis": "Several things point toward a comeback",
+    "row5Score": "78 to 102",
+    "row5Level": "A foot in the door",
+    "row5Analysis": "Your ex isn't far from coming back, if it isn't already happening",
+    "tip": "The quiz talks about chances, not certainties. And the result can shift fast: a text, a new person, a new relationship, and everything changes within a few weeks."
+  },
+  "section5": {
+    "title": "And if you want them to come back?",
+    "p1": "Nobody can make someone come back if they don't want to. But some things help, and others are guaranteed to push them away.",
+    "sub1Title": "Give them some space",
+    "sub1P1": "Texting every day, begging, keeping an eye on their stories, asking their friends how they're doing... All of that adds pressure, and pressure almost always pushes the other way. Stepping back gives your ex room to realize they miss you.",
+    "sub2Title": "Say it once",
+    "sub2P1": "If you still love them, you can tell them. Once, clearly, without hints and without expecting an answer that same night. After that, it's up to them to take a step.",
+    "sub3Title": "Ask yourself if it's a good idea",
+    "sub3P1": "People rarely ask themselves that when they're hurting: they just want it to stop. But <strong>getting back together doesn't fix anything by itself</strong>. For it to work the second time, <a href=\"/en/should-i-get-back-with-my-ex-quiz/\">what split you up has to have changed</a>, not just the fact that you miss each other.",
+    "sub3P2": "And if the chances are slim, don't put your life on hold for a comeback that may never happen. Cutting contact for a while is still the best way to <a href=\"/en/how-long-to-get-over-an-ex-test/\">stop spending your days thinking about them</a>. If your ex does come back one day, you'll be in a much better place to decide!"
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "an ex coming back after a breakup",
+    "faq1Q": "Do exes always come back?",
+    "faq1A": "No. It happens a lot: in one US study, more than four in ten young adults had already gotten back together with an ex at least once. But plenty of exes never come back, and it mostly depends on how you broke up and what has happened since.",
+    "faq2Q": "How long does it take for an ex to come back?",
+    "faq2A": "There's no set timeframe, and be wary of rules like \"they always come back after three weeks\". What matters is what happens in the meantime: whether you're still talking, whether your ex is single, whether the breakup left room for doubt. The longer it goes without any contact, the less likely a comeback becomes.",
+    "faq3Q": "My ex is with someone else. Can they still come back?",
+    "faq3A": "It happens, especially when the new relationship started right after the breakup and looks like a way of not being alone. If it lasts and gets serious (they live together, your ex introduces them to everyone), the chances drop a lot, and the quiz takes that into account.",
+    "faq4Q": "Should I go no contact to get my ex back?",
+    "faq4A": "Going no contact mostly helps you feel better. Used as a trick to get the other person back, it doesn't always work, and it shouldn't turn into a game. What does push people away, though, is pushing: texts every day, begging, watching their social media.",
+    "faq5Q": "Does getting back together with an ex work?",
+    "faq5A": "Sometimes, yes. But a US study of more than a thousand couples found that those who break up and get back together have more doubts about their relationship, are less satisfied with it, and are more likely to break up again. A second try mostly works when the reason for the breakup is gone.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser, nobody sees them, and there's nothing to sign up for."
+  }
+}

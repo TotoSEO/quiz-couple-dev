@@ -334,6 +334,18 @@
     "description": "Zwanzig Fragen zu eurer Geschichte, zur Trennung und zu deinem Alltag, und eine Schätzung in Monaten, wie lange du noch brauchst.",
     "metaDescription": "Wie lange dauert es, über den Ex hinwegzukommen? Was die Forschung sagt, und ein Test mit 20 Fragen, der deine Dauer in Monaten schätzt. Kostenlos."
   },
+  "testExRevenir": {
+    "title": "Kommt mein Ex zurück? Test mit 20 Fragen",
+    "shortTitle": "Kommt mein Ex zurück?",
+    "description": "Zwanzig Fragen zu eurer Trennung, zu dem, was seitdem passiert ist, und zum Leben deines Ex heute, um die Chancen auf ein Comeback zu schätzen.",
+    "metaDescription": "Kommt mein Ex zurück? 20 Fragen zu eurer Trennung und dem, was seitdem passiert ist, um deine Chancen auf ein Comeback zu schätzen. Kostenlos und anonym."
+  },
+  "testRemettreEx": {
+    "title": "Soll ich zu meinem Ex zurück? Test mit 20 Fragen",
+    "shortTitle": "Soll ich zu meinem Ex zurück?",
+    "description": "Zwanzig Fragen dazu, was euch getrennt hat, was sich seitdem verändert hat und was du zurückhaben willst, um zu sehen, ob ein zweiter Versuch Chancen hat.",
+    "metaDescription": "Soll ich zu meinem Ex zurück? 20 Fragen, ob ein zweiter Versuch Chancen hat: was sich verändert hat, das Vertrauen, dein Umfeld. Kostenlos und anonym."
+  },
   "testChargeMentale": {
     "title": "Mental-Load-Test für Paare: Wer trägt was?",
     "shortTitle": "Wer trägt die Mental Load?",

@@ -2368,6 +2368,8 @@ var QuizEngine = (function() {
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'encore-amoureux-ex', icon: '🥀', route: 'testEncoreAmoureuxEx' },
     { type: 'test', key: 'oublier-ex', icon: '🌊', route: 'testOublierEx' },
+    { type: 'test', key: 'ex-revenir', icon: '🚪', route: 'testExRevenir' },
+    { type: 'test', key: 'remettre-ex', icon: '🧩', route: 'testRemettreEx' },
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
@@ -2494,9 +2496,13 @@ var QuizEngine = (function() {
     // Après une rupture : ce que fait l'ex appelle ce qu'on ressent soi-même,
     // puis le temps qu'il faudra ; ce qu'on ressent appelle le temps, puis l'ex ;
     // le temps appelle ce qu'on ressent, puis la question d'après, la rencontre.
-    'ex':                 ['testEncoreAmoureuxEx', 'testOublierEx', 'testDependance'],
-    'encore-amoureux-ex': ['testOublierEx', 'testEx', 'testPretRelation'],
+    'ex':                 ['testExRevenir', 'testEncoreAmoureuxEx', 'testOublierEx'],
+    'encore-amoureux-ex': ['testOublierEx', 'testRemettreEx', 'testEx'],
     'oublier-ex':         ['testEncoreAmoureuxEx', 'testPretRelation', 'testEx'],
+    // Les chances d'un retour appellent la question de s'y remettre, et
+    // l'inverse ; chacune propose aussi le temps qu'il faudra pour oublier.
+    'ex-revenir':         ['testRemettreEx', 'testEx', 'testOublierEx'],
+    'remettre-ex':        ['testExRevenir', 'testEncoreAmoureuxEx', 'testRedFlag'],
     // Savoir si c'est la bonne personne appelle la solidite du couple, puis
     // ce qui reste de l'amour, puis la question de la fin.
     'est-ce-le-bon': ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple'],
@@ -3050,6 +3056,9 @@ var QuizEngine = (function() {
     'pret-nouvelle-relation': ['cinqLangages'],
     'encore-amoureux-ex': ['dependance'],
     'oublier-ex': ['dependance'],
+    'ex-revenir': ['dependance'],
+    // Aucun produit sur « dois-je me remettre avec mon ex » : son premier verdict
+    // parle de peur et de violence, un livre en dessous n'y a pas sa place.
     'est-ce-le-bon': ['autotherapie'],
     'red-flag': ['autotherapie'],
     'type-couple': ['quiSaitMieux'],
@@ -3523,6 +3532,11 @@ var QuizEngine = (function() {
     // et le palier minimum : { q: 6, o: 'e', palier: 4 }. Aucun test n'en
     // declare par defaut, rien ne change pour les autres.
     this.planchers = config.planchers || [];
+    // Plafonds, l'inverse : une reponse qui, a elle seule, interdit les
+    // verdicts du haut, quel que soit le reste (la peur de sa reaction avant
+    // de se remettre avec un ex, une nouvelle histoire serieuse quand on se
+    // demande s'il va revenir). Meme forme : { q: 8, o: 'c', palier: 1 }.
+    this.plafonds = config.plafonds || [];
     this.totalScore = 0;
     this.skippedCount = 0;
     this.playerName = '';
@@ -3783,6 +3797,22 @@ var QuizEngine = (function() {
       if (palierMin > 0 && palierMin <= this.results.length) {
         var plancher = this.results[palierMin - 1];
         if (this.totalScore < plancher.min) { this.totalScore = plancher.min; result = plancher; }
+      }
+    }
+    // Les plafonds passent apres les planchers : quand les deux jouent, la
+    // prudence l'emporte. Le score est ramene a la borne haute du palier le
+    // plus bas qui est declenche, pour la meme raison que plus haut.
+    if (this.plafonds.length && this.results.length) {
+      var palierMax = 0;
+      for (var pf = 0; pf < this.plafonds.length; pf++) {
+        var pa = this.plafonds[pf];
+        for (var qj = 0; qj < this.questions.length; qj++) {
+          if (this.questions[qj].id === pa.q && this.choix[qj] === pa.o && (!palierMax || pa.palier < palierMax)) palierMax = pa.palier;
+        }
+      }
+      if (palierMax > 0 && palierMax <= this.results.length) {
+        var plafond = this.results[palierMax - 1];
+        if (this.totalScore > plafond.max) { this.totalScore = plafond.max; result = plafond; }
       }
     }
 

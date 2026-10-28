@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Post-breakup quiz",
+    "title": "Should you get back together with your ex? The quiz to take before you say yes",
+    "titleHighlight": "get back together with your ex",
+    "description": "Your ex wants to come back, or you're the one thinking about it? Before you say yes, the quiz goes through why it ended and what has changed since. At the end, it tells you whether <strong>the conditions for a second try are there</strong>, or whether it's better to wait.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "crossLink": {
+    "title": "Mostly wondering whether they'll come back?",
+    "text": "This quiz assumes the question is already on the table. The other one estimates the chances of a comeback, based on how you broke up and what has happened since.",
+    "button": "Will my ex come back?"
+  },
+  "section1": {
+    "title": "Getting back with an ex: good idea or bad idea?",
+    "p1": "It can be a really good idea. Some couples get back together after a breakup and are stronger the second time, because being apart showed them what mattered. But it mostly works <strong>when what split you up has changed</strong>, not just when you miss each other.",
+    "p2": "Missing someone is a bad advisor, by the way. After a breakup, you mostly remember the good times, and on a lonely evening, going back seems like the simplest thing in the world. The quiz makes you look at the rest, starting with how you lived together when things weren't going well.",
+    "p3": "It assumes the question is already on the table: your ex has suggested getting back together, or <a href=\"/en/will-my-ex-come-back-quiz/\">the door doesn't seem completely shut</a>. The result tells you whether a comeback has a chance of going well for you."
+  },
+  "section2": {
+    "title": "Signs that getting back together can work",
+    "intro": "These are the answers that score the most points in the quiz. The more of them you recognize in your story, the better a second try's chances of lasting.",
+    "pillar1Title": "What split you up has changed",
+    "pillar1Text": "And it shows <strong>in what they do, not just in what they promise</strong>. An \"I'll change\" costs nothing to say. A change that sticks shows up in everyday life, over several weeks.",
+    "pillar2Title": "You both own your part",
+    "pillar2Text": "A breakup rarely comes from just one person. If your ex owns what they did without putting it all on you, and if you can see what you'd do differently on your side, you're starting off on the right foot.",
+    "pillar3Title": "You want the same life",
+    "pillar3Text": "Kids or no kids, where to live, how much room work takes up... When your plans head in the same direction, there's still something to build. When they clash, love isn't enough to bring them together.",
+    "pillar4Title": "Your friends and family are mostly for it",
+    "pillar4Text": "A US study followed about a hundred couples for two years: <strong>couples whose friends and family supported them got along better</strong>, and they lasted longer when the woman felt supported by the people around her. The idea that disapproval brings a couple closer, the so-called Romeo and Juliet effect, didn't hold up.",
+    "pillar5Title": "You've talked about what would be different",
+    "pillar5Text": "You talked about it and got specific: who does what, what you don't want to go through again, what you'll do if the same problem comes back. Couples who get back together without changing anything often end up in the same argument a few months later.",
+    "pillar6Title": "It's the person you miss",
+    "pillar6Text": "If it's your ex you want back, and not <a href=\"/en/am-i-still-in-love-with-my-ex-quiz/\">the comfort of being in a relationship</a> or the fear of being alone, that's a good starting point!"
+  },
+  "section3": {
+    "title": "Reasons not to go back",
+    "intro": "Some answers bring the result down, and a few of them lock it at the bottom, whatever the others say.",
+    "sub1Title": "Nothing has changed except the distance between you",
+    "sub1P1": "They promise everything will be different, but nothing shows it yet. Promises made right after a breakup are often sincere... and often forgotten as soon as the fear of losing you fades. Wait and see before you say yes.",
+    "sub2Title": "You've already broken up several times",
+    "sub2P1": "Breaking up and getting back together is more common than people think. In a US study of more than a thousand couples, <strong>more than a third of cohabiting couples and one married couple in five</strong> had been through it. But all that back and forth comes at a price: those couples had more doubts about their relationship, were less satisfied with it, and the more often they'd broken up, the more likely they were to do it again.",
+    "sub2P2": "Another study, of young adults, found that those who broke up and got back together reported <strong>physical violence twice as often</strong> in their relationship. That doesn't mean the breakups cause it, but these relationships are often more turbulent than others.",
+    "sub3Title": "You're going back so you won't be alone",
+    "sub3P1": "Not wanting to be alone is one of the reasons that keep coming up when people are asked why they went back to their ex. In the evening, loneliness weighs on you, and your ex is the person you already know. But going back for that means getting the same relationship again, with the same problems.",
+    "sub4Title": "You were afraid of them",
+    "sub4P1": "Here, there's no gray area. <strong>If you've been afraid of how they'd react</strong>, if there was yelling, broken objects, threats, or if they're threatening to hurt themselves to get you back, the quiz tells you not to go back, whatever your other answers say. These aren't personality quirks: they're <a href=\"/en/red-flag-test/\">the most serious red flags</a>, and a breakup doesn't make them go away.",
+    "sub4P2": "If you're afraid, talk to someone. In the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, day and night; in the US, the National Domestic Violence Hotline is 1-800-799-7233. In immediate danger, call 999 or 911."
+  },
+  "section4": {
+    "title": "How the quiz calculates your result",
+    "p1": "Each answer scores points, and the questions don't all weigh the same: whether what split you up has changed counts a lot more than how long it's been since the breakup. The total goes from 0 to 112 points.",
+    "p2": "<strong>Having been afraid of how they'd react several times, yelling or broken objects, threats</strong>: any one of these answers is enough for the result to be \"don't get back together with your ex\", even if everything else is going well. Having been afraid once, or having felt put down and controlled, locks the result at \"everything says no for now\". And after three or more breakups, the quiz doesn't go above \"not while nothing has changed\".",
+    "headerScore": "Points",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "0",
+    "row1Level": "Don't get back together with your ex",
+    "row1Analysis": "One answer mentions fear, violence or threats",
+    "row2Score": "1 to 35",
+    "row2Level": "Everything says no for now",
+    "row2Analysis": "The problem is still there, and this relationship was hurting you",
+    "row3Score": "36 to 55",
+    "row3Level": "Not while nothing has changed",
+    "row3Analysis": "Some things matter between you, but the reason for the breakup hasn't moved",
+    "row4Score": "56 to 72",
+    "row4Level": "Not yet",
+    "row4Analysis": "The basics are there, but a conversation or a bit of time is missing",
+    "row5Score": "73 to 90",
+    "row5Level": "Yes, but with your eyes open",
+    "row5Analysis": "A second try has good chances, as long as you don't pick up where you left off",
+    "row6Score": "91 to 112",
+    "row6Level": "The conditions are there",
+    "row6Analysis": "Almost everything is going the right way",
+    "tip": "The result is about your relationship, not about your ex in general. People can change for good: the quiz looks at whether it already shows."
+  },
+  "section5": {
+    "title": "If you decide to try again",
+    "intro": "If the quiz says yes, or almost, here's what helps a second try last.",
+    "sub1Title": "Talk about what broke before starting over",
+    "sub1P1": "Before getting back together, take the time to talk about what split you up, what each of you will do differently, and what you'll do if the same problem comes back. It can feel heavy, but <strong>if that conversation is impossible, that's already an answer</strong>.",
+    "sub2Title": "Take your time",
+    "sub2P1": "There's no rush. Seeing each other, going out together, without picking everything back up at once (the apartment, the weekends with the in-laws...) gives you time to see whether things have really changed.",
+    "sub3Title": "Don't hide it from the people close to you",
+    "sub3P1": "If you don't dare tell them you're back together, ask yourself why. Their opinion doesn't decide for you, but their reaction often says a lot."
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "getting back together with an ex after a breakup",
+    "faq1Q": "Is it a good idea to get back together with an ex?",
+    "faq1A": "It mostly depends on what split you up. If it was circumstances (distance, a rough patch) and they've changed, a second try has a good chance. If it was the way they treated you, and all they're doing is making promises, a lot less so.",
+    "faq2Q": "Can you get back together with an ex after cheating?",
+    "faq2A": "Yes, some couples manage it, on two conditions: the person who cheated owns what they did without making excuses, and you can trust them again without checking everything. If you know you'll be going through their phone every night, getting back together will mostly hurt you.",
+    "faq3Q": "How long should you wait before getting back with an ex?",
+    "faq3A": "There's no perfect timing, but avoid deciding in the first two weeks: at that point, it's mostly the pain of the breakup talking. Take the time to see whether what split you up changes for good, over several weeks.",
+    "faq4Q": "Why do we keep going back to our ex?",
+    "faq4A": "Research on the subject mentions lingering feelings first, then familiarity, the fear of being alone, and the feeling that someone else wouldn't be any better. Those reasons are human, but only the first one is really about your ex: the others are mostly about missing someone.",
+    "faq5Q": "Can getting back together after several breakups work?",
+    "faq5A": "Less often. Studies show that the more a couple has broken up, the more likely they are to break up again, and that these couples are less happy on average. It can work if the reason for the breakups is gone. If every breakup happens for the same reason, the next comeback will likely end the same way.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser, nobody sees them, and there's nothing to sign up for."
+  }
+}

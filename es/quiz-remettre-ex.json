@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Test después de una ruptura",
+    "title": "¿Es buena idea volver con tu ex? El test para hacer antes de decir que sí",
+    "titleHighlight": "volver con tu ex",
+    "description": "¿Tu ex quiere volver, o eres tú quien lo piensa? Antes de decir que sí, el test repasa contigo por qué se acabó y qué ha cambiado desde entonces. Al final, te dice si <strong>se dan las condiciones para un segundo intento</strong>, o si es mejor esperar.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿Lo que te preguntas es si va a volver?",
+    "text": "Este test parte de que la pregunta ya está sobre la mesa. El otro calcula las posibilidades de que vuelva, a partir de cómo os separasteis y de lo que ha pasado después.",
+    "button": "¿Mi ex volverá?"
+  },
+  "section1": {
+    "title": "Volver con tu ex: ¿buena o mala idea?",
+    "p1": "Puede ser una idea muy buena. Algunas parejas vuelven después de una ruptura y son más sólidas la segunda vez, porque la separación les hizo entender lo que importaba. Pero funciona sobre todo <strong>cuando lo que os separó ha cambiado</strong>, y no solo cuando os echáis de menos.",
+    "p2": "Echar de menos, precisamente, es un mal consejero. Después de una ruptura, se recuerdan sobre todo los buenos momentos, y una noche de soledad, volver parece lo más sencillo del mundo. El test te hace mirar lo demás, empezando por cómo vivíais juntos cuando las cosas no iban bien.",
+    "p3": "Parte de que la pregunta ya está sobre la mesa: tu ex ha propuesto volver, o <a href=\"/es/test-mi-ex-volvera/\">la puerta no parece del todo cerrada</a>. El resultado te dice si una vuelta tiene posibilidades de salir bien para ti."
+  },
+  "section2": {
+    "title": "Las señales de que volver puede funcionar",
+    "intro": "Son las respuestas que más puntos dan en el test. Cuantas más encuentres en tu historia, más posibilidades tiene un segundo intento de durar.",
+    "pillar1Title": "Lo que os separó ha cambiado",
+    "pillar1Text": "Y se nota <strong>en lo que hace, no solo en lo que promete</strong>. Un «voy a cambiar» no cuesta nada decirlo. Un cambio que se mantiene se ve en el día a día, durante varias semanas.",
+    "pillar2Title": "Cada uno reconoce su parte",
+    "pillar2Text": "Una ruptura rara vez viene de una sola persona. Si tu ex reconoce lo que hizo sin echarte toda la culpa, y si tú ves lo que harías de otra forma, empezáis con buen pie.",
+    "pillar3Title": "Queréis la misma vida",
+    "pillar3Text": "Hijos o no, la ciudad donde vivir, el sitio que ocupa el trabajo... Cuando vuestros proyectos van en la misma dirección, queda algo que construir. Cuando chocan, el amor no basta para acercarlos.",
+    "pillar4Title": "Tu gente está más bien a favor",
+    "pillar4Text": "Un estudio estadounidense siguió a un centenar de parejas durante dos años: <strong>las parejas a las que su entorno apoyaba se llevaban mejor</strong>, y duraban más cuando la mujer se sentía apoyada por los suyos. La idea de que la oposición de la familia une más a la pareja, el llamado efecto Romeo y Julieta, no se confirmó.",
+    "pillar5Title": "Habéis hablado de lo que sería distinto",
+    "pillar5Text": "Lo habéis hablado y en concreto: quién hace qué, lo que no queréis volver a vivir, lo que haréis si vuelve el mismo problema. Las parejas que vuelven sin cambiar nada suelen acabar en la misma discusión unos meses después.",
+    "pillar6Title": "Echas de menos a la persona",
+    "pillar6Text": "Si es a tu ex a quien quieres recuperar, y no <a href=\"/es/test-sigo-enamorado-de-mi-ex/\">la comodidad de tener pareja</a> o el miedo a estar solo, ¡es un buen punto de partida!"
+  },
+  "section3": {
+    "title": "Los motivos para no volver",
+    "intro": "Algunas respuestas bajan el resultado, y unas pocas lo bloquean abajo del todo, digan lo que digan las demás.",
+    "sub1Title": "No ha cambiado nada, salvo la distancia entre vosotros",
+    "sub1P1": "Promete que todo será distinto, pero todavía no se nota en nada. Las promesas hechas justo después de una ruptura suelen ser sinceras... y se olvidan en cuanto se pasa el miedo a perderte. Espera a verlo antes de decir que sí.",
+    "sub2Title": "Ya lo habéis dejado varias veces",
+    "sub2P1": "Dejarlo y volver es más frecuente de lo que se cree. En un estudio estadounidense con más de mil parejas, <strong>más de un tercio de las parejas que vivían juntas y una de cada cinco parejas casadas</strong> ya lo habían vivido. Pero esas idas y venidas tienen un precio: esas parejas tenían más dudas sobre su relación, estaban menos satisfechas y, cuantas más veces lo habían dejado, más riesgo tenían de repetir.",
+    "sub2P2": "Otro estudio, con jóvenes adultos, mostró que quienes lo dejaban y volvían declaraban <strong>el doble de violencia física</strong> en su relación. No quiere decir que las rupturas sean la causa, pero estas historias suelen ser más movidas que las demás.",
+    "sub3Title": "Vuelves para no estar solo",
+    "sub3P1": "No querer estar solo es uno de los motivos que más se repiten cuando se pregunta a la gente por qué volvió con su ex. Por la noche, la soledad pesa, y tu ex es la persona que ya conoces. Pero volver por eso es recuperar la misma historia, con los mismos problemas.",
+    "sub4Title": "Le tenías miedo",
+    "sub4P1": "Aquí no hay matices. <strong>Si has tenido miedo de su reacción</strong>, si hubo gritos, objetos rotos, amenazas, o si amenaza con hacerse daño para que vuelvas, el test te dice que no vuelvas, digan lo que digan tus otras respuestas. No son rasgos de carácter: son <a href=\"/es/test-red-flag/\">las red flags más graves</a>, y una ruptura no las hace desaparecer.",
+    "sub4P2": "Si tienes miedo, habla con alguien. En España, el 016 atiende gratis, las 24 horas y sin dejar rastro en la factura; en peligro inmediato, llama al 112."
+  },
+  "section4": {
+    "title": "Cómo calcula el test tu resultado",
+    "p1": "Cada respuesta da puntos, y las preguntas no pesan todas igual: saber si lo que os separó ha cambiado cuenta mucho más que el tiempo pasado desde la ruptura. El total va de 0 a 112 puntos.",
+    "p2": "<strong>Haber tenido miedo de su reacción varias veces, gritos u objetos rotos, amenazas</strong>: basta con una de esas respuestas para que el resultado sea «no vuelvas con tu ex», aunque todo lo demás vaya bien. Haber tenido miedo una sola vez, o haberte sentido menospreciado/a y controlado/a, bloquea el resultado en «todo dice que no, por ahora». Y después de tres rupturas o más, el test no pasa de «no mientras nada haya cambiado».",
+    "headerScore": "Puntos",
+    "headerLevel": "Resultado",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0",
+    "row1Level": "No vuelvas con tu ex",
+    "row1Analysis": "Una respuesta habla de miedo, de violencia o de amenazas",
+    "row2Score": "1 a 35",
+    "row2Level": "Todo dice que no, por ahora",
+    "row2Analysis": "El problema sigue ahí, y esta relación te hacía daño",
+    "row3Score": "36 a 55",
+    "row3Level": "No mientras nada haya cambiado",
+    "row3Analysis": "Hay cosas que importan entre vosotros, pero el motivo de la ruptura no se ha movido",
+    "row4Score": "56 a 72",
+    "row4Level": "Todavía no",
+    "row4Analysis": "Las bases están, falta una conversación o un poco de tiempo",
+    "row5Score": "73 a 90",
+    "row5Level": "Sí, pero con los ojos abiertos",
+    "row5Analysis": "Un segundo intento tiene buenas posibilidades si no retomáis las cosas como antes",
+    "row6Score": "91 a 112",
+    "row6Level": "Se dan las condiciones",
+    "row6Analysis": "Casi todo va en la buena dirección",
+    "tip": "El resultado habla de vuestra historia, no de tu ex en general. Alguien puede haber cambiado de verdad: el test mira si eso ya se nota."
+  },
+  "section5": {
+    "title": "Si decides intentarlo otra vez",
+    "intro": "Si el test te dice que sí, o casi, esto es lo que ayuda a que un segundo intento dure.",
+    "sub1Title": "Hablar de lo que se rompió antes de empezar de nuevo",
+    "sub1P1": "Antes de volver, tómate el tiempo de hablar de lo que os separó, de lo que cada uno hará de otra forma y de lo que haréis si vuelve el mismo problema. Puede parecer pesado, pero <strong>si esa conversación es imposible, eso ya es una respuesta</strong>.",
+    "sub2Title": "Tomarse su tiempo",
+    "sub2P1": "No hay prisa. Volver a veros, salir juntos, sin retomarlo todo de golpe (el piso, los fines de semana con los suegros...), da tiempo para ver si las cosas han cambiado de verdad.",
+    "sub3Title": "No ocultárselo a tu gente",
+    "sub3P1": "Si no te atreves a decirles que habéis vuelto, pregúntate por qué. Su opinión no decide por ti, pero su reacción suele decir mucho."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "volver con tu ex después de una ruptura",
+    "faq1Q": "¿Es buena idea volver con tu ex?",
+    "faq1A": "Depende sobre todo de lo que os separó. Si fueron las circunstancias (la distancia, una mala racha) y han cambiado, un segundo intento tiene buenas posibilidades. Si fue su forma de tratarte, y se limita a prometer, muchas menos.",
+    "faq2Q": "¿Se puede volver con tu ex después de una infidelidad?",
+    "faq2A": "Sí, algunas parejas lo consiguen, con dos condiciones: que quien fue infiel reconozca lo que hizo sin buscarse excusas, y que puedas volver a confiar sin comprobarlo todo. Si sabes que vas a mirar su móvil todas las noches, esa vuelta te hará sobre todo daño.",
+    "faq3Q": "¿Cuánto tiempo esperar antes de volver con tu ex?",
+    "faq3A": "No hay un plazo bueno, pero evita decidir en las dos primeras semanas: en ese momento habla sobre todo el dolor de la ruptura. Tómate el tiempo de ver si lo que os separó cambia de verdad, durante varias semanas.",
+    "faq4Q": "¿Por qué siempre volvemos con nuestro ex?",
+    "faq4A": "Los estudios sobre el tema citan primero sentimientos que no se han ido, luego la costumbre, el miedo a estar solo y la impresión de que con otra persona no iría mejor. Son motivos humanos, pero solo el primero habla de verdad de tu ex: los demás hablan sobre todo de la falta que te hace alguien.",
+    "faq5Q": "Volver con tu ex después de varias rupturas, ¿puede funcionar?",
+    "faq5A": "Con menos frecuencia. Los estudios muestran que cuantas más veces lo ha dejado una pareja, más riesgo tiene de volver a dejarlo, y que estas parejas son de media menos felices. Puede funcionar si el motivo de las rupturas ha desaparecido. Si cada ruptura llega por la misma razón, la próxima vuelta probablemente acabará igual.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador, nadie las ve y no hay nada que crear ni rellenar."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "badge": "Test después de una ruptura",
+    "title": "¿Mi ex volverá? El test que calcula tus posibilidades",
+    "titleHighlight": "Mi ex volverá",
+    "description": "Veinte preguntas sobre cómo os separasteis, lo que ha pasado desde entonces y cómo es hoy la vida de tu ex. Al final, el test te dice <strong>si es probable que vuelva</strong>... o si tu ex ya ha pasado página.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿Tu ex quiere volver y no lo tienes claro?",
+    "text": "Este test calcula las posibilidades de que vuelva. El otro te ayuda a saber si volver sería buena idea, a partir de lo que os separó y de lo que ha cambiado desde entonces.",
+    "button": "¿Debo volver con mi ex?"
+  },
+  "section1": {
+    "title": "¿Cómo saber si tu ex va a volver?",
+    "p1": "Nadie puede saberlo con seguridad, y a veces ni siquiera tu ex lo sabe todavía. Pero hay situaciones que hacen que una vuelta sea mucho más probable que otras, y eso es lo que mira el test.",
+    "p2": "Los estudios sobre parejas que se separan y vuelven van más o menos en la misma dirección: <strong>lo que pasa después de la ruptura cuenta al menos tanto como el motivo de la ruptura</strong>. ¿Seguís hablando? ¿Tu ex ha conocido a alguien? ¿Su decisión era firme o dejaba lugar a la duda? En el test, esas preguntas pesan más que el motivo de la separación.",
+    "p3": "Y pasa más a menudo de lo que se cree. En un estudio estadounidense con 792 jóvenes de 17 a 24 años, <strong>el 44 % de los que habían tenido pareja en los dos años anteriores había vuelto al menos una vez con su ex</strong>. No es raro, pero tampoco pasa después de cualquier ruptura.",
+    "p4": "Piensa en dos parejas. La primera lo deja una noche, en plena discusión, y los dos siguen escribiéndose todos los días. En la segunda, uno de los dos llevaba meses alejándose, tomó la decisión solo y después cortó el contacto. Las dos rupturas duelen igual, pero no tienen ni de lejos las mismas posibilidades de acabar en una reconciliación."
+  },
+  "section2": {
+    "title": "Las señales de que tu ex va a volver",
+    "intro": "Esto es lo que hace más probable una vuelta. Son las respuestas que más puntos dan en el test.",
+    "pillar1Title": "La ruptura dejaba una duda",
+    "pillar1Text": "Un «nos damos un tiempo», un «ya no sé lo que quiero», una decisión tomada en caliente... Las parejas que vuelven suelen ser aquellas en las que <strong>la ruptura no estaba clara</strong>, incluso para quien la pidió.",
+    "pillar2Title": "Tu ex no ha rehecho su vida",
+    "pillar2Text": "En un estudio con 274 personas que habían tenido una relación de idas y venidas, las que no habían salido con nadie después de la ruptura volvían con más frecuencia. Y cuando a tu ex los demás le parecen peores que tú, eso también cuenta.",
+    "pillar3Title": "El contacto nunca se cortó",
+    "pillar3Text": "Os seguís escribiendo, y no solo para recoger cosas. Fíjate sobre todo en <strong>quién escribe primero</strong>: si casi siempre es tu ex, es buena señal. Si casi siempre eres tú, bastante menos.",
+    "pillar4Title": "Quedan sentimientos",
+    "pillar4Text": "Es el primer motivo de las reconciliaciones en los estudios sobre el tema: <strong>sentimientos que no se fueron con la ruptura</strong>. Una frase de arrepentimiento, un «te echo de menos», una noche en la que hablasteis de vosotros cuentan mucho en el test.",
+    "pillar5Title": "Lo que os separó puede cambiar",
+    "pillar5Text": "La distancia que se acaba, una mala racha que pasa, un trabajo que lo ocupaba todo... Cuando la ruptura venía de algo ajeno a vosotros dos, ese algo puede desaparecer, y las ganas de volver suelen regresar con él.",
+    "pillar6Title": "Ya lo habíais dejado y vuelto antes",
+    "pillar6Text": "Una pareja que ya ha vuelto una vez tiene más posibilidades de repetir, como mostró un estudio estadounidense con más de mil parejas. No es necesariamente una buena noticia, lo hablamos más abajo.",
+    "tip": "Las historias vistas y los «me gusta» casi no cuentan en el cálculo: a tu ex no le cuestan nada, así que no demuestran gran cosa. <a href=\"/es/mi-ex-todavia-piensa-en-mi/\">Lo que le supone un esfuerzo</a>, como escribir primero o proponer veros, dice mucho más."
+  },
+  "section3": {
+    "title": "Lo que hace poco probable que vuelva",
+    "intro": "Al revés, algunas situaciones cierran la puerta, al menos durante un buen tiempo. El test las detecta, y dos de ellas bastan por sí solas para bajar el resultado.",
+    "sub1Title": "Una decisión tomada hace mucho",
+    "sub1P1": "Cuando tu ex llevaba meses alejándose antes de irse, muchas veces ha hecho buena parte de su duelo <strong>antes incluso de la ruptura</strong>. Para ti, todo empieza el día en que se va. Para esa persona, casi se acaba. Por eso algunas personas parecen pasar página tan rápido.",
+    "sub2Title": "Una nueva relación que dura",
+    "sub2P1": "Una aventura justo después de la ruptura no es necesariamente seria, y a veces sirve sobre todo para no estar solo.",
+    "sub2P2": "Pero si tu ex vive con alguien, o se lo presenta a todo el mundo desde hace meses, el test no sube por encima de «pocas posibilidades», digan lo que digan tus otras respuestas.",
+    "sub3Title": "Una petición clara de no escribir más",
+    "sub3P1": "Que te bloqueen unos días en pleno enfado, pasa. Que te bloqueen en todas partes, o que te digan «no me escribas más», es otra cosa: <strong>es una petición, y se respeta</strong>. Insistir en ese momento solo le confirmará a tu ex que hizo bien en irse.",
+    "sub4Title": "Dos vidas que ya no van en la misma dirección",
+    "sub4P1": "Uno quiere hijos y el otro no. Uno se va a vivir al extranjero y el otro se queda. Cuando la ruptura viene de ahí, <strong>el amor no cambia el problema</strong>: uno de los dos tendría que renunciar a algo importante para él, y eso rara vez pasa."
+  },
+  "section4": {
+    "title": "Lo que dice tu resultado",
+    "p1": "Cada respuesta da puntos, y las preguntas no pesan todas igual: desde 3 puntos por lo que duró vuestra relación hasta 8 por quién retoma el contacto o por si tu ex te ha hablado de arrepentimiento. El total va de 0 a 102 puntos.",
+    "p2": "Tres respuestas lo cambian todo por sí solas. Una relación seria por su parte, o una petición clara de no volver a contactarle, y el resultado no puede pasar de «pocas posibilidades». Al revés, <strong>si tu ex ya te ha propuesto volver a intentarlo</strong>, el test no baja de «posibilidades reales».",
+    "headerScore": "Puntos",
+    "headerLevel": "Resultado",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0 a 32",
+    "row1Level": "Muy pocas posibilidades",
+    "row1Analysis": "Tu ex ha tomado su decisión, y nada de lo que ha pasado desde entonces muestra que dude",
+    "row2Score": "33 a 48",
+    "row2Level": "Pocas posibilidades, por ahora",
+    "row2Analysis": "Quedan algunos hilos entre vosotros, pero nada va hacia una vuelta",
+    "row3Score": "49 a 62",
+    "row3Level": "La puerta no está cerrada",
+    "row3Analysis": "Señales en los dos sentidos, nada está decidido",
+    "row4Score": "63 a 77",
+    "row4Level": "Posibilidades reales",
+    "row4Analysis": "Varias cosas van en el sentido de una vuelta",
+    "row5Score": "78 a 102",
+    "row5Level": "Un pie en la puerta",
+    "row5Analysis": "Tu ex no está lejos de volver, si no está volviendo ya",
+    "tip": "El test habla de posibilidades, no de certezas. Y el resultado puede moverse rápido: un mensaje, alguien nuevo, una nueva relación, y todo cambia en pocas semanas."
+  },
+  "section5": {
+    "title": "¿Y si quieres que vuelva?",
+    "p1": "Nadie puede hacer volver a alguien que no quiere. Pero hay cosas que ayudan, y otras que le hacen huir seguro.",
+    "sub1Title": "Dejar aire",
+    "sub1P1": "Escribir todos los días, suplicar, vigilar sus historias, preguntar por esa persona a sus amigos... Todo eso mete presión, y la presión casi siempre empuja en el sentido contrario. Dar un paso atrás deja a tu ex el espacio para darse cuenta de que le haces falta.",
+    "sub2Title": "Decirlo una vez",
+    "sub2P1": "Si todavía le quieres, puedes decírselo. Una vez, claramente, sin indirectas y sin esperar respuesta esa misma noche. Después, le toca a tu ex dar un paso.",
+    "sub3Title": "Preguntarte si es buena idea",
+    "sub3P1": "Casi nadie se lo pregunta cuando le duele: solo quiere que pare. Y sin embargo, <strong>volver no arregla nada por sí solo</strong>. Para que funcione la segunda vez, <a href=\"/es/test-debo-volver-con-mi-ex/\">lo que os separó tiene que haber cambiado</a>, y no basta con que os echéis de menos.",
+    "sub3P2": "Y si las posibilidades son pocas, no pongas tu vida en pausa por una vuelta que quizá no llegue nunca. Cortar el contacto un tiempo sigue siendo la mejor forma de <a href=\"/es/cuanto-tiempo-se-tarda-en-olvidar-a-un-ex/\">dejar de pasarte el día pensando en esa persona</a>. Si tu ex vuelve algún día, ¡estarás mucho mejor para decidir!"
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "la vuelta de un ex después de una ruptura",
+    "faq1Q": "¿Un ex siempre acaba volviendo?",
+    "faq1A": "No. Pasa a menudo: en un estudio estadounidense, más de cuatro de cada diez jóvenes adultos ya habían vuelto al menos una vez con un ex. Pero muchos ex no vuelven nunca, y depende sobre todo de cómo os separasteis y de lo que ha pasado después.",
+    "faq2Q": "¿Cuánto tarda un ex en volver?",
+    "faq2A": "No hay un plazo fijo, y desconfía de reglas del tipo «siempre vuelve a las tres semanas». Lo que cuenta es lo que pasa mientras tanto: si seguís hablando, si tu ex está solo, si la ruptura dejaba una duda. Cuanto más tiempo pasa sin ningún contacto, menos probable es una vuelta.",
+    "faq3Q": "Mi ex está con otra persona, ¿puede volver todavía?",
+    "faq3A": "Pasa, sobre todo cuando la nueva relación empezó justo después de la ruptura y parece una forma de no estar solo. Si dura y se vuelve seria (viven juntos, tu ex se la presenta a todo el mundo), las posibilidades bajan mucho, y el test lo tiene en cuenta.",
+    "faq4Q": "¿Hay que cortar el contacto para que un ex vuelva?",
+    "faq4A": "Cortar el contacto te ayuda sobre todo a ti, a estar mejor. Usado como una técnica para que la otra persona vuelva, no funciona siempre, y no debería convertirse en un juego. Lo que sí hace huir es insistir: los mensajes todos los días, las súplicas, vigilar sus redes.",
+    "faq5Q": "Volver con tu ex, ¿funciona?",
+    "faq5A": "A veces, sí. Pero un estudio estadounidense con más de mil parejas mostró que las que se dejan y vuelven tienen más dudas sobre su relación, están menos satisfechas y corren más riesgo de volver a romper. Un segundo intento funciona sobre todo cuando el motivo de la ruptura ha desaparecido.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador, nadie las ve y no hay nada que crear ni rellenar."
+  }
+}

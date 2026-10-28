@@ -346,6 +346,18 @@
     "description": "Vingt questions sur votre histoire, la rupture et vos journées, et une estimation en mois du temps qu'il vous faudra encore pour tourner la page.",
     "metaDescription": "Combien de temps faut-il pour oublier son ex ? Ce que disent les études, et un test en 20 questions qui estime votre durée en mois. Gratuit et anonyme."
   },
+  "testExRevenir": {
+    "title": "Mon ex va-t-il revenir ? Test en 20 questions",
+    "shortTitle": "Mon ex va-t-il revenir ?",
+    "description": "Vingt questions sur votre rupture, sur ce qui s'est passé depuis et sur la vie de votre ex aujourd'hui, pour estimer les chances d'un retour.",
+    "metaDescription": "Mon ex va-t-il revenir ? 20 questions sur votre rupture et ce qui s'est passé depuis, pour estimer vos chances d'un retour. Gratuit et anonyme."
+  },
+  "testRemettreEx": {
+    "title": "Dois-je me remettre avec mon ex ? Test en 20 questions",
+    "shortTitle": "Dois-je me remettre avec mon ex ?",
+    "description": "Vingt questions sur ce qui vous a séparés, ce qui a changé depuis et ce que vous cherchez à retrouver, pour savoir si un deuxième essai a des chances de marcher.",
+    "metaDescription": "Dois-je me remettre avec mon ex ? 20 questions pour savoir si un deuxième essai a des chances de marcher : ce qui a changé, la confiance, vos proches."
+  },
   "testChargeMentale": {
     "title": "Test charge mentale du couple : qui porte quoi ?",
     "shortTitle": "Qui porte la charge mentale ?",
