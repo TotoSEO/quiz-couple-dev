@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-27T08:56:46.894Z",
+  "genere_le": "2026-10-28T03:13:44.119Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-27",
+  "aujourdhui": "2026-10-28",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 156,
+  "reserve_jours": 155,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -2891,7 +2891,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-28",
+      "jour": "2026-10-29",
       "creneau": "matin"
     },
     "mipaps-statique": null,
@@ -3474,6 +3474,42 @@
       "jour": "2026-10-20",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "cce59b5f-11f6-4ed3-b003-99b21d9b0a29",
+      "releve": "j7",
+      "vues": 1374,
+      "portee": 1203,
+      "likes": 57,
+      "commentaires": 0,
+      "partages": 19,
+      "enregistrements": 14,
+      "releve_le": "2026-10-28T03:13:30.505805+00:00",
+      "publie_le": "2026-10-20T14:50:11.321+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-20",
+      "creneau": "soir",
+      "theme": null
+    },
+    {
+      "variante_id": "b342cd3f-94d8-4744-8873-b01ab0a2699c",
+      "releve": "j7",
+      "vues": 10,
+      "portee": 6,
+      "likes": 1,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 0,
+      "releve_le": "2026-10-28T03:13:32.997826+00:00",
+      "publie_le": "2026-10-20T09:20:10.805+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-20",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -3490,13 +3526,13 @@
     },
     {
       "categorie": "mipaps-statique",
-      "posts": 4,
-      "vues_mediane": 205,
-      "vues_moyenne": 201,
-      "vues_max": 213,
-      "partages": 3,
-      "enregistrements": 0,
-      "likes": 5,
+      "posts": 5,
+      "vues_mediane": 210,
+      "vues_moyenne": 436,
+      "vues_max": 1374,
+      "partages": 22,
+      "enregistrements": 14,
+      "likes": 62,
       "commentaires": 0
     },
     {
@@ -3512,13 +3548,13 @@
     },
     {
       "categorie": "mipaps-post",
-      "posts": 10,
+      "posts": 11,
       "vues_mediane": 2,
-      "vues_moyenne": 3,
-      "vues_max": 9,
+      "vues_moyenne": 4,
+      "vues_max": 10,
       "partages": 1,
       "enregistrements": 0,
-      "likes": 2,
+      "likes": 3,
       "commentaires": 0
     }
   ]
