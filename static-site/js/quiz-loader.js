@@ -540,6 +540,22 @@
     // b) ou le mepris et le controle (q6 d) bloquent au deuxieme verdict,
     // trois ruptures ou plus (q5 d) au troisieme (Vennum et al. 2014 : plus
     // un couple a rompu, plus il rompt encore, et moins il est heureux).
+    // A-t-il / a-t-elle oublie son ex ? Deux series, les memes questions
+    // ecrites pour lui ou pour elle (resultats a part, pour les accords).
+    // 98 points, de 3 (une chanson evitee, le delai avant votre rencontre)
+    // a 8 (un contact cache, l'envie de revenir en arriere dite a voix
+    // haute). Planchers : un contact cache (q3 d) et l'envie de revoir son
+    // ex en le croisant (q18 d) ne descendent pas sous le quatrieme
+    // verdict, l'envie de revenir en arriere (q19 d) vaut le dernier.
+    'oublie-son-ex':  { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'sonExH', engine: 'solo', totalQ: 20, pool: 20, quizType: 'oublie-son-ex', ptsExplicites: true, dansLOrdre: true,
+        paliers: [14, 32, 52, 72], planchers: [{ q: 3, o: 'd', palier: 4 }, { q: 18, o: 'd', palier: 4 }, { q: 19, o: 'd', palier: 5 }] },
+      { id: 'femme', emoji: '👩', prefix: 'sonExF', engine: 'solo', totalQ: 20, pool: 20, quizType: 'oublie-son-ex', ptsExplicites: true, dansLOrdre: true,
+        paliers: [14, 32, 52, 72], planchers: [{ q: 3, o: 'd', palier: 4 }, { q: 18, o: 'd', palier: 4 }, { q: 19, o: 'd', palier: 5 }] }
+    ] },
+    // Pourquoi mon ex m'a quitte(e) ? Un diagnostic a huit causes
+    // (DIAGNOSTIC_AXES.pourquoiQuitte), vingt questions sans condition.
+    'pourquoi-quitte': { prefix: 'pourquoiQuitte', engine: 'diagnostic', totalQ: 20, pool: 20, quizType: 'pourquoi-quitte' },
     'remettre-ex':    { prefix: 'remettreEx', engine: 'solo', totalQ: 20, pool: 20, quizType: 'remettre-ex',
                         ptsExplicites: true, dansLOrdre: true, paliers: [0, 35, 55, 72, 90],
                         plafonds: [{ q: 1, o: 'e', palier: 1 }, { q: 7, o: 'd', palier: 1 }, { q: 8, o: 'c', palier: 1 },
@@ -2671,6 +2687,17 @@
       { id: 'estime',    color: '#06b6d4' },
       { id: 'priorite',  color: '#84cc16' },
       { id: 'suite',     color: '#f43f5e' }
+    ],
+    // Les huit causes de rupture du test « pourquoi mon ex m'a quitte(e) ».
+    pourquoiQuitte: [
+      { id: 'flamme',      color: '#f97316' },
+      { id: 'eloignement', color: '#64748b' },
+      { id: 'conflits',    color: '#ef4444' },
+      { id: 'projets',     color: '#22c55e' },
+      { id: 'etouffement', color: '#8b5cf6' },
+      { id: 'confiance',   color: '#0ea5e9' },
+      { id: 'autre',       color: '#ec4899' },
+      { id: 'moment',      color: '#eab308' }
     ]
   };
 

@@ -375,6 +375,8 @@
     "testOublierEx": "Test: Wie lange, um über den Ex hinwegzukommen?",
     "testExRevenir": "Test: Kommt mein Ex zurück?",
     "testRemettreEx": "Test: Soll ich zu meinem Ex zurück?",
+    "testOublieSonEx": "Test: Ist er über seine Ex hinweg?",
+    "testPourquoiQuitte": "Test: Warum hat mein Ex Schluss gemacht?",
     "testChargeMentale": "Mental-Load-Test für Paare",
     "quizRencontre": "Fragen fürs erste Date",
     "jeuJamais": "Ich hab noch nie",
@@ -789,6 +791,11 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte für dich, nicht für das, was dein Ex gern hören würde.",
     "disclaimer": "Dieser Test ist ein Werkzeug zum Nachdenken und ersetzt keine professionelle Beratung. Deine Antworten werden nicht gespeichert."
+  },
+  "oublie-son-ex": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte nach dem, was du gesehen oder gehört hast, nicht nach dem, was du dir vorstellst.",
+    "disclaimer": "Der Test misst Anzeichen, er liest nicht die Gedanken deines Partners. Deine Antworten werden nicht gespeichert."
   },
   "est-ce-le-bon": {
     "introQuestion": "Bevor du anfängst:",

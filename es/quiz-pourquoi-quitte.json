@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "badge": "Test después de una ruptura",
+    "title": "¿Por qué me dejó mi ex? El test para entender la ruptura",
+    "titleHighlight": "Por qué me dejó mi ex",
+    "description": "«Ya no siento lo mismo», «necesito espacio», o nada de nada... El motivo que te dieron no siempre es toda la historia. Veinte preguntas sobre los últimos meses de vuestra relación para encontrar <strong>lo que más pesó en la ruptura</strong>, entre las ocho causas más frecuentes.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿Lo que te preguntas es si va a volver?",
+    "text": "Este test busca por qué se acabó. El otro calcula las posibilidades de que vuelva, a partir de cómo os separasteis y de lo que ha pasado después.",
+    "button": "¿Mi ex volverá?"
+  },
+  "section1": {
+    "title": "¿Por qué se deja a alguien?",
+    "p1": "El motivo que da un ex al irse rara vez es toda la historia. «No eres tú, soy yo», «necesito encontrarme»... Esas frases sirven a menudo para irse sin hacer demasiado daño, o sin tener que explicarlo todo.",
+    "p2": "Unos investigadores preguntaron a personas que pensaban dejar a su pareja por qué querían hacerlo, y luego clasificaron todas las respuestas: <strong>encontraron 23 motivos distintos</strong>. Los que más se repetían: una confianza traicionada, rasgos del carácter del otro que se habían vuelto difíciles de soportar y una pareja que se va retirando poco a poco. Y casi una persona de cada dos también tenía motivos para quedarse.",
+    "p3": "Un estudio mucho más antiguo ya había notado algo sencillo. Siguió a 231 parejas de estudiantes de Boston durante dos años, y <strong>las parejas en las que uno se implicaba mucho más que el otro se separaban más a menudo</strong>. Cuando solo uno de los dos sostiene la relación, acaba notándose.",
+    "p4": "Por eso el test solo te pregunta una vez el motivo «oficial». El resto del tiempo mira los últimos meses de vuestra historia, y detecta la causa que más se repite en tus respuestas."
+  },
+  "section2": {
+    "title": "Las ocho causas que detecta el test",
+    "intro": "Son los motivos de ruptura que más se repiten. El test da un porcentaje a cada una, y la más alta se convierte en tu resultado.",
+    "pillar1Title": "La llama se había apagado",
+    "pillar1Text": "Menos deseo, menos sorpresas, la sensación de vivir con un compañero de piso. Es lo que suele haber detrás de un «ya no siento lo mismo».",
+    "pillar2Title": "Os habíais distanciado",
+    "pillar2Text": "Cada uno con su vida, cada uno con su móvil, y cada vez menos cosas que contaros. Nada grave, en apariencia... hasta el día en que uno de los dos se da cuenta.",
+    "pillar3Title": "Las discusiones lo habían desgastado todo",
+    "pillar3Text": "Siempre los mismos reproches, palabras que hieren, a veces desprecio. El psicólogo John Gottman, que observa parejas desde los años setenta, ve en el desprecio la señal más preocupante para una pareja.",
+    "pillar4Title": "No la misma vida, no el mismo ritmo",
+    "pillar4Text": "Uno quería vivir juntos o tener un hijo, el otro daba un paso atrás en cuanto la cosa se ponía seria. O simplemente no queríais la misma vida.",
+    "pillar5Title": "La necesidad de aire",
+    "pillar5Text": "Mensajes a todas horas, celos, la sensación de tener que dar explicaciones. Cuando uno se siente asfixiado, irse se convierte en la única forma de respirar.",
+    "pillar6Title": "La confianza dañada",
+    "pillar6Text": "Mentiras, secretos, una infidelidad, por un lado o por el otro. Una vez rota la confianza, muchas parejas no consiguen recomponerla.",
+    "pillar7Title": "Otra persona",
+    "pillar7Text": "Se dice a menudo que no se deja a alguien por otra persona. En parte es verdad: la nueva persona suele llegar <strong>cuando la pareja ya iba mal</strong>, y el test también mira lo que pasaba antes.",
+    "pillar8Title": "No era el momento",
+    "pillar8Text": "El estrés, los estudios, un trabajo que lo ocupa todo, un duelo, una depresión... A veces tu ex no estaba bien y ya no podía sostener una relación, ni siquiera con alguien a quien quería.",
+    "tip": "El test no busca un culpable. Varias causas suelen venir de los dos, y algunas no vienen de nadie: una mudanza, una enfermedad, una mala época."
+  },
+  "section3": {
+    "title": "Lo que la ruptura no dice de ti",
+    "intro": "Entender por qué se acabó ayuda a pasar página. Siempre que no conviertas el motivo en un veredicto sobre ti.",
+    "sub1Title": "No es necesariamente culpa tuya",
+    "sub1P1": "Incluso cuando el test señala algo que viene de ti, como los celos o la necesidad de que te tranquilicen, <strong>una ruptura rara vez ocurre por culpa de una sola persona</strong>. Y lo que no funcionó con esa persona puede <a href=\"/es/test-preparado-para-una-nueva-relacion/\">funcionar muy bien con otra</a>.",
+    "sub2Title": "«No eres tú, soy yo»",
+    "sub2P1": "Esa frase saca de quicio a todo el mundo, y sin embargo a veces es verdad. Cuando tu ex atravesaba una mala época, la ruptura hablaba sobre todo de esa persona. El test lo detecta con la causa «no era el momento».",
+    "sub3Title": "Entender ayuda a desapegarse",
+    "sub3P1": "Un estudio de 2018 pidió a personas que acababan de vivir una ruptura que <a href=\"/es/cuanto-tiempo-se-tarda-en-olvidar-a-un-ex/\">repensaran los defectos de su ex</a> y lo que no iba bien: <strong>sus sentimientos amorosos bajaban</strong>, aunque su ánimo bajara un poco en el momento. Poner palabras a lo que no iba bien también es una forma de avanzar más rápido."
+  },
+  "section4": {
+    "title": "Cómo encuentra el test la causa",
+    "p1": "Cada respuesta pesa sobre una o dos causas, con 1 a 3 puntos según lo que dice. Una misma causa puede volver en varias preguntas, de formas distintas: el deseo que baja, el aburrimiento, una carta que hablaría de un amor apagado, etc.",
+    "p2": "Al final, cada causa recibe un porcentaje de lo que podía recibir. La más alta se convierte en tu resultado, siempre que supere el 30 %. Si una segunda causa llega casi al mismo nivel, el test la cita justo debajo. Y si ninguna destaca, también te lo dice: <strong>algunas rupturas no tienen un solo motivo</strong>, sino varios pequeños que se suman.",
+    "tip": "El test no lee la mente de tu ex. Detecta, en lo que has vivido, las causas de ruptura que más se repiten entre las parejas que se separan."
+  },
+  "section5": {
+    "title": "¿Y ahora qué?",
+    "p1": "Saber por qué se acabó no cambia la ruptura, pero cambia lo que haces con ella.",
+    "sub1Title": "Si esperas que vuelva",
+    "sub1P1": "Una ruptura que viene de un mal momento o de una distancia que se fue instalando no tiene las mismas posibilidades de arreglarse que una confianza rota o dos proyectos de vida opuestos. Lo que ha pasado desde la ruptura también cuenta mucho.",
+    "sub2Title": "Si quieres pasar página",
+    "sub2P1": "Ten presente tu resultado la próxima vez que idealices vuestra historia. Y si te reconoces en una causa que viene de ti, como la necesidad de que te tranquilicen, es bueno saberlo para lo que venga."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "los motivos de una ruptura amorosa",
+    "faq1Q": "¿Por qué me dejó mi ex si todo iba bien?",
+    "faq1A": "A menudo, todo no iba tan bien por el lado de tu ex. Quien se va suele haber tomado distancia durante meses sin decirlo, y ha hecho parte de su duelo antes de la ruptura. También pasa que el motivo esté fuera de la pareja: una mala época, el estrés, una depresión.",
+    "faq2Q": "Mi ex me dejó por otra persona, ¿es culpa mía?",
+    "faq2A": "No. Quien se va por otra persona toma una decisión, y esa decisión es suya. La mayoría de las veces, la nueva persona llega cuando la pareja ya iba peor, lo que no quiere decir que tú seas responsable.",
+    "faq3Q": "¿Hay que preguntarle al ex por qué se fue?",
+    "faq3A": "Puedes preguntarlo una vez, con calma. Pero no cuentes demasiado con la respuesta: mucha gente da un motivo que duele menos que el real, o ni siquiera lo conoce. Y exigir explicaciones durante semanas sobre todo te impide avanzar.",
+    "faq4Q": "¿Qué significa «no eres tú, soy yo»?",
+    "faq4A": "A veces, que tu ex no quiere hacerte daño con el motivo real. A veces también, que es verdad: alguien que atraviesa una época difícil puede no tener fuerzas para vivir una relación, ni siquiera con una persona a la que quiere.",
+    "faq5Q": "¿Cómo superar una ruptura que no has elegido?",
+    "faq5A": "Toma distancia de tu ex, al menos durante un tiempo: nada de mensajes, nada de mirar sus historias por la noche. Rodéate de gente y date permiso para sufrir. El tiempo necesario varía mucho de una persona a otra, y depende sobre todo de lo que hagas ahora.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador, nadie las ve y no hay nada que crear ni rellenar. Solo la causa obtenida, sin ningún dato personal, sirve para saber cómo se usa el test."
+  }
+}

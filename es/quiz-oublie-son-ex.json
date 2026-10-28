@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "Test para parejas",
+    "title": "¿Ha olvidado a su ex? El test online, para él o para ella",
+    "titleHighlight": "olvidado a su ex",
+    "description": "Todavía habla de ella, guarda sus fotos, ¿o son imaginaciones tuyas? Veinte preguntas sobre lo que tu pareja hace y dice, para saber <strong>si su ex todavía ocupa sitio en su cabeza</strong>. El test tiene dos versiones: para un hombre o para una mujer.",
+    "subtitle": "Veinte preguntas, cinco minutos, gratis y sin registro",
+    "jumpBtn": "Hacer el test"
+  },
+  "crossLink": {
+    "title": "¿Estas preguntas te ocupan mucho la cabeza?",
+    "text": "Este test habla de tu pareja. El otro habla de ti: mide tus celos y lo que dicen de vuestra relación.",
+    "button": "Hacer el test de celos"
+  },
+  "section1": {
+    "title": "¿Cómo saber si ha olvidado a su ex?",
+    "p1": "Casi siempre, la pregunta llega después de un pequeño detalle. Un nombre que vuelve a salir en la conversación, una foto que nunca borró, un mensaje a medianoche que guarda un poco rápido... Y a partir de ahí, ya no ves otra cosa.",
+    "p2": "Tener recuerdos de una historia pasada es normal, todo el mundo los tiene. No haberla olvidado es otra cosa: es cuando <strong>su ex todavía ocupa un lugar en su vida de hoy</strong>, en sus pensamientos, en su humor o en sus mensajes. Ese lugar es lo que el test intenta medir.",
+    "p3": "Las veinte preguntas tratan de lo que hace tu pareja, no de lo que sientes tú. No pesan todas igual: un contacto con su ex que te oculta suma 8 puntos, una canción que evita suma 3. Y todo lo que pone aquí vale igual para una mujer: por eso el test también tiene su versión «¿ha olvidado ella a su ex?»."
+  },
+  "section2": {
+    "title": "Las señales de que no ha olvidado a su ex",
+    "intro": "Esto es lo que más pesa en el test. Una señal sola no dice gran cosa, es cuando se suman cuando la pregunta tiene sentido.",
+    "pillar1Title": "Sigue en contacto, y lo oculta",
+    "pillar1Text": "Seguir en contacto con un ex pasa, por los hijos o por amistad. Lo que debe ponerte en alerta es <strong>el secreto</strong>: un mensaje borrado, el móvil boca abajo en la mesa, una conversación que quita importancia cuando la descubres.",
+    "pillar2Title": "Habla de ella con mucha emoción",
+    "pillar2Text": "Para bien o para mal. La rabia y el rencor también muestran que una historia no está cerrada: alguien que <a href=\"/es/cuanto-tiempo-se-tarda-en-olvidar-a-un-ex/\">ha pasado página</a> habla de su ex sin pasión, como de una etapa de su vida.",
+    "pillar3Title": "Te compara con ella",
+    "pillar3Text": "En la cocina, en las vacaciones, en la forma de vestir... Una comparación de vez en cuando no tiene nada de grave. Si se repite a menudo, es que su ex le sigue sirviendo de referencia.",
+    "pillar4Title": "La nueva vida de ella le afecta",
+    "pillar4Text": "Se entera de que ella sale con alguien y está de mal humor durante días. Es una de las señales que más dicen, y cuenta mucho en el test.",
+    "pillar5Title": "Vigila sus redes",
+    "pillar5Text": "Un estudio publicado en 2012 preguntó a 464 personas después de una ruptura: <strong>cuanto más miraban el perfil de su ex, más sufrían</strong> y menos avanzaban. Echar un vistazo de vez en cuando pasa. Vigilar con regularidad, mucho menos.",
+    "pillar6Title": "No avanza contigo",
+    "pillar6Text": "Nunca habla de planes juntos, retrasa el momento de presentarte a su gente o te dice que no sabe en qué punto está. No tiene por qué venir de su ex, pero junto a otras señales, cuenta.",
+    "tip": "Pensar en un ex no significa seguir queriéndolo. Lo que queda después de una ruptura a veces es orgullo herido, nostalgia o <a href=\"/es/test-sigo-enamorado-de-mi-ex/\">echar de menos la vida en pareja</a> más que a la persona en sí."
+  },
+  "section3": {
+    "title": "Lo que no significa que siga pensando en ella",
+    "intro": "Algunos detalles <a href=\"/es/test-celos-pareja/\">dan celos</a> sin querer decir gran cosa. El test les da pocos puntos, o ninguno.",
+    "sub1Title": "Se ha quedado como amigo de su ex",
+    "sub1P1": "Algunas personas siguen siendo amigas después de una ruptura, sobre todo cuando tienen amigos en común o lo dejaron sin dramas. Si todo pasa a la vista, lo sabes e incluso te invitan, no es una señal. Lo es cuando se oculta.",
+    "sub2Title": "Volvió a tener pareja muy rápido",
+    "sub2P1": "Se dice a menudo que una relación que empieza justo después de una ruptura es por fuerza un parche. Sin embargo, en un estudio estadounidense de 2015 sobre estas relaciones «rebote», <strong>quienes habían encontrado a alguien rápido no estaban peor que los demás</strong>, al contrario. El plazo por sí solo no dice gran cosa.",
+    "sub3Title": "Ha guardado fotos",
+    "sub3P1": "Borrar cada foto no es obligatorio. Recuerdos guardados en una caja o en un disco duro viejo son normales. Fotos enmarcadas, o negarse en redondo a deshacerse de ellas, es otra cosa.",
+    "sub4Title": "Habla de ello cuando le preguntas",
+    "sub4P1": "¿Le preguntas cómo terminó y te responde sin más? Es más bien buena señal. Lo que más dice es el silencio total o, al contrario, el monólogo de una hora."
+  },
+  "section4": {
+    "title": "Lo que dice tu resultado",
+    "p1": "Cada pregunta suma de 0 a 8 puntos, según lo que la respuesta dice del lugar que ocupa su ex. El total va de 0 a 98 puntos.",
+    "p2": "Tres respuestas pesan por sí solas: un contacto con su ex que te oculta, las ganas de volver a verla si se la cruzara y el hecho de decir que le gustaría volver atrás. Con una sola de ellas, <strong>el resultado no puede ser bajo</strong>, aunque todo lo demás vaya bien.",
+    "headerScore": "Puntos",
+    "headerLevel": "Resultado",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0 a 14",
+    "row1Level": "Ha pasado página",
+    "row1Analysis": "Su ex forma parte de su pasado, no de su vida de hoy",
+    "row2Score": "15 a 32",
+    "row2Level": "Recuerdos, nada más",
+    "row2Analysis": "Algún pensamiento de vez en cuando, como todo el mundo",
+    "row3Score": "33 a 52",
+    "row3Level": "Su ex todavía ocupa un poco de sitio",
+    "row3Analysis": "Algo no está del todo resuelto",
+    "row4Score": "53 a 72",
+    "row4Level": "No ha olvidado del todo a su ex",
+    "row4Analysis": "Varias señales se suman, merece una conversación",
+    "row5Score": "73 a 98",
+    "row5Level": "Su ex sigue muy presente",
+    "row5Analysis": "Su ex todavía ocupa mucho sitio en su cabeza",
+    "tip": "El test habla de lo que ves desde fuera. No sustituye una conversación con él, y no lee su mente."
+  },
+  "section5": {
+    "title": "No ha olvidado a su ex: ¿cómo hablarlo?",
+    "p1": "Si el resultado es alto, no lo conviertas en un juicio. El objetivo es entender en qué punto está, no sacarle una confesión.",
+    "sub1Title": "Elegir el momento",
+    "sub1P1": "No en plena discusión, no con su móvil en la mano, no a las dos de la mañana. Un momento tranquilo, en el que tengáis tiempo de hablar sin que se sienta acorralado.",
+    "sub2Title": "Hablar de lo que sientes",
+    "sub2P1": "«Me siento en competición con tu ex cuando hablas tanto de ella» funciona mucho mejor que «todavía piensas en ella». La primera frase abre la conversación, la segunda le acusa, y se defenderá.",
+    "sub3Title": "Mirar también vuestra relación",
+    "sub3P1": "Un estudio de 2013 que siguió durante seis meses a personas con pareja mostró que <strong>funciona en los dos sentidos</strong>: cuando la relación actual va peor, se piensa más en el ex, y al revés, añorar al último ex baja la calidad de la relación. Si la confianza se ha resentido entre vosotros, quizá haya que empezar por ahí.",
+    "sub3P2": "Y si el test sale bajo pero la duda no se va, pregúntate si no se tratará de unos celos que no se apoyan en nada concreto. Pasa mucho más de lo que se cree, ¡y se puede trabajar!"
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que te haces"
+  },
+  "jsonLd": {
+    "about": "el ex de tu pareja",
+    "faq1Q": "¿Cómo saber si mi novio sigue pensando en su ex?",
+    "faq1A": "Fíjate en lo que hace más que en lo que dice: un contacto que oculta, un humor que cambia cuando tiene noticias de ella, comparaciones que se repiten, redes que vigila. Una señal sola no demuestra nada, es cuando se suman varias cuando hay una pregunta real que hacerse.",
+    "faq2Q": "¿Es normal que mi novio hable de su ex?",
+    "faq2A": "Sí, de vez en cuando. Una historia que importó forma parte de su vida, y es normal que salga en una conversación. Lo que cuenta es la frecuencia y el tono: hablar de ello a menudo, con mucha rabia o mucha nostalgia, muestra que todavía ocupa sitio.",
+    "faq3Q": "Se ha quedado como amigo de su ex, ¿debo preocuparme?",
+    "faq3A": "No necesariamente. Mucha gente sigue en buenos términos después de una ruptura, sobre todo con amigos en común o con hijos. La señal de alarma es el secreto: mensajes ocultos, citas de las que no sabes nada.",
+    "faq4Q": "¿Cuánto tiempo se tarda en olvidar a un ex?",
+    "faq4A": "Mucho más de lo que se cree: según un estudio de la Universidad de Illinois publicado en 2025, hacen falta de media unos cuatro años para desapegarse a medias de un ex, después de una relación de al menos dos años. Lo que más frena el desapego es el contacto que se mantiene con el ex. Y seguir pensando en un ex no impide estar bien en una nueva pareja.",
+    "faq5Q": "¿Hay que preguntarle si ha olvidado a su ex?",
+    "faq5A": "Puedes, pero plantéalo desde lo que sientes: «a veces me siento en competición con ella». Una pregunta directa del tipo «¿todavía la quieres?» le pone a la defensiva, y rara vez tendrás una respuesta sincera.",
+    "faq6Q": "¿Se guardan mis respuestas?",
+    "faq6A": "No. Tus respuestas se quedan en tu navegador, nadie las ve y no hay nada que crear ni rellenar."
+  }
+}

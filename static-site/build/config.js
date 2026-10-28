@@ -88,6 +88,9 @@ export const ROUTE_SLUGS = {
   // Lot 2 : les chances d'un retour, puis la question de s'y remettre.
   testExRevenir: { fr: 'test-mon-ex-va-t-il-revenir', en: 'will-my-ex-come-back-quiz', es: 'test-mi-ex-volvera', de: 'kommt-mein-ex-zurueck-test', it: 'test-il-mio-ex-tornera' },
   testRemettreEx: { fr: 'dois-je-me-remettre-avec-mon-ex', en: 'should-i-get-back-with-my-ex-quiz', es: 'test-debo-volver-con-mi-ex', de: 'soll-ich-zu-meinem-ex-zurueck-test', it: 'test-devo-tornare-con-il-mio-ex' },
+  // Lot 3 : l'ex de son partenaire (tests de couple), puis pourquoi c'est fini.
+  testOublieSonEx: { fr: 'test-a-t-il-oublie-son-ex', en: 'is-he-over-his-ex-quiz', es: 'test-ha-olvidado-a-su-ex', de: 'ist-er-ueber-seine-ex-hinweg-test', it: 'test-ha-dimenticato-la-sua-ex' },
+  testPourquoiQuitte: { fr: 'pourquoi-mon-ex-m-a-quitte', en: 'why-did-my-ex-break-up-with-me-quiz', es: 'test-por-que-me-dejo-mi-ex', de: 'warum-hat-mein-ex-schluss-gemacht-test', it: 'test-perche-il-mio-ex-mi-ha-lasciato' },
   testAimeEncore: { fr: 'test-m-aime-t-il-encore', en: 'does-he-she-still-love-me-test', es: 'test-me-sigue-queriendo', de: 'liebt-er-sie-mich-noch-test', it: 'mi-ama-ancora-test' },
   testEmprise: { fr: 'test-emprise-psychologique', en: 'coercive-control-test', es: 'test-manipulacion-psicologica-pareja', de: 'psychische-kontrolle-beziehung-test', it: 'test-manipolazione-psicologica-coppia' },
   testTrouverAmour: { fr: 'test-pourquoi-je-ne-trouve-pas-l-amour', en: 'why-cant-i-find-love-test', es: 'test-por-que-no-encuentro-el-amor', de: 'warum-finde-ich-keine-liebe-test', it: 'test-perche-non-trovo-l-amore' },
@@ -209,6 +212,8 @@ export const QUIZ_FEATURED = {
   testOublierEx:     { file: 'footprints-tide',          old: null,                  alt: { fr: "Des traces de pas sur une plage au soleil couchant, que la marée montante commence à effacer", en: 'Footprints on a beach at sunset, slowly being washed away by the rising tide', es: 'Huellas de pasos en una playa al atardecer, que la marea empieza a borrar', de: 'Fußspuren an einem Strand bei Sonnenuntergang, die die steigende Flut langsam verwischt', it: 'Impronte di passi su una spiaggia al tramonto, che la marea sta cominciando a cancellare' } },
   testExRevenir:     { file: 'ex-door-ajar',             old: null,                  alt: { fr: "La porte d'entrée d'une maison restée entrouverte à la tombée de la nuit, une lumière chaude passe par l'entrebâillement", en: 'A front door left ajar at dusk, with warm light spilling out through the gap', es: 'La puerta de una casa entreabierta al anochecer, con una luz cálida que se cuela por la rendija', de: 'Eine Haustür, die in der Abenddämmerung einen Spalt offen steht, warmes Licht fällt nach draußen', it: 'La porta di casa socchiusa al tramonto, con una luce calda che filtra dallo spiraglio' } },
   testRemettreEx:    { file: 'kintsugi-vase',            old: null,                  alt: { fr: "Un vase en céramique cassé puis réparé à l'or, selon la technique japonaise du kintsugi, posé près d'une fenêtre", en: 'A ceramic vase that was broken and mended with gold using the Japanese kintsugi technique, standing by a window', es: 'Un jarrón de cerámica roto y reparado con oro, con la técnica japonesa del kintsugi, junto a una ventana', de: 'Eine zerbrochene Keramikvase, mit Gold repariert nach der japanischen Kintsugi-Technik, am Fenster', it: "Un vaso di ceramica rotto e riparato con l'oro, secondo la tecnica giapponese del kintsugi, vicino a una finestra" } },
+  testOublieSonEx:   { file: 'ex-keepsake-box',          old: null,                  alt: { fr: "Une vieille boîte à chaussures sortie de sous un lit, avec des lettres nouées, une rose séchée et des photos retournées", en: 'An old shoebox pulled out from under a bed, with tied-up letters, a dried rose and photos turned face down', es: 'Una vieja caja de zapatos sacada de debajo de la cama, con cartas atadas, una rosa seca y fotos boca abajo', de: 'Ein alter Schuhkarton, unter dem Bett hervorgezogen, mit zusammengebundenen Briefen, einer getrockneten Rose und umgedrehten Fotos', it: "Una vecchia scatola da scarpe tirata fuori da sotto il letto, con lettere legate, una rosa secca e foto girate al contrario" } },
+  testPourquoiQuitte: { file: 'keys-left-behind',        old: null,                  alt: { fr: "Un trousseau de clés et un mot plié laissés sur une console dans l'entrée, sous une patère vide", en: 'A set of keys and a folded note left on a console table in the entryway, under an empty coat hook', es: 'Un llavero y una nota doblada dejados sobre una consola en la entrada, bajo un perchero vacío', de: 'Ein Schlüsselbund und ein gefalteter Zettel auf einer Kommode im Flur, unter einem leeren Garderobenhaken', it: "Un mazzo di chiavi e un biglietto piegato lasciati su una consolle all'ingresso, sotto un appendiabiti vuoto" } },
   testAimeEncore:     { file: 'two-pillows-one-untouched',   old: null,                  alt: { fr: "Un lit vu de dessus avec deux oreillers : l'un froissé, le drap rabattu, l'autre parfaitement lisse et intact", en: "A bed seen from above with two pillows: one crumpled with the sheet turned back, the other perfectly smooth and untouched", es: "Una cama vista desde arriba con dos almohadas: una arrugada con la sábana retirada, la otra perfectamente lisa e intacta", de: "Ein Bett von oben mit zwei Kissen: eines zerknittert mit zurückgeschlagenem Laken, das andere vollkommen glatt und unberührt", it: "Un letto visto dall'alto con due cuscini: uno spiegazzato con il lenzuolo ripiegato, l'altro perfettamente liscio e intatto" } },
   testEmprise:       { file: 'open-birdcage-window',        old: null,                  alt: { fr: "Une cage à oiseaux vide, la porte grande ouverte, posée sur le rebord d'une fenêtre avec quelques plumes", en: 'An empty birdcage with its door wide open on a windowsill, a few feathers left behind', es: 'Una jaula de pájaros vacía con la puerta abierta de par en par en el alféizar de una ventana, con algunas plumas', de: 'Ein leerer Vogelkäfig mit weit offener Tür auf einer Fensterbank, ein paar Federn liegen daneben', it: 'Una gabbia per uccelli vuota con la porta spalancata sul davanzale di una finestra, con qualche piuma' } },
   testTrouverAmour:   { file: 'compass-heart-map',           old: null,                  alt: { fr: "Une boussole en laiton ouverte sur une nappe en lin, l'aiguille remplacée par un petit cœur rose, à côté d'une carte pliée et d'un brin de lavande", en: "An open brass compass on a linen tablecloth, its needle replaced by a small pink heart, next to a folded map and a sprig of lavender", es: "Una brújula de latón abierta sobre un mantel de lino, con la aguja sustituida por un pequeño corazón rosa, junto a un mapa doblado y una ramita de lavanda", de: "Ein geöffneter Messingkompass auf einer Leinentischdecke, die Nadel durch ein kleines rosa Herz ersetzt, neben einer gefalteten Karte und einem Lavendelzweig", it: "Una bussola di ottone aperta su una tovaglia di lino, con l'ago sostituito da un piccolo cuore rosa, accanto a una mappa piegata e a un rametto di lavanda" } },
@@ -315,6 +320,8 @@ export const ROUTE_CONFIG = {
   testOublierEx: { template: 'quiz-oublier-ex', namespaces: ['quiz-oublier-ex', 'quizzes', 'quizGames', 'gd', 'common'] },
   testExRevenir: { template: 'quiz-ex-revenir', namespaces: ['quiz-ex-revenir', 'quizzes', 'quizGames', 'gd', 'common'] },
   testRemettreEx: { template: 'quiz-remettre-ex', namespaces: ['quiz-remettre-ex', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testOublieSonEx: { template: 'quiz-oublie-son-ex', namespaces: ['quiz-oublie-son-ex', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testPourquoiQuitte: { template: 'quiz-pourquoi-quitte', namespaces: ['quiz-pourquoi-quitte', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAimeEncore: { template: 'quiz-aime-encore', namespaces: ['quiz-aime-encore', 'quizzes', 'quizGames', 'gd', 'common'] },
   testEmprise: { template: 'quiz-emprise', namespaces: ['quiz-emprise', 'quizzes', 'quizGames', 'gd', 'common'] },
   testTrouverAmour: { template: 'quiz-trouver-amour', namespaces: ['quiz-trouver-amour', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -420,6 +427,7 @@ export const BILAN_ENTREES = {
   // rien depuis l'emprise, la manipulation et l'infidélité.
   testToxic: { groupe: 'doute', id: 'toxique' },
   testRedFlag: { groupe: 'doute', id: 'red-flag' },
+  testOublieSonEx: { groupe: 'doute', id: 'oublie-son-ex' },
   testJalousie: { groupe: 'doute', id: 'jalousie' },
   testAmourAttachement: { groupe: 'doute', id: 'amour-attachement' },
   testAimeEncore: { groupe: 'doute', id: 'aime-encore' },
@@ -558,13 +566,13 @@ export const FAMILLES_NAV = {
     'testAstroPrenoms', 'testDateNaissance', 'testSignesChinois',
     'testJalousie', 'testLangageAmour', 'testPersonnalite', 'testAttachement',
     'testConfiance', 'testDependance', 'testAmeSoeur', 'testKarmique',
-    'testInfidelite', 'testCouche', 'testAimeEncore', 'testDistanceAime',
+    'testInfidelite', 'testCouche', 'testAimeEncore', 'testOublieSonEx', 'testDistanceAime',
     'testChargeMentale', 'testPurete', 'testVacances',
   ],
   celib: [
     'testTrouverAmour', 'testCelibataire', 'testDureeCelibat', 'testCoupleOuCelibat',
     'testPretRelation', 'testSuisJeAmoureux', 'testCrush', 'testAmourAmitie',
-    'testAmourAmi', 'testSecret', 'testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir', 'testRemettreEx',
+    'testAmourAmi', 'testSecret', 'testEx', 'testEncoreAmoureuxEx', 'testOublierEx', 'testExRevenir', 'testRemettreEx', 'testPourquoiQuitte',
   ],
   quiz: [
     'quizAmoureux', 'quizTypeCouple', 'quizRencontre', 'quizCoquin',
@@ -1748,6 +1756,8 @@ export const QUIZ_RELATED_ARTICLES = {
   testOublierEx:    ['les-phases-de-la-rupture-chez-l-homme', 'sortir-de-la-dependance-affective', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'attachement-anxieux'],
   testExRevenir:    ['les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'amour-ou-dependance-affective', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
   testRemettreEx:   ['amour-ou-dependance-affective', 'red-flags-homme', 'red-flags-femme', 'les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture'],
+  testOublieSonEx:  ['jalousie-maladive', 'relation-toxique-signes', 'red-flags-homme', 'red-flags-femme', 'amour-ou-dependance-affective'],
+  testPourquoiQuitte: ['les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'disputes-couple', 'sortir-de-la-dependance-affective', 'attachement-anxieux'],
   testChargeMentale:['charge-mentale-couple', 'disputes-couple', 'manque-communication-couple'],
   // Les deux tests du doute et de l'emprise : les articles qui parlent des
   // sentiments qui s'effacent et de ce qu'on ne doit pas accepter.

@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "Quiz for couples",
+    "title": "Is he over his ex? The online quiz, for him or for her",
+    "titleHighlight": "over his ex",
+    "description": "He still talks about her, he kept the photos, or is it just in your head? Twenty questions about what your partner does and says, to find out <strong>whether their ex still takes up space in their mind</strong>. The quiz comes in two versions: one for a man, one for a woman.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the quiz"
+  },
+  "crossLink": {
+    "title": "Do these questions take up a lot of your headspace?",
+    "text": "This quiz is about your partner. The other one is about you: it measures your jealousy, and what it says about your relationship.",
+    "button": "Take the jealousy test"
+  },
+  "section1": {
+    "title": "How do you know if he's over his ex?",
+    "p1": "Most of the time, the question comes up after a small detail. A name that keeps popping up in conversation, a photo he never deleted, a text at midnight that he puts away a bit too quickly... And from then on, it's all you can see.",
+    "p2": "Having memories of a past relationship is normal, everyone has them. Not being over it is something else: it's when <strong>his ex still has a place in his life today</strong>, in his thoughts, his moods or his messages. That's the place the quiz tries to measure.",
+    "p3": "The twenty questions are about what your partner does, not about what you feel. They don't all weigh the same: contact with his ex that he hides from you scores 8 points, a song he avoids scores 3. And everything written here works the same way for a woman, which is why the quiz also has an \"is she over her ex\" version."
+  },
+  "section2": {
+    "title": "Signs he's not over his ex",
+    "intro": "Here's what weighs the most in the quiz. One sign on its own doesn't mean much, it's when they add up that the question is worth asking.",
+    "pillar1Title": "He's still in touch, and he hides it",
+    "pillar1Text": "Staying in touch with an ex happens, for the kids or as friends. What should worry you is <strong>the secrecy</strong>: a deleted message, a phone turned face down on the table, a conversation he plays down when you find out about it.",
+    "pillar2Title": "He talks about her with a lot of emotion",
+    "pillar2Text": "Good or bad. Anger and resentment also show that a relationship isn't settled: someone who <a href=\"/en/how-long-to-get-over-an-ex-test/\">has moved on</a> talks about their ex without much feeling, like a chapter of their life.",
+    "pillar3Title": "He compares you to her",
+    "pillar3Text": "Cooking, vacations, the way you dress... A comparison now and then is no big deal. If it keeps coming back, his ex is still his point of reference.",
+    "pillar4Title": "Her new life gets to him",
+    "pillar4Text": "He finds out she's seeing someone, and he's in a bad mood for days. It's one of the most telling signs, and it counts a lot in the quiz.",
+    "pillar5Title": "He keeps an eye on her social media",
+    "pillar5Text": "A study published in 2012 surveyed 464 people after a breakup: <strong>the more they checked their ex's profile, the more they suffered</strong> and the less they moved forward. A quick look now and then happens. Regular monitoring, much less so.",
+    "pillar6Title": "He's not moving forward with you",
+    "pillar6Text": "He never talks about plans together, he keeps putting off introducing you to the people close to him, or he tells you he doesn't know where he stands. It doesn't necessarily come from his ex, but alongside other signs, it counts.",
+    "tip": "Thinking about an ex doesn't mean still loving them. What's left after a breakup is sometimes a bruised ego, nostalgia, or <a href=\"/en/am-i-still-in-love-with-my-ex-quiz/\">missing life as a couple</a> more than the person themselves."
+  },
+  "section3": {
+    "title": "What doesn't mean he's still thinking about her",
+    "intro": "Some details <a href=\"/en/jealousy-test-couple/\">make you jealous</a> without meaning much. The quiz gives them few points, or none at all.",
+    "sub1Title": "He stayed friends with his ex",
+    "sub1P1": "Some people stay friends after a breakup, especially when they have friends in common or split up without drama. If it all happens out in the open, you know about it and you're even invited, it's not a sign. It becomes one when it's hidden.",
+    "sub2Title": "He got into a relationship very quickly",
+    "sub2P1": "People often say a relationship that starts right after a breakup is bound to be a rebound. Yet in a 2015 US study on these \"rebound\" relationships, <strong>people who had found someone quickly weren't doing any worse than the others</strong>, quite the opposite. The timing alone doesn't say much.",
+    "sub3Title": "He kept some photos",
+    "sub3P1": "Deleting every photo isn't mandatory. Memories stored in a box or on an old hard drive are normal. Framed photos, or a flat refusal to part with them, are something else.",
+    "sub4Title": "He talks about it when you ask",
+    "sub4P1": "You ask him how it ended and he just answers? That's rather a good sign. Total silence, or on the contrary an hour-long monologue, says the most."
+  },
+  "section4": {
+    "title": "What your result means",
+    "p1": "Each question scores 0 to 8 points, depending on what the answer says about his ex's place. The total goes from 0 to 98 points.",
+    "p2": "Three answers carry weight on their own: contact with his ex that he hides from you, wanting to see her again if he ran into her, and saying out loud that he'd like to go back. With any one of them, <strong>the result can't be low</strong>, even if everything else is fine.",
+    "headerScore": "Points",
+    "headerLevel": "Result",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 14",
+    "row1Level": "He has moved on",
+    "row1Analysis": "His ex is part of his past, not his life today",
+    "row2Score": "15 to 32",
+    "row2Level": "Memories, nothing more",
+    "row2Analysis": "A few thoughts now and then, like everyone",
+    "row3Score": "33 to 52",
+    "row3Level": "His ex still takes up some space",
+    "row3Analysis": "Something isn't quite settled",
+    "row4Score": "53 to 72",
+    "row4Level": "He's not quite over his ex",
+    "row4Analysis": "Several signs add up, it's worth a conversation",
+    "row5Score": "73 to 98",
+    "row5Level": "His ex is still very much on his mind",
+    "row5Analysis": "His ex still takes up a lot of room in his head",
+    "tip": "The quiz is about what you can see from the outside. It doesn't replace a conversation with him, and it can't read his mind."
+  },
+  "section5": {
+    "title": "He's not over his ex: how do you bring it up?",
+    "p1": "If the result is high, don't turn it into a trial. The goal is to understand where he's at, not to drag a confession out of him.",
+    "sub1Title": "Pick the right moment",
+    "sub1P1": "Not in the middle of an argument, not with his phone in your hand, not at two in the morning. A calm moment, when you have time to talk without him feeling cornered.",
+    "sub2Title": "Talk about how you feel",
+    "sub2P1": "\"I feel like I'm competing with your ex when you talk about her so much\" lands a lot better than \"you're still thinking about her\". The first sentence opens a conversation, the second one accuses him, and he'll get defensive.",
+    "sub3Title": "Look at your own relationship too",
+    "sub3P1": "A 2013 study that followed people in relationships for six months found that <strong>it works both ways</strong>: when the current relationship is going less well, people think about their ex more, and in turn, longing for your most recent ex lowers the quality of the relationship. If trust has taken a hit between you, that may be the place to start.",
+    "sub3P2": "And if the quiz comes out low but the doubt won't leave you, ask yourself whether it might be jealousy that isn't based on anything specific. It happens a lot more often than people think, and it's something you can work on!"
+  },
+  "seo": {
+    "faqTitle": "Questions people ask"
+  },
+  "jsonLd": {
+    "about": "a partner's ex",
+    "faq1Q": "How do I know if my boyfriend is still thinking about his ex?",
+    "faq1A": "Look at what he does more than what he says: contact he hides, a mood that changes when he hears news about her, comparisons that keep coming back, social media he keeps an eye on. One sign proves nothing, it's when several add up that there's a real question to ask.",
+    "faq2Q": "Is it normal for my boyfriend to talk about his ex?",
+    "faq2A": "Yes, now and then. A relationship that mattered is part of his life, and it's normal for it to come up in conversation. What counts is how often and the tone: talking about it a lot, with a lot of anger or a lot of nostalgia, shows it still takes up space.",
+    "faq3Q": "He stayed friends with his ex, should I be worried?",
+    "faq3A": "Not necessarily. Plenty of people stay on good terms after a breakup, especially with friends in common or kids. The warning sign is secrecy: hidden messages, meetups you don't know about.",
+    "faq4Q": "How long does it take to get over an ex?",
+    "faq4A": "Much longer than people think: according to a University of Illinois study published in 2025, it takes around four years on average to be halfway detached from an ex, after a relationship of at least two years. What slows detachment down the most is the contact you keep with your ex. And still having thoughts about an ex doesn't stop anyone from being happy in a new relationship.",
+    "faq5Q": "Should I ask him if he's over his ex?",
+    "faq5A": "You can, but frame it around how you feel: \"I sometimes feel like I'm competing with her.\" A direct question like \"do you still love her?\" puts him on the defensive, and you'll rarely get an honest answer.",
+    "faq6Q": "Are my answers saved?",
+    "faq6A": "No. Your answers stay in your browser, nobody sees them, and there's nothing to sign up for."
+  }
+}

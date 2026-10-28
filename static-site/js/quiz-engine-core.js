@@ -2370,6 +2370,8 @@ var QuizEngine = (function() {
     { type: 'test', key: 'oublier-ex', icon: '🌊', route: 'testOublierEx' },
     { type: 'test', key: 'ex-revenir', icon: '🚪', route: 'testExRevenir' },
     { type: 'test', key: 'remettre-ex', icon: '🧩', route: 'testRemettreEx' },
+    { type: 'test', key: 'oublie-son-ex', icon: '💭', route: 'testOublieSonEx' },
+    { type: 'test', key: 'pourquoi-quitte', icon: '🔑', route: 'testPourquoiQuitte' },
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
@@ -2503,6 +2505,10 @@ var QuizEngine = (function() {
     // l'inverse ; chacune propose aussi le temps qu'il faudra pour oublier.
     'ex-revenir':         ['testRemettreEx', 'testEx', 'testOublierEx'],
     'remettre-ex':        ['testExRevenir', 'testEncoreAmoureuxEx', 'testRedFlag'],
+    // L'ex de son partenaire appelle la jalousie et la confiance ; pourquoi
+    // c'est fini appelle les chances d'un retour et le temps pour oublier.
+    'oublie-son-ex':      ['testJalousie', 'testConfiance', 'testAimeEncore'],
+    'pourquoi-quitte':    ['testExRevenir', 'testOublierEx', 'testEncoreAmoureuxEx'],
     // Savoir si c'est la bonne personne appelle la solidite du couple, puis
     // ce qui reste de l'amour, puis la question de la fin.
     'est-ce-le-bon': ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple'],
@@ -3057,6 +3063,8 @@ var QuizEngine = (function() {
     'encore-amoureux-ex': ['dependance'],
     'oublier-ex': ['dependance'],
     'ex-revenir': ['dependance'],
+    'pourquoi-quitte': ['dependance'],
+    'oublie-son-ex': ['jalousie'],
     // Aucun produit sur « dois-je me remettre avec mon ex » : son premier verdict
     // parle de peur et de violence, un livre en dessous n'y a pas sa place.
     'est-ce-le-bon': ['autotherapie'],

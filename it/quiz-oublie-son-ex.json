@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "Test per coppie",
+    "title": "Ha dimenticato la sua ex? Il test online, per lui o per lei",
+    "titleHighlight": "dimenticato la sua ex",
+    "description": "Parla ancora di lei, tiene le sue foto, o è solo la tua immaginazione? Venti domande su quello che fa e dice il tuo partner, per capire <strong>se la sua ex occupa ancora spazio nella sua testa</strong>. Il test esiste in due versioni: per un uomo o per una donna.",
+    "subtitle": "Venti domande, cinque minuti, gratis e senza registrazione",
+    "jumpBtn": "Fai il test"
+  },
+  "crossLink": {
+    "title": "Queste domande ti occupano tanto la testa?",
+    "text": "Questo test parla del tuo partner. L'altro parla di te: misura la tua gelosia e quello che dice della vostra relazione.",
+    "button": "Fai il test della gelosia"
+  },
+  "section1": {
+    "title": "Come capire se ha dimenticato la sua ex?",
+    "p1": "Il più delle volte, la domanda arriva dopo un piccolo dettaglio. Un nome che torna nei discorsi, una foto che non ha mai cancellato, un messaggio a mezzanotte che mette via un po' troppo in fretta... E da lì in poi, non vedi altro.",
+    "p2": "Avere ricordi di una storia passata è normale, ce li hanno tutti. Non averla dimenticata è un'altra cosa: è quando <strong>la sua ex occupa ancora un posto nella sua vita di oggi</strong>, nei suoi pensieri, nei suoi umori o nei suoi messaggi. È questo posto che il test cerca di misurare.",
+    "p3": "Le venti domande riguardano quello che fa il tuo partner, non quello che provi tu. Non pesano tutte allo stesso modo: un contatto con la sua ex che ti nasconde vale 8 punti, una canzone che evita ne vale 3. E tutto quello che c'è scritto qui vale allo stesso modo per una donna: per questo il test ha anche la sua versione «ha dimenticato il suo ex?»."
+  },
+  "section2": {
+    "title": "I segnali che non ha dimenticato la sua ex",
+    "intro": "Ecco cosa pesa di più nel test. Un segnale da solo non dice granché, è quando si sommano che la domanda ha senso.",
+    "pillar1Title": "È ancora in contatto, e lo nasconde",
+    "pillar1Text": "Restare in contatto con un ex capita, per i figli o per amicizia. Quello che deve metterti in allerta è <strong>il segreto</strong>: un messaggio cancellato, il telefono girato a faccia in giù sul tavolo, una conversazione che minimizza quando la scopri.",
+    "pillar2Title": "Parla di lei con molta emozione",
+    "pillar2Text": "Nel bene e nel male. Anche la rabbia e il rancore mostrano che una storia non è chiusa: chi <a href=\"/it/quanto-tempo-ci-vuole-per-dimenticare-un-ex/\">ha voltato pagina</a> parla della sua ex senza passione, come di una tappa della sua vita.",
+    "pillar3Title": "Ti paragona a lei",
+    "pillar3Text": "In cucina, in vacanza, nel modo di vestire... Un paragone ogni tanto non ha niente di grave. Se torna spesso, vuol dire che la sua ex gli fa ancora da riferimento.",
+    "pillar4Title": "La nuova vita di lei lo tocca",
+    "pillar4Text": "Viene a sapere che lei esce con qualcuno ed è di cattivo umore per giorni. È uno dei segnali più eloquenti, e conta molto nel test.",
+    "pillar5Title": "Tiene d'occhio i suoi social",
+    "pillar5Text": "Uno studio pubblicato nel 2012 ha interrogato 464 persone dopo una rottura: <strong>più guardavano il profilo del loro ex, più soffrivano</strong> e meno andavano avanti. Un'occhiata ogni tanto capita. Un controllo regolare, molto meno.",
+    "pillar6Title": "Con te non va avanti",
+    "pillar6Text": "Non parla mai di progetti insieme, rimanda il momento di presentarti ai suoi, o ti dice che non sa a che punto è. Non dipende per forza dalla sua ex, ma insieme ad altri segnali conta.",
+    "tip": "Pensare a un ex non vuol dire amarlo ancora. Quello che resta dopo una rottura a volte è l'orgoglio ferito, la nostalgia o <a href=\"/it/test-sono-ancora-innamorato-del-mio-ex/\">la mancanza della vita di coppia</a> più che della persona in sé."
+  },
+  "section3": {
+    "title": "Quello che non vuol dire che pensi ancora a lei",
+    "intro": "Certi dettagli <a href=\"/it/test-gelosia-coppia/\">fanno ingelosire</a> senza voler dire granché. Il test dà loro pochi punti, o nessuno.",
+    "sub1Title": "È rimasto amico della sua ex",
+    "sub1P1": "Alcune persone restano amiche dopo una rottura, soprattutto quando hanno amici in comune o si sono lasciate senza drammi. Se tutto succede alla luce del sole, lo sai e magari ti invitano pure, non è un segnale. Lo diventa quando lo si nasconde.",
+    "sub2Title": "Si è rimesso con qualcuno molto in fretta",
+    "sub2P1": "Si sente spesso dire che una storia cominciata subito dopo una rottura è per forza un cerotto. Eppure, in uno studio americano del 2015 su queste relazioni «di rimbalzo», <strong>chi aveva ritrovato qualcuno in fretta non stava peggio degli altri</strong>, anzi. Il tempo da solo non dice granché.",
+    "sub3Title": "Ha tenuto delle foto",
+    "sub3P1": "Cancellare ogni foto non è un obbligo. Ricordi messi in una scatola o su un vecchio hard disk sono normali. Foto incorniciate, o un no netto all'idea di separarsene, sono un'altra cosa.",
+    "sub4Title": "Ne parla quando glielo chiedi",
+    "sub4P1": "Gli chiedi com'è finita e ti risponde con semplicità? È piuttosto un buon segno. A dire di più sono il silenzio totale o, al contrario, il monologo di un'ora."
+  },
+  "section4": {
+    "title": "Cosa dice il tuo risultato",
+    "p1": "Ogni domanda vale da 0 a 8 punti, a seconda di quello che la risposta dice del posto della sua ex. Il totale va da 0 a 98 punti.",
+    "p2": "Tre risposte pesano da sole: un contatto con la sua ex che ti nasconde, la voglia di rivederla se la incontrasse per caso, e il fatto di dire che vorrebbe tornare indietro. Con una sola di queste, <strong>il risultato non può essere basso</strong>, anche se tutto il resto va bene.",
+    "headerScore": "Punti",
+    "headerLevel": "Risultato",
+    "headerAnalysis": "Cosa significa",
+    "row1Score": "da 0 a 14",
+    "row1Level": "Ha voltato pagina",
+    "row1Analysis": "La sua ex fa parte del suo passato, non della sua vita di oggi",
+    "row2Score": "da 15 a 32",
+    "row2Level": "Ricordi, niente di più",
+    "row2Analysis": "Qualche pensiero ogni tanto, come tutti",
+    "row3Score": "da 33 a 52",
+    "row3Level": "La sua ex occupa ancora un po' di spazio",
+    "row3Analysis": "Qualcosa non è del tutto risolto",
+    "row4Score": "da 53 a 72",
+    "row4Level": "Non ha dimenticato del tutto la sua ex",
+    "row4Analysis": "Più segnali si sommano, vale la pena parlarne",
+    "row5Score": "da 73 a 98",
+    "row5Level": "La sua ex è ancora molto presente",
+    "row5Analysis": "La sua ex occupa ancora molto spazio nella sua testa",
+    "tip": "Il test parla di quello che vedi da fuori. Non sostituisce una conversazione con lui, e non legge nel pensiero."
+  },
+  "section5": {
+    "title": "Non ha dimenticato la sua ex: come parlargliene?",
+    "p1": "Se il risultato è alto, non farne un processo. Lo scopo è capire a che punto è, non strappargli una confessione.",
+    "sub1Title": "Scegliere il momento giusto",
+    "sub1P1": "Non nel mezzo di un litigio, non con il suo telefono in mano, non alle due di notte. Un momento tranquillo, in cui avete il tempo di parlarne senza che si senta messo all'angolo.",
+    "sub2Title": "Parlare di quello che provi",
+    "sub2P1": "«Mi sento in competizione con la tua ex quando ne parli così tanto» passa molto meglio di «pensi ancora a lei». La prima frase apre la conversazione, la seconda lo accusa, e si difenderà.",
+    "sub3Title": "Guardare anche la vostra coppia",
+    "sub3P1": "Uno studio del 2013 che ha seguito per sei mesi persone in coppia ha mostrato che <strong>funziona in tutti e due i sensi</strong>: quando la relazione attuale va peggio, si pensa di più all'ex, e al contrario, rimpiangere l'ultimo ex abbassa la qualità della coppia. Se la fiducia tra voi ha preso un colpo, forse è da lì che bisogna cominciare.",
+    "sub3P2": "E se il test esce basso ma il dubbio non ti lascia, chiediti se non si tratti di una gelosia che non si basa su niente di preciso. Succede molto più spesso di quanto si pensi, e ci si può lavorare!"
+  },
+  "seo": {
+    "faqTitle": "Le domande che ti fai"
+  },
+  "jsonLd": {
+    "about": "l'ex del proprio partner",
+    "faq1Q": "Come capire se il mio ragazzo pensa ancora alla sua ex?",
+    "faq1A": "Guarda quello che fa più di quello che dice: un contatto che nasconde, un umore che cambia quando ha notizie di lei, paragoni che tornano spesso, social che tiene d'occhio. Un segnale da solo non prova niente, è quando se ne sommano diversi che c'è una vera domanda da farsi.",
+    "faq2Q": "È normale che il mio ragazzo parli della sua ex?",
+    "faq2A": "Sì, ogni tanto. Una storia che ha contato fa parte della sua vita, ed è normale che torni in una conversazione. Quello che conta è la frequenza e il tono: parlarne spesso, con molta rabbia o molta nostalgia, mostra che occupa ancora spazio.",
+    "faq3Q": "È rimasto amico della sua ex, devo preoccuparmi?",
+    "faq3A": "Non per forza. Molte persone restano in buoni rapporti dopo una rottura, soprattutto con amici in comune o con dei figli. Il segnale d'allarme è il segreto: messaggi nascosti, incontri di cui non sai niente.",
+    "faq4Q": "Quanto tempo ci vuole per dimenticare un ex?",
+    "faq4A": "Molto più di quanto si pensi: secondo uno studio dell'Università dell'Illinois pubblicato nel 2025, ci vogliono in media circa quattro anni per staccarsi a metà da un ex, dopo una storia di almeno due anni. Quello che frena di più il distacco è il contatto che si mantiene con l'ex. E pensare ancora a un ex non impedisce di stare bene in una nuova coppia.",
+    "faq5Q": "Bisogna chiedergli se ha dimenticato la sua ex?",
+    "faq5A": "Puoi farlo, ma parti da quello che provi: «a volte mi sento in competizione con lei». Una domanda diretta come «la ami ancora?» lo mette sulla difensiva, e raramente avrai una risposta sincera.",
+    "faq6Q": "Le mie risposte vengono salvate?",
+    "faq6A": "No. Le tue risposte restano nel tuo browser, nessuno le vede e non c'è niente da creare né da compilare."
+  }
+}

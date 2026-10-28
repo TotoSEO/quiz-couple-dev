@@ -346,6 +346,18 @@
     "description": "Zwanzig Fragen dazu, was euch getrennt hat, was sich seitdem verändert hat und was du zurückhaben willst, um zu sehen, ob ein zweiter Versuch Chancen hat.",
     "metaDescription": "Soll ich zu meinem Ex zurück? 20 Fragen, ob ein zweiter Versuch Chancen hat: was sich verändert hat, das Vertrauen, dein Umfeld. Kostenlos und anonym."
   },
+  "testOublieSonEx": {
+    "title": "Ist er über seine Ex hinweg? Online-Test mit 20 Fragen",
+    "shortTitle": "Ist er über seine Ex hinweg?",
+    "description": "Zwanzig Fragen dazu, was dein Partner tut und sagt, um zu wissen, ob seine Ex noch Platz in seinem Kopf hat. Eine Version für ihn und eine für sie.",
+    "metaDescription": "Ist er über seine Ex hinweg? 20 Fragen dazu, was dein Partner tut und sagt, in einer Version für ihn oder für sie. Kostenlos, anonym, ohne Anmeldung."
+  },
+  "testPourquoiQuitte": {
+    "title": "Warum hat mein Ex Schluss gemacht? Test mit 20 Fragen",
+    "shortTitle": "Warum hat mein Ex Schluss gemacht?",
+    "description": "Zwanzig Fragen zu den letzten Monaten eurer Beziehung, und die Ursache, die bei der Trennung am schwersten gewogen hat, unter den acht häufigsten.",
+    "metaDescription": "Warum hat mein Ex Schluss gemacht? 20 Fragen zu den letzten Monaten eurer Beziehung, um die Ursache zu finden, die am schwersten gewogen hat. Kostenlos."
+  },
   "testChargeMentale": {
     "title": "Mental-Load-Test für Paare: Wer trägt was?",
     "shortTitle": "Wer trägt die Mental Load?",
