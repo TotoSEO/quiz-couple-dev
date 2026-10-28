@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -658,7 +658,31 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/denkt-mein-ex-noch-an-mich/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/il-mio-ex-pensa-ancora-a-me/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mon-ex-pense-t-il-elle-encore-a-moi/"/>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/it/test-sono-ancora-innamorato-del-mio-ex/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-suis-je-encore-amoureux-de-mon-ex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/am-i-still-in-love-with-my-ex-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-sigo-enamorado-de-mi-ex/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bin-ich-noch-in-meinen-ex-verliebt-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-sono-ancora-innamorato-del-mio-ex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-suis-je-encore-amoureux-de-mon-ex/"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/it/quanto-tempo-ci-vuole-per-dimenticare-un-ex/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/combien-de-temps-pour-oublier-son-ex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/how-long-to-get-over-an-ex-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/cuanto-tiempo-se-tarda-en-olvidar-a-un-ex/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wie-lange-dauert-es-ueber-den-ex-hinwegzukommen/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quanto-tempo-ci-vuole-per-dimenticare-un-ex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/combien-de-temps-pour-oublier-son-ex/"/>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -754,7 +778,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bereit-fuer-eine-neue-beziehung-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-pronto-per-una-nuova-relazione/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pret-pour-une-nouvelle-relation/"/>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
