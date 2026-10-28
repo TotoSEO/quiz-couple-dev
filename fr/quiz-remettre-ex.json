@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Test après une rupture",
+    "title": "Faut-il se remettre avec son ex ? Le test à faire avant de dire oui",
+    "titleHighlight": "se remettre avec son ex",
+    "description": "Votre ex veut revenir, ou c'est vous qui y pensez ? Avant de dire oui, le test regarde avec vous pourquoi ça s'est arrêté et ce qui a changé depuis. À la fin, il vous dit si <strong>les conditions d'un deuxième essai sont réunies</strong>, ou s'il vaut mieux attendre.",
+    "subtitle": "Vingt questions, cinq minutes, gratuit et sans inscription",
+    "jumpBtn": "Faire le test"
+  },
+  "crossLink": {
+    "title": "Vous vous demandez surtout s'il ou elle va revenir ?",
+    "text": "Ce test-ci part du principe que la question se pose. L'autre estime les chances d'un retour, à partir de la façon dont vous vous êtes quittés et de ce qui s'est passé depuis.",
+    "button": "Mon ex va-t-il revenir ?"
+  },
+  "section1": {
+    "title": "Se remettre avec son ex : bonne ou mauvaise idée ?",
+    "p1": "Ça peut être une très bonne idée. Certains couples se retrouvent après une rupture et sont plus solides la deuxième fois, parce que la séparation leur a fait comprendre ce qui comptait. Mais ça marche surtout <strong>quand ce qui vous a séparés a changé</strong>, et pas seulement quand vous vous manquez.",
+    "p2": "Le manque, justement, est un mauvais conseiller. Après une rupture, on se souvient surtout des bons moments, et un soir de solitude, revenir paraît la chose la plus simple du monde. Le test vous fait regarder le reste, à commencer par la façon dont vous viviez ensemble quand ça n'allait pas.",
+    "p3": "Il part du principe que la question se pose : votre ex a proposé de revenir, ou <a href=\"/test-mon-ex-va-t-il-revenir/\">la porte n'a pas l'air tout à fait fermée</a>. Le résultat vous dit si un retour a des chances de bien se passer pour vous."
+  },
+  "section2": {
+    "title": "Les signes qu'un retour peut marcher",
+    "intro": "Ce sont les réponses qui rapportent le plus de points dans le test. Plus vous en retrouvez dans votre histoire, plus un deuxième essai a de chances de tenir.",
+    "pillar1Title": "Ce qui vous a séparés a changé",
+    "pillar1Text": "Et ça se voit <strong>dans ses actes, pas seulement dans ses promesses</strong>. Un « je vais changer » ne coûte rien à dire. Un changement qui tient, ça se voit dans la vie de tous les jours, sur plusieurs semaines.",
+    "pillar2Title": "Chacun reconnaît sa part",
+    "pillar2Text": "Une rupture vient rarement d'une seule personne. Si votre ex reconnaît ce qu'il ou elle a fait sans tout vous mettre sur le dos, et si vous voyez de votre côté ce que vous feriez autrement, vous partez sur de bonnes bases.",
+    "pillar3Title": "Vous voulez la même vie",
+    "pillar3Text": "Des enfants ou pas, la ville où vivre, la place du travail... Quand vos projets vont dans le même sens, il reste de quoi construire. Quand ils s'opposent, l'amour ne suffit pas à les rapprocher.",
+    "pillar4Title": "Vos proches sont plutôt pour",
+    "pillar4Text": "Une étude américaine a suivi une centaine de couples pendant deux ans : <strong>ceux que leurs proches soutenaient s'entendaient mieux</strong>, et leur couple durait plus longtemps quand la femme se sentait soutenue par son entourage. L'idée que l'opposition des proches rapproche le couple, ce qu'on appelle l'effet Roméo et Juliette, ne s'y est pas vérifiée.",
+    "pillar5Title": "Vous avez parlé de ce qui serait différent",
+    "pillar5Text": "Vous en avez parlé, en restant précis : qui fait quoi, ce que vous ne voulez plus revivre, ce que vous ferez si le même problème revient. Les couples qui se remettent ensemble sans rien changer retombent souvent sur la même dispute, quelques mois plus tard.",
+    "pillar6Title": "C'est la personne qui vous manque",
+    "pillar6Text": "Si c'est votre ex que vous voulez retrouver, et pas <a href=\"/test-suis-je-encore-amoureux-de-mon-ex/\">le confort d'être en couple</a> ou la peur d'être seul(e), c'est un bon point de départ !"
+  },
+  "section3": {
+    "title": "Les raisons de ne pas revenir",
+    "intro": "Certaines réponses font baisser le résultat, et quelques-unes le bloquent tout en bas, quoi que disent les autres.",
+    "sub1Title": "Rien n'a changé, à part la distance entre vous",
+    "sub1P1": "Il ou elle promet que tout sera différent, mais rien ne le montre encore. Les promesses faites juste après une rupture sont souvent sincères... et souvent oubliées dès que la peur de vous perdre retombe. Attendez de voir avant de dire oui.",
+    "sub2Title": "Vous vous êtes déjà quittés plusieurs fois",
+    "sub2P1": "Se quitter puis se remettre ensemble, c'est plus fréquent qu'on ne le croit. Dans une étude américaine sur plus de mille couples, <strong>plus d'un tiers des couples qui vivaient ensemble et un couple marié sur cinq</strong> l'avaient déjà vécu. Mais ces allers-retours ont un prix : les couples concernés avaient plus de doutes sur leur relation, en étaient moins satisfaits, et plus ils avaient rompu, plus ils risquaient de recommencer.",
+    "sub2P2": "Une autre étude, menée auprès de jeunes adultes, a montré que ceux qui se quittaient et se remettaient ensemble déclaraient <strong>deux fois plus souvent des violences physiques</strong> dans leur couple. Ça ne veut pas dire que les ruptures en sont la cause, mais ces histoires sont souvent plus agitées que les autres.",
+    "sub3Title": "Vous revenez pour ne pas être seul(e)",
+    "sub3P1": "Ne pas vouloir être seul(e) fait partie des raisons qui reviennent souvent quand on demande aux gens pourquoi ils sont retournés avec leur ex. Le soir, la solitude pèse, et l'ex est la personne qu'on connaît déjà. Mais revenir pour ça, c'est retrouver la même histoire, avec les mêmes problèmes.",
+    "sub4Title": "Vous aviez peur de lui ou d'elle",
+    "sub4P1": "Là, il n'y a pas de nuance. <strong>Si vous avez eu peur de sa réaction</strong>, s'il y a eu des cris, des objets cassés, des menaces, ou s'il ou elle menace de se faire du mal pour que vous reveniez, le test vous dit de ne pas y retourner, quoi que disent vos autres réponses. Ce ne sont pas des traits de caractère : ce sont <a href=\"/test-red-flag/\">les red flags les plus graves</a>, et une rupture ne les fait pas disparaître.",
+    "sub4P2": "Si vous avez peur, parlez-en. En France, le 3919 écoute gratuitement, sans laisser de trace sur la facture ; en danger immédiat, appelez le 17."
+  },
+  "section4": {
+    "title": "Comment le test calcule votre résultat",
+    "p1": "Chaque réponse rapporte des points, et les questions ne pèsent pas toutes pareil : savoir si ce qui vous a séparés a changé compte bien plus que le temps passé depuis la rupture. Le total va de 0 à 112 points.",
+    "p2": "<strong>Avoir eu peur de sa réaction plusieurs fois, des cris ou des objets cassés, des menaces</strong> : une seule de ces réponses suffit pour que le résultat soit « ne vous remettez pas avec votre ex », même si tout le reste va bien. Avoir eu peur une seule fois, ou vous être senti(e) rabaissé(e) et contrôlé(e), bloque le résultat à « tout dit non pour l'instant ». Et après trois ruptures ou plus, le test ne dépasse pas « pas tant que rien n'a changé ».",
+    "headerScore": "Points",
+    "headerLevel": "Résultat",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "0",
+    "row1Level": "Ne vous remettez pas avec votre ex",
+    "row1Analysis": "Une réponse parle de peur, de violence ou de menaces",
+    "row2Score": "1 à 35",
+    "row2Level": "Tout dit non pour l'instant",
+    "row2Analysis": "Le problème est toujours là, et cette histoire vous faisait du mal",
+    "row3Score": "36 à 55",
+    "row3Level": "Pas tant que rien n'a changé",
+    "row3Analysis": "Des choses comptent entre vous, mais la cause de la rupture n'a pas bougé",
+    "row4Score": "56 à 72",
+    "row4Level": "Pas encore",
+    "row4Analysis": "Les bases sont là, il manque une discussion ou un peu de temps",
+    "row5Score": "73 à 90",
+    "row5Level": "Oui, mais pas les yeux fermés",
+    "row5Analysis": "Un deuxième essai a de bonnes chances, si vous ne reprenez pas comme avant",
+    "row6Score": "91 à 112",
+    "row6Level": "Les conditions sont réunies",
+    "row6Analysis": "Presque tout va dans le bon sens",
+    "tip": "Le résultat parle de votre histoire, pas de votre ex en général. Quelqu'un peut avoir changé pour de bon : le test regarde si ça se voit déjà."
+  },
+  "section5": {
+    "title": "Si vous décidez de réessayer",
+    "intro": "Si le test vous dit oui, ou presque, voici ce qui aide un deuxième essai à tenir.",
+    "sub1Title": "Parler de ce qui a cassé avant de recommencer",
+    "sub1P1": "Avant de vous remettre ensemble, prenez le temps de parler de ce qui vous a séparés, de ce que chacun fera autrement, et de ce que vous ferez si le même problème revient. Ça peut paraître lourd, mais <strong>si cette discussion est impossible, c'est déjà une réponse</strong>.",
+    "sub2Title": "Prendre son temps",
+    "sub2P1": "Rien ne presse. Se revoir, sortir ensemble, sans tout reprendre d'un coup (l'appartement, les week-ends chez les beaux-parents...), ça laisse le temps de voir si les choses ont changé pour de bon.",
+    "sub3Title": "Ne pas le cacher à vos proches",
+    "sub3P1": "Si vous n'osez pas leur dire que vous êtes de nouveau ensemble, demandez-vous pourquoi. Leur avis ne décide pas à votre place, mais leur réaction en dit souvent long."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "se remettre avec son ex après une rupture",
+    "faq1Q": "Est-ce une bonne idée de se remettre avec son ex ?",
+    "faq1A": "Ça dépend surtout de ce qui vous a séparés. Si c'étaient les circonstances (la distance, une mauvaise passe) et qu'elles ont changé, un deuxième essai a de bonnes chances. Si c'était sa façon de vous traiter, et qu'il ou elle se contente de promettre, beaucoup moins.",
+    "faq2Q": "Peut-on se remettre avec son ex après une tromperie ?",
+    "faq2A": "Oui, certains couples y arrivent, à deux conditions : que la personne qui a trompé reconnaisse ce qu'elle a fait sans se chercher d'excuses, et que vous puissiez de nouveau lui faire confiance sans tout vérifier. Si vous savez que vous fouillerez son téléphone tous les soirs, ce retour vous fera surtout du mal.",
+    "faq3Q": "Combien de temps attendre avant de se remettre avec son ex ?",
+    "faq3A": "Il n'y a pas de bon délai, mais évitez de décider dans les deux premières semaines : à ce moment-là, c'est surtout la douleur de la rupture qui parle. Prenez le temps de voir si ce qui vous a séparés change pour de bon, sur plusieurs semaines.",
+    "faq4Q": "Pourquoi on retourne toujours vers son ex ?",
+    "faq4A": "Les études sur le sujet citent d'abord des sentiments qui ne sont pas partis, puis l'habitude, la peur d'être seul(e), et l'impression qu'avec quelqu'un d'autre ce ne serait pas mieux. Ces raisons sont humaines, mais seule la première parle vraiment de votre ex : les autres parlent surtout du manque.",
+    "faq5Q": "Se remettre avec son ex après plusieurs ruptures, ça peut marcher ?",
+    "faq5A": "Plus rarement. Les études montrent que plus un couple a rompu, plus il risque de rompre encore, et que ces couples sont en moyenne moins heureux. Ça peut marcher si la cause des ruptures a disparu. Si chaque rupture arrive pour la même raison, le prochain retour risque de finir pareil.",
+    "faq6Q": "Mes réponses sont-elles enregistrées ?",
+    "faq6A": "Non. Vos réponses restent dans votre navigateur, personne ne les voit, et il n'y a rien à créer ni à remplir."
+  }
+}

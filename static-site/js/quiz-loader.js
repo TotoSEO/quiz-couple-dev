@@ -518,6 +518,34 @@
         { m: [1.08, 1.0, 0.82] }                          // 20 peur d'etre abandonne(e)
       ] },
 
+    // Mon ex va-t-il revenir ? Vingt questions dans l'ordre d'un recit (la
+    // rupture, ce qui a suivi, sa vie, la votre), chacune pesee de 3 a 8
+    // points selon ce qu'elle dit d'un retour : qui reprend contact et les
+    // regrets (8) devant la duree de l'histoire (3). 102 points, cinq
+    // paliers. Le plancher : un ex qui a deja propose de reessayer (q8 a) ne
+    // descend pas sous « de vraies chances ». Les plafonds : une histoire
+    // serieuse de son cote (q11 e) ou une demande claire de ne plus ecrire
+    // (q10 d) bloquent le resultat a « peu de chances ».
+    'ex-revenir':     { prefix: 'exRevenir', engine: 'solo', totalQ: 20, pool: 20, quizType: 'ex-revenir',
+                        ptsExplicites: true, dansLOrdre: true, paliers: [32, 48, 62, 77],
+                        planchers: [{ q: 8, o: 'a', palier: 4 }],
+                        plafonds: [{ q: 10, o: 'd', palier: 2 }, { q: 11, o: 'e', palier: 2 }] },
+    // Dois-je me remettre avec mon ex ? Le score dit si les conditions d'un
+    // deuxieme essai sont reunies : ce qui a change depuis la rupture (8)
+    // pese plus que le temps passe (3). 112 points, six verdicts. Le premier
+    // n'a qu'une valeur, 0, et ne s'atteint que par un plafond : la peur de
+    // sa reaction plusieurs fois (q8 c, d), des cris ou des objets casses
+    // (q7 d), des violences (q1 e) ou des menaces (q13 d) ramenent le score a
+    // zero, quoi que disent les autres reponses. La peur une seule fois (q8
+    // b) ou le mepris et le controle (q6 d) bloquent au deuxieme verdict,
+    // trois ruptures ou plus (q5 d) au troisieme (Vennum et al. 2014 : plus
+    // un couple a rompu, plus il rompt encore, et moins il est heureux).
+    'remettre-ex':    { prefix: 'remettreEx', engine: 'solo', totalQ: 20, pool: 20, quizType: 'remettre-ex',
+                        ptsExplicites: true, dansLOrdre: true, paliers: [0, 35, 55, 72, 90],
+                        plafonds: [{ q: 1, o: 'e', palier: 1 }, { q: 7, o: 'd', palier: 1 }, { q: 8, o: 'c', palier: 1 },
+                                   { q: 8, o: 'd', palier: 1 }, { q: 13, o: 'd', palier: 1 }, { q: 8, o: 'b', palier: 2 },
+                                   { q: 6, o: 'd', palier: 2 }, { q: 5, o: 'd', palier: 3 }] },
+
     // Quel type de couple etes-vous ? Un quiz a remplir ensemble, sur un seul
     // telephone : quinze situations, quatre facons de vivre a deux, le sens
     // des lettres tourne d'une question a l'autre (TYPOLOGIES.typeCouple).
@@ -1139,7 +1167,11 @@
 
     // Randomly select totalQ questions from pool if pool > totalQ
     var hasRandomPool = questions.length > config.totalQ;
-    if (config.ordre && config.ordre.length) {
+    if (config.dansLOrdre) {
+      // Un récit, de la rupture à aujourd'hui : les questions se lisent dans
+      // l'ordre du fichier, comme le diagnostic et la balance.
+      questions.sort(function (a, b) { return a.id - b.id; });
+    } else if (config.ordre && config.ordre.length) {
       // Ordre de priorite fixe : les questions les plus decisives d'abord, pour
       // qu'une version courte mesure bien ce qu'elle annonce. On melange a
       // l'interieur de chaque bloc pour que deux parties ne se suivent pas
@@ -2083,6 +2115,7 @@
       hasLocalStorage: cfg.hasLocalStorage || false,
       needsName: cfg.needsName || false,
       planchers: cfg.planchers || [],
+      plafonds: cfg.plafonds || [],
       partenaire: partenaireResultat(cfg.quizType || 'solo')
     });
   }

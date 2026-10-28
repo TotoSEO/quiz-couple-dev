@@ -334,6 +334,18 @@
     "description": "Twenty questions about your relationship, the breakup and your days, and an estimate in months of how long it will take you to move on.",
     "metaDescription": "How long does it take to get over an ex? What the research says, and a 20-question test that estimates your own timeline in months. Free and anonymous."
   },
+  "testExRevenir": {
+    "title": "Will My Ex Come Back? 20-Question Quiz",
+    "shortTitle": "Will my ex come back?",
+    "description": "Twenty questions about your breakup, what's happened since and your ex's life now, to estimate the chances of a comeback.",
+    "metaDescription": "Will my ex come back? 20 questions about your breakup and what's happened since, to estimate your chances of getting back together. Free and anonymous."
+  },
+  "testRemettreEx": {
+    "title": "Should I Get Back With My Ex? 20-Question Quiz",
+    "shortTitle": "Should I get back with my ex?",
+    "description": "Twenty questions about what split you up, what has changed since and what you're hoping to get back, to see whether a second try has a chance of working.",
+    "metaDescription": "Should I get back with my ex? 20 questions to see whether a second try has a chance of working: what has changed, trust, your friends and family. Free."
+  },
   "testChargeMentale": {
     "title": "Mental Load Test for Couples: Who Carries What?",
     "shortTitle": "Who carries the mental load?",

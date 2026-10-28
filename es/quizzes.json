@@ -334,6 +334,18 @@
     "description": "Veinte preguntas sobre tu historia, la ruptura y tu día a día, y una estimación en meses del tiempo que te queda para pasar página.",
     "metaDescription": "¿Cuánto tiempo se tarda en olvidar a un ex? Lo que dicen los estudios y un test de 20 preguntas que calcula tu propio plazo en meses. Gratis y anónimo."
   },
+  "testExRevenir": {
+    "title": "¿Mi ex volverá? Test de 20 preguntas",
+    "shortTitle": "¿Mi ex volverá?",
+    "description": "Veinte preguntas sobre vuestra ruptura, lo que ha pasado después y la vida de tu ex hoy, para calcular las posibilidades de que vuelva.",
+    "metaDescription": "¿Mi ex volverá? 20 preguntas sobre vuestra ruptura y lo que ha pasado después, para calcular tus posibilidades de que vuelva. Gratis y anónimo."
+  },
+  "testRemettreEx": {
+    "title": "¿Debo volver con mi ex? Test de 20 preguntas",
+    "shortTitle": "¿Debo volver con mi ex?",
+    "description": "Veinte preguntas sobre lo que os separó, lo que ha cambiado y lo que buscas recuperar, para saber si un segundo intento tiene posibilidades de funcionar.",
+    "metaDescription": "¿Debo volver con mi ex? 20 preguntas para saber si un segundo intento puede funcionar: lo que ha cambiado, la confianza, tu gente. Gratis y anónimo."
+  },
   "testChargeMentale": {
     "title": "Test de carga mental en pareja: ¿quién lleva qué?",
     "shortTitle": "¿Quién lleva la carga mental?",

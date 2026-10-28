@@ -326,6 +326,7 @@
     "testCommonPoints": "Common Points Test",
     "testDistance": "Distance Test",
     "testToxic": "Toxic Test",
+    "testRedFlag": "Red flag test",
     "testCoupleSain": "Healthy Couple Test",
     "testMariage": "Marriage Test",
     "testDivorce": "Divorce Test",
@@ -372,6 +373,8 @@
     "testEx": "Does my ex still think about me test",
     "testEncoreAmoureuxEx": "Am I still in love with my ex quiz",
     "testOublierEx": "How long to get over an ex test",
+    "testExRevenir": "Will my ex come back quiz",
+    "testRemettreEx": "Should I get back with my ex quiz",
     "testChargeMentale": "Mental load test for couples",
     "quizRencontre": "First date questions",
     "jeuJamais": "Never Have I Ever",
@@ -776,6 +779,16 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer about what you're living right now, not about the month after the break-up.",
     "disclaimer": "This test doesn't say whether you'll meet someone. It looks at whether the place is free today, and that changes from one month to the next. Your answers are not stored."
+  },
+  "ex-revenir": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer based on what's happening right now, not on what you're hoping for.",
+    "disclaimer": "The quiz estimates chances based on situations that often go with a comeback. It can't read your ex's mind. Your answers aren't saved."
+  },
+  "remettre-ex": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer for yourself, not for what your ex would like to hear.",
+    "disclaimer": "This quiz is a tool to help you think, not professional advice. Your answers aren't saved."
   },
   "est-ce-le-bon": {
     "introQuestion": "Before you start:",
