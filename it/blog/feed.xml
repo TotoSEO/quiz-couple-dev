@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Relazione tira e molla: tornare insieme dopo più rotture?</title>
+      <link>https://quiz-couple.com/it/blog/relazione-tira-e-molla/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/relazione-tira-e-molla/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:25:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Vi siete lasciati e rimessi insieme più di una volta? Cosa dicono gli studi sulle relazioni tira e molla, e quando un nuovo tentativo può funzionare.</description>
+      <media:content url="https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Il mio ex era quello giusto? Le domande da farsi</title>
+      <link>https://quiz-couple.com/it/blog/il-mio-ex-era-quello-giusto/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/il-mio-ex-era-quello-giusto/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:20:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Il tuo ex era la persona giusta? Perché il pensiero torna, cosa fa la memoria ai ricordi, e 6 domande per vederci più chiaro.</description>
+      <media:content url="https://quiz-couple.com/blog/mon-ex-etait-il-le-bon.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>«Non si lascia qualcuno per qualcun altro»: vero o falso?</title>
       <link>https://quiz-couple.com/it/blog/lasciare-qualcuno-per-un-altro/</link>
@@ -263,24 +281,6 @@
       <category>Psicologia</category>
       <description>Affascinante fuori, distruttivo in casa. Il ciclo del narcisista nella coppia, i segnali concreti e come toglierti il dubbio.</description>
       <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Vacanze: una coppia su tre litiga in viaggio, e tutto era cominciato prima di partire</title>
-      <link>https://quiz-couple.com/it/blog/litigi-di-coppia-in-vacanza/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/litigi-di-coppia-in-vacanza/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Il 28 % delle coppie vive il viaggio delle vacanze come teso e il 47 % delle donne ha già litigato sull&#39;organizzazione.</description>
-      <media:content url="https://quiz-couple.com/blog/disputes-couple-vacances.webp" medium="image" type="image/webp" width="1200" height="675"/>
-    </item>
-    <item>
-      <title>Le fasi attraverso cui un uomo si innamora</title>
-      <link>https://quiz-couple.com/it/blog/come-nascono-i-sentimenti-in-un-uomo/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/come-nascono-i-sentimenti-in-un-uomo/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vita di coppia</category>
-      <description>Le sei fasi attraverso cui passano i sentimenti di un uomo, cosa le accelera, cosa le blocca e i segnali che non ingannano.</description>
-      <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

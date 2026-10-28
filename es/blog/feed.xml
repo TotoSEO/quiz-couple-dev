@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>Relación intermitente: ¿volver otra vez después de varias rupturas?</title>
+      <link>https://quiz-couple.com/es/blog/relacion-intermitente/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/relacion-intermitente/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:25:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>¿Lo habéis dejado y habéis vuelto más de una vez? Lo que dicen los estudios sobre las parejas intermitentes, y cuándo puede funcionar otro intento.</description>
+      <media:content url="https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>¿Mi ex era el amor de mi vida? Las preguntas que hay que hacerse</title>
+      <link>https://quiz-couple.com/es/blog/mi-ex-era-el-amor-de-mi-vida/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/mi-ex-era-el-amor-de-mi-vida/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:20:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>¿Y si tu ex era el amor de tu vida? Por qué vuelve esa idea, lo que la memoria hace con los recuerdos, y 6 preguntas para verlo más claro.</description>
+      <media:content url="https://quiz-couple.com/blog/mon-ex-etait-il-le-bon.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>«Nadie deja a alguien por otra persona»: ¿verdad o mentira?</title>
       <link>https://quiz-couple.com/es/blog/dejar-a-alguien-por-otra-persona/</link>
@@ -263,24 +281,6 @@
       <category>Psicología</category>
       <description>Encantador fuera, destructivo en casa. El ciclo del narcisista en la pareja, las señales concretas y cómo salir de dudas.</description>
       <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Vacaciones: una pareja de cada tres discute en la carretera, y empezó antes de salir</title>
-      <link>https://quiz-couple.com/es/blog/discusiones-pareja-vacaciones/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/discusiones-pareja-vacaciones/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>El 28 % de las parejas vive el viaje de vacaciones con tensión y el 47 % de las mujeres ya ha discutido por la organización.</description>
-      <media:content url="https://quiz-couple.com/blog/disputes-couple-vacances.webp" medium="image" type="image/webp" width="1200" height="675"/>
-    </item>
-    <item>
-      <title>Las etapas por las que un hombre se enamora</title>
-      <link>https://quiz-couple.com/es/blog/como-nacen-los-sentimientos-en-un-hombre/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/como-nacen-los-sentimientos-en-un-hombre/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>Las seis etapas por las que pasan los sentimientos de un hombre, lo que los acelera, lo que los bloquea y las señales que no engañan.</description>
-      <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

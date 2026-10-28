@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>On-again, off-again relationship: is it worth getting back together again?</title>
+      <link>https://quiz-couple.com/en/blog/on-again-off-again-relationship/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/on-again-off-again-relationship/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:25:00 GMT</pubDate>
+      <category>Exes</category>
+      <description>Broken up and gotten back together more than once? What studies say about on-again, off-again couples, and when another try can work.</description>
+      <media:content url="https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Was my ex the one? The questions to ask yourself</title>
+      <link>https://quiz-couple.com/en/blog/was-my-ex-the-one/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/was-my-ex-the-one/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:20:00 GMT</pubDate>
+      <category>Exes</category>
+      <description>Wondering if your ex was the one? Why the thought keeps coming back, what memory does to the past, and 6 questions to see things more clearly.</description>
+      <media:content url="https://quiz-couple.com/blog/mon-ex-etait-il-le-bon.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>Leaving someone for someone else: what the studies say</title>
       <link>https://quiz-couple.com/en/blog/leaving-someone-for-someone-else/</link>
@@ -263,24 +281,6 @@
       <category>Psychology</category>
       <description>Charming outside, destructive at home. The narcissistic cycle in a relationship, the concrete warning signs, and how to know for sure.</description>
       <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>One couple in three argues on the drive to their holiday, and it started before they left</title>
-      <link>https://quiz-couple.com/en/blog/couples-arguing-on-holiday/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/couples-arguing-on-holiday/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>28% of couples find the journey to their holiday tense and 47% of women have already argued about organising it.</description>
-      <media:content url="https://quiz-couple.com/blog/disputes-couple-vacances.webp" medium="image" type="image/webp" width="1200" height="675"/>
-    </item>
-    <item>
-      <title>The stages a man goes through when he falls in love</title>
-      <link>https://quiz-couple.com/en/blog/how-men-develop-feelings/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/how-men-develop-feelings/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>The six stages a man&#39;s feelings go through, what speeds them up, what blocks them, and the signs that do not lie.</description>
-      <media:content url="https://quiz-couple.com/blog/sentiments-chez-un-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
     </item>
   </channel>
 </rss>

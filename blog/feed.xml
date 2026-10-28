@@ -6,12 +6,30 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 28 Oct 2026 20:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Se remettre ensemble après plusieurs ruptures : est-ce une bonne idée ?</title>
+      <link>https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:25:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Vous vous êtes quittés puis remis ensemble plusieurs fois ? Ce que disent les études sur les couples « on-off », et quand un nouvel essai peut marcher.</description>
+      <media:content url="https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
+    <item>
+      <title>Mon ex était-il le bon (ou la bonne) ? Les questions à se poser</title>
+      <link>https://quiz-couple.com/blog/mon-ex-etait-il-le-bon/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/mon-ex-etait-il-le-bon/</guid>
+      <pubDate>Wed, 28 Oct 2026 21:20:00 GMT</pubDate>
+      <category>Ex</category>
+      <description>Votre ex était-il le bon, ou la bonne ? Pourquoi cette idée revient, ce que la mémoire fait aux souvenirs, et 6 questions pour y voir plus clair.</description>
+      <media:content url="https://quiz-couple.com/blog/mon-ex-etait-il-le-bon.webp" medium="image" type="image/webp" width="1536" height="864"/>
+    </item>
     <item>
       <title>On ne quitte pas quelqu&#39;un pour quelqu&#39;un d&#39;autre : vrai ou faux ?</title>
       <link>https://quiz-couple.com/blog/on-ne-quitte-pas-quelqu-un-pour-quelqu-un-d-autre/</link>
@@ -263,24 +281,6 @@
       <category>Vie de couple</category>
       <description>100 questions à poser à ton copain, par thème et par moment : pour le connaître, sur vous deux, drôles, sentiments, avenir, à distance, et 5 questions pièges.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Pervers narcissique en amour : reconnaître l&#39;emprise quand on est en plein dedans</title>
-      <link>https://quiz-couple.com/blog/pervers-narcissique-amour/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/pervers-narcissique-amour/</guid>
-      <pubDate>Sat, 22 Aug 2026 13:20:00 GMT</pubDate>
-      <category>Psychologie</category>
-      <description>Charmant dehors, destructeur dedans. Le cycle du pervers narcissique en couple, les signaux concrets et comment en avoir le cœur net.</description>
-      <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Vacances : un couple sur trois se dispute sur la route, et ça commence avant le départ</title>
-      <link>https://quiz-couple.com/blog/disputes-couple-vacances/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/disputes-couple-vacances/</guid>
-      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>28 % des couples jugent le trajet des vacances tendu. Les chiffres, les vrais déclencheurs des disputes en vacances, et ce qui les désamorce.</description>
-      <media:content url="https://quiz-couple.com/blog/disputes-couple-vacances.webp" medium="image" type="image/webp" width="1200" height="675"/>
     </item>
   </channel>
 </rss>
