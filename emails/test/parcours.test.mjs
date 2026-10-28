@@ -272,20 +272,63 @@ test('les crédits de Brevo coupent la file, avec la marge des essais', async ()
 });
 
 test('la montée en charge : les paliers de REGLAGES.montee aux premiers soirs d\'envoi réel, puis le plafond', async () => {
-  const file = Array.from({ length: 2000 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
-  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
-  // 100 le premier soir, 150 pendant cinq soirs, 200 pendant deux, 250, puis 290.
-  const attendus = [100, 150, 150, 150, 150, 150, 200, 200, 250, 290];
-  for (let soir = 0; soir < attendus.length; soir++) {
-    const quand = new Date(SOIR.getTime() + soir * 86400e3);
-    const b = await passage({ base, brevo: new FauxBrevo(), maintenant: quand, mode: 'reel', journal: silence });
-    assert.equal(b.limite, attendus[soir], `soir ${soir + 1}`);
+  const garde = REGLAGES.retenue;
+  REGLAGES.retenue = null;
+  try {
+    const file = Array.from({ length: 2000 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
+    const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+    // 100 le premier soir, 150 pendant cinq soirs, 200 pendant deux, 250, puis 290.
+    const attendus = [100, 150, 150, 150, 150, 150, 200, 200, 250, 290];
+    for (let soir = 0; soir < attendus.length; soir++) {
+      const quand = new Date(SOIR.getTime() + soir * 86400e3);
+      const b = await passage({ base, brevo: new FauxBrevo(), maintenant: quand, mode: 'reel', journal: silence });
+      assert.equal(b.limite, attendus[soir], `soir ${soir + 1}`);
+      assert.equal(b.retenue, undefined);
+    }
+    // Un soir sans rien à envoyer ne fait pas avancer la montée.
+    const vide = new FausseBase();
+    vide.t.emails_passages.push({ jour: '2026-10-20', fin: 'x', bilan: { mode: 'reel', envois: {} } });
+    const b = await passage({ base: vide, brevo: new FauxBrevo(), maintenant: SOIR, mode: 'blanc', journal: silence });
+    assert.equal(b.limite, 100);
+  } finally {
+    REGLAGES.retenue = garde;
   }
-  // Un soir sans rien à envoyer ne fait pas avancer la montée.
-  const vide = new FausseBase();
-  vide.t.emails_passages.push({ jour: '2026-10-20', fin: 'x', bilan: { mode: 'reel', envois: {} } });
-  const b = await passage({ base: vide, brevo: new FauxBrevo(), maintenant: SOIR, mode: 'blanc', journal: silence });
-  assert.equal(b.limite, 100);
+});
+
+test('la retenue : jamais plus que REGLAGES.retenue, et les soirs retenus ne font pas avancer la montée', async () => {
+  const garde = REGLAGES.retenue;
+  try {
+    const file = Array.from({ length: 3000 }, (_, i) => candidat(i, 'e1', 'fr', 'toxique'));
+    const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email })) });
+    const soir = (k, journal = silence) => passage({ base, brevo: new FauxBrevo(), maintenant: new Date(SOIR.getTime() + k * 86400e3), mode: 'reel', journal });
+    // Quatre soirs sans retenue, comme du 24 au 27 octobre 2026 : 100, puis 150.
+    REGLAGES.retenue = null;
+    for (let k = 0; k < 4; k++) await soir(k);
+    // Trois soirs retenus à 100 alors que la montée dirait 150.
+    REGLAGES.retenue = 100;
+    const lignes = [];
+    for (let k = 4; k < 7; k++) {
+      const b = await soir(k, (m) => lignes.push(m));
+      assert.equal(b.limite, 100, `soir ${k + 1}`);
+      assert.equal(b.retenue, 100);
+      assert.equal(b.envois['e1:fr:a'], 100);
+    }
+    assert.ok(base.t.emails_passages.slice(4).every((p) => p.bilan.retenue === 100), 'le bilan de chaque soir retenu le dit');
+    assert.ok(lignes.some((l) => l.includes('(plafond 100, retenue à 100)')));
+    // Enlevée : la montée reprend à son cinquième palier, là où elle s'était arrêtée.
+    REGLAGES.retenue = null;
+    const suite = [];
+    for (let k = 7; k < 11; k++) suite.push((await soir(k)).limite);
+    assert.deepEqual(suite, [150, 150, 200, 200]);
+    // Une valeur qui n'est pas un entier positif n'est pas une retenue.
+    for (const [k, valeur] of [[11, 0], [12, '100'], [13, 12.5]]) {
+      REGLAGES.retenue = valeur;
+      const b = await soir(k);
+      assert.equal(b.retenue, undefined, `retenue ${JSON.stringify(valeur)}`);
+    }
+  } finally {
+    REGLAGES.retenue = garde;
+  }
 });
 
 test('une ligne déjà là (passage concurrent) ne repart pas', async () => {

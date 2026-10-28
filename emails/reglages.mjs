@@ -56,4 +56,15 @@ export const REGLAGES = {
   // « verif » restent bons. Seuls comptent les soirs où quelque chose est
   // vraiment parti.
   montee: [100, 150, 150, 150, 150, 150, 200, 200, 250],
+  // La retenue (28 octobre 2026, Thomas : « vasy ») : tant que c'est un
+  // nombre, aucun soir n'envoie plus que ça, quel que soit le palier de la
+  // montée, et les soirs retenus ne font pas avancer la montée : quand on
+  // l'enlève (null), elle reprend au palier où elle s'était arrêtée. Posée
+  // parce que presque personne n'ouvrait plus : hors Apple Mail, environ
+  // une personne sur dix avait ouvert le premier soir, puis 3 sur 421
+  // e-mails remis du 25 au 27 octobre, le signe que Gmail (huit adresses sur
+  // dix) range nos e-mails dans les spams. Envoyer plus dans les spams
+  // enfonce le domaine. On l'enlève par une PR quand les ouvertures
+  // reviennent (« verif »).
+  retenue: 100,
 };

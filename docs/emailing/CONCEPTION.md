@@ -238,6 +238,13 @@ l'espagnol ne reçoit presque plus rien ; un `e1` qui attend plus de 60 jours
 sort de la file sans être parti. Pour remettre l'espagnol dans l'ordre
 commun, une migration réécrit `emails_du_jour` sans le `CASE` de la langue.
 
+Depuis le 28 octobre 2026, la file sert d'abord les adresses laissées dans
+les 48 dernières heures, puis les `e2`, puis le reste des `e1`, les plus
+récents d'abord dans chacun des trois groupes, et la langue en second
+(migration `20261028120000_emails_recents.sql`) ; le soir n'envoie pas plus
+de 100 e-mails tant que la retenue est posée (voir « 28 octobre 2026 : le
+bilan du test A/B, la retenue »).
+
 Au lancement, la file part avec tout le retard (766 adresses en attente de
 `e1` le 24 octobre 2026). Thomas : « il faut vider la base actuelle sans
 envoyer 900 mails d'un coup, faut faire par vague pendant plusieurs jours
@@ -250,6 +257,9 @@ premier soir (24 octobre 2026), 100 `e1` sont partis à 18 h 55, 150 le
 lendemain. La montée prévue était 100, 150, 200 puis le plafond ; depuis le
 26 octobre 2026 elle est 100, 150 pendant cinq soirs, 200 pendant deux, 250
 un soir, puis le plafond (voir « 26 octobre 2026 : le premier audit »).
+Depuis le 28 octobre 2026, la retenue (`retenue` dans `emails/reglages.mjs`,
+100) l'arrête : aucun soir n'envoie plus, et les soirs retenus ne comptent
+pas, si bien que la montée reprend à son palier quand on l'enlève.
 
 ### 26 octobre 2026 : le premier audit
 
@@ -327,6 +337,62 @@ disait « me contacte occasionnellement à des fins informationnelles », pas
 des offres. Celle de la porte des résultats dit « les conseils et
 nouveautés de Quiz Couple », et la politique de confidentialité nomme
 l'évaluation de couple avec ses offres.
+
+### 28 octobre 2026 : le bilan du test A/B, la retenue
+
+Le rappel demandé par Thomas le 24 octobre (« on regarde d'ici 3 jours les
+résultats »). L'e1 du 25 au 27 octobre, d'après la section « Le test A/B »
+de `verif` (chiffres d'ensemble des campagnes, jamais une personne) :
+
+| | Maquette | Sobre |
+|---|---|---|
+| Envoyés / remis | 221 / 210 | 229 / 211 |
+| Ouvertures | 6, dont 4 par Apple Mail | 6, dont 5 par Apple Mail |
+| Clics | 8 | 0 |
+| Désinscriptions, plaintes | 0 | 0 |
+| Visites de la page de l'évaluation | 2 | 0 |
+| « Commencer », évaluations, ventes | 0 | 0 |
+
+- **Rien à départager :** hors Apple Mail (qui charge d'office chaque
+  e-mail reçu), 2 vraies ouvertures pour la maquette et 1 pour la version
+  sobre, sur 421 e-mails remis. Les 8 clics de la maquette viennent tous
+  d'une seule campagne (anglais, 26 octobre, 20 remis) qui n'a eu qu'une
+  ouverture, et d'aucune adresse Gmail, iCloud ou Hotmail (`statsByDomain`) :
+  selon toute vraisemblance des filtres de sécurité de messageries
+  d'entreprise, qui ouvrent chaque lien pour le tester. Les 2 visites
+  peuvent aussi venir des e-mails du 24, qui portent le même lien. L'e2 du
+  test n'était pas parti : le 27, les 150 places étaient allées à des `e1`
+  anglais en retard, et 97 `e2` attendaient.
+- **Presque personne n'ouvre :** hors Apple Mail, environ une personne sur
+  dix le premier soir (24 octobre, avant le test), puis 0 sur 136 le 25,
+  3 sur 140 le 26 et 0 sur 144 le 27. Le pixel marche (Apple Mail le
+  déclenche dans les deux versions), et le DNS du domaine d'envoi est en
+  règle (les deux clés DKIM de Brevo publiées, DMARC hérité de
+  quiz-couple.com en `quarantine`, qui passe par l'alignement DKIM). Huit
+  adresses sur dix sont chez Gmail : un domaine neuf, un premier soir peu
+  ouvert, des rebonds doux qui montent le deuxième soir, puis plus
+  personne, c'est le signe que Gmail range nos e-mails dans les spams, où
+  il ne charge pas les images (même une personne qui ouvre n'y est pas
+  comptée). Brevo compte « remis » un e-mail arrivé dans les spams : seul
+  Google Postmaster Tools peut le confirmer.
+- **Ce qui a été fait (Thomas : « vasy ») :** deux essais du jour (e1 en
+  français, maquette et sobre) vers infoquizcouple@gmail.com, pour voir
+  l'onglet où ils tombent ; la retenue à 100 par soir au lieu des 200 puis
+  300 prévus (envoyer plus dans les spams enfonce le domaine) ; et la file
+  qui sert d'abord les adresses de moins de 48 heures, les plus récentes en
+  premier, parce que ceux qui viennent de faire un test se souviennent du
+  site et ouvrent, et que c'est ce que Gmail regarde. Rangée par échéance,
+  avec 1 048 `e1` en attente pour 150 places, une adresse du jour attendait
+  des jours, puis recevait l'e-mail d'un site qu'elle avait oublié. C'est
+  l'ordre du premier jour, la langue en second : à 100 par soir, les
+  adresses récentes remplissent à peu près le soir à elles seules, les `e2`
+  et le retard attendent que le plafond remonte.
+- **Ce qui reste à Thomas :** inscrire `mail.quiz-couple.com` dans Google
+  Postmaster Tools (réputation du domaine et part rangée en spam chez Gmail,
+  jour par jour, dès que le volume suffit).
+- **La suite :** le test A/B continue ; on le relit, e2 compris, quand les
+  ouvertures reviennent, et on enlève alors la retenue par une PR
+  (`retenue: null`).
 
 ### Ce que dit chaque e-mail
 
@@ -574,7 +640,8 @@ que de secours. Dans l'ordre :
    dans la file ; une campagne partie fait passer ses lignes en `envoye` ;
 4. le filet des désinscriptions ;
 5. la file (`emails_du_jour`), coupée aux crédits de Brevo (moins dix pour
-   les essais), au plafond et à la montée en charge des premiers soirs, puis par e-mail et par langue : les lignes
+   les essais), au plafond et à la montée en charge des premiers soirs,
+   jamais plus que la retenue quand elle est posée, puis par e-mail et par langue : les lignes
    `prepare`, les contacts et leurs champs, mis dans la liste du soir au
    même appel (Brevo répond 400 à un ajout séparé quand le contact y est
    déjà), la liste relue (seuls ceux qui y sont partent ; Brevo peut mettre

@@ -14,7 +14,8 @@
 //      manquées (contacts du parcours bloqués ces trois derniers jours) ;
 //   5. la file du soir (emails_du_jour), coupée aux crédits de Brevo et au
 //      plafond du soir (montée en charge les premiers soirs, puis
-//      REGLAGES.plafond), puis, par e-mail et par langue : les lignes
+//      REGLAGES.plafond, jamais plus que REGLAGES.retenue quand elle est
+//      posée), puis, par e-mail et par langue : les lignes
 //      d'envoi, les contacts et leurs champs, la liste du soir, la campagne,
 //      l'envoi ; pendant le test A/B (REGLAGES.ab), une campagne par version ;
 //   6. le ménage chez Brevo : les listes du parcours plus vieilles que
@@ -158,13 +159,20 @@ async function synchroniserBlocages(base, brevo, maintenant) {
   return n;
 }
 
+// La retenue des réglages, si c'en est une (un nombre entier positif).
+export const retenueDuSoir = () => (Number.isInteger(REGLAGES.retenue) && REGLAGES.retenue > 0 ? REGLAGES.retenue : null);
+
 // Le plafond de ce soir : celui de la montée en charge tant qu'on n'a pas
-// eu autant de soirs d'envoi réel (REGLAGES.montee), le plafond ensuite.
+// eu autant de soirs d'envoi réel (REGLAGES.montee), le plafond ensuite, et
+// jamais plus que la retenue quand elle est posée. Un soir retenu (son
+// bilan porte `retenue`) ne compte pas dans la montée.
 export async function plafondDuSoir(base) {
   const faits = await base.select('emails_passages', 'select=jour,bilan&fin=not.is.null&order=jour.asc&limit=100');
-  const soirs = (faits || []).filter((p) => p && p.bilan && p.bilan.mode === 'reel'
+  const soirs = (faits || []).filter((p) => p && p.bilan && p.bilan.mode === 'reel' && !p.bilan.retenue
     && Object.values(p.bilan.envois || {}).some((n) => Number(n) > 0)).length;
-  return soirs < REGLAGES.montee.length ? REGLAGES.montee[soirs] : REGLAGES.plafond;
+  const montee = soirs < REGLAGES.montee.length ? REGLAGES.montee[soirs] : REGLAGES.plafond;
+  const retenue = retenueDuSoir();
+  return retenue ? Math.min(retenue, montee) : montee;
 }
 
 async function dossierDuParcours(brevo) {
@@ -316,6 +324,8 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
 
   bilan.credits = creditsRestants(await brevo.compte());
   bilan.plafond = await plafondDuSoir(base);
+  const retenue = retenueDuSoir();
+  if (retenue) bilan.retenue = retenue;
   bilan.limite = Math.max(0, Math.min(bilan.plafond, bilan.credits - REGLAGES.marge));
 
   let dossier = null;
@@ -342,7 +352,7 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
     if (!groupes.has(cle)) groupes.set(cle, []);
     groupes.get(cle).push({ abonne_id: x.abonne_id, email, prenom: x.prenom, angle: angleDe(x.source) });
   }
-  journal(`${heure} à Paris · ${bilan.credits} crédits Brevo · ${file.length} e-mail(s) ce soir (plafond ${bilan.limite}).`);
+  journal(`${heure} à Paris · ${bilan.credits} crédits Brevo · ${file.length} e-mail(s) ce soir (plafond ${bilan.limite}${bilan.retenue ? `, retenue à ${bilan.retenue}` : ''}).`);
 
   for (const [cle, membres] of groupes) {
     const [type, lang, version] = cle.split(':');
