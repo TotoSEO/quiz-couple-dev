@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-29T03:14:45.635Z",
+  "genere_le": "2026-10-29T09:55:04.747Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -597,9 +597,9 @@
       "creneau": "matin",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "echec",
       "texte": null,
-      "erreur": null
+      "erreur": "créneau passé sans publication"
     },
     {
       "jour": "2026-10-28",
@@ -4410,6 +4410,24 @@
       "jour": "2026-10-21",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "6e8717bc-a26b-4ca4-ac4b-47938765c8ff",
+      "releve": "j7",
+      "vues": 1492,
+      "portee": 1243,
+      "likes": 48,
+      "commentaires": 0,
+      "partages": 4,
+      "enregistrements": 6,
+      "releve_le": "2026-10-29T09:55:01.703713+00:00",
+      "publie_le": "2026-10-22T05:20:11.955+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-22",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4426,13 +4444,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 4,
-      "vues_mediane": 1195,
-      "vues_moyenne": 1208,
+      "posts": 5,
+      "vues_mediane": 1445,
+      "vues_moyenne": 1265,
       "vues_max": 1647,
-      "partages": 11,
-      "enregistrements": 5,
-      "likes": 52,
+      "partages": 15,
+      "enregistrements": 11,
+      "likes": 100,
       "commentaires": 0
     },
     {
