@@ -461,9 +461,28 @@ Thomas : « Vas-y et non pour brevo payant ». Ce qui a changé (migration
   webhook, de la clé chez Supabase, des réglages et des modèles, ce qui est
   parti dans la journée, et les chiffres d'ensemble des `e1` immédiats par
   version du test A/B (étiquettes `parcours-e1-a` et `parcours-e1-b`,
-  jamais par personne). L'admin compte les `e1` partis tout de suite
+  jamais par personne ; les essais ont leur étiquette, `essai-immediat`,
+  et n'y comptent pas). L'admin compte les `e1` partis tout de suite
   (`e1:immediat` dans `emails_compteurs`). La politique de confidentialité
   dit « peu après » au lieu de « le lendemain ».
+- **Part-il pour tout le monde ?** Savoir qu'un `e1` part ne suffit pas :
+  `verif` compte aussi les adresses arrivées depuis minuit (heure de Paris ;
+  le premier jour, depuis la mise en service, `MISE_EN_SERVICE` dans
+  `emails/immediat.mjs`), par langue, celles qui pouvaient recevoir l'`e1`
+  tout de suite (actives, laissées à une porte des résultats, dans une
+  langue de l'envoi immédiat) et ce qu'il en est advenu : parti tout de
+  suite, dans la minute d'attente, ou rien (`bilanArrivees`). Une adresse
+  sans rien est dans une évaluation, au-delà du plafond du jour, ou perdue
+  en route : la section « le journal de lead-capture » donne, depuis le
+  même instant, les raisons que la fonction écrit (jamais `arret` ni
+  `deja`), les refus de Brevo et les erreurs, puis les messages du moteur
+  des fonctions (démarrages, arrêts, limites), où se verrait une tâche
+  coupée avant la fin de sa minute d'attente : un worker vit 150 secondes
+  au plus sur l'offre gratuite de Supabase, tâches de fond comprises. Les
+  logs se lisent par l'API de gestion (`journaux` de
+  `emails/supabase-gestion.mjs`, le point d'entrée de
+  `supabase-inventaire.yml`), vingt-quatre heures au plus ; les messages
+  ne contiennent jamais d'adresse.
 
 Mise en route : après la fusion, l'action `essai-immediat` de
 `brevo-reglages.yml` envoie l'`e1` immédiat de chaque version vers une

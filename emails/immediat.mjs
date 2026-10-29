@@ -21,6 +21,34 @@ import { corpsBrevo } from '../supabase/functions/_shared/emails/immediat.mjs';
 // lendemain (prixDu), et le paiement la garde douze heures après sa fin.
 export const VALIDITE_H = 30;
 
+export const ETIQUETTE_ESSAI = 'essai-immediat';
+
+// La mise en service (réglages écrits par « installer ») : avant, aucune
+// adresse ne pouvait recevoir l'e1 tout de suite, et verif.mjs compte le
+// premier jour à partir de là.
+export const MISE_EN_SERVICE = Date.parse('2026-10-29T08:50:46Z');
+
+// Les adresses laissées à une porte des résultats (abonnes : id, lang,
+// source, statut, created_at) qui pouvaient recevoir l'e1 tout de suite
+// (actives, dans une langue de l'envoi immédiat), et ce qu'il en est advenu
+// d'après leurs lignes e1 (emails_envois : abonne_id, immediat) : parti tout
+// de suite, parti un soir, encore dans la minute d'attente, ou rien. Une
+// adresse sans rien est dans une évaluation, au-delà du plafond du jour, ou
+// perdue en route : le journal de lead-capture dit laquelle (verif.mjs).
+export function bilanArrivees(arrivees, envois, langues, maintenant = Date.now()) {
+  const visees = arrivees.filter((x) => x.statut === 'actif' && x.source !== 'ebook' && langues.has(x.lang));
+  const e1 = new Map(envois.map((x) => [x.abonne_id, x.immediat === true]));
+  const b = { arrivees: arrivees.length, visees: visees.length, tout: 0, soir: 0, attente: 0, sans: 0, parLangue: {} };
+  for (const x of arrivees) b.parLangue[x.lang] = (b.parLangue[x.lang] || 0) + 1;
+  for (const x of visees) {
+    if (e1.has(x.id)) b[e1.get(x.id) ? 'tout' : 'soir']++;
+    // La minute laissée pour le prénom, l'envoi, et une marge.
+    else if (maintenant - Date.parse(x.created_at) < 3 * 60e3) b.attente++;
+    else b.sans++;
+  }
+  return b;
+}
+
 // Une ligne de emails_modeles par langue et par version de l'e1.
 export function modeles(instant = new Date()) {
   const lignes = [];
@@ -91,7 +119,9 @@ export function pourEssai(ligne, { email, prenom = null, angle = 'score' } = {})
 // L'essai : l'e1 immédiat de chaque langue et version, par l'API
 // transactionnelle, vers une adresse « +immediat-... » de la même boîte, le
 // sujet marqué « [Essai immédiat] ». Le lien de désinscription mène à la page
-// de lead-capture sans jeton : il ne désinscrit personne.
+// de lead-capture sans jeton : il ne désinscrit personne. Son étiquette n'est
+// pas celle d'une version (ETIQUETTE_ESSAI) : les chiffres du test A/B que
+// lit verif.mjs ne comptent pas les essais.
 export async function essaiImmediat({ brevo, adresse, langues, prenom, versions, fonctions, maintenant = new Date(), journal = (m) => console.log(m) }) {
   if (!/^[^\s@+]+(\+[^\s@]*)?@[^\s@]+\.[^\s@]+$/.test(String(adresse || ''))) throw new Error('adresse d\'essai invalide');
   const lignes = modeles(maintenant);
@@ -101,7 +131,7 @@ export async function essaiImmediat({ brevo, adresse, langues, prenom, versions,
       const ligne = lignes.find((l) => l.lang === lang && l.version === version);
       const d = pourEssai(ligne, { email: adresseVariante(adresse, 'immediat', lang, 'score', version), prenom });
       d.sujet = `[Essai immédiat ${lang} ${version}] ${d.sujet}`;
-      const r = await brevo.envoyerTransactionnel(corpsBrevo(d, `${fonctions}/lead-capture?d=essai&lang=${lang}`));
+      const r = await brevo.envoyerTransactionnel({ ...corpsBrevo(d, `${fonctions}/lead-capture?d=essai&lang=${lang}`), tags: [ETIQUETTE_ESSAI] });
       journal(`${lang} ${version} : parti${r && r.messageId ? ', identifiant du message reçu' : ', SANS identifiant de message'}${ligne.promo ? ', avec la réduction' : ''}.`);
       n++;
     }

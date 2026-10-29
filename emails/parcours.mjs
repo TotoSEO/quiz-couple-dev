@@ -37,6 +37,17 @@ const fmt = (options) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Pa
 export const jourParis = (instant) => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
 export const heureParis = (instant) => fmt({ hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(instant);
 
+// Minuit à Paris le jour de `instant`, en millisecondes (une ou deux heures
+// d'écart avec UTC selon la saison).
+export function minuitParis(instant) {
+  const jour = jourParis(instant);
+  for (const decalage of ['+01:00', '+02:00']) {
+    const t = Date.parse(`${jour}T00:00:00${decalage}`);
+    if (jourParis(new Date(t)) === jour && heureParis(new Date(t)) === '00:00') return t;
+  }
+  return Date.parse(`${jour}T00:00:00Z`);
+}
+
 // La version d'un e-mail du parcours. Pendant le test A/B, celle que donne
 // l'empreinte de l'adresse (versionDe), la même pour e1 et e2 ; un e2 dont
 // l'e1 est parti avant le premier soir du test (`depuis` : la date de l'e1)
