@@ -5,7 +5,7 @@
 // testées sur un Postgres.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { modeles, reglagesImmediat, publierImmediat, pourEssai, essaiImmediat, VALIDITE_H } from '../immediat.mjs';
+import { modeles, reglagesImmediat, publierImmediat, pourEssai, essaiImmediat, bilanArrivees, VALIDITE_H } from '../immediat.mjs';
 import { REGLAGES } from '../reglages.mjs';
 import { LANGUES, VERSIONS, ANGLES, MARQUEURS_BREVO, campagne, intro } from '../contenu.mjs';
 import { corpsBrevo } from '../../supabase/functions/_shared/emails/immediat.mjs';
@@ -87,7 +87,30 @@ test('l\'essai : une requête par langue et par version, vers une adresse « +im
   assert.equal(n, 4);
   assert.deepEqual(envoyes.map((c) => c.to[0].email), ['thomas+immediat-fr-score@gmail.com', 'thomas+immediat-fr-score-b@gmail.com', 'thomas+immediat-en-score@gmail.com', 'thomas+immediat-en-score-b@gmail.com']);
   assert.ok(envoyes.every((c) => c.subject.startsWith('[Essai immédiat ')));
-  assert.deepEqual(envoyes.map((c) => c.tags[0]), ['parcours-e1-a', 'parcours-e1-b', 'parcours-e1-a', 'parcours-e1-b']);
+  // L'étiquette des essais, jamais celle d'une version : les chiffres du test A/B ne les comptent pas.
+  assert.ok(envoyes.every((c) => c.tags.length === 1 && c.tags[0] === 'essai-immediat'));
   assert.ok(lignes.every((l) => l.includes('identifiant du message reçu')));
   await assert.rejects(essaiImmediat({ brevo, adresse: 'pas une adresse', langues: ['fr'], versions: ['a'], fonctions: 'x', journal: () => {} }), /invalide/);
+});
+
+test('le bilan des arrivées : qui pouvait recevoir l\'e1 tout de suite, et ce qu\'il en est advenu', () => {
+  const maintenant = Date.parse('2026-10-29T10:00:00Z');
+  const il = (minutes) => new Date(maintenant - minutes * 60e3).toISOString();
+  const arrivees = [
+    { id: 'a1', lang: 'en', source: 'tester-couple', statut: 'actif', created_at: il(40) }, // parti tout de suite
+    { id: 'a2', lang: 'fr', source: 'toxique', statut: 'actif', created_at: il(20) },       // rien : à expliquer
+    { id: 'a3', lang: 'it', source: 'jalousie', statut: 'actif', created_at: il(1) },       // dans la minute d'attente
+    { id: 'a4', lang: 'es', source: 'tester-couple', statut: 'actif', created_at: il(30) }, // langue sans envoi immédiat
+    { id: 'a5', lang: 'en', source: 'ebook', statut: 'actif', created_at: il(30) },         // l'e-book, hors parcours
+    { id: 'a6', lang: 'de', source: 'toxique', statut: 'desinscrit', created_at: il(30) },  // désinscrite
+    { id: 'a7', lang: 'de', source: 'red-flag', statut: 'actif', created_at: il(50) },      // partie un soir
+  ];
+  const envois = [
+    { abonne_id: 'a1', immediat: true },
+    { abonne_id: 'a7', immediat: false },
+    { abonne_id: 'x9', immediat: true }, // une adresse déjà connue, redonnée
+  ];
+  const b = bilanArrivees(arrivees, envois, new Set(['en', 'fr', 'it', 'de']), maintenant);
+  assert.deepEqual(b, { arrivees: 7, visees: 4, tout: 1, soir: 1, attente: 1, sans: 1, parLangue: { en: 2, fr: 1, it: 1, es: 1, de: 2 } });
+  assert.deepEqual(bilanArrivees([], [], new Set(['en']), maintenant), { arrivees: 0, visees: 0, tout: 0, soir: 0, attente: 0, sans: 0, parLangue: {} });
 });

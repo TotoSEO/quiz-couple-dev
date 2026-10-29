@@ -3,15 +3,18 @@
 // expéditeur, champs, dossier, liste d'essais, webhooks), la fonction
 // brevo-webhook et sa clé chez Supabase, l'e1 envoyé dans la minute par
 // lead-capture (API transactionnelle, clé, réglages, modèles, envois du
-// jour), le mode écrit dans reglages.mjs, la file du soir et les derniers
-// envois. Rien n'est écrit. Le rapport ne montre ni clé ni adresse de contact.
+// jour, adresses arrivées depuis minuit et ce qu'il en est advenu, journal
+// de la fonction), le mode écrit dans reglages.mjs, la file du soir et les
+// derniers envois. Rien n'est écrit. Le rapport ne montre ni clé ni adresse
+// de contact.
 //
 //   BREVO_API_KEY=... [SUPABASE_ACCESS_TOKEN=... SUPABASE_PROJECT_REF=...] node emails/verif.mjs
 
 import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { REGLAGES } from './reglages.mjs';
 import { EVENEMENTS_WEBHOOK } from './installer.mjs';
-import { jourParis } from './parcours.mjs';
+import { jourParis, heureParis, minuitParis } from './parcours.mjs';
+import { MISE_EN_SERVICE, bilanArrivees } from './immediat.mjs';
 import { etiquette } from '../supabase/functions/_shared/emails/immediat.mjs';
 
 const brevo = clientBrevo(process.env.BREVO_API_KEY);
@@ -140,6 +143,48 @@ await etape('L\'e-mail immédiat', async () => {
   const jour = jourParis(new Date());
   const envois = (await base.select('emails_envois', `select=remis_le,message_id,rebond_doux_le&immediat=is.true&jour=eq.${jour}`)) || [];
   info(`aujourd'hui (${jour}) : ${envois.length} parti(s) tout de suite, ${envois.filter((x) => x.message_id).length} avec l'identifiant du message, ${envois.filter((x) => x.remis_le).length} remis, ${envois.filter((x) => x.rebond_doux_le).length} rebond(s) doux`);
+
+  // Les adresses arrivées depuis minuit (depuis la mise en service le
+  // premier jour), et ce qu'il en est advenu : de quoi voir si l'e1 part
+  // pour toutes celles qui y ont droit, pas seulement s'il part.
+  const debut = new Date(Math.max(minuitParis(new Date()), MISE_EN_SERVICE));
+  const arrivees = (await base.select('abonnes', `select=id,lang,source,statut,created_at&created_at=gte.${debut.toISOString()}`)) || [];
+  const e1 = (await base.select('emails_envois', `select=abonne_id,immediat&type=eq.e1&cree_le=gte.${debut.toISOString()}`)) || [];
+  const langues = (r && r.valeur && r.valeur.langues) || [];
+  const b = bilanArrivees(arrivees, e1, new Set(langues));
+  const parLangue = Object.entries(b.parLangue).sort((x, y) => y[1] - x[1]).map(([l, n]) => `${l} ${n}`).join(', ');
+  info(`depuis ${heureParis(debut)} (heure de Paris) : ${b.arrivees} adresse(s) arrivée(s)${parLangue ? ` (${parLangue})` : ''}, dont ${b.visees} pour l'envoi immédiat (porte des résultats, ${langues.join(', ') || 'aucune langue'})`);
+  info(`  e1 tout de suite : ${b.tout} · dans la minute d'attente : ${b.attente} · sans e1 : ${b.sans}${b.soir ? ` · e1 d'un soir : ${b.soir}` : ''}`);
+  const redonnees = e1.filter((x) => x.immediat === true).length - b.tout;
+  if (redonnees > 0) info(`  et ${redonnees} e1 tout de suite pour des adresses déjà connues, redonnées depuis`);
+  if (b.visees - b.attente >= 3 && b.tout === 0) ko('aucune des adresses arrivées n\'a reçu l\'e1 tout de suite : voir le journal de lead-capture, dessous');
+});
+
+// Le journal de lead-capture depuis le même instant (vingt-quatre heures au
+// plus, la limite du point d'entrée) : la raison écrite quand une adresse
+// n'a pas l'e1 tout de suite (sauf « arret » et « deja »), les refus de
+// Brevo et les erreurs ; puis les messages du moteur des fonctions, toutes
+// fonctions confondues (démarrages, arrêts, limites atteintes), où se
+// verrait une tâche coupée avant la fin de la minute d'attente. Les
+// messages ne contiennent jamais d'adresse. Une requête refusée par le
+// point d'entrée des logs ne compte pas comme un problème du parcours.
+await etape('L\'e-mail immédiat, le journal de lead-capture', async () => {
+  if (!avecSupabase) return info('SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF absents : pas lu');
+  const { gestion } = await import('./supabase-gestion.mjs');
+  const g = gestion();
+  const debut = new Date(Math.max(minuitParis(new Date()), MISE_EN_SERVICE, Date.now() - 24 * 3600e3 + 60e3));
+  const lire = async (titre, sql) => {
+    try {
+      const lignes = await g.journaux(sql, debut);
+      info(`${titre} :${lignes.length ? '' : ' rien'}`);
+      for (const l of lignes) info(`  ${l.n} × ${String(l.message).replace(/\s+/g, ' ').trim()}`);
+    } catch (e) {
+      info(`${titre} : illisible (${e.message})`);
+    }
+  };
+  info(`depuis ${heureParis(debut)} (heure de Paris)`);
+  await lire('les messages de lead-capture', "select substring(event_message, 1, 100) as message, count(*) as n from logs where source = 'function_logs' and position(event_message, '[lead-capture]') > 0 group by message order by n desc limit 15");
+  await lire('le moteur des fonctions', "select replaceRegexpAll(substring(event_message, 1, 48), '[0-9]+', 'N') as message, count(*) as n from logs where source = 'function_logs' and position(event_message, '[') != 1 group by message order by n desc limit 12");
 });
 
 // Les chiffres d'ensemble des e1 immédiats, par version du test A/B

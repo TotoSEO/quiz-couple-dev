@@ -7,6 +7,7 @@ import { installer, EVENEMENTS_WEBHOOK } from '../installer.mjs';
 import { essai, adresseVariante } from '../essai.mjs';
 import { REGLAGES } from '../reglages.mjs';
 import { clientBrevo } from '../brevo.mjs';
+import { gestion } from '../supabase-gestion.mjs';
 
 function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], transactionnels = [], brouillons = [] } = {}) {
   const b = {
@@ -167,4 +168,28 @@ test('le client Brevo retire des contacts d\'une liste par 150, et une liste qui
     ['POST', '/contacts/lists/12/contacts/remove', 10],
   ]);
   await assert.rejects(brevo.retirerDeLaListe(12, ['a@exemple.fr']), /404/);
+});
+
+test('les logs du projet par l\'API de gestion : la requête, la fenêtre et les lignes rendues', async () => {
+  const appels = [];
+  const f = async (url, options) => {
+    appels.push([url, options]);
+    return { ok: true, status: 200, json: async () => ({ result: [{ message: '[lead-capture] e-mail immédiat : langue', n: 2 }] }) };
+  };
+  const g = gestion({ SUPABASE_PROJECT_REF: 'ref', SUPABASE_ACCESS_TOKEN: 'jeton' }, f);
+  const debut = new Date('2026-10-29T08:50:46Z');
+  const fin = new Date('2026-10-29T10:00:00Z');
+  const lignes = await g.journaux("select 1 from logs where source = 'function_logs'", debut, fin);
+  assert.deepEqual(lignes, [{ message: '[lead-capture] e-mail immédiat : langue', n: 2 }]);
+  const u = new URL(appels[0][0]);
+  assert.equal(u.origin + u.pathname, 'https://api.supabase.com/v1/projects/ref/analytics/endpoints/logs');
+  assert.equal(u.searchParams.get('sql'), "select 1 from logs where source = 'function_logs'");
+  assert.equal(u.searchParams.get('iso_timestamp_start'), '2026-10-29T08:50:46.000Z');
+  assert.equal(u.searchParams.get('iso_timestamp_end'), '2026-10-29T10:00:00.000Z');
+  assert.equal(appels[0][1].headers.Authorization, 'Bearer jeton');
+  // Une erreur du point d'entrée (requête refusée) remonte en exception.
+  const g2 = gestion({ SUPABASE_PROJECT_REF: 'ref', SUPABASE_ACCESS_TOKEN: 'jeton' }, async () => ({ ok: true, status: 200, json: async () => ({ error: { message: 'Unknown function' } }) }));
+  await assert.rejects(g2.journaux('select x', debut, fin), /Unknown function/);
+  const g3 = gestion({ SUPABASE_PROJECT_REF: 'ref', SUPABASE_ACCESS_TOKEN: 'jeton' }, async () => ({ ok: false, status: 403, json: async () => ({}) }));
+  await assert.rejects(g3.journaux('select x', debut, fin), /403/);
 });

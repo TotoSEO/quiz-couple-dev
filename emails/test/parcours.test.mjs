@@ -4,7 +4,7 @@
 // Postgres ; ici, la file est donnée telle quelle.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { passage, jourParis, heureParis, versionPour } from '../parcours.mjs';
+import { passage, jourParis, heureParis, minuitParis, versionPour } from '../parcours.mjs';
 import { REGLAGES } from '../reglages.mjs';
 import { versionDe } from '../contenu.mjs';
 
@@ -567,4 +567,14 @@ test('le test A/B : un e2 dont l\'e1 est parti avant le premier soir du test res
   }
   // Hors test, tout le monde reçoit la version des réglages.
   assert.equal(versionPour({ type: 'e1' }, 'x@exemple.fr'), REGLAGES.version);
+});
+
+test('minuit à Paris, l\'hiver, l\'été, le jour du changement d\'heure et juste après minuit', () => {
+  const iso = (t) => new Date(t).toISOString();
+  assert.equal(iso(minuitParis(new Date('2026-10-29T09:43:00Z'))), '2026-10-28T23:00:00.000Z');
+  assert.equal(iso(minuitParis(new Date('2026-07-01T12:00:00Z'))), '2026-06-30T22:00:00.000Z');
+  // Le 25 octobre 2026, Paris repasse à l'heure d'hiver à 3 h : minuit était encore à l'heure d'été.
+  assert.equal(iso(minuitParis(new Date('2026-10-25T15:00:00Z'))), '2026-10-24T22:00:00.000Z');
+  // 23 h 30 UTC le 29, c'est déjà le 30 à Paris.
+  assert.equal(iso(minuitParis(new Date('2026-10-29T23:30:00Z'))), '2026-10-29T23:00:00.000Z');
 });
