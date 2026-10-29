@@ -73,6 +73,12 @@ export function angleDe(source) {
   return ANGLES.includes(g) ? g : 'general';
 }
 
+// La famille de chaque page à porte e-mail : l'envoi immédiat la lit dans
+// emails_reglages (emails/immediat.mjs).
+export function famillesDesSources() {
+  return Object.fromEntries(Object.keys(GROUPES).sort().map((s) => [s, angleDe(s)]));
+}
+
 export function textes(lang) {
   const t = TEXTES[lang];
   if (!t) throw new Error(`langue inconnue : ${lang}`);

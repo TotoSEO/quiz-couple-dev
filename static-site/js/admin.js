@@ -3409,7 +3409,7 @@
   // Une lecture, get_emails_tableau (par admin-stats) : les comptes de la
   // période (envoyés, remis, rebonds, plaintes, désinscriptions), les envois
   // par e-mail, langue et famille de test, la file et les derniers passages.
-  var NOMS_EMAILS = { e1: 'E-mail 1 (le lendemain)', e2: 'E-mail 2 (trois jours après)' };
+  var NOMS_EMAILS = { e1: 'E-mail 1 (tout de suite, sinon un soir)', e2: 'E-mail 2 (trois jours après)' };
   function loadEmails() {
     ['emails-detail', 'emails-passages'].forEach(function (id) { placeAbonnes(id, '<p class="text-center text-muted-foreground py-6">Chargement...</p>'); });
     return statsRpc('get_emails_tableau', { p_jours: 30 }).then(function (d) {
@@ -3428,7 +3428,7 @@
     var envoyes = somme('envoye');
     var remis = somme('remis');
     ecritAbonnes('emails-envoyes', nombreAb(envoyes));
-    ecritAbonnes('emails-envoyes-sub', 'e1 ' + nombreAb(c['e1:envoye']) + ' · e2 ' + nombreAb(c['e2:envoye']));
+    ecritAbonnes('emails-envoyes-sub', 'e1 ' + nombreAb(c['e1:envoye']) + (c['e1:immediat'] ? ' (dont ' + nombreAb(c['e1:immediat']) + ' tout de suite)' : '') + ' · e2 ' + nombreAb(c['e2:envoye']));
     ecritAbonnes('emails-remis', envoyes ? Math.round(100 * remis / envoyes) + ' %' : '—');
     ecritAbonnes('emails-remis-sub', nombreAb(remis) + ' remis · ' + nombreAb(somme('rebond_dur')) + ' rebonds durs · ' + nombreAb(somme('rebond_doux')) + ' doux');
     var sorties = somme('desinscription') + (c['autre:desinscription'] || 0);

@@ -8,7 +8,7 @@ import { essai, adresseVariante } from '../essai.mjs';
 import { REGLAGES } from '../reglages.mjs';
 import { clientBrevo } from '../brevo.mjs';
 
-function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], brouillons = [] } = {}) {
+function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], transactionnels = [], brouillons = [] } = {}) {
   const b = {
     appels: [],
     attributs: async () => ({ attributes: attributs.map((name) => ({ name })) }),
@@ -17,7 +17,7 @@ function fauxBrevo({ attributs = [], dossiers = [], listes = [], webhooks = [], 
     creerDossier: async (nom) => { b.appels.push(['creerDossier', nom]); const d = { id: 9, name: nom }; dossiers.push(d); return { id: 9 }; },
     listesDuDossier: async () => ({ lists: listes }),
     creerListe: async (nom, dossier) => { b.appels.push(['creerListe', nom, dossier]); const l = { id: 40 + listes.length, name: nom }; listes.push(l); return { id: l.id }; },
-    webhooks: async () => ({ webhooks }),
+    webhooks: async (type) => ({ webhooks: type === 'transactional' ? transactionnels : webhooks }),
     supprimerWebhook: async (id) => { b.appels.push(['supprimerWebhook', id]); },
     creerWebhook: async (corps) => { b.appels.push(['creerWebhook', corps]); return { id: 77 }; },
     campagnes: async () => ({ campaigns: brouillons }),
@@ -48,29 +48,51 @@ test('installer crée ce qui manque : champs, dossier, liste d\'essais, clé et 
   assert.equal(nom, 'BREVO_WEBHOOK_CLE');
   assert.ok(cle.length >= 30);
   assert.deepEqual(masques, [cle]);
-  const w = brevo.appels.find(([n]) => n === 'creerWebhook')[1];
+  const [w, wt] = brevo.appels.filter(([n]) => n === 'creerWebhook').map(([, x]) => x);
   assert.equal(w.type, 'marketing');
   assert.equal(w.url, `https://ref.supabase.co/functions/v1/brevo-webhook?cle=${cle}`);
   assert.deepEqual(w.events, EVENEMENTS_WEBHOOK);
+  // Le transactionnel (l'e1 immédiat) : la même adresse, la même clé.
+  assert.equal(wt.type, 'transactional');
+  assert.equal(wt.url, w.url);
+  assert.deepEqual(wt.events, EVENEMENTS_WEBHOOK);
+});
+
+test('installer pose la clé de l\'API chez Supabase et publie l\'e-mail immédiat', async () => {
+  const brevo = fauxBrevo({ attributs: [...REGLAGES.attributs], dossiers: [{ id: 3, name: REGLAGES.dossier }], listes: [{ id: 4, name: REGLAGES.listeEssais }] });
+  const supa = fauxSupa();
+  const ecrits = [];
+  const base = { insert: async (table, lignes, o) => { ecrits.push([table, lignes, o]); return lignes; } };
+  await installer({ brevo, supa, base, cleBrevo: 'xkeysib-essai', journal: silence });
+  assert.deepEqual(supa.poses.map(([n]) => n), ['BREVO_WEBHOOK_CLE', 'BREVO_API_KEY']);
+  assert.equal(supa.poses[1][1], 'xkeysib-essai');
+  const tables = ecrits.map(([t]) => t);
+  assert.deepEqual(tables, REGLAGES.immediat.actif && REGLAGES.mode === 'reel' ? ['emails_modeles', 'emails_reglages'] : ['emails_reglages']);
 });
 
 test('installer ne touche à rien quand tout est là, et refait la clé sur demande', async () => {
   const webhooks = [{ id: 5, url: 'https://ref.supabase.co/functions/v1/brevo-webhook?cle=x', events: EVENEMENTS_WEBHOOK }, { id: 6, url: 'https://ailleurs.test/hook', events: ['spam'] }];
+  const transactionnels = [{ id: 8, url: 'https://ref.supabase.co/functions/v1/brevo-webhook?cle=x', events: EVENEMENTS_WEBHOOK }];
   const etat = () => ({
     attributs: [...REGLAGES.attributs],
     dossiers: [{ id: 3, name: REGLAGES.dossier }],
     listes: [{ id: 4, name: REGLAGES.listeEssais }],
     webhooks,
+    transactionnels,
   });
   const brevo = fauxBrevo(etat());
   const supa = fauxSupa(['BREVO_WEBHOOK_CLE']);
   await installer({ brevo, supa, journal: silence });
   assert.deepEqual(brevo.appels, []);
   assert.deepEqual(supa.poses, []);
+  // Il manque le transactionnel : seul lui est créé, avec la clé du premier.
+  const brevo1 = fauxBrevo({ ...etat(), transactionnels: [] });
+  await installer({ brevo: brevo1, supa: fauxSupa(['BREVO_WEBHOOK_CLE']), journal: silence });
+  assert.deepEqual(brevo1.appels.map(([n, x]) => [n, x.type, x.url]), [['creerWebhook', 'transactional', webhooks[0].url]]);
   const brevo2 = fauxBrevo(etat());
   const supa2 = fauxSupa(['BREVO_WEBHOOK_CLE']);
   await installer({ brevo: brevo2, supa: supa2, nouvelleCle: true, journal: silence });
-  assert.deepEqual(brevo2.appels.filter(([n]) => n === 'supprimerWebhook'), [['supprimerWebhook', 5]], 'seul notre webhook est remplacé');
+  assert.deepEqual(brevo2.appels.filter(([n]) => n === 'supprimerWebhook'), [['supprimerWebhook', 5], ['supprimerWebhook', 8]], 'seuls nos webhooks sont remplacés');
   assert.equal(supa2.poses.length, 1);
   // Un webhook sans le secret chez Supabase : clé et webhook refaits.
   const brevo3 = fauxBrevo(etat());

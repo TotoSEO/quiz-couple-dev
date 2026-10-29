@@ -12,6 +12,20 @@
 //   → 400 { ok: false, code }     format, jetable, domaine, consentement, langue, source
 //   → 429 { ok: false, code: 'trop' }
 // GET  ?d=<jeton>[&lang=fr]      → la page de désinscription (HTML)
+// POST ?d=<jeton>                → 200, le désabonnement en un clic des
+//                                  messageries (RFC 8058, en-tête
+//                                  List-Unsubscribe-Post de l'e1 immédiat)
+//
+// L'e-mail 1 du parcours part d'ici (29 octobre 2026, Thomas : « Vas-y et non
+// pour brevo payant ») : une minute après l'adresse laissée, le temps de
+// donner son prénom, ou tout de suite quand le prénom arrive, par l'API
+// transactionnelle de Brevo (secret BREVO_API_KEY, posé par l'action
+// « installer » de brevo-reglages.yml). La réponse à la page n'attend rien :
+// l'envoi tourne après elle (EdgeRuntime.waitUntil). La base décide de tout
+// (emails_immediat_prendre : réglages, langue, plafond du jour, déjà parti,
+// évaluation, modèle) et réserve la ligne d'envoi ; quand Brevo refuse,
+// emails_immediat_resultat la rend et l'adresse attend le soir
+// (emails/parcours.mjs). Le journal ne garde jamais une adresse.
 //
 // Ce qui est contrôlé : la forme stricte de l'adresse, les fournisseurs
 // jetables, le domaine (un enregistrement MX ou A, tolérant quand le DNS ne
@@ -25,10 +39,12 @@
 // La table abonnes est fermée à la clé publique : tout passe par la clé de
 // service, ici. L'adresse IP n'est gardée qu'en empreinte salée.
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import {
   controleEmail, langueValide, sourceValide, pagePropre, hacheIp, pageDesinscription, prenomPropre, empreinte,
 } from '../_shared/abonnes/regles.mjs';
+import { corpsBrevo, BREVO_ENVOI } from '../_shared/emails/immediat.mjs';
+import { messageIdPropre } from '../_shared/emails/evenements.mjs';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -38,6 +54,11 @@ const corsHeaders = {
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const SEL = Deno.env.get('ABONNES_SEL') || SERVICE_KEY.slice(-16);
+const BREVO_API_KEY = Deno.env.get('BREVO_API_KEY') || '';
+// L'attente avant l'e1 immédiat : le prénom se donne juste après l'adresse,
+// sur le mot de merci, et l'e-mail commence par lui quand il est là. Bien en
+// dessous des 150 secondes qu'une fonction a pour finir sur l'offre gratuite.
+const ATTENTE_PRENOM_MS = 60_000;
 const TAILLE_MAX = 2048;
 // Trente par heure et par IP : derrière le NAT d'un opérateur mobile, une
 // adresse IP sert des dizaines de personnes à la fois ; et au 429 la page
@@ -61,13 +82,79 @@ function ipAutorisee(ip: string): boolean {
 // manquent (migration pas encore passée), l'adresse est gardée quand même,
 // simplement sans clé.
 const CLE_DUREE_MS = 3600_000;
-async function poserCle(supabase: ReturnType<typeof createClient>, email: string): Promise<string | null> {
+async function poserCle(supabase: SupabaseClient, email: string): Promise<string | null> {
   const cle = crypto.randomUUID().replace(/-/g, '') + crypto.randomUUID().replace(/-/g, '');
   const { error } = await supabase.from('abonnes')
     .update({ prenom_cle: await empreinte(cle), prenom_cle_le: new Date().toISOString() })
     .eq('email', email);
   if (error) { console.warn('[lead-capture] clé du prénom :', error.message); return null; }
   return cle;
+}
+
+// L'e1 immédiat d'une adresse, si la base le permet (voir l'en-tête).
+async function envoyerImmediat(supabase: SupabaseClient, email: string): Promise<void> {
+  const { data: d, error } = await supabase.rpc('emails_immediat_prendre', { p_email: email });
+  if (error) { console.error('[lead-capture] e-mail immédiat :', error.message); return; }
+  if (!d || !d.envoi) {
+    if (d && d.raison && !['arret', 'deja'].includes(d.raison)) console.log('[lead-capture] e-mail immédiat :', d.raison);
+    return;
+  }
+  const desinscription = `${SUPABASE_URL}/functions/v1/lead-capture?d=${encodeURIComponent(d.jeton)}&lang=${encodeURIComponent(d.lang)}`;
+  let ok = false;
+  let message = '';
+  let corps = '';
+  try {
+    corps = JSON.stringify(corpsBrevo(d, desinscription));
+  } catch (e) {
+    // Un modèle incomplet : rien n'est parti, la ligne est rendue.
+    console.error('[lead-capture] e-mail immédiat, modèle :', (e as Error).message);
+  }
+  if (corps) {
+    try {
+      const r = await fetch(BREVO_ENVOI, {
+        method: 'POST',
+        headers: { 'api-key': BREVO_API_KEY, 'content-type': 'application/json', accept: 'application/json' },
+        body: corps,
+        signal: AbortSignal.timeout(20_000),
+      });
+      const rep = await r.json().catch(() => null);
+      ok = r.ok;
+      if (r.ok) message = messageIdPropre(rep && rep.messageId);
+      // Le code de l'erreur seulement : le message de Brevo peut citer l'adresse.
+      else console.error('[lead-capture] e-mail immédiat refusé par Brevo :', r.status, String((rep && rep.code) || '').slice(0, 80));
+    } catch (e) {
+      // Sans réponse (délai, coupure), on ne sait pas si Brevo l'a envoyé : la
+      // ligne reste, pour que l'e1 ne parte jamais deux fois.
+      ok = true;
+      console.error('[lead-capture] e-mail immédiat sans réponse de Brevo :', (e as Error).name);
+    }
+  }
+  const { error: e2 } = await supabase.rpc('emails_immediat_resultat', { p_envoi: d.envoi, p_ok: ok, p_message: message || null });
+  if (e2) console.error('[lead-capture] e-mail immédiat, résultat :', e2.message);
+}
+
+function planifierImmediat(supabase: SupabaseClient, email: string, attenteMs: number): void {
+  if (!BREVO_API_KEY) return;
+  const tache = new Promise((r) => setTimeout(r, attenteMs))
+    .then(() => envoyerImmediat(supabase, email))
+    .catch((e) => console.error('[lead-capture] e-mail immédiat :', (e as Error).message));
+  // deno-lint-ignore no-explicit-any
+  const rt = (globalThis as any).EdgeRuntime;
+  if (rt && typeof rt.waitUntil === 'function') rt.waitUntil(tache);
+}
+
+// La désinscription par le jeton de la personne : vrai si elle vient de se
+// faire, faux si l'adresse était déjà désinscrite ; null pour un jeton inconnu.
+async function desinscrire(supabase: SupabaseClient, jeton: string): Promise<{ trouve: boolean, lang: string | null } | null> {
+  if (!/^[a-f0-9]{16,64}$/.test(jeton)) return null;
+  const { data } = await supabase.from('abonnes').select('id, statut, lang').eq('jeton', jeton).maybeSingle();
+  if (!data) return null;
+  const trouve = data.statut !== 'desinscrit';
+  if (trouve) {
+    const maintenant = new Date().toISOString();
+    await supabase.from('abonnes').update({ statut: 'desinscrit', desinscrit_le: maintenant, maj_le: maintenant }).eq('id', data.id);
+  }
+  return { trouve, lang: data.lang || null };
 }
 
 function json(code: number, corps: unknown): Response {
@@ -100,23 +187,21 @@ serve(async (req: Request) => {
 
   // ── La désinscription ──
   if (req.method === 'GET') {
-    const jeton = (url.searchParams.get('d') || '').trim();
     const lang = langueValide(url.searchParams.get('lang') || '') || 'fr';
-    let trouve = false;
-    if (/^[a-f0-9]{16,64}$/.test(jeton)) {
-      const { data } = await supabase.from('abonnes').select('id, statut, lang').eq('jeton', jeton).maybeSingle();
-      if (data) {
-        trouve = data.statut !== 'desinscrit';
-        if (trouve) {
-          await supabase.from('abonnes').update({ statut: 'desinscrit', desinscrit_le: new Date().toISOString(), maj_le: new Date().toISOString() }).eq('id', data.id);
-        }
-        return new Response(pageDesinscription(data.lang || lang, trouve), { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
-      }
-    }
-    return new Response(pageDesinscription(lang, false), { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
+    const fait = await desinscrire(supabase, (url.searchParams.get('d') || '').trim());
+    return new Response(pageDesinscription((fait && fait.lang) || lang, !!(fait && fait.trouve)), {
+      status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
+    });
   }
 
   if (req.method !== 'POST') return json(405, { ok: false, code: 'methode' });
+
+  // Le désabonnement en un clic : la messagerie envoie
+  // « List-Unsubscribe=One-Click » à l'adresse du lien, sans autre en-tête.
+  if (url.searchParams.has('d')) {
+    await desinscrire(supabase, (url.searchParams.get('d') || '').trim());
+    return new Response(null, { status: 200 });
+  }
   const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || req.headers.get('cf-connecting-ip') || 'inconnue';
   const texte = await req.text();
   if (texte.length > TAILLE_MAX) return json(413, { ok: false, code: 'taille' });
@@ -144,6 +229,7 @@ serve(async (req: Request) => {
       .update({ prenom, prenom_cle: null, prenom_cle_le: null, maj_le: new Date().toISOString() })
       .eq('id', ab.id);
     if (error) { console.error('[lead-capture] prénom :', error.message); return json(500, { ok: false, code: 'serveur' }); }
+    planifierImmediat(supabase, ctrlP.email as string, 0);
     return json(200, { ok: true, prenom });
   }
 
@@ -172,7 +258,8 @@ serve(async (req: Request) => {
     if (existant.statut === 'desinscrit') Object.assign(champs, { statut: 'actif', consent_at: maintenant, desinscrit_le: null });
     const { error } = await supabase.from('abonnes').update(champs).eq('id', existant.id);
     if (error) console.error('[lead-capture] maj :', error.message);
-    return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email) });
+    else planifierImmediat(supabase, ctrl.email as string, ATTENTE_PRENOM_MS);
+    return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email as string) });
   }
   const { error } = await supabase.from('abonnes').insert({
     email: ctrl.email, lang, source, page, statut: 'actif', consent_at: maintenant, ip_hash: ipHash,
@@ -184,5 +271,6 @@ serve(async (req: Request) => {
     console.error('[lead-capture] insertion :', error.message);
     return json(500, { ok: false, code: 'serveur' });
   }
-  return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email) });
+  planifierImmediat(supabase, ctrl.email as string, ATTENTE_PRENOM_MS);
+  return json(200, { ok: true, cle: await poserCle(supabase, ctrl.email as string) });
 });

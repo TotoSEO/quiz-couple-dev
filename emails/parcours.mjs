@@ -5,6 +5,9 @@
 //   node emails/parcours.mjs [--blanc] [--forcer]
 //
 // Dans l'ordre :
+//   0. les réglages et les modèles de l'e1 envoyé dans la minute par
+//      lead-capture (emails/immediat.mjs), à chaque passage, même hors de la
+//      fenêtre ou en mode « arret » (qui l'arrête), jamais à blanc ;
 //   1. le mode (REGLAGES.mode, ou --blanc) et l'heure (fenêtre de
 //      REGLAGES, sauf --forcer) ;
 //   2. le passage du jour (emails_passages) : un seul par soir ;
@@ -28,6 +31,7 @@ import { REGLAGES } from './reglages.mjs';
 import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { connexion } from './base.mjs';
 import { campagne, attributsContact, angleDe, versionDe, LANGUES, TYPES } from './contenu.mjs';
+import { publierImmediat, modeles } from './immediat.mjs';
 
 const fmt = (options) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', ...options });
 export const jourParis = (instant) => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
@@ -310,6 +314,21 @@ async function reconcilier(base, brevo) {
 export async function passage({ base, brevo, maintenant = new Date(), mode = REGLAGES.mode, forcer = false, journal = (m) => console.log(m), pause = attendre }) {
   const jour = jourParis(maintenant);
   const bilan = { mode, jour, credits: null, limite: 0, file: 0, envois: {}, refuses: 0 };
+  // L'e1 immédiat : ses réglages, et ses modèles quand il est actif, refaits
+  // à chaque passage pour qu'ils ne périment pas (30 heures). Un échec ne
+  // retient pas l'envoi du soir : lead-capture s'arrête seul quand ses
+  // modèles sont périmés, et la file du soir reprend ses adresses.
+  if (mode === 'blanc') {
+    journal(`[blanc] e-mail immédiat : ${modeles(maintenant).length} modèles rendus, rien d'écrit.`);
+  } else {
+    try {
+      bilan.immediat = await publierImmediat(base, { instant: maintenant, mode });
+      journal(`E-mail immédiat : ${bilan.immediat.actif ? `actif, ${bilan.immediat.modeles} modèles écrits` : 'arrêté'}.`);
+    } catch (e) {
+      bilan.immediat = { erreur: true };
+      journal(`E-mail immédiat : réglages et modèles non écrits (${e.message}).`);
+    }
+  }
   if (mode === 'arret') {
     journal('Mode « arret » : rien à faire.');
     return bilan;

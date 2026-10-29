@@ -100,6 +100,13 @@ export function clientBrevo(cle, { fetch: f = globalThis.fetch, pause = attendre
     envoyerMaintenant: (id) => appel('POST', `/emailCampaigns/${enc(id)}/sendNow`),
     envoyerEssai: (id, emails) => appel('POST', `/emailCampaigns/${enc(id)}/sendTest`, { emailTo: emails }),
     supprimerCampagne: (id) => appel('DELETE', '/emailCampaigns/' + enc(id)),
+    // Un e-mail transactionnel (l'e1 immédiat, ici pour son essai) : 201
+    // { messageId }. Celui de lead-capture part de la fonction elle-même.
+    envoyerTransactionnel: (corps) => appel('POST', '/smtp/email', corps),
+    // Les chiffres d'ensemble des e-mails transactionnels d'une étiquette
+    // (requests, delivered, uniqueOpens, uniqueClicks...), jamais par personne.
+    statsTransactionnelles: ({ debut, fin, tag }) => appel('GET',
+      `/smtp/statistics/aggregatedReport?startDate=${enc(debut)}&endDate=${enc(fin)}${tag ? '&tag=' + enc(tag) : ''}`),
   };
 }
 

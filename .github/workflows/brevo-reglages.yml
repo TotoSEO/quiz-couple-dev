@@ -7,11 +7,17 @@ name: E-mails · Brevo
 #               manque, puis le bilan du test A/B par version. Rien n'est
 #               écrit.
 #   installer : crée ce qui manque chez Brevo (champs, dossier, liste
-#               « Essais », webhook) et pose la clé du webhook chez Supabase
-#               (BREVO_WEBHOOK_CLE). Sans risque à relancer.
+#               « Essais », webhooks des campagnes et transactionnel), pose la
+#               clé des webhooks et celle de l'API chez Supabase
+#               (BREVO_WEBHOOK_CLE, BREVO_API_KEY), et écrit les réglages et
+#               les modèles de l'e1 immédiat. Sans risque à relancer.
 #   essai     : envoie les e-mails du parcours en test à « adresse » (une
 #               adresse +variante par famille de test et par version du
 #               test A/B, même boîte). Brevo en permet 50 par jour.
+#   essai-immediat : envoie l'e1 tel que lead-capture l'envoie dans la
+#               minute, par l'API transactionnelle, à « adresse » (une
+#               adresse +immediat par langue et par version, même boîte) :
+#               de quoi voir que Brevo accepte l'envoi et où il arrive.
 #   blanc     : un passage du soir à blanc, à n'importe quelle heure : qui
 #               recevrait quoi ce soir, sans rien envoyer ni écrire.
 #
@@ -22,7 +28,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'verif, installer, essai ou blanc'
+        description: 'verif, installer, essai, essai-immediat ou blanc'
         required: true
         default: 'verif'
         type: choice
@@ -30,6 +36,7 @@ on:
           - verif
           - installer
           - essai
+          - essai-immediat
           - blanc
       adresse:
         description: 'essai : adresse qui reçoit les essais'
@@ -40,7 +47,7 @@ on:
         required: false
         default: 'e1,e2'
       langues:
-        description: 'essai : langues (fr,en,es,de,it)'
+        description: 'essai et essai-immediat : langues (fr,en,es,de,it)'
         required: false
         default: 'fr'
       angles:
@@ -77,6 +84,7 @@ jobs:
             emails
             static-site/build
             supabase/functions/_shared/bilan
+            supabase/functions/_shared/emails
             fr
             en
             es
@@ -101,6 +109,14 @@ jobs:
           PRENOM: ${{ inputs.prenom }}
           VERSIONS: ${{ inputs.versions }}
         run: node emails/essai.mjs "$ADRESSE" "$TYPES" "$LANGUES" "$ANGLES" "$PRENOM" "$VERSIONS"
+      - name: Essai de l'e-mail immédiat
+        if: inputs.action == 'essai-immediat'
+        env:
+          ADRESSE: ${{ inputs.adresse }}
+          LANGUES: ${{ inputs.langues }}
+          PRENOM: ${{ inputs.prenom }}
+          VERSIONS: ${{ inputs.versions }}
+        run: node emails/immediat.mjs essai "$ADRESSE" "$LANGUES" "$PRENOM" "$VERSIONS"
       - name: Passage à blanc
         if: inputs.action == 'blanc'
         run: node emails/parcours.mjs --blanc --forcer

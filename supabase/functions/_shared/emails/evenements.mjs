@@ -1,14 +1,17 @@
-// Les événements du webhook « marketing » de Brevo, traduits pour
-// emails_evenement (migration 20261024120000_emails_parcours.sql).
-// JavaScript pur : la fonction brevo-webhook (Deno) et les tests (Node)
-// lisent ce fichier.
+// Les événements des webhooks de Brevo, traduits pour emails_evenement
+// (migrations 20261024120000_emails_parcours.sql et
+// 20261029120000_emails_immediat.sql). JavaScript pur : la fonction
+// brevo-webhook (Deno) et les tests (Node) lisent ce fichier.
 //
 // Brevo écrit un événement de deux façons : à la création du webhook
 // (hardBounce, unsubscribed...) et dans ce qu'il envoie (hard_bounce,
-// unsubscribe...) ; on accepte les deux. Un événement porte l'adresse
-// (`email`), la campagne (`camp_id`) et `event` ; il n'a pas d'identifiant
-// propre, d'où des états idempotents côté base. En mode groupé, le corps
-// est une liste d'événements.
+// unsubscribe...) ; on accepte les deux. Un événement du webhook
+// « marketing » porte l'adresse (`email`), la campagne (`camp_id`) et
+// `event` ; celui du webhook « transactionnel » (l'e1 envoyé dans la minute
+// par lead-capture) porte l'identifiant du message (`message-id`) à la
+// place de la campagne. Aucun des deux n'a d'identifiant d'événement, d'où
+// des états idempotents côté base. En mode groupé, le corps est une liste
+// d'événements.
 
 const TRADUCTION = {
   delivered: 'remis',
@@ -27,8 +30,17 @@ export function traduire(evenement) {
   return Object.prototype.hasOwnProperty.call(TRADUCTION, evenement) ? TRADUCTION[evenement] : null;
 }
 
-// Un événement reçu → { email, campagne, evenement }, ou null s'il n'y a
-// rien à faire.
+// L'identifiant d'un message transactionnel, tel que la réponse de l'envoi
+// et le webhook l'écrivent (« <2026...@smtp-relay.mailin.fr> ») : sans les
+// chevrons ni les blancs, 300 signes au plus, rien d'autre que des signes
+// visibles. Chaîne vide sinon.
+export function messageIdPropre(brut) {
+  const s = String(brut ?? '').trim().replace(/^<+/, '').replace(/>+$/, '');
+  return /^[\x21-\x7e]{1,300}$/.test(s) ? s : '';
+}
+
+// Un événement reçu → { email, campagne, evenement, message }, ou null s'il
+// n'y a rien à faire.
 export function lireEvenement(e) {
   if (!e || typeof e !== 'object' || Array.isArray(e)) return null;
   const evenement = traduire(String(e.event || ''));
@@ -36,7 +48,8 @@ export function lireEvenement(e) {
   if (!evenement || !email || email.length > 254 || !/^[^\s@]+@[^\s@]+$/.test(email)) return null;
   const id = Number(e.camp_id ?? e.campaign_id);
   const campagne = Number.isSafeInteger(id) && id > 0 ? id : null;
-  return { email, campagne, evenement };
+  const message = campagne ? null : messageIdPropre(e['message-id'] ?? e.message_id ?? e.messageId) || null;
+  return { email, campagne, evenement, message };
 }
 
 // Le corps d'une requête : un événement, ou une liste (webhook groupé).

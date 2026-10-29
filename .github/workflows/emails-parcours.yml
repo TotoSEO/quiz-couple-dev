@@ -1,8 +1,11 @@
 name: E-mails · envoi du soir
 
 # Le parcours e-mail des abonnés (emails/parcours.mjs, docs/emailing) :
-# vers 19 h à Paris, « e1 » le lendemain de l'adresse laissée, « e2 » trois
-# jours après, par des campagnes Brevo. Ce que fait le passage dépend du
+# vers 19 h à Paris, « e2 » trois jours après « e1 », et « e1 » pour les
+# adresses que l'envoi immédiat de lead-capture n'a pas servies (l'espagnol,
+# le plafond du jour, un refus de Brevo), dans les sept jours, par des
+# campagnes Brevo. Chaque passage réécrit aussi les réglages et les modèles
+# de l'e1 immédiat (emails/immediat.mjs). Ce que fait le passage dépend du
 # mode écrit dans emails/reglages.mjs (arret, blanc, reel).
 #
 # L'horloge est pg_cron (emails_lancer, migration 20261024120000), qui
@@ -45,6 +48,7 @@ jobs:
             emails
             static-site/build
             supabase/functions/_shared/bilan
+            supabase/functions/_shared/emails
             fr
             en
             es
