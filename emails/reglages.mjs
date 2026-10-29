@@ -67,4 +67,20 @@ export const REGLAGES = {
   // enfonce le domaine. On l'enlève par une PR quand les ouvertures
   // reviennent (« verif »).
   retenue: 100,
+  // L'e-mail 1 envoyé dans la minute (29 octobre 2026, Thomas : « Vas-y et
+  // non pour brevo payant ») : lead-capture l'envoie par l'API
+  // transactionnelle de Brevo une minute après l'adresse laissée (ou dès que
+  // le prénom est donné), au lieu d'attendre un soir ; l'envoi du soir garde
+  // les e2 et ce que l'envoi immédiat n'a pas fait. `parJour` (jour de Paris)
+  // laisse au soir sa place dans les 300 envois quotidiens de l'offre
+  // gratuite : 180 + la retenue (100) + la marge (10) = 290. `langues` : pas
+  // l'espagnol, à qui l'e-mail ne peut pas dire son prix (celui de l'Amérique
+  // latine, 27 octobre 2026) ; ses e1 passent le soir après les e2. La base
+  // lit ces réglages dans emails_reglages, que chaque passage du soir
+  // réécrit (emails/immediat.mjs) : un changement ici vaut au passage
+  // suivant, ou tout de suite par l'action « installer » de
+  // brevo-reglages.yml. Le mode « arret » arrête aussi l'envoi immédiat.
+  // Depuis le même jour, la file du soir ne garde un e1 que sept jours après
+  // l'adresse (migration 20261029120000_emails_immediat.sql).
+  immediat: { actif: true, parJour: 180, langues: ['en', 'fr', 'it', 'de'] },
 };

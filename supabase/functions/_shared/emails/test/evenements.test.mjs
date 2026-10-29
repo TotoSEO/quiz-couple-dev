@@ -1,7 +1,7 @@
 // node --test supabase/functions/_shared/emails/test/
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { traduire, lireEvenement, lireCorps, cleValide, EVENEMENTS_MAX } from '../evenements.mjs';
+import { traduire, lireEvenement, lireCorps, cleValide, messageIdPropre, EVENEMENTS_MAX } from '../evenements.mjs';
 
 test('les noms de Brevo, à la création comme à l\'envoi', () => {
   assert.equal(traduire('delivered'), 'remis');
@@ -20,9 +20,9 @@ test('les noms de Brevo, à la création comme à l\'envoi', () => {
 test('un événement : adresse en minuscules, campagne numérique', () => {
   assert.deepEqual(
     lireEvenement({ event: 'delivered', email: ' Julie@Exemple.FR ', camp_id: 42, campaign_name: 'x', tag: 'parcours-e1', ts_event: 1 }),
-    { email: 'julie@exemple.fr', campagne: 42, evenement: 'remis' },
+    { email: 'julie@exemple.fr', campagne: 42, evenement: 'remis', message: null },
   );
-  assert.deepEqual(lireEvenement({ event: 'unsubscribe', email: 'a@b.fr', camp_id: '17' }), { email: 'a@b.fr', campagne: 17, evenement: 'desinscription' });
+  assert.deepEqual(lireEvenement({ event: 'unsubscribe', email: 'a@b.fr', camp_id: '17' }), { email: 'a@b.fr', campagne: 17, evenement: 'desinscription', message: null });
   assert.equal(lireEvenement({ event: 'spam', email: 'a@b.fr' }).campagne, null);
   assert.equal(lireEvenement({ event: 'spam', email: 'a@b.fr', camp_id: 'abc' }).campagne, null);
   assert.equal(lireEvenement({ event: 'opened', email: 'a@b.fr', camp_id: 1 }), null);
@@ -49,4 +49,31 @@ test('la clé du webhook', () => {
   assert.equal(cleValide(null, 'abc123'), false);
   assert.equal(cleValide('', ''), false);
   assert.equal(cleValide('x', ''), false);
+});
+
+test('le webhook transactionnel : l\'identifiant du message à la place de la campagne', () => {
+  // Le corps qu'envoie Brevo pour un e-mail transactionnel (l'e1 immédiat).
+  const e = { event: 'delivered', email: 'Julie@exemple.fr', id: 26224, date: '2026-10-29 10:12:01', ts: 1, 'message-id': '<202610291012.12345678901@smtp-relay.mailin.fr>', ts_event: 1, subject: 'x', tag: '["parcours-e1-a"]', sending_ip: '1.2.3.4', ts_epoch: 1, tags: ['parcours-e1-a'] };
+  assert.deepEqual(lireEvenement(e), { email: 'julie@exemple.fr', campagne: null, evenement: 'remis', message: '202610291012.12345678901@smtp-relay.mailin.fr' });
+  assert.equal(lireEvenement({ ...e, event: 'hard_bounce' }).evenement, 'rebond_dur');
+  assert.equal(lireEvenement({ ...e, event: 'soft_bounce' }).evenement, 'rebond_doux');
+  assert.equal(lireEvenement({ ...e, event: 'unsubscribed' }).evenement, 'desinscription');
+  for (const x of ['request', 'opened', 'unique_opened', 'click', 'deferred', 'blocked', 'proxy_open']) assert.equal(lireEvenement({ ...e, event: x }), null, x);
+  // Une campagne l'emporte : son numéro suffit.
+  assert.equal(lireEvenement({ ...e, camp_id: 9 }).message, null);
+  // Un identifiant illisible est ignoré, pas l'événement.
+  assert.equal(lireEvenement({ ...e, 'message-id': 'a b' }).message, null);
+  assert.equal(lireEvenement({ ...e, 'message-id': undefined }).message, null);
+});
+
+test('l\'identifiant d\'un message : sans chevrons ni blancs, 300 signes visibles au plus', () => {
+  assert.equal(messageIdPropre('<abc.123@smtp-relay.mailin.fr>'), 'abc.123@smtp-relay.mailin.fr');
+  assert.equal(messageIdPropre('  abc@x  '), 'abc@x');
+  assert.equal(messageIdPropre('<<abc@x>>'), 'abc@x');
+  assert.equal(messageIdPropre(''), '');
+  assert.equal(messageIdPropre(null), '');
+  assert.equal(messageIdPropre('a b@x'), '');
+  assert.equal(messageIdPropre('é@x'), '');
+  assert.equal(messageIdPropre('a'.repeat(300)), 'a'.repeat(300));
+  assert.equal(messageIdPropre('a'.repeat(301)), '');
 });

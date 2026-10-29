@@ -1,15 +1,18 @@
 // La vérification du parcours e-mail, en lecture seule (workflow
 // brevo-reglages.yml, action « verif ») : le compte Brevo (domaine,
-// expéditeur, champs, dossier, liste d'essais, webhook), la fonction
-// brevo-webhook et sa clé chez Supabase, le mode écrit dans reglages.mjs,
-// la file du soir et les derniers envois. Rien n'est écrit. Le rapport ne
-// montre ni clé ni adresse de contact.
+// expéditeur, champs, dossier, liste d'essais, webhooks), la fonction
+// brevo-webhook et sa clé chez Supabase, l'e1 envoyé dans la minute par
+// lead-capture (API transactionnelle, clé, réglages, modèles, envois du
+// jour), le mode écrit dans reglages.mjs, la file du soir et les derniers
+// envois. Rien n'est écrit. Le rapport ne montre ni clé ni adresse de contact.
 //
 //   BREVO_API_KEY=... [SUPABASE_ACCESS_TOKEN=... SUPABASE_PROJECT_REF=...] node emails/verif.mjs
 
 import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { REGLAGES } from './reglages.mjs';
 import { EVENEMENTS_WEBHOOK } from './installer.mjs';
+import { jourParis } from './parcours.mjs';
+import { etiquette } from '../supabase/functions/_shared/emails/immediat.mjs';
 
 const brevo = clientBrevo(process.env.BREVO_API_KEY);
 const avecSupabase = !!(process.env.SUPABASE_ACCESS_TOKEN && process.env.SUPABASE_PROJECT_REF);
@@ -100,6 +103,58 @@ await etape('La fonction brevo-webhook', async () => {
   else if (r.status === 503) ko('déployée, mais sans le secret BREVO_WEBHOOK_CLE (action « installer »)');
   else if (r.status === 404) ko('pas encore déployée (deploy-functions.yml)');
   else ko(`réponse inattendue : ${r.status}`);
+});
+
+// L'e1 envoyé dans la minute (29 octobre 2026) : l'API transactionnelle de
+// Brevo, son webhook, la clé chez Supabase, les réglages et les modèles que
+// lit la base, et ce qui est parti aujourd'hui.
+await etape('L\'e-mail immédiat', async () => {
+  const i = REGLAGES.immediat || {};
+  info(`${i.actif && REGLAGES.mode === 'reel' ? 'actif' : 'arrêté'} dans emails/reglages.mjs · ${i.parJour} par jour au plus · ${(i.langues || []).join(', ')}`);
+  const c = await brevo.compte();
+  if (c.relay && typeof c.relay.enabled === 'boolean') {
+    (c.relay.enabled ? ok : ko)(`API transactionnelle de Brevo ${c.relay.enabled ? 'active' : 'pas activée (Brevo > Transactionnel)'}`);
+  } else info('API transactionnelle de Brevo : état non donné par le compte (l\'action « essai-immediat » le dira)');
+  const w = await brevo.webhooks('transactional');
+  const liste = w.webhooks || [];
+  for (const x of liste) info(`${String(x.url).replace(/cle=[^&]+/, 'cle=…')} : ${(x.events || []).join(', ')}`);
+  const nos = liste.filter((x) => String(x.url).includes('/functions/v1/brevo-webhook'));
+  if (!nos.length) ko('webhook transactionnel vers notre base absent (créé par l\'action « installer ») : sans lui, aucun e2 ne suit un e1 immédiat');
+  else {
+    const manque = EVENEMENTS_WEBHOOK.filter((e) => !(nos[0].events || []).includes(e));
+    (manque.length || nos.length > 1 ? ko : ok)(`webhook transactionnel vers notre base${manque.length ? ` sans ${manque.join(', ')}` : ''}${nos.length > 1 ? ` (${nos.length}, un seul attendu)` : ''}`);
+  }
+  if (!avecSupabase) return info('SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF absents : réglages et modèles non lus');
+  const { gestion } = await import('./supabase-gestion.mjs');
+  const secrets = await gestion().nomsDesSecrets();
+  (secrets.has('BREVO_API_KEY') ? ok : ko)(`clé de l'API Brevo chez Supabase (BREVO_API_KEY)${secrets.has('BREVO_API_KEY') ? '' : ' absente : lead-capture n\'envoie rien (action « installer »)'}`);
+  const { connexion } = await import('./base.mjs');
+  const base = await connexion();
+  const [r] = (await base.select('emails_reglages', 'select=valeur,maj_le&cle=eq.immediat')) || [];
+  if (!r) ko('réglages absents de la base (emails_reglages) : écrits par le passage du soir ou par « installer »');
+  else info(`réglages de la base (${r.maj_le}) : ${r.valeur.actif ? 'actif' : 'arrêté'}, ${r.valeur.parJour} par jour, ${(r.valeur.langues || []).join(', ')}`);
+  const m = (await base.select('emails_modeles', 'select=lang,version,promo,valide_jusqu_a&type=eq.e1&order=lang,version')) || [];
+  const valides = m.filter((x) => Date.parse(x.valide_jusqu_a) > Date.now());
+  const attendus = (i.langues || []).length * 2;
+  (valides.length >= attendus && attendus ? ok : ko)(`modèles valides : ${valides.length} (${valides.map((x) => `${x.lang} ${x.version}`).join(', ') || 'aucun'})${valides.length ? `, jusqu'au ${valides[0].valide_jusqu_a}` : ''}`);
+  const jour = jourParis(new Date());
+  const envois = (await base.select('emails_envois', `select=remis_le,message_id,rebond_doux_le&immediat=is.true&jour=eq.${jour}`)) || [];
+  info(`aujourd'hui (${jour}) : ${envois.length} parti(s) tout de suite, ${envois.filter((x) => x.message_id).length} avec l'identifiant du message, ${envois.filter((x) => x.remis_le).length} remis, ${envois.filter((x) => x.rebond_doux_le).length} rebond(s) doux`);
+});
+
+// Les chiffres d'ensemble des e1 immédiats, par version du test A/B
+// (étiquette de chaque envoi), depuis le premier jour : jamais par personne.
+await etape('L\'e-mail immédiat, en chiffres', async () => {
+  const fin = new Date().toISOString().slice(0, 10);
+  for (const version of ['a', 'b']) {
+    try {
+      const s = await brevo.statsTransactionnelles({ debut: '2026-10-29', fin, tag: etiquette(version) });
+      const champs = ['requests', 'delivered', 'uniqueOpens', 'uniqueClicks', 'hardBounces', 'softBounces', 'spamReports', 'unsubscribed', 'blocked'];
+      info(`${version === 'b' ? 'sobre   ' : 'maquette'} : ${champs.map((f) => `${f} ${Number((s || {})[f]) || 0}`).join(' · ')}`);
+    } catch (e) {
+      info(`${version} : statistiques illisibles (${e.message})`);
+    }
+  }
 });
 
 await etape('La file du soir', async () => {

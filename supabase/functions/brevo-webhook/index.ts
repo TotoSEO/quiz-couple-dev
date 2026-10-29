@@ -1,9 +1,12 @@
-// Le webhook des campagnes Brevo du parcours e-mail (emails/,
+// Les webhooks Brevo du parcours e-mail (emails/,
 // docs/emailing/CONCEPTION.md). Brevo y envoie, pour chaque contact d'une
-// campagne : remis, rebond doux ou dur, plainte, désinscription (webhook
-// « marketing » créé par emails/installer.mjs, la clé dans l'adresse :
-// ?cle=…, secret BREVO_WEBHOOK_CLE). Chaque événement passe par
-// emails_evenement, qui tient l'état des envois et les comptes.
+// campagne (webhook « marketing ») et pour chaque e1 envoyé dans la minute
+// par lead-capture (webhook « transactionnel », depuis le 29 octobre 2026) :
+// remis, rebond doux ou dur, plainte, désinscription. Les deux webhooks sont
+// créés par emails/installer.mjs, avec la même clé dans l'adresse (?cle=…,
+// secret BREVO_WEBHOOK_CLE). Chaque événement passe par emails_evenement,
+// qui tient l'état des envois et les comptes : une campagne par son numéro,
+// un e-mail transactionnel par l'identifiant de son message.
 //
 // Réponses : 200 traité (même quand l'adresse n'est pas chez nous, ou que
 // le corps ne se lit pas), 401 clé absente ou fausse, 405 autre méthode,
@@ -38,9 +41,10 @@ serve(async (req) => {
   const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSession: false } });
   const bilan: Record<string, number> = {};
   for (const e of evenements) {
-    const { data, error } = await supabase.rpc('emails_evenement', {
-      p_email: e.email, p_campagne: e.campagne, p_evenement: e.evenement,
-    });
+    if (!e) continue;
+    const args: Record<string, unknown> = { p_email: e.email, p_campagne: e.campagne, p_evenement: e.evenement };
+    if (e.message) args.p_message = e.message;
+    const { data, error } = await supabase.rpc('emails_evenement', args);
     if (error) {
       // Les événements déjà passés ne bougeront pas au nouvel essai de
       // Brevo : chaque état ne change qu'une fois.

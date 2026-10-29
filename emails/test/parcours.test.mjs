@@ -37,7 +37,7 @@ function filtre(requete) {
 
 class FausseBase {
   constructor({ file = [], abonnes = [] } = {}) {
-    this.t = { emails_envois: [], emails_passages: [], abonnes: abonnes.map((a) => ({ statut: 'actif', ...a })) };
+    this.t = { emails_envois: [], emails_passages: [], emails_modeles: [], emails_reglages: [], abonnes: abonnes.map((a) => ({ statut: 'actif', ...a })) };
     this.file = file;
     this.compteurs = {};
     this.evenements = [];
@@ -49,9 +49,13 @@ class FausseBase {
     const faites = [];
     for (const l of lignes) {
       const cles = conflit ? conflit.split(',') : [];
-      if (cles.length && this.t[table].some((r) => cles.every((k) => r[k] === l[k]))) {
+      const i = cles.length ? this.t[table].findIndex((r) => cles.every((k) => r[k] === l[k])) : -1;
+      if (i >= 0) {
         if (ignorer) continue;
-        throw new Error('conflit');
+        // Sans « ignorer », PostgREST fusionne (resolution=merge-duplicates).
+        Object.assign(this.t[table][i], l);
+        faites.push({ ...this.t[table][i] });
+        continue;
       }
       const ligne = table === 'emails_envois'
         ? { id: uuid(), statut: 'prepare', cree_le: new Date().toISOString(), campagne_id: null, liste_id: null, ...l }
@@ -169,13 +173,16 @@ test('l\'heure et le jour se lisent à Paris', () => {
   assert.equal(heureParis(new Date('2026-12-01T18:00:00Z')), '19:00');
 });
 
-test('mode « arret » : rien n\'est lu ni envoyé', async () => {
+test('mode « arret » : rien n\'est lu ni envoyé, et l\'e-mail immédiat s\'arrête aussi', async () => {
   const base = new FausseBase({ file: [candidat(1, 'e1', 'fr', 'toxique')] });
   const brevo = new FauxBrevo();
   const b = await passage({ base, brevo, maintenant: SOIR, mode: 'arret', journal: silence });
   assert.equal(b.file, 0);
   assert.equal(brevo.appels.length, 0);
-  assert.equal(base.ecritures, 0);
+  // La seule écriture : les réglages de l'e-mail immédiat, arrêté.
+  assert.equal(base.ecritures, 1);
+  assert.equal(base.t.emails_reglages[0].valeur.actif, false);
+  assert.equal(base.t.emails_modeles.length, 0);
 });
 
 test('hors de la fenêtre du soir : rien, sauf si on force', async () => {

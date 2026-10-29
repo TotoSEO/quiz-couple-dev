@@ -194,7 +194,7 @@ bon. »
 
 | E-mail | Quand | À qui |
 |---|---|---|
-| `e1` | le soir, vers 19 h à Paris, au moins 18 heures après l'adresse (le lendemain, ou le surlendemain pour une adresse laissée après 1 h du matin), au plus 60 jours | toute adresse active dont la source n'est pas l'e-book |
+| `e1` | depuis le 29 octobre 2026, dans la minute qui suit l'adresse (lead-capture, anglais, français, italien et allemand, 180 par jour au plus) ; sinon le soir, vers 19 h à Paris, au moins 18 heures après l'adresse, au plus 7 jours (60 jusqu'au 29 octobre) | toute adresse active dont la source n'est pas l'e-book |
 | `e2` | le soir, au moins 66 heures après `e1` (trois jours), au plus 30 jours | seulement si Brevo a dit que `e1` était remis, sans rebond, plainte ni désinscription |
 
 Personne ne reçoit rien dès que son adresse est dans une évaluation (donnée
@@ -393,6 +393,85 @@ de `verif` (chiffres d'ensemble des campagnes, jamais une personne) :
 - **La suite :** le test A/B continue ; on le relit, e2 compris, quand les
   ouvertures reviennent, et on enlève alors la retenue par une PR
   (`retenue: null`).
+
+### 29 octobre 2026 : l'e1 dans la minute, la file sur sept jours
+
+Thomas demandait si l'on exploitait assez les quotas : le soir n'envoyait
+que 100 e-mails sur les 300 de l'offre gratuite, et plus de mille
+attendaient. La lecture de ce matin-là (`verif` et `get_emails_tableau`) :
+
+- **Le volume dépasse l'offre gratuite :** environ 220 nouvelles adresses
+  par jour (781 `e1` en attente le 24 au soir, 1 146 le 29 au matin, plus
+  650 envoyés entre-temps). Deux e-mails par adresse, c'est environ 400
+  envois par jour, plus que les 300 de l'offre gratuite, quel que soit le
+  réglage. Aucun des 236 `e2` en attente n'était encore parti.
+- **Presque personne n'ouvre :** hors Apple Mail, 10 ouvertures sur 91
+  e-mails remis le premier soir, puis environ 6 sur 500. Le lot du 28 au
+  soir, lu le lendemain : 2 sur 91. Les 650 e-mails ont amené 4 visites sur
+  la page de l'évaluation, aucune évaluation, aucune vente (les cinq ventes
+  du moment venaient du site).
+
+Thomas : « Vas-y et non pour brevo payant ». Ce qui a changé (migration
+`20261029120000_emails_immediat.sql`, appliquée par `emails-base.yml`) :
+
+- **L'e1 part de lead-capture, une minute après l'adresse.** La minute
+  laisse le temps de donner son prénom, et le prénom donné le fait partir
+  tout de suite. L'envoi passe par l'API transactionnelle de Brevo, avec le
+  même HTML que la campagne du soir. La personne est encore sur le site et
+  reconnaît l'expéditeur, et c'est sur les ouvertures que Gmail juge un
+  domaine d'envoi neuf. `emails_immediat_prendre` fait les contrôles du soir
+  (adresse active, pas l'e-book, pas dans une évaluation, pas d'`e1` déjà
+  parti), regarde la langue et le plafond du jour, et écrit la ligne d'envoi
+  avant l'envoi : une fonction qui s'arrête au mauvais moment ne fait jamais
+  partir l'`e1` deux fois. Quand Brevo refuse, `emails_immediat_resultat`
+  rend la ligne et l'adresse attend le soir ; quand Brevo ne répond pas, la
+  ligne reste.
+- **Les langues :** anglais, français, italien et allemand. L'espagnol n'a
+  pas d'envoi immédiat, puisque l'e-mail ne peut pas annoncer le prix de
+  l'Amérique latine (décision du 27 octobre) ; ses `e1` passent le soir,
+  après les `e2`.
+- **Le budget de l'offre gratuite :** 180 e-mails immédiats par jour au plus
+  (jour de Paris, `immediat.parJour` dans `emails/reglages.mjs`), plus la
+  retenue du soir (100) et la marge des essais (10) : 290 sur 300. Le soir
+  lit toujours les crédits qui restent chez Brevo avant de partir.
+- **Les modèles :** chaque passage du soir écrit dans `emails_modeles` le
+  HTML de l'`e1` (cinq langues, deux versions du test A/B), les phrases
+  d'accroche de chaque famille de test et la salutation, et dans
+  `emails_reglages` les réglages de `emails/reglages.mjs`. Un modèle vaut
+  30 heures : sans passage pour le refaire, plus rien ne part tout de suite
+  et la file du soir reprend les adresses. Le mode `arret` arrête aussi
+  l'envoi immédiat, au passage suivant.
+- **Le désabonnement en un clic :** chaque `e1` immédiat porte l'en-tête
+  `List-Unsubscribe` vers le lien personnel de lead-capture (`?d=<jeton>`),
+  que les messageries appellent en POST (RFC 8058). Le bouton « Se
+  désabonner » de Gmail évite que les gens passent par « Signaler comme
+  spam ».
+- **Le webhook transactionnel :** créé par l'action `installer`, à la même
+  adresse et avec la même clé que celui des campagnes. Ses événements
+  portent l'identifiant du message au lieu du numéro de campagne, et
+  `emails_evenement` retrouve l'envoi par lui. Sans lui, aucune remise ne
+  reviendrait et aucun `e2` ne suivrait un `e1` immédiat.
+- **La file du soir garde un `e1` sept jours, au lieu de 60 :** une adresse
+  laissée il y a plus d'une semaine n'ouvre presque jamais l'e-mail d'un
+  site qu'elle a oublié, et c'est ce genre d'envoi qui fait marquer en spam.
+  Les adresses restent dans `abonnes`. Le soir sert d'abord les `e1` de
+  moins de 48 heures que l'envoi immédiat n'a pas faits, puis les `e2`, puis
+  les `e1` plus anciens, puis l'espagnol.
+- **Les chiffres :** `verif` dit l'état de l'API transactionnelle, du
+  webhook, de la clé chez Supabase, des réglages et des modèles, ce qui est
+  parti dans la journée, et les chiffres d'ensemble des `e1` immédiats par
+  version du test A/B (étiquettes `parcours-e1-a` et `parcours-e1-b`,
+  jamais par personne). L'admin compte les `e1` partis tout de suite
+  (`e1:immediat` dans `emails_compteurs`). La politique de confidentialité
+  dit « peu après » au lieu de « le lendemain ».
+
+Mise en route : après la fusion, l'action `essai-immediat` de
+`brevo-reglages.yml` envoie l'`e1` immédiat de chaque version vers une
+adresse `+immediat` (de quoi voir que Brevo accepte la requête, et où
+l'e-mail arrive), puis l'action `installer` pose la clé de l'API chez
+Supabase (`BREVO_API_KEY`), crée le webhook transactionnel et écrit les
+réglages et les modèles : les envois immédiats commencent là. Le lendemain,
+`verif`.
 
 ### Ce que dit chaque e-mail
 
@@ -600,8 +679,9 @@ les ouvertures et les clics d'une personne ; on ne l'a pas demandé. Rien ne
 dépend donc des ouvertures ni des clics :
 
 - **remis, rebonds, plaintes, désinscriptions** : le webhook « marketing »
-  de Brevo (fonction `brevo-webhook`, clé dans l'adresse, secret
-  `BREVO_WEBHOOK_CLE`) appelle `emails_evenement`. Un rebond dur supprime
+  de Brevo, et depuis le 29 octobre 2026 le webhook transactionnel pour
+  l'`e1` immédiat (fonction `brevo-webhook`, clé dans l'adresse, secret
+  `BREVO_WEBHOOK_CLE`), appellent `emails_evenement`. Un rebond dur supprime
   l'adresse (Thomas : « on supprime le mail de la BDD et ça s'arrête
   là ») ; un rebond doux arrête le parcours sans la supprimer (boîte pleine,
   serveur indisponible ce soir-là) ; une plainte ou une désinscription la
@@ -688,9 +768,14 @@ Le journal ne contient jamais une adresse.
 
 `node --test emails/test/*.test.mjs` (contenu dans les cinq langues, envoi
 du soir contre une base et un Brevo en mémoire : blanc, réel, passage unique,
-crédits, doublon, refus, reprise, ménage, filet) et
+crédits, doublon, refus, reprise, ménage, filet ; modèles, réglages et essai
+de l'`e1` immédiat) et
 `node --test supabase/functions/_shared/emails/test/*.test.mjs` (lecture des
-événements). Les règles de la migration (qui reçoit quoi, événements,
-droits) ont été jouées sur un Postgres 16 local. `node emails/apercu.mjs
+événements des deux webhooks, requête de l'`e1` immédiat). Les règles de la
+migration (qui reçoit quoi, événements, droits ; pour l'`e1` immédiat, chaque
+raison de ne pas l'envoyer, le plafond, la version du test A/B identique à
+celle de Node, la ligne rendue sur refus, la remise retrouvée par
+l'identifiant du message, la file de sept jours) ont été jouées sur un
+Postgres 16 local, et lead-capture et brevo-webhook passent `deno check`. `node emails/apercu.mjs
 <dossier>` écrit les 160 aperçus (deux e-mails, cinq langues, quatre
 familles, avec et sans prénom, en maquette et en version sobre).
