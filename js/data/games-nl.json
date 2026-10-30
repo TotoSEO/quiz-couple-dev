@@ -109,11 +109,11 @@
     "retakeTest": "Doe de test opnieuw"
   },
   "pervers": {
-    "introQuestion": "Vous vous posez la question :",
-    "introQuote": "« Est-ce que je vis avec un pervers narcissique… ou est-ce que j'exagère ? »",
-    "introDesc": "Si cette question revient sans cesse, ce n'est jamais un hasard. La perversion narcissique ne se reconnaît pas à une dispute isolée, mais à des mécanismes répétés qui installent le doute, la culpabilité et la perte d'estime de soi.",
-    "disclaimer": "Ce test n'est ni un diagnostic, ni un jugement.",
-    "disclaimerDesc": "C'est un outil de réflexion bienveillant pour mettre des mots sur ce que vous vivez réellement."
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Leef ik met een narcist… of overdrijf ik?”",
+    "introDesc": "Komt die vraag steeds terug, dan is dat nooit toeval. Narcistisch misbruik herken je niet aan één ruzie, maar aan patronen die zich herhalen en twijfel, schuldgevoel en een kapot zelfvertrouwen achterlaten.",
+    "disclaimer": "Deze test is geen diagnose en geen oordeel.",
+    "disclaimerDesc": "Het is een hulpmiddel om na te denken en onder woorden te brengen wat je meemaakt."
   },
   "tentation": {
     "logoTop": "L'île de la",
@@ -719,9 +719,9 @@
     "disclaimer": "Personne ne peut lire dans la tête de quelqu'un d'autre. Ce test met de l'ordre dans ce que vous voyez, il ne rend pas de verdict."
   },
   "emprise": {
-    "introQuestion": "Vous vous posez la question :",
-    "introQuote": "« Est-ce que je suis sous emprise… ou est-ce que je dramatise ? »",
-    "disclaimer": "Ce test n'est ni un diagnostic, ni un jugement. Il regarde votre liberté dans le couple, pas la personnalité de votre partenaire. Vos réponses ne sont pas enregistrées."
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Sta ik onder controle… of maak ik er een drama van?”",
+    "disclaimer": "Deze test is geen diagnose en geen oordeel. Hij kijkt naar je vrijheid in de relatie, niet naar de persoonlijkheid van je partner. Je antwoorden worden niet opgeslagen."
   },
   "amour-ami": {
     "introQuestion": "Tu te poses la question :",
