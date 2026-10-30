@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-29T09:55:08.496Z",
+  "genere_le": "2026-10-30T03:14:33.197Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-29",
+  "aujourdhui": "2026-10-30",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 154,
+  "reserve_jours": 153,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -651,7 +651,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2891,7 +2891,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-30",
+      "jour": "2026-10-31",
       "creneau": "matin"
     },
     "mipaps-statique": null,
@@ -3582,6 +3582,42 @@
       "jour": "2026-10-22",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "ac4a5974-d0f9-439b-acd7-b8eff44ed1c4",
+      "releve": "j7",
+      "vues": 2649,
+      "portee": 2270,
+      "likes": 87,
+      "commentaires": 1,
+      "partages": 73,
+      "enregistrements": 16,
+      "releve_le": "2026-10-30T03:14:21.823236+00:00",
+      "publie_le": "2026-10-22T14:20:13.384+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-22",
+      "creneau": "soir",
+      "theme": null
+    },
+    {
+      "variante_id": "6e3f0a15-f6bc-4dac-8b8a-f2a10d013544",
+      "releve": "j7",
+      "vues": 5,
+      "portee": 3,
+      "likes": 0,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 0,
+      "releve_le": "2026-10-30T03:14:24.456038+00:00",
+      "publie_le": "2026-10-22T10:40:09.79+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-22",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -3598,14 +3634,14 @@
     },
     {
       "categorie": "mipaps-statique",
-      "posts": 5,
-      "vues_mediane": 210,
-      "vues_moyenne": 436,
-      "vues_max": 1374,
-      "partages": 22,
-      "enregistrements": 14,
-      "likes": 62,
-      "commentaires": 0
+      "posts": 6,
+      "vues_mediane": 212,
+      "vues_moyenne": 805,
+      "vues_max": 2649,
+      "partages": 95,
+      "enregistrements": 30,
+      "likes": 149,
+      "commentaires": 1
     },
     {
       "categorie": "mipaps-histoire",
@@ -3620,7 +3656,7 @@
     },
     {
       "categorie": "mipaps-post",
-      "posts": 12,
+      "posts": 13,
       "vues_mediane": 3,
       "vues_moyenne": 4,
       "vues_max": 10,
