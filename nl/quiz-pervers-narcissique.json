@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "Is mijn partner een narcist, of zie ik spoken?",
+    "titleHighlight": "narcist",
+    "description": "Een vertrouwelijke test voor jezelf, zonder oordeel, om onder woorden te brengen wat je meemaakt.",
+    "badge": "Narcist test • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "Waarom zoek je naar deze test?",
+    "p1": "Wie zoekt naar een <strong class=\"text-foreground\">narcistische partner test</strong>, doet dat zelden zomaar. Je vraagt je niet af of je je leven deelt met een manipulator als alles goed gaat. Ben je hier, dan zegt een stemmetje je al een tijdje dat er iets niet klopt, zonder dat je precies kunt zeggen wat.",
+    "p2": "De kern van een relatie met een narcist is geen spectaculair geweld, maar <strong class=\"text-foreground\">voortdurende twijfel</strong>. “Ben ik te gevoelig? Ben ik het probleem? Overdrijf ik?” Die verwarring is geen toeval: het is precies wat manipulatie wil bereiken. Stukje bij beetje verlies je het vertrouwen in je eigen waarneming.",
+    "p3": "Je zoekt een blik van buitenaf, omdat van binnenuit alles door elkaar loopt. Deze test vervangt geen professional, maar hij helpt je wel om te zien wat bij een gewone <a href=\"/nl/toxische-relatie-test/\">toxische relatie</a> hoort, en wat erop wijst dat iemand je in zijn greep heeft."
+  },
+  "section2": {
+    "title": "Wat is een narcist precies?",
+    "p1": "De term <em>perverse narcist</em>, bekend geworden door de Franse psychiater Marie-France Hirigoyen, beschrijft iemand die een narcistische behoefte aan macht combineert met een perverse manier van omgaan met anderen: hij of zij teert op de ander, zuigt diens energie en zelfvertrouwen weg, en voelt zich daar nooit echt schuldig over.",
+    "p2": "Plak dat etiket er alleen niet te snel op. Een groot ego hebben, egoïstisch zijn of door een moeilijke periode gaan, maakt van iemand nog geen narcist. Het verschil zit in de <strong class=\"text-foreground\">bedoeling</strong> en in de <strong class=\"text-foreground\">herhaling</strong>:",
+    "healthy": "<strong class=\"text-foreground\">Iemand die gewoon onhandig of met zichzelf bezig is</strong>, kan je pijn doen zonder het te willen, maar kan dat ook inzien, oprecht sorry zeggen en er iets aan veranderen.",
+    "toxic": "<strong class=\"text-foreground\">Een narcist</strong> gebruikt de ander: de relatie is geen band tussen gelijken, maar een machtsstrijd waarin jouw pijn niets weegt tegen zijn of haar behoefte aan controle.",
+    "quote": "Een narcist wil niet in de eerste plaats geliefd worden, maar de controle hebben. En op de een of andere manier ben jij het altijd die zich schuldig voelt over de pijn die je wordt aangedaan."
+  },
+  "section3": {
+    "title": "Hoe lees je je uitslag?",
+    "intro": "Niet elke vraag weegt even zwaar: dat hangt af van wat ze over je relatie zegt. En elk antwoord krijgt punten volgens zijn plaats. Het totaal gaat van 0 tot 255 punten. Zo lees je je score. Hou in je achterhoofd dat het een aanwijzing is, geen diagnose.",
+    "headerScore": "Totale score",
+    "headerLevel": "Alarmniveau",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 63 punten",
+    "row1Level": "Geen tekenen van narcistisch misbruik",
+    "row1Analysis": "Jullie relatie lijkt gebouwd op respect. Spanningen zijn er, zoals overal, maar niet het mechanisme van controle.",
+    "row2Score": "64 tot 127 punten",
+    "row2Level": "Een paar signalen om in de gaten te houden",
+    "row2Analysis": "Sommige gedragingen vragen om je aandacht. Trek een duidelijke grens en kijk hoe de ander reageert.",
+    "row3Score": "128 tot 191 punten",
+    "row3Level": "Duidelijke tekenen van manipulatie",
+    "row3Analysis": "Er zijn al meerdere mechanismen van controle. Het is belangrijk om hulp te zoeken en jezelf te gaan beschermen.",
+    "row4Score": "192 tot 255 punten",
+    "row4Level": "Een profiel dat sterk aan een narcist doet denken",
+    "row4Analysis": "Het beeld komt dicht bij narcistisch misbruik. Je emotionele, en misschien ook je lichamelijke, veiligheid moet nu voorgaan."
+  },
+  "section4": {
+    "title": "Hoe je in de val loopt bij een narcist",
+    "p1": "Is je score hoog, dan knaagt er misschien een vraag: <em>“Hoe heb ik dit kunnen laten gebeuren?”</em> Dat schuldgevoel is onterecht. Je ‘kiest’ er niet voor om in de greep van een narcist te raken: je glijdt erin, via een proces dat angstaanjagend goed werkt.",
+    "p2": "<a href=\"/nl/controlerende-relatie-test/\">Controle in een relatie</a> sluipt er bijna altijd in drie fases in:",
+    "pillar1Title": "1. Love bombing (de ideale fase)",
+    "pillar1Text": "In het begin is het een sprookje. Aandacht op elk moment, complimenten, plannen voor later, het gevoel dat je eindelijk je zielsverwant hebt gevonden. Die intense verleiding zorgt voor een sterke band… en voor een prachtige herinnering waar je je later aan vastklampt, als alles misgaat.",
+    "pillar2Title": "2. Stukje bij beetje kleineren",
+    "pillar2Text": "Als je eenmaal gehecht bent, valt het masker langzaam af. Kritiek ‘voor je eigen bestwil’, een steek onder water verpakt als grap, een vergelijking die je klein maakt. Je grens schuift ongemerkt op, en uiteindelijk vind je ‘normaal’ wat je in het begin nooit had geaccepteerd.",
+    "pillar3Title": "3. Warm en koud (de verslaving)",
+    "pillar3Text": "Dit is de sterkste val. Een narcist is niet 100% van de tijd onaardig: hij of zij wisselt warm en koud af, momenten van grote nabijheid en ijzige breuken. Die onvoorspelbare momenten van genegenheid werken als een drug op je hersenen en zorgen voor een echte emotionele afhankelijkheid."
+  },
+  "section5": {
+    "title": "Signalen waar je op moet letten",
+    "intro": "Los van de score wijzen vooral bepaalde mechanismen op narcistisch misbruik. Herken je er meerdere, dan is je waakzaamheid terecht. Veel ervan zijn trouwens ook de meest destructieve red flags in een relatie.",
+    "pillar1Title": "Gaslighting (je werkelijkheid ontkennen)",
+    "pillar1Text": "“Dat heb ik nooit gezegd”, “dat verzin je”, “je bent paranoïde”. Een narcist ontkent dingen die je wel degelijk hebt meegemaakt, tot je aan je eigen geheugen en je gezonde verstand gaat twijfelen. Het is een stille vorm van psychisch geweld die je identiteit aantast.",
+    "pillar2Title": "De schuld omdraaien",
+    "pillar2Text": "Wat er ook gebeurt, het is altijd jouw schuld. Hij of zij speelt steeds het slachtoffer, draait je verwijten om tegen jou, en uiteindelijk zeg jij sorry… voor dingen die je niet hebt gedaan.",
+    "pillar3Title": "Isolement en controle",
+    "pillar3Text": "Beetje bij beetje ‘verdienen je vrienden je niet’ en ‘bemoeit je familie zich overal mee’. Een narcist snijdt je af van de mensen die je steunen en houdt je tijd, je geld of je contacten in de gaten, soms <a href=\"/nl/jaloezie-test/\">onder het mom van liefde of jaloezie</a>.",
+    "pillar4Title": "Twee gezichten en geen empathie",
+    "pillar4Text": "Charmant in gezelschap, minachtend thuis: “niemand zou me geloven”. En als jij pijn hebt, krijg je alleen een verwarrende kilte terug, soms zelfs ergernis. Dat gebrek aan echte empathie is het kenmerk van een narcist."
+  },
+  "section6": {
+    "title": "Wijst de test op manipulatie? Hier begin je",
+    "p1": "Onthoud eerst dat deze test een hulpmiddel is om over je relatie na te denken, geen oordeel. Hij vervangt nooit het advies van een professional. Denk je dat je in een relatie zit waarin je onder controle staat, of die zelfs gevaarlijk is, zoek dan mensen die er verstand van hebben.",
+    "p2": "Beseffen wat er aan de hand is, is de moeilijkste stap, en die heb je net gezet. Een hoge score betekent niet ‘vertrek nu meteen’ (behalve bij direct lichamelijk gevaar), maar wel dat het zo niet verder kan. Hier kun je beginnen.",
+    "dontTitle": "Wat je beter kunt vermijden",
+    "dont1Title": "Hem of haar willen ‘redden’ of veranderen",
+    "dont1Text": "Je wordt nooit de therapeut van je partner. Narcisme is een diepgeworteld patroon waar alleen de persoon zelf aan zou kunnen werken, en dat gebeurt maar zelden. Jezelf uitputten om hem of haar te repareren, maakt jou alleen nog meer kapot.",
+    "dont2Title": "Hem of haar met deze test confronteren",
+    "dont2Text": "Met deze uitslag zwaaien leidt bijna zeker tot een crisis, tot ontkenning of tot een omkering (“jij bent hier de manipulator”). Houd hem voor jezelf, als een innerlijk kompas, niet als bewijs om over te onderhandelen.",
+    "doTitle": "Wat wel helpt",
+    "do1Title": "Schrijf de feiten op",
+    "do1Text": "Houd een dagboek bij met de woorden en de scènes die je pijn doen, zo feitelijk mogelijk. Later, met een koel hoofd, teruglezen wat er echt is gebeurd, is het beste tegengif tegen de twijfel die gaslighting in je zaait.",
+    "do2Title": "Doorbreek het isolement",
+    "do2Text": "Praat met iemand die je vertrouwt en het liefst ook met een professional (een psycholoog) of met een organisatie die gespecialiseerd is in psychisch geweld. Als je dingen hardop benoemt, verliezen ze een deel van hun macht.",
+    "do3Title": "Trek een grens en zorg voor je veiligheid",
+    "do3Text": "Trek een eenvoudige, duidelijke grens bij één gedrag dat je niet aanvaardt, en kijk wat er gebeurt: een gezonde partner past zich aan, een narcist gaat een stap verder. Er zijn dingen die je nooit hoort te accepteren, en je hebt het recht om jezelf te beschermen."
+  },
+  "section7": {
+    "title": "Onthoud dit: je gevoel is een kompas",
+    "p1": "Deze narcistische partner test is geen vonnis van een rechter, maar een spiegel. Heb je de vragen beantwoord met een knoop in je maag, dan weet je lichaam al wat je hoofd nog moeilijk kan toegeven.",
+    "p2": "Een relatie hoort een veilige haven te zijn, geen slagveld waar je op eieren loopt. De verwarring die je voelt is geen zwakte: ze laat zien dat je je al veel te lang probeert aan te passen aan een situatie die niet normaal is. Je hebt het recht om <a href=\"/nl/gezonde-relatie-test/\">gerespecteerd, gehoord en veilig</a> te zijn: dat is de basis van een gezonde relatie.",
+    "p3": "Maakt deze uitslag je ongerust, draag dit dan niet alleen. Erover praten met iemand is al een eerste stap uit de greep van de ander."
+  },
+  "jsonLd": {
+    "quizName": "Narcistische partner test",
+    "quizDescription": "Kijk met deze zelftest van 20 vragen of je partner de signalen van een narcist vertoont.",
+    "faq1Q": "Hoe herken je een narcist in een relatie?",
+    "faq1A": "Signalen die vaak terugkomen: love bombing in het begin, stap voor stap kleineren, gaslighting (je werkelijkheid ontkennen), de schuld omdraaien, isolement, controle en een gebrek aan empathie als jij pijn hebt.",
+    "faq2Q": "Wat is het verschil tussen een narcist en iemand die gewoon egoïstisch is?",
+    "faq2A": "Iemand die egoïstisch of onhandig is, kan kritisch naar zichzelf kijken, sorry zeggen en veranderen. Een narcist manipuleert bewust en steeds opnieuw, zonder echt schuldgevoel, en gebruikt de ander als middel.",
+    "faq3Q": "Is deze narcistische partner test betrouwbaar?",
+    "faq3A": "Het is een hulpmiddel om over jezelf en je relatie na te denken, geen medische diagnose. Een hoge score bewijst op zichzelf niets, maar is wel een reden om met een professional te praten en jezelf te beschermen.",
+    "about": "narcistisch misbruik"
+  }
+}

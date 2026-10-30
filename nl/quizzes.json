@@ -29,11 +29,23 @@
     "description": "25 vragen om de tekenen van een toxische relatie te herkennen en goed voor jezelf te zorgen.",
     "metaDescription": "Toxische relatie test: 25 vragen over controle, angst, schuld en wat er na een ruzie gebeurt, om de alarmsignalen te herkennen. Gratis en vertrouwelijk."
   },
+  "testPervers": {
+    "title": "Narcistische partner test: word ik gemanipuleerd?",
+    "shortTitle": "Narcist test",
+    "description": "20 vragen om de signalen van een narcistische partner te herkennen en uit de twijfel te komen.",
+    "metaDescription": "Twijfel je aan je relatie? Deze narcistische partner test stelt 20 vragen over manipulatie, controle en gaslighting. Gratis, en je ziet meteen je uitslag."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
     "metaDescription": "Is mijn relatie voorbij? 24 feitelijke vragen, gewogen naar hoe ernstig elk teken is, en een uitslag in 8 niveaus die je niet sust. Gratis, zonder account.",
     "description": "Vierentwintig feitelijke vragen, een weging naar hoe ernstig elk teken is, en een uitslag die je niet probeert te sparen."
+  },
+  "testEmprise": {
+    "title": "Controlerende relatie test: hoe vrij ben je nog?",
+    "shortTitle": "Controlerende relatie test",
+    "description": "Twintig vragen over je vrijheid in je relatie: vrienden, geld, keuzes, je mening. Om een naam te geven aan wat je meemaakt.",
+    "metaDescription": "Doe de controlerende relatie test: twintig vragen over je vrienden, je geld, je keuzes en je mening. Gratis en vertrouwelijk, met tips en hulplijnen."
   },
   "testRedFlag": {
     "title": "Red flag test: is deze persoon een red flag?",

@@ -63,6 +63,13 @@
     "reminderText": "Deze test geeft alleen een indicatie. De uitslag is niet exact, en hij is geen vervanging voor het advies van een professional. Denk je dat je relatie echt toxisch is, of zelfs gevaarlijk? Neem dan contact op met echte deskundigen.",
     "retakeTest": "Doe de test opnieuw"
   },
+  "pervers": {
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Leef ik met een narcist… of overdrijf ik?”",
+    "introDesc": "Komt die vraag steeds terug, dan is dat nooit toeval. Narcistisch misbruik herken je niet aan één ruzie, maar aan patronen die zich herhalen en twijfel, schuldgevoel en een kapot zelfvertrouwen achterlaten.",
+    "disclaimer": "Deze test is geen diagnose en geen oordeel.",
+    "disclaimerDesc": "Het is een hulpmiddel om na te denken en onder woorden te brengen wat je meemaakt."
+  },
   "question": {
     "itsTurnOf": "Nu is het de beurt aan",
     "turnToAnswer": "{{name}} is aan de beurt!",
@@ -389,6 +396,11 @@
     "orient_distance_raison": "Je hebt geantwoord dat jullie op afstand wonen. Daar betekenen de signalen niet hetzelfde.",
     "orient_toxique_nom": "Is mijn relatie toxisch?",
     "orient_toxique_raison": "Een relatie kan eindigen omdat ze uitdooft, of omdat ze schade doet. Dat is niet hetzelfde."
+  },
+  "emprise": {
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Sta ik onder controle… of maak ik er een drama van?”",
+    "disclaimer": "Deze test is geen diagnose en geen oordeel. Hij kijkt naar je vrijheid in de relatie, niet naar de persoonlijkheid van je partner. Je antwoorden worden niet opgeslagen."
   },
   "salon": {
     "activer": "Op afstand spelen",
