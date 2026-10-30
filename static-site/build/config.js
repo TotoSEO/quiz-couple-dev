@@ -517,7 +517,7 @@ export const MOYENS_PAIEMENT = ['visa', 'mastercard', 'cb', 'applepay', 'googlep
 export const VENDEUR = {
   nom: 'Visibilitea',
   dirigeant: 'Thomas Owaller',
-  statut: { fr: 'Entreprise individuelle (EI) de Thomas Owaller', en: 'Sole proprietorship of Thomas Owaller (French entreprise individuelle)', es: 'Empresa individual de Thomas Owaller (entreprise individuelle francesa)', de: 'Einzelunternehmen von Thomas Owaller (französische entreprise individuelle)', it: 'Impresa individuale di Thomas Owaller (entreprise individuelle francese)' },
+  statut: { fr: 'Entreprise individuelle (EI) de Thomas Owaller', en: 'Sole proprietorship of Thomas Owaller (French entreprise individuelle)', es: 'Empresa individual de Thomas Owaller (entreprise individuelle francesa)', de: 'Einzelunternehmen von Thomas Owaller (französische entreprise individuelle)', it: 'Impresa individuale di Thomas Owaller (entreprise individuelle francese)', nl: 'Eenmanszaak van Thomas Owaller (Franse entreprise individuelle)' },
   siret: '940 106 800 00011',
   adresse: '4 rue de Bruges, 67000 Strasbourg',
   email: 'infoquizcouple@gmail.com',

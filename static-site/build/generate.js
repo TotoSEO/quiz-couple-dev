@@ -2062,8 +2062,22 @@ function copyTranslationData() {
       }
     }
 
+    // Les textes des moteurs (games-<langue>.json) : tg() n'a pas de repli
+    // sur le français, seulement sur le texte écrit dans le code (parfois
+    // aucun, et la clé s'affiche). Une langue cachée se traduit partie par
+    // partie : ce qu'elle n'a pas encore vient du français, clé par clé.
     const gamesSrc = sourceDe('quizGames.json');
-    if (fs.existsSync(gamesSrc)) {
+    const gamesFr = path.resolve(__dirname, '../../fr/quizGames.json');
+    if (langueCachee(lang) && gamesSrc !== gamesFr && fs.existsSync(gamesSrc)) {
+      const complete = (base, plus) => {
+        if (!plus || typeof plus !== 'object' || Array.isArray(plus) || !base || typeof base !== 'object' || Array.isArray(base)) return plus;
+        const out = { ...base };
+        for (const [k, v] of Object.entries(plus)) out[k] = k in base ? complete(base[k], v) : v;
+        return out;
+      };
+      const fusion = complete(JSON.parse(fs.readFileSync(gamesFr, 'utf-8')), JSON.parse(fs.readFileSync(gamesSrc, 'utf-8')));
+      fs.writeFileSync(path.join(dataDir, `games-${lang}.json`), JSON.stringify(fusion, null, 2), 'utf-8');
+    } else if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
     }
 

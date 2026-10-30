@@ -242,6 +242,15 @@ var QuizEngine = (function() {
     return String(texte).replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
   }
 
+  // Ce qui precede « ! ? : ; » dans une phrase que le moteur assemble : une
+  // espace insecable en francais, rien dans les autres langues (« Léa ! »,
+  // « Sanne! »). Et un pourcentage : colle au nombre en anglais et en
+  // neerlandais, apres une espace insecable ailleurs.
+  function langueDuMoteur() { return (document.documentElement.lang || 'fr').slice(0, 2); }
+  function avantPonct() { return langueDuMoteur() === 'fr' ? '\u00a0' : ''; }
+  var PCT_COLLE = ['en', 'nl'];
+  function pctTexte(lang, v) { return v + (PCT_COLLE.indexOf(lang) >= 0 ? '%' : '\u00a0%'); }
+
   function ecranDepart(o) {
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
     wrap.appendChild(badgeDepart(o.iconeSvg, o.icone || '📝', 'mb-6', o.poses));
@@ -997,7 +1006,8 @@ var QuizEngine = (function() {
       en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)', nomRegle: 'Your first name must be 3 to 60 characters long, spaces included.' },
       es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: 'Tu opinión se verá tras la validación.', merci: '¡Muchísimas gracias por tu apoyo!', insta: 'Síguenos en Instagram ❤️', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)', nomRegle: 'Tu nombre debe tener entre 3 y 60 caracteres, espacios incluidos.' },
       de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Deine Bewertung erscheint nach der Prüfung.', merci: 'Vielen, vielen Dank für deine Unterstützung!', insta: 'Folge uns auf Instagram ❤️', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)', nomRegle: 'Dein Vorname muss 3 bis 60 Zeichen lang sein, Leerzeichen eingeschlossen.' },
-      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)', nomRegle: 'Il tuo nome deve avere da 3 a 60 caratteri, spazi inclusi.' }
+      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)', nomRegle: 'Il tuo nome deve avere da 3 a 60 caratteri, spazi inclusi.' },
+      nl: { share: 'Delen', close: 'Sluiten', rate: 'Je review in 1 klik', more: 'Alleen nog je voornaam (of jullie voornamen) en hij staat online!', name: 'Je voornaam (of jullie voornamen)', comment: 'Een woord (optioneel)', submit: 'Plaats mijn review', thanks: 'Je review is zichtbaar zodra hij is gecontroleerd.', merci: 'Heel erg bedankt voor je steun!', insta: 'Volg ons op Instagram ❤️', err: 'Er ging iets mis, probeer het opnieuw.', doneT: 'Deze test is al {n} keer gedaan', doneQ: 'Deze quiz is al {n} keer gespeeld', minAvis: 'Drie sterren of minder? Vertel ons wat er niet goed ging, in minstens 90 tekens.', minReste: 'Nog {n} tekens.', minPlace: 'Wat er niet goed ging (minstens 90 tekens)', nomRegle: 'Je voornaam moet 3 tot 60 tekens hebben, spaties meegeteld.' }
     };
     return M[lang] || M.fr;
   }
@@ -1436,7 +1446,7 @@ var QuizEngine = (function() {
     var o = (partage && typeof partage === 'object') ? partage : {};
     var q = nomDuQuiz();
     var score = '';
-    if (o.pct !== undefined && o.pct !== null && o.pct !== '') score = o.pct + ' %';
+    if (o.pct !== undefined && o.pct !== null && o.pct !== '') score = pctTexte(langueDuMoteur(), o.pct);
     else if (o.score !== undefined && o.score !== null && o.total) score = o.score + '/' + o.total;
     else if (o.score !== undefined && o.score !== null && o.score !== '') score = String(o.score);
     // Les prénoms prennent la place de l'étiquette générique : « Léa & Hugo »
@@ -2882,6 +2892,8 @@ var QuizEngine = (function() {
   // place de marche correspondante (amazon.fr, .com, .de, .es, .it) : un tag
   // francais ne rapporte rien sur une vente allemande. Une langue absente de
   // l'entree n'affiche simplement pas de carte.
+  // langues: sans-nl : aucun identifiant d'affiliation Amazon.nl
+  // (docs/langues/CADRAGE-NL.md), donc aucune carte de produit en neerlandais.
   var PRODUITS = {
     lovebox: {
       fr: { nom: 'Lovebox : messages à distance', prix: '99,99 €', note: 4.0, avis: 74, url: 'https://link.amazon/B07yg77Vv', images: ['/produits/lovebox-fr-1.webp'] },
@@ -3089,6 +3101,7 @@ var QuizEngine = (function() {
   var PRODUITS_PAR_TEST_LANG = {
     en: { 'tester-couple': ['kodak', 'quiSaitMieux', 'dimoi'] }
   };
+  // langues: sans-nl : pas de produit en neerlandais (voir PRODUITS).
   var PRODUITS_TEXTES = {
     fr: {
       un: 'Ce produit / cadeau pourrait vous intéresser !',
@@ -3427,7 +3440,7 @@ var QuizEngine = (function() {
   function saisonTexteQuestion(q) { return tgd(this.prefix + '.q' + q.id, q.text); }
   function saisonTexteOption(q, opt) { return tgd(this.prefix + '.q' + q.id + opt.id, opt.text); }
   function saisonCouleur(rang) { return getPlayerColor(this.players[rang], this.players[1 - rang], rang); }
-  function saisonPct(lang, v) { return lang === 'en' ? v + '%' : v + '\u00a0%'; }
+  function saisonPct(lang, v) { return pctTexte(lang, v); }
   function saisonOptionDe(q, id) {
     for (var i = 0; i < q.options.length; i++) if (q.options[i].id === id) return q.options[i];
     return null;
@@ -4966,9 +4979,9 @@ var QuizEngine = (function() {
 
     var wrap = el('div', 'quiz-engine animate-fade-in text-center');
     wrap.appendChild(el('div', 'text-5xl mb-4', '🎯'));
-    wrap.appendChild(el('h2', 'text-xl font-bold mb-3', tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + esc(nextGuesser.name) + ' !'));
+    wrap.appendChild(el('h2', 'text-xl font-bold mb-3', tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + esc(nextGuesser.name) + avantPonct() + '!'));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2', tg('question.getReadyToGuess', 'Préparez-vous à deviner !')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('coquin.currentScore', 'Score') + ' : ' + esc(this.players[0].name) + ' ' + this.scores[0] + ' - ' + this.scores[1] + ' ' + esc(this.players[1].name)));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('coquin.currentScore', 'Score') + avantPonct() + ': ' + esc(this.players[0].name) + ' ' + this.scores[0] + ' - ' + this.scores[1] + ' ' + esc(this.players[1].name)));
 
     // Auto-advance after 2.5s or click (but never both)
     var advanced = false;
@@ -5011,7 +5024,7 @@ var QuizEngine = (function() {
     var diff = this.scores[0] - this.scores[1];
     var msg = '';
     if (diff === 0) msg = tg('result.perfectTie', 'Égalité parfaite !');
-    else if (Math.abs(diff) >= 5) msg = esc(this.players[diff > 0 ? 0 : 1].name) + ' ' + tg('result.knowsMuchBetter', 'connait beaucoup mieux') + ' ' + esc(this.players[diff > 0 ? 1 : 0].name) + ' !';
+    else if (Math.abs(diff) >= 5) msg = esc(this.players[diff > 0 ? 0 : 1].name) + ' ' + tg('result.knowsMuchBetter', 'connait beaucoup mieux') + ' ' + esc(this.players[diff > 0 ? 1 : 0].name) + avantPonct() + '!';
     else if (Math.abs(diff) >= 3) msg = esc(this.players[diff > 0 ? 0 : 1].name) + ' ' + tg('result.knowsSlightlyBetter', 'connait légèrement mieux') + ' ' + esc(this.players[diff > 0 ? 1 : 0].name);
     else msg = esc(this.players[diff > 0 ? 0 : 1].name) + ' ' + tg('result.knowsLittleBetter', 'connait un peu mieux') + ' ' + esc(this.players[diff > 0 ? 1 : 0].name);
 
@@ -5220,7 +5233,7 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     wrap.appendChild(el('div', 'text-5xl mb-4', '🎉'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3',
-      esc(tgd(this.prefix + '.finTitre', tg('result.bravo', 'Bravo') + ' !'))));
+      esc(tgd(this.prefix + '.finTitre', tg('result.bravo', 'Bravo') + avantPonct() + '!'))));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6',
       esc(tgd(this.prefix + '.finTexte', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')))));
 
@@ -14377,7 +14390,7 @@ var QuizEngine = (function() {
       wrap.appendChild(this.blocFaits(this.answers.p1));
       partage = this.echelle === 'pourcent'
         ? { noms: nomsPartage(this), type: 'solo', pct: v, verdict: titre }
-        : { noms: nomsPartage(this), type: 'profil', verdict: this.formate(v) + ' : ' + titre };
+        : { noms: nomsPartage(this), type: 'profil', verdict: this.formate(v) + avantPonct() + ': ' + titre };
     } else {
       var vA = this.valeur(this.answers.p1), vB = this.valeur(this.answers.p2);
       var persos = persosDe(this.players);

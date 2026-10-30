@@ -10,7 +10,7 @@ le met à jour dans la PR de chaque lot.
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
-| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a (menu, pied, pages d'information) et 2b (accueil) faits le 30 octobre 2026 ; 2c textes communs des moteurs, 2d pages juridiques |
+| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
@@ -107,9 +107,10 @@ le met à jour dans la PR de chaque lot.
     contraintes de la base (`reviews_lang_valeur`, `abonnes`...) : sinon un
     avis envoyé depuis une page /nl/ serait refusé par la base et perdu.
     Avant l'ouverture.
-  - **À trancher par Thomas** : la case de la porte e-mail dit « 16 jaar of
-    ouder » en néerlandais, pas 15 comme en France : c'est l'âge du
-    consentement numérique aux Pays-Bas (13 ans en Belgique).
+  - **L'âge de la case de la porte e-mail** : « 16 jaar of ouder » en
+    néerlandais, l'âge du consentement numérique aux Pays-Bas (13 ans en
+    Belgique), validé par Thomas le 30 octobre 2026 (« ok pour 16 ans ») ;
+    15 ans dans les cinq langues publiques.
   - La clé `nav.bilanCoupleDesc` parle encore d'un rapport de 30 pages dans
     les cinq langues publiques ; aucune page ne l'affiche.
 
@@ -149,7 +150,62 @@ le met à jour dans la PR de chaque lot.
   quelques articles avant d'ouvrir, soit la page du blog reste en noindex et
   hors du menu tant qu'une langue n'a pas d'article.
 
+## Lot 2c (30 octobre 2026) : les textes communs des moteurs
+
+- **Les textes** : dans `nl/quizGames.json`, les parties partagées par tous
+  les moteurs (`playerSetup`, `question`, `result`, `meta`, `reviews`,
+  `share`, `story`, `quizNames`, `ui`, `salon`) ; dans `nl/gd.json`, la seule
+  partie commune (`question`). Les parties propres à un test ou à un jeu
+  (`coquin`, `plateau`, `quiDeNous`...) viennent avec leur page, aux lots 3
+  à 7. En attendant, `games-nl.json` est complété par le français, clé par
+  clé (generate.js) : `tg()` ne retombe pas seul sur le français, et un jeu
+  aurait affiché ses clés.
+- **Les noms des quiz** (`quizNames`) sont ceux des cartes de fin de partie,
+  repris du menu et de la carte des mots-clés, sans césure. Dans un message de
+  partage, le nom est entre guillemets (« Ik scoorde 87% bij ‘Relatietest’ »)
+  : un nom de test ou de jeu néerlandais prendrait « de » ou « het » selon le
+  mot, et les noms en forme de question n'en prennent pas.
+- **Le moteur** (`quiz-engine-core.js`) : les phrases qu'il assemble lui-même
+  suivent la typographie de la langue (`avantPonct`, `pctTexte` dans le
+  socle) : « Sanne! », « Score: », « 87% » en néerlandais et en anglais, une
+  espace insécable en français ; les étiquettes de l'écran de résultat
+  (`pcLabels`) et le message de chargement trop long (`quiz-loader.js`) ont
+  leur néerlandais. Les produits affiliés restent sans néerlandais
+  (`langues: sans-nl`, pas d'identifiant Amazon.nl), et `verifie-langue.mjs`
+  accepte une marque posée sur l'ouverture d'une table entière.
+- **Les phrases à ordre fixe** : « Sanne weet veel meer over de ander dan
+  Daan! » (le quiz « Wie kent de ander het best? » assemble prénom, texte,
+  prénom), « Nu is het de beurt aan Sanne! ».
+- **Restent pour la base, avant l'ouverture** : `LANGUES_AVIS` (écrite trois
+  fois, dont `quiz-engine-core.js`), `capture.js`, `lead-capture`.
+
+## Lot 2d (30 octobre 2026) : contact, mentions légales, confidentialité
+
+- **Les textes** : `nl/contact.json`, `nl/legal.json` (mentions légales et
+  politique de confidentialité, traduites au plus près, en « u », comme le
+  veut le guide pour les pages juridiques) et, de `nl/cgv.json`, les seuls
+  libellés du vendeur (`vendeur`), que les deux pages juridiques affichent ;
+  le statut du vendeur en néerlandais est dans `VENDEUR` (config.js). Le
+  reste des conditions de vente vient au lot 8, avec l'évaluation.
+- **Les adaptations** : le droit de réclamation nomme, en plus de la CNIL,
+  l'Autoriteit Persoonsgegevens (Pays-Bas) et la Gegevensbeschermingsautoriteit
+  (Belgique) ; l'âge des e-mails est celui de la case de la porte, 16 ans
+  (validé par Thomas).
+- **À trancher avant l'ouverture** : la porte e-mail enregistre une adresse
+  néerlandaise comme française (`capture.js` ne connaît pas `nl` tant que la
+  base ne l'accepte pas), et rien ne part en néerlandais avant le lot 8. Soit
+  la porte reste fermée en néerlandais jusqu'à ses e-mails, soit la
+  migration passe d'abord et les adresses attendent.
+- **Remarqué au passage, sans y toucher** : les mentions légales des cinq
+  langues listent les services tiers sans Brevo, qui envoie les e-mails du
+  parcours depuis le 24 octobre 2026 ; la politique de confidentialité, elle,
+  le nomme.
+
 ## Les chiffres
+
+Au lot 2d : `textes nl` 44 parties écrites sur 1 045 (1 042 avant que le contrôle ne lise aussi `cp`, `coquinQ` et `funny`, les préfixes de `gd.json` qui portent un autre nom hors du français) ; `site nl --jouer --sans-rendus` : chaque moteur va jusqu'à son résultat, dans chaque mode, sans erreur de console, et les 753 textes restés en français sur 73 pages sont ceux propres à chaque test ou jeu (lots 3 à 7).
+
+Au lot 2c : `code nl` 259 passages (dans le moteur, il ne reste que `LANGUES_AVIS`, pour la base, et les textes de l'encart de l'évaluation, lot 8), `textes nl` 38 parties écrites sur 1 042.
 
 Au lot 2b : `code nl` 280 passages, `textes nl` 27 parties écrites sur 1 042,
 `seo nl` sans erreur (3 pages contrôlées), `site nl --pages '/nl/$'` sans
