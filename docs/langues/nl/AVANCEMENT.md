@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -482,7 +482,44 @@ le met à jour dans la PR de chaque lot.
   anglais, ne sont pas repris ; ceux de l'infidélité vers les deux articles
   red flags attendent leur traduction.
 
+## Lot 3j (30 octobre 2026) : m'aime-t-il encore, m'aime-t-il encore à distance
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/houdt-hij-nog-van-mij/` | Houdt hij nog van mij? Of zij? De test in 20 vragen | Houdt mijn vriend nog van mij? Of mijn vriendin? |
+  | `/nl/houdt-hij-van-mij-op-afstand/` | Houdt hij van mij op afstand? De test in 15 vragen | Lange afstandsrelatie: houdt hij nog van mij? Of zij? |
+
+- **Les textes de moteur** : `aimeEncore` (20 questions, quatre verdicts)
+  et `distanceAime` (15 questions, quatre verdicts), et leurs écrans de
+  départ dans quizGames.json (`aime-encore`, `distanceAime`), que le contrôle
+  `site` a trouvés en français au premier passage : les textes d'un écran de
+  départ propre à un test se cherchent sous la clé du test dans
+  `quizGames.json` avant de dire la page finie.
+- **Le tableau du score à distance, dans les six langues** : il disait 0 à
+  11, 12 à 23, 24 à 35, 36 à 45, alors que le test compte de 0 à 160 points
+  (poids de 1 à 3, réponses de 0 à 5 fois le poids) et découpe ses quatre
+  verdicts par tranches de 40, comme le dit le texte juste au-dessus. Le
+  néerlandais et les cinq langues publiques donnent désormais 0 à 39, 40 à
+  79, 80 à 119 et 120 à 160 ; une partie jouée dans Chromium affiche 86/160
+  et le verdict de la troisième tranche.
+- **La porte e-mail** : les deux pages l'ont (« zonder account », jamais
+  « anoniem »).
+- **Les liens** : vers « liefde of gewoonte », le couple sain, « is mijn
+  relatie voorbij », le test de couple, le couple toxique, la relation sous
+  contrôle, « ben ik verliefd », l'infidélité, la dépendance affective, la
+  confiance et, entre les deux pages, de l'une à l'autre.
+
 ## Les chiffres
+
+Au lot 3j : `textes nl` 303 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (28 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat, et le seul texte resté en français est celui d'une carte
+« Hierna » vers « ben ik verliefd », pas encore traduite. Côté public, seul
+le tableau du score du test à distance change, dans les cinq langues.
+
 
 Au lot 3i : `textes nl` 276 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (26 pages traduites) ; `site nl` sur les deux pages : aucun

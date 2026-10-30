@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Gratis test, 15 vragen",
+    "title": "Lange afstandsrelatie: houdt hij nog van mij? Of zij?",
+    "titleHighlight": "Lange afstandsrelatie",
+    "description": "Speciaal voor een lange afstandsrelatie. 15 vragen om te scheiden wat door de kilometers komt en wat door het gevoel, want die twee zie je niet op dezelfde manier.",
+    "subtitle": "Test voor jou alleen, gratis en zonder account"
+  },
+  "howTo": {
+    "title": "Hoe werkt deze test?",
+    "step1": "Je antwoordt alleen, over je huidige relatie. Er wordt niets verstuurd: niemand ziet je antwoorden.",
+    "step2": "Denk aan de <strong>afgelopen weken</strong> en niet aan het begin van jullie verhaal. Een lange afstandsrelatie verandert een paar keer van ritme, en het gaat om de periode waar jullie nu in zitten.",
+    "step3": "De antwoorden lopen van het meest verontrustende signaal tot het meest geruststellende, en elke vraag weegt mee naar hoe belangrijk ze is. Het totaal loopt van 0 tot 160 punten: hier is een hoge score goed nieuws.",
+    "step4": "De uitslag vertelt je of wat je meemaakt lijkt op vermoeidheid door de afstand, of op iets anders.",
+    "outro": "Antwoord met een koel hoofd, niet net na een ruzie of na twee dagen stilte. Lange afstandsrelaties hebben dipjes die op zich niets betekenen."
+  },
+  "crossLink": {
+    "title": "Wil je kijken hoe het met de relatie zelf gaat?",
+    "text": "Deze test gaat over zijn of haar gevoelens. Onze test over relaties op afstand kijkt naar jullie relatie als geheel: het contact, de bezoeken, het vertrouwen en het einde van de afstand dat jullie voor ogen hebben.",
+    "button": "Naar de test over relaties op afstand"
+  },
+  "section1": {
+    "title": "Afstand maakt alles onleesbaar, en daar zit het probleem",
+    "p1": "In een relatie waarin je op dezelfde plek woont, zie je het als de liefde minder wordt. Stiltes aan tafel, avonden ieder voor zich, een hand die niet meer wordt gepakt. Op afstand verdwijnen al die signalen, en blijven er alleen berichten, belletjes en weken wachten over.",
+    "p2": "Het probleem is dat <strong>vermoeidheid door de afstand en minder liefde precies dezelfde symptomen geven</strong>: minder bellen, kortere gesprekken, minder zin om plannen te maken. Twee heel verschillende oorzaken, één en hetzelfde plaatje. Daarom draaien mensen maandenlang in rondjes.",
+    "p3": "Deze test kan de gedachten van je partner niet lezen. Wat hij wel doet, is je observaties in twee groepen verdelen: wat door de kilometers komt, en wat alleen te verklaren is doordat iemand zich terugtrekt. Dat zijn niet dezelfde dingen, en ze vragen niet om dezelfde reactie."
+  },
+  "section2": {
+    "title": "De vijf signalen die op afstand tellen",
+    "intro": "De gewone signalen bij koppels werken hier niet. Dit zijn de signalen die hun waarde houden als je elkaar niet ziet.",
+    "pillar1Title": "Wie het contact zoekt",
+    "pillar1Text": "Het betrouwbaarste signaal van allemaal, en het makkelijkst te zien. Bij iedereen gaan er na verloop van tijd minder berichten heen en weer, maar de verhouding tussen wie schrijft en wie antwoordt verandert niet zolang de zin er is. Wekenlang altijd als eerste schrijven: dat is het echte alarmsignaal.",
+    "pillar2Title": "Waar de gesprekken over gaan",
+    "pillar2Text": "Van echte gesprekken overgaan op praktische zaken is de natuurlijke helling van elke lange afstandsrelatie. Het wordt zorgwekkend als de moeilijke onderwerpen helemaal verdwijnen: jullie maken geen ruzie meer, jullie vertellen elkaar niets meer, jullie regelen alleen nog dingen.",
+    "pillar3Title": "Of er een plan met een datum is",
+    "pillar3Text": "Dit is de beste bekende voorspeller of een koppel op afstand het redt. Niet de liefde die je uitspreekt, niet hoe vaak je belt: weten wanneer het ophoudt. Een plan dat steeds verder opschuift, komt uiteindelijk neer op een nee, ook als niemand dat heeft gezegd.",
+    "pillar4Title": "Je plek in zijn of haar leven daar",
+    "pillar4Text": "Voorgesteld worden, genoemd worden, bestaan in de dagelijkse gesprekken van de ander. Iemand die je buiten zijn of haar dagelijks leven daar houdt, houdt je vaak ook buiten zijn of haar toekomst, en dat signaal zegt veel meer dan een onbeantwoord bericht.",
+    "pillar5Title": "Wat er gebeurt als jullie elkaar weer zien",
+    "pillar5Text": "Een paar uur om weer aan elkaar te wennen is normaal en goed bekend. Een ongemak dat dagen duurt, of momenten samen die gespannen worden, zegt veel meer dan drie weken met weinig telefoontjes.",
+    "tip": "Eén ding telt niet, ook al denken mensen van wel: hoe snel iemand op berichten reageert. Dat hangt veel meer af van werk, tijdverschil en karakter dan van gevoelens."
+  },
+  "section3": {
+    "title": "Wat je score zegt",
+    "p1": "Elke vraag weegt mee naar hoe belangrijk ze is, en elk antwoord krijgt punten naar zijn plaats in de rij. Het totaal loopt van 0 tot 160 punten. Hier is een hoge score goed nieuws: de antwoorden lopen van het meest verontrustende signaal tot het meest geruststellende.",
+    "headerScore": "Score",
+    "headerLevel": "Uitslag",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 39",
+    "row1Level": "De band is dunner geworden",
+    "row1Analysis": "Wat je beschrijft, gaat verder dan vermoeidheid door de kilometers. De moeite lijkt niet meer van twee kanten te komen.",
+    "row2Score": "40 tot 79",
+    "row2Level": "De afstand is aan het winnen",
+    "row2Analysis": "De gevoelens zijn er waarschijnlijk nog, maar het onderhoud van de band is ingestort. Nu is het nog om te keren.",
+    "row3Score": "80 tot 119",
+    "row3Level": "De band houdt",
+    "row3Analysis": "De zwakke punten die je beschrijft, hebben bijna alle koppels op afstand. Niets verontrustends.",
+    "row4Score": "120 tot 160",
+    "row4Level": "Ja, en dat zie je",
+    "row4Analysis": "Evenwichtig contact, echte gesprekken, een plan met een datum. De afstand verandert daar weinig aan.",
+    "tip": "Doe deze test niet de dag na een ruzie. Een koppel op afstand heeft dipjes van een paar dagen die niets betekenen, en die je score met tien punten laten zakken zonder dat er iets veranderd is."
+  },
+  "section4": {
+    "title": "Wat koppels op afstand kapotmaakt, en het is niet wat je denkt",
+    "p1": "Mensen denken dat afstand eindigt met vreemdgaan of met <a href=\"/nl/houdt-hij-nog-van-mij/\">gevoelens die verdwijnen</a>. In de praktijk is het bijna altijd iets anders, en dat zie je van ver aankomen.",
+    "sub1Title": "Geen einddatum",
+    "sub1Text": "Afstand met een bekend einde is goed vol te houden, ook als het lang duurt. Afstand zonder horizon put iedereen uit, omdat elke week een week extra wordt in een tunnel waarvan niemand weet hoe lang hij is. Het is factor nummer één, ver voor alle andere.",
+    "sub2Title": "Gesprekken die steeds dunner worden",
+    "sub2Text": "Omdat je de schaarse belmomenten wilt beschermen, vertel je er op den duur alleen nog goed nieuws in. Je vermijdt moeilijke onderwerpen, je verzwijgt je zorgen, je vat je dag samen. Na een paar maanden weten twee mensen die van elkaar houden niets meer van elkaar.",
+    "sub3Title": "Parallelle levens",
+    "sub3Text": "Ieder bouwt een dagelijks leven op waarin de ander niet bestaat. Nieuwe vrienden, nieuwe gewoontes, nieuwe grapjes. Dat is geen verraad, het gaat vanzelf, en het wordt pas een probleem als niemand de ander in dat nieuwe decor binnenlaat.",
+    "tip": "Herken je jezelf in deze drie stukken, dan is dat geen slecht nieuws. Het zijn de enige drie punten waar je iets aan kunt doen zonder dat de ander een ander karakter hoeft te krijgen."
+  },
+  "section5": {
+    "title": "Wat koppels op afstand die het volhouden anders doen",
+    "p1": "De drie gewoontes hieronder komen steeds terug bij koppels die een lange periode op afstand doorkomen zonder dat hun relatie eraan onderdoor gaat. Geen van de drie vraagt meer gevoel, alleen meer organisatie.",
+    "sub1Title": "Een datum, geen voornemen",
+    "sub1Text": "Niet ‘we zien elkaar snel’, maar een geboekt ticket. Het verschil in stevigheid is groot, omdat een datum het wachten verandert in aftellen. En zodra een bezoek voorbij is, leg je het volgende vast voordat jullie afscheid nemen.",
+    "sub2Title": "Een vast moment dat niet van je humeur afhangt",
+    "sub2Text": "Een vast belmoment, ook al is het kort, dat doorgaat, ook als je er even geen zin in hebt. Koppels die alleen bellen als ze er zin in hebben, bellen uiteindelijk helemaal niet meer, omdat de zin bij allebei altijd tegelijk afneemt.",
+    "sub3Title": "Deel het gewone, niet alleen het belangrijke",
+    "sub3Text": "Een foto van je lunch, een flauwe opmerking, het gezicht van die onuitstaanbare collega. Juist die kleine dingen geven het gevoel dat je samenleeft, veel meer dan lange gesprekken over de relatie. Het gedeelde dagelijks leven is het eerste wat de afstand je afpakt.",
+    "tip": "En één ding moet je zeker niet doen: de afstand compenseren met controle. Bewijs vragen, onaangekondigd bellen om te checken, sociale media uitpluizen. Dat put een koppel op afstand sneller uit dan de afstand zelf."
+  },
+  "section6": {
+    "title": "Hoe je de vraag stelt zonder dat het via de telefoon uitgaat",
+    "p1": "Dat is de moeilijkheid van afstand: je kunt dit gesprek niet voeren terwijl je elkaar aankijkt, en een gesprek dat ontspoort, maak je niet goed door de ander in je armen te nemen. Een paar voorzorgen maken veel uit.",
+    "sub1Title": "Via video, nooit op schrift",
+    "sub1Text": "Een lang bericht over dit onderwerp valt bijna altijd verkeerd, omdat je toon op schrift niet bestaat en de ander het tien keer herleest. Kan videobellen niet, dan is gewoon bellen nog altijd beter dan een tekst.",
+    "sub2Title": "Beschrijf wat je mist, geen verwijt",
+    "sub2Text": "“Ik heb sinds een paar weken het gevoel dat ik deze relatie in mijn eentje draag” opent een gesprek. “Je doet helemaal geen moeite meer” sluit het af. De inhoud is hetzelfde, de afloop helemaal niet.",
+    "sub3Title": "Begin met de vraag over de einddatum",
+    "sub3Text": "Praat over de datum voordat je over gevoelens praat. Dat is concreter, minder bedreigend, en het antwoord vertelt je vaak meer dan welke liefdesverklaring ook. Iemand die je wil houden, zoekt een oplossing. Iemand die heeft losgelaten, schuift het voor zich uit.",
+    "sub4Title": "Accepteer dat één gesprek niet alles oplost",
+    "sub4Text": "Zulke gesprekken voer je in een paar keer. Een definitief antwoord willen in de veertig minuten voordat de ander naar zijn werk gaat, is de beste manier om een verkeerd antwoord te krijgen."
+  },
+  "section7": {
+    "title": "Als de afstand niet meer het onderwerp is",
+    "p1": "Er komt een moment waarop de vraag verandert. Heb je drie keer een datum vastgelegd en is die drie keer opgeschoven, zijn de gesprekken al maanden leeg, ben jij de enige die de relatie in leven houdt, dan is het probleem niet meer geografisch.",
+    "p2": "Een lange afstandsrelatie beoordeel je niet aan hoeveel pijn ze kost, maar aan of de moeite van twee kanten komt. Veel mensen houden het jarenlang vol in een situatie die maar van één kant komt, door zichzelf wijs te maken dat het aan de kilometers ligt. Kilometers schrijven geen berichten.",
+    "p3": "Wil je het van een andere kant bekijken, vraag je dan af of <a href=\"/nl/liefde-of-gewoonte-test/\">het nog liefde is of al gewoonte</a>. En knaagt vooral de onzekerheid over wat daar gebeurt aan je, dan moet je kijken naar <a href=\"/nl/vertrouwen-relatie-test/\">het vertrouwen tussen jullie</a>.",
+    "tip": "Een lange afstandsrelatie die werkt, vraagt veel organisatie en weinig opofferingen. Heb je het gevoel dat het andersom is, dan is het waarschijnlijk geen kwestie van planning."
+  },
+  "faq": {
+    "q1": "Hoe weet je of hij of zij nog van je houdt op afstand?",
+    "a1": "De gewone signalen werken niet als je elkaar niet ziet. Wat je wel kunt zien, is hoe het contact verdeeld is, waar de gesprekken over gaan, of er een plan met een datum is, welke plek je hebt in het sociale leven van de ander en hoe het gaat als jullie elkaar weer zien. Die vijf punten meet deze test.",
+    "q2": "Betekent minder bellen altijd iets?",
+    "a2": "Nee, en dat is de meest gemaakte fout. Na de eerste maanden gaan er in elke lange afstandsrelatie minder berichten heen en weer, bij koppels die het volhouden net zo goed als bij de andere. Het verschil zit in wie als eerste schrijft en in wat jullie elkaar vertellen. De hoeveelheid alleen zegt niets.",
+    "q3": "Mijn score is laag: betekent dat dat het voorbij is?",
+    "a3": "Nee. Een lage score betekent dat het onderhoud van de band is ingestort, en dat is niet hetzelfde als minder liefde. Meestal is een datum om elkaar te zien en een vast belmoment genoeg om weer omhoog te klimmen. Wat niet meer goed te maken is, is een scheve verdeling van de moeite die al jaren duurt.",
+    "q4": "Hoe lang kan een lange afstandsrelatie standhouden?",
+    "a4": "De duur telt minder dan een bekend einde. Sommige koppels houden het drie jaar zonder moeite vol omdat ze weten wanneer het ophoudt, en andere knappen na zes maanden af omdat de horizon bij elk gesprek opschuift. Zou je maar aan één punt werken, dan is het dit.",
+    "q5": "Moet je deze test samen doen?",
+    "a5": "Nee, hij is gemaakt om alleen te doen, omdat hij gaat over wat jij ziet en wat jij voelt. Wil je liever kijken hoe het met de relatie zelf gaat, dan doet onze test over relaties op afstand dat, en die kun je ook alleen doen.",
+    "q6": "Worden mijn antwoorden opgeslagen?",
+    "a6": "Nee. Alles gebeurt in je browser, er wordt geen antwoord verstuurd of bewaard, en je hoeft geen account te maken. We vragen alleen één keer je e-mailadres om de volledige uitslag te tonen, en je antwoorden gaan daar niet mee. Je kunt de test over een maand opnieuw doen om te vergelijken, maar intussen wordt er niets bewaard."
+  }
+}
