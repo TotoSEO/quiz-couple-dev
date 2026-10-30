@@ -1077,6 +1077,10 @@ Thomas, après l'étude d'une sixième langue : « ok reprends l'allemand d'abor
 - **Un angle par page, en allemand aussi :** le test de couple (`/de/paar-kompatibilitaetstest/`) a « Partnertest » et « Beziehungstest » (et « kompatibilitätstest paare » par son adresse) ; le test de compatibilité en vingt questions a « Passen wir zusammen? » et « Kompatibilitätstest », sans « für Paare » ; la date de naissance « passen wir zusammen (namen und) geburtsdatum » ; les prénoms et signes « Liebestest mit Namen und Sternzeichen » ; le Liebesrechner « Liebesrechner » et « Liebestest mit Namen ».
 - **Une nouvelle page allemande** prend son title dans les requêtes allemandes de sa famille, et son nom de jeu dans l'usage allemand, vérifié dans la Search Console avant d'être écrit.
 
+## Le néerlandais (en préparation depuis le 30 octobre 2026)
+
+Thomas, devant les volumes néerlandais (« vragen voor koppels » 1 600 recherches par mois, « liefdestest » 320, « spelletjes voor koppels » 210, « relatietest » et « zou je liever vragen » 170) : « On fonce ». Le cadrage (inventaire chiffré, quatre contrôles automatiques, interrupteur `LANGUES_CACHEES`, carte des mots-clés, guide de style, lots) est `docs/langues/CADRAGE-NL.md`, l'avancement `docs/langues/nl/AVANCEMENT.md` : on les relit avant tout travail sur le néerlandais. D'ici là, tout code nouveau qui dépend de la langue lit `LANGUAGES` (config.js) au lieu d'écrire les cinq langues en dur : 57 fichiers le font déjà, et chacun devra recevoir `nl`.
+
 ## Le frein sur les mauvaises notes
 
 Une note de quatre ou cinq étoiles arrive presque toujours avec un mot. Une
