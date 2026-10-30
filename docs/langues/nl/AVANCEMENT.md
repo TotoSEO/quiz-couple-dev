@@ -107,9 +107,10 @@ le met à jour dans la PR de chaque lot.
     contraintes de la base (`reviews_lang_valeur`, `abonnes`...) : sinon un
     avis envoyé depuis une page /nl/ serait refusé par la base et perdu.
     Avant l'ouverture.
-  - **À trancher par Thomas** : la case de la porte e-mail dit « 16 jaar of
-    ouder » en néerlandais, pas 15 comme en France : c'est l'âge du
-    consentement numérique aux Pays-Bas (13 ans en Belgique).
+  - **L'âge de la case de la porte e-mail** : « 16 jaar of ouder » en
+    néerlandais, l'âge du consentement numérique aux Pays-Bas (13 ans en
+    Belgique), validé par Thomas le 30 octobre 2026 (« ok pour 16 ans ») ;
+    15 ans dans les cinq langues publiques.
   - La clé `nav.bilanCoupleDesc` parle encore d'un rapport de 30 pages dans
     les cinq langues publiques ; aucune page ne l'affiche.
 
@@ -189,7 +190,7 @@ le met à jour dans la PR de chaque lot.
 - **Les adaptations** : le droit de réclamation nomme, en plus de la CNIL,
   l'Autoriteit Persoonsgegevens (Pays-Bas) et la Gegevensbeschermingsautoriteit
   (Belgique) ; l'âge des e-mails est celui de la case de la porte, 16 ans
-  (voir plus haut, à trancher par Thomas).
+  (validé par Thomas).
 - **À trancher avant l'ouverture** : la porte e-mail enregistre une adresse
   néerlandaise comme française (`capture.js` ne connaît pas `nl` tant que la
   base ne l'accepte pas), et rien ne part en néerlandais avant le lot 8. Soit
