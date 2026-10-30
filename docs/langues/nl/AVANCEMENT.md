@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -455,7 +455,42 @@ le met à jour dans la PR de chaque lot.
 - **Les mots gardés** : « Factor » et « Effect » (en-têtes du tableau de la
   confiance) rejoignent `identiques.txt`.
 
+## Lot 3i (30 octobre 2026) : dépendance affective, infidélité
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/emotionele-afhankelijkheid-test/` | Emotionele afhankelijkheid test: liefde of vastklampen? | Ben ik emotioneel afhankelijk van mijn partner? Doe de test |
+  | `/nl/gaat-mijn-partner-vreemd/` | Gaat mijn partner vreemd? De vreemdgaan test in 20 vragen | Vreemdgaan test: de signalen die niet liegen |
+
+- **Les textes de moteur** : `dependance` (20 questions, quatre verdicts) et
+  `infidelite` (20 questions, quatre verdicts).
+- **Les numéros** : la section de la dépendance qui parle d'« idées noires »
+  donne en néerlandais 113 Zelfmoordpreventie (113 ou 0800-0113, Pays-Bas)
+  et la Zelfmoordlijn (1813, Belgique), que le français ne donne pas.
+- **Les chiffres** : le tableau de l'infidélité reprend la version anglaise
+  (20 à 40 % selon l'enquête et le pays, sans l'IFOP), et la part des
+  couples qui se reconstruisent après une thérapie y dit « ongeveer de
+  helft », comme le texte de la section 6 (l'anglais écrit 50 à 60 %).
+- **La porte e-mail** : la dépendance l'a (« zonder account ») ;
+  l'infidélité ne l'a jamais.
+- **Les liens** : de la dépendance vers le style d'attachement et la
+  jalousie ; de l'infidélité vers le quiz Temptation Island, le style
+  d'attachement, le couple toxique et la confiance (verdict 2). Les liens
+  du français vers six articles du blog sur la dépendance, absents en
+  anglais, ne sont pas repris ; ceux de l'infidélité vers les deux articles
+  red flags attendent leur traduction.
+
 ## Les chiffres
+
+Au lot 3i : `textes nl` 276 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (26 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat, et les textes restés en français sont ceux des cartes
+« Hierna » vers des pages pas encore traduites. Aucune page publique ne
+change.
+
 
 Au lot 3h : `textes nl` 252 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (24 pages traduites) ; `site nl` sur les deux pages : aucun

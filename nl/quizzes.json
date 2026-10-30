@@ -100,11 +100,23 @@
     "description": "20 vragen om het vertrouwen in je relatie te meten: jaloezie, eerlijkheid, betrouwbaarheid. Meteen een uitslag.",
     "metaDescription": "Vertrouwen in een relatie test: 20 vragen over jaloezie, eerlijkheid en hoe betrouwbaar jullie zijn voor elkaar. Gratis, met meteen een uitslag."
   },
+  "testInfidelite": {
+    "title": "Gaat mijn partner vreemd? De vreemdgaan test in 20 vragen",
+    "shortTitle": "Vreemdgaan test",
+    "description": "20 vragen om de signalen van vreemdgaan in je relatie te herkennen: geheimzinnigheid, afstand, ander gedrag. Meteen een uitslag.",
+    "metaDescription": "Gaat mijn partner vreemd? 20 vragen om de signalen van vreemdgaan in je relatie te herkennen. Gratis, met meteen een uitslag."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
     "metaDescription": "Is mijn relatie voorbij? 24 feitelijke vragen, gewogen naar hoe ernstig elk teken is, en een uitslag in 8 niveaus die je niet sust. Gratis, zonder account.",
     "description": "Vierentwintig feitelijke vragen, een weging naar hoe ernstig elk teken is, en een uitslag die je niet probeert te sparen."
+  },
+  "testDependance": {
+    "title": "Emotionele afhankelijkheid test: liefde of vastklampen?",
+    "shortTitle": "Emotionele afhankelijkheid test",
+    "description": "20 eerlijke vragen om te zien of je van je partner houdt of je aan hem of haar vastklampt. Meteen een uitslag en concrete stappen.",
+    "metaDescription": "Emotionele afhankelijkheid test: gezonde gehechtheid of afhankelijkheid? 20 eerlijke vragen, meteen een uitslag en concrete stappen. Gratis."
   },
   "testEmprise": {
     "title": "Controlerende relatie test: hoe vrij ben je nog?",
