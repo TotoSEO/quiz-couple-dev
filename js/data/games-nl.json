@@ -668,9 +668,9 @@
     "disclaimer": "Pensez à une personne précise avant de commencer, et répondez sur elle uniquement."
   },
   "distanceAime": {
-    "introQuestion": "Vous vous posez la question :",
-    "introQuote": "« Est-ce qu'il ou elle m'aime encore… ou est-ce que c'est juste la distance ? »",
-    "disclaimer": "Répondez sur les dernières semaines, pas sur le début de votre histoire."
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Houdt hij of zij nog van me... of is het gewoon de afstand?”",
+    "disclaimer": "Antwoord over de afgelopen weken, niet over het begin van jullie verhaal."
   },
   "pourContre": {
     "introTitre": "Pour ou contre ?",
@@ -714,9 +714,9 @@
     "orient_toxique_raison": "Een relatie kan eindigen omdat ze uitdooft, of omdat ze schade doet. Dat is niet hetzelfde."
   },
   "aime-encore": {
-    "introQuestion": "Avant de commencer :",
-    "introQuote": "Répondez sur les trois derniers mois, pas sur la semaine dernière.",
-    "disclaimer": "Personne ne peut lire dans la tête de quelqu'un d'autre. Ce test met de l'ordre dans ce que vous voyez, il ne rend pas de verdict."
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord over de afgelopen drie maanden, niet over vorige week.",
+    "disclaimer": "Niemand kan in het hoofd van een ander kijken. Deze test brengt orde in wat je ziet, hij velt geen oordeel."
   },
   "emprise": {
     "introQuestion": "Je vraagt je af:",
