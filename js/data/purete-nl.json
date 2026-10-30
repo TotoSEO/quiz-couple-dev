@@ -1,0 +1,2562 @@
+{
+ "cats": {
+  "sexe": {
+   "nom": "Sexe",
+   "emoji": "🔥"
+  },
+  "infidelite": {
+   "nom": "Infidélité",
+   "emoji": "💔"
+  },
+  "mensonge": {
+   "nom": "Mensonges",
+   "emoji": "🎭"
+  },
+  "substances": {
+   "nom": "Alcool & co",
+   "emoji": "🍸"
+  },
+  "famille": {
+   "nom": "Famille",
+   "emoji": "👪"
+  },
+  "numerique": {
+   "nom": "Vie numérique",
+   "emoji": "📱"
+  },
+  "interdit": {
+   "nom": "Interdits",
+   "emoji": "🚨"
+  },
+  "exhibition": {
+   "nom": "Exhibition",
+   "emoji": "👀"
+  },
+  "libertinage": {
+   "nom": "Libertinage",
+   "emoji": "💫"
+  },
+  "transgression": {
+   "nom": "Transgression",
+   "emoji": "🚨"
+  },
+  "secrets": {
+   "nom": "Secrets",
+   "emoji": "🤐"
+  }
+ },
+ "solo": {
+  "questions": [
+   {
+    "id": 1,
+    "cat": "sexe",
+    "ado": false,
+    "q": "C'est quoi ton bodycount ?",
+    "r": [
+     {
+      "t": "0",
+      "p": 0
+     },
+     {
+      "t": "1 à 3",
+      "p": 5
+     },
+     {
+      "t": "4 à 10",
+      "p": 11
+     },
+     {
+      "t": "11 à 30",
+      "p": 17
+     },
+     {
+      "t": "Plus de 30",
+      "p": 22
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà couché le premier soir ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une seule fois",
+      "p": 8
+     },
+     {
+      "t": "Quelques fois",
+      "p": 13
+     },
+     {
+      "t": "C'est un peu ma spécialité",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà eu un plan cul régulier ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un, vite fini",
+      "p": 7
+     },
+     {
+      "t": "Un qui a duré des mois",
+      "p": 13
+     },
+     {
+      "t": "Plusieurs en même temps",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà couché avec quelqu'un dont t'as oublié le prénom ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'ai hésité mais je l'avais",
+      "p": 6
+     },
+     {
+      "t": "Oui, une fois",
+      "p": 14
+     },
+     {
+      "t": "Plus d'une fois",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà simulé au lit ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois pour abréger",
+      "p": 6
+     },
+     {
+      "t": "Assez souvent",
+      "p": 11
+     },
+     {
+      "t": "Presque à chaque fois",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà fait l'amour ailleurs que dans un lit ?",
+    "r": [
+     {
+      "t": "Non",
+      "p": 0
+     },
+     {
+      "t": "Un canapé, ça compte ?",
+      "p": 5
+     },
+     {
+      "t": "Voiture, douche, cuisine",
+      "p": 10
+     },
+     {
+      "t": "Dehors, avec le risque",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà testé un jouet, seul(e) ou à deux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Seul(e)",
+      "p": 6
+     },
+     {
+      "t": "À deux, une fois",
+      "p": 10
+     },
+     {
+      "t": "On a un tiroir dédié",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà regardé un film de cul avec quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Par hasard, en zappant",
+      "p": 4
+     },
+     {
+      "t": "Oui, volontairement",
+      "p": 9
+     },
+     {
+      "t": "C'est devenu une habitude",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà eu une expérience avec une personne du même sexe ?",
+    "r": [
+     {
+      "t": "Non",
+      "p": 0
+     },
+     {
+      "t": "Un baiser en soirée",
+      "p": 7
+     },
+     {
+      "t": "Oui, une fois",
+      "p": 13
+     },
+     {
+      "t": "Oui, plusieurs fois",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà fait un plan à trois ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On en a parlé, jamais fait",
+      "p": 6
+     },
+     {
+      "t": "Une fois",
+      "p": 18
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 24
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà eu un rapport en sachant que quelqu'un pouvait entendre ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Chez des amis, en silence",
+      "p": 8
+     },
+     {
+      "t": "Chez mes parents",
+      "p": 13
+     },
+     {
+      "t": "Et on n'a pas fait semblant",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "cat": "sexe",
+    "ado": false,
+    "q": "T'as déjà couché avec quelqu'un juste pour te venger ou te prouver un truc ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'y ai pensé",
+      "p": 5
+     },
+     {
+      "t": "Oui, une fois",
+      "p": 15
+     },
+     {
+      "t": "Oui, et je le referais",
+      "p": 21
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "cat": "infidelite",
+    "ado": false,
+    "q": "T'as déjà trompé quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un baiser, rien de plus",
+      "p": 12
+     },
+     {
+      "t": "Oui, une fois",
+      "p": 22
+     },
+     {
+      "t": "Oui, plusieurs fois",
+      "p": 28
+     }
+    ]
+   },
+   {
+    "id": 14,
+    "cat": "infidelite",
+    "ado": true,
+    "q": "T'as déjà embrassé quelqu'un d'autre en soirée sans jamais le dire ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un smack, ça compte pas",
+      "p": 8
+     },
+     {
+      "t": "Oui, et je l'ai caché",
+      "p": 16
+     },
+     {
+      "t": "Oui, plusieurs fois",
+      "p": 21
+     }
+    ]
+   },
+   {
+    "id": 15,
+    "cat": "infidelite",
+    "ado": false,
+    "q": "T'as déjà été l'histoire cachée de quelqu'un en couple ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Je l'ai su après coup",
+      "p": 8
+     },
+     {
+      "t": "Oui, en le sachant",
+      "p": 20
+     },
+     {
+      "t": "Oui, plusieurs fois",
+      "p": 25
+     }
+    ]
+   },
+   {
+    "id": 16,
+    "cat": "infidelite",
+    "ado": true,
+    "q": "T'as déjà gardé contact avec un ex pendant que t'étais en couple ?",
+    "r": [
+     {
+      "t": "Non",
+      "p": 0
+     },
+     {
+      "t": "Un anniversaire par an",
+      "p": 4
+     },
+     {
+      "t": "On se parlait souvent",
+      "p": 11
+     },
+     {
+      "t": "En cachette, oui",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 17,
+    "cat": "infidelite",
+    "ado": false,
+    "q": "T'as déjà retéléchargé une appli de rencontre en étant en couple ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Juste pour regarder",
+      "p": 10
+     },
+     {
+      "t": "J'ai discuté avec des gens",
+      "p": 17
+     },
+     {
+      "t": "J'ai vu quelqu'un",
+      "p": 25
+     }
+    ]
+   },
+   {
+    "id": 18,
+    "cat": "infidelite",
+    "ado": true,
+    "q": "T'as déjà eu une relation trop proche avec quelqu'un, sans rien faire de physique ?",
+    "r": [
+     {
+      "t": "Non",
+      "p": 0
+     },
+     {
+      "t": "Une amitié un peu ambiguë",
+      "p": 6
+     },
+     {
+      "t": "On se disait des choses qu'on aurait pas dû",
+      "p": 13
+     },
+     {
+      "t": "C'était une histoire, sans le corps",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 19,
+    "cat": "infidelite",
+    "ado": false,
+    "q": "T'as déjà revu un ex en cachette ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un café, rien d'autre",
+      "p": 8
+     },
+     {
+      "t": "Oui, et il s'est passé un truc",
+      "p": 20
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 24
+     }
+    ]
+   },
+   {
+    "id": 20,
+    "cat": "infidelite",
+    "ado": true,
+    "q": "T'as déjà flirté au boulot ou en cours en étant pris(e) ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un peu, pour le jeu",
+      "p": 7
+     },
+     {
+      "t": "Assez pour me poser des questions",
+      "p": 13
+     },
+     {
+      "t": "Ça a fini par déraper",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 21,
+    "cat": "infidelite",
+    "ado": true,
+    "q": "T'as déjà supprimé une conversation avant que ton/ta partenaire la voie ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois, sans gravité",
+      "p": 7
+     },
+     {
+      "t": "Régulièrement",
+      "p": 14
+     },
+     {
+      "t": "J'ai un deuxième téléphone",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 22,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà menti sur ton passé amoureux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'ai arrondi un chiffre",
+      "p": 5
+     },
+     {
+      "t": "J'ai caché toute une histoire",
+      "p": 12
+     },
+     {
+      "t": "Ma version officielle est très loin de la vraie",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 23,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà fait semblant d'aller mal pour avoir de l'attention ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un peu, sans le vouloir",
+      "p": 5
+     },
+     {
+      "t": "Oui, consciemment",
+      "p": 11
+     },
+     {
+      "t": "C'est un réflexe chez moi",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 24,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà mal parlé de ton/ta partenaire à tes proches ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un coup de gueule normal",
+      "p": 4
+     },
+     {
+      "t": "J'ai raconté des trucs intimes",
+      "p": 10
+     },
+     {
+      "t": "J'ai dit des choses vraiment moches",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 25,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà menti sur l'endroit où t'étais ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Pour éviter une prise de tête",
+      "p": 5
+     },
+     {
+      "t": "Pour cacher quelqu'un",
+      "p": 13
+     },
+     {
+      "t": "Souvent, c'est devenu un système",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 26,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà fait semblant d'adorer un cadeau ?",
+    "r": [
+     {
+      "t": "Non, je dis ce que je pense",
+      "p": 0
+     },
+     {
+      "t": "Oui, par politesse",
+      "p": 3
+     },
+     {
+      "t": "Oui, et je l'ai revendu",
+      "p": 8
+     },
+     {
+      "t": "Oui, et je l'ai jeté",
+      "p": 11
+     }
+    ]
+   },
+   {
+    "id": 27,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà fouillé le téléphone de quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'ai regardé un écran allumé",
+      "p": 6
+     },
+     {
+      "t": "Oui, en cachette",
+      "p": 13
+     },
+     {
+      "t": "Régulièrement",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 28,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà ghosté quelqu'un du jour au lendemain ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Après un ou deux rendez-vous",
+      "p": 5
+     },
+     {
+      "t": "Après plusieurs mois",
+      "p": 13
+     },
+     {
+      "t": "Après une vraie relation",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "cat": "mensonge",
+    "ado": true,
+    "q": "T'as déjà caché un truc grave à ton/ta partenaire ?",
+    "r": [
+     {
+      "t": "Rien de grave",
+      "p": 0
+     },
+     {
+      "t": "Un flirt, une danse de trop",
+      "p": 8
+     },
+     {
+      "t": "Un baiser",
+      "p": 15
+     },
+     {
+      "t": "Bien pire que ça",
+      "p": 22
+     }
+    ]
+   },
+   {
+    "id": 30,
+    "cat": "substances",
+    "ado": true,
+    "q": "T'as déjà été ivre au point d'oublier une partie de la soirée ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 7
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 13
+     },
+     {
+      "t": "Trop souvent pour compter",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 31,
+    "cat": "substances",
+    "ado": false,
+    "q": "T'as déjà fumé un joint ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une taffe pour essayer",
+      "p": 6
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 12
+     },
+     {
+      "t": "Régulièrement",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 32,
+    "cat": "substances",
+    "ado": false,
+    "q": "T'as déjà pris autre chose qu'un joint ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois, en soirée",
+      "p": 14
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 21
+     },
+     {
+      "t": "Régulièrement",
+      "p": 26
+     }
+    ]
+   },
+   {
+    "id": 33,
+    "cat": "substances",
+    "ado": true,
+    "q": "T'as déjà enchaîné une soirée jusqu'au petit-déjeuner ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 4
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 8
+     },
+     {
+      "t": "C'est mon format préféré",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 34,
+    "cat": "substances",
+    "ado": false,
+    "q": "T'as déjà eu un rapport sous l'emprise de l'alcool ou d'autre chose ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un peu éméché(e)",
+      "p": 7
+     },
+     {
+      "t": "Vraiment sous emprise",
+      "p": 15
+     },
+     {
+      "t": "Sans en garder de souvenir clair",
+      "p": 21
+     }
+    ]
+   },
+   {
+    "id": 35,
+    "cat": "substances",
+    "ado": true,
+    "q": "T'as déjà pris le volant après avoir bu ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un verre, il y a longtemps",
+      "p": 11
+     },
+     {
+      "t": "Oui, plus d'une fois",
+      "p": 21
+     },
+     {
+      "t": "Oui, et j'ai eu peur",
+      "p": 27
+     }
+    ]
+   },
+   {
+    "id": 36,
+    "cat": "substances",
+    "ado": true,
+    "q": "T'as déjà été malade en soirée devant tout le monde ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Discrètement",
+      "p": 4
+     },
+     {
+      "t": "Devant témoins",
+      "p": 8
+     },
+     {
+      "t": "Sur quelqu'un",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 37,
+    "cat": "famille",
+    "ado": true,
+    "q": "Tu t'es déjà dit que ta belle-famille était pas ouf ?",
+    "r": [
+     {
+      "t": "Je les adore",
+      "p": 0
+     },
+     {
+      "t": "Un ou deux agacements",
+      "p": 4
+     },
+     {
+      "t": "Oui, franchement",
+      "p": 8
+     },
+     {
+      "t": "Je les évite quand je peux",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 38,
+    "cat": "famille",
+    "ado": true,
+    "q": "T'as déjà menti à tes parents sur une relation ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'ai omis des détails",
+      "p": 4
+     },
+     {
+      "t": "J'ai caché quelqu'un entièrement",
+      "p": 10
+     },
+     {
+      "t": "J'ai inventé une autre vie",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 39,
+    "cat": "famille",
+    "ado": true,
+    "q": "T'as déjà présenté quelqu'un à tes parents en sachant que ça durerait pas ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "J'avais un doute",
+      "p": 4
+     },
+     {
+      "t": "Je savais très bien",
+      "p": 9
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 40,
+    "cat": "famille",
+    "ado": true,
+    "q": "T'as déjà passé les fêtes avec quelqu'un que t'aimais déjà plus ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un repas",
+      "p": 5
+     },
+     {
+      "t": "Toutes les fêtes",
+      "p": 10
+     },
+     {
+      "t": "Et j'ai joué le jeu à fond",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 41,
+    "cat": "famille",
+    "ado": true,
+    "q": "T'as déjà choisi une soirée plutôt qu'un truc important en famille ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 4
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 8
+     },
+     {
+      "t": "C'est un classique chez moi",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 42,
+    "cat": "numerique",
+    "ado": false,
+    "q": "T'as déjà envoyé une photo de toi dénudé(e) ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Sans mon visage",
+      "p": 8
+     },
+     {
+      "t": "Oui, avec le visage",
+      "p": 14
+     },
+     {
+      "t": "À plusieurs personnes",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 43,
+    "cat": "numerique",
+    "ado": false,
+    "q": "T'as déjà sexté depuis le boulot ou la salle de cours ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Quelques messages",
+      "p": 7
+     },
+     {
+      "t": "Beaucoup plus que ça",
+      "p": 12
+     },
+     {
+      "t": "Et j'ai failli me faire griller",
+      "p": 16
+     }
+    ]
+   },
+   {
+    "id": 44,
+    "cat": "numerique",
+    "ado": true,
+    "q": "T'as déjà eu un compte secret sur les réseaux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un compte pour regarder",
+      "p": 6
+     },
+     {
+      "t": "Un compte pour parler à des gens",
+      "p": 13
+     },
+     {
+      "t": "Un compte que personne ne connaît",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 45,
+    "cat": "numerique",
+    "ado": true,
+    "q": "T'as déjà stalké un ex ou son/sa nouveau/nouvelle ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un petit tour rapide",
+      "p": 4
+     },
+     {
+      "t": "Régulièrement",
+      "p": 9
+     },
+     {
+      "t": "J'ai remonté des années de photos",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 46,
+    "cat": "numerique",
+    "ado": true,
+    "q": "T'as déjà envoyé un message que t'as regretté au réveil ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un message gênant",
+      "p": 4
+     },
+     {
+      "t": "Un message que j'ai dû expliquer",
+      "p": 9
+     },
+     {
+      "t": "Un message qui a tout cassé",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 47,
+    "cat": "interdit",
+    "ado": true,
+    "q": "T'as déjà volé quelque chose ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un bonbon, gamin(e)",
+      "p": 5
+     },
+     {
+      "t": "Quelque chose de vraie valeur",
+      "p": 14
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 48,
+    "cat": "interdit",
+    "ado": true,
+    "q": "T'as déjà séché les cours ou le boulot pour rester avec quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une matinée",
+      "p": 4
+     },
+     {
+      "t": "Une journée entière",
+      "p": 8
+     },
+     {
+      "t": "Plusieurs jours",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 49,
+    "cat": "interdit",
+    "ado": true,
+    "q": "T'as déjà fait un truc franchement illégal pour impressionner quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une bêtise sans gravité",
+      "p": 7
+     },
+     {
+      "t": "Quelque chose de sérieux",
+      "p": 17
+     },
+     {
+      "t": "Et j'ai eu des ennuis",
+      "p": 23
+     }
+    ]
+   },
+   {
+    "id": 50,
+    "cat": "interdit",
+    "ado": true,
+    "q": "T'as déjà été surpris(e) en flagrant délit par quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un ami",
+      "p": 6
+     },
+     {
+      "t": "Mes parents",
+      "p": 12
+     },
+     {
+      "t": "Des inconnus",
+      "p": 17
+     }
+    ]
+   }
+  ],
+  "paliers": [
+   {
+    "min": 0,
+    "max": 9,
+    "titre": "Casier vierge",
+    "emoji": "😇",
+    "texte": "Sur le papier, tu n'as rien à te reprocher. Soit tu es vraiment sage, soit tu mens très bien, et personne ne saura jamais lequel des deux."
+   },
+   {
+    "min": 9,
+    "max": 22,
+    "titre": "Sage, mais pas naïf",
+    "emoji": "🌱",
+    "texte": "Tu as fait quelques bêtises, celles que tout le monde fait. Rien qui t'empêcherait de regarder tes parents dans les yeux au repas de Noël."
+   },
+   {
+    "min": 22,
+    "max": 38,
+    "titre": "Tu as vécu, sans excès",
+    "emoji": "🙂",
+    "texte": "Tu as des histoires à raconter, mais tu gardes les meilleures pour les gens en qui tu as confiance. C'est le score le plus courant, et c'est plutôt bon signe."
+   },
+   {
+    "min": 38,
+    "max": 54,
+    "titre": "Le dossier s'épaissit",
+    "emoji": "😏",
+    "texte": "Là on commence à avoir de la matière. Tu as passé quelques lignes, tu le sais, et visiblement tu ne le regrettes pas tant que ça."
+   },
+   {
+    "min": 54,
+    "max": 70,
+    "titre": "Tu as clairement dépassé la ligne",
+    "emoji": "🔥",
+    "texte": "À ce niveau, ce n'est plus une série d'accidents, c'est un mode de vie. Tu as fait des choses que la moitié des gens n'osent même pas cocher."
+   },
+   {
+    "min": 70,
+    "max": 85,
+    "titre": "Ton casier fait peur",
+    "emoji": "😈",
+    "texte": "Tu es dans le très haut du panier. Il reste peu de cases que tu n'as pas cochées, et celles qui restent, tu y as sûrement déjà pensé."
+   },
+   {
+    "min": 85,
+    "max": 101,
+    "titre": "Hors catégorie",
+    "emoji": "👑",
+    "texte": "Tu as coché à peu près tout ce qu'il y avait à cocher. À ce stade la question n'est plus de savoir ce que tu as fait, mais ce qu'il te reste à faire."
+   }
+  ]
+ },
+ "couple": {
+  "questions": [
+   {
+    "id": 1,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous l'avez déjà fait en public ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Dans un endroit désert",
+      "p": 10
+     },
+     {
+      "t": "Là où on aurait pu nous voir",
+      "p": 19
+     },
+     {
+      "t": "On nous a vus",
+      "p": 26
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous l'avez déjà fait dans une voiture ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Garée, à l'abri",
+      "p": 8
+     },
+     {
+      "t": "Sur un parking",
+      "p": 14
+     },
+     {
+      "t": "Pendant que ça roulait",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous l'avez déjà fait chez quelqu'un d'autre pendant une soirée ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Dans la chambre d'amis",
+      "p": 8
+     },
+     {
+      "t": "Dans la salle de bain",
+      "p": 14
+     },
+     {
+      "t": "Personne n'a rien vu, on croit",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous vous êtes déjà filmés ou photographiés ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Des photos, supprimées depuis",
+      "p": 9
+     },
+     {
+      "t": "Des photos qu'on a gardées",
+      "p": 15
+     },
+     {
+      "t": "Des vidéos",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous avez déjà testé un jouet ensemble ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On en a parlé",
+      "p": 5
+     },
+     {
+      "t": "Une fois",
+      "p": 10
+     },
+     {
+      "t": "On a une petite collection",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous avez déjà joué un rôle, avec le costume et tout ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Juste des mots",
+      "p": 5
+     },
+     {
+      "t": "Une tenue, une fois",
+      "p": 11
+     },
+     {
+      "t": "On a un scénario récurrent",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous avez déjà regardé un film de cul ensemble ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois, en rigolant",
+      "p": 5
+     },
+     {
+      "t": "Volontairement, pour l'ambiance",
+      "p": 10
+     },
+     {
+      "t": "C'est une habitude",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous l'avez déjà fait en sachant que quelqu'un pouvait entendre ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "En silence complet",
+      "p": 8
+     },
+     {
+      "t": "Chez les parents de l'un de nous",
+      "p": 14
+     },
+     {
+      "t": "Et on n'a pas fait d'effort",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous avez déjà utilisé des menottes, un bandeau, ou plus ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un foulard sur les yeux",
+      "p": 8
+     },
+     {
+      "t": "Des menottes",
+      "p": 14
+     },
+     {
+      "t": "On a tout un attirail",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "cat": "sexe",
+    "ado": false,
+    "q": "L'un de vous a déjà tenté un truc que l'autre a regretté ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un moment gênant",
+      "p": 6
+     },
+     {
+      "t": "Oui, on en a reparlé",
+      "p": 12
+     },
+     {
+      "t": "Oui, et ça a fait mal",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "cat": "sexe",
+    "ado": true,
+    "q": "Vous avez déjà traversé une longue période sans rien ?",
+    "r": [
+     {
+      "t": "Jamais plus de quelques jours",
+      "p": 0
+     },
+     {
+      "t": "Deux ou trois semaines",
+      "p": 4
+     },
+     {
+      "t": "Plusieurs mois",
+      "p": 8
+     },
+     {
+      "t": "Plus d'un an",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "cat": "sexe",
+    "ado": false,
+    "q": "Vous l'avez déjà fait le matin chez les parents de l'un des deux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Très discrètement",
+      "p": 8
+     },
+     {
+      "t": "Pendant qu'ils étaient réveillés",
+      "p": 14
+     },
+     {
+      "t": "Et on a croisé quelqu'un après",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "cat": "exhibition",
+    "ado": true,
+    "q": "Vous vous êtes déjà embrassés au point de mettre les autres mal à l'aise ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un peu trop longtemps",
+      "p": 4
+     },
+     {
+      "t": "On nous l'a fait remarquer",
+      "p": 9
+     },
+     {
+      "t": "Souvent",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 14,
+    "cat": "exhibition",
+    "ado": false,
+    "q": "Vous vous êtes déjà envoyé une photo coquine en pleine journée de travail ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un message osé",
+      "p": 6
+     },
+     {
+      "t": "Une photo",
+      "p": 12
+     },
+     {
+      "t": "Et quelqu'un a failli voir",
+      "p": 16
+     }
+    ]
+   },
+   {
+    "id": 15,
+    "cat": "exhibition",
+    "ado": true,
+    "q": "Vous êtes déjà partis d'une soirée sans prévenir personne ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On a prévenu une personne",
+      "p": 3
+     },
+     {
+      "t": "On a disparu sans un mot",
+      "p": 8
+     },
+     {
+      "t": "Et personne n'a compris pourquoi",
+      "p": 11
+     }
+    ]
+   },
+   {
+    "id": 16,
+    "cat": "exhibition",
+    "ado": false,
+    "q": "Vous vous êtes déjà isolés dans les toilettes d'un bar ou d'un resto ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Juste pour s'embrasser",
+      "p": 7
+     },
+     {
+      "t": "Pour plus que ça",
+      "p": 15
+     },
+     {
+      "t": "Et on s'est fait attendre",
+      "p": 19
+     }
+    ]
+   },
+   {
+    "id": 17,
+    "cat": "exhibition",
+    "ado": false,
+    "q": "Vous vous êtes déjà fait surprendre par quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un ami, en riant",
+      "p": 7
+     },
+     {
+      "t": "Un membre de la famille",
+      "p": 15
+     },
+     {
+      "t": "Un inconnu",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 18,
+    "cat": "exhibition",
+    "ado": false,
+    "q": "Vous avez déjà tenté un truc dans un lieu public fermé ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un cinéma vide",
+      "p": 9
+     },
+     {
+      "t": "Un train, un avion",
+      "p": 17
+     },
+     {
+      "t": "Et on a failli se faire prendre",
+      "p": 22
+     }
+    ]
+   },
+   {
+    "id": 19,
+    "cat": "exhibition",
+    "ado": true,
+    "q": "Vous vous êtes déjà baignés sans rien sur le dos ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Dans une piscine privée",
+      "p": 6
+     },
+     {
+      "t": "Dans un lac ou la mer",
+      "p": 11
+     },
+     {
+      "t": "Là où il y avait du monde",
+      "p": 15
+     }
+    ]
+   },
+   {
+    "id": 20,
+    "cat": "exhibition",
+    "ado": true,
+    "q": "Vous avez déjà envoyé un message très privé dans un groupe par erreur ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un message ambigu",
+      "p": 5
+     },
+     {
+      "t": "Un message explicite",
+      "p": 11
+     },
+     {
+      "t": "Une photo",
+      "p": 16
+     }
+    ]
+   },
+   {
+    "id": 21,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà fait un plan à trois ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On en a parlé sérieusement",
+      "p": 7
+     },
+     {
+      "t": "Une fois",
+      "p": 20
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 26
+     }
+    ]
+   },
+   {
+    "id": 22,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà fait un deux contre deux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On y a pensé",
+      "p": 7
+     },
+     {
+      "t": "Une fois",
+      "p": 22
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 28
+     }
+    ]
+   },
+   {
+    "id": 23,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà échangé avec un autre couple ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On a discuté avec un couple",
+      "p": 8
+     },
+     {
+      "t": "Une fois",
+      "p": 23
+     },
+     {
+      "t": "C'est devenu régulier",
+      "p": 29
+     }
+    ]
+   },
+   {
+    "id": 24,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous êtes déjà allés dans un club libertin ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Pour regarder",
+      "p": 12
+     },
+     {
+      "t": "Et on a participé",
+      "p": 22
+     },
+     {
+      "t": "On y retourne",
+      "p": 27
+     }
+    ]
+   },
+   {
+    "id": 25,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà eu une relation ouverte, même quelques semaines ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On en a parlé",
+      "p": 6
+     },
+     {
+      "t": "Quelques semaines",
+      "p": 17
+     },
+     {
+      "t": "Plusieurs mois",
+      "p": 23
+     }
+    ]
+   },
+   {
+    "id": 26,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "L'un de vous a déjà embrassé quelqu'un d'autre devant l'autre, d'un commun accord ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un défi en soirée",
+      "p": 9
+     },
+     {
+      "t": "Oui, assumé",
+      "p": 16
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 21
+     }
+    ]
+   },
+   {
+    "id": 27,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà partagé un fantasme qui implique quelqu'un d'autre ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Vaguement",
+      "p": 5
+     },
+     {
+      "t": "Avec des prénoms",
+      "p": 11
+     },
+     {
+      "t": "Et on a commencé à l'organiser",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 28,
+    "cat": "libertinage",
+    "ado": false,
+    "q": "Vous avez déjà utilisé une appli à deux pour rencontrer quelqu'un ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "On a créé le profil sans l'utiliser",
+      "p": 8
+     },
+     {
+      "t": "On a discuté avec des gens",
+      "p": 15
+     },
+     {
+      "t": "On a rencontré quelqu'un",
+      "p": 24
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "cat": "substances",
+    "ado": false,
+    "q": "Vous avez déjà fumé ensemble ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 8
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 14
+     },
+     {
+      "t": "C'est régulier",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 30,
+    "cat": "substances",
+    "ado": false,
+    "q": "Vous avez déjà pris autre chose ensemble ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois en soirée",
+      "p": 15
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 22
+     },
+     {
+      "t": "Régulièrement",
+      "p": 27
+     }
+    ]
+   },
+   {
+    "id": 31,
+    "cat": "substances",
+    "ado": false,
+    "q": "Vous avez déjà eu un rapport sous emprise, tous les deux ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un peu éméchés",
+      "p": 7
+     },
+     {
+      "t": "Vraiment sous emprise",
+      "p": 16
+     },
+     {
+      "t": "Sans souvenir clair",
+      "p": 22
+     }
+    ]
+   },
+   {
+    "id": 32,
+    "cat": "substances",
+    "ado": true,
+    "q": "Vous avez déjà fini une soirée au petit matin sans dormir ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 4
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 8
+     },
+     {
+      "t": "C'est notre format",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 33,
+    "cat": "substances",
+    "ado": true,
+    "q": "Vous vous êtes déjà engueulés parce que l'un avait trop bu ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une petite tension",
+      "p": 4
+     },
+     {
+      "t": "Une vraie dispute",
+      "p": 9
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 34,
+    "cat": "substances",
+    "ado": true,
+    "q": "Vous avez déjà tous les deux oublié une partie de la même soirée ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Des trous par-ci par-là",
+      "p": 6
+     },
+     {
+      "t": "Une soirée entière",
+      "p": 12
+     },
+     {
+      "t": "Plusieurs fois",
+      "p": 16
+     }
+    ]
+   },
+   {
+    "id": 35,
+    "cat": "substances",
+    "ado": true,
+    "q": "Vous avez déjà annulé un truc important à cause de la veille ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un rendez-vous sans enjeu",
+      "p": 5
+     },
+     {
+      "t": "Un truc familial",
+      "p": 10
+     },
+     {
+      "t": "Un truc professionnel",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 36,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous êtes déjà allés au casino ensemble ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Pour regarder",
+      "p": 4
+     },
+     {
+      "t": "On a joué un petit budget",
+      "p": 9
+     },
+     {
+      "t": "On a perdu bien plus que prévu",
+      "p": 14
+     }
+    ]
+   },
+   {
+    "id": 37,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous avez déjà parié quelque chose de sérieux l'un contre l'autre ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une vaisselle",
+      "p": 3
+     },
+     {
+      "t": "De l'argent",
+      "p": 8
+     },
+     {
+      "t": "Un gage qu'on n'oublie pas",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 38,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous vous êtes déjà fait virer d'un endroit ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "D'un bar, gentiment",
+      "p": 7
+     },
+     {
+      "t": "D'un lieu public",
+      "p": 13
+     },
+     {
+      "t": "Par la sécurité",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 39,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous avez déjà squatté un endroit interdit ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une piscine d'hôtel",
+      "p": 7
+     },
+     {
+      "t": "Un rooftop, un chantier",
+      "p": 13
+     },
+     {
+      "t": "Et on s'est fait attraper",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 40,
+    "cat": "transgression",
+    "ado": true,
+    "q": "L'un de vous a déjà conduit après avoir bu, avec l'autre à bord ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un verre, il y a longtemps",
+      "p": 11
+     },
+     {
+      "t": "Plus d'une fois",
+      "p": 22
+     },
+     {
+      "t": "Et on a eu très peur",
+      "p": 28
+     }
+    ]
+   },
+   {
+    "id": 41,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous avez déjà menti ensemble à vos familles sur un truc important ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une petite version arrangée",
+      "p": 5
+     },
+     {
+      "t": "Un vrai mensonge",
+      "p": 12
+     },
+     {
+      "t": "Un mensonge qui dure encore",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 42,
+    "cat": "transgression",
+    "ado": true,
+    "q": "Vous êtes déjà partis sans rien réserver, sans savoir où dormir ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une nuit",
+      "p": 4
+     },
+     {
+      "t": "Tout un week-end",
+      "p": 8
+     },
+     {
+      "t": "Un voyage entier",
+      "p": 12
+     }
+    ]
+   },
+   {
+    "id": 43,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Il y a un truc que l'un de vous ne sait toujours pas ?",
+    "r": [
+     {
+      "t": "Non, on se dit tout",
+      "p": 0
+     },
+     {
+      "t": "Un détail sans importance",
+      "p": 6
+     },
+     {
+      "t": "Quelque chose qui compte",
+      "p": 15
+     },
+     {
+      "t": "Quelque chose qui ferait mal",
+      "p": 22
+     }
+    ]
+   },
+   {
+    "id": 44,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Vous vous êtes déjà fouillé le téléphone ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Un écran allumé, par hasard",
+      "p": 5
+     },
+     {
+      "t": "Oui, en cachette",
+      "p": 12
+     },
+     {
+      "t": "Régulièrement",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 45,
+    "cat": "secrets",
+    "ado": true,
+    "q": "L'un de vous a encore un ex dans ses contacts ?",
+    "r": [
+     {
+      "t": "Non",
+      "p": 0
+     },
+     {
+      "t": "Un numéro jamais utilisé",
+      "p": 4
+     },
+     {
+      "t": "On s'écrit parfois",
+      "p": 10
+     },
+     {
+      "t": "Et l'autre ne le sait pas",
+      "p": 17
+     }
+    ]
+   },
+   {
+    "id": 46,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Vous avez déjà fait une pause dans votre relation ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Quelques jours",
+      "p": 5
+     },
+     {
+      "t": "Plusieurs semaines",
+      "p": 11
+     },
+     {
+      "t": "Et il s'est passé des choses pendant",
+      "p": 20
+     }
+    ]
+   },
+   {
+    "id": 47,
+    "cat": "secrets",
+    "ado": false,
+    "q": "L'un de vous a déjà réinstallé une appli de rencontre pendant la relation ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Par curiosité, sans parler à personne",
+      "p": 10
+     },
+     {
+      "t": "Il y a eu des discussions",
+      "p": 18
+     },
+     {
+      "t": "Il y a eu une rencontre",
+      "p": 26
+     }
+    ]
+   },
+   {
+    "id": 48,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Vous avez déjà caché un problème d'argent à l'autre ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une dépense honteuse",
+      "p": 5
+     },
+     {
+      "t": "Une vraie somme",
+      "p": 12
+     },
+     {
+      "t": "Une dette entière",
+      "p": 18
+     }
+    ]
+   },
+   {
+    "id": 49,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Vous vous êtes déjà remis ensemble après une rupture ?",
+    "r": [
+     {
+      "t": "Jamais rompu",
+      "p": 0
+     },
+     {
+      "t": "Une fois",
+      "p": 5
+     },
+     {
+      "t": "Deux fois",
+      "p": 9
+     },
+     {
+      "t": "On a arrêté de compter",
+      "p": 13
+     }
+    ]
+   },
+   {
+    "id": 50,
+    "cat": "secrets",
+    "ado": true,
+    "q": "Vous avez déjà juré un truc que vous n'avez pas tenu ?",
+    "r": [
+     {
+      "t": "Jamais",
+      "p": 0
+     },
+     {
+      "t": "Une promesse du quotidien",
+      "p": 4
+     },
+     {
+      "t": "Une promesse qui comptait",
+      "p": 10
+     },
+     {
+      "t": "Une promesse qui a tout changé",
+      "p": 16
+     }
+    ]
+   }
+  ],
+  "paliers": [
+   {
+    "min": 0,
+    "max": 9,
+    "titre": "Couple de carte postale",
+    "emoji": "😇",
+    "texte": "Vous êtes le couple qu'on présente à sa grand-mère sans transpirer. Tout est propre, rangé, et un peu trop calme pour être totalement honnête."
+   },
+   {
+    "min": 9,
+    "max": 22,
+    "titre": "Sages, avec un ou deux souvenirs",
+    "emoji": "🌱",
+    "texte": "Vous avez vos petites entorses, celles qui font sourire quand vous en reparlez. Rien qui mette la relation en danger."
+   },
+   {
+    "min": 22,
+    "max": 38,
+    "titre": "Un couple normal, quoi",
+    "emoji": "🙂",
+    "texte": "Vous avez fait des choses, vous en avez raté d'autres, et vous vous êtes bien marrés. C'est le score le plus fréquent, et franchement c'est très bien."
+   },
+   {
+    "min": 38,
+    "max": 54,
+    "titre": "Vous n'êtes pas si sages",
+    "emoji": "😏",
+    "texte": "Il y a une vraie liste derrière vous. Vous savez très bien de quoi on parle, et vous vous regardez sûrement en lisant ça."
+   },
+   {
+    "min": 54,
+    "max": 70,
+    "titre": "Vous avez un passif",
+    "emoji": "🔥",
+    "texte": "Vous avez tenté des choses que la plupart des couples se contentent d'imaginer. Ce n'est plus de la curiosité, c'est une habitude."
+   },
+   {
+    "min": 70,
+    "max": 85,
+    "titre": "Rien ne vous arrête",
+    "emoji": "😈",
+    "texte": "Il reste très peu de cases vides dans votre dossier. Vous êtes de ceux dont les amis disent « je préfère ne pas savoir »."
+   },
+   {
+    "min": 85,
+    "max": 101,
+    "titre": "Hors catégorie",
+    "emoji": "👑",
+    "texte": "Vous avez à peu près tout coché. Ce test n'a plus grand-chose à vous apprendre, il sert juste à écrire le score quelque part."
+   }
+  ]
+ }
+}
