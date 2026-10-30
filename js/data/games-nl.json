@@ -90,23 +90,23 @@
     "beHonest": "Soyez honnête, c'est plus fun !"
   },
   "toxic": {
-    "introQuestion": "Vous vous posez la question :",
-    "introQuote": "« Est-ce que mon couple est toxique… ou est-ce que je dramatise ? »",
-    "introDesc": "Si cette interrogation revient régulièrement, ce n'est jamais par hasard. Un couple toxique ne se définit pas par des disputes, mais par des dynamiques répétées qui génèrent peur, culpabilité, perte d'estime de soi ou confusion émotionnelle.",
-    "disclaimer": "Ce test n'est ni un diagnostic médical, ni un jugement.",
-    "disclaimerDesc": "C'est un outil d'auto-évaluation lucide pour comprendre ce que vous vivez réellement.",
-    "takeTest": "Faire le test",
-    "testInfo": "25 questions • Environ 5 minutes • Anonyme et gratuit",
-    "yourScore": "Votre score",
-    "scoreTotal": "Score Total",
-    "toxicityLevel": "Niveau de Toxicité",
-    "points": "points",
-    "healthy": "Relation Saine à Tension Normale",
-    "dysfunctional": "Relation Dysfonctionnelle",
-    "highlyToxic": "Relation Hautement Toxique",
-    "importantReminder": "Rappel important :",
-    "reminderText": "Ce test est purement indicatif. Il n'est en rien un résultat exact et précis, et ne doit pas servir à remplacer l'avis d'un professionnel. Si vous estimez que votre relation amoureuse est vraiment toxique, voire dangereuse, contactez de vrais spécialistes.",
-    "retakeTest": "Refaire le test"
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "‘Is mijn relatie toxisch… of maak ik er een drama van?’",
+    "introDesc": "Als die vraag steeds terugkomt, is dat nooit toevallig. Een toxische relatie herken je niet aan ruzies, maar aan patronen die steeds terugkomen en die angst, schuldgevoel, minder zelfvertrouwen of emotionele verwarring veroorzaken.",
+    "disclaimer": "Deze test is geen medische diagnose en geen oordeel.",
+    "disclaimerDesc": "Het is een eerlijk hulpmiddel om te begrijpen wat je echt meemaakt.",
+    "takeTest": "Doe de test",
+    "testInfo": "25 vragen • Ongeveer 5 minuten • Gratis",
+    "yourScore": "Je score",
+    "scoreTotal": "Totale score",
+    "toxicityLevel": "Niveau van toxiciteit",
+    "points": "punten",
+    "healthy": "Gezonde relatie met normale spanningen",
+    "dysfunctional": "Relatie die niet goed functioneert",
+    "highlyToxic": "Zeer toxische relatie",
+    "importantReminder": "Belangrijk om te onthouden:",
+    "reminderText": "Deze test geeft alleen een indicatie. De uitslag is niet exact, en hij is geen vervanging voor het advies van een professional. Denk je dat je relatie echt toxisch is, of zelfs gevaarlijk? Neem dan contact op met echte deskundigen.",
+    "retakeTest": "Doe de test opnieuw"
   },
   "pervers": {
     "introQuestion": "Vous vous posez la question :",
@@ -804,8 +804,8 @@
     "disclaimer": "Ce test ne décide pas à votre place. Il met vos réponses côte à côte, et c'est souvent là qu'on voit ce qu'on savait déjà. Vos réponses ne sont pas enregistrées."
   },
   "red-flag": {
-    "introQuestion": "Avant de commencer :",
-    "introQuote": "Répondez sur ce que cette personne fait, pas sur ce qu'elle dit qu'elle fera.",
-    "disclaimer": "Ce test ne colle une étiquette sur personne. Il compte des comportements, et il pèse plus lourd ceux qui comptent : la peur, le contrôle, le non qu'on n'entend pas. Vos réponses ne sont pas enregistrées."
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord op basis van wat deze persoon doet, niet wat hij of zij zegt te gaan doen.",
+    "disclaimer": "Deze test plakt op niemand een etiket. Hij telt gedrag, en hij laat zwaarder wegen wat echt telt: angst, controle, het nee dat niet wordt gehoord. Je antwoorden worden niet bewaard."
   }
 }
