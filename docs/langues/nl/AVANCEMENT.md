@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -334,7 +334,43 @@ le met à jour dans la PR de chaque lot.
   affective, red flags chez un homme, ce qu'on ne devrait jamais accepter)
   attendent leur traduction.
 
+## Lot 3e (30 octobre 2026) : amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/liefde-of-gewoonte-test/` | Liefde of gewoonte test: is het nog liefde? | Blijf je bij je partner uit liefde of gewoonte? |
+  | `/nl/verliefd-of-gehecht-test/` | Verliefd of gehecht test: blijf je voor de persoon? | Liefde of gehechtheid: wat houdt je bij je partner? |
+  | `/nl/is-hij-de-ware/` | Is hij de ware? Of is zij de ware? Doe de test | De ware test: is dit de juiste persoon voor je? |
+  | `/nl/hou-ik-nog-van-hem/` | Hou ik nog van hem of haar? De test in 20 vragen | Hou ik nog van mijn partner, of niet meer? |
+
+- **Les textes de moteur** : `habitude` (quatre verdicts), `attache` (le
+  moteur à deux axes, « Liefde » et « Gehechtheid », cinq profils, points et
+  axes recopiés du français), `estCeLeBon` (cinq verdicts) et `jeLaime` (huit
+  niveaux), points recopiés ; l'écran de départ de « est-ce le bon » dans
+  quizGames.json.
+- **La porte e-mail** : les quatre pages l'ont. La question « le test est-il
+  anonyme ? » de trois FAQ devient en néerlandais « mes réponses restent-elles
+  privées ? » et dit ce qui part vraiment : l'adresse une fois, jamais les
+  réponses. Les cinq langues publiques gardent « anonyme » : à trancher par
+  Thomas avec les pages du lot 3c.
+- **La carte des mots-clés** : pour « je l'aime encore », le mot-clé
+  secondaire « hou ik nog van mijn partner test » devient « hou ik nog van
+  mijn partner », la forme que porte le H1.
+- **Les liens** : entre les quatre pages, vers « moet ik scheiden », la
+  liefdestaal, le couple sain, la dépendance affective, la fin de couple,
+  « ben ik verliefd » et « houdt hij nog van mij ». Un lien vers un article du
+  blog (« il ne fait pas d'effort ») attend sa traduction.
+
 ## Les chiffres
+
+Au lot 3e : `textes nl` 198 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (17 pages traduites) ; `site nl` sur les quatre pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, chaque moteur va jusqu'à son
+résultat, et le seul texte resté en français est celui d'une carte « Hierna »
+vers une page pas encore traduite. Aucune page publique ne change.
+
 
 Au lot 3d : `textes nl` 162 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (13 pages traduites) ; `site nl` sur les deux pages : aucun

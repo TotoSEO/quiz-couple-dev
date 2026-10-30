@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "Blijf je bij je partner uit liefde of gewoonte?",
+    "titleHighlight": "liefde of gewoonte",
+    "description": "Een eerlijke zelftest om te begrijpen wat jullie vandaag nog samenhoudt.",
+    "badge": "Liefde of gewoonte • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "Liefde of gewoonte: waarom stel je jezelf die vraag?",
+    "p1": "Je afvragen of je blijft <strong class=\"text-foreground\">uit liefde of uit gewoonte</strong>, doe je niet zomaar. Die vraag komt zelden op aan het begin van een relatie: ze duikt op na een paar jaar, als de passie van het begin is gaan liggen en er stilletjes een twijfel binnensluipt. “Hou ik nog echt van hem of haar, of blijf ik omdat het comfortabel is?”",
+    "p2": "Routine is niet de vijand van de liefde: een koppel heeft juist houvast en veiligheid nodig. Het probleem begint als er <strong class=\"text-foreground\">alleen nog</strong> routine over is: als het verlangen, de verbondenheid en de zin om plannen te maken plaats hebben gemaakt voor gewoon samenwonen, dat vanzelf doorloopt, op de automatische piloot.",
+    "p3": "Deze test is geen vonnis en beslist niet voor jou. Hij helpt je om te benoemen wat je voelt, en om het verschil te zien tussen een liefde die gerijpt is en <a href=\"/nl/verliefd-of-gehecht-test/\">een relatie die alleen nog op gehechtheid draait</a>. De volgende vraag, of je <a href=\"/nl/moet-ik-scheiden-test/\">weggaat of blijft</a>, komt pas als deze beantwoord is."
+  },
+  "section2": {
+    "title": "Liefde of gewoonte: wat is het verschil?",
+    "p1": "De grens is dunner dan ze lijkt, want liefde die lang duurt, <em>lijkt</em> soms op gewoonte: minder vlinders, meer rust. Het verschil zit niet in hoe intens het is, maar in wat je diep vanbinnen drijft.",
+    "p2": "Om het helder te zien, kijk je naar twee dingen: het <strong class=\"text-foreground\">verlangen</strong> (heb je nog zin in deze persoon, om hem of haar te verrassen, te ontdekken?) en de <strong class=\"text-foreground\">keuze</strong> (blijf je omdat je dat wilt, of omdat weggaan je bang maakt?).",
+    "healthy": "<strong class=\"text-foreground\">Een liefde die gerijpt is</strong>: de passie is rustiger geworden, maar je kiest nog steeds voor je partner, je hebt nog zin in hem of haar, en jullie bouwen samen iets op en lachen samen.",
+    "toxic": "<strong class=\"text-foreground\">Een relatie uit gewoonte</strong>: je blijft vooral voor het gemak, uit angst om alleen te zijn of voor verandering. Het verlangen, de verbondenheid en de gezamenlijke plannen zijn uitgedoofd.",
+    "quote": "Liefde is de ander telkens opnieuw kiezen. Gewoonte is blijven omdat je vergeten bent dat je een keuze had."
+  },
+  "section3": {
+    "title": "Zo lees je je uitslag",
+    "intro": "Elke vraag heeft een eigen gewicht, en elk antwoord krijgt punten volgens zijn plaats. Het totaal gaat van 0 tot 205 punten. Hoe hoger je score, hoe meer de gewoonte het wint van de liefde. Zo lees je je uitslag: als aanwijzing om over na te denken, niet als vonnis.",
+    "headerScore": "Totale score",
+    "headerLevel": "Wat de overhand heeft",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 51 punten",
+    "row1Level": "Een liefde die springlevend is",
+    "row1Analysis": "De liefde wint ruim. De passie is uitgegroeid tot een diepe band, maar het verlangen en de verbondenheid zijn er nog.",
+    "row2Score": "52 tot 103 punten",
+    "row2Level": "De liefde wint, de routine sluipt erin",
+    "row2Analysis": "De gevoelens zijn echt, maar de routine knabbelt eraan. Een zacht signaal om weer in jullie relatie te investeren.",
+    "row3Score": "104 tot 155 punten",
+    "row3Level": "De gewoonte krijgt de overhand",
+    "row3Analysis": "Het dagelijks leven heeft meer plaats ingenomen dan de liefde. Tijd om dat eerlijk onder ogen te zien.",
+    "row4Score": "156 tot 205 punten",
+    "row4Level": "Vooral gewoonte",
+    "row4Analysis": "Het is vooral gemak of angst die je vasthoudt, meer dan liefde. Neem eerlijk de tijd om erover na te denken."
+  },
+  "section4": {
+    "title": "Waarom liefde (soms) gewoonte wordt",
+    "p1": "Neigt je score naar gewoonte, voel je dan niet schuldig: die verschuiving komt heel vaak voor, en er is een verklaring voor. Liefde verdwijnt niet in één keer, ze valt in slaap als je er niet meer voor zorgt.",
+    "p2": "Vooral drie dingen zorgen ervoor dat de liefde langzaam verandert in gewoon samenwonen:",
+    "pillar1Title": "1. De sleur van alledag",
+    "pillar1Text": "Werk, kinderen, huishouden, vermoeidheid: de logistiek slokt de tijd en de energie van het koppel op. Je gaat een gezamenlijk leven regelen in plaats van het te leven, en de momenten met z'n tweeën komen als laatste, na al het andere.",
+    "pillar2Title": "2. Het nieuwe is eraf",
+    "pillar2Text": "In het begin is alles nieuw, en je hersenen maken dopamine aan: vandaar de beroemde vlinders. Na een tijd denk je dat je de ander ‘wel kent’. Zonder iets nieuws en zonder verrassingen zakt de spanning en sluipt de routine erin.",
+    "pillar3Title": "3. Geen moeite en geen attenties meer",
+    "pillar3Text": "Je vindt elkaar ‘vanzelfsprekend’, dus je stopt met verleiden, met complimentjes geven, met voor de ander zorgen. Terwijl liefde juist leeft van die kleine attenties. Als ze stoppen, vaak omdat een van de twee geen moeite meer doet, koelt de band af."
+  },
+  "section5": {
+    "title": "De tekenen dat de gewoonte het heeft overgenomen",
+    "intro": "Los van de score zijn er signalen die niet liegen. Herken je er meerdere, dan is het niet per se het einde, maar wel tijd om iets te doen voordat de afstand te groot wordt.",
+    "pillar1Title": "Verlangen en tederheid zijn verdwenen",
+    "pillar1Text": "Geen spontane gebaren meer, geen aantrekking meer, een intimiteit die zeldzaam of mechanisch is geworden. Als jullie elkaar niet meer aanraken en niet meer begeren, is dat vaak een van de eerste tekenen dat de vlam zwakker wordt.",
+    "pillar2Title": "Jullie praten alleen nog over praktische zaken",
+    "pillar2Text": "Jullie gesprekken gaan over de boodschappen, de planning en de kinderen, maar niet meer over wat jullie voelen, waar jullie van dromen of wat jullie willen. Dat gebrek aan diepere gesprekken haalt langzaam de inhoud uit de relatie.",
+    "pillar3Title": "Je blijft uit angst, niet omdat je het wilt",
+    "pillar3Text": "De angst om alleen te zijn, voor wat anderen denken, om opnieuw te beginnen, of de praktische gevolgen wegen zwaarder dan de wens om samen te zijn. Blijven ‘omdat het makkelijker is’ is het duidelijkste teken van een relatie uit gewoonte.",
+    "pillar4Title": "Jullie missen elkaar niet meer",
+    "pillar4Text": "Als jullie niet samen zijn, mis je de ander niet: soms geniet je zelfs van die momenten alleen. Onverschilligheid zegt nog meer dan ruzie: ze laat zien dat de band losser is geworden."
+  },
+  "section6": {
+    "title": "Liefde of gewoonte: wat doe je met je uitslag?",
+    "p1": "Wat je score ook is, onthoud één ding: een uitslag is geen beslissing. Het is een beginpunt om na te denken, eerst alleen en daarna het liefst samen. Aan routine valt iets te doen, als je haar benoemt en er iets aan wilt veranderen.",
+    "p2": "Wint de gewoonte, dan liggen er twee tegengestelde fouten op de loer: niets doen en hopen dat het overgaat, of alles kapotmaken in een opwelling. Daartussen ligt een begaanbare weg.",
+    "dontTitle": "Wat je beter kunt vermijden",
+    "dont1Title": "Alles over je heen laten komen",
+    "dont1Text": "Blijven uit pure gewoonte, in afwachting dat het ‘vanzelf terugkomt’, is de zekerste manier om de relatie te laten uitdoven. Liefde die in slaap is gevallen, wordt niet wakker zonder dat jij er bewust iets voor doet.",
+    "dont2Title": "Alles kapotmaken in een opwelling",
+    "dont2Text": "Omgekeerd kun je spijt krijgen als je halsoverkop weggaat omdat je het beu bent. Minder zin is niet altijd een einde: soms is het een teken dat je eerst weer in de relatie moet investeren voordat je conclusies trekt.",
+    "doTitle": "Wat wel helpt",
+    "do1Title": "De vlam bewust weer aanwakkeren",
+    "do1Text": "Breng weer iets nieuws in jullie leven: uitjes, verrassingen, plannen, dingen die jullie nog nooit samen hebben gedaan. Pak de kleine attenties van het begin weer op. Er zijn veel manieren om een relatie die in slaap valt weer leven in te blazen, als jullie er samen werk van maken.",
+    "do2Title": "Open met elkaar praten",
+    "do2Text": "Durf het eerlijke gesprek aan: “Hoe sta jij in onze relatie? Waar heb je zin in?” Vaak denk je dat de liefde weg is, terwijl ze alleen wordt uitgedrukt in een taal die de ander niet meer oppikt: <a href=\"/nl/liefdestaal-test/\">elkaars liefdestaal herontdekken</a> brengt soms een band terug die je kwijt dacht te zijn.",
+    "do3Title": "Neem de tijd om na te denken (of zoek hulp)",
+    "do3Text": "Blijft de twijfel, neem dan de tijd om liefde en angst uit elkaar te halen. Jezelf afvragen <a href=\"/nl/is-hij-de-ware/\">of dit wel de juiste persoon is</a>, of naar een relatietherapeut gaan, helpt je om bewust te kiezen in plaats van het over je heen te laten komen."
+  },
+  "section7": {
+    "title": "Om te onthouden: sleur is geen eindstation",
+    "p1": "Jezelf afvragen ‘liefde of gewoonte?’ betekent niet dat alles voorbij is: het bewijst juist dat iets in jou nog aan deze relatie hecht en haar niet in stilte wil laten uitdoven.",
+    "p2": "De meeste koppels gaan door periodes waarin de gewoonte het overneemt. Het verschil zit er niet in dat je daaraan ontsnapt, maar dat je het opmerkt en er iets mee doet. Liefde kan weer opbloeien; dat moeten jullie wel samen besluiten, en een relatie waarin jullie zulke beslissingen nog samen nemen, is een <a href=\"/nl/gezonde-relatie-test/\">gezonde relatie</a>, hoeveel gewoonte er ook in is geslopen.",
+    "p3": "Luister naar wat deze test in je losmaakt. Je gevoel, meer dan je score, is het beste kompas om te weten hoe je je leven wilt leiden."
+  },
+  "jsonLd": {
+    "quizName": "Liefde of gewoonte test",
+    "quizDescription": "Kijk met deze zelftest van 20 vragen of je uit liefde of uit gewoonte bij je partner blijft.",
+    "faq1Q": "Hoe weet ik of ik blijf uit liefde of uit gewoonte?",
+    "faq1A": "Kijk naar je verlangen en je vrijheid om te kiezen: voel je nog aantrekking, verbondenheid en zin in gezamenlijke plannen, of blijf je vooral voor het gemak, uit angst om alleen te zijn of voor verandering? Deze test meet precies dat evenwicht, in 20 vragen.",
+    "faq2Q": "Is het erg om uit gewoonte te blijven?",
+    "faq2A": "Niet per se: routine hoort bij elke relatie die lang duurt. Het wordt een probleem als er alleen nog gewoonte over is, zonder verlangen of verbondenheid, en je niet meer gelukkig bent. Dan is het een signaal dat je niet moet negeren.",
+    "faq3Q": "Kun je na jaren van gewoonte opnieuw verliefd worden?",
+    "faq3A": "Ja, heel vaak. Door weer iets nieuws te doen, het gesprek en de attenties terug te brengen, en soms met hulp van een relatietherapeut, laten veel koppels een liefde opbloeien die gewoon in slaap was gevallen.",
+    "about": "liefdesrelatie"
+  }
+}
