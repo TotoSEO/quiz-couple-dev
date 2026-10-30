@@ -25,3 +25,8 @@ Stripe:
 Resend:
 Website: quiz-couple.com
 Website: github.com
+Pasta
+Burger
+Japan
+New York
+Winter

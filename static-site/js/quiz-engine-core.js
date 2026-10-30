@@ -10846,7 +10846,7 @@ var QuizEngine = (function() {
     var anneau = el('div', 'qdn-anneau');
     var circ = 2 * Math.PI * 52;
     anneau.innerHTML =
-      '<svg viewBox="0 0 120 120" role="img" aria-label="' + esc(pct + ' %') + '">' +
+      '<svg viewBox="0 0 120 120" role="img" aria-label="' + esc(pctTexte(langueDuMoteur(), pct)) + '">' +
         '<circle class="qdn-anneau-fond" cx="60" cy="60" r="52"></circle>' +
         '<circle class="qdn-anneau-jauge" cx="60" cy="60" r="52" stroke-dasharray="' + circ.toFixed(1) + '" ' +
           'stroke-dashoffset="' + circ.toFixed(1) + '"></circle>' +
@@ -13671,7 +13671,7 @@ var QuizEngine = (function() {
     triees.forEach(function(a) {
       var ligne = el('div', 'ech-axe');
       ligne.innerHTML = '<div class="ech-axe-tete"><span class="ech-axe-nom">' + esc(self.etg('axe_' + a.id, a.id)) + '</span>' +
-        '<span class="ech-axe-pct">' + a.pct + ' %</span></div>' +
+        '<span class="ech-axe-pct">' + pctTexte(langueDuMoteur(), a.pct) + '</span></div>' +
         '<div class="ech-axe-piste" aria-hidden="true"><span class="ech-axe-plein" style="width:' + a.pct + '%"></span></div>';
       bloc.appendChild(ligne);
     });

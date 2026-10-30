@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Doe je met z'n tweeën 💞",
+    "title": "Compatibiliteitstest: zijn jullie voor elkaar gemaakt?",
+    "titleHighlight": "Compatibiliteitstest",
+    "description": "Beantwoord ieder 20 vragen over wat er echt toe doet (jullie waarden, plannen en levensstijl) en zie <strong>hoeveel procent jullie bij elkaar passen</strong>. Een echte test voor koppels, gratis en zonder account.",
+    "subtitle": "2 spelers · 20 vragen · direct een uitslag in %"
+  },
+  "section1": {
+    "title": "Wat is compatibiliteit in een relatie?",
+    "p1": "<strong>Compatibiliteit</strong> in een relatie is de mate waarin twee partners op één lijn zitten over de dingen die een leven samen bepalen: waarden, toekomstplannen, geld, levensstijl, communicatie en intimiteit. Dat is iets anders dan aantrekkingskracht: je kunt een sterke klik voelen en toch heel verschillende ideeën over het leven hebben.",
+    "p2": "Twee mensen die bij elkaar passen, zijn geen klonen: ze hoeven niet alles te delen, maar hun <strong>basis wijst dezelfde kant op</strong>. Juist dat, meer dan de passie van het begin, zegt het meest over hoe stevig een relatie op de lange duur is.",
+    "p3": "Onze <strong>compatibiliteitstest</strong> meet precies dat: jullie antwoorden ieder apart, en daarna vergelijken we jullie antwoorden om te berekenen hoe goed jullie bij elkaar passen."
+  },
+  "section2": {
+    "title": "Hoe werkt onze compatibiliteitstest?",
+    "p1": "De test doe je <strong>met z'n tweeën</strong>. Jullie beantwoorden om de beurt dezelfde 20 vragen over de grote thema's van een relatie. Er zijn geen goede of foute antwoorden, je moet alleen eerlijk antwoorden.",
+    "p2": "Aan het eind vergelijken we jullie antwoorden. Elk gelijk antwoord is een punt waarop jullie op één lijn zitten. Jullie <strong>score</strong> is het percentage antwoorden waarin jullie hetzelfde denken, met een uitslag en onderwerpen om samen over te praten."
+  },
+  "section3": {
+    "title": "De grote thema's van compatibiliteit",
+    "pillar1Title": "Waarden",
+    "pillar1Text": "Trouw, eerlijkheid, vrijheid, familie: liggen jullie principes in elkaars verlengde?",
+    "pillar2Title": "Toekomstplannen",
+    "pillar2Text": "Trouwen, kinderen, waar je wilt wonen: kijken jullie dezelfde kant op?",
+    "pillar3Title": "Levensstijl",
+    "pillar3Text": "Huismussen of feestbeesten, ritme, vakanties, het dagelijks leven: sluiten jullie gewoontes op elkaar aan?",
+    "pillar4Title": "Communicatie",
+    "pillar4Text": "Hoe jullie ruzies oplossen, of je elkaar alles wilt vertellen of niet: spreken jullie dezelfde taal?",
+    "pillar5Title": "Intimiteit",
+    "pillar5Text": "Tederheid, <a href=\"/nl/seksuele-compatibiliteit-test/\">verlangen, behoefte aan nabijheid</a>: komen jullie verwachtingen overeen?",
+    "pillar6Title": "Onafhankelijkheid",
+    "pillar6Text": "Alles samen of ieder zijn eigen ding, tijd samen of tijd apart: waar ligt jullie balans?"
+  },
+  "section4": {
+    "title": "Compatibiliteit of chemie: wat is het verschil?",
+    "p1": "<strong>Chemie</strong> (of aantrekkingskracht) is er meteen, lichamelijk en emotioneel: de vonk van het begin. <strong>Compatibiliteit</strong> zie je pas na verloop van tijd, als je samen beslissingen moet nemen, het dagelijks leven moet regelen en compromissen moet sluiten.",
+    "p2": "Veel koppels die enorm tot elkaar aangetrokken zijn, gaan toch uit elkaar omdat hun basis niet overeenkomt. Andersom helpt een stevige compatibiliteit om stormen te doorstaan. Ideaal is natuurlijk allebei, maar als je op de lange termijn zou moeten wedden, is compatibiliteit de beste graadmeter."
+  },
+  "section5": {
+    "title": "Kun je beter bij elkaar leren passen?",
+    "p1": "Voor een deel wel. Over sommige dingen valt weinig te onderhandelen (<a href=\"/nl/klaar-voor-een-baby-test/\">wel of geen kinderen willen</a>, bijvoorbeeld), maar aan veel verschillen kun je werken: levensritme, omgaan met geld, de manier waarop je praat of ruzies oplost.",
+    "p2": "Het gaat er niet om dat jullie hetzelfde zijn, maar dat jullie <strong>je verschillen kennen en erover praten</strong>. Een gemiddelde score is geen veroordeling: het is een kaart die laat zien waar jullie op één lijn zitten en waar een goed gesprek nodig is."
+  },
+  "section6": {
+    "title": "Hoe lees je jullie score?",
+    "p1": "Jullie uitslag is een percentage gelijke antwoorden. Zo lees je hem:<ul><li><strong>80% en hoger, <a href=\"/nl/zielsverwant-test/\">zielsverwanten</a>:</strong> jullie basis klopt bijna overal, een ideaal fundament om op te bouwen.</li><li><strong>60 tot 79%, jullie passen goed bij elkaar:</strong> jullie vinden elkaar in het belangrijkste, met een paar verschillen die jullie verrijken.</li><li><strong>40 tot 59%, een klik om te laten groeien:</strong> echte overeenkomsten, maar ook onderwerpen om samen uit te praten.</li><li><strong>Onder de 40%, verschillende wegen:</strong> jullie kijk verschilt op een paar basisdingen, en dan is praten heel waardevol.</li></ul>",
+    "p2": "Onthoud: een test vervangt geen echt gesprek. Het beste wat je met je score kunt doen, is er samen over praten."
+  },
+  "seo": {
+    "howTitle": "Zo doe je de compatibiliteitstest in 4 stappen",
+    "step1Title": "Vul jullie namen in",
+    "step1Text": "Vul jullie twee voornamen in, dan spreekt de test jullie persoonlijk aan.",
+    "step2Title": "Antwoord om de beurt",
+    "step2Text": "Jullie krijgen om de beurt dezelfde 20 vragen. Antwoord eerlijk.",
+    "step3Title": "We vergelijken jullie antwoorden",
+    "step3Text": "Elk gelijk antwoord is een punt waarop jullie op één lijn zitten.",
+    "step4Title": "Bekijk jullie score",
+    "step4Text": "Jullie krijgen een percentage, een uitslag en onderwerpen om over te praten.",
+    "faqTitle": "Veelgestelde vragen over de compatibiliteitstest"
+  },
+  "jsonLd": {
+    "faq1Q": "Wat is compatibiliteit in een relatie?",
+    "faq1A": "Het is de mate waarin twee partners op één lijn zitten over de basis van een leven samen: waarden, toekomstplannen, geld, levensstijl, communicatie en intimiteit. Het is iets anders dan aantrekkingskracht: die is er meteen, terwijl compatibiliteit pas na verloop van tijd zichtbaar wordt.",
+    "faq2Q": "Hoe wordt de score berekend?",
+    "faq2A": "Jullie beantwoorden allebei dezelfde 20 vragen. De test vergelijkt jullie antwoorden: jullie score is het percentage gelijke antwoorden, dus het aantal punten waarop jullie op één lijn zitten.",
+    "faq3Q": "Moet je met z'n tweeën zijn om de test te doen?",
+    "faq3A": "Ja, het is een test voor twee: jullie antwoorden om de beurt op hetzelfde toestel. De vergelijking van jullie antwoorden levert de score op.",
+    "faq4Q": "Wat is het verschil met de test op basis van namen en sterrenbeelden?",
+    "faq4A": "De berekening <a href=\"/nl/sterrenbeelden-match/\">met jullie namen en sterrenbeelden</a> is een spelletje op basis van numerologie en astrologie. Deze test is een echte vragenlijst voor koppels, die meet hoe goed jullie op één lijn zitten over waarden, plannen en het dagelijks leven.",
+    "faq5Q": "Betekent een lage score dat we uit elkaar moeten?",
+    "faq5A": "Nee. Een lage score betekent alleen dat jullie op een paar basisdingen verschillen. Aan veel van die verschillen kun je werken door te praten en compromissen te sluiten. De uitslag is vooral een begin om er samen over te praten.",
+    "faq6Q": "Is de test gratis?",
+    "faq6A": "Ja, onze compatibiliteitstest is 100% gratis, zonder account en zonder download, met meteen een uitslag."
+  }
+}
