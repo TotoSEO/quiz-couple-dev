@@ -10,7 +10,7 @@ le met à jour dans la PR de chaque lot.
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
-| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a (menu, pied, pages d'information) et 2b (accueil) faits le 30 octobre 2026 ; 2c textes communs des moteurs, 2d pages juridiques |
+| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a (menu, pied, pages d'information), 2b (accueil) et 2c (textes communs des moteurs) faits le 30 octobre 2026 ; 2d pages juridiques |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
@@ -149,7 +149,38 @@ le met à jour dans la PR de chaque lot.
   quelques articles avant d'ouvrir, soit la page du blog reste en noindex et
   hors du menu tant qu'une langue n'a pas d'article.
 
+## Lot 2c (30 octobre 2026) : les textes communs des moteurs
+
+- **Les textes** : dans `nl/quizGames.json`, les parties partagées par tous
+  les moteurs (`playerSetup`, `question`, `result`, `meta`, `reviews`,
+  `share`, `story`, `quizNames`, `ui`, `salon`) ; dans `nl/gd.json`, la seule
+  partie commune (`question`). Les parties propres à un test ou à un jeu
+  (`coquin`, `plateau`, `quiDeNous`...) viennent avec leur page, aux lots 3
+  à 7. En attendant, `games-nl.json` est complété par le français, clé par
+  clé (generate.js) : `tg()` ne retombe pas seul sur le français, et un jeu
+  aurait affiché ses clés.
+- **Les noms des quiz** (`quizNames`) sont ceux des cartes de fin de partie,
+  repris du menu et de la carte des mots-clés, sans césure. Dans un message de
+  partage, le nom est entre guillemets (« Ik scoorde 87% bij ‘Relatietest’ »)
+  : un nom de test ou de jeu néerlandais prendrait « de » ou « het » selon le
+  mot, et les noms en forme de question n'en prennent pas.
+- **Le moteur** (`quiz-engine-core.js`) : les phrases qu'il assemble lui-même
+  suivent la typographie de la langue (`avantPonct`, `pctTexte` dans le
+  socle) : « Sanne! », « Score: », « 87% » en néerlandais et en anglais, une
+  espace insécable en français ; les étiquettes de l'écran de résultat
+  (`pcLabels`) et le message de chargement trop long (`quiz-loader.js`) ont
+  leur néerlandais. Les produits affiliés restent sans néerlandais
+  (`langues: sans-nl`, pas d'identifiant Amazon.nl), et `verifie-langue.mjs`
+  accepte une marque posée sur l'ouverture d'une table entière.
+- **Les phrases à ordre fixe** : « Sanne weet veel meer over de ander dan
+  Daan! » (le quiz « Wie kent de ander het best? » assemble prénom, texte,
+  prénom), « Nu is het de beurt aan Sanne! ».
+- **Restent pour la base, avant l'ouverture** : `LANGUES_AVIS` (écrite trois
+  fois, dont `quiz-engine-core.js`), `capture.js`, `lead-capture`.
+
 ## Les chiffres
+
+Au lot 2c : `code nl` 259 passages (dans le moteur, il ne reste que `LANGUES_AVIS`, pour la base, et les textes de l'encart de l'évaluation, lot 8), `textes nl` 38 parties écrites sur 1 042.
 
 Au lot 2b : `code nl` 280 passages, `textes nl` 27 parties écrites sur 1 042,
 `seo nl` sans erreur (3 pages contrôlées), `site nl --pages '/nl/$'` sans

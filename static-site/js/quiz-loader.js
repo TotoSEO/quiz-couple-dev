@@ -3156,7 +3156,8 @@
       en: { t: 'This is taking a while to load', p: 'Please check your connection and try again.', b: 'Retry' },
       es: { t: 'La carga está tardando', p: 'Comprueba tu conexión e inténtalo de nuevo.', b: 'Reintentar' },
       de: { t: 'Das Laden dauert etwas länger', p: 'Bitte prüfe deine Verbindung und versuche es erneut.', b: 'Erneut versuchen' },
-      it: { t: 'Il caricamento sta impiegando un po\'', p: 'Controlla la connessione e riprova.', b: 'Riprova' }
+      it: { t: 'Il caricamento sta impiegando un po\'', p: 'Controlla la connessione e riprova.', b: 'Riprova' },
+      nl: { t: 'Het laden duurt even', p: 'Controleer je internetverbinding en probeer het opnieuw.', b: 'Opnieuw proberen' }
     };
     var m = M[lang] || M.fr;
     var wrap = QuizEngine.el('div', 'quiz-engine animate-fade-in text-center');

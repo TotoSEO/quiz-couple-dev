@@ -386,10 +386,16 @@ function controleCode() {
     if (ext === '.json') {
       try { objets = objetsJson(JSON.parse(brut)).map((o) => ({ ...o, ligne: 1, fin: 1 })); } catch { objets = []; }
     } else if (/\.(m?js|cjs|ts|ejs|html)$/.test(ext)) objets = objetsLitteraux(code);
+    // Une marque posée sur l'ouverture d'un objet, ou juste au-dessus, vaut
+    // pour tout ce qu'il contient (la table des produits affiliés : une entrée
+    // par produit, chacune avec ses langues).
+    const zones = objets.filter((o) => o.fin > o.ligne && lignes.slice(Math.max(0, o.ligne - 3), o.ligne).some((x) => x.includes(MARQUE_SANS)))
+      .map((o) => [o.ligne, o.fin]);
     for (const o of objets) {
       const l = codes.filter((k) => o.cles.has(k));
       if (o.cles.has(LANGUE) || l.length < seuil) continue;
-      const marque = lignes.slice(Math.max(0, o.ligne - 2), o.fin).some((x) => x.includes(MARQUE_SANS));
+      const marque = lignes.slice(Math.max(0, o.ligne - 2), o.fin).some((x) => x.includes(MARQUE_SANS))
+        || zones.some(([a, b]) => o.ligne >= a && o.fin <= b);
       if (marque) continue;
       total++;
       erreur(C, `${rel(f)}:${o.ligne}${o.chemin ? ` (${o.chemin})` : ''}`, `objet par langue sans « ${LANGUE} » : { ${[...o.cles].filter((k) => codes.includes(k)).join(', ')} }`);
