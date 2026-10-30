@@ -10,7 +10,7 @@ le met à jour dans la PR de chaque lot.
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
-| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a (menu, pied, pages d'information), 2b (accueil) et 2c (textes communs des moteurs) faits le 30 octobre 2026 ; 2d pages juridiques |
+| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
@@ -178,7 +178,31 @@ le met à jour dans la PR de chaque lot.
 - **Restent pour la base, avant l'ouverture** : `LANGUES_AVIS` (écrite trois
   fois, dont `quiz-engine-core.js`), `capture.js`, `lead-capture`.
 
+## Lot 2d (30 octobre 2026) : contact, mentions légales, confidentialité
+
+- **Les textes** : `nl/contact.json`, `nl/legal.json` (mentions légales et
+  politique de confidentialité, traduites au plus près, en « u », comme le
+  veut le guide pour les pages juridiques) et, de `nl/cgv.json`, les seuls
+  libellés du vendeur (`vendeur`), que les deux pages juridiques affichent ;
+  le statut du vendeur en néerlandais est dans `VENDEUR` (config.js). Le
+  reste des conditions de vente vient au lot 8, avec l'évaluation.
+- **Les adaptations** : le droit de réclamation nomme, en plus de la CNIL,
+  l'Autoriteit Persoonsgegevens (Pays-Bas) et la Gegevensbeschermingsautoriteit
+  (Belgique) ; l'âge des e-mails est celui de la case de la porte, 16 ans
+  (voir plus haut, à trancher par Thomas).
+- **À trancher avant l'ouverture** : la porte e-mail enregistre une adresse
+  néerlandaise comme française (`capture.js` ne connaît pas `nl` tant que la
+  base ne l'accepte pas), et rien ne part en néerlandais avant le lot 8. Soit
+  la porte reste fermée en néerlandais jusqu'à ses e-mails, soit la
+  migration passe d'abord et les adresses attendent.
+- **Remarqué au passage, sans y toucher** : les mentions légales des cinq
+  langues listent les services tiers sans Brevo, qui envoie les e-mails du
+  parcours depuis le 24 octobre 2026 ; la politique de confidentialité, elle,
+  le nomme.
+
 ## Les chiffres
+
+Au lot 2d : `textes nl` 44 parties écrites sur 1 042.
 
 Au lot 2c : `code nl` 259 passages (dans le moteur, il ne reste que `LANGUES_AVIS`, pour la base, et les textes de l'encart de l'évaluation, lot 8), `textes nl` 38 parties écrites sur 1 042.
 
