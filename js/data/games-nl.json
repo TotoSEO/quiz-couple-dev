@@ -251,7 +251,7 @@
     "pointsWord": "punten"
   },
   "divorce": {
-    "disclaimer": "Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l'avis d'un professionnel."
+    "disclaimer": "Deze test is een hulpmiddel om voor jezelf na te denken. Hij vervangt nooit het advies van een professional."
   },
   "reviews": {
     "yourReviews": "Jullie reviews",
@@ -495,20 +495,20 @@
     "yourStyle": "Votre style d'attachement"
   },
   "sainMode": {
-    "titre": "Comment voulez-vous passer le test ?",
-    "sousTitre": "Choisissez votre formule, le questionnaire est le même dans les deux cas.",
+    "titre": "Hoe willen jullie de test doen?",
+    "sousTitre": "Kies jullie manier, de vragenlijst is in beide gevallen dezelfde.",
     "soloNom": "SOLO",
-    "soloDesc": "Vous répondez à deux aux questions",
-    "soloScore": "Score unique",
+    "soloDesc": "Jullie beantwoorden de vragen samen",
+    "soloScore": "Eén score",
     "duoNom": "DUO",
-    "duoDesc": "Vous répondez aux mêmes questions à tour de rôle",
-    "duoScore": "Scores individuels + moyenne",
-    "soloBadge": "Votre réponse commune",
-    "retour": "Changer de mode"
+    "duoDesc": "Jullie beantwoorden om de beurt dezelfde vragen",
+    "duoScore": "Een score per persoon + gemiddelde",
+    "soloBadge": "Jullie gezamenlijke antwoord",
+    "retour": "Andere manier kiezen"
   },
   "healthy": {
-    "securiteNote": "Une de vos réponses porte sur la peur, la manipulation ou l'humiliation. Ce point compte davantage que le reste du score : il mérite d'être regardé de près, seul·e ou accompagné·e.",
-    "gapWarning": "⚠️ L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
+    "securiteNote": "Een van je antwoorden gaat over angst, manipulatie of vernedering. Dat punt telt zwaarder dan de rest van de score: het verdient een goede blik, alleen of met hulp.",
+    "gapWarning": "⚠️ Het verschil tussen jullie scores is groot. Neem de tijd om er rustig over te praten, zonder er een wedstrijd van te maken."
   },
   "jeu": {
     "setupTitre": "Qui joue ce soir ?",
