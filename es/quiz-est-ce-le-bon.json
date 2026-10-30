@@ -42,7 +42,7 @@
     "faq4Q": "El test me dice que no es la persona adecuada. ¿Qué hago?",
     "faq4A": "Nada con prisas. Un test no es una decisión, es un espejo. Vuelve a leer las preguntas en las que tus respuestas te han dolido, y pregúntate si alguna vez se las has dicho a la persona en cuestión. Muchas veces no. Empieza por ahí. Y si en tus respuestas hay miedo, control o desprecio, habla con alguien de confianza, eso va más allá de la cuestión de la persona adecuada.",
     "faq5Q": "¿El test es anónimo?",
-    "faq5A": "Sí. Tus respuestas se quedan en tu navegador, nadie las ve, y no hay nada que crear ni que rellenar. Puedes hacerlo solo/a, o cada uno por su lado y luego comparar, lo que da conversaciones interesantes, por cierto..."
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador, nadie las ve, y no hay que crear ninguna cuenta. Solo se pide tu correo electrónico, una vez, para ver el resultado completo, y tus respuestas no se envían con él. Puedes hacerlo solo/a, o cada uno por su lado y luego comparar, lo que da conversaciones interesantes, por cierto..."
   },
   "jsonLd": {
     "about": "elegir a la persona adecuada"
