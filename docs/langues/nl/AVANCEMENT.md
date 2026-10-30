@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur | à faire |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -201,7 +201,55 @@ le met à jour dans la PR de chaque lot.
   parcours depuis le 24 octobre 2026 ; la politique de confidentialité, elle,
   le nomme.
 
+## Lot 3a (30 octobre 2026) : test de couple, points communs, compatibilité, compatibilité sexuelle
+
+- **Les pages**, sur la carte des mots-clés (title avec le mot-clé principal en
+  tête, H1 différent avec le principal ou un secondaire, description de 120 à
+  155 signes) :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/relatietest/` | Relatietest gratis online: 20 vragen over jullie relatie | Relatietest: hoe stevig is jullie relatie? |
+  | `/nl/hoeveel-hebben-we-gemeen/` | Hoeveel hebben we gemeen? Test met 153 vragen voor koppels | Wat hebben we gemeen? Test jullie raakvlakken in 20 vragen |
+  | `/nl/passen-we-bij-elkaar/` | Passen we bij elkaar? Compatibiliteitstest in 20 vragen | Compatibiliteitstest: zijn jullie voor elkaar gemaakt? |
+  | `/nl/seksuele-compatibiliteit-test/` | Seksuele compatibiliteit test: 20 vragen voor jullie twee | Passen we seksueel bij elkaar? De test voor koppels |
+
+- **Les textes de moteur** : `testerC` (33 questions, deux modes) et
+  `coupleLevel` (huit niveaux) ; `cp`, le nom des points communs hors du
+  français, avec les 153 questions et le vocabulaire d'options partagé
+  (`qNopts` recopiés du français, libellés `o_*`), dans la structure du
+  français, sans les verdicts `r0t` à `r3a` que les autres langues gardent
+  sans s'en servir (les verdicts viennent de `result.low/medium/high` de
+  quizGames.json) ; `compatibilite` (20 questions) ; `compatSex` (20
+  questions, cinq dimensions, cinq niveaux). Les textes alternatifs des
+  images de tête sont dans `QUIZ_FEATURED`.
+- **Le maillage** : les mêmes cibles que l'anglais, en /nl/ (`relatietest`,
+  `passen-we-bij-elkaar`, `vragen-voor-koppels`, `klaar-voor-een-baby-test`,
+  `zielsverwant-test`, `sterrenbeelden-match`, `waarheid-of-durven-18`,
+  `seksuele-compatibiliteit-test`...). Deux liens de la compatibilité
+  sexuelle vers des articles du blog (langages de l'amour, questions
+  intimes) attendent leur traduction : le texte est là, sans lien.
+- **Corrigé dans les cinq langues publiques** : la section 6 du test de
+  couple annonçait 10 signes et en listait 5 ; sa FAQ disait 30 questions
+  pour une réserve de 33. Le moteur écrivait « 100 % » avec une espace
+  ordinaire dans les dimensions de la compatibilité sexuelle et dans
+  l'étiquette de l'anneau du « Qui de nous deux » : `pctTexte` (« 100% » en
+  anglais et en néerlandais, espace insécable ailleurs).
+- **Les contrôles** : `site --captures <dossier>` photographie l'écran de
+  résultat de chaque moteur joué, sans la porte e-mail, pour relire les
+  verdicts ; `identiques.txt` accepte Pasta, Burger, Japan, New York, Winter.
+
 ## Les chiffres
+
+Au lot 3a : `textes nl` 84 parties écrites sur 1 045, sans erreur (trois
+avertissements voulus : « Relatieblog », « Thrillers », « Rap/hiphop ») ;
+`seo nl` sans erreur (7 pages traduites contrôlées) ; `site nl` sur les quatre
+pages : aucun débordement ni mot coupé à 360 et 1 280 px, chaque moteur va
+jusqu'à son résultat dans chaque mode, et les quatre textes restés en français
+sont ceux des cartes « Hierna » qui mènent à des pages pas encore traduites.
+Côté public, seules les cinq pages du test de couple changent (les deux
+corrections ci-dessus), et les paquets du moteur.
+
 
 Au lot 2d : `textes nl` 44 parties écrites sur 1 045 (1 042 avant que le contrôle ne lise aussi `cp`, `coquinQ` et `funny`, les préfixes de `gd.json` qui portent un autre nom hors du français) ; `site nl --jouer --sans-rendus` : chaque moteur va jusqu'à son résultat, dans chaque mode, sans erreur de console, et les 753 textes restés en français sur 73 pages sont ceux propres à chaque test ou jeu (lots 3 à 7).
 

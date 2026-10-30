@@ -16,6 +16,9 @@
 //   --pages a,b       seo et site : seulement les adresses qui contiennent
 //                     l'un de ces bouts (« /nl/$ » : cette adresse seule)
 //   --sans-rendus     site : seulement les moteurs (avec --jouer)
+//   --captures dossier  site : l'écran de résultat de chaque moteur joué, en
+//                     image (avec --jouer), sans la porte e-mail, pour relire
+//                     les verdicts
 //   --debug           site : chaque étape du joueur
 //   --sortie f.json   tout le rapport, sans coupe
 //   --tout-afficher   pas de coupe à l'écran
@@ -1002,6 +1005,9 @@ async function controleSite() {
     // Le moteur, joué jusqu'au résultat, une fois par mode proposé au départ.
     if (drapeau('--jouer') && type === 'route' && !SANS_RESULTAT.has(cle)) {
       const contexte = await navigateur.newContext({ viewport: { width: 390, height: 844 } });
+      // Pour les captures, l'appareil a déjà laissé son adresse : la porte
+      // e-mail (capture.js) ne floute pas le détail du résultat.
+      if (valeurDe('--captures')) await contexte.addInitScript((lang) => { try { localStorage.setItem('qc-abonne', JSON.stringify({ at: Date.now(), lang })); } catch (e) { /* rien */ } }, LANGUE);
       let modes = 1;
       for (let m = 0; m < modes; m++) {
         const { page, erreurs } = await ouvre(contexte, base + chemin);
@@ -1017,6 +1023,13 @@ async function controleSite() {
         }
         const r = await joue(page, modes > 1 ? m : null);
         const ou = `${chemin} (moteur${modes > 1 ? `, mode ${m + 1}/${modes}` : ''})`;
+        const captures = valeurDe('--captures');
+        if (captures && r.atteint) {
+          fs.mkdirSync(captures, { recursive: true });
+          const nom = `${chemin.replace(/^\/|\/$/g, '').replace(/\//g, '_')}${modes > 1 ? `-mode${m + 1}` : ''}.png`;
+          const carte = await page.$('.quiz-result-card, [data-quiz-done]');
+          await (carte || page).screenshot({ path: path.join(captures, nom) }).catch(() => {});
+        }
         if (!r.atteint) erreur(C, ou, `résultat non atteint (${r.raison}, ${r.etapes} étapes)`);
         const restes = [...new Set(r.vus)].filter(nonTraduit);
         for (const l of restes.slice(0, 8)) erreur(C, ou, `texte non traduit : « ${l.slice(0, 80)} »`);
