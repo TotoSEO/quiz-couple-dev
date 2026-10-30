@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Gratis test, 15 vragen",
+    "title": "Heeft mijn partner met een ander geslapen?",
+    "titleHighlight": "met een ander geslapen",
+    "description": "15 vragen om orde te brengen in wat je hebt gezien. We vragen eerst over wie het gaat, want de vragen zijn niet hetzelfde.",
+    "subtitle": "Gratis, zonder account, meteen een uitslag"
+  },
+  "howTo": {
+    "title": "Hoe werkt deze test?",
+    "step1": "Je geeft aan of je partner een man of een vrouw is. De vijftien vragen passen zich aan, en één ervan verandert helemaal.",
+    "step2": "Je antwoordt met de <strong>afgelopen weken</strong> in gedachten, niet je hele geschiedenis. Een signaal telt omdat het veranderd is, niet omdat het er is.",
+    "step3": "Elke vraag weegt mee naar hoe ernstig ze is: een onverklaarde uitgave telt zwaarder dan een nieuw kapsel. Het totaal, van 0 tot 155 punten, plaatst je in een van de vier niveaus.",
+    "step4": "De uitslag vertelt je wat je observaties samen wegen, en wat je er redelijkerwijs mee kunt doen.",
+    "outro": "Antwoord eerlijk, ook als het eerlijke antwoord ‘ik weet het niet’ is. Aan een geruststellende uitslag die je krijgt door de randjes eraf te halen, heb je niets."
+  },
+  "crossLink": {
+    "title": "Is dit niet helemaal je vraag?",
+    "text": "Gaat je twijfel eerder over een vriendschap die te close is geworden, dubbelzinnige berichten of een vertrouwelijkheid waar je je niet goed bij voelt, dan heb je de andere test nodig.",
+    "button": "Doe de volledige vreemdgaan test"
+  },
+  "section1": {
+    "title": "De vraag die maar blijft rondspoken",
+    "p1": "Misschien heb je het nog tegen niemand gezegd. De vraag komt terug 's avonds, in de auto, als het gesprek stilvalt. <strong>Heeft hij of zij met iemand anders geslapen?</strong> En meteen daarachter een tweede vraag, vaak pijnlijker: word ik gek, of heb ik gelijk?",
+    "p2": "Twijfel heeft de eigenaardigheid dat hij zichzelf voedt. Te laat thuiskomen wordt een leugen, een omgedraaide telefoon wordt een bewijs, een stilte wordt een bekentenis. En de volgende dag lijkt alles normaal en neem je het jezelf kwalijk dat je eraan dacht. Dat heen en weer is uitputtend, en het beschadigt de relatie net zo goed als waar je bang voor bent.",
+    "p3": "Deze test beslist niet voor jou, en het zou oneerlijk zijn om dat te beweren. Wat hij doet, is naast elkaar zetten wat je werkelijk hebt gezien, de signalen die zwaar wegen scheiden van de signalen die niets betekenen, en je één totaalbeeld geven in plaats van vijftien details die door je hoofd spoken."
+  },
+  "section2": {
+    "title": "De signalen die tellen, en de signalen die niets bewijzen",
+    "intro": "Geen van deze signalen zegt op zich iets. Kijk liever naar wat recent veranderd is, en naar of er meerdere tegelijk opduiken.",
+    "pillar1Title": "De telefoon die ineens anders wordt behandeld",
+    "pillar1Text": "Het signaal is niet ‘hij schermt zijn telefoon af’, maar ‘hij schermt hem sinds kort af’. Een nieuwe code, het scherm omgedraaid, meldingen uit, een gearchiveerd gesprek. Iemand die altijd al op zijn privacy gesteld was, zegt je helemaal niets.",
+    "pillar2Title": "Verhalen die niet kloppen",
+    "pillar2Text": "Dit is het zwaarste signaal van allemaal, omdat je het kunt nagaan. Een avond die twee keer verteld wordt met twee verschillende plekken, een verklaring die achteraf wordt rechtgezet. Een leugen over de plek weegt zwaarder dan een leugen over de tijd.",
+    "pillar3Title": "Intimiteit die omslaat",
+    "pillar3Text": "In beide richtingen. Een plotselinge stop is een waarschuwing, maar een verandering in hoe het gaat ook: nieuwe gewoontes die uit het niets komen, roepen net zoveel vragen op als een plotselinge woestijn.",
+    "pillar4Title": "De beschuldiging die wordt omgedraaid",
+    "pillar4Text": "Je stelt een vraag, en ineens moet jij je verantwoorden. Als iemand zijn partner beschuldigt van vreemdgaan terwijl daar niets op wees, noemen therapeuten dat projectie. Het is geen bewijs, maar het valt wel op.",
+    "pillar5Title": "Geld laat sporen na",
+    "pillar5Text": "Een dubbelleven kost geld. Ongewone geldopnames, uitgaven aan restaurants of hotels die niet in het gezamenlijke budget te zien zijn, een rekening die zonder overleg is geopend. Een bankafschrift liegt minder goed dan mensen.",
+    "pillar6Title": "Een omgeving die vreemd gaat doen",
+    "pillar6Text": "Een stilte als je binnenkomt, een vriend die je ontloopt, een zin die half wordt uitgesproken. Mensen uit de omgeving weten het vaak eerder, en ze kunnen slecht met die kennis omgaan. Hun ongemak is een indirect signaal, en dat valt op.",
+    "tip": "Twee signalen zijn bijna nooit genoeg. Waar het om gaat, is dat meerdere aanwijzingen in dezelfde periode samenkomen: dat verandert hoe je het leest, niet het aantal op zich."
+  },
+  "section3": {
+    "title": "Wat je score zegt, en wat hij niet zegt",
+    "p1": "Elke vraag weegt mee naar hoe ernstig ze is, en elk antwoord krijgt punten naar zijn plaats in de rij. Het totaal loopt van 0 tot 155 punten. De vier niveaus hieronder zijn geen oordelen, het zijn manieren om te lezen wat je hebt geantwoord. Een hoge score beschrijft gedrag, nooit een feit.",
+    "headerScore": "Score",
+    "headerLevel": "Uitslag",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 38",
+    "row1Level": "Niets wijst in die richting",
+    "row1Analysis": "Geen van de gebruikelijke signalen. Blijft de twijfel, dan komt die waarschijnlijk ergens anders vandaan dan uit zijn of haar gedrag.",
+    "row2Score": "39 tot 77",
+    "row2Level": "Dubbelzinnige signalen",
+    "row2Analysis": "Er is iets veranderd, ja. Maar stress, vermoeidheid en een periode waarin iemand zich terugtrekt, geven precies dezelfde symptomen.",
+    "row3Score": "78 tot 116",
+    "row3Level": "Een echte opeenstapeling",
+    "row3Analysis": "Er komt te veel samen om toeval te zijn. Let op: een depressie of een verborgen probleem geven hetzelfde beeld.",
+    "row4Score": "117 tot 155",
+    "row4Level": "Veel signalen",
+    "row4Analysis": "Geheimzinnigheid, nagegane tegenstrijdigheden, intimiteit die verdwijnt. Het bewijst nog steeds niets, maar het vraagt om een antwoord.",
+    "tip": "Een score van 140 is geen bewijs, en een score van 20 is geen garantie. Allebei zeggen ze vooral wat je observatie vandaag waard is, met wat je nu weet."
+  },
+  "section4": {
+    "title": "Met een ander slapen of je aan een ander hechten: twee verschillende vragen",
+    "p1": "Veel mensen komen hier met een precieze vraag: <strong>is er iets lichamelijks gebeurd?</strong> Dat is een andere vraag dan ‘is mijn relatie in gevaar’, en die vraagt om andere signalen. Lichamelijk vreemdgaan laat materiële sporen na: afwezigheden, uitgaven, plekken die niet kloppen, soms een verandering in jullie intimiteit.",
+    "p2": "Emotioneel vreemdgaan laat bijna niets materieels na. Je ziet het aan aandacht die verschuift, aan dingen die iemand ineens aan een ander toevertrouwt, aan een nieuwe verbondenheid met iemand over wie nooit wordt gepraat als jij erbij bent. Het kan net zoveel pijn doen, en langer duren, zonder dat er één nacht buiten de deur is doorgebracht.",
+    "p3": "Deze test gaat over de eerste vraag. Gaat je twijfel meer over de tweede, dan meet je <a href=\"/nl/gaat-mijn-partner-vreemd/\">vreemdgaan in de brede zin</a> op een andere manier: het gaat dan net zo goed over het emotionele als over het lichamelijke. En knaagt vooral <a href=\"/nl/jaloezie-test/\">een jaloezie zonder concreet aanknopingspunt</a> aan je, kijk dan eerst daarnaar."
+  },
+  "section5": {
+    "title": "Wat je nu vooral niet moet doen",
+    "p1": "Twijfel zet aan tot actie, en bijna alles wat hij je ingeeft, maakt het erger. Dit zijn de drie dingen die het vaakst gebeuren.",
+    "sub1Title": "De telefoon doorzoeken",
+    "sub1Text": "Het is het eerste idee, en het slechtste. In het beste geval vind je niets, en blijft de twijfel staan omdat ‘hij het vast heeft gewist’. In het slechtste geval vind je iets dubbelzinnigs dat je nooit meer kunt vergeten of nagaan. En in beide gevallen heb jij nu ook iets te verbergen.",
+    "sub2Title": "Navraag doen in zijn of haar omgeving",
+    "sub2Text": "Vrienden ondervragen zet iedereen in een onmogelijke positie, en het komt altijd bij je partner terecht, meestal verdraaid. Je verliest het verrassingseffect, je krijgt een reputatie, en je krijgt geen antwoord.",
+    "sub3Title": "Beschuldigen zonder iets op tafel te leggen",
+    "sub3Text": "“Ik weet dat je vreemdgaat” levert nooit een bekentenis op. Het levert een tegenaanval op, en dan moet jij ineens iets bewijzen. Beschuldig je zonder iets in handen te hebben, dan heb je het gesprek al verloren voordat het begon.",
+    "tip": "Speel je met de gedachte aan spyware of een gps-tracker? Spyware zonder toestemming op iemands telefoon zetten is in Nederland en België strafbaar. Los van het juridische risico is het precies het soort daad waardoor je de waarheid niet meer aan jouw kant hebt als die uiteindelijk uitkomt."
+  },
+  "section6": {
+    "title": "Hoe stel je de vraag?",
+    "p1": "Er bestaat geen magische formulering, maar er zijn omstandigheden die je kans flink vergroten op een echt antwoord in plaats van een verdedigingsreflex.",
+    "sub1Title": "Kies het moment, niet de impuls",
+    "sub1Text": "Niet om middernacht na een avond uit, niet als een van jullie naar zijn werk vertrekt, niet waar de kinderen bij zijn. Een moment waarop niemand kan wegvluchten of over twintig minuten ergens moet zijn.",
+    "sub2Title": "Beschrijf, plak geen etiket",
+    "sub2Text": "“Je kwam zaterdag om drie uur thuis en zei dat je bij Tom was, en Tom zei iets anders” is moeilijk weg te wuiven. “Je liegt de hele tijd tegen me” wuif je met één zin weg. Blijf bij de feiten die je echt hebt gezien, zonder ze op te blazen.",
+    "sub3Title": "Zeg wat je zoekt",
+    "sub3Text": "Zeggen “ik wil het liever weten, ook al doet het pijn, dan zo doorgaan” verandert het gesprek vaak. Veel mensen liegen niet omdat ze graag liegen, maar uit angst voor de reactie. Een deel van die angst wegnemen kan genoeg zijn.",
+    "sub4Title": "Luister ook naar wat niet wordt gezegd",
+    "sub4Text": "Een antwoord dat tien seconden op zich laat wachten, is geen bewijs. Een antwoord dat tussen dinsdag en donderdag verandert, wel. Wat je zoekt, is geen reactie, maar een verhaal dat door de tijd heen hetzelfde blijft."
+  },
+  "section7": {
+    "title": "En als het antwoord ja is?",
+    "p1": "Dan kom je bij een andere vraag, en die hoef je niet dezelfde avond te beantwoorden. Het eerste wat je moet weten: de beslissing om te blijven of te gaan neem je niet in de dagen na de onthulling. De schok is een slechte raadgever, in welke richting dan ook.",
+    "p2": "Wat daarna bepalend is, komt neer op weinig: neemt de ander de verantwoordelijkheid zonder te bagatelliseren, verbreekt hij of zij het contact, en accepteert hij of zij je vragen maandenlang zonder het moe te worden? Zonder die drie houdt een nieuwe start zelden stand. Met die drie kan het, en het duurt meestal één tot drie jaar.",
+    "p3": "En wil je daarna kijken wat er nog over is, dan gaan <a href=\"/nl/gezonde-relatie-test/\">wat er nog gezond is tussen jullie</a> en <a href=\"/nl/vertrouwen-relatie-test/\">het vertrouwen dat er nog is</a> over wat daarna komt, in plaats van over de schok.",
+    "tip": "Brengt de situatie je in gevaar, ben je bang voor de reactie van je partner als je een vraag stelt, dan gaat het niet meer om vreemdgaan. In Nederland kun je dag en nacht gratis bellen met Veilig Thuis (0800-2000), in België op werkdagen gratis en anoniem met 1712. Bij direct gevaar bel je 112."
+  },
+  "faq": {
+    "q1": "Kan een test zeggen of iemand met een ander heeft geslapen?",
+    "a1": "Nee, en geen enkele serieuze test zal dat beweren. Wat deze test meet, is hoe samenhangend en hoe talrijk je observaties zijn. Hij maakt van vijftien losse indrukken één totaalbeeld. Zekerheid komt nooit uit een vragenlijst: die komt uit een gesprek, een bekentenis of iets concreets.",
+    "q2": "Waarom vragen jullie of mijn partner een man of een vrouw is?",
+    "a2": "Omdat een van de vijftien vragen maar in een van de twee gevallen te stellen is, en omdat een vraag over een man vreemd leest als je aan een vrouw denkt. De keuze verandert niets aan de punten of de uitslagen: de veertien andere vragen zijn dezelfde, alleen de formulering volgt.",
+    "q3": "Mijn score is hoog: betekent dat dat hij of zij me heeft bedrogen?",
+    "a3": "Nee. Een hoge score betekent dat er in dezelfde periode veel signalen samenkomen. Een depressie waar niet over gepraat wordt, een verzwegen ontslag, een schuld, een geheimgehouden gezondheidsprobleem of een verslaving geven precies hetzelfde patroon van antwoorden. Daarom stuurt de uitslag je naar een gesprek, niet naar een conclusie.",
+    "q4": "Mijn score is laag maar ik twijfel nog steeds: is dat normaal?",
+    "a4": "Ja, en dat komt vaak voor. De twijfel komt niet altijd van de ander. Een oud verraad, in deze relatie of in een vorige, laat een waakzaamheid achter die wakker wordt zonder dat daar nu een reden voor is. Blijft de twijfel terwijl niets hem voedt, kijk dan naar die kant, en erover praten blijft de beste uitweg.",
+    "q5": "Kan ik deze test samen met mijn partner doen?",
+    "a5": "Daar is hij niet voor gemaakt, en het zou een slecht idee zijn: de vijftien vragen beschrijven vermoedens, en ze laten lezen door iemand die je verdenkt, komt neer op hem of haar vraag voor vraag beschuldigen. Doe de test alleen, en praat daarna, in je eigen woorden.",
+    "q6": "Worden mijn antwoorden opgeslagen?",
+    "a6": "Nee. Alles gebeurt in je browser, er wordt geen antwoord verstuurd of bewaard, en je hoeft geen account te maken. We vragen alleen één keer je e-mailadres om de volledige uitslag te tonen, en je antwoorden gaan daar niet mee. Sluit de pagina en er blijft niets van over."
+  }
+}

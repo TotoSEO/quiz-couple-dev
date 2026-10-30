@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -511,7 +511,47 @@ le met à jour dans la PR de chaque lot.
   contrôle, « ben ik verliefd », l'infidélité, la dépendance affective, la
   confiance et, entre les deux pages, de l'une à l'autre.
 
+## Lot 3k (30 octobre 2026) : couché avec un autre, a-t-il oublié son ex
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/met-iemand-anders-geslapen/` | Heeft hij met iemand anders geslapen? De test in 15 vragen | Heeft mijn partner met een ander geslapen? |
+  | `/nl/is-hij-over-zijn-ex-heen/` | Is hij over zijn ex heen? De test in 20 vragen | Denkt mijn vriend nog aan zijn ex? De test, voor hem of voor haar |
+
+- **Les textes de moteur** : `couche`, `coucheH` et `coucheF` (quinze
+  questions qui changent selon que le partenaire est un homme ou une femme,
+  quatre verdicts), `sonExH` et `sonExF` (vingt questions dans l'ordre, cinq
+  verdicts, écran du choix « Je partner is… » ; les points sont recopiés du
+  français), et les écrans de départ `couche` et `oublie-son-ex` de
+  quizGames.json. Les deux modes de chaque page ont été joués jusqu'au
+  résultat dans Chromium.
+- **Le tableau du score du test « couché avec un autre », dans les six
+  langues** : il disait 0 à 11, 12 à 23, 24 à 35, 36 à 45, alors que le test
+  compte de 0 à 155 points et découpe ses quatre verdicts par tranches de 39.
+  Les six langues donnent désormais 0 à 38, 39 à 77, 78 à 116 et 117 à 155,
+  et l'encadré dessous parle d'un score de 140 et d'un score de 20 (40 et 8
+  avant) ; une partie jouée affiche 80/155 et le verdict de la troisième
+  tranche.
+- **La porte e-mail** : les deux pages l'ont. La FAQ néerlandaise dit qu'on
+  demande l'adresse une seule fois pour la réponse complète, sans les
+  réponses ; le français de « a-t-il oublié son ex » disait « rien à créer ni
+  à remplir », corrigé à part dans les cinq langues.
+- **Les liens** : vers la confiance, la jalousie, le couple sain et
+  l'infidélité pour la première page ; vers « over je ex heen komen »,
+  « nog verliefd op mijn ex » et la jalousie pour la seconde. Le lien du
+  français vers l'article « rester ami avec son ex » attend la traduction du
+  blog.
+
 ## Les chiffres
+
+Au lot 3k : `textes nl` 332 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (30 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux modes de chaque moteur
+vont jusqu'à leur résultat, sans texte resté en français. Côté public, seul
+le tableau du score du test « couché avec un autre » change, dans les cinq
+langues.
 
 Au lot 3j : `textes nl` 303 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (28 pages traduites) ; `site nl` sur les deux pages : aucun
