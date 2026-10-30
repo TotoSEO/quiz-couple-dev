@@ -474,17 +474,29 @@ function controleTextes() {
   const interditsTitre = INTERDITS_TITRES[LANGUE] || [];
   const marqueurs = MARQUEURS[LANGUE] || [];
 
+  // Les préfixes de gd.json qui portent un autre nom hors du français
+  // (PREFIX_ALIASES de quiz-engine-core.js : « cp » pour « commonPoints ») :
+  // la nouvelle langue les écrit sous le nom des autres langues, et le
+  // français, sous son nom à lui, sert quand même de comparaison.
+  const coeur = fs.readFileSync(path.join(STATIC, 'js', 'quiz-engine-core.js'), 'utf8');
+  const blocAlias = (coeur.match(/var PREFIX_ALIASES = \{([\s\S]*?)\};/) || [])[1] || '';
+  const ALIAS = Object.fromEntries([...blocAlias.matchAll(/^\s*'([^']+)':\s*'([^']+)'/gm)].map((m) => [m[2], m[1]]));
+
   for (const f of fichiers) {
     const src = Object.fromEntries(AUTRES.filter((l) => fs.existsSync(path.join(dirL(l), f))).map((l) => [l, lisJson(path.join(dirL(l), f))]));
     const fNouv = path.join(dirL(LANGUE), f);
     const nouv = fs.existsSync(fNouv) ? lisJson(fNouv) : null;
-    for (const u of Object.keys(src.fr)) {
-      if (!(u in src.en)) continue; // une partie propre au français (page frOnly)
+    const alias = f === 'gd.json' ? ALIAS : {};
+    // Une partie propre au français (page frOnly, ou préfixe renommé ailleurs)
+    // n'est pas à écrire ; une partie renommée l'est, sous son autre nom.
+    const parties = [...Object.keys(src.fr).filter((u) => u in src.en),
+      ...Object.keys(src.en).filter((u) => !(u in src.fr) && alias[u] in src.fr)];
+    for (const u of parties) {
       unites++;
       const ou = `${LANGUE}/${f} ${u}`;
       if (!nouv || !(u in nouv)) { marque(C, ou, nouv ? 'partie pas encore écrite' : 'fichier pas encore écrit'); continue; }
       faites++;
-      const F = Object.fromEntries(Object.entries(src).map(([l, d]) => [l, feuilles(d[u], u)]));
+      const F = Object.fromEntries(Object.entries(src).map(([l, d]) => [l, feuilles(l === 'fr' && !(u in d) ? d[alias[u]] : d[u], u)]));
       const N = feuilles(nouv[u], u);
       // La structure suit celle du français ou celle de l'anglais (certains
       // préfixes de gd.json n'ont pas les mêmes clés d'une langue à l'autre).
