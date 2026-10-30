@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -573,7 +573,51 @@ le met à jour dans la PR de chaque lot.
 - **Les liens** : vers la relation toxique, l'emménagement, le couple sain
   et, par l'encart du haut, la parentalité, quatre pages déjà traduites.
 
+## Lot 3m (30 octobre 2026) : les langages de l'amour, la personnalité amoureuse
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/liefdestaal-test/` | Liefdestaal test: welke van de 5 liefdestalen spreek jij? | De 5 liefdestalen test: ontdek de jouwe in 30 vragen |
+  | `/nl/persoonlijkheidstest-liefde/` | Persoonlijkheidstest liefde: hoe ben jij in een relatie? | Persoonlijkheid in de liefde: wat voor partner ben ik? |
+
+- **Les noms des langages** sont ceux de la traduction néerlandaise du livre
+  de Chapman (« De vijf talen van de liefde ») : bevestigende woorden,
+  dienstbaarheid, cadeaus ontvangen, quality time, lichamelijke aanraking.
+  « Quality time » est donc le même mot qu'en anglais, ajouté à
+  `identiques.txt`.
+- **Les profils de la personnalité amoureuse** : de Gepassioneerde, de
+  Zorgzame (le Dévoué, comme « Fürsorgliche » en allemand), de Speelse, de
+  Bouwer, et de Evenwichtige quand aucun ne se détache. Le sens des lettres
+  tourne d'une question à l'autre : chaque réponse a été traduite lettre par
+  lettre, sans rien réordonner.
+- **Les textes de moteur** : `loveLanguage` (trente questions, cinq verdicts,
+  écran des deux formats, palier des quinze questions) et `personnalite`
+  (quinze questions, cinq profils). Les deux formats du premier test et le
+  second ont été joués jusqu'au résultat dans Chromium.
+- **Le script des statistiques** (`langage-amour-stats.js`, la répartition
+  des langages chez les gens qui ont fait le test, affichée à partir de
+  quarante résultats) connaît le néerlandais (`nl-NL` pour les nombres) et
+  écrit les pourcentages comme le moteur (`PCT_COLLE` : « 34% » en anglais et
+  en néerlandais, « 34 % » ailleurs, avec une espace insécable). C'est le
+  seul changement public du lot : l'anglais passe de « 34 % » à « 34% ».
+- **La porte e-mail** : les deux pages l'ont ; « zonder account », et la FAQ
+  de la personnalité dit que l'adresse est demandée une fois.
+- **Les liens** : vers le test de couple, les points communs, « hoe goed ken
+  je je partner » (pas encore traduite), le quiz coquin et les questions pour
+  couple pour la première page ; vers le type de couple (pas encore
+  traduit), les langages de l'amour, l'attachement (pas encore traduit) et le
+  test de couple pour la seconde. Le lien du français vers l'article des cinq
+  langages attend la traduction du blog.
+
 ## Les chiffres
+
+Au lot 3m : `textes nl` 366 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (33 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les moteurs vont jusqu'à leur
+résultat dans chaque format, sans texte resté en français. Côté public, seul
+le script des statistiques des langages de l'amour change.
 
 Au lot 3l : `textes nl` 345 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (31 pages traduites) ; `site nl` sur la page : aucun
@@ -697,7 +741,7 @@ Au lot 1 : `code nl` 334 passages dans 61 fichiers (169 dans `config.js`),
 |---|---|
 | `config.js` (`ROUTE_SLUGS`, `BLOG_ARTICLES`, `BLOG_CATEGORIES`), `sitemap.ejs` | 1 (adresses), puis 9 (articles) |
 | `generate.js` (titres des pages d'information, fil d'Ariane, 404), gabarits partagés (`header`, `preuve-sociale`, `quiz-reviews`, `related-tests`, `quiz-loading`, `404`, `about`, `home`), `home-dynamic.js`, `quiz-extras.js`, `reviews.js`, `resultat-url.js`, `pub.js`, `capture.js`, `admin.js`, `image-partage.mjs`, textes alternatifs de `config.js` | 2 |
-| `quiz-engine-core.js`, `quiz-loader.js`, `quiz-ado-multiplayer.js`, gabarits de pages (`quiz-astro-prenoms`, `quiz-date-naissance`, `quiz-jalousie`, `quiz-tu-preferes`, `questions-couple`), `compteur-couple.js`, `purete.js`, `langage-amour-stats.js`, `questions-couple.js` | 3 à 7, avec leurs pages |
+| `quiz-engine-core.js`, `quiz-loader.js`, `quiz-ado-multiplayer.js`, gabarits de pages (`quiz-astro-prenoms`, `quiz-date-naissance`, `quiz-jalousie`, `quiz-tu-preferes`, `questions-couple`), `compteur-couple.js`, `purete.js`, `questions-couple.js` | 3 à 7, avec leurs pages (`langage-amour-stats.js` : fait au lot 3m) |
 | Base et fonctions : `_shared/abonnes/regles.mjs` (porte e-mail), contrainte des avis, `manage-custom-quiz`, migrations (`reviews`, `abonnes`, `custom_quizzes`, chemins du blog) | 2 (une migration qui ajoute `nl` partout) |
 | L'évaluation : `bilan.js`, `_shared/bilan/*`, `bilan/*`, `bilan-banniere`, `bilan-sous-moteur`, migrations des bilans | 8 |
 | Les e-mails : `emails/*`, migrations des e-mails, `brevo-reglages.yml` | 8 |

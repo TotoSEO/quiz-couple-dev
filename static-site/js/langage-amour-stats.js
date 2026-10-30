@@ -17,7 +17,10 @@
   var SLUG = RACINE.dataset.quizSlug || 'testLangageAmour';
   var MIN_ECHANTILLON = 40; // en dessous, une répartition ne veut rien dire
   var LANGUE = document.documentElement.lang || 'fr';
-  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' };
+  // « 34 % » en français, en espagnol, en allemand et en italien, « 34% » en
+  // anglais et en néerlandais : la même liste que PCT_COLLE dans le moteur.
+  var PCT_COLLE = ['en', 'nl'];
 
   // Ordre et habillage des cinq langages. Les libellés viennent du gabarit :
   // la page est traduite, le script ne doit pas porter de français en dur.
@@ -32,6 +35,7 @@
     try { return Number(n).toLocaleString(LOCALES[LANGUE] || 'fr-FR'); }
     catch (e) { return String(n); }
   }
+  function pct(v) { return v + (PCT_COLLE.indexOf(LANGUE) >= 0 ? '%' : '\u00a0%'); }
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -80,7 +84,7 @@
           '<div class="la-stat-tete">' +
             '<span class="la-stat-nom"><span aria-hidden="true">' + EMOJIS[l.id] + '</span> ' +
               esc(libelles[l.id] || l.id) + '</span>' +
-            '<span class="la-stat-pct">' + l.pct + ' %</span>' +
+            '<span class="la-stat-pct">' + pct(l.pct) + '</span>' +
           '</div>' +
           '<div class="la-stat-piste"><span style="width:' + Math.round((l.pct / max) * 100) +
             '%;background:' + COULEURS[l.id] + '"></span></div>' +
@@ -90,7 +94,7 @@
       var tete = fmt(textes.intro || '', {
         n: '<strong>' + nb(total) + '</strong>',
         premier: '<strong>' + esc(libelles[lignes[0].id] || lignes[0].id) + '</strong>',
-        pct: '<strong>' + lignes[0].pct + ' %</strong>'
+        pct: '<strong>' + pct(lignes[0].pct) + '</strong>'
       });
       var pied = fmt(textes.note || '', { n: nb(total) });
 

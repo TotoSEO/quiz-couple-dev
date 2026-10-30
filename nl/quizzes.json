@@ -94,6 +94,18 @@
     "description": "Twee tests om jaloezie in je relatie te meten: die van jezelf en die van je partner. Met een genuanceerde uitslag.",
     "metaDescription": "Doe de jaloezie test: twee tests van 20 vragen, één over je eigen jaloezie en één over die van je partner. Gratis, met een genuanceerde uitslag."
   },
+  "testLangageAmour": {
+    "title": "Liefdestaal test: welke van de 5 liefdestalen spreek jij?",
+    "shortTitle": "De 5 liefdestalen",
+    "description": "30 vragen om te ontdekken welke van de 5 liefdestalen van Gary Chapman jouw belangrijkste is.",
+    "metaDescription": "Liefdestaal test: 30 vragen om te ontdekken welke van de 5 liefdestalen jij spreekt. Gratis en zonder account, en vergelijk daarna met je partner."
+  },
+  "testPersonnalite": {
+    "title": "Persoonlijkheidstest liefde: hoe ben jij in een relatie?",
+    "shortTitle": "Persoonlijkheidstest liefde",
+    "description": "15 vragen om te ontdekken hoe jij liefhebt: gepassioneerd, zorgzaam, speels of als bouwer. Gratis test, meteen een uitslag.",
+    "metaDescription": "Persoonlijkheidstest liefde: 15 vragen om te zien wat voor partner je bent. Gepassioneerd, zorgzaam, speels of een bouwer? Gratis en zonder account."
+  },
   "testConfiance": {
     "title": "Vertrouwen in een relatie test: vertrouw je elkaar?",
     "shortTitle": "Vertrouwenstest",
