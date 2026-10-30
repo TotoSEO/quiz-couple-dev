@@ -30,3 +30,5 @@ Burger
 Japan
 New York
 Winter
+red flag
+Green flag

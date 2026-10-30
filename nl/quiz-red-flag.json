@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "badge": "Test om alleen te doen",
+    "title": "Is hij een red flag, of zij? Zoek het uit in 20 vragen",
+    "titleHighlight": "red flag",
+    "description": "Een man of een vrouw: de vragen zijn anders. Twintig concrete situaties: hoe deze persoon over zijn of haar exen praat, wat hij of zij doet als je nee zegt, jaloezie, woede, de mensen om je heen. <strong>Elk teken weegt naar hoe ernstig het is</strong>, en de uitslag lees je af op <strong>negen niveaus</strong>.",
+    "subtitle": "Twintig vragen, vijf minuten, gratis en zonder account",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Hoe werkt de red flag test?",
+    "intro": "Een red flag is gedrag dat steeds terugkomt en dat je zou moeten alarmeren. Geen slechte dag, geen eigenaardigheid waarover je kunt praten. Het probleem is dat je ze van binnenuit slecht ziet. Je praat ze een voor een goed, en je telt ze nooit bij elkaar op. Dat doet de test wel.",
+    "p1": "Je begint met aangeven of de persoon aan wie je denkt een man of een vrouw is. Dat is niet voor de vorm: de vragen veranderen. Wat mensen het vaakst opvalt bij een man (hoe hij over vrouwen praat, wat hij doet als je nee zegt) en bij een vrouw (de tests, dagenlang boos zijn zonder te zeggen waarom), lijkt niet helemaal op elkaar. De volledige lijsten, met een voorbeeld bij elk punt, staan in onze artikelen over de red flags bij een man en de red flags die je bij een vrouw ziet; de test telt de tekenen die je al hebt gezien.",
+    "p2": "Daarna volgen twintig vragen over situaties van elke dag, met elke keer vier antwoorden, van ‘niets aan de hand’ tot ‘dat is het precies’. Je antwoordt op basis van wat deze persoon doet, niet wat hij of zij zegt te gaan doen, en niet wat je hoopt. Het werkt voor iemand met wie je drie weken afspreekt en voor de persoon met wie je al drie jaar samenwoont: daarvoor zijn de situaties gekozen.",
+    "p3": "Je antwoorden blijven in je browser. Je kunt de test zo vaak doen als je wilt, over zes maanden voor dezelfde persoon, of voor iemand anders."
+  },
+  "section2": {
+    "title": "Waarom niet alle vragen even zwaar wegen",
+    "p1": "‘Het is hun werk’ zeggen tegen een ober en de hand tegen je opheffen, dat zijn geen twee vakjes in hetzelfde lijstje. Elke vraag in de test heeft daarom een eigen gewicht, van drie tot acht punten, afhankelijk van wat ze zegt. Kortaf zijn tegen obers of slecht praten over al je exen is maximaal drie punten waard: het zijn bekende signalen, maar los zeggen ze niet veel. Jaloezie die je telefoon doorzoekt, woede-uitbarstingen, excuses die nooit komen, de mensen om je heen die op afstand worden gehouden: die zijn vijf of zes punten waard. En drie vragen zijn acht punten waard: wat er gebeurt als je nee zegt, lichamelijke woede, en of je bang bent voor zijn of haar reactie.",
+    "p2": "Het totaal is 100 punten. Sommige antwoorden tellen zelfs helemaal op zichzelf: zeg je dat deze persoon al eens de hand tegen je heeft opgeheven, dan kan de uitslag niet onder het laatste niveau zakken, ook al is de rest perfect. De negentien andere antwoorden veranderen daar niets aan.",
+    "p3": "De uitslag lees je af op negen niveaus, van ‘green flag’ tot ‘dit is geen red flag meer, het is gevaar’, met telkens wat je antwoorden zeggen en één ding dat je kunt doen. Negen in plaats van vier, omdat er tussen ‘twee of drie kleine dingen’ en ‘meerdere tekenen die bij elkaar horen’ een echt verschil zit, en dat is precies wat je hier komt zoeken.",
+    "headerScore": "Score",
+    "headerLevel": "Niveau",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 5",
+    "row1Level": "Green flag",
+    "row1Analysis": "Niets van wat de test zoekt.",
+    "row2Score": "6 tot 13",
+    "row2Level": "Niets alarmerends",
+    "row2Analysis": "Gewone gebreken, geen gedrag dat schade doet.",
+    "row3Score": "14 tot 25",
+    "row3Level": "Een paar zwakke signalen",
+    "row3Analysis": "Twee of drie dingen om te zeggen, zonder dat iemand in paniek hoeft te raken.",
+    "row4Score": "26 tot 36",
+    "row4Level": "Een red flag, misschien twee",
+    "row4Analysis": "Gedrag dat terugkomt en dat geen kleinigheid is.",
+    "row5Score": "37 tot 48",
+    "row5Level": "Meerdere red flags",
+    "row5Analysis": "Tekenen die bij elkaar horen en die je al iets kosten.",
+    "row6Score": "49 tot 60",
+    "row6Level": "Red flag bevestigd",
+    "row6Analysis": "Een manier om jou te behandelen, geen gebreken.",
+    "row7Score": "61 tot 73",
+    "row7Level": "Een grote red flag",
+    "row7Analysis": "Controle en angst: je bent je al gaan aanpassen.",
+    "row8Score": "74 tot 86",
+    "row8Level": "Een wandelende red flag",
+    "row8Analysis": "Een relatie die je beschadigt.",
+    "row9Score": "87 tot 100",
+    "row9Level": "Gevaar",
+    "row9Analysis": "Geweld of echte angst: blijf er niet alleen mee zitten."
+  },
+  "section3": {
+    "title": "Een red flag is niet hetzelfde als een toxische relatie",
+    "p1": "Een red flag is een signaal: iets waardoor je zou moeten afremmen en beter zou moeten kijken, aan het begin van een relatie of halverwege. Een toxische relatie is wanneer die signalen dagelijkse kost zijn geworden en je niet meer weet of je overdrijft. Ben je zover, is de vraag niet meer ‘heeft deze persoon red flags’ maar ‘is wat ik meemaak normaal’? Dan zit je misschien al in <a href=\"/nl/toxische-relatie-test/\">een toxische relatie</a>, en dat meet je op een andere manier.",
+    "p2": "En als je hier bent gekomen door een begin dat te perfect was, liefdesverklaringen in de eerste week, berichtjes op elk uur van de dag, dan is het misschien geen liefde op het eerste gezicht maar love bombing, en dat kun je nagaan met één zin.",
+    "p3": "Andersom beantwoordt een lage score niet alles. Geen red flag zijn is niet hetzelfde als <a href=\"/nl/is-hij-de-ware/\">de ware zijn</a>, en daarvoor zijn de vragen die je jezelf moet stellen heel anders."
+  },
+  "seo": {
+    "faqTitle": "De vragen die je je stelt",
+    "faq1Q": "Werkt de test als ik deze persoon nog maar kort ken?",
+    "faq1A": "Ja, dat is zelfs het beste moment. De twintig situaties zijn gekozen omdat je ze in de eerste weken al ziet: hoe iemand tegen obers en over zijn of haar exen praat, de reactie op een nee, het tempo van het begin, of iemand luistert. Kies bij wat je nog niet hebt kunnen zien ‘niets aan de hand’: de test raadt niets, hij telt wat je hebt gezien.",
+    "faq2Q": "Waarom veranderen de vragen als het om een man of om een vrouw gaat?",
+    "faq2A": "Omdat een deel van de red flags er anders uitziet. Vrouwen die over hun slechte ervaringen vertellen, hebben het vaak over veiligheid: het nee dat niet wordt gehoord, hoe hij over vrouwen praat, controle die zich voordoet als bescherming. Mannen hebben het vaker over tests, straffende stiltes, het ‘raad maar waarom ik boos ben’. De basis is dezelfde, en een paar vragen zijn voor de een of voor de ander geschreven. Wie jij bent, verandert niets aan de vragen of aan de score.",
+    "faq3Q": "Is één red flag erg?",
+    "faq3A": "Dat hangt ervan af welke, en daarom wegen de vragen niet allemaal even zwaar. Eén zwaar teken, zoals angst voor zijn of haar reactie of een nee dat niet wordt gehoord, weegt zwaarder dan vijf kleine. En bij de kleine telt vooral of ze terugkomen, en hoe de ander reageert als je erover begint. Iemand die de opmerking hoort en verandert, is geen red flag. Iemand die beledigd is en het opnieuw doet, wel.",
+    "faq4Q": "Worden mijn antwoorden bewaard?",
+    "faq4A": "Nee. Je antwoorden blijven in je browser: ze worden niet verstuurd en niemand ziet ze. Je hoeft geen account aan te maken, en je kunt de test zo vaak doen als je wilt.",
+    "faq5Q": "De uitslag is hoog. Wat doe ik nu?",
+    "faq5A": "Lees eerst de vragen terug waarbij je het laatste antwoord hebt gekozen: die hebben de score bepaald, en ze zeggen beter wat er gebeurt dan een getal. Praat er daarna over met iemand die niet bij het verhaal betrokken is, en lees je antwoorden voor zoals ze zijn. En gaat een van je antwoorden over slaan, angst of een nee dat niet wordt gerespecteerd? Blijf er dan niet alleen mee zitten: in Nederland kun je gratis bellen met Veilig Thuis (0800-2000), in België met 1712.",
+    "faq6Q": "Wat is het verschil met de test over een toxische relatie?",
+    "faq6A": "Deze test kijkt naar een persoon: wat hij of zij doet, desnoods vanaf het begin, ook als jullie nog geen relatie hebben. De test over een toxische relatie kijkt naar een relatie die al loopt: wat jullie samen meemaken, de angst, het schuldgevoel, het zelfvertrouwen dat slijt. De eerste helpt je beslissen of je met iemand verdergaat. De tweede helpt je begrijpen wat je al aan het meemaken bent."
+  },
+  "jsonLd": {
+    "about": "red flags herkennen bij een persoon"
+  }
+}

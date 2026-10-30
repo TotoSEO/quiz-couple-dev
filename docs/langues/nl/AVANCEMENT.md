@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -269,7 +269,48 @@ le met à jour dans la PR de chaque lot.
 - **Le contrôle seo** a trouvé « concreet » dans le titre H3 d'une question
   de la liste pour les robots : la question 1 a été reformulée.
 
+## Lot 3c (30 octobre 2026) : couple toxique, red flag
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/toxische-relatie-test/` | Toxische relatie test: 25 vragen, gratis en vertrouwelijk | Zit ik in een toxische relatie? Test het gratis online |
+  | `/nl/red-flag-test/` | Red flag test: is deze persoon een red flag? | Is hij een red flag, of zij? Zoek het uit in 20 vragen |
+
+- **Les textes de moteur** : `toxic` (25 questions, quatre verdicts, dans la
+  structure du français, sans les trois verdicts que l'anglais garde sans
+  s'en servir) et, dans quizGames.json, `toxic` (l'écran de départ) ;
+  `redFlagH` et `redFlagF` (les deux séries de 20 questions, points
+  recopiés du français, l'écran des modes), `redFlag` (neuf verdicts) et,
+  dans quizGames.json, `red-flag`.
+- **Les numéros d'aide** des verdicts graves : en néerlandais, Veilig Thuis
+  (0800-2000, Pays-Bas, gratuit, jour et nuit), 1712 (Belgique), et 112 en
+  danger immédiat, à la place du 3919 et du 17.
+- **Ce que le néerlandais ne reprend pas** : la page du couple toxique parle,
+  en français comme en anglais, à la première personne d'un thérapeute
+  (« la question que l'on me pose le plus souvent en cabinet », « en tant
+  que thérapeute ») ; personne sur le site n'a ce titre, et le néerlandais
+  dit la même chose sans s'en réclamer. Le test du couple toxique et le red
+  flag ne promettent pas non plus l'anonymat (« anonyme », « anoniem ») :
+  la porte e-mail demande une adresse pour le résultat complet. Les cinq
+  langues publiques gardent ces phrases : à trancher par Thomas.
+- **Les liens** : vers le red flag, le couple sain, la jalousie, le
+  partenaire narcissique, la relation sous contrôle, le couple toxique et
+  « is hij de ware » ; quatre liens vers des articles du blog (red flags
+  chez un homme et chez une femme, love bombing) attendent leur traduction.
+- **identiques.txt** accepte « red flag » et « Green flag », que le
+  néerlandais emploie tels quels.
+
 ## Les chiffres
+
+Au lot 3c : `textes nl` 137 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (11 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement, chaque moteur va jusqu'à son résultat dans chaque mode (homme
+et femme pour le red flag), et les deux textes restés en français sont ceux
+des cartes « Hierna » vers des pages pas encore traduites. Aucune page
+publique ne change.
+
 
 Au lot 3b : `textes nl` 114 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (9 pages traduites) ; `site nl` sur les deux pages : aucun

@@ -44,6 +44,25 @@
     "firstFirstName": "Eerste voornaam",
     "secondFirstName": "Tweede voornaam"
   },
+  "toxic": {
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "‘Is mijn relatie toxisch… of maak ik er een drama van?’",
+    "introDesc": "Als die vraag steeds terugkomt, is dat nooit toevallig. Een toxische relatie herken je niet aan ruzies, maar aan patronen die steeds terugkomen en die angst, schuldgevoel, minder zelfvertrouwen of emotionele verwarring veroorzaken.",
+    "disclaimer": "Deze test is geen medische diagnose en geen oordeel.",
+    "disclaimerDesc": "Het is een eerlijk hulpmiddel om te begrijpen wat je echt meemaakt.",
+    "takeTest": "Doe de test",
+    "testInfo": "25 vragen • Ongeveer 5 minuten • Gratis",
+    "yourScore": "Je score",
+    "scoreTotal": "Totale score",
+    "toxicityLevel": "Niveau van toxiciteit",
+    "points": "punten",
+    "healthy": "Gezonde relatie met normale spanningen",
+    "dysfunctional": "Relatie die niet goed functioneert",
+    "highlyToxic": "Zeer toxische relatie",
+    "importantReminder": "Belangrijk om te onthouden:",
+    "reminderText": "Deze test geeft alleen een indicatie. De uitslag is niet exact, en hij is geen vervanging voor het advies van een professional. Denk je dat je relatie echt toxisch is, of zelfs gevaarlijk? Neem dan contact op met echte deskundigen.",
+    "retakeTest": "Doe de test opnieuw"
+  },
   "question": {
     "itsTurnOf": "Nu is het de beurt aan",
     "turnToAnswer": "{{name}} is aan de beurt!",
@@ -415,5 +434,10 @@
     "annulerNon": "Nee, verder spelen",
     "annulee": "Het spel is gestopt door {{nom}}.",
     "retourTest": "Terug naar de test"
+  },
+  "red-flag": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord op basis van wat deze persoon doet, niet wat hij of zij zegt te gaan doen.",
+    "disclaimer": "Deze test plakt op niemand een etiket. Hij telt gedrag, en hij laat zwaarder wegen wat echt telt: angst, controle, het nee dat niet wordt gehoord. Je antwoorden worden niet bewaard."
   }
 }

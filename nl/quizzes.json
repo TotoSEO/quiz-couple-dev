@@ -23,11 +23,23 @@
     "description": "100 vragen om te zien hoe stevig jullie relatie op afstand is, en om jullie band te versterken.",
     "metaDescription": "Lange afstandsrelatie test: 15 vragen over contact, bezoekjes, vertrouwen en plannen, alleen of samen. Plus 18 vragen voor als het gesprek stilvalt."
   },
+  "testToxic": {
+    "title": "Toxische relatie test: 25 vragen, gratis en vertrouwelijk",
+    "shortTitle": "Toxische relatie test",
+    "description": "25 vragen om de tekenen van een toxische relatie te herkennen en goed voor jezelf te zorgen.",
+    "metaDescription": "Toxische relatie test: 25 vragen over controle, angst, schuld en wat er na een ruzie gebeurt, om de alarmsignalen te herkennen. Gratis en vertrouwelijk."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
     "metaDescription": "Is mijn relatie voorbij? 24 feitelijke vragen, gewogen naar hoe ernstig elk teken is, en een uitslag in 8 niveaus die je niet sust. Gratis, zonder account.",
     "description": "Vierentwintig feitelijke vragen, een weging naar hoe ernstig elk teken is, en een uitslag die je niet probeert te sparen."
+  },
+  "testRedFlag": {
+    "title": "Red flag test: is deze persoon een red flag?",
+    "shortTitle": "Red flag test",
+    "description": "Een man of een vrouw: twintig vragen over wat deze persoon doet, elk teken gewogen naar ernst, en een uitslag op negen niveaus.",
+    "metaDescription": "Red flag test voor een man of een vrouw: 20 vragen over wat deze persoon doet, van de exen tot het nee, jaloezie en woede. Elk teken weegt naar ernst."
   },
   "testCompatSexuelle": {
     "title": "Seksuele compatibiliteit test: 20 vragen voor jullie twee",
