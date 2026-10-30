@@ -10,7 +10,7 @@ le met à jour dans la PR de chaque lot.
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
-| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | à faire |
+| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a fait le 30 octobre 2026 (menu, pied, pages d'information) ; 2b accueil, 2c textes communs des moteurs, 2d pages juridiques |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
@@ -82,6 +82,36 @@ le met à jour dans la PR de chaque lot.
   langue cachée n'a pas encore (`games-nl.json`, `purete-nl.json`,
   `bilan-nl.json`) sont ceux du français : le jeu de pureté, qui ne sait pas
   retomber seul sur le français, ne se lançait pas sur /nl/.
+
+## Lot 2a (30 octobre 2026) : le menu, le pied de page, les pages d'information
+
+- **Les textes** : `nl/common.json` (menu, pied de page, boutons, avis, porte
+  e-mail, blog, 404, barre de la réduction) et `nl/custom-quiz.json` (la page
+  « Maak je eigen quiz »). Les libellés du menu suivent la carte des
+  mots-clés (« Relatietest », « Zou je liever? », « Wie van ons twee »...).
+  Deux mots trop longs pour la colonne du menu à 360 px portent une césure
+  conditionnelle : « Persoonlijk­heids­test », « superschurken­duo ».
+- **Le code** : titres et descriptions des pages d'information, fil
+  d'Ariane, 404, prix (`nl-NL` : « € 9,90 »), blocs des questions des pages
+  de moteur (`STATIC_Q_LABELS`, `STATIC_Q_HEADINGS`), titres du flux RSS
+  (generate.js) ; barre de preuve sociale, bloc des avis, chargement du
+  moteur, 404, page « Over mij », cartes « Hierna », plan du site (gabarits) ;
+  formulaires d'avis, écran du résultat, mot « Advertentie » au-dessus du
+  bandeau (scripts) ; catégories du blog (`BLOG_CATEGORIES`).
+- **À reprendre plus tard** :
+  - `STATIC_Q_HEADINGS` (generate.js) reprend le titre de l'écran de départ
+    de huit moteurs : à vérifier quand leurs textes seront écrits (lots 3 à 6).
+  - Les listes de langues acceptées pour un avis (`LANGUES_AVIS`, écrite
+    trois fois), la porte e-mail (`capture.js`, `lead-capture`) et l'admin
+    (`LANGUES_ABONNES`) n'auront `nl` qu'avec la migration qui l'ajoute aux
+    contraintes de la base (`reviews_lang_valeur`, `abonnes`...) : sinon un
+    avis envoyé depuis une page /nl/ serait refusé par la base et perdu.
+    Avant l'ouverture.
+  - **À trancher par Thomas** : la case de la porte e-mail dit « 16 jaar of
+    ouder » en néerlandais, pas 15 comme en France : c'est l'âge du
+    consentement numérique aux Pays-Bas (13 ans en Belgique).
+  - La clé `nav.bilanCoupleDesc` parle encore d'un rapport de 30 pages dans
+    les cinq langues publiques ; aucune page ne l'affiche.
 
 ## Les chiffres
 

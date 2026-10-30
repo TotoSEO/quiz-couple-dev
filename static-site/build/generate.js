@@ -175,7 +175,7 @@ function entreeArticle(articleMeta) {
 }
 function formatPrix(centimes, lang) {
   try {
-    const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+    const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
     return new Intl.NumberFormat(bcp, { style: 'currency', currency: 'EUR' })
       .format(centimes / 100).replace(/\u202f/g, '\u00a0');
   } catch (e) {
@@ -704,11 +704,11 @@ const GD_QUESTION_FAMILLES = {
     prefixes: ['pourContre.projets', 'pourContre.vacances', 'pourContre.couple',
                'pourContre.quotidien', 'pourContre.moments', 'pourContre.discuter'],
     amorce: { fr: 'Pour ou contre : ', en: 'For or against: ', es: 'A favor o en contra: ',
-              de: 'Dafür oder dagegen: ', it: 'Pro o contro: ' },
+              de: 'Dafür oder dagegen: ', it: 'Pro o contro: ', nl: 'Voor of tegen: ' },
     // La proposition est écrite avec une majuscule parce qu'elle est seule sur
     // sa carte. Derrière un deux-points elle ne doit plus en porter, sauf en
     // allemand où les noms communs gardent la leur.
-    minuscule: ['fr', 'en', 'es', 'it'],
+    minuscule: ['fr', 'en', 'es', 'it', 'nl'],
   },
 };
 // Quiz types whose answers aren't meaningful multiple-choice options to list.
@@ -724,20 +724,21 @@ const STATIC_Q_LABELS = {
   es: { heading: '¿Listos para el test?', intro: 'Las {n} preguntas, en orden. Inicia el test arriba para obtener tu resultado.', introExtrait: '{n} de las preguntas planteadas. El motor saca otras en cada partida: inicia el test arriba.' },
   de: { heading: 'Bereit für den Test?', intro: 'Alle {n} Fragen, der Reihe nach. Startet den Test oben, um euer Ergebnis zu bekommen.', introExtrait: '{n} der gestellten Fragen. Der Motor zieht bei jeder Runde neue: startet den Test oben.' },
   it: { heading: 'Pronti per il test?', intro: 'Le {n} domande, in ordine. Avvia il test qui sopra per ottenere il tuo risultato.', introExtrait: '{n} delle domande poste. Il motore ne pesca di nuove ogni partita: avvia il test qui sopra.' },
+  nl: { heading: 'Klaar voor de test?', intro: 'Alle {n} vragen, op volgorde. Start de test hierboven om je uitslag te krijgen.', introExtrait: '{n} van de vragen die we stellen. De test kiest er elke keer andere uit: start hem hierboven.' },
 };
 // Quelques moteurs ouvrent sur une autre phrase que « Prêts pour le test ? ».
 // Le bloc statique reprend la leur, sinon le titre en dur ne correspondrait
 // pas à ce que la personne lit une fois le moteur chargé.
 const STATIC_Q_HEADINGS = {
-  coquin: { fr: 'Prêts à pimenter ?', en: 'Ready to spice things up?', es: '¿Listos para darle picante?', de: 'Bereit für etwas Würze?', it: 'Pronti a pepare la serata?' },
-  marrant: { fr: 'Prêts à rire ensemble ?', en: 'Ready to laugh together?', es: '¿Listos para reíros juntos?', de: 'Bereit, zusammen zu lachen?', it: 'Pronti a ridere insieme?' },
-  'vrai-faux': { fr: 'Prêt pour le vrai ou faux ?', en: 'Ready for true or false?', es: '¿Listo para el verdadero o falso?', de: 'Bereit für Wahr oder Falsch?', it: 'Pronto per il vero o falso?' },
-  'tu-preferes': { fr: 'Prêts à trancher ?', en: 'Ready to choose?', es: '¿Listos para decidir?', de: 'Bereit, euch zu entscheiden?', it: 'Pronti a scegliere?' },
-  'amour-amitie': { fr: 'Prêt à mettre un mot dessus ?', en: 'Ready to put a name on it?', es: '¿Listo para ponerle nombre?', de: 'Bereit, es beim Namen zu nennen?', it: 'Pronto a dargli un nome?' },
-  'fin-couple': { fr: 'Prêt à regarder les choses en face ?', en: 'Ready to face it?', es: '¿Listo para mirarlo de frente?', de: 'Bereit, hinzusehen?', it: 'Pronto a guardarlo in faccia?' },
+  coquin: { fr: 'Prêts à pimenter ?', en: 'Ready to spice things up?', es: '¿Listos para darle picante?', de: 'Bereit für etwas Würze?', it: 'Pronti a pepare la serata?', nl: 'Klaar om het wat spannender te maken?' },
+  marrant: { fr: 'Prêts à rire ensemble ?', en: 'Ready to laugh together?', es: '¿Listos para reíros juntos?', de: 'Bereit, zusammen zu lachen?', it: 'Pronti a ridere insieme?', nl: 'Klaar om samen te lachen?' },
+  'vrai-faux': { fr: 'Prêt pour le vrai ou faux ?', en: 'Ready for true or false?', es: '¿Listo para el verdadero o falso?', de: 'Bereit für Wahr oder Falsch?', it: 'Pronto per il vero o falso?', nl: 'Klaar voor waar of niet waar?' },
+  'tu-preferes': { fr: 'Prêts à trancher ?', en: 'Ready to choose?', es: '¿Listos para decidir?', de: 'Bereit, euch zu entscheiden?', it: 'Pronti a scegliere?', nl: 'Klaar om te kiezen?' },
+  'amour-amitie': { fr: 'Prêt à mettre un mot dessus ?', en: 'Ready to put a name on it?', es: '¿Listo para ponerle nombre?', de: 'Bereit, es beim Namen zu nennen?', it: 'Pronto a dargli un nome?', nl: 'Klaar om er een naam aan te geven?' },
+  'fin-couple': { fr: 'Prêt à regarder les choses en face ?', en: 'Ready to face it?', es: '¿Listo para mirarlo de frente?', de: 'Bereit, hinzusehen?', it: 'Pronto a guardarlo in faccia?', nl: 'Klaar om het onder ogen te zien?' },
   // Le test crush tutoie : son public a l'âge du tutoiement.
-  crush: { fr: 'Prêt à mettre les choses au clair ?', en: 'Ready to figure it out?', es: '¿Listo para aclararte?', de: 'Bereit, Klarheit zu schaffen?', it: 'Pronto a fare chiarezza?' },
-  'pour-contre': { fr: 'Prêts à vous prononcer ?', en: 'Ready to take a side?', es: '¿Listos para posicionaros?', de: 'Bereit, Stellung zu beziehen?', it: 'Pronti a schierarvi?' },
+  crush: { fr: 'Prêt à mettre les choses au clair ?', en: 'Ready to figure it out?', es: '¿Listo para aclararte?', de: 'Bereit, Klarheit zu schaffen?', it: 'Pronto a fare chiarezza?', nl: 'Klaar om het uit te zoeken?' },
+  'pour-contre': { fr: 'Prêts à vous prononcer ?', en: 'Ready to take a side?', es: '¿Listos para posicionaros?', de: 'Bereit, Stellung zu beziehen?', it: 'Pronti a schierarvi?', nl: 'Klaar om een kant te kiezen?' },
 };
 
 function buildStaticQuestionsSection(quizType, tgd, lang) {
@@ -1214,6 +1215,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Aviso Legal - Quiz Couple', description: 'Aviso legal del sitio Quiz Couple.' },
       de: { title: 'Impressum - Quiz Couple', description: 'Impressum der Website Quiz Couple.' },
       it: { title: 'Note Legali - Quiz Couple', description: 'Note legali del sito Quiz Couple.' },
+      nl: { title: 'Juridische informatie - Quiz Couple', description: 'Juridische informatie over de website Quiz Couple.' },
     };
     title = legalMeta[lang]?.title || legalMeta.fr.title;
     description = legalMeta[lang]?.description || legalMeta.fr.description;
@@ -1224,6 +1226,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Política de Privacidad - Quiz Couple', description: 'Política de privacidad de Quiz Couple.' },
       de: { title: 'Datenschutzerklärung - Quiz Couple', description: 'Datenschutzerklärung von Quiz Couple.' },
       it: { title: 'Informativa sulla Privacy - Quiz Couple', description: 'Informativa sulla privacy di Quiz Couple.' },
+      nl: { title: 'Privacybeleid - Quiz Couple', description: 'Het privacybeleid van Quiz Couple.' },
     };
     title = privacyMeta[lang]?.title || privacyMeta.fr.title;
     description = privacyMeta[lang]?.description || privacyMeta.fr.description;
@@ -1234,6 +1237,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Blog de pareja: consejos y relaciones amorosas', description: 'Artículos sobre relaciones, compatibilidad y vida en pareja. Consejos prácticos y psicología.' },
       de: { title: 'Paar-Blog: Tipps und Beziehungsratgeber', description: 'Fachartikel über Liebe, Kompatibilität und Beziehungen. Praktische Tipps und Psychologie für Paare.' },
       it: { title: 'Blog di coppia: consigli e relazioni amorose', description: 'Articoli su relazioni, compatibilità e vita di coppia. Consigli pratici e psicologia.' },
+      nl: { title: 'Blog over relaties: tips en advies voor koppels', description: 'Een blog over relaties: artikelen over liefde, samenwonen en ruzie maken, met praktische tips en een beetje psychologie, in gewone taal.' },
     };
     title = blogMeta[lang]?.title || blogMeta.fr.title;
     description = blogMeta[lang]?.description || blogMeta.fr.description;
@@ -1244,6 +1248,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Quién soy: la persona detrás de Quiz Couple', description: 'Thomas, creador de Quiz Couple. Por qué creé este sitio y cómo construyo los tests, sin rodeos.' },
       de: { title: 'Über mich: die Person hinter Quiz Couple', description: 'Thomas, der Gründer von Quiz Couple. Warum ich diese Seite gebaut habe und wie die Tests entstehen, ehrlich und direkt.' },
       it: { title: 'Chi sono: la persona dietro Quiz Couple', description: 'Thomas, creatore di Quiz Couple. Perché ho creato questo sito e come nascono i test, in trasparenza.' },
+      nl: { title: 'Over mij: de persoon achter Quiz Couple', description: 'Thomas, de maker van Quiz Couple. Waarom ik deze site heb gemaakt, hoe de tests tot stand komen en wat ze waard zijn, eerlijk verteld.' },
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;
@@ -1254,6 +1259,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Mapa del sitio | Quiz Couple', description: 'Mapa del sitio Quiz Couple, encuentra todas las páginas, tests, quiz y artículos del blog.' },
       de: { title: 'Seitenverzeichnis | Quiz Couple', description: 'Quiz Couple Seitenverzeichnis, finde alle Seiten, Tests, Quiz und Blog-Artikel.' },
       it: { title: 'Mappa del sito | Quiz Couple', description: 'Mappa del sito Quiz Couple, trova tutte le pagine, test, quiz e articoli del blog.' },
+      nl: { title: 'Sitemap | Quiz Couple', description: 'De sitemap van Quiz Couple: alle pagina\'s, tests, quizzen en blogartikelen op één plek.' },
     };
     title = sitemapMeta[lang]?.title || sitemapMeta.fr.title;
     description = sitemapMeta[lang]?.description || sitemapMeta.fr.description;
@@ -1264,6 +1270,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Contáctanos | Quiz Couple', description: '¿Tienes alguna pregunta o sugerencia? Contacta al equipo de Quiz Couple. Respondemos a todos los mensajes.' },
       de: { title: 'Kontakt | Quiz Couple', description: 'Fragen oder Anregungen? Kontaktiere das Quiz Couple Team. Wir antworten auf jede Nachricht.' },
       it: { title: 'Contattaci | Quiz Couple', description: 'Hai domande o suggerimenti? Contatta il team Quiz Couple. Rispondiamo a tutti i messaggi.' },
+      nl: { title: 'Contact | Quiz Couple', description: 'Een vraag of een idee? Neem contact op met Quiz Couple. We beantwoorden elk bericht.' },
     };
     title = contactMeta[lang]?.title || contactMeta.fr.title;
     description = contactMeta[lang]?.description || contactMeta.fr.description;
@@ -1274,6 +1281,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Quiz personalizado | ¡Crea tu propio cuestionario!', description: 'Crea tu propio quiz online gratis y compártelo con tus amigos o tu pareja. Quiz de puntos, verdadero o falso o solo por diversión, en unos clics.' },
       de: { title: 'Eigenes Quiz | Erstelle deinen eigenen Fragebogen!', description: 'Erstelle dein eigenes Online-Quiz kostenlos und teile es mit Freunden oder deinem Partner. Punkte-Quiz, Wahr oder Falsch oder einfach zum Spaß, in wenigen Klicks.' },
       it: { title: 'Quiz personalizzato | Crea il tuo questionario!', description: 'Crea il tuo quiz online gratis e condividilo con gli amici o il partner. Quiz a punti, vero o falso o solo per divertimento, in pochi clic.' },
+      nl: { title: 'Maak je eigen quiz | Gratis en in een paar klikken', description: 'Maak je eigen quiz en deel hem met je vrienden of je partner: met punten, waar of niet waar of gewoon voor de lol, gratis en in een paar klikken.' },
     };
     title = cqMeta[lang]?.title || cqMeta.fr.title;
     description = cqMeta[lang]?.description || cqMeta.fr.description;
@@ -1284,6 +1292,7 @@ async function generatePage(routeKey, lang) {
       es: { title: 'Condiciones generales de venta - Quiz Couple', description: 'Condiciones generales de venta de la evaluación de pareja de Quiz Couple.' },
       de: { title: 'Allgemeine Geschäftsbedingungen - Quiz Couple', description: 'Allgemeine Geschäftsbedingungen für die Beziehungsanalyse von Quiz Couple.' },
       it: { title: 'Condizioni generali di vendita - Quiz Couple', description: 'Condizioni generali di vendita della valutazione di coppia di Quiz Couple.' },
+      nl: { title: 'Algemene voorwaarden - Quiz Couple', description: 'De algemene verkoopvoorwaarden van de relatiecheck van Quiz Couple.' },
     };
     title = cgvMeta[lang]?.title || cgvMeta.fr.title;
     description = cgvMeta[lang]?.description || cgvMeta.fr.description;
@@ -1303,6 +1312,7 @@ async function generatePage(routeKey, lang) {
     es: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
     de: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
     it: { home: 'Quiz Couple', tests: 'Test', quiz: 'Quiz', blog: 'Blog' },
+    nl: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quizzen', blog: 'Blog' },
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
@@ -1830,6 +1840,7 @@ const TITRES_FLUX = {
   es: { titre: 'Quiz Couple · Blog', description: 'Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.' },
   de: { titre: 'Quiz Couple · Blog', description: 'Die Artikel von Quiz Couple über Beziehungen, Psychologie und Liebesgeschichten.' },
   it: { titre: 'Quiz Couple · Blog', description: 'Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d\'amore.' },
+  nl: { titre: 'Quiz Couple · Blog', description: 'De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.' },
 };
 const FLUX_MAX = 30;
 
@@ -2413,6 +2424,7 @@ async function generateBlogArticle(articleMeta, lang) {
     es: { home: 'Quiz Couple', blog: 'Blog' },
     de: { home: 'Quiz Couple', blog: 'Blog' },
     it: { home: 'Quiz Couple', blog: 'Blog' },
+    nl: { home: 'Quiz Couple', blog: 'Blog' },
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
@@ -2576,6 +2588,7 @@ async function generate404Pages() {
       es: 'Página no encontrada - Quiz Couple',
       de: 'Seite nicht gefunden - Quiz Couple',
       it: 'Pagina non trovata - Quiz Couple',
+      nl: 'Pagina niet gevonden - Quiz Couple',
     };
     const desc404 = {
       fr: 'La page que vous cherchez n\'existe pas.',
@@ -2583,6 +2596,7 @@ async function generate404Pages() {
       es: 'La página que buscas no existe.',
       de: 'Die Seite, die du suchst, existiert nicht.',
       it: 'La pagina che cerchi non esiste.',
+      nl: 'De pagina die je zoekt, bestaat niet.',
     };
 
     const canonical = lang === 'fr' ? `${BASE_URL}/` : `${BASE_URL}/${lang}/`;

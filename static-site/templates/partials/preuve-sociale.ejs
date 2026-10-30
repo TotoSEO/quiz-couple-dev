@@ -12,13 +12,14 @@
      libellé dans la langue de la page. */
   var _ps = (typeof preuveSociale !== 'undefined' && preuveSociale) || {};
   var _lg = lang || 'fr';
-  var _loc = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[_lg] || 'fr-FR';
+  var _loc = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[_lg] || 'fr-FR';
   var _MOTS = {
     fr: { parties: ['partie jouée', 'parties jouées'], utilisations: ['utilisation', 'utilisations'], votes: ['vote', 'votes'], reponses: ['réponse', 'réponses'], avis: ['avis', 'avis'], note: '{n} sur 5' },
     en: { parties: ['play', 'plays'], utilisations: ['use', 'uses'], votes: ['vote', 'votes'], reponses: ['answer', 'answers'], avis: ['review', 'reviews'], note: '{n} out of 5' },
     es: { parties: ['partida jugada', 'partidas jugadas'], utilisations: ['uso', 'usos'], votes: ['voto', 'votos'], reponses: ['respuesta', 'respuestas'], avis: ['opinión', 'opiniones'], note: '{n} sobre 5' },
     de: { parties: ['Mal gespielt', 'Mal gespielt'], utilisations: ['Nutzung', 'Nutzungen'], votes: ['Stimme', 'Stimmen'], reponses: ['Antwort', 'Antworten'], avis: ['Bewertung', 'Bewertungen'], note: '{n} von 5' },
     it: { parties: ['partita giocata', 'partite giocate'], utilisations: ['utilizzo', 'utilizzi'], votes: ['voto', 'voti'], reponses: ['risposta', 'risposte'], avis: ['recensione', 'recensioni'], note: '{n} su 5' },
+    nl: { parties: ['keer gespeeld', 'keer gespeeld'], utilisations: ['keer gebruikt', 'keer gebruikt'], votes: ['stem', 'stemmen'], reponses: ['antwoord', 'antwoorden'], avis: ['review', 'reviews'], note: '{n} van 5' },
   };
   var _m = _MOTS[_lg] || _MOTS.fr;
   var _nb = function (n) { try { return Number(n).toLocaleString(_loc); } catch (e) { return String(n); } };

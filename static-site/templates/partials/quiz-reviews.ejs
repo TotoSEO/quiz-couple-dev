@@ -3,7 +3,7 @@
   // Recoit : lang, t, routeKey (= quiz_slug), genrePage ('jeu' | 'quiz' | 'test'),
   // supabaseUrl, supabaseKey
   var _genre = typeof genrePage !== 'undefined' && genrePage ? genrePage : 'test';
-  var _headings = { fr: 'Cet avis compte', en: 'Your review matters', es: 'Tu opinión cuenta', de: 'Deine Meinung zählt', it: 'La tua opinione conta' };
+  var _headings = { fr: 'Cet avis compte', en: 'Your review matters', es: 'Tu opinión cuenta', de: 'Deine Meinung zählt', it: 'La tua opinione conta', nl: 'Jouw mening telt' };
   // Un jeu se joue, un test se fait, un outil s'essaie : la relance change de
   // verbe. « Vous venez de le faire ? » devant une calculatrice ne veut rien
   // dire.
@@ -22,7 +22,10 @@
           autre: 'Gerade gemacht? Sag uns in einem Wort, wie es war, das hilft anderen Paaren.' },
     it: { jeu: 'Appena giocato? Diteci in una parola cosa ne pensate, aiuta le altre coppie a provarci.',
           outil: 'Appena provata? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.',
-          autre: 'Appena fatto? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.' }
+          autre: 'Appena fatto? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.' },
+    nl: { jeu: 'Net gespeeld? Zeg in één woord wat jullie ervan vonden, dat helpt andere koppels om ook te beginnen.',
+          outil: 'Net geprobeerd? Zeg in één woord wat je ervan vond, dat helpt andere koppels om ook te beginnen.',
+          autre: 'Net gedaan? Zeg in één woord wat je ervan vond, dat helpt andere koppels om ook te beginnen.' }
   };
   var _heading = _headings[lang] || _headings.fr;
   var _bloc = _subs[lang] || _subs.fr;

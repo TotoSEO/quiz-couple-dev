@@ -682,6 +682,7 @@ export const BLOG_CATEGORIES = {
     es: 'Astrología',
     de: 'Astrologie',
     it: 'Astrologia',
+    nl: 'Astrologie',
   },
   'vie-de-couple': {
     fr: 'Vie de couple',
@@ -689,6 +690,7 @@ export const BLOG_CATEGORIES = {
     es: 'Vida en pareja',
     de: 'Beziehung',
     it: 'Vita di coppia',
+    nl: 'Relatie',
   },
   psychologie: {
     fr: 'Psychologie',
@@ -696,6 +698,7 @@ export const BLOG_CATEGORIES = {
     es: 'Psicología',
     de: 'Psychologie',
     it: 'Psicologia',
+    nl: 'Psychologie',
   },
   // Les ex (28 octobre 2026, Thomas : « nouvelle catégorie de blog « Ex » ») :
   // rester ami, être quitté pour quelqu'un d'autre, les phases de la rupture.
@@ -705,6 +708,7 @@ export const BLOG_CATEGORIES = {
     es: 'Ex',
     de: 'Ex',
     it: 'Ex',
+    nl: 'Exen',
   },
   // Les histoires vraies de couples célèbres (22 octobre 2026), écrites pour
   // Google Discover : un couple, un fait vérifié, des sources citées.
@@ -714,6 +718,7 @@ export const BLOG_CATEGORIES = {
     es: 'Historias de amor',
     de: 'Liebesgeschichten',
     it: "Storie d'amore",
+    nl: 'Liefdesverhalen',
   },
 };
 

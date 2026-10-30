@@ -179,9 +179,15 @@
           essayer: 'Prova',
           blogPastille: 'Il blog', blogTitre: 'Per approfondire', blogSous: 'I nostri articoli per approfondire',
           lire: 'Leggi l\'articolo', minutes: '{n} min', lu: 'Letto {n} volte' },
+    nl: { pastille: 'Hierna', titre: 'Ga verder',
+          sous: { tests: 'Deze tests vind je misschien ook leuk', quiz: 'Deze quizzen vind je misschien ook leuk', jeux: 'Deze spelletjes vind je misschien ook leuk', mix: 'Nog meer ideeën die je misschien leuk vindt' },
+          famille: { tests: 'Test voor koppels', celib: 'Test voor singles', quiz: 'Quiz voor koppels', jeux: 'Spelletje voor koppels', outil: 'Tool', speciaux: 'Themaquiz' },
+          essayer: 'Proberen',
+          blogPastille: 'De blog', blogTitre: 'Lees verder', blogSous: 'Onze artikelen over dit onderwerp',
+          lire: 'Lees het artikel', minutes: '{n} min', lu: '{n} keer gelezen' },
   };
   const _tx = _TXT[lang] || _TXT.fr;
-  const _locale = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const _locale = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
   const _nombre = function (n) { try { return Number(n).toLocaleString(_locale); } catch (e) { return String(n); } };
 
   // Le sous-titre suit ce qui est proposé : « ces tests » sous une liste de

@@ -55,6 +55,17 @@ const i18n = {
     articles: 'Articoli del blog',
     info: 'Informazioni',
   },
+  nl: {
+    title: 'Sitemap',
+    subtitle: "Alle pagina's van Quiz Couple op een rij",
+    pages: "Pagina's",
+    tests: 'Tests voor koppels',
+    singles: 'Tests voor singles',
+    quizzes: 'Quizzen voor koppels',
+    tools: 'Tools',
+    articles: 'Blogartikelen',
+    info: 'Informatie',
+  },
 };
 const s = i18n[lang] || i18n.fr;
 
@@ -241,7 +252,7 @@ const toolLinksDispo = _dispo(toolLinks);
             <span class="text-xs text-primary font-medium"><%= article.categoryLabel %></span>
             <% } %>
             <h3 class="text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2"><%= article.title %></h3>
-            <time class="text-xs text-muted-foreground" datetime="<%= article.publishedAt %>"><%= new Date(article.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
+            <time class="text-xs text-muted-foreground" datetime="<%= article.publishedAt %>"><%= new Date(article.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : lang === 'nl' ? 'nl-NL' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
           </div>
         </a>
         <% } %>
