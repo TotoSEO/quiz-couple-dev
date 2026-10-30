@@ -76,6 +76,18 @@
     "emergencyNotice": "Ben je in gevaar? In Nederland kun je dag en nacht gratis bellen met <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>), in België op werkdagen met <strong>1712</strong>. In direct gevaar: bel <strong>112</strong>.",
     "emergencyResult": "Hulp nodig? Ben je in gevaar, bel dan <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>, Nederland) of <strong>1712</strong> (België). In direct gevaar: <strong>112</strong>."
   },
+  "testParentalite": {
+    "title": "Klaar voor een baby test: 12 of 24 eerlijke vragen",
+    "shortTitle": "Klaar voor een baby?",
+    "description": "24 eerlijke vragen om als koppel te zien of jullie klaar zijn voor een kind. Gratis test, meteen een uitslag.",
+    "metaDescription": "Doe de klaar voor een baby test samen: 12 of 24 eerlijke vragen over geld, jullie relatie, de nachten en jullie angsten. Gratis, meteen een uitslag."
+  },
+  "testEmmenager": {
+    "title": "Samenwonen test: zijn jullie er klaar voor?",
+    "shortTitle": "Samenwonen test",
+    "description": "20 vragen om te zien of jullie klaar zijn om samen te wonen. Gratis test voor koppels, meteen een uitslag.",
+    "metaDescription": "Doe de samenwonen test: 20 vragen over geld, het huishouden, tijd voor jezelf en jullie ritme. Zijn jullie er klaar voor? Gratis, met meteen een uitslag."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",

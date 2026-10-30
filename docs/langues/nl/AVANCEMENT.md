@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -397,7 +397,44 @@ le met à jour dans la PR de chaque lot.
   écrit et neutralisé à la construction tant qu'elle reste fermée en
   néerlandais.
 
+## Lot 3g (30 octobre 2026) : parentalité, emménager
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/klaar-voor-een-baby-test/` | Klaar voor een baby test: 12 of 24 eerlijke vragen | Zijn we klaar voor een kind? Doe de test met z'n tweeën |
+  | `/nl/samenwonen-test/` | Samenwonen test: zijn jullie er klaar voor? | Zijn jullie klaar om samen te wonen? De test voor koppels |
+
+- **Les textes de moteur** : `parentalite` (24 questions, version courte de
+  12 et version complète, verdicts et écart entre les deux) et `emmenager`
+  (20 questions, quatre verdicts, trois textes d'écart), points recopiés du
+  français ; l'écran de départ commun (`parentalite` de quizGames.json).
+- **Les chiffres et le droit** : la parentalité parle en euros, sans les
+  chiffres français (Insee, coût moyen d'un enfant) ni américains, et
+  nomme le congé parental (`ouderschapsverlof`) et la garde
+  (`kinderopvang`) sans montant ni durée par pays ; l'emménagement compte en
+  mètres carrés et dit du bail ce qui vaut des deux côtés de la frontière
+  (les deux noms sur le contrat, ou un seul), sans le droit français.
+- **La porte e-mail** : les deux pages l'ont, « zonder account ».
+- **Les titres** : une question de la parentalité affichée en H3 dans la
+  liste statique contenait « concreet » ; elle est reformulée.
+- **Les liens** : de la parentalité vers le test de couple, les points
+  communs, le mariage et le couple toxique ; de l'emménagement vers la charge
+  mentale, couple ou célibat, le test de couple, le quiz sur l'amour, les
+  questions pour couple, le quiz marrant, le quiz coquin et le couple
+  toxique. Un lien vers un article du blog (la peur de l'engagement) attend
+  sa traduction.
+
 ## Les chiffres
+
+Au lot 3g : `textes nl` 228 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (22 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, chaque moteur va jusqu'à son
+résultat dans chaque mode (version courte et complète pour la parentalité),
+et le seul texte resté en français est celui d'une carte « Hierna » vers la
+charge mentale, pas encore traduite. Aucune page publique ne change.
+
 
 Au lot 3f : `textes nl` 217 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (20 pages traduites) ; `site nl` sur les trois pages : aucun
