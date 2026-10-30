@@ -413,6 +413,11 @@
     "securiteNote": "Een van je antwoorden gaat over angst, manipulatie of vernedering. Dat punt telt zwaarder dan de rest van de score: het verdient een goede blik, alleen of met hulp.",
     "gapWarning": "⚠️ Het verschil tussen jullie scores is groot. Neem de tijd om er rustig over te praten, zonder er een wedstrijd van te maken."
   },
+  "distanceAime": {
+    "introQuestion": "Je vraagt je af:",
+    "introQuote": "“Houdt hij of zij nog van me... of is het gewoon de afstand?”",
+    "disclaimer": "Antwoord over de afgelopen weken, niet over het begin van jullie verhaal."
+  },
   "finCouple": {
     "orientationTitre": "Wat deze test je niet heeft gevraagd",
     "orient_couche_nom": "Of hij of zij met iemand anders heeft geslapen",
@@ -421,6 +426,11 @@
     "orient_distance_raison": "Je hebt geantwoord dat jullie op afstand wonen. Daar betekenen de signalen niet hetzelfde.",
     "orient_toxique_nom": "Is mijn relatie toxisch?",
     "orient_toxique_raison": "Een relatie kan eindigen omdat ze uitdooft, of omdat ze schade doet. Dat is niet hetzelfde."
+  },
+  "aime-encore": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord over de afgelopen drie maanden, niet over vorige week.",
+    "disclaimer": "Niemand kan in het hoofd van een ander kijken. Deze test brengt orde in wat je ziet, hij velt geen oordeel."
   },
   "emprise": {
     "introQuestion": "Je vraagt je af:",
