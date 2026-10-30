@@ -228,18 +228,25 @@
     "suites_titre": "Et maintenant ?",
     "statique_titre": "Prêts pour le test ?",
     "statique_intro": "Un aperçu des questions du test. Lancez-le ci-dessus pour obtenir votre score.",
-    "verdict_kicker": "Votre résultat",
+    "verdict_kicker_solo": "Ton résultat",
+    "verdict_kicker_couple": "Votre résultat",
     "score_lib_solo": "Ton score",
     "score_lib_couple": "Votre score",
     "score_sur": "sur {max} points",
-    "jauge_ici": "Vous êtes ici",
+    "jauge_ici_solo": "Tu es ici",
+    "jauge_ici_couple": "Vous êtes ici",
     "jauge_aria": "Votre score de {score} points sur {max}",
     "jauge_sans_solo": "Plus le curseur est à droite, moins tu es pur.",
     "jauge_sans_couple": "Plus le curseur est à droite, moins vous êtes purs.",
     "jauge_compare_solo": "Sur <strong>{n}</strong> tests, tu fais moins pur que <strong>{devant}%</strong> des gens.",
     "jauge_compare_couple": "Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens.",
     "partage_copie_msg": "Message copié, collez-le où vous voulez",
-    "hero_jauge_moyenne": "Score moyen"
+    "hero_jauge_moyenne": "Score moyen",
+    "quitter_aria": "Quitter le test",
+    "changer_mode": "← Changer de mode",
+    "erreur_titre": "Les questions n'ont pas voulu se charger",
+    "numero": "N°{n}",
+    "cat_detail": "{pts} points sur {max}"
   },
   "jsonLd": {
     "about": "test de pureté"
