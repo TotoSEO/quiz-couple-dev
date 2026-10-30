@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "Test voor koppels",
+    "title": "Denkt mijn vriend nog aan zijn ex? De test, voor hem of voor haar",
+    "titleHighlight": "nog aan zijn ex",
+    "description": "Hij praat nog over haar, hij heeft de foto's bewaard, of zit het gewoon in je hoofd? Twintig vragen over wat je partner doet en zegt, om te zien <strong>of de ex nog ruimte inneemt in het hoofd van je partner</strong>. De test bestaat in twee versies: voor een man of voor een vrouw.",
+    "subtitle": "Twintig vragen, vijf minuten, gratis en zonder account",
+    "jumpBtn": "Doe de test"
+  },
+  "crossLink": {
+    "title": "Nemen deze vragen veel ruimte in jouw hoofd in?",
+    "text": "Deze test gaat over je partner. De andere gaat over jou: hij meet je jaloezie, en wat die zegt over jullie relatie.",
+    "button": "Doe de jaloezie test"
+  },
+  "section1": {
+    "title": "Hoe weet je of hij over zijn ex heen is?",
+    "p1": "Meestal komt de vraag na een klein detail. Een naam die steeds terugkomt in een gesprek, een foto die hij nooit heeft gewist, een bericht om middernacht dat hij net iets te snel wegklikt... En vanaf dat moment zie je niets anders meer.",
+    "p2": "Herinneringen hebben aan een vorige relatie is normaal, iedereen heeft ze. Er niet overheen zijn is iets anders: dan <strong>neemt zijn ex nog een plek in in zijn leven van nu</strong>, in zijn gedachten, zijn humeur of zijn berichten. Die plek probeert de test te meten.",
+    "p3": "De twintig vragen gaan over wat je partner doet, niet over wat jij voelt. Ze wegen niet allemaal even zwaar: contact met zijn ex dat hij voor je verbergt, levert 8 punten op, een liedje dat hij vermijdt 3. En alles wat hier staat, geldt net zo goed voor een vrouw: de test heeft daarom ook een versie ‘is zij over haar ex heen’."
+  },
+  "section2": {
+    "title": "De signalen dat hij niet over zijn ex heen is",
+    "intro": "Dit weegt het zwaarst in de test. Eén signaal op zich zegt niet veel: pas als ze optellen, wordt het een vraag.",
+    "pillar1Title": "Hij heeft nog contact, en hij verbergt het",
+    "pillar1Text": "Contact houden met een ex komt voor, voor de kinderen of als vrienden. Waar je op moet letten, is <strong>de geheimzinnigheid</strong>: een gewist bericht, een telefoon die omgedraaid op tafel ligt, een gesprek waar hij luchtig over doet als je het ontdekt.",
+    "pillar2Title": "Hij praat met veel emotie over haar",
+    "pillar2Text": "Positief of negatief. Ook boosheid en wrok laten zien dat een relatie niet is afgesloten: iemand die <a href=\"/nl/over-je-ex-heen-komen/\">de bladzijde heeft omgeslagen</a>, praat zonder veel gevoel over zijn ex, als over een fase in zijn leven.",
+    "pillar3Title": "Hij vergelijkt je met haar",
+    "pillar3Text": "Over koken, over vakanties, over hoe je je kleedt... Af en toe een vergelijking is niet erg. Komt het vaak terug, dan is zijn ex nog altijd zijn maatstaf.",
+    "pillar4Title": "Haar nieuwe leven raakt hem",
+    "pillar4Text": "Hij hoort dat ze iemand ziet, en hij is dagenlang slecht gehumeurd. Dat is een van de duidelijkste signalen, en het telt zwaar in de test.",
+    "pillar5Title": "Hij houdt haar sociale media in de gaten",
+    "pillar5Text": "In een studie die in 2012 werd gepubliceerd, werden 464 mensen na een breuk ondervraagd: <strong>hoe vaker ze het profiel van hun ex bekeken, hoe meer ze leden</strong> en hoe minder ze vooruitkwamen. Af en toe even kijken, dat gebeurt. Er geregeld een oogje op houden, veel minder.",
+    "pillar6Title": "Hij komt niet vooruit met jou",
+    "pillar6Text": "Hij praat nooit over plannen samen, hij stelt het moment uit om je aan de mensen om hem heen voor te stellen, of hij zegt dat hij niet weet waar hij staat. Dat komt niet per se door zijn ex, maar samen met andere signalen telt het mee.",
+    "tip": "Aan een ex denken betekent niet dat je nog van die persoon houdt. Wat er na een breuk overblijft, is soms een gekrenkt ego, nostalgie of <a href=\"/nl/nog-verliefd-op-mijn-ex/\">het gemis van het leven met z'n tweeën</a>, meer dan de persoon zelf."
+  },
+  "section3": {
+    "title": "Wat niet wil zeggen dat hij nog aan haar denkt",
+    "intro": "Sommige details <a href=\"/nl/jaloezie-test/\">maken je jaloers</a> zonder dat ze veel betekenen. De test geeft ze weinig of geen punten.",
+    "sub1Title": "Hij is bevriend gebleven met zijn ex",
+    "sub1P1": "Sommige mensen blijven vrienden na een breuk, vooral als ze gezamenlijke vrienden hebben of zonder drama uit elkaar gingen. Gebeurt alles openlijk, weet je ervan en word je zelfs uitgenodigd, dan is het geen signaal. Het wordt er een als het verborgen wordt.",
+    "sub2Title": "Hij had heel snel een nieuwe relatie",
+    "sub2P1": "Je hoort vaak dat een relatie die vlak na een breuk begint, altijd een pleister is. Toch bleek uit een Amerikaanse studie uit 2015 naar zulke ‘rebound’-relaties dat <strong>mensen die snel iemand nieuw hadden gevonden, het niet slechter deden dan de anderen</strong>, eerder het tegendeel. Hoe snel het ging, zegt op zich weinig.",
+    "sub3Title": "Hij heeft foto's bewaard",
+    "sub3P1": "Je hoeft niet elke foto te wissen. Herinneringen in een doos of op een oude harde schijf zijn normaal. Ingelijste foto's, of absoluut weigeren om ze weg te doen, is iets anders.",
+    "sub4Title": "Hij praat erover als je ernaar vraagt",
+    "sub4P1": "Je vraagt hem hoe het is geëindigd en hij antwoordt gewoon? Dat is eerder een goed teken. Totale stilte, of juist een monoloog van een uur, zeggen het meest."
+  },
+  "section4": {
+    "title": "Wat je uitslag zegt",
+    "p1": "Elke vraag levert 0 tot 8 punten op, afhankelijk van wat het antwoord zegt over de plek van zijn ex. Het totaal loopt van 0 tot 98 punten.",
+    "p2": "Drie antwoorden wegen op zichzelf al zwaar: contact met zijn ex dat hij voor je verbergt, haar terug willen zien als hij haar toevallig tegenkwam, en hardop zeggen dat hij de klok zou willen terugdraaien. Met een daarvan <strong>kan de uitslag niet laag zijn</strong>, ook al is de rest in orde.",
+    "headerScore": "Punten",
+    "headerLevel": "Uitslag",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 14",
+    "row1Level": "Hij is over zijn ex heen",
+    "row1Analysis": "Zijn ex hoort bij zijn verleden, niet bij zijn leven van nu",
+    "row2Score": "15 tot 32",
+    "row2Level": "Herinneringen, meer niet",
+    "row2Analysis": "Af en toe wat gedachten, zoals bij iedereen",
+    "row3Score": "33 tot 52",
+    "row3Level": "Zijn ex neemt nog wat ruimte in",
+    "row3Analysis": "Er is iets nog niet helemaal afgerond",
+    "row4Score": "53 tot 72",
+    "row4Level": "Hij is nog niet helemaal over zijn ex heen",
+    "row4Analysis": "Meerdere signalen tellen op, dat verdient een gesprek",
+    "row5Score": "73 tot 98",
+    "row5Level": "Zijn ex is nog heel aanwezig",
+    "row5Analysis": "Zijn ex neemt nog een grote plek in zijn hoofd in",
+    "tip": "De test gaat over wat je van buitenaf ziet. Hij vervangt geen gesprek met hem, en hij kan zijn gedachten niet lezen."
+  },
+  "section5": {
+    "title": "Hij is niet over zijn ex heen: hoe begin je erover?",
+    "p1": "Is de uitslag hoog, maak er dan geen rechtszaak van. Het doel is begrijpen waar hij staat, niet een bekentenis uit hem trekken.",
+    "sub1Title": "Kies het goede moment",
+    "sub1P1": "Niet midden in een ruzie, niet met zijn telefoon in je hand, niet om twee uur 's nachts. Een rustig moment, waarop jullie de tijd hebben om te praten zonder dat hij zich in het nauw gedreven voelt.",
+    "sub2Title": "Praat over wat jij voelt",
+    "sub2P1": "“Ik heb het gevoel dat ik met je ex moet concurreren als je zo vaak over haar praat” komt veel beter aan dan “je denkt nog aan haar”. De eerste zin opent een gesprek, de tweede beschuldigt hem, en dan gaat hij in de verdediging.",
+    "sub3Title": "Kijk ook naar jullie relatie",
+    "sub3P1": "Een studie uit 2013 die mensen met een relatie zes maanden volgde, liet zien dat <strong>het in twee richtingen werkt</strong>: als de huidige relatie minder goed gaat, denk je meer aan je ex, en omgekeerd maakt verlangen naar je laatste ex de relatie minder goed. Heeft het vertrouwen tussen jullie een deuk opgelopen, dan kun je misschien beter daar beginnen.",
+    "sub3P2": "En komt de test laag uit maar laat de twijfel je niet los, vraag je dan af of het niet om jaloezie gaat die nergens concreet op berust. Dat komt veel vaker voor dan mensen denken, en je kunt eraan werken!"
+  },
+  "seo": {
+    "faqTitle": "De vragen die mensen zich stellen"
+  },
+  "jsonLd": {
+    "about": "de ex van je partner",
+    "faq1Q": "Hoe weet ik of mijn vriend nog aan zijn ex denkt?",
+    "faq1A": "Kijk meer naar wat hij doet dan naar wat hij zegt: contact dat hij verbergt, een humeur dat omslaat als hij iets over haar hoort, vergelijkingen die steeds terugkomen, sociale media die hij in de gaten houdt. Eén signaal bewijst niets: pas als er meerdere optellen, is er een echte vraag te stellen.",
+    "faq2Q": "Is het normaal dat mijn vriend over zijn ex praat?",
+    "faq2A": "Ja, af en toe. Een relatie die belangrijk was, hoort bij zijn leven, en het is normaal dat die in een gesprek terugkomt. Waar het om gaat, is hoe vaak en op welke toon: er vaak over praten, met veel boosheid of veel nostalgie, laat zien dat ze nog ruimte inneemt.",
+    "faq3Q": "Hij is bevriend gebleven met zijn ex: moet ik me zorgen maken?",
+    "faq3A": "Niet per se. Veel mensen blijven op goede voet na een breuk, vooral met gezamenlijke vrienden of kinderen. Het alarmsignaal is geheimzinnigheid: verborgen berichten, afspraken waar je niets van weet.",
+    "faq4Q": "Hoe lang duurt het om over een ex heen te komen?",
+    "faq4A": "Veel langer dan mensen denken: volgens een studie van de Universiteit van Illinois uit 2025 duurt het gemiddeld zo'n vier jaar om half los te komen van een ex, na een relatie van minstens twee jaar. Wat het loskomen het meest vertraagt, is het contact dat je met je ex houdt. En nog aan een ex denken staat een goede nieuwe relatie niet in de weg.",
+    "faq5Q": "Moet ik hem vragen of hij over zijn ex heen is?",
+    "faq5A": "Dat kan, maar stel de vraag liever vanuit wat jij voelt: “ik heb soms het gevoel dat ik met haar moet concurreren”. Een directe vraag als “hou je nog van haar?” zet hem in de verdediging, en dan krijg je zelden een eerlijk antwoord.",
+    "faq6Q": "Worden mijn antwoorden opgeslagen?",
+    "faq6A": "Nee. Je antwoorden blijven in je browser en niemand ziet ze. We vragen alleen één keer je e-mailadres om de volledige uitslag te tonen, en je antwoorden gaan daar niet mee."
+  }
+}
