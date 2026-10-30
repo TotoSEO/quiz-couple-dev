@@ -110,6 +110,6 @@
     "q5": "Les vingt tâches ne correspondent pas toutes à notre situation, est-ce grave ?",
     "a5": "Non. Les vingt tâches ont été choisies pour valoir dans la grande majorité des foyers, avec ou sans enfants, en location comme en propriété. Si l'une d'elles ne s'applique pas chez vous, répondez « à deux, équitablement » : elle deviendra neutre et ne faussera pas la répartition.",
     "q6": "Mes réponses sont-elles enregistrées ?",
-    "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a ni compte ni adresse e-mail à donner. Même en mode à deux, les réponses du premier joueur ne servent qu'au calcul final et disparaissent en fermant la page."
+    "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a pas de compte à créer. Seule votre adresse e-mail est demandée, une fois, pour voir le résultat complet, et vos réponses ne partent pas avec. Même en mode à deux, les réponses du premier joueur ne servent qu'au calcul final et disparaissent en fermant la page."
   }
 }

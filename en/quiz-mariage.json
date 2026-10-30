@@ -25,7 +25,7 @@
     "faq2Q": "Does skipping questions affect the result?",
     "faq2A": "No. Skipped questions are excluded from the calculation. Your score is based only on answered questions. That said, if you skip a question because it's uncomfortable, it might be the one you need to discuss most.",
     "faq3Q": "Is this test free and confidential?",
-    "faq3A": "Yes, 100%. No registration, no email required. Your answers are not saved and stay only on your device."
+    "faq3A": "Yes, 100%. No registration, and your answers are not saved: they stay only on your device. To see the full result, we just ask for your email address, once, without your answers."
   },
   "quiz": {
     "skipQuestion": "Skip this question",

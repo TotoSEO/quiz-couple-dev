@@ -25,7 +25,7 @@
     "faq2Q": "Beeinflusst das Überspringen von Fragen das Ergebnis?",
     "faq2A": "Nein. Übersprungene Fragen werden aus der Berechnung ausgeschlossen. Eure Punktzahl beruht nur auf den beantworteten Fragen. Wenn ihr eine Frage aber überspringt, weil sie unangenehm ist, dann ist es womöglich genau die, über die ihr am dringendsten reden solltet.",
     "faq3Q": "Ist dieser Test kostenlos und vertraulich?",
-    "faq3A": "Ja, 100%. Keine Registrierung, keine E-Mail erforderlich. Eure Antworten werden nicht gespeichert."
+    "faq3A": "Ja, 100%. Keine Registrierung, und eure Antworten werden nicht gespeichert. Für das vollständige Ergebnis fragen wir nur einmal nach einer E-Mail-Adresse, eure Antworten werden dabei nicht mitgeschickt."
   },
   "quiz": {
     "skipQuestion": "Frage überspringen",

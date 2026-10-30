@@ -25,7 +25,7 @@
     "faq2Q": "¿Saltar preguntas afecta el resultado?",
     "faq2A": "No. Las preguntas saltadas se excluyen del cálculo. Vuestra puntuación se basa solo en las preguntas respondidas. Dicho esto, si saltáis una pregunta porque resulta incómoda, puede que sea justamente de la que más falta os hace hablar.",
     "faq3Q": "¿Es este test gratuito y confidencial?",
-    "faq3A": "Sí, 100%. Sin registro, sin email. Sus respuestas no se guardan y permanecen solo en su dispositivo."
+    "faq3A": "Sí, 100%. Sin registro, y sus respuestas no se guardan: permanecen solo en su dispositivo. Para ver el resultado completo, solo se pide su correo electrónico, una vez, sin sus respuestas."
   },
   "quiz": {
     "skipQuestion": "Saltar esta pregunta",
