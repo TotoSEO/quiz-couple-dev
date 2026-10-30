@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -611,7 +611,49 @@ le met à jour dans la PR de chaque lot.
   test de couple pour la seconde. Le lien du français vers l'article des cinq
   langages attend la traduction du blog.
 
+## Lot 3n (30 octobre 2026) : le style d'attachement, l'âme sœur
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/hechtingsstijl-test/` | Hechtingsstijl test: welke hechtingsstijl heb jij? | Welke hechtingsstijl heb ik? Ontdek hoe jij liefhebt |
+  | `/nl/zielsverwant-test/` | Zielsverwant test: is dit de juiste persoon voor jou? | Soulmate test: is hij of zij de ware? |
+
+- **Les mots de l'attachement** : veilig, angstig (gepreoccupeerd),
+  vermijdend (afstandelijk), gedesorganiseerd (angstig-vermijdend), les
+  termes de la psychologie néerlandaise. Le badge du haut dit « Gebaseerd op
+  de hechtingstheorie » plutôt que « test scientifique ». Les écrans du
+  moteur lisent `attachment` dans quizGames.json (titre de départ, « Jouw
+  hechtingsstijl ») : le contrôle `site` les a trouvés en français au premier
+  passage.
+- **L'âme sœur** : trois façons de jouer (alleen, met z'n tweeën,
+  vrijgezel) et deux préfixes (`ameSoeur`, vingt-quatre questions, cinq
+  verdicts et la comparaison à deux ; `ameSoeurPortrait`, le portrait de qui
+  irait à un célibataire). Les piliers : Gemak, Op één lijn, Tegenslag,
+  Zelfstandigheid ; la fusion devient « symbiose », la flamme jumelle
+  « tweelingziel ». Le dernier paragraphe donne Veilig Thuis, 1712 et 112 à
+  la place du 3919.
+- **Les liens** : la dépendance affective, le couple sain et la relation
+  toxique pour la première page ; la relation karmique (pas encore
+  traduite), la dépendance affective, le couple sain, l'attachement et les
+  langages de l'amour pour la seconde. Les ancres qui portaient le nom de la
+  page visée (« dépendance affective », « style d'attachement ») disent ce
+  dont parle la phrase (« niet meer zonder de ander kunt », « hoe jij je hecht
+  aan een partner »). Les trois liens du français vers des articles du blog
+  sur l'attachement attendent sa traduction.
+- **Ce qui reste en français sur ces pages** : la description de deux cartes
+  « Ga verder » vers des pages pas encore traduites (la relation karmique,
+  « amour ou crush »).
+
 ## Les chiffres
+
+Au lot 3n : `textes nl` 393 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (35 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, le test d'attachement et les
+trois façons de jouer l'âme sœur vont jusqu'à leur résultat ; restent en
+français deux descriptions de cartes vers des pages pas encore traduites.
+Aucune page publique ne change.
 
 Au lot 3m : `textes nl` 366 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (33 pages traduites) ; `site nl` sur les deux pages : aucun

@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "Alleen of samen 💫",
+    "title": "Soulmate test: is hij of zij de ware?",
+    "titleHighlight": "Soulmate",
+    "description": "20 vragen, 4 pijlers, en een uitslag die je niet naar de mond praat. Alleen over iemand, of met z'n tweeën."
+  },
+  "section1": {
+    "title": "Wat is een zielsverwant?",
+    "p1": "Zoek de definitie op en je vindt van alles en het tegendeel. Voor de een is het je sterrenbeeld, voor de ander ‘iemand die vrolijk en lief is’, en dat beschrijft ongeveer de helft van de wereld.",
+    "p2": "Voor ons is het eenvoudiger. Een zielsverwant is je maatje: de persoon bij wie jezelf zijn geen enkele moeite kost, met wie je het eens bent over wat ertoe doet en niet alleen over smaak, en met wie tegenslagen je dichter bij elkaar brengen in plaats van jullie uit elkaar te drijven.",
+    "p3": "Blijft het criterium dat iedereen vergeet, en dat is het belangrijkste: je moet heel blijven. Eén worden, prima, zolang jullie er allebei nog zijn! Als een van de twee onderweg is verdwenen, de vrienden uit beeld zijn en de eigen plannen zijn gesneuveld, is het geen zielsverwant meer. Dan is het symbiose, en de test ziet het verschil.",
+    "notTitle": "Wat een zielsverwant niet is",
+    "not1Title": "Liefde op het eerste gezicht",
+    "not1Text": "De intensiteit van het begin voorspelt niets. Ze zegt alleen hoe snel je gehecht raakte.",
+    "not2Title": "De perfecte persoon",
+    "not2Text": "Een zielsverwant heeft gebreken, en sommige ergeren je flink. De vraag is niet of ze er zijn, maar of je erover kunt praten.",
+    "not3Title": "Degene die je aanvult",
+    "not3Text": "De ontbrekende helft levert mooie films op. In het echte leven houden twee hele mensen het beter vol dan twee helften die aan elkaar vastgeklampt zitten."
+  },
+  "section2": {
+    "title": "De verschillende soorten zielsverwanten",
+    "intro": "Er zijn verschillende soorten zielsverwanten, en dit zijn de 5 bekendste:",
+    "type1Title": "De zielsverwant in de liefde",
+    "type1Text": "Je maatje. Degene bij wie je geen rol meer speelt, en door wie je meer jezelf wordt in plaats van minder. Die meet de test hierboven.",
+    "type2Title": "De zielsverwant in vriendschap",
+    "type2Text": "Er wordt weinig over gepraat, en toch. Een vriendschap kan precies dezelfde vakjes aanvinken, zonder ook maar iets romantisch. Dat is geen troostprijs!",
+    "type3Title": "De reisgenoot",
+    "type3Text": "Stevig, trouw, vaak voor lang. Maar je moet je woorden nog kiezen. Veel gelukkige stellen draaien precies daarop, en dat is geen mislukking.",
+    "type4Title": "De tweelingziel",
+    "type4Text": "Een spiegel, geen schuilplaats. <a href=\"/nl/karmische-relatie-test/\">Een tweelingziel zet je voor wat je liever niet bekeek</a>, met breuken en weerzien. Je komt er niet als dezelfde persoon uit.",
+    "type5Title": "De karmische relatie",
+    "type5Text": "Dezelfde scène die steeds opnieuw wordt gespeeld: de intensiteit blijft, de uitputting sluipt erin, en weggaan wordt onmogelijk. Dat is geen zielsverwant: het is een karmische relatie, en die herken je aan andere signalen dan de vier hierboven."
+  },
+  "section3": {
+    "title": "Bestaat het, of is het een verzinsel?",
+    "p1": "Het idee komt van Plato, uit het <em>Symposium</em>. Mensen waren ooit dubbele wezens, Zeus sneed ze doormidden, en sindsdien zoekt iedereen zijn andere helft. Het is een mythe, verteld door een komediepersonage, en hij heeft vierentwintig eeuwen overleefd om te eindigen in de profielteksten op datingapps. Na al die eeuwen halen we er vooral de zinnen uit die we achter op kaartjes schrijven, vaak met de verkeerde schrijver eronder.",
+    "p2": "De vraag is dus niet ‘bestaat het’, maar ‘wat verandert het als je erin gelooft’.",
+    "p3": "En daar is interessant onderzoek over, onder meer van C. R. Knee. Er staan twee overtuigingen tegenover elkaar. Het <strong>lot</strong>: je past bij elkaar of niet, en dat zie je meteen. Het <strong>bouwen</strong>: een relatie maak je samen, en moeilijkheden horen bij het werk. Gevolg: wie in het lot gelooft, kan slecht tegen het eerste echte conflict, omdat dat het bewijs wordt dat hij of zij de verkeerde persoon heeft gekozen. De anderen zien er gewoon een probleem in dat opgelost moet worden.",
+    "p4": "Op zoek gaan naar je zielsverwant kan dus de relatie beschadigen die je al hebt. Daarom meet deze test geen lot: hij kijkt wat je relatie vandaag met jou doet."
+  },
+  "section4": {
+    "title": "De vier pijlers van de test",
+    "intro": "Elke vraag hoort bij een van deze vier pijlers, en de test stelt er vijf per pijler. Het evenwicht ertussen bepaalt de uitslag, niet je totaal.",
+    "sign1Title": "Gemak",
+    "sign1Text": "Kun je jezelf zijn, zonder masker? De stiltes die niet zwaar wegen, de woorden die je niet hoeft af te wegen, de vermoeide en dwarse versie van jezelf die de ander al heeft gezien. Het is geen liefde op het eerste gezicht, het is gemak.",
+    "sign2Title": "Op één lijn",
+    "sign2Text": "Niet dezelfde smaak: dezelfde waarden. Hoe je een ober behandelt, hoe je met geld omgaat, wat je trouw vindt en wat niet. Je kunt van dezelfde films houden en het over niets belangrijks eens zijn.",
+    "sign3Title": "Tegenslag",
+    "sign3Text": "Wat moeilijkheden met de band hebben gedaan. Een overlijden, een flinke tegenslag, een ruzie waar je niet makkelijk overheen komt: heeft het jullie dichter bij elkaar gebracht of uit elkaar gedreven? Een relatie die nooit op de proef is gesteld, is niet stevig, maar nieuw.",
+    "sign4Title": "Zelfstandigheid",
+    "sign4Text": "Je vrienden, je plannen, of jullie een weekend ieder apart kunnen doorbrengen. Dit is de pijler die de meeste schade doet als hij ontbreekt: zonder hem is gemak geen gemak meer, maar <a href=\"/nl/emotionele-afhankelijkheid-test/\">de ander nodig hebben om overeind te blijven</a>."
+  },
+  "section5": {
+    "title": "Zo lees je je uitslag",
+    "intro": "Je index is het gemiddelde van de vier pijlers, waarbij de zwakste dubbel telt: een zielsverwant beoordeel je niet op zijn beste kant! De uitslag zelf komt niet uit een scoregrens, maar uit de vorm van je profiel. Daarom kan een goede score iets anders opleveren dan een vleiende titel.",
+    "headerProfile": "Je uitslag",
+    "headerMeaning": "Wat het aangeeft",
+    "headerAction": "Wat je ermee kunt",
+    "row1Profile": "Zielsverwanten",
+    "row1Meaning": "De vier pijlers staan tegelijk overeind, zelfstandigheid inbegrepen. Dat is zeldzaam.",
+    "row1Action": "Ga door met wat jullie hier bracht: je vrienden zien, dingen op tijd zeggen, het snel goedmaken.",
+    "row2Profile": "Zielsverwanten in wording",
+    "row2Meaning": "Het gemak en het op één lijn zitten zijn er, maar nog niets heeft deze band op de proef gesteld. Jullie missen tijd, geen kwaliteit.",
+    "row2Action": "Kijk hoe jullie kleine ergernissen oplossen. Dat geeft een goed beeld van wat er bij de eerste echte klap gebeurt.",
+    "row3Profile": "Symbiose, geen zielsverwantschap",
+    "row3Meaning": "Het klikt, maar jullie zijn kleiner geworden. Vrienden, plannen en het vermogen om apart te zijn, zijn langzaam verdwenen.",
+    "row3Action": "Pak één ding weer op dat je had laten vallen, en kijk hoe de ander reageert. Daar leer je veel van.",
+    "row4Profile": "Reisgenoten",
+    "row4Meaning": "Jullie zitten op één lijn en hebben elkaar gesteund, maar je moet nog opletten wat je zegt.",
+    "row4Action": "Zoek uit waar de terughoudendheid vandaan komt. Angst om veroordeeld te worden verdwijnt soms in één gesprek.",
+    "row5Profile": "Twee wegen die elkaar kruisen",
+    "row5Meaning": "Geen gemak, niet op één lijn, en tegenslagen brachten jullie niet dichter bij elkaar. Twee goede mensen kunnen gewoon niet bij elkaar passen.",
+    "row5Action": "De nuttige vraag is niet meer ‘is dit mijn zielsverwant’ maar ‘<a href=\"/nl/gezonde-relatie-test/\">voel ik me goed in deze relatie</a>’.",
+    "note": "Deze test is geen diagnose en heeft geen klinische waarde. Het is een manier om naar je relatie te kijken, naast wat je zelf al weet."
+  },
+  "section6": {
+    "title": "Zielsverwant of symbiose: het verschil dat telt",
+    "p1": "Het is de verwarring die het vaakst voorkomt, en die het meest kost. Van binnenuit lijken ze sterk op elkaar: je begrijpt elkaar zonder woorden, je wilt de hele tijd samen zijn, de rest van de wereld raakt uit beeld.",
+    "p2": "Het verschil zie je niet aan de intensiteit. Je ziet het aan wat je ernaast nog hebt.",
+    "dontTitle": "De signalen van symbiose",
+    "dont1Title": "Je vrienden zijn verdwenen",
+    "dont1Text": "Zelden omdat het verboden werd. Jij zei steeds nee, en toen vroegen ze je niet meer.",
+    "dont2Title": "Een dag zonder bericht is moeilijk door te komen",
+    "dont2Text": "Dat is geen gehechtheid meer, dat is een alarm, en het zegt veel over <a href=\"/nl/hechtingsstijl-test/\">hoe jij je hecht aan een partner</a>. Een stevige band kan tegen stilte.",
+    "doTitle": "De signalen van een zielsverwant",
+    "do1Title": "Je hebt je eigen leven gehouden",
+    "do1Text": "Je vrienden, je plannen, je wensen zonder de ander bestaan nog steeds. En de ander neemt ze serieus.",
+    "do2Title": "Je voelt je meer jezelf",
+    "do2Text": "Niet wijzer, niet gladder: meer jezelf. Het is het betrouwbaarste signaal, en het moeilijkste om na te bootsen.",
+    "do3Title": "Afwezigheid maakt je niet in paniek",
+    "do3Text": "Je mist de ander, en dat is iets heel anders. Je leeft je dag, en 's avonds heb je dingen te vertellen.",
+    "do4Title": "Je hoeft niets van jezelf te verbergen",
+    "do4Text": "De vermoeide versie, de dwarse versie, de bange versie: de ander heeft ze gezien, en er is niets ingestort."
+  },
+  "section7": {
+    "title": "En als je single bent?",
+    "p1": "Ben je single, dan wil je niet weten of er een band is met iemand, maar eerder welk soort persoon bij je zou passen.",
+    "p2": "En dan hebben we het niet over ‘iemand die lief, gul of grappig is’, want dat beschrijft iedereen en niemand... We kijken liever hoe jij in elkaar zit: waardoor voel je je geliefd, ben je meer van <a href=\"/nl/liefdestaal-test/\">gebaren of van woorden</a>, hoe reageer je op een conflict. Zo kom je makkelijker dichter bij het soort persoon dat bij je past!"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen over zielsverwanten",
+    "q1": "Hoe weet ik of iemand mijn zielsverwant is?",
+    "a1": "Kijk naar vier dingen, niet naar één. Kun je zonder moeite jezelf zijn? Zitten jullie op één lijn over wat ertoe doet? Hebben moeilijkheden jullie dichter bij elkaar gebracht? En vooral: heb je je eigen leven gehouden? De eerste drie vind je overal, de vierde maakt het verschil.",
+    "q2": "Kun je meerdere zielsverwanten hebben?",
+    "a2": "Ja, en dat is zelfs het waarschijnlijkst. Niets dwingt je te geloven in één persoon op acht miljard. Een vriendschap kan ook zielsverwantschap zijn, en je kunt zo'n band best twee keer in je leven meemaken.",
+    "q3": "Wat is het verschil tussen een zielsverwant en een tweelingziel?",
+    "a3": "Een zielsverwant geeft rust, een tweelingziel verandert je. Bij een zielsverwant voel je je uitgerust en heb je meer ruimte voor de rest van je leven. Een tweelingziel zet je tegenover wat je vermeed, vaak met breuken en weerzien. Allebei kunnen ze waardevol zijn, maar ze kosten niet hetzelfde.",
+    "q4": "Werkt de test als jullie nog maar kort samen zijn?",
+    "a4": "Ja, en hij zegt het je ook. Een nieuwe band is nog niet op de proef gesteld, en de test ziet dat: hij geeft ‘zielsverwanten in wording’ in plaats van een titel die de eerste echte moeilijkheid zou tegenspreken.",
+    "q5": "Is deze test betrouwbaar?",
+    "a5": "Hij is samenhangend, en dat is iets anders. De vragen gaan over dingen die je kunt waarnemen in plaats van over indrukken, de uitslag hangt af van het evenwicht in je antwoorden en niet van een totaal, en geen enkele uitslag beweert de toekomst van je relatie te voorspellen."
+  },
+  "section8": {
+    "title": "Om te onthouden",
+    "p1": "Een zielsverwant herken je niet aan de intensiteit van het begin, maar aan wat je erna nog hebt. Na een ruzie, na een moeilijke periode, na drie jaar.",
+    "p2": "Het enige signaal dat niet bedriegt, is het signaal waar het minst naar gekeken wordt: maakt deze relatie je meer jezelf, of ben je kleiner geworden? Al het andere kan nagebootst worden door een mooi verhaal dat niet blijft duren.",
+    "p3": "En is er in je relatie sprake van angst, controle, vernedering of geweld, dan heeft geen enkele test daar iets over te zeggen. Praat erover met een professional. In Nederland kun je dag en nacht gratis bellen met Veilig Thuis (0800-2000), in België op werkdagen gratis en anoniem met 1712. Bij direct gevaar bel je 112."
+  },
+  "jsonLd": {
+    "about": "zielsverwant"
+  }
+}
