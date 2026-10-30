@@ -75,6 +75,12 @@
       note: 'Una breve pubblicità e compare. È quello che tiene Quiz Couple gratuito, e non abbiamo trovato niente di meglio ❤️',
       bouton: 'Vedi il mio risultato',
       attente: 'Un attimo…'
+    },
+    nl: {
+      titre: 'Je uitslag is klaar!',
+      note: 'Eén korte advertentie en hij verschijnt. Zo blijft Quiz Couple gratis, en iets beters hebben we niet gevonden ❤️',
+      bouton: 'Bekijk mijn uitslag',
+      attente: 'Even geduld…'
     }
   };
 

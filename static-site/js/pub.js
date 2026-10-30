@@ -512,7 +512,7 @@
   // Moneytizer, tag transmis le 15 octobre 2026 ; vide, rien n'est pose.
   var FORMAT_BANDEAU = '1';
   var SITE_REGIE = '142829';
-  var ETIQUETTES = { fr: 'Publicité', en: 'Advertisement', es: 'Publicidad', de: 'Anzeige', it: 'Pubblicità' };
+  var ETIQUETTES = { fr: 'Publicité', en: 'Advertisement', es: 'Publicidad', de: 'Anzeige', it: 'Pubblicità', nl: 'Advertentie' };
 
   // Le geste qui lance la partie. Ecoute des l'execution du script, avant
   // l'evenement load : sur une connexion lente, on peut commencer un test

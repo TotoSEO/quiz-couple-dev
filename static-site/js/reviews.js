@@ -130,6 +130,30 @@
       noReviews: 'Sii il primo a lasciare una recensione!',
       timeAgo: { now: 'Adesso', minutes: '{n} min fa', hours: '{n}h fa', days: '{n}g fa', weeks: '{n} sett fa', months: '{n} mesi fa' },
       chars: 'caratteri'
+    },
+    nl: {
+      title: 'Wat koppels ervan vinden',
+      subtitle: 'Lees de reviews van mensen die onze quizzen hebben gedaan',
+      leaveReview: 'Laat je review achter',
+      yourName: 'Je voornaam',
+      namePlaceholder: 'Voornaam of bijnaam',
+      ratingLabel: 'Je beoordeling',
+      commentLabel: 'Je reactie',
+      commentPlaceholder: 'Vertel over je ervaring (optioneel)',
+      submit: 'Review versturen',
+      sending: 'Bezig met versturen...',
+      thankYou: 'Bedankt voor je review!',
+      pending: 'Hij is zichtbaar zodra hij is gecontroleerd.',
+      alreadySubmitted: 'Je hebt al een review achtergelaten, bedankt!',
+      errorGeneric: 'Er ging iets mis, probeer het opnieuw.',
+      errorNameRequired: 'Vul je voornaam in.',
+      errorRatingRequired: 'Geef een beoordeling.',
+      basedOn: 'Op basis van',
+      reviews: 'reviews',
+      anonymous: 'Anoniem',
+      noReviews: 'Laat als eerste een review achter!',
+      timeAgo: { now: 'Zojuist', minutes: '{n} min. geleden', hours: '{n} uur geleden', days: '{n} d. geleden', weeks: '{n} wk. geleden', months: '{n} mnd. geleden' },
+      chars: 'tekens'
     }
   };
 
