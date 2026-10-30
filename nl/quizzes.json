@@ -17,6 +17,18 @@
     "description": "20 vragen om met z'n tweeën te beantwoorden en te zien hoe goed jullie bij elkaar passen: waarden, plannen, levensstijl. Bekijk jullie score!",
     "metaDescription": "Passen we bij elkaar? Beantwoord allebei 20 vragen over waarden, plannen en het dagelijks leven, en zie meteen hoeveel procent jullie op één lijn zitten."
   },
+  "testDistance": {
+    "title": "Lange afstandsrelatie test: 100 vragen, alleen of samen",
+    "shortTitle": "Lange afstandsrelatie",
+    "description": "100 vragen om te zien hoe stevig jullie relatie op afstand is, en om jullie band te versterken.",
+    "metaDescription": "Lange afstandsrelatie test: 15 vragen over contact, bezoekjes, vertrouwen en plannen, alleen of samen. Plus 18 vragen voor als het gesprek stilvalt."
+  },
+  "testFinCouple": {
+    "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
+    "shortTitle": "Is mijn relatie voorbij?",
+    "metaDescription": "Is mijn relatie voorbij? 24 feitelijke vragen, gewogen naar hoe ernstig elk teken is, en een uitslag in 8 niveaus die je niet sust. Gratis, zonder account.",
+    "description": "Vierentwintig feitelijke vragen, een weging naar hoe ernstig elk teken is, en een uitslag die je niet probeert te sparen."
+  },
   "testCompatSexuelle": {
     "title": "Seksuele compatibiliteit test: 20 vragen voor jullie twee",
     "shortTitle": "Seksuele compatibiliteit",
