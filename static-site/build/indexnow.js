@@ -17,6 +17,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { LANGUES_PUBLIQUES } from './config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -78,7 +79,8 @@ async function submitBatch(urls, host) {
 async function main() {
   // Collect URLs from all language sitemaps
   const allUrls = new Set();
-  const sitemapFiles = ['sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml'];
+  // Une langue cachée (LANGUES_CACHEES) n'a pas de sitemap.
+  const sitemapFiles = LANGUES_PUBLIQUES.map((l) => `sitemap-${l}.xml`);
 
   let total = 0;
   for (const file of sitemapFiles) {

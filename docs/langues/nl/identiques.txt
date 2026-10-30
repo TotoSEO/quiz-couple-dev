@@ -1,0 +1,8 @@
+# Les valeurs que le néerlandais écrit comme le français ou l'anglais, une par
+# ligne, telles qu'elles sont dans le JSON (balises comprises) ou sans leurs
+# balises. Le contrôle « textes » de static-site/build/verifie-langue.mjs les
+# laisse passer ; toute autre valeur identique au français ou à l'anglais est
+# une erreur. On n'y écrit que des noms propres, des marques et des mots que le
+# néerlandais emploie tels quels.
+Quiz Couple
+Instagram

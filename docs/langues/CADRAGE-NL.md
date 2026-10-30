@@ -55,7 +55,7 @@ allemand entier.
 
 ## 3. Ne rien oublier : quatre contrôles automatiques et un interrupteur
 
-Rien ne repose sur la mémoire. Le lot 0 écrit `static-site/build/verifie-langue.mjs`,
+Rien ne repose sur la mémoire. Le lot 0 a écrit `static-site/build/verifie-langue.mjs`,
 qui échoue tant qu'il manque quelque chose. Chaque PR du chantier joint sa sortie.
 Ses quatre contrôles : le code, les textes et le site (ci-dessous), et les
 balises (§ 4).
@@ -64,7 +64,10 @@ balises (§ 4).
    et toute expression régulière qui énumère `fr|en|es|de|it` doit contenir
    `nl`, ou porter un commentaire `langues: sans-nl` qui dit pourquoi
    (Instagram, en anglais seulement). Le contrôle refait la recherche à chaque
-   passage : un fichier ajouté plus tard est vu aussi.
+   passage : un fichier ajouté plus tard est vu aussi. Il relève aussi les
+   libellés écrits en dur dans les scripts des pages publiques (`aria-label`,
+   `title`, `alert`, `confirm`), qui restent en français dans toutes les
+   langues.
 2. **Les textes** (`verifie-langue.mjs textes nl`) : chaque clé de `fr/*.json`
    (hors pages `frOnly`) existe dans `nl/*.json` et n'est pas vide ; mêmes
    variables `{{...}}`, mêmes balises HTML et autant de liens ; chaque lien
@@ -132,18 +135,31 @@ aucun lien) jusqu'à son propre lot.
 ### La carte des mots-clés
 
 Un fichier, `docs/langues/nl/mots-cles.tsv` : une ligne par page (les 99
-routes, puis les articles), avec le mot-clé principal et son volume, deux à
-quatre secondaires, l'adresse, le title, le H1 et la description.
+routes, puis les articles), colonnes `cle` (la route, ou `blog:<slug
+interne>`), `adresse`, `principal`, `secondaires` (séparés par « ; »),
+`requete_fr`, `clics_fr` et `notes`. Le title, le H1 et la description ne
+s'y recopient pas : ils vivent dans les JSON, et le contrôle `seo` les lit
+dans les pages construites.
 
-1. Je propose trois à six requêtes néerlandaises par page (environ 450),
-   écrites comme les gens les tapent, jamais traduites du français.
-2. Thomas les passe d'un coup dans son outil et me rend les volumes.
-3. Je fixe **un mot-clé principal par page, jamais le même pour deux pages**.
-   Les pages proches ont chacune leur angle, comme en français et en
-   allemand : la calculatrice « liefdestest », le test de couple
-   « relatietest », la date de naissance, les prénoms et signes, et le test de
-   compatibilité en vingt questions ont chacun leur requête.
-4. Après l'ouverture, la Search Console néerlandaise corrige la carte, comme
+Thomas, le 30 octobre 2026 : « pas besoin d'analyser les mots-clés. Si les
+pages françaises ont des clics organiques sur une requête FR, il suffit juste
+de trouver son équivalent en néerlandais naturel pas littéral. » Donc :
+
+1. Pour chaque page, la Search Console française (connecteur
+   `searchconsole` de Windsor, trois mois) donne la requête qui apporte le
+   plus de clics, et les suivantes.
+2. J'écris son **équivalent néerlandais naturel**, comme un Néerlandais ou un
+   Flamand le taperait, jamais traduit mot à mot : la requête devient le
+   mot-clé principal, les suivantes donnent les secondaires. Une page sans
+   clic en France prend la requête de la page anglaise, ou à défaut le nom
+   que l'usage néerlandais donne à la chose.
+3. Les volumes que Thomas a mesurés (§ 1) fixent les pages qui les portent.
+4. **Un mot-clé principal par page, jamais le même pour deux pages.** Les
+   pages proches ont chacune leur angle, comme en français et en allemand :
+   la calculatrice « liefdestest », le test de couple « relatietest », la date
+   de naissance, les prénoms et signes, et le test de compatibilité en vingt
+   questions ont chacun leur requête.
+5. Après l'ouverture, la Search Console néerlandaise corrige la carte, comme
    pour l'allemand le 30 octobre 2026.
 
 ### Les règles, contrôlées par `verifie-langue.mjs seo nl` (bloquant)
@@ -209,15 +225,15 @@ l'ouverture.
 
 | Lot | Contenu | Ce que fait Thomas |
 |---|---|---|
-| 0 | `nl` dans le code, caché ; les quatre contrôles ; le guide de style ; la liste des requêtes à mesurer | Mesurer les ~450 requêtes |
-| 1 | Carte des mots-clés figée, adresses des 99 pages | Valider la carte |
+| 0 | `nl` dans le code, caché ; les quatre contrôles ; le guide de style | - |
+| 1 | Carte des mots-clés (requêtes françaises à clics → néerlandais), adresses des 99 pages | Valider la carte |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | - |
 | 3 | Tests de couple, avec leurs textes de moteur | Trouver le relecteur natif |
 | - | Relecture native de l'échantillon, corrections | Transmettre ses remarques |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | - |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` (évaluation encore fermée en néerlandais) | Envoyer le sitemap /nl/ dans la Search Console |
 | 8 | Évaluation payante, e-mails, CGV, puis ouverture de l'évaluation en néerlandais | Activer iDEAL et Bancontact dans Stripe |
-| 9 et suite | Blog, par ordre de volume néerlandais | Mesurer les requêtes des articles |
+| 9 et suite | Blog, dans l'ordre des clics français, mots-clés tirés des requêtes françaises de chaque article | - |
 
 ## 7. Les risques
 

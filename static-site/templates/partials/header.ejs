@@ -64,8 +64,12 @@
   const urlSpeciaux = getLocalizedUrl('speciauxCouple', lang);
 
   // Language names for selector
-  const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
-  const langFullNames = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch', it: 'Italiano' };
+  const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT', nl: 'NL' };
+  const langFullNames = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch', it: 'Italiano', nl: 'Nederlands' };
+  // Les langues publiques, plus la langue de la page si elle est encore
+  // cachée (languesMenu, generate.js). La liste écrite n'est qu'un repli pour
+  // un rendu qui ne passerait pas languesMenu. langues: sans-nl
+  const languesDuMenu = (typeof languesMenu !== 'undefined' && languesMenu) || ['fr', 'en', 'es', 'de', 'it'];
 
   // Jeu d'icones SVG du menu (remplace les emojis, rendu plus travaille)
   function _svg(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; }
@@ -252,7 +256,7 @@
                 <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </button>
               <div class="nav-dropdown-content nav-lang-dropdown hidden">
-                <% for (const l of ['fr','en','es','de','it']) { %>
+                <% for (const l of languesDuMenu) { %>
                 <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) || getLocalizedUrl('home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>"<%- l === lang ? ' aria-current="true"' : '' %>>
                   <span class="text-xs font-bold uppercase w-6"><%= langNames[l] %></span>
                   <span><%= langFullNames[l] %></span>

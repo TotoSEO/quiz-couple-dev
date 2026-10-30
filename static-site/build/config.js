@@ -5,7 +5,15 @@
 export const BASE_URL = 'https://quiz-couple.com';
 // Le compte Instagram du site : menu, pied de page, JSON-LD (sameAs), merci après un avis.
 export const INSTAGRAM_URL = 'https://www.instagram.com/quiz_couple_official/';
-export const LANGUAGES = ['fr', 'en', 'es', 'de', 'it'];
+export const LANGUAGES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
+// Les langues construites mais pas encore ouvertes (30 octobre 2026, le
+// néerlandais, docs/langues/CADRAGE-NL.md) : leurs pages sont publiées en
+// noindex, hors des sitemaps, du hreflang, des flux RSS et du sélecteur de
+// langue, et un article n'y existe que traduit. On retire une langue de la
+// liste le jour de son ouverture.
+export const LANGUES_CACHEES = ['nl'];
+export const LANGUES_PUBLIQUES = LANGUAGES.filter((l) => !LANGUES_CACHEES.includes(l));
+export function langueCachee(lang) { return LANGUES_CACHEES.includes(lang); }
 export const DEFAULT_LANG = 'fr';
 
 export const LOCALES = {
@@ -14,11 +22,12 @@ export const LOCALES = {
   es: 'es_ES',
   de: 'de_DE',
   it: 'it_IT',
+  nl: 'nl_NL',
 };
 
 // Route slugs per language (mirrored from i18n/routes.ts)
 export const ROUTE_SLUGS = {
-  home: { fr: '', en: '', es: '', de: '', it: '' },
+  home: { fr: '', en: '', es: '', de: '', it: '', nl: '' },
   testCouple: { fr: 'tester-son-couple', en: 'couple-compatibility-test', es: 'test-compatibilidad-pareja', de: 'paar-kompatibilitaetstest', it: 'test-compatibilita-coppia' },
   testCommonPoints: { fr: 'test-points-communs-couples', en: 'couple-common-points-test', es: 'test-puntos-comunes-pareja', de: 'gemeinsamkeiten-test-paare', it: 'test-punti-comuni-coppia' },
   testCompatibilite: { fr: 'test-compatibilite-amoureuse', en: 'love-compatibility-test', es: 'test-compatibilidad-amorosa', de: 'liebeskompatibilitaet-test', it: 'test-compatibilita-amorosa' },
@@ -657,7 +666,7 @@ export function getLocalizedUrl(routeKey, lang) {
 }
 
 export function getRouteAlternates(routeKey) {
-  const alts = LANGUAGES.map(lang => ({
+  const alts = LANGUES_PUBLIQUES.map(lang => ({
     hreflang: lang,
     href: getLocalizedUrl(routeKey, lang),
   }));
@@ -1726,7 +1735,7 @@ export function getArticleUrl(articleSlug, lang) {
 }
 
 export function getArticleAlternates(articleMeta) {
-  const alts = LANGUAGES.map(lang => ({
+  const alts = LANGUES_PUBLIQUES.map(lang => ({
     hreflang: lang,
     href: getArticleUrl(articleMeta.slugs[lang], lang),
   }));
