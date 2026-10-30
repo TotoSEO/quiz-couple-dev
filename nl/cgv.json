@@ -1,0 +1,13 @@
+{
+  "vendeur": {
+    "titre": "De verkoper",
+    "nom": "Naam:",
+    "statut": "Hoedanigheid:",
+    "siret": "SIRET (Frans ondernemingsnummer):",
+    "adresse": "Adres:",
+    "email": "E-mail:",
+    "tva": "Btw:",
+    "tvaValeur": "Geen btw van toepassing, artikel 293 B van de Franse Code général des impôts",
+    "telephone": "Telefoon:"
+  }
+}

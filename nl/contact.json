@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Contact | Quiz Couple",
+    "description": "Neem contact op met het team van Quiz Couple voor een vraag, een idee of een samenwerking. Beveiligd contactformulier."
+  },
+  "hero": {
+    "title": "Neem contact op",
+    "subtitle": "Een vraag, een idee, een samenwerking? Stuur ons een bericht."
+  },
+  "form": {
+    "lastName": "Achternaam",
+    "lastNamePlaceholder": "Je achternaam",
+    "firstName": "Voornaam",
+    "firstNamePlaceholder": "Je voornaam",
+    "email": "E-mailadres",
+    "emailPlaceholder": "jouw@email.nl",
+    "phone": "Telefoon",
+    "phonePlaceholder": "+31 6 12345678",
+    "company": "Bedrijf",
+    "companyPlaceholder": "Naam van je bedrijf",
+    "message": "Bericht",
+    "messagePlaceholder": "Je bericht...",
+    "optional": "optioneel",
+    "rgpd": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt volgens het <a href=\"/nl/privacybeleid/\" class=\"text-primary hover:underline\">privacybeleid</a> van Quiz Couple.",
+    "submit": "Versturen",
+    "successTitle": "Bericht verstuurd!",
+    "successText": "We hebben je bericht goed ontvangen en antwoorden zo snel mogelijk.",
+    "errorLastName": "Vul je achternaam in (minstens 2 tekens)",
+    "errorFirstName": "Vul je voornaam in (minstens 2 tekens)",
+    "errorEmail": "Vul een geldig e-mailadres in",
+    "errorMessage": "Je bericht moet minstens 10 tekens hebben",
+    "errorMessageLong": "Je bericht is te lang (maximaal 3000 tekens)",
+    "errorRgpd": "Je moet akkoord gaan met het privacybeleid",
+    "errorGeneric": "Er ging iets mis. Probeer het opnieuw."
+  }
+}
