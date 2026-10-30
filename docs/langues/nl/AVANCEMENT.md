@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -646,7 +646,39 @@ le met à jour dans la PR de chaque lot.
   « Ga verder » vers des pages pas encore traduites (la relation karmique,
   « amour ou crush »).
 
+## Lot 3o (30 octobre 2026) : la relation karmique
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/karmische-relatie-test/` | Karmische relatie test: wat voor band hebben jullie? | Zit ik in een karmische relatie? Test het in 20 vragen |
+
+  Le H1 porte « zit ik in een karmische relatie », la question telle qu'on
+  la tape, ajoutée aux mots-clés secondaires de la carte ; le H2 des signes
+  dit « De 7 kenmerken van een karmische relatie » pour « karmische relatie
+  kenmerken ».
+- **Les trois axes** : de rustige band, de spiegelband (la flamme jumelle,
+  « tweelingziel ») et de karmische band, plus les « karmische echo's ». Le
+  « renforcement intermittent » garde son nom de psychologie,
+  « intermitterende bekrachtiging ».
+- **Les liens** : la compatibilité (« de band bekijken vanuit jullie
+  waarden »), l'attachement, « mon ex pense-t-il encore à moi » (pas encore
+  traduite), le couple sain, la relation toxique et le partenaire
+  narcissique, avec des ancres qui disent le sujet de la phrase. Les deux
+  liens du français vers le blog (love bombing, dépendance affective)
+  attendent sa traduction.
+- **Ce qui reste en français sur la page** : la description de deux cartes
+  « Ga verder » vers des pages pas encore traduites (la date de naissance,
+  « amour ou crush »).
+
 ## Les chiffres
+
+Au lot 3o : `textes nl` 405 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (36 pages traduites) ; `site nl` sur la page : aucun
+débordement ni mot coupé à 360 et 1 280 px, le moteur va jusqu'à son
+résultat ; restent en français deux descriptions de cartes vers des pages
+pas encore traduites. Aucune page publique ne change.
 
 Au lot 3n : `textes nl` 393 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (35 pages traduites) ; `site nl` sur les deux pages : aucun
