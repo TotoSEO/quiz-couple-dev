@@ -1,0 +1,105 @@
+# Carte des mots-clés néerlandais (lot 1, 30 octobre 2026). Une ligne par route ;
+# « principal » : l'équivalent néerlandais naturel de la requête française qui apporte le
+# plus de clics (Search Console, août à octobre 2026), jamais le même pour deux pages ;
+# « - » pour une page d'information. « adresse » : la valeur de ROUTE_SLUGS.nl.
+# Contrôle : node build/verifie-langue.mjs seo nl (depuis static-site/).
+cle	adresse	principal	secondaires	requete_fr	clics_fr	notes
+home	-	quiz voor koppels	quiz voor stellen; test voor koppels; relatiequiz	quiz couple	1606	accueil, sans adresse
+testCouple	relatietest	relatietest	online relatietest; relatietest met z'n tweeën	test couple à faire à deux	47	volume mesuré par Thomas : 170
+testCommonPoints	hoeveel-hebben-we-gemeen	hoeveel hebben we gemeen	wat hebben we gemeen test; gemeenschappelijke interesses koppel	test de compatibilité amoureuse	14	en France, les clics viennent des requêtes de compatibilité, qui vont à testCompatibilite : la page garde son sujet, les points communs
+testCompatibilite	passen-we-bij-elkaar	passen we bij elkaar	compatibiliteitstest; passen wij bij elkaar test; relatie compatibiliteit test	test de compatibilité amoureuse	1955	comme « passen wir zusammen » en allemand
+testDistance	lange-afstandsrelatie-test	lange afstandsrelatie test	quiz lange afstandsrelatie; vragen lange afstandsrelatie; spelletjes lange afstandsrelatie	jeu de question couple à distance	61	
+testToxic	toxische-relatie-test	toxische relatie test	ben ik toxisch test; zit ik in een toxische relatie	test de toxicité	9	
+testRedFlag	red-flag-test	red flag test	is hij een red flag; red flags in een relatie	redflag	1	
+testPervers	narcistische-partner-test	narcistische partner test	is mijn partner een narcist; manipulatie in een relatie test	test pervers narcissique	6	
+testAmourHabitude	liefde-of-gewoonte-test	liefde of gewoonte test	is het nog liefde of gewoonte; liefde of gewoonte	test amour	31	« test amour » et « quiz amour » vont à la calculatrice (liefdestest) et au quiz sur l'amour
+testAmourAttachement	verliefd-of-gehecht-test	verliefd of gehecht test	ben ik verliefd of gehecht; liefde of gehechtheid	suis je amoureuse ou attachée test	44	
+testJeLaimeEncore	hou-ik-nog-van-hem	hou ik nog van hem	hou ik nog van haar; hou ik nog van mijn partner test	test est ce que je l'aime encore	8	le title dira « hem of haar »
+testCoupleSain	gezonde-relatie-test	gezonde relatie test	heb ik een gezonde relatie; kenmerken gezonde relatie	test relation saine	4	
+testMariage	klaar-om-te-trouwen-test	klaar om te trouwen test	moeten we trouwen; huwelijkstest	test de mariage	6	
+testDivorce	moet-ik-scheiden-test	moet ik scheiden test	moet ik scheiden; scheiden of niet	dois-je divorcer test	21	
+testPurete	puriteitstest	puriteitstest	purity test; rice purity test nederlands	test de pureté	1388	
+quizAmoureux	quiz-over-liefde	quiz over liefde	liefdesvragen quiz; quiz liefde koppel	quiz sur l'amour	7	« liefdesquiz » reste au quiz des ados
+quizTypeCouple	wat-voor-koppel-zijn-jullie	wat voor koppel zijn jullie	wat voor stel zijn wij; welk type koppel zijn we		0	aucun clic : le nom de la chose
+quizCoquin	ondeugende-quiz	ondeugende quiz	ondeugende vragen voor koppels; pikante vragen; spannende vragen voor koppels	quiz coquin	36	« quiz coquin », « quiz hot »
+quizMarrant	grappige-vragen-voor-koppels	grappige vragen voor koppels	grappige quiz voor koppels; leuke quiz voor koppels	quizz couple	608	volume mesuré par Thomas : 260
+quizKnowledge	hoe-goed-ken-je-je-partner	hoe goed ken je je partner	wie kent de ander het best; hoe goed ken jij mij quiz	quiz couple qui se connaît le mieux	50	
+quizMost	wie-is-het-meest	wie is het meest	wie is het meest vragen; wie is het meest spel	qui est le plus	209	à ne pas confondre avec « wie zou eerder » (qui pourrait)
+questionsCouple	vragen-voor-koppels	vragen voor koppels	100 vragen voor koppels; leuke vragen voor koppels; vragen om elkaar beter te leren kennen	100 questions à poser en couple	4	volumes mesurés par Thomas : 1 600, 390 et 90
+legalMentions	juridische-informatie	-			0	page d'information, en noindex
+privacy	privacybeleid	-			0	page d'information, en noindex
+blog	blog	blog over relaties	relatieblog; relatietips		0	
+quizAdo	liefdesquiz-voor-tieners	liefdesquiz voor tieners	quiz voor tienerstelletjes; ben ik verliefd quiz tieners	quizz couple ado	37	
+testParentalite	klaar-voor-een-baby-test	klaar voor een baby test	zijn we klaar voor een kind; kinderwens test	question parentalité	1	
+testEmmenager	samenwonen-test	samenwonen test	klaar om samen te wonen; moeten we gaan samenwonen		0	aucun clic en France ; en anglais « should we move in together quiz »
+testAstroPrenoms	sterrenbeelden-match	sterrenbeelden match	welke sterrenbeelden passen bij elkaar; naam en sterrenbeeld compatibiliteit	compatibilité amoureuse	958	« compatibilité amoureuse prénom et signe » ; les prénoms et les signes
+calculatriceAmour	liefdestest	liefdestest	liefdestest namen; love calculator; liefdescalculator	test de compatibilité prénom pourcentage	2197	volumes mesurés par Thomas : 320 et 30
+compteurCouple	hoe-lang-zijn-we-samen	hoe lang zijn we samen	relatieteller; dagen samen berekenen		0	en anglais « relationship counter days »
+bilanCouple	relatiecheck	relatiecheck	relatie evaluatie; relatiecheck pdf		0	comme « Beziehungscheck » en allemand
+cgv	algemene-voorwaarden	-			0	page d'information, en noindex
+testSignesChinois	chinese-sterrenbeelden-liefde	chinese sterrenbeelden liefde	chinese horoscoop compatibiliteit; chinees sterrenbeeld match		0	en anglais « chinese zodiac compatibility calculator »
+testDateNaissance	compatibiliteit-geboortedatum	compatibiliteit geboortedatum	liefdestest geboortedatum; passen we bij elkaar geboortedatum	compatibilité amoureuse date naissance	520	
+testJalousie	jaloezie-test	jaloezie test	ben ik te jaloers; jaloezie in een relatie test	test de jalousie	256	
+testKarmique	karmische-relatie-test	karmische relatie test	tweelingziel test; karmische relatie kenmerken	relation karmique test	47	
+testSuisJeAmoureux	ben-ik-verliefd-test	ben ik verliefd test	ben ik verliefd; verliefd test	quiz amour	15	
+testAmeSoeur	zielsverwant-test	zielsverwant test	soulmate test; is hij mijn soulmate	test ame soeur	2	
+jeuActionVerite	waarheid-of-durven-koppels	waarheid of durven voor koppels	waarheid of durven online; truth or dare koppels	action ou vérité couple	162	
+jeuActionVeriteHot	waarheid-of-durven-18	waarheid of durven 18+	ondeugende waarheid of durven; pikante waarheid of durven	action ou vérité hot	48	« action ou vérité hot »
+jeuxCouple	spelletjes-voor-koppels	spelletjes voor koppels	spelletje voor koppels; online spelletjes voor koppels; spellen voor koppels	jeu de couple	272	volumes mesurés par Thomas : 210 et 50
+jeuGages	opdrachten-voor-koppels	opdrachten voor koppels	leuke opdrachten voor koppels; rad met opdrachten	gage couple	4	« gage couple », « roue des gages »
+jeuPlateau	bordspel-voor-koppels	bordspel voor koppels	online bordspel voor twee		0	aucun clic : le nom de la chose
+jeuQuiDeNous	wie-van-ons-twee	wie van ons twee	wie van ons twee vragen; wie van ons twee spel	qui de nous deux	210	
+quizGenant	genante-vragen	gênante vragen	gênante vragen voor koppels; ongemakkelijke vragen	question gênante couple	5	le néerlandais dit « gênant »
+testLangageAmour	liefdestaal-test	liefdestaal test	5 liefdestalen test; love language test	test langage de l'amour	12	
+testPersonnalite	persoonlijkheidstest-liefde	persoonlijkheidstest liefde	wat voor type ben ik in de liefde; wat voor partner ben ik	test personnalité amour	7	
+quizTuPreferes	zou-je-liever-vragen	zou je liever vragen	zou je liever vragen relatie; zou je liever vragen seksueel; wat zou je liever	tu préfères couple	67	volumes mesurés par Thomas : 170, 30 et 40
+quizVraiFaux	waar-of-niet-waar-quiz	waar of niet waar quiz	waar of niet waar vragen liefde	quiz amour vrai ou faux	4	
+testAttachement	hechtingsstijl-test	hechtingsstijl test	welke hechtingsstijl heb ik; hechtingsstijl relatie		0	en anglais « attachment style test »
+testDependance	emotionele-afhankelijkheid-test	emotionele afhankelijkheid test	ben ik emotioneel afhankelijk; afhankelijk in een relatie	test dependance affective	1	
+testConfiance	vertrouwen-relatie-test	vertrouwen in een relatie test	vertrouw ik mijn partner; vertrouwenstest relatie	test de confiance couple	2	
+testInfidelite	gaat-mijn-partner-vreemd	gaat mijn partner vreemd	gaat hij vreemd test; vreemdgaan test	question piège pour savoir si elle me trompe	12	« comment savoir si ma femme me trompe test »
+testCouche	met-iemand-anders-geslapen	heeft hij met iemand anders geslapen	heeft zij met iemand anders geslapen; heeft mijn partner met een ander geslapen		0	aucun clic : la question telle qu'on la tape
+testSecret	stiekem-verliefd-op-mij	is hij stiekem verliefd op mij	is hij verliefd op mij test; vindt hij mij leuk test	test est-il amoureux de moi en secret	38	
+testDistanceAime	houdt-hij-van-mij-op-afstand	houdt hij van mij op afstand	lange afstandsrelatie houdt hij nog van mij; lange afstand twijfels	relation à distance comment savoir si il m'aime test	5	
+testEx	denkt-mijn-ex-nog-aan-mij	denkt mijn ex nog aan mij	mist mijn ex mij; denkt mijn ex nog aan mij test	comment savoir si mon ex pense à moi	2	
+testEncoreAmoureuxEx	nog-verliefd-op-mijn-ex	ben ik nog verliefd op mijn ex	nog gevoelens voor mijn ex; ben ik over mijn ex heen		0	page du 28 octobre, aucun clic encore
+testOublierEx	over-je-ex-heen-komen	over je ex heen komen	hoe lang duurt liefdesverdriet; hoe lang duurt het om over je ex heen te komen		0	page du 28 octobre, aucun clic encore
+testExRevenir	komt-mijn-ex-terug	komt mijn ex terug	komt mijn ex ooit terug; komt mijn ex terug test		0	page du 28 octobre, aucun clic encore
+testRemettreEx	terug-naar-mijn-ex	moet ik terug naar mijn ex	weer samen met je ex; terug naar je ex		0	page du 28 octobre, aucun clic encore
+testOublieSonEx	is-hij-over-zijn-ex-heen	is hij over zijn ex heen	is zij over haar ex heen; denkt mijn vriend nog aan zijn ex		0	page du 28 octobre, aucun clic encore
+testPourquoiQuitte	waarom-heeft-mijn-ex-het-uitgemaakt	waarom heeft mijn ex het uitgemaakt	waarom is het uit; redenen om het uit te maken		0	page du 28 octobre, aucun clic encore
+testAimeEncore	houdt-hij-nog-van-mij	houdt hij nog van mij	houdt mijn vriend nog van mij; houdt mijn man nog van mij	comment savoir si mon mari m'aime encore test	2	
+testEmprise	controlerende-relatie-test	controlerende relatie test	dwingende controle; psychisch geweld in een relatie; emotionele mishandeling test	suis-je sous emprise test gratuit	10	« suis-je sous emprise test » ; « dwingende controle » est le terme officiel, moins tapé
+testTrouverAmour	waarom-vind-ik-geen-liefde	waarom vind ik geen liefde	waarom vind ik geen vriend; waarom vind ik geen relatie	pourquoi je ne trouve pas lamour test	5	
+testCelibataire	waarom-ben-ik-nog-single	waarom ben ik nog single	waarom ben ik single; single test	test celibataire	2	
+testCoupleOuCelibat	single-of-relatie-test	single of relatie test	ben ik beter af als single; relatie of single		0	en anglais « should i be single or in a relationship quiz »
+testCompatSexuelle	seksuele-compatibiliteit-test	seksuele compatibiliteit test	passen we seksueel bij elkaar; seksuele match test	test compatibilité sexuelle	3	
+testEstCeLeBon	is-hij-de-ware	is hij de ware	is zij de ware; de ware test	test pour savoir si c'est la bonne personne	3	« test pour savoir si c'est la bonne personne »
+testPretRelation	klaar-voor-een-nieuwe-relatie	klaar voor een nieuwe relatie	ben ik klaar voor een nieuwe relatie test; rebound relatie	test relation pansement	1	
+testDureeCelibat	hoe-lang-blijf-ik-nog-single	hoe lang blijf ik nog single	blijf ik altijd single; wanneer vind ik de liefde	vais je finir seule test	2	« vais je finir seule test »
+testAmourAmi	verliefd-op-je-beste-vriend	verliefd op je beste vriend	verliefd op je beste vriendin; verliefd op beste vriend test	test de meilleure amie à deux	2	
+testChargeMentale	mentale-belasting-test	mentale belasting test	mentale belasting relatie; taakverdeling thuis test	calcul charge mentale couple	4	
+quizRencontre	vragen-eerste-date	vragen eerste date	vragen voor een eerste date; gespreksonderwerpen eerste date		0	aucun clic : la requête que les gens tapent
+jeuDilemmes	dilemmas-voor-koppels	dilemma's voor koppels	dilemma vragen; moeilijke dilemma's	dilemme couple	45	
+testAmourAmitie	liefde-of-vriendschap-test	liefde of vriendschap test	is het liefde of vriendschap; vriendschap of meer	test amitié	9	
+testCrush	crush-test	crush test	is het liefde of een crush; heb ik een crush	test crush	126	
+testFinCouple	is-mijn-relatie-voorbij	is mijn relatie voorbij	is mijn relatie voorbij test; relatie gaat slecht test	test fin du couple	24	
+pourContre	voor-of-tegen-stellingen	voor of tegen stellingen	stellingen voor koppels; eens of oneens vragen	pour ou contre couple	57	« pour ou contre couple »
+jeuJamais	ik-heb-nog-nooit-vragen	ik heb nog nooit vragen	ik heb nog nooit spel; ik heb nog nooit koppels	je n'ai jamais questions	1	
+jeuQuiPourrait	wie-zou-eerder-vragen	wie zou eerder vragen	wie zou eerder; wie van ons zou eerder	qui pourrait	30	« qui pourrait » (en anglais « who is most likely to »)
+jeuOuiNon	ja-of-nee-vragen	ja of nee vragen	ja of nee vragen koppels; ja nee spel	oui ou non sans débattre question couple	19	
+jeuPhrases	maak-de-zin-af	maak de zin af	zinnen afmaken spel; maak de zin af vragen		0	en anglais « finish the sentence game for couples »
+jeuDixMais	hij-is-een-10-maar	hij is een 10 maar	zij is een 10 maar; een 10 maar spel	c'est un 10 mais	6	
+jeuSoireeCouples	partyspel-voor-koppels	partyspel voor koppels	spel voor meerdere koppels; spelletjesavond koppels		0	aucun clic : la page date du 27 octobre
+speciauxCouple	themaquiz-voor-koppels	themaquiz voor koppels	halloween quiz koppels; kerstquiz koppels		0	la saison change le titre, pas le mot-clé
+quizSerialKiller	seriemoordenaar-quiz	seriemoordenaar quiz	met welke seriemoordenaar match jij	quiz serial killer	1	
+quizMortFilmHorreur	wie-gaat-als-eerste-dood	wie gaat als eerste dood in een horrorfilm	horrorfilm quiz; overleef jij een horrorfilm		0	en anglais « which horror movie kills you first quiz »
+quizPossession	wie-wordt-bezeten-quiz	wie wordt bezeten quiz	wie van ons wordt bezeten	qui de nous	1	
+quizSuperVilain	welke-superschurk-ben-jij	welke superschurk ben jij	superschurk quiz	compatibilité prénom en pourcentage	1	
+quizDuoVilains	welk-superschurkenduo-zijn-jullie	welk superschurkenduo zijn jullie	superschurken koppel quiz		0	
+quizTentation	temptation-island-quiz	temptation island quiz	temptation island vragen		0	l'émission existe aux Pays-Bas et en Flandre sous ce nom
+admin	admin	-			0	administration, en noindex
+contact	contact	-			0	page d'information
+about	over-ons	-			0	page d'information
+customQuiz	maak-je-eigen-quiz	maak je eigen quiz	quiz over mezelf maken; quiz maken voor je vriend	cree ton quiz	9	« crée ton quiz », « créer un quiz sur moi »
+sitemap	sitemap	-			0	page d'information

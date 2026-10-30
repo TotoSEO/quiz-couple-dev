@@ -602,21 +602,27 @@ function controleSeo() {
     if (!r.cle) { erreur(C, ou, 'ligne sans clé'); continue; }
     if (parCle.has(r.cle)) erreur(C, ou, 'clé en double');
     parCle.set(r.cle, r);
-    if (!r.principal) { erreur(C, ou, 'pas de mot-clé principal'); continue; }
-    const p = normalise(r.principal);
-    if (principaux.has(p)) erreur(C, ou, `mot-clé principal déjà pris par ${principaux.get(p)} : « ${r.principal} »`);
-    principaux.set(p, r.cle);
-    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(r.adresse || '')) erreur(C, ou, `adresse « ${r.adresse} » : minuscules, chiffres et tirets seulement`);
-    if (adresses.has(r.adresse)) erreur(C, ou, `adresse déjà prise par ${adresses.get(r.adresse)}`);
-    adresses.set(r.adresse, r.cle);
-    const motsAdresse = new Set((r.adresse || '').split('-'));
-    if (!normalise(r.principal).split(' ').some((m) => motsAdresse.has(m))) avert(C, ou, `l'adresse ne reprend aucun mot du mot-clé principal « ${r.principal} »`);
+    if (!r.principal) { erreur(C, ou, 'pas de mot-clé principal (« - » pour une page d\'information)'); continue; }
+    // L'accueil n'a pas d'adresse (« - ») ; une page d'information n'a pas
+    // de mot-clé (« - »).
+    const accueil = r.cle === 'home' && r.adresse === '-';
+    if (!accueil) {
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(r.adresse || '')) erreur(C, ou, `adresse « ${r.adresse} » : minuscules, chiffres et tirets seulement`);
+      if (adresses.has(r.adresse)) erreur(C, ou, `adresse déjà prise par ${adresses.get(r.adresse)}`);
+      adresses.set(r.adresse, r.cle);
+    }
     if (r.cle.startsWith('blog:')) {
       const a = BLOG_ARTICLES.find((x) => `blog:${x.internalSlug}` === r.cle);
       if (!a) erreur(C, ou, 'article inconnu');
       else if ((a.slugs || {})[LANGUE] !== r.adresse) erreur(C, ou, `BLOG_ARTICLES dit « ${(a.slugs || {})[LANGUE] ?? 'rien'} »`);
     } else if (!ROUTE_SLUGS[r.cle]) erreur(C, ou, 'route inconnue');
     else if (ROUTE_SLUGS[r.cle][LANGUE] !== r.adresse && !(r.cle === 'home' && r.adresse === '-')) erreur(C, ou, `ROUTE_SLUGS dit « ${ROUTE_SLUGS[r.cle][LANGUE] ?? 'rien'} »`);
+    if (r.principal === '-') { r.information = true; continue; }
+    const p = normalise(r.principal);
+    if (principaux.has(p)) erreur(C, ou, `mot-clé principal déjà pris par ${principaux.get(p)} : « ${r.principal} »`);
+    principaux.set(p, r.cle);
+    const motsAdresse = new Set((r.adresse || '').split('-'));
+    if (!accueil && !normalise(r.principal).split(' ').some((m) => motsAdresse.has(m))) avert(C, ou, `l'adresse ne reprend aucun mot du mot-clé principal « ${r.principal} »`);
   }
   for (const k of routes) if (!parCle.has(k)) erreur(C, k, 'page absente de la carte des mots-clés');
 
@@ -625,6 +631,7 @@ function controleSeo() {
   const vus = { title: new Map(), h1: new Map(), description: new Map() };
   const pages = [];
   for (const r of carte) {
+    if (r.information) continue;
     const chemin = r.cle.startsWith('blog:')
       ? getArticlePath(r.adresse, LANGUE)
       : (ROUTE_SLUGS[r.cle] && getLocalizedPath(r.cle, LANGUE));
@@ -860,7 +867,7 @@ async function joue(page, mode) {
       const cliquables = boutons
         .filter((b) => visible(b) && !b.disabled && b.getAttribute('aria-disabled') !== 'true')
         .filter((b) => !b.closest('.qc-porte, [class*="pqx"], .qr-bilan, .qr-zone--avis'))
-        .filter((b) => !reEvitees.test(typeof b.className === 'string' ? b.className : '') && !(b.tagName === 'A' && b.getAttribute('href') && !b.getAttribute('href').startsWith('#')));
+        .filter((b) => !reEvitees.test(typeof b.className === 'string' ? b.className : '') && !/online|distance|salon/i.test(b.id || '') && !(b.tagName === 'A' && b.getAttribute('href') && !b.getAttribute('href').startsWith('#')));
       const classe = (b) => (typeof b.className === 'string' ? b.className : '');
       const cle = (b) => classe(b) + '|' + (b.innerText || '').trim().slice(0, 30) + '|' + [...racine.querySelectorAll(b.tagName)].indexOf(b);
       // Une bascule (genre, nombre de cartes, façon de jouer) ne se touche que
@@ -868,7 +875,7 @@ async function joue(page, mode) {
       const bascule = (b) => b.hasAttribute('aria-pressed') || b.getAttribute('role') === 'radio';
       const actif = (b) => b.getAttribute('aria-pressed') === 'true' || b.getAttribute('aria-checked') === 'true' || /(^|\s|-)(active|actif|selected)(\s|$)/.test(classe(b));
       const groupeChoisi = (b) => [...b.parentElement.children].some(actif);
-      const modes = cliquables.filter((b) => /mode/i.test(classe(b)) || b.hasAttribute('data-mode'));
+      const modes = cliquables.filter((b) => (/mode/i.test(classe(b)) || b.hasAttribute('data-mode')) && !/online|distance|salon/i.test(b.id + ' ' + classe(b)));
       let liste;
       if (mode !== null && modes.length > 1 && !window.__qcModeChoisi) {
         window.__qcModeChoisi = true;
@@ -980,7 +987,10 @@ async function controleSite() {
         if (m === 0) {
           modes = await page.evaluate((r) => [...document.querySelectorAll(`${r.split(',').map((x) => `${x} button, ${x} [role="button"]`).join(', ')}`)]
             .filter((b) => { const q = b.getBoundingClientRect(); return q.width > 0 && q.height > 0; })
-            .filter((b) => /mode/i.test(typeof b.className === 'string' ? b.className : '') || b.hasAttribute('data-mode')).length, RACINES_MOTEUR) || 1;
+            .filter((b) => /mode/i.test(typeof b.className === 'string' ? b.className : '') || b.hasAttribute('data-mode'))
+            // un mode à deux téléphones (« chacun sur son téléphone ») ne se
+            // joue pas seul : il se vérifie à la main
+            .filter((b) => !/online|distance|salon/i.test(b.id + ' ' + (typeof b.className === 'string' ? b.className : ''))).length, RACINES_MOTEUR) || 1;
         }
         const r = await joue(page, modes > 1 ? m : null);
         const ou = `${chemin} (moteur${modes > 1 ? `, mode ${m + 1}/${modes}` : ''})`;

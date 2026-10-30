@@ -9,7 +9,7 @@ le met à jour dans la PR de chaque lot.
 | Lot | Contenu | État |
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
-| 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | à faire |
+| 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | à faire |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
@@ -50,7 +50,46 @@ le met à jour dans la PR de chaque lot.
 - **Le guide** : `STIJLGIDS.md` ; les valeurs gardées telles quelles :
   `identiques.txt`.
 
-## Les chiffres au lot 0
+## Lot 1 (30 octobre 2026)
+
+- **La carte** : `mots-cles.tsv`, une ligne par route (99), avec la requête
+  française qui apporte le plus de clics et ses clics (Search Console, du
+  1er août au 29 octobre 2026). Le mot-clé principal en est l'équivalent
+  néerlandais naturel, jamais le même pour deux pages (92 mots-clés, les 7
+  pages d'information n'en ont pas). Les volumes mesurés par Thomas fixent
+  six pages : « vragen voor koppels » (questions), « grappige vragen voor
+  koppels » (quiz drôle), « liefdestest » (calculatrice), « spelletjes voor
+  koppels » (jeux), « relatietest » (test de couple), « zou je liever
+  vragen » (tu préfères).
+- **Les choix qui ne viennent pas de la requête française** :
+  - les points communs ne gardent pas « test de compatibilité amoureuse »,
+    qui leur apporte des clics en France mais appartient au test de
+    compatibilité (« passen we bij elkaar ») ;
+  - « test amour » et « quiz amour » ne vont ni à l'amour ou l'habitude ni
+    au « suis-je amoureux », mais à la calculatrice (« liefdestest ») et au
+    quiz sur l'amour (« quiz over liefde ») ;
+  - les 30 pages sans clic en France (les pages d'information, les tests
+    « ex » du 28 octobre, les quiz d'Halloween, le jeu de soirée, le
+    compteur...) prennent la requête de la page anglaise quand elle en a,
+    sinon le nom que l'usage néerlandais donne à la chose ;
+  - l'emprise devient « controlerende relatie test » : « dwingende
+    controle » est le terme officiel, peu tapé, il reste en secondaire.
+- **Les adresses** : `ROUTE_SLUGS.nl` pour les 99 routes, ASCII, tirées du
+  mot-clé principal. Les 99 pages sont construites (`/nl/...`), cachées, avec
+  les textes français en attendant les lots 2 à 7. Joués un à un
+  (`site nl --jouer --sans-rendus`), tous les moteurs vont jusqu'à leur
+  résultat, sans erreur de console. Pour ça, les fichiers de données qu'une
+  langue cachée n'a pas encore (`games-nl.json`, `purete-nl.json`,
+  `bilan-nl.json`) sont ceux du français : le jeu de pureté, qui ne sait pas
+  retomber seul sur le français, ne se lançait pas sur /nl/.
+
+## Les chiffres
+
+Au lot 1 : `code nl` 334 passages dans 61 fichiers (169 dans `config.js`),
+`seo nl` sans erreur (92 pages dont le title est encore en français),
+`textes nl` 0 partie écrite sur 1 042.
+
+### Au lot 0
 
 | Contrôle | Résultat |
 |---|---|
@@ -80,8 +119,9 @@ Calé le 30 octobre 2026 sur 24 moteurs allemands (`site de --jouer
 --sans-rendus`), qui vont tous jusqu'à leur résultat, dans chaque mode. Il remplit les prénoms, les dates et les listes, choisit une
 bascule seulement dans un groupe où rien n'est choisi (genre, nombre de
 cartes), répond, tape les relais entre joueurs ou attend qu'ils s'effacent,
-passe en dernier les boutons qui ne sont qu'un symbole (↺, ✕), et
-s'arrête à `.quiz-result-card` ou `[data-quiz-done]`. Les pages sans écran
+passe en dernier les boutons qui ne sont qu'un symbole (↺, ✕), ne joue
+pas un mode « chacun sur son téléphone » (il en faut deux), et s'arrête à
+`.quiz-result-card` ou `[data-quiz-done]`. Les pages sans écran
 de résultat (cartes sans fin, salons à plusieurs téléphones, hubs) sont dans
 `SANS_RESULTAT` et se vérifient à la main ; le jeu de soirée a son essai à
 six téléphones (CLAUDE.md).
