@@ -259,7 +259,7 @@
           var noteLocale = noteHero.toFixed(1).replace('.', lang === 'en' ? '.' : ',');
         %>
         <% if (nbAvisHero > 0) { %>
-        <div class="note-site" role="img" aria-label="<%= t('home:noteSite.label', 'Note moyenne du site') %> : <%= noteLocale %>/5, <%= nbAvisHero %> <%= t('common:reviews.reviews', 'avis') %>">
+        <div class="note-site" role="img" aria-label="<%= t('home:noteSite.label', 'Note moyenne du site') %><%= lang === 'fr' ? ' :' : ':' %> <%= noteLocale %>/5, <%= nbAvisHero %> <%= t('common:reviews.reviews', 'avis') %>">
           <span class="note-site-etoiles" aria-hidden="true">
             <% for (var ns = 1; ns <= 5; ns++) {
                  var plein = Math.max(0, Math.min(1, noteHero - (ns - 1))); %>
@@ -787,9 +787,13 @@
       <div class="grid gap-12 grid-cols-1 lg:grid-cols-2 items-center">
         <!-- Content -->
         <div class="space-y-6">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span> ?</h2>
-          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
-          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
+          <%# La suite d'un passage en gras : une espace avant un mot, aucune avant
+              une ponctuation (« constructifs. », pas « constructifs . »). %>
+          <% const suiteDuGras = (txt) => /^[.,;:!?)]/.test(txt) ? txt : ' ' + txt; %>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span><%# Le point d'interrogation : collé à son mot par une espace insécable en
+              français, sans espace dans les autres langues. %><%- lang === 'fr' ? '&nbsp;?' : '?' %></h2>
+          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong><%= suiteDuGras(t('home:whatIs.paragraph1End', '')) %></p>
+          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong><%= suiteDuGras(t('home:whatIs.paragraph2End', '')) %></p>
           <% const whatIsFeatures = t('home:whatIs.features', []); if (Array.isArray(whatIsFeatures) && whatIsFeatures.length > 0) { %>
           <ul class="space-y-3 pt-2">
             <% for (const feat of whatIsFeatures) { %>
@@ -869,15 +873,18 @@
 <!-- Latest Articles (statically rendered at build time) -->
 <%
   const latestArticles = (typeof blogArticlesList !== 'undefined' ? blogArticlesList : []).slice(0, 3);
-  const dateLocaleHome = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+  const dateLocaleHome = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
 %>
+<%# Une langue dont aucun article n'est encore traduit (le néerlandais avant
+    son lot 9) n'a pas cette section : un bloc « derniers articles » vide sur
+    l'accueil. Les cinq langues publiques en ont toujours. %>
+<% if (latestArticles.length > 0) { %>
 <section class="section-padding" id="latest-articles">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-8">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
       <p class="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed"><%= t('home:latestArticles.intro', '') %></p>
     </div>
-    <% if (latestArticles.length > 0) { %>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <% for (const article of latestArticles) { %>
       <article class="dernier-article group rounded-2xl overflow-hidden border border-border bg-card/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
@@ -903,14 +910,12 @@
       </article>
       <% } %>
     </div>
-    <% } else { %>
-    <p class="text-center text-muted-foreground py-8"><%= t('common:blog.noArticles', 'Aucun article disponible.') %></p>
-    <% } %>
     <div class="text-center mt-8">
       <a href="<%= getLocalizedUrl('blog', lang) %>" class="btn btn-outline"><%= t('common:blog.seeAll', 'Voir tous les articles') %></a>
     </div>
   </div>
 </section>
+<% } %>
 
 <%# Les trois dernières publications Instagram : nos propres affiches (bucket
     public rempli au rendu), lues par home-dynamic.js après le chargement.

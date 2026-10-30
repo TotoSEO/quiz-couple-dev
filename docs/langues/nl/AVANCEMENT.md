@@ -10,7 +10,7 @@ le met à jour dans la PR de chaque lot.
 |---|---|---|
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
-| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a fait le 30 octobre 2026 (menu, pied, pages d'information) ; 2b accueil, 2c textes communs des moteurs, 2d pages juridiques |
+| 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | en cours : 2a (menu, pied, pages d'information) et 2b (accueil) faits le 30 octobre 2026 ; 2c textes communs des moteurs, 2d pages juridiques |
 | 3 | Tests de couple, avec leurs textes de moteur | à faire |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
@@ -113,7 +113,48 @@ le met à jour dans la PR de chaque lot.
   - La clé `nav.bilanCoupleDesc` parle encore d'un rapport de 30 pages dans
     les cinq langues publiques ; aucune page ne l'affiche.
 
+## Lot 2b (30 octobre 2026) : l'accueil
+
+- **Les textes** : `nl/home.json`. Title « Quiz voor koppels: gratis online
+  tests voor jullie relatie » (58 signes), H1 « Test jullie relatie met een
+  quiz voor koppels », description de 154 signes avec « quiz voor koppels ».
+  Les phrases de la scène du hero sont courtes (« Wie valt altijd als eerste in
+  slaap? », « Zou je liever… ») et tiennent à 360 px. Les phrases des cartes
+  qui manquent dans `home.json` sont les descriptions des pages
+  (`quizzes.json`) : elles viendront avec chaque page, aux lots 3 à 7.
+- **L'image de partage** : `public/og/quiz-couple-nl.jpg` (« Quizzen, tests
+  en spelletjes voor koppels », « Gratis, zonder account »), dessinée par
+  `build/image-partage.mjs --langue nl`, qui ne refait plus que les langues
+  demandées ; texte alternatif dans `IMAGE_PARTAGE`.
+- **L'évaluation fermée en néerlandais** (`BILAN_LANGUES_FERMEES`,
+  `bilanOuvertPour(lang)` dans config.js) : plus de bouton dans le menu, de
+  barre de la réduction, de section ni de bouton sur l'accueil, d'encart sous
+  les résultats, de bannière ni de carte dans les familles sur les pages /nl/ ;
+  la page `/nl/relatiecheck/` est construite en noindex, hors du hreflang et
+  des sitemaps du néerlandais, et les liens écrits vers elle sont neutralisés.
+  Elle rouvre en retirant `nl` de la liste, au lot 8. Les cinq langues
+  publiques n'ont pas bougé d'un octet sur ce point.
+- **Les derniers articles** : la section ne s'affiche que s'il y a des articles
+  dans la langue ; l'accueil /nl/ n'en a pas avant le lot 9.
+- **Au passage, sur l'accueil des cinq langues publiques** : les cartes du
+  mariage, du divorce et de la parentalité donnaient 30, 25 et 20 questions
+  (20, 15, et 12 ou 24 en vrai, aussi dans les cartes « À faire ensuite ») ;
+  l'introduction du blog parlait encore des tests d'applications de rencontre,
+  retirés ; celle d'Instagram de « trois animations par jour » ; le titre
+  « Qu'est-ce qu'un quiz pour couples ? » avait une espace avant son « ? » en
+  anglais, en espagnol, en allemand et en italien, et une espace précédait la
+  ponctuation après les mots en gras du même bloc (« constructifs . »).
+- **À trancher avant l'ouverture** : le blog /nl/ est vide jusqu'au lot 9, et
+  le menu, le pied de page et le plan du site y mènent. Soit on traduit
+  quelques articles avant d'ouvrir, soit la page du blog reste en noindex et
+  hors du menu tant qu'une langue n'a pas d'article.
+
 ## Les chiffres
+
+Au lot 2b : `code nl` 280 passages, `textes nl` 27 parties écrites sur 1 042,
+`seo nl` sans erreur (3 pages contrôlées), `site nl --pages '/nl/$'` sans
+débordement ni erreur de console, les textes restés en français étant les
+descriptions des pages (`quizzes.json`).
 
 Au lot 1 : `code nl` 334 passages dans 61 fichiers (169 dans `config.js`),
 `seo nl` sans erreur (92 pages dont le title est encore en français),

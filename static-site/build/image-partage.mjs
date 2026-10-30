@@ -16,8 +16,9 @@
 // sharp viennent d'en dehors du dépôt :
 //   cd /tmp && npm i sharp@0.33.5 && cd -
 //   NODE_PATH=/opt/node22/lib/node_modules:/tmp/node_modules node static-site/build/image-partage.mjs [--apercu <dossier>]
-// Il écrit public/og/quiz-couple-<langue>.jpg ; --apercu ajoute une copie PNG
-// des cinq images dans le dossier donné. Pour changer l'image, on change le nom
+// Il écrit public/og/quiz-couple-<langue>.jpg ; --langue nl n'en refait qu'une
+// (les autres images ne bougent pas d'un octet), --apercu ajoute une copie PNG
+// de chaque image dans le dossier donné. Pour changer l'image, on change le nom
 // du fichier (IMAGE_PARTAGE dans config.js) : les réseaux gardent en cache
 // l'image d'une adresse déjà vue.
 
@@ -43,6 +44,7 @@ const TEXTES = {
   es: { avant: 'Quiz, tests y juegos para', mot: 'parejas', pastille: 'Gratis, sin registro' },
   de: { avant: 'Quiz, Tests und Spiele für', mot: 'Paare', pastille: 'Kostenlos, ohne Anmeldung' },
   it: { avant: 'Quiz, test e giochi per', mot: 'coppie', pastille: 'Gratis, senza registrazione' },
+  nl: { avant: 'Quizzen, tests en spelletjes voor', mot: 'koppels', pastille: 'Gratis, zonder account' },
 };
 
 const dataUrl = (fichier, type) => `data:${type};base64,${fs.readFileSync(fichier).toString('base64')}`;
@@ -172,12 +174,15 @@ html, body { margin: 0; background: ${C.nuit}; }
 async function main() {
   const iApercu = process.argv.indexOf('--apercu');
   const apercu = iApercu > 0 ? process.argv[iApercu + 1] : null;
+  const iLangue = process.argv.indexOf('--langue');
+  const langues = iLangue > 0 ? process.argv[iLangue + 1].split(',') : Object.keys(TEXTES);
+  for (const l of langues) if (!TEXTES[l]) throw new Error(`langue inconnue : ${l}`);
   fs.mkdirSync(SORTIE, { recursive: true });
   if (apercu) fs.mkdirSync(apercu, { recursive: true });
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 2 });
   const p = await ctx.newPage();
-  for (const lang of Object.keys(TEXTES)) {
+  for (const lang of langues) {
     await p.setContent(page(lang), { waitUntil: 'load' });
     await p.evaluate(() => document.fonts.ready);
     await p.waitForTimeout(150);

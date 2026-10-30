@@ -14,7 +14,7 @@
 //   --jouer           site : chaque moteur joué jusqu'à l'écran de résultat,
 //                     une fois par mode proposé au départ
 //   --pages a,b       seo et site : seulement les adresses qui contiennent
-//                     l'un de ces bouts
+//                     l'un de ces bouts (« /nl/$ » : cette adresse seule)
 //   --sans-rendus     site : seulement les moteurs (avec --jouer)
 //   --debug           site : chaque étape du joueur
 //   --sortie f.json   tout le rapport, sans coupe
@@ -64,6 +64,8 @@ if (LANGUE === 'en' && ['textes', 'site', 'tout'].includes(QUOI)) {
 }
 const DEBUG = drapeau('--debug');
 const PAGES = (valeurDe('--pages') || '').split(',').map((s) => s.trim()).filter(Boolean);
+// « /nl/$ » : cette adresse seule ; « /nl/relatietest » : toutes celles qui la contiennent.
+const pageRetenue = (chemin) => !PAGES.length || PAGES.some((p) => (p.endsWith('$') ? chemin === p.slice(0, -1) : chemin.includes(p)));
 // Les langues déjà publiées, auxquelles on compare la nouvelle.
 const AUTRES = LANGUAGES.filter((l) => l !== LANGUE && !LANGUES_CACHEES.includes(l));
 const DOC_LANGUE = path.join(REPO, 'docs', 'langues', LANGUE);
@@ -540,7 +542,10 @@ function controleTextes() {
 
         // La typographie et le ton.
         for (const [re, quoi] of TYPO[LANGUE] || []) if (re.test(v)) erreur(C, loc, quoi);
-        if (/\s[?!;](?=\s|$)/.test(texte) && !/[\u00a0\u202f][?!;]/.test(v)) avert(C, loc, 'espace avant un point d\'interrogation ou d\'exclamation');
+        // Sur le texte aux balises retirées sans espace : « <a>…</a>! » n'a pas
+        // d'espace avant son point d'exclamation.
+        const colle = String(v).replace(/<[^>]+>/g, '');
+        if (/\s[?!;](?=\s|$)/.test(colle) && !/[\u00a0\u202f][?!;]/.test(v)) avert(C, loc, 'espace avant un point d\'interrogation ou d\'exclamation');
         const estTitre = /(^|[._])(title|titre|heading|h[1-3]|shortTitle|metaTitle|seoTitle)$|Title$|Titre$/i.test(k);
         for (const mot of interditsTitre) if (estTitre && motTrouve(texte, mot)) erreur(C, loc, `mot interdit dans un titre : « ${mot} »`);
         for (const mot of marqueurs) if (motTrouve(texte, mot)) avert(C, loc, `tournure à éviter : « ${mot} »`);
@@ -635,7 +640,7 @@ function controleSeo() {
     const chemin = r.cle.startsWith('blog:')
       ? getArticlePath(r.adresse, LANGUE)
       : (ROUTE_SLUGS[r.cle] && getLocalizedPath(r.cle, LANGUE));
-    if (!chemin || (PAGES.length && !PAGES.some((p) => chemin.includes(p)))) continue;
+    if (!chemin || !pageRetenue(chemin)) continue;
     const f = fichierPage(chemin);
     if (!fs.existsSync(f)) { afaire(C, chemin, 'page pas encore construite'); continue; }
     const b = balisesDe(fs.readFileSync(f, 'utf8'));
@@ -934,7 +939,7 @@ async function controleSite() {
   const permis = identiquesPermis();
   const chemins = parcours(path.join(DIST, LANGUE), (p) => p.endsWith('index.html') || p.endsWith('404.html'))
     .map((f) => '/' + path.relative(DIST, f).replace(/index\.html$/, '').replace(/\\/g, '/'))
-    .filter((c) => !PAGES.length || PAGES.some((p) => c.includes(p)));
+    .filter(pageRetenue);
   const rendus = [
     { nom: '360 clair', viewport: { width: 360, height: 780 }, colorScheme: 'light' },
     { nom: '360 sombre', viewport: { width: 360, height: 780 }, colorScheme: 'dark' },

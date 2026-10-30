@@ -1,0 +1,251 @@
+{
+  "seo": {
+    "title": "Quiz voor koppels: gratis online tests voor jullie relatie",
+    "description": "Doe een gratis quiz voor koppels: hoe goed passen jullie bij elkaar, hoeveel vertrouwen is er, hoe praten jullie samen? Direct je uitslag, zonder account.",
+    "schemaDescription": "Gratis quizzen en tests om samen te doen en jullie relatie te testen"
+  },
+  "hero": {
+    "badge": "100% gratis, zonder account",
+    "title": "Test jullie relatie met een",
+    "titleHighlight": "quiz voor koppels",
+    "description": "Hoe goed kennen jullie elkaar eigenlijk? Met onze quizzen komen jullie daar samen achter, en meestal wordt er flink bij gelachen.",
+    "descriptionHighlight": "Direct je uitslag, met tips die bij jullie passen!",
+    "cta": "Bekijk onze quizzen",
+    "ctaSecondary": "Doe de relatietest",
+    "stats": {
+      "quizzesLabel": "quizzen en spelletjes",
+      "testsLabel": "tests",
+      "totalLabel": "quizzen en tests gedaan"
+    }
+  },
+  "evaluation": {
+    "sur": "Nieuw · Relatiecheck",
+    "titre": "Willen jullie allebei hetzelfde leven?",
+    "texte": "100 concrete vragen over twaalf delen van jullie leven samen, gebaseerd op onderzoek naar relaties, en een volledig rapport dat jullie antwoorden naast elkaar zet. Met z'n tweeën, op hetzelfde moment, ieder op een eigen telefoon: reken op een minuut of twintig.",
+    "points": [
+      "Ieder antwoordt op een eigen telefoon, zonder de antwoorden van de ander te zien",
+      "Een volledig rapport, met grafieken en genoeg om samen over te praten",
+      "Vragen gratis · {{prix}} voor het rapport, aan het eind"
+    ],
+    "ctaDuo": "Doe de relatiecheck samen",
+    "ctaCourt": "Check je relatie",
+    "legende": "Een pagina uit het voorbeeldrapport"
+  },
+  "quizSection": {
+    "title": "Onze gratis quizzen voor",
+    "titleHighlight": "koppels",
+    "description": "Kies de quiz die bij jullie past en kom meer te weten over jullie relatie. Al onze quizzen zijn gratis, zonder account, en de uitslag krijg je meteen!",
+    "questionsCard": {
+      "title": "120 vragen voor koppels",
+      "subtitle": "Voor jullie avondjes samen",
+      "button": "Bekijk de vragen"
+    }
+  },
+  "whatIs": {
+    "title": "Wat is een",
+    "titleHighlight": "quiz voor koppels",
+    "paragraph1": "Een quiz voor koppels is een",
+    "paragraph1Highlight": "speelse vragenlijst",
+    "paragraph1End": "die speciaal voor stellen is gemaakt. Samen kijken jullie naar allerlei kanten van je relatie: hoe jullie met elkaar praten, intimiteit, plannen voor later, en nog veel meer.",
+    "paragraph2": "Onze quizzen zijn gemaakt om",
+    "paragraph2Highlight": "leuk én nuttig",
+    "paragraph2End": "te zijn. Je hoeft er geen ingewikkelde psychologische test van te verwachten: het is gewoon een moment samen, om te lachen en elkaar beter te leren kennen.",
+    "features": [
+      "Leuke vragen, zonder oordeel",
+      "Voor elk koppel",
+      "Geen account nodig",
+      "Direct een uitslag op maat"
+    ],
+    "imageAlt": "Illustratie van een quiz voor koppels",
+    "stats": {
+      "quizzes": "12",
+      "quizzesLabel": "quizzen",
+      "questions": "800+",
+      "questionsLabel": "vragen om te ontdekken"
+    }
+  },
+  "whyDoQuiz": {
+    "title": "Waar deze quizzen",
+    "titleHighlight": "goed voor zijn",
+    "subtitle": "Zes goede redenen om vanavond samen je telefoon te pakken, in plaats van nog een aflevering te kijken.",
+    "reasons": {
+      "testRelation": {
+        "title": "Weten waar jullie staan",
+        "description": "Jullie sterke punten, jullie blinde vlekken en een score die alles samenvat. Dat is eerlijker dan een gesprek laat op de avond, en het duurt vijf minuten."
+      },
+      "haveFun": {
+        "title": "Een leuke avond hebben",
+        "description": "Niks te reserveren, niks te installeren. Eén telefoon, jullie twee, en de avond neemt een heel andere wending."
+      },
+      "discover": {
+        "title": "Nog iets nieuws over elkaar leren",
+        "description": "Zelfs na tien jaar zijn er antwoorden die je nog nooit hebt gehoord. Vaak is het de gekste vraag die ze naar boven haalt, en dat werkt heel goed als jullie <a href=\"/nl/vragen-voor-koppels/\">vragen uit een hoed trekken</a>!"
+      },
+      "strengthen": {
+        "title": "De klik terugvinden",
+        "description": "Een spelletje waarbij je lacht en elkaar plaagt, zoals in het begin. Zo'n moment verdwijnt ongemerkt als de weken voorbijvliegen."
+      },
+      "dialogue": {
+        "title": "Zeggen wat je anders niet zegt",
+        "description": "Sommige onderwerpen komen nooit vanzelf ter sprake. Een vraag van het scherm komt beter aan dan dezelfde vraag van de ander."
+      },
+      "memories": {
+        "title": "Er iets aan overhouden",
+        "description": "Een uitslag om te delen of een screenshot om naar elkaar te sturen. En vaak een gesprek dat nog lang na de laatste vraag doorgaat."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Zo",
+    "titleHighlight": "werkt het",
+    "subtitle": "Drie stappen en jullie kunnen beginnen.",
+    "steps": {
+      "choose": {
+        "step": "1",
+        "title": "Kies",
+        "description": "Een serieuze test of een luchtig spelletje, net waar jullie zin in hebben. Alles is gratis en nergens heb je een account voor nodig."
+      },
+      "answer": {
+        "step": "2",
+        "title": "Antwoord",
+        "description": "Om de beurt op dezelfde telefoon, of ieder op een eigen toestel. De vragen komen één voor één."
+      },
+      "results": {
+        "step": "3",
+        "title": "Bekijk de uitslag",
+        "description": "Een uitgebreide uitslag, de tips die erbij horen, en meteen een idee voor de volgende test."
+      }
+    }
+  },
+  "finalCTA": {
+    "title": "Klaar om jullie",
+    "titleHighlight": "klik te testen?",
+    "description": "Kies jullie favoriete quiz en ontdek wat jullie relatie zo bijzonder maakt. Het is gratis, zonder account, en het duurt maar een paar minuten!",
+    "button": "Begin nu",
+    "socialProof": "Al",
+    "socialProofEnd": "quizzen en tests gedaan door koppels zoals jullie 💕"
+  },
+  "latestArticles": {
+    "title": "De nieuwste artikelen",
+    "titleHighlight": "van de blog",
+    "intro": "Naast de spelletjes en tests op de site schrijven we ook een blog, die we zo vaak mogelijk aanvullen. Tips voor jullie relatie, psychologie, astrologie, liefdesverdriet of beroemde liefdesverhalen: we schrijven over van alles, voor jullie, en met veel plezier."
+  },
+  "quizGrid": {
+    "testsTitle": "Onze tests voor koppels",
+    "testsDesc": "Hoe staat jullie relatie ervoor? Onze tests laten zien waar het goed zit en waar het wringt",
+    "quizzesTitle": "Onze quizzen om samen te doen",
+    "quizzesDesc": "Leuke quizzen om samen te spelen, en zo kom je weer wat dichter bij elkaar",
+    "jeuxTitle": "Onze spelletjes voor twee",
+    "jeuxDesc": "{{n}} spelletjes die je met één tik start, zonder account en zonder iets voor te bereiden.",
+    "jeuxCta": "Bekijk al onze spelletjes voor koppels",
+    "celibEyebrow": "Singles",
+    "celibTitle": "Onze tests voor singles",
+    "celibDesc": "Heb je een crush, zit je ex nog in je hoofd of voelt een vriendschap als iets meer? Deze tests zijn voor jou, al voordat je een relatie hebt.",
+    "cards": {
+      "testCouple": "20 vragen om jullie relatie te testen.",
+      "testCommonPoints": "Hoeveel hebben jullie met elkaar gemeen?",
+      "testDistance": "Houdt jullie relatie het vol op afstand?",
+      "testToxic": "Herken de signalen van een ongezonde relatie.",
+      "testRedFlag": "Man of vrouw: twintig vragen om te zien of deze persoon een red flag is.",
+      "testEncoreAmoureuxEx": "Liefde of gewoon gemis? Twintig vragen om het verschil te zien.",
+      "testOublierEx": "Een schatting, in maanden, van hoe lang het duurt voor je je ex loslaat.",
+      "testExRevenir": "De kans dat je ex terugkomt, op basis van hoe jullie uit elkaar gingen en wat er daarna gebeurde.",
+      "testRemettreEx": "Twintig vragen om jezelf te stellen voor je ja zegt tegen een tweede poging.",
+      "testOublieSonEx": "Is je partner over zijn of haar ex heen? Twintig vragen, over hem of over haar.",
+      "testPourquoiQuitte": "Wat het zwaarst woog toen je ex het uitmaakte, uit de acht redenen die het vaakst voorkomen.",
+      "testCoupleSain": "Kijk of jullie relatie gezond en in balans is.",
+      "testMariage": "20 vragen om te zien of jullie klaar zijn om te trouwen.",
+      "testDivorce": "15 vragen om eerlijk naar jullie relatie te kijken.",
+      "testParentalite": "12 of 24 vragen om te zien of jullie klaar zijn om ouders te worden.",
+      "testAttachement": "Wat is jouw hechtingsstijl: veilig, angstig of vermijdend?",
+      "testConfiance": "Hoeveel vertrouwen is er tussen jullie?",
+      "quizAmoureux": "Praat samen en kijk hoe goed jullie op één lijn zitten.",
+      "quizCoquin": "Praat over jullie verlangens en breng wat pit in de relatie.",
+      "quizMarrant": "Lach samen om de gekste vragen!",
+      "quizKnowledge": "Wie kent de ander het best? Daag elkaar uit!",
+      "quizMost": "Stem samen: wie van jullie is het meest...?",
+      "quizSerialKiller": "Vijftien situaties op een halloweenavond, en de bekende seriemoordenaar op wie je het meest lijkt (flink aangedikt).",
+      "quizMortFilmHorreur": "Vijftien situaties, een overlevingstijd in minuten, en wie als eerste sterft als jullie met z'n tweeën spelen.",
+      "quizPossession": "Voor ieder een kans op bezetenheid in procenten, en wie de demonen zouden kiezen.",
+      "quizSuperVilain": "Je entree op het feest, je kostuum, je lach: de superschurk op wie je lijkt, van de Joker tot Maleficent.",
+      "quizDuoVilains": "De kraak van de halloweennacht: ieders rol, en het beroemde schurkenduo dat jullie samen vormen."
+    },
+    "testsEyebrow": "De tests",
+    "quizzesEyebrow": "De quizzen",
+    "jeuxEyebrow": "De spelletjes",
+    "speciauxEyebrow": "Speciale editie",
+    "speciauxTitle": "Onze themaquizzen, per seizoen",
+    "speciauxTitleSaison": {
+      "halloween": "Speciaal voor Halloween: onze (een beetje) enge quizzen"
+    },
+    "speciauxDesc": "{{n}} quizzen om alleen of met z'n tweeën te doen, voor een avond die anders is dan anders. Je kunt ze allemaal ook op afstand spelen, ieder op een eigen telefoon.",
+    "speciauxCta": "Bekijk alle themaquizzen"
+  },
+  "customQuizPromo": {
+    "eyebrow": "Eigen quiz",
+    "title": "Maak je",
+    "titleHighlight": "eigen quiz",
+    "sub": "Je schrijft je eigen vragen, kiest het soort quiz, en wij geven je een link om naar je partner of je vrienden te sturen. Zij spelen op hun telefoon, zonder account, en het is gratis!",
+    "modeles": [
+      "Quiz met punten",
+      "Waar of niet waar",
+      "Zou je liever",
+      "Gewoon voor de lol"
+    ],
+    "note": "De quiz blijft privé: alleen wie de link heeft, kan meespelen.",
+    "cta": "Maak mijn quiz",
+    "demo": {
+      "titre": "Hoe goed ken je mij?",
+      "num": "Vraag 2/10",
+      "question": "Mijn favoriete toetje?",
+      "reponses": [
+        "Dame blanche",
+        "Pannenkoeken",
+        "Chocolademousse"
+      ],
+      "lien": "Link gekopieerd ✓"
+    }
+  },
+  "marquee": {
+    "item1": "💕 Test jullie relatie",
+    "item2": "🔥 Pittige vragen",
+    "item3": "😂 Gegarandeerd lachen",
+    "item4": "🎯 Wat jullie gemeen hebben",
+    "item5": "💬 Echte gesprekken",
+    "item6": "🎲 Voor met z'n tweeën",
+    "item7": "✨ 100% gratis",
+    "item8": "🚀 Zonder account",
+    "item9": "🌙 Romantisch avondje",
+    "item10": "🧠 Hoe goed kennen jullie elkaar?",
+    "item11": "👀 Wie van ons twee?",
+    "item12": "⚡ Direct je uitslag"
+  },
+  "noteSite": {
+    "label": "Gemiddelde beoordeling van de site"
+  },
+  "heroScene": {
+    "etiquette": "Relatietest",
+    "progression": "Vraag 12/20",
+    "question": "Wie valt altijd als eerste in slaap?",
+    "a": "Ik, zonder twijfel",
+    "b": "De ander, binnen twee minuten",
+    "c": "Hangt van de avond af",
+    "match": "Zelfde antwoord!",
+    "jeu": "Zou je liever…",
+    "ou": "of",
+    "choixA": "Een filmavond onder een dekentje",
+    "choixB": "Uit eten, met z'n tweeën",
+    "desaccord": "Niet hetzelfde!",
+    "resultat": "Jullie uitslag",
+    "pct": "87",
+    "verdict": "Een hecht koppel!",
+    "detail": "17 van de 20 antwoorden hetzelfde"
+  },
+  "instagram": {
+    "title": "Onze nieuwste posts",
+    "titleHighlight": "op Instagram",
+    "intro": "Elke dag een nieuw kort filmpje: een ‘Zou je liever’-dilemma om samen te beslissen, vragen om te zien hoe goed jullie elkaar kennen, of een klein verhaaltje over een koppel om naar de ander te sturen.",
+    "follow": "Volg @quiz_couple_official",
+    "voir": "Bekijk op Instagram"
+  }
+}
