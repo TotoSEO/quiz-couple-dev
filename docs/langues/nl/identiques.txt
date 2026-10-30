@@ -34,3 +34,6 @@ red flag
 Green flag
 Factor
 Effect
+# « Quality time » est le nom néerlandais du langage (traduction du livre de Chapman, « De vijf talen van de liefde »).
+Quality time
+⏳ Quality time
