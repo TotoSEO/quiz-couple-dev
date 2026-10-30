@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -426,7 +426,45 @@ le met à jour dans la PR de chaque lot.
   toxique. Un lien vers un article du blog (la peur de l'engagement) attend
   sa traduction.
 
+## Lot 3h (30 octobre 2026) : jalousie, confiance
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/jaloezie-test/` | Jaloezie test: ben ik te jaloers, of mijn partner? | Ben ik te jaloers? De jaloezie test voor jou en je partner |
+  | `/nl/vertrouwen-relatie-test/` | Vertrouwen in een relatie test: vertrouw je elkaar? | Vertrouw ik mijn partner? De vertrouwenstest voor koppels |
+
+- **Les textes de moteur** : les deux séries de la jalousie, `jalousie1` (la
+  sienne) et `jalousie2` (celle du partenaire, des questions « Wat doet je
+  partner als... ? » et des réponses qui commencent par le verbe), cinq
+  verdicts chacune ; `confiance` (20 questions, quatre verdicts).
+- **Le gabarit de la jalousie** : ses onglets et ses deux paragraphes
+  d'introduction sont écrits dans `quiz-jalousie.ejs`, langue par langue ;
+  le néerlandais y a sa branche (sans elle, la page aurait affiché
+  l'italien, la dernière branche de chaque phrase). Le contrôle `code` ne
+  signale plus ce gabarit.
+- **La porte e-mail** : les deux pages l'ont. Le sous-titre de la confiance
+  dit « zonder account » au lieu de « confidentiel », et la FAQ ne reprend
+  pas le chiffre de 35 à 40 % des couples qui retrouvent la confiance après
+  une infidélité, faute de source.
+- **Les liens** : de la jalousie vers le style d'attachement, « is hij over
+  zijn ex heen », la confiance, la relation sous contrôle, le couple toxique
+  et la dépendance affective ; de la confiance vers la jalousie, le style
+  d'attachement, l'infidélité et la dépendance affective.
+- **Les mots gardés** : « Factor » et « Effect » (en-têtes du tableau de la
+  confiance) rejoignent `identiques.txt`.
+
 ## Les chiffres
+
+Au lot 3h : `textes nl` 252 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (24 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat (la deuxième série de la jalousie, derrière son onglet, jouée à
+part dans Chromium), et les textes restés en français sont ceux des cartes
+« Hierna » vers des pages pas encore traduites. Aucune page publique ne
+change, gabarit de la jalousie compris.
+
 
 Au lot 3g : `textes nl` 228 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (22 pages traduites) ; `site nl` sur les deux pages : aucun
