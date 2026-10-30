@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -239,7 +239,45 @@ le met à jour dans la PR de chaque lot.
   résultat de chaque moteur joué, sans la porte e-mail, pour relire les
   verdicts ; `identiques.txt` accepte Pasta, Burger, Japan, New York, Winter.
 
+## Lot 3b (30 octobre 2026) : relation à distance, fin de couple
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/lange-afstandsrelatie-test/` | Lange afstandsrelatie test: 100 vragen, alleen of samen | Lange afstandsrelatie test: houden jullie het samen vol? |
+  | `/nl/is-mijn-relatie-voorbij/` | Is mijn relatie voorbij? De test in 24 eerlijke vragen | Is mijn relatie voorbij, of nog niet? Onze test |
+
+- **Les textes de moteur** : `distance` (100 questions, deux modes, quatre
+  verdicts et leurs étiquettes) ; `finCouple` (24 questions et leurs points
+  recopiés du français, huit niveaux) et, dans quizGames.json, `finCouple`
+  (les trois pistes de la fin du test).
+- **Les adaptations** : la page « relation à distance » parlait de « la
+  réalité française » (l'indépendance des couples français, 18 à 24 mois
+  avant de se retrouver) ; en néerlandais, la sous-partie dit seulement la
+  durée moyenne, sans parler de la France. Les deux témoignages gardent
+  leurs prénoms et leurs villes.
+- **Les liens** : vers « houdt hij van mij op afstand », le test toxique et
+  « met iemand anders geslapen » ; trois liens vers des articles du blog
+  (Marie-Antoinette et Fersen, arrêter ou continuer) attendent leur
+  traduction.
+- **Corrigé dans les cinq langues publiques** : le résumé de la page « fin
+  de couple » promettait « aucune donnée personnelle », alors que la porte
+  e-mail demande une adresse pour voir le résultat complet (CLAUDE.md : une
+  page à porte ne promet jamais « sans e-mail ») ; il dit désormais
+  seulement « aucune inscription ».
+- **Le contrôle seo** a trouvé « concreet » dans le titre H3 d'une question
+  de la liste pour les robots : la question 1 a été reformulée.
+
 ## Les chiffres
+
+Au lot 3b : `textes nl` 114 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (9 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement, chaque moteur va jusqu'à son résultat dans chaque mode, et les
+trois textes restés en français sont ceux des cartes « Hierna » vers des
+pages pas encore traduites. Côté public, seule la phrase du résumé de la fin
+de couple change, dans les cinq langues.
+
 
 Au lot 3a : `textes nl` 84 parties écrites sur 1 045, sans erreur (trois
 avertissements voulus : « Relatieblog », « Thrillers », « Rap/hiphop ») ;

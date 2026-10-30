@@ -362,6 +362,15 @@
     "namePlaceholder": "Bijv. Daan",
     "yourName": "Voornaam van je partner"
   },
+  "finCouple": {
+    "orientationTitre": "Wat deze test je niet heeft gevraagd",
+    "orient_couche_nom": "Of hij of zij met iemand anders heeft geslapen",
+    "orient_couche_raison": "Vijftien vragen over concrete tekenen, als je twijfel over iemand anders gaat.",
+    "orient_distance_nom": "Op afstand: houdt hij of zij nog van me?",
+    "orient_distance_raison": "Je hebt geantwoord dat jullie op afstand wonen. Daar betekenen de signalen niet hetzelfde.",
+    "orient_toxique_nom": "Is mijn relatie toxisch?",
+    "orient_toxique_raison": "Een relatie kan eindigen omdat ze uitdooft, of omdat ze schade doet. Dat is niet hetzelfde."
+  },
   "salon": {
     "activer": "Op afstand spelen",
     "aide": "Met deze modus speelt ieder op een eigen telefoon. De een maakt het spel aan, de ander doet mee. Leuk voor meer interactie, of voor koppels die ver van elkaar wonen!",
