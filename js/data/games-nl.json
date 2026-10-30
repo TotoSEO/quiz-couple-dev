@@ -314,10 +314,10 @@
     "enregistree": "Afbeelding opgeslagen! Open Instagram, TikTok, Snapchat of Facebook en zet hem in je story."
   },
   "parentalite": {
-    "setupDesc": "Répondez chacun de votre côté aux mêmes {{n}} questions.",
-    "scoreOn60": "Score sur 60 par personne",
-    "combinedScore": "Score global du couple",
-    "gapWarning": "Il y a un écart significatif entre vos deux scores. C'est souvent dans ces écarts que se trouvent les discussions les plus importantes à avoir."
+    "setupDesc": "Beantwoord allebei apart dezelfde {{n}} vragen.",
+    "scoreOn60": "Score op 60 per persoon",
+    "combinedScore": "Gezamenlijke score van het koppel",
+    "gapWarning": "Er zit een flink verschil tussen jullie twee scores. Vaak zitten juist in zulke verschillen de belangrijkste gesprekken."
   },
   "quizNames": {
     "testDureeCelibat": "Hoe lang blijf ik nog single?",
