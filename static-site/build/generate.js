@@ -14,7 +14,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -106,6 +106,15 @@ const FUTURE_BLOG_URLS = new Set();
     BLOG_ARTICLES.push(...publies);
     console.log(`[blog] ${futurs.length} article(s) programmé(s) en attente (publishedAt > ${BUILD_INSTANT.toISOString()})`);
     console.log(`[blog] prochain : ${futurs.map(f => f.publishedAt).sort()[0]}`);
+  }
+}
+// Dans une langue cachée, un article dont l'adresse est déclarée mais dont
+// le texte n'est pas encore traduit (articleTraduit) : les liens écrits vers
+// lui sont neutralisés de la même façon, et reviennent seuls le jour où son
+// fichier arrive dans data/blog/<langue>/.
+for (const a of BLOG_ARTICLES) {
+  for (const l of LANGUAGES) {
+    if (langueCachee(l) && a.slugs && a.slugs[l] && !articleTraduit(a, l)) FUTURE_BLOG_URLS.add(getArticlePath(a.slugs[l], l));
   }
 }
 
@@ -546,7 +555,7 @@ async function fetchLecturesArticles() {
   const chemins = [];
   for (const a of BLOG_ARTICLES) {
     for (const l of (a.frOnly ? ['fr'] : LANGUAGES)) {
-      if (a.slugs && a.slugs[l]) chemins.push(getArticlePath(a.slugs[l], l));
+      if (a.slugs && a.slugs[l] && articleTraduit(a, l)) chemins.push(getArticlePath(a.slugs[l], l));
     }
   }
   if (!chemins.length) return;
@@ -1189,7 +1198,7 @@ async function generatePage(routeKey, lang) {
   // sitemaps (generateSitemaps), et les liens vers elle restent suivis
   // (« noindex, follow »).
   const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
-  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !BILAN_OUVERT);
+  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !BILAN_OUVERT) || langueCachee(lang);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
 
@@ -1429,6 +1438,7 @@ async function generatePage(routeKey, lang) {
     for (const articleMeta of BLOG_ARTICLES) {
       // Skip frOnly articles for non-FR languages
       if (articleMeta.frOnly && lang !== 'fr') continue;
+      if (!articleTraduit(articleMeta, lang)) continue;
       const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
       const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
       const frPath = path.resolve(__dirname, '../../data/blog/fr', `${articleMeta.internalSlug}.ts`);
@@ -1524,6 +1534,8 @@ async function generatePage(routeKey, lang) {
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,
+    languesMenu: languesMenu(lang),
+    langueCachee: langueCachee(lang),
     // Translation function
     t,
     tgd,
@@ -1659,7 +1671,7 @@ function generateSitemaps() {
   // Generate hreflang links block for a set of localized URLs
   function hreflangs(urlsByLang) {
     let xml = '';
-    for (const lang of LANGUAGES) {
+    for (const lang of LANGUES_PUBLIQUES) {
       xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${urlsByLang[lang]}"/>\n`;
     }
     xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlsByLang.fr}"/>\n`;
@@ -1697,7 +1709,7 @@ function generateSitemaps() {
     if (cfg.template) fichiers.push(`static-site/templates/pages/${cfg.template}.ejs`);
     for (const ns of cfg.namespaces || []) {
       if ((compteNamespaces.get(ns) || 0) > 1) continue;
-      for (const lang of LANGUAGES) fichiers.push(`${lang}/${ns}.json`);
+      for (const lang of LANGUES_PUBLIQUES) fichiers.push(`${lang}/${ns}.json`);
     }
     return fichiers;
   }
@@ -1711,7 +1723,7 @@ function generateSitemaps() {
 
     // Build URL map for available languages
     const urlsByLang = {};
-    for (const lang of LANGUAGES) {
+    for (const lang of LANGUES_PUBLIQUES) {
       if (slugs[lang] !== undefined) {
         urlsByLang[lang] = url(lang, slugs[lang]);
       }
@@ -1739,7 +1751,7 @@ function generateSitemaps() {
       entries.push({ urlsByLang: { fr: blogUrl('fr', article.slugs.fr) }, lastmod: article.publishedAt, frOnly: true, priority: '0.6', changefreq: 'monthly' });
     } else {
       const urlsByLang = {};
-      for (const lang of LANGUAGES) {
+      for (const lang of LANGUES_PUBLIQUES) {
         urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
       }
       entries.push({ urlsByLang, lastmod: article.publishedAt, priority: '0.6', changefreq: 'monthly' });
@@ -1748,7 +1760,7 @@ function generateSitemaps() {
 
   // Generate one sitemap per language
   const maxLastmodParLangue = new Map();
-  for (const lang of LANGUAGES) {
+  for (const lang of LANGUES_PUBLIQUES) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
     xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
@@ -1790,7 +1802,7 @@ function generateSitemaps() {
   let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   index += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
   index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-  for (const lang of LANGUAGES) {
+  for (const lang of LANGUES_PUBLIQUES) {
     const derniere = maxLastmodParLangue.get(lang);
     index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n`;
     if (derniere) index += `    <lastmod>${derniere}</lastmod>\n`;
@@ -1801,7 +1813,7 @@ function generateSitemaps() {
 
   const sansDate = entries.filter(e => !e.lastmod).length;
   console.log(
-    `[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)` +
+    `[sitemaps] Generated sitemap index + ${LANGUES_PUBLIQUES.length} language sitemaps (${entries.length} URLs each)` +
     (sansDate ? ` — ${sansDate} sans lastmod` : '')
   );
 }
@@ -1832,7 +1844,7 @@ function dateRss(publishedAt) {
 }
 
 function generateFlux() {
-  for (const lang of LANGUAGES) {
+  for (const lang of LANGUES_PUBLIQUES) {
     const items = [];
     for (const meta of BLOG_ARTICLES) {
       if (meta.frOnly && lang !== 'fr') continue;
@@ -1881,7 +1893,7 @@ function generateFlux() {
     ensureDir(path.dirname(sortie));
     fs.writeFileSync(sortie, xml);
   }
-  console.log(`[flux] ${LANGUAGES.length} flux RSS du blog (${FLUX_MAX} articles au plus chacun)`);
+  console.log(`[flux] ${LANGUES_PUBLIQUES.length} flux RSS du blog (${FLUX_MAX} articles au plus chacun)`);
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
@@ -2268,6 +2280,22 @@ function parseArticleTs(filePath) {
   }
 }
 
+// Le sélecteur de langue du menu : les langues publiques, et sur une page
+// d'une langue cachée, cette langue en plus, pour la relire.
+function languesMenu(lang) {
+  return langueCachee(lang) ? [...LANGUES_PUBLIQUES, lang] : LANGUES_PUBLIQUES;
+}
+
+// Un article n'existe dans une langue cachée (LANGUES_CACHEES, config.js)
+// qu'une fois traduit : son adresse déclarée dans BLOG_ARTICLES et son
+// fichier dans data/blog/<langue>/. Les langues publiques gardent le repli
+// sur le texte français.
+function articleTraduit(meta, lang) {
+  if (!langueCachee(lang)) return true;
+  return Boolean(meta.slugs && meta.slugs[lang])
+    && fs.existsSync(path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`));
+}
+
 // Une carte du bloc « Pour aller plus loin » des pages de test : le titre de
 // l'article (celui de la base s'il y a été corrigé, comme la liste du blog),
 // son image à la une et ses variantes, son temps de lecture et ses lectures
@@ -2280,7 +2308,7 @@ function carteArticle(internalSlug, lang) {
   let carte = null;
   const a = BLOG_ARTICLES.find(x => x.internalSlug === internalSlug);
   const slug = a && a.slugs[lang];
-  if (slug) {
+  if (slug && articleTraduit(a, lang)) {
     const aData = parseArticleTs(path.resolve(__dirname, '../../data/blog', lang, `${internalSlug}.ts`))
       || parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${internalSlug}.ts`));
     const o = articleOverrides[cle];
@@ -2362,7 +2390,7 @@ async function generateBlogArticle(articleMeta, lang) {
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
   const t = createT(lang);
   const translations = loadTranslations(lang);
-  const articleAlternates = articleMeta.frOnly ? [] : getArticleAlternates(articleMeta);
+  const articleAlternates = (articleMeta.frOnly || langueCachee(lang)) ? [] : getArticleAlternates(articleMeta);
   const canonical = getArticleUrl(localizedSlug, lang);
   const pagePath = getArticlePath(localizedSlug, lang);
 
@@ -2454,6 +2482,7 @@ async function generateBlogArticle(articleMeta, lang) {
     rawDescription: description,
     canonical,
     alternates: articleAlternates,
+    noindex: langueCachee(lang) ? 'noindex, follow' : false,
     ogImage: article.featuredImage
       ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
       : imagePartage(lang).url,
@@ -2468,6 +2497,8 @@ async function generateBlogArticle(articleMeta, lang) {
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,
+    languesMenu: languesMenu(lang),
+    langueCachee: langueCachee(lang),
     t,
     translations,
     getLocalizedUrl,
@@ -2574,6 +2605,8 @@ async function generate404Pages() {
       pagePath: '/404',
       routeSlugs: ROUTE_SLUGS,
       languages: LANGUAGES,
+      languesMenu: languesMenu(lang),
+      langueCachee: langueCachee(lang),
       t,
       tgd,
       translations,
@@ -2671,7 +2704,7 @@ async function main() {
   // Generate blog articles
   console.log(`\n[blog] Generating ${BLOG_ARTICLES.length} articles × ${LANGUAGES.length} languages...\n`);
   for (const articleMeta of BLOG_ARTICLES) {
-    const articleLangs = articleMeta.frOnly ? ['fr'] : LANGUAGES;
+    const articleLangs = articleMeta.frOnly ? ['fr'] : LANGUAGES.filter((l) => articleTraduit(articleMeta, l));
     for (const lang of articleLangs) {
       const result = await generateBlogArticle(articleMeta, lang);
       if (result) {
