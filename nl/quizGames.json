@@ -297,6 +297,67 @@
     "quizSuperVilain": "Welke superschurk ben jij?",
     "quizDuoVilains": "Welk superschurkenduo zijn jullie?"
   },
+  "coupleLevel": {
+    "heading": "Het niveau van jullie relatie",
+    "bands": [
+      {
+        "min": 0,
+        "max": 19,
+        "tag": "Eerst praten",
+        "title": "Veel om over te praten",
+        "desc": "Bij de meeste vragen wijzen jullie antwoorden dezelfde kant op: het vertrouwen heeft klappen gekregen, en ruzies worden niet goed afgesloten. Een test weet niet wat jullie meemaken, dus hij gaat je niet vertellen wat jullie relatie waard is. Wat hij wel kan zeggen: deze onderwerpen verdienen een echt gesprek, rustig, op een dag dat het goed gaat. En lukt dat niet met z'n tweeën, dan helpt het vaak om met iemand neutraals te praten."
+      },
+      {
+        "min": 20,
+        "max": 34,
+        "tag": "Opnieuw opbouwen",
+        "title": "Een paar fundamenten om opnieuw te leggen",
+        "desc": "Meerdere antwoorden laten zien dat het op hetzelfde punt vastloopt: hoe jullie met elkaar praten, of wat er na een ruzie blijft hangen. Niets onherstelbaars, veel koppels maken dit mee. Het nuttigste is om het onderwerp te kiezen dat het zwaarst weegt en dat rustig aan te snijden, niet midden in een ruzie."
+      },
+      {
+        "min": 35,
+        "max": 49,
+        "tag": "In opbouw",
+        "title": "Een koppel dat zijn evenwicht zoekt",
+        "desc": "Er is een band, en er zijn onderwerpen die schuren. Jullie antwoorden laten zien waar, en daar kijk je als eerste. Je hoeft niet alles tegelijk op te lossen: kies er een of twee uit en pak die serieus aan."
+      },
+      {
+        "min": 50,
+        "max": 62,
+        "tag": "Te versterken",
+        "title": "Een echte basis, met bekende werkpunten",
+        "desc": "Jullie relatie staat op een echt fundament, met wrijvingen die jullie waarschijnlijk al kennen. Het verschil tussen koppels die vooruitgaan en de rest: de eersten praten erover voordat het vastloopt, niet erna."
+      },
+      {
+        "min": 63,
+        "max": 74,
+        "tag": "Stevig",
+        "title": "Een stevige relatie",
+        "desc": "Communicatie en vertrouwen zijn er, de wrijvingen blijven te overzien. Jullie groeiruimte zit in de onderwerpen die jullie nog vermijden: daar liggen vaak de 10 punten die nog ontbreken."
+      },
+      {
+        "min": 75,
+        "max": 84,
+        "tag": "Heel stevig",
+        "title": "Een heel stevige relatie",
+        "desc": "Jullie hebben iets stabiels en evenwichtigs opgebouwd, dat stormen doorstaat zonder water te maken. Houd vast aan wat werkt, en let op de sleur: op dit niveau is dat het enige echte gevaar."
+      },
+      {
+        "min": 85,
+        "max": 94,
+        "tag": "Hecht",
+        "title": "Een zeldzaam koppel",
+        "desc": "Vertrouwen, verbondenheid, plannen, het weer goedmaken: bijna alles klopt, en jullie antwoorden komen overeen waar het telt. Zo'n evenwicht is geen toeval: het zegt iets over wat jullie elke dag voor elkaar doen."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "tag": "Uitzonderlijk",
+        "title": "Een bijna perfecte overeenstemming",
+        "desc": "Zo'n score is uitzonderlijk, op één voorwaarde: dat jullie allebei eerlijk hebben geantwoord, niet met het antwoord dat de ander wil horen. Is dat zo? Dan van harte gefeliciteerd. Twijfel je? Doe de test dan nog eens, helemaal eerlijk: de uitslag wordt er alleen maar mooier van."
+      }
+    ]
+  },
   "ui": {
     "namePlaceholder": "Bijv. Daan",
     "yourName": "Voornaam van je partner"

@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "badge": "153 vragen • Gratis • Zonder account",
+    "title": "Wat hebben we gemeen? Test jullie raakvlakken in 20 vragen",
+    "description": "Kijk waar jullie smaak, gewoontes en waarden overeenkomen. Elke ronde trekt 20 vragen uit de 153, dus geen twee rondes zijn hetzelfde!",
+    "duration": "5 minuten",
+    "players": "2 spelers",
+    "questions": "20 vragen per ronde",
+    "titleHighlight": "raakvlakken"
+  },
+  "seo": {
+    "intro": "Deze test doe je met z'n tweeën, op één telefoon. Jullie beantwoorden allebei dezelfde 20 vragen, ieder voor zich, en aan het eind telt het spel de gelijke antwoorden. Het is heel simpel, en juist daarom werkt het: valsspelen kan niet, want je ziet pas wat de ander heeft geantwoord als je zelf hebt geantwoord.",
+    "s1": {
+      "title": "Wat jullie overeenkomsten zeggen over jullie relatie",
+      "p1": "Laten we eerlijk zijn: niemand blijft bij iemand omdat die ook van de bergen houdt. Wat gelijke antwoorden vertellen, is iets anders. Als jullie allebei hetzelfde antwoorden op ‘wat is belangrijker, familie of vrijheid?’, weten jullie dat jullie levens dezelfde kant op willen. En dat merk je elke dag: bij beslissingen, in het weekend, in waar jullie ruzie over maken en waar jullie nooit ruzie over maken.",
+      "p2": "Verschillen horen er trouwens ook bij. Een koppel dat overal hetzelfde antwoordt, bestaat niet, en zou zich vervelen. Het gaat erom dat je weet waar jullie op elkaar lijken en waar niet. De meeste koppels weten dat maar half, en dat is precies wat het spel op tafel legt."
+    },
+    "s2": {
+      "title": "Wat de score zegt, en wat niet",
+      "p1": "De score telt jullie gelijke antwoorden op 20 vragen. Hij laat zien waar jullie elkaar vinden, niet of het goed gaat met jullie relatie. Dat zijn twee verschillende dingen: heel verschillende mensen kunnen samen een heel sterk koppel vormen, en twee mensen met precies dezelfde smaak kunnen elkaar ongelukkig maken. Wil je weten hoe het met jullie relatie zelf staat? Daar hebben we een andere test voor, die <a href=\"/nl/relatietest/\">jullie relatie zelf onder de loep neemt</a> in plaats van jullie smaak.",
+      "p2": "Het nut van de score zit vooral in wat er direct daarna gebeurt. ‘Wacht, wat heb jij geantwoord? Waarom?’ Dat gesprek brengt het spel op gang, vraag na vraag. Meestal is het leukste moment van een ronde geen gelijk antwoord, maar een verschil van mening waar je nooit iets van wist."
+    },
+    "s3": {
+      "title": "Zo gaat een ronde",
+      "steps": [
+        {
+          "title": "Vul jullie twee voornamen in",
+          "desc": "Het spel noemt ieder van jullie de hele ronde bij naam."
+        },
+        {
+          "title": "Antwoord na elkaar",
+          "desc": "De een beantwoordt de 20 vragen en geeft de telefoon door, de ander beantwoordt dezelfde vragen, zonder de eerste antwoorden te zien."
+        },
+        {
+          "title": "Vergelijk",
+          "desc": "Het spel telt de gelijke antwoorden en laat zien waar jullie elkaar vinden. Daar begint het leukste deel."
+        }
+      ]
+    },
+    "s4": {
+      "title": "Wat er in de 153 vragen zit",
+      "p1": "Het spel trekt 20 vragen uit de 153, dus geen twee rondes zijn hetzelfde, en je kunt meteen vanaf het eindscherm opnieuw beginnen. De vragen gaan van heel luchtig, ‘Koffie of thee?’, ‘Zee of bergen?’, tot onderwerpen waar iets meer van afhangt. Dit zijn de zes soorten vragen:",
+      "categories": [
+        {
+          "title": "Persoonlijkheid en karakter",
+          "desc": "Ochtendmens of avondmens, geduldig of impulsief, degene die alles plant of degene die improviseert."
+        },
+        {
+          "title": "Smaak en interesses",
+          "desc": "Films, muziek, eten, escape rooms. Het luchtigste deel, en vaak het verrassendste."
+        },
+        {
+          "title": "Waarden en kijk op het leven",
+          "desc": "Familie, werk, geld, vrijheid. Hier wegen gelijke antwoorden het zwaarst."
+        },
+        {
+          "title": "Dagelijks leven en gewoontes",
+          "desc": "Levensritme, hoe je dingen regelt, kleine eigenaardigheden. Hier kom je heel concrete verschillen tegen."
+        },
+        {
+          "title": "Relatie en intimiteit",
+          "desc": "Hoe je laat zien dat je van iemand houdt, wat ieder van jullie nodig heeft, wat je van de ander verwacht."
+        },
+        {
+          "title": "Plannen en toekomst",
+          "desc": "Reizen, kinderen, een huis. De vragen die koppels altijd voor zich uit schuiven, gewoon gesteld."
+        }
+      ]
+    },
+    "s5": {
+      "title": "Zo lees je jullie uitslag",
+      "p1": "Een hoge score betekent dat jullie elkaar goed kennen en dat jullie smaak overlapt. Leuk om te zien, maar stop daar niet: kijk welke antwoorden hetzelfde waren. Twintig gelijke antwoorden over eten en films vertellen niet hetzelfde verhaal als vijf gelijke antwoorden over familie en geld.",
+      "p2": "Een lage score betekent niet dat het slecht begint. Het betekent dat jullie verschillend zijn, en soms dat jullie elkaar minder goed kennen dan jullie dachten. Pak dus twee of drie vragen waar jullie antwoorden uit elkaar liepen en praat erover: vaak is dat het leukste deel van de avond."
+    },
+    "s6": {
+      "title": "Heb je als koppel veel gemeenschappelijke interesses nodig?",
+      "p1": "Nee, en dat zegt het onderzoek naar koppels net zo duidelijk als het gezonde verstand. Wat twee mensen voor lange tijd bij elkaar houdt, is niet dezelfde smaak, maar dezelfde waarden: hetzelfde idee over trouw, over familie, over wat je met je geld en je tijd doet. Twee mensen kunnen elkaars films vreselijk vinden en toch prima samen oud worden.",
+      "p2": "Gaat jouw vraag verder dan de overeenkomsten, en wil je weten of <a href=\"/nl/passen-we-bij-elkaar/\">jullie karakters en waarden op elkaar aansluiten</a>? Dat kun je ook meten. De twee tests vullen elkaar goed aan: deze voor wat jullie delen, de andere voor hoe jullie op elkaar afgestemd zijn."
+    },
+    "s7": {
+      "title": "De beste momenten om het te spelen",
+      "p1": "Er is geen slecht moment voor dit spel, maar sommige momenten zijn beter dan andere:",
+      "items": [
+        "<strong>Aan het begin van een relatie:</strong> Het is de simpelste manier om elkaar <a href=\"/nl/vragen-voor-koppels/\">20 echte vragen</a> te stellen zonder dat het op een sollicitatiegesprek lijkt.",
+        "<strong>Na jaren samen:</strong> Dan zijn de verrassingen het grappigst. Je denkt dat je alles weet, en bij een kwart van de antwoorden zit je ernaast.",
+        "<strong>Een avond waarop je niet weet wat je moet doen:</strong> Tien minuten, één telefoon, en de avond komt weer op gang.",
+        "<strong>Op afstand:</strong> Ieder speelt op de eigen telefoon, en jullie vergelijken tijdens een videogesprek. Dat werkt heel goed."
+      ]
+    },
+    "ctaTitle": "Aan jullie!",
+    "ctaDesc": "Scrol terug naar boven, vul jullie namen in en start de ronde. En houd aan het eind vijf minuten vrij: de antwoorden die niet overeenkomen, zijn het leukst om over te praten.",
+    "faqTitle": "Veelgestelde vragen",
+    "faq": [
+      {
+        "q": "Hoe zie je met deze test hoeveel jullie gemeen hebben?",
+        "a": "Jullie vullen allebei je voornaam in, en daarna beantwoordt ieder dezelfde 20 vragen, na elkaar, zonder de antwoorden van de ander te zien. Het spel telt de gelijke antwoorden en geeft jullie je score. De 20 vragen worden willekeurig getrokken uit 153, dus elke ronde is anders."
+      },
+      {
+        "q": "Moet je veel gemeen hebben om goed bij elkaar te passen?",
+        "a": "Nee. Het is genoeg als jullie het belangrijkste delen: jullie waarden, jullie kijk op het leven, wat je van een relatie verwacht. Een andere smaak is helemaal geen probleem, en maakt het leven zelfs interessanter."
+      },
+      {
+        "q": "Kunnen we opnieuw spelen met andere vragen?",
+        "a": "Ja, meteen vanaf het eindscherm. Het spel trekt opnieuw 20 vragen uit de 153, dus je kunt meerdere rondes spelen zonder steeds dezelfde vragen te krijgen."
+      }
+    ]
+  },
+  "results": {
+    "fewTitle": "Weinig gemeen",
+    "fewDesc": "Jullie zijn behoorlijk verschillend.",
+    "someTitle": "Een paar raakvlakken",
+    "someDesc": "Jullie delen een paar dingen, maar jullie kennen elkaar nog lang niet helemaal.",
+    "goodTitle": "Veel gemeen",
+    "goodDesc": "Jullie hebben een stevige basis van overeenkomsten.",
+    "greatTitle": "Helemaal op één lijn",
+    "greatDesc": "Jullie kennen elkaar goed en delen veel."
+  },
+  "jsonLd": {
+    "about": "overeenkomsten en gemeenschappelijke interesses van een koppel"
+  }
+}
