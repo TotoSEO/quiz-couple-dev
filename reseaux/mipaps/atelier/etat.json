@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-30T03:14:33.197Z",
+  "genere_le": "2026-10-30T09:58:49.963Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -606,7 +606,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -660,7 +660,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -3618,18 +3618,54 @@
       "jour": "2026-10-22",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "6be5c061-66e1-4be1-a5f7-e89f3f928040",
+      "releve": "j7",
+      "vues": 668,
+      "portee": 544,
+      "likes": 19,
+      "commentaires": 0,
+      "partages": 1,
+      "enregistrements": 3,
+      "releve_le": "2026-10-30T09:58:39.076596+00:00",
+      "publie_le": "2026-10-23T05:20:09.616+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-23",
+      "creneau": "matin",
+      "theme": null
+    },
+    {
+      "variante_id": "440b1a30-dac5-4d61-bde4-8c41a16ab7b9",
+      "releve": "j7",
+      "vues": 5,
+      "portee": 3,
+      "likes": 0,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 0,
+      "releve_le": "2026-10-30T09:58:43.982171+00:00",
+      "publie_le": "2026-10-23T09:40:12.914+00:00",
+      "categorie": "mipaps-post",
+      "format": "image",
+      "gabarit": "mipaps-post",
+      "jour": "2026-10-23",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "mipaps-anime",
-      "posts": 13,
-      "vues_mediane": 394,
-      "vues_moyenne": 871,
+      "posts": 14,
+      "vues_mediane": 531,
+      "vues_moyenne": 856,
       "vues_max": 2832,
-      "partages": 33,
-      "enregistrements": 9,
-      "likes": 255,
+      "partages": 34,
+      "enregistrements": 12,
+      "likes": 274,
       "commentaires": 0
     },
     {
@@ -3644,6 +3680,17 @@
       "commentaires": 1
     },
     {
+      "categorie": "mipaps-post",
+      "posts": 14,
+      "vues_mediane": 4,
+      "vues_moyenne": 4,
+      "vues_max": 10,
+      "partages": 1,
+      "enregistrements": 0,
+      "likes": 3,
+      "commentaires": 0
+    },
+    {
       "categorie": "mipaps-histoire",
       "posts": 8,
       "vues_mediane": 3,
@@ -3652,17 +3699,6 @@
       "partages": 0,
       "enregistrements": 0,
       "likes": 2,
-      "commentaires": 0
-    },
-    {
-      "categorie": "mipaps-post",
-      "posts": 13,
-      "vues_mediane": 3,
-      "vues_moyenne": 4,
-      "vues_max": 10,
-      "partages": 1,
-      "enregistrements": 0,
-      "likes": 3,
       "commentaires": 0
     }
   ]
