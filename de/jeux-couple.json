@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "14 Spiele • Kostenlos • Ohne Anmeldung",
-    "title": "Paarspiele und Beziehungsspiele, in einem Tipp startklar",
+    "title": "Paarspiele und Beziehungsspiele, sofort spielbar",
     "titleHighlight": "Beziehungsspiele",
     "description": "Vierzehn Spiele: dreizehn, die auf einem einzigen Handy zwischen euch beiden starten, und eines für mehrere Paare, jeder auf dem eigenen. Ohne Konto und ohne Installation."
   },
@@ -20,7 +20,7 @@
   },
   "jeux": {
     "adultes": "18+",
-    "tuPreferesNom": "Was würdest du lieber",
+    "tuPreferesNom": "Würdest du eher",
     "tuPreferesTagline": "Zwei unmögliche Optionen, jeder wählt für sich, danach vergleicht ihr die Antworten.",
     "tuPreferesJoueurs": "2 Spieler",
     "tuPreferesDuree": "10 Min.",
@@ -50,7 +50,7 @@
     "quiDeNousJoueurs": "2 Spieler",
     "quiDeNousDuree": "5 Min.",
     "quiDeNousContenu": "40 Fragen",
-    "dilemmesNom": "Paar-Dilemmata",
+    "dilemmesNom": "Dilemma-Fragen",
     "dilemmesTagline": "Ein Vorteil, ein ABER, und ihr entscheidet zu zweit",
     "dilemmesJoueurs": "2 Spieler",
     "dilemmesDuree": "10 Min.",
@@ -65,7 +65,7 @@
     "jamaisContenu": "100 Sätze, geschrieben für Paare, gespielt in 15, 30 oder 100",
     "jamaisDuree": "10 bis 30 Min",
     "jamaisJoueurs": "2 Spieler",
-    "quiPourraitNom": "Wer könnte?",
+    "quiPourraitNom": "Wer würde eher?",
     "quiPourraitTagline": "Eine Frage, zwei Vornamen, und ihr zeigt auf den Schuldigen",
     "quiPourraitContenu": "108 Fragen, gespielt in Runden mit 20, 40 oder 60, zufällig gezogen",
     "quiPourraitDuree": "5 bis 20 Min",
@@ -152,11 +152,11 @@
     "q2": "Muss man eine App herunterladen?",
     "a2": "Nein. Alles läuft direkt im Browser, auf dem Handy wie am Rechner. Genau deshalb startet eine Partie in zehn Sekunden, genau dann, wenn die Lust kommt.",
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",
-    "a3": "Kommt auf den Abend an! Wahrheit oder Pflicht ist am vielseitigsten: schnell gestartet, jederzeit beendet. Wer von uns beiden passt in fünf Minuten und bringt jedes Mal ein Gespräch in Gang. Was würdest du lieber funktioniert besser, wenn ihr eher reden als machen wollt. Das Brettspiel braucht eine echte halbe Stunde, ist dafür das einzige, das man gewinnen kann. Das Rad dient vor allem dazu, eine Wette zu entscheiden. Und die versaute Variante hebt ihr euch für die Momente auf, in denen ihr allein seid.",
+    "a3": "Kommt auf den Abend an! Wahrheit oder Pflicht ist am vielseitigsten: schnell gestartet, jederzeit beendet. Wer von uns beiden passt in fünf Minuten und bringt jedes Mal ein Gespräch in Gang. Würdest du eher funktioniert besser, wenn ihr eher reden als machen wollt. Das Brettspiel braucht eine echte halbe Stunde, ist dafür das einzige, das man gewinnen kann. Das Rad dient vor allem dazu, eine Wette zu entscheiden. Und die versaute Variante hebt ihr euch für die Momente auf, in denen ihr allein seid.",
     "q4": "Kann man aus der Ferne spielen, jeder bei sich?",
     "a4": "Ja. Einer öffnet das Spiel, liest per Video laut vor und bestätigt für beide. Wahrheiten, Dilemmata und Abstimmungen funktionieren aus der Ferne einwandfrei, die Pflichten brauchen etwas Fantasie.",
     "q5": "Eignen sich diese Spiele für ein Paar, das sich gerade erst kennengelernt hat?",
-    "a5": "Was würdest du lieber, Wer von uns beiden, das Pfänderrad und die klassische Variante von Wahrheit oder Pflicht: ja, keines davon setzt eine gemeinsame Geschichte voraus. Das Brettspiel auch, auch wenn seine Erinnerungsfelder am Anfang etwas dünn ausfallen. Die versaute Variante geht dagegen davon aus, dass ihr euch schon gut kennt: zu früh gespielt ist sie eher unangenehm als lustig."
+    "a5": "Würdest du eher, Wer von uns beiden, das Pfänderrad und die klassische Variante von Wahrheit oder Pflicht: ja, keines davon setzt eine gemeinsame Geschichte voraus. Das Brettspiel auch, auch wenn seine Erinnerungsfelder am Anfang etwas dünn ausfallen. Die versaute Variante geht dagegen davon aus, dass ihr euch schon gut kennt: zu früh gespielt ist sie eher unangenehm als lustig."
   },
   "section4": {
     "title": "Ein Spiel repariert nichts, aber es öffnet Türen",

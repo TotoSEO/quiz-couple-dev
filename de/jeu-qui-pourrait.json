@@ -1,21 +1,21 @@
 {
   "hero": {
     "badge": "108 Fragen • 2 Spieler • Kostenlos",
-    "title": "Wer könnte, das Spiel für Paare | 100+ Fragen",
-    "titleHighlight": "Wer könnte",
+    "title": "Wer würde eher? Das Spiel für Paare mit 100+ Fragen",
+    "titleHighlight": "Wer würde eher",
     "description": "Eine Frage erscheint, eure zwei Vornamen darunter, und ihr zeigt auf den, der dazu fähig wäre."
   },
   "jsonLd": {
-    "name": "Wer könnte, die Paar-Version"
+    "name": "Wer würde eher, die Paar-Version"
   },
   "exemples": {
-    "amorce": "Wer könnte",
+    "amorce": "Wer würde eher",
     "avant": "",
     "apres": "?"
   },
   "section1": {
-    "title": "Die Regeln vom Wer könnte",
-    "intro": "Wer könnte ist ein Spiel, das man als Paar spielen kann, auf einem einzigen Handy. Es ist ein sehr einfaches Spiel: eine Frage erscheint, etwa „Wer könnte sich aus einer Laune heraus eine Luxusuhr kaufen?“, und ihr antwortet, indem ihr einen Vornamen antippt. Wenn ihr denkt, dass er es ist, tippt ihr seinen Vornamen an, wenn ihr denkt, dass du es bist, tippst du deinen an. Und wenn keiner von euch beiden dazu fähig wäre, gibt es direkt darunter einen Knopf „Niemand“.",
+    "title": "Die Regeln von Wer würde eher",
+    "intro": "Wer würde eher ist ein Spiel, das man als Paar spielen kann, auf einem einzigen Handy. Es ist ein sehr einfaches Spiel: eine Frage erscheint, etwa „Wer würde eher aus einer Laune heraus eine Luxusuhr kaufen?“, und ihr antwortet, indem ihr einen Vornamen antippt. Wenn ihr denkt, dass er es ist, tippt ihr seinen Vornamen an, wenn ihr denkt, dass du es bist, tippst du deinen an. Und wenn keiner von euch beiden dazu fähig wäre, gibt es direkt darunter einen Knopf „Niemand“.",
     "intro2": "Es gibt keine richtige Antwort und es gibt keine Punkte zu zählen. Das Spiel merkt sich einfach, wer bei jeder Frage gezeigt wurde, und zeigt euch am Ende die Summe. So läuft eine Runde ab:",
     "etape1Titre": "Gebt eure Vornamen ein und wählt die Länge",
     "etape1Texte": "Ihr könnt 20, 40 oder 60 Fragen spielen, zufällig gezogen aus den 108 des Spiels. Eine Runde mit 20 Fragen dauert ungefähr fünf Minuten.",
@@ -28,7 +28,7 @@
   "section2": {
     "title": "Der Unterschied zum Wer von uns beiden",
     "p1": "Es gibt auf der Seite auch ein Spiel, bei dem <a href=\"/de/wer-von-uns-beiden-paarspiel/\">jeder heimlich abstimmt, wer von euch beiden gemeint ist</a>, und die beiden Spiele ähneln sich sehr. Der Unterschied liegt in den Fragen. Beim Wer von uns beiden antwortet man über das, was ihr schon seid: wer sturer ist, wer mehr redet, wer besser kocht, und so weiter. Die Antworten kennt ihr schon, weil ihr sie jeden Tag erlebt.",
-    "p2": "Beim Wer könnte antwortet man über das, wozu ihr fähig wärt. Wer könnte Fallschirm springen, wer könnte alles hinschmeißen und eine Pension auf dem Land eröffnen, oder wer könnte das Urlaubsbudget an einem Abend ausgeben... Die Antwort kennt niemand, also gibt jeder seine Meinung ab, und ihr entdeckt das Bild, das der andere von euch hat. Es passt übrigens nicht immer zu dem, das ihr von euch selbst habt.",
+    "p2": "Bei Wer würde eher antwortet man über das, wozu ihr fähig wärt. Wer würde eher Fallschirm springen, wer würde eher alles hinschmeißen und eine Pension auf dem Land eröffnen, oder wer würde das Urlaubsbudget an einem Abend ausgeben... Die Antwort kennt niemand, also gibt jeder seine Meinung ab, und ihr entdeckt das Bild, das der andere von euch hat. Es passt übrigens nicht immer zu dem, das ihr von euch selbst habt.",
     "p3": "Bei „wer könnte bei einem Tiervideo weinen“ gezeigt zu werden, wenn man sich für unverdächtig hielt, sorgt für Reaktionen. Meistens kommt als Nächstes „Moment, so siehst du mich??“, und daraus entstehen Gespräche, die ihr sonst nie geführt hättet!"
   },
   "section3": {
@@ -44,11 +44,11 @@
     "resume2": "<strong>Übertreibt es nicht mit dem Knopf „Niemand“:</strong> Wenn ihr ihn bei jeder Frage nehmt, um euch nicht festzulegen, verliert das Spiel seinen Reiz. Hebt ihn für die Fragen auf, bei denen sich ehrlich gesagt keiner von euch trauen würde.",
     "resume3": "<strong>Nehmt das Urteil an:</strong> Als „zu allem fähig“ gezeigt zu werden ist nichts Böses. Und wenn ihr anderer Meinung seid, sagt es: der Streit darüber gehört zum Spiel.",
     "resume4": "<strong>Spielt ein anderes Mal wieder:</strong> Mit 108 Fragen könnt ihr mehrere Runden spielen, ohne auf dieselben zu treffen. Und die Antworten ändern sich manchmal von Runde zu Runde, was auch interessant ist.",
-    "apres": "Und wenn euch das Spiel gefällt, haben wir <a href=\"/de/paarspiele/\">weitere Spiele für zu zweit</a> nach derselben Idee: ein Handy, nichts zu installieren, und Fragen, die ins Reden bringen. <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">Ich hab noch nie</a> ist wahrscheinlich das bekannteste, und viele Paare starten es direkt nach einem Wer könnte."
+    "apres": "Und wenn euch das Spiel gefällt, haben wir <a href=\"/de/paarspiele/\">weitere Spiele für zu zweit</a> nach derselben Idee: ein Handy, nichts zu installieren, und Fragen, die ins Reden bringen. <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">Ich hab noch nie</a> ist wahrscheinlich das bekannteste, und viele Paare starten es direkt nach einer Runde Wer würde eher."
   },
   "faq": {
     "title": "Häufige Fragen",
-    "q1": "Wie spielt man Wer könnte als Paar?",
+    "q1": "Wie spielt man Wer würde eher als Paar?",
     "a1": "Ihr gebt eure zwei Vornamen ein, wählt 20, 40 oder 60 Fragen, und bei jeder Frage tippt ihr auf den Vornamen von dem, der dazu fähig wäre, oder auf „Niemand“. Am Ende sagt euch das Spiel, wer am häufigsten gezeigt wurde.",
     "q2": "Müsst ihr euch beide einig sein, um zu antworten?",
     "a2": "Das ist die Idee, und genau das bringt euch ins Reden. Wenn ihr euch nicht einigen könnt, gewinnt der, der seinen Fall am besten verteidigt. Das Spiel prüft sowieso nichts, also entscheidet ihr.",
