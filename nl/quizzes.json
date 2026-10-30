@@ -88,6 +88,18 @@
     "description": "20 vragen om te zien of jullie klaar zijn om samen te wonen. Gratis test voor koppels, meteen een uitslag.",
     "metaDescription": "Doe de samenwonen test: 20 vragen over geld, het huishouden, tijd voor jezelf en jullie ritme. Zijn jullie er klaar voor? Gratis, met meteen een uitslag."
   },
+  "testJalousie": {
+    "title": "Jaloezie test: ben ik te jaloers, of mijn partner?",
+    "shortTitle": "Jaloezie test",
+    "description": "Twee tests om jaloezie in je relatie te meten: die van jezelf en die van je partner. Met een genuanceerde uitslag.",
+    "metaDescription": "Doe de jaloezie test: twee tests van 20 vragen, één over je eigen jaloezie en één over die van je partner. Gratis, met een genuanceerde uitslag."
+  },
+  "testConfiance": {
+    "title": "Vertrouwen in een relatie test: vertrouw je elkaar?",
+    "shortTitle": "Vertrouwenstest",
+    "description": "20 vragen om het vertrouwen in je relatie te meten: jaloezie, eerlijkheid, betrouwbaarheid. Meteen een uitslag.",
+    "metaDescription": "Vertrouwen in een relatie test: 20 vragen over jaloezie, eerlijkheid en hoe betrouwbaar jullie zijn voor elkaar. Gratis, met meteen een uitslag."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
