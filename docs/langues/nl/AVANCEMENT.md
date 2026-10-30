@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -544,7 +544,42 @@ le met à jour dans la PR de chaque lot.
   français vers l'article « rester ami avec son ex » attend la traduction du
   blog.
 
+## Lot 3l (30 octobre 2026) : la charge mentale
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/mentale-belasting-test/` | Mentale belasting test: wie denkt er bij jullie aan alles? | Wie draagt de mental load in jullie relatie? |
+
+- **Les mots** : les Néerlandais et les Flamands disent « mental load » pour
+  la charge mentale du foyer ; « mentale belasting », mot-clé principal de la
+  carte, sert surtout dans les études et au travail. Le title, la description
+  et le menu gardent « mentale belasting », le H1 et le texte disent « mental
+  load », ajouté aux mots-clés secondaires de la carte (`mots-cles.tsv`).
+- **Les textes de moteur** : `chargeMentale` (vingt tâches, quatre domaines,
+  six verdicts, écran des deux façons de jouer, « Alleen » et « Met z'n
+  tweeën »). Les deux modes ont été joués jusqu'au résultat dans Chromium :
+  « Je draagt 100% van de mental load » seul(e), « Sanne draagt 100% van de
+  mental load » à deux.
+- **Les chiffres de la FAQ** : le français cite le baromètre de l'Ifop et
+  l'Insee. Le néerlandais cite l'Emancipatiemonitor 2024 du CBS (chapitre
+  « Werken en zorgen », lu le 30 octobre 2026) : 51 % des personnes en couple
+  voudraient partager à égalité le travail payé et le ménage, 10 % le font,
+  et 46 % disent qu'en pratique la femme fait plus de ménage et l'homme
+  travaille plus (couples homme-femme dont l'un au moins travaille, 2024).
+- **La porte e-mail** : la page l'a ; « zonder account » au lieu de
+  « anonyme », et la FAQ dit que l'adresse est demandée une fois.
+- **Les liens** : vers la relation toxique, l'emménagement, le couple sain
+  et, par l'encart du haut, la parentalité, quatre pages déjà traduites.
+
 ## Les chiffres
+
+Au lot 3l : `textes nl` 345 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (31 pages traduites) ; `site nl` sur la page : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux modes du moteur vont
+jusqu'à leur résultat, sans texte resté en français. Aucune page publique ne
+change.
 
 Au lot 3k : `textes nl` 332 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (30 pages traduites) ; `site nl` sur les deux pages : aucun

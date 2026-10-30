@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Gratis test, 20 taken",
+    "title": "Wie draagt de mental load in jullie relatie?",
+    "titleHighlight": "de mental load",
+    "description": "20 taken, en elke keer maar één vraag: wie denkt eraan? Doe de test allebei, ieder voor zich, en het verschil tussen jullie antwoorden wordt de uitslag.",
+    "subtitle": "Alleen of samen, gratis en zonder account"
+  },
+  "howTo": {
+    "title": "Hoe werkt deze test?",
+    "step1": "Kies hoe je de test doet. <strong>Alleen</strong> krijg je de verdeling zoals jij die ziet. <strong>Samen</strong> antwoorden jullie om de beurt, zonder elkaars antwoorden te zien, en de test vergelijkt ze.",
+    "step2": "Bij elk van de 20 taken staat maar één vraag: <strong>wie denkt eraan?</strong> Niet wie het doet, wie eraan denkt. Er zijn vijf antwoorden, van ‘altijd de een’ tot ‘altijd de ander’, met de eerlijke verdeling in het midden.",
+    "step3": "Antwoord op basis van wat er gebeurt, niet van wat er zou moeten gebeuren. Niemand leest je antwoorden, en aan een test die je naar de mond praat, heb je niets.",
+    "step4": "De uitslag geeft de verdeling in procenten, de details per domein en, als jullie hem samen doen, de drie taken waarover jullie het het minst eens zijn.",
+    "outro": "Samen levert de test het meest op. Een scheve verdeling die jullie allebei zien en een scheve verdeling die maar één van jullie ziet, zijn twee heel verschillende situaties, en ze vragen niet om hetzelfde gesprek."
+  },
+  "crossLink": {
+    "title": "En als er een kind komt?",
+    "text": "De mental load groeit nergens zo hard als bij de komst van een kind, en bijna altijd vangt dezelfde persoon die extra last op. De babytest kijkt of jullie daar klaar voor zijn.",
+    "button": "Doe de babytest"
+  },
+  "section1": {
+    "title": "Mental load is iets anders dan de afwas doen",
+    "p1": "Dat misverstand blokkeert elk gesprek over dit onderwerp. <a href=\"/nl/toxische-relatie-test/\">Als een stel ruzie maakt</a> over de verdeling van de taken, heeft de een het over het uitvoeren en de ander over het vooruitdenken. Ze hebben het niet over hetzelfde, en geen van beiden heeft het door.",
+    "p2": "Mental load is niet de vuilniszak buitenzetten. Het is <strong>weten dat vandaag het afval wordt opgehaald</strong>. Het is niet nieuwe tandpasta kopen, het is zien dat die bijna op is. Het is niet iemand naar de dokter brengen, het is drie weken van tevoren aan de afspraak denken. Het zichtbare werk ziet iedereen. Het onzichtbare werk ziet niemand, behalve degene die het doet.",
+    "p3": "Daarom is de zin ‘je hoeft het maar te vragen’ eerder de kern van het probleem dan de oplossing. Vragen betekent dat je weet wat er moet gebeuren, wanneer, en dat je eraan denkt om het op het goede moment te zeggen. Wie vraagt, houdt de hele mental load bij zich en geeft alleen het uitvoeren uit handen, en dat is het lichtste deel.",
+    "p4": "Deze test meet dus alleen het vooruitdenken. Bij elk van de twintig taken is de vraag nooit ‘wie doet het’, maar altijd ‘wie denkt eraan’."
+  },
+  "section2": {
+    "title": "De vier domeinen waar de mental load zich verstopt",
+    "intro": "De mental load is bijna nooit overal even scheef verdeeld. De test deelt hem op in vier domeinen, want zien waar het scheef zit, zegt meer dan één totaalcijfer.",
+    "pillar1Title": "Het dagelijks leven",
+    "pillar1Text": "De voorraad, de maaltijden, de was, wat bijna op is voordat het op is. Dit domein loopt altijd door: het is nooit af, en je ziet het pas op de dag dat de koffie op is. Het is ook het domein waar de scheve verdeling er het vroegst in sluipt, vaak <a href=\"/nl/samenwonen-test/\">al in de eerste maanden van het samenwonen</a>.",
+    "pillar2Title": "Vooruitdenken",
+    "pillar2Text": "De afspraken die gemaakt moeten worden, wat kapot is en gerepareerd moet worden, de keuring van de auto of het onderhoud van het huis, de kleren voor het volgende seizoen. Niets daarvan is dringend, en juist dat maakt het zwaar: je moet er lang van tevoren aan denken, zonder dat iets je eraan herinnert.",
+    "pillar3Title": "De administratie",
+    "pillar3Text": "De post, de afschrijvingen, de contracten, de saaie papierwinkel. Dit domein wordt het vaakst helemaal aan één persoon overgelaten, omdat het op het eerste gezicht het meest technisch lijkt. Daar zit de valkuil: zodra het iemands domein is geworden, denkt niemand anders er nog aan, ook niet om te kijken of alles goed loopt.",
+    "pillar4Title": "Familie en vrienden",
+    "pillar4Text": "De verjaardagen, de cadeaus, de uitnodigingen, even laten weten hoe het gaat. Van alle domeinen is dit het meest ongelijk verdeeld, en het wordt het minst als werk gezien. Toch kost het geheugen, organisatie en tijd om contact te houden, ook met de familie van de ander.",
+    "tip": "Een simpele manier om de twee soorten werk uit elkaar te houden: stel je voor dat je tien dagen weggaat zonder iets te zeggen. Wat er dan stil komt te liggen, is jouw mental load. Wat iemand anders zonder nadenken van je zou overnemen, is uitvoeren."
+  },
+  "section3": {
+    "title": "Wat je uitslag zegt",
+    "p1": "De test geeft eerst een verdeling in procenten, daarna de details per domein. Doen jullie hem samen, dan komt daar het belangrijkste bij: het verschil tussen jullie twee antwoorden. Een scheve verdeling die jullie allebei zien en een scheve verdeling die maar één van jullie ziet, pak je niet op dezelfde manier aan. De vier situaties hieronder horen bij de test met z'n tweeën, de enige manier waarop dat verschil te meten is.",
+    "headerScore": "Situatie",
+    "headerLevel": "Wat het beschrijft",
+    "headerAnalysis": "Wat je eraan doet",
+    "row1Score": "Jullie zijn een team",
+    "row1Level": "Verdeeld, en jullie beschrijven hetzelfde.",
+    "row1Analysis": "Er valt niets te repareren. Doe de test opnieuw na de volgende grote verandering.",
+    "row2Score": "Verdeeld, maar vaag",
+    "row2Level": "Het totaal is in evenwicht, maar jullie verhalen lopen uiteen.",
+    "row2Analysis": "Vertel elkaar precies wat je doet. De wrok komt voort uit het misverstand.",
+    "row3Score": "Scheef, en jullie zien het",
+    "row3Level": "De een draagt meer, en daar zijn jullie het over eens.",
+    "row3Analysis": "De vraag is niet of het eerlijk is, maar of het vol te houden is. Spreek een datum af.",
+    "row4Score": "De een draagt, de ander ziet het niet",
+    "row4Level": "De situatie die het vaakst voorkomt, en op termijn het meest kost.",
+    "row4Analysis": "Begin bij de drie verschillen uit de test, niet bij een lijst verwijten.",
+    "tip": "Alleen kan het verschil niet gemeten worden: de test geeft dan een van twee uitslagen, ‘Je beschrijft een gedeelde mental load’ of ‘Je beschrijft een mental load die vooral op één persoon rust’. Het woord dat telt, is <strong>beschrijft</strong>. Juist over de verdeling lopen de antwoorden van twee partners het verst uiteen, dus een uitslag van één persoon zegt vooral hoe jij het ziet, niet hoe het er voor jullie allebei voor staat."
+  },
+  "section4": {
+    "title": "Waarom het bijna altijd bij dezelfde persoon terechtkomt",
+    "p1": "Geen enkel stel besluit op een dag dat een van de twee al het onzichtbare werk gaat doen. Een scheve verdeling wordt niet besloten, ze sluipt erin, en dat gebeurt via mechanismen die vrij makkelijk te benoemen zijn.",
+    "sub1Title": "Wie iets het eerst ziet, gaat het uiteindelijk doen",
+    "sub1Text": "Dit is het belangrijkste mechanisme, en het heeft niets met goede wil te maken. Twee mensen hebben een andere grens voor rommel, lege kastjes of afspraken die te laat zijn. Wie de laagste grens heeft, ziet het probleem als eerste, pakt het op, en wordt zo vanzelf degene die het altijd oppakt. Na een paar maanden kijkt de ander al niet meer.",
+    "sub2Title": "Ergens goed in zijn wordt een valkuil",
+    "sub2Text": "Zodra iemand iets twee keer zo goed of twee keer zo snel doet, is het logisch om het aan die persoon over te laten. Alleen heeft die efficiëntie een prijs: elke taak die je verdeelt naar wie het best kan, wordt een taak die niemand anders meer kan overnemen, en het domein gaat dicht.",
+    "sub3Title": "Helpen wordt verward met delen",
+    "sub3Text": "‘Ik help je’ en ‘ik regel het’ zijn twee heel verschillende houdingen, en veel stellen zien het verschil niet. Helpen is uitvoeren als het gevraagd wordt, en dus het weten, het plannen en het herinneren bij de ander laten. Een stel waarin de een veel helpt, kan het uitvoeren bijna eerlijk verdeeld hebben en de mental load toch helemaal scheef.",
+    "sub4Title": "Niemand telt dezelfde dingen",
+    "sub4Text": "Iedereen weet precies wat hij zelf draagt en heeft maar een vaag idee van wat de ander draagt. Dat is geen onwil, zo werkt aandacht nu eenmaal: je ziet wat je zelf doet, en je ziet niet wat er zonder jou is gedaan. Precies dat verschil meet de test als jullie hem samen doen.",
+    "tip": "Geen van deze vier mechanismen gaat uit van onwil. Daardoor zijn ze zo moeilijk recht te zetten: er is niemand om de schuld te geven, en toch is de situatie er."
+  },
+  "section5": {
+    "title": "Wat het kost als het lang duurt",
+    "p1": "Een scheve mental load veroorzaakt geen crisis. Hij zorgt voor slijtage, en slijtage merk je pas op het moment dat ze al haar werk heeft gedaan.",
+    "p2": "Het eerste gevolg is een vermoeidheid die met slapen niet weggaat, omdat ze komt van een hoofd dat altijd aanstaat en niet van lichamelijke inspanning. Het tweede is wrok, die zich langzaam opstapelt en er meestal uitkomt om iets piepkleins, wat het voor de ander onbegrijpelijk maakt: de ruzie gaat over een sok, nooit over waar het om gaat.",
+    "p3": "Het derde gevolg is het moeilijkst terug te draaien. Door alles te regelen komt iemand uiteindelijk in de rol van organisator in de eigen relatie terecht, en die rol heeft niets romantisch. Veel stellen beschrijven die omslag zonder er een naam voor te hebben: ze zijn niet meer <a href=\"/nl/gezonde-relatie-test/\">twee volwassenen die samenleven</a>, de een stuurt en de ander voert uit.",
+    "tip": "Herken je jezelf in deze drie alinea's? Het goede nieuws is dat de mental load een van de weinige scheve verdelingen is die je rechtzet met organisatie, en niet met een ander karakter."
+  },
+  "section6": {
+    "title": "Wat helpt om het eerlijker te verdelen, en wat niets oplevert",
+    "p1": "Veel oplossingen die je over dit onderwerp leest, verplaatsen niets, omdat het onzichtbare deel blijft waar het was. Dit werkt wel, en dit geeft alleen het gevoel dat je iets doet.",
+    "sub1Title": "Geef een heel domein uit handen, geen losse taken",
+    "sub1Text": "Dat is de enige overdracht die de last lichter maakt. ‘Jij regelt de afspraken bij de dokter’ betekent: weten wanneer ze nodig zijn, ze inplannen, ze opschrijven en je eraan houden, zonder dat iemand je eraan herinnert. Zolang iemand moet herinneren, is de mental load geen millimeter verschoven.",
+    "sub2Title": "Accepteer dat het anders gebeurt",
+    "sub2Text": "Hier gaat het bij de meeste stellen mis. Een domein dat de ander overneemt, wordt anders geregeld, in het begin vaak minder goed, soms gewoon minder goed. Wie het bij de eerste fout weer overneemt, staat meteen weer bij af, en het idee dat de ander het niet kan, blijft voorgoed hangen.",
+    "sub3Title": "Schrijf de lijst één keer samen op",
+    "sub3Text": "Veel onzichtbare taken bestaan voor een van de twee pas als hij of zij ze op papier ziet staan. Eén keer samen een lijst maken, verandert meer dan een gesprek over eerlijkheid, omdat je een discussie over gevoelens vervangt door iets waar jullie allebei naar kunnen kijken.",
+    "sub4Title": "Wat niet werkt",
+    "sub4Text": "Een taakverdelingsschema op de koelkast houdt het drie weken vol. Apps voor gedeelde taken verschuiven de mental load naar degene die de app bijhoudt. En ‘zeg maar wat ik moet doen’ is letterlijk een verzoek aan de ander om de mental load te houden."
+  },
+  "section7": {
+    "title": "Hoe je erover begint zonder dat het uit de hand loopt",
+    "p1": "Dit gesprek loopt vaak mis, omdat het bijna altijd op het verkeerde moment begint: op een vermoeide avond, na de druppel, als verwijt. De ander hoort een beschuldiging, verdedigt zich, en waar het om gaat, komt nooit op tafel.",
+    "p2": "Daar is de test nu juist voor. Hij vervangt ‘jij doet ook nooit iets’ door iets neutraals waar jullie samen naar kijken, en hij wijst drie precieze taken aan in plaats van een hele rechtszaak. Over drie taken kun je praten. Over een rechtszaak niet.",
+    "p3": "Ben jij degene die bij het lezen van de uitslag ontdekt dat het scheef zit? Dan is er maar één ding nuttig om te doen, en dat is niet jezelf verdedigen. Vraag de ander om een gewone dag te beschrijven, met alles wat hij of zij in het hoofd heeft. Zo begrijp je het het snelst, omdat het zichtbaar maakt wat je per definitie niet ziet.",
+    "tip": "Praat er nog eens over als het onderwerp is afgekoeld, en spreek vooraf een datum af om te kijken hoe het gaat. Een eerlijkere verdeling houdt zelden stand als je er pas bij de volgende crisis naar kijkt."
+  },
+  "faq": {
+    "q1": "Wat is het verschil tussen mental load en huishoudelijk werk?",
+    "a1": "Huishoudelijk werk is het zichtbare werk: stofzuigen, boodschappen doen, koken. De mental load is het onzichtbare werk dat eraan voorafgaat: weten dat het moet gebeuren, beslissen wanneer, onthouden wat er op is, de afspraken maken voordat het te laat is. Je kunt de taken perfect eerlijk verdeeld hebben en toch een mental load die helemaal op één persoon rust, en dat komt zelfs heel vaak voor.",
+    "q2": "Doe je deze test beter alleen of samen?",
+    "a2": "Allebei kan, maar ze geven niet hetzelfde. Alleen krijg je de verdeling zoals jij die ziet, en dat is nuttig maar niet het hele verhaal. Samen krijg je daarbovenop het verschil tussen jullie twee blikken, en dat is vaak wat de test het meest vertelt. Kun je er maar één doen, doe hem dan samen.",
+    "q3": "Gaat de mental load alleen over vrouwen?",
+    "a3": "Nee, maar de cijfers wijzen wel één kant op. Volgens de <a href=\"https://longreads.cbs.nl/emancipatiemonitor-2024/werken-en-zorgen\" target=\"_blank\" rel=\"noopener\">Emancipatiemonitor 2024 van het CBS</a> zou de helft van de mensen met een partner het betaalde werk en het huishouden het liefst gelijk verdelen, terwijl 10 procent dat ook doet. 46 procent zegt dat in de praktijk de vrouw meer huishoudelijke taken doet en de man meer werkt. Over jullie relatie zegt dat niets: dat is precies waar de test naar kijkt, zonder vooraf aan te nemen wie wat draagt.",
+    "q4": "Mijn partner begrijpt niet waar ik het over heb, wat nu?",
+    "a4": "Dat is de situatie die het vaakst voorkomt, en het is bijna nooit onwil: de mental load zie je pas op het moment dat niemand hem meer draagt. Het werkt het best om je partner de test ook te laten doen, ieder voor zich, en de twee uitslagen te vergelijken. Het verschil tussen jullie antwoorden overtuigt veel meer dan een gesprek, omdat niemand je op je woord hoeft te geloven.",
+    "q5": "Niet alle twintig taken passen bij onze situatie, is dat erg?",
+    "a5": "Nee. De twintig taken zijn zo gekozen dat ze in de meeste huishoudens kloppen, met of zonder kinderen, in een huur- of een koophuis. Past er een niet bij jullie, antwoord dan ‘samen, eerlijk verdeeld’: dan telt die taak neutraal mee en klopt de verdeling nog steeds.",
+    "q6": "Worden mijn antwoorden opgeslagen?",
+    "a6": "Nee. Alles gebeurt in je browser, er wordt geen antwoord verstuurd of bewaard, en je hoeft geen account te maken. We vragen alleen één keer je e-mailadres om de volledige uitslag te tonen, en je antwoorden gaan daar niet mee. Ook als jullie hem samen doen, dienen de antwoorden van de eerste speler alleen voor de berekening aan het eind, en ze zijn weg zodra je de pagina sluit."
+  }
+}
