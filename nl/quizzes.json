@@ -35,6 +35,24 @@
     "description": "20 vragen om de signalen van een narcistische partner te herkennen en uit de twijfel te komen.",
     "metaDescription": "Twijfel je aan je relatie? Deze narcistische partner test stelt 20 vragen over manipulatie, controle en gaslighting. Gratis, en je ziet meteen je uitslag."
   },
+  "testAmourHabitude": {
+    "title": "Liefde of gewoonte test: is het nog liefde?",
+    "shortTitle": "Liefde of gewoonte",
+    "description": "20 vragen om te zien of je uit liefde of uit gewoonte bij je partner blijft.",
+    "metaDescription": "Twijfel je aan je gevoelens? Doe de liefde of gewoonte test: 20 vragen om te zien of je uit liefde of uit gewoonte blijft. Gratis, met meteen je uitslag."
+  },
+  "testAmourAttachement": {
+    "title": "Verliefd of gehecht test: blijf je voor de persoon?",
+    "shortTitle": "Verliefd of gehecht?",
+    "description": "Twintig vragen die apart meten wat je voor je partner voelt en wat je bij hem of haar houdt. Twee balken om te vergelijken, vijf mogelijke uitslagen.",
+    "metaDescription": "Doe de verliefd of gehecht test: twintig vragen meten apart wat je naar je partner trekt en wat je vasthoudt. Twee percentages om te vergelijken, gratis."
+  },
+  "testJeLaimeEncore": {
+    "title": "Hou ik nog van hem of haar? De test in 20 vragen",
+    "shortTitle": "Hou ik nog van hem of haar?",
+    "description": "Twintig eerlijke, gewogen vragen over wat je vandaag voor je partner voelt. Acht niveaus van uitslag, van heel duidelijk tot bijna vervaagd.",
+    "metaDescription": "Hou ik nog van hem of haar? Twintig gewogen vragen, waarbij denken aan weggaan zwaarder telt dan een ergernis, en een uitslag op acht niveaus. Gratis."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
@@ -46,6 +64,12 @@
     "shortTitle": "Controlerende relatie test",
     "description": "Twintig vragen over je vrijheid in je relatie: vrienden, geld, keuzes, je mening. Om een naam te geven aan wat je meemaakt.",
     "metaDescription": "Doe de controlerende relatie test: twintig vragen over je vrienden, je geld, je keuzes en je mening. Gratis en vertrouwelijk, met tips en hulplijnen."
+  },
+  "testEstCeLeBon": {
+    "title": "Is hij de ware? Of is zij de ware? Doe de test",
+    "shortTitle": "Is dit de ware?",
+    "description": "Twintig vragen over hoe je je bij deze persoon voelt, jullie ruzies, vertrouwen en de toekomst die je voor je ziet. De uitslag zegt of je antwoorden dezelfde kant op wijzen, en welke kant.",
+    "metaDescription": "Is hij de ware, of is zij het? Twintig vragen over vertrouwen, ruzies, de zin om elkaar te zien en jullie toekomst. Gratis, met meteen je uitslag."
   },
   "testRedFlag": {
     "title": "Red flag test: is deze persoon een red flag?",

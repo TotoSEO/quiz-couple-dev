@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test voor koppels",
+    "title": "Liefde of gehechtheid: wat houdt je bij je partner?",
+    "titleHighlight": "Liefde of gehechtheid",
+    "description": "Je bent al een tijd samen en er komt steeds één vraag terug: blijf ik omdat ik van deze persoon hou, of omdat ik aan hem of haar gehecht ben? Deze test meet <strong>die twee apart</strong>, in twintig vragen, en geeft je twee balken om te vergelijken in plaats van één cijfer.",
+    "subtitle": "Twintig vragen, vijf minuten, twee metingen en vijf mogelijke uitslagen",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Het verschil tussen liefde en gehechtheid",
+    "p1": "Het belangrijkste verschil zit in wat je doet blijven. Liefde gaat over de persoon: je hebt zin in hem of haar, wat hij of zij vertelt interesseert je, en <a href=\"/nl/hou-ik-nog-van-hem/\">je zou opnieuw voor hem of haar kiezen</a> als jullie elkaar morgen leerden kennen. Gehechtheid gaat over de band: de jaren achter je, het huis, de gezamenlijke vrienden, de angst voor de stilte 's avonds, het idee om alles opnieuw te moeten beginnen.",
+    "p2": "Het zijn twee verschillende dingen, maar geen tegenpolen, en juist daarom is de vraag zo moeilijk in je eentje te beantwoorden: een koppel dat het goed heeft, heeft ruim van allebei. Je kunt heel goed van je partner houden en tegelijk opzien tegen alleen zijn. Dat doet niets af aan je gevoelens, het betekent gewoon dat je leven met het zijne of hare verweven is, en dat is na een paar jaar vrij normaal!",
+    "p3": "Het probleem begint als alleen het tweede overblijft. Als het enige wat je nog tegenhoudt de gevolgen van weggaan zijn, en niets meer over de persoon zelf gaat. Dat onevenwicht wil de test zichtbaar maken: ben je nog verliefd, of vooral gehecht?"
+  },
+  "section2": {
+    "title": "Vier tekenen die het verschil maken",
+    "intro": "Dit zijn de vier dingen die de twee het best van elkaar onderscheiden, en waar de vragen van de test steeds op terugkomen.",
+    "sub1Title": "Interesseert deze persoon je nog?",
+    "sub1P1": "Niet of je je partner aardig vindt, maar of je partner je interesseert. Zijn of haar plannen voor dit jaar, waar hij of zij nu mee bezig is, wat hij of zij vindt van een onderwerp waar jullie het nooit over hebben gehad. Wie van iemand houdt, wil dat weten. Kun je die vragen al een tijd niet meer beantwoorden, dan is dat zelden vergeetachtigheid.",
+    "sub2Title": "Wat je antwoordt op ‘als je het opnieuw moest doen’",
+    "sub2P1": "Als je deze persoon vandaag zou ontmoeten, op een feestje, zonder jullie gezamenlijke verleden: zou je voor hem of haar kiezen? Het is de moeilijkste vraag van de test, en de veelzeggendste. Ze zet alles opzij wat zich in de loop der jaren heeft opgestapeld en laat alleen de persoon over. ‘Ik weet het niet’ is ook al een antwoord.",
+    "sub3Title": "Wat er in je opkomt als je aan later denkt",
+    "sub3P1": "Als je je een leven zonder hem of haar voorstelt, wat komt er dan eerst? Is het de persoon die je mist, dan is het liefde. Is het de stilte in huis, het geregel van een verhuizing en wat je vrienden zouden zeggen, dan is het iets anders. Ook hier kunnen de twee naast elkaar bestaan, en de volgorde waarin ze opkomen zegt veel.",
+    "sub4Title": "Wat je jezelf voorhoudt om te blijven",
+    "sub4P1": "“We hebben toch tien jaar achter ons.” “Hij of zij zou er niet overheen komen.” “Het is nu niet het moment…” Dat zijn argumenten van gehechtheid: ze gaan over wat weggaan kost, nooit over de zin om te blijven. Komen ze elke week terug, dan is het vaak omdat <a href=\"/nl/liefde-of-gewoonte-test/\">de sleur het heeft overgenomen</a>."
+  },
+  "section3": {
+    "title": "Hoe de test de twee meet",
+    "p1": "Twintig vragen, tien voor elke kant, om de beurt gesteld. Tien meten wat je naar de persoon toe trekt: het verlangen, de interesse, het plezier als hij of zij thuiskomt, de manier waarop je goed nieuws deelt. Tien meten wat je vasthoudt: de angst voor de leegte, de jaren die je erin hebt gestoken, de gezamenlijke vrienden, wat je zou verliezen als je wegging.",
+    "p2": "Elk antwoord is een ander aantal punten waard, en elke vraag heeft haar eigen gewicht: wat je antwoordt op ‘als je het opnieuw moest doen’ telt zwaarder dan wat je van de dagelijkse gewoontes vindt. Beide kanten zijn elk vijftig punten waard, en de uitslag zet ze om in percentages.",
+    "p3": "De twee percentages komen samen niet op honderd uit, en dat is zo bedoeld. Elk wordt berekend op zijn eigen maximum, dus je kunt heel goed 80 en 80 halen. Eén enkel cijfer zou een lauwe band aan beide kanten en een sterke band aan beide kanten in hetzelfde middenvak stoppen, terwijl dat twee tegenovergestelde situaties zijn.",
+    "p4": "Er zijn vijf uitslagen mogelijk, afhankelijk van de vorm van je profiel: allebei hoog, de liefde duidelijk voor, de gehechtheid duidelijk voor, allebei laag, of bijna gelijk. Wint de gehechtheid ruim en raak je <a href=\"/nl/emotionele-afhankelijkheid-test/\">in paniek bij het idee alleen te zijn</a>, dan gaat de vraag niet helemaal meer over de relatie. En staan beide balken op de bodem, dan bekijk je <a href=\"/nl/is-mijn-relatie-voorbij/\">wat er nog te redden valt</a> beter ergens anders."
+  },
+  "seo": {
+    "faqTitle": "De vragen die mensen zich stellen"
+  },
+  "jsonLd": {
+    "about": "liefde en gehechtheid in een relatie",
+    "faq1Q": "Hoe weet ik of het liefde of gehechtheid is?",
+    "faq1A": "Door te kijken waar je redenen om te blijven over gaan. Gaan ze over de persoon, over wie hij of zij is en hoeveel zin je in hem of haar hebt, dan is het liefde. Gaan ze vooral over wat je zou verliezen als je wegging, de tijd die al voorbij is en de angst om alleen te zijn, dan is het gehechtheid. Vaak zijn ze er allebei tegelijk, en het verschil tussen de twee zegt meer dan het feit dat ze er zijn.",
+    "faq2Q": "Kun je van iemand houden en tegelijk aan hem of haar gehecht zijn?",
+    "faq2A": "Ja, en bij koppels die lang samen blijven, komt dat zelfs het vaakst voor. Gehechtheid groeit vanzelf als je jaren, een huis en dezelfde vrienden deelt. Ze vervangt de liefde niet, ze komt erbij. Het signaal om op te letten is niet dat ze er is, maar het moment waarop alleen zij overblijft.",
+    "faq3Q": "Kan gehechtheid weer liefde worden?",
+    "faq3A": "Ze wordt geen liefde meer, maar de liefde kan ernaast weer groeien. Vaak is niet het gevoel weggezakt, maar de aandacht: je stelde geen vragen meer, je stelde niets meer voor, je zag de ander alleen nog als degene die de vaatwasser uitruimt. Dat valt te herstellen, als jullie het allebei willen.",
+    "faq4Q": "Is het erg om uit gehechtheid te blijven?",
+    "faq4A": "Het is geen fout, en veel mensen doen het jarenlang zonder ongelukkig te zijn. Het wordt een probleem op de dag dat het jullie allebei belet om iets anders te hebben, of als een van de twee nog gelooft dat de ander van hem of haar houdt zoals in het begin. De vraag is niet moreel, maar praktisch: hoeveel tijd je eraan wilt geven.",
+    "faq5Q": "Blijven mijn antwoorden privé?",
+    "faq5A": "Ja. Je antwoorden blijven in je browser, en er gaat niets weg met je naam. Om de volledige uitslag te zien, vragen we één keer je e-mailadres, en je antwoorden gaan daar niet mee. Alleen het eindprofiel, zonder persoonsgegevens, telt mee om te zien hoe de profielen verdeeld zijn."
+  }
+}

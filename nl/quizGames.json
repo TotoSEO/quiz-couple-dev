@@ -447,6 +447,11 @@
     "annulee": "Het spel is gestopt door {{nom}}.",
     "retourTest": "Terug naar de test"
   },
+  "est-ce-le-bon": {
+    "introQuestion": "Voor je begint:",
+    "introQuote": "Antwoord over de persoon zoals hij of zij vandaag is, niet zoals je hoopt dat hij of zij wordt.",
+    "disclaimer": "Deze test beslist niet voor jou. Hij zet je antwoorden naast elkaar, en daar zie je vaak wat je al wist. Je antwoorden worden niet opgeslagen."
+  },
   "red-flag": {
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat deze persoon doet, niet wat hij of zij zegt te gaan doen.",
