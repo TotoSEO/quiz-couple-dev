@@ -12582,8 +12582,10 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-male { background: #1e3a8a; border-color: #60a5fa; }
 .dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-female { background: #831843; border-color: #f472b6; }
 
-/* Qui est le plus : une ligne par joueur, dans le même aplat. */
-.most-joueurs { display: grid; gap: 0.6rem; width: 100%; max-width: 30rem; margin: 0 auto; }
+/* Qui est le plus : une ligne par joueur, dans le même aplat. La colonne
+   descend sous la largeur naturelle du champ de prénom : sans minmax(0, 1fr),
+   la grille la prenait et la page défilait de côté à 360 px. */
+.most-joueurs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.6rem; width: 100%; max-width: 30rem; margin: 0 auto; }
 .most-joueur {
   display: flex; align-items: center; gap: 0.6rem;
   padding: 0.5rem 0.55rem 0.5rem 0.7rem; border-radius: 1rem;
