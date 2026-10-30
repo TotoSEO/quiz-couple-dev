@@ -3,7 +3,7 @@
     "title": "Partnertest kostenlos: Beziehungstest in 20 Fragen",
     "shortTitle": "Paar-Test",
     "description": "Beantworte 20 Fragen, um die Stärke deiner Beziehung zu bewerten und deine Stärken zu entdecken.",
-    "metaDescription": "Kostenloser Partnertest für Paare: 20 Fragen zeigen, wie stark eure Beziehung wirklich ist. Passt ihr zusammen? Ergebnis sofort, ohne Anmeldung."
+    "metaDescription": "Kostenloser Partnertest für Paare: 20 Fragen zeigen, wie stark eure Beziehung ist und wo ihr euch einig seid. Ergebnis sofort, ohne Anmeldung."
   },
   "testPurete": {
     "title": "Reinheitstest: 50 Fragen, allein oder als Paar | Kostenlos",
@@ -18,10 +18,10 @@
     "metaDescription": "Kostenloser Gemeinsamkeiten-Test für Paare mit 153 Fragen. Antwortet abwechselnd und entdeckt eure Kompatibilität. Ohne Anmeldung!"
   },
   "testCompatibilite": {
-    "title": "Kompatibilitätstest für Paare: Passt ihr zusammen?",
+    "title": "Passen wir zusammen? Kompatibilitätstest in 20 Fragen",
     "shortTitle": "Liebeskompatibilität",
     "description": "20 Fragen zu zweit, um eure Liebeskompatibilität zu messen: Werte, Zukunftspläne, Lebensstil. Entdeckt euren Kompatibilitätswert!",
-    "metaDescription": "Passt ihr in der Liebe wirklich zusammen? Beantwortet 20 Fragen zu zweit und erhaltet euren Liebeskompatibilitäts-Wert: Werte, Pläne, Alltag. Kostenlos."
+    "metaDescription": "Passen wir zusammen? 20 Fragen zu euren Werten, euren Plänen und eurem Alltag zeigen, wie gut ihr als Paar harmoniert. Kostenlos, Ergebnis sofort."
   },
   "testDistance": {
     "title": "Fernbeziehung Test: 100 Fragen für Paare, kostenlos",
@@ -33,13 +33,13 @@
     "title": "Toxische Beziehung Test, kostenlos: 25 klare Fragen",
     "shortTitle": "Toxischer Test",
     "description": "25 Fragen zur Erkennung von Anzeichen einer toxischen Beziehung und zur Selbstfürsorge.",
-    "metaDescription": "Kostenloser Test für toxische Beziehungen: 25 Fragen zur Erkennung von Warnsignalen. 100% vertraulich, sofortige Ergebnisse."
+    "metaDescription": "Toxische Beziehung Test: 25 Fragen zu Kontrolle, Kritik und Eifersucht zeigen, ob dir deine Beziehung schadet. Kostenlos, anonym, Ergebnis sofort."
   },
   "testPervers": {
-    "title": "Narzissten-Test: Bin ich mit einem Narzissten zusammen?",
+    "title": "Ist mein Partner ein Narzisst? Der Test mit 20 Fragen",
     "shortTitle": "Narzissten-Test",
     "description": "20 Fragen, um die Anzeichen eines narzisstischen Partners zu erkennen und den Zweifel zu beenden.",
-    "metaDescription": "Zweifelst du an deiner Beziehung? 20 Fragen, um einen Narzissten zu erkennen: Manipulation, Kontrolle, Gaslighting. Kostenlos, vertraulich und sofort."
+    "metaDescription": "Bin ich mit einem Narzissten zusammen? 20 Fragen zu Manipulation, Kontrolle und Gaslighting zeigen die Warnzeichen. Kostenlos, vertraulich, sofort."
   },
   "testAmourHabitude": {
     "title": "Test Liebe oder Gewohnheit: Ist es noch Liebe?",
@@ -66,28 +66,28 @@
     "metaDescription": "Liebes-Quiz zu zweit: 20 Fragen über eure Geschichte, jeder antwortet allein und das Spiel vergleicht. Kostenlos, ohne Anmeldung, auf einem Handy."
   },
   "quizCoquin": {
-    "title": "Pikantes Paar-Quiz: 30 intime Fragen, kostenlos",
+    "title": "Spicy Fragen für Paare: das pikante Quiz mit 30 Fragen",
     "shortTitle": "Pikantes Quiz",
     "description": "30 Fragen, um deine Beziehung zu würzen und die Wünsche deines Partners besser kennenzulernen.",
-    "metaDescription": "Pikantes Quiz für Paare: 30 intime Fragen zum Erkunden von Wünschen und Wiederbeleben der Leidenschaft. Kostenlos und vertraulich."
+    "metaDescription": "Spicy Fragen für Paare: 30 intime Fragen, um eure Wünsche zu erkunden und die Leidenschaft neu zu wecken. Kostenlos und vertraulich."
   },
   "quizMarrant": {
-    "title": "Lustiges Paar-Quiz: 150 Fragen, die ihr euch stellt",
+    "title": "Lustige Fragen für Paare: das Paar-Quiz mit 150 Fragen",
     "shortTitle": "Lustiges Quiz",
     "description": "150 Fragen für euch beide: eure Anfänge, peinliche Momente, euer Blödsinn und eure Geständnisse. Keine Punkte, nur Lachen.",
-    "metaDescription": "Kostenloses lustiges Paar-Quiz: 150 Fragen für euch beide, in sechs Familien. Eure Anfänge, peinliche Momente, Geständnisse. Ohne Anmeldung."
+    "metaDescription": "150 lustige Fragen für Paare in sechs Familien: eure Anfänge, peinliche Momente, Geständnisse. Das Paar-Quiz zum Lachen, kostenlos, ohne Anmeldung."
   },
   "quizKnowledge": {
-    "title": "Wer kennt wen besser? Paar-Quiz mit 100 Fragen",
+    "title": "Wer kennt wen besser? Paar-Quiz: Wie gut kennst du mich?",
     "shortTitle": "Wer kennt besser?",
     "description": "Wechselt euch mit den Fragen ab und findet heraus, wer seinen Partner am besten kennt! 100 Fragen, um eure Verbindung zu testen.",
-    "metaDescription": "Interaktives Paar-Quiz: Wer kennt den Partner besser? 100 Fragen zum abwechselnden Raten. Kostenlos, lustig und perfekt für einen Date-Abend!"
+    "metaDescription": "Wie gut kennst du deinen Partner? 100 Fragen zum abwechselnden Raten: Wer kennt wen besser? Kostenlos, lustig und perfekt für einen Date-Abend."
   },
   "quizMost": {
-    "title": "Wer ist am meisten...? Paar-Quiz mit 240 Fragen",
-    "shortTitle": "Wer ist am meisten...?",
+    "title": "Wer von euch ist …? Quiz mit 240 Fragen zum Abstimmen",
+    "shortTitle": "Wer von euch ist …?",
     "description": "2 bis 8 Spieler, stimmt zusammen ab, um herauszufinden, wer am lustigsten, gesprächigsten, romantischsten ist... 240+ lustige Fragen!",
-    "metaDescription": "Wer ist am ehesten...? Quiz mit 240+ Fragen für 2-8 Spieler. Stimmt ab, lacht und entdeckt, wer am lustigsten ist. Kostenlos!"
+    "metaDescription": "Wer von euch ist am lustigsten, wer am romantischsten? 240 Fragen für 2 bis 8 Spieler: abstimmen, lachen, diskutieren. Kostenlos, ohne Anmeldung."
   },
   "questionsCouple": {
     "title": "100+ Fragen für Paare",
@@ -131,22 +131,22 @@
     "metaDescription": "Kostenloser Elternschaftstest: 24 Fragen, um herauszufinden, ob ihr als Paar bereit seid für ein Kind. Sofortiges Ergebnis, ohne Anmeldung!"
   },
   "testAstroPrenoms": {
-    "title": "Liebeskompatibilität: Vornamen & Sternzeichen | Kostenloser Test",
+    "title": "Liebestest mit Namen und Sternzeichen: Passt ihr zusammen?",
     "shortTitle": "Astro-Kompatibilität",
     "description": "Entdecke die Liebeskompatibilität eurer Vornamen und Sternzeichen. Numerologie und Astrologie vereint.",
-    "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test kombiniert Numerologie und Astrologie, um zu enthüllen, was die Sterne über eure Kompatibilität sagen."
+    "metaDescription": "Liebestest mit Namen und Sternzeichen: Vornamen eingeben, Sternzeichen wählen, und Numerologie und Astrologie zeigen eure Kompatibilität. Kostenlos."
   },
   "calculatriceAmour": {
-    "title": "Liebesrechner: Namen-Kompatibilität in Prozent, kostenlos",
+    "title": "Liebesrechner: Liebestest mit Namen, Ergebnis in Prozent",
     "shortTitle": "Liebesrechner",
     "description": "Zwei Namen, ein Kompatibilitätswert in Prozent und die ganze Rechnung dahinter. Kostenlos, sofort, ohne Anmeldung.",
-    "metaDescription": "Kostenloser Liebesrechner: zwei Namen eingeben und euren Kompatibilitätswert in Prozent bekommen, mit den fünf Messungen dahinter. Ergebnis sofort."
+    "metaDescription": "Kostenloser Liebesrechner: zwei Namen eingeben und euren Wert in Prozent bekommen, mit den fünf Messungen dahinter. Der Liebestest mit Namen, sofort."
   },
   "testDateNaissance": {
-    "title": "Passt ihr zusammen? Liebestest nach Geburtsdatum",
+    "title": "Passen wir zusammen? Liebestest nach Geburtsdatum",
     "shortTitle": "Kompatibilität nach Geburtsdatum",
     "description": "Zwei Geburtsdaten genügen. Daraus ergeben sich eure Lebenszahlen, eure Sternzeichen und eure chinesischen Tierkreiszeichen, und alle drei werden verknüpft.",
-    "metaDescription": "Passt ihr laut eurem Geburtsdatum zusammen? Lebenszahl, Sternzeichen und chinesisches Zeichen in einer Berechnung verknüpft. Kostenlos, ohne Anmeldung."
+    "metaDescription": "Passen wir zusammen laut Geburtsdatum? Lebenszahl, Sternzeichen und chinesisches Zeichen ergeben euer Partnerhoroskop. Kostenlos, ohne Anmeldung."
   },
   "testEmmenager": {
     "title": "Bereit zum Zusammenziehen? Test für Paare",
@@ -155,16 +155,16 @@
     "metaDescription": "Bereit für den großen Schritt und zusammenziehen? Dieser Paar-Test hilft euch herauszufinden, ob ihr wirklich alltagstauglich seid. 2 Modi: zusammen oder getrennt."
   },
   "testJalousie": {
-    "title": "Eifersucht Test für Paare: 20 Fragen, ein klares Ergebnis",
+    "title": "Eifersuchtstest: Bin ich zu eifersüchtig? 20 Fragen",
     "shortTitle": "Eifersucht-Test",
     "description": "Zwei Eifersuchtstests für Paare: einer für deine eigene Eifersucht, einer für die deines Partners. Differenzierte Ergebnisse.",
     "metaDescription": "Zwei Eifersuchtstests für Paare: einer für deine eigene Eifersucht, einer für die deines Partners. Präzise Fragen, differenzierte Ergebnisse."
   },
   "testLangageAmour": {
-    "title": "Test der 5 Sprachen der Liebe: gratis, ohne Anmeldung",
+    "title": "5 Sprachen der Liebe Test: kostenlos, ohne Anmeldung",
     "shortTitle": "Sprachen der Liebe",
     "description": "30 Fragen, um deine dominante Liebessprache unter den 5 von Gary Chapman identifizierten zu entdecken.",
-    "metaDescription": "Was ist deine Sprache der Liebe? 30 Fragen, sofortiges Ergebnis, ohne Anmeldung und ohne E-Mail. Macht ihn getrennt und vergleicht eure zwei Profile."
+    "metaDescription": "Welche der 5 Sprachen der Liebe ist deine? 30 Fragen nach Gary Chapman, Ergebnis sofort, ohne Anmeldung. Macht ihn getrennt und vergleicht eure Profile."
   },
   "testPersonnalite": {
     "title": "Liebespersönlichkeitstest online & kostenlos",
@@ -179,10 +179,10 @@
     "metaDescription": "Zwei kostenlose Formate: der Test „sind wir ein peinliches Paar“ mit 15 Situationen, und 20 peinliche Fragen für euch beide. Ohne Anmeldung."
   },
   "quizTuPreferes": {
-    "title": "Was würdest du lieber für Paare: 100 Fragen zu zweit",
-    "shortTitle": "Was würdest du lieber?",
-    "description": "100 'Was würdest du lieber'-Fragen für Paare. Unmögliche Entscheidungen, die zum Lachen, Diskutieren und manchmal langen Zögern bringen.",
-    "metaDescription": "Das Was-würdest-du-lieber-Spiel für Paare: 100 unmögliche Dilemmas, 15 oder 30 pro Runde, auf einem einzigen Handy. Kostenlos, ohne Anmeldung."
+    "title": "Würdest du eher Fragen für Paare: 100 Dilemmas zu zweit",
+    "shortTitle": "Würdest du eher?",
+    "description": "100 „Würdest du eher“-Fragen für Paare. Unmögliche Entscheidungen, die zum Lachen, Diskutieren und manchmal langen Zögern bringen.",
+    "metaDescription": "Würdest du eher oder würdest du lieber? 100 Fragen für Paare, 15 oder 30 pro Runde, auf einem einzigen Handy. Kostenlos, ohne Anmeldung."
   },
   "quizVraiFaux": {
     "title": "Wahr oder falsch Quiz speziell für Paare | 100 Fragen",
@@ -197,10 +197,10 @@
     "metaDescription": "Kostenloses Temptation Island Quiz online: 12 Tage auf der Insel, jeden Tag eine Versuchung und ein letztes Lagerfeuer. Würde deine Beziehung bestehen?"
   },
   "testAttachement": {
-    "title": "Bindungsstil-Test: welcher ist deiner?",
+    "title": "Bindungstyp Test: Welcher Bindungsstil bist du?",
     "shortTitle": "Bindungstest",
     "description": "20 Fragen, um deinen Bindungsstil in der Liebe herauszufinden: sicher, ängstlich, vermeidend oder desorganisiert. Ergebnis sofort.",
-    "metaDescription": "Sicher, ängstlich, vermeidend oder desorganisiert? Finde deinen Bindungsstil in 20 Fragen heraus. Nach der Theorie von Bowlby."
+    "metaDescription": "Sicher, ängstlich, vermeidend oder desorganisiert? Finde deinen Bindungstyp in 20 Fragen heraus, nach der Bindungstheorie von Bowlby. Kostenlos."
   },
   "testConfiance": {
     "title": "Vertrauenstest Paar: wie stabil ist euer Vertrauen? Gratis",
@@ -209,10 +209,10 @@
     "metaDescription": "Vertraust du deinem Partner wirklich? 20 Fragen zur Einschätzung des Vertrauens in eurer Beziehung. Kostenlos, vertraulich, sofort."
   },
   "testInfidelite": {
-    "title": "Untreue Test für Paare: 20 Fragen zu den echten Warnsignalen",
+    "title": "Geht mein Partner fremd? Untreue-Test mit 20 Fragen",
     "shortTitle": "Untreue-Test",
     "description": "20 Fragen, um die Warnsignale in eurer Beziehung zu erkennen: Heimlichkeit, emotionale Distanz, Verhaltensänderungen. Ergebnis sofort.",
-    "metaDescription": "Betrügt dich dein Partner? 20 Fragen, um die Warnzeichen in eurer Beziehung zu erkennen. Kostenlos, vertraulich, Ergebnis sofort."
+    "metaDescription": "Geht mein Partner fremd? 20 Fragen zu den Warnzeichen in eurer Beziehung, ohne Paranoia. Kostenlos, vertraulich, Ergebnis sofort."
   },
   "testCouche": {
     "title": "Hat er/sie mit jemand anderem geschlafen? Test",
@@ -221,10 +221,10 @@
     "metaDescription": "Hat er oder sie mit jemand anderem geschlafen? 15 Fragen, angepasst an das Geschlecht deines Partners. Kostenlos, anonym, sofortiges Ergebnis."
   },
   "testSecret": {
-    "title": "Test: Liebt er/sie mich heimlich? Kostenlos online",
+    "title": "Steht er auf mich? Test: Liebt er oder sie mich heimlich?",
     "shortTitle": "Liebt er/sie mich heimlich?",
     "description": "10 Fragen zum Verhalten dir gegenüber, um aufmerksame Freundschaft von einem unausgesprochenen Gefühl zu unterscheiden.",
-    "metaDescription": "Liebt er oder sie mich heimlich? 10 Fragen zu Blicken, Detailgedächtnis und herbeigeführten Gelegenheiten. Kostenlos, Ergebnis sofort."
+    "metaDescription": "Steht er heimlich auf mich, steht sie auf mich? 10 Fragen zu Blicken, Detailgedächtnis und gesuchten Gelegenheiten. Kostenlos, Ergebnis sofort."
   },
   "testDistanceAime": {
     "title": "Fernbeziehung: Liebt er/sie mich noch? Test",
@@ -251,10 +251,10 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele & Beziehungsspiele: 13 kostenlose Spiele",
+    "title": "Paarspiele online: 13 kostenlose Spiele für zwei",
     "shortTitle": "Paarspiele",
-    "description": "Dreizehn Spiele für zu zweit: Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer könnte, Ich hab noch nie, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
-    "metaDescription": "13 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
+    "description": "Dreizehn Spiele für zwei: Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer würde eher, Ich hab noch nie, Wer von uns beiden, Würdest du eher, die Dilemma-Fragen, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "13 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Wer von uns beiden, Würdest du eher, Dilemma-Fragen, Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -269,27 +269,27 @@
     "metaDescription": "Brettspiel für Paare: 40 Felder, ein Würfel, zwei kleine Figuren. Wahrheiten, Pflichten, Duelle und Erinnerungen. Gratis, ohne Anmeldung, wer zuerst ankommt gewinnt."
   },
   "jeuActionVerite": {
-    "title": "Wahrheit oder Pflicht für Paare: das Onlinespiel, 70 Karten",
+    "title": "Wahrheit oder Pflicht für Paare: Fragen und Aufgaben online",
     "shortTitle": "Wahrheit oder Pflicht",
     "description": "70 zufällig gezogene Karten für Wahrheit oder Pflicht zu zweit, ihr sagt an.",
-    "metaDescription": "Spielt Wahrheit oder Pflicht als Paar: 70 zufällige Karten, und ihr sagt an, Wahrheit oder Pflicht. Gratis, ohne Anmeldung, auf einem einzigen Handy."
+    "metaDescription": "Wahrheit oder Pflicht für Paare: 70 zufällige Karten mit Fragen und Aufgaben, ihr sagt an. Gratis, ohne Anmeldung, auf einem einzigen Handy."
   },
   "jeuActionVeriteHot": {
-    "title": "Wahrheit oder Pflicht versaut: das heiße Spiel zu zweit",
+    "title": "Wahrheit oder Pflicht versaut: Fragen für Paare ab 18",
     "shortTitle": "Wahrheit oder Pflicht versaut",
     "description": "70 pikante Karten zum Spielen zu zweit, von andeutend bis sehr direkt.",
     "metaDescription": "Wahrheit oder Pflicht versaut online: 70 Karten von andeutend bis sehr direkt, ihr sagt an. Gratis, ohne Anmeldung, heute Abend zu zweit."
   },
   "jeuQuiDeNous": {
-    "title": "Wer von uns beiden? Kostenloses Paarspiel für zwei",
+    "title": "Wer von uns beiden? Fragen für Paare, das Spiel zu zweit",
     "shortTitle": "Wer von uns beiden",
     "metaDescription": "Das Spiel, bei dem jeder heimlich abstimmt und erst danach die Antwort des anderen sieht. 40 Fragen, ein Harmonie-Wert und viel Diskussionsstoff. Kostenlos, ohne Anmeldung.",
     "description": "Jeder stimmt heimlich ab, beide Antworten werden gleichzeitig aufgedeckt: 40 Fragen und ein Harmonie-Wert."
   },
   "jeuDilemmes": {
-    "title": "Dilemmata für Paare zum gemeinsamen Beantworten | 100 Situationen",
-    "shortTitle": "Paar-Dilemmata",
-    "metaDescription": "100 Dilemmata, die ihr zu zweit entscheidet: ein Vorteil, ein ABER, und ihr sagt OK oder auf keinen Fall. Danach seht ihr, wie alle anderen Paare abgestimmt haben. Kostenlos, ohne Anmeldung.",
+    "title": "Dilemma-Fragen für Paare: 100 Situationen zu zweit",
+    "shortTitle": "Dilemma-Fragen",
+    "metaDescription": "100 Dilemma-Fragen zu zweit: ein Vorteil, ein ABER, und ihr sagt okay oder auf keinen Fall. Danach seht ihr, wie die anderen Paare gewählt haben.",
     "description": "Ein Vorteil, ein Haken, und ihr entscheidet gemeinsam. Danach seht ihr die Stimmen aller anderen Paare."
   },
   "pourContre": {
@@ -299,19 +299,19 @@
     "description": "Eine Aussage, zwei Lager. Ihr entscheidet gemeinsam und erfahrt danach, wie andere Paare abgestimmt haben."
   },
   "testFinCouple": {
-    "title": "Test: Ist meine Beziehung am Ende? | 24 Fragen",
+    "title": "Soll ich mich trennen? Test: Ist meine Beziehung am Ende?",
     "shortTitle": "Ist meine Beziehung am Ende?",
-    "metaDescription": "24 sachliche, gewichtete Fragen, um herauszufinden, ob eure Beziehung zu Ende geht. Ergebnis in 8 Stufen, ohne falsche Beruhigung. Kostenlos, ohne Anmeldung.",
+    "metaDescription": "Soll ich mich trennen? 24 sachliche, gewichtete Fragen zeigen, ob eure Beziehung zu Ende geht. Ergebnis in 8 Stufen, ohne falsche Beruhigung. Kostenlos.",
     "description": "Vierundzwanzig sachliche Fragen, ein nach dem Gewicht jedes Signals abgestuftes Punktesystem, und ein Urteil, das euch nichts erspart."
   },
   "testAmourAmitie": {
-    "title": "Liebe oder Freundschaft? Gratis Online-Test | 20 Fragen",
+    "title": "Liebe oder Freundschaft? Test: Nur Freunde oder mehr?",
     "shortTitle": "Liebe oder Freundschaft?",
-    "metaDescription": "20 gewichtete Fragen, um herauszufinden, ob das, was du für diese Person empfindest, Liebe oder Freundschaft ist. Urteil in 6 Stufen. Kostenlos, ohne Anmeldung.",
+    "metaDescription": "Nur Freundschaft oder mehr? 20 gewichtete Fragen zeigen, ob du für diese Person Liebe oder Freundschaft empfindest. Urteil in 6 Stufen, kostenlos.",
     "description": "Zwanzig gewichtete Fragen und ein Urteil in sechs Stufen, um endlich einen Namen für dein Gefühl zu finden."
   },
   "testDependance": {
-    "title": "Test emotionale Abhängigkeit | Sofortiges Ergebnis, kostenlos",
+    "title": "Emotionale Abhängigkeit Test: Bin ich emotional abhängig?",
     "shortTitle": "Test Emotionale Abhängigkeit",
     "description": "20 ehrliche Fragen, um herauszufinden, ob du deinen Partner liebst oder dich an ihn klammerst. Sofortiges Ergebnis und konkrete Schritte.",
     "metaDescription": "Gesunde Bindung oder emotionale Abhängigkeit? 20 ehrliche Fragen, sofortiges Ergebnis und konkrete Schritte zurück ins Gleichgewicht. Kostenlos."
@@ -371,7 +371,7 @@
     "metaDescription": "Das Fragenspiel fürs erste Date, in drei Leveln wachsender Nähe. 60 Fragen, 15 pro Runde, zu zweit auf einem Handy, ohne Anmeldung und ohne Punkte."
   },
   "jeuJamais": {
-    "title": "Ich hab noch nie: Interaktives Paar-Spiel, kostenlos",
+    "title": "Ich hab noch nie Fragen für Paare: das Spiel zu zweit",
     "shortTitle": "Ich hab noch nie",
     "metaDescription": "100 Ich-hab-noch-nie-Fragen, geschrieben für Paare. Ihr antwortet abwechselnd, das Spiel zählt die Geständnisse und zeigt, wer von euch mehr erlebt hat. Kostenlos, ohne Anmeldung.",
     "description": "Der große Partyklassiker, neu geschrieben für zwei: ihr antwortet abwechselnd, und das Ergebnis zeigt, wer am meisten zu gestehen hat."
@@ -384,11 +384,11 @@
     "description": "Antworte auf das, was du fühlst, der Score trennt Anziehung, Crush und echte Gefühle."
   },
   "jeuQuiPourrait": {
-    "title": "Wer könnte? Online-Paarspiel mit 100+ Fragen",
-    "shortTitle": "Wer könnte?",
-    "metaTitle": "Wer könnte? Online-Paarspiel mit 100+ Fragen",
-    "metaDescription": "Eine Frage, eure zwei Vornamen, und ihr zeigt, wer dazu fähig wäre. 108 Fragen, Runden mit 20, 40 oder 60, kostenlos und ohne Anmeldung.",
-    "description": "Eine Frage erscheint, ihr zeigt, wer dazu fähig wäre: einer von euch beiden, oder niemand."
+    "title": "Wer würde eher? Fragen für Paare, das Spiel zu zweit",
+    "shortTitle": "Wer würde eher?",
+    "metaTitle": "Wer würde eher? Fragen für Paare, das Spiel zu zweit",
+    "metaDescription": "Wer würde eher aus einer Laune heraus eine Luxusuhr kaufen? 108 Fragen für Paare, Runden mit 20, 40 oder 60, kostenlos und ohne Anmeldung.",
+    "description": "Eine Frage erscheint, ihr zeigt, wer es eher tun würde: einer von euch beiden, oder niemand."
   },
   "jeuOuiNon": {
     "title": "Ja oder Nein Spiel für Paare online - 120 Fragen",
@@ -404,7 +404,7 @@
     "description": "Zwanzig angefangene Sätze, die ihr in Ruhe zu Ende bringt oder beide gleichzeitig nach einem Countdown von drei Sekunden."
   },
   "testAimeEncore": {
-    "title": "Test: Liebt er oder sie mich noch? 20 Fragen",
+    "title": "Liebt er mich noch? Liebt sie mich noch? Test, 20 Fragen",
     "shortTitle": "Test Liebt er mich noch?",
     "description": "Zwanzig Alltagssituationen, um herauszufinden, ob die Gefühle noch da sind, oder ob sich etwas entfernt hat. Sofortiges Ergebnis, kostenlos.",
     "metaDescription": "Liebt er oder sie dich noch? Zwanzig Fragen zum Alltag, um Routine von echter Entfremdung zu unterscheiden. Kostenlos, sofortiges Ergebnis und Hinweise für das Gespräch."
@@ -423,10 +423,10 @@
     "metaDescription": "Bin ich in meinen besten Freund oder meine beste Freundin verliebt? Fünfzehn Fragen mit eigenem Gewicht, zwei Reihen je nachdem, ob dein Freund ein Junge oder ein Mädchen ist, und ein sofortiges Ergebnis."
   },
   "testTrouverAmour": {
-    "title": "Warum finde ich keine Liebe? Test mit 15 Fragen",
+    "title": "Warum finde ich keinen Partner? Test mit 15 Fragen",
     "shortTitle": "Warum finde ich keine Liebe?",
     "description": "Fünfzehn Fragen zu den Menschen, die du triffst, zu dem, was du erwartest, und zu dem, was dich zurückhält. Das Ergebnis gibt dem, was hakt, einen Namen, ohne zu urteilen.",
-    "metaDescription": "Warum findest du keine Liebe? Fünfzehn Fragen zu den Menschen, die du triffst, zu deinen Erwartungen und zu dem, was dich zurückhält, um zu verstehen, was hakt. Kostenloser Test, sofortiges Ergebnis und Ideen für danach."
+    "metaDescription": "Warum finde ich keinen Partner, warum finde ich keine Liebe? 15 Fragen zu deinen Begegnungen, Erwartungen und Bremsen. Kostenlos, Ergebnis sofort."
   },
   "testCelibataire": {
     "title": "Warum bin ich noch Single? | Kostenloser Online-Test",
@@ -453,10 +453,10 @@
     "metaDescription": "Fünfzehn Situationen, zusammen am selben Handy beantwortet. Unzertrennliche, Verbündete, Unabhängige oder Aufbauer: euer Profil in drei Minuten."
   },
   "testEstCeLeBon": {
-    "title": "Woran erkennt man den richtigen Partner? Test in 20 Fragen",
+    "title": "Ist er der Richtige? Ist sie die Richtige? Test, 20 Fragen",
     "shortTitle": "Ist es die richtige Person?",
     "description": "Zwanzig Fragen dazu, wie du dich mit diesem Menschen fühlst, zu euren Streits, zum Vertrauen und zu der Zukunft, die du dir vorstellst. Das Ergebnis sagt, ob deine Antworten in dieselbe Richtung zeigen, und in welche.",
-    "metaDescription": "Zwanzig Fragen zu Vertrauen, Streit, der Lust auf ein Wiedersehen und der Zukunft, die du dir vorstellst. Sofortiges Ergebnis, kostenlos und anonym."
+    "metaDescription": "Ist er der Richtige, ist sie die Richtige? Zwanzig Fragen zu Vertrauen, Streit, der Lust auf ein Wiedersehen und eurer Zukunft. Kostenlos und anonym."
   },
   "testRedFlag": {
     "title": "Red-Flag-Test | Hat diese Person welche?",
@@ -471,10 +471,10 @@
     "metaDescription": "Zwei Geburtsdaten, eure beiden Tiere und ihr Element, und was die chinesische Tradition über euer Paar sagt. Ergebnis sofort, kostenlos und anonym."
   },
   "compteurCouple": {
-    "title": "Beziehungsdauer-Zähler: eure Tage zusammen und die Daten zum Feiern",
+    "title": "Beziehungsdauer-Zähler: Wie lange sind wir zusammen?",
     "shortTitle": "Beziehungsdauer-Zähler",
     "description": "Gebt den Tag ein, an dem alles begann, und der Zähler sagt euch, wie viele Tage ihr zusammen seid, die genaue Dauer und die nächsten Daten zum Feiern.",
-    "metaDescription": "Kostenloser Beziehungsdauer-Zähler: Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer, die nächsten Jahrestage und Tage-Marken zum Feiern."
+    "metaDescription": "Beziehungsdauer-Zähler: Wie lange sind wir zusammen? Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer und die nächsten Jahrestage."
   },
   "testDureeCelibat": {
     "title": "Wie lange bleibe ich noch Single? Online-Test",

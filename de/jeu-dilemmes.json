@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Paarspiel",
-    "title": "100 Paar-Dilemmata zum gemeinsamen Lösen + wie viele Leute abgestimmt haben!",
-    "titleHighlight": "Paar-Dilemmata",
+    "title": "100 Dilemma-Fragen für Paare, mit den Stimmen aller anderen",
+    "titleHighlight": "Dilemma-Fragen",
     "description": "Ein Vorteil, der lockt, ein ABER, das wehtut. Ihr antwortet zu zweit mit OK oder auf keinen Fall und seht danach, wohin sich alle anderen Paare geneigt haben."
   },
   "jsonLd": {
-    "name": "Paar-Dilemmata"
+    "name": "Dilemma-Fragen für Paare"
   },
   "section1": {
     "title": "Ein Dilemma ist kein « Was wäre dir lieber? »",

@@ -110,6 +110,6 @@
     "q5": "Not all twenty tasks apply to us, is that a problem?",
     "a5": "No. The twenty tasks were chosen to hold in the large majority of households, with or without children, renting or owning. If one of them does not apply to you, answer « both, evenly »: it will become neutral and will not skew the split.",
     "q6": "Are my answers saved?",
-    "a6": "No. Everything happens in your browser, no answer is sent or stored, and there is no account and no email address to give. Even in two-player mode, the first player's answers are only used for the final calculation and disappear when you close the page."
+    "a6": "No. Everything happens in your browser, no answer is sent or stored, and there's no account to create. The only thing we ask for is your email address, once, to show the full result, and your answers never go with it. Even in two-player mode, the first player's answers are only used for the final calculation and disappear when you close the page."
   }
 }

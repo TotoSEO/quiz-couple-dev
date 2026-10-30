@@ -25,7 +25,7 @@
     "faq2Q": "Est-ce que passer des questions fausse le résultat ?",
     "faq2A": "Non. Les questions passées sont exclues du calcul. Votre score est calculé uniquement sur les questions auxquelles vous avez répondu. Cela dit, si vous passez une question parce qu'elle est inconfortable, c'est peut-être celle dont vous avez le plus besoin de parler.",
     "faq3Q": "Ce test est-il gratuit et confidentiel ?",
-    "faq3A": "Oui, 100%. Aucune inscription, aucun email demandé. Vos réponses ne sont pas enregistrées et restent uniquement sur votre appareil."
+    "faq3A": "Oui, 100%. Aucune inscription, et vos réponses ne sont pas enregistrées : elles restent uniquement sur votre appareil. Pour voir le résultat complet, on vous demande juste votre adresse e-mail, une fois, sans vos réponses."
   },
   "quiz": {
     "skipQuestion": "Passer cette question",
