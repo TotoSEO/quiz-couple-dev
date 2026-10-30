@@ -44,7 +44,7 @@
   function TV(cleSolo, cleCouple, repliSolo, repliCouple) {
     return mode === 'solo' ? T(cleSolo, repliSolo) : T(cleCouple, repliCouple);
   }
-  // Les gabarits portent {score}, {max}, {pct}, {n} ou {lien}.
+  // Les gabarits portent {score}, {max}, {pct}, {n}, {pts} ou {lien}.
   function fmt(chaine, valeurs) {
     return String(chaine).replace(/\{(\w+)\}/g, function (tout, cle) {
       return valeurs[cle] != null ? valeurs[cle] : tout;
@@ -57,7 +57,7 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
-  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' };
   function nb(n) {
     try { return Number(n).toLocaleString(LOCALES[LANGUE] || 'fr-FR'); } catch (e) { return String(n); }
   }
@@ -194,7 +194,7 @@
     });
     w.appendChild(choix);
 
-    var retour = el('button', 'pu-lien', '← Changer de mode');
+    var retour = el('button', 'pu-lien', T('changer_mode', '← Changer de mode'));
     retour.type = 'button';
     retour.addEventListener('click', function () { rend(ecranModes); });
     w.appendChild(retour);
@@ -218,7 +218,7 @@
     }).catch(function () {
       rend(function () {
         var w = el('div', 'pu-carte');
-        w.appendChild(el('h2', 'pu-titre', 'Les questions n\'ont pas voulu se charger'));
+        w.appendChild(el('h2', 'pu-titre', T('erreur_titre', 'Les questions n\'ont pas voulu se charger')));
         w.appendChild(el('p', 'pu-sous', T('erreur_sous', 'Vérifiez votre connexion et réessayez.')));
         var b = el('button', 'pu-cta', T('reessayer', 'Réessayer'));
         b.type = 'button';
@@ -260,7 +260,7 @@
 
     var quitter = el('button', 'pu-rond pu-rond--sortie', '✕');
     quitter.type = 'button';
-    quitter.setAttribute('aria-label', 'Quitter le test');
+    quitter.setAttribute('aria-label', T('quitter_aria', 'Quitter le test'));
     quitter.addEventListener('click', function () {
       if (confirm(T('quitter', 'Quitter le test ? Les réponses seront perdues.'))) rend(ecranModes);
     });
@@ -272,7 +272,7 @@
 
     var carte = el('div', 'pu-carte pu-carte--question');
     carte.appendChild(el('p', 'pu-num',
-      'N°' + (index + 1) + ' <span class="pu-num-cat">' + cat.emoji + ' ' + esc(cat.nom) + '</span>'));
+      fmt(T('numero', 'N°{n}'), { n: index + 1 }) + ' <span class="pu-num-cat">' + cat.emoji + ' ' + esc(cat.nom) + '</span>'));
     carte.appendChild(el('h2', 'pu-question', esc(q.q)));
 
     // Les réponses sont teintées du vert au rouge selon ce qu'elles coûtent :
@@ -321,7 +321,7 @@
       rend(function () { return ecranResultat(score, pct); });
       if (window.QCResultat) {
         window.QCResultat.arrivee(RACINE.firstElementChild, {
-          lang: 'fr',
+          lang: LANGUE,
           apres: function () { versLeHaut(RACINE); }
         });
       } else {
@@ -347,7 +347,7 @@
     // différentes sans rien pour les tenir ensemble, et la section entière se
     // fondait dans la page.
     var tete = el('div', 'pu-verdict');
-    tete.appendChild(el('p', 'pu-verdict-kicker', T('verdict_kicker', 'Votre résultat')));
+    tete.appendChild(el('p', 'pu-verdict-kicker', TV('verdict_kicker_solo', 'verdict_kicker_couple', 'Ton résultat', 'Votre résultat')));
     tete.appendChild(el('h2', 'pu-verdict-titre',
       esc(p.titre) + ' <span class="pu-verdict-emoji" aria-hidden="true">' + p.emoji + '</span>'));
 
@@ -389,18 +389,18 @@
     var url = 'https://c3po.link/Quyean9abC';
     var nom = 'Le Passage du Désir : lingerie, jeux et accessoires';
     var zone = el('section', 'qr-produits');
-    zone.setAttribute('aria-label', 'Ce produit / cadeau pourrait vous intéresser !');
+    zone.setAttribute('aria-label', 'Ce produit / cadeau pourrait vous intéresser !'); // langues: sans-nl : boutique française, encart en français seulement
     zone.innerHTML =
       '<h3 class="qr-produits-titre">Ce produit / cadeau pourrait vous intéresser !</h3>' +
       '<div class="qr-produits-piste"><article class="qr-produit">' +
-        '<a class="qr-produit-visuel" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' +
+        '<a class="qr-produit-visuel" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' + // langues: sans-nl : boutique française, encart en français seulement
           '<span class="qr-produit-cadre"><span class="qr-produit-piste">' +
             '<img src="/partenaires/passage-du-desir.webp" alt="Mannequin en lingerie de dentelle, campagne Le Passage du Désir" width="300" height="300" loading="lazy" decoding="async">' +
           '</span></span>' +
         '</a>' +
         '<span class="qr-produit-corps">' +
           '<span class="qr-produit-nom">' + nom + '</span>' +
-          '<a class="qr-produit-btn" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' +
+          '<a class="qr-produit-btn" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' + // langues: sans-nl : boutique française, encart en français seulement
             '<span>Voir la boutique</span>' +
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>' +
           '</a>' +
@@ -582,7 +582,7 @@
     boite.innerHTML = '<div class="pu-jauge-boite">' + res.svg + '</div>' +
       '<div class="pu-jauge-axes"><span>0</span><span>' + esc(nb(scoreMax)) + '</span></div>';
 
-    var etiq = el('span', 'pu-jauge-ici', T('jauge_ici', 'Vous êtes ici'));
+    var etiq = el('span', 'pu-jauge-ici', TV('jauge_ici_solo', 'jauge_ici_couple', 'Tu es ici', 'Vous êtes ici'));
     etiq.style.left = ((res.x / res.L) * 100).toFixed(2) + '%';
     boite.firstChild.appendChild(etiq);
 
@@ -701,7 +701,7 @@
           '<div class="pu-cat-tete"><span class="pu-cat-nom">' + meta.emoji + ' ' + esc(meta.nom) + '</span>' +
           '<span class="pu-cat-val">' + r.pct + '%</span></div>' +
           '<div class="pu-cat-piste"><span style="width:' + r.pct + '%"></span></div>' +
-          '<p class="pu-cat-detail">' + nb(r.pts) + ' points sur ' + nb(r.max) + '</p>';
+          '<p class="pu-cat-detail">' + fmt(T('cat_detail', '{pts} points sur {max}'), { pts: nb(r.pts), max: nb(r.max) }) + '</p>';
         liste.appendChild(ligne);
       });
     bloc.appendChild(liste);

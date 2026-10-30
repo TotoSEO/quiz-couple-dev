@@ -1,0 +1,254 @@
+{
+  "hero": {
+    "badge": "50 vragen · gratis · zonder account",
+    "titre": "Puriteitstest",
+    "titreAccent": "alleen of als koppel",
+    "accroche": "Hoe ver ben je eigenlijk al gegaan?",
+    "description": "De puriteitstest bestaat uit 50 vragen over wat je al hebt gedaan: feestjes, exen, leugens, seks, enzovoort. Doe hem alleen voor je eigen score, of met z'n tweeën om jullie relatie te scoren, en vergelijk dan met je partner!"
+  },
+  "cta": "Start de test",
+  "sections": {
+    "s1": {
+      "titre": "Wat is een puriteitstest?",
+      "lead": "Een puriteitstest is een lange lijst dingen die mensen doen, en jij vinkt aan wat je al hebt gedaan. Hoe meer vakjes je aanvinkt, hoe hoger je score, en hoe minder ‘puur’ je bent.",
+      "p1": "De bekendste, de Rice Purity Test, komt van Rice University in Texas en ging de hele wereld over via sociale media. Dat het principe ook zo goed werkt als <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">spel voor een avondje</a>, komt vooral doordat je een getal krijgt dat je kunt vergelijken met je vrienden, of met je vriend of vriendin.",
+      "p2": "Onze versie heeft twee modi. Alleen gaan de vragen over jou: je exen, je leugens, de feestjes die uit de hand liepen of wat je voor iemand verborgen hebt gehouden. Met z'n tweeën gaan ze over jullie relatie, over wat jullie samen hebben gedaan en wat jullie voor elkaar hebben verzwegen.",
+      "chiffres": [
+        {
+          "val": "50",
+          "lib": "vragen per modus"
+        },
+        {
+          "val": "899",
+          "lib": "punten maximaal"
+        },
+        {
+          "val": "7",
+          "lib": "categorieën met een score"
+        },
+        {
+          "val": "2",
+          "lib": "speelmodi"
+        }
+      ],
+      "sub1Titre": "Waarom het met z'n tweeën zo goed werkt",
+      "sub1P1": "Een score kun je makkelijk vergelijken. Jullie doen de test ieder voor zich, sturen elkaar je uitslag, en het gesprek begint vanzelf. Meestal gaat het minder over het getal dan over de vraag die je even deed slikken, en van daaruit kom je snel bij <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">vragen die je elkaar nooit stelt</a>."
+    },
+    "s2": {
+      "titre": "Zo wordt je score berekend",
+      "p1": "Niet alle vragen zijn evenveel punten waard. Als elk aangevinkt vakje één punt opleverde, zou bijna iedereen op een gemiddelde score uitkomen, en dan zei de uitslag niet veel meer. Een voorbeeld:",
+      "tableau": {
+        "titre": "Drie antwoorden, drie gewichten",
+        "entete": [
+          "Het antwoord",
+          "Wat het kost"
+        ],
+        "lignes": [
+          [
+            "Van een feestje vertrekken zonder iemand iets te zeggen",
+            "8 punten"
+          ],
+          [
+            "Het in het openbaar hebben gedaan, waar mensen je hadden kunnen zien",
+            "26 punten"
+          ],
+          [
+            "Achter het stuur zijn gaan zitten na het drinken",
+            "27 punten"
+          ]
+        ],
+        "note": "Een dom moment op een feestje en iets waarbij iemand kan omkomen, hoeven niet even zwaar te wegen."
+      },
+      "p2": "Elke vraag heeft ook drie tot vijf gradaties in plaats van ja of nee. ‘Ben je weleens vreemdgegaan?’ vraagt om een ander antwoord bij een zoen op een feestje dan bij een dubbelleven van zes maanden, en de puntentelling maakt dat verschil.",
+      "encart": {
+        "titre": "Het maximum verschilt per versie",
+        "texte": "De volledige versie gaat tot 899 punten alleen en 927 als koppel. De versie voor iedereen, die je krijgt als je zegt dat je jonger bent dan 16, laat de expliciete vragen weg en heeft dus een lager maximum. De uitslag wordt berekend als percentage van het maximum dat je echt hebt gespeeld, anders zou de korte versie altijd braaf uitkomen."
+      }
+    },
+    "s3": {
+      "titre": "Alleen of met z'n tweeën: wat het verandert",
+      "p1": "De twee modi stellen niet dezelfde vragen en scoren niet hetzelfde. Kies voordat je begint, onderweg wisselen kan niet.",
+      "comparatif": [
+        {
+          "emoji": "🙋",
+          "titre": "Ieder voor zich",
+          "texte": "De vragen gaan over jou. Je verleden, je exen, wat je hebt verborgen, wat je nooit hebt verteld. Dit is de modus als je je score wilt rondsturen en iemand wilt uitdagen hetzelfde te doen."
+        },
+        {
+          "emoji": "💞",
+          "titre": "Met z'n tweeën, over jullie relatie",
+          "texte": "Er worden geen twee mensen meer gescoord, maar een verhaal: wat jullie samen hebben gedaan, waar, en wat jullie voor elkaar hebben verzwegen. De antwoorden zeg je hardop, en dat maakt deze modus een stuk gevaarlijker."
+        }
+      ],
+      "p2": "De koppelmodus is geen dubbel werk met de relatietest: de een meet wat jullie samen hebben gedaan, de ander <a class=\"pu-lien-int\" href=\"{{testCouple}}\">hoe jullie relatie er vandaag voor staat</a>. Doe je ze na elkaar, dan krijg je twee heel verschillende blikken op hetzelfde stel.",
+      "encart": {
+        "titre": "Een tip voordat je de koppelmodus start",
+        "texte": "Sommige vragen vragen je om dingen hardop te zeggen die nog nooit gezegd zijn. Ligt het onderwerp nog gevoelig tussen jullie, doe dan allebei de modus alleen en vergelijk alleen de scores. Het getal is genoeg om het gesprek te beginnen zonder dat iemand details hoeft te geven."
+      }
+    },
+    "s4": {
+      "titre": "Waar de test naar kijkt",
+      "p1": "De vragen zijn verdeeld over categorieën, en de uitslag geeft je score in elke categorie. Daar zit vaak de verrassing: je denkt dat je braaf bent omdat het totaal gemiddeld is, en dan zie je dat je bij één categorie op 90% zit.",
+      "sub1Titre": "De zeven categorieën van de modus alleen",
+      "liste1": [
+        "🔥 <strong>Seks:</strong> bodycount, eerste keren, experimenten, plekken",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Ontrouw</a>:</strong> van een zoen op een feestje tot een dubbelleven",
+        "🎭 <strong>Leugens:</strong> wat je hebt aangepast, weggelaten, gewist",
+        "🍸 <strong>Drank & co:</strong> feestjes, uitspattingen, en wat erbij hoort",
+        "👪 <strong>Familie:</strong> schoonfamilie, ouders, feestdagen die je moest uitzitten",
+        "📱 <strong>Online:</strong> nudes, geheime accounts, berichtjes waar je spijt van had bij het wakker worden",
+        "🚨 <strong>Verboden dingen:</strong> diefstal, domme acties, op heterdaad betrapt"
+      ],
+      "sub1P1": "De details verrassen vaak: je kunt een redelijke score hebben op seks en de teller laten ontploffen op leugens, of andersom.",
+      "sub2Titre": "De zes categorieën van de koppelmodus",
+      "liste2": [
+        "🔥 <strong>Seks:</strong> wat jullie hebben geprobeerd, en waar",
+        "👀 <strong>Exhibitionisme:</strong> het risico om gezien te worden, bewust of niet",
+        "💫 <strong>Swingen:</strong> trio, partnerruil, open relatie",
+        "🍸 <strong>Drank & co:</strong> feestjes, onder invloed, de ochtend erna",
+        "🚨 <strong>Over de grens:</strong> casino, verboden plekken, samen liegen",
+        "🤐 <strong>Geheimen:</strong> wat de ander nog steeds niet weet"
+      ],
+      "sub2P1": "De categorie geheimen scoort wat de een voor de ander verborgen heeft gehouden. Daardoor kunnen twee stellen die ongeveer hetzelfde hebben meegemaakt, op heel verschillende scores uitkomen."
+    },
+    "s5": {
+      "titre": "Is een hoge score erg?",
+      "citation": "Een hoge score betekent gewoon dat je best veel hebt meegemaakt, niet dat je een slecht mens bent.",
+      "p1": "Er zijn herinneringen aan feestjes en er zijn fouten, en de test maakt geen verschil tussen die twee: hij telt punten op. Wat het getal vertelt, bepaal je zelf.",
+      "p2": "Interessant wordt de uitslag pas als twee mensen hem vergelijken. Driehonderd punten verschil tussen twee partners is op zich geen probleem, maar het verklaart soms spanningen die je niet kon benoemen. Twee scores die dicht bij elkaar liggen, betekenen daarentegen niet dat jullie het eens zijn over <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">jullie waarden en jullie plannen</a>: de puriteitstest kijkt alleen naar het verleden.",
+      "encart": {
+        "titre": "En als de score van de ander pijn doet",
+        "texte": "Dat gebeurt. De test gaat over een heel verleden, en het grootste deel daarvan was vaak vóór jou. Het nuttigst is wat de ander je wil vertellen achter dat getal."
+      }
+    }
+  },
+  "faq": {
+    "titre": "De vragen die we krijgen",
+    "q1": "Is de puriteitstest gratis?",
+    "a1": "Ja, helemaal. Je hoeft geen account te maken, geen e-mailadres op te geven en er is geen betaalde versie: je beantwoordt de vragen en aan het eind zie je je score.",
+    "q2": "Worden mijn antwoorden ergens opgeslagen?",
+    "a2": "Nee. Er wordt geen enkel antwoord bewaard. Alleen de eindscore wordt opgeslagen, zonder iets waarmee je bij jou uitkomt, en die dient alleen om het gemiddelde en de grafiek op de pagina te berekenen.",
+    "q3": "Hoe lang duurt het?",
+    "a3": "Vijf tot zeven minuten voor de vijftig vragen alleen. Als koppel duurt het langer, omdat jullie vast af en toe stoppen om erover te praten!",
+    "q4": "Wat is een goede score?",
+    "a4": "Die bestaat niet. De meeste mensen komen uit tussen 25 en 40% van het maximum, dus rond de 250 tot 350 punten. Daaronder ben je heel braaf, daarboven heb je een verleden, maar geen van beide is beter dan het andere.",
+    "q5": "Kun je hem met meer dan twee mensen doen?",
+    "a5": "De koppelmodus is voor twee mensen gemaakt. Maar niets houdt een hele groep tegen om ieder voor zich de modus alleen te doen en daarna de scores te vergelijken: als je met meer bent, is dat zelfs de beste manier om de test te gebruiken.",
+    "q6": "Vanaf welke leeftijd?",
+    "a6": "De test vraagt je leeftijd voordat je begint. Ben je jonger dan 16, dan krijg je een versie voor iedereen, zonder vragen over expliciete seks en drugs, maar met alles over leugens, familie, feestjes en geheimen. Voor een tienerstel past de <a href=\"/nl/liefdesquiz-voor-tieners/\">liefdesquiz voor tieners</a> waarschijnlijk beter."
+  },
+  "suite": {
+    "titre": "Om meteen daarna te doen",
+    "sous": "De score is binnen, de avond is nog niet voorbij.",
+    "liens": [
+      {
+        "cle": "quizCoquin",
+        "emoji": "🔥",
+        "texte": "Dertig vragen om te zien of jullie verlangens bij elkaar passen."
+      },
+      {
+        "cle": "testCouple",
+        "emoji": "💕",
+        "texte": "Twintig vragen met z'n tweeën over hoe het er echt voor staat tussen jullie."
+      },
+      {
+        "cle": "jeuActionVerite",
+        "emoji": "🎲",
+        "texte": "Opdrachten en waarheden, voor als er meer mensen zijn."
+      },
+      {
+        "cle": "testInfidelite",
+        "emoji": "💔",
+        "texte": "De signalen die het vaakst terugkomen, met een score."
+      },
+      {
+        "cle": "quizTuPreferes",
+        "emoji": "🤔",
+        "texte": "Honderd onmogelijke dilemma's, vijftien of dertig per spel."
+      },
+      {
+        "cle": "testCompatibilite",
+        "emoji": "💘",
+        "texte": "Jullie waarden en plannen, vraag per vraag vergeleken."
+      }
+    ]
+  },
+  "meta": {
+    "titre": "Puriteitstest: 50 vragen, alleen of als koppel | Gratis",
+    "description": "De puriteitstest in 50 vragen: alleen voor je eigen score, of met z'n tweeën voor die van jullie relatie. Uitslag per categorie. Gratis, zonder account."
+  },
+  "moteur": {
+    "noscript": "Deze test heeft JavaScript nodig. Zet het aan en laad de pagina opnieuw.",
+    "etape1": "Stap 1 van 2",
+    "etape2": "Stap 2 van 2",
+    "modes_titre": "Kies je modus voor de puriteitstest: als koppel of alleen?",
+    "modes_sous": "50 vragen in allebei de gevallen. De modus verandert wat er gescoord wordt.",
+    "mode_action": "Kies deze modus",
+    "mode_solo_nom": "Ieder voor zich",
+    "mode_solo_desc": "Over jou: je verleden, je lijken in de kast.",
+    "mode_couple_nom": "Met z'n tweeën, als koppel",
+    "mode_couple_desc": "Over jullie samen: wat jullie samen hebben gedaan.",
+    "age_titre_solo": "Ben je 16 of ouder?",
+    "age_titre_couple": "Zijn jullie 16 of ouder?",
+    "age_sous": "Het antwoord verandert alleen welke vragen je krijgt. De versie voor iedereen laat alles over expliciete seks en drugs weg, en houdt leugens, familie, feestjes en geheimen.",
+    "age_oui": "Ja, 16 of ouder",
+    "age_oui_sous": "Volledige versie, zonder filter",
+    "age_non": "Nee, jonger dan 16",
+    "age_non_sous": "Versie voor iedereen",
+    "chargement": "We zetten de vragen klaar…",
+    "calcul": "We berekenen je score…",
+    "erreur_sous": "Controleer je verbinding en probeer het opnieuw.",
+    "reessayer": "Opnieuw proberen",
+    "precedente": "Terug naar de vorige vraag",
+    "quitter": "Stoppen met de test? Je antwoorden gaan verloren.",
+    "refaire": "Doe de test opnieuw",
+    "categories_titre": "De details, per categorie",
+    "categories_sous_solo": "Hier zie je wat je echt de das omdoet. Een volle balk is een onderwerp waarop je alles hebt aangevinkt.",
+    "categories_sous_couple": "Hier zie je wat jullie echt de das omdoet. Een volle balk is een onderwerp waarop jullie alles hebben aangevinkt.",
+    "partage_titre_solo": "Stuur je score naar iemand",
+    "partage_titre_couple": "Stuur jullie score naar iemand",
+    "partage_sous_solo": "Het leukste is vergelijken. Stuur dit naar je partner of je vrienden, en wacht op hun score.",
+    "partage_sous_couple": "Stuur de score van jullie relatie naar je vrienden, en daag ze uit om het beter te doen. Of erger.",
+    "partage_msg_solo": "Ik heb {score} punten bij de puriteitstest ({pct}% onzuiver). Nu jij: ",
+    "partage_msg_couple": "We hebben {score} punten bij de puriteitstest als koppel ({pct}% onzuiver). Nu jullie: ",
+    "partage_sujet": "Puriteitstest",
+    "partage_envoyer": "Versturen",
+    "hero_compteur": "Deze test is al {n} keer gedaan",
+    "hero_moyenne": "Gemiddelde score: {n} punten",
+    "suites_sous_solo": "Je hebt je score, nu nog het vervolg. Hiermee kun je verder.",
+    "suites_sous_couple": "Jullie zitten toch al samen achter het scherm, maak er gebruik van.",
+    "suite_solo_1": "Dertig vragen om te zien of jullie verlangens bij elkaar passen.",
+    "suite_solo_2": "Twijfel heeft een naam. Twintig vragen om hem te benoemen.",
+    "suite_solo_3": "De basistest, met z'n tweeën, over jullie relatie.",
+    "suite_solo_4": "Opdrachten en waarheden, voor als er meer mensen zijn.",
+    "suite_couple_1": "Zijn jullie op dreef? Ga dan gewoon door op dit terrein.",
+    "suite_couple_2": "De versie die geen makkelijke vragen stelt.",
+    "suite_couple_3": "Het rad draait, een van jullie voert de opdracht uit.",
+    "suite_couple_4": "Een tandje rustiger: hoe staat het met jullie relatie?",
+    "suites_titre": "En nu?",
+    "statique_titre": "Klaar voor de test?",
+    "statique_intro": "Een voorproefje van de vragen. Start de test hierboven om je score te krijgen.",
+    "verdict_kicker_solo": "Je uitslag",
+    "verdict_kicker_couple": "Jullie uitslag",
+    "score_lib_solo": "Je score",
+    "score_lib_couple": "Jullie score",
+    "score_sur": "van de {max} punten",
+    "jauge_ici_solo": "Hier sta je",
+    "jauge_ici_couple": "Hier staan jullie",
+    "jauge_aria": "Je score van {score} punten van de {max}",
+    "jauge_sans_solo": "Hoe verder de wijzer naar rechts staat, hoe minder puur je bent.",
+    "jauge_sans_couple": "Hoe verder de wijzer naar rechts staat, hoe minder puur jullie zijn.",
+    "jauge_compare_solo": "Van de <strong>{n}</strong> tests ben jij minder puur dan <strong>{devant}%</strong> van de mensen.",
+    "jauge_compare_couple": "Van de <strong>{n}</strong> tests zijn jullie minder puur dan <strong>{devant}%</strong> van de mensen.",
+    "partage_copie_msg": "Bericht gekopieerd, plak het waar je wilt",
+    "hero_jauge_moyenne": "Gemiddelde score",
+    "quitter_aria": "Test verlaten",
+    "changer_mode": "← Andere modus kiezen",
+    "erreur_titre": "De vragen wilden niet laden",
+    "numero": "Nr. {n}",
+    "cat_detail": "{pts} van de {max} punten"
+  },
+  "jsonLd": {
+    "about": "puriteitstest"
+  }
+}

@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique) |
+| 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -39,8 +39,9 @@ le met à jour dans la PR de chaque lot.
   en tête du fichier), calé sur l'allemand, l'italien et l'espagnol :
   - `code` : listes, objets par langue, expressions et branches qui
     énumèrent les langues sans `nl`, libellés écrits en dur dans les scripts
-    des pages publiques (six, dans `purete.js` et `quiz-ado-multiplayer.js`,
-    qui restent en français dans toutes les langues) ;
+    des pages publiques (six au départ, restés en français dans toutes les
+    langues : ceux de `purete.js` sont passés dans les fichiers de langue au
+    lot 3p, restent les deux de `quiz-ado-multiplayer.js`) ;
   - `textes` : `nl/*.json` partie par partie face au français et à
     l'anglais ;
   - `seo` : la carte `mots-cles.tsv` et les balises des pages construites ;
@@ -672,7 +673,63 @@ le met à jour dans la PR de chaque lot.
   « Ga verder » vers des pages pas encore traduites (la date de naissance,
   « amour ou crush »).
 
+## Lot 3p (30 octobre 2026) : le test de pureté
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/puriteitstest/` | Puriteitstest: 50 vragen, alleen of als koppel \| Gratis | Puriteitstest alleen of als koppel |
+
+  « Puriteitstest » est le mot que tapent les Néerlandais et les Flamands,
+  « purity test » et « rice purity test nederlands » restent en mots-clés
+  secondaires.
+- **Les questions** : les cent questions (cinquante seul, cinquante à deux),
+  les catégories et les sept paliers de chaque mode sont dans
+  `nl/purete.json`, servi en `/js/data/purete-nl.json` ; points, catégories
+  et drapeaux « tout public » sont ceux du français. Seul, on tutoie
+  (« Heb je weleens... ») ; à deux, « Hebben jullie weleens... ». Le
+  registre suit celui du français, familier sans être vulgaire
+  (« bodycount », « fuckbuddy » pour « plan cul », « doorhalen » pour une
+  nuit blanche). L'écran de l'âge dit 16 ans, comme les cinq langues ; la
+  version « moins de 16 ans » pose 29 questions seul et 23 à deux.
+- **`purete.js`, pour toutes les langues** : cinq libellés étaient écrits
+  en dur en français et s'affichaient ainsi sur les pages anglaise,
+  espagnole, allemande et italienne : « ← Changer de mode », le titre
+  d'erreur du chargement, « N° » devant le numéro de la question, « N points
+  sur M » sous chaque catégorie du résultat et l'étiquette de la croix pour
+  quitter (`aria-label`). Ils passent par les fichiers de langue
+  (`changer_mode`, `erreur_titre`, `numero`, `cat_detail`, `quitter_aria`).
+  L'arrivée sur le résultat (`QCResultat.arrivee`) reçoit la langue de la
+  page au lieu de `'fr'` (elle ne sert qu'à la porte e-mail, que cette page
+  n'a pas), et les nombres prennent le séparateur de la langue (`nl-NL`
+  ajouté à `LOCALES`). Deux libellés ne suivaient pas le mode : « Votre
+  résultat » et « Vous êtes ici » servaient au solo comme au couple, si bien
+  que l'allemand et l'italien disaient « euer » et « siete » à une seule
+  personne, l'espagnol « tu » à un couple et le français mélangeait « tu » et
+  « vous » en solo ; ils deviennent `verdict_kicker_solo` et
+  `verdict_kicker_couple`, `jauge_ici_solo` et `jauge_ici_couple`. L'encart
+  de la boutique partenaire reste en français, marqué `langues: sans-nl`.
+- **Les liens** : le hub des jeux (« spel voor een avondje »), les questions
+  pour couple (« vragen die je elkaar nooit stelt »), le test de couple
+  (« hoe jullie relatie er vandaag voor staat »), l'infidélité dans la liste
+  des catégories et la compatibilité (« jullie waarden en jullie plannen »),
+  comme en français ; la FAQ renvoie les moins de 16 ans au quiz des ados.
+- **Ce qui reste en français sur la page** : le nom de quatre cartes « En
+  nu? » vers des jeux et quiz pas encore traduits (le quiz coquin, action ou
+  vérité et sa version coquine, la roue des gages).
+
 ## Les chiffres
+
+Au lot 3p : `textes nl` 417 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (37 pages traduites) ; `site nl` sur la page : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux modes vont jusqu'à leur
+résultat ; joué aussi dans Chromium dans les six langues, seul et à deux, et
+en néerlandais dans la version « moins de 16 ans » et en thème sombre ; reste
+en français le nom de quatre cartes vers des pages pas encore traduites ;
+`code nl` passe de 223 à 216 erreurs, plus rien dans `purete.js`. Côté
+public, les cinq pages du test de pureté affichent leurs propres libellés là
+où elles montraient du français.
 
 Au lot 3o : `textes nl` 405 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (36 pages traduites) ; `site nl` sur la page : aucun
@@ -815,7 +872,7 @@ Au lot 1 : `code nl` 334 passages dans 61 fichiers (169 dans `config.js`),
 |---|---|
 | `config.js` (`ROUTE_SLUGS`, `BLOG_ARTICLES`, `BLOG_CATEGORIES`), `sitemap.ejs` | 1 (adresses), puis 9 (articles) |
 | `generate.js` (titres des pages d'information, fil d'Ariane, 404), gabarits partagés (`header`, `preuve-sociale`, `quiz-reviews`, `related-tests`, `quiz-loading`, `404`, `about`, `home`), `home-dynamic.js`, `quiz-extras.js`, `reviews.js`, `resultat-url.js`, `pub.js`, `capture.js`, `admin.js`, `image-partage.mjs`, textes alternatifs de `config.js` | 2 |
-| `quiz-engine-core.js`, `quiz-loader.js`, `quiz-ado-multiplayer.js`, gabarits de pages (`quiz-astro-prenoms`, `quiz-date-naissance`, `quiz-jalousie`, `quiz-tu-preferes`, `questions-couple`), `compteur-couple.js`, `purete.js`, `questions-couple.js` | 3 à 7, avec leurs pages (`langage-amour-stats.js` : fait au lot 3m) |
+| `quiz-engine-core.js`, `quiz-loader.js`, `quiz-ado-multiplayer.js`, gabarits de pages (`quiz-astro-prenoms`, `quiz-date-naissance`, `quiz-jalousie`, `quiz-tu-preferes`, `questions-couple`), `compteur-couple.js`, `purete.js`, `questions-couple.js` | 3 à 7, avec leurs pages (`langage-amour-stats.js` : fait au lot 3m ; `purete.js` : fait au lot 3p) |
 | Base et fonctions : `_shared/abonnes/regles.mjs` (porte e-mail), contrainte des avis, `manage-custom-quiz`, migrations (`reviews`, `abonnes`, `custom_quizzes`, chemins du blog) | 2 (une migration qui ajoute `nl` partout) |
 | L'évaluation : `bilan.js`, `_shared/bilan/*`, `bilan/*`, `bilan-banniere`, `bilan-sous-moteur`, migrations des bilans | 8 |
 | Les e-mails : `emails/*`, migrations des e-mails, `brevo-reglages.yml` | 8 |
