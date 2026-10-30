@@ -42,7 +42,7 @@
     "faq4Q": "Le test me dit que ce n'est pas la bonne personne. Je fais quoi ?",
     "faq4A": "Rien dans la précipitation. Un test n'est pas une décision, c'est un miroir. Relisez les questions où vos réponses vous ont fait mal, et demandez-vous si vous les avez déjà dites à la personne concernée. Souvent non. Commencez par là. Et si dans vos réponses il y a de la peur, du contrôle ou du mépris, parlez-en à quelqu'un de confiance, ça dépasse la question du bon ou de la bonne.",
     "faq5Q": "Le test est-il anonyme ?",
-    "faq5A": "Oui. Vos réponses restent dans votre navigateur, personne ne les voit, et il n'y a rien à créer ni à remplir. Vous pouvez le faire seul(e), ou chacun de votre côté puis comparer, ce qui donne d'ailleurs des conversations intéressantes..."
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, personne ne les voit, et il n'y a pas de compte à créer. Seule votre adresse e-mail est demandée, une fois, pour voir le résultat complet, et vos réponses ne partent pas avec. Vous pouvez le faire seul(e), ou chacun de votre côté puis comparer, ce qui donne d'ailleurs des conversations intéressantes..."
   },
   "jsonLd": {
     "about": "choisir la bonne personne"
