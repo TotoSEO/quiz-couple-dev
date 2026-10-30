@@ -397,6 +397,10 @@
     "namePlaceholder": "Bijv. Daan",
     "yourName": "Voornaam van je partner"
   },
+  "attachment": {
+    "introTitle": "Welke hechtingsstijl heb jij?",
+    "yourStyle": "Jouw hechtingsstijl"
+  },
   "sainMode": {
     "titre": "Hoe willen jullie de test doen?",
     "sousTitre": "Kies jullie manier, de vragenlijst is in beide gevallen dezelfde.",

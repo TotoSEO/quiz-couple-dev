@@ -112,6 +112,12 @@
     "description": "20 vragen om het vertrouwen in je relatie te meten: jaloezie, eerlijkheid, betrouwbaarheid. Meteen een uitslag.",
     "metaDescription": "Vertrouwen in een relatie test: 20 vragen over jaloezie, eerlijkheid en hoe betrouwbaar jullie zijn voor elkaar. Gratis, met meteen een uitslag."
   },
+  "testAttachement": {
+    "title": "Hechtingsstijl test: welke hechtingsstijl heb jij?",
+    "shortTitle": "Hechtingsstijl test",
+    "description": "20 vragen om je hechtingsstijl in de liefde te ontdekken: veilig, angstig, vermijdend of gedesorganiseerd. Meteen een uitslag.",
+    "metaDescription": "Hechtingsstijl test: veilig, angstig, vermijdend of gedesorganiseerd? Ontdek in 20 vragen hoe jij je hecht in de liefde, op basis van Bowlby."
+  },
   "testInfidelite": {
     "title": "Gaat mijn partner vreemd? De vreemdgaan test in 20 vragen",
     "shortTitle": "Vreemdgaan test",
@@ -129,6 +135,12 @@
     "shortTitle": "Houdt hij van mij op afstand?",
     "description": "15 vragen om te zien wat door de afstand komt en wat door de gevoelens. Test voor jou alleen, meteen een uitslag.",
     "metaDescription": "Houdt hij van mij op afstand? 15 vragen over jullie gesprekken, plannen en stiltes, om te zien wat door de afstand komt. Gratis, meteen een uitslag."
+  },
+  "testAmeSoeur": {
+    "title": "Zielsverwant test: is dit de juiste persoon voor jou?",
+    "shortTitle": "Zielsverwant test",
+    "description": "20 vragen over vier pijlers om te zien of deze persoon je zielsverwant is.",
+    "metaDescription": "Zielsverwant test: 20 vragen, een index en een uitslag die je niet naar de mond praat. Alleen over iemand, samen of als single. Gratis, zonder account."
   },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
