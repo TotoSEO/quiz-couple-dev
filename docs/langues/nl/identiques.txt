@@ -23,3 +23,5 @@ Supabase:
 GitHub Pages:
 Stripe:
 Resend:
+Website: quiz-couple.com
+Website: github.com
