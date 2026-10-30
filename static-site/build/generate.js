@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, bilanOuvertPour, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR, MOYENS_PAIEMENT, ROUTES_JEUX,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -118,14 +118,14 @@ for (const a of BLOG_ARTICLES) {
   }
 }
 
-// Le bilan de couple tant qu'il n'est pas ouvert (BILAN_OUVERT, config.js) :
-// les liens écrits vers lui dans les textes sont neutralisés comme ceux d'un
-// article programmé, et ils reviennent seuls le jour où il ouvre.
-if (!BILAN_OUVERT) {
-  for (const l of LANGUAGES) {
-    const p = getLocalizedPath('bilanCouple', l);
-    if (p) FUTURE_BLOG_URLS.add(p);
-  }
+// Le bilan de couple tant qu'il n'est pas ouvert (BILAN_OUVERT, config.js),
+// ou dans une langue où il reste fermé (BILAN_LANGUES_FERMEES) : les liens
+// écrits vers lui dans les textes sont neutralisés comme ceux d'un article
+// programmé, et ils reviennent seuls le jour où il ouvre.
+for (const l of LANGUAGES) {
+  if (bilanOuvertPour(l)) continue;
+  const p = getLocalizedPath('bilanCouple', l);
+  if (p) FUTURE_BLOG_URLS.add(p);
 }
 
 // Le prix du rapport du bilan, lu dans le module partagé avec le serveur
@@ -168,8 +168,8 @@ if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
 // manipulation, de violence ou d'infidélité : on ne vend pas une évaluation
 // à deux à quelqu'un qui lit ça (même règle que BILAN_ENTREES).
 const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou|quitter-quelqu-un/i;
-function entreeArticle(articleMeta) {
-  if (!BILAN_OUVERT || !articleMeta) return null;
+function entreeArticle(articleMeta, lang) {
+  if (!bilanOuvertPour(lang) || !articleMeta) return null;
   const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
   return ARTICLE_SANS_BILAN.test(cles) ? null : { groupe: 'article', id: 'article' };
 }
@@ -230,10 +230,17 @@ function promoBilanPour(lang) {
 // l'évaluation : emprise, manipulation, infidélité, et pour les articles la
 // même règle que la bannière du bas (entreeArticle).
 const PAGES_SANS_BANDEAU = new Set(['bilanCouple', 'admin', 'quizAdo', 'testEmprise', 'testPervers', 'testInfidelite']);
-function bandeauPromoPour(routeKey, articleMeta) {
-  if (!BILAN_OUVERT || !BILAN_PROMO) return false;
-  if (articleMeta) return !!entreeArticle(articleMeta);
+function bandeauPromoPour(routeKey, articleMeta, lang) {
+  if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
+  if (articleMeta) return !!entreeArticle(articleMeta, lang);
   return !PAGES_SANS_BANDEAU.has(routeKey);
+}
+
+// Les familles du menu, du pied de page, de l'accueil et du plan du site dans
+// une langue : sans l'évaluation là où elle est fermée (bilanOuvertPour).
+function famillesPour(lang) {
+  if (bilanOuvertPour(lang)) return FAMILLES_NAV;
+  return { ...FAMILLES_NAV, tests: FAMILLES_NAV.tests.filter((k) => k !== 'bilanCouple') };
 }
 
 function stripFutureLinks(html) {
@@ -1199,7 +1206,7 @@ async function generatePage(routeKey, lang) {
   // sitemaps (generateSitemaps), et les liens vers elle restent suivis
   // (« noindex, follow »).
   const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
-  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !BILAN_OUVERT) || langueCachee(lang);
+  const isNoindex = noindexRoutes.includes(routeKey) || (routeKey === 'bilanCouple' && !bilanOuvertPour(lang)) || langueCachee(lang);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
 
@@ -1553,14 +1560,14 @@ async function generatePage(routeKey, lang) {
     // Helpers
     getLocalizedUrl,
     mascotteSvg,
-    famillesNav: FAMILLES_NAV,
+    famillesNav: famillesPour(lang),
     // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
-    bilanOuvert: BILAN_OUVERT,
-    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanOuvert: bilanOuvertPour(lang),
+    bilanChemin: bilanOuvertPour(lang) ? getLocalizedPath('bilanCouple', lang) : null,
     // Les pages qui renvoient vers le bilan (BILAN_ENTREES) : le groupe du
     // texte et l'identifiant de la source.
-    bilanEntree: BILAN_OUVERT ? (BILAN_ENTREES[routeKey] || null) : null,
+    bilanEntree: bilanOuvertPour(lang) ? (BILAN_ENTREES[routeKey] || null) : null,
     // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
@@ -1570,7 +1577,7 @@ async function generatePage(routeKey, lang) {
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
-    bandeauPromo: bandeauPromoPour(routeKey),
+    bandeauPromo: bandeauPromoPour(routeKey, null, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -1734,6 +1741,7 @@ function generateSitemaps() {
     // Build URL map for available languages
     const urlsByLang = {};
     for (const lang of LANGUES_PUBLIQUES) {
+      if (key === 'bilanCouple' && !bilanOuvertPour(lang)) continue;
       if (slugs[lang] !== undefined) {
         urlsByLang[lang] = url(lang, slugs[lang]);
       }
@@ -2522,16 +2530,16 @@ async function generateBlogArticle(articleMeta, lang) {
     t,
     translations,
     getLocalizedUrl,
-    famillesNav: FAMILLES_NAV,
+    famillesNav: famillesPour(lang),
     // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
-    bilanOuvert: BILAN_OUVERT,
-    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
-    bilanEntree: entreeArticle(articleMeta),
+    bilanOuvert: bilanOuvertPour(lang),
+    bilanChemin: bilanOuvertPour(lang) ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanEntree: entreeArticle(articleMeta, lang),
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
-    bandeauPromo: bandeauPromoPour('article', articleMeta),
+    bandeauPromo: bandeauPromoPour('article', articleMeta, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
     bilanGarantie: BILAN_CONST.garantie,
@@ -2633,15 +2641,15 @@ async function generate404Pages() {
       tgd,
       translations,
       getLocalizedUrl,
-      famillesNav: FAMILLES_NAV,
+      famillesNav: famillesPour(lang),
       // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
       // sa garantie, et les mentions du vendeur (mentions légales, CGV).
-      bilanOuvert: BILAN_OUVERT,
-      bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+      bilanOuvert: bilanOuvertPour(lang),
+      bilanChemin: bilanOuvertPour(lang) ? getLocalizedPath('bilanCouple', lang) : null,
       bilanPrix: prixBilan(lang),
       bilanPrixBase: prixBilanBase(lang),
       bilanPromo: promoBilanPour(lang),
-      bandeauPromo: bandeauPromoPour('404'),
+      bandeauPromo: bandeauPromoPour('404', null, lang),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
       bilanGarantie: BILAN_CONST.garantie,

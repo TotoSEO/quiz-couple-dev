@@ -128,7 +128,7 @@
   "latestArticles": {
     "title": "Les derniers articles",
     "titleHighlight": "du blog",
-    "intro": "En plus des jeux pour couple que vous trouverez sur le site, nous avons un blog que nous actualisons le plus possible. Tests d'applications de rencontre, conseils sur les relations amoureuses ou techniques de drague, nous diversifions nos contenus le plus possible, pour vous, avec passion."
+    "intro": "En plus des jeux pour couple que vous trouverez sur le site, nous avons un blog que nous actualisons le plus possible. Conseils pour la vie à deux, psychologie, astrologie, ruptures ou histoires d'amour célèbres, nous diversifions nos contenus le plus possible, pour vous, avec passion."
   },
   "quizGrid": {
     "testsTitle": "Nos Tests pour les Couples",
@@ -154,9 +154,9 @@
       "testOublieSonEx": "Son ex prend-elle encore de la place ? Vingt questions, pour lui ou pour elle.",
       "testPourquoiQuitte": "La cause qui a le plus pesé dans votre rupture, parmi les huit plus fréquentes.",
       "testCoupleSain": "Évaluez si votre relation est saine et équilibrée.",
-      "testMariage": "30 questions pour savoir si vous êtes prêts à vous marier.",
-      "testDivorce": "25 questions pour faire le point sur votre relation.",
-      "testParentalite": "20 questions pour savoir si vous êtes prêts à devenir parents.",
+      "testMariage": "20 questions pour savoir si vous êtes prêts à vous marier.",
+      "testDivorce": "15 questions pour faire le point sur votre relation.",
+      "testParentalite": "12 ou 24 questions pour savoir si vous êtes prêts à devenir parents.",
       "testAttachement": "Découvrez votre style d'attachement : sécure, anxieux, évitant ?",
       "testConfiance": "Évaluez le niveau de confiance mutuelle dans votre couple.",
       "quizAmoureux": "Débattez ensemble et mesurez votre harmonie.",
@@ -244,7 +244,7 @@
   "instagram": {
     "title": "Nos dernières publications",
     "titleHighlight": "sur Instagram",
-    "intro": "Chaque jour, trois petites animations avec nos deux mascottes : des quiz de couple, des dilemmes et des moments tendres à envoyer à l'autre.",
+    "intro": "Chaque jour, une nouvelle petite vidéo : un dilemme « Tu préfères » à trancher à deux, des questions pour voir si vous vous connaissez bien, ou une petite histoire de couple à envoyer à l'autre.",
     "follow": "Suivre @quiz_couple_official",
     "voir": "Voir sur Instagram"
   }

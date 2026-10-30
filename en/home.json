@@ -128,7 +128,7 @@
   "latestArticles": {
     "title": "Latest articles",
     "titleHighlight": "from the blog",
-    "intro": "In addition to the couple games you'll find on the site, we have a blog that we update as often as possible. Dating app reviews, relationship advice, or flirting tips, we diversify our content as much as we can, for you, with passion."
+    "intro": "In addition to the couple games you'll find on the site, we have a blog that we update as often as possible. Relationship advice, psychology, astrology, breakups or famous love stories, we diversify our content as much as we can, for you, with passion."
   },
   "quizGrid": {
     "testsTitle": "Our Couple Tests",
@@ -154,9 +154,9 @@
       "testOublieSonEx": "Does their ex still take up space? Twenty questions, for him or for her.",
       "testPourquoiQuitte": "The cause that weighed the most in your breakup, among the eight most common.",
       "testCoupleSain": "Evaluate if your relationship is healthy and balanced.",
-      "testMariage": "30 questions to find out if you're ready to get married.",
-      "testDivorce": "25 questions to honestly assess your relationship.",
-      "testParentalite": "20 questions to find out if you're ready to become parents.",
+      "testMariage": "20 questions to find out if you're ready to get married.",
+      "testDivorce": "15 questions to honestly assess your relationship.",
+      "testParentalite": "12 or 24 questions to find out if you're ready to become parents.",
       "quizAmoureux": "Debate together and measure your harmony.",
       "quizCoquin": "Explore your desires and spice up your relationship.",
       "quizMarrant": "Laugh together with hilarious questions!",
@@ -244,7 +244,7 @@
   "instagram": {
     "title": "Our latest posts",
     "titleHighlight": "on Instagram",
-    "intro": "Every day, three little animations with our two mascots: couple quizzes, dilemmas and tender moments to send to your partner.",
+    "intro": "Every day, a new short video: a “Would you rather” dilemma to settle together, questions to see how well you know each other, or a little couple story to send to your partner.",
     "follow": "Follow @quiz_couple_official",
     "voir": "View on Instagram"
   }

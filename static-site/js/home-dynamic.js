@@ -10,7 +10,7 @@
   var cfg = document.getElementById('reviews-config');
   var SB_URL = cfg && cfg.dataset.url, SB_KEY = cfg && cfg.dataset.key;
   var lang = document.documentElement.lang || 'fr';
-  var locale = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  var locale = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -70,7 +70,7 @@
   var igSection = document.getElementById('instagram-recents');
   if (igSection && SB_URL) {
     var igGrille = igSection.querySelector('.ig-grille');
-    var igTexte = { fr: 'Voir sur Instagram', en: 'View on Instagram', es: 'Ver en Instagram', de: 'Auf Instagram ansehen', it: 'Guarda su Instagram' }[lang] || 'View on Instagram';
+    var igTexte = { fr: 'Voir sur Instagram', en: 'View on Instagram', es: 'Ver en Instagram', de: 'Auf Instagram ansehen', it: 'Guarda su Instagram', nl: 'Bekijk op Instagram' }[lang] || 'View on Instagram';
     var igIcone = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
     var igCarte = function (p) {
       var image = SB_URL + '/storage/v1/object/public/social-public/' + p.affiche;

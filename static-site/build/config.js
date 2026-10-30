@@ -159,6 +159,7 @@ export const IMAGE_PARTAGE = {
     es: 'Las dos mascotas de Quiz Couple, una rosa y otra morada, con el texto «Quiz, tests y juegos para parejas»',
     de: 'Die beiden Maskottchen von Quiz Couple, eines rosa und eines lila, mit dem Text „Quiz, Tests und Spiele für Paare“',
     it: 'Le due mascotte di Quiz Couple, una rosa e una viola, con la scritta «Quiz, test e giochi per coppie»',
+    nl: 'De twee mascottes van Quiz Couple, een roze en een paarse, met de tekst ‘Quizzen, tests en spelletjes voor koppels’',
   },
 };
 
@@ -396,6 +397,15 @@ export const GA_ID = 'G-XZV8V6FEK5';
 export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
   : process.env.QC_BILAN === 'ferme' ? false
   : true;
+// Les langues où l'évaluation reste fermée alors qu'elle est ouverte
+// ailleurs : celles dont les textes ne sont pas encore écrits (le néerlandais
+// jusqu'à son lot 8, docs/langues/CADRAGE-NL.md). Fermée dans une langue, elle
+// y est comme partout quand BILAN_OUVERT est à false : aucun lien ni encart,
+// page en noindex, hors du plan du site et du hreflang.
+export const BILAN_LANGUES_FERMEES = ['nl'];
+export function bilanOuvertPour(lang) {
+  return BILAN_OUVERT && !BILAN_LANGUES_FERMEES.includes(lang);
+}
 // Les pages qui envoient vers le bilan, une fois ouvert : l'encart sous le
 // verdict (encartBilan, quiz-engine-core.js) et la bannière au-dessus des
 // cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
@@ -666,7 +676,8 @@ export function getLocalizedUrl(routeKey, lang) {
 }
 
 export function getRouteAlternates(routeKey) {
-  const alts = LANGUES_PUBLIQUES.map(lang => ({
+  const langues = routeKey === 'bilanCouple' ? LANGUES_PUBLIQUES.filter(bilanOuvertPour) : LANGUES_PUBLIQUES;
+  const alts = langues.map(lang => ({
     hreflang: lang,
     href: getLocalizedUrl(routeKey, lang),
   }));

@@ -128,7 +128,7 @@
   "latestArticles": {
     "title": "Los últimos artículos",
     "titleHighlight": "del blog",
-    "intro": "Además de los juegos para parejas que encontrarás en el sitio, tenemos un blog que actualizamos lo más posible. Reseñas de apps de citas, consejos sobre relaciones amorosas o técnicas de seducción, diversificamos nuestros contenidos al máximo, para ti, con pasión."
+    "intro": "Además de los juegos para parejas que encontrarás en el sitio, tenemos un blog que actualizamos lo más posible. Consejos para la vida en pareja, psicología, astrología, rupturas o historias de amor célebres, diversificamos nuestros contenidos al máximo, para ti, con pasión."
   },
   "quizGrid": {
     "testsTitle": "Nuestros Tests para Parejas",
@@ -154,9 +154,9 @@
       "testOublieSonEx": "¿Su ex todavía ocupa sitio? Veinte preguntas, para él o para ella.",
       "testPourquoiQuitte": "La causa que más pesó en vuestra ruptura, entre las ocho más frecuentes.",
       "testCoupleSain": "Evalúa si tu relación es sana y equilibrada.",
-      "testMariage": "30 preguntas para saber si están listos para casarse.",
-      "testDivorce": "25 preguntas para evaluar honestamente tu relación.",
-      "testParentalite": "20 preguntas para saber si están listos para ser padres.",
+      "testMariage": "20 preguntas para saber si están listos para casarse.",
+      "testDivorce": "15 preguntas para evaluar honestamente tu relación.",
+      "testParentalite": "12 o 24 preguntas para saber si están listos para ser padres.",
       "quizAmoureux": "Debatan juntos y midan su armonía.",
       "quizCoquin": "Explora tus deseos y dale sabor a tu relación.",
       "quizMarrant": "¡Ríanse juntos con preguntas hilarantes!",
@@ -244,7 +244,7 @@
   "instagram": {
     "title": "Nuestras últimas publicaciones",
     "titleHighlight": "en Instagram",
-    "intro": "Cada día, tres pequeñas animaciones con nuestras dos mascotas: quiz de pareja, dilemas y momentos tiernos para enviar a tu pareja.",
+    "intro": "Cada día, un vídeo corto nuevo: un dilema «¿Qué preferirías?» para decidir entre los dos, preguntas para ver si os conocéis bien o una pequeña historia de amor para mandársela a tu pareja.",
     "follow": "Seguir a @quiz_couple_official",
     "voir": "Ver en Instagram"
   }
