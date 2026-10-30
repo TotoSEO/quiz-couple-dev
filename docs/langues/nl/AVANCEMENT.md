@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -302,7 +302,46 @@ le met à jour dans la PR de chaque lot.
 - **identiques.txt** accepte « red flag » et « Green flag », que le
   néerlandais emploie tels quels.
 
+## Lot 3d (30 octobre 2026) : partenaire narcissique, relation sous contrôle
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/narcistische-partner-test/` | Narcistische partner test: word ik gemanipuleerd? | Is mijn partner een narcist, of zie ik spoken? |
+  | `/nl/controlerende-relatie-test/` | Controlerende relatie test: hoe vrij ben je nog? | Zit ik in een controlerende relatie? |
+
+- **Les textes de moteur** : `pervers` (20 questions, quatre verdicts) et
+  `emprise` (20 questions, la cinquième réponse de la question 6, points
+  recopiés du français, quatre verdicts), avec leur écran de départ dans
+  quizGames.json.
+- **« Pervers narcissique »** n'a pas d'équivalent courant en néerlandais :
+  la page cite une fois le terme d'origine (« perverse narcist », Marie-France
+  Hirigoyen), puis dit « narcist » et « narcistisch misbruik ».
+- **Les numéros d'aide** : Veilig Thuis (0800-2000, Pays-Bas, gratuit, jour
+  et nuit, conseil anonyme possible), 1712 (Belgique, gratuit et anonyme, les
+  jours ouvrables) et 112 en danger. Le verdict le plus grave du red flag
+  laissait entendre que le 1712 répond jour et nuit : corrigé. La relation
+  sous contrôle ne cite aucune loi, là où le français cite le harcèlement au
+  sein du couple et l'anglais le droit anglais et français.
+- **La carte des mots-clés** : « zit ik in een controlerende relatie », le H1
+  et le libellé du menu, rejoint les mots-clés secondaires de la relation
+  sous contrôle.
+- **Les liens** : du partenaire narcissique vers le couple toxique, la
+  relation sous contrôle, la jalousie et le couple sain ; de la relation sous
+  contrôle vers le couple toxique, le partenaire narcissique (deux fois) et
+  la dépendance affective. Trois liens vers des articles du blog (dépendance
+  affective, red flags chez un homme, ce qu'on ne devrait jamais accepter)
+  attendent leur traduction.
+
 ## Les chiffres
+
+Au lot 3d : `textes nl` 162 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (13 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, chaque moteur va jusqu'à son
+résultat, et les textes restés en français sont ceux des cartes « Hierna »
+vers des pages pas encore traduites. Aucune page publique ne change.
+
 
 Au lot 3c : `textes nl` 137 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (11 pages traduites) ; `site nl` sur les deux pages : aucun
