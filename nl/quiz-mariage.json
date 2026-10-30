@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "badge": "Huwelijkstest",
+    "title": "Zijn jullie klaar om te trouwen? De huwelijkstest voor koppels",
+    "description": "Trouwen is veel meer dan een mooi feest en een witte jurk. Het is een beslissing voor het leven, die twee mensen voor tientallen jaren aan elkaar bindt, met alles wat daarbij hoort: geld, kinderen, het dagelijks leven, waarden, meningsverschillen. Deze test helpt jullie na te gaan of jullie daar samen, eerlijk, over hebben nagedacht voordat jullie ‘ja’ zeggen.",
+    "duration": "~10 minuten",
+    "players": "Met z'n tweeën",
+    "questions": "20 vragen",
+    "titleHighlight": "klaar om te trouwen"
+  },
+  "seo": {
+    "whyTitle": "Waarom een test doen voor je gaat trouwen?",
+    "card1Title": "De echte onderwerpen aansnijden",
+    "card1Text": "Geld, kinderen, waarden, intimiteit: deze test gaat over alle onderwerpen die koppels voor de grote dag vaak uit de weg gaan.",
+    "card2Title": "Het gesprek openen",
+    "card2Text": "Elke vraag is een uitnodiging om eerlijk met elkaar te praten. De beste gesprekken beginnen hier.",
+    "card3Title": "Zien of jullie op één lijn zitten",
+    "card3Text": "Kijk of jullie het eens zijn over de onderwerpen die een huwelijk maken of breken.",
+    "card4Title": "Geen account nodig",
+    "card4Text": "Helemaal gratis en zonder account. Jullie antwoorden blijven tussen jullie.",
+    "richContent": "<h2>Wat deze test meet</h2><p>Deze <strong>huwelijkstest</strong> meet niet hoe sterk jullie liefde is, ook niet jullie <strong>astrologische compatibiliteit</strong>, en ook niet <a href='/nl/is-hij-de-ware/'>of je met de juiste persoon bent</a>. Hij meet evenmin <a href='/nl/relatietest/'>hoe stevig jullie relatie in het algemeen is</a>, dat test je apart. Wat hij meet, is hoe goed jullie <strong>op één lijn zitten over concrete onderwerpen</strong> die een leven samen maken of breken:</p><ul><li>Hoe jullie met <strong>geld</strong> en <strong>meningsverschillen over geld</strong> omgaan</li><li>Jullie kijk op <strong>kinderen</strong>, <strong>opvoeding</strong> en de plaats van jullie families</li><li>Het evenwicht in het <strong>dagelijks leven</strong> en de verdeling van de <strong>mentale belasting</strong></li><li>Jullie <strong>belangrijkste waarden</strong> en hoe jullie tegenover geloof en zingeving staan</li><li>Hoe goed jullie <strong>communiceren</strong> en hoe jullie door <strong>conflicten</strong> heen komen</li><li>Jullie <strong>levensplannen</strong> en of jullie je daarin samen kunnen voorstellen</li></ul><figure class='seo-figure'><img src='/quiz/test-mariage.webp' alt='Gelukkig koppel op hun trouwdag' width='1000' height='667' loading='lazy' decoding='async'></figure><h2>De onderwerpen die koppels voor het huwelijk vermijden</h2><p>Er is een lijstje <a href=\"/nl/relatiecheck/\">gesprekken die veel koppels uitstellen tot ‘later’</a>. <strong>Geld</strong> staat bovenaan. <strong>Kinderen</strong> komen vlak daarna. De <strong>schoonfamilie</strong> is nog zo'n mijnenveld. En dan de <strong>ambities op het werk</strong>: allemaal situaties die echte breuken kunnen veroorzaken als jullie ze niet samen hebben zien aankomen.</p><p>Dat die gesprekken worden uitgesteld, komt bijna nooit door slordigheid. Het komt doordat ze voor het huwelijk aansnijden voelt als twijfelen, en niemand wil op dat moment twijfelen. Toch is een moeilijke vraag kunnen stellen zonder dat die als een bedreiging aankomt, precies wat een <a href='/nl/gezonde-relatie-test/'>gezonde relatie</a> onderscheidt van een relatie die blijft bestaan dankzij het zwijgen.</p><h2>Is een meningsverschil een probleem?</h2><p>Nee. Een <strong>meningsverschil is geen probleem</strong>, het is de werkelijkheid. Wat telt, is niet dat er geen meningsverschillen zijn. Het is <strong>of jullie er samen doorheen komen</strong>.</p><table><thead><tr><th>Geen probleem</th><th>Verdient aandacht</th></tr></thead><tbody><tr><td>Een andere kijk hebben op een onderwerp</td><td>Weigeren erover te praten</td></tr><tr><td>Het oneens zijn over het aantal kinderen</td><td>Het onderwerp nooit hebben aangesneden</td></tr><tr><td>Andere uitgavengewoontes hebben</td><td>Je financiën voor de ander verbergen</td></tr><tr><td>Niet evenveel zin hebben</td><td>Er nooit over praten</td></tr><tr><td>Ingewikkelde families hebben</td><td>De ander er alleen mee laten zitten</td></tr></tbody></table><h2>Een huwelijk bereid je voor</h2><p>De jurk, de catering, de locatie en de uitnodigingen bereid je maandenlang voor. Aan <strong>de relatie zelf voorbereiden</strong> besteed je vaak veel minder tijd. Deze <strong>huwelijkstest</strong> is een beginpunt. Geen conclusie.</p>",
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Kan deze test voorspellen of een huwelijk slaagt?",
+    "faq1A": "Nee, geen enkele test kan dat. Een huwelijk is een menselijk avontuur, en dat is onvoorspelbaar. Deze test brengt blinde vlekken aan het licht die jullie nog niet hadden verkend, en geeft jullie een reden om belangrijke gesprekken te voeren.",
+    "faq2Q": "Verandert het de uitslag als we vragen overslaan?",
+    "faq2A": "Nee. Overgeslagen vragen tellen niet mee. Jullie score wordt alleen berekend op de vragen die jullie hebben beantwoord. Maar als je een vraag overslaat omdat ze ongemakkelijk is, is het misschien juist de vraag waar jullie het meest over moeten praten.",
+    "faq3Q": "Is deze test gratis en vertrouwelijk?",
+    "faq3A": "Ja, helemaal. Je hoeft geen account aan te maken, en jullie antwoorden worden niet opgeslagen: ze blijven alleen op jullie toestel. Om de volledige uitslag te zien, vragen we één keer een e-mailadres, zonder jullie antwoorden."
+  },
+  "quiz": {
+    "skipQuestion": "Deze vraag overslaan",
+    "previous": "Vorige",
+    "score": "Score",
+    "points": "punten",
+    "skippedCount": "vraag/vragen overgeslagen (niet meegeteld)",
+    "skippedTitle": "⏭️ Overgeslagen vragen, om samen over te praten",
+    "skippedIntro": "Jullie hebben vragen overgeslagen. Misschien zijn het juist de vragen waar jullie het meest over moeten praten:",
+    "shareText": "huwelijkscompatibiliteit!",
+    "question": "Vraag"
+  }
+}

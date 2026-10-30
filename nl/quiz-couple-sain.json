@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Gratis • Zonder account • 5 min",
+    "title": "Heb ik een gezonde relatie? De test voor jullie twee",
+    "intro1": "Jullie zijn gelukkig samen… maar is dat ook zo? Het is een vraag die je jezelf niet altijd hardop stelt, soms uit angst voor het antwoord, soms omdat je niet goed weet hoe je erover moet nadenken. Deze test helpt jullie om het samen helderder te zien, als jullie het spel eerlijk spelen.",
+    "intro2": "Je kunt de test op twee manieren doen. Solo: jullie antwoorden samen en krijgen één score. Duo: ieder beantwoordt om de beurt dezelfde vragen, met een score per persoon en het gemiddelde van jullie als koppel. Niet elke vraag weegt even zwaar: vertrouwen, een gezamenlijke toekomst en respect tellen meer dan wie de afwas doet. Er bestaan geen goede of foute antwoorden, alleen jullie werkelijkheid, van dichtbij bekeken.",
+    "titleHighlight": "gezonde relatie"
+  },
+  "quiz": {
+    "sectionTitle": "Test hier of jullie relatie gezond is!"
+  },
+  "results": {
+    "gapWarning": "Er zit een flink verschil tussen jullie twee scores. {{name1}} lijkt de relatie anders te zien dan {{name2}}. Een goede gelegenheid om er samen over te praten."
+  },
+  "seo": {
+    "s1Title": "Wat een gezonde relatie is",
+    "s1p1": "Er wordt vaak over een gezonde relatie gepraat alsof het een vakje is dat je kunt aanvinken, en dat is een van de hardnekkigste <a href=\"/nl/waar-of-niet-waar-quiz/\">misverstanden over samenleven</a>. Een soort onbereikbaar ideaal voor mensen die van elkaar houden zonder ooit ruzie te maken, die perfect communiceren en die op elke vakantiefoto lachen. In werkelijkheid is een gezonde relatie geen perfecte relatie. Het is een levende relatie, van twee mensen die samen aan de slag gaan, die fouten durven te maken en erop terugkomen, en die elke dag kiezen om elkaar te respecteren en naar elkaar te luisteren.",
+    "s1p2": "Het verschil tussen een relatie waarin je opbloeit en een <a href=\"/nl/toxische-relatie-test/\">toxische relatie</a> zit niet in hoe sterk de gevoelens zijn. Het zit in de gewoontes van elke dag: hoe jullie praten, hoe jullie met meningsverschillen omgaan, hoe jullie elkaar behandelen als niemand kijkt. Deze test helpt jullie om die gewoontes te bekijken, zonder oordeel.",
+    "s2Title": "De pijlers van een gezonde relatie",
+    "s2Intro": "Een gezonde relatie rust op een paar fundamenten die van elkaar afhangen. Haal er één weg en het geheel wankelt. Dit zijn de belangrijkste.",
+    "s2h3_1Title": "Eerlijke communicatie",
+    "s2h3_1Text": "Communiceren betekent niet veel praten. Het betekent dat ieder zijn gevoelens, behoeftes en ongenoegen kan uiten zonder bang te zijn om veroordeeld, uitgelachen of genegeerd te worden. In een gezonde relatie zijn stiltes niet zwaar, en zijn moeilijke gesprekken mogelijk. Jullie hoeven het niet over alles eens te zijn, maar jullie kunnen echt naar elkaar luisteren.",
+    "s2h3_2Title": "Vertrouwen en wederzijds respect",
+    "s2h3_2Text": "<a href=\"/nl/vertrouwen-relatie-test/\">Vertrouwen in elkaar</a> kun je niet afdwingen, het groeit door daden die zich herhalen. Je beloftes nakomen, de grenzen van de ander respecteren, zijn of haar zwakke plekken niet als wapen gebruiken tijdens een ruzie: zo bouw je het op. In een gezonde relatie weet ieder dat de ander aan zijn kant staat, ook bij onenigheid.",
+    "s2h3_3Title": "Evenwicht tussen samen zijn en jezelf blijven",
+    "s2h3_3Text": "Van iemand houden betekent niet met hem of haar versmelten. Een gezonde relatie bestaat uit twee mensen die ook zichzelf blijven. Ieder heeft zijn eigen vrienden, passies en ambities. Die vrijheid bedreigt de relatie niet, ze maakt haar rijker. Als allebei de partners zich vrij voelen om zichzelf te zijn, komen ze met veel meer te delen bij elkaar terug.",
+    "s2h3_4Title": "Gezond omgaan met conflicten",
+    "s2h3_4Text": "Conflicten zijn geen teken dat er iets mis is. Ze horen bij elke relatie tussen mensen, en alles hangt af van wat je ermee doet. In een gezonde relatie lopen ruzies niet uit op persoonlijke aanvallen. Oude koeien worden niet uit de sloot gehaald. Je probeert de ander te begrijpen in plaats van gelijk te krijgen. En vooral: als het weer goed is, kun je er echt een streep onder zetten.",
+    "s2h3_5Title": "Elkaar steunen, met zorg",
+    "s2h3_5Text": "Is je partner je grootste supporter? In een relatie waarin je opbloeit, vier je elkaars successen zonder jaloezie. Je bent er voor elkaar in moeilijke tijden, niet alleen in de goede. Die onvoorwaardelijke steun is een van de sterkste tekenen van een goede relatie.",
+    "s3Title": "Gezonde relatie of toxische relatie: een paar houvasten",
+    "tableHeaders": [
+      "Kenmerk",
+      "Gezonde relatie",
+      "Waarschuwingssignaal"
+    ],
+    "tableRows": [
+      [
+        "Communicatie",
+        "Open, vriendelijk, ook over moeilijke onderwerpen",
+        "Zware stiltes, conflicten uit de weg gaan, kwetsende woorden"
+      ],
+      [
+        "Vertrouwen",
+        "Ieder vertrouwt de ander vanzelf",
+        "Overdreven jaloezie, behoefte aan controle, alles nakijken"
+      ],
+      [
+        "Eigenheid",
+        "Ieder houdt zijn eigen vrienden, hobby's en ambities",
+        "De een verdwijnt achter de ander, volledige afhankelijkheid"
+      ],
+      [
+        "Conflicten",
+        "Leiden tot oplossingen, geen blijvende wrok",
+        "Verbaal geweld, oude wonden openrijten"
+      ],
+      [
+        "Welzijn",
+        "Je voelt je goed en vol energie",
+        "Je voelt je uitgeput, angstig, kleiner"
+      ]
+    ],
+    "s4Title": "De signalen die je alert moeten maken",
+    "s4Intro": "Sommige gedragingen, ook als ze in een relatie normaal zijn geworden, verdienen een tweede blik. Niet om iemand de schuld te geven, maar om de dingen te zien zoals ze zijn.",
+    "s4Signals": [
+      "Je bent bang voor de reactie van je partner als je iets zegt.",
+      "Ruzies eindigen zonder echte oplossing, en dezelfde onderwerpen komen steeds terug.",
+      "Een van de twee wist zichzelf steeds weg, met zijn of haar behoeftes, wensen en identiteit: dat is het kenmerk van <a href=\"/nl/emotionele-afhankelijkheid-test/\">emotionele afhankelijkheid</a>.",
+      "Er zijn vernederingen, spot of kleinerende opmerkingen geweest, ook ‘als grapje’.",
+      "Je voelt je alleen, zelfs als jullie samen zijn.",
+      "Je ziet ertegen op om te zeggen wat je echt voelt, uit angst voor ruzie.",
+      "Je mentale gezondheid, je zelfvertrouwen of je levenslust is achteruitgegaan sinds jullie samen zijn."
+    ],
+    "s4Outro": "Deze signalen herkennen is geen mislukking. Het is de eerste stap naar iets beters, of dat nu is door samen aan jullie relatie te werken of door de beslissingen te nemen die nodig zijn voor je welzijn.",
+    "s5Title": "Hoe lees je je score?",
+    "s5Intro": "Deze test geeft een percentage: elke vraag heeft een gewicht dat afhangt van hoe belangrijk ze is, en de score vergelijkt jullie antwoorden met het totaal van de gewichten die echt gesteld zijn. Hieronder een leeswijzer.",
+    "s5r1Title": "Tussen 0 en 34%: fundamenten om (opnieuw) op te bouwen",
+    "s5r1Text": "Jullie relatie maakt duidelijk een zware tijd door. Verschillende belangrijke pijlers lijken verzwakt. Deze uitslag is geen vonnis, maar informatie. Veel koppels zijn door heel moeilijke periodes gegaan en zijn er weer uitgekomen. Maar dat vraagt een oprechte wil van allebei, en vaak de hulp van een professional (een relatietherapeut, een psycholoog). Blijf er niet alleen mee zitten.",
+    "s5r2Title": "Tussen 35 en 54%: een relatie die meer aandacht verdient",
+    "s5r2Text": "Er zitten echt positieve dingen in jullie relatie, maar sommige punten verdienen jullie aandacht. Waarschijnlijk zijn er een paar vragen geweest die jullie aan het denken hebben gezet. Dat is precies de bedoeling. In deze fase lukt veranderen vaak het best: allebei de partners zijn nog betrokken, maar weten dat er werk aan de winkel is. Praat met elkaar over wat je voelde tijdens het invullen.",
+    "s5r3Title": "Tussen 55 en 74%: een stevige relatie met ruimte om te groeien",
+    "s5r3Text": "Jullie relatie is over het algemeen gezond. Jullie hebben een goede basis: vertrouwen, communicatie en respect lijken er te zijn. Sommige dingen kunnen sterker, en dat is in elke relatie normaal. Wat telt, is dat jullie allebei in een positieve beweging zitten en willen groeien, en het bewijs daarvan is dat jullie deze test samen hebben gedaan.",
+    "s5r4Title": "Tussen 75 en 100%: een relatie waarin jullie opbloeien",
+    "s5r4Text": "Bravo. Niet omdat jullie perfect zijn, dat is niemand, maar omdat jullie iets stevigs, respectvols en liefdevols hebben opgebouwd. Jullie relatie laat mooi zien hoe een gezonde relatie eruit kan zien. Blijf er zorg voor dragen, met elkaar praten, voor elkaar kiezen. Zulke scores houden zichzelf niet in stand: ze zijn het resultaat van wat jullie elke dag doen.",
+    "s6Title": "Is deze test betrouwbaar?",
+    "s6p1": "Deze quiz is een hulpmiddel om na te denken, geen klinische diagnose. Hij is gemaakt om jullie goed naar jullie relatie te laten kijken, gesprekken te laten beginnen die jullie misschien nog niet hebben gevoerd, en dingen te laten benoemen die nog vaag waren. Hij vervangt geen begeleiding door een psycholoog of relatietherapeut als jullie door een ernstige crisis gaan.",
+    "s6p2": "Wat deze test waardevol maakt, is vooral hoe eerlijk jullie antwoorden. De bruikbaarste uitslagen krijg je als je oprecht antwoordt, zonder te proberen ‘goed over te komen’. Jullie relatie verdient die eerlijkheid.",
+    "s7Title": "Na de test: en nu?",
+    "s7p1": "Deze test samen doen is al een sterk gebaar. Het betekent dat jullie om je relatie geven en klaar zijn om er eerlijk naar te kijken. Stop de uitslag dus niet in een la als je hem eenmaal hebt. Praat erover. Wat verraste je? Wat raakte je? Wat zou je willen veranderen? Komt het gesprek niet vanzelf op gang, dan is <a href=\"/nl/vragen-voor-koppels/\">een goede vraag om mee te beginnen</a> vaak genoeg.",
+    "s7p2": "Voel je dat jullie relatie een professionele ruimte nodig heeft om verder te kunnen, aarzel dan niet om naar een relatietherapeut te gaan. Dat is geen teken van zwakte, het bewijst juist dat jullie je relatie serieus nemen. De koppels die hulp zoeken, zijn niet de koppels die het slechtst gaan: vaak zijn het koppels die het nog beter willen doen.",
+    "s7p3": "En heeft deze test laten zien dat jullie relatie stevig is, geniet er dan van. Goede relaties zijn geen toeval: ze zijn het resultaat van keuzes, moeite en liefde, elke dag opnieuw.",
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Is deze test gratis?",
+    "faq1A": "Ja, de test is helemaal gratis, je hoeft geen account aan te maken en je kunt hem zo vaak doen als je wilt. De 20 vragen worden telkens willekeurig gekozen uit 78, dus de test is elke keer anders.",
+    "faq2Q": "Hoe werkt de score van de test?",
+    "faq2A": "Je kiest aan het begin de manier. Solo: jullie beantwoorden de 20 vragen samen en krijgen één score. Duo: ieder beantwoordt om de beurt dezelfde 20 vragen, met een score per persoon en het gemiddelde van jullie als koppel. De uitslag is een percentage en geen puntentotaal, omdat elke vraag meetelt naar hoe belangrijk ze is. Geen plannen voor de toekomst hebben weegt drie keer zwaarder dan een scheve verdeling van het huishouden, en de 20 vragen gaan altijd over dezelfde grote thema's: communicatie, vertrouwen, conflicten, intimiteit, zelfstandigheid, de toekomst en welzijn.",
+    "faq3Q": "Wat als onze scores heel verschillend zijn?",
+    "faq3A": "Een groot verschil tussen jullie scores betekent dat jullie je relatie niet op dezelfde manier zien. Dat is waardevolle informatie om samen over te praten, zonder oordeel."
+  }
+}

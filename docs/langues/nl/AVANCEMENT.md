@@ -11,7 +11,7 @@ le met à jour dans la PR de chaque lot.
 | 0 | `nl` caché dans le code, contrôles, guide de style | fait le 30 octobre 2026 |
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
-| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore) |
+| 3 | Tests de couple, avec leurs textes de moteur (35 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8), par paquets de quatre pages environ | en cours : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
@@ -363,7 +363,49 @@ le met à jour dans la PR de chaque lot.
   « ben ik verliefd » et « houdt hij nog van mij ». Un lien vers un article du
   blog (« il ne fait pas d'effort ») attend sa traduction.
 
+## Lot 3f (30 octobre 2026) : couple sain, mariage, divorce
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/gezonde-relatie-test/` | Gezonde relatie test: hoe gezond is jullie relatie? | Heb ik een gezonde relatie? De test voor jullie twee |
+  | `/nl/klaar-om-te-trouwen-test/` | Klaar om te trouwen test: 20 vragen voor jullie twee | Zijn jullie klaar om te trouwen? De huwelijkstest voor koppels |
+  | `/nl/moet-ik-scheiden-test/` | Moet ik scheiden test: scheiden of nog een kans? | Moet ik scheiden? Een test om het helder te zien |
+
+- **Les textes de moteur** : le couple sain suit le réservoir international
+  (préfixe `healthy`, 78 questions, comme l'anglais ; le français a ses 30
+  questions sous `couple`), avec l'écran des modes (`sainMode`) et la note de
+  sécurité (`healthy` de quizGames.json) ; `marriage` (30 questions, huit
+  thèmes, trois verdicts) ; `divorce` (25 questions, les remarques sous
+  certaines réponses, quatre verdicts) et son avertissement. L'outil du
+  scratchpad (`applique.py`) prend désormais l'anglais comme modèle d'un
+  préfixe quand le français n'a pas la même structure (`GD_SOURCE_LANGUE`).
+- **Le droit et les numéros** : la section du divorce sur la procédure parle
+  des Pays-Bas et de la Belgique (pas de divorce pour faute, avocat obligatoire
+  aux Pays-Bas, plan de parentalité, Juridisch Loket, aide juridique de
+  première ligne) au lieu du droit français ; Veilig Thuis, 1712 et 112 à la
+  place du 3919, du 15, du 17 et du 18.
+- **La porte e-mail** : les trois pages l'ont. « Sans inscription » devient
+  « zonder account », et le divorce ne dit plus ses réponses « anonymes »
+  (« elles ne sont pas enregistrées »).
+- **Les titres** : cinq questions affichées en H3 dans la liste statique
+  contenaient « echt » ; elles sont reformulées.
+- **Les liens** : vers le quiz vrai ou faux, le couple toxique, la confiance,
+  la dépendance affective, les questions pour couple, « is hij de ware », le
+  test de couple et le couple sain. Le lien du mariage vers l'évaluation est
+  écrit et neutralisé à la construction tant qu'elle reste fermée en
+  néerlandais.
+
 ## Les chiffres
+
+Au lot 3f : `textes nl` 217 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (20 pages traduites) ; `site nl` sur les trois pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, chaque moteur va jusqu'à son
+résultat dans chaque mode (solo et duo pour le couple sain), et les textes
+restés en français sont ceux des cartes « Hierna » vers des pages pas encore
+traduites. Aucune page publique ne change.
+
 
 Au lot 3e : `textes nl` 198 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (17 pages traduites) ; `site nl` sur les quatre pages : aucun

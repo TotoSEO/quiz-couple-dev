@@ -53,6 +53,29 @@
     "description": "Twintig eerlijke, gewogen vragen over wat je vandaag voor je partner voelt. Acht niveaus van uitslag, van heel duidelijk tot bijna vervaagd.",
     "metaDescription": "Hou ik nog van hem of haar? Twintig gewogen vragen, waarbij denken aan weggaan zwaarder telt dan een ergernis, en een uitslag op acht niveaus. Gratis."
   },
+  "testCoupleSain": {
+    "title": "Gezonde relatie test: hoe gezond is jullie relatie?",
+    "shortTitle": "Gezonde relatie test",
+    "description": "Een quiz voor jullie twee, om te zien of jullie relatie gezond en in evenwicht is.",
+    "metaDescription": "Doe de gezonde relatie test met z'n tweeën: 20 vragen over vertrouwen, communicatie en respect, met een score per persoon. Gratis, met meteen je uitslag."
+  },
+  "testMariage": {
+    "title": "Klaar om te trouwen test: 20 vragen voor jullie twee",
+    "shortTitle": "Huwelijkstest",
+    "description": "20 vragen om samen te beantwoorden en te zien of jullie klaar zijn om te trouwen.",
+    "metaDescription": "Doe de klaar om te trouwen test: 20 vragen over geld, kinderen, waarden en ruzies, om te zien of jullie op één lijn zitten. Gratis, met meteen een uitslag."
+  },
+  "testDivorce": {
+    "title": "Moet ik scheiden test: scheiden of nog een kans?",
+    "shortTitle": "Moet ik scheiden?",
+    "h1": "Moet ik scheiden? Een test om het helder te zien",
+    "heroSubtitle": "Een test voor jezelf, zonder oordeel, om het helderder te zien",
+    "description": "15 vragen om eerlijk stil te staan bij je relatie.",
+    "metaDescription": "Scheiden of het nog eens proberen? Doe de moet ik scheiden test: 15 eerlijke vragen om je relatie op een rij te zetten. Gratis, met meteen je uitslag.",
+    "startSubtitle": "Gratis en zonder account",
+    "emergencyNotice": "Ben je in gevaar? In Nederland kun je dag en nacht gratis bellen met <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>), in België op werkdagen met <strong>1712</strong>. In direct gevaar: bel <strong>112</strong>.",
+    "emergencyResult": "Hulp nodig? Ben je in gevaar, bel dan <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>, Nederland) of <strong>1712</strong> (België). In direct gevaar: <strong>112</strong>."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
