@@ -1970,6 +1970,14 @@ function copyTranslationData() {
 
   for (const lang of LANGUAGES) {
     const langDir = path.resolve(__dirname, '../../', lang);
+    // Un fichier qu'une langue cachée n'a pas encore : celui du français, pour
+    // que ses pages marchent en attendant la traduction (le jeu de pureté, par
+    // exemple, ne sait pas retomber seul sur le français).
+    const sourceDe = (nom) => {
+      const p = path.join(langDir, nom);
+      if (fs.existsSync(p) || !langueCachee(lang)) return p;
+      return path.resolve(__dirname, '../../fr', nom);
+    };
 
     // Load base gd.json
     const gdSrc = path.join(langDir, 'gd.json');
@@ -2035,7 +2043,7 @@ function copyTranslationData() {
       }
     }
 
-    const gamesSrc = path.join(langDir, 'quizGames.json');
+    const gamesSrc = sourceDe('quizGames.json');
     if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
     }
@@ -2043,14 +2051,14 @@ function copyTranslationData() {
     // Les cent questions du test de pureté ne sont chargées que lorsque
     // quelqu'un lance le test, jamais à l'ouverture de la page : c'est ce qui
     // permet au gabarit de rester quasiment vide, ce que la page vise.
-    const pureteSrc = path.join(langDir, 'purete.json');
+    const pureteSrc = sourceDe('purete.json');
     if (fs.existsSync(pureteSrc)) {
       fs.copyFileSync(pureteSrc, path.join(dataDir, `purete-${lang}.json`));
     }
 
     // Les questions du bilan de couple et leurs guides (près de 100 Ko) ne
     // se chargent que quand quelqu'un ouvre l'application du bilan.
-    const bilanSrc = path.join(langDir, 'bilan-questions.json');
+    const bilanSrc = sourceDe('bilan-questions.json');
     if (fs.existsSync(bilanSrc)) {
       fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(JSON.parse(fs.readFileSync(bilanSrc, 'utf-8'))), 'utf-8');
     }
