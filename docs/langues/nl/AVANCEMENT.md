@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -845,7 +845,50 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur la page** : la description de trois cartes
   vers des tests célibataires pas encore traduits (lots 4e à 4h).
 
+## Lot 4e (31 octobre 2026) : amour ou amitié, amoureux de son meilleur ami
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/liefde-of-vriendschap-test/` | Liefde of vriendschap test: wat voel je voor die persoon? | Is het liefde of vriendschap? 20 vragen |
+  | `/nl/verliefd-op-je-beste-vriend/` | Verliefd op je beste vriend of vriendin? Doe de test | Test: ben je verliefd op je beste vriend of vriendin? |
+
+- **Les moteurs** : `amourAmitie` (barème explicite repris du français,
+  146 points, six paliers ; les noms des paliers du tableau de la page sont
+  ceux des verdicts) ; `amourAmiH` et `amourAmiF`, deux séries de 15
+  questions (beste vriend, beste vriendin), 129 points, et `amourAmi`, les
+  quatre verdicts communs, avec l'écran des deux modes et l'écran de départ
+  (`amour-ami` de `quizGames.json`). Le vouvoiement français de « amour ou
+  amitié » devient « je », comme partout. Les pronoms qui renvoyaient à « de
+  vriendschap » ou « de vraag » (« koester haar », « dan kun je haar
+  opbergen ») sont remplacés par le nom : avec une amie pour sujet du test,
+  « haar » se lisait « elle ».
+- **Les liens** : « je gewoon afvragen of je verliefd bent » (ben ik
+  verliefd), « signalen dat iemand stiekem gevoelens voor je heeft » et « je
+  vriend of vriendin stiekem meer voor je voelt » (stiekem verliefd op mij),
+  « liefde die gewoonte is geworden » (liefde of gewoonte), « zo dicht bij
+  je beste vriend of vriendin » (dans la FAQ, le premier passage de la page
+  qui parle d'un meilleur ami), « wat vriendschap en liefde met elkaar
+  delen » (liefde of vriendschap), « je al een tijdje single bent » (waarom
+  vind ik geen liefde) et « prille aantrekking tot iemand die je amper
+  kent » (crush test ; l'ancre française aurait fait neuf mots). L'article
+  du blog sur le manque (« ce n'est pas de l'amour, c'est du manque ») n'a
+  pas d'adresse néerlandaise : la phrase reste sans lien, rappelée par
+  `textes` jusqu'au lot 9 ; celui sur la dépendance affective en amitié
+  disparaît de la première phrase de « amour ou amitié », que l'anglais
+  n'a pas non plus.
+- **Ce qui reste en français sur les pages** : la description de la carte
+  vers « m'aime-t-il en secret » (lot 4f).
+
 ## Les chiffres
+
+Au lot 4e : `textes nl` 514 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (46 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, le moteur de « amour ou
+amitié » et les deux modes de « meilleur ami » vont jusqu'à leur résultat ;
+reste en français la description d'une carte vers une page pas encore
+traduite. Aucune page publique ne change.
 
 Au lot 4d : `textes nl` 489 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (44 pages traduites) ; `site nl` sur la page : aucun

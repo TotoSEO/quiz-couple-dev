@@ -166,6 +166,12 @@
     "metaDescription": "Is mijn relatie voorbij? 24 feitelijke vragen, gewogen naar hoe ernstig elk teken is, en een uitslag in 8 niveaus die je niet sust. Gratis, zonder account.",
     "description": "Vierentwintig feitelijke vragen, een weging naar hoe ernstig elk teken is, en een uitslag die je niet probeert te sparen."
   },
+  "testAmourAmitie": {
+    "title": "Liefde of vriendschap test: wat voel je voor die persoon?",
+    "shortTitle": "Liefde of vriendschap?",
+    "metaDescription": "Liefde of vriendschap test: 20 gewogen vragen om te weten of wat je voor die persoon voelt liefde is of vriendschap. Uitslag in 6 niveaus, gratis.",
+    "description": "Twintig gewogen vragen en een uitslag in zes niveaus, om eindelijk een naam te geven aan wat je voelt."
+  },
   "testDependance": {
     "title": "Emotionele afhankelijkheid test: liefde of vastklampen?",
     "shortTitle": "Emotionele afhankelijkheid test",
@@ -202,6 +208,13 @@
     "shortTitle": "Controlerende relatie test",
     "description": "Twintig vragen over je vrijheid in je relatie: vrienden, geld, keuzes, je mening. Om een naam te geven aan wat je meemaakt.",
     "metaDescription": "Doe de controlerende relatie test: twintig vragen over je vrienden, je geld, je keuzes en je mening. Gratis en vertrouwelijk, met tips en hulplijnen."
+  },
+  "testAmourAmi": {
+    "title": "Verliefd op je beste vriend of vriendin? Doe de test",
+    "shortTitle": "Verliefd op je beste vriend(in)?",
+    "metaTitle": "Verliefd op je beste vriend of vriendin? Doe de test",
+    "description": "Vijftien vragen om te weten of wat je voor je beste vriend of vriendin voelt nog vriendschap is, of al iets anders.",
+    "metaDescription": "Ben je verliefd op je beste vriend of vriendin? Vijftien vragen met elk hun eigen gewicht, aangepast aan een jongen of een meisje, en meteen je uitslag."
   },
   "testTrouverAmour": {
     "title": "Waarom vind ik geen liefde? Test in 15 vragen",
