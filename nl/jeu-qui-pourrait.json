@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "108 vragen • 2 spelers • Gratis",
+    "title": "Wie zou eerder? Het spel voor koppels met 100+ vragen",
+    "titleHighlight": "Wie zou eerder?",
+    "description": "Er verschijnt een vraag, jullie twee namen eronder, en jullie wijzen aan wie het zou doen."
+  },
+  "jsonLd": {
+    "name": "Wie zou eerder, voor koppels"
+  },
+  "exemples": {
+    "amorce": "Wie zou eerder",
+    "avant": "",
+    "apres": "?"
+  },
+  "section1": {
+    "title": "De regels van wie zou eerder",
+    "intro": "Wie zou eerder is een spel dat je als koppel kunt spelen, op één telefoon. Het is een heel simpel spel: er verschijnt een vraag, zoals “Wie zou eerder in een opwelling een luxe horloge kopen?”, en jullie antwoorden door op een naam te tikken. Denk je dat hij of zij het is, dan tik je op die naam; denk je dat jij het bent, dan tik je op de jouwe. En zou geen van jullie het doen, dan is er een knop ‘Niemand’ net daaronder.",
+    "intro2": "Er is geen goed antwoord en er worden geen punten geteld. Het spel onthoudt gewoon wie er bij elke vraag werd aangewezen, en laat jullie aan het eind het totaal zien. Zo gaat een spel:",
+    "etape1Titre": "Vul jullie namen in en kies de lengte",
+    "etape1Texte": "Jullie kunnen spelen met 20, 40 of 60 vragen, willekeurig gekozen uit de 108 van het spel. Een spel van 20 vragen duurt ongeveer vijf minuten.",
+    "etape2Titre": "Wijs bij elke vraag iemand aan",
+    "etape2Texte": "Het mooist is als jullie het eens worden voor je op het scherm tikt. Meestal is een van de twee het er niet mee eens, en juist dan wordt het spel grappig!",
+    "etape3Titre": "Bekijk het oordeel",
+    "etape3Texte": "Aan het eind laat het spel zien hoe vaak ieder werd aangewezen, en wie het vaakst.",
+    "apres": "Er is verder niets voor te bereiden: het spel werkt online en gratis, en jullie kunnen de telefoon doorgeven of gewoon tussen jullie in leggen."
+  },
+  "section2": {
+    "title": "Het verschil met wie van ons twee",
+    "p1": "Er staat ook een spel op de site waarin <a href=\"/nl/wie-van-ons-twee/\">ieder in het geheim een van jullie aanwijst</a>, en de twee spellen lijken erg op elkaar. Het verschil zit in de vragen. Bij wie van ons twee antwoord je over wat jullie al zijn: wie het koppigst is, wie het meest kletst, wie het best kookt, enzovoort. De antwoorden ken je al, want je beleeft ze elke dag.",
+    "p2": "Bij wie zou eerder antwoord je over wat jullie zouden kunnen doen. Wie zou eerder gaan parachutespringen, wie zou alles opgeven om een B&amp;B op het platteland te beginnen, of wie zou in één avond het hele vakantiebudget uitgeven... Niemand kent het antwoord, dus ieder geeft zijn mening, en je ontdekt welk beeld de ander van je heeft. Dat klopt trouwens niet altijd met het beeld dat je zelf hebt.",
+    "p3": "Aangewezen worden bij “wie zou eerder huilen bij een dierenfilmpje” terwijl je dacht dat niemand het van je zou verwachten, dat roept reacties op. Meestal is de volgende vraag “wacht, zie je mij zo??”, en dat levert gesprekken op die je anders nooit gehad zou hebben!"
+  },
+  "section3": {
+    "title": "Voorbeelden van vragen uit het spel",
+    "intro": "Hier zijn twintig van de honderdacht vragen, precies zoals het spel ze stelt. Sommige zijn luchtig, andere wat minder, en een paar zorgen voor discussie:",
+    "apres": "De andere 88 zitten in het spel, en elk spel kiest ze willekeurig. Hebben jullie je 20 vragen af en willen jullie doorgaan, dan stelt het spel er 20 meer voor. En de knop ‘Opnieuw met andere vragen’ kiest eerst uit de vragen die nog niet geweest zijn."
+  },
+  "section4": {
+    "title": "Een paar tips om te spelen",
+    "intro": "Er valt niet veel te weten om te spelen, maar deze vier gewoontes maken het spel een stuk beter:",
+    "resumeTitre": "De goede gewoontes",
+    "resume1": "<strong>Leg je keuzes uit:</strong> “Jij, want de laatste keer in het restaurant…”. Vaak is het verhaaltje bij het antwoord grappiger dan het antwoord zelf.",
+    "resume2": "<strong>Gebruik de knop ‘Niemand’ niet te vaak:</strong> Neem je hem bij elke vraag om niet te hoeven kiezen, dan is de lol eraf. Bewaar hem voor de vragen waarbij eerlijk gezegd geen van jullie het zou durven.",
+    "resume3": "<strong>Accepteer het oordeel:</strong> Als ‘tot alles in staat’ aangewezen worden is helemaal niet gemeen. En ben je het er niet mee eens, zeg het dan: de discussie hoort bij het spel.",
+    "resume4": "<strong>Speel het nog eens:</strong> Met 108 vragen kun je meerdere spellen spelen zonder dezelfde te krijgen. En de antwoorden veranderen soms van spel tot spel, wat ook interessant is.",
+    "apres": "En vinden jullie het spel leuk, dan hebben we <a href=\"/nl/spelletjes-voor-koppels/\">andere spelletjes om met z'n tweeën te doen</a> volgens hetzelfde principe: één telefoon, niets te installeren, en vragen die aan het praten zetten. <a href=\"/nl/ik-heb-nog-nooit-vragen/\">Ik heb nog nooit</a> is waarschijnlijk het bekendste, en veel koppels starten het meteen na een spelletje wie zou eerder."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Hoe speel je wie zou eerder als koppel?",
+    "a1": "Jullie vullen jullie twee namen in, kiezen 20, 40 of 60 vragen, en tikken bij elke vraag op de naam van wie het zou doen, of op ‘Niemand’. Aan het eind zegt het spel wie het vaakst werd aangewezen.",
+    "q2": "Moeten we het allebei eens zijn om te antwoorden?",
+    "a2": "Dat is de bedoeling, en juist daardoor gaan jullie praten. Lukt het niet om het eens te worden, dan wint wie zijn zaak het best verdedigt. Het spel controleert toch niets, dus jullie beslissen.",
+    "q3": "Kun je het op afstand spelen?",
+    "a3": "Ja. Zet op het startscherm de afstandsmodus aan: een van jullie maakt een spel aan, de ander doet mee met de code of de QR-code, en jullie antwoorden elk op je eigen telefoon. Jullie wijzen niet altijd dezelfde persoon aan, en daar wordt het grappig.",
+    "q4": "Veranderen de vragen bij elk spel?",
+    "a4": "Ja. Elk spel kiest zijn vragen willekeurig uit de 108, en ‘Opnieuw met andere vragen’ kiest eerst uit de vragen die nog niet geweest zijn sinds je op de pagina kwam.",
+    "q5": "Werkt het ook met vrienden?",
+    "a5": "Heel goed, zolang jullie met z'n tweeën zijn: het spel toont twee namen. Met vrienden, familie of huisgenoten werken de vragen net zo goed. Er zitten maar een paar vragen over koppels tussen, en die werken ook prima met vrienden."
+  }
+}
