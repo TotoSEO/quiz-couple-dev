@@ -1,0 +1,578 @@
+{
+  "belier_belier": {
+    "score": 8,
+    "text": "Twee Rammen (twee Vuurtekens, geregeerd door Mars) vormen een bijzonder hartstochtelijk duo. Hun relatie is vurig en explosief, vol energie en spontaniteit. Ze beleven hun liefde intens, maar hun impulsiviteit en hun even grote ego zorgen vaak voor botsingen. Het is een spannende combinatie, op voorwaarde dat ze leren hun vaart soms wat in te houden."
+  },
+  "belier_taureau": {
+    "score": 5,
+    "text": "De Ram (kardinaal Vuur) en de Stier (vaste Aarde) hebben een tegengesteld temperament. De Ram is impulsief en haastig (Mars), de Stier rustig en geduldig (Venus). Dat verschil in element zorgt voor dagelijkse wrijving: de Stier vindt de Ram roekeloos, de Ram vindt de Stier traag. De aantrekking komt juist uit die aanvulling (energie tegenover stabiliteit), maar het vraagt flink wat compromissen en begrip voor elkaar."
+  },
+  "belier_gemeaux": {
+    "score": 8,
+    "text": "De Ram (Vuur) en de Tweelingen (Lucht) vormen een levendig en dynamisch stel. Ze delen een honger naar vrijheid en avontuur. De Ram handelt vol vuur, en de nieuwsgierige, flexibele Tweelingen prikkelt de Ram steeds weer met een snelle geest. Hun relatie zit vol gezamenlijke plannen: de Ram brengt daadkracht, de Tweelingen nieuwe ideeën. Ze ontlopen de sleur en begrijpen elkaar goed, al moeten ze de haast van de Ram en de soms twijfelende Tweelingen in balans houden."
+  },
+  "belier_cancer": {
+    "score": 4,
+    "text": "De Ram (Vuur) en de Kreeft (Water) vinden moeilijk een gemeenschappelijk ritme. Ze delen hun element niet, en dat merk je. De Kreeft zoekt emotionele zekerheid en denkt vooruit, de Ram leeft in het moment. De Kreeft voelt zich soms genegeerd door de onstuimige Ram, en de Ram ergert zich aan de gevoeligheid van de Kreeft. Met echte liefde kan het diep gaan, maar dan zijn grote compromissen nodig: de Kreeft leert de Ram rekening te houden met gevoelens, de Ram leert de Kreeft op het moment te vertrouwen."
+  },
+  "belier_lion": {
+    "score": 9,
+    "text": "De Ram (Vuur) en de Leeuw (Vuur) hebben een sterke band door hun gedeelde element. Hun relatie is intens en hartstochtelijk. Allebei zijn ze trots en energiek, en samen zorgen ze voor een relatie vol kracht en vuur. Ze houden elkaar scherp en vervelen zich nooit, maar ze kunnen ook met elkaar wedijveren, want allebei willen ze schitteren. Respecteren ze elkaars trots, dan is het een sterk en heel lichamelijk koppel."
+  },
+  "belier_vierge": {
+    "score": 4,
+    "text": "De Ram (Vuur) en de Maagd (Aarde) leven niet in hetzelfde tempo. De Maagd denkt lang na voor ze iets doet, de Ram stormt er meteen op af. De Ram houdt niet van de regels en de nauwkeurigheid die de Maagd oplegt, en dat geeft conflicten. Omgekeerd bewondert de Maagd de durf van de Ram, maar ergert ze zich aan zijn onvoorzichtigheid. Zonder gedeeld element (Vuur tegenover Aarde) is de relatie gespannen, en ze moeten zich flink aan elkaar aanpassen om het te laten werken."
+  },
+  "belier_balance": {
+    "score": 9,
+    "text": "De Ram (Vuur) en de Weegschaal (Lucht) staan tegenover elkaar in de dierenriem, en dat geeft een sterke aanvulling. De rustige, diplomatieke Weegschaal tempert de impulsiviteit van de Ram, en de vurige Ram verwarmt het hart van de Weegschaal. In de liefde is het een bijna perfecte combinatie: de Weegschaal brengt harmonie en zelfbeheersing, de Ram energie en eerlijkheid. Samen maken ze van hun verschillen een stevig evenwicht."
+  },
+  "belier_scorpion": {
+    "score": 6,
+    "text": "De Ram (Vuur) en de Schorpioen (Water) hebben een intense, ingewikkelde relatie. De Schorpioen (vast teken, Mars en Pluto) is raadselachtig en hartstochtelijk, de Ram (kardinaal Vuur) direct en energiek. Samen kunnen ze een ongeremde passie beleven: de Schorpioen voedt de kracht van de Ram, de Ram brengt de Schorpioen in beweging. Maar hun neigingen botsen (de Schorpioen test graag, de Ram stormt vooruit) en dat kan uitlopen op felle ruzies. Het wordt de liefde van hun leven, of een strijd, afhankelijk van hoe ze hun intensiteit in toom houden."
+  },
+  "belier_sagittaire": {
+    "score": 9,
+    "text": "De Ram (Vuur) en de Boogschutter (Vuur) passen heel goed bij elkaar. De optimistische, rustige Boogschutter zet de Ram ertoe aan om eerst na te denken. Samen hebben ze een warme en dynamische relatie. Allebei houden ze van avontuur: hoe geduldiger de Boogschutter, hoe meer de Ram naar zijn raad luistert, en hun leven samen zit vol reizen en ontdekkingen. Ze wakkeren elkaars vechtlust en avonturenzin aan, wat hen tot een heel hecht stel maakt."
+  },
+  "belier_capricorne": {
+    "score": 5,
+    "text": "De Ram (Vuur) en de Steenbok (Aarde) zijn twee kardinale tekens die tegen elkaar indruisen. De koele, bedachtzame Steenbok voelt tegenover het vuur van de Ram soms als een muur van ijs. De Ram brengt enthousiasme, de Steenbok stabiliteit. Op lange termijn kunnen ze iets evenwichtigs opbouwen, want ze delen ambitie en wilskracht, maar het kost moeite: de Ram leert de Steenbok durven, de Steenbok leert de Ram nadenken voor hij springt. Een stevige verbintenis, met af en toe felle passie."
+  },
+  "belier_verseau": {
+    "score": 8,
+    "text": "De Ram (Vuur) en de Waterman (Lucht) kunnen het heel goed met elkaar vinden dankzij hun gedeelde behoefte aan vrijheid. Ze respecteren allebei de onafhankelijkheid van de ander en praten makkelijk met elkaar. Hun relatie hangt niet aan veel eisen: ze begrijpen elkaars dromen en ideeën. De wat afstandelijkere Waterman houdt de vurige Ram in balans. Het is een van de gelukkigste combinaties van de dierenriem, al moeten ze opletten dat ze elkaar niet kwetsen, bijvoorbeeld over intimiteit."
+  },
+  "belier_poissons": {
+    "score": 6,
+    "text": "De Ram (Vuur) en de Vissen (Water) vormen een heel emotionele combinatie. Samen kunnen ze een grote passie en een diepe toewijding beleven. De Ram, meestal nogal fel, wordt zacht door de toewijding van de Vissen, die zich volledig geeft. Er kan een sterke chemie ontstaan: de Vissen troost de Ram, de Ram brengt levendigheid. Maar hun elementen zijn tegengesteld (Vuur tegenover Water), dus er is veel begrip nodig: zonder echte liefde zorgen de haast van de Ram en het dromerige van de Vissen voor spanning."
+  },
+  "taureau_belier": {
+    "score": 5,
+    "text": "De Stier (Aarde, Venus) en de Ram (Vuur, Mars) hebben een heel verschillend temperament. De Stier houdt van stabiliteit en eenvoudige genoegens, de Ram wil meteen actie. Die tegenstelling (Aarde tegenover Vuur) zorgt voor dagelijkse wrijving: de Stier voelt zich opgejaagd door de impulsieve Ram, de Ram voelt zich verstikt door het rustige tempo van de Stier. Toch kunnen ze een evenwicht vinden: de Ram valt voor de standvastigheid van de Stier, de Stier voor het vuur van de Ram. Hun relatie draait om compromissen en wederzijds respect."
+  },
+  "taureau_taureau": {
+    "score": 9,
+    "text": "Twee Stieren samen (vaste Aarde, geregeerd door Venus) passen heel goed bij elkaar. Ze houden allebei van comfort, zachtheid en trouw. Een Stier-Stier-stel bouwt een stevig thuis: ieder begrijpt wat de ander nodig heeft (financiële zekerheid, lichamelijke tederheid, stabiliteit). Hun koppigheid kan soms botsen, maar hun geduld maakt die neiging om niet toe te geven meestal goed. Uiteindelijk vinden ze rust bij elkaar, in een heel stabiele en duurzame band."
+  },
+  "taureau_gemeaux": {
+    "score": 3,
+    "text": "De Stier (Aarde) en de Tweelingen (Lucht) hebben tegengestelde behoeften. De Stier draait om zekerheid en vaste gewoontes, de Tweelingen zoeken afwisseling en beweging. Ze passen niet goed bij elkaar: de praktische Stier en de praatgrage Tweelingen communiceren totaal anders. De Stier houdt van diepe, betrouwbare gesprekken, terwijl de Tweelingen van het ene onderwerp naar het andere springen, en dat kan de Stier irriteren. Ze moeten bereid zijn elkaar te begrijpen, ondanks die grote verschillen."
+  },
+  "taureau_cancer": {
+    "score": 9,
+    "text": "De Stier (Aarde) en de Kreeft (Water) vormen een harmonieus en stevig stel. Hun band rust op een gedeeld doel: zekerheid en comfort. De praktische Stier stelt de trouwe Kreeft gerust, en de liefdevolle Kreeft voelt zich gesteund door de Stier. Samen bouwen ze een warm thuis. Alleen de manier waarop ze gevoelens uiten kan wat spanning geven (de Kreeft heeft geruststellende woorden nodig, de Stier toont het liever met daden), maar met begrip voor elkaar overbruggen ze dat verschil."
+  },
+  "taureau_lion": {
+    "score": 4,
+    "text": "De Stier (Aarde) en de Leeuw (Vuur) hebben vaak tegengestelde waarden. De nuchtere Stier houdt van rust en zekerheid, de stralende Leeuw zoekt bewondering en luxe. In het begin kan de aantrekking sterk zijn (de Stier bewondert de uitstraling van de Leeuw, en omgekeerd), maar de verschillen komen snel boven. De Stier voelt zich overrompeld door de uitbundige Leeuw, de Leeuw vindt de Stier te bescheiden. Het kost veel moeite om de stabiliteit van de Stier en de passie van de Leeuw in evenwicht te brengen."
+  },
+  "taureau_vierge": {
+    "score": 9,
+    "text": "De Stier (Aarde) en de Maagd (Aarde) zijn allebei heel praktisch. Hun gedeelde element zorgt ervoor dat ze elkaar perfect begrijpen. Ze hebben dezelfde waarden: zin voor het concrete, trouw en verantwoordelijkheid. De Stier geeft de Maagd comfort en standvastigheid, de Maagd geeft de Stier haar nauwkeurigheid en oog voor detail. Samen vormen ze een heel harmonieus stel, dat leeft in stabiliteit en vooruitziendheid."
+  },
+  "taureau_balance": {
+    "score": 5,
+    "text": "De Stier (Aarde) en de Weegschaal (Lucht) worden allebei door Venus geregeerd, maar ze verschillen wel. De Stier zoekt materiële en emotionele zekerheid, de Weegschaal evenwicht in de relatie en mooie dingen. Ze kunnen elkaar vinden in hun gevoel voor stijl en hun wens naar een stabiele relatie, maar de Stier vindt de Weegschaal soms besluiteloos, en de Weegschaal vindt de Stier te materialistisch. Het vraagt geduld: de Weegschaal brengt zachtheid, de Stier trouw, maar Aarde en Lucht verenigen kost moeite."
+  },
+  "taureau_scorpion": {
+    "score": 8,
+    "text": "De Stier (Aarde) en de Schorpioen (Water) staan tegenover elkaar in de dierenriem, en dat geeft een sterke, magnetische aantrekking. De stabiele Stier valt voor de emotionele diepte van de Schorpioen, en de Schorpioen voor de betrouwbaarheid van de Stier. Samen vormen ze een krachtig evenwicht: emotionele zekerheid voor de Schorpioen, gedeelde passie voor de Stier. Hun relatie draait om trouw en toewijding. De intimiteit is intens (ze houden allebei van sensualiteit), maar hun koppigheid vraagt dat ze goed naar elkaar luisteren."
+  },
+  "taureau_sagittaire": {
+    "score": 3,
+    "text": "De Stier (Aarde) en de Boogschutter (Vuur) hebben weinig gemeen. De strikte Stier houdt van gewoontes, de avontuurlijke Boogschutter zoekt steeds nieuwe ervaringen. Hun elementen passen niet bij elkaar (Aarde tegenover Vuur), en dat maakt het lastig om echt op één lijn te komen. De Stier verwijt de Boogschutter dat hij onvoorspelbaar is, de Boogschutter vindt de Stier te behoudend. Zonder grote toegevingen raakt de relatie snel uitgeblust."
+  },
+  "taureau_capricorne": {
+    "score": 9,
+    "text": "De Stier (Aarde) en de Steenbok (Aarde) passen dankzij hun element heel goed bij elkaar. Ze zijn allebei hardwerkend, trouw en praktisch. De Stier waardeert de financiële zekerheid waar de Steenbok naar streeft, en de Steenbok bewondert de standvastigheid van de Stier. Samen bouwen ze een stevig leven op: ze plannen de toekomst (huis, carrière) samen. Hun relatie is heel betrouwbaar dankzij dat gedeelde doel van materiële zekerheid."
+  },
+  "taureau_verseau": {
+    "score": 3,
+    "text": "De Stier (Aarde) en de Waterman (Lucht) hebben heel verschillende behoeften. De Stier zoekt vaste gewoontes en zekerheid, de Waterman houdt van het ongewone en van zijn onafhankelijkheid. Die fundamentele verschillen maken het lastig: de Stier vindt de Waterman afstandelijk, de Waterman vindt de Stier bezitterig. Om het te laten werken, moeten ze flink wat compromissen sluiten."
+  },
+  "taureau_poissons": {
+    "score": 8,
+    "text": "De Stier (Aarde) en de Vissen (Water) vullen elkaar goed aan. De stevige Stier stelt de gevoelige Vissen gerust, en de Vissen brengt de Stier poëzie en tederheid. Ze houden allebei van comfort en zachtheid, en hun relatie is vaak heel liefdevol. De Stier geeft de dromen van de Vissen een basis, de Vissen verruimt de verbeelding van de Stier. Samen kunnen ze een heel harmonieus, warm nest bouwen."
+  },
+  "gemeaux_belier": {
+    "score": 8,
+    "text": "De Tweelingen (Lucht) en de Ram (Vuur) vormen een heel dynamisch duo. De Tweelingen zijn vlot en flexibel, de Ram impulsief en moedig. Samen maken ze van het dagelijks leven een avontuur: de Ram zet de Tweelingen aan tot actie, en de Tweelingen prikkelen de Ram met nieuwe ideeën. Ze delen hun enthousiasme en vervelen zich niet. Een levendige en hartstochtelijke relatie, al moet de Ram zijn botheid soms wat temperen om de Tweelingen niet te kwetsen."
+  },
+  "gemeaux_taureau": {
+    "score": 3,
+    "text": "De Tweelingen (Lucht) en de Stier (Aarde) hebben tegengestelde behoeften. De Tweelingen houden van verandering en praten, de Stier zoekt stabiliteit en tastbare genoegens. Ze passen niet goed bij elkaar: de Stier vindt de Tweelingen oppervlakkig, de Tweelingen vinden de Stier te veel een gewoontedier. Zonder echte moeite om elkaars verschillen te respecteren, mist de relatie diepgang en verbondenheid."
+  },
+  "gemeaux_gemeaux": {
+    "score": 8,
+    "text": "Twee Tweelingen samen hebben veel gemeen. Als beweeglijke Luchttekens praten ze graag, wisselen ze ideeën uit en zoeken ze nieuwe ervaringen. Ze passen goed bij elkaar, omdat ze elkaars honger naar vrijheid en nieuwigheid begrijpen. Met humor en creativiteit houden ze de relatie levendig. Wel moeten ze af en toe de diepte opzoeken, anders blijft het te oppervlakkig."
+  },
+  "gemeaux_cancer": {
+    "score": 4,
+    "text": "De Tweelingen (Lucht) en de Kreeft (Water) begrijpen elkaar moeilijk. De Kreeft droomt van emotionele zekerheid, de Tweelingen zoeken intellectuele afwisseling. Voor de Kreeft lijken de Tweelingen te afstandelijk en weinig betrouwbaar. De relatie vraagt geduld: de Tweelingen moeten de gevoeligheid van de Kreeft verdragen, en de Kreeft moet de behoefte aan onafhankelijkheid van de Tweelingen accepteren."
+  },
+  "gemeaux_lion": {
+    "score": 8,
+    "text": "De Tweelingen (Lucht) en de Leeuw (Vuur) vormen een leuk en prikkelend stel. De charismatische Leeuw waardeert de snelle geest van de Tweelingen, en de Tweelingen genieten van de warmte en gulheid van de Leeuw. Allebei houden ze van mensen om zich heen, ze delen hun optimisme en hun zin om dingen te doen. Een relatie vol goed humeur en avonturen, al moet de Leeuw soms leven met de wispelturigheid van de Tweelingen."
+  },
+  "gemeaux_vierge": {
+    "score": 4,
+    "text": "De Tweelingen (Lucht) en de Maagd (Aarde) staan tegenover elkaar op de beweeglijke as. Ze worden allebei door Mercurius geregeerd, maar pakken het heel anders aan. De Tweelingen houden van veelzijdigheid en luchtigheid, de Maagd van orde en precisie. Ze passen niet goed bij elkaar: de Tweelingen vinden de Maagd te streng, de Maagd vindt de Tweelingen te verstrooid. Het werkt alleen als ze elkaars manier van denken respecteren."
+  },
+  "gemeaux_balance": {
+    "score": 9,
+    "text": "De Tweelingen (Lucht) en de Weegschaal (Lucht) delen hetzelfde element. Ze praten allebei graag, wisselen ideeën uit en zijn graag onder de mensen. De diplomatieke Weegschaal brengt evenwicht in het denken van de Tweelingen, en de Tweelingen verrijken de Weegschaal met hun verbeelding. Een heel harmonieuze relatie: ze begrijpen elkaar bijna instinctief en hun intellectuele klik is sterk."
+  },
+  "gemeaux_scorpion": {
+    "score": 4,
+    "text": "De Tweelingen (Lucht) en de Schorpioen (Water) hebben van nature weinig met elkaar. De intense, gesloten Schorpioen kan de sociale, open Tweelingen van hun stuk brengen. Hun nieuwsgierigheid is niet altijd genoeg om de Schorpioen te doorgronden. Het vraagt veel werk aan de communicatie: de Tweelingen moeten de emotionele diepte van de Schorpioen accepteren, de Schorpioen de wisselende luchtigheid van de Tweelingen."
+  },
+  "gemeaux_sagittaire": {
+    "score": 9,
+    "text": "De Tweelingen (Lucht) en de Boogschutter (Vuur) zijn tegenover elkaar staande beweeglijke tekens, en dat geeft een natuurlijke aantrekking. Ze houden allebei van avontuur en vrijheid. De onverschrokken Boogschutter prikkelt de nieuwsgierige geest van de Tweelingen, en de Tweelingen brengen hun veelzijdigheid mee. Ze beleven hun relatie als één grote ontdekkingstocht, in hun hoofd en in de wereld."
+  },
+  "gemeaux_capricorne": {
+    "score": 4,
+    "text": "De Tweelingen (Lucht) en de Steenbok (Aarde) hebben heel andere prioriteiten. De serieuze, georganiseerde Steenbok vindt de Tweelingen te onvoorspelbaar, en de Tweelingen vinden de Steenbok star. Het loopt niet vanzelf tussen hen: zonder compromissen hebben ze weinig gemeen, en ze passen maar matig bij elkaar."
+  },
+  "gemeaux_verseau": {
+    "score": 9,
+    "text": "De Tweelingen (Lucht) en de Waterman (Lucht) passen door hun gedeelde element heel goed bij elkaar. Ze houden allebei van praten, vernieuwende ideeën en vrijheid. Ze houden elkaar scherp en bespreken graag plannen en ideeën. Hun relatie is vriendschappelijk en vindingrijk: een dynamisch duo dat graag samen culturele of maatschappelijke projecten oppakt."
+  },
+  "gemeaux_poissons": {
+    "score": 4,
+    "text": "De Tweelingen (Lucht) en de Vissen (Water) vinden moeilijk een gemeenschappelijk ritme. De dromerige, introverte Vissen voelt zich overrompeld door de energie van de Tweelingen, en de Tweelingen vinden de Vissen te emotioneel. Het vraagt veel inlevingsvermogen: de Tweelingen moeten dieper naar de Vissen luisteren, de Vissen moet de behoefte aan afwisseling van de Tweelingen accepteren."
+  },
+  "cancer_belier": {
+    "score": 4,
+    "text": "De Kreeft (Water, kardinaal) en de Ram (Vuur, kardinaal) willen allebei de dingen in gang zetten, maar op een heel andere manier. De gevoelige Kreeft verwacht emotionele zekerheid, de Ram stormt vooruit zonder om te kijken. Hun elementen liggen ver uit elkaar, en ze passen niet goed bij elkaar. De Kreeft voelt zich gekwetst door de impulsieve Ram, en de Ram wordt moe van de gevoeligheid van de Kreeft. Het vraagt geduld: de Kreeft moet milder zijn voor het ongeduld van de Ram, en de Ram moet leren voorzichtig te zijn met het hart van de Kreeft."
+  },
+  "cancer_taureau": {
+    "score": 9,
+    "text": "De Stier (Aarde) en de Kreeft (Water) vormen een heel harmonieus verbond. De emotionele Kreeft en de praktische Stier hebben hetzelfde doel: een stabiel en liefdevol thuis. De beschermende Kreeft vindt in de Stier een betrouwbare partner, en de trouwe Stier stelt de Kreeft gerust met zijn standvastigheid. Hun relatie is teder en emotioneel stabiel. Alleen het verschil in uiten (de Kreeft zegt wat hij voelt, de Stier toont liefde met daden) vraagt soms wat aanpassing van allebei."
+  },
+  "cancer_gemeaux": {
+    "score": 4,
+    "text": "De Kreeft (Water) en de Tweelingen (Lucht) hebben van nature weinig met elkaar. De Kreeft zoekt emotionele zekerheid, de Tweelingen luchtigheid en afwisseling. De Kreeft vindt de Tweelingen te onstabiel, de Tweelingen vinden de Kreeft te veeleisend. Hun relatie draait op inzet: de Kreeft moet de behoefte aan ruimte van de Tweelingen begrijpen, en de Tweelingen de behoefte aan verbinding van de Kreeft."
+  },
+  "cancer_lion": {
+    "score": 3,
+    "text": "De Kreeft (Water) en de Leeuw (Vuur) hebben een heel verschillend temperament. De introverte, beschermende Kreeft kan overspoeld raken door de uitbundige Leeuw. De Leeuw, die graag in het middelpunt staat, kan de emotionele zekerheid ondermijnen die de Kreeft zoekt. Het vraagt evenwicht: de Leeuw moet zijn dominante kant verzachten, en de Kreeft moet meer openstaan voor het sociale leven van de Leeuw, anders blijft de match zwak."
+  },
+  "cancer_vierge": {
+    "score": 8,
+    "text": "De Kreeft (Water) en de Maagd (Aarde) vormen een warm en betrouwbaar stel. De Kreeft brengt tederheid en steun, de Maagd praktisch begrip. Ze delen oog voor detail en gevoeligheid: de Kreeft stelt de Maagd gerust met genegenheid, en de Maagd ontlast de Kreeft met concrete hulp. Een stevige relatie, waarin ze elkaar in het dagelijks leven steunen."
+  },
+  "cancer_balance": {
+    "score": 4,
+    "text": "De Kreeft (Water) en de Weegschaal (Lucht) hebben vaak moeite om echt contact te maken. De Weegschaal zoekt harmonie onder de mensen en komt luchtig over op de Kreeft, die emotionele diepgang wil. Omgekeerd kan de hartstochtelijke Kreeft te intens zijn voor de Weegschaal, die evenwicht belangrijk vindt. Ze passen niet goed bij elkaar en moeten veel moeite doen om de gevoeligheid van de Kreeft en de luchtigheid van de Weegschaal te verenigen."
+  },
+  "cancer_scorpion": {
+    "score": 9,
+    "text": "De Kreeft (Water) en de Schorpioen (Water) passen door hun gedeelde element heel goed bij elkaar. Allebei diep gevoelig en trouw, ze begrijpen elkaar intuïtief. De beschermende Kreeft stelt de intense Schorpioen gerust, en de hartstochtelijke Schorpioen steunt de Kreeft op zijn beurt. Hun relatie zit vol emotie en wederzijdse toewijding. Samen bouwen ze een diepe intimiteit op, gedragen door vertrouwen en begrip."
+  },
+  "cancer_sagittaire": {
+    "score": 4,
+    "text": "De Kreeft (Water) en de Boogschutter (Vuur) verwachten iets tegengestelds. De Kreeft wil zich settelen en zich emotioneel beschermen, de Boogschutter wil ontdekken en steeds in beweging zijn. Hun prioriteiten verschillen en dat maakt het moeilijk: de Kreeft voelt zich in de steek gelaten, de Boogschutter voelt zich opgesloten. Ze kunnen van elkaar leren (de Boogschutter om voor een thuis te zorgen, de Kreeft om groter te denken), maar de basis blijft zwak."
+  },
+  "cancer_capricorne": {
+    "score": 9,
+    "text": "De Kreeft (Water) en de Steenbok (Aarde) staan tegenover elkaar, en dat geeft een heel sterke band. De emotionele Kreeft vindt bij de Steenbok materiële zekerheid, en de ambitieuze Steenbok vindt bij de Kreeft een beschermend thuis. Ze delen waarden voor de lange termijn (gezin, stabiliteit) en zijn allebei heel trouw. Als ze blijven praten, houden ze gevoel en organisatie in evenwicht, en dan is hun verbond heel stevig."
+  },
+  "cancer_verseau": {
+    "score": 2,
+    "text": "De Kreeft (Water) en de Waterman (Lucht) kijken heel anders naar de wereld. De vernieuwende, afstandelijke Waterman komt koel over op de emotionele Kreeft. Ze delen weinig: de Kreeft wil zich hechten, de Waterman kiest voor vrijheid. Zonder enorme moeite om elkaar te begrijpen, missen ze emotionele verbinding."
+  },
+  "cancer_poissons": {
+    "score": 8,
+    "text": "De Kreeft (Water) en de Vissen (Water) kunnen het heel goed met elkaar vinden. Deze twee Watertekens delen veel empathie en zachtheid. De zorgzame, moederlijke Kreeft geeft de Vissen steun en troost, en de fantasierijke, onbaatzuchtige Vissen brengt de Kreeft romantiek en toewijding. Hun relatie is heel teder: ze voeden elkaars dromen en trouw, en vormen een hecht, beschermend stel."
+  },
+  "lion_belier": {
+    "score": 9,
+    "text": "De Leeuw (Vuur) en de Ram (Vuur) hebben een natuurlijke klik. Hun relatie is hartstochtelijk en moedig, en ze moedigen elkaar aan om te schitteren. Ze delen enthousiasme en leiderschap. Samen beleven ze opwindende avonturen. Ze moeten wel omgaan met hun ego (allebei willen ze de hoofdrol), maar al met al is het een heel levendige en intense verbintenis."
+  },
+  "lion_taureau": {
+    "score": 4,
+    "text": "De Leeuw (Vuur) en de Stier (Aarde) verschillen op veel punten. De stralende Leeuw wil bewondering en actie, de Stier zoekt rust en comfort. In het begin kan de aantrekking sterk zijn (de Stier vol bewondering, de Leeuw onder de indruk van de stabiliteit), maar de verschillen komen snel naar boven. De Stier vindt de Leeuw te extravagant, de Leeuw vindt de Stier te behoudend. Deze relatie vraagt flinke compromissen."
+  },
+  "lion_gemeaux": {
+    "score": 8,
+    "text": "De Leeuw (Vuur) en de Tweelingen (Lucht) houden allebei van mensen om zich heen en van iets nieuws. De sociale, gulle Leeuw waardeert de charme van de Tweelingen, en de Tweelingen vallen voor het zelfvertrouwen van de Leeuw. Hun relatie is leuk en prikkelend: ze praten veel en delen veel interesses. Een levendig en creatief stel, zolang ze elkaar af en toe het woord en de aandacht gunnen."
+  },
+  "lion_cancer": {
+    "score": 3,
+    "text": "De Leeuw (Vuur) en de Kreeft (Water) vinden moeilijk een gemeenschappelijke basis. De verlegen, beschermende Kreeft kan platgedrukt worden door de constante behoefte van de Leeuw aan bewondering. De extraverte Leeuw kan de Kreeft stress bezorgen. Om het te laten werken, moet de Leeuw zachter zijn voor de Kreeft, en moet de Kreeft zich vrij voelen om zijn gevoelens te uiten."
+  },
+  "lion_vierge": {
+    "score": 4,
+    "text": "De Leeuw (Vuur) en de Maagd (Aarde) kunnen het moeilijk hebben samen. De bescheiden, perfectionistische Maagd vindt de Leeuw te theatraal, en de Leeuw vindt de Maagd te kritisch. Hun tegengestelde manier van leven (uitbundig tegenover bescheiden) vraagt grote aanpassingen: de Maagd moet de expansieve Leeuw accepteren, en de Leeuw de nauwkeurigheid van de Maagd, anders blijft de match middelmatig."
+  },
+  "lion_balance": {
+    "score": 8,
+    "text": "De Leeuw (Vuur) en de Weegschaal (Lucht) vormen meestal een harmonieus stel. De evenwichtige, sociale Weegschaal waardeert de gulheid en het charisma van de Leeuw. De Leeuw bewondert op zijn beurt de vriendelijkheid en elegantie van de Weegschaal. Ze houden allebei van mooie dingen en van het leven met z'n tweeën. Een evenwichtige relatie: de Leeuw brengt warmte en passie, de Weegschaal een luisterend oor en diplomatie."
+  },
+  "lion_scorpion": {
+    "score": 4,
+    "text": "De Leeuw (Vuur) en de Schorpioen (Water) zijn grote tegenpolen. De openhartige, dominante Leeuw kan botsen met de jaloezie en diepgang van de Schorpioen. De intense Schorpioen vindt de Leeuw te oppervlakkig. Het vraagt grote compromissen: de Leeuw moet meer begrip tonen, en de Schorpioen meer luchtigheid, wil de liefde het volhouden."
+  },
+  "lion_sagittaire": {
+    "score": 9,
+    "text": "De Leeuw (Vuur) en de Boogschutter (Vuur) passen heel goed bij elkaar. Allebei hartstochtelijk en enthousiast, ze delen hun levenslust en hun liefde voor avontuur. Ze motiveren elkaar: de Leeuw brengt flair in het leven van de Boogschutter, en de Boogschutter brengt optimisme en nieuwe ervaringen. Hun band is sterk, omdat vriendschap voor hen net zo belangrijk is als romantiek."
+  },
+  "lion_capricorne": {
+    "score": 3,
+    "text": "De Leeuw (Vuur) en de Steenbok (Aarde) hebben weinig gemeen. De ambitieuze, gereserveerde Steenbok kan de extraverte, theatrale Leeuw irriteren. De Leeuw wil liefdesbewijzen zien en vindt de Steenbok te afstandelijk. Het vraagt veel aanpassing: ze moeten leren elkaars behoeften te respecteren, erkenning voor de Leeuw en stabiliteit voor de Steenbok."
+  },
+  "lion_verseau": {
+    "score": 8,
+    "text": "De Leeuw (Vuur) en de Waterman (Lucht) staan tegenover elkaar, en dat geeft vaak een sterke aantrekking. De onafhankelijke Waterman bewondert de kracht en gulheid van de Leeuw, en de Leeuw is nieuwsgierig naar het originele van de Waterman. Samen kunnen ze grote sociale of creatieve projecten aanpakken. Ze vullen elkaar aan door respect voor elkaars vrijheid: de Waterman steunt de Leeuw zonder bezitterig te zijn, en de Leeuw moedigt de eigen ideeën van de Waterman aan."
+  },
+  "lion_poissons": {
+    "score": 4,
+    "text": "De Leeuw (Vuur) en de Vissen (Water) kijken heel anders naar de liefde. De stralende Leeuw kan de gevoelige Vissen overweldigen. De Vissen kan op zijn beurt te beïnvloedbaar of afwezig lijken voor de Leeuw. Om het te laten werken, moet de Leeuw zachter worden en de Vissen zelfverzekerder. Zonder die aanpassingen blijft de match beperkt."
+  },
+  "vierge_belier": {
+    "score": 4,
+    "text": "De Maagd (Aarde) en de Ram (Vuur) delen hun element niet. De methodische, voorzichtige Maagd vindt de Ram te bruusk, en de Ram vindt de Maagd te kritisch. Ze nemen beslissingen op een tegengestelde manier, en dat vraagt verdraagzaamheid. Het kan werken als ze leren genieten van elkaars sterke kanten: de Maagd tempert de impulsiviteit van de Ram, en de Ram helpt de Maagd om meer te durven."
+  },
+  "vierge_taureau": {
+    "score": 9,
+    "text": "De Maagd (Aarde) en de Stier (Aarde) passen heel goed bij elkaar. Hun nuchtere, realistische aard verbindt hen. Ze zoeken allebei zekerheid en comfort. De ijverige Maagd brengt structuur in het leven van de Stier, en de Stier steunt de Maagd met zijn trouw en zachtheid. Ze delen praktische waarden, en dat maakt hen heel harmonieus."
+  },
+  "vierge_gemeaux": {
+    "score": 4,
+    "text": "De Maagd (Aarde) en de Tweelingen (Lucht) staan tegenover elkaar op de beweeglijke as. De Maagd zoekt orde en precisie, de Tweelingen houden van verandering en afwisseling. Ze delen weinig: de Tweelingen vinden de Maagd te pietluttig, de Maagd vindt de Tweelingen te verstrooid. Ze moeten hard werken om elkaar te vinden, anders blijven ze op afstand."
+  },
+  "vierge_cancer": {
+    "score": 8,
+    "text": "De Maagd (Aarde) en de Kreeft (Water) vullen elkaar heel goed aan. De empathische Kreeft vindt in de Maagd een betrouwbaar luisterend oor, en de Maagd voelt zich gesteund door de moederlijke kant van de Kreeft. Ze zorgen allebei graag voor anderen: de Maagd regelt de praktische details, de Kreeft brengt warmte. Samen bouwen ze een stabiel thuis en plannen ze graag hun leven samen, en dat maakt hun band stevig."
+  },
+  "vierge_lion": {
+    "score": 4,
+    "text": "De Maagd (Aarde) en de Leeuw (Vuur) zijn heel verschillend. De bescheiden Maagd raakt van slag door de behoefte van de Leeuw om zijn gevoelens openlijk te tonen, en de Leeuw vindt de Maagd te rationeel. De relatie vraagt toegevingen: de Leeuw moet zijn uitbundigheid temperen om de Maagd niet af te schrikken, en de Maagd moet spontaner reageren op de Leeuw. Zonder die aanpassingen blijft de match middelmatig."
+  },
+  "vierge_vierge": {
+    "score": 8,
+    "text": "Twee Maagden begrijpen elkaar van nature. Ze delen een gevoel voor organisatie en een kritische blik, die ze positief proberen te gebruiken. Hun relatie is heel gestructureerd en betrouwbaar. Ze plannen graag hun toekomst samen en werken er hard voor. Het enige risico: hun neiging tot analyseren kan ervoor zorgen dat ze elkaar bekritiseren. Toch maken hun onderlinge hulp en toewijding de relatie heel stabiel."
+  },
+  "vierge_balance": {
+    "score": 4,
+    "text": "De Maagd (Aarde) en de Weegschaal (Lucht) werken niet op dezelfde manier. De Weegschaal zoekt harmonie en schoonheid, de Maagd precisie en efficiëntie. Hun interesses raken elkaar weinig. De Weegschaal vindt de Maagd te pietluttig, de Maagd vindt de Weegschaal te oppervlakkig. Ze zullen moeite moeten doen om elkaar aan te vullen: de Maagd kan de Weegschaal helpen haar idealen waar te maken, en de Weegschaal kan de strengheid van de Maagd verzachten."
+  },
+  "vierge_scorpion": {
+    "score": 9,
+    "text": "De Maagd (Aarde) en de Schorpioen (Water) kunnen het heel goed met elkaar vinden. De hartstochtelijke Schorpioen vindt in de Maagd een betrouwbare partner, en de Maagd waardeert de diepgang van de Schorpioen. Hun relatie draait om toewijding: geen van beiden begint er zomaar aan. De Schorpioen brengt emotionele intensiteit, de Maagd nuchterheid en methode. Samen vormen ze een trouw en volhardend stel."
+  },
+  "vierge_sagittaire": {
+    "score": 4,
+    "text": "De Maagd (Aarde) en de Boogschutter (Vuur) hebben weinig gemeen. De avontuurlijke, optimistische Boogschutter kan de voorzichtige, praktische Maagd frustreren, en omgekeerd. Het is meestal een moeilijke relatie, want de Boogschutter wil risico's nemen waar de Maagd liever zekerheid heeft. Om het te laten werken, zijn enorme compromissen nodig: de Boogschutter leert zijn impulsen te doseren, de Maagd leert meer enthousiasme te tonen."
+  },
+  "vierge_capricorne": {
+    "score": 9,
+    "text": "De Maagd (Aarde) en de Steenbok (Aarde) passen heel goed bij elkaar. Ze delen ambitie en plichtsbesef. De Maagd steunt de Steenbok bij zijn plannen door op de details te letten, en de Steenbok waardeert de Maagd om haar betrouwbaarheid. Hun relatie is serieus en praktisch: samen bouwen ze geduldig aan hun toekomst, en dat zorgt voor een mooie harmonie."
+  },
+  "vierge_verseau": {
+    "score": 2,
+    "text": "De Maagd (Aarde) en de Waterman (Lucht) zijn moeilijk op één lijn te krijgen. De originele, onafhankelijke Waterman kan botsen met de gestructureerde, traditionele Maagd. Ze hebben weinig gedeelde interesses. Hun elementen passen niet bij elkaar, en zonder een fundamentele verandering is de match heel zwak."
+  },
+  "vierge_poissons": {
+    "score": 8,
+    "text": "De Maagd (Aarde) en de Vissen (Water) staan tegenover elkaar, maar die tegenpolen vullen elkaar mooi aan. De dromerige, gevoelige Vissen verzacht het dagelijks leven van de Maagd, en de Maagd geeft de Vissen stevige, concrete steun. Ze hebben veel respect voor elkaar. De Vissen brengt verbeelding in de plannen van de Maagd, en de Maagd helpt de Vissen zijn dromen te ordenen. Als ze elkaar waarderen, kan het een heel harmonieuze verbintenis zijn."
+  },
+  "balance_belier": {
+    "score": 8,
+    "text": "De Weegschaal (Lucht) en de Ram (Vuur) staan tegenover elkaar, en dat geeft een bijzondere chemie. De evenwichtige Weegschaal tempert de onstuimigheid van de Ram, en de Ram zet de Weegschaal aan tot actie. Samen brengen ze hun verschillen in balans: de Ram brengt passie en eerlijkheid, de Weegschaal diplomatie en romantiek. Een dynamische relatie waarin ze elkaars kwaliteiten waarderen."
+  },
+  "balance_taureau": {
+    "score": 5,
+    "text": "De Weegschaal (Lucht) en de Stier (Aarde) delen de planeet Venus, maar verschillen op de belangrijkste punten. De sociale, esthetische Weegschaal houdt van praten, de Stier van rust en tastbare genoegens. Ze kunnen elkaar vinden in hun liefde voor comfort (kleding, inrichting...), maar de Stier vindt de Weegschaal te besluiteloos, en de Weegschaal vindt de Stier te bezitterig. Het hangt ervan af of ze harmonie in het hoofd en materiële stabiliteit kunnen verenigen."
+  },
+  "balance_gemeaux": {
+    "score": 9,
+    "text": "De Weegschaal (Lucht) en de Tweelingen (Lucht) delen hetzelfde element. Allebei zijn ze op de ander gericht en praten ze heel graag. De Weegschaal brengt haar diplomatie en rechtvaardigheidsgevoel in bij de nieuwsgierige Tweelingen, en de Tweelingen verrijken de Weegschaal met hun snelle geest. Een luchtige, ontwikkelde en heel harmonieuze relatie, want ze hechten allebei aan goede gesprekken en een fijne sfeer."
+  },
+  "balance_cancer": {
+    "score": 4,
+    "text": "De Weegschaal (Lucht) en de Kreeft (Water) vinden vaak moeilijk een evenwicht. De heel emotionele Kreeft vindt de Weegschaal te oppervlakkig of afstandelijk, en de Weegschaal vindt de Kreeft te bezitterig of wispelturig. Ze verwachten iets anders: de Kreeft zoekt een warm en diep thuis, de Weegschaal harmonie en een gedeelde gedachtewereld. Ze moeten werken aan begrip voor elkaar om het te laten slagen."
+  },
+  "balance_lion": {
+    "score": 8,
+    "text": "De Weegschaal (Lucht) en de Leeuw (Vuur) kunnen het heel goed met elkaar vinden. De vredelievende Weegschaal verzacht de impulsieve Leeuw, en de koninklijke Leeuw brengt de Weegschaal passie en erkenning. Ze zijn allebei graag onder de mensen en genieten van het leven. Hun relatie is vaak mooi en creatief: de Weegschaal bewondert het charisma van de Leeuw, en de Leeuw valt voor de elegantie van de Weegschaal."
+  },
+  "balance_vierge": {
+    "score": 4,
+    "text": "De Weegschaal (Lucht) en de Maagd (Aarde) denken op een tegengestelde manier. De Weegschaal zoekt luchtigheid en schoonheid, de Maagd precisie en efficiëntie. Hun waarden verschillen: de Weegschaal vindt de Maagd te pietluttig en gereserveerd, de Maagd vindt de Weegschaal te besluiteloos. Ze moeten die verschillen respecteren: de Weegschaal leert de Maagd zichzelf niet te serieus te nemen, en de Maagd leert de Weegschaal haar ideeën waar te maken."
+  },
+  "balance_scorpion": {
+    "score": 4,
+    "text": "De Weegschaal (Lucht) en de Schorpioen (Water) verschillen emotioneel sterk. De intense, jaloerse Schorpioen kan de Weegschaal ongemakkelijk maken, en de Weegschaal komt oppervlakkig over op de hartstochtelijke Schorpioen. Hun relatie vraagt compromissen: de Weegschaal moet de diepgang van de Schorpioen accepteren, en de Schorpioen moet socialer en soepeler worden om tot een evenwicht te komen."
+  },
+  "balance_sagittaire": {
+    "score": 7,
+    "text": "De Weegschaal (Lucht) en de Boogschutter (Vuur) kunnen het meestal goed met elkaar vinden. De harmonieuze Weegschaal waardeert het optimisme van de Boogschutter, en de Boogschutter voelt zich aangetrokken tot de charme en diplomatie van de Weegschaal. Ze reizen allebei graag in gedachten en praten graag over levensbeschouwingen en plannen. Hun relatie rust op een mooie klik in het hoofd en een positieve kijk op het leven, al moeten ze soms checken of ze nog op één lijn zitten."
+  },
+  "balance_capricorne": {
+    "score": 3,
+    "text": "De Weegschaal (Lucht) en de Steenbok (Aarde) hebben heel verschillende interesses. De ambitieuze, realistische Steenbok komt te streng over op de Weegschaal, die liever idealen en schoonheid zoekt. Ze kijken anders naar het leven: de Weegschaal wil eerlijkheid in het nu, de Steenbok plant voor de lange termijn. Zonder grote compromissen passen ze maar beperkt bij elkaar."
+  },
+  "balance_verseau": {
+    "score": 9,
+    "text": "De Weegschaal (Lucht) en de Waterman (Lucht) passen door hun gedeelde element heel goed bij elkaar. Allebei zijn ze vrij van geest en open voor de wereld. Ze praten graag over nieuwe ideeën en zetten zich in voor zaken die hun na aan het hart liggen. Hun relatie loopt soepel en draait veel om ideeën: ze houden elkaar scherp en vinden elkaar in hun vooruitstrevende kijk en hun gedeelde gevoel voor rechtvaardigheid."
+  },
+  "balance_poissons": {
+    "score": 4,
+    "text": "De Weegschaal (Lucht) en de Vissen (Water) hebben andere emotionele verwachtingen. De evenwichtige Weegschaal begrijpt de heel emotionele Vissen niet altijd. De dromerige Vissen vindt de Weegschaal te rationeel of te aarzelend. Het werkt als ze allebei water bij de wijn doen: de Weegschaal moet meer inlevingsvermogen tonen, en de Vissen moet duidelijker zeggen wat hij nodig heeft."
+  },
+  "scorpion_belier": {
+    "score": 6,
+    "text": "De Schorpioen (Water) en de Ram (Vuur) hebben een heel intense relatie. De hartstochtelijke Schorpioen voelt zich sterk aangetrokken tot de kracht van de Ram, en de moedige Ram is gefascineerd door de mysterieuze Schorpioen. Het zijn twee sterke karakters: ze beleven momenten van overweldigende passie. Maar die intensiteit kan ook ontaarden in rivaliteit, want allebei willen ze de baas zijn. Ze kunnen een groot liefdesverhaal beleven als ze hun driften leren temperen, anders maken hun verschillen (confrontatie tegenover vertrouwen) het lastig."
+  },
+  "scorpion_taureau": {
+    "score": 8,
+    "text": "De Schorpioen (Water) en de Stier (Aarde) staan tegenover elkaar in de dierenriem, en dat geeft een heel sterke aantrekking. De intense Schorpioen valt voor de stabiliteit van de Stier, en de Stier voor de diepgang van de Schorpioen. Ze zijn mooi in balans: de Stier geeft de Schorpioen zekerheid, en de Schorpioen maakt de Stier expressiever. Ze delen trouw en toewijding. Hun intimiteit is hartstochtelijk (intensiteit van de Schorpioen, sensualiteit van de Stier), en met respect voor elkaar bouwen ze iets stevigs."
+  },
+  "scorpion_gemeaux": {
+    "score": 4,
+    "text": "De Schorpioen (Water) en de Tweelingen (Lucht) hebben weinig gemeen. De duistere, jaloerse Schorpioen kan de Tweelingen storen, die luchtigheid zoeken. De praatgrage, wispelturige Tweelingen zijn te oppervlakkig voor de Schorpioen. Zonder veel begrip voor elkaar blijft de match zwak. Ze moeten de moeite nemen om elkaar te leren kennen: de Tweelingen moeten de complexe Schorpioen accepteren, en de Schorpioen moet leren relativeren."
+  },
+  "scorpion_cancer": {
+    "score": 9,
+    "text": "De Schorpioen (Water) en de Kreeft (Water) hebben van nature een heel sterke band. Deze twee Watertekens begrijpen elkaar diep en hebben weinig woorden nodig. De Schorpioen houdt van de trouw en zachtheid van de Kreeft, en de Kreeft voelt zich veilig bij de beschermende kracht van de Schorpioen. Hun relatie is heel intiem en emotioneel: ze steunen elkaar in moeilijke tijden en bouwen samen een duurzame band, gebaseerd op vertrouwen en toewijding."
+  },
+  "scorpion_lion": {
+    "score": 4,
+    "text": "De Schorpioen (Water) en de Leeuw (Vuur) zijn heel verschillend. De stralende, extraverte Leeuw kan de gevoelige Schorpioen overheersen. De Schorpioen vindt de Leeuw op zijn beurt te oppervlakkig en egoïstisch. Het vraagt verdraagzaamheid: de Leeuw moet de Schorpioen meer emotionele ruimte geven, en de Schorpioen moet warmer zijn voor de Leeuw. Zonder die moeite blijft de match zwak."
+  },
+  "scorpion_vierge": {
+    "score": 9,
+    "text": "De Schorpioen (Water) en de Maagd (Aarde) kunnen het heel goed met elkaar vinden. De bescheiden, trouwe Maagd geeft de Schorpioen betrouwbare steun, en de Schorpioen brengt passie en intensiteit in het leven van de Maagd. Hun verbintenis is serieus en diep: ze hechten allebei aan trouw en toewijding. Ze werken hand in hand aan hun gezamenlijke doelen, en dat maakt hun relatie duurzaam en stevig."
+  },
+  "scorpion_balance": {
+    "score": 4,
+    "text": "De Schorpioen (Water) en de Weegschaal (Lucht) passen moeilijk bij elkaar. De vredelievende, wat oppervlakkige Weegschaal kan botsen met de emotionele diepte van de Schorpioen. De Schorpioen vindt de Weegschaal te oppervlakkig en te aarzelend. Het vraagt veel toegevingen: de Weegschaal moet verder kijken dan de buitenkant, en de Schorpioen moet sneller leren vertrouwen."
+  },
+  "scorpion_scorpion": {
+    "score": 8,
+    "text": "Twee Schorpioenen samen beleven een uiterst intense relatie. Ze begrijpen elkaar vanzelf en delen dezelfde passies en geheimen. Hun band is sterk, omdat ze niet bang zijn om diep in elkaars gevoelens te duiken. Maar hun jaloezie en koppigheid kunnen tot felle conflicten leiden. Als ze open met elkaar praten en verdraagzaam zijn, kan hun verbintenis heel sterk zijn, zolang wantrouwen of rivaliteit niet de overhand krijgen."
+  },
+  "scorpion_sagittaire": {
+    "score": 4,
+    "text": "De Schorpioen (Water) en de Boogschutter (Vuur) werken heel anders. De Schorpioen zoekt emotionele intensiteit en toewijding, de Boogschutter vrijheid en avontuur. Zonder toegevingen is het een moeilijke relatie: de Boogschutter vindt de Schorpioen te bezitterig, de Schorpioen vindt de Boogschutter te zorgeloos. Ze zullen veel moeten praten om een middenweg te vinden tussen de diepgang van de Schorpioen en de luchtigheid van de Boogschutter."
+  },
+  "scorpion_capricorne": {
+    "score": 8,
+    "text": "De Schorpioen (Water) en de Steenbok (Aarde) kunnen een stevig stel vormen. De hartstochtelijke Schorpioen en de ambitieuze Steenbok delen hun inzet en discipline. De Steenbok brengt structuur en stabiliteit, de Schorpioen emotionele steun en intensiteit. Ze waarderen allebei trouw en een serieuze planning van de toekomst. Een serieuze, duurzame relatie, met een sterke band als het evenwicht er is."
+  },
+  "scorpion_verseau": {
+    "score": 3,
+    "text": "De Schorpioen (Water) en de Waterman (Lucht) hebben een heel tegengestelde kijk. De vooruitstrevende, afstandelijke Waterman is onbegrijpelijk voor de intense, emotionele Schorpioen. Ze delen weinig: de Schorpioen wil oprechte passie, de Waterman kiest voor het verstand. Ze moeten veel leren luisteren en elkaars wereld accepteren, anders blijft de match zwak."
+  },
+  "scorpion_poissons": {
+    "score": 8,
+    "text": "De Schorpioen (Water) en de Vissen (Water) hebben een mooie emotionele klik. Deze twee Watertekens voelen intuïtief aan wat de ander voelt. De rustgevende, empathische Vissen geeft de Schorpioen morele steun, en de Schorpioen geeft de Vissen zekerheid en passie. Hun relatie is heel intiem: ze kunnen bijna samensmelten, met de diepgang van de Schorpioen en de zachtheid van de Vissen."
+  },
+  "sagittaire_belier": {
+    "score": 9,
+    "text": "De Boogschutter (Vuur) en de Ram (Vuur) passen heel goed bij elkaar, want ze delen dezelfde passie en energie. De optimistische Boogschutter en de impulsieve Ram houden elkaar scherp. De Boogschutter brengt wijsheid en bezinning, de Ram strijdlust. Ze zijn op avontuur gericht: samen ontdekken ze de wereld en zetten ze elkaar aan om te groeien."
+  },
+  "sagittaire_taureau": {
+    "score": 3,
+    "text": "De Boogschutter (Vuur) en de Stier (Aarde) hebben weinig gemeen. De Boogschutter houdt van vrijheid en het onverwachte, de Stier liever van vaste gewoontes en zekerheid. Hun prioriteiten lopen uiteen: de Stier voelt zich genegeerd door de wispelturige Boogschutter, en de Boogschutter voelt zich verstikt door de bezitterige Stier. Het vraagt veel moeite om avontuur en stabiliteit te combineren."
+  },
+  "sagittaire_gemeaux": {
+    "score": 9,
+    "text": "De Boogschutter (Vuur) en de Tweelingen (Lucht) vormen vaak een uitstekend duo. Ze delen hun intellectuele nieuwsgierigheid en hun zin in avontuur. De open Boogschutter en de spraakzame Tweelingen prikkelen elkaars geest. Hun relatie draait om vrijheid en ontdekken: ze reizen graag samen, verkennen nieuwe ideeën en groeien samen."
+  },
+  "sagittaire_cancer": {
+    "score": 4,
+    "text": "De Boogschutter (Vuur) en de Kreeft (Water) hebben heel verschillende behoeften. De Kreeft zoekt emotionele zekerheid, de Boogschutter avontuur. Hun relatie loopt vaak uit op conflicten: de Kreeft vindt de Boogschutter te zorgeloos, de Boogschutter vindt de Kreeft te huiselijk. Ze zullen veel moeten praten om hun verschillen te overbruggen."
+  },
+  "sagittaire_lion": {
+    "score": 9,
+    "text": "De Boogschutter (Vuur) en de Leeuw (Vuur) delen een natuurlijk enthousiasme. De sociale Leeuw en de optimistische Boogschutter hebben dezelfde honger naar een vol leven. Ze nemen allebei graag berekende risico's en helpen elkaar hun doelen te halen. Een dynamisch en heel hecht stel: weinig conflicten, want ze houden elkaar scherp en waarderen elkaars eerlijkheid."
+  },
+  "sagittaire_vierge": {
+    "score": 4,
+    "text": "De Boogschutter (Vuur) en de Maagd (Aarde) verschillen op veel vlakken. De avontuurlijke, onstuimige Boogschutter kan de rationele, voorzichtige Maagd op de zenuwen werken, en omgekeerd. Ze pakken het leven tegengesteld aan: de Maagd plant elk detail, de Boogschutter handelt spontaan. Ze moeten veel compromissen sluiten om op één lijn te komen."
+  },
+  "sagittaire_capricorne": {
+    "score": 3,
+    "text": "De Boogschutter (Vuur) en de Steenbok (Aarde) vinden moeilijk een gemeenschappelijke basis. De zorgeloze, ongeduldige Boogschutter kan de hardwerkende, georganiseerde Steenbok ergeren, en omgekeerd. De Boogschutter wil in het moment leven, de Steenbok bouwt voor de lange termijn. Het vraagt geduld: ieder moet het tempo van de ander accepteren, wil het standhouden."
+  },
+  "sagittaire_balance": {
+    "score": 7,
+    "text": "De Boogschutter (Vuur) en de Weegschaal (Lucht) delen een filosofische geest. De Weegschaal, die harmonie zoekt, respecteert het optimisme van de Boogschutter, en de Boogschutter bewondert de diplomatie van de Weegschaal. Samen praten ze graag over grote plannen en nieuwe ideeën. Hun relatie is meestal positief en evenwichtig: ze prikkelen elkaars denken, al moet de Weegschaal soms leren omgaan met de botte eerlijkheid van de Boogschutter."
+  },
+  "sagittaire_scorpion": {
+    "score": 4,
+    "text": "De Boogschutter (Vuur) en de Schorpioen (Water) hebben uiteenlopende behoeften. De Boogschutter wil de wereld verkennen en plezier maken, de Schorpioen wil de diepte in, naar intimiteit en innerlijke verandering. Door die prioriteiten begrijpen ze elkaar moeilijk. Ze zullen hun emotionele verschillen moeten leren respecteren: de Boogschutter door meer diepgang te tonen, de Schorpioen door te ontspannen in het optimisme van de Boogschutter."
+  },
+  "sagittaire_verseau": {
+    "score": 8,
+    "text": "De Boogschutter (Vuur) en de Waterman (Lucht) vormen een heel hecht stel. Allebei kijken ze vooruit en hebben ze vrijheid nodig. Ze leren graag en dagen zichzelf samen uit, bijvoorbeeld op reis of in culturele projecten. Hun band is intellectueel en optimistisch: de geest van de Boogschutter vult de vooruitziende ideeën van de Waterman aan. Samen bouwen ze een relatie op vriendschap en vertrouwen."
+  },
+  "sagittaire_poissons": {
+    "score": 3,
+    "text": "De Boogschutter (Vuur) en de Vissen (Water) passen van nature weinig bij elkaar. De openhartige, extraverte Boogschutter kan de overgevoelige Vissen kwetsen, en de dromerige Vissen komt passief over op de Boogschutter. De relatie vraagt grote compromissen, want hun tegengestelde stijl (de wereld verkennen tegenover naar binnen keren) zorgt voor misverstanden."
+  },
+  "capricorne_belier": {
+    "score": 5,
+    "text": "De Steenbok (Aarde) en de Ram (Vuur) kunnen een ambitieus maar tegendraads team vormen. Tegenover het vuur van de Ram werkt de geduldige Steenbok als een muur van ijs. De Ram brengt vaart in de relatie, de Steenbok structuur. Ze delen ambitie (werk, succes) en kunnen samen iets stevigs bouwen. Ze moeten van elkaar leren: de Ram om te plannen, de Steenbok om het moment te grijpen. Met die compromissen is de relatie stabiel."
+  },
+  "capricorne_taureau": {
+    "score": 9,
+    "text": "De Steenbok (Aarde) en de Stier (Aarde) passen heel goed bij elkaar. Ze delen dezelfde praktische waarden: hard werken, stabiliteit, trouw. De Stier steunt de ambitie van de Steenbok met zijn standvastigheid, en de Steenbok stelt de Stier gerust met zijn betrouwbaarheid. Samen regelen ze hun leven praktisch (geld, huis) en steunen ze elkaar. Een stevige relatie, gebouwd om te blijven."
+  },
+  "capricorne_gemeaux": {
+    "score": 4,
+    "text": "De Steenbok (Aarde) en de Tweelingen (Lucht) hebben weinig gemeen. De ambitieuze, gedisciplineerde Steenbok vindt de Tweelingen te oppervlakkig, en de Tweelingen vinden de Steenbok te serieus. Het praten gaat niet vanzelf. Ze moeten moeite doen om de ernst van de Steenbok en de luchtigheid van de Tweelingen te verenigen en zo een evenwicht te vinden."
+  },
+  "capricorne_cancer": {
+    "score": 9,
+    "text": "De Steenbok (Aarde) en de Kreeft (Water) vullen elkaar heel goed aan. De warme, beschermende Kreeft stelt de Steenbok gerust en bouwt een liefdevol thuis. De ambitieuze, stabiele Steenbok geeft de Kreeft de zekerheid en structuur die hij nodig heeft. Samen steken ze hun energie in dezelfde doelen, voor het gezin en voor het materiële. Een evenwichtige relatie, gebaseerd op vertrouwen en trouw."
+  },
+  "capricorne_lion": {
+    "score": 3,
+    "text": "De Steenbok (Aarde) en de Leeuw (Vuur) hebben tegengestelde waarden. De carrièregerichte Steenbok vindt de Leeuw te egoïstisch of te verkwistend. De Leeuw vindt de Steenbok te star. Het vraagt veel aanpassing: ieder moet de prioriteiten van de ander begrijpen en respecteren."
+  },
+  "capricorne_vierge": {
+    "score": 9,
+    "text": "De Steenbok (Aarde) en de Maagd (Aarde) delen dezelfde praktische energie. Dit duo gaat voor efficiëntie: de nauwgezette Maagd steunt de plannen van de Steenbok met precisie, en de Steenbok waardeert de betrouwbaarheid van de Maagd. Allebei hebben ze plichtsbesef en zin voor organisatie. Hun relatie rust op respect voor goed werk, en dat maakt hen een sterke match."
+  },
+  "capricorne_balance": {
+    "score": 3,
+    "text": "De Steenbok (Aarde) en de Weegschaal (Lucht) vinden moeilijk een gemeenschappelijke basis. De hardwerkende Steenbok komt saai over op de Weegschaal, die meer plezier en harmonie wil. De Steenbok vindt de Weegschaal dan weer te nonchalant. Zonder grote toegevingen mist de relatie verbondenheid."
+  },
+  "capricorne_scorpion": {
+    "score": 8,
+    "text": "De Steenbok (Aarde) en de Schorpioen (Water) kunnen het heel goed met elkaar vinden. De ambitieuze Steenbok brengt de Schorpioen structuur en praktische zin, en de Schorpioen brengt de Steenbok emotionele intensiteit en trouw. Allebei zijn ze vastberaden en serieus in hun verbintenissen. Samen vormen ze een krachtig stel: de Steenbok geeft de Schorpioen houvast, de Schorpioen motiveert de Steenbok. Een heel sterke relatie, emotioneel en praktisch."
+  },
+  "capricorne_sagittaire": {
+    "score": 3,
+    "text": "De Steenbok (Aarde) en de Boogschutter (Vuur) hebben weinig gemeen. De realistische, voorzichtige Steenbok kan de optimistische, zorgeloze Boogschutter frustreren, en omgekeerd. De Boogschutter leeft in het moment, de Steenbok plant de toekomst. Hun levensdoelen liggen te ver uit elkaar voor een goede verstandhouding zonder heel grote compromissen."
+  },
+  "capricorne_capricorne": {
+    "score": 8,
+    "text": "Twee Steenbokken samen begrijpen elkaar perfect. Ze hebben dezelfde ambities en methodes: werk, organisatie en discipline staan centraal in hun relatie. Ze steunen elkaar om hun doelen op lange termijn te halen. Een heel stevige relatie, al kan de spontaniteit ontbreken. Ze moeten zichzelf geregeld ontspanning gunnen, zodat het leven samen in balans blijft."
+  },
+  "capricorne_verseau": {
+    "score": 2,
+    "text": "De Steenbok (Aarde) en de Waterman (Lucht) passen heel slecht bij elkaar. De rebelse, op de groep gerichte Waterman komt te afstandelijk over op de ambitieuze, traditionele Steenbok. Ze hebben andere prioriteiten: de Steenbok wil zekerheid en status, de Waterman vernieuwing en vrijheid. Zonder enorme toegevingen is het een moeilijke relatie."
+  },
+  "capricorne_poissons": {
+    "score": 8,
+    "text": "De Steenbok (Aarde) en de Vissen (Water) vullen elkaar goed aan. De praktische Steenbok geeft de dromen van de Vissen een basis, en de Vissen brengt de Steenbok inlevingsvermogen en verbeelding. Ze hebben allebei een diep verantwoordelijkheidsgevoel (gezin, plicht). Hun relatie combineert realisme (Steenbok) en zachtheid (Vissen) tot een beschermende, evenwichtige band."
+  },
+  "verseau_belier": {
+    "score": 8,
+    "text": "De Waterman (Lucht) en de Ram (Vuur) vormen een heel vrij en vernieuwend stel. Ze hechten allebei aan hun onafhankelijkheid en houden van een uitdaging. De Ram brengt de Waterman enthousiasme, de Waterman brengt de Ram originaliteit. Hun band rust op groot vertrouwen: ze steunen elkaars gekke ideeën. Ze hebben samen plezier, verruimen hun blik op de wereld en respecteren elkaars verschillen."
+  },
+  "verseau_taureau": {
+    "score": 3,
+    "text": "De Waterman (Lucht) en de Stier (Aarde) verwachten heel verschillende dingen. De Waterman houdt van vernieuwing en het excentrieke, de Stier van traditie en stabiliteit. De Waterman vindt de Stier te behoudend, de Stier vindt de Waterman te onvoorspelbaar. Het vraagt grote compromissen om het te laten werken."
+  },
+  "verseau_gemeaux": {
+    "score": 9,
+    "text": "De Waterman (Lucht) en de Tweelingen (Lucht) delen hetzelfde element, en dat maakt de match sterker. Allebei zijn ze communicatief en origineel. Ze hebben een groot hongerig hoofd: gesprekken, vooruitziende ideeën en vernieuwende plannen. Hun relatie draait om vriendschap en mentale prikkels. Ze begrijpen elkaar perfect en gunnen elkaar hun vrijheid."
+  },
+  "verseau_cancer": {
+    "score": 2,
+    "text": "De Waterman (Lucht) en de Kreeft (Water) kunnen moeilijk op één lijn komen. De onafhankelijke, toekomstgerichte Waterman komt koel over op de gevoelige, huiselijke Kreeft. De Kreeft zoekt emotionele zekerheid die de afstandelijkere Waterman moeilijk steeds kan geven. Zonder grote compromissen is de match zwak."
+  },
+  "verseau_lion": {
+    "score": 8,
+    "text": "De Waterman (Lucht) en de Leeuw (Vuur) staan tegenover elkaar, en dat geeft een sterke aantrekking. De sociale Leeuw houdt van het originele van de Waterman, en de Waterman bewondert het nobele van de Leeuw. Samen kunnen ze ambitieuze creatieve en sociale projecten aanpakken. Hun relatie is vaak spannend: de Waterman brengt de Leeuw nieuwe ideeën, en de Leeuw geeft de Waterman warmte en zelfvertrouwen."
+  },
+  "verseau_vierge": {
+    "score": 2,
+    "text": "De Waterman (Lucht) en de Maagd (Aarde) passen heel slecht bij elkaar. De idealistische Waterman vindt de Maagd te nuchter, en de Maagd vindt de Waterman te onrealistisch. Ze hebben geen duidelijke gedeelde visie. Het vraagt grote aanpassingen om elkaar te begrijpen."
+  },
+  "verseau_balance": {
+    "score": 9,
+    "text": "De Waterman (Lucht) en de Weegschaal (Lucht) passen door hun gedeelde element heel goed bij elkaar. Allebei hebben ze iets met ideeën, vriendschap en maatschappelijke zaken. Ze kijken vooruit en praten graag over grote vragen. Hun relatie is in het hoofd heel evenwichtig: ze begrijpen elkaar snel en prikkelen elkaars geest."
+  },
+  "verseau_scorpion": {
+    "score": 3,
+    "text": "De Waterman (Lucht) en de Schorpioen (Water) hebben een heel tegengestelde aard. De onafhankelijke, rationele Waterman komt onverschillig over op de hartstochtelijke, bezitterige Schorpioen. Ze moeten de moeite nemen om elkaar te leren kennen: de Waterman door naar de gevoelens van de Schorpioen te luisteren, de Schorpioen door de afstand van de Waterman te accepteren. Zonder die moeite blijft de match zwak."
+  },
+  "verseau_sagittaire": {
+    "score": 8,
+    "text": "De Waterman (Lucht) en de Boogschutter (Vuur) kunnen het heel goed met elkaar vinden, want ze houden allebei van vrijheid en vernieuwing. Ze delen hun optimisme en hun open blik op de wereld. Hun relatie draait om vriendschap: ze moedigen elkaar aan om nieuwe dingen te beleven en voor hun idealen op te komen. Samen maken ze veel plannen waar, ieder met zijn eigen originaliteit."
+  },
+  "verseau_capricorne": {
+    "score": 2,
+    "text": "De Waterman (Lucht) en de Steenbok (Aarde) passen bijna niet bij elkaar. De ambitieuze, traditionele Steenbok begrijpt de excentrieke, op de toekomst gerichte Waterman niet altijd. De Waterman vindt de Steenbok te streng. De relatie vraagt een groot compromis, en dat is moeilijk te vinden."
+  },
+  "verseau_poissons": {
+    "score": 2,
+    "text": "De Waterman (Lucht) en de Vissen (Water) werken heel anders. De dromerige Vissen vindt de Waterman te zakelijk, en de Waterman vindt de Vissen te emotioneel. Hun verstandhouding vraagt veel moeite: de Waterman moet luisteren naar de verbeelding van de Vissen, en de Vissen moet wat rationeler worden om elkaar te begrijpen."
+  },
+  "poissons_belier": {
+    "score": 5,
+    "text": "De Vissen (Water) en de Ram (Vuur) vormen een verrassende combinatie. De gedurfde Ram en de gevoelige Vissen kunnen een diepe passie beleven. De Vissen brengt de Ram in contact met zijn emotionele kant, en de Ram zet de Vissen aan tot actie. Hun relatie is heel intens in de intimiteit. Toch vragen hun verschillen (de Ram direct, de Vissen dromerig) begrip en evenwicht: de Vissen moet zeggen wat hij nodig heeft, en de Ram moet leren luisteren."
+  },
+  "poissons_taureau": {
+    "score": 8,
+    "text": "De Vissen (Water) en de Stier (Aarde) vullen elkaar goed aan. De empathische, fantasierijke Vissen vindt bij de Stier stabiliteit en comfort. De nuchtere Stier wordt geraakt door de zachtheid en onbaatzuchtigheid van de Vissen. Ze houden allebei van een warm thuis en van zintuiglijk comfort. Een tedere en geruststellende relatie: de Stier maakt de dromen van de Vissen echt, en de Vissen brengt poëzie in het leven van de Stier."
+  },
+  "poissons_gemeaux": {
+    "score": 4,
+    "text": "De Vissen (Water) en de Tweelingen (Lucht) hebben niet hetzelfde ritme. In de ogen van de dromerige Vissen missen de spraakzame Tweelingen diepgang. Omgekeerd vinden de praktische Tweelingen de Vissen te gevoelig. Het vraagt aanpassing: de Tweelingen moeten gevoeliger luisteren, en de Vissen moet een beetje luchtigheid accepteren."
+  },
+  "poissons_cancer": {
+    "score": 9,
+    "text": "De Vissen (Water) en de Kreeft (Water) vormen een heel zachte en empathische verbintenis. Deze twee Watertekens zijn even gevoelig. De dromerige Vissen vindt in de Kreeft een beschermende partner, en de Kreeft krijgt van de Vissen het emotionele begrip waar hij naar verlangt. Hun relatie is bijna één geheel: ze delen een droom over het ideale leven en steunen elkaar met veel genegenheid."
+  },
+  "poissons_lion": {
+    "score": 4,
+    "text": "De Vissen (Water) en de Leeuw (Vuur) pakken het heel verschillend aan. De stralende Leeuw kan de introverte Vissen platwalsen. De gevoelige Vissen voelt zich gekwetst door de openhartigheid van de Leeuw. Om het te laten werken, moet de Leeuw veel zachtheid en geduld tonen, en moet de Vissen leren voor zichzelf op te komen."
+  },
+  "poissons_vierge": {
+    "score": 8,
+    "text": "De Vissen (Water) en de Maagd (Aarde) staan tegenover elkaar, maar dat geeft een mooie aanvulling. De nuchtere Maagd brengt orde in het leven van de Vissen, die de Maagd inspiratie en tederheid geeft. Ze houden elkaar in evenwicht: de Vissen maakt de Maagd meelevender, en de Maagd helpt de Vissen zijn dromen waar te maken. Hun relatie draait om solidariteit en toewijding, waarbij ieder brengt wat de ander mist."
+  },
+  "poissons_balance": {
+    "score": 4,
+    "text": "De Vissen (Water) en de Weegschaal (Lucht) verwachten iets anders. De romantische, emotionele Vissen voelt zich niet begrepen door de verstandelijke Weegschaal. De praktische Weegschaal vindt de Vissen te besluiteloos. De relatie vraagt toegevingen: ze moeten de verbeelding van de Vissen en het verstand van de Weegschaal leren verenigen."
+  },
+  "poissons_scorpion": {
+    "score": 8,
+    "text": "De Vissen (Water) en de Schorpioen (Water) vullen elkaar heel goed aan. Ze begrijpen elkaar emotioneel tot in de diepte. De intense Schorpioen beschermt de dromen van de Vissen, en de Vissen kalmeert de kracht van de Schorpioen. Hun band is sterk: ze hechten allebei aan trouw en aan zich volledig aan elkaar geven. Een relatie vol passie en tederheid, gedragen door hun toewijding."
+  },
+  "poissons_sagittaire": {
+    "score": 3,
+    "text": "De Vissen (Water) en de Boogschutter (Vuur) zijn heel verschillend. In de ogen van de Vissen mist de enthousiaste Boogschutter gevoeligheid, en de Boogschutter vindt de Vissen te slap. De relatie vraagt moeite om elkaar te begrijpen: de Boogschutter moet naar de gevoelens van de Vissen luisteren, en de Vissen moet leren meegaan in de vaart van de Boogschutter."
+  },
+  "poissons_capricorne": {
+    "score": 8,
+    "text": "De Vissen (Water) en de Steenbok (Aarde) passen goed bij elkaar. De gestructureerde Steenbok geeft de Vissen de stevige basis waar hij om vraagt, en de Vissen brengt de Steenbok medeleven en creativiteit. Ze vormen een evenwichtig stel: de Steenbok geeft de idealen van de Vissen houvast, en de Vissen verzacht de strengheid van de Steenbok. Samen kunnen ze mooie dingen bereiken, met droom en realisme."
+  },
+  "poissons_verseau": {
+    "score": 2,
+    "text": "De Vissen (Water) en de Waterman (Lucht) begrijpen elkaar moeilijk. De onafhankelijke, rationele Waterman komt ongevoelig over op de Vissen, en de Vissen is te intuïtief voor de Waterman. Ze delen weinig: de Vissen droomt van een diepe emotionele band, de Waterman hecht aan vriendschap en ideeën. Zonder grote compromissen passen ze van nature weinig bij elkaar."
+  },
+  "cancer_cancer": {
+    "score": 8,
+    "text": "Twee Kreeften samen vormen een heel sterke emotionele cocon. Ze hebben dezelfde behoefte aan emotionele zekerheid, tederheid en een thuis. Door hun gedeelde gevoeligheid voelen ze heel goed aan wat de ander nodig heeft, zonder dat het gezegd hoeft te worden. Hun relatie is zacht en beschermend. Maar hun gedeelde emotionaliteit maakt hen kwetsbaar voor stemmingswisselingen op hetzelfde moment. Als ze leren om niet samen in hun schulp te kruipen, is hun verbintenis heel liefdevol en duurzaam."
+  },
+  "lion_lion": {
+    "score": 7,
+    "text": "Twee Leeuwen samen vormen een stralend en theatraal stel. Ze delen dezelfde passie, dezelfde trots en dezelfde behoefte aan erkenning. Hun relatie is intens en spectaculair: ze bewonderen elkaar en beleven de liefde met flair. Maar hun sterke ego kan tot machtsstrijd leiden, want allebei willen ze de koning of koningin van de relatie zijn. Als ze leren het licht te delen en elkaar zonder competitie te bewonderen, is hun verbintenis prachtig en vol warmte."
+  },
+  "balance_balance": {
+    "score": 8,
+    "text": "Twee Weegschalen samen vormen een heel harmonieus en stijlvol stel. Ze delen hun liefde voor evenwicht, schoonheid en diplomatie. Hun relatie is zacht en verfijnd: ze vermijden conflicten en zoeken altijd een compromis. Maar die voortdurende jacht op harmonie kan hen ervan weerhouden de echte problemen aan te pakken. Hun gedeelde besluiteloosheid kan belangrijke keuzes ook vertragen. Komen ze daaroverheen, dan is hun relatie een van de prettigste en elegantste van de dierenriem."
+  },
+  "sagittaire_sagittaire": {
+    "score": 8,
+    "text": "Twee Boogschutters samen beleven een relatie vol avontuur en optimisme. Ze delen dezelfde honger naar vrijheid, reizen en ontdekkingen. Hun relatie is naar buiten gericht: ze verkennen samen de wereld, vol enthousiasme en goed humeur. Maar hun gedeelde behoefte aan onafhankelijkheid kan hen uit elkaar drijven als ze geen tijd nemen voor echte intimiteit. Vinden ze het evenwicht tussen avontuur en toewijding, dan is hun relatie vrolijk en prikkelend."
+  },
+  "verseau_verseau": {
+    "score": 8,
+    "text": "Twee Watermannen samen vormen een heel origineel en intellectueel stel. Ze delen dezelfde vooruitstrevende kijk op de wereld, dezelfde behoefte aan vrijheid en dezelfde nieuwsgierigheid. Hun relatie draait om vriendschap en respect voor elkaars eigenheid. Maar hun neiging tot emotionele afstand kan een kloof tussen hen maken. Leren ze hun gevoelens te uiten, en niet alleen hun gedachten, dan is hun verbintenis uniek, vernieuwend en vol respect."
+  },
+  "poissons_poissons": {
+    "score": 7,
+    "text": "Twee Vissen samen hebben een heel emotionele en intuïtieve relatie. Ze begrijpen elkaar diep en delen een rijke, gevoelige binnenwereld. Hun relatie is vol romantiek, creativiteit en medeleven. Maar hun grote gevoeligheid maakt hen kwetsbaar: zonder houvast in de werkelijkheid kunnen ze samen verdwalen in dromen of emoties. Vinden ze een evenwicht tussen hun binnenwereld en de realiteit, dan is hun verbintenis magisch en diep verbonden."
+  }
+}

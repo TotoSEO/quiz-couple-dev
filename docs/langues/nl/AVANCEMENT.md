@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
 | 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
 | 9 et suite | Blog | à faire |
@@ -1850,7 +1850,49 @@ spéciaux ».
 - Les liens vers les trois autres outils restent neutralisés tant qu'ils
   sont en attente.
 
+## Lot 7b (31 octobre 2026) : compatibiliteit geboortedatum et sterrenbeelden match
+
+- Les deux pages d'astrologie sortent ensemble de `PAGES_EN_ATTENTE` : elles
+  se renvoient l'une à l'autre, et le bouton « Ga verder met jullie namen »
+  du résultat de la première (`getLocalizedUrl('testAstroPrenoms')`) aurait
+  eu une adresse vide tant que la seconde attendait.
+- `static-site/build/zodiac-data-nl.json` : les 144 textes des paires de
+  signes (Ram, Stier, Tweelingen, Kreeft, Leeuw, Maagd, Weegschaal,
+  Schorpioen, Boogschutter, Steenbok, Waterman, Vissen), notes recopiées du
+  français ; lus par les deux pages (`/js/data/zodiac-nl.json` et
+  `zodiacDataJson`).
+- `nl/quiz-date-naissance.json` (`/nl/compatibiliteit-geboortedatum/`), title
+  « Compatibiliteit geboortedatum: gratis test voor koppels », H1
+  « Compatibiliteit geboortedatum: hoe goed passen jullie bij elkaar? » ;
+  `levenspad`, les douze animaux (Rat, Os, Tijger, Konijn, Draak, Slang,
+  Paard, Geit, Aap, Haan, Hond, Varken) et les cinq éléments (Hout, Vuur,
+  Aarde, Metaal, Water), le signe chinois écrit « Paard (Metaal) », les mois
+  en minuscules partout (`form.mois` comme `moisDate`), la date « 14 maart
+  1990 ». Le paragraphe du français qui renvoie aux douze articles du blog
+  sur chaque signe (pas encore traduits) dit ce que contient le résultat et
+  porte le lien vers les sterrenbeelden (« welke sterrenbeelden goed bij
+  elkaar passen ») ; la FAQ garde l'explication sans ce lien.
+- `nl/quiz-astro-prenoms.json` (`/nl/sterrenbeelden-match/`), title
+  « Sterrenbeelden match: jullie tekens en namen vergeleken », H1 « Welke
+  sterrenbeelden passen bij elkaar? Test het met jullie namen ». Les exemples
+  de numérologie sont refaits avec le calcul de la page sur des prénoms
+  néerlandais : Lotte 9, Tom 3, Daan 11 (nombre maître), Chloë et Chloe 7,
+  Thijs 3 et Tijs 4, Alexander 3 et Alex 6, Emma (Weegschaal) et Noah
+  (Leeuw) 80 %, 40 % et 64 %, comme Emma et Hugo en français. Le gabarit a
+  ses libellés (« Persoon 1 », « Voornaam ») et les explications des nombres
+  en néerlandais (`NUMBER_TRAITS`, phrases selon le score) ; l'italien du 9
+  était recopié de l'allemand (« altruistisch, weise, universell »), corrigé.
+- Joué dans Chromium à 390 px : 14 maart 1990 et 20 januari 1990 donnent
+  Vissen ♓, levenspad 9, Paard (Metaal) et Waterman ♒, levenspad 22, Slang
+  (Aarde), 53 % ; Emma et Noah 64 %.
+
 ## Les chiffres
+
+Au lot 7b : `textes nl` 943 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur ni avertissement (83 pages traduites) ; `liens nl` sans
+erreur ; `site nl --jouer` sans erreur sur les deux pages ; `code nl` 87
+passages (les adresses des articles du blog, le compteur, les quiz
+spéciaux et la page des articles).
 
 Au lot 8g : `seo nl` sans erreur ni « à faire » (la relatiecheck n'est plus
 en noindex), `liens nl` sans erreur, `site nl --jouer` sans erreur sur le

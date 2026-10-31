@@ -68,3 +68,5 @@ Single
 Storm
 Week {{n}}
 Calculator
+Astrologie
+Water

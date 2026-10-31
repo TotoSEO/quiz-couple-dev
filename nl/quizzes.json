@@ -130,6 +130,24 @@
     "description": "24 eerlijke vragen om als koppel te zien of jullie klaar zijn voor een kind. Gratis test, meteen een uitslag.",
     "metaDescription": "Doe de klaar voor een baby test samen: 12 of 24 eerlijke vragen over geld, jullie relatie, de nachten en jullie angsten. Gratis, meteen een uitslag."
   },
+  "testAstroPrenoms": {
+    "title": "Sterrenbeelden match: jullie tekens en namen vergeleken",
+    "shortTitle": "Sterrenbeelden match",
+    "description": "Ontdek hoe goed jullie namen en sterrenbeelden bij elkaar passen. Astrologie en numerologie in één test.",
+    "metaDescription": "Sterrenbeelden match: typ jullie twee namen, kies jullie tekens en zie hoe goed jullie bij elkaar passen, met astrologie en numerologie. Gratis."
+  },
+  "calculatriceAmour": {
+    "title": "Liefdestest met namen: jullie percentage, gratis en meteen",
+    "shortTitle": "Liefdestest",
+    "description": "Twee namen, een percentage, en de hele berekening erachter. Gratis, meteen, zonder inschrijving.",
+    "metaDescription": "Gratis liefdestest met namen: typ twee namen en zie meteen jullie percentage, met de vijf metingen waar het uit komt. Zonder inschrijving."
+  },
+  "testDateNaissance": {
+    "title": "Compatibiliteit geboortedatum: gratis test voor koppels",
+    "shortTitle": "Compatibiliteit geboortedatum",
+    "description": "Twee geboortedata zijn genoeg. Daaruit halen we jullie levenspaden, jullie sterrenbeelden en jullie Chinese tekens, en we leggen de drie lezingen naast elkaar.",
+    "metaDescription": "Compatibiliteit geboortedatum: vul jullie twee data in en zie wat levenspad, sterrenbeeld en Chinees teken over jullie zeggen. Gratis, zonder account."
+  },
   "testEmmenager": {
     "title": "Samenwonen test: zijn jullie er klaar voor?",
     "shortTitle": "Samenwonen test",
@@ -475,11 +493,5 @@
     "shortTitle": "Relatiecheck",
     "description": "Zo'n honderd precieze vragen, samen of alleen, en een volledig rapport dat de antwoorden naast elkaar zet, thema per thema.",
     "metaDescription": "Doe de relatiecheck online: 100 vragen, samen of alleen, over twaalf thema's uit jullie leven samen. Direct resultaat, online en als pdf."
-  },
-  "calculatriceAmour": {
-    "title": "Liefdestest met namen: jullie percentage, gratis en meteen",
-    "shortTitle": "Liefdestest",
-    "description": "Twee namen, een percentage, en de hele berekening erachter. Gratis, meteen, zonder inschrijving.",
-    "metaDescription": "Gratis liefdestest met namen: typ twee namen en zie meteen jullie percentage, met de vijf metingen waar het uit komt. Zonder inschrijving."
   }
 }
