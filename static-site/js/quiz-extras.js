@@ -309,11 +309,13 @@
 
   // La langue de la page part avec l'avis depuis le 12 octobre 2026 (colonne
   // lang de reviews) : le classement de l'admin range les avis par page et
-  // par langue. Si la base ne connait pas encore la colonne, l'avis repart
-  // sans elle, il ne se perd jamais pour une information en plus. Ecrit deux
+  // par langue. Si la base ne connait pas encore la colonne, ou refuse la
+  // langue (contrainte reviews_lang_valeur, ouverte au neerlandais le
+  // 31 octobre 2026), l'avis repart sans elle, il ne se perd jamais pour
+  // une information en plus. Ecrit deux
   // fois aussi (pcReviewForm, quiz-engine-core.js), et une troisieme dans
   // reviews.js pour l'accueil.
-  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it'];
+  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it', 'nl'];
   function langueAvis(l) {
     l = String(l || '').slice(0, 2).toLowerCase();
     return LANGUES_AVIS.indexOf(l) >= 0 ? l : null;
@@ -323,7 +325,7 @@
     return envoi(corps).then(function (r) {
       if (r.status !== 400 || !corps.lang) return r;
       return r.clone().json().catch(function () { return null; }).then(function (e) {
-        if (!e || (e.code !== 'PGRST204' && !/'lang'/.test(String(e.message || '')))) return r;
+        if (!e || (e.code !== 'PGRST204' && !/lang/.test(String(e.message || '')))) return r;
         var sans = {};
         Object.keys(corps).forEach(function (k) { if (k !== 'lang') sans[k] = corps[k]; });
         return envoi(sans);

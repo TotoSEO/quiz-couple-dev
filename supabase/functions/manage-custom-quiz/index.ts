@@ -206,7 +206,7 @@ Deno.serve(async (req) => {
       const quizType = String(body.quizType || '');
       if (!QUIZ_TYPES.includes(quizType)) return json({ error: 'invalid_type' }, 400);
 
-      const lang = ['fr', 'en', 'es', 'de', 'it'].includes(body.lang) ? body.lang : 'fr';
+      const lang = ['fr', 'en', 'es', 'de', 'it', 'nl'].includes(body.lang) ? body.lang : 'fr';
       const title = sanitizeText(body.title, MAX_TITLE);
       const description = sanitizeText(body.description, MAX_DESC);
       if (!title) return json({ error: 'empty_title' }, 400);

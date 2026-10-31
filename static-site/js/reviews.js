@@ -499,9 +499,10 @@
   }
 
   // La langue de la page part avec l'avis (colonne lang, 12 octobre 2026) ;
-  // sans la colonne en base, l'avis repart sans elle. Meme code que dans
+  // sans la colonne en base, ou si la base refuse la langue, l'avis repart
+  // sans elle. Meme code que dans
   // quiz-extras.js et quiz-engine-core.js.
-  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it'];
+  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it', 'nl'];
   function langueAvis(l) {
     l = String(l || '').slice(0, 2).toLowerCase();
     return LANGUES_AVIS.indexOf(l) >= 0 ? l : null;
@@ -511,7 +512,7 @@
     return envoi(corps).then(function (r) {
       if (r.status !== 400 || !corps.lang) return r;
       return r.clone().json().catch(function () { return null; }).then(function (e) {
-        if (!e || (e.code !== 'PGRST204' && !/'lang'/.test(String(e.message || '')))) return r;
+        if (!e || (e.code !== 'PGRST204' && !/lang/.test(String(e.message || '')))) return r;
         var sans = {};
         Object.keys(corps).forEach(function (k) { if (k !== 'lang') sans[k] = corps[k]; });
         return envoi(sans);
