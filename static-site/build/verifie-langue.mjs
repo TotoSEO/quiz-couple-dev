@@ -485,6 +485,28 @@ function controleTextes() {
   const blocAlias = (coeur.match(/var PREFIX_ALIASES = \{([\s\S]*?)\};/) || [])[1] || '';
   const ALIAS = Object.fromEntries([...blocAlias.matchAll(/^\s*'([^']+)':\s*'([^']+)'/gm)].map((m) => [m[2], m[1]]));
 
+  // Un lien de la page de référence peut changer de place dans la nouvelle
+  // langue : la règle du maillage (CLAUDE.md, « Les liens se posent dans le
+  // contenu, jamais en bas de page ») demande de le remonter quand un passage
+  // plus haut parle déjà du sujet, alors que le français l'a parfois laissé
+  // dans la dernière section. Même cible, autre clé du même texte : c'est un
+  // lien déplacé, signalé pour relecture, pas un lien manquant. Une page se
+  // lit fichier par fichier ; gd.json, quizGames.json, quizzes.json et
+  // common.json rangent un texte par partie, le lien n'y change pas de partie.
+  const nomCible = (c) => c.replace(/^route:|^article:/, '');
+  let liensAPlacer = { manquants: [], enPlus: [] };
+  const placerLiens = () => {
+    for (const m of liensAPlacer.manquants) {
+      const j = liensAPlacer.enPlus.findIndex((p) => p.c === m.c);
+      if (j < 0) { erreur(C, m.loc, `lien manquant vers ${nomCible(m.c)}`); continue; }
+      const p = liensAPlacer.enPlus.splice(j, 1)[0];
+      avert(C, m.loc, `lien vers ${nomCible(m.c)} déplacé dans ${p.k}`);
+    }
+    for (const p of liensAPlacer.enPlus) avert(C, p.loc, `lien en plus vers ${nomCible(p.c)}`);
+    liensAPlacer = { manquants: [], enPlus: [] };
+  };
+  const PAR_PARTIE = new Set(['gd.json', 'quizGames.json', 'quizzes.json', 'common.json']);
+
   for (const f of fichiers) {
     const src = Object.fromEntries(AUTRES.filter((l) => fs.existsSync(path.join(dirL(l), f))).map((l) => [l, lisJson(path.join(dirL(l), f))]));
     const fNouv = path.join(dirL(LANGUE), f);
@@ -555,9 +577,9 @@ function controleTextes() {
           if (j >= 0) { reste.splice(j, 1); continue; }
           const art = c.startsWith('article:') && BLOG_ARTICLES.find((a) => `article:${a.internalSlug}` === c);
           if (art && !(art.slugs || {})[LANGUE]) afaire(C, loc, `lien vers l'article ${art.internalSlug}, à poser quand il aura son adresse /${LANGUE}/`);
-          else erreur(C, loc, `lien manquant vers ${c.replace(/^route:|^article:/, '')}`);
+          else liensAPlacer.manquants.push({ loc, k, c });
         }
-        for (const c of reste) avert(C, loc, `lien en plus vers ${c.replace(/^route:|^article:/, '')}`);
+        for (const c of reste) liensAPlacer.enPlus.push({ loc, k, c });
         const bRef = AUTRES.map((l) => F[l] && F[l].has(k) ? balises(F[l].get(k)) : null).filter((x) => x !== null);
         if (bRef.length === AUTRES.length && bRef.every((b) => b === bRef[0]) && balises(v) !== bRef[0]) avert(C, loc, `balises ${balises(v) || 'aucune'} au lieu de ${bRef[0] || 'aucune'}`);
 
@@ -571,7 +593,9 @@ function controleTextes() {
         for (const mot of interditsTitre) if (estTitre && motTrouve(texte, mot)) erreur(C, loc, `mot interdit dans un titre : « ${mot} »`);
         for (const mot of marqueurs) if (motTrouve(texte, mot)) avert(C, loc, `tournure à éviter : « ${mot} »`);
       }
+      if (PAR_PARTIE.has(f)) placerLiens();
     }
+    placerLiens();
   }
   console.log(`[textes] ${fichiers.length} fichiers, ${faites}/${unites} parties écrites en « ${LANGUE} »`);
 }

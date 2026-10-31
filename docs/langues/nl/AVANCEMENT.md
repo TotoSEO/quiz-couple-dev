@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen) ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen) ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1392,7 +1392,52 @@ le met à jour dans la PR de chaque lot.
 - **Vérifié** : une partie entière de chaque jeu, jusqu'au score
   d'harmonie et jusqu'au verdict (`joue-boutons.cjs`).
 
+## Lot 6e (31 octobre 2026) : les dilemmes, le pour ou contre
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/dilemmas-voor-koppels/` | Dilemma's voor koppels: 100 situaties om samen te beslissen | 100 dilemma's voor koppels om samen te beslissen, en hoeveel mensen er al stemden! |
+  | `/nl/voor-of-tegen-stellingen/` | Voor of tegen stellingen voor koppels: gratis online spel | Voor of tegen: 60 stellingen voor koppels om samen te beslissen |
+
+- **Les moteurs** : les cent dilemmes (`dilemmes` de gd.json : `d{N}`
+  l'avantage, `d{N}_mais` le prix, lu après « MAAR ») et les textes du jeu
+  (`dilemme` de quizGames.json) ; les soixante stellingen, leurs six
+  thèmes (`pourContre`) et les textes du jeu. « Jullie » quand le marché
+  vaut pour le couple, « je » quand il ne touche qu'une personne et met
+  l'autre en jeu (« je partner weet ook precies wat jij denkt »). Les
+  votes partent avec `lang: 'nl'` dans `dilemme_votes` et
+  `pour_contre_votes`, qui n'ont pas de contrainte de langue (16 signes au
+  plus) ; les pourcentages se comptent toutes langues confondues, comme
+  pour les cinq autres.
+- **Une stelling sert aussi de titre** : la page écrit les soixante
+  stellingen en H3 sous le jeu (« Voor of tegen: … », la liste statique),
+  première lettre en minuscule. Une stelling ne prend donc aucun mot
+  interdit dans les titres (« Elkaar echt alles vertellen » est devenu
+  « Elkaar alles vertellen ») et ne commence pas par un nom qui garde sa
+  majuscule (« Kerst … » est devenu « De kerstdagen … »).
+- **Les liens** : sur la page des dilemmes, « twee opties en kies je er
+  één » (zou je liever) et « een gewoon ja of nee » (ja of nee vragen),
+  tous deux dans la première section ; le français met le second dans la
+  dernière (« d'autres font voter »), que `liens-contenu.mjs` signale
+  `BAS`. Sur le pour ou contre : « de andere spelletjes voor twee » (le
+  hub), « wat je wint en wat het kost » (les dilemmes), « vragen om elkaar
+  beter te leren kennen » (vragen voor koppels).
+- **Le contrôle `textes` reconnaît un lien déplacé** : même cible que la
+  référence, autre clé du même texte (le fichier pour une page ; la partie
+  pour gd.json, quizGames.json, quizzes.json et common.json). Il le
+  signale en avertissement (« lien vers … déplacé dans … ») au lieu d'une
+  erreur « lien manquant ».
+- **Vérifié** : une partie de chaque jeu jusqu'à son bilan
+  (`joue-boutons.cjs`, envois vers la base coupés pour ne compter aucun
+  faux vote).
+
 ## Les chiffres
+
+Au lot 6e : `textes nl` 818 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (74 pages traduites) ; les deux jeux vont jusqu'à leur
+bilan. Aucune page publique ne change.
 
 Au lot 6d : `textes nl` 794 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (72 pages traduites) ; les deux jeux vont jusqu'à leur
