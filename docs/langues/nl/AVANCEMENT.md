@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -751,7 +751,44 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur les pages** : rien, d'après le contrôle
   `site` joué jusqu'aux résultats.
 
+## Lot 4b (31 octobre 2026) : combien de temps vais-je rester célibataire, couple ou célibat
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/hoe-lang-blijf-ik-nog-single/` | Hoe lang blijf ik nog single? Gratis online test | Wanneer vind ik de liefde? De test die het in maanden schat |
+  | `/nl/single-of-relatie-test/` | Single of relatie test: ben je beter af alleen of samen? | Relatie of single: welke manier van leven past bij jou? |
+
+- **Le moteur de la durée** (`dureeCelib`) : les unités sont « 1 maand »,
+  « {{n}} maanden », « 1 jaar », « {{n}} jaar » (le néerlandais garde
+  « jaar » après un nombre), « 1 jaar en 4 maanden », la marge « Meestal
+  tussen 11 maanden en 3 jaar » et la date « Dus rond augustus 2028 » (mois
+  en minuscules par `Intl.DateTimeFormat('nl')`, l'année seule passe dans le
+  même modèle : pas besoin des clés propres à l'allemand). Les clés des
+  verdicts (`r{N}_cle`) restent celles du français, elles partent dans
+  `profil_resultats`.
+- **Le moteur des deux parts** (`balance`) : points (`_pts`) et clés des
+  verdicts repris du français ; « 34% gemaakt om alleen te leven », pourcentage
+  collé au nombre.
+- **Les liens** : « waarom ben ik nog single » (« komt heel weinig mensen
+  tegen », « wat je tot nu toe op afstand heeft gehouden »), « prêt pour une
+  nouvelle relation » (« je laatste relatie »), « pourquoi je ne trouve pas
+  l'amour » (« de liefde te vinden »), emménager (« onder één dak »), la
+  dépendance affective et l'attachement.
+- **Le script d'application** (`applique.py`, dans le scratchpad) sait
+  désormais ajouter le texte alternatif néerlandais aux objets écrits en JSON
+  dans `QUIZ_FEATURED` (`"it": "..."`, comme celui de la durée).
+- **Ce qui reste en français sur les pages** : la description d'une carte
+  vers « prêt pour une nouvelle relation », pas encore traduite (lot 4c).
+
 ## Les chiffres
+
+Au lot 4b : `textes nl` 455 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (41 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat ; reste en français la description d'une carte vers une page
+pas encore traduite. Aucune page publique ne change.
 
 Au lot 4a : `textes nl` 437 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (39 pages traduites) ; `site nl` sur les deux pages : aucun
