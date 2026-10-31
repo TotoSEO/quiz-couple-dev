@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1700,7 +1700,36 @@ spéciaux ».
   (61) et de la fabrique du PDF (27) passent. Hors /nl/, seuls changent
   `js/bilan.js` et `js/bilan-rapport.js` (la ligne `nl` et le signe %).
 
+## Lot 8d (31 octobre 2026) : les questions de la relatiecheck
+
+- **Les textes** : `nl/bilan-questions.json` en entier (environ 12 900
+  mots) : les 118 questions des douze thèmes, leurs réponses, leur nom court,
+  leur « pourquoi ça compte », leurs deux questions pour en parler et ce
+  qu'il vaut mieux éviter, les textes du rapport de chaque thème (fort,
+  moyen, faible), les sept questions de situation et les réponses « qui »
+  (`qui`, `quiNeutre`, `quiPercu`). Les questions parlent à la personne
+  (« je »), les questions pour en parler sont celles qu'un partenaire pose à
+  l'autre ; les variantes sans prénom (`qNeutre`, `oNeutre`) et les
+  questions miroirs suivent le français.
+- **Ce que le néerlandais dit autrement** : aucun accord au genre (« {heureux|
+  heureuse} » devient « gelukkig ») : le néerlandais n'accorde pas ses
+  adjectifs, et le fichier n'a plus aucune accolade de genre ; le PACS
+  devient « geregistreerd partnerschap, samenlevingscontract of wettelijke
+  samenwoning » (les Pays-Bas et la Belgique) ; la question de l'argent
+  citée par la page de vente (« Het geld in jullie relatie, als het aan jou
+  ligt... ») est celle du fichier, mot pour mot.
+- **Corrigé dans les cinq langues publiques** : l'introduction du thème
+  « Comment vous allez » annonçait huit questions ; l'évaluation en pose
+  douze (« douze questions », « twelve questions », « doce preguntas »,
+  « zwölf Fragen », « dodici domande »).
+- **Les tests** : `coeur.test.mjs` vérifie désormais la structure des six
+  langues (61 tests, tous passent).
+- **Vérifié** : `textes nl` sans erreur ; hors /nl/, seuls changent les
+  fichiers de questions des cinq langues (la phrase ci-dessus).
+
 ## Les chiffres
+
+Au lot 8d : `textes nl` 892 parties écrites sur 1 045, sans erreur.
 
 Au lot 8c : `textes nl` 887 parties écrites sur 1 045, sans erreur.
 

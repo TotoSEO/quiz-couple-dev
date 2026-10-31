@@ -1,0 +1,2040 @@
+{
+  "qui": [
+    "Vooral ik",
+    "Iets meer ik",
+    "Allebei evenveel",
+    "Iets meer {autre}",
+    "Vooral {autre}"
+  ],
+  "quiNeutre": [
+    "Vooral {nom}",
+    "Iets meer {nom}",
+    "Allebei evenveel"
+  ],
+  "quiPercu": [
+    "Vooral {autre}",
+    "Iets meer {autre}",
+    "Allebei evenveel",
+    "Iets meer jij",
+    "Vooral jij"
+  ],
+  "situation": {
+    "ensemble": {
+      "q": "Wonen jullie samen?",
+      "o": [
+        "Ja",
+        "Nee"
+      ]
+    },
+    "duree": {
+      "q": "Hoe lang zijn jullie al samen?",
+      "o": [
+        "Korter dan een jaar",
+        "Tussen een en drie jaar",
+        "Tussen drie en tien jaar",
+        "Langer dan tien jaar"
+      ]
+    },
+    "engagement": {
+      "q": "Zijn jullie getrouwd of hebben jullie je relatie officieel vastgelegd?",
+      "o": [
+        "Getrouwd",
+        "Geregistreerd partnerschap, samenlevingscontract of wettelijke samenwoning",
+        "Geen van beide"
+      ]
+    },
+    "enfants": {
+      "q": "Hebben jullie samen kinderen (of is er een baby op komst)?",
+      "o": [
+        "Ja",
+        "Nee"
+      ]
+    },
+    "enfantsAvant": {
+      "q": "Heeft een van jullie kinderen uit een eerdere relatie?",
+      "o": [
+        "Ja",
+        "Nee"
+      ]
+    },
+    "proprio": {
+      "q": "Zijn jullie samen eigenaar van jullie woning?",
+      "o": [
+        "Ja",
+        "Nee"
+      ]
+    },
+    "animal": {
+      "q": "Hebben jullie een huisdier?",
+      "o": [
+        "Ja",
+        "Nee"
+      ]
+    }
+  },
+  "domaines": {
+    "quotidien": {
+      "titre": "Het dagelijks leven thuis",
+      "bref": "Dagelijks leven",
+      "intro": "De taken, het opruimen, het ritme van de week. Juist de kleine onderwerpen zorgen vaak voor de grote ruzies, dus daar beginnen we mee.",
+      "rapport": {
+        "fort": "In het dagelijks leven werken jullie op dezelfde manier. Dat is zeldzamer dan je denkt, en het scheelt jullie een hoop kleine wrijvingen.",
+        "moyen": "Het dagelijks leven loopt best goed, met een paar verschillen in gewoontes. Niets ergs, maar juist zulke onderwerpen gaan elke week iets meer irriteren als je er nooit over praat.",
+        "faible": "Jullie hebben niet hetzelfde beeld van het leven thuis. Dat komt heel vaak voor, en het is goed op te lossen met een paar eenvoudige afspraken die jullie samen maken, in plaats van elk meningsverschil op te lossen op het moment dat het irriteert."
+      },
+      "questions": {
+        "quo1": {
+          "q": "Wie doet bij jullie thuis het meeste huishoudelijk werk (schoonmaken, de was, boodschappen, koken)?",
+          "court": "Het huishouden",
+          "pourquoi": "In bijna elke relatie ziet ieder beter wat hij zelf doet dan wat de ander doet. Dat is op zich niet erg, maar het wordt het wel als een van de twee het gevoel heeft dat hij het huishouden in zijn eentje draagt.",
+          "parler": [
+            "Als we een lijst maakten van alles wat er deze week gedaan is, wie zou dan wat gedaan hebben?",
+            "Welke klus haat je het meest, en welke vind je niet erg?"
+          ],
+          "eviter": "Punten tellen (‘ik heb drie wassen gedraaid’): dan ga je onderhandelen in plaats van het samen te regelen."
+        },
+        "quo1b": {
+          "q": "Als jullie morgen gingen samenwonen, wie zou dan volgens jou het meeste huishoudelijk werk doen?",
+          "court": "Het huishouden, als jullie samenwoonden",
+          "pourquoi": "Voordat je gaat samenwonen, heeft ieder vaak al een vrij precies beeld van wat de ander zal doen, zonder dat jullie het er ooit over gehad hebben. Dat is een van de eerste bronnen van spanning als je onder één dak woont.",
+          "parler": [
+            "Hoe was het verdeeld bij je ouders? Zou je dat ook willen, of juist andersom?",
+            "Wat doe je graag in huis, en wat wil je echt niet doen?"
+          ],
+          "eviter": "Ervan uitgaan dat het vanzelf goed komt: dat gebeurt zelden vanzelf, en bijna nooit eerlijk verdeeld."
+        },
+        "quo2": {
+          "q": "Wie denkt aan alles wat er moet gebeuren (afspraken, rekeningen, cadeaus, wat er in de koelkast ontbreekt)?",
+          "court": "Aan alles denken",
+          "pourquoi": "Een klus doen en eraan denken dat hij gedaan moet worden, zijn twee verschillende dingen. Wie aan alles denkt, voelt zich vaak alleen, zelfs als de ander graag helpt zodra je het vraagt.",
+          "parler": [
+            "Waar loop je op dit moment over te piekeren voor thuis, dat ik misschien niet zie?",
+            "Is er een onderdeel dat ik helemaal op me kan nemen, van begin tot eind?"
+          ],
+          "eviter": "Antwoorden met ‘je hoeft het maar te vragen’: juist dat vragen is wat zwaar weegt."
+        },
+        "quo2b": {
+          "q": "Wie organiseert het meest jullie momenten samen (uitjes, weekendjes weg, reserveringen)?",
+          "court": "Jullie momenten samen organiseren",
+          "pourquoi": "Als je niet samenwoont, moet elk gedeeld moment voorbereid worden. Als het altijd dezelfde is die het regelt, gaat die zich op den duur afvragen of de ander er net zoveel om geeft.",
+          "parler": [
+            "Organiseer je graag, of doe je het omdat het anders niemand doet?",
+            "Wie regelt ons volgende uitje, en wat gaan we doen?"
+          ],
+          "eviter": "Er een liefdesbewijs van maken (‘als je om me gaf, zou je het regelen’): sommige mensen houden gewoon niet van organiseren."
+        },
+        "quo3": {
+          "q": "Opruimen in huis betekent voor jou...",
+          "o": [
+            "Alles opgeruimd, altijd",
+            "Meestal opgeruimd",
+            "Een beetje rommel, daar heb ik geen last van",
+            "Het is niet mijn prioriteit"
+          ],
+          "court": "Opruimen",
+          "pourquoi": "De rommel is bijna nooit het echte onderwerp. Voor de een is het extra stress, voor de ander een huis waarin geleefd wordt. Zonder gezamenlijke afspraak is het degene die het minst tegen rommel kan die uiteindelijk alles opruimt, en het de ander kwalijk neemt.",
+          "parler": [
+            "Welke plek in huis zou je altijd opgeruimd willen zien?",
+            "Wat laat ik slingeren waar je je aan ergert, zonder dat je het gezegd hebt?"
+          ],
+          "eviter": "Zuchtend de spullen van de ander opruimen: de boodschap komt over, maar verkeerd."
+        },
+        "quo4": {
+          "q": "Doordeweeks ga je het liefst naar bed...",
+          "o": [
+            "Voor 22 uur",
+            "Tussen 22 en 23 uur",
+            "Tussen 23 uur en middernacht",
+            "Na middernacht"
+          ],
+          "court": "Bedtijd",
+          "pourquoi": "Een stel dat niet op hetzelfde uur naar bed gaat, verliest vaak zonder het te merken de momenten waarop je met elkaar praat en elkaar aanraakt. Dat is geen probleem als je het weet en een paar avonden samen houdt.",
+          "parler": [
+            "Op welke avonden van de week zouden we tegelijk naar bed kunnen gaan?",
+            "Wat doe je 's avonds graag als ik al slaap?"
+          ],
+          "eviter": "De ander zijn ritme verwijten: een nachtmens wordt geen ochtendmens om jou een plezier te doen."
+        },
+        "quo5": {
+          "q": "Een ideaal weekend is een weekend...",
+          "o": [
+            "Goed gevuld, met veel plannen",
+            "Met een of twee dingen gepland",
+            "Van dag tot dag geïmproviseerd",
+            "Leeg, om uit te rusten"
+          ],
+          "court": "De weekenden",
+          "pourquoi": "Het weekend is vaak de enige echte vrije tijd samen. Als de een het wil vullen en de ander het leeg wil houden, brengt ieder zijn zaterdagen door met de ander teleur te stellen, zonder dat te willen.",
+          "parler": [
+            "Hoe ziet jouw perfecte zondag eruit, van opstaan tot slapengaan?",
+            "Het ene weekend op jouw manier, het andere op de mijne, zou je dat zien zitten?"
+          ],
+          "eviter": "Op vrijdagavond het programma aankondigen zonder iets te vragen: voor wie wilde uitrusten, is het dan al mislukt."
+        },
+        "quo6": {
+          "q": "Hoe vaak wil je mensen over de vloer hebben (vrienden, familie, etentjes, borrels)?",
+          "o": [
+            "Zo vaak mogelijk",
+            "Af en toe",
+            "Zelden",
+            "Zo weinig mogelijk"
+          ],
+          "court": "Mensen over de vloer",
+          "pourquoi": "Voor de een is een vol huis het leven zelf. Voor de ander is het de enige plek waar je even kunt bijkomen. En gasten ontvangen is werk, dat niet altijd terechtkomt bij degene die heeft uitgenodigd.",
+          "parler": [
+            "Hoe vaak per maand zou je idealiter mensen willen uitnodigen?",
+            "Als we mensen over de vloer hebben, wie doet dan wat, en is dat goed zo?"
+          ],
+          "eviter": "Mensen uitnodigen zonder het de ander te laten weten ‘omdat het gewoon vrienden zijn’."
+        },
+        "quo7": {
+          "q": "Een huisdier (hond, kat...):",
+          "o": [
+            "Ik wil er zeker een",
+            "Waarom niet",
+            "Liever niet",
+            "Nee, geen sprake van"
+          ],
+          "court": "Een huisdier",
+          "pourquoi": "Een huisdier betekent tien tot vijftien jaar samenleven, vakanties die je anders moet regelen, een budget en soms een allergie. Een vastberaden ‘nee’ aan de ene kant en een droom van een hond aan de andere kant los je niet op met een compromis.",
+          "parler": [
+            "Als we een huisdier namen, welk zou het dan zijn, en wie zou er dagelijks voor zorgen?",
+            "Wat trekt je aan in een huisdier, of wat schrikt je juist af?"
+          ],
+          "eviter": "Een dier in huis halen en de ander voor een voldongen feit stellen: dat dier wordt dan jarenlang het symbool van de ruzie."
+        },
+        "quo7b": {
+          "q": "Jullie huisdier mag in huis...",
+          "o": [
+            "Overal komen, ook in bed",
+            "Overal komen behalve in de slaapkamer",
+            "Alleen in bepaalde kamers komen",
+            "Zo weinig mogelijk binnenkomen"
+          ],
+          "court": "De plek van het huisdier",
+          "pourquoi": "De hond op de bank of de kat in bed: voor de een een detail, voor de ander echt vervelend. En het is zo'n detail dat elke avond terugkomt.",
+          "parler": [
+            "Is er een kamer waar je liever niet meer hebt dat hij komt?",
+            "Wie zorgt er op dit moment het meest voor hem, en is dat goed zo?"
+          ],
+          "eviter": "De regels van de ene dag op de andere veranderen: het dier snapt er niets meer van, en de ander ook niet."
+        },
+        "quo8": {
+          "q": "Je eet het liefst...",
+          "o": [
+            "Altijd samen, aan tafel",
+            "Zo vaak mogelijk samen",
+            "Samen als het uitkomt",
+            "Ieder wanneer hij wil"
+          ],
+          "court": "Samen eten",
+          "pourquoi": "De maaltijd is vaak het enige moment van de dag waarop je tegenover elkaar zit. Voor sommigen is dat heilig, voor anderen is het gewoon eten, en beide ideeën komen meestal uit het gezin waarin je bent opgegroeid.",
+          "parler": [
+            "Hoe ging het eten bij je ouders?",
+            "Welke maaltijd van de week zouden we alleen voor ons tweeën kunnen houden?"
+          ],
+          "eviter": "Er een gewoonte van maken om ieder voor een eigen scherm te eten zonder dat jullie dat samen besloten hebben."
+        }
+      }
+    },
+    "temps": {
+      "titre": "Tijd samen en tijd voor jezelf",
+      "bref": "Tijd",
+      "intro": "Hoeveel tijd samen, hoeveel tijd ieder voor zich, en wat jullie ermee doen.",
+      "rapport": {
+        "fort": "Jullie denken hetzelfde over de balans tussen tijd samen en tijd voor jezelf. Koester dat: het is het eerste waar het leven aan begint te knabbelen.",
+        "moyen": "Jullie zijn het ongeveer eens over tijd samen, met een paar verschillende wensen. Een of twee vaste rituelen die jullie samen afspreken, zijn vaak genoeg om dat op te lossen.",
+        "faible": "Een van jullie heeft waarschijnlijk meer tijd samen nodig, of meer ruimte, dan de ander. Dat wordt vaak gezien als een gebrek aan liefde, terwijl het gewoon een andere behoefte is."
+      },
+      "questions": {
+        "tps1": {
+          "q": "Hoeveel tijd met z'n tweeën (zonder kinderen, vrienden of schermen) zou je willen?",
+          "o": [
+            "Veel meer dan nu",
+            "Iets meer",
+            "Evenveel als nu",
+            "Iets minder"
+          ],
+          "court": "Tijd samen",
+          "pourquoi": "Tijd samen is het eerste wat verdwijnt als het leven voller wordt: werk, kinderen, vrienden. Als de een er gebrek aan heeft en de ander niet, heeft de eerste het gevoel dat hij na al de rest komt.",
+          "parler": [
+            "Wanneer hebben we voor het laatst een echte avond met z'n tweeën gehad?",
+            "Wat zouden we uit onze week kunnen schrappen om een moment voor onszelf te houden?"
+          ],
+          "eviter": "Het vragen als verwijt (‘we doen nooit meer iets samen’): dan gaat de ander zich verdedigen in plaats van er zin in te krijgen."
+        },
+        "tps2": {
+          "q": "Tijd helemaal voor jezelf, alleen: hoe vaak heb je die nodig?",
+          "o": [
+            "Heel vaak, ik kan niet zonder",
+            "Regelmatig",
+            "Af en toe",
+            "Bijna nooit"
+          ],
+          "court": "Tijd voor jezelf",
+          "pourquoi": "Behoefte hebben aan alleen zijn betekent niet dat je minder van iemand houdt. Maar wie er nooit behoefte aan heeft, kan het als afwijzing ervaren, en wie er wel behoefte aan heeft, stikt als hij het niet krijgt.",
+          "parler": [
+            "Als je behoefte hebt aan rust, hoe kan ik dat weten zonder dat jij je hoeft te verantwoorden?",
+            "Hoe ziet jouw ideale moment voor jezelf eruit?"
+          ],
+          "eviter": "De behoefte van de ander aan alleen zijn opvatten als kritiek op jezelf."
+        },
+        "tps3": {
+          "q": "De telefoon aan tafel en in bed, dat is voor jou...",
+          "o": [
+            "Verboden",
+            "Liever niet",
+            "Hangt ervan af",
+            "Geen enkel probleem"
+          ],
+          "court": "De telefoon aan tafel en in bed",
+          "pourquoi": "De telefoon is een van de meest gehoorde verwijten in relaties geworden, vooral 's avonds. Het ding zelf is niet het probleem, wel het gevoel dat je na dat ding komt.",
+          "parler": [
+            "Op welk moment van de dag stoort mijn telefoon je het meest?",
+            "Zullen we een week lang een eenvoudige regel proberen, zoals geen telefoon in bed?"
+          ],
+          "eviter": "Preken met je eigen telefoon in de hand."
+        },
+        "tps4": {
+          "q": "Hobby's zie je het liefst...",
+          "o": [
+            "Bijna allemaal samen",
+            "Vooral samen, met ieder ook een eigen hobby",
+            "Vooral ieder apart, met een paar samen",
+            "Ieder zijn eigen hobby's"
+          ],
+          "court": "Hobby's",
+          "pourquoi": "Samen hobby's delen brengt je dichter bij elkaar, je eigen hobby's houden zorgt dat je jezelf blijft. Het wringt als de een de hobby's van de ander ervaart als afwezigheid.",
+          "parler": [
+            "Is er een activiteit die je me zou willen laten ontdekken?",
+            "Wat zouden we samen kunnen beginnen dat we geen van beiden ooit gedaan hebben?"
+          ],
+          "eviter": "Met tegenzin meegaan naar de hobby van de ander: gun hem of haar dan liever dat eigen moment."
+        },
+        "tps5": {
+          "q": "Uitgaan (restaurant, iets drinken, concert, feestje), daar heb je zin in...",
+          "o": [
+            "Een paar keer per week",
+            "Een keer per week",
+            "Een paar keer per maand",
+            "Zelden, ik blijf liever thuis"
+          ],
+          "court": "Uitgaan",
+          "pourquoi": "Een stel dat graag thuis blijft en een stel dat graag uitgaat, zijn allebei even gelukkig. Pas als de een wil uitgaan en de ander thuis wil blijven, gaat ieder uiteindelijk alleen uit, of blijft gefrustreerd thuis.",
+          "parler": [
+            "Is er een uitje waar je van droomt met mij, dat we nog nooit gedaan hebben?",
+            "Als ik weiger om uit te gaan, hoe vat je dat op?"
+          ],
+          "eviter": "Met tegenzin ja zeggen en de hele avond chagrijnig zijn."
+        },
+        "tps6": {
+          "q": "Een geslaagde vakantie is voor jou vooral...",
+          "o": [
+            "Uitrusten, niets doen",
+            "Bezienswaardigheden zien, ontdekken",
+            "De natuur in, wandelen, bewegen",
+            "Familie of vrienden opzoeken"
+          ],
+          "court": "Vakanties",
+          "pourquoi": "Op vakantie wacht je het hele jaar, en verschillende verwachtingen maken er voor een van de twee een mislukte vakantie van. Dat is heel goed op te lossen als je het van tevoren weet.",
+          "parler": [
+            "Waar was je beste vakantie ooit, en waarom?",
+            "Zullen we afwisselen: een deel van de reis op jouw manier, een deel op de mijne?"
+          ],
+          "eviter": "Boeken zonder iets te vragen, ook al is het als verrassing bedoeld."
+        },
+        "tps7": {
+          "q": "Kleine attenties (een briefje, een klein cadeautje, een berichtje overdag), die zijn...",
+          "o": [
+            "Heel belangrijk voor me",
+            "Belangrijk",
+            "Fijn, maar meer niet",
+            "Niet zo belangrijk"
+          ],
+          "court": "Kleine attenties",
+          "pourquoi": "Niet iedereen laat zijn liefde op dezelfde manier zien. Voor sommigen telt een berichtje tussen de middag meer dan een groot cadeau, en de ander heeft geen idee dat het gemist wordt.",
+          "parler": [
+            "Wat was de laatste kleine attentie waar je echt blij van werd?",
+            "Wat zou ik vaker kunnen doen, dat me niets kost?"
+          ],
+          "eviter": "Wachten tot de ander het raadt: wat voor jou telt, is voor de ander helemaal niet vanzelfsprekend."
+        },
+        "tps8": {
+          "q": "Belangrijke data (jullie relatiejubileum, Valentijnsdag...):",
+          "o": [
+            "Die moeten gevierd worden, dat is heilig",
+            "Ik sta er graag bij stil",
+            "Een klein gebaar is genoeg",
+            "Ik hecht er geen belang aan"
+          ],
+          "court": "Data vieren",
+          "pourquoi": "Een datum vergeten is voor de een helemaal niet erg en doet de ander pijn. Het gaat niet om de datum, maar om wat hij zegt: ‘ik heb aan ons gedacht’.",
+          "parler": [
+            "Welke datum in het jaar telt voor jou het meest?",
+            "Hoe zou je de volgende willen vieren?"
+          ],
+          "eviter": "Zeggen ‘dat is alleen maar commercieel’ als het voor de ander telt: het gaat om wat de ander voelt, niet om het feest."
+        },
+        "tps9": {
+          "q": "Hoe vaak zou je samen iets willen doen wat jullie nog nooit gedaan hebben (een nieuwe plek, een activiteit, een andere reis)?",
+          "o": [
+            "Veel vaker dan nu",
+            "Iets vaker",
+            "Even vaak als nu",
+            "Minder vaak, ik hou van onze gewoontes"
+          ],
+          "court": "Samen iets nieuws",
+          "pourquoi": "Stellen die regelmatig samen iets nieuws beleven, vervelen zich minder in hun relatie, en verveling slijt een relatie al lang voor de ruzies. Dan moet je wel even veel zin hebben in iets nieuws: voor de een is het een avontuur, voor de ander nog meer vermoeidheid.",
+          "parler": [
+            "Wat is het laatste dat we samen voor het eerst hebben gedaan?",
+            "Wat zou je dit jaar samen willen proberen?"
+          ],
+          "eviter": "Een ‘verrassing’ organiseren die de ander als zoveelste klus zal ervaren."
+        }
+      }
+    },
+    "entourage": {
+      "titre": "Familie en vrienden",
+      "bref": "Familie en vrienden",
+      "intro": "De families, de feestdagen, de vrienden, de avonden zonder de ander. Alles rondom jullie relatie.",
+      "rapport": {
+        "fort": "Jullie kijken op dezelfde manier naar jullie families en vrienden. De feestdagen aan het eind van het jaar zouden goed moeten verlopen!",
+        "moyen": "Een paar verschillen over de plek van familie en vrienden. Niets ongewoons, ieder komt met eigen gewoontes, maar het loont om ze op tafel te leggen voor het volgende familiefeest.",
+        "faible": "Familie en vrienden zijn een gevoelig onderwerp bij jullie. Het gaat bijna nooit om de mensen zelf, eerder om hun plek: wie gaat voor wie, en wanneer."
+      },
+      "questions": {
+        "ent1": {
+          "q": "Hoe vaak zou je jullie families willen zien (die van jou en die van {autre})?",
+          "qNeutre": "Hoe vaak zou je jullie families willen zien (die van jou en die van de ander)?",
+          "o": [
+            "Elke week",
+            "Een paar keer per maand",
+            "Ongeveer een keer per maand",
+            "Een paar keer per jaar"
+          ],
+          "court": "De families zien",
+          "pourquoi": "Ieder komt met een eigen familie, en elke familie heeft haar gewoontes. Wie de eigen familie vaak ziet, vindt dat normaal; de ander kan het gevoel hebben dat die familie alle ruimte inneemt.",
+          "parler": [
+            "Wat vind je leuk aan mijn familie, en wat vind je moeilijk?",
+            "Hoeveel weekenden per maand bij onze families vind je redelijk?"
+          ],
+          "eviter": "Kritiek hebben op de familie van de ander: op je eigen familie mag je kritiek hebben, maar je hoort het zelden graag van de ander."
+        },
+        "ent2": {
+          "q": "Als je familie in jouw bijzijn kritiek heeft op {autre}, dan...",
+          "qNeutre": "Als je familie in jouw bijzijn kritiek heeft op de ander, dan...",
+          "o": [
+            "Neem ik {autre} meteen in bescherming",
+            "Praat ik er later over met mijn familie",
+            "Zeg ik op dat moment niets",
+            "Bemoei ik me er niet mee"
+          ],
+          "oNeutre": [
+            "Neem ik de ander meteen in bescherming",
+            "Praat ik er later over met mijn familie",
+            "Zeg ik op dat moment niets",
+            "Bemoei ik me er niet mee"
+          ],
+          "court": "De ander verdedigen tegenover je familie",
+          "pourquoi": "Het is niet wat de schoonfamilie zegt dat het meest pijn doet, maar het zwijgen van je partner. Weten dat de ander het voor je opneemt, verandert alles.",
+          "parler": [
+            "Was er een keer dat je wilde dat ik iets zei, en ik zei niets?",
+            "Hoe wil je liefst dat ik reageer als het gebeurt?"
+          ],
+          "eviter": "Antwoorden met ‘ze bedoelden het niet zo’: misschien niet, maar het deed toch pijn."
+        },
+        "ent3": {
+          "q": "De feestdagen aan het eind van het jaar breng je het liefst door...",
+          "o": [
+            "Bij mijn familie",
+            "Bij de familie van {autre}",
+            "Om het jaar bij een van beide",
+            "Met z'n tweeën of met vrienden"
+          ],
+          "court": "De feestdagen",
+          "pourquoi": "Kerst is een van de momenten met de meeste spanning in een relatie: twee families, één avond, en tradities waar ieder aan hecht zonder het altijd te zeggen.",
+          "parler": [
+            "Wat telt voor jou het meest met kerst: de plek, de mensen, of een bepaald moment?",
+            "Zullen we nu al beslissen voor de komende drie jaar?"
+          ],
+          "eviter": "Wachten tot december om erover te praten: onder druk verdedigt ieder zijn eigen kamp."
+        },
+        "ent4": {
+          "q": "Je vrienden en die van {autre}, die zie je het liefst...",
+          "qNeutre": "Je vrienden en die van de ander, die zie je het liefst...",
+          "o": [
+            "Allemaal samen, door elkaar",
+            "Vaak samen, soms ieder apart",
+            "Vooral ieder apart",
+            "Ieder houdt zijn eigen vrienden"
+          ],
+          "court": "Jullie vrienden mengen",
+          "pourquoi": "Sommigen dromen van een gezamenlijke vriendengroep, anderen houden hun vrienden liever voor zichzelf. Allebei te verdedigen, maar wie nooit wordt uitgenodigd bij de vrienden van de ander, kan zich buitengesloten voelen.",
+          "parler": [
+            "Bij welke vrienden van mij voel je je het meest op je gemak?",
+            "Zijn er vrienden die je liever zonder mij ziet? Dat is prima, zeg maar welke."
+          ],
+          "eviter": "Je vrienden bij elk uitje opdringen, of de ander er juist nooit bij vragen."
+        },
+        "ent5": {
+          "q": "Dat {autre} zonder jou uitgaat (avondje uit, weekend met vrienden), vind je...",
+          "qNeutre": "Dat de ander zonder jou uitgaat (avondje uit, weekend met vrienden), vind je...",
+          "o": [
+            "Normaal, zo vaak als er zin in is",
+            "Normaal, af en toe",
+            "Oké als het zelden is",
+            "Moeilijk"
+          ],
+          "court": "Zonder de ander uitgaan",
+          "pourquoi": "Niet het avondje uit is het probleem, maar wat je je ondertussen voorstelt. Afspreken wat normaal is, voorkomt dat elk uitje een onderhandeling wordt.",
+          "parler": [
+            "Wat zou je geruststellen als ik zonder jou uitga?",
+            "Eén avond met vrienden per week, per maand: wat lijkt je normaal?"
+          ],
+          "eviter": "‘Ga maar’ zeggen en ondertussen laten merken dat je het er niet mee eens bent."
+        },
+        "ent6": {
+          "q": "Ooit een ouder die niet meer alleen kan wonen bij jullie in huis nemen:",
+          "o": [
+            "Ja, vanzelfsprekend",
+            "Ja, als het nodig is",
+            "Liever niet",
+            "Nee"
+          ],
+          "court": "Een ouder in huis nemen",
+          "pourquoi": "Op je dertigste stel je je die vraag niet, en op een dag valt hij zonder waarschuwing op je bord. In sommige families is het vanzelfsprekend, in andere ondenkbaar.",
+          "parler": [
+            "Hoe ging het in jouw familie met de grootouders?",
+            "Als het morgen gebeurde met een van onze ouders, wat zouden we dan precies doen?"
+          ],
+          "eviter": "Je familie iets beloven zonder het met de ander besproken te hebben."
+        },
+        "ent7": {
+          "q": "Wat er in jullie relatie gebeurt, vertel je aan familie en vrienden...",
+          "o": [
+            "Ik vertel bijna alles",
+            "Ik vertel best veel",
+            "Ik vertel weinig",
+            "Ik vertel niets"
+          ],
+          "court": "De relatie vertellen aan anderen",
+          "pourquoi": "Je hart luchten doet goed, maar de ander kan het heel slecht vinden om te ontdekken dat jullie vrienden alle details van jullie ruzies kennen. Ieder heeft een grens, en die kun je maar beter kennen.",
+          "parler": [
+            "Wat zou je niet willen dat ik vertel, zelfs niet aan mijn beste vrienden?",
+            "Bij wie stort je je hart uit als het niet goed gaat tussen ons?"
+          ],
+          "eviter": "Een ruzie aan anderen vertellen voordat je het er met de ander over hebt gehad."
+        }
+      }
+    },
+    "travail": {
+      "titre": "Werk en ambities",
+      "bref": "Werk",
+      "intro": "De plek van werk in je leven, je plannen, en wat jullie bereid zijn te veranderen voor de ander.",
+      "rapport": {
+        "fort": "Werk heeft voor jullie allebei dezelfde plek in je leven. Dat bespaart jullie het gevoel dat je na het werk van de ander komt.",
+        "moyen": "Jullie hebben wat verschillende ambities, en dat is heel normaal. Het belangrijkste is dat ieder weet wat de ander over vijf jaar zou willen doen.",
+        "faible": "Werk weegt voor jullie allebei helemaal niet even zwaar. Voor de een is het misschien een passie, voor de ander een manier om de kost te verdienen. Dat kan heel goed samengaan, als je het van elkaar weet."
+      },
+      "questions": {
+        "tra1": {
+          "q": "In je leven neemt werk een plek in die...",
+          "o": [
+            "Centraal staat, het is een groot deel van wie ik ben",
+            "Belangrijk is",
+            "Nuttig is, maar meer niet",
+            "Bijzaak is, ik werk vooral om te leven"
+          ],
+          "court": "De plek van werk",
+          "pourquoi": "Als werk voor de een ontzettend belangrijk is en voor de ander weinig, voelt de eerste zich onbegrepen en de tweede verwaarloosd. Er is geen goed antwoord, alleen twee manieren van leven die op elkaar afgestemd moeten worden.",
+          "parler": [
+            "Wat vind je eigenlijk leuk aan je werk?",
+            "Zijn er momenten waarop je het gevoel hebt dat mijn werk voor jou gaat?"
+          ],
+          "eviter": "‘Het is maar werk’ zeggen tegen iemand voor wie het niet zomaar werk is."
+        },
+        "tra2": {
+          "q": "'s Avonds of in het weekend werken is voor jou...",
+          "o": [
+            "Normaal als het werk dat vraagt",
+            "Af en toe acceptabel",
+            "Liever niet",
+            "Geen sprake van"
+          ],
+          "court": "Werken 's avonds en in het weekend",
+          "pourquoi": "De mails van 's avonds en het dossier van zondag knabbelen aan de tijd samen zonder dat je het merkt. Wat voor de een normaal is, voelt voor de ander als afwezigheid.",
+          "parler": [
+            "Welk moment van de week zou je werkvrij willen houden, wat er ook gebeurt?",
+            "Wat voel je als ik 's avonds werk?"
+          ],
+          "eviter": "Beloven dat je ‘nooit meer’ 's avonds werkt: een afspraak die je volhoudt, is beter."
+        },
+        "tra3": {
+          "q": "Van baan veranderen of weer gaan studeren, ook als je daardoor een tijd minder verdient:",
+          "o": [
+            "Dat zou ik zonder twijfel doen",
+            "Waarom niet, als het plan goed in elkaar zit",
+            "Liever niet",
+            "Nee, te riskant"
+          ],
+          "court": "Van beroep veranderen",
+          "pourquoi": "Een carrièreswitch doe je zelden alleen: het is de relatie die het lagere inkomen en de onzekerheid draagt. Weten of de ander zou meegaan, voorkomt dat je jarenlang een plan geheimhoudt.",
+          "parler": [
+            "Als je morgen elk beroep kon kiezen, welk zou het dan zijn?",
+            "Met hoeveel zouden we ons budget een jaar lang kunnen verkleinen, als een van ons het erop waagde?"
+          ],
+          "eviter": "De ander bij de eerste woorden al ontmoedigen: je kunt bang zijn en toch tot het eind luisteren."
+        },
+        "tra4": {
+          "q": "Veel geld verdienen is voor jou...",
+          "o": [
+            "Een belangrijk doel",
+            "Mooi meegenomen als het komt",
+            "Bijzaak",
+            "Helemaal geen doel"
+          ],
+          "court": "Veel geld verdienen",
+          "pourquoi": "Het geld dat je wilt verdienen, zegt vaak veel over wat je van het leven verwacht: zekerheid, vrijheid, succes, of niets van dat alles. Twee heel verschillende ambities trekken een relatie uiteindelijk in twee richtingen.",
+          "parler": [
+            "Wat zou je doen met veel meer geld?",
+            "Wat zou je willen opofferen om meer te verdienen?"
+          ],
+          "eviter": "De ambitie van de ander materialistisch noemen, of het gebrek aan ambitie lui."
+        },
+        "tra5": {
+          "q": "Hoe vaak heb je 's avonds behoefte om over je werkdag te vertellen?",
+          "o": [
+            "Elke dag, dat is belangrijk",
+            "Vaak",
+            "Soms",
+            "Zelden, ik schakel liever uit"
+          ],
+          "court": "Over werk praten 's avonds",
+          "pourquoi": "Voor de een is over je dag vertellen een manier om ervan los te komen. Voor de ander is het hem opnieuw beleven. Wie behoefte heeft om te praten en iemand treft die wil uitschakelen, blijft alleen met zijn zorgen.",
+          "parler": [
+            "Als je over je dag vertelt, wil je dan dat ik mijn mening geef, of alleen dat ik luister?",
+            "Zullen we een moment afspreken om erover te praten, en dan schakelen we uit?"
+          ],
+          "eviter": "Oplossingen aandragen als de ander er gewoon over wil praten."
+        },
+        "tra6": {
+          "q": "Als een van jullie veel meer verdient dan de ander, dan...",
+          "o": [
+            "Verandert dat niets",
+            "Kan dat een paar kleine dingen veranderen",
+            "Kan dat een onevenwicht geven",
+            "Zou ik daar veel moeite mee hebben"
+          ],
+          "court": "Een verschil in salaris",
+          "pourquoi": "Een verschil in salaris verandert vaak meer dan je denkt: wie beslist, wie wat betaalt, wie zich iets verschuldigd voelt. Erover praten als alles goed gaat, is veel makkelijker dan op het moment dat het wringt.",
+          "parler": [
+            "Als een van ons twee keer zoveel verdiende als de ander, wat zou er dan bij ons veranderen?",
+            "Heb je je weleens ongemakkelijk gevoeld over geld tussen ons?"
+          ],
+          "eviter": "Wie minder verdient laten voelen dat hij of zij de relatie ‘geld kost’."
+        },
+        "tra7": {
+          "q": "Samen een project opzetten (een bedrijf, een activiteit, een vereniging):",
+          "o": [
+            "Daar droom ik van",
+            "Waarom niet",
+            "Liever niet, ik hou relatie en werk liever gescheiden",
+            "Nee"
+          ],
+          "court": "Een project samen",
+          "pourquoi": "Sommige stellen dromen ervan om samen iets op te bouwen, andere willen dat de relatie een toevluchtsoord blijft. Weten waar de ander staat, voorkomt dat je een project voorstelt waar hij of zij bang van wordt.",
+          "parler": [
+            "Als we samen een project moesten opzetten, wat zou het dan zijn?",
+            "Wat zou je eng vinden aan samenwerken met mij?"
+          ],
+          "eviter": "De ander meeslepen in je project in de veronderstelling dat hij of zij het leuk zal vinden."
+        }
+      }
+    },
+    "argent": {
+      "titre": "Geld",
+      "bref": "Geld",
+      "intro": "Een gezamenlijke rekening of niet, de verdeling van de uitgaven, sparen. Geld is een van de onderwerpen die stellen het vaakst uit de weg gaan, dus dit is je kans.",
+      "rapport": {
+        "fort": "Jullie kijken op dezelfde manier naar geld. Dat is een echte troef, want het is een van de eerste onderwerpen waarover stellen ruzie maken.",
+        "moyen": "Jullie zijn het vrij eens over geld, met een paar punten om af te stemmen. Praat er het liefst over op een dag waarop alles goed gaat, niet op de dag van een grote uitgave.",
+        "faible": "Geld betekent niet hetzelfde voor jullie. Vaak zitten er twee verschillende angsten achter: tekortkomen, of niet van het leven genieten. Een duidelijke regeling, samen besloten, brengt veel rust."
+      },
+      "questions": {
+        "arg1": {
+          "q": "Het geld in jullie relatie, als het aan jou ligt...",
+          "o": [
+            "Alles samen",
+            "Een gezamenlijke rekening voor de gezamenlijke uitgaven, de rest voor ieder apart",
+            "Ieder zijn eigen geld, de rekeningen delen we",
+            "Ieder zijn eigen geld, we bekijken het per keer"
+          ],
+          "court": "De gezamenlijke rekening",
+          "pourquoi": "Er is geen goede manier om het te regelen, alleen de manier die bij jullie allebei past. Het wringt als de een een aparte rekening ervaart als wantrouwen en de ander een gezamenlijke rekening als verlies van vrijheid.",
+          "parler": [
+            "Hoe werd het geld geregeld bij je ouders?",
+            "Wat geeft jou rust als het om geld gaat?"
+          ],
+          "eviter": "Er een kwestie van vertrouwen van maken (‘vertrouw je me niet?’): vaak is het gewoon een kwestie van gewoonte."
+        },
+        "arg2": {
+          "q": "De gezamenlijke uitgaven (huur, boodschappen, uitjes) verdeel je het liefst...",
+          "o": [
+            "Half om half",
+            "Naar wat ieder verdient",
+            "Wie het meest verdient, betaalt meer, zonder te rekenen",
+            "We houden het niet bij"
+          ],
+          "court": "De verdeling van de uitgaven",
+          "pourquoi": "Half om half lijkt eerlijk, tot de dag dat de een twee keer zoveel verdient als de ander en de tweede niets meer overhoudt. Verdelen naar inkomen lijkt ook eerlijk, maar sommigen ervaren het als boekhouden.",
+          "parler": [
+            "Hoeveel houd jij aan het eind van de maand over voor jezelf, en ik?",
+            "Wat zou jij het eerlijkst vinden, en waarom?"
+          ],
+          "eviter": "Tot op de cent bijhouden zonder het besproken te hebben: de ander ontdekt het en ervaart het als wantrouwen."
+        },
+        "arg3": {
+          "q": "Bij een aankoop van meer dan 300 euro alleen voor jezelf...",
+          "o": [
+            "Doe ik het zonder erover te praten",
+            "Laat ik het {autre} weten",
+            "Praat ik er eerst over",
+            "Beslis ik samen met {autre}"
+          ],
+          "oNeutre": [
+            "Doe ik het zonder erover te praten",
+            "Laat ik het de ander weten",
+            "Praat ik er eerst over",
+            "Beslis ik samen met de ander"
+          ],
+          "court": "Grote aankopen",
+          "pourquoi": "Het is niet het bedrag dat boos maakt, maar de aankoop achteraf ontdekken. Samen een grens afspreken voorkomt zowel het gevoel gecontroleerd te worden als vervelende verrassingen.",
+          "parler": [
+            "Vanaf welk bedrag zou je willen dat we het er eerst over hebben?",
+            "Is er een aankoop van mij waar je van schrok?"
+          ],
+          "eviter": "Een aankoop verbergen: de dag dat het uitkomt, wordt het een kwestie van vertrouwen."
+        },
+        "arg4": {
+          "q": "Geld opzijzetten is voor jou...",
+          "o": [
+            "Een absolute prioriteit",
+            "Belangrijk",
+            "Goed als het kan",
+            "Geen prioriteit, je moet genieten"
+          ],
+          "court": "Sparen",
+          "pourquoi": "Wie spaart, ziet de uitgaven van de ander als zorgeloosheid; wie uitgeeft, ziet het sparen van de ander als een leven dat wordt uitgesteld. Vaak zijn het twee verschillende angsten: tekortkomen, of niet leven.",
+          "parler": [
+            "Waar zou je over tien jaar bang voor zijn als het om geld gaat?",
+            "Hoeveel zouden we elke maand opzij kunnen zetten zonder ons iets te ontzeggen?"
+          ],
+          "eviter": "De uitgaven van de ander veroordelen zonder te weten wat ze voor hem of haar betekenen."
+        },
+        "arg5": {
+          "q": "Je krijgt zomaar 1000 euro: wat doe je ermee?",
+          "o": [
+            "Ik zet het opzij",
+            "Een reisje of een uitje met z'n tweeën",
+            "Iets voor in huis",
+            "Iets leuks voor mezelf"
+          ],
+          "court": "Zomaar 1000 euro",
+          "pourquoi": "Deze vraag zonder inzet zegt veel over wat geld voor ieder betekent: zekerheid, herinneringen, comfort of vrijheid.",
+          "parler": [
+            "Zullen we onszelf echt eens verwennen, met een deel van ons spaargeld?",
+            "Waar word je het blijst van: iets kopen of iets beleven?"
+          ],
+          "eviter": "De keuze van de ander belachelijk maken: er is hier geen fout antwoord."
+        },
+        "arg6": {
+          "q": "Met elkaar over geld praten is...",
+          "o": [
+            "Makkelijk, we doen het vaak",
+            "Vrij makkelijk",
+            "Een beetje ongemakkelijk",
+            "Lastig, we vermijden het"
+          ],
+          "court": "Over geld praten",
+          "pourquoi": "Geld is een van de onderwerpen die stellen het meest vermijden, en een onderwerp dat je vermijdt, komt altijd op het verkeerde moment terug. Als de een het makkelijk vindt en de ander lastig, is het misschien zo dat de een praat en de ander zwijgt.",
+          "parler": [
+            "Waar voel je je ongemakkelijk bij als we over geld praten?",
+            "Hoe vaak zullen we rustig even samen naar ons geld kijken?"
+          ],
+          "eviter": "Alleen over geld praten als er een probleem is."
+        },
+        "arg7": {
+          "q": "Wie beheert het meest het geld van jullie relatie (budget, rekeningen, papieren, belastingen)?",
+          "court": "Geld en papieren beheren",
+          "pourquoi": "Wie de papieren beheert, draagt een onzichtbare last, en wie niets beheert, weet vaak niet hoe het ervoor staat. Dat wordt een echt probleem op de dag van een grote tegenvaller.",
+          "parler": [
+            "Zou je weten waar onze belangrijke papieren liggen als ik er niet was?",
+            "Zou je het beheer anders willen verdelen?"
+          ],
+          "eviter": "De ander alles laten beheren, en hem of haar daarna de keuzes verwijten."
+        },
+        "arg7b": {
+          "q": "Als jullie samen zijn (uitjes, restaurants, weekendjes weg), wie betaalt dan meestal?",
+          "court": "Wie betaalt bij uitjes",
+          "pourquoi": "Zonder samen te wonen, is het geld van de relatie vooral het geld van de uitjes. Wie bijna altijd betaalt, merkt dat op den duur; wie bijna nooit betaalt, vaak niet.",
+          "parler": [
+            "Vind je het in evenwicht, wat ieder bijdraagt als we uitgaan?",
+            "Hoe doen we het als een van ons duidelijk minder verdient dan de ander?"
+          ],
+          "eviter": "Elke rekening in je hoofd bijhouden zonder er ooit over te praten."
+        },
+        "arg8": {
+          "q": "Een familielid financieel helpen, ook met een groot bedrag:",
+          "o": [
+            "Natuurlijk, zonder aarzelen",
+            "Ja, als het redelijk blijft",
+            "Alleen in noodgevallen",
+            "Nee, niet met een groot bedrag"
+          ],
+          "court": "Je familie financieel helpen",
+          "pourquoi": "In sommige families is het vanzelfsprekend om elkaar te helpen. In andere leen je geen geld uit. Als het geld gezamenlijk is, is het niet langer alleen de beslissing van degene van wie het de familie is.",
+          "parler": [
+            "Als iemand uit je familie je morgen om geld vroeg, wat zou je dan doen?",
+            "Tot welk bedrag zou je het normaal vinden dat we helpen zonder het er eerst over te hebben?"
+          ],
+          "eviter": "Je familie stiekem helpen met jullie gezamenlijke geld."
+        }
+      }
+    },
+    "logement": {
+      "titre": "Waar en hoe je wilt wonen",
+      "bref": "Wonen",
+      "intro": "Samenwonen, de stad of het platteland, kopen, verhuizen. Beslissingen die je niet half om half kunt nemen.",
+      "rapport": {
+        "fort": "Jullie zien jezelf op dezelfde plek wonen, op dezelfde manier. Voor de grote beslissingen is dat een stevige basis.",
+        "moyen": "Jullie zijn het in grote lijnen eens over waar en hoe jullie willen wonen, met een paar nuances. Die worden echte vragen op de dag dat er een beslissing valt, dus praat er liever eerder over.",
+        "faible": "Jullie zien jezelf niet per se op dezelfde plek wonen, en ook niet op dezelfde manier. Zulke beslissingen kun je niet half om half nemen, dus praat er liever lang voordat je moet kiezen over."
+      },
+      "questions": {
+        "log1": {
+          "q": "Samenwonen zou je willen...",
+          "o": [
+            "Zo snel mogelijk",
+            "Binnen het jaar",
+            "Over een paar jaar",
+            "Het is niet per se een doel"
+          ],
+          "court": "Samenwonen",
+          "pourquoi": "De een wacht al maanden op de vraag, de ander heeft hem zich nooit echt gesteld: dat verschil komt heel vaak voor, en je ontdekt het maar beter voordat het wachten in wrok omslaat.",
+          "parler": [
+            "Waar krijg je zin in als je aan samenwonen denkt, en waar ben je bang voor?",
+            "Wat moet er geregeld zijn voordat we gaan samenwonen?"
+          ],
+          "eviter": "‘Nog niet meteen’ opvatten als ‘niet met jou’."
+        },
+        "log2": {
+          "q": "Over tien jaar zie je jezelf wonen...",
+          "o": [
+            "In een grote stad",
+            "In een middelgrote stad of in een voorstad",
+            "Op het platteland",
+            "In het buitenland"
+          ],
+          "court": "Waar wonen over tien jaar",
+          "pourquoi": "Stad of platteland is niet alleen een kwestie van decor: het is een baan, een school, vrienden, een ritme. Dat kun je niet half om half doen, en daarom praat je er maar beter over lang voordat je gaat zoeken.",
+          "parler": [
+            "Als we overal konden wonen zonder rekening te houden met werk, waar zou dat dan zijn?",
+            "Wat zou je het meest missen als we hier weggingen?"
+          ],
+          "eviter": "De vraag voor je uit schuiven met ‘we zien wel’: op de dag dat hij zich stelt, moet je vaak snel beslissen."
+        },
+        "log3": {
+          "q": "Samen een huis kopen is...",
+          "o": [
+            "Een belangrijk doel",
+            "Een goed idee, ooit",
+            "Niet onmisbaar",
+            "Niets voor mij"
+          ],
+          "court": "Een huis kopen",
+          "pourquoi": "Voor de een betekent kopen iets opbouwen en je veilig voelen. Voor de ander betekent het je voor vijfentwintig jaar in de schulden steken en je vrijheid verliezen. Allebei te verdedigen, maar het leidt niet tot hetzelfde leven.",
+          "parler": [
+            "Wat betekent kopen voor jou: zekerheid, succes, iets anders?",
+            "Hoeveel jaar zie je ons nog huren?"
+          ],
+          "eviter": "Alvast huizen gaan bekijken om de ander over te halen."
+        },
+        "log3b": {
+          "q": "Jullie huidige woning, voor de komende jaren...",
+          "o": [
+            "Die is perfect, we blijven",
+            "Die volstaat nog een tijdje",
+            "We zullen binnenkort moeten verhuizen",
+            "Ik zou er zo snel mogelijk weg willen"
+          ],
+          "court": "Jullie huidige woning",
+          "pourquoi": "Aan een huis dat je samen gekocht hebt, raak je gehecht, of je voelt je er klem in zitten. Als de een ervan droomt om weg te gaan en de ander er het huis voor het leven in ziet, weet je dat maar beter.",
+          "parler": [
+            "Wat mis je in ons huis?",
+            "Waar zie je ons over vijf jaar wonen?"
+          ],
+          "eviter": "Wachten tot de volgende grote beslissing (een baby, een nieuwe baan) om erover te praten."
+        },
+        "log4": {
+          "q": "Dicht bij jullie families wonen is...",
+          "o": [
+            "Onmisbaar",
+            "Liever wel",
+            "Niet belangrijk",
+            "Ik woon liever ver weg"
+          ],
+          "court": "Dicht bij de families wonen",
+          "pourquoi": "Dicht bij de families heb je hulp, zondagse etentjes en grootouders om de hoek. Verder weg heb je meer vrijheid. En als de twee families ver van elkaar wonen, wordt de vraag al snel: dicht bij welke?",
+          "parler": [
+            "Hoe ver van je ouders zou je willen wonen?",
+            "Wat vind je fijn aan ver van je familie wonen, of juist dichtbij?"
+          ],
+          "eviter": "Bij je familie in de buurt gaan wonen in de veronderstelling dat de ander wel volgt."
+        },
+        "log5": {
+          "q": "Ver weg verhuizen voor het werk van {autre}:",
+          "qNeutre": "Ver weg verhuizen voor het werk van de ander:",
+          "o": [
+            "Ja, zonder aarzelen",
+            "Ja, als het een mooie kans is",
+            "Moeilijk",
+            "Nee"
+          ],
+          "court": "Verhuizen voor het werk van de ander",
+          "pourquoi": "Een mooi werkaanbod in een andere stad komt vaak onverwacht. Als de een denkt dat de ander meegaat en de ander nooit heeft overwogen om te verhuizen, wordt het aanbod een keuze tussen de relatie en de carrière.",
+          "parler": [
+            "Voor welke kans zou je hier weggaan?",
+            "Wat zou je terugvragen als je met mij meeging?"
+          ],
+          "eviter": "Ver weg solliciteren zonder het eerst te bespreken, ‘gewoon om te kijken’."
+        },
+        "log6": {
+          "q": "Een aantal jaren in het buitenland wonen:",
+          "o": [
+            "Daar droom ik van",
+            "Waarom niet",
+            "Liever niet",
+            "Nee, nooit"
+          ],
+          "court": "In het buitenland wonen",
+          "pourquoi": "Ergens anders gaan wonen is voor sommigen een droom en voor anderen een ontworteling. Het is zo'n plan dat je voor jezelf houdt tot het juiste moment, en dat de ander verrast op de dag dat je het zegt.",
+          "parler": [
+            "Is er een land waar je jezelf zou zien wonen?",
+            "Wat houdt je hier?"
+          ],
+          "eviter": "De droom van de ander met één zin wegwuiven: je kunt nee zeggen tegen een plan en toch respect hebben voor de wens."
+        },
+        "log7": {
+          "q": "Wie beslist bij jullie thuis het meest over de inrichting en de aankleding?",
+          "court": "De inrichting",
+          "pourquoi": "Wie nooit iets kiest, kan zich uiteindelijk niet meer thuis voelen. Wie alles kiest, heeft soms het gevoel dat het de ander niets kan schelen.",
+          "parler": [
+            "Is er een hoekje in huis dat je naar jouw smaak zou willen inrichten?",
+            "Wat zou je als eerste veranderen bij ons thuis?"
+          ],
+          "eviter": "De inrichting veranderen zonder het te vragen, ook al is het als verrassing bedoeld."
+        }
+      }
+    },
+    "enfants": {
+      "titre": "Kinderen",
+      "bref": "Kinderen",
+      "intro": "Wel of geen kinderen, wanneer, hoeveel, hoe je ze opvoedt. Of, als jullie er al hebben, hoe jullie het regelen.",
+      "rapport": {
+        "fort": "Over kinderen zitten jullie op dezelfde golflengte. Dat is waarschijnlijk het onderwerp waarbij het het belangrijkst is.",
+        "moyen": "Jullie zitten dicht bij elkaar wat kinderen betreft, met verschillen in planning of aanpak. Die zijn goed op te lossen als je er vroeg over praat.",
+        "faible": "Jullie hebben niet dezelfde wensen of ideeën over kinderen. Een compromis is bij dit onderwerp het moeilijkst, dus praat er eerlijk over, zonder erop te rekenen dat de tijd de ander wel van gedachten doet veranderen."
+      },
+      "questions": {
+        "enf1": {
+          "q": "Kinderen krijgen:",
+          "o": [
+            "Ja, zeker weten",
+            "Ja, waarschijnlijk",
+            "Ik weet het nog niet",
+            "Nee"
+          ],
+          "court": "Kinderen krijgen",
+          "pourquoi": "Over deze vraag valt niet te onderhandelen: je krijgt geen half kind. Veel stellen hebben hem nooit eerlijk gesteld, waarbij ieder denkt dat de ander er uiteindelijk wel zin in krijgt... of ervan afziet.",
+          "parler": [
+            "Waarom zou je graag kinderen willen, of wat houdt je tegen?",
+            "Als een van ons echt niet wilde, wat zouden we dan doen?"
+          ],
+          "eviter": "Erop rekenen dat de tijd de ander van gedachten doet veranderen."
+        },
+        "enf2": {
+          "q": "Een eerste kind zou idealiter komen...",
+          "o": [
+            "Zo snel mogelijk",
+            "Binnen twee jaar",
+            "Over een paar jaar",
+            "Pas over lange tijd"
+          ],
+          "court": "Wanneer een kind",
+          "pourquoi": "Een kind willen is niet genoeg om het eens te zijn: de een denkt ‘volgend jaar’, de ander ‘over vijf jaar’, en de jaren gaan voorbij. De leeftijd geeft deze vraag soms een deadline.",
+          "parler": [
+            "Wat moet er voor jou geregeld zijn voordat we een kind krijgen?",
+            "Heb je een leeftijdsgrens in je hoofd?"
+          ],
+          "eviter": "Uitstellen zonder een datum te noemen: voor wie wacht, betekent ‘later’ niets."
+        },
+        "enf3": {
+          "q": "Hoeveel kinderen, idealiter?",
+          "o": [
+            "Eén",
+            "Twee",
+            "Drie of meer",
+            "Ik weet het niet, we zien wel"
+          ],
+          "court": "Hoeveel kinderen",
+          "pourquoi": "Eén kind of een groot gezin, dat is niet hetzelfde huis, hetzelfde budget of hetzelfde leven. Het idee komt vaak uit je eigen jeugd, om het opnieuw zo te doen of juist andersom.",
+          "parler": [
+            "Vond je het fijn om enig kind te zijn, of om broers en zussen te hebben?",
+            "Waar komt dat aantal voor jou vandaan?"
+          ],
+          "eviter": "Een aantal vastleggen als een belofte: het leven beslist ook mee."
+        },
+        "enf1b": {
+          "q": "Nog een kind:",
+          "o": [
+            "Ja, zeker weten",
+            "Ja, misschien",
+            "Ik weet het niet",
+            "Nee, ons gezin is compleet"
+          ],
+          "court": "Nog een kind",
+          "pourquoi": "Na een kind veranderen de wensen vaak, en niet altijd in dezelfde richting bij allebei. De een heeft een nieuw evenwicht gevonden, de ander denkt al aan het volgende.",
+          "parler": [
+            "Waar word je blij of juist bang van bij het idee van nog een kind?",
+            "Wat zou er voor jou in het dagelijks leven veranderen?"
+          ],
+          "eviter": "Erover beginnen na een slechte nacht, of net nadat je bij vrienden een schattige baby zag."
+        },
+        "enf2b": {
+          "q": "Sinds jullie kinderen hebben, is de tijd alleen voor jullie tweeën...",
+          "o": [
+            "Heilig, we beschermen hem",
+            "Iets waar we ons best voor doen, al lukt het niet altijd",
+            "Zeldzaam",
+            "Er bijna niet meer"
+          ],
+          "court": "Tijd samen sinds de kinderen",
+          "pourquoi": "Dat is wat onderzoek het duidelijkst laat zien na een geboorte: de relatie komt op de tweede plaats, en jaren later lukt het moeilijk om haar weer voorop te zetten. De stellen die het volhouden, zijn de stellen die momenten met z'n tweeën vasthouden, ook als ze kort zijn.",
+          "parler": [
+            "Wat is voor jou op dit moment een echt moment met z'n tweeën?",
+            "Wat zouden we elke week kunnen inplannen, alleen voor ons?"
+          ],
+          "eviter": "Wachten tot de kinderen groot zijn om aandacht aan de relatie te besteden."
+        },
+        "enf3b": {
+          "q": "Tegenover de kinderen zijn jullie twee ouders...",
+          "o": [
+            "Die samen één front vormen, wat er ook gebeurt",
+            "Die elkaar aanvullen: de een strenger, de ander soepeler",
+            "Die het ieder op hun eigen manier doen",
+            "Van wie er één de meeste beslissingen neemt"
+          ],
+          "court": "Twee ouders tegenover de kinderen",
+          "pourquoi": "Onderzoekers spreken van ‘coparenting’, samen ouder zijn: niet per se dezelfde opvoeding, maar het gevoel een team te vormen. Dat weegt het zwaarst op de relatie als de kinderen er eenmaal zijn, veel zwaarder dan het aantal verschoonde luiers.",
+          "parler": [
+            "Voel je je door mij gesteund tegenover de kinderen?",
+            "Waarover spreken we elkaar het vaakst tegen waar zij bij zijn?"
+          ],
+          "eviter": "Een meningsverschil over de opvoeding uitvechten waar de kinderen bij zijn, en een van hen als getuige nemen."
+        },
+        "enf4": {
+          "q": "Bij het opvoeden van een kind ben je eerder...",
+          "o": [
+            "Streng: duidelijke regels en grenzen",
+            "Duidelijk, maar we praten erover",
+            "Soepel",
+            "Heel soepel: vertrouwen gaat voor alles"
+          ],
+          "court": "De opvoeding",
+          "pourquoi": "Twee ouders die niet hetzelfde idee hebben over gezag, spelen vaak uiteindelijk de lieve en de strenge, en het kind leert snel bij wie het moet zijn. Je hoeft niet dezelfde opvoeding te hebben, wel samen een paar regels af te spreken.",
+          "parler": [
+            "Wat zou je overhouden van de opvoeding van je ouders, en wat zou je niet opnieuw doen?",
+            "Bij welke regel zou je nooit toegeven?"
+          ],
+          "eviter": "De ander tegenspreken waar het kind bij is."
+        },
+        "enf5": {
+          "q": "Wie zorgt er, of zou er, het meest voor de kinderen (dagelijkse dingen, huiswerk, dokter, nachten)?",
+          "court": "Voor de kinderen zorgen",
+          "pourquoi": "Zelfs bij stellen die alles eerlijk willen verdelen, zorgt de komst van een kind er vaak voor dat de last naar één kant doorslaat, binnen een paar maanden en zonder dat iemand dat besloten heeft.",
+          "parler": [
+            "Een gewone week met een kind: wie zou wat doen, precies?",
+            "Wat zou je absoluut zelf willen doen met onze kinderen?"
+          ],
+          "eviter": "Zeggen dat je de ander ‘helpt’ met de kinderen: een ouder helpt niet, die doet zijn deel."
+        },
+        "enf6": {
+          "q": "Minder gaan werken (deeltijd, een pauze) om voor de kinderen te zorgen:",
+          "o": [
+            "Ja, daar heb ik zin in",
+            "Ja, als het nodig is",
+            "Liever niet",
+            "Nee"
+          ],
+          "court": "Minder werken voor de kinderen",
+          "pourquoi": "Als een van de twee minder gaat werken, betalen die carrière en dat pensioen er vaak jarenlang de prijs voor. Het is beter als dat een keuze is die jullie allebei kennen, in plaats van iets wat langzaam zo gegroeid is.",
+          "parler": [
+            "Als een van ons gas terug moest nemen, wie zou dat dan zijn, en waarom?",
+            "Hoe zouden we het compenseren voor wie minder zou verdienen?"
+          ],
+          "eviter": "Ervan uitgaan dat degene die het minst verdient vanzelfsprekend moet stoppen."
+        },
+        "enf7": {
+          "q": "Grootouders in het leven van de kinderen wil je...",
+          "o": [
+            "Heel vaak erbij, het liefst elke dag",
+            "Regelmatig erbij",
+            "Af en toe erbij",
+            "Liever op afstand"
+          ],
+          "court": "De plek van de grootouders",
+          "pourquoi": "Grootouders zijn een waardevolle hulp, en soms een bron van spanning: ongevraagd advies, andere regels, onaangekondigd langskomen. Ieder accepteert van de eigen ouders vaak wat hij of zij van de schoonouders niet zou verdragen.",
+          "parler": [
+            "Wat zou je van mijn ouders accepteren met onze kinderen, en wat niet?",
+            "En van die van jou?"
+          ],
+          "eviter": "Je eigen ouders de regels laten negeren die jullie samen hebben afgesproken."
+        },
+        "enf8": {
+          "q": "In een samengesteld gezin is de opvoeding van de kinderen van de ander...",
+          "o": [
+            "Een zaak van allebei, gelijkwaardig",
+            "Een zaak van allebei, maar de ouder heeft het laatste woord",
+            "Vooral de zaak van de ouder",
+            "Alleen de zaak van de ouder"
+          ],
+          "court": "Het samengestelde gezin",
+          "pourquoi": "De stiefouder weet nooit goed hoever hij of zij mag gaan, en de ouder twijfelt tussen hulp vragen en de eigen kinderen verdedigen. De rollen duidelijk maken lucht iedereen op, te beginnen bij de kinderen.",
+          "parler": [
+            "Wat verwacht je precies van mij met je kinderen?",
+            "Zijn er dingen die je liever niet hebt dat ik doe?"
+          ],
+          "eviter": "Van de opvoeding van de kinderen een wedstrijd met de ex maken."
+        },
+        "enf9": {
+          "q": "Als je partner ineens wel een kind zou willen, dan...",
+          "o": [
+            "Zou dat een echt probleem tussen ons zijn",
+            "Zouden we erover praten, maar ik denk niet dat ik van gedachten verander",
+            "Zou ik er opnieuw over kunnen nadenken",
+            "Zou ik waarschijnlijk meegaan"
+          ],
+          "court": "Als de ander van gedachten verandert",
+          "pourquoi": "Geen kinderen willen is een beslissing die de meeste mensen vroeg nemen en die weinig verandert met de jaren. Maar in een relatie hoeft maar een van de twee te veranderen om alles opnieuw op tafel te leggen.",
+          "parler": [
+            "Wat zou je van gedachten kunnen doen veranderen, als er iets is?",
+            "Als een van ons van gedachten veranderde, wat zouden we dan doen?"
+          ],
+          "eviter": "Denken dat de ander uiteindelijk hetzelfde zal willen als jij."
+        },
+        "enf10": {
+          "q": "Als familie of vrienden vragen ‘en, wanneer komen de kinderen?’, dan...",
+          "o": [
+            "Zeg ik duidelijk dat het niet de bedoeling is",
+            "Ontwijk ik de vraag, met humor of anders",
+            "Weegt het elke keer op me",
+            "Laat ik mijn partner antwoorden"
+          ],
+          "court": "De vraag van anderen",
+          "pourquoi": "Stellen die bewust kinderloos blijven, horen die vraag jarenlang, van familie, collega's en vrienden. Wat ieder voelt bij die druk, en hoe hij of zij erop reageert, zegt veel over hoe stevig de keuze samen is.",
+          "parler": [
+            "Wie stelt je die vraag het vaakst, en wat antwoord je?",
+            "Zou je willen dat we allebei hetzelfde antwoorden?"
+          ],
+          "eviter": "Een van de twee alleen de opmerkingen laten opvangen."
+        },
+        "enf11": {
+          "q": "Zonder kinderen is het plan dat voor jullie tweeën het meest telt...",
+          "o": [
+            "Reizen, ontdekken",
+            "Een plan voor je werk of iets creatiefs",
+            "Een huis, een plek helemaal van ons",
+            "Vrije tijd, zonder groot plan"
+          ],
+          "court": "Het plan in de plaats",
+          "pourquoi": "Een kinderloos stel bouwt zich op rond iets anders: reizen, een vak, een plek, of gewoon tijd. Als de twee niet hetzelfde ‘iets anders’ hebben, heeft de een al snel het gevoel dat hij of zij het plan van de ander leeft.",
+          "parler": [
+            "Waar zie je ons over tien jaar, en wat zijn we dan aan het doen?",
+            "Wat doen we met de vrijheid die het ons geeft?"
+          ],
+          "eviter": "De tijd vullen zonder ooit samen te beslissen wat je ermee doet."
+        },
+        "enf12": {
+          "q": "Wie brengt het liefst tijd door met de kinderen van anderen (neefjes, nichtjes, kinderen van vrienden)?",
+          "court": "De kinderen van anderen",
+          "pourquoi": "Geen kinderen willen zegt niets over wat je voelt bij de kinderen van anderen. Als de een het geweldig vindt om oom of tante te zijn en de ander ze ontloopt, beleef je familieweekenden niet hetzelfde.",
+          "parler": [
+            "Wat vind je wel of niet leuk aan tijd met de kinderen van onze familie en vrienden?",
+            "Peetouder worden, zou je dat zien zitten?"
+          ],
+          "eviter": "De ander bij de kinderen van familie en vrienden een rol opdringen die hij of zij niet gekozen heeft."
+        },
+        "enf13": {
+          "q": "Oud worden zonder kinderen (wie er dan is, eenzaamheid, zorg nodig hebben), daar denk je...",
+          "o": [
+            "Vaak aan, en het maakt me ongerust",
+            "Af en toe aan",
+            "Zelden aan",
+            "Nooit aan, we regelen het als het zover is"
+          ],
+          "court": "Oud worden zonder kinderen",
+          "pourquoi": "Dat is het argument dat kinderloze stellen het vaakst te horen krijgen, en onderzoek bevestigt het niet: kinderloze ouderen zijn niet eenzamer, zolang ze een netwerk om zich heen hebben opgebouwd. Dan moeten jullie er wel allebei op dezelfde manier over denken.",
+          "parler": [
+            "Wat zou je geruststellen voor later?",
+            "Op wie zullen we kunnen rekenen, en wie zal op ons kunnen rekenen?"
+          ],
+          "eviter": "De ongerustheid van de ander wegwuiven met ‘we zien wel’."
+        },
+        "enf14": {
+          "q": "Samen iemand of iets hebben om voor te zorgen (een huisdier, petekinderen, vrijwilligerswerk):",
+          "o": [
+            "Ja, dat is belangrijk voor me",
+            "Ja, waarom niet",
+            "Niet speciaal",
+            "Nee, ik blijf liever vrij"
+          ],
+          "court": "Op een andere manier zorgen",
+          "pourquoi": "Veel kinderloze stellen leggen die wens ergens anders: een hond, een tuin, petekinderen, een vereniging. Als de een er behoefte aan heeft en de ander niet, is dat een kleine frustratie die blijft.",
+          "parler": [
+            "Heb je op dit moment zin om voor iemand of iets te zorgen?",
+            "Wat zouden we in die zin samen kunnen hebben of doen?"
+          ],
+          "eviter": "Een huisdier nemen voor maar een van de twee."
+        }
+      }
+    },
+    "valeurs": {
+      "titre": "Waarden",
+      "bref": "Waarden",
+      "intro": "Religie, verbintenis, wat voor jou het meest telt, en wat je wilt doorgeven.",
+      "rapport": {
+        "fort": "Jullie delen dezelfde waarden. Dat helpt het meest als je moeilijke beslissingen moet nemen.",
+        "moyen": "Jullie waarden liggen dicht bij elkaar, met een paar verschillende prioriteiten. Die maken een relatie vaak rijker, zolang ieder die van de ander respecteert.",
+        "faible": "Jullie zetten niet dezelfde dingen op de eerste plaats. Je kunt heel goed van elkaar houden met verschillende waarden, maar je moet weten welke voor de ander het zwaarst wegen, en wat ze met zich mee zullen brengen."
+      },
+      "questions": {
+        "val1": {
+          "q": "Religie of spiritualiteit is in je leven...",
+          "o": [
+            "Heel belangrijk, ik praktiseer",
+            "Belangrijk, zonder veel te praktiseren",
+            "Weinig belangrijk",
+            "Helemaal niet belangrijk"
+          ],
+          "court": "Religie in je leven",
+          "pourquoi": "Twee verschillende geloven kunnen heel goed samengaan. Het probleem is als je niet weet wat het geloof van de ander voor hem of haar betekent, en wat het met zich meebrengt op de dag van een huwelijk, een geboorte of een overlijden.",
+          "parler": [
+            "Wat geeft je geloof, of het ontbreken ervan, je in het dagelijks leven?",
+            "Zijn er feestdagen of rituelen waar je aan hecht?"
+          ],
+          "eviter": "De spot drijven met de overtuigingen van de ander, ook als grap."
+        },
+        "val2": {
+          "q": "Een religie doorgeven aan je kinderen (doop, godsdienstonderwijs...):",
+          "o": [
+            "Ja, dat is essentieel",
+            "Ja, als het zo uitkomt",
+            "Liever niet, ze kiezen zelf",
+            "Nee"
+          ],
+          "court": "Een religie doorgeven",
+          "pourquoi": "De doop, de besnijdenis, catechese of een religieuze school komen al heel snel na de geboorte, en dan ontdekken veel stellen dat ze er helemaal niet hetzelfde over dachten.",
+          "parler": [
+            "Wat zou je aan onze kinderen willen doorgeven, religie of niet?",
+            "Als onze families druk zouden zetten, wat zouden we dan antwoorden?"
+          ],
+          "eviter": "De grootouders voor jullie laten beslissen."
+        },
+        "val2b": {
+          "q": "Wat je achterlaat (een werk, een bedrijf, iets wat je doorgeeft aan je naasten), hoeveel telt dat voor je?",
+          "o": [
+            "Veel",
+            "Een beetje",
+            "Niet echt",
+            "Helemaal niet"
+          ],
+          "court": "Wat je achterlaat",
+          "pourquoi": "Zonder kinderen stelt de vraag wat je doorgeeft zich anders: een werk, kennis, een plek, een engagement, of niets bijzonders. Twee mensen die er niet even veel belang aan hechten, maken niet dezelfde keuzes in het leven.",
+          "parler": [
+            "Wat zou je willen achterlaten, of doorgeven, en aan wie?",
+            "Is het belangrijk voor je dat we iets opbouwen dat groter is dan wijzelf?"
+          ],
+          "eviter": "Alles wat je doorgeeft terugbrengen tot kinderen: er zijn ook andere manieren."
+        },
+        "val3": {
+          "q": "Trouwen of jullie relatie officieel vastleggen (geregistreerd partnerschap, samenlevingscontract), dat is voor jou...",
+          "o": [
+            "Belangrijk, daar heb ik zin in",
+            "Waarom niet, ooit",
+            "Om het even",
+            "Dat wil ik niet"
+          ],
+          "court": "Trouwen of je relatie vastleggen",
+          "pourquoi": "Voor de een is trouwen vanzelfsprekend of een droom. Voor de ander is het een papiertje dat niets verandert, of een instituut waar hij of zij niet in gelooft. Het misverstand duurt vaak jaren, met verwachtingen aan de ene kant en geen idee van die verwachtingen aan de andere.",
+          "parler": [
+            "Wat zou trouwen voor jou betekenen?",
+            "Als we zouden trouwen, hoe zou dat er dan uitzien?"
+          ],
+          "eviter": "Grapjes maken over een aanzoek als de ander er echt op wacht."
+        },
+        "val3b": {
+          "q": "De verbintenis die jullie zijn aangegaan (huwelijk, geregistreerd partnerschap of wettelijke samenwoning), is voor jou...",
+          "o": [
+            "Voor het leven, wat er ook gebeurt",
+            "Voor het leven, als het kan",
+            "Zolang we samen gelukkig zijn",
+            "Een papiertje dat niet veel verandert"
+          ],
+          "court": "De betekenis van jullie verbintenis",
+          "pourquoi": "Hetzelfde ‘ja’ betekent niet voor iedereen hetzelfde. Weten wat de verbintenis voor de ander betekent, helpt begrijpen hoe hij of zij moeilijke periodes beleeft.",
+          "parler": [
+            "Wat betekende dat ‘ja’ voor jou, op de dag dat we het zeiden?",
+            "Wat is er sindsdien voor jou veranderd?"
+          ],
+          "eviter": "De verbintenis gebruiken als argument in een ruzie."
+        },
+        "val4": {
+          "q": "Duurzaamheid in je dagelijks leven (consumptie, eten, vervoer):",
+          "o": [
+            "Een prioriteit, ik doe veel moeite",
+            "Belangrijk, ik doe wat ik kan",
+            "Ik denk eraan, meer niet",
+            "Het is niet mijn zorg"
+          ],
+          "court": "Duurzaamheid in het dagelijks leven",
+          "pourquoi": "Het milieu is een echt onderwerp in relaties geworden: het vliegtuig voor de vakantie, vlees, de auto, aankopen. Het is niet alleen een mening, het zijn keuzes die je elke dag samen maakt.",
+          "parler": [
+            "Is er een inspanning die je samen met mij zou willen leveren?",
+            "Waarin zou je niet gedwongen willen worden om te veranderen?"
+          ],
+          "eviter": "Bij elke maaltijd of elke aankoop de les lezen."
+        },
+        "val5": {
+          "q": "Wat het meest telt in je leven:",
+          "o": [
+            "Familie",
+            "Liefde",
+            "Succes",
+            "Vrijheid"
+          ],
+          "court": "Wat het meest telt",
+          "pourquoi": "Je kunt van elkaar houden en niet hetzelfde op de eerste plaats zetten. Wat voor ieder het zwaarst weegt, bepaalt de moeilijke keuzes: een baan ver weg, een familie die alle ruimte inneemt, een riskant plan.",
+          "parler": [
+            "Waarom koos je dat als eerste?",
+            "Wat zou je op de tweede plaats zetten?"
+          ],
+          "eviter": "Het antwoord van de ander opvatten als een rangorde van jullie relatie."
+        },
+        "val6": {
+          "q": "Een leugentje om een ruzie te vermijden of iemand niet te kwetsen, is...",
+          "o": [
+            "Nooit acceptabel",
+            "Zelden acceptabel",
+            "Soms acceptabel",
+            "Normaal, dat doet iedereen weleens"
+          ],
+          "court": "Leugentjes",
+          "pourquoi": "Sommigen ervaren de kleinste draai aan de waarheid als verraad, anderen als vriendelijkheid. Op de dag dat een leugentje uitkomt, bepaalt dat verschil hoe groot de ruzie wordt.",
+          "parler": [
+            "Zijn er dingen die je liever niet weet?",
+            "Heb je liever een waarheid die pijn doet of een leugen die beschermt?"
+          ],
+          "eviter": "Gaan snuffelen om het te controleren: dat lost de kwestie van een leugen op en opent een andere, over vertrouwen."
+        },
+        "val7": {
+          "q": "Tradities (feestdagen, familiediners, rituelen):",
+          "o": [
+            "Ik hecht er veel aan",
+            "Ik hou ze graag in ere",
+            "Ik doe mee zonder eraan te hechten",
+            "Ik kan ze best missen"
+          ],
+          "court": "Tradities",
+          "pourquoi": "Tradities zijn vaak het sterkst verbonden met je jeugd. Wie ze best kan missen, kan zonder het te willen iemand kwetsen voor wie een ritueel heel veel betekent.",
+          "parler": [
+            "Welke traditie uit jouw familie zou je willen houden?",
+            "Zullen we er een van onszelf verzinnen?"
+          ],
+          "eviter": "Een traditie van de ander ouderwets noemen."
+        },
+        "val8": {
+          "q": "Dezelfde politieke ideeën hebben als {autre}, is...",
+          "qNeutre": "Dezelfde politieke ideeën hebben als de ander, is...",
+          "o": [
+            "Onmisbaar",
+            "Liever wel",
+            "Niet belangrijk",
+            "Ik vind het zelfs fijn als we het oneens zijn"
+          ],
+          "court": "Politiek",
+          "pourquoi": "Sommige stellen praten nooit over politiek, andere debatteren elke avond. Het wringt als de een er een kwestie van waarden van maakt en de ander een gewone mening.",
+          "parler": [
+            "Is er een maatschappelijk onderwerp waarover we het nooit eens zouden kunnen worden?",
+            "Wat kwetst je als we discussiëren?"
+          ],
+          "eviter": "Discussiëren om te winnen: in een relatie verliest wie een discussie wint vaak de avond."
+        }
+      }
+    },
+    "disputes": {
+      "titre": "Communicatie en ruzies",
+      "bref": "Ruzies",
+      "intro": "Hoe jullie zeggen wat er niet goed zit, hoe jullie ruzie maken, en hoe jullie het weer goedmaken.",
+      "rapport": {
+        "fort": "Jullie gaan op dezelfde manier met spanningen om. Jullie maken vast ruzie, zoals iedereen, maar jullie begrijpen elkaar als het gebeurt.",
+        "moyen": "Jullie gaan niet helemaal op dezelfde manier met ruzies om. Weten wat de ander nodig heeft als het oploopt, verandert al veel.",
+        "faible": "Jullie beleven een meningsverschil op twee heel verschillende manieren. Vaak wil de een het meteen uitpraten en heeft de ander afstand nodig, en ieder maakt zonder het te willen de angst van de ander groter. Dit is het thema waar een beetje aanpak het meest helpt."
+      },
+      "questions": {
+        "dis1": {
+          "q": "Als iets je stoort aan {autre}, dan zeg je dat...",
+          "qNeutre": "Als iets je stoort aan de ander, dan zeg je dat...",
+          "o": [
+            "Meteen",
+            "Vrij snel, op het goede moment",
+            "Nadat ik lang gewacht heb",
+            "Zelden, ik hou het voor me"
+          ],
+          "court": "Zeggen wat je stoort",
+          "pourquoi": "Wie het meteen zegt en wie alles opkropt, begrijpen elkaar niet: de eerste denkt dat alles goed gaat omdat de ander niets zegt, de tweede ontploft uiteindelijk om een detail.",
+          "parler": [
+            "Is er iets wat je al een tijdje voor je houdt?",
+            "Hoe kan ik het je makkelijker maken om het te zeggen?"
+          ],
+          "eviter": "Op kritiek reageren met andere kritiek (‘en jij dan?’)."
+        },
+        "dis2": {
+          "q": "Tijdens een ruzie heb je vooral nodig...",
+          "o": [
+            "Dat we het meteen oplossen",
+            "Een pauze om te kalmeren voordat we erover praten",
+            "Eerst gerustgesteld te worden",
+            "Dat we het laten rusten, het komt vanzelf goed"
+          ],
+          "court": "Tijdens een ruzie",
+          "pourquoi": "De een moet de ruzie meteen oplossen om zich beter te voelen, de ander heeft afstand nodig om geen domme dingen te zeggen. De eerste dringt aan, de tweede loopt weg, en ieder maakt de angst van de ander groter.",
+          "parler": [
+            "Als ik tijdens een ruzie de kamer uitloop, hoe beleef jij dat?",
+            "Zullen we een teken afspreken voor ‘pauze, we praten er over een uur verder over’?"
+          ],
+          "eviter": "De ander van kamer tot kamer achternalopen, of weggaan zonder te zeggen wanneer je terugkomt."
+        },
+        "dis3": {
+          "q": "Boos naar bed gaan:",
+          "o": [
+            "Nooit, we lossen het eerst op",
+            "Ik probeer het te vermijden",
+            "Dat kan gebeuren",
+            "Daar heb ik geen moeite mee"
+          ],
+          "court": "Boos naar bed gaan",
+          "pourquoi": "Voor sommigen is boos naar bed gaan ondenkbaar. Anderen lossen het beter op na een nacht slapen. Allebei te verdedigen, maar de ander moet het weten.",
+          "parler": [
+            "Wat helpt je om te slapen na een ruzie?",
+            "Kunnen we elkaar welterusten wensen, ook als we boos zijn?"
+          ],
+          "eviter": "Een gesprek forceren om twee uur 's nachts, als niemand nog kan luisteren."
+        },
+        "dis4": {
+          "q": "Wie zet na een ruzie meestal de eerste stap?",
+          "court": "De eerste stap na een ruzie",
+          "pourquoi": "Wie altijd de eerste stap zet, krijgt uiteindelijk het gevoel altijd toe te geven, ook als hij of zij gelijk had. De eerste stap zetten is niet toegeven dat je ongelijk hebt, het is zeggen dat je om de ander geeft.",
+          "parler": [
+            "Hoe weet je dat ik het wil goedmaken?",
+            "Wat helpt je om weer naar mij toe te komen?"
+          ],
+          "eviter": "Wachten tot de ander komt om te bewijzen dat je gelijk had."
+        },
+        "dis5": {
+          "q": "Je stem verheffen tijdens een ruzie is voor jou...",
+          "o": [
+            "Nooit acceptabel",
+            "Liever niet, maar het gebeurt",
+            "Normaal als je boos wordt",
+            "Een manier als een andere om je te uiten"
+          ],
+          "court": "Je stem verheffen",
+          "pourquoi": "In sommige families schreeuw je en vergeet je het. In andere maakt een verheven stem al bang. Dezelfde stem die omhooggaat, weegt voor de twee helemaal niet even zwaar.",
+          "parler": [
+            "Hoe maakten ze ruzie bij jou thuis?",
+            "Vanaf welk moment wordt een ruzie te veel voor jou?"
+          ],
+          "eviter": "Zeggen ‘ik schreeuw niet, ik praat hard’: het is de persoon tegenover je die weet hoe het overkomt."
+        },
+        "dis6": {
+          "q": "Als het niet goed gaat, helpt het je het meest als...",
+          "o": [
+            "We erover praten",
+            "Iemand me in de armen neemt",
+            "Iemand naar me luistert zonder advies te geven",
+            "Ik even met rust gelaten word"
+          ],
+          "court": "Wat helpt als het niet goed gaat",
+          "pourquoi": "Je troost de ander vaak zoals je zelf getroost zou willen worden: door te praten, oplossingen aan te dragen, iemand in je armen te nemen. Dat valt verkeerd als de ander iets anders nodig heeft.",
+          "parler": [
+            "De laatste keer dat het niet goed met je ging, wat had je dan goedgedaan?",
+            "Hoe kan ik op dat moment weten wat je nodig hebt?"
+          ],
+          "eviter": "Oplossingen geven aan iemand die gewoon wil dat je luistert."
+        },
+        "dis7": {
+          "q": "‘Ik hou van je’, ‘dank je’ of ‘sorry’ zeggen, is voor jou...",
+          "o": [
+            "Makkelijk, ik zeg het vaak",
+            "Vrij makkelijk",
+            "Moeilijk",
+            "Heel moeilijk"
+          ],
+          "court": "‘Ik hou van je’, ‘dank je’, ‘sorry’ zeggen",
+          "pourquoi": "Sommigen laten hun liefde zien met woorden, anderen met gebaren, vaak zonder het te beseffen. Wie het nodig heeft om het te horen, kan twijfelen, zelfs bij duizend bewijzen.",
+          "parler": [
+            "Welk woord zou je vaker van mij willen horen?",
+            "Hoe zeg jij dat je van me houdt, zonder het te zeggen?"
+          ],
+          "eviter": "Denken dat de ander het al weet: weten en horen is niet hetzelfde."
+        },
+        "dis8": {
+          "q": "Tijdens jullie ruzies gaan de verwijten weleens over de persoon in plaats van over het probleem (‘jij bent altijd...’, ‘jij doet nooit...’):",
+          "o": [
+            "Nooit",
+            "Zelden",
+            "Soms",
+            "Vaak"
+          ],
+          "court": "Verwijten die over de persoon gaan",
+          "pourquoi": "Zeggen ‘je bent de boodschappen vergeten’ gaat over een feit. Zeggen ‘jij denkt nooit ergens aan’ gaat over de persoon, en dan heeft de ander nog maar één optie: zich verdedigen. Onderzoekers die al tientallen jaren stellen observeren, zien in die verschuiving een van de eerste tekenen dat een ruzie de verkeerde kant op gaat.",
+          "parler": [
+            "Als ik je iets verwijt, hoe zou ik het kunnen zeggen zodat je het niet als een aanval opvat?",
+            "Is er een zin van mij waar je altijd van op de kast gaat?"
+          ]
+        },
+        "dis9": {
+          "q": "Tijdens een ruzie gebeurt het weleens dat een van jullie de ander belachelijk maakt, ironisch doet of met de ogen rolt:",
+          "o": [
+            "Nooit",
+            "Zelden",
+            "Soms",
+            "Vaak"
+          ],
+          "court": "Spot en minachting",
+          "pourquoi": "Minachting (ironie, spot, met de ogen rollen) is in onderzoeken die stellen jarenlang volgen het meest verontrustende signaal voor de toekomst van een relatie. Het zegt tegen de ander ‘ik ben beter dan jij’, en dat zegt geen enkel meningsverschil.",
+          "parler": [
+            "Heb ik weleens een toon die je kwetst, ook als het grappig bedoeld is?",
+            "Wat bewonder je in mij, ook als je boos bent?"
+          ]
+        },
+        "dis10": {
+          "q": "Als {autre} je iets verwijt, is je eerste reflex om je te verdedigen of een ander verwijt terug te kaatsen:",
+          "o": [
+            "Nooit",
+            "Zelden",
+            "Soms",
+            "Vaak"
+          ],
+          "court": "Je verdedigen in plaats van luisteren",
+          "pourquoi": "Je verdedigen is een heel menselijke reflex. Het probleem is dat de ander ‘het is niet mijn schuld’ hoort en het verwijt luider herhaalt. Ook maar een klein deel erkennen (‘het klopt, ik ben het vergeten’) is vaak genoeg om de spanning te laten zakken.",
+          "parler": [
+            "Als ik me verdedig, wat zou je in plaats daarvan willen horen?",
+            "Bij welk onderwerp heb je het gevoel dat ik nooit iets toegeef?"
+          ]
+        },
+        "dis11": {
+          "q": "Tijdens een ruzie sluit een van jullie zich weleens helemaal af: geeft geen antwoord meer, loopt zonder een woord de kamer uit of doet alsof de ander er niet is:",
+          "o": [
+            "Nooit",
+            "Zelden",
+            "Soms",
+            "Vaak"
+          ],
+          "court": "Je afsluiten tijdens een ruzie",
+          "pourquoi": "Je afsluiten is bijna nooit onverschilligheid: vaak is het lichaam verzadigd en klopt het hart te snel om na te denken. Maar voor wie tegenover je blijft staan, voelt die stilte als een muur. Een echte pauze van een minuut of twintig, aangekondigd met het tijdstip waarop je terugkomt, verandert veel.",
+          "parler": [
+            "Wat voel je als ik me afsluit?",
+            "Zullen we een woord afspreken voor ‘pauze, ik heb twintig minuten nodig’?"
+          ]
+        },
+        "dis12": {
+          "q": "Na een ruzie lukt het jullie om het goed te maken (een gebaar, een grapje, een ‘sorry’, een knuffel):",
+          "o": [
+            "Altijd",
+            "Vaak",
+            "Soms",
+            "Zelden"
+          ],
+          "court": "Het goedmaken na een ruzie",
+          "pourquoi": "Alle stellen maken ruzie. Volgens onderzoek hebben stellen die het lang volhouden net zoveel ruzies als andere; het verschil is dat ze makkelijker een manier vinden om daarna weer naar elkaar toe te komen, met een gebaar, een woord of een grapje.",
+          "parler": [
+            "Wat werkt voor jou het best om het goed te maken?",
+            "Is er een ruzie waar we nooit echt overheen zijn gekomen?"
+          ]
+        }
+      }
+    },
+    "confiance": {
+      "titre": "Vertrouwen en trouw",
+      "bref": "Vertrouwen",
+      "intro": "De telefoon, de ex, jaloezie, en wat ieder onder vreemdgaan verstaat.",
+      "rapport": {
+        "fort": "Jullie denken hetzelfde over vertrouwen en trouw. Veel stellen hebben dat nooit tegen elkaar gezegd, jullie weten het nu.",
+        "moyen": "Jullie zijn het eens over de hoofdzaken, met een paar grenzen die op verschillende plekken liggen. Die ken je maar beter voordat een situatie ze blootlegt.",
+        "faible": "Jullie leggen de grenzen niet op dezelfde plek. Dat betekent niet dat er nu een probleem is, wel dat hetzelfde gebaar voor de een onschuldig en voor de ander verraad kan zijn."
+      },
+      "questions": {
+        "con1": {
+          "q": "In de telefoon van {autre} kijken is voor jou...",
+          "qNeutre": "In de telefoon van de ander kijken is voor jou...",
+          "o": [
+            "Geen enkel probleem",
+            "Oké als je het eerst vraagt",
+            "Liever niet",
+            "Nee, ieder zijn eigen telefoon"
+          ],
+          "court": "De telefoon van de ander",
+          "pourquoi": "Voor de een is een open telefoon een bewijs van vertrouwen. Voor de ander is juist een telefoon waar je niet in kijkt dat bewijs. Hetzelfde gebaar kan de een dus geruststellen en de ander kwetsen.",
+          "parler": [
+            "Is er iets in mijn telefoon waar je je zorgen over maakt?",
+            "Wat zou je meer geruststellen dan kijken?"
+          ],
+          "eviter": "Stiekem kijken: wat je vindt, telt minder dan het feit dat je gekeken hebt."
+        },
+        "con2": {
+          "q": "Voor jou begint vreemdgaan als je...",
+          "o": [
+            "Via berichtjes flirt",
+            "Iemand zoent",
+            "Met iemand naar bed gaat",
+            "Een echte geheime relatie hebt"
+          ],
+          "court": "Waar vreemdgaan begint",
+          "pourquoi": "Twee mensen kunnen volgens hun eigen definitie volkomen trouw zijn, en volgens die van de ander vreemdgaan. Vaak ontdek je pas achteraf dat je niet dezelfde grens had.",
+          "parler": [
+            "Zijn er dingen die voor jou geen vreemdgaan zijn, maar je toch pijn zouden doen?",
+            "Als een ex me een bericht stuurde, zou je willen dat ik het je vertelde?"
+          ],
+          "eviter": "De grens van de ander belachelijk maken omdat je hem te streng vindt."
+        },
+        "con3": {
+          "q": "Contact houden met een ex:",
+          "o": [
+            "Geen enkel probleem",
+            "Hangt af van de ex",
+            "Liever niet",
+            "Nee"
+          ],
+          "court": "De ex",
+          "pourquoi": "Sommigen blijven bevriend met hun ex, anderen verbreken alle contact. Wie contact houdt, ziet het probleem niet; wie het nooit zou doen, ziet er een deur in die op een kier is blijven staan.",
+          "parler": [
+            "Wat zou je geruststellen als ik contact hield met een ex?",
+            "Is er een bepaalde ex bij wie je je ongemakkelijk voelt?"
+          ],
+          "eviter": "Contact met een ex verbergen, ook als het onschuldig is."
+        },
+        "con4": {
+          "q": "Dat {autre} een heel goede vriend of vriendin heeft op wie hij of zij zou kunnen vallen:",
+          "qNeutre": "Dat de ander een heel goede vriend of vriendin heeft op wie hij of zij zou kunnen vallen:",
+          "o": [
+            "Geen enkel probleem",
+            "Hangt af van de persoon",
+            "Dat zit me een beetje dwars",
+            "Dat zit me echt dwars"
+          ],
+          "court": "Hechte vriendschappen",
+          "pourquoi": "Vriendschap tussen twee mensen die op elkaar zouden kunnen vallen, is voor de een vanzelfsprekend en voor de ander een gevaar. Het ongemak komt zelden door de vriendschap zelf, eerder door wat je er niet van weet.",
+          "parler": [
+            "Is er een vriendschap aan mijn kant waar je je ongemakkelijk bij voelt?",
+            "Wat zou je helpen om je op je gemak te voelen bij die persoon?"
+          ],
+          "eviter": "Het ongemak van de ander wegwuiven met ‘dat is onzin’."
+        },
+        "con5": {
+          "q": "Jaloezie in een relatie is voor jou...",
+          "o": [
+            "Een teken dat je om de ander geeft",
+            "Begrijpelijk, in kleine doses",
+            "Iets om in de gaten te houden",
+            "Een echt probleem"
+          ],
+          "court": "Jaloezie",
+          "pourquoi": "Voor sommigen bewijst een beetje jaloezie dat je om de ander geeft. Voor anderen is het een gebrek aan vertrouwen. Wie het vleiend vindt, kan zonder het te willen degene uitdagen die het als een gevangenis ervaart.",
+          "parler": [
+            "Wat maakt je jaloers, al is het maar een beetje?",
+            "Hoe kan ik je geruststellen zonder dat het controle wordt?"
+          ],
+          "eviter": "De ander expres jaloers maken, ‘om te kijken’."
+        },
+        "con6": {
+          "q": "De codes en wachtwoorden van {autre} kennen:",
+          "qNeutre": "De codes en wachtwoorden van de ander kennen:",
+          "o": [
+            "Vanzelfsprekend, we delen alles",
+            "Handig als het nodig is",
+            "Niet nodig",
+            "Nee, dat is persoonlijk"
+          ],
+          "court": "Codes en wachtwoorden",
+          "pourquoi": "Je codes delen kan een bewijs van vertrouwen zijn of gewoon een voorzorg voor noodgevallen. Ze niet delen kan schroom zijn of behoefte aan een eigen ruimte. Het belangrijkste is te weten wat het voor de ander betekent.",
+          "parler": [
+            "Zijn er codes die we allebei zouden moeten kennen, voor als er iets gebeurt?",
+            "Wat wil je helemaal voor jezelf houden?"
+          ],
+          "eviter": "Een code eisen als liefdesbewijs."
+        },
+        "con7": {
+          "q": "Een open relatie (andere mensen zien, met toestemming van de ander):",
+          "o": [
+            "Daar heb ik zin in",
+            "Waarom niet, ooit",
+            "Liever niet",
+            "Nee, nooit"
+          ],
+          "court": "Een open relatie",
+          "pourquoi": "Het wordt zelden hardop gezegd, en toch bestaat die wens bij sommigen. Het weten, al is het om nee te zeggen, voorkomt dat die wens verandert in ontrouw of in een fantasie die je jarenlang voor jezelf houdt.",
+          "parler": [
+            "Wat trekt je aan in dat idee, of waar ben je bang voor?",
+            "Is het een wens, of eerder nieuwsgierigheid?"
+          ],
+          "eviter": "De ander veroordelen omdat hij of zij eerlijk heeft geantwoord: precies dat verhindert het volgende eerlijke antwoord."
+        },
+        "con8": {
+          "q": "Ontrouw vergeven:",
+          "o": [
+            "Dat zou ik kunnen vergeven",
+            "Dat zou afhangen van wat er gebeurd is",
+            "Dat zou heel moeilijk zijn",
+            "Dat zou ik niet kunnen"
+          ],
+          "court": "Ontrouw vergeven",
+          "pourquoi": "Niemand weet echt wat hij zou doen. Maar weten wat de ander er nu over denkt, zegt veel over wat voor hem of haar telt, en over hoe zwaar een misstap zou wegen.",
+          "parler": [
+            "Wat zou het moeilijkst te vergeven zijn voor jou: wat er gebeurd is, of de leugen?",
+            "Is er iets wat je me nooit zou vergeven?"
+          ],
+          "eviter": "Het antwoord van de ander opvatten als toestemming."
+        }
+      }
+    },
+    "intimite": {
+      "titre": "Intimiteit en tederheid",
+      "bref": "Intimiteit",
+      "intro": "Verlangen, tederheid, en hoe je erover praat. Deze antwoorden worden alleen door {autre} gezien.",
+      "rapport": {
+        "fort": "Jullie hebben dezelfde verlangens en beleven ze op dezelfde manier. Dat is kostbaar, en het vraagt onderhoud.",
+        "moyen": "Jullie verlangens liggen dicht bij elkaar, met een paar verschillen. Erover praten op een rustige dag, als er niets aan de hand is, helpt vaak meer dan wat ook.",
+        "faible": "Jullie verlangens komen niet altijd samen. Dat is een van de meest voorkomende en minst besproken onderwerpen in relaties: het belangrijkste is dat niemand het alleen in een hoekje beleeft."
+      },
+      "questions": {
+        "int1": {
+          "q": "Hoe vaak zou je seks willen hebben?",
+          "o": [
+            "Veel vaker dan nu",
+            "Iets vaker",
+            "Even vaak als nu",
+            "Minder vaak"
+          ],
+          "court": "Het ritme",
+          "pourquoi": "Verschillende verlangens zijn een van de eerste redenen die stellen noemen om uit elkaar te gaan. Het is op zich geen probleem, het is de stilte eromheen die er een probleem van maakt: wie meer wil, voelt zich afgewezen, wie minder wil, voelt druk.",
+          "parler": [
+            "Waar krijg je zin van, buiten het bed?",
+            "Waardoor verlies je op dit moment de zin?"
+          ],
+          "eviter": "Tellen, of jezelf vergelijken met andere stellen."
+        },
+        "int2": {
+          "q": "Hoeveel tederheid zou je willen in het dagelijks leven (knuffels, gebaren, kusjes zonder bijbedoeling)?",
+          "o": [
+            "Veel meer",
+            "Iets meer",
+            "Evenveel als nu",
+            "Minder"
+          ],
+          "court": "Tederheid",
+          "pourquoi": "Als elk teder gebaar wordt opgevat als uitnodiging, gaat wie geen zin heeft uiteindelijk ook de tederheid uit de weg. De twee loskoppelen, brengt vaak allebei terug.",
+          "parler": [
+            "Van welk teder gebaar hou je het meest?",
+            "Zijn er momenten waarop je gewoon een knuffel wilt, zonder iets erna?"
+          ],
+          "eviter": "Van elke knuffel een uitnodiging maken."
+        },
+        "int3": {
+          "q": "Met elkaar over jullie seksleven praten, is...",
+          "o": [
+            "Makkelijk, we doen het vaak",
+            "Vrij makkelijk",
+            "Een beetje ongemakkelijk",
+            "Heel moeilijk"
+          ],
+          "court": "Erover praten",
+          "pourquoi": "Veel stellen vrijen jarenlang zonder elkaar ooit te zeggen waar ze van houden. Wie erover praat, is niet vrijer, die heeft er gewoon een gewoonte van gemaakt.",
+          "parler": [
+            "Wat zou dit gesprek voor jou makkelijker maken?",
+            "Is er iets wat je me nooit hebt durven zeggen?"
+          ],
+          "eviter": "Erover beginnen net na een moment dat niet goed liep: later, met een rustig hoofd, is het zachter."
+        },
+        "int4": {
+          "q": "Wie neemt meestal het initiatief?",
+          "court": "Het initiatief",
+          "pourquoi": "Wie altijd het initiatief neemt, gaat zich op den duur afvragen of hij of zij wel begeerd wordt, en wie het nooit neemt, krijgt soms gewoon de kans niet.",
+          "parler": [
+            "Wat zou het met je doen als ik vaker het initiatief nam?",
+            "Hoe laat je me merken dat je zin hebt, zonder het te zeggen?"
+          ],
+          "eviter": "Een ‘vanavond niet’ opvatten als een afwijzing van jou als persoon."
+        },
+        "int5": {
+          "q": "Samen nieuwe dingen proberen:",
+          "o": [
+            "Daar heb ik veel zin in",
+            "Waarom niet",
+            "Ik vind het goed zoals het is",
+            "Daar voel ik me ongemakkelijk bij"
+          ],
+          "court": "Iets nieuws",
+          "pourquoi": "De zin in iets nieuws van de een kan door de ander worden ervaren als verwijt (‘verveel je je met mij?’). Dat is het bijna nooit.",
+          "parler": [
+            "Is er een verlangen dat je nooit hebt durven voorstellen?",
+            "Wat zou je op je gemak stellen om het te proberen?"
+          ],
+          "eviter": "Aandringen na een nee: een verlangen stel je voor, daar onderhandel je niet over."
+        },
+        "int6": {
+          "q": "Je voelt je begeerd door {autre}:",
+          "o": [
+            "Helemaal",
+            "Behoorlijk",
+            "Niet genoeg",
+            "Helemaal niet"
+          ],
+          "court": "Je begeerd voelen",
+          "pourquoi": "Je begeerd voelen is een behoefte, geen gril. Je kunt veel van elkaar houden en het elkaar niet meer laten zien, en dan gaat de ander uiteindelijk denken dat hij of zij niet meer aantrekkelijk is.",
+          "parler": [
+            "Waardoor krijg je het gevoel dat ik je begeer?",
+            "Wat zou ik vaker kunnen doen?"
+          ]
+        },
+        "int7": {
+          "q": "Je intieme leven op dit moment vind je...",
+          "o": [
+            "Heel fijn",
+            "Behoorlijk bevredigend",
+            "Niet bevredigend genoeg",
+            "Helemaal niet bevredigend"
+          ],
+          "court": "Jullie intieme leven nu",
+          "pourquoi": "Het is niet de frequentie die een intiem leven fijn maakt, maar het feit dat jullie er allebei je ding in vinden. Als de een tevreden is en de ander niet, weet de eerste dat vaak niet.",
+          "parler": [
+            "Wat mis je het meest?",
+            "Wat vind je fijn, en zou je willen dat we houden?"
+          ]
+        },
+        "int8": {
+          "q": "Als jullie verlangens niet samenvallen, beleef je dat...",
+          "o": [
+            "Goed, we praten erover",
+            "Vrij goed",
+            "Vrij slecht",
+            "Heel slecht"
+          ],
+          "court": "Als de verlangens niet samenvallen",
+          "pourquoi": "Niet tegelijk zin hebben is het gewoonste ding van de wereld. Wat schade doet, is hoe de afwijzing wordt gezegd en ontvangen.",
+          "parler": [
+            "Hoe zou je willen dat ik ‘vanavond niet’ zeg?",
+            "Wat helpt je om het niet persoonlijk op te vatten?"
+          ]
+        }
+      }
+    },
+    "meteo": {
+      "titre": "Hoe het met je gaat",
+      "bref": "Sfeer",
+      "intro": "Tot slot twaalf vragen over hoe je jullie relatie op dit moment beleeft. Hier hoeven jullie het niet eens te worden, je zegt gewoon hoe het gaat.",
+      "questions": {
+        "met1": {
+          "q": "Op dit moment ben je in jullie relatie...",
+          "o": [
+            "Gelukkig",
+            "Best gelukkig",
+            "Niet echt gelukkig",
+            "Ongelukkig"
+          ],
+          "court": "Samen gelukkig zijn",
+          "pourquoi": "Alle stellen gaan door gelukkigere en minder gelukkige periodes. Waar het om gaat, is dat jullie allebei weten hoe het met de ander zit, vooral als jullie niet op hetzelfde punt staan.",
+          "parler": [
+            "Wat zou je op dit moment goeddoen in onze relatie?",
+            "Wanneer was onze beste periode, voor jou?"
+          ]
+        },
+        "met2": {
+          "q": "Je voelt je gehoord door {autre}:",
+          "o": [
+            "Altijd",
+            "Vaak",
+            "Zelden",
+            "Nooit"
+          ],
+          "court": "Je gehoord voelen",
+          "pourquoi": "Je gehoord voelen is een van de behoeften die stellen het vaakst noemen, en een gebrek aan communicatie is de eerste reden die ze geven om uit elkaar te gaan.",
+          "parler": [
+            "Is er een onderwerp waarbij je het gevoel hebt dat ik niet naar je luister?",
+            "Wat doe ik als je het gevoel hebt dat ik niet naar je luister?"
+          ]
+        },
+        "met3": {
+          "q": "Als je het moeilijk hebt, voel je je gesteund door {autre}:",
+          "o": [
+            "Altijd",
+            "Vaak",
+            "Zelden",
+            "Nooit"
+          ],
+          "court": "Je gesteund voelen",
+          "pourquoi": "In moeilijke tijden merk je wat een relatie waard is. Je alleen voelen als het slecht gaat, laat nog lang daarna sporen na.",
+          "parler": [
+            "De laatste keer dat het niet goed met je ging, heb ik je toen kunnen helpen zoals je nodig had?",
+            "Hoe kan ik je steunen als je niets vraagt?"
+          ]
+        },
+        "met4": {
+          "q": "Je hebt bewondering voor {autre}:",
+          "o": [
+            "Veel",
+            "Behoorlijk",
+            "Een beetje",
+            "Niet echt"
+          ],
+          "court": "Bewondering",
+          "pourquoi": "Bewondering is een van de stevigste tekenen van een relatie die standhoudt. Als ze vervaagt, gaat de liefde niet per se weg, maar je moet het wel opmerken.",
+          "parler": [
+            "Wat bewonder je in mij?",
+            "Is er iets wat ik doe waarvan je nooit hebt gedacht me te zeggen dat je het fijn vindt?"
+          ]
+        },
+        "met5": {
+          "q": "Jullie ruzies zijn op dit moment...",
+          "o": [
+            "Zeldzaam",
+            "Af en toe",
+            "Vaak",
+            "Bijna dagelijks"
+          ],
+          "court": "Ruzies op dit moment",
+          "pourquoi": "Ruziemaken is op zich geen slecht teken. Maar als ruzies het achtergrondgeluid van de relatie worden, is het tijd om te kijken wat erachter zit.",
+          "parler": [
+            "Welk onderwerp komt het vaakst terug in onze ruzies?",
+            "Wat zou ons helpen om daar minder over te ruziën?"
+          ]
+        },
+        "met6": {
+          "q": "Bij {autre} voel je je vrij om jezelf te zijn:",
+          "o": [
+            "Helemaal",
+            "Behoorlijk",
+            "Niet altijd",
+            "Helemaal niet"
+          ],
+          "court": "Jezelf zijn",
+          "pourquoi": "Een relatie waarin je moet opletten wat je zegt, is vermoeiend, ook als er geen ruzie is. Je vrij voelen om jezelf te zijn, is een van de basissen van vertrouwen.",
+          "parler": [
+            "Zijn er momenten waarop je het gevoel hebt dat je bij mij moet opletten?",
+            "Wat durf je niet te doen of te zeggen in mijn bijzijn?"
+          ]
+        },
+        "met7": {
+          "q": "Over tien jaar zie je jezelf nog met {autre}:",
+          "o": [
+            "Ja, zonder enige twijfel",
+            "Ja, denk ik",
+            "Ik weet het niet",
+            "Ik denk het niet"
+          ],
+          "court": "Jezelf over tien jaar samen zien",
+          "pourquoi": "Jezelf samen in de toekomst zien, is een van de betrouwbaarste tekenen dat een relatie goed gaat. Twijfel betekent niet dat het voorbij is, wel dat je erover moet praten.",
+          "parler": [
+            "Hoe zie je ons over tien jaar?",
+            "Wat doet je op dit moment twijfelen?"
+          ]
+        },
+        "met8": {
+          "q": "Als je opnieuw mocht kiezen, zou je weer voor {autre} kiezen:",
+          "o": [
+            "Ja, zonder aarzelen",
+            "Ja",
+            "Ik weet het niet zeker",
+            "Nee"
+          ],
+          "court": "Als je opnieuw mocht kiezen",
+          "pourquoi": "Dit is de meest directe vraag van de relatiecheck. Een antwoord dat pijn doet om te lezen, is vaak een antwoord dat je niet over je lippen kreeg, en het zeggen is al een eerste stap.",
+          "parler": [
+            "Wat zou je doen antwoorden met ‘ja, zonder aarzelen’?",
+            "Wat is er voor jou veranderd sinds het begin?"
+          ]
+        },
+        "met9": {
+          "q": "Als je {autre} goed nieuws vertelt, is de reactie meestal...",
+          "o": [
+            "Enthousiast: we praten erover, hij of zij is blij voor me",
+            "Positief, maar meer niet",
+            "Afwezig, half geïnteresseerd",
+            "Onverschillig of kritisch"
+          ],
+          "court": "Goed nieuws delen",
+          "pourquoi": "Er wordt veel gesproken over steun in moeilijke tijden. Onderzoek laat zien dat de manier waarop je op goed nieuws reageert minstens zo belangrijk is: een ‘wat goed, vertel!’ brengt je dichter bij elkaar, een afwezig ‘o, super’ drijft je uit elkaar zonder dat je het merkt.",
+          "parler": [
+            "Wat was het laatste goede nieuws dat je me vertelde, en hoe reageerde ik?",
+            "Waaraan merk je dat ik echt blij voor je ben?"
+          ]
+        },
+        "met10": {
+          "q": "Je voelt je gewaardeerd door {autre}, om wat je doet en om wie je bent:",
+          "o": [
+            "Altijd",
+            "Vaak",
+            "Zelden",
+            "Nooit"
+          ],
+          "court": "Je gewaardeerd voelen",
+          "pourquoi": "Je gewaardeerd voelen door je partner hoort bij wat het best voorspelt hoe goed een relatie is, volgens een grote analyse die tientallen studies over stellen samenbracht. En waardering werkt aanstekelijk: wie zich gewaardeerd voelt, waardeert de ander vaak ook meer.",
+          "parler": [
+            "Wat doe ik voor je waarvan je zou willen dat ik het vaker opmerk?",
+            "Wanneer had je voor het laatst het gevoel dat ik echt zag wat je doet?"
+          ]
+        },
+        "met11": {
+          "q": "Je weet zeker dat {autre} net zoveel om jullie relatie geeft als jij:",
+          "o": [
+            "Helemaal",
+            "Behoorlijk",
+            "Niet echt",
+            "Helemaal niet"
+          ],
+          "court": "De betrokkenheid van de ander",
+          "pourquoi": "Het gevoel dat de ander echt betrokken is, is in grote analyses van gegevens over stellen een van de beste aanwijzingen voor hoe goed een relatie is. Twijfel daarover weegt vaak in stilte, zonder dat hij ooit wordt uitgesproken.",
+          "parler": [
+            "Waaraan merk je dat ik om ons geef?",
+            "Waren er momenten waarop je twijfelde aan mijn betrokkenheid?"
+          ]
+        },
+        "met12": {
+          "q": "Je hebt het gevoel dat {autre} weet wat er op dit moment in je leven speelt (je zorgen, je plannen, waar je mee bezig bent):",
+          "o": [
+            "Helemaal",
+            "Grotendeels",
+            "Een beetje",
+            "Niet echt"
+          ],
+          "court": "Het leven van de ander kennen",
+          "pourquoi": "Weten waar de ander op dit moment mee bezig is (een lastige collega, een project, een zorg), is een van de basissen van een stevige relatie. Als die kennis afbrokkelt, leef je uiteindelijk naast elkaar, vaak zonder dat er ook maar één ruzie is om het te signaleren.",
+          "parler": [
+            "Waar maak je je op dit moment het meest druk om?",
+            "Wat weet ik niet van je week?"
+          ]
+        }
+      }
+    }
+  }
+}

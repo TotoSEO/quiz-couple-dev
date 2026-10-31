@@ -1852,7 +1852,7 @@
     "meteo": {
       "titre": "Comment vous allez",
       "bref": "Climat",
-      "intro": "Pour finir, huit questions sur la façon dont vous vivez votre couple en ce moment. Il n'y a pas d'accord à trouver ici, juste à dire comment ça va.",
+      "intro": "Pour finir, douze questions sur la façon dont vous vivez votre couple en ce moment. Il n'y a pas d'accord à trouver ici, juste à dire comment ça va.",
       "questions": {
         "met1": {
           "q": "En ce moment, dans votre couple, vous êtes...",

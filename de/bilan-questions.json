@@ -1852,7 +1852,7 @@
     "meteo": {
       "titre": "Wie es euch geht",
       "bref": "Klima",
-      "intro": "Zum Schluss acht Fragen dazu, wie du dich gerade in eurer Beziehung fühlst. Hier gibt es keine Übereinstimmung zu finden, sag einfach, wie es läuft.",
+      "intro": "Zum Schluss zwölf Fragen dazu, wie du dich gerade in eurer Beziehung fühlst. Hier gibt es keine Übereinstimmung zu finden, sag einfach, wie es läuft.",
       "questions": {
         "met1": {
           "q": "Gerade bist du in eurer Beziehung...",

@@ -1852,7 +1852,7 @@
     "meteo": {
       "titre": "Cómo estáis",
       "bref": "Clima",
-      "intro": "Para terminar, ocho preguntas sobre cómo te sientes en tu pareja ahora mismo. Aquí no hay que estar de acuerdo, solo decir cómo va.",
+      "intro": "Para terminar, doce preguntas sobre cómo te sientes en tu pareja ahora mismo. Aquí no hay que estar de acuerdo, solo decir cómo va.",
       "questions": {
         "met1": {
           "q": "Ahora mismo, en tu pareja, eres...",

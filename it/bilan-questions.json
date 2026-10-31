@@ -1852,7 +1852,7 @@
     "meteo": {
       "titre": "Come state",
       "bref": "Clima",
-      "intro": "Per finire, otto domande su come ti senti nella vostra coppia in questo momento. Qui non c'è nessun accordo da trovare, di' solo come va.",
+      "intro": "Per finire, dodici domande su come ti senti nella vostra coppia in questo momento. Qui non c'è nessun accordo da trovare, di' solo come va.",
       "questions": {
         "met1": {
           "q": "In questo momento, nella vostra coppia, sei...",
