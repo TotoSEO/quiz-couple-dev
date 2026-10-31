@@ -1,7 +1,7 @@
 name: Bilan de couple · contrôle du rapport
 
 # À chaque changement du gabarit du rapport, de sa feuille de style, du
-# calcul ou des textes du bilan : vingt rapports d'exemple (cinq langues,
+# calcul ou des textes du bilan : vingt-quatre rapports d'exemple (six langues,
 # quatre cas, dont des prénoms de trente signes et un couple d'accord sur
 # rien) passent par les mêmes contrôles que la fabrique. Le moindre texte
 # qui sort de sa boîte fait échouer le contrôle. Les PDF sont gardés en

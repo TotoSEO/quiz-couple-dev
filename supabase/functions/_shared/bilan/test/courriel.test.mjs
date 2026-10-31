@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { messageRapport, messageLien, emailPropre, masquerEmail, nomFichier, creerCourriel, messagePret, messageRelance, messageReprise, minutesRestantes } from '../courriel.mjs';
 
 test('le message dans les cinq langues, sans accolade restée', () => {
-  for (const lang of ['fr', 'en', 'es', 'de', 'it']) {
+  for (const lang of ['fr', 'en', 'es', 'de', 'it', 'nl']) {
     for (const mode of ['duo', 'solo']) {
       const m = messageRapport({ lang, a: 'Léa', b: 'Thomas', mode, moi: 'Léa', url: 'https://quiz-couple.com/x/#b=1&t=2' });
       for (const champ of [m.sujet, m.html, m.texte]) {
@@ -23,7 +23,7 @@ test('le message dans les cinq langues, sans accolade restée', () => {
       assert.ok(m.html.includes('#b=1&amp;t=2&amp;pdf=1') && m.texte.includes('#b=1&t=2&pdf=1'), lang);
       assert.ok(m.html.includes('href="https://quiz-couple.com/x/#b=1&amp;t=2"'), lang + ' : lire en ligne');
       // la confirmation de la renonciation, avec le lien des CGV, toujours là
-      const cgv = { fr: '/conditions-generales-de-vente/', en: '/en/terms-of-sale/', es: '/es/condiciones-generales-de-venta/', de: '/de/agb/', it: '/it/condizioni-generali-di-vendita/' }[lang];
+      const cgv = { fr: '/conditions-generales-de-vente/', en: '/en/terms-of-sale/', es: '/es/condiciones-generales-de-venta/', de: '/de/agb/', it: '/it/condizioni-generali-di-vendita/', nl: '/nl/algemene-voorwaarden/' }[lang];
       assert.ok(m.html.includes('<a href="https://quiz-couple.com' + cgv + '"'), lang + ' : lien des CGV');
       assert.ok(m.texte.includes('https://quiz-couple.com' + cgv), lang);
       assert.ok(/293 B/.test(m.html) && /293 B/.test(m.texte), lang);
@@ -76,7 +76,7 @@ test('envoi par Resend : en-têtes, pièce jointe, erreur remontée', async () =
 // des e-mails du parcours, dans les cinq langues, sans rien du rapport.
 test('rapport prêt, rappel et reprise : cinq langues, rien d\'oublié, rien du rapport', () => {
   const base = { url: 'https://quiz-couple.com/x/#b=1&t=2', arret: 'https://quiz-couple.com/x/#b=1&t=2&arret=1', prix: 792, prixBase: 990 };
-  for (const lang of ['fr', 'en', 'es', 'de', 'it']) {
+  for (const lang of ['fr', 'en', 'es', 'de', 'it', 'nl']) {
     for (const mode of ['duo', 'solo']) {
       for (const promo of [{ pourcent: 20 }, null]) {
         const o = { ...base, lang, mode, moi: 'Léa', autre: 'Tom', promo, prix: promo ? 792 : 990 };
@@ -126,7 +126,7 @@ test('rapport prêt, rappel et reprise : cinq langues, rien d\'oublié, rien du 
 test('le lien personnel : un, plusieurs ou aucun, cinq langues', () => {
   const un = [{ a: 'Léa', b: 'Tom', mode: 'duo', url: 'https://quiz-couple.com/x/#b=1&t=aaa' }];
   const deux = un.concat([{ a: 'Léa', b: 'Sam', mode: 'solo', url: 'https://quiz-couple.com/x/#b=2&t=bbb' }]);
-  for (const lang of ['fr', 'en', 'es', 'de', 'it']) {
+  for (const lang of ['fr', 'en', 'es', 'de', 'it', 'nl']) {
     for (const [liens, rotation] of [[un, false], [un, true], [deux, true], [[], true]]) {
       const m = messageLien({ lang, liens, rotation });
       for (const champ of [m.sujet, m.html, m.texte]) assert.ok(!/\{[a-z]+\}/i.test(champ), lang + ' : ' + champ.slice(0, 80));

@@ -28,6 +28,7 @@ export const EXPEDITEURS = {
   es: 'Quiz Couple <resultados@quiz-couple.com>',
   de: 'Quiz Couple <ergebnisse@quiz-couple.com>',
   it: 'Quiz Couple <risultati@quiz-couple.com>',
+  nl: 'Quiz Couple <resultaten@quiz-couple.com>',
 };
 export const EXPEDITEUR = EXPEDITEURS.fr;
 export const REPONDRE_A = 'infoquizcouple@gmail.com';
@@ -39,6 +40,7 @@ const PAGES = {
   es: '/es/evaluacion-de-pareja/',
   de: '/de/beziehungsanalyse/',
   it: '/it/valutazione-di-coppia/',
+  nl: '/nl/relatiecheck/',
 };
 const PREFIXE_FICHIER = {
   fr: 'evaluation-de-couple',
@@ -46,6 +48,7 @@ const PREFIXE_FICHIER = {
   es: 'evaluacion-de-pareja',
   de: 'beziehungsanalyse',
   it: 'valutazione-di-coppia',
+  nl: 'relatiecheck',
 };
 
 // Les conditions générales de vente, par langue : le lien part dans l'e-mail du
@@ -56,6 +59,7 @@ export const CGV = {
   es: '/es/condiciones-generales-de-venta/',
   de: '/de/agb/',
   it: '/it/condizioni-generali-di-vendita/',
+  nl: '/nl/algemene-voorwaarden/',
 };
 // L'e-mail du lien du rapport, dans la carte commune depuis le 24 octobre
 // 2026 (Thomas : « tu peux redesigner comme pour les mails marketing les
@@ -154,6 +158,25 @@ const TEXTES = {
     aide: 'Una domanda o un problema con il download? Basta rispondere a questo messaggio.',
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per ricevere questo report. Non ti scriveremo nient\'altro.',
     legal: 'Prima di pagare, l\'acquirente ha chiesto che questo report fosse fornito non appena pronto, senza attendere la fine del periodo di recesso, e ha riconosciuto che il suo diritto di recesso termina con la fornitura. Questo messaggio ne è la conferma: il report è fornito. IVA non applicabile, art. 293 B del CGI francese. Condizioni di vendita: {cgv}',
+  },
+  nl: {
+    sujet: 'Jullie relatiecheck: het rapport van {a} en {b}',
+    sujetSolo: 'Je relatiecheck: je rapport, {a}',
+    avant: 'Jullie rapport is klaar: download het als pdf of lees het online.',
+    avantSolo: 'Je rapport is klaar: download het als pdf of lees het online.',
+    titre: 'Jullie rapport is klaar',
+    titreSolo: 'Je rapport is klaar',
+    phrase: 'De relatiecheck van {a} en {b} is afgerond. Download het rapport als pdf, of lees het online.',
+    phraseSolo: 'Je relatiecheck is afgerond. Download het rapport als pdf, of lees het online.',
+    puces: ['**Lees het eerst elk apart**, en praat er dan samen over', '**Waar begin je?** Bij het deel ‘Jullie volgende vier gesprekken’', '**Je link is persoonlijk**: hij werkt zes maanden, op elk apparaat'],
+    pucesSolo: ['**Lees het in alle rust**, in je eigen tempo', '**Waar begin je?** Bij het deel ‘Jullie volgende vier gesprekken’', '**Je link is persoonlijk**: hij werkt zes maanden, op elk apparaat'],
+    bouton: 'Download het rapport (pdf)',
+    enLigne: 'Online lezen',
+    note: 'Dit rapport bevat de antwoorden van jullie allebei: houd het voor jullie tweeën.',
+    noteSolo: 'Dit rapport bevat je antwoorden en wat je van je relatie vindt: het is alleen voor jou bedoeld.',
+    aide: 'Een vraag, of een probleem met downloaden? Beantwoord dit bericht gewoon.',
+    pied: 'Je krijgt dit bericht omdat dit adres is opgegeven om dit rapport te ontvangen. We sturen je verder niets.',
+    legal: 'Voor de betaling heeft de koper gevraagd om dit rapport te krijgen zodra het klaar was, zonder het einde van de herroepingstermijn af te wachten, en erkend dat het herroepingsrecht vervalt zodra het rapport geleverd is. Dit bericht is die bevestiging: het rapport is geleverd. Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Verkoopvoorwaarden: {cgv}',
   },
 };
 
@@ -284,6 +307,30 @@ const TEXTES_LIEN = {
     nouveauPlusieurs: 'Se avevi già dei link per queste valutazioni, da ora valgono questi: i vecchi non funzionano più.',
     pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per una valutazione di coppia su quiz-couple.com, o perché qualcuno ha chiesto di ritrovare una valutazione con esso.',
   },
+  nl: {
+    sujet: 'Je link om verder te gaan met je relatiecheck',
+    sujetPlusieurs: 'Je links om verder te gaan met je relatiechecks',
+    sujetAucun: 'Geen relatiecheck met dit adres',
+    avant: 'Bewaar dit bericht: deze link opent je antwoorden weer, precies waar je gebleven was.',
+    avantPlusieurs: 'Bewaar dit bericht: deze links openen je antwoorden weer, precies waar je gebleven was.',
+    avantAucun: 'Er is geen relatiecheck aan dit adres gekoppeld: hier kun je zoeken.',
+    titre: 'Je persoonlijke link',
+    titrePlusieurs: 'Je persoonlijke links',
+    titreAucun: 'Geen relatiecheck op dit adres',
+    intro: 'Hier is de link om verder te gaan met de relatiecheck van {a} en {b}, precies waar je gebleven was.',
+    introPlusieurs: 'Hier zijn je links om verder te gaan met je relatiechecks, precies waar je gebleven was.',
+    aucun: 'Er is geen relatiecheck gekoppeld aan dit e-mailadres. Er zijn twee mogelijkheden:',
+    puces: ['**Bewaar dit bericht**: deze link is de sleutel tot je antwoorden', '**Geef hem aan niemand**: hij opent je antwoorden zonder wachtwoord', '**Hij werkt op elk apparaat**: telefoon, computer of tablet'],
+    pucesPlusieurs: ['**Bewaar dit bericht**: deze links zijn de sleutel tot je antwoorden', '**Geef ze aan niemand**: ze openen je antwoorden zonder wachtwoord', '**Ze werken op elk apparaat**: telefoon, computer of tablet'],
+    pucesAucun: ['**Een ander adres**: misschien is de relatiecheck gedaan met een ander e-mailadres', '**Zonder adres**: hij blijft open op de telefoon waarop je hebt geantwoord, als je teruggaat naar de pagina van de relatiecheck'],
+    ligne: '{a} en {b}',
+    ligneSolo: '{a}, alleen',
+    bouton: 'Verder met mijn relatiecheck',
+    boutonAucun: 'Naar de relatiecheck',
+    nouveau: 'Had je al een link voor deze relatiecheck, dan geldt voortaan deze: de oude werkt niet meer.',
+    nouveauPlusieurs: 'Had je al links voor deze relatiechecks, dan gelden voortaan deze: de oude werken niet meer.',
+    pied: 'Je krijgt dit bericht omdat dit adres is opgegeven voor een relatiecheck op quiz-couple.com, of omdat iemand met dit adres een relatiecheck wilde terugvinden.',
+  },
 };
 
 // Une adresse e-mail raisonnable, en minuscules, ou null.
@@ -315,7 +362,7 @@ export function nomFichier(lang, a, b, mode) {
     .toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 20) || 'x';
   const prefixe = PREFIXE_FICHIER[lang] || PREFIXE_FICHIER.fr;
   if (mode === 'solo') return `${prefixe}-${propre(a)}.pdf`;
-  const et = { fr: 'et', en: 'and', es: 'y', de: 'und', it: 'e' }[lang] || 'et';
+  const et = { fr: 'et', en: 'and', es: 'y', de: 'und', it: 'e', nl: 'en' }[lang] || 'et';
   return `${prefixe}-${propre(a)}-${et}-${propre(b)}.pdf`;
 }
 
@@ -714,11 +761,70 @@ const TEXTES_RAPPEL = {
     boutonRepriseInvite: 'Rimandare l\'invito',
     seulRepriseAutre: 'È l\'unico messaggio che ti invieremo su questo.',
   },
+  nl: {
+    bonjour: 'Hoi {moi}!',
+    bonjourSans: 'Hoi!',
+    alt: 'De mascottes van Quiz Couple zwaaien naar je',
+    signature: ['Tot snel,', 'Thomas, van Quiz Couple'],
+    pied: 'Je krijgt dit bericht omdat dit adres is opgegeven voor een relatiecheck op quiz-couple.com.',
+    arret: 'Geen berichten meer over deze relatiecheck',
+    conseiller: 'Ter vergelijking: een sessie bij een relatietherapeut kost al snel 60 euro of meer.',
+    chacun: 'Dat is {prixChacun} per persoon: minder dan een bioscoopkaartje',
+    ticketSolo: 'In één keer, zonder abonnement',
+    ticketSoloPromo: 'Nu {pourcent}% korting, automatisch toegepast',
+    puces: ['**Waar jullie het eens zijn en waar niet**, antwoord tegenover antwoord', '**De beslissende onderwerpen** voor jullie relatie', '**Jullie volgende 4 gesprekken**, met hulp om ze te beginnen', '**Als pdf**, en zes maanden online'],
+    pucesSolo: ['**Wat jullie verbindt**, en waar jullie verschillen', '**Wat {autre} volgens jou zou antwoorden**, naast je eigen antwoorden', '**Je blinde vlekken**, en waar je kunt beginnen', '**Als pdf**, en zes maanden online'],
+    sujetPret: '{autre} heeft alles beantwoord: jullie rapport is klaar',
+    avantPret: 'Je hoeft het alleen nog te ontgrendelen, voor jullie allebei.',
+    titrePret: 'Jullie rapport is klaar',
+    p1Pret: '{autre} is net klaar met de antwoorden, en die zijn vraag per vraag vergeleken met die van jou.',
+    sujetRelance: 'Jullie rapport wacht nog steeds op je',
+    sujetRelanceSolo: 'Je rapport wacht nog steeds op je',
+    sujetRelancePromo: 'Jullie rapport wacht op je, nu met {pourcent}% korting',
+    sujetRelancePromoSolo: 'Je rapport wacht op je, nu met {pourcent}% korting',
+    avantRelance: 'Jullie antwoorden zijn bewaard, het rapport wacht alleen nog op jou.',
+    avantRelanceSolo: 'Je antwoorden zijn bewaard, het rapport wacht alleen nog op jou.',
+    titreRelance: 'Jullie rapport wacht op je',
+    titreRelanceSolo: 'Je rapport wacht op je',
+    p1Relance: 'Jouw antwoorden en die van {autre} zijn vergeleken, en het rapport is klaar.',
+    p1RelanceSolo: 'Je hebt de honderd vragen beantwoord, en het rapport is klaar.',
+    citation: 'Het langste deel is gedaan, jullie hebben allebei geantwoord. Nu hoef je het alleen nog te lezen!',
+    citationSolo: 'Het langste deel is gedaan. Nu hoef je het alleen nog te lezen!',
+    bouton: 'Bekijk ons rapport',
+    boutonSolo: 'Bekijk mijn rapport',
+    seul: 'Dit is de enige herinnering die we je sturen.',
+    sujetRepriseMoi: 'Je relatiecheck wacht op je',
+    avantRepriseMoi: 'Je antwoorden zijn bewaard: je gaat verder waar je gebleven was.',
+    titreRepriseMoi: 'Je relatiecheck wacht op je',
+    p1RepriseMoi: 'Je hebt {repondu} van de {total} vragen beantwoord. Je antwoorden zijn bewaard: je gaat verder waar je gebleven was.',
+    p1RepriseDebut: 'Je honderd vragen wachten op je: je kunt beginnen wanneer je wilt, in je eigen tempo.',
+    temps: '**Ongeveer {minutes} minuten** om af te ronden',
+    autreFini: '**{autre} is al klaar**: het rapport wacht alleen nog op jou',
+    autreEnCours: '**{autre} antwoordt op de eigen telefoon**, zonder jouw antwoorden te zien',
+    rienAutre: '**{autre} krijgt niets toegestuurd**: je antwoorden blijven van jou',
+    gratuit: '**De vragen zijn gratis**: je betaalt pas aan het eind, als je het rapport wilt',
+    boutonRepriseMoi: 'Verder met mijn antwoorden',
+    boutonRepriseDebut: 'Begin met mijn antwoorden',
+    seulRepriseMoi: 'Dit is de enige herinnering die we je sturen om af te ronden.',
+    sujetRepriseAutre: '{autre} is nog niet klaar met de antwoorden',
+    sujetRepriseInvite: '{autre} heeft de uitnodiging nog niet geopend',
+    avantRepriseAutre: 'Jullie rapport is klaar zodra {autre} klaar is. Een kleine herinnering?',
+    titreRepriseAutre: 'Alleen {autre} nog',
+    p1RepriseAutre: 'Je antwoorden zijn opgeslagen. {autre} zit bij {repondu} van de {total} vragen.',
+    p1RepriseInvite: 'Je antwoorden zijn opgeslagen, maar {autre} heeft de uitnodiging nog niet geopend.',
+    unMessage: '**Een kort berichtje is genoeg**: {autre} gaat op de eigen telefoon verder waar de antwoorden gestopt waren',
+    renvoyer: '**Stuur de uitnodiging opnieuw** vanaf je pagina, met één tik',
+    pretDeux: '**Het rapport is klaar** zodra jullie allebei klaar zijn',
+    onEcrit: '**We mailen je** op dat moment',
+    boutonRepriseAutre: 'Stuur {autre} een herinnering',
+    boutonRepriseInvite: 'Uitnodiging opnieuw versturen',
+    seulRepriseAutre: 'Dit is het enige bericht dat we je hierover sturen.',
+  },
 };
 
 // 7,92 € dans la langue du message (centimes en entrée).
 export function prixEcrit(centimes, lang) {
-  const loc = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const loc = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
   return new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR' }).format((Number(centimes) || 0) / 100)
     .replace(/[\u202f\u00a0 ]/g, '\u00a0');
 }

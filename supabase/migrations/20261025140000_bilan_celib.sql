@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS public.bilan_celib (
 );
 ALTER TABLE public.bilan_celib DROP CONSTRAINT IF EXISTS bilan_celib_bornes;
 ALTER TABLE public.bilan_celib ADD CONSTRAINT bilan_celib_bornes CHECK (
-  lang IN ('fr', 'en', 'es', 'de', 'it')
+  lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
   AND cardinality(interets) BETWEEN 1 AND 12
   AND (autre IS NULL OR char_length(autre) <= 300)
   AND (email IS NULL OR (char_length(email) <= 254 AND consent_at IS NOT NULL))
