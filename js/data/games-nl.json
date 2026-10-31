@@ -784,14 +784,14 @@
     "disclaimer": "Deze test zegt niet of je iemand gaat ontmoeten. Hij kijkt of de plek vandaag vrij is, en dat verandert van maand tot maand. Je antwoorden worden niet opgeslagen."
   },
   "ex-revenir": {
-    "introQuestion": "Avant de commencer :",
-    "introQuote": "Répondez sur ce qui se passe en ce moment, pas sur ce que vous espérez.",
-    "disclaimer": "Le test estime des chances à partir de situations qui vont souvent avec un retour. Il ne lit pas dans les pensées de votre ex. Vos réponses ne sont pas enregistrées."
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord op basis van wat er nu gebeurt, niet van wat je hoopt.",
+    "disclaimer": "De test schat kansen in op basis van situaties die vaak samengaan met een terugkeer. Hij kan niet in het hoofd van je ex kijken. Je antwoorden worden niet bewaard."
   },
   "remettre-ex": {
-    "introQuestion": "Avant de commencer :",
-    "introQuote": "Répondez pour vous, pas pour ce que votre ex aimerait entendre.",
-    "disclaimer": "Ce test est un outil de réflexion, il ne remplace pas l'avis d'un professionnel. Vos réponses ne sont pas enregistrées."
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord voor jezelf, niet op basis van wat je ex graag zou horen.",
+    "disclaimer": "Deze test helpt je nadenken, hij vervangt het advies van een professional niet. Je antwoorden worden niet bewaard."
   },
   "oublie-son-ex": {
     "introQuestion": "Voordat je begint:",
