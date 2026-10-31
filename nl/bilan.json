@@ -1,0 +1,246 @@
+{
+  "jsonLd": {
+    "name": "Relatiecheck",
+    "about": "Relatiecheck"
+  },
+  "lp": {
+    "badge": "Relatiecheck",
+    "titre": "Relatiecheck: weet waar jullie staan, zonder therapeut",
+    "sousTitre": "20 minuten samen, ieder op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
+    "cta": "Begin de relatiecheck",
+    "soloQuestion": "Wil je partner niet meedoen?",
+    "soloLien": "Doe hem alleen",
+    "preuve": "{{nom}}, elke dag duizenden bezoekers",
+    "paiements": "Veilig betalen via Stripe",
+    "visuel": {
+      "sur": "Voorbeeldrapport · fictief stel",
+      "noms": "Sanne & Daan",
+      "alignement": "Overeenstemming",
+      "legende": "De radar met de thema's, zoals in het rapport"
+    },
+    "chiffres": [
+      {
+        "n": "100",
+        "l": "concrete vragen"
+      },
+      {
+        "n": "12",
+        "l": "thema's uit jullie leven samen"
+      },
+      {
+        "n": "20 min",
+        "l": "samen, ieder op de eigen telefoon"
+      },
+      {
+        "n": "€ 0",
+        "l": "om de vragen te beantwoorden"
+      }
+    ],
+    "etapes": {
+      "titre": "Zo werkt het",
+      "liste": [
+        {
+          "duree": "2 min",
+          "titre": "Je start de relatiecheck",
+          "texte": "Jullie twee voornamen, en dan scant je partner de QR-code op je scherm of krijgt hij of zij een link."
+        },
+        {
+          "duree": "20 min",
+          "titre": "Jullie antwoorden tegelijk",
+          "texte": "Ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Pauzeren kan wanneer je wilt."
+        },
+        {
+          "duree": "1 min",
+          "titre": "Jullie lezen het rapport",
+          "texte": "{{prix}} voor jullie samen, één keer betalen. Het rapport opent zodra jullie allebei klaar zijn, en de link naar de pdf komt per e-mail."
+        }
+      ],
+      "note": "De vragen zijn gebaseerd op onderzoek naar relaties en op de vragenlijsten die stellen invullen voordat ze trouwen."
+    },
+    "rapport": {
+      "titre": "Wat staat er in de relatiecheck?",
+      "intro": "Een echt rapport, met hoofdstukken, grafieken en, bij elk verschil, iets om het gesprek mee te beginnen. Scroll maar door.",
+      "pages": [
+        {
+          "img": "couverture",
+          "titre": "De voorkant",
+          "texte": "Jullie twee voornamen, de datum, en het aantal thema's en vragen."
+        },
+        {
+          "img": "synthese",
+          "titre": "Jullie samenvatting",
+          "texte": "Hoe goed jullie op één lijn zitten, de sfeer in jullie relatie, en jullie thema's op een radar."
+        },
+        {
+          "img": "carte",
+          "titre": "Het overzicht van jullie thema's",
+          "texte": "Eén balk per thema: waar jullie het eens zijn, waar jullie dicht bij elkaar zitten en waar jullie verschillen."
+        },
+        {
+          "img": "conversation",
+          "titre": "Jullie volgende vier gesprekken",
+          "texte": "De onderwerpen om mee te beginnen, met vragen om erover te praten."
+        },
+        {
+          "img": "climat",
+          "titre": "De sfeer in jullie relatie",
+          "texte": "Hoe ieder van jullie zich voelt in de relatie, thema per thema."
+        },
+        {
+          "img": "domaine",
+          "titre": "Thema per thema",
+          "texte": "Al jullie antwoorden: eerst waar jullie het eens zijn, dan de verschillen."
+        },
+        {
+          "img": "fin",
+          "titre": "Tot slot",
+          "texte": "Wat stevig staat, wat werk vraagt, en een stappenplan."
+        }
+      ],
+      "legende": "Pagina's uit een voorbeeldrapport. Sanne en Daan zijn een fictief stel."
+    },
+    "facons": {
+      "citation": "Een sessie bij een relatietherapeut kost al snel 60 euro of meer. Beginnen met de volledige relatiecheck van Quiz Couple is DE goede eerste stap.",
+      "titre": "Samen, of alleen",
+      "intro": "Heeft de ander geen zin om erover te praten? Dan doe je hem in je eentje. Zelfde prijs, zelfde rapport.",
+      "duo": {
+        "titre": "Samen",
+        "sous": "Tegelijk, ieder op de eigen telefoon",
+        "points": [
+          "Jullie antwoorden tegelijk, zonder de antwoorden van de ander te zien",
+          "Het rapport vergelijkt jullie antwoorden, onderwerp per onderwerp"
+        ],
+        "cta": "Samen beginnen"
+      },
+      "solo": {
+        "titre": "Alleen",
+        "sous": "Zonder je partner iets te zeggen",
+        "points": [
+          "Je antwoordt voor jezelf, en bij de belangrijkste onderwerpen ook in de plaats van de ander",
+          "Het rapport laat ook zien wat je niet weet van je partner"
+        ],
+        "cta": "Alleen beginnen"
+      }
+    },
+    "demo": {
+      "titre": "Probeer één vraag",
+      "intro": "Zoals hij in de relatiecheck wordt gesteld, hier zoals Sanne hem zag. Antwoord en kijk wat het rapport ermee doet.",
+      "partenaireNom": "Daan",
+      "vous": "Jij",
+      "partenaire": "Daan",
+      "attente": "vult zijn antwoord in",
+      "apres": "In het rapport staat jouw antwoord tegenover dat van je partner, met vragen om erover te praten.",
+      "pourquoi": "Waarom het ertoe doet",
+      "questions": [
+        {
+          "dom": "quotidien",
+          "id": "quo2"
+        }
+      ],
+      "cta": "Doe de 100 vragen"
+    },
+    "prix": {
+      "accroche": "Stellen vergeten maar al te vaak om stil te staan bij hun relatie. 20 minuten per persoon en een paar euro kunnen echt iets veranderen.",
+      "titre": "Eén prijs, voor jullie samen",
+      "unite": "voor jullie samen, één keer",
+      "aide": "Eén keer betalen, door een van jullie, aan het eind. Geen abonnement.",
+      "inclus": [
+        "100 vragen over twaalf thema's",
+        "Het volledige rapport, online en als pdf",
+        "De onderwerpen om mee te beginnen, met hulp om erover te praten",
+        "Hetzelfde rapport, samen of alleen"
+      ],
+      "garantie": "Niet tevreden, geld terug binnen {{jours}} dagen: één bericht is genoeg."
+    },
+    "confiance": {
+      "titre": "Jullie antwoorden blijven tussen jullie",
+      "points": [
+        {
+          "titre": "Geen account",
+          "texte": "Een persoonlijke link voor ieder, zonder wachtwoord."
+        },
+        {
+          "titre": "Niets voor het einde",
+          "texte": "Niemand ziet de antwoorden van de ander voordat jullie allebei klaar zijn."
+        },
+        {
+          "titre": "Automatisch gewist",
+          "texte": "60 dagen na het laatste antwoord als er niet betaald is, zes maanden na de betaling."
+        },
+        {
+          "titre": "Veilig betalen",
+          "texte": "Via Stripe: wij zien je kaart nooit."
+        }
+      ]
+    },
+    "definition": {
+      "titre": "Wat is een relatiecheck?",
+      "paragraphes": [
+        "Een relatiecheck is een moment dat je neemt om stil te staan bij je relatie: wat gaat goed, en waar wringt het? Dat kan bij een relatietherapeut, in een sessie, of zelf met een lijst vragen.",
+        "De relatiecheck van Quiz Couple doe je online, ieder op de eigen telefoon. Jullie beantwoorden 100 concrete vragen over twaalf onderwerpen uit jullie leven samen (geld, het dagelijks leven, kinderen, intimiteit, ruzies, enzovoort), zonder de antwoorden van de ander te zien. Bijvoorbeeld: ‘Het geld in jullie relatie, als het aan jou ligt...’, met vier antwoorden, van ‘Alles samen’ tot ‘Ieder zijn eigen geld, we bekijken het per keer’. Geven jullie hetzelfde antwoord, dan zijn jullie het eens. Liggen jullie antwoorden ver uit elkaar, dan is dat een verschil, en juist over die verschillen kun je beter praten.",
+        "Als jullie allebei hebben geantwoord, kost de volledige relatiecheck {{prix}} voor jullie samen. Hij verschijnt meteen op de pagina, en per e-mail krijgen jullie de link naar jullie relatiecheck als pdf, om te bewaren. Jullie antwoorden staan naast elkaar, vraag per vraag, met bij elk verschil vragen om erover te praten."
+      ]
+    },
+    "utilite": {
+      "titre": "Wat heb je aan een relatie-evaluatie?",
+      "paragraphes": [
+        "Veel stellen praten pas over bepaalde onderwerpen als het misgaat: over geld na een grote uitgave, over kinderen op de dag dat de vraag ineens op tafel ligt, of over de taakverdeling midden in een ruzie... Een relatie-evaluatie helpt juist om er vooraf over te praten, met een rustig hoofd.",
+        "De relatiecheck laat ook zien wat jullie niet van elkaar weten. Er zijn onderwerpen waarover jullie het eens zijn zonder dat ooit tegen elkaar gezegd te hebben, en onderwerpen waarbij ieder dacht dat de ander er net zo over dacht. Die laatste eindigen vaak in ruzie, dus het loont om ze te ontdekken als er niets aan de hand is."
+      ],
+      "momentsIntro": "Er is geen ideaal moment om hem te doen, maar sommige momenten lenen zich er goed voor:",
+      "moments": [
+        "Voordat jullie gaan samenwonen",
+        "Voordat jullie trouwen of een kind krijgen",
+        "Na een paar jaar samen",
+        "Als je voelt dat er iets veranderd is tussen jullie"
+      ],
+      "solo": "En als je partner er geen zin in heeft, kun je hem alleen doen: je antwoordt voor jezelf en zegt bij de onderwerpen die het zwaarst wegen wat de ander volgens jou zou antwoorden."
+    },
+    "faq": {
+      "titre": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Hoe lang duurt het?",
+          "a": "Reken op een minuut of twintig per persoon. Elk antwoord wordt bewaard: je kunt pauzeren en later verdergaan."
+        },
+        {
+          "q": "Ziet mijn partner mijn antwoorden?",
+          "a": "Ja, zodra jullie allebei klaar zijn: het rapport zet jullie antwoorden naast elkaar, daar draait het om. Daarvoor ziet niemand iets."
+        },
+        {
+          "q": "Waarom moet ik betalen om het resultaat te zien?",
+          "a": "Omdat het resultaat het rapport is: jullie antwoorden vergeleken, onderwerp per onderwerp, met hulp om erover te praten. De vragen zijn gratis, en je betaalt pas aan het eind, als je het rapport wilt."
+        },
+        {
+          "q": "Als ik hem alleen doe, hoort mijn partner dat dan?",
+          "a": "Nee. Je partner krijgt niets toegestuurd, en alleen jij ziet het rapport. Je antwoordt voor jezelf, en bij de onderwerpen die het zwaarst wegen ook in zijn of haar plaats, of met ‘ik weet het niet’."
+        },
+        {
+          "q": "En als we niet samenwonen, of geen kinderen hebben?",
+          "a": "Dan werkt het ook. Zes vragen over jullie situatie, verspreid over de relatiecheck, passen de rest aan: een stel dat nog niet samenwoont, antwoordt bijvoorbeeld over hoe het zich dat voorstelt."
+        },
+        {
+          "q": "Vervangt dit relatietherapie?",
+          "a": "Nee. De vragen zijn gebaseerd op onderzoek naar relaties, maar de relatiecheck blijft een hulpmiddel om te weten waarover jullie moeten praten, geen diagnose. Het rapport kan trouwens een goed vertrekpunt zijn bij een professional."
+        },
+        {
+          "q": "En als het rapport ons niet bevalt?",
+          "a": "Het rapport is gemaakt van jullie antwoorden, en het kan iets anders zeggen dan jullie hoopten. Eenmaal geleverd wordt het niet terugbetaald: voordat je betaalt, vraag je om het meteen te krijgen. Zolang het niet geleverd is, kun je de aankoop herroepen. En als er iets mis is met het bestand, lossen we dat op."
+        },
+        {
+          "q": "Wat gebeurt er met onze antwoorden?",
+          "a": "Ze dienen alleen voor jullie relatiecheck en worden nooit doorverkocht. Ze worden gewist 60 dagen na het laatste antwoord als er niet betaald is, anders zes maanden na de betaling, en ieder van jullie kan alles eerder verwijderen."
+        }
+      ]
+    },
+    "final": {
+      "titre": "Klaar om te kijken waar jullie staan?",
+      "texte": "20 minuten per persoon, en jullie weten waar jullie het eens zijn en waarover jullie moeten praten."
+    },
+    "colle": {
+      "texte": "Relatiecheck · {{prix}}",
+      "bouton": "Beginnen"
+    },
+    "avertissement": "Samen ingevuld laat deze relatiecheck aan ieder de antwoorden van de ander zien. Ben je bang voor je partner, doe hem dan alleen, of helemaal niet: in Nederland kun je gratis en anoniem bellen met Veilig Thuis (0800-2000), dag en nacht, in België met 1712, en bij direct gevaar met 112."
+  }
+}

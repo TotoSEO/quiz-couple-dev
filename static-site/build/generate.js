@@ -2094,21 +2094,31 @@ function copyTranslationData() {
       }
     }
 
+    // Une langue en cours de traduction (langueEnCours) se traduit partie
+    // par partie : dans les fichiers que les scripts lisent eux-mêmes, ce
+    // qu'elle n'a pas encore vient du français, clé par clé (les listes sont
+    // prises telles quelles).
+    const completeCles = (base, plus) => {
+      if (!plus || typeof plus !== 'object' || Array.isArray(plus) || !base || typeof base !== 'object' || Array.isArray(base)) return plus;
+      const out = { ...base };
+      for (const [k, v] of Object.entries(plus)) out[k] = k in base ? completeCles(base[k], v) : v;
+      return out;
+    };
+    const completeParFrancais = (nom) => {
+      const src = sourceDe(nom);
+      const fr = path.resolve(__dirname, '../../fr', nom);
+      if (!fs.existsSync(src)) return null;
+      const donnees = JSON.parse(fs.readFileSync(src, 'utf-8'));
+      return (langueEnCours(lang) && src !== fr) ? completeCles(JSON.parse(fs.readFileSync(fr, 'utf-8')), donnees) : donnees;
+    };
+
     // Les textes des moteurs (games-<langue>.json) : tg() n'a pas de repli
     // sur le français, seulement sur le texte écrit dans le code (parfois
-    // aucun, et la clé s'affiche). Une langue cachée se traduit partie par
-    // partie : ce qu'elle n'a pas encore vient du français, clé par clé.
+    // aucun, et la clé s'affiche).
     const gamesSrc = sourceDe('quizGames.json');
     const gamesFr = path.resolve(__dirname, '../../fr/quizGames.json');
     if (langueEnCours(lang) && gamesSrc !== gamesFr && fs.existsSync(gamesSrc)) {
-      const complete = (base, plus) => {
-        if (!plus || typeof plus !== 'object' || Array.isArray(plus) || !base || typeof base !== 'object' || Array.isArray(base)) return plus;
-        const out = { ...base };
-        for (const [k, v] of Object.entries(plus)) out[k] = k in base ? complete(base[k], v) : v;
-        return out;
-      };
-      const fusion = complete(JSON.parse(fs.readFileSync(gamesFr, 'utf-8')), JSON.parse(fs.readFileSync(gamesSrc, 'utf-8')));
-      fs.writeFileSync(path.join(dataDir, `games-${lang}.json`), JSON.stringify(fusion, null, 2), 'utf-8');
+      fs.writeFileSync(path.join(dataDir, `games-${lang}.json`), JSON.stringify(completeParFrancais('quizGames.json'), null, 2), 'utf-8');
     } else if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
     }
@@ -2123,9 +2133,9 @@ function copyTranslationData() {
 
     // Les questions du bilan de couple et leurs guides (près de 100 Ko) ne
     // se chargent que quand quelqu'un ouvre l'application du bilan.
-    const bilanSrc = sourceDe('bilan-questions.json');
-    if (fs.existsSync(bilanSrc)) {
-      fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(JSON.parse(fs.readFileSync(bilanSrc, 'utf-8'))), 'utf-8');
+    const bilanQuestions = completeParFrancais('bilan-questions.json');
+    if (bilanQuestions) {
+      fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(bilanQuestions), 'utf-8');
     }
 
     // Les 200 destinations du test « où partir en vacances ? » ne se

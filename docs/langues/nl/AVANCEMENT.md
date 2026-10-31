@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1637,7 +1637,43 @@ spéciaux ».
   publiques des conditions de vente ne changent que par leur option « NL »
   du sélecteur, qui mène désormais à la page néerlandaise.
 
+## Lot 8b (31 octobre 2026) : la page de vente de la relatiecheck
+
+- **La page** (toujours fermée, donc en noindex et liée nulle part) :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/relatiecheck/` | Relatiecheck online \| Direct resultaat, ook als pdf | Relatiecheck: weet waar jullie staan, zonder therapeut |
+
+  Le H1 garde la promesse de Thomas (« sans aller chez un pro ») ; les deux
+  sections de texte s'appellent « Wat is een relatiecheck? » et « Wat heb je
+  aan een relatie-evaluatie? » (le mot-clé secondaire, écrit avec son trait
+  d'union, comme le veut l'orthographe néerlandaise).
+- **Les textes** : `lp` et `jsonLd` de `nl/bilan.json`, `bilanCouple` de
+  `nl/quizzes.json`, le texte alternatif de l'image de tête. Les domaines
+  s'appellent « thema's » (« twaalf thema's », « thema per thema ») ; les
+  conditions de vente du lot 8a disent désormais la même chose. Le couple
+  fictif des exemples s'appelle Sanne et Daan (les aperçus du rapport et
+  `bilan/exemples.mjs` suivront avec le rapport).
+- **Ce que le néerlandais dit autrement** : la citation du prix d'une séance
+  (« entre 50 et 90 € » en France) dit « al snel 60 euro of meer », vrai aux
+  Pays-Bas comme en Belgique ; l'avertissement du haut donne Veilig Thuis,
+  le 1712 et le 112.
+- **La construction** : les questions de l'évaluation (`bilan-<langue>.json`)
+  sont complétées par le français clé par clé, comme les textes des moteurs
+  (`completeParFrancais`), pour que `nl/bilan-questions.json` puisse arriver
+  en plusieurs fois. Les fichiers des cinq langues publiques sont identiques
+  à la construction d'avant.
+- **Le contrôle seo** attend le noindex de l'évaluation tant qu'elle est
+  fermée dans la langue (« à faire » au lieu d'une erreur).
+- **Corrigé dans trois langues publiques** : le message affiché sans
+  JavaScript sur la page de l'évaluation était en anglais en espagnol, en
+  allemand et en italien ; il est dans leur langue (et en néerlandais).
+
 ## Les chiffres
+
+Au lot 8b : `textes nl` 886 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (la relatiecheck en « à faire » tant qu'elle est fermée).
 
 Au lot 8a : `textes nl` 883 parties écrites sur 1 045, sans erreur ; `liens
 nl` sans erreur.
