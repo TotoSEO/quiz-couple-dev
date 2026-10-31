@@ -16,7 +16,7 @@ const article: BlogArticleData = {
 <p>Ben je hier, dan zit je waarschijnlijk iets dwars en lukt het je niet om er woorden aan te geven. Hier is de lijst met de 13 red flags bij een man, met voor elk een voorbeeld uit het dagelijks leven en wat het betekent. Je kunt ze op volgorde lezen, of meteen naar de red flag gaan die je herkent.</p>`,
   quickSummary: [
     "Een red flag is gedrag dat steeds terugkomt, geen slechte dag.",
-    "De meest voorkomende: hij bagatelliseert wat je voelt, hij is de ene keer warm en de andere keer koud, hij zegt nooit echt sorry.",
+    "De meest voorkomende: hij bagatelliseert wat je voelt, hij is de ene keer warm en de andere keer koud, zijn excuses zijn nooit gemeend.",
     "De ernstigste: hij haalt je weg bij de mensen van wie je houdt, en hij is charmant tegen iedereen behalve tegen jou.",
     "Eén signaal is niet genoeg. Wat telt, is de herhaling, en hoe hij reageert als je erover begint.",
     "Het meest veelzeggende signaal: je twijfelt aan jezelf sinds je met hem bent.",
@@ -31,7 +31,7 @@ const article: BlogArticleData = {
 <li><a href="#bagatelliseert-wat-je-voelt">Hij bagatelliseert wat je voelt</a></li>
 <li><a href="#zijn-buien-jouw-probleem">Zijn buien worden jouw probleem</a></li>
 <li><a href="#warm-en-koud">Hij is de ene keer warm, de andere keer koud</a></li>
-<li><a href="#nooit-echt-sorry">Hij zegt nooit echt sorry</a></li>
+<li><a href="#nooit-echt-sorry">Zijn excuses zijn nooit gemeend</a></li>
 <li><a href="#daden-en-woorden">Zijn daden passen niet bij zijn woorden</a></li>
 <li><a href="#respecteert-je-grens-niet">Hij respecteert een grens niet die je hebt aangegeven</a></li>
 <li><a href="#al-zijn-exen-zijn-gek">Al zijn exen zijn ‘gek’</a></li>
@@ -70,7 +70,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'nooit-echt-sorry',
-          title: "4. Hij zegt nooit echt sorry",
+          title: "4. Zijn excuses zijn nooit gemeend",
           content: `<p>Of zijn excuses worden tegen jou gekeerd: “het spijt me dat je het zo opvat”, “sorry, maar jij had...”. Zo'n excuus is een beleefde manier om jou de schuld te geven. Een excuus dat klopt, klinkt als “ik had het mis, sorry”, zonder ‘maar’ erachter.</p>`,
         },
       ],
@@ -141,7 +141,7 @@ const article: BlogArticleData = {
       title: "Je herkent er een paar: en nu?",
       content: `<p>Eerst dit: een of twee punten op een lijst maken van iemand nog geen slechte partner. Iedereen heeft gebreken en slechte periodes. Wat een red flag maakt, is de herhaling, en vooral hoe hij reageert als je erover begint. Erkent hij het probleem? Doet hij moeite die blijft, of moeite tot jij weer bent gekalmeerd? Vink je meerdere vakjes aan en is het antwoord nee, dan mag je vertrouwen op wat je voelt.</p>
 <p>Om het helderder te zien, kun je in een paar minuten meten <a href="/nl/red-flag-test/">hoe groot een red flag hij is</a>, met twintig situaties zoals die van deze lijst, elk gewogen naar hoe ernstig het is. Zijn jullie al lang samen en is de vraag eerder “is wat ik meemaak normaal?”, kijk dan <a href="/nl/toxische-relatie-test/">of jullie relatie toxisch is geworden</a>, en niet alleen naar zijn gebreken. En herken je vooral de laatste signalen van de lijst, het isolement en de twijfel aan jezelf? Dan legt het artikel over <a href="/nl/blog/toxische-man-in-een-relatie/">wat een toxische man je elke dag aandoet</a> ook uit hoe je eruit komt.</p>
-<a href="/nl/blog/ongelukkige-vrouw-in-een-relatie/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lees ook</span><span class="blog-read-also-title">De signalen van een ongelukkige vrouw in een relatie</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/nl/blog/ongelukkige-vrouw-in-een-relatie/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lees ook</span><span class="blog-read-also-title">De signalen van een ongelukkige vrouw in een relatie: zo herken je ze</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

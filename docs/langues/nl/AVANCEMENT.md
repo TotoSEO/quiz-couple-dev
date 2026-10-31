@@ -17,7 +17,7 @@ le met à jour dans la PR de chaque lot.
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match), 7c (relatieteller), 7d (chinese sterrenbeelden) : les outils sont faits, restent les quiz spéciaux |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) ; après le lot 7d, 7 en attente (les six pages des quiz spéciaux et la liste du blog) |
 | 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
-| 9 et suite | Blog | en cours : 9a (adresses des 71 articles, liste du blog ouverte, red flags bij een man) |
+| 9 et suite | Blog | en cours : 9a (adresses des 71 articles, liste du blog ouverte, red flags bij een man), 9b (red flags bij een vrouw, ongelukkige vrouw in een relatie, man zenuwachtig in je buurt, gevoelens bij een man) |
 
 ## Lot 0 (30 octobre 2026)
 
@@ -1973,7 +1973,28 @@ spéciaux ».
   fases van een breuk bij een man, vragen om aan je vriend te stellen, puis
   les autres par impressions.
 
+## Lot 9b (31 octobre 2026) : quatre articles de plus
+
+- `red-flags-femme` (`/nl/blog/red-flags-bij-een-vrouw/`),
+  `femme-malheureuse-en-couple` (`/nl/blog/ongelukkige-vrouw-in-een-relatie/`),
+  `homme-nerveux-devant-une-femme` (`/nl/blog/man-zenuwachtig-in-je-buurt/`)
+  et `sentiments-chez-un-homme` (`/nl/blog/gevoelens-bij-een-man/`), dans
+  l'ordre des clics français. Les liens du français vers des articles
+  réservés au français (manque de communication, disputes, sauver son
+  couple) sont retirés comme en anglais, la carte « Lees ook » de
+  l'article sur la femme malheureuse mène aux questions pour mieux se
+  connaître ; les cartes croisées des articles déjà traduits prennent le
+  titre néerlandais de leur cible.
+- L'introduction française de l'article sur les sentiments commence par
+  « La réponse tient en une phrase », une tournure interdite par le guide :
+  le néerlandais entre dans le sujet sans elle.
+- Un titre de section ne contient plus « echt » (« Zijn excuses zijn nooit
+  gemeend » dans l'article sur les red flags chez un homme).
+
 ## Les chiffres
+
+Au lot 9b : cinq articles en ligne ; `verifie-article` sans erreur sur les
+cinq, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9a : `seo nl`, `liens nl` et `site nl` (liste du blog et article) sans
 erreur ; `node build/verifie-article.mjs nl/blog/red-flags-bij-een-man` sans
