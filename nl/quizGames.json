@@ -377,6 +377,25 @@
     "quizSuperVilain": "Welke superschurk ben jij?",
     "quizDuoVilains": "Welk superschurkenduo zijn jullie?"
   },
+  "truefalse": {
+    "ready": "Klaar voor waar of niet waar?",
+    "statements": "stellingen",
+    "freeAnon": "Gratis en anoniem",
+    "howTitle": "Hoe werkt het?",
+    "howDesc": "Kies bij elke stelling Waar of Niet waar. Na elke vraag zie je het juiste antwoord en een uitleg.",
+    "true": "Waar",
+    "false": "Niet waar",
+    "correct": "Goed!",
+    "wrong": "Fout",
+    "correctAnswer": "Het antwoord:",
+    "explanation": "Uitleg",
+    "score": "Score",
+    "next": "Volgende vraag",
+    "seeResults": "Bekijk de uitslag",
+    "correctAnswers": "goede antwoorden",
+    "summary": "Overzicht van je antwoorden",
+    "yourAnswer": "jouw antwoord"
+  },
   "coupleLevel": {
     "heading": "Het niveau van jullie relatie",
     "bands": [
