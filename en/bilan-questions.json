@@ -1852,7 +1852,7 @@
     "meteo": {
       "titre": "How you're doing",
       "bref": "Mood",
-      "intro": "To finish, eight questions about how you feel in your relationship right now. There's no agreement to find here, just say how it's going.",
+      "intro": "To finish, twelve questions about how you feel in your relationship right now. There's no agreement to find here, just say how it's going.",
       "questions": {
         "met1": {
           "q": "Right now, in your relationship, you're...",

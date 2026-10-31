@@ -1,5 +1,5 @@
 // Le calcul du bilan de couple, et l'accord entre la structure des questions
-// (coeur.mjs) et les textes des cinq langues ({lang}/bilan-questions.json).
+// (coeur.mjs) et les textes des six langues ({lang}/bilan-questions.json).
 // Lancer : node --test supabase/functions/_shared/bilan/test/
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -10,7 +10,7 @@ import * as C from '../coeur.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.resolve(ici, '../../../../..');
-const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
+const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 
 const SIT = { ensemble: 'oui', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
 
@@ -86,7 +86,7 @@ test('qui ne veut pas d\'enfants ne répond pas aux questions sur leur éducatio
   assert.ok(avec.includes('enf1b') && avec.includes('enf4') && !avec.includes('enf1'));
 });
 
-test('les textes des cinq langues suivent la structure', () => {
+test('les textes des six langues suivent la structure', () => {
   for (const lang of LANGUES) {
     const fichier = path.join(RACINE, lang, 'bilan-questions.json');
     if (!fs.existsSync(fichier)) { assert.fail(lang + ' : fichier absent'); continue; }
