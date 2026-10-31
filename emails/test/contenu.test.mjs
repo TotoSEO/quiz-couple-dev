@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import {
   TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
 } from '../contenu.mjs';
-import { CAPTURE_PAGES, BILAN_ENTREES } from '../../static-site/build/config.js';
+import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES } from '../../static-site/build/config.js';
 
 const SOIR = new Date('2026-10-24T17:00:00Z');
 const NBSP = String.fromCharCode(0xa0);
@@ -14,6 +14,16 @@ const lireTextes = (l) => JSON.parse(readFileSync(new URL(`../textes/${l}.json`,
 function cles(o, prefixe = '') {
   return Object.entries(o).flatMap(([k, v]) => (v && typeof v === 'object' && !Array.isArray(v) ? cles(v, `${prefixe}${k}.`) : [`${prefixe}${k}${Array.isArray(v) ? `[${v.length}]` : ''}`]));
 }
+
+test('le parcours ne prend que les langues du site qui ont leurs textes, et au moins les cinq premières', () => {
+  // Du 30 au 31 octobre 2026, une langue du site sans emails/textes/<langue>.json
+  // (le néerlandais) faisait planter le module au chargement.
+  for (const l of LANGUES) {
+    assert.ok(LANGUAGES.includes(l), l);
+    assert.doesNotThrow(() => lireTextes(l), l);
+  }
+  for (const l of ['fr', 'en', 'es', 'de', 'it']) assert.ok(LANGUES.includes(l), l);
+});
 
 test('les cinq langues ont exactement les mêmes textes que le français', () => {
   const ref = cles(lireTextes('fr')).sort();

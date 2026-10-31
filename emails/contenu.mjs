@@ -17,14 +17,20 @@
 // tout ! » : une phrase d'accroche, quatre ou cinq points cochés, le ticket
 // du prix, le bouton.
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES, BASE_URL, getLocalizedUrl } from '../static-site/build/config.js';
 import { PRIX_CENTIMES, PROMO_POURCENT, PROMO_CODE, prixPromo, promoEnCours } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
 export const TYPES = ['e1', 'e2'];
 export const ANGLES = ['score', 'projet', 'doute', 'general'];
-export const LANGUES = LANGUAGES;
+// Les langues du parcours : celles du site qui ont leurs textes
+// (emails/textes/<langue>.json). Une langue ajoutée au site avant ses textes
+// reste hors du parcours au lieu de le faire planter : du 30 au 31 octobre
+// 2026, `LANGUES = LANGUAGES` faisait lire emails/textes/nl.json, qui
+// n'existait pas, et l'envoi du soir échouait au chargement (aucun e1 ni e2,
+// et l'e1 immédiat coupé quand ses modèles ont expiré).
+export const LANGUES = LANGUAGES.filter((l) => existsSync(new URL(`./textes/${l}.json`, import.meta.url)));
 export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}', '{{ unsubscribe }}'];
 // Les deux versions du test A/B (REGLAGES.ab) : « a » la maquette de Claude
 // Design, « b » l'e-mail sobre signé de Thomas (emails/sobre.html).
