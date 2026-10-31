@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-30T09:58:49.963Z",
+  "genere_le": "2026-10-31T03:14:21.271Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-30",
+  "aujourdhui": "2026-10-31",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 153,
+  "reserve_jours": 152,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -2892,7 +2892,7 @@
   "prochain_creneau": {
     "mipaps-anime": {
       "jour": "2026-10-31",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
@@ -3654,6 +3654,24 @@
       "jour": "2026-10-23",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "42dde0f8-1425-4046-9052-a12cb3586420",
+      "releve": "j7",
+      "vues": 4,
+      "portee": 2,
+      "likes": 0,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 0,
+      "releve_le": "2026-10-31T03:14:15.182227+00:00",
+      "publie_le": "2026-10-23T14:40:15.254+00:00",
+      "categorie": "mipaps-histoire",
+      "format": "carrousel",
+      "gabarit": "mipaps-carrousel",
+      "jour": "2026-10-23",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -3692,7 +3710,7 @@
     },
     {
       "categorie": "mipaps-histoire",
-      "posts": 8,
+      "posts": 9,
       "vues_mediane": 3,
       "vues_moyenne": 3,
       "vues_max": 9,
