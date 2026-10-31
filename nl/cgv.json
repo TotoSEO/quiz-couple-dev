@@ -1,4 +1,12 @@
 {
+  "title": "Algemene voorwaarden",
+  "majLe": "Laatst bijgewerkt: 31 oktober 2026",
+  "intro": "Deze voorwaarden gelden voor de aankoop van het volledige rapport van de {{bilan}} op quiz-couple.com. Al het andere op de site is gratis; daar wordt niets verkocht.",
+  "liens": {
+    "contact": "contactpagina",
+    "confidentialite": "privacybeleid",
+    "bilan": "relatiecheck"
+  },
   "vendeur": {
     "titre": "De verkoper",
     "nom": "Naam:",
@@ -9,5 +17,85 @@
     "tva": "Btw:",
     "tvaValeur": "Geen btw van toepassing, artikel 293 B van de Franse Code général des impôts",
     "telephone": "Telefoon:"
-  }
+  },
+  "sections": [
+    {
+      "titre": "1. Wat er wordt verkocht",
+      "p": [
+        "De relatiecheck is een vragenlijst die twee partners elk apart invullen, of die één persoon alleen invult en daarbij ook aangeeft wat zijn of haar partner volgens hem of haar zou antwoorden. De vragen beantwoorden is gratis; zonder aankoop krijgt u geen enkel resultaat.",
+        "Wat wordt verkocht, is het rapport: een volledige evaluatie van de relatie op basis van beide reeksen antwoorden (overeenstemming, sfeer, overzicht van de domeinen, verschillen met beide antwoorden, handvatten om erover te praten, struikelblokken en punten waarover niet te onderhandelen valt, signalen om op te letten, rolverdeling). Het rapport is digitale inhoud: een pdf-document dat u downloadt via de persoonlijke link die per e-mail wordt verstuurd, en dezelfde versie is te lezen op de pagina van de relatiecheck.",
+        "De relatiecheck is alleen voor meerderjarigen. Het rapport is een gewoon pdf-bestand, te lezen met elke pdf-lezer, op een telefoon en op een computer; dezelfde versie staat op de pagina van de relatiecheck. Op een aankoop zijn de voorwaarden van toepassing die online staan op het moment van de betaling."
+      ]
+    },
+    {
+      "titre": "2. De prijs",
+      "p": [
+        "Het volledige rapport kost {{prix}}; er wordt geen btw gerekend. Het is een eenmalige betaling, zonder abonnement. Eén betaling, door een van beide partners, ontgrendelt het rapport voor allebei. Als u de relatiecheck alleen invult, wordt het rapport alleen aan u geleverd.",
+        "De prijs staat op de pagina van de relatiecheck vóór de eerste vraag, en nog een keer vóór de betaling.",
+        "Er kan voor beperkte tijd een korting worden aangeboden. Die staat dan op de pagina van de relatiecheck, met de normale prijs doorgestreept, en wordt automatisch toegepast op de betaalpagina: u betaalt het bedrag dat de betaalpagina toont voordat u bevestigt.",
+        "Afhankelijk van de regio van het gebruikte apparaat kan een andere prijs gelden, bijvoorbeeld in Latijns-Amerika. Die prijs ziet u vóór de betaling, en u betaalt het bedrag dat de betaalpagina toont voordat u bevestigt."
+      ]
+    },
+    {
+      "titre": "3. Bestellen en betalen",
+      "p": [
+        "Elke partner krijgt de betaling aangeboden zodra hij of zij de eigen vragen heeft beantwoord. Vóór de betaling kan de koper het e-mailadres opgeven waarop hij het rapport wil ontvangen, en vinkt hij een vakje aan waarmee hij uitdrukkelijk vraagt om het rapport te krijgen zodra het klaar is, zonder het einde van de herroepingstermijn af te wachten, en erkent dat hij zijn herroepingsrecht verliest zodra het rapport geleverd is (zie artikel 5). De e-mail met de link naar het rapport herhaalt dat verzoek en die erkenning.",
+        "U betaalt op de beveiligde pagina van onze dienstverlener Stripe, met een bankkaart (creditcard of debetkaart), Apple Pay of Google Pay. Wij hebben nooit toegang tot uw kaartgegevens. Stripe stuurt een betaalbewijs naar het e-mailadres dat u bij de betaling opgeeft: dat is de bevestiging van uw bestelling. Een factuur kunt u aanvragen via de {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. De levering van het rapport",
+      "p": [
+        "Het rapport wordt gemaakt zodra de betaling bevestigd is en beide partners klaar zijn met antwoorden (of, als u de relatiecheck alleen invult, zodra u klaar bent). Elk opgegeven e-mailadres krijgt dan een persoonlijke link om het als pdf te downloaden, en het verschijnt voor beide partners op de pagina van de relatiecheck, via hun persoonlijke links, met een knop om de pdf te downloaden. Het blijft zes maanden na de betaling beschikbaar; daarna wordt de relatiecheck gewist.",
+        "Als de partner zijn of haar antwoorden niet afmaakt, kan het rapport niet worden gemaakt: de koper kan dan op elk moment via de {{contact}} om terugbetaling vragen.",
+        "Elk van beide partners kan de relatiecheck vóór die termijn verwijderen. Dat gebeurt meteen en definitief, voor allebei, en geeft geen recht op terugbetaling."
+      ]
+    },
+    {
+      "titre": "5. Het herroepingsrecht",
+      "p": [
+        "Het rapport is digitale inhoud die niet op een materiële drager wordt geleverd. Voor dit soort inhoud bepaalt artikel L221-28 13° van de Franse Code de la consommation dat het herroepingsrecht van veertien dagen niet meer kan worden uitgeoefend zodra de levering is begonnen met de uitdrukkelijke toestemming van de consument, en nadat hij heeft erkend dat hij dat recht daarmee verliest. Dat aanvaardt de koper door vóór de betaling het vakje aan te vinken.",
+        "Het rapport is geleverd op het moment dat het ter beschikking wordt gesteld: wanneer de e-mail met de downloadlink vertrekt, of wanneer het op de pagina van de relatiecheck verschijnt, wat het eerst gebeurt. Vanaf dat moment is het herroepingsrecht vervallen: de aankoop is definitief en kan op die grond niet meer worden terugbetaald.",
+        "Zolang het rapport niet geleverd is, bijvoorbeeld omdat de partner nog niet klaar is met antwoorden, kan de koper de aankoop zonder opgave van redenen herroepen binnen veertien dagen na de betaling, door ons te schrijven via de {{contact}}. Hij krijgt dan het volledige bedrag terug, via het gebruikte betaalmiddel, binnen veertien dagen."
+      ]
+    },
+    {
+      "titre": "6. Na de levering van het rapport",
+      "p": [
+        "Zodra het rapport geleverd is, is geen terugbetaling meer verschuldigd. Het rapport is gebaseerd op de gegeven antwoorden: een uitkomst die tegenvalt, verrast of niet past bij het beeld dat u van uw relatie had, is geen gebrek van het rapport en geeft geen recht op terugbetaling of schadevergoeding.",
+        "Het rapport valt onder de wettelijke conformiteitsgarantie voor digitale inhoud (artikelen L224-25-12 en volgende van de Franse Code de la consommation). Als het bestand niet opent, als het rapport onvolledig is of niet overeenkomt met wat artikel 1 beschrijft, schrijf ons dan via de {{contact}}: we verbeteren het of maken het kosteloos opnieuw, en als dat niet lukt, betalen we u terug."
+      ]
+    },
+    {
+      "titre": "7. Wat de relatiecheck is, en wat niet",
+      "p": [
+        "De relatiecheck is een hulpmiddel om inzicht te krijgen en het gesprek aan te gaan. Hij zet de antwoorden van beide partners naast elkaar, of, als u hem alleen invult, uw antwoorden naast wat u denkt dat uw partner zou antwoorden, en stelt gespreksonderwerpen voor. Er komt geen professional aan te pas: het is geen diagnose, geen therapie en geen medisch, psychologisch, juridisch of financieel advies, en geen enkel resultaat zegt de waarheid over uw relatie of over hoe die zich zal ontwikkelen.",
+        "De beslissingen die u op basis van het rapport in uw leven neemt, of het nu gaat om bij elkaar blijven, uit elkaar gaan, trouwen, een kind krijgen, verhuizen, geld of welke andere keuze ook, zijn de uwe en vallen onder uw eigen verantwoordelijkheid. Wij garanderen geen enkel resultaat en staan niet in voor die beslissingen of hun gevolgen. Als u een moeilijke periode doormaakt, kan een relatiecoach of relatietherapeut u begeleiden; als u bang bent voor uw partner, bel dan Veilig Thuis (0800-2000, in Nederland), 1712 (in België) of het hulpnummer van uw land, en bij direct gevaar 112.",
+        "We doen ons best om de dienst altijd beschikbaar te houden, zonder een tijdelijke onderbreking te kunnen uitsluiten (onderhoud, storing bij een dienstverlener). Als een betaald rapport door onze schuld onbereikbaar blijft, leveren we het opnieuw of betalen we het terug. Onze aansprakelijkheid kan alleen worden ingeroepen onder de voorwaarden die de wet bepaalt."
+      ]
+    },
+    {
+      "titre": "8. Persoonsgegevens",
+      "p": [
+        "De antwoorden van de relatiecheck, die over het intieme leven en over overtuigingen kunnen gaan, worden alleen bewaard met de uitdrukkelijke toestemming van elke partner en dienen alleen voor de relatiecheck. Het e-mailadres dat u opgeeft om het rapport te ontvangen, dient alleen voor die verzending. Hoe lang we gegevens bewaren, uw rechten en de lijst van dienstverleners leest u in ons {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Klachten en bemiddeling",
+      "mediation": true,
+      "p": [
+        "Voor een klacht schrijft u ons eerst via de {{contact}} of op het adres {{email}}: we antwoorden binnen enkele dagen.",
+        "Als het meningsverschil blijft bestaan, kunt u kosteloos een beroep doen op de consumentenbemiddelaar waaronder wij vallen: {{mediateur}}, binnen een jaar na uw schriftelijke klacht."
+      ],
+      "pSans": [
+        "Voor een klacht schrijft u ons eerst via de {{contact}} of op het adres {{email}}: we antwoorden binnen enkele dagen."
+      ]
+    },
+    {
+      "titre": "10. Toepasselijk recht",
+      "p": [
+        "Op deze voorwaarden is het Franse recht van toepassing. Bij een geschil, en als er geen minnelijke regeling komt, zijn de rechtbanken bevoegd die de wet aanwijst; een consument kan zich ook wenden tot de rechter van de plaats waar hij woonde op het moment van de betaling. Als u in een ander land van de Europese Unie woont, behoudt u de bescherming van de dwingende regels van uw woonland."
+      ]
+    }
+  ]
 }

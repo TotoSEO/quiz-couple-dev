@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | à faire |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1614,7 +1614,33 @@ spéciaux ».
   Nederlands » du sélecteur, les adresses néerlandaises de la liste
   embarquée des pages de jeu et la ligne de la porte e-mail.
 
+## Lot 8a (31 octobre 2026) : les conditions générales de vente
+
+- **La page** : `/nl/algemene-voorwaarden/`, toujours en noindex comme dans
+  les autres langues, et liée seulement quand l'évaluation sera ouverte en
+  néerlandais (pied de page, écran de paiement). Elle quitte
+  `PAGES_EN_ATTENTE`.
+- **Les textes** : `nl/cgv.json` en entier, en « u » comme les autres pages
+  juridiques, au plus près du français : les articles du Code de la
+  consommation gardent leur nom français (« artikel L221-28 13° van de
+  Franse Code de la consommation »), le droit applicable reste le droit
+  français avec la protection des règles impératives du pays de résidence.
+  L'évaluation s'y appelle « de relatiecheck », le mode seul(e) « de
+  relatiecheck alleen invullen ».
+- **Ce que le néerlandais dit autrement** : à l'article 7, le 3919 devient
+  Veilig Thuis (0800-2000, Pays-Bas), le 1712 (Belgique) et le 112 en cas de
+  danger immédiat ; la date de mise à jour est celle de la version
+  néerlandaise.
+- **Vérifié** : la page se construit (prix « € 9,90 », vendeur, liens vers
+  la page de contact et le privacybeleid, lien vers la relatiecheck
+  neutralisé tant qu'elle est fermée) ; `liens nl` sans erreur. Les pages
+  publiques des conditions de vente ne changent que par leur option « NL »
+  du sélecteur, qui mène désormais à la page néerlandaise.
+
 ## Les chiffres
+
+Au lot 8a : `textes nl` 883 parties écrites sur 1 045, sans erreur ; `liens
+nl` sans erreur.
 
 À l'ouverture : `textes nl` 878 parties écrites sur 1 045, sans erreur ;
 `seo nl` sans erreur ni avertissement (79 pages traduites : la liste du
