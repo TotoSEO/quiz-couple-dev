@@ -1,0 +1,351 @@
+{
+  "hero": {
+    "badge": "Gratis · meteen resultaat",
+    "title": "Liefdescalculator: jullie percentage met twee namen",
+    "titleHighlight": "Liefdescalculator",
+    "description": "Typ twee namen en de liefdescalculator geeft je een percentage, plus waar dat getal vandaan komt. Het is een spelletje, en we leggen de hele berekening uit."
+  },
+  "form": {
+    "label1": "Jouw naam",
+    "label2": "Naam van de ander",
+    "placeholder1": "Bijv. Daan",
+    "placeholder2": "Bijv. Sanne",
+    "submit": "Bereken ons percentage",
+    "retry": "Probeer twee andere namen",
+    "erreur": "Vul allebei de namen in om te rekenen.",
+    "aide": "Bijnamen werken ook. Met dezelfde namen krijg je altijd hetzelfde resultaat."
+  },
+  "resultat": {
+    "et": "+",
+    "compat": "match",
+    "detailTitre": "Waar dit percentage vandaan komt",
+    "detailIntro": "Vijf metingen, elk met een eigen gewicht in het totaal. Dit is wat {{a}} en {{b}} opleveren:",
+    "partageTitre": "Laat jullie score zien",
+    "partageBouton": "Delen",
+    "imageBouton": "Afbeelding om te posten",
+    "copie": "Uitslag gekopieerd!",
+    "partageTexte": "{{a}} + {{b}} = {{score}}% met de liefdestest van Quiz Couple",
+    "chemin": "levenspad {{n}}"
+  },
+  "dimensions": {
+    "lettresNom": "De gedeelde letters",
+    "lettresDesc": "Het deel van de letters dat in allebei de namen voorkomt, vergeleken met alle letters die de twee namen samen gebruiken. Sanne en Daan delen de a en de n, dan gaat het snel omhoog.",
+    "motNom": "De klassieke methode",
+    "motDesc": "De oorspronkelijke berekening van de liefdestests. Je telt in elke naam de letters van het woord ‘liefde’, en daarna tel je de cijfers twee aan twee op tot er nog maar twee over zijn. Die twee cijfers zijn de score.",
+    "rythmeNom": "Het ritme van de klinkers",
+    "rythmeDesc": "Elke naam heeft zijn eigen aandeel klinkers. Eva heeft er twee op drie, Bram één op vier. Liggen die twee aandelen dicht bij elkaar, dan klinken de namen hardop goed samen.",
+    "numeroNom": "De numerologie",
+    "numeroDesc": "De pythagorische traditie geeft elke letter een cijfer van 1 tot 9. Je telt op, je brengt het totaal terug, en elke naam komt uit op een cijfer tussen 1 en 9. Een tabel zegt dan hoe goed die twee cijfers samengaan.",
+    "longueurNom": "De balans in lengte",
+    "longueurDesc": "Twee namen van ongeveer dezelfde lengte passen beter bij elkaar als je ze na elkaar uitspreekt. Hoe groter het verschil, hoe lager het cijfer."
+  },
+  "verdicts": {
+    "v1Titre": "Op papier klikt het niet zo",
+    "v1Texte": "Jullie namen lijken niet erg op elkaar: weinig letters gemeen, een ander ritme, cijfers die niet goed samengaan. Goed nieuws: niemand is ooit bij iemand weggegaan om een berekening met namen. Probeer het met jullie bijnamen, dat maakt een groot verschil.",
+    "v2Titre": "Een voorzichtig begin",
+    "v2Texte": "De berekening vindt een paar overeenkomsten tussen jullie namen, meer niet. Zo'n score zegt niets ernstigs, alleen dat de magie van de letters niet al het werk voor jullie doet.",
+    "v3Titre": "Jullie passen goed bij elkaar",
+    "v3Texte": "Jullie namen hebben duidelijke overeenkomsten en een vergelijkbaar ritme. Dit is de meest voorkomende score, die van stellen bij wie de namen goed samengaan zonder dat het opvalt.",
+    "v4Titre": "Een mooie match",
+    "v4Texte": "Gedeelde letters, een gelijk ritme, cijfers die precies kloppen: jullie twee namen gaan heel goed samen. Het soort uitslag dat je meteen aan de ander wilt laten zien.",
+    "v5Titre": "Het voelt als vanzelfsprekend",
+    "v5Texte": "Weinig paren komen zo hoog. Jullie namen delen veel, hebben hetzelfde ritme en komen uit op cijfers die goed samengaan. Geniet ervan, dit is een mooie score om te posten.",
+    "v6Titre": "Foutloos",
+    "v6Texte": "Alle vijf de metingen staan tegelijk op groen, en dat gebeurt bijna nooit. Als jullie een teken nodig hadden om ervoor te gaan: de letters zijn het ermee eens."
+  },
+  "celebres": {
+    "titre": "Je hebt een beroemd stel ontgrendeld",
+    "teaser": "Er zitten een stuk of twintig bekende stellen verstopt in de liefdestest, elk met een eigen score en een eigen zin. Probeer Romeo en Julia om te zien hoe het werkt, en zoek dan de rest."
+  },
+  "jour": {
+    "titre": "Jullie dosis van vandaag",
+    "intro": "Drie ideeën om samen te proberen, elke ochtend nieuw.",
+    "conseilLabel": "De tip van vandaag",
+    "questionLabel": "De vraag voor vanavond",
+    "defiLabel": "De kleine uitdaging"
+  },
+  "suite": {
+    "titre": "Zin in de test met twintig vragen?",
+    "texte": "Dit percentage is een spelletje, het telt letters. Wil je meten wat er wel toe doet, dan is er een test met twintig vragen om samen te doen, over <a href=\"/nl/passen-we-bij-elkaar/\">geld, kinderen, het dagelijks leven of trouw</a>. Daar betekent de score wel iets.",
+    "bouton": "Doe de test met 20 vragen",
+    "autresTitre": "Misschien vind je deze calculators ook leuk:",
+    "autresEtiquette": "Calculator"
+  },
+  "section1": {
+    "title": "Wat is een liefdestest met namen?",
+    "p1": "Een liefdestest met namen is een klein hulpmiddel waarin je twee namen typt en een percentage krijgt. Bijvoorbeeld: je schrijft ‘Daan’ en ‘Sanne’, en de test geeft 71%. Je hoeft geen vragen in te vullen en je niet in te schrijven, en het resultaat staat er binnen een seconde.",
+    "p2": "Het idee komt uit de tijd van de allereerste websites, toen je elkaar linkjes stuurde via MSN. Het principe is nooit veranderd: je vergelijkt de letters van twee namen en haalt daar een getal uit. Het is dus vooral voor de lol, om een gesprek op gang te brengen, of om de naam van je crush in te typen en te kijken wat eruit komt.",
+    "p3": "De onze doet hetzelfde, met twee verschillen. Ten eerste laat hij je de hele berekening zien in plaats van een getal uit het niets. Ten tweede doet hij niet alsof hij wetenschappelijk is: het is een spelletje met de letters van jullie namen."
+  },
+  "section2": {
+    "title": "Zo werkt onze liefdescalculator",
+    "p1": "De eindscore is een gemiddelde van vijf metingen, elk met een eigen gewicht. Zo werkt de berekening hierboven:",
+    "apres": "De vijf cijfers tellen op volgens hun gewicht en geven het percentage dat je ziet. Er gebeurt niets op goed geluk: dezelfde namen geven altijd precies hetzelfde resultaat, en ‘Daan + Sanne’ geeft hetzelfde als ‘Sanne + Daan’.",
+    "poidsTitre": "Het gewicht van elke meting",
+    "poidsTexte": "De klassieke methode en de numerologie wegen het zwaarst, omdat zij de traditie van dit soort tests maken. De gedeelde letters volgen op korte afstand. Het ritme van de klinkers en de balans in lengte tellen iets minder mee: ze dienen vooral om twee paren uit elkaar te houden die verder gelijk scoren."
+  },
+  "section3": {
+    "title": "Zegt het percentage iets?",
+    "p1": "Nee. Je naam heb je niet zelf gekozen, en hij zegt niets over hoe je liefhebt, ruziemaakt of plannen maakt. Twee mensen met 38% kunnen dertig jaar samen zijn, en twee mensen met 97% kunnen na zes maanden uit elkaar gaan.",
+    "p2": "Waar het getal wel goed in is: een gesprek beginnen. Je typt de twee namen, je lacht om de uitslag, je probeert het met jullie bijnamen, en voor je het weet praat je over serieuzere dingen. Zo komen <a href=\"/nl/vragen-voor-koppels/\">de goede vragen vaak in een gesprek terecht</a>, zonder dat je ze hebt voorbereid.",
+    "p3": "Wil je een getal dat ergens op steunt, dan moet je vragen beantwoorden over jullie leven samen, niet over jullie namen. Dat doet onze test met twintig vragen, en dat is een heel andere oefening."
+  },
+  "section4": {
+    "title": "De beroemde stellen in de liefdestest",
+    "p1": "Een stuk of twintig bekende stellen hebben een eigen score, met de hand geschreven, en een zin speciaal voor hen. Typ ‘Romeo’ en ‘Julia’ om de eerste te zien. Er zitten tragische geliefden tussen, tekenfilmhelden, filmduo's en twee of drie grapjes.",
+    "p2": "Ze veranderen niets aan hoe de test normaal werkt: alle andere namen gaan gewoon door de berekening met de vijf metingen. Het is alleen een knipoog voor wie op zoek gaat."
+  },
+  "section5": {
+    "title": "Je score is laag, en dan?",
+    "p1": "Probeer het eerst met jullie bijnamen. De test kijkt naar letters, dus ‘Daan’ en ‘Sanne’ geven niet hetzelfde als ‘Daniël’ en ‘Susanne’. Veel stellen halen hun beste score met de koosnaampjes die ze in het dagelijks leven gebruiken.",
+    "p2": "Bedenk daarna waar het getal vandaan komt. Een lage score betekent dat jullie namen niet veel letters gemeen hebben en dat hun ritme verschilt. Meer zegt het niet. Zit de grote vraag je dwars, dan leer je met <a href=\"/nl/passen-we-bij-elkaar/\">twintig vragen over jullie waarden en plannen</a> veel meer dan met een berekening op letters.",
+    "p3": "En wil je het bij een spelletje houden, dan hebben we nog twee hulpmiddelen in dezelfde sfeer: de <a href=\"/nl/sterrenbeelden-match/\">match op namen en sterrenbeelden</a>, en de <a href=\"/nl/compatibiliteit-geboortedatum/\">vergelijking van jullie twee geboortedatums</a>. En voor wie al samen is: je kunt ook <a href=\"/nl/hoe-lang-zijn-we-samen/\">de dagen tellen sinds het begin van jullie verhaal</a>, elke ochtend bijgewerkt."
+  },
+  "faq": {
+    "title": "De vragen die we krijgen",
+    "q1": "Is de liefdestest gratis?",
+    "a1": "Ja, helemaal. Geen inschrijving, geen e-mailadres, geen limiet op het aantal pogingen. Je kunt zoveel paren namen testen als je wilt.",
+    "q2": "Verandert de uitslag als ik het opnieuw doe?",
+    "a2": "Nee, nooit. Dezelfde twee namen geven altijd hetzelfde percentage, vandaag net zo goed als over zes maanden. En de volgorde maakt niets uit: ‘Emma + Noah’ geeft precies hetzelfde als ‘Noah + Emma’.",
+    "q3": "Kan ik een bijnaam of gebruikersnaam invullen?",
+    "a3": "Ja, en voor de lol is dat zelfs een aanrader. De test leest letters, dus alles wat je kunt schrijven werkt: een bijnaam, een gebruikersnaam, een achternaam. Accenten en hoofdletters veranderen niets aan de berekening.",
+    "q4": "Hoe krijg ik een hoger percentage?",
+    "a4": "Door jullie namen op andere manieren te schrijven. De paren die het hoogst scoren delen veel letters, hebben ongeveer evenveel klinkers en zijn ongeveer even lang. Daarom geven korte bijnamen vaak een betere score dan volledige namen.",
+    "q5": "Heeft de score een wetenschappelijke basis?",
+    "a5": "Nee, helemaal niet. Het is een spelletje met letters, met een stukje numerologie, en dat is een traditie en geen wetenschap. Om te meten hoe goed jullie bij elkaar passen, moet je vragen stellen over het leven samen, en dat doet onze test met twintig vragen.",
+    "q6": "Wat is het verschil met jullie compatibiliteitstest?",
+    "a6": "Dat zijn twee heel verschillende dingen. De liefdestest kijkt naar twee namen en geeft binnen een seconde een getal. De compatibiliteitstest stelt jullie allebei twintig vragen over geld, kinderen, het levensritme en trouw, en vergelijkt dan jullie antwoorden. Het ene is een spelletje, het andere een vragenlijst voor stellen die ergens over gaat.",
+    "q7": "Bewaren jullie de namen die ik intyp?",
+    "a7": "Nee. De berekening gebeurt volledig in je browser, er wordt niets verstuurd of ergens opgeslagen. Je kunt dus rustig de naam van je crush intypen."
+  },
+  "seo": {
+    "etapesTitre": "De liefdestest in 3 stappen",
+    "e1Titre": "Schrijf de twee namen op",
+    "e1Texte": "Die van jou en die van de ander. Bijnamen werken net zo goed.",
+    "e2Titre": "Start de berekening",
+    "e2Texte": "Het percentage verschijnt meteen, met de details van de vijf metingen.",
+    "e3Titre": "Deel de uitslag",
+    "e3Texte": "Een kant-en-klare afbeelding om te posten, of de link om naar de persoon in kwestie te sturen."
+  },
+  "jsonLd": {
+    "name": "Liefdestest",
+    "about": "Een percentage voor jullie liefdesmatch, berekend uit twee namen"
+  },
+  "couples": [
+    {
+      "a": "romeo",
+      "b": "julia",
+      "score": 99,
+      "mot": "Hét referentiestel. Al vier eeuwen noemt iedereen ze, en ze hielden het maar een paar dagen vol. Geniet van jullie 99% en doe het beter dan zij, op de lange termijn."
+    },
+    {
+      "a": "bonnie",
+      "b": "clyde",
+      "score": 97,
+      "mot": "Onafscheidelijk tot het einde, wat romantisch is en sterk af te raden. Hou de trouw, laat de rest."
+    },
+    {
+      "a": "napoleon",
+      "b": "josephine",
+      "score": 72,
+      "mot": "Vurige brieven, een keizerrijk, en toch een scheiding. Passie was niet genoeg, er moest een erfgenaam komen."
+    },
+    {
+      "a": "cleopatra",
+      "b": "caesar",
+      "score": 68,
+      "mot": "Een politiek bondgenootschap dat uitliep op een liefdesverhaal. Of andersom, historici zijn het er nog steeds niet over eens."
+    },
+    {
+      "a": "tristan",
+      "b": "isolde",
+      "score": 95,
+      "mot": "Per ongeluk een liefdesdrankje gedronken en klaar was het. Het beste excuus uit de geschiedenis om verliefd te worden."
+    },
+    {
+      "a": "orpheus",
+      "b": "eurydice",
+      "score": 88,
+      "mot": "Hij ging haar halen in de onderwereld. Hij keek alleen net te vroeg om. Kijk niet om."
+    },
+    {
+      "a": "adam",
+      "b": "eva",
+      "score": 100,
+      "mot": "Technisch gezien was er niemand anders. Maximale match door een totaal gebrek aan concurrentie."
+    },
+    {
+      "a": "lancelot",
+      "b": "guinevere",
+      "score": 64,
+      "mot": "Grote liefde, heel slechte timing, en een koning ertussen. Een heel koninkrijk is erover gevallen."
+    },
+    {
+      "a": "shrek",
+      "b": "fiona",
+      "score": 96,
+      "mot": "Het bewijs dat je elkaar prachtig kunt vinden terwijl de rest van de wereld zich achter de oren krabt."
+    },
+    {
+      "a": "mickey",
+      "b": "minnie",
+      "score": 94,
+      "mot": "Bijna honderd jaar samen, nooit een onvertogen woord. We zouden hun geheim graag kennen."
+    },
+    {
+      "a": "jack",
+      "b": "rose",
+      "score": 81,
+      "mot": "Een deur breed genoeg voor twee, een twijfelachtige beslissing. De discussie is nog steeds niet beslecht."
+    },
+    {
+      "a": "han",
+      "b": "leia",
+      "score": 91,
+      "mot": "“Ik hou van je.” “Dat weet ik.” Het irritantste en stijlvolste antwoord van het hele sterrenstelsel."
+    },
+    {
+      "a": "mario",
+      "b": "peach",
+      "score": 76,
+      "mot": "Acht kastelen bezocht, steeds het verkeerde adres. Volharding loont uiteindelijk."
+    },
+    {
+      "a": "aladdin",
+      "b": "jasmine",
+      "score": 89,
+      "mot": "Eerste date op een vliegend tapijt. Daar kom je moeilijk overheen."
+    },
+    {
+      "a": "belle",
+      "b": "beest",
+      "score": 92,
+      "mot": "Een hele bibliotheek als cadeau. Eerlijk gezegd het mooiste romantische gebaar van de lijst."
+    },
+    {
+      "a": "popeye",
+      "b": "olijfje",
+      "score": 79,
+      "mot": "Hij tilt al sinds 1929 boten op voor haar. Dat is constante inzet, dat moet je hem nageven."
+    },
+    {
+      "a": "marie",
+      "b": "pierre",
+      "score": 98,
+      "mot": "Twee Nobelprijzen, een laboratorium en een hecht werkduo. Het productiefste stel van de lijst."
+    },
+    {
+      "a": "asterix",
+      "b": "obelix",
+      "score": 85,
+      "mot": "Niet dat soort stel, maar geef toe: deze vriendschap is steviger dan de helft van alle liefdesverhalen."
+    },
+    {
+      "a": "tom",
+      "b": "jerry",
+      "score": 12,
+      "mot": "Zeventig jaar achter elkaar aan zitten zonder ooit met elkaar te praten. We kennen stellen zoals zij."
+    },
+    {
+      "a": "batman",
+      "b": "robin",
+      "score": 70,
+      "mot": "Een samenwerking die loopt, een duidelijke taakverdeling, nul emotionele communicatie."
+    },
+    {
+      "a": "bella",
+      "b": "edward",
+      "score": 66,
+      "mot": "Hij kijkt naar haar als ze slaapt, zij vindt dat charmant. We zeggen er maar niets van."
+    },
+    {
+      "a": "harry",
+      "b": "ginny",
+      "score": 87,
+      "mot": "Ze wachtte al op hem sinds het eerste boek. Geduld wordt beloond."
+    },
+    {
+      "a": "ross",
+      "b": "rachel",
+      "score": 47,
+      "mot": "Tien seizoenen, een heel vaag omschreven pauze, en een vliegveld. Jullie verdienen iets eenvoudigers."
+    },
+    {
+      "a": "sherlock",
+      "b": "watson",
+      "score": 83,
+      "mot": "De een lost alles op, de ander verdraagt alles. Een evenwicht, op zijn manier."
+    }
+  ],
+  "dose": {
+    "conseils": [
+      "Vraag de ander hoe de dag was, en stel daarna een tweede vraag over het antwoord. Die tweede vraag maakt het verschil.",
+      "Leg vanavond allebei je telefoon in een andere kamer tijdens het eten. Binnen tien minuten merk je het verschil.",
+      "Bedank de ander voor iets wat hij of zij altijd doet en wat je niet meer opvalt. Daar is de ander vaak het blijst mee.",
+      "Ergert een onderwerp je al weken, praat er dan over op een dag dat alles goed gaat, niet midden in een ruzie.",
+      "Vertel een herinnering uit jullie begintijd die de ander misschien vergeten is. Dat zet de dingen weer op hun plek.",
+      "Stel een activiteit voor die de ander leuk vindt en jij niet zo. Eén keer. Dat telt meer dan je denkt.",
+      "Als de ander over een probleem vertelt, vraag dan eerst: “wil je dat ik help of dat ik luister?”",
+      "Schrijf iets op een briefje en leg het ergens neer. Een briefje op papier, dat bewaar je.",
+      "Spreek samen iets af om over drie maanden te doen. Een datum in het vooruitzicht verandert de sfeer van een hele week.",
+      "Pak een gewoonte weer op die jullie in het begin hadden en die er zomaar bij in is geschoten.",
+      "Stel een vraag over zijn of haar jeugd die je nog nooit hebt gesteld. Die zijn er altijd nog.",
+      "Hadden jullie gisteren ruzie, kom er dan vandaag rustig op terug. Ruzies die je niet afsluit, komen terug.",
+      "Geef een compliment over iets wat niets met het uiterlijk te maken heeft. Dat verrast altijd.",
+      "Doe vandaag iets in de plaats van de ander, zonder het te zeggen en zonder te wachten tot het opvalt.",
+      "Vraag waar de ander deze week blij van zou worden. Het antwoord is zelden wat je verwacht.",
+      "Kijk naar een foto van jullie samen van minstens twee jaar geleden. Vertel wat je je van die dag herinnert.",
+      "Praat een kwartiertje rustig over geld, voordat het onderwerp op een slechte avond vanzelf op tafel komt.",
+      "Zeg iets wat je in de ander bewondert en wat je nog nooit hardop hebt gezegd.",
+      "Laat de ander de avond helemaal kiezen, zonder commentaar op de keuze.",
+      "Heeft iets je vandaag geraakt, zeg het dan dezelfde dag nog. Zoiets is snel over datum."
+    ],
+    "questions": [
+      "Waar moest je vandaag om lachen?",
+      "Als we onze eerste date over mochten doen, wat zou je dan anders doen?",
+      "Wat zou je willen dat we vaker doen?",
+      "Wat doe ik waardoor jij je gerustgesteld voelt, zonder dat ik het weet?",
+      "Waar droomde je van toen je vijftien was?",
+      "Wat verraste je in het begin het meest aan mij?",
+      "Er is een onderwerp waar we nooit over praten. Welk, denk jij?",
+      "Waar wonen we over tien jaar, in jouw hoofd?",
+      "Welk moment uit ons verhaal zou je precies zo opnieuw willen beleven?",
+      "Wat durf je me niet te vragen?",
+      "Wanneer was je voor het laatst trots op jezelf?",
+      "Wat heb je van je ouders meegekregen dat je houdt, en wat heb je laten vallen?",
+      "Als we morgen drie dagen ergens heen konden, waar dan?",
+      "Wat mis je het meest als ik er niet ben?",
+      "Welke gewoonte van mij vind je schattig, en welke verdraag je uit liefde?",
+      "Weet je nog wanneer je voor het eerst dacht dat het serieus was?",
+      "Waardoor zou je je deze week gesteund voelen?",
+      "Welk compliment zou je vaker willen horen?",
+      "Is er iets waarvan je zou willen dat we ermee stoppen?",
+      "Wat heb je geleerd van onze laatste ruzie?"
+    ],
+    "defis": [
+      "Stuur de ander overdag een berichtje, zonder speciale reden.",
+      "Maak morgenochtend het ontbijt voor de ander, al is het maar snel.",
+      "Breng samen een hele avond door zonder scherm.",
+      "Maak samen een gerecht dat jullie aten bij een mooie herinnering.",
+      "Bel elkaar vandaag één keer in plaats van te appen.",
+      "Vertel elkaar allebei je slechtste date van voor jullie elkaar kenden.",
+      "Loop samen twintig minuten buiten, zonder bestemming.",
+      "Laat de ander een liedje horen dat je aan hem of haar doet denken.",
+      "Schrijf allebei drie dingen op die je leuk vindt aan de ander, en ruil de briefjes.",
+      "Kijk samen de lievelingsfilm van de ander, zonder te zuchten.",
+      "Maak vandaag een foto van jullie samen. Wanneer was de laatste?",
+      "Bestel in het restaurant voor de ander, zonder te vragen.",
+      "Vertel elkaar je dag in drie minuten per persoon, zonder onderbroken te worden.",
+      "Zoek samen een activiteit die jullie allebei nog nooit hebben gedaan.",
+      "Ga vanavond slapen zonder in bed op je telefoon te kijken.",
+      "Maak samen een lijstje met tien dingen om te doen voor het einde van het jaar.",
+      "Haal oude foto's tevoorschijn en bespreek ze samen.",
+      "Geef de ander een kleinigheidje van minder dan vijf euro dat hem of haar aan jou doet denken.",
+      "Stel elkaar om de beurt de gênantste vraag van jullie lijst.",
+      "Doe het licht uit en praat tien minuten in het donker voor het slapengaan."
+    ]
+  },
+  "calcul": {
+    "mot": "liefde"
+  }
+}

@@ -67,3 +67,4 @@ Sport
 Single
 Storm
 Week {{n}}
+Calculator

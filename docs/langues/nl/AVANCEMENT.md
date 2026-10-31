@@ -14,9 +14,9 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
+| 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1833,6 +1833,22 @@ spéciaux ».
   l'e2 et le PS en viennent).
 - 75 tests (parcours, e-mails, abonnés) ; aperçus relus dans les deux
   versions (maquette et sobre).
+
+## Lot 7a (31 octobre 2026) : le liefdestest
+
+- `nl/calculatrice-amour.json` : la page (`/nl/liefdestest/`), title
+  « Liefdestest met namen: jullie percentage, gratis en meteen », H1
+  « Liefdescalculator: jullie percentage met twee namen » ; les verdicts, la
+  « dosis van vandaag » (20 tips, 20 vragen, 20 uitdagingen), les 24
+  beroemde stellen sous leur nom néerlandais (Romeo en Julia, Adam en Eva,
+  Belle en het Beest, Popeye en Olijfje...).
+- La méthode historique compte les lettres du mot « liefde » ; les exemples
+  du texte sont refaits avec le calcul de la page : Daan + Sanne 71 %,
+  Daniël + Susanne 90 %, et les mesures citées (Sanne et Daan partagent le a
+  et le n ; Eva deux voyelles sur trois, Bram une sur quatre). Joué dans
+  Chromium : Daan + Sanne affiche 71 %, Romeo + Julia 99 % avec sa phrase.
+- Les liens vers les trois autres outils restent neutralisés tant qu'ils
+  sont en attente.
 
 ## Les chiffres
 
