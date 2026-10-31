@@ -232,6 +232,18 @@
     "description": "20 vragen over vier pijlers om te zien of deze persoon je zielsverwant is.",
     "metaDescription": "Zielsverwant test: 20 vragen, een index en een uitslag die je niet naar de mond praat. Alleen over iemand, samen of als single. Gratis, zonder account."
   },
+  "jeuGages": {
+    "title": "Opdrachten voor koppels: draai aan het rad, 140 opdrachten",
+    "shortTitle": "Rad met opdrachten",
+    "description": "Een rad om eindeloos aan te draaien, dat willekeurig één opdracht uit 140 kiest, in zeven soorten.",
+    "metaDescription": "Leuke opdrachten voor koppels aan een rad: 140 willekeurige opdrachten, van een kus tot een bekentenis. Gratis, zonder account, draai zo vaak je wilt."
+  },
+  "jeuPlateau": {
+    "title": "Bordspel voor koppels: 40 vakjes en één winnaar",
+    "shortTitle": "Bordspel",
+    "description": "Een bord met 40 vakjes om met z'n tweeën op één telefoon te spelen, met een echte winnaar aan het eind.",
+    "metaDescription": "Online bordspel voor koppels: 40 vakjes, een dobbelsteen, twee poppetjes. Waarheden, opdrachten, duels en herinneringen. Gratis, wie eerst aankomt wint."
+  },
   "jeuActionVerite": {
     "title": "Waarheid of durven voor koppels: online spel met 70 kaarten",
     "shortTitle": "Waarheid of durven",

@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "badge": "Gratis • Zonder account • Er is een winnaar",
+    "title": "Het bordspel voor koppels dat je op één telefoon speelt",
+    "titleHighlight": "bordspel voor koppels",
+    "description": "Veertig vakjes, een dobbelsteen, twee poppetjes met jullie namen. Wie het eerst aankomt, wint… en de verliezer kiest de laatste kaart: waarheid of durven."
+  },
+  "cases": {
+    "veriteNom": "Waarheid",
+    "veriteDesc": "Een vraag waar je eerlijk op moet antwoorden. Je antwoordt en gaat één vakje vooruit; je slaat over en gaat er één terug.",
+    "defiNom": "Durven",
+    "defiDesc": "Iets wat je meteen moet doen, waar de ander bij is. Zelfde regel: gedaan, je gaat vooruit; geweigerd, je gaat terug.",
+    "duelNom": "Duel",
+    "duelDesc": "Een vraag die begint met ‘wie van jullie twee’. Jullie wijzen tegelijk: zijn jullie het eens, dan gaat wie aan de beurt is twee vakjes vooruit.",
+    "souvenirNom": "Herinnering",
+    "souvenirDesc": "Je moet vertellen. Een eerste reis, een eerste ruzie, een lachbui. Het vakje dat het spel vertraagt, en vaak het vakje waar je het langst aan terugdenkt.",
+    "choixNom": "Waarheid of durven",
+    "choixDesc": "Het vakje waar je zelf kiest. Een vraag of een opdracht, wat je het liefst wilt, en dan dezelfde regel als bij de andere: gedaan, één vakje vooruit; overgeslagen, één terug.",
+    "chanceNom": "Geluk",
+    "chanceDesc": "Een duwtje van het geluk: één, twee of drie vakjes vooruit, nog een keer gooien, of de ander inhalen als je achterligt. Je gaat er nooit door achteruit."
+  },
+  "section1": {
+    "title": "Het eerste van onze spellen dat je kunt winnen",
+    "p1": "Bij de meeste <strong class=\"text-foreground\">spelletjes voor koppels</strong> trek je een kaart, antwoord je en begin je opnieuw. Dat is tien minuten leuk. Daarna houdt het op, omdat niets je aanzet om door te gaan: geen voortgang, geen einde, geen enkele reden om de volgende kaart te willen.",
+    "p2": "Een speelbord lost dat in één keer op.",
+    "p3": "Je ziet waar je staat, je ziet waar de ander staat, en die drie vakjes verschil zijn genoeg om nog één keer te willen gooien. De kaarten blijven dezelfde, maar je hebt ineens een reden om ze te trekken. Reken op twintig tot dertig minuten voor een heel spel, iets minder als de dobbelsteen gul is."
+  },
+  "section2": {
+    "title": "De zes soorten vakjes",
+    "intro": "Het bord wisselt de opdrachten af, zodat geen spel op het vorige lijkt. Dit wacht jullie achter elke kleur.",
+    "headerFamille": "Het vakje",
+    "headerContenu": "Wat er gebeurt"
+  },
+  "section3": {
+    "title": "De regels, in vier punten",
+    "intro": "Je leest ze in een minuut, en het spel doet de rest.",
+    "regle1Titre": "Vul jullie namen in en gooi de dobbelsteen",
+    "regle1Texte": "Ieder een eigen poppetje, ieder om de beurt. Het spel zegt wie er speelt en zet het poppetje zelf vooruit, vakje voor vakje, tot het gegooide vakje.",
+    "regle2Titre": "Elk vakje start een opdracht",
+    "regle2Texte": "Waarheid, durven, duel, herinnering, waarheid of durven naar keuze, of een meevaller. De kaart zie je pas als het poppetje staat, nooit eerder.",
+    "regle3Titre": "Gelukt is vooruit, weigeren is achteruit",
+    "regle3Texte": "Een waarheid of een opdracht die je doet, levert één vakje extra op. Weigeren kost er één. Zo kun je weigeren, maar niet zomaar.",
+    "regle4Titre": "Wie het eerst aankomt, wint",
+    "regle4Texte": "Je hoeft niet precies uit te komen: het laatste vakje halen of erover gaan is genoeg. De verliezer kiest dan nog een laatste kaart, waarheid of durven, en dan is het klaar."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Hoe lang duurt een spel?",
+    "a1": "Meestal tussen twintig en dertig minuten. Het aantal beurten hangt af van de dobbelsteen, maar vooral van jullie: een herinneringsvakje kan in vijftien seconden klaar zijn… of een gesprek van tien minuten opleveren.",
+    "q2": "Moet ik iets printen?",
+    "a2": "Nee! Het bord staat op het scherm en de poppetjes lopen vanzelf. Eén telefoon tussen jullie in is genoeg, niets om te installeren of aan te maken.",
+    "q3": "Waar komen de kaarten vandaan?",
+    "a3": "De waarheden en de opdrachten komen uit ons spel <a href=\"/nl/waarheid-of-durven-koppels/\">waarheid of durven</a>, en het zijn dezelfde kaarten die op het keuzevakje terechtkomen. De herinneringen, de duels en de geluksvakjes zijn speciaal voor het bord geschreven.",
+    "q4": "Kun je valsspelen of een opdracht overslaan?",
+    "a4": "Overslaan hoort erbij en kost één vakje, op elke kaart. Voor de rest is het een spel voor twee zonder scheidsrechter: niemand controleert of je echt geantwoord hebt…",
+    "q5": "Kun je met meer dan twee spelen?",
+    "a5": "Het bord is gemaakt voor twee pionnen en twee namen. Met meer mensen speel je het makkelijkst in teams van twee, en geef je de telefoon bij elke beurt door."
+  },
+  "section4": {
+    "title": "Waarom een speelbord alles verandert",
+    "p1": "Niet de inhoud houdt een spelletjesavond gaande, maar wat er op het spel staat. Dezelfde vraag, willekeurig gesteld, ben je zo weer vergeten; gesteld drie vakjes voor de finish, met de ander die je inhaalt, wordt het een moment. Meer doet het bord niet: het geeft je een reden om door te gaan.",
+    "p2": "En aan het eind is er een winnaar, een verliezer en een laatste kaart die de verliezer zelf kiest. Een kleinigheid… maar wel precies wat een spel spannend maakt.",
+    "cta": "Bekijk al onze spelletjes voor koppels"
+  },
+  "jsonLd": {
+    "name": "Het bordspel voor koppels"
+  }
+}

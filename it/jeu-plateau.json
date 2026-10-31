@@ -17,7 +17,7 @@
     "choixNom": "Obbligo o verità",
     "choixDesc": "È la casella in cui si sceglie. Una domanda o una sfida, quella che preferisci, poi la stessa regola delle altre: fatta, si avanza di una casella; passata, si torna indietro di una.",
     "chanceNom": "Fortuna",
-    "chanceDesc": "L'imprevisto che ribalta tutto: avanzare di tre, tornare indietro di due, rilanciare o scambiare le due pedine."
+    "chanceDesc": "Una spinta dalla fortuna: avanzare di una, due o tre caselle, rilanciare o raggiungere l'altro quando sei indietro. Non fa mai tornare indietro."
   },
   "section1": {
     "title": "Il primo dei nostri giochi che si vince",

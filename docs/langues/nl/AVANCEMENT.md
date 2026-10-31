@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+) ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels) ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1326,7 +1326,44 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur ces pages** : le fil d'Ariane vers le hub
   des jeux et les cartes vers les jeux du lot 6 pas encore faits.
 
+## Lot 6c (31 octobre 2026) : la roue des gages, le jeu de plateau
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/opdrachten-voor-koppels/` | Opdrachten voor koppels: draai aan het rad, 140 opdrachten | Het rad met opdrachten voor koppels: draai zo vaak als jullie willen |
+  | `/nl/bordspel-voor-koppels/` | Bordspel voor koppels: 40 vakjes en één winnaar | Het bordspel voor koppels dat je op één telefoon speelt |
+
+- **Les moteurs** : les 140 gages de la roue (`gageRoue`) et ses textes
+  (`roue`), les cases, les souvenirs et les duels du plateau (`plateau`) et
+  ses textes (`plateau` de quizGames.json). Un gage de la roue est une «
+  opdracht » (le mot-clé de la page), une famille une « soort ». Restent
+  tels quels, comme dans les cinq langues : « Show », « Massage », « Duel
+  », « Start », « Finish » (`identiques.txt`).
+- **Corrigé dans les cinq langues publiques** : la case chance du plateau
+  était décrite comme pouvant faire reculer de deux cases ou échanger les
+  pions, ce que le jeu ne fait plus depuis le 8 octobre 2026
+  (`PLATEAU_CHANCES` : une, deux ou trois cases, rejouer, rattraper
+  l'autre). Elle dit désormais ce qu'elle fait, et qu'elle ne fait jamais
+  reculer.
+- **Les introductions** du plateau ne disent plus que « les jeux de couple
+  en ligne se ressemblent tous » ni que le gagnant est « ce qui manque à la
+  plupart des jeux en ligne » : elles décrivent le jeu, sans taper sur ce
+  qui existe ailleurs.
+- **Les liens** : « een potje waarheid of durven » et « waarheid of durven
+  voor volwassenen » depuis la roue ; « waarheid of durven » (d'où viennent
+  les cartes) depuis le plateau.
+- **Vérifié** : la roue tourne et tire un gage ; une partie de plateau
+  jouée jusqu'à la victoire, puis la dernière carte du perdant
+  (`joue-boutons.cjs`, scratchpad de la session).
+
 ## Les chiffres
+
+Au lot 6c : `textes nl` 772 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (70 pages traduites) ; la roue et le plateau vont au bout.
+Les pages publiques ne changent que par la description de la case chance
+du plateau, dans les cinq langues.
 
 Au lot 6b : `textes nl` 750 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (68 pages traduites) ; les deux jeux de cartes vont

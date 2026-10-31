@@ -17,7 +17,7 @@
     "choixNom": "Truth or dare",
     "choixDesc": "The square where you choose. A question or a dare, whichever you prefer, then the same rule as everywhere else: done and you move forward one square, passed and you move back one.",
     "chanceNom": "Luck",
-    "chanceDesc": "The event that turns everything around: move three forward, two back, roll again, or swap the two pawns."
+    "chanceDesc": "A helping hand from luck: move one, two or three squares forward, roll again, or catch up with the other one when you're behind. It never sends you back."
   },
   "section1": {
     "title": "The first of our games that can be won",

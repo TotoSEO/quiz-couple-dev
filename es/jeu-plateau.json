@@ -17,7 +17,7 @@
     "choixNom": "Verdad o reto",
     "choixDesc": "Es la casilla en la que se elige. Una pregunta o un reto, lo que prefieras, y después la misma regla que en las demás: cumplido, avanzas una casilla; pasado, retrocedes una.",
     "chanceNom": "Suerte",
-    "chanceDesc": "El acontecimiento que lo cambia todo: avanzar tres, retroceder dos, volver a tirar o intercambiar las dos fichas."
+    "chanceDesc": "Un empujón de la suerte: avanzar una, dos o tres casillas, volver a tirar o alcanzar al otro cuando vas por detrás. Nunca te hace retroceder."
   },
   "section1": {
     "title": "El primero de nuestros juegos que se gana",
