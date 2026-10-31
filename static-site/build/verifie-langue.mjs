@@ -204,6 +204,7 @@ const EXT_CODE = /\.(m?js|cjs|ts|ejs|json|sql|ya?ml|html)$/;
 const SANS_LA_LANGUE = [
   [/supabase\/migrations\/\d+_(reseaux_sociaux|mipaps_compte)\.sql$/, 'les comptes Instagram (anglais, et français pour les mipaps)'],
   [/supabase\/functions\/admin-social\//, 'les comptes Instagram (anglais, et français pour les mipaps)'],
+  [/supabase\/migrations\/20260826120000_blog_lectures_source_pref\.sql$/, 'est_article_blog et langue_du_chemin, retirées par 20261008170000 ; get_article_lectures porte nl depuis 20261011110000'],
 ];
 const MOTS_AVANT_REGEX = new Set(['return', 'typeof', 'case', 'in', 'of', 'new', 'delete', 'void', 'throw', 'else', 'do', 'yield', 'await', 'instanceof']);
 

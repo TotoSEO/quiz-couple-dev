@@ -15,6 +15,7 @@ export const AUTHORS: Record<string, BlogAuthor> = {
       es: "Creador de Quiz Couple, Thomas lleva 4 años en pareja. Idea quizzes, tests y juegos para ayudar a las parejas a conocerse mejor, reír juntas y compartir nuevos momentos.",
       de: "Thomas, der Gründer von Quiz Couple, ist seit 4 Jahren in einer Beziehung. Er entwickelt Quiz, Tests und Spiele, die Paaren helfen, sich besser kennenzulernen, gemeinsam zu lachen und Neues zu erleben.",
       it: "Creatore di Quiz Couple, Thomas è in coppia da 4 anni. Crea quiz, test e giochi per aiutare le coppie a conoscersi meglio, ridere insieme e condividere nuovi momenti.",
+      nl: "Thomas, de maker van Quiz Couple, heeft al 4 jaar een relatie. Hij bedenkt quizzen, tests en spelletjes die koppels helpen om elkaar beter te leren kennen, samen te lachen en nieuwe momenten te delen.",
     },
   },
 };

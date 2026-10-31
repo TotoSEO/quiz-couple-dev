@@ -13,12 +13,12 @@
 
   const homeLabel = 'Quiz Couple';
   const blogLabel = 'Blog';
-  const publishedOnLabel = lang === 'fr' ? 'Publié le' : lang === 'en' ? 'Published on' : lang === 'es' ? 'Publicado el' : lang === 'de' ? 'Veröffentlicht am' : 'Pubblicato il';
-  const backToBlogLabel = lang === 'fr' ? 'Retour au blog' : lang === 'en' ? 'Back to blog' : lang === 'es' ? 'Volver al blog' : lang === 'de' ? 'Zurück zum Blog' : 'Torna al blog';
-  const aboutAuthorLabel = lang === 'fr' ? 'À propos de l\'auteur' : lang === 'en' ? 'About the author' : lang === 'es' ? 'Sobre el autor' : lang === 'de' ? 'Über den Autor' : 'Sull\'autore';
-  const shareLabel = lang === 'fr' ? 'Partager cet article' : lang === 'en' ? 'Share this article' : lang === 'es' ? 'Compartir este artículo' : lang === 'de' ? 'Artikel teilen' : 'Condividi questo articolo';
-  const copyLinkLabel = lang === 'fr' ? 'Copier le lien' : lang === 'en' ? 'Copy link' : lang === 'es' ? 'Copiar enlace' : lang === 'de' ? 'Link kopieren' : 'Copia link';
-  const copiedLabel = lang === 'fr' ? 'Copié !' : lang === 'en' ? 'Copied!' : lang === 'es' ? '¡Copiado!' : lang === 'de' ? 'Kopiert!' : 'Copiato!';
+  const publishedOnLabel = lang === 'fr' ? 'Publié le' : lang === 'en' ? 'Published on' : lang === 'es' ? 'Publicado el' : lang === 'de' ? 'Veröffentlicht am' : lang === 'nl' ? 'Gepubliceerd op' : 'Pubblicato il';
+  const backToBlogLabel = lang === 'fr' ? 'Retour au blog' : lang === 'en' ? 'Back to blog' : lang === 'es' ? 'Volver al blog' : lang === 'de' ? 'Zurück zum Blog' : lang === 'nl' ? 'Terug naar de blog' : 'Torna al blog';
+  const aboutAuthorLabel = lang === 'fr' ? 'À propos de l\'auteur' : lang === 'en' ? 'About the author' : lang === 'es' ? 'Sobre el autor' : lang === 'de' ? 'Über den Autor' : lang === 'nl' ? 'Over de auteur' : 'Sull\'autore';
+  const shareLabel = lang === 'fr' ? 'Partager cet article' : lang === 'en' ? 'Share this article' : lang === 'es' ? 'Compartir este artículo' : lang === 'de' ? 'Artikel teilen' : lang === 'nl' ? 'Deel dit artikel' : 'Condividi questo articolo';
+  const copyLinkLabel = lang === 'fr' ? 'Copier le lien' : lang === 'en' ? 'Copy link' : lang === 'es' ? 'Copiar enlace' : lang === 'de' ? 'Link kopieren' : lang === 'nl' ? 'Link kopiëren' : 'Copia link';
+  const copiedLabel = lang === 'fr' ? 'Copié !' : lang === 'en' ? 'Copied!' : lang === 'es' ? '¡Copiado!' : lang === 'de' ? 'Kopiert!' : lang === 'nl' ? 'Gekopieerd!' : 'Copiato!';
 
   // Temps de lecture : calculé au build à partir du nombre de mots, le même
   // qui part dans les données structurées.
@@ -26,6 +26,7 @@
     : lang === 'en' ? `${readingMinutes} min read`
     : lang === 'es' ? `${readingMinutes} min de lectura`
     : lang === 'de' ? `${readingMinutes} Min. Lesezeit`
+    : lang === 'nl' ? `${readingMinutes} min lezen`
     : `${readingMinutes} min di lettura`;
 
   // Le compteur de lectures est lu à la construction (generate.js,
@@ -37,6 +38,7 @@
     : lang === 'en' ? 'This article has been read {n} times'
     : lang === 'es' ? 'Este artículo se ha leído {n} veces'
     : lang === 'de' ? 'Dieser Artikel wurde {n} Mal gelesen'
+    : lang === 'nl' ? 'Dit artikel is {n} keer gelezen'
     : 'Questo articolo è stato letto {n} volte';
   // En dessous de ce seuil, le compteur reste invisible : « lu 3 fois » sur
   // un article publié hier dessert l'article au lieu de le servir. Le seuil
@@ -44,12 +46,12 @@
   const readCountSeuil = typeof seuilLectures === 'number' ? seuilLectures : 10;
   const lectures = typeof lecturesCuites === 'number' ? lecturesCuites : null;
   const lecturesVisibles = lectures !== null && lectures >= readCountSeuil;
-  const lecturesLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+  const lecturesLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : lang === 'nl' ? 'nl-NL' : 'it-IT';
   const lecturesTexte = lecturesVisibles ? readCountTemplate.replace('{n}', Number(lectures).toLocaleString(lecturesLocale)) : '';
 
   // Format published date
   const publishedDate = new Date(article.publishedAt);
-  const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+  const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : lang === 'nl' ? 'nl-NL' : 'it-IT';
   const formattedDate = publishedDate.toLocaleDateString(dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
   const isoDate = publishedDate.toISOString();
 

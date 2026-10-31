@@ -1615,11 +1615,16 @@ async function generatePage(routeKey, lang) {
     breadcrumbs,
     // Blog listing data
     blogArticlesList,
-    // Blog categories for filter tabs
-    blogCategories: Object.entries(BLOG_CATEGORIES).map(([key, labels]) => ({
-      key,
-      label: labels[lang] || labels.fr,
-    })),
+    // Blog categories for filter tabs : seulement celles qui ont au moins un
+    // article dans la langue (une langue en cours de traduction, comme le
+    // néerlandais à partir du 31 octobre 2026, n'en a d'abord que quelques-uns,
+    // et un onglet vide n'affiche rien).
+    blogCategories: Object.entries(BLOG_CATEGORIES)
+      .filter(([key]) => !blogArticlesList || !blogArticlesList.length || blogArticlesList.some((a) => a.category === key))
+      .map(([key, labels]) => ({
+        key,
+        label: labels[lang] || labels.fr,
+      })),
     // Zodiac compatibility data for astro-prenoms page (per-language)
     zodiacDataJson: routeKey === 'testAstroPrenoms' ? (() => {
       const langFile = path.resolve(__dirname, `zodiac-data-${lang}.json`);
