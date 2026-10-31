@@ -491,6 +491,11 @@
     "annulee": "Het spel is gestopt door {{nom}}.",
     "retourTest": "Terug naar de test"
   },
+  "trouver-amour": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord zoals je het in het echt doet, niet zoals je het zou willen doen.",
+    "disclaimer": "Deze test zegt niet wie je bent. Hij kijkt naar wat er vandaag tussen jou en een nieuwe ontmoeting in de weg zit, en dat kan veranderen. Je antwoorden worden niet opgeslagen."
+  },
   "oublie-son-ex": {
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat je hebt gezien of gehoord, niet van wat je je voorstelt.",

@@ -13,7 +13,8 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | à faire |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -719,7 +720,43 @@ le met à jour dans la PR de chaque lot.
   nu? » vers des jeux et quiz pas encore traduits (le quiz coquin, action ou
   vérité et sa version coquine, la roue des gages).
 
+## Lot 4a (31 octobre 2026) : pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/waarom-vind-ik-geen-liefde/` | Waarom vind ik geen liefde? Test in 15 vragen | Waarom vind ik geen relatie? 15 vragen om het te begrijpen |
+  | `/nl/waarom-ben-ik-nog-single/` | Waarom ben ik nog single? Gratis test in 20 vragen | Waarom ben ik single? 20 vragen om de oorzaak te vinden |
+
+  Chaque H1 porte un mot-clé secondaire de la carte, posé comme la question
+  qu'on se pose (« waarom vind ik geen relatie », « waarom ben ik single »).
+- **Les moteurs** : `trouverAmour` (quinze questions, quatre paliers) et
+  `celib` (le diagnostic à huit causes, vingt-deux questions dont deux qui
+  dépendent des réponses) ; les poids des causes (`_axes`), les conditions
+  (`_si`), l'icône et la durée sont repris du français. Les questions disent
+  « je » au lecteur, les réponses sont à la première personne (« Ik denk na
+  over wat ik zou kunnen zeggen... »), et la page qui en cite deux les cite
+  mot pour mot. L'écran de départ de `trouver-amour` est traduit
+  (quizGames.json) ; le diagnostic n'en a pas.
+- **Les liens** : chaque page renvoie à l'autre, à la durée du célibat, à
+  « couple ou célibat », à l'attachement, à « prêt pour une nouvelle
+  relation », à « m'aime-t-il en secret », à « mon ex pense-t-il encore à
+  moi », à la dépendance affective, à « amour ou crush » et aux questions du
+  premier rendez-vous, avec des ancres qui disent le sujet de la phrase ; les
+  ancres françaises du type « ce test » et « celui sur la dépendance
+  affective » deviennent « wat er aan zijn of haar kant nog speelt » et
+  « het gemis harder praat dan de liefde ». Les trois liens vers l'article sur
+  la peur de l'engagement attendent sa traduction.
+- **Ce qui reste en français sur les pages** : rien, d'après le contrôle
+  `site` joué jusqu'aux résultats.
+
 ## Les chiffres
+
+Au lot 4a : `textes nl` 437 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (39 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat, sans texte resté en français. Aucune page publique ne change.
 
 Au lot 3p : `textes nl` 417 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (37 pages traduites) ; `site nl` sur la page : aucun
