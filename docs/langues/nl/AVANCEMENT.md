@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1770,7 +1770,49 @@ spéciaux ».
 - Aucune page publique ne change : seuls les scripts des moteurs, de la
   mesure et des avis de l'accueil.
 
+## Lot 8g (31 octobre 2026) : l'évaluation ouverte en néerlandais
+
+- `BILAN_LANGUES_FERMEES` est vide : la relatiecheck est indexable
+  (`/nl/relatiecheck/`, « Relatiecheck online | Direct resultaat, ook als
+  pdf »), dans le hreflang des cinq autres pages de l'évaluation et dans
+  `sitemap-nl.xml` ; le menu a son bouton « Check je relatie », l'accueil sa
+  section, le pied de page le lien des algemene voorwaarden, la politique de
+  confidentialité sa section sur la relatiecheck, et la barre de la réduction
+  passe sur les pages /nl/.
+- Les encarts en néerlandais : la carte sous le moteur du relatietest et du
+  test de compatibilité (`bilan-sous-moteur.ejs`), la bannière du bas
+  (`bilan-banniere.ejs`) et l'encart sous le verdict (`BILAN_TEXTES` de
+  quiz-engine-core.js).
+- Les textes qui disaient « kaart » pour le paiement disent
+  « betaalgegevens » (iDEAL et Bancontact ne sont pas des cartes), les CGV
+  ajoutent « een andere betaalmethode die op die pagina wordt aangeboden », et
+  le lien des CGV s'appelle partout « Algemene voorwaarden », comme la page.
+- **Essayée de bout en bout dans Chromium**, contre le site construit et la
+  fonction en mémoire (390 x 844, clair et sombre) : invitation au même
+  moment avec le QR code, arrivée par le code et par le lien comptées ; départ
+  à deux, seul(e) et avec l'adresse ; les douze domaines dans l'ordre, avec
+  les questions de situation à leur place, à deux et seul(e) ; l'écran
+  « rapport prêt » (€ 3,96 chacun, € 9,90 barré, € 7,92, code LOVE20), la
+  barre collée, la case manquante, la redirection vers Stripe ; l'attente avec
+  l'offre repliée ; le célibataire et son sondage ; l'e-mail du rapport et son
+  lien qui ouvre le rapport et télécharge `relatiecheck-thomas-en-lea.pdf`
+  une fois. Aucune erreur dans la console.
+- **Ce qui reste en anglais** : le parcours e-mail des abonnés (une adresse
+  laissée à la porte d'une page /nl/ est rangée en anglais par capture.js, et
+  reçoit les e-mails anglais, qui mènent à la page anglaise de l'évaluation).
+- **Ce que fait Thomas** : activer iDEAL et Bancontact dans le tableau de bord
+  de Stripe (Paramètres, Moyens de paiement). La session ne fixe pas
+  `payment_method_types` : ils apparaissent d'eux-mêmes sur la page de
+  paiement, en euros, sans changement de code. Les vignettes de la page de
+  vente (Visa, Mastercard, CB, Apple Pay, Google Pay) ne les montrent pas
+  tant qu'ils ne sont pas actifs.
+
 ## Les chiffres
+
+Au lot 8g : `seo nl` sans erreur ni « à faire » (la relatiecheck n'est plus
+en noindex), `liens nl` sans erreur, `site nl --jouer` sans erreur sur le
+relatietest, la relatiecheck et les trois pages juridiques ; 61 tests du
+serveur de l'évaluation passent.
 
 Au lot 8e : `code nl` 127 passages (164 à l'ouverture) : les adresses des
 articles du blog (lot 9), la page des prénoms et des signes et les autres

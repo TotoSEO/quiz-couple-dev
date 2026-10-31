@@ -236,7 +236,7 @@ l'ouverture.
 | - | Relecture native de l'échantillon, corrections | Transmettre ses remarques |
 | 4 à 6 | Tests célibataires, quiz et questions, jeux | - |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` (évaluation encore fermée en néerlandais), les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` ; faite le 31 octobre 2026 | Envoyer le sitemap /nl/ dans la Search Console |
-| 8 | Évaluation payante, e-mails, CGV, puis ouverture de l'évaluation en néerlandais | Activer iDEAL et Bancontact dans Stripe |
+| 8 | Évaluation payante, e-mails, CGV, puis ouverture de l'évaluation en néerlandais ; faite le 31 octobre 2026 (le parcours e-mail des abonnés reste en anglais pour les néerlandophones) | Activer iDEAL et Bancontact dans Stripe |
 | 9 et suite | Blog, dans l'ordre des clics français, mots-clés tirés des requêtes françaises de chaque article | - |
 | 7 | Outils, puis les quiz spéciaux en dernier (Thomas, 31 octobre 2026 : « Le plus important : jeux, évaluation payante et pages légales, blog, quiz spéciaux ») | - |
 
