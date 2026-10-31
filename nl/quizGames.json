@@ -496,6 +496,11 @@
     "introQuote": "Antwoord zoals je het in het echt doet, niet zoals je het zou willen doen.",
     "disclaimer": "Deze test zegt niet wie je bent. Hij kijkt naar wat er vandaag tussen jou en een nieuwe ontmoeting in de weg zit, en dat kan veranderen. Je antwoorden worden niet opgeslagen."
   },
+  "pret-nouvelle-relation": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord over wat je nu meemaakt, niet over de maand na de breuk.",
+    "disclaimer": "Deze test zegt niet of je iemand gaat ontmoeten. Hij kijkt of de plek vandaag vrij is, en dat verandert van maand tot maand. Je antwoorden worden niet opgeslagen."
+  },
   "oublie-son-ex": {
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat je hebt gezien of gehoord, niet van wat je je voorstelt.",
