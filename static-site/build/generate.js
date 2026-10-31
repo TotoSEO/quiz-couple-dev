@@ -14,7 +14,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INSTAGRAM_URL, LANGUAGES, LANGUES_PUBLIQUES, langueCachee, langueEnCours, PAGES_EN_ATTENTE, pageEnAttente, cheminDeclare, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, IMAGE_PARTAGE, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -108,15 +108,34 @@ const FUTURE_BLOG_URLS = new Set();
     console.log(`[blog] prochain : ${futurs.map(f => f.publishedAt).sort()[0]}`);
   }
 }
-// Dans une langue cachée, un article dont l'adresse est déclarée mais dont
-// le texte n'est pas encore traduit (articleTraduit) : les liens écrits vers
-// lui sont neutralisés de la même façon, et reviennent seuls le jour où son
-// fichier arrive dans data/blog/<langue>/.
+// Dans une langue en cours de traduction (langueEnCours), un article dont
+// l'adresse est déclarée mais dont le texte n'est pas encore traduit
+// (articleTraduit) : les liens écrits vers lui sont neutralisés de la même
+// façon, et reviennent seuls le jour où son fichier arrive dans
+// data/blog/<langue>/.
 for (const a of BLOG_ARTICLES) {
   for (const l of LANGUAGES) {
-    if (langueCachee(l) && a.slugs && a.slugs[l] && !articleTraduit(a, l)) FUTURE_BLOG_URLS.add(getArticlePath(a.slugs[l], l));
+    if (langueEnCours(l) && a.slugs && a.slugs[l] && !articleTraduit(a, l)) FUTURE_BLOG_URLS.add(getArticlePath(a.slugs[l], l));
   }
 }
+
+// Une page encore en attente de traduction dans une langue ouverte
+// (PAGES_EN_ATTENTE, config.js) n'est pas construite : les liens écrits vers
+// son adresse déclarée sont neutralisés, et reviennent seuls le jour où la
+// page sort de la liste.
+for (const [l, routes] of Object.entries(PAGES_EN_ATTENTE)) {
+  for (const r of routes) {
+    const p = cheminDeclare(r, l);
+    if (p) FUTURE_BLOG_URLS.add(p);
+  }
+}
+
+// La table des adresses que les moteurs lisent dans la page
+// (data-route-slugs, getRelatedQuizUrl) : sans l'adresse d'une page encore en
+// attente, que le moteur saute alors comme une page absente de la langue.
+const ROUTE_SLUGS_PUBLIES = Object.fromEntries(Object.entries(ROUTE_SLUGS).map(([k, slugs]) => [
+  k, Object.fromEntries(Object.entries(slugs).filter(([l]) => !pageEnAttente(k, l))),
+]));
 
 // Le bilan de couple tant qu'il n'est pas ouvert (BILAN_OUVERT, config.js),
 // ou dans une langue où il reste fermé (BILAN_LANGUES_FERMEES) : les liens
@@ -1549,10 +1568,11 @@ async function generatePage(routeKey, lang) {
     genrePage: genrePageJouable(routeKey),
     pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
-    routeSlugs: ROUTE_SLUGS,
+    routeSlugs: ROUTE_SLUGS_PUBLIES,
     languages: LANGUAGES,
     languesMenu: languesMenu(lang),
     langueCachee: langueCachee(lang),
+    sansFlux: pageEnAttente('blog', lang),
     // Translation function
     t,
     tgd,
@@ -1689,6 +1709,9 @@ function generateSitemaps() {
   function hreflangs(urlsByLang) {
     let xml = '';
     for (const lang of LANGUES_PUBLIQUES) {
+      // Une langue où la page n'existe pas (évaluation fermée, page en
+      // attente de traduction, article pas encore traduit) n'a pas de lien.
+      if (!urlsByLang[lang]) continue;
       xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${urlsByLang[lang]}"/>\n`;
     }
     xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlsByLang.fr}"/>\n`;
@@ -1742,6 +1765,7 @@ function generateSitemaps() {
     const urlsByLang = {};
     for (const lang of LANGUES_PUBLIQUES) {
       if (key === 'bilanCouple' && !bilanOuvertPour(lang)) continue;
+      if (pageEnAttente(key, lang)) continue;
       if (slugs[lang] !== undefined) {
         urlsByLang[lang] = url(lang, slugs[lang]);
       }
@@ -1770,6 +1794,7 @@ function generateSitemaps() {
     } else {
       const urlsByLang = {};
       for (const lang of LANGUES_PUBLIQUES) {
+        if (!article.slugs[lang] || !articleTraduit(article, lang)) continue;
         urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
       }
       entries.push({ urlsByLang, lastmod: article.publishedAt, priority: '0.6', changefreq: 'monthly' });
@@ -1778,6 +1803,7 @@ function generateSitemaps() {
 
   // Generate one sitemap per language
   const maxLastmodParLangue = new Map();
+  const nbParLangue = new Map();
   for (const lang of LANGUES_PUBLIQUES) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
@@ -1789,6 +1815,7 @@ function generateSitemaps() {
       if (entry.frOnly && lang !== 'fr') continue;
       // Skip entries that don't have a URL for this language
       if (!entry.urlsByLang[lang]) continue;
+      nbParLangue.set(lang, (nbParLangue.get(lang) || 0) + 1);
       xml += `  <url>\n`;
       xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
       if (!entry.frOnly) {
@@ -1831,7 +1858,7 @@ function generateSitemaps() {
 
   const sansDate = entries.filter(e => !e.lastmod).length;
   console.log(
-    `[sitemaps] Generated sitemap index + ${LANGUES_PUBLIQUES.length} language sitemaps (${entries.length} URLs each)` +
+    `[sitemaps] Generated sitemap index + ${LANGUES_PUBLIQUES.length} language sitemaps (URLs : ${LANGUES_PUBLIQUES.map((l) => `${l} ${nbParLangue.get(l) || 0}`).join(', ')})` +
     (sansDate ? ` — ${sansDate} sans lastmod` : '')
   );
 }
@@ -1863,10 +1890,15 @@ function dateRss(publishedAt) {
 }
 
 function generateFlux() {
-  for (const lang of LANGUES_PUBLIQUES) {
+  // Une langue dont la liste du blog attend encore son premier article
+  // (PAGES_EN_ATTENTE) n'a pas de flux ; ailleurs, un article n'y entre que
+  // traduit (articleTraduit).
+  const langues = LANGUES_PUBLIQUES.filter((l) => !pageEnAttente('blog', l));
+  for (const lang of langues) {
     const items = [];
     for (const meta of BLOG_ARTICLES) {
       if (meta.frOnly && lang !== 'fr') continue;
+      if (!articleTraduit(meta, lang)) continue;
       const article = parseArticleTs(path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`))
         || parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${meta.internalSlug}.ts`));
       if (!article) continue;
@@ -1912,7 +1944,7 @@ function generateFlux() {
     ensureDir(path.dirname(sortie));
     fs.writeFileSync(sortie, xml);
   }
-  console.log(`[flux] ${LANGUES_PUBLIQUES.length} flux RSS du blog (${FLUX_MAX} articles au plus chacun)`);
+  console.log(`[flux] ${langues.length} flux RSS du blog (${FLUX_MAX} articles au plus chacun)`);
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
@@ -1994,7 +2026,7 @@ function copyTranslationData() {
     // exemple, ne sait pas retomber seul sur le français).
     const sourceDe = (nom) => {
       const p = path.join(langDir, nom);
-      if (fs.existsSync(p) || !langueCachee(lang)) return p;
+      if (fs.existsSync(p) || !langueEnCours(lang)) return p;
       return path.resolve(__dirname, '../../fr', nom);
     };
 
@@ -2068,7 +2100,7 @@ function copyTranslationData() {
     // partie : ce qu'elle n'a pas encore vient du français, clé par clé.
     const gamesSrc = sourceDe('quizGames.json');
     const gamesFr = path.resolve(__dirname, '../../fr/quizGames.json');
-    if (langueCachee(lang) && gamesSrc !== gamesFr && fs.existsSync(gamesSrc)) {
+    if (langueEnCours(lang) && gamesSrc !== gamesFr && fs.existsSync(gamesSrc)) {
       const complete = (base, plus) => {
         if (!plus || typeof plus !== 'object' || Array.isArray(plus) || !base || typeof base !== 'object' || Array.isArray(base)) return plus;
         const out = { ...base };
@@ -2327,12 +2359,13 @@ function languesMenu(lang) {
   return langueCachee(lang) ? [...LANGUES_PUBLIQUES, lang] : LANGUES_PUBLIQUES;
 }
 
-// Un article n'existe dans une langue cachée (LANGUES_CACHEES, config.js)
-// qu'une fois traduit : son adresse déclarée dans BLOG_ARTICLES et son
-// fichier dans data/blog/<langue>/. Les langues publiques gardent le repli
-// sur le texte français.
+// Un article n'existe dans une langue en cours de traduction (langueEnCours,
+// config.js : cachée, ou ouverte avec des pages en attente) qu'une fois
+// traduit : son adresse déclarée dans BLOG_ARTICLES et son fichier dans
+// data/blog/<langue>/. Les langues finies gardent le repli sur le texte
+// français.
 function articleTraduit(meta, lang) {
-  if (!langueCachee(lang)) return true;
+  if (!langueEnCours(lang)) return true;
   return Boolean(meta.slugs && meta.slugs[lang])
     && fs.existsSync(path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`));
 }
@@ -2431,7 +2464,8 @@ async function generateBlogArticle(articleMeta, lang) {
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
   const t = createT(lang);
   const translations = loadTranslations(lang);
-  const articleAlternates = (articleMeta.frOnly || langueCachee(lang)) ? [] : getArticleAlternates(articleMeta);
+  const articleAlternates = (articleMeta.frOnly || langueCachee(lang)) ? []
+    : getArticleAlternates(articleMeta).filter((a) => a.hreflang === 'x-default' || articleTraduit(articleMeta, a.hreflang));
   const canonical = getArticleUrl(localizedSlug, lang);
   const pagePath = getArticlePath(localizedSlug, lang);
 
@@ -2537,10 +2571,11 @@ async function generateBlogArticle(articleMeta, lang) {
     pagePublicitaire: true,
     cssCritique: cssCritiquePour('blog-article'),
     pagePath,
-    routeSlugs: ROUTE_SLUGS,
+    routeSlugs: ROUTE_SLUGS_PUBLIES,
     languages: LANGUAGES,
     languesMenu: languesMenu(lang),
     langueCachee: langueCachee(lang),
+    sansFlux: pageEnAttente('blog', lang),
     t,
     translations,
     getLocalizedUrl,
@@ -2647,10 +2682,11 @@ async function generate404Pages() {
       routeKey: '404',
       pagePublicitaire: false,
       pagePath: '/404',
-      routeSlugs: ROUTE_SLUGS,
+      routeSlugs: ROUTE_SLUGS_PUBLIES,
       languages: LANGUAGES,
       languesMenu: languesMenu(lang),
       langueCachee: langueCachee(lang),
+      sansFlux: pageEnAttente('blog', lang),
       t,
       tgd,
       translations,

@@ -6,14 +6,42 @@ export const BASE_URL = 'https://quiz-couple.com';
 // Le compte Instagram du site : menu, pied de page, JSON-LD (sameAs), merci après un avis.
 export const INSTAGRAM_URL = 'https://www.instagram.com/quiz_couple_official/';
 export const LANGUAGES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
-// Les langues construites mais pas encore ouvertes (30 octobre 2026, le
-// néerlandais, docs/langues/CADRAGE-NL.md) : leurs pages sont publiées en
-// noindex, hors des sitemaps, du hreflang, des flux RSS et du sélecteur de
-// langue, et un article n'y existe que traduit. On retire une langue de la
-// liste le jour de son ouverture.
-export const LANGUES_CACHEES = ['nl'];
+// Les langues construites mais pas encore ouvertes : leurs pages sont
+// publiées en noindex, hors des sitemaps, du hreflang, des flux RSS et du
+// sélecteur de langue, et un article n'y existe que traduit. On retire une
+// langue de la liste le jour de son ouverture. Le néerlandais y a été du 30
+// au 31 octobre 2026 (docs/langues/CADRAGE-NL.md).
+export const LANGUES_CACHEES = [];
 export const LANGUES_PUBLIQUES = LANGUAGES.filter((l) => !LANGUES_CACHEES.includes(l));
 export function langueCachee(lang) { return LANGUES_CACHEES.includes(lang); }
+
+// Une langue ouverte avant d'être entièrement traduite : ses pages encore à
+// traduire n'existent pas dans cette langue tant qu'elles sont dans la liste
+// (31 octobre 2026, Thomas : « quand tous les jeux seront traduits, je veux
+// que tu mettes en ligne une première version du NL »). Une page en attente
+// n'est pas construite, getLocalizedPath la dit absente (menu, pied de page,
+// accueil, plan du site, cartes, sélecteur de langue, hreflang), elle sort du
+// sitemap, et les liens écrits vers elle dans les textes sont neutralisés
+// comme ceux d'un article programmé. « blog » est la liste des articles :
+// elle attend que la langue en ait un. Un lot de traduction retire ses pages
+// de la liste ; la langue est finie quand la liste est vide et qu'on retire
+// son entrée. L'évaluation a son propre interrupteur (BILAN_LANGUES_FERMEES).
+export const PAGES_EN_ATTENTE = {
+  nl: [
+    // lot 7 : les outils, puis les quiz spéciaux, en dernier
+    'testAstroPrenoms', 'calculatriceAmour', 'compteurCouple', 'testSignesChinois', 'testDateNaissance',
+    'speciauxCouple', 'quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains',
+    // lot 8 : les conditions de vente de l'évaluation
+    'cgv',
+    // lot 9 : la liste du blog, tant qu'aucun article n'est traduit
+    'blog',
+  ],
+};
+// Une langue dont le contenu n'est pas encore entièrement traduit, cachée ou
+// déjà ouverte : un article n'y existe que traduit, et un fichier de textes
+// qu'elle n'a pas encore vient du français.
+export function langueEnCours(lang) { return langueCachee(lang) || Object.prototype.hasOwnProperty.call(PAGES_EN_ATTENTE, lang); }
+export function pageEnAttente(routeKey, lang) { return (PAGES_EN_ATTENTE[lang] || []).includes(routeKey); }
 export const DEFAULT_LANG = 'fr';
 
 export const LOCALES = {
@@ -234,7 +262,7 @@ export const QUIZ_FEATURED = {
   testPretRelation:  { file: 'new-relationship-sprout',  old: null,                  alt: { fr: "Sur un rebord de fenêtre, un vieil album photo fermé à gauche et, à droite, une jeune pousse verte dans un pot en terre cuite, une petite clé en laiton posée à côté", en: "On a windowsill, an old closed photo album on the left and, on the right, a fresh green sprout in a terracotta pot with a small brass key beside it", es: "En el alféizar de una ventana, un viejo álbum de fotos cerrado a la izquierda y, a la derecha, un brote verde en una maceta de barro con una pequeña llave de latón al lado", de: "Auf einer Fensterbank links ein altes, geschlossenes Fotoalbum und rechts ein frischer grüner Trieb in einem Terrakottatopf, daneben ein kleiner Messingschlüssel", it: "Su un davanzale, a sinistra un vecchio album di foto chiuso e, a destra, un germoglio verde in un vaso di terracotta con una piccola chiave d'ottone accanto", nl: 'Op een vensterbank links een oud, gesloten fotoalbum en rechts een jong groen plantje in een terracotta pot, met een klein koperen sleuteltje ernaast' } },
   testDureeCelibat:  { file: 'single-hourglass-cafe',    old: null,                  alt: {"fr": "Sur une petite table de café en marbre, un sablier en laiton au sable rose à moitié écoulé, un cappuccino et un cœur en papier plié, face à une chaise vide, dans la lumière dorée d'une fin d'après-midi", "en": "On a small marble cafe table, a brass hourglass with pink sand half run through, a cappuccino and a folded paper heart, facing an empty chair, in golden late-afternoon light", "es": "Sobre una mesita de mármol de una terraza, un reloj de arena de latón con arena rosa a medio caer, un capuchino y un corazón de papel doblado, frente a una silla vacía, con la luz dorada del final de la tarde", "de": "Auf einem kleinen Marmortisch eines Cafés eine Sanduhr aus Messing mit halb durchgelaufenem rosa Sand, ein Cappuccino und ein gefaltetes Papierherz, gegenüber ein leerer Stuhl, im goldenen Licht des späten Nachmittags", "it": "Su un tavolino di marmo di un caffè, una clessidra d'ottone con la sabbia rosa a metà, un cappuccino e un cuore di carta piegato, davanti a una sedia vuota, nella luce dorata del tardo pomeriggio", "nl": "Op een klein marmeren cafétafeltje een koperen zandloper met roze zand die half is doorgelopen, een cappuccino en een gevouwen papieren hartje, tegenover een lege stoel, in het gouden licht van het eind van de middag"} },
   testAmourAmi:      { file: 'friendship-bracelets-heart',  old: null,                  alt: { fr: "Deux bracelets d'amitié tressés, un rose et un lavande, entrelacés en forme de cœur sur une table en bois", en: 'Two braided friendship bracelets, one pink and one lavender, intertwined into a heart on a wooden table', es: 'Dos pulseras de la amistad trenzadas, una rosa y otra lavanda, entrelazadas en forma de corazón sobre una mesa de madera', de: 'Zwei geflochtene Freundschaftsbändchen, eines rosa und eines lavendelblau, herzförmig verschlungen auf einem Holztisch', it: "Due braccialetti dell'amicizia intrecciati, uno rosa e uno lavanda, uniti a forma di cuore su un tavolo di legno", nl: 'Twee gevlochten vriendschapsbandjes, een roze en een lila, in de vorm van een hart door elkaar gevlochten op een houten tafel' } },
-  testChargeMentale: { file: 'sticky-notes-fridge',        old: null,                  alt: { fr: "Une porte de réfrigérateur couverte de listes et de pense-bêtes qui se chevauchent", en: 'A fridge door covered in overlapping lists and reminder notes', es: 'Una puerta de nevera cubierta de listas y notas recordatorias superpuestas', de: 'Eine Kühlschranktür voller sich überlappender Listen und Merkzettel', it: "Una porta di frigorifero coperta di liste e promemoria sovrapposti" } },
+  testChargeMentale: { file: 'sticky-notes-fridge',        old: null,                  alt: { fr: "Une porte de réfrigérateur couverte de listes et de pense-bêtes qui se chevauchent", en: 'A fridge door covered in overlapping lists and reminder notes', es: 'Una puerta de nevera cubierta de listas y notas recordatorias superpuestas', de: 'Eine Kühlschranktür voller sich überlappender Listen und Merkzettel', it: "Una porta di frigorifero coperta di liste e promemoria sovrapposti", nl: 'Een koelkastdeur vol lijstjes en memobriefjes die over elkaar heen geplakt zijn' } },
   quizRencontre:      { file: 'bistro-table-two-chairs',     old: null,                  alt: { fr: "Une petite table de bistrot en terrasse avec deux chaises vides face à face, une fleur dans un vase fin, des guirlandes lumineuses floues derrière", en: "A small bistro table on a terrace with two empty chairs facing each other, a flower in a slim vase, blurred string lights behind", es: "Una pequeña mesa de bistró en una terraza con dos sillas vacías frente a frente, una flor en un jarrón fino y luces de guirnalda desenfocadas detrás", de: "Ein kleiner Bistrotisch auf einer Terrasse mit zwei leeren Stühlen einander gegenüber, eine Blume in einer schmalen Vase, dahinter unscharfe Lichterketten", it: "Un tavolino da bistrot su una terrazza con due sedie vuote una di fronte all'altra, un fiore in un vaso sottile e ghirlande luminose sfocate dietro", nl: 'Een klein bistrotafeltje op een terras met twee lege stoelen tegenover elkaar, een bloem in een slank vaasje en wazige lichtslingers op de achtergrond' } },
   zamours:            { file: 'game-show-buzzers',           old: null,                  alt: { fr: "Deux gros boutons de jeu télévisé, un rose et un violet, sur un pupitre brillant sous les lumières d'un plateau", en: "Two large game show buzzer buttons, one pink and one violet, on a glossy desk under studio lights", es: "Dos grandes pulsadores de concurso de televisión, uno rosa y otro violeta, sobre un pupitre brillante bajo las luces del plató", de: "Zwei große Buzzer einer Fernsehshow, einer rosa und einer violett, auf einem glänzenden Pult unter Studiolicht", it: "Due grossi pulsanti da quiz televisivo, uno rosa e uno viola, su un bancone lucido sotto le luci di uno studio" } },
   testVacances:      { file: 'carte-vacances-couple',      old: null,                  alt: { fr: 'Carte du monde stylisée rose et violette avec des épingles en forme de cœur, illustrant le test où partir en vacances en couple' } },
@@ -663,11 +691,21 @@ export function genrePageJouable(routeKey) {
 }
 
 // Helper functions
-export function getLocalizedPath(routeKey, lang) {
+// L'adresse déclarée d'une page dans une langue, qu'elle y soit construite ou
+// encore en attente de traduction (PAGES_EN_ATTENTE) : c'est elle qu'on
+// neutralise dans les textes, et que le contrôle des liens reconnaît.
+export function cheminDeclare(routeKey, lang) {
   const slug = ROUTE_SLUGS[routeKey]?.[lang];
   if (slug === undefined) return null;
   if (lang === 'fr') return slug ? `/${slug}/` : '/';
   return slug ? `/${lang}/${slug}/` : `/${lang}/`;
+}
+
+// L'adresse d'une page qui existe dans la langue : null pour une page qui
+// n'y est pas, ou qui attend sa traduction.
+export function getLocalizedPath(routeKey, lang) {
+  if (pageEnAttente(routeKey, lang)) return null;
+  return cheminDeclare(routeKey, lang);
 }
 
 export function getLocalizedUrl(routeKey, lang) {
@@ -1750,8 +1788,10 @@ export function getArticleUrl(articleSlug, lang) {
   return `${BASE_URL}${getArticlePath(articleSlug, lang)}`;
 }
 
+// Les langues où l'article a une adresse ; generate.js retire en plus celles
+// où il n'est pas encore traduit (articleTraduit).
 export function getArticleAlternates(articleMeta) {
-  const alts = LANGUES_PUBLIQUES.map(lang => ({
+  const alts = LANGUES_PUBLIQUES.filter((lang) => articleMeta.slugs && articleMeta.slugs[lang]).map(lang => ({
     hreflang: lang,
     href: getArticleUrl(articleMeta.slugs[lang], lang),
   }));

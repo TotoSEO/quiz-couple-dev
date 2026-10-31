@@ -6,7 +6,8 @@
 //   node build/verifie-langue.mjs textes nl   nl/*.json face au français et à l'anglais
 //   node build/verifie-langue.mjs seo nl      la carte des mots-clés et les balises des pages construites
 //   node build/verifie-langue.mjs site nl     les pages /nl/ de dist/ dans Chromium
-//   node build/verifie-langue.mjs tout nl     les quatre
+//   node build/verifie-langue.mjs liens nl    les liens internes de dist/ vers et depuis /nl/
+//   node build/verifie-langue.mjs tout nl     les cinq
 //
 // Options :
 //   --complet         textes : ce qui n'est pas encore écrit devient une erreur
@@ -40,7 +41,7 @@ import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import {
   LANGUAGES, LANGUES_CACHEES, ROUTE_SLUGS, ROUTE_CONFIG, BLOG_ARTICLES,
-  getLocalizedPath, getArticlePath,
+  getLocalizedPath, getArticlePath, cheminDeclare, pageEnAttente, BASE_URL,
 } from './config.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
@@ -56,7 +57,7 @@ const valeurDe = (nom) => { const i = args.indexOf(nom); return i >= 0 ? args[i 
 const drapeau = (nom) => args.includes(nom);
 const positionnels = args.filter((a, i) => !a.startsWith('--') && !AVEC_VALEUR.has(args[i - 1]));
 const [QUOI, LANGUE = 'nl'] = positionnels;
-const CONTROLES = ['code', 'textes', 'seo', 'site'];
+const CONTROLES = ['code', 'textes', 'seo', 'site', 'liens'];
 if (!QUOI || ![...CONTROLES, 'tout'].includes(QUOI) || !LANGUAGES.includes(LANGUE) || LANGUE === 'fr') {
   console.error('Usage : node build/verifie-langue.mjs code|textes|seo|site|tout <langue> [--complet] [--jouer] [--pages a,b] [--sortie f.json]');
   process.exit(2);
@@ -172,9 +173,12 @@ const motTrouve = (texte, mot) => new RegExp(`(^|[^\\p{L}])${mot.replace(/[.*+?^
 
 // Les adresses du site : chemin → route ou article.
 const CIBLES = new Map();
+// L'adresse déclarée de chaque page, construite ou encore en attente de
+// traduction dans sa langue (PAGES_EN_ATTENTE) : un lien vers une page en
+// attente est neutralisé à la construction, il reste une cible connue.
 for (const cle of Object.keys(ROUTE_SLUGS)) {
   for (const l of LANGUAGES) {
-    const p = getLocalizedPath(cle, l);
+    const p = cheminDeclare(cle, l);
     if (p) CIBLES.set(p, `route:${cle}`);
   }
 }
@@ -568,6 +572,7 @@ function controleTextes() {
           if (estFichier(h)) continue;
           if (langueDuChemin(h) !== LANGUE) erreur(C, loc, `lien vers une page d'une autre langue : ${h}`);
           else if (!cibleDe(h)) erreur(C, loc, `lien vers une adresse inconnue : ${h}`);
+          else if (cibleDe(h).startsWith('route:') && pageEnAttente(cibleDe(h).slice(6), LANGUE)) afaire(C, loc, `lien vers ${cibleDe(h).slice(6)}, page en attente de traduction : neutralisé jusqu'à ce qu'elle sorte de PAGES_EN_ATTENTE`);
         }
         const attendues = lRef.filter((h) => h.startsWith('/')).map((h) => cibleDe(h) || `?${h}`);
         const posees = internes.map((h) => cibleDe(h)).filter(Boolean);
@@ -1074,6 +1079,51 @@ async function controleSite() {
   console.log(`[site] ${chemins.length} page(s) /${LANGUE}/ ouvertes en ${rendus.length} rendus${drapeau('--jouer') ? ', moteurs joués' : ''}`);
 }
 
+// ════════════════════════════════════════════════════════════════════════
+// 5. Les liens du site construit
+// ════════════════════════════════════════════════════════════════════════
+// Chaque lien interne d'une page de la langue (contenu, menu, pied de page,
+// cartes, hreflang), et chaque lien d'une autre langue qui mène vers elle
+// (sélecteur de langue, hreflang), doit mener à une page construite : une
+// page en attente de traduction (PAGES_EN_ATTENTE) n'est pas construite, et
+// un lien qui y mène encore serait une page 404.
+function controleLiens() {
+  const C = 'liens';
+  if (!fs.existsSync(DIST)) { erreur(C, 'dist/', 'site non construit (npm run build)'); return; }
+  const prefixe = `/${LANGUE}/`;
+  const existe = (chemin) => {
+    const p = chemin.split('#')[0].split('?')[0];
+    if (!p || p === '/') return fs.existsSync(path.join(DIST, 'index.html'));
+    if (/\.[a-z0-9]+$/i.test(p)) return fs.existsSync(path.join(DIST, p));
+    return fs.existsSync(path.join(DIST, p.endsWith('/') ? p : p + '/', 'index.html'));
+  };
+  const pages = parcours(DIST, (f) => f.endsWith('.html'));
+  let vus = 0;
+  const morts = new Map();
+  for (const f of pages) {
+    const chemin = '/' + path.relative(DIST, f).replace(/index\.html$/, '').replace(/\\/g, '/');
+    const dansLaLangue = chemin.startsWith(prefixe);
+    const html = fs.readFileSync(f, 'utf8');
+    for (const m of html.matchAll(/<(?:a|link)\b[^>]*\bhref="([^"]+)"/g)) {
+      let h = m[1].replace(/&amp;/g, '&');
+      if (h.startsWith(BASE_URL)) h = h.slice(BASE_URL.length) || '/';
+      if (!h.startsWith('/') || h.startsWith('//')) continue;
+      // Hors de la langue, seuls les liens qui mènent vers elle comptent.
+      if (!dansLaLangue && !h.startsWith(prefixe)) continue;
+      vus++;
+      if (existe(h)) continue;
+      const cle = h.split('#')[0].split('?')[0];
+      if (!morts.has(cle)) morts.set(cle, new Set());
+      morts.get(cle).add(chemin);
+    }
+  }
+  for (const [cible, depuis] of morts) {
+    const liste = [...depuis];
+    erreur(C, cible, `lien mort depuis ${liste.length} page(s) : ${liste.slice(0, 3).join(', ')}${liste.length > 3 ? '…' : ''}`);
+  }
+  console.log(`[liens] ${pages.length} pages lues, ${vus} liens vers ou depuis /${LANGUE}/ vérifiés`);
+}
+
 // ── Lancement ────────────────────────────────────────────────────────────
 
 const aFaire = QUOI === 'tout' ? CONTROLES : [QUOI];
@@ -1082,5 +1132,6 @@ for (const c of aFaire) {
   if (c === 'textes') controleTextes();
   if (c === 'seo') controleSeo();
   if (c === 'site') await controleSite();
+  if (c === 'liens') controleLiens();
 }
 process.exit(imprime(aFaire) ? 1 : 0);

@@ -238,10 +238,11 @@
   <% for (const alt of alternates) { %>
   <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%= alt.href %>">
   <% } %>
-<% if (!(typeof sansCache !== 'undefined' && sansCache) && !(typeof langueCachee !== 'undefined' && langueCachee)) { %>
+<% if (!(typeof sansCache !== 'undefined' && sansCache) && !(typeof langueCachee !== 'undefined' && langueCachee) && !(typeof sansFlux !== 'undefined' && sansFlux)) { %>
   <%# Le flux du blog dans la langue de la page (generateFlux) : c'est ce que
       lit le bouton « Suivre » de Google Discover. Une langue cachée n'en a
-      pas (LANGUES_CACHEES, config.js). %>
+      pas (LANGUES_CACHEES, config.js), ni une langue dont la liste du blog
+      attend encore son premier article (PAGES_EN_ATTENTE). %>
   <link rel="alternate" type="application/rss+xml" title="Quiz Couple · Blog" href="<%= lang === 'fr' ? '/blog/feed.xml' : '/' + lang + '/blog/feed.xml' %>">
 <% } %>
 
