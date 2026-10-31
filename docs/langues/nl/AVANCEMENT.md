@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -986,7 +986,37 @@ le met à jour dans la PR de chaque lot.
   phrases restent sans lien.
 - **Ce qui reste en français sur les pages** : rien.
 
+## Lot 4i (31 octobre 2026) : pourquoi mon ex m'a quitté(e)
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/waarom-heeft-mijn-ex-het-uitgemaakt/` | Waarom heeft mijn ex het uitgemaakt? Test in 20 vragen | Waarom heeft mijn ex het uitgemaakt? De test om de breuk te begrijpen |
+
+  Le H2 de la première section porte le mot-clé secondaire « redenen om het
+  uit te maken ».
+- **Le moteur** : le diagnostic `pourquoiQuitte` (huit causes, les poids
+  `q{N}{lettre}_axes` repris du français), ses fiches et ses libellés de
+  causes, et l'écran de départ. Joué jusqu'au résultat : la cause en tête,
+  la seconde quand elle pèse assez, et les huit jauges.
+- **Les liens** : « met iemand anders wel werken » (klaar voor een nieuwe
+  relatie) et « terug te denken aan de minpunten van hun ex » (over je ex
+  heen komen). L'article « on ne quitte pas quelqu'un pour quelqu'un
+  d'autre » attend son adresse néerlandaise (lot 9) : sa phrase reste sans
+  lien.
+- **Ce qui reste en français sur la page** : rien.
+- **Le lot 4 en entier** : les seize pages célibataires ouvertes ensemble
+  dans Chromium à 360 et 1 280 px, en clair et en sombre : aucun
+  débordement, aucun mot coupé, aucun texte resté en français ni sur les
+  pages ni sur les cartes « À faire ensuite ».
+
 ## Les chiffres
+
+Au lot 4i : `textes nl` 603 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (53 pages traduites) ; `site nl` sur la page, puis sur les
+seize pages du lot 4 : aucune erreur, le moteur va jusqu'à son résultat sans
+texte resté en français. Aucune page publique ne change.
 
 Au lot 4h : `textes nl` 592 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (52 pages traduites) ; `site nl` sur les deux pages : aucun
