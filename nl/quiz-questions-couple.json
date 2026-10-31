@@ -1,0 +1,377 @@
+{
+  "hero": {
+    "title": "100+ leuke vragen voor koppels, om elkaar beter te leren kennen",
+    "titleHighlight": "100+ leuke vragen",
+    "description": "Een willekeurige vraag om meteen te beginnen, 120 vragen per thema daaronder, en voorbeelden voor meer specifieke situaties: het begin van een relatie, intieme vragen, de toekomst, op afstand...",
+    "badge": "120 vragen • Gratis"
+  },
+  "listes": {
+    "pastille": "💬 Onze lijsten",
+    "titre": "Al onze lijsten met vragen",
+    "sousTitre": "Elke lijst past bij een situatie, met eigen vragen en een paar tips om ze op het goede moment te stellen.",
+    "bouton": "Bekijk de vragen",
+    "minutes": "{n} min lezen",
+    "lu": "{n} keer gelezen",
+    "tags": {
+      "questions-pour-mieux-se-connaitre-en-couple": "Elkaar beter leren kennen",
+      "questions-debut-de-relation": "Begin van een relatie",
+      "questions-intimes-couple": "Intiem",
+      "questions-avenir-couple": "Toekomst",
+      "questions-couple-telephone-message": "Op afstand",
+      "36-questions-pour-tomber-amoureux": "Verliefd worden",
+      "questions-a-poser-a-son-copain": "Voor je vriend",
+      "questions-a-poser-a-sa-copine": "Voor je vriendin",
+      "questions-a-poser-a-son-crush": "Voor je crush",
+      "questions-a-poser-a-une-fille": "Voor een meisje"
+    }
+  },
+  "liste_titre": "De 120 vragen, per thema",
+  "liste_intro": "Hier is de volledige lijst. Elk thema heeft vierentwintig vragen, om op volgorde te lezen of willekeurig uit te kiezen.",
+  "liste": {
+    "connaissance": {
+      "titre": "Vragen om elkaar beter te leren kennen",
+      "court": "Leren kennen",
+      "intro": "Vragen over wat jullie gevormd heeft: je jeugd, je familie, de keuzes die ertoe deden. Ook als je al lang samen bent, krijg je vaak een antwoord dat je niet zag aankomen!",
+      "questions": [
+        "Welke beslissing uit je verleden heeft je het meest veranderd, en had je dat toen al door?",
+        "Wat hebben je ouders je meegegeven zonder het ooit hardop te zeggen?",
+        "Welk compliment raakt je echt, en van welk compliment word je ongemakkelijk?",
+        "Waar was je op je twintigste zeker van, en waar geloof je nu helemaal niet meer in?",
+        "Waar ben je het best in, terwijl bijna niemand het ziet?",
+        "Aan welke jeugdherinnering denk je het vaakst terug, zonder speciale reden?",
+        "Wat vind je vermoeiend aan anderen, terwijl niemand anders er last van lijkt te hebben?",
+        "Welke vriendschap heeft je het meest gevormd, en hoe staat het daar nu mee?",
+        "In wat voor situatie voel je je het meest jezelf?",
+        "Welke kritiek is je zo bijgebleven dat je er nog steeds aan terugdenkt?",
+        "Wat zou je met je dagen doen als geld geen rol meer speelde?",
+        "Welke karaktertrek heb je geërfd en probeer je af te leren?",
+        "Wat begrijpen mensen bijna altijd verkeerd aan jou?",
+        "Welke mislukking heeft je achteraf gezien het meest opgeleverd?",
+        "Wanneer ben je voor het laatst van mening veranderd over iets belangrijks?",
+        "Waar word je boos om, terwijl je zou willen dat het je koud liet?",
+        "Op welke plek voel je je meteen beter zodra je er aankomt?",
+        "Wat heb je nooit aan iemand verteld, niet uit schaamte, maar omdat het er nooit van kwam?",
+        "Welke eigenschap bewonder je het meest, terwijl je die zelf niet hebt?",
+        "Wat stelt je gerust als alles misgaat?",
+        "Welke gewoonte heb je onlangs aangenomen, en hoe kwam dat?",
+        "Als je jezelf moest beschrijven in één zin die je nooit in een sollicitatiegesprek zou zeggen, welke zin zou dat zijn?",
+        "Welk talent zou je graag hebben, zonder dat je ooit de tijd hebt genomen om het te leren?",
+        "Wat is er aan jou veranderd sinds we samen zijn, zonder dat ik het doorhad?"
+      ]
+    },
+    "futur": {
+      "titre": "Vragen over jullie plannen en jullie toekomst",
+      "court": "Toekomst",
+      "intro": "Waar je wilt wonen, geld, werk, wel of geen kinderen... Het zijn onderwerpen die je voor je uit schuift, terwijl ze veel makkelijker te bespreken zijn zolang er nog niets beslist is.",
+      "questions": [
+        "Hoe ziet een gewone dag van ons leven er over vijf jaar uit, in jouw hoofd?",
+        "Wat is het enige dat je absoluut niet met ons wilt zien gebeuren?",
+        "Waar zou je willen wonen als niets ons hier hield?",
+        "Wat moeten we samen gedaan hebben voor we vijftig zijn?",
+        "Hoe zie je ons over tien jaar met geld omgaan?",
+        "Welke plek wil je dat werk later in je leven inneemt?",
+        "Waaraan zou je over twintig jaar merken dat onze relatie geslaagd is?",
+        "Is er een plan dat je opzij hebt gezet vanwege onze relatie?",
+        "Hoe aanwezig wil je dat onze families in ons leven zijn?",
+        "Waar ben je het bangst voor als het gaat om samen oud worden?",
+        "Als we morgen ergens anders opnieuw moesten beginnen, zou je dan gaan of blijven?",
+        "Hoeveel plaats wil je de komende jaren voor je vrienden houden?",
+        "Hoe zou je willen dat we grote beslissingen nemen?",
+        "Wat wil je ooit absoluut aan iemand doorgeven?",
+        "Wanneer zou het juiste moment zijn voor de volgende grote stap in onze relatie?",
+        "Is er iets wat je van mij verwacht, maar nooit gevraagd hebt?",
+        "Hoe willen we het regelen als een van ons moet stoppen met werken?",
+        "Welke gewoonte zou je samen willen beginnen en lang volhouden?",
+        "Wat moeten we niet langer uitstellen?",
+        "Hoe zouden we weten dat het tijd is om iets in ons leven te veranderen?",
+        "Welk compromis wil je sluiten, en welk nooit?",
+        "Wat zou je precies zo willen houden als het nu is?",
+        "Als we een heel jaar vrij hadden, wat zouden we er dan mee doen?",
+        "Wat hoop je dat mensen over dertig jaar over ons zeggen?"
+      ]
+    },
+    "intime": {
+      "titre": "Vragen over intimiteit en gevoelens",
+      "court": "Intiem",
+      "intro": "Hier gaat het over wat jullie dichter bij elkaar brengt: gebaren, woorden, wat er soms ontbreekt. Niets platvloers, het zijn vooral vragen over wat je voelt.",
+      "questions": [
+        "Waardoor voel je je in het dagelijks leven het meest geliefd?",
+        "Wanneer voelde je je het dichtst bij mij?",
+        "Wat mis je als ik er niet ben?",
+        "Hoe weet je dat het niet goed met me gaat, nog voor ik het zeg?",
+        "Wat geeft je het meeste vertrouwen in mij?",
+        "Is er een gebaar dat je vaker van me zou willen?",
+        "Waardoor heb je minder zin in nabijheid, als het geen vermoeidheid is?",
+        "Hoe word je het liefst getroost als het niet gaat?",
+        "Wat durf je me niet te vragen?",
+        "Op welk moment van de dag voel je je het best bij mij?",
+        "Waar word je jaloers van, eerlijk gezegd?",
+        "Hoe wist je dat je echt om me gaf?",
+        "Wat is er sinds het begin veranderd in onze intimiteit?",
+        "Is er iets wat ik doe dat je raakt, zonder dat ik het weet?",
+        "Waardoor voel je je begeerd?",
+        "Wanneer voel je je het kwetsbaarst bij mij?",
+        "Wat zou je willen dat we vaker samen durven?",
+        "Hoe zou je willen dat we elkaar terugvinden na een ruzie?",
+        "Waar moet je om lachen bij mij, terwijl ik het als een fout zie?",
+        "Wat heb je nodig als je moe bent en niets zegt?",
+        "Wat heeft je het meest verrast aan mij sinds we elkaar kennen?",
+        "Is er een onderwerp dat we allebei vermijden zonder dat we het ooit hebben afgesproken?",
+        "Waardoor wil je je eerder aan mij toevertrouwen dan aan iemand anders?",
+        "Wat zou je willen dat ik begrijp zonder dat je het hoeft uit te leggen?"
+      ]
+    },
+    "fun": {
+      "titre": "Grappige en luchtige vragen",
+      "court": "Grappig",
+      "intro": "Vragen om even te lachen, in de auto, aan tafel of op een avond waarop niemand een idee heeft. Ze werken ook heel goed met vrienden.",
+      "questions": [
+        "Als onze relatie een film was, wat zou dan de titel en de poster zijn?",
+        "Wat is het belachelijkste waar we ooit ruzie over hebben gemaakt?",
+        "Op welk personage uit een serie lijk je het meest, en waarom irriteert je dat?",
+        "Welk compleet nutteloos talent zou je willen beheersen?",
+        "Wat is de ergste outfit die je mij ooit hebt zien dragen?",
+        "Als we morgen van baan wisselden, hoe zou dat aflopen?",
+        "Wat is jouw guilty pleasure, die je tot het einde zou verdedigen?",
+        "Bij welk liedje denk je meteen aan ons, ook al is het slecht?",
+        "Als we vanavond de loterij wonnen, wat is dan het eerste domme ding dat we zouden doen?",
+        "Welk dier zou jij zijn, en welk dier zou ik zijn?",
+        "Wat is het gênantste dat je ooit in het openbaar hebt gedaan?",
+        "Welk gerecht zou je elke dag kunnen eten zonder dat het je gaat vervelen?",
+        "Als we een band hadden, wat voor muziek zouden we maken en hoe zouden we heten?",
+        "Welke gewoonte van jou irriteert mij, en dat weet je best?",
+        "Welke superkracht zou je kiezen, wetende dat ik het tegenovergestelde zou kiezen?",
+        "Wat is het slechtste uitje dat we ooit samen hebben bedacht?",
+        "Als ons leven gefilmd werd, welke scène zou dan de eindmontage halen?",
+        "Wat is de onschuldigste leugen die je mij ooit hebt verteld?",
+        "In welke tijd had je absoluut niet willen leven, en waarom?",
+        "Als je mij in drie argumenten aan een onbekende moest verkopen, wat zou je dan zeggen?",
+        "Wat is het nutteloosste dat je ooit hebt gekocht?",
+        "Wie van ons twee houdt het het langst vol zonder telefoon?",
+        "Welke bijnaam wil je absoluut nooit van mij horen als er anderen bij zijn?",
+        "Als we een boek over ons schreven, hoe zou het eerste hoofdstuk dan heten?"
+      ]
+    },
+    "profond": {
+      "titre": "Diepe vragen over waarden en het leven",
+      "court": "Diep",
+      "intro": "Vragen over wat voor jullie belangrijk is in het leven. Ze vragen een beetje rust, en juist dan komen de grote verschillen vaak naar boven.",
+      "questions": [
+        "Wat geeft je leven op dit moment zin?",
+        "Waar zou je het moeilijkst overheen komen?",
+        "Wat vind jij onvergeeflijk?",
+        "Van welk onrecht word je echt boos?",
+        "Wat had je de moed willen hebben om te doen?",
+        "Wat betekent succes voor jou, in je eigen woorden?",
+        "Over welke waarde zul je nooit onderhandelen?",
+        "Waar ben je het bangst voor, behalve voor de dood?",
+        "Wat heb je vergeven zonder het ooit te vergeten?",
+        "Welk cliché over het leven als koppel klopt volgens jou niet?",
+        "Wat zou ervoor zorgen dat je je hele leven in twijfel trekt?",
+        "Geloof je dat we zelf kiezen van wie we houden?",
+        "Wat zou je willen dat mensen van jou onthouden?",
+        "Van wie heb je het meest geleerd, zonder dat die persoon het wilde?",
+        "Wat begrijp je niet aan mensen van jouw generatie?",
+        "Waar ben je trots op, terwijl je dat niet durft te zeggen?",
+        "Wat is het moeilijkste dat je ooit hebt moeten accepteren?",
+        "Wat heb je spijt dat je nooit tegen iemand hebt gezegd?",
+        "Waaraan zie je dat een relatie het waard is om te redden?",
+        "Wat zou je doen als je wist dat je nog maar een jaar had?",
+        "Welke waarheid over jezelf heb je pas na lange tijd kunnen aanvaarden?",
+        "Wat verwacht je van de liefde, behalve het gevoel?",
+        "Welke grens mag niemand bij jou overschrijden?",
+        "Waar wil je dat ik je aan herinner op de dagen dat je het vergeet?"
+      ]
+    }
+  },
+  "situations": {
+    "titre": "Welke vragen stel je elkaar, afhankelijk van de situatie?",
+    "intro": "Een vraag die heel goed werkt op een derde date, kan na vijf jaar samenwonen helemaal niet aankomen, en andersom ook. Hier zijn de situaties die het vaakst terugkomen, telkens met een paar voorbeelden.",
+    "items": [
+      {
+        "article": "questions-pour-mieux-se-connaitre-en-couple",
+        "titre": "Om elkaar beter te leren kennen, ook na jaren",
+        "texte": "Na een tijdje ken je de gewoontes van de ander uit je hoofd: de koffie, de series, de manier waarop de vaatwasser ingeruimd wordt. Over wat de ander gevormd heeft, de familie of wat hem of haar nu bezighoudt, weet je vaak veel minder. Bijvoorbeeld:",
+        "exemples": [
+          "Welke gewoonte uit je familie heb je overgenomen zonder het door te hebben?",
+          "Wat zou je willen dat ik vaker opmerk?",
+          "Als ons verhaal een boek was, bij welk hoofdstuk zouden we dan zijn?"
+        ]
+      },
+      {
+        "article": "questions-debut-de-relation",
+        "titre": "Aan het begin van een relatie",
+        "texte": "De eerste weken praat je vooral over feiten: werk, waar je woont, vrienden. Dat is normaal. Maar sommige dingen kun je beter vrij snel weten, zoals hoe de ander op kritiek reageert of wat hij of zij van een relatie verwacht, zonder dat het een vragenlijst wordt. Een paar vragen om mee te beginnen:",
+        "exemples": [
+          "Wat is jouw natuurlijke ritme: eerder uitgaan of eerder thuis op de bank?",
+          "Wat zou ik nooit over jou raden?",
+          "Wat is voor jou een mooi gebaar: woorden, tijd, kleine attenties?"
+        ]
+      },
+      {
+        "article": "questions-intimes-couple",
+        "titre": "Intieme vragen",
+        "texte": "Het zijn niet per se <a href=\"/nl/ondeugende-quiz/\">vragen over seks</a>. De meeste gaan over wat jullie dichter bij elkaar brengt: wanneer de ander zich geliefd voelt, het kleine gebaar dat iets met hem of haar doet, wat hij of zij niet durft te vragen. Begin bij tederheid en ga rustig richting verlangen, dan kan ieder stoppen waar hij of zij wil. Bijvoorbeeld:",
+        "exemples": [
+          "Op welk moment voel je je het meest geliefd?",
+          "Wat is het gewone gebaar dat ik doe en dat iets met je doet?",
+          "Wat zou je vaker willen doen, zonder dat je het durft te vragen?"
+        ]
+      },
+      {
+        "article": "questions-avenir-couple",
+        "titre": "Over de toekomst en grote beslissingen",
+        "texte": "Samenwonen, wel of niet trouwen, kinderen, het geld samen beheren... Veel koppels gaan die onderwerpen uit de weg, uit angst dat ze het niet eens zijn. En juist daarom is het veel makkelijker om erover te praten vóór een grote beslissing dan erna. Drie voorbeelden:",
+        "exemples": [
+          "Stad of rand van de stad, huren of kopen: wat is jouw ideale scenario?",
+          "Een kind: een plan met een datum, een vaag verlangen of een open vraag?",
+          "Een gezamenlijke rekening, aparte rekeningen of allebei: wat is jouw model, en waarom?"
+        ]
+      },
+      {
+        "article": "questions-couple-telephone-message",
+        "titre": "Op afstand, aan de telefoon of via berichtjes",
+        "texte": "Als je elkaar weinig ziet, gaan de gesprekken vaak op elkaar lijken: je dag, hoe moe je bent, welterusten. Eén net iets andere vraag is genoeg om het gesprek weer op gang te brengen, en sommige werken zelfs beter via een berichtje of aan de telefoon dan in het echt. En om te zien waar jullie staan, zijn er ook <a href=\"/nl/lange-afstandsrelatie-test/\">vragen speciaal voor koppels op afstand</a>. Bijvoorbeeld:",
+        "exemples": [
+          "Wat heb je vandaag gedacht zonder het tegen iemand te zeggen?",
+          "Wat kijken we tegelijk, ieder bij zichzelf thuis?",
+          "Wat doen we, uur na uur, op de eerste dag dat we elkaar weer zien?"
+        ]
+      },
+      {
+        "article": "36-questions-pour-tomber-amoureux",
+        "titre": "De 36 vragen om verliefd te worden",
+        "texte": "Deze lijst komt uit een psychologisch onderzoek van Arthur Aron uit 1997: twee onbekenden stellen elkaar 36 steeds persoonlijkere vragen. Veel koppels proberen het ook, gewoon om te zien wat er gebeurt. Een paar vragen uit het experiment:",
+        "exemples": [
+          "Wat zou voor jou een perfecte dag zijn?",
+          "Als een glazen bol je de waarheid kon vertellen over jezelf, je leven of de toekomst, wat zou je dan willen weten?",
+          "Je huis brandt, je dierbaren en huisdieren zijn veilig: je kunt nog maar één voorwerp redden. Welk, en waarom?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-copain",
+        "titre": "Om aan je vriend te stellen",
+        "texte": "Mensen vragen ons vaak om vragen voor hun vriend, vooral als hij niet zo’n prater is. Met een paar goede vragen, van de luchtigste tot de serieuste, praat hij al snel wat meer dan anders. Bijvoorbeeld:",
+        "exemples": [
+          "Wat zou je willen dat mensen je vaker vragen?",
+          "Wat deden we in het begin dat we weer zouden moeten doen?",
+          "Hoe lang zou jij het overleven in een horrorfilm, eerlijk?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-sa-copine",
+        "titre": "Om aan je vriendin te stellen",
+        "texte": "En andersom: de beste vragen voor je vriendin gaan vooral over wat ze nu meemaakt, en niet alleen over wat ze leuk vindt. Een paar voorbeelden:",
+        "exemples": [
+          "Wat mis je de laatste tijd, zonder dat je erover praat?",
+          "Wat is jouw toevluchtsoord, de plek waar je in gedachten naartoe gaat?",
+          "Als onze relatie een serie was, welke zou het dan zijn?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-crush",
+        "titre": "Voor je een koppel bent: met je crush of een meisje dat je net leert kennen",
+        "texte": "Niet iedereen zoekt vragen voor koppels. Als je nog in de fase van berichtjes zit, werken luchtige vragen het best: makkelijk te sturen, en leuk om te beantwoorden. Zo houd je het gesprek met je crush gaande, of leer je een meisje kennen zonder dat het voelt als een sollicitatiegesprek. Bijvoorbeeld:",
+        "exemples": [
+          "Ben jij meer van een spraakbericht van vier minuten of van een lap tekst?",
+          "Hoe ziet jouw perfecte zondag eruit, uur na uur?",
+          "Welke plek in je stad zou je iemand als eerste laten zien?"
+        ]
+      }
+    ]
+  },
+  "jeux": {
+    "titre": "En als jullie liever een spel spelen",
+    "intro": "Sommige vragen werken veel beter als spel, omdat er een regel is en vaak een uitslag aan het eind. Dit zijn de spellen op de site die op vragen draaien:",
+    "bouton": "Spelen",
+    "items": [
+      {
+        "route": "quizRencontre",
+        "texte": "Vragen voor een eerste of tweede date, één voor één te trekken op je telefoon."
+      },
+      {
+        "route": "quizKnowledge",
+        "texte": "Jullie beantwoorden allebei vragen over de ander, en jullie tellen wie de ander het best kent."
+      },
+      {
+        "route": "quizTuPreferes",
+        "texte": "Telkens twee keuzes, en jullie zien of jullie het eens zijn."
+      },
+      {
+        "route": "jeuJamais",
+        "texte": "‘Ik heb nog nooit...’, en jullie zeggen allebei of je het al eens gedaan hebt. Er komen vaak oude verhalen boven."
+      },
+      {
+        "route": "jeuActionVerite",
+        "texte": "De versie voor koppels van het spel, met waarheden om te vragen en opdrachten om te doen."
+      },
+      {
+        "route": "jeuPhrases",
+        "texte": "Zinnen die jullie elk apart afmaken, en daarna vergelijken jullie."
+      },
+      {
+        "route": "jeuDilemmes",
+        "texte": "Onmogelijke keuzes om samen te maken, die vaak in een discussie eindigen."
+      },
+      {
+        "route": "quizCoquin",
+        "texte": "Pittigere vragen, voor als de sfeer ernaar is."
+      }
+    ]
+  },
+  "conseils": {
+    "titre": "Zo stel je deze vragen zonder dat het een verhoor wordt",
+    "intro": "Er is geen ingewikkelde methode, maar een paar details maken het verschil tussen een goed gesprek en een vragenlijst.",
+    "items": [
+      {
+        "titre": "Niet te veel vragen tegelijk:",
+        "texte": "Drie of vier vragen op een avond is al mooi. Opent een antwoord een onderwerp, blijf daar dan bij in plaats van naar de volgende vraag te gaan."
+      },
+      {
+        "titre": "Zelf ook antwoorden:",
+        "texte": "Wie de vraag stelt, beantwoordt hem daarna zelf ook, anders wordt het een sollicitatiegesprek. En meestal is het juist het antwoord van de ander waardoor je zin krijgt om je eigen verhaal te vertellen."
+      },
+      {
+        "titre": "Doorvragen in plaats van de volgende vraag voorbereiden:",
+        "texte": "Terwijl de ander praat, ben je geneigd al naar de volgende vraag te zoeken. Een simpel “en hoe voelde je je toen?” werkt veel beter."
+      },
+      {
+        "titre": "Het recht om over te slaan:",
+        "texte": "Maakt een vraag iemand ongemakkelijk, dan sla je hem over, zonder commentaar. Je kunt er altijd een andere dag op terugkomen."
+      },
+      {
+        "titre": "Kies het moment:",
+        "texte": "In de auto, tijdens een wandeling of als jullie uit eten zijn, werkt het heel goed. Even tussendoor of midden in een ruzie, veel minder!"
+      }
+    ]
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen over deze vragen voor koppels",
+    "faq": [
+      {
+        "q": "Welke vragen stel je elkaar als koppel?",
+        "a": "Dat hangt vooral af van het moment. Voor een leuke avond werken grappige vragen heel goed, bijvoorbeeld “Als onze relatie een film was, wat zou dan de titel en de poster zijn?”. Om elkaar beter te leren kennen, kies je eerder vragen over je jeugd, je familie of waar je trots op bent. En als er een grote beslissing aankomt (samenwonen, een kind...), zijn vragen over de toekomst het nuttigst."
+      },
+      {
+        "q": "Hoeveel vragen stel je na elkaar?",
+        "a": "Drie of vier per avond is ruim genoeg. Het doel is niet om de lijst af te werken, maar om een goed gesprek te hebben, en één goede vraag kan makkelijk een hele avond vullen."
+      },
+      {
+        "q": "Werkt het ook op afstand?",
+        "a": "Ja, en zelfs heel goed. Jullie kunnen elkaar elke dag een vraag sturen via een berichtje, of er een bewaren voor het telefoontje van ’s avonds."
+      },
+      {
+        "q": "Wat als een vraag ongemakkelijk voelt?",
+        "a": "Dan sla je hem gewoon over. Niemand hoeft op alles te antwoorden, en aandringen maakt van het spel al snel een examen. Jullie kunnen er altijd een andere dag op terugkomen, als de ander er klaar voor is."
+      },
+      {
+        "q": "Wat is het verschil met de 36 vragen om verliefd te worden?",
+        "a": "De 36 vragen komen uit een psychologisch experiment: twee mensen stellen ze elkaar in volgorde, zonder er een over te slaan. Onze 120 vragen kies je vrij uit, in de volgorde die je wilt, en ze zijn bedoeld voor mensen die al samen zijn."
+      },
+      {
+        "q": "Kunnen deze vragen relatietherapie vervangen?",
+        "a": "Nee. Ze helpen jullie om te praten, maar als jullie door een echte crisis gaan, heb je veel meer aan een relatietherapeut. Niets houdt jullie natuurlijk tegen om deze vragen er ook bij te gebruiken."
+      }
+    ]
+  }
+}

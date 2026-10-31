@@ -698,6 +698,10 @@ function controleSeo() {
   for (const a of pages) {
     for (const b of pages) {
       if (a === b) continue;
+      // Un mot-clé qui en contient un autre (« grappige vragen voor koppels »
+      // et « vragen voor koppels ») les porte forcément tous les deux : c'est
+      // la carte qui l'a voulu, pas une cannibalisation à corriger.
+      if (contientMots(b.r.principal, a.r.principal)) continue;
       if (contientMots(b.b.title, a.r.principal)) avert(C, b.chemin, `son title porte « ${a.r.principal} », mot-clé principal de ${a.chemin}`);
     }
   }
