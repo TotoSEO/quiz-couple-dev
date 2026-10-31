@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1039,7 +1039,35 @@ le met à jour dans la PR de chaque lot.
   préfères » et les dilemmes), tirées de leur description dans
   `quizzes.json` : elles partent avec le lot 6.
 
+## Lot 5b (31 octobre 2026) : le quiz coquin
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/ondeugende-quiz/` | Ondeugende quiz: 30 pikante vragen voor jullie twee | Ondeugende vragen voor koppels: de quiz voor twee |
+
+  Le title évite « quiz voor koppels », le mot-clé de l'accueil (le contrôle
+  `seo` le signalait) ; le H1 porte le mot-clé secondaire « ondeugende
+  vragen voor koppels », les titres des sections disent « ondeugende quiz »
+  et « pikante quiz ».
+- **Le moteur** : les 60 questions sous `coquinQ`, le nom que le préfixe
+  porte hors du français (`PREFIX_ALIASES`), dans la structure du français ;
+  l'écran du jeu (`coquin` de quizGames.json). « Lingerie » s'écrit pareil
+  (identiques.txt).
+- **Les liens** : « smaak, gedeelde herinneringen en kleine gewoontes van
+  elke dag » (relatietest), « partners op afstand » (lange afstandsrelatie
+  test) et « verwachtingen en verlangens » (seksuele compatibiliteit test).
+- **Ce qui reste en français sur la page** : les phrases de trois cartes «
+  À faire ensuite », vers deux jeux du lot 6 (action ou vérité coquin, la
+  roue des gages) et vers le quiz de l'île de la tentation (lot 5).
+
 ## Les chiffres
+
+Au lot 5b : `textes nl` 621 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (56 pages traduites) ; `site nl` : le moteur va jusqu'à son
+résultat ; trois erreurs attendues, les cartes vers des pages pas encore
+traduites. Aucune page publique ne change.
 
 Au lot 5a : `textes nl` 616 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (55 pages traduites) ; `site nl` sur les deux pages : les

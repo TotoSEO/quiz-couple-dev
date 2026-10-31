@@ -41,3 +41,5 @@ Quality time
 # Gerechten die in het Nederlands zo heten (quiz over liefde, lot 5a).
 Pizza
 Sushi
+# « Lingerie » is ook Nederlands (ondeugende quiz, lot 5b).
+Lingerie
