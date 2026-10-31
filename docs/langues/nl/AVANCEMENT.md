@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1142,7 +1142,45 @@ le met à jour dans la PR de chaque lot.
   « À faire ensuite », vers des jeux du lot 6 et vers la page des questions
   (lot 5).
 
+## Lot 5f (31 octobre 2026) : le quiz vrai ou faux
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/waar-of-niet-waar-quiz/` | Waar of niet waar quiz: 100 verrassende vragen over relaties | Waar of niet waar quiz over liefde en relaties |
+
+  Le title évite « quiz voor koppels », le mot-clé de l'accueil.
+- **Le moteur** : les 100 affirmations, leurs réponses (recopiées) et leurs
+  explications, les quatre verdicts et l'écran du jeu (`truefalse`). Les
+  affirmations s'affichent en H3 dans la page : aucune ne dit « echt ».
+- **Les questions propres à la France** (quinze : divorces, âge au mariage,
+  PACS, Ifop, INSEE, mariage posthume...) restent françaises et le disent
+  (« In Frankrijk... ») : l'anglais et l'allemand les ont remplacées par des
+  chiffres de leur pays, mais les chiffres néerlandais et belges n'ont pas
+  été vérifiés un à un, et une affirmation fausse n'a pas sa place dans un
+  quiz qui corrige les idées reçues. À reprendre avec le CBS et Statbel si
+  Thomas le souhaite.
+- **Corrigé dans trois langues publiques** : l'affirmation 98 disait que «
+  mariage » (et « marriage », et l'allemand « Ehe ») vient du latin «
+  matrimonium », réponse « vrai ». C'est faux (« mariage » vient de «
+  marier », du latin « maritare » ; « Ehe » est germanique). Elle dit
+  désormais que le mot latin « matrimonium » vient de « mater », ce qui est
+  vrai, en français, en anglais et en allemand ; l'espagnol et l'italien («
+  matrimonio ») étaient justes.
+- **Les liens** : « gezonde relatie » (gezonde relatie test), « fundamentele
+  waarden » (passen we bij elkaar) et « vreemdgaan in een relatie » (gaat
+  mijn partner vreemd).
+- **Ce qui reste en français sur la page** : la phrase d'une carte « À
+  faire ensuite », vers les dilemmes (lot 6).
+
 ## Les chiffres
+
+Au lot 5f : `textes nl` 689 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (62 pages traduites) ; `site nl` : le moteur va jusqu'à son
+résultat ; une erreur attendue, la carte vers un jeu du lot 6. Les pages
+publiques du vrai ou faux en français, anglais et allemand changent par
+l'affirmation 98, et par elle seule.
 
 Au lot 5e : `textes nl` 683 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (61 pages traduites) ; `site nl` : le premier rendez-vous et

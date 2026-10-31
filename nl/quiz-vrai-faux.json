@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "100 vragen",
+    "title": "Waar of niet waar quiz",
+    "titleHighlight": "over liefde en relaties",
+    "description": "Denk je dat je alles weet over samenleven? Over wat een relatie bij elkaar houdt, over de mythes die al jaren worden herhaald, over de cijfers die verrassen? Deze waar of niet waar quiz zet het op de proef.",
+    "subtitle": "Een verzameling van 100 vragen, waarvan er elk spel 30 worden getrokken. Elke vraag heeft een simpel antwoord, waar of niet waar, en een korte uitleg om te snappen waarom."
+  },
+  "seo": {
+    "s1Title": "Waar of niet waar: een quizvorm die alles verandert",
+    "s1p1": "Waar of niet waar is de vorm die makkelijk lijkt en je het vaakst verrast. Twee keuzes, één antwoord, en toch. Bij 100 vragen over relaties komt niemand er ongeschonden vanaf.",
+    "s1p2": "Wat deze vorm zo geschikt maakt voor relatieonderwerpen, is dat hij je dwingt positie te kiezen. Geen ‘het hangt ervan af’, geen nuance halverwege: waar of niet waar. En juist dan komen de overtuigingen boven die je al lang met je meedraagt over relaties. Die je hebt meegekregen, die je hebt opgebouwd na slechte ervaringen, die je ergens hebt gelezen en nooit hebt gecontroleerd.",
+    "s2Title": "Wat we denken over relaties, en wat onderzoek laat zien",
+    "s2p1": "Veel ideeën over samenleven komen uit films, series, wat we bij onze ouders zagen of wat we in tijdschriften lazen. Het gevolg: we hebben stellige overtuigingen over dingen die in werkelijkheid veel genuanceerder zijn.",
+    "s2h3_1": "De mythe van het koppel zonder ruzie",
+    "s2h3_1_p1": "Het idee dat gelukkige koppels geen ruzie maken, is waarschijnlijk een van de meest verspreide mythes, en een van de schadelijkste. Onderzoek naar relaties, vooral dat van John Gottman, die duizenden koppels decennialang volgde, laat zien dat het niet de aanwezigheid van conflicten is die een breuk voorspelt, maar de manier waarop je ermee omgaat. Een <a href=\"/nl/gezonde-relatie-test/\">gezonde relatie</a> is dus geen relatie zonder ruzie: zo'n koppel gaat misschien gewoon de moeilijke onderwerpen uit de weg.",
+    "s2h3_2": "De mythe dat tegenpolen elkaar aantrekken",
+    "s2h3_2_p1": "Je hoort het overal. De cijfers vertellen een ander verhaal. Koppels die dezelfde <a href=\"/nl/passen-we-bij-elkaar/\">fundamentele waarden</a> delen, over geld, kinderen, levensstijl en de toekomst, zijn op de lange termijn stabieler dan koppels die inzetten op persoonlijkheden die elkaar aanvullen. De aantrekkingskracht van verschillen kan er in het begin zijn. Dat is niet wat een relatie laat duren.",
+    "s2h3_3": "De mythe dat liefde minder wordt",
+    "s2h3_3_p1": "Romantische liefde die lang duurt, werd lang gezien als een tegenstrijdigheid. Hersenscans lieten het tegendeel zien: mensen die al meer dan 20 jaar getrouwd zijn en zeggen nog steeds van hun partner te houden, vertonen in de hersengebieden die met romantische liefde te maken hebben een activiteit die vergelijkbaar is met die van pas verliefde mensen. Liefde verandert. Ze verdwijnt niet per se.",
+    "s3Title": "Waarom een quiz voor koppels samen spelen?",
+    "s3p1": "Een quiz met z'n tweeën doen, heeft iets bijzonders. Je speelt niet meer tegen een anonieme score, je speelt tegen elkaar, of beter gezegd: met elkaar. En onenigheid over de antwoorden leidt vaak tot gesprekken die je anders niet had gevoerd.",
+    "s3p2": "“Dacht je nou dat koppels zonder ruzie het stevigst waren?” Een gewone vraag, zo op het oog. Maar erachter zit misschien hoe je partner jullie eigen ruzies beleeft, wat hij of zij ervan verwacht, waar hij of zij bang voor is. Een quiz kan dat openen.",
+    "s3p3": "Daarom werkt waar of niet waar hier beter dan een persoonlijkheidsquiz. Het zegt niet wat je bent, het laat zien wat je gelooft. En wat je gelooft over relaties, zegt vaak meer dan wat je doet.",
+    "s4Title": "De grote vragen achter de kleine vragen",
+    "s4p1": "Achter elke ‘waar of niet waar’ in deze quiz zit een grote vraag over samenleven. Is sleur de vijand van een relatie? Is geld echt de grootste bron van ruzie? Kun je herstellen van <a href=\"/nl/gaat-mijn-partner-vreemd/\">vreemdgaan in een relatie</a>? Is in aparte bedden slapen het einde van iets, of gewoon gezond verstand?",
+    "s4p2": "Op die vragen is geen universeel antwoord. Maar ze verdienen het om gesteld te worden. En een quiz met 100 vragen is een goede manier om ze te stellen zonder dat het lijkt alsof je relatietherapie begint.",
+    "faqTitle": "Veelgestelde vragen",
+    "faq": [
+      {
+        "q": "Hoe lang duurt de waar of niet waar quiz?",
+        "a": "Reken op 5 tot 10 minuten, afhankelijk van hoe snel je leest: elk spel trekt willekeurig 30 vragen uit de 100. Speel opnieuw en je krijgt andere stellingen."
+      },
+      {
+        "q": "Kun je met z'n tweeën spelen?",
+        "a": "Zeker. De quiz is gemaakt om alleen of als koppel te spelen. Met z'n tweeën vergelijk je jullie antwoorden en praat je over de uitleg, en daar wordt het pas interessant."
+      },
+      {
+        "q": "Zijn de antwoorden gebaseerd op onderzoek?",
+        "a": "Ja. Elke uitleg steunt op onderzoek in de psychologie, de sociologie of de neurowetenschappen. De belangrijkste bronnen zijn het werk van John Gottman en Helen Fisher, en cijfers van het Franse statistiekbureau INSEE en het Franse peilingbureau Ifop."
+      },
+      {
+        "q": "Wordt mijn score opgeslagen?",
+        "a": "Nee. Er worden geen persoonsgegevens verzameld. Je score verschijnt aan het eind van de quiz en blijft alleen op je eigen toestel."
+      }
+    ]
+  },
+  "jsonLd": {
+    "about": "waar of niet waar quiz voor koppels"
+  }
+}

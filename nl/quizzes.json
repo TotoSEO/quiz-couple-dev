@@ -148,6 +148,12 @@
     "description": "15 vragen om te ontdekken of jullie koppel discreet, ongegeneerd of ronduit legendarisch is in het openbaar.",
     "metaDescription": "Gênante vragen voor jullie twee: de test ‘zijn wij een gênant koppel?’ in 15 situaties, en een spel met 20 gênante vragen. Gratis, zonder account."
   },
+  "quizVraiFaux": {
+    "title": "Waar of niet waar quiz: 100 verrassende vragen over relaties",
+    "shortTitle": "Waar of niet waar",
+    "description": "100 waar of niet waar vragen over relaties: mythes, psychologie, verrassende cijfers en vooroordelen.",
+    "metaDescription": "Waar of niet waar quiz over liefde: 100 stellingen over mythes, psychologie en verrassende cijfers, met bij elk antwoord een korte uitleg. Gratis."
+  },
   "testConfiance": {
     "title": "Vertrouwen in een relatie test: vertrouw je elkaar?",
     "shortTitle": "Vertrouwenstest",
