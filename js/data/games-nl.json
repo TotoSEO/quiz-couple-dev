@@ -663,9 +663,9 @@
     "disclaimer": "Deze test bewijst niets en beschuldigt niemand. Hij brengt orde in wat je hebt gezien, zodat je weet wat je ermee kunt doen."
   },
   "secret": {
-    "introQuestion": "Vous vous posez la question :",
-    "introQuote": "« Est-ce qu'il ou elle m'aime en secret… ou est-ce que je me raconte une histoire ? »",
-    "disclaimer": "Pensez à une personne précise avant de commencer, et répondez sur elle uniquement."
+    "introQuestion": "Je stelt jezelf de vraag:",
+    "introQuote": "“Is hij of zij stiekem verliefd op me… of maak ik mezelf iets wijs?”",
+    "disclaimer": "Denk aan één bepaalde persoon voordat je begint, en antwoord alleen over hem of haar."
   },
   "distanceAime": {
     "introQuestion": "Je vraagt je af:",
