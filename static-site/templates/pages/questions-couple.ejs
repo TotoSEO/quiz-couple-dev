@@ -14,7 +14,7 @@
   const _cartes = typeof articlesQuestions !== 'undefined' && Array.isArray(articlesQuestions) ? articlesQuestions : [];
   const _listes = t(ns + ':listes', {}) || {};
   const _tags = _listes.tags || {};
-  const _locale = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const _locale = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
   const _nombre = function (n) { try { return Number(n).toLocaleString(_locale); } catch (e) { return String(n); } };
   const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
   // Largeur affichée des images des cartes (.quiz-slide, max-w-4xl), relevée dans Chromium

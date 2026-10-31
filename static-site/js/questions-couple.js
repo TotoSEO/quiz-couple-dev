@@ -14,7 +14,8 @@
     en: { next: 'Another question', categories: 'Themes', all: 'All' },
     es: { next: 'Otra pregunta', categories: 'Temas', all: 'Todas' },
     de: { next: 'Andere Frage', categories: 'Themen', all: 'Alle' },
-    it: { next: 'Un’altra domanda', categories: 'Temi', all: 'Tutte' }
+    it: { next: 'Un’altra domanda', categories: 'Temi', all: 'Tutte' },
+    nl: { next: 'Andere vraag', categories: 'Thema’s', all: 'Alle' }
   };
   var t = labels[lang] || labels.fr;
 

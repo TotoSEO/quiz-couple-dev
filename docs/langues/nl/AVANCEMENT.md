@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz), 5g (temptation island quiz), 5h (liefdesquiz voor tieners) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lots 6 et 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1234,7 +1234,50 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur la page** : la phrase d'une carte « À
   faire ensuite », vers le tu préfères (lot 6).
 
+## Lot 5i (31 octobre 2026) : vragen voor koppels
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/vragen-voor-koppels/` | 100+ vragen voor koppels om aan elkaar te stellen | 100+ leuke vragen voor koppels, om elkaar beter te leren kennen |
+
+  Le français a le même title et le même H1 (le choix de Thomas) ; ici le
+  H1 porte deux mots-clés secondaires de la carte (« leuke vragen voor
+  koppels », « elkaar beter te leren kennen »).
+- **Le contenu** : les 120 questions des cinq thèmes (avec leur nom court
+  pour les pastilles du tirage), les neuf situations et leurs exemples, les
+  huit jeux, les cinq conseils et la FAQ. Le tirage (`questions-couple.js`)
+  a ses libellés néerlandais, et le gabarit écrit les nombres en `nl-NL`.
+- **Sans le blog** : le curseur des listes ne s'affiche pas tant qu'aucun
+  article de questions n'existe en néerlandais, et les liens des situations
+  vers ces articles (neuf en français) attendent le lot 9 ; les phrases qui
+  parlaient de « la liste complète » ont été écrites sans elle. Restent dans
+  le texte deux liens : « vragen over seks » (ondeugende quiz) et « vragen
+  speciaal voor koppels op afstand » (relatie op afstand).
+- **Les 36 questions d'Arthur Aron** : le français dit que les deux
+  inconnus se regardent ensuite quatre minutes dans les yeux, et la FAQ
+  qu'on les pose « en une heure et demie environ ». Seule l'année de
+  l'étude (1997, *Personality and Social Psychology Bulletin*) a pu être
+  vérifiée depuis une session de travail : l'article lui-même n'a pas pu
+  être lu (refus de l'éditeur), et rien de ce qui a été lu ne dit si le
+  regard de quatre minutes faisait partie de l'étude ou vient de l'article
+  de Mandy Len Catron (New York Times, 2015), ni combien de temps durait
+  l'exercice. Le néerlandais ne dit donc ni l'un ni l'autre ; à vérifier
+  dans l'article, puis à reprendre dans les cinq langues publiques si
+  besoin.
+- **Le contrôle `seo`** ne signale plus qu'un title porte le mot-clé d'une
+  autre page quand son propre mot-clé le contient déjà (« grappige vragen
+  voor koppels » et « vragen voor koppels ») ; le title des points communs
+  ne dit plus « vragen voor koppels » (« Hoeveel hebben we gemeen? Test het
+  samen met 153 vragen »).
+
 ## Les chiffres
+
+Au lot 5i : `textes nl` 720 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur ni avertissement (65 pages traduites) ; `site nl` : la page
+des questions sans erreur, tirage compris. Les pages publiques ne changent
+que par `questions-couple.js` (sa table de libellés).
 
 Au lot 5h : `textes nl` 710 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (64 pages traduites) ; `site nl` : le quiz va jusqu'à son

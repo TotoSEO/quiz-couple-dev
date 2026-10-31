@@ -12,7 +12,7 @@
     "metaDescription": "De puriteitstest in 50 vragen: alleen voor je eigen score, of met z'n tweeën voor die van jullie relatie. Uitslag per categorie. Gratis, zonder account."
   },
   "testCommonPoints": {
-    "title": "Hoeveel hebben we gemeen? Test met 153 vragen voor koppels",
+    "title": "Hoeveel hebben we gemeen? Test het samen met 153 vragen",
     "shortTitle": "Wat hebben we gemeen?",
     "description": "153 vragen om te zien wat jullie delen. Jullie antwoorden om de beurt en zien aan het eind waar jullie hetzelfde dachten!",
     "metaDescription": "Hoeveel hebben we gemeen? Beantwoord allebei dezelfde 20 vragen, getrokken uit 153, en zie meteen waar jullie antwoorden overeenkomen. Gratis."
@@ -88,6 +88,12 @@
     "shortTitle": "Wie is het meest?",
     "description": "Stem met 2 tot 8 spelers samen over wie het grappigst, het spraakzaamst of het romantischst is. 240+ leuke vragen!",
     "metaDescription": "Wie is het meest romantisch, het meest verstrooid, het meest jaloers? Meer dan 240 vragen om samen te stemmen, als koppel of met vrienden. Gratis."
+  },
+  "questionsCouple": {
+    "title": "100+ vragen voor koppels om aan elkaar te stellen",
+    "shortTitle": "Vragen",
+    "description": "Meer dan 100 vragen per thema, om willekeurig uit te kiezen, met voorbeelden voor elke situatie.",
+    "metaDescription": "Meer dan 100 vragen voor koppels, per thema: om elkaar beter te leren kennen, over de toekomst, intiem of grappig. Begin met een willekeurige vraag!"
   },
   "testCoupleSain": {
     "title": "Gezonde relatie test: hoe gezond is jullie relatie?",
