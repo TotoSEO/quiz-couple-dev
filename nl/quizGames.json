@@ -509,6 +509,27 @@
     "securiteNote": "Een van je antwoorden gaat over angst, manipulatie of vernedering. Dat punt telt zwaarder dan de rest van de score: het verdient een goede blik, alleen of met hulp.",
     "gapWarning": "⚠️ Het verschil tussen jullie scores is groot. Neem de tijd om er rustig over te praten, zonder er een wedstrijd van te maken."
   },
+  "jeu": {
+    "setupTitre": "Wie speelt er vanavond?",
+    "setupDesc": "Vul jullie twee namen in: het spel zegt wie er aan de beurt is.",
+    "commencer": "Start het spel",
+    "demande": "Waarheid of durven?",
+    "tourDe": "Aan de beurt:",
+    "tourDeVoyelle": "Aan de beurt:",
+    "arreter": "Spel beëindigen",
+    "type_question": "Waarheid",
+    "type_defi": "Durven",
+    "type_gage": "Strafje",
+    "fait": "Gedaan!",
+    "passe": "Ik sla over",
+    "gageFait": "Strafje gedaan!",
+    "cartes": "kaart(en) gespeeld",
+    "recapTitre": "Mooi gespeeld!",
+    "recapTexte": "Jullie hebben {{releves}} van de {{total}} kaarten gedaan.",
+    "recapGages": "{{passes}} strafje(s) onderweg.",
+    "rejouer": "Opnieuw spelen",
+    "cartesMot": "kaarten"
+  },
   "couche": {
     "introQuestion": "Je vraagt je af:",
     "introQuote": "“Heeft hij of zij met iemand anders geslapen... of haal ik me iets in mijn hoofd?”",

@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Gratis • Zonder account • Met z'n tweeën",
+    "title": "Waarheid of durven voor koppels, zonder iets voor te bereiden",
+    "titleHighlight": "voor koppels",
+    "description": "70 kaarten, één telefoon tussen jullie in, en jullie kiezen zelf: waarheid of durven."
+  },
+  "section1": {
+    "title": "Waarheid of durven om te spelen, geen lijst om door te scrollen",
+    "p1": "<strong class=\"text-foreground\">Waarheid of durven als koppel</strong> heeft iedereen wel eens gespeeld. Op kamp, op een feestje, om twee uur ’s nachts op de bank… Met een lijst van honderd vragen waar je met je duim doorheen scrolt, houdt het meestal maar vijf minuten stand. Daarna leest iemand vooruit, zoekt een ander ‘een betere’, en valt het spel stil.",
+    "p2": "Hier is het een echt spel. Wie aan de beurt is, kiest waarheid of durven, er verschijnt een kaart, en jullie zien er telkens maar één. Geen lijst, geen vaste volgorde, geen manier om de volgende al te zien. En een kaart komt pas terug als de stapel op is.",
+    "p3": "Eén telefoon tussen jullie in, en jullie kunnen beginnen!"
+  },
+  "section2": {
+    "title": "De regels, in vier punten",
+    "intro": "Ze zijn heel kort… en dat is ook een beetje de bedoeling van het spel.",
+    "regle1Titre": "Vul jullie twee namen in",
+    "regle1Texte": "Het spel zegt bij elke kaart wie er aan de beurt is. Je hoeft niet meer in je hoofd bij te houden wie als laatste was, en er valt ook niets meer over te kibbelen.",
+    "regle2Titre": "Waarheid of durven: jullie kiezen",
+    "regle2Texte": "Bij elke beurt kiest de speler die aan de beurt is waarheid of durven. Dat kiezen jullie zelf. Wat er op de kaart staat niet: die wordt willekeurig getrokken uit de bijbehorende stapel, en jullie ontdekken hem tegelijk.",
+    "regle3Titre": "Je doet het, of je slaat over",
+    "regle3Texte": "Zie je de kaart zitten? Dan doe je hem en is de ander aan de beurt. Zie je hem niet zitten? Dan sla je over, en krijg je een strafje in de plaats. Niemand hoeft zich ooit te verantwoorden.",
+    "regle4Titre": "Jullie stoppen wanneer jullie willen",
+    "regle4Texte": "De knop om te stoppen staat er altijd. Aan het eind telt het overzicht de kaarten die jullie gedaan hebben en de strafjes die jullie kregen, en jullie kunnen het delen."
+  },
+  "section3": {
+    "title": "De regel die alles verandert: het recht om over te slaan",
+    "p1": "Waarheid of durven met z'n tweeën gaat mis zodra een van jullie zich verplicht voelt. Daar is het strafje juist voor: het maakt weigeren normaal, voorzien, gewoon. In plaats van een ongemakkelijke stilte die je moet uitleggen, is het gewoon een kaart meer.",
+    "p2": "Spreek voor je begint af: ieder mag overslaan zonder reden, zo vaak als hij of zij wil. Het klinkt tegenstrijdig, maar juist daardoor gaan jullie het verst. Omdat niemand in de verdediging speelt."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Hoeveel kaarten zijn er?",
+    "a1": "70 in totaal: 30 waarheden, 24 durfopdrachten en 16 strafjes, in één stapel. Een kaart komt pas terug als de stapel op is, dus er is ruim genoeg voor een hele avond.",
+    "q2": "Moet ik me aanmelden of iets installeren?",
+    "a2": "Geen van beide! Het spel draait in je browser, op je telefoon en op je computer. Je opent de pagina, typt jullie namen, en de eerste kaart verschijnt.",
+    "q3": "Met hoeveel mensen kun je spelen?",
+    "a3": "Het is gemaakt voor twee, met een beurt die bij elke kaart wordt aangekondigd. Niets houdt jullie tegen om de telefoon in een grotere groep rond te geven, maar de kaarten zijn geschreven voor een koppel.",
+    "q4": "Is er een gewaagdere versie?",
+    "a4": "Ja, op een aparte pagina, met een eigen stapel die een stuk directer is. Dat is <a href=\"/nl/waarheid-of-durven-18/\">de ondeugende versie voor volwassenen</a>, voor de avonden waarop jullie echt met z'n tweeën zijn.",
+    "q5": "Kunnen we op afstand spelen?",
+    "a5": "Ja, en dat werkt beter dan je zou denken. Een van jullie opent het spel, leest de kaart hardop voor tijdens het videobellen en bevestigt voor jullie allebei. De waarheden werken perfect, de durfopdrachten vragen wat fantasie…"
+  },
+  "section4": {
+    "title": "Waarom dit spel na al die jaren nog steeds werkt",
+    "p1": "Waarheid of durven gaat al generaties mee om een heel simpele reden: het geeft je toestemming om een vraag te stellen die je zelf nooit gesteld zou hebben. Niet jij vraagt het, de kaart vraagt het. En dat kleine beetje afstand verandert alles.",
+    "p2": "Als koppel is het vaak de enige manier om bepaalde onderwerpen aan te snijden zonder er een plechtig gesprek van te maken. Niemand wil “we moeten praten” horen… maar iedereen trekt wel een kaart. Het werkt hetzelfde als <a href=\"/nl/vragen-voor-koppels/\">de vragen die koppels elkaar stellen</a>, maar dan lichter. En op de avond dat jullie liever allebei dezelfde vraag beantwoorden dan kaarten te trekken, kunnen jullie <a href=\"/nl/ik-heb-nog-nooit-vragen/\">tellen wat ieder al eens gedurfd heeft</a>."
+  },
+  "jsonLd": {
+    "name": "Waarheid of durven voor koppels"
+  }
+}

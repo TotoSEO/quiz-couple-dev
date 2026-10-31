@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Alleen voor volwassenen • Met z'n tweeën • Gratis",
+    "title": "Ondeugende waarheid of durven, de versie die zich niet inhoudt",
+    "titleHighlight": "Ondeugende",
+    "description": "70 kaarten voor twee, van suggestief tot heel direct, op één telefoon en zonder iets voor te bereiden."
+  },
+  "section1": {
+    "title": "Eén stapel, van suggestief tot heel direct",
+    "p1": "Een <strong class=\"text-foreground\">ondeugende waarheid of durven</strong> die te hard begint, werkt nooit. De eerste opdracht maakt iemand ongemakkelijk, een van jullie klapt dicht, en de avond is voorbij voor hij begonnen is. Daarom bouwt deze stapel geleidelijk op, in plaats van er meteen hard in te gaan.",
+    "p2": "De zachtste kaarten blijven suggestief: vragen waarvan je bloost, opdrachten die jullie dichter bij elkaar brengen, niets waarvoor je je bloot moet geven. De meest directe nemen geen blad voor de mond en gaan ervan uit dat jullie allebei weten waar dit naartoe gaat. De trekking husselt ze door elkaar, en het recht om over te slaan houdt jullie aan het stuur.",
+    "p3": "Begin rustig, ook als je denkt dat je die stap wel kunt overslaan. Het lachen bij de eerste kaarten doet meer voor de rest van de avond dan welke opdracht ook die je er koud in gooit…"
+  },
+  "section2": {
+    "title": "Zo speel je het",
+    "intro": "Dezelfde regels als bij de klassieke versie, met één punt extra dat hier veel uitmaakt.",
+    "regle1Titre": "Vul jullie twee namen in",
+    "regle1Texte": "Het spel zegt bij elke kaart wie er aan de beurt is, zodat jullie je dat niet steeds hoeven af te vragen.",
+    "regle2Titre": "Waarheid of durven: jullie kiezen",
+    "regle2Texte": "Wie aan de beurt is, kiest waarheid of durven, en de kaart komt willekeurig uit de bijbehorende stapel. De volgende zien jullie nooit.",
+    "regle3Titre": "Overslaan hoort bij het spel",
+    "regle3Texte": "Wie een kaart weigert, krijgt een strafje, en dat is alles. Dat is de belangrijkste regel van deze versie: weigeren wordt iets gewoons, en geen bekentenis.",
+    "regle4Titre": "Jullie bepalen de grens, niet het spel",
+    "regle4Texte": "Spreek voor je begint af wat vanavond niet aan de orde is. Een spel vervangt nooit een afspraak tussen jullie twee, het doet alleen voorstellen."
+  },
+  "section3": {
+    "title": "Toestemming, in gewone woorden",
+    "p1": "Dit spel stelt voor, het verplicht tot niets. Elke kaart mag geweigerd worden zonder uitleg, zo vaak als nodig, en een strafje is nooit een echte straf die je moet ondergaan. Heeft een van jullie geen zin, dan is het goede antwoord: stoppen met het spel. Niet onderhandelen.",
+    "p2": "De kaarten zijn geschreven voor een koppel dat samen speelt, tussen volwassenen die er allebei mee instemmen. Ze gaan ervan uit dat jullie elkaar kennen, en dat jullie allebei weten wanneer je moet stoppen."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Wat is het verschil met de klassieke versie?",
+    "a1": "De kaarten, heel simpel. <a href=\"/nl/waarheid-of-durven-koppels/\">De klassieke versie</a> is voor alle koppels en kun je spelen waar iedereen bij is. Deze heeft een eigen stapel, een stuk directer, geschreven voor een moment waarop jullie samen alleen zijn.",
+    "q2": "Is het heel expliciet?",
+    "a2": "Het gaat van suggestief tot heel direct. De zachtste kaarten vragen om een compliment of een kus, de gewaagdste gaan uit van een intimiteit die er al is. Er is geen niveau om te kiezen: het recht om over te slaan bepaalt de grens, kaart na kaart.",
+    "q3": "Hoeveel kaarten zijn er?",
+    "a3": "70 in totaal: 30 waarheden, 24 durfopdrachten en 16 strafjes in één stapel. Een kaart komt pas terug als de stapel op is, dus genoeg voor een hele avond zonder herhalingen.",
+    "q4": "Is het geschikt voor een koppel dat elkaar net kent?",
+    "a4": "Het begin van de stapel wel! Daarmee kun je prima het terrein verkennen. De meest directe kaarten gaan ervan uit dat jullie elkaar al goed kennen: komen ze te vroeg, sla ze dan over, daar is het voor.",
+    "q5": "Moet ik een account aanmaken?",
+    "a5": "Nee, en er wordt niets opgeslagen. Het spel draait in je browser, jullie antwoorden verlaten het toestel nooit, en er is geen spelgeschiedenis."
+  },
+  "section4": {
+    "title": "Wat een spel als dit kan doen",
+    "p1": "Het gaat jullie intieme leven niet veranderen, en dat moet niemand ervan verwachten. Wat het wel goed doet, is een kader geven aan een gesprek dat veel koppels nooit echt gevoerd hebben, een gesprek dat je ook kunt beginnen <a href=\"/nl/ondeugende-quiz/\">met ondeugende vragen in plaats van opdrachten</a>. Omdat de kaart de vraag stelt, en niet jij.",
+    "p2": "De rest bepalen jullie zelf. En zo hoort het ook!"
+  },
+  "jsonLd": {
+    "name": "Waarheid of durven 18+ voor koppels"
+  }
+}
