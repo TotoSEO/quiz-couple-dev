@@ -511,6 +511,16 @@
     "introQuote": "Antwoord over wat je nu meemaakt, niet over de maand na de breuk.",
     "disclaimer": "Deze test zegt niet of je iemand gaat ontmoeten. Hij kijkt of de plek vandaag vrij is, en dat verandert van maand tot maand. Je antwoorden worden niet opgeslagen."
   },
+  "ex-revenir": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord op basis van wat er nu gebeurt, niet van wat je hoopt.",
+    "disclaimer": "De test schat kansen in op basis van situaties die vaak samengaan met een terugkeer. Hij kan niet in het hoofd van je ex kijken. Je antwoorden worden niet bewaard."
+  },
+  "remettre-ex": {
+    "introQuestion": "Voordat je begint:",
+    "introQuote": "Antwoord voor jezelf, niet op basis van wat je ex graag zou horen.",
+    "disclaimer": "Deze test helpt je nadenken, hij vervangt het advies van een professional niet. Je antwoorden worden niet bewaard."
+  },
   "oublie-son-ex": {
     "introQuestion": "Voordat je begint:",
     "introQuote": "Antwoord op basis van wat je hebt gezien of gehoord, niet van wat je je voorstelt.",

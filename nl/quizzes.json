@@ -202,6 +202,18 @@
     "description": "Twintig vragen over jullie verhaal, de breuk en je dagen, en een schatting in maanden van de tijd die je nog nodig hebt om de bladzijde om te slaan.",
     "metaDescription": "Over je ex heen komen: wat zeggen de studies, en hoe lang duurt het bij jou? Een test in 20 vragen schat het in maanden. Gratis en anoniem."
   },
+  "testExRevenir": {
+    "title": "Komt mijn ex terug? Test in 20 vragen",
+    "shortTitle": "Komt mijn ex terug?",
+    "description": "Twintig vragen over jullie breuk, over wat er sindsdien is gebeurd en over het leven van je ex vandaag, om de kans op een terugkeer in te schatten.",
+    "metaDescription": "Komt mijn ex terug? 20 vragen over jullie breuk en wat er sindsdien is gebeurd, om je kansen op een terugkeer in te schatten. Gratis en anoniem."
+  },
+  "testRemettreEx": {
+    "title": "Moet ik terug naar mijn ex? Test in 20 vragen",
+    "shortTitle": "Moet ik terug naar mijn ex?",
+    "description": "Twintig vragen over wat jullie uit elkaar heeft gedreven, wat er sindsdien is veranderd en wat je terug wilt, om te weten of een tweede poging kans van slagen heeft.",
+    "metaDescription": "Moet ik terug naar mijn ex? 20 vragen om te weten of een tweede poging kans van slagen heeft: wat er is veranderd, het vertrouwen, je omgeving."
+  },
   "testOublieSonEx": {
     "title": "Is hij over zijn ex heen? De test in 20 vragen",
     "shortTitle": "Is hij over zijn ex heen?",
