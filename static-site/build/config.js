@@ -31,8 +31,6 @@ export const PAGES_EN_ATTENTE = {
     // lot 7 : les outils, puis les quiz spéciaux, en dernier
     'testAstroPrenoms', 'calculatriceAmour', 'compteurCouple', 'testSignesChinois', 'testDateNaissance',
     'speciauxCouple', 'quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains',
-    // lot 8 : les conditions de vente de l'évaluation
-    'cgv',
     // lot 9 : la liste du blog, tant qu'aucun article n'est traduit
     'blog',
   ],
