@@ -81,7 +81,9 @@
       metaQuestions: '{{n}} questions chacun',
       notreConseil: 'Notre conseil',
       nomLabel: 'Ton prénom',
-      roleTitre: 'Comment on se retrouve ?'
+      roleTitre: 'Comment on se retrouve ?',
+      pareil: 'identique',
+      different: 'différent'
     },
     en: {
       modeTitle: 'Teen Couple Quiz',
@@ -129,7 +131,9 @@
       metaQuestions: '{{n}} questions each',
       notreConseil: 'Our advice',
       nomLabel: 'Your name',
-      roleTitre: 'How do you meet up?'
+      roleTitre: 'How do you meet up?',
+      pareil: 'same',
+      different: 'different'
     },
     es: {
       modeTitle: 'Quiz Pareja Adolescentes',
@@ -177,7 +181,9 @@
       metaQuestions: '{{n}} preguntas cada uno',
       notreConseil: 'Nuestro consejo',
       nomLabel: 'Tu nombre',
-      roleTitre: '¿Cómo os conectáis?'
+      roleTitre: '¿Cómo os conectáis?',
+      pareil: 'igual',
+      different: 'diferente'
     },
     de: {
       modeTitle: 'Teenager Paar-Quiz',
@@ -225,7 +231,9 @@
       metaQuestions: '{{n}} Fragen pro Person',
       notreConseil: 'Unser Tipp',
       nomLabel: 'Dein Name',
-      roleTitre: 'Wie findet ihr euch?'
+      roleTitre: 'Wie findet ihr euch?',
+      pareil: 'gleich',
+      different: 'verschieden'
     },
     it: {
       modeTitle: 'Quiz Coppia Adolescenti',
@@ -273,7 +281,59 @@
       metaQuestions: '{{n}} domande a testa',
       notreConseil: 'Il nostro consiglio',
       nomLabel: 'Il tuo nome',
-      roleTitre: 'Come vi collegate?'
+      roleTitre: 'Come vi collegate?',
+      pareil: 'uguale',
+      different: 'diverso'
+    },
+    nl: {
+      modeTitle: 'Liefdesquiz voor tieners',
+      modeSubtitle: 'Test hoe goed jullie bij elkaar passen met dezelfde vragen!',
+      localBtn: 'Op één telefoon',
+      localDesc: 'Om de beurt antwoorden op hetzelfde toestel',
+      onlineBtn: 'Elk op je eigen telefoon',
+      onlineDesc: 'Speel op afstand met een spelcode',
+      player1Name: 'Naam van speler 1',
+      player2Name: 'Naam van speler 2',
+      namePlaceholder: 'Vul je naam in',
+      sessionCode: 'Spelcode',
+      codePlaceholder: 'Bijv. ABC123',
+      startLocal: 'Start de quiz',
+      createGame: 'Spel aanmaken',
+      joinGame: 'Meedoen',
+      back: 'Terug',
+      waitingTitle: 'Wachten op je vriend(in)…',
+      waitingDesc: 'Stuur deze code naar je vriend(in):',
+      copyCode: 'Code kopiëren',
+      copied: 'Gekopieerd!',
+      passPhone: 'Geef de telefoon aan {{name}}!',
+      passPhoneDesc: '{{name}} is klaar. Nu is {{name2}} aan de beurt, met dezelfde vragen.',
+      tapToContinue: 'Daar gaan we!',
+      dontLook: '({{name}}, niet naar de antwoorden kijken!)',
+      questionOf: 'van',
+      turnOf: '{{name}} is aan de beurt',
+      waitingAnswer: 'Wachten op {{name}}…',
+      waitingProgress: '{{name}}: vraag {{n}}/{{total}}',
+      resultsTitle: 'Jullie uitslag',
+      matchPercent: '{{pct}}% match',
+      identical: 'dezelfde antwoorden',
+      playAgain: 'Opnieuw spelen',
+      backHome: 'Terug naar de homepage',
+      errorGeneric: 'Verbindingsfout. Probeer ‘Op één telefoon’.',
+      errorCodeInvalid: 'Ongeldige code of spel niet gevonden.',
+      errorTimeout: 'Verbinding verbroken. Probeer het opnieuw.',
+      comparison: 'Alle antwoorden bekijken',
+      connecting: 'Verbinden…',
+      createDesc2: 'Maak een code aan en stuur die naar je vriend(in)',
+      joinDesc2: 'Vul de code in die je van je vriend(in) kreeg',
+      joueur: 'Speler',
+      prenomCourt: 'Naam',
+      questionLabel: 'Vraag',
+      metaQuestions: '{{n}} vragen per persoon',
+      notreConseil: 'Onze tip',
+      nomLabel: 'Je naam',
+      roleTitre: 'Hoe spelen jullie samen?',
+      pareil: 'hetzelfde',
+      different: 'anders'
     }
   };
 
@@ -833,7 +893,7 @@
           '<td class="ado-col-num">' + (j + 1) + '</td>' +
           '<td>' + esc(c1) + '</td>' +
           '<td>' + esc(c2) + '</td>' +
-          '<td class="ado-col-verdict">' + (same ? '<span class="ado-pareil" aria-label="identique">✓</span>' : '<span class="ado-different" aria-label="différent">✗</span>') + '</td>' +
+          '<td class="ado-col-verdict">' + (same ? '<span class="ado-pareil" aria-label="' + esc(t('pareil')) + '">✓</span>' : '<span class="ado-different" aria-label="' + esc(t('different')) + '">✗</span>') + '</td>' +
         '</tr>';
     }
 

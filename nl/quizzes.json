@@ -112,6 +112,12 @@
     "emergencyNotice": "Ben je in gevaar? In Nederland kun je dag en nacht gratis bellen met <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>), in België op werkdagen met <strong>1712</strong>. In direct gevaar: bel <strong>112</strong>.",
     "emergencyResult": "Hulp nodig? Ben je in gevaar, bel dan <strong>Veilig Thuis</strong> (<strong>0800-2000</strong>, Nederland) of <strong>1712</strong> (België). In direct gevaar: <strong>112</strong>."
   },
+  "quizAdo": {
+    "title": "Liefdesquiz voor tieners: blijven jullie samen?",
+    "shortTitle": "Quiz voor tieners",
+    "description": "20 vragen om te zien of jullie relatie stevig is of maar een fase. Speel samen, ook op afstand!",
+    "metaDescription": "Liefdesquiz voor tieners: 20 vragen om te zien of jullie relatie stevig is of maar een fase. Speel samen, elk op je eigen telefoon of op één!"
+  },
   "testParentalite": {
     "title": "Klaar voor een baby test: 12 of 24 eerlijke vragen",
     "shortTitle": "Klaar voor een baby?",
