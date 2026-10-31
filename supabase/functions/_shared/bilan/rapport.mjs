@@ -45,7 +45,7 @@ import * as C from './coeur.mjs';
 // domaine, étiquette des sujets décisifs sur les accords).
 export const VERSION_RAPPORT = 4;
 
-const LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
+const LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' };
 
 // La couleur d'ouverture de chaque chapitre (fond sombre, texte blanc).
 export const TEINTES = {
@@ -227,6 +227,10 @@ function barreEmpilee(accords, proches, ecarts) {
 export function rapportHtml(d, T, Q, o) {
   o = o || {};
   const lang = d.lang || 'fr';
+  // Le signe % après un nombre : collé en néerlandais (« 75% »), précédé
+  // d'une espace insécable dans les autres langues, comme le rapport l'a
+  // toujours écrit.
+  const pcSuffixe = lang === 'nl' ? '%' : ' %';
   const format = o.format === 'pdf' ? 'pdf' : 'ecran';
   const solo = d.mode === 'solo';
   const couper = typeof o.couper === 'function' ? o.couper : (s) => s;
@@ -547,7 +551,7 @@ export function rapportHtml(d, T, Q, o) {
   const tuile = (cle, n) => '<div class="rap-tuile rap-tuile--' + cle + '"><p class="rap-tuile-n">' + n + '</p><p class="rap-tuile-lib">' + tx('rapport.synthese.tuiles.' + cle) + '</p></div>';
   const listeDomaines = (ids) => '<ul class="rap-liste-dom">' + ids.map((id) => {
     const x = domaineParId[id];
-    return '<li><span class="rap-liste-dom-nom">' + tl(titreDomaine(id)) + '</span><span class="rap-liste-dom-val">' + x.score + ' %</span></li>';
+    return '<li><span class="rap-liste-dom-nom">' + tl(titreDomaine(id)) + '</span><span class="rap-liste-dom-val">' + x.score + pcSuffixe + '</span></li>';
   }).join('') + '</ul>';
   const rassemble = analyse.rassemble.length
     ? '<div class="rap-bloc"><h3 class="rap-h3">' + tx('rapport.synthese.rassemble') + '</h3><p class="rap-aide">' + tx('rapport.synthese.rassembleIntro') + '</p>'
@@ -565,9 +569,9 @@ export function rapportHtml(d, T, Q, o) {
     + '<p class="rap-score-titre">' + tx('rapport.meteos.' + temps + '.titre') + '</p>'
     + '<p class="rap-score-desc">' + tx('rapport.meteos.' + temps + '.texte') + '</p>'
     + (analyse.meteoA !== null ? '<ul class="rap-climats">'
-      + '<li>' + pastille(P.a) + '<span>' + nomH(P.a) + '<span class="rap-climat-n">' + analyse.meteoA + ' %</span></span></li>'
+      + '<li>' + pastille(P.a) + '<span>' + nomH(P.a) + '<span class="rap-climat-n">' + analyse.meteoA + pcSuffixe + '</span></span></li>'
       // En solo, sans question d'état imaginée, pas de climat prêté à l'autre.
-      + (analyse.meteoB === null ? '' : '<li>' + pastille(P.b) + '<span>' + nomH(P.b) + '<span class="rap-climat-n">' + analyse.meteoB + ' %</span></span></li>') + '</ul>' : '')
+      + (analyse.meteoB === null ? '' : '<li>' + pastille(P.b) + '<span>' + nomH(P.b) + '<span class="rap-climat-n">' + analyse.meteoB + pcSuffixe + '</span></span></li>') + '</ul>' : '')
     + '<p class="rap-aide">' + tx('rapport.synthese.climatAide') + '</p></div></div>'
     + '</div>'
     + '<div class="rap-tuiles">' + tuile('accords', analyse.compte.accords) + tuile('proches', analyse.compte.proches)
@@ -591,7 +595,7 @@ export function rapportHtml(d, T, Q, o) {
   const domainesTries = domainesNotes.slice().sort((u, v) => v.score - u.score || rangDomaine(u.id) - rangDomaine(v.id));
   const barres = domainesTries.map((x) => '<div class="rap-barre rap-barre--' + x.bande + '">'
     + '<div class="rap-barre-tete"><p class="rap-barre-nom">' + tl(titreDomaine(x.id)) + '</p>'
-    + '<p class="rap-barre-val"><span class="rap-barre-bande">' + tx('rapport.carte.bandes.' + x.bande) + '</span><strong>' + x.score + ' %</strong></p></div>'
+    + '<p class="rap-barre-val"><span class="rap-barre-bande">' + tx('rapport.carte.bandes.' + x.bande) + '</span><strong>' + x.score + pcSuffixe + '</strong></p></div>'
     + '<div class="rap-barre-piste"><span class="rap-barre-plein" style="width:' + x.score + '%"></span></div>'
     + '<div class="rap-barre-pied">' + barreEmpilee(x.accords, x.proches, x.ecarts)
     + '<p class="rap-barre-compte"><span class="rap-compte rap-compte--accord">' + x.accords + '</span><span class="rap-compte rap-compte--proche">' + x.proches + '</span><span class="rap-compte rap-compte--ecart">' + x.ecarts + '</span>'
@@ -684,8 +688,8 @@ export function rapportHtml(d, T, Q, o) {
           + '<div class="rap-haltere-piste" aria-hidden="true"><span class="rap-haltere-lien" style="left:' + lo + '%;width:' + (hi - lo) + '%"></span>'
           + '<span class="rap-haltere-point rap-haltere-point--' + P.a.couleur + '" style="left:' + a + '%"></span>'
           + (b === null ? '' : '<span class="rap-haltere-point rap-haltere-point--' + P.b.couleur + '" style="left:' + b + '%"></span>') + '</div>'
-          + '<p class="rap-haltere-val"><span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.a.couleur + '"></span>' + a + ' %</span>'
-          + (b === null ? '' : '<span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.b.couleur + '"></span>' + b + ' %</span>') + '</p>'
+          + '<p class="rap-haltere-val"><span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.a.couleur + '"></span>' + a + pcSuffixe + '</span>'
+          + (b === null ? '' : '<span class="rap-haltere-n"><span class="rap-pastille rap-pastille--' + P.b.couleur + '"></span>' + b + pcSuffixe + '</span>') + '</p>'
           + '</div>';
       }).join('') + '</div></div>'
     : '';
@@ -842,7 +846,7 @@ export function rapportHtml(d, T, Q, o) {
   const partAccords = parts[0];
   const lignesRepartition = '<ul class="rap-repartition">'
     + [['accord', analyse.compte.accords], ['proche', analyse.compte.proches], ['ecart', analyse.compte.ecarts]].map(([c, n], k) =>
-      '<li><span class="rap-compte rap-compte--' + c + '">' + tx('rapport.cat.' + c) + '</span><strong>' + n + '</strong><span class="rap-repartition-part">' + parts[k] + ' %</span></li>').join('')
+      '<li><span class="rap-compte rap-compte--' + c + '">' + tx('rapport.cat.' + c) + '</span><strong>' + n + '</strong><span class="rap-repartition-part">' + parts[k] + pcSuffixe + '</span></li>').join('')
     + '</ul>';
   // Les accords sur ce qui engage une vie : le socle.
   const socle = analyse.items.filter((i) => i.poids === 3 && i.cat === 'accord').length;
@@ -851,7 +855,7 @@ export function rapportHtml(d, T, Q, o) {
     + (ids.length ? ids.map((id) => {
       const x = domaineParId[id];
       const texteDom = texteDomaine(x, true);
-      return '<div class="rap-fin-dom"><div class="rap-fin-dom-tete"><p class="rap-fin-dom-nom">' + tl(titreDomaine(id)) + '</p><p class="rap-fin-dom-val">' + x.score + ' %</p></div>'
+      return '<div class="rap-fin-dom"><div class="rap-fin-dom-tete"><p class="rap-fin-dom-nom">' + tl(titreDomaine(id)) + '</p><p class="rap-fin-dom-val">' + x.score + pcSuffixe + '</p></div>'
         + '<div class="rap-barre-piste rap-barre-piste--fine"><span class="rap-barre-plein rap-barre-plein--' + x.bande + '" style="width:' + x.score + '%"></span></div>'
         + (texteDom ? '<p class="rap-fin-dom-texte">' + texteDom + '</p>' : '') + '</div>';
     }).join('') : '<p class="rap-vide">' + tx('rapport.fin.aucun') + '</p>') + '</div>';

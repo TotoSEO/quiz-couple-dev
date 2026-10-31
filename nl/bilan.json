@@ -3,6 +3,696 @@
     "name": "Relatiecheck",
     "about": "Relatiecheck"
   },
+  "app": {
+    "chargement": "Laden...",
+    "accueil": {
+      "titre": "Je relatiechecks op dit apparaat",
+      "avec": "Met {{autre}}",
+      "seul": "Alleen",
+      "progression": "{{n}} van de {{total}} vragen",
+      "invite": "Uitnodiging nog niet aangenomen",
+      "fini": "Je antwoorden zijn verstuurd",
+      "resultat": "Rapport beschikbaar",
+      "reprendre": "Verdergaan",
+      "voir": "Bekijk het rapport",
+      "oublier": "Van dit apparaat verwijderen",
+      "oublierConfirmer": "Bevestigen: hier verwijderen",
+      "oublierAide": "De relatiecheck wordt niet gewist, hij verdwijnt alleen van dit apparaat. Bewaar je persoonlijke link om hem terug te vinden.",
+      "violence": "Deze relatiecheck laat ieder de antwoorden van de ander zien. Ben je bang voor je partner, dan is hij niet bedoeld voor jouw situatie: bel dan gratis en anoniem Veilig Thuis (0800-2000, dag en nacht) in Nederland of 1712 in België, en bij direct gevaar 112.",
+      "nouveau": "Een nieuwe relatiecheck beginnen",
+      "pret": "Klaar: je hoeft het rapport alleen nog te ontgrendelen",
+      "reprise": "Je bent een relatiecheck aan het invullen met {{autre}}.",
+      "repriseRapport": "Je rapport met {{autre}} is beschikbaar.",
+      "quitter": "Terug"
+    },
+    "creation": {
+      "titre": "Je relatiecheck",
+      "modeTitre": "Hoe vul je de relatiecheck in?",
+      "modeDuo": "Samen",
+      "modeDuoAide": "Tegelijk, ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Het rapport vergelijkt jullie twee reeksen antwoorden.",
+      "modeSolo": "Alleen",
+      "modeSoloAide": "Je antwoordt voor jezelf, en bij de onderwerpen die het zwaarst wegen zeg je ook wat je partner zou antwoorden. Je partner krijgt niets te horen en ziet niets.",
+      "prenomsTitre": "Jullie twee voornamen",
+      "moi": "Je voornaam",
+      "autre": "De voornaam van je partner",
+      "genre": "Je bent",
+      "genreAutre": "Je partner is",
+      "femme": "Een vrouw",
+      "homme": "Een man",
+      "sansGenre": "Zeg ik liever niet",
+      "genreAide": "Dat dient alleen om de vragen goed te formuleren (‘hij’ of ‘zij’) en om de figuurtjes te kiezen.",
+      "consentement": "Ik ben 18 jaar of ouder en ik geef toestemming om mijn antwoorden op te slaan, alleen om het rapport van de relatiecheck te kunnen leveren.",
+      "accordAide": "Je antwoorden, ook over intieme onderwerpen, dienen alleen voor dit rapport, waarin {{autre}} ze naast de eigen antwoorden ziet. De relatiecheck wordt bewaard tot 60 dagen na je laatste antwoord als er niet betaald is, en tot zes maanden na de betaling, en ieder van jullie kan hem op elk moment verwijderen. Je hoeft geen account aan te maken.",
+      "prixRappel": "De vragen zijn gratis. Het volledige rapport kost {{prix}} voor jullie samen: je ontgrendelt het als je klaar bent met je antwoorden.",
+      "retour": "Terug",
+      "creer": "Onze relatiecheck aanmaken",
+      "prenomManque": "Vul jullie twee voornamen in.",
+      "accordManque": "Vink het vakje aan om verder te gaan.",
+      "email": "Je e-mailadres",
+      "emailFacultatif": "Je e-mailadres (niet verplicht)",
+      "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit. We mailen je als je rapport klaar is, één keer als {{autre}} lang over het afmaken doet, en één keer als het rapport de volgende dag nog wacht.",
+      "emailAideDepart": "Zo kun je je relatiecheck terugvinden als je de pagina sluit. We mailen je als het rapport klaar is, één keer als je halverwege stopt of als {{autre}} lang over het afmaken doet, en één keer als het rapport de volgende dag nog wacht. Geef je nu geen adres op, dan vragen we het aan het eind, voor de link naar het rapport als pdf. Het dient nergens anders voor.",
+      "emailSuggestion": "Bedoelde je {{email}}?",
+      "emailFaux": "Dit e-mailadres lijkt niet compleet.",
+      "emailManque": "Vul je e-mailadres in: daar sturen we de link naar het rapport als pdf naartoe.",
+      "autreDefaut": "je partner",
+      "statutTitre": "Wat is je situatie?",
+      "statuts": {
+        "couple": "In een relatie",
+        "complique": "Het is ingewikkeld",
+        "celib": "Single"
+      }
+    },
+    "invitation": {
+      "ensembleTitre": "Is {{autre}} bij je?",
+      "ensemble": "Het fijnst is om tegelijk te antwoorden, ieder op de eigen telefoon: {{autre}} hoeft alleen deze code met de camera te scannen.",
+      "qrLabel": "QR-code met de link voor {{autre}}",
+      "nouveauLien": "Dit is een nieuwe link: de oude werkt niet meer, stuur deze naar {{autre}}.",
+      "suite": "Begin tegelijk met {{autre}}: een minuut of twintig per persoon, en jullie bekijken het rapport samen.",
+      "commencer": "Begin met mijn antwoorden",
+      "distanceTitre": "Is {{autre}} niet bij je?",
+      "texte": "Stuur deze link naar {{autre}}. {{autre}} antwoordt op de eigen telefoon, zonder jouw antwoorden te zien, en jij ziet de antwoorden van {{autre}} pas aan het eind.",
+      "envoyer": "Link versturen",
+      "copier": "Link kopiëren",
+      "copie": "Link gekopieerd!",
+      "message": "Ik ben begonnen met onze relatiecheck, nu ben jij aan de beurt: {{lien}}",
+      "messageTitre": "Onze relatiecheck",
+      "monLien": "Je persoonlijke link",
+      "monLienAide": "Daarmee kun je op een ander apparaat verder met je antwoorden. Geef hem aan niemand, ook niet aan {{autre}}: het is de sleutel tot je antwoorden.",
+      "copierMonLien": "Mijn link kopiëren",
+      "dejaRejoint": "{{autre}} doet mee aan de relatiecheck."
+    },
+    "rejoindre": {
+      "titre": "{{autre}} nodigt je uit voor jullie relatiecheck",
+      "texte": "100 concrete vragen over jullie leven samen. Je antwoordt op je eigen telefoon, zonder de antwoorden van {{autre}} te zien, en omgekeerd. Als jullie allebei klaar zijn, zet het rapport jullie antwoorden tegenover elkaar, onderwerp per onderwerp.",
+      "duree": "Reken op een minuut of twintig. Je kunt pauzeren wanneer je wilt, alles wordt bewaard.",
+      "prenom": "Je voornaam",
+      "genre": "Je bent",
+      "commencer": "Ik ga akkoord en begin",
+      "lienUtilise": "Deze uitnodigingslink is al gebruikt. Was jij dat, open dan je persoonlijke link, of ga terug naar deze pagina op de telefoon waarop je begonnen bent.",
+      "paye": "Goed nieuws: {{autre}} heeft het rapport al betaald voor jullie samen. Het opent zodra je klaar bent met je antwoorden.",
+      "prenomManque": "Vul je voornaam in."
+    },
+    "domaine": {
+      "partie": "Deel {{n}} van {{total}}",
+      "nb": "{{n}} vragen, ongeveer {{min}} min",
+      "go": "Daar gaan we",
+      "pause": "Even pauzeren",
+      "reprise": "Je gaat verder waar je gebleven was."
+    },
+    "question": {
+      "progression": "Vraag {{n}} van {{total}}",
+      "vous": "Jij",
+      "percuTitre": "En {{autre}}, wat denk jij?",
+      "percuAide": "Zo zou {{autre}} de vraag lezen. Wat zou {{autre}} antwoorden, denk je?",
+      "maReponse": "Jouw antwoord:",
+      "inconnu": "Ik weet het niet",
+      "inconnuAide": "Dat is een antwoord als alle andere: het rapport maakt er een vraag van om te stellen.",
+      "precedente": "Vorige",
+      "suivante": "Volgende",
+      "nn": "Hier valt voor mij niet over te onderhandelen",
+      "nnAide": "Vink dit aan als je op dit punt geen compromis zou kunnen sluiten. Je partner ziet het in het rapport.",
+      "pause": "Pauze",
+      "enregistre": "Opgeslagen",
+      "horsLigne": "Geen verbinding: je antwoorden worden verstuurd zodra die terug is.",
+      "erreur": "Je laatste antwoorden konden niet worden opgeslagen. We proberen het zo opnieuw..."
+    },
+    "fin": {
+      "titre": "Waar mogen we het rapport naartoe sturen?",
+      "texte": "Je antwoorden zijn opgeslagen! We hoeven alleen nog te weten waar we het rapport naartoe sturen.",
+      "bouton": "Verder",
+      "revenir": "Terug naar de laatste vraag"
+    },
+    "pause": {
+      "titre": "Het is opgeslagen",
+      "texte": "Je kunt de pagina sluiten: je antwoorden blijven bewaard. Om verder te gaan, kom je op deze telefoon terug naar deze pagina, of open je je persoonlijke link op een ander apparaat.",
+      "reprendre": "Verder met mijn antwoorden",
+      "progression": "Je hebt {{n}} van de {{total}} vragen beantwoord."
+    },
+    "attente": {
+      "titre": "Je bent klaar!",
+      "texte": "Je antwoorden zijn opgeslagen. Jullie rapport is klaar zodra {{autre}} ook alle vragen heeft beantwoord.",
+      "autreProgression": "{{autre}}: {{n}} van de {{total}} vragen",
+      "autrePasRejoint": "{{autre}} heeft de uitnodiging nog niet geopend.",
+      "renvoyer": "Uitnodiging opnieuw versturen",
+      "revoir": "Mijn antwoorden bekijken",
+      "revoirAide": "Je kunt je antwoorden nog veranderen zolang {{autre}} niet klaar is.",
+      "maj": "Deze pagina werkt zichzelf bij.",
+      "accueil": "Terug",
+      "payeTitre": "Jullie rapport is betaald",
+      "payeTexte": "Bedankt! Het opent hier en gaat per e-mail de deur uit zodra {{autre}} klaar is met de antwoorden.",
+      "relance": "Stuur {{autre}} een kleine herinnering",
+      "relanceMessage": "Ik ben klaar met mijn antwoorden voor onze relatiecheck, ik wacht op jou! Je gaat verder waar je gebleven was, op je telefoon.",
+      "prevenu": "We mailen je op {{email}} zodra {{autre}} klaar is: je kunt deze pagina sluiten."
+    },
+    "paywall": {
+      "titre": "Jullie volledige rapport",
+      "titrePret": "Jullie rapport ligt klaar",
+      "introAttente": "Je kunt het nu al ontgrendelen: het opent hier, en gaat per e-mail de deur uit, zodra {{autre}} klaar is.",
+      "introPret": "Jullie twee reeksen antwoorden zijn klaar. Nog één stap en je ziet wat ze over jullie relatie zeggen.",
+      "apercu": {
+        "intro": "Jullie antwoorden zijn vergeleken, vraag per vraag:",
+        "accordsUn": "overeenkomst",
+        "accordsN": "overeenkomsten",
+        "prochesUn": "bijna gelijk",
+        "prochesN": "bijna gelijk",
+        "ecartsUn": "verschil",
+        "ecartsN": "verschillen",
+        "decisifs0": "Geen enkel verschil bij de beslissende onderwerpen, die het zwaarst wegen in een relatie.",
+        "decisifsUn": "Waarvan één verschil bij een beslissend onderwerp, een van de onderwerpen die het zwaarst wegen in een relatie.",
+        "decisifsN": "Waarvan {{n}} verschillen bij beslissende onderwerpen, die het zwaarst wegen in een relatie.",
+        "quoi": "Weinig stellen nemen ooit de tijd om zo stil te staan bij hun relatie: jullie hebben het net gedaan, nu hoef je alleen nog de uitkomst te lezen."
+      },
+      "contenu": [
+        "Hoe goed jullie op één lijn zitten en de sfeer in jullie relatie, in één oogopslag",
+        "Het overzicht van jullie twaalf thema's, van geld tot kinderen",
+        "Jullie volgende vier gesprekken, in de volgorde waarin je ze het best voert",
+        "Al jullie verschillen, met jullie twee antwoorden naast elkaar",
+        "Bij elk verschil: waarom het ertoe doet, vragen om erover te praten en wat je beter kunt vermijden",
+        "Jullie signalen om op te letten bij ruzies",
+        "Wie wat doet in huis, gezien door ieder van jullie",
+        "Het volledige rapport als pdf, de downloadlink per e-mail zodra het klaar is, en zes maanden online"
+      ],
+      "prix": "{{prix}} voor jullie samen",
+      "prixAide": "Eén betaling ontgrendelt het rapport voor jullie allebei, zonder abonnement.",
+      "emailLabel": "Waar mogen we het rapport naartoe sturen?",
+      "emailPlaceholder": "jouw@email.com",
+      "emailAide": "De link naar de pdf gaat naar dit adres zodra jullie allebei klaar zijn.",
+      "emailFaux": "Dit adres lijkt niet geldig.",
+      "renonciation": "Ik vraag om het rapport te krijgen zodra het klaar is, zonder het einde van de herroepingstermijn van 14 dagen af te wachten, en ik erken dat ik mijn herroepingsrecht verlies zodra het geleverd is.",
+      "renonciationManque": "Vink het vakje aan om verder te gaan.",
+      "bouton": "Ontgrendel ons rapport · {{prix}}",
+      "securite": "Veilig betalen via Stripe. Wij zien je kaart nooit.",
+      "cgv": "Verkoopvoorwaarden",
+      "tva": "Geen btw van toepassing, art. 293 B van de Franse Code général des impôts.",
+      "ferme": "Online betalen kan binnenkort. Je relatiecheck blijft bewaard: kom over een paar dagen terug naar deze pagina.",
+      "redirection": "Doorsturen naar de betaling...",
+      "pretTitre": "{{moi}} en {{autre}}, jullie rapport is klaar",
+      "sommaire": "Wat er in jullie rapport staat",
+      "emailAutre": "Op een ander adres ontvangen",
+      "plie": "Het rapport nu al ontgrendelen",
+      "accroche": "Je hebt nog niet gezien wat {{autre}} heeft geantwoord.",
+      "points": {
+        "reponses": "Alle antwoorden van {{autre}} naast die van jou, vraag per vraag",
+        "ecartsN": "Bij jullie {{n}} verschillen: waarom ze ertoe doen, en hoe je erover praat zonder ruzie",
+        "ecartsUn": "Bij jullie verschil: waarom het ertoe doet, en hoe je erover praat zonder ruzie",
+        "ecarts0": "Bij elk verschil, ook een klein: waarom het ertoe doet, en hoe je erover praat",
+        "accords": "Wat jullie verbindt, thema per thema",
+        "conversationsN": "Jullie volgende {{n}} gesprekken, in de volgorde waarin je ze het best voert",
+        "conversationsUn": "Jullie volgende gesprek, en hoe je het aanpakt",
+        "climat": "De sfeer in jullie relatie, en wie wat doet in huis, gezien door ieder van jullie",
+        "pdf": "Het volledige rapport als pdf, om te bewaren, en zes maanden online"
+      },
+      "chacunSr": "Dat is {{chacun}} per persoon.",
+      "cine": "Minder dan een bioscoopkaartje per persoon.",
+      "conseiller": "Ter vergelijking: een sessie bij een relatietherapeut kost al snel 60 euro of meer.",
+      "immediat": "Het rapport opent hier meteen na de betaling, voor jullie allebei, en de link naar de pdf gaat per e-mail de deur uit.",
+      "moyens": "Geaccepteerde betaalmethoden",
+      "colle": "Jullie rapport",
+      "colleBouton": "Ontgrendelen",
+      "region": {
+        "latam": "Prijs Latijns-Amerika",
+        "avant": "In plaats van",
+        "apres": "Prijs voor Latijns-Amerika:"
+      }
+    },
+    "paiement": {
+      "verification": "Betaling controleren...",
+      "ok": "Betaling bevestigd, bedankt!",
+      "attente": "De betaling is nog niet bevestigd. Dat kan een paar seconden duren...",
+      "annule": "De betaling is geannuleerd. Je relatiecheck staat er nog.",
+      "erreur": "We kunnen de betaling nu niet controleren. Heb je betaald, laad de pagina dan over een minuut opnieuw."
+    },
+    "solo": {
+      "accueil": {
+        "violence": "Alleen jij ziet dit rapport. Ben je bang voor je partner, bel dan gratis en anoniem Veilig Thuis (0800-2000, dag en nacht) in Nederland of 1712 in België, en bij direct gevaar 112."
+      },
+      "creation": {
+        "autreAide": "Die dient alleen om de vragen te formuleren. Je partner krijgt niets toegestuurd.",
+        "soloNote": "Je vult de relatiecheck alleen in: {{autre}} krijgt niets te horen, er wordt niets naartoe gestuurd, en alleen jij ziet het rapport.",
+        "consentement": "Ik ben 18 jaar of ouder en ik geef toestemming om mijn antwoorden op te slaan, alleen om het rapport van de relatiecheck te kunnen leveren.",
+        "accordAide": "Je antwoorden, ook over intieme onderwerpen, en wat je denkt dat {{autre}} zou antwoorden, dienen alleen voor dit rapport, dat alleen jij ziet. De relatiecheck wordt bewaard tot 60 dagen na je laatste antwoord als er niet betaald is, en tot zes maanden na de betaling, en je kunt hem op elk moment verwijderen. Je hoeft geen account aan te maken.",
+        "prixRappel": "De vragen zijn gratis. Het volledige rapport kost {{prix}}: je ontgrendelt het als je klaar bent met je antwoorden.",
+        "creer": "Mijn relatiecheck beginnen",
+        "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit, en we sturen je één herinnering als je rapport de volgende dag nog wacht.",
+        "emailAideDepart": "Zo kun je je relatiecheck terugvinden als je de pagina sluit. We mailen je één keer als je halverwege stopt, en één keer als je rapport de volgende dag nog wacht. Geef je nu geen adres op, dan vragen we het aan het eind, voor de link naar het rapport als pdf. Het dient nergens anders voor.",
+        "apportTitre": "Wat de relatiecheck alleen je oplevert",
+        "apport": [
+          "Jouw kijk op de twaalf thema's van je relatie, van het dagelijks leven tot intimiteit",
+          "Bij de onderwerpen die het zwaarst wegen: waar je denkt dat je het eens bent met {{autre}}, en waar niet",
+          "De onderwerpen waarbij je niet weet wat {{autre}} ervan vindt: dat zijn vaak de gesprekken die je moet voeren"
+        ],
+        "apportNote": "100 vragen, ongeveer 25 minuten. Je kunt pauzeren en later verdergaan."
+      },
+      "domaine": {
+        "nb": "{{n}} vragen, telkens twee antwoorden, ongeveer {{min}} min"
+      },
+      "paywall": {
+        "introPret": "Je antwoorden zijn klaar, en wat je denkt dat {{autre}} zou antwoorden ook. Nog één stap en je ziet wat dat allemaal over jullie relatie zegt.",
+        "contenu": [
+          "Hoe goed jullie op één lijn zitten en de sfeer in jullie relatie, zoals jij die ziet, in één oogopslag",
+          "Het overzicht van jullie twaalf thema's, van geld tot kinderen",
+          "Jullie volgende vier gesprekken, in de volgorde waarin je ze het best voert",
+          "Je blinde vlekken: wat je niet weet van {{autre}}, klaar om te vragen",
+          "Bij elk verschil: waarom het ertoe doet, vragen om erover te praten en wat je beter kunt vermijden",
+          "Jullie signalen om op te letten bij ruzies",
+          "Wie wat doet in huis, zoals jij het ziet",
+          "Het volledige rapport als pdf, de downloadlink per e-mail zodra het klaar is, en zes maanden online"
+        ],
+        "prixAide": "Eén betaling, zonder abonnement. Je partner krijgt niets te horen.",
+        "emailAide": "De link naar de pdf gaat naar dit adres zodra je betaald hebt.",
+        "pretTitre": "{{moi}}, je rapport is klaar",
+        "apercu": {
+          "intro": "Bij de onderwerpen die het zwaarst wegen, zijn je antwoorden vergeleken met wat je denkt dat {{autre}} zou antwoorden:",
+          "quoi": "Weinig mensen nemen ooit de tijd om zo stil te staan bij hun relatie: jij hebt het net gedaan, nu hoef je alleen nog de uitkomst te lezen.",
+          "inconnusUn": "En één onderwerp waarbij je niet weet wat {{autre}} zou antwoorden.",
+          "inconnusN": "En {{n}} onderwerpen waarbij je niet weet wat {{autre}} zou antwoorden."
+        },
+        "prix": "{{prix}}",
+        "bouton": "Ontgrendel mijn rapport · {{prix}}",
+        "accroche": "Het rapport laat zien waar je staat met {{autre}}, en waar je kunt beginnen.",
+        "points": {
+          "reponses": "Je antwoorden tegenover wat je denkt dat {{autre}} zou antwoorden",
+          "ecartsN": "Bij je {{n}} verschillen: waarom ze ertoe doen, en hoe je erover praat met {{autre}}",
+          "ecartsUn": "Bij je verschil: waarom het ertoe doet, en hoe je erover praat met {{autre}}",
+          "ecarts0": "Bij elk verschil, ook een klein: waarom het ertoe doet, en hoe je erover praat met {{autre}}",
+          "ombreN": "Je blinde vlekken: {{n}} onderwerpen waarbij je niet weet wat {{autre}} ervan vindt",
+          "ombreUn": "Je blinde vlek: één onderwerp waarbij je niet weet wat {{autre}} ervan vindt"
+        },
+        "immediat": "Het rapport opent hier meteen na de betaling, en de link naar de pdf gaat per e-mail de deur uit."
+      },
+      "rapport": {
+        "ecran": {
+          "supprimer": "Mijn relatiecheck verwijderen",
+          "supprimerAide": "De relatiecheck wordt meteen en definitief gewist, ook de pdf. Bewaar de pdf eerst.",
+          "supprime": "Je relatiecheck is verwijderd.",
+          "garde": "Dit rapport blijft zes maanden op deze pagina beschikbaar, alleen voor jou."
+        }
+      }
+    },
+    "rapport": {
+      "surtitre": "Relatiecheck",
+      "pied": "Relatiecheck · vertrouwelijk",
+      "couverture": {
+        "de": "De relatiecheck van",
+        "et": "en",
+        "date": "Rapport opgesteld op {{date}}",
+        "chiffres": "{{domaines}} thema's · {{questions}} vragen",
+        "confidentiel": "Vertrouwelijk: dit rapport bevat de antwoorden van jullie allebei."
+      },
+      "lire": {
+        "titre": "Zo lees je dit rapport",
+        "p1": "Jullie hebben elk apart geantwoord, zonder de antwoorden van de ander te zien. Dit rapport zet jullie twee reeksen antwoorden tegenover elkaar, onderwerp per onderwerp, om te laten zien waar jullie het eens zijn en waar jullie de dingen anders zien.",
+        "p2": "De vragen zijn gebaseerd op onderzoek naar relaties: studies die stellen jarenlang hebben gevolgd, en de vragenlijsten die relatietherapeuten gebruiken voor een huwelijk. Dit rapport is geen diagnose. Het is een basis om met elkaar te praten, over de juiste onderwerpen in de juiste volgorde.",
+        "p3": "Het makkelijkst is om het eerst elk apart te lezen, en er dan samen over te praten, één onderwerp per keer. Weet je niet waar je moet beginnen, ga dan meteen naar jullie volgende vier gesprekken.",
+        "reperes": "De legenda",
+        "accord": "Jullie gaven hetzelfde antwoord.",
+        "proche": "Jullie antwoorden liggen dicht bij elkaar.",
+        "ecart": "Jullie antwoorden liggen ver uit elkaar.",
+        "nn": "Een van jullie heeft dit onderwerp als ‘niet onderhandelbaar’ aangeduid.",
+        "poids": "Een vraag die een heel leven bepaalt (een kind, waar je woont, trouw, het geld dat je deelt) weegt in jullie scores drie keer zo zwaar als een vraag over het dagelijks leven. Ze heeft dit label.",
+        "sommaire": "In dit rapport",
+        "nnTag": "Niet onderhandelbaar"
+      },
+      "chapitres": {
+        "synthese": "Jullie samenvatting",
+        "carte": "Het overzicht van jullie thema's",
+        "conversations": "Jullie volgende vier gesprekken",
+        "bloquants": "Struikelblokken en wat niet onderhandelbaar is",
+        "ombre": "Je blinde vlekken",
+        "climat": "De sfeer in jullie relatie",
+        "signaux": "Jullie signalen om op te letten",
+        "roles": "Wie doet wat, volgens ieder van jullie",
+        "domaines": "Thema per thema",
+        "fin": "Tot slot",
+        "suite": "En nu?"
+      },
+      "ouvertures": {
+        "synthese": "Twee cijfers, en wat ze voor jullie betekenen.",
+        "carte": "Twaalf thema's uit jullie leven samen, van waar jullie het meest op één lijn zitten tot waar het meest te bespreken valt.",
+        "conversations": "De vier onderwerpen om mee te beginnen, en hoe je ze aanpakt.",
+        "bloquants": "Waar een van jullie niet over kan onderhandelen.",
+        "ombre": "Wat je niet weet van {{b}}, en wat een vraag waard is.",
+        "climat": "Hoe ieder van jullie zich op dit moment voelt in de relatie.",
+        "signaux": "De ruziegewoontes die een relatie slijten, en hoe het daar bij jullie mee staat.",
+        "roles": "Wie wat op zich neemt, volgens ieder van jullie.",
+        "domaines": "Al jullie antwoorden, onderwerp per onderwerp.",
+        "fin": "Wat je moet onthouden, en waar je begint.",
+        "suite": "Hoe je erover praat, en wanneer je opnieuw kijkt waar jullie staan."
+      },
+      "synthese": {
+        "intro": "Twee cijfers vatten jullie relatiecheck samen. Het eerste zegt hoe sterk jullie hetzelfde leven samen willen. Het tweede zegt hoe ieder van jullie zich op dit moment in de relatie voelt. Die twee hoeven niet samen te gaan: je kunt goed op één lijn zitten en toch een moeilijke periode doormaken, of omgekeerd.",
+        "alignement": "Jullie overeenstemming",
+        "alignementAide": "Hoe jullie antwoorden over het leven samen overeenkomen. Beslissende onderwerpen tellen drie keer.",
+        "climat": "De sfeer tussen jullie",
+        "climatAide": "Hoe ieder van jullie de relatie op dit moment beleeft.",
+        "climatDe": "{{nom}}: {{n}}%",
+        "tuiles": {
+          "accords": "Overeenkomsten",
+          "proches": "Bijna gelijk",
+          "ecarts": "Verschillen",
+          "bloquants": "Struikelblokken",
+          "vigilance": "Signalen om op te letten",
+          "inconnus": "Blinde vlekken"
+        },
+        "radar": "Jullie thema's in één oogopslag",
+        "radarAide": "Hoe dichter de lijn bij de rand komt, hoe meer jullie antwoorden in dat thema overeenkomen. De precieze cijfers staan in het volgende hoofdstuk.",
+        "forts": "Waar jullie het dichtst bij elkaar staan",
+        "faibles": "Waar jullie het verst uit elkaar liggen",
+        "rassemble": "Wat jullie verbindt",
+        "rassembleIntro": "Belangrijke onderwerpen waarop jullie precies hetzelfde hebben geantwoord."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "Op dezelfde golflengte",
+          "texte": "Jullie willen ongeveer hetzelfde leven, en jullie zien het op dezelfde manier. Er zijn verschillen, maar weinig: dit is het goede moment om erover te praten, nu ze nog klein zijn."
+        },
+        "proches": {
+          "titre": "Heel dicht bij elkaar",
+          "texte": "Jullie zijn het eens over de hoofdzaken, met een paar onderwerpen waarover jullie anders denken. Zo gaat het bij de meeste stellen bij wie het goed gaat."
+        },
+        "creuser": {
+          "titre": "Dicht bij elkaar, met onderwerpen om uit te diepen",
+          "texte": "Jullie vinden elkaar in veel dingen, maar een aantal onderwerpen scheidt jullie. Niets verontrustends zolang jullie erover praten, en daar dient dit rapport nu net voor."
+        },
+        "apprivoiser": {
+          "titre": "Verschillen om mee te leren leven",
+          "texte": "Jullie kijken nogal verschillend naar het leven samen. Dat zegt niets over jullie liefde, maar het betekent wel dat sommige onderwerpen echte gesprekken vragen, en compromissen."
+        },
+        "visions": {
+          "titre": "Twee manieren om naar het leven te kijken",
+          "texte": "Over veel onderwerpen willen jullie niet hetzelfde. Sommige stellen leven daar heel goed mee, andere niet: het belangrijkste is te weten welke verschillen voor ieder van jullie tellen."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Stralend weer",
+          "texte": "Jullie voelen je allebei goed in jullie relatie."
+        },
+        "nuages": {
+          "titre": "Mooi weer, een paar wolken",
+          "texte": "Het gaat goed, met een paar punten waarop een van jullie zich minder goed voelt."
+        },
+        "variable": {
+          "titre": "Wisselvallig",
+          "texte": "Er is veel goeds, en op dit moment ook moeilijkere momenten."
+        },
+        "orageux": {
+          "titre": "Onweer",
+          "texte": "Een van jullie, of allebei, voelt zich op dit moment niet zo goed in de relatie."
+        },
+        "tempete": {
+          "titre": "Storm",
+          "texte": "Het gaat op dit moment niet zo goed. Dit rapport kan helpen om er woorden aan te geven, en een relatietherapeut kan jullie helpen om verder te komen."
+        }
+      },
+      "carte": {
+        "intro": "Elke balk laat zien hoe jullie antwoorden in een thema overeenkomen, van 0 tot 100%. De sfeer in jullie relatie zoekt geen overeenstemming: die heeft een eigen deel.",
+        "bandes": {
+          "fort": "Heel dicht bij elkaar",
+          "moyen": "Redelijk dicht bij elkaar",
+          "faible": "Om te bespreken"
+        },
+        "accords": "overeenkomsten",
+        "proches": "bijna gelijk",
+        "ecarts": "verschillen",
+        "inconnus": "weet ik niet"
+      },
+      "conversations": {
+        "intro": "De onderwerpen waarop jullie antwoorden het verst uit elkaar liggen, bij wat het zwaarst weegt, één per thema. Neem er één per avond, in alle rust, in plaats van alles tegelijk.",
+        "titre": "Gesprek {{n}}",
+        "aucune": "Jullie hebben geen verschillen om aan te werken: jullie antwoorden liggen overal dicht bij elkaar of zijn gelijk. Dat is zeldzaam! Maak er gebruik van om te praten over wat jullie verbindt."
+      },
+      "bloquants": {
+        "intro": "Verschillen bij vragen die een van jullie als ‘niet onderhandelbaar’ heeft aangeduid. Dat zijn de eerste onderwerpen om aan te kaarten, zonder de ander die avond te willen overtuigen: eerst begrijpen.",
+        "aucun": "Geen struikelblokken: geen van jullie verschillen gaat over een onderwerp dat een van jullie als niet onderhandelbaar heeft aangeduid.",
+        "nnTitre": "Wat voor ieder niet onderhandelbaar is",
+        "nnIntro": "De onderwerpen waarover ieder van jullie zei geen compromis te kunnen sluiten, met het antwoord erbij.",
+        "nnAucun": "Niets aangeduid."
+      },
+      "ombre": {
+        "intro": "Bij de onderwerpen die het zwaarst wegen, heb je gezegd wat {{nom}} zou antwoorden. Als je het niet wist, heb je dat gezegd: dit hoofdstuk zet die onderwerpen bij elkaar. Het zijn geen problemen, het zijn vragen om te stellen.",
+        "part": "Wat je niet weet",
+        "bandes": {
+          "peu": {
+            "titre": "Weinig blinde vlekken",
+            "texte": "Bij maar {{n}} onderwerpen wist je niet wat {{nom}} zou antwoorden. Je weet goed hoe {{nom}} naar de dingen kijkt."
+          },
+          "quelques": {
+            "titre": "Een paar blinde vlekken",
+            "texte": "Bij {{n}} onderwerpen wist je niet wat {{nom}} zou antwoorden. Zo gaat het bij de meeste stellen: je praat zelden over alles."
+          },
+          "large": {
+            "titre": "Veel blinde vlekken",
+            "texte": "Bij {{n}} onderwerpen wist je niet wat {{nom}} zou antwoorden. Dat is geen slecht nieuws: het is de lijst van gesprekken die jullie nog niet gevoerd hebben."
+          }
+        },
+        "listeTitre": "De onderwerpen waarbij je het niet weet",
+        "listeAide": "Elk onderwerp is een vraag die je zo aan {{nom}} kunt stellen. Beslissende onderwerpen hebben hun label.",
+        "aucune": "Je kon telkens voor {{nom}} antwoorden. Het rapport vergelijkt je antwoorden dus met wat je denkt dat {{nom}} zou antwoorden: de volgende stap is om het bij {{nom}} na te gaan."
+      },
+      "climat": {
+        "intro": "Deze vragen zoeken geen overeenstemming: ze zeggen hoe ieder van jullie de relatie op dit moment beleeft. Een verschil hier betekent dat jullie niet dezelfde relatie beleven, en dat komt veel vaker voor dan je denkt.",
+        "parDomaine": "De sfeer, thema per thema",
+        "parDomaineAide": "Voor de thema's met vragen over hoe je je voelt (ruzies, intimiteit en de algemene sfeer): het welzijn van ieder op dezelfde lijn, van 0 tot 100%. Liggen de twee punten ver uit elkaar, dan beleven jullie niet hetzelfde.",
+        "questions": "Vraag per vraag",
+        "ecart": "Jullie beleven het niet hetzelfde",
+        "attention": "Om in de gaten te houden",
+        "de": "Voor {{nom}}",
+        "sens": "Op elke lijn is het vakje links het vakje waar het het best gaat, en het vakje rechts dat waar het het minst goed gaat."
+      },
+      "signaux": {
+        "intro": "Onderzoekers die al tientallen jaren stellen observeren, hebben een paar ruziegewoontes gevonden die een relatie veel meer slijten dan de ruzies zelf, als ze een gewoonte worden. Iedereen heeft ze weleens. Waar het om gaat, is hoe vaak ze voorkomen, en wat jullie er daarna mee doen.",
+        "rare": "Zelden bij jullie",
+        "attention": "Om in de gaten te houden",
+        "alerte": "Eerst naar kijken",
+        "reparationBien": "Een echte kracht",
+        "reparationAttention": "Om aan te werken",
+        "fin": "Komt een van deze gewoontes vaak voor bij jullie, dan is dat geen veroordeling: het is precies wat een relatietherapeut helpt te veranderen, en het is te veranderen."
+      },
+      "roles": {
+        "intro": "Bij elk onderwerp loopt de lijn van ‘vooral {{a}}’ tot ‘vooral {{b}}’. De twee punten laten zien wat ieder heeft geantwoord.",
+        "surtout": "Vooral {{nom}}",
+        "autant": "Evenveel",
+        "chacunPlus": "Ieder denkt meer te doen",
+        "chacunPlusTexte": "Dat komt heel vaak voor: je ziet beter wat je zelf doet dan wat de ander doet. Het beste is om samen op te schrijven wat ieder op zich neemt, zonder punten te tellen.",
+        "desequilibre": "Jullie zijn het eens: het is vooral {{nom}}. Vinden jullie dat allebei goed zo?",
+        "accord": "Jullie zien het op dezelfde manier.",
+        "aucun": "Geen vragen van dit soort in jullie relatiecheck."
+      },
+      "domaines": {
+        "intro": "Al jullie antwoorden, thema per thema: eerst waarover jullie het eens zijn, dan jullie verschillen, van het belangrijkste naar het kleinste.",
+        "domaine": "Thema",
+        "accords": "Jullie zijn het eens",
+        "accordsAucun": "Geen enkele exacte overeenkomst in dit thema.",
+        "differences": "Jullie verschillen",
+        "differencesAucune": "Geen enkel verschil in dit thema.",
+        "etats": "Hoe jullie het beleven",
+        "inconnus": "Wat je niet weet",
+        "voirConversation": "Je vindt het hierboven terug, met hulp om erover te praten: gesprek {{n}}.",
+        "voirBloquants": "Je vindt het hierboven terug, met hulp om erover te praten: struikelblokken.",
+        "climatBas": "Wat het gevoel betreft, beleeft minstens een van jullie dit deel van de relatie op dit moment slecht: dat staat verderop uitgewerkt, in ‘{{titre}}’.",
+        "climatBasCourt": "Wat het gevoel betreft, beleeft minstens een van jullie dit deel van de relatie op dit moment slecht.",
+        "signauxBas": "In de praktijk komen bij jullie op dit moment een paar ruziegewoontes terug die een relatie slijten: dat staat uitgewerkt in hoofdstuk {{n}}, ‘{{titre}}’.",
+        "signauxBasCourt": "In de praktijk komen bij jullie op dit moment een paar ruziegewoontes terug die een relatie slijten."
+      },
+      "fin": {
+        "intro": "Jullie hebben alles gelezen, of bijna. Deze laatste samenvatting herhaalt de eerste niet: ze telt jullie antwoorden op een andere manier, houdt vast wat stevig staat en wat werk vraagt, en stelt een volgorde voor om erover te praten.",
+        "repartition": "Al jullie antwoorden vergeleken",
+        "accordsPart": "Aandeel overeenkomsten",
+        "accordsTexte": "Van de {{total}} vergeleken vragen hebben jullie {{n}} keer hetzelfde antwoord gegeven, dat is {{part}}%. De rest is verdeeld over antwoorden die dicht bij elkaar liggen en verschillen.",
+        "socle": "Jullie fundament",
+        "socleAide": "De beslissende onderwerpen waarop jullie precies hetzelfde hebben geantwoord, van alle die jullie gesteld zijn.",
+        "forces": "Wat stevig staat",
+        "chantiers": "Wat werk vraagt",
+        "aucun": "Niets te melden hier.",
+        "feuille": "Jullie stappenplan",
+        "feuilleIntro": "Eén onderwerp per week, in deze volgorde. Vink ze af naarmate jullie verder komen.",
+        "semaine": "Week {{n}}",
+        "ensuite": "Daarna",
+        "ombreEtape": "De {{n}} vragen van je blinde vlekken aan {{nom}} stellen",
+        "sixMois": "Over zes maanden",
+        "refaire": "De relatiecheck opnieuw doen",
+        "refaireTexte": "Om te zien wat er veranderd is, en wat gebleven is."
+      },
+      "cat": {
+        "accord": "Overeenkomst",
+        "proche": "Bijna gelijk",
+        "ecart": "Verschil"
+      },
+      "statut": {
+        "bloquant": "Struikelblok",
+        "aTrancher": "Te beslissen",
+        "aConfirmer": "Na te gaan"
+      },
+      "nnDe": "Niet onderhandelbaar voor {{nom}}",
+      "poidsFort": "Beslissend onderwerp",
+      "pourquoi": "Waarom het ertoe doet",
+      "parler": "Om erover te praten",
+      "eviter": "Beter vermijden",
+      "suite": {
+        "p1": "Een rapport verandert op zich niets: wat telt, zijn de gesprekken die het op gang brengt. Zo pak je het aan, op basis van wat werkt bij stellen die goed met elkaar praten.",
+        "conseils": [
+          "Eén onderwerp per avond, niet meer. Begin met het makkelijkste om op gang te komen.",
+          "Kies een rustig moment, zonder telefoon, en niet als er net spanning is.",
+          "Praat over wat je voelt (‘ik ben bang dat...’) in plaats van over wat de ander doet.",
+          "Het doel van het eerste gesprek is de ander te begrijpen, niet te overtuigen. Een beslissing kan wachten tot de week erna.",
+          "Loopt het hoog op, neem dan twintig minuten pauze en ga later verder. Dat werkt beter dan je denkt."
+        ],
+        "refaire": "Doe de relatiecheck over zes maanden of een jaar opnieuw, dan zie je wat er tussen jullie veranderd is. Veel stellen doen hem opnieuw bij elke grote stap: samenwonen, trouwen, een kind krijgen.",
+        "aide": "Dit rapport is een hulpmiddel om te praten, geen diagnose. Als jullie een moeilijke periode doormaken, kan een relatietherapeut jullie begeleiden.",
+        "violence": "Ben je bang voor je partner, dan is deze relatiecheck niet bedoeld voor jouw situatie. Bel gratis en anoniem Veilig Thuis (0800-2000, dag en nacht) in Nederland of 1712 in België, en bij direct gevaar 112."
+      },
+      "solo": {
+        "selonSuffixe": ", volgens jou",
+        "couverture": {
+          "solo": "Jouw kijk op je relatie met {{nom}}",
+          "confidentiel": "Vertrouwelijk: dit rapport bevat je antwoorden en wat je denkt dat je partner zou antwoorden."
+        },
+        "inconnuTag": "Weet ik niet",
+        "inconnuLire": "Je wist niet wat je partner zou antwoorden: dit onderwerp staat bij je blinde vlekken.",
+        "lire": {
+          "p1": "Je hebt alleen geantwoord: op alle vragen voor jezelf, en bij de onderwerpen die het zwaarst wegen heb je ook gezegd wat {{b}} volgens jou zou antwoorden. Dit rapport zet die twee bij die onderwerpen tegenover elkaar: waar je zeker weet dat jullie hetzelfde denken, waar je weet dat jullie de dingen anders zien, en waar je het niet weet. Je andere antwoorden staan bij elk thema.",
+          "p3": "Lees het eerst voor jezelf. Wil {{b}} erover praten, dan geven de vier gesprekken en je blinde vlekken aan waar je kunt beginnen. En als {{b}} op een dag zelf wil antwoorden, vervangt een relatiecheck samen jouw vermoedens door de antwoorden van {{b}}."
+        },
+        "synthese": {
+          "intro": "Twee cijfers vatten je relatiecheck samen. Het eerste zegt hoe sterk jullie volgens jou hetzelfde leven samen willen: het vergelijkt je antwoorden met de antwoorden die je je partner toeschrijft. Het tweede zegt hoe jij je op dit moment in de relatie voelt, en hoe je denkt dat je partner zich voelt.",
+          "alignement": "Jullie overeenstemming, volgens jou",
+          "alignementAide": "Hoe je antwoorden overeenkomen met de antwoorden die je je partner toeschrijft. Beslissende onderwerpen tellen drie keer.",
+          "climatAide": "Hoe jij de relatie op dit moment beleeft, en hoe je denkt dat je partner die beleeft."
+        },
+        "carte": {
+          "intro": "Elke balk laat zien hoe je antwoorden overeenkomen met de antwoorden die je je partner toeschrijft, van 0 tot 100%. De onderwerpen waarbij je het antwoord niet wist, tellen niet mee in de score: ze worden apart geteld."
+        },
+        "conversations": {
+          "intro": "De onderwerpen waarbij je denkt dat je partner er anders over denkt, bij wat het zwaarst weegt, één per thema. Het zijn je vermoedens: elk gesprek begint met nagaan of je het goed geraden hebt."
+        },
+        "bloquants": {
+          "intro": "Verschillen, volgens jou, bij vragen die je als ‘niet onderhandelbaar’ hebt aangeduid. Dat zijn de eerste onderwerpen om met je partner na te gaan, zonder die avond te willen overtuigen: eerst begrijpen.",
+          "nnIntro": "De onderwerpen waarover je zei geen compromis te kunnen sluiten, met je antwoord erbij."
+        },
+        "climat": {
+          "intro": "Deze vragen zoeken geen overeenstemming: ze zeggen hoe jij de relatie op dit moment beleeft, en hoe je denkt dat je partner die beleeft. Een verschil hier betekent dat jullie volgens jou niet dezelfde relatie beleven.",
+          "parDomaineAide": "Voor de thema's met vragen over hoe je je voelt: jouw welzijn en het welzijn dat je je partner toeschrijft, op dezelfde lijn, van 0 tot 100%."
+        },
+        "roles": {
+          "intro": "Bij elk onderwerp loopt de lijn van ‘vooral {{a}}’ tot ‘vooral {{b}}’. Het eerste punt is jouw antwoord, het tweede, als het je gevraagd werd, wat {{b}} volgens jou zou antwoorden.",
+          "desequilibre": "Je denkt dat jullie het eens zijn: het is vooral {{nom}}. Vinden jullie dat allebei goed zo?"
+        },
+        "domaines": {
+          "intro": "Al je antwoorden, thema per thema: eerst waarover je denkt dat jullie het eens zijn, dan de verschillen die je vermoedt, van het belangrijkste naar het kleinste, en wat je niet weet.",
+          "climatBas": "Wat het gevoel betreft, beleef je dit deel van de relatie op dit moment slecht, of denk je dat je partner het slecht beleeft: dat staat verderop uitgewerkt, in ‘{{titre}}’.",
+          "climatBasCourt": "Wat het gevoel betreft, beleef je dit deel van de relatie op dit moment slecht, of denk je dat je partner het slecht beleeft.",
+          "signauxBas": "Volgens jou komen bij jullie op dit moment een paar ruziegewoontes terug die een relatie slijten: dat staat uitgewerkt in hoofdstuk {{n}}, ‘{{titre}}’.",
+          "signauxBasCourt": "Volgens jou komen bij jullie op dit moment een paar ruziegewoontes terug die een relatie slijten.",
+          "seules": "Je andere antwoorden",
+          "seulesAide": "Bij deze vragen werd je niet gevraagd wat {{nom}} zou antwoorden: hier staat gewoon jouw antwoord."
+        },
+        "fin": {
+          "accordsTexte": "Van de {{total}} vragen waarbij je voor je partner kon antwoorden, denk je {{n}} keer hetzelfde antwoord te hebben, dat is {{part}}%.",
+          "socleAide": "De beslissende onderwerpen waarbij je zeker weet dat je er hetzelfde over denkt als je partner, van alle die je gesteld zijn."
+        },
+        "suite": {
+          "p1": "Een rapport verandert op zich niets: wat telt, is wat je ermee doet. Je hebt het alleen gedaan, en dat is al een manier om helderder te zien. Zo pak je het verder aan.",
+          "conseils": [
+            "Lees eerst je blinde vlekken nog eens: het zijn eenvoudige vragen om aan {{nom}} te stellen, zonder over het rapport te praten als je dat liever hebt.",
+            "Ga je vermoedens een voor een na, te beginnen met de gesprekken uit het rapport: ‘ik dacht dat je zou zeggen... klopt dat?’",
+            "Kies een rustig moment, zonder telefoon, en niet als er net spanning is.",
+            "Praat over wat je voelt (‘ik ben bang dat...’) in plaats van over wat de ander doet.",
+            "Wil {{nom}} er voorlopig niet over praten, dan heb je toch iets aan dit rapport: het zegt wat voor jou telt, en wat niet goed zit. Een relatietherapeut kan je ook alleen ontvangen."
+          ],
+          "refaire": "Doe de relatiecheck samen als {{nom}} er klaar voor is: dan worden je vermoedens vervangen door de antwoorden van {{nom}}. Veel stellen doen hem bij elke grote stap: samenwonen, trouwen, een kind krijgen."
+        }
+      },
+      "ecran": {
+        "telecharger": "Download de pdf",
+        "pdfPrepa": "Je pdf wordt klaargemaakt: hij staat hier binnen een paar minuten klaar, en de link komt per e-mail.",
+        "pdfErreur": "De pdf loopt wat vertraging op. De link wordt je per e-mail gestuurd zodra hij klaar is, je hoeft niets te doen.",
+        "envoyeA": "De link naar de pdf is verstuurd naar {{emails}}. Zie je hem niet, kijk dan bij je spam.",
+        "envoiA": "De link naar de pdf gaat naar {{emails}} zodra hij klaar is. Je hoeft er niet om te vragen.",
+        "emailTitre": "Je rapport per e-mail",
+        "emailAide": "Dit adres vervangt het jouwe voor dit rapport. Het dient nergens anders voor.",
+        "emailChamp": "Je e-mailadres",
+        "emailBouton": "Versturen",
+        "emailOk": "Genoteerd! De link naar de pdf gaat naar dit adres.",
+        "emailFaux": "Dit adres lijkt niet geldig.",
+        "imprimer": "Afdrukken",
+        "supprimer": "Onze relatiecheck verwijderen",
+        "supprimerConfirmer": "Verwijderen bevestigen",
+        "supprimerAide": "De relatiecheck wordt voor jullie allebei meteen en definitief gewist, ook de pdf. Bewaar de pdf eerst.",
+        "supprime": "Jullie relatiecheck is verwijderd.",
+        "garde": "Dit rapport blijft zes maanden op deze pagina beschikbaar, voor jullie allebei.",
+        "envoiSans": "De link naar de pdf gaat per e-mail zodra hij klaar is.",
+        "emailAutre": "Op een ander adres ontvangen"
+      }
+    },
+    "situation": {
+      "resume": "Situatie",
+      "titre": "Jullie situatie",
+      "aide": "Je antwoord past de vragen die volgen aan.",
+      "deja": "Dit antwoord is al gegeven: verander het als het niet klopt."
+    },
+    "erreurs": {
+      "reseau": "Geen verbinding. Controleer je netwerk en probeer het opnieuw.",
+      "introuvable": "Deze relatiecheck bestaat niet meer, of dit is niet de juiste link.",
+      "trop": "Er zijn te veel relatiechecks aangemaakt vanaf deze verbinding. Probeer het over een uur opnieuw.",
+      "serveur": "Er ging iets mis aan onze kant. Probeer het zo opnieuw.",
+      "reessayer": "Opnieuw proberen"
+    },
+    "genres": {
+      "f": "Een vrouw",
+      "h": "Een man"
+    },
+    "lien": {
+      "titre": "Mijn link per e-mail ontvangen",
+      "placeholder": "jouw@email.com",
+      "bouton": "Versturen",
+      "aide": "Zo vind je je antwoorden terug als je deze pagina sluit of een andere telefoon gebruikt. Maak je de vragen niet af, dan sturen we je één herinnering.",
+      "envoye": "Verstuurd: je link staat in je mailbox ({{email}}). Kijk ook even bij je spam.",
+      "faux": "Dit e-mailadres lijkt niet compleet.",
+      "trop": "Te veel verzendingen voor deze relatiecheck. Probeer het over een uur opnieuw."
+    },
+    "retrouver": {
+      "titre": "Was je al eens begonnen aan een relatiecheck?",
+      "texte": "We sturen je links opnieuw naar het adres dat je aan het begin hebt opgegeven. De oude link werkt dan niet meer.",
+      "placeholder": "jouw@email.com",
+      "bouton": "Mijn relatiecheck terugvinden",
+      "envoye": "Als er een relatiecheck aan {{email}} gekoppeld is, staan je links binnen een minuut in je mailbox. Kijk ook even bij je spam.",
+      "trop": "Te veel aanvragen vanaf je verbinding. Probeer het over een uur opnieuw."
+    },
+    "rappels": {
+      "arret": "Genoteerd: je krijgt geen berichten meer over deze relatiecheck.",
+      "continuer": "Verder"
+    },
+    "celib": {
+      "titre": "Voor singles is er een aparte check in de maak",
+      "texte": "Deze check is gemaakt voor een stel: hij vergelijkt wat twee mensen samen beleven. Voor singles maken we een volledige check, en die bouwen we graag samen met jou!",
+      "question": "Wat zou jou het meest interesseren? Vink alles aan wat je aanspreekt.",
+      "sujets": {
+        "point": "Weten waar ik sta in mijn liefdesleven",
+        "schemas": "Begrijpen wat zich herhaalt in mijn relaties",
+        "profil": "Weten wat voor iemand bij me past",
+        "blocages": "Begrijpen wat me tegenhoudt om iemand te leren kennen",
+        "rencontres": "Het beter aanpakken om mensen te leren kennen",
+        "rupture": "Een breuk achter me laten",
+        "envie": "Weten wat ik eigenlijk wil: een serieuze relatie of niet",
+        "confiance": "Weer vertrouwen in mezelf krijgen in de liefde"
+      },
+      "autre": "Een ander idee? (niet verplicht)",
+      "email": "Je e-mailadres, om bericht te krijgen als hij uitkomt (niet verplicht)",
+      "consentement": "Ik ben 16 jaar of ouder en ga akkoord met één e-mail van Quiz Couple op de dag dat de check voor singles klaar is.",
+      "emailAide": "Je adres dient alleen daarvoor: één e-mail, op die dag. Het wordt een maand later gewist, en uiterlijk na een jaar.",
+      "confidentialite": "Privacy",
+      "envoyer": "Mijn antwoorden versturen",
+      "choixManque": "Vink minstens één onderwerp aan.",
+      "consentManque": "Vink het vakje aan zodat we je kunnen mailen, of laat het adres leeg.",
+      "merciTitre": "Bedankt, genoteerd!",
+      "merci": "Je antwoorden helpen ons kiezen wat er in de check voor singles komt.",
+      "merciEmail": "We mailen je op {{email}} op de dag dat hij uitkomt. Tot dan helpen je antwoorden ons kiezen wat erin komt.",
+      "testsTitre": "Ondertussen zijn onze tests voor singles gratis:",
+      "fermer": "Sluiten"
+    }
+  },
   "lp": {
     "badge": "Relatiecheck",
     "titre": "Relatiecheck: weet waar jullie staan, zonder therapeut",

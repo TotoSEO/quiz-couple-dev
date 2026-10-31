@@ -30,7 +30,7 @@
   var LANG = CFG.lang || 'fr';
   var CLE_LOCALE = 'qc-bilans';
   var EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' };
   var SECONDES_PAR_QUESTION = 12;
   var C = null;   // le calcul (window.QCBilanCoeur)
   var Q = null;   // les textes des questions
