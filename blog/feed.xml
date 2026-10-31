@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>Femme toxique en amour : les comportements subtils à connaître</title>
+      <link>https://quiz-couple.com/blog/femme-toxique-en-amour/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/femme-toxique-en-amour/</guid>
+      <pubDate>Sat, 31 Oct 2026 07:38:00 GMT</pubDate>
+      <category>Psychologie</category>
+      <description>Drames à répétition, culpabilisation, contrôle déguisé en amour... Les signes de la femme toxique en couple, les 6 profils types, et la question que personne n&#39;ose : et si c&#39;était moi ?</description>
+      <media:content url="https://quiz-couple.com/blog/femme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Se remettre ensemble après plusieurs ruptures : est-ce une bonne idée ?</title>
       <link>https://quiz-couple.com/blog/se-remettre-ensemble-apres-plusieurs-ruptures/</link>
@@ -272,15 +281,6 @@
       <category>Vie de couple</category>
       <description>60 citations sur l&#39;âme sœur à envoyer, à offrir ou à écrire sur une carte. Avec les auteurs et leurs livres, et trois attributions célèbres qui sont fausses.</description>
       <media:content url="https://quiz-couple.com/blog/citation-ame-soeur.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>100 questions à poser à son copain, des plus légères aux grandes conversations</title>
-      <link>https://quiz-couple.com/blog/questions-a-poser-a-son-copain/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/questions-a-poser-a-son-copain/</guid>
-      <pubDate>Tue, 25 Aug 2026 11:18:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>100 questions à poser à ton copain, par thème et par moment : pour le connaître, sur vous deux, drôles, sentiments, avenir, à distance, et 5 questions pièges.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

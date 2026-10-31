@@ -1731,6 +1731,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/blog/toxic-woman-in-love/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/femme-toxique-en-amour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/toxic-woman-in-love/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/mujer-toxica-en-el-amor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/toxische-frau-in-der-liebe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/donna-tossica-in-amore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/femme-toxique-en-amour/"/>
+    <lastmod>2026-10-31T08:38:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/"/>

@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/it/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Gli articoli di Quiz Couple sulla vita di coppia, la psicologia e le storie d&#39;amore.</description>
     <language>it</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/it/blog/</link>
     </image>
+    <item>
+      <title>Donna tossica in amore: i comportamenti sottili da conoscere</title>
+      <link>https://quiz-couple.com/it/blog/donna-tossica-in-amore/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/it/blog/donna-tossica-in-amore/</guid>
+      <pubDate>Sat, 31 Oct 2026 07:38:00 GMT</pubDate>
+      <category>Psicologia</category>
+      <description>Drammi a ripetizione, colpevolizzazione, controllo travestito da amore... I segnali della donna tossica in coppia, i 6 profili tipo, e la domanda che nessuno osa: e se fossi io?</description>
+      <media:content url="https://quiz-couple.com/blog/femme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Relazione tira e molla: tornare insieme dopo più rotture?</title>
       <link>https://quiz-couple.com/it/blog/relazione-tira-e-molla/</link>
@@ -272,15 +281,6 @@
       <category>Vita di coppia</category>
       <description>100 domande da fare al tuo ragazzo, per tema e per momento: per conoscerlo, su voi due, divertenti, sentimenti, futuro, a distanza, e 5 domande scomode ma gentili.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Narcisista in amore: riconoscere la manipolazione mentre ci sei dentro</title>
-      <link>https://quiz-couple.com/it/blog/narcisista-in-amore/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/it/blog/narcisista-in-amore/</guid>
-      <pubDate>Sat, 22 Aug 2026 13:20:00 GMT</pubDate>
-      <category>Psicologia</category>
-      <description>Affascinante fuori, distruttivo in casa. Il ciclo del narcisista nella coppia, i segnali concreti e come toglierti il dubbio.</description>
-      <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

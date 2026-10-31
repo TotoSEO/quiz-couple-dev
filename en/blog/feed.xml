@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:25:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>Toxic woman in love: the subtle behaviours to know about</title>
+      <link>https://quiz-couple.com/en/blog/toxic-woman-in-love/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/toxic-woman-in-love/</guid>
+      <pubDate>Sat, 31 Oct 2026 07:38:00 GMT</pubDate>
+      <category>Psychology</category>
+      <description>Repeated drama, guilt-tripping, control disguised as love... The signs of the toxic woman in a relationship, the 6 typical profiles, and the question nobody dares: what if it&#39;s me?</description>
+      <media:content url="https://quiz-couple.com/blog/femme-toxique-en-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>On-again, off-again relationship: is it worth getting back together again?</title>
       <link>https://quiz-couple.com/en/blog/on-again-off-again-relationship/</link>
@@ -272,15 +281,6 @@
       <category>Relationship</category>
       <description>100 questions to ask your boyfriend, by theme and by moment: to know him better, about the two of you, funny, feelings, future, distance, and 5 trick questions.</description>
       <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
-    </item>
-    <item>
-      <title>Narcissist in love: recognising coercive control while you&#39;re still inside it</title>
-      <link>https://quiz-couple.com/en/blog/narcissist-in-love-signs/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/narcissist-in-love-signs/</guid>
-      <pubDate>Sat, 22 Aug 2026 13:20:00 GMT</pubDate>
-      <category>Psychology</category>
-      <description>Charming outside, destructive at home. The narcissistic cycle in a relationship, the concrete warning signs, and how to know for sure.</description>
-      <media:content url="https://quiz-couple.com/blog/pervers-narcissique-amour.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>
