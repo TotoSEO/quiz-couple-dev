@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -953,7 +953,45 @@ le met à jour dans la PR de chaque lot.
   rupture) attendent le lot 9, rappelés par `textes`.
 - **Ce qui reste en français sur les pages** : rien.
 
+## Lot 4h (31 octobre 2026) : mon ex va-t-il revenir, dois-je me remettre avec mon ex
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/komt-mijn-ex-terug/` | Komt mijn ex terug? Test in 20 vragen | Komt mijn ex ooit terug? De test die je kansen inschat |
+  | `/nl/terug-naar-mijn-ex/` | Moet ik terug naar mijn ex? Test in 20 vragen | Weer samen met je ex? De test die je doet voordat je ja zegt |
+
+  Les deux H1 portent un mot-clé secondaire de la carte (« komt mijn ex
+  ooit terug », « weer samen met je ex »), le H2 de la seconde page aussi.
+- **Les moteurs** : `exRevenir` (102 points, paliers, plancher et plafonds
+  repris du français) et `remettreEx` (112 points, six verdicts, plafonds,
+  et le rappel sous la question 8, `q8_r`), avec leurs écrans de départ
+  (`ex-revenir`, `remettre-ex` de `quizGames.json`). Les noms des verdicts
+  cités dans le texte de la page (« weinig kans », « een reële kans », « ga
+  niet terug naar je ex », « alles zegt nee, voorlopig », « niet zolang er
+  niets is veranderd ») sont ceux du tableau et du résultat. « On-off » se
+  dit « knipperlichtrelatie ». Les numéros français deviennent Veilig Thuis
+  (0800-2000, jour et nuit), le 1712 (jours ouvrables) et le 112, et pour un
+  ex qui menace de se faire du mal, 113 Zelfmoordpreventie et la
+  Zelfmoordlijn, qui aident aussi les proches ; joué jusqu'au verdict le plus
+  grave, tout s'affiche.
+- **Les liens** : « de reden van de breuk » (waarom heeft mijn ex het
+  uitgemaakt), « een “ik mis je” » (denkt mijn ex nog aan mij), « de zin om
+  weer samen te zijn » (terug naar mijn ex), « zo snel verder te gaan »
+  (over je ex heen komen), « de deur lijkt niet helemaal dicht te zijn »
+  (komt mijn ex terug), « het comfort van een relatie » (nog verliefd op mijn
+  ex) et « de ernstigste red flags » (red flag test). L'article sur les
+  ruptures à répétition attend son adresse néerlandaise (lot 9) : ses deux
+  phrases restent sans lien.
+- **Ce qui reste en français sur les pages** : rien.
+
 ## Les chiffres
+
+Au lot 4h : `textes nl` 592 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (52 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat, sans texte resté en français. Aucune page publique ne change.
 
 Au lot 4g : `textes nl` 568 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (50 pages traduites) ; `site nl` sur les deux pages : aucun
