@@ -61,3 +61,6 @@ Duel
 Start
 Finish
 Show
+
+# Un sujet de conversation du jeu de soirée (lot 6h) : le même mot en néerlandais
+Sport

@@ -1,0 +1,696 @@
+{
+  "hero": {
+    "badge": "Nieuw • Van 2 tot 5 koppels • Ieder op de eigen telefoon",
+    "title": "Het spel voor meerdere koppels van Quiz Couple! Multiplayer tot 10 personen",
+    "titleHighlight": "voor meerdere koppels",
+    "description": "Een partyspel voor koppels, te spelen met meerdere koppels: één persoon maakt het spel aan en wordt spelleider, de anderen doen mee met een code, en elk koppel antwoordt vanaf de eigen telefoon. Je hebt minstens twee koppels nodig."
+  },
+  "jsonLd": {
+    "name": "Het partyspel voor koppels: de multiplayer van Quiz Couple"
+  },
+  "app": {
+    "accueil": {
+      "titre": "Wie organiseert de avond?",
+      "texte": "Eén persoon maakt het spel aan: dat is de spelleider. De anderen doen mee met de code, ieder op de eigen telefoon, en daarna maakt de spelleider de koppels.",
+      "creer": "Spel aanmaken",
+      "creerAide": "Ik ben de spelleider",
+      "rejoindre": "Ik heb een code",
+      "rejoindreAide": "Iemand heeft het spel al aangemaakt",
+      "minimum": "Van 2 tot 5 koppels, dus 4 tot 10 spelers.",
+      "seulTitre": "Zijn jullie vanavond maar met z'n tweeën?",
+      "seulTexte": "Dit spel heeft minstens twee koppels nodig. Met z'n tweeën zijn deze tests voor jullie gemaakt:"
+    },
+    "creer": {
+      "titre": "Jij bent de spelleider",
+      "texte": "Jij maakt de koppels, start de vragen en onthult de antwoorden. Je kunt meespelen, of alleen het spel leiden.",
+      "prenom": "Je voornaam",
+      "joue": "Ik speel ook mee",
+      "joueAide": "Je zit in een koppel",
+      "anime": "Ik leid alleen het spel",
+      "animeAide": "Je antwoordt niet",
+      "bouton": "Spel aanmaken",
+      "prenomRequis": "Vul je voornaam in om het spel aan te maken."
+    },
+    "rejoindre": {
+      "titre": "Meedoen met een spel",
+      "texte": "Vul de code in die je van de spelleider kreeg, en je voornaam.",
+      "code": "Spelcode",
+      "prenom": "Je voornaam",
+      "bouton": "Meedoen",
+      "codeInvalide": "Een code bestaat uit 6 letters of cijfers.",
+      "prenomRequis": "Vul je voornaam in om mee te doen.",
+      "connexion": "Verbinden…",
+      "introuvable": "Er wacht niemand op deze code. Check hem bij de spelleider, of vraag of die het spel opnieuw aanmaakt.",
+      "complete": "Het spel is al vol: 10 spelers is het maximum.",
+      "commencee": "Dit spel is al begonnen, je kunt niet meer meedoen.",
+      "erreurReseau": "Verbinden lukt niet. Check je internetverbinding en probeer het opnieuw."
+    },
+    "salle": {
+      "titre": "Spel aangemaakt!",
+      "codeLabel": "Spelcode",
+      "scan": "Laat iedereen deze QR-code scannen, of stuur de code of de link. Iedereen doet mee vanaf de eigen telefoon.",
+      "copier": "Link kopiëren",
+      "copie": "Link gekopieerd!",
+      "envoyer": "Link versturen",
+      "joueurs": "Spelers",
+      "aucun": "Er is nog niemand. Even wachten tot iedereen gescand heeft…",
+      "vous": "jij",
+      "mj": "spelleider",
+      "couplesTitre": "De koppels",
+      "couplesAide": "Tik op twee namen om een koppel te maken, of laat het spel de koppels maken in volgorde van binnenkomst.",
+      "auto": "Koppels maken in volgorde van binnenkomst",
+      "defaire": "Ongedaan maken",
+      "retirer": "Verwijderen",
+      "sansCouple": "Nog niet in een koppel",
+      "couple": "Koppel {{n}}",
+      "nb": "Aantal vragen",
+      "nbAide": "Bij de laatste vraag kun je nog verlengen.",
+      "commencer": "Spel starten",
+      "manque": "Je hebt minstens 2 koppels nodig om het spel te starten.",
+      "pasAssigne": "{{n}} speler(s) zonder koppel: maak de koppels of verwijder ze.",
+      "unSeul": "Met maar één koppel heeft het spel geen zin: je hebt minstens nog een koppel nodig. Met z'n tweeën zijn deze tests voor jullie gemaakt:",
+      "attente": "Wachten op de spelleider…",
+      "attenteTexte": "{{mj}} maakt de koppels en start het spel zodra iedereen er is.",
+      "avec": "Je speelt met {{nom}}",
+      "pasEncore": "De spelleider heeft je nog niet in een koppel gezet.",
+      "arrives": "Er zijn al:"
+    },
+    "partie": {
+      "question": "Vraag {{n}}/{{total}}",
+      "accord": "Raadronde",
+      "speciale": "Speciale ronde",
+      "toi": "Antwoord voor jezelf. {{nom}} moet raden wat je antwoordt!",
+      "devine": "Raad wat {{nom}} gaat antwoorden!",
+      "vote": "Iedereen stemt op een koppel, het eigen koppel ook.",
+      "enregistre": "Antwoord opgeslagen!",
+      "attente": "Wachten op de anderen… {{n}}/{{total}} hebben geantwoord.",
+      "attenteMj": "De spelleider onthult de antwoorden als iedereen heeft geantwoord.",
+      "mjReponses": "{{n}}/{{total}} hebben geantwoord",
+      "mjTous": "Iedereen heeft geantwoord!",
+      "reveler": "Antwoorden onthullen",
+      "revelerQuandMeme": "Onthullen zonder te wachten",
+      "passer": "Deze vraag overslaan",
+      "spectateur": "Jij leidt het spel: de spelers antwoorden op hun telefoon.",
+      "manquent": "Nog niet geantwoord: {{noms}}"
+    },
+    "revele": {
+      "titre": "De antwoorden",
+      "accordOui": "Hetzelfde antwoord: +1 punt!",
+      "accordNon": "Mis, niet hetzelfde antwoord.",
+      "serie": "Reeks van {{n}}: +1 bonuspunt!",
+      "aRepondu": "{{nom}} antwoordde: {{r}}",
+      "pensait": "{{nom}} dacht: {{r}}",
+      "sansReponse": "geen antwoord",
+      "couplesOk": "De koppels die het goed hadden",
+      "aucun": "Geen enkel koppel had het goed deze keer!",
+      "tous": "Alle koppels hadden het goed!",
+      "votes": "{{n}} stemmen",
+      "gagnant": "{{couple}} wint de titel ‘{{titre}}’: +2 punten!",
+      "egalite": "Gelijkspel: +1 punt voor {{couples}}.",
+      "aucunVote": "Niemand heeft gestemd.",
+      "suivant": "Volgende vraag",
+      "attenteMj": "Wachten tot de spelleider verdergaat…",
+      "scores": "De scores",
+      "derniereTitre": "Dat was de laatste vraag!",
+      "prolonger": "Verlengen met {{n}} vragen",
+      "prolongerAide": "Er zijn nog {{n}} vragen over.",
+      "terminer": "Uitslag bekijken",
+      "derniereJoueur": "Laatste vraag: de spelleider kan het spel verlengen of de uitslag laten zien.",
+      "vote": "1 stem"
+    },
+    "fin": {
+      "titre": "De uitslag van de avond",
+      "sousTitre": "{{n}} vragen, {{couples}} koppels, en maar één podium.",
+      "podium": "Het podium",
+      "gagnant": "{{couple}} wint de avond!",
+      "egalite": "Gelijk aan kop: {{couples}}!",
+      "accords": "{{n}} keer goed op {{total}}",
+      "serieMax": "beste reeks: {{n}}",
+      "titres": "Titels",
+      "aucunTitre": "Geen titel, wel een topavond",
+      "rejouer": "Opnieuw spelen met dezelfde spelers",
+      "nouvelle": "Nieuw spel",
+      "attenteRejouer": "De spelleider kan een nieuw spel starten met dezelfde spelers.",
+      "points": "{{n}} pnt",
+      "point": "1 pnt"
+    },
+    "bandeau": {
+      "mj": "Jij bent de spelleider · code {{code}}",
+      "joueur": "Spel {{code}} · spelleider: {{mj}}",
+      "mjParti": "De spelleider heeft geen verbinding meer. We wachten tot die terug is…",
+      "mjRevenu": "De spelleider is terug!",
+      "coupure": "Verbinding verbroken. We proberen het opnieuw…",
+      "quitter": "Stoppen",
+      "quitterTexte": "Stoppen met het spel? De anderen spelen zonder jou verder.",
+      "annulerTexte": "Het spel voor iedereen annuleren?",
+      "oui": "Ja",
+      "non": "Nee, doorgaan",
+      "annulee": "De spelleider heeft het spel geannuleerd.",
+      "retire": "De spelleider heeft je uit het spel gehaald.",
+      "retour": "Terug naar het spel",
+      "deconnecte": "geen verbinding"
+    },
+    "partage": {
+      "texte": "Doe mee met ons partyspel voor koppels op Quiz Couple! Code {{code}}: {{lien}}"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "toi": "Bij het wakker worden ben je meestal:",
+      "lui": "Bij het wakker worden is {{nom}} meestal:",
+      "options": [
+        "Meteen goedgehumeurd",
+        "Pas aanspreekbaar na de koffie",
+        "Niet te benaderen voor 12 uur",
+        "Niet uit bed te krijgen"
+      ]
+    },
+    {
+      "id": 2,
+      "toi": "De serie van dit moment kijk je:",
+      "lui": "De serie van dit moment kijkt {{nom}}:",
+      "options": [
+        "Braaf één aflevering per avond",
+        "Minstens drie achter elkaar",
+        "Met de telefoon in de hand",
+        "Er loopt nu geen serie"
+      ]
+    },
+    {
+      "id": 3,
+      "toi": "In een restaurant bestel je:",
+      "lui": "In een restaurant bestelt {{nom}}:",
+      "options": [
+        "Altijd hetzelfde gerecht",
+        "Het gekste wat er op de kaart staat",
+        "Pas na het advies van de hele tafel",
+        "Eén gerecht, en een vork in het bord van de ander"
+      ]
+    },
+    {
+      "id": 4,
+      "toi": "Je droomvakantie:",
+      "lui": "De droomvakantie van {{nom}}:",
+      "options": [
+        "Een strand en verder niks",
+        "Een grote stad om te ontdekken",
+        "De bergen en lange wandelingen",
+        "Een roadtrip zonder planning"
+      ]
+    },
+    {
+      "id": 5,
+      "toi": "Als je 50 euro over hebt, gaat dat naar:",
+      "lui": "Als {{nom}} 50 euro over heeft, gaat dat naar:",
+      "options": [
+        "Een restaurant",
+        "Kleren",
+        "De spaarrekening",
+        "Niemand weet ooit waarheen"
+      ]
+    },
+    {
+      "id": 6,
+      "toi": "Je favoriete soort film:",
+      "lui": "De favoriete soort film van {{nom}}:",
+      "options": [
+        "Een komedie",
+        "Een actiefilm",
+        "Een liefdesverhaal",
+        "Een enge film"
+      ]
+    },
+    {
+      "id": 7,
+      "toi": "Op een feestje ben je:",
+      "lui": "Op een feestje is {{nom}}:",
+      "options": [
+        "Midden op de dansvloer",
+        "In de keuken, aan het kletsen",
+        "Op de bank met de kat",
+        "Voor middernacht al naar huis"
+      ]
+    },
+    {
+      "id": 8,
+      "toi": "In de auto zing je:",
+      "lui": "In de auto zingt {{nom}}:",
+      "options": [
+        "Een hit uit de jaren 2000",
+        "Rap",
+        "Een Disneyliedje",
+        "Niks, stilte is fijn"
+      ]
+    },
+    {
+      "id": 9,
+      "toi": "Schoonmaken is voor jou:",
+      "lui": "Schoonmaken is voor {{nom}}:",
+      "options": [
+        "Elke dag een beetje",
+        "Eén grote beurt in het weekend",
+        "Pas als je de vloer niet meer ziet",
+        "Het werk van de ander"
+      ]
+    },
+    {
+      "id": 10,
+      "toi": "Je ziet een spin. Je reactie:",
+      "lui": "{{nom}} ziet een spin. De reactie:",
+      "options": [
+        "Een glas en een papiertje, en hup naar buiten",
+        "Zonder nadenken platgeslagen",
+        "Een gil, en hulp!",
+        "Nooit meer die kamer in"
+      ]
+    },
+    {
+      "id": 11,
+      "toi": "Je ideale ontbijt:",
+      "lui": "Het ideale ontbijt van {{nom}}:",
+      "options": [
+        "Zoet: hagelslag of jam",
+        "Hartig: eieren en spek",
+        "Alleen een kop koffie",
+        "Een brunch tot 14 uur"
+      ]
+    },
+    {
+      "id": 12,
+      "toi": "Als je te laat bent:",
+      "lui": "Als {{nom}} te laat is:",
+      "options": [
+        "Meteen een appje",
+        "‘Ik ben er over 5 minuten’",
+        "Niks, we zien wel",
+        "Nooit te laat"
+      ]
+    },
+    {
+      "id": 13,
+      "toi": "Je ideale huisdier:",
+      "lui": "Het ideale huisdier van {{nom}}:",
+      "options": [
+        "Een hond",
+        "Een kat",
+        "Een goudvis",
+        "Geen, dank je"
+      ]
+    },
+    {
+      "id": 14,
+      "toi": "In de bioscoop is je popcorn:",
+      "lui": "In de bioscoop is de popcorn van {{nom}}:",
+      "options": [
+        "Zoet",
+        "Zout",
+        "Op voordat de film begint",
+        "Vervangen door M&M's"
+      ]
+    },
+    {
+      "id": 15,
+      "toi": "Je ergste gewoonte in de auto:",
+      "lui": "De ergste gewoonte van {{nom}} in de auto:",
+      "options": [
+        "Mopperen op andere bestuurders",
+        "De muziek keihard zetten",
+        "Tips geven aan wie er rijdt",
+        "Na vijf minuten in slaap vallen"
+      ]
+    },
+    {
+      "id": 16,
+      "toi": "Je perfecte zondag:",
+      "lui": "De perfecte zondag van {{nom}}:",
+      "options": [
+        "Uitslapen en in pyjama blijven",
+        "Een uitje met familie of vrienden",
+        "Sporten",
+        "Een grote schoonmaak en boodschappen"
+      ]
+    },
+    {
+      "id": 17,
+      "toi": "Je favoriete sociale netwerk:",
+      "lui": "Het favoriete sociale netwerk van {{nom}}:",
+      "options": [
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Geen, de telefoon blijft in de zak"
+      ]
+    },
+    {
+      "id": 18,
+      "toi": "Als iemand je verrast:",
+      "lui": "Als iemand {{nom}} verrast:",
+      "options": [
+        "Tranen van geluk",
+        "Een harde gil",
+        "Een ongemakkelijke glimlach",
+        "De verrassing was al geraden"
+      ]
+    },
+    {
+      "id": 19,
+      "toi": "In de keuken ben je:",
+      "lui": "In de keuken is {{nom}}:",
+      "options": [
+        "Een echte chef",
+        "Prima, maar meer ook niet",
+        "Altijd hetzelfde gerecht",
+        "Liever iets laten bezorgen"
+      ]
+    },
+    {
+      "id": 20,
+      "toi": "Je superkracht, als je mocht kiezen:",
+      "lui": "De superkracht die {{nom}} zou kiezen:",
+      "options": [
+        "Vliegen",
+        "Gedachten lezen",
+        "Onzichtbaar zijn",
+        "De tijd stilzetten"
+      ]
+    },
+    {
+      "id": 21,
+      "toi": "Je drankje aan de bar:",
+      "lui": "Het drankje van {{nom}} aan de bar:",
+      "options": [
+        "Een biertje",
+        "Een cocktail",
+        "Een glas wijn",
+        "Fris of sap"
+      ]
+    },
+    {
+      "id": 22,
+      "toi": "Je raakt je sleutels kwijt:",
+      "lui": "{{nom}} raakt de sleutels kwijt:",
+      "options": [
+        "Nooit",
+        "Eens per maand",
+        "Eens per week",
+        "Nu meteen, waar liggen ze?"
+      ]
+    },
+    {
+      "id": 23,
+      "toi": "Jij en sport:",
+      "lui": "{{nom}} en sport:",
+      "options": [
+        "Lid en altijd aanwezig",
+        "Lid en nooit aanwezig",
+        "Af en toe een wandeling",
+        "Totaal allergisch"
+      ]
+    },
+    {
+      "id": 24,
+      "toi": "Het cadeau dat je geweldig zou vinden:",
+      "lui": "Het cadeau dat {{nom}} geweldig zou vinden:",
+      "options": [
+        "Een verrassingsweekend",
+        "Een technisch snufje",
+        "Een goed restaurant",
+        "Iets handgemaakts"
+      ]
+    },
+    {
+      "id": 25,
+      "toi": "Je exen, op dit moment:",
+      "lui": "De exen van {{nom}}, op dit moment:",
+      "options": [
+        "Nooit meer iets van gehoord",
+        "Af en toe een berichtje",
+        "Nog steeds bevriend",
+        "Overal geblokkeerd"
+      ]
+    },
+    {
+      "id": 26,
+      "toi": "Bij karaoke ben je:",
+      "lui": "Bij karaoke is {{nom}}:",
+      "options": [
+        "Als eerste aan de microfoon",
+        "Pas na twee drankjes aan de microfoon",
+        "In het publiek, helemaal los",
+        "Nergens te vinden"
+      ]
+    },
+    {
+      "id": 27,
+      "toi": "Op het strand ben je:",
+      "lui": "Op het strand is {{nom}}:",
+      "options": [
+        "Meteen in het water",
+        "Op de handdoek, aan het bruinen",
+        "Onder de parasol met een boek",
+        "In de strandtent"
+      ]
+    },
+    {
+      "id": 28,
+      "toi": "Je troostmaaltijd:",
+      "lui": "De troostmaaltijd van {{nom}}:",
+      "options": [
+        "Een bord pasta",
+        "Pizza",
+        "Eten zoals bij oma",
+        "Chocola, en verder niks"
+      ]
+    },
+    {
+      "id": 29,
+      "toi": "Om 's ochtends op te staan heb je nodig:",
+      "lui": "Om 's ochtends op te staan heeft {{nom}} nodig:",
+      "options": [
+        "Eén wekker, meer niet",
+        "Minstens drie alarmen",
+        "Iemand die je door elkaar schudt",
+        "Niks, al wakker voor de wekker"
+      ]
+    },
+    {
+      "id": 30,
+      "toi": "Je favoriete outfit:",
+      "lui": "De favoriete outfit van {{nom}}:",
+      "options": [
+        "Joggingbroek en hoodie",
+        "Spijkerbroek en T-shirt",
+        "Altijd netjes gekleed",
+        "Dezelfde trui al tien jaar"
+      ]
+    },
+    {
+      "id": 31,
+      "toi": "Als je ziek bent:",
+      "lui": "Als {{nom}} ziek is:",
+      "options": [
+        "Op sterven na dood, als je het hoort",
+        "Toch gewoon aan het werk",
+        "In bed met een kopje thee",
+        "Nooit ziek, en dat is verdacht"
+      ]
+    },
+    {
+      "id": 32,
+      "toi": "Een mislukt gerecht in een restaurant, je reactie:",
+      "lui": "Een mislukt gerecht in een restaurant, de reactie van {{nom}}:",
+      "options": [
+        "Meteen terug naar de keuken",
+        "Dezelfde avond nog een Google-review",
+        "Niks, maar nooit meer hier",
+        "Toch alles opgegeten"
+      ]
+    },
+    {
+      "id": 33,
+      "toi": "Jouw kant van het bed:",
+      "lui": "De kant van het bed van {{nom}}:",
+      "options": [
+        "Links",
+        "Rechts",
+        "Het midden, als een zeester",
+        "Elke nacht anders"
+      ]
+    },
+    {
+      "id": 34,
+      "toi": "Bij een gezelschapsspel ben je:",
+      "lui": "Bij een gezelschapsspel is {{nom}}:",
+      "options": [
+        "Superfanatiek",
+        "Er voor de lol",
+        "Degene die de regels leest",
+        "Een slechte verliezer"
+      ]
+    },
+    {
+      "id": 35,
+      "toi": "Je profielfoto:",
+      "lui": "De profielfoto van {{nom}}:",
+      "options": [
+        "Een selfie",
+        "Een vakantiefoto",
+        "Een foto van jullie samen",
+        "Een dier of een tekening"
+      ]
+    },
+    {
+      "id": 36,
+      "toi": "Je onuitputtelijke gespreksonderwerp:",
+      "lui": "Het onuitputtelijke gespreksonderwerp van {{nom}}:",
+      "options": [
+        "Werk",
+        "Sport",
+        "Roddels",
+        "Eten"
+      ]
+    }
+  ],
+  "speciales": [
+    {
+      "id": 101,
+      "q": "Welk koppel is het grootste feestbeest?",
+      "titre": "De feestbeesten"
+    },
+    {
+      "id": 102,
+      "q": "Welk koppel zoent het meest in het openbaar?",
+      "titre": "De tortelduifjes"
+    },
+    {
+      "id": 103,
+      "q": "Welk koppel maakt ruzie over de afstandsbediening?",
+      "titre": "Het koppel van de afstandsbediening"
+    },
+    {
+      "id": 104,
+      "q": "Welk koppel is altijd te laat?",
+      "titre": "De laatkomers"
+    },
+    {
+      "id": 105,
+      "q": "Welk koppel is over vijftig jaar nog samen?",
+      "titre": "Het koppel voor het leven"
+    },
+    {
+      "id": 106,
+      "q": "Welk koppel heeft de beste vakantieverhalen?",
+      "titre": "Het vakantiekoppel"
+    },
+    {
+      "id": 107,
+      "q": "Welk koppel kookt het best?",
+      "titre": "De topkoks"
+    },
+    {
+      "id": 108,
+      "q": "Welk koppel lijkt het meest op elkaar?",
+      "titre": "De tweeling"
+    },
+    {
+      "id": 109,
+      "q": "Welk koppel raakt als eerste de weg kwijt op een roadtrip?",
+      "titre": "Het gps-koppel"
+    },
+    {
+      "id": 110,
+      "q": "Welk koppel post de meeste foto's samen?",
+      "titre": "Het Instagramkoppel"
+    },
+    {
+      "id": 111,
+      "q": "Welk koppel had de romantischste eerste ontmoeting?",
+      "titre": "De liefde op het eerste gezicht"
+    },
+    {
+      "id": 112,
+      "q": "Welk koppel krijgt in z'n eentje een heel buffet op?",
+      "titre": "De lekkerbekken"
+    },
+    {
+      "id": 113,
+      "q": "Welk koppel zou samen Expeditie Robinson winnen?",
+      "titre": "De avonturiers"
+    },
+    {
+      "id": 114,
+      "q": "Welk koppel valt als eerste in slaap bij een film?",
+      "titre": "De slaapkoppen"
+    }
+  ],
+  "section1": {
+    "title": "Een partyspel voor koppels, te spelen met meerdere koppels",
+    "p1": "Het partyspel voor koppels is een spel voor als er meerdere koppels bij elkaar zijn: een etentje met vrienden, een weekend weg met z'n allen, een avond op vakantie. Je speelt het met twee tot vijf koppels, dus met vier tot tien mensen, en iedereen speelt vanaf de eigen telefoon. Er valt niets te installeren: één persoon opent deze pagina, maakt het spel aan, en de anderen doen mee door een QR-code te scannen of een code in te tikken.",
+    "p2": "Het idee is simpel: welk koppel kent elkaar het best? Bij elke vraag antwoordt in elk koppel de een voor zichzelf, en moet de ander dat antwoord raden. Bijvoorbeeld: ‘Bij het wakker worden ben je meestal: meteen goedgehumeurd, pas aanspreekbaar na de koffie, niet te benaderen voor 12 uur, of niet uit bed te krijgen?’ Zijn de twee antwoorden hetzelfde, dan scoort het koppel een punt. En omdat alle koppels tegelijk spelen, zie je meteen wie het goed had en wie de mist in ging… en daar komt altijd discussie van!",
+    "p3": "Tussen de vragen door zijn er speciale rondes waarin iedereen op een koppel stemt: ‘Welk koppel is het grootste feestbeest?’, ‘Welk koppel is altijd te laat?’. Het koppel met de meeste stemmen krijgt twee punten en een titel, die het tot het eindpodium houdt. Het lijkt een beetje op <a href=\"{{quizMost}}\">aanwijzen wie van jullie het koppigst is</a>, maar dan met meerdere koppels, en hier oordelen de andere koppels over jullie."
+  },
+  "section2": {
+    "title": "Zo werkt het",
+    "intro": "Zo verloopt een spel, van de eerste scan tot het podium:",
+    "etapes": [
+      {
+        "titre": "Eén persoon maakt het spel aan",
+        "texte": "Die persoon wordt de spelleider, en kan meespelen of alleen het spel leiden als jullie met een oneven aantal zijn. De pagina geeft een code van zes tekens, een QR-code en een link."
+      },
+      {
+        "titre": "De anderen doen mee",
+        "texte": "Iedereen scant de QR-code of tikt de code in op de eigen telefoon, vult een voornaam in en komt in de wachtruimte. Maximaal tien spelers in totaal."
+      },
+      {
+        "titre": "De spelleider maakt de koppels",
+        "texte": "Die tikt op twee namen om ze bij elkaar te zetten, of laat het spel de koppels maken in volgorde van binnenkomst. De spelleider kiest ook het aantal vragen: 10, 20, 30 of 40."
+      },
+      {
+        "titre": "Spelen, en verlengen als je wilt",
+        "texte": "Bij elke vraag antwoordt iedereen op de eigen telefoon, en daarna onthult de spelleider de antwoorden. Bij de laatste vraag kan de spelleider het spel met tien vragen verlengen, zolang er nog vragen over zijn."
+      }
+    ],
+    "apres": "Aan het eind toont elke telefoon het podium: de punten, hoe vaak elk koppel het goed had, de beste reeks en de titels uit de speciale rondes. De uitslag blijft in beeld, dus je kunt hem aan de hele tafel laten zien."
+  },
+  "section3": {
+    "title": "Twee soorten rondes",
+    "accordTitre": "De raadrondes: kennen jullie elkaar?",
+    "accordTexte": "Dit is de kern van het spel. In elk koppel antwoordt de een voor zichzelf, en moet de ander raden wat er gekozen is. De rollen wisselen bij elke vraag, dus jullie raden om de beurt. Een punt per goed antwoord, en een bonuspunt als een koppel drie keer achter elkaar goed raadt. De vragen gaan over het dagelijks leven, niet over grote onderwerpen: het ontbijt, de kant van het bed, de kwijtgeraakte sleutels, de reactie op een spin… Dingen dus die je hoort te weten over degene met wie je samenwoont, en die je niet altijd weet!",
+    "specialeTitre": "De speciale rondes: de andere koppels stemmen",
+    "specialeTexte": "Eén op de vier vragen is een speciale ronde. Iedereen stemt op een koppel, het eigen koppel ook, en het koppel met de meeste stemmen krijgt twee punten en een titel. Een paar voorbeelden:",
+    "exemples": [
+      "Welk koppel is het grootste feestbeest?",
+      "Welk koppel zoent het meest in het openbaar?",
+      "Welk koppel is over vijftig jaar nog samen?",
+      "Welk koppel raakt als eerste de weg kwijt op een roadtrip?",
+      "Welk koppel valt als eerste in slaap bij een film?"
+    ],
+    "apres": "Bij een gelijkspel delen de koppels die gelijk staan een punt, en krijgt niemand de titel. De titels staan op het eindpodium, en uit ervaring is dat waar iedereen de volgende dag nog over praat."
+  },
+  "seul": {
+    "title": "Zijn jullie vanavond maar met z'n tweeën?",
+    "texte": "Dan heb je niets aan dit spel: het heeft minstens twee koppels nodig, anders stemt er niemand en vergelijkt er niemand. Met z'n tweeën kunnen jullie het best <a href=\"{{testCouple}}\">om de beurt dezelfde vragen beantwoorden</a> om te zien of jullie hetzelfde zeggen, <a href=\"{{testCommonPoints}}\">tellen wat jullie allemaal gemeen hebben</a>, of <a href=\"{{jeuQuiDeNous}}\">aanwijzen wie van jullie wat doet</a>. En willen jullie gewoon wat lachen op de bank, dan spelen <a href=\"{{jeuxCouple}}\">de andere spellen</a> allemaal op één telefoon."
+  },
+  "section4": {
+    "title": "Onze tips voor een geslaagde avond",
+    "p1": "Start het spel na het eten, niet ervoor: de speciale rondes werken beter als iedereen ontspannen is en de vakantieverhalen al verteld zijn. Reken op een minuut of twintig voor 20 vragen met drie koppels, iets langer met vijf koppels, want je wacht altijd op degene die een fles is gaan halen.",
+    "p2": "De spelleider hoeft niet op iedereen te wachten. Mist er een antwoord, dan kan die onthullen zonder te wachten, en telt de speler die te laat is als mis. Een vraag die niemand iets zegt, kan de spelleider ook overslaan. En valt iemands verbinding weg, dan herlaadt die de pagina en krijgt die de eigen plek in het spel terug.",
+    "p3": "Een laatste tip: met twee koppels werkt het ook prima, maar de speciale rondes eindigen dan vaak in een gelijkspel. Vanaf drie koppels is er altijd een stem die de doorslag geeft, en dan worden de titels pas grappig."
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Hoeveel spelers heb je nodig?",
+    "a1": "Minstens twee koppels, dus vier spelers, en hooguit vijf koppels, dus tien spelers. Zijn jullie met een oneven aantal, dan maakt één persoon het spel aan en leidt die het alleen: die antwoordt niet, maar start wel de vragen en onthult de antwoorden.",
+    "q2": "Moet je iets installeren of een account aanmaken?",
+    "a2": "Nee. Alles gebeurt in de browser van de telefoon. De spelleider opent deze pagina en maakt het spel aan, de anderen scannen de QR-code of tikken de code in. Je hoeft geen account aan te maken.",
+    "q3": "Werkt het als je niet in dezelfde ruimte bent?",
+    "a3": "Ja, het spel loopt via internet en niet via bluetooth: iedereen kan tegelijk van thuis uit spelen, bijvoorbeeld tijdens een videogesprek. Maar rond een tafel is het toch het leukst, want dan zie je het gezicht van wie het fout had.",
+    "q4": "Hoe worden de koppels gemaakt?",
+    "a4": "De spelleider maakt ze door in de wachtruimte op twee namen te tikken, of laat het spel ze maken in volgorde van binnenkomst. Een speler zonder koppel kan niet meespelen: de spelleider moet die in een koppel zetten of verwijderen voordat het spel start.",
+    "q5": "Kun je het spel verlengen?",
+    "a5": "Ja. De spelleider kiest aan het begin het aantal vragen, 10, 20, 30 of 40, en bij de laatste vraag stelt de pagina voor om met tien vragen te verlengen, zolang er nog vragen over zijn. Een spel stopt bij hooguit 40 vragen.",
+    "q6": "Waarom heb je een e-mailadres nodig om de uitslag te zien?",
+    "a6": "Het podium staat achter een klein poortje: iedereen laat op de eigen telefoon één keer een e-mailadres achter, en alle uitslagen van de site gaan open op dat toestel. We gebruiken het om nieuwtjes en tips van Quiz Couple te sturen, en je meldt je met één klik af."
+  }
+}
