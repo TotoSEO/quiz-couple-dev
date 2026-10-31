@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Quiz Couple · Blog</title>
+    <link>https://quiz-couple.com/nl/blog/</link>
+    <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
+    <language>nl</language>
+    <lastBuildDate>Sat, 31 Oct 2026 06:00:00 GMT</lastBuildDate>
+    <image>
+      <url>https://quiz-couple.com/apple-touch-icon.png</url>
+      <title>Quiz Couple · Blog</title>
+      <link>https://quiz-couple.com/nl/blog/</link>
+    </image>
+    <item>
+      <title>Red flags bij een man: de lijst met 13 signalen om serieus te nemen</title>
+      <link>https://quiz-couple.com/nl/blog/red-flags-bij-een-man/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/red-flags-bij-een-man/</guid>
+      <pubDate>Sat, 31 Oct 2026 06:00:00 GMT</pubDate>
+      <category>Relatie</category>
+      <description>De lijst met 13 red flags bij een man, van de stilste tot de ernstigste, met voor elk een voorbeeld uit het dagelijks leven en wat het voor later betekent.</description>
+      <media:content url="https://quiz-couple.com/blog/red-flags-homme.webp" medium="image" type="image/webp" width="1200" height="800"/>
+    </item>
+  </channel>
+</rss>
