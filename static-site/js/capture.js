@@ -31,13 +31,10 @@
   var DUREE = 730 * 24 * 3600 * 1000;
   var FONCTION = 'https://lojvajnnvhatfplevyvy.supabase.co/functions/v1/lead-capture';
   var lang = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
-  // Le néerlandais, ouvert le 31 octobre 2026, n'a pas encore ses e-mails
-  // (lot 8 de docs/langues/CADRAGE-NL.md) ni sa place dans abonnes : une
-  // adresse laissée sur une page /nl/ est rangée en anglais, que les
-  // Néerlandais et les Flamands lisent bien mieux que le français. On retire
-  // cette ligne le jour où le serveur accepte « nl ».
-  if (lang === 'nl') lang = 'en';
-  if (['fr', 'en', 'es', 'de', 'it'].indexOf(lang) < 0) lang = 'fr'; // langues: sans-nl (le serveur n'accepte que ces cinq-là)
+  // Les langues que lead-capture accepte (LANGUES de abonnes/regles.mjs) ;
+  // le néerlandais depuis le 31 octobre 2026, avec ses e-mails (rangé en
+  // anglais du 31 octobre au matin jusque-là).
+  if (['fr', 'en', 'es', 'de', 'it', 'nl'].indexOf(lang) < 0) lang = 'fr';
   // La même forme que le serveur, en plus simple : le serveur tranche.
   var EMAIL_RE = /^[^\s@]+@([a-z0-9-]+\.)+[a-z]{2,24}$/i;
   // Les fautes de frappe des grands fournisseurs : on propose, on n'impose pas.

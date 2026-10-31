@@ -12,7 +12,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { TYPES, LANGUES, ANGLES, VERSIONS, campagne, attributsContact, pourContact } from './contenu.mjs';
 
-const PRENOMS = { fr: 'Julie', en: 'Emma', es: 'Lucía', de: 'Anna', it: 'Giulia' };
+const PRENOMS = { fr: 'Julie', en: 'Emma', es: 'Lucía', de: 'Anna', it: 'Giulia', nl: 'Sanne' };
 
 export function apercus(dossier, instant = new Date()) {
   mkdirSync(dossier, { recursive: true });

@@ -3233,7 +3233,7 @@
     vacances: 'Vacances à deux', coquin: 'Quiz coquin', connaissance: 'Connaissance du partenaire', genant: 'Couple gênant',
     soiree: 'Jeu de soirée (plusieurs couples)'
   };
-  var LANGUES_ABONNES = ['fr', 'en', 'es', 'de', 'it'];
+  var LANGUES_ABONNES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
   function libelleSourceAbonnes(src) { return SOURCES_ABONNES[src] || String(src || ''); }
   function nombreAb(n) { return (Number(n) || 0).toLocaleString('fr-FR'); }
   function statutAbonne(st) {

@@ -29,9 +29,10 @@
 //
 // Ce qui est contrôlé : la forme stricte de l'adresse, les fournisseurs
 // jetables, le domaine (un enregistrement MX ou A, tolérant quand le DNS ne
-// répond pas), le consentement coché, la langue parmi les cinq, la source
-// (l'id de la page), trente envois par heure et par adresse IP (mémoire de la
-// fonction, repart à zéro à chaque redémarrage), un pot de miel (`hp`,
+// répond pas), le consentement coché, la langue parmi les six (LANGUES de
+// abonnes/regles.mjs), la source (l'id de la page), trente envois par heure
+// et par adresse IP (mémoire de la fonction, repart à zéro à chaque
+// redémarrage), un pot de miel (`hp`,
 // rempli seulement par les robots : on répond ok sans rien garder), et une
 // taille de corps bornée. Pas de code de validation par e-mail (plan Resend
 // de cent envois par jour) : voir _shared/abonnes/regles.mjs.

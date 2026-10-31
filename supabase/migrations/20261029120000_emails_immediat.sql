@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS public.emails_modeles (
   PRIMARY KEY (type, lang, version),
   CONSTRAINT emails_modeles_bornes CHECK (
     type IN ('e1', 'e2')
-    AND lang IN ('fr', 'en', 'es', 'de', 'it')
+    AND lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
     AND version IN ('a', 'b')
     AND char_length(sujet) <= 300
     AND char_length(html) <= 300000
@@ -118,7 +118,7 @@ AS $$
       (SELECT CASE WHEN COALESCE(r.valeur->>'actif', 'false') = 'true' AND jsonb_typeof(r.valeur->'langues') = 'array'
                    THEN r.valeur->'langues' END
          FROM public.emails_reglages r WHERE r.cle = 'immediat'),
-      '["fr", "en", "es", "de", "it"]'::jsonb) AS langues
+      '["fr", "en", "es", "de", "it", "nl"]'::jsonb) AS langues
   ),
   evaluations AS (
     SELECT lower(x.e) AS email FROM (
@@ -161,7 +161,8 @@ AS $$
                       WHERE ev.abonne_id = c.id
                         AND COALESCE(ev.envoye_le, ev.cree_le) > p_maintenant - interval '44 hours')
    ORDER BY c.priorite,
-            CASE c.lang WHEN 'en' THEN 1 WHEN 'fr' THEN 2 WHEN 'it' THEN 3 WHEN 'de' THEN 4 ELSE 5 END,
+            -- le néerlandais (31 octobre 2026) avant l'espagnol, qui reste le dernier
+            CASE c.lang WHEN 'en' THEN 1 WHEN 'fr' THEN 2 WHEN 'it' THEN 3 WHEN 'de' THEN 4 WHEN 'nl' THEN 5 ELSE 6 END,
             c.depuis DESC, c.id
    LIMIT GREATEST(0, LEAST(COALESCE(p_limite, 0), 5000));
 $$;

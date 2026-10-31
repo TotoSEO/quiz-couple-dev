@@ -1,0 +1,122 @@
+{
+  "salutation": {
+    "prenom": "Hoi [[prenom]]!",
+    "sans": "Hoi!"
+  },
+  "signature": [
+    "Tot snel,",
+    "Thomas, van Quiz Couple"
+  ],
+  "pastille": "Tests · Quizzen · Spelletjes",
+  "altMascottes": "De mascottes van Quiz Couple zwaaien naar je",
+  "voir": {
+    "titre": "Ook leuk op [[marque]]!",
+    "aller": "Ik ga kijken →",
+    "cartes": [
+      {
+        "route": "testLangageAmour",
+        "image": "voir-langage-amour.png",
+        "type": "Test",
+        "titre": "Wat is jouw liefdestaal?",
+        "texte": "30 vragen om te zien hoe ieder van jullie liefde geeft."
+      },
+      {
+        "route": "quizKnowledge",
+        "image": "voir-qui-connait.png",
+        "type": "Quiz",
+        "titre": "Wie kent de ander het best?",
+        "texte": "Het kleine duel om te zien wie het best luistert."
+      },
+      {
+        "route": "quizTuPreferes",
+        "image": "voir-tu-preferes-nl.png",
+        "type": "Spel",
+        "titre": "Zou je liever?",
+        "texte": "100 onmogelijke keuzes om samen uit te vechten."
+      }
+    ]
+  },
+  "instagram": {
+    "titre": "Zien we je op Instagram?",
+    "texte": "Elke dag een kleine quiz, om samen te doen."
+  },
+  "pied": {
+    "pourquoi": "Je krijgt deze e-mail omdat je je adres hebt achtergelaten aan het eind van een test op quiz-couple.com, en akkoord ging met onze tips en nieuwtjes.",
+    "desinscription": "Afmelden",
+    "editeur": "Quiz Couple · Visibilitea",
+    "mentions": "Juridische informatie"
+  },
+  "e1": {
+    "sujet": "100 vragen om samen te kijken waar jullie staan",
+    "apercu": "Ieder antwoordt op de eigen telefoon, daarna laat een rapport zien waar jullie het eens zijn.",
+    "titre": "Kijk samen waar jullie staan, zonder therapeut",
+    "intro": {
+      "score": "Bedankt dat je een test hebt gedaan op Quiz Couple! Wil je weten waar jullie het allebei over eens zijn, en waarover niet? Daar hebben we iets veel uitgebreiders voor gemaakt: de relatiecheck.",
+      "projet": "Bedankt dat je een test hebt gedaan op Quiz Couple! Voor een grote stap is het slim om te checken of jullie allebei hetzelfde willen. Daar is de relatiecheck voor.",
+      "doute": "Bedankt dat je een test hebt gedaan op Quiz Couple. Als je twijfelt over je relatie, helpt het al veel om er woorden aan te geven. Daar is de relatiecheck voor.",
+      "general": "Bedankt dat je Quiz Couple volgt! Wil je weten waar jullie het allebei over eens zijn, en waarover niet? Daarvoor hebben we onze meest complete test gemaakt: de relatiecheck."
+    },
+    "points": [
+      "**100 vragen** over 12 thema's: geld, kinderen, intimiteit, ruzies...",
+      "**Ieder antwoordt op de eigen telefoon**, zonder de antwoorden van de ander te zien",
+      "**Vragen die steunen op onderzoek**: meer dan 30 studies over relaties",
+      "**Aan het eind een rapport** dat jullie antwoorden vergelijkt en zegt waar jullie het eerst over moeten praten"
+    ],
+    "solo": "Wil je partner niet meedoen? [Je kunt de relatiecheck ook alleen doen](solo).",
+    "prixPhrase": {
+      "promo": "Nu [[pourcent]]% korting, automatisch toegepast bij het betalen",
+      "normal": "Voor jullie samen, in één keer"
+    },
+    "bouton": "Bekijk hoe het werkt",
+    "note": "De vragen zijn gratis: je betaalt aan het eind, één keer voor jullie samen.",
+    "ps": "**PS:** [[accroche]]"
+  },
+  "e2": {
+    "sujet": "Een gezamenlijke rekening of ieder zijn eigen geld?",
+    "apercu": {
+      "promo": "Een van de 100 vragen van de relatiecheck, nu met [[pourcent]]% korting.",
+      "normal": "Een van de 100 vragen van de relatiecheck. Wat zou jij antwoorden?"
+    },
+    "titre": "Zouden jullie hetzelfde antwoorden?",
+    "intro": {
+      "score": "Een paar dagen geleden vertelde ik je over de relatiecheck. Dit is een van de 100 vragen:",
+      "projet": "Een paar dagen geleden vertelde ik je over de relatiecheck. Dit is een van de 100 vragen:",
+      "doute": "Een paar dagen geleden vertelde ik je over de relatiecheck. Dit is een van de 100 vragen:",
+      "general": "Een paar dagen geleden vertelde ik je over de relatiecheck. Dit is een van de 100 vragen:"
+    },
+    "exemple": "Ieder antwoordt voor zich. Kiezen jullie hetzelfde antwoord, dan is dat een overeenkomst. Zegt de een “[[reponseA]]” en de ander “[[reponseB]]”, dan legt het rapport uit waarom dat ertoe doet en krijgen jullie vragen om erover te praten.",
+    "aussi": "In het rapport staat ook:",
+    "points": [
+      "**De beslissende onderwerpen** apart uitgelicht: die wegen het zwaarst in een relatie",
+      "**4 gesprekken om te voeren**, met vragen om op gang te komen",
+      "**Hoe ieder van jullie** de relatie op dit moment beleeft"
+    ],
+    "solo": "[De relatiecheck kan ook alleen](solo), als je partner niet wil meedoen.",
+    "prixPhrase": {
+      "promo": "Dat is [[prixChacun]] per persoon: minder dan een bioscoopkaartje",
+      "normal": "Dat is [[prixChacun]] per persoon: minder dan een bioscoopkaartje"
+    },
+    "bouton": "Doe de relatiecheck",
+    "note": "Ter vergelijking: een sessie bij een relatietherapeut kost al snel 60 euro of meer."
+  },
+  "sobre": {
+    "expediteur": "Thomas van Quiz Couple",
+    "signature": [
+      "Tot snel,",
+      "Thomas"
+    ],
+    "prix": {
+      "promo": "De vragen zijn gratis, en het rapport kost nu [[prix]] voor jullie samen, in plaats van [[prixBase]].",
+      "normal": "De vragen zijn gratis, en het rapport kost [[prix]] voor jullie samen."
+    },
+    "solo": "De relatiecheck kan ook alleen, als je partner niet wil meedoen.",
+    "e1": {
+      "texte": "Jullie beantwoorden allebei 100 vragen, ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Het gaat over geld, kinderen, ruzies, intimiteit... Aan het eind vergelijkt een rapport jullie antwoorden en zegt het waar jullie het eerst over moeten praten.",
+      "lien": "Hier wordt alles uitgelegd: [bekijk de relatiecheck](evaluation).",
+      "reponse": "Heb je een vraag? Dan kun je gewoon op deze e-mail antwoorden."
+    },
+    "e2": {
+      "lien": "Zin om het te proberen? [Doe de relatiecheck](evaluation)."
+    }
+  }
+}

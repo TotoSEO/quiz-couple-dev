@@ -25,12 +25,16 @@ import { PRIX_CENTIMES, PROMO_POURCENT, PROMO_CODE, prixPromo, promoEnCours } fr
 export const TYPES = ['e1', 'e2'];
 export const ANGLES = ['score', 'projet', 'doute', 'general'];
 // Les langues du parcours : celles du site qui ont leurs textes
-// (emails/textes/<langue>.json). Une langue ajoutée au site avant ses textes
+// (emails/textes/<langue>.json) et dont le dossier est là (la question de
+// l'e2 et le PS viennent de <langue>/bilan-questions.json et bilan.json : les
+// workflows qui envoient récupèrent donc les dossiers des langues, chacun le
+// sien dans sa liste sparse-checkout). Une langue à qui il manque un fichier
 // reste hors du parcours au lieu de le faire planter : du 30 au 31 octobre
 // 2026, `LANGUES = LANGUAGES` faisait lire emails/textes/nl.json, qui
 // n'existait pas, et l'envoi du soir échouait au chargement (aucun e1 ni e2,
 // et l'e1 immédiat coupé quand ses modèles ont expiré).
-export const LANGUES = LANGUAGES.filter((l) => existsSync(new URL(`./textes/${l}.json`, import.meta.url)));
+const present = (chemin) => existsSync(new URL(chemin, import.meta.url));
+export const LANGUES = LANGUAGES.filter((l) => present(`./textes/${l}.json`) && present(`../${l}/bilan-questions.json`) && present(`../${l}/bilan.json`));
 export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}', '{{ unsubscribe }}'];
 // Les deux versions du test A/B (REGLAGES.ab) : « a » la maquette de Claude
 // Design, « b » l'e-mail sobre signé de Thomas (emails/sobre.html).
@@ -103,7 +107,7 @@ export function typo(texte, lang) {
 }
 
 export function formatPrix(centimes, lang) {
-  const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' }[lang] || 'fr-FR';
   return new Intl.NumberFormat(bcp, { style: 'currency', currency: 'EUR' })
     .format(centimes / 100).replace(/ /g, ' ');
 }

@@ -81,6 +81,7 @@ export const REGLAGES = {
   // suivant, ou tout de suite par l'action « installer » de
   // brevo-reglages.yml. Le mode « arret » arrête aussi l'envoi immédiat.
   // Depuis le même jour, la file du soir ne garde un e1 que sept jours après
-  // l'adresse (migration 20261029120000_emails_immediat.sql).
-  immediat: { actif: true, parJour: 180, langues: ['en', 'fr', 'it', 'de'] },
+  // l'adresse (migration 20261029120000_emails_immediat.sql). Le néerlandais
+  // depuis le 31 octobre 2026 (emails/textes/nl.json), au prix habituel.
+  immediat: { actif: true, parJour: 180, langues: ['en', 'fr', 'it', 'de', 'nl'] },
 };

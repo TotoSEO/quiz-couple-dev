@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS public.emails_envois (
   CONSTRAINT emails_envois_bornes CHECK (
     type IN ('e1', 'e2')
     AND angle IN ('score', 'projet', 'doute', 'general')
-    AND lang IN ('fr', 'en', 'es', 'de', 'it')
+    AND lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
     AND statut IN ('prepare', 'envoye')
   )
 );
