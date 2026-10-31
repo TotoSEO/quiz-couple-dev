@@ -354,6 +354,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/nl/hoe-lang-zijn-we-samen/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/compteur-de-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/relationship-counter/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/contador-de-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/beziehungszaehler/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/contatore-di-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/hoe-lang-zijn-we-samen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/compteur-de-couple/"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/nl/relatiecheck/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/evaluation-de-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/relationship-assessment/"/>
