@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels) ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen) ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1358,7 +1358,46 @@ le met à jour dans la PR de chaque lot.
   jouée jusqu'à la victoire, puis la dernière carte du perdant
   (`joue-boutons.cjs`, scratchpad de la session).
 
+## Lot 6d (31 octobre 2026) : qui de nous deux, qui pourrait
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/wie-van-ons-twee/` | Wie van ons twee? Gratis spel voor koppels, met z'n tweeën | Wie van ons twee? Het spel met de geheime stemming |
+  | `/nl/wie-zou-eerder-vragen/` | Wie zou eerder vragen: het spel voor koppels, 108 vragen | Wie zou eerder? Het spel voor koppels met 100+ vragen |
+
+- **Les moteurs** : les 80 questions et les textes de « wie van ons twee »
+  (`quiDeNous`, gd.json et quizGames.json ; les questions sont la fin de «
+  Wie van jullie twee… »), les 108 questions et les textes de « wie zou
+  eerder » (`quiPourrait` ; chaque question finit la phrase « Wie zou
+  eerder … ? », verbe à l'infinitif en dernier). Comme en allemand
+  (« Wer würde eher »), le jeu prend le nom que les gens tapent, « wie zou
+  eerder », et non la traduction de « qui pourrait ».
+- **Corrigé dans les cinq langues publiques** : la description et la
+  meta du « qui de nous deux » annonçaient 40 questions ; le jeu en a 80
+  (quatre thèmes de vingt), ce que la page dit déjà. Les cartes qui
+  reprennent cette description changent avec elle (40 pages construites).
+- **Ce que le néerlandais dit autrement** : la FAQ de « wie van ons twee »
+  (« deux, et un seul téléphone ») et celle de « wie zou eerder » (chacun
+  ouvre le jeu de son côté et on compare à la fin) datent d'avant le mode à
+  distance, que les deux jeux ont désormais : le néerlandais parle de la
+  façon de le lancer. Le français et les autres langues gardent l'ancienne
+  réponse, pas fausse, à reprendre si Thomas le souhaite.
+- **Les liens** : « een test over jullie relatie » (relatietest) et « in de
+  eerste weken van een relatie » (vragen eerste date) ajoutés à « wie van
+  ons twee », qui n'en avait aucun en français ; « ieder in het geheim een
+  van jullie aanwijst », « andere spelletjes om met z'n tweeën te doen » et
+  « Ik heb nog nooit » depuis « wie zou eerder ».
+- **Vérifié** : une partie entière de chaque jeu, jusqu'au score
+  d'harmonie et jusqu'au verdict (`joue-boutons.cjs`).
+
 ## Les chiffres
+
+Au lot 6d : `textes nl` 794 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (72 pages traduites) ; les deux jeux vont jusqu'à leur
+résultat. Les pages publiques ne changent que par le nombre de questions
+du « qui de nous deux » (40 devient 80), dans les cinq langues.
 
 Au lot 6c : `textes nl` 772 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (70 pages traduites) ; la roue et le plateau vont au bout.

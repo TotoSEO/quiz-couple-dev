@@ -256,6 +256,12 @@
     "description": "70 ondeugende kaarten om met z'n tweeën te spelen, van suggestief tot heel direct.",
     "metaDescription": "Waarheid of durven 18+ online: 70 kaarten van suggestief tot heel direct, en jullie kiezen zelf. Gratis, zonder account, voor vanavond met z'n tweeën."
   },
+  "jeuQuiDeNous": {
+    "title": "Wie van ons twee? Gratis spel voor koppels, met z'n tweeën",
+    "shortTitle": "Wie van ons twee",
+    "metaDescription": "Wie van ons twee: ieder stemt in het geheim en ziet dan het antwoord van de ander. 80 vragen, een harmoniescore en veel discussie. Gratis, zonder account.",
+    "description": "Ieder stemt in het geheim, de twee antwoorden worden tegelijk onthuld: 80 vragen en een harmoniescore."
+  },
   "testFinCouple": {
     "title": "Is mijn relatie voorbij? De test in 24 eerlijke vragen",
     "shortTitle": "Is mijn relatie voorbij?",
@@ -334,6 +340,13 @@
     "metaTitle": "Crush test: is het liefde of een crush? (35 vragen)",
     "metaDescription": "Crush test in 35 vragen: is het een bevlieging, een crush of ben je verliefd? De vragen passen zich aan, of je crush nu een jongen of een meisje is.",
     "description": "Antwoord op basis van wat je voelt, de score maakt het onderscheid tussen aantrekking, een crush en verliefde gevoelens."
+  },
+  "jeuQuiPourrait": {
+    "title": "Wie zou eerder vragen: het spel voor koppels, 108 vragen",
+    "shortTitle": "Wie zou eerder?",
+    "metaTitle": "Wie zou eerder vragen: het spel voor koppels, 108 vragen",
+    "metaDescription": "Wie zou eerder vragen voor koppels: een vraag, jullie twee namen, en jullie wijzen aan wie het zou doen. 108 vragen, spellen van 20, 40 of 60, gratis.",
+    "description": "Er verschijnt een vraag en jullie wijzen aan wie het zou doen: een van jullie twee, of niemand."
   },
   "testAimeEncore": {
     "title": "Houdt hij nog van mij? Of zij? De test in 20 vragen",

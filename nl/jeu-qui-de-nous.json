@@ -1,0 +1,73 @@
+{
+  "jsonLd": {
+    "name": "Wie van ons twee?"
+  },
+  "hero": {
+    "badge": "Met z'n tweeën, op één telefoon",
+    "title": "Wie van ons twee? Het spel met de geheime stemming",
+    "titleHighlight": "geheime stemming",
+    "description": "Twee manieren van spelen: ieder stemt stiekem en jullie onthullen tegelijk, of jullie wijzen samen hardop iemand aan. In beide gevallen ontdekken jullie hoe hetzelfde jullie elkaar zien."
+  },
+  "section1": {
+    "title": "Een heel simpel spel, en toch",
+    "p1": "Het principe van <strong class=\"text-foreground\">wie van ons twee</strong> ken je vast. Eén vraag, twee mogelijke antwoorden, en maar één waarheid: jij, of de ander. Alleen heeft op een feestje degene die het hardst roept altijd gelijk… Hier kan niemand de ander overstemmen. Ieder stemt apart, in het geheim, en de twee antwoorden komen tegelijk.",
+    "p2": "Het is simpel. Het werkt altijd.",
+    "p3": "Het grappigst zijn niet de rondes waarin jullie het eens zijn, maar de andere. Die waarin jullie elkaar aankijken en denken: “wacht even, denk jij nou dat ik degene ben die het meest moppert in de file?”",
+    "p4": "Twaalf rondes, vier minuten op de klok, en een harmoniescore aan het eind. En één telefoon, meer niet."
+  },
+  "section2": {
+    "title": "Zo speel je het",
+    "intro": "Niets ingewikkelds, maar de vier punten hieronder maken het verschil.",
+    "etape1Titre": "Eerst jullie namen",
+    "etape1Texte": "Het spel gebruikt ze overal: op de knoppen, bij de onthulling, in de eindscore. Veel levendiger dan ‘speler 1’ en ‘speler 2’.",
+    "etape2Titre": "Dan jullie manier van spelen",
+    "etape2Texte": "Ieder stemt stiekem en jullie discussiëren daarna, of jullie wijzen samen hardop iemand aan. De eerste manier duurt langer en zorgt voor meer discussie; de tweede gaat twee keer zo snel.",
+    "etape3Titre": "De stemming",
+    "etape3Texte": "De vraag verschijnt, en jullie kiezen wie van jullie twee hij het best beschrijft. In de geheime versie geven jullie de telefoon door en mag de ander niet kijken. En past een vraag niet bij jullie, dan is er altijd ‘weten we niet’.",
+    "etape4Titre": "Onthulling, en einde van de discussie",
+    "etape4Texte": "De twee kaarten draaien tegelijk om. Zelfde antwoord: een punt. Verschillende antwoorden: het spel vraagt of de discussie iets heeft opgeleverd, en zo ja, welke naam.",
+    "apres": "Aan het eind krijgen jullie een harmoniepercentage, jullie beste reeks, de discussies die jullie beslecht hebben en de lijst met vragen die open bleven. Die lijst is eerlijk gezegd het beste van het spel."
+  },
+  "section3": {
+    "title": "De vier soorten vragen",
+    "intro": "Tachtig vragen in totaal, verdeeld over vier thema's. Elk spel kiest er uit elk thema evenveel, zodat twaalf rondes op rij niet allemaal dezelfde kant op gaan.",
+    "headerTheme": "Thema",
+    "headerExemple": "Een voorbeeldvraag",
+    "apres": "Start een nieuw spel en de twaalf vragen veranderen. Genoeg om nog eens terug te komen zonder in rondjes te draaien."
+  },
+  "themes": {
+    "quotidien": "“…vergeet altijd net dat ene ding dat jullie nodig hadden?”",
+    "amour": "“…geeft als eerste toe na een ruzie?”",
+    "caractere": "“…is het langst haatdragend?”",
+    "drole": "“…zingt het valst?”"
+  },
+  "section4": {
+    "title": "Waarom het zo goed werkt als koppel",
+    "p1": "Er is één ding dat <a href=\"/nl/relatietest/\">een test over jullie relatie</a> nooit doet: jullie confronteren met het beeld dat de ander van je heeft. Een test geeft je een uitslag. Hier ontdek je dat je partner jou ziet als de koppigste van jullie twee… en daar zullen jullie het toch over moeten hebben!",
+    "p2": "Vaak begint de avond dan pas echt.",
+    "p3": "En nee, een lage score betekent niet dat het slecht gaat. Het betekent vooral dat jullie elkaar deze vragen nog nooit hardop hebben gesteld. Koppels die 100% halen, zijn trouwens niet per se de gelukkigste: soms vertellen ze zichzelf al tien jaar hetzelfde verhaal."
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Met hoeveel mensen speel je het?",
+    "a1": "Met twee. Op één telefoon die jullie aan elkaar doorgeven, of elk op je eigen telefoon: zet daarvoor op het startscherm de afstandsmodus aan.",
+    "q2": "Hoe lang duurt een spel?",
+    "a2": "Vier tot vijf minuten voor de twaalf rondes… als jullie niet bij elk meningsverschil stoppen om te discussiëren. Wat vaak gebeurt.",
+    "q3": "Is het gratis? Moet je een account aanmaken?",
+    "a3": "Gratis, en zonder account. Je opent de pagina, vult jullie namen in en speelt. Er wordt niets opgeslagen.",
+    "q4": "Kunnen we het meerdere keren spelen?",
+    "a4": "Ja. De twaalf rondes worden willekeurig gekozen uit tachtig vragen, dus twee spellen na elkaar lijken niet op elkaar. En tussen twee spellen kunnen jullie van manier van spelen wisselen.",
+    "q5": "En als we het over niets eens zijn?",
+    "a5": "Eerlijk gezegd is dat het beste scenario. Het spel geeft jullie aan het eind de lijst met de vragen waarover jullie het oneens waren, en dat is precies het soort gesprek dat niemand uit zichzelf begint.",
+    "q6": "Werkt het voor een koppel dat elkaar net kent?",
+    "a6": "Ja, maar reken op een lage score en veel gelach. De vragen uit het thema lol werken heel goed <a href=\"/nl/vragen-eerste-date/\">in de eerste weken van een relatie</a>, die over de toekomst iets minder.",
+    "q7": "En als we niet weten wat we moeten antwoorden?",
+    "a7": "Bij elke ronde staat er een knop ‘weten we niet’. De ronde wordt dan opzijgezet: ze telt niet voor en niet tegen jullie, en komt aan het eind terug in de lijst met vragen om nog eens over te praten."
+  },
+  "section5": {
+    "title": "Zin om door te gaan?",
+    "p1": "Vonden jullie het principe van de geheime stemming leuk? Onze andere spellen draaien om hetzelfde idee: jullie aan het praten krijgen zonder dat het opvalt.",
+    "p2": "Veel speelplezier, jullie twee!",
+    "cta": "Bekijk alle spelletjes voor koppels"
+  }
+}
