@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1670,7 +1670,39 @@ spéciaux ».
   JavaScript sur la page de l'évaluation était en anglais en espagnol, en
   allemand et en italien ; il est dans leur langue (et en néerlandais).
 
+## Lot 8c (31 octobre 2026) : l'application et le rapport de la relatiecheck
+
+- **Les textes** : toute la partie `app` de `nl/bilan.json` (environ 5 900
+  mots) : accueil, départ (façon de faire, prénoms, genres, case, adresse),
+  invitation, acceptation, questions, pause, attente, écran « rapport prêt »
+  et paiement, mode seul(e), sondage des célibataires, et tout le texte du
+  rapport (couverture, chapitres, verdicts, météo, carte, conversations,
+  points bloquants, zones d'ombre, climat, signaux, rôles, domaines, fin,
+  suite, écran du rapport). « je » à la personne, « jullie » au couple, comme
+  le reste du site ; la structure et les variables `{{ }}` sont celles du
+  français, clé par clé.
+- **Le vocabulaire, fixé pour le rapport, les questions et les e-mails** :
+  accord / réponses proches / écart = « overeenkomst » / « bijna gelijk » /
+  « verschil » ; sujet décisif = « beslissend onderwerp » ; non négociable =
+  « niet onderhandelbaar » ; point bloquant = « struikelblok » ; zones
+  d'ombre = « blinde vlekken » ; domaines = « thema's » ; alignement =
+  « overeenstemming » ; climat = « sfeer » ; feuille de route =
+  « stappenplan ». Les numéros d'aide sont Veilig Thuis, le 1712 et le 112 ;
+  la séance chez un conseiller dit « al snel 60 euro of meer », comme la
+  page de vente ; la case du sondage des célibataires dit « 16 jaar of
+  ouder ».
+- **Le code** : `nl-NL` dans les tables de formats de `js/bilan.js` et du
+  gabarit du rapport (`rapport.mjs`, dates et nombres) ; le signe % du
+  rapport est collé au nombre en néerlandais (`pcSuffixe`), les autres
+  langues gardent leur espace insécable, sans aucun changement.
+- **Vérifié** : `textes nl` sans erreur (« Single », « Storm » et « Week
+  {{n}} » ajoutés à `identiques.txt`) ; les tests du serveur de l'évaluation
+  (61) et de la fabrique du PDF (27) passent. Hors /nl/, seuls changent
+  `js/bilan.js` et `js/bilan-rapport.js` (la ligne `nl` et le signe %).
+
 ## Les chiffres
+
+Au lot 8c : `textes nl` 887 parties écrites sur 1 045, sans erreur.
 
 Au lot 8b : `textes nl` 886 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (la relatiecheck en « à faire » tant qu'elle est fermée).
