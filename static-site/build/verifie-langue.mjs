@@ -41,7 +41,7 @@ import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import {
   LANGUAGES, LANGUES_CACHEES, ROUTE_SLUGS, ROUTE_CONFIG, BLOG_ARTICLES,
-  getLocalizedPath, getArticlePath, cheminDeclare, pageEnAttente, BASE_URL,
+  getLocalizedPath, getArticlePath, cheminDeclare, pageEnAttente, bilanOuvertPour, BASE_URL,
 } from './config.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
@@ -715,7 +715,11 @@ function controleSeo() {
     if (!b.canonical.endsWith(chemin)) erreur(C, ou, `canonique ${b.canonical}`);
     if (b.inLanguage.some((l) => l !== LANGUE && !l.startsWith(`${LANGUE}-`))) erreur(C, ou, `JSON-LD inLanguage ${b.inLanguage.join(', ')}`);
     const cachee = LANGUES_CACHEES.includes(LANGUE);
-    if (!cachee && /noindex/.test(b.robots)) erreur(C, ou, `robots ${b.robots}`);
+    // L'évaluation reste en noindex dans une langue où elle est fermée
+    // (BILAN_LANGUES_FERMEES, config.js) : c'est voulu jusqu'à son ouverture.
+    if (r.cle === 'bilanCouple' && !bilanOuvertPour(LANGUE)) {
+      if (/noindex/.test(b.robots)) afaire(C, ou, 'évaluation fermée dans la langue : noindex jusqu\'à son ouverture');
+    } else if (!cachee && /noindex/.test(b.robots)) erreur(C, ou, `robots ${b.robots}`);
     for (const champ of ['title', 'h1', 'description']) {
       const v = normalise(b[champ]);
       if (!v) continue;

@@ -245,7 +245,7 @@
         <% } %>
         <p class="blp-preuve"><span class="blp-preuve-persos" aria-hidden="true"><%- masc('rose', 'salut', 'blp-preuve-masc') %><%- masc('violet', 'mignon', 'blp-preuve-masc') %></span><span class="blp-preuve-texte"><%- preuve %></span></p>
         <div id="bilan-reprise" class="blp-reprise" hidden></div>
-        <noscript><p class="blp-cta-note"><%= lang === 'fr' ? "L'évaluation a besoin de JavaScript pour fonctionner." : 'The assessment needs JavaScript to work.' %></p></noscript>
+        <noscript><p class="blp-cta-note"><%= ({ fr: "L'évaluation a besoin de JavaScript pour fonctionner.", es: 'La evaluación necesita JavaScript para funcionar.', de: 'Die Beziehungsanalyse braucht JavaScript, um zu funktionieren.', it: 'La valutazione ha bisogno di JavaScript per funzionare.', nl: 'De relatiecheck heeft JavaScript nodig om te werken.' })[lang] || 'The assessment needs JavaScript to work.' %></p></noscript>
       </div>
       <div class="blp-hero-visuel">
         <div class="blp-radar-carte">
