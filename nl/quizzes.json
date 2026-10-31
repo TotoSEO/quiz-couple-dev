@@ -346,6 +346,12 @@
     "description": "15 vragen om elkaar te stellen, in drie niveaus die steeds persoonlijker worden. Niets te installeren, niets op te schrijven.",
     "metaDescription": "Vragen eerste date: het spel met 60 vragen in drie niveaus, van luchtig tot persoonlijk. 15 per keer, om samen op één telefoon te spelen."
   },
+  "jeuJamais": {
+    "title": "Ik heb nog nooit vragen als koppel: speel ze samen online",
+    "shortTitle": "Ik heb nog nooit",
+    "metaDescription": "100 ik heb nog nooit vragen voor koppels. Jullie antwoorden om de beurt, het spel telt de bekentenissen en laat zien wie het meest heeft beleefd. Gratis.",
+    "description": "De grote klassieker van elk feestje, herschreven voor twee: jullie antwoorden om de beurt, en de uitslag laat zien wie het meest op te biechten heeft."
+  },
   "testCrush": {
     "title": "Crush test: is het liefde of een crush? (35 vragen)",
     "shortTitle": "Crush test",
@@ -359,6 +365,13 @@
     "metaTitle": "Wie zou eerder vragen: het spel voor koppels, 108 vragen",
     "metaDescription": "Wie zou eerder vragen voor koppels: een vraag, jullie twee namen, en jullie wijzen aan wie het zou doen. 108 vragen, spellen van 20, 40 of 60, gratis.",
     "description": "Er verschijnt een vraag en jullie wijzen aan wie het zou doen: een van jullie twee, of niemand."
+  },
+  "jeuOuiNon": {
+    "title": "Ja of nee vragen als koppel: 120 situaties, live stemmen",
+    "shortTitle": "Ja of nee",
+    "metaTitle": "Ja of nee vragen als koppel: 120 situaties, live stemmen",
+    "metaDescription": "120 ja of nee vragen over het leven als koppel. Na elk antwoord zie je wat alle andere koppels stemden. Gratis, zonder account en op één telefoon.",
+    "description": "Situaties uit het leven als koppel om met ja of nee te beslissen, met na elk antwoord de stemmen van alle anderen."
   },
   "testAimeEncore": {
     "title": "Houdt hij nog van mij? Of zij? De test in 20 vragen",
