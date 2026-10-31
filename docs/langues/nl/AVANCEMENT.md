@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz), 5g (temptation island quiz) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz), 5g (temptation island quiz), 5h (liefdesquiz voor tieners) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1203,7 +1203,44 @@ le met à jour dans la PR de chaque lot.
   lecteurs d'écran) et dans `quiz-ado-multiplayer.js` (les deux boutons du
   choix de mode). En français, seul le type d'espace change.
 
+## Lot 5h (31 octobre 2026) : le quiz des ados
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/liefdesquiz-voor-tieners/` | Liefdesquiz voor tieners: blijven jullie samen? | Quiz voor tienerstelletjes: hoe sterk staan jullie samen? |
+
+- **Le moteur** (`quiz-ado-multiplayer.js`, à part du moteur commun) : les
+  80 questions et leurs réponses (`nl/quiz-ado.json`, que la construction
+  aplatit dans `js/data/gd/ado-nl.json`), les quatre verdicts, et une entrée
+  `nl` dans sa propre table de textes. « Je vriend(in) » pour le « ton/ta
+  partenaire » du français ; ni « verkering » (Pays-Bas) ni « je lief »
+  (Flandre), qui ne parlent qu'à un des deux pays. Le « bac » de la
+  question 2 devient le diplôme de fin d'études (« je diploma halen »).
+- **Corrigé dans toutes les langues** : la coche et la croix du détail des
+  réponses portaient « identique » et « différent » en français pour les
+  lecteurs d'écran, quelle que soit la langue ; elles passent par la table
+  (`pareil`, `different`).
+- **La FAQ** dit ce que fait le moteur : sur deux téléphones, les réponses
+  passent par un canal temporaire qui disparaît quand on arrête, et rien
+  n'est gardé. Le français et les quatre autres langues parlent encore de
+  « sessions qui expirent après 30 minutes », un reste de l'ancienne table
+  des parties ; à reprendre si Thomas le souhaite.
+- **Les liens** : « een relatie waarin je je goed voelt » (gezonde relatie
+  test), « ver van elkaar wonen » (relatie op afstand) et « een relatie
+  snel toxisch maken » (toxische relatie test). Le lien du français vers
+  l'article des phases de la rupture attend la traduction du blog.
+- **Ce qui reste en français sur la page** : la phrase d'une carte « À
+  faire ensuite », vers le tu préfères (lot 6).
+
 ## Les chiffres
+
+Au lot 5h : `textes nl` 710 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (64 pages traduites) ; `site nl` : le quiz va jusqu'à son
+résultat ; une erreur attendue, la carte vers un jeu du lot 6. Les pages
+publiques ne changent que par le script du quiz des ados (les deux
+étiquettes de la coche et de la croix).
 
 Au lot 5g : `textes nl` 703 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (63 pages traduites) ; `site nl` : le quiz va jusqu'à son
