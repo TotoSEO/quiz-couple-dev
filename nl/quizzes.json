@@ -136,6 +136,12 @@
     "description": "15 vragen om te scheiden wat je echt hebt gezien van wat de twijfel eraan heeft toegevoegd.",
     "metaDescription": "Heeft hij met iemand anders geslapen? Of zij? 15 vragen die zich aanpassen aan je partner, om te ordenen wat je hebt gezien. Gratis, meteen een uitslag."
   },
+  "testSecret": {
+    "title": "Is hij stiekem verliefd op mij? Gratis test in 10 vragen",
+    "shortTitle": "Stiekem verliefd op mij?",
+    "description": "10 vragen over hoe die persoon zich tegenover jou gedraagt, om een oplettende vriendschap te onderscheiden van een gevoel dat niet wordt uitgesproken.",
+    "metaDescription": "Is hij stiekem verliefd op mij, of zij? 10 vragen over de blik, het geheugen voor details en de kansen die hij of zij creëert. Gratis en meteen."
+  },
   "testDistanceAime": {
     "title": "Houdt hij van mij op afstand? De test in 15 vragen",
     "shortTitle": "Houdt hij van mij op afstand?",
@@ -177,6 +183,12 @@
     "shortTitle": "Emotionele afhankelijkheid test",
     "description": "20 eerlijke vragen om te zien of je van je partner houdt of je aan hem of haar vastklampt. Meteen een uitslag en concrete stappen.",
     "metaDescription": "Emotionele afhankelijkheid test: gezonde gehechtheid of afhankelijkheid? 20 eerlijke vragen, meteen een uitslag en concrete stappen. Gratis."
+  },
+  "testEx": {
+    "title": "Denkt mijn ex nog aan mij? Gratis test in 15 vragen",
+    "shortTitle": "Denkt mijn ex nog aan mij?",
+    "description": "15 vragen over wat hij of zij doet, niet over wat jij erin leest. Een test voor jou alleen, meteen je uitslag.",
+    "metaDescription": "Denkt mijn ex nog aan mij? 15 vragen die zijn of haar daden wegen in plaats van jouw interpretaties. Gratis, anoniem, zonder account of e-mail."
   },
   "testOublieSonEx": {
     "title": "Is hij over zijn ex heen? De test in 20 vragen",
