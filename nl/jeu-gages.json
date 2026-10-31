@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "badge": "Gratis • Zonder account • Draai zo vaak je wilt",
+    "title": "Het rad met opdrachten voor koppels: draai zo vaak als jullie willen",
+    "titleHighlight": "opdrachten voor koppels",
+    "description": "140 opdrachten in zeven soorten. Jullie drukken, het rad draait… en het beslist voor jullie."
+  },
+  "familles": {
+    "bisouNom": "Kus",
+    "bisouDesc": "Korte, lieve opdrachten, van een kus op de schouder tot een eskimokus. Die kunnen overal, ook als er anderen bij zijn.",
+    "massageNom": "Massage",
+    "massageDesc": "Schouders, handen, nek, voeten: twee minuten op de klok, en de spanning zakt in één keer weg.",
+    "showNom": "Show",
+    "showDesc": "Zingen, dansen, nadoen, voordragen. De soort die je vijf seconden ongemakkelijk maakt en tien minuten aan het lachen.",
+    "aveuNom": "Bekentenis",
+    "aveuDesc": "Een vraag waar je eerlijk op moet antwoorden. Dit is de soort die van een spelletjesavond een echt gesprek maakt.",
+    "grimaceNom": "Gek doen",
+    "grimaceDesc": "Je belachelijk maken en ervoor gaan: een opgelegd accent, een dier om na te doen, een kledingstuk drie draaien lang binnenstebuiten.",
+    "photoNom": "Foto",
+    "photoDesc": "Opdrachten die een spoor achterlaten, van de lelijkste selfie tot een foto van een jaar geleden die je precies moet naspelen.",
+    "douceurNom": "Lief",
+    "douceurDesc": "Complimenten, geschreven briefjes, een knuffel die niet loslaat. De eenvoudigste, en vaak die waar je het langst aan terugdenkt."
+  },
+  "section1": {
+    "title": "Een opdracht die het lot kiest, is beter dan een verzonnen opdracht",
+    "p1": "Een weddenschap is afgelopen, iemand heeft verloren, en nu moet er een <strong class=\"text-foreground\">opdracht</strong> komen. Het is altijd hetzelfde verhaal: niemand heeft een idee, of iemand komt met eentje die veel te zwaar is, of de winnaar voelt zich verplicht om lief te doen. In alle drie de gevallen zakt het moment als een pudding in elkaar.",
+    "p2": "Een rad regelt dat in een seconde. Niemand kiest, dus niemand is verantwoordelijk.",
+    "p3": "Daardoor accepteer je ook een opdracht die je geweigerd zou hebben als hij van de ander kwam: er zit geen bedoeling meer achter, alleen toeval. Er draaien zeven soorten rond, plus een verrassingsvak dat uit alle andere put, en jullie draaien zo vaak als jullie willen."
+  },
+  "section2": {
+    "title": "Wat er op het rad staat",
+    "intro": "Elke soort heeft twintig opdrachten, geschreven voor een koppel en te doen in een woonkamer. Niets komt terug zolang de soort niet op is.",
+    "headerFamille": "De soort",
+    "headerContenu": "Wat erin zit"
+  },
+  "section3": {
+    "title": "Zo speel je met het rad",
+    "intro": "Er is geen verplichte regel: het rad is een hulpmiddel, en jullie bepalen wanneer het gaat draaien.",
+    "regle1Titre": "Na een verloren weddenschap",
+    "regle1Texte": "Verreweg het vaakst gebruikt. Wie verliest, draait aan het rad en voert uit, zonder over de uitslag te discussiëren. Juist omdat hij of zij niets gekozen heeft, gaat het goed.",
+    "regle2Titre": "Aan het eind van een ander spel",
+    "regle2Texte": "Een draai aan het eind van een quiz of van <a href=\"/nl/waarheid-of-durven-koppels/\">een potje waarheid of durven</a> geeft de avond nieuwe energie, zonder dat je een heel nieuw spel hoeft te pakken.",
+    "regle3Titre": "Als spel op zich",
+    "regle3Texte": "Om de beurt: je draait en doet de opdracht die eruit komt. Tien rondes zijn genoeg voor een fijn moment, en jullie krijgen nooit twee keer dezelfde.",
+    "regle4Titre": "Met het recht om opnieuw te draaien",
+    "regle4Texte": "Spreek vooraf af: ieder mag één keer per avond opnieuw draaien, zonder uitleg. Dan valt de enige goede reden om niet te spelen weg."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Hoeveel opdrachten zijn er?",
+    "a1": "140, verdeeld over zeven soorten van twintig. Het verrassingsvak put uit alle zeven: het voegt geen opdrachten toe, het verandert alleen hoe ze vallen.",
+    "q2": "Komen de opdrachten terug?",
+    "a2": "Niet zolang de soort waaruit getrokken wordt nog niet op is! Elke soort wordt opnieuw geschud als de twintig opdrachten eruit zijn, dus genoeg voor meerdere avonden zonder ooit dezelfde te krijgen.",
+    "q3": "Is het ondeugend?",
+    "a3": "Nee. Het rad is gemaakt om overal aan te draaien, ook als er vrienden bij zijn. Het intiemste is een kus of een massage. Voor iets veel directers is er <a href=\"/nl/waarheid-of-durven-18/\">waarheid of durven voor volwassenen</a>, met een eigen stapel.",
+    "q4": "Kunnen er meer dan twee mensen spelen?",
+    "a4": "De opdrachten zijn geschreven voor een koppel, maar niets houdt jullie tegen om de telefoon in een groep rond te geven: de helft werkt zoals ze is, de andere helft gaat er gewoon van uit dat er een partner tegenover je zit.",
+    "q5": "Moet ik een account aanmaken?",
+    "a5": "Nee, en er wordt niets opgeslagen. Het rad draait in je browser, op je telefoon en op je computer, en de teller begint weer bij nul zodra je de pagina herlaadt."
+  },
+  "section4": {
+    "title": "Een goede opdracht maakt niemand ongemakkelijk",
+    "p1": "Het enige echte risico van een spel met opdrachten is de opdracht die voor een van jullie te ver gaat. De opdrachten op dit rad passen bewust in een woonkamer: niets waarvoor je je moet uitkleden, niets wat je voor anderen te kijk zet, niets waar je de volgende ochtend spijt van hebt.",
+    "p2": "De rest bepalen jullie zelf. En zo is het veel beter!",
+    "cta": "Bekijk al onze spelletjes voor koppels"
+  },
+  "jsonLd": {
+    "name": "Het rad met opdrachten voor koppels"
+  }
+}

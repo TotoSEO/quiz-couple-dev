@@ -530,6 +530,37 @@
     "rejouer": "Opnieuw spelen",
     "cartesMot": "kaarten"
   },
+  "plateau": {
+    "setupTitre": "Wie staat er aan de start?",
+    "setupDesc": "Vul jullie namen in: veertig vakjes scheiden jullie van de finish.",
+    "commencer": "Naar de start",
+    "lancerDe": "Gooi de dobbelsteen",
+    "abandonner": "Spel stoppen",
+    "regles": "Bekijk de regels",
+    "reglesFermer": "Regels verbergen",
+    "compteur": "{{n}} beurten gespeeld",
+    "ok": "Begrepen!",
+    "dAccord": "We zijn het eens",
+    "pasDAccord": "Niet eens",
+    "releve": "Gedaan, ik ga vooruit",
+    "refuse": "Ik sla over, ik ga terug",
+    "victoire": "{{nom}} wint het spel!",
+    "victoireTexte": "Finish gehaald in {{n}} beurten.",
+    "choixTitre": "Waarheid of durven?",
+    "choixDesc": "Een vraag of een opdracht, naar keuze. Gedaan is één vakje vooruit; overgeslagen is één vakje terug.",
+    "finChoix": "{{nom}} heeft verloren: waarheid of durven?",
+    "finChoixDesc": "Geen opgelegde straf: de verliezer kiest de laatste kaart, en de winnaar leest hem voor.",
+    "casesMot": "vakjes"
+  },
+  "roue": {
+    "lancer": "Draai aan het rad",
+    "relancer": "Nog eens draaien",
+    "enCours": "Het rad draait...",
+    "intro": "Druk op de knop: het rad kiest de opdracht voor jullie.",
+    "compteur": "{{n}} opdrachten getrokken",
+    "compteur1": "1 opdracht getrokken",
+    "legende": "Elk vak is een soort met {{parFamille}} opdrachten: {{familles}} soorten plus een verrassingsvak, samen {{total}} opdrachten."
+  },
   "couche": {
     "introQuestion": "Je vraagt je af:",
     "introQuote": "“Heeft hij of zij met iemand anders geslapen... of haal ik me iets in mijn hoofd?”",

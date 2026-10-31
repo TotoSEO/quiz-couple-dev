@@ -54,3 +54,10 @@ Island
 
 # Le niveau le plus osé de l’action ou vérité 18+ : « Hot » dans les cinq langues, compris tel quel en néerlandais
 Hot
+
+# Les cases et les familles des jeux (lot 6c) : les mêmes mots en néerlandais
+Massage
+Duel
+Start
+Finish
+Show

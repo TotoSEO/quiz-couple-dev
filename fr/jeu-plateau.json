@@ -17,7 +17,7 @@
     "choixNom": "Action ou vérité",
     "choixDesc": "C'est la case où on choisit. Une question ou un défi, celui qu'on préfère, puis la même règle que les autres : relevé, on avance d'une case ; passé, on recule d'une.",
     "chanceNom": "Chance",
-    "chanceDesc": "L'événement qui renverse tout : avancer de trois, reculer de deux, rejouer, ou échanger les deux pions de place."
+    "chanceDesc": "Le coup de pouce du hasard : avancer d'une, deux ou trois cases, rejouer, ou rattraper l'autre quand on est derrière. Elle ne fait jamais reculer."
   },
   "section1": {
     "title": "Le premier de nos jeux qui se gagne",

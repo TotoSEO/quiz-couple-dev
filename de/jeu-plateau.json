@@ -17,7 +17,7 @@
     "choixNom": "Wahrheit oder Pflicht",
     "choixDesc": "Das Feld, auf dem man wählt. Eine Frage oder eine Aufgabe, was einem lieber ist, und dann dieselbe Regel wie überall: geschafft heißt ein Feld vor, gepasst ein Feld zurück.",
     "chanceNom": "Glück",
-    "chanceDesc": "Das Ereignis, das alles umwirft: drei vor, zwei zurück, noch einmal würfeln oder die beiden Figuren tauschen."
+    "chanceDesc": "Ein Schubs vom Glück: ein, zwei oder drei Felder vor, noch einmal würfeln oder den anderen einholen, wenn man hinten liegt. Zurück geht es nie."
   },
   "section1": {
     "title": "Das erste unserer Spiele, das man gewinnen kann",
