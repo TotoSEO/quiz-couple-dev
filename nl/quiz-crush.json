@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "35 vragen, meteen je uitslag",
+    "title": "Crush test: heb je gevoelens voor deze persoon?",
+    "titleHighlight": "gevoelens",
+    "description": "Antwoord op basis van wat je meemaakt, niet van wat je hoopt. De score maakt het onderscheid tussen een aantrekking die overwaait, een crush en verliefde gevoelens."
+  },
+  "jsonLd": {
+    "name": "Crush test: liefde of crush",
+    "about": "Het verschil tussen een crush en verliefde gevoelens"
+  },
+  "section1": {
+    "title": "Wat is een crush?",
+    "p1": "Een crush is een sterke aantrekking tot iemand, vaak nog voordat je die persoon goed kent. Het woord komt uit het Engels, waar het ‘verpletteren’ betekent: het idee van iets wat je overvalt. Bijvoorbeeld: je komt iemand tegen op school of op Insta, en zonder goed te weten waarom, denk je opeens de hele tijd aan die persoon.",
+    "p2": "Wat een crush zo typisch maakt, is dat je fantasie een groot deel van het werk doet. Je kent de persoon nauwelijks, dus vul je de gaten op met wat je hoopt dat hij of zij is. Daarom voelt een crush ook zo heftig: je valt niet op de persoon zoals die is, maar op de best mogelijke versie ervan.",
+    "p3": "En dat is normaal, iedereen maakt het mee. Een crush is niet belachelijk of kinderachtig, volwassenen hebben er trouwens ook een. De vraag waarvoor je hier waarschijnlijk bent, is of die van jou aan het uitgroeien is tot iets anders."
+  },
+  "section2": {
+    "title": "Liefde of een crush: wat is het verschil?",
+    "p1": "Het grootste verschil zit in wat je van de ander weet. Een crush leunt op wat je je voorstelt, liefde op wat je weet. Simpel gezegd: als je nog nooit langer dan vijf minuten met die persoon hebt gepraat, is wat je voelt sterk, maar het rust op heel weinig.",
+    "p2": "Het andere verschil is wat het met je doet. Een crush is opwinding: je hart dat sneller klopt, de knoop in je maag, de zin om die persoon te zien. Liefde is gehechtheid: het gemis als hij of zij er niet is, het gevoel dat je op je plek bent bij die persoon, de minpunten die je kent en die niets veranderen. Zo ziet dat eruit in situaties die je vast herkent:",
+    "headerSituation": "De situatie",
+    "headerCrush": "Als het een crush is",
+    "headerAmour": "Als het liefde is",
+    "row1Situation": "Hij of zij antwoordt niet",
+    "row1Crush": "Je raakt gestrest, je bedenkt duizend dingen",
+    "row1Amour": "Je mist die persoon, maar je raakt niet in paniek",
+    "row2Situation": "Je ontdekt een minpunt",
+    "row2Crush": "Je ziet het niet eens, of je praat het goed",
+    "row2Amour": "Je ziet het heel goed, en het verandert niets",
+    "row3Situation": "Jullie praten lang met elkaar",
+    "row3Crush": "Je weegt elke zin af die je stuurt",
+    "row3Amour": "Het gaat vanzelf, je denkt er niet meer bij na",
+    "row4Situation": "Die persoon is een week weg",
+    "row4Crush": "Je denkt eraan, maar je leven gaat door",
+    "row4Amour": "Er mist iets in je dagen",
+    "row5Situation": "Iemand anders vind je ook een beetje leuk",
+    "row5Crush": "Kan gebeuren, een crush is niet exclusief",
+    "row5Amour": "Dat gebeurt niet meer, en dat verbaast je zelf",
+    "row6Situation": "Je stelt je voor hoe het verdergaat",
+    "row6Crush": "Filmscènes: de eerste kus, de blikken",
+    "row6Amour": "Gewone dingen: de vakanties, het dagelijks leven, later",
+    "apres": "Let wel op: niemand gaat van de ene dag op de andere van het een naar het ander. Liefde begint bijna altijd met een crush, en een crush die blijft, die tegen minpunten en afwezigheid kan, is vaak <a href=\"/nl/ben-ik-verliefd-test/\">het begin van verliefdheid</a>. Precies dat meet de test: waar jij staat op die weg."
+  },
+  "section3": {
+    "title": "Heb ik een crush? Zo weet je het",
+    "p1": "Meestal weet je het al voordat je het aan jezelf toegeeft. Je lichaam reageert vaak eerder dan jij. Herken je drie of vier van de signalen hieronder, dan heb je je antwoord al:",
+    "resumeTitre": "De signalen die niet liegen",
+    "resume1": "<strong>Je denkt aan die persoon zonder dat je het wilt:</strong> in de les, in de bus, 's avonds. Hij of zij komt vanzelf in je hoofd op, meerdere keren per dag.",
+    "resume2": "<strong>Je telefoon wordt een verlengstuk van je crush:</strong> je bekijkt zijn of haar stories als eerste, je leest jullie gesprekken terug, je typt berichten die je nooit verstuurt.",
+    "resume3": "<strong>Je lichaam reageert als die persoon er is:</strong> de knoop in je maag voordat je hem of haar ziet, je wangen die warm worden als iemand de naam noemt, je hart dat sneller gaat als die naam op je scherm verschijnt.",
+    "resume4": "<strong>Je past je gewoontes aan om die persoon tegen te komen:</strong> een omweg door de gang, een feestje waar je heen gaat omdat hij of zij er ook is, een outfit die je kiest met die persoon in je hoofd.",
+    "resume5": "<strong>Je ogen vinden hem of haar vanzelf:</strong> in een volle ruimte weet je altijd waar die persoon is, zonder dat je besloten hebt om te zoeken.",
+    "resume6": "<strong>Je vrienden weten het, ook al wil je dat niet:</strong> omdat je er te veel over praat, of omdat het van je gezicht af te lezen is.",
+    "apres": "Vink je bijna alles aan, dan is de vraag niet meer óf je een crush hebt. De vraag is of het nog een crush is, of al meer. Daar maken de 35 vragen van de test het onderscheid, en elk signaal telt mee naar hoe zwaar het weegt: elke dag aan iemand denken weegt zwaarder dan één keer kippenvel hebben gehad."
+  },
+  "section4": {
+    "title": "Hoe weet je of je crush jou ook leuk vindt?",
+    "p1": "Kijk eerst wie de gesprekken begint. Ben jij altijd degene die als eerste een bericht stuurt, en zijn de antwoorden beleefd maar kort, dan heb je al een deel van je antwoord. Stuurt die persoon uit zichzelf een bericht terug, vraagt hij of zij naar jou, komt hij of zij terug op iets wat je een week geleden zei, dan onthoudt die persoon wat jij vertelt.",
+    "p2": "Kijk daarna wat die persoon met zijn of haar zenuwen en aandacht doet als jullie samen zijn. Iemand die je leuk vindt, zoekt je blik, verzint smoesjes om met je te praten, blijft in de buurt als de groep uit elkaar gaat. Bij een jongen verraden zijn handen, zijn mond en zijn blik de zenuwen al lang voordat hij iets zegt. En wil je meer houvast dan een gevoel, let dan op <a href=\"/nl/stiekem-verliefd-op-mij/\">de signalen die hij of zij onbewust geeft</a>.",
+    "p3": "Nog één tip: trek geen conclusie uit één gebaar. Een bekeken story, een like, een glimlach, op zichzelf zegt dat niets. Het is de herhaling die iets zegt: iemand die je één keer opzoekt, is misschien gewoon beleefd, iemand die je elke week opzoekt, heeft een reden."
+  },
+  "section5": {
+    "title": "Mijn crush lijkt onbereikbaar en daar word ik verdrietig van: wat nu?",
+    "p1": "Weet eerst dat dit de meest voorkomende situatie is die er bestaat. De onbereikbare crush, die ouder is, al een relatie heeft, superpopulair is of niet eens weet dat je bestaat: bijna iedereen heeft er een gehad. Het verdriet dat erbij hoort, is echt, het is geen drama, en je mag het voelen.",
+    "p2": "Wees daarna eerlijk over één ding: is die persoon onbereikbaar, of alleen in je hoofd? Er is een groot verschil tussen iemand die een relatie heeft, waarbij er niets te proberen valt, en iemand die je gewoon nog nooit hebt durven aanspreken. Het tweede is niet onbereikbaar, het is angst, en daar kun je aan werken.",
+    "resumeTitre": "Wat helpt, in deze volgorde",
+    "resume1": "<strong>Noem het beestje bij de naam:</strong> ‘heeft een relatie’ is niet hetzelfde als ‘is verlegen’, en ‘kent me niet’ is niet hetzelfde als ‘heeft me afgewezen’. De helft van het verdriet komt doordat je dat allemaal door elkaar haalt.",
+    "resume2": "<strong>Is het angst, begin dan klein:</strong> geen liefdesverklaring, gewoon een gesprek. Een vraag over een les, een reactie op een story. Iets waar hij of zij makkelijk op kan antwoorden, zodat het niet raar wordt.",
+    "resume3": "<strong>Is het een muur, stop dan met wat je crush voedt:</strong> kijk niet meer elke dag naar zijn of haar stories. Een crush leeft van wat je van de persoon ziet: hoe minder je ziet, hoe sneller hij overgaat.",
+    "resume4": "<strong>Geef jezelf een deadline:</strong> niet voor je gevoelens, die heb je niet in de hand, maar voor je beslissing. “Over een maand heb ik met die persoon gepraat, of laat ik het los.” Zo sleept een verdriet niet een jaar lang aan.",
+    "apres": "En onthoud één ding: een crush die nergens toe leidt, is geen verloren tijd. Je leert ervan wat je aantrekt en wat je raakt, en je weet beter wat je zoekt bij de volgende persoon, iemand die wél bereikbaar is."
+  },
+  "faq": {
+    "title": "De vragen die iedereen zich stelt",
+    "q1": "Hoe lang duurt een crush?",
+    "a1": "Meestal een paar weken tot een paar maanden. Een crush leeft van nieuwigheid en mysterie: zodra je de persoon beter kent, gaat hij over of groeit hij uit tot iets wat steviger is. Duurt hij langer dan zes maanden zonder af te zwakken, dan is het waarschijnlijk geen gewone crush meer.",
+    "q2": "Kun je een crush hebben als je een relatie hebt?",
+    "a2": "Ja, en dat maakt je nog geen vreemdganger. Een crush is een reactie, geen beslissing. Het hangt allemaal af van wat je ermee doet: hem laten overwaaien, of hem stiekem voeden.",
+    "q3": "Crush of liefde: kan de test zich vergissen?",
+    "a3": "De test meet wat jij meemaakt, op basis van je antwoorden. Antwoord je wat je voelt, dan klopt de score wat de richting betreft. Maar geen enkele test kan in je hoofd kijken: hij helpt je om het helder te zien, hij beslist niet voor jou.",
+    "q4": "Waarom krijg ik mijn crush niet uit mijn hoofd?",
+    "a4": "Omdat een crush draait op onzekerheid. Je hersenen zijn dol op vragen zonder antwoord, en ‘vindt die persoon mij leuk?’ is er een hele grote. Daarom neemt een crush meer ruimte in dan een vaste relatie: het is niet de persoon die je zo bezighoudt, het is de spanning.",
+    "q5": "Hoe kom je over een crush heen?",
+    "a5": "Stop met wat hem voedt: de stories, het account dat je steeds checkt, de omwegen om die persoon tegen te komen. Zonder nieuwe beelden gaat een crush binnen een paar weken over. Het werkt, als je het tenminste ook doet.",
+    "q6": "Is het erg om een crush te hebben op iemand die ik niet ken?",
+    "a6": "Nee, het is zelfs de meest klassieke vorm. Maar onthoud dat je valt voor het beeld, niet voor de persoon. De enige manier om te weten wat erachter zit, is met hem of haar praten.",
+    "q7": "Werkt de test als mijn crush een meisje is en ik ook?",
+    "a7": "Ja. De test vraagt alleen of je crush een jongen of een meisje is, om de vragen goed te schrijven. Wie jij bent, verandert niets aan de vragen of de score."
+  },
+  "section6": {
+    "title": "Doe de test, binnen vijf minuten weet je het",
+    "p1": "35 vragen, geen account nodig, en niemand behalve jij ziet de uitslag. Antwoord wat waar is, niet wat je goed uitkomt: de test heeft geen zin als je hem vertelt wat je wilt horen.",
+    "p2": "En zegt de score ‘verliefde gevoelens’, haal dan even diep adem. Het verplicht je tot niets, het zegt je alleen waar je staat."
+  }
+}
