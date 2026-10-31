@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -919,7 +919,46 @@ le met à jour dans la PR de chaque lot.
   repris.
 - **Ce qui reste en français sur les pages** : rien.
 
+## Lot 4g (31 octobre 2026) : encore amoureux de mon ex, combien de temps pour oublier son ex
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/nog-verliefd-op-mijn-ex/` | Ben ik nog verliefd op mijn ex? Test in 20 vragen | Ben ik nog verliefd op mijn ex, of mis ik gewoon de relatie? |
+  | `/nl/over-je-ex-heen-komen/` | Over je ex heen komen: hoe lang duurt het? Doe de test | Hoe lang duurt het om over je ex heen te komen? De test in 20 vragen |
+
+  Le title de la seconde commence par le mot-clé tel quel (« over je ex
+  heen komen ») ; le H1 porte le secondaire, la question entière (« hoe lang
+  duurt het om over je ex heen te komen »), où le « te » coupe le premier.
+- **Les moteurs** : `encoreEx` (AxesQuiz, les deux balken « Liefde voor je
+  ex » et « Gemis van de relatie », points et axes recopiés du français) et
+  `oublierEx` (DureeQuiz : unités, fourchette, date et leviers repris de la
+  forme de `dureeCelib` au lot 4b ; la durée sort par exemple « ongeveer 2
+  jaar en 2 maanden », « Dus rond december 2028 »). Les deux pages vouvoient
+  en français, « je » en néerlandais. Les études gardent leurs chiffres
+  (Chong et Fraley 2025, Gardner et Oswald 2006, Marshall 2012, Langeslag et
+  Sanchez 2018, Fisher 2010, Lewandowski et Bizzoco 2007) ; « Un de perdu,
+  dix de retrouvés » devient « Er zijn nog genoeg vissen in de zee », et le
+  3114 français devient 113 Zelfmoordpreventie (113 ou gratis 0800-0113)
+  et la Zelfmoordlijn (1813), comme sur les pages déjà traduites.
+- **Les liens** : « de zin om weer bij hem of haar te zijn » (terug naar
+  mijn ex), « aan je ex denken » (over je ex heen komen), « miste je vooral
+  de relatie » (klaar voor een nieuwe relatie), « een bericht van hem of
+  haar » (denkt mijn ex nog aan mij), « de hoop dat hij of zij terugkomt »
+  (komt mijn ex terug), « waarom het voorbij is » (waarom heeft mijn ex het
+  uitgemaakt), « vaak bang zijn om verlaten te worden » (hechtingsstijl) et
+  « hun verliefde gevoelens » (nog verliefd op mijn ex). Les trois liens vers
+  le blog (« mon ex était-il le bon », deux fois, et la dépendance après une
+  rupture) attendent le lot 9, rappelés par `textes`.
+- **Ce qui reste en français sur les pages** : rien.
+
 ## Les chiffres
+
+Au lot 4g : `textes nl` 568 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (50 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat, sans texte resté en français. Aucune page publique ne change.
 
 Au lot 4f : `textes nl` 545 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (48 pages traduites) ; `site nl` sur les deux pages : aucun
