@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "Quiz voor koppels",
+    "title": "Welk type koppel zijn we? De quiz om samen te doen",
+    "titleHighlight": "type koppel",
+    "description": "Onafscheidelijken, maatjes, vrije vogels of bouwers? Vijftien situaties uit het dagelijks leven, om <strong>samen op dezelfde telefoon</strong> te beantwoorden en te ontdekken bij welke familie jullie horen. Met voor elke familie de sterke kant en het zwakke punt.",
+    "subtitle": "Vijftien vragen, drie minuten, samen te beantwoorden",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Er is niet één goed type koppel, er zijn er vier",
+    "intro": "Vaak denken we dat een gelukkig koppel er op een bepaalde manier uitziet: veel tijd samen, veel lachen, plannen maken. In werkelijkheid lijken de koppels die het lang volhouden helemaal niet op elkaar.",
+    "p1": "Deze quiz deelt koppels in vier grote families in. De onafscheidelijken doen bijna alles samen, en dat vinden ze heerlijk. Bij de maatjes draait alles om lachen. De vrije vogels hebben ieder hun eigen leven en zien elkaar 's avonds. En de bouwers werken samen ergens naartoe: een huis, een kind, een project.",
+    "p2": "Geen van deze vier manieren van samenleven is beter dan een andere. Elke manier heeft een sterke kant, en elke manier heeft een zwakke plek die je niet ziet omdat je er middenin zit. Hieronder lees je ze alle vier.",
+    "p3": "Wat de quiz jullie geeft, is een naam voor wat jullie zijn, en één ding om in de gaten te houden. Dat klinkt simpel, maar een woord plakken op hoe je samenleeft, verandert best veel. Je snapt ineens waarom een vriend vindt dat jullie elkaar te weinig zien, of waarom de ander vorige maand wat lucht nodig had."
+  },
+  "section2": {
+    "title": "De vier types koppels",
+    "sub1Title": "De Onafscheidelijken",
+    "sub1P1": "<strong>Hun kracht:</strong> een geborgenheid die weinig mensen kennen. Je bent nooit alleen, er wacht altijd iemand op je. Onafscheidelijken begrijpen elkaar snel, omdat ze dezelfde dingen op hetzelfde moment meemaken.",
+    "sub1P2": "<strong>Waar ze op moeten letten:</strong> te weinig lucht. Als je alles samen beleeft, heb je 's avonds niets meer te vertellen. En op de dag dat een van de twee een avondje voor zichzelf nodig heeft, kan de ander dat als afwijzing voelen, terwijl het dat helemaal niet is.",
+    "sub2Title": "De Maatjes",
+    "sub2P1": "<strong>Hun kracht:</strong> de lichtheid. Een rotdag eindigt met een avond waarop ze overal om lachen, en spanningen krijgen geen kans om te blijven hangen. Het zijn de koppels die je uitnodigt als je zeker wilt weten dat de avond gezellig wordt.",
+    "sub2P2": "<strong>Waar ze op moeten letten:</strong> humor als schuilplaats. Als een onderwerp pijn doet, komt er een grap en stopt het gesprek. Sommige dingen moeten gezegd worden zonder te lachen, en dat kost maatjes een beetje moeite.",
+    "sub3Title": "De Vrije Vogels",
+    "sub3P1": "<strong>Hun kracht:</strong> niemand stikt. Ieder heeft eigen vrienden, eigen plannen, soms eigen vakanties, en wat ze delen, kiezen ze zelf. Vrije vogels blijven vaak lang samen, juist omdat de relatie niet zwaar weegt.",
+    "sub3P2": "<strong>Waar ze op moeten letten:</strong> het huisgenotengevoel. Als je goed met elkaar overweg kunt en ieder z'n eigen leven leidt, deel je op den duur misschien meer een huis dan een verhaal. Een vaste afspraak met z'n tweeën is meestal genoeg om dat te voorkomen.",
+    "sub4Title": "De Bouwers",
+    "sub4P1": "<strong>Hun kracht:</strong> een richting. Ze weten waar ze naartoe gaan, praten zonder gêne over geld en maken plannen. Een koppel dat ergens naartoe werkt, komt beter door saaie periodes heen, omdat het een reden heeft om vol te houden.",
+    "sub4P2": "<strong>Waar ze op moeten letten:</strong> de leegte als het werk af is. Als het huis gekocht is en het kind slaapt, moet er nog iets overblijven om over te praten. Bouwers doen er goed aan ruimte te houden voor dingen die nergens voor nodig zijn.",
+    "tip": "Veel koppels zijn een mix van twee families. Liggen jullie twee hoogste balken dicht bij elkaar? Lees dan beide profielen: vaak beschrijft juist die mix jullie het best."
+  },
+  "section3": {
+    "title": "Hoe je antwoordt, en wat de uitslag zegt",
+    "p1": "Jullie antwoorden samen, op dezelfde telefoon. Bij elke situatie zijn er vier antwoorden, één per type koppel. Kies het antwoord dat het meest op jullie lijkt, ook als geen enkel helemaal klopt. Zijn jullie het niet eens? Dan wordt het juist interessant! Praat er twee minuten over en kies het antwoord dat beschrijft wat jullie in werkelijkheid doen, niet wat jullie graag zouden doen.",
+    "p2": "De volgorde van de antwoorden verandert bij elke vraag, zodat je niet ‘altijd de eerste’ kunt kiezen zonder te lezen. Aan het eind zie je de vier balken en het profiel dat eruit springt. Als geen enkele familie duidelijk wint, zegt de quiz dat liever dan op één stem verschil te kiezen: dan zijn jullie het kameleonkoppel, dat meebeweegt met de periode.",
+    "p3": "Deze quiz beschrijft hoe jullie samenleven. Hij meet niet <a href=\"/nl/relatietest/\">hoe stevig jullie relatie is</a>, en ook niet <a href=\"/nl/persoonlijkheidstest-liefde/\">hoe ieder van jullie liefheeft</a>. En wil je weten door welke gebaren de ander zich geliefd voelt? Dat is weer iets anders: <a href=\"/nl/liefdestaal-test/\">de liefdestaal van de ander</a> meet je met een aparte test."
+  },
+  "seo": {
+    "faqTitle": "De vragen die mensen zich stellen",
+    "faq1Q": "Welke types koppels zijn er?",
+    "faq1A": "Er zijn net zoveel indelingen als boeken over het onderwerp. Deze quiz houdt het bij vier, die je hierboven leest: de onafscheidelijken, de maatjes, de vrije vogels en de bouwers. Er is ook een vijfde uitslag, het kameleonkoppel, voor koppels bij wie geen enkele familie de overhand heeft.",
+    "faq2Q": "Kan een koppel na verloop van tijd van type veranderen?",
+    "faq2A": "Ja, en dat gebeurt zelfs vaak. Veel koppels beginnen als onafscheidelijken, worden bouwers als het huis en de kinderen komen, en worden weer maatjes of vrije vogels als de kinderen groter zijn. Doe je de quiz een paar jaar later opnieuw, dan krijg je vaak een andere uitslag, en dat is geen probleem.",
+    "faq3Q": "We zijn het niet eens over een antwoord, wat nu?",
+    "faq3A": "Praat er twee minuten over en kies wat er bij jullie het vaakst gebeurt. Komen jullie er niet uit, neem dan het antwoord van degene die het vaakst het gevoel heeft dat het niet zo gaat. En onthoud die vraag: onenigheid over ‘wat we zijn’ zegt vaak meer dan de uitslag zelf.",
+    "faq4Q": "Is er een type koppel dat beter is dan de rest?",
+    "faq4A": "Nee. Alle vier de types houden het lang vol, en alle vier gaan ze weleens uit elkaar. Wat telt, is dat de manier van samenleven voor allebei goed voelt. Een vrije vogel met een onafscheidelijke partner heeft het moeilijker dan twee vrije vogels samen. Het probleem zit in het verschil tussen de twee, niet in het type.",
+    "faq5Q": "Is de quiz anoniem?",
+    "faq5A": "Ja. Jullie antwoorden blijven op je telefoon, je hoeft geen account aan te maken en de uitslag verschijnt meteen na de vijftiende vraag. Alleen je e-mailadres wordt één keer gevraagd om de volledige uitslag te zien, en jullie antwoorden gaan daar niet mee."
+  },
+  "jsonLd": {
+    "about": "types koppels en samenleven"
+  }
+}

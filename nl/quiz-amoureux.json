@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "badge": "Quiz om samen te doen",
+    "title": "Antwoorden jullie hetzelfde? Een quiz over liefde in 20 vragen",
+    "titleHighlight": "Antwoorden jullie hetzelfde",
+    "description": "20 vragen over jullie verhaal. Ieder antwoordt voor zich, daarna vergelijken jullie: hoe vaak kiezen jullie hetzelfde zonder te overleggen?",
+    "statements": "20 vragen",
+    "score": "Antwoorden vergeleken",
+    "results": "Meteen de uitslag"
+  },
+  "howTo": {
+    "title": "Hoe speel je het?",
+    "step1": "Vul jullie twee namen in. Eén telefoon is genoeg, leg hem tussen jullie in.",
+    "step2": "De eerste beantwoordt de 20 vragen zonder het scherm te laten zien, en geeft de telefoon dan door.",
+    "step3": "De tweede beantwoordt dezelfde vragen, zonder te weten wat de ander heeft gekozen.",
+    "step4": "Het spel vergelijkt jullie antwoorden, vraag per vraag.",
+    "outro": "Er zijn hier geen goede antwoorden. De vragen waarop jullie iets anders kozen, zijn juist het leukst: daar valt iets te vertellen. En als deze vragen op zijn, vinden jullie nog veel meer <a href=\"/nl/vragen-voor-koppels/\">vragen om elkaar beter te leren kennen</a>."
+  },
+  "seo": {
+    "whyTitle": "Waarom een quiz over liefde samen doen?",
+    "whySubtitle": "Een quiz om jullie band te versterken en elkaar beter te begrijpen.",
+    "card1Title": "Begin het gesprek",
+    "card1Text": "Elke vraag is een kans om erover te praten. Zeg wat je voelt en luister naar wat de ander voelt.",
+    "card2Title": "Vergelijk jullie antwoorden",
+    "card2Text": "Ieder antwoordt zonder de ander te zien. Aan het eind zet het spel jullie antwoorden naast elkaar, vraag per vraag. Waar andere tests zoeken naar <a href=\"/nl/hoeveel-hebben-we-gemeen/\">wat jullie gemeen hebben</a>, gaat deze over jullie eigen verhaal.",
+    "card3Title": "Versterk jullie band",
+    "card3Text": "Alleen al deze quiz samen doen laat zien dat je moeite doet voor de relatie. Dat is op zich al een liefdesbewijs!",
+    "card4Title": "Vier jullie relatie",
+    "card4Text": "Wat jullie score ook is, deze quiz laat jullie even stilstaan bij jullie verhaal en herinnert jullie eraan waarom jullie samen zijn.",
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Hoe speel je deze quiz over liefde?",
+    "faq1A": "Met z'n tweeën, op één telefoon. De eerste beantwoordt de 20 vragen en geeft de telefoon door, de tweede beantwoordt dezelfde vragen. Daarna vergelijkt het spel jullie antwoorden één voor één.",
+    "faq2Q": "Hoe lang duurt de quiz?",
+    "faq2A": "Een minuut of tien met z'n tweeën. Er loopt geen klok, en de vragen waar jullie over willen praten, zijn het waard om even bij stil te staan.",
+    "faq3Q": "Is de quiz gratis?",
+    "faq3A": "Ja, 100% gratis en zonder account. Jullie antwoorden worden niet opgeslagen, en je kunt de quiz zo vaak doen als je wilt.",
+    "faq4Q": "Wat zegt onze score?",
+    "faq4A": "De score telt de vragen waarop jullie hetzelfde antwoord kozen zonder te overleggen. Een lage score zegt weinig over jullie relatie. Vooral dat jullie elkaar nog dingen te vertellen hebben."
+  }
+}

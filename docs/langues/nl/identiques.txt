@@ -38,3 +38,6 @@ Effect
 # « Quality time » est le nom néerlandais du langage (traduction du livre de Chapman, « De vijf talen van de liefde »).
 Quality time
 ⏳ Quality time
+# Gerechten die in het Nederlands zo heten (quiz over liefde, lot 5a).
+Pizza
+Sushi

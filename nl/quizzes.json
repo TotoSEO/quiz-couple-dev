@@ -59,6 +59,12 @@
     "description": "Twintig eerlijke, gewogen vragen over wat je vandaag voor je partner voelt. Acht niveaus van uitslag, van heel duidelijk tot bijna vervaagd.",
     "metaDescription": "Hou ik nog van hem of haar? Twintig gewogen vragen, waarbij denken aan weggaan zwaarder telt dan een ergernis, en een uitslag op acht niveaus. Gratis."
   },
+  "quizAmoureux": {
+    "title": "Quiz over liefde: 20 vragen, antwoorden jullie hetzelfde?",
+    "shortTitle": "Quiz over liefde",
+    "description": "20 vragen om samen over te praten en te zien hoe vaak jullie hetzelfde denken.",
+    "metaDescription": "Quiz over liefde voor twee: 20 vragen over jullie verhaal. Ieder antwoordt apart en het spel vergelijkt. Gratis, zonder account, op één telefoon."
+  },
   "testCoupleSain": {
     "title": "Gezonde relatie test: hoe gezond is jullie relatie?",
     "shortTitle": "Gezonde relatie test",
@@ -281,6 +287,12 @@
     "shortTitle": "Klaar voor een nieuwe relatie?",
     "description": "Twintig vragen over je ex, je leven als single en wat je van iemand verwacht. De uitslag zegt of dit het moment is, of dat je beter nog even kunt wachten.",
     "metaDescription": "Klaar voor een nieuwe relatie? Twintig vragen over je ex, je avonden en wat je van iemand verwacht. Meteen een uitslag op vijf niveaus. Gratis test."
+  },
+  "quizTypeCouple": {
+    "title": "Wat voor koppel zijn jullie? De quiz voor twee in 15 vragen",
+    "shortTitle": "Wat voor koppel zijn jullie?",
+    "description": "Vijftien situaties uit het dagelijks leven om samen te beantwoorden. Aan het eind één profiel uit vier: onafscheidelijken, maatjes, vrije vogels of bouwers, met jullie kracht en waar je op moet letten.",
+    "metaDescription": "Wat voor koppel zijn jullie? 15 situaties om samen op één telefoon te beantwoorden. Onafscheidelijk, maatjes, vrije vogels of bouwers: in drie minuten."
   },
   "testEstCeLeBon": {
     "title": "Is hij de ware? Of is zij de ware? Doe de test",
