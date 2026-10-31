@@ -28,6 +28,7 @@ const COUPLES = {
   es: ['Lucía', 'Pablo'],
   de: ['Hannah', 'Lukas'],
   it: ['Giulia', 'Marco'],
+  nl: ['Sanne', 'Daan'],
 };
 // Les pages montrées dans le curseur de la page de vente, dans l'ordre du
 // rapport : la couverture, la synthèse, la carte, les conversations, le

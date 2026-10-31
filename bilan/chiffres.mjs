@@ -45,7 +45,7 @@ export function serieCompacte(serie) {
 // faire, par source et par étape d'arrêt. Les évaluations ne sont lues que
 // par leurs colonnes de dates, de langue, de mode, de source et d'étape :
 // jamais une réponse, un prénom, une adresse ni la situation.
-const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
+const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 export const langueDuChemin = (chemin) => {
   const l = String(chemin || '').split('/')[1];
   return LANGUES.includes(l) ? l : 'fr';

@@ -32,6 +32,7 @@ export const PRENOMS = {
   es: ['Lucía', 'Pablo'],
   de: ['Hannah', 'Lukas'],
   it: ['Giulia', 'Marco'],
+  nl: ['Sanne', 'Daan'],
 };
 const LONGS = ['Anna-Katharina Schwarzenberger', 'Maximilian-Alexander Ostermann'];
 
@@ -108,7 +109,7 @@ async function principal() {
     console.error('usage : node bilan/exemples.mjs <dossier> [langue...]');
     process.exit(2);
   }
-  const langues = process.argv.slice(3).length ? process.argv.slice(3) : ['fr', 'en', 'es', 'de', 'it'];
+  const langues = process.argv.slice(3).length ? process.argv.slice(3) : ['fr', 'en', 'es', 'de', 'it', 'nl'];
   fs.mkdirSync(sortie, { recursive: true });
   const navigateur = await lancer();
   let erreurs = 0;

@@ -11,7 +11,7 @@ import { couperPour } from '../cesure.mjs';
 import { jeuxDEssai, couple } from '../exemples.mjs';
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
+const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 const lire = (lang, f) => JSON.parse(fs.readFileSync(path.join(RACINE, lang, f), 'utf8'));
 
 function cles(o, p = '') {

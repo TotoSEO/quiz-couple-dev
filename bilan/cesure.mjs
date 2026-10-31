@@ -9,6 +9,7 @@ import motifsEn from 'hyphen/en-us/index.js';
 import motifsEs from 'hyphen/es/index.js';
 import motifsDe from 'hyphen/de/index.js';
 import motifsIt from 'hyphen/it/index.js';
+import motifsNl from 'hyphen/nl/index.js';
 
 // Le paquet est en CommonJS : chaque langue exporte un objet.
 const PAR_LANGUE = {
@@ -17,6 +18,7 @@ const PAR_LANGUE = {
   es: motifsEs.hyphenateSync,
   de: motifsDe.hyphenateSync,
   it: motifsIt.hyphenateSync,
+  nl: motifsNl.hyphenateSync,
 };
 
 // Un mot de moins de huit lettres ne se coupe pas : le gain est nul et le

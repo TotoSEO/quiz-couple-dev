@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1727,7 +1727,45 @@ spéciaux ».
 - **Vérifié** : `textes nl` sans erreur ; hors /nl/, seuls changent les
   fichiers de questions des cinq langues (la phrase ci-dessus).
 
+## Lot 8e (31 octobre 2026) : le serveur, les e-mails et le PDF de la relatiecheck
+
+- **Le serveur** (`supabase/functions/_shared/bilan/serveur.mjs`) accepte
+  `nl` : la page `/nl/relatiecheck/`, et ce que Stripe affiche sur sa page
+  de paiement (nom, descriptions à deux et seul(e), mention de la
+  renonciation à la rétractation et de la TVA), `locale: 'nl'` pour la page
+  Stripe elle-même.
+- **Les e-mails de l'évaluation** (`courriel.mjs`) : le lien du rapport,
+  le lien personnel (un, plusieurs, aucun), « votre rapport est prêt », le
+  rappel, la reprise (à soi et à l'autre), avec leurs variantes seul(e)
+  là où le néerlandais distingue « jullie » et « je » ; expéditeur
+  `resultaten@quiz-couple.com`, nom du PDF `relatiecheck-sanne-en-daan.pdf`,
+  prix au format néerlandais (« € 7,92 »), la séance chez un thérapeute
+  « al snel 60 euro of meer ».
+- **Le PDF** : césure néerlandaise (`bilan/cesure.mjs`, motifs du paquet
+  `hyphen`) ; le couple fictif des exemples et des aperçus s'appelle Sanne et
+  Daan ; `bilan/exemples.mjs` rend désormais 24 rapports (six langues), et
+  les six rapports néerlandais passent les contrôles de mise en page (27 à
+  49 pages, prénoms de trente signes compris). Les sept aperçus de la page
+  de vente sont faits (`public/bilan/apercu-*-nl.webp`).
+- **La base** : `20261031130000_langue_nl.sql` ajoute `nl` aux sept
+  contraintes de langue (évaluations, sondage des célibataires, abonnés,
+  avis, e-mails du parcours, modèles de l'e1, quiz personnalisés) en relisant
+  chaque définition dans la base ; appliquée en dernier par bilan-base.yml,
+  dont deux migrations (recopiées avec `nl`) recréent `bilans_bornes` et
+  `bilan_celib_bornes` à chaque passage. Essayée sur un Postgres 16 local :
+  les sept contraintes acceptent `nl`, le reste de chaque définition est
+  intact, un second passage ne change rien.
+- **Les tests** : `courriel.test.mjs` et `rapport.test.mjs` parcourent les
+  six langues ; 61 tests du serveur et 27 de la fabrique passent.
+
 ## Les chiffres
+
+Au lot 8e : `code nl` 127 passages (164 à l'ouverture) : les adresses des
+articles du blog (lot 9), la page des prénoms et des signes et les autres
+outils (lot 7a), les avis, les abonnés et le parcours e-mail, l'encart et la
+bannière de l'évaluation (fin du lot 8) ; 61 tests du serveur de
+l'évaluation et 27 de la fabrique passent, six rapports néerlandais
+d'exemple passent les contrôles de mise en page.
 
 Au lot 8d : `textes nl` 892 parties écrites sur 1 045, sans erreur.
 

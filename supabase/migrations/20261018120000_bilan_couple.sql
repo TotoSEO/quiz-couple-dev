@@ -94,7 +94,7 @@ GRANT ALL ON TABLE public.bilans TO service_role;
 -- passage pour suivre les colonnes.
 ALTER TABLE public.bilans DROP CONSTRAINT IF EXISTS bilans_bornes;
 ALTER TABLE public.bilans ADD CONSTRAINT bilans_bornes CHECK (
-  lang IN ('fr', 'en', 'es', 'de', 'it')
+  lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
   AND (src IS NULL OR src ~ '^[a-z0-9-]{1,40}$')
   AND char_length(a_prenom) BETWEEN 1 AND 30
   AND char_length(b_prenom) BETWEEN 1 AND 30

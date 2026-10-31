@@ -23,7 +23,7 @@
 import * as C from './coeur.mjs';
 import { emailPropre, masquerEmail, messageRapport, messageLien, messagePret, messageRelance, messageReprise, nomFichier } from './courriel.mjs';
 
-export const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
+export const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 export const SITE = 'https://quiz-couple.com';
 // Les adresses de la page, les mêmes que ROUTES.bilanCouple dans
 // static-site/build/config.js (test/serveur.test.mjs le vérifie).
@@ -33,6 +33,7 @@ export const CHEMINS = {
   es: '/es/evaluacion-de-pareja/',
   de: '/de/beziehungsanalyse/',
   it: '/it/valutazione-di-coppia/',
+  nl: '/nl/relatiecheck/',
 };
 
 // Ce que Stripe affiche sur sa page de paiement, dans la langue de la page.
@@ -73,6 +74,13 @@ const PRODUIT = {
     descriptionSolo: 'Il report completo della tua valutazione di coppia, fatta da solo o da sola, in PDF via e-mail e online: il tuo sguardo sulla relazione tema per tema, le differenze che percepisci, le tue zone d\'ombra, i segnali d\'allarme e da dove cominciare.',
     mention: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato e avete finito tutti e due: avete chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
     mentionSolo: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato: hai chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
+  },
+  nl: {
+    nom: 'Relatiecheck: het volledige rapport',
+    description: 'Voor jullie allebei: het volledige rapport van jullie relatiecheck, als pdf per e-mail en online. Waar jullie het eens zijn, alle verschillen met beide antwoorden, de signalen om op te letten, de sfeer in jullie relatie en jullie volgende vier gesprekken.',
+    descriptionSolo: 'Het volledige rapport van je relatiecheck, alleen ingevuld, als pdf per e-mail en online: jouw kijk op je relatie per onderwerp, de verschillen die je ziet, je blinde vlekken, de signalen om op te letten en waar je kunt beginnen.',
+    mention: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport wordt geleverd zodra de betaling bevestigd is en jullie allebei klaar zijn: jullie hebben om directe levering gevraagd en afgezien van het herroepingsrecht.',
+    mentionSolo: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport wordt geleverd zodra de betaling bevestigd is: je hebt om directe levering gevraagd en afgezien van het herroepingsrecht.',
   },
 };
 

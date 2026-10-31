@@ -20,7 +20,7 @@ ALTER TABLE public.bilans ADD COLUMN IF NOT EXISTS a_percu jsonb NOT NULL DEFAUL
 -- ligne ne grossit sans limite).
 ALTER TABLE public.bilans DROP CONSTRAINT IF EXISTS bilans_bornes;
 ALTER TABLE public.bilans ADD CONSTRAINT bilans_bornes CHECK (
-  lang IN ('fr', 'en', 'es', 'de', 'it')
+  lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
   AND mode IN ('duo', 'solo')
   AND (src IS NULL OR src ~ '^[a-z0-9-]{1,40}$')
   AND char_length(a_prenom) BETWEEN 1 AND 30
