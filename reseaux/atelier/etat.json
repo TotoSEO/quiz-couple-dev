@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-31T03:14:17.469Z",
+  "genere_le": "2026-10-31T09:34:24.015Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -687,7 +687,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3624,8 +3624,8 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-10-31",
-      "creneau": "midi"
+      "jour": "2026-11-01",
+      "creneau": "soir"
     },
     "phrase": null,
     "carrousel": null,
@@ -4518,6 +4518,24 @@
       "jour": "2026-10-23",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "652f0643-205e-41d9-93d3-8a126d3f806a",
+      "releve": "j7",
+      "vues": 1326,
+      "portee": 1155,
+      "likes": 20,
+      "commentaires": 0,
+      "partages": 4,
+      "enregistrements": 0,
+      "releve_le": "2026-10-31T09:34:20.362374+00:00",
+      "publie_le": "2026-10-24T05:20:10.276+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-24",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4545,13 +4563,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 6,
-      "vues_mediane": 1374,
-      "vues_moyenne": 1271,
+      "posts": 7,
+      "vues_mediane": 1326,
+      "vues_moyenne": 1279,
       "vues_max": 1647,
-      "partages": 18,
+      "partages": 22,
       "enregistrements": 12,
-      "likes": 112,
+      "likes": 132,
       "commentaires": 0
     },
     {
