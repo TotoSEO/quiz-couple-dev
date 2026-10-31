@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -782,7 +782,46 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur les pages** : la description d'une carte
   vers « prêt pour une nouvelle relation », pas encore traduite (lot 4c).
 
+## Lot 4c (31 octobre 2026) : prêt pour une nouvelle relation, suis-je amoureux
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/klaar-voor-een-nieuwe-relatie/` | Klaar voor een nieuwe relatie na een breuk? Doe de test | Ben ik klaar voor een nieuwe relatie? De test om het te weten |
+  | `/nl/ben-ik-verliefd-test/` | Ben ik verliefd test: liefde of alleen aantrekking? | Ben ik verliefd? |
+
+  Le title et le H1 de « ben ik verliefd » évitent « crush » : c'est le
+  mot-clé de la page « amour ou crush » (`crush-test`).
+- **Les moteurs** : `pretRelation` (barème explicite repris du français,
+  86 points, cinq paliers, et l'écran de départ) et `suisjeamoureux` (barème
+  pondéré du chargeur, 205 points). Le français « béguin » devient
+  « bevlieging », « relation pansement » devient « reboundrelatie », et la
+  distinction néerlandaise entre « houden van » et « verliefd zijn » porte la
+  question de la FAQ.
+- **Une erreur corrigée sur les cinq pages publiques** : la page « suis-je
+  amoureux » annonçait « un score sur 60 » (« out of 60 », « sobre 60 »,
+  « einen Wert von 60 », « su 60 ») depuis que le barème pondéré du chargeur
+  mène le total à 205, ce que disait déjà le tableau du score de la même
+  page ; le résultat affiche bien « …/205 ». La phrase dit désormais 205
+  dans les cinq langues.
+- **Les liens** : l'ex (« klaar bent met aan je ex denken », « je je nog
+  afvraagt wat je ex van je denkt »), « encore amoureux de mon ex » (« komt
+  uit gemis »), l'attachement, « pourquoi je ne trouve pas l'amour »,
+  « couple ou célibat », amour ou amitié (« de grens met vriendschap »,
+  l'ancre française « le test amour ou amitié » nommait la page visée),
+  « c'est un 10 mais », l'amour pour un meilleur ami et amour ou habitude.
+- **Ce qui reste en français sur les pages** : la description de quatre
+  cartes vers des tests célibataires pas encore traduits (lots 4d à 4f).
+
 ## Les chiffres
+
+Au lot 4c : `textes nl` 476 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (43 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux moteurs vont jusqu'à
+leur résultat ; restent en français les descriptions de quatre cartes vers
+des pages pas encore traduites. Côté public, les cinq pages « suis-je
+amoureux » disent 205 au lieu de 60.
 
 Au lot 4b : `textes nl` 455 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (41 pages traduites) ; `site nl` sur les deux pages : aucun

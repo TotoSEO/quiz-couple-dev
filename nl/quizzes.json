@@ -148,6 +148,12 @@
     "description": "20 vragen om te zien of jullie band karmisch is, een spiegel of rustig.",
     "metaDescription": "Karmische relatie test: 20 vragen om te zien of jullie band karmisch is, een spiegel van wie je bent, of juist rustig. Gratis en zonder account."
   },
+  "testSuisJeAmoureux": {
+    "title": "Ben ik verliefd test: liefde of alleen aantrekking?",
+    "shortTitle": "Ben ik verliefd?",
+    "description": "20 vragen om liefde te onderscheiden van een bevlieging, en te weten wat je voelt.",
+    "metaDescription": "Ben ik verliefd test: twintig vragen om liefde te onderscheiden van een bevlieging of gewone aantrekking. Gratis, met meteen een uitslag."
+  },
   "testAmeSoeur": {
     "title": "Zielsverwant test: is dit de juiste persoon voor jou?",
     "shortTitle": "Zielsverwant test",
@@ -207,6 +213,12 @@
     "shortTitle": "Single of relatie?",
     "description": "Twintig gewogen vragen over je dagelijks leven en je reflexen. De uitslag geeft twee delen die samen honderd maken: het deel dat naar alleen leven neigt, en het deel dat naar samen leven neigt.",
     "metaDescription": "Single of relatie test: twintig gewogen vragen over je dagelijks leven, en een uitslag in twee percentages die samen honderd maken. Gratis test."
+  },
+  "testPretRelation": {
+    "title": "Klaar voor een nieuwe relatie na een breuk? Doe de test",
+    "shortTitle": "Klaar voor een nieuwe relatie?",
+    "description": "Twintig vragen over je ex, je leven als single en wat je van iemand verwacht. De uitslag zegt of dit het moment is, of dat je beter nog even kunt wachten.",
+    "metaDescription": "Klaar voor een nieuwe relatie? Twintig vragen over je ex, je avonden en wat je van iemand verwacht. Meteen een uitslag op vijf niveaus. Gratis test."
   },
   "testEstCeLeBon": {
     "title": "Is hij de ware? Of is zij de ware? Doe de test",
