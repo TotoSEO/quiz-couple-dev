@@ -70,3 +70,4 @@ Week {{n}}
 Calculator
 Astrologie
 Water
+Element

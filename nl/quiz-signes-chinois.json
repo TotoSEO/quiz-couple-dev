@@ -1,0 +1,705 @@
+{
+  "hero": {
+    "badge": "Chinese astrologie",
+    "title": "Chinese horoscoop compatibiliteit: passen jullie dieren bij elkaar?",
+    "highlight": "Chinese horoscoop",
+    "description": "Twee geboortedata zijn genoeg. Daaruit halen we jouw dier en dat van je partner, het element van elk, en wat de Chinese traditie over jullie combinatie zegt: <strong>dezelfde driehoek</strong>, <strong>geheime vrienden</strong>, <strong>tegenpolen</strong>... Het resultaat legt alles uit, met een score en een advies.",
+    "subtitle": "Geen inschrijving, geen e-mail. De uitslag staat er meteen."
+  },
+  "form": {
+    "titre": "Jullie twee geboortedata",
+    "personne1": "Jij",
+    "personne2": "Je partner",
+    "jour": "Dag",
+    "moisLabel": "Maand",
+    "annee": "Jaar",
+    "mois": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "moisDate": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "erreur": "Een van de twee data bestaat niet. Controleer de dag en de maand die je hebt gekozen.",
+    "lancer": "Bereken onze compatibiliteit",
+    "aide": "Het jaar geeft het dier en het element. Maar het Chinese jaar begint eind januari of begin februari, en daarom vragen we de volledige datum."
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Os",
+    "tigre": "Tijger",
+    "lapin": "Konijn",
+    "dragon": "Draak",
+    "serpent": "Slang",
+    "cheval": "Paard",
+    "chevre": "Geit",
+    "singe": "Aap",
+    "coq": "Haan",
+    "chien": "Hond",
+    "cochon": "Varken"
+  },
+  "elements": {
+    "bois": "Hout",
+    "feu": "Vuur",
+    "terre": "Aarde",
+    "metal": "Metaal",
+    "eau": "Water"
+  },
+  "relations": {
+    "trine": "{{a1}} en {{a2}} horen bij dezelfde driehoek van affiniteit. In de Chinese dierenriem is dat de meest gewilde band: jullie gaan in hetzelfde tempo, willen ongeveer hetzelfde, en hoeven niet lang uit te leggen om het eens te worden.",
+    "harmonie": "{{a1}} en {{a2}} vormen een van de zes paren van geheime vrienden. Jullie lijken niet op elkaar, en juist dat werkt: de een is sterk waar de ander kwetsbaar is, en dat gaat vanzelf, bijna zonder erbij na te denken.",
+    "meme": "Jullie hebben allebei {{a1}} als Chinees teken. Jullie begrijpen elkaar snel, hebben dezelfde verlangens en dezelfde gebreken. Dat is rustgevend, en het is ook een spiegel: wat je aan de ander irriteert, doe je waarschijnlijk zelf ook.",
+    "neutre": "{{a1}} en {{a2}} hebben in de Chinese traditie geen bijzondere band en ook geen duidelijke spanning. Niets helpt jullie vanzelf, en niets remt jullie af. Wat jullie ervan maken, hangt meer van jullie twee af dan van jullie tekens.",
+    "nuisance": "{{a1}} en {{a2}} horen bij de zes paren die de traditie ‘schadelijk’ noemt. Dat is geen echte onverenigbaarheid. Het is eerder slijtage: kleine ergernissen die steeds terugkomen en op den duur gaan wegen als niemand ze benoemt.",
+    "opposition": "{{a1}} en {{a2}} staan tegenover elkaar op het wiel, zes tekens van elkaar. Dat is de meest gespannen as van de Chinese dierenriem, en in het begin vaak ook de aantrekkelijkste. Jullie vallen op elkaar omdat jullie verschillend zijn, en juist dat verschil wordt met de tijd vermoeiend."
+  },
+  "elementsRelation": {
+    "meme": "Jullie hebben hetzelfde element: {{e1}}. Jullie reageren met dezelfde energie op wat er gebeurt. Dat maakt het leven samen makkelijker, en de slechte dagen heftiger, omdat niemand de ander kalmeert.",
+    "nourrit": "Jullie elementen kunnen goed met elkaar overweg: in de Chinese cyclus is {{de}} het element dat {{vers}} voedt. De een geeft de ander vaart zonder te forceren. Dat is een klein pluspunt dat telt in het dagelijks leven, vooral als jullie moe zijn.",
+    "controle": "Jullie elementen zitten elkaar dwars: in de Chinese cyclus is {{de}} het element dat {{vers}} in toom houdt. De een tempert de ander. Dat voorkomt uitschieters, maar het kan voelen alsof je wordt afgeremd. Je lost het op door te zeggen wanneer je een duwtje nodig hebt, en wanneer je met rust gelaten wilt worden."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Twee tekens die bij elkaar horen",
+      "texte": "De traditie is duidelijk over {{a1}} en {{a2}}: jullie zijn gemaakt om het met elkaar te kunnen vinden. Jullie dieren gaan dezelfde kant op en jullie elementen passen bij elkaar. Dat betekent niet dat het vanzelf gaat, maar jullie hebben wel een voorsprong!"
+    },
+    "belle": {
+      "titre": "Een mooie band, met één detail om op te letten",
+      "texte": "Het belangrijkste zit goed tussen {{a1}} en {{a2}}. Jullie tekens kunnen het goed met elkaar vinden, en wat de score omlaag haalt, is een detail: een element dat het andere afremt, of een paar dat wat aandacht vraagt. Niets wat een lang verhaal in de weg staat."
+    },
+    "solide": {
+      "titre": "Een stel dat standhoudt, ook zonder hulp van de sterren",
+      "texte": "{{a1}} en {{a2}} zijn volgens de traditie niet voor elkaar gemaakt, maar ook niet om ruzie te maken. Jullie zitten in de zone die het vaakst voorkomt, waar de relatie afhangt van wat jullie ervan maken. Wat het wiel zegt, staat hieronder, en dat is eerder bemoedigend."
+    },
+    "travail": {
+      "titre": "Twee temperamenten die elkaar moeten leren lezen",
+      "texte": "Tussen {{a1}} en {{a2}} ziet de traditie wrijving. Geen onverenigbaarheid, maar gewoontes die elkaar in de weg zitten als je niets zegt. De stellen die het met zo'n score volhouden, zijn degenen die woorden hebben gegeven aan wat hen irriteert."
+    },
+    "contraires": {
+      "titre": "Twee werelden om te verbinden",
+      "texte": "{{a1}} en {{a2}} zijn een van de meest gespannen duo's van de Chinese dierenriem. Vaak is het in het begin ook een van de aantrekkelijkste. Deze score zegt niets over jullie gevoelens. Hij zegt dat jullie niet op dezelfde manier werken, en dat je dat terugziet in de details van het dagelijks leven."
+    }
+  },
+  "resultat": {
+    "animal": "Chinees teken",
+    "element": "Element",
+    "polarite": "Polariteit",
+    "yin": "Yin",
+    "yang": "Yang",
+    "anneeLunaire": "Chinees jaar",
+    "titreRoue": "{{a1}} en {{a2}}: wat het wiel zegt",
+    "titrePortrait": "{{a}} in de liefde",
+    "titreElements": "Jullie elementen: {{e1}} en {{e2}}",
+    "titreConseil": "Het advies voor jullie twee",
+    "refaire": "Twee andere data testen",
+    "avis": "Laat een review achter"
+  },
+  "portraits": {
+    "rat": "De Rat is snel, nieuwsgierig en heel sociaal. In de liefde is hij attent en gul voor de mensen die hij heeft gekozen, en eerder zuinig voor de rest van de wereld. Hij moet kunnen praten, dingen begrijpen en voelen dat hij ertoe doet. Zijn zwakke punt is ongerustheid: hij denkt vooruit, controleert alles en haalt zich van alles in zijn hoofd. Met iemand die stabiel is en hem geruststelt zonder hem af te remmen, wordt hij een trouwe en grappige partner.",
+    "buffle": "De Os is geduldig, betrouwbaar en een harde werker. Hij houdt van weinig mensen, maar wel lang, en hij laat zijn liefde zien met daden in plaats van woorden. Hij heeft rust, vaste gewoontes en vertrouwen nodig. Zijn zwakke punt is koppigheid: als hij iets heeft besloten, luistert hij niet meer. Hij geeft het beste van zichzelf aan iemand die kan wachten en hem niet in het nauw drijft.",
+    "tigre": "De Tijger is hartstochtelijk, moedig en een beetje onvoorspelbaar. In de liefde gaat hij er helemaal voor, beschermt hij zijn mensen en heeft hij een hekel aan verveling. Hij heeft beweging, plannen en bewondering nodig. Zijn zwakke punt is impulsiviteit: hij zegt en doet dingen snel, en heeft er soms spijt van. Hij bloeit op bij iemand die meegaat in zijn plotselinge ideeën en toch met beide benen op de grond blijft.",
+    "lapin": "Het Konijn is zacht, diplomatiek en houdt van comfort. Het gaat conflicten uit de weg, zorgt goed voor zijn huis en zijn naasten, en kiest liever een rustige avond dan een luidruchtig uitje. Het heeft emotionele zekerheid en tederheid nodig. Zijn zwakke punt is wegvluchten: in plaats van de confrontatie aan te gaan, trekt het zich in stilte terug. Het Konijn is gelukkig met iemand die attent is en het nooit opjaagt.",
+    "dragon": "De Draak heeft charisma, energie en ambitie. In de liefde is hij heel of niets, gul en trots. Hij heeft iemand nodig die in hem gelooft en zijn tempo volgt, en dat ligt hoog. Zijn zwakke punt is hoogmoed: hij kan slecht tegen kritiek en geeft zelden als eerste toe. Hij geeft veel aan iemand die hem kan bewonderen zonder zichzelf weg te cijferen.",
+    "serpent": "De Slang is bedachtzaam, verleidelijk en gesloten. In de liefde kijkt ze eerst goed rond voordat ze zich bindt, en daarna hecht ze zich diep. Ze heeft een klik op intellectueel vlak nodig en een beetje mysterie. Haar zwakke punt is jaloezie: ze houdt vast wat ze liefheeft en let op zonder het te zeggen. Ze voelt zich goed bij iemand die trouw is en haar stiltes respecteert.",
+    "cheval": "Het Paard is enthousiast, eerlijk en onafhankelijk. In de liefde is het warm en spontaan, maar het heeft een hekel aan het gevoel opgesloten te zitten. Het heeft lucht, nieuwe dingen en bewegingsvrijheid nodig. Zijn zwakke punt is wispelturigheid: het raakt snel enthousiast en is er soms ook snel weer op uitgekeken. Het Paard houdt het lang vol met iemand die zijn zin in nieuwe dingen deelt zonder het te willen tegenhouden.",
+    "chevre": "De Geit is gevoelig, creatief en zacht. In de liefde geeft ze veel, en ze moet zich beschermd en gerustgesteld voelen. Ze gaat ruzies uit de weg en geeft liever toe dan dat ze de confrontatie aangaat. Haar zwakke punt is angst: ze twijfelt, en ze heeft het nodig dat je dingen nog eens zegt. Ze bloeit op bij iemand die sterk en teder is, en die de moeilijke beslissingen neemt zonder haar onder druk te zetten.",
+    "singe": "De Aap is grappig, vindingrijk en slim. In de liefde verleidt hij met humor en fantasie, en hij heeft een hekel aan sleur. Hij heeft spel, verrassingen en een partner nodig die zijn ideeën volgt. Zijn zwakke punt is luchtigheid: hij kan serieuze gesprekken ontwijken met een grap. Hij houdt het vol met iemand die hem aan het lachen maakt en hem af en toe weer met beide benen op de grond zet.",
+    "coq": "De Haan is eerlijk, precies en trots. In de liefde is hij loyaal en let hij op details, en hij zegt wat hij denkt, soms wat te veel. Hij heeft orde, erkenning en openheid nodig. Zijn zwakke punt is kritiek: hij ziet alles en laat het ook weten. Hij is gelukkig met iemand die zijn opmerkingen ziet als aandacht en die hem van repliek kan dienen.",
+    "chien": "De Hond is loyaal, rechtvaardig en beschermend. In de liefde is hij trouw en attent, en hij doet veel voor de mensen van wie hij houdt. Hij heeft vertrouwen en stabiliteit nodig. Zijn zwakke punt is ongerustheid: hij denkt meteen aan het ergste en kan moeilijk loslaten. Hij geeft het beste van zichzelf aan iemand die eerlijk is en hem keer op keer met daden geruststelt.",
+    "cochon": "Het Varken is gul, een levensgenieter en vol vertrouwen. In de liefde geeft het zonder te tellen, houdt het van eenvoudige pleziertjes en vergeeft het snel. Het heeft warmte, delen en een zacht leven nodig. Zijn zwakke punt is naïviteit: het vertrouwt mensen snel en kan teleurgesteld raken. Het Varken is gelukkig met iemand die eerlijk is en er net zo goed voor zorgt als het zelf voor anderen doet."
+  },
+  "paires": {
+    "rat-rat": {
+      "note": 7.0,
+      "texte": "Twee Ratten begrijpen elkaar in één oogopslag. Jullie praten veel, ruimen dezelfde dingen op en maken je zorgen over dezelfde rekeningen. Pas wel op dat jullie elkaar niet bevestigen in je angsten: een van jullie moet kunnen zeggen “het komt wel goed”."
+    },
+    "rat-buffle": {
+      "note": 8.4,
+      "texte": "De Rat is druk, de Os brengt rust. Jullie zijn geheime vrienden: de Rat brengt de ideeën en de luchtigheid, de Os de standvastigheid en de zekerheid. De een heeft de ander precies daar nodig waar hij zelf tekortschiet."
+    },
+    "rat-tigre": {
+      "note": 6.2,
+      "texte": "De Rat rekent, de Tijger gaat ervoor. Jullie bewonderen elkaar en ergeren je aan elkaar om dezelfde reden. Het werkt als de Rat zich af en toe laat meeslepen, en als de Tijger naar de voorzichtigheid van de Rat luistert voordat hij springt."
+    },
+    "rat-lapin": {
+      "note": 5.8,
+      "texte": "De Rat houdt van gezelschap, het Konijn van rust. Wat jullie gemeen hebben, is de liefde voor een verzorgd huis en een leven zonder drama. Het Konijn moet zeggen wanneer het stilte nodig heeft, en de Rat moet leren niet elke avond vol te plannen."
+    },
+    "rat-dragon": {
+      "note": 9.0,
+      "texte": "Een van de mooiste duo's van de Chinese dierenriem. De Rat bewondert de durf van de Draak, de Draak is gek op de geest van de Rat. Jullie horen bij dezelfde driehoek: jullie willen slagen, in beweging blijven en iets opbouwen, en dat doen jullie samen."
+    },
+    "rat-serpent": {
+      "note": 6.4,
+      "texte": "Twee scherpe geesten die graag observeren en begrijpen. De Rat praat, de Slang luistert, en jullie kunnen uren de wereld ontleden. Het risico is wantrouwen met z'n tweeën: leer elkaar op je woord te geloven."
+    },
+    "rat-cheval": {
+      "note": 3.6,
+      "texte": "De Rat spaart, het Paard geeft uit; de Rat plant, het Paard improviseert. Jullie zijn tegenpolen, en de aantrekking van het begin komt juist daarvandaan. Om het vol te houden, moeten jullie accepteren dat jullie nooit in hetzelfde tempo zullen leven."
+    },
+    "rat-chevre": {
+      "note": 4.6,
+      "texte": "De Rat heeft geruststelling nodig, de Geit ook. Jullie zijn een zogenaamd ‘schadelijk’ paar: de ongerustheid van de een voedt die van de ander. Wat jullie redt, is jullie gedeelde tederheid, als een van jullie tweeën maar durft te beslissen."
+    },
+    "rat-singe": {
+      "note": 8.8,
+      "texte": "Dezelfde driehoek, dezelfde vlugheid, dezelfde humor. De Rat en de Aap vervelen zich nooit samen en vinden overal een oplossing voor. Let alleen op dat jullie niet alles in een grap veranderen als er serieus gepraat moet worden."
+    },
+    "rat-coq": {
+      "note": 5.6,
+      "texte": "De Rat past zich aan, de Haan houdt voet bij stuk. Jullie zijn twee perfectionisten die niet hetzelfde perfectioneren. Dat kan heel productief zijn, zolang jullie elkaar niet de hele dag verbeteren."
+    },
+    "rat-chien": {
+      "note": 6.4,
+      "texte": "De Rat en de Hond delen hun gevoel voor familie en een diepe loyaliteit. De Hond kalmeert de zorgen van de Rat, de Rat maakt de gewetensbezwaren van de Hond lichter. Een bescheiden stel dat het vaak langer volhoudt dan iedereen denkt."
+    },
+    "rat-cochon": {
+      "note": 6.8,
+      "texte": "De Rat is slim, het Varken vol vertrouwen, en de een beschermt de ander zonder erbij na te denken. Jullie houden van dezelfde eenvoudige dingen: lekker eten, een avond met vrienden. De Rat moet oppassen dat hij geen misbruik maakt van de gulheid van het Varken."
+    },
+    "buffle-buffle": {
+      "note": 6.8,
+      "texte": "Twee Ossen, dat is een stevig huis en vaste gewoontes. Jullie vertrouwen elkaar en werken dezelfde kant op. Het risico: twee stijfkoppen tegenover elkaar. Als jullie het niet eens zijn, beweegt niemand."
+    },
+    "buffle-tigre": {
+      "note": 5.6,
+      "texte": "De Os wil stabiliteit, de Tijger avontuur. Jullie respecteren elkaar, maar remmen elkaar ook af. Het houdt stand als de Tijger een kader accepteert, en als de Os af en toe uit het zijne durft te stappen."
+    },
+    "buffle-lapin": {
+      "note": 6.6,
+      "texte": "De Os beschermt, het Konijn maakt alles zachter. Jullie houden allebei van een rustig huis en een leven zonder schokken. Het Konijn moet leren zeggen wat het wil in plaats van erop te wachten, en de Os moet soms vragen in plaats van beslissen."
+    },
+    "buffle-dragon": {
+      "note": 5.8,
+      "texte": "Twee sterke karakters, twee manieren om de leiding te nemen. De Os gaat stap voor stap, de Draak wil snel en ver. Het werkt als ieder zijn eigen terrein heeft en niemand overal het laatste woord wil hebben."
+    },
+    "buffle-serpent": {
+      "note": 8.8,
+      "texte": "Dezelfde driehoek: het geduld van de Os en de strategie van de Slang maken samen een geducht duo. Jullie nemen de tijd, bouwen op en raken niet verstrooid. Een bescheiden en heel stevig stel."
+    },
+    "buffle-cheval": {
+      "note": 4.4,
+      "texte": "De Os wil zich settelen, het Paard wil weg. Jullie zijn een ‘schadelijk’ paar: het is geen oorlog, wel een tempoverschil dat nooit ophoudt. Er is veel praten nodig, zodat de een zich niet opgesloten voelt en de ander niet in de steek gelaten."
+    },
+    "buffle-chevre": {
+      "note": 3.8,
+      "texte": "De Os is praktisch, de Geit dromerig. Jullie zijn tegenpolen: wat de een essentieel vindt, vindt de ander bijzaak. De tederheid van de Geit kan de Os zachter maken, als hij leert haar met woorden gerust te stellen."
+    },
+    "buffle-singe": {
+      "note": 6.2,
+      "texte": "De Os neemt alles serieus, de Aap neemt alles luchtig. Jullie kunnen elkaar veel goeds doen: de Aap laat de Os lachen, de Os geeft de Aap houvast. Of jullie ergeren je flink aan elkaar, als geen van beiden een stap zet."
+    },
+    "buffle-coq": {
+      "note": 8.6,
+      "texte": "Dezelfde driehoek, hetzelfde plichtsbesef, dezelfde liefde voor goed werk. De Os en de Haan vormen een georganiseerd stel waarin ieder weet wat hij te doen heeft. Gun jezelf ook momenten die nergens voor dienen."
+    },
+    "buffle-chien": {
+      "note": 5.8,
+      "texte": "Twee loyale, trouwe en ongeruste tekens. De Os en de Hond vertrouwen elkaar, maar ze kunnen zich opsluiten in hun voorzichtigheid. Een van de twee moet zin hebben om eens ergens anders te gaan kijken: op reis, niet in de liefde."
+    },
+    "buffle-cochon": {
+      "note": 6.6,
+      "texte": "De Os stelt gerust, het Varken geeft warmte. Jullie houden van thuis, lekker eten en eenvoudige mensen. Het Varken moet de behoefte aan rust van de Os respecteren, en de Os moet openstaan voor de vrienden van het Varken."
+    },
+    "tigre-tigre": {
+      "note": 6.2,
+      "texte": "Twee Tijgers, dat is veel passie en veel onweer. Jullie bewonderen elkaar, dagen elkaar uit en maken het vurig weer goed. Om het vol te houden, moeten jullie samen beslissen wie er deze keer toegeeft, want vanzelf doet geen van jullie dat."
+    },
+    "tigre-lapin": {
+      "note": 6.2,
+      "texte": "De Tijger valt aan, het Konijn ontwijkt. Jullie vullen elkaar aan als de Tijger zijn stem laat zakken en het Konijn durft te zeggen wat het pijn doet. Het Konijn brengt de zachtheid die de Tijger nodig heeft zonder het te weten."
+    },
+    "tigre-dragon": {
+      "note": 7.0,
+      "texte": "Twee natuurkrachten. De Tijger en de Draak bewonderen elkaar, sleuren elkaar mee en vechten om het stuur. Dit stel schittert in gezelschap, maar moet leren de ander af en toe te laten winnen, anders wordt het huis een arena."
+    },
+    "tigre-serpent": {
+      "note": 4.4,
+      "texte": "De Tijger is direct, de Slang gesloten. Jullie zijn een ‘schadelijk’ paar: de Tijger begrijpt de stiltes van de Slang niet, de Slang houdt niet van de uitbarstingen van de Tijger. Daar valt aan te werken, met veel geduld en weinig verwijten."
+    },
+    "tigre-cheval": {
+      "note": 8.8,
+      "texte": "Dezelfde driehoek: twee onafhankelijke tekens die van actie en eerlijkheid houden. De Tijger en het Paard geven elkaar ruimte, vertrekken samen en komen samen terug. Een stel dat beweegt en lacht, zolang jullie een paar vaste afspraken houden."
+    },
+    "tigre-chevre": {
+      "note": 5.8,
+      "texte": "De Tijger beschermt, de Geit leunt op hem. Dat kan een teder stel geven, als de Tijger beschermen niet verwart met overheersen. De Geit moet nee durven zeggen, en de Tijger moet leren het te horen."
+    },
+    "tigre-singe": {
+      "note": 3.6,
+      "texte": "De Tijger en de Aap staan tegenover elkaar op het wiel. De Aap vindt de trots van de Tijger grappig, de Tijger raakt uitgekeken op de capriolen van de Aap. Veel aantrekking en veel gelach in het begin, en daarna echt behoefte aan duidelijke regels."
+    },
+    "tigre-coq": {
+      "note": 5.6,
+      "texte": "Twee trotse tekens die graag gelijk hebben. De Tijger handelt snel, de Haan verbetert de details, en op slechte dagen vinden ze elkaar onuitstaanbaar. Het houdt stand als jullie van de competitie een team maken."
+    },
+    "tigre-chien": {
+      "note": 9.0,
+      "texte": "Een van de zekerste duo's van de Chinese dierenriem. De Hond gelooft in de Tijger en de Tijger beschermt de Hond, in dezelfde driehoek van loyaliteit en vrijheid. Jullie vertrouwen elkaar, en dat maakt jullie sterk."
+    },
+    "tigre-cochon": {
+      "note": 8.6,
+      "texte": "Geheime vrienden: de Tijger brengt de durf, het Varken de zachtheid en de warmte. Het Varken kalmeert de Tijger zonder hem af te remmen, de Tijger geeft het Varken de vaart die het mist. Een gul stel, dat graag mensen over de vloer heeft."
+    },
+    "lapin-lapin": {
+      "note": 7.4,
+      "texte": "Twee Konijnen, dat is een knus huis, rustige avonden en heel weinig ruzie. Jullie begrijpen elkaar zonder te praten. Het risico is wat onuitgesproken blijft: jullie gaan allebei de lastige onderwerpen uit de weg, en die stapelen zich op."
+    },
+    "lapin-dragon": {
+      "note": 4.8,
+      "texte": "Het Konijn zoekt rust, de Draak maakt lawaai. Jullie zijn een ‘schadelijk’ paar: de Draak kan het Konijn te terughoudend vinden, het Konijn kan zich platgewalst voelen. Het werkt als de Draak vaart mindert en het Konijn voor zichzelf opkomt."
+    },
+    "lapin-serpent": {
+      "note": 6.4,
+      "texte": "Twee fijngevoelige en wat geheimzinnige naturen. Het Konijn en de Slang houden van comfort, schoonheid en gesprekken met z'n tweeën. Jullie raden meer van elkaar dan dat jullie praten, en dat is charmant, tot de dag waarop jullie elkaar echt iets moeten zeggen."
+    },
+    "lapin-cheval": {
+      "note": 6.0,
+      "texte": "Het Konijn blijft graag thuis, het Paard gaat graag weg. Jullie kunnen elkaar vinden in vriendelijkheid en een goed humeur, maar jullie levensritme verschilt. Het Paard moet laten weten wanneer het weggaat, en het Konijn moet accepteren dat het af en toe uit zijn hol komt."
+    },
+    "lapin-chevre": {
+      "note": 8.8,
+      "texte": "Dezelfde driehoek: twee gevoelige tekens die van zachtheid en rust houden. Het Konijn en de Geit beschermen elkaar en maken samen een warm thuis. Een van jullie zal wel de beslissingen moeten nemen die de ander voor zich uit schuift."
+    },
+    "lapin-singe": {
+      "note": 5.8,
+      "texte": "Het Konijn is bescheiden, de Aap luidruchtig. De Aap vermaakt het Konijn en het Konijn kalmeert de Aap, zolang de Aap niet spot met zijn terughoudendheid. Twee werelden die elkaar goed kunnen doen, zonder op elkaar te lijken."
+    },
+    "lapin-coq": {
+      "note": 3.8,
+      "texte": "Het Konijn en de Haan zijn tegenpolen. De Haan ziet alles en zegt het ook, het Konijn trekt het zich aan en sluit zich af. De aantrekking is er, maar de Haan moet zijn eerlijkheid wat verzachten en het Konijn moet leren antwoord te geven."
+    },
+    "lapin-chien": {
+      "note": 8.6,
+      "texte": "Geheime vrienden: de zachtheid van het Konijn en de trouw van de Hond maken een attent en trouw stel. Jullie zorgen voor elkaar zonder te tellen. Het enige risico is dat jullie je samen te veel zorgen maken om de buitenwereld."
+    },
+    "lapin-cochon": {
+      "note": 8.6,
+      "texte": "Dezelfde driehoek, dezelfde liefde voor het goede leven. Het Konijn en het Varken houden van eten, mensen ontvangen en tegen elkaar aan kruipen. Jullie zijn gul voor elkaar en hebben zelden ruzie. Houd alleen het budget en de kilo's een beetje in de gaten."
+    },
+    "dragon-dragon": {
+      "note": 6.4,
+      "texte": "Twee Draken, dat is veel vuur en twee keer zoveel trots. Jullie bewonderen elkaar, mikken hoog en vechten om de eerste plaats. Het houdt stand als ieder zijn eigen rijk heeft en jullie de ander kunnen feliciteren zonder jaloezie."
+    },
+    "dragon-serpent": {
+      "note": 6.8,
+      "texte": "De Draak schittert, de Slang denkt na. Een elegant stel, waarin de Slang raad geeft en de Draak handelt. Let op de jaloezie van de Slang tegenover het charisma van de Draak, en op het ongeduld van de Draak tegenover de stiltes van de Slang."
+    },
+    "dragon-cheval": {
+      "note": 6.6,
+      "texte": "Twee sterke en gulle energieën. De Draak en het Paard houden van actie, feest en grote plannen. Jullie sleuren elkaar mee, soms te ver. Plan rustige momenten in, anders putten jullie je uit."
+    },
+    "dragon-chevre": {
+      "note": 6.0,
+      "texte": "De Draak beslist, de Geit volgt, en dat kan lang goed gaan. De Geit brengt zachtheid bij de Draak, de Draak geeft de Geit zekerheid. Het risico is dat de Geit zichzelf te veel wegcijfert en daar uiteindelijk spijt van krijgt."
+    },
+    "dragon-singe": {
+      "note": 8.6,
+      "texte": "Dezelfde driehoek: de durf van de Draak en de vindingrijkheid van de Aap, een winnend team. Jullie hebben ideeën, energie en gevoel voor show. De Aap laat de Draak lachen, de Draak geeft de Aap een richting."
+    },
+    "dragon-coq": {
+      "note": 8.4,
+      "texte": "Geheime vrienden: de Draak denkt groot, de Haan zorgt voor de details. Wat zou kunnen irriteren, wordt een kracht als ieder het werk van de ander respecteert. Een stel dat bouwt, zolang de Haan niet elk idee van de Draak bekritiseert."
+    },
+    "dragon-chien": {
+      "note": 3.8,
+      "texte": "De Draak en de Hond staan tegenover elkaar op het wiel. De Hond twijfelt aan wat de Draak beweert, de Draak ergert zich aan de voorzichtigheid van de Hond. Twee loyale tekens die elkaar aantrekken, maar die moeten accepteren dat ze de wereld niet hetzelfde zien."
+    },
+    "dragon-cochon": {
+      "note": 6.4,
+      "texte": "De Draak staat in de schijnwerpers, het Varken zorgt. Een warm duo, waarin het Varken bewondert zonder jaloezie en de Draak gul beschermt. De Draak moet er alleen aan denken dank je wel te zeggen, want het Varken vraagt er nooit om."
+    },
+    "serpent-serpent": {
+      "note": 6.8,
+      "texte": "Twee Slangen, dat is een elegant, bescheiden en heel trouw stel, met aan beide kanten een stukje mysterie. Jullie begrijpen elkaar met een half woord. Het risico is jaloezie over en weer, en stiltes die te lang duren."
+    },
+    "serpent-cheval": {
+      "note": 6.0,
+      "texte": "De Slang denkt na, het Paard gaat ervoor. Het Paard kan de Slang te traag vinden, de Slang kan het Paard te verstrooid vinden. Toch kunnen jullie elkaar veel leren, als de jaloezie van de Slang zich er niet mee bemoeit."
+    },
+    "serpent-chevre": {
+      "note": 6.2,
+      "texte": "Twee verfijnde naturen die van schoonheid en rust houden. De Slang stelt de Geit gerust met haar standvastigheid, de Geit maakt de Slang zachter met haar tederheid. Een rustig stel, waarin je af en toe zelf voor iets nieuws moet zorgen."
+    },
+    "serpent-singe": {
+      "note": 8.2,
+      "texte": "Geheime vrienden: de Slang en de Aap delen een scherpe intelligentie en echt plezier in het spel. De Aap laat de Slang lachen, de Slang zet de energie van de Aap in goede banen. Pas alleen op dat jullie elkaar niet uit gewoonte manipuleren."
+    },
+    "serpent-coq": {
+      "note": 8.6,
+      "texte": "Dezelfde driehoek: twee precieze geesten die van goed gedaan werk houden. De Slang en de Haan vormen een georganiseerd en trouw stel. De Haan praat, de Slang luistert, en jullie nemen zelden zomaar een beslissing."
+    },
+    "serpent-chien": {
+      "note": 6.2,
+      "texte": "De Slang is gesloten, de Hond heeft openheid nodig. Jullie kunnen elkaar geruststellen met trouw, als de Slang accepteert te zeggen wat ze denkt en de Hond accepteert dat hij niet alles hoeft te weten."
+    },
+    "serpent-cochon": {
+      "note": 4.0,
+      "texte": "De Slang en het Varken zijn tegenpolen. Het Varken vertrouwt iedereen, de Slang wantrouwt iedereen. De aantrekking is echt, maar het Varken kan zich bespied voelen en de Slang alleen met haar waakzaamheid."
+    },
+    "cheval-cheval": {
+      "note": 6.6,
+      "texte": "Twee Paarden, dat is energie, reizen en veel vrijheid. Jullie sluiten elkaar niet op, en daar worden jullie gelukkig van. Het risico is dat jullie ieder je eigen kant op rennen en elkaar tegenkomen zonder elkaar echt te vinden."
+    },
+    "cheval-chevre": {
+      "note": 8.6,
+      "texte": "Geheime vrienden: het Paard brengt de vaart, de Geit de zachtheid. Het Paard beschermt de Geit tegen haar angsten, de Geit geeft het Paard een plek om naar terug te keren. Een van de tederste duo's van de dierenriem."
+    },
+    "cheval-singe": {
+      "note": 6.2,
+      "texte": "Twee spelers die van nieuwe dingen en snelheid houden. Het Paard en de Aap hebben veel lol samen en vervelen zich zelden. Een van jullie zal zich om de serieuze zaken moeten bekommeren, want geen van beiden heeft daar zin in."
+    },
+    "cheval-coq": {
+      "note": 5.8,
+      "texte": "Het Paard improviseert, de Haan organiseert. De Haan kan het Paard slordig vinden, het Paard kan de Haan star vinden. Het werkt als de Haan ruimte laat voor het onverwachte en het Paard een paar huisregels respecteert."
+    },
+    "cheval-chien": {
+      "note": 8.6,
+      "texte": "Dezelfde driehoek: twee eerlijke en loyale tekens die allebei van vrijheid houden. Het Paard en de Hond begrijpen elkaar en vertrouwen elkaar zonder elkaar te controleren. De Hond moet alleen leren zich minder zorgen te maken als het Paard er even niet is."
+    },
+    "cheval-cochon": {
+      "note": 6.4,
+      "texte": "Het Paard trekt mee, het Varken volgt met plezier. Jullie houden van fijne momenten, vrienden en spontane plannen. Het Varken moet zeggen wanneer het moe is, en het Paard moet eraan denken dan wat gas terug te nemen."
+    },
+    "chevre-chevre": {
+      "note": 7.2,
+      "texte": "Twee Geiten, dat is een zacht, artistiek en attent stel, met weinig ruzie. Jullie begrijpen elkaars gevoeligheid. Het risico is dat jullie elkaar geruststellen in je ongerustheid en de beslissingen samen voor je uit schuiven."
+    },
+    "chevre-singe": {
+      "note": 6.4,
+      "texte": "De Geit is gevoelig, de Aap plaagt graag. De Aap laat de Geit lachen en haalt haar uit haar twijfels, zolang hij haar niet belachelijk maakt. De Geit geeft de Aap een tederheid waar hij zelf niet om durft te vragen."
+    },
+    "chevre-coq": {
+      "note": 5.6,
+      "texte": "De Geit heeft zachtheid nodig, de Haan zegt recht voor zijn raap wat hij denkt. Dit duo vraagt moeite: de Haan moet zijn woorden kiezen, en de Geit moet een opmerking kunnen horen zonder er een afwijzing in te zien."
+    },
+    "chevre-chien": {
+      "note": 5.8,
+      "texte": "Twee ongeruste tekens die geruststelling nodig hebben, en twee trouwe tekens die die kunnen geven. De Geit en de Hond beschermen elkaar goed, maar ze kunnen zich opsluiten in hun zorgen. Een van de twee moet wat luchtigheid bewaren."
+    },
+    "chevre-cochon": {
+      "note": 8.8,
+      "texte": "Dezelfde driehoek: de Geit en het Varken delen zachtheid, gulheid en liefde voor comfort. Een warm stel, waar je je meteen thuis voelt. Houd wel een beetje gezamenlijke ambitie, anders wordt het comfort een gesloten cocon."
+    },
+    "singe-singe": {
+      "note": 7.0,
+      "texte": "Twee Apen, dat is lachen, ideeën en een vrolijke chaos. Jullie vervelen je nooit en raden wat de ander denkt. Het risico is luchtigheid met z'n tweeën: niemand neemt iets serieus, tot het te laat is."
+    },
+    "singe-coq": {
+      "note": 6.0,
+      "texte": "De Aap is sluw, de Haan zegt alles. De Haan kan de Aap onbetrouwbaar vinden, de Aap kan de Haan te rechtlijnig vinden. Jullie kunnen elkaar aanvullen als de Aap eerlijk speelt en de Haan zich laat verrassen."
+    },
+    "singe-chien": {
+      "note": 6.6,
+      "texte": "De Aap vermaakt, de Hond waakt. Dit stel werkt beter dan je zou denken: de Hond geeft de Aap vaste grond onder de voeten, de Aap geeft de Hond luchtigheid. De Hond moet alleen leren lachen om grappen die hij niet meteen snapt."
+    },
+    "singe-cochon": {
+      "note": 5.0,
+      "texte": "De Aap en het Varken vormen een ‘schadelijk’ paar. Het Varken vertrouwt, de Aap speelt, en het Varken kan zich uiteindelijk bedrogen voelen zonder dat de Aap dat wilde. Het houdt stand als de Aap de naïviteit van het Varken beschermt in plaats van er misbruik van te maken."
+    },
+    "coq-coq": {
+      "note": 6.0,
+      "texte": "Twee Hanen, dat is een smetteloos huis en uitgesproken meningen, aan beide kanten. Jullie respecteren elkaar, maar jullie bekritiseren elkaar ook. Om het vol te houden: geef ieder een onderwerp waarover hij altijd gelijk heeft, en praat er verder niet meer over."
+    },
+    "coq-chien": {
+      "note": 4.6,
+      "texte": "De Haan en de Hond vormen een ‘schadelijk’ paar. De Haan bekritiseert, de Hond maakt zich zorgen, en ze kwetsen elkaar zonder het te willen. Twee eerlijke tekens die het heel goed met elkaar kunnen vinden, als ze de dingen zacht zeggen."
+    },
+    "coq-cochon": {
+      "note": 6.2,
+      "texte": "De Haan organiseert, het Varken geniet. De Haan kan het Varken te laks vinden, het Varken kan de Haan te veeleisend vinden. Maar het Varken kan beter tegen opmerkingen dan anderen, en bij het Varken ontspant de Haan zich."
+    },
+    "chien-chien": {
+      "note": 7.2,
+      "texte": "Twee Honden, dat is een loyaliteit die tegen alles bestand is en een vertrouwen waar niet aan getornd wordt. Jullie beschermen elkaar. Het risico is dat jullie je samen overal zorgen over maken en vergeten plezier te hebben."
+    },
+    "chien-cochon": {
+      "note": 6.8,
+      "texte": "De Hond waakt, het Varken geniet, en ze doen elkaar goed. De Hond brengt het Varken voorzichtigheid, het Varken brengt de Hond vrolijkheid. Een eenvoudig en warm stel, dat vaak wordt onderschat."
+    },
+    "cochon-cochon": {
+      "note": 7.6,
+      "texte": "Twee Varkens, dat is een open huis, een volle tafel en veel tederheid. Jullie vergeven elkaar alles. Het risico is blind vertrouwen met z'n tweeën: houd een oogje op de mensen die misbruik maken van jullie gulheid."
+    }
+  },
+  "conseils": {
+    "trine": "Jullie band is een gegeven, geen garantie. Stellen uit dezelfde driehoek vervelen zich soms, omdat alles te makkelijk gaat. Houd een plan voor jullie samen dat moeite kost, en jullie houden de vaart die jullie bij elkaar heeft gebracht.",
+    "harmonie": "Het werkt omdat jullie verschillend zijn: probeer dus niet op de ander te gaan lijken. Zeg liever af en toe wat je in de ander bewondert en zelf niet hebt. Daardoor houden geheime vrienden het vol.",
+    "meme": "Jullie kennen elkaar te goed om elkaar nog te verrassen. Neem allebei een gewoonte aan die bij jou past en die de ander mist: wie zich zorgen maakt, besluit gerust te stellen; wie snel boos wordt, besluit te wachten. Anders verdubbelen jullie je gebreken in plaats van ze te verbeteren.",
+    "neutre": "Niets helpt jullie, niets remt jullie: jullie relatie wordt wat jullie ervan maken. Kies deze maand één ding om beter te doen, hetzelfde voor jullie allebei, en de score die telt, die van het dagelijks leven, gaat vanzelf omhoog.",
+    "nuisance": "Wat jullie relatie slijt, zijn kleine dingen die steeds terugkomen, geen grote onderwerpen. Maak allebei een lijstje van wat je echt irriteert, zonder commentaar, en ruil het. De helft van de regels verdwijnt zodra ze hardop zijn gezegd.",
+    "opposition": "Jullie zullen nooit in hetzelfde tempo werken, en dat is ook niet de bedoeling. Spreek af wie waarover beslist: de uitjes voor de een, de financiën voor de ander, bijvoorbeeld. De tegenpolen die het volhouden, zijn degenen die gestopt zijn met de ander te willen bekeren."
+  },
+  "suite": {
+    "titre": "Ga verder met jullie volledige data",
+    "texte": "Het Chinese teken kijkt alleen naar het jaar. Dag en maand zeggen iets anders: jullie sterrenbeeld en jullie levenspad. Onze test op geboortedatum legt die drie lezingen naast elkaar.",
+    "bouton": "Doe de test op geboortedatum"
+  },
+  "section1": {
+    "title": "Liefde volgens de Chinese sterrenbeelden: hoe werkt het?",
+    "p1": "De Chinese astrologie geeft elk jaar een dier: Rat, Os, Tijger, Konijn, Draak, Slang, Paard, Geit, Aap, Haan, Hond en Varken, en dan begint de cyclus opnieuw. Elk dier heeft een karakter, en de traditie zegt al eeuwen welke dieren goed met elkaar overweg kunnen, welke elkaar aanvullen en welke elkaar voor de voeten lopen. Dat is de compatibiliteit van de Chinese sterrenbeelden: een lezing van jullie relatie op basis van jullie twee geboortejaren.",
+    "p2": "Onze tool doet die berekening voor je. Je vult twee data in, en hij vindt de twee dieren, hun element (Hout, Vuur, Aarde, Metaal of Water) en de band tussen hen op het wiel: dezelfde driehoek van affiniteit, geheime vrienden, tegenpolen, een ‘schadelijk’ paar of niets bijzonders. Daar komt een score uit, uitleg over elk dier in de liefde en een advies voor jullie twee.",
+    "p3": "Wil je een bredere lezing? Je geboortedatum zegt ook iets over je sterrenbeeld en je levenspad, en <a href=\"/nl/compatibiliteit-geboortedatum/\">die drie lezingen naast elkaar leggen</a> geeft een genuanceerder resultaat. En gaat het je om <a href=\"/nl/relatietest/\">jullie relatie zoals die echt is</a>, met de echte ruzies en de echte plannen? Kijk dan niet naar de sterren, maar beantwoord samen vragen."
+  },
+  "section2": {
+    "title": "Je Chinese teken vinden: let op het nieuwjaar",
+    "p1": "Het Chinese jaar begint niet op 1 januari. Het start met het maannieuwjaar, tussen 21 januari en 20 februari, afhankelijk van het jaar. Iemand die op 15 januari 1990 is geboren, is geen Paard maar een Slang, omdat het jaar van het Paard pas op 27 januari 1990 begon. Dat is de meest gemaakte fout in de tabellen die je online vindt, en het geldt voor ongeveer één op de tien mensen.",
+    "p2": "Onze calculator gebruikt de werkelijke data van het nieuwjaar, jaar voor jaar, van 1924 tot 2043. De tabel hieronder geeft de jaren van elk dier om je op weg te helpen, maar ben je in januari of februari geboren, reken het dan uit met je volledige geboortedatum: daarom vragen we die ook.",
+    "tip": "Het element lees je af aan het laatste cijfer van het Chinese jaar: 4 en 5 voor Hout, 6 en 7 voor Vuur, 8 en 9 voor Aarde, 0 en 1 voor Metaal, 2 en 3 voor Water. Een Draak uit 2000 is een Draak met het element Metaal, een Draak uit 2012 een Draak met het element Water.",
+    "tableHeaders": [
+      "Teken",
+      "Recente jaren",
+      "In de liefde"
+    ],
+    "tableRows": [
+      [
+        "Rat",
+        "1960, 1972, 1984, 1996, 2008, 2020",
+        "attent, praatgraag, een beetje angstig"
+      ],
+      [
+        "Os",
+        "1961, 1973, 1985, 1997, 2009, 2021",
+        "trouw, geduldig, koppig"
+      ],
+      [
+        "Tijger",
+        "1962, 1974, 1986, 1998, 2010, 2022",
+        "hartstochtelijk, beschermend, impulsief"
+      ],
+      [
+        "Konijn",
+        "1963, 1975, 1987, 1999, 2011, 2023",
+        "zacht, bescheiden, gaat ruzie uit de weg"
+      ],
+      [
+        "Draak",
+        "1964, 1976, 1988, 2000, 2012, 2024",
+        "heel of niets, gul, trots"
+      ],
+      [
+        "Slang",
+        "1965, 1977, 1989, 2001, 2013, 2025",
+        "diep, verleidelijk, jaloers"
+      ],
+      [
+        "Paard",
+        "1966, 1978, 1990, 2002, 2014, 2026",
+        "warm, vrij, wispelturig"
+      ],
+      [
+        "Geit",
+        "1967, 1979, 1991, 2003, 2015, 2027",
+        "teder, creatief, angstig"
+      ],
+      [
+        "Aap",
+        "1968, 1980, 1992, 2004, 2016, 2028",
+        "grappig, vindingrijk, luchtig"
+      ],
+      [
+        "Haan",
+        "1969, 1981, 1993, 2005, 2017, 2029",
+        "loyaal, eerlijk, kritisch"
+      ],
+      [
+        "Hond",
+        "1970, 1982, 1994, 2006, 2018, 2030",
+        "trouw, rechtvaardig, ongerust"
+      ],
+      [
+        "Varken",
+        "1971, 1983, 1995, 2007, 2019, 2031",
+        "gul, vol vertrouwen, levensgenieter"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "De vier driehoeken van affiniteit",
+    "p1": "De traditie verdeelt de twaalf dieren in vier groepen van drie, met vier jaar ertussen. De tekens van dezelfde driehoek kijken op dezelfde manier naar het leven: dat is de gunstigste band voor een stel, de band waarin je elkaar begrijpt zonder het uit te leggen.",
+    "p2": "In dezelfde driehoek zitten betekent niet dat je in alles op elkaar lijkt. De Rat is voorzichtiger dan de Draak, de Hond ongeruster dan de Tijger. Maar als er een beslissing genomen moet worden, neigen jullie naar dezelfde kant, en dat is wat op de lange termijn telt.",
+    "tableHeaders": [
+      "Driehoek",
+      "De drie tekens",
+      "Wat ze verbindt"
+    ],
+    "tableRows": [
+      [
+        "De driehoek van de actie",
+        "Rat, Draak, Aap",
+        "Energie, durf, de wil om te slagen"
+      ],
+      [
+        "De driehoek van de methode",
+        "Os, Slang, Haan",
+        "Geduld, strategie, oog voor detail"
+      ],
+      [
+        "De driehoek van de onafhankelijkheid",
+        "Tijger, Paard, Hond",
+        "Vrijheid, trouw, eerlijkheid"
+      ],
+      [
+        "De driehoek van de zachtheid",
+        "Konijn, Geit, Varken",
+        "Gevoeligheid, rust, houden van comfort"
+      ]
+    ]
+  },
+  "section4": {
+    "title": "De geheime vrienden en de tegenpolen",
+    "p1": "Naast de driehoeken kent de traditie zes paren van geheime vrienden, twee dieren die niet op elkaar lijken maar elkaar perfect aanvullen, en zes paren van tegenpolen, die tegenover elkaar staan op het wiel, met zes jaar ertussen. De eerste geven heel sterke stellen, de tweede stellen die elkaar in het begin erg aantrekken en het daarna moeilijker hebben.",
+    "p2": "Er zijn ook zes paren die ‘schadelijk’ heten: Rat en Geit, Os en Paard, Tijger en Slang, Konijn en Draak, Aap en Varken, Haan en Hond. Dat is geen echte tegenstelling. Het is eerder slijtage, kleine ergernissen die steeds terugkomen. Het resultaat zegt het je als dat bij jullie zo is, met waar je op moet letten.",
+    "tip": "Een stel van tegenpolen is helemaal niet ten dode opgeschreven. Het werkt anders: ieder houdt zijn eigen terrein in plaats van de ander te willen overtuigen. Veel stellen die al dertig jaar samen zijn, bestaan uit twee tegenpolen die zijn opgehouden elkaar te bekeren.",
+    "tableHeaders": [
+      "Soort paar",
+      "De twee tekens",
+      "Wat de traditie zegt"
+    ],
+    "tableRows": [
+      [
+        "Geheime vrienden",
+        "Rat + Os",
+        "De snelle geest en de rustige kracht"
+      ],
+      [
+        "Geheime vrienden",
+        "Tijger + Varken",
+        "Durf en zachtheid"
+      ],
+      [
+        "Geheime vrienden",
+        "Konijn + Hond",
+        "Fijngevoeligheid en trouw"
+      ],
+      [
+        "Geheime vrienden",
+        "Draak + Haan",
+        "Visie en oog voor detail"
+      ],
+      [
+        "Geheime vrienden",
+        "Slang + Aap",
+        "Intelligentie en spel"
+      ],
+      [
+        "Geheime vrienden",
+        "Paard + Geit",
+        "Vaart en tederheid"
+      ],
+      [
+        "Tegenpolen",
+        "Rat + Paard",
+        "Vooruit plannen tegenover improviseren"
+      ],
+      [
+        "Tegenpolen",
+        "Os + Geit",
+        "Het concrete tegenover de droom"
+      ],
+      [
+        "Tegenpolen",
+        "Tijger + Aap",
+        "Trots tegenover spot"
+      ],
+      [
+        "Tegenpolen",
+        "Konijn + Haan",
+        "Terughoudendheid tegenover openhartigheid"
+      ],
+      [
+        "Tegenpolen",
+        "Draak + Hond",
+        "Zelfverzekerdheid tegenover twijfel"
+      ],
+      [
+        "Tegenpolen",
+        "Slang + Varken",
+        "Wantrouwen tegenover vertrouwen"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "De vijf elementen, die het resultaat nuanceren",
+    "p1": "Elk dier komt om de twaalf jaar terug, maar nooit met hetzelfde element. Een Tijger met Vuur (1986) en een Tijger met Water (1962) beleven de liefde niet op dezelfde manier. De vijf elementen volgen elkaar op in een cyclus: Hout voedt Vuur, Vuur voedt Aarde, Aarde voedt Metaal, Metaal voedt Water, en Water voedt Hout. Twee elementen die elkaar opvolgen, kunnen goed met elkaar overweg; twee elementen met er één tussen houden elkaar in toom.",
+    "p2": "In het resultaat laat het element de score een paar punten stijgen of dalen, nooit meer. Het is een nuance, niet de kern. Twee tegengestelde dieren met elementen die elkaar voeden, blijven een gespannen duo, met wat meer zachtheid op de slechte dagen.",
+    "tableHeaders": [
+      "Element",
+      "Het Chinese jaar eindigt op",
+      "Wat het de relatie geeft"
+    ],
+    "tableRows": [
+      [
+        "Hout",
+        "4 of 5",
+        "groei, gulheid, behoefte aan plannen"
+      ],
+      [
+        "Vuur",
+        "6 of 7",
+        "passie, vaart, boosheid die snel overgaat"
+      ],
+      [
+        "Aarde",
+        "8 of 9",
+        "stabiliteit, geduld, houden van het concrete"
+      ],
+      [
+        "Metaal",
+        "0 of 1",
+        "strengheid, trouw, moeite met buigen"
+      ],
+      [
+        "Water",
+        "2 of 3",
+        "gevoeligheid, intuïtie, behoefte aan geruststelling"
+      ]
+    ]
+  },
+  "section6": {
+    "title": "En als de score laag is?",
+    "p1": "Dan is er niets ergs aan de hand. Deze score meet hoe goed twee symbolische temperamenten samengaan, die van jullie geboortejaren. Hij meet niet jullie gevoelens, en ook niet hoe stevig is wat jullie hebben opgebouwd. Duizenden stellen van tegenpolen leven heel goed samen, en stellen uit dezelfde driehoek gaan ook uit elkaar.",
+    "p2": "Wat een lage score je kan opleveren, is een gesprek. Lees het portret van jouw dier en dat van je partner, en vraag je af wat klopt en wat niet. Meestal wordt het dan pas interessant: jij herkent je in de ene zin, de ander in een andere, en jullie praten over een ergernis die jullie nooit hadden benoemd.",
+    "tip": "Doe de berekening samen in plaats van ieder voor zich. Het getal telt minder dan wat jullie tegen elkaar zeggen terwijl jullie de portretten lezen."
+  },
+  "faq": {
+    "title": "Jullie vragen over de Chinese sterrenbeelden en de liefde",
+    "q1": "Hoe weet je of twee Chinese sterrenbeelden bij elkaar passen?",
+    "a1": "Eerst kijk je naar de band tussen de twee dieren op het wiel: dezelfde driehoek van affiniteit (vier jaar ertussen), geheime vrienden, tegenpolen (zes jaar ertussen), een ‘schadelijk’ paar of geen bijzondere band. Daarna verfijn je met het element van elk, dat van het jaar afhangt. Onze tool doet allebei en legt het resultaat uit.",
+    "q2": "Welke Chinese sterrenbeelden passen het best bij elkaar in de liefde?",
+    "a2": "De stellen uit dezelfde driehoek: Rat, Draak en Aap onder elkaar; Os, Slang en Haan; Tijger, Paard en Hond; Konijn, Geit en Varken. En de zes paren van geheime vrienden: Rat en Os, Tijger en Varken, Konijn en Hond, Draak en Haan, Slang en Aap, Paard en Geit.",
+    "q3": "Welke Chinese sterrenbeelden passen niet bij elkaar?",
+    "a3": "De zes tegengestelde paren, met zes jaar ertussen: Rat en Paard, Os en Geit, Tijger en Aap, Konijn en Haan, Draak en Hond, Slang en Varken. Dat zijn de meest gespannen stellen van de traditie, maar in het begin vaak ook de aantrekkelijkste. ‘Niet bij elkaar passen’ betekent hier ‘niet op dezelfde manier werken’, niet ‘niet van elkaar houden’.",
+    "q4": "Ik ben in januari geboren, wat is mijn Chinese teken?",
+    "a4": "Waarschijnlijk dat van het jaar ervoor. Het Chinese jaar begint tussen 21 januari en 20 februari, dus wie in januari is geboren, valt bijna altijd in het Chinese jaar daarvoor. Vul je volledige geboortedatum in de calculator in: die kent de datum van het nieuwjaar voor elk jaar.",
+    "q5": "Moet je rekening houden met het element?",
+    "a5": "Ja, maar als nuance. Het dier geeft het temperament, het element zegt hoe dat naar buiten komt: een Paard met Vuur is heftiger dan een Paard met Aarde. In onze berekening verschuift het element de score een paar punten als de twee elkaar voeden of elkaar tegenwerken.",
+    "q6": "Worden de resultaten bewaard?",
+    "a6": "Nee. De berekening gebeurt in je browser, de data gaan nergens heen en er wordt niets bewaard. Je kunt de berekening zo vaak doen als je wilt, met de data van wie je maar wilt."
+  },
+  "jsonLd": {
+    "about": "hoe de tekens van de Chinese dierenriem in de liefde bij elkaar passen"
+  }
+}
