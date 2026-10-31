@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen) ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar) ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1469,7 +1469,41 @@ le met à jour dans la PR de chaque lot.
   situations de « ja of nee » (`joue-boutons.cjs`, envois vers la base
   coupés).
 
+## Lot 6g (31 octobre 2026) : phrases à compléter, c'est un 10 mais
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/maak-de-zin-af/` | Maak de zin af: gratis spel voor koppels met 20 zinnen | Maak de zin af: 20 zinnen om met z'n tweeën af te maken |
+  | `/nl/hij-is-een-10-maar/` | Hij is een 10 maar... \| Het spel voor koppels (60 kaarten) | ‘Hij is een 10, maar...’: het spel voor koppels |
+
+- **Les moteurs** : les vingt phrases (`phrases`) et les textes des deux
+  façons de jouer ; les soixante cartes de « hij is een 10 maar »
+  (`dixMais`), écrites une fois pour les deux genres comme en allemand,
+  `{hij|zij}` et `{zijn|haar}`, après l'accroche « Hij is een 10, maar... »
+  ou « Zij is een 10, maar... ». La « chocolatine » devient le débat
+  néerlandais du même genre, « patat » contre « friet » (q19). « Dealbreaker »
+  se dit « afknapper ».
+- **Les listes de la page** (groupes de cartes, en-têtes et barème) passent
+  entières dans le module : l'aide `deplier` ne descend pas dans les
+  listes.
+- **Les liens** : trois liens du français vers le blog attendent leur
+  article néerlandais (« questions pour mieux se connaître », « red flags
+  chez un homme », « ce qu'on n'accepte pas dans un couple ») : les
+  phrases restent sans lien, `textes` les rappelle en « à faire » jusqu'au
+  lot 9. Celui de « maak de zin af » vers « hoe goed ken je je partner »
+  reste dans la dernière section, comme en français.
+- **Vérifié** : « maak de zin af » joué jusqu'au bout dans ses deux façons
+  de jouer, « hij is een 10 maar » en secret jusqu'au résultat
+  (`joue-boutons.cjs`), puis les deux pages par `site --jouer`, tous modes,
+  sans erreur de moteur.
+
 ## Les chiffres
+
+Au lot 6g : `textes nl` 855 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur ni avertissement (78 pages traduites). Aucune page publique
+ne change.
 
 Au lot 6f : `textes nl` sans erreur ; `seo nl` sans erreur ni
 avertissement (76 pages traduites) ; les deux jeux se jouent. Aucune page

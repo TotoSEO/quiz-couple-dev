@@ -373,6 +373,12 @@
     "metaDescription": "120 ja of nee vragen over het leven als koppel. Na elk antwoord zie je wat alle andere koppels stemden. Gratis, zonder account en op één telefoon.",
     "description": "Situaties uit het leven als koppel om met ja of nee te beslissen, met na elk antwoord de stemmen van alle anderen."
   },
+  "jeuPhrases": {
+    "title": "Maak de zin af: gratis spel voor koppels met 20 zinnen",
+    "shortTitle": "Maak de zin af",
+    "metaDescription": "Maak de zin af met z'n tweeën: 20 zinnen om hardop af te maken, of allebei tegelijk na drie seconden aftellen. Gratis en zonder account.",
+    "description": "Twintig zinnen die halverwege ophouden, om rustig af te maken of allebei tegelijk na drie seconden aftellen."
+  },
   "testAimeEncore": {
     "title": "Houdt hij nog van mij? Of zij? De test in 20 vragen",
     "shortTitle": "Houdt hij nog van mij?",
@@ -439,6 +445,12 @@
     "shortTitle": "Hoe lang blijf ik nog single?",
     "description": "Twintig vragen over je dagelijks leven, en een schatting in maanden van de tijd die je nog hebt voordat je iemand ontmoet.",
     "metaDescription": "Hoe lang blijf ik nog single? Twintig vragen over je leeftijd, je uitjes, je vrienden en je reflexen, en een schatting in maanden. Gratis test."
+  },
+  "jeuDixMais": {
+    "title": "Hij is een 10 maar... | Het spel voor koppels (60 kaarten)",
+    "shortTitle": "Hij is een 10, maar...",
+    "metaDescription": "Speel ‘hij is een 10 maar’ en ‘zij is een 10 maar’ samen: een perfect iemand, één minpunt, en jullie geven allebei een cijfer van 0 tot 10. 60 kaarten.",
+    "description": "Een perfect iemand met één minpunt: jullie geven allebei opnieuw een cijfer van 0 tot 10 en vergelijken."
   },
   "testCompatSexuelle": {
     "title": "Seksuele compatibiliteit test: 20 vragen voor jullie twee",

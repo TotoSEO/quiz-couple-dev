@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "Hij is een 10, maar..., het spel voor koppels"
+  },
+  "hero": {
+    "badge": "Spel voor twee • 60 kaarten",
+    "title": "‘Hij is een 10, maar...’: het spel voor koppels",
+    "titleHighlight": "Hij is een 10, maar...",
+    "description": "Een perfect iemand met één minpunt. Jullie geven allebei opnieuw een cijfer van 0 tot 10 en vergelijken. 60 kaarten, te spelen in het geheim, tegenover elkaar of op afstand."
+  },
+  "section1": {
+    "title": "Wat is ‘Hij is een 10, maar...’?",
+    "p1": "‘Hij is een 10, maar...’ is een spel dat je met vrienden of als koppel kunt spelen. Je stelt je een perfect iemand voor, een 10 op 10, en je geeft die persoon één minpunt. Bijvoorbeeld: ‘Hij is een 10, maar hij doet ketchup op zijn spaghetti carbonara.’ Daarna zegt iedereen welk cijfer hij nu nog krijgt.",
+    "p2": "Blijf je op 10, dan stoort het minpunt je helemaal niet. Zak je naar een 2, dan verpest het die persoon behoorlijk voor je... en geef je een 0, dan is het een afknapper en valt er niets meer te redden! Het idee komt van een Engelstalige TikTok-trend, ‘He's a 10 but...’, die de hele wereld rondging, met ‘she's a 10 but...’ er vlak achteraan. Met z'n tweeën wordt het een van de <a href=\"/nl/spelletjes-voor-koppels/\">spelletjes die je samen op de bank doet</a>: je ontdekt wat de ander kan hebben en waar hij of zij gek van wordt, en meestal loopt het uit op een discussie.",
+    "p3": "Het spel hierboven speel je in je browser, zonder account en zonder iets te installeren. Eén telefoon is genoeg, of twee als jullie niet op dezelfde plek zijn."
+  },
+  "section2": {
+    "title": "Zo speel je het",
+    "intro": "Zo werkt ons spel hierboven. Voordat jullie beginnen, kiezen jullie drie dingen: wie de 10 is (een man, een vrouw, of door elkaar), hoeveel kaarten (15, 30 of alle 60) en hoe jullie spelen.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "In het geheim",
+    "modeSecretTexte": "Ieder geeft apart een cijfer, zonder dat van de ander te zien. De telefoon gaat heen en weer, en als jullie allebei een cijfer hebben gegeven, verschijnen de twee cijfers tegelijk. Dat is de eerlijkste versie, want niemand kan de ander nadoen.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Tegenover elkaar",
+    "modeFaceTexte": "Jullie geven allebei een cijfer op hetzelfde scherm, ieder op een eigen rij. Dat gaat sneller en je hoeft niets te verstoppen: je ziet het cijfer van de ander binnenkomen, en de discussie begint meteen.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "Op afstand",
+    "modeDistanceTexte": "Ieder speelt op de eigen telefoon. Een van jullie maakt het spel aan en stuurt de code of de link naar de ander, jullie geven allebei apart een cijfer, en de twee cijfers verschijnen op allebei jullie schermen. Handig tijdens een videogesprek, of als jullie ver van elkaar wonen.",
+    "apres": "Na elke kaart laat het spel het verschil tussen jullie twee cijfers zien. Aan het eind zien jullie bij hoeveel kaarten jullie het op één punt na eens waren, wie van jullie het strengst is, jullie grootste meningsverschillen en de minpunten die voor jullie allebei een afknapper zijn."
+  },
+  "section3": {
+    "title": "De 60 kaarten van het spel",
+    "intro": "Hier zijn alle kaarten, per thema. In het spel worden ze geschud, en kies je ‘door elkaar’, dan gaat de helft van de kaarten over een vrouw. Sommige zijn er om te lachen, andere zijn echte relatieonderwerpen, en juist die mix maakt het spel leuk.",
+    "groupes": [
+      {
+        "titre": "In het dagelijks leven",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "Aan tafel",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "Aan de telefoon",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "Als koppel",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "De echte red flags",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "Kies je graag een duidelijke kant, dan zijn er ook <a href=\"/nl/ja-of-nee-vragen/\">situaties om met ja of nee te beoordelen</a>, met na elk antwoord de stemmen van alle andere spelers."
+  },
+  "section4": {
+    "title": "Zo geef je een cijfer",
+    "intro": "Er is geen officiële regel. De meeste mensen geven ongeveer zo een cijfer:",
+    "entetes": [
+      "Cijfer",
+      "Wat het betekent"
+    ],
+    "bareme": [
+      [
+        "10",
+        "Het verandert niks, het is zelfs best schattig."
+      ],
+      [
+        "7 tot 9",
+        "Een beetje irritant, maar je kunt er prima mee leven."
+      ],
+      [
+        "4 tot 6",
+        "Daar valt over te praten. Het hangt af van de rest, en van je humeur die dag."
+      ],
+      [
+        "1 tot 3",
+        "Flinke twijfel. De rest zou het wel heel goed moeten maken."
+      ],
+      [
+        "0",
+        "Afknapper. Zelfs een 10 komt daar niet meer van terug."
+      ]
+    ],
+    "apres": "Het interessantst blijft het verschil tussen jullie twee cijfers. Geeft de een een 9 en de ander een 1 voor dezelfde kaart, dan zit daar vast een verhaal achter... of op z'n minst wat uitleg!"
+  },
+  "section5": {
+    "title": "Klein minpuntje of echte red flag?",
+    "p1": "Het spel haalt die twee door elkaar. Ketchup op pasta of sokken die rondslingeren, dat is het soort minpunt waar je om lacht, ook als het je ergert. Door iemands telefoon gaan of diens vrienden niet kunnen uitstaan is iets anders: dat zijn waarschuwingssignalen die je beter vroeg kunt herkennen, bij een man net zo goed als bij een vrouw.",
+    "p2": "Liggen jullie cijfers bij zo'n kaart ver uit elkaar, dan is het de moeite waard om er na het spel rustig op terug te komen. Iedereen heeft dingen die hij of zij in een relatie niet accepteert, en dat weet je liever voordat je er middenin zit.",
+    "p3": "Voor de rest: hou het luchtig. Het is een spel, en niemand hoeft zich veroordeeld te voelen omdat hij ananas op pizza een 3 gaf!"
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Waar komt ‘Hij is een 10, maar’ vandaan?",
+    "a1": "Van een Engelstalige trend op TikTok, ‘He's a 10 but...’. Het idee is daarna overal overgenomen, ook in het Nederlands, vaak ook als ‘zij is een 10, maar...’: je beschrijft een perfect iemand, voegt een minpunt toe, en iedereen geeft een cijfer.",
+    "q2": "Kun je het met meer dan twee spelen?",
+    "a2": "Het online spel houdt de cijfers van twee mensen bij. Met vrienden kun je de kaarten gewoon hardop voorlezen en om de beurt je cijfer geven, dat werkt heel goed op een feestje.",
+    "q3": "Hoe lang duurt een spel?",
+    "a3": "Een minuut of tien voor 15 kaarten tegenover elkaar, iets langer in het geheim, omdat de telefoon heen en weer gaat. Alle 60 kaarten is eerder een hele avond, zeker als jullie over elk cijfer discussiëren.",
+    "q4": "Waarom kies je tussen een man en een vrouw?",
+    "a4": "De kaarten zijn voor allebei geschreven. Afhankelijk van je keuze zegt de kaart ‘Hij is een 10, maar hij...’ of ‘Zij is een 10, maar zij...’. Kies je ‘door elkaar’, dan wisselt het van kaart tot kaart, en het is vaak grappig om te zien of het cijfer verandert als het om een man of om een vrouw gaat.",
+    "q5": "Worden onze cijfers opgeslagen?",
+    "a5": "Nee. De cijfers blijven op je telefoon zolang het spel duurt en verdwijnen als je de pagina verlaat. Op afstand gaan ze van de ene telefoon naar de andere, zonder ergens bewaard te worden."
+  }
+}
