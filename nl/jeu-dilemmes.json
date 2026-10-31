@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Spel voor koppels",
+    "title": "100 dilemma's voor koppels om samen te beslissen, en hoeveel mensen er al stemden!",
+    "titleHighlight": "dilemma's voor koppels",
+    "description": "Een voordeel waar je meteen zin in hebt, en een MAAR die pijn doet. Jullie antwoorden samen OK of NIET OK, en zien daarna welke kant alle andere koppels kozen."
+  },
+  "jsonLd": {
+    "name": "Dilemma's voor koppels"
+  },
+  "section1": {
+    "title": "Een dilemma is geen ‘zou je liever’",
+    "p1": "Het verschil is simpel. Bij <strong>zou je liever</strong> krijg je <a href=\"/nl/zou-je-liever-vragen/\">twee opties en kies je er één</a>: de zee of de bergen, ontbijt op bed of lekker uitslapen. Er is altijd een antwoord, en weigeren hoort er niet bij.",
+    "p2": "Een <strong>dilemma</strong> geeft je maar één ding: een deal. Je krijgt een flink voordeel, vaak een belachelijk groot, en meteen daarna hoor je wat het kost. Jullie winnen tien miljoen euro, maar jullie zetten nooit meer een voet in een restaurant. Dan blijft er nog één beslissing over, <a href=\"/nl/ja-of-nee-vragen/\">een gewoon ja of nee</a>: jullie tekenen, of jullie laten het lopen.",
+    "p3": "Daardoor wordt er bij dit spel zo veel gepraat. Bij zou je liever zeggen jullie allebei wat je het liefst wilt en ga je door. Bij een dilemma moeten jullie het samen eens worden, en daar wordt het lastig: de een vindt de prijs een schijntje, de ander heeft het gevoel dat er gevraagd wordt om een heel leven op te geven. Je leert iemand zelden zo goed kennen als wanneer je diegene tien miljoen euro ziet weigeren.",
+    "p4": "De honderd situaties komen bij elk spel in een andere volgorde. Jullie kunnen er drie doen voor het eten of ze allemaal in één keer afwerken, niemand houdt de tijd bij."
+  },
+  "section2": {
+    "title": "Zo speel je het",
+    "intro": "Eén telefoon, twee mensen, geen account. Het spel begint zodra je op de knop drukt.",
+    "etape1Titre": "Lees de situatie hardop voor",
+    "etape1Texte": "Eerst het voordeel, dan de MAAR, dan de prijs. Laat het na de prijs even stil zijn, daar begint de echte discussie.",
+    "etape2Titre": "Beslis samen, niet ieder voor zich",
+    "etape2Texte": "Het spel wil één antwoord van jullie als koppel. Zijn jullie het oneens, praat het dan uit: daar draait het spel om. De knop loopt niet weg.",
+    "etape3Titre": "Antwoord OK of NIET OK",
+    "etape3Texte": "OK: jullie nemen de deal aan zoals hij er staat. NIET OK: de prijs is te hoog en jullie laten het voordeel aan iemand anders.",
+    "etape4Titre": "Bekijk welke kant won",
+    "etape4Texte": "Jullie stem komt bij die van alle andere koppels, en de balk laat meteen de twee kampen zien, in stemmen en in procenten.",
+    "apres": "Aan het eind krijgen jullie je uitslag: hoeveel deals jullie hebben aangenomen. Sommige koppels tekenen bijna alles, andere geven nergens aan toe. Geen van de twee heeft gelijk, maar ze zeggen allebei iets."
+  },
+  "section3": {
+    "title": "Wat er in de 100 dilemma's zit",
+    "intro": "De situaties springen steeds van het ene onderwerp naar het andere, en de twee helften van een dilemma hebben niet altijd iets met elkaar te maken. Dat is expres: een prijs die uit het niets komt, is veel moeilijker in te schatten dan een logische.",
+    "headerTheme": "Onderwerp",
+    "headerExemple": "Een voorbeeld",
+    "apres": "Geen enkele situatie gaat over ziekte, rouw of vreemdgaan. Het is een spel voor een gezellige avond, geen uithoudingstest: we willen jullie aan het praten krijgen, niet het einde van jullie etentje verpesten."
+  },
+  "familles": {
+    "argentTitre": "Geld en comfort",
+    "argentExemple": "Jullie betalen nooit meer huur of hypotheek, MAAR jullie huis is vijfentwintig vierkante meter, voor altijd.",
+    "voyageTitre": "Reizen",
+    "voyageExemple": "Jullie reizen een jaar lang de wereld rond, alles betaald, MAAR jullie mogen geen enkele foto maken, geen video, niks.",
+    "familleTitre": "Familie en schoonfamilie",
+    "familleExemple": "Jullie schoonouders zijn de liefste van de wereld en zijn dol op jullie, MAAR jullie moeten elke keer dat jullie ze zien het eten betalen.",
+    "quotidienTitre": "Dagelijks leven",
+    "quotidienExemple": "Jullie hoeven nooit meer af te wassen, MAAR jullie moeten elke maaltijd koken, elke dag, zonder uitzondering.",
+    "amourTitre": "Liefde en relatie",
+    "amourExemple": "Jullie maken nooit meer ruzie, MAAR jullie kunnen het na een ruzie ook nooit meer goedmaken."
+  },
+  "section4": {
+    "title": "Wat de andere koppels stemden",
+    "p1": "Bij elk dilemma zie je de echte uitslag van alle stemmen die binnenkwamen, live bijgewerkt: het aantal stemmen aan elke kant, het percentage, en een balk in twee delen die de krachtsverhouding in één oogopslag laat zien. Jullie eigen kamp staat omkaderd, zodat je meteen ziet of jullie bij de meerderheid horen of ertegenin gaan.",
+    "p2": "Eén stem per dilemma en per huishouden. Als je de pagina herlaadt, kun je niet nog een keer stemmen: het spel onthoudt wat jullie al beslist hebben en laat jullie antwoord opnieuw zien in plaats van een nieuw aan te nemen. Zo blijven de percentages eerlijk, en daarom zijn ze ook de moeite waard om naar te kijken.",
+    "p3": "De teller bovenaan de pagina laat niet zien hoeveel spellen er gespeeld zijn, maar het <strong>totale aantal stemmen</strong> op alle dilemma's samen. Dat is hier de maat die iets zegt: één spel kan drie stemmen opleveren, of honderd."
+  },
+  "section5": {
+    "title": "Wat je na de dilemma's kunt spelen",
+    "p1": "Hebben de dilemma's jullie aan het praten gekregen, dan nemen de andere spellen voor koppels het over: bij sommige moet je raden, bij andere stem je, en weer andere laten je gewoon lachen.",
+    "p2": "Alles is gratis, zonder account, en je speelt het op één telefoon.",
+    "cta": "Alle spellen voor koppels bekijken"
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Wat is het verschil met het spel ‘zou je liever’?",
+    "a1": "Bij zou je liever kies je tussen twee opties: A of B. Een dilemma geeft je er maar één, met een prijs eraan vast, en jullie beslissen of je hem aanneemt of weigert. Het zijn twee verschillende spellen, met heel verschillende gesprekken.",
+    "q2": "Hoeveel dilemma's zitten er in het spel?",
+    "a2": "Honderd, bij elk spel in een andere volgorde. Jullie hoeven ze niet allemaal te doen: stop wanneer jullie willen en bekijk je uitslag.",
+    "q3": "Moet je met z'n tweeën zijn om te spelen?",
+    "a3": "Het spel is gemaakt voor een koppel, op één telefoon, met één gezamenlijk antwoord. Niets houdt je tegen om het alleen te spelen, maar dan mis je het leukste stuk: het onderhandelen.",
+    "q4": "Kloppen de percentages die je ziet?",
+    "a4": "Ja. Het zijn de stemmen van de mensen die vóór jullie speelden, live geteld. Er wordt niets nagebootst en geen enkel getal wordt naar boven afgerond.",
+    "q5": "Kun je meer dan één keer stemmen op hetzelfde dilemma?",
+    "a5": "Nee. Er telt één stem per dilemma en per huishouden. Herlaad je de pagina, dan laat het spel het antwoord zien dat jullie al gaven in plaats van een nieuw op te slaan.",
+    "q6": "Moet je een account aanmaken?",
+    "a6": "Nee, nooit. Geen account, geen e-mailadres, zelfs geen voornaam. Je opent de pagina en speelt.",
+    "q7": "Is het spel gratis?",
+    "a7": "Helemaal, en dat blijft zo. De honderd dilemma's zijn zonder limiet te spelen, en er komt geen reclame midden in het spel."
+  }
+}

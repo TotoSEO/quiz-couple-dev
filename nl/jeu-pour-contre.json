@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "Met z'n tweeën · 60 stellingen",
+    "title": "Voor of tegen: 60 stellingen voor koppels om samen te beslissen",
+    "titleHighlight": "Voor of tegen",
+    "description": "Zestig stellingen om samen over te beslissen, van het eten van vanavond tot het kopen van een huis. Jullie antwoorden VOOR of TEGEN en zien daarna wat de andere koppels stemden."
+  },
+  "jsonLd": {
+    "name": "Voor of tegen: het spel voor koppels"
+  },
+  "section1": {
+    "title": "De regels van voor of tegen als koppel",
+    "intro": "Er valt niets voor te bereiden en niets te installeren. Er verschijnt een stelling, jullie beslissen samen, en jullie gaan door naar de volgende.",
+    "etape1Titre": "Ga naast elkaar zitten",
+    "etape1Texte": "Er staat steeds één stelling op het scherm, op één telefoon. Lees hem hardop voor, zodat de vraag bij jullie allebei tegelijk binnenkomt.",
+    "etape2Titre": "Beslis samen",
+    "etape2Texte": "Jullie stemmen niet ieder apart: het doel is om op één gezamenlijk antwoord uit te komen, VOOR of TEGEN. Juist het gesprek om daar te komen maakt het spel leuk.",
+    "etape3Titre": "Bekijk wat de anderen stemden",
+    "etape3Texte": "Zodra jullie beslist hebben, zie je de twee kampen met hun percentage en hun aantal stemmen. Je weet meteen of jullie bij de meerderheid horen.",
+    "etape4Titre": "Ga door, of stop",
+    "etape4Texte": "De volgende stelling komt meteen. Jullie kunnen stoppen wanneer jullie willen om jullie uitslag te zien, of doorgaan tot de zestigste.",
+    "apres": "Het werkt net als <a href=\"/nl/spelletjes-voor-koppels/\">de andere spelletjes voor twee</a> op de site: niets te installeren, geen account, je opent de pagina en speelt. Jullie antwoord wordt zonder naam opgeslagen, alleen om de percentages bij te houden die het volgende koppel te zien krijgt."
+  },
+  "section2": {
+    "title": "Waarom is dit spel zo leuk?",
+    "p1": "Gewoon omdat het jullie voor situaties zet die jullie in het echt gaan tegenkomen. Misschien kopen jullie ooit een huis. Of niet, omdat jullie meer appartementmensen zijn, en dat weten jullie nu na dertig seconden in plaats van er over vijf jaar pas over te praten.",
+    "p2": "Een huisdier, een gezamenlijke rekening, verhuizen, trouwen: dat zijn onderwerpen die je voor je uit schuift, omdat er nooit een goed moment is om erover te beginnen. Een stelling die toevallig voorbijkomt, doet het werk voor jullie, en niemand lijkt er expres over begonnen te zijn.",
+    "p3": "En omdat de stem van de andere koppels meteen na die van jullie verschijnt, zien jullie of jullie antwoord het gewoonste is, of dat jullie de enigen zijn die er zo over denken. Daar komt vaak nog een tweede gesprek van."
+  },
+  "section3": {
+    "title": "Van luchtige onderwerpen tot de grote beslissingen",
+    "intro": "Sommige stellingen zijn er om te lachen of om te beslissen wat jullie vanavond gaan doen. Andere gaan over veel zwaardere dingen: vakanties, waar je woont, geld, trouwen, kinderen, huisdieren, plannen voor jullie tweeën. Er zit iets tussen voor elk koppel en voor elke fase van een relatie.",
+    "headerTheme": "Thema",
+    "headerExemple": "Voorbeeld van een stelling",
+    "apres": "Twijfelen jullie bij een stelling, dan komt dat vaak doordat er een prijs ontbreekt. Bij de dilemma's staan <a href=\"/nl/dilemmas-voor-koppels/\">wat je wint en wat het kost</a> juist samen op één kaart."
+  },
+  "familles": {
+    "projetsTitre": "Plannen en toekomst",
+    "projetsExemple": "Een huis kopen",
+    "vacancesTitre": "Vakanties en uitjes",
+    "vacancesExemple": "Op reis zonder alles te plannen",
+    "coupleTitre": "Leven als koppel",
+    "coupleExemple": "Je wachtwoorden delen",
+    "quotidienTitre": "Dagelijks leven",
+    "quotidienExemple": "Vanavond eten bestellen in plaats van koken",
+    "momentsTitre": "Momenten met z'n tweeën",
+    "momentsExemple": "Jullie eerste date overdoen",
+    "discuterTitre": "Onderwerpen die discussie geven",
+    "discuterExemple": "Je ex in je contacten houden"
+  },
+  "section4": {
+    "title": "En als jullie het oneens zijn?",
+    "p1": "Niets bijzonders. Het oneens zijn over een stelling is geen probleem in jullie relatie, het is informatie. Jullie weten nu iets wat je beter nu kunt weten dan over drie jaar, bij de notaris of naast een koffer.",
+    "p2": "Het handigste is om eerst te vragen waarom, voordat je je eigen kant verdedigt. ‘Tegen’ betekent niet hetzelfde als iemand bang is voor een hypotheek, de eigen stad niet uit wil, of gewoon nog nooit een hond heeft gehad. De reden is altijd interessanter dan het antwoord.",
+    "p3": "En loopt het hoog op, sla de stelling dan over en kom er later op terug. Het spel vraagt niet van jullie om in het echt een besluit te nemen. Komt hetzelfde thema steeds terug als twistpunt, dan halen <a href=\"/nl/vragen-voor-koppels/\">vragen om elkaar beter te leren kennen</a> vaak naar boven wat er onder zit."
+  },
+  "section5": {
+    "title": "Eén spel, en dan nog een",
+    "p1": "Voor of tegen werkt net zo goed op de bank op een zondagavond als in de auto of in een wachtkamer. Eén stelling duurt tien seconden, een heel spel duurt zo lang als jullie willen.",
+    "p2": "En als jullie alle zestig hebben beslist, is er nog van alles om te spelen.",
+    "cta": "Alle spellen voor koppels bekijken"
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Hoe speel je voor of tegen als koppel?",
+    "a1": "Er verschijnt een stelling, bijvoorbeeld ‘een huisdier nemen’. Jullie praten er samen over en antwoorden samen VOOR of TEGEN, op dezelfde telefoon. Het percentage van de andere koppels verschijnt meteen daarna, en dan gaan jullie door naar de volgende stelling.",
+    "q2": "Hoeveel stellingen zijn er?",
+    "a2": "Zestig, verdeeld over zes thema's: plannen en toekomst, vakanties en uitjes, leven als koppel, dagelijks leven, momenten met z'n tweeën, en een reeks onderwerpen die flink wat discussie geven. Ze komen bij elk spel in een andere volgorde.",
+    "q3": "Moet je met z'n tweeën zijn om te spelen?",
+    "a3": "Het is gemaakt voor twee, ja. Het spel vraagt nooit wie er antwoordt: jullie beslissen samen, en juist daardoor komen de gesprekken los. Niets houdt je tegen om de stellingen alleen te bekijken, maar dan is de lol eraf.",
+    "q4": "Is het spel gratis?",
+    "a4": "Ja, helemaal, zonder account en zonder iets te installeren. Je opent de pagina en speelt.",
+    "q5": "Waar komen de percentages vandaan?",
+    "a5": "Van de stemmen van de koppels die vóór jullie speelden. Elk antwoord wordt opgeslagen zonder enig persoonlijk gegeven, alleen om de verdeling tussen VOOR en TEGEN te berekenen. Een koppel kan maar één keer per stelling stemmen.",
+    "q6": "Kun je het meerdere keren spelen?",
+    "a6": "Ja. De stellingen komen bij elk spel in een andere volgorde. Bij de stellingen die jullie al beslist hebben, zie je meteen de uitslag in plaats van nog een keer te stemmen.",
+    "q7": "Is het spel geschikt voor een koppel dat elkaar net kent?",
+    "a7": "Heel goed zelfs. De thema's over het dagelijks leven en uitjes beantwoord je zonder je ergens aan vast te leggen, en de grote beslissingen geven een vrij duidelijk beeld van hoe ieder de toekomst voor zich ziet. Dat zegt vaak meer dan een lang gesprek over later."
+  }
+}
