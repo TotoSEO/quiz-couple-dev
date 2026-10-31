@@ -142,6 +142,12 @@
     "description": "15 vragen om te ontdekken hoe jij liefhebt: gepassioneerd, zorgzaam, speels of als bouwer. Gratis test, meteen een uitslag.",
     "metaDescription": "Persoonlijkheidstest liefde: 15 vragen om te zien wat voor partner je bent. Gepassioneerd, zorgzaam, speels of een bouwer? Gratis en zonder account."
   },
+  "quizGenant": {
+    "title": "Gênante vragen: de test en 80 vragen om elkaar te stellen",
+    "shortTitle": "Gênante vragen",
+    "description": "15 vragen om te ontdekken of jullie koppel discreet, ongegeneerd of ronduit legendarisch is in het openbaar.",
+    "metaDescription": "Gênante vragen voor jullie twee: de test ‘zijn wij een gênant koppel?’ in 15 situaties, en een spel met 20 gênante vragen. Gratis, zonder account."
+  },
   "testConfiance": {
     "title": "Vertrouwen in een relatie test: vertrouw je elkaar?",
     "shortTitle": "Vertrouwenstest",
@@ -261,6 +267,12 @@
     "shortTitle": "Wie draagt de mentale belasting?",
     "description": "20 taken, twee antwoorden, en het verschil daartussen. Alleen of samen te doen, met meteen een uitslag.",
     "metaDescription": "Mentale belasting test voor koppels: 20 taken en steeds één vraag, wie denkt eraan? Samen gedaan wordt het verschil tussen jullie antwoorden de uitslag."
+  },
+  "quizRencontre": {
+    "title": "Vragen eerste date: 60 vragen in 3 niveaus voor jullie twee",
+    "shortTitle": "Vragen voor een eerste date",
+    "description": "15 vragen om elkaar te stellen, in drie niveaus die steeds persoonlijker worden. Niets te installeren, niets op te schrijven.",
+    "metaDescription": "Vragen eerste date: het spel met 60 vragen in drie niveaus, van luchtig tot persoonlijk. 15 per keer, om samen op één telefoon te spelen."
   },
   "testCrush": {
     "title": "Crush test: is het liefde of een crush? (35 vragen)",
