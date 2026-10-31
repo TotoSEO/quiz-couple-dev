@@ -464,6 +464,12 @@
     "description": "Een man of een vrouw: twintig vragen over wat deze persoon doet, elk teken gewogen naar ernst, en een uitslag op negen niveaus.",
     "metaDescription": "Red flag test voor een man of een vrouw: 20 vragen over wat deze persoon doet, van de exen tot het nee, jaloezie en woede. Elk teken weegt naar ernst."
   },
+  "compteurCouple": {
+    "title": "Hoe lang zijn we samen? Bereken het tot op de dag",
+    "shortTitle": "Relatieteller",
+    "description": "Vul de datum van jullie eerste dag samen in en zie hoeveel dagen jullie al samen zijn, met de volgende data om te vieren.",
+    "metaDescription": "Hoe lang zijn we samen? Vul jullie startdatum in en zie het aantal dagen, weken en uren samen, plus de volgende mijlpalen om te vieren. Gratis."
+  },
   "testDureeCelibat": {
     "title": "Hoe lang blijf ik nog single? Gratis online test",
     "shortTitle": "Hoe lang blijf ik nog single?",

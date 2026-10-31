@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match), 7c (relatieteller) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
 | 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
 | 9 et suite | Blog | à faire |
@@ -1886,7 +1886,36 @@ spéciaux ».
   Vissen ♓, levenspad 9, Paard (Metaal) et Waterman ♒, levenspad 22, Slang
   (Aarde), 53 % ; Emma et Noah 64 %.
 
+## Lot 7c (31 octobre 2026) : la relatieteller
+
+- `nl/compteur-couple.json` (`/nl/hoe-lang-zijn-we-samen/`), title « Hoe lang
+  zijn we samen? Bereken het tot op de dag », H1 « Relatieteller: hoe lang zijn
+  jullie al samen? » ; les caps s'écrivent « De mijlpaal van 1.000 dagen »
+  (aussi en heures et en minutes, pour tenir dans « ... ligt achter jullie » et
+  « ...: dat is vandaag! »), les nombres avec le point des milliers
+  (`LOCALES.nl = 'nl-NL'` dans compteur-couple.js).
+- Les noces sont la liste néerlandaise (katoenen, papieren, leren, zijden,
+  houten, ijzeren, wollen, bronzen... bruiloft ; tinnen à 10 ans, linnen à
+  12, kristallen à 15, zilveren à 25, gouden à 50, diamanten à 60), aux mêmes
+  années que le français ; le texte parle de la koperen bruiloft (12 ans et
+  demi), que le compteur ne compte pas.
+- **Corrigé dans les cinq langues publiques** : l'exemple du début disait
+  qu'un couple formé le 14 mai 2023 passe les 1 200 jours « à l'automne
+  2026 » ; c'est le 26 août 2026 (« fin août »). Le mois rond du jour ne
+  s'affichait jamais (`fete` exigeait aussi `d.mois === 0`, vrai seulement un
+  jour d'anniversaire) : la carte dit maintenant « Vandaag 15 maanden samen »,
+  « 2 months together today »... L'anglais, l'espagnol, l'allemand et
+  l'italien écrivaient le pluriel en dur (« 1 months together ») : `{{mois}}`,
+  que le script fournissait déjà, comme en néerlandais.
+- Joué dans Chromium à 390 px : 14 mei 2023 avec Daan et Sanne, 1.266 dagen,
+  « 3 jaar, 5 maanden en 17 dagen », de zijden bruiloft pour les 4 ans ; le
+  lien `?depuis=` un jour de mois rond, d'anniversaire et de cap de 100 jours.
+
 ## Les chiffres
+
+Au lot 7c : `textes nl` 964 parties écrites sur 1 045, sans erreur ; `seo nl`,
+`liens nl` et `site nl --jouer` (la relatieteller) sans erreur ; `code nl`
+84 passages.
 
 Au lot 7b : `textes nl` 943 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur ni avertissement (83 pages traduites) ; `liens nl` sans

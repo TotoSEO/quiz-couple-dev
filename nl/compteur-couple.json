@@ -1,0 +1,473 @@
+{
+  "hero": {
+    "badge": "Gratis tool",
+    "title": "Relatieteller: hoe lang zijn jullie al samen?",
+    "highlight": "Relatieteller",
+    "description": "Vul de datum van jullie eerste dag samen in. De teller geeft je <strong>het aantal dagen samen</strong>, de duur in jaren, maanden en dagen, en de volgende data om te vieren: jullie jubileum, ronde maanden, de mijlpaal van 1.000 dagen... Met een link om te bewaren, zodat je het getal kunt zien oplopen.",
+    "subtitle": "Geen inschrijving. De datum blijft op je telefoon, er wordt niets verstuurd."
+  },
+  "form": {
+    "titre": "Jullie teller",
+    "dateTitre": "De dag waarop het begon",
+    "dateAide": "De eerste kus, de eerste date of de dag waarop jullie zeiden “we zijn samen”: neem de datum die jullie al vieren, of de datum die voor jullie allebei telt.",
+    "jour": "Dag",
+    "moisLabel": "Maand",
+    "annee": "Jaar",
+    "mois": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "moisDate": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "joursSemaine": [
+      "zondag",
+      "maandag",
+      "dinsdag",
+      "woensdag",
+      "donderdag",
+      "vrijdag",
+      "zaterdag"
+    ],
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenomsTitre": "Jullie namen (niet verplicht)",
+    "prenom1": "Jouw naam",
+    "prenom2": "Naam van je partner",
+    "prenom1Ex": "Bijv. Daan",
+    "prenom2Ex": "Bijv. Sanne",
+    "lancer": "Tel onze dagen samen",
+    "aide": "De teller werkt zichzelf elke dag bij. Zet de pagina bij je favorieten of kopieer de link om hem terug te vinden.",
+    "erreurVide": "Kies de dag, de maand en het jaar waarop het begon.",
+    "erreur": "Deze datum bestaat niet. Controleer de dag en de maand.",
+    "erreurFutur": "Deze datum ligt nog voor je. De teller telt de dagen die jullie al samen hebben."
+  },
+  "unites": {
+    "jour": [
+      "dag",
+      "dagen"
+    ],
+    "semaine": [
+      "week",
+      "weken"
+    ],
+    "mois": [
+      "maand",
+      "maanden"
+    ],
+    "an": [
+      "jaar",
+      "jaar"
+    ],
+    "heure": [
+      "uur",
+      "uur"
+    ],
+    "minute": [
+      "minuut",
+      "minuten"
+    ],
+    "valentin": [
+      "Valentijnsdag samen",
+      "Valentijnsdagen samen"
+    ],
+    "dimanche": [
+      "zondag samen",
+      "zondagen samen"
+    ]
+  },
+  "et": " en ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "vandaag",
+    "demain": "morgen",
+    "hier": "gisteren",
+    "dans": "over {{n}} dagen",
+    "ilya": "{{n}} dagen geleden"
+  },
+  "etapes": {
+    "anniversaire": "{{n}} {{ans}} samen",
+    "mois": "{{n}} {{mois}} samen",
+    "capJours": "De mijlpaal van {{n}} dagen",
+    "capHeures": "De mijlpaal van {{n}} uur",
+    "capMinutes": "De mijlpaal van {{n}} minuten",
+    "noces": "de {{noces}}",
+    "capDetail": "oftewel {{n}} dagen"
+  },
+  "fete": {
+    "anniversaire": "Gefeliciteerd! Vandaag zijn jullie {{n}} {{ans}} samen",
+    "mois": "Vandaag {{n}} {{mois}} samen, dat moet gevierd worden!",
+    "cap": "{{cap}}: dat is vandaag!"
+  },
+  "noces": [
+    {
+      "an": 1,
+      "nom": "katoenen bruiloft"
+    },
+    {
+      "an": 2,
+      "nom": "papieren bruiloft"
+    },
+    {
+      "an": 3,
+      "nom": "leren bruiloft"
+    },
+    {
+      "an": 4,
+      "nom": "zijden bruiloft"
+    },
+    {
+      "an": 5,
+      "nom": "houten bruiloft"
+    },
+    {
+      "an": 6,
+      "nom": "ijzeren bruiloft"
+    },
+    {
+      "an": 7,
+      "nom": "wollen bruiloft"
+    },
+    {
+      "an": 8,
+      "nom": "bronzen bruiloft"
+    },
+    {
+      "an": 9,
+      "nom": "aardewerken bruiloft"
+    },
+    {
+      "an": 10,
+      "nom": "tinnen bruiloft"
+    },
+    {
+      "an": 11,
+      "nom": "stalen bruiloft"
+    },
+    {
+      "an": 12,
+      "nom": "linnen bruiloft"
+    },
+    {
+      "an": 13,
+      "nom": "kanten bruiloft"
+    },
+    {
+      "an": 14,
+      "nom": "ivoren bruiloft"
+    },
+    {
+      "an": 15,
+      "nom": "kristallen bruiloft"
+    },
+    {
+      "an": 20,
+      "nom": "porseleinen bruiloft"
+    },
+    {
+      "an": 25,
+      "nom": "zilveren bruiloft"
+    },
+    {
+      "an": 30,
+      "nom": "parelen bruiloft"
+    },
+    {
+      "an": 35,
+      "nom": "koralen bruiloft"
+    },
+    {
+      "an": 40,
+      "nom": "robijnen bruiloft"
+    },
+    {
+      "an": 45,
+      "nom": "saffieren bruiloft"
+    },
+    {
+      "an": 50,
+      "nom": "gouden bruiloft"
+    },
+    {
+      "an": 60,
+      "nom": "diamanten bruiloft"
+    }
+  ],
+  "resultat": {
+    "noms": "{{a}} & {{b}}",
+    "vous": "jij",
+    "vousDeux": "Jullie twee",
+    "depuis": "samen sinds {{date}}",
+    "joursEnsemble": "{{jours}} samen",
+    "soit": "oftewel {{duree}}",
+    "titreEtapes": "De volgende data om te vieren",
+    "titreDernierCap": "De laatste mijlpaal",
+    "dernierCap": "{{cap}} ligt achter jullie: dat was op {{date}}, {{quand}}.",
+    "titreGarder": "Houd deze teller bij de hand",
+    "garder": "De datum staat opgeslagen in deze browser: kom je terug op deze pagina, dan staat je teller er vanzelf, bijgewerkt. Wil je hem op een andere telefoon zien of naar je partner sturen? Kopieer dan de link hieronder. Daar staan de datum en jullie namen in, verder niets.",
+    "modifier": "Datum wijzigen",
+    "avis": "Laat een review achter"
+  },
+  "partage": {
+    "bouton": "Delen",
+    "lienBouton": "Link van de teller kopiëren",
+    "texte": "{{noms}}: al {{jours}} {{unite}} samen, oftewel {{duree}}. Volgende datum om te vieren: {{etape}}, op {{date}}.",
+    "copieTexte": "Tekst en link gekopieerd!",
+    "copieLien": "Link gekopieerd!"
+  },
+  "suite": {
+    "titre": "En na de cijfers?",
+    "texte": "Een teller zegt hoe lang jullie samen zijn, niet hoe het tussen jullie gaat. Vraag je je af of het nog liefde is of al gewoonte? Daar is een test met twintig vragen voor.",
+    "bouton": "Doe de test liefde of gewoonte"
+  },
+  "section1": {
+    "title": "Wat is een relatieteller?",
+    "p1": "Een relatieteller is een heel simpele tool: je vult de datum in waarop jullie verhaal begon, en hij vertelt je hoe lang jullie al samen zijn. Niet alleen in jaren, zoals je antwoordt als iemand het vraagt, maar in dagen, weken, maanden en zelfs uren. Een stel dat op 14 mei 2023 samenkwam, passeert bijvoorbeeld eind augustus 2026 de 1.200 dagen samen. Zo gezegd klinkt dat meteen anders dan ‘drie jaar en een beetje’.",
+    "p2": "Het idee bestaat al lang in apps voor koppels, waar het getal op het beginscherm staat en elke ochtend een tikje oploopt. Hier werkt het net zo, zonder iets te installeren: de pagina bewaart jullie datum in je browser, en bij elk bezoek is de teller bijgewerkt. Je kunt ook een link kopiëren met de datum en jullie namen erin, die bij je favorieten zetten of naar de ander sturen.",
+    "p3": "En omdat een getal alleen niet zoveel zegt, vertelt de teller ook wat er aankomt: het volgende jubileum met de naam van de bruiloft die erbij hoort, de volgende ronde maand, en de mijlpalen in dagen die je nooit ziet aankomen, zoals 500 dagen, 1.000 dagen of 10.000 uur. Zo heb je redenen om iets te vieren buiten de gewone data, en vaak zijn dat juist de momenten die je onthoudt!"
+  },
+  "section2": {
+    "title": "Zo werkt de teller hierboven",
+    "p1": "Dit doet de teller zodra je hem jullie datum hebt gegeven:",
+    "points": [
+      "<strong>Hij telt de dagen:</strong> het precieze aantal dagen tussen jullie begindatum en vandaag, schrikkeljaren meegerekend. Dat is het grote getal bovenaan de kaart.",
+      "<strong>Hij zet het om in jaren, maanden en dagen:</strong> ‘3 jaar, 4 maanden en 16 dagen’, bijvoorbeeld. Een maand telt zoals op een kalender, van de 14e tot de 14e van de volgende maand, hoeveel dagen die maand ook heeft.",
+      "<strong>Hij voegt een paar getallen toe waar je om moet glimlachen:</strong> de weken, maanden, uren en minuten samen, het aantal Valentijnsdagen dat jullie al samen hebben gevierd en het aantal zondagen samen.",
+      "<strong>Hij kijkt vooruit:</strong> het volgende jubileum (met de bruiloft van dat jaar: katoen, papier, leer...), de volgende ronde maand en de twee volgende mijlpalen in dagen, elk met de datum en het aantal dagen dat nog te gaan is."
+    ],
+    "p2": "Valt een van die data op vandaag, dan staat dat in het groot bovenaan de kaart. Open je de teller op de dag van jullie 1.000 dagen, dan weet je het meteen, dus het is de moeite waard om hem bij je favorieten te zetten en er 's ochtends even naar te kijken.",
+    "tip": "De teller kent alleen de datum van je telefoon. Open je hem net na middernacht, dan is hij al een dag verder."
+  },
+  "section3": {
+    "title": "Vanaf wanneer tel je? De vraag van de eerste dag",
+    "p1": "Het lastigste is meestal niet de berekening, maar de datum. Tel je vanaf de eerste date, de eerste kus, de avond waarop een van jullie “ik hou van je” zei, of de dag waarop jullie besloten dat het officieel was? Er is geen goed antwoord, en de twee mensen in een relatie hebben trouwens niet altijd dezelfde datum in hun hoofd.",
+    "p2": "Ons advies: neem de datum die jullie al vieren, de datum die in je opkomt als iemand ernaar vraagt. Hebben jullie er geen, kies hem dan samen, nu meteen, en hak de knoop door. Veel stellen nemen de eerste kus, omdat dat een precies moment is, terwijl ‘we kregen iets’ vaak vager is. Wie elkaar via een app heeft leren kennen, neemt soms de datum van het eerste bericht. Dan loopt de teller een paar weken langer, en daar klaagt niemand over.",
+    "p3": "Sommige stellen tellen liever vanaf de dag dat ze <a href=\"/nl/samenwonen-test/\">hun dozen in hetzelfde huis neerzetten</a>: voor hen begon het leven samen daar pas echt. Zijn jullie uit elkaar gegaan en weer bij elkaar gekomen? Dat mogen jullie zelf weten: sommigen beginnen opnieuw bij nul, anderen houden de eerste datum, omdat daar alles begon. En als je twijfelt tussen twee data, weet je misschien niet meer zo goed <a href=\"/nl/liefde-of-gewoonte-test/\">of het nog liefde is of al gewoonte</a>... maar dat is een andere vraag, en daar hebben we een test voor.",
+    "tip": "Schrijf de gekozen datum ergens op, om te beginnen in de teller. Over tien jaar is de herinnering aan het begin minder scherp, en het getal staat er dan nog steeds."
+  },
+  "section4": {
+    "title": "Mijlpalen om te vieren: 100 dagen, 1 jaar, 1.000 dagen...",
+    "p1": "Eén jubileum per jaar is weinig. De mijlpalen in dagen geven je andere momenten om iets te vieren, en omdat niemand ze verwacht, zijn ze vaak extra leuk. Dit zijn de mijlpalen die de teller voor je in de gaten houdt, met een idee voor elk:",
+    "tableHeaders": [
+      "De mijlpaal",
+      "Wat het betekent",
+      "Een idee om het te vieren"
+    ],
+    "tableRows": [
+      [
+        "100 dagen",
+        "Iets meer dan drie maanden. De tijd waarin je elkaar nog aan het ontdekken bent.",
+        "Jullie eerste date overdoen, op dezelfde plek als het kan."
+      ],
+      [
+        "365 dagen",
+        "Een jaar. Alle vier de seizoenen samen meegemaakt.",
+        "Elkaar allebei een brief schrijven, die jullie openen bij 730 dagen."
+      ],
+      [
+        "500 dagen",
+        "Ruim zestien maanden. Je kent de gewoontes van de ander uit je hoofd.",
+        "Een avond <a href=\"/nl/hoe-goed-ken-je-je-partner/\">om te zien wie de ander het best kent</a>: wie verliest, betaalt het toetje."
+      ],
+      [
+        "1.000 dagen",
+        "Twee jaar en negen maanden. De mijlpaal die iedereen wil vieren.",
+        "Een weekend weg naar een plek waar jullie nog nooit zijn geweest."
+      ],
+      [
+        "10.000 uur",
+        "Ongeveer 417 dagen. De tijd die je volgens het gezegde nodig hebt om ergens expert in te worden.",
+        "Tien dingen opschrijven die je over de ander hebt geleerd."
+      ],
+      [
+        "Een miljoen minuten",
+        "Ongeveer 695 dagen, iets minder dan twee jaar.",
+        "Een etentje zonder telefoon, met maar één vraag op de kaart: wat doen we met de komende tien jaar?"
+      ],
+      [
+        "3.650 dagen",
+        "Tien jaar. De tinnen bruiloft.",
+        "De foto's van het eerste jaar opzoeken en samen bekijken."
+      ],
+      [
+        "10.000 dagen",
+        "Iets meer dan 27 jaar.",
+        "Een feest, met de mensen die er in het begin al bij waren."
+      ]
+    ],
+    "p2": "De teller laat alleen de twee volgende mijlpalen zien, zodat de data die ertoe doen niet ondersneeuwen. Ben je er een voorbij, dan wordt hij ‘de laatste mijlpaal’, met de datum erbij, zodat je zonder rekenen kunt zeggen “dat was 34 dagen geleden”. En valt de mijlpaal op een doordeweekse avond zonder plannen? Dan doet <a href=\"/nl/spelletjes-voor-koppels/\">een spelletje met z'n tweeën op de bank</a> het ook prima."
+  },
+  "section5": {
+    "title": "De bruiloften: de naam van elk jaar samen",
+    "p1": "Elk jubileum heeft een eigen naam, meestal een materiaal: van de katoenen bruiloft na één jaar tot de gouden bruiloft na vijftig jaar. Oorspronkelijk was die lijst er alleen voor getrouwde stellen, maar tegenwoordig gebruiken koppels hem voor elk jubileum, getrouwd of niet. De teller laat de naam zien die bij jullie volgende jubileum hoort. Hier is de hele lijst, met een idee voor een cadeau of een kleine attentie voor elk jaar:",
+    "tableHeaders": [
+      "Jaar",
+      "De bruiloft",
+      "Een idee"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Katoenen bruiloft",
+        "Een T-shirt of een kussensloop met jullie twee namen erop geborduurd."
+      ],
+      [
+        "2",
+        "Papieren bruiloft",
+        "Een mooi notitieboek om de herinneringen van het jaar in op te schrijven."
+      ],
+      [
+        "3",
+        "Leren bruiloft",
+        "Iets van leer dat je elke dag gebruikt, zoals een portemonnee of een armband."
+      ],
+      [
+        "4",
+        "Zijden bruiloft",
+        "Een zijden sjaal, of zijden lakens."
+      ],
+      [
+        "5",
+        "Houten bruiloft",
+        "Samen een boom planten, of een houten lijstje met jullie favoriete foto."
+      ],
+      [
+        "6",
+        "Ijzeren bruiloft",
+        "Een gietijzeren pan en samen een nieuw recept koken."
+      ],
+      [
+        "7",
+        "Wollen bruiloft",
+        "Een plaid voor de bankavonden in de winter."
+      ],
+      [
+        "8",
+        "Bronzen bruiloft",
+        "Een bronzen sleutelhanger met jullie datum erin gegraveerd."
+      ],
+      [
+        "9",
+        "Aardewerken bruiloft",
+        "Twee kommen die jullie zelf maken, in een pottenbakkersatelier."
+      ],
+      [
+        "10",
+        "Tinnen bruiloft",
+        "Jullie datum gegraveerd in een metalen voorwerp."
+      ],
+      [
+        "11",
+        "Stalen bruiloft",
+        "Een horloge met jullie datum op de achterkant."
+      ],
+      [
+        "12",
+        "Linnen bruiloft",
+        "Linnen beddengoed en een lange zondagochtend in bed."
+      ],
+      [
+        "13",
+        "Kanten bruiloft",
+        "Een kanten tafelkleed voor een etentje thuis, met kaarsen."
+      ],
+      [
+        "14",
+        "Ivoren bruiloft",
+        "Iets in ivoorwit, want echt ivoor geef je natuurlijk niet: een vaas, een kaars of een fotoboek."
+      ],
+      [
+        "15",
+        "Kristallen bruiloft",
+        "Twee kristallen glazen en een heel goede fles."
+      ],
+      [
+        "20",
+        "Porseleinen bruiloft",
+        "Een theeservies en een middag om het in te wijden."
+      ],
+      [
+        "25",
+        "Zilveren bruiloft",
+        "Een zilveren sieraad, of de reis van jullie begintijd nog een keer maken."
+      ],
+      [
+        "30",
+        "Parelen bruiloft",
+        "Een parelketting, of een etentje met uitzicht op zee."
+      ],
+      [
+        "35",
+        "Koralen bruiloft",
+        "Een reis naar een warme zee waar jullie nog nooit zijn geweest."
+      ],
+      [
+        "40",
+        "Robijnen bruiloft",
+        "Een sieraad met een rode steen, of een etentje in het restaurant van jullie eerste date."
+      ],
+      [
+        "45",
+        "Saffieren bruiloft",
+        "Een feest met de kinderen en de kleinkinderen."
+      ],
+      [
+        "50",
+        "Gouden bruiloft",
+        "Een feest met iedereen die jullie elkaar heeft zien ontmoeten."
+      ],
+      [
+        "60",
+        "Diamanten bruiloft",
+        "Ze zijn het zeldzaamst van allemaal. Dat verdient een familiefoto met iedereen erop."
+      ]
+    ],
+    "p2": "De namen verschillen een beetje per land en per lijst: in het Engels is het eerste jaar dat van papier en het tweede dat van katoen, en in Nederland vieren veel stellen ook de koperen bruiloft, na twaalfenhalf jaar. Welke lijst je ook neemt, het idee blijft hetzelfde: elk jaar een eigen thema, zodat je niet hetzelfde geeft als het jaar ervoor. En komt trouwen in zicht? Kijk dan eerst of jullie <a href=\"/nl/klaar-om-te-trouwen-test/\">klaar zijn om te trouwen</a>, voordat jullie de bruiloften echt gaan tellen."
+  },
+  "section6": {
+    "title": "Waarom dagen tellen goed is voor jullie relatie",
+    "p1": "Je zou denken dat dagen tellen iets is voor het begin van een relatie, als je de eerste maand nog viert. Het is eerder andersom. Na een paar jaar lossen de data op in het dagelijks leven, en een getal dat elke ochtend oploopt, herinnert je eraan dat jullie dat dagelijks leven al 1.500 dagen samen opbouwen. Dat is niet niks.",
+    "p2": "De teller geeft je ook aanleidingen. Een ronde maand of een mijlpaal in dagen is een reden om te zeggen “weet je dat het vandaag 900 dagen is?” en die avond iets anders te doen, al is het maar iets kleins, <a href=\"/nl/liefdestaal-test/\">in de taal die de ander het best verstaat</a>. De stellen die het volhouden, zijn zelden degenen die grote verklaringen doen. Het zijn eerder de stellen die <a href=\"/nl/gezonde-relatie-test/\">regelmatig kleine gebaren voor elkaar hebben</a>, en een datum om te vieren om de honderd dagen helpt om die niet te vergeten.",
+    "tip": "Zet de teller bij jullie allebei in de favorieten, met dezelfde link. Wie de mijlpaal als eerste ziet, mag het restaurant kiezen."
+  },
+  "faq": {
+    "title": "Jullie vragen over de relatieteller",
+    "q1": "Is de relatieteller gratis?",
+    "a1": "Ja, helemaal, zonder inschrijving of e-mailadres. Je kunt hem zo vaak gebruiken als je wilt, voor jullie relatie of uit nieuwsgierigheid voor die van je ouders.",
+    "q2": "Waar wordt onze datum bewaard?",
+    "a2": "Alleen in je browser, op het apparaat dat je gebruikt. Er wordt niets naar een server gestuurd. Wis je je browsergegevens, dan verdwijnt de datum ook: daarom is er de link om te kopiëren, waar de datum in staat en waarmee je hem overal terugvindt.",
+    "q3": "Hoe deel ik de teller met mijn partner?",
+    "a3": "Tik op ‘Link van de teller kopiëren’ en stuur hem door. Opent de ander de link, dan ziet die dezelfde teller, met de datum en jullie namen al ingevuld, en kan die hem ook bij de favorieten zetten. De knop ‘Delen’ stuurt er nog een kort tekstje met het getal van vandaag bij.",
+    "q4": "Hoe telt de teller de maanden?",
+    "a4": "Zoals een kalender: van de 14e van de ene maand tot de 14e van de volgende, hoeveel dagen er ook tussen zitten. Zijn jullie op een 31e samengekomen, dan valt een ronde maand in maanden van dertig dagen op de 30e. Schrikkeljaren tellen mee in het totaal aantal dagen.",
+    "q5": "Welke mijlpalen in dagen laat de teller zien?",
+    "a5": "De honderdtallen tot 1.000 (100, 200, 300, 365, 400...), daarna 1.500, 2.000, 2.500, 3.000, en zo verder tot 30.000 dagen. Daar komen vier ongewone mijlpalen bij: 10.000 uur, een miljoen minuten, 100.000 uur en tien miljoen minuten. De teller laat de twee volgende zien, en de laatste die jullie zijn gepasseerd.",
+    "q6": "Kun je de teller ook voor iets anders gebruiken dan een relatie?",
+    "a6": "Natuurlijk. Een vriendschap, een huwelijk, de dag dat je huisdier bij jullie kwam wonen, de dag dat je stopte met roken... Hij telt dagen vanaf een datum, de rest hangt af van wat je erin zet. De bruiloften en Valentijnsdag zeggen dan alleen wat minder!"
+  },
+  "jsonLd": {
+    "name": "Relatieteller",
+    "about": "Aantal dagen samen sinds een begindatum, en de volgende data om te vieren"
+  }
+}
