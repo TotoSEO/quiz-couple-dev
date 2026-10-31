@@ -176,7 +176,7 @@ const TEXTES = {
     noteSolo: 'Dit rapport bevat je antwoorden en wat je van je relatie vindt: het is alleen voor jou bedoeld.',
     aide: 'Een vraag, of een probleem met downloaden? Beantwoord dit bericht gewoon.',
     pied: 'Je krijgt dit bericht omdat dit adres is opgegeven om dit rapport te ontvangen. We sturen je verder niets.',
-    legal: 'Voor de betaling heeft de koper gevraagd om dit rapport te krijgen zodra het klaar was, zonder het einde van de herroepingstermijn af te wachten, en erkend dat het herroepingsrecht vervalt zodra het rapport geleverd is. Dit bericht is die bevestiging: het rapport is geleverd. Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Verkoopvoorwaarden: {cgv}',
+    legal: 'Voor de betaling heeft de koper gevraagd om dit rapport te krijgen zodra het klaar was, zonder het einde van de herroepingstermijn af te wachten, en erkend dat het herroepingsrecht vervalt zodra het rapport geleverd is. Dit bericht is die bevestiging: het rapport is geleverd. Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Algemene voorwaarden: {cgv}',
   },
 };
 

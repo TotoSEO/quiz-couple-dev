@@ -3279,6 +3279,10 @@ var QuizEngine = (function() {
           commun: ['Quiz Couple vi propone la valutazione di coppia più completa online!', 'Non serve andare da un professionista. Fate il punto sulla vostra relazione e verificate se siete davvero solidi.'],
           points: ['Da fare insieme, ciascuno sul proprio telefono', 'Test costruito su ricerche in psicologia di coppia', 'Una ventina di minuti, senza vedere le risposte dell\'altro', 'Risultati immediati & report online + PDF'],
           bouton: 'Scopri la valutazione', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+    nl: { sur: 'Relatiecheck',
+          commun: ['Quiz Couple heeft de meest complete relatiecheck die je online kunt doen!', 'Daarvoor hoef je niet naar een therapeut. Sta samen stil bij jullie relatie en ontdek hoe stevig die staat.'],
+          points: ['Samen te doen, ieder op de eigen telefoon', 'Gebaseerd op onderzoek naar relaties', 'Een minuut of twintig, zonder de antwoorden van de ander te zien', 'Meteen resultaat & rapport online + pdf'],
+          bouton: 'Ontdek de relatiecheck', prix: 'Vragen gratis · rapport {{prix}} voor jullie samen' },
   };
   var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   function encartBilan(cle, lang) {

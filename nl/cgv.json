@@ -40,7 +40,7 @@
       "titre": "3. Bestellen en betalen",
       "p": [
         "Elke partner krijgt de betaling aangeboden zodra hij of zij de eigen vragen heeft beantwoord. Vóór de betaling kan de koper het e-mailadres opgeven waarop hij het rapport wil ontvangen, en vinkt hij een vakje aan waarmee hij uitdrukkelijk vraagt om het rapport te krijgen zodra het klaar is, zonder het einde van de herroepingstermijn af te wachten, en erkent dat hij zijn herroepingsrecht verliest zodra het rapport geleverd is (zie artikel 5). De e-mail met de link naar het rapport herhaalt dat verzoek en die erkenning.",
-        "U betaalt op de beveiligde pagina van onze dienstverlener Stripe, met een bankkaart (creditcard of debetkaart), Apple Pay of Google Pay. Wij hebben nooit toegang tot uw kaartgegevens. Stripe stuurt een betaalbewijs naar het e-mailadres dat u bij de betaling opgeeft: dat is de bevestiging van uw bestelling. Een factuur kunt u aanvragen via de {{contact}}."
+        "U betaalt op de beveiligde pagina van onze dienstverlener Stripe, met een bankkaart (creditcard of debetkaart), Apple Pay, Google Pay of een andere betaalmethode die op die pagina wordt aangeboden. Wij hebben nooit toegang tot uw betaalgegevens. Stripe stuurt een betaalbewijs naar het e-mailadres dat u bij de betaling opgeeft: dat is de bevestiging van uw bestelling. Een factuur kunt u aanvragen via de {{contact}}."
       ]
     },
     {

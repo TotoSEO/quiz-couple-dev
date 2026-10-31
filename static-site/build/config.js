@@ -425,10 +425,11 @@ export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
   : true;
 // Les langues où l'évaluation reste fermée alors qu'elle est ouverte
 // ailleurs : celles dont les textes ne sont pas encore écrits (le néerlandais
-// jusqu'à son lot 8, docs/langues/CADRAGE-NL.md). Fermée dans une langue, elle
-// y est comme partout quand BILAN_OUVERT est à false : aucun lien ni encart,
-// page en noindex, hors du plan du site et du hreflang.
-export const BILAN_LANGUES_FERMEES = ['nl'];
+// jusqu'à la fin de son lot 8, le 31 octobre 2026, docs/langues/CADRAGE-NL.md).
+// Fermée dans une langue, elle y est comme partout quand BILAN_OUVERT est à
+// false : aucun lien ni encart, page en noindex, hors du plan du site et du
+// hreflang.
+export const BILAN_LANGUES_FERMEES = [];
 export function bilanOuvertPour(lang) {
   return BILAN_OUVERT && !BILAN_LANGUES_FERMEES.includes(lang);
 }

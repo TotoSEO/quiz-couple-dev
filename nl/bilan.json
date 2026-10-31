@@ -182,8 +182,8 @@
       "renonciation": "Ik vraag om het rapport te krijgen zodra het klaar is, zonder het einde van de herroepingstermijn van 14 dagen af te wachten, en ik erken dat ik mijn herroepingsrecht verlies zodra het geleverd is.",
       "renonciationManque": "Vink het vakje aan om verder te gaan.",
       "bouton": "Ontgrendel ons rapport · {{prix}}",
-      "securite": "Veilig betalen via Stripe. Wij zien je kaart nooit.",
-      "cgv": "Verkoopvoorwaarden",
+      "securite": "Veilig betalen via Stripe. Wij zien je betaalgegevens nooit.",
+      "cgv": "Algemene voorwaarden",
       "tva": "Geen btw van toepassing, art. 293 B van de Franse Code général des impôts.",
       "ferme": "Online betalen kan binnenkort. Je relatiecheck blijft bewaard: kom over een paar dagen terug naar deze pagina.",
       "redirection": "Doorsturen naar de betaling...",
@@ -859,7 +859,7 @@
         },
         {
           "titre": "Veilig betalen",
-          "texte": "Via Stripe: wij zien je kaart nooit."
+          "texte": "Via Stripe: wij zien je betaalgegevens nooit."
         }
       ]
     },
