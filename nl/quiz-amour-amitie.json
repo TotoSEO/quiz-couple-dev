@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "badge": "20 vragen · Gewogen score · Gratis",
+    "title": "Is het liefde of vriendschap? 20 vragen",
+    "titleHighlight": "liefde of vriendschap",
+    "description": "Twintig vragen over wat je doet, niet over wat je denkt te voelen. Aan het eind een uitslag in zes niveaus, van goede vriend tot liefde die nog geen naam heeft."
+  },
+  "jsonLd": {
+    "name": "Test: liefde of vriendschap?",
+    "about": "Liefde en vriendschap van elkaar onderscheiden"
+  },
+  "section1": {
+    "title": "Wat deze test meet",
+    "p1": "Er is iemand in je leven over wie je een beetje te vaak praat, en uiteindelijk heeft iemand de lastige vraag gesteld: “Weet je zeker dat het gewoon een vriend is?” Sindsdien spookt die vraag door je hoofd. Precies voor dat moment is deze test er.",
+    "p2": "Het probleem is dat liefde en vriendschap bijna alles delen: het plezier om samen te zijn, het vertrouwen, de geheimen, de slappe lach. Jezelf afvragen ‘hou ik van hem of haar?’ door te kijken naar wat jullie delen, levert niets op, want dat bestaat allemaal ook in een hechte vriendschap.",
+    "p3": "De test kijkt dus niet naar wat jullie delen, maar naar wat erbovenuit komt: wat je doet, wat je verbergt, wat je steekt als die persoon over iemand anders praat. Daar, en alleen daar, gaan de twee banden uit elkaar.",
+    "resumeTitre": "De test in vijf punten",
+    "resume1": "Twintig vragen over je gedrag, niet over de gevoelens die je zegt te hebben.",
+    "resume2": "Elke vraag heeft haar eigen gewicht: zin om die persoon te kussen is tot tien punten waard, het plezier om samen te zijn vijf, omdat dat ook tussen vrienden bestaat.",
+    "resume3": "De score loopt van 0 tot 146, in zes niveaus, van pure vriendschap tot liefde die zichzelf nog niet kent.",
+    "resume4": "De test zegt wat jij voelt. Wat de ander voelt, is een andere vraag, en daar doet hij geen uitspraak over.",
+    "resume5": "Gratis, anoniem, zonder account, vijf minuten."
+  },
+  "section2": {
+    "title": "De signalen die liefde en vriendschap van elkaar scheiden",
+    "intro": "Niet alle signalen zijn evenveel waard, en daarom leveren de vragen niet allemaal evenveel punten op. Een signaal dat ook in vriendschap bestaat, weegt weinig. Een signaal dat alleen in liefde bestaat, weegt zwaar.",
+    "headerSigne": "Wat wordt gemeten",
+    "headerPoids": "Gewicht",
+    "headerPourquoi": "Waarom dit gewicht",
+    "row1Signe": "Zin om die persoon te kussen",
+    "row1Poids": "10 punten",
+    "row1Pourquoi": "Dit is het duidelijkste teken dat er bestaat. Met een vriend kun je alles delen, behalve dat: die zin heeft geen vriendschappelijke versie.",
+    "row2Signe": "Een “ik hou van je”, vanavond gezegd",
+    "row2Poids": "9 punten",
+    "row2Pourquoi": "Hoe je denkt te reageren op die zin, beslist alles. Een vriend antwoordt “ik ook van jou” zonder erbij na te denken. Slaat je hart op hol bij het idee, dan heeft het al voor je geantwoord.",
+    "row3Signe": "Jaloezie op zijn of haar dates",
+    "row3Poids": "9 punten",
+    "row3Pourquoi": "Een vriend geef je graag advies over zijn of haar dates. Hoor je er liever niets over, dan is advies niet meer wat je wilt geven.",
+    "row4Signe": "Die persoon over een jaar in een relatie zien",
+    "row4Poids": "9 punten",
+    "row4Pourquoi": "Wat je je voorstelt, verraadt wat het heden verstopt. Blij zijn voor een vriend is een reflex; een knoop in je maag is een antwoord.",
+    "row5Signe": "Het woord ‘vriend’ dat vals klinkt",
+    "row5Poids": "8 punten",
+    "row5Pourquoi": "Als het woord waarmee je iemand voorstelt pijn doet, is het niet meer het goede woord.",
+    "row6Signe": "De tijd die samen voorbijvliegt",
+    "row6Poids": "5 punten",
+    "row6Pourquoi": "Het is een signaal, maar een zwak: de tijd vliegt ook voorbij met een heel goede vriend. Het telt alleen mee als de andere signalen er ook zijn.",
+    "apres": "Het maximum is 146 punten. De vragen met weinig gewicht vormen de achtergrond, de zware vragen bepalen de uitslag: je kunt het heerlijk vinden om tijd met iemand door te brengen en toch op 30 punten blijven steken, als de rest niet volgt."
+  },
+  "section3": {
+    "title": "Zo lees je je score",
+    "intro": "Zes niveaus van vijfentwintig punten. De eerste twee beschrijven een vriendschap, de laatste twee een liefde, en de twee in het midden beschrijven waar je waarschijnlijk voor komt: de zone waarin het kantelt.",
+    "headerScore": "Score",
+    "headerPalier": "Niveau",
+    "headerSens": "Wat het betekent",
+    "row1Score": "0 tot 24",
+    "row1Palier": "Het is vriendschap, en een hechte",
+    "row1Sens": "Niets gaat buiten het kader van vriendschap, en dat is al heel waardevol.",
+    "row2Score": "25 tot 49",
+    "row2Palier": "Een vriendschap, met een klein iets",
+    "row2Sens": "Twee of drie antwoorden steken erbovenuit, niets waarover je per se moet praten.",
+    "row3Score": "50 tot 74",
+    "row3Palier": "De verwarring zit er goed in",
+    "row3Sens": "Je woorden zijn vriendschappelijk, je reacties niet meer.",
+    "row4Score": "75 tot 99",
+    "row4Palier": "Je neigt duidelijk naar liefde",
+    "row4Sens": "De meeste van je antwoorden zijn niet meer met vriendschap te verklaren.",
+    "row5Score": "100 tot 124",
+    "row5Palier": "Het is liefde, alleen de woorden ontbreken nog",
+    "row5Sens": "Iedereen van buitenaf zou het al anders noemen.",
+    "row6Score": "125 tot 146",
+    "row6Palier": "Je wist het al voordat je klikte",
+    "row6Sens": "Je kwam geen antwoord zoeken, maar toestemming.",
+    "apres": "Een detail dat telt: deze test meet wat jij voelt. Een score van 130 zegt helemaal niets over wat de ander voelt, en dat is de eerste fout die je niet moet maken als je hier weggaat."
+  },
+  "section4": {
+    "title": "Waarom je die twee zo makkelijk door elkaar haalt",
+    "p1": "Omdat de grens niet ligt waar je die zoekt. Je denkt dat je liefde herkent aan de intensiteit: je denkt veel aan iemand, dus zou het liefde zijn. Maar aan een vriend die het zwaar heeft, denk je ook veel, en niemand noemt dat een passie. Intensiteit beslist niets, en het is trouwens dezelfde doodlopende weg als <a href=\"/nl/ben-ik-verliefd-test/\">je gewoon afvragen of je verliefd bent</a>: zonder naar je gedrag te kijken, draai je in rondjes.",
+    "p2": "Wat het verschil maakt, is exclusiviteit. Vriendschap kun je zonder problemen delen: je beste vriend kan andere beste vrienden hebben, dat neemt jou niets af. Op de dag dat het idee je tegenstaat dat die persoon ‘de persoon’ van iemand anders wordt, ben je uit het delen gestapt, en dus uit de vriendschap.",
+    "p3": "En dan is er het gemak van het woord. ‘Vriend’ is een woord zonder risico: je houdt de persoon, de verstandhouding, de avonden, zonder ooit een afwijzing te riskeren. Veel mensen halen liefde en vriendschap niet door elkaar, ze kiezen voor de verwarring omdat die hen beschermt. Deze test haalt die bescherming vijf minuten weg."
+  },
+  "section5": {
+    "title": "En als je het antwoord hebt?",
+    "p1": "Zegt de uitslag vriendschap, geloof het dan. Er valt niets te forceren en niets te betreuren: een vriendschap waarin je elkaar als eerste je goede nieuws vertelt, is een van de mooiste dingen die een leven kan bevatten, en ze is niet minder waard dan een liefdesverhaal.",
+    "p2": "Zegt de uitslag liefde, dan is de volgende vraag niet ‘wat moet ik doen?’ maar ‘en de ander?’. Dat weet je niet, en de aanwijzingen die je hebt verzameld, verdienen beter dan gissen: de <a href=\"/nl/stiekem-verliefd-op-mij/\">signalen dat iemand stiekem gevoelens voor je heeft</a> zijn op te sommen, en je kunt ze beter nagaan dan raden.",
+    "p3": "En heb je al een relatie met die persoon en kwam de vraag andersom bij je op, die van een liefde die zo vertrouwd is geworden dat ze op vriendschap lijkt, dan meet je iets anders: <a href=\"/nl/liefde-of-gewoonte-test/\">liefde die gewoonte is geworden</a>, en die twijfel heeft zijn eigen antwoord."
+  },
+  "section6": {
+    "title": "Vijf minuten eerlijkheid",
+    "p1": "Deze test is maar zo goed als je antwoorden. Antwoord wat waar is, niet wat comfortabel is: niemand kijkt over je schouder mee, en de uitslag wordt nergens bewaard.",
+    "p2": "En bevestigt de score wat je al wist, onthoud dan dit: de vraag die jij je al weken stelt, stelt de ander zich misschien ook."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Hoe weet je of het liefde is of vriendschap?",
+    "a1": "Door te kijken naar wat alleen in liefde bestaat: zin in lichamelijk contact, jaloezie als die persoon over zijn of haar dates vertelt, het woord ‘vriend’ dat je niet meer graag uitspreekt, het feit dat je iedereen die je leuk vindt met hem of haar vergelijkt. Al de rest, de verstandhouding, het vertrouwen, de tijd die voorbijvliegt, bestaat in allebei. Precies dat sorteert deze test, vraag per vraag.",
+    "q2": "Waarom wegen niet alle vragen even zwaar?",
+    "a2": "Omdat een signaal dat liefde en vriendschap delen niets bewijst. Het heerlijk vinden om tijd met iemand door te brengen levert weinig punten op; die persoon willen kussen levert er veel op, omdat dat signaal geen vriendschappelijke verklaring heeft. Zonder die weging zou een heel goede vriend dezelfde score halen als een liefde die net begint.",
+    "q3": "Kun je verliefd zijn op je beste vriend zonder het door te hebben?",
+    "a3": "Bij wie deze test doet, is dat zelfs het meest voorkomende geval. Als je elke dag <a href=\"/nl/verliefd-op-je-beste-vriend/\">zo dicht bij je beste vriend of vriendin</a> bent, sluipen de signalen er één voor één in, zo langzaam dat geen enkel ervan alarm slaat. Vaak is het een opmerking van iemand anders, of een date van de ander, die alles in één keer naar boven haalt.",
+    "q4": "Werkt de test als we al eens iets met elkaar hebben gehad?",
+    "a4": "Ja, maar lees de uitslag voorzichtig. Na een relatie vertroebelen de gebaren en de herinneringen de signalen: een gemiddelde score kan weergeven wat er van vroeger over is, eerder dan wat er vandaag bestaat. Doe de test over twee maanden opnieuw: de richting tussen de twee scores is betrouwbaarder dan elke score op zich.",
+    "q5": "En als ik een score in het midden krijg, liefde noch vriendschap?",
+    "a5": "Dat is de nuttigste uitslag van de test, ook al is het de minst comfortabele. De middelste zone betekent dat de verwarring er is en blijft. In dit stadium groeit ze of slijt ze, maar ze blijft niet stilstaan: doe de test over een paar weken opnieuw, dan zie je naar welke kant het overhelt.",
+    "q6": "Zegt deze test of de ander ook van me houdt?",
+    "a6": "Nee, en wantrouw elke test die dat beweert. Hij meet wat jij voelt, op basis van jouw gedrag. Wat de ander voelt, lees je af aan zijn of haar gedrag, en dat is een andere zoektocht.",
+    "q7": "Is de test gratis en anoniem?",
+    "a7": "Ja, allebei. Geen account, geen e-mailadres, en je antwoorden worden niet bewaard. Alleen het aantal gedane tests wordt geteld."
+  }
+}
