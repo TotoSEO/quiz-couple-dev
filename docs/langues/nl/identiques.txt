@@ -43,3 +43,7 @@ Pizza
 Sushi
 # « Lingerie » is ook Nederlands (ondeugende quiz, lot 5b).
 Lingerie
+# Noms de marque et mot repris tel quel (hoe goed ken je je partner, lot 5d).
+TikTok
+YouTube
+Streetwear

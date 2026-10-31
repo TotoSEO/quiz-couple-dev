@@ -1,0 +1,218 @@
+{
+  "hero": {
+    "badge": "Interactieve quiz voor twee",
+    "title1": "Wie kent de ander het best?",
+    "title2": "Quiz voor koppels",
+    "description": "Test hoe goed jullie elkaar kennen met deze leuke quiz! Raad de voorkeuren van je partner en ontdek wie de ander het best kent.",
+    "titleHighlight": "het best"
+  },
+  "howItWorks": {
+    "title": "Hoe werkt de quiz ‘Wie kent de ander het best’?",
+    "steps": [
+      {
+        "title": "1. Vul jullie namen in",
+        "desc": "Zo worden de vragen van de quiz persoonlijk"
+      },
+      {
+        "title": "2. Raad om de beurt",
+        "desc": "Beantwoord de vragen over de voorkeuren van je partner"
+      },
+      {
+        "title": "3. Keur de antwoorden goed",
+        "desc": "Je partner bevestigt of je het goede antwoord hebt gegeven"
+      },
+      {
+        "title": "4. Bekijk de uitslag",
+        "desc": "Wie kent de ander het best in jullie relatie?"
+      }
+    ]
+  },
+  "whatIs": {
+    "title": "Wat is de quiz ‘Hoe goed ken je je partner’?",
+    "p1": "De quiz ‘Wie kent de ander het best’ is een interactief spel, speciaal gemaakt voor koppels die op een speelse manier willen testen hoe goed ze elkaar kennen. Geïnspireerd op bekende tv-spelletjes daagt deze quiz jullie uit om de voorkeuren, gewoontes en dromen van de ander te raden. Waar andere tests beoordelen <a href=\"/nl/relatietest/\">hoe stevig jullie relatie is</a>, meet deze maar één ding: hoe goed jullie elkaar kennen.",
+    "p2": "Anders dan bij gewone quizzen, waar je in je eentje vragen beantwoordt, draait dit spel om wisselwerking tussen jullie tweeën. De een raadt, de ander keurt goed, en dan draaien jullie de rollen om. Juist dat maakt het zo leuk en zo onthullend.",
+    "features": [
+      {
+        "title": "100 gevarieerde vragen",
+        "desc": "Vragen over alle kanten van het leven: smaak, gewoontes, dromen, angsten, levensplannen, dagelijkse voorkeuren..."
+      },
+      {
+        "title": "20 vragen per spel",
+        "desc": "Elk spel trekt willekeurig 20 vragen uit de 100. Speel zo vaak als je wilt!"
+      },
+      {
+        "title": "100% gratis",
+        "desc": "Geen account nodig, niets te betalen, geen opdringerige reclame. Je speelt meteen, zo vaak als je wilt."
+      }
+    ]
+  },
+  "why": {
+    "title": "Waarom speel je deze quiz als koppel?",
+    "subtitle": "Deze quiz is meer dan een spelletje: hij helpt jullie relatie te versterken en je partner beter te begrijpen.",
+    "benefits": [
+      {
+        "title": "Versterk jullie band",
+        "desc": "Elk goed antwoord bewijst dat je je partner goed kent. Leuk voor wie raadt, en ontroerend voor wie geraden wordt."
+      },
+      {
+        "title": "Begin het gesprek",
+        "desc": "De vragen gaan over allerlei onderwerpen waar jullie het misschien nog nooit over hadden. Een prima begin voor mooie gesprekken."
+      },
+      {
+        "title": "Een leuke tijd samen",
+        "desc": "Los van de score is deze quiz een kans om samen te lachen, elkaar te verrassen en een bijzonder moment te delen."
+      },
+      {
+        "title": "Ontdek nieuwe kanten",
+        "desc": "Zelfs na jaren samen valt er altijd nog iets te ontdekken. Deze quiz kan onverwachte verrassingen opleveren."
+      },
+      {
+        "title": "Ideaal voor een avondje met z'n tweeën",
+        "desc": "Perfect voor een romantische avond, een weekendje weg of gewoon om de dagelijkse sleur te doorbreken."
+      },
+      {
+        "title": "Maak herinneringen",
+        "desc": "De momenten rond deze quiz worden mooie herinneringen waar jullie later graag aan terugdenken."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Voorbeelden van vragen uit de quiz",
+    "subtitle": "Hier zie je wat voor vragen je in deze quiz tegenkomt. De onderwerpen lopen uiteen, zodat jullie alle kanten van je relatie verkennen.",
+    "categories": [
+      {
+        "emoji": "🎯",
+        "title": "Smaak en voorkeuren",
+        "questions": [
+          "Wat is de lievelingskleur van je partner?",
+          "Houdt hij of zij meer van de zee of van de bergen?",
+          "Wat is zijn of haar lievelingseten?",
+          "Is hij of zij meer van koffie of van thee?"
+        ]
+      },
+      {
+        "emoji": "💭",
+        "title": "Persoonlijkheid en gewoontes",
+        "questions": [
+          "Is hij of zij een ochtend- of een avondmens?",
+          "Plannen of improviseren: wat doet hij of zij liever?",
+          "Is hij of zij meer introvert of extravert?",
+          "Wat is zijn of haar beste eigenschap?"
+        ]
+      },
+      {
+        "emoji": "❤️",
+        "title": "Liefde en relatie",
+        "questions": [
+          "Waardoor voelt hij of zij zich geliefd?",
+          "Gaat hij of zij meer voor woorden of voor daden?",
+          "Wat is zijn of haar grootste angst in de liefde?",
+          "Gelooft hij of zij in liefde voor het leven?"
+        ]
+      },
+      {
+        "emoji": "🌟",
+        "title": "Dromen en plannen",
+        "questions": [
+          "Welk land wil hij of zij graag bezoeken?",
+          "Wat wilde hij of zij als kind later worden?",
+          "Wat zou hij of zij doen met de hoofdprijs in de loterij?",
+          "Wat is zijn of haar grootste droom?"
+        ]
+      }
+    ]
+  },
+  "when": {
+    "title": "Wanneer speel je deze quiz?",
+    "occasions": [
+      {
+        "emoji": "🏠",
+        "title": "Gezellige avond thuis",
+        "desc": "Perfect om Netflix eens te vervangen door een moment van echte verbinding. Een plaid, iets warms te drinken en gaan!"
+      },
+      {
+        "emoji": "🚗",
+        "title": "Lange autorit",
+        "desc": "Maak van een saaie rit een moment samen. De tijd vliegt voorbij!"
+      },
+      {
+        "emoji": "🌴",
+        "title": "Vakantie met z'n tweeën",
+        "desc": "Op het strand, in een restaurant of in je hotel: deze quiz is de ideale metgezel voor jullie romantische uitjes."
+      },
+      {
+        "emoji": "💑",
+        "title": "Begin van een relatie",
+        "desc": "Leer je nieuwe partner op een speelse manier kennen. Een originele manier om het ijs te breken!"
+      },
+      {
+        "emoji": "💍",
+        "title": "Al lang samen",
+        "desc": "Zelfs na jaren kan deze quiz verrassingen opleveren! Bekijk je partner eens vanuit een nieuwe hoek."
+      },
+      {
+        "emoji": "🎉",
+        "title": "Jullie jubileum",
+        "desc": "Een originele activiteit om jullie liefde te vieren en te meten hoe goed jullie elkaar na al die tijd kennen."
+      }
+    ]
+  },
+  "tips": {
+    "title": "Tips om het meeste uit de quiz te halen",
+    "items": [
+      {
+        "title": "Geen scherm tussen jullie in",
+        "desc": "Leg de telefoon tussen jullie in of op tafel. Het idee is dat je elkaar aankijkt als je antwoordt, niet dat je naar een scherm staart."
+      },
+      {
+        "title": "Licht je antwoorden toe",
+        "desc": "Hou het niet bij een simpel ‘ja’ of ‘nee’. Leg uit waarom je denkt dat het het goede antwoord is. Daar beginnen de leukste gesprekken."
+      },
+      {
+        "title": "Neem de score niet te serieus",
+        "desc": "Het doel is niet winnen, maar samen een leuke tijd hebben. De foute antwoorden zijn vaak het grappigst en zeggen het meest!"
+      },
+      {
+        "title": "Speel het regelmatig",
+        "desc": "Met 100 vragen en een willekeurige trekking is elk spel anders. Maak er een maandelijks ritueel van om jullie band te versterken."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Klaar om te ontdekken wie de ander het best kent?",
+    "desc": "Start de quiz nu en ontdek wie de kampioen is in jullie relatie! Gratis en zonder account.",
+    "button": "Start de quiz"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen over de quiz ‘Wie kent de ander het best’",
+    "items": [
+      {
+        "q": "Hoe werkt de quiz ‘Wie kent de ander het best’?",
+        "a": "Om de beurt raad je de voorkeuren van je partner. Je partner zegt daarna of je antwoord klopt. Na de 20 vragen vergelijk je de scores om te zien wie de ander het best kent."
+      },
+      {
+        "q": "Hoeveel vragen heeft deze quiz?",
+        "a": "Elk spel heeft 20 vragen, willekeurig getrokken uit een verzameling van 100. Je kunt zo vaak spelen als je wilt, telkens met andere vragen."
+      },
+      {
+        "q": "Is deze quiz gratis?",
+        "a": "Ja, deze quiz is 100% gratis en zonder account. Je speelt zo vaak als je wilt op de site, zonder account aan te maken of persoonlijke gegevens te geven."
+      },
+      {
+        "q": "Waarvoor dient de quiz ‘Hoe goed ken je je partner’?",
+        "a": "Met deze quiz test je op een speelse manier hoe goed jullie elkaar kennen, versterk je jullie band en open je het gesprek over allerlei onderwerpen: voorkeuren, dromen, angsten, dagelijkse gewoontes, levensplannen..."
+      },
+      {
+        "q": "Kun je opnieuw spelen met dezelfde vragen?",
+        "a": "Nee, bij elk nieuw spel worden 20 vragen getrokken uit de 100. Zo is het elke keer anders en ontdek je steeds nieuwe kanten van je partner."
+      },
+      {
+        "q": "Moet je tegelijk met je partner spelen?",
+        "a": "Ja, deze quiz is bedoeld om met z'n tweeën tegelijk te spelen. Jullie moeten samen zijn, want de een raadt en de ander keurt het antwoord goed. Juist die wisselwerking maakt het spel zo leuk."
+      }
+    ]
+  },
+  "jsonLd": {
+    "about": "quiz over hoe goed je je partner kent"
+  }
+}

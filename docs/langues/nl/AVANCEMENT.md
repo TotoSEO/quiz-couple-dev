@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1088,7 +1088,38 @@ le met à jour dans la PR de chaque lot.
   lancé et a fait défiler quatre questions, toutes en néerlandais, avec leur
   famille.
 
+## Lot 5d (31 octobre 2026) : qui connaît le mieux l'autre, qui est le plus
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/hoe-goed-ken-je-je-partner/` | Hoe goed ken je je partner? Quiz met 100 vragen | Wie kent de ander het best? (puis « Quiz voor koppels ») |
+  | `/nl/wie-is-het-meest/` | Wie is het meest? Meer dan 240 vragen voor 2 tot 8 spelers | Wie is het meest...? Het spel voor koppels en vrienden |
+
+- **Les moteurs** : `knowledge` (100 questions avec `{{name}}`) et `most`
+  (244 questions) dans la structure du français, puisque l'anglais a
+  d'autres questions sous d'autres clés : les réponses que ces deux jeux
+  n'affichent pas (`q1a` à `q30d` pour le premier, « Speler 1 » et « Speler
+  2 » pour le second) sont écrites quand même. Le « qui est le plus » ne dit
+  jamais « wie zou eerder », le mot-clé du « qui pourrait » (lot 6) : « wie
+  ... het snelst », « het vaakst », « het meest ». « TikTok », « YouTube »
+  et « Streetwear » s'écrivent pareil (identiques.txt). La FAQ cite les
+  boutons tels que le moteur les écrit (« Opnieuw beginnen », « Andere
+  spelers »).
+- **Les liens** : « hoe stevig jullie relatie is » (relatietest), « de
+  spellen die voor een koppel zijn geschreven » (spelletjes voor koppels) et
+  « ondeugendere vragen » (ondeugende quiz). Le lien français vers le quiz
+  des Z'amours, page française seulement, n'a pas d'équivalent.
+- **Ce qui reste en français sur les pages** : les phrases de quatre cartes
+  « À faire ensuite », vers des jeux du lot 6.
+
 ## Les chiffres
+
+Au lot 5d : `textes nl` 659 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (59 pages traduites) ; `site nl` : les deux moteurs vont
+jusqu'à leur résultat ; quatre erreurs attendues, les cartes vers des jeux
+du lot 6. Aucune page publique ne change.
 
 Au lot 5c : `textes nl` 637 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (57 pages traduites) ; `site nl` : deux erreurs attendues,
