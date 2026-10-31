@@ -84,10 +84,10 @@
             <div class="astro-person-block astro-person-1">
               <div class="astro-person-header">
                 <span class="astro-person-number astro-person-number-1">1</span>
-                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : 'Person 1' %></span>
+                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : lang === 'nl' ? 'Persoon 1' : 'Person 1' %></span>
               </div>
               <div class="astro-field">
-                <label class="astro-field-label" for="name1"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : 'First name' %></label>
+                <label class="astro-field-label" for="name1"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : lang === 'nl' ? 'Voornaam' : 'First name' %></label>
                 <input type="text" id="name1" class="astro-input" placeholder="<%= t(ns + ':form.name1Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
               </div>
               <div class="astro-field">
@@ -123,10 +123,10 @@
             <div class="astro-person-block astro-person-2">
               <div class="astro-person-header">
                 <span class="astro-person-number astro-person-number-2">2</span>
-                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : 'Person 2' %></span>
+                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : lang === 'nl' ? 'Persoon 2' : 'Person 2' %></span>
               </div>
               <div class="astro-field">
-                <label class="astro-field-label" for="name2"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : 'First name' %></label>
+                <label class="astro-field-label" for="name2"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : lang === 'nl' ? 'Voornaam' : 'First name' %></label>
                 <input type="text" id="name2" class="astro-input" placeholder="<%= t(ns + ':form.name2Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
               </div>
               <div class="astro-field">
@@ -229,7 +229,7 @@
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
               <a href="#pq-reviews" class="btn btn-outline px-6 py-2.5 text-sm">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <%= lang === 'fr' ? 'Laisser un avis' : lang === 'es' ? 'Dejar una opinión' : lang === 'de' ? 'Bewertung abgeben' : lang === 'it' ? 'Lascia una recensione' : 'Leave a review' %>
+                <%= lang === 'fr' ? 'Laisser un avis' : lang === 'es' ? 'Dejar una opinión' : lang === 'de' ? 'Bewertung abgeben' : lang === 'it' ? 'Lascia una recensione' : lang === 'nl' ? 'Laat een review achter' : 'Leave a review' %>
               </a>
               <% if (lang === 'fr') { %>
               <a href="#ebook-form-section" class="btn btn-primary px-6 py-2.5 text-sm">
@@ -462,17 +462,17 @@
 
   // Number meanings for explanations
   var NUMBER_TRAITS = {
-    1: { fr: "leader, indépendant, pionnier", en: "leader, independent, pioneer", es: "líder, independiente, pionero", de: "Anführer, unabhängig, Pionier", it: "leader, indipendente, pioniere" },
-    2: { fr: "diplomate, sensible, partenaire", en: "diplomat, sensitive, partner", es: "diplomático, sensible, compañero", de: "Diplomat, sensibel, Partner", it: "diplomatico, sensibile, partner" },
-    3: { fr: "créatif, sociable, expressif", en: "creative, sociable, expressive", es: "creativo, sociable, expresivo", de: "kreativ, gesellig, ausdrucksvoll", it: "creativo, socievole, espressivo" },
-    4: { fr: "stable, organisé, loyal", en: "stable, organized, loyal", es: "estable, organizado, leal", de: "stabil, organisiert, loyal", it: "stabile, organizzato, leale" },
-    5: { fr: "aventurier, libre, dynamique", en: "adventurous, free, dynamic", es: "aventurero, libre, dinámico", de: "abenteuerlustig, frei, dynamisch", it: "avventuriero, libero, dinamico" },
-    6: { fr: "protecteur, harmonieux, responsable", en: "protective, harmonious, responsible", es: "protector, armonioso, responsable", de: "beschützend, harmonisch, verantwortungsvoll", it: "protettivo, armonioso, responsabile" },
-    7: { fr: "spirituel, analytique, introspectif", en: "spiritual, analytical, introspective", es: "espiritual, analítico, introspectivo", de: "spirituell, analytisch, introspektiv", it: "spirituale, analitico, introspettivo" },
-    8: { fr: "ambitieux, puissant, déterminé", en: "ambitious, powerful, determined", es: "ambicioso, poderoso, determinado", de: "ehrgeizig, kraftvoll, entschlossen", it: "ambizioso, potente, determinato" },
-    9: { fr: "altruiste, sage, universel", en: "altruistic, wise, universal", es: "altruista, sabio, universal", de: "altruistisch, weise, universell", it: "altruistisch, weise, universell" },
-    11: { fr: "visionnaire, inspiré, intuitif", en: "visionary, inspired, intuitive", es: "visionario, inspirado, intuitivo", de: "visionär, inspiriert, intuitiv", it: "visionario, ispirato, intuitivo" },
-    22: { fr: "bâtisseur, visionnaire, maître", en: "builder, visionary, master", es: "constructor, visionario, maestro", de: "Erbauer, Visionär, Meister", it: "costruttore, visionario, maestro" }
+    1: { fr: "leader, indépendant, pionnier", en: "leader, independent, pioneer", es: "líder, independiente, pionero", de: "Anführer, unabhängig, Pionier", it: "leader, indipendente, pioniere", nl: "leider, onafhankelijk, pionier" },
+    2: { fr: "diplomate, sensible, partenaire", en: "diplomat, sensitive, partner", es: "diplomático, sensible, compañero", de: "Diplomat, sensibel, Partner", it: "diplomatico, sensibile, partner", nl: "diplomaat, gevoelig, partner" },
+    3: { fr: "créatif, sociable, expressif", en: "creative, sociable, expressive", es: "creativo, sociable, expresivo", de: "kreativ, gesellig, ausdrucksvoll", it: "creativo, socievole, espressivo", nl: "creatief, sociaal, expressief" },
+    4: { fr: "stable, organisé, loyal", en: "stable, organized, loyal", es: "estable, organizado, leal", de: "stabil, organisiert, loyal", it: "stabile, organizzato, leale", nl: "stabiel, georganiseerd, trouw" },
+    5: { fr: "aventurier, libre, dynamique", en: "adventurous, free, dynamic", es: "aventurero, libre, dinámico", de: "abenteuerlustig, frei, dynamisch", it: "avventuriero, libero, dinamico", nl: "avontuurlijk, vrij, dynamisch" },
+    6: { fr: "protecteur, harmonieux, responsable", en: "protective, harmonious, responsible", es: "protector, armonioso, responsable", de: "beschützend, harmonisch, verantwortungsvoll", it: "protettivo, armonioso, responsabile", nl: "beschermend, harmonieus, verantwoordelijk" },
+    7: { fr: "spirituel, analytique, introspectif", en: "spiritual, analytical, introspective", es: "espiritual, analítico, introspectivo", de: "spirituell, analytisch, introspektiv", it: "spirituale, analitico, introspettivo", nl: "spiritueel, analytisch, naar binnen gekeerd" },
+    8: { fr: "ambitieux, puissant, déterminé", en: "ambitious, powerful, determined", es: "ambicioso, poderoso, determinado", de: "ehrgeizig, kraftvoll, entschlossen", it: "ambizioso, potente, determinato", nl: "ambitieus, krachtig, vastberaden" },
+    9: { fr: "altruiste, sage, universel", en: "altruistic, wise, universal", es: "altruista, sabio, universal", de: "altruistisch, weise, universell", it: "altruista, saggio, universale", nl: "onbaatzuchtig, wijs, universeel" },
+    11: { fr: "visionnaire, inspiré, intuitif", en: "visionary, inspired, intuitive", es: "visionario, inspirado, intuitivo", de: "visionär, inspiriert, intuitiv", it: "visionario, ispirato, intuitivo", nl: "visionair, geïnspireerd, intuïtief" },
+    22: { fr: "bâtisseur, visionnaire, maître", en: "builder, visionary, master", es: "constructor, visionario, maestro", de: "Erbauer, Visionär, Meister", it: "costruttore, visionario, maestro", nl: "bouwer, visionair, meester" }
   };
 
   var LANG = '<%= lang %>';
@@ -486,13 +486,14 @@
       en: name1 + ' carries the number ' + n1 + ' (' + t1 + ') and ' + name2 + ' carries the number ' + n2 + ' (' + t2 + '). ',
       es: name1 + ' lleva el número ' + n1 + ' (' + t1 + ') y ' + name2 + ' lleva el número ' + n2 + ' (' + t2 + '). ',
       de: name1 + ' trägt die Zahl ' + n1 + ' (' + t1 + ') und ' + name2 + ' trägt die Zahl ' + n2 + ' (' + t2 + '). ',
-      it: name1 + ' porta il numero ' + n1 + ' (' + t1 + ') e ' + name2 + ' porta il numero ' + n2 + ' (' + t2 + '). '
+      it: name1 + ' porta il numero ' + n1 + ' (' + t1 + ') e ' + name2 + ' porta il numero ' + n2 + ' (' + t2 + '). ',
+      nl: name1 + ' heeft het getal ' + n1 + ' (' + t1 + ') en ' + name2 + ' heeft het getal ' + n2 + ' (' + t2 + '). '
     };
     var base = templates[LANG] || templates.fr;
 
-    var high = { fr: 'Ces vibrations se complètent naturellement, créant une belle harmonie entre vos prénoms.', en: 'These vibrations complement each other naturally, creating beautiful harmony between your names.', es: 'Estas vibraciones se complementan naturalmente, creando una hermosa armonía entre vuestros nombres.', de: 'Diese Schwingungen ergänzen sich auf natürliche Weise und schaffen eine schöne Harmonie zwischen euren Namen.', it: 'Queste vibrazioni si completano naturalmente, creando una bella armonia tra i vostri nomi.' };
-    var med = { fr: 'Vos vibrations sont différentes mais peuvent créer une dynamique intéressante si vous apprenez à apprécier vos différences.', en: 'Your vibrations are different but can create an interesting dynamic if you learn to appreciate your differences.', es: 'Vuestras vibraciones son diferentes pero pueden crear una dinámica interesante si aprendéis a apreciar vuestras diferencias.', de: 'Eure Schwingungen sind unterschiedlich, können aber eine interessante Dynamik schaffen, wenn ihr lernt, eure Unterschiede zu schätzen.', it: 'Le vostre vibrazioni sono diverse ma possono creare una dinamica interessante se imparate ad apprezzare le vostre differenze.' };
-    var low = { fr: 'Vos vibrations sont contrastées, ce qui peut créer de la tension mais aussi une forte attirance magnétique. L\'effort de compréhension mutuelle sera la clé.', en: 'Your vibrations are contrasting, which can create tension but also strong magnetic attraction. Mutual understanding will be key.', es: 'Vuestras vibraciones son contrastadas, lo que puede crear tensión pero también una fuerte atracción magnética. La comprensión mutua será la clave.', de: 'Eure Schwingungen sind gegensätzlich, was Spannung aber auch eine starke magnetische Anziehung erzeugen kann. Gegenseitiges Verständnis wird der Schlüssel sein.', it: 'Le vostre vibrazioni sono contrastanti, il che può creare tensione ma anche una forte attrazione magnetica. La comprensione reciproca sarà la chiave.' };
+    var high = { fr: 'Ces vibrations se complètent naturellement, créant une belle harmonie entre vos prénoms.', en: 'These vibrations complement each other naturally, creating beautiful harmony between your names.', es: 'Estas vibraciones se complementan naturalmente, creando una hermosa armonía entre vuestros nombres.', de: 'Diese Schwingungen ergänzen sich auf natürliche Weise und schaffen eine schöne Harmonie zwischen euren Namen.', it: 'Queste vibrazioni si completano naturalmente, creando una bella armonia tra i vostri nomi.', nl: 'Die getallen vullen elkaar vanzelf aan: jullie namen passen mooi bij elkaar.' };
+    var med = { fr: 'Vos vibrations sont différentes mais peuvent créer une dynamique intéressante si vous apprenez à apprécier vos différences.', en: 'Your vibrations are different but can create an interesting dynamic if you learn to appreciate your differences.', es: 'Vuestras vibraciones son diferentes pero pueden crear una dinámica interesante si aprendéis a apreciar vuestras diferencias.', de: 'Eure Schwingungen sind unterschiedlich, können aber eine interessante Dynamik schaffen, wenn ihr lernt, eure Unterschiede zu schätzen.', it: 'Le vostre vibrazioni sono diverse ma possono creare una dinamica interessante se imparate ad apprezzare le vostre differenze.', nl: 'Jullie getallen verschillen, maar dat kan juist goed uitpakken als jullie die verschillen leren waarderen.' };
+    var low = { fr: 'Vos vibrations sont contrastées, ce qui peut créer de la tension mais aussi une forte attirance magnétique. L\'effort de compréhension mutuelle sera la clé.', en: 'Your vibrations are contrasting, which can create tension but also strong magnetic attraction. Mutual understanding will be key.', es: 'Vuestras vibraciones son contrastadas, lo que puede crear tensión pero también una fuerte atracción magnética. La comprensión mutua será la clave.', de: 'Eure Schwingungen sind gegensätzlich, was Spannung aber auch eine starke magnetische Anziehung erzeugen kann. Gegenseitiges Verständnis wird der Schlüssel sein.', it: 'Le vostre vibrazioni sono contrastanti, il che può creare tensione ma anche una forte attrazione magnetica. La comprensione reciproca sarà la chiave.', nl: 'Jullie getallen liggen ver uit elkaar. Dat kan voor spanning zorgen, maar ook voor een sterke aantrekking. Elkaar proberen te begrijpen is hier het belangrijkste.' };
 
     if (score >= 7) return base + (high[LANG] || high.fr);
     if (score >= 5) return base + (med[LANG] || med.fr);

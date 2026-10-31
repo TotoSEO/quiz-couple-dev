@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "badge": "Astrologie en numerologie",
+    "title": "Welke sterrenbeelden passen bij elkaar? Test het met jullie namen",
+    "highlight": "sterrenbeelden",
+    "description": "Typ jullie twee namen en kies jullie twee sterrenbeelden: de test berekent in procenten hoe goed jullie bij elkaar passen. De tekens worden vergeleken met de astrologie en de namen met de numerologie, en je ziet van allebei de details.",
+    "subtitle": "Gratis, zonder inschrijving, en de uitslag staat er meteen."
+  },
+  "form": {
+    "name1Placeholder": "Naam van persoon 1",
+    "name2Placeholder": "Naam van persoon 2",
+    "sign1Label": "Sterrenbeeld",
+    "sign2Label": "Sterrenbeeld",
+    "selectSign": "Kies een sterrenbeeld",
+    "submitButton": "Bekijk onze match",
+    "signs": {
+      "belier": "Ram ♈",
+      "taureau": "Stier ♉",
+      "gemeaux": "Tweelingen ♊",
+      "cancer": "Kreeft ♋",
+      "lion": "Leeuw ♌",
+      "vierge": "Maagd ♍",
+      "balance": "Weegschaal ♎",
+      "scorpion": "Schorpioen ♏",
+      "sagittaire": "Boogschutter ♐",
+      "capricorne": "Steenbok ♑",
+      "verseau": "Waterman ♒",
+      "poissons": "Vissen ♓"
+    }
+  },
+  "results": {
+    "title": "Jullie match",
+    "overall": "Totaalscore",
+    "astroScore": "Match van de sterrenbeelden",
+    "numeroScore": "Match van de namen",
+    "astroLabel": "Astrologie",
+    "numeroLabel": "Numerologie",
+    "detailTitle": "Wat jullie sterrenbeelden zeggen",
+    "numeroTitle": "Wat jullie namen verraden",
+    "tryAgain": "Een ander stel testen"
+  },
+  "section1": {
+    "title": "Zo berekent deze test jullie match",
+    "p1": "Je doet deze test met z'n tweeën, of alleen terwijl je aan iemand denkt. Hij vraagt vier dingen: jullie twee namen en jullie twee sterrenbeelden. De tekens worden twee aan twee vergeleken met de astrologie (een Ram met een Weegschaal bijvoorbeeld), en de namen met de numerologie, die elke letter een getal geeft.",
+    "p2": "De eindscore mengt de twee: <strong>60% voor de sterrenbeelden en 40% voor de namen</strong>. Daarnaast zie je de score van de tekens en die van de namen, elk met een korte tekst. Zo weet je meteen waar het resultaat vandaan komt."
+  },
+  "section2": {
+    "title": "De numerologie van namen, letter voor letter",
+    "p1": "In de numerologie is elke letter een getal van 1 tot 9 waard. A is 1, B is 2, en zo verder tot de I, die 9 is. Bij de J begin je weer bij 1, en bij de S nog een keer. Dat is de tabel die ze ‘van Pythagoras’ noemen, de bekendste. Je telt de letters van de naam bij elkaar op, en dan de cijfers van het totaal, tot er één overblijft. Bijvoorbeeld: Lotte is L = 3, O = 6, T = 2, T = 2 en E = 5, samen 18, en 1 + 8 = 9. Tom is T = 2, O = 6 en M = 4, samen 12, en 1 + 2 = 3. Lotte heeft dus de 9 en Tom de 3.",
+    "p2": "Er is één uitzondering: kom je op 11 of 22 uit, dan stop je daar. Dat zijn de ‘meestergetallen’, zoals Daan: 4 + 1 + 1 + 5 = 11. Elk getal heeft zijn eigen reputatie: de 1 beslist, de 2 zoekt harmonie, de 5 heeft vrijheid nodig, de 9 denkt aan anderen, enzovoort. De test legt jullie twee getallen daarna naast een tabel met matches. Een 3 en een 6 kunnen het bijvoorbeeld heel goed met elkaar vinden, een 4 en een 5 veel minder.",
+    "tip": "De berekening neemt de letters zoals je ze typt, zonder accenten. ‘Chloë’ en ‘Chloe’ geven dus hetzelfde getal, maar ‘Thijs’ en ‘Tijs’ niet (3 en 4). En ken je het sterrenbeeld van de ander nog niet? Voor de liefdestest zijn <a href=\"/nl/liefdestest/\">twee namen genoeg</a>: die geeft een percentage zonder astrologie."
+  },
+  "section3": {
+    "title": "De sterrenbeelden en hun vier elementen",
+    "p1": "Je sterrenbeeld is de stand van de zon op de dag dat je geboren werd. Het hangt af van de dag en de maand, en hier kies je het zelf uit de lijst. Wil je liever <a href=\"/nl/compatibiliteit-geboortedatum/\">uitgaan van jullie twee geboortedata</a>? Dan zoekt een andere test jullie tekens zelf op, en zet er jullie levenspad en jullie Chinese teken bij.",
+    "p2": "De twaalf tekens zijn verdeeld in vier families, de elementen: <strong>Vuur</strong> (Ram, Leeuw, Boogschutter), <strong>Aarde</strong> (Stier, Maagd, Steenbok), <strong>Lucht</strong> (Tweelingen, Weegschaal, Waterman) en <strong>Water</strong> (Kreeft, Schorpioen, Vissen). In de astrologie begin je daar als je twee tekens vergelijkt. Vuur en Lucht gaan goed samen, net als Aarde en Water. Twee tekens van hetzelfde element hebben meestal dezelfde behoeftes.",
+    "subtitle": "De grote affiniteiten tussen sterrenbeelden",
+    "p3": "Tegenovergestelde tekens in de dierenriem, zoals Ram en Weegschaal of Kreeft en Steenbok, hebben een paar van de beste scores van de test, vaak 8 of 9 op 10: ieder heeft wat de ander mist. Tekens ‘in vierkant’, drie vakjes uit elkaar, zoals Leeuw en Schorpioen, staan erom bekend dat ze botsen, en hun scores liggen tussen 3 en 5. In totaal heeft de test een score en een tekst voor elk van de 144 combinaties."
+  },
+  "section4": {
+    "title": "Waarom de twee lezingen combineren?",
+    "p1": "Omdat ze naar heel andere dingen kijken. Je sterrenbeeld hangt af van de dag dat je geboren bent, je naam is gekozen door je ouders, en het een heeft niets met het ander te maken. Twee Leeuwen kunnen best namen hebben met getallen die tegenover elkaar staan, en een stel dat volgens de tekens lastig is, kan twee namen hebben die heel goed samengaan.",
+    "p2": "Daarom toont het resultaat drie scores. Neem Emma, Weegschaal, en Noah, Leeuw: hun sterrenbeelden passen goed bij elkaar (80%), hun namen veel minder (40%), en de totaalscore zakt naar 64%. Zonder de details zou je niet weten dat het de namen zijn die de score omlaag halen...",
+    "tip": "Een goede score is geen garantie voor een makkelijke relatie, en een lage score betekent niet dat het niets wordt. Kijk liever welke van de twee scores het resultaat omlaag trekt, en praat er samen over."
+  },
+  "section5": {
+    "title": "Wat deze getallen niet kunnen zeggen",
+    "p1": "Astrologie noch numerologie kan zeggen of jullie relatie standhoudt. Zie het resultaat als een spelletje, en als een kans om over jullie karakters te praten: “jij bent echt een Leeuw”, “ik, een 9? Dat verbaast me”, enzovoort.",
+    "p2": "Wil je een resultaat dat uitgaat van jullie leven samen, dan moeten jullie vragen beantwoorden. Er is een test die jullie elk twintig vragen stelt over <a href=\"/nl/passen-we-bij-elkaar/\">trouwen, kinderen, geld of vakanties</a>, en daarna jullie antwoorden vergelijkt.",
+    "tip": "Doe hem met z'n tweeën op dezelfde telefoon, en probeer het daarna nog eens met jullie bijnamen: de score van de namen verandert vaak!"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Is een match op sterrenbeeld betrouwbaar?",
+    "a1": "Niet in wetenschappelijke zin: niets wijst erop dat een sterrenbeeld of een naam kan voorspellen of een relatie standhoudt. Astrologie en numerologie beschrijven karakters, en veel mensen herkennen zich daar, in elk geval voor een deel, in. Zie de score als een spelletje, en de teksten als een goede aanleiding om erover te praten.",
+    "q2": "Gebruik je je volledige naam of je bijnaam?",
+    "a2": "Allebei werkt, maar ze geven niet altijd dezelfde score, want elke letter telt. In de numerologie ga je meestal uit van de naam in je paspoort. Noemt iedereen je ‘Alex’ en niet ‘Alexander’, probeer het dan ook met ‘Alex’: het getal gaat dan van 3 naar 6.",
+    "q3": "Mijn sterrenbeeld past ‘niet’ bij dat van mijn partner, is het dan hopeloos?",
+    "a3": "Nee! De test zegt nooit dat twee tekens niet samengaan, hij geeft een hogere of lagere score. En stellen die het lang volhouden, vind je met alle combinaties van tekens. Lees liever de tekst van het resultaat: die zegt waarin jullie verschillen, en daar begint vaak een goed gesprek."
+  }
+}

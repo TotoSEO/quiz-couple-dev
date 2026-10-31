@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "badge": "Numerologie, astrologie en Chinese dierenriem",
+    "title": "Compatibiliteit geboortedatum: hoe goed passen jullie bij elkaar?",
+    "highlight": "geboortedatum",
+    "description": "Vul jullie twee geboortedata in. De test berekent jullie levenspad, jullie sterrenbeeld en jullie Chinese teken, en legt die twee profielen naast elkaar. Je ziet wat jullie verbindt, en waar het wat meer moeite kost.",
+    "subtitle": "Je hoeft je niet in te schrijven of je e-mailadres te geven: de uitslag staat er meteen."
+  },
+  "form": {
+    "titre": "Jullie twee geboortedata",
+    "personne1": "Jij",
+    "personne2": "Je partner",
+    "jour": "Dag",
+    "moisLabel": "Maand",
+    "annee": "Jaar",
+    "mois": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "moisDate": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "lancer": "Bereken onze compatibiliteit",
+    "erreur": "Een van de twee data bestaat niet. Controleer de dag en de maand die je hebt gekozen.",
+    "aide": "Dag en maand geven het sterrenbeeld, het jaar geeft het Chinese teken, en alle drie samen geven het levenspad."
+  },
+  "signes": {
+    "belier": "Ram ♈",
+    "taureau": "Stier ♉",
+    "gemeaux": "Tweelingen ♊",
+    "cancer": "Kreeft ♋",
+    "lion": "Leeuw ♌",
+    "vierge": "Maagd ♍",
+    "balance": "Weegschaal ♎",
+    "scorpion": "Schorpioen ♏",
+    "sagittaire": "Boogschutter ♐",
+    "capricorne": "Steenbok ♑",
+    "verseau": "Waterman ♒",
+    "poissons": "Vissen ♓"
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Os",
+    "tigre": "Tijger",
+    "lapin": "Konijn",
+    "dragon": "Draak",
+    "serpent": "Slang",
+    "cheval": "Paard",
+    "chevre": "Geit",
+    "singe": "Aap",
+    "coq": "Haan",
+    "chien": "Hond",
+    "cochon": "Varken"
+  },
+  "elements": {
+    "bois": "Hout",
+    "feu": "Vuur",
+    "terre": "Aarde",
+    "metal": "Metaal",
+    "eau": "Water"
+  },
+  "cheminsTraits": {
+    "1": "daadkracht en initiatief",
+    "2": "zachtheid en luisteren",
+    "3": "fantasie en woorden",
+    "4": "stevigheid en je woord houden",
+    "5": "beweging en vrijheid",
+    "6": "zorg en familie",
+    "7": "nadenken en je terugtrekken",
+    "8": "ambitie en controle",
+    "9": "geven en openheid",
+    "11": "intuïtie en idealen",
+    "22": "geduldig bouwen",
+    "33": "liefde geven zonder te tellen"
+  },
+  "bandesVie": {
+    "haute": "Jullie getallen gaan dezelfde kant op. Je hoeft je niet lang uit te leggen om begrepen te worden, en wat jullie diep vanbinnen nodig hebben, botst bijna nooit. Het risico bij zo'n match is eerder verveling: verras elkaar af en toe.",
+    "moyenne": "Jullie getallen vullen elkaar meer aan dan dat ze op elkaar lijken. Wat de een niet ziet, valt de ander wel op. Dat werkt heel goed zolang jullie accepteren dat je niet op dezelfde manier werkt, en het gaat schuren op de dag dat een van jullie de ander wil bekeren.",
+    "basse": "Jullie getallen spreken niet dezelfde taal. Dat betekent niet dat het niet kan werken, wel dat jullie dingen moeten uitspreken die bij anderen vanzelf gaan. Veel sterke stellen zitten precies hier, zolang ze het verschil niet aanzien voor minder liefde.",
+    "tendue": "Jullie getallen trekken duidelijk een andere kant op. In het begin is de aantrekking vaak heel sterk, juist omdat de ander heeft wat jou ontbreekt. Hoe het daarna gaat, hangt vooral af van één ding: of jullie kunnen onderhandelen in plaats van gelijk te willen krijgen."
+  },
+  "nombresCouple": {
+    "1": "Jullie relatie draait op de 1: het is een relatie die vooruit wil. Jullie gaan ervoor, jullie beslissen, en jullie houden niet van wachten of van halve maatregelen. Let wel op dat niet elk gesprek een krachtmeting wordt: er is geen plek voor twee kapiteins op één schip.",
+    "2": "Jullie relatie draait op de 2: het is een tedere relatie. De band zit in de kleine gebaren, de attenties, het er gewoon voor elkaar zijn. Jullie kracht is zachtheid, en jullie zwakke punt ook: als jullie elk conflict willen vermijden, zeggen jullie op den duur misschien helemaal niets meer.",
+    "3": "Jullie relatie draait op de 3: het is een relatie die praat en lacht. Jullie vertellen, jullie verzinnen, jullie hebben mensen om je heen nodig. Het gevaar is dat die luchtigheid een manier wordt om de echte onderwerpen te ontlopen.",
+    "4": "Jullie relatie draait op de 4: het is een relatie die bouwt. Een huis, een project, een routine die standhoudt. Jullie zijn het stel waar iedereen op rekent. Let er alleen op dat het dagelijkse leven niet alle ruimte gaat innemen.",
+    "5": "Jullie relatie draait op de 5: het is een relatie die in beweging is. Reizen, van gedachten veranderen, beslissingen op een vrijdagavond. Jullie vervelen je heel snel. Wat jullie samen te leren hebben, is dat stabiliteit niet de vijand van verlangen is.",
+    "6": "Jullie relatie draait op de 6: het is een zorgzame relatie. Jullie zorgen voor elkaar, en vaak ook voor anderen. Dat is warm en geruststellend, zolang niet één van jullie de rol van ouder helemaal alleen op zich neemt.",
+    "7": "Jullie relatie draait op de 7: het is een zoekende relatie. Jullie praten over onderwerpen die anderen raar vinden, jullie hebben stilte nodig, en jullie begrijpen elkaar vaak zonder woorden. De valkuil is dat jullie je met z'n tweeën opsluiten en het contact met de rest van de wereld verliezen.",
+    "8": "Jullie relatie draait op de 8: het is een relatie die hoog mikt. Succes, geld, status, een gedeelde ambitie. Jullie gaan snel. Check alleen regelmatig of jullie nog aan hetzelfde bouwen, en niet aan twee carrières naast elkaar.",
+    "9": "Jullie relatie draait op de 9: het is een gevende relatie. Jullie zijn gericht op anderen en gevoelig voor wat groter is dan jullie eigen verhaal. Dat is mooi en gul. Pas wel op dat jullie je eigen relatie daarbij niet vergeten.",
+    "11": "Jullie relatie draait op de 11: het is een relatie van intuïtie. Jullie voelen dingen voordat jullie ze begrijpen, soms zelfs voordat jullie ze meemaken. De intensiteit is echt, de vermoeidheid ook. Kom regelmatig samen weer met beide benen op de grond.",
+    "22": "Jullie relatie draait op de 22: het is een relatie van bouwers. Jullie doen niets half en denken in jaren, niet in weken. Een heel stevig stel, dat alleen moet onthouden dat je niet alles kunt plannen.",
+    "33": "Jullie relatie draait op de 33: het is een beschermende relatie. Jullie geven enorm veel, aan elkaar en vaak ook aan de mensen om jullie heen. Gulheid is jullie handelsmerk. Let er alleen op dat de een zichzelf niet leegmaakt om de ander te vullen."
+  },
+  "relations": {
+    "trine": "{{a1}} en {{a2}} horen bij dezelfde driehoek van affiniteit, een van de meest gewilde banden in de Chinese dierenriem. Jullie hebben hetzelfde ritme en dezelfde manier om dingen aan te pakken, en daardoor gaat samen beslissen verrassend makkelijk.",
+    "harmonie": "{{a1}} en {{a2}} vormen een van de zes harmonieparen. De traditie noemt ze de geheime vrienden: twee tekens die vanzelf de blinde vlekken van de ander opvangen, zonder op elkaar te hoeven lijken.",
+    "meme": "Jullie hebben allebei {{a1}} als Chinees teken. Jullie herkennen elkaar meteen, met de goede kanten en de minder goede die erbij horen. Dat is fijn, en het is ook een spiegel: wat je aan de ander irriteert, is vaak wat je bij jezelf niet leuk vindt.",
+    "neutre": "{{a1}} en {{a2}} hebben in de Chinese dierenriem geen bijzondere band en ook geen duidelijke spanning. Niets helpt jullie vanzelf, maar niets remt jullie ook af: hier geven de twee andere berekeningen de doorslag.",
+    "nuisance": "{{a1}} en {{a2}} horen bij de paren die de Chinese traditie ‘schadelijk’ noemt. Dat is geen echte onverenigbaarheid, eerder slijtage: kleine ergernissen die steeds terugkomen en op den duur zwaar gaan wegen als jullie er niet over praten.",
+    "opposition": "{{a1}} en {{a2}} staan tegenover elkaar op het Chinese wiel, zes tekens van elkaar. Dat is de meest gespannen as van de dierenriem, en vaak ook de meest magnetische. Jullie trekken elkaar aan juist omdat jullie niet op elkaar lijken, en precies dat maakt jullie na drie jaar moe."
+  },
+  "elementsRelation": {
+    "meme": "Jullie hebben hetzelfde element: {{e1}}. Jullie reageren met dezelfde energie op wat er gebeurt, en dat maakt het samenleven een stuk makkelijker en de slechte dagen dubbel zo zwaar.",
+    "nourrit": "Jullie elementen voeden elkaar: tussen {{e1}} en {{e2}} zit een cyclus die eerder geeft dan neemt. De een helpt de ander uit de comfortzone te komen, zonder te forceren.",
+    "controle": "Jullie elementen remmen elkaar af: {{e1}} en {{e2}} horen bij de cyclus van controle, waarin het ene het andere tempert. Handig om uitschieters te vermijden, vermoeiend als niemand ooit toegeeft."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Jullie geboortedata passen bij elkaar",
+      "texte": "De drie lezingen gaan dezelfde kant op, en dat gebeurt niet zo vaak. Jullie gaan op dezelfde manier vooruit, hebben dezelfde diepe behoeftes en een band die geen uitleg nodig heeft. Het enige wat jullie te doen staat: niet denken dat wat vanzelf gaat, ook vanzelf blijft."
+    },
+    "belle": {
+      "titre": "Een mooi geheel, met één verschil",
+      "texte": "Het belangrijkste zit goed. Twee van de drie lezingen komen duidelijk overeen, de derde brengt een verschil waar jullie over moeten praten. Dat is vaak het profiel van stellen die het lang volhouden: genoeg gemeen om je thuis te voelen, genoeg verschil om je niet te vervelen."
+    },
+    "travail": {
+      "titre": "Een relatie die je samen opbouwt",
+      "texte": "Niets gaat vanzelf tussen jullie, en dat is geen slecht teken. De lezingen spreken elkaar deels tegen: wat bij andere stellen vanzelf loopt, zullen jullie moeten uitspreken. Veel heel sterke relaties zien er precies zo uit, zolang jullie accepteren dat je niet op dezelfde manier werkt."
+    },
+    "contraires": {
+      "titre": "Twee werelden om te verbinden",
+      "texte": "De drie lezingen wijzen op heel verschillende temperamenten. Dat zegt niets over jullie gevoelens, wel dat jullie gebruiksaanwijzingen niet op elkaar lijken. De stellen die het met dit profiel volhouden, zijn degenen die niet meer wachten tot de ander wordt zoals zij."
+    }
+  },
+  "resultat": {
+    "signe": "Sterrenbeeld",
+    "chemin": "Levenspad",
+    "chinois": "Chinees teken",
+    "chinoisValeur": "{{a}} ({{e}})",
+    "axeVie": "Levenspaden",
+    "axeAstro": "Sterrenbeelden",
+    "axeChinois": "Chinese dierenriem",
+    "axeVieValeur": "Levenspad {{n1}} en levenspad {{n2}}",
+    "axeAstroValeur": "{{s1}} en {{s2}}",
+    "axeChinoisValeur": "{{a1}} ({{e1}}) en {{a2}} ({{e2}})",
+    "titreVie": "Wat jullie levenspaden vertellen",
+    "introVie": "Jij hebt levenspad {{n1}}, dat staat voor {{t1}}. Je partner heeft levenspad {{n2}}, dat staat voor {{t2}}.",
+    "titreAstro": "{{s1}} en {{s2}}: wat de sterren zeggen",
+    "titreChinois": "Wat de Chinese dierenriem zegt",
+    "titreCouple": "Het getal van jullie relatie: {{n}}",
+    "refaire": "Twee andere data testen"
+  },
+  "suite": {
+    "titre": "Ga verder met jullie namen",
+    "texte": "De test met namen en sterrenbeelden gaat uit van jullie twee namen, gelezen met de numerologie, en van jullie twee sterrenbeelden. Je hoeft geen datum in te vullen, en de uitslag lees je heel goed naast deze.",
+    "bouton": "Doe de test met namen en sterrenbeelden"
+  },
+  "section1": {
+    "title": "Wat een geboortedatum over een relatie kan zeggen",
+    "p1": "Deze test gaat uit van één gegeven: jullie twee geboortedata. Een geboortedatum gebruik je vooral om iemand te feliciteren, maar drie tradities lezen er ook een karakter in: de numerologie, de westerse astrologie en de Chinese astrologie. De test haalt jullie twee data door alle drie.",
+    "p2": "De numerologie haalt er een getal uit, het <strong>levenspad</strong>, dat zegt hoe iemand door het leven gaat. De westerse astrologie kijkt naar de dag en de maand om je sterrenbeeld te vinden, en de Chinese astrologie kijkt naar het jaar om je dier te vinden. Die drie lezingen zeggen niet hetzelfde, en juist daarom kijken we naar alle drie.",
+    "p3": "Aan het eind krijg je een totaalscore, een score voor elk van de drie lezingen en uitleg die over jullie twee gaat. Zoek je liever <a href=\"/nl/passen-we-bij-elkaar/\">een vragenlijst om samen in te vullen</a>? Dan is er ook een test met twintig vragen over hoe jullie het leven samen zien."
+  },
+  "section2": {
+    "title": "Het levenspad, het getal dat in je geboortedatum verstopt zit",
+    "p1": "Dit is de eenvoudigste berekening van de hele numerologie, en je kunt hem met de hand narekenen terwijl je leest. Je telt <strong>alle cijfers</strong> van de datum bij elkaar op, en dan reduceer je het totaal tot er één cijfer overblijft. Eén uitzondering: kom je op 11, 22 of 33 uit, dan stop je daar. Dat zijn de meestergetallen, die reduceer je niet verder.",
+    "sub1Title": "Een voorbeeld in dertig seconden",
+    "sub1Text": "Neem 14 maart 1990. Je telt op: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Je reduceert: 2 + 7 = 9. Levenspad 9. Nog een voorbeeld, 29 december 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Hier stop je, want het is een meestergetal.",
+    "sub2Title": "Wat elk levenspad zoekt in de liefde",
+    "tableHeaders": [
+      "Levenspad",
+      "Sleutelwoord",
+      "Wat het van een relatie verwacht"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Daadkracht",
+        "Bewondering en ruimte om zelf te beslissen"
+      ],
+      [
+        "2",
+        "Zachtheid",
+        "Aanwezigheid, tederheid, weinig ruzie"
+      ],
+      [
+        "3",
+        "Woorden",
+        "Samen lachen en naar elkaars verhalen luisteren"
+      ],
+      [
+        "4",
+        "Stevigheid",
+        "Beloftes die worden nagekomen en duidelijke afspraken"
+      ],
+      [
+        "5",
+        "Beweging",
+        "Iets nieuws, en vooral niet aan de lijn"
+      ],
+      [
+        "6",
+        "Zorg",
+        "Een thuis, gewoontes, iemand om voor te zorgen"
+      ],
+      [
+        "7",
+        "Nadenken",
+        "Stilte, diepgang, geen gekletst"
+      ],
+      [
+        "8",
+        "Ambitie",
+        "Een partner die net zo snel vooruit wil"
+      ],
+      [
+        "9",
+        "Geven",
+        "Zin, gulheid, een gezamenlijk doel"
+      ],
+      [
+        "11",
+        "Intuïtie",
+        "Dat gevoelens serieus worden genomen"
+      ],
+      [
+        "22",
+        "Bouwen",
+        "Een plan voor het leven, geen flirt"
+      ],
+      [
+        "33",
+        "Liefde geven",
+        "Geliefd zijn om wie je bent, niet om wat je geeft"
+      ]
+    ],
+    "tip": "Hetzelfde levenspad hebben is geen garantie. Twee keer een 5 bijvoorbeeld, dat zijn twee mensen die allebei in beweging willen zijn, en niet per se in dezelfde richting."
+  },
+  "section3": {
+    "title": "Het sterrenbeeld, de hemel op de dag dat je geboren werd",
+    "p1": "Je zonneteken hangt af van de dag en de maand, niet van het jaar. Het is de stand van de zon op het moment dat je geboren werd, en verreweg het bekendste gegeven uit de astrologie. Het beschrijft een manier van liefhebben: wat je geruststelt, waar je van wegloopt, hoe je dingen zegt als ze moeilijk zijn.",
+    "sub1Title": "De vier elementen: daar begin je mee",
+    "sub1Text": "Nog voor je teken per teken vergelijkt, kijk je naar de elementen. <strong>Vuur</strong> (Ram, Leeuw, Boogschutter) gaat ervoor. <strong>Aarde</strong> (Stier, Maagd, Steenbok) bouwt. <strong>Lucht</strong> (Tweelingen, Weegschaal, Waterman) wisselt uit. <strong>Water</strong> (Kreeft, Schorpioen, Vissen) voelt. Vuur en Lucht versterken elkaar, Aarde en Water begrijpen elkaar, en stellen die twee verre families mengen, moeten meer voor elkaar vertalen.",
+    "p2": "Let op bij de grensdata. Ben je op de 20e of de 21e geboren, dan ben je misschien van het teken ervoor: de grenzen schuiven elk jaar een beetje op. Onze berekening gebruikt de gangbaarste data, die je in bijna elke almanak terugvindt.",
+    "p3": "In het resultaat lees je een tekst over precies jullie twee tekens, met wat goed loopt en waar het kan wringen. Wil je zonder datum zien <a href=\"/nl/sterrenbeelden-match/\">welke sterrenbeelden goed bij elkaar passen</a>? Dan kies je jullie tekens zelf, samen met jullie namen."
+  },
+  "section4": {
+    "title": "Het Chinese teken, dat afhangt van het maannieuwjaar",
+    "p1": "Hier spreekt het jaar. Twaalf dieren, één per jaar, en een cyclus die steeds opnieuw begint. Alleen begint het Chinese jaar niet op 1 januari: het start op het maannieuwjaar, dat tussen 21 januari en 21 februari valt, afhankelijk van het jaar. Wie in januari of de eerste helft van februari is geboren, kan dus bij het dier van het jaar ervoor horen.",
+    "p2": "Dat geldt voor ongeveer één op de tien mensen: iedereen die tussen 1 januari en het Chinees nieuwjaar is geboren. De test gebruikt daarom de <strong>werkelijke data van het Chinees nieuwjaar</strong>, jaar voor jaar, van 1924 tot 2043. Iemand die op 1 januari 2000 is geboren, is bijvoorbeeld geen Draak maar een Konijn, met het element Aarde.",
+    "sub1Title": "De vier driehoeken van affiniteit",
+    "tableHeaders": [
+      "Driehoek",
+      "De drie tekens",
+      "Wat ze verbindt"
+    ],
+    "tableRows": [
+      [
+        "De driehoek van de actie",
+        "Rat, Draak, Aap",
+        "Energie, durf, zin in risico"
+      ],
+      [
+        "De driehoek van de methode",
+        "Os, Slang, Haan",
+        "Geduld, strategie, oog voor detail"
+      ],
+      [
+        "De driehoek van de onafhankelijkheid",
+        "Tijger, Paard, Hond",
+        "Vrijheid, trouw, eerlijkheid"
+      ],
+      [
+        "De driehoek van de zachtheid",
+        "Konijn, Geit, Varken",
+        "Gevoeligheid, rust, houden van comfort"
+      ]
+    ],
+    "sub2Title": "En het element?",
+    "sub2Text": "Elk dier komt om de twaalf jaar terug, maar steeds met een ander element: Hout, Vuur, Aarde, Metaal of Water. Een Draak met Hout en een Draak met Vuur lijken niet zo op elkaar. Die vijf elementen volgen elkaar op in cycli, waarbij het ene het volgende voedt of afremt, en dat verfijnt de Chinese score in jullie resultaat.",
+    "tip": "Zes paren gelden in de Chinese traditie als harmonieus, <a href=\"/nl/chinese-sterrenbeelden-liefde/\">de bekende geheime vrienden</a>: Rat en Os, Tijger en Varken, Konijn en Hond, Draak en Haan, Slang en Aap, Paard en Geit. Ze zitten in geen enkele driehoek, en toch werken ze heel goed."
+  },
+  "section5": {
+    "title": "Waarom drie lezingen in plaats van één",
+    "p1": "Omdat geen enkele lezing in haar eentje genoeg is. Het sterrenbeeld verdeelt acht miljard mensen over twaalf vakjes, en dat zijn dus heel brede vakjes. Het levenspad is preciezer, maar zegt niets over je temperament. En het Chinese teken geeft vooral een ritme, meer dan een manier van liefhebben.",
+    "p2": "Samen vullen ze elkaar aan. Twee sterrenbeelden die als onverenigbaar bekendstaan, kunnen levenspaden hebben die heel goed samengaan, en dat zie je meteen aan de drie balken van het resultaat. Daarom tonen we de details en niet alleen een percentage: zonder die details weet je niet waar de score vandaan komt.",
+    "tip": "Wat het vaakst voorkomt, is een hoge score op de ene lezing en een lage op een andere. Dat is vaak juist het leukste resultaat om samen te lezen."
+  },
+  "section6": {
+    "title": "En als de score laag is?",
+    "p1": "Dan is er niets ergs aan de hand! Geen van deze drie systemen heeft ooit een breuk voorspeld, en geen enkel heeft een stel ooit belet om dertig jaar samen te blijven. Een lage score betekent alleen dat jullie temperamenten niet vanzelf op elkaar aansluiten, en dat jullie soms met woorden moeten zeggen wat andere stellen zonder praten begrijpen.",
+    "p2": "Veel mensen komen op dit soort pagina's met een heel andere vraag in hun hoofd, en dat is geen vraag over astrologie. Herken je dat? Dan heb je meer aan een test over <a href=\"/nl/gezonde-relatie-test/\">hoe jullie elkaar elke dag behandelen</a>, of aan een test die je helpt te zien <a href=\"/nl/liefde-of-gewoonte-test/\">wat je nog voelt</a>. Die gaan over wat er vandaag tussen jullie gebeurt, niet over wat de sterren zeiden op de dag dat je geboren werd.",
+    "tip": "Doe de test samen, op hetzelfde scherm. Als jullie de drie balken samen lezen, begint het gesprek vaak vanzelf."
+  },
+  "faq": {
+    "title": "Jullie vragen over compatibiliteit op geboortedatum",
+    "q1": "Hoe bereken je compatibiliteit op basis van een geboortedatum?",
+    "a1": "Er zijn drie verschillende berekeningen, en onze tool doet ze alle drie. Het levenspad krijg je door alle cijfers van de datum op te tellen en het totaal te reduceren. Het sterrenbeeld lees je af aan de dag en de maand. Het Chinese teken lees je af aan het maanjaar, dat niet op 1 januari begint. Daarna vergelijken we de twee profielen op elk van die drie punten.",
+    "q2": "Moet je weten hoe laat je geboren bent?",
+    "a2": "Nee. Het tijdstip dient om de ascendant en de astrologische huizen te berekenen, dus een volledige geboortehoroscoop, en die vraagt een veel langere lezing. Hier is de datum alleen genoeg voor alle drie de berekeningen.",
+    "q3": "Mijn Chinese teken is niet wat ik dacht, hoe kan dat?",
+    "a3": "Waarschijnlijk omdat de geboortedatum in januari of begin februari valt. Het Chinese jaar begint met het maannieuwjaar, tussen 21 januari en 21 februari. Wie op 20 januari 1990 is geboren, hoort nog bij het jaar van de Slang (1989), niet bij dat van het Paard. Onze berekening gebruikt voor elk jaar de precieze datum van het nieuwjaar.",
+    "q4": "Betekent een score van 40% dat we uit elkaar gaan?",
+    "a4": "Nee. Dat getal meet hoe goed twee symbolische temperamenten samengaan, niet hoe sterk een relatie is. Het weet niets van jullie verhaal, van de moeite die jullie doen of van wat jullie samen hebben meegemaakt. Zie het als een manier van kijken die laat zien waar het vanzelf klikt en waar je eraan moet werken.",
+    "q5": "Wat is het verschil met jullie test met namen en sterrenbeelden?",
+    "a5": "Deze test gaat alleen uit van jullie data en legt drie berekeningen naast elkaar. De test met namen en sterrenbeelden gaat uit van jullie namen, gelezen met de numerologie van de letters, en van de tekens die je zelf uit een lijst kiest. Ze vullen elkaar goed aan, en allebei doen kost in totaal vijf minuten. En om <a href=\"/nl/liefdestest/\">twee namen te vergelijken zonder astrologie</a> is er ook de liefdestest.",
+    "q6": "Worden de resultaten ergens bewaard?",
+    "a6": "Nee. De hele berekening gebeurt in je browser, de data gaan nergens heen en er wordt niets bewaard als je de pagina sluit. Je kunt de test zo vaak doen als je wilt, met zoveel data als je wilt."
+  }
+}
