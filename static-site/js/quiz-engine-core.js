@@ -341,7 +341,7 @@ var QuizEngine = (function() {
       carte.type = 'button';
       if (grand) {
         carte.setAttribute('aria-label',
-          (m.titre || '') + ' : ' + (m.desc || '') + (m.meta ? '. ' + m.meta : ''));
+          (m.titre || '') + avantPonct() + ': ' + (m.desc || '') + (m.meta ? '. ' + m.meta : ''));
         carte.innerHTML =
           '<span class="choix-mode-nom">' + esc(m.titre || '') + '</span>' +
           '<span class="choix-mode-desc">' + esc(m.desc || '') + '</span>' +
@@ -5831,7 +5831,7 @@ var QuizEngine = (function() {
     modes.forEach(function(m) {
       var carte = el('button', 'choix-mode choix-mode--' + m.id);
       carte.type = 'button';
-      carte.setAttribute('aria-label', m.nom + ' : ' + m.desc + '. ' + m.score);
+      carte.setAttribute('aria-label', m.nom + avantPonct() + ': ' + m.desc + '. ' + m.score);
       carte.innerHTML =
         '<span class="choix-mode-nom">' + esc(m.nom) + '</span>' +
         '<span class="choix-mode-desc">' + esc(m.desc) + '</span>' +
@@ -6581,7 +6581,7 @@ var QuizEngine = (function() {
       var expBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-lg mx-auto text-left quiz-reveal-enter');
       expBox.style.animationDelay = '200ms';
       expBox.innerHTML = '<p class="text-sm text-muted-foreground leading-relaxed">' +
-        '<strong class="text-foreground">' + esc(tg('truefalse.explanation', 'Explication')) + ' :</strong> ' + esc(expText) + '</p>';
+        '<strong class="text-foreground">' + esc(tg('truefalse.explanation', 'Explication')) + avantPonct() + ':</strong> ' + esc(expText) + '</p>';
       wrap.appendChild(expBox);
     }
 
@@ -7844,7 +7844,7 @@ var QuizEngine = (function() {
       bloc.innerHTML =
         '<div class="axe-tete"><span class="axe-lib">' + esc(t[1] || '') + '</span>'
         + '<span class="axe-nb">' + t[2] + '<span class="axe-pct">%</span></span></div>'
-        + '<div class="axe-piste" role="img" aria-label="' + esc(t[1] || '') + ' : ' + t[2] + ' %">'
+        + '<div class="axe-piste" role="img" aria-label="' + esc(t[1] || '') + avantPonct() + ': ' + pctTexte(langueDuMoteur(), t[2]) + '">'
         + '<span class="axe-part" style="width:0%"></span></div>';
       zone.appendChild(bloc);
     });
@@ -9231,7 +9231,7 @@ var QuizEngine = (function() {
       + '<h2 class="tentation-results-title">' + esc(result ? result.title : '') + '</h2>'
       + '<p class="tentation-results-sub">' + (result ? result.description : '') + '</p>'
       + (result && result.advice ? '<p class="tentation-results-advice">' + result.advice + '</p>' : '')
-      + '<p class="tentation-results-couple">' + esc(this.tt('scoreLabel', 'Score de tentation')) + ' : <strong>'
+      + '<p class="tentation-results-couple">' + esc(this.tt('scoreLabel', 'Score de tentation')) + avantPonct() + ': <strong>'
       + this.score + '/' + this.maxScore + '</strong></p>';
     wrap.appendChild(hero);
 
@@ -11931,7 +11931,7 @@ var QuizEngine = (function() {
     carte.innerHTML =
       '<span class="jnj-resultat-nom">' + esc(this.joueur(j)) + '</span>' +
       '<div class="jnj-camembert">' +
-        '<svg viewBox="0 0 120 120" role="img" aria-label="' + esc(this.joueur(j) + ' : ' + c.jai + ' / ' + total) + '">' +
+        '<svg viewBox="0 0 120 120" role="img" aria-label="' + esc(this.joueur(j) + avantPonct() + ': ' + c.jai + ' / ' + total) + '">' +
           '<circle class="jnj-camembert-fond" cx="60" cy="60" r="46"></circle>' +
           '<circle class="jnj-camembert-part" cx="60" cy="60" r="46" ' +
             'stroke-dasharray="' + (frac * circ).toFixed(2) + ' ' + circ.toFixed(2) + '"></circle>' +

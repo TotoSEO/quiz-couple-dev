@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz) |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | en cours : 5a (quiz over liefde, wat voor koppel zijn jullie), 5b (ondeugende quiz), 5c (grappige vragen voor koppels), 5d (hoe goed ken je je partner, wie is het meest), 5e (vragen eerste date, gênante vragen), 5f (waar of niet waar quiz), 5g (temptation island quiz) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1174,7 +1174,42 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur la page** : la phrase d'une carte « À
   faire ensuite », vers les dilemmes (lot 6).
 
+## Lot 5g (31 octobre 2026) : le quiz de l'île de la tentation
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/temptation-island-quiz/` | Temptation Island quiz: zou jij het overleven? | De Temptation Island quiz: hoe lang hou jij het vol op het eiland? |
+
+  « Temptation Island » est le nom de l'émission aux Pays-Bas et en Flandre :
+  il reste tel quel (`identiques.txt`). Ce que la page dit de l'émission
+  (née aux États-Unis en 2001, diffusée aux Pays-Bas et en Flandre de 2002
+  à 2009, revenue en 2016 sur RTL 5, VIJF et Videoland, aujourd'hui sur
+  Videoland) a été vérifié avant d'être écrit.
+- **Le moteur** : les vingt situations du séjour, leurs réponses, les
+  points recopiés du français (`GD_COPIES`), les cinq verdicts et l'écran du
+  jeu (`tentation` de quizGames.json) ; « kampvuur » pour le feu de camp,
+  « verleider » et « verleidster » pour les tentateurs.
+- **Les liens** : « jaloezie » (jaloezie test), « uit gewoonte »
+  (liefde of gewoonte), « wat een relatie gezond houdt » (gezonde relatie
+  test) et « hoe sterk jullie band is » (relatietest).
+- **Les deux-points du moteur, dans toutes les langues** : six phrases que
+  le moteur assemble lui-même (« Score de tentation : », « Explication : »,
+  l'étiquette des cartes de mode et de résultat, le compte d'un joueur)
+  écrivaient « : » avec une espace ordinaire dans toutes les langues. Elles
+  passent par `avantPonct()` : espace insécable en français, rien ailleurs.
+  Même correction dans `salon.js` (le code de la partie, lu par les
+  lecteurs d'écran) et dans `quiz-ado-multiplayer.js` (les deux boutons du
+  choix de mode). En français, seul le type d'espace change.
+
 ## Les chiffres
+
+Au lot 5g : `textes nl` 703 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (63 pages traduites) ; `site nl` : le quiz va jusqu'à son
+résultat (« Verleidingsscore: 9/36 », sans espace avant les deux-points).
+Les pages publiques ne changent que par les scripts des moteurs (les
+deux-points ci-dessus).
 
 Au lot 5f : `textes nl` 689 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (62 pages traduites) ; `site nl` : le moteur va jusqu'à son

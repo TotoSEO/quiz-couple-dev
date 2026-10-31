@@ -488,7 +488,7 @@
     wrap.appendChild(para(s('creeeDesc', '')));
 
     var code = el('div', 'salon-code', esc(salon.code));
-    code.setAttribute('aria-label', s('codeLabel', 'Code de la partie') + ' : ' + salon.code.split('').join(' '));
+    code.setAttribute('aria-label', s('codeLabel', 'Code de la partie') + ((document.documentElement.lang || 'fr').slice(0, 2) === 'fr' ? '\u00a0' : '') + ': ' + salon.code.split('').join(' '));
     wrap.appendChild(code);
 
     var url = urlDeRejointe(salon.code);
