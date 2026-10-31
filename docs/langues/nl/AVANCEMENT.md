@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1757,6 +1757,18 @@ spéciaux ».
   intact, un second passage ne change rien.
 - **Les tests** : `courriel.test.mjs` et `rapport.test.mjs` parcourent les
   six langues ; 61 tests du serveur et 27 de la fabrique passent.
+
+## Lot 8f (31 octobre 2026) : les avis et les quiz personnalisés en néerlandais
+
+- Un avis laissé sur une page /nl/ part avec `lang: 'nl'` (`LANGUES_AVIS`
+  dans quiz-extras.js, quiz-engine-core.js et reviews.js), maintenant que
+  `reviews_lang_valeur` accepte le néerlandais (lot 8e). Si la base refuse
+  la langue, l'avis repart sans elle : jusque-là, seul le PGRST204 (colonne
+  absente) le faisait repartir, et un refus de la contrainte l'aurait perdu.
+- Un quiz personnalisé créé sur la page néerlandaise est rangé en `nl`
+  (`manage-custom-quiz`), et non plus en français.
+- Aucune page publique ne change : seuls les scripts des moteurs, de la
+  mesure et des avis de l'accueil.
 
 ## Les chiffres
 
