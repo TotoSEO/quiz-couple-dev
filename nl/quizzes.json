@@ -202,6 +202,12 @@
     "description": "Twintig vragen over je dagelijks leven, je ontmoetingen en wat er in je hoofd gebeurt. De uitslag noemt de oorzaak die het zwaarst weegt, en de oorzaak die er vlak achter komt.",
     "metaDescription": "Waarom ben ik nog single? Twintig vragen, waarvan twee afhangen van je antwoorden, om de oorzaak te vinden die het zwaarst weegt. Gratis, zonder account."
   },
+  "testCoupleOuCelibat": {
+    "title": "Single of relatie test: ben je beter af alleen of samen?",
+    "shortTitle": "Single of relatie?",
+    "description": "Twintig gewogen vragen over je dagelijks leven en je reflexen. De uitslag geeft twee delen die samen honderd maken: het deel dat naar alleen leven neigt, en het deel dat naar samen leven neigt.",
+    "metaDescription": "Single of relatie test: twintig gewogen vragen over je dagelijks leven, en een uitslag in twee percentages die samen honderd maken. Gratis test."
+  },
   "testEstCeLeBon": {
     "title": "Is hij de ware? Of is zij de ware? Doe de test",
     "shortTitle": "Is dit de ware?",
@@ -213,6 +219,12 @@
     "shortTitle": "Red flag test",
     "description": "Een man of een vrouw: twintig vragen over wat deze persoon doet, elk teken gewogen naar ernst, en een uitslag op negen niveaus.",
     "metaDescription": "Red flag test voor een man of een vrouw: 20 vragen over wat deze persoon doet, van de exen tot het nee, jaloezie en woede. Elk teken weegt naar ernst."
+  },
+  "testDureeCelibat": {
+    "title": "Hoe lang blijf ik nog single? Gratis online test",
+    "shortTitle": "Hoe lang blijf ik nog single?",
+    "description": "Twintig vragen over je dagelijks leven, en een schatting in maanden van de tijd die je nog hebt voordat je iemand ontmoet.",
+    "metaDescription": "Hoe lang blijf ik nog single? Twintig vragen over je leeftijd, je uitjes, je vrienden en je reflexen, en een schatting in maanden. Gratis test."
   },
   "testCompatSexuelle": {
     "title": "Seksuele compatibiliteit test: 20 vragen voor jullie twee",

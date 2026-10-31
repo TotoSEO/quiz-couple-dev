@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test voor singles",
+    "title": "Relatie of single: welke manier van leven past bij jou?",
+    "titleHighlight": "Relatie of single",
+    "description": "Je weet niet of je beter af bent alleen of met iemand, en afhankelijk van de dag lijken allebei de antwoorden te kloppen. Deze test kijkt naar <strong>je reflexen in het dagelijks leven</strong> in plaats van naar waar je nu zin in hebt, en geeft je <strong>twee percentages die samen honderd maken</strong>: het deel dat naar alleen leven neigt, en het deel dat naar samen leven neigt.",
+    "subtitle": "Twintig gewogen vragen, vijf minuten, een uitslag in twee delen",
+    "jumpBtn": "Doe de test"
+  },
+  "section1": {
+    "title": "Bestaat het, gemaakt zijn om alleen te wonen?",
+    "p1": "Ja, en het is geen troost die je jezelf geeft. Er zijn mensen die zich beter voelen als niemand hun huis deelt: ze slapen beter, werken beter, zien hun vrienden vaker. En er zijn mensen bij wie één avond te veel alleen genoeg is om de hele week te verpesten. Allebei bestaan ze, en geen van beide is een probleem dat je moet oplossen!",
+    "p2": "Wat het verwarrend maakt, is dat we vaak twee dingen door elkaar halen: je huidige leven fijn vinden, en ervoor gemaakt zijn. Je kunt al drie jaar prima alleen zijn en bij het eerste ontbijt samen merken dat je dát miste. En je kunt jarenlang van een relatie dromen, en na zes maanden samenwonen ontdekken dat je het niet uithoudt met iemand in de kamer ernaast op zaterdagochtend…",
+    "p3": "De vraag los je dus niet op door te kijken of je vandaag gelukkig bent. Je lost hem op door naar je reflexen te kijken: wat je doet met goed nieuws, hoeveel tijd je nodig hebt om bij te komen, wat het met je doet als je moet laten weten dat je later thuiskomt."
+  },
+  "section2": {
+    "title": "De signalen die de ene of de andere kant op wijzen",
+    "intro": "Dit is waar de test naar kijkt, en waarom die vier dingen zwaarder wegen dan waar je op een zondagavond zin in hebt.",
+    "sub1Title": "Wat je doet als je iets overkomt",
+    "sub1P1": "Dat is het betrouwbaarste signaal, en het makkelijkst te zien. Je krijgt goed nieuws: pak je binnen een minuut je telefoon, of hou je het voor jezelf tot het vanzelf een keer ter sprake komt? Mensen die gemaakt zijn voor een leven met z'n tweeën delen het meteen, bijna zonder erbij na te denken. Dat is geen vrijgevigheid, dat is een reflex.",
+    "sub2Title": "Hoeveel tijd alleen je nodig hebt",
+    "sub2P1": "Niet de tijd die je fijn vindt, maar de tijd die je nodig hebt om te blijven functioneren. Sommigen hebben genoeg aan één avond per week, anderen worden prikkelbaar zonder een paar uur per dag. Over dat getal valt weinig te onderhandelen, en vaak bepaalt het of samenwonen standhoudt.",
+    "sub3Title": "Wat samenwonen je heeft geleerd",
+    "sub3P1": "Heb je al eens met iemand samengewoond, dan heb je informatie die niemand anders heeft. Niet de herinnering aan de breuk, maar aan de gewone dinsdagavonden: was het fijn om de deur open te horen gaan? Komt het antwoord niet meteen, dan is dat ook een antwoord. En heb je die stap nog nooit gezet, dan telt <a href=\"/nl/waarom-ben-ik-nog-single/\">wat je tot nu toe op afstand heeft gehouden</a> net zo zwaar als wat je je voorstelt.",
+    "sub4Title": "Wat je bij een ander kunt verdragen",
+    "sub4P1": "Opruimen, tijden, gewoontes die de ander niet zal veranderen: dat zijn de onderwerpen die een relatie slijten, lang voor de grote vragen. Iemand die antwoordt “we vinden wel onze manier” en iemand die antwoordt “daar zou ik uiteindelijk moe van worden”, beleven hun eerste jaar <a href=\"/nl/samenwonen-test/\">onder één dak</a> totaal verschillend."
+  },
+  "section3": {
+    "title": "Hoe de test je twee percentages berekent",
+    "p1": "De uitslag geeft twee delen die samen honderd maken: bijvoorbeeld 34% gemaakt om alleen te leven en 66% gemaakt om samen te leven. Beide getallen komen uit dezelfde berekening, ze worden niet apart gemeten.",
+    "p2": "Elke vraag heeft een eigen gewicht, omdat ze niet allemaal hetzelfde zeggen. Wat je voelt als je in een leeg huis thuiskomt, hoeveel tijd alleen je nodig hebt, waar je jezelf over tien jaar ziet en wat je vandaag zoekt, zijn elk acht punten waard. Opruimen is er vier waard, de manier waarop je laat weten dat je later thuiskomt drie. Honderdeen punten in totaal, en je deel ‘samen’ is het aandeel dat je hebt behaald.",
+    "p3": "Daarna valt je score in een van de vijf uitslagen: goed alleen, eerder alleen, ertussenin, eerder samen, gemaakt voor samen. De middelste uitslag is geen mislukking: die past bij mensen die allebei nodig hebben, en die heel goed in een relatie leven als ze dat maar uitspreken.",
+    "p4": "Nog één ding. Iemand nodig hebben is niet hetzelfde als je slecht voelen zodra de ander afstand neemt: is dat jouw onderwerp, dan meet je <a href=\"/nl/emotionele-afhankelijkheid-test/\">wat er gebeurt als de ander niet antwoordt</a> ergens anders. En komt je manier van dichterbij komen en weer terugdeinzen in elke relatie terug, dan verklaart <a href=\"/nl/hechtingsstijl-test/\">de manier waarop je je hecht</a> vaak meer dan deze test."
+  },
+  "seo": {
+    "faqTitle": "Vragen die je jezelf stelt"
+  },
+  "jsonLd": {
+    "about": "samenleven en single zijn",
+    "faq1Q": "Kun je gelukkig zijn als je je hele leven alleen woont?",
+    "faq1A": "Ja. Een deel van de mensen functioneert beter met een eigen huis, een eigen ritme en zelfgekozen relaties. Het verschil zit niet in het alleen wonen, maar in mensen om je heen hebben: vrienden die je ziet, een activiteit, mensen om mee te praten in de loop van de week. Eenzaamheid die zwaar weegt en alleen wonen zijn niet hetzelfde.",
+    "faq2Q": "Hoe weet ik of ik gemaakt ben voor een relatie of om single te zijn?",
+    "faq2A": "Door naar je reflexen te kijken in plaats van naar waar je zin in hebt. Hoeveel tijd alleen je nodig hebt, wat je doet met goed nieuws, wat het met je doet om in een leeg huis thuis te komen, wat je bij iemand anders in het dagelijks leven zou verdragen. Dat meet deze test, waarbij elke vraag een eigen gewicht krijgt, afhankelijk van hoe belangrijk ze is.",
+    "faq3Q": "Kan de uitslag in de loop van de tijd veranderen?",
+    "faq3A": "Ja, en vaak. Een breuk, een verhuizing, een drukke periode op het werk verschuiven de wijzer tien of twintig punten. De test zegt waar je nu staat, niet wie je over vijftien jaar bent. Doe hem over twee jaar opnieuw, dan zegt het verschil veel.",
+    "faq4Q": "Ik heb 60% ‘gemaakt om samen te leven’, is dat goed of niet?",
+    "faq4A": "Het betekent dat samenleven bij je past, als je maar tijd voor jezelf houdt. Er is geen goede of slechte score: 15% zegt iets nuttigs, 90% zegt iets anders. Waar het om gaat, is dat je weet wat je nodig hebt voordat je met iemand gaat samenwonen, niet daarna.",
+    "faq5Q": "Is de test anoniem?",
+    "faq5A": "Ja. Je antwoorden blijven in je browser, er wordt niets met je naam verstuurd. Alleen de einduitslag, zonder persoonlijke gegevens, wordt gebruikt om te meten hoe de profielen verdeeld zijn."
+  }
+}
