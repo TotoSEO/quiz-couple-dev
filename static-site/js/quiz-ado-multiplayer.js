@@ -474,12 +474,12 @@
       '<div class="quiz-engine quiz-setup-screen quiz-modes animate-fade-in">' +
         enTete(ICONE_DEUX, t('modeTitle'), t('modeSubtitle')) +
         '<div class="choix-modes choix-modes--longs">' +
-          '<button id="btn-local" type="button" class="choix-mode choix-mode--solo" aria-label="' + esc(t('localBtn') + ' : ' + t('localDesc')) + '">' +
+          '<button id="btn-local" type="button" class="choix-mode choix-mode--solo" aria-label="' + esc(t('localBtn') + (lang === 'fr' ? '\u00a0' : '') + ': ' + t('localDesc')) + '">' +
             '<span class="ado-mode-icon" aria-hidden="true">' + ICONE_TEL + '</span>' +
             '<span class="choix-mode-nom">' + esc(t('localBtn')) + '</span>' +
             '<span class="choix-mode-desc">' + esc(t('localDesc')) + '</span>' +
           '</button>' +
-          '<button id="btn-online" type="button" class="choix-mode choix-mode--duo" aria-label="' + esc(t('onlineBtn') + ' : ' + t('onlineDesc')) + '">' +
+          '<button id="btn-online" type="button" class="choix-mode choix-mode--duo" aria-label="' + esc(t('onlineBtn') + (lang === 'fr' ? '\u00a0' : '') + ': ' + t('onlineDesc')) + '">' +
             '<span class="ado-mode-icon ado-mode-icon--alt" aria-hidden="true">' + ICONE_DEUX + '</span>' +
             '<span class="choix-mode-nom">' + esc(t('onlineBtn')) + '</span>' +
             '<span class="choix-mode-desc">' + esc(t('onlineDesc')) + '</span>' +
