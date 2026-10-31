@@ -108,7 +108,7 @@
   },
   "etapes": {
     "anniversaire": "{{n}} {{ans}} insieme",
-    "mois": "{{n}} mesi insieme",
+    "mois": "{{n}} {{mois}} insieme",
     "capJours": "Il traguardo dei {{n}} giorni",
     "capHeures": "{{n}} ore insieme",
     "capMinutes": "{{n}} minuti insieme",
@@ -117,7 +117,7 @@
   },
   "fete": {
     "anniversaire": "Buon anniversario! Oggi {{n}} {{ans}} insieme",
-    "mois": "Oggi {{n}} mesi insieme, va festeggiato!",
+    "mois": "Oggi {{n}} {{mois}} insieme, va festeggiato!",
     "cap": "{{cap}} è oggi!"
   },
   "noces": [
@@ -243,7 +243,7 @@
   },
   "section1": {
     "title": "Che cos'è un contatore della durata di coppia?",
-    "p1": "Un contatore della durata di coppia è uno strumento molto semplice: inserite la data in cui è iniziata la vostra storia e vi dice da quanto tempo state insieme. Non conta solo in anni, come si risponde quando ce lo chiedono, ma in giorni, in settimane, in mesi e persino in ore. Per esempio, una coppia nata il 14 maggio 2023 supera i 1.200 giorni insieme nell'autunno del 2026. Detto così, suona ben diverso da «tre anni e qualcosa».",
+    "p1": "Un contatore della durata di coppia è uno strumento molto semplice: inserite la data in cui è iniziata la vostra storia e vi dice da quanto tempo state insieme. Non conta solo in anni, come si risponde quando ce lo chiedono, ma in giorni, in settimane, in mesi e persino in ore. Per esempio, una coppia nata il 14 maggio 2023 supera i 1.200 giorni insieme a fine agosto 2026. Detto così, suona ben diverso da «tre anni e qualcosa».",
     "p2": "L'idea esiste da tempo nelle app di coppia, dove la cifra sta nella schermata iniziale e sale di uno ogni mattina. Qui è la stessa cosa, senza installare niente: la pagina tiene la vostra data nel browser e, a ogni visita, il contatore è aggiornato. Potete anche copiare un link che contiene la data e i vostri nomi, metterlo tra i preferiti o mandarlo all'altro.",
     "p3": "E siccome una cifra da sola non fa granché, il contatore vi dice anche cosa arriva: il prossimo anniversario con il nome delle nozze che gli corrisponde, il prossimo mese tondo e i traguardi di giorni che non si vedono mai arrivare, i 500 giorni, i 1.000 giorni, le 10.000 ore. Dà occasioni per festeggiare qualcosa fuori dalle date solite, e spesso sono proprio quelle che si ricordano!"
   },

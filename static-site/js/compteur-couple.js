@@ -15,7 +15,7 @@
 
   var T = window.CC_I18N || {};
   var LANG = racine.getAttribute('data-lang') || 'fr';
-  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT', nl: 'nl-NL' };
   var CLE_STOCK = 'qc-compteur';
   var JOUR_MS = 86400000;
   var PREMIERE_ANNEE = 1940;
@@ -129,9 +129,12 @@
     var premierDimanche = (7 - jourSemaine(debut)) % 7;
     var dimanches = premierDimanche > jours ? 0 : Math.floor((jours - premierDimanche) / 7) + 1;
 
-    // Ce qui se fête aujourd'hui
+    // Ce qui se fête aujourd'hui : chaque mois rond, l'anniversaire tous les
+    // douze. (Jusqu'au 31 octobre 2026 la condition exigeait aussi d.mois === 0,
+    // qui n'est vrai qu'un jour d'anniversaire : le mois rond ne s'affichait
+    // jamais.)
     var fete = null;
-    if (d.mois === 0 && d.jours === 0 && d.totalMois > 0) {
+    if (d.jours === 0 && d.totalMois > 0) {
       fete = d.totalMois % 12 === 0 ? { type: 'anniversaire', n: d.ans } : { type: 'mois', n: d.totalMois };
     }
     var i;

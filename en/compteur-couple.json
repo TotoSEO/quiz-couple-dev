@@ -108,7 +108,7 @@
   },
   "etapes": {
     "anniversaire": "{{n}} {{ans}} together",
-    "mois": "{{n}} months together",
+    "mois": "{{n}} {{mois}} together",
     "capJours": "The {{n}}-day mark",
     "capHeures": "{{n}} hours together",
     "capMinutes": "{{n}} minutes together",
@@ -117,7 +117,7 @@
   },
   "fete": {
     "anniversaire": "Happy anniversary! {{n}} {{ans}} together today",
-    "mois": "{{n}} months together today, that calls for a celebration!",
+    "mois": "{{n}} {{mois}} together today, that calls for a celebration!",
     "cap": "{{cap}} is today!"
   },
   "noces": [
@@ -243,7 +243,7 @@
   },
   "section1": {
     "title": "What is a relationship duration counter?",
-    "p1": "A relationship duration counter is a very simple tool: you enter the date your story began, and it tells you how long you have been together. It does not count only in years, the way we answer when someone asks, but in days, weeks, months and even hours. For example, a couple who got together on 14 May 2023 passes the 1,200-day mark in the autumn of 2026. Said like that, it sounds quite different from \"three years and a bit\".",
+    "p1": "A relationship duration counter is a very simple tool: you enter the date your story began, and it tells you how long you have been together. It does not count only in years, the way we answer when someone asks, but in days, weeks, months and even hours. For example, a couple who got together on 14 May 2023 passes the 1,200-day mark at the end of August 2026. Said like that, it sounds quite different from \"three years and a bit\".",
     "p2": "The idea has been around for a long time on couple apps, where the number sits on the home screen and goes up by one every morning. This is the same thing, with nothing to install: the page keeps your date in your browser, and every time you visit, the counter is up to date. You can also copy a link that holds the date and your first names, bookmark it or send it to the other person.",
     "p3": "And since a number on its own does not do much, the counter also tells you what is coming: the next anniversary with the name of the year that goes with it, the next round month, and the day milestones nobody sees coming, 500 days, 1,000 days, 10,000 hours. It gives you reasons to celebrate outside the usual dates, and those are often the ones you remember!"
   },
