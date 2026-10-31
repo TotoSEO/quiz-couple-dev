@@ -15,7 +15,7 @@ le met à jour dans la PR de chaque lot.
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
-| Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
+| Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
 
@@ -1560,7 +1560,68 @@ le met à jour dans la PR de chaque lot.
 
 **Le lot 6 est fini** : les quatorze jeux et leur hub sont en néerlandais.
 
+## L'ouverture (31 octobre 2026)
+
+Thomas : « quand tous les jeux seront traduits, je veux que tu mettes en
+ligne une première version du NL. Ne fais les quiz spéciaux qu'en dernier.
+Le plus important : jeux, évaluation payante et pages légales, blog, quiz
+spéciaux ».
+
+- **Ce qui s'ouvre** : `nl` quitte `LANGUES_CACHEES`. Les 86 pages
+  traduites (accueil, pages d'information et juridiques, tests de couple,
+  tests célibataires, quiz, questions pour couple, jeux et leur hub) passent
+  en « index, follow », entrent dans le hreflang des cinq autres langues,
+  dans `sitemap-nl.xml` (81 adresses : sans l'évaluation, fermée, ni les
+  pages en noindex) et dans IndexNow ; le sélecteur de langue de toutes les
+  pages propose le néerlandais, vers l'accueil /nl/ quand la page n'existe
+  pas encore dans la langue.
+- **Ce qui attend** : `PAGES_EN_ATTENTE.nl` (config.js) : les cinq outils
+  (prénoms et signes, liefdestest, compteur, signes chinois, date de
+  naissance) et les six pages des quiz spéciaux (lot 7), les CGV (lot 8), la
+  liste du blog (lot 9). Une page en attente n'est pas construite :
+  `getLocalizedPath` la dit absente, donc elle sort du menu, du pied de
+  page, de l'accueil, du plan du site, des cartes « À faire ensuite », du
+  hreflang et du sitemap ; `cheminDeclare` garde son adresse pour que la
+  construction neutralise les liens écrits vers elle, comme ceux d'un
+  article programmé ; les moteurs lisent `ROUTE_SLUGS_PUBLIES` et ne la
+  proposent jamais en suite. Chaque lot retire ses pages de la liste ;
+  l'entrée `nl` part quand la liste est vide.
+- **Les règles du chantier restent** : `langueEnCours(lang)` (cachée, ou
+  ouverte avec des pages en attente) remplace `langueCachee` là où il le
+  fallait : un article n'existe qu'une fois traduit (aucun en néerlandais,
+  donc aucun hreflang nl sur les articles et aucun flux RSS néerlandais,
+  `sansFlux`), un fichier de textes absent vient du français, et les textes
+  des moteurs sont complétés clé par clé.
+- **Le serveur, en attendant le lot 8** : une adresse laissée à la porte
+  des résultats d'une page /nl/ est rangée en anglais (`capture.js`) :
+  `lead-capture` refuse toute autre langue que les cinq, et les e-mails du
+  parcours n'existent pas en néerlandais ; le néerlandophone reçoit donc les
+  e-mails anglais, qui mènent aux pages anglaises de l'évaluation. Un quiz
+  personnalisé créé en néerlandais est rangé en français par
+  `manage-custom-quiz` (son lien de partage reste la page /nl/), et un avis
+  part sans langue (`langueAvis`), comme le prévoit la base.
+- **Corrigé au passage** : le texte alternatif de l'image du test de charge
+  mentale était resté en français sur la page néerlandaise (lot 3l).
+- **Le nouveau contrôle** : `node build/verifie-langue.mjs liens nl`, après
+  `npm run build`, lit chaque lien de `dist/` qui part d'une page /nl/ ou y
+  mène, et signale tout lien mort (une page en attente qu'on aurait oublié
+  de neutraliser, une adresse mal recopiée).
+- **Vérifié** : `liens nl` sans erreur (24 721 liens lus dans 920 pages) ;
+  aucun texte français ni anglais dans les balises, le JSON-LD et le texte
+  visible des pages /nl/ (hors admin et évaluation fermée) ; les textes
+  des moteurs ne mènent à aucune page absente ; hors /nl/, les pages
+  publiques ne changent que par le lien hreflang nl, l'option « NL
+  Nederlands » du sélecteur, les adresses néerlandaises de la liste
+  embarquée des pages de jeu et la ligne de la porte e-mail.
+
 ## Les chiffres
+
+À l'ouverture : `textes nl` 878 parties écrites sur 1 045, sans erreur ;
+`seo nl` sans erreur ni avertissement (79 pages traduites : la liste du
+blog, en attente, n'est plus construite) ; `liens nl` sans erreur ; `code
+nl` 164 passages, tous dans ce qui reste à traduire (adresses des articles
+et biographies du blog, textes alternatifs des images des outils, des quiz
+spéciaux et de l'évaluation, e-mails, évaluation et fonctions serveur).
 
 Au lot 6i : `textes nl` 878 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur ni avertissement (80 pages traduites). Seules les cinq

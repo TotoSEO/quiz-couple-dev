@@ -89,7 +89,11 @@ hors des sitemaps, du hreflang, des flux RSS et du sélecteur de langue :
 Thomas peut tout parcourir en ligne avant que Google ne voie quoi que ce soit.
 On retire `nl` de la liste quand les trois contrôles sont verts et que Thomas
 a relu. Le même principe ferme l'évaluation en néerlandais (aucun encart,
-aucun lien) jusqu'à son propre lot.
+aucun lien) jusqu'à son propre lot. Le 31 octobre 2026, Thomas a demandé
+d'ouvrir la langue dès les jeux traduits, avant les outils et les quiz
+spéciaux : `nl` a quitté `LANGUES_CACHEES`, et les pages encore à traduire
+attendent dans `PAGES_EN_ATTENTE.nl` (config.js), sans être construites ni
+citées nulle part (voir AVANCEMENT.md, « L'ouverture »).
 
 ### Les zones, relues à chaque lot
 
@@ -230,10 +234,11 @@ l'ouverture.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | - |
 | 3 | Tests de couple, avec leurs textes de moteur | Trouver le relecteur natif |
 | - | Relecture native de l'échantillon, corrections | Transmettre ses remarques |
-| 4 à 7 | Tests célibataires, quiz et questions, jeux, outils et quiz spéciaux | - |
-| Ouverture | `nl` sort de `LANGUES_CACHEES` (évaluation encore fermée en néerlandais) | Envoyer le sitemap /nl/ dans la Search Console |
+| 4 à 6 | Tests célibataires, quiz et questions, jeux | - |
+| Ouverture | `nl` sort de `LANGUES_CACHEES` (évaluation encore fermée en néerlandais), les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` ; faite le 31 octobre 2026 | Envoyer le sitemap /nl/ dans la Search Console |
 | 8 | Évaluation payante, e-mails, CGV, puis ouverture de l'évaluation en néerlandais | Activer iDEAL et Bancontact dans Stripe |
 | 9 et suite | Blog, dans l'ordre des clics français, mots-clés tirés des requêtes françaises de chaque article | - |
+| 7 | Outils, puis les quiz spéciaux en dernier (Thomas, 31 octobre 2026 : « Le plus important : jeux, évaluation payante et pages légales, blog, quiz spéciaux ») | - |
 
 ## 7. Les risques
 
