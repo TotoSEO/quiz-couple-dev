@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -814,7 +814,45 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur les pages** : la description de quatre
   cartes vers des tests célibataires pas encore traduits (lots 4d à 4f).
 
+## Lot 4d (31 octobre 2026) : amour ou crush
+
+- **La page** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/crush-test/` | Crush test: is het liefde of een crush? (35 vragen) | Crush test: heb je gevoelens voor deze persoon? |
+
+  Le H2 « Heb ik een crush? Zo weet je het » porte le second mot-clé de la
+  carte, et « Liefde of een crush: wat is het verschil? » le premier.
+  « Crush test » s'écrit en deux mots comme on le tape (et comme « Red flag
+  test »), et rejoint `identiques.txt` puisque l'anglais dit pareil.
+- **Les moteurs** : `crushH` et `crushF`, deux séries entières de 35
+  questions (lui : « hij, hem, zijn » ; elle : « ze, zij, haar »), barème
+  explicite repris du français (161 points par série) et l'écran des deux
+  modes ; `crush`, les cinq verdicts communs, écrits pour « die persoon ».
+  Public de 13 à 18 ans : « je », « in de les », « stories », « een
+  bericht sturen » plutôt que « appen », que la Flandre dit moins. Les
+  réponses qui suivent une question en « … » sont des phrases entières
+  (« Ik word er blij van », pas « Word ik blij ») : la question dit « je »,
+  la réponse « ik », et une suite de la phrase mélangerait les deux. Le
+  « râteau » devient « een blauwtje lopen ».
+- **Les liens** : « het begin van verliefdheid » (ben ik verliefd) et « de
+  signalen die hij of zij onbewust geeft » (stiekem verliefd op mij ; l'ancre
+  française, onze mots, aurait dépassé huit). Les deux articles du blog
+  (« homme nerveux devant une femme », « questions à poser à son crush ») n'ont
+  pas d'adresse néerlandaise : leurs phrases restent sans lien, et `textes`
+  les rappelle en « à faire » jusqu'au lot 9.
+- **Ce qui reste en français sur la page** : la description de trois cartes
+  vers des tests célibataires pas encore traduits (lots 4e à 4h).
+
 ## Les chiffres
+
+Au lot 4d : `textes nl` 489 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (44 pages traduites) ; `site nl` sur la page : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux modes (crush garçon,
+crush fille) vont jusqu'à leur résultat ; restent en français les
+descriptions de trois cartes vers des pages pas encore traduites. Aucune
+page publique ne change.
 
 Au lot 4c : `textes nl` 476 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (43 pages traduites) ; `site nl` sur les deux pages : aucun

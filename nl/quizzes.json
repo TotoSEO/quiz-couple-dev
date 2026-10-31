@@ -184,6 +184,13 @@
     "description": "20 taken, twee antwoorden, en het verschil daartussen. Alleen of samen te doen, met meteen een uitslag.",
     "metaDescription": "Mentale belasting test voor koppels: 20 taken en steeds één vraag, wie denkt eraan? Samen gedaan wordt het verschil tussen jullie antwoorden de uitslag."
   },
+  "testCrush": {
+    "title": "Crush test: is het liefde of een crush? (35 vragen)",
+    "shortTitle": "Crush test",
+    "metaTitle": "Crush test: is het liefde of een crush? (35 vragen)",
+    "metaDescription": "Crush test in 35 vragen: is het een bevlieging, een crush of ben je verliefd? De vragen passen zich aan, of je crush nu een jongen of een meisje is.",
+    "description": "Antwoord op basis van wat je voelt, de score maakt het onderscheid tussen aantrekking, een crush en verliefde gevoelens."
+  },
   "testAimeEncore": {
     "title": "Houdt hij nog van mij? Of zij? De test in 20 vragen",
     "shortTitle": "Houdt hij nog van mij?",
