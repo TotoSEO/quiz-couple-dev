@@ -17,7 +17,7 @@ le met à jour dans la PR de chaque lot.
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match), 7c (relatieteller), 7d (chinese sterrenbeelden) : les outils sont faits, restent les quiz spéciaux |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) ; après le lot 7d, 7 en attente (les six pages des quiz spéciaux et la liste du blog) |
 | 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
-| 9 et suite | Blog | à faire |
+| 9 et suite | Blog | en cours : 9a (adresses des 71 articles, liste du blog ouverte, red flags bij een man) |
 
 ## Lot 0 (30 octobre 2026)
 
@@ -1934,7 +1934,50 @@ spéciaux ».
   avec Os (1985, Hout) 82 % ; Draak et Rat 84 % ; 2 februari 1996 donne
   Varken (1995, Hout), avec Paard 58 %.
 
+## Lot 9a (31 octobre 2026) : le blog ouvert, avec son premier article
+
+- **Les adresses** : les 71 articles traduisibles ont leur adresse `/nl/blog/`
+  dans `BLOG_ARTICLES` (`slugs.nl`), d'après la requête française de chaque
+  article transposée en néerlandais (« welk sterrenbeeld past bij ... » pour
+  les douze signes, « emotionele afhankelijkheid », « bindingsangst »,
+  « aan-uit-relatie »...). Un article déclaré sans son fichier
+  `data/blog/nl/<slug interne>.ts` n'est pas construit : les liens écrits
+  vers lui sont neutralisés et se rallument seuls le jour de sa traduction,
+  et ses cartes « Lees ook » disparaissent jusque-là. La clé `nl` de
+  `PAGES_EN_ATTENTE` doit rester, même vide, tant qu'un article attend
+  (`langueEnCours`).
+- **La liste du blog** sort de `PAGES_EN_ATTENTE` : `/nl/blog/`, son flux
+  RSS et le lien du menu existent ; la liste n'affiche plus que les onglets
+  de catégorie qui ont un article dans la langue (`blogCategories`,
+  generate.js). Le sélecteur de langue d'un article pas encore traduit mène
+  à `/nl/blog/` au lieu de l'accueil.
+- **Le gabarit** : les libellés de `blog-article.ejs` (date, retour, auteur,
+  partage, temps de lecture, compteur de lectures, formats de date et de
+  nombre) et l'onglet « Alle » de la liste avaient l'italien pour dernière
+  branche, que le contrôle `code` ne voyait pas (aucune branche `it`
+  explicite) ; la bio de Thomas en néerlandais (`AUTHORS` de config.js et
+  data/blog/authors.ts).
+- **La base** : `get_article_lectures` accepte `/nl/blog/`
+  (`20261011110000_compteur_lectures_articles.sql`, réappliquée à la fusion
+  par securite-base.yml) ; sans ça, les articles néerlandais restaient à zéro
+  lecture.
+- **L'article** : `data/blog/nl/red-flags-homme.ts`
+  (`/nl/blog/red-flags-bij-een-man/`), title « Red flags bij een man: de
+  lijst met 13 signalen », les mêmes sections et ancres traduites, les liens
+  vers les tests en /nl/ (angstige hechting, controle, red flag test,
+  toxische relatie) et vers cinq articles à venir, neutralisés pour l'instant.
+- **L'ordre des articles suivants** (clics français de la Search Console sur
+  trois mois) : red flags bij een vrouw, ongelukkige vrouw in een relatie,
+  man zenuwachtig in je buurt, gevoelens bij een man, welk sterrenbeeld past
+  bij waterman, ruzie op vakantie, relatie stoppen of doorgaan, schorpioen,
+  fases van een breuk bij een man, vragen om aan je vriend te stellen, puis
+  les autres par impressions.
+
 ## Les chiffres
+
+Au lot 9a : `seo nl`, `liens nl` et `site nl` (liste du blog et article) sans
+erreur ; `node build/verifie-article.mjs nl/blog/red-flags-bij-een-man` sans
+erreur ; `code nl` 6 passages (les images des quiz spéciaux).
 
 Au lot 7d : `textes nl` 985 parties écrites sur 1 045, sans erreur ; `seo nl`,
 `liens nl` et `site nl --jouer` sans erreur ; `code nl` 83 passages (les

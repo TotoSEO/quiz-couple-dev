@@ -15,7 +15,8 @@
 -- même : /blog/<slug>/ en français, /<langue>/blog/<slug>/ ailleurs, la page
 -- de listing /blog/ exclue. Même signature, mêmes droits (la page publique
 -- l'appelle avec la clé publique). Idempotente ; appliquée à la fusion par
--- securite-base.yml.
+-- securite-base.yml. Le néerlandais (nl) y est depuis le 31 octobre 2026 : sans
+-- lui, les articles /nl/blog/ restaient à zéro lecture.
 
 create or replace function public.get_article_lectures(p_path text)
 returns bigint
@@ -27,7 +28,7 @@ as $$
   select count(*)::bigint
   from public.article_lectures al
   where al.path = lower(p_path)
-    and lower(p_path) ~ '^(/(en|es|de|it))?/blog/[^/]+/$';
+    and lower(p_path) ~ '^(/(en|es|de|it|nl))?/blog/[^/]+/$';
 $$;
 
 grant execute on function public.get_article_lectures(text) to anon, authenticated;
