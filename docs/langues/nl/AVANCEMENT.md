@@ -13,7 +13,7 @@ le met à jour dans la PR de chaque lot.
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
-| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami) |
+| 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | en cours : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
@@ -881,7 +881,52 @@ le met à jour dans la PR de chaque lot.
 - **Ce qui reste en français sur les pages** : la description de la carte
   vers « m'aime-t-il en secret » (lot 4f).
 
+## Lot 4f (31 octobre 2026) : m'aime-t-il en secret, mon ex pense-t-il encore à moi
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/stiekem-verliefd-op-mij/` | Is hij stiekem verliefd op mij? Gratis test in 10 vragen | Is hij stiekem verliefd op mij? Of zij? |
+  | `/nl/denkt-mijn-ex-nog-aan-mij/` | Denkt mijn ex nog aan mij? Gratis test in 15 vragen | Denkt mijn ex nog aan mij, of ben ik al vergeten? |
+
+  Le mot-clé de la première page est au masculin, comme la recherche : « Of
+  zij? » dit dans le H1 que le test vaut aussi pour une femme, sans couper le
+  mot-clé (« is hij of zij stiekem… » ne le porterait plus d'un seul tenant).
+- **Les moteurs** : `secretH` et `secretF` (dix questions, barème pondéré du
+  chargeur, `SOLO_BAREME`, 105 points), `exH` et `exF` (quinze questions,
+  150 points), leurs verdicts communs (`secret`, `ex`), les écrans des deux
+  modes et l'écran de départ de « en secret » (`secret` de
+  `quizGames.json`). Les deux pages vouvoient en français, « je » en
+  néerlandais. L'en-tête « Niveau » du tableau devient « Uitslag », comme sur
+  les pages déjà traduites où le mot français et le mot néerlandais étaient
+  les mêmes.
+- **Une erreur corrigée sur les cinq pages publiques** : le tableau du score
+  de « m'aime-t-il en secret » découpait encore 0 à 30 (« 0 à 7 », « 8 à
+  15 », « 16 à 23 », « 24 à 30 »), alors que la phrase au-dessus dit 105 et
+  que le moteur classe sur 105 depuis le barème pondéré (`SOLO_BAREME`,
+  poids 21 × 5 ; tranches de `parseGdResults` : 0 à 26, 27 à 53, 54 à 80,
+  81 à 105). Le tableau dit désormais ces tranches dans les cinq langues ;
+  joué en néerlandais, 55/105 tombe bien dans la troisième. Celui de « mon
+  ex pense-t-il encore à moi » (0 à 37 jusqu'à 114 à 150) était juste.
+- **Les liens** : « wat je zelf voelt, liefde of aantrekking » (ben ik
+  verliefd), « hoe goed jullie in de kern bij elkaar passen » (passen we bij
+  elkaar), « dat je ex terugkomt » (komt mijn ex terug), « het bewijs dat het
+  nog niet voorbij is » (is mijn relatie voorbij), « een deur op een kier te
+  houden » (stiekem verliefd op mij) et « je leven weer oppakt » (klaar voor
+  een nieuwe relatie). Le lien français vers l'article sur la dépendance
+  affective après une rupture, que les autres langues n'ont pas, n'est pas
+  repris.
+- **Ce qui reste en français sur les pages** : rien.
+
 ## Les chiffres
+
+Au lot 4f : `textes nl` 545 parties écrites sur 1 045, sans erreur ; `seo
+nl` sans erreur (48 pages traduites) ; `site nl` sur les deux pages : aucun
+débordement ni mot coupé à 360 et 1 280 px, les deux modes de chaque test
+vont jusqu'à leur résultat, sans texte resté en français. Côté public, seul
+le tableau du score de « m'aime-t-il en secret » change, dans les cinq
+langues.
 
 Au lot 4e : `textes nl` 514 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (46 pages traduites) ; `site nl` sur les deux pages : aucun

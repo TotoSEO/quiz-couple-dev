@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Gratis test, 15 vragen",
+    "title": "Denkt mijn ex nog aan mij, of ben ik al vergeten?",
+    "titleHighlight": "nog aan mij",
+    "description": "15 vragen over wat hij of zij doet, niet over wat jij eruit afleidt. Want een story die om middernacht wordt bekeken en een voorstel om af te spreken wegen niet even zwaar.",
+    "subtitle": "Test voor jou alleen, gratis en anoniem"
+  },
+  "howTo": {
+    "title": "Hoe werkt deze test?",
+    "step1": "Je geeft eerst aan of je ex een man of een vrouw is, daarna antwoord je alleen. Er wordt niets verstuurd, niemand ziet je antwoorden.",
+    "step2": "Antwoord op basis van de <strong>afgelopen weken</strong>, niet van de maand na de breuk. De eerste weken zeggen niets: iedereen overdrijft dan, in de ene of de andere richting.",
+    "step3": "Elke vraag weegt naar wat het gedrag kost aan wie het vertoont. Het totaal loopt van 0 tot 150 punten, en een hoge score betekent dat je ex de deur niet heeft dichtgedaan.",
+    "step4": "De uitslag plaatst je in een van de vier mogelijke situaties, ook die waar niemand over praat: aan je denken zonder terug te willen komen.",
+    "outro": "Doe deze test niet op de avond van een onverwacht bericht. Antwoord op basis van wat zich herhaalt, niet van wat net is gebeurd."
+  },
+  "crossLink": {
+    "title": "Kun je aan niets anders meer denken?",
+    "text": "Deze test gaat over je ex. Ligt het probleem ergens anders, bij wat die afwezigheid met je doet, dan stelt de test over emotionele afhankelijkheid de vraag vanuit die hoek.",
+    "button": "Doe de test emotionele afhankelijkheid"
+  },
+  "section1": {
+    "title": "Waarom je er zelf niet uitkomt",
+    "p1": "Je hebt alles al herlezen. De laatste berichten, het tijdstip waarop hij of zij je story zag, die ene zin te veel tijdens het laatste telefoontje. Je hebt er hele avonden aan besteed, en je bent niets verder dan aan het begin.",
+    "p2": "Dat komt niet doordat je het niet helder ziet. Het komt doordat <strong>dezelfde aanwijzingen van betekenis veranderen met je humeur van de dag</strong>. Op maandag bewijst dat verjaardagsbericht dat hij of zij het niet heeft afgesloten. Op donderdag is het maar een beleefdheid, naar dertig mensen gestuurd. Beide lezingen zijn te verdedigen, geen van beide is te controleren, en precies daarom draai je in rondjes.",
+    "p3": "Deze test leest de gedachten van je ex niet, en wantrouw wie beweert dat wel te kunnen. Wat hij doet, is je waarnemingen sorteren volgens één eenvoudig criterium dat je kunt nagaan: <strong>hoeveel dat gedrag hem of haar heeft gekost</strong>. Een gebaar dat niets kost, bewijst bijna niets, ook al doet het je veel plezier. Een gebaar dat iets van iemand vraagt, is niet zo makkelijk anders te verklaren."
+  },
+  "section2": {
+    "title": "De signalen die iets kosten, en de signalen die niets kosten",
+    "intro": "Dat is de hele logica van deze test. Hier zijn de vijf soorten gedrag die zwaar wegen, gerangschikt naar wat ze vragen van wie ze vertoont.",
+    "pillar1Title": "Zonder aanleiding weer contact zoeken",
+    "pillar1Text": "Het betrouwbaarste signaal van allemaal. Iemand schrijven die je hebt verlaten, vraagt dat je een ongemak overwint, dat je accepteert dat je doorgaat voor degene die niet loslaat, en dat je een koud antwoord riskeert. Niemand doet dat uit verstrooidheid. Wat telt, is niet hoe vaak er berichten komen, maar van welke kant: schrijf jij al drie maanden altijd als eerste, dan heb je je antwoord al.",
+    "pillar2Title": "Voorstellen om elkaar te zien",
+    "pillar2Text": "Een stap verder dan een bericht, omdat een afspraak niet terug te draaien is en je je er niet met een grapje uit kunt redden. Let wel op de nuance: voorstellen om af te spreken om een doos spullen op te halen is niet hetzelfde als voorstellen om af te spreken zonder enige reden. Het eerste vraagt nul moed, het tweede heel veel.",
+    "pillar3Title": "Iets duidelijks zeggen",
+    "pillar3Text": "Eén heldere zin over spijt of gevoelens is meer waard dan zes maanden signalen. Wie hem uitspreekt, legt zich vast, je kunt hem niet terugnemen, en hij kan later worden aangehaald. Daarom is hij ook zo zeldzaam: veel mensen houden het liever bij toespelingen, waarmee ze in het vage kunnen blijven zonder ooit iets te riskeren.",
+    "pillar4Title": "Over jullie twee praten in de toekomende tijd",
+    "pillar4Text": "De tijd waarin iemand praat, zegt veel. Wie de bladzijde heeft omgeslagen, praat over jullie in de verleden tijd, soms met veel tederheid: herinneringen zijn ongevaarlijk. Wie de deur niet heeft dichtgedaan, laat “we zouden kunnen” en “ooit misschien” vallen, plannen die er niet meer toe doen. Het gaat onbewust, en het zegt heel veel.",
+    "pillar5Title": "Wat de mensen om hem of haar heen zeggen",
+    "pillar5Text": "Een indirect signaal, maar moeilijk te vervalsen. Geven zijn of haar vrienden en familie je uit zichzelf nieuws, of laten ze doorschemeren dat hij of zij nog over je praat, dan bestaat het onderwerp nog in zijn of haar privégesprekken. Niemand speelt maandenlang toneel tegenover vrienden om een illusie in stand te houden.",
+    "tip": "Eén eenvoudig criterium, toe te passen op elk signaal: moest hij of zij voor dit gebaar iets overwinnen? Is het antwoord nee, bouw er dan niets op."
+  },
+  "section3": {
+    "title": "Wat je score zegt",
+    "p1": "De vijftien vragen worden elke keer gesteld, en elke vraag weegt naar wat het beschreven gedrag van iemand vraagt. Het totaal loopt van 0 tot 150 punten. Een hoge score betekent niet <a href=\"/nl/komt-mijn-ex-terug/\">dat je ex terugkomt</a>, hij betekent dat hij of zij niets heeft afgesloten.",
+    "headerScore": "Score",
+    "headerLevel": "Situatie",
+    "headerAnalysis": "Wat het betekent",
+    "row1Score": "0 tot 37",
+    "row1Level": "De bladzijde is omgeslagen",
+    "row1Analysis": "Geen enkel signaal dat iets kost, en vaak helemaal geen signaal. Het leven van je ex is ergens anders weer op gang gekomen.",
+    "row2Score": "38 tot 75",
+    "row2Level": "Sporen, geen terugkeer",
+    "row2Analysis": "Het meest voorkomende geval. Er is nog gehechtheid, maar er volgt geen enkele daad op.",
+    "row3Score": "76 tot 113",
+    "row3Level": "De deur is niet dicht",
+    "row3Analysis": "Echte inspanningen, steeds opnieuw, maar niets wordt duidelijk gezegd. Dat vage is wat je uitput.",
+    "row4Score": "114 tot 150",
+    "row4Level": "Alles is er, behalve de woorden",
+    "row4Analysis": "De signalen die het meest vragen, zijn er allemaal. Er ontbreekt alleen iemand die het uitspreekt.",
+    "tip": "Een lage score is geen oordeel over wat je waard bent, en een hoge score is geen belofte. Deze test beschrijft hoe het nu is, niet hoe het gaat lopen."
+  },
+  "section4": {
+    "title": "De vier signalen die iedereen overschat",
+    "p1": "Het zijn de vier aanwijzingen waar je de meeste tijd aan besteedt, en het zijn juist de minst betrouwbare. Niet omdat ze niet kloppen, maar omdat ze niets kosten en op tien manieren te verklaren zijn.",
+    "sub1Title": "De story die om drie uur 's nachts werd bekeken",
+    "sub1Text": "Het is signaal nummer één geworden, en het is het zwakste van allemaal. Een story bekijken vraagt één duimbeweging en nul moed. Het kan nostalgie betekenen, nieuwsgierigheid, verveling, of gewoon dat de app de ene story na de andere afspeelt. Een ex die elke dag naar je kijkt zonder je ooit te schrijven, vertelt je vooral dat hij of zij liever toekijkt dan iets onderneemt.",
+    "sub2Title": "De foto's die niet zijn verwijderd",
+    "sub2Text": "Veel mensen zien er <a href=\"/nl/is-mijn-relatie-voorbij/\">het bewijs in dat het nog niet voorbij is</a>. Vaak is het veel banaler: foto's verwijderen betekent dat je er weer in moet duiken, en heel veel mensen schuiven dat moment jarenlang voor zich uit, gewoon om het te vermijden. Omgekeerd is alles meteen en volledig wissen niet altijd onverschilligheid, soms is het precies het tegenovergestelde.",
+    "sub3Title": "Het verjaardagsbericht",
+    "sub3Text": "Alles hangt af van de vorm. Een kaal “gefeliciteerd” is wat je naar een collega stuurt, en het zegt niets. Een bericht dat een precies detail aanhaalt, een grap die alleen van jullie twee is, of dat binnenkomt op een datum die verder niemand kent, is iets anders: daarvoor moet je het hele jaar iets in je hoofd hebben gehouden.",
+    "sub4Title": "Het “laten we vrienden blijven”",
+    "sub4Text": "Die zin is dubbelzinnig van opzet, en daarom wordt hij ook vaak uitgesproken. Hij dient net zo goed om een breuk te verzachten als om <a href=\"/nl/stiekem-verliefd-op-mij/\">een deur op een kier te houden</a>. Lees hem niet los: kijk naar wat erna komt. Een vriendschap die gemeend is, zie je aan vriendengebaren, niet aan contact dat telkens weer opleeft als jij afstand neemt.",
+    "tip": "De regel geldt ook andersom: een ex die je overal heeft geblokkeerd, is niet per se onverschillig. Blokkeren is een heftig gebaar, en onverschilligheid doet helemaal niets."
+  },
+  "section5": {
+    "title": "Aan je denken en terug willen komen zijn twee verschillende dingen",
+    "p1": "Die nuance ontbreekt overal, en toch is het de vaakste situatie: iemand kan oprecht, vaak en lang aan je denken, en nooit van plan zijn om terug te komen. Het een spreekt het ander niet tegen.",
+    "p2": "Een verhaal dat belangrijk was, laat vanzelf sporen na. Liedjes, routes, geuren, data in het jaar. Die sporen verdwijnen niet omdat iemand heeft besloten te vertrekken, en ze kunnen jaren blijven zonder iets aan te kondigen. Een ex die je op een sombere avond schrijft, zegt je niet dat hij of zij opnieuw wil beginnen, hij of zij zegt je dat het een sombere avond is.",
+    "p3": "Er is ook een situatie die ongemakkelijker is om te benoemen: die waarin je ex bewust het contact onderhoudt zonder iets meer te willen. Aanwezig blijven kost weinig en levert veel op: je voelt je niet vervangen en je houdt je vrijheid. Het is niet altijd berekend, het is zelfs zelden bewust, maar het effect op jou is hetzelfde: jij blijft wachten terwijl de ander verdergaat.",
+    "tip": "Herken je jezelf hierin, dan is de nuttige vraag niet meer wat hij of zij voelt. De vraag is hoelang je je leven nog op pauze wilt zetten om daarachter te komen."
+  },
+  "section6": {
+    "title": "Hoe je een antwoord krijgt in plaats van erop te wachten",
+    "p1": "Geen enkel signaal extra haalt je uit de twijfel, omdat je het net zo zult interpreteren als de vorige. Wat je eruit haalt, is een situatie creëren waarin je ex positie moet kiezen. Zo doe je dat zonder je waardigheid te verliezen.",
+    "sub1Title": "Stel een daad voor, geen gesprek",
+    "sub1Text": "“Denk je nog aan ons?” roept een vaag antwoord op, en dat krijg je ook. “Zullen we zaterdag afspreken?” roept een ja of een nee op. De tweede vraag is eng om te stellen, maar het is de enige die bruikbare informatie oplevert.",
+    "sub2Title": "Stel de vraag één keer, niet drie keer",
+    "sub2Text": "Een duidelijke vraag waarop ontwijkend wordt geantwoord, is al een antwoord. Dezelfde vraag de week erna in een andere vorm opnieuw stellen, verandert niets aan de kern en verschuift de verhoudingen. Je mag één keer direct zijn; aandringen levert je niets op.",
+    "sub3Title": "Kies het moment, niet de impuls",
+    "sub3Text": "Berichten die je om twee uur 's nachts schrijft, na een drankje of nadat je een foto hebt gezien, zijn de berichten waar je spijt van krijgt. Niet omdat ze niet kloppen, maar omdat ze op het slechtste moment komen en een beeld van je geven dat niet bij je past. Schrijf het bericht, bewaar het als concept, en lees het de volgende dag rond de middag nog eens.",
+    "sub4Title": "Beslis vooraf wat je met een nee doet",
+    "sub4Text": "Dat is de voorzorg die niemand neemt. Heb je niets besloten voordat je de vraag stelt, dan sta je na een weigering nog te onderhandelen. Weet vooraf wat je met een nee doet, en het gesprek verloopt veel beter, ook voor jou."
+  },
+  "section7": {
+    "title": "Als de vraag een andere vraag wordt",
+    "p1": "Er komt een moment waarop het niet meer over je ex gaat. Hou je al maanden zijn of haar sociale media in de gaten, zeg je afspraken af voor het geval dat, vertel je je vrienden steeds hetzelfde verhaal tot ze er moe van worden, dan is de vraag veranderd zonder dat je het merkte.",
+    "p2": "Iemand missen en niet uit een wachtstand kunnen komen, zijn niet hetzelfde. Het eerste vervaagt, langzaam maar zeker. Het tweede nestelt zich, en het voedt zich precies met de kleine gratis signalen waar deze pagina over gaat: elke bekeken story zet de teller weer op nul en stelt het rouwen een paar dagen uit.",
+    "p3": "Er is een eenvoudige test om te weten waar je staat. Stel dat iemand je vandaag met zekerheid garandeert dat je ex nooit terugkomt. Is je eerste reactie opluchting, dan mis je je ex niet, dan weegt het wachten je zwaar.",
+    "tip": "Niets verplicht je om op zekerheid te wachten voordat je <a href=\"/nl/klaar-voor-een-nieuwe-relatie/\">je leven weer oppakt</a>. In de praktijk gebeurt bijna altijd het omgekeerde: de dingen komen los wanneer je ophoudt met alles in de gaten te houden."
+  },
+  "faq": {
+    "q1": "Hoe weet ik of mijn ex nog aan mij denkt?",
+    "a1": "Door te kijken naar wat hij of zij doet in plaats van naar wat jij eruit afleidt, en elk gedrag te wegen naar wat het kost. Zonder aanleiding contact zoeken, voorstellen om af te spreken, iets duidelijks zeggen over gevoelens, over jullie twee in de toekomst praten: dat zijn daden die iets van iemand vragen. Een story bekijken, een foto online laten staan of een verjaardagsbericht sturen vraagt niets van niemand. Die vijf punten meet de test.",
+    "q2": "Mijn ex bekijkt al mijn stories, wat betekent dat?",
+    "a2": "Meestal niet veel. Het is het goedkoopste signaal dat er bestaat: een duimbeweging, geen risico, geen gevolgen. Het kan nostalgie zijn, maar ook gewoon nieuwsgierigheid. Iemand die elke dag naar je kijkt zonder je ooit te schrijven, laat vooral zien dat hij of zij liever toekijkt dan iets onderneemt, en dat is op zich ook informatie.",
+    "q3": "Mijn score is laag, is alles voorbij?",
+    "a3": "Een lage score beschrijft de situatie van vandaag, niet die van de komende maanden. Hij zegt je dat je ex op dit moment niets doet wat op een terugkeer wijst. Dat is harde informatie, maar ze geeft je iets belangrijks terug: de tijd die je aan ontcijferen besteedde. Je hoeft niet meer te interpreteren, je kunt beslissen.",
+    "q4": "Hoelang moet je wachten voordat je weer contact opneemt met je ex?",
+    "a4": "Er bestaat geen magische termijn, en kant-en-klare regels als “dertig dagen geen contact” berusten nergens op. Hoe jij je voelt op het moment dat je schrijft, is veel bepalender. Vertrekt het bericht om een reactie los te krijgen, dan is het te vroeg. Vertrekt het omdat je iets te zeggen hebt en je een stilte overleeft, dan is het moment goed.",
+    "q5": "Komt een ex die terugkomt voorgoed terug?",
+    "a5": "Dat hangt volledig af van wat er sindsdien is veranderd. Een ex die terugkomt in een identieke relatie, met dezelfde onopgeloste meningsverschillen en dezelfde gewoontes, vertrekt meestal om dezelfde redenen en binnen dezelfde tijd. Wat het verschil maakt, is niet hoe intens het weerzien is, maar waar jullie anders dan vroeger over kunnen praten.",
+    "q6": "Worden mijn antwoorden bewaard?",
+    "a6": "Nee. Alles gebeurt in je browser, er wordt geen antwoord verstuurd of bewaard, en je hoeft geen account of e-mailadres op te geven. Je kunt de test over twee maanden opnieuw doen om te vergelijken, maar er wordt intussen niets bijgehouden."
+  }
+}

@@ -422,6 +422,11 @@
     "introQuote": "“Heeft hij of zij met iemand anders geslapen... of haal ik me iets in mijn hoofd?”",
     "disclaimer": "Deze test bewijst niets en beschuldigt niemand. Hij brengt orde in wat je hebt gezien, zodat je weet wat je ermee kunt doen."
   },
+  "secret": {
+    "introQuestion": "Je stelt jezelf de vraag:",
+    "introQuote": "“Is hij of zij stiekem verliefd op me… of maak ik mezelf iets wijs?”",
+    "disclaimer": "Denk aan één bepaalde persoon voordat je begint, en antwoord alleen over hem of haar."
+  },
   "distanceAime": {
     "introQuestion": "Je vraagt je af:",
     "introQuote": "“Houdt hij of zij nog van me... of is het gewoon de afstand?”",
