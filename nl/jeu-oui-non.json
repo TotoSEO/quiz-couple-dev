@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 situaties • Live stemmen • Gratis",
+    "title": "Ja of nee vragen: het online spel om als koppel te spelen",
+    "titleHighlight": "Ja of nee",
+    "description": "Er verschijnt een situatie, jullie antwoorden ja of nee, en je ziet meteen wat de anderen stemden."
+  },
+  "jsonLd": {
+    "name": "Ja of nee, de versie voor koppels"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": ": ja of nee?"
+  },
+  "section1": {
+    "title": "Wat voor spel is ja of nee?",
+    "p1": "Ja of nee is een heel simpel spel om over te praten. Iemand stelt een gesloten vraag, zoiets als ‘zou je ja zeggen tegen een bijpassende tattoo?’, en iedereen antwoordt met ja of nee, zonder eromheen te mogen draaien. Er valt niets te installeren en niets te tellen, en daarom hoort het bij <a href=\"/nl/spelletjes-voor-koppels/\">de simpelste spelletjes met z'n tweeën</a>: je begint ermee bij de borrel, in de auto, of op een doordeweekse avond op de bank.",
+    "p2": "Zo uitgelegd klinkt de regel wat mager, en toch wordt het spel al generaties lang gespeeld. Dat het zo goed werkt, komt doordat je niet mag nuanceren: iedereen wil ‘het hangt ervan af’ zeggen, en dat is nou net verboden. Ja of nee zeggen dwingt je om een kant te kiezen, en daar beginnen de gesprekken.",
+    "p3": "Er bestaan veel varianten: met vrienden en opdrachten, een brave versie met de familie, of als drankspel. Wij hebben het aangepast voor koppels, en er iets aan toegevoegd waar we zelf heel blij mee zijn: bij elke situatie zie je wat alle andere bezoekers hebben geantwoord. Je speelt dus niet alleen met z'n tweeën, je vergelijkt jullie met iedereen."
+  },
+  "section2": {
+    "title": "Het verschil met de klassieke ja of nee",
+    "intro": "Het grootste verschil zit in de vragen, en in wat er met de antwoorden gebeurt. De klassieke ja of nee speel je snel, meestal om te lachen, en de vragen gaan over van alles en nog wat. Onze versie gaat over situaties uit het leven met z'n tweeën, en houdt alle stemmen bij. Dit verandert er, naast elkaar:",
+    "colClassique": "De klassieke ja of nee",
+    "colCouple": "Onze versie voor koppels",
+    "ligne1Titre": "De vragen",
+    "ligne1Classique": "Van alles en nog wat: ‘heb je weleens tegen je moeder gelogen?’",
+    "ligne1Couple": "Situaties uit het leven met z'n tweeën: gezamenlijke rekening, huis, huisdier, schoonfamilie",
+    "ligne2Titre": "Wie antwoordt",
+    "ligne2Classique": "Om de beurt, zo snel mogelijk",
+    "ligne2Couple": "Het koppel antwoordt met één stem, nadat jullie erover gepraat hebben",
+    "ligne3Titre": "Wat je ontdekt",
+    "ligne3Classique": "Anekdotes en de slappe lach",
+    "ligne3Couple": "Wat je partner vindt van onderwerpen waar jullie het nog nooit over hadden",
+    "ligne4Titre": "Het einde van het spel",
+    "ligne4Classique": "Als iemand afhaakt of de groep iets anders gaat doen",
+    "ligne4Couple": "Wanneer jullie willen: er is geen score en geen finish",
+    "apres": "Nog een kleine opmerking, want de verwarring komt vaak terug: ja of nee is niet het ‘ja-nee-spel’ waarin je die twee woorden juist niet mag zeggen. Daarin zijn ze verboden en moet je het zo lang mogelijk volhouden zonder ze uit te spreken. Hier is het andersom: het zijn de enige twee antwoorden die mogen."
+  },
+  "section3": {
+    "title": "De regels van ons spel",
+    "intro": "Er valt bijna niets te leren. Jullie gaan samen voor hetzelfde scherm zitten, en het gaat zo:",
+    "etape1Titre": "Er verschijnt een situatie",
+    "etape1Texte": "Bijvoorbeeld ‘Een gezamenlijke rekening hebben’. Jullie praten erover als dat nodig is, en antwoorden dan met één tik: JA of NEE. Gaat een situatie niet over jullie, dan kun je hem ook overslaan.",
+    "etape2Titre": "De stemmen van iedereen verschijnen",
+    "etape2Texte": "Meteen na jullie antwoord zie je de cijfers: bijvoorbeeld 1.203 mensen stemden ja en 255 stemden nee. Je weet meteen of jullie bij de meerderheid horen of tegen de stroom in gaan.",
+    "etape3Titre": "Jullie gaan door, of niet",
+    "etape3Texte": "Er zijn 120 situaties, maar niets verplicht jullie om ze in één keer te doen. Het spel heeft geen score en geen eindscherm: jullie stoppen wanneer jullie willen, en gaan later verder met de situaties die nog over zijn.",
+    "apres": "Een technisch detail dat ertoe doet: je kunt per situatie maar één keer stemmen. Kom je morgen terug, dan laten de situaties die je al beslist hebt hun cijfers zien, zonder dat je opnieuw kunt stemmen. Daardoor zeggen de percentages iets: niemand kan een kamp groter maken door tien keer te klikken."
+  },
+  "section4": {
+    "title": "Voorbeelden van situaties uit het spel",
+    "intro": "Hier zijn twintig van de honderdtwintig situaties, zoals het spel ze stelt. Er zitten heel concrete bij, wat zwaardere, en een paar onderwerpen waar je niet zo snel recht op af durft:",
+    "apres": "De andere 100 zitten in het spel, bij elk bezoek in een andere volgorde. Sommige zorgen voor wat wrijving, en eerlijk gezegd is dat ook een beetje de bedoeling: onenigheid over ‘Een beste vriend of vriendin van het andere geslacht hebben’ zegt meer dan een hele avond koetjes en kalfjes. Loopt een onderwerp vast, wuif het dan niet weg: misschien is het het begin van <a href=\"/nl/vragen-voor-koppels/\">een goed gesprek met z'n tweeën</a>, en dat is meer waard dan het spel."
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Hoe speel je ja of nee als koppel?",
+    "a1": "Jullie openen het spel samen op één telefoon, er verschijnt een situatie, en jullie antwoorden met één stem ja of nee. Meteen daarna laat het spel zien wat de anderen stemden. Er zijn 120 situaties, en jullie stoppen wanneer jullie willen.",
+    "q2": "Zijn de cijfers echte stemmen?",
+    "a2": "Ja. Elke klik op ja of nee wordt opgeslagen, van alle bezoekers samen, en iedereen kan maar één keer per situatie stemmen. De cijfers die je ziet veranderen dus naarmate andere koppels spelen.",
+    "q3": "Moeten jullie het allebei eens zijn om te antwoorden?",
+    "a3": "Daar draait het spel om: het antwoord is dat van het koppel, niet van één van jullie. Zijn jullie het oneens, dan is dat goed nieuws: er is iets om over te praten voordat jullie klikken.",
+    "q4": "Kun je het met vrienden spelen, of alleen?",
+    "a4": "Het spel is geschreven voor een koppel: de situaties gaan over een gezamenlijke rekening, de schoonfamilie of intimiteit. Alleen werkt het ook: je stemt je eigen mening en vergelijkt die met die van de anderen. Met vrienden vallen sommige situaties een beetje plat, maar niets houdt je tegen.",
+    "q5": "Wat gebeurt er na de 120 situaties?",
+    "a5": "Niet veel, en dat is expres: er is geen score en geen ranglijst, het spel zegt gewoon dat jullie alles gezien hebben. Bevalt het jullie, dan werken de dilemma's met hetzelfde stemsysteem, alleen stemmen jullie daar over <a href=\"/nl/dilemmas-voor-koppels/\">onmogelijke deals met een prijs eraan</a> in plaats van over situaties."
+  }
+}

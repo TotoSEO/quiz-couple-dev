@@ -14,7 +14,7 @@ le met à jour dans la PR de chaque lot.
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
 | - | Relecture native de l'échantillon | à faire |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen) ; lot 7 à faire |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen) ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES` | à faire |
 | 8 | Évaluation payante, e-mails, CGV | à faire |
 | 9 et suite | Blog | à faire |
@@ -1433,7 +1433,47 @@ le met à jour dans la PR de chaque lot.
   (`joue-boutons.cjs`, envois vers la base coupés pour ne compter aucun
   faux vote).
 
+## Lot 6f (31 octobre 2026) : je n'ai jamais, oui ou non
+
+- **Les pages** :
+
+  | Page | Title | H1 |
+  |---|---|---|
+  | `/nl/ik-heb-nog-nooit-vragen/` | Ik heb nog nooit vragen als koppel: speel ze samen online | ‘Ik heb nog nooit’-spel voor koppels: 100 vragen om samen te spelen |
+  | `/nl/ja-of-nee-vragen/` | Ja of nee vragen als koppel: 120 situaties, live stemmen | Ja of nee vragen: het online spel om als koppel te spelen |
+
+  Les deux titles disent « als koppel » et non « voor koppels » : « … vragen
+  voor koppels » contient le mot-clé principal de `/nl/vragen-voor-koppels/`
+  (1 600 recherches par mois), que `seo` signalait sur les deux pages.
+- **Les moteurs** : les cent affirmations de « ik heb nog nooit »
+  (`jamais`), qui commencent toutes par « Ik heb nog nooit », ou « Ik ben
+  nog nooit » quand le verbe se conjugue avec « zijn » (vreemdgaan,
+  vergeten, bang zijn), ce que la page dit ; les boutons « Ik wel » et
+  « Ik nooit », la page reprend l'exemple de référence du guide de style.
+  Les 120 situations de « ja of nee » (`ouiNon`) et les textes des deux
+  jeux. Sinterklaas à la place du père Noël (q84), « huwelijkse
+  voorwaarden » pour le contrat de mariage (q25).
+- **Ce que le néerlandais dit autrement** : la FAQ de « ik heb nog nooit »
+  sur le jeu à distance parle de la façon de le lancer (le jeu a le mode à
+  distance) ; le français et les autres langues disent encore de le jouer
+  en appel vidéo, sur un seul téléphone. La page de « ja of nee » précise
+  que ce n'est pas le « ja-nee-spel » (celui où l'on ne doit dire ni oui ni
+  non), le mot que tapent les Néerlandais pour l'autre jeu.
+- **Les liens** : comme en français, sauf les ancres. Trois restent en bas
+  de page (`BAS`), faute d'un passage plus haut sur le même sujet : la FAQ
+  de « ik heb nog nooit » vers « waarheid of durven 18+ » (un jeu plus
+  chaud), la dernière section et la FAQ de « ja of nee » vers « vragen voor
+  koppels » et les dilemmes ; les cellules du tableau de « ja of nee »
+  n'acceptent pas de lien.
+- **Vérifié** : une partie de « ik heb nog nooit » jusqu'au résultat, six
+  situations de « ja of nee » (`joue-boutons.cjs`, envois vers la base
+  coupés).
+
 ## Les chiffres
+
+Au lot 6f : `textes nl` sans erreur ; `seo nl` sans erreur ni
+avertissement (76 pages traduites) ; les deux jeux se jouent. Aucune page
+publique ne change.
 
 Au lot 6e : `textes nl` 818 parties écrites sur 1 045, sans erreur ; `seo
 nl` sans erreur (74 pages traduites) ; les deux jeux vont jusqu'à leur

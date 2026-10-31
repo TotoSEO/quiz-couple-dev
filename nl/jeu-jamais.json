@@ -1,0 +1,50 @@
+{
+  "jsonLd": {
+    "name": "Ik heb nog nooit, spel voor koppels"
+  },
+  "hero": {
+    "badge": "Spel voor koppels",
+    "title": "‘Ik heb nog nooit’-spel voor koppels: 100 vragen om samen te spelen",
+    "titleHighlight": "Ik heb nog nooit",
+    "description": "De grote klassieker van elk feestje, aangepast voor koppels: 100 vragen, jullie antwoorden om de beurt, en aan het eind zien jullie wie van jullie twee het meest op te biechten heeft!"
+  },
+  "section1": {
+    "title": "Zo werkt het spel ‘Ik heb nog nooit’",
+    "intro": "‘Ik heb nog nooit’ is een spel dat je met vrienden of met z'n tweeën kunt spelen. Het is heel simpel: je krijgt een situatie te zien en je zegt gewoon of je het al eens gedaan hebt, ‘<strong>ik wel</strong>’, of nog nooit, ‘<strong>ik nooit</strong>’. Bijvoorbeeld: ‘Ik heb nog nooit een bruiloft meegemaakt.’",
+    "intro2": "Zeg je ‘ik wel’, dan ben je dus al eens op een bruiloft geweest. Zeg je ‘ik nooit’, dan niet. Het is supersimpel, maar meestal levert het discussies op, komen er herinneringen boven en heb je samen een topavond!",
+    "intro3": "Zo werkt ons spel hierboven:",
+    "etape1Titre": "Vul jullie namen in en kies hoe lang jullie spelen",
+    "etape1Texte": "Je kunt spelen met 15, 30 of 100 vragen. Twijfel je, neem dan 15: aan het eind vraagt het spel toch of jullie willen doorgaan.",
+    "etape2Titre": "Lees de vraag hardop voor",
+    "etape2Texte": "Elke vraag begint met ‘Ik heb nog nooit’, of soms ‘Ik ben nog nooit’. Het leukst is om hem hardop voor te lezen, alsof jullie met echte kaartjes spelen.",
+    "etape3Titre": "Antwoord om de beurt",
+    "etape3Texte": "Het spel laat zien wie er aan de beurt is, en vraagt dan aan de ander: ‘En jij?’ Hebben jullie allebei geantwoord, dan gaan jullie door naar de volgende vraag, en dan begint de ander.",
+    "etape4Titre": "Kijk wie het meest heeft opgebiecht",
+    "etape4Texte": "Aan het eind krijgen jullie allebei een grafiek met hoe vaak je ‘ik wel’ en ‘ik nooit’ zei. Dan weten jullie eindelijk wie van jullie twee de braafste is!",
+    "apres": "Zoals je ziet, zitten er in onze versie <strong>geen drankjes en geen opdrachten</strong>: je antwoordt, jullie praten erover, en door naar de volgende. Spelen jullie liever een versie waarin wie iets opbiecht ervoor moet boeten, ga dan daarna <a href=\"/nl/opdrachten-voor-koppels/\">aan het rad draaien en een opdracht trekken</a>, dat past er perfect bij."
+  },
+  "section2": {
+    "title": "Het verschil tussen de klassieke versie en de versie voor koppels",
+    "p1": "Het grootste verschil zit in de vragen. In de klassieke versie krijg je <strong>heel algemene vragen</strong> uit het dagelijks leven, zoals ‘Ik heb nog nooit alcohol gedronken’ of ‘Ik heb nog nooit een auto-ongeluk gehad’.",
+    "p2": "Voor koppels gaat het veel meer <strong>over de relatie en wat je samen meemaakt</strong>: ‘Ik ben nog nooit vreemdgegaan’, ‘Ik heb nog nooit tegen mijn partner gelogen’, ‘Ik heb nog nooit gemokt om aandacht te krijgen’, ‘Ik heb nog nooit aan kinderen gedacht’, enzovoort.",
+    "p3": "Het andere verschil is hoe je speelt. Met vrienden steek je een vinger op of neem je een slok, vaak met z'n vijven of zessen. Als koppel neem je de tijd om over elk antwoord te praten, en daar draait het spel juist om. Hou je van dit soort spelletjes met z'n tweeën, dan is de kans groot dat je het ook leuk vindt om <a href=\"/nl/zou-je-liever-vragen/\">te kiezen tussen twee onmogelijke opties</a>, dat is hetzelfde idee. En om de avond in dezelfde sfeer voort te zetten, werkt <a href=\"/nl/wie-zou-eerder-vragen/\">aanwijzen wie van jullie waartoe in staat is</a> heel goed na de bekentenissen."
+  },
+  "section3": {
+    "title": "Voorbeelden van ‘ik heb nog nooit’-vragen",
+    "intro": "Hier zijn een stuk of twintig voorbeelden uit de 100 vragen van het spel, zodat je weet wat je te wachten staat. Er zitten lieve vragen tussen, vragen waar je je een beetje schuldig bij voelt, ondeugende, en een paar klassiekers om even op adem te komen tussen twee bekentenissen door.",
+    "apres": "De andere 80 ontdek je in het spel zelf. En spelen jullie nog een keer, dan geeft de knop ‘Opnieuw met andere vragen’ jullie eerst de vragen die jullie nog niet gezien hebben."
+  },
+  "faq": {
+    "title": "Vragen die we vaak krijgen",
+    "q1": "Hoe lang duurt een spel?",
+    "a1": "Reken op ongeveer 10 minuten voor 15 vragen, en het dubbele voor 30. Omdat elke vraag aan allebei de spelers wordt gesteld, zijn 15 vragen in feite 30 antwoorden.",
+    "q2": "Moet je drinken of opdrachten doen?",
+    "a2": "Nee, in onze versie is er geen drank en zijn er geen opdrachten: je antwoordt, jullie praten erover, en door naar de volgende. Daardoor kun je het altijd spelen, zelfs op een dinsdagavond op de bank.",
+    "q3": "Zijn de vragen gewaagd?",
+    "a3": "Een paar wel, ja, maar niets gênants voor twee mensen met een relatie. En zoeken jullie een veel heter spel, dan hebben we alles om <a href=\"/nl/waarheid-of-durven-18/\">samen de temperatuur flink te laten oplopen</a>.",
+    "q4": "Kunnen we het op afstand spelen?",
+    "a4": "Ja. Zet op het startscherm de afstandsmodus aan: ieder speelt dan op de eigen telefoon, en bij elke vraag zien jullie allebei het antwoord van de ander.",
+    "q5": "Kunnen we opnieuw spelen zonder dezelfde vragen te krijgen?",
+    "a5": "Ja. Het spel onthoudt welke vragen al gesteld zijn en kiest eerst uit de vragen die jullie nog niet gezien hebben. Na drie spellen van 30 hebben jullie ze zo ongeveer allemaal gehad."
+  }
+}
