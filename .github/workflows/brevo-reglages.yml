@@ -47,7 +47,7 @@ on:
         required: false
         default: 'e1,e2'
       langues:
-        description: 'essai et essai-immediat : langues (fr,en,es,de,it)'
+        description: 'essai et essai-immediat : langues (fr,en,es,de,it,nl)'
         required: false
         default: 'fr'
       angles:
@@ -90,6 +90,7 @@ jobs:
             es
             de
             it
+            nl
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

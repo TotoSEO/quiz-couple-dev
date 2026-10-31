@@ -798,3 +798,32 @@ l'identifiant du message, la file de sept jours) ont été jouées sur un
 Postgres 16 local, et lead-capture et brevo-webhook passent `deno check`. `node emails/apercu.mjs
 <dossier>` écrit les 160 aperçus (deux e-mails, cinq langues, quatre
 familles, avec et sans prénom, en maquette et en version sobre).
+
+## 31 octobre 2026 : le néerlandais, et la panne du 30 octobre
+
+**La panne.** Le néerlandais a rejoint les langues du site le 30 octobre 2026
+(`LANGUAGES` de config.js). `emails/contenu.mjs` en tirait ses langues
+(`LANGUES = LANGUAGES`) et lisait donc `emails/textes/nl.json`, qui n'existait
+pas : l'envoi du soir échouait au chargement (ENOENT). Les deux passages du
+30 octobre ont fini en erreur, aucun e1 ni e2 n'est parti ce soir-là, et l'e1
+immédiat s'est arrêté dans la nuit, quand les modèles publiés le 29 au soir
+(valables 30 heures) ont expiré. Corrigé le 31 octobre (#727) : le parcours ne
+prend que les langues du site qui ont leurs textes et leur dossier
+(`emails/textes/<langue>.json`, `<langue>/bilan-questions.json`,
+`<langue>/bilan.json`), et un test le vérifie. Un passage lancé à la main à
+15 h 31 (hors de la fenêtre, il ne fait que republier) a remis l'e1 immédiat
+en route ; les adresses arrivées entre-temps passent par la file du soir, qui
+garde un e1 sept jours.
+
+**Le néerlandais** (lot 8h de docs/langues/nl/AVANCEMENT.md) : textes
+`emails/textes/nl.json` (« je » à la personne, « jullie » au couple, la
+relatiecheck, le prix au format néerlandais, la séance chez un
+relatietherapeut « al snel 60 euro of meer »), carte « Zou je liever? » avec
+le mot « of » (`public/email/voir-tu-preferes-nl.png`), e1 immédiat
+(`immediat.langues`), page de désinscription (`regles.mjs`), place dans la
+file du soir juste avant l'espagnol, qui reste le dernier, et colonne de
+l'onglet Leads. capture.js range désormais une adresse de page /nl/ en `nl`
+(en anglais du 31 octobre au matin jusque-là ; celles-là gardent l'anglais).
+Une langue ajoutée au site doit aussi entrer dans la liste sparse-checkout
+d'emails-parcours.yml et de brevo-reglages.yml : sans son dossier, elle reste
+hors du parcours.

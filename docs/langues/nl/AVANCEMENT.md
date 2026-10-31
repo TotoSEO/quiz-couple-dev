@@ -16,7 +16,7 @@ le met à jour dans la PR de chaque lot.
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
 | 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 en cours : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 à faire |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) |
-| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation) |
+| 8 | Évaluation payante, e-mails, CGV | en cours : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
 | 9 et suite | Blog | à faire |
 
 ## Lot 0 (30 octobre 2026)
@@ -1797,15 +1797,42 @@ spéciaux ».
   l'offre repliée ; le célibataire et son sondage ; l'e-mail du rapport et son
   lien qui ouvre le rapport et télécharge `relatiecheck-thomas-en-lea.pdf`
   une fois. Aucune erreur dans la console.
-- **Ce qui reste en anglais** : le parcours e-mail des abonnés (une adresse
-  laissée à la porte d'une page /nl/ est rangée en anglais par capture.js, et
-  reçoit les e-mails anglais, qui mènent à la page anglaise de l'évaluation).
+- **Ce qui restait en anglais** : le parcours e-mail des abonnés, traduit au
+  lot 8h le même jour.
 - **Ce que fait Thomas** : activer iDEAL et Bancontact dans le tableau de bord
   de Stripe (Paramètres, Moyens de paiement). La session ne fixe pas
   `payment_method_types` : ils apparaissent d'eux-mêmes sur la page de
   paiement, en euros, sans changement de code. Les vignettes de la page de
   vente (Visa, Mastercard, CB, Apple Pay, Google Pay) ne les montrent pas
   tant qu'ils ne sont pas actifs.
+
+## Lot 8h (31 octobre 2026) : le parcours e-mail des abonnés
+
+- **Une panne trouvée en chemin** : depuis l'ajout du néerlandais aux
+  langues du site (30 octobre), `emails/contenu.mjs` cherchait
+  `emails/textes/nl.json` et l'envoi du soir échouait au chargement (aucun e1
+  ni e2 le 30 octobre, e1 immédiat arrêté dans la nuit). Corrigé à part
+  (#727) : le parcours ne prend que les langues qui ont leurs textes et leur
+  dossier ; un passage à la main a remis l'e1 immédiat en route à 15 h 31.
+- `emails/textes/nl.json` : e1, e2 et la version sobre, « Hoi [[prenom]]! »,
+  la relatiecheck, « Bekijk hoe het werkt », la question sur l'argent de la
+  relatiecheck en e2 (« Een gezamenlijke rekening of ieder zijn eigen
+  geld? »), « minder dan een bioscoopkaartje », le relatietherapeut à
+  « al snel 60 euro of meer », signé « Thomas, van Quiz Couple ».
+- La carte « Zou je liever? » : la carte anglaise avec le mot « of » à la
+  place de « or », police calée sur l'original (Inter ExtraBold 19,5 px),
+  `public/email/voir-tu-preferes-nl.png`.
+- L'e1 dans la minute en néerlandais (`immediat.langues`, au prix habituel),
+  page de désinscription en néerlandais (`regles.mjs`), capture.js range une
+  adresse de page /nl/ en `nl`, file du soir : le néerlandais juste avant
+  l'espagnol, qui reste le dernier (`emails_du_jour`), colonne `nl` dans
+  l'onglet Leads (`get_abonnes_tableau`, `LANGUES_ABONNES`). Les migrations
+  rejouées par emails-base.yml et abonnes-base.yml portent `nl` (essayées
+  sur un Postgres 16 local avec six abonnés d'essai).
+- Les deux workflows d'envoi récupèrent le dossier `nl/` (la question de
+  l'e2 et le PS en viennent).
+- 75 tests (parcours, e-mails, abonnés) ; aperçus relus dans les deux
+  versions (maquette et sobre).
 
 ## Les chiffres
 

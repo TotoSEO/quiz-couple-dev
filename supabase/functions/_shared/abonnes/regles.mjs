@@ -10,7 +10,7 @@
 // serveur (un enregistrement MX ou A, Deno.resolveDns) ; les rebonds des
 // envois à venir finiront le ménage (statut `invalide`).
 
-export const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
+export const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];
 export const EMAIL_MAX = 254;
 export const LOCAL_MAX = 64;
 export const PAGE_MAX = 200;
@@ -116,8 +116,9 @@ const DESINSCRIPTION = {
   es: { titre: 'Te has dado de baja', texte: 'Ya no recibirás e-mails de Quiz Couple. Tus resultados y todo el sitio siguen disponibles, gratis.', lien: 'Volver a Quiz Couple', deja: 'Esta dirección ya estaba dada de baja, o el enlace ya no es válido. En ambos casos, no volverás a recibir nada de nuestra parte.' },
   de: { titre: 'Du bist abgemeldet', texte: 'Du bekommst keine E-Mails mehr von Quiz Couple. Deine Ergebnisse und die ganze Website bleiben kostenlos zugänglich.', lien: 'Zurück zu Quiz Couple', deja: 'Diese Adresse war bereits abgemeldet, oder der Link ist nicht mehr gültig. In beiden Fällen hörst du nichts mehr von uns.' },
   it: { titre: 'Sei disiscritto/a', texte: 'Non riceverai più e-mail da Quiz Couple. I tuoi risultati e tutto il sito restano accessibili, gratis.', lien: 'Torna su Quiz Couple', deja: 'Questo indirizzo era già disiscritto, o il link non è più valido. In entrambi i casi, non riceverai più niente da parte nostra.' },
+  nl: { titre: 'Je bent afgemeld', texte: 'Je krijgt geen e-mails meer van Quiz Couple. Je uitslagen en de hele site blijven gratis toegankelijk.', lien: 'Terug naar Quiz Couple', deja: 'Dit adres was al afgemeld, of de link is niet meer geldig. Hoe dan ook: je hoort niets meer van ons.' },
 };
-const ACCUEIL = { fr: 'https://quiz-couple.com/', en: 'https://quiz-couple.com/en/', es: 'https://quiz-couple.com/es/', de: 'https://quiz-couple.com/de/', it: 'https://quiz-couple.com/it/' };
+const ACCUEIL = { fr: 'https://quiz-couple.com/', en: 'https://quiz-couple.com/en/', es: 'https://quiz-couple.com/es/', de: 'https://quiz-couple.com/de/', it: 'https://quiz-couple.com/it/', nl: 'https://quiz-couple.com/nl/' };
 
 export function pageDesinscription(lang, trouve) {
   const l = langueValide(lang) || 'fr';

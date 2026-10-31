@@ -54,6 +54,7 @@ jobs:
             es
             de
             it
+            nl
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

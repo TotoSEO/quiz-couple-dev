@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS public.abonnes (
   CONSTRAINT abonnes_jeton_unique UNIQUE (jeton),
   CONSTRAINT abonnes_bornes CHECK (
     char_length(email) BETWEEN 6 AND 254 AND email = lower(email) AND position('@' IN email) > 1
-    AND lang IN ('fr', 'en', 'es', 'de', 'it')
+    AND lang IN ('fr', 'en', 'es', 'de', 'it', 'nl')
     AND source ~ '^[a-z0-9-]{1,40}$'
     AND (page IS NULL OR char_length(page) <= 200)
     AND statut IN ('actif', 'desinscrit', 'invalide')
@@ -91,14 +91,14 @@ BEGIN
     'jours', jours,
     'par_source', COALESCE((
       SELECT jsonb_agg(jsonb_build_object('source', s.source, 'n', s.n, 'actifs', s.actifs, 'periode', s.periode,
-        'fr', s.fr, 'en', s.en, 'es', s.es, 'de', s.de, 'it', s.it) ORDER BY s.n DESC, s.source)
+        'fr', s.fr, 'en', s.en, 'es', s.es, 'de', s.de, 'it', s.it, 'nl', s.nl) ORDER BY s.n DESC, s.source)
       FROM (
         SELECT source, count(*) AS n,
           count(*) FILTER (WHERE statut = 'actif') AS actifs,
           count(*) FILTER (WHERE (created_at AT TIME ZONE tz)::date >= debut) AS periode,
           count(*) FILTER (WHERE lang = 'fr') AS fr, count(*) FILTER (WHERE lang = 'en') AS en,
           count(*) FILTER (WHERE lang = 'es') AS es, count(*) FILTER (WHERE lang = 'de') AS de,
-          count(*) FILTER (WHERE lang = 'it') AS it
+          count(*) FILTER (WHERE lang = 'it') AS it, count(*) FILTER (WHERE lang = 'nl') AS nl
         FROM abonnes GROUP BY source
       ) s), '[]'::jsonb),
     'par_langue', COALESCE((

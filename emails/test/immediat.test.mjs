@@ -37,7 +37,7 @@ test('les réglages lus par la base : actifs en mode réel seulement, sans l\'es
   const r = reglagesImmediat('reel');
   assert.equal(r.actif, REGLAGES.immediat.actif);
   assert.equal(r.parJour, REGLAGES.immediat.parJour);
-  assert.deepEqual(r.langues, ['en', 'fr', 'it', 'de']);
+  assert.deepEqual(r.langues, ['en', 'fr', 'it', 'de', 'nl']);
   assert.equal(r.ab, REGLAGES.ab);
   assert.deepEqual(r.expediteur, REGLAGES.expediteur);
   assert.equal(r.repondreA, REGLAGES.repondreA);
@@ -53,7 +53,8 @@ test('la publication : les modèles puis les réglages, en remplaçant ceux de l
   const ecrits = [];
   const base = { insert: async (table, lignes, o) => { ecrits.push({ table, lignes, o }); return lignes; } };
   const r = await publierImmediat(base, { instant: SOIR, mode: 'reel' });
-  assert.deepEqual(r, { actif: true, modeles: 10 });
+  // Une langue du parcours sur deux versions (a, b) : six langues, douze modèles.
+  assert.deepEqual(r, { actif: true, modeles: 12 });
   assert.deepEqual(ecrits.map((e) => [e.table, e.o]), [
     ['emails_modeles', { conflit: 'type,lang,version' }],
     ['emails_reglages', { conflit: 'cle' }],
@@ -110,7 +111,8 @@ test('le bilan des arrivées : qui pouvait recevoir l\'e1 tout de suite, et ce q
     { abonne_id: 'a7', immediat: false },
     { abonne_id: 'x9', immediat: true }, // une adresse déjà connue, redonnée
   ];
+  // langues: sans-nl (données d'essai : sept adresses dans les cinq premières langues)
   const b = bilanArrivees(arrivees, envois, new Set(['en', 'fr', 'it', 'de']), maintenant);
-  assert.deepEqual(b, { arrivees: 7, visees: 4, tout: 1, soir: 1, attente: 1, sans: 1, parLangue: { en: 2, fr: 1, it: 1, es: 1, de: 2 } });
+  assert.deepEqual(b, { arrivees: 7, visees: 4, tout: 1, soir: 1, attente: 1, sans: 1, parLangue: { en: 2, fr: 1, it: 1, es: 1, de: 2 } }); // langues: sans-nl (données d'essai)
   assert.deepEqual(bilanArrivees([], [], new Set(['en']), maintenant), { arrivees: 0, visees: 0, tout: 0, soir: 0, attente: 0, sans: 0, parLangue: {} });
 });

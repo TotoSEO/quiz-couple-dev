@@ -26,6 +26,7 @@ test('les adresses jetables sont refusées, sous-domaines compris', () => {
 
 test('langue, source et page sont bornées', () => {
   assert.equal(R.langueValide('de'), 'de');
+  assert.equal(R.langueValide('nl'), 'nl');
   assert.equal(R.langueValide('pt'), null);
   assert.equal(R.sourceValide('tester-couple'), 'tester-couple');
   assert.equal(R.sourceValide('Tester Couple'), null);
@@ -50,6 +51,8 @@ test('la page de désinscription est dans la langue et sans injection', () => {
   assert.ok(html.includes('<html lang="de">') && html.includes('abgemeldet'));
   assert.ok(R.pageDesinscription('xx', false).includes('<html lang="fr">'));
   assert.ok(R.pageDesinscription('fr', false).includes('déjà désinscrite'));
+  const nl = R.pageDesinscription('nl', true);
+  assert.ok(nl.includes('<html lang="nl">') && nl.includes('afgemeld') && nl.includes('https://quiz-couple.com/nl/'));
 });
 
 test('le prénom : des lettres seulement, mis en forme quand il est tout en minuscules ou en capitales', () => {
