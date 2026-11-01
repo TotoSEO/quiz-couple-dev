@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-01T03:13:42.273Z",
+  "genere_le": "2026-11-01T10:25:49.517Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -4572,6 +4572,24 @@
       "jour": "2026-10-24",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "df5b34b3-5c40-4b7b-8048-7dceae08ba33",
+      "releve": "j7",
+      "vues": 1342,
+      "portee": 1178,
+      "likes": 31,
+      "commentaires": 0,
+      "partages": 3,
+      "enregistrements": 1,
+      "releve_le": "2026-11-01T10:25:46.872936+00:00",
+      "publie_le": "2026-10-25T06:20:11.133+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-25",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4599,13 +4617,13 @@
     },
     {
       "categorie": "baton",
-      "posts": 7,
-      "vues_mediane": 1326,
-      "vues_moyenne": 1279,
+      "posts": 8,
+      "vues_mediane": 1334,
+      "vues_moyenne": 1287,
       "vues_max": 1647,
-      "partages": 22,
-      "enregistrements": 12,
-      "likes": 132,
+      "partages": 25,
+      "enregistrements": 13,
+      "likes": 163,
       "commentaires": 0
     },
     {
