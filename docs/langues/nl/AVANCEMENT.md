@@ -1991,7 +1991,56 @@ spéciaux ».
 - Un titre de section ne contient plus « echt » (« Zijn excuses zijn nooit
   gemeend » dans l'article sur les red flags chez un homme).
 
+## Le plan de finition (2 novembre 2026)
+
+Thomas, le 1er novembre 2026 : finir la traduction (le blog, puis les quiz
+spéciaux), puis « vérifie que les title meta H1 H2 H3 soient conformes aux
+directives SEO que j'ai fixée, et survole les contenus des pages pour vérifier
+que y'ait pas de problèmes de traduction, genre des trucs trop litéraux. Met
+toi dans la peau d'un néerlandais ! », et enfin le push final. Dans l'ordre :
+
+1. **Le blog** (lot 9) : les 66 articles qui restaient, par lots de 4 à 6,
+   dans l'ordre des clics français ; les douze articles d'astrologie ensemble
+   (lot 9c).
+2. **Les quiz spéciaux d'Halloween** (lot 7) : le hub, les cinq quiz, leurs
+   textes de moteur (`gd.json`), leurs entrées de `quizzes.json` et les textes
+   alternatifs de `config.js` ; les six pages sortent de `PAGES_EN_ATTENTE`.
+3. **La vérification** : les contrôles à zéro (`code`, `textes`, `seo`,
+   `liens`, `site --jouer`, `verifie-article`), la revue des title, meta, H1,
+   H2 et H3 de chaque page contre `mots-cles.tsv` et les règles, puis une
+   relecture du texte de chaque page comme un lecteur néerlandais (calques du
+   français, anglicismes, vouvoiement, de/het, régionalismes, typographie).
+4. **Le push final** : la clé `nl` quitte `PAGES_EN_ATTENTE` (plus aucun
+   repli sur le français), CLAUDE.md, AVANCEMENT et CADRAGE à jour,
+   vérification en ligne (sitemap, hreflang, flux RSS, indexation).
+
+Chaque lot met cette page à jour : si la session s'arrête, on reprend au
+premier point qui n'est pas fait.
+
+## Lot 9c (2 novembre 2026) : les douze signes du zodiaque
+
+- Les douze `compatibilite-amoureuse-*`
+  (`/nl/blog/welk-sterrenbeeld-past-bij-<teken>/`), écrits ensemble par un
+  générateur qui reprend le gabarit français (fiches, notes, étoiles) et y
+  pose le néerlandais : title « Welk sterrenbeeld past bij Waterman? Alle 12
+  tekens », H1 « De Waterman in de liefde: met welke tekens klikt het? »,
+  description sur la requête. La réponse « welk sterrenbeeld past het best »
+  se calcule sur les notes des fiches ; la liste « De andere sterrenbeelden in
+  de liefde » mène aux onze autres.
+- Les signes : Ram, Stier, Tweelingen, Kreeft, Leeuw, Maagd, Weegschaal,
+  Schorpioen, Boogschutter, Steenbok, Waterman, Vissen ; « een Tweelingen »
+  et « een Vissen » au singulier, comme on le dit en néerlandais ; la Maagd
+  et la Weegschaal au féminin, comme en français.
+- Les liens du texte : les deux outils de compatibilité dans l'introduction
+  (« op basis van jullie twee geboortedata », « met jullie namen en
+  sterrenbeelden ») et le test de compatibilité dans la dernière question
+  (« hoe goed jullie waarden en karakters bij elkaar passen »).
+
 ## Les chiffres
+
+Au lot 9c : dix-sept articles en ligne ; `verifie-article` sans erreur sur
+les douze nouveaux, `seo nl`, `liens nl` et `site nl --pages blog` sans
+erreur.
 
 Au lot 9b : cinq articles en ligne ; `verifie-article` sans erreur sur les
 cinq, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
