@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-31T09:34:28.386Z",
+  "genere_le": "2026-11-01T03:13:46.435Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-31",
+  "aujourdhui": "2026-11-01",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 152,
+  "reserve_jours": 151,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -651,7 +651,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -2891,8 +2891,8 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-31",
-      "creneau": "soir"
+      "jour": "2026-11-02",
+      "creneau": "matin"
     },
     "mipaps-statique": null,
     "mipaps-histoire": null,
@@ -3690,6 +3690,24 @@
       "jour": "2026-10-24",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "96995bbc-cf49-4888-9fb7-aef80cf511f0",
+      "releve": "j7",
+      "vues": 1775,
+      "portee": 1495,
+      "likes": 91,
+      "commentaires": 0,
+      "partages": 38,
+      "enregistrements": 11,
+      "releve_le": "2026-11-01T03:13:38.594708+00:00",
+      "publie_le": "2026-10-24T15:30:15.263+00:00",
+      "categorie": "mipaps-statique",
+      "format": "reel",
+      "gabarit": "mipaps-statique",
+      "jour": "2026-10-24",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -3706,13 +3724,13 @@
     },
     {
       "categorie": "mipaps-statique",
-      "posts": 6,
-      "vues_mediane": 212,
-      "vues_moyenne": 805,
+      "posts": 7,
+      "vues_mediane": 213,
+      "vues_moyenne": 943,
       "vues_max": 2649,
-      "partages": 95,
-      "enregistrements": 30,
-      "likes": 149,
+      "partages": 133,
+      "enregistrements": 41,
+      "likes": 240,
       "commentaires": 1
     },
     {
