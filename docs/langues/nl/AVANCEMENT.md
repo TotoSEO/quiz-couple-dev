@@ -2036,7 +2036,28 @@ premier point qui n'est pas fait.
   sterrenbeelden ») et le test de compatibilité dans la dernière question
   (« hoe goed jullie waarden en karakters bij elkaar passen »).
 
+## Lot 9d (2 novembre 2026) : vakantie, stoppen of doorgaan, fases, vragen aan je vriend
+
+- `disputes-couple-vacances` (`/nl/blog/ruzie-op-vakantie/`), `arreter-ou-continuer-relation`
+  (`/nl/blog/relatie-stoppen-of-doorgaan/`), `les-phases-de-la-rupture-chez-l-homme`
+  (`/nl/blog/fases-van-een-breuk-bij-een-man/`) et `questions-a-poser-a-son-copain`
+  (`/nl/blog/vragen-om-aan-je-vriend-te-stellen/`), dans l'ordre des clics français.
+- Les enquêtes françaises (OpinionWay, IFOP) sont présentées comme françaises ; le
+  test « où partir en vacances » n'existe qu'en français, sa mention est retirée.
+- Les liens vers les articles réservés au français (manque de communication, sauver
+  son couple) sont retirés, le texte reste ; le 3919 devient Veilig Thuis (0800-2000,
+  jour et nuit), le 1712 (Belgique, jours ouvrables) et le 112.
+- « Le cycle de rupture de la psychologie masculine » devient ‘de break-upcyclus van
+  mannen’ ; les titres de phase évitent « echt » (« als het werkelijkheid wordt »).
+- Une carte « Lees ook » vise un article pas encore traduit
+  (`dingen-die-je-niet-accepteert-in-een-relatie`) : son titre néerlandais sera « Wat
+  je nooit zou moeten accepteren in een relatie » ; avant le push final, un passage
+  aligne le titre de chaque carte sur celui de sa cible.
+
 ## Les chiffres
+
+Au lot 9d : vingt et un articles en ligne ; `verifie-article`, `seo nl`,
+`liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9c : dix-sept articles en ligne ; `verifie-article` sans erreur sur
 les douze nouveaux, `seo nl`, `liens nl` et `site nl --pages blog` sans
