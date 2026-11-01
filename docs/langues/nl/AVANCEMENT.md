@@ -2068,7 +2068,31 @@ premier point qui n'est pas fait.
   guide ; « Love bombing » et « love bombing » vont dans `identiques.txt` (le mot
   anglais que les Néerlandais emploient).
 
+## Lot 9f (2 novembre 2026) : moeite, afhankelijkheid, narcist, zomeruitjes
+
+- `copain-ne-fait-pas-effort` (`/nl/blog/mijn-vriend-doet-geen-moeite/`),
+  `dependance-affective` (`/nl/blog/emotionele-afhankelijkheid/`),
+  `pervers-narcissique-amour` (`/nl/blog/narcist-in-de-liefde/`) et
+  `activites-couple-ete` (`/nl/blog/zomeruitjes-voor-koppels/`).
+- Le « pervers narcissique » devient « narcist », comme sur la page du test
+  (`/nl/narcistische-partner-test/`) ; l'encadré sur le mot dit d'où vient la
+  « perverse narcist » (Racamier) sans en faire un mot-clé.
+- Le 3919 et le code pénal français deviennent Veilig Thuis (0800-2000), la 1712
+  et le 112, et une réponse qui dit ce qui est punissable aux Pays-Bas et en
+  Belgique (bedreiging, belaging, mishandeling) sans prétendre que le psychisch
+  geweld l'est toujours ; le juge des affaires familiales devient « een rechter
+  kan rekening houden met ».
+- Le « Spoiler : » et le plan annoncé en introduction disparaissent ; la phrase
+  qui renvoyait à la page des activités autour de chez soi (retirée du site le
+  17 octobre 2026) n'est pas reprise ; « Strasbourg » devient « Straatsburg »,
+  les « journées du patrimoine » la Open Monumentendag.
+- Les liens vers les articles du narcissisme pas encore traduits (breuk,
+  manipulator, kenmerken) restent neutralisés jusqu'à leur lot.
+
 ## Les chiffres
+
+Au lot 9f : vingt-neuf articles en ligne ; `verifie-article`, `seo nl`,
+`liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9e : vingt-cinq articles en ligne ; `verifie-article`, `seo nl`,
 `liens nl` et `site nl --pages blog` sans erreur, descriptions de 120 à 155
