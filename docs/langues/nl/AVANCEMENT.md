@@ -2054,7 +2054,25 @@ premier point qui n'est pas fait.
   je nooit zou moeten accepteren in een relatie » ; avant le push final, un passage
   aligne le titre de chaque carte sur celui de sa cible.
 
+## Lot 9e (2 novembre 2026) : afzeggen, negeren, grenzen, love bombing
+
+- `il-annule-au-dernier-moment` (`/nl/blog/hij-zegt-op-het-laatste-moment-af/`),
+  `homme-qu-on-ignore` (`/nl/blog/wat-voelt-een-man-als-je-hem-negeert/`),
+  `choses-pas-accepter-couple` (`/nl/blog/dingen-die-je-niet-accepteert-in-een-relatie/`,
+  H1 « Wat je nooit zou moeten accepteren in een relatie », le titre que portaient
+  déjà les cartes du lot 9d) et `love-bombing` (`/nl/blog/love-bombing-signalen/`).
+- Les faux échanges de messages prennent un prénom néerlandais (Bram) et les mots
+  du téléphone (« Gelezen 19:14 »).
+- Les introductions qui s'en prenaient aux autres articles (« les listes de signes,
+  tu en trouveras partout ») entrent dans le sujet sans ce détour, comme le veut le
+  guide ; « Love bombing » et « love bombing » vont dans `identiques.txt` (le mot
+  anglais que les Néerlandais emploient).
+
 ## Les chiffres
+
+Au lot 9e : vingt-cinq articles en ligne ; `verifie-article`, `seo nl`,
+`liens nl` et `site nl --pages blog` sans erreur, descriptions de 120 à 155
+signes.
 
 Au lot 9d : vingt et un articles en ligne ; `verifie-article`, `seo nl`,
 `liens nl` et `site nl --pages blog` sans erreur.
