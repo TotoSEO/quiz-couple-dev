@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-31T09:34:24.015Z",
+  "genere_le": "2026-11-01T03:13:42.273Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-31",
+  "aujourdhui": "2026-11-01",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 152,
+  "reserve_jours": 151,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -687,7 +687,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -696,7 +696,7 @@
       "creneau": "soir",
       "gabarit": "baton",
       "categorie": "baton",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -750,7 +750,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: at home?",
       "erreur": null
     },
@@ -3632,7 +3632,7 @@
     "bd": null,
     "dix-mais": null,
     "baton": {
-      "jour": "2026-10-31",
+      "jour": "2026-11-07",
       "creneau": "soir"
     }
   },
@@ -4536,18 +4536,54 @@
       "jour": "2026-10-24",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "4197df44-326a-4408-865a-dfa9045ab8c3",
+      "releve": "j7",
+      "vues": 170,
+      "portee": 56,
+      "likes": 3,
+      "commentaires": 0,
+      "partages": 6,
+      "enregistrements": 1,
+      "releve_le": "2026-11-01T03:13:35.003147+00:00",
+      "publie_le": "2026-10-24T14:20:09.634+00:00",
+      "categorie": "dix-mais",
+      "format": "carrousel",
+      "gabarit": "carrousel",
+      "jour": "2026-10-24",
+      "creneau": "soir",
+      "theme": null
+    },
+    {
+      "variante_id": "dfd21e9c-bfa2-4f19-a04b-c232127f9362",
+      "releve": "j7",
+      "vues": 1554,
+      "portee": 1312,
+      "likes": 31,
+      "commentaires": 0,
+      "partages": 20,
+      "enregistrements": 8,
+      "releve_le": "2026-11-01T03:13:37.143915+00:00",
+      "publie_le": "2026-10-24T09:50:10.104+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-24",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 9,
-      "vues_mediane": 2676,
-      "vues_moyenne": 15713,
+      "posts": 10,
+      "vues_mediane": 2589,
+      "vues_moyenne": 14297,
       "vues_max": 74587,
-      "partages": 4619,
-      "enregistrements": 1912,
-      "likes": 1768,
+      "partages": 4639,
+      "enregistrements": 1920,
+      "likes": 1799,
       "commentaires": 3
     },
     {
@@ -4618,13 +4654,13 @@
     },
     {
       "categorie": "dix-mais",
-      "posts": 1,
+      "posts": 2,
       "vues_mediane": 170,
       "vues_moyenne": 170,
       "vues_max": 170,
-      "partages": 0,
-      "enregistrements": 2,
-      "likes": 3,
+      "partages": 6,
+      "enregistrements": 3,
+      "likes": 6,
       "commentaires": 0
     },
     {
