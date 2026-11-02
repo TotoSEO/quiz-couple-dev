@@ -2255,7 +2255,38 @@ premier point qui n'est pas fait.
 - Le contrôle `site` a relevé « 📖 In Les Misérables », le même texte que
   l'anglais : le titre de l'encadré dit « Hun datum in Les Misérables ».
 
+## Lot 9p (2 novembre 2026) : les six articles de décembre, le blog est complet
+
+- `peur-de-l-engagement` (`/nl/blog/bindingsangst/`, 8 décembre),
+  `5-langages-de-l-amour` (`/nl/blog/de-5-liefdestalen/`, 12 décembre),
+  `jalousie-maladive` (`/nl/blog/ziekelijke-jaloezie/`, 15 décembre),
+  `signes-infidelite` (`/nl/blog/tekenen-van-vreemdgaan/`, 19 décembre),
+  `micro-tromperie` (`/nl/blog/micro-cheating/`, 22 décembre) et
+  `pardonner-une-infidelite` (`/nl/blog/vreemdgaan-vergeven/`, 26 décembre),
+  programmés aux mêmes dates qu'en français.
+- Les cinq liefdestalen portent les noms du test du site (`pf_axis_*` de
+  `nl/gd.json` : bevestigende woorden, quality time, dienstbaarheid, cadeaus,
+  lichamelijke aanraking).
+- Les ancres françaises qui étaient le mot-clé de la page visée (« attachement
+  anxieux », « gaslighting », « dépendance affective ») disent en néerlandais ce
+  dont parle la page (« bij elke stilte bang zijn verlaten te worden », « je
+  laten twijfelen aan wat je zelf zag », « alleen door de ander in evenwicht
+  blijven »).
+- « Echt » sortait d'un H2 (« Hoe echt vergeven verloopt ») : « Hoe vergeven in
+  de praktijk verloopt ».
+- Vérifié sur une construction datée du 27 décembre (`BUILD_DATE_OVERRIDE`),
+  où les 71 articles traduits sont publiés : `verifie-article`, `seo nl`,
+  `liens nl` et `site nl --pages blog` sans erreur, puis `seo` et `liens` sur
+  la construction du jour.
+- Les 79 articles du blog moins les 8 `frOnly` : les 71 ont leur version
+  néerlandaise.
+
 ## Les chiffres
+
+Au lot 9p : les 71 articles traduits, cinquante-cinq en ligne et seize programmés
+(du 3 novembre au 26 décembre) ; `verifie-article`, `seo nl`, `liens nl` et
+`site nl --pages blog` sans erreur, sur la construction du jour et sur celle du
+27 décembre.
 
 Au lot 9o : cinquante-cinq articles en ligne et dix programmés (du 3 novembre au
 5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
