@@ -2370,6 +2370,14 @@ premier point qui n'est pas fait.
 
 ## Les chiffres
 
+À la vérification finale (2 novembre 2026) : `PAGES_EN_ATTENTE` sans entrée
+`nl` ; `code` 0 passage sans `nl` dans 329 fichiers ; `textes` 1 045 parties
+sur 1 045, 0 erreur ; `seo` 92 pages, 0 erreur ; `liens` 51 193 liens vers ou
+depuis /nl/, 0 erreur ; `verifie-article` sans erreur sur les 71 articles
+(construction du 27 décembre) ; `site --jouer` sur les 155 pages (une page
+rejouée seule, voir « Vérification et push final »), puis sur les quatre pages
+touchées ce jour-là ; construction du jour : 935 pages, aucun échec.
+
 Au lot 7 : toutes les pages traduites (`PAGES_EN_ATTENTE.nl` vide), 92 pages contrôlées
 par `seo` ; `code`, `textes`, `seo`, `liens` et `site --jouer` (six pages des quiz
 spéciaux) sans erreur.
