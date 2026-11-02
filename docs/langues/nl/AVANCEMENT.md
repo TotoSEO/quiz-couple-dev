@@ -2126,7 +2126,32 @@ premier point qui n'est pas fait.
 - La carte de fin de `narcistische-manipulator` retrouve sa cible française
   (les 35 phrases), traduite dans le même lot.
 
+## Lot 9i (2 novembre 2026) : toxische man, toxische vrouw, afhankelijkheid bij mannen, doorbreken
+
+- `homme-toxique-en-amour` (`/nl/blog/toxische-man-in-een-relatie/`),
+  `femme-toxique-en-amour` (`/nl/blog/toxische-vrouw-in-een-relatie/`),
+  `dependance-affective-chez-l-homme` (`/nl/blog/emotionele-afhankelijkheid-bij-mannen/`)
+  et `sortir-de-la-dependance-affective` (`/nl/blog/emotionele-afhankelijkheid-doorbreken/`,
+  H1 « Hoe kom je uit een emotionele afhankelijkheid? 12 concrete oefeningen »).
+- Le « contrôle coercitif » devient « dwingende controle », le mot néerlandais.
+- Le livre de Géraldyne Prévot-Gigant (« 50 exercices pour sortir de la
+  dépendance affective »), en français seulement, n'est pas cité : l'article
+  conseille de demander un cahier d'exercices à son psychologue ou à son
+  médecin traitant (huisarts).
+- Les titres des articles de la série de la dépendance pas encore traduits sont
+  fixés dès maintenant, pour que les cartes « Lees ook » qui les annoncent
+  disent juste : symptomen (« De symptomen van emotionele afhankelijkheid:
+  voorbeelden en gevolgen »), manipulator (« Ik ben emotioneel afhankelijk van
+  een manipulator: wat nu? »), liefde of afhankelijkheid (« Hou ik van hem, of
+  ben ik bang hem kwijt te raken? »), na een breuk (« Emotionele
+  afhankelijkheid na een breuk: het afkicken overleven en weer opkrabbelen »),
+  vriendschap (« Emotionele afhankelijkheid in een vriendschap: als een
+  vriendin een behoefte wordt »).
+
 ## Les chiffres
+
+Au lot 9i : trente-neuf articles en ligne et deux programmés (10 et 21 novembre) ;
+`verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9h : trente-cinq articles en ligne et deux programmés (10 et 21 novembre) ;
 `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
