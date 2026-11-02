@@ -19,7 +19,7 @@
   function starsHtml(rating) {
     var html = '';
     for (var i = 1; i <= 5; i++) {
-      html += '<svg viewBox="0 0 24 24" class="w-4 h-4 ' + (i <= rating ? 'star-filled' : 'star-empty') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+      html += '<svg viewBox="0 0 24 24" class="adm-etoile' + (i <= rating ? ' est-pleine' : '') + '" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
     }
     return html;
   }
@@ -1032,7 +1032,7 @@
       var autres = d.autres || [];
       if (autres.length) {
         html += '<p class="bil-fait-l">Leurs autres idées</p><div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Idée</th><th>Langue</th><th>Le</th></tr></thead><tbody>' +
-          autres.map(function (a) { return '<tr><td class="bil-gauche">' + esc(a.texte || '') + '</td><td>' + esc(a.lang || '') + '</td><td>' + esc(dateBilan(a.le)) + '</td></tr>'; }).join('') +
+          autres.map(function (a) { return '<tr><td class="bil-gauche adm-texte">' + esc(a.texte || '') + '</td><td>' + esc(a.lang || '') + '</td><td>' + esc(dateBilan(a.le)) + '</td></tr>'; }).join('') +
           '</tbody></table></div>';
       }
       el.innerHTML = html;
@@ -1221,7 +1221,7 @@
       }
       if ((d.erreurs || []).length) {
         html += '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Bilan</th><th>Essais</th><th>Le</th><th class="bil-gauche">Erreur</th></tr></thead><tbody>' +
-          d.erreurs.map(function (x) { return '<tr><td class="bil-gauche">' + esc(x.id) + '</td><td>' + nombreBilan(x.essais) + '</td><td>' + esc(dateBilan(x.le)) + '</td><td class="bil-gauche bil-erreur">' + esc(x.erreur || '') + '</td></tr>'; }).join('') +
+          d.erreurs.map(function (x) { return '<tr><td class="bil-gauche">' + esc(x.id) + '</td><td>' + nombreBilan(x.essais) + '</td><td>' + esc(dateBilan(x.le)) + '</td><td class="bil-gauche bil-erreur adm-texte">' + esc(x.erreur || '') + '</td></tr>'; }).join('') +
           '</tbody></table></div>';
       }
       place('admin-bilan-delais', html);
@@ -2674,7 +2674,7 @@
     l.forEach(function (x) { par[x.nom] = (par[x.nom] || 0) + x.valeur; });
     var fusion = Object.keys(par).map(function (k) { return { nom: k, valeur: par[k] }; })
       .sort(function (a, b) { return b.valeur - a.valeur; }).slice(0, 12);
-    barres('trafic-sources', fusion, 'hsl(258 70% 55%)');
+    barres('trafic-sources', fusion, 'var(--adm-s-visites)');
   }
 
   // ══ Sources préférées Google (dans l'onglet Trafic) ═══════════════════
@@ -3127,26 +3127,28 @@
 
     var html = '';
     allReviews.forEach(function (r) {
+      // Les classes des cartes sont celles de css/admin.css (adm-carte, adm-badge,
+      // btn) : la page ne charge plus styles.css depuis le 2 novembre 2026.
       var statusBadge = r.is_approved
-        ? '<span class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">Approuvé</span>'
-        : '<span class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">En attente</span>';
+        ? '<span class="adm-badge adm-badge--ok">Approuvé</span>'
+        : '<span class="adm-badge adm-badge--warn">En attente</span>';
 
-      html += '<div class="glass-card rounded-xl p-5 space-y-3" data-avis="' + esc(String(r.id)) + '">';
-      html += '<div class="flex items-center justify-between flex-wrap gap-2">';
-      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(nomQuiz(canon(r.quiz_slug))) : 'Général (home)') + '</span>';
-      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
-      html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating) + '</div>';
+      html += '<div class="adm-carte" data-avis="' + esc(String(r.id)) + '">';
+      html += '<div class="adm-carte-tete">';
+      var quizBadge = '<span class="adm-badge">' + (r.quiz_slug ? esc(nomQuiz(canon(r.quiz_slug))) : 'Général (accueil)') + '</span>';
+      html += '<div class="adm-carte-qui"><span class="adm-carte-nom">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
+      html += '<span class="adm-etoiles" aria-label="' + esc(String(r.rating)) + ' sur 5">' + starsHtml(r.rating) + '</span>';
       html += '</div>';
-      html += '<p class="text-sm text-muted-foreground">' + formatDate(r.created_at) + '</p>';
-      if (r.comment) html += '<p class="text-sm text-foreground">' + esc(r.comment) + '</p>';
-      if (r.ip_address) html += '<p class="text-xs text-muted-foreground/60">IP: ' + esc(r.ip_address) + '</p>';
-      html += '<div class="flex gap-2 pt-2">';
+      html += '<p class="adm-carte-date">' + formatDate(r.created_at) + '</p>';
+      if (r.comment) html += '<p class="adm-carte-texte">' + esc(r.comment) + '</p>';
+      if (r.ip_address) html += '<p class="adm-carte-ip">IP ' + esc(r.ip_address) + '</p>';
+      html += '<div class="adm-carte-actions">';
       if (!r.is_approved) {
-        html += '<button type="button" class="admin-action btn btn-sm text-emerald-600 border border-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20" data-id="' + esc(String(r.id)) + '" data-action="approve">Approuver</button>';
+        html += '<button type="button" class="admin-action btn btn-sm adm-btn--ok" data-id="' + esc(String(r.id)) + '" data-action="approve">Approuver</button>';
       } else {
-        html += '<button type="button" class="admin-action btn btn-sm text-amber-600 border border-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20" data-id="' + esc(String(r.id)) + '" data-action="reject">Retirer</button>';
+        html += '<button type="button" class="admin-action btn btn-sm adm-btn--warn" data-id="' + esc(String(r.id)) + '" data-action="reject">Retirer</button>';
       }
-      html += '<button type="button" class="admin-action admin-action--suppr btn btn-sm text-destructive border border-destructive/20 hover:bg-destructive/10" data-id="' + esc(String(r.id)) + '" data-action="delete">Supprimer</button>';
+      html += '<button type="button" class="admin-action admin-action--suppr btn btn-sm adm-btn--danger" data-id="' + esc(String(r.id)) + '" data-action="delete">Supprimer</button>';
       html += '</div>';
       html += '<p class="adm-carte-msg" role="status" aria-live="polite"></p>';
       html += '</div>';
@@ -3209,7 +3211,7 @@
     var max = lignes[0].nombre;
     el.style.setProperty('--rangs', String(Math.ceil(lignes.length / 2)));
     el.innerHTML = lignes.map(function (l, i) {
-      return '<div class="stats-row adm-classement-ligne" style="--fam:hsl(var(--primary));--part:' + (l.nombre / max) * 100 + '%">'
+      return '<div class="stats-row adm-classement-ligne" style="--fam:var(--adm-accent);--part:' + (l.nombre / max) * 100 + '%">'
         + '<span class="adm-classement-rang">' + (i + 1) + '</span>'
         + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span></span>'
         + '<span class="adm-classement-nb">' + nb(l.nombre) + ' avis</span>'
@@ -3237,8 +3239,8 @@
   function libelleSourceAbonnes(src) { return SOURCES_ABONNES[src] || String(src || ''); }
   function nombreAb(n) { return (Number(n) || 0).toLocaleString('fr-FR'); }
   function statutAbonne(st) {
-    var m = { actif: ['Actif', 'hsl(142 71% 45%/0.12)', 'hsl(142 71% 32%)'], desinscrit: ['Désinscrit', 'hsl(var(--muted))', 'hsl(var(--muted-foreground))'], invalide: ['Invalide', 'hsl(0 70% 50%/0.12)', 'hsl(0 70% 40%)'] }[st] || [st, 'hsl(var(--muted))', 'inherit'];
-    return '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:' + m[1] + ';color:' + m[2] + ';">' + esc(m[0]) + '</span>';
+    var m = { actif: ['Actif', 'adm-badge--ok'], desinscrit: ['Désinscrit', ''], invalide: ['Invalide', 'adm-badge--bad'] }[st] || [st, ''];
+    return '<span class="adm-badge ' + m[1] + '">' + esc(m[0]) + '</span>';
   }
   // place() de l'onglet Bilan est une variable locale de son chargeur : d'ici,
   // elle n'existe pas. Jusqu'au 20 octobre 2026 l'onglet Leads plantait sur
@@ -3471,7 +3473,7 @@
     loadAbonnes();
     loadEmails();
     var tbody = document.getElementById('leads-table-body');
-    if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
+    if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="adm-table-vide">Chargement...</td></tr>';
 
     fetch(SUPABASE_URL + '/functions/v1/admin-leads', {
       method: 'GET',
@@ -3490,11 +3492,11 @@
         majPastilles();
         renderLeads();
       } else {
-        tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="adm-table-erreur">Erreur de chargement.</td></tr>';
       }
     })
     .catch(function () {
-      tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur réseau.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" class="adm-table-erreur">Erreur réseau.</td></tr>';
     });
   }
 
@@ -3502,22 +3504,22 @@
     var tbody = document.getElementById('leads-table-body');
     if (!tbody) return;
     if (allLeads.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Aucun lead pour le moment.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" class="adm-table-vide">Aucun lead pour le moment.</td></tr>';
       return;
     }
     var html = '';
     allLeads.forEach(function (lead) {
       var date = new Date(lead.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
       var verifiedBadge = lead.email_verified
-        ? '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(142 71% 45%/0.12);color:hsl(142 71% 35%);font-weight:500;">✓ Vérifié</span>'
-        : '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(40 95% 55%/0.12);color:hsl(40 80% 35%);font-weight:500;">En attente</span>';
-      html += '<tr style="border-top:1px solid hsl(var(--border));">'
-        + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.first_name) + '</td>'
-        + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.email) + '</td>'
-        + '<td style="padding:0.75rem 1rem;"><span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(var(--primary)/0.1);color:hsl(var(--primary));">' + escapeLeadHtml(lead.subject) + '</span></td>'
-        + '<td style="padding:0.75rem 1rem;font-size:0.8rem;color:hsl(var(--muted-foreground));">' + date + '</td>'
-        + '<td style="padding:0.75rem 1rem;text-align:center;">' + verifiedBadge + '</td>'
-        + '<td style="padding:0.75rem 1rem;text-align:center;"><input type="checkbox"' + (lead.is_closed ? ' checked' : '') + ' data-lead-id="' + lead.id + '" class="lead-closed-cb" style="width:1.1rem;height:1.1rem;cursor:pointer;accent-color:hsl(var(--primary));"></td>'
+        ? '<span class="adm-badge adm-badge--ok">Vérifié</span>'
+        : '<span class="adm-badge adm-badge--warn">En attente</span>';
+      html += '<tr>'
+        + '<td>' + escapeLeadHtml(lead.first_name) + '</td>'
+        + '<td class="bil-gauche">' + escapeLeadHtml(lead.email) + '</td>'
+        + '<td class="bil-gauche"><span class="adm-badge">' + escapeLeadHtml(lead.subject) + '</span></td>'
+        + '<td class="bil-gauche adm-petit">' + date + '</td>'
+        + '<td class="adm-centre">' + verifiedBadge + '</td>'
+        + '<td class="adm-centre"><input type="checkbox"' + (lead.is_closed ? ' checked' : '') + ' data-lead-id="' + lead.id + '" class="lead-closed-cb" aria-label="Clôturé"></td>'
         + '</tr>';
     });
     tbody.innerHTML = html;
@@ -3592,33 +3594,35 @@
     var html = '';
     filtered.forEach(function (msg) {
       var date = new Date(msg.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-      var statusColors = { 'new': 'background:hsl(var(--primary)/0.15);color:hsl(var(--primary));', 'read': 'background:hsl(var(--muted));color:hsl(var(--muted-foreground));', 'archived': 'background:hsl(var(--muted));color:hsl(var(--muted-foreground));opacity:0.6;' };
+      // Classes de css/admin.css (adm-carte, adm-badge, btn) : la page ne charge
+      // plus styles.css depuis le 2 novembre 2026.
+      var statusClasses = { 'new': 'adm-badge--info', 'read': '', 'archived': '' };
       var statusLabels = { 'new': 'Nouveau', 'read': 'Lu', 'archived': 'Archivé' };
       var isNew = msg.status === 'new';
 
-      html += '<div class="glass-card rounded-xl p-5 space-y-3' + (isNew ? '' : ' opacity-80') + '" data-msg-id="' + msg.id + '">'
-        + '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">'
-        + '<div style="display:flex;align-items:center;gap:0.75rem;">'
-        + '<span style="font-weight:700;">' + escapeLeadHtml(msg.first_name) + ' ' + escapeLeadHtml(msg.last_name) + '</span>'
-        + '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.7rem;font-weight:600;' + (statusColors[msg.status] || '') + '">' + (statusLabels[msg.status] || msg.status) + '</span>'
+      html += '<div class="adm-carte' + (isNew ? '' : ' est-lue') + '" data-msg-id="' + msg.id + '">'
+        + '<div class="adm-carte-tete">'
+        + '<div class="adm-carte-qui">'
+        + '<span class="adm-carte-nom">' + escapeLeadHtml(msg.first_name) + ' ' + escapeLeadHtml(msg.last_name) + '</span>'
+        + '<span class="adm-badge ' + (statusClasses[msg.status] || '') + '">' + (statusLabels[msg.status] || msg.status) + '</span>'
         + '</div>'
-        + '<span style="font-size:0.8rem;color:hsl(var(--muted-foreground));">' + date + '</span>'
+        + '<span class="adm-carte-date">' + date + '</span>'
         + '</div>'
-        + '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.85rem;color:hsl(var(--muted-foreground));">'
+        + '<div class="adm-carte-meta">'
         + '<span>' + escapeLeadHtml(msg.email) + '</span>'
         + (msg.phone ? '<span>' + escapeLeadHtml(msg.phone) + '</span>' : '')
-        + (msg.company ? '<span style="font-style:italic;">' + escapeLeadHtml(msg.company) + '</span>' : '')
+        + (msg.company ? '<span><em>' + escapeLeadHtml(msg.company) + '</em></span>' : '')
         + '</div>'
-        + '<div style="background:hsl(var(--muted)/0.5);border-radius:0.5rem;padding:0.75rem;font-size:0.875rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;">' + escapeLeadHtml(msg.message) + '</div>'
-        + '<div style="display:flex;gap:0.5rem;justify-content:flex-end;">';
+        + '<div class="adm-carte-bloc">' + escapeLeadHtml(msg.message) + '</div>'
+        + '<div class="adm-carte-actions adm-carte-actions--droite">';
 
       if (msg.status === 'new') {
-        html += '<button class="btn btn-sm msg-action" data-action="read" data-id="' + msg.id + '" style="font-size:0.75rem;">Marquer lu</button>';
+        html += '<button type="button" class="btn btn-sm msg-action" data-action="read" data-id="' + msg.id + '">Marquer lu</button>';
       }
       if (msg.status !== 'archived') {
-        html += '<button class="btn btn-sm msg-action" data-action="archived" data-id="' + msg.id + '" style="font-size:0.75rem;color:hsl(var(--muted-foreground));">Archiver</button>';
+        html += '<button type="button" class="btn btn-sm msg-action adm-btn--discret" data-action="archived" data-id="' + msg.id + '">Archiver</button>';
       }
-      html += '<button type="button" class="btn btn-sm msg-action text-destructive" data-action="delete" data-id="' + msg.id + '" style="font-size:0.75rem;">Supprimer</button>';
+      html += '<button type="button" class="btn btn-sm msg-action adm-btn--danger" data-action="delete" data-id="' + msg.id + '">Supprimer</button>';
       html += '</div><p class="adm-carte-msg" role="status" aria-live="polite"></p></div>';
     });
 

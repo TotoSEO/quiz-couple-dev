@@ -17,6 +17,9 @@
       Le script est repris tel quel, tel que la regie le fournit. Le seul
       element a renseigner est l'hote, qui designe le compte sous lequel la
       configuration est enregistree, donc celui de la regie et non le notre. %>
+  <%# Le tableau de bord n'a ni publicite ni banniere de consentement : rien
+      de tout ce bloc ne s'y charge. %>
+  <% if (routeKey !== 'admin') { %>
   <link rel="preconnect" href="https://cmp.inmobi.com">
   <link rel="dns-prefetch" href="https://cmp.inmobi.com">
   <%# La regie n'est appelee qu'une fois le document analyse, par js/pub.js,
@@ -205,6 +208,7 @@
   })();
   </script>
   <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
+  <% } %>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <%# La base est appelee des le premier rendu : le compteur de parties et les
@@ -320,8 +324,12 @@
   <!-- Fonts (non-blocking, reduced weights) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"></noscript>
+  <%# Le tableau de bord n'a que l'Inter : sa feuille ne connaît pas Fredoka. %>
+  <% var fontesUrl = routeKey === 'admin'
+       ? 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+       : 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap'; %>
+  <link rel="preload" href="<%= fontesUrl %>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="<%= fontesUrl %>"></noscript>
 
   <%# L'accueil ne porte aucune image dans son hero : l'illustration du bloc
       « c'est quoi » est loin sous la ligne de flottaison et se charge a
@@ -351,7 +359,12 @@
       depend d'elle. Le noscript garde le chemin d'avant pour les navigateurs
       sans JavaScript. %>
   <% var critique = typeof cssCritique !== 'undefined' && cssCritique; %>
-  <% if (critique) { %>
+  <% if (routeKey === 'admin') { %>
+  <%# Le tableau de bord (2 novembre 2026) a sa propre feuille, complète et
+      neutre : il ne charge pas styles.css, dont les couleurs sont celles du
+      site. Dans l'en-tête, pour qu'aucun écran ne se peigne avant elle. %>
+  <link rel="stylesheet" href="/css/admin.css">
+  <% } else if (critique) { %>
   <style><%- critique %></style>
   <link rel="preload" href="/css/styles.css" as="style" fetchpriority="low" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
@@ -454,6 +467,11 @@
       document, donc celui-ci est pret avant les suivants. Il part des la fin
       de l'analyse du HTML, sans attendre les images, pour attraper aussi les
       visites qui repartent en deux secondes. %>
+  <%# Le tableau de bord n'a aucun de ces scripts : pas de mesure d'audience
+      (il s'en exclut de toute facon), pas de menu, pas de plateforme de
+      consentement ni de publicite ; son theme et son interface sont dans
+      js/admin-ui.js, charge par son gabarit. %>
+  <% if (routeKey !== 'admin') { %>
   <script src="/js/audience.js" defer></script>
   <%# L'ecran de resultat prend sa propre adresse et compte comme une page
       vue. Il lit window.QCAudience, donc il passe apres la mesure d'audience.
@@ -466,6 +484,7 @@
   <script src="/js/obl.js" defer></script>
   <script src="/js/scroll-reveal.js" defer></script>
   <script src="/js/quiz-extras.js" defer></script>
+  <% } %>
   <%# La porte e-mail des résultats (capture.js), sur les pages de CAPTURE_PAGES
       seulement : ses textes dans la langue de la page et le lien vers la
       confidentialité. %>
@@ -488,6 +507,9 @@
   <script src="/js/blog-lectures.js" defer></script>
   <% } %>
 
+  <%# Pas de Google Analytics sur le tableau de bord : ses passages sont ceux
+      du proprietaire. %>
+  <% if (routeKey !== 'admin') { %>
   <!-- GA (deferred) -->
   <script>
     window.addEventListener('load',function(){
@@ -501,5 +523,6 @@
       };
     });
   </script>
+  <% } %>
 </body>
 </html>
