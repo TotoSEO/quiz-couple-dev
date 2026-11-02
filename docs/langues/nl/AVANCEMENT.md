@@ -2216,7 +2216,27 @@ premier point qui n'est pas fait.
   aussi sur les pages des tests (`/nl/crush-test/`, `/nl/liefdestest/`...), où
   le contrôle l'a relevé.
 
+## Lot 9n (2 novembre 2026) : elkaar beter leren kennen, het begin, de toekomst
+
+- `questions-pour-mieux-se-connaitre-en-couple`
+  (`/nl/blog/vragen-om-elkaar-beter-te-leren-kennen/`), `questions-debut-de-relation`
+  (`/nl/blog/vragen-begin-relatie/`) et `questions-avenir-couple`
+  (`/nl/blog/vragen-over-de-toekomst-als-koppel/`), les trois déjà publiés en
+  français, donc en ligne tout de suite.
+- Les ancres françaises de l'article sur l'avenir nommaient les tests
+  (« test « prêts à vivre ensemble » », « test « prêts pour le mariage » ») :
+  en néerlandais, elles disent le sujet de la page visée, dans une phrase qui en
+  parle déjà (« klaar zijn om onder één dak te wonen », « de vraag of jullie gaan
+  trouwen », « de kinderwens concreet wordt », « lange gesprekken met z’n
+  tweeën »).
+- « Je echt binden » (« vraiment s'engager ») était dans un H2 : « je aan elkaar
+  binden ».
+
 ## Les chiffres
+
+Au lot 9n : cinquante-deux articles en ligne et huit programmés (du 7 novembre au
+5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9m : quarante-neuf articles en ligne et huit programmés (du 7 novembre au
 5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
