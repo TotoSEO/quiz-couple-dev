@@ -1831,3 +1831,63 @@ Dans la série jour par jour de `bilan-chiffres.yml`, la part des écrans de
 départ (`departs`) qui deviennent une évaluation (`crees`), à comparer aux
 58-60 % des 23 et 24 octobre, et la liste des évaluations allées au bout :
 combien de couples anglophones, et ce qui a suivi.
+
+## 2 novembre 2026 : plus d'adresse au départ, et « chacun à son rythme »
+
+Thomas : « Je n'ai eu aucune vente depuis 4 jours alors qu'avant j'en avais
+une au moins tous les deux jours », puis « Oui vas-y » sur les deux
+changements ci-dessous.
+
+### Ce que disaient les chiffres
+
+Lus par `bilan-chiffres.yml`, qui écrit depuis ce jour-là les créations à deux
+et les visites jour par jour et par langue (`duoParJour`, `visitesParJour`).
+
+- Rien n'était cassé : la sonde de `bilan-sante.yml` ouvrait la page Stripe à
+  7,92 € avec LOVE20, et le parcours entier passait dans Chromium.
+- Cinq ventes du 23 au 28 octobre (quatre en anglais, une en français), puis
+  aucune du 29 octobre au 1er novembre. Sur ces quatre jours, sept évaluations
+  finies à deux (deux anglaises, deux françaises, trois espagnoles) : avec les
+  taux habituels (une anglaise sur deux paie, une française sur sept, aucune
+  espagnole), on en attendait à peu près une, et zéro arrive environ une fois
+  sur cinq.
+- Moins d'entrées : les visites du test de couple anglais sont passées d'environ
+  1 090 par jour à la mi-octobre à 710, et celles de la page de l'évaluation en
+  anglais de 114 à 86 par jour ; le test de couple a reculé sur Google sur
+  « compatibility test » (de la 1,7e place à la 3e ou 4e). Les couples anglais
+  qui commencent l'évaluation sont passés de 10 à 5 ou 6 par jour.
+- L'écran de départ : 58 à 60 % des écrans de départ devenaient une évaluation
+  les 23 et 24 octobre, puis 29 à 37 % chaque jour depuis l'arrivée du champ
+  e-mail (25 octobre au soir), facultatif compris (37 %, 32 %, 37 %, 36 % et
+  30 % du 28 octobre au 1er novembre), dans toutes les langues. Le champ et son
+  paragraphe sur les e-mails à venir coûtaient, pas l'obligation. Et la reprise
+  qu'il permettait n'a rien rapporté : 102 e-mails de reprise envoyés, aucune
+  personne revenue finir, aucune vente.
+- « Au même moment » sur la page de vente (27 octobre) : depuis, 19 % des
+  visites de la page cliquent sur « Commencer » au lieu de 25 %, et la part des
+  évaluations créées qui vont au bout n'a pas bougé (14 %). Le message retirait
+  des départs sans faire finir plus de couples.
+
+### Ce qui a changé
+
+- Plus de champ e-mail au départ ni sur l'acceptation de l'invitation (`creation`
+  et `rejoindre` dans bilan.js ; textes `creation.emailFacultatif` et
+  `emailAideDepart` retirés des six langues). L'adresse se demande à la fin de
+  ses propres questions (`ecranEmail`), obligatoire, comme du 21 au 25 octobre :
+  le « prêt » part toujours à tous ceux qui finissent. La reprise ne part plus
+  qu'aux évaluations qui ont une adresse (celles créées du 25 octobre au
+  2 novembre, et « Recevoir mon lien par e-mail »).
+- « Chacun sur son téléphone, à son rythme » revient sur la page de vente
+  (`lp.sousTitre`, le chiffre, la deuxième étape, la façon « à deux »), sur
+  l'écran de départ (`creation.modeDuoAide`), sur la section de l'accueil
+  (`evaluation.texte` de home.json), dans la bannière du bas et dans la carte
+  sous le moteur, dans les six langues. L'écran d'invitation, qui vient après
+  la création, garde le QR code en premier et « Commencez en même temps que X ».
+
+### Ce qu'il faut regarder
+
+Dans `bilan-chiffres.yml` : la part des écrans de départ (`departs`) qui
+deviennent une évaluation (`crees`), à comparer aux 58-60 % des 23 et
+24 octobre et aux 29-37 % d'après ; la part des visites qui cliquent sur
+« Commencer » (`ctas` sur `vues`), à comparer aux 25 % d'avant le 27 octobre ;
+les créations à deux en anglais par jour (`À deux, jour par jour`).

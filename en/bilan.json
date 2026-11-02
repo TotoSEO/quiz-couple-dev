@@ -29,7 +29,7 @@
       "titre": "Your assessment",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
-      "modeDuoAide": "At the same time, each on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
+      "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
       "modeSolo": "On your own",
       "modeSoloAide": "You answer for yourself, and on the topics that matter most, you also say what your partner would answer. Your partner isn't told and sees nothing.",
       "prenomsTitre": "Your two first names",
@@ -49,9 +49,7 @@
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick the box to continue.",
       "email": "Your email",
-      "emailFacultatif": "Your email (optional)",
       "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page. We'll email you when your report is ready, once if {{autre}} is slow to finish, and just once more if it's still waiting the next day.",
-      "emailAideDepart": "It lets you find your assessment again if you close the page. We'll email you when the report is ready, once if you stop partway or {{autre}} is slow to finish, and once if it's still waiting the next day. If you skip it now, we'll ask for it at the end, for the link to your PDF report. It isn't used for anything else.",
       "emailSuggestion": "Did you mean {{email}}?",
       "emailFaux": "This email address doesn't look complete.",
       "emailManque": "Enter your email address: that's where the link to the PDF report will be sent.",
@@ -235,7 +233,6 @@
         "prixRappel": "The questions are free. The full report costs {{prix}}: you unlock it once you've finished your answers.",
         "creer": "Start my assessment",
         "emailAide": "The link to your PDF report will be sent to this address. It also lets you find your assessment again if you close the page, and we'll send a single reminder if your report is still waiting the next day.",
-        "emailAideDepart": "It lets you find your assessment again if you close the page. We'll email you once if you stop partway, and once if your report is still waiting the next day. If you skip it now, we'll ask for it at the end, for the link to your PDF report. It isn't used for anything else.",
         "apportTitre": "What the solo assessment gives you",
         "apport": [
           "Your view of the twelve areas of your relationship, from everyday life to intimacy",
@@ -696,7 +693,7 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "20 minutes together, each on your own phone, and a report that shows you where you agree and what you need to talk about.",
+    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
     "soloQuestion": "Your partner doesn't want to take part?",
     "soloLien": "Take it on your own",
@@ -719,7 +716,7 @@
       },
       {
         "n": "20 min",
-        "l": "together, each on your own phone"
+        "l": "each, at your own pace"
       },
       {
         "n": "€0",
@@ -736,8 +733,8 @@
         },
         {
           "duree": "20 min",
-          "titre": "You answer at the same time",
-          "texte": "Each on your own phone, without seeing the other's answers. You can take a break whenever you like."
+          "titre": "You each answer separately",
+          "texte": "On your own phone, without seeing the other's answers. You can take a break whenever you like."
         },
         {
           "duree": "1 min",
@@ -795,9 +792,9 @@
       "intro": "If your partner doesn't feel like talking about it, you can do it on your side. Same price, same report.",
       "duo": {
         "titre": "Together",
-        "sous": "At the same time, each on your own phone",
+        "sous": "Each on your own phone",
         "points": [
-          "You answer together, without seeing each other's answers",
+          "You each answer on your own side, at your own pace",
           "The report compares your answers, topic by topic"
         ],
         "cta": "Start together"
