@@ -2142,13 +2142,32 @@ premier point qui n'est pas fait.
   fixés dès maintenant, pour que les cartes « Lees ook » qui les annoncent
   disent juste : symptomen (« De symptomen van emotionele afhankelijkheid:
   voorbeelden en gevolgen »), manipulator (« Ik ben emotioneel afhankelijk van
-  een manipulator: wat nu? »), liefde of afhankelijkheid (« Hou ik van hem, of
-  ben ik bang hem kwijt te raken? »), na een breuk (« Emotionele
+  een manipulator: wat nu? »), liefde of afhankelijkheid (« Liefde of afhankelijkheid: hou ik van hem, of ben ik
+  bang hem kwijt te raken? », le mot-clé ajouté en tête au lot 9j), na een breuk (« Emotionele
   afhankelijkheid na een breuk: het afkicken overleven en weer opkrabbelen »),
   vriendschap (« Emotionele afhankelijkheid in een vriendschap: als een
   vriendin een behoefte wordt »).
 
+## Lot 9j (2 novembre 2026) : la suite de la dépendance affective
+
+- `dependance-affective-symptomes` (`/nl/blog/emotionele-afhankelijkheid-symptomen/`),
+  `dependant-affectif-et-manipulateur` (`/nl/blog/emotioneel-afhankelijk-en-manipulator/`,
+  programmé comme en français pour le 7 novembre 2026),
+  `amour-ou-dependance-affective` (`/nl/blog/liefde-of-emotionele-afhankelijkheid/`)
+  et `dependance-affective-rupture` (`/nl/blog/emotionele-afhankelijkheid-na-een-breuk/`,
+  programmé pour le 17 novembre 2026) ; vérifiés par
+  `BUILD_DATE_OVERRIDE=2026-11-17T16:00:00+01:00`.
+- Le H1 de `liefde-of-emotionele-afhankelijkheid` commence par « Liefde of
+  afhankelijkheid: » (le H1 français, « Est-ce que je l'aime, ou est-ce que j'ai
+  peur de le perdre ? », n'a pas le mot-clé).
+- Le « Autrement dit » de la FAQ des symptômes n'est pas repris ; « la moitié de
+  la durée de la relation » est présentée comme un mythe, en néerlandais aussi.
+
 ## Les chiffres
+
+Au lot 9j : quarante et un articles en ligne et quatre programmés (7, 10, 17 et
+21 novembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9i : trente-neuf articles en ligne et deux programmés (10 et 21 novembre) ;
 `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
