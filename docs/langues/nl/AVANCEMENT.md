@@ -2109,7 +2109,27 @@ premier point qui n'est pas fait.
   le sujet sans reprendre le titre de la cible (« een narcist die je in zijn
   greep houdt », « de alarmsignalen bij een man », « weggaan bij een narcist »).
 
+## Lot 9h (2 novembre 2026) : manipulator, zinnen, gaslighting, toxische relatie
+
+- `manipulateur-narcissique` (`/nl/blog/narcistische-manipulator/`),
+  `phrases-preferees-des-manipulateurs` (`/nl/blog/zinnen-van-een-manipulator/`),
+  `gaslighting` (`/nl/blog/gaslighting-signalen/`, programmé comme en français
+  pour le 21 novembre 2026, vérifié par `BUILD_DATE_OVERRIDE`) et
+  `relation-toxique-signes` (`/nl/blog/kenmerken-toxische-relatie/`).
+- Les 35 phrases sont celles qu'on entend en néerlandais, pas leur traduction :
+  « je zoekt altijd spijkers op laag water », « je ziet spoken », « rustig
+  nou », « daar hoef je geen halszaak van te maken ».
+- « En France, ces violences sont un délit » devient « in Nederland en België
+  valt herhaald psychisch geweld in een relatie onder huiselijk geweld » (la
+  définition de huiselijk geweld des deux pays), sans prétendre à un délit
+  propre ; le « détournement cognitif » du Québec disparaît.
+- La carte de fin de `narcistische-manipulator` retrouve sa cible française
+  (les 35 phrases), traduite dans le même lot.
+
 ## Les chiffres
+
+Au lot 9h : trente-cinq articles en ligne et deux programmés (10 et 21 novembre) ;
+`verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9g : trente-deux articles en ligne et un programmé (10 novembre) ;
 `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
