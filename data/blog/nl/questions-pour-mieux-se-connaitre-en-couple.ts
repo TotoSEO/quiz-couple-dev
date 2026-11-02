@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Na jaren samen denk je alles van elkaar te weten. Mis! 60 vragen om elkaar beter te leren kennen, en elkaar onderweg opnieuw te ontdekken.",
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Een stel dat met de ruggen tegen elkaar zit, met vraagtekens en hartjes boven hun hoofd",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Je bent nooit klaar met elkaar ontdekken, je stopt alleen met zoeken. Deze 60 vragen zetten het zoeken weer aan, met z’n tweeën.",
   introduction: `<p>Doe eens een proefje: vraag een stel dat al tien jaar samen is of ze elkaar door en door kennen. Ze zeggen ja, natuurlijk. Stel ze dan drie wat preciezere vragen, de droom die hij heeft opgegeven, de angst die zij nooit uitspreekt, wat ieder denkt dat de ander van hem vindt... en kijk naar de gezichten. Er is altijd een verrassing. Altijd!</p>

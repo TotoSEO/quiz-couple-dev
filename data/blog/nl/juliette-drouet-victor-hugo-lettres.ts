@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Vijftig jaar lang schreef Juliette Drouet Victor Hugo bijna elke dag. Ze leefde voor hem bijna opgesloten, redde zijn leven en volgde hem in ballingschap.",
   featuredImage: '/blog/juliette-drouet-victor-hugo-lettres.webp',
   featuredImageAlt: "Juliette Drouet op oudere leeftijd, geschilderd door Jules Bastien-Lepage in 1883, naast Victor Hugo gefotografeerd door Étienne Carjat",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-24T08:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Ze is nooit zijn vrouw geweest, maar ze schreef hem vijftig jaar lang en redde in 1851 zijn leven. Het verhaal van Juliette Drouet en Victor Hugo.",
   introduction: `<p>Vijftig jaar lang schreef Juliette Drouet bijna elke dag aan Victor Hugo, vaak meerdere keren per dag. Bij elkaar zijn dat <strong>zo’n 22.000 brieven</strong>.</p>

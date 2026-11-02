@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Jaloezie, woede, controle, de ene relatie na de andere... Emotionele afhankelijkheid bij mannen lijkt niet op het cliché, en daarom mis je het.",
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Man van achteren die naar zijn telefoon kijkt, met een schaduw in de vorm van een geketend hart",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-13T17:47:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Bij emotionele afhankelijkheid denk je aan iemand die klef is en smeekt. Bij mannen lijkt het vaker op jaloezie, woede... of op een man die nooit single is.",
   introduction: `<p>Als je ‘emotionele afhankelijkheid’ zegt, ziet iedereen hetzelfde voor zich: iemand die smeekt, die zich vastklampt, die vijftien berichtjes achter elkaar stuurt. En omdat de meeste mannen zichzelf niet in dat beeld herkennen, concluderen ze dat het niet over hen gaat. Grote vergissing.</p>

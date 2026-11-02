@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Leeuw? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Leeuwen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Astrologisch symbool van de Leeuw`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Leeuw met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Er wordt vaak gezegd dat een Leeuw alleen aan zichzelf denkt. Het is simpeler: hij moet zien dat zijn aanwezigheid ertoe doet, dat de ander naar hem kijkt, dat wat hij geeft gezien wordt. Dat is geen ijdelheid, zo houdt hij nu eenmaal van iemand. Iemand die zich voor hem wegcijfert, verveelt hem, iemand die zijn plek wil innemen, put hem uit.</p>

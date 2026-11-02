@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "“Je bent te gevoelig”, “het is jouw schuld”, “ik zeg het voor je eigen bestwil”... 35 zinnen van een manipulator, wat ze betekenen en wat je terugzegt.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Tekstballonnen waarvan sommige een vishaak verbergen",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Een manipulator liegt niet zomaar wat. Hij put uit een vast repertoire, altijd hetzelfde. En zodra je dat repertoire kent, is de goocheltruc kapot.",
   introduction: `<p>“Je bent te gevoelig.” Hoe vaak heb je die al gehoord? En hoe vaak ben je weggelopen met de vraag of je inderdaad niet een beetje overdreef?</p>

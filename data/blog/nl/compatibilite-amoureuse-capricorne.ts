@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Steenbok? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Steenbokken samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Astrologisch symbool van de Steenbok`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Steenbok met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Een Steenbok staat bekend als koel in de liefde. Hij is niet koel, hij is serieus, en in een wereld waarin liefde vaak als vermaak wordt behandeld, lijkt dat afstandelijk. Hij wordt niet snel verliefd, maar als hij iemand kiest, komt hij daar niet op terug.</p>

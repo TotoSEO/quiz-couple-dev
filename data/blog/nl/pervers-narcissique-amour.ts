@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Charmant voor iedereen, vernietigend achter de voordeur. De cyclus van een narcist in de liefde, de signalen die tellen en hoe je zekerheid krijgt.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouet van een koppel waarin de een aan de touwtjes van de ander trekt, als bij een marionet",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Iedereen vindt hem charmant. Jij weet niet meer wat je meemaakt. Precies zo werkt de greep van een narcist.",
   introduction: `<p>Er is de man die de anderen zien: grappig, attent, sterk in gezelschap. En er is de man die je terugziet zodra de deur dicht is. Die warm en koud blaast, die elke ruzie tegen jou keert, die je aan je eigen geheugen laat twijfelen... Het verschil tussen die twee is zo groot dat je er niet eens meer over durft te praten met de mensen om je heen. Want eerlijk, wie zou je geloven?</p>

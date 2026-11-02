@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Stier? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Stieren samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Astrologisch symbool van de Stier`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Stier met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Vraag een Stier wat hij zoekt in de liefde en hij zegt iets als “iemand die blijft”. Geen sleur, geen verveling: hij wil de zekerheid dat de ander er morgen nog is. Liefde is voor hem een lekker etentje samen, een fijne bank en de warmte van iemand die je door en door kent.</p>

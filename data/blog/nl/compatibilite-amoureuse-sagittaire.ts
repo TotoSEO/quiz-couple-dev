@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Boogschutter? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Boogschutters samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Astrologisch symbool van de Boogschutter`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Boogschutter met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Een Boogschutter kan niet stilzitten, niet omdat hij wispelturig is, maar omdat hij honger heeft naar het leven. Hij vlucht niet voor een vaste relatie, hij vlucht voor verveling, en voor hem begint verveling als de sleur erin sluipt zonder dat iemand er iets aan verandert. Hij zegt wat hij denkt, zonder filter: bij hem weet je altijd waar je staat.</p>

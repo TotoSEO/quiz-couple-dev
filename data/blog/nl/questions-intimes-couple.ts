@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Intimiteit zit niet alleen onder de dekens: ook in de vragen die je elkaar durft te stellen. 65 intieme vragen voor koppels, van teder tot heet.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Een stel dat elkaar omarmt op een bank in gedempt licht, in een vertrouwelijk gesprek",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Er zijn de gesprekken die je elke dag voert... en die je niet durft te beginnen. Raad eens welke je het dichtst bij elkaar brengen.",
   introduction: `<p>Jullie vertellen elkaar alles, nou ja, bijna. Het werk, de vrienden, de plannen, wat jullie vanavond eten. Maar er is een terrein waar je veel minder makkelijk over praat, ook na jaren: wat de ander echt voelt, wat hij niet durft te vragen, wat hij mist, waar hij zin in heeft. Kortom, het intieme, het echte.</p>

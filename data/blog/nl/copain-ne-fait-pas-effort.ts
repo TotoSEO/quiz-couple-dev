@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Jij doet alles, hij bijna niets. Waarom sommige mannen stoppen met moeite doen, hoe je het herkent en wat je concreet doet als je vriend geen moeite doet.",
   featuredImage: '/blog/copain-ne-fait-pas-effort.webp',
   featuredImageAlt: "Gedekte tafel voor twee, aan de ene kant een verzorgd couvert met kaars en bloemen, de andere plek leeg",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-08',
   author: AUTHORS['thomas'],
   excerpt: "Een scheve verdeling van de moeite is een van de meest voorkomende redenen voor een breuk, juist omdat ze er langzaam insluipt en je je eraan aanpast.",
   introduction: `<p>Jij organiseert, jij denkt vooruit, jij denkt aan alles. De avonden uit, de cadeaus, de momenten samen, <a href="/nl/blog/vragen-om-aan-je-vriend-te-stellen/">de belangrijke gesprekken</a>. En hij is er wel, hij antwoordt als jij iets voorstelt, hij doet mee als je aandringt, maar niets komt echt van hem. Je hebt al een tijdje het gevoel dat je <a href="/nl/gezonde-relatie-test/">de relatie in je eentje draagt</a>, en je begint je af te vragen of dat normaal is, of je te veel vraagt, of dat er echt iets niet klopt.</p>

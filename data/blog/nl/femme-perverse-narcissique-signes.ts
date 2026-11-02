@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Lief in gezelschap, afbrekend thuis. De 10 kenmerken van een narcistische vrouw, haar maskers, en waarom mannen die het meemaken er nooit over praten.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Vrouw die een glimlachend masker voor haar gezicht houdt, met een harde schaduw op de muur",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Bij een narcist denkt iedereen aan een man. Gevolg: mannen die het met een vrouw meemaken, twijfelen dubbel, aan hun relatie en aan hun recht om eronder te lijden.",
   introduction: `<p>Zoek op ‘narcist’ op welke site ook: de voorbeelden zijn mannen, de slachtoffers vrouwen. Dus wat doe je als het JOUW vriendin is die warm en koud blaast, die je achter gesloten deuren afbreekt en buiten iedereen inpakt? Je twijfelt. Dubbel zelfs. Eerst aan wat je meemaakt. En dan aan je recht om eronder te lijden.</p>

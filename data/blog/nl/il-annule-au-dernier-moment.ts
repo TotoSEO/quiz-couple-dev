@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Hij zegt op het laatste moment af, een uur voor jullie date. Wat het meestal betekent, het enige signaal dat telt, en de berichten om terug te sturen.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Jonge vrouw die klaar is om uit te gaan, zittend op haar bed met haar telefoon in de hand na een bericht waarin hij afzegt",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-28T14:41:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Het bericht komt een uur van tevoren. Dit is wat het betekent, het signaal waar je op let om het te weten, en de berichten om hem terug te sturen.",
   introduction: `<p>Het bericht komt een uur van tevoren, soms twintig minuten. “Sorry, ik kan vanavond niet.” Je was klaar, je had twee of drie dingen verschoven om vrij te zijn, en nu sta je met je telefoon in je hand diezelfde paar woorden voor de vierde keer te lezen.</p>

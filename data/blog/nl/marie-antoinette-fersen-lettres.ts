@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Passages in de brieven tussen Marie-Antoinette en Axel von Fersen waren met inkt bedekt. Onderzoekers lazen ze met röntgenstralen: dit stond eronder.",
   featuredImage: '/blog/marie-antoinette-fersen-lettres.webp',
   featuredImageAlt: "Marie-Antoinette, geschilderd door Élisabeth Vigée Le Brun in 1783, naast het portret van Axel von Fersen door Carl Fredrik von Breda",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-22T16:30:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Meer dan een eeuw lang waren hele regels van hun brieven onleesbaar. Franse onderzoekers lazen ze met röntgenstralen, en nu weten we wie ze had verborgen.",
   introduction: `<p>Tijdens de Franse Revolutie schreven Marie-Antoinette en de Zweedse graaf Axel von Fersen elkaar in het geheim. Een deel van die brieven ligt sinds 1982 in het Franse Nationaal Archief, maar woorden en soms hele regels zijn er <strong>met inkt bedekt</strong>. Heel lang kon niemand lezen wat eronder stond.</p>

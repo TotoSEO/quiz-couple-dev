@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Waterman? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Watermannen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Astrologisch symbool van de Waterman`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Waterman met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>De Waterman is waarschijnlijk het meest onbegrepen teken in de liefde. Hij heet afstandelijk, onthecht, niet in staat om zich te binden. Maar hij houdt wel degelijk van iemand, alleen niet zoals anderen vinden dat het moet: geen versmelting, geen “jij bent alles voor mij”. Hij wil een partner die eerst een vriend is, met wie hij om drie uur 's nachts de wereld kan verbeteren, en hij heeft lucht nodig om naar de ander terug te komen.</p>

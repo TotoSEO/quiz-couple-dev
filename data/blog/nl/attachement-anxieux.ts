@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Verlatingsangst, berichtjes teruglezen, steeds geruststelling nodig... Angstige hechting in een relatie: de signalen, de spiraal en wat echt helpt.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Iemand die een hart tegen zich aan drukt terwijl ze naar een telefoon kijkt die stil blijft",
-  publishedAt: '2026-12-01',
-  modifiedAt: '2026-12-01',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Angstige hechting twijfelt niet aan de liefde die ze geeft, ze twijfelt aan de liefde die ze krijgt. Voortdurend. En dat is uitputtend, aan beide kanten van de relatie.",
   introduction: `<p>Misschien ken je dat gevoel: alles gaat goed in je relatie, objectief gezien, en toch blijft een deel van je op zijn hoede. Een wat koele toon, een korter antwoord dan anders, een avond zonder berichtje: het alarm gaat af. En daar ben je weer bewijs aan het zoeken dat alles goed is, opnieuw, zoals gisteren, zoals morgen.</p>

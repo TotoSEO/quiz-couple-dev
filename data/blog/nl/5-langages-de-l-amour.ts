@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Hij geeft je cadeaus, jij wilde tijd. Jij geeft complimenten, hij wilde aanraking... De 5 liefdestalen uitgelegd, en hoe je ze in je relatie gebruikt.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Vijf gekleurde tekstballonnen rond een stel, voor de vijf liefdestalen",
-  publishedAt: '2026-12-12',
-  modifiedAt: '2026-12-12',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Bij veel stellen is het probleem geen gebrek aan liefde, maar een vertaalprobleem. Ieder spreekt zijn eigen taal, en niemand heeft het woordenboek.",
   introduction: `<p>Misschien heb je dit al eens meegemaakt. Hij komt thuis met een cadeautje, helemaal trots, en eigenlijk had jij liever gehad dat hij gewoon wat eerder thuis was. Of andersom: je zegt hem steeds dat je van hem houdt, je geeft hem complimenten, en hij lijkt het nauwelijks te horen, terwijl een simpele knuffel hem gelukkig had gemaakt. Allebei geven jullie, oprecht. En allebei hebben jullie het gevoel dat wat je terugkrijgt net niet raak is.</p>

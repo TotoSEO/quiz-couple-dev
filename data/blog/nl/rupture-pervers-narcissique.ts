@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Breken met een narcist lijkt op geen enkele andere breuk. Wat je vooraf regelt, wat hij daarna gaat doen en hoe je het volhoudt zonder contact.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Een deur die op een kier staat naar het licht, en een hand die een draad met een knoop in de vorm van een hart loslaat",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-17T09:54:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Met een narcist is de breuk niet het einde van het verhaal. Het is een hoofdstuk op zich... en het hoofdstuk dat de meeste voorbereiding vraagt.",
   introduction: `<p>Iemand verlaten is al moeilijk. Een narcist verlaten is iets aparts: een breuk waarbij de ander je niet laat gaan, waarbij tranen en dreigementen elkaar afwisselen, waarbij de man van het begin precies op het juiste moment weer opduikt, en waarbij je drie weken later terug kunt zijn zonder goed te weten hoe.</p>

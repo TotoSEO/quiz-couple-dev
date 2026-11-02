@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Voor wie emotioneel afhankelijk is, is een breuk geen gewoon liefdesverdriet maar afkicken. Waarom het zo’n pijn doet, en hoe je erdoorheen komt.",
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Een hart in twee helften, waarvan de ene verandert in een trap die omhoog gaat",
-  publishedAt: '2026-11-17',
-  modifiedAt: '2026-11-17',
+  publishedAt: '2026-11-17T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Iedereen heeft pijn na een breuk. Wie emotioneel afhankelijk is, zit in de ontwenning, en daar kom je op een andere manier doorheen.",
   introduction: `<p>De mensen om je heen lijken het lang te vinden. “Je moet verder.” Makkelijk gezegd. Zij weten niet hoe het is om ’s ochtends meteen op je telefoon te kijken voor een bericht dat niet meer komt, een nummer in te toetsen en weer op te hangen, lichamelijk een gemis te voelen dat verdacht veel lijkt op dat van een verslaving.</p>

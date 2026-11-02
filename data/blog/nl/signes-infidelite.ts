@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Een omgedraaide telefoon, vage tijden, plotselinge afstand... De tekenen van vreemdgaan die tellen, die niets bewijzen, en wat je met je twijfel doet.",
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Een telefoon die omgekeerd op tafel ligt tussen twee mensen die elkaar de rug toekeren",
-  publishedAt: '2026-12-19',
-  modifiedAt: '2026-12-19',
+  publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Twijfelen of je partner vreemdgaat is een van de ergste dingen in een relatie, en juist de losse ‘tekenen’ maken die twijfel groter in plaats van duidelijker.",
   introduction: `<p>Als je dit leest, heeft iets je alert gemaakt. Andere gewoontes, een telefoon die ineens onaantastbaar is, een nieuwe afstand, of gewoon een gevoel, dat doffe iets dat maar niet stil wil zijn. En sindsdien schommel je tussen twee soorten schaamte: die van verdenken zonder bewijs, en die van niet willen zien.</p>

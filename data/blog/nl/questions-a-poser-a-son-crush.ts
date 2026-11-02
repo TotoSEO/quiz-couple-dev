@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "Gesprekken die doodbloeden? 100 vragen om aan je crush te stellen, per situatie: via berichtjes, om te lachen, om te flirten, om te zien of het klikt.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Twee telefoons tegenover elkaar, verbonden door tekstballonnen en een hartje",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-01T11:34:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Het moeilijkste met een crush is de vraag vinden die het gesprek op het goede moment weer op gang brengt. Hier zijn er 100, per situatie.",
   introduction: `<p>Je kent dat moment. Het gesprek draait rondjes, de “goed en met jou?” volgen elkaar op, en je voelt dat het als niemand met iets anders komt, rustig uitdooft in een “fijne avond dan”. Met een crush telt elk gesprek dubbel! Dus zit iedereen vroeg of laat naar zijn telefoon te staren zonder te weten wat hij moet sturen.</p>

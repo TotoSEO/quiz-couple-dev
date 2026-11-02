@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Maagd? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Maagden samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Astrologisch symbool van de Maagd`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Maagd met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Een Maagd doet geen grote liefdesverklaringen. Ze weet nog hoe je je koffie drinkt, ze regelt wat nodig is op de dag dat het slecht met je gaat, ze lost achter de schermen dingen op zodat jouw leven wat makkelijker wordt. Haar liefde zit in de details, en je moet wel weten waar je moet kijken.</p>

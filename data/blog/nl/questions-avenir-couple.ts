@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Samenwonen, trouwen, een kind... Het gaat zelden mis door te weinig liefde, wel doordat je er nooit over praatte. 60 vragen over de toekomst als koppel.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Een stel dat met koffers in de hand naar een pad kijkt dat naar de horizon loopt",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Stellen lopen bijna nooit stuk op te weinig liefde. Ze lopen stuk op onderwerpen die ze nooit op tafel hebben gelegd.",
   introduction: `<p>De meeste grote crises in een relatie gaan over onderwerpen waarvan allebei wisten dat ze er ooit over moesten praten: geld, kinderen, de schoonfamilie, wie wat doet in huis. Dat ‘ooit’ kwam alleen te laat, midden in de crisis, op het slechtste moment om er rustig over te praten.</p>

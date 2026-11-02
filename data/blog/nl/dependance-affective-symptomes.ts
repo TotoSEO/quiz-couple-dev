@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Je telefoon 40 keer checken, bang voor stilte, een relatie die alle ruimte inneemt... De 16 symptomen van emotionele afhankelijkheid, per levensgebied.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Iemand die vastzit aan een telefoon met een hartje op het scherm, wachtend op een antwoord",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Emotionele afhankelijkheid zie je in de details: wat je voelt als hij niet antwoordt, wat je voor hem afzegt, wat je niet meer durft te zeggen.",
   introduction: `<p>Hij heeft al twee uur niet geantwoord. Objectief gezien is er niets aan de hand: hij werkt, hij leeft zijn leven, alles is goed. Maar jij hebt al vijftien keer op je telefoon gekeken, je laatste bericht teruggelezen om te zien of het onhandig was, en drie scenario’s bedacht, waarvan er een eindigt met hem die je verlaat...</p>

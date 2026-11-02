@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Telefoons checken, scenario’s bedenken, lijden zonder bewijs... Ziekelijke jaloezie uitgelegd: het verschil met gewone jaloezie, de oorzaken, de uitweg.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Een gestileerd groen oog met een stel gevangen in de iris",
-  publishedAt: '2026-12-15',
-  modifiedAt: '2026-12-15',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gewone jaloezie beschermt een relatie. Ziekelijke jaloezie vreet haar op, en als eerste degene die haar voelt.",
   introduction: `<p>Het begint altijd met iets kleins. Een naam die net te vaak valt, een glimlach op een feestje, een telefoon die met het scherm naar beneden ligt... en in je hoofd begint een scenario te draaien. Je weet dat het nergens op slaat. Dat wéét je! Maar het draait toch, steeds sneller, en voor je het weet ben je aan het controleren, vragen, fantaseren, en neem je het jezelf kwalijk.</p>

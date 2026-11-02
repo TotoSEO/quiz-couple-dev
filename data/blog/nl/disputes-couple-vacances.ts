@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: `28% van de koppels vindt de autorit naar de vakantie gespannen. De cijfers, wat ruzie op vakantie echt uitlokt, en wat de spanning wegneemt.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Open kofferbak langs een landweg, koffers half ingeladen, twee schaduwen die elkaar de rug toekeren`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-12',
   author: AUTHORS['thomas'],
   excerpt: `Vakantie zou een relatie goed moeten doen. In de peilingen komt vooral naar boven wat al niet goed zat. Dit zijn de echte cijfers, en het moment waarop het misgaat.`,
   introduction: `<p>Eerst het cijfer, want daarvoor heb je waarschijnlijk geklikt: <strong>28% van de mensen met een relatie vindt de reis naar de vakantiebestemming een gespannen moment</strong>. Dat blijkt uit een Franse peiling van OpinionWay voor de verzekeraar Direct Assurance, onder 1.016 mensen in mei 2025. De pers maakte er ‘een op de drie koppels’ van, en dat is niet overdreven.</p>

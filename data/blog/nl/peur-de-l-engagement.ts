@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Zegt hij al twee jaar dat hij er ‘niet klaar voor is’? Of blokkeer jij? Bindingsangst uitgelegd: de echte oorzaken, de signalen en hoe je eruit komt.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Iemand met een koffer in de hand die aarzelt voor een open deur in de vorm van een hart",
-  publishedAt: '2026-12-08',
-  modifiedAt: '2026-12-08',
+  publishedAt: '2026-12-08T08:31:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Bindingsangst is bijna nooit angst voor de ander. Het is angst voor wat je denkt te verliezen als je je bindt, en dat verandert het hele probleem.",
   introduction: `<p>“Ik ben er niet klaar voor.” Zes woorden die een relatie jarenlang in de wacht kunnen zetten. Niet klaar om het officieel te maken, niet klaar om samen te wonen, niet klaar om vooruit te kijken. En de ander wacht, ergens tussen geduld en uitputting, en vraagt zich af: ligt het aan mij, of aan hem?</p>

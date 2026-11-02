@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Weegschaal? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Weegschalen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Astrologisch symbool van de Weegschaal`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Weegschaal met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Een Weegschaal staat bekend als besluiteloos. Niet omdat ze keuzes uit de weg gaat, maar omdat ze de juiste keuze zoekt, de keuze die niemand pijn doet. Ze denkt bijna vanzelf met z'n tweeën, en daardoor is ze attent, maar ook iemand die haar eigen behoeften kan vergeten omdat ze zo graag het evenwicht bewaart.</p>

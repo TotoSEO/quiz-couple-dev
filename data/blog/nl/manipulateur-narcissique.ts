@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "De technieken van een narcistische manipulator op volgorde, zijn zwakke plekken, wat stilte met hem doet en hoe hij reageert als je hem doorziet.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Een schaker van wie de stukken menselijke silhouetten zijn",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Een narcistische manipulator is helemaal niet almachtig: zijn systeem heeft zwakke plekken, bekend en voorspelbaar... als je weet waar je moet kijken.",
   introduction: `<p>Je weet, of je vermoedt heel sterk, dat je te maken hebt met een narcistische manipulator. Ben je zover, dan is het niet meer genoeg om de signalen te herkennen: de vraag wordt hoe hij werkt, en hoe je je er concreet tegen beschermt.</p>

@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "Wat voelt een man als je hem negeert, stap voor stap: hij merkt niets, twijfelt, ergert zich, schrijft, en haakt dan af. En of hij terugkomt.",
   featuredImage: '/blog/homme-qu-on-ignore.webp',
   featuredImageAlt: "Man die 's avonds alleen op de bank zit, met zijn uitgeschakelde telefoon in de hand, starend voor zich uit",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-26T09:30:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Je antwoordt niet meer, en je vraagt je af wat dat met hem doet. Er gebeuren vrij precieze dingen, in een vrij voorspelbare volgorde.",
   introduction: `<p>Je bent gestopt met antwoorden. Misschien na een ruzie, misschien omdat hij geen moeite meer deed, misschien omdat iemand je vertelde dat het de beste manier is om hem terug te laten komen. En sindsdien vraag je je af wat er aan zijn kant gebeurt.</p>

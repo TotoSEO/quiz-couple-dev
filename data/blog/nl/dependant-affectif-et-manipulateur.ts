@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Een manipulator pikt iemand die emotioneel afhankelijk is er feilloos uit. Waarom die twee elkaar aantrekken, wat het met je doet, en hoe je het breekt.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Een magneet in de vorm van een hart die een geketend silhouet aantrekt",
-  publishedAt: '2026-11-07',
-  modifiedAt: '2026-11-07',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Het is geen toeval dat mensen die emotioneel afhankelijk zijn zoveel manipulators tegenkomen. De een wil onmisbaar zijn... de ander zoekt iemand die bang is om te verliezen.",
   introduction: `<p>Het is een vraag die steeds terugkomt bij mensen die uit een relatie komen waarin iemand hen in zijn greep had: “waarom ik?” Waarom hij, alweer? Waarom dat gevoel dat je altijd op hetzelfde profiel uitkomt, alsof er een magneet in het spel is?</p>

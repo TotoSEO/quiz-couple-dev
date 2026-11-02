@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Veilig, angstig, vermijdend, gedesorganiseerd: je hechtingsstijl bepaalt hoe je liefhebt, lang voor jij dat doet. De 4 profielen en hoe je de jouwe vindt.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Vier gestileerde harten die de vier hechtingsstijlen voorstellen, verbonden door verschillende draden",
-  publishedAt: '2026-11-28',
-  modifiedAt: '2026-11-28',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Waarom houden sommige mensen rustig van iemand, anderen terwijl ze zich vastklampen, en weer anderen terwijl ze vluchten? Het antwoord heeft een naam: hechting. En die begint lang voor de eerste liefde.",
   introduction: `<p>Je hebt vast dat vreemde verschijnsel al eens gezien: in een relatie lijkt ieder een rol te spelen die al op papier stond. De een heeft nabijheid nodig, voelt zich snel in de steek gelaten, stuurt nog een berichtje. De ander heeft lucht nodig, voelt zich snel overspoeld, neemt afstand. En hoe meer de een zich vastklampt, hoe verder de ander terugdeinst! Alsof het script al geschreven was voordat ze elkaar ontmoetten.</p>

@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Likes voor een ex, een Tinder-match ‘voor de lol’, dubbelzinnige DM’s... Micro-cheating uitgelegd: wat ernstig is, wat niet, en hoe je erover praat.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Een telefoon met een hartje als melding, en de schaduw van een derde tussen twee silhouetten",
-  publishedAt: '2026-12-22',
-  modifiedAt: '2026-12-22',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Niemand heeft met iemand geslapen. En toch is er iets gebeurd. Welkom in het grijze gebied van trouw zijn, anno nu.",
   introduction: `<p>Technisch gezien heeft hij niets gedaan. Hij heeft met niemand geslapen, geen geheime afspraakjes, geen regelrechte leugen. Alleen likes, steeds weer, op de foto’s van hetzelfde meisje, gesprekken op Insta die hij wegklikt als jij eraan komt, een ex met wie hij ‘vrienden is gebleven’ en die om elf uur ’s avonds nog berichtjes krijgt. Technisch gezien niets. En toch zit iets je dwars, en je weet niet eens of je je er wel aan mag storen.</p>

@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Niet elke toxische man is een narcist. De 6 profielen van een toxische man in een relatie, wat ze met je doen, en welke van hen kunnen veranderen.",
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Zes silhouetten van mannen, waarvan sommige een stekelige schaduw werpen",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-24T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Tussen de onhandige man die kan veranderen en de manipulator die dat niet doet, zit een hele waaier... en je beschermt je er niet op dezelfde manier tegen.",
   introduction: `<p>Sinds ‘toxisch’ het woord van deze tijd is geworden, stopt iedereen alles in hetzelfde vakje: de jaloerse man, de afstandelijke, de driftige, de leugenaar... En dat is een echt probleem, want die mannen lijken niet op elkaar. Sommigen beschadigen je uit onvolwassenheid, zonder het te willen, en kunnen veranderen. Anderen beschadigen je omdat ze zo werken, en zullen niet veranderen. <strong>Haal je die twee door elkaar, dan vlucht je weg voor een man die had kunnen groeien, of blijf je jaren bij een man die nooit zal groeien.</strong></p>

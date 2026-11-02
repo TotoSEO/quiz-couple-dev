@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "De 12 signalen dat een man zenuwachtig is in je buurt, wat er op dat moment in zijn lichaam gebeurt, en wat je doet om hem te laten ontspannen.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Een jonge man wrijft glimlachend en een beetje verlegen over zijn nek, tegenover een jonge vrouw die tegen hem praat, op een zomeravond buiten",
-  publishedAt: '2026-10-31',
-  modifiedAt: '2026-10-31',
+  publishedAt: '2026-08-26T16:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Hij lacht te hard, hij kan je niet aankijken, hij zit al tien minuten aan zijn glas te frunniken. Dit zijn de 12 signalen, en wat ze betekenen.",
   introduction: `<p>Hij lacht net iets te hard. Hij kan je niet langer dan twee seconden aankijken. Al tien minuten draait hij zijn glas rond in zijn handen zonder ervan te drinken.</p>

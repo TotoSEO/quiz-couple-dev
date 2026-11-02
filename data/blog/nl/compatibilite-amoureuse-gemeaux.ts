@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Tweelingen? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Tweelingen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Astrologisch symbool van de Tweelingen`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Tweelingen met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Als er één ding is waar een Tweelingen een hekel aan heeft, dan is het zich opgesloten voelen: in een hokje, in een sleur, in een beeld van hem dat de ander voor hem heeft bedacht. Mensen noemen hem wispelturig, maar hij is eerder veelzijdig. Hij wordt verliefd op een geest voordat hij verliefd wordt op een lichaam, en de dag dat het gesprek stopt, valt er iets weg.</p>

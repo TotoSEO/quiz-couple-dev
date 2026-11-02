@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Veel liefhebben en bang zijn om te verliezen lijken op elkaar. De 7 verschillen tussen liefde en emotionele afhankelijkheid, en de test die het uitmaakt.",
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Twee verstrengelde harten, het ene vrij en het andere omwikkeld met een touw",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-06T09:45:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Liefde en emotionele afhankelijkheid lijken van binnenuit enorm op elkaar. Even heftig, dezelfde gedachten die altijd doorlopen... en toch is alles anders.",
   introduction: `<p>Het is een vraag die je jezelf niet graag stelt, omdat ze een beetje eng is: hou ik van hem... of hou ik vooral van het feit dat hij er is? Is dat liefde, dat ding dat mijn maag samenknijpt als hij niet antwoordt? Of iets anders?</p>

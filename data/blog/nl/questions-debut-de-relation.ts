@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "In de eerste weken durf je niets te vragen, bang om alles kapot te maken. Fout: hier zijn 60 vragen voor het begin van een relatie, per fase gedoseerd.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Twee dampende koppen koffie naast elkaar, het begin van een gesprek",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Het begin van een relatie is het enige moment waarop je elkaar alles kunt vragen... en waarop je niets durft te vragen. Laten we dat oplossen.",
   introduction: `<p>Het begin van een relatie is HET moment waarop de goede vragen alles zouden veranderen, en het is ook het moment waarop je ze zorgvuldig ontwijkt, bang om te intens over te komen, een stap over te slaan, de magie te breken. Dus loop je blind verder, met een glimlach, en ontdek je de belangrijke dingen per ongeluk, drie maanden te laat.</p>

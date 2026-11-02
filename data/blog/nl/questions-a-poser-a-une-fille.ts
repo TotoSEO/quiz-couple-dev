@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Klaar met het “hoi, hoe gaat het?” dat nergens heen gaat? 90 vragen om aan een meisje te stellen, van het eerste bericht tot de date, zonder verhoor.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Een man en een vrouw op een terras, in een levendig gesprek bij een kop koffie",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Een gesprek dat vastloopt of een meisje dat je terug wil zien: dat hangt af van hoe goed je vragen zijn... en van wat je met de antwoorden doet.",
   introduction: `<p>Laten we twee minuten eerlijk zijn. Het probleem is bijna nooit om ÉÉN vraag te vinden. Het probleem is dat alle andere gesprekken die ze op dit moment voert, op dezelfde manier beginnen: “hoe gaat het?”, “wat doe je in het dagelijks leven?”, “fijn weekend gehad?”</p>

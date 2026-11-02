@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Loskomen van een narcist gaat niet in één keer. De traumaband uitgelegd, de 4 stappen naar vrijheid, en waarom teruggaan geen falen is.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Een vogel die ontsnapt uit een kooi waarvan het deurtje openstaat naar een heldere lucht",
-  publishedAt: '2026-11-10',
-  modifiedAt: '2026-11-10',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Je denkt dat loskomen uit iemands greep betekent dat je weggaat. Eigenlijk is weggaan maar de derde stap van de vier, en niet de moeilijkste.",
   introduction: `<p>Heb je al eens geprobeerd weg te gaan, dan ken je die paradox waar je gek van wordt: je WEET het. Je snapt het mechanisme, je hebt de artikelen gelezen, je kunt beter dan een handboek uitleggen hoe hij werkt, en toch ben je er nog. Of je bent weggegaan, en teruggekomen. Misschien wel meerdere keren.</p>
