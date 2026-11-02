@@ -69,3 +69,28 @@ test('completesDansLOrdre : les évaluations allées au bout, dans l\'ordre, ave
     '26/10 21:00 · fr · duo · source menu',
   ]);
 });
+
+test('duoParJour : les évaluations à deux, jour par jour (heure de Paris) et langue par langue', async () => {
+  const { duoParJour } = await import('../chiffres.mjs');
+  const l = duoParJour([
+    { lang: 'en', mode: 'duo', cree_le: '2026-10-28T23:30:00Z', a_fini: 'x', b_fini: 'y', paye_le: 'z' },
+    { lang: 'en', mode: 'duo', cree_le: '2026-10-28T10:00:00Z', a_fini: 'x', b_fini: null },
+    { lang: 'es', mode: 'duo', cree_le: '2026-10-28T09:00:00Z' },
+    { lang: 'fr', mode: 'solo', cree_le: '2026-10-28T09:00:00Z', a_fini: 'x' },
+  ]);
+  // 23 h 30 UTC le 28 octobre, c'est déjà le 29 à Paris (heure d'hiver depuis le 25).
+  assert.deepEqual(l, ['2026-10-28 · en 1/0/0 · es 1/0/0', '2026-10-29 · en 1/1/1']);
+});
+
+test('visitesParJour : la différence de deux fenêtres voisines donne les visites d\'un jour', async () => {
+  const { visitesParJour } = await import('../chiffres.mjs');
+  const fenetres = [null,
+    [{ path: '/en/relationship-assessment/', visites: 5 }],
+    [{ path: '/en/relationship-assessment/', visites: 25 }, { path: '/en/', visites: 3 }],
+    [{ path: '/en/relationship-assessment/', visites: 60 }, { path: '/en/', visites: 10 }]];
+  assert.deepEqual(visitesParJour(fenetres, [['éval en', '/en/relationship-assessment/'], ['accueil en', '/en/']], '2026-11-02'), [
+    '2026-10-31 · éval en 35 · accueil en 7',
+    '2026-11-01 · éval en 20 · accueil en 3',
+    '2026-11-02 · éval en 5 · accueil en 0',
+  ]);
+});
