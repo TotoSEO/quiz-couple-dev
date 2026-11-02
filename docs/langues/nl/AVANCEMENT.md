@@ -2089,7 +2089,30 @@ premier point qui n'est pas fait.
 - Les liens vers les articles du narcissisme pas encore traduits (breuk,
   manipulator, kenmerken) restent neutralisés jusqu'à leur lot.
 
+## Lot 9g (2 novembre 2026) : la série du narcissisme
+
+- `homme-pervers-narcissique-signes` (`/nl/blog/kenmerken-narcistische-man/`),
+  `femme-perverse-narcissique-signes` (`/nl/blog/kenmerken-narcistische-vrouw/`),
+  `rupture-pervers-narcissique` (`/nl/blog/breken-met-een-narcist/`, H1 « Een
+  narcist verlaten: hoe pak je dat aan? ») et `sortir-emprise-pervers-narcissique`
+  (`/nl/blog/loskomen-van-een-narcist/`, programmé comme en français pour le
+  10 novembre 2026 : la page n'existe qu'à la reconstruction qui suit, et ses
+  liens entrants restent neutralisés jusque-là ; vérifié par
+  `BUILD_DATE_OVERRIDE=2026-11-10T12:00:00+01:00`).
+- « Emprise » devient « greep » (« in de greep van een narcist »), « lien
+  traumatique » « traumaband », le hoovering garde son nom avec sa traduction
+  (« letterlijk ‘stofzuigen’ »), le no contact devient « geen contact meer ».
+- « Le 3919, c'est aussi pour les hommes » devient « Veilig Thuis is er ook
+  voor mannen » ; le 17 et le 114 par SMS disparaissent (le 112 par SMS
+  demande une inscription aux Pays-Bas).
+- Les ancres vers les quatre articles de la série et vers les red flags disent
+  le sujet sans reprendre le titre de la cible (« een narcist die je in zijn
+  greep houdt », « de alarmsignalen bij een man », « weggaan bij een narcist »).
+
 ## Les chiffres
+
+Au lot 9g : trente-deux articles en ligne et un programmé (10 novembre) ;
+`verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog` sans erreur.
 
 Au lot 9f : vingt-neuf articles en ligne ; `verifie-article`, `seo nl`,
 `liens nl` et `site nl --pages blog` sans erreur.
