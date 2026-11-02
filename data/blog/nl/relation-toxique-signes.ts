@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Een relatie is niet toxisch door de ruzies, maar door wat ze van je maakt. De 7 kenmerken van een toxische relatie, en wat er nog te herstellen valt.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Twee handen die aan elkaar vastzitten door een plant met doorns in plaats van bladeren",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "‘Toxisch’, het woord is overal, zo erg dat het niets meer betekent. Toch heeft een toxische relatie duidelijke kenmerken... en één centrale vraag: valt het te herstellen?",
   introduction: `<p>‘Toxische relatie’. Het woord is zo overal dat het voor alles gebruikt wordt: een stevige ruzie, een ex die wrok koestert, onenigheid over de vakantie, hup, toxisch! Gevolg: als je je de vraag ECHT stelt over je eigen relatie, weet je niet meer wat je ervan moet denken. Is het erg? Is het normaal? Ligt het aan mij?</p>

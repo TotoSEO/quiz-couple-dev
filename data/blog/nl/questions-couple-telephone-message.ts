@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Draaien jullie ‘wat doe je?’-appjes in rondjes? 60 vragen voor koppels via berichtjes en telefoon: avonden op afstand, appjes overdag, lange gesprekken.",
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Twee telefoons verbonden door een rood draadje dat tussen twee verlichte ramen gespannen is",
-  publishedAt: '2026-11-24',
-  modifiedAt: '2026-11-24',
+  publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Aan de telefoon heb je geen blikken en geen gebaren, alleen woorden. En juist daarom doen goede vragen daar wonderen.",
   introduction: `<p>Er is een moment dat alle stellen kennen, of ze nu 800 kilometer of twee wijken van elkaar wonen: het moment waarop het telefoontje van de avond een weerbericht wordt. “Hoe was je dag?” “Goed.” “Wat eet je?” “Pasta.” De band is er, de zin ook, maar het gesprek draait leeg.</p>

@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Onberispelijk in gezelschap, vernietigend thuis. De 12 kenmerken van een narcistische man, in de volgorde waarin ze opduiken, en wat je daarna doet.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Man met een dubbel gezicht, aan de ene kant glimlachend en aan de andere kant dreigend in de schaduw",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Het probleem met een narcistische man is dat jij de enige bent die ziet wat je ziet. De 12 gedragingen waardoor hij uiteindelijk door de mand valt.",
   introduction: `<p>Als je ‘narcistische man kenmerken’ in een zoekmachine typt, is dat niet uit nieuwsgierigheid. Een bepaalde man heeft je alarmbellen laten afgaan: je vriend, je ex, misschien de vader van je kinderen. En er klopt iets niet, want deze man op wie iedereen dol is, laat jou achter gesloten deuren iets meemaken wat niemand zich kan voorstellen.</p>

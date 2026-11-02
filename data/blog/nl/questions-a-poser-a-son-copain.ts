@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `100 vragen om aan je vriend te stellen, per thema: om hem beter te leren kennen, over jullie, grappig, gevoelens, toekomst, op afstand en 5 strikvragen.`,
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Jong koppel dat tegenover elkaar zit te praten, zij stelt glimlachend een vraag",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-25T13:18:00+02:00',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Je kent zijn lievelingseten en zijn humeur op zondagavond. Maar weet je ook waar hij echt bang voor is, of wat hij jou nooit durfde te vragen?",
   introduction: `<p>Jullie kunnen een hele avond samen zijn en maar drie nuttige zinnen wisselen: “wat eten we?”, “heb jij de sleutels?”, “gaat het met jou?”. Geen zorgen, dat betekent niet dat het slecht gaat met jullie relatie! Het overkomt gewoon elk koppel. Na een tijdje eet de planning het gesprek op.</p>

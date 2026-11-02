@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: `Relatie stoppen of doorgaan? Elf signalen die zeggen dat het op is, zeven die zeggen dat het de moeite waard is, en de vraag die de doorslag geeft.`,
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Twee mokken op een keukentafel bij zonsopgang, de ene vol en de andere leeg, twee stoelen een beetje uit elkaar`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-11',
   author: AUTHORS['thomas'],
   excerpt: `De meeste mensen die zich dit afvragen, draaien al maanden in rondjes. Dit is wat een slechte periode onderscheidt van een doodlopende weg, en zo beslis je zonder jezelf voor de gek te houden.`,
   introduction: `<p>Zoek je het korte antwoord, dan is het dit: <strong>je stopt als de relatie van je vraagt dat je opgeeft wie je bent, je gaat door als ze alleen vraagt dat je eraan werkt.</strong> De rest van dit artikel helpt je uit te zoeken in welk van de twee gevallen je zit.</p>

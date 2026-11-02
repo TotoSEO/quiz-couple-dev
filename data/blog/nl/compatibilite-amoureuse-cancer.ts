@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Kreeft? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Kreeften samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Astrologisch symbool van de Kreeft`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Kreeft met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Achter het pantser, want er is er altijd een, is de Kreeft een van de tekens die het meest geven in de liefde. Als hij zich veilig voelt, is hij er helemaal: hij onthoudt alles, hij voelt wat je nodig hebt voordat je het zegt. En er zijn dagen waarop hij zonder waarschuwing in zichzelf keert, wat de ander vaak opvat als afwijzing.</p>

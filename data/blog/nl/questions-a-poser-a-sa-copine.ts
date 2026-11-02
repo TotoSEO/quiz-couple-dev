@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Denk je dat je haar door en door kent? Wedden dat je van deze 75 vragen om aan je vriendin te stellen er minstens tien niet kunt beantwoorden?",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Een stel aan tafel dat lacht, zij beantwoordt een vraag en gebaart druk",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "De valkuil van stellen die al lang samen zijn: denken dat je klaar bent met elkaar ontdekken. Deze 75 vragen bewijzen het tegendeel.",
   introduction: `<p>Een testje voordat we beginnen: je weet wat haar lievelingseten is, haar favoriete film, haar parfum. Makkelijk. En nu... weet je waar ze dit jaar het meest trots op is? Wat ze op dit moment mist? Wat ze je niet durft te vragen? Minder makkelijk, hè.</p>

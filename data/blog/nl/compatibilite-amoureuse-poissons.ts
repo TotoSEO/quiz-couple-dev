@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Vissen? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Vissen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Astrologisch symbool van de Vissen`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Vissen met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>De Vissen is het laatste teken van de dierenriem, en heeft van alle andere tekens wel iets in zich. Zijn gevoeligheid werkt als een radar: hij merkt wat anderen verbergen, en hij houdt van iemand met een intensiteit die even mooi als ontregelend kan zijn. Het verschil tussen van iemand houden en in iemand opgaan, ziet hij niet altijd goed.</p>

@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Drama, schuldgevoel, controle vermomd als liefde... De signalen van een toxische vrouw in een relatie, de 6 profielen, en de vraag: en als ik het ben?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Silhouet van een vrouw die touwtjes vasthoudt, geknoopt in de vorm van een hart",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-31T08:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Mannen doen er gemiddeld veel langer over om een toxische relatie te benoemen... omdat niemand ze ooit heeft geleerd hoe dat eruitziet als het van een vrouw komt.",
   introduction: `<p>Doe de test in je omgeving: vraag een paar mannen wat een toxische vrouw is. Je krijgt grapjes, verwijzingen naar films... en heel weinig serieuze antwoorden. Want we zijn allemaal opgegroeid met het idee dat toxisch gedrag in een relatie iets van mannen is. Gevolg: als een man een relatie heeft die hem beschadigt, benoemt hij het niet. Hij zegt dat ze ‘karakter’ heeft. Hij zegt dat het ‘ingewikkeld’ is. Hij slikt het, en hij doet er jaren over om het te snappen.</p>

@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "De 6 fases van een breuk bij een man, van ontkenning tot wederopbouw, en de cyclus van de man die zelf weggaat, in de volgorde waarin het meestal gebeurt.",
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: "Een man die door de fases van een liefdesbreuk gaat",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-02-21',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "De 6 fases van een breuk bij een man, van ontkenning tot wederopbouw, en de cyclus van de man die zelf weggaat.",
   introduction: `<p>Je hoort vaak dat mannen minder lijden onder een breuk, dat ze sneller verdergaan. Dat klopt niet. Ze lijden net zo veel, maar anders: bij hen komt de pijn later. Een man kan wekenlang uitgaan, lachen, het ene feestje na het andere afwerken... en dan drie maanden later instorten, op een zondagavond, als de werkelijkheid hem in één keer inhaalt.</p>

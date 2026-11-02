@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dingen die je niet accepteert in een relatie: gebrek aan respect, manipulatie, ziekelijke jaloezie. Waar de grens ligt en hoe je die duidelijk aangeeft.",
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Koppel dat grenzen aangeeft in de relatie",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-02-21',
   author: AUTHORS['thomas'],
   excerpt: "Het gedrag dat je nooit zou moeten pikken in een relatie, en hoe je je grenzen aangeeft.",
   introduction: `<p>Er zijn dingen die je in een relatie accepteert zonder dat je het echt doorhebt. Niet in één keer, maar stukje bij beetje. Een <strong>opmerking die pijn doet</strong>, één keer. Dan twee keer. Dan wordt het normaal. <strong>Respectloos gedrag</strong> dat je in het begin schokt, en dat je uiteindelijk “normaal” gaat vinden omdat je eraan gewend bent geraakt. Dat heet het <strong>normaliseren van toxisch gedrag</strong>, en het is een van de sluwste mechanismen in een relatie die ontspoort.</p>

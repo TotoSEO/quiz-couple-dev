@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "De lijst met 13 red flags bij een man, van de stilste tot de ernstigste, met voor elk een voorbeeld uit het dagelijks leven en wat het voor later betekent.",
   featuredImage: '/blog/red-flags-homme.webp',
   featuredImageAlt: "Een rode vlag die zwemmen verbiedt, strak gespannen door de wind, van onderaf gezien tegen een heldere lucht",
-  publishedAt: '2026-10-31',
-  modifiedAt: '2026-10-31',
+  publishedAt: '2026-03-05',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Een red flag is zelden een grote ruzie. Het is iets kleins dat steeds terugkomt, dat je één keer laat gaan, en dan tien keer. Dit zijn de 13 die je moet kennen.",
   introduction: `<p>Een red flag is een waarschuwingssignaal in een relatie. Niet per se een scène of een crisis: meestal is het gedrag dat steeds terugkomt, dat je één keer laat gaan, dan twee keer, en dat je uiteindelijk normaal gaat vinden. Bijvoorbeeld: hij lacht om wat jij voelt, hij zegt op het laatste moment af, hij praat slecht over al zijn exen.</p>

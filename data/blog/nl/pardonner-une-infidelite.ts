@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Kun je vreemdgaan vergeven? Ja, onder duidelijke voorwaarden, en nee, niet altijd. Hoe vergeven verloopt, stap voor stap, zonder dat iemand je iets oplegt.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Een gebroken hart dat met gouden draad is gerepareerd, zoals bij kintsugi",
-  publishedAt: '2026-12-26',
-  modifiedAt: '2026-12-26',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Na vreemdgaan heeft iedereen een mening: ‘ga weg’, ‘vergeef het’, ‘ik zou het nooit kunnen’. De enige vraag die telt: wanneer is vergeving ECHT?",
   introduction: `<p>Sinds je het weet, weet iedereen wat jij moet doen. Je beste vriendin zegt: “ga weg, je verdient beter”. Je moeder zegt: “elk stel maakt weleens iets mee”. En jij, daartussenin, schommelt van uur tot uur tussen de neiging om alles kapot te slaan en de wens dat het nooit gebeurd was.</p>

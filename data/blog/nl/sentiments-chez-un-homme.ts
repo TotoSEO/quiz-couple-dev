@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: `De zes fases waarin gevoelens bij een man ontstaan, wat ze versnelt, wat ze blokkeert, en de signalen die laten zien dat hij echt iets voor je voelt.`,
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `De hand van een man naast een kopje op een houten tafel, in het zachte licht van een late middag`,
-  publishedAt: '2026-10-31',
-  modifiedAt: '2026-10-31',
+  publishedAt: '2026-08-12',
   author: AUTHORS['thomas'],
   excerpt: `Bij veel mannen beginnen gevoelens niet met een innerlijke liefdesverklaring, maar met een gewoonte. Dit zijn de fases, in de volgorde waarin ze echt komen.`,
   introduction: `<p>Bij de meeste mannen ontstaan gevoelens niet door liefde op het eerste gezicht. <strong>Ze ontstaan uit een opeenstapeling van gedeelde momenten, die op een dag een gemis veroorzaakt.</strong> Dat is niet minder romantisch, het gaat alleen langzamer, en van buitenaf zie je er lange tijd niets van.</p>

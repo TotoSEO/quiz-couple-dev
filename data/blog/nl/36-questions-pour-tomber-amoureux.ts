@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Twee onbekenden, 36 vragen en vier minuten oogcontact... De 36 vragen om verliefd te worden van Arthur Aron, het protocol en hoe je het vanavond doet.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Twee stoelen tegenover elkaar onder een warm peertje, met een boekje vol vragen ertussen",
-  publishedAt: '2026-11-03',
-  modifiedAt: '2026-11-03',
+  publishedAt: '2026-11-03T10:33:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "In 1997 bracht een psycholoog onbekenden in zijn laboratorium dichter bij elkaar met een simpele lijst vragen. Twee van hen trouwden later. De lijst bestaat nog steeds... hier is hij.",
   introduction: `<p>Het verhaal is waar, en het is onweerstaanbaar. In 1997 laat de Amerikaanse psycholoog Arthur Aron telkens twee onbekenden tegenover elkaar plaatsnemen in zijn laboratorium. De opdracht: elkaar 36 vragen stellen, in volgorde, steeds persoonlijker. Het resultaat: een opvallende nabijheid tussen volslagen vreemden, en, dat onthoudt iedereen vooral, twee deelnemers die later met elkaar trouwden.</p>

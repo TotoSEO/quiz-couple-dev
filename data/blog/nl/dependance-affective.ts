@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Emotionele afhankelijkheid: verlatingsangst, steeds geruststelling nodig hebben, jezelf kwijtraken. De signalen, de oorzaken en hoe je eruit komt.",
   featuredImage: '/blog/dependance-affective.webp',
   featuredImageAlt: "Close-up van een klimopsteel die strak om een lichte bamboestok gewonden is",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-24',
   author: AUTHORS['thomas'],
   excerpt: "Emotionele afhankelijkheid is niet ‘te veel houden van’. Het is niet meer weten hoe je zonder de ander bestaat en je hele waarde laten afhangen van hoe die naar je kijkt.",
   introduction: `<p>Je kijkt om de vijf minuten op je telefoon. Je ontleedt elke kleine verandering van toon in zijn berichtjes. Als hij afstandelijk is, raak je in paniek. Als hij er is, ben je opgelucht, maar nooit echt rustig, want je weet dat het elk moment kan omslaan.</p>

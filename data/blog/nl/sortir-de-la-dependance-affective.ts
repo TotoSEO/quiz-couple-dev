@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Een plan in 3 fases en 12 concrete oefeningen om emotionele afhankelijkheid te doorbreken, week na week, met de valkuilen die je onderweg tegenkomt.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Iemand die een ketting in de vorm van een hart breekt, met een trap op de achtergrond",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "“Werk aan jezelf”, “leer van jezelf houden”... Dank je, maar wat doe je dan maandagochtend concreet? Hier is het plan, oefening voor oefening.",
   introduction: `<p>Heb je al eens opgezocht hoe je uit een emotionele afhankelijkheid komt, dan ken je het liedje: “krijg weer vertrouwen in jezelf”, “richt je op je eigen behoeften”, “leer van jezelf houden”. Ongetwijfeld waar. Maar totaal onbruikbaar op een dinsdagavond om elf uur, als je naar je telefoon zit te staren en op zijn antwoord wacht.</p>

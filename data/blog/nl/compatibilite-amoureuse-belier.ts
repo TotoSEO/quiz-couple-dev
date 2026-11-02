@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: `Welk sterrenbeeld past bij Ram? Per teken een cijfer van 1 tot 10, wat goed gaat en wat schuurt, en hoe het zit met twee Rammen samen.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Astrologisch symbool van de Ram`,
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-03-03',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Ram met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
   introduction: `<p>Een Ram wacht niet. Hij wil iets, hij gaat ervoor, hij wordt verliefd, en als de ander het tempo niet bijhoudt, gaat hij verder. Niet omdat het hem niets kan schelen: hij leeft gewoon snel, en niet iedereen houdt dat vol. In de liefde levert dat een begin vol vuurwerk op, en soms een verhaal dat uitdooft voordat het goed en wel begonnen is.</p>

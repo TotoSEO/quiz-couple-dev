@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Een bruiloft zonder witte jurk, twee fietsen als huwelijksreis, het radium en het ongeluk van 1906: het liefdesverhaal van Pierre en Marie Curie.",
   featuredImage: '/blog/pierre-marie-curie-histoire-amour.webp',
   featuredImageAlt: "Pierre en Marie Curie in hun laboratorium, hij staand en zij zittend voor hun instrumenten, met links een collega",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-10-23T08:10:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Na het ongeluk van Pierre in 1906 hield Marie Curie een dagboek bij dat ze rechtstreeks aan hem richtte. Dit is hun verhaal, van hun ontmoeting in 1894 tot het Panthéon.",
   introduction: `<p>Marie Curie kennen we vooral van haar twee Nobelprijzen. Minder bekend is dat ze met Pierre Curie <strong>een echt liefdesverhaal</strong> beleefde, dat iets meer dan tien jaar duurde en in 1906 ineens ophield, in een Parijse straat.</p>

@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Koelt hij af als het serieus wordt? Vermijdende hechting in een relatie, van twee kanten: wat hij vanbinnen beleeft, wat het met jou doet, wat helpt.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Een silhouet dat een stap achteruit zet voor een hart dat naar hem wordt uitgestoken",
-  publishedAt: '2026-12-05',
-  modifiedAt: '2026-12-05',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Iemand met een vermijdende hechting houdt niet minder van je. Hij heeft alleen heel vroeg geleerd dat iets nodig hebben gevaarlijk is, en hij gaat met liefde om zoals je met een risico omgaat.",
   introduction: `<p>Het is een van de verwarrendste ervaringen in de liefde: alles gaat goed, hij is er, grappig, betrokken, en precies op het moment dat de relatie serieus wordt, gaat er iets dicht. Minder berichtjes, minder plannen, die plotselinge behoefte aan lucht. Je hebt niets verkeerd gedaan. Hij is niet minder gehecht. Het is iets anders: hoe dichterbij jij komt, hoe verder zijn systeem terugdeinst.</p>

@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "De lijst met 12 red flags bij een vrouw, van de stilste tot de ernstigste, met voor elk een voorbeeld uit het dagelijks leven en wat het betekent.",
   featuredImage: '/blog/red-flags-femme.webp',
   featuredImageAlt: "Een rij kleine rode vlaggetjes in het gras, de eerste scherp en de andere wazig",
-  publishedAt: '2026-10-31',
-  modifiedAt: '2026-10-31',
+  publishedAt: '2026-03-07',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Een red flag is gedrag dat steeds terugkomt en je op den duur uitput, niet zomaar een karaktertrek. Dit zijn de 12 die je bij een vrouw moet kennen.",
   introduction: `<p>Er wordt veel gepraat over red flags bij een man, en veel minder over die bij een meisje of een vrouw. Toch bestaan ze net zo goed, en mannen die ze meemaken, hebben er vaak langer voor nodig om ze te benoemen. Een red flag is geen karaktertrek, geen ‘ze is lastig’ of ‘ze is te emotioneel’. Het is gedrag dat steeds terugkomt, dat je één keer laat gaan, dan tien keer, en dat de relatie uiteindelijk uitputtend maakt.</p>

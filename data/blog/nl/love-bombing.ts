@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Love bombing signalen: hij is perfect, te snel, te heftig. De 3 fases van de cyclus, de concrete tekenen en de grenstest die het verschil laat zien.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "Een veel te grote bos lichtroze rozen, alleen op een drempel in de volle zon",
-  publishedAt: '2026-11-02',
-  modifiedAt: '2026-11-02',
+  publishedAt: '2026-08-02',
   author: AUTHORS['thomas'],
   excerpt: "Love bombing lijkt niet op manipulatie. Het lijkt op het mooiste begin van een liefdesverhaal dat je ooit hebt meegemaakt. Precies daarom werkt het zo goed.",
   introduction: `<p>Je hebt net iemand leren kennen en alles gaat heel snel. Berichtjes van 's ochtends tot 's avonds. Complimenten waar je duizelig van wordt. Een “ik denk dat jij de persoon van mijn leven bent” na drie weken. Je vriendinnen vinden het prachtig. Jij voelt ergens een klein schuurtje dat je niet goed kunt benoemen.</p>

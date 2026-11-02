@@ -8,8 +8,8 @@ const article: BlogArticleData = {
   metaDescription: "Ze huilt niet en slaat niet met deuren, ze verdwijnt langzaam. De 9 signalen van een ongelukkige vrouw in een relatie, met een voorbeeld en wat je doet.",
   featuredImage: '/blog/femme-malheureuse-en-couple.webp',
   featuredImageAlt: "Een vrouw van achteren gezien op de rand van een onopgemaakt bed, een kopje in haar handen, in een kamer vol licht",
-  publishedAt: '2026-10-31',
-  modifiedAt: '2026-10-31',
+  publishedAt: '2026-03-01',
+  modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: "Een ongelukkige vrouw in een relatie schreeuwt het niet uit. Ze praat minder, gaat vaker weg, ergert zich aan kleinigheden. De 9 signalen, en wat je dan doet.",
   introduction: `<p>Een ongelukkige vrouw in een relatie ziet er meestal niet uit zoals je denkt. Geen tranen elke avond, geen deuren die dichtslaan. Meestal is het stiller dan dat: ze praat minder, ze gaat vaker weg, ze ergert zich aan kleinigheden, en op een dag besef je dat jullie laatste echte moment samen lang geleden is.</p>

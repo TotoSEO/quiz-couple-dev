@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "“Dat heb ik nooit gezegd”, “je bent gek”, “je verzint het”... De signalen van gaslighting, het mechanisme in 3 stappen en hoe je weer vaste grond vindt.",
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Een gaslamp waarvan de vlam lager wordt, en een silhouet dat twijfelt in het halfdonker",
-  publishedAt: '2026-11-21',
-  modifiedAt: '2026-11-21',
+  publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting liegt niet tegen je over de feiten. Het liegt tegen je over jezelf: je geheugen, je waarneming, je geestelijke gezondheid. Daardoor is het de meest bijtende manipulatie die er bestaat.",
   introduction: `<p>Je hebt het gezien. Je was erbij, je hebt de woorden gehoord, je zou ze kunnen herhalen. En toch, tegenover je, een perfecte stelligheid: “dat heb ik nooit gezegd”. Geen moment van twijfel. Dus check je het in je hoofd, één keer, twee keer, en er ontstaat een klein scheurtje: en als ik het nou ben?</p>

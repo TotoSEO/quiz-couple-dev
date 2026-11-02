@@ -8,8 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Emotionele afhankelijkheid zit niet alleen in relaties. Een vriendschap die een behoefte wordt, jaloezie, exclusiviteit... de signalen en de oplossing.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Twee vriendinnen verbonden door een te strak gespannen rode draad tussen hun polsen",
-  publishedAt: '2026-11-14',
-  modifiedAt: '2026-11-14',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Op emotionele afhankelijkheid letten we in onze relaties, en we laten haar rustig binnensluipen in onze vriendschappen, waar niemand eraan denkt haar te zoeken.",
   introduction: `<p>Er is een jaloezie waar nooit iemand over praat: die je voelt als je beste vriendin naar iemand anders toe groeit. Dat steekje als ze vertelt over een avond waar jij niet bij was. Die behoefte om te weten dat je ‘de’ persoon blijft, de eerste die het hoort, de favoriet. Je durft het niet te zeggen, omdat het absurd lijkt: jaloezie, tussen vriendinnen?</p>
