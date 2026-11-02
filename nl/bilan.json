@@ -29,7 +29,7 @@
       "titre": "Je relatiecheck",
       "modeTitre": "Hoe vul je de relatiecheck in?",
       "modeDuo": "Samen",
-      "modeDuoAide": "Tegelijk, ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Het rapport vergelijkt jullie twee reeksen antwoorden.",
+      "modeDuoAide": "Jullie antwoorden ieder apart, op de eigen telefoon, zonder de antwoorden van de ander te zien. Het rapport vergelijkt jullie twee reeksen antwoorden.",
       "modeSolo": "Alleen",
       "modeSoloAide": "Je antwoordt voor jezelf, en bij de onderwerpen die het zwaarst wegen zeg je ook wat je partner zou antwoorden. Je partner krijgt niets te horen en ziet niets.",
       "prenomsTitre": "Jullie twee voornamen",
@@ -49,9 +49,7 @@
       "prenomManque": "Vul jullie twee voornamen in.",
       "accordManque": "Vink het vakje aan om verder te gaan.",
       "email": "Je e-mailadres",
-      "emailFacultatif": "Je e-mailadres (niet verplicht)",
       "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit. We mailen je als je rapport klaar is, één keer als {{autre}} lang over het afmaken doet, en één keer als het rapport de volgende dag nog wacht.",
-      "emailAideDepart": "Zo kun je je relatiecheck terugvinden als je de pagina sluit. We mailen je als het rapport klaar is, één keer als je halverwege stopt of als {{autre}} lang over het afmaken doet, en één keer als het rapport de volgende dag nog wacht. Geef je nu geen adres op, dan vragen we het aan het eind, voor de link naar het rapport als pdf. Het dient nergens anders voor.",
       "emailSuggestion": "Bedoelde je {{email}}?",
       "emailFaux": "Dit e-mailadres lijkt niet compleet.",
       "emailManque": "Vul je e-mailadres in: daar sturen we de link naar het rapport als pdf naartoe.",
@@ -235,7 +233,6 @@
         "prixRappel": "De vragen zijn gratis. Het volledige rapport kost {{prix}}: je ontgrendelt het als je klaar bent met je antwoorden.",
         "creer": "Mijn relatiecheck beginnen",
         "emailAide": "De link naar je rapport als pdf wordt naar dit adres gestuurd. Je kunt er ook je relatiecheck mee terugvinden als je de pagina sluit, en we sturen je één herinnering als je rapport de volgende dag nog wacht.",
-        "emailAideDepart": "Zo kun je je relatiecheck terugvinden als je de pagina sluit. We mailen je één keer als je halverwege stopt, en één keer als je rapport de volgende dag nog wacht. Geef je nu geen adres op, dan vragen we het aan het eind, voor de link naar het rapport als pdf. Het dient nergens anders voor.",
         "apportTitre": "Wat de relatiecheck alleen je oplevert",
         "apport": [
           "Jouw kijk op de twaalf thema's van je relatie, van het dagelijks leven tot intimiteit",
@@ -696,7 +693,7 @@
   "lp": {
     "badge": "Relatiecheck",
     "titre": "Relatiecheck: weet waar jullie staan, zonder therapeut",
-    "sousTitre": "20 minuten samen, ieder op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
+    "sousTitre": "20 minuten per persoon op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
     "cta": "Begin de relatiecheck",
     "soloQuestion": "Wil je partner niet meedoen?",
     "soloLien": "Doe hem alleen",
@@ -719,7 +716,7 @@
       },
       {
         "n": "20 min",
-        "l": "samen, ieder op de eigen telefoon"
+        "l": "per persoon, in het eigen tempo"
       },
       {
         "n": "€ 0",
@@ -736,8 +733,8 @@
         },
         {
           "duree": "20 min",
-          "titre": "Jullie antwoorden tegelijk",
-          "texte": "Ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Pauzeren kan wanneer je wilt."
+          "titre": "Jullie antwoorden ieder apart",
+          "texte": "Op de eigen telefoon, zonder de antwoorden van de ander te zien. Pauzeren kan wanneer je wilt."
         },
         {
           "duree": "1 min",
@@ -795,9 +792,9 @@
       "intro": "Heeft de ander geen zin om erover te praten? Dan doe je hem in je eentje. Zelfde prijs, zelfde rapport.",
       "duo": {
         "titre": "Samen",
-        "sous": "Tegelijk, ieder op de eigen telefoon",
+        "sous": "Ieder op de eigen telefoon",
         "points": [
-          "Jullie antwoorden tegelijk, zonder de antwoorden van de ander te zien",
+          "Ieder antwoordt apart, in het eigen tempo",
           "Het rapport vergelijkt jullie antwoorden, onderwerp per onderwerp"
         ],
         "cta": "Samen beginnen"

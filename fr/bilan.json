@@ -29,7 +29,7 @@
       "titre": "Votre évaluation",
       "modeTitre": "Comment faites-vous l'évaluation ?",
       "modeDuo": "À deux",
-      "modeDuoAide": "Au même moment, chacun sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
+      "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
       "modeSolo": "Seul(e)",
       "modeSoloAide": "Vous répondez pour vous, et sur les sujets qui comptent le plus, vous dites aussi ce que votre partenaire répondrait. Votre partenaire n'est pas prévenu(e) et ne voit rien.",
       "prenomsTitre": "Vos deux prénoms",
@@ -49,9 +49,7 @@
       "prenomManque": "Écrivez vos deux prénoms.",
       "accordManque": "Cochez la case pour continuer.",
       "email": "Votre e-mail",
-      "emailFacultatif": "Votre e-mail (facultatif)",
       "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page. On vous écrira quand votre rapport sera prêt, une fois si {{autre}} tarde à finir, et une seule fois s'il attend encore le lendemain.",
-      "emailAideDepart": "Elle vous permet de retrouver votre évaluation si vous fermez la page. On vous écrira quand le rapport sera prêt, une fois si vous vous arrêtez en route ou si {{autre}} tarde à finir, et une fois s'il attend encore le lendemain. Sans adresse maintenant, on vous la demandera à la fin, pour le lien du rapport PDF. Elle ne sert à rien d'autre.",
       "emailSuggestion": "Vous vouliez dire {{email}} ?",
       "emailFaux": "Cette adresse e-mail n'a pas l'air complète.",
       "emailManque": "Écrivez votre adresse e-mail : c'est là que le lien du rapport PDF sera envoyé.",
@@ -235,7 +233,6 @@
         "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} : vous le débloquez quand vous avez fini vos réponses.",
         "creer": "Commencer mon évaluation",
         "emailAide": "Le lien de votre rapport PDF sera envoyé à cette adresse. Elle sert aussi à retrouver votre évaluation si vous fermez la page, et à vous envoyer un seul rappel si votre rapport attend encore le lendemain.",
-        "emailAideDepart": "Elle vous permet de retrouver votre évaluation si vous fermez la page. On vous écrira une fois si vous vous arrêtez en route, et une fois si votre rapport attend encore le lendemain. Sans adresse maintenant, on vous la demandera à la fin, pour le lien du rapport PDF. Elle ne sert à rien d'autre.",
         "apportTitre": "Ce que l'évaluation seul(e) vous apporte",
         "apport": [
           "Votre regard sur les douze domaines de votre couple, du quotidien à l'intimité",
@@ -696,7 +693,7 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Faites le point sur votre couple, sans aller chez un pro",
-    "sousTitre": "20 minutes ensemble, chacun sur son téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
+    "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
     "cta": "Commencer l'évaluation",
     "soloQuestion": "Votre partenaire ne veut pas participer ?",
     "soloLien": "Faites-la seul(e)",
@@ -719,7 +716,7 @@
       },
       {
         "n": "20 min",
-        "l": "ensemble, chacun sur son téléphone"
+        "l": "chacun, à son rythme"
       },
       {
         "n": "0 €",
@@ -736,8 +733,8 @@
         },
         {
           "duree": "20 min",
-          "titre": "Vous répondez en même temps",
-          "texte": "Chacun sur son téléphone, sans voir les réponses de l'autre. Vous pouvez faire une pause quand vous voulez."
+          "titre": "Chacun répond de son côté",
+          "texte": "Sur son téléphone, sans voir les réponses de l'autre. Vous pouvez faire une pause quand vous voulez."
         },
         {
           "duree": "1 min",
@@ -795,9 +792,9 @@
       "intro": "Si l'autre n'a pas envie d'en parler, vous pouvez la faire de votre côté. Même prix, même rapport.",
       "duo": {
         "titre": "À deux",
-        "sous": "Au même moment, chacun sur son téléphone",
+        "sous": "Chacun sur son téléphone",
         "points": [
-          "Vous répondez en même temps, sans voir les réponses de l'autre",
+          "Chacun répond de son côté, à son rythme",
           "Le rapport compare vos réponses, sujet par sujet"
         ],
         "cta": "Commencer à deux"

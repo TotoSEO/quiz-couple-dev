@@ -29,7 +29,7 @@
       "titre": "Vuestra evaluación",
       "modeTitre": "¿Cómo hacéis la evaluación?",
       "modeDuo": "En pareja",
-      "modeDuoAide": "A la vez, cada uno en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
+      "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
       "modeSolo": "A solas",
       "modeSoloAide": "Respondes por ti y, en los temas que más cuentan, dices también lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
       "prenomsTitre": "Vuestros dos nombres",
@@ -49,9 +49,7 @@
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca la casilla para continuar.",
       "email": "Tu e-mail",
-      "emailFacultatif": "Tu e-mail (opcional)",
       "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página. Te escribiremos cuando tu informe esté listo, una vez si {{autre}} tarda en terminar, y una sola vez más si al día siguiente sigue esperando.",
-      "emailAideDepart": "Te permite recuperar tu evaluación si cierras la página. Te escribiremos cuando el informe esté listo, una vez si lo dejas a medias o si {{autre}} tarda en terminar, y una vez si al día siguiente sigue esperando. Si no lo das ahora, te lo pediremos al final, para el enlace a tu informe en PDF. No se usa para nada más.",
       "emailSuggestion": "¿Querías decir {{email}}?",
       "emailFaux": "Esta dirección de e-mail no parece completa.",
       "emailManque": "Escribe tu dirección de e-mail: es ahí donde se enviará el enlace al informe en PDF.",
@@ -235,7 +233,6 @@
         "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}}: lo desbloqueas cuando hayas terminado tus respuestas.",
         "creer": "Empezar mi evaluación",
         "emailAide": "El enlace a tu informe en PDF se enviará a esta dirección. También sirve para recuperar tu evaluación si cierras la página y para enviarte un solo recordatorio si al día siguiente tu informe sigue esperando.",
-        "emailAideDepart": "Te permite recuperar tu evaluación si cierras la página. Te escribiremos una vez si lo dejas a medias, y una vez si al día siguiente tu informe sigue esperando. Si no lo das ahora, te lo pediremos al final, para el enlace a tu informe en PDF. No se usa para nada más.",
         "apportTitre": "Lo que te aporta la evaluación a solas",
         "apport": [
           "Tu mirada sobre las doce áreas de vuestra pareja, del día a día a la intimidad",
@@ -700,7 +697,7 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
-    "sousTitre": "20 minutos juntos, cada uno en su teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
+    "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
     "soloQuestion": "¿Tu pareja no quiere participar?",
     "soloLien": "Hazla a solas",
@@ -723,7 +720,7 @@
       },
       {
         "n": "20 min",
-        "l": "juntos, cada uno en su teléfono"
+        "l": "cada uno, a su ritmo"
       },
       {
         "n": "0 €",
@@ -740,8 +737,8 @@
         },
         {
           "duree": "20 min",
-          "titre": "Respondéis a la vez",
-          "texte": "Cada uno en su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
+          "titre": "Cada uno responde por su lado",
+          "texte": "En su teléfono, sin ver las respuestas del otro. Podéis hacer una pausa cuando queráis."
         },
         {
           "duree": "1 min",
@@ -799,9 +796,9 @@
       "intro": "Si tu pareja no tiene ganas de hablar del tema, puedes hacerla por tu lado. Mismo precio, mismo informe.",
       "duo": {
         "titre": "En pareja",
-        "sous": "A la vez, cada uno en su teléfono",
+        "sous": "Cada uno en su teléfono",
         "points": [
-          "Respondéis juntos, sin ver las respuestas del otro",
+          "Cada uno responde por su lado, a su ritmo",
           "El informe compara vuestras respuestas, tema por tema"
         ],
         "cta": "Empezar en pareja"
