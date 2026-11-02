@@ -27,14 +27,12 @@ export function langueCachee(lang) { return LANGUES_CACHEES.includes(lang); }
 // de la liste ; la langue est finie quand la liste est vide et qu'on retire
 // son entrée. L'évaluation a son propre interrupteur (BILAN_LANGUES_FERMEES).
 export const PAGES_EN_ATTENTE = {
-  // Les quiz spéciaux sont sortis au lot 7 (2 novembre 2026), les dernières
-  // pages : la liste est vide, la clé part au push final.
-  nl: [],
-  // La clé reste là, même vide, tant que des articles du blog attendent leur
+  // Le néerlandais en est sorti le 2 novembre 2026, toutes ses pages et tous
+  // ses articles traduits. Une langue future y met ses pages en attente, et sa
+  // clé reste là, même vide, tant que des articles du blog attendent leur
   // traduction : langueEnCours() la lit, et sans elle un article déclaré dans
-  // BLOG_ARTICLES (slugs.nl) serait construit sans son fichier
-  // data/blog/nl/<slug>.ts. La liste du blog est sortie au lot 9a (31 octobre
-  // 2026), avec le premier article.
+  // BLOG_ARTICLES (slugs.<langue>) serait construit sans son fichier
+  // data/blog/<langue>/<slug>.ts.
 };
 // Une langue dont le contenu n'est pas encore entièrement traduit, cachée ou
 // déjà ouverte : un article n'y existe que traduit, et un fichier de textes
