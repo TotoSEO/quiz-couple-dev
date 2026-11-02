@@ -1,17 +1,17 @@
 {
   "hero": {
     "badge": "Free • No signup • 5 min",
-    "title": "Relationship test: how strong is your couple?",
-    "description": "20 questions to measure how solid your relationship is. Together on one phone or each in turn, pick the format you want to play.",
+    "title": "Couple compatibility test: how strong is your relationship?",
+    "description": "A free 20-question compatibility test to see how solid your relationship is. Together on one phone or each in turn, pick the format you want to play.",
     "duration": "5 minutes",
     "players": "2 players",
     "questions": "20 questions",
-    "titleHighlight": "your couple",
+    "titleHighlight": "your relationship",
     "intro1": "Whether you've been together for a few months or for years, a small test to compare yourselves is a great way to step back and open up subjects you wouldn't necessarily think of bringing up!"
   },
   "section1": {
-    "title": "What is a couple test and what is it for?",
-    "p1": "A <strong>couple test</strong> is an assessment tool designed to measure the compatibility and harmony between two partners. Unlike a casual conversation, it structures your exchanges around key themes: communication, trust, values, life goals, and intimacy.",
+    "title": "What is a couple compatibility test and what is it for?",
+    "p1": "A <strong>couple compatibility test</strong> is a tool that measures how well two partners fit together. Unlike a casual conversation, it structures your exchanges around key themes: communication, trust, values, life goals, and intimacy.",
     "p2": "The goal isn't to deliver a final verdict, but to offer an <strong>objective mirror of your relationship</strong>. Your score highlights your strengths and identifies the areas where a joint effort could strengthen your bond.",
     "p3": "The questions are built on <strong>concrete everyday situations</strong>, not abstract concepts. That's what makes the exercise relevant and accessible, whether your relationship is new or years old."
   },
@@ -30,7 +30,7 @@
     "pillar5Text": "Not fearing that the other will leave, not seeing a break-up brandished in every argument, being able to count on them in an emergency, knowing how to repair after a conflict. This is the pillar that makes all the others possible."
   },
   "section3": {
-    "title": "How to interpret your couple test results",
+    "title": "How to interpret your compatibility test results",
     "p1": "Not every question carries the same weight. Being unable to picture five years from now counts for more than one badly handled weekend alone: each question carries a weight matching what it really says about solidity, and your score is what your answers earn against the total of those weights.",
     "quote": "The score is just a starting point. What truly matters is what you do with it together.",
     "p2": "The verdict runs on eight levels, from “a lot to talk about” to an almost perfect match: fine enough that two different couples don't get the same label. You each also get your individual score, and the gap between the two is often the most interesting data point of the test.",
@@ -63,7 +63,7 @@
     "row8Analysis": "A lot to talk about: a real conversation on a good day, and some help if needed"
   },
   "section4": {
-    "title": "Mistakes to avoid when taking a couple test",
+    "title": "Mistakes to avoid when taking a compatibility test",
     "p1": "For the result to actually mean something, here are the most common traps:",
     "sub1Title": "Not answering honestly",
     "sub1P1": "Answering what you think your partner wants to hear completely skews the results. The purpose is to reveal your real thoughts, not to please the other person. <strong>Honesty</strong> is the key to a meaningful test.",
@@ -74,7 +74,7 @@
     "tip": "💡 <strong>Tip:</strong> Retake the test in a few months to track your growth. A couple that grows together is a couple that lasts."
   },
   "section5": {
-    "title": "When should you take a couple test?",
+    "title": "When should you take a compatibility test as a couple?",
     "p1": "There's no perfect moment, but some situations particularly lend themselves to it:",
     "p2": "<strong>Early in the relationship:</strong> to make sure you're aligned on the important topics before committing further.",
     "p3": "<strong>After a rough patch:</strong> an argument, growing apart, falling into routine… The test helps you take stock without judgment.",
@@ -96,7 +96,7 @@
     "sub5P1": "You envision a future together, whether it's a weekend getaway, a move, or a life-changing project."
   },
   "section7": {
-    "title": "How to improve your couple score",
+    "title": "How to improve your compatibility score",
     "p1": "If the result reveals room for improvement, here are concrete leads:",
     "pillar1Title": "Schedule a weekly check-in",
     "pillar1Text": "Set aside 30 minutes a week for an <strong>emotional check-in</strong>. Talk about how you feel, not just the week's logistics. The hardest part is starting: prepare one open question in advance, and let the other person finish their sentences.",
@@ -127,8 +127,8 @@
     "quote": "A happy couple isn't a couple without problems. It's a couple that knows how to face them together."
   },
   "seo": {
-    "whyTitle": "Why take a relationship test online?",
-    "whySubtitle": "A couple test is more than just a game: it's a shared moment of truth that can transform your relationship.",
+    "whyTitle": "Why take a compatibility test online?",
+    "whySubtitle": "A compatibility test is more than just a game: it's a shared moment of truth that can transform your relationship.",
     "card1Title": "Strengthen your connection",
     "card1Text": "<a href=\"/en/couple-common-points-test/\">What the two of you have in common</a> counts, but so do the differences that make your relationship richer.",
     "card2Title": "Open the dialogue",
@@ -137,16 +137,16 @@
     "card3Text": "Your score helps you see where you can grow together and which aspects of your relationship deserve attention.",
     "card4Title": "Have fun together",
     "card4Text": "Beyond the score, it's a playful and intimate moment to share as a couple.",
-    "howTitle": "How does our couple test work?",
+    "howTitle": "How does our compatibility test work?",
     "step1Title": "Enter your names",
     "step1Text": "Choose your mode: SOLO together on one phone, or DUO each in turn",
     "step2Title": "Answer in turns",
     "step2Text": "Answer the 20 questions, drawn to cover all five pillars",
     "step3Title": "Discover your score",
     "step3Text": "Get your level across eight bands, with a score each in DUO mode",
-    "faqTitle": "Frequently asked questions about the couple test",
-    "faq1Q": "Is the couple test really free?",
-    "faq1A": "Yes, our couple test is 100% free with no signup required. You can retake it as many times as you like to track how your relationship evolves.",
+    "faqTitle": "Frequently asked questions about the compatibility test",
+    "faq1Q": "Is this compatibility test really free?",
+    "faq1A": "Yes, this couple compatibility test is 100% free with no signup required. You can retake it as many times as you like to track how your relationship evolves.",
     "faq2Q": "How long does the couple test take?",
     "faq2A": "The couple test takes about 5 minutes. It has 20 questions, which you can work through together in SOLO mode or each in turn in DUO mode.",
     "faq3Q": "How is the couple test score calculated?",
