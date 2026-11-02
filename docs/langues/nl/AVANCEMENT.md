@@ -2232,7 +2232,34 @@ premier point qui n'est pas fait.
 - « Je echt binden » (« vraiment s'engager ») était dans un H2 : « je aan elkaar
   binden ».
 
+## Lot 9o (2 novembre 2026) : les trois histoires d'amour, les 36 vragen, les berichtjes
+
+- `marie-antoinette-fersen-lettres` (`/nl/blog/marie-antoinette-fersen-brieven/`),
+  `pierre-marie-curie-histoire-amour` (`/nl/blog/pierre-en-marie-curie-liefdesverhaal/`)
+  et `juliette-drouet-victor-hugo-lettres` (`/nl/blog/juliette-drouet-victor-hugo-brieven/`),
+  en ligne tout de suite ; `36-questions-pour-tomber-amoureux`
+  (`/nl/blog/36-vragen-om-verliefd-te-worden/`, programmé le 3 novembre) et
+  `questions-couple-telephone-message` (`/nl/blog/vragen-voor-koppels-via-berichtjes/`,
+  le 24 novembre).
+- Les histoires gardent chaque fait, chaque date et chaque source du français.
+  Les citations d'époque restent en français avec leur traduction entre
+  parenthèses (‘ma tendre amie’ (mijn lieve vriendin)), les citations longues
+  sont traduites et le disent (« vertaald uit het Frans ») ; « Axel von Fersen »,
+  le nom que lui donnent les sources néerlandaises, les Tuilerieën, Guernsey,
+  et les milliers avec un point (22.000).
+- Les 36 questions sont traduites d'après celles d'Aron, sans reprendre une
+  traduction néerlandaise existante. Les quatre minutes de regard sont données
+  pour ce qu'elles sont, la fin de la version qui a fait le tour du monde (celle
+  de l'essai du New York Times), sans dire qu'elles étaient dans le protocole de
+  1997, ce que les sources ne permettent pas d'affirmer.
+- Le contrôle `site` a relevé « 📖 In Les Misérables », le même texte que
+  l'anglais : le titre de l'encadré dit « Hun datum in Les Misérables ».
+
 ## Les chiffres
+
+Au lot 9o : cinquante-cinq articles en ligne et dix programmés (du 3 novembre au
+5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9n : cinquante-deux articles en ligne et huit programmés (du 7 novembre au
 5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
