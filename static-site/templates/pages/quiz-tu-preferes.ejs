@@ -217,7 +217,7 @@
 %>
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8"><%= t(ns + ':related.title', lang === 'fr' ? 'Vous aimerez aussi' : lang === 'en' ? 'You might also like' : lang === 'es' ? 'También te gustará' : lang === 'de' ? 'Das könnte euch auch gefallen' : 'Potrebbe piacerti anche') %></h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8"><%= t(ns + ':related.title', lang === 'fr' ? 'Vous aimerez aussi' : lang === 'en' ? 'You might also like' : lang === 'es' ? 'También te gustará' : lang === 'de' ? 'Das könnte euch auch gefallen' : lang === 'nl' ? 'Dit vind je misschien ook leuk' : 'Potrebbe piacerti anche') %></h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <% for (var ri = 0; ri < relatedItems.length; ri++) { var rel = relatedItems[ri]; %>
       <a href="<%= getLocalizedUrl(rel.routeKey, lang) %>" class="glass-card rounded-xl p-6 text-center no-underline group hover:border-primary/30 transition-all">

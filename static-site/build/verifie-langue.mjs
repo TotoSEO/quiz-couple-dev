@@ -421,6 +421,34 @@ function controleCode() {
       }
     }
 
+    // Les chaînes de ternaires (lang === 'fr' ? … : lang === 'en' ? … : défaut) :
+    // la dernière valeur sert à toute langue absente de la chaîne, et c'est
+    // souvent l'italien. Le décompte des branches ci-dessous ne les voit pas
+    // quand l'italien est le défaut (aucune branche « it ») : le 2 novembre
+    // 2026, la page « zou je liever » titrait « Potrebbe piacerti anche » et
+    // les données structurées du vrai-faux répondaient « Vero » et « Falso »
+    // en néerlandais. Pour les cinq premières langues du site, la dernière
+    // valeur d'une chaîne est souvent la leur (l'italien, l'anglais) : la règle
+    // ne vaut que pour une langue ajoutée ensuite.
+    if (!estSql && !['fr', 'en', 'es', 'de', 'it'].includes(LANGUE)) {
+      const reTern = new RegExp(`\\b(?:lang|langue)\\s*===?\\s*(['"])([a-z]{2})\\1\\s*\\?`, 'g');
+      const chaines = [];
+      let chaine = null;
+      for (const m of code.matchAll(reTern)) {
+        // La suite d'une chaîne : « … : lang === 'xx' ? », un deux-points précédé
+        // d'une espace ; « "text": lang === 'fr' ? » ouvre une nouvelle chaîne.
+        const avant = code.slice(0, m.index).trimEnd();
+        const suite = chaine && avant.endsWith(':') && /\s$/.test(avant.slice(0, -1)) && m.index - chaine.fin < 3000;
+        if (suite) { chaine.langs.add(m[2]); chaine.fin = m.index + m[0].length; continue; }
+        chaine = { langs: new Set([m[2]]), debut: m.index, fin: m.index + m[0].length };
+        chaines.push(chaine);
+      }
+      for (const ch of chaines) {
+        if (ch.langs.has(LANGUE) || codes.filter((k) => ch.langs.has(k)).length < seuil) continue;
+        signale(nbLigne(code, ch.debut), 'chaîne de ternaires', `${[...ch.langs].join(', ')}, la dernière valeur sert de défaut`);
+      }
+    }
+
     // Les branches et les codes de locale : le fichier en a-t-il autant
     // pour la nouvelle langue que pour l'italien ?
     if (!estSql) {

@@ -8,6 +8,12 @@ Ce document est la référence du chantier : chaque session le relit avant de
 travailler, et le fichier d'avancement (`docs/langues/nl/AVANCEMENT.md`, créé
 au lot 0) dit où on en est.
 
+**Chantier terminé le 2 novembre 2026** : toutes les pages et les 71 articles
+qui ne sont pas réservés au français existent en néerlandais, `nl` a quitté
+`PAGES_EN_ATTENTE` et plus rien ne se replie sur le français. Ce document
+reste la méthode pour une prochaine langue ; le détail de chaque lot est dans
+`AVANCEMENT.md`.
+
 ## 1. Pour qui
 
 - **Pays-Bas et Flandre** : environ 24 millions de personnes, un public que les

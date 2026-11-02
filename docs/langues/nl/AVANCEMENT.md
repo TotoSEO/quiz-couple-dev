@@ -12,12 +12,13 @@ le met à jour dans la PR de chaque lot.
 | 1 | Carte des mots-clés (requêtes françaises qui apportent des clics → équivalent néerlandais), adresses des 99 pages | fait le 30 octobre 2026 |
 | 2 | Textes communs : menu, accueil, pied de page, textes communs des moteurs, pages juridiques | fait le 30 octobre 2026 : 2a (menu, pied, pages d'information), 2b (accueil), 2c (textes communs des moteurs), 2d (contact, mentions légales, confidentialité) |
 | 3 | Tests de couple, avec leurs textes de moteur (34 pages : la famille sans les cinq outils, lot 7, ni l'évaluation, lot 8, ni le test des vacances, français seulement), par paquets de quatre pages environ | fait le 30 octobre 2026 : 3a (test de couple, points communs, compatibilité, compatibilité sexuelle), 3b (relation à distance, fin de couple), 3c (couple toxique, red flag), 3d (partenaire narcissique, relation sous contrôle), 3e (amour ou habitude, amour ou attachement, est-ce le bon, je l'aime encore), 3f (couple sain, mariage, divorce), 3g (parentalité, emménager), 3h (jalousie, confiance), 3i (dépendance affective, infidélité), 3j (m'aime-t-il encore, à distance), 3k (couché avec un autre, a-t-il oublié son ex), 3l (charge mentale), 3m (langages de l'amour, personnalité amoureuse), 3n (style d'attachement, âme sœur), 3o (relation karmique), 3p (test de pureté) |
-| - | Relecture native de l'échantillon | à faire |
+| - | Relecture native de l'échantillon | relecture faite le 2 novembre 2026 (vérification finale : titres et intertitres de toutes les pages, calques et restes d'autres langues) ; une relecture par une personne de langue maternelle reste conseillée |
 | 4 | Tests célibataires, avec leurs textes de moteur (16 pages), par paires | fait le 31 octobre 2026 : 4a (pourquoi je ne trouve pas l'amour, pourquoi suis-je encore célibataire), 4b (combien de temps vais-je rester célibataire, couple ou célibat), 4c (prêt pour une nouvelle relation, suis-je amoureux), 4d (amour ou crush), 4e (amour ou amitié, amoureux de son meilleur ami), 4f (m'aime-t-il en secret, mon ex pense-t-il encore à moi), 4g (encore amoureux de mon ex, combien de temps pour oublier son ex), 4h (mon ex va-t-il revenir, dois-je me remettre avec mon ex), 4i (pourquoi mon ex m'a quitté(e)) |
-| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 en cours : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match), 7c (relatieteller), 7d (chinese sterrenbeelden) : les outils sont faits, restent les quiz spéciaux |
+| 5 à 7 | Quiz et questions, jeux, outils et quiz spéciaux | lot 5 fait (5a à 5i : quiz over liefde, wat voor koppel zijn jullie, ondeugende quiz, grappige vragen voor koppels, hoe goed ken je je partner, wie is het meest, vragen eerste date, gênante vragen, waar of niet waar quiz, temptation island quiz, liefdesquiz voor tieners, vragen voor koppels) ; lot 6 : 6a (zou je liever vragen), 6b (waarheid of durven voor koppels, waarheid of durven 18+), 6c (opdrachten voor koppels, bordspel voor koppels), 6d (wie van ons twee, wie zou eerder vragen), 6e (dilemma's voor koppels, voor of tegen stellingen), 6f (ik heb nog nooit vragen, ja of nee vragen), 6g (maak de zin af, hij is een 10 maar), 6h (partyspel voor koppels), 6i (spelletjes voor koppels) : lot 6 fait ; lot 7 fait le 2 novembre 2026 : 7a (liefdestest), 7b (compatibiliteit geboortedatum, sterrenbeelden match), 7c (relatieteller), 7d (chinese sterrenbeelden), puis les quiz spéciaux (le hub et les cinq quiz d'Halloween) |
 | Ouverture | `nl` sort de `LANGUES_CACHEES`, les pages pas encore traduites attendent dans `PAGES_EN_ATTENTE` | fait le 31 octobre 2026, après les jeux : 86 pages ouvertes, 13 en attente (les outils et les quiz spéciaux, lot 7 ; les CGV, lot 8 ; la liste du blog, lot 9) ; après le lot 7d, 7 en attente (les six pages des quiz spéciaux et la liste du blog) |
 | 8 | Évaluation payante, e-mails, CGV | fait le 31 octobre 2026 : 8a (algemene voorwaarden), 8b (page de vente de la relatiecheck), 8c (textes de l'application et du rapport), 8d (les 118 questions), 8e (serveur, e-mails de l'évaluation, PDF, base), 8f (avis et quiz personnalisés), 8g (ouverture de l'évaluation), 8h (parcours e-mail des abonnés) |
-| 9 et suite | Blog | en cours : 9a (adresses des 71 articles, liste du blog ouverte, red flags bij een man), 9b (red flags bij een vrouw, ongelukkige vrouw in een relatie, man zenuwachtig in je buurt, gevoelens bij een man) |
+| 9 et suite | Blog | fait le 2 novembre 2026 : 9a à 9p, les 71 articles qui ne sont pas réservés au français (cinquante-cinq en ligne, seize programmés jusqu'au 26 décembre) |
+| Fin | Vérification et push final : `nl` quitte `PAGES_EN_ATTENTE`, plus aucun repli sur le français | fait le 2 novembre 2026 |
 
 ## Lot 0 (30 octobre 2026)
 
@@ -2312,6 +2313,47 @@ premier point qui n'est pas fait.
   les six pages, chaque quiz joué jusqu'au résultat en solo et à deux, captures
   relues (tout en néerlandais, « Sanne houdt het 1 uur 22 vol », « Jullie zijn
   De Joker en Harley Quinn »).
+
+## Vérification et push final (2 novembre 2026)
+
+- **Les titres, relus comme les lirait un Néerlandais** : le title, la
+  description, le H1 et chaque H2 et H3 des pages /nl/ et des 71 articles,
+  relevés dans `dist/` et lus un par un (mot-clé de la carte, longueurs, mots
+  interdits, tournures qui sentent la traduction). Les deux bizarreries qui
+  restent viennent des gabarits et sont les mêmes en français : le H2 du
+  liefdestest, vide dans le HTML et rempli par le script, et « De regels, in
+  vier punten » deux fois sur la page du bordspel.
+- **Deux restes d'italien** : « Potrebbe piacerti anche » au-dessus des cartes
+  de la page « zou je liever » (`quiz-tu-preferes.ejs`) et « Vero » et
+  « Falso » dans les données structurées du waar of niet waar
+  (`quiz-vrai-faux.ejs`). Les deux venaient d'une chaîne de ternaires
+  (`lang === 'fr' ? … : lang === 'de' ? … : …`) dont la dernière valeur,
+  l'italien, servait à toute langue non nommée. Ils disent « Dit vind je
+  misschien ook leuk », « Waar » et « Niet waar ». Le contrôle `code` signale
+  désormais une telle chaîne quand elle nomme quatre des cinq premières langues
+  sans la langue contrôlée (« chaîne de ternaires », seulement pour une langue
+  ajoutée après elles : pour les cinq premières, la dernière valeur est
+  justement la leur).
+- **Des calques** : « Het is dat… », le « c'est que… » français, réécrit dans
+  trois articles (`attachement-evitant`, `compatibilite-amoureuse-balance`,
+  `sortir-de-la-dependance-affective`) et dans les textes des moteurs.
+- **Trois liens que seul le néerlandais avait, retirés** : sur la roue des
+  gages, « waarheid of durven voor volwassenen » dans une réponse de la FAQ
+  (le nom de la page visée, en bas de page) ; sur « wie van ons twee », « een
+  test over jullie relatie » (le nom du relatietest) et un lien dans la FAQ.
+  Les deux pages ont désormais les liens du français, de l'anglais et de
+  l'allemand : un pour la roue, aucun dans le texte de « wie van ons twee ».
+  Les trois avertissements de liens qui restent dans `textes` sont voulus :
+  deux liens « déplacés », montés plus haut dans leur page, et « vragen over
+  seks » vers le quiz coquin, dans les situations de la page des questions.
+- **Plus aucun repli sur le français** : l'entrée `nl` de `PAGES_EN_ATTENTE`
+  est retirée, `langueEnCours('nl')` est faux. Vérifié avant de la retirer :
+  `quizGames.json`, `bilan-questions.json`, `bilan.json` et `purete.json` ont
+  en néerlandais toutes les clés du français sauf celles des pages réservées au
+  français (`zamours`, `testVacances`), et les 1 512 clés de `gd.json` absentes
+  sont celles des préfixes que le français nomme autrement (`commonPoints`,
+  `marrant`, `coquin`, `couple`, qui s'appellent `cp`, `funny`, `coquinQ` et
+  `testerC` ailleurs) et du zamours.
 
 ## Les chiffres
 

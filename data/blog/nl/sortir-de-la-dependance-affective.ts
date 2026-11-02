@@ -26,7 +26,7 @@ const article: BlogArticleData = {
     {
       id: 'eerst-begrijpen',
       title: "Twee minuten om te snappen waar je tegen vecht",
-      content: `<p>Emotionele afhankelijkheid is een regelsysteem: je gaat <a href="/nl/blog/emotionele-afhankelijkheid/">je angst kalmeren via de ander</a>, via zijn berichtjes, zijn aanwezigheid, zijn liefdesbewijzen. Het probleem is dus niet dat je te veel liefhebt... het is dat je je emotionele thermostaat buiten jezelf hebt gelegd.</p>
+      content: `<p>Emotionele afhankelijkheid is een regelsysteem: je gaat <a href="/nl/blog/emotionele-afhankelijkheid/">je angst kalmeren via de ander</a>, via zijn berichtjes, zijn aanwezigheid, zijn liefdesbewijzen. Het probleem is dus niet dat je te veel liefhebt... maar dat je je emotionele thermostaat buiten jezelf hebt gelegd.</p>
 <p>Waarom is het belangrijk om dat te weten? Omdat het iets verklaart wat iedereen meemaakt en niemand snapt: <strong>als je stopt met afhankelijk gedrag, wordt de angst eerst ERGER voordat hij afneemt.</strong> Niet meer op je telefoon kijken doet je niet meteen goed, het doet eerst pijn! Dat is normaal, zo gaat afkicken van elk mechanisme dat je kalmeert. Weet je dat die golf erbij hoort, dan kun je erdoorheen in plaats van te concluderen dat “het niet werkt”.</p>
 <p>Nog één ding voor de oefeningen: weet je nog niet of het over jou gaat, dan worden <a href="/nl/blog/emotionele-afhankelijkheid-symptomen/">de symptomen per levensgebied</a> uitgelegd, en dat is goed om eerst te lezen. En nu aan het werk.</p>`,
     },
