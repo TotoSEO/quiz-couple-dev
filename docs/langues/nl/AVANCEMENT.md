@@ -2177,7 +2177,33 @@ premier point qui n'est pas fait.
   « sécurité acquise » devient « verworven veiligheid ».
 - « Les meilleures amies depuis le CP » deviennent « sinds de basisschool ».
 
+## Lot 9l (2 novembre 2026) : les quatre articles de la catégorie Ex
+
+- `rester-ami-avec-son-ex` (`/nl/blog/vrienden-blijven-met-je-ex/`),
+  `quitter-quelqu-un-pour-quelqu-un-d-autre` (`/nl/blog/iemand-verlaten-voor-een-ander/`,
+  H1 « Je verlaat niemand voor een ander: waar of niet waar? »),
+  `mon-ex-etait-il-le-bon` (`/nl/blog/was-mijn-ex-de-ware/`) et
+  `se-remettre-ensemble-apres-plusieurs-ruptures` (`/nl/blog/aan-uit-relatie/`,
+  H1 sur « knipperlichtrelatie », le mot que les Néerlandais emploient, le
+  title sur « aan-uitrelatie », le mot-clé de l'adresse).
+- Ces articles écrivent leurs liens entre guillemets doubles échappés (`href=\"...\"`),
+  que `fr2nl.py` ne reconnaît pas : les liens vers les tests « ex » ont été
+  repris à la main (`komt-mijn-ex-terug`, `nog-verliefd-op-mijn-ex`,
+  `is-hij-over-zijn-ex-heen`, `over-je-ex-heen-komen`, `terug-naar-mijn-ex`,
+  `waarom-heeft-mijn-ex-het-uitgemaakt`, `is-hij-de-ware`,
+  `hoe-lang-blijf-ik-nog-single`, `klaar-voor-een-nieuwe-relatie`).
+- Les études citées restent celles du français, vérifiées une à une le
+  28 octobre 2026 ; le chiffre de l'Insee est dit comme celui du bureau
+  statistique français ; le 3919 et le 17 de l'encadré sur les violences
+  deviennent Veilig Thuis, la 1712 et le 112.
+- Les liens écrits vers ces articles dans les pages des tests « ex » et leurs
+  cartes « Pour aller plus loin » sont actifs depuis ce lot.
+
 ## Les chiffres
+
+Au lot 9l : quarante-cinq articles en ligne et huit programmés (du 7 novembre au
+5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9k : quarante et un articles en ligne et huit programmés (du 7 novembre au
 5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
