@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-01T10:25:53.965Z",
+  "genere_le": "2026-11-02T03:15:50.062Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-01",
+  "aujourdhui": "2026-11-02",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 151,
+  "reserve_jours": 150,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -2891,7 +2891,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-02",
+      "jour": "2026-11-03",
       "creneau": "matin"
     },
     "mipaps-statique": null,
