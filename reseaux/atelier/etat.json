@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-11-02T03:15:44.473Z",
+  "genere_le": "2026-11-02T10:59:58.815Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -4626,6 +4626,42 @@
       "jour": "2026-10-25",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "8603424a-da2d-4da0-9e91-8d2e7a6b6015",
+      "releve": "j7",
+      "vues": 1427,
+      "portee": 1124,
+      "likes": 17,
+      "commentaires": 0,
+      "partages": 0,
+      "enregistrements": 1,
+      "releve_le": "2026-11-02T10:59:53.266587+00:00",
+      "publie_le": "2026-10-26T05:20:10.638+00:00",
+      "categorie": "baton",
+      "format": "reel",
+      "gabarit": "baton",
+      "jour": "2026-10-26",
+      "creneau": "matin",
+      "theme": null
+    },
+    {
+      "variante_id": "382516f9-77de-4839-b635-a1f2681b15e0",
+      "releve": "j7",
+      "vues": 2122,
+      "portee": 1746,
+      "likes": 39,
+      "commentaires": 0,
+      "partages": 45,
+      "enregistrements": 18,
+      "releve_le": "2026-11-02T10:59:57.387329+00:00",
+      "publie_le": "2026-10-26T10:39:26.858+00:00",
+      "categorie": "connais-tu",
+      "format": "reel",
+      "gabarit": "connais-tu",
+      "jour": "2026-10-26",
+      "creneau": "midi",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
@@ -4642,24 +4678,24 @@
     },
     {
       "categorie": "connais-tu",
-      "posts": 7,
-      "vues_mediane": 2020,
-      "vues_moyenne": 1592,
+      "posts": 8,
+      "vues_mediane": 2071,
+      "vues_moyenne": 1658,
       "vues_max": 3083,
-      "partages": 232,
-      "enregistrements": 116,
-      "likes": 129,
+      "partages": 277,
+      "enregistrements": 134,
+      "likes": 168,
       "commentaires": 0
     },
     {
       "categorie": "baton",
-      "posts": 8,
-      "vues_mediane": 1334,
-      "vues_moyenne": 1287,
+      "posts": 9,
+      "vues_mediane": 1342,
+      "vues_moyenne": 1302,
       "vues_max": 1647,
       "partages": 25,
-      "enregistrements": 13,
-      "likes": 163,
+      "enregistrements": 14,
+      "likes": 180,
       "commentaires": 0
     },
     {
