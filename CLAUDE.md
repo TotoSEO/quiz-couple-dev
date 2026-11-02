@@ -1080,6 +1080,41 @@ langue : la calculatrice compte les lettres du mot amour de la langue, et
 « Thomas » et « Elisa » donnent 59 % en français, en anglais et en allemand,
 mais 54 % en espagnol et 64 % en italien.
 
+**En anglais, le test de couple tient « compatibility test »** (2 novembre
+2026, Thomas : « identifie pourquoi on a perdu des positions [...] il me
+semble qu'il y a un souci de cannibalisation en anglais », sans changer
+d'adresse). `/en/couple-compatibility-test/` est la page la plus cliquée du
+site, et « compatibility test » y amenait 255 clics par jour en 1,7e position
+jusqu'au 21 octobre ; elle est descendue à la 3e ou 4e place du 24 au
+31 octobre (150 clics par jour), pendant qu'elle montait sur « relationship
+quiz » (de 9,3 à 5,5), « relationship test » et « couple questions quiz ».
+La page anglaise est la traduction du « test de couple » français : son H1
+disait « Relationship test », ses H2 « couple test », l'expression
+« compatibility test » n'apparaissait nulle part dans son texte (3 280 mots,
+« couple test » 18 fois, « relationship » 36 fois), le menu de chaque page
+la nommait « Test Your Relationship », et les liens internes qui y mènent
+disaient tous « relationship » ou « how solid » depuis la reprise des ancres
+du 27 octobre ; s'y sont ajoutés, du 20 au 25 octobre, la carte de
+l'évaluation sous le moteur et la barre de la réduction, qui parlent de
+« relationship assessment ». La page « love compatibility » n'a jamais
+pris la requête (une ou deux impressions par jour) : elle parle d'amour, de
+valeurs et de projets, et partage seulement « love compatibility test » avec
+le test de couple (les deux vers la 6e ou 7e place, jusqu'à ce que Google
+retire le test de couple de cette requête le 28 octobre). Ce jour-là, la page
+anglaise a reçu « Couple compatibility test: how strong is your
+relationship? » en H1, « compatibility test » dans sa description, huit H2,
+une phrase de la première section et la FAQ (l'expression y revient
+15 fois, « couple test » 7), le menu « Couple Compatibility
+Test » (`nav.testCouple` de en/common.json, `quizNames.testCouple`,
+`shortTitle` « Compatibility Test »), et trois ancres qui disent la
+compatibilité dans leur phrase (`quiz-type-couple`, `quiz-knowledge`,
+l'article `choses-pas-accepter-couple`). En anglais, le test de couple vise
+« compatibility test » et « couple compatibility test », la page « love
+compatibility » vise « love compatibility test » et ses valeurs (son title
+commence désormais par « Love Compatibility Test », comme son H1) : aucune
+des deux ne prend les mots de l'autre dans ses titres. Les autres langues gardent
+leurs mots.
+
 ## L'allemand : les mots que tapent les germanophones (30 octobre 2026)
 
 Thomas, après l'étude d'une sixième langue : « ok reprends l'allemand d'abord ». En octobre 2026, l'allemand faisait 4 300 clics depuis Google et l'italien 15 800, pour le même catalogue. Les titles, H1 et descriptions de trente pages /de/ ont été repris d'après les requêtes allemandes de la Search Console (connecteur `searchconsole` de Windsor, pages filtrées sur `/de/`) : chaque title commence par ce que les gens tapent, jamais par la traduction mot à mot du nom français. Exemples relevés de juillet à octobre : « 5 sprachen der liebe test » (413 impressions, position 11), « toxische beziehung test » (494, position 15), « beziehungstest fragen » (271, position 10), « spicy fragen für paare » (172), « liebestest mit namen und sternzeichen » (180), « passen wir zusammen test » (180).
