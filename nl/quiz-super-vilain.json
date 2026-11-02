@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Halloweenquiz • Alleen of met z’n tweeën",
+    "title": "Welke superschurk ben jij? Ontdek op wie je het meest lijkt",
+    "titleHighlight": "superschurk",
+    "description": "Hoe je het halloweenfeest binnenkomt, je verkleedpak, je schuilplaats, je handlangers, je lach, wat je doet als iemand je verraadt of als een held je de hand reikt. Aan het eind de superschurk die het meest op jou lijkt, van de Joker tot Maleficent, met zijn portret en een tip voor Halloween. Alleen, of met z’n tweeën om te vergelijken.",
+    "subtitle": "15 vragen • 5 minuten • alleen, met z’n tweeën op één telefoon of ieder op een eigen telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe de quiz werkt",
+    "intro": "Het is een persoonlijkheidstest, maar dan met capes. De vragen zetten je in de schoenen van de slechterik op een halloweenavond: hoe je het feest binnenkomt, wie je handlangers zijn, hoe je lach klinkt, wat je doet als je verliest.",
+    "p1": "Bijvoorbeeld: ‘Iemand verraadt je.’ of ‘Er belt een kind aan: “Snoep of een streek!”’ Elk antwoord telt mee voor een of twee van de acht schurken van de quiz. Aan het eind wint de schurk met de meeste punten, en de drie trekken die het sterkst uit je antwoorden naar voren komen, zie je als meters.",
+    "p2": "Speel je alleen, dan beantwoord je de vijftien vragen en ontdek je je schurk. Met z’n tweeën beantwoordt de eerste de hele reeks en geeft de telefoon door, waarna de tweede antwoordt zonder de antwoorden van de eerste te zien. De twee portretten staan dan naast elkaar, met het aantal gelijke antwoorden.",
+    "p3": "Met de afstandsmodus speel je ieder op je eigen telefoon: de een maakt het spel aan, de ander doet mee met de code, en na elke vraag zien jullie allebei de twee antwoorden."
+  },
+  "section2": {
+    "title": "De acht schurken van de quiz",
+    "intro": "We hebben slechteriken genomen die iedereen kent, uit films, strips en tekenfilms, en van elk de karaktertrek gekozen die hem samenvat.",
+    "pillar1Title": "De Joker",
+    "pillar1Text": "De chaos, de lach, het plan dat elke vijf minuten verandert.",
+    "pillar2Title": "Harley Quinn",
+    "pillar2Text": "Te veel liefde, glitters, en de kracht om weg te gaan als het moet.",
+    "pillar3Title": "Loki",
+    "pillar3Text": "De list, het dubbelspel, en achter dat alles de behoefte om geliefd te zijn.",
+    "pillar4Title": "Thanos",
+    "pillar4Text": "De logica, het plan, en het offer in naam van een evenwicht waar niemand om heeft gevraagd.",
+    "pillar5Title": "Darth Vader",
+    "pillar5Text": "De macht die hij koos na een verlies, het harnas dat hij draagt als rouw, en het goede dat overblijft.",
+    "pillar6Title": "Voldemort",
+    "pillar6Text": "De controle, de angst voor de dood, en de naam die je niet uitspreekt.",
+    "pillar7Title": "Maleficent",
+    "pillar7Text": "De elegantie, de wrok, en de vloek die volgt op een vergeten uitnodiging.",
+    "pillar8Title": "Cruella de Vil",
+    "pillar8Text": "De stijl, de luxe, de obsessie, en een auto waarmee veel te hard wordt gereden."
+  },
+  "section3": {
+    "title": "Met z’n tweeën is de vraag: bondgenoten of vijanden?",
+    "p1": "Spelen jullie met z’n tweeën, dan staan de twee portretten naast elkaar. Twee Jokers, dat is een stad die niet meer slaapt. Een Thanos en een Harley Quinn, dat is een levendige discussie over wat ‘redelijk’ betekent. En wil je precies weten <a href=\"/nl/welk-superschurkenduo-zijn-jullie/\">welk schurkenduo jullie samen vormen</a>, met een rol voor ieder, dan speel je dat alleen met z’n tweeën.",
+    "p2": "De andere halloweenquizzen zitten in dezelfde sfeer: <a href=\"/nl/seriemoordenaar-quiz/\">de seriemoordenaar die op jou lijkt</a> voor een duisterder portret, <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie als eerste doodgaat in een horrorfilm</a> voor een stopwatch, en <a href=\"/nl/wie-wordt-bezeten-quiz/\">wie er bezeten zou kunnen raken</a> voor een percentage. <a href=\"/nl/themaquiz-voor-koppels/\">De quizzen voor Halloween en andere feestdagen</a> staan allemaal bij elkaar."
+  },
+  "section4": {
+    "title": "Goed om te weten",
+    "p1": "De personages zijn van hun makers en studio’s; de quiz gebruikt ze zoals je ze op een verkleedfeest gebruikt, om te lachen om wat je van jezelf terugziet in een slechterik uit een verhaal. De afbeeldingen bij de portretten zijn illustraties die voor deze pagina zijn gemaakt, geen beelden uit de films.",
+    "p2": "Er wordt niets opgeslagen: de antwoorden blijven op je telefoon. Alleen de schurk die je krijgt, wordt geteld, zonder naam of antwoorden, om ooit de verdeling van de uitslagen op de pagina te kunnen tonen."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Welke superschurken kun je krijgen?",
+    "faq1A": "Acht: de Joker, Harley Quinn, Loki, Thanos, Darth Vader, Voldemort, Maleficent en Cruella de Vil. Elk hoort bij een karaktertrek die de vragen meten.",
+    "faq2Q": "Hoe wordt de uitslag berekend?",
+    "faq2A": "Elk antwoord geeft een of twee punten aan een of twee schurken. Aan het eind wordt elke schurk afgezet tegen het maximum dat hij kon krijgen, en de schurk met het hoogste percentage wint. De drie trekken die het vaakst terugkomen, zie je onder de uitslag.",
+    "faq3Q": "Kun je hem met z’n tweeën doen?",
+    "faq3A": "Ja, om de beurt op dezelfde telefoon, of ieder op een eigen telefoon met de afstandsmodus. Aan het eind staan de twee portretten naast elkaar.",
+    "faq4Q": "Wat is het verschil met de quiz over het superschurkenduo?",
+    "faq4A": "Hier krijgt ieder zijn eigen schurk. De duoquiz geeft ieder een rol (het brein, de chaosmaker, de krachtpatser, de charmeur, de schaduw, het hart) en het beroemde duo dat die twee rollen samen vormen. Die speel je alleen met z’n tweeën.",
+    "faq5Q": "Worden mijn antwoorden opgeslagen?",
+    "faq5A": "Nee. De antwoorden blijven op je telefoon. Alleen de schurk die je krijgt, wordt geteld, zonder naam, voor de verdeling van de uitslagen."
+  },
+  "jsonLd": {
+    "about": "halloweenquiz"
+  }
+}

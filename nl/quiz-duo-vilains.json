@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badge": "Halloweenquiz • Met z’n tweeën",
+    "title": "Welk superschurkenduo zijn jullie samen?",
+    "titleHighlight": "superschurkenduo",
+    "description": "De kraak van de halloweennacht: het snoepmagazijn van de stad leeghalen. Vijftien vragen elk, van het verkleedpak tot het politiebureau. De uitslag geeft ieders rol in het duo (het brein, de chaosmaker, de krachtpatser, de charmeur, de schaduw of het hart), en daarna het beroemde schurkenduo dat jullie samen vormen, van de Joker en Harley Quinn tot Bonnie en Clyde.",
+    "subtitle": "15 vragen elk • 5 minuten • met z’n tweeën op één telefoon of ieder op een eigen telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe de quiz werkt",
+    "intro": "Dit is de enige halloweenquiz die je alleen met z’n tweeën kunt spelen, want een duo stel je samen. Ieder beantwoordt voor zich dezelfde vijftien vragen, en de uitslag wordt in twee stappen berekend.",
+    "p1": "Eerst ieders rol. De vragen vertellen het verhaal van een kraak in de halloweennacht: ‘Het alarm gaat af. Natuurlijk.’, ‘In de vluchtauto:’, ‘De politie klopt aan. Je doet open:’. Elk antwoord telt mee voor een of twee van de zes rollen in het duo, en de rol met de meeste punten wordt de jouwe.",
+    "p2": "Dan het duo. Elk paar rollen hoort bij een beroemd schurkenduo: de chaosmaker en het hart geven de Joker en Harley Quinn, het hart en de krachtpatser geven Bonnie en Clyde, het brein en de krachtpatser geven Darth Vader en de Keizer. Alle combinaties zijn gedekt, ook twee keer dezelfde rol.",
+    "p3": "Op één telefoon beantwoordt de eerste de hele reeks en geeft de telefoon dan door aan de tweede. Op afstand antwoordt ieder op zijn eigen telefoon en zien jullie na elke vraag allebei de twee antwoorden."
+  },
+  "section2": {
+    "title": "De zes rollen in een schurkenduo",
+    "intro": "In alle schurkenduo’s, van films tot tekenfilms, kom je dezelfde rollen tegen. De quiz onderscheidt er zes.",
+    "pillar1Title": "Het brein",
+    "pillar1Text": "Heeft het plan minuut voor minuut uitgeschreven, en haat het als je eraan komt.",
+    "pillar2Title": "De chaosmaker",
+    "pillar2Text": "Improviseert, lacht, en blaast het plan op zodra hij zich verveelt.",
+    "pillar3Title": "De krachtpatser",
+    "pillar3Text": "Gaat er recht op af, draagt de zakken, vangt de klappen op, en beschermt de ander zonder het te zeggen.",
+    "pillar4Title": "De charmeur",
+    "pillar4Text": "Onderhandelt, verleidt, en krijgt de sleutels zonder het slot te forceren.",
+    "pillar5Title": "De schaduw",
+    "pillar5Text": "Onopvallend, trouw, en al binnen als de anderen aankomen.",
+    "pillar6Title": "Het hart",
+    "pillar6Text": "Volgt de ander uit liefde, en is vaak degene die de gekste stunt uithaalt."
+  },
+  "section3": {
+    "title": "De negen mogelijke duo’s",
+    "p1": "De Joker en Harley Quinn, Bonnie en Clyde, Jessie en James van Team Rocket, Darth Vader en de Keizer, Voldemort en Bellatrix, Harley Quinn en Poison Ivy, Pinky en de Brein, Wario en Waluigi, Magneto en Mystique. Elk duo heeft zijn eigen fiche: wat er in hun manier van samenwerken op jullie lijkt, en een tip voor halloweenavond.",
+    "p2": "Wil je eerst weten <a href=\"/nl/welke-superschurk-ben-jij/\">welke superschurk er in ieder van jullie schuilt</a>, los van elkaar, dan is er een portret per persoon. En voor een complete avond passen <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie als eerste doodgaat in een horrorfilm</a> en <a href=\"/nl/wie-wordt-bezeten-quiz/\">wie er bezeten zou kunnen raken</a> er goed achteraan.",
+    "p3": "<a href=\"/nl/themaquiz-voor-koppels/\">Alle seizoensquizzen</a> staan op één plek; de rest van het jaar nemen <a href=\"/nl/spelletjes-voor-koppels/\">de spelletjes voor met z’n tweeën</a> het over."
+  },
+  "section4": {
+    "title": "Goed om te weten",
+    "p1": "De personages zijn van hun makers. De afbeeldingen van de duo’s zijn illustraties die voor deze pagina zijn gemaakt, geen beelden uit de films of games. En de kraak van de eeuw blijft verzonnen.",
+    "p2": "Er wordt niets opgeslagen: de antwoorden blijven op jullie telefoons. Alleen het duo dat jullie krijgen, wordt geteld, zonder namen, om ooit de verdeling van de uitslagen te kunnen tonen."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Kun je deze quiz alleen doen?",
+    "faq1A": "Nee, dit is de enige halloweenquiz waarvoor je twee spelers nodig hebt: het duo wordt berekend op basis van jullie twee rollen. Ben je alleen, dan geeft de quiz over de superschurk je een eigen portret.",
+    "faq2Q": "Hoe wordt het duo gekozen?",
+    "faq2A": "Elke speler krijgt op basis van zijn antwoorden een van de zes rollen (het brein, de chaosmaker, de krachtpatser, de charmeur, de schaduw, het hart). Het paar rollen hoort bij een van de negen duo’s van de quiz. Twee keer dezelfde rol geeft ook een duo: twee chaosmakers worden de Joker en Harley Quinn, twee harten worden Bonnie en Clyde.",
+    "faq3Q": "Kun je op afstand spelen?",
+    "faq3A": "Ja. Op het scherm met de namen maakt de afstandsmodus een spel aan met een code en een QR-code. Ieder antwoordt op zijn eigen telefoon en ziet na elke vraag het antwoord van de ander.",
+    "faq4Q": "En als we ons duo niet leuk vinden?",
+    "faq4A": "Doe de quiz opnieuw en antwoord anders: de rollen veranderen snel, en het duo ook. En wie Pinky en de Brein krijgt, vindt dat achteraf vaak toch best raak.",
+    "faq5Q": "Worden onze antwoorden opgeslagen?",
+    "faq5A": "Nee. De antwoorden blijven op jullie telefoons; alleen het duo dat jullie krijgen, wordt geteld, zonder namen."
+  },
+  "jsonLd": {
+    "about": "halloweenquiz"
+  }
+}

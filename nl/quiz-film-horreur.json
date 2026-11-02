@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloweenquiz • Alleen of met z’n tweeën",
+    "title": "Wie gaat als eerste dood in een horrorfilm: jij of je partner?",
+    "titleHighlight": "horrorfilm",
+    "description": "Vijftien situaties, van de aankomst in de blokhut tot de aftiteling, met telkens vier mogelijke reacties. De uitslag vertelt je hoeveel minuten je het volhoudt voordat je uit het verhaal verdwijnt, in een film van hooguit tweeënhalf uur. Met z’n tweeën antwoordt ieder voor zich, en weet je wie als eerste sterft.",
+    "subtitle": "15 situaties • 5 minuten • alleen, met z’n tweeën op één telefoon of ieder op een eigen telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe de quiz werkt",
+    "intro": "Het idee is simpel: je komt terecht in de situaties die iedereen in de bioscoop heeft gezien, en je kiest wat je écht zou doen. Niet wat je zou moeten doen, wat je zou doen.",
+    "p1": "Bijvoorbeeld: ‘23.00 uur. Voetstappen op zolder, recht boven je hoofd. Er is niemand op zolder.’ Je kunt op je sokken gaan kijken met de zaklamp die knippert, je partner sturen, het luik op slot doen en met z’n allen in de woonkamer slapen, of iedereen in de auto zetten. Elke reactie is nul tot drie punten waard, en het totaal van de vijftien situaties wordt een overlevingstijd.",
+    "p2": "Een horrorfilm duurt hooguit tweeënhalf uur. Met de slechtste reflexen hou je het vijf minuten vol, de tijd van de begintitels. Met de beste kom je tot 2 uur 30: je hebt de hele film overleefd. Daartussen vertelt de uitslag je in welke minuut je uit het verhaal verdwijnt, en welke keuzes je hebben gered of je de das hebben omgedaan.",
+    "p3": "Met z’n tweeën beantwoordt de eerste de vijftien situaties en geeft de telefoon door, daarna is de tweede aan de beurt. Jullie twee tijden staan op dezelfde tijdlijn, met de naam van het eerste slachtoffer en de situaties waarin jullie verschillend reageerden. Zijn jullie niet samen, dan kun je met de afstandsmodus ieder op je eigen telefoon antwoorden."
+  },
+  "section2": {
+    "title": "De vijf uitslagen, van de openingsscène tot de aftiteling",
+    "intro": "De overlevingstijd lees je in vijf stappen, en elke stap hoort bij een personage dat iedereen herkent.",
+    "pillar1Title": "Minder dan 25 minuten: de openingsscène",
+    "pillar1Text": "Je gaat de kelder in en zegt dat het de wind is. De film is net begonnen en jouw naam staat al op de aftiteling.",
+    "pillar2Title": "Van 25 tot 55 minuten: het eerste slachtoffer",
+    "pillar2Text": "Het publiek begint je een beetje aardig te vinden, en dan ga je kijken wat dat geluid op zolder is. Iedereen gilt, maar iedereen zag het aankomen.",
+    "pillar3Title": "Van 55 tot 90 minuten: het midden van de film",
+    "pillar3Text": "De helft van de tijd de goede reflexen, en nog één laatste blik om te checken of de moordenaar echt op de grond ligt.",
+    "pillar4Title": "Van 1 uur 30 tot 2 uur 10: bijna tot het einde",
+    "pillar4Text": "Deuren dicht, sleutels in de hand, de kortere weg geweigerd. Alleen de laatste scène nog, die waarin iedereen zijn sleutels laat vallen.",
+    "pillar5Title": "Meer dan 2 uur 10: de overlevende",
+    "pillar5Text": "Je kent de regels en je houdt het vol tot de aftiteling. De film vertelt jouw verhaal, en het vervolg wacht al op je."
+  },
+  "section3": {
+    "title": "De overlevingsregels die de quiz checkt",
+    "p1": "Alle horrorfilms hebben dezelfde regels, en iedereen kent ze: je gaat niet uit elkaar, je gaat niet de kelder in, je leest nooit hardop voor uit een oud boek, je neemt geen kortere weg door het bos, en als de moordenaar op de grond ligt, ga je niet kijken maar vertrek je. De quiz loopt die regels een voor een langs, in concrete situaties.",
+    "p2": "Met z’n tweeën is het grappig om te ontdekken dat de een alle goede reflexen heeft en de ander bij de eerste vraag het zolderluik opendoet. Meestal is degene die als eerste doodgaat ook degene die ‘ach, het is maar een film’ zegt als jullie kijken <a href=\"/nl/wie-wordt-bezeten-quiz/\">wie van jullie bezeten zou kunnen raken</a>.",
+    "p3": "Wil je de avond voortzetten, dan zitten <a href=\"/nl/seriemoordenaar-quiz/\">de seriemoordenaar met wie je zou matchen</a> en <a href=\"/nl/welke-superschurk-ben-jij/\">de superschurk die op jou lijkt</a> in dezelfde sfeer, met een portret als uitslag in plaats van een stopwatch. En <a href=\"/nl/themaquiz-voor-koppels/\">al onze seizoensquizzen</a> staan samen op één pagina."
+  },
+  "section4": {
+    "title": "Twee nuttige toelichtingen",
+    "p1": "De minuten worden berekend op basis van het totaal aantal punten, tussen 5 en 150: het is een schaal, geen voorspelling. Twee mensen met hetzelfde totaal hebben dezelfde tijd, ook als ze op dezelfde vragen niet hetzelfde hebben geantwoord. De lijst van wat je heeft gered en wat je de das heeft omgedaan, laat zien waar het misging.",
+    "p2": "Er wordt niets opgeslagen. De antwoorden blijven op jullie telefoon, en je kunt de quiz zo vaak doen als je wilt, met andere rollen of andere antwoorden."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Waarom maximaal 2 uur 30?",
+    "faq1A": "Omdat dat de lengte is van een heel lange horrorfilm. Daarboven heb je alles overleefd: de uitslag zegt dan ‘tot de aftiteling’ in plaats van een aantal minuten.",
+    "faq2Q": "Moet je met z’n tweeën zijn om te spelen?",
+    "faq2A": "Nee. Alleen krijg je je overlevingstijd en je uitslag. Met z’n tweeën voegt de quiz de vergelijking toe: wie als eerste doodgaat, en in welke situaties jullie verschillend reageerden.",
+    "faq3Q": "Is er een goed en een fout antwoord?",
+    "faq3A": "Ja, in filmtermen: de reactie die drie punten waard is, houdt je in leven in een horrorfilm, de reactie van nul punten is die van het klassieke slachtoffer. In het echte leven is de kelder in gaan zelden dodelijk.",
+    "faq4Q": "Kun je op afstand spelen?",
+    "faq4A": "Ja. Op het scherm met de namen maakt de afstandsmodus een spel aan met een code en een QR-code. Ieder antwoordt op zijn eigen telefoon en ziet na elke situatie hoe de ander reageerde.",
+    "faq5Q": "Worden mijn antwoorden opgeslagen?",
+    "faq5A": "Nee, ze blijven op je telefoon. De site houdt alleen bij dat er een spel is gespeeld, voor de teller op de pagina."
+  },
+  "jsonLd": {
+    "about": "halloweenquiz"
+  }
+}
