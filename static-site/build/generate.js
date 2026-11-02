@@ -1809,9 +1809,16 @@ function generateSitemaps() {
   // Generate one sitemap per language
   const maxLastmodParLangue = new Map();
   const nbParLangue = new Map();
+  // Plus de feuille XSLT sur les sitemaps depuis le 2 novembre 2026 : Chrome
+  // annonce la fin du XSLT (« Ce site utilise XSLT, une fonctionnalité qui
+  // sera bientôt supprimée de ce navigateur », vu par Thomas en ouvrant
+  // /sitemap.xml), et public/sitemap.xsl, qui habillait le XML pour un
+  // humain, est supprimée. Un sitemap s'adresse aux robots ; la version
+  // lisible est la page du plan du site, dont l'adresse est en commentaire
+  // en tête de chaque fichier, dans sa langue.
   for (const lang of LANGUES_PUBLIQUES) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-    xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
+    xml += `<!-- Version lisible : ${url(lang, ROUTE_SLUGS.sitemap[lang])} -->\n`;
     xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
     xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
@@ -1850,7 +1857,7 @@ function generateSitemaps() {
   // Sitemap index : la date d'un sitemap est celle de sa page la plus
   // récemment modifiée, pas celle du build.
   let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-  index += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
+  index += `<!-- Version lisible : ${url('fr', ROUTE_SLUGS.sitemap.fr)} -->\n`;
   index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   for (const lang of LANGUES_PUBLIQUES) {
     const derniere = maxLastmodParLangue.get(lang);
@@ -1962,7 +1969,7 @@ function copyStaticAssets() {
   // Les fichiers de verification de propriete des plateformes de netlinking
   // sont copies tels quels a la racine : leur nom et leur contenu sont
   // imposes par la plateforme, qui va les lire a l'adresse exacte.
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', '389f91dd4161e549.html', 'soumettre-aLDZNbLFYuQUSvDMbhdyr5GyF4KNdZ4a.txt', 'llms.txt', 'ads.txt'];
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', '389f91dd4161e549.html', 'soumettre-aLDZNbLFYuQUSvDMbhdyr5GyF4KNdZ4a.txt', 'llms.txt', 'ads.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
