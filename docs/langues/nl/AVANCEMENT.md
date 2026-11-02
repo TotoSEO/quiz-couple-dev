@@ -2354,6 +2354,19 @@ premier point qui n'est pas fait.
   sont celles des préfixes que le français nomme autrement (`commonPoints`,
   `marrant`, `coquin`, `couple`, qui s'appellent `cp`, `funny`, `coquinQ` et
   `testerC` ailleurs) et du zamours.
+- **Le contrôle `site` ne lit plus l'admin** : c'est la même page française
+  dans toutes les langues (noindex, hors plan du site), et ses textes sortaient
+  en « non traduits ». Sur le passage complet des 155 pages, le joueur
+  automatique s'est arrêté une fois avant le résultat, sur le moet ik scheiden
+  test (700 étapes) ; rejouée seule, et à la main question par question, la
+  page va jusqu'au résultat sans erreur. C'était le joueur, ralenti par la
+  charge de la machine, pas la page.
+- **Deux relevés en plus**, sur le site construit : les ancres des liens du
+  texte (aucune « onze test… », aucune égale au nom, au H1 ou au title de la
+  page visée ; 17 ancres de plus de huit mots, contre 46 en français et 40 en
+  anglais) et la langue du texte visible des 155 pages (aucun passage où les
+  mots outils d'une autre langue l'emportent, hors l'admin et le titre anglais
+  d'une étude citée en source).
 
 ## Les chiffres
 

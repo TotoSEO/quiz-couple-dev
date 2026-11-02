@@ -1024,8 +1024,11 @@ async function controleSite() {
   const navigateur = await chromium.launch();
   const ref = textesDeReference();
   const permis = identiquesPermis();
+  // L'admin est la même page française dans toutes les langues (noindex,
+  // hors plan du site) : elle n'a rien à traduire.
   const chemins = parcours(path.join(DIST, LANGUE), (p) => p.endsWith('index.html') || p.endsWith('404.html'))
     .map((f) => '/' + path.relative(DIST, f).replace(/index\.html$/, '').replace(/\\/g, '/'))
+    .filter((c) => c !== `/${LANGUE}/admin/`)
     .filter(pageRetenue);
   const rendus = [
     { nom: '360 clair', viewport: { width: 360, height: 780 }, colorScheme: 'light' },
