@@ -321,6 +321,7 @@
   },
   "quizNames": {
     "testDureeCelibat": "Hoe lang blijf ik nog single?",
+    "testPurete": "Puriteitstest",
     "testCouple": "Relatietest",
     "testCommonPoints": "Hoeveel hebben we gemeen?",
     "testDistance": "Lange afstandsrelatie test",
@@ -354,7 +355,6 @@
     "testPersonnalite": "Persoonlijkheidstest liefde",
     "testAttachement": "Hechtingsstijl test",
     "testConfiance": "Vertrouwenstest",
-    "zamours": "Quiz Les Z'Amours",
     "quizTentation": "Temptation Island quiz",
     "jeuActionVerite": "Waarheid of durven",
     "jeuActionVeriteHot": "Waarheid of durven 18+",
@@ -365,7 +365,6 @@
     "testCouche": "Heeft hij of zij met een ander geslapen?",
     "testSecret": "Is hij of zij stiekem verliefd op mij?",
     "testDistanceAime": "Houdt hij of zij nog van mij op afstand?",
-    "testPurete": "Puriteitstest",
     "pourContre": "Voor of tegen",
     "jeuDilemmes": "Dilemma's voor koppels",
     "testFinCouple": "Is mijn relatie voorbij?",
