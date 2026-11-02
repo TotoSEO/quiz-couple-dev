@@ -2199,7 +2199,28 @@ premier point qui n'est pas fait.
 - Les liens écrits vers ces articles dans les pages des tests « ex » et leurs
   cartes « Pour aller plus loin » sont actifs depuis ce lot.
 
+## Lot 9m (2 novembre 2026) : crush, meisje, vriendin, intieme vragen
+
+- `questions-a-poser-a-son-crush` (`/nl/blog/vragen-om-aan-je-crush-te-stellen/`),
+  `questions-a-poser-a-une-fille` (`/nl/blog/vragen-om-aan-een-meisje-te-stellen/`),
+  `questions-a-poser-a-sa-copine` (`/nl/blog/vragen-om-aan-je-vriendin-te-stellen/`)
+  et `questions-intimes-couple` (`/nl/blog/intieme-vragen-voor-koppels/`).
+- Les questions sont écrites comme on les tape dans un message néerlandais
+  (« Je dag in drie emoji’s, zonder valsspelen? », « Team spraakberichten of
+  team lappen tekst? »), pas traduites une par une ; « Marseille » devient la
+  Zélande, l'« unpopular opinion » une « impopulaire mening ».
+- « In het echt » (« en vrai ») était dans le H1 de l'article du crush et dans
+  un H2 : le contrôle `seo` refuse « echt » dans tout titre, le sens ne change
+  rien. Il est remplacé par « als jullie afspreken » / « als jullie elkaar
+  zien », carte « Lees ook » comprise ; les cartes de l'article apparaissent
+  aussi sur les pages des tests (`/nl/crush-test/`, `/nl/liefdestest/`...), où
+  le contrôle l'a relevé.
+
 ## Les chiffres
+
+Au lot 9m : quarante-neuf articles en ligne et huit programmés (du 7 novembre au
+5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9l : quarante-cinq articles en ligne et huit programmés (du 7 novembre au
 5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
