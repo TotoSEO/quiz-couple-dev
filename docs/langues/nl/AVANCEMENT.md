@@ -2281,7 +2281,43 @@ premier point qui n'est pas fait.
 - Les 79 articles du blog moins les 8 `frOnly` : les 71 ont leur version
   néerlandaise.
 
+## Lot 7 (2 novembre 2026) : les quiz spéciaux d'Halloween, les dernières pages
+
+- Le hub `/nl/themaquiz-voor-koppels/` (H1 « Elk seizoen een nieuwe themaquiz
+  voor koppels », title « Themaquiz voor koppels: Halloween, kerst en meer ») et
+  les cinq quiz : `/nl/seriemoordenaar-quiz/`, `/nl/wie-gaat-als-eerste-dood/`,
+  `/nl/wie-wordt-bezeten-quiz/`, `/nl/welke-superschurk-ben-jij/`,
+  `/nl/welk-superschurkenduo-zijn-jullie/`. Textes des pages
+  (`nl/quiz-speciaux.json` et les cinq `nl/quiz-*.json`), entrées de
+  `quizzes.json`, textes des moteurs (`serialKiller`, `filmHorreur`,
+  `possession`, `superVilain`, `duoVilains` de `gd.json`, les clés `_axes` et
+  `_pts` recopiées du français) et textes alternatifs des six images (config.js).
+- Les noms néerlandais des personnages : Darth Vader et de Keizer, Maleficent,
+  Cruella de Vil, Pinky en de Brein, Jessie en James van Team Rocket, Magneto ;
+  les six rôles du duo sont des personnes (het brein, de chaosmaker, de
+  krachtpatser, de charmeur, de schaduw, het hart). « Des bonbons ou un sort »
+  devient « Snoep of een streek! », les durées du film « 1 uur 22 », les heures
+  « 23.00 uur ». `Darth Vader`, `Maleficent` et `Cruella de Vil`, identiques à
+  l'anglais, sont dans `identiques.txt`.
+- Les six pages sont sorties de `PAGES_EN_ATTENTE.nl`, désormais vide : plus
+  aucune page n'attend sa traduction.
+- Le contrôle `textes` a relevé, ce jour-là, 44 liens vers des articles du blog
+  absents des textes néerlandais : ils avaient été laissés de côté tant que
+  l'article visé n'existait pas en néerlandais, et le contrôle ne les réclame
+  qu'une fois l'article traduit. Les 44 sont posés, chacun sur un passage du
+  texte qui parle du sujet de l'article (`quiz-questions-couple.json` en
+  portait dix). Une seule carte « Lees ook » ne reprenait pas le H1 de l'article
+  visé (`gevoelens-bij-een-man`) : elle le reprend.
+- Vérifié : `code`, `textes`, `seo` et `liens` sans erreur ; `site --jouer` sur
+  les six pages, chaque quiz joué jusqu'au résultat en solo et à deux, captures
+  relues (tout en néerlandais, « Sanne houdt het 1 uur 22 vol », « Jullie zijn
+  De Joker en Harley Quinn »).
+
 ## Les chiffres
+
+Au lot 7 : toutes les pages traduites (`PAGES_EN_ATTENTE.nl` vide), 92 pages contrôlées
+par `seo` ; `code`, `textes`, `seo`, `liens` et `site --jouer` (six pages des quiz
+spéciaux) sans erreur.
 
 Au lot 9p : les 71 articles traduits, cinquante-cinq en ligne et seize programmés
 (du 3 novembre au 26 décembre) ; `verifie-article`, `seo nl`, `liens nl` et

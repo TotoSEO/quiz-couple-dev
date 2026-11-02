@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloweenquiz • Alleen of met z’n tweeën",
+    "title": "Wie van ons wordt bezeten? Ontdek het met z’n tweeën",
+    "titleHighlight": "bezeten",
+    "description": "Tien dagen in een goedkoop huis waarvan niemand de geschiedenis wil vertellen: het ouijabord op zolder, de spiegel van de rommelmarkt, de kat die blaast naar de hoek van de woonkamer, de stem die je naam kent. De uitslag is een kans op bezetenheid in procenten, met wat je beschermt en wat je kwetsbaar maakt. Met z’n tweeën weet je wie van jullie de demonen zouden kiezen.",
+    "subtitle": "15 vragen • 5 minuten • alleen, met z’n tweeën op één telefoon of ieder op een eigen telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe de quiz werkt",
+    "intro": "In alle films over bezetenheid heeft het slachtoffer hetzelfde profiel: nieuwsgierig, moe, en net iets te makkelijk met ouijaborden en spullen van de rommelmarkt. De quiz kijkt of dat bij jou zo is.",
+    "p1": "De vragen volgen de tien dagen. Bijvoorbeeld: ‘Op zolder, onder een laken: een ouijabord, met het glas er al op.’ Je kunt voorstellen om vanavond een potje te spelen, er een foto van maken voor je vrienden, het onder het laken laten liggen of het in de tuin verbranden. Elk antwoord is nul tot drie risicopunten waard, en het totaal geeft een percentage.",
+    "p2": "Speel je alleen, dan ontdek je je risico, je uitslag (een van de vijf) en twee lijstjes: wat je beschermt en wat je kwetsbaar maakt. Met z’n tweeën antwoordt de eerste en geeft de telefoon door, daarna antwoordt de tweede, en de uitslag vergelijkt jullie twee risico’s: wie het hoogste percentage heeft, wordt bezeten.",
+    "p3": "Er is ook een afstandsmodus: de een maakt het spel aan, de ander doet mee met de code, ieder antwoordt op zijn eigen telefoon, en na elke vraag zien jullie allebei de twee antwoorden."
+  },
+  "section2": {
+    "title": "De vijf uitslagen",
+    "intro": "Het percentage lees je in vijf stappen, van iemand die nergens door geraakt wordt tot iemand die beter een ander kan waarschuwen.",
+    "pillar1Title": "Minder dan 20%: onmogelijk te bezetten",
+    "pillar1Text": "Deuren dicht, ouijabord geweigerd, dekbed tot aan je kin. Te veel werk voor een demon.",
+    "pillar2Title": "Van 20 tot 40%: moeilijk te bezetten",
+    "pillar2Text": "De goede reflexen, maar je kunt het niet laten om te kijken.",
+    "pillar3Title": "Van 40 tot 60%: te bezetten op een avond dat je moe bent",
+    "pillar3Text": "Op een gewone dag is er niets aan de hand. Op een oktoberavond in een oud huis valt erover te praten.",
+    "pillar4Title": "Van 60 tot 80%: het ideale doelwit",
+    "pillar4Text": "Je praat tegen spiegels en neemt spullen mee naar huis zonder te vragen waar ze vandaan komen.",
+    "pillar5Title": "Meer dan 80%: al bezeten?",
+    "pillar5Text": "Je doet alle deuren open, je zegt overal ja op, en je vindt het grappig."
+  },
+  "section3": {
+    "title": "Waarom het met z’n tweeën zo leuk is",
+    "p1": "In een relatie is er bijna altijd één die het verlaten huis wil bezoeken en één die in de auto wacht. De quiz zet er cijfers op. En de grootste scepticus, die zegt ‘spoken bestaan niet’, heeft vaak het hoogste risico, omdat die zonder nadenken alle deuren opendoet.",
+    "p2": "Vind je dit leuk, dan werkt <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie als eerste doodgaat in een horrorfilm</a> op hetzelfde principe, met minuten overlevingstijd in plaats van een percentage. En wil je iets anders zonder uit de sfeer te raken, dan krijg je bij <a href=\"/nl/welke-superschurk-ben-jij/\">de superschurk die op jou lijkt</a> of <a href=\"/nl/welk-superschurkenduo-zijn-jullie/\">het schurkenduo dat jullie samen vormen</a> een portret in plaats van een getal.",
+    "p3": "<a href=\"/nl/themaquiz-voor-koppels/\">Al deze seizoensquizzen</a> staan op één plek, en de selectie verandert met de kalender."
+  },
+  "section4": {
+    "title": "Goed om te weten",
+    "p1": "Het is een spel. Geen enkele vraag meet iets echts, en het woord ‘risico’ moet je opvatten zoals in een halloweenfilm. Het enige echte advies van de quiz: slaap goed in oktober.",
+    "p2": "Er wordt niets opgeslagen. De antwoorden blijven op jullie telefoon, en als je de quiz opnieuw doet en anders denkt over het ouijabord, verandert de uitslag."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Hoe wordt het risico berekend?",
+    "faq1A": "Elk antwoord is nul tot drie risicopunten waard. Het totaal van de vijftien vragen wordt omgerekend naar een percentage: vijfenveertig punten is 100%, nul punten is 0%. De uitslag hangt af van de stap waarin dat percentage valt.",
+    "faq2Q": "Kun je alleen spelen?",
+    "faq2A": "Ja. Alleen krijg je je risico, je uitslag en de twee lijstjes van wat je beschermt en wat je kwetsbaar maakt. Met z’n tweeën vergelijkt de quiz de twee risico’s en wijst hij aan wie de demonen zouden kiezen.",
+    "faq3Q": "Wie wordt er bezeten als je met z’n tweeën speelt?",
+    "faq3A": "Degene met het hoogste percentage. Bij gelijkspel zegt de quiz het eerlijk: de demon zal moeten kiezen.",
+    "faq4Q": "Kun je op afstand spelen?",
+    "faq4A": "Ja, vanaf het scherm met de namen. De een maakt het spel aan, de ander doet mee met de code of de QR-code, en ieder antwoordt op zijn eigen telefoon.",
+    "faq5Q": "Is het eng?",
+    "faq5A": "Nee. De vragen zijn grappig, en het ergste wat je kan overkomen, is ontdekken dat je partner in een verlaten kerk tegen een beeld zou praten."
+  },
+  "jsonLd": {
+    "about": "halloweenquiz"
+  }
+}

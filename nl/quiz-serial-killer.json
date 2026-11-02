@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Halloweenquiz • Alleen of met z’n tweeën",
+    "title": "Met welke seriemoordenaar match jij?",
+    "titleHighlight": "seriemoordenaar",
+    "description": "Vijftien situaties op een halloweenavond: hoe je het feest binnenkomt, je verkleedpak, het kerkhof om middernacht, de inspecteur die aanklopt, de true-crimedocumentaire. Aan het eind de bekende moordenaar die het meest op jou lijkt, flink uitvergroot, met zijn portret en een tip voor de avond. Alleen, of met z’n tweeën om te vergelijken.",
+    "subtitle": "15 vragen • 5 minuten • alleen, met z’n tweeën op één telefoon of ieder op een eigen telefoon",
+    "jumpBtn": "Doe de quiz"
+  },
+  "section1": {
+    "title": "Hoe deze quiz werkt",
+    "intro": "Het is een persoonlijkheidsquiz in halloweenkostuum. Hij wil niet weten of je gevaarlijk bent, hij kijkt naar heel gewone karaktertrekken, zoals charme, geduld, eenzaamheid, liefde voor raadsels of de behoefte om alles in de hand te houden, via situaties op een halloweenavond. En hij vergroot ze uit tot een karikatuur.",
+    "p1": "De vragen zijn scènes. Bijvoorbeeld: ‘Een inspecteur klopt aan en stelt vragen over de buurt.’ of ‘Het kerkhof, om middernacht, om een weddenschap.’ Elk antwoord telt mee voor een of twee van de acht portretten van de quiz, en het portret met de meeste punten wint.",
+    "p2": "Speel je alleen, dan beantwoord je de vijftien vragen en ontdek je je portret, met de drie trekken die het sterkst uit je antwoorden naar voren komen. Met z’n tweeën beantwoordt de eerste de hele reeks en geeft de telefoon door, waarna de tweede antwoordt zonder de antwoorden van de eerste te zien. Daarna staan de twee portretten naast elkaar, met het aantal gelijke antwoorden.",
+    "p3": "Zijn jullie niet op dezelfde plek, dan kun je met de afstandsmodus ieder op je eigen telefoon antwoorden: de een maakt het spel aan, de ander doet mee met de code, en na elke vraag zien jullie allebei de twee antwoorden."
+  },
+  "section2": {
+    "title": "De acht portretten van de quiz",
+    "intro": "We hebben de bekendste seriemoordenaars genomen, van wie iedereen de naam weleens in een documentaire of serie heeft gehoord, en van elk de karaktertrek gehouden die mensen van hem onthouden. Alleen die trek meet de quiz.",
+    "pillar1Title": "Ted Bundy, de charmeur",
+    "pillar1Text": "De glimlach, het directe vertrouwen, de ideale schoonzoon. Het portret van wie alles gedaan krijgt met één zin.",
+    "pillar2Title": "Jeffrey Dahmer, de eenzaat",
+    "pillar2Text": "De angst om verlaten te worden, de behoefte om vast te houden, liever thuis dan in de rest van de wereld.",
+    "pillar3Title": "Jack the Ripper, het mysterie",
+    "pillar3Text": "Niemand weet wie hij was. Het portret van mensen die je al tien jaar kent zonder iets van ze te weten.",
+    "pillar4Title": "De Zodiac, de raadselspeler",
+    "pillar4Text": "De gecodeerde brieven, de raadsels, het plezier om gezocht te worden. Voor wie altijd een aanwijzing achterlaat.",
+    "pillar5Title": "Charles Manson, de goeroe",
+    "pillar5Text": "Hij deed zelf niets: hij praatte. Het portret van wie voor de groep beslist zonder dat iemand het merkt.",
+    "pillar6Title": "Dennis Rader, de façade",
+    "pillar6Text": "Dertig jaar een normaal leven, met gezin en vrijwilligerswerk. Het portret van het keurig opgeruimde dubbelleven.",
+    "pillar7Title": "Aileen Wuornos, de gekwetste",
+    "pillar7Text": "Woede, overlevingsdrang, reageren voor je nadenkt. Voor wie de deur achter zich dichtsmijt.",
+    "pillar8Title": "H. H. Holmes, de bouwer",
+    "pillar8Text": "Het hotel met de geheime kamers, de oplichterij, het geld. Het portret van wie altijd een plan heeft, en een kamer extra."
+  },
+  "section3": {
+    "title": "Met z’n tweeën spelen, op een halloweenavond",
+    "p1": "Deze quiz werkt heel goed met z’n tweeën, juist omdat niemand gevleid wordt door zijn uitslag. Je lacht om je eigen portret, je herkent de ander in het zijne, en uiteindelijk vertel je elkaar waarom je dát antwoordde op de vraag over de inspecteur of over het kerkhof.",
+    "p2": "Wil je in de sfeer blijven, dan zijn de andere halloweenquizzen gemaakt om achter elkaar te spelen: <a href=\"/nl/wie-gaat-als-eerste-dood/\">wie als eerste doodgaat in een horrorfilm</a>, <a href=\"/nl/wie-wordt-bezeten-quiz/\">wie er bezeten zou kunnen raken</a>, of <a href=\"/nl/welke-superschurk-ben-jij/\">welke superschurk er in jullie schuilt</a>. Je speelt ze allemaal op dezelfde manier, alleen of met z’n tweeën.",
+    "p3": "En voor een avond die niet alleen over monsters gaat, nemen <a href=\"/nl/zou-je-liever-vragen/\">onze ‘zou je liever’-dilemma’s</a> het prima over als het snoep op is."
+  },
+  "section4": {
+    "title": "Wat deze quiz niet is",
+    "p1": "Het is geen psychologische test, en al helemaal geen diagnose. De genoemde mensen hebben echte slachtoffers gemaakt, en dat vergeten we niet: de quiz neemt van hen alleen een karaktertrek over, die het grote publiek heeft onthouden, en drijft die op tot het belachelijke. Krijg je Ted Bundy, dan betekent dat dat je makkelijk met mensen omgaat. Meer niet.",
+    "p2": "De uitslag zegt ook niets over je relatie. Twee verschillende portretten zijn twee verschillende karakters, en dat geldt voor de meeste stellen. Willen jullie een echte test met z’n tweeën, dan is er een die <a href=\"/nl/relatietest/\">jullie antwoorden over wat er echt toe doet</a> naast elkaar legt.",
+    "p3": "Je antwoorden worden niet opgeslagen. De quiz houdt alleen het portret bij, zonder naam of antwoorden, om ooit de verdeling van de portretten op de pagina te kunnen tonen."
+  },
+  "seo": {
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Moet je de quiz serieus nemen?",
+    "faq1A": "Nee. Het is een halloweenspel. Hij meet gewone karaktertrekken (charme, geduld, nieuwsgierigheid, woede) en koppelt ze aan een heel karikaturaal portret. Niemand is gevaarlijk omdat hij de Zodiac krijgt.",
+    "faq2Q": "Kun je hem met z’n tweeën doen?",
+    "faq2A": "Ja. De eerste beantwoordt de hele reeks en geeft de telefoon dan door aan de tweede. Aan het eind verschijnen beide portretten. En zijn jullie niet samen, dan kun je met de afstandsmodus ieder op je eigen telefoon spelen.",
+    "faq3Q": "Hoe wordt de uitslag berekend?",
+    "faq3A": "Elk antwoord geeft een of twee punten aan een of twee van de acht portretten. Aan het eind wordt elk portret afgezet tegen het maximum dat het kon krijgen, en het portret met het hoogste percentage wint. De drie trekken die het vaakst terugkomen, zie je als meters onder de uitslag.",
+    "faq4Q": "Waarom deze acht moordenaars en geen andere?",
+    "faq4A": "Omdat ze het bekendst zijn, en je van elk makkelijk één trek onthoudt: de charme van Bundy, de raadsels van de Zodiac, de façade van Dennis Rader. Een persoonlijkheidsquiz heeft portretten nodig die iedereen in één regel herkent.",
+    "faq5Q": "Worden mijn antwoorden opgeslagen?",
+    "faq5A": "Nee. De antwoorden blijven op je telefoon. Alleen het portret dat je krijgt, wordt geteld, zonder naam, om later de verdeling van de uitslagen te kunnen tonen."
+  },
+  "jsonLd": {
+    "about": "halloweenquiz"
+  }
+}

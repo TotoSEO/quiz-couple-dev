@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Seizoensquizzen • Gratis • Alleen of met z’n tweeën",
+    "title": "Elk seizoen een nieuwe themaquiz voor koppels",
+    "titleHighlight": "themaquiz voor koppels",
+    "description": "Een beetje gekke quizzen die je niet het hele jaar door doet: nu die van Halloween, binnenkort die van kerst. Je speelt ze alleen, met z’n tweeën op één telefoon of ieder op een eigen telefoon, en na het seizoen blijven ze gewoon hier staan."
+  },
+  "enCeMoment": "Nu actueel",
+  "horsSaison": "Het hele jaar",
+  "jouer": "Doe de quiz",
+  "duoSeul": "Voor twee spelers",
+  "soloOuDuo": "Alleen of met z’n tweeën",
+  "distance": "Ook op afstand",
+  "saisons": {
+    "halloween": {
+      "titre": "Halloween-special",
+      "intro": "Vijf quizzen voor een halloweenavond met z’n tweeën: een moordenaarsportret, een overlevingsklok, een kans op bezetenheid, een superschurkenportret en het schurkenduo dat jullie samen vormen. Alles is voor de lol, en elke quiz duurt vijf minuten."
+    },
+    "noel": {
+      "titre": "Kerst-special",
+      "intro": "De kerstquizzen komen in december: hoeveel jullie aan elkaar willen uitgeven, wie het slechtste cadeau gaat geven, en nog een paar verrassingen.",
+      "bientot": "Binnenkort"
+    }
+  },
+  "quiz": {
+    "quizSerialKillerNom": "Met welke seriemoordenaar match jij?",
+    "quizSerialKillerTagline": "Vijftien situaties op een halloweenavond, en de bekende moordenaar die het meest op jou lijkt, flink uitvergroot.",
+    "quizMortFilmHorreurNom": "Wie van ons gaat als eerste dood in een horrorfilm?",
+    "quizMortFilmHorreurTagline": "Vijftien situaties, van de aankomst in de blokhut tot de aftiteling, een overlevingstijd in minuten, en de naam van het eerste slachtoffer als jullie samen spelen.",
+    "quizPossessionNom": "Wie van ons wordt bezeten?",
+    "quizPossessionTagline": "Tien dagen in een huis waarvan niemand de geschiedenis wil vertellen, een kans op bezetenheid in procenten, en wie de demonen zouden kiezen.",
+    "quizSuperVilainNom": "Op welke superschurk lijk jij het meest?",
+    "quizSuperVilainTagline": "Hoe je het feest binnenkomt, je verkleedpak, je handlangers, je lach: de superschurk die op jou lijkt, van de Joker tot Maleficent.",
+    "quizDuoVilainsNom": "Welk superschurkenduo zijn jullie?",
+    "quizDuoVilainsTagline": "De kraak van de halloweennacht: ieders rol (het brein, de chaosmaker, de krachtpatser, de charmeur, de schaduw of het hart) en het beroemde schurkenduo dat jullie vormen."
+  },
+  "section1": {
+    "title": "Waarom seizoensquizzen",
+    "p1": "De quizzen op deze pagina lijken niet op onze relatietests. Ze meten niets serieus, ze geven geen advies, en ze gaan niet over jullie relatie. Het zijn spelletjes voor een bepaalde avond: een halloweenavond tussen twee horrorfilms door, een kerstavond terwijl je op de cadeaus wacht.",
+    "p2": "Ze werken omdat ze gemaakt zijn om om jezelf en om de ander te lachen. Ontdekken dat je partner in een horrorfilm na twaalf minuten dood zou zijn, of dat jullie samen Pinky en de Brein zijn: daar ben je een flink deel van de avond zoet mee.",
+    "p3": "We bewaren ze hier allemaal, seizoen na seizoen. Die van het huidige seizoen staan bovenaan; de andere kun je het hele jaar spelen, iets verder naar beneden."
+  },
+  "section2": {
+    "title": "Hoe je speelt",
+    "p1": "Al deze quizzen speel je op dezelfde manier. Speel je alleen, dan beantwoord je de vragen en zie je je uitslag. Met z’n tweeën beantwoordt de eerste de hele reeks en geeft de telefoon door, waarna de tweede antwoordt zonder de antwoorden van de eerste te zien: aan het eind staan de twee uitslagen naast elkaar, met waar jullie verschillen.",
+    "p2": "Zijn jullie niet op dezelfde plek, dan heeft elke quiz een afstandsmodus: de een maakt het spel aan, de ander doet mee met de code of de QR-code, en ieder antwoordt op zijn eigen telefoon. Na elke vraag zien jullie allebei de twee antwoorden, en de uitslag is aan beide kanten dezelfde.",
+    "p3": "Je hoeft geen account aan te maken of iets te installeren, en er wordt niets opgeslagen: de antwoorden blijven op jullie telefoons."
+  },
+  "section3": {
+    "title": "En de rest van het jaar",
+    "p1": "Is het seizoen voorbij, dan nemen <a href=\"/nl/spelletjes-voor-koppels/\">de spelletjes voor het hele jaar</a> het over: <a href=\"/nl/zou-je-liever-vragen/\">de ‘zou je liever’-dilemma’s</a>, waarheid of durven, het bordspel en nog een stuk of tien andere. En wie <a href=\"/nl/relatietest/\">een echt antwoord over zijn relatie</a> wil, kan zijn antwoorden vergelijken op wat er echt toe doet."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Zijn de themaquizzen gratis?",
+    "a1": "Ja, allemaal, zonder account en zonder app om te installeren. Je speelt ze in de browser van je telefoon.",
+    "q2": "Moet je met z’n tweeën zijn?",
+    "a2": "Niet per se. Vier van de vijf halloweenquizzen kun je alleen of met z’n tweeën spelen. Alleen de quiz over het superschurkenduo vraagt om twee spelers, omdat hij een duo samenstelt.",
+    "q3": "Wat gebeurt er met de quizzen als het seizoen voorbij is?",
+    "a3": "Ze blijven op deze pagina staan, iets verder naar beneden, en op hun eigen adres. We halen niets weg: een halloweenquiz midden in maart kan ook.",
+    "q4": "Wanneer komen de kerstquizzen?",
+    "a4": "In december. Op het programma: hoeveel jullie aan elkaar willen uitgeven, wie het slechtste cadeau gaat geven, en nog een paar ideeën voor het eind van het jaar.",
+    "q5": "Kunnen we op afstand spelen?",
+    "a5": "Ja, elke quiz heeft een afstandsmodus. De een maakt het spel aan, de ander doet mee met de code, en ieder antwoordt op zijn eigen telefoon."
+  },
+  "jsonLd": {
+    "name": "Themaquizzen voor koppels"
+  }
+}

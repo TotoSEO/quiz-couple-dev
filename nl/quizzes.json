@@ -500,6 +500,42 @@
     "metaDescription": "Seksuele compatibiliteit test voor twee: 20 vragen over verlangen, tederheid, nieuwe dingen en ritme, met een score per onderdeel. Gratis.",
     "description": "Twintig vragen voor twee over verlangen, tederheid en erover praten, om te zien waar jullie elkaar vinden."
   },
+  "speciauxCouple": {
+    "title": "Themaquiz voor koppels: Halloween, kerst en meer",
+    "shortTitle": "Themaquizzen",
+    "metaDescription": "Een themaquiz voor koppels, per seizoen. Voor Halloween: welke seriemoordenaar bij jou past, wie als eerste doodgaat in een horrorfilm, wie bezeten raakt.",
+    "description": "De wat gekkere quizzen voor met z’n tweeën, per seizoen: nu Halloween, straks kerst."
+  },
+  "quizSerialKiller": {
+    "title": "Seriemoordenaar quiz: welke past bij jou? Alleen of samen",
+    "shortTitle": "Welke seriemoordenaar past bij jou",
+    "metaDescription": "Seriemoordenaar quiz voor Halloween: 15 situaties (het feest, het kerkhof om middernacht, de inspecteur aan de deur) en de moordenaar die op jou lijkt.",
+    "description": "Vijftien situaties op een halloweenavond en de bekende moordenaar die het meest op jou lijkt, flink uitvergroot. Alleen of met z’n tweeën."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Wie gaat als eerste dood in een horrorfilm? De quiz",
+    "shortTitle": "Wie gaat als eerste dood in de horrorfilm",
+    "metaDescription": "Wie gaat als eerste dood in een horrorfilm? 15 situaties en een uitslag in minuten: hoe lang hou jij het vol, en wie van jullie sterft het eerst. Gratis.",
+    "description": "Vijftien situaties, een overlevingstijd in minuten, en de naam van het eerste slachtoffer als jullie met z’n tweeën spelen."
+  },
+  "quizPossession": {
+    "title": "Wie wordt bezeten? Quiz voor Halloween, alleen of samen",
+    "shortTitle": "Wie wordt er bezeten",
+    "metaDescription": "Wie wordt bezeten? Quiz met 15 vragen en een kans op bezetenheid in procenten: wie van jullie laat de demonen binnen? Gratis, alleen of met z’n tweeën.",
+    "description": "Vijftien vragen, een kans op bezetenheid in procenten, en wie de demonen als eerste zouden kiezen."
+  },
+  "quizSuperVilain": {
+    "title": "Welke superschurk ben jij? Quiz, alleen of met z’n tweeën",
+    "shortTitle": "Welke superschurk ben jij",
+    "metaDescription": "Welke superschurk ben jij? Je entree op het feest, je handlangers, je lach: 15 vragen en de schurk die op jou lijkt, van de Joker tot Maleficent.",
+    "description": "Vijftien vragen in de schoenen van de slechterik op een halloweenavond, en de superschurk die het meest op jou lijkt."
+  },
+  "quizDuoVilains": {
+    "title": "Welk superschurkenduo zijn jullie? Quiz voor stellen",
+    "shortTitle": "Welk superschurkenduo zijn jullie",
+    "metaDescription": "Welk superschurkenduo zijn jullie? De halloweenkraak in 15 vragen elk, ieders rol in het duo en het beroemde schurkenduo dat jullie samen vormen.",
+    "description": "Ieder antwoordt voor zich, en de quiz geeft jullie ieders rol in het duo en het beroemde schurkenduo dat jullie vormen."
+  },
   "bilanCouple": {
     "title": "Relatiecheck online | Direct resultaat, ook als pdf",
     "shortTitle": "Relatiecheck",
