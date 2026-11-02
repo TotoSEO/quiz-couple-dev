@@ -134,6 +134,49 @@ export function arretsCreateur(lignes) {
   return Object.fromEntries(Object.entries(t).sort((a, b) => b[1] - a[1]));
 }
 
+// Les évaluations à deux, jour par jour (heure de Paris, jour de la
+// création) et langue par langue (2 novembre 2026, Thomas : « aucune vente
+// depuis 4 jours alors qu'avant j'en avais une au moins tous les deux
+// jours ») : créées / allées au bout des deux côtés / payées.
+const jourParis = (iso) => new Intl.DateTimeFormat('fr-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(iso));
+export function duoParJour(lignes) {
+  const t = {};
+  for (const l of lignes || []) {
+    if (l.mode === 'solo') continue;
+    const j = jourParis(l.cree_le);
+    const parLangue = (t[j] = t[j] || {});
+    const e = (parLangue[l.lang] = parLangue[l.lang] || { creees: 0, completes: 0, payees: 0 });
+    e.creees++;
+    if (l.a_fini && l.b_fini) e.completes++;
+    if (l.paye_le) e.payees++;
+  }
+  return Object.keys(t).sort().map((j) => `${j} · ` + Object.entries(t[j])
+    .sort((a, b) => b[1].creees - a[1].creees || (a[0] < b[0] ? -1 : 1))
+    .map(([lang, e]) => `${lang} ${e.creees}/${e.completes}/${e.payees}`).join(' · '));
+}
+
+// Les visites de quelques pages jour par jour. get_trafic_pages compte une
+// fenêtre qui finit aujourd'hui (p_days = 1 : aujourd'hui, 2 : hier et
+// aujourd'hui...) : la différence de deux fenêtres voisines donne un jour.
+// fenetres[d] est la réponse pour p_days = d (fenetres[0] absente = rien).
+export function visitesParJour(fenetres, pages, aujourdhui) {
+  const somme = (lignes, chemin) => (lignes || []).filter((p) => p.path === chemin).reduce((s, p) => s + (Number(p.visites) || 0), 0);
+  const lignes = [];
+  for (let k = fenetres.length - 2; k >= 0; k--) {
+    const jour = new Date(Date.parse(aujourdhui + 'T12:00:00Z') - k * 86400000).toISOString().slice(0, 10);
+    const parts = pages.map(([etiquette, chemin]) => `${etiquette} ${somme(fenetres[k + 1], chemin) - somme(fenetres[k], chemin)}`);
+    lignes.push(`${jour} · ${parts.join(' · ')}`);
+  }
+  return lignes;
+}
+
+const PAGES_DU_JOUR = [
+  ['éval fr', '/evaluation-de-couple/'], ['éval en', '/en/relationship-assessment/'], ['éval es', '/es/evaluacion-de-pareja/'],
+  ['éval it', '/it/valutazione-di-coppia/'], ['éval de', '/de/beziehungsanalyse/'], ['éval nl', '/nl/relatiecheck/'],
+  ['test en', '/en/couple-compatibility-test/'], ['résultat en', '/en/couple-compatibility-test/resultat/'],
+  ['accueil en', '/en/'],
+];
+
 const tableau = (titre, t) => {
   console.log(titre);
   for (const [k, v] of Object.entries(t).sort((a, b) => (b[1].creees || 0) - (a[1].creees || 0))) {
@@ -158,6 +201,15 @@ async function analyse(base, jours) {
     for (const p of resultats) console.log(`  ${String(p.visites).padStart(6)} visites · ${p.path}`);
   } catch (e) {
     console.log(`\nTrafic par page : ${e.message}`);
+  }
+  try {
+    const N = Math.min(jours, 21);
+    const fenetres = [null];
+    for (let d = 1; d <= N + 1; d++) fenetres[d] = await base.rpc('get_trafic_pages', { p_days: d });
+    console.log(`\nVisites jour par jour, ${N} derniers jours (différence des fenêtres de get_trafic_pages, aujourd'hui en cours) :`);
+    for (const l of visitesParJour(fenetres, PAGES_DU_JOUR, jourParis(new Date().toISOString()))) console.log('  ' + l);
+  } catch (e) {
+    console.log(`\nVisites jour par jour : ${e.message}`);
   }
   try {
     const sources = await base.rpc('get_trafic_sources', { p_days: 7 });
@@ -185,6 +237,8 @@ async function analyse(base, jours) {
     // même moment (QR code en grand) et le prix de l'Amérique latine.
     const bascule27 = '2026-10-27T12:00:00Z';
     tableau('Avant et après le 27 octobre (QR code en grand, prix Amérique latine) :', entonnoir(lignes, (l) => `${l.cree_le < bascule27 ? 'avant' : 'après'} ${l.lang} ${l.mode}`));
+    console.log('À deux, jour par jour (heure de Paris de la création), par langue : créées/complètes/payées :');
+    for (const l of duoParJour(lignes)) console.log('  ' + l);
     const auPrixRegion = Object.fromEntries(Object.entries(PRIX_REGIONS).map(([z, c]) => [z, lignes.filter((l) => l.paye_le && l.paiement_montant === c).length]));
     console.log('Ventes au prix d\'une région :', JSON.stringify(auPrixRegion));
     console.log('Les évaluations allées au bout, dans l\'ordre (heure de Paris de la dernière réponse) :');
