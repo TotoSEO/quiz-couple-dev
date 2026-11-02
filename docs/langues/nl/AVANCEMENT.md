@@ -2163,7 +2163,25 @@ premier point qui n'est pas fait.
 - Le « Autrement dit » de la FAQ des symptômes n'est pas repris ; « la moitié de
   la durée de la relation » est présentée comme un mythe, en néerlandais aussi.
 
+## Lot 9k (2 novembre 2026) : vriendschap et les trois articles de l'attachement
+
+- `dependance-affective-amitie` (`/nl/blog/emotionele-afhankelijkheid-in-vriendschap/`,
+  programmé pour le 14 novembre 2026), `styles-attachement-couple`
+  (`/nl/blog/hechtingsstijlen-in-een-relatie/`, 28 novembre),
+  `attachement-anxieux` (`/nl/blog/angstige-hechting-in-een-relatie/`, 1er décembre)
+  et `attachement-evitant` (`/nl/blog/vermijdende-hechting-in-een-relatie/`,
+  5 décembre), aux dates françaises ; vérifiés par
+  `BUILD_DATE_OVERRIDE=2026-12-05T17:00:00+01:00`.
+- Les styles s'appellent « veilig », « angstig », « vermijdend » et
+  « gedesorganiseerd », les mots des psychologues néerlandophones ; la
+  « sécurité acquise » devient « verworven veiligheid ».
+- « Les meilleures amies depuis le CP » deviennent « sinds de basisschool ».
+
 ## Les chiffres
+
+Au lot 9k : quarante et un articles en ligne et huit programmés (du 7 novembre au
+5 décembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
+sans erreur.
 
 Au lot 9j : quarante et un articles en ligne et quatre programmés (7, 10, 17 et
 21 novembre) ; `verifie-article`, `seo nl`, `liens nl` et `site nl --pages blog`
