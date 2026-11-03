@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-02T10:59:58.815Z",
+  "genere_le": "2026-11-03T03:14:48.478Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-02",
+  "aujourdhui": "2026-11-03",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 150,
+  "reserve_jours": 149,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -750,7 +750,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: at home?",
       "erreur": null
     },
@@ -804,7 +804,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -3624,7 +3624,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-02",
+      "jour": "2026-11-04",
       "creneau": "soir"
     },
     "phrase": null,
@@ -4662,19 +4662,37 @@
       "jour": "2026-10-26",
       "creneau": "midi",
       "theme": null
+    },
+    {
+      "variante_id": "3dced30e-8bc6-42ba-a0f0-7a5640f7ffaf",
+      "releve": "j7",
+      "vues": 2075,
+      "portee": 1660,
+      "likes": 43,
+      "commentaires": 1,
+      "partages": 58,
+      "enregistrements": 21,
+      "releve_le": "2026-11-03T03:14:46.097079+00:00",
+      "publie_le": "2026-10-26T15:30:11.855+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-26",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 11,
-      "vues_mediane": 2676,
-      "vues_moyenne": 14294,
+      "posts": 12,
+      "vues_mediane": 2589,
+      "vues_moyenne": 13276,
       "vues_max": 74587,
-      "partages": 5271,
-      "enregistrements": 2071,
-      "likes": 2139,
-      "commentaires": 3
+      "partages": 5329,
+      "enregistrements": 2092,
+      "likes": 2182,
+      "commentaires": 4
     },
     {
       "categorie": "connais-tu",
