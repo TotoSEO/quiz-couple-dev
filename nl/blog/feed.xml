@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/nl/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>De artikelen van Quiz Couple over relaties, psychologie en liefdesverhalen.</description>
     <language>nl</language>
-    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/nl/blog/</link>
     </image>
+    <item>
+      <title>36 vragen om verliefd te worden, en waarom ze werken</title>
+      <link>https://quiz-couple.com/nl/blog/36-vragen-om-verliefd-te-worden/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/36-vragen-om-verliefd-te-worden/</guid>
+      <pubDate>Tue, 03 Nov 2026 09:33:00 GMT</pubDate>
+      <category>Relatie</category>
+      <description>Twee onbekenden, 36 vragen en vier minuten oogcontact... De 36 vragen om verliefd te worden van Arthur Aron, het protocol en hoe je het vanavond doet.</description>
+      <media:content url="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Een toxische vrouw in de liefde: het subtiele gedrag dat je moet kennen</title>
       <link>https://quiz-couple.com/nl/blog/toxische-vrouw-in-een-relatie/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Wat voelt een man als je hem negeert, stap voor stap: hij merkt niets, twijfelt, ergert zich, schrijft, en haakt dan af. En of hij terugkomt.</description>
       <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>100 vragen om aan je vriend te stellen, van luchtig tot diepgaand</title>
-      <link>https://quiz-couple.com/nl/blog/vragen-om-aan-je-vriend-te-stellen/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/nl/blog/vragen-om-aan-je-vriend-te-stellen/</guid>
-      <pubDate>Tue, 25 Aug 2026 11:18:00 GMT</pubDate>
-      <category>Relatie</category>
-      <description>100 vragen om aan je vriend te stellen, per thema: om hem beter te leren kennen, over jullie, grappig, gevoelens, toekomst, op afstand en 5 strikvragen.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

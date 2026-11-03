@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/en/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Quiz Couple articles on relationships, psychology and love stories.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/en/blog/</link>
     </image>
+    <item>
+      <title>36 questions to fall in love</title>
+      <link>https://quiz-couple.com/en/blog/36-questions-to-fall-in-love/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/en/blog/36-questions-to-fall-in-love/</guid>
+      <pubDate>Tue, 03 Nov 2026 09:33:00 GMT</pubDate>
+      <category>Relationship</category>
+      <description>Two strangers, 36 questions, 4 minutes of eye contact... and a wedding six months later. Arthur Aron&#39;s experiment, the questions, and how to do it tonight.</description>
+      <media:content url="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Toxic woman in love: the subtle behaviours to know about</title>
       <link>https://quiz-couple.com/en/blog/toxic-woman-in-love/</link>
@@ -272,15 +281,6 @@
       <category>Psychology</category>
       <description>What a man feels when you ignore him, stage by stage: he doesn&#39;t notice, he doubts, he gets annoyed, he texts, then he switches off. And whether it brings him back.</description>
       <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>100 questions to ask your boyfriend, from light to the big conversations</title>
-      <link>https://quiz-couple.com/en/blog/questions-to-ask-your-boyfriend/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/en/blog/questions-to-ask-your-boyfriend/</guid>
-      <pubDate>Tue, 25 Aug 2026 11:18:00 GMT</pubDate>
-      <category>Relationship</category>
-      <description>100 questions to ask your boyfriend, by theme and by moment: to know him better, about the two of you, funny, feelings, future, distance, and 5 trick questions.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

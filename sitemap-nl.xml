@@ -1888,6 +1888,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/nl/blog/36-vragen-om-verliefd-te-worden/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/36-questions-to-fall-in-love/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/36-preguntas-para-enamorarse/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/36-fragen-um-sich-zu-verlieben/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/36-domande-per-innamorarsi/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/blog/36-vragen-om-verliefd-te-worden/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux/"/>
+    <lastmod>2026-11-03T10:33:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/nl/blog/vrienden-blijven-met-je-ex/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/rester-ami-avec-son-ex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/can-you-be-friends-with-your-ex/"/>

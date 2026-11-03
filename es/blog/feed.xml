@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/es/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Los artículos de Quiz Couple sobre la vida en pareja, la psicología y las historias de amor.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Blog</title>
       <link>https://quiz-couple.com/es/blog/</link>
     </image>
+    <item>
+      <title>36 preguntas para enamorarse</title>
+      <link>https://quiz-couple.com/es/blog/36-preguntas-para-enamorarse/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/es/blog/36-preguntas-para-enamorarse/</guid>
+      <pubDate>Tue, 03 Nov 2026 09:33:00 GMT</pubDate>
+      <category>Vida en pareja</category>
+      <description>Dos desconocidos, 36 preguntas, 4 minutos de mirada... y una boda seis meses después. El experimento de Arthur Aron, las preguntas y cómo hacerlo esta noche.</description>
+      <media:content url="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Mujer tóxica en el amor: los comportamientos sutiles que hay que conocer</title>
       <link>https://quiz-couple.com/es/blog/mujer-toxica-en-el-amor/</link>
@@ -272,15 +281,6 @@
       <category>Psicología</category>
       <description>Lo que siente un hombre cuando lo ignoras, fase por fase: no se entera, duda, se irrita, te escribe y al final desconecta. Y si eso hace que vuelva.</description>
       <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>100 preguntas para hacerle a tu novio, de las ligeras a las grandes conversaciones</title>
-      <link>https://quiz-couple.com/es/blog/preguntas-para-tu-novio/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/es/blog/preguntas-para-tu-novio/</guid>
-      <pubDate>Tue, 25 Aug 2026 11:18:00 GMT</pubDate>
-      <category>Vida en pareja</category>
-      <description>100 preguntas para tu novio, por tema y por momento: para conocerlo, sobre vosotros, sentimientos, futuro, a distancia, y 5 preguntas trampa con respuesta.</description>
-      <media:content url="https://quiz-couple.com/blog/questions-a-poser-a-son-copain.webp" medium="image" type="image/webp" width="1536" height="1024"/>
     </item>
   </channel>
 </rss>

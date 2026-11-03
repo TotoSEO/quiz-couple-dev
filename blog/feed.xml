@@ -6,12 +6,21 @@
     <atom:link href="https://quiz-couple.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Les articles de Quiz Couple sur la vie de couple, la psychologie et les histoires d&#39;amour.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 31 Oct 2026 07:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 09:33:00 GMT</lastBuildDate>
     <image>
       <url>https://quiz-couple.com/apple-touch-icon.png</url>
       <title>Quiz Couple · Le blog</title>
       <link>https://quiz-couple.com/blog/</link>
     </image>
+    <item>
+      <title>36 questions pour tomber amoureux</title>
+      <link>https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux/</link>
+      <guid isPermaLink="true">https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux/</guid>
+      <pubDate>Tue, 03 Nov 2026 09:33:00 GMT</pubDate>
+      <category>Vie de couple</category>
+      <description>Deux inconnus, 36 questions, 4 minutes de regard... et un mariage six mois plus tard. L&#39;expérience d&#39;Arthur Aron, les questions traduites, et comment la faire ce soir.</description>
+      <media:content url="https://quiz-couple.com/blog/36-questions-pour-tomber-amoureux.webp" medium="image" type="image/webp" width="1536" height="1024"/>
+    </item>
     <item>
       <title>Femme toxique en amour : les comportements subtils à connaître</title>
       <link>https://quiz-couple.com/blog/femme-toxique-en-amour/</link>
@@ -272,15 +281,6 @@
       <category>Psychologie</category>
       <description>Ce que ressent un homme quand on l&#39;ignore, étape par étape : il ne remarque rien, il doute, il s&#39;agace, il écrit, puis il décroche. Et si ça le fait revenir.</description>
       <media:content url="https://quiz-couple.com/blog/homme-qu-on-ignore.webp" medium="image" type="image/webp" width="1200" height="630"/>
-    </item>
-    <item>
-      <title>Citation âme sœur : 60 phrases à garder, à envoyer ou à offrir</title>
-      <link>https://quiz-couple.com/blog/citation-ame-soeur/</link>
-      <guid isPermaLink="true">https://quiz-couple.com/blog/citation-ame-soeur/</guid>
-      <pubDate>Tue, 25 Aug 2026 15:34:00 GMT</pubDate>
-      <category>Vie de couple</category>
-      <description>60 citations sur l&#39;âme sœur à envoyer, à offrir ou à écrire sur une carte. Avec les auteurs et leurs livres, et trois attributions célèbres qui sont fausses.</description>
-      <media:content url="https://quiz-couple.com/blog/citation-ame-soeur.webp" medium="image" type="image/webp" width="1200" height="630"/>
     </item>
   </channel>
 </rss>
