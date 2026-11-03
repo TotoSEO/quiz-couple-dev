@@ -61,7 +61,7 @@ commentaire en tête de chaque bloc.
 ## Avancement
 
 - [x] Cocon 1 : fr · en · es · de · it · nl · images · liens entrants (`QUIZ_RELATED_ARTICLES`, CLAUDE.md) · PR (3 novembre 2026)
-- [ ] Cocon 2
+- [x] Cocon 2 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 29 janvier 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [ ] Cocon 3
 - [ ] Cocon 4
 - [ ] Cocon 5
@@ -80,3 +80,26 @@ commentaire en tête de chaque bloc.
 - Les images : `scratchpad/cocons/images.mjs` (mascottes de face, `regard`
   pour la direction ; la vue de profil dessine mal la bouche), un aperçu PNG
   par scène à relire avant de produire les variantes.
+
+## Ce qu'on a appris sur le cocon 2
+
+- Une transposition n'est pas une traduction : chaque langue a reçu ses
+  propres repères (prix des bagues, âge au premier mariage, formalités du
+  mariage civil, régime matrimonial par défaut, alternative au mariage). Le
+  pacs n'a d'équivalent ni en Allemagne (plus de Lebenspartnerschaft pour un
+  nouveau couple) ni en Italie pour un couple homme-femme (l'unione civile est
+  réservée aux couples de même sexe) : les articles « il ne veut pas se
+  marier » y parlent de ce qui se règle sans mariage, et de ce qui ne se
+  règle pas.
+- Les descriptions allemandes et néerlandaises dépassent 160 signes à
+  chaque fois : on écrit la liste des candidats dans un script avec
+  `assert len(v) <= 160` plutôt que de compter à la main.
+- Un `tip` posé après l'accolade fermante d'une section passe le contrôle
+  de forme et casse le build : le contrôle de syntaxe (évaluer le fichier
+  dans Node après avoir retiré les imports) se fait avant la construction.
+- `images.mjs` a une aide `mainDe(perso, 0|1)` qui donne la position d'une
+  main en pixels de la page d'après `mains()` de la charte, pour y poser
+  l'objet tenu (écrin, loupe, stylo) ; un reflet dans un miroir est le même
+  perso en plus petit, `miroir: true`, derrière un cadre dessiné en
+  `devant` ; une scène peut changer la couleur du sol (`sol`).
+

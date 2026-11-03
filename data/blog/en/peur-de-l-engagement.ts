@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'slice-up-the-commitment',
           title: "Slice up the commitment",
-          content: `<p>Fear of commitment is almost always a fear of the whole package: the marriage-the-house-the-kids-forever, swallowed in one go. Nobody swallows that in one go! Slice it: the next step, only the next one. A weekend booked two months out. A drawer at their place. Then a month of holiday together. Every step crossed without catastrophe recalibrates the system, exactly as with every other fear.</p>`,
+          content: `<p>Fear of commitment is almost always a fear of the whole package: <a href="/en/blog/he-doesnt-want-to-get-married/">the marriage-the-house-the-kids-forever</a>, swallowed in one go. Nobody swallows that in one go! Slice it: the next step, only the next one. A weekend booked two months out. A drawer at their place. Then a month of holiday together. Every step crossed without catastrophe recalibrates the system, exactly as with every other fear.</p>`,
         },
         {
           id: 'separate-the-old-story-from-the-present',

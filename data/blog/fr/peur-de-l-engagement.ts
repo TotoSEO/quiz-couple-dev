@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'decoupe-l-engagement',
           title: "Découpe l'engagement",
-          content: `<p>La peur de l'engagement est presque toujours une peur du paquet complet : le mariage-la-maison-les-enfants-pour-toujours, avalé d'un coup. Personne n'avale ça d'un coup ! Découpe : le prochain pas, seulement le prochain. Un week-end prévu à deux mois. Un tiroir chez l'autre. Puis un mois de vacances. Chaque pas franchi sans catastrophe recalibre le système, exactement comme pour toutes les peurs.</p>`,
+          content: `<p>La peur de l'engagement est presque toujours une peur du paquet complet : <a href="/blog/il-ne-veut-pas-se-marier/">le mariage-la-maison-les-enfants-pour-toujours</a>, avalé d'un coup. Personne n'avale ça d'un coup ! Découpe : le prochain pas, seulement le prochain. Un week-end prévu à deux mois. Un tiroir chez l'autre. Puis un mois de vacances. Chaque pas franchi sans catastrophe recalibre le système, exactement comme pour toutes les peurs.</p>`,
         },
         {
           id: 'separe-l-histoire-ancienne-du-present',
