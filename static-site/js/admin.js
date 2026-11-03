@@ -3430,7 +3430,7 @@
     var envoyes = somme('envoye');
     var remis = somme('remis');
     ecritAbonnes('emails-envoyes', nombreAb(envoyes));
-    ecritAbonnes('emails-envoyes-sub', 'e1 ' + nombreAb(c['e1:envoye']) + (c['e1:immediat'] ? ' (dont ' + nombreAb(c['e1:immediat']) + ' tout de suite)' : '') + ' · e2 ' + nombreAb(c['e2:envoye']));
+    ecritAbonnes('emails-envoyes-sub', 'e1 ' + nombreAb(c['e1:envoye']) + (c['e1:immediat'] ? ' (dont ' + nombreAb(c['e1:immediat']) + ' tout de suite)' : '') + ' · e2 ' + nombreAb(c['e2:envoye']) + (c['e2:transactionnel'] ? ' (dont ' + nombreAb(c['e2:transactionnel']) + ' hors campagne)' : ''));
     ecritAbonnes('emails-remis', envoyes ? Math.round(100 * remis / envoyes) + ' %' : '—');
     ecritAbonnes('emails-remis-sub', nombreAb(remis) + ' remis · ' + nombreAb(somme('rebond_dur')) + ' rebonds durs · ' + nombreAb(somme('rebond_doux')) + ' doux');
     var sorties = somme('desinscription') + (c['autre:desinscription'] || 0);

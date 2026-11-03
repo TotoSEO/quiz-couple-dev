@@ -38,6 +38,12 @@ test('la requête d\'envoi : expéditeur, réponse, sujet, désabonnement en un 
   assert.deepEqual(c.tags, ['parcours-e1-b']);
   assert.equal(etiquette('a'), 'parcours-e1-a');
   assert.equal(etiquette(undefined), 'parcours-e1-a');
+  // L'e2 du soir part aussi par l'API transactionnelle (3 novembre 2026) :
+  // son étiquette dit l'e-mail, pour que ses chiffres restent à part.
+  assert.equal(etiquette('b', 'e2'), 'parcours-e2-b');
+  assert.equal(etiquette('a', 'e2'), 'parcours-e2-a');
+  assert.equal(etiquette('a', 'e3'), 'parcours-e1-a');
+  assert.deepEqual(corpsBrevo({ ...d, type: 'e2' }, LIEN).tags, ['parcours-e2-b']);
   assert.equal(BREVO_ENVOI, 'https://api.brevo.com/v3/smtp/email');
   // Sans adresse de réponse, pas de champ replyTo ; un modèle incomplet ne part pas.
   assert.equal(corpsBrevo({ ...d, repondre_a: null }, LIEN).replyTo, undefined);

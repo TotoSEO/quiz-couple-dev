@@ -910,3 +910,57 @@ que par une PR) :
    deux ») et celui de l'`e2` (« Compte commun ou chacun son argent ? ») sont
    bons ; un sujet avec le prénom se testera quand l'`e2` partira en
    transactionnel, pas avant, pour ne mesurer qu'une chose à la fois.
+
+### Mis en place le même soir
+
+Thomas : « Ok pour les mails. J'ai déjà inscrit le site dans la postmaster,
+tout est niquel aucun spam. » Postmaster Tools compte les plaintes des
+personnes (« signaler comme spam »), pas les e-mails que Gmail range de
+lui-même dans Promotions ou dans les spams : un taux de plainte nul dit
+qu'on n'agace personne, pas que les campagnes arrivent dans la boîte de
+réception. Les points 1 et 2 sont faits, le point 3 attend les chiffres :
+
+1. **L'e2 part par l'API transactionnelle** (`REGLAGES.transactionnel`,
+   `envoyerTransactionnel` dans emails/parcours.mjs). Le soir, à la même
+   heure, dans le même plafond et la même retenue, une requête par personne
+   (`POST /v3/smtp/email`, que Brevo limite à 1 000 requêtes par seconde,
+   hors du compteur de 100 par heure des autres points d'entrée) : le HTML
+   de la campagne rempli par `corpsBrevo` (bulle, accroche, lien de
+   désinscription de lead-capture, en-têtes `List-Unsubscribe`), étiquette
+   `parcours-e2-a` ou `parcours-e2-b`, aucun contact, liste ni campagne chez
+   Brevo. La ligne d'envoi est écrite « envoye » avant la requête, comme pour
+   l'e1 immédiat, puis reçoit l'identifiant du message ; un refus 4xx
+   l'efface (une adresse mauvaise passe en invalide), une réponse manquante
+   la garde (jamais deux fois le même e-mail), et plus de trois refus ou
+   réponses manquantes d'un coup arrêtent le passage, les lignes des
+   personnes pas encore servies effacées. Le compteur `e2:transactionnel`
+   s'ajoute à `e2:envoye` (l'admin écrit « dont N hors campagne »).
+   `20261103120000_emails_transactionnel.sql` (emails-base.yml) : un
+   événement du webhook transactionnel qui arrive avant l'identifiant de son
+   message se pose sur le dernier envoi hors campagne de l'adresse, et non
+   plus sur son e1 immédiat. Les e1 du soir restent en campagne : à la même
+   heure et aussi tard, ils disent ce que change le seul mode d'envoi.
+2. **L'espagnol a son e1 dans la minute, sans prix** (`LANGUES_SANS_PRIX`
+   de contenu.mjs, `es` dans `REGLAGES.immediat.langues`). Ses e-mails, e1
+   et e2, maquette et version sobre, n'ont plus ni ticket, ni réduction, ni
+   prix par personne : la note de l'e1 (« Las preguntas son gratis: pagas al
+   final, una sola vez para los dos. ») prend leur place, et la page de
+   l'évaluation montre le prix de la zone du téléphone. Dans la file du
+   soir, l'e1 espagnol perd sa priorité 4. Le plafond de 180 e-mails
+   immédiats par jour ne change pas : le 3 novembre, 123 adresses sont
+   arrivées, dont 36 en espagnol.
+3. **La retenue reste à 100** : l'e1 immédiat (180), la retenue (100) et la
+   marge (10) font déjà 290 des 300 envois quotidiens de l'offre gratuite.
+   Si l'e2 transactionnel s'ouvre comme l'e1 immédiat, l'étape suivante est
+   d'envoyer aussi les e1 du soir par l'API et de supprimer les campagnes ;
+   pour plus de volume, il faut l'offre payante de Brevo.
+
+Vérifié avant la fusion : les migrations du parcours rejouées dans l'ordre
+du workflow sur un Postgres 16 local (la remise d'un e2 arrivée avant son
+identifiant se pose sur l'e2, la remise par identifiant aussi, l'espagnol
+réservé pour l'envoi immédiat et en priorité 1 dans la file), les 75 tests
+de `node --test emails/test/*.test.mjs supabase/functions/_shared/emails/test/*.test.mjs`,
+et le rendu des quatre e-mails espagnols à 390 px. L'action « verif » de
+brevo-reglages.yml donne les chiffres de l'e2 transactionnel par version
+(« Les e-mails transactionnels, en chiffres ») : on les relit après trois
+soirs, contre les 1,4 % d'ouvertures de l'e2 en campagne.

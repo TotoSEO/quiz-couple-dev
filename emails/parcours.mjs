@@ -20,7 +20,10 @@
 //      REGLAGES.plafond, jamais plus que REGLAGES.retenue quand elle est
 //      posée), puis, par e-mail et par langue : les lignes
 //      d'envoi, les contacts et leurs champs, la liste du soir, la campagne,
-//      l'envoi ; pendant le test A/B (REGLAGES.ab), une campagne par version ;
+//      l'envoi ; pendant le test A/B (REGLAGES.ab), une campagne par version.
+//      Les e-mails de REGLAGES.transactionnel (l'e2 depuis le 3 novembre
+//      2026) partent à la place par l'API transactionnelle de Brevo, une
+//      requête par personne (envoyerTransactionnel) ;
 //   6. le ménage chez Brevo : les listes du parcours plus vieilles que
 //      REGLAGES.listesGardees, et les contacts du parcours que notre base
 //      n'a plus en actif (rebond, désinscription, purge de rgpd_menage).
@@ -32,6 +35,8 @@ import { clientBrevo, creditsRestants } from './brevo.mjs';
 import { connexion } from './base.mjs';
 import { campagne, attributsContact, angleDe, versionDe, LANGUES, TYPES } from './contenu.mjs';
 import { publierImmediat, modeles } from './immediat.mjs';
+import { corpsBrevo } from '../supabase/functions/_shared/emails/immediat.mjs';
+import { messageIdPropre } from '../supabase/functions/_shared/emails/evenements.mjs';
 
 const fmt = (options) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', ...options });
 export const jourParis = (instant) => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
@@ -280,6 +285,95 @@ async function envoyerGroupe({ base, brevo, type, lang, version = 'a', membres, 
   return { envoyes: partis.length, refuses: refuses.length };
 }
 
+// Les e-mails que le soir envoie par l'API transactionnelle (REGLAGES).
+export const typesTransactionnels = () => (Array.isArray(REGLAGES.transactionnel) ? REGLAGES.transactionnel : []).filter((t) => TYPES.includes(t));
+
+// Un e-mail dans une langue et une version par l'API transactionnelle de
+// Brevo : une requête par personne, le HTML de la campagne rempli comme pour
+// l'e1 envoyé dans la minute (corpsBrevo : la bulle, la phrase d'accroche,
+// le lien de désinscription de la personne, que lead-capture sert, et
+// l'en-tête List-Unsubscribe), l'étiquette de l'e-mail et de la version pour
+// les chiffres d'ensemble (« parcours-e2-a »). Aucun contact ni liste chez
+// Brevo. Comme pour l'e1 immédiat, la ligne est écrite « envoye » avant la
+// requête : un passage qui s'arrête entre l'envoi et la réponse ne renvoie
+// jamais l'e-mail un autre soir. Elle s'efface (la personne revient dans la
+// file) sur un refus certain de Brevo, une réponse 4xx (429 compris, après
+// le second essai du client), et une adresse que Brevo dit mauvaise passe en
+// invalide. Sans réponse (coupure, 5xx après le
+// second essai du client), on ne sait pas : la ligne reste. Beaucoup de refus
+// ou de réponses manquantes d'un coup, c'est un problème chez nous ou chez
+// Brevo : on arrête, et les lignes des personnes pas encore servies
+// s'effacent. Rend le nombre de personnes parties et refusées.
+export async function envoyerTransactionnel({ base, brevo, type, lang, version = 'a', membres, c, jour, fonctions, journal }) {
+  if (!fonctions) throw new Error('adresse des fonctions Supabase inconnue : pas de lien de désinscription');
+  const jetons = new Map();
+  for (const lot of morceaux(membres.map((m) => m.abonne_id), 80)) {
+    for (const a of (await base.select('abonnes', `select=id,jeton&id=in.(${lot.join(',')})`)) || []) {
+      if (a && a.jeton) jetons.set(a.id, a.jeton);
+    }
+  }
+  // Une adresse sans jeton vient d'être effacée (rebond, purge) : rien.
+  // Chaque requête est écrite avant la première ligne d'envoi : un modèle
+  // mal rempli arrête tout sans rien marquer (corpsBrevo refuse un marqueur
+  // resté dans le HTML).
+  const avecJeton = membres.filter((m) => jetons.has(m.abonne_id));
+  if (!avecJeton.length) return { envoyes: 0, refuses: 0 };
+  const corpsDe = new Map();
+  for (const m of avecJeton) {
+    const champs = attributsContact({ type, lang, angle: m.angle, prenom: m.prenom }, jour);
+    const desinscription = `${fonctions}/lead-capture?d=${encodeURIComponent(jetons.get(m.abonne_id))}&lang=${encodeURIComponent(lang)}`;
+    corpsDe.set(m.abonne_id, corpsBrevo({
+      email: m.email, type, version, sujet: c.sujet, html: c.html,
+      expediteur: c.expediteur || REGLAGES.expediteur.name, adresse: REGLAGES.expediteur.email, repondre_a: REGLAGES.repondreA,
+      salutation: champs.SALUTATION, intro: champs.INTRO,
+    }, desinscription));
+  }
+  const lignes = await base.insert('emails_envois',
+    avecJeton.map((m) => ({ abonne_id: m.abonne_id, type, angle: m.angle, lang, jour, statut: 'envoye', envoye_le: new Date().toISOString() })),
+    { conflit: 'abonne_id,type', ignorer: true });
+  const ligneDe = new Map((lignes || []).map((l) => [l.abonne_id, l]));
+  const retenus = avecJeton.filter((m) => ligneDe.has(m.abonne_id));
+  const seuil = Math.max(3, Math.ceil(retenus.length / 10));
+  let envoyes = 0;
+  let sansReponse = 0;
+  const refuses = [];
+  const compter = async () => {
+    const n = envoyes + sansReponse;
+    if (!n) return;
+    await base.rpc('emails_compter', { p_type: type, p_evenement: 'envoye', p_n: n });
+    await base.rpc('emails_compter', { p_type: type, p_evenement: 'transactionnel', p_n: n });
+  };
+  for (let i = 0; i < retenus.length; i++) {
+    const m = retenus[i];
+    const ligne = ligneDe.get(m.abonne_id);
+    try {
+      const r = await brevo.envoyerTransactionnel(corpsDe.get(m.abonne_id));
+      const message = messageIdPropre(r && r.messageId);
+      if (message) await base.update('emails_envois', `id=eq.${ligne.id}`, { message_id: message });
+      envoyes++;
+    } catch (e) {
+      const certain = Number.isInteger(e.statut) && e.statut >= 400 && e.statut < 500;
+      if (certain) {
+        refuses.push(m);
+        await base.supprimer('emails_envois', `id=eq.${ligne.id}&message_id=is.null`);
+        if (e.statut === 400 && /mail/i.test(String(e.message))) {
+          await base.update('abonnes', `id=eq.${m.abonne_id}&statut=eq.actif`, { statut: 'invalide', maj_le: new Date().toISOString() });
+        }
+      } else sansReponse++;
+      if (refuses.length > seuil || sansReponse > seuil) {
+        const restes = retenus.slice(i + 1).map((x) => ligneDe.get(x.abonne_id).id);
+        for (const lot of morceaux(restes, 80)) await base.supprimer('emails_envois', `id=in.(${lot.join(',')})&message_id=is.null`);
+        await compter();
+        // Le statut seulement : le message de Brevo peut citer l'adresse.
+        throw new Error(`${type} ${lang} ${version} : ${refuses.length} refus et ${sansReponse} envoi(s) sans réponse de Brevo, passage arrêté après ${envoyes} envoi(s) (dernière réponse : ${e.statut || e.name})`);
+      }
+    }
+  }
+  await compter();
+  journal(`${type} ${lang} ${version} : ${envoyes} envoyé(s) par l'API transactionnelle${refuses.length ? `, ${refuses.length} refusé(s) par Brevo` : ''}${sansReponse ? `, ${sansReponse} sans réponse (compté(s) comme partis)` : ''}.`);
+  return { envoyes: envoyes + sansReponse, refuses: refuses.length };
+}
+
 async function effacerVieillesListes(brevo, dossier, jour) {
   const limite = jourAvant(jour, REGLAGES.listesGardees);
   const aEffacer = [];
@@ -322,7 +416,7 @@ async function reconcilier(base, brevo) {
   return n;
 }
 
-export async function passage({ base, brevo, maintenant = new Date(), mode = REGLAGES.mode, forcer = false, journal = (m) => console.log(m), pause = attendre }) {
+export async function passage({ base, brevo, maintenant = new Date(), mode = REGLAGES.mode, forcer = false, journal = (m) => console.log(m), pause = attendre, fonctions = base && base.url ? `${base.url}/functions/v1` : null }) {
   const jour = jourParis(maintenant);
   const bilan = { mode, jour, credits: null, limite: 0, file: 0, envois: {}, refuses: 0 };
   // L'e1 immédiat : ses réglages, et ses modèles quand il est actif, refaits
@@ -384,17 +478,21 @@ export async function passage({ base, brevo, maintenant = new Date(), mode = REG
   }
   journal(`${heure} à Paris · ${bilan.credits} crédits Brevo · ${file.length} e-mail(s) ce soir (plafond ${bilan.limite}${bilan.retenue ? `, retenue à ${bilan.retenue}` : ''}).`);
 
+  const parApi = typesTransactionnels();
   for (const [cle, membres] of groupes) {
     const [type, lang, version] = cle.split(':');
     const c = campagne(type, lang, maintenant, { version });
+    const transactionnel = parApi.includes(type);
     if (mode === 'blanc') {
       const angles = {};
       for (const m of membres) angles[m.angle] = (angles[m.angle] || 0) + 1;
-      journal(`[blanc] ${type} ${lang} ${version} : ${membres.length} (${Object.entries(angles).map(([a, n]) => `${a} ${n}`).join(', ')}) · « ${c.sujet} »${c.promo ? ' · réduction' : ''}${c.expediteur ? ` · de « ${c.expediteur} »` : ''}`);
+      journal(`[blanc] ${type} ${lang} ${version} : ${membres.length} (${Object.entries(angles).map(([a, n]) => `${a} ${n}`).join(', ')}) · « ${c.sujet} »${c.promo ? ' · réduction' : ''}${c.sansPrix ? ' · sans prix' : ''}${c.expediteur ? ` · de « ${c.expediteur} »` : ''}${transactionnel ? ' · par l\'API transactionnelle' : ''}`);
       bilan.envois[cle] = membres.length;
       continue;
     }
-    const r = await envoyerGroupe({ base, brevo, type, lang, version, membres, c, jour, heure, dossier, journal, pause });
+    const r = transactionnel
+      ? await envoyerTransactionnel({ base, brevo, type, lang, version, membres, c, jour, fonctions, journal })
+      : await envoyerGroupe({ base, brevo, type, lang, version, membres, c, jour, heure, dossier, journal, pause });
     bilan.envois[cle] = r.envoyes;
     bilan.refuses += r.refuses;
   }

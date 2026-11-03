@@ -6,11 +6,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { passage, jourParis, heureParis, minuitParis, versionPour } from '../parcours.mjs';
 import { REGLAGES } from '../reglages.mjs';
-import { versionDe } from '../contenu.mjs';
+import { versionDe, campagne } from '../contenu.mjs';
 
 // Les tests de la mécanique d'envoi partent avec une seule version (« a »),
 // une campagne par e-mail et par langue ; le test A/B a les siens, en bas.
+// De même, ils envoient tout en campagne : l'envoi par l'API
+// transactionnelle (REGLAGES.transactionnel, l'e2 depuis le 3 novembre 2026)
+// a ses tests, en bas.
 REGLAGES.ab = false;
+const TRANSACTIONNEL = REGLAGES.transactionnel;
+REGLAGES.transactionnel = [];
 
 const SOIR = new Date('2026-10-24T17:02:00Z'); // 19 h 02 à Paris
 const MATIN = new Date('2026-10-24T08:00:00Z');
@@ -108,8 +113,14 @@ class FauxBrevo {
   // horsListe : jamais mis dans la liste ; lents : dans la liste, montrés
   // à partir de la deuxième lecture ; invisibles : dans la liste, jamais
   // montrés tant qu'on ne les en retire pas.
-  constructor({ credits = 300, refuses = [], horsListe = [], lents = [], invisibles = [], campagnes = {}, contacts = [], listes = [] } = {}) {
+  // refusesApi : refusés par l'API transactionnelle (400, adresse) ;
+  // muets : l'API ne répond pas (coupure) ; limites : 429 après le second essai.
+  constructor({ credits = 300, refuses = [], horsListe = [], lents = [], invisibles = [], campagnes = {}, contacts = [], listes = [], refusesApi = [], muets = [], limites = [] } = {}) {
     this.credits = credits;
+    this.refusesApi = new Set(refusesApi);
+    this.muets = new Set(muets);
+    this.limites = new Set(limites);
+    this.transactionnels = [];
     this.refuses = new Set(refuses);
     this.horsListe = new Set(horsListe);
     this.lents = new Set(lents);
@@ -159,6 +170,15 @@ class FauxBrevo {
   async supprimerContact(email) { this.note('supprimerContact', email); this.supprimes.contacts.push(email); return null; }
   async listesDuDossier(dossier, offset) { this.note('listesDuDossier', dossier, offset); return { lists: offset ? [] : this.listesBrevo }; }
   async supprimerListe(id) { this.note('supprimerListe', id); this.supprimes.listes.push(id); return null; }
+  async envoyerTransactionnel(corps) {
+    const email = corps.to[0].email;
+    this.note('envoyerTransactionnel', email);
+    if (this.refusesApi.has(email)) { const e = new Error(`POST /smtp/email : 400 email is not valid in to (${email})`); e.statut = 400; throw e; }
+    if (this.limites.has(email)) { const e = new Error('POST /smtp/email : 429 too many requests'); e.statut = 429; throw e; }
+    if (this.muets.has(email)) throw new TypeError('fetch failed');
+    this.transactionnels.push(corps);
+    return { messageId: `<2026110${this.transactionnels.length}.abc@smtp-relay.mailin.fr>` };
+  }
   ecrit() { return this.appels.filter(([nom]) => !['compte', 'dossiers', 'contacts', 'listesDuDossier', 'campagne', 'membresDeLaListe'].includes(nom)); }
 }
 
@@ -578,3 +598,138 @@ test('minuit à Paris, l\'hiver, l\'été, le jour du changement d\'heure et jus
   // 23 h 30 UTC le 29, c'est déjà le 30 à Paris.
   assert.equal(iso(minuitParis(new Date('2026-10-29T23:30:00Z'))), '2026-10-29T23:00:00.000Z');
 });
+
+// L'e2 par l'API transactionnelle de Brevo (3 novembre 2026).
+const avecApi = async (f) => {
+  const avant = REGLAGES.transactionnel;
+  REGLAGES.transactionnel = TRANSACTIONNEL;
+  try { await f(); } finally { REGLAGES.transactionnel = avant; }
+};
+const jetonDe = (id) => `${id.replace(/\D/g, '')}`.padStart(16, 'a');
+const baseApi = (file) => {
+  const base = new FausseBase({ file, abonnes: file.map((c) => ({ id: c.abonne_id, email: c.email, jeton: jetonDe(c.abonne_id) })) });
+  base.url = 'https://projet.supabase.co';
+  return base;
+};
+
+test('les réglages : l\'e2 part par l\'API transactionnelle, l\'e1 du soir reste en campagne', () => {
+  assert.deepEqual(TRANSACTIONNEL, ['e2']);
+});
+
+test('l\'e2 par l\'API : une requête par personne, sans contact ni liste ni campagne, le lien de désinscription de chacun, l\'étiquette', () => avecApi(async () => {
+  const file = [candidat(1, 'e1', 'fr', 'toxique'), candidat(2, 'e2', 'fr', 'mariage', 'Julie'), candidat(3, 'e2', 'es', 'toxique')];
+  const base = baseApi(file);
+  const brevo = new FauxBrevo();
+  const journal = [];
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: (m) => journal.push(m), pause: pauses() });
+  assert.deepEqual(b.envois, { 'e1:fr:a': 1, 'e2:fr:a': 1, 'e2:es:a': 1 });
+  // L'e1 en campagne, les e2 sans liste, campagne ni contact chez Brevo.
+  assert.equal(brevo.campagnesCreees.length, 1);
+  assert.match(brevo.campagnesCreees[0].name, /^Parcours · e1 · fr · a · /);
+  assert.ok(!brevo.contactsEcrits.has('p2@exemple.fr') && !brevo.contactsEcrits.has('p3@exemple.fr'));
+  assert.equal(brevo.transactionnels.length, 2);
+  const fr = brevo.transactionnels.find((x) => x.to[0].email === 'p2@exemple.fr');
+  const lien = `https://projet.supabase.co/functions/v1/lead-capture?d=${jetonDe('ab-2')}&lang=fr`;
+  assert.deepEqual(fr.tags, ['parcours-e2-a']);
+  assert.equal(fr.headers['List-Unsubscribe'], `<${lien}>`);
+  assert.equal(fr.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+  assert.ok(fr.htmlContent.includes(lien.replace(/&/g, '&amp;')));
+  assert.ok(fr.htmlContent.includes('Coucou Julie'));
+  assert.ok(!/\{\{|\{%|\[\[/.test(fr.htmlContent));
+  assert.deepEqual(fr.sender, REGLAGES.expediteur);
+  assert.deepEqual(fr.replyTo, { email: REGLAGES.repondreA });
+  assert.equal(fr.subject, campagne('e2', 'fr', SOIR).sujet);
+  assert.match(fr.subject, /^Compte commun ou chacun son argent.\?$/);
+  // L'espagnol, sans prix.
+  const es = brevo.transactionnels.find((x) => x.to[0].email === 'p3@exemple.fr');
+  assert.ok(!es.htmlContent.includes('€') && es.htmlContent.includes('lang=es'));
+  // Les lignes : envoyées, avec l'identifiant du message (sans ses chevrons), sans campagne ni liste.
+  const e2 = base.t.emails_envois.filter((l) => l.type === 'e2');
+  assert.equal(e2.length, 2);
+  for (const l of e2) {
+    assert.equal(l.statut, 'envoye');
+    assert.match(l.message_id, /^2026110\d\.abc@smtp-relay\.mailin\.fr$/);
+    assert.equal(l.campagne_id, null);
+    assert.equal(l.liste_id, null);
+    assert.ok(l.envoye_le);
+  }
+  assert.deepEqual(base.compteurs, { 'e1:envoye': 1, 'e2:envoye': 2, 'e2:transactionnel': 2 });
+  assert.ok(journal.some((m) => /e2 fr a : 1 envoyé\(s\) par l'API transactionnelle/.test(m)));
+  // Le journal ne contient jamais une adresse.
+  assert.ok(!journal.some((m) => /@exemple/.test(m)));
+}));
+
+test('l\'e2 par l\'API : un refus efface la ligne (une adresse mauvaise passe en invalide), une réponse manquante la garde', () => avecApi(async () => {
+  const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e2', 'fr', 'mariage'));
+  const base = baseApi(file);
+  const brevo = new FauxBrevo({ refusesApi: ['p1@exemple.fr'], limites: ['p3@exemple.fr'], muets: ['p2@exemple.fr'] });
+  const b = await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() });
+  // Dix partis, un sans réponse compté comme parti (il ne repartira jamais), deux refus.
+  assert.equal(b.envois['e2:fr:a'], 10);
+  assert.equal(b.refuses, 2);
+  const ligne = (id) => base.t.emails_envois.find((l) => l.abonne_id === id);
+  assert.equal(ligne('ab-1'), undefined);
+  assert.equal(ligne('ab-3'), undefined);
+  assert.equal(base.t.abonnes.find((a) => a.id === 'ab-1').statut, 'invalide');
+  // Un 429 n'est pas une mauvaise adresse : elle reste active et revient dans la file.
+  assert.equal(base.t.abonnes.find((a) => a.id === 'ab-3').statut, 'actif');
+  assert.equal(ligne('ab-2').statut, 'envoye');
+  assert.equal(ligne('ab-2').message_id, undefined);
+  assert.deepEqual(base.compteurs, { 'e2:envoye': 10, 'e2:transactionnel': 10 });
+}));
+
+test('l\'e2 par l\'API : trop de réponses manquantes d\'un coup arrêtent le passage, les lignes des personnes pas encore servies s\'effacent', () => avecApi(async () => {
+  const file = Array.from({ length: 12 }, (_, i) => candidat(i, 'e2', 'fr', 'mariage'));
+  const base = baseApi(file);
+  const brevo = new FauxBrevo({ muets: ['p0@exemple.fr', 'p1@exemple.fr', 'p2@exemple.fr', 'p3@exemple.fr', 'p4@exemple.fr'] });
+  await assert.rejects(passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() }),
+    (e) => /sans réponse de Brevo, passage arrêté/.test(e.message) && !/@/.test(e.message));
+  // Quatre essais (le seuil est de trois), et seules leurs lignes restent.
+  assert.equal(brevo.appels.filter(([n]) => n === 'envoyerTransactionnel').length, 4);
+  assert.deepEqual(base.t.emails_envois.map((l) => l.abonne_id).sort(), ['ab-0', 'ab-1', 'ab-2', 'ab-3']);
+  assert.deepEqual(base.compteurs, { 'e2:envoye': 4, 'e2:transactionnel': 4 });
+}));
+
+test('l\'e2 par l\'API : sans l\'adresse des fonctions, rien ne part et aucune ligne n\'est écrite', () => avecApi(async () => {
+  const file = [candidat(1, 'e2', 'fr', 'mariage')];
+  const base = baseApi(file);
+  delete base.url;
+  const brevo = new FauxBrevo();
+  await assert.rejects(passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() }), /fonctions Supabase/);
+  assert.equal(base.t.emails_envois.length, 0);
+  assert.equal(brevo.transactionnels.length, 0);
+}));
+
+test('l\'e2 par l\'API à blanc : le journal le dit, rien n\'est écrit ni envoyé', () => avecApi(async () => {
+  const file = [candidat(1, 'e2', 'es', 'mariage'), candidat(2, 'e2', 'en', 'mariage')];
+  const base = baseApi(file);
+  const brevo = new FauxBrevo();
+  const journal = [];
+  await passage({ base, brevo, maintenant: SOIR, mode: 'blanc', journal: (m) => journal.push(m), pause: pauses() });
+  assert.ok(journal.some((m) => /\[blanc\] e2 es a : 1 .* · sans prix · par l'API transactionnelle/.test(m)), journal.join('\n'));
+  assert.ok(journal.some((m) => /\[blanc\] e2 en a : 1 .* · par l'API transactionnelle/.test(m)));
+  assert.equal(base.ecritures, 0);
+  assert.equal(brevo.transactionnels.length, 0);
+}));
+
+test('l\'e2 par l\'API et le test A/B : la version de l\'adresse, son étiquette et l\'expéditeur de la version sobre', () => avecApi(async () => {
+  REGLAGES.ab = true;
+  try {
+    const file = Array.from({ length: 10 }, (_, i) => candidat(i, 'e2', 'fr', 'mariage'));
+    const base = baseApi(file);
+    const brevo = new FauxBrevo();
+    await passage({ base, brevo, maintenant: SOIR, mode: 'reel', journal: silence, pause: pauses() });
+    assert.equal(brevo.transactionnels.length, 10);
+    const versions = new Set();
+    for (const c of brevo.transactionnels) {
+      const v = versionDe(c.to[0].email);
+      versions.add(v);
+      assert.deepEqual(c.tags, [`parcours-e2-${v}`]);
+      assert.equal(c.sender.name, v === 'b' ? 'Thomas de Quiz Couple' : REGLAGES.expediteur.name);
+      assert.ok(c.htmlContent.includes(v === 'b' ? 'src=email-e2-sobre' : 'src=email-e2"'));
+    }
+    assert.equal(versions.size, 2);
+  } finally {
+    REGLAGES.ab = false;
+  }
+}));

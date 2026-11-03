@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
+  TYPES, LANGUES, ANGLES, VERSIONS, MARQUEURS_BREVO, LANGUES_SANS_PRIX, campagne, attributsContact, angleDe, lien, verifier, pourContact, typo, prixDu, versionDe,
 } from '../contenu.mjs';
 import { CAPTURE_PAGES, BILAN_ENTREES, LANGUAGES } from '../../static-site/build/config.js';
 
@@ -35,14 +35,18 @@ test('chaque campagne se rend, avec et sans réduction, et ne garde que les marq
     for (const lang of LANGUES) {
       for (const promo of [true, false]) {
         const c = campagne(type, lang, SOIR, { promo });
-        assert.equal(c.promo, promo);
+        // Une langue sans prix (l'espagnol) n'a jamais ni ticket ni réduction.
+        const avecPrix = !LANGUES_SANS_PRIX.includes(lang);
+        assert.equal(c.promo, promo && avecPrix);
+        assert.equal(c.sansPrix, !avecPrix);
+        assert.equal(c.html.includes('class="prix-big"'), avecPrix, `${type} ${lang} : ticket`);
         assert.ok(verifier(c.html));
         for (const m of MARQUEURS_BREVO) assert.ok(c.html.includes(m), `${type} ${lang} ${m}`);
         assert.ok(!/\[\[|\]\]/.test(c.html + c.sujet + c.apercu), `${type} ${lang} : marqueur oublié`);
         assert.ok(c.sujet.length > 10 && c.sujet.length < 80, `${type} ${lang} : sujet ${c.sujet.length} signes`);
         assert.match(c.html, new RegExp(`<html lang="${lang}"`));
         // Le prix barré du ticket n'apparaît que pendant une réduction.
-        assert.equal(c.html.includes('text-decoration:line-through;">'), promo, `${type} ${lang} promo ${promo}`);
+        assert.equal(c.html.includes('text-decoration:line-through;">'), promo && avecPrix, `${type} ${lang} promo ${promo}`);
         assert.ok(!c.html.includes('<!--prix-->') && !c.html.includes('<!--barre-->'));
         // Les liens : la page de l'évaluation de la langue, la source de l'e-mail, et la façon seul(e).
         assert.ok(c.html.includes(lien(lang, type).replace(/&/g, '&amp;')), `${type} ${lang} lien`);
@@ -67,6 +71,27 @@ test('les prix viennent de l\'évaluation : 9,90 € et 7,92 € avec -20 %, 3,9
   assert.ok(e1.html.includes(`−20${NBSP}% en ce moment, déjà appliqué au paiement`));
   const sans = campagne('e1', 'de', SOIR, { promo: false });
   assert.ok(!sans.html.includes('line-through') && sans.html.includes(`>9,90${NBSP}€</div>`));
+});
+
+test('l\'espagnol ne dit aucun prix (3 novembre 2026) : ni ticket, ni réduction, ni montant, la note de l\'e1 à la place', () => {
+  assert.deepEqual(LANGUES_SANS_PRIX, ['es']);
+  const note = lireTextes('es').e1.note;
+  for (const type of TYPES) {
+    for (const version of VERSIONS) {
+      for (const promo of [true, false]) {
+        const c = campagne(type, 'es', SOIR, { version, promo });
+        assert.equal(c.promo, false);
+        assert.equal(c.sansPrix, true);
+        assert.ok(!/€|9,90|7,92|3,96|4,95|class="prix-big"/.test(c.html), `${type} ${version} ${promo}`);
+        assert.ok(!/€/.test(c.apercu + c.sujet), `${type} ${version} : aperçu`);
+        assert.equal(c.html.split(note).length - 1, 1, `${type} ${version} : note`);
+        assert.ok(verifier(c.html));
+      }
+    }
+  }
+  // Les autres langues gardent leur ticket et leur réduction.
+  assert.ok(campagne('e2', 'fr', SOIR, { promo: true }).html.includes('class="prix-big"'));
+  assert.equal(campagne('e1', 'it', SOIR, { promo: true }).promo, true);
 });
 
 test('le lien de l\'e-mail ne porte que la source et la façon de faire', () => {
@@ -250,6 +275,12 @@ test('la version sobre : sans image ni ticket, un seul lien vers l\'évaluation,
         // Une fois chacun : avec la réduction, « 7,92 € ... au lieu de 9,90 € » ;
         // sans, le prix habituel seul.
         const fois = (x) => c.html.split(x).length - 1;
+        if (LANGUES_SANS_PRIX.includes(lang)) {
+          // Sans prix : la phrase de la note de l'e1, aucun montant.
+          assert.ok(!c.html.includes('€'), `${type} ${lang} : montant`);
+          assert.equal(fois(t.e1.note), 1, `${type} ${lang} : note`);
+          continue;
+        }
         assert.equal(fois(p.prix), 1, `${type} ${lang} : prix`);
         assert.equal(fois(p.prixBase), 1, `${type} ${lang} : prix habituel`);
       }

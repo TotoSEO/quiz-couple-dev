@@ -33,11 +33,16 @@ test('un modèle par langue et par version, le HTML de la campagne avec ses troi
   assert.equal(lignes.find((l) => l.lang === 'fr' && l.version === 'b').expediteur, 'Thomas de Quiz Couple');
 });
 
-test('les réglages lus par la base : actifs en mode réel seulement, sans l\'espagnol, avec la famille de chaque page', () => {
+test('les réglages lus par la base : actifs en mode réel seulement, toutes les langues (l\'espagnol sans prix depuis le 3 novembre 2026), avec la famille de chaque page', () => {
   const r = reglagesImmediat('reel');
   assert.equal(r.actif, REGLAGES.immediat.actif);
   assert.equal(r.parJour, REGLAGES.immediat.parJour);
-  assert.deepEqual(r.langues, ['en', 'fr', 'it', 'de', 'nl']);
+  assert.deepEqual(r.langues, ['en', 'fr', 'it', 'de', 'nl', 'es']);
+  // L'e1 espagnol envoyé dans la minute ne dit aucun prix.
+  for (const l of modeles(SOIR).filter((x) => x.lang === 'es')) {
+    assert.equal(l.promo, false);
+    assert.ok(!/€|class="prix-big"/.test(l.html), `es ${l.version}`);
+  }
   assert.equal(r.ab, REGLAGES.ab);
   assert.deepEqual(r.expediteur, REGLAGES.expediteur);
   assert.equal(r.repondreA, REGLAGES.repondreA);

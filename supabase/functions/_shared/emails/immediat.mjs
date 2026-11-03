@@ -34,7 +34,9 @@ export function remplirModele(html, { salutation, intro, desinscription }) {
 }
 
 // La requête d'envoi pour ce que rend emails_immediat_prendre (`d`) et le
-// lien de désinscription de la personne. L'en-tête List-Unsubscribe donne
+// lien de désinscription de la personne. Depuis le 3 novembre 2026, l'e2 du
+// soir part aussi par l'API transactionnelle (emails/parcours.mjs) : `d.type`
+// dit lequel des deux e-mails part, l'e1 quand il manque. L'en-tête List-Unsubscribe donne
 // aux messageries le désabonnement en un clic (RFC 8058, le POST que
 // lead-capture accepte) : sans lui, le seul bouton à portée de main est
 // « Signaler comme spam ». L'étiquette (une par version du test A/B) sert aux
@@ -51,8 +53,8 @@ export function corpsBrevo(d, desinscription) {
       'List-Unsubscribe': `<${desinscription}>`,
       'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
     },
-    tags: [etiquette(d.version)],
+    tags: [etiquette(d.version, d.type)],
   };
 }
 
-export const etiquette = (version) => `parcours-e1-${version === 'b' ? 'b' : 'a'}`;
+export const etiquette = (version, type = 'e1') => `parcours-${type === 'e2' ? 'e2' : 'e1'}-${version === 'b' ? 'b' : 'a'}`;
