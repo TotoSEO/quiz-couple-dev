@@ -2035,6 +2035,16 @@ export const BLOG_ARTICLES = [
   { internalSlug: 'disputes-d-argent-dans-le-couple', category: 'vie-de-couple', featuredImage: '/blog/disputes-d-argent-dans-le-couple.webp', slugs: { fr: 'disputes-d-argent-dans-le-couple', en: 'money-arguments-in-relationships', es: 'discusiones-por-dinero-en-pareja', de: 'streit-ums-geld-in-der-beziehung', it: 'litigi-per-soldi-in-coppia', nl: 'ruzie-over-geld-in-je-relatie' }, publishedAt: '2027-02-25T08:30:00+01:00' },
   { internalSlug: 'budget-couple', category: 'vie-de-couple', featuredImage: '/blog/budget-couple.webp', slugs: { fr: 'budget-couple', en: 'couple-budget', es: 'presupuesto-en-pareja', de: 'haushaltsbudget-fuer-paare', it: 'budget-di-coppia', nl: 'budget-voor-koppels' }, publishedAt: '2027-02-27T08:30:00+01:00' },
   { internalSlug: 'infidelite-financiere', category: 'vie-de-couple', featuredImage: '/blog/infidelite-financiere.webp', slugs: { fr: 'infidelite-financiere', en: 'financial-infidelity', es: 'infidelidad-financiera', de: 'finanzielle-untreue', it: 'infedelta-finanziaria', nl: 'financiele-ontrouw' }, publishedAt: '2027-03-01T08:30:00+01:00' },
+  // ── Cocon 5 : la relation à distance (docs/blog/COCONS.md) ──
+  { internalSlug: 'relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/relation-a-distance.webp', slugs: { fr: 'relation-a-distance', en: 'long-distance-relationship', es: 'relacion-a-distancia', de: 'fernbeziehung', it: 'relazione-a-distanza', nl: 'lange-afstandsrelatie' }, publishedAt: '2027-03-02T08:30:00+01:00' },
+  { internalSlug: 'relation-a-distance-conseils', category: 'vie-de-couple', featuredImage: '/blog/relation-a-distance-conseils.webp', slugs: { fr: 'relation-a-distance-conseils', en: 'long-distance-relationship-tips', es: 'consejos-relacion-a-distancia', de: 'fernbeziehung-tipps', it: 'consigli-relazione-a-distanza', nl: 'tips-lange-afstandsrelatie' }, publishedAt: '2027-03-03T08:30:00+01:00' },
+  { internalSlug: 'relation-a-distance-combien-de-temps', category: 'vie-de-couple', featuredImage: '/blog/relation-a-distance-combien-de-temps.webp', slugs: { fr: 'relation-a-distance-combien-de-temps', en: 'how-long-can-a-long-distance-relationship-last', es: 'cuanto-dura-una-relacion-a-distancia', de: 'wie-lange-haelt-eine-fernbeziehung', it: 'quanto-dura-una-relazione-a-distanza', nl: 'hoe-lang-houdt-een-lange-afstandsrelatie-stand' }, publishedAt: '2027-03-05T08:30:00+01:00' },
+  { internalSlug: 'relation-a-distance-qui-s-essouffle', category: 'vie-de-couple', featuredImage: '/blog/relation-a-distance-qui-s-essouffle.webp', slugs: { fr: 'relation-a-distance-qui-s-essouffle', en: 'long-distance-relationship-fading', es: 'relacion-a-distancia-se-enfria', de: 'fernbeziehung-schlaeft-ein', it: 'relazione-a-distanza-si-spegne', nl: 'lange-afstandsrelatie-verwatert' }, publishedAt: '2027-03-07T08:30:00+01:00' },
+  { internalSlug: 'jalousie-et-confiance-a-distance', category: 'vie-de-couple', featuredImage: '/blog/jalousie-et-confiance-a-distance.webp', slugs: { fr: 'jalousie-et-confiance-relation-a-distance', en: 'trust-and-jealousy-long-distance-relationship', es: 'celos-y-confianza-relacion-a-distancia', de: 'eifersucht-und-vertrauen-fernbeziehung', it: 'gelosia-e-fiducia-relazione-a-distanza', nl: 'jaloezie-en-vertrouwen-lange-afstandsrelatie' }, publishedAt: '2027-03-09T08:30:00+01:00' },
+  { internalSlug: 'activites-couple-a-distance', category: 'vie-de-couple', featuredImage: '/blog/activites-couple-a-distance.webp', slugs: { fr: 'activites-couple-a-distance', en: 'long-distance-relationship-activities', es: 'actividades-pareja-a-distancia', de: 'aktivitaeten-fernbeziehung', it: 'attivita-di-coppia-a-distanza', nl: 'activiteiten-lange-afstandsrelatie' }, publishedAt: '2027-03-11T08:30:00+01:00' },
+  { internalSlug: 'cadeau-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/cadeau-relation-a-distance.webp', slugs: { fr: 'cadeau-relation-a-distance', en: 'long-distance-relationship-gifts', es: 'regalos-relacion-a-distancia', de: 'geschenke-fernbeziehung', it: 'regali-relazione-a-distanza', nl: 'cadeau-lange-afstandsrelatie' }, publishedAt: '2027-03-13T08:30:00+01:00' },
+  { internalSlug: 'retrouvailles-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/retrouvailles-relation-a-distance.webp', slugs: { fr: 'retrouvailles-relation-a-distance', en: 'long-distance-relationship-reunion', es: 'reencuentro-relacion-a-distancia', de: 'wiedersehen-fernbeziehung', it: 'ritrovarsi-dopo-relazione-a-distanza', nl: 'weerzien-lange-afstandsrelatie' }, publishedAt: '2027-03-15T08:30:00+01:00' },
+  { internalSlug: 'mettre-fin-a-une-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/mettre-fin-a-une-relation-a-distance.webp', slugs: { fr: 'mettre-fin-a-une-relation-a-distance', en: 'how-to-end-a-long-distance-relationship', es: 'terminar-una-relacion-a-distancia', de: 'fernbeziehung-beenden', it: 'chiudere-una-relazione-a-distanza', nl: 'lange-afstandsrelatie-beeindigen' }, publishedAt: '2027-03-17T08:30:00+01:00' },
 ];
 
 // Author data
@@ -2267,4 +2277,17 @@ QUIZ_RELATED_ARTICLES.testInfidelite.push('infidelite-financiere');
 QUIZ_RELATED_ARTICLES.testEmprise.push('mon-conjoint-gagne-plus-que-moi');
 QUIZ_RELATED_ARTICLES.quizTypeCouple.push('disputes-d-argent-dans-le-couple', 'compte-commun-ou-compte-separe');
 QUIZ_RELATED_ARTICLES.testParentalite.push('budget-couple');
+// Cocon 5 (la relation à distance) : le pilier et les conseils en tête des deux tests à distance, les activités et les
+// cadeaux sur le test à distance et les jeux (le hub, qui de nous deux, je n'ai jamais), la jalousie sur les tests de
+// jalousie et de confiance, les retrouvailles sur emménager, la fin sur « est-ce la fin », le temps sur le compteur.
+QUIZ_RELATED_ARTICLES.testDistance.unshift('relation-a-distance', 'relation-a-distance-conseils', 'activites-couple-a-distance', 'cadeau-relation-a-distance');
+QUIZ_RELATED_ARTICLES.testDistanceAime.unshift('relation-a-distance-qui-s-essouffle', 'relation-a-distance', 'jalousie-et-confiance-a-distance', 'mettre-fin-a-une-relation-a-distance');
+QUIZ_RELATED_ARTICLES.testJalousie.push('jalousie-et-confiance-a-distance');
+QUIZ_RELATED_ARTICLES.testConfiance.push('jalousie-et-confiance-a-distance');
+QUIZ_RELATED_ARTICLES.testEmmenager.push('retrouvailles-relation-a-distance');
+QUIZ_RELATED_ARTICLES.testFinCouple.push('mettre-fin-a-une-relation-a-distance');
+QUIZ_RELATED_ARTICLES.jeuxCouple.push('activites-couple-a-distance');
+QUIZ_RELATED_ARTICLES.jeuQuiDeNous.push('activites-couple-a-distance');
+QUIZ_RELATED_ARTICLES.jeuJamais.push('activites-couple-a-distance');
+QUIZ_RELATED_ARTICLES.compteurCouple.push('relation-a-distance-combien-de-temps');
 

@@ -64,7 +64,7 @@ commentaire en tête de chaque bloc.
 - [x] Cocon 2 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 29 janvier 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 3 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 14 février 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 4 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 2 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
-- [ ] Cocon 5
+- [x] Cocon 5 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 18 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [ ] Cocon 6
 - [ ] Entrants des cocons 2 à 6 : `QUIZ_RELATED_ARTICLES` (tests → piliers),
       passages des articles existants vers les piliers, CLAUDE.md.
@@ -147,3 +147,25 @@ commentaire en tête de chaque bloc.
   pièces, balance à plateaux, sacs de courses, ticket de caisse déroulé,
   calculatrice, enveloppe, piles de pièces (un perso debout dessus se place
   avec `y` au sommet de la pile).
+
+## Ce qu'on a appris sur le cocon 5
+
+- Un cocon qui parle d'un mode du site (les jeux à distance, chacun sur son
+  téléphone) est l'occasion de lier les pages jouables depuis le texte : les
+  activités à distance renvoient au hub des jeux, au test de couple, aux
+  points communs, à je n'ai jamais, qui de nous deux, qui pourrait et c'est
+  un 10 mais, sur ce qu'on y fait (« chacun avoue de son côté », « on vote en
+  secret »), jamais sur le nom du jeu.
+- Les études : Jiang et Hancock 2013 (63 couples, Cornell), Kelmer et al.
+  2013 (870 personnes, Denver), Dargie et al. 2015 (plus de 700 personnes),
+  Stafford, Merolla et Castle 2006 (un tiers de séparations dans les trois
+  mois qui suivent la fin de la distance), Maguire et Kinney 2010 (la
+  certitude de vivre ensemble un jour), et les repères du centre d'études
+  américain de Guldner (200 km, 1,5 visite par mois, 14 mois). Les chiffres
+  sont en kilomètres sauf en anglais (125 miles).
+- `images.mjs` a reçu une scène de nuit (`ciel`, `fenetreNuit`, `filRouge`,
+  `sol` sombre), deux pièces séparées par un `mur`, une télé et un bol de
+  pop-corn, un colis ouvert, une valise et le bord de quai, une commode à
+  tiroir ouvert, un billet, un calendrier sans jour entouré, des amis en
+  silhouettes ; un perso peut se poser en petit dans un cadre de téléphone
+  dessiné en `devant`.
