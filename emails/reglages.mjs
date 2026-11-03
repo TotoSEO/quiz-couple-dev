@@ -73,9 +73,13 @@ export const REGLAGES = {
   // le prénom est donné), au lieu d'attendre un soir ; l'envoi du soir garde
   // les e2 et ce que l'envoi immédiat n'a pas fait. `parJour` (jour de Paris)
   // laisse au soir sa place dans les 300 envois quotidiens de l'offre
-  // gratuite : 180 + la retenue (100) + la marge (10) = 290. `langues` : pas
-  // l'espagnol, à qui l'e-mail ne peut pas dire son prix (celui de l'Amérique
-  // latine, 27 octobre 2026) ; ses e1 passent le soir après les e2. La base
+  // gratuite : 180 + la retenue (100) + la marge (10) = 290. `langues` :
+  // l'espagnol n'y était pas, l'e-mail ne pouvant pas dire son prix (celui
+  // de l'Amérique latine, 27 octobre 2026), et ses e1 passaient le soir après
+  // les e2, en campagne, ouverts par 2 % des gens ; depuis le 3 novembre
+  // 2026 (Thomas : « Ok pour les mails »), les e-mails espagnols ne disent
+  // aucun prix (LANGUES_SANS_PRIX de contenu.mjs) et l'e1 espagnol part dans
+  // la minute comme les autres. La base
   // lit ces réglages dans emails_reglages, que chaque passage du soir
   // réécrit (emails/immediat.mjs) : un changement ici vaut au passage
   // suivant, ou tout de suite par l'action « installer » de
@@ -83,5 +87,17 @@ export const REGLAGES = {
   // Depuis le même jour, la file du soir ne garde un e1 que sept jours après
   // l'adresse (migration 20261029120000_emails_immediat.sql). Le néerlandais
   // depuis le 31 octobre 2026 (emails/textes/nl.json), au prix habituel.
-  immediat: { actif: true, parJour: 180, langues: ['en', 'fr', 'it', 'de', 'nl'] },
+  immediat: { actif: true, parJour: 180, langues: ['en', 'fr', 'it', 'de', 'nl', 'es'] },
+  // Les e-mails que le soir envoie par l'API transactionnelle de Brevo, une
+  // requête par personne, au lieu d'une liste et d'une campagne (3 novembre
+  // 2026, Thomas : « Ok pour les mails ») : le même e1 était ouvert par 44 %
+  // des gens quand il partait dans la minute par l'API transactionnelle, et
+  // par 2 à 5 % en campagne le soir (2 % chez Gmail), et l'e2, celui qui
+  // montre une vraie question et le prix, ne partait qu'en campagne (1,4 %
+  // d'ouvertures). Les e1 du soir (adresses que l'envoi immédiat n'a pas
+  // prises) restent en campagne pour l'instant : à la même heure et aussi
+  // tard, ils disent ce que change le seul mode d'envoi. Même budget que la
+  // campagne (plafond, retenue, crédits de Brevo), même fenêtre du soir.
+  // Section « 3 novembre 2026 » de docs/emailing/CONCEPTION.md.
+  transactionnel: ['e2'],
 };

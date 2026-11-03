@@ -187,17 +187,25 @@ await etape('L\'e-mail immédiat, le journal de lead-capture', async () => {
   await lire('le moteur des fonctions', "select replaceRegexpAll(substring(event_message, 1, 48), '[0-9]+', 'N') as message, count(*) as n from logs where source = 'function_logs' and position(event_message, '[') != 1 group by message order by n desc limit 12");
 });
 
-// Les chiffres d'ensemble des e1 immédiats, par version du test A/B
-// (étiquette de chaque envoi), depuis le premier jour : jamais par personne.
-await etape('L\'e-mail immédiat, en chiffres', async () => {
+// Les chiffres d'ensemble des e-mails partis par l'API transactionnelle,
+// par e-mail et par version du test A/B (étiquette de chaque envoi), depuis
+// leur premier jour : l'e1 immédiat depuis le 29 octobre 2026, l'e2 du soir
+// depuis le 3 novembre 2026 (REGLAGES.transactionnel). Jamais par personne.
+// Le taux d'ouverture de l'e2 se lit contre celui de ses campagnes (1,4 %
+// avant ce jour, section « Le test A/B » plus bas).
+await etape('Les e-mails transactionnels, en chiffres', async () => {
   const fin = new Date().toISOString().slice(0, 10);
-  for (const version of ['a', 'b']) {
-    try {
-      const s = await brevo.statsTransactionnelles({ debut: '2026-10-29', fin, tag: etiquette(version) });
-      const champs = ['requests', 'delivered', 'uniqueOpens', 'uniqueClicks', 'hardBounces', 'softBounces', 'spamReports', 'unsubscribed', 'blocked'];
-      info(`${version === 'b' ? 'sobre   ' : 'maquette'} : ${champs.map((f) => `${f} ${Number((s || {})[f]) || 0}`).join(' · ')}`);
-    } catch (e) {
-      info(`${version} : statistiques illisibles (${e.message})`);
+  const champs = ['requests', 'delivered', 'uniqueOpens', 'uniqueClicks', 'hardBounces', 'softBounces', 'spamReports', 'unsubscribed', 'blocked'];
+  for (const [type, debut] of [['e1', '2026-10-29'], ['e2', '2026-11-03']]) {
+    for (const version of ['a', 'b']) {
+      try {
+        const s = await brevo.statsTransactionnelles({ debut, fin, tag: etiquette(version, type) });
+        const n = (f) => Number((s || {})[f]) || 0;
+        const taux = n('delivered') ? ` (${(Math.round((1000 * n('uniqueOpens')) / n('delivered')) / 10).toLocaleString('fr-FR')} % d'ouvertures)` : '';
+        info(`${type} ${version === 'b' ? 'sobre   ' : 'maquette'} : ${champs.map((f) => `${f} ${n(f)}`).join(' · ')}${taux}`);
+      } catch (e) {
+        info(`${type} ${version} : statistiques illisibles (${e.message})`);
+      }
     }
   }
 });

@@ -39,6 +39,16 @@ export const MARQUEURS_BREVO = ['{{ contact.SALUTATION }}', '{{ contact.INTRO }}
 // Les deux versions du test A/B (REGLAGES.ab) : « a » la maquette de Claude
 // Design, « b » l'e-mail sobre signé de Thomas (emails/sobre.html).
 export const VERSIONS = ['a', 'b'];
+// Les langues dont les e-mails ne disent aucun prix (3 novembre 2026) :
+// l'espagnol, parce qu'une bonne partie des hispanophones paient le prix de
+// l'Amérique latine (PRIX_REGIONS de coeur.mjs, depuis le 27 octobre 2026),
+// que la page de l'évaluation choisit d'après le fuseau du téléphone ; un
+// e-mail ne connaît pas ce fuseau. Ni ticket, ni réduction, ni prix par
+// personne : à la place du prix, la phrase de la note de l'e1 (« les
+// questions sont gratuites, tu paies à la fin, une fois pour vous deux »,
+// qui ne cite aucun montant), et c'est la page qui montre le prix. C'est ce
+// qui permet d'envoyer l'e1 espagnol dans la minute (REGLAGES.immediat).
+export const LANGUES_SANS_PRIX = ['es'];
 
 const lire = (chemin) => readFileSync(new URL(chemin, import.meta.url), 'utf8');
 const TEXTES = Object.fromEntries(LANGUES.map((l) => [l, JSON.parse(lire(`./textes/${l}.json`))]));
@@ -234,11 +244,11 @@ function questionSobre(e) {
 // La version sobre (« b ») : le même sujet, le même aperçu, la même accroche
 // (le champ INTRO) et le même PS que la maquette, sans image, ticket ni
 // cartes, et un seul lien vers l'évaluation, écrit dans une phrase.
-function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo }) {
+function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo, sansPrix }) {
   const s = t.sobre;
   const enTexte = (x) => enLigne(ecrire(x), liens, LIEN_SOBRE);
   const p = (html) => `<p style="margin:0 0 16px;">${html}</p>`;
-  const prixEtSolo = p(`${enTexte(s.prix[variante])} ${enTexte(s.solo)}`);
+  const prixEtSolo = p(`${enTexte(sansPrix ? t.e1.note : s.prix[variante])} ${enTexte(s.solo)}`);
   const corps = type === 'e1'
     ? [p('{{ contact.INTRO }}'), p(enTexte(s.e1.texte)), prixEtSolo, p(enTexte(s.e1.lien)), p(enTexte(s.e1.reponse))]
     : [p('{{ contact.INTRO }}'), questionSobre(ev), p(enTexte(e.exemple)), prixEtSolo, p(enTexte(s.e2.lien))];
@@ -257,19 +267,22 @@ function campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, a
     MENTIONS_TEXTE: echapper(ecrire(t.pied.mentions)),
   });
   verifier(html);
-  return { type, lang, version: 'b', promo, sujet, apercu, html, expediteur: s.expediteur };
+  return { type, lang, version: 'b', promo, sansPrix, sujet, apercu, html, expediteur: s.expediteur };
 }
 
 // `promo` (vrai ou faux) force l'une des deux variantes du prix : aperçus
 // et tests ; le soir de l'envoi, la date décide. `version` : « a » la
 // maquette, « b » l'e-mail sobre (le test A/B, REGLAGES.ab). `expediteur`
 // est le nom d'expéditeur propre à la version, null pour celui des réglages.
+// Une langue de LANGUES_SANS_PRIX n'a jamais de prix ni de réduction,
+// `promo` compris.
 export function campagne(type, lang, instant = new Date(), { promo, version = 'a' } = {}) {
   if (!TYPES.includes(type)) throw new Error(`e-mail inconnu : ${type}`);
   if (!VERSIONS.includes(version)) throw new Error(`version inconnue : ${version}`);
   const t = textes(lang);
   const e = t[type];
-  const p = prixDu(lang, instant, promo);
+  const sansPrix = LANGUES_SANS_PRIX.includes(lang);
+  const p = prixDu(lang, instant, sansPrix ? false : promo);
   const variante = p.promo ? 'promo' : 'normal';
   const ev = EVALUATION[lang];
   const v = {
@@ -282,7 +295,7 @@ export function campagne(type, lang, instant = new Date(), { promo, version = 'a
   const liens = { evaluation: lien(lang, type, { version }), solo: lien(lang, type, { solo: true, version }) };
   const sujet = ecrire(e.sujet);
   const apercu = ecrire(typeof e.apercu === 'string' ? e.apercu : e.apercu[variante]);
-  if (version === 'b') return campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo: p.promo });
+  if (version === 'b') return campagneSobre({ type, lang, t, e, ecrire, liens, variante, ev, sujet, apercu, promo: p.promo, sansPrix });
   const points = liste(e.points.map((x) => enLigne(ecrire(x), liens)));
 
   // L'e1 présente l'évaluation ; l'e2 montre une de ses questions, ce que le
@@ -309,7 +322,9 @@ export function campagne(type, lang, instant = new Date(), { promo, version = 'a
     PRIX_PHRASE: echapper(ecrire(e.prixPhrase[variante])),
     BOUTON_LIEN: echapper(liens.evaluation),
     BOUTON_TEXTE: echapper(ecrire(e.bouton)),
-    NOTE: echapper(ecrire(e.note)),
+    // Sans prix, la note de l'e2 (« une séance chez un conseiller coûte... »)
+    // ne compare plus rien : les deux e-mails prennent celle de l'e1.
+    NOTE: echapper(ecrire(sansPrix ? t.e1.note : e.note)),
     SIGNATURE: t.signature.map((x) => echapper(ecrire(x))).join('<br>') + ps,
     VOIR_TITRE: echapper(ecrire(t.voir.titre)).replace('[[marque]]', marque),
     VOIR_ALLER: echapper(ecrire(t.voir.aller)).replace(/ (\S+)$/, '&nbsp;$1'),
@@ -331,10 +346,10 @@ export function campagne(type, lang, instant = new Date(), { promo, version = 'a
     valeurs[`VOIR${n}_TITRE`] = echapper(ecrire(c.titre));
     valeurs[`VOIR${n}_TEXTE`] = echapper(ecrire(c.texte));
   });
-  const gabarit = sansCommentaires(bloc(bloc(GABARIT, 'prix', true), 'barre', p.promo));
+  const gabarit = sansCommentaires(bloc(bloc(GABARIT, 'prix', !sansPrix), 'barre', p.promo));
   const html = remplir(gabarit, valeurs);
   verifier(html);
-  return { type, lang, version: 'a', promo: p.promo, sujet, apercu, html, expediteur: null };
+  return { type, lang, version: 'a', promo: p.promo, sansPrix, sujet, apercu, html, expediteur: null };
 }
 
 // Le HTML part tel quel chez Brevo : plus aucun marqueur [[...]], et pour
