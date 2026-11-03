@@ -1831,6 +1831,72 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-28T22:25:00+01:00',
   },
+  // ── Cocon 1 : thérapie de couple et crise de couple (docs/blog/COCONS.md) ──
+  // Le pilier, puis un article tous les deux jours du 28 décembre 2026 au
+  // 12 janvier 2027.
+  {
+    internalSlug: 'therapie-de-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/therapie-de-couple.webp',
+    slugs: { fr: 'therapie-de-couple', en: 'couples-therapy', es: 'terapia-de-pareja', de: 'paartherapie', it: 'terapia-di-coppia', nl: 'relatietherapie' },
+    publishedAt: '2026-12-28T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'therapie-de-couple-comment-ca-se-passe',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/therapie-de-couple-comment-ca-se-passe.webp',
+    slugs: { fr: 'therapie-de-couple-comment-ca-se-passe', en: 'what-happens-in-couples-therapy', es: 'como-es-una-terapia-de-pareja', de: 'paartherapie-ablauf', it: 'come-funziona-la-terapia-di-coppia', nl: 'hoe-gaat-relatietherapie' },
+    publishedAt: '2026-12-29T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'therapie-de-couple-prix',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/therapie-de-couple-prix.webp',
+    slugs: { fr: 'therapie-de-couple-prix', en: 'couples-therapy-cost', es: 'terapia-de-pareja-precio', de: 'paartherapie-kosten', it: 'terapia-di-coppia-costo', nl: 'relatietherapie-kosten' },
+    publishedAt: '2026-12-31T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'quand-faire-une-therapie-de-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/quand-faire-une-therapie-de-couple.webp',
+    slugs: { fr: 'quand-faire-une-therapie-de-couple', en: 'when-to-go-to-couples-therapy', es: 'cuando-ir-a-terapia-de-pareja', de: 'wann-paartherapie', it: 'quando-fare-terapia-di-coppia', nl: 'wanneer-relatietherapie' },
+    publishedAt: '2027-01-02T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'conjoint-refuse-therapie-de-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/conjoint-refuse-therapie-de-couple.webp',
+    slugs: { fr: 'mon-conjoint-refuse-la-therapie-de-couple', en: 'partner-refuses-couples-therapy', es: 'mi-pareja-no-quiere-ir-a-terapia', de: 'partner-will-keine-paartherapie', it: 'partner-rifiuta-terapia-di-coppia', nl: 'partner-wil-geen-relatietherapie' },
+    publishedAt: '2027-01-04T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'therapie-de-couple-seul',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/therapie-de-couple-seul.webp',
+    slugs: { fr: 'therapie-de-couple-seul', en: 'couples-therapy-alone', es: 'terapia-de-pareja-solo', de: 'paartherapie-alleine', it: 'terapia-di-coppia-da-soli', nl: 'relatietherapie-alleen' },
+    publishedAt: '2027-01-06T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'therapie-de-couple-en-ligne',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/therapie-de-couple-en-ligne.webp',
+    slugs: { fr: 'therapie-de-couple-en-ligne', en: 'online-couples-therapy', es: 'terapia-de-pareja-online', de: 'paartherapie-online', it: 'terapia-di-coppia-online', nl: 'online-relatietherapie' },
+    publishedAt: '2027-01-08T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'exercices-therapie-de-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/exercices-therapie-de-couple.webp',
+    slugs: { fr: 'exercices-therapie-de-couple', en: 'couples-therapy-exercises', es: 'ejercicios-terapia-de-pareja', de: 'paartherapie-uebungen', it: 'esercizi-terapia-di-coppia', nl: 'relatietherapie-oefeningen' },
+    publishedAt: '2027-01-10T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'crise-de-couple-que-faire',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/crise-de-couple-que-faire.webp',
+    slugs: { fr: 'crise-de-couple-que-faire', en: 'relationship-crisis-what-to-do', es: 'crisis-de-pareja-que-hacer', de: 'beziehungskrise-was-tun', it: 'crisi-di-coppia-cosa-fare', nl: 'relatiecrisis-wat-te-doen' },
+    publishedAt: '2027-01-12T08:30:00+01:00',
+  },
 ];
 
 // Author data
@@ -2014,4 +2080,16 @@ QUIZ_RELATED_ARTICLES.quizAdo.push('lexique-relations-2026');
 QUIZ_RELATED_ARTICLES.testCoupleSain.push('femme-malheureuse-en-couple');
 QUIZ_RELATED_ARTICLES.testCouple.push('femme-malheureuse-en-couple');
 QUIZ_RELATED_ARTICLES.testDivorce.push('arreter-ou-continuer-relation');
+// Le cocon « thérapie de couple » (docs/blog/COCONS.md, décembre 2026) : la
+// page pilier en tête des cartes des tests qui parlent de la relation telle
+// qu'elle va, et la marche à suivre en cas de crise là où la question de la
+// fin se pose. En tête (unshift), parce que quatre cartes seulement
+// s'affichent ; une carte vers un article encore programmé est retirée
+// jusqu'à sa date, comme partout.
+QUIZ_RELATED_ARTICLES.testCouple.unshift('therapie-de-couple');
+QUIZ_RELATED_ARTICLES.testCoupleSain.unshift('therapie-de-couple', 'exercices-therapie-de-couple');
+QUIZ_RELATED_ARTICLES.testAmourHabitude.unshift('therapie-de-couple');
+QUIZ_RELATED_ARTICLES.testDistance.push('therapie-de-couple-en-ligne');
+QUIZ_RELATED_ARTICLES.testJeLaimeEncore.unshift('crise-de-couple-que-faire');
+QUIZ_RELATED_ARTICLES.testFinCouple = ['crise-de-couple-que-faire', 'therapie-de-couple', 'arreter-ou-continuer-relation', 'sauver-son-couple'];
 
