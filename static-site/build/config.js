@@ -1961,6 +1961,70 @@ export const BLOG_ARTICLES = [
     slugs: { fr: 'il-ne-veut-pas-se-marier', en: 'he-doesnt-want-to-get-married', es: 'no-quiere-casarse', de: 'er-will-nicht-heiraten', it: 'non-vuole-sposarsi', nl: 'hij-wil-niet-trouwen' },
     publishedAt: '2027-01-28T08:30:00+01:00',
   },
+  // ── Cocon 3 : raviver la flamme, la routine, les rendez-vous, les surprises (docs/blog/COCONS.md) ──
+  {
+    internalSlug: 'raviver-la-flamme-dans-son-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/raviver-la-flamme-dans-son-couple.webp',
+    slugs: { fr: 'raviver-la-flamme-dans-son-couple', en: 'rekindle-the-spark-in-your-relationship', es: 'reavivar-la-llama-en-pareja', de: 'liebe-neu-entfachen', it: 'ravvivare-la-fiamma-nella-coppia', nl: 'de-vonk-terug-in-je-relatie' },
+    publishedAt: '2027-01-29T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'routine-dans-le-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/routine-dans-le-couple.webp',
+    slugs: { fr: 'routine-dans-le-couple', en: 'how-to-get-out-of-a-relationship-rut', es: 'rutina-en-la-pareja', de: 'routine-in-der-beziehung', it: 'routine-di-coppia', nl: 'sleur-in-je-relatie' },
+    publishedAt: '2027-01-30T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'idees-de-rendez-vous-amoureux',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/idees-de-rendez-vous-amoureux.webp',
+    slugs: { fr: 'idees-de-rendez-vous-amoureux', en: 'date-ideas-for-couples', es: 'ideas-de-citas-para-parejas', de: 'date-ideen-fuer-paare', it: 'idee-per-appuntamenti-di-coppia', nl: 'date-ideeen-voor-koppels' },
+    publishedAt: '2027-02-01T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'soiree-en-amoureux-a-la-maison',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/soiree-en-amoureux-a-la-maison.webp',
+    slugs: { fr: 'soiree-en-amoureux-a-la-maison', en: 'date-night-at-home-ideas', es: 'noche-romantica-en-casa', de: 'romantischer-abend-zu-hause', it: 'serata-romantica-a-casa', nl: 'romantische-avond-thuis' },
+    publishedAt: '2027-02-03T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'week-end-en-amoureux-pas-cher',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/week-end-en-amoureux-pas-cher.webp',
+    slugs: { fr: 'week-end-en-amoureux-pas-cher', en: 'cheap-romantic-weekend-getaway', es: 'escapada-romantica-barata', de: 'romantisches-wochenende-guenstig', it: 'weekend-romantico-economico', nl: 'romantisch-weekendje-weg-goedkoop' },
+    publishedAt: '2027-02-05T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'activites-couple-hiver',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/activites-couple-hiver.webp',
+    slugs: { fr: 'activites-couple-hiver', en: 'winter-activities-for-couples', es: 'planes-de-invierno-en-pareja', de: 'winter-aktivitaeten-fuer-paare', it: 'attivita-di-coppia-in-inverno', nl: 'winteractiviteiten-voor-koppels' },
+    publishedAt: '2027-02-07T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'surprise-pour-son-copain-ou-sa-copine',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/surprise-pour-son-copain-ou-sa-copine.webp',
+    slugs: { fr: 'surprise-pour-son-copain-ou-sa-copine', en: 'surprise-ideas-for-your-boyfriend-or-girlfriend', es: 'sorpresas-para-tu-novio-o-novia', de: 'ueberraschung-fuer-freund-oder-freundin', it: 'sorprese-per-il-fidanzato-o-la-fidanzata', nl: 'verrassing-voor-je-vriend-of-vriendin' },
+    publishedAt: '2027-02-09T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'rituels-de-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/rituels-de-couple.webp',
+    slugs: { fr: 'rituels-de-couple', en: 'couple-rituals', es: 'rituales-de-pareja', de: 'paar-rituale', it: 'rituali-di-coppia', nl: 'rituelen-voor-koppels' },
+    publishedAt: '2027-02-11T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'pimenter-son-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/pimenter-son-couple.webp',
+    slugs: { fr: 'pimenter-son-couple', en: 'spice-up-your-relationship', es: 'avivar-la-pasion-en-pareja', de: 'mehr-leidenschaft-in-der-beziehung', it: 'ravvivare-la-passione-nella-coppia', nl: 'passie-terug-in-je-relatie' },
+    publishedAt: '2027-02-13T08:30:00+01:00',
+  },
 ];
 
 // Author data
@@ -2162,4 +2226,20 @@ QUIZ_RELATED_ARTICLES.testMariage.unshift('demande-en-mariage', 'au-bout-de-comb
 QUIZ_RELATED_ARTICLES.testEmmenager.push('demande-en-mariage');
 QUIZ_RELATED_ARTICLES.testEstCeLeBon.splice(1, 0, 'demande-en-mariage', 'il-ne-veut-pas-se-marier');
 QUIZ_RELATED_ARTICLES.compteurCouple.splice(1, 0, 'combien-de-temps-durent-les-fiancailles');
+// Cocon 3 (raviver la flamme) : le pilier et la routine en tête d'« amour ou habitude », le pilier sur le test de couple et le couple sain,
+// les rendez-vous et la soirée à la maison sur les jeux (tu préfères, dilemmes, je n'ai jamais, le hub), les surprises sur les langages de l'amour,
+// les rituels sur le compteur, le désir sur la compatibilité sexuelle et le quiz coquin.
+QUIZ_RELATED_ARTICLES.testAmourHabitude.unshift('raviver-la-flamme-dans-son-couple', 'routine-dans-le-couple');
+QUIZ_RELATED_ARTICLES.testCouple.splice(1, 0, 'raviver-la-flamme-dans-son-couple');
+QUIZ_RELATED_ARTICLES.testCoupleSain.splice(2, 0, 'raviver-la-flamme-dans-son-couple');
+QUIZ_RELATED_ARTICLES.quizTuPreferes.push('idees-de-rendez-vous-amoureux', 'soiree-en-amoureux-a-la-maison');
+QUIZ_RELATED_ARTICLES.jeuDilemmes.push('soiree-en-amoureux-a-la-maison', 'routine-dans-le-couple');
+QUIZ_RELATED_ARTICLES.jeuJamais.push('soiree-en-amoureux-a-la-maison');
+QUIZ_RELATED_ARTICLES.jeuxCouple.unshift('soiree-en-amoureux-a-la-maison', 'idees-de-rendez-vous-amoureux');
+QUIZ_RELATED_ARTICLES.jeuQuiDeNous.push('activites-couple-hiver');
+QUIZ_RELATED_ARTICLES.testLangageAmour.unshift('surprise-pour-son-copain-ou-sa-copine', 'rituels-de-couple');
+QUIZ_RELATED_ARTICLES.compteurCouple.splice(2, 0, 'rituels-de-couple');
+QUIZ_RELATED_ARTICLES.testCompatSexuelle.unshift('pimenter-son-couple');
+QUIZ_RELATED_ARTICLES.quizCoquin.unshift('pimenter-son-couple');
+QUIZ_RELATED_ARTICLES.testVacances.unshift('week-end-en-amoureux-pas-cher');
 

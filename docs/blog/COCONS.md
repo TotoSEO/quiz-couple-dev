@@ -62,7 +62,7 @@ commentaire en tête de chaque bloc.
 
 - [x] Cocon 1 : fr · en · es · de · it · nl · images · liens entrants (`QUIZ_RELATED_ARTICLES`, CLAUDE.md) · PR (3 novembre 2026)
 - [x] Cocon 2 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 29 janvier 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
-- [ ] Cocon 3
+- [x] Cocon 3 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 14 février 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [ ] Cocon 4
 - [ ] Cocon 5
 - [ ] Cocon 6
@@ -103,3 +103,25 @@ commentaire en tête de chaque bloc.
   perso en plus petit, `miroir: true`, derrière un cadre dessiné en
   `devant` ; une scène peut changer la couleur du sol (`sol`).
 
+## Ce qu'on a appris sur le cocon 3
+
+- Un test qui n'existe qu'en français (les vacances en couple, `testVacances`)
+  ne reçoit pas de lien dans les cinq autres langues : la phrase du week-end
+  (« alternez : ce mois-ci c'est toi qui choisis ») est écrite sans lui dès
+  le départ, au lieu de laisser `liens.py` retirer la balise.
+- Les repères changent avec la langue, même sur un sujet sans droit : le
+  musée gratuit (premier dimanche du mois en France et en Italie, musées
+  municipaux ailleurs), le cinéma à tarif réduit (mardi, mercredi en Italie,
+  « un jour fixe » en néerlandais), l'alba de janvier (8 h 15 en Allemagne,
+  7 h 40 en Italie, 8 h 45 aux Pays-Bas), la station « sans ski » (Ardennes
+  et Eifel pour le néerlandais), la nuit de San Lorenzo pour les étoiles
+  filantes en italien.
+- Les descriptions allemandes et néerlandaises dépassent 160 signes à tous
+  les coups : on écrit deux candidats par description dans le script, le
+  second plus court, et on prend le premier qui passe.
+- `images.mjs` a reçu `teteDe(perso)` (centre, haut de la tête, ligne des
+  yeux, échelle) pour poser un bonnet et une écharpe par-dessus une mascotte
+  (`noeud: false` sur la rose sous le bonnet), des accessoires de saison et
+  de sortie (cheminée, luge, sapin, tente, feu de camp, vélos, bougies,
+  cadeau) et une scène peut poser sa propre `<defs>` dans `derriere` (le
+  vichy du panier).
