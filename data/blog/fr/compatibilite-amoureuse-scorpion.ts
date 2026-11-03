@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Scorpion avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Si vous avez déjà aimé un Scorpion, vous savez que pour lui, l'amour n'est pas une légèreté. Il y met tout : les émotions, le corps, la loyauté, ses failles les plus profondes. Et il attend la même chose de l'autre. Il lui arrive de tenir à distance pour voir si l'autre reste quand même : ce n'est pas de la manipulation, c'est de la protection.</p>
+  introduction: `<p>Si vous avez déjà aimé un Scorpion, vous savez que pour lui, <a href="/blog/signes-astrologiques-en-amour/">l'amour n'est pas une légèreté</a>. Il y met tout : les émotions, le corps, la loyauté, ses failles les plus profondes. Et il attend la même chose de l'autre. Il lui arrive de tenir à distance pour voir si l'autre reste quand même : ce n'est pas de la manipulation, c'est de la protection.</p>
 <p>Ce qu'il cherche, c'est quelqu'un qui ne reste pas à la surface, et qui ne part pas quand ça devient difficile. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Cancer, Vierge, Capricorne : ses trois unions les plus profondes et les plus durables.`,

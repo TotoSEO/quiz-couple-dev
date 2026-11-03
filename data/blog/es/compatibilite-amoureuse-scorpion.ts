@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Escorpio con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Si alguna vez has querido a un Escorpio, sabes que para él el amor no es algo ligero. Lo pone todo: las emociones, el cuerpo, la lealtad, sus heridas más profundas. Y espera lo mismo de la otra persona. A veces mantiene las distancias para ver si el otro se queda de todas formas: no es manipulación, es protección.</p>
+  introduction: `<p>Si alguna vez has querido a un Escorpio, sabes que para él <a href="/es/blog/signos-del-zodiaco-en-el-amor/">el amor no es algo ligero</a>. Lo pone todo: las emociones, el cuerpo, la lealtad, sus heridas más profundas. Y espera lo mismo de la otra persona. A veces mantiene las distancias para ver si el otro se queda de todas formas: no es manipulación, es protección.</p>
 <p>Lo que busca es alguien que no se quede en la superficie, y que no se vaya cuando la cosa se pone difícil. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Cáncer y Piscis: las alianzas de Agua donde Escorpio se siente comprendido sin palabras.`,

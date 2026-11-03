@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> This can be repaired</p>
 <ul>
-<li><strong>Routine and boredom</strong>, when both of you complain about them. That is two people who still want something else.</li>
+<li><strong><a href="/en/blog/how-to-get-out-of-a-relationship-rut/">Routine and boredom</a></strong>, when both of you complain about them. That is two people who still want something else.</li>
 <li><strong>Desire that has dropped</strong> over a few years, with no reproach behind it.</li>
 <li><strong>Frequent arguments that actually end</strong>, with someone coming back afterwards.</li>
 <li><strong>A crisis with a date on it</strong>: a bereavement, a move, burnout, a new baby.</li>

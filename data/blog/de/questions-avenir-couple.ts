@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Paare scheitern fast nie an fehlender Liebe. Sie scheitern an Themen, die sie nie auf den Tisch gelegt haben.",
   introduction: `<p>Die meisten großen Beziehungskrisen drehen sich um Themen, von denen beide wussten, dass man eines Tages darüber reden müsste: Geld, Kinder, Schwiegereltern, die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
 <p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet, während das Schweigen darüber viele getötet hat.</strong> Und diese Gespräche sind weder feierlich noch schwer. Gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>
-<p>Hier sind 60 Zukunftsfragen, nach großen Etappen geordnet: vor dem Zusammenziehen, vor der endgültigen Bindung, vor einem Kind, rund ums Geld und über eure gemeinsamen Träume. Zum Herauspicken, BEVOR die Themen dringend werden, genau darin liegt ihr Wert.</p>`,
+<p>Hier sind 60 Zukunftsfragen, nach großen Etappen geordnet: vor dem Zusammenziehen, vor <a href="/de/blog/heiratsantrag/">der endgültigen Bindung</a>, vor einem Kind, <a href="/de/blog/geld-in-der-beziehung/">rund ums Geld</a> und über eure gemeinsamen Träume. Zum Herauspicken, BEVOR die Themen dringend werden, genau darin liegt ihr Wert.</p>`,
   quickSummary: [
     "60 Fragen nach Etappen geordnet: zusammenziehen, binden, ein Kind, Geld, Träume.",
     "Das Prinzip: darüber reden, bevor es dringend ist, nie mitten in der Krise.",

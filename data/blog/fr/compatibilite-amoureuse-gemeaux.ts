@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Les Gémeaux avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>S'il y a une chose que le Gémeaux déteste, c'est se sentir enfermé : dans une case, dans une routine, dans une idée de lui que l'autre aurait décidée à sa place. On le dit instable, il est plutôt multiple. Il tombe amoureux d'un esprit avant de tomber amoureux d'un corps, et le jour où la conversation s'arrête, quelque chose se déconnecte.</p>
+  introduction: `<p>S'il y a une chose que le Gémeaux déteste, c'est se sentir enfermé : dans une case, dans une routine, dans une idée de lui que l'autre aurait décidée à sa place. On le dit instable, il est plutôt multiple. <a href="/blog/signes-astrologiques-en-amour/">Il tombe amoureux d'un esprit</a> avant de tomber amoureux d'un corps, et le jour où la conversation s'arrête, quelque chose se déconnecte.</p>
 <p>Du coup, les signes qui lui vont sont ceux qui n'essaient pas de le fixer. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Balance et Verseau : ses deux grandes compatibilités Air, la conversation n'a jamais de fin avec eux.`,

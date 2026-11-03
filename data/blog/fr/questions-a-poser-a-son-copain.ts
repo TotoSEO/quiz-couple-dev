@@ -154,7 +154,7 @@ const article: BlogArticleData = {
 <li>Qu'est-ce qui te donne le sentiment que ta vie a du sens ?</li>
 <li>Quel conseil tu donnerais au toi d'il y a dix ans ?</li>
 <li>Qu'est-ce que tu portes encore d'une histoire passée, en bien ou en mal ?</li>
-<li>C'est quoi ton rapport à l'argent, hérité de qui ?</li>
+<li>C'est quoi <a href="/blog/parler-d-argent-en-couple/">ton rapport à l'argent</a>, hérité de qui ?</li>
 <li>Qu'est-ce qui te ferait dire non à un rêve : la peur ou la raison ?</li>
 <li>Sur quoi as-tu changé d'avis ces dernières années ?</li>
 <li>Qu'est-ce que tu n'as jamais raconté à personne, même pas à moi ?</li>
@@ -164,7 +164,7 @@ const article: BlogArticleData = {
     {
       id: 'avenir-et-projets',
       title: "Avenir et projets (81-90)",
-      content: `<p>Pas besoin d'attendre une demande en mariage pour savoir si vos trajectoires s'accordent. Franchement, mieux vaut ces questions-là trop tôt que trop tard.</p>
+      content: `<p><a href="/blog/demande-en-mariage/">Pas besoin d'attendre une demande en mariage</a> pour savoir si vos trajectoires s'accordent. Franchement, mieux vaut ces questions-là trop tôt que trop tard.</p>
 <ol start="81">
 <li>Tu t'imagines où dans cinq ans, et j'y suis comment ?</li>
 <li>Qu'est-ce qui est non négociable dans ta vie future ?</li>
@@ -182,7 +182,7 @@ const article: BlogArticleData = {
     {
       id: 'au-telephone-ou-a-distance',
       title: "Au téléphone ou à distance (91-100)",
-      content: `<p>Dix questions qui passent parfaitement à l'oral ou par messages, pour les couples à distance ou les soirées chacun chez soi.</p>
+      content: `<p>Dix questions qui passent parfaitement à l'oral ou par messages, pour <a href="/blog/relation-a-distance/">les couples à distance</a> ou les soirées chacun chez soi.</p>
 <ol start="91">
 <li>Qu'est-ce que tu ferais là, tout de suite, si j'étais à côté de toi ?</li>
 <li>C'est quoi la première chose que tu as pensée ce matin ?</li>

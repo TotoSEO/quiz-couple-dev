@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Virgo con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Virgo no hace grandes declaraciones. Se acuerda de cómo te gusta el café, prepara lo que hace falta el día que estás mal, arregla las cosas entre bastidores para que tu vida sea un poco más sencilla. Su amor se lee en los detalles, y hay que saber mirar.</p>
+  introduction: `<p>Virgo no hace grandes declaraciones. Se acuerda de cómo te gusta el café, prepara lo que hace falta el día que estás mal, arregla las cosas entre bastidores para que tu vida sea un poco más sencilla. <a href="/es/blog/signos-del-zodiaco-en-el-amor/">Su amor se lee en los detalles</a>, y hay que saber mirar.</p>
 <p>Los signos que lo entienden de forma natural son aquellos con los que se abre. Los demás lo encuentran distante, sin saber qué se han perdido. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Tauro, Capricornio y Escorpio: sus uniones más sólidas, cada una por razones diferentes.`,

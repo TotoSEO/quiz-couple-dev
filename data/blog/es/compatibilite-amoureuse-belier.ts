@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Aries con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Aries no espera. Quiere, va a por ello, ama, y si la otra persona no sigue el ritmo, pasa a otra cosa. No es que le dé igual: es que vive deprisa, y no todo el mundo aguanta ese ritmo. En el amor, eso da comienzos de fuegos artificiales, y a veces historias que se apagan antes de haber tenido tiempo de asentarse.</p>
+  introduction: `<p>Aries no espera. Quiere, va a por ello, ama, y si la otra persona no sigue el ritmo, pasa a otra cosa. No es que le dé igual: es que vive deprisa, y no todo el mundo aguanta ese ritmo. <a href="/es/blog/signos-del-zodiaco-en-el-amor/">En el amor, eso da comienzos de fuegos artificiales</a>, y a veces historias que se apagan antes de haber tenido tiempo de asentarse.</p>
 <p>Lo que busca es alguien que le responda, que no se hunda a la primera tensión y que tampoco desaparezca. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Leo y Libra son sus mejores parejas, por razones completamente opuestas.`,

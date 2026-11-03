@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Sagittaire avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Le Sagittaire ne tient pas en place, pas par instabilité, mais parce qu'il a soif de vivre. Il ne fuit pas l'engagement, il fuit l'ennui, et pour lui l'ennui commence quand la routine s'installe sans que personne ne la remette en question. Il dit ce qu'il pense, sans filtre : avec lui, vous savez toujours où vous en êtes.</p>
+  introduction: `<p>Le Sagittaire ne tient pas en place, pas par instabilité, mais parce qu'il a soif de vivre. <a href="/blog/signes-astrologiques-en-amour/">Il ne fuit pas l'engagement, il fuit l'ennui</a>, et pour lui l'ennui commence quand la routine s'installe sans que personne ne la remette en question. Il dit ce qu'il pense, sans filtre : avec lui, vous savez toujours où vous en êtes.</p>
 <p>Ce qu'il veut, c'est un partenaire de voyage, au sens propre comme au figuré. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Bélier, Lion, Verseau : ses trois compatibilités les plus naturelles et les plus enthousiastes.`,

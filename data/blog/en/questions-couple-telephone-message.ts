@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "On the phone there are no looks, no gestures... just words. That's exactly why good questions work wonders there.",
   introduction: `<p>There's a moment every couple knows, whether they live 800 kilometres or two neighbourhoods apart: the one where the evening call turns into a weather report. «How was your day?» «Fine.» «What are you eating?» «Pasta.» The bond is there, the desire too, but the conversation is running on empty.</p>
 <p>It's normal, actually: at a distance you lose everything that usually feeds an exchange, the looks, the shared context, the gestures. <strong>Only the words are left. And that is precisely why good questions work wonders on the phone: they give the words something to do again.</strong></p>
-<p>Here are 60 questions designed for long-distance exchanges: evenings each at home, genuine long-distance couples, daytime messages, and the long calls that stretch on. Some fit in a text, others deserve an hour on the phone. Up to you to dose them!</p>`,
+<p>Here are 60 questions designed for long-distance exchanges: evenings each at home, <a href="/en/blog/long-distance-relationship/">genuine long-distance couples</a>, daytime messages, and the long calls that stretch on. Some fit in a text, others deserve an hour on the phone. Up to you to dose them!</p>`,
   quickSummary: [
     "60 questions calibrated for phone and messages, from the one-line text to the big evening call.",
     "The format rule: in writing, short questions; out loud, open questions.",

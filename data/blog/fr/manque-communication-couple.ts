@@ -106,7 +106,7 @@ const article: BlogArticleData = {
     {
       id: 'outils-concrets-mieux-communiquer',
       title: "Les outils concrets pour mieux communiquer",
-      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part : elles sont utilisées en thérapie de couple et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
+      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part : elles sont <a href="/blog/exercices-therapie-de-couple/">utilisées en thérapie de couple</a> et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
       subsections: [
         {
           id: 'ecoute-active',

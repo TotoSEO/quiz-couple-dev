@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Questo si ripara</p>
 <ul>
-<li><strong>La routine e la noia</strong>, quando entrambi ve ne lamentate. Sono due persone che vogliono ancora altro.</li>
+<li><strong><a href="/it/blog/routine-di-coppia/">La routine e la noia</a></strong>, quando entrambi ve ne lamentate. Sono due persone che vogliono ancora altro.</li>
 <li><strong>Un calo del desiderio</strong> installato da qualche anno, senza rimproveri dietro.</li>
 <li><strong>Litigi frequenti ma che finiscono</strong>, con qualcuno che torna dopo.</li>
 <li><strong>Una crisi che ha una data</strong>: un lutto, un trasloco, un esaurimento da lavoro, l'arrivo di un figlio.</li>

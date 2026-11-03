@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Krebs mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Hinter dem Panzer, denn einen gibt es immer, ist der Krebs eines der Zeichen, die in der Liebe am meisten geben. Wenn er sich sicher fühlt, ist er ganz da: Er erinnert sich an alles, er spürt, was du brauchst, bevor du es gesagt hast. Und es gibt Tage, an denen er sich ohne Vorwarnung in sich zurückzieht, was der andere oft für Ablehnung hält.</p>
+  introduction: `<p>Hinter dem Panzer, denn einen gibt es immer, ist der Krebs eines der Zeichen, <a href="/de/blog/sternzeichen-in-der-liebe/">die in der Liebe am meisten geben</a>. Wenn er sich sicher fühlt, ist er ganz da: Er erinnert sich an alles, er spürt, was du brauchst, bevor du es gesagt hast. Und es gibt Tage, an denen er sich ohne Vorwarnung in sich zurückzieht, was der andere oft für Ablehnung hält.</p>
 <p>Was er sucht, ist kein Abenteuer, sondern ein Ort, an dem er er selbst sein kann, ohne sich verteidigen zu müssen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Fische schaffen die emotionale Sicherheit, die der Krebs über alles braucht.`,

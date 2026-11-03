@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>66% of women say they do more</strong> than their partner in the preparation, including 43% who say "a lot more". Facing them, 53% of men believe they took an equal share, against only 27% of women. That is not a disagreement about the holiday, it is a disagreement about what happened.</p></li>
 
-<li><p><strong>30%:</strong> the share of couples who argue about going over budget. A stable figure, and the only one a spreadsheet genuinely solves.</p></li>
+<li><p><strong>30%:</strong> the share of couples who argue about <a href="/en/blog/couple-budget/">going over budget</a>. A stable figure, and the only one a spreadsheet genuinely solves.</p></li>
 
 <li><p><strong>28% find the journey tense.</strong> Route choice and driving style top the list of reasons, far ahead of tiredness or the children.</p></li>
 

@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>66 % des femmes disent en faire plus</strong> que leur conjoint dans la préparation, dont 43 % « beaucoup plus ». En face, 53 % des hommes estiment avoir participé à parts égales, contre seulement 27 % des femmes. Ce n'est pas un désaccord sur les vacances, c'est un désaccord sur ce qui s'est passé.</p></li>
 
-<li><p><strong>30 % :</strong> la part des couples qui se disputent sur le dépassement du budget. Un chiffre stable, et le seul qui se règle vraiment avec une feuille de calcul.</p></li>
+<li><p><strong>30 % :</strong> la part des couples qui se disputent sur <a href="/blog/budget-couple/">le dépassement du budget</a>. Un chiffre stable, et le seul qui se règle vraiment avec une feuille de calcul.</p></li>
 
 <li><p><strong>28 % trouvent le trajet tendu.</strong> Le choix de l'itinéraire et le style de conduite arrivent en tête des motifs, loin devant la fatigue ou les enfants.</p></li>
 

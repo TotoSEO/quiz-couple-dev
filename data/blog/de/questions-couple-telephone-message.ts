@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Am Telefon gibt es keine Blicke, keine Gesten... nur Worte. Genau deshalb wirken gute Fragen dort Wunder.",
   introduction: `<p>Es gibt einen Moment, den alle Paare kennen, ob sie 800 Kilometer oder zwei Stadtteile auseinander wohnen: der, in dem der Abendanruf zum Wetterbericht wird. «Wie war dein Tag?» «Ganz gut.» «Was isst du?» «Nudeln.» Die Bindung ist da, die Lust auch, aber das Gespräch läuft leer.</p>
 <p>Das ist eigentlich normal: Auf Distanz verliert man alles, was den Austausch sonst nährt, die Blicke, den gemeinsamen Kontext, die Gesten. <strong>Es bleiben nur die Worte. Und genau deshalb wirken gute Fragen am Telefon Wunder: Sie geben den Worten wieder etwas zu tun.</strong></p>
-<p>Hier sind 60 Fragen, gemacht für den Austausch auf Distanz: die Abende jeder für sich, die echten Fernbeziehungen, die Nachrichten tagsüber, und die langen Anrufe. Manche passen in eine Nachricht, andere verdienen eine Stunde am Telefon. Dosieren ist deine Sache!</p>`,
+<p>Hier sind 60 Fragen, gemacht für den Austausch auf Distanz: die Abende jeder für sich, <a href="/de/blog/fernbeziehung/">die echten Fernbeziehungen</a>, die Nachrichten tagsüber, und die langen Anrufe. Manche passen in eine Nachricht, andere verdienen eine Stunde am Telefon. Dosieren ist deine Sache!</p>`,
   quickSummary: [
     "60 Fragen, kalibriert für Telefon und Nachrichten, von der Einzeiler-Nachricht bis zum großen Abendanruf.",
     "Die Formatregel: schriftlich kurze Fragen; mündlich offene Fragen.",

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Die Jungfrau mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Die Jungfrau macht keine großen Erklärungen. Sie weiß noch, wie du deinen Kaffee magst, sie bereitet vor, was nötig ist, an dem Tag, an dem es dir schlecht geht, sie regelt die Dinge im Hintergrund, damit dein Leben ein bisschen einfacher ist. Ihre Liebe steht in den Details, und man muss hinsehen können.</p>
+  introduction: `<p>Die Jungfrau macht keine großen Erklärungen. Sie weiß noch, wie du deinen Kaffee magst, sie bereitet vor, was nötig ist, an dem Tag, an dem es dir schlecht geht, sie regelt die Dinge im Hintergrund, damit dein Leben ein bisschen einfacher ist. <a href="/de/blog/sternzeichen-in-der-liebe/">Ihre Liebe steht in den Details</a>, und man muss hinsehen können.</p>
 <p>Die Zeichen, die das von selbst verstehen, sind die, bei denen sie sich öffnet. Die anderen finden sie distanziert, ohne je zu wissen, was sie verpasst haben. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Steinbock bieten die Stabilität und Ernsthaftigkeit, die die Jungfrau braucht.`,

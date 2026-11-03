@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Ça se répare</p>
 <ul>
-<li><strong>La routine et l'ennui</strong>, quand les deux s'en plaignent. Ce sont deux personnes qui veulent encore autre chose.</li>
+<li><strong><a href="/blog/routine-dans-le-couple/">La routine et l'ennui</a></strong>, quand les deux s'en plaignent. Ce sont deux personnes qui veulent encore autre chose.</li>
 <li><strong>Une baisse de désir</strong> installée depuis quelques années, sans reproche derrière.</li>
 <li><strong>Des disputes fréquentes mais qui se terminent</strong>, avec quelqu'un qui revient.</li>
 <li><strong>Une crise qui a une date</strong> : un deuil, un déménagement, un burn-out, l'arrivée d'un enfant.</li>

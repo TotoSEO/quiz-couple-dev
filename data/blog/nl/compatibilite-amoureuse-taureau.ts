@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Stier met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Vraag een Stier wat hij zoekt in de liefde en hij zegt iets als “iemand die blijft”. Geen sleur, geen verveling: hij wil de zekerheid dat de ander er morgen nog is. Liefde is voor hem een lekker etentje samen, een fijne bank en de warmte van iemand die je door en door kent.</p>
+  introduction: `<p>Vraag een Stier <a href="/nl/blog/sterrenbeelden-in-de-liefde/">wat hij zoekt in de liefde</a> en hij zegt iets als “iemand die blijft”. Geen sleur, geen verveling: hij wil de zekerheid dat de ander er morgen nog is. Liefde is voor hem een lekker etentje samen, een fijne bank en de warmte van iemand die je door en door kent.</p>
 <p>Niet elk teken kan tegen die stevigheid: sommige hebben nodig dat er iets beweegt, de Stier heeft nodig dat het blijft staan. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Stier met Stier, Maagd of Steenbok: de duurzaamste combinaties van de dierenriem. Soms een beetje te braaf.`,

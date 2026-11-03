@@ -153,7 +153,7 @@ const article: BlogArticleData = {
 <li>Cosa ti dà la sensazione che la tua vita abbia senso?</li>
 <li>Quale consiglio daresti al te di dieci anni fa?</li>
 <li>Cosa ti porti ancora dietro da una storia passata, nel bene o nel male?</li>
-<li>Qual è il tuo rapporto con i soldi, ereditato da chi?</li>
+<li>Qual è <a href="/it/blog/parlare-di-soldi-in-coppia/">il tuo rapporto con i soldi</a>, ereditato da chi?</li>
 <li>Cosa ti farebbe dire di no a un sogno: la paura o la ragione?</li>
 <li>Su cosa hai cambiato idea in questi ultimi anni?</li>
 <li>Cosa non hai mai raccontato a nessuno, nemmeno a me?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
     {
       id: 'futuro-e-progetti',
       title: "Futuro e progetti (81-90)",
-      content: `<p>Non serve aspettare una proposta di matrimonio per sapere se le vostre traiettorie combaciano. Sinceramente, meglio queste domande troppo presto che troppo tardi.</p>
+      content: `<p>Non serve <a href="/it/blog/proposta-di-matrimonio/">aspettare una proposta di matrimonio</a> per sapere se le vostre traiettorie combaciano. Sinceramente, meglio queste domande troppo presto che troppo tardi.</p>
 <ol start="81">
 <li>Dove ti immagini tra cinque anni, e io come ci sono dentro?</li>
 <li>Cos'è non negoziabile nella tua vita futura?</li>
@@ -181,7 +181,7 @@ const article: BlogArticleData = {
     {
       id: 'al-telefono',
       title: "Al telefono o a distanza (91-100)",
-      content: `<p>Dieci domande che funzionano benissimo a voce o per messaggio, per coppie a distanza o serate ognuno a casa propria.</p>
+      content: `<p>Dieci domande che funzionano benissimo a voce o per messaggio, per <a href="/it/blog/relazione-a-distanza/">coppie a distanza</a> o serate ognuno a casa propria.</p>
 <ol start="91">
 <li>Cosa staresti facendo adesso se fossi accanto a te?</li>
 <li>Qual è stata la prima cosa che hai pensato stamattina?</li>

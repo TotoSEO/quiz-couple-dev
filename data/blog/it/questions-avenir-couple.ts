@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Le coppie non falliscono quasi mai per mancanza d'amore. Falliscono su argomenti che non avevano mai messo sul tavolo.",
   introduction: `<p>La maggior parte delle grandi crisi di coppia riguarda argomenti che entrambi sapevano di dover affrontare un giorno: i soldi, i figli, i suoceri, la divisione delle faccende. Il «un giorno» è semplicemente arrivato troppo tardi, in piena crisi, nel peggior momento per parlarne con calma.</p>
 <p><strong>Parlare di futuro non ha mai ucciso una storia solida, mentre non parlarne ne ha uccise molte.</strong> E queste conversazioni non sono né solenni né pesanti. Condotte bene, sono anzi tra le più entusiasmanti che una coppia possa avere!</p>
-<p>Ecco 60 domande sul futuro, classificate per grande tappa: prima di andare a vivere insieme, prima di impegnarsi sul serio, prima di un figlio, attorno ai soldi e sui vostri sogni comuni. Da piluccare PRIMA che gli argomenti diventino urgenti, è tutto il loro interesse.</p>`,
+<p>Ecco 60 domande sul futuro, classificate per grande tappa: prima di andare a vivere insieme, prima di <a href="/it/blog/proposta-di-matrimonio/">impegnarsi sul serio</a>, prima di un figlio, <a href="/it/blog/soldi-e-coppia/">attorno ai soldi</a> e sui vostri sogni comuni. Da piluccare PRIMA che gli argomenti diventino urgenti, è tutto il loro interesse.</p>`,
   quickSummary: [
     "60 domande classificate per tappa: convivere, impegnarsi, un figlio, i soldi, i sogni.",
     "Il principio: parlarne prima che sia urgente, mai in piena crisi.",

@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Das lässt sich reparieren</p>
 <ul>
-<li><strong>Routine und Langeweile</strong>, wenn sich beide darüber beklagen. Das sind zwei Menschen, die noch etwas anderes wollen.</li>
+<li><strong><a href="/de/blog/routine-in-der-beziehung/">Routine und Langeweile</a></strong>, wenn sich beide darüber beklagen. Das sind zwei Menschen, die noch etwas anderes wollen.</li>
 <li><strong>Nachlassendes Verlangen</strong> über einige Jahre hinweg, ohne Vorwurf dahinter.</li>
 <li><strong>Häufige Streits, die aber enden</strong>, weil danach jemand zurückkommt.</li>
 <li><strong>Eine Krise mit Datum</strong>: ein Trauerfall, ein Umzug, ein Burn-out, die Geburt eines Kindes.</li>

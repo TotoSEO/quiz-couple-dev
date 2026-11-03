@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Scorpio with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>If you've ever loved a Scorpio, you know that for them, love is nothing light. They put everything into it: emotions, body, loyalty, their deepest flaws. And they expect the same from the other person. Sometimes they keep their distance to see whether the other person stays anyway: it isn't manipulation, it's protection.</p>
+  introduction: `<p>If you've ever loved a Scorpio, you know that for them, <a href="/en/blog/zodiac-signs-in-love/">love is nothing light</a>. They put everything into it: emotions, body, loyalty, their deepest flaws. And they expect the same from the other person. Sometimes they keep their distance to see whether the other person stays anyway: it isn't manipulation, it's protection.</p>
 <p>What they're looking for is someone who doesn't stay on the surface, and who doesn't leave when things get hard. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Cancer, Virgo, Capricorn: their three deepest and most lasting unions.`,

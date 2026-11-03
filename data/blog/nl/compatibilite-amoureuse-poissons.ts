@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Vissen met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>De Vissen is het laatste teken van de dierenriem, en heeft van alle andere tekens wel iets in zich. Zijn gevoeligheid werkt als een radar: hij merkt wat anderen verbergen, en hij houdt van iemand met een intensiteit die even mooi als ontregelend kan zijn. Het verschil tussen van iemand houden en in iemand opgaan, ziet hij niet altijd goed.</p>
+  introduction: `<p>De Vissen is het laatste teken van de dierenriem, en heeft van alle andere tekens wel iets in zich. Zijn gevoeligheid werkt als een radar: hij merkt wat anderen verbergen, en <a href="/nl/blog/sterrenbeelden-in-de-liefde/">hij houdt van iemand met een intensiteit</a> die even mooi als ontregelend kan zijn. Het verschil tussen van iemand houden en in iemand opgaan, ziet hij niet altijd goed.</p>
 <p>Hij zoekt iemand die hem begrijpt zonder dat hij alles hoeft uit te leggen, en die niet “je overdrijft” zegt als hij huilt. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Kreeft, Schorpioen, Stier: de drie partners die zijn gevoeligheid begrijpen en beschermen.`,

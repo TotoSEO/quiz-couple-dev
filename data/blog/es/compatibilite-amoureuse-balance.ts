@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Libra con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Libra tiene fama de indecisa. No es que evite las decisiones, es que busca la decisión justa, la que no hiere a nadie. Piensa en pareja casi por naturaleza, lo que la hace atenta, y también alguien que puede olvidar sus propias necesidades a fuerza de buscar el equilibrio.</p>
+  introduction: `<p>Libra tiene fama de indecisa. No es que evite las decisiones, es que busca la decisión justa, la que no hiere a nadie. <a href="/es/blog/signos-del-zodiaco-en-el-amor/">Piensa en pareja casi por naturaleza</a>, lo que la hace atenta, y también alguien que puede olvidar sus propias necesidades a fuerza de buscar el equilibrio.</p>
 <p>Lo que quiere es alguien con quien se sienta bien, y que sepa decidir a veces por ella, sin presionarla. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Géminis y Acuario: los dos signos de Aire que le entienden sin esfuerzo.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Sagittarius with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Sagittarius can't sit still, not out of instability, but because they're hungry for life. They don't run from commitment, they run from boredom, and for them boredom starts when routine settles in without anyone questioning it. They say what they think, no filter: with them, you always know where you stand.</p>
+  introduction: `<p>Sagittarius can't sit still, not out of instability, but because they're hungry for life. They don't run from commitment, <a href="/en/blog/zodiac-signs-in-love/">they run from boredom</a>, and for them boredom starts when routine settles in without anyone questioning it. They say what they think, no filter: with them, you always know where you stand.</p>
 <p>What they want is a travel companion, literally and figuratively. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Aries, Leo, Aquarius: their three most natural and enthusiastic matches.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Die Waage mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Die Waage gilt als unentschlossen. Es ist nicht so, dass sie Entscheidungen ausweicht, sie sucht die richtige, die niemanden verletzt. Sie denkt fast von Natur aus zu zweit, was sie aufmerksam macht, und auch zu jemandem, der die eigenen Bedürfnisse vergisst, während er das Gleichgewicht sucht.</p>
+  introduction: `<p>Die Waage gilt als unentschlossen. Es ist nicht so, dass sie Entscheidungen ausweicht, sie sucht die richtige, die niemanden verletzt. <a href="/de/blog/sternzeichen-in-der-liebe/">Sie denkt fast von Natur aus zu zweit</a>, was sie aufmerksam macht, und auch zu jemandem, der die eigenen Bedürfnisse vergisst, während er das Gleichgewicht sucht.</p>
 <p>Was sie will, ist jemand, bei dem sie sich wohlfühlt, und der manchmal für sie entscheiden kann, ohne sie zu drängen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Zwillinge und Wassermann sind Seelenverwandte, Luft versteht Luft ohne große Erklärungen.`,

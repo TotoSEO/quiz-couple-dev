@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Il Capricorno con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Il Capricorno ha fama di essere freddo in amore. Non è freddo, è serio, e in un mondo dove l'amore si tratta spesso come un passatempo, questo passa per distanza. Non si innamora facilmente, ma quando sceglie qualcuno, non torna indietro.</p>
+  introduction: `<p>Il Capricorno ha <a href="/it/blog/segni-zodiacali-in-amore/">fama di essere freddo in amore</a>. Non è freddo, è serio, e in un mondo dove l'amore si tratta spesso come un passatempo, questo passa per distanza. Non si innamora facilmente, ma quando sceglie qualcuno, non torna indietro.</p>
 <p>Quello che si aspetta non è passione cieca, è qualcuno su cui contare, che mantiene le promesse e che non sparisce quando si complica. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Vergine sono le sue compatibilità naturali, Terra con Terra, costruzione condivisa.`,

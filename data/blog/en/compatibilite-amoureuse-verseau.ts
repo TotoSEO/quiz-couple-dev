@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Aquarius with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Aquarius is probably the most misunderstood sign in love. People call them distant, detached, unable to commit. The truth is they love, just not the way they're told to: no fusion, no "you're everything to me". They want a partner who is a friend first, someone to put the world to rights with at three in the morning, and they need air to come back to the other person.</p>
+  introduction: `<p>Aquarius is probably <a href="/en/blog/zodiac-signs-in-love/">the most misunderstood sign in love</a>. People call them distant, detached, unable to commit. The truth is they love, just not the way they're told to: no fusion, no "you're everything to me". They want a partner who is a friend first, someone to put the world to rights with at three in the morning, and they need air to come back to the other person.</p>
 <p>Try to hold them and they drift away. Leave them free and they come back. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Gemini, Libra, Sagittarius: their three most harmonious and stimulating partners.`,

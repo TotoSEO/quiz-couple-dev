@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Piscis con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Piscis es el último signo del zodiaco, y lleva un poco de todos los demás dentro. Su sensibilidad es un radar: percibe lo que los demás esconden, y quiere con una intensidad que puede ser tan bonita como desestabilizante. No distingue bien entre querer a alguien y fundirse con esa persona.</p>
+  introduction: `<p>Piscis es el último signo del zodiaco, y lleva un poco de todos los demás dentro. Su sensibilidad es un radar: percibe lo que los demás esconden, y <a href="/es/blog/signos-del-zodiaco-en-el-amor/">quiere con una intensidad</a> que puede ser tan bonita como desestabilizante. No distingue bien entre querer a alguien y fundirse con esa persona.</p>
 <p>Lo que busca es alguien que lo entienda sin tener que explicarlo todo, y que no le diga «estás exagerando» cuando llora. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Cáncer y Escorpio: las uniones de Agua donde Piscis se siente comprendido sin palabras.`,

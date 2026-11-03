@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Leo with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>People often say Leo only thinks about themselves. It's simpler than that: they need to see that their presence matters, that the other person looks at them, that what they bring is recognised. It's not vanity, it's their way of loving. Someone who fades into the background bores them, someone who wants to take their place wears them out.</p>
+  introduction: `<p>People often say Leo only thinks about themselves. It's simpler than that: they need to see that their presence matters, that the other person looks at them, that what they bring is recognised. It's not vanity, it's <a href="/en/blog/zodiac-signs-in-love/">their way of loving</a>. Someone who fades into the background bores them, someone who wants to take their place wears them out.</p>
 <p>The ideal is someone with their own light who admires theirs in return. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Sagittarius and Aries share their Fire energy, these relationships are rarely lukewarm.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Die Fische mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Die Fische sind das letzte Zeichen des Tierkreises, und sie tragen ein bisschen von allen anderen in sich. Ihre Sensibilität ist ein Radar: Sie spüren, was andere verbergen, und sie lieben mit einer Intensität, die so schön wie verstörend sein kann. Sie unterscheiden nicht gut zwischen jemanden lieben und in jemandem aufgehen.</p>
+  introduction: `<p>Die Fische sind das letzte Zeichen des Tierkreises, und sie tragen ein bisschen von allen anderen in sich. Ihre Sensibilität ist ein Radar: Sie spüren, was andere verbergen, und <a href="/de/blog/sternzeichen-in-der-liebe/">sie lieben mit einer Intensität</a>, die so schön wie verstörend sein kann. Sie unterscheiden nicht gut zwischen jemanden lieben und in jemandem aufgehen.</p>
 <p>Was sie suchen, ist jemand, der sie versteht, ohne dass sie alles erklären müssen, und der nicht „du übertreibst“ sagt, wenn sie weinen. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Krebs und Skorpion verstehen ihre emotionale Sprache, Wasser spricht zu Wasser.`,

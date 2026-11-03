@@ -153,7 +153,7 @@ const article: BlogArticleData = {
 <li>¿Qué te da la sensación de que tu vida tiene sentido?</li>
 <li>¿Qué consejo le darías al tú de hace diez años?</li>
 <li>¿Qué llevas todavía de una historia pasada, para bien o para mal?</li>
-<li>¿Cuál es tu relación con el dinero, y de quién la heredaste?</li>
+<li>¿Cuál es <a href="/es/blog/hablar-de-dinero-en-pareja/">tu relación con el dinero</a>, y de quién la heredaste?</li>
 <li>¿Qué te haría decir no a un sueño: el miedo o la razón?</li>
 <li>¿Sobre qué has cambiado de opinión estos últimos años?</li>
 <li>¿Qué no le has contado nunca a nadie, ni siquiera a mí?</li>
@@ -181,7 +181,7 @@ const article: BlogArticleData = {
     {
       id: 'por-telefono-o-a-distancia',
       title: "Por teléfono o a distancia (91-100)",
-      content: `<p>Diez preguntas que funcionan perfectamente en voz alta o por mensaje, para parejas a distancia o noches cada uno en su casa.</p>
+      content: `<p>Diez preguntas que funcionan perfectamente en voz alta o por mensaje, para <a href="/es/blog/relacion-a-distancia/">parejas a distancia</a> o noches cada uno en su casa.</p>
 <ol start="91">
 <li>¿Qué estarías haciendo ahora mismo si yo estuviera a tu lado?</li>
 <li>¿Cuál fue lo primero que pensaste esta mañana?</li>

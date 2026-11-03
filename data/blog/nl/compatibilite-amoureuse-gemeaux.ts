@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Tweelingen met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Als er één ding is waar een Tweelingen een hekel aan heeft, dan is het zich opgesloten voelen: in een hokje, in een sleur, in een beeld van hem dat de ander voor hem heeft bedacht. Mensen noemen hem wispelturig, maar hij is eerder veelzijdig. Hij wordt verliefd op een geest voordat hij verliefd wordt op een lichaam, en de dag dat het gesprek stopt, valt er iets weg.</p>
+  introduction: `<p>Als er één ding is waar een Tweelingen een hekel aan heeft, dan is het zich opgesloten voelen: in een hokje, in een sleur, in een beeld van hem dat de ander voor hem heeft bedacht. Mensen noemen hem wispelturig, maar hij is eerder veelzijdig. <a href="/nl/blog/sterrenbeelden-in-de-liefde/">Hij wordt verliefd op een geest</a> voordat hij verliefd wordt op een lichaam, en de dag dat het gesprek stopt, valt er iets weg.</p>
 <p>De tekens die bij hem passen, zijn dus de tekens die hem niet proberen vast te pinnen. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Weegschaal en Waterman: zijn twee grote matches onder de luchttekens, met hen raakt het gesprek nooit op.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Steinbock mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Der Steinbock gilt in der Liebe als kalt. Er ist nicht kalt, er ist ernst, und in einer Welt, in der Liebe oft wie eine Unterhaltung behandelt wird, geht das als Distanz durch. Er verliebt sich nicht leicht, aber wenn er jemanden gewählt hat, macht er keinen Rückzieher.</p>
+  introduction: `<p>Der Steinbock <a href="/de/blog/sternzeichen-in-der-liebe/">gilt in der Liebe als kalt</a>. Er ist nicht kalt, er ist ernst, und in einer Welt, in der Liebe oft wie eine Unterhaltung behandelt wird, geht das als Distanz durch. Er verliebt sich nicht leicht, aber wenn er jemanden gewählt hat, macht er keinen Rückzieher.</p>
 <p>Was er erwartet, ist keine blinde Leidenschaft, sondern jemand, auf den er zählen kann, der seine Versprechen hält und nicht verschwindet, wenn es kompliziert wird. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier und Jungfrau teilen seine Erdverbundenheit, diese Beziehungen sind wie Fels in der Brandung.`,

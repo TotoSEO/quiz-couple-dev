@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Leeuw met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Er wordt vaak gezegd dat een Leeuw alleen aan zichzelf denkt. Het is simpeler: hij moet zien dat zijn aanwezigheid ertoe doet, dat de ander naar hem kijkt, dat wat hij geeft gezien wordt. Dat is geen ijdelheid, zo houdt hij nu eenmaal van iemand. Iemand die zich voor hem wegcijfert, verveelt hem, iemand die zijn plek wil innemen, put hem uit.</p>
+  introduction: `<p>Er wordt vaak gezegd dat een Leeuw alleen aan zichzelf denkt. Het is simpeler: hij moet zien dat zijn aanwezigheid ertoe doet, dat de ander naar hem kijkt, dat wat hij geeft gezien wordt. Dat is geen ijdelheid, <a href="/nl/blog/sterrenbeelden-in-de-liefde/">zo houdt hij nu eenmaal van iemand</a>. Iemand die zich voor hem wegcijfert, verveelt hem, iemand die zijn plek wil innemen, put hem uit.</p>
 <p>Ideaal is iemand met een eigen licht, die het zijne op zijn beurt bewondert. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Boogschutter en Ram delen zijn vuur: hun relaties zijn zelden lauw.`,

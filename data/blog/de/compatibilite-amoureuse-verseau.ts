@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Wassermann mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Der Wassermann ist wohl das am meisten missverstandene Zeichen in der Liebe. Man nennt ihn distanziert, unnahbar, bindungsunfähig. Dabei liebt er, nur nicht so, wie man es ihm vorschreibt: keine Verschmelzung, kein „du bist alles für mich“. Er will einen Partner, der zuerst ein Freund ist, mit dem er um drei Uhr morgens die Welt neu erfinden kann, und er braucht Luft, um zum anderen zurückzukommen.</p>
+  introduction: `<p>Der Wassermann ist wohl <a href="/de/blog/sternzeichen-in-der-liebe/">das am meisten missverstandene Zeichen in der Liebe</a>. Man nennt ihn distanziert, unnahbar, bindungsunfähig. Dabei liebt er, nur nicht so, wie man es ihm vorschreibt: keine Verschmelzung, kein „du bist alles für mich“. Er will einen Partner, der zuerst ein Freund ist, mit dem er um drei Uhr morgens die Welt neu erfinden kann, und er braucht Luft, um zum anderen zurückzukommen.</p>
 <p>Wer ihn festhalten will, verliert ihn. Wer ihn frei lässt, bekommt ihn zurück. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Zwillinge und Waage sind seine natürlichen Verbündeten, intellektuell, leicht und ohne Erstickungsgefahr.`,

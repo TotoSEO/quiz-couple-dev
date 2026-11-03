@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Sagitario con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Sagitario no para quieto, no por inestabilidad, sino porque tiene sed de vivir. No huye del compromiso, huye del aburrimiento, y para él el aburrimiento empieza cuando la rutina se instala sin que nadie la cuestione. Dice lo que piensa, sin filtro: con él, siempre sabes a qué atenerte.</p>
+  introduction: `<p>Sagitario no para quieto, no por inestabilidad, sino porque tiene sed de vivir. <a href="/es/blog/signos-del-zodiaco-en-el-amor/">No huye del compromiso, huye del aburrimiento</a>, y para él el aburrimiento empieza cuando la rutina se instala sin que nadie la cuestione. Dice lo que piensa, sin filtro: con él, siempre sabes a qué atenerte.</p>
 <p>Lo que quiere es un compañero de viaje, en sentido literal y figurado. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Aries y Leo: fuego con fuego. Relaciones intensas, vibrantes, que nunca se estancan.`,

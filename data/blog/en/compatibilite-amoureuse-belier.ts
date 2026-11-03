@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Aries with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Aries doesn't wait. They want, they go for it, they love, and if the other person doesn't keep up, they move on. It's not that they don't care: they live fast, and not everyone can keep that pace. In love, that means beginnings like fireworks, and sometimes stories that burn out before they've had time to settle.</p>
+  introduction: `<p>Aries doesn't wait. They want, they go for it, they love, and if the other person doesn't keep up, they move on. It's not that they don't care: they live fast, and not everyone can keep that pace. <a href="/en/blog/zodiac-signs-in-love/">In love, that means beginnings like fireworks</a>, and sometimes stories that burn out before they've had time to settle.</p>
 <p>What they're looking for is someone who answers back, who doesn't cave at the first tension and doesn't fade away either. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Leo and Libra are their best matches, for completely different reasons.`,

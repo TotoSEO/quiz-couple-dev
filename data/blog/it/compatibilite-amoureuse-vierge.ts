@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `La Vergine con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>La Vergine non fa grandi dichiarazioni. Si ricorda di come prendi il caffè, prepara quello che serve il giorno in cui stai male, sistema le cose dietro le quinte perché la tua vita sia un po' più semplice. Il suo amore si legge nei dettagli, e bisogna saper guardare.</p>
+  introduction: `<p>La Vergine non fa grandi dichiarazioni. Si ricorda di come prendi il caffè, prepara quello che serve il giorno in cui stai male, sistema le cose dietro le quinte perché la tua vita sia un po' più semplice. <a href="/it/blog/segni-zodiacali-in-amore/">Il suo amore si legge nei dettagli</a>, e bisogna saper guardare.</p>
 <p>I segni che lo capiscono da soli sono quelli con cui si apre. Gli altri la trovano distante, senza sapere cosa si sono persi. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Capricorno sono le sue compatibilità più solide, Terra con Terra, concreti fino in fondo.`,

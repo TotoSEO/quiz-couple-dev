@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Verseau avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Le Verseau est sans doute le signe le plus mal compris en amour. On le dit distant, détaché, incapable de s'engager. En fait, il aime, mais pas comme on lui dit d'aimer : pas de fusion, pas de « tu es tout pour moi ». Il veut un partenaire qui soit d'abord un ami, avec qui refaire le monde à trois heures du matin, et il a besoin d'air pour revenir vers l'autre.</p>
+  introduction: `<p>Le Verseau est sans doute <a href="/blog/signes-astrologiques-en-amour/">le signe le plus mal compris en amour</a>. On le dit distant, détaché, incapable de s'engager. En fait, il aime, mais pas comme on lui dit d'aimer : pas de fusion, pas de « tu es tout pour moi ». Il veut un partenaire qui soit d'abord un ami, avec qui refaire le monde à trois heures du matin, et il a besoin d'air pour revenir vers l'autre.</p>
 <p>Si vous essayez de le retenir, il s'éloigne. Si vous le laissez libre, il revient. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Gémeaux, Balance, Sagittaire : ses trois partenaires les plus harmonieux et stimulants.`,

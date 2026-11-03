@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `L'Acquario con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>L'Acquario è forse il segno più frainteso in amore. Lo dicono distante, distaccato, incapace di impegnarsi. In realtà ama, ma non come gli dicono di amare: niente fusione, niente «sei tutto per me». Vuole un partner che sia prima di tutto un amico, con cui rifare il mondo alle tre di notte, e ha bisogno d'aria per tornare verso l'altro.</p>
+  introduction: `<p>L'Acquario è forse <a href="/it/blog/segni-zodiacali-in-amore/">il segno più frainteso in amore</a>. Lo dicono distante, distaccato, incapace di impegnarsi. In realtà ama, ma non come gli dicono di amare: niente fusione, niente «sei tutto per me». Vuole un partner che sia prima di tutto un amico, con cui rifare il mondo alle tre di notte, e ha bisogno d'aria per tornare verso l'altro.</p>
 <p>Se provi a trattenerlo, si allontana. Se lo lasci libero, torna. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Gemelli e Bilancia sono le sue anime gemelle, Aria con Aria, libertà condivisa.`,

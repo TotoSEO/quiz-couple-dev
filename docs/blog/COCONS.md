@@ -66,8 +66,7 @@ commentaire en tête de chaque bloc.
 - [x] Cocon 4 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 2 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 5 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 18 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 6 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 3 avril 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
-- [ ] Entrants des cocons 2 à 6 : `QUIZ_RELATED_ARTICLES` (tests → piliers),
-      passages des articles existants vers les piliers, CLAUDE.md.
+- [x] Entrants des cocons 2 à 6 : `QUIZ_RELATED_ARTICLES` (tests → piliers) à chaque cocon, et le 3 novembre 2026 les passages des articles déjà publiés vers les pages des cocons (`scratchpad/cocons/entrants.py` : 137 liens dans 117 fichiers, six langues ; détail dans « Les liens entrants depuis les articles publiés »).
 
 ## Ce qu'on a appris sur le cocon 1
 
@@ -196,3 +195,46 @@ commentaire en tête de chaque bloc.
   fissure au sol et une aube (`aube`, soleil derrière les collines) ; un
   objet « caché dans le dos » se dessine dans `derriere` à moitié derrière
   le corps du personnage.
+
+## Les liens entrants depuis les articles publiés
+
+Thomas, le 3 novembre 2026 : « assure-toi que les planifications sont niquels,
+que les liens de maillage s'ajoutent automatiquement entre les articles déjà
+publiés vers les nouveaux ». Le mécanisme est `stripFutureLinks` (generate.js) :
+un lien écrit aujourd'hui vers un article programmé est rendu en texte simple
+(et sa carte « Lire aussi » retirée) jusqu'à la date de l'article, puis devient
+un vrai lien à la première reconstruction qui suit. Les reconstructions sont à
+2 h, 6 h, 8 h, 10 h, 12 h, 14 h et 16 h UTC (pg_cron `site-reconstruction`) :
+un article daté 8 h 30 à Paris sort à 9 h en hiver et à 10 h en été. Les 69
+articles programmés (16 de la réserve d'avant, du 7 novembre au 26 décembre
+2026, puis les 54 des cocons, du 28 décembre 2026 au 2 avril 2027) ont tous une
+date distincte et les six langues partagent la même.
+
+Les liens posés, sur un passage qui existait déjà (`entrants.py`, ancre ≤ 8
+mots, une occurrence par fichier) :
+
+- vers `signes-astrologiques-en-amour` : les douze pages
+  `compatibilite-amoureuse-*`, dans l'introduction, sur la phrase qui dit
+  comment le signe aime (« sa façon d'aimer », « ce qu'il cherche en amour »,
+  « Son amour se lit dans les détails »...), six langues ;
+- vers `therapie-de-couple` : `femme-malheureuse-en-couple` (« thérapie de
+  couple n'est pas un aveu d'échec », six langues), `sauver-son-couple` (fr,
+  avec `quand-faire-une-therapie-de-couple` sur « plus on y va tôt » et
+  `therapie-de-couple-comment-ca-se-passe` sur « Un bon thérapeute ne dit pas
+  qui a raison »), `manque-communication-couple` (fr, « utilisées en thérapie
+  de couple » vers les exercices) ;
+- vers `demande-en-mariage` : `questions-avenir-couple` (« s'engager pour de
+  bon », six langues) et `questions-a-poser-a-son-copain` (« Pas besoin
+  d'attendre une demande en mariage », fr, en, de, it, nl) ;
+- vers `raviver-la-flamme-dans-son-couple` et `routine-dans-le-couple` :
+  `choses-pas-accepter-couple` (« phases de routine »),
+  `arreter-ou-continuer-relation` (« La routine et l'ennui »),
+  `sauver-son-couple` (« La routine sans intention ») ;
+- vers `argent-et-couple`, `parler-d-argent-en-couple`, `budget-couple`,
+  `disputes-d-argent-dans-le-couple` : `questions-avenir-couple` (« autour de
+  l'argent »), `questions-a-poser-a-son-copain` (« ton rapport à l'argent »),
+  `disputes-couple-vacances` (« le dépassement du budget »),
+  `disputes-couple` (fr, « le sujet numéro un, toutes études confondues ») ;
+- vers `relation-a-distance` : `questions-a-poser-a-son-copain` (« les couples
+  à distance ») et `questions-couple-telephone-message` (« les vrais couples à
+  distance », programmé le 24 novembre 2026), six langues.
