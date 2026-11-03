@@ -65,7 +65,7 @@ commentaire en tête de chaque bloc.
 - [x] Cocon 3 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 14 février 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 4 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 2 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 5 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 18 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
-- [ ] Cocon 6
+- [x] Cocon 6 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 3 avril 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [ ] Entrants des cocons 2 à 6 : `QUIZ_RELATED_ARTICLES` (tests → piliers),
       passages des articles existants vers les piliers, CLAUDE.md.
 
@@ -169,3 +169,30 @@ commentaire en tête de chaque bloc.
   tiroir ouvert, un billet, un calendrier sans jour entouré, des amis en
   silhouettes ; un perso peut se poser en petit dans un cadre de téléphone
   dessiné en `devant`.
+
+## Ce qu'on a appris sur le cocon 6
+
+- Le passage à l'heure d'été : le dernier dimanche de mars 2027 est le 28,
+  les articles du 29 mars, du 31 mars et du 2 avril portent `+02:00` dans
+  leur `publishedAt` (8 h 30 heure de Paris), les six précédents `+01:00`.
+  Un cocon à cheval sur le dernier dimanche de mars ou d'octobre se relit.
+- Un cocon sur l'astrologie dit d'abord ce que la recherche sait (Voas 2007
+  sur dix millions de couples mariés, Forer 1948 et ses 4,26/5, Carlson 1985
+  dans Nature, Pew 2018), puis joue : la tradition est présentée comme une
+  tradition (« d'après l'astrologie »), jamais comme un fait, et chaque
+  classement renvoie au test qui mesure la même chose sans date de
+  naissance (confiance, jalousie, langages de l'amour, infidélité, emprise,
+  compatibilité sexuelle) et à l'évaluation.
+- Le pilier porte 34 liens dans le texte : les huit articles, les douze
+  pages `compatibilite-amoureuse-*` (présentes dans les six langues), les
+  trois outils et l'évaluation. Les classements renvoient aux pages des trois
+  signes de leur podium.
+- Quand la requête est une question (« welche Sternzeichen passen nicht
+  zusammen », « sterrenbeelden die niet bij elkaar passen »), l'adresse la
+  reprend telle quelle ; `forme.py` interdit « echt » dans les titres
+  néerlandais, d'où « En in de praktijk » pour « Et dans la vraie vie ».
+- `images.mjs` a reçu une roue du zodiaque et des constellations dessinées
+  dans les étoiles, un cœur (avec cadenas ou chaîne), un bouquet, une
+  fissure au sol et une aube (`aube`, soleil derrière les collines) ; un
+  objet « caché dans le dos » se dessine dans `derriere` à moitié derrière
+  le corps du personnage.
