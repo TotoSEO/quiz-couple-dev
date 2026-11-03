@@ -827,3 +827,86 @@ l'onglet Leads. capture.js range désormais une adresse de page /nl/ en `nl`
 Une langue ajoutée au site doit aussi entrer dans la liste sparse-checkout
 d'emails-parcours.yml et de brevo-reglages.yml : sans son dossier, elle reste
 hors du parcours.
+
+## 3 novembre 2026 : la lecture des campagnes, et ce qui ferait ouvrir
+
+Thomas : « regarde côté Brevo ce que donnent les campagnes de mail, regarde
+quoi optimiser pour avoir plus d'ouvertures ». La lecture (`verif` de
+`brevo-reglages.yml`, 18 h 28 UTC, chiffres d'ensemble des campagnes et des
+étiquettes, jamais une personne) :
+
+| | Remis | Ouvertures uniques | Clics uniques |
+|---|---|---|---|
+| `e1` dans la minute, maquette (API transactionnelle, depuis le 29 octobre) | 290 | 129 (44 %) | 7 (2,4 %) |
+| `e1` dans la minute, sobre | 308 | 133 (43 %) | 14 (4,5 %) |
+| Toutes les campagnes du soir depuis le 24 octobre | 1 098 | 51 (4,6 %, dont 28 par Apple Mail) | 58 |
+| dont Gmail | 883 | 19 (2,2 %) | 1 |
+| dont iCloud | 50 | 8 (16 %) | |
+| `e2` par campagne (test A/B, maquette puis sobre) | 210 et 147 | 3 et 1 (1,4 % et 0,7 %) | 8 et 7 |
+
+Aujourd'hui, 123 adresses sont arrivées (50 en anglais, 36 en espagnol, 26 en
+français, 10 en italien, 1 en allemand) ; 84 `e1` sont partis dans la minute.
+Dans la file du soir, 429 `e1` (97 de moins de 48 heures) et 613 `e2`
+attendent ; les deux derniers soirs ont envoyé cent `e2` anglais chacun. Sur
+la page de l'évaluation, les e-mails ont amené 22 visites, 2 « Commencer »,
+1 évaluation, 0 vente.
+
+Ce que ça dit :
+
+- **Le même e-mail, du même expéditeur, sur le même domaine, est ouvert par
+  44 % des gens quand il part dans la minute par l'API transactionnelle, et
+  par 2 à 5 % quand il part le soir en campagne.** Deux causes, qu'on ne
+  peut pas séparer sans essai : le moment (la personne est encore sur le site
+  et reconnaît l'expéditeur) et le classement (une campagne tombe dans
+  Promotions ou dans les spams chez Gmail, un envoi transactionnel dans la
+  boîte de réception). Les deux plaident pour la même chose : ne plus rien
+  envoyer en campagne.
+- **L'`e2` est l'e-mail qui vend** (la vraie question des cent, le prix, la
+  réduction), et c'est celui que personne n'ouvre : il ne part qu'en
+  campagne, à cent par soir, et 613 attendent.
+- **L'espagnol est perdu :** 36 adresses par jour, aucune n'a l'`e1` dans la
+  minute (l'e-mail ne peut pas dire le prix de l'Amérique latine), toutes
+  passent en dernier dans la file du soir, et l'`e1` n'y est gardé que sept
+  jours : à cent par soir, pris par les `e2`, elles ne reçoivent rien, ou un
+  e-mail qu'elles ouvrent à 2 %.
+- **Le test A/B :** à ouvertures égales, la version sobre fait deux fois plus
+  de clics que la maquette sur l'`e1` immédiat (14 contre 7, sur 300 remis
+  chacune). C'est petit (une dizaine de clics d'écart) ; on relit à 500 remis
+  par version avant de trancher. En campagne, rien à départager, comme le
+  28 octobre.
+- **Après l'ouverture, le problème est celui du site :** 22 visites pour 1
+  évaluation et 0 vente, dans la proportion des visiteurs qui arrivent par
+  Google.
+
+Ce qui ferait ouvrir, par ordre de gain attendu (à décider par Thomas, parce
+que chaque point change ce qui part, et que `emails/reglages.mjs` ne bouge
+que par une PR) :
+
+1. **Envoyer l'`e2` par l'API transactionnelle, comme l'`e1`.** Dans le
+   passage du soir, `envoyerGroupe` créerait pour les `e2` un envoi par
+   adresse (`smtp/email`, le corps de `corpsBrevo` qui existe déjà, avec
+   l'en-tête `List-Unsubscribe` et l'étiquette `parcours-e2-a|b`) au lieu
+   d'une liste et d'une campagne ; le webhook transactionnel retrouve déjà
+   un envoi par son identifiant de message. Même budget (le soir, dans les
+   300 envois par jour de l'offre gratuite), même fenêtre de 18 à 21 heures,
+   même délai de 66 heures après l'`e1` remis. Si les ouvertures de l'`e2`
+   passent de 1,4 % à quelques dizaines de pour cent, c'est le classement qui
+   faisait tout, et il n'y a plus aucune raison de garder une campagne.
+2. **Un `e1` espagnol sans prix, dans la minute.** L'`e1` dit « 100 questions
+   pour faire le point à deux » ; le prix n'est que dans le ticket, que le
+   gabarit sait omettre (`<!--prix-->`). Un `e1` espagnol sans ticket peut
+   partir dans la minute comme les autres (ajouter `es` à
+   `immediat.langues` et un modèle sans prix dans `emails_modeles`), et le
+   prix se découvre sur la page, qui connaît la zone. Une adresse sur trois
+   arrive en espagnol.
+3. **Laisser le soir aux `e2` :** c'est déjà le cas de fait, la file sert les
+   `e1` de moins de 48 heures (presque tous partis dans la minute), puis les
+   `e2`. Avec le point 1, la retenue de cent par soir peut remonter, puisque
+   ce ne sont plus des campagnes qui partent.
+4. **Ce qui reste à Thomas :** inscrire `mail.quiz-couple.com` dans Google
+   Postmaster Tools (c'est le seul endroit qui dit la part rangée en spam chez
+   Gmail), et poser SPF et DMARC sur le domaine racine chez le registraire.
+5. **Les sujets :** celui de l'`e1` (« 100 questions pour faire le point à
+   deux ») et celui de l'`e2` (« Compte commun ou chacun son argent ? ») sont
+   bons ; un sujet avec le prénom se testera quand l'`e2` partira en
+   transactionnel, pas avant, pour ne mesurer qu'une chose à la fois.
