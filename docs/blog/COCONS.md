@@ -63,7 +63,7 @@ commentaire en tête de chaque bloc.
 - [x] Cocon 1 : fr · en · es · de · it · nl · images · liens entrants (`QUIZ_RELATED_ARTICLES`, CLAUDE.md) · PR (3 novembre 2026)
 - [x] Cocon 2 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 29 janvier 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [x] Cocon 3 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 14 février 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
-- [ ] Cocon 4
+- [x] Cocon 4 : 54 pages écrites et vérifiées le 3 novembre 2026 (build daté au 2 mars 2027, `verifie-article`, `verifie-langue liens nl`), entrants dans `QUIZ_RELATED_ARTICLES`.
 - [ ] Cocon 5
 - [ ] Cocon 6
 - [ ] Entrants des cocons 2 à 6 : `QUIZ_RELATED_ARTICLES` (tests → piliers),
@@ -125,3 +125,25 @@ commentaire en tête de chaque bloc.
   de sortie (cheminée, luge, sapin, tente, feu de camp, vélos, bougies,
   cadeau) et une scène peut poser sa propre `<defs>` dans `derriere` (le
   vichy du panier).
+
+## Ce qu'on a appris sur le cocon 4
+
+- Un sujet de droit change de réponse à chaque langue, et parfois à l'intérieur
+  d'une langue : le néerlandais distingue les Pays-Bas (beperkte gemeenschap
+  depuis 2018, samenlevingscontract, en/of-rekening, BKR) et la Belgique
+  (wettelijk stelsel, wettelijk samenwonen, OCMW), l'anglais les États-Unis
+  (community property / equitable distribution) et le Royaume-Uni (pas de
+  régime, pas de common-law marriage, financial association sur le dossier de
+  crédit), l'espagnol la Catalogne et les Baléares (séparation de biens par
+  défaut). On écrit la section « ce que dit la loi » pour chaque pays, jamais
+  en traduisant la française.
+- Les exemples chiffrés se recalculent par langue, et les pourcentages doivent
+  être justes par rapport à l'exemple (en français, « 55 %, 30 % et 15 % »
+  avait été écrit pour un exemple qui donnait 65, 20 et 15) : un seul script
+  par langue pour les parts, pas de chiffre écrit de tête.
+- `forme.py` refuse aussi « echt » (néerlandais) et « vraiment » dans un H2 :
+  on l'apprend à chaque langue.
+- `images.mjs` a reçu les accessoires de l'argent : feuille de calcul, pots de
+  pièces, balance à plateaux, sacs de courses, ticket de caisse déroulé,
+  calculatrice, enveloppe, piles de pièces (un perso debout dessus se place
+  avec `y` au sommet de la pile).

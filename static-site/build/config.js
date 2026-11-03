@@ -2025,6 +2025,16 @@ export const BLOG_ARTICLES = [
     slugs: { fr: 'pimenter-son-couple', en: 'spice-up-your-relationship', es: 'avivar-la-pasion-en-pareja', de: 'mehr-leidenschaft-in-der-beziehung', it: 'ravvivare-la-passione-nella-coppia', nl: 'passie-terug-in-je-relatie' },
     publishedAt: '2027-02-13T08:30:00+01:00',
   },
+  // ── Cocon 4 : l'argent dans le couple (docs/blog/COCONS.md) ──
+  { internalSlug: 'argent-et-couple', category: 'vie-de-couple', featuredImage: '/blog/argent-et-couple.webp', slugs: { fr: 'argent-et-couple', en: 'money-and-relationships', es: 'dinero-y-pareja', de: 'geld-in-der-beziehung', it: 'soldi-e-coppia', nl: 'geld-in-je-relatie' }, publishedAt: '2027-02-14T08:30:00+01:00' },
+  { internalSlug: 'compte-commun-ou-compte-separe', category: 'vie-de-couple', featuredImage: '/blog/compte-commun-ou-compte-separe.webp', slugs: { fr: 'compte-commun-ou-compte-separe', en: 'joint-account-or-separate-accounts', es: 'cuenta-conjunta-o-cuentas-separadas', de: 'gemeinschaftskonto-oder-getrennte-konten', it: 'conto-cointestato-o-conti-separati', nl: 'gezamenlijke-rekening-of-gescheiden-rekeningen' }, publishedAt: '2027-02-15T08:30:00+01:00' },
+  { internalSlug: 'partage-des-depenses-en-couple', category: 'vie-de-couple', featuredImage: '/blog/partage-des-depenses-en-couple.webp', slugs: { fr: 'partage-des-depenses-en-couple', en: 'how-to-split-expenses-as-a-couple', es: 'como-repartir-los-gastos-en-pareja', de: 'kosten-aufteilen-in-der-beziehung', it: 'come-dividere-le-spese-in-coppia', nl: 'kosten-verdelen-als-koppel' }, publishedAt: '2027-02-17T08:30:00+01:00' },
+  { internalSlug: 'parler-d-argent-en-couple', category: 'vie-de-couple', featuredImage: '/blog/parler-d-argent-en-couple.webp', slugs: { fr: 'parler-d-argent-en-couple', en: 'how-to-talk-about-money-with-your-partner', es: 'hablar-de-dinero-en-pareja', de: 'ueber-geld-reden-in-der-beziehung', it: 'parlare-di-soldi-in-coppia', nl: 'praten-over-geld-in-je-relatie' }, publishedAt: '2027-02-19T08:30:00+01:00' },
+  { internalSlug: 'mon-conjoint-gagne-plus-que-moi', category: 'vie-de-couple', featuredImage: '/blog/mon-conjoint-gagne-plus-que-moi.webp', slugs: { fr: 'mon-conjoint-gagne-plus-que-moi', en: 'my-partner-earns-more-than-me', es: 'mi-pareja-gana-mas-que-yo', de: 'mein-partner-verdient-mehr-als-ich', it: 'il-mio-partner-guadagna-piu-di-me', nl: 'mijn-partner-verdient-meer-dan-ik' }, publishedAt: '2027-02-21T08:30:00+01:00' },
+  { internalSlug: 'mon-conjoint-depense-trop', category: 'vie-de-couple', featuredImage: '/blog/mon-conjoint-depense-trop.webp', slugs: { fr: 'mon-conjoint-depense-trop', en: 'my-partner-spends-too-much', es: 'mi-pareja-gasta-demasiado', de: 'mein-partner-gibt-zu-viel-geld-aus', it: 'il-mio-partner-spende-troppo', nl: 'mijn-partner-geeft-te-veel-geld-uit' }, publishedAt: '2027-02-23T08:30:00+01:00' },
+  { internalSlug: 'disputes-d-argent-dans-le-couple', category: 'vie-de-couple', featuredImage: '/blog/disputes-d-argent-dans-le-couple.webp', slugs: { fr: 'disputes-d-argent-dans-le-couple', en: 'money-arguments-in-relationships', es: 'discusiones-por-dinero-en-pareja', de: 'streit-ums-geld-in-der-beziehung', it: 'litigi-per-soldi-in-coppia', nl: 'ruzie-over-geld-in-je-relatie' }, publishedAt: '2027-02-25T08:30:00+01:00' },
+  { internalSlug: 'budget-couple', category: 'vie-de-couple', featuredImage: '/blog/budget-couple.webp', slugs: { fr: 'budget-couple', en: 'couple-budget', es: 'presupuesto-en-pareja', de: 'haushaltsbudget-fuer-paare', it: 'budget-di-coppia', nl: 'budget-voor-koppels' }, publishedAt: '2027-02-27T08:30:00+01:00' },
+  { internalSlug: 'infidelite-financiere', category: 'vie-de-couple', featuredImage: '/blog/infidelite-financiere.webp', slugs: { fr: 'infidelite-financiere', en: 'financial-infidelity', es: 'infidelidad-financiera', de: 'finanzielle-untreue', it: 'infedelta-finanziaria', nl: 'financiele-ontrouw' }, publishedAt: '2027-03-01T08:30:00+01:00' },
 ];
 
 // Author data
@@ -2242,4 +2252,19 @@ QUIZ_RELATED_ARTICLES.compteurCouple.splice(2, 0, 'rituels-de-couple');
 QUIZ_RELATED_ARTICLES.testCompatSexuelle.unshift('pimenter-son-couple');
 QUIZ_RELATED_ARTICLES.quizCoquin.unshift('pimenter-son-couple');
 QUIZ_RELATED_ARTICLES.testVacances.unshift('week-end-en-amoureux-pas-cher');
+// Cocon 4 (l'argent dans le couple) : le pilier en tête du test de couple, du couple sain et d'emménager (où l'argent est
+// la première question), le compte commun sur emménager et le mariage, le budget et le partage sur le compteur et la charge
+// mentale, les disputes d'argent sur le couple sain et le test de confiance, l'infidélité financière sur la confiance et
+// l'infidélité, l'écart de salaire sur l'emprise (le contrôle de l'argent), les disputes sur « quel type de couple ».
+QUIZ_RELATED_ARTICLES.testCouple.splice(2, 0, 'argent-et-couple');
+QUIZ_RELATED_ARTICLES.testCoupleSain.splice(3, 0, 'argent-et-couple', 'disputes-d-argent-dans-le-couple');
+QUIZ_RELATED_ARTICLES.testEmmenager.unshift('argent-et-couple', 'compte-commun-ou-compte-separe', 'partage-des-depenses-en-couple');
+QUIZ_RELATED_ARTICLES.testMariage.push('compte-commun-ou-compte-separe');
+QUIZ_RELATED_ARTICLES.compteurCouple.push('budget-couple');
+QUIZ_RELATED_ARTICLES.testChargeMentale.push('partage-des-depenses-en-couple', 'budget-couple');
+QUIZ_RELATED_ARTICLES.testConfiance.unshift('infidelite-financiere', 'disputes-d-argent-dans-le-couple');
+QUIZ_RELATED_ARTICLES.testInfidelite.push('infidelite-financiere');
+QUIZ_RELATED_ARTICLES.testEmprise.push('mon-conjoint-gagne-plus-que-moi');
+QUIZ_RELATED_ARTICLES.quizTypeCouple.push('disputes-d-argent-dans-le-couple', 'compte-commun-ou-compte-separe');
+QUIZ_RELATED_ARTICLES.testParentalite.push('budget-couple');
 
