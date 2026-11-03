@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'deel-de-binding-op',
           title: "Deel de binding op",
-          content: `<p>Bindingsangst is bijna altijd angst voor het hele pakket: het huwelijk-het-huis-de-kinderen-voor-altijd, in één keer. Niemand slikt dat in één keer door! Deel het op: de volgende stap, alleen de volgende. Een weekend weg over twee maanden. Een la bij de ander. Dan samen een maand op vakantie. Elke stap die je zet zonder dat er een ramp gebeurt, stelt je systeem opnieuw af, net als bij elke andere angst.</p>`,
+          content: `<p>Bindingsangst is bijna altijd angst voor het hele pakket: <a href="/nl/blog/hij-wil-niet-trouwen/">het huwelijk-het-huis-de-kinderen-voor-altijd</a>, in één keer. Niemand slikt dat in één keer door! Deel het op: de volgende stap, alleen de volgende. Een weekend weg over twee maanden. Een la bij de ander. Dan samen een maand op vakantie. Elke stap die je zet zonder dat er een ramp gebeurt, stelt je systeem opnieuw af, net als bij elke andere angst.</p>`,
         },
         {
           id: 'scheid-het-oude-verhaal-van-het-nu',

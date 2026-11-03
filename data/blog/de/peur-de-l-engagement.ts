@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'zerlege-die-bindung',
           title: "Zerlege die Bindung",
-          content: `<p>Bindungsangst ist fast immer die Angst vor dem Komplettpaket: die Hochzeit, das Haus, die Kinder, für immer, in einem Zug geschluckt. Niemand schluckt das in einem Zug! Zerlege es: der nächste Schritt, nur der nächste. Ein Wochenende, zwei Monate im Voraus geplant. Eine Schublade bei ihr. Dann ein Monat Urlaub zu zweit. Jeder Schritt, der ohne Katastrophe gelingt, kalibriert das System neu, genau wie bei allen anderen Ängsten.</p>`,
+          content: `<p>Bindungsangst ist fast immer die Angst vor dem Komplettpaket: <a href="/de/blog/er-will-nicht-heiraten/">die Hochzeit, das Haus, die Kinder, für immer</a>, in einem Zug geschluckt. Niemand schluckt das in einem Zug! Zerlege es: der nächste Schritt, nur der nächste. Ein Wochenende, zwei Monate im Voraus geplant. Eine Schublade bei ihr. Dann ein Monat Urlaub zu zweit. Jeder Schritt, der ohne Katastrophe gelingt, kalibriert das System neu, genau wie bei allen anderen Ängsten.</p>`,
         },
         {
           id: 'trenne-die-alte-geschichte-von-der-gegenwart',

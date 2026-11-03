@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'trocea-el-compromiso',
           title: "Trocea el compromiso",
-          content: `<p>El miedo al compromiso casi siempre es miedo al paquete completo: la boda, la casa, los hijos, para siempre, tragado de golpe. ¡Nadie traga eso de golpe! Trocéalo: el siguiente paso, solo el siguiente. Un fin de semana reservado con dos meses de antelación. Un cajón en su casa. Luego un mes de vacaciones juntos. Cada paso dado sin catástrofe recalibra el sistema, exactamente como con todos los miedos.</p>`,
+          content: `<p>El miedo al compromiso casi siempre es miedo al paquete completo: <a href="/es/blog/no-quiere-casarse/">la boda, la casa, los hijos, para siempre</a>, tragado de golpe. ¡Nadie traga eso de golpe! Trocéalo: el siguiente paso, solo el siguiente. Un fin de semana reservado con dos meses de antelación. Un cajón en su casa. Luego un mes de vacaciones juntos. Cada paso dado sin catástrofe recalibra el sistema, exactamente como con todos los miedos.</p>`,
         },
         {
           id: 'separa-la-historia-antigua-del-presente',

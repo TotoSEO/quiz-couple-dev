@@ -1897,6 +1897,70 @@ export const BLOG_ARTICLES = [
     slugs: { fr: 'crise-de-couple-que-faire', en: 'relationship-crisis-what-to-do', es: 'crisis-de-pareja-que-hacer', de: 'beziehungskrise-was-tun', it: 'crisi-di-coppia-cosa-fare', nl: 'relatiecrisis-wat-te-doen' },
     publishedAt: '2027-01-12T08:30:00+01:00',
   },
+  // ── Cocon 2 : demande en mariage et fiançailles (docs/blog/COCONS.md) ──
+  {
+    internalSlug: 'demande-en-mariage',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/demande-en-mariage.webp',
+    slugs: { fr: 'demande-en-mariage', en: 'marriage-proposal', es: 'pedida-de-mano', de: 'heiratsantrag', it: 'proposta-di-matrimonio', nl: 'huwelijksaanzoek' },
+    publishedAt: '2027-01-13T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'comment-faire-sa-demande-en-mariage',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/comment-faire-sa-demande-en-mariage.webp',
+    slugs: { fr: 'comment-faire-sa-demande-en-mariage', en: 'how-to-propose', es: 'como-pedir-matrimonio', de: 'heiratsantrag-machen', it: 'come-fare-la-proposta-di-matrimonio', nl: 'hoe-doe-je-een-huwelijksaanzoek' },
+    publishedAt: '2027-01-14T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'idees-demande-en-mariage',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/idees-demande-en-mariage.webp',
+    slugs: { fr: 'idees-demande-en-mariage', en: 'proposal-ideas', es: 'ideas-pedida-de-mano', de: 'heiratsantrag-ideen', it: 'idee-proposta-di-matrimonio', nl: 'huwelijksaanzoek-ideeen' },
+    publishedAt: '2027-01-16T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'au-bout-de-combien-de-temps-demande-en-mariage',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/au-bout-de-combien-de-temps-demande-en-mariage.webp',
+    slugs: { fr: 'au-bout-de-combien-de-temps-demande-en-mariage', en: 'how-long-to-date-before-proposing', es: 'cuanto-tiempo-antes-de-pedir-matrimonio', de: 'wann-heiratsantrag-machen', it: 'dopo-quanto-tempo-proposta-di-matrimonio', nl: 'na-hoe-lang-huwelijksaanzoek' },
+    publishedAt: '2027-01-18T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'signes-qu-il-va-faire-sa-demande',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/signes-qu-il-va-faire-sa-demande.webp',
+    slugs: { fr: 'signes-qu-il-va-faire-sa-demande', en: 'signs-he-is-going-to-propose', es: 'senales-de-que-va-a-pedir-matrimonio', de: 'anzeichen-heiratsantrag', it: 'segnali-che-sta-per-fare-la-proposta', nl: 'signalen-dat-hij-gaat-vragen' },
+    publishedAt: '2027-01-20T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'bague-de-fiancailles-prix',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/bague-de-fiancailles-prix.webp',
+    slugs: { fr: 'bague-de-fiancailles-prix', en: 'engagement-ring-cost', es: 'precio-anillo-de-compromiso', de: 'verlobungsring-kosten', it: 'anello-di-fidanzamento-prezzo', nl: 'verlovingsring-prijs' },
+    publishedAt: '2027-01-22T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'combien-de-temps-durent-les-fiancailles',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/combien-de-temps-durent-les-fiancailles.webp',
+    slugs: { fr: 'combien-de-temps-durent-les-fiancailles', en: 'how-long-should-an-engagement-be', es: 'cuanto-dura-el-compromiso', de: 'wie-lange-verlobt-sein', it: 'quanto-dura-il-fidanzamento', nl: 'hoe-lang-verloofd' },
+    publishedAt: '2027-01-24T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'demande-en-mariage-femme',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/demande-en-mariage-femme.webp',
+    slugs: { fr: 'demande-en-mariage-femme-a-homme', en: 'woman-proposing-to-a-man', es: 'mujer-pide-matrimonio', de: 'frau-macht-heiratsantrag', it: 'donna-che-fa-la-proposta-di-matrimonio', nl: 'vrouw-doet-huwelijksaanzoek' },
+    publishedAt: '2027-01-26T08:30:00+01:00',
+  },
+  {
+    internalSlug: 'il-ne-veut-pas-se-marier',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/il-ne-veut-pas-se-marier.webp',
+    slugs: { fr: 'il-ne-veut-pas-se-marier', en: 'he-doesnt-want-to-get-married', es: 'no-quiere-casarse', de: 'er-will-nicht-heiraten', it: 'non-vuole-sposarsi', nl: 'hij-wil-niet-trouwen' },
+    publishedAt: '2027-01-28T08:30:00+01:00',
+  },
 ];
 
 // Author data
@@ -2092,4 +2156,10 @@ QUIZ_RELATED_ARTICLES.testAmourHabitude.unshift('therapie-de-couple');
 QUIZ_RELATED_ARTICLES.testDistance.push('therapie-de-couple-en-ligne');
 QUIZ_RELATED_ARTICLES.testJeLaimeEncore.unshift('crise-de-couple-que-faire');
 QUIZ_RELATED_ARTICLES.testFinCouple = ['crise-de-couple-que-faire', 'therapie-de-couple', 'arreter-ou-continuer-relation', 'sauver-son-couple'];
+// Cocon 2 (demande en mariage) : le pilier et le délai avant la demande en tête du test « prêts à se marier »,
+// le pilier sur les tests qui précèdent un oui (emménager, est-ce le bon), « il ne veut pas se marier » sur est-ce le bon.
+QUIZ_RELATED_ARTICLES.testMariage.unshift('demande-en-mariage', 'au-bout-de-combien-de-temps-demande-en-mariage', 'combien-de-temps-durent-les-fiancailles');
+QUIZ_RELATED_ARTICLES.testEmmenager.push('demande-en-mariage');
+QUIZ_RELATED_ARTICLES.testEstCeLeBon.splice(1, 0, 'demande-en-mariage', 'il-ne-veut-pas-se-marier');
+QUIZ_RELATED_ARTICLES.compteurCouple.splice(1, 0, 'combien-de-temps-durent-les-fiancailles');
 

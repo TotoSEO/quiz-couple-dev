@@ -92,7 +92,7 @@ const article: BlogArticleData = {
         {
           id: 'dividi-l-impegno',
           title: "Dividi l'impegno",
-          content: `<p>La paura dell'impegno è quasi sempre paura del pacchetto completo: il matrimonio, la casa, i figli, per sempre, ingoiato in un colpo solo. Nessuno ingoia quella roba in un colpo solo! Dividila: il prossimo passo, solo il prossimo. Un weekend prenotato con due mesi di anticipo. Un cassetto a casa sua. Poi un mese di vacanza insieme. Ogni passo superato senza catastrofe ritara il sistema, esattamente come per tutte le paure.</p>`,
+          content: `<p>La paura dell'impegno è quasi sempre paura del pacchetto completo: <a href="/it/blog/non-vuole-sposarsi/">il matrimonio, la casa, i figli, per sempre</a>, ingoiato in un colpo solo. Nessuno ingoia quella roba in un colpo solo! Dividila: il prossimo passo, solo il prossimo. Un weekend prenotato con due mesi di anticipo. Un cassetto a casa sua. Poi un mese di vacanza insieme. Ogni passo superato senza catastrofe ritara il sistema, esattamente come per tutte le paure.</p>`,
         },
         {
           id: 'separa-la-storia-vecchia-dal-presente',
