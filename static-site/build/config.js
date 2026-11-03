@@ -2045,6 +2045,16 @@ export const BLOG_ARTICLES = [
   { internalSlug: 'cadeau-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/cadeau-relation-a-distance.webp', slugs: { fr: 'cadeau-relation-a-distance', en: 'long-distance-relationship-gifts', es: 'regalos-relacion-a-distancia', de: 'geschenke-fernbeziehung', it: 'regali-relazione-a-distanza', nl: 'cadeau-lange-afstandsrelatie' }, publishedAt: '2027-03-13T08:30:00+01:00' },
   { internalSlug: 'retrouvailles-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/retrouvailles-relation-a-distance.webp', slugs: { fr: 'retrouvailles-relation-a-distance', en: 'long-distance-relationship-reunion', es: 'reencuentro-relacion-a-distancia', de: 'wiedersehen-fernbeziehung', it: 'ritrovarsi-dopo-relazione-a-distanza', nl: 'weerzien-lange-afstandsrelatie' }, publishedAt: '2027-03-15T08:30:00+01:00' },
   { internalSlug: 'mettre-fin-a-une-relation-a-distance', category: 'vie-de-couple', featuredImage: '/blog/mettre-fin-a-une-relation-a-distance.webp', slugs: { fr: 'mettre-fin-a-une-relation-a-distance', en: 'how-to-end-a-long-distance-relationship', es: 'terminar-una-relacion-a-distancia', de: 'fernbeziehung-beenden', it: 'chiudere-una-relazione-a-distanza', nl: 'lange-afstandsrelatie-beeindigen' }, publishedAt: '2027-03-17T08:30:00+01:00' },
+  // ── Cocon 6 : les signes astrologiques en amour (docs/blog/COCONS.md) ; l'heure d'été commence le 28 mars 2027, d'où +02:00 ensuite ──
+  { internalSlug: 'signes-astrologiques-en-amour', category: 'astrologie', featuredImage: '/blog/signes-astrologiques-en-amour.webp', slugs: { fr: 'signes-astrologiques-en-amour', en: 'zodiac-signs-in-love', es: 'signos-del-zodiaco-en-el-amor', de: 'sternzeichen-in-der-liebe', it: 'segni-zodiacali-in-amore', nl: 'sterrenbeelden-in-de-liefde' }, publishedAt: '2027-03-18T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-fidele', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-fidele.webp', slugs: { fr: 'signe-astrologique-le-plus-fidele', en: 'most-loyal-zodiac-sign', es: 'signo-del-zodiaco-mas-fiel', de: 'treuestes-sternzeichen', it: 'segno-zodiacale-piu-fedele', nl: 'trouwste-sterrenbeeld' }, publishedAt: '2027-03-19T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-jaloux', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-jaloux.webp', slugs: { fr: 'signe-astrologique-le-plus-jaloux', en: 'most-jealous-zodiac-sign', es: 'signo-del-zodiaco-mas-celoso', de: 'eifersuechtigstes-sternzeichen', it: 'segno-zodiacale-piu-geloso', nl: 'meest-jaloerse-sterrenbeeld' }, publishedAt: '2027-03-21T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-romantique', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-romantique.webp', slugs: { fr: 'signe-astrologique-le-plus-romantique', en: 'most-romantic-zodiac-sign', es: 'signo-del-zodiaco-mas-romantico', de: 'romantischstes-sternzeichen', it: 'segno-zodiacale-piu-romantico', nl: 'meest-romantische-sterrenbeeld' }, publishedAt: '2027-03-23T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-infidele', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-infidele.webp', slugs: { fr: 'signe-astrologique-le-plus-infidele', en: 'most-unfaithful-zodiac-sign', es: 'signo-del-zodiaco-mas-infiel', de: 'untreuestes-sternzeichen', it: 'segno-zodiacale-piu-infedele', nl: 'meest-ontrouwe-sterrenbeeld' }, publishedAt: '2027-03-25T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-possessif', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-possessif.webp', slugs: { fr: 'signe-astrologique-le-plus-possessif', en: 'most-possessive-zodiac-sign', es: 'signo-del-zodiaco-mas-posesivo', de: 'besitzergreifendstes-sternzeichen', it: 'segno-zodiacale-piu-possessivo', nl: 'meest-bezitterige-sterrenbeeld' }, publishedAt: '2027-03-27T08:30:00+01:00' },
+  { internalSlug: 'signe-astrologique-le-plus-passionne', category: 'astrologie', featuredImage: '/blog/signe-astrologique-le-plus-passionne.webp', slugs: { fr: 'signe-astrologique-le-plus-passionne', en: 'most-passionate-zodiac-sign', es: 'signo-del-zodiaco-mas-apasionado', de: 'leidenschaftlichstes-sternzeichen', it: 'segno-zodiacale-piu-passionale', nl: 'meest-gepassioneerde-sterrenbeeld' }, publishedAt: '2027-03-29T08:30:00+02:00' },
+  { internalSlug: 'signes-astrologiques-incompatibles-en-amour', category: 'astrologie', featuredImage: '/blog/signes-astrologiques-incompatibles-en-amour.webp', slugs: { fr: 'signes-astrologiques-incompatibles-en-amour', en: 'incompatible-zodiac-signs-in-love', es: 'signos-del-zodiaco-incompatibles-en-el-amor', de: 'welche-sternzeichen-passen-nicht-zusammen', it: 'segni-zodiacali-incompatibili-in-amore', nl: 'sterrenbeelden-die-niet-bij-elkaar-passen' }, publishedAt: '2027-03-31T08:30:00+02:00' },
+  { internalSlug: 'ascendant-astrologique-en-amour', category: 'astrologie', featuredImage: '/blog/ascendant-astrologique-en-amour.webp', slugs: { fr: 'ascendant-astrologique-en-amour', en: 'rising-sign-in-love', es: 'ascendente-en-el-amor', de: 'aszendent-in-der-liebe', it: 'ascendente-in-amore', nl: 'ascendant-in-de-liefde' }, publishedAt: '2027-04-02T08:30:00+02:00' },
 ];
 
 // Author data
@@ -2290,4 +2300,17 @@ QUIZ_RELATED_ARTICLES.jeuxCouple.push('activites-couple-a-distance');
 QUIZ_RELATED_ARTICLES.jeuQuiDeNous.push('activites-couple-a-distance');
 QUIZ_RELATED_ARTICLES.jeuJamais.push('activites-couple-a-distance');
 QUIZ_RELATED_ARTICLES.compteurCouple.push('relation-a-distance-combien-de-temps');
+// Cocon 6 : les signes astrologiques en amour (le pilier en tête des trois outils astrologiques, chaque classement sur son test).
+QUIZ_RELATED_ARTICLES.testAstroPrenoms.unshift('signes-astrologiques-en-amour', 'signes-astrologiques-incompatibles-en-amour');
+QUIZ_RELATED_ARTICLES.testDateNaissance.unshift('signes-astrologiques-en-amour', 'ascendant-astrologique-en-amour');
+QUIZ_RELATED_ARTICLES.testSignesChinois.unshift('signes-astrologiques-en-amour');
+QUIZ_RELATED_ARTICLES.calculatriceAmour.push('signes-astrologiques-en-amour');
+QUIZ_RELATED_ARTICLES.testCompatibilite.push('signes-astrologiques-incompatibles-en-amour');
+QUIZ_RELATED_ARTICLES.testJalousie.push('signe-astrologique-le-plus-jaloux');
+QUIZ_RELATED_ARTICLES.testConfiance.push('signe-astrologique-le-plus-fidele');
+QUIZ_RELATED_ARTICLES.testInfidelite.push('signe-astrologique-le-plus-infidele');
+QUIZ_RELATED_ARTICLES.testEmprise.push('signe-astrologique-le-plus-possessif');
+QUIZ_RELATED_ARTICLES.testLangageAmour.push('signe-astrologique-le-plus-romantique');
+QUIZ_RELATED_ARTICLES.testCompatSexuelle.push('signe-astrologique-le-plus-passionne');
+QUIZ_RELATED_ARTICLES.quizCoquin.push('signe-astrologique-le-plus-passionne');
 
