@@ -118,7 +118,7 @@ const article: BlogArticleData = {
       id: 'hacer-de-la-distancia-un-juego',
       title: "Y para las noches en que hablar no basta",
       content: `<p>Incluso con las mejores preguntas del mundo hay noches en que las llamadas giran en vacío, no por falta de amor, sino por falta de MATERIA. Esas noches, lo que la pareja necesita no es una conversación más, es una actividad común.</p>
-<p>Ese es exactamente el hueco del <a href="/es/quiz-pareja-distancia/">quiz especial para parejas a distancia</a>: cada uno en su pantalla, preguntas que adivinar sobre el otro, puntos, morro, en resumen una noche de verdad en pareja, a 800 kilómetros de distancia. Las parejas a distancia lo han convertido en su ritual del domingo, y francamente se entiende.</p>
+<p>Ese es exactamente el hueco del <a href="/es/quiz-pareja-distancia/">quiz especial para parejas a distancia</a>: cada uno en su pantalla, preguntas que adivinar sobre el otro, puntos, morro, en resumen una noche de verdad en pareja, a 800 kilómetros de distancia. <a href="/es/blog/relacion-a-distancia/">Las parejas a distancia</a> lo han convertido en su ritual del domingo, y francamente se entiende.</p>
 <p>Y si sois más de subir la temperatura por escrito, las últimas preguntas de las <a href="/es/blog/preguntas-intimas-pareja/">preguntas íntimas</a> tienen una sección especial mensajes, pensada justo para eso. ¡Aquí no diremos más!</p>
 <div><table><thead><tr><th>El formato</th><th>Lo que funciona</th><th>Lo que cae en saco roto</th></tr></thead><tbody>
 <tr><td>La llamada de la noche</td><td>Una pregunta abierta y silencio para la respuesta</td><td>El resumen del día, minuto a minuto</td></tr>

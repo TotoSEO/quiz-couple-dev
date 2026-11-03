@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Stier mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Frag einen Stier, was er in der Liebe sucht, und er antwortet so etwas wie „jemanden, der bleibt“. Keine Routine, keine Langeweile: die Gewissheit, dass der andere morgen noch da ist. Für ihn ist Liebe ein gutes Essen zu zweit, ein bequemes Sofa und die Wärme von jemandem, den man in- und auswendig kennt.</p>
+  introduction: `<p>Frag einen Stier, <a href="/de/blog/sternzeichen-in-der-liebe/">was er in der Liebe sucht</a>, und er antwortet so etwas wie „jemanden, der bleibt“. Keine Routine, keine Langeweile: die Gewissheit, dass der andere morgen noch da ist. Für ihn ist Liebe ein gutes Essen zu zweit, ein bequemes Sofa und die Wärme von jemandem, den man in- und auswendig kennt.</p>
 <p>Diese Beständigkeit hält nicht jedes Zeichen aus: Manche brauchen Bewegung, und der Stier braucht Halt. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Stier x Stier, Jungfrau oder Steinbock: die dauerhaftesten Verbindungen im Tierkreis. Manchmal etwas zu brav.`,

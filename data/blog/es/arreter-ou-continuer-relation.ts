@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Esto se repara</p>
 <ul>
-<li><strong>La rutina y el aburrimiento</strong>, cuando los dos os quejáis de ellos. Son dos personas que todavía quieren otra cosa.</li>
+<li><strong><a href="/es/blog/rutina-en-la-pareja/">La rutina y el aburrimiento</a></strong>, cuando los dos os quejáis de ellos. Son dos personas que todavía quieren otra cosa.</li>
 <li><strong>Una bajada del deseo</strong> instalada desde hace unos años, sin reproche detrás.</li>
 <li><strong>Discusiones frecuentes pero que terminan</strong>, con alguien que vuelve después.</li>
 <li><strong>Una crisis con fecha</strong>: un duelo, una mudanza, un agotamiento laboral, la llegada de un hijo.</li>

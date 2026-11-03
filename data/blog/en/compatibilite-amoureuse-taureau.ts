@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Taurus with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Ask a Taurus what they want in love and they'll answer something like "someone who stays". Not routine, not boredom: the certainty that tomorrow, the other person will still be there. For them, love is a good meal shared, a comfortable sofa and the warmth of someone they know by heart.</p>
+  introduction: `<p>Ask a Taurus <a href="/en/blog/zodiac-signs-in-love/">what they want in love</a> and they'll answer something like "someone who stays". Not routine, not boredom: the certainty that tomorrow, the other person will still be there. For them, love is a good meal shared, a comfortable sofa and the warmth of someone they know by heart.</p>
 <p>Not every sign can take that kind of steadiness: some need things to move, and Taurus needs things to hold. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus with Taurus, Virgo, or Capricorn: some of the most enduring unions in the zodiac. Sometimes a little too safe.`,

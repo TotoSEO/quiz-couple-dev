@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Il Leone con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Si dice spesso che il Leone pensi solo a sé. È più semplice di così: ha bisogno di vedere che la sua presenza conta, che l'altro lo guarda, che quello che porta viene riconosciuto. Non è vanità, è il suo modo di amare. Chi si cancella davanti a lui lo annoia, chi vuole prendere il suo posto lo sfinisce.</p>
+  introduction: `<p>Si dice spesso che il Leone pensi solo a sé. È più semplice di così: ha bisogno di vedere che la sua presenza conta, che l'altro lo guarda, che quello che porta viene riconosciuto. Non è vanità, è <a href="/it/blog/segni-zodiacali-in-amore/">il suo modo di amare</a>. Chi si cancella davanti a lui lo annoia, chi vuole prendere il suo posto lo sfinisce.</p>
 <p>L'ideale è qualcuno con una luce propria, che ammiri la sua in cambio. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Ariete e Sagittario sono i partner che lo capiscono al volo, Fuoco con Fuoco, senza compromessi.`,

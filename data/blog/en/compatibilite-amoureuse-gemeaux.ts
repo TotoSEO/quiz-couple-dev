@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Gemini with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>If there's one thing Gemini hates, it's feeling boxed in: in a category, in a routine, in an idea of themselves that someone else decided for them. People call them unstable; they're more like several people at once. They fall in love with a mind before they fall in love with a body, and the day the conversation stops, something switches off.</p>
+  introduction: `<p>If there's one thing Gemini hates, it's feeling boxed in: in a category, in a routine, in an idea of themselves that someone else decided for them. People call them unstable; they're more like several people at once. <a href="/en/blog/zodiac-signs-in-love/">They fall in love with a mind</a> before they fall in love with a body, and the day the conversation stops, something switches off.</p>
 <p>So the signs that suit them are the ones that don't try to pin them down. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Libra and Aquarius: their two great Air matches, the conversation never ends with them.`,

@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Stellen lopen bijna nooit stuk op te weinig liefde. Ze lopen stuk op onderwerpen die ze nooit op tafel hebben gelegd.",
   introduction: `<p>De meeste grote crises in een relatie gaan over onderwerpen waarvan allebei wisten dat ze er ooit over moesten praten: geld, kinderen, de schoonfamilie, wie wat doet in huis. Dat ‘ooit’ kwam alleen te laat, midden in de crisis, op het slechtste moment om er rustig over te praten.</p>
 <p><strong>Praten over de toekomst heeft nog nooit een sterke relatie kapotgemaakt. Er niet over praten wel, en heel wat.</strong> En die gesprekken hoeven niet plechtig of zwaar te zijn. Goed gevoerd horen ze zelfs bij de leukste gesprekken die je als stel kunt hebben!</p>
-<p>Hier zijn 60 vragen over de toekomst, per grote stap: voor jullie gaan samenwonen, voor jullie je aan elkaar binden, voor een kind, over geld, en over jullie gezamenlijke dromen. Stel ze <strong>voordat</strong> de onderwerpen dringend worden, daar zit juist hun waarde.</p>`,
+<p>Hier zijn 60 vragen over de toekomst, per grote stap: voor jullie gaan samenwonen, voor jullie <a href="/nl/blog/huwelijksaanzoek/">je aan elkaar binden</a>, voor een kind, <a href="/nl/blog/geld-in-je-relatie/">over geld</a>, en over jullie gezamenlijke dromen. Stel ze <strong>voordat</strong> de onderwerpen dringend worden, daar zit juist hun waarde.</p>`,
   quickSummary: [
     "60 vragen per stap: samenwonen, je binden, een kind, geld, dromen.",
     "Het idee: erover praten voordat het dringend is, nooit midden in een crisis.",

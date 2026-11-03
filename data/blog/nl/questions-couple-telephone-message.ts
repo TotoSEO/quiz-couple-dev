@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Aan de telefoon heb je geen blikken en geen gebaren, alleen woorden. En juist daarom doen goede vragen daar wonderen.",
   introduction: `<p>Er is een moment dat alle stellen kennen, of ze nu 800 kilometer of twee wijken van elkaar wonen: het moment waarop het telefoontje van de avond een weerbericht wordt. “Hoe was je dag?” “Goed.” “Wat eet je?” “Pasta.” De band is er, de zin ook, maar het gesprek draait leeg.</p>
 <p>Dat is heel normaal: op afstand verlies je alles wat een gesprek gewoonlijk voedt, de blikken, de dingen die je samen meemaakt, de gebaren. <strong>Er blijven alleen woorden over. En juist daarom doen goede vragen wonderen aan de telefoon: ze geven die woorden weer iets te doen.</strong></p>
-<p>Hier zijn 60 vragen voor gesprekken op afstand: de avonden dat ieder bij zichzelf thuis zit, echte afstandsrelaties, de berichtjes overdag en de lange telefoongesprekken. Sommige stuur je in één appje, andere zijn een uur bellen waard. Jij bepaalt de dosis!</p>`,
+<p>Hier zijn 60 vragen voor gesprekken op afstand: de avonden dat ieder bij zichzelf thuis zit, <a href="/nl/blog/lange-afstandsrelatie/">echte afstandsrelaties</a>, de berichtjes overdag en de lange telefoongesprekken. Sommige stuur je in één appje, andere zijn een uur bellen waard. Jij bepaalt de dosis!</p>`,
   quickSummary: [
     "60 vragen voor de telefoon en berichtjes, van het appje van één regel tot het lange gesprek ’s avonds.",
     "De regel van het formaat: op schrift korte vragen, aan de telefoon open vragen.",

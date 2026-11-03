@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Las parejas casi nunca fracasan por falta de amor. Fracasan por temas que nunca habían puesto sobre la mesa.",
   introduction: `<p>La mayoría de las grandes crisis de pareja giran sobre temas que los dos sabían que habría que hablar algún día: el dinero, los hijos, la familia política, el reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
 <p><strong>Hablar del futuro nunca ha matado una historia sólida, mientras que no hablarlo ha matado muchas.</strong> Y estas conversaciones no son ni solemnes ni pesadas. Bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>
-<p>Aquí van 60 preguntas sobre el futuro, clasificadas por gran etapa: antes de vivir juntos, antes de comprometerse de verdad, antes de un hijo, en torno al dinero y sobre vuestros sueños comunes. Para picotear ANTES de que los temas se vuelvan urgentes, ahí está todo su interés.</p>`,
+<p>Aquí van 60 preguntas sobre el futuro, clasificadas por gran etapa: antes de vivir juntos, antes de <a href="/es/blog/pedida-de-mano/">comprometerse de verdad</a>, antes de un hijo, <a href="/es/blog/dinero-y-pareja/">en torno al dinero</a> y sobre vuestros sueños comunes. Para picotear ANTES de que los temas se vuelvan urgentes, ahí está todo su interés.</p>`,
   quickSummary: [
     "60 preguntas clasificadas por etapa: vivir juntos, comprometerse, un hijo, el dinero, los sueños.",
     "El principio: hablarlo antes de que sea urgente, nunca en plena crisis.",

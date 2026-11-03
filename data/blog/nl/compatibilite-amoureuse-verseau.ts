@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Waterman met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>De Waterman is waarschijnlijk het meest onbegrepen teken in de liefde. Hij heet afstandelijk, onthecht, niet in staat om zich te binden. Maar hij houdt wel degelijk van iemand, alleen niet zoals anderen vinden dat het moet: geen versmelting, geen “jij bent alles voor mij”. Hij wil een partner die eerst een vriend is, met wie hij om drie uur 's nachts de wereld kan verbeteren, en hij heeft lucht nodig om naar de ander terug te komen.</p>
+  introduction: `<p>De Waterman is waarschijnlijk <a href="/nl/blog/sterrenbeelden-in-de-liefde/">het meest onbegrepen teken in de liefde</a>. Hij heet afstandelijk, onthecht, niet in staat om zich te binden. Maar hij houdt wel degelijk van iemand, alleen niet zoals anderen vinden dat het moet: geen versmelting, geen “jij bent alles voor mij”. Hij wil een partner die eerst een vriend is, met wie hij om drie uur 's nachts de wereld kan verbeteren, en hij heeft lucht nodig om naar de ander terug te komen.</p>
 <p>Probeer je hem vast te houden, dan glipt hij weg. Laat je hem vrij, dan komt hij terug. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Tweelingen, Weegschaal, Boogschutter: zijn drie meest harmonieuze en prikkelende partners.`,

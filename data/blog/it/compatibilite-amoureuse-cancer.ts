@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Il Cancro con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Dietro la corazza, perché ce n'è sempre una, il Cancro è uno dei segni che danno di più in amore. Quando si sente al sicuro, c'è tutto intero: si ricorda di tutto, sente di cosa hai bisogno prima che tu l'abbia detto. E ci sono giorni in cui si chiude in sé stesso senza preavviso, cosa che l'altro prende spesso per un rifiuto.</p>
+  introduction: `<p>Dietro la corazza, perché ce n'è sempre una, il Cancro è uno de<a href="/it/blog/segni-zodiacali-in-amore/">i segni che danno di più in amore</a>. Quando si sente al sicuro, c'è tutto intero: si ricorda di tutto, sente di cosa hai bisogno prima che tu l'abbia detto. E ci sono giorni in cui si chiude in sé stesso senza preavviso, cosa che l'altro prende spesso per un rifiuto.</p>
 <p>Quello che cerca non è l'avventura, è un posto dove può essere sé stesso senza difendersi. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro e Scorpione sono le sue combinazioni più forti, sicurezza emotiva e profondità.`,

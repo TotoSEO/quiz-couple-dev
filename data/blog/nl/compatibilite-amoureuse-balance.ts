@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Weegschaal met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Een Weegschaal staat bekend als besluiteloos. Niet omdat ze keuzes uit de weg gaat, maar omdat ze de juiste keuze zoekt, de keuze die niemand pijn doet. Ze denkt bijna vanzelf met z'n tweeën, en daardoor is ze attent, maar ook iemand die haar eigen behoeften kan vergeten omdat ze zo graag het evenwicht bewaart.</p>
+  introduction: `<p>Een Weegschaal staat bekend als besluiteloos. Niet omdat ze keuzes uit de weg gaat, maar omdat ze de juiste keuze zoekt, de keuze die niemand pijn doet. <a href="/nl/blog/sterrenbeelden-in-de-liefde/">Ze denkt bijna vanzelf met z'n tweeën</a>, en daardoor is ze attent, maar ook iemand die haar eigen behoeften kan vergeten omdat ze zo graag het evenwicht bewaart.</p>
 <p>Ze wil iemand bij wie ze zich goed voelt, en die soms voor haar kan beslissen zonder haar onder druk te zetten. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Tweelingen, Waterman, Boogschutter: de partners met wie de gesprekken nooit ophouden.`,

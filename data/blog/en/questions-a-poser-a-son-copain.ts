@@ -153,7 +153,7 @@ const article: BlogArticleData = {
 <li>What gives you the sense that your life has meaning?</li>
 <li>What advice would you give the you of ten years ago?</li>
 <li>What do you still carry from a past relationship, for better or worse?</li>
-<li>What's your relationship with money, and who did you inherit it from?</li>
+<li>What's <a href="/en/blog/how-to-talk-about-money-with-your-partner/">your relationship with money</a>, and who did you inherit it from?</li>
 <li>What would make you say no to a dream: fear or reason?</li>
 <li>What have you changed your mind about in recent years?</li>
 <li>What have you never told anyone, not even me?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
     {
       id: 'future-and-plans',
       title: "Future and plans (81-90)",
-      content: `<p>You don't need to wait for a proposal to find out whether your trajectories match. Honestly, better these questions too early than too late.</p>
+      content: `<p>You don't need to <a href="/en/blog/marriage-proposal/">wait for a proposal</a> to find out whether your trajectories match. Honestly, better these questions too early than too late.</p>
 <ol start="81">
 <li>Where do you see yourself in five years, and how am I in that picture?</li>
 <li>What's non-negotiable in your future life?</li>
@@ -181,7 +181,7 @@ const article: BlogArticleData = {
     {
       id: 'over-the-phone',
       title: "Over the phone or long distance (91-100)",
-      content: `<p>Ten questions that work perfectly out loud or by message, for long-distance couples or evenings apart.</p>
+      content: `<p>Ten questions that work perfectly out loud or by message, for <a href="/en/blog/long-distance-relationship/">long-distance couples</a> or evenings apart.</p>
 <ol start="91">
 <li>What would you be doing right now if I were next to you?</li>
 <li>What was the first thing you thought this morning?</li>

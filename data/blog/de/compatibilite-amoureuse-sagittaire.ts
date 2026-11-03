@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Schütze mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Der Schütze hält nicht still, nicht aus Unbeständigkeit, sondern weil er Hunger aufs Leben hat. Er flieht nicht vor der Bindung, er flieht vor der Langeweile, und für ihn beginnt die Langeweile, wenn sich die Routine einnistet, ohne dass jemand sie infrage stellt. Er sagt, was er denkt, ohne Filter: Bei ihm weißt du immer, woran du bist.</p>
+  introduction: `<p>Der Schütze hält nicht still, nicht aus Unbeständigkeit, sondern weil er Hunger aufs Leben hat. Er flieht nicht vor der Bindung, <a href="/de/blog/sternzeichen-in-der-liebe/">er flieht vor der Langeweile</a>, und für ihn beginnt die Langeweile, wenn sich die Routine einnistet, ohne dass jemand sie infrage stellt. Er sagt, was er denkt, ohne Filter: Bei ihm weißt du immer, woran du bist.</p>
 <p>Was er will, ist ein Reisegefährte, im wörtlichen wie im übertragenen Sinn. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Widder und Löwe teilen sein Feuer, diese Verbindungen sind voller Energie und Abenteuergeist.`,

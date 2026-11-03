@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>Il 66 % delle donne dice di fare di più</strong> del partner nella preparazione, di cui il 43 % «molto di più». Di fronte, il 53 % degli uomini ritiene di aver partecipato in parti uguali, contro appena il 27 % delle donne. Non è un disaccordo sulle vacanze, è un disaccordo su cosa è successo.</p></li>
 
-<li><p><strong>30 %:</strong> la quota di coppie che litiga sullo sforamento del budget. Un dato stabile, e l'unico che si risolve davvero con un foglio di calcolo.</p></li>
+<li><p><strong>30 %:</strong> la quota di coppie che litiga sul<a href="/it/blog/budget-di-coppia/">lo sforamento del budget</a>. Un dato stabile, e l'unico che si risolve davvero con un foglio di calcolo.</p></li>
 
 <li><p><strong>Il 28 % trova il tragitto teso.</strong> La scelta dell'itinerario e lo stile di guida sono in testa ai motivi, molto prima della stanchezza o dei figli.</p></li>
 

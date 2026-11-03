@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
   introduction: `<p>La plupart des grandes crises de couple portent sur des sujets dont les deux savaient qu'il faudrait parler un jour : l'argent, les enfants, la belle-famille, la répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
 <p><strong>Parler d'avenir n'a jamais tué une histoire solide, alors que ne pas en parler en a tué beaucoup.</strong> Et ces conversations ne sont ni solennelles ni pesantes. Bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
-<p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de s'engager pour de bon, avant un enfant, autour de l'argent, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents, c'est tout leur intérêt.</p>`,
+<p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de <a href="/blog/demande-en-mariage/">s'engager pour de bon</a>, avant un enfant, <a href="/blog/argent-et-couple/">autour de l'argent</a>, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents, c'est tout leur intérêt.</p>`,
   quickSummary: [
     "60 questions classées par étape : emménager, s'engager, un enfant, l'argent, les rêves.",
     "Le principe : en parler avant que ce soit urgent, jamais en pleine crise.",

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Boogschutter met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Een Boogschutter kan niet stilzitten, niet omdat hij wispelturig is, maar omdat hij honger heeft naar het leven. Hij vlucht niet voor een vaste relatie, hij vlucht voor verveling, en voor hem begint verveling als de sleur erin sluipt zonder dat iemand er iets aan verandert. Hij zegt wat hij denkt, zonder filter: bij hem weet je altijd waar je staat.</p>
+  introduction: `<p>Een Boogschutter kan niet stilzitten, niet omdat hij wispelturig is, maar omdat hij honger heeft naar het leven. Hij vlucht niet voor een vaste relatie, <a href="/nl/blog/sterrenbeelden-in-de-liefde/">hij vlucht voor verveling</a>, en voor hem begint verveling als de sleur erin sluipt zonder dat iemand er iets aan verandert. Hij zegt wat hij denkt, zonder filter: bij hem weet je altijd waar je staat.</p>
 <p>Wat hij wil, is een reisgenoot, letterlijk en figuurlijk. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Ram, Leeuw, Waterman: zijn drie meest natuurlijke en enthousiaste matches.`,

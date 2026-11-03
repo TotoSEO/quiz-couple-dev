@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Géminis con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Si hay algo que Géminis odia, es sentirse encerrado: en una casilla, en una rutina, en una idea de sí mismo que la otra persona haya decidido por él. Dicen que es inestable; más bien es varios a la vez. Se enamora de una mente antes que de un cuerpo, y el día en que la conversación se para, algo se desconecta.</p>
+  introduction: `<p>Si hay algo que Géminis odia, es sentirse encerrado: en una casilla, en una rutina, en una idea de sí mismo que la otra persona haya decidido por él. Dicen que es inestable; más bien es varios a la vez. <a href="/es/blog/signos-del-zodiaco-en-el-amor/">Se enamora de una mente</a> antes que de un cuerpo, y el día en que la conversación se para, algo se desconecta.</p>
 <p>Así que los signos que le van son los que no intentan fijarlo. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Libra y Acuario: sus dos grandes compatibilidades de Aire, con ellos la conversación no tiene fin.`,

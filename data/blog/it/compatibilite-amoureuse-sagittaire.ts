@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Il Sagittario con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Il Sagittario non sta fermo, non per instabilità, ma perché ha sete di vivere. Non scappa dall'impegno, scappa dalla noia, e per lui la noia comincia quando la routine si installa senza che nessuno la metta in discussione. Dice quello che pensa, senza filtri: con lui sai sempre a che punto sei.</p>
+  introduction: `<p>Il Sagittario non sta fermo, non per instabilità, ma perché ha sete di vivere. <a href="/it/blog/segni-zodiacali-in-amore/">Non scappa dall'impegno, scappa dalla noia</a>, e per lui la noia comincia quando la routine si installa senza che nessuno la metta in discussione. Dice quello che pensa, senza filtri: con lui sai sempre a che punto sei.</p>
 <p>Quello che vuole è un compagno di viaggio, in senso letterale e figurato. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Ariete e Leone sono i compagni d'avventura ideali, Fuoco con Fuoco, nessuno frena l'altro.`,

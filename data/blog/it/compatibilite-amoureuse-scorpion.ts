@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Lo Scorpione con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Se avete mai amato uno Scorpione, sapete che per lui l'amore non è una cosa leggera. Ci mette tutto: le emozioni, il corpo, la lealtà, le sue ferite più profonde. E si aspetta lo stesso dall'altro. A volte tiene le distanze per vedere se l'altro resta lo stesso: non è manipolazione, è protezione.</p>
+  introduction: `<p>Se avete mai amato uno Scorpione, sapete che per lui <a href="/it/blog/segni-zodiacali-in-amore/">l'amore non è una cosa leggera</a>. Ci mette tutto: le emozioni, il corpo, la lealtà, le sue ferite più profonde. E si aspetta lo stesso dall'altro. A volte tiene le distanze per vedere se l'altro resta lo stesso: non è manipolazione, è protezione.</p>
 <p>Quello che cerca è qualcuno che non resti in superficie, e che non se ne vada quando diventa difficile. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Cancro, Vergine, Capricorno: le tre unioni più profonde e durature per lo Scorpione.`,

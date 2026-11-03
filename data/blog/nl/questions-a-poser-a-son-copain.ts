@@ -154,7 +154,7 @@ const article: BlogArticleData = {
 <li>Wat geeft je het gevoel dat je leven zin heeft?</li>
 <li>Welk advies zou je jezelf van tien jaar geleden geven?</li>
 <li>Wat draag je nog mee uit een vorige relatie, in goede of slechte zin?</li>
-<li>Hoe ga je met geld om, en van wie heb je dat?</li>
+<li><a href="/nl/blog/praten-over-geld-in-je-relatie/">Hoe ga je met geld om</a>, en van wie heb je dat?</li>
 <li>Wat zou je nee laten zeggen tegen een droom: angst of verstand?</li>
 <li>Waarover ben je de laatste jaren van mening veranderd?</li>
 <li>Wat heb je nog nooit aan iemand verteld, zelfs niet aan mij?</li>
@@ -164,7 +164,7 @@ const article: BlogArticleData = {
     {
       id: 'toekomst-en-plannen',
       title: "Toekomst en plannen (81-90)",
-      content: `<p>Je hoeft niet op een huwelijksaanzoek te wachten om te weten of jullie levens dezelfde kant op gaan. Eerlijk gezegd kun je deze vragen beter te vroeg dan te laat stellen.</p>
+      content: `<p>Je hoeft niet <a href="/nl/blog/huwelijksaanzoek/">op een huwelijksaanzoek te wachten</a> om te weten of jullie levens dezelfde kant op gaan. Eerlijk gezegd kun je deze vragen beter te vroeg dan te laat stellen.</p>
 <ol start="81">
 <li>Waar zie je jezelf over vijf jaar, en hoe pas ik daarin?</li>
 <li>Waarover valt in je toekomst niet te onderhandelen?</li>
@@ -182,7 +182,7 @@ const article: BlogArticleData = {
     {
       id: 'aan-de-telefoon-of-op-afstand',
       title: "Aan de telefoon of op afstand (91-100)",
-      content: `<p>Tien vragen die perfect werken aan de telefoon of via berichtjes, voor koppels op afstand of voor avonden waarop ieder thuis zit.</p>
+      content: `<p>Tien vragen die perfect werken aan de telefoon of via berichtjes, voor <a href="/nl/blog/lange-afstandsrelatie/">koppels op afstand</a> of voor avonden waarop ieder thuis zit.</p>
 <ol start="91">
 <li>Wat zou je nu meteen doen als ik naast je zat?</li>
 <li>Wat was het eerste waar je vanochtend aan dacht?</li>

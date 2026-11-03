@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Schorpioen met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Als je ooit van een Schorpioen hebt gehouden, weet je dat liefde voor hem niets lichtzinnigs is. Hij stopt er alles in: zijn gevoelens, zijn lichaam, zijn trouw, zijn diepste kwetsbaarheden. En hij verwacht hetzelfde van de ander. Soms houdt hij iemand op afstand om te zien of die toch blijft: dat is geen manipulatie, dat is zelfbescherming.</p>
+  introduction: `<p>Als je ooit van een Schorpioen hebt gehouden, weet je dat <a href="/nl/blog/sterrenbeelden-in-de-liefde/">liefde voor hem niets lichtzinnigs is</a>. Hij stopt er alles in: zijn gevoelens, zijn lichaam, zijn trouw, zijn diepste kwetsbaarheden. En hij verwacht hetzelfde van de ander. Soms houdt hij iemand op afstand om te zien of die toch blijft: dat is geen manipulatie, dat is zelfbescherming.</p>
 <p>Wat hij zoekt, is iemand die niet aan de oppervlakte blijft en die niet weggaat als het moeilijk wordt. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Kreeft, Maagd, Steenbok: zijn drie diepste en duurzaamste combinaties.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Pisces with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Pisces is the last sign of the zodiac, and they carry a little of all the others in them. Their sensitivity is a radar: they pick up what others hide, and they love with an intensity that can be as beautiful as it is unsettling. They don't really tell the difference between loving someone and melting into them.</p>
+  introduction: `<p>Pisces is the last sign of the zodiac, and they carry a little of all the others in them. Their sensitivity is a radar: they pick up what others hide, and <a href="/en/blog/zodiac-signs-in-love/">they love with an intensity</a> that can be as beautiful as it is unsettling. They don't really tell the difference between loving someone and melting into them.</p>
 <p>What they're looking for is someone who understands them without having everything explained, and who doesn't say "you're overreacting" when they cry. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Cancer, Scorpio, Taurus: the three partners who understand and protect their sensitivity.`,

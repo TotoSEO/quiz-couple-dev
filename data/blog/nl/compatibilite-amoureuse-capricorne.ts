@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Steenbok met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Een Steenbok staat bekend als koel in de liefde. Hij is niet koel, hij is serieus, en in een wereld waarin liefde vaak als vermaak wordt behandeld, lijkt dat afstandelijk. Hij wordt niet snel verliefd, maar als hij iemand kiest, komt hij daar niet op terug.</p>
+  introduction: `<p>Een Steenbok <a href="/nl/blog/sterrenbeelden-in-de-liefde/">staat bekend als koel in de liefde</a>. Hij is niet koel, hij is serieus, en in een wereld waarin liefde vaak als vermaak wordt behandeld, lijkt dat afstandelijk. Hij wordt niet snel verliefd, maar als hij iemand kiest, komt hij daar niet op terug.</p>
 <p>Hij verwacht geen blinde passie, maar iemand op wie hij kan rekenen, die zijn beloftes nakomt en die niet verdwijnt als het ingewikkeld wordt. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Stier, Maagd, Schorpioen: zijn drie sterkste en duurzaamste combinaties.`,

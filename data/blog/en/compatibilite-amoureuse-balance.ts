@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Libra with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Libra has a reputation for being indecisive. It's not that they avoid choices, it's that they look for the right one, the one that hurts nobody. They think as a pair almost naturally, which makes them attentive, and also someone who can forget their own needs while searching for balance.</p>
+  introduction: `<p>Libra has a reputation for being indecisive. It's not that they avoid choices, it's that they look for the right one, the one that hurts nobody. <a href="/en/blog/zodiac-signs-in-love/">They think as a pair almost naturally</a>, which makes them attentive, and also someone who can forget their own needs while searching for balance.</p>
 <p>What they want is someone they feel good with, who knows how to decide for them sometimes, without rushing them. Here's what it gives with each of the 12 signs, with a score out of 10. And if you want an answer for the two of you right away, you can work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Gemini, Aquarius, Sagittarius: the partners whose conversations never run dry.`,

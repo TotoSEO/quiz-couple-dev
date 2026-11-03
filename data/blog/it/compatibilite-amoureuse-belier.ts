@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `L'Ariete con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>L'Ariete non aspetta. Vuole, parte, ama, e se l'altro non tiene il ritmo, passa ad altro. Non è che non gliene importi: è che vive veloce, e non tutti reggono quel ritmo. In amore, questo dà inizi da fuochi d'artificio, e a volte storie che si spengono prima di aver avuto il tempo di assestarsi.</p>
+  introduction: `<p>L'Ariete non aspetta. Vuole, parte, ama, e se l'altro non tiene il ritmo, passa ad altro. Non è che non gliene importi: è che vive veloce, e non tutti reggono quel ritmo. <a href="/it/blog/segni-zodiacali-in-amore/">In amore, questo dà inizi da fuochi d'artificio</a>, e a volte storie che si spengono prima di aver avuto il tempo di assestarsi.</p>
 <p>Quello che cerca è qualcuno che gli risponda, che non crolli alla prima tensione e che non sparisca nemmeno. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Leone e Bilancia sono i suoi partner migliori, per ragioni opposte.`,

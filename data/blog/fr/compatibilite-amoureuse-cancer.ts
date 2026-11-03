@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Cancer avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Derrière la carapace, parce qu'il y en a toujours une, le Cancer est l'un des signes qui donnent le plus en amour. Quand il se sent en sécurité, il est là tout entier : il se souvient de tout, il sent ce dont vous avez besoin avant que vous l'ayez dit. Et il y a des jours où il rentre en lui-même sans prévenir, ce que l'autre prend souvent pour du rejet.</p>
+  introduction: `<p>Derrière la carapace, parce qu'il y en a toujours une, le Cancer est l'un des <a href="/blog/signes-astrologiques-en-amour/">signes qui donnent le plus en amour</a>. Quand il se sent en sécurité, il est là tout entier : il se souvient de tout, il sent ce dont vous avez besoin avant que vous l'ayez dit. Et il y a des jours où il rentre en lui-même sans prévenir, ce que l'autre prend souvent pour du rejet.</p>
 <p>Ce qu'il cherche, ce n'est pas l'aventure, c'est un endroit où il peut être lui-même sans se défendre. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Scorpion, Taureau, Capricorne : trois associations solides, chacune pour une raison différente.`,

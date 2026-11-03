@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>66 % der Frauen sagen, sie machen mehr</strong> als ihr Partner in der Vorbereitung, davon 43 % «deutlich mehr». Ihnen gegenüber meinen 53 % der Männer, sie hätten sich zu gleichen Teilen beteiligt, gegenüber nur 27 % der Frauen. Das ist keine Meinungsverschiedenheit über den Urlaub, das ist eine Meinungsverschiedenheit darüber, was passiert ist.</p></li>
 
-<li><p><strong>30 %:</strong> der Anteil der Paare, die über das überschrittene Budget streiten. Ein stabiler Wert, und der einzige, den eine Tabelle wirklich löst.</p></li>
+<li><p><strong>30 %:</strong> der Anteil der Paare, die über <a href="/de/blog/haushaltsbudget-fuer-paare/">das überschrittene Budget</a> streiten. Ein stabiler Wert, und der einzige, den eine Tabelle wirklich löst.</p></li>
 
 <li><p><strong>28 % empfinden die Fahrt als angespannt.</strong> Routenwahl und Fahrstil stehen bei den Gründen ganz oben, weit vor Müdigkeit oder Kindern.</p></li>
 

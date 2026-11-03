@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Virgo with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Virgo doesn't make grand declarations. They remember how you take your coffee, they prepare what's needed on the day you're not doing well, they sort things out behind the scenes so your life is a little simpler. Their love shows in the details, and you have to know where to look.</p>
+  introduction: `<p>Virgo doesn't make grand declarations. They remember how you take your coffee, they prepare what's needed on the day you're not doing well, they sort things out behind the scenes so your life is a little simpler. <a href="/en/blog/zodiac-signs-in-love/">Their love shows in the details</a>, and you have to know where to look.</p>
 <p>The signs that understand this naturally are the ones they open up to. The others find them distant, without ever knowing what they missed. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus, Capricorn, Scorpio: their strongest unions, each for different reasons.`,

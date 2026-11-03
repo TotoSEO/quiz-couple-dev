@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Capricornio con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Capricornio tiene fama de frío en el amor. No es frío, es serio, y en un mundo donde el amor se trata a menudo como un entretenimiento, eso pasa por distancia. No se enamora fácilmente, pero cuando elige a alguien, no da marcha atrás.</p>
+  introduction: `<p>Capricornio tiene <a href="/es/blog/signos-del-zodiaco-en-el-amor/">fama de frío en el amor</a>. No es frío, es serio, y en un mundo donde el amor se trata a menudo como un entretenimiento, eso pasa por distancia. No se enamora fácilmente, pero cuando elige a alguien, no da marcha atrás.</p>
 <p>Lo que espera no es pasión ciega, es alguien con quien contar, que cumpla sus promesas y que no desaparezca cuando la cosa se complica. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Tauro y Virgo: las uniones de Tierra donde todo encaja sin forzar. Sólidas, fiables, duraderas.`,

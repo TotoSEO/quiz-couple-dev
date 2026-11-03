@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Die Zwillinge mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Wenn es etwas gibt, was Zwillinge hassen, dann ist es das Gefühl, eingesperrt zu sein: in eine Schublade, in eine Routine, in ein Bild von sich, das der andere für sie entschieden hat. Man nennt sie unbeständig, dabei sind sie eher mehrere auf einmal. Sie verlieben sich in einen Kopf, bevor sie sich in einen Körper verlieben, und an dem Tag, an dem das Gespräch aufhört, schaltet etwas ab.</p>
+  introduction: `<p>Wenn es etwas gibt, was Zwillinge hassen, dann ist es das Gefühl, eingesperrt zu sein: in eine Schublade, in eine Routine, in ein Bild von sich, das der andere für sie entschieden hat. Man nennt sie unbeständig, dabei sind sie eher mehrere auf einmal. <a href="/de/blog/sternzeichen-in-der-liebe/">Sie verlieben sich in einen Kopf</a>, bevor sie sich in einen Körper verlieben, und an dem Tag, an dem das Gespräch aufhört, schaltet etwas ab.</p>
 <p>Die Zeichen, die zu ihnen passen, sind also die, die nicht versuchen, sie festzunageln. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Waage und Wassermann verstehen das Zwillings-Tempo intuitiv, Luft trifft auf Luft.`,

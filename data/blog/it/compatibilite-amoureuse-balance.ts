@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `La Bilancia con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>La Bilancia ha fama di indecisa. Non è che eviti le scelte, è che cerca la scelta giusta, quella che non ferisce nessuno. Pensa in due quasi per natura, il che la rende premurosa, e anche qualcuno che può dimenticare i propri bisogni a forza di cercare l'equilibrio.</p>
+  introduction: `<p>La Bilancia ha fama di indecisa. Non è che eviti le scelte, è che cerca la scelta giusta, quella che non ferisce nessuno. <a href="/it/blog/segni-zodiacali-in-amore/">Pensa in due quasi per natura</a>, il che la rende premurosa, e anche qualcuno che può dimenticare i propri bisogni a forza di cercare l'equilibrio.</p>
 <p>Quello che vuole è qualcuno con cui sta bene, e che sappia decidere a volte al posto suo, senza forzarla. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Gemelli e Acquario sono i partner che la capiscono al primo sguardo, armonia d'Aria.`,

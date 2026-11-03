@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Couples almost never fail for lack of love. They fail on subjects they had never put on the table.",
   introduction: `<p>Most major relationship crises are about subjects both people knew they'd have to discuss one day: money, children, in-laws, sharing the chores. «One day» simply arrived too late, in the middle of a crisis, at the worst possible moment for discussing it calmly.</p>
 <p><strong>Talking about the future has never killed a solid relationship, whereas not talking about it has killed plenty.</strong> And these conversations are neither solemn nor heavy. Handled well, they're among the most exciting a couple can have!</p>
-<p>Here are 60 future questions, sorted by major stage: before moving in, before committing for good, before a child, around money, and about your shared dreams. To pick at BEFORE the subjects become urgent, that's the whole point.</p>`,
+<p>Here are 60 future questions, sorted by major stage: before moving in, before <a href="/en/blog/marriage-proposal/">committing for good</a>, before a child, <a href="/en/blog/money-and-relationships/">around money</a>, and about your shared dreams. To pick at BEFORE the subjects become urgent, that's the whole point.</p>`,
   quickSummary: [
     "60 questions sorted by stage: moving in, committing, a child, money, dreams.",
     "The principle: talk about it before it's urgent, never in the middle of a crisis.",

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Capricorn with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Capricorn has a reputation for being cold in love. They aren't cold, they're serious, and in a world where love is often treated as entertainment, that passes for distance. They don't fall in love easily, but when they choose someone, they don't go back.</p>
+  introduction: `<p>Capricorn has <a href="/en/blog/zodiac-signs-in-love/">a reputation for being cold in love</a>. They aren't cold, they're serious, and in a world where love is often treated as entertainment, that passes for distance. They don't fall in love easily, but when they choose someone, they don't go back.</p>
 <p>What they expect isn't blind passion, it's someone they can count on, who keeps their promises and doesn't disappear when things get complicated. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Taurus, Virgo, Scorpio: their three most solid and enduring unions.`,

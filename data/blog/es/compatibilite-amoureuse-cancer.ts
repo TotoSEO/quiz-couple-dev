@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Cáncer con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Detrás del caparazón, porque siempre hay uno, Cáncer es uno de los signos que más dan en el amor. Cuando se siente seguro, está ahí por completo: se acuerda de todo, siente lo que necesitas antes de que lo digas. Y hay días en que se encierra en sí mismo sin avisar, algo que la otra persona suele tomar por rechazo.</p>
+  introduction: `<p>Detrás del caparazón, porque siempre hay uno, Cáncer es uno de <a href="/es/blog/signos-del-zodiaco-en-el-amor/">los signos que más dan en el amor</a>. Cuando se siente seguro, está ahí por completo: se acuerda de todo, siente lo que necesitas antes de que lo digas. Y hay días en que se encierra en sí mismo sin avisar, algo que la otra persona suele tomar por rechazo.</p>
 <p>Lo que busca no es aventura, es un sitio donde pueda ser él mismo sin defenderse. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Escorpio, Tauro y Capricornio: tres asociaciones sólidas, cada una por una razón distinta.`,

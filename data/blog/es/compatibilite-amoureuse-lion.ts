@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Leo con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Se dice a menudo que Leo solo piensa en sí mismo. Es más simple que eso: necesita ver que su presencia cuenta, que la otra persona lo mira, que lo que aporta se reconoce. No es vanidad, es su manera de querer. Quien se borra delante de él lo aburre, quien quiere ocupar su sitio lo agota.</p>
+  introduction: `<p>Se dice a menudo que Leo solo piensa en sí mismo. Es más simple que eso: necesita ver que su presencia cuenta, que la otra persona lo mira, que lo que aporta se reconoce. No es vanidad, es <a href="/es/blog/signos-del-zodiaco-en-el-amor/">su manera de querer</a>. Quien se borra delante de él lo aburre, quien quiere ocupar su sitio lo agota.</p>
 <p>Lo ideal es alguien con luz propia que admire la suya a cambio. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Sagitario y Aries comparten su energía de Fuego, sus relaciones rara vez son tibias.`,

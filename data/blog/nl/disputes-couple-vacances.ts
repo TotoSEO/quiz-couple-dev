@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>66% van de vrouwen zegt meer te doen</strong> dan de partner bij de voorbereiding, en 43% zelfs ‘veel meer’. Daartegenover vindt 53% van de mannen dat ze evenveel gedaan hebben, tegen maar 27% van de vrouwen. Ze zijn het niet oneens over de vakantie, ze zijn het oneens over wat er gebeurd is.</p></li>
 
-<li><p><strong>30%:</strong> het aandeel koppels dat ruzie maakt over een overschreden budget. Een stabiel cijfer, en het enige dat je echt oplost met een rekenblad.</p></li>
+<li><p><strong>30%:</strong> het aandeel koppels dat ruzie maakt over <a href="/nl/blog/budget-voor-koppels/">een overschreden budget</a>. Een stabiel cijfer, en het enige dat je echt oplost met een rekenblad.</p></li>
 
 <li><p><strong>28% vindt de reis gespannen.</strong> De keuze van de route en de rijstijl staan bovenaan de redenen, ver voor vermoeidheid of de kinderen.</p></li>
 

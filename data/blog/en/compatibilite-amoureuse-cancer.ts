@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Cancer with each of the 12 signs, a score out of 10 and what works or grates in each couple.`,
-  introduction: `<p>Behind the shell, because there's always one, Cancer is one of the signs that give the most in love. When they feel safe, they're there completely: they remember everything, they sense what you need before you've said it. And there are days when they withdraw into themselves without warning, which the other person often takes for rejection.</p>
+  introduction: `<p>Behind the shell, because there's always one, Cancer is one of <a href="/en/blog/zodiac-signs-in-love/">the signs that give the most in love</a>. When they feel safe, they're there completely: they remember everything, they sense what you need before you've said it. And there are days when they withdraw into themselves without warning, which the other person often takes for rejection.</p>
 <p>What they're looking for isn't adventure, it's a place where they can be themselves without having to defend themselves. Here's what it gives with each of the 12 signs, a score out of 10 each time. For an answer about the two of you, you can also work it out <a href="/en/birth-date-love-compatibility/">from your two birth dates</a> or <a href="/en/zodiac-signs-names-compatibility/">from your first names and your signs</a>.</p>`,
   quickSummary: [
     `Scorpio, Taurus, Capricorn: three solid matches, each for a different reason.`,

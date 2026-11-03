@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Les Poissons avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Les Poissons sont le dernier signe du zodiaque, et ils ont un peu de tous les autres en eux. Leur sensibilité, c'est un radar : ils perçoivent ce que les autres cachent, et ils aiment avec une intensité qui peut être aussi belle que déstabilisante. Ils ne font pas bien la différence entre aimer quelqu'un et se fondre en lui.</p>
+  introduction: `<p>Les Poissons sont le dernier signe du zodiaque, et ils ont un peu de tous les autres en eux. Leur sensibilité, c'est un radar : ils perçoivent ce que les autres cachent, et <a href="/blog/signes-astrologiques-en-amour/">ils aiment avec une intensité</a> qui peut être aussi belle que déstabilisante. Ils ne font pas bien la différence entre aimer quelqu'un et se fondre en lui.</p>
 <p>Ce qu'ils cherchent, c'est quelqu'un qui les comprend sans qu'ils aient à tout expliquer, et qui ne leur dit pas « tu exagères » quand ils pleurent. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Cancer, Scorpion, Taureau : les trois partenaires qui comprennent et protègent leur sensibilité.`,

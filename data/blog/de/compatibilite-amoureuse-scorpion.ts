@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Skorpion mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Wer schon einmal einen Skorpion geliebt hat, weiß, dass Liebe für ihn nichts Leichtes ist. Er gibt alles hinein: die Gefühle, den Körper, die Loyalität, seine tiefsten Wunden. Und er erwartet dasselbe vom anderen. Manchmal hält er Abstand, um zu sehen, ob der andere trotzdem bleibt: Das ist keine Manipulation, das ist Schutz.</p>
+  introduction: `<p>Wer schon einmal einen Skorpion geliebt hat, weiß, dass <a href="/de/blog/sternzeichen-in-der-liebe/">Liebe für ihn nichts Leichtes ist</a>. Er gibt alles hinein: die Gefühle, den Körper, die Loyalität, seine tiefsten Wunden. Und er erwartet dasselbe vom anderen. Manchmal hält er Abstand, um zu sehen, ob der andere trotzdem bleibt: Das ist keine Manipulation, das ist Schutz.</p>
 <p>Was er sucht, ist jemand, der nicht an der Oberfläche bleibt und nicht geht, wenn es schwierig wird. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, jedes Mal mit einer Note von 10. Für eine Antwort, die euch beide betrifft, könnt ihr sie auch <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Krebs und Fische verstehen seine emotionale Tiefe, Wasser erkennt Wasser.`,

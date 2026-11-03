@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Löwe mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Man sagt oft, der Löwe denke nur an sich. Es ist einfacher als das: Er muss sehen, dass seine Anwesenheit zählt, dass der andere ihn ansieht, dass das, was er einbringt, anerkannt wird. Das ist keine Eitelkeit, das ist seine Art zu lieben. Wer sich vor ihm klein macht, langweilt ihn, wer seinen Platz will, erschöpft ihn.</p>
+  introduction: `<p>Man sagt oft, der Löwe denke nur an sich. Es ist einfacher als das: Er muss sehen, dass seine Anwesenheit zählt, dass der andere ihn ansieht, dass das, was er einbringt, anerkannt wird. Das ist keine Eitelkeit, das ist <a href="/de/blog/sternzeichen-in-der-liebe/">seine Art zu lieben</a>. Wer sich vor ihm klein macht, langweilt ihn, wer seinen Platz will, erschöpft ihn.</p>
 <p>Ideal ist jemand mit eigenem Licht, der seines im Gegenzug bewundert. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Schütze und Widder teilen seine Feuerenergie, ihre Beziehungen sind selten lauwarm.`,

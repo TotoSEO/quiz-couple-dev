@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Lion avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>On dit souvent que le Lion ne pense qu'à lui. C'est plus simple que ça : il a besoin de voir que sa présence compte, que l'autre le regarde, que ce qu'il apporte est reconnu. Ce n'est pas de la vanité, c'est sa façon d'aimer. Quelqu'un qui s'efface devant lui l'ennuie, quelqu'un qui veut prendre sa place l'épuise.</p>
+  introduction: `<p>On dit souvent que le Lion ne pense qu'à lui. C'est plus simple que ça : il a besoin de voir que sa présence compte, que l'autre le regarde, que ce qu'il apporte est reconnu. Ce n'est pas de la vanité, c'est <a href="/blog/signes-astrologiques-en-amour/">sa façon d'aimer</a>. Quelqu'un qui s'efface devant lui l'ennuie, quelqu'un qui veut prendre sa place l'épuise.</p>
 <p>L'idéal, c'est quelqu'un qui a sa propre lumière et qui admire la sienne en retour. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Sagittaire et Bélier partagent son énergie de Feu, leurs relations sont rarement tièdes.`,

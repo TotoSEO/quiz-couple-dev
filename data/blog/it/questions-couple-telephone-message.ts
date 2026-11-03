@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Al telefono non ci sono sguardi né gesti... solo parole. È esattamente per questo che le buone domande lì fanno miracoli.",
   introduction: `<p>C'è un momento che conoscono tutte le coppie, che vivano a 800 chilometri o a due quartieri di distanza: quello in cui la telefonata della sera diventa un bollettino meteo. «Com'è andata?» «Bene.» «Cosa mangi?» «Pasta.» Il legame c'è, la voglia anche, ma la conversazione gira a vuoto.</p>
 <p>È normale, in realtà: a distanza si perde tutto quello che di solito nutre gli scambi, gli sguardi, il contesto condiviso, i gesti. <strong>Restano solo le parole. Ed è proprio per questo che le buone domande fanno miracoli al telefono: ridanno alle parole qualcosa da fare.</strong></p>
-<p>Ecco 60 domande pensate per gli scambi a distanza: le serate ciascuno a casa sua, le vere coppie a distanza, i messaggi della giornata, e le grandi telefonate che si allungano. Alcune stanno in un messaggio, altre meritano un'ora di telefono. Sta a te dosare!</p>`,
+<p>Ecco 60 domande pensate per gli scambi a distanza: le serate ciascuno a casa sua, <a href="/it/blog/relazione-a-distanza/">le vere coppie a distanza</a>, i messaggi della giornata, e le grandi telefonate che si allungano. Alcune stanno in un messaggio, altre meritano un'ora di telefono. Sta a te dosare!</p>`,
   quickSummary: [
     "60 domande calibrate per telefono e messaggi, dal messaggio di una riga alla grande telefonata serale.",
     "La regola del formato: per iscritto domande corte; a voce domande aperte.",

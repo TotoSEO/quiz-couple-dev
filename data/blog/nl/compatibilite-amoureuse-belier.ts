@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Ram met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Een Ram wacht niet. Hij wil iets, hij gaat ervoor, hij wordt verliefd, en als de ander het tempo niet bijhoudt, gaat hij verder. Niet omdat het hem niets kan schelen: hij leeft gewoon snel, en niet iedereen houdt dat vol. In de liefde levert dat een begin vol vuurwerk op, en soms een verhaal dat uitdooft voordat het goed en wel begonnen is.</p>
+  introduction: `<p>Een Ram wacht niet. Hij wil iets, hij gaat ervoor, hij wordt verliefd, en als de ander het tempo niet bijhoudt, gaat hij verder. Niet omdat het hem niets kan schelen: hij leeft gewoon snel, en niet iedereen houdt dat vol. <a href="/nl/blog/sterrenbeelden-in-de-liefde/">In de liefde levert dat een begin vol vuurwerk op</a>, en soms een verhaal dat uitdooft voordat het goed en wel begonnen is.</p>
 <p>Hij zoekt iemand die iets terugzegt, die niet dichtklapt bij de eerste spanning en die zichzelf ook niet wegcijfert. Hieronder lees je hoe dat uitpakt met elk van de 12 sterrenbeelden, met telkens een cijfer van 1 tot 10. En wil je meteen een antwoord voor jullie tweeën, dan kun je het berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `De Leeuw en de Weegschaal zijn zijn beste partners, om tegenovergestelde redenen.`,

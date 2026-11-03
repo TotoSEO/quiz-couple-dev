@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Acuario con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Acuario es seguramente el signo peor entendido en el amor. Dicen que es distante, desapegado, incapaz de comprometerse. En realidad quiere, pero no como le dicen que quiera: nada de fusión, nada de «lo eres todo para mí». Quiere una pareja que sea antes que nada un amigo, con quien arreglar el mundo a las tres de la mañana, y necesita aire para volver hacia el otro.</p>
+  introduction: `<p>Acuario es seguramente <a href="/es/blog/signos-del-zodiaco-en-el-amor/">el signo peor entendido en el amor</a>. Dicen que es distante, desapegado, incapaz de comprometerse. En realidad quiere, pero no como le dicen que quiera: nada de fusión, nada de «lo eres todo para mí». Quiere una pareja que sea antes que nada un amigo, con quien arreglar el mundo a las tres de la mañana, y necesita aire para volver hacia el otro.</p>
 <p>Si intentas retenerlo, se aleja. Si lo dejas libre, vuelve. Aquí tienes lo que da con cada uno de los 12 signos, con una nota sobre 10. Y si queréis una respuesta para vosotros dos sin esperar, podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Géminis y Libra: los compañeros de Aire que le entienden sin intentar retenerle.`,

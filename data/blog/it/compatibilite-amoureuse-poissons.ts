@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `I Pesci con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>I Pesci sono l'ultimo segno dello zodiaco, e portano dentro un po' di tutti gli altri. La loro sensibilità è un radar: percepiscono quello che gli altri nascondono, e amano con un'intensità che può essere tanto bella quanto destabilizzante. Non distinguono bene tra amare qualcuno e fondersi in lui.</p>
+  introduction: `<p>I Pesci sono l'ultimo segno dello zodiaco, e portano dentro un po' di tutti gli altri. La loro sensibilità è un radar: percepiscono quello che gli altri nascondono, e <a href="/it/blog/segni-zodiacali-in-amore/">amano con un'intensità</a> che può essere tanto bella quanto destabilizzante. Non distinguono bene tra amare qualcuno e fondersi in lui.</p>
 <p>Quello che cercano è qualcuno che li capisca senza dover spiegare tutto, e che non dica «stai esagerando» quando piangono. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Cancro e Scorpione sono le loro combinazioni più naturali, Acqua con Acqua, emozioni che non serve spiegare.`,

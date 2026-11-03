@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Taureau avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Demandez à un Taureau ce qu'il cherche en amour, il vous répondra quelque chose comme « quelqu'un qui reste ». Pas de la routine, pas de l'ennui : la certitude que demain, l'autre sera encore là. Pour lui, l'amour, c'est un bon repas partagé, un canapé confortable et la chaleur de quelqu'un qu'on connaît par cœur.</p>
+  introduction: `<p>Demandez à un Taureau <a href="/blog/signes-astrologiques-en-amour/">ce qu'il cherche en amour</a>, il vous répondra quelque chose comme « quelqu'un qui reste ». Pas de la routine, pas de l'ennui : la certitude que demain, l'autre sera encore là. Pour lui, l'amour, c'est un bon repas partagé, un canapé confortable et la chaleur de quelqu'un qu'on connaît par cœur.</p>
 <p>Cette solidité, tous les signes ne la supportent pas : certains ont besoin que ça bouge, et le Taureau a besoin que ça tienne. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Taureau x Taureau, Vierge ou Capricorne : les unions les plus durables du zodiaque. Parfois un peu trop sages.`,

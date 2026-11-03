@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Il Toro con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Chiedete a un Toro cosa cerca in amore, vi risponderà qualcosa come «qualcuno che resta». Niente routine, niente noia: la certezza che domani l'altro sarà ancora lì. Per lui l'amore è una buona cena in due, un divano comodo e il calore di qualcuno che conosce a memoria.</p>
+  introduction: `<p>Chiedete a un Toro <a href="/it/blog/segni-zodiacali-in-amore/">cosa cerca in amore</a>, vi risponderà qualcosa come «qualcuno che resta». Niente routine, niente noia: la certezza che domani l'altro sarà ancora lì. Per lui l'amore è una buona cena in due, un divano comodo e il calore di qualcuno che conosce a memoria.</p>
 <p>Questa solidità non la reggono tutti i segni: alcuni hanno bisogno che le cose si muovano, e il Toro ha bisogno che tengano. Ecco cosa dà con ciascuno dei 12 segni, ogni volta con un voto su 10. Per una risposta che riguarda voi due, potete anche calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Toro x Toro, Vergine o Capricorno: le unioni più durature dello zodiaco. A volte fin troppo tranquille.`,

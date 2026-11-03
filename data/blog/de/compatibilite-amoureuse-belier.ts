@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Der Widder mit jedem der 12 Sternzeichen, eine Note von 10 und was in jedem Paar passt oder hakt.`,
-  introduction: `<p>Der Widder wartet nicht. Er will, er legt los, er liebt, und wenn der andere nicht mitkommt, zieht er weiter. Nicht, dass es ihm egal wäre: Er lebt schnell, und nicht jeder hält dieses Tempo aus. In der Liebe heißt das Anfänge wie ein Feuerwerk, und manchmal Geschichten, die erlöschen, bevor sie Zeit hatten, sich zu setzen.</p>
+  introduction: `<p>Der Widder wartet nicht. Er will, er legt los, er liebt, und wenn der andere nicht mitkommt, zieht er weiter. Nicht, dass es ihm egal wäre: Er lebt schnell, und nicht jeder hält dieses Tempo aus. <a href="/de/blog/sternzeichen-in-der-liebe/">In der Liebe heißt das Anfänge wie ein Feuerwerk</a>, und manchmal Geschichten, die erlöschen, bevor sie Zeit hatten, sich zu setzen.</p>
 <p>Was er sucht, ist jemand, der ihm Paroli bietet, der bei der ersten Spannung nicht einknickt und auch nicht verschwindet. Hier ist, was das mit jedem der 12 Sternzeichen ergibt, mit einer Note von 10. Und wenn ihr gleich eine Antwort für euch beide wollt, könnt ihr sie <a href="/de/liebeskompatibilitaet-geburtsdatum/">aus euren beiden Geburtsdaten</a> oder <a href="/de/sternzeichen-vornamen-kompatibilitaet/">aus euren Vornamen und Sternzeichen</a> berechnen.</p>`,
   quickSummary: [
     `Löwe und Waage sind seine besten Partner, aus völlig gegensätzlichen Gründen.`,

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Maagd met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Een Maagd doet geen grote liefdesverklaringen. Ze weet nog hoe je je koffie drinkt, ze regelt wat nodig is op de dag dat het slecht met je gaat, ze lost achter de schermen dingen op zodat jouw leven wat makkelijker wordt. Haar liefde zit in de details, en je moet wel weten waar je moet kijken.</p>
+  introduction: `<p>Een Maagd doet geen grote liefdesverklaringen. Ze weet nog hoe je je koffie drinkt, ze regelt wat nodig is op de dag dat het slecht met je gaat, ze lost achter de schermen dingen op zodat jouw leven wat makkelijker wordt. <a href="/nl/blog/sterrenbeelden-in-de-liefde/">Haar liefde zit in de details</a>, en je moet wel weten waar je moet kijken.</p>
 <p>Bij de tekens die dat vanzelf begrijpen, gaat ze open. De anderen vinden haar afstandelijk, zonder te weten wat ze gemist hebben. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Stier, Steenbok, Schorpioen: haar sterkste combinaties, elk om een andere reden.`,

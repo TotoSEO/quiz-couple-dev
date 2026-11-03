@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 
 <li><p><strong>El 66 % de las mujeres dice hacer más</strong> que su pareja en la preparación, y un 43 % dice «mucho más». Enfrente, el 53 % de los hombres cree haber participado a partes iguales, frente a solo el 27 % de las mujeres. No es un desacuerdo sobre las vacaciones, es un desacuerdo sobre lo que ha pasado.</p></li>
 
-<li><p><strong>30 %:</strong> la proporción de parejas que discute por pasarse del presupuesto. Una cifra estable, y la única que se arregla de verdad con una hoja de cálculo.</p></li>
+<li><p><strong>30 %:</strong> la proporción de parejas que discute por <a href="/es/blog/presupuesto-en-pareja/">pasarse del presupuesto</a>. Una cifra estable, y la única que se arregla de verdad con una hoja de cálculo.</p></li>
 
 <li><p><strong>El 28 % vive el trayecto con tensión.</strong> La elección del itinerario y el estilo de conducción encabezan los motivos, muy por delante del cansancio o de los hijos.</p></li>
 

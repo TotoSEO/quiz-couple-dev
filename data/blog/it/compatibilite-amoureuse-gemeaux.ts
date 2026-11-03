@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `I Gemelli con ciascuno dei 12 segni, un voto su 10 e cosa funziona o stride in ogni coppia.`,
-  introduction: `<p>Se c'è una cosa che i Gemelli odiano, è sentirsi chiusi: in una casella, in una routine, in un'idea di sé che l'altro ha deciso al posto loro. Li dicono instabili, sono piuttosto più persone in una. Si innamorano di una mente prima che di un corpo, e il giorno in cui la conversazione si ferma, qualcosa si spegne.</p>
+  introduction: `<p>Se c'è una cosa che i Gemelli odiano, è sentirsi chiusi: in una casella, in una routine, in un'idea di sé che l'altro ha deciso al posto loro. Li dicono instabili, sono piuttosto più persone in una. <a href="/it/blog/segni-zodiacali-in-amore/">Si innamorano di una mente</a> prima che di un corpo, e il giorno in cui la conversazione si ferma, qualcosa si spegne.</p>
 <p>Quindi i segni che vanno bene per loro sono quelli che non provano a fissarli. Ecco cosa dà con ciascuno dei 12 segni, con un voto su 10. E se volete una risposta per voi due senza aspettare, potete calcolarla <a href="/it/compatibilita-amorosa-data-di-nascita/">a partire dalle vostre due date di nascita</a> o <a href="/it/segni-zodiacali-nomi-compatibilita/">dai nomi e dai segni</a>.</p>`,
   quickSummary: [
     `Bilancia e Acquario sono le sue anime gemelle intellettuali, aria incontra aria.`,

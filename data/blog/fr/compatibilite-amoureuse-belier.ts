@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Bélier avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Le Bélier n'attend pas. Il veut, il fonce, il aime, et si l'autre ne suit pas le rythme, il passe à autre chose. Ce n'est pas qu'il s'en fiche : c'est qu'il vit vite, et que tout le monde ne tient pas ce rythme-là. En amour, ça donne des débuts en feu d'artifice, et parfois des histoires qui s'éteignent avant d'avoir eu le temps de s'installer.</p>
+  introduction: `<p>Le Bélier n'attend pas. Il veut, il fonce, il aime, et si l'autre ne suit pas le rythme, il passe à autre chose. Ce n'est pas qu'il s'en fiche : c'est qu'il vit vite, et que tout le monde ne tient pas ce rythme-là. <a href="/blog/signes-astrologiques-en-amour/">En amour, ça donne des débuts en feu d'artifice</a>, et parfois des histoires qui s'éteignent avant d'avoir eu le temps de s'installer.</p>
 <p>Ce qu'il cherche, c'est quelqu'un qui lui répond, qui ne s'écrase pas à la première tension et qui ne s'efface pas non plus. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Le Lion et la Balance sont ses meilleurs partenaires, pour des raisons opposées.`,

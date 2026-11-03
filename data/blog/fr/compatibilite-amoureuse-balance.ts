@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `La Balance avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>La Balance a une réputation d'indécise. Ce n'est pas qu'elle évite les choix, c'est qu'elle cherche le choix juste, celui qui ne blesse personne. Elle pense en duo presque naturellement, ce qui en fait quelqu'un d'attentionné, et quelqu'un qui peut oublier ses propres besoins à force de chercher l'équilibre.</p>
+  introduction: `<p>La Balance a une réputation d'indécise. Ce n'est pas qu'elle évite les choix, c'est qu'elle cherche le choix juste, celui qui ne blesse personne. <a href="/blog/signes-astrologiques-en-amour/">Elle pense en duo presque naturellement</a>, ce qui en fait quelqu'un d'attentionné, et quelqu'un qui peut oublier ses propres besoins à force de chercher l'équilibre.</p>
 <p>Ce qu'elle veut, c'est quelqu'un avec qui elle se sent bien, et qui sait décider parfois à sa place, sans la brusquer. Voici ce que ça donne avec chacun des 12 signes, avec une note sur 10. Et si vous voulez une réponse pour vous deux sans attendre, vous pouvez la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Gémeaux, Verseau, Sagittaire : les partenaires avec qui les conversations ne s'arrêtent jamais.`,

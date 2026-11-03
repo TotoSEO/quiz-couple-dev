@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `La Vierge avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>La Vierge ne fait pas de grandes déclarations. Elle se souvient de comment vous aimez votre café, elle prépare ce qu'il faut le jour où vous allez mal, elle arrange les choses en coulisses pour que votre vie soit un peu plus simple. Son amour se lit dans les détails, et il faut savoir regarder.</p>
+  introduction: `<p>La Vierge ne fait pas de grandes déclarations. Elle se souvient de comment vous aimez votre café, elle prépare ce qu'il faut le jour où vous allez mal, elle arrange les choses en coulisses pour que votre vie soit un peu plus simple. <a href="/blog/signes-astrologiques-en-amour/">Son amour se lit dans les détails</a>, et il faut savoir regarder.</p>
 <p>Les signes qui comprennent ça naturellement sont ceux avec qui elle s'ouvre. Les autres la trouvent distante, sans savoir ce qu'ils ont raté. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Taureau, Capricorne, Scorpion : ses unions les plus solides, chacune pour des raisons différentes.`,

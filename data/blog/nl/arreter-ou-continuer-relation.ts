@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Dit is te herstellen</p>
 <ul>
-<li><strong>Sleur en verveling</strong>, als jullie er allebei over klagen. Dan zijn het twee mensen die nog iets anders willen.</li>
+<li><strong><a href="/nl/blog/sleur-in-je-relatie/">Sleur en verveling</a></strong>, als jullie er allebei over klagen. Dan zijn het twee mensen die nog iets anders willen.</li>
 <li><strong>Minder zin in seks</strong>, al een paar jaar, zonder verwijt erachter.</li>
 <li><strong>Vaak ruzie, maar ruzies die eindigen</strong>, met iemand die terugkomt.</li>
 <li><strong>Een crisis met een datum</strong>: een overlijden, een verhuizing, een burn-out, de komst van een kind.</li>

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Tauro con cada uno de los 12 signos, una nota sobre 10 y lo que funciona o chirría en cada pareja.`,
-  introduction: `<p>Pregúntale a un Tauro qué busca en el amor y te contestará algo como «alguien que se quede». Ni rutina ni aburrimiento: la certeza de que mañana, la otra persona seguirá ahí. Para él, el amor es una buena comida compartida, un sofá cómodo y el calor de alguien a quien conoce de memoria.</p>
+  introduction: `<p>Pregúntale a un Tauro <a href="/es/blog/signos-del-zodiaco-en-el-amor/">qué busca en el amor</a> y te contestará algo como «alguien que se quede». Ni rutina ni aburrimiento: la certeza de que mañana, la otra persona seguirá ahí. Para él, el amor es una buena comida compartida, un sofá cómodo y el calor de alguien a quien conoce de memoria.</p>
 <p>Esa solidez no la aguantan todos los signos: algunos necesitan que las cosas se muevan, y Tauro necesita que aguanten. Aquí tienes lo que da con cada uno de los 12 signos, una nota sobre 10 cada vez. Para una respuesta sobre vosotros dos, también podéis calcularla <a href="/es/compatibilidad-amorosa-fecha-de-nacimiento/">a partir de vuestras dos fechas de nacimiento</a> o <a href="/es/signos-astrologicos-nombres-compatibilidad/">por los nombres y los signos</a>.</p>`,
   quickSummary: [
     `Tauro x Tauro, Virgo o Capricornio: las uniones más duraderas del zodiaco. A veces un poco demasiado tranquilas.`,

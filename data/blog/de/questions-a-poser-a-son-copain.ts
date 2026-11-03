@@ -153,7 +153,7 @@ const article: BlogArticleData = {
 <li>Was gibt dir das Gefühl, dass dein Leben Sinn hat?</li>
 <li>Welchen Rat würdest du dem Dich von vor zehn Jahren geben?</li>
 <li>Was trägst du noch aus einer früheren Beziehung mit dir, im Guten wie im Schlechten?</li>
-<li>Wie ist dein Verhältnis zu Geld, und von wem hast du es geerbt?</li>
+<li>Wie ist <a href="/de/blog/ueber-geld-reden-in-der-beziehung/">dein Verhältnis zu Geld</a>, und von wem hast du es geerbt?</li>
 <li>Was würde dich zu einem Traum Nein sagen lassen: die Angst oder die Vernunft?</li>
 <li>Worin hast du in den letzten Jahren deine Meinung geändert?</li>
 <li>Was hast du nie jemandem erzählt, nicht einmal mir?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
     {
       id: 'zukunft-und-plaene',
       title: "Zukunft und Pläne (81-90)",
-      content: `<p>Man muss nicht auf einen Heiratsantrag warten, um zu wissen, ob eure Wege zusammenpassen. Ehrlich gesagt, lieber diese Fragen zu früh als zu spät.</p>
+      content: `<p>Man muss nicht <a href="/de/blog/heiratsantrag/">auf einen Heiratsantrag warten</a>, um zu wissen, ob eure Wege zusammenpassen. Ehrlich gesagt, lieber diese Fragen zu früh als zu spät.</p>
 <ol start="81">
 <li>Wo siehst du dich in fünf Jahren, und wie komme ich darin vor?</li>
 <li>Was ist in deinem künftigen Leben nicht verhandelbar?</li>
@@ -181,7 +181,7 @@ const article: BlogArticleData = {
     {
       id: 'am-telefon',
       title: "Am Telefon oder auf Distanz (91-100)",
-      content: `<p>Zehn Fragen, die mündlich oder per Nachricht bestens funktionieren, für Fernbeziehungen oder Abende, an denen jeder bei sich ist.</p>
+      content: `<p>Zehn Fragen, die mündlich oder per Nachricht bestens funktionieren, für <a href="/de/blog/fernbeziehung/">Fernbeziehungen</a> oder Abende, an denen jeder bei sich ist.</p>
 <ol start="91">
 <li>Was würdest du gerade jetzt tun, wenn ich neben dir wäre?</li>
 <li>Was war heute Morgen dein erster Gedanke?</li>

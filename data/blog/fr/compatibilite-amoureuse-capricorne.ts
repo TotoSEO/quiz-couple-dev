@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `Le Capricorne avec chacun des 12 signes, une note sur 10 et ce qui marche ou coince dans chaque couple.`,
-  introduction: `<p>Le Capricorne a la réputation d'être froid en amour. Il n'est pas froid, il est sérieux, et dans un monde où l'amour se traite souvent comme un divertissement, ça passe pour de la distance. Il ne tombe pas amoureux facilement, mais quand il choisit quelqu'un, il ne revient pas en arrière.</p>
+  introduction: `<p>Le Capricorne a <a href="/blog/signes-astrologiques-en-amour/">la réputation d'être froid en amour</a>. Il n'est pas froid, il est sérieux, et dans un monde où l'amour se traite souvent comme un divertissement, ça passe pour de la distance. Il ne tombe pas amoureux facilement, mais quand il choisit quelqu'un, il ne revient pas en arrière.</p>
 <p>Ce qu'il attend, ce n'est pas de la passion aveugle, c'est quelqu'un sur qui compter, qui tient ses promesses et qui ne disparaît pas quand ça se complique. Voici ce que ça donne avec chacun des 12 signes, une note sur 10 à chaque fois. Pour une réponse qui vous concerne vous deux, vous pouvez aussi la calculer <a href="/compatibilite-amoureuse-date-de-naissance/">à partir de vos deux dates de naissance</a> ou <a href="/signes-astrologiques-prenoms-compatibilite/">par les prénoms et les signes</a>.</p>`,
   quickSummary: [
     `Taureau, Vierge, Scorpion : ses trois unions les plus solides et les plus durables.`,

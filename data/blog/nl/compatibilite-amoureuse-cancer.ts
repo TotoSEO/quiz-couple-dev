@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   modifiedAt: '2026-10-26',
   author: AUTHORS['thomas'],
   excerpt: `De Kreeft met elk van de 12 sterrenbeelden: een cijfer van 1 tot 10 en wat goed gaat of schuurt in elk koppel.`,
-  introduction: `<p>Achter het pantser, want er is er altijd een, is de Kreeft een van de tekens die het meest geven in de liefde. Als hij zich veilig voelt, is hij er helemaal: hij onthoudt alles, hij voelt wat je nodig hebt voordat je het zegt. En er zijn dagen waarop hij zonder waarschuwing in zichzelf keert, wat de ander vaak opvat als afwijzing.</p>
+  introduction: `<p>Achter het pantser, want er is er altijd een, is de Kreeft een van de tekens <a href="/nl/blog/sterrenbeelden-in-de-liefde/">die het meest geven in de liefde</a>. Als hij zich veilig voelt, is hij er helemaal: hij onthoudt alles, hij voelt wat je nodig hebt voordat je het zegt. En er zijn dagen waarop hij zonder waarschuwing in zichzelf keert, wat de ander vaak opvat als afwijzing.</p>
 <p>Wat hij zoekt, is geen avontuur, maar een plek waar hij zichzelf kan zijn zonder zich te verdedigen. Hieronder zie je hoe dat gaat met elk van de 12 sterrenbeelden, elke keer met een cijfer van 1 tot 10. Voor een antwoord over jullie tweeën kun je het ook berekenen <a href="/nl/compatibiliteit-geboortedatum/">op basis van jullie twee geboortedata</a> of <a href="/nl/sterrenbeelden-match/">met jullie namen en sterrenbeelden</a>.</p>`,
   quickSummary: [
     `Schorpioen, Stier, Steenbok: drie sterke combinaties, elk om een andere reden.`,
