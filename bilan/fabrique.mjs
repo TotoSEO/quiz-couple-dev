@@ -99,14 +99,18 @@ async function maj(db, id, champs) {
   });
 }
 
-function donneesDe(ligne) {
+export function donneesDe(ligne) {
   const solo = ligne.mode === 'solo';
+  // Le point sur ma relation (formule 'point', depuis le 4 novembre 2026) :
+  // ses seules réponses, sans perception.
+  const point = ligne.formule === 'point';
   return {
     lang: ligne.lang,
     mode: solo ? 'solo' : 'duo',
+    ...(point ? { formule: 'point' } : {}),
     situation: ligne.situation,
     finiLe: solo ? ligne.a_fini : (ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini),
-    a: { prenom: ligne.a_prenom, genre: ligne.a_genre, reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [], ...(solo ? { percu: ligne.a_percu || {} } : {}) },
+    a: { prenom: ligne.a_prenom, genre: ligne.a_genre, reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [], ...(solo && !point ? { percu: ligne.a_percu || {} } : {}) },
     b: solo ? { prenom: ligne.b_prenom, genre: ligne.b_genre }
       : { prenom: ligne.b_prenom, genre: ligne.b_genre, reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
   };

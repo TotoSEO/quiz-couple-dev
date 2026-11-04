@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { rapportHtml, styleDePage } from '../supabase/functions/_shared/bilan/rapport.mjs';
+import { rapportPointHtml, styleDePagePoint } from '../supabase/functions/_shared/bilan/rapport-point.mjs';
 import { couperPour } from './cesure.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
@@ -29,6 +30,13 @@ export function textes(lang) {
   return cache.get(lang);
 }
 
+// Les textes du point sur ma relation (le seul(e) depuis le 4 novembre 2026).
+const cachePoint = new Map();
+export function textesPoint(lang) {
+  if (!cachePoint.has(lang)) cachePoint.set(lang, JSON.parse(fs.readFileSync(path.join(RACINE, lang, 'bilan-point.json'), 'utf8')));
+  return cachePoint.get(lang);
+}
+
 let cssCache = null;
 export function feuilleEnLigne() {
   if (cssCache) return cssCache;
@@ -44,29 +52,41 @@ export function feuilleEnLigne() {
 // Les marges du PDF, en millimètres : reprises par le contrôle du PDF.
 export const MARGES = { haut: 16, droite: 16, bas: 18, gauche: 16 };
 
-function regleDePage(T) {
+function regleDePage(stylePied) {
   const m = MARGES;
   const pied = 'font-family: "QC Inter", Helvetica, Arial, sans-serif; font-size: 7.5pt; color: #85798b; vertical-align: top; padding-top: 5mm;';
   return `@page { size: A4; margin: ${m.haut}mm ${m.droite}mm ${m.bas}mm ${m.gauche}mm;
   @bottom-left { ${pied} }
   @bottom-right { content: counter(page) " / " counter(pages); ${pied} text-align: right; } }
 @page :first { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
-${styleDePage(T)}
+${stylePied}
 html, body { margin: 0; padding: 0; background: #fff; }`;
 }
 
-// donnees : ce que rend l'action « resultat » (lang, situation, a, b, finiLe).
+// donnees : ce que rend l'action « resultat » (lang, situation, a, b, finiLe,
+// et `formule: 'point'` pour le point sur ma relation).
 export function documentPdf(donnees) {
   const lang = donnees.lang || 'fr';
-  const { T, Q } = textes(lang);
-  const r = rapportHtml(donnees, T, Q, { format: 'pdf', couper: couperPour(lang), editeur: EDITEUR });
-  const titre = (T.rapport && T.rapport.surtitre ? T.rapport.surtitre + ' · ' : '') + donnees.a.prenom
-    + (donnees.mode === 'solo' ? '' : ' & ' + donnees.b.prenom);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let r;
+  let titre;
+  let pied;
+  if (donnees.formule === 'point') {
+    const TP = textesPoint(lang);
+    r = rapportPointHtml(donnees, TP, { format: 'pdf', couper: couperPour(lang), editeur: EDITEUR });
+    titre = (TP.rapport && TP.rapport.surtitre ? TP.rapport.surtitre + ' · ' : '') + donnees.a.prenom;
+    pied = styleDePagePoint(TP);
+  } else {
+    const { T, Q } = textes(lang);
+    r = rapportHtml(donnees, T, Q, { format: 'pdf', couper: couperPour(lang), editeur: EDITEUR });
+    titre = (T.rapport && T.rapport.surtitre ? T.rapport.surtitre + ' · ' : '') + donnees.a.prenom
+      + (donnees.mode === 'solo' ? '' : ' & ' + donnees.b.prenom);
+    pied = styleDePage(T);
+  }
   const html = `<!doctype html>
 <html lang="${esc(lang)}"><head><meta charset="utf-8"><title>${esc(titre)}</title>
 <style>${feuilleEnLigne()}
-${regleDePage(T)}</style></head>
+${regleDePage(pied)}</style></head>
 <body>${r.html}</body></html>`;
   return { html, analyse: r.analyse, titre };
 }

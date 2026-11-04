@@ -8,7 +8,11 @@ import { fileURLToPath } from 'node:url';
 import { rapportHtml, couleurs, styleDePage, partsCent } from '../../supabase/functions/_shared/bilan/rapport.mjs';
 import * as C from '../../supabase/functions/_shared/bilan/coeur.mjs';
 import { couperPour } from '../cesure.mjs';
-import { jeuxDEssai, couple } from '../exemples.mjs';
+import { jeuxDEssai as tousLesJeux, couple } from '../exemples.mjs';
+
+// Les cas du rapport à deux (le point sur ma relation a son propre gabarit et
+// ses tests, rapport-point.test.mjs).
+const jeuxDEssai = (lang) => tousLesJeux(lang).filter((j) => j.d.formule !== 'point');
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const LANGUES = ['fr', 'en', 'es', 'de', 'it', 'nl'];

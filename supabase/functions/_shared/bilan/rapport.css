@@ -625,6 +625,142 @@
 .rap-sig-et { color: rgba(255, 255, 255, .6); }
 .rap-editeur { font-size: .74em; color: var(--encre-3); margin-top: 2em; }
 
+/* ── Le point sur ma relation (seul(e), depuis le 4 novembre 2026) ─────
+   rapport-point.mjs : les mêmes ouvertures de chapitre, cartes et aplats que
+   le rapport à deux, plus ce qui lui est propre (classes rpt-). Mêmes règles :
+   des grilles en minmax(0, 1fr), aucun texte en position absolue, et chaque
+   bloc qui ne doit pas se couper porte break-inside: avoid. */
+
+/* Dans le PDF, les chapitres du point se suivent sans page neuve : chacun
+   est court, et une page neuve par chapitre laissait une page sur deux à
+   moitié vide. L'ouverture et l'intro forment un bloc insécable
+   (`rpt-tete`) qui garde au moins le début du contenu avec lui. */
+.rap--point.rap--pdf .rpt-chap { break-before: auto; margin-top: 2.4em; }
+.rap--point.rap--pdf .rap-couv + .rpt-chap { margin-top: 0; }
+.rpt-tete { break-inside: avoid; break-after: avoid; }
+.rap--pdf .rpt-intro { margin-top: 1.4em; }
+.rap--pdf .rpt-chap .rpt-corps--suite { margin-top: 0; }
+.rap--ecran .rpt-intro { margin: 1.6em 1.75em 1.4em; }
+.rap--ecran .rpt-chap .rpt-corps--suite { padding-top: 0; }
+@media (max-width: 480px) { .rap--ecran .rpt-intro { margin: 1.3em 1.15em 1.25em; } }
+
+/* Un prénom dans le texte : jamais coupé par la césure, il passe à la ligne
+   où il peut. */
+.rpt-nom { hyphens: none; -webkit-hyphens: none; overflow-wrap: anywhere; }
+
+/* La couverture : l'état de la relation, en pastille sous le prénom. */
+.rpt-couv-etat { display: inline-grid; gap: .15em; margin-top: 1.4em; padding: .75em 1.1em .8em; border-radius: 14px;
+  background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); max-width: 100%; }
+.rpt-couv-etat-lib { font-size: .72em; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: rgba(255, 255, 255, .72); }
+.rpt-couv-etat-titre { font-family: var(--titre); font-weight: 500; font-size: 1.5em; line-height: 1.2; }
+.rpt-couv-etat--epanouie { box-shadow: inset 0 0 0 1px rgba(150, 214, 182, .8); }
+.rpt-couv-etat--solide { box-shadow: inset 0 0 0 1px rgba(236, 206, 132, .85); }
+.rpt-couv-etat--fragile, .rpt-couv-etat--securite { box-shadow: inset 0 0 0 1px rgba(240, 160, 160, .9); }
+
+/* L'essentiel : un anneau, l'état, et cinq tuiles dont deux en mots. */
+.rpt-score { margin-top: .4em; }
+.rpt-tuile--texte .rap-tuile-n { font-size: 1.12em; line-height: 1.22; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
+.rpt-tuile--climat { border-top-color: var(--violet); }
+.rpt-tuile--climat .rap-tuile-n { color: var(--violet-texte); }
+.rpt-tuile--signaux { border-top-color: var(--ecart); }
+.rpt-tuile--signaux .rap-tuile-n { color: var(--ecart-texte); }
+.rpt-tuile--manques { border-top-color: var(--proche); }
+.rpt-tuile--manques .rap-tuile-n { color: var(--proche-texte); }
+.rpt-tuile--attachement, .rpt-tuile--profil { border-top-color: var(--rose); }
+.rpt-pc { font-size: .5em; }
+.rpt-conseils { margin-bottom: 0; }
+.rpt-encadre-secu { margin-top: 1.2em; }
+.rpt-pas-faute { font-family: var(--titre); font-size: 1.15em; line-height: 1.35; }
+
+/* Les réponses, une ligne chacune : la question, la réponse, la marque. */
+/* Sept lignes au plus : elles restent sur la même page. */
+.rpt-lignes { list-style: none; display: grid; gap: 0; margin-top: 1.3em; border-top: 1px solid var(--trait); break-inside: avoid; }
+.rpt-ligne { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto; gap: .4em 1em; align-items: baseline;
+  padding: .62em 0; border-bottom: 1px solid var(--trait); break-inside: avoid; }
+.rpt-ligne-q { font-weight: 600; font-size: .95em; }
+.rpt-ligne-r { color: var(--encre-2); font-size: .93em; }
+.rpt-ligne-m { justify-self: end; }
+.rpt-lignes--serre { margin-top: .6em; }
+.rpt-lignes--serre .rpt-ligne { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); padding: .45em 0; }
+@media (max-width: 640px) {
+  .rap--ecran .rpt-ligne { grid-template-columns: minmax(0, 1fr) auto; }
+  .rap--ecran .rpt-ligne-q { grid-column: 1 / -1; }
+}
+.rpt-zoom { margin-top: 1.2em; }
+
+/* Les besoins : deux colonnes de cartes. */
+.rpt-manques { margin-bottom: 1.4em; }
+.rpt-besoins { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .8em; }
+.rpt-besoins > .rap-etat { margin-bottom: 0; }
+@media (max-width: 640px) { .rap--ecran .rpt-besoins { grid-template-columns: minmax(0, 1fr); } }
+.rpt-besoin .rap-etat-tete { grid-template-columns: minmax(0, 1fr); gap: .3em; }
+.rpt-besoin .rap-etat-tete .rap-tags { justify-content: flex-start; }
+.rpt-besoin-rep { font-weight: 600; font-size: .92em; margin-top: .55em; }
+.rpt-besoin-texte { font-size: .88em; color: var(--encre-2); margin-top: .35em; }
+
+/* Les signaux : la carte d'état du rapport à deux, un texte et ce qui aide. */
+.rpt-signal-texte { margin-top: .5em; }
+.rpt-signal-aide { margin-top: .55em; font-size: .93em; color: var(--encre-2); }
+
+/* Les numéros d'aide. */
+.rpt-numeros { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(13em, 1fr)); gap: .7em; margin-top: .8em; }
+.rpt-numero { border-radius: 12px; border: 1px solid var(--ecart-trait); background: #fff; padding: .75em .95em .8em; break-inside: avoid; }
+.rpt-numero-n { font-family: var(--titre); font-weight: 600; font-size: 1.45em; line-height: 1.1; color: var(--ecart-texte); }
+.rpt-numero-d { font-size: .86em; color: var(--encre-2); margin-top: .3em; }
+
+/* Qui fait quoi : une échelle de cinq cases, la réponse dessous. */
+.rpt-quis { list-style: none; display: grid; gap: 1.1em; break-inside: avoid; }
+.rpt-qui { break-inside: avoid; }
+.rpt-qui-q { font-weight: 600; margin-bottom: .45em; }
+.rpt-qui-piste { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px; }
+.rpt-qui-case { display: block; height: .9em; border-radius: 4px; background: var(--papier-3); }
+.rpt-qui-case--on { background: var(--foret); }
+.rpt-qui-bouts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1em; font-size: .78em; color: var(--encre-3); margin-top: .25em; }
+.rpt-qui-bouts span:last-child { text-align: right; }
+.rpt-qui-r { font-size: .92em; color: var(--encre-2); margin-top: .2em; }
+.rpt-texte { margin-top: 1.4em; }
+
+/* La façon d'aimer : le plan à deux axes à côté du texte. */
+.rpt-attachement { display: grid; grid-template-columns: minmax(0, 19em) minmax(0, 1fr); gap: 1.6em; align-items: start; break-inside: avoid; }
+@media (max-width: 640px) { .rap--ecran .rpt-attachement { grid-template-columns: minmax(0, 1fr); } }
+.rpt-plan2d { max-width: 19em; }
+.rpt-plan2d svg { width: 100%; height: auto; }
+.rpt-plan2d-axe { font-size: .76em; font-weight: 600; color: var(--encre-2); }
+.rpt-plan2d-axe--y { margin-bottom: .2em; }
+.rpt-plan2d-axe--x { text-align: right; margin-top: .1em; }
+.rpt-plan-zone { stroke: #fff; stroke-width: 2; }
+.rpt-plan-zone--secure { fill: var(--accord-fond); }
+.rpt-plan-zone--anxieux { fill: var(--rose-fond); }
+.rpt-plan-zone--evitant { fill: var(--violet-fond); }
+.rpt-plan-zone--craintif { fill: var(--proche-fond); }
+.rpt-plan-milieu { stroke: #fff; stroke-width: 2; }
+.rpt-plan-axe { stroke: var(--encre-3); stroke-width: 2; }
+.rpt-plan-pointe { fill: var(--encre-3); }
+.rpt-plan-quad { font-family: var(--texte); font-size: 14px; font-weight: 600; fill: var(--encre-3); }
+.rpt-plan-quad--on { fill: var(--encre); }
+.rpt-plan-point { fill: var(--rose); stroke: #fff; stroke-width: 3; }
+
+/* Ce qui vous retient : la balance, le profil, les questions. */
+.rpt-balance .rap-encadre { margin-top: 0; }
+.rpt-mesure { margin-top: .9em; }
+.rpt-mesure:first-of-type { margin-top: 0; }
+.rpt-retient { margin-top: .5em; }
+.rpt-resultat { margin-top: 1em; }
+.rpt-resultat .rpt-mesure { margin-top: 0; }
+.rpt-profil { grid-template-columns: minmax(0, 1fr); margin-top: 1.6em; }
+.rpt-verdict { margin-top: 1em; }
+
+/* Le plan : trois cartes numérotées, le guide en trois blocs. */
+.rpt-sujet .rap-carte-tete--num { margin-bottom: .2em; }
+.rpt-sujet-sur { font-size: .72em; letter-spacing: .13em; text-transform: uppercase; font-weight: 700; color: var(--rose-texte); margin-bottom: .15em; }
+.rpt-sujet-texte { margin-top: .6em; }
+.rpt-ouvrir { font-style: italic; }
+.rpt-avant { margin-top: 1.2em; }
+
+/* Et à deux ? */
+.rpt-deux { margin-top: .4em; }
+.rpt-lien { margin-top: 1.2em; font-size: 1.02em; }
+
 /* ── Écran seulement ─────────────────────────────────────────────────── */
 
 @media print {

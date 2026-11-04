@@ -563,7 +563,9 @@
   "couverture": {
    "avec": "avec {{autre}}",
    "sous": "Votre rapport personnel. Personne d'autre que vous ne le voit.",
-   "etat": "Votre relation aujourd'hui"
+   "etat": "Votre relation aujourd'hui",
+   "date": "Rapport du {{date}}",
+   "confidentiel": "Confidentiel, pour vous {seul|seule}"
   },
   "chapitres": {
    "securite": "Votre sécurité d'abord",
@@ -693,6 +695,7 @@
    "signauxTitre": "Ce qui abîme vos disputes",
    "aucun": "Aucun de ces signaux dans vos réponses : vos disputes restent des disputes, et vous savez vous réconcilier. C'est plus rare qu'on ne le pense, et ça se protège.",
    "aide": "Ce qui aide",
+   "reponsesTitre": "Vos réponses",
    "securiteTitre": "À ne pas laisser de côté",
    "fort": "Signal fort",
    "moyen": "À surveiller"
@@ -799,6 +802,10 @@
    "charge": "Penser à tout (les rendez-vous, les factures, ce qui manque) est un travail invisible. Quand une seule personne le porte, la fatigue et le ressentiment s'installent, même si les tâches sont partagées.",
    "pese": "Vous avez dit que ce partage vous pèse : c'est un sujet à aborder, calmement, avec une liste sous les yeux plutôt qu'avec des reproches.",
    "vaBien": "Ce partage vous convient : c'est précieux, beaucoup de couples se disputent sur ce point.",
+   "bouts": {
+    "moi": "Moi",
+    "autre": "{{autre}}"
+   },
    "premierPas": {
     "moi": "Après une dispute, c'est surtout vous qui faites le premier pas.",
     "autre": "Après une dispute, c'est surtout {{autre}} qui fait le premier pas.",
@@ -814,6 +821,12 @@
    "faible": "faible",
    "fort": "fort",
    "vous": "Vous",
+   "quadrants": {
+    "secure": "Sécure",
+    "anxieux": "Anxieux",
+    "evitant": "Évitant",
+    "craintif": "Craintif"
+   },
    "pasEtiquette": "Ce n'est pas une étiquette pour la vie. L'attachement change avec les relations et avec le temps, et il se travaille, {seul|seule} ou avec un psychologue.",
    "source": "Les quatre styles viennent des travaux de Kim Bartholomew (1991). Les phrases sont écrites pour votre relation avec {{autre}}, comme dans le questionnaire de Chris Fraley (2011)."
   },
@@ -847,8 +860,10 @@
     "satisfaction": "Ce que vous vivez aujourd'hui",
     "investissement": "Ce que vous avez mis dans la relation",
     "alternatives": "La vie sans {{autre}} vous semble meilleure",
+    "partir": "L'idée de partir",
     "engagement": "Votre envie que ça dure"
    },
+   "resultat": "Au bout du compte",
    "choisisTitre": "Ce que vous avez choisi",
    "jamaisVerdict": "Ce rapport ne vous dira pas de rester ou de partir. Personne ne peut le décider à votre place. Ces questions sont là pour vous aider à y voir clair.",
    "questionsTitre": "Les questions à vous poser",
@@ -904,6 +919,8 @@
    "ouvrir": "Pour commencer",
    "eviter": "À éviter",
    "choisi": "Le sujet que vous avez choisi",
+   "numero": "Conversation {{n}}",
+   "avantTitre": "Avant de commencer",
    "moment": "Choisissez un moment calme : pas au milieu d'une dispute, ni juste avant de dormir.",
    "reactions": [
     "Quand vous abordez un sujet sensible, {{autre}} en parle et ça avance : c'est une vraie force, appuyez-vous dessus.",
@@ -1106,6 +1123,6 @@
    "avertissement": "Ce rapport est un outil pour y voir clair, pas un diagnostic. Il ne remplace ni un psychologue, ni un conseiller conjugal, ni un médecin, et il ne prédit pas l'avenir de votre relation : il dit ce que vos réponses disent aujourd'hui.",
    "confidentialite": "Vos réponses ne servent qu'à ce rapport. Personne d'autre que vous ne le voit, et rien n'a été envoyé à {{autre}}."
   },
-  "pied": "Le point sur ma relation · {{nom}}"
+  "pied": "Le point sur ma relation · confidentiel"
  }
 }
