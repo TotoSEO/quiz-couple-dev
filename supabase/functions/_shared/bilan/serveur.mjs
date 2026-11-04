@@ -19,6 +19,11 @@
 // elle (a_percu). En solo il n'y a pas d'invitation : la clé de B est tirée
 // au hasard et jamais rendue, le bilan est figé dès que A a fini, et le
 // rapport ne part qu'à A.
+//
+// Depuis le 4 novembre 2026, le seul(e) est « Le point sur ma relation »
+// (formule 'point', coeur.mjs) : 50 questions sur ce que la personne vit,
+// sans situation ni perception, un rapport à elle, 4,90 € sans réduction.
+// Un seul(e) commencé avant (sans formule) se finit et se paie comme avant.
 
 import * as C from './coeur.mjs';
 import { emailPropre, masquerEmail, messageRapport, messageLien, messagePret, messageRelance, messageReprise, nomFichier } from './courriel.mjs';
@@ -38,7 +43,9 @@ export const CHEMINS = {
 
 // Ce que Stripe affiche sur sa page de paiement, dans la langue de la page.
 // `description` pour une évaluation à deux, `descriptionSolo` pour une
-// évaluation faite seul(e) ; `mention` et `mentionSolo` de même.
+// évaluation faite seul(e) ; `mention` et `mentionSolo` de même ; `nomPoint`
+// et `descriptionPoint` pour le point sur ma relation (seul(e) depuis le
+// 4 novembre 2026, avec `mentionSolo`).
 const PRODUIT = {
   fr: {
     nom: 'Évaluation de couple : le rapport complet',
@@ -46,6 +53,8 @@ const PRODUIT = {
     descriptionSolo: 'Le rapport complet de votre évaluation de couple, faite seul(e), en PDF par e-mail et en ligne : votre regard sur votre relation, sujet par sujet, les écarts que vous percevez, vos zones d\'ombre, les signaux de vigilance et par où commencer.',
     mention: 'TVA non applicable, art. 293 B du CGI. Le rapport est fourni dès le paiement confirmé et dès que vous avez fini tous les deux : vous avez demandé l\'exécution immédiate et renoncé au droit de rétractation.',
     mentionSolo: 'TVA non applicable, art. 293 B du CGI. Le rapport est fourni dès le paiement confirmé : vous avez demandé l\'exécution immédiate et renoncé au droit de rétractation.',
+    nomPoint: 'Le point sur ma relation : le rapport',
+    descriptionPoint: "Votre rapport personnel, en PDF par e-mail et en ligne : l'état de votre relation, vos besoins, les signaux à regarder, votre façon d'aimer, ce qui vous retient et trois conversations pour avancer.",
   },
   en: {
     nom: 'Relationship assessment: the full report',
@@ -53,6 +62,8 @@ const PRODUIT = {
     descriptionSolo: 'The full report of your relationship assessment, done on your own, as a PDF by email and online: your view of your relationship topic by topic, the gaps you perceive, your blind spots, the warning signs and where to start.',
     mention: 'VAT not applicable, art. 293 B of the French tax code. The report is provided as soon as payment is confirmed and you have both finished: you asked for immediate performance and waived your right of withdrawal.',
     mentionSolo: 'VAT not applicable, art. 293 B of the French tax code. The report is provided as soon as payment is confirmed: you asked for immediate performance and waived your right of withdrawal.',
+    nomPoint: 'My Relationship Check-Up: the report',
+    descriptionPoint: "Your personal report, as a PDF by email and online: where your relationship stands, your needs, the signs to watch, the way you love, what keeps you there and three conversations to move forward.",
   },
   es: {
     nom: 'Evaluación de pareja: el informe completo',
@@ -60,6 +71,8 @@ const PRODUIT = {
     descriptionSolo: 'El informe completo de tu evaluación de pareja, hecha a solas, en PDF por correo y en línea: tu mirada sobre tu relación tema por tema, las diferencias que percibes, tus zonas de sombra, las señales de alerta y por dónde empezar.',
     mention: 'IVA no aplicable, art. 293 B del CGI francés. El informe se entrega en cuanto se confirma el pago y habéis terminado los dos: habéis pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
     mentionSolo: 'IVA no aplicable, art. 293 B del CGI francés. El informe se entrega en cuanto se confirma el pago: has pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
+    nomPoint: 'Mi relación, en claro: el informe',
+    descriptionPoint: "Tu informe personal, en PDF por correo y en línea: el estado de tu relación, tus necesidades, las señales a vigilar, tu forma de amar, lo que te retiene y tres conversaciones para avanzar.",
   },
   de: {
     nom: 'Beziehungsanalyse: der vollständige Bericht',
@@ -67,6 +80,8 @@ const PRODUIT = {
     descriptionSolo: 'Der vollständige Bericht deiner allein gemachten Beziehungsanalyse, als PDF per E-Mail und online: dein Blick auf deine Beziehung Thema für Thema, die Unterschiede, die du wahrnimmst, deine blinden Flecken, die Warnsignale und womit du anfangen kannst.',
     mention: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht wird geliefert, sobald die Zahlung bestätigt ist und ihr beide fertig seid: Ihr habt die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
     mentionSolo: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht wird geliefert, sobald die Zahlung bestätigt ist: Du hast die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
+    nomPoint: 'Wo steht meine Beziehung? Der Bericht',
+    descriptionPoint: "Dein persönlicher Bericht, als PDF per E-Mail und online: wo deine Beziehung steht, deine Bedürfnisse, die Warnsignale, wie du liebst, was dich hält, und drei Gespräche, um weiterzukommen.",
   },
   it: {
     nom: 'Valutazione di coppia: il report completo',
@@ -74,6 +89,8 @@ const PRODUIT = {
     descriptionSolo: 'Il report completo della tua valutazione di coppia, fatta da solo o da sola, in PDF via e-mail e online: il tuo sguardo sulla relazione tema per tema, le differenze che percepisci, le tue zone d\'ombra, i segnali d\'allarme e da dove cominciare.',
     mention: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato e avete finito tutti e due: avete chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
     mentionSolo: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato: hai chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
+    nomPoint: 'Il punto sulla mia relazione: il report',
+    descriptionPoint: "Il tuo report personale, in PDF via e-mail e online: lo stato della tua relazione, i tuoi bisogni, i segnali da guardare, il tuo modo di amare, cosa ti trattiene e tre conversazioni per andare avanti.",
   },
   nl: {
     nom: 'Relatiecheck: het volledige rapport',
@@ -81,6 +98,8 @@ const PRODUIT = {
     descriptionSolo: 'Het volledige rapport van je relatiecheck, alleen ingevuld, als pdf per e-mail en online: jouw kijk op je relatie per onderwerp, de verschillen die je ziet, je blinde vlekken, de signalen om op te letten en waar je kunt beginnen.',
     mention: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport wordt geleverd zodra de betaling bevestigd is en jullie allebei klaar zijn: jullie hebben om directe levering gevraagd en afgezien van het herroepingsrecht.',
     mentionSolo: 'Geen btw van toepassing, art. 293 B van de Franse Code général des impôts. Het rapport wordt geleverd zodra de betaling bevestigd is: je hebt om directe levering gevraagd en afgezien van het herroepingsrecht.',
+    nomPoint: 'Waar staat mijn relatie? Het rapport',
+    descriptionPoint: "Je persoonlijke rapport, als pdf per e-mail en online: hoe je relatie ervoor staat, je behoeften, de signalen om op te letten, hoe je liefhebt, wat je vasthoudt en drie gesprekken om verder te komen.",
   },
 };
 
@@ -166,7 +185,15 @@ export const JETONS_MAIL_MAX = ENVOIS_MAX + 5;
 // rien sinon.
 // `statut_solo` (25 octobre 2026) : la réponse à « Où en êtes-vous ? » au
 // départ seul(e), la clé dans C.STATUTS_SOLO.
-export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo'];
+// `celib_carte_vue` et `celib_carte_clic` (4 novembre 2026) : la carte « le
+// bilan célibataire arrive » à la fin des tests célibataires
+// (js/celib-bientot.js), la clé est l'identifiant de la page.
+export const ETAPES_PAGE = ['depart', 'depart_erreur', 'invitation_vue', 'situation_vue', 'email_vue', 'offre_vue', 'attente_vue', 'case_manquante', 'statut_solo', 'celib_carte_vue', 'celib_carte_clic'];
+// Les écrans comptés une seconde fois avec `_point` pour le point sur ma
+// relation (la page envoie `formule: 'point'`).
+const ETAPES_POINT = ['depart', 'depart_erreur', 'email_vue', 'offre_vue', 'case_manquante'];
+// L'identifiant d'une page du site (routeKey), pour la carte des célibataires.
+const PAGE_SITE = /^[A-Za-z0-9-]{1,40}$/;
 // Les réponses des célibataires (action `celib`) : par adresse IP et par
 // heure, en mémoire de l'instance, et un plafond global par jour, compté en
 // base (`celib`), pour qu'une boucle ne remplisse pas la table.
@@ -213,6 +240,8 @@ function genrePropre(g) {
 
 const ok = (json) => ({ statut: 200, json });
 const estSolo = (ligne) => ligne.mode === 'solo';
+// « Le point sur ma relation » : le seul(e) depuis le 4 novembre 2026.
+const estPoint = (ligne) => ligne.formule === 'point';
 // Le bilan est figé : les deux ont fini, ou la personne seule a fini.
 const estVerrouille = (ligne) => (estSolo(ligne) ? !!ligne.a_fini : !!(ligne.a_fini && ligne.b_fini));
 // La date où tout a été répondu.
@@ -232,6 +261,14 @@ function etapeDe(situation, reponses) {
     if (qs.length && !e.finis.includes(id)) return id;
   }
   return C.situationValide(situation) ? 'fini' : 'situation';
+}
+
+// L'étape d'un point sur ma relation : la première partie pas finie, ou
+// « fini » (a_etape, 20 signes au plus).
+function etapePoint(reponses) {
+  const { finies } = C.partiesPoint(reponses);
+  const p = C.POINT_PARTIES.find((x) => !finies.includes(x.id));
+  return p ? p.id : 'fini';
 }
 
 // Les adresses où envoyer le rapport, sans doublon, chacune avec le rôle dont
@@ -322,10 +359,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   function paiementPour(ligne, role, zone) {
     const paye = !!ligne.paye_le;
     const region = paye ? '' : C.zoneValide(zone);
-    const promo = !region && promoActive();
+    // Le point se paie sans réduction (PRIX_POINT_CENTIMES), au prix de la
+    // région quand il y en a une (PRIX_POINT_REGIONS).
+    const point = estPoint(ligne);
+    const promo = !region && !point && promoActive();
     return {
-      prix: region ? C.PRIX_REGIONS[region] : promo ? C.prixPromo() : C.PRIX_CENTIMES,
-      prixBase: C.PRIX_CENTIMES,
+      prix: point ? C.prixPoint(region) : region ? C.PRIX_REGIONS[region] : promo ? C.prixPromo() : C.PRIX_CENTIMES,
+      prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES,
       promo: promo ? { code: C.PROMO_CODE, pourcent: C.PROMO_POURCENT } : null,
       region: region || null,
       garantie: C.GARANTIE_JOURS,
@@ -353,6 +393,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       id: ligne.id,
       role,
       mode: solo ? 'solo' : 'duo',
+      formule: ligne.formule || null,
       lang: ligne.lang,
       situation: ligne.situation,
       creeLe: ligne.cree_le,
@@ -363,8 +404,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         consent: !!ligne[role + '_consent'],
         reponses: ligne[role + '_reponses'] || {},
         nn: ligne[role + '_nn'] || [],
-        // En solo seulement : ce que la personne pense que l'autre répondrait.
-        percu: solo ? (ligne.a_percu || {}) : undefined,
+        // Dans le seul(e) d'avant seulement : ce que la personne pense que
+        // l'autre répondrait.
+        percu: solo && !estPoint(ligne) ? (ligne.a_percu || {}) : undefined,
         fini: !!ligne[role + '_fini'],
         email: ligne[role + '_email'] || null,
         // L'adresse a été donnée sous la phrase qui annonce le « prêt » et le
@@ -402,8 +444,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // total de l'étape reste la somme de toutes ses clés.
     else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' ? 'qr' : '';
     else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
+    else if (quoi === 'celib_carte_vue' || quoi === 'celib_carte_clic') cle = typeof corps.cle === 'string' && PAGE_SITE.test(corps.cle) ? corps.cle : 'autre';
     await compter(quoi, cle);
-    if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo') await compter(quoi + '_solo', cle);
+    if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo' && !quoi.startsWith('celib_')) await compter(quoi + '_solo', cle);
+    if (corps.formule === 'point' && ETAPES_POINT.includes(quoi)) await compter(quoi + '_point', cle);
     return ok({ compte: true });
   }
 
@@ -412,11 +456,18 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!lang) return non(400, 'lang');
     const mode = corps.mode === undefined ? 'duo' : corps.mode;
     if (!C.modeValide(mode)) return non(400, 'mode');
+    // « Le point sur ma relation » (4 novembre 2026) : la nouvelle formule du
+    // seul(e). Une page d'avant crée encore l'ancien seul(e), sans formule.
+    let formule = null;
+    if (corps.formule !== undefined && corps.formule !== null) {
+      formule = C.formuleValide(corps.formule);
+      if (!formule || mode !== 'solo') return non(400, 'formule');
+    }
     // Depuis le 21 octobre 2026, la situation est demandée après la création,
     // comme les premières questions (action `situation`) : la page de
     // départ n'a plus que les prénoms et les deux cases. Une page d'avant
     // l'envoie encore ici.
-    if (corps.situation !== undefined && !C.situationValide(corps.situation)) return non(400, 'situation');
+    if (corps.situation !== undefined && !formule && !C.situationValide(corps.situation)) return non(400, 'situation');
     const pa = prenomPropre(corps.moi?.prenom);
     const pb = prenomPropre(corps.autre?.prenom);
     if (!pa || !pb) return non(400, 'prenom');
@@ -442,10 +493,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     // ne peut ouvrir ce bilan.
     const jetonB = nouveauJeton();
     const quand = maintenant().toISOString();
-    const situation = corps.situation === undefined ? {} : C.nettoieSituation(corps.situation);
+    const situation = corps.situation === undefined || formule ? {} : C.nettoieSituation(corps.situation);
     const ligne = await stockage.inserer({
       lang,
       mode,
+      ...(formule ? { formule } : {}),
       situation,
       src: sourcePropre(corps.src),
       a_prenom: pa, a_genre: genrePropre(corps.moi?.genre),
@@ -459,7 +511,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
-      a_etape: etapeDe(situation, {}),
+      a_etape: formule ? etapePoint({}) : etapeDe(situation, {}),
       ip_hash: ipHash,
       cree_le: quand,
       maj_le: quand,
@@ -521,6 +573,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (c.erreur) return c.erreur;
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
+    if (estPoint(ligne)) return non(400, 'formule');
     if (ligne.a_fini || ligne.b_fini) return non(409, 'fini');
     // La page donne la situation clé par clé, juste avant le domaine qui en a
     // besoin (25 octobre 2026) ; une page d'avant la donne en entier. Les clés
@@ -539,6 +592,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     if (estVerrouille(ligne)) return non(409, 'verrouille');
+    if (estPoint(ligne)) return repondrePoint(corps, ligne, role);
     // Les réponses arrivent avant que la situation soit complète (elle se
     // donne au fil des domaines depuis le 25 octobre 2026) : seul « fini »
     // l'attend, puisque C.complet exige une situation complète.
@@ -587,6 +641,55 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     });
   }
 
+  // Les réponses d'un point sur ma relation : les 50 questions de
+  // C.POINT_PARTIES, sans situation ni perception. Comme à deux, « fini » veut
+  // dire toutes les réponses et une adresse où envoyer le rapport.
+  async function repondrePoint(corps, ligne, role) {
+    const reponses = C.valideReponsesPoint(corps.reponses === undefined ? {} : corps.reponses);
+    if (!reponses) return non(400, 'reponses');
+    const complet = C.completPoint(reponses);
+    const dejaFini = !!ligne.a_fini;
+    const emailManque = !ligne.a_email;
+    let fini = null;
+    if (complet && (corps.fini === true || dejaFini) && (dejaFini || !emailManque)) {
+      fini = dejaFini ? ligne.a_fini : maintenant().toISOString();
+    }
+    const anciennes = ligne.a_reponses || {};
+    const avant = C.partiesPoint(anciennes);
+    const apres = C.partiesPoint(reponses);
+    const maj = await stockage.maj(ligne.id, {
+      a_reponses: reponses,
+      a_fini: fini,
+      a_etape: fini ? 'fini' : complet ? 'email' : etapePoint(reponses),
+      maj_le: maintenant().toISOString(),
+    });
+    // Où les gens entrent et sortent, partie par partie (onglet Évaluation).
+    for (const p of apres.entrees) if (!avant.entrees.includes(p)) await compter('point_partie_entree', p);
+    for (const p of apres.finies) if (!avant.finies.includes(p)) await compter('point_partie_finie', p);
+    // Pourquoi seul(e), ce que la personne veut savoir en premier et depuis
+    // combien de temps elle est en couple, comptés à leur première réponse.
+    for (const [id, evenement, liste] of [['pd1', 'point_motif', C.POINT_MOTIFS], ['pd2', 'point_priorite', C.POINT_PRIORITES], ['pd3', 'point_duree', C.POINT_DUREES]]) {
+      if (anciennes[id] === undefined && reponses[id] !== undefined) await compter(evenement, liste[reponses[id]]);
+    }
+    // À la fin : l'état, le style d'attachement, le profil d'engagement et la
+    // sécurité, comptés sans rien d'autre (aucune réponse ne quitte la ligne).
+    if (fini && !dejaFini) {
+      const an = C.analyserPoint(reponses);
+      await compter('point_etat', an.etat);
+      await compter('point_attachement', an.attachement.style);
+      await compter('point_engagement', an.engagement.profil);
+      await compter('point_securite', an.securite.niveau);
+      if (an.securite.refus) await compter('point_securite', 'refus');
+    }
+    return ok({
+      fini: !!fini,
+      complet,
+      emailManque: complet && !fini && emailManque,
+      progression: C.progressionPoint(reponses),
+      etat: etatPour(maj, role, corps.zone),
+    });
+  }
+
   // Le rapport : seulement payé, et seulement quand tout est répondu (les
   // deux en duo, la personne seule en solo).
   async function resultat(corps) {
@@ -595,9 +698,11 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
     const solo = estSolo(ligne);
+    const point = estPoint(ligne);
     const base = {
       role,
       mode: solo ? 'solo' : 'duo',
+      formule: ligne.formule || null,
       lang: ligne.lang,
       situation: ligne.situation,
       ...paiementPour(ligne, role, corps.zone),
@@ -612,14 +717,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // a accepté cette entorse à « aucun résultat gratuit ») : combien
       // d'accords, de réponses proches, d'écarts et de sujets décisifs en
       // désaccord, jamais lesquels.
-      return { statut: 402, json: { erreur: 'non_paye', ...base, apercu: estVerrouille(ligne) ? apercuDe(ligne) : null } };
+      // Le point : l'état, le climat, le nombre de signaux et de besoins en
+      // manque, le style d'attachement et l'alerte (C.apercuPoint).
+      const apercu = !estVerrouille(ligne) ? null : point ? C.apercuPoint(ligne.a_reponses || {}) : apercuDe(ligne);
+      return { statut: 402, json: { erreur: 'non_paye', ...base, apercu } };
     }
     if (!estVerrouille(ligne)) return { statut: 409, json: { erreur: 'pas_fini', ...base } };
     return ok({
       ...base,
       finiLe: finiLe(ligne),
       payeLe: ligne.paye_le,
-      a: { ...personne(ligne, 'a'), reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [], ...(solo ? { percu: ligne.a_percu || {} } : {}) },
+      a: { ...personne(ligne, 'a'), reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [], ...(solo && !point ? { percu: ligne.a_percu || {} } : {}) },
       b: solo ? personne(ligne, 'b') : { ...personne(ligne, 'b'), reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
     });
   }
@@ -637,18 +745,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (corps.renonciation !== true) return non(400, 'renonciation');
     const lang = LANGUES.includes(corps.lang) ? corps.lang : ligne.lang;
     const solo = estSolo(ligne);
+    const point = estPoint(ligne);
     const base = SITE + CHEMINS[lang];
     const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
     const zone = C.zoneValide(corps.zone);
     let ouverte;
     try {
       ouverte = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, email, avecPromo, zone,
+        lang, solo, point, email, avecPromo, zone,
         reference: ligne.id,
-        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo', ...(zone ? { zone } : {}) },
+        metadata: { bilan: ligne.id, role, mode: solo ? 'solo' : 'duo', ...(point ? { formule: 'point' } : {}), ...(zone ? { zone } : {}) },
         succes: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
         annule: base + '?annule=1&b=' + ligne.id,
-      }), !!zone);
+      }), !!zone || point);
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }
@@ -667,7 +776,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
 
   // La page de paiement de Stripe, la même pour un client (payer) et pour
   // l'aperçu de l'admin (apercuPaiement) : prix, réduction, textes.
-  function sessionStripe({ lang, solo, email, avecPromo, zone, reference, metadata, succes, annule }) {
+  function sessionStripe({ lang, solo, point, email, avecPromo, zone, reference, metadata, succes, annule }) {
     const t = PRODUIT[lang];
     const region = C.zoneValide(zone);
     return {
@@ -680,8 +789,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       // La réduction en cours est appliquée d'office (personne n'a de code à
       // taper) ; Stripe refuse `allow_promotion_codes` avec `discounts`, le
       // champ des codes ne revient donc que sans réduction. Le prix d'une
-      // région se paie tel quel, sans l'une ni l'autre.
-      ...(region ? {}
+      // région se paie tel quel, sans l'une ni l'autre, comme le point sur ma
+      // relation, qui n'a ni réduction ni champ des codes.
+      ...(region || point ? {}
         : avecPromo ? { discounts: [{ promotion_code: C.PROMO_STRIPE }] }
         : { allow_promotion_codes: 'true' }),
       metadata,
@@ -691,8 +801,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         quantity: 1,
         price_data: {
           currency: 'eur',
-          unit_amount: region ? C.PRIX_REGIONS[region] : C.PRIX_CENTIMES,
-          product_data: { name: t.nom, description: solo ? t.descriptionSolo : t.description },
+          unit_amount: point ? C.prixPoint(region) : region ? C.PRIX_REGIONS[region] : C.PRIX_CENTIMES,
+          product_data: point ? { name: t.nomPoint, description: t.descriptionPoint }
+            : { name: t.nom, description: solo ? t.descriptionSolo : t.description },
         },
       }],
     };
@@ -725,17 +836,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     if (!ctx?.admin) return non(403, 'admin');
     if (!stripe) return non(503, 'paiement_ferme');
     const lang = LANGUES.includes(corps.lang) ? corps.lang : 'fr';
-    const solo = corps.mode === 'solo';
+    // Le point sur ma relation (`formule: 'point'`), ou l'évaluation à deux
+    // ou seul(e) d'avant (`mode`).
+    const point = corps.formule === 'point';
+    const solo = point || corps.mode === 'solo';
     const zone = C.zoneValide(corps.zone);
     const retour = SITE + '/admin/';
     try {
       const { session, promo } = await ouvrirSession((avecPromo) => sessionStripe({
-        lang, solo, avecPromo, zone,
-        metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo', ...(zone ? { zone } : {}) },
+        lang, solo, point, avecPromo, zone,
+        metadata: { apercu: 'admin', mode: solo ? 'solo' : 'duo', ...(point ? { formule: 'point' } : {}), ...(zone ? { zone } : {}) },
         succes: retour,
         annule: retour,
-      }), !!zone);
-      return ok({ url: session.url, promo, region: zone || null, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: C.PRIX_CENTIMES });
+      }), !!zone || point);
+      return ok({ url: session.url, promo, region: zone || null, code: promo ? C.PROMO_CODE : null, total: totalSession(session), prixBase: point ? C.PRIX_POINT_CENTIMES : C.PRIX_CENTIMES });
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }
@@ -820,7 +934,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     for (const dest of restants) {
       if (envois.length >= ENVOIS_MAX) break;
       const j = await jetonMail(jetons, dest.role);
-      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, mode, url: lienDe(ligne, j.jeton), moi: ligne[dest.role + '_prenom'] });
+      const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, mode, formule: ligne.formule || null, url: lienDe(ligne, j.jeton), moi: ligne[dest.role + '_prenom'] });
       let reussi = false;
       try {
         await courriel.envoyer({ a: dest.email, sujet: msg.sujet, html: msg.html, texte: msg.texte, lang: ligne.lang });
@@ -886,7 +1000,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
       return ok({ pret: false, statut: ligne.rapport_statut || null });
     }
     const url = await stockage.urlSignee(ligne.rapport_chemin, DUREE_LIEN_PDF,
-      nomFichier(ligne.lang, ligne.a_prenom, ligne.b_prenom, estSolo(ligne) ? 'solo' : 'duo'));
+      nomFichier(ligne.lang, ligne.a_prenom, ligne.b_prenom, estSolo(ligne) ? 'solo' : 'duo', ligne.formule || null));
     return ok({ pret: true, url });
   }
 
@@ -993,7 +1107,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const url = lienDe(ligne, j.jeton);
     const fabrique = quoi === 'pret' ? messagePret : quoi === 'reprise' ? messageReprise : messageRelance;
     const msg = fabrique({
-      lang: ligne.lang, mode: solo ? 'solo' : 'duo',
+      lang: ligne.lang, mode: solo ? 'solo' : 'duo', formule: ligne.formule || null,
       moi: ligne[role + '_prenom'], autre: ligne[autre + '_prenom'],
       url, arret: url + '&arret=1', ...prixPour(ligne),
       ...(reprise || {}),
@@ -1085,7 +1199,8 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         const qui = variante === 'moi' ? role : autre;
         const reprise = {
           variante,
-          progression: C.progression(ligne.situation, ligne[qui + '_reponses'] || {}, solo ? (ligne.a_percu || {}) : undefined),
+          progression: estPoint(ligne) ? C.progressionPoint(ligne.a_reponses || {})
+            : C.progression(ligne.situation, ligne[qui + '_reponses'] || {}, solo ? (ligne.a_percu || {}) : undefined),
           autreFini: !solo && !!ligne[autre + '_fini'],
           invite: variante === 'autre' && !ligne[autre + '_consent'],
         };
@@ -1166,7 +1281,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
   }
   function entreeLien(ligne, role) {
     const autre = role === 'a' ? 'b' : 'a';
-    return { a: ligne[role + '_prenom'], b: ligne[autre + '_prenom'], mode: estSolo(ligne) ? 'solo' : 'duo' };
+    return { a: ligne[role + '_prenom'], b: ligne[autre + '_prenom'], mode: estSolo(ligne) ? 'solo' : 'duo', formule: ligne.formule || null };
   }
 
   // Son propre lien, envoyé à l'adresse donnée ou, sans adresse dans la
@@ -1278,10 +1393,16 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
         console.error('[bilan] compteurs', String(e && e.message || e).slice(0, 200));
       }
     }
+    // D'où vient la réponse (4 novembre 2026) : le départ seul(e) de
+    // l'évaluation, ou la carte « bientôt » d'un test célibataire, avec la
+    // situation choisie sur la carte (C.SITUATIONS_CELIB).
+    const source = typeof corps.src === 'string' && PAGE_SITE.test(corps.src) ? corps.src : 'evaluation';
+    const situationCelib = C.SITUATIONS_CELIB.includes(corps.situation) ? corps.situation : null;
     const quand = maintenant().toISOString();
     await stockage.enregistrerCelib({
       lang, interets, autre: autre || null, email,
       consent_at: email ? quand : null, maj_le: quand,
+      source, situation: situationCelib,
     });
     await compter('celib', email ? 'email' : '');
     return ok({ enregistre: true, email: !!email });

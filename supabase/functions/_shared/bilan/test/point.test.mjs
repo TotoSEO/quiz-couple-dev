@@ -75,10 +75,10 @@ test('la validation refuse ce qui n\'est pas une réponse possible', () => {
 });
 
 test('progression, réponses complètes et parties entrées', () => {
-  assert.deepEqual(C.progressionPoint({}), { repondues: 0, total: 50 });
+  assert.deepEqual(C.progressionPoint({}), { repondu: 0, total: 50 });
   const r = reponses(0);
   assert.equal(C.completPoint(r), true);
-  assert.deepEqual(C.progressionPoint(r), { repondues: 50, total: 50 });
+  assert.deepEqual(C.progressionPoint(r), { repondu: 50, total: 50 });
   const { pc7, ...sans } = r;
   assert.equal(C.completPoint(sans), false);
   assert.deepEqual(C.partiesPoint({ pd1: 0, pd2: 0, pd3: 0, pc1: 1 }), { entrees: ['depart', 'climat'], finies: ['depart'] });

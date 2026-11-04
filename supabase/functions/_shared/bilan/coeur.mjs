@@ -985,8 +985,8 @@ export function valideReponsesPoint(reponses) {
 
 export function progressionPoint(reponses) {
   const r = reponses || {};
-  const repondues = POINT_ORDRE.filter((id) => valeurPointValide(id, r[id])).length;
-  return { repondues, total: POINT_TOTAL };
+  const repondu = POINT_ORDRE.filter((id) => valeurPointValide(id, r[id])).length;
+  return { repondu, total: POINT_TOTAL };
 }
 export function completPoint(reponses) {
   const r = reponses || {};
