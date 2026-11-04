@@ -13225,6 +13225,13 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 /* Le bouton, partout : article a:not(.no-underline) et .seo-content a le
    passaient en rose souligné sur son fond rose. */
 .qr-bilan a.qr-bilan-bouton, .qr-bilan a.qr-bilan-bouton:hover { color: #fff; text-decoration: none; }
+/* « Le point sur ma relation » (4 novembre 2026, encartPoint de
+   quiz-engine-core.js et bilan-banniere.ejs) : la même carte, et sous le prix
+   un lien discret vers l'évaluation à deux. */
+.qr-bilan-autre { font-size: .84rem; line-height: 1.45; color: hsl(0 0% 100% / .72); margin: .55rem 0 0; overflow-wrap: break-word; }
+.blog-article .qr-bilan p.qr-bilan-autre { font-size: .84rem; line-height: 1.45; margin: .55rem 0 0; color: hsl(0 0% 100% / .72); }
+.qr-bilan .qr-bilan-autre a, .qr-bilan .qr-bilan-autre a:hover { color: hsl(var(--qrb-clair)); font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
+.qr-bilan .qr-bilan-autre a:focus-visible { outline: 2px solid hsl(45 90% 65%); outline-offset: 2px; border-radius: .2rem; }
 
 /* La porte e-mail des écrans de résultat (capture.js) : le score et le titre
    restent nets, tout ce qui suit est flouté et inerte, et la carte du

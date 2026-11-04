@@ -500,7 +500,17 @@
     pdfDemande = hash.get('pdf') === '1';
     var paiement = !!(query.get('paiement') && query.get('b'));
     var annule = !!(query.get('annule') && query.get('b'));
+    // Les encarts du point (4 novembre 2026 : tests où l'on doute seul(e),
+    // articles) mènent ici avec #point : le départ du point s'ouvre tout de
+    // suite, comme après « Faire le point seul(e) » sur la page.
+    var versPoint = !lien && !paiement && !annule && location.hash === '#point';
     arrivee(query);
+    if (versPoint) {
+      nettoyerUrl();
+      compterVue('page');
+      commencer('solo');
+      return;
+    }
     if (!lien && !paiement && !annule) {
       // La présentation seule : l'application attend le bouton.
       repriseSurLaPage();
@@ -2495,23 +2505,28 @@
     zone.hidden = false;
   }
 
+  // Commencer d'une façon donnée (à deux, seul(e)) : le clic compté, puis la
+  // création, sans passer par les évaluations de l'appareil.
+  function commencer(m) {
+    compterVue('cta', { mode: m });
+    focus(true);
+    modeDemande = m;
+    brouillon = null;
+    chargement();
+    preparer().then(function () { creation(); }).catch(function () { messageErreur('reseau'); });
+  }
+
   document.addEventListener('click', function (ev) {
     var go = ev.target.closest('[data-bilan-commencer]');
     if (go) {
       ev.preventDefault();
       var m = go.getAttribute('data-bilan-commencer');
-      compterVue('cta', { mode: m === 'solo' || m === 'duo' ? m : modeDemande });
-      focus(true);
       // Un bouton qui dit la façon de faire (à deux, seul(e)) mène droit à
       // la création ; le bouton générique passe par les évaluations de
       // l'appareil.
-      if (m === 'solo' || m === 'duo') {
-        modeDemande = m;
-        brouillon = null;
-        chargement();
-        preparer().then(function () { creation(); }).catch(function () { messageErreur('reseau'); });
-        return;
-      }
+      if (m === 'solo' || m === 'duo') { commencer(m); return; }
+      compterVue('cta', { mode: modeDemande });
+      focus(true);
       accueil();
       return;
     }

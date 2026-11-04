@@ -37,12 +37,70 @@
           points: ['100 vragen samen, ieder op de eigen telefoon', 'Gebaseerd op onderzoek naar relaties', 'Een volledig rapport als pdf, met grafieken'],
           bouton: 'Ontdek de relatiecheck', prix: 'Vragen gratis · rapport {{prix}} voor jullie samen' },
   };
+  // « Le point sur ma relation » (4 novembre 2026) : sur les tests où l'on se
+  // pose seul(e) une question sur sa relation (formule: 'point' dans
+  // BILAN_ENTREES) et les articles de ARTICLES_POINT (generate.js), la
+  // bannière propose le point, 4,90 € sans réduction, avec #point (bilan.js
+  // ouvre tout de suite son départ) et un lien discret vers l'évaluation à
+  // deux. Les textes sont ceux de l'encart sous le verdict (encartPoint,
+  // quiz-engine-core.js).
+  const _POINT_BAS = {
+    fr: { sur: 'Le point sur ma relation', titre: 'Faites le point sur votre relation, de votre côté',
+          texte: 'Votre partenaire n\'a pas besoin d\'être au courant. 50 questions sur ce que vous vivez, et un rapport rien que pour vous\u00a0: où vous en êtes, ce qui pèse, ce qui vous fait rester, et comment en parler.',
+          points: ['Seul(e), sans prévenir votre partenaire', '50 questions, une douzaine de minutes', 'Votre rapport tout de suite, en ligne et en PDF'],
+          bouton: 'Faire le point sur ma relation', prix: 'Questions gratuites · rapport {{prix}}',
+          duoAvant: 'Plutôt à deux, chacun sur son téléphone\u00a0?', duoLien: 'Voir l\'évaluation de couple' },
+    en: { sur: 'My Relationship Check-Up', titre: 'Take stock of your relationship, on your own',
+          texte: 'Your partner doesn\'t need to know. 50 questions about what you\'re living, and a report just for you: where you stand, what weighs on you, what makes you stay, and how to talk about it.',
+          points: ['On your own, without telling your partner', '50 questions, about twelve minutes', 'Your report right away, online and as a PDF'],
+          bouton: 'Start my check-up', prix: 'Free questions · report {{prix}}',
+          duoAvant: 'Rather do it together, each on your own phone?', duoLien: 'See the relationship assessment' },
+    es: { sur: 'Mi relación, en claro', titre: 'Haz balance de tu relación, por tu lado',
+          texte: 'Tu pareja no tiene por qué enterarse. 50 preguntas sobre lo que vives, y un informe solo para ti: dónde estás, lo que te pesa, lo que te hace quedarte y cómo hablarlo.',
+          points: ['A solas, sin avisar a tu pareja', '50 preguntas, unos doce minutos', 'Tu informe al momento, en línea y en PDF'],
+          bouton: 'Hacer el balance de mi relación', prix: 'Preguntas gratis · informe {{prix}}',
+          duoAvant: '¿Mejor en pareja, cada uno en su teléfono?', duoLien: 'Ver la evaluación de pareja' },
+    de: { sur: 'Wo steht meine Beziehung?', titre: 'Schau ganz für dich, wie es um deine Beziehung steht',
+          texte: 'Dein Partner oder deine Partnerin muss nichts davon wissen. 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich: wo du stehst, was dich belastet, was dich bleiben lässt und wie du darüber reden kannst.',
+          points: ['Allein, ohne deinem Partner oder deiner Partnerin Bescheid zu geben', '50 Fragen, etwa zwölf Minuten', 'Dein Bericht sofort, online und als PDF'],
+          bouton: 'Den Check allein machen', prix: 'Fragen kostenlos · Bericht {{prix}}',
+          duoAvant: 'Lieber zu zweit, jeder auf dem eigenen Handy?', duoLien: 'Zur Beziehungsanalyse' },
+    it: { sur: 'Il punto sulla mia relazione', titre: 'Fai il punto sulla tua relazione, per conto tuo',
+          texte: 'Il tuo partner non ha bisogno di saperlo. 50 domande su quello che vivi, e un report solo per te: a che punto sei, cosa ti pesa, cosa ti fa restare e come parlarne.',
+          points: ['Da solo/a, senza avvisare il tuo partner', '50 domande, una dozzina di minuti', 'Il tuo report subito, online e in PDF'],
+          bouton: 'Fare il punto sulla mia relazione', prix: 'Domande gratuite · report {{prix}}',
+          duoAvant: 'Meglio in due, ciascuno sul proprio telefono?', duoLien: 'Vedi la valutazione di coppia' },
+    nl: { sur: 'Waar staat mijn relatie?', titre: 'Breng je relatie voor jezelf in kaart',
+          texte: 'Je partner hoeft er niets van te weten. 50 vragen over wat je beleeft, en een rapport alleen voor jou: waar je staat, wat zwaar weegt, waarom je blijft en hoe je erover kunt praten.',
+          points: ['Alleen, zonder je partner op de hoogte te brengen', '50 vragen, een minuut of twaalf', 'Je rapport meteen, online en als pdf'],
+          bouton: 'De check alleen doen', prix: 'Vragen gratis · rapport {{prix}}',
+          duoAvant: 'Liever samen, ieder op de eigen telefoon?', duoLien: 'Bekijk de relatiecheck' },
+  };
+  const _point = !!(_bilan && _bilan.formule === 'point');
+  const _bp = _POINT_BAS[lang] || _POINT_BAS.fr;
   const _bb = _BILAN_BAS[lang] || _BILAN_BAS.fr;
   // La réduction en cours (bilanPromo, generate.js) : pastille et prix barré.
   const _bbPromo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
   const _bbPrix = escapeHtml(_bb.prix.replace('{{prix}}', bilanPrix));
 %>
-<% if (_bilan) { %>
+<% if (_bilan && _point) { %>
+<section class="qr-bilan qr-bilan--bas qr-bilan--point" aria-label="<%= _bp.sur %>">
+  <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-point-<%= _POINT_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
+  <div class="qr-bilan-corps">
+    <p class="qr-bilan-sur"><%= _bp.sur %></p>
+    <h3 class="qr-bilan-titre"><%= _bp.titre %></h3>
+    <p class="qr-bilan-texte"><%= _bp.texte %></p>
+    <ul class="qr-bilan-points">
+      <% for (const p of _bp.points) { %><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><%= p %></span></li><% } %>
+    </ul>
+    <div class="qr-bilan-boutons">
+      <a class="qr-bilan-bouton" href="<%= bilanChemin %>#point" data-bilan-src="bas-<%= _bilan.id %>" data-bilan-mode="solo"><%= _bp.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <p class="qr-bilan-prix"><%= _bp.prix.replace('{{prix}}', bilanPrixPoint) %></p>
+    <p class="qr-bilan-autre"><%= _bp.duoAvant %> <a href="<%= bilanChemin %>" data-bilan-src="bas-<%= _bilan.id %>"><%= _bp.duoLien %></a></p>
+  </div>
+</section>
+<% } else if (_bilan) { %>
 <section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
   <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false"></div>
   <div class="qr-bilan-corps">
