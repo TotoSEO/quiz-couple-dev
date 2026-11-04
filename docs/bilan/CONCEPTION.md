@@ -2224,3 +2224,68 @@ bannière du point sur deux tests, le test joué jusqu'au résultat, l'encart,
 le clic jusqu'au départ du point et le point créé avec la source de
 l'encart, l'encart à deux du couple sain, la ligne de l'accueil, la bannière
 d'un article.
+
+## 4 novembre 2026, plus tard : les deux offres au même rang
+
+Thomas, sur le haut de la page de vente : « Met les deux prix du coup, En
+couple et Seul. Seul est maintenant à part entière de l'évaluation, il faut
+bien le mettre en avant », et sur l'accueil : « le bloc "Voulez-vous la même
+vie, tous les deux ?" change par "Faites le point sur votre relation sans aller
+chez un pro" et met un deuxième bouton "Faire l'évaluation seul" ».
+
+### La page de vente
+
+- **Le haut de page** : sous le titre, deux cartes côte à côte dès 320 px,
+  « À deux » et « Seul(e) ». Chacune a ses personnages (les deux, ou la rose
+  seule), une ligne qui dit comment ça se passe (« Chacun répond sur son
+  téléphone », « Sans votre partenaire »), son prix et un bouton
+  « Commencer ». La carte entière est le bouton (`data-bilan-commencer`,
+  que bilan.js écoute déjà) : rien ne change dans l'application ni dans la
+  mesure (`cta`, `cta_solo`). La réduction ne touche que la carte à deux : le
+  prix habituel barré au-dessus du prix réduit, et la pastille sur le bord
+  haut de la carte (« -20 % » seul sous 400 px, la pastille entière ne tenant
+  pas dans une carte de 135 à 150 px). « À deux » plutôt que « en couple » :
+  qui fait le point seul(e) est en couple aussi.
+- **La phrase du haut** parle des deux : « 20 minutes chacun sur votre
+  téléphone, ou 12 minutes seul(e), et un rapport qui vous montre où vous en
+  êtes et de quoi il faut parler. »
+- **Le bloc du prix** garde « Un seul prix, pour vous deux » et le prix à
+  deux ; le point, son prix et son bouton passent sous le bouton à deux, et
+  la ligne « Seul(e) ? Le point sur ma relation, 4,90 € » sort de la liste
+  de ce qui est compris.
+- **Le dernier appel** a les deux mêmes cartes, et la barre collée sur
+  téléphone deux boutons, chacun son prix (« À deux · 7,92 € », « Seul(e) ·
+  4,90 € »), qui ouvrent directement le bon départ (avant, un seul bouton
+  « Commencer » passait par l'accueil de l'application).
+- **Partis** : le lien « Votre partenaire ne veut pas participer ? Faites le
+  point seul(e) » (trois fois sur la page), qui faisait du seul(e) un
+  repli, et la ligne de la réduction au-dessus de l'ancien bouton.
+
+Le premier écran : les deux boutons sont dedans sur un téléphone de 390 x 844
+dans les six langues (bas des cartes entre 697 et 733 px), et sur un 360 x 740
+(le haut de page s'y resserre un peu ; l'allemand, au titre le plus long,
+passait 26 px dessous).
+
+### L'accueil
+
+Le bloc sous le ruban s'appelle « Faites le point sur votre relation sans
+aller chez un pro » (les mots de Thomas ; « relation » couvre aussi qui est
+seul(e) ou dans une histoire compliquée), puis : une phrase sur ce que c'est,
+« Il y a deux façons de faire : », les deux formules en cartes avec leur prix
+(à deux en rose, avec la réduction ; seul(e) en violet), deux boutons
+(« Faire l'évaluation à deux », source `accueil` ; « Faire l'évaluation
+seul(e) », `#point`, source `accueil-point`, qui ouvre tout de suite le départ
+du point), « Les questions sont gratuites : vous ne payez qu'à la fin, pour le
+rapport. », et les deux rapports en aperçu (le point derrière la synthèse).
+Les autres langues tutoient ou vouvoient comme leurs pages (« Haz balance de
+tu relación », « Zieh Bilanz über deine Beziehung », « Fai il punto sulla tua
+relazione », « Kijk waar je relatie staat »).
+
+### Vérifié
+
+`scratchpad/offres/essai.mjs` dans les six langues, à 390 x 844, 360 x 740
+(sombre) et 1 280 x 860 : chaque carte ouvre son départ et le clic est compté,
+le bloc du prix et le dernier appel, la barre collée (deux boutons de même
+hauteur), l'accueil jusqu'au point créé avec la source `accueil-point`, aucune
+erreur dans la console. `scratchpad/encart/essai.mjs` (les encarts du point)
+passe toujours, son contrôle de l'accueil suit le nouveau bouton.

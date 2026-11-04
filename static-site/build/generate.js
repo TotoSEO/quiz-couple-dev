@@ -258,6 +258,9 @@ function promoBilanPour(lang) {
     code: BILAN_PROMO.code,
     fin: BILAN_PROMO.fin || '',
     badge: rp(t('common:promoBilan.badge', '')),
+    // La réduction seule (« -20 % »), quand la pastille entière ne tient pas
+    // (les cartes des offres de la page de vente sur un petit téléphone).
+    remise: rp(t('common:promoBilan.bandeauRemise', '')),
     codeTexte: rp(t('common:promoBilan.code', '')),
     avant, apres, prix, base, html,
     marque: (texte) => String(texte).replace(escPromo(prix), html),

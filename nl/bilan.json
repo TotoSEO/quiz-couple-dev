@@ -785,10 +785,21 @@
   "lp": {
     "badge": "Relatiecheck",
     "titre": "Relatiecheck: weet waar jullie staan, zonder therapeut",
-    "sousTitre": "20 minuten per persoon op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
+    "sousTitre": "20 minuten per persoon op de eigen telefoon, of 12 minuten alleen, en een rapport dat laat zien waar jullie relatie staat en waarover jullie moeten praten.",
+    "offres": {
+      "cta": "Beginnen",
+      "duo": {
+        "titre": "Samen",
+        "sous": "Ieder op de eigen telefoon",
+        "unite": "voor jullie samen, één keer"
+      },
+      "solo": {
+        "titre": "Alleen",
+        "sous": "Zonder je partner",
+        "unite": "voor jou, één keer"
+      }
+    },
     "cta": "Begin de relatiecheck",
-    "soloQuestion": "Wil je partner niet meedoen?",
-    "soloLien": "Doe de check alleen",
     "preuve": "{{nom}}, elke dag duizenden bezoekers",
     "paiements": "Veilig betalen via Stripe",
     "visuel": {
@@ -924,11 +935,14 @@
       "titre": "Eén prijs, voor jullie samen",
       "unite": "voor jullie samen, één keer",
       "aide": "Eén keer betalen, door een van jullie, aan het eind. Geen abonnement.",
+      "seul": {
+        "sur": "Alleen?",
+        "texte": "50 vragen over wat je beleeft, ongeveer 12 minuten, en een rapport alleen voor jou."
+      },
       "inclus": [
         "100 vragen over twaalf thema's",
         "Het volledige rapport, online en als pdf",
-        "De onderwerpen om mee te beginnen, met hulp om erover te praten",
-        "Alleen? Waar staat mijn relatie?, {{prixPoint}}"
+        "De onderwerpen om mee te beginnen, met hulp om erover te praten"
       ],
       "garantie": "Niet tevreden, geld terug binnen {{jours}} dagen: één bericht is genoeg."
     },
@@ -1015,11 +1029,7 @@
     },
     "final": {
       "titre": "Klaar om te kijken waar jullie staan?",
-      "texte": "20 minuten per persoon, en jullie weten waar jullie het eens zijn en waarover jullie moeten praten."
-    },
-    "colle": {
-      "texte": "Relatiecheck · {{prix}}",
-      "bouton": "Beginnen"
+      "texte": "Samen of alleen: het rapport laat zien waar de relatie staat en waar het gesprek over moet gaan."
     },
     "avertissement": "Samen ingevuld laat deze relatiecheck aan ieder de antwoorden van de ander zien. Ben je bang voor je partner, doe hem dan niet samen: doe de check alleen, of helemaal niet. In Nederland kun je gratis en anoniem bellen met Veilig Thuis (0800-2000), dag en nacht, in België met 1712, en bij direct gevaar met 112."
   }

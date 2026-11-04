@@ -785,10 +785,21 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Faites le point sur votre couple, sans aller chez un pro",
-    "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
+    "sousTitre": "20 minutes chacun sur votre téléphone, ou 12 minutes seul(e), et un rapport qui vous montre où vous en êtes et de quoi il faut parler.",
+    "offres": {
+      "cta": "Commencer",
+      "duo": {
+        "titre": "À deux",
+        "sous": "Chacun répond sur son téléphone",
+        "unite": "pour vous deux, en une fois"
+      },
+      "solo": {
+        "titre": "Seul(e)",
+        "sous": "Sans votre partenaire",
+        "unite": "pour vous, en une fois"
+      }
+    },
     "cta": "Commencer l'évaluation",
-    "soloQuestion": "Votre partenaire ne veut pas participer ?",
-    "soloLien": "Faites le point seul(e)",
     "preuve": "{{nom}}, des milliers de visiteurs chaque jour",
     "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
@@ -924,11 +935,14 @@
       "titre": "Un seul prix, pour vous deux",
       "unite": "pour le couple, en une fois",
       "aide": "Payé une seule fois, par l'un ou l'autre, à la fin. Pas d'abonnement.",
+      "seul": {
+        "sur": "Seul(e) ?",
+        "texte": "50 questions sur ce que vous vivez, environ 12 minutes, et un rapport rien que pour vous."
+      },
       "inclus": [
         "100 questions sur douze domaines",
         "Le rapport complet, en ligne et en PDF",
-        "Les sujets par lesquels commencer, avec de quoi en parler",
-        "Seul(e) ? Le point sur ma relation, {{prixPoint}}"
+        "Les sujets par lesquels commencer, avec de quoi en parler"
       ],
       "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message suffit."
     },
@@ -1015,11 +1029,7 @@
     },
     "final": {
       "titre": "Prêts à faire le point ?",
-      "texte": "20 minutes chacun, et vous saurez sur quoi vous êtes d'accord et de quoi il faut parler."
-    },
-    "colle": {
-      "texte": "Évaluation de couple · {{prix}}",
-      "bouton": "Commencer"
+      "texte": "À deux ou seul(e), vous saurez où vous en êtes et de quoi il faut parler."
     },
     "avertissement": "À deux, cette évaluation montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, ne la faites pas à deux : faites le point seul(e), ou rien du tout. En France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
   }

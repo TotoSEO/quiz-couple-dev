@@ -788,10 +788,21 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Fate il punto sulla vostra coppia, senza andare da un professionista",
-    "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
+    "sousTitre": "20 minuti a testa sul telefono, oppure 12 minuti da solo/a, e un report che mostra a che punto è la vostra relazione e di cosa dovete parlare.",
+    "offres": {
+      "cta": "Iniziare",
+      "duo": {
+        "titre": "In due",
+        "sous": "Ciascuno sul proprio telefono",
+        "unite": "per tutti e due, in una volta"
+      },
+      "solo": {
+        "titre": "Da solo/a",
+        "sous": "Senza il tuo partner",
+        "unite": "per te, in una volta"
+      }
+    },
     "cta": "Iniziare la valutazione",
-    "soloQuestion": "Il tuo partner non vuole partecipare?",
-    "soloLien": "Fai il punto da solo/a",
     "preuve": "{{nom}}, migliaia di visitatori ogni giorno",
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
@@ -927,11 +938,14 @@
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
       "aide": "Un solo pagamento, dell'uno o dell'altro, alla fine. Nessun abbonamento.",
+      "seul": {
+        "sur": "Da solo/a?",
+        "texte": "50 domande su quello che vivi, circa 12 minuti, e un report solo per te."
+      },
       "inclus": [
         "100 domande su dodici aree",
         "Il report completo, online e in PDF",
-        "Gli argomenti da cui partire, con spunti per parlarne",
-        "Da solo/a? Il punto sulla mia relazione, {{prixPoint}}"
+        "Gli argomenti da cui partire, con spunti per parlarne"
       ],
       "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
     },
@@ -1018,11 +1032,7 @@
     },
     "final": {
       "titre": "Pronti a fare il punto?",
-      "texte": "20 minuti a testa, e saprete su cosa siete d'accordo e di cosa bisogna parlare."
-    },
-    "colle": {
-      "texte": "Valutazione di coppia · {{prix}}",
-      "bouton": "Iniziare"
+      "texte": "In due o da solo/a, il report mostra a che punto è la relazione e di cosa parlare."
     },
     "avertissement": "In due, questa valutazione mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non farla in due: fai il punto da solo/a, o niente. In Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24."
   }

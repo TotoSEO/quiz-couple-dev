@@ -790,10 +790,21 @@
   "lp": {
     "badge": "Beziehungsanalyse",
     "titre": "Zieht Bilanz über eure Beziehung, ohne zur Paarberatung zu gehen",
-    "sousTitre": "20 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
+    "sousTitre": "20 Minuten pro Person auf dem Handy oder 12 Minuten allein, und ein Bericht, der zeigt, wo eure Beziehung steht und worüber ihr reden solltet.",
+    "offres": {
+      "cta": "Beginnen",
+      "duo": {
+        "titre": "Zu zweit",
+        "sous": "Jeder auf dem eigenen Handy",
+        "unite": "für euch beide, einmalig"
+      },
+      "solo": {
+        "titre": "Allein",
+        "sous": "Nur du antwortest",
+        "unite": "für dich, einmalig"
+      }
+    },
     "cta": "Analyse beginnen",
-    "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
-    "soloLien": "Mach den Check allein",
     "preuve": "{{nom}}: Tausende Besucher jeden Tag",
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
@@ -929,11 +940,14 @@
       "titre": "Ein Preis, für euch beide",
       "unite": "für das Paar, einmalig",
       "aide": "Einmal bezahlt, von einem von euch, am Ende. Kein Abo.",
+      "seul": {
+        "sur": "Allein?",
+        "texte": "50 Fragen dazu, was du erlebst, etwa 12 Minuten, und ein Bericht nur für dich."
+      },
       "inclus": [
         "100 Fragen zu zwölf Bereichen",
         "Der vollständige Bericht, online und als PDF",
-        "Die Themen, mit denen ihr anfangt, mit Gesprächshilfen",
-        "Allein? Wo steht meine Beziehung?, {{prixPoint}}"
+        "Die Themen, mit denen ihr anfangt, mit Gesprächshilfen"
       ],
       "garantie": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht genügt."
     },
@@ -1020,11 +1034,7 @@
     },
     "final": {
       "titre": "Bereit, Bilanz zu ziehen?",
-      "texte": "20 Minuten pro Person, und ihr wisst, worin ihr euch einig seid und worüber ihr reden solltet."
-    },
-    "colle": {
-      "texte": "Beziehungsanalyse · {{prix}}",
-      "bouton": "Beginnen"
+      "texte": "Ob zu zweit oder allein: Der Bericht zeigt, wo die Beziehung steht und worüber zu reden ist."
     },
     "avertissement": "Zu zweit zeigt diese Analyse jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, mach sie nicht zu zweit: Mach den Check allein oder gar nicht. In Deutschland hilft das Hilfetelefon Gewalt gegen Frauen unter 116 016, kostenlos und anonym, rund um die Uhr."
   }

@@ -20,14 +20,23 @@
   },
   "evaluation": {
     "sur": "Nuevo · Evaluación de pareja",
-    "titre": "¿Queréis la misma vida, los dos?",
-    "texte": "100 preguntas concretas sobre doce áreas de la vida en pareja, construidas sobre la investigación en psicología de pareja, y un informe completo que pone vuestras respuestas frente a frente. En pareja, cada uno en su teléfono y a su ritmo: unos veinte minutos.",
-    "points": [
-      "Cada uno responde en su teléfono, sin ver las respuestas del otro",
-      "Un informe completo, con gráficos y pistas para hablarlo",
-      "Preguntas gratis · {{prix}} por el informe, al final"
+    "titre": "Haz balance de tu relación sin ir a un profesional",
+    "texte": "Preguntas concretas, basadas en la investigación en psicología de pareja, y un informe completo que te muestra en qué punto estás. Hay dos formas de hacerlo:",
+    "formules": [
+      {
+        "titre": "En pareja",
+        "texte": "100 preguntas, cada uno en su teléfono, y el informe pone vuestras respuestas frente a frente.",
+        "prix": "{{prix}} para los dos"
+      },
+      {
+        "titre": "A solas",
+        "texte": "50 preguntas sobre lo que vives, sin tu pareja, y un informe solo para ti.",
+        "prix": "{{prixPoint}}"
+      }
     ],
+    "gratuit": "Las preguntas son gratis: solo pagas al final, por el informe.",
     "ctaDuo": "Hacer la evaluación en pareja",
+    "ctaSolo": "Hacer la evaluación a solas",
     "ctaCourt": "Evaluar tu pareja",
     "legende": "Una página del informe de ejemplo"
   },

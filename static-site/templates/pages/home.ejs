@@ -132,13 +132,19 @@
   const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
   const evaluation = t('home:evaluation', {}) || {};
   const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
-  // Le point sur ma relation (4 novembre 2026) : son prix, jamais réduit, et
-  // la phrase de la page de vente (lp.soloQuestion, lp.soloLien de bilan.json).
+  // Le point sur ma relation (le seul(e) depuis le 4 novembre 2026) : son
+  // prix, jamais réduit.
   const prixPointEval = typeof bilanPrixPoint !== 'undefined' ? bilanPrixPoint : '';
   const insEval = (s) => String(s || '').replace(/ ([?!:;»])/g, '\u00a0$1');
-  // La réduction en cours (bilanPromo, generate.js) : pastille à côté du
-  // surtitre et prix habituel barré devant le prix réduit.
+  // La réduction en cours (bilanPromo, generate.js) : pastille et prix
+  // habituel barré devant le prix réduit, sur la formule à deux seulement.
   const promoEval = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
+  // Le prix d'une formule, échappé, {{prix}} et {{prixPoint}} remplacés, le
+  // prix réduit remplacé par le prix barré suivi du nouveau.
+  const prixFormule = (s) => {
+    const html = escapeHtml(insEval(String(s || '').replace(/\{\{prix\}\}/g, prixEval).replace(/\{\{prixPoint\}\}/g, prixPointEval)));
+    return promoEval && String(s || '').indexOf('{{prix}}') !== -1 ? promoEval.marque(html) : html;
+  };
   const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
@@ -413,32 +419,41 @@
 
 <% if (urlEval) { %>
 <!-- L'évaluation de couple : la carte des encarts de résultat (.qr-bilan,
-     styles.css), en grand, avec un seul bouton (à deux) depuis le 27 octobre
-     2026, et depuis le 4 novembre 2026 une ligne discrète dessous pour qui
-     est seul(e) : « Le point sur ma relation », un autre produit. -->
+     styles.css), en grand. Depuis le 4 novembre 2026 (Thomas : « le bloc
+     "Voulez-vous la même vie, tous les deux ?" change par "Faites le point
+     sur votre relation sans aller chez un pro" et met un deuxième bouton
+     "Faire l'évaluation seul" », « Change du coup le contenu de cet encart
+     pour mettre en avant le solo »), deux formules avec leur prix, à deux et
+     seul(e) (le point sur ma relation, un autre produit), deux boutons, et
+     les deux rapports en aperçu. Le bouton seul(e) mène à #point, qui ouvre
+     tout de suite son départ (bilan.js), source accueil-point. -->
 <section class="home-eval" aria-labelledby="home-eval-titre">
   <div class="container mx-auto px-4">
     <div class="qr-bilan qr-bilan--bas qr-bilan--accueil">
-      <div class="qr-bilan-visuel">
+      <div class="qr-bilan-visuel qr-bilan-visuel--deux">
+        <img src="/bilan/apercu-point-<%= lang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false">
         <img src="/bilan/apercu-synthese-<%= lang %>.webp" alt="" width="240" height="340" loading="lazy" decoding="async" draggable="false">
       </div>
       <div class="qr-bilan-corps">
-        <p class="qr-bilan-sur"><%= evaluation.sur %><% if (promoEval) { %> <span class="promo-pastille"><%= promoEval.badge %></span><% } %></p>
-        <h2 class="qr-bilan-titre" id="home-eval-titre"><%= evaluation.titre %></h2>
-        <p class="qr-bilan-texte"><%= evaluation.texte %></p>
-        <ul class="qr-bilan-points">
-          <% (evaluation.points || []).forEach((pt) => { %>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%- promoEval ? promoEval.marque(escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval))) : escapeHtml(String(pt).replace(/\{\{prix\}\}/g, prixEval)) %></span></li>
+        <p class="qr-bilan-sur"><%= evaluation.sur %></p>
+        <h2 class="qr-bilan-titre" id="home-eval-titre"><%= insEval(evaluation.titre) %></h2>
+        <p class="qr-bilan-texte"><%= insEval(evaluation.texte) %></p>
+        <ul class="qr-bilan-formules">
+          <% (evaluation.formules || []).forEach((f, i) => { %>
+          <li class="qr-bilan-formule qr-bilan-formule--<%= i ? 'solo' : 'duo' %>">
+            <p class="qr-bilan-formule-tete"><span class="qr-bilan-formule-titre"><%= f.titre %></span><% if (!i && promoEval) { %> <span class="promo-pastille"><%= promoEval.badge %></span><% } %></p>
+            <p class="qr-bilan-formule-prix"><%- prixFormule(f.prix) %></p>
+            <p class="qr-bilan-formule-texte"><%= insEval(f.texte) %></p>
+          </li>
           <% }) %>
         </ul>
         <div class="qr-bilan-boutons">
           <a class="qr-bilan-bouton" href="<%= urlEval %>" data-bilan-src="accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <% if (evaluation.ctaSolo && prixPointEval) { %>
+          <a class="qr-bilan-bouton qr-bilan-bouton--violet" href="<%= urlEval %>#point" data-bilan-src="accueil-point" data-bilan-mode="solo"><%= evaluation.ctaSolo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <% } %>
         </div>
-        <%# Seul(e) : le point sur ma relation, dans les mots de la page de vente,
-            avec #point qui ouvre tout de suite son départ (bilan.js). %>
-        <% if (t('bilan:lp.soloLien', '')) { %>
-        <p class="qr-bilan-autre"><%= insEval(t('bilan:lp.soloQuestion', '')) %> <a href="<%= urlEval %>#point" data-bilan-src="accueil-point" data-bilan-mode="solo"><%= t('bilan:lp.soloLien', '') %></a><% if (prixPointEval) { %> · <%= prixPointEval %><% } %></p>
-        <% } %>
+        <% if (evaluation.gratuit) { %><p class="qr-bilan-prix"><%= insEval(evaluation.gratuit) %></p><% } %>
       </div>
     </div>
   </div>

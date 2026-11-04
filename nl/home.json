@@ -20,14 +20,23 @@
   },
   "evaluation": {
     "sur": "Nieuw · Relatiecheck",
-    "titre": "Willen jullie allebei hetzelfde leven?",
-    "texte": "100 concrete vragen over twaalf delen van jullie leven samen, gebaseerd op onderzoek naar relaties, en een volledig rapport dat jullie antwoorden naast elkaar zet. Met z'n tweeën, ieder op een eigen telefoon en in het eigen tempo: reken op een minuut of twintig.",
-    "points": [
-      "Ieder antwoordt op een eigen telefoon, zonder de antwoorden van de ander te zien",
-      "Een volledig rapport, met grafieken en genoeg om samen over te praten",
-      "Vragen gratis · {{prix}} voor het rapport, aan het eind"
+    "titre": "Kijk waar je relatie staat, zonder naar een therapeut te gaan",
+    "texte": "Concrete vragen, gebaseerd op onderzoek naar relaties, en een volledig rapport dat laat zien waar je staat. Dat kan op twee manieren:",
+    "formules": [
+      {
+        "titre": "Samen",
+        "texte": "100 vragen, ieder op een eigen telefoon, en het rapport zet jullie antwoorden naast elkaar.",
+        "prix": "{{prix}} voor jullie samen"
+      },
+      {
+        "titre": "Alleen",
+        "texte": "50 vragen over wat je meemaakt, zonder je partner, en een rapport alleen voor jou.",
+        "prix": "{{prixPoint}}"
+      }
     ],
+    "gratuit": "De vragen zijn gratis: je betaalt pas aan het eind, voor het rapport.",
     "ctaDuo": "Doe de relatiecheck samen",
+    "ctaSolo": "Doe de check alleen",
     "ctaCourt": "Check je relatie",
     "legende": "Een pagina uit het voorbeeldrapport"
   },

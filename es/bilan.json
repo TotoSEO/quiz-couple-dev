@@ -789,10 +789,21 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "Haced balance de vuestra pareja sin ir a un profesional",
-    "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
+    "sousTitre": "20 minutos cada uno en el teléfono, o 12 minutos a solas, y un informe que muestra en qué punto está la relación y de qué hay que hablar.",
+    "offres": {
+      "cta": "Empezar",
+      "duo": {
+        "titre": "En pareja",
+        "sous": "Cada uno en su teléfono",
+        "unite": "para los dos, un solo pago"
+      },
+      "solo": {
+        "titre": "A solas",
+        "sous": "Sin tu pareja",
+        "unite": "para ti, un solo pago"
+      }
+    },
     "cta": "Empezar la evaluación",
-    "soloQuestion": "¿Tu pareja no quiere participar?",
-    "soloLien": "Haz un balance a solas",
     "preuve": "{{nom}}, miles de visitantes cada día",
     "paiements": "Pago seguro con Stripe",
     "visuel": {
@@ -928,11 +939,14 @@
       "titre": "Un solo precio, para los dos",
       "unite": "para la pareja, de una vez",
       "aide": "Un solo pago, de uno o del otro, al final. Sin suscripción.",
+      "seul": {
+        "sur": "¿A solas?",
+        "texte": "50 preguntas sobre lo que vives, unos 12 minutos, y un informe solo para ti."
+      },
       "inclus": [
         "100 preguntas sobre doce áreas",
         "El informe completo, en línea y en PDF",
-        "Los temas por los que empezar, con pistas para hablarlo",
-        "¿A solas? Mi relación, en claro, {{prixPoint}}"
+        "Los temas por los que empezar, con pistas para hablarlo"
       ],
       "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta un mensaje."
     },
@@ -1019,11 +1033,7 @@
     },
     "final": {
       "titre": "¿Listos para hacer balance?",
-      "texte": "20 minutos cada uno, y sabréis en qué estáis de acuerdo y de qué hay que hablar."
-    },
-    "colle": {
-      "texte": "Evaluación de pareja · {{prix}}",
-      "bouton": "Empezar"
+      "texte": "Tanto en pareja como a solas, el informe muestra en qué punto está la relación y de qué hay que hablar."
     },
     "avertissement": "En pareja, esta evaluación muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no la hagas con ella: haz el balance a solas, o nada. En España, el 016 atiende gratis y de forma anónima, las 24 horas."
   }
