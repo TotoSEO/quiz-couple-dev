@@ -492,6 +492,13 @@
   <script>window.__QC_CAPTURE=<%- JSON.stringify({ t: t('common:capture', {}), confidentialite: getLocalizedUrl('privacy', lang) }) %>;</script>
   <script src="/js/capture.js" defer></script>
   <% } %>
+  <%# La carte « le bilan célibataire arrive bientôt » (celib-bientot.js), à
+      l'écran de résultat des tests célibataires : ses textes, la page (source
+      de la réponse, clé des vues et des clics) et l'adresse de la fonction. %>
+  <% if (typeof carteCelib !== 'undefined' && carteCelib) { %>
+  <script>window.__QC_CELIB=<%- JSON.stringify(Object.assign({ fonction: supabaseUrl + '/functions/v1/bilan' }, carteCelib)).replace(/</g, '\\u003c') %>;</script>
+  <script src="/js/celib-bientot.js" defer></script>
+  <% } %>
   <%# Les emplacements de la regie sont poses en dernier, et leurs scripts ne
       partent qu'une fois le document analyse : la page et le moteur de quiz
       ne doivent alors plus rien a un domaine tiers. %>

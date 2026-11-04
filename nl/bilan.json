@@ -687,7 +687,23 @@
       "merci": "Je antwoorden helpen ons kiezen wat er in de check voor singles komt.",
       "merciEmail": "We mailen je op {{email}} op de dag dat hij uitkomt. Tot dan helpen je antwoorden ons kiezen wat erin komt.",
       "testsTitre": "Ondertussen zijn onze tests voor singles gratis:",
-      "fermer": "Sluiten"
+      "fermer": "Sluiten",
+      "carte": {
+        "etiquette": "Binnenkort",
+        "titre": "Binnenkort: de check voor singles",
+        "texte": "We werken aan een check voor singles, zoals we die al voor stellen hebben. Voordat we hem schrijven, willen we graag weten wat jij eraan zou hebben!",
+        "situationQuestion": "Om te beginnen: welke zin past het best bij jou?",
+        "situations": {
+          "jamais": "Ik heb nog nooit een relatie gehad",
+          "rupture": "Mijn relatie is minder dan een jaar geleden uitgegaan",
+          "repete": "Mijn relaties eindigen vaak op dezelfde manier",
+          "autre": "Geen van deze"
+        },
+        "emailFaux": "Dit e-mailadres lijkt niet te kloppen.",
+        "erreur": "Dat lukte niet. Probeer het zo nog eens.",
+        "envoi": "Versturen…",
+        "suggestion": "Bedoelde je {{domaine}}?"
+      }
     },
     "point": {
       "accueil": {

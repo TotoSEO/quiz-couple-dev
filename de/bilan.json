@@ -691,7 +691,23 @@
       "merci": "Deine Antworten helfen uns zu entscheiden, was in die Analyse für Singles kommt.",
       "merciEmail": "Wir schreiben dir an {{email}}, sobald sie erscheint. Bis dahin helfen uns deine Antworten zu entscheiden, was hineinkommt.",
       "testsTitre": "Bis dahin sind unsere Tests für Singles kostenlos:",
-      "fermer": "Schließen"
+      "fermer": "Schließen",
+      "carte": {
+        "etiquette": "Bald",
+        "titre": "Bald gibt es die Analyse für Singles",
+        "texte": "Wir arbeiten an einer Analyse für Singles, so wie es sie für Paare schon gibt. Bevor wir sie schreiben, wollen wir wissen, was dir helfen würde!",
+        "situationQuestion": "Zum Anfang: Welcher dieser Sätze passt am besten zu dir?",
+        "situations": {
+          "jamais": "Ich war noch nie in einer Beziehung",
+          "rupture": "Ich hatte vor weniger als einem Jahr eine Trennung",
+          "repete": "Meine Beziehungen enden oft auf die gleiche Art",
+          "autre": "Keiner davon"
+        },
+        "emailFaux": "Diese E-Mail-Adresse sieht nicht richtig aus.",
+        "erreur": "Das hat nicht geklappt. Versuch es gleich noch einmal.",
+        "envoi": "Wird gesendet…",
+        "suggestion": "Meintest du {{domaine}}?"
+      }
     },
     "point": {
       "accueil": {

@@ -687,7 +687,23 @@
       "merci": "Your answers will help us choose what goes into the assessment for singles.",
       "merciEmail": "We'll write to {{email}} the day it comes out. Until then, your answers will help us choose what goes into it.",
       "testsTitre": "In the meantime, our tests for singles are free:",
-      "fermer": "Close"
+      "fermer": "Close",
+      "carte": {
+        "etiquette": "Coming soon",
+        "titre": "The singles assessment is coming soon",
+        "texte": "We're building an assessment for singles, like the one we already offer couples. Before we write it, we'd love to know what would help you!",
+        "situationQuestion": "To start, which of these sounds most like you?",
+        "situations": {
+          "jamais": "I've never been in a relationship",
+          "rupture": "I went through a breakup less than a year ago",
+          "repete": "My relationships tend to end the same way",
+          "autre": "None of these"
+        },
+        "emailFaux": "That email address doesn't look right.",
+        "erreur": "That didn't work. Please try again in a moment.",
+        "envoi": "Sending…",
+        "suggestion": "Did you mean {{domaine}}?"
+      }
     },
     "point": {
       "accueil": {

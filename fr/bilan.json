@@ -687,7 +687,23 @@
       "merci": "Vos réponses vont nous aider à choisir ce que contiendra l'évaluation pour célibataires.",
       "merciEmail": "On vous écrit à {{email}} le jour où elle sort. D'ici là, vos réponses vont nous aider à choisir ce qu'elle contiendra.",
       "testsTitre": "En attendant, nos tests pour célibataires sont gratuits :",
-      "fermer": "Fermer"
+      "fermer": "Fermer",
+      "carte": {
+        "etiquette": "Bientôt",
+        "titre": "Le bilan célibataire arrive bientôt",
+        "texte": "On prépare une évaluation pour les célibataires, comme celle qu'on propose déjà aux couples. Avant de l'écrire, on aimerait savoir ce qui vous serait utile !",
+        "situationQuestion": "Pour commencer, laquelle de ces phrases vous ressemble le plus ?",
+        "situations": {
+          "jamais": "Je n'ai jamais été en couple",
+          "rupture": "J'ai vécu une rupture il y a moins d'un an",
+          "repete": "Mes histoires finissent souvent de la même façon",
+          "autre": "Aucune de ces phrases"
+        },
+        "emailFaux": "Cette adresse ne semble pas valide.",
+        "erreur": "Ça n'a pas marché, réessayez dans un instant.",
+        "envoi": "Envoi…",
+        "suggestion": "Vouliez-vous dire {{domaine}} ?"
+      }
     },
     "point": {
       "accueil": {

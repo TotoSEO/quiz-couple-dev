@@ -161,11 +161,20 @@ const BILAN_CONST = (() => {
     const m = src.match(new RegExp('export const ' + nom + " = '([^']*)';"));
     return m ? m[1] : '';
   };
+  // Une liste de mots écrite sur une ligne : export const X = ['a', 'b'];
+  const lisListe = (nom) => {
+    const m = src.match(new RegExp('export const ' + nom + ' = \\[([^\\]]*)\\];'));
+    return m ? [...m[1].matchAll(/'([a-z]+)'/g)].map((x) => x[1]) : [];
+  };
   return {
     prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0),
     // « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026),
     // sans réduction.
     prixPoint: lis('PRIX_POINT_CENTIMES', 490),
+    // Le sondage des célibataires (carte des tests célibataires) : les sujets
+    // et les situations que l'action `celib` accepte.
+    sujetsCelib: lisListe('SUJETS_CELIB'),
+    situationsCelib: lisListe('SITUATIONS_CELIB'),
     promo: { code: lisTexte('PROMO_CODE'), stripe: lisTexte('PROMO_STRIPE'), pourcent: lis('PROMO_POURCENT', 0), fin: lisTexte('PROMO_FIN') },
   };
 })();
@@ -258,6 +267,35 @@ function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
   return !PAGES_SANS_BANDEAU.has(routeKey);
+}
+
+// La carte « le bilan célibataire arrive bientôt » (celib-bientot.js,
+// 4 novembre 2026) : à l'écran de résultat des tests célibataires
+// (FAMILLES_NAV.celib), elle demande la situation et les sujets qui
+// intéresseraient, et l'adresse si on veut être prévenu. Seulement là où
+// l'évaluation est ouverte : la politique de confidentialité ne décrit le
+// sondage qu'avec elle. Ses textes sont ceux du sondage de l'évaluation
+// (app.celib de {lang}/bilan.json, `carte` pour ce qui lui est propre) ; elle
+// ne se pose pas sous les verdicts de CELIB_SANS_CARTE (le premier verdict de
+// « dois-je me remettre avec mon ex » parle de peur et de violence, comme les
+// produits, qui n'y sont pas non plus).
+const CELIB_SANS_CARTE = { testRemettreEx: ['gd:remettreEx.r1_t'] };
+const CLES_CARTE_CELIB = ['question', 'sujets', 'autre', 'email', 'consentement', 'emailAide', 'confidentialite',
+  'envoyer', 'choixManque', 'consentManque', 'merciTitre', 'merci', 'merciEmail', 'carte'];
+function carteCelibPour(routeKey, lang, t) {
+  if (!FAMILLES_NAV.celib.includes(routeKey) || !bilanOuvertPour(lang)) return null;
+  const celib = t('bilan:app.celib', null);
+  if (!celib || !celib.carte || !celib.sujets) return null;
+  const textes = {};
+  for (const k of CLES_CARTE_CELIB) if (celib[k] != null) textes[k] = celib[k];
+  return {
+    page: routeKey,
+    t: textes,
+    sujets: BILAN_CONST.sujetsCelib,
+    situations: BILAN_CONST.situationsCelib,
+    graves: (CELIB_SANS_CARTE[routeKey] || []).map((k) => t(k, '')).filter(Boolean),
+    confidentialite: getLocalizedUrl('privacy', lang),
+  };
 }
 
 // Les familles du menu, du pied de page, de l'accueil et du plan du site dans
@@ -1596,6 +1634,9 @@ async function generatePage(routeKey, lang) {
     // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
+    // La carte « le bilan célibataire arrive bientôt » (celib-bientot.js) des
+    // tests célibataires : l'id de la page, ses textes, les verdicts sans carte.
+    carteCelib: carteCelibPour(routeKey, lang, t),
     // L'admin calcule le taux de capture (onglet Leads) : il lui faut, pour
     // chaque source de la porte, les chemins de la page dans les cinq langues.
     capturePages: routeKey === 'admin' ? CAPTURE_PAGES : null,

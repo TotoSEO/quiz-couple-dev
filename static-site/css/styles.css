@@ -13343,6 +13343,76 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
 .blog-portrait figcaption { margin-top: .6rem; font-size: .85rem; line-height: 1.45; text-align: center; color: hsl(var(--foreground) / .62); }
 
 /* ═══════════════════════════════════════════════════════════════════
+   La carte « le bilan célibataire arrive bientôt » (celib-bientot.js,
+   4 novembre 2026), à l'écran de résultat des tests célibataires : au rang
+   des produits dans le plan du résultat (juste après eux), dans le
+   turquoise de la famille. Repliée, elle n'a que la situation à choisir ;
+   le choix ouvre les sujets, l'idée et l'adresse. Jamais présente au
+   chargement : ses règles n'ont rien à faire dans les feuilles critiques.
+   ═══════════════════════════════════════════════════════════════════ */
+.qr-zone--celib { order: 3; }
+.qc-celib {
+  padding: 1.5rem 1.35rem 1.4rem; border-radius: 1.5rem; text-align: left;
+  border: 2px solid hsl(var(--celib) / .45);
+  background: linear-gradient(hsl(var(--celib) / .07), hsl(var(--celib) / .07)) hsl(var(--card));
+}
+.qc-celib > * { margin-top: 0; margin-bottom: 0; }
+.qc-celib-sur {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .3rem .7rem; border-radius: 999px;
+  font-size: .74rem; font-weight: 800; line-height: 1.2; letter-spacing: .1em; text-transform: uppercase;
+  color: hsl(var(--celib-texte)); background: hsl(var(--celib) / .14);
+}
+.qc-celib-sur svg { width: .95rem; height: .95rem; flex: none; }
+.qc-celib .qc-celib-titre { margin-top: .75rem; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.15rem, 2.5vw, 1.35rem); line-height: 1.25; color: hsl(var(--foreground)); overflow-wrap: break-word; }
+.qc-celib .qc-celib-texte { margin-top: .5rem; font-size: .95rem; line-height: 1.55; color: hsl(var(--foreground) / .82); }
+.qc-celib-corps { margin-top: 1.1rem; }
+.qc-celib-groupe { margin: 0; padding: 0; border: 0; min-width: 0; }
+.qc-celib-question { padding: 0; margin: 0 0 .6rem; font-weight: 700; font-size: .95rem; line-height: 1.4; color: hsl(var(--foreground)); }
+.qc-celib-choix { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+@media (min-width: 560px) { .qc-celib-choix { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.qc-celib-option {
+  display: grid; grid-template-columns: 1.15rem minmax(0, 1fr); gap: .6rem; align-items: start;
+  padding: .7rem .85rem; border-radius: .9rem; cursor: pointer;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card));
+  font-size: .93rem; line-height: 1.4; color: hsl(var(--foreground));
+  transition: border-color .15s ease, background-color .15s ease;
+}
+.qc-celib-option input { width: 1.1rem; height: 1.1rem; margin: .1rem 0 0; accent-color: hsl(var(--celib)); }
+.qc-celib-option:has(input:checked) { border-color: hsl(var(--celib)); background: hsl(var(--celib) / .12); }
+.qc-celib-option:has(input:focus-visible) { outline: 3px solid hsl(var(--celib) / .5); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .qc-celib-option:hover { border-color: hsl(var(--celib) / .7); } }
+.qc-celib-groupe--manque .qc-celib-option { border-color: hsl(var(--destructive, 0 72% 51%) / .6); }
+.qc-celib-form { display: grid; gap: .55rem; margin-top: 1.25rem; padding-top: 1.15rem; border-top: 1.5px dashed hsl(var(--celib) / .35); }
+.qc-celib-form[hidden], .qc-celib-accord[hidden], .qc-celib-erreur[hidden], .qc-celib-suggestion[hidden] { display: none; }
+.qc-celib-form .qc-celib-groupe { margin-bottom: .5rem; }
+.qc-celib-lib { margin-top: .35rem; font-weight: 600; font-size: .9rem; line-height: 1.4; color: hsl(var(--foreground)); }
+.qc-celib input.qc-celib-champ {
+  width: 100%; min-height: 2.9rem; padding: .65rem .9rem; border-radius: .8rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--background)); color: hsl(var(--foreground));
+  font-size: 16px; line-height: 1.3; box-shadow: none;
+}
+.qc-celib input.qc-celib-champ:focus { outline: none; border-color: hsl(var(--celib)); box-shadow: 0 0 0 3px hsl(var(--celib) / .25); }
+.qc-celib-suggestion { margin: 0; }
+.qc-celib-suggere { padding: 0; border: 0; background: none; font: inherit; font-size: .88rem; font-weight: 600; color: hsl(var(--celib-texte)); text-decoration: underline; cursor: pointer; }
+.qc-celib-accord { display: grid; gap: .45rem; margin-top: .2rem; }
+.qc-celib-case { display: grid; grid-template-columns: 1.1rem minmax(0, 1fr); gap: .55rem; align-items: start; font-size: .88rem; line-height: 1.45; color: hsl(var(--foreground) / .9); cursor: pointer; border-radius: .6rem; }
+.qc-celib-case input { width: 1.05rem; height: 1.05rem; margin: .12rem 0 0; accent-color: hsl(var(--celib)); }
+.qc-celib-case--manque { outline: 2px solid hsl(var(--destructive, 0 72% 51%) / .7); outline-offset: 4px; }
+.qc-celib .qc-celib-note { margin: 0; font-size: .8rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.qc-celib-note a { color: inherit; text-decoration: underline; }
+.qc-celib-erreur { margin: .2rem 0 0; font-size: .88rem; font-weight: 600; line-height: 1.4; color: hsl(var(--destructive, 0 72% 51%)); }
+.qc-celib .qc-celib-bouton { justify-self: start; margin-top: .45rem; }
+@media (max-width: 559.98px) { .qc-celib .qc-celib-bouton { justify-self: stretch; width: 100%; } }
+.qc-celib-merci { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: .2rem .75rem; align-items: center; }
+.qc-celib-merci-ic { grid-row: 1; grid-column: 1; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 999px; color: #fff; background: hsl(var(--celib-texte)); }
+.dark .qc-celib-merci-ic { color: hsl(var(--background)); }
+.qc-celib-merci-ic svg { width: 1.2rem; height: 1.2rem; }
+.qc-celib .qc-celib-merci-titre { grid-row: 1; grid-column: 2; margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.3; outline: none; }
+.qc-celib .qc-celib-merci-texte { margin: 0; grid-column: 2; font-size: .92rem; line-height: 1.5; color: hsl(var(--foreground) / .82); }
+@media (max-width: 560px) { .qc-celib { padding: 1.25rem 1.1rem 1.2rem; } }
+
+/* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
    ═══════════════════════════════════════════════════════════════════
    Elles n'animent ni transform ni opacity : dégradé qui glisse dans le

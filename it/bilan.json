@@ -691,7 +691,23 @@
       "merci": "Le tue risposte ci aiuteranno a scegliere cosa conterrà la valutazione per single.",
       "merciEmail": "Ti scriveremo a {{email}} il giorno in cui esce. Nel frattempo, le tue risposte ci aiuteranno a scegliere cosa conterrà.",
       "testsTitre": "Nel frattempo, i nostri test per single sono gratuiti:",
-      "fermer": "Chiudi"
+      "fermer": "Chiudi",
+      "carte": {
+        "etiquette": "Presto",
+        "titre": "Presto arriva la valutazione per single",
+        "texte": "Stiamo preparando una valutazione per single, come quella che proponiamo già alle coppie. Prima di scriverla, vorremmo sapere cosa ti sarebbe utile!",
+        "situationQuestion": "Per cominciare, quale di queste frasi ti somiglia di più?",
+        "situations": {
+          "jamais": "Non sono mai stato/a in coppia",
+          "rupture": "Ho vissuto una rottura meno di un anno fa",
+          "repete": "Le mie storie finiscono spesso allo stesso modo",
+          "autre": "Nessuna di queste"
+        },
+        "emailFaux": "Questo indirizzo non sembra valido.",
+        "erreur": "Non ha funzionato. Riprova tra un attimo.",
+        "envoi": "Invio…",
+        "suggestion": "Intendevi {{domaine}}?"
+      }
     },
     "point": {
       "accueil": {

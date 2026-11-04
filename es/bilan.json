@@ -691,7 +691,23 @@
       "merci": "Tus respuestas nos ayudarán a elegir qué incluirá la evaluación para solteros.",
       "merciEmail": "Te escribiremos a {{email}} el día que salga. Mientras tanto, tus respuestas nos ayudarán a elegir qué incluirá.",
       "testsTitre": "Mientras tanto, nuestros tests para solteros son gratis:",
-      "fermer": "Cerrar"
+      "fermer": "Cerrar",
+      "carte": {
+        "etiquette": "Muy pronto",
+        "titre": "Pronto llega la evaluación para solteros",
+        "texte": "Estamos preparando una evaluación para solteros, como la que ya ofrecemos a las parejas. ¡Antes de escribirla, nos gustaría saber qué te sería útil a ti!",
+        "situationQuestion": "Para empezar, ¿cuál de estas frases se parece más a ti?",
+        "situations": {
+          "jamais": "Nunca he tenido pareja",
+          "rupture": "Tuve una ruptura hace menos de un año",
+          "repete": "Mis historias suelen terminar de la misma manera",
+          "autre": "Ninguna de estas"
+        },
+        "emailFaux": "Este correo no parece válido.",
+        "erreur": "No ha funcionado. Vuelve a intentarlo en un momento.",
+        "envoi": "Enviando…",
+        "suggestion": "¿Querías decir {{domaine}}?"
+      }
     },
     "point": {
       "accueil": {
