@@ -132,6 +132,10 @@
   const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
   const evaluation = t('home:evaluation', {}) || {};
   const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  // Le point sur ma relation (4 novembre 2026) : son prix, jamais réduit, et
+  // la phrase de la page de vente (lp.soloQuestion, lp.soloLien de bilan.json).
+  const prixPointEval = typeof bilanPrixPoint !== 'undefined' ? bilanPrixPoint : '';
+  const insEval = (s) => String(s || '').replace(/ ([?!:;»])/g, '\u00a0$1');
   // La réduction en cours (bilanPromo, generate.js) : pastille à côté du
   // surtitre et prix habituel barré devant le prix réduit.
   const promoEval = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
@@ -410,7 +414,8 @@
 <% if (urlEval) { %>
 <!-- L'évaluation de couple : la carte des encarts de résultat (.qr-bilan,
      styles.css), en grand, avec un seul bouton (à deux) depuis le 27 octobre
-     2026 : le seul(e) ne reste proposé que sur la page de vente. -->
+     2026, et depuis le 4 novembre 2026 une ligne discrète dessous pour qui
+     est seul(e) : « Le point sur ma relation », un autre produit. -->
 <section class="home-eval" aria-labelledby="home-eval-titre">
   <div class="container mx-auto px-4">
     <div class="qr-bilan qr-bilan--bas qr-bilan--accueil">
@@ -429,6 +434,11 @@
         <div class="qr-bilan-boutons">
           <a class="qr-bilan-bouton" href="<%= urlEval %>" data-bilan-src="accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
+        <%# Seul(e) : le point sur ma relation, dans les mots de la page de vente,
+            avec #point qui ouvre tout de suite son départ (bilan.js). %>
+        <% if (t('bilan:lp.soloLien', '')) { %>
+        <p class="qr-bilan-autre"><%= insEval(t('bilan:lp.soloQuestion', '')) %> <a href="<%= urlEval %>#point" data-bilan-src="accueil-point" data-bilan-mode="solo"><%= t('bilan:lp.soloLien', '') %></a><% if (prixPointEval) { %> · <%= prixPointEval %><% } %></p>
+        <% } %>
       </div>
     </div>
   </div>

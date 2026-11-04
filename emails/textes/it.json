@@ -62,7 +62,7 @@
       "**Domande basate sulla ricerca**: più di 30 studi pubblicati sulla coppia",
       "**Alla fine, un report** confronta le vostre risposte e vi dice di cosa parlare per prima cosa"
     ],
-    "solo": "Il tuo partner non vuole partecipare? [Puoi fare la valutazione anche da solo/a](solo).",
+    "solo": "Il tuo partner non vuole partecipare? [Fai il punto da solo/a](solo): 50 domande su quello che vivi e un report tutto per te.",
     "prixPhrase": {
       "promo": "−[[pourcent]] % in questo momento, già applicato al pagamento",
       "normal": "Per tutti e due, in un solo pagamento"
@@ -91,7 +91,7 @@
       "**4 conversazioni da fare**, con domande per cominciare",
       "**Come ognuno di voi** vive la coppia in questo momento"
     ],
-    "solo": "[La valutazione si può fare anche da solo/a](solo), se il tuo partner non vuole partecipare.",
+    "solo": "Se il tuo partner non vuole, [fai il punto da solo/a](solo): 50 domande su quello che vivi e un report tutto per te.",
     "prixPhrase": {
       "promo": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema",
       "normal": "Cioè [[prixChacun]] a testa: meno di un biglietto del cinema"
@@ -109,7 +109,7 @@
       "promo": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due in questo momento, invece di [[prixBase]].",
       "normal": "Le domande sono gratuite, e il report costa [[prix]] per tutti e due."
     },
-    "solo": "La valutazione si può fare anche da solo/a, se il tuo partner non vuole.",
+    "solo": "Se il tuo partner non vuole, puoi anche fare il punto da solo/a: 50 domande su quello che vivi e un report tutto per te.",
     "e1": {
       "texte": "Rispondete ognuno a 100 domande sul proprio telefono, senza vedere le risposte dell'altro. Soldi, figli, litigi, intimità... Alla fine, un report confronta le vostre risposte e vi dice di cosa parlare per prima cosa.",
       "lien": "Qui trovi tutto spiegato: [vedi la valutazione di coppia](evaluation).",

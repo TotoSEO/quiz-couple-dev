@@ -25,8 +25,9 @@
 -- get_bilan_point(p_jours) : ce que l'onglet Évaluation de l'admin montre du
 -- point (par admin-stats) : l'entonnoir jour par jour, les motifs, les
 -- priorités, les états, les styles d'attachement, les alertes, les parties
--- entrées et finies, et la carte célibataire par page. Jamais une adresse ni
--- une réponse. get_bilan_celib rend en plus les sources et les situations.
+-- entrées et finies, la carte célibataire par page et, depuis le soir du
+-- 4 novembre 2026, les sources (l'encart ou la page qui a mené au point).
+-- Jamais une adresse ni une réponse. get_bilan_celib rend en plus les sources et les situations.
 --
 -- Idempotente ; appliquée par bilan-base.yml après toutes les autres
 -- migrations du bilan.
@@ -238,6 +239,22 @@ BEGIN
   ),
   celib AS (
     SELECT * FROM public.bilan_celib WHERE cree_le >= depuis
+  ),
+  -- D'où viennent les points : la source de la visite (encart sous le
+  -- verdict resultat-<id>, bannière bas-<id>, accueil, article...), avec les
+  -- clics « seul(e) » (cta_solo, page de vente comprise) et ce qui devient un
+  -- point, une fin et une vente.
+  sources AS (
+    SELECT cle AS src,
+      COALESCE(sum(n) FILTER (WHERE evenement = 'cta_solo'), 0)::integer AS ctas,
+      COALESCE(sum(n) FILTER (WHERE evenement = 'cree_point'), 0)::integer AS crees,
+      COALESCE(sum(n) FILTER (WHERE evenement = 'fini_point'), 0)::integer AS finis,
+      COALESCE(sum(n) FILTER (WHERE evenement = 'paiement_ouvert_point'), 0)::integer AS paiements_ouverts,
+      COALESCE(sum(n) FILTER (WHERE evenement = 'paye_point'), 0)::integer AS payes,
+      COALESCE(sum(montant) FILTER (WHERE evenement = 'paye_point'), 0)::integer AS revenu
+    FROM c
+    WHERE evenement IN ('cta_solo', 'cree_point', 'fini_point', 'paiement_ouvert_point', 'paye_point')
+    GROUP BY cle
   )
   SELECT jsonb_build_object(
     'jours', n_jours,
@@ -268,6 +285,7 @@ BEGIN
         ) pages
       ) p
     ),
+    'sources', (SELECT COALESCE(jsonb_agg(to_jsonb(s) ORDER BY s.crees DESC, s.ctas DESC, s.src), '[]'::jsonb) FROM sources s),
     'total_payes', (SELECT COALESCE(sum(n), 0)::integer FROM public.bilan_compteurs WHERE evenement = 'paye_point'),
     'total_revenu', (SELECT COALESCE(sum(montant), 0)::integer FROM public.bilan_compteurs WHERE evenement = 'paye_point')
   ) INTO resultat;

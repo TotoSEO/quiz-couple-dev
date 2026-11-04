@@ -61,6 +61,9 @@ const TEXTES_POINT = {
     fichier: 'le-point-sur-ma-relation',
     ligne: '{a}, le point sur ma relation',
     intro: 'Voici le lien pour reprendre le point sur votre relation, là où vous en étiez.',
+    lienSujet: 'Votre lien pour reprendre le point sur votre relation',
+    lienBouton: 'Reprendre mes réponses',
+    lienPied: 'Vous recevez ce message parce que cette adresse a été donnée pour le point sur votre relation, sur quiz-couple.com, ou qu\'on a demandé à retrouver ce point avec elle.',
     rapport: {
       sujet: 'Le point sur votre relation : votre rapport, {a}',
       phrase: 'Votre point sur votre relation est terminé. Téléchargez le rapport en PDF, ou lisez-le en ligne.',
@@ -68,6 +71,8 @@ const TEXTES_POINT = {
       note: 'Ce rapport contient vos réponses sur votre relation : il n\'est destiné qu\'à vous.',
     },
     rappel: {
+      pied: 'Vous recevez ce message parce que cette adresse a été donnée pour le point sur votre relation, sur quiz-couple.com.',
+      arret: 'Ne plus recevoir de message sur ce point',
       sujetRelance: 'Le point sur votre relation vous attend',
       avantRelance: 'Vos réponses sont gardées, le rapport n\'attend plus que vous.',
       titreRelance: 'Votre rapport vous attend',
@@ -84,6 +89,9 @@ const TEXTES_POINT = {
     fichier: 'my-relationship-check-up',
     ligne: '{a}, my relationship check-up',
     intro: 'Here is the link to pick up your relationship check-up, right where you left off.',
+    lienSujet: 'Your link to pick up your relationship check-up',
+    lienBouton: 'Continue my answers',
+    lienPied: 'You\'re receiving this email because this address was given for a relationship check-up on quiz-couple.com, or someone asked to find that check-up with it.',
     rapport: {
       sujet: 'Your relationship check-up: your report, {a}',
       phrase: 'Your relationship check-up is complete. Download the report as a PDF, or read it online.',
@@ -91,6 +99,8 @@ const TEXTES_POINT = {
       note: 'This report contains your answers about your relationship: it is meant for you alone.',
     },
     rappel: {
+      pied: 'You\'re receiving this email because this address was given for a relationship check-up on quiz-couple.com.',
+      arret: 'Stop emails about this check-up',
       sujetRelance: 'Your relationship check-up is waiting for you',
       avantRelance: 'Your answers are saved: the report is just waiting for you.',
       titreRelance: 'Your report is waiting',
@@ -107,6 +117,9 @@ const TEXTES_POINT = {
     fichier: 'mi-relacion-en-claro',
     ligne: '{a}, Mi relación, en claro',
     intro: 'Aquí tienes el enlace para seguir con «Mi relación, en claro», justo donde lo dejaste.',
+    lienSujet: 'Tu enlace para seguir con «Mi relación, en claro»',
+    lienBouton: 'Seguir con mis respuestas',
+    lienPied: 'Recibes este mensaje porque esta dirección se indicó para «Mi relación, en claro», en quiz-couple.com, o porque alguien pidió recuperar ese balance con ella.',
     rapport: {
       sujet: 'Mi relación, en claro: tu informe, {a}',
       phrase: 'Has terminado «Mi relación, en claro». Descarga el informe en PDF, o léelo en línea.',
@@ -114,6 +127,8 @@ const TEXTES_POINT = {
       note: 'Este informe contiene tus respuestas sobre tu relación: es solo para ti.',
     },
     rappel: {
+      pied: 'Recibes este mensaje porque esta dirección se indicó para «Mi relación, en claro», en quiz-couple.com.',
+      arret: 'No recibir más mensajes sobre este balance',
       sujetRelance: 'Tu informe sobre tu relación te espera',
       avantRelance: 'Tus respuestas están guardadas, el informe solo espera a que lo abras.',
       titreRelance: 'Tu informe te espera',
@@ -130,6 +145,9 @@ const TEXTES_POINT = {
     fichier: 'wo-steht-meine-beziehung',
     ligne: '{a}, Wo steht meine Beziehung?',
     intro: 'Hier ist der Link, um mit „Wo steht meine Beziehung?“ genau da weiterzumachen, wo du aufgehört hast.',
+    lienSujet: 'Dein Link für „Wo steht meine Beziehung?“',
+    lienBouton: 'Weiter antworten',
+    lienPied: 'Du bekommst diese Nachricht, weil diese Adresse für „Wo steht meine Beziehung?“ auf quiz-couple.com angegeben wurde oder jemand damit diesen Check wiederfinden wollte.',
     rapport: {
       sujet: 'Wo steht meine Beziehung? Dein Bericht, {a}',
       phrase: 'Du bist fertig. Lade deinen Bericht als PDF herunter oder lies ihn online.',
@@ -137,6 +155,8 @@ const TEXTES_POINT = {
       note: 'Dieser Bericht enthält deine Antworten zu deiner Beziehung: Er ist nur für dich bestimmt.',
     },
     rappel: {
+      pied: 'Du bekommst diese Nachricht, weil diese Adresse für „Wo steht meine Beziehung?“ auf quiz-couple.com angegeben wurde.',
+      arret: 'Keine Nachrichten mehr zu diesem Check',
       sujetRelance: 'Dein Bericht zu deiner Beziehung wartet auf dich',
       avantRelance: 'Deine Antworten sind gespeichert, der Bericht wartet nur noch auf dich.',
       titreRelance: 'Dein Bericht wartet',
@@ -153,6 +173,9 @@ const TEXTES_POINT = {
     fichier: 'il-punto-sulla-mia-relazione',
     ligne: '{a}, il punto sulla mia relazione',
     intro: 'Ecco il link per riprendere il punto sulla tua relazione, da dove avevi lasciato.',
+    lienSujet: 'Il tuo link per riprendere il punto sulla tua relazione',
+    lienBouton: 'Riprendere le mie risposte',
+    lienPied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per il punto sulla tua relazione, su quiz-couple.com, o perché qualcuno ha chiesto di ritrovarlo con esso.',
     rapport: {
       sujet: 'Il punto sulla tua relazione: il tuo report, {a}',
       phrase: 'Hai finito il punto sulla tua relazione. Scarica il report in PDF, o leggilo online.',
@@ -160,6 +183,8 @@ const TEXTES_POINT = {
       note: 'Questo report contiene le tue risposte sulla tua relazione: è destinato solo a te.',
     },
     rappel: {
+      pied: 'Ricevi questo messaggio perché questo indirizzo è stato indicato per il punto sulla tua relazione, su quiz-couple.com.',
+      arret: 'Non ricevere più messaggi su questo punto',
       sujetRelance: 'Il punto sulla tua relazione ti aspetta',
       avantRelance: 'Le tue risposte sono salvate, il report aspetta solo te.',
       titreRelance: 'Il tuo report ti aspetta',
@@ -176,6 +201,9 @@ const TEXTES_POINT = {
     fichier: 'waar-staat-mijn-relatie',
     ligne: '{a}, Waar staat mijn relatie?',
     intro: 'Hier is de link om verder te gaan met ‘Waar staat mijn relatie?’, precies waar je gebleven was.',
+    lienSujet: 'Je link om verder te gaan met ‘Waar staat mijn relatie?’',
+    lienBouton: 'Verder met mijn antwoorden',
+    lienPied: 'Je krijgt dit bericht omdat dit adres is opgegeven voor ‘Waar staat mijn relatie?’ op quiz-couple.com, of omdat iemand die check met dit adres wilde terugvinden.',
     rapport: {
       sujet: 'Waar staat je relatie? Je rapport, {a}',
       phrase: 'Je bent klaar. Download je rapport als pdf, of lees het online.',
@@ -183,6 +211,8 @@ const TEXTES_POINT = {
       note: 'Dit rapport bevat je antwoorden over je relatie: het is alleen voor jou bedoeld.',
     },
     rappel: {
+      pied: 'Je krijgt dit bericht omdat dit adres is opgegeven voor ‘Waar staat mijn relatie?’ op quiz-couple.com.',
+      arret: 'Geen berichten meer over deze check',
       sujetRelance: 'Je rapport over je relatie wacht op je',
       avantRelance: 'Je antwoorden zijn bewaard, het rapport wacht alleen nog op jou.',
       titreRelance: 'Je rapport wacht op je',
@@ -595,9 +625,12 @@ export function messageLien({ lang, liens, rotation }) {
     };
   } else if (l.length === 1) {
     m = {
-      sujet: t.sujet, avant: t.avant, titre: t.titre,
+      // Un point sur ma relation : son nom dans le sujet et le bouton, pas
+      // « l'évaluation de couple » (4 novembre 2026).
+      sujet: l[0].formule === 'point' ? textesPoint(lang).lienSujet : t.sujet, avant: t.avant, titre: t.titre,
       phrase: remplir(l[0].formule === 'point' ? textesPoint(lang).intro : t.intro, { a: l[0].a, b: l[0].b }), puces: t.puces,
-      bouton: t.bouton, url: l[0].url, brut: true, note: rotation ? t.nouveau : null,
+      bouton: l[0].formule === 'point' ? textesPoint(lang).lienBouton : t.bouton, url: l[0].url, brut: true, note: rotation ? t.nouveau : null,
+      ...(l[0].formule === 'point' ? { pied: textesPoint(lang).lienPied } : {}),
     };
   } else {
     m = {
@@ -1017,7 +1050,7 @@ function messageRappel(quoi, o) {
     repondu: prog.repondu || 0, total: prog.total || 0, minutes: minutesRestantes(reste, solo, point),
   };
   const r = (s) => remplir(s, v);
-  const commun = { lang, bonjour: r(t.bonjour), alt: t.alt, signature: t.signature, pied: t.pied, arret: t.arret, arretUrl: arret, url };
+  const commun = { lang, bonjour: r(t.bonjour), alt: t.alt, signature: t.signature, pied: (tp && tp.pied) || t.pied, arret: (tp && tp.arret) || t.arret, arretUrl: arret, url };
   let m;
   if (quoi === 'pret' || quoi === 'relance') {
     const pret = quoi === 'pret';

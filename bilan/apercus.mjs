@@ -3,6 +3,12 @@
 // refaire quand le gabarit, sa feuille ou les textes du rapport changent.
 //
 //   node bilan/apercus.mjs [langue...]
+//   node bilan/apercus.mjs --point [langue...]   (le point sur ma relation seul)
+//
+// Le point sur ma relation (4 novembre 2026) a son aperçu, la page
+// « L'essentiel » d'un point fictif (apercu-point-<langue>.webp), montré par
+// les encarts des tests où l'on doute seul(e) (encartBilan dans
+// quiz-engine-core.js, partials/bilan-banniere.ejs).
 //
 // Il faut sharp pour le WebP (comme build/variantes-images.cjs : installé
 // hors du dépôt, chemin dans SHARP, sinon /tmp/node_modules/sharp).
@@ -11,9 +17,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { lancer } from './navigateur.mjs';
-import { couple } from './exemples.mjs';
-import { feuilleEnLigne, textes, RACINE } from './document.mjs';
+import { couple, point } from './exemples.mjs';
+import { feuilleEnLigne, textes, textesPoint, RACINE } from './document.mjs';
 import { rapportHtml } from '../supabase/functions/_shared/bilan/rapport.mjs';
+import { rapportPointHtml } from '../supabase/functions/_shared/bilan/rapport-point.mjs';
 import { couperPour } from './cesure.mjs';
 
 const require = createRequire(import.meta.url);
@@ -52,12 +59,50 @@ html, body { margin: 0; background: #fff; }
 </style></head><body>${html}</body></html>`;
 }
 
+// L'aperçu du point : la page « L'essentiel » (état, tuiles, par où
+// commencer) d'un point fictif, avec ses marges de PDF, coupée au bas de la
+// page.
+async function apercuPoint(navigateur, lang) {
+  const d = point({ lang, graine: 31, biais: 0.4, genres: ['f', 'h'], prenoms: COUPLES[lang], autres: { pd2: 3, pp1: 2, pp2: 1 } });
+  const r = rapportPointHtml(d, textesPoint(lang), { format: 'pdf', couper: couperPour(lang) });
+  const page = await navigateur.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 1.5 });
+  await page.setContent(documentApercu(lang, r.html), { waitUntil: 'load' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => {
+    const rap = document.querySelector('.rap');
+    // Dans le PDF du point, les chapitres se suivent sans page neuve : la
+    // page montre l'essentiel puis le début du chapitre suivant, coupé en bas.
+    const source = rap.querySelector('.rap-chap--essentiel');
+    const suite = source.nextElementSibling && source.nextElementSibling.classList.contains('rap-chap') ? source.nextElementSibling : null;
+    const feuille = document.createElement('div');
+    feuille.className = 'feuille feuille--marges';
+    const copie = document.createElement('div');
+    copie.className = rap.className;
+    copie.setAttribute('lang', rap.getAttribute('lang'));
+    copie.appendChild(source.cloneNode(true));
+    if (suite) copie.appendChild(suite.cloneNode(true));
+    feuille.appendChild(copie);
+    document.body.innerHTML = '';
+    document.body.appendChild(feuille);
+  });
+  const png = await page.locator('.feuille').screenshot({ type: 'png' });
+  const sortie = path.join(SORTIE, `apercu-point-${lang}.webp`);
+  await sharp(png).resize({ width: LARGEUR }).webp({ quality: 80 }).toFile(sortie);
+  console.log('  ', path.relative(RACINE, sortie), Math.round(fs.statSync(sortie).size / 1024) + ' Ko');
+  await page.close();
+}
+
 async function principal() {
-  const langues = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(COUPLES);
+  const args = process.argv.slice(2);
+  const seulPoint = args.includes('--point');
+  const choisies = args.filter((a) => a !== '--point');
+  const langues = choisies.length ? choisies : Object.keys(COUPLES);
   fs.mkdirSync(SORTIE, { recursive: true });
   const navigateur = await lancer();
   try {
     for (const lang of langues) {
+      await apercuPoint(navigateur, lang);
+      if (seulPoint) continue;
       const d = couple({ lang, graine: 13, pareil: 0.58, voisin: 0.27, climat: 0.82, prenoms: COUPLES[lang], genres: ['f', 'h'] });
       const { T, Q } = textes(lang);
       const r = rapportHtml(d, T, Q, { format: 'pdf', couper: couperPour(lang) });

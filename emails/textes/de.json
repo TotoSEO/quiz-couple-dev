@@ -62,7 +62,7 @@
       "**Fragen auf Grundlage der Forschung**: mehr als 30 veröffentlichte Studien über Paare",
       "**Am Ende vergleicht ein Bericht** eure Antworten und sagt euch, worüber ihr zuerst reden solltet"
     ],
-    "solo": "Dein Partner oder deine Partnerin will nicht mitmachen? [Du kannst die Analyse auch allein machen](solo).",
+    "solo": "Dein Partner oder deine Partnerin will nicht mitmachen? [Mach den Check allein](solo): 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich.",
     "prixPhrase": {
       "promo": "−[[pourcent]] % gerade, schon beim Bezahlen abgezogen",
       "normal": "Für euch beide, einmalig"
@@ -91,7 +91,7 @@
       "**4 Gespräche, die anstehen**, mit Fragen für den Einstieg",
       "**Wie jeder von euch** die Beziehung gerade erlebt"
     ],
-    "solo": "[Die Analyse geht auch allein](solo), wenn dein Partner oder deine Partnerin nicht mitmachen will.",
+    "solo": "Wenn dein Partner oder deine Partnerin nicht will, [mach den Check allein](solo): 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich.",
     "prixPhrase": {
       "promo": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte",
       "normal": "Also [[prixChacun]] pro Person: weniger als eine Kinokarte"
@@ -109,7 +109,7 @@
       "promo": "Die Fragen sind kostenlos, und der Bericht kostet gerade [[prix]] für euch beide statt [[prixBase]].",
       "normal": "Die Fragen sind kostenlos, und der Bericht kostet [[prix]] für euch beide."
     },
-    "solo": "Die Analyse geht auch allein, wenn dein Partner oder deine Partnerin nicht mitmachen will.",
+    "solo": "Wenn dein Partner oder deine Partnerin nicht will, kannst du den Check auch allein machen: 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich.",
     "e1": {
       "texte": "Ihr beantwortet jeder auf seinem Handy 100 Fragen, ohne die Antworten des anderen zu sehen. Geld, Kinder, Streit, Intimität... Am Ende vergleicht ein Bericht eure Antworten und sagt euch, worüber ihr zuerst reden solltet.",
       "lien": "Hier ist alles erklärt: [zur Beziehungsanalyse](evaluation).",

@@ -3284,12 +3284,58 @@ var QuizEngine = (function() {
           points: ['Samen te doen, ieder op de eigen telefoon', 'Gebaseerd op onderzoek naar relaties', 'Een minuut of twintig, zonder de antwoorden van de ander te zien', 'Meteen resultaat & rapport online + pdf'],
           bouton: 'Ontdek de relatiecheck', prix: 'Vragen gratis · rapport {{prix}} voor jullie samen' },
   };
+  // « Le point sur ma relation » (4 novembre 2026, Thomas : « que du coup le
+  // test solo est mis en avant sur les pages de tests à faire seul les plus
+  // propices ») : sur les tests où l'on se pose seul(e) une question sur sa
+  // relation (formule: 'point' dans BILAN_ENTREES, data-bilan-formule sur le
+  // body), l'encart propose le point, 4,90 € sans réduction, et garde un lien
+  // discret vers l'évaluation à deux. Le bouton mène à la page de
+  // l'évaluation avec #point, qui ouvre tout de suite le départ du point.
+  var BILAN_POINT_TEXTES = {
+    fr: { sur: 'Le point sur ma relation',
+          titre: 'Faites le point sur votre relation, de votre côté',
+          texte: 'Votre partenaire n\'a pas besoin d\'être au courant. 50 questions sur ce que vous vivez, et un rapport rien que pour vous : où vous en êtes, ce qui pèse, ce qui vous fait rester, et comment en parler.',
+          points: ['Seul(e), sans prévenir votre partenaire', '50 questions, une douzaine de minutes', 'Construit à partir de la recherche en psychologie du couple', 'Votre rapport tout de suite, en ligne et en PDF'],
+          bouton: 'Faire le point sur ma relation', prix: 'Questions gratuites · rapport {{prix}}',
+          duoAvant: 'Plutôt à deux, chacun sur son téléphone ?', duoLien: 'Voir l\'évaluation de couple' },
+    en: { sur: 'My Relationship Check-Up',
+          titre: 'Take stock of your relationship, on your own',
+          texte: 'Your partner doesn\'t need to know. 50 questions about what you\'re living, and a report just for you: where you stand, what weighs on you, what makes you stay, and how to talk about it.',
+          points: ['On your own, without telling your partner', '50 questions, about twelve minutes', 'Built on research in couple psychology', 'Your report right away, online and as a PDF'],
+          bouton: 'Start my check-up', prix: 'Free questions · report {{prix}}',
+          duoAvant: 'Rather do it together, each on your own phone?', duoLien: 'See the relationship assessment' },
+    es: { sur: 'Mi relación, en claro',
+          titre: 'Haz balance de tu relación, por tu lado',
+          texte: 'Tu pareja no tiene por qué enterarse. 50 preguntas sobre lo que vives, y un informe solo para ti: dónde estás, lo que te pesa, lo que te hace quedarte y cómo hablarlo.',
+          points: ['A solas, sin avisar a tu pareja', '50 preguntas, unos doce minutos', 'Construido a partir de la investigación en psicología de pareja', 'Tu informe al momento, en línea y en PDF'],
+          bouton: 'Hacer el balance de mi relación', prix: 'Preguntas gratis · informe {{prix}}',
+          duoAvant: '¿Mejor en pareja, cada uno en su teléfono?', duoLien: 'Ver la evaluación de pareja' },
+    de: { sur: 'Wo steht meine Beziehung?',
+          titre: 'Schau ganz für dich, wie es um deine Beziehung steht',
+          texte: 'Dein Partner oder deine Partnerin muss nichts davon wissen. 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich: wo du stehst, was dich belastet, was dich bleiben lässt und wie du darüber reden kannst.',
+          points: ['Allein, ohne deinem Partner oder deiner Partnerin Bescheid zu geben', '50 Fragen, etwa zwölf Minuten', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Dein Bericht sofort, online und als PDF'],
+          bouton: 'Den Check allein machen', prix: 'Fragen kostenlos · Bericht {{prix}}',
+          duoAvant: 'Lieber zu zweit, jeder auf dem eigenen Handy?', duoLien: 'Zur Beziehungsanalyse' },
+    it: { sur: 'Il punto sulla mia relazione',
+          titre: 'Fai il punto sulla tua relazione, per conto tuo',
+          texte: 'Il tuo partner non ha bisogno di saperlo. 50 domande su quello che vivi, e un report solo per te: a che punto sei, cosa ti pesa, cosa ti fa restare e come parlarne.',
+          points: ['Da solo/a, senza avvisare il tuo partner', '50 domande, una dozzina di minuti', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Il tuo report subito, online e in PDF'],
+          bouton: 'Fare il punto sulla mia relazione', prix: 'Domande gratuite · report {{prix}}',
+          duoAvant: 'Meglio in due, ciascuno sul proprio telefono?', duoLien: 'Vedi la valutazione di coppia' },
+    nl: { sur: 'Waar staat mijn relatie?',
+          titre: 'Breng je relatie voor jezelf in kaart',
+          texte: 'Je partner hoeft er niets van te weten. 50 vragen over wat je beleeft, en een rapport alleen voor jou: waar je staat, wat zwaar weegt, waarom je blijft en hoe je erover kunt praten.',
+          points: ['Alleen, zonder je partner op de hoogte te brengen', '50 vragen, een minuut of twaalf', 'Gebaseerd op onderzoek naar relaties', 'Je rapport meteen, online en als pdf'],
+          bouton: 'De check alleen doen', prix: 'Vragen gratis · rapport {{prix}}',
+          duoAvant: 'Liever samen, ieder op de eigen telefoon?', duoLien: 'Bekijk de relatiecheck' },
+  };
   var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   function encartBilan(cle, lang) {
     var corps = document.body;
     var chemin = corps && corps.getAttribute('data-bilan');
     var groupe = corps && corps.getAttribute('data-bilan-groupe');
     if (!chemin || !groupe) return null;
+    if (corps.getAttribute('data-bilan-formule') === 'point') return encartPoint(cle, lang, chemin);
     var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
     var prix = corps.getAttribute('data-bilan-prix') || '';
     // La réduction en cours, posée par la page (generate.js, promoBilanPour) :
@@ -3321,6 +3367,33 @@ var QuizEngine = (function() {
       '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(chemin) + '"' + src + '>' + esc(t.bouton) +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
       (prix ? '<p class="qr-bilan-prix">' + lignePrix + '</p>' : '') +
+      '</div>';
+    return zone;
+  }
+
+  // L'encart du point : même carte que l'évaluation à deux (.qr-bilan), une
+  // page du rapport du point (bilan/apercus.mjs --point), le prix du point
+  // sans réduction, et le lien vers l'évaluation à deux en dessous. Les deux
+  // liens portent la même source, resultat-<id> : l'onglet Évaluation de
+  // l'admin compte à part ce qui devient un point (get_bilan_point).
+  function encartPoint(cle, lang, chemin) {
+    var corps = document.body;
+    var t = BILAN_POINT_TEXTES[lang] || BILAN_POINT_TEXTES.fr;
+    var prix = corps.getAttribute('data-bilan-prix-point') || '';
+    var id = corps.getAttribute('data-bilan-id') || cle || 'test';
+    var src = ' data-bilan-src="' + esc('resultat-' + id) + '"';
+    var zone = el('section', 'qr-bilan qr-bilan--point');
+    zone.setAttribute('aria-label', t.sur);
+    zone.innerHTML = '<div class="qr-bilan-visuel" aria-hidden="true"><img draggable="false" src="/bilan/apercu-point-' + esc(BILAN_POINT_TEXTES[lang] ? lang : 'fr') +
+      '.webp" alt="" width="240" height="340" loading="lazy" decoding="async"></div>' +
+      '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
+      '<h3 class="qr-bilan-titre">' + esc(insecables(t.titre)) + '</h3>' +
+      '<p class="qr-bilan-texte">' + esc(insecables(t.texte)) + '</p>' +
+      '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
+      '<div class="qr-bilan-boutons"><a class="qr-bilan-bouton" href="' + esc(chemin + '#point') + '"' + src + ' data-bilan-mode="solo">' + esc(t.bouton) +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' + '</a></div>' +
+      (prix ? '<p class="qr-bilan-prix">' + esc(t.prix.replace('{{prix}}', prix)) + '</p>' : '') +
+      '<p class="qr-bilan-autre">' + esc(insecables(t.duoAvant)) + ' <a href="' + esc(chemin) + '"' + src + '>' + esc(t.duoLien) + '</a></p>' +
       '</div>';
     return zone;
   }

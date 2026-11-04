@@ -199,10 +199,26 @@ if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
 // manipulation, de violence ou d'infidélité : on ne vend pas une évaluation
 // à deux à quelqu'un qui lit ça (même règle que BILAN_ENTREES).
 const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou|quitter-quelqu-un/i;
+// Les articles où l'on se pose seul(e) une question sur sa relation, ou dont
+// le partenaire ne veut pas en parler : leur bannière propose « Le point sur
+// ma relation » (4 novembre 2026, comme `formule: 'point'` de BILAN_ENTREES),
+// par l'identifiant interne de l'article.
+const ARTICLES_POINT = new Set([
+  'arreter-ou-continuer-relation', 'femme-malheureuse-en-couple', 'copain-ne-fait-pas-effort',
+  'choses-pas-accepter-couple', 'manque-communication-couple', 'comment-savoir-si-cest-le-bon',
+  'dependance-affective', 'dependance-affective-symptomes', 'sortir-de-la-dependance-affective',
+  'amour-ou-dependance-affective', 'dependance-affective-chez-l-homme',
+  'styles-attachement-couple', 'attachement-anxieux', 'attachement-evitant', 'peur-de-l-engagement',
+  'crise-de-couple-que-faire', 'therapie-de-couple-seul', 'conjoint-refuse-therapie-de-couple',
+  'il-ne-veut-pas-se-marier', 'relation-a-distance-qui-s-essouffle', 'mettre-fin-a-une-relation-a-distance',
+]);
 function entreeArticle(articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !articleMeta) return null;
   const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
-  return ARTICLE_SANS_BILAN.test(cles) ? null : { groupe: 'article', id: 'article' };
+  if (ARTICLE_SANS_BILAN.test(cles)) return null;
+  return ARTICLES_POINT.has(articleMeta.internalSlug)
+    ? { groupe: 'article', id: 'article', formule: 'point' }
+    : { groupe: 'article', id: 'article' };
 }
 function formatPrix(centimes, lang) {
   try {
@@ -309,7 +325,8 @@ function stripFutureLinks(html) {
   if (!FUTURE_BLOG_URLS.size) return html;
   return html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (m, attrs, inner) => {
     const href = (attrs.match(/href="([^"]+)"/) || [])[1];
-    if (!href || !FUTURE_BLOG_URLS.has(href)) return m;
+    // Une ancre ne change pas la page visée (/evaluation-de-couple/#point).
+    if (!href || !(FUTURE_BLOG_URLS.has(href) || FUTURE_BLOG_URLS.has(href.replace(/#.*$/, '')))) return m;
     return attrs.includes('blog-read-also') ? '' : inner;
   });
 }

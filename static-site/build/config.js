@@ -443,6 +443,16 @@ export function bilanOuvertPour(lang) {
 // d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
 // chacun les réponses de l'autre.
 export const BILAN_ENTREES = {
+  // `formule: 'point'` (4 novembre 2026, Thomas : « que du coup le test solo
+  // est mis en avant sur les pages de tests à faire seul les plus propices ») :
+  // sur les tests où l'on se pose seul(e) une question sur sa relation (fin,
+  // confiance, jalousie, toxique, attachement...), l'encart sous le verdict et
+  // la bannière du bas proposent « Le point sur ma relation » (4,90 €, sans
+  // réduction) au lieu de l'évaluation à deux, avec un lien discret vers
+  // celle-ci. Leur bouton mène à la page de l'évaluation avec #point, qui
+  // ouvre directement le départ du point (bilan.js, demarrer). Les tests qui
+  // se jouent à deux (couple sain, distance, charge mentale) gardent l'encart
+  // à deux.
   // `sousMoteur` : la carte de l'évaluation juste sous le moteur, en plus de
   // l'encart du résultat et de la bannière du bas (20 octobre 2026, Thomas :
   // « mettre mieux en avant l'évaluation de couple » sur ces deux tests) ;
@@ -457,33 +467,33 @@ export const BILAN_ENTREES = {
   testEmmenager: { groupe: 'projet', id: 'emmenager' },
   testMariage: { groupe: 'projet', id: 'mariage' },
   testParentalite: { groupe: 'projet', id: 'parentalite' },
-  testEstCeLeBon: { groupe: 'projet', id: 'est-ce-le-bon' },
-  testFinCouple: { groupe: 'doute', id: 'fin-couple' },
+  testEstCeLeBon: { groupe: 'projet', id: 'est-ce-le-bon', formule: 'point' },
+  testFinCouple: { groupe: 'doute', id: 'fin-couple', formule: 'point' },
   testCoupleSain: { groupe: 'doute', id: 'couple-sain' },
   testChargeMentale: { groupe: 'doute', id: 'charge-mentale' },
   testDistance: { groupe: 'doute', id: 'distance' },
-  testDivorce: { groupe: 'doute', id: 'divorce' },
-  testConfiance: { groupe: 'doute', id: 'confiance' },
-  testAmourHabitude: { groupe: 'doute', id: 'amour-habitude' },
-  testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore' },
+  testDivorce: { groupe: 'doute', id: 'divorce', formule: 'point' },
+  testConfiance: { groupe: 'doute', id: 'confiance', formule: 'point' },
+  testAmourHabitude: { groupe: 'doute', id: 'amour-habitude', formule: 'point' },
+  testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore', formule: 'point' },
   // Depuis le 19 octobre 2026 (Thomas : « on ne va pas compter sur le SEO
   // pour vendre »), presque toute la famille des tests de couple, les jeux
   // (groupe `jeu`) et le hub des questions (groupe `questions`) ; le mode
   // seul(e) permet d'y renvoyer depuis les tests où l'on doute. Toujours
   // rien depuis l'emprise, la manipulation et l'infidélité.
-  testToxic: { groupe: 'doute', id: 'toxique' },
-  testRedFlag: { groupe: 'doute', id: 'red-flag' },
-  testOublieSonEx: { groupe: 'doute', id: 'oublie-son-ex' },
-  testJalousie: { groupe: 'doute', id: 'jalousie' },
-  testAmourAttachement: { groupe: 'doute', id: 'amour-attachement' },
-  testAimeEncore: { groupe: 'doute', id: 'aime-encore' },
-  testDistanceAime: { groupe: 'doute', id: 'distance-aime' },
-  testDependance: { groupe: 'doute', id: 'dependance' },
-  testAttachement: { groupe: 'score', id: 'attachement' },
+  testToxic: { groupe: 'doute', id: 'toxique', formule: 'point' },
+  testRedFlag: { groupe: 'doute', id: 'red-flag', formule: 'point' },
+  testOublieSonEx: { groupe: 'doute', id: 'oublie-son-ex', formule: 'point' },
+  testJalousie: { groupe: 'doute', id: 'jalousie', formule: 'point' },
+  testAmourAttachement: { groupe: 'doute', id: 'amour-attachement', formule: 'point' },
+  testAimeEncore: { groupe: 'doute', id: 'aime-encore', formule: 'point' },
+  testDistanceAime: { groupe: 'doute', id: 'distance-aime', formule: 'point' },
+  testDependance: { groupe: 'doute', id: 'dependance', formule: 'point' },
+  testAttachement: { groupe: 'score', id: 'attachement', formule: 'point' },
   testAmeSoeur: { groupe: 'score', id: 'ame-soeur' },
-  testCouche: { groupe: 'score', id: 'couche' },
+  testCouche: { groupe: 'score', id: 'couche', formule: 'point' },
   testPersonnalite: { groupe: 'score', id: 'personnalite' },
-  testKarmique: { groupe: 'score', id: 'karmique' },
+  testKarmique: { groupe: 'score', id: 'karmique', formule: 'point' },
   testVacances: { groupe: 'projet', id: 'vacances' },
   quizCoquin: { groupe: 'score', id: 'coquin' },
   quizKnowledge: { groupe: 'score', id: 'connaissance' },

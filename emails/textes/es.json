@@ -62,7 +62,7 @@
       "**Preguntas basadas en la investigación**: más de 30 estudios publicados sobre la pareja",
       "**Al final, un informe** compara vuestras respuestas y os dice de qué hablar primero"
     ],
-    "solo": "¿Tu pareja no quiere participar? [También puedes hacer la evaluación a solas](solo).",
+    "solo": "¿Tu pareja no quiere participar? [Haz un balance a solas](solo): 50 preguntas sobre lo que vives y un informe solo para ti.",
     "prixPhrase": {
       "promo": "−[[pourcent]] % ahora mismo, ya aplicado al pagar",
       "normal": "Para los dos, en un solo pago"
@@ -91,7 +91,7 @@
       "**4 conversaciones pendientes**, con preguntas para empezar",
       "**Cómo vive cada uno** la relación ahora mismo"
     ],
-    "solo": "[La evaluación también se puede hacer a solas](solo), si tu pareja no quiere participar.",
+    "solo": "Si tu pareja no quiere, [haz un balance a solas](solo): 50 preguntas sobre lo que vives y un informe solo para ti.",
     "prixPhrase": {
       "promo": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine",
       "normal": "Es decir, [[prixChacun]] cada uno: menos que una entrada de cine"
@@ -109,7 +109,7 @@
       "promo": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos ahora mismo, en lugar de [[prixBase]].",
       "normal": "Las preguntas son gratis, y el informe cuesta [[prix]] para los dos."
     },
-    "solo": "La evaluación también se puede hacer a solas, si tu pareja no quiere.",
+    "solo": "Si tu pareja no quiere, también puedes hacer un balance a solas: 50 preguntas sobre lo que vives y un informe solo para ti.",
     "e1": {
       "texte": "Cada uno responde a 100 preguntas en su móvil, sin ver las respuestas del otro. Dinero, hijos, discusiones, intimidad... Al final, un informe compara vuestras respuestas y os dice de qué hablar primero.",
       "lien": "Aquí lo tienes todo explicado: [ver la evaluación de pareja](evaluation).",

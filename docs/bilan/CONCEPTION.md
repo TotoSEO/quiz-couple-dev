@@ -2127,3 +2127,100 @@ son effacement (60 jours sans paiement) : le code de l'ancien seul(e) reste.
   [pages]`), l'admin avec des données factices (`scratchpad/admin/essai.mjs`,
   `ELEMENTS` pour capturer un panneau) et la sonde contre la fonction en
   mémoire servie en HTTP.
+
+## 4 novembre 2026 au soir : le point mis en avant, et la cohérence du site
+
+Thomas, après la mise en ligne du point : « Merge et lance la santé de
+l'évaluation. Vérifie aussi les mails et que tout est cohérent sur la page
+d'un point de vue marketing / copywriting avec ce nouveau test, que les
+encarts sur le site notamment à la fin des tests et sur la home sont bien
+cohérent, que du coup le test solo est mis en avant sur les pages de tests à
+faire seul les plus propices, etc ».
+
+### La santé
+
+`bilan-sante.yml` (run 41862010937, sur le code publié) : secrets posés
+(Stripe, webhook, Resend), fonction `bilan` joignable, vente à deux jouée
+jusqu'à la page Stripe à 7,92 € (LOVE20 appliqué), point joué jusqu'à la page
+Stripe à 4,90 €, webhook qui refuse un événement sans signature, porte e-mail
+joignable, page de vente publiée et ouverte. Les deux évaluations de la sonde
+ont été supprimées ; elles restent dans les compteurs du jour.
+
+### Où le point remplace l'évaluation à deux
+
+L'encart sous le verdict et la bannière du bas proposaient l'évaluation à
+deux partout, avec un seul bouton depuis le 27 octobre. Sur un test qu'on
+fait seul(e) parce qu'on doute (est-ce la fin, je l'aime encore, confiance,
+jalousie, toxique, red flag...), demander à l'autre de répondre à cent
+questions est le pas le plus dur à faire ; le point est fait pour ça. Il les
+remplace donc sur dix-sept tests (`formule: 'point'` dans `BILAN_ENTREES`) :
+fin de couple, divorce, confiance, amour ou habitude, je l'aime encore,
+toxique, red flag, a-t-il oublié son ex, jalousie, amour ou attachement,
+m'aime-t-il encore (et à distance), dépendance affective, est-ce le bon, a
+couché avec un(e) autre, style d'attachement, relation karmique. Les tests
+qui se jouent à deux (couple sain, relation à distance, charge mentale) et
+tous les tests à score, de projet, les jeux et les questions gardent
+l'évaluation à deux.
+
+Les articles suivent la même règle (`ARTICLES_POINT` dans generate.js, par
+identifiant interne) : femme malheureuse en couple, arrêter ou continuer,
+le copain qui ne fait pas d'effort, ce qu'on n'accepte pas dans un couple,
+le manque de communication, comment savoir si c'est le bon, les cinq
+articles sur la dépendance affective, les trois sur l'attachement, la peur
+de l'engagement, la crise de couple, la thérapie seul(e), le conjoint qui
+refuse la thérapie, « il ne veut pas se marier », la relation à distance qui
+s'essouffle et y mettre fin.
+
+L'encart du point garde un lien discret vers l'évaluation à deux, sous le
+prix (« Plutôt à deux, chacun sur son téléphone ? Voir l'évaluation de
+couple »), avec la même source : qui préfère le faire à deux n'a pas à le
+chercher.
+
+### Le chemin du clic
+
+Le bouton du point mène à `/evaluation-de-couple/#point`. À l'arrivée,
+`demarrer()` de bilan.js retire l'ancre de l'adresse, compte la page, puis
+ouvre tout de suite le départ seul(e) (« Où en êtes-vous ? », le point pour
+qui est en couple ou dans une situation compliquée, le sondage pour qui est
+célibataire), comme le bouton « Faire le point seul(e) » de la page : la
+carte qui vient d'être lue décrit déjà le point et son prix, repasser par la
+page de vente, qui commence par l'évaluation à deux, brouillait le message.
+Le retour arrière montre la page de vente. Le clic est compté comme celui de
+la page (`cta`, `cta_solo`) avec la source de l'encart, et le point créé
+garde cette source.
+
+### Les autres endroits
+
+- **L'accueil** : sous le bouton de la section de l'évaluation, la phrase de
+  la page de vente (« Votre partenaire ne veut pas participer ? Faites le
+  point seul(e) ») et le prix du point, vers `#point` (source
+  `accueil-point`). Le bouton à deux reste le seul gros bouton.
+- **La page de vente** : déjà au nom du point (les deux façons, le prix, la
+  FAQ, le dernier appel) ; l'avertissement « si vous avez peur de votre
+  partenaire, faites-la seul(e) » renvoyait à l'ancien seul(e), il dit
+  désormais « ne la faites pas à deux : faites le point seul(e), ou rien du
+  tout », dans les six langues.
+- **Les articles** : les deux articles programmés du cocon thérapie qui
+  décrivaient l'ancien seul(e) (« cent questions… ce que tu penses qu'il
+  répondrait ») décrivent le point (cinquante questions sur ce qu'on vit,
+  trois sujets à aborder avec une façon de commencer), lien `#point` compris.
+- **Les e-mails** : la ligne seul(e) des e-mails du parcours parle du point
+  (« Fais le point seul(e) sur ta relation : 50 questions sur ce que tu vis,
+  et un rapport rien que pour toi »), sans prix ; elle mène à la section des
+  deux façons de la page de vente. Les e-mails du point (lien perdu, rappel,
+  reprise, rapport) ne nomment plus l'évaluation à deux nulle part : sujet,
+  bouton, pied et lien d'arrêt au nom du point.
+- **L'admin** : `get_bilan_point` rend les sources (clics seul(e), points
+  créés, finis, pages Stripe, ventes, revenu), tableau « D'où ils viennent »
+  du panneau du point. C'est là qu'on lira si les encarts des tests vendent.
+
+### Vérifié
+
+Les tests du serveur (94), des e-mails (75) et du rapport (44) ; dans
+Chromium contre le site construit et la fonction en mémoire, dans les six
+langues, en clair et en sombre, sur téléphone et sur ordinateur
+(`scratchpad/encart/essai.mjs <lang> <largeur> <hauteur> <theme>`) : la
+bannière du point sur deux tests, le test joué jusqu'au résultat, l'encart,
+le clic jusqu'au départ du point et le point créé avec la source de
+l'encart, l'encart à deux du couple sain, la ligne de l'accueil, la bannière
+d'un article.

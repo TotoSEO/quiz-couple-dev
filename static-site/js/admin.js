@@ -881,12 +881,14 @@
       }).join('')
         : '<p class="bil-vide">Personne n\'a encore commencé de cette façon.</p>') + '</div>';
   }
-  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', 'bandeau-promo': 'Barre de la réduction (mobile)', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple', 'email-e1': 'E-mail 1 · maquette', 'email-e1-sobre': 'E-mail 1 · sobre', 'email-e2': 'E-mail 2 · maquette', 'email-e2-sobre': 'E-mail 2 · sobre' };
+  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', 'menu-mobile': 'Menu mobile', 'bandeau-promo': 'Barre de la réduction (mobile)', accueil: 'Accueil', 'accueil-hero': 'Accueil · haut de page', 'accueil-point': 'Accueil · le point seul(e)', pied: 'Pied de page', 'bas-article': 'Bas des articles', 'bas-questions-couple': 'Questions de couple', 'email-e1': 'E-mail 1 · maquette', 'email-e1-sobre': 'E-mail 1 · sobre', 'email-e2': 'E-mail 2 · maquette', 'email-e2-sobre': 'E-mail 2 · sobre' };
   function libelleSourceBilan(src) {
     src = String(src || 'direct');
     if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
     var m = /^(resultat|bas|moteur)-(.+)$/.exec(src);
     if (m) return (m[1] === 'resultat' ? 'Résultat · ' : m[1] === 'moteur' ? 'Sous le moteur · ' : 'Bas de page · ') + m[2];
+    m = /^article-(.+)$/.exec(src);
+    if (m) return 'Dans un article · ' + m[1];
     return src;
   }
   // ── La page de paiement de Stripe, sans faire le test ──────────────────
@@ -1150,10 +1152,23 @@
           'Clics sur « Débloquer » sans la case cochée : ' + nombreBilan(t.cases_manquantes),
           'Depuis l\'ouverture : ' + nombreBilan(d.total_payes) + ' vente' + (Number(d.total_payes) > 1 ? 's' : '') + ', ' + eurosBilan(d.total_revenu)
         ];
+        // D'où viennent les points (4 novembre 2026 au soir) : l'encart sous
+        // le verdict (resultat-<id>), la bannière du bas (bas-<id>), l'accueil,
+        // un article ou la page de vente elle-même (direct, menu...), avec les
+        // clics « seul(e) » et ce qui en sort.
+        var sources = (Array.isArray(d.sources) ? d.sources : []).filter(function (x) { return Number(x.crees) || Number(x.ctas); });
+        var tableSources = sources.length
+          ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Clics seul(e)</th><th>Créés</th><th>Finis</th><th>Payés</th><th>Revenu</th></tr></thead><tbody>' +
+            sources.map(function (x) {
+              return '<tr><td class="bil-gauche">' + esc(libelleSourceBilan(x.src)) + '</td><td>' + nombreBilan(x.ctas) + '</td><td>' + nombreBilan(x.crees) + '</td><td>' +
+                nombreBilan(x.finis) + '</td><td>' + nombreBilan(x.payes) + '</td><td>' + eurosBilan(x.revenu) + '</td></tr>';
+            }).join('') + '</tbody></table></div>'
+          : '<p class="bil-vide">Aucun point créé ni clic « seul(e) » pendant la période.</p>';
         html += '<div class="bil-colonnes">' + colonneEtapesBilan('L\'entonnoir', etapes, couleurs) +
           '<div class="bil-colonne"><h3 class="bil-colonne-titre">Où ils s\'arrêtent</h3>' +
           '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Partie</th><th>Entrés</th><th>Finis</th><th>Perte</th></tr></thead><tbody>' + lignesParties + '</tbody></table></div></div></div>' +
           '<ul class="bil-faits-etapes">' + notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>' +
+          '<p class="bil-fait-l">D\'où ils viennent</p>' + tableSources +
           '<p class="bil-fait-l">Leurs réponses au départ, et ce que dit leur rapport</p>' +
           '<div class="bil-colonnes">' + ['point_motif', 'point_priorite', 'point_duree', 'point_etat', 'point_attachement', 'point_engagement', 'point_securite']
             .map(function (ev) { return repartitionPoint(cles, ev); }).join('') + '</div>';

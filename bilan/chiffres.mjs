@@ -288,8 +288,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
   // « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 :
   // son entonnoir jour par jour, puis ses comptes par clé (réponses du
-  // départ, ce que dit le rapport, parties, erreurs) et la carte des tests
-  // célibataires page par page. Que des comptes.
+  // départ, ce que dit le rapport, parties, erreurs), la carte des tests
+  // célibataires page par page et les sources (l'encart ou la page qui a
+  // mené au point). Que des comptes.
   try {
     const point = await base.rpc('get_bilan_point', { p_jours: jours });
     const { serie: seriePoint, ...restePoint } = point || {};

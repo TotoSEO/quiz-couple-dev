@@ -62,7 +62,7 @@
       "**Vragen die steunen op onderzoek**: meer dan 30 studies over relaties",
       "**Aan het eind een rapport** dat jullie antwoorden vergelijkt en zegt waar jullie het eerst over moeten praten"
     ],
-    "solo": "Wil je partner niet meedoen? [Je kunt de relatiecheck ook alleen doen](solo).",
+    "solo": "Wil je partner niet meedoen? [Doe de check alleen](solo): 50 vragen over wat je beleeft, en een rapport alleen voor jou.",
     "prixPhrase": {
       "promo": "Nu [[pourcent]]% korting, automatisch toegepast bij het betalen",
       "normal": "Voor jullie samen, in één keer"
@@ -91,7 +91,7 @@
       "**4 gesprekken om te voeren**, met vragen om op gang te komen",
       "**Hoe ieder van jullie** de relatie op dit moment beleeft"
     ],
-    "solo": "[De relatiecheck kan ook alleen](solo), als je partner niet wil meedoen.",
+    "solo": "Als je partner niet wil, [doe de check alleen](solo): 50 vragen over wat je beleeft, en een rapport alleen voor jou.",
     "prixPhrase": {
       "promo": "Dat is [[prixChacun]] per persoon: minder dan een bioscoopkaartje",
       "normal": "Dat is [[prixChacun]] per persoon: minder dan een bioscoopkaartje"
@@ -109,7 +109,7 @@
       "promo": "De vragen zijn gratis, en het rapport kost nu [[prix]] voor jullie samen, in plaats van [[prixBase]].",
       "normal": "De vragen zijn gratis, en het rapport kost [[prix]] voor jullie samen."
     },
-    "solo": "De relatiecheck kan ook alleen, als je partner niet wil meedoen.",
+    "solo": "Als je partner niet wil, kun je de check ook alleen doen: 50 vragen over wat je beleeft, en een rapport alleen voor jou.",
     "e1": {
       "texte": "Jullie beantwoorden allebei 100 vragen, ieder op de eigen telefoon, zonder de antwoorden van de ander te zien. Het gaat over geld, kinderen, ruzies, intimiteit... Aan het eind vergelijkt een rapport jullie antwoorden en zegt het waar jullie het eerst over moeten praten.",
       "lien": "Hier wordt alles uitgelegd: [bekijk de relatiecheck](evaluation).",
