@@ -62,7 +62,7 @@
       "**Des questions qui s'appuient sur la recherche** : plus de 30 études sur le couple",
       "**À la fin, un rapport** compare vos réponses et vous dit de quoi parler en premier"
     ],
-    "solo": "Ton ou ta partenaire ne veut pas participer ? [Tu peux aussi faire l'évaluation seul(e)](solo).",
+    "solo": "Ton ou ta partenaire ne veut pas participer ? [Fais le point seul(e) sur ta relation](solo) : 50 questions sur ce que tu vis, et un rapport rien que pour toi.",
     "prixPhrase": {
       "promo": "−[[pourcent]] % en ce moment, déjà appliqué au paiement",
       "normal": "Pour vous deux, en une seule fois"
@@ -91,7 +91,7 @@
       "**4 conversations à avoir**, avec des questions pour vous lancer",
       "**Comment chacun de vous deux** vit votre couple en ce moment"
     ],
-    "solo": "[L'évaluation se fait aussi seul(e)](solo), si ton ou ta partenaire ne veut pas.",
+    "solo": "Si ton ou ta partenaire ne veut pas, [tu peux faire le point seul(e)](solo) : 50 questions sur ce que tu vis, et un rapport rien que pour toi.",
     "prixPhrase": {
       "promo": "Soit [[prixChacun]] chacun : moins qu'une place de ciné",
       "normal": "Soit [[prixChacun]] chacun : moins qu'une place de ciné"
@@ -109,7 +109,7 @@
       "promo": "Les questions sont gratuites, et le rapport coûte [[prix]] pour vous deux en ce moment, au lieu de [[prixBase]].",
       "normal": "Les questions sont gratuites, et le rapport coûte [[prix]] pour vous deux."
     },
-    "solo": "L'évaluation se fait aussi seul(e), si ton ou ta partenaire ne veut pas.",
+    "solo": "Si ton ou ta partenaire ne veut pas, tu peux aussi faire le point seul(e) sur ta relation : 50 questions sur ce que tu vis, et un rapport rien que pour toi.",
     "e1": {
       "texte": "Vous répondez chacun à 100 questions sur votre téléphone, sans voir les réponses de l'autre. Ça parle d'argent, d'enfants, de disputes, d'intimité... À la fin, un rapport compare vos réponses et vous dit de quoi parler en premier.",
       "lien": "Tout est expliqué ici : [voir l'évaluation de couple](evaluation).",

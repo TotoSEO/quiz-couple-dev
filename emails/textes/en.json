@@ -62,7 +62,7 @@
       "**Questions grounded in research**: more than 30 published studies on couples",
       "**At the end, a report** compares your answers and tells you what to talk about first"
     ],
-    "solo": "Your partner doesn't want to take part? [You can also take the assessment on your own](solo).",
+    "solo": "Your partner doesn't want to take part? [Do a check-up on your own](solo): 50 questions about what you're living, and a report just for you.",
     "prixPhrase": {
       "promo": "[[pourcent]]% off right now, already applied at checkout",
       "normal": "For both of you, in a single payment"
@@ -91,7 +91,7 @@
       "**4 conversations to have**, with questions to get you started",
       "**How each of you** feels about the relationship right now"
     ],
-    "solo": "[The assessment also works on your own](solo), if your partner doesn't want to take part.",
+    "solo": "If your partner doesn't want to, [do a check-up on your own](solo): 50 questions about what you're living, and a report just for you.",
     "prixPhrase": {
       "promo": "That's [[prixChacun]] each: less than a cinema ticket",
       "normal": "That's [[prixChacun]] each: less than a cinema ticket"
@@ -109,7 +109,7 @@
       "promo": "The questions are free, and the report costs [[prix]] for both of you right now, instead of [[prixBase]].",
       "normal": "The questions are free, and the report costs [[prix]] for both of you."
     },
-    "solo": "You can also take the assessment on your own, if your partner doesn't want to.",
+    "solo": "If your partner doesn't want to, you can do a check-up on your own: 50 questions about what you're living, and a report just for you.",
     "e1": {
       "texte": "You each answer 100 questions on your own phone, without seeing the other's answers. Money, kids, arguments, intimacy... At the end, a report compares your answers and tells you what to talk about first.",
       "lien": "It's all explained here: [see the relationship assessment](evaluation).",

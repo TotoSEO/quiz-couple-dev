@@ -152,3 +152,22 @@ test('le lien personnel : un, plusieurs ou aucun, cinq langues', () => {
   assert.ok(messageLien({ lang: 'fr', liens: un, rotation: false }).html.includes('Bonjour Léa\u00a0!'));
   assert.ok(messageLien({ lang: 'fr', liens: [], rotation: true }).html.includes('Bonjour\u00a0!'));
 });
+
+// Le point sur ma relation (4 novembre 2026) : le lien perdu d'un point dit
+// son nom (sujet, bouton, pied), jamais « l'évaluation de couple » ; les
+// rappels du point ont leur pied.
+test('le lien perdu et les rappels d\'un point disent son nom, dans les six langues', () => {
+  const NOMS = { fr: 'point sur votre relation', en: 'relationship check-up', es: 'Mi relación, en claro', de: 'Wo steht meine Beziehung?', it: 'punto sulla tua relazione', nl: 'Waar staat mijn relatie?' };
+  const DUO = { fr: 'évaluation de couple', en: 'relationship assessment', es: 'evaluación de pareja', de: 'Beziehungsanalyse', it: 'valutazione di coppia', nl: 'relatiecheck' };
+  for (const lang of Object.keys(NOMS)) {
+    const m = messageLien({ lang, liens: [{ a: 'Léa', b: 'Tom', mode: 'solo', formule: 'point', url: 'https://quiz-couple.com/x/#b=1&t=2' }] });
+    const brut = (s) => s.replace(/[  ]/g, ' ');
+    assert.ok(brut(m.sujet).includes(NOMS[lang]), lang + ' : sujet « ' + m.sujet + ' »');
+    assert.ok(!brut(m.sujet).toLowerCase().includes(DUO[lang].toLowerCase()), lang + ' : le sujet ne parle pas de l\'évaluation à deux');
+    assert.ok(brut(m.texte).includes(NOMS[lang]), lang + ' : le texte nomme le point');
+    assert.ok(!brut(m.texte).toLowerCase().includes(DUO[lang].toLowerCase()), lang + ' : le texte ne parle pas de l\'évaluation à deux');
+    const r = messageRelance({ lang, mode: 'solo', formule: 'point', moi: 'Léa', autre: 'Tom', url: 'https://quiz-couple.com/x/', arret: 'https://quiz-couple.com/x/&arret=1', prix: 490, prixBase: 490, promo: null });
+    assert.ok(brut(r.texte).includes(NOMS[lang]), lang + ' : le rappel nomme le point');
+    assert.ok(!brut(r.texte).toLowerCase().includes(DUO[lang].toLowerCase()), lang + ' : le rappel ne parle pas de l\'évaluation à deux');
+  }
+});
