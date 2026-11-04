@@ -106,6 +106,57 @@
 (function () {
   'use strict';
 
+  // ── Le garde-fou contre les annonces qui emmenent la page ailleurs ─────
+  // Le 4 novembre 2026, une annonce servie par la regie executait du code
+  // dans la page meme (tva.js, charge depuis un sous-domaine azurefd.net) :
+  // neuf secondes apres le chargement, sans aucun geste de la personne, elle
+  // ajoutait une entree a l'historique (le bouton retour ramene alors sur la
+  // meme page) et envoyait la page vers une fausse alerte antivirus
+  // (webleap.lifestyle, puis recoverwave.live). Mesure dans Chromium, sur
+  // telephone, sur la page du test de couple en anglais : trois visites sur
+  // quatre, puis deux sur cinq. La personne quitte le site, et avec elle
+  // tous les emplacements qui restaient a demander et a rafraichir.
+  //
+  // L'API Navigation laisse annuler une navigation lancee par un script.
+  // Toute navigation de la page vers un autre site qui ne vient pas d'un
+  // clic sur un lien est donc annulee, sauf juste apres un appui dans une
+  // annonce (la page perd alors le focus au profit de l'iframe de
+  // l'annonce), pour ne pas perdre les clics sur les publicites. Les
+  // navigateurs sans cette API (Safari avant la version 26, les anciens
+  // Firefox) ne sont pas proteges, et rien ne change pour eux. Le site
+  // lui-meme n'envoie jamais une page a publicite vers un autre site par
+  // script : la seule redirection de ce genre, vers Stripe, est sur la page
+  // de l'evaluation, qui n'a pas de publicite et ne charge pas ce fichier.
+  // Chaque redirection annulee part a Google Analytics, evenement
+  // redirection_bloquee avec le seul nom de domaine vise.
+  var DELAI_CLIC_ANNONCE = 3000;
+  function gardeRedirections() {
+    var nav = window.navigation;
+    if (!nav || typeof nav.addEventListener !== 'function') return;
+    var clicAnnonce = 0;
+    window.addEventListener('blur', function () {
+      setTimeout(function () {
+        var actif = document.activeElement;
+        if (actif && actif.tagName === 'IFRAME') clicAnnonce = Date.now();
+      }, 0);
+    });
+    nav.addEventListener('navigate', function (e) {
+      if (e.userInitiated || !e.cancelable) return;
+      if (e.navigationType !== 'push' && e.navigationType !== 'replace') return;
+      var dest;
+      try { dest = new URL(e.destination.url); } catch (x) { return; }
+      if (dest.origin === location.origin) return;
+      if (Date.now() - clicAnnonce < DELAI_CLIC_ANNONCE) return;
+      e.preventDefault();
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'redirection_bloquee', { destination: dest.hostname });
+        }
+      } catch (x) {}
+    });
+  }
+  try { gardeRedirections(); } catch (e) {}
+
   // Les formats qui se placent tout seuls, hors du flux (le footer, colle en
   // bas de la fenetre) : la position de leur div dans le document ne dit rien
   // de leur visibilite, on les demande au premier defilement, sans attendre
