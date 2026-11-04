@@ -864,3 +864,344 @@ export function remplir(texte, valeurs) {
   return texte.replace(/\{([a-zA-Z]+)\}/g, (tout, cle) =>
     valeurs && Object.prototype.hasOwnProperty.call(valeurs, cle) ? String(valeurs[cle]) : tout);
 }
+
+// ── « Le point sur ma relation » : le seul(e) depuis le 4 novembre 2026 ───
+//
+// L'évaluation faite seul(e) ne compare plus rien. Sur trente jours, 236
+// évaluations seul(e) créées, 21 au bout et aucune page de paiement ouverte :
+// la personne connaissait déjà ce que le rapport lui rendait. Elle répond
+// désormais à 50 questions sur ce qu'elle vit dans sa relation, en neuf
+// parties, et le rapport lui dit où elle en est (docs/bilan/CONCEPTION.md,
+// section du 4 novembre 2026 ; la recherche derrière chaque partie :
+// docs/bilan/RECHERCHE.md). Une évaluation de cette formule porte
+// `formule: 'point'` (en mode solo) ; un seul(e) d'avant n'a pas de formule
+// et garde l'ancien parcours jusqu'à son effacement. Les textes sont dans
+// {lang}/bilan-point.json.
+//
+// Les réponses d'une question vont de la plus favorable (0) à la moins
+// favorable (n - 1), sauf pour ces types :
+//   - `info` : les trois questions du départ, qui ne mesurent rien ;
+//   - `qui` : cinq réponses, de « c'est surtout moi » (0) à « c'est surtout
+//     {autre} » (4) ;
+//   - `accord` : de « pas du tout » (0) à « tout à fait » (3), pour les
+//     phrases de l'attachement, où aucune réponse n'est la bonne ;
+//   - `plusieurs` : un choix multiple, gardé en un entier dont chaque bit est
+//     une réponse cochée, au plus `max`.
+// `refus: true` ajoute « Je préfère ne pas répondre », de valeur n.
+
+export const FORMULES = ['point'];
+export function formuleValide(f) { return FORMULES.includes(f) ? f : null; }
+
+// Le prix du point, en centimes : 4,90 €, sans réduction ni prix barré (ce
+// prix n'a jamais été pratiqué ; un prix barré doit être le plus bas des
+// trente jours d'avant, L112-1-1 du Code de la consommation), et le prix
+// d'une région (zoneDuFuseau) en Amérique latine.
+export const PRIX_POINT_CENTIMES = 490;
+export const PRIX_POINT_REGIONS = { latam: 199 };
+export function prixPoint(zone) {
+  return Object.prototype.hasOwnProperty.call(PRIX_POINT_REGIONS, zone) ? PRIX_POINT_REGIONS[zone] : PRIX_POINT_CENTIMES;
+}
+
+// Les réponses du départ, dans l'ordre des réponses de pd1, pd2 et pd3.
+export const POINT_MOTIFS = ['refuse', 'nose', 'clair', 'partir', 'parler', 'curieux'];
+export const POINT_PRIORITES = ['etat', 'probleme', 'decision', 'parler'];
+export const POINT_DUREES = ['moins1', 'un3', 'trois10', 'plus10'];
+// Les dix besoins de pb0 (un bit chacun, dans cet ordre), et la question
+// qui dit s'il est comblé.
+export const POINT_BESOINS = [
+  { id: 'ecoute', q: 'pc2' }, { id: 'soutien', q: 'pc3' }, { id: 'reconnaissance', q: 'pc4' },
+  { id: 'tendresse', q: 'pb1' }, { id: 'desir', q: 'pb2' }, { id: 'temps', q: 'pb3' },
+  { id: 'liberte', q: 'pb4' }, { id: 'projets', q: 'pb5' }, { id: 'confiance', q: 'pb6' }, { id: 'rire', q: 'pb7' },
+];
+// Ce qui retient (pv6), et la famille de chaque réponse.
+export const POINT_RETIENT = ['amour', 'moments', 'construit', 'enfants', 'espoir', 'seul', 'argent', 'regard', 'habitude'];
+const RETIENT_FAMILLE = {
+  amour: 'elan', moments: 'elan', construit: 'liens', enfants: 'liens', espoir: 'espoir',
+  seul: 'contrainte', argent: 'contrainte', regard: 'contrainte', habitude: 'contrainte',
+};
+// Le sujet par lequel la personne veut commencer (pp3).
+export const POINT_SUJETS_CHOIX = ['temps', 'tendresse', 'ecoute', 'disputes', 'partage', 'confiance', 'avenir', 'liberte', 'rien'];
+export const POINT_ETATS = ['epanouie', 'solide', 'fragile', 'securite'];
+export const POINT_STYLES = ['secure', 'anxieux', 'evitant', 'craintif'];
+export const POINT_PROFILS = ['epanoui', 'attache', 'hesitant', 'eloigne'];
+// La situation d'un célibataire, demandée par la carte « bientôt » des tests
+// célibataires (bilan_celib.situation).
+export const SITUATIONS_CELIB = ['jamais', 'rupture', 'repete', 'autre'];
+
+const q4 = (id, o) => Object.assign({ id, n: 4 }, o || {});
+export const POINT_PARTIES = [
+  { id: 'depart', questions: [
+    { id: 'pd1', type: 'info', n: 6 },
+    { id: 'pd2', type: 'info', n: 4 },
+    { id: 'pd3', type: 'info', n: 4 },
+  ] },
+  { id: 'climat', questions: ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7'].map((id) => q4(id)) },
+  { id: 'besoins', questions: [
+    { id: 'pb0', type: 'plusieurs', n: 10, max: 4 },
+    ...['pb1', 'pb2', 'pb3', 'pb4', 'pb5', 'pb6', 'pb7'].map((id) => q4(id)),
+  ] },
+  { id: 'disputes', questions: ['px1', 'px2', 'px3', 'px4', 'px5', 'px6', 'px7'].map((id) => q4(id)) },
+  { id: 'securite', questions: [q4('ps1'), q4('ps2'), q4('ps3'), q4('ps4'), q4('ps5', { refus: true }), q4('ps6', { refus: true })] },
+  { id: 'equilibre', questions: [
+    { id: 'pe1', type: 'qui', n: 5 }, { id: 'pe2', type: 'qui', n: 5 }, { id: 'pe3', type: 'qui', n: 5 }, q4('pe4'),
+  ] },
+  { id: 'attachement', questions: ['pa1', 'pa2', 'pa3', 'pa4', 'pa5', 'pa6'].map((id) => q4(id, { type: 'accord' })) },
+  { id: 'avenir', questions: [
+    ...['pv1', 'pv2', 'pv3', 'pv4', 'pv5'].map((id) => q4(id)),
+    { id: 'pv6', type: 'plusieurs', n: 9, max: 3 },
+  ] },
+  { id: 'parler', questions: [q4('pp1'), q4('pp2'), { id: 'pp3', type: 'info', n: 9 }] },
+];
+export const POINT_INDEX = {};
+for (const p of POINT_PARTIES) for (const q of p.questions) POINT_INDEX[q.id] = { q, partie: p.id };
+export const POINT_TOTAL = Object.keys(POINT_INDEX).length;
+export const POINT_ORDRE = POINT_PARTIES.flatMap((p) => p.questions.map((q) => q.id));
+
+function nbBits(v) { let n = 0; while (v) { n += v & 1; v >>>= 1; } return n; }
+// Les réponses cochées d'un choix multiple, rendues avec les identifiants.
+export function bitsDe(v, ids) {
+  return Number.isInteger(v) && v > 0 ? ids.filter((_, i) => (v >> i) & 1) : [];
+}
+
+// Une réponse est-elle une valeur possible de sa question ?
+export function valeurPointValide(id, v) {
+  const e = POINT_INDEX[id];
+  if (!e || !Number.isInteger(v)) return false;
+  const q = e.q;
+  if (q.type === 'plusieurs') return v >= 1 && v < (1 << q.n) && nbBits(v) <= q.max;
+  return v >= 0 && v <= (q.refus ? q.n : q.n - 1);
+}
+
+// Les réponses reçues, vérifiées une à une : null si une seule est fausse.
+export function valideReponsesPoint(reponses) {
+  if (!reponses || typeof reponses !== 'object' || Array.isArray(reponses)) return null;
+  const propre = {};
+  for (const [id, v] of Object.entries(reponses)) {
+    if (!valeurPointValide(id, v)) return null;
+    propre[id] = v;
+  }
+  return propre;
+}
+
+export function progressionPoint(reponses) {
+  const r = reponses || {};
+  const repondues = POINT_ORDRE.filter((id) => valeurPointValide(id, r[id])).length;
+  return { repondues, total: POINT_TOTAL };
+}
+export function completPoint(reponses) {
+  const r = reponses || {};
+  return POINT_ORDRE.every((id) => valeurPointValide(id, r[id]));
+}
+// Les parties où la personne a répondu à au moins une question, et celles
+// qu'elle a finies (compteurs de l'admin, comme `etapes` à deux).
+export function partiesPoint(reponses) {
+  const r = reponses || {};
+  const entrees = [];
+  const finies = [];
+  for (const p of POINT_PARTIES) {
+    const faites = p.questions.filter((q) => valeurPointValide(q.id, r[q.id])).length;
+    if (faites) entrees.push(p.id);
+    if (faites === p.questions.length) finies.push(p.id);
+  }
+  return { entrees, finies };
+}
+
+// Les sujets du plan : la question qui dit s'il y a quelque chose à en dire,
+// sa famille (deux sujets d'une même famille ne vont jamais ensemble dans le
+// plan) et son poids. `besoin` : le besoin de pb0 qui y correspond.
+export const POINT_SUJETS = [
+  { id: 'mepris', q: 'px3', famille: 'disputes', poids: 3 },
+  { id: 'fermeture', q: 'px5', famille: 'disputes', poids: 2 },
+  { id: 'critique', q: 'px2', famille: 'disputes', poids: 2 },
+  { id: 'reparation', q: 'px6', famille: 'disputes', poids: 2 },
+  { id: 'frequentes', q: 'px1', famille: 'disputes', poids: 1 },
+  { id: 'defense', q: 'px4', famille: 'disputes', poids: 1 },
+  { id: 'garde', q: 'px7', famille: 'disputes', poids: 1 },
+  { id: 'ecoute', q: 'pc2', famille: 'ecoute', poids: 2, besoin: 'ecoute' },
+  { id: 'soutien', q: 'pc3', famille: 'ecoute', poids: 2, besoin: 'soutien' },
+  { id: 'reconnaissance', q: 'pc4', famille: 'ecoute', poids: 1, besoin: 'reconnaissance' },
+  { id: 'nouvelles', q: 'pc6', famille: 'ecoute', poids: 1 },
+  { id: 'confiance', q: 'pb6', famille: 'confiance', poids: 2, besoin: 'confiance' },
+  { id: 'soi', q: 'pc5', famille: 'liberte', poids: 2 },
+  { id: 'liberte', q: 'pb4', famille: 'liberte', poids: 1, besoin: 'liberte' },
+  { id: 'admiration', q: 'pc7', famille: 'proximite', poids: 2 },
+  { id: 'tendresse', q: 'pb1', famille: 'proximite', poids: 1, besoin: 'tendresse' },
+  { id: 'desir', q: 'pb2', famille: 'proximite', poids: 1, besoin: 'desir' },
+  { id: 'temps', q: 'pb3', famille: 'proximite', poids: 1, besoin: 'temps' },
+  { id: 'rire', q: 'pb7', famille: 'proximite', poids: 1, besoin: 'rire' },
+  { id: 'projets', q: 'pb5', famille: 'avenir', poids: 1, besoin: 'projets' },
+  { id: 'partage', q: 'pe4', famille: 'partage', poids: 1 },
+];
+// Quand rien n'est à réparer : de quoi entretenir ce qui marche.
+export const POINT_ENTRETIEN = ['rituels', 'nouveaute', 'gratitude'];
+// Le sujet choisi en pp3, et les sujets du plan qui le traitent.
+const CHOIX_SUJETS = {
+  temps: ['temps'], tendresse: ['tendresse', 'desir'], ecoute: ['ecoute', 'soutien', 'reconnaissance', 'nouvelles'],
+  disputes: ['mepris', 'fermeture', 'critique', 'reparation', 'frequentes', 'defense', 'garde'],
+  partage: ['partage'], confiance: ['confiance'], avenir: ['projets'], liberte: ['soi', 'liberte'],
+};
+
+// Tout le calcul du rapport, à partir des 50 réponses (complètes).
+export function analyserPoint(reponses) {
+  const r = reponses || {};
+  const v = (id, defaut = 0) => (Number.isInteger(r[id]) ? r[id] : defaut);
+  const sur100 = (ids) => Math.round(ids.reduce((s, id) => s + (3 - v(id)) / 3, 0) / ids.length * 100);
+
+  const motif = POINT_MOTIFS[v('pd1')] || POINT_MOTIFS[0];
+  const priorite = POINT_PRIORITES[v('pd2')] || POINT_PRIORITES[0];
+  const duree = POINT_DUREES[v('pd3')] || POINT_DUREES[0];
+
+  // Comment vous allez : sept questions, de 0 à 100.
+  const climatIds = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7'];
+  const climat = sur100(climatIds);
+
+  // Les besoins : comblé (0), plutôt comblé (1), en manque (2), très en
+  // manque (3) ; ceux cochés en pb0 comptent double dans le plan.
+  const importants = bitsDe(v('pb0'), POINT_BESOINS.map((b) => b.id));
+  const besoins = POINT_BESOINS.map((b) => ({ id: b.id, q: b.q, niveau: v(b.q), important: importants.includes(b.id) }));
+  const besoinsScore = Math.round(besoins.reduce((s, b) => s + (3 - b.niveau) / 3, 0) / besoins.length * 100);
+  const manques = besoins.filter((b) => b.important && b.niveau >= 2).map((b) => b.id);
+
+  // Les disputes : un indice de 0 à 100 et les signaux de Gottman.
+  const disputes = sur100(['px1', 'px2', 'px3', 'px4', 'px5', 'px6', 'px7']);
+  const signaux = [];
+  const signal = (id, famille, force, q) => signaux.push({ id, famille, force, q });
+  if (v('px3') >= 2) signal('mepris', 'disputes', 'fort', 'px3');
+  if (v('px2') >= 2) signal('critique', 'disputes', v('px2') === 3 ? 'fort' : 'moyen', 'px2');
+  if (v('px5') >= 2) signal('fermeture', 'disputes', v('px5') === 3 ? 'fort' : 'moyen', 'px5');
+  if (v('px4') === 3) signal('defense', 'disputes', 'moyen', 'px4');
+  if (v('px6') >= 2) signal('reparation', 'disputes', v('px6') === 3 ? 'fort' : 'moyen', 'px6');
+  if (v('px1') >= 2) signal('frequentes', 'disputes', v('px1') === 3 ? 'fort' : 'moyen', 'px1');
+  if (v('px7') === 3) signal('garde', 'disputes', 'moyen', 'px7');
+  if (v('pc7') === 3) signal('admiration', 'climat', 'moyen', 'pc7');
+
+  // La sécurité. Vigilance : la peur, le contrôle, l'humiliation et
+  // l'isolement dès « parfois ». Alerte : les violences ou les menaces et
+  // les relations sexuelles forcées dès « une fois », la peur ou
+  // l'humiliation « souvent », ou deux signaux de vigilance ensemble (le
+  // contrôle qui s'installe). Une humiliation « rarement » est un signal à
+  // regarder, sans plus. « Je préfère ne pas répondre » (la valeur 4 de ps5
+  // et ps6) ne compte ni pour ni contre.
+  const vigilance = [];
+  if (v('ps1') >= 2) vigilance.push(['peur', 'ps1', v('ps1') === 3]);
+  if (v('ps2') >= 2) vigilance.push(['controle', 'ps2', false]);
+  if (v('ps3') >= 2) vigilance.push(['humiliation', 'ps3', v('ps3') === 3]);
+  if (v('ps4') >= 2) vigilance.push(['isolement', 'ps4', false]);
+  const violence = v('ps5') >= 1 && v('ps5') <= 3;
+  const contrainte = v('ps6') >= 1 && v('ps6') <= 3;
+  const alerte = violence || contrainte || vigilance.some((x) => x[2]) || vigilance.length >= 2;
+  for (const [id, q, grave] of vigilance) signal(id, 'securite', alerte || grave ? 'fort' : 'moyen', q);
+  if (v('ps3') === 1) signal('humiliation', 'securite', 'moyen', 'ps3');
+  if (violence) signal('violence', 'securite', 'fort', 'ps5');
+  if (contrainte) signal('contrainte', 'securite', 'fort', 'ps6');
+  const refus = ['ps5', 'ps6'].filter((id) => v(id) === 4).length;
+  const securite = { niveau: alerte ? 'alerte' : vigilance.length ? 'vigilance' : 'aucune', refus };
+
+  // Qui fait quoi : de « c'est surtout moi » (0) à « c'est surtout
+  // {autre} » (4), et la façon dont le partage est vécu.
+  const charge = (v('pe1', 2) + v('pe2', 2)) / 2;
+  const equilibre = {
+    penche: charge < 1.5 ? 'moi' : charge > 2.5 ? 'autre' : 'egal',
+    vecu: v('pe4'),
+    pese: v('pe4') >= 2,
+  };
+
+  // L'attachement : anxiété (pa1 à pa3) et évitement (pa4, pa5, et pa6 à
+  // l'envers), de 0 à 1, coupés à la moitié.
+  const anxiete = (v('pa1') + v('pa2') + v('pa3')) / 9;
+  const evitement = (v('pa4') + v('pa5') + (3 - v('pa6'))) / 9;
+  const style = anxiete < 0.5 ? (evitement < 0.5 ? 'secure' : 'evitant') : (evitement < 0.5 ? 'anxieux' : 'craintif');
+  const attachement = { anxiete: Math.round(anxiete * 100), evitement: Math.round(evitement * 100), style };
+
+  // Ce qui retient (Rusbult) : la satisfaction (le climat), ce qui a été
+  // investi, ce que serait la vie sans l'autre, et l'engagement.
+  const investissement = Math.round((3 - v('pv3')) / 3 * 100);
+  const alternatives = Math.round(v('pv4') / 3 * 100);
+  const engagementScore = Math.round(((3 - v('pv1')) + (3 - v('pv2')) + (3 - v('pv5'))) / 9 * 100);
+  const retient = bitsDe(v('pv6'), POINT_RETIENT);
+  const familles = (f) => retient.filter((x) => RETIENT_FAMILLE[x] === f);
+  let profil;
+  if (engagementScore < 40 || v('pv5') === 3 || v('pv2') === 3 || (v('pv4') === 3 && v('pv1') >= 2)) profil = 'eloigne';
+  else if (climat >= 65 && engagementScore >= 70) profil = 'epanoui';
+  else if (climat < 55 && !familles('elan').length && (investissement >= 67 || familles('liens').length || familles('contrainte').length)) profil = 'attache';
+  else profil = 'hesitant';
+  const engagement = {
+    satisfaction: climat, investissement, alternatives, engagement: engagementScore, profil, retient,
+    elan: familles('elan'), liens: familles('liens'), contraintes: familles('contrainte'), espoir: familles('espoir').length > 0,
+  };
+
+  // L'état : la sécurité d'abord, puis un indice général (45 % le climat,
+  // 30 % les disputes, 25 % les besoins comblés) et les signaux lourds.
+  const general = Math.round(0.45 * climat + 0.30 * disputes + 0.25 * besoinsScore);
+  const lourds = signaux.filter((s) => s.force === 'fort');
+  const mepris = signaux.some((s) => s.id === 'mepris');
+  let etat;
+  if (securite.niveau === 'alerte') etat = 'securite';
+  else if (securite.niveau === 'vigilance' || general < 55 || v('pc1') === 3 || (mepris && climat < 60)) etat = 'fragile';
+  else if (general >= 75 && !lourds.length && manques.length <= 1 && v('pc1') <= 1) etat = 'epanouie';
+  else etat = 'solide';
+
+  // Le plan : trois sujets. Le sujet choisi en pp3 d'abord, puis les plus
+  // lourds (réponse 2 ou 3, fois le poids, plus trois si le besoin a été
+  // coché), jamais deux d'une même famille ; sans rien à réparer, de quoi
+  // entretenir ce qui marche. En cas d'alerte, pas de conversation à
+  // préparer avec l'autre : le rapport donne trois choses à faire pour soi.
+  const choix = POINT_SUJETS_CHOIX[v('pp3', 8)] || 'rien';
+  const scoreDe = (s) => {
+    const n = v(s.q);
+    if (n < 2) return 0;
+    return n * s.poids + (s.besoin && importants.includes(s.besoin) ? 3 : 0);
+  };
+  const candidats = POINT_SUJETS.map((s) => ({ ...s, valeur: v(s.q), score: scoreDe(s) }));
+  const plan = [];
+  const famillesPrises = new Set();
+  const prendre = (s, choisi) => {
+    if (!s || famillesPrises.has(s.famille) || plan.length >= 3) return;
+    famillesPrises.add(s.famille);
+    plan.push({ id: s.id, famille: s.famille, q: s.q || null, valeur: s.valeur == null ? null : s.valeur, choisi: !!choisi });
+  };
+  if (CHOIX_SUJETS[choix]) {
+    const parmi = candidats.filter((s) => CHOIX_SUJETS[choix].includes(s.id));
+    // Le plus lourd de ceux qui traitent le sujet choisi ; s'il n'y a rien à
+    // réparer, le premier de la liste.
+    const meilleur = parmi.slice().sort((a, b) => b.score - a.score || b.valeur - a.valeur)[0];
+    prendre(meilleur, true);
+  }
+  for (const s of candidats.filter((c) => c.score > 0).sort((a, b) => b.score - a.score || b.valeur - a.valeur)) prendre(s, false);
+  for (const id of POINT_ENTRETIEN) prendre({ id, famille: 'entretien-' + id }, false);
+  const planMode = securite.niveau === 'alerte' ? 'securite' : 'conversations';
+
+  // L'ordre des chapitres suit ce que la personne veut savoir en premier.
+  const ORDRES = {
+    etat: ['essentiel', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient', 'plan'],
+    probleme: ['essentiel', 'disputes', 'besoins', 'climat', 'equilibre', 'attachement', 'retient', 'plan'],
+    decision: ['essentiel', 'retient', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'plan'],
+    parler: ['essentiel', 'plan', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient'],
+  };
+  const chapitres = (securite.niveau === 'alerte' ? ['securite'] : [])
+    .concat(ORDRES[priorite], securite.niveau === 'alerte' ? [] : ['deux'], ['methode']);
+
+  return {
+    motif, priorite, duree, choix,
+    climat, besoins: { score: besoinsScore, liste: besoins, importants, manques },
+    disputes, signaux, securite, equilibre, attachement, engagement,
+    general, etat, plan: { mode: planMode, sujets: plan, reaction: v('pp1'), deja: v('pp2') },
+    chapitres,
+  };
+}
+
+// Ce que l'écran « rapport prêt » montre avant le paiement : des chiffres,
+// jamais une question, une réponse ni le nom d'un signal.
+export function apercuPoint(reponses) {
+  const a = analyserPoint(reponses);
+  return {
+    etat: a.etat,
+    climat: a.climat,
+    signaux: a.signaux.length,
+    manques: a.besoins.manques.length,
+    attachement: a.attachement.style,
+    securite: a.securite.niveau,
+    refus: a.securite.refus > 0,
+    priorite: a.priorite,
+  };
+}

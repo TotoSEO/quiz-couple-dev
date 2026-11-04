@@ -163,6 +163,9 @@ const BILAN_CONST = (() => {
   };
   return {
     prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0),
+    // « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026),
+    // sans réduction.
+    prixPoint: lis('PRIX_POINT_CENTIMES', 490),
     promo: { code: lisTexte('PROMO_CODE'), stripe: lisTexte('PROMO_STRIPE'), pourcent: lis('PROMO_POURCENT', 0), fin: lisTexte('PROMO_FIN') },
   };
 })();
@@ -206,6 +209,8 @@ function formatPrix(centimes, lang) {
 const prixBilanCentimes = () => (BILAN_PROMO ? BILAN_PROMO.prix : BILAN_CONST.prix);
 function prixBilan(lang) { return formatPrix(prixBilanCentimes(), lang); }
 function prixBilanBase(lang) { return formatPrix(BILAN_CONST.prix, lang); }
+// Le prix du point sur ma relation, jamais réduit.
+function prixBilanPoint(lang) { return formatPrix(BILAN_CONST.prixPoint, lang); }
 // La réduction affichée : pastille (« -20 % en ce moment »), prix habituel
 // barré et prix réduit, textes `promoBilan` de common.json. `html` est le
 // prix barré suivi du nouveau, avec ce qu'en lit un lecteur d'écran ;
@@ -1600,6 +1605,8 @@ async function generatePage(routeKey, lang) {
     bandeauPromo: bandeauPromoPour(routeKey, null, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
+    bilanPrixPoint: prixBilanPoint(lang),
+    bilanPrixPointCentimes: BILAN_CONST.prixPoint,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2613,6 +2620,8 @@ async function generateBlogArticle(articleMeta, lang) {
     bandeauPromo: bandeauPromoPour('article', articleMeta, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
+    bilanPrixPoint: prixBilanPoint(lang),
+    bilanPrixPointCentimes: BILAN_CONST.prixPoint,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2724,6 +2733,8 @@ async function generate404Pages() {
       bandeauPromo: bandeauPromoPour('404', null, lang),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
+      bilanPrixPoint: prixBilanPoint(lang),
+      bilanPrixPointCentimes: BILAN_CONST.prixPoint,
       bilanGarantie: BILAN_CONST.garantie,
       vendeur: VENDEUR,
       saisonDesQuiz: SAISON_DES_QUIZ,

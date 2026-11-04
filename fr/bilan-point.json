@@ -1,0 +1,1111 @@
+{
+ "nom": "Le point sur ma relation",
+ "parties": {
+  "depart": {
+   "titre": "Pour commencer",
+   "bref": "Départ",
+   "intro": "Trois questions pour que le rapport parte de votre situation."
+  },
+  "climat": {
+   "titre": "Comment vous allez",
+   "bref": "Climat",
+   "intro": "Ce que vous vivez avec {autre} en ce moment, au quotidien."
+  },
+  "besoins": {
+   "titre": "Ce dont vous avez besoin",
+   "bref": "Besoins",
+   "intro": "Ce qui compte pour vous dans un couple, et ce que vous en avez aujourd'hui."
+  },
+  "disputes": {
+   "titre": "Vos disputes",
+   "bref": "Disputes",
+   "intro": "Tous les couples se disputent. Ce qui compte, c'est la façon dont ça se passe."
+  },
+  "securite": {
+   "titre": "Vous sentir en sécurité",
+   "bref": "Sécurité",
+   "intro": "Ces questions sont posées à tout le monde. Personne d'autre que vous ne verra vos réponses."
+  },
+  "equilibre": {
+   "titre": "Qui fait quoi",
+   "bref": "Partage",
+   "intro": "Le partage du quotidien, et la façon dont vous le vivez."
+  },
+  "attachement": {
+   "titre": "Votre façon d'aimer",
+   "bref": "Attachement",
+   "intro": "Six phrases. Dites à quel point chacune vous ressemble, avec {autre}."
+  },
+  "avenir": {
+   "titre": "Ce qui vous retient",
+   "bref": "Avenir",
+   "intro": "Ce que vous voyez pour la suite, et ce qui vous attache à cette relation."
+  },
+  "parler": {
+   "titre": "Pour en parler",
+   "bref": "En parler",
+   "intro": "Trois dernières questions, pour que le rapport vous aide à en parler avec {autre}."
+  }
+ },
+ "qui": [
+  "C'est surtout moi",
+  "Plutôt moi",
+  "Autant l'un que l'autre",
+  "Plutôt {autre}",
+  "C'est surtout {autre}"
+ ],
+ "refus": "Je préfère ne pas répondre",
+ "plusieurs": "Jusqu'à {{max}} réponses",
+ "questions": {
+  "pd1": {
+   "q": "Qu'est-ce qui vous amène à faire ce point {seul|seule} ?",
+   "court": "Pourquoi seul(e)",
+   "o": [
+    "{autre} ne veut pas, ou ce n'est pas son truc",
+    "Je n'ose pas lui proposer",
+    "J'ai besoin d'y voir clair pour moi d'abord",
+    "Je me demande si je dois rester",
+    "Je veux préparer une conversation importante",
+    "Par curiosité"
+   ]
+  },
+  "pd2": {
+   "q": "Ce que vous voulez savoir en premier :",
+   "court": "Ce que vous voulez savoir",
+   "o": [
+    "Où j'en suis dans ma relation",
+    "Ce qui ne va pas, et pourquoi",
+    "Si je dois rester ou partir",
+    "Comment en parler avec {autre}"
+   ]
+  },
+  "pd3": {
+   "q": "Vous êtes avec {autre} depuis...",
+   "court": "Depuis combien de temps",
+   "o": [
+    "Moins d'un an",
+    "Un à trois ans",
+    "Trois à dix ans",
+    "Plus de dix ans"
+   ]
+  },
+  "pc1": {
+   "q": "En ce moment, dans votre couple, vous êtes...",
+   "court": "Être {heureux|heureuse}",
+   "o": [
+    "{Heureux|Heureuse}",
+    "Plutôt {heureux|heureuse}",
+    "Pas vraiment {heureux|heureuse}",
+    "{Malheureux|Malheureuse}"
+   ]
+  },
+  "pc2": {
+   "q": "Vous vous sentez {écouté|écoutée} par {autre} :",
+   "court": "Être {écouté|écoutée}",
+   "o": [
+    "Toujours",
+    "Souvent",
+    "Rarement",
+    "Jamais"
+   ]
+  },
+  "pc3": {
+   "q": "Quand vous traversez un moment difficile, vous vous sentez {soutenu|soutenue} par {autre} :",
+   "court": "Être {soutenu|soutenue} dans les moments durs",
+   "o": [
+    "Toujours",
+    "Souvent",
+    "Rarement",
+    "Jamais"
+   ]
+  },
+  "pc4": {
+   "q": "Vous vous sentez {apprécié|appréciée} par {autre}, pour ce que vous faites et pour ce que vous êtes :",
+   "court": "Se sentir {apprécié|appréciée}",
+   "o": [
+    "Toujours",
+    "Souvent",
+    "Rarement",
+    "Jamais"
+   ]
+  },
+  "pc5": {
+   "q": "Avec {autre}, vous vous sentez libre d'être vous-même :",
+   "court": "Être soi-même",
+   "o": [
+    "Tout à fait",
+    "Plutôt",
+    "Pas toujours",
+    "Pas du tout"
+   ]
+  },
+  "pc6": {
+   "q": "Quand vous annoncez une bonne nouvelle à {autre}, sa réaction est le plus souvent...",
+   "court": "Partager les bonnes nouvelles",
+   "o": [
+    "Enthousiaste : on en parle, ça lui fait plaisir",
+    "Positive, sans plus",
+    "Distraite, à moitié attentive",
+    "Indifférente ou critique"
+   ]
+  },
+  "pc7": {
+   "q": "Vous avez de l'admiration pour {autre} :",
+   "court": "L'admiration",
+   "o": [
+    "Beaucoup",
+    "Assez",
+    "Un peu",
+    "Pas vraiment"
+   ]
+  },
+  "pb0": {
+   "q": "Dans un couple, qu'est-ce qui compte le plus pour vous ?",
+   "court": "Ce qui compte le plus",
+   "o": [
+    "Être {écouté|écoutée}",
+    "Être {soutenu|soutenue} quand ça ne va pas",
+    "Me sentir {apprécié|appréciée}",
+    "La tendresse",
+    "Me sentir {désiré|désirée}",
+    "Du temps à deux",
+    "Garder ma liberté",
+    "Avoir des projets ensemble",
+    "Pouvoir avoir confiance",
+    "Rire ensemble"
+   ]
+  },
+  "pb1": {
+   "q": "La tendresse au quotidien (câlins, gestes, bisous sans arrière-pensée), vous en avez...",
+   "court": "La tendresse",
+   "o": [
+    "Autant que j'en ai envie",
+    "Un peu moins que j'en voudrais",
+    "Beaucoup moins que j'en voudrais",
+    "Presque plus"
+   ]
+  },
+  "pb2": {
+   "q": "Vous vous sentez {désiré|désirée} par {autre} :",
+   "court": "Se sentir {désiré|désirée}",
+   "o": [
+    "Tout à fait",
+    "Plutôt",
+    "Pas assez",
+    "Pas du tout"
+   ]
+  },
+  "pb3": {
+   "q": "Du temps rien qu'à deux (sans enfants, sans amis, sans écran), vous en avez...",
+   "court": "Le temps à deux",
+   "o": [
+    "Autant que j'en ai envie",
+    "Un peu moins que j'en voudrais",
+    "Beaucoup moins que j'en voudrais",
+    "Presque jamais"
+   ]
+  },
+  "pb4": {
+   "q": "Du temps pour vous, pour vos amis et vos activités, vous en avez...",
+   "court": "Votre liberté",
+   "o": [
+    "Autant que j'en ai besoin",
+    "Un peu moins que j'en voudrais",
+    "Beaucoup moins que j'en voudrais",
+    "Presque plus"
+   ]
+  },
+  "pb5": {
+   "q": "Vos projets à deux (ce que vous voulez construire ensemble) :",
+   "court": "Les projets à deux",
+   "o": [
+    "On en a, et on avance",
+    "On en parle, sans vraiment avancer",
+    "On n'en a pas vraiment",
+    "On ne veut pas les mêmes choses"
+   ]
+  },
+  "pb6": {
+   "q": "La confiance que vous avez en {autre}, aujourd'hui :",
+   "court": "La confiance",
+   "o": [
+    "Totale",
+    "Plutôt bonne",
+    "Fragile",
+    "Abîmée"
+   ]
+  },
+  "pb7": {
+   "q": "Vous riez ensemble :",
+   "court": "Rire ensemble",
+   "o": [
+    "Souvent",
+    "De temps en temps",
+    "Rarement",
+    "Presque plus"
+   ]
+  },
+  "px1": {
+   "q": "Vos disputes, en ce moment, c'est...",
+   "court": "Les disputes en ce moment",
+   "o": [
+    "Rare",
+    "De temps en temps",
+    "Souvent",
+    "Presque tous les jours"
+   ]
+  },
+  "px2": {
+   "q": "Pendant vos disputes, il arrive que les reproches visent la personne plutôt que le problème (« tu es toujours... », « tu ne fais jamais... ») :",
+   "court": "Les reproches qui visent la personne",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "px3": {
+   "q": "Pendant une dispute, il arrive que l'un de vous se moque de l'autre, soit ironique ou lève les yeux au ciel :",
+   "court": "La moquerie et le mépris",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "px4": {
+   "q": "Quand l'un de vous fait un reproche, l'autre se justifie ou renvoie aussitôt un autre reproche :",
+   "court": "Se défendre plutôt qu'écouter",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "px5": {
+   "q": "Pendant une dispute, il arrive que l'un de vous se ferme complètement : il ne répond plus, quitte la pièce sans un mot ou fait comme si l'autre n'était pas là :",
+   "court": "Se fermer pendant une dispute",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "px6": {
+   "q": "Après une dispute, vous arrivez à vous réconcilier (un geste, une blague, un « pardon », un câlin) :",
+   "court": "Se réconcilier",
+   "o": [
+    "Toujours",
+    "Souvent",
+    "Parfois",
+    "Rarement"
+   ]
+  },
+  "px7": {
+   "q": "Quand quelque chose vous dérange chez {autre}, vous le dites...",
+   "court": "Dire ce qui dérange",
+   "o": [
+    "Assez vite, au bon moment",
+    "Tout de suite, sur le coup",
+    "Après avoir beaucoup attendu",
+    "Rarement, je garde ça pour moi"
+   ]
+  },
+  "ps1": {
+   "q": "Il vous arrive d'avoir peur de la réaction de {autre}, de sa colère ou de ce qui pourrait arriver :",
+   "court": "Avoir peur de sa réaction",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "ps2": {
+   "q": "{autre} contrôle ce que vous faites (votre téléphone, votre argent, vos sorties, les gens que vous voyez) :",
+   "court": "Le contrôle",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "ps3": {
+   "q": "{autre} vous rabaisse, vous humilie ou vous insulte, en privé ou devant d'autres :",
+   "court": "Être {rabaissé|rabaissée} ou {insulté|insultée}",
+   "o": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent"
+   ]
+  },
+  "ps4": {
+   "q": "Vous voyez moins vos amis ou votre famille à cause de {autre} (des reproches, des disputes, des interdits) :",
+   "court": "Voir moins ses proches",
+   "o": [
+    "Non, pas du tout",
+    "Un peu",
+    "Oui, nettement",
+    "Je ne vois presque plus personne"
+   ]
+  },
+  "ps5": {
+   "q": "{autre} vous a déjà {bousculé|bousculée}, {frappé|frappée} ou {menacé|menacée}, ou a cassé des objets pendant une dispute :",
+   "court": "Les violences et les menaces",
+   "o": [
+    "Jamais",
+    "Une fois",
+    "Plusieurs fois",
+    "Souvent"
+   ]
+  },
+  "ps6": {
+   "q": "Il vous est arrivé d'avoir des relations sexuelles ou des gestes intimes avec {autre} sans en avoir envie, parce que vous vous sentiez {obligé|obligée} :",
+   "court": "Les relations forcées",
+   "o": [
+    "Jamais",
+    "Une fois",
+    "Plusieurs fois",
+    "Souvent"
+   ]
+  },
+  "pe1": {
+   "q": "Qui s'occupe le plus du concret de votre vie à deux (tâches de la maison, courses, organisation) ?",
+   "court": "Le concret du quotidien"
+  },
+  "pe2": {
+   "q": "Qui pense le plus à tout ce qui doit être fait (rendez-vous, factures, cadeaux, ce qui manque) ?",
+   "court": "Penser à tout"
+  },
+  "pe3": {
+   "q": "Après une dispute, qui fait le plus souvent le premier pas ?",
+   "court": "Le premier pas après une dispute"
+  },
+  "pe4": {
+   "q": "Ce partage, vous le vivez...",
+   "court": "Le partage, vécu par vous",
+   "o": [
+    "Bien, ça me va",
+    "À peu près bien",
+    "Ça me pèse",
+    "Ça me pèse beaucoup"
+   ]
+  },
+  "pa1": {
+   "q": "J'ai souvent peur que mes sentiments soient plus forts que ceux de {autre}.",
+   "court": "Peur d'aimer plus que l'autre",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pa2": {
+   "q": "Quand {autre} ne répond pas à un message, je m'inquiète vite.",
+   "court": "S'inquiéter d'un silence",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pa3": {
+   "q": "J'ai besoin que {autre} me rassure souvent sur ses sentiments.",
+   "court": "Avoir besoin d'être {rassuré|rassurée}",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pa4": {
+   "q": "Je préfère ne pas montrer à {autre} ce que je ressens au fond de moi.",
+   "court": "Garder ses sentiments pour soi",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pa5": {
+   "q": "Quand ça ne va pas, je préfère me débrouiller {seul|seule} plutôt que de me tourner vers {autre}.",
+   "court": "Se débrouiller {seul|seule}",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pa6": {
+   "q": "Je trouve facile de compter sur {autre}.",
+   "court": "Compter sur l'autre",
+   "o": [
+    "Pas du tout",
+    "Un peu",
+    "Assez",
+    "Tout à fait"
+   ]
+  },
+  "pv1": {
+   "q": "Dans dix ans, vous vous voyez avec {autre} :",
+   "court": "Se voir ensemble dans dix ans",
+   "o": [
+    "Oui, sans aucun doute",
+    "Oui, je pense",
+    "Je ne sais pas",
+    "Je ne crois pas"
+   ]
+  },
+  "pv2": {
+   "q": "Ces derniers mois, l'idée de partir vous est venue :",
+   "court": "L'idée de partir",
+   "o": [
+    "Jamais",
+    "Une ou deux fois",
+    "Souvent",
+    "Presque tous les jours"
+   ]
+  },
+  "pv3": {
+   "q": "Vous avez beaucoup mis dans cette relation (du temps, des projets, une vie organisée ensemble), et vous le perdriez si elle s'arrêtait :",
+   "court": "Ce que vous avez mis dans la relation",
+   "o": [
+    "Tout à fait",
+    "Plutôt",
+    "Un peu",
+    "Pas vraiment"
+   ]
+  },
+  "pv4": {
+   "q": "Sans {autre}, vous pensez que vous seriez...",
+   "court": "La vie sans l'autre",
+   "o": [
+    "Bien moins {heureux|heureuse}",
+    "Un peu moins {heureux|heureuse}",
+    "Aussi {heureux|heureuse}",
+    "Plus {heureux|heureuse}"
+   ]
+  },
+  "pv5": {
+   "q": "Vous voulez que votre relation dure :",
+   "court": "Vouloir que ça dure",
+   "o": [
+    "Oui, de tout cœur",
+    "Oui",
+    "Je ne sais plus",
+    "Non"
+   ]
+  },
+  "pv6": {
+   "q": "Aujourd'hui, qu'est-ce qui vous retient le plus dans cette relation ?",
+   "court": "Ce qui vous retient",
+   "o": [
+    "L'amour que j'ai pour {autre}",
+    "Les bons moments qu'on vit encore",
+    "Ce qu'on a construit ensemble (un logement, des projets)",
+    "Les enfants",
+    "L'espoir que ça redevienne comme avant",
+    "La peur d'être {seul|seule}",
+    "L'argent ou le logement",
+    "Le regard des autres, la famille",
+    "L'habitude"
+   ]
+  },
+  "pp1": {
+   "q": "Quand vous abordez un sujet sensible avec {autre}, en général...",
+   "court": "Quand vous abordez un sujet sensible",
+   "o": [
+    "On en parle, et ça avance",
+    "On en parle, mais rien ne change",
+    "{autre} se ferme ou change de sujet",
+    "{autre} se met en colère"
+   ]
+  },
+  "pp2": {
+   "q": "Ce qui vous pèse, vous en avez déjà parlé à {autre} :",
+   "court": "En avoir déjà parlé",
+   "o": [
+    "Oui, et ça a aidé",
+    "Oui, plusieurs fois, sans résultat",
+    "J'ai essayé, sans y arriver",
+    "Jamais"
+   ]
+  },
+  "pp3": {
+   "q": "Le sujet dont vous aimeriez parler en premier avec {autre} :",
+   "court": "Le sujet à aborder en premier",
+   "o": [
+    "Le temps qu'on passe ensemble",
+    "La tendresse et le désir",
+    "La façon dont on s'écoute",
+    "La façon dont on se dispute",
+    "Le partage des tâches et de la charge mentale",
+    "La confiance",
+    "Nos projets et notre avenir",
+    "La place de chacun (amis, famille, temps pour soi)",
+    "Je ne sais pas encore"
+   ]
+  }
+ },
+ "rapport": {
+  "surtitre": "Le point sur ma relation",
+  "couverture": {
+   "avec": "avec {{autre}}",
+   "sous": "Votre rapport personnel. Personne d'autre que vous ne le voit.",
+   "etat": "Votre relation aujourd'hui"
+  },
+  "chapitres": {
+   "securite": "Votre sécurité d'abord",
+   "essentiel": "L'essentiel",
+   "climat": "Comment vous allez",
+   "besoins": "Vos besoins",
+   "disputes": "Vos disputes",
+   "equilibre": "Qui fait quoi",
+   "attachement": "Votre façon d'aimer",
+   "retient": "Ce qui vous retient",
+   "plan": "Votre plan",
+   "deux": "Et à deux ?",
+   "methode": "Comment ce rapport est fait"
+  },
+  "ouvertures": {
+   "securite": "Avant tout le reste, ce que vous avez dit de votre sécurité.",
+   "essentiel": "Où vous en êtes, en une page.",
+   "climat": "Ce que vous vivez avec {{autre}} au quotidien.",
+   "besoins": "Ce qui compte pour vous, et ce que vous en avez.",
+   "disputes": "Pas leur nombre : la façon dont elles se passent.",
+   "equilibre": "Le partage du quotidien, et ce qu'il vous coûte.",
+   "attachement": "Ce qui se joue en vous quand vous aimez.",
+   "retient": "Ce qui vous attache à cette relation, et ce qui vous en éloigne.",
+   "plan": "Trois sujets, et une façon de commencer chacun.",
+   "deux": "Ce que l'évaluation à deux vous apprendrait en plus.",
+   "methode": "D'où viennent les questions et les calculs."
+  },
+  "etats": {
+   "epanouie": {
+    "titre": "Une relation épanouie",
+    "texte": "Vous êtes {heureux|heureuse} avec {{autre}}, vous vous sentez {écouté|écoutée}, et vos disputes ne laissent pas de traces. Ça n'arrive pas tout seul : ce rapport vous montre ce qui marche, pour le garder."
+   },
+   "solide": {
+    "titre": "Une relation solide, avec des tensions",
+    "texte": "L'essentiel tient : vous êtes plutôt bien avec {{autre}}. Mais certains points vous pèsent, et c'est le bon moment pour en parler, avant qu'ils prennent plus de place."
+   },
+   "fragile": {
+    "titre": "Une relation fragile",
+    "texte": "Vos réponses disent que ça ne va pas bien en ce moment, que ce soit le climat entre vous, vos disputes ou des besoins importants qui manquent. Ça ne veut pas dire que c'est fini. Ça veut dire que ça ne s'arrangera pas sans en parler."
+   },
+   "securite": {
+    "titre": "Votre sécurité d'abord",
+    "texte": "Certaines de vos réponses parlent de peur, de contrôle ou de violence. Avant toute question de couple, c'est votre sécurité qui compte. Des personnes formées peuvent vous écouter, gratuitement et sans rien vous imposer."
+   }
+  },
+  "motifs": {
+   "refuse": "Vous faites ce point sans {{autre}}, qui n'avait pas envie de participer. Ce rapport vous donne de quoi avancer de votre côté.",
+   "nose": "Vous n'avez pas osé proposer ce point à {{autre}}. Ce rapport est d'abord pour vous, et il vous aide aussi à trouver les mots.",
+   "clair": "Vous vouliez y voir clair pour vous d'abord. Voici ce que disent vos réponses.",
+   "partir": "Vous vous demandez si vous devez rester. Ce rapport ne décidera pas à votre place, mais le chapitre « Ce qui vous retient » vous aide à y voir clair.",
+   "parler": "Vous voulez préparer une conversation importante. Le chapitre « Votre plan » vous donne trois sujets et une façon de commencer chacun.",
+   "curieux": "Vous vouliez savoir où vous en êtes. Voici le point, sans détour."
+  },
+  "essentiel": {
+   "intro": "Vos 50 réponses, résumées en quelques chiffres. Le détail est dans les chapitres suivants.",
+   "climat": "Comment vous allez",
+   "signaux": "Signaux à regarder",
+   "manques": "Besoins importants en manque",
+   "attachement": "Votre façon d'aimer",
+   "profil": "Ce qui vous retient",
+   "planTitre": "Par où commencer",
+   "planSecurite": "Trois choses à faire pour vous",
+   "refusUn": "Vous avez préféré ne pas répondre à une question sur votre sécurité. C'est votre droit. Si la réponse vous fait peur, les numéros ci-dessous sont gratuits et anonymes.",
+   "refusN": "Vous avez préféré ne pas répondre à {{n}} questions sur votre sécurité. C'est votre droit. Si les réponses vous font peur, les numéros ci-dessous sont gratuits et anonymes.",
+   "vigilance": "Certaines de vos réponses parlent de peur, de contrôle ou d'humiliation. Le chapitre « Vos disputes » y revient. Si vous avez besoin d'en parler, ces numéros sont gratuits et anonymes."
+  },
+  "bandesClimat": {
+   "bon": "Un bon climat",
+   "mitige": "Un climat mitigé",
+   "difficile": "Un climat difficile"
+  },
+  "climat": {
+   "intro": "Sept questions sur ce que vous vivez avec {{autre}}. Plus le score est haut, mieux vous allez.",
+   "bon": "Vous vous sentez bien avec {{autre}} : {écouté|écoutée}, {soutenu|soutenue}, libre d'être vous-même. C'est la meilleure base qui soit.",
+   "mitige": "Certaines choses vont bien, d'autres moins. Les réponses marquées « À regarder » sont celles par où commencer.",
+   "difficile": "Vous ne vous sentez pas bien dans votre couple en ce moment. Les réponses marquées « À regarder » disent où ça coince le plus.",
+   "marques": [
+    "Ça va",
+    "Plutôt bien",
+    "À regarder",
+    "À regarder"
+   ],
+   "nouvellesTitre": "Les bonnes nouvelles comptent aussi",
+   "nouvelles": "La façon dont {{autre}} accueille vos bonnes nouvelles compte plus qu'on ne le croit. La psychologue Shelly Gable a montré que les couples où l'on se réjouit vraiment des bonnes nouvelles de l'autre sont plus satisfaits, pas seulement les jours de fête. Vous avez répondu « {{reponse}} » : c'est un sujet à mettre sur la table.",
+   "admirationTitre": "L'admiration, ce qui protège",
+   "admiration": "D'après les travaux de John Gottman, l'admiration est ce qui protège le mieux un couple du mépris. Quand elle s'use, les petites piques prennent plus de place. Elle se cultive : remarquer ce que l'autre fait bien, et le lui dire à voix haute."
+  },
+  "besoins": {
+   "intro": "Dix choses qui comptent dans un couple. Celles que vous avez choisies comme les plus importantes portent une étoile.",
+   "niveaux": [
+    "Comblé",
+    "Plutôt comblé",
+    "En manque",
+    "Très en manque"
+   ],
+   "important": "Important pour vous",
+   "manquesTitre": "Vos besoins importants en manque",
+   "manques0": "Aucun des besoins que vous avez choisis comme les plus importants ne manque. C'est une vraie force.",
+   "noms": {
+    "ecoute": "Être {écouté|écoutée}",
+    "soutien": "Être {soutenu|soutenue}",
+    "reconnaissance": "Se sentir {apprécié|appréciée}",
+    "tendresse": "La tendresse",
+    "desir": "Se sentir {désiré|désirée}",
+    "temps": "Le temps à deux",
+    "liberte": "La liberté",
+    "projets": "Les projets à deux",
+    "confiance": "La confiance",
+    "rire": "Rire ensemble"
+   },
+   "textes": {
+    "ecoute": "Être écouté, c'est sentir que ce qu'on raconte intéresse l'autre, même quand il n'y a rien à régler.",
+    "soutien": "Quand ça va mal, savoir qu'on peut compter sur l'autre change tout. C'est souvent là qu'un couple se resserre, ou qu'il s'éloigne.",
+    "reconnaissance": "Se sentir apprécié pour ce qu'on fait au quotidien et pour ce qu'on est. Un « merci » dit souvent pèse plus lourd qu'un grand geste de temps en temps.",
+    "tendresse": "Les câlins et les gestes sans arrière-pensée. Quand ils manquent, la distance s'installe sans bruit.",
+    "desir": "Se sentir désiré, c'est sentir qu'on plaît encore à l'autre. Ça compte pour beaucoup de monde, et on en parle rarement.",
+    "temps": "Du temps rien qu'à deux, sans enfants ni écrans. Les couples qui s'en gardent chaque semaine se disent plus souvent très heureux (université de Virginie).",
+    "liberte": "Garder du temps pour soi, ses amis, ses activités. Un couple qui laisse de l'air à chacun tient mieux qu'un couple qui étouffe.",
+    "projets": "Savoir qu'on va dans la même direction : un logement, un voyage, des enfants ou pas. Sans projet commun, on vit à côté plus qu'ensemble.",
+    "confiance": "Pouvoir croire l'autre sur parole. Une confiance abîmée se répare, mais lentement, et jamais sans en parler.",
+    "rire": "Rire ensemble, c'est souvent le premier signe que ça va, et le premier qui disparaît quand ça va moins bien."
+   }
+  },
+  "disputes": {
+   "intro": "Le psychologue John Gottman a suivi des milliers de couples pendant des années. Ceux qui se séparent ne se disputent pas forcément plus que les autres : ils se disputent d'une certaine façon, avec des reproches à la personne, du mépris, de la défense et des silences.",
+   "score": "Vos disputes",
+   "signauxTitre": "Ce qui abîme vos disputes",
+   "aucun": "Aucun de ces signaux dans vos réponses : vos disputes restent des disputes, et vous savez vous réconcilier. C'est plus rare qu'on ne le pense, et ça se protège.",
+   "aide": "Ce qui aide",
+   "securiteTitre": "À ne pas laisser de côté",
+   "fort": "Signal fort",
+   "moyen": "À surveiller"
+  },
+  "signaux": {
+   "critique": {
+    "titre": "Les reproches visent la personne",
+    "texte": "« Tu es toujours... », « tu ne fais jamais... » : un reproche qui vise la personne met l'autre sur la défensive avant même qu'il ait compris le problème.",
+    "aide": "Parler du fait, pas de la personne, et dire ce dont vous avez besoin : « Quand tu rentres sans prévenir, je m'inquiète. J'aimerais un message. »"
+   },
+   "mepris": {
+    "titre": "Le mépris",
+    "texte": "Se moquer, être ironique, lever les yeux au ciel. Pour Gottman, c'est le signal le plus lourd des quatre, celui qui annonce le plus souvent une séparation, parce qu'il dit à l'autre « je vaux mieux que toi ».",
+    "aide": "L'antidote, c'est l'admiration : remarquer ce que l'autre fait bien, et le lui dire. Ça paraît petit, et c'est pourtant ce qui change le plus le climat."
+   },
+   "defense": {
+    "titre": "La défense",
+    "texte": "Se justifier ou renvoyer un reproche, c'est humain. Mais quand c'est le premier réflexe, l'autre a l'impression de ne jamais être entendu.",
+    "aide": "Prendre sa part, même petite : « C'est vrai, j'aurais dû te prévenir. » La dispute redescend d'un coup."
+   },
+   "fermeture": {
+    "titre": "Le mur de silence",
+    "texte": "Ne plus répondre, quitter la pièce, faire comme si l'autre n'était pas là. Souvent, c'est qu'on est débordé. Pour l'autre, c'est le plus dur à vivre.",
+    "aide": "Faire une vraie pause, d'au moins vingt minutes, en disant quand on reprend : « J'ai besoin de me calmer, on en reparle à 21 h. »"
+   },
+   "reparation": {
+    "titre": "Des réconciliations difficiles",
+    "texte": "Tous les couples se disputent. Ceux qui durent savent se réconcilier, avec une blague, un geste, un « pardon ». Quand ça manque, chaque dispute laisse une trace.",
+    "aide": "Tendre la main tôt, même maladroitement, et accepter celle de l'autre quand elle arrive."
+   },
+   "frequentes": {
+    "titre": "Des disputes fréquentes",
+    "texte": "Se disputer souvent n'est pas grave en soi. Mais quand c'est presque tous les jours, la fatigue s'installe et plus rien ne se règle.",
+    "aide": "Repérer le sujet qui revient le plus, et lui donner un vrai moment, au calme, plutôt que de le régler en passant."
+   },
+   "garde": {
+    "titre": "Vous gardez pour vous",
+    "texte": "Quand quelque chose vous dérange, vous le gardez pour vous. Ça évite des disputes sur le moment, mais ça s'accumule, et ça finit souvent par sortir d'un coup.",
+    "aide": "Le dire tôt, petit, au calme : « Il y a un truc qui me travaille, on peut en parler ce soir ? »"
+   },
+   "admiration": {
+    "titre": "L'admiration s'est usée",
+    "texte": "Vous avez répondu que vous n'avez plus vraiment d'admiration pour {{autre}}. C'est souvent ce qui disparaît en premier quand une relation s'use, et ce qui laisse la place au mépris.",
+    "aide": "Se souvenir de ce qui vous a plu au début, et chercher ce que {{autre}} fait encore bien aujourd'hui."
+   },
+   "peur": {
+    "titre": "La peur",
+    "texte": "Vous avez dit avoir peur de la réaction de {{autre}}. Avoir peur de son partenaire n'est pas un désaccord comme un autre : c'est un signe à prendre au sérieux.",
+    "aide": "En parler à quelqu'un de confiance, ou à une ligne d'écoute. Vous n'avez pas à vous justifier."
+   },
+   "controle": {
+    "titre": "Le contrôle",
+    "texte": "Le téléphone, l'argent, les sorties, les gens que vous voyez : quand l'autre contrôle ce que vous faites, votre liberté rétrécit, souvent petit à petit, sans qu'on s'en rende compte.",
+    "aide": "Noter ce qui se passe, pour vous, et en parler à quelqu'un en dehors du couple."
+   },
+   "humiliation": {
+    "titre": "L'humiliation",
+    "texte": "Être {rabaissé|rabaissée}, {humilié|humiliée} ou {insulté|insultée}, même rarement, n'a rien d'une dispute ordinaire.",
+    "aide": "Ce n'est pas à vous de mériter le respect : il vous est dû. En parler à quelqu'un de confiance aide à le voir plus clairement."
+   },
+   "isolement": {
+    "titre": "L'isolement",
+    "texte": "Vous voyez moins vos proches à cause de {{autre}}. C'est un des signes les plus fréquents du contrôle dans un couple, parce qu'on se retrouve {seul|seule} face à l'autre.",
+    "aide": "Reprendre contact avec une personne de confiance, même par un simple message."
+   },
+   "violence": {
+    "titre": "Les violences et les menaces",
+    "texte": "Être {bousculé|bousculée}, {frappé|frappée} ou {menacé|menacée}, voir des objets cassés pendant une dispute : ce sont des violences, même une seule fois. Ce n'est pas de votre faute.",
+    "aide": "Vous pouvez appeler une ligne d'écoute, gratuite et anonyme. En cas de danger, appelez les secours."
+   },
+   "contrainte": {
+    "titre": "Les relations forcées",
+    "texte": "Avoir des relations sexuelles ou des gestes intimes sans en avoir envie, parce qu'on se sent {obligé|obligée}, c'est une violence, même dans un couple, même une seule fois.",
+    "aide": "Vous pouvez en parler à une ligne d'écoute, gratuitement et sans donner votre nom."
+   }
+  },
+  "securite": {
+   "intro": "Vous avez répondu à six questions sur votre sécurité. Voici ce que vos réponses disent, sans jugement.",
+   "pasFaute": "Ce n'est pas de votre faute. Personne ne mérite d'avoir peur chez soi.",
+   "numerosTitre": "Qui appeler",
+   "numeros": [
+    {
+     "nom": "3919",
+     "detail": "Violences Femmes Info : gratuit, anonyme, 24 h sur 24, 7 jours sur 7. N'apparaît pas sur les factures de téléphone."
+    },
+    {
+     "nom": "17 ou 112",
+     "detail": "Police secours, en cas de danger immédiat."
+    },
+    {
+     "nom": "114",
+     "detail": "Par SMS, si vous ne pouvez pas parler : le message arrive aux secours."
+    }
+   ],
+   "apres": "Vous pouvez aussi en parler à votre médecin, qui est tenu au secret."
+  },
+  "equilibre": {
+   "intro": "Qui s'occupe de quoi au quotidien, d'après vous, et comment vous le vivez.",
+   "penche": {
+    "moi": "Vous portez l'essentiel du concret et de la charge mentale.",
+    "autre": "{{autre}} porte l'essentiel du concret et de la charge mentale.",
+    "egal": "Le concret et la charge mentale sont à peu près partagés."
+   },
+   "charge": "Penser à tout (les rendez-vous, les factures, ce qui manque) est un travail invisible. Quand une seule personne le porte, la fatigue et le ressentiment s'installent, même si les tâches sont partagées.",
+   "pese": "Vous avez dit que ce partage vous pèse : c'est un sujet à aborder, calmement, avec une liste sous les yeux plutôt qu'avec des reproches.",
+   "vaBien": "Ce partage vous convient : c'est précieux, beaucoup de couples se disputent sur ce point.",
+   "premierPas": {
+    "moi": "Après une dispute, c'est surtout vous qui faites le premier pas.",
+    "autre": "Après une dispute, c'est surtout {{autre}} qui fait le premier pas.",
+    "egal": "Après une dispute, le premier pas vient de l'un comme de l'autre."
+   }
+  },
+  "attachement": {
+   "intro": "Votre style d'attachement dit comment vous vivez la proximité avec {{autre}} : le besoin d'être {rassuré|rassurée} d'un côté, le besoin de distance de l'autre. Six phrases ne suffisent pas à vous définir, et ce style bouge avec les relations et avec le temps.",
+   "axes": {
+    "anxiete": "Besoin d'être {rassuré|rassurée}",
+    "evitement": "Besoin de distance"
+   },
+   "faible": "faible",
+   "fort": "fort",
+   "vous": "Vous",
+   "pasEtiquette": "Ce n'est pas une étiquette pour la vie. L'attachement change avec les relations et avec le temps, et il se travaille, {seul|seule} ou avec un psychologue.",
+   "source": "Les quatre styles viennent des travaux de Kim Bartholomew (1991). Les phrases sont écrites pour votre relation avec {{autre}}, comme dans le questionnaire de Chris Fraley (2011)."
+  },
+  "styles": {
+   "secure": {
+    "titre": "Attachement sécure",
+    "texte": "Vous êtes à l'aise avec la proximité, et vous ne vivez pas dans la peur d'être {abandonné|abandonnée}. Vous pouvez compter sur {{autre}} sans vous perdre. C'est une base solide pour traverser les moments durs.",
+    "aide": "Ce qui aide : continuer à dire ce que vous ressentez, y compris quand tout va bien."
+   },
+   "anxieux": {
+    "titre": "Attachement anxieux",
+    "texte": "Vous avez besoin d'être {rassuré|rassurée} sur les sentiments de {{autre}}, et un silence ou un message sans réponse peut vite vous inquiéter. Ça ne veut pas dire que vous aimez trop : votre alarme intérieure se déclenche plus facilement.",
+    "aide": "Ce qui aide : dire ce dont vous avez besoin plutôt que de le chercher dans les détails (« quand tu ne réponds pas, je m'inquiète, tu peux m'envoyer un mot ? »), et trouver aussi de quoi vous rassurer ailleurs, avec vos amis et vos projets."
+   },
+   "evitant": {
+    "titre": "Attachement évitant",
+    "texte": "Vous tenez à votre indépendance, et montrer ce que vous ressentez au fond n'est pas naturel pour vous. Quand ça va mal, vous préférez vous débrouiller {seul|seule}. Pour {{autre}}, ça peut ressembler à de la distance.",
+    "aide": "Ce qui aide : partager un peu plus que d'habitude, même une phrase (« je suis {fatigué|fatiguée} ce soir, rien à voir avec toi »), et laisser {{autre}} vous aider de temps en temps."
+   },
+   "craintif": {
+    "titre": "Attachement craintif",
+    "texte": "Vous avez à la fois besoin d'être {rassuré|rassurée} et peur de trop vous rapprocher. C'est un mélange difficile à vivre : vous voulez de la proximité, et elle vous inquiète quand elle arrive.",
+    "aide": "Ce qui aide : avancer par petits pas, mettre des mots sur ce que vous ressentez (« j'ai envie qu'on soit proches, et ça me fait peur »), et, si c'est lourd, en parler avec un psychologue."
+   }
+  },
+  "retient": {
+   "intro": "Le psychologue Caryl Rusbult a montré qu'on ne reste pas dans une relation seulement parce qu'on y est heureux. On reste aussi pour ce qu'on y a mis, et parce qu'on imagine que la vie sans l'autre serait moins bien. Voici votre balance.",
+   "tient": "Ce qui vous retient",
+   "eloigne": "Ce qui vous éloigne",
+   "mesures": {
+    "satisfaction": "Ce que vous vivez aujourd'hui",
+    "investissement": "Ce que vous avez mis dans la relation",
+    "alternatives": "La vie sans {{autre}} vous semble meilleure",
+    "engagement": "Votre envie que ça dure"
+   },
+   "choisisTitre": "Ce que vous avez choisi",
+   "jamaisVerdict": "Ce rapport ne vous dira pas de rester ou de partir. Personne ne peut le décider à votre place. Ces questions sont là pour vous aider à y voir clair.",
+   "questionsTitre": "Les questions à vous poser",
+   "questionsDoute": [
+    "Si rien ne changeait pendant un an, est-ce que ça vous irait ?",
+    "Qu'est-ce qui devrait changer pour que vous ayez envie de rester ? En avez-vous parlé à {{autre}} ?",
+    "Restez-vous pour {{autre}}, ou pour ce que vous avez construit ensemble ?",
+    "La dernière fois que vous vous êtes {senti|sentie} bien avec {{autre}}, c'était quand ? Qu'est-ce que vous faisiez ?",
+    "Que diriez-vous à un ami qui vous raconterait la même chose ?",
+    "Avez-vous plus peur de partir, ou envie de rester ?",
+    "Si vous partiez, qu'est-ce qui vous manquerait le plus ? Et qu'est-ce qui ne vous manquerait pas du tout ?"
+   ],
+   "questionsBien": [
+    "Qu'est-ce qui vous fait du bien dans cette relation, et que vous pourriez dire plus souvent à {{autre}} ?",
+    "Qu'avez-vous envie de vivre ensemble dans les deux ou trois ans qui viennent ?",
+    "Qu'est-ce qui pourrait vous éloigner un jour, et comment le voir venir ?",
+    "Quel petit rituel à deux aimeriez-vous garder, quoi qu'il arrive ?"
+   ],
+   "securite": "Avant de vous poser ces questions, pensez d'abord à votre sécurité. Une décision se prend mieux une fois {entouré|entourée}, avec l'aide d'une ligne d'écoute ou d'un professionnel.",
+   "noms": {
+    "amour": "L'amour que vous avez pour {{autre}}",
+    "moments": "Les bons moments que vous vivez encore",
+    "construit": "Ce que vous avez construit ensemble",
+    "enfants": "Les enfants",
+    "espoir": "L'espoir que ça redevienne comme avant",
+    "seul": "La peur d'être {seul|seule}",
+    "argent": "L'argent ou le logement",
+    "regard": "Le regard des autres, la famille",
+    "habitude": "L'habitude"
+   }
+  },
+  "profils": {
+   "epanoui": {
+    "titre": "{Engagé|Engagée}, et bien",
+    "texte": "Vous êtes {heureux|heureuse} avec {{autre}} et vous voulez que ça dure. Vous restez par envie, pas par obligation."
+   },
+   "attache": {
+    "titre": "{Retenu|Retenue} par ce que vous avez construit",
+    "texte": "Vous n'êtes pas {heureux|heureuse} en ce moment, et ce qui vous retient tient surtout à ce que vous avez construit ou à ce que vous perdriez en partant. Ça arrive souvent, et ça vaut la peine de le regarder en face : on peut rester pour de bonnes raisons, à condition de savoir lesquelles."
+   },
+   "hesitant": {
+    "titre": "{Partagé|Partagée}",
+    "texte": "Une partie de vous tient à {{autre}}, une autre doute. C'est souvent le moment où une relation se transforme, dans un sens ou dans l'autre."
+   },
+   "eloigne": {
+    "titre": "En train de prendre de la distance",
+    "texte": "Vos réponses disent que vous vous éloignez : l'idée de partir revient, ou vous ne voyez plus l'avenir avec {{autre}}. Ce rapport ne vous dit pas quoi faire, mais ça vaut la peine de vous écouter."
+   }
+  },
+  "plan": {
+   "intro": "Trois sujets, choisis à partir de vos réponses. Pour chacun : pourquoi il compte, une façon de commencer, et ce qu'il vaut mieux éviter.",
+   "pourquoi": "Pourquoi",
+   "ouvrir": "Pour commencer",
+   "eviter": "À éviter",
+   "choisi": "Le sujet que vous avez choisi",
+   "moment": "Choisissez un moment calme : pas au milieu d'une dispute, ni juste avant de dormir.",
+   "reactions": [
+    "Quand vous abordez un sujet sensible, {{autre}} en parle et ça avance : c'est une vraie force, appuyez-vous dessus.",
+    "Vous en parlez, mais rien ne change. Essayez de finir chaque conversation par une chose précise à essayer pendant deux semaines, puis faites le point ensemble.",
+    "{{autre}} se ferme ou change de sujet. Prévenez à l'avance (« j'aimerais qu'on parle de quelque chose ce week-end »), gardez la conversation courte, ou écrivez d'abord ce que vous voulez dire.",
+    "{{autre}} se met en colère. Choisissez un moment où vous êtes calmes tous les deux, et si cette colère vous fait peur, parlez-en d'abord à quelqu'un de confiance ou à un conseiller conjugal plutôt que d'ouvrir le sujet {seul|seule}."
+   ],
+   "deja": [
+    "Vous en avez déjà parlé, et ça a aidé : ce qui a marché une fois peut marcher encore.",
+    "Vous en avez parlé plusieurs fois, sans résultat. Quand une conversation tourne en rond, c'est souvent la façon d'en parler qui coince, plus que le sujet. Un conseiller conjugal peut vous aider à sortir de la boucle, même si vous y allez {seul|seule} au début.",
+    "Vous avez essayé, sans y arriver. Écrire d'abord ce que vous voulez dire, en trois phrases, aide souvent à passer le cap.",
+    "Vous n'en avez jamais parlé. Commencez par ce qui vous manque, pas par ce que {{autre}} fait mal : on écoute plus facilement une demande qu'un reproche."
+   ],
+   "securiteTitre": "Trois choses à faire pour vous",
+   "securiteActions": [
+    {
+     "titre": "En parler à quelqu'un de confiance",
+     "texte": "Un ami, quelqu'un de votre famille, votre médecin. Vous n'avez pas à tout raconter : « ça ne va pas à la maison » suffit pour commencer."
+    },
+    {
+     "titre": "Appeler une ligne d'écoute",
+     "texte": "C'est gratuit, anonyme et sans engagement. On vous écoute et on vous aide à y voir clair, sans rien vous imposer. Les numéros sont au début de ce rapport."
+    },
+    {
+     "titre": "Ne pas aborder {seul|seule} ce qui vous fait peur",
+     "texte": "Si la réaction de {{autre}} vous fait peur, n'ouvrez pas ces sujets en tête-à-tête. Préparez-vous d'abord avec une ligne d'écoute ou un professionnel."
+    }
+   ]
+  },
+  "sujets": {
+   "mepris": {
+    "titre": "Sortir du mépris",
+    "pourquoi": "Le mépris est le signal qui annonce le plus souvent une séparation. Il ne disparaît pas tout seul, mais il recule quand l'admiration revient.",
+    "ouvrir": "« Je me rends compte qu'on se lance des piques, moi aussi. J'aimerais qu'on arrête, je n'aime pas comment on se parle. »",
+    "eviter": "Faire la liste des moqueries de l'autre. Commencez par les vôtres."
+   },
+   "fermeture": {
+    "titre": "Briser le mur de silence",
+    "pourquoi": "Quand l'un se ferme, l'autre insiste, et le premier se ferme encore plus. On finit par se sentir seuls à deux.",
+    "ouvrir": "« Quand ça chauffe, j'ai l'impression qu'on se coupe l'un de l'autre. Et si on se donnait le droit de faire une pause, et de reprendre plus tard ? »",
+    "eviter": "Poursuivre quelqu'un qui s'est fermé. Proposez plutôt une heure pour reprendre."
+   },
+   "critique": {
+    "titre": "Parler du problème, pas de la personne",
+    "pourquoi": "Un reproche qui vise la personne (« tu es toujours... ») met l'autre en défense. Un reproche qui vise un fait laisse une chance de régler le problème.",
+    "ouvrir": "« J'aimerais qu'on change notre façon de se faire des reproches. Je vais essayer de dire ce qui me gêne sans dire que tu es comme ci ou comme ça. »",
+    "eviter": "Les « toujours » et les « jamais » : ils sont rarement vrais, et l'autre ne retient qu'eux."
+   },
+   "reparation": {
+    "titre": "Se réconcilier plus vite",
+    "pourquoi": "Les couples qui durent ne se disputent pas moins que les autres, ils se réconcilient plus vite. Une blague, un geste, un « pardon » suffisent souvent.",
+    "ouvrir": "« Après nos disputes, on reste fâchés longtemps. Comment on pourrait se réconcilier plus vite, d'après toi ? »",
+    "eviter": "Attendre que l'autre fasse le premier pas à chaque fois."
+   },
+   "frequentes": {
+    "titre": "Se disputer moins souvent",
+    "pourquoi": "Quand les disputes reviennent presque tous les jours, c'est souvent le même sujet qui revient sous d'autres formes.",
+    "ouvrir": "« On se dispute beaucoup en ce moment, et je crois que c'est souvent pour la même chose. Tu vois ce que c'est, toi ? »",
+    "eviter": "Régler le fond au milieu d'une dispute. Prenez un vrai moment, au calme."
+   },
+   "defense": {
+    "titre": "Prendre sa part",
+    "pourquoi": "Se défendre est un réflexe. Mais quand chacun se justifie, personne n'écoute, et la dispute tourne en rond.",
+    "ouvrir": "« J'ai remarqué que je me défends souvent quand tu me fais un reproche. Je vais essayer de t'écouter jusqu'au bout. »",
+    "eviter": "Répondre à un reproche par un autre reproche."
+   },
+   "garde": {
+    "titre": "Dire ce qui vous dérange",
+    "pourquoi": "Ce qu'on garde pour soi ne disparaît pas. Ça s'accumule, et ça ressort d'un coup, souvent pour un détail.",
+    "ouvrir": "« Il y a des choses que je ne te dis pas pour éviter les disputes. J'aimerais t'en parler, au calme, une à la fois. »",
+    "eviter": "Tout dire d'un coup après des mois de silence."
+   },
+   "ecoute": {
+    "titre": "Vous sentir {écouté|écoutée}",
+    "pourquoi": "Se sentir écouté est un des besoins qui comptent le plus dans un couple. Quand il manque, on finit par ne plus rien raconter.",
+    "ouvrir": "« Parfois, j'ai besoin que tu m'écoutes sans me donner de solution. Juste que tu sois là. »",
+    "eviter": "Le reprocher en pleine conversation (« tu ne m'écoutes jamais »). Demandez plutôt ce dont vous avez besoin, au calme."
+   },
+   "soutien": {
+    "titre": "Être {soutenu|soutenue} quand ça va mal",
+    "pourquoi": "C'est dans les moments durs qu'on mesure ce qu'on peut attendre de l'autre. Se sentir seul à ce moment-là laisse des traces.",
+    "ouvrir": "« Quand ça ne va pas pour moi, j'ai besoin de sentir que tu es là. La dernière fois, ça m'a manqué. »",
+    "eviter": "Attendre que l'autre devine. Dites ce qui vous aide : une écoute, un câlin, un coup de main."
+   },
+   "reconnaissance": {
+    "titre": "Vous sentir {apprécié|appréciée}",
+    "pourquoi": "Se sentir apprécié pour ce qu'on fait et pour ce qu'on est protège un couple de l'usure. Quand on ne l'entend plus, on donne moins.",
+    "ouvrir": "« J'ai besoin d'entendre de temps en temps que ce que je fais compte pour toi. Et je vais essayer de te le dire aussi. »",
+    "eviter": "Tenir les comptes de qui fait le plus."
+   },
+   "nouvelles": {
+    "titre": "Partager les bonnes nouvelles",
+    "pourquoi": "La façon dont on accueille les bonnes nouvelles de l'autre compte autant que le soutien dans les mauvais moments (Shelly Gable).",
+    "ouvrir": "« Quand je te raconte un truc qui me rend {heureux|heureuse}, j'aimerais qu'on en profite ensemble, même deux minutes. »",
+    "eviter": "Le prendre pour un caprice : c'est une vraie façon de se sentir proches."
+   },
+   "confiance": {
+    "titre": "Retrouver la confiance",
+    "pourquoi": "La confiance se répare, mais lentement, avec des actes qui tiennent dans le temps, et jamais sans en parler.",
+    "ouvrir": "« J'ai du mal à te faire confiance en ce moment, et je n'aime pas ça. J'aimerais qu'on en parle, pour comprendre ce qui pourrait m'aider. »",
+    "eviter": "Fouiller ou surveiller : ça abîme la confiance des deux côtés."
+   },
+   "soi": {
+    "titre": "Être vous-même avec {{autre}}",
+    "pourquoi": "Ne pas se sentir libre d'être soi, c'est jouer un rôle à la maison. À la longue, on s'y perd.",
+    "ouvrir": "« J'ai l'impression de faire attention à tout ce que je dis avec toi. J'aimerais être plus à l'aise, et comprendre pourquoi je ne le suis pas. »",
+    "eviter": "Le présenter comme un reproche. Parlez de ce que vous ressentez."
+   },
+   "liberte": {
+    "titre": "Garder de l'air",
+    "pourquoi": "Un couple tient mieux quand chacun garde du temps pour soi, pour ses amis et ses activités.",
+    "ouvrir": "« J'aimerais avoir un peu plus de temps pour moi, sans que ça veuille dire que je m'éloigne de toi. »",
+    "eviter": "Le prendre en cachette. Le dire rassure."
+   },
+   "admiration": {
+    "titre": "Retrouver l'admiration",
+    "pourquoi": "L'admiration est ce qui protège le mieux un couple du mépris. Elle s'use quand on ne regarde plus que ce qui ne va pas.",
+    "ouvrir": "Celui-ci commence par vous : pendant une semaine, notez chaque jour une chose que {{autre}} fait bien, et dites-en au moins une à voix haute.",
+    "eviter": "Attendre que l'admiration revienne toute seule."
+   },
+   "tendresse": {
+    "titre": "Plus de tendresse",
+    "pourquoi": "Les gestes tendres sans arrière-pensée entretiennent le lien. Quand ils manquent, la distance s'installe sans bruit.",
+    "ouvrir": "« Les câlins me manquent, juste comme ça, sans rien derrière. Ça me ferait du bien. »",
+    "eviter": "En faire un reproche. Demandez, tout simplement."
+   },
+   "desir": {
+    "titre": "Vous sentir {désiré|désirée}",
+    "pourquoi": "Se sentir désiré compte pour beaucoup de monde, et c'est un des sujets dont on parle le moins.",
+    "ouvrir": "« J'ai besoin de sentir que je te plais encore. J'aimerais qu'on en parle, sans pression. »",
+    "eviter": "En parler au lit, au moment où ça ne se passe pas comme vous voudriez."
+   },
+   "temps": {
+    "titre": "Du temps à deux",
+    "pourquoi": "Les couples qui se gardent un moment à eux chaque semaine se disent plus souvent très heureux (université de Virginie).",
+    "ouvrir": "« Et si on se gardait une soirée par semaine rien qu'à nous, sans écrans ? »",
+    "eviter": "Attendre d'avoir le temps. Il se prend, il ne se trouve pas."
+   },
+   "rire": {
+    "titre": "Rire ensemble",
+    "pourquoi": "Rire ensemble est souvent le premier signe que ça va, et le premier qui disparaît quand ça va moins bien.",
+    "ouvrir": "« Ça me manque qu'on rigole ensemble. On pourrait refaire un truc qu'on aimait bien au début ? »",
+    "eviter": "En faire un sujet sérieux. Proposez quelque chose, tout simplement."
+   },
+   "projets": {
+    "titre": "Vos projets à deux",
+    "pourquoi": "Savoir où l'on va ensemble donne du sens au quotidien. Sans projet commun, on vit à côté plus qu'ensemble.",
+    "ouvrir": "« J'aimerais qu'on parle de ce qu'on veut pour les prochaines années, toi et moi. Pas pour décider tout de suite, juste pour savoir. »",
+    "eviter": "Arriver avec un projet déjà tout décidé."
+   },
+   "partage": {
+    "titre": "Le partage du quotidien",
+    "pourquoi": "Quand une seule personne porte le concret et pense à tout, la fatigue et le ressentiment s'installent, même par amour.",
+    "ouvrir": "« J'ai l'impression de penser à tout, et ça me fatigue. Est-ce qu'on pourrait faire la liste de ce qu'il y a à faire, et se la répartir ? »",
+    "eviter": "Faire la liste de ce que l'autre ne fait pas."
+   },
+   "rituels": {
+    "titre": "Garder vos rituels",
+    "pourquoi": "Les couples qui durent ont de petits rituels : un café le matin, un message dans la journée, une soirée à eux. Ce sont eux qui tiennent quand tout s'accélère.",
+    "ouvrir": "« J'aime bien nos petites habitudes. On en garde une rien qu'à nous, quoi qu'il arrive ? »",
+    "eviter": "Les laisser disparaître quand la vie devient chargée."
+   },
+   "nouveaute": {
+    "titre": "Faire des choses nouvelles",
+    "pourquoi": "Faire ensemble quelque chose de nouveau rapproche, même quand tout va bien (Arthur Aron).",
+    "ouvrir": "« Et si on testait un truc qu'on n'a jamais fait, un week-end, une activité ? »",
+    "eviter": "Attendre l'occasion parfaite."
+   },
+   "gratitude": {
+    "titre": "Dire merci",
+    "pourquoi": "Remercier pour les petites choses entretient le lien. C'est simple, et ça se perd vite.",
+    "ouvrir": "Un merci précis, chaque jour, pour un petit truc que {{autre}} a fait : « Merci d'avoir pensé à... »",
+    "eviter": "Croire que l'autre le sait déjà."
+   }
+  },
+  "deux": {
+   "texte": "L'évaluation à deux compare vos réponses sujet par sujet : vous découvrez où vous êtes d'accord sans vous l'être jamais dit, et où chacun croyait que l'autre pensait comme lui.",
+   "motifs": {
+    "refuse": "{{autre}} n'avait pas envie de participer. Si un jour c'est le cas, l'évaluation à deux vous montrera ses réponses à côté des vôtres.",
+    "nose": "Vous n'avez pas osé lui proposer. Ce rapport peut vous aider à trouver les mots, et l'évaluation à deux se fait chacun sur son téléphone, sans voir les réponses de l'autre avant la fin."
+   },
+   "points": [
+    "100 questions, chacun sur son téléphone, à son rythme",
+    "Vos réponses côte à côte, sujet par sujet",
+    "Les sujets qui vous rapprochent, ceux qui vous séparent, et comment en parler"
+   ],
+   "lien": "quiz-couple.com/evaluation-de-couple/",
+   "lienTexte": "Pour la faire :"
+  },
+  "methode": {
+   "intro": "Les questions s'appuient sur des travaux publiés en psychologie du couple, écrits avec nos mots. Les calculs sont simples : chaque réponse a une valeur, et chaque chapitre fait la moyenne de ses questions.",
+   "sources": [
+    "John Gottman et Robert Levenson : les quatre façons de se disputer qui annoncent une séparation (reproches à la personne, mépris, défense, mur de silence) et la réconciliation.",
+    "Shelly Gable (2004) : la façon d'accueillir les bonnes nouvelles de l'autre.",
+    "Caryl Rusbult (1980, 1983) et la synthèse de Benjamin Le et Christopher Agnew (2003) : satisfaction, investissement et alternatives, ce qui fait qu'on reste.",
+    "Kim Bartholomew et Leonard Horowitz (1991), Kelly Brennan, Catherine Clark et Phillip Shaver (1998), Chris Fraley (2011) : l'attachement en deux dimensions.",
+    "Les questionnaires de repérage des violences dans le couple utilisés par les médecins, pour la partie sur la sécurité.",
+    "Le National Marriage Project de l'université de Virginie (2012) pour le temps à deux, Arthur Aron (2000) pour la nouveauté partagée."
+   ],
+   "avertissement": "Ce rapport est un outil pour y voir clair, pas un diagnostic. Il ne remplace ni un psychologue, ni un conseiller conjugal, ni un médecin, et il ne prédit pas l'avenir de votre relation : il dit ce que vos réponses disent aujourd'hui.",
+   "confidentialite": "Vos réponses ne servent qu'à ce rapport. Personne d'autre que vous ne le voit, et rien n'a été envoyé à {{autre}}."
+  },
+  "pied": "Le point sur ma relation · {{nom}}"
+ }
+}
