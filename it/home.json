@@ -20,14 +20,23 @@
   },
   "evaluation": {
     "sur": "Novità · Valutazione di coppia",
-    "titre": "Volete la stessa vita, tutti e due?",
-    "texte": "100 domande precise su dodici aree della vita a due, costruite sulla ricerca in psicologia di coppia, e un report completo che mette le vostre risposte a confronto. In due, ciascuno sul proprio telefono e al proprio ritmo: una ventina di minuti.",
-    "points": [
-      "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
-      "Un report completo, con grafici e spunti per parlarne",
-      "Domande gratuite · {{prix}} per il report, alla fine"
+    "titre": "Fai il punto sulla tua relazione senza andare da un professionista",
+    "texte": "Domande precise, costruite sulla ricerca in psicologia di coppia, e un report completo che ti mostra a che punto sei. Ci sono due modi per farlo:",
+    "formules": [
+      {
+        "titre": "In due",
+        "texte": "100 domande, ciascuno sul proprio telefono, e il report mette le vostre risposte a confronto.",
+        "prix": "{{prix}} per tutti e due"
+      },
+      {
+        "titre": "Da solo/a",
+        "texte": "50 domande su quello che vivi, senza il tuo partner, e un report solo per te.",
+        "prix": "{{prixPoint}}"
+      }
     ],
+    "gratuit": "Le domande sono gratuite: paghi solo alla fine, per il report.",
     "ctaDuo": "Fare la valutazione in due",
+    "ctaSolo": "Fare la valutazione da solo/a",
     "ctaCourt": "Valutare la coppia",
     "legende": "Una pagina del report di esempio"
   },

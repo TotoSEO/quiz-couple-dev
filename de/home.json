@@ -20,14 +20,23 @@
   },
   "evaluation": {
     "sur": "Neu · Beziehungsanalyse",
-    "titre": "Wollt ihr beide dasselbe Leben?",
-    "texte": "100 genaue Fragen zu zwölf Bereichen des gemeinsamen Lebens, aufgebaut auf der Forschung der Paarpsychologie, und ein vollständiger Bericht, der eure Antworten nebeneinanderstellt. Zu zweit, jeder auf dem eigenen Handy und im eigenen Tempo: etwa zwanzig Minuten.",
-    "points": [
-      "Jeder antwortet auf dem eigenen Handy, ohne die Antworten des anderen zu sehen",
-      "Ein vollständiger Bericht mit Grafiken und Gesprächshilfen",
-      "Kostenlose Fragen · {{prix}} für den Bericht, am Ende"
+    "titre": "Zieh Bilanz über deine Beziehung, ohne zur Paarberatung zu gehen",
+    "texte": "Genaue Fragen, aufgebaut auf der Forschung der Paarpsychologie, und ein vollständiger Bericht, der dir zeigt, wo du stehst. Es gibt zwei Wege:",
+    "formules": [
+      {
+        "titre": "Zu zweit",
+        "texte": "100 Fragen, jeder auf dem eigenen Handy, und der Bericht stellt eure Antworten nebeneinander.",
+        "prix": "{{prix}} für euch beide"
+      },
+      {
+        "titre": "Allein",
+        "texte": "50 Fragen dazu, was du erlebst, ohne deinen Partner oder deine Partnerin, und ein Bericht nur für dich.",
+        "prix": "{{prixPoint}}"
+      }
     ],
+    "gratuit": "Die Fragen sind kostenlos: Du zahlst erst am Ende, für den Bericht.",
     "ctaDuo": "Die Analyse zu zweit machen",
+    "ctaSolo": "Die Analyse allein machen",
     "ctaCourt": "Beziehung analysieren",
     "legende": "Eine Seite aus dem Beispielbericht"
   },

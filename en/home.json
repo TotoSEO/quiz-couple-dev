@@ -20,14 +20,23 @@
   },
   "evaluation": {
     "sur": "New · Relationship assessment",
-    "titre": "Do you both want the same life?",
-    "texte": "100 specific questions across twelve areas of life together, built on research in couple psychology, and a full report that puts your answers side by side. As a couple, each on your own phone and at your own pace: allow about twenty minutes.",
-    "points": [
-      "You each answer on your own phone, without seeing the other's answers",
-      "A full report, with charts and ways to talk things through",
-      "Free questions · {{prix}} for the report, at the end"
+    "titre": "Take stock of your relationship without seeing a professional",
+    "texte": "Specific questions built on research in couple psychology, and a full report that shows you where you stand. There are two ways to do it:",
+    "formules": [
+      {
+        "titre": "Together",
+        "texte": "100 questions, each on your own phone, and the report puts your answers side by side.",
+        "prix": "{{prix}} for both of you"
+      },
+      {
+        "titre": "On your own",
+        "texte": "50 questions about what you're going through, without your partner, and a report just for you.",
+        "prix": "{{prixPoint}}"
+      }
     ],
+    "gratuit": "The questions are free: you only pay at the end, for the report.",
     "ctaDuo": "Take the assessment together",
+    "ctaSolo": "Take the assessment on your own",
     "ctaCourt": "Assess your relationship",
     "legende": "A page from the sample report"
   },

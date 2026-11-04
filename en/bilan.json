@@ -785,10 +785,21 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Take stock of your relationship, without seeing a professional",
-    "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
+    "sousTitre": "20 minutes each on your phone, or 12 minutes on your own, and a report that shows you where you stand and what you need to talk about.",
+    "offres": {
+      "cta": "Start",
+      "duo": {
+        "titre": "Together",
+        "sous": "Each on your own phone",
+        "unite": "for both of you, paid once"
+      },
+      "solo": {
+        "titre": "On your own",
+        "sous": "Without your partner",
+        "unite": "for you, paid once"
+      }
+    },
     "cta": "Start the assessment",
-    "soloQuestion": "Your partner doesn't want to take part?",
-    "soloLien": "Do a check-up on your own",
     "preuve": "{{nom}}: thousands of visitors every day",
     "paiements": "Secure payment via Stripe",
     "visuel": {
@@ -924,11 +935,14 @@
       "titre": "One price, for both of you",
       "unite": "for the couple, in one go",
       "aide": "Paid once, by either of you, at the end. No subscription.",
+      "seul": {
+        "sur": "On your own?",
+        "texte": "50 questions about what you're going through, about 12 minutes, and a report just for you."
+      },
       "inclus": [
         "100 questions across twelve areas",
         "The full report, online and as a PDF",
-        "The topics to start with, and ways to talk about them",
-        "On your own? My Relationship Check-Up, {{prixPoint}}"
+        "The topics to start with, and ways to talk about them"
       ],
       "garantie": "Satisfied or refunded within {{jours}} days: one message is enough."
     },
@@ -1015,11 +1029,7 @@
     },
     "final": {
       "titre": "Ready to take stock?",
-      "texte": "20 minutes each, and you'll know what you agree on and what you need to talk about."
-    },
-    "colle": {
-      "texte": "Relationship assessment · {{prix}}",
-      "bouton": "Start"
+      "texte": "Together or on your own, you'll know where you stand and what you need to talk about."
     },
     "avertissement": "Together, this assessment shows each of you the other's answers. If you're afraid of your partner, don't do it together: do the check-up on your own, or nothing at all. A domestic abuse helpline can talk with you, free and anonymously."
   }

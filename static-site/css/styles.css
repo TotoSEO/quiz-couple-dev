@@ -13207,6 +13207,32 @@ img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-us
   .qr-bilan--accueil .qr-bilan-visuel img { width: 15rem; }
   .home-eval { padding-top: 3.5rem; }
 }
+/* L'accueil depuis le 4 novembre 2026 (Thomas : « met un deuxième bouton
+   "Faire l'évaluation seul" », « mettre en avant le solo ») : les deux
+   formules côte à côte avec leur prix (à deux en rose, seul(e) en violet),
+   deux boutons, et les deux rapports en aperçu, le point derrière la
+   synthèse. Sous 560 px, les formules l'une sous l'autre et les boutons
+   pleine largeur. */
+.qr-bilan-formules { list-style: none; margin: 1.1rem 0 1.25rem; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.qr-bilan-formule { min-width: 0; padding: .8rem .95rem .95rem; border-radius: 1rem; background: hsl(0 0% 100% / .07); box-shadow: inset 0 0 0 1px hsl(0 0% 100% / .13); border-top: 3px solid hsl(var(--qrb-rose)); }
+.qr-bilan-formule--solo { border-top-color: hsl(var(--qrb-violet)); }
+.qr-bilan-formule-tete { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .5rem; margin: 0; }
+.qr-bilan-formule-titre { font: 800 1.05rem/1.2 var(--font-display, inherit); color: #fff; }
+.qr-bilan-formule-prix { margin: .3rem 0 0; font: 800 1.2rem/1.25 var(--font-display, inherit); color: hsl(var(--qrb-clair)); overflow-wrap: break-word; }
+.qr-bilan-formule--solo .qr-bilan-formule-prix { color: hsl(268 85% 86%); }
+.qr-bilan-formule-prix .prix-promo { white-space: normal; }
+.qr-bilan-formule-prix .prix-promo-avant { font-size: .72em; font-weight: 600; color: hsl(0 0% 100% / .66); white-space: nowrap; }
+.qr-bilan-formule-prix .prix-promo-apres { white-space: nowrap; }
+.qr-bilan-formule-texte { margin: .4rem 0 0; font-size: .88rem; line-height: 1.45; color: hsl(0 0% 100% / .82); overflow-wrap: break-word; hyphens: auto; }
+.qr-bilan-bouton--violet { background: linear-gradient(135deg, hsl(var(--qrb-violet)), hsl(268 45% 42%)); box-shadow: 0 10px 26px -10px hsl(var(--qrb-violet) / .75), inset 0 1px 0 hsl(0 0% 100% / .25); }
+.qr-bilan-bouton--violet:hover { box-shadow: 0 14px 32px -10px hsl(var(--qrb-violet) / .85), inset 0 1px 0 hsl(0 0% 100% / .25); }
+.qr-bilan-visuel--deux img:first-child { top: .9rem; transform: translateX(-64%) rotate(-5deg); }
+.qr-bilan-visuel--deux img:last-child { transform: translateX(-34%) rotate(4deg); }
+@media (max-width: 559.98px) {
+  .qr-bilan-formules { grid-template-columns: minmax(0, 1fr); }
+  .qr-bilan-visuel--deux img:first-child { top: 1.6rem; transform: translateX(-80%) rotate(-5deg); }
+  .qr-bilan-visuel--deux img:last-child { transform: translateX(-24%) rotate(3deg); }
+}
 @media (prefers-reduced-motion: reduce) { .qr-bilan-bouton, .qr-bilan-bouton svg { transition: none; } }
 /* Dans un article de blog (22 octobre 2026, Thomas : « du texte noir,
    illisible ») : la bannière est dans <article class="blog-article">, et

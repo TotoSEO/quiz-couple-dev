@@ -24,6 +24,11 @@
   // façons de faire (#facons, la cible des liens « seul(e) » du site), une
   // question à essayer (bilan-lp.js), le prix, la confiance, huit questions
   // fréquentes, le dernier appel et la barre collée en bas sur téléphone.
+  // Depuis le 4 novembre 2026, le seul(e) est le point sur ma relation (un
+  // produit à lui, 4,90 €) et la page le met au même rang que l'évaluation à
+  // deux : le haut de page, le dernier appel et la barre collée montrent les
+  // deux offres avec leur prix (offres(), plus bas), le bloc du prix a le
+  // point sous le bouton à deux, et le lien « faites-la seul(e) » est parti.
   // Partis ce jour-là : les coches du haut, le fil d'Ariane, la grille des
   // domaines, « pour qui », le comparatif conseiller / IA / évaluation et la
   // section sur la recherche (une phrase sous les étapes et une réponse de la
@@ -224,6 +229,32 @@
   // fait plus de 5 000 visites par jour (mesure d'audience), et l'évaluation
   // n'a pas encore d'avis à citer.
   const preuve = e(ins(L('preuve'))).replace('{{nom}}', '<strong>Quiz Couple</strong>');
+
+  // Les deux façons de faire, chacune avec son prix (4 novembre 2026,
+  // Thomas : « Met les deux prix du coup, En couple et Seul. Seul est
+  // maintenant à part entière de l'évaluation, il faut bien le mettre en
+  // avant ») : deux cartes côte à côte en haut de page et au dernier appel,
+  // la carte entière est le bouton (data-bilan-commencer, que bilan.js
+  // écoute). « À deux » plutôt que « en couple » : qui fait le point seul(e)
+  // est en couple aussi. Les textes sont lp.offres, la réduction ne touche
+  // que l'offre à deux (le point n'est jamais réduit).
+  const offre = (m) => {
+    const duo = m === 'duo';
+    const persos = duo ? masc('rose', 'salut', 'blp-offre-masc') + masc('violet', 'mignon', 'blp-offre-masc') : masc('rose', 'mignon', 'blp-offre-masc');
+    return '<button type="button" class="blp-offre blp-offre--' + m + '" data-bilan-commencer="' + m + '">' +
+      (duo && promo ? '<span class="promo-pastille blp-offre-promo"><span class="blp-offre-promo-long">' + e(promo.badge) + '</span>' +
+        (promo.remise ? '<span class="blp-offre-promo-court" aria-hidden="true">' + e(promo.remise) + '</span>' : '') + '</span>' : '') +
+      '<span class="blp-offre-persos" aria-hidden="true">' + persos + '</span>' +
+      '<span class="blp-offre-titre">' + x('offres.' + m + '.titre') + '</span>' +
+      '<span class="blp-offre-sous">' + x('offres.' + m + '.sous') + '</span>' +
+      '<span class="blp-offre-bas">' +
+        '<span class="blp-offre-prix">' + (duo ? (promo ? promo.html : e(prix)) : e(prixPoint)) + '</span>' +
+        '<span class="blp-offre-unite">' + x('offres.' + m + '.unite') + '</span>' +
+        '<span class="blp-offre-cta">' + x('offres.cta') + fleche + '</span>' +
+      '</span>' +
+    '</button>';
+  };
+  const offres = (classe) => '<div class="blp-offres' + (classe ? ' ' + classe : '') + '">' + offre('duo') + offre('solo') + '</div>';
 %>
 <script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
 <% if (faqEntrees.length) { %>
@@ -232,20 +263,14 @@
 
 <div class="blp" data-lang="<%= lang %>">
 
-  <!-- La promesse : un titre, une phrase, un seul gros bouton -->
+  <!-- La promesse : un titre, une phrase, les deux offres avec leur prix -->
   <section class="blp-hero">
     <div class="blp-wrap blp-hero-grille">
       <div class="blp-hero-texte">
         <p class="blp-sur"><%- x('badge') %></p>
         <h1 class="blp-h1"><%- x('titre') %></h1>
         <p class="blp-lead"><%- x('sousTitre') %></p>
-        <% if (promo) { %>
-        <p class="blp-promo"><span class="promo-pastille"><%= promo.badge %></span><span class="blp-promo-prix"><%- promo.html %></span><span class="blp-promo-unite"><%- x('prix.unite') %></span></p>
-        <% } %>
-        <div class="blp-ctas">
-          <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
-        </div>
-        <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
+        <%- offres() %>
         <% if (moyens.length) { %>
         <div class="blp-paiements">
           <span class="blp-paiements-lib"><%- icone(iconesConfiance[3]) %><%- x('paiements') %></span>
@@ -440,7 +465,15 @@
           <div class="blp-ctas">
             <button type="button" class="blp-btn" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
           </div>
-          <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
+          <%# Seul(e) : le point sur ma relation, son prix et son bouton, sous le
+              bouton à deux (4 novembre 2026 ; un lien « Votre partenaire ne veut
+              pas participer ? » jusque-là). %>
+          <div class="blp-prix-seul">
+            <p class="blp-prix-seul-sur"><%- x('prix.seul.sur') %></p>
+            <p class="blp-prix-seul-titre"><%- tx(facons.solo && facons.solo.titre) %> <span class="blp-prix-seul-montant"><%= prixPoint %></span></p>
+            <p class="blp-prix-seul-texte"><%- x('prix.seul.texte') %></p>
+            <button type="button" class="blp-btn blp-btn--violet" data-bilan-commencer="solo"><%- tx(facons.solo && facons.solo.cta) %><%- fleche %></button>
+          </div>
         </div>
       </div>
     </div>
@@ -510,24 +543,18 @@
     <div class="blp-wrap blp-etroit">
       <h2 class="blp-h2"><%- x('final.titre') %></h2>
       <p class="blp-lead"><%- x('final.texte') %></p>
-      <div class="blp-ctas blp-ctas--centre">
-        <button type="button" class="blp-btn blp-btn--grand" data-bilan-commencer="duo"><%- x('cta') %><%- fleche %></button>
-      </div>
-      <p class="blp-solo"><%- x('soloQuestion') %> <button type="button" class="blp-solo-lien" data-bilan-commencer="solo"><%- x('soloLien') %></button></p>
+      <%- offres('blp-offres--final') %>
     </div>
   </section>
 
   <p class="blp-avertissement blp-wrap"><%- x('avertissement') %></p>
 
-  <!-- La barre collée en bas, sur téléphone, dès que le haut de page est passé -->
+  <!-- La barre collée en bas, sur téléphone, dès que le haut de page est
+       passé : les deux offres et leur prix (le prix réduit pendant une
+       réduction), chacune son bouton. -->
   <div class="blp-colle" id="blp-colle" hidden>
-    <% if (promo) { %>
-    <%# Avec une réduction : le nom sur une ligne, le prix barré et le nouveau dessous (« Évaluation de couple » sans le « · » du texte d'origine). %>
-    <span class="blp-colle-texte"><span class="blp-colle-nom"><%- tx(String(L('colle.texte')).split('{{prix}}')[0].replace(/\s*·\s*$/, '')) %></span><span class="blp-colle-prix"><%- promo.html %></span></span>
-    <% } else { %>
-    <span class="blp-colle-texte"><%- x('colle.texte') %></span>
-    <% } %>
-    <button type="button" class="blp-btn blp-btn--petit" data-bilan-commencer><%- x('colle.bouton') %><%- fleche %></button>
+    <button type="button" class="blp-btn blp-btn--petit blp-colle-btn" data-bilan-commencer="duo"><%- x('offres.duo.titre') %><span class="blp-colle-prix"><%= prix %></span></button>
+    <button type="button" class="blp-btn blp-btn--petit blp-btn--violet blp-colle-btn" data-bilan-commencer="solo"><%- x('offres.solo.titre') %><span class="blp-colle-prix"><%= prixPoint %></span></button>
   </div>
 </div>
 
