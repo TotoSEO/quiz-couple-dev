@@ -44,7 +44,8 @@ personnel vers lui, jamais le fichier.
 | Prénoms, genre (facultatif) | les deux | non |
 | Situation du couple (vie commune, enfants, mariage...) | le couple | non |
 | Réponses aux cent questions | chacun pour soi | oui, pour une partie (intimité, valeurs, confiance) |
-| En seul(e) : ce que la personne imagine des réponses de l'autre | le partenaire, absent | oui, pour une partie |
+| En seul(e) : ce que la personne imagine des réponses de l'autre (ancienne formule) | le partenaire, absent | oui, pour une partie |
+| « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026) : cinquante réponses sur sa propre relation, dont la sécurité (peur, contrôle, humiliation, isolement, violences ou menaces, relations sexuelles forcées, avec « je préfère ne pas répondre ») | la personne seule | oui ; la partie sécurité décrit aussi ce que la personne vit de la part de son ou sa partenaire |
 | Adresse e-mail | chacun | non |
 | Empreinte salée de l'adresse IP | le créateur | non |
 | Session de paiement, montant, e-mail du reçu | le payeur | non |
@@ -104,8 +105,10 @@ reste.
   - avant de commencer, un message renvoie vers le 3919 et ses équivalents par pays : « si vous avez peur de votre partenaire, elle n'est pas faite pour votre situation » ;
   - le mode seul(e) ne contacte jamais le partenaire ;
   - chacun peut tout effacer à tout moment ;
-  - les tests sur l'emprise et la manipulation ne renvoient jamais vers l'évaluation.
-- **Ce qui reste** : le service ne peut pas savoir qui répond sous la contrainte.
+  - les tests sur l'emprise et la manipulation ne renvoient jamais vers l'évaluation ;
+  - le point sur ma relation (4 novembre 2026) : quand les réponses de sécurité donnent l'alerte, l'écran « rapport prêt » commence par les numéros d'aide du pays, gratuits, sans barre de paiement collée, et le rapport ouvre sur « Votre sécurité d'abord » ; il ne propose jamais d'aborder ces sujets avec l'autre, seulement d'en parler à quelqu'un de confiance ou à une ligne d'écoute ;
+  - dès qu'une réponse de sécurité parle de peur, de contrôle, d'humiliation, d'isolement ou de violence, ou que la personne préfère ne pas répondre, plus aucun e-mail non demandé ne part (relance, reprise : `rappels_off`), parce qu'un sujet qui dit « le point sur votre relation » peut être lu par la personne dont on a peur ; seuls partent ceux qu'elle demande (le lien du rapport payé, son lien personnel).
+- **Ce qui reste** : le service ne peut pas savoir qui répond sous la contrainte, ni qui lit la boîte de réception de la personne.
 - **Gravité et vraisemblance** : grave, limitée. Risque résiduel **modéré**, à garder en tête dans les textes.
 
 ### Risque 3 : le rapport passe par un tiers hors de l'Union
@@ -130,7 +133,8 @@ reste.
   - aucune donnée qui identifie le partenaire au-delà d'un prénom ;
   - effacement à 60 jours sans paiement, à six mois avec ;
   - la politique de confidentialité et les CGV le disent.
-- **Ce qui reste** : le partenaire n'est pas informé. L'informer reviendrait à révéler la démarche de la personne, ce qui irait contre l'intérêt des deux. C'est l'exception de l'article 14.5.b, à condition de le documenter ici.
+- **Le point sur ma relation** (4 novembre 2026) n'enregistre plus aucune supposition sur les réponses de l'autre : seulement ce que la personne vit. Mais ses réponses de sécurité décrivent le comportement d'une personne nommée par son prénom (contrôle, violences). Elles restent dans la ligne de l'évaluation, ne sont montrées qu'à la personne, et ne quittent la base qu'en compteurs anonymes par jour (le niveau de sécurité, sans rien qui permette de retrouver l'évaluation).
+- **Ce qui reste** : le partenaire n'est pas informé. L'informer reviendrait à révéler la démarche de la personne, ce qui irait contre l'intérêt des deux, et pour le point, parfois contre sa sécurité. C'est l'exception de l'article 14.5.b, à condition de le documenter ici.
 - **Risque résiduel** : **faible**.
 
 ### Risque 5 : perte ou modification des données
@@ -153,6 +157,7 @@ reste.
 | Envoyer le rapport par un lien de téléchargement plutôt qu'en pièce jointe | risque 3 : le contenu sensible ne passe plus par Resend ni ne reste dans les boîtes | Thomas l'a décidé, mis en place | fait le 22 octobre 2026 |
 | Une sauvegarde de la base (plan payant de Supabase, ou export régulier chiffré) | risque 5 | Thomas | quand les ventes commencent |
 | Relire cette analyse à chaque changement de l'évaluation, et une fois par an | suivi | Thomas | octobre 2027 au plus tard |
+| Le point sur ma relation : numéros d'aide gratuits en tête en cas d'alerte, plus d'e-mail non demandé dès un signal de sécurité | risques 2 et 4 | mis en place | fait le 4 novembre 2026 (relue ce jour-là) |
 
 ## 5. Validation
 

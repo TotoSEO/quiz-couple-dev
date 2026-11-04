@@ -268,3 +268,27 @@ test('l\'aperçu de la page de paiement du point pour l\'admin', async () => {
   assert.equal(r.json.prixBase, 490);
   assert.equal(r.json.promo, false);
 });
+
+test('aucun rappel non demandé quand les réponses de sécurité parlent de peur, de contrôle ou de violence', async () => {
+  for (const [cas, plus] of [['violence', { ps5: 1 }], ['contrôle', { ps2: 2 }], ['refus', { ps6: 4 }]]) {
+    const { appel, courriel, avancer, stockage } = monter();
+    const c = await creerPoint(appel);
+    const A = { id: c.id, jeton: c.jeton };
+    await appel({ action: 'email', ...A, email: 'camille@exemple.fr', rappel: true });
+    await appel({ action: 'repondre', ...A, reponses: cinquante(plus), fini: true });
+    assert.equal(stockage.lignes.get(c.id).rappels_off, true, cas + ' : plus de rappel');
+    avancer(25);
+    const avant = courriel.envoyes.length;
+    const rel = await appel({ action: 'relancer' }, '1.2.3.4', { interne: true });
+    assert.equal(rel.json.relances, 0, cas + ' : ' + JSON.stringify(rel.json));
+    assert.equal(courriel.envoyes.length, avant, cas + ' : aucun e-mail');
+    // Le lien demandé par la personne part toujours.
+    const l = await appel({ action: 'lien', ...A, email: 'camille@exemple.fr' });
+    assert.equal(l.statut, 200, cas + ' : ' + JSON.stringify(l.json));
+  }
+  // Sans aucun signal, le drapeau reste baissé (le rappel du test d'avant part).
+  const { appel, stockage } = monter();
+  const c = await creerPoint(appel);
+  await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: cinquante() });
+  assert.equal(stockage.lignes.get(c.id).rappels_off, false);
+});

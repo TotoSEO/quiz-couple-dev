@@ -664,11 +664,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     const anciennes = ligne.a_reponses || {};
     const avant = C.partiesPoint(anciennes);
     const apres = C.partiesPoint(reponses);
+    // Plus aucun rappel non demandé (relance, reprise) dès que les réponses
+    // de sécurité parlent de peur, de contrôle, d'humiliation, d'isolement
+    // ou de violence, ou que la personne a préféré ne pas répondre : un
+    // e-mail qui dit « le point sur votre relation » peut être lu par la
+    // personne dont on a peur. Seuls partent ceux qu'elle demande (le lien du
+    // rapport payé, son lien personnel). Même drapeau que « ne plus recevoir ».
+    const sec = C.analyserPoint(reponses).securite;
+    const sansRappel = !ligne.rappels_off && (sec.niveau !== 'aucune' || sec.refus > 0);
     const maj = await stockage.maj(ligne.id, {
       a_reponses: reponses,
       a_fini: fini,
       a_etape: fini ? 'fini' : complet ? 'email' : etapePoint(reponses),
       maj_le: maintenant().toISOString(),
+      ...(sansRappel ? { rappels_off: true } : {}),
     });
     // Où les gens entrent et sortent, partie par partie (onglet Évaluation).
     for (const p of apres.entrees) if (!avant.entrees.includes(p)) await compter('point_partie_entree', p);

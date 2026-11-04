@@ -2070,3 +2070,60 @@ d'un an, histoires qui se répètent, autre) et les sujets du sondage
 L'évaluation à deux, son rapport, son prix. Une évaluation seul(e) commencée
 avant (sans formule) se finit et se paie comme avant, à son ancien prix, jusqu'à
 son effacement (60 jours sans paiement) : le code de l'ancien seul(e) reste.
+
+### Ce qui a été construit, et comment le vérifier
+
+- **Le cœur** (`coeur.mjs`) : `POINT_PARTIES` et `POINT_ORDRE` (50 questions),
+  `valideReponsesPoint`, `completPoint`, `progressionPoint`, `partiesPoint`,
+  `analyserPoint`, `apercuPoint` (les chiffres gratuits), `chapitresPoint`
+  (l'ordre des chapitres selon la priorité, « Votre sécurité d'abord » en tête
+  en cas d'alerte), `PRIX_POINT_CENTIMES` et le prix de l'Amérique latine.
+- **Le serveur** (`serveur.mjs`) : `formule: 'point'` à la création (seul(e)
+  seulement), la situation refusée, les réponses du point, l'aperçu dans la
+  réponse 402 de `resultat`, le paiement à 4,90 € sans réduction, les e-mails
+  du point (`textesPoint` de `courriel.mjs`, six langues). Dès qu'une réponse
+  de sécurité donne l'alerte ou la vigilance, ou que la personne préfère ne
+  pas répondre, `rappels_off` est posé : plus de relance ni de reprise, parce
+  qu'un sujet qui dit « le point sur votre relation » peut être lu par la
+  personne dont on a peur ; le lien du rapport payé et le lien personnel
+  partent toujours, puisqu'elle les demande.
+- **Le rapport** (`rapport-point.mjs`, styles `.rpt-*` de `rapport.css`,
+  servi en `/js/bilan-rapport-point.js`) : dans le PDF, les chapitres se
+  suivent au lieu de commencer chacun sur une page neuve (l'ouverture en
+  couleur et l'introduction restent ensemble, `.rpt-tete`) : une page par
+  chapitre laissait des demi-pages vides, 11 à 14 pages au lieu de 20. Les
+  prénoms passent par des marqueurs posés avant la césure, sinon un prénom
+  long se coupait. Les textes sont `{lang}/bilan-point.json` (questions et
+  rapport) et `app.point` de `{lang}/bilan.json` (l'application), servis en
+  `/js/data/bilan-point-<lang>.json`.
+- **L'application** (`bilan.js`) : le départ seul(e) en couple crée un point
+  (`FORMULE`), les questions une par une (`questionPoint` : choix multiples
+  avec leur plafond, « je préfère ne pas répondre », une note de sécurité sur
+  les six questions de la partie), l'écran de l'adresse à la fin, l'écran
+  « prêt » du point (`aDebloquerPoint`), puis le rapport à l'écran. Une
+  évaluation seul(e) commencée avant garde l'ancien parcours et son prix.
+- **La carte des célibataires** (`js/celib-bientot.js`, styles `.qc-celib*`
+  de `styles.css`, textes `app.celib.carte`) : sous le verdict des seize
+  tests célibataires, après les produits ; repliée, elle n'a que la
+  situation à choisir, qui ouvre les sujets, l'idée et l'adresse. Vue et
+  clic comptés une fois par page et par onglet, en requêtes simples, jamais
+  pour le propriétaire, les robots ni les navigateurs pilotés ; plus de carte
+  pendant trente jours après une réponse ; pas de carte sous le premier
+  verdict de « dois-je me remettre avec mon ex » (peur et violence).
+- **L'admin** (onglet Évaluation) : le panneau « Le point sur ma relation »
+  (entonnoir, parties, réponses du départ, ce que dit le rapport), la carte
+  des tests célibataires page par page, la provenance et la situation des
+  réponses du sondage, l'aperçu Stripe du point ; l'export, `bilan/chiffres.mjs`
+  et le retrait d'une vente de test connaissent le point ; la sonde de
+  `bilan-sante.yml` joue aussi une vente du point (4,90 € attendus).
+- **Vérifié le 4 novembre 2026** : les tests du serveur et du rapport ; les 24
+  rapports d'exemple du point (six langues, quatre cas) passent les deux
+  contrôles de mise en page ; dans Chromium contre le site construit et la
+  fonction en mémoire, le parcours entier dans les six langues
+  (`scratchpad/point/app.mjs <lang> <largeur> <hauteur> <theme>
+  bien|tensions|fragile|secu|ancien [fuseau]`, 1,99 € avec
+  `America/Mexico_City`), la carte des célibataires sur huit tests et six
+  langues (`scratchpad/celib/essai.mjs <lang> <largeur> <hauteur> <theme>
+  [pages]`), l'admin avec des données factices (`scratchpad/admin/essai.mjs`,
+  `ELEMENTS` pour capturer un panneau) et la sonde contre la fonction en
+  mémoire servie en HTTP.
