@@ -33,6 +33,7 @@ const FONCTIONS = new Set([
   'get_emails_tableau',
   'get_bilan_tableau',
   'get_bilan_celib',
+  'get_bilan_point',
   'get_instagram_clics',
   'get_quiz_counts',
   'get_quiz_daily',

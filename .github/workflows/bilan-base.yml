@@ -10,7 +10,11 @@ name: Évaluation de couple · base Supabase
 # réponses des célibataires au départ seul(e) et get_bilan_celib pour l'admin)
 # puis 20261031130000_langue_nl.sql (le néerlandais dans les contraintes de
 # langue de toutes les tables, en dernier : deux des migrations d'avant
-# recréent bilans_bornes et bilan_celib_bornes)
+# recréent bilans_bornes et bilan_celib_bornes) puis
+# 20261104120000_evaluation_point.sql (« Le point sur ma relation », le
+# seul(e) refait : colonne formule, compteurs du point, source et situation
+# des célibataires, get_bilan_point pour l'admin ; ses contraintes sont à part
+# et ne gênent pas celle d'avant)
 # par l'API de gestion de Supabase, comme
 # avis-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
@@ -37,6 +41,7 @@ on:
       - 'supabase/migrations/20261024140000_bilan_reprise.sql'
       - 'supabase/migrations/20261025140000_bilan_celib.sql'
       - 'supabase/migrations/20261031130000_langue_nl.sql'
+      - 'supabase/migrations/20261104120000_evaluation_point.sql'
       - '.github/workflows/bilan-base.yml'
   workflow_dispatch:
 
@@ -64,7 +69,8 @@ jobs:
                    supabase/migrations/20261021180000_bilan_etapes.sql \
                    supabase/migrations/20261024140000_bilan_reprise.sql \
                    supabase/migrations/20261025140000_bilan_celib.sql \
-                   supabase/migrations/20261031130000_langue_nl.sql; do
+                   supabase/migrations/20261031130000_langue_nl.sql \
+                   supabase/migrations/20261104120000_evaluation_point.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

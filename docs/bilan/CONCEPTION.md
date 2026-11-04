@@ -1891,3 +1891,182 @@ deviennent une évaluation (`crees`), à comparer aux 58-60 % des 23 et
 24 octobre et aux 29-37 % d'après ; la part des visites qui cliquent sur
 « Commencer » (`ctas` sur `vues`), à comparer aux 25 % d'avant le 27 octobre ;
 les créations à deux en anglais par jour (`À deux, jour par jour`).
+
+## 4 novembre 2026 : « Le point sur ma relation », le seul(e) refait
+
+Thomas : « Je crois qu'il est grand temps de faire une refonte de
+l'évaluation solo. On a 18 personnes qui sont allées jusqu'au bout et qui n'ont
+pas cliqué sur le lien Stripe, là où pour le duo on a un bien meilleur taux de
+conversion. Réfléchis, comment est-ce qu'on peut repositionner le test à faire
+seul ? », puis, sur les trois propositions ci-dessous : « Oui fais ça c'est
+parfait. N'oublie rien, fais-toi un plan parfait, tout doit être niquel. »
+
+### Ce que disaient les chiffres (30 jours, onglet Évaluation)
+
+- **Seul(e)** : 236 évaluations créées, 21 personnes au bout de leurs réponses
+  (9 %), 18 écrans « rapport prêt » vus, aucune page Stripe ouverte, aucune
+  vente. La page de paiement marchait (`scratchpad/pret/paiement.mjs solo`).
+- **À deux** : 364 évaluations créées, 78 créateurs au bout (21 %), 50 couples
+  au bout, 9 pages Stripe ouvertes, 7 ventes.
+- **« Où en êtes-vous ? »** au départ seul(e) : en couple 186 (70 %), c'est
+  compliqué 32 (12 %), célibataire 49 (18 %). Côté célibataires, 10 réponses au
+  sondage, une adresse, et en tête « Savoir quel genre de personne me
+  correspond » (7 sur 10).
+
+### Pourquoi le seul(e) ne se vendait pas
+
+- **Rien à découvrir.** À deux, on paie pour voir ce que l'autre a répondu. Seul(e),
+  la personne connaît ses réponses et ce qu'elle a imaginé pour l'autre : le
+  rapport lui rendait, rangé autrement, ce qu'elle venait de dire.
+- **Trop long** : 136 écrans, environ 25 minutes, une personne sur onze au bout.
+- **Même prix et même rapport que l'évaluation à deux**, pour un produit qui ne
+  compare rien.
+- **Ce n'est pas le même besoin.** Celui ou celle qui la fait seul(e) a souvent un
+  partenaire qui refuse, n'ose pas proposer, ou se demande s'il faut rester. Il
+  ou elle veut y voir clair sur sa propre relation, savoir si ce qu'il ou elle
+  vit est normal, et savoir quoi faire, pas une comparaison.
+
+### Les trois décisions
+
+1. Le seul(e) devient un autre produit, **« Le point sur ma relation »** (My
+   Relationship Check-Up, Mi relación, en claro, Wo steht meine Beziehung?, Il
+   punto sulla mia relazione, Waar staat mijn relatie?) : 50 questions sur ce
+   que la personne vit, environ 12 minutes, et un rapport neuf (son état, ses
+   signaux, ses besoins, sa façon d'aimer, ce qui la retient, un plan pour en
+   parler), avec un aperçu gratuit qui donne envie de lire la suite.
+2. **4,90 €**, 1,99 € en Amérique latine, sans réduction ni prix barré : ce prix
+   n'a jamais été pratiqué, un prix barré devrait être le plus bas des trente
+   jours d'avant (L112-1-1 du Code de la consommation). L'évaluation à deux
+   garde 9,90 € et LOVE20.
+3. **Les célibataires** : pas de produit tout de suite. Une carte « Le bilan
+   célibataire arrive bientôt » à la fin des tests célibataires, avec la liste
+   d'attente, mesure la demande et dit dans quelle situation sont ceux qui la
+   veulent (jamais en couple, rupture récente, histoires qui se répètent).
+
+### Le questionnaire : 50 questions, neuf parties
+
+Le prénom et le genre des deux, puis la case de l'accord, sur l'écran de départ
+(comme avant). Les questions disent « vous » à la personne et le prénom de
+l'autre (`{autre}`), jamais un pronom pour lui ou elle : rien à accorder au
+genre de l'autre. Aucune question à condition : 50 pour tout le monde, le total
+affiché ne bouge pas. Les identifiants commencent par `p` et la lettre de la
+partie, aucun ne croise ceux de l'évaluation à deux. Chaque question a quatre
+réponses rangées du mieux au moins bien (`0` à `3`), sauf les choix multiples
+(`plusieurs`, gardés en un entier de bits) et les questions de départ.
+
+| Partie | Questions | Ce qu'elle mesure |
+|---|---|---|
+| Départ (3) | `pd1` pourquoi seul(e) (six motifs), `pd2` ce que vous voulez savoir en premier (où j'en suis, ce qui ne va pas, rester ou partir, comment en parler), `pd3` depuis combien de temps | le motif et la priorité changent l'ordre du rapport ; comptés dans l'admin |
+| Comment vous allez (7) | heureux(se), écouté(e), soutenu(e), apprécié(e), libre d'être soi, la réaction de l'autre à une bonne nouvelle (Gable), l'admiration | l'indice de climat |
+| Vos besoins (8) | `pb0` les quatre choses qui comptent le plus (dix au choix), puis tendresse, désir, temps à deux, liberté, projets, confiance, rire | les besoins comblés ou non, ceux qui comptent marqués |
+| Vos disputes (7) | fréquence, reproches à la personne, mépris, défense, fermeture (les quatre cavaliers de Gottman), réconciliation, dire ce qui dérange | l'indice des disputes et ses signaux |
+| Votre sécurité (6) | peur de sa réaction, contrôle, humiliation, isolement, violences ou menaces, relations sexuelles forcées ; « je préfère ne pas répondre » possible sur les quatre dernières | l'alerte (voir plus bas) |
+| Qui fait quoi (4) | l'organisation concrète, penser à tout, le premier pas après une dispute, et comment le partage est vécu | l'équilibre |
+| Votre façon d'aimer (6) | trois phrases d'anxiété et trois d'évitement (une à l'envers), écrites pour cette relation | le style d'attachement |
+| Ce qui vous retient (6) | se voir dans dix ans, l'idée de partir, ce qui serait perdu (investissement), sans l'autre seriez-vous plus ou moins heureux(se) (alternatives), vouloir que ça dure, `pv6` ce qui vous retient le plus (jusqu'à trois) | le profil d'engagement (Rusbult) |
+| Pour en parler (3) | sa réaction quand on aborde un sujet sensible, en avoir déjà parlé, le sujet à aborder en premier | le plan |
+
+### Les calculs (`analyserPoint` dans coeur.mjs)
+
+- **Climat** : la moyenne des sept questions de « Comment vous allez », de 0 à 100.
+- **Besoins** : dix besoins (écoute, soutien, reconnaissance, tendresse, désir,
+  temps à deux, liberté, projets, confiance, rire), chacun lu sur sa question ;
+  comblé (réponses 0 et 1), à moitié (2), pas comblé (3). Un besoin coché dans
+  `pb0` qui n'est pas comblé (2 ou 3) est un **besoin important en manque**.
+- **Disputes** : un indice de 0 à 100 et des signaux nommés : reproches à la
+  personne, mépris (dès « parfois » : c'est le signal le plus lourd de
+  Gottman), défense (« souvent »), fermeture, réconciliation difficile, garder
+  pour soi, disputes fréquentes.
+- **Sécurité** : vigilance dès « parfois » pour la peur, le contrôle et
+  l'isolement, dès « rarement » pour l'humiliation ; **alerte** dès « une fois »
+  pour les violences ou menaces et pour les relations sexuelles forcées, pour
+  la peur « souvent », ou pour deux signaux de vigilance ensemble (le contrôle
+  qui s'installe). « Je préfère ne pas répondre » ne compte ni pour ni contre,
+  et le rapport le dit doucement, avec les numéros.
+- **État** : en cas d'alerte, « Votre sécurité d'abord », quoi que disent les
+  autres chiffres (la proposition parlait de « à protéger », qui se lit aussi
+  « une relation à préserver » : le nom est changé). Sinon un indice général
+  (45 % climat, 30 % disputes, 25 % besoins comblés) et les signaux lourds
+  donnent « épanouie », « solide, avec des tensions » ou « fragile ».
+- **Attachement** : anxiété et évitement de 0 à 1, seuil à la moitié : sécure,
+  anxieux, évitant, craintif (Bartholomew et Horowitz 1991, Fraley 2011 pour
+  les phrases propres à une relation). Le rapport dit que ce n'est pas une
+  étiquette pour la vie.
+- **Engagement** (Rusbult) : satisfaction (le climat), investissement,
+  alternatives et engagement donnent « engagé(e), et bien », « retenu(e) par ce
+  que vous avez construit », « partagé(e) » ou « en train de prendre de la
+  distance ». Jamais un verdict : le rapport pose les questions, la personne
+  répond.
+- **Plan** : trois sujets de conversation tirés d'une réserve d'une vingtaine,
+  classés par gravité, les besoins cochés et le sujet choisi en `pp3` en
+  premier, jamais deux de la même famille ; pour chacun, pourquoi c'est
+  important, la première phrase pour l'ouvrir, ce qu'il vaut mieux éviter, avec
+  une variante selon la réaction de l'autre (`pp1`) et ce qui a déjà été essayé
+  (`pp2`). Sans rien à réparer, des sujets d'entretien (rituels, projets,
+  nouveauté). En cas d'alerte, pas de conversation à préparer avec l'autre sur
+  ces sujets : trois choses à faire pour soi (en parler à quelqu'un de
+  confiance, appeler la ligne d'écoute, ne pas aborder seul(e) ce qui fait peur).
+
+### Le rapport (`rapportPointHtml`, rapport-point.mjs)
+
+Le même système que le rapport à deux (ouvertures de chapitre en couleur,
+cartes, aplats, insécables, PDF contrôlé par mise-en-page.mjs et
+controle-pdf.mjs) :
+
+1. la couverture (prénom, « avec {autre} », date, état) ;
+2. « Votre sécurité d'abord », seulement en cas d'alerte ou de réponses
+   refusées à la sécurité : ce qui a été répondu, sans jugement, pourquoi ça
+   compte, les numéros du pays, « ce n'est pas de votre faute » ;
+3. l'essentiel : l'état, le climat, les signaux, les besoins en manque, le
+   style d'attachement, le profil d'engagement et les trois sujets ;
+4. comment vous allez ; 5. vos besoins ; 6. vos disputes (avec les antidotes de
+   Gottman) ; 7. qui fait quoi ; 8. votre façon d'aimer (le plan à deux axes) ;
+9. ce qui vous retient (la balance, le profil, les questions à se poser) ;
+10. votre plan (trois conversations) ; 11. « Et à deux ? » : l'évaluation à deux,
+   adaptée au motif (jamais en cas d'alerte) ; 12. la méthode et les sources.
+
+L'ordre suit la priorité : « rester ou partir » remonte « Ce qui vous retient »
+juste après l'essentiel, « comment en parler » remonte le plan, « ce qui ne va
+pas » remonte les disputes et les besoins.
+
+### L'écran « rapport prêt » (aperçu gratuit)
+
+Le serveur ne rend avant paiement que des chiffres (`apercuPoint`) : l'état, le
+climat, le nombre de signaux, le nombre de besoins importants en manque, le
+style d'attachement, l'alerte. Jamais une question, une réponse ni le nom d'un
+signal. L'écran montre l'état en grand, les quatre tuiles, puis ce qui reste à
+lire, verrouillé (le profil d'engagement, le nom des signaux, les trois
+conversations et leur première phrase). En cas d'alerte, le bloc sécurité et
+les numéros viennent en premier, gratuits, et la barre collée ne s'affiche pas.
+
+### Les célibataires : la carte « bientôt »
+
+`js/celib-bientot.js` sur les pages de la famille des tests célibataires
+(`FAMILLES_NAV.celib`) : à l'écran de résultat, une carte dit que le bilan
+célibataire arrive, demande la situation (jamais en couple, rupture de moins
+d'un an, histoires qui se répètent, autre) et les sujets du sondage
+(`C.SUJETS_CELIB`), puis, si on le veut, l'adresse où prévenir. Même action
+`celib`, avec la page d'origine (`src`) et la situation, rangées dans
+`bilan_celib`. Les vues et les clics de la carte sont comptés par page.
+
+### La mesure
+
+- `bilans.formule` (`point`, ou rien pour une évaluation d'avant), migration
+  `20261104120000_evaluation_point.sql` : `bilan_compte()` ajoute les
+  événements `cree_point`, `commence_point`, `fini_point`,
+  `paiement_ouvert_point`, `paye_point` à ceux du seul(e) ; la page envoie
+  `formule` à `vue` (`depart_point`, `offre_vue_point`...) ; le serveur compte
+  le motif (`point_motif`), la priorité (`point_priorite`), l'état, le style
+  d'attachement et l'alerte à la fin (`point_etat`, `point_attachement`,
+  `point_securite`), et les parties entrées et finies (`point_partie_entree`,
+  `point_partie_finie`). `get_bilan_point(p_jours)` les rend à l'admin, avec la
+  carte célibataire par page.
+- À regarder : la part des départs qui finissent (9 % avant, on vise 40 %), puis
+  rapport prêt → page Stripe → vente ; les motifs et les états ; les clics sur
+  la carte célibataire et leurs situations.
+
+### Ce qui ne change pas
+
+L'évaluation à deux, son rapport, son prix. Une évaluation seul(e) commencée
+avant (sans formule) se finit et se paie comme avant, à son ancien prix, jusqu'à
+son effacement (60 jours sans paiement) : le code de l'ancien seul(e) reste.
