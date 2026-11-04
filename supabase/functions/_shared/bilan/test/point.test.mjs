@@ -182,6 +182,24 @@ test('l\'aperçu gratuit ne dit que des chiffres', () => {
   assert.ok(!/mepris|ecoute/.test(texte), 'aucun nom de signal ni de besoin');
 });
 
+// La même forme dans les six langues : les mêmes clés et les mêmes listes
+// que le français, sauf les numéros d'aide, propres à chaque pays ; et
+// app.point de bilan.json pareil.
+function formeDe(o, p = '') {
+  if (Array.isArray(o) && p.endsWith('numeros')) return [p + '[]'];
+  if (Array.isArray(o)) return [p + '[' + o.length + ']'].concat(...o.map((x, i) => (x && typeof x === 'object' ? formeDe(x, p + '[' + i + ']') : [])));
+  if (o && typeof o === 'object') return Object.keys(o).sort().flatMap((k) => formeDe(o[k], p ? p + '.' + k : k));
+  return [p];
+}
+for (const lang of LANGUES.filter((l) => l !== 'fr')) {
+  const fichier = path.join(RACINE, lang, 'bilan-point.json');
+  test(`le point en ${lang} a la forme du français`, { skip: !fs.existsSync(fichier) && 'fichier absent' }, () => {
+    const lire = (l, f) => JSON.parse(fs.readFileSync(path.join(RACINE, l, f), 'utf8'));
+    assert.deepEqual(formeDe(lire(lang, 'bilan-point.json')), formeDe(lire('fr', 'bilan-point.json')));
+    assert.deepEqual(formeDe(lire(lang, 'bilan.json').app.point), formeDe(lire('fr', 'bilan.json').app.point));
+  });
+}
+
 // Les textes : chaque langue a toutes les questions, le bon nombre de
 // réponses, et ce que le rapport cite.
 for (const lang of LANGUES) {

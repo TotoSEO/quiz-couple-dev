@@ -31,7 +31,7 @@
       "modeDuo": "Samen",
       "modeDuoAide": "Jullie antwoorden ieder apart, op de eigen telefoon, zonder de antwoorden van de ander te zien. Het rapport vergelijkt jullie twee reeksen antwoorden.",
       "modeSolo": "Alleen",
-      "modeSoloAide": "Je antwoordt voor jezelf, en bij de onderwerpen die het zwaarst wegen zeg je ook wat je partner zou antwoorden. Je partner krijgt niets te horen en ziet niets.",
+      "modeSoloAide": "Waar staat mijn relatie?: 50 vragen over wat je in je relatie beleeft, alleen voor jou. Je partner wordt niet op de hoogte gebracht en ziet niets.",
       "prenomsTitre": "Jullie twee voornamen",
       "moi": "Je voornaam",
       "autre": "De voornaam van je partner",
@@ -688,6 +688,82 @@
       "merciEmail": "We mailen je op {{email}} op de dag dat hij uitkomt. Tot dan helpen je antwoorden ons kiezen wat erin komt.",
       "testsTitre": "Ondertussen zijn onze tests voor singles gratis:",
       "fermer": "Sluiten"
+    },
+    "point": {
+      "accueil": {
+        "seul": "Waar staat mijn relatie?",
+        "violence": "Alleen jij ziet dit rapport. Ben je bang voor je partner, bel dan gratis en anoniem Veilig Thuis (0800-2000, dag en nacht) in Nederland of 1712 in België, en bij direct gevaar 112."
+      },
+      "creation": {
+        "apportTitre": "Wat de check je oplevert",
+        "apport": [
+          "Waar je staat met {{autre}}: de sfeer tussen jullie, je behoeften, jullie ruzies",
+          "De signalen om naar te kijken, en wat bij elk helpt",
+          "Hoe je liefhebt, wat je vasthoudt, en drie gesprekken om verder te komen"
+        ],
+        "apportNote": "50 vragen over wat je beleeft, ongeveer 12 minuten. Je kunt een pauze nemen en later verdergaan.",
+        "accordAide": "Je antwoorden, ook over je intimiteit en je veiligheid, dienen alleen voor dit rapport, dat alleen jij te zien krijgt. De check wordt zonder betaling 60 dagen na je laatste antwoord bewaard, na betaling zes maanden, en je kunt hem altijd verwijderen. Geen account nodig.",
+        "prixRappel": "De vragen zijn gratis. Het rapport kost {{prixPoint}}: je ontgrendelt het als je klaar bent.",
+        "creer": "Mijn check starten",
+        "soloNote": "Je doet de check alleen: {{autre}} wordt niet op de hoogte gebracht, krijgt niets toegestuurd, en alleen jij ziet het rapport."
+      },
+      "domaine": {
+        "nb": "{{n}} vragen, ongeveer {{min}} min",
+        "nbUn": "Eén vraag"
+      },
+      "question": {
+        "plusieurs": "Maximaal {{max}} antwoorden",
+        "valider": "Bevestigen",
+        "choixManque": "Kies minstens één antwoord.",
+        "tropDeChoix": "Maximaal {{max}} antwoorden.",
+        "securiteAide": "Ben je bang voor je veiligheid: bel gratis en anoniem Veilig Thuis (0800-2000, dag en nacht) in Nederland of 1712 in België. Bij direct gevaar: 112."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, je check is klaar",
+        "etat": "Je relatie vandaag",
+        "tuiles": {
+          "climat": "Hoe het met je gaat",
+          "signauxUn": "signaal om naar te kijken",
+          "signauxN": "signalen om naar te kijken",
+          "signaux0": "geen signalen om naar te kijken",
+          "manquesUn": "belangrijke behoefte komt tekort",
+          "manquesN": "belangrijke behoeften komen tekort",
+          "manques0": "geen belangrijke behoefte komt tekort",
+          "attachement": "Hoe je liefhebt"
+        },
+        "accroche": "Het rapport legt uit wat je antwoorden zeggen over je relatie met {{autre}}, en waar je kunt beginnen.",
+        "verrouTitre": "Wat je ontdekt als je het rapport ontgrendelt",
+        "verrou": [
+          "De naam van elk signaal, en wat helpt",
+          "Je behoeften een voor een, en hoe je liefhebt, uitgelegd",
+          "Wat je in deze relatie vasthoudt, en de vragen om jezelf te stellen",
+          "Drie gesprekken om te voeren, met de eerste zin van elk"
+        ],
+        "verrouSecurite": [
+          "Wat je antwoorden zeggen over je veiligheid, zonder oordeel",
+          "De naam van elk signaal, en wat helpt",
+          "Je behoeften een voor een, en hoe je liefhebt, uitgelegd",
+          "Drie dingen om voor jezelf te doen, en wie je kunt bellen"
+        ],
+        "securiteTitre": "Eerst je veiligheid",
+        "alerte": "Een deel van je antwoorden gaat over angst, controle of geweld. Het is niet jouw schuld, en je staat er niet alleen voor: deze nummers zijn gratis en anoniem.",
+        "vigilance": "Een deel van je antwoorden gaat over angst, controle of vernedering. Als je erover wilt praten: deze nummers zijn gratis en anoniem.",
+        "numeros": [
+          "0800-2000: Veilig Thuis (Nederland), gratis en anoniem, dag en nacht",
+          "1712: hulplijn bij geweld (België), op werkdagen",
+          "112: bij direct gevaar"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "Eén betaling, geen abonnement. {{autre}} wordt niet op de hoogte gebracht.",
+        "comparaison": "De prijs van een kop koffie op een terras.",
+        "bouton": "Mijn check ontgrendelen · {{prixPoint}}",
+        "immediat": "Het rapport opent hier meteen na de betaling, en de link naar de pdf komt per e-mail."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "Dit rapport blijft zes maanden op deze pagina beschikbaar, alleen voor jou."
+        }
+      }
     }
   },
   "lp": {
@@ -696,7 +772,7 @@
     "sousTitre": "20 minuten per persoon op de eigen telefoon, en een rapport dat laat zien waar jullie het eens zijn en waarover jullie moeten praten.",
     "cta": "Begin de relatiecheck",
     "soloQuestion": "Wil je partner niet meedoen?",
-    "soloLien": "Doe hem alleen",
+    "soloLien": "Doe de check alleen",
     "preuve": "{{nom}}, elke dag duizenden bezoekers",
     "paiements": "Veilig betalen via Stripe",
     "visuel": {
@@ -789,7 +865,7 @@
     "facons": {
       "citation": "Een sessie bij een relatietherapeut kost al snel 60 euro of meer. Beginnen met de volledige relatiecheck van Quiz Couple is DE goede eerste stap.",
       "titre": "Samen, of alleen",
-      "intro": "Heeft de ander geen zin om erover te praten? Dan doe je hem in je eentje. Zelfde prijs, zelfde rapport.",
+      "intro": "Heeft je partner geen zin om erover te praten, doe de check dan voor jezelf: 50 vragen over wat je beleeft, en een rapport alleen voor jou.",
       "duo": {
         "titre": "Samen",
         "sous": "Ieder op de eigen telefoon",
@@ -800,13 +876,14 @@
         "cta": "Samen beginnen"
       },
       "solo": {
-        "titre": "Alleen",
-        "sous": "Zonder je partner iets te zeggen",
+        "titre": "Waar staat mijn relatie?",
+        "sous": "Alleen, zonder je partner op de hoogte te brengen",
         "points": [
-          "Je antwoordt voor jezelf, en bij de belangrijkste onderwerpen ook in de plaats van de ander",
-          "Het rapport laat ook zien wat je niet weet van je partner"
+          "50 vragen over wat je beleeft, ongeveer 12 minuten",
+          "Waar je staat, je signalen, hoe je liefhebt en een plan om erover te praten",
+          "{{prixPoint}}, eenmalig"
         ],
-        "cta": "Alleen beginnen"
+        "cta": "De check alleen doen"
       }
     },
     "demo": {
@@ -835,7 +912,7 @@
         "100 vragen over twaalf thema's",
         "Het volledige rapport, online en als pdf",
         "De onderwerpen om mee te beginnen, met hulp om erover te praten",
-        "Hetzelfde rapport, samen of alleen"
+        "Alleen? Waar staat mijn relatie?, {{prixPoint}}"
       ],
       "garantie": "Niet tevreden, geld terug binnen {{jours}} dagen: één bericht is genoeg."
     },
@@ -881,7 +958,7 @@
         "Na een paar jaar samen",
         "Als je voelt dat er iets veranderd is tussen jullie"
       ],
-      "solo": "En als je partner er geen zin in heeft, kun je hem alleen doen: je antwoordt voor jezelf en zegt bij de onderwerpen die het zwaarst wegen wat de ander volgens jou zou antwoorden."
+      "solo": "En heeft je partner er geen zin in, doe de check dan alleen: 50 vragen over wat je beleeft, en een rapport alleen voor jou, voor {{prixPoint}}."
     },
     "faq": {
       "titre": "Veelgestelde vragen",
@@ -899,8 +976,8 @@
           "a": "Omdat het resultaat het rapport is: jullie antwoorden vergeleken, onderwerp per onderwerp, met hulp om erover te praten. De vragen zijn gratis, en je betaalt pas aan het eind, als je het rapport wilt."
         },
         {
-          "q": "Als ik hem alleen doe, hoort mijn partner dat dan?",
-          "a": "Nee. Je partner krijgt niets toegestuurd, en alleen jij ziet het rapport. Je antwoordt voor jezelf, en bij de onderwerpen die het zwaarst wegen ook in zijn of haar plaats, of met ‘ik weet het niet’."
+          "q": "En als ik de check alleen doe?",
+          "a": "Er wordt niets naar je partner gestuurd, en alleen jij ziet het rapport. De check alleen vergelijkt niets: 50 vragen over wat je beleeft, en een rapport over je relatie zoals jij die ziet (waar je staat, je signalen, hoe je liefhebt, wat je vasthoudt, een plan om erover te praten), voor {{prixPoint}}."
         },
         {
           "q": "En als we niet samenwonen, of geen kinderen hebben?",

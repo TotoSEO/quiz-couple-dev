@@ -675,7 +675,9 @@
 /* Les réponses, une ligne chacune : la question, la réponse, la marque. */
 /* Sept lignes au plus : elles restent sur la même page. */
 .rpt-lignes { list-style: none; display: grid; gap: 0; margin-top: 1.3em; border-top: 1px solid var(--trait); break-inside: avoid; }
-.rpt-ligne { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto; gap: .4em 1em; align-items: baseline;
+/* La colonne de l'étiquette a une largeur fixe : chaque ligne est sa propre
+   grille, et une étiquette plus courte (« Ça va ») décalait la réponse. */
+.rpt-ligne { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 9em; gap: .4em 1em; align-items: baseline;
   padding: .62em 0; border-bottom: 1px solid var(--trait); break-inside: avoid; }
 .rpt-ligne-q { font-weight: 600; font-size: .95em; }
 .rpt-ligne-r { color: var(--encre-2); font-size: .93em; }

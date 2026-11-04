@@ -181,7 +181,10 @@ export function rapportPointHtml(d, TP, o) {
     + (!alerte && securite.niveau === 'vigilance' ? '<div class="rap-encadre rap-encadre--ecart rpt-encadre-secu"><p>' + tx('essentiel.vigilance') + '</p>' + numeros() + '</div>' : '')
     + (!alerte && securite.niveau !== 'vigilance' && securite.refus ? '<div class="rap-encadre rpt-encadre-secu"><p>' + tx(securite.refus > 1 ? 'essentiel.refusN' : 'essentiel.refusUn', { n: securite.refus }) + '</p>' + numeros() + '</div>' : '')
     + '<div class="rap-bloc rap-bloc--insecable"><h3 class="rap-h3">' + tx(analyse.plan.mode === 'securite' ? 'essentiel.planSecurite' : 'essentiel.planTitre') + '</h3>'
-    + '<ol class="rap-conseils rpt-conseils">' + sujetsPlan.map((t) => '<li>' + t + '</li>').join('') + '</ol></div>',
+    // Le texte d'une ligne numérotée tient dans un seul élément : la ligne est
+    // une grille, et un prénom (span.rpt-nom) posé seul y prendrait la
+    // colonne étroite du numéro.
+    + '<ol class="rap-conseils rpt-conseils">' + sujetsPlan.map((t) => '<li><span>' + t + '</span></li>').join('') + '</ol></div>',
     tx('essentiel.intro'));
 
   // ── Comment vous allez ──
@@ -314,7 +317,7 @@ export function rapportPointHtml(d, TP, o) {
     + '<div class="rap-encadre rpt-verdict"><p>' + tx('retient.jamaisVerdict') + '</p></div>'
     + (alerte ? '<div class="rap-encadre rap-encadre--ecart rpt-encadre-secu"><p>' + tx('retient.securite') + '</p></div>' : '')
     + '<div class="rap-bloc rap-bloc--insecable"><h3 class="rap-h3">' + tx('retient.questionsTitre') + '</h3>'
-    + '<ol class="rap-conseils">' + (Array.isArray(questions) ? questions : []).map((t) => '<li>' + txs(t) + '</li>').join('') + '</ol></div>',
+    + '<ol class="rap-conseils">' + (Array.isArray(questions) ? questions : []).map((t) => '<li><span>' + txs(t) + '</span></li>').join('') + '</ol></div>',
     tx('retient.intro'));
 
   // ── Votre plan ──

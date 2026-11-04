@@ -31,7 +31,7 @@
       "modeDuo": "Zu zweit",
       "modeDuoAide": "Jeder antwortet für sich, auf dem eigenen Handy, ohne die Antworten des anderen zu sehen. Der Bericht vergleicht eure beiden Antwortreihen.",
       "modeSolo": "Allein",
-      "modeSoloAide": "Du antwortest für dich und sagst bei den wichtigsten Themen auch, was dein Partner oder deine Partnerin antworten würde. Er oder sie erfährt nichts davon und sieht nichts.",
+      "modeSoloAide": "Wo steht meine Beziehung?: 50 Fragen dazu, was du in deiner Beziehung erlebst, nur für dich. Dein Partner oder deine Partnerin erfährt nichts davon und sieht nichts.",
       "prenomsTitre": "Eure beiden Vornamen",
       "moi": "Dein Vorname",
       "autre": "Der Vorname deines Partners oder deiner Partnerin",
@@ -150,8 +150,8 @@
       "introPret": "Eure beiden Antwortreihen sind fertig. Nur noch ein Schritt, und ihr erfahrt, was sie über eure Beziehung sagen.",
       "apercu": {
         "intro": "Eure Antworten wurden Frage für Frage verglichen:",
-        "accordsUn": "Überein\u00adstimmung",
-        "accordsN": "Überein\u00adstimmungen",
+        "accordsUn": "Überein­stimmung",
+        "accordsN": "Überein­stimmungen",
         "prochesUn": "ähnliche Antwort",
         "prochesN": "ähnliche Antworten",
         "ecartsUn": "Unterschied",
@@ -692,6 +692,83 @@
       "merciEmail": "Wir schreiben dir an {{email}}, sobald sie erscheint. Bis dahin helfen uns deine Antworten zu entscheiden, was hineinkommt.",
       "testsTitre": "Bis dahin sind unsere Tests für Singles kostenlos:",
       "fermer": "Schließen"
+    },
+    "point": {
+      "accueil": {
+        "seul": "Wo steht meine Beziehung?",
+        "violence": "Nur du wirst diesen Bericht sehen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, hilft in Deutschland das Hilfetelefon Gewalt gegen Frauen unter 116 016, kostenlos und anonym, rund um die Uhr."
+      },
+      "creation": {
+        "apportTitre": "Was dir der Check bringt",
+        "apport": [
+          "Wo du mit {{autre}} stehst: die Stimmung zwischen euch, deine Bedürfnisse, eure Streits",
+          "Die Zeichen, auf die du achten solltest, und was bei jedem hilft",
+          "Wie du liebst, was dich hält, und drei Gespräche, um weiterzukommen"
+        ],
+        "apportNote": "50 Fragen dazu, was du erlebst, etwa 12 Minuten. Du kannst eine Pause machen und später weitermachen.",
+        "accordAide": "Deine Antworten, auch zu deiner Intimität und deiner Sicherheit, dienen nur diesem Bericht, den nur du sehen wirst. Der Check wird ohne Zahlung 60 Tage nach deiner letzten Antwort aufbewahrt, nach der Zahlung sechs Monate, und du kannst ihn jederzeit löschen. Kein Konto nötig.",
+        "prixRappel": "Die Fragen sind kostenlos. Der Bericht kostet {{prixPoint}}: Du schaltest ihn frei, wenn du fertig bist.",
+        "creer": "Meinen Check starten",
+        "soloNote": "Du machst den Check allein: {{autre}} erfährt nichts davon, bekommt nichts zugeschickt, und nur du wirst den Bericht sehen."
+      },
+      "domaine": {
+        "nb": "{{n}} Fragen, etwa {{min}} Min.",
+        "nbUn": "Eine Frage"
+      },
+      "question": {
+        "plusieurs": "Bis zu {{max}} Antworten",
+        "valider": "Bestätigen",
+        "choixManque": "Wähl mindestens eine Antwort.",
+        "tropDeChoix": "Höchstens {{max}} Antworten.",
+        "securiteAide": "Wenn du Angst um deine Sicherheit hast: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ unter 116 016 rund um die Uhr erreichbar, kostenlos und anonym, in Österreich die Frauenhelpline unter 0800 222 555. In akuter Gefahr: 110 oder 112."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, dein Check ist fertig",
+        "etat": "Deine Beziehung heute",
+        "tuiles": {
+          "climat": "Wie es dir geht",
+          "signauxUn": "Warnzeichen",
+          "signauxN": "Warnzeichen",
+          "signaux0": "keine Warnzeichen",
+          "manquesUn": "wichtiges Bedürfnis fehlt",
+          "manquesN": "wichtige Bedürfnisse fehlen",
+          "manques0": "kein wichtiges Bedürfnis fehlt",
+          "attachement": "Wie du liebst"
+        },
+        "accroche": "Der Bericht erklärt dir, was deine Antworten über deine Beziehung mit {{autre}} sagen, und wo du anfangen kannst.",
+        "verrouTitre": "Was du entdeckst, wenn du den Bericht freischaltest",
+        "verrou": [
+          "Den Namen jedes Zeichens, und was hilft",
+          "Deine Bedürfnisse einzeln, und wie du liebst, erklärt",
+          "Was dich in dieser Beziehung hält, und die Fragen, die du dir stellen kannst",
+          "Drei Gespräche, die du führen kannst, mit dem ersten Satz für jedes"
+        ],
+        "verrouSecurite": [
+          "Was deine Antworten über deine Sicherheit sagen, ohne Urteil",
+          "Den Namen jedes Zeichens, und was hilft",
+          "Deine Bedürfnisse einzeln, und wie du liebst, erklärt",
+          "Drei Dinge, die du für dich tun kannst, und wen du anrufen kannst"
+        ],
+        "securiteTitre": "Deine Sicherheit zuerst",
+        "alerte": "Einige deiner Antworten sprechen von Angst, Kontrolle oder Gewalt. Es ist nicht deine Schuld, und du bist nicht allein: Diese Nummern sind kostenlos und vertraulich.",
+        "vigilance": "Einige deiner Antworten sprechen von Angst, Kontrolle oder Demütigung. Wenn du darüber reden möchtest: Diese Nummern sind kostenlos und vertraulich.",
+        "numeros": [
+          "116 016: Hilfetelefon „Gewalt gegen Frauen“ (Deutschland), rund um die Uhr",
+          "0800 123 99 00: Hilfetelefon „Gewalt an Männern“ (Deutschland)",
+          "0800 222 555: Frauenhelpline (Österreich), rund um die Uhr",
+          "110 oder 112: in akuter Gefahr"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "Eine einzige Zahlung, kein Abo. {{autre}} erfährt nichts davon.",
+        "comparaison": "So viel wie ein Kaffee im Café.",
+        "bouton": "Meinen Check freischalten · {{prixPoint}}",
+        "immediat": "Der Bericht öffnet sich hier direkt nach der Zahlung, und der Link zum PDF kommt per E-Mail."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "Dieser Bericht bleibt sechs Monate lang auf dieser Seite verfügbar, nur für dich."
+        }
+      }
     }
   },
   "lp": {
@@ -700,7 +777,7 @@
     "sousTitre": "20 Minuten pro Person auf dem Handy, und ein Bericht, der euch zeigt, worin ihr euch einig seid und worüber ihr reden solltet.",
     "cta": "Analyse beginnen",
     "soloQuestion": "Dein Partner oder deine Partnerin will nicht mitmachen?",
-    "soloLien": "Mach sie allein",
+    "soloLien": "Mach den Check allein",
     "preuve": "{{nom}}: Tausende Besucher jeden Tag",
     "paiements": "Sichere Zahlung über Stripe",
     "visuel": {
@@ -793,7 +870,7 @@
     "facons": {
       "citation": "Eine Sitzung bei einer Paarberatung kostet zwischen 80 und 150 €. Mit der vollständigen Analyse von Quiz Couple anzufangen ist DER richtige erste Schritt.",
       "titre": "Zu zweit oder allein",
-      "intro": "Wenn der andere nicht darüber reden möchte, kannst du sie auch für dich machen. Gleicher Preis, gleicher Bericht.",
+      "intro": "Wenn dein Partner oder deine Partnerin nicht darüber reden will, mach den Check für dich: 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich.",
       "duo": {
         "titre": "Zu zweit",
         "sous": "Jeder auf dem eigenen Handy",
@@ -804,13 +881,14 @@
         "cta": "Zu zweit beginnen"
       },
       "solo": {
-        "titre": "Allein",
-        "sous": "Ohne deinen Partner oder deine Partnerin einzuweihen",
+        "titre": "Wo steht meine Beziehung?",
+        "sous": "Allein, ohne deinem Partner oder deiner Partnerin Bescheid zu geben",
         "points": [
-          "Du antwortest für dich und bei den wichtigsten Themen an Stelle des anderen",
-          "Der Bericht zeigt dir auch, was du über den anderen nicht weißt"
+          "50 Fragen dazu, was du erlebst, etwa 12 Minuten",
+          "Wo du stehst, deine Warnzeichen, wie du liebst, und ein Plan, um darüber zu reden",
+          "{{prixPoint}}, einmalig"
         ],
-        "cta": "Allein beginnen"
+        "cta": "Den Check allein machen"
       }
     },
     "demo": {
@@ -839,7 +917,7 @@
         "100 Fragen zu zwölf Bereichen",
         "Der vollständige Bericht, online und als PDF",
         "Die Themen, mit denen ihr anfangt, mit Gesprächshilfen",
-        "Derselbe Bericht, zu zweit oder allein"
+        "Allein? Wo steht meine Beziehung?, {{prixPoint}}"
       ],
       "garantie": "Zufrieden oder Geld zurück, {{jours}} Tage lang: Eine Nachricht genügt."
     },
@@ -885,7 +963,7 @@
         "Nach ein paar Jahren zusammen",
         "Wenn ihr merkt, dass sich zwischen euch etwas verändert hat"
       ],
-      "solo": "Und wenn dein Partner oder deine Partnerin keine Lust hat, kannst du sie allein machen: Du antwortest für dich und sagst bei den wichtigsten Themen, was der oder die andere deiner Meinung nach antworten würde."
+      "solo": "Und wenn dein Partner oder deine Partnerin keine Lust hat, mach den Check allein: 50 Fragen dazu, was du erlebst, und ein Bericht nur für dich, für {{prixPoint}}."
     },
     "faq": {
       "titre": "Häufige Fragen",
@@ -903,8 +981,8 @@
           "a": "Weil das Ergebnis der Bericht ist: eure Antworten im Vergleich, Thema für Thema, mit Gesprächshilfen. Die Fragen sind kostenlos, und ihr zahlt erst am Ende, falls ihr den Bericht wollt."
         },
         {
-          "q": "Erfährt mein Partner oder meine Partnerin davon, wenn ich sie allein mache?",
-          "a": "Nein. Es wird nichts verschickt, und nur du siehst den Bericht. Du antwortest für dich und bei den wichtigsten Themen an seiner oder ihrer Stelle, oder mit „weiß ich nicht“."
+          "q": "Und wenn ich den Check allein mache?",
+          "a": "Deinem Partner oder deiner Partnerin wird nichts geschickt, und nur du siehst den Bericht. Der Check allein vergleicht nichts: 50 Fragen dazu, was du erlebst, und ein Bericht über deine Beziehung, wie du sie siehst (wo du stehst, deine Warnzeichen, wie du liebst, was dich hält, ein Plan, um darüber zu reden), für {{prixPoint}}."
         },
         {
           "q": "Und wenn wir nicht zusammenwohnen oder keine Kinder haben?",

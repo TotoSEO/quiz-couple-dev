@@ -1,0 +1,1128 @@
+{
+ "nom": "My Relationship Check-Up",
+ "parties": {
+  "depart": {
+   "titre": "To start",
+   "bref": "Start",
+   "intro": "Three questions so the report starts from your situation."
+  },
+  "climat": {
+   "titre": "How you're doing",
+   "bref": "Climate",
+   "intro": "What you're living with {autre} right now, day to day."
+  },
+  "besoins": {
+   "titre": "What you need",
+   "bref": "Needs",
+   "intro": "What matters to you in a relationship, and how much of it you have today."
+  },
+  "disputes": {
+   "titre": "Your arguments",
+   "bref": "Arguments",
+   "intro": "Every couple argues. What matters is how it goes."
+  },
+  "securite": {
+   "titre": "Feeling safe",
+   "bref": "Safety",
+   "intro": "Everyone gets these questions. Nobody but you will see your answers."
+  },
+  "equilibre": {
+   "titre": "Who does what",
+   "bref": "Sharing",
+   "intro": "How everyday life is shared, and how you feel about it."
+  },
+  "attachement": {
+   "titre": "The way you love",
+   "bref": "Attachment",
+   "intro": "Six sentences. Say how much each one sounds like you, with {autre}."
+  },
+  "avenir": {
+   "titre": "What keeps you here",
+   "bref": "Future",
+   "intro": "What you see ahead, and what ties you to this relationship."
+  },
+  "parler": {
+   "titre": "Talking about it",
+   "bref": "Talking",
+   "intro": "Three last questions, so the report helps you talk about it with {autre}."
+  }
+ },
+ "qui": [
+  "Mostly me",
+  "More me",
+  "Both of us equally",
+  "More {autre}",
+  "Mostly {autre}"
+ ],
+ "refus": "I'd rather not answer",
+ "plusieurs": "Up to {{max}} answers",
+ "questions": {
+  "pd1": {
+   "q": "What makes you want to do this check-up on your own?",
+   "court": "Why on your own",
+   "o": [
+    "{autre} doesn't want to, or it's not their thing",
+    "I don't dare suggest it",
+    "I need to see clearly for myself first",
+    "I'm wondering whether I should stay",
+    "I want to prepare an important conversation",
+    "Out of curiosity"
+   ]
+  },
+  "pd2": {
+   "q": "What you want to know first:",
+   "court": "What you want to know",
+   "o": [
+    "Where I stand in my relationship",
+    "What's wrong, and why",
+    "Whether I should stay or leave",
+    "How to talk about it with {autre}"
+   ]
+  },
+  "pd3": {
+   "q": "You've been with {autre} for...",
+   "court": "How long together",
+   "o": [
+    "Less than a year",
+    "One to three years",
+    "Three to ten years",
+    "More than ten years"
+   ]
+  },
+  "pc1": {
+   "q": "Right now, in your relationship, you are...",
+   "court": "Being happy",
+   "o": [
+    "Happy",
+    "Fairly happy",
+    "Not really happy",
+    "Unhappy"
+   ]
+  },
+  "pc2": {
+   "q": "You feel listened to by {autre}:",
+   "court": "Being listened to",
+   "o": [
+    "Always",
+    "Often",
+    "Rarely",
+    "Never"
+   ]
+  },
+  "pc3": {
+   "q": "When you're going through a hard time, you feel supported by {autre}:",
+   "court": "Being supported in hard times",
+   "o": [
+    "Always",
+    "Often",
+    "Rarely",
+    "Never"
+   ]
+  },
+  "pc4": {
+   "q": "You feel appreciated by {autre}, for what you do and for who you are:",
+   "court": "Feeling appreciated",
+   "o": [
+    "Always",
+    "Often",
+    "Rarely",
+    "Never"
+   ]
+  },
+  "pc5": {
+   "q": "With {autre}, you feel free to be yourself:",
+   "court": "Being yourself",
+   "o": [
+    "Completely",
+    "Mostly",
+    "Not always",
+    "Not at all"
+   ]
+  },
+  "pc6": {
+   "q": "When you share good news with {autre}, the reaction is usually...",
+   "court": "Sharing good news",
+   "o": [
+    "Excited: we talk about it, it makes them happy",
+    "Positive, nothing more",
+    "Distracted, half listening",
+    "Indifferent or critical"
+   ]
+  },
+  "pc7": {
+   "q": "You admire {autre}:",
+   "court": "Admiration",
+   "o": [
+    "A lot",
+    "Quite a bit",
+    "A little",
+    "Not really"
+   ]
+  },
+  "pb0": {
+   "q": "In a relationship, what matters most to you?",
+   "court": "What matters most",
+   "o": [
+    "Being listened to",
+    "Being supported when things are hard",
+    "Feeling appreciated",
+    "Tenderness",
+    "Feeling desired",
+    "Time together",
+    "Keeping my freedom",
+    "Having plans together",
+    "Being able to trust",
+    "Laughing together"
+   ]
+  },
+  "pb1": {
+   "q": "Everyday tenderness (cuddles, small gestures, kisses with no ulterior motive), you get...",
+   "court": "Tenderness",
+   "o": [
+    "As much as I want",
+    "A bit less than I'd like",
+    "Much less than I'd like",
+    "Hardly any anymore"
+   ]
+  },
+  "pb2": {
+   "q": "You feel desired by {autre}:",
+   "court": "Feeling desired",
+   "o": [
+    "Completely",
+    "Mostly",
+    "Not enough",
+    "Not at all"
+   ]
+  },
+  "pb3": {
+   "q": "Time just for the two of you (no kids, no friends, no screens), you have...",
+   "court": "Time together",
+   "o": [
+    "As much as I want",
+    "A bit less than I'd like",
+    "Much less than I'd like",
+    "Almost never"
+   ]
+  },
+  "pb4": {
+   "q": "Time for yourself, your friends and your activities, you have...",
+   "court": "Your freedom",
+   "o": [
+    "As much as I need",
+    "A bit less than I'd like",
+    "Much less than I'd like",
+    "Hardly any anymore"
+   ]
+  },
+  "pb5": {
+   "q": "Your plans as a couple (what you want to build together):",
+   "court": "Plans together",
+   "o": [
+    "We have some, and we're moving forward",
+    "We talk about them, without really moving",
+    "We don't really have any",
+    "We don't want the same things"
+   ]
+  },
+  "pb6": {
+   "q": "The trust you have in {autre} today:",
+   "court": "Trust",
+   "o": [
+    "Complete",
+    "Fairly good",
+    "Fragile",
+    "Damaged"
+   ]
+  },
+  "pb7": {
+   "q": "You laugh together:",
+   "court": "Laughing together",
+   "o": [
+    "Often",
+    "From time to time",
+    "Rarely",
+    "Hardly ever anymore"
+   ]
+  },
+  "px1": {
+   "q": "Your arguments, right now, are...",
+   "court": "Arguments right now",
+   "o": [
+    "Rare",
+    "Now and then",
+    "Frequent",
+    "Almost every day"
+   ]
+  },
+  "px2": {
+   "q": "During your arguments, the criticism sometimes targets the person rather than the problem (\"you always...\", \"you never...\"):",
+   "court": "Criticism aimed at the person",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "px3": {
+   "q": "During an argument, one of you sometimes mocks the other, gets sarcastic or rolls their eyes:",
+   "court": "Mockery and contempt",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "px4": {
+   "q": "When one of you raises a complaint, the other justifies themselves or fires back another complaint straight away:",
+   "court": "Defending instead of listening",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "px5": {
+   "q": "During an argument, one of you sometimes shuts down completely: stops answering, leaves the room without a word or acts as if the other isn't there:",
+   "court": "Shutting down during an argument",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "px6": {
+   "q": "After an argument, you manage to make up (a gesture, a joke, a \"sorry\", a hug):",
+   "court": "Making up",
+   "o": [
+    "Always",
+    "Often",
+    "Sometimes",
+    "Rarely"
+   ]
+  },
+  "px7": {
+   "q": "When something about {autre} bothers you, you say it...",
+   "court": "Saying what bothers you",
+   "o": [
+    "Fairly soon, at the right moment",
+    "Straight away, in the heat of the moment",
+    "After waiting a long time",
+    "Rarely, I keep it to myself"
+   ]
+  },
+  "ps1": {
+   "q": "You're sometimes afraid of how {autre} will react, of their anger or of what might happen:",
+   "court": "Being afraid of their reaction",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "ps2": {
+   "q": "{autre} controls what you do (your phone, your money, when you go out, who you see):",
+   "court": "Control",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "ps3": {
+   "q": "{autre} puts you down, humiliates you or insults you, in private or in front of others:",
+   "court": "Being put down or insulted",
+   "o": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often"
+   ]
+  },
+  "ps4": {
+   "q": "You see your friends or family less because of {autre} (criticism, arguments, things you're not allowed to do):",
+   "court": "Seeing the people close to you less",
+   "o": [
+    "No, not at all",
+    "A little",
+    "Yes, clearly",
+    "I hardly see anyone anymore"
+   ]
+  },
+  "ps5": {
+   "q": "{autre} has already pushed you, hit you or threatened you, or broken things during an argument:",
+   "court": "Violence and threats",
+   "o": [
+    "Never",
+    "Once",
+    "Several times",
+    "Often"
+   ]
+  },
+  "ps6": {
+   "q": "You've had sex or intimate contact with {autre} without wanting to, because you felt you had to:",
+   "court": "Pressured sex",
+   "o": [
+    "Never",
+    "Once",
+    "Several times",
+    "Often"
+   ]
+  },
+  "pe1": {
+   "q": "Who takes care of most of the practical side of your life together (housework, shopping, organizing)?",
+   "court": "Everyday practical tasks"
+  },
+  "pe2": {
+   "q": "Who thinks the most about everything that needs doing (appointments, bills, presents, what's running out)?",
+   "court": "Keeping track of everything"
+  },
+  "pe3": {
+   "q": "After an argument, who usually makes the first move?",
+   "court": "The first move after an argument"
+  },
+  "pe4": {
+   "q": "This way of sharing things, you feel it's...",
+   "court": "How the sharing feels to you",
+   "o": [
+    "Fine, it works for me",
+    "More or less fine",
+    "A weight on me",
+    "A heavy weight on me"
+   ]
+  },
+  "pa1": {
+   "q": "I often worry that my feelings are stronger than {autre}'s.",
+   "court": "Worrying you love more",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pa2": {
+   "q": "When {autre} doesn't answer a message, I quickly start to worry.",
+   "court": "Worrying about a silence",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pa3": {
+   "q": "I need {autre} to reassure me often about their feelings.",
+   "court": "Needing reassurance",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pa4": {
+   "q": "I'd rather not show {autre} what I feel deep down.",
+   "court": "Keeping your feelings to yourself",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pa5": {
+   "q": "When things are hard, I'd rather handle it on my own than turn to {autre}.",
+   "court": "Handling it on your own",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pa6": {
+   "q": "I find it easy to count on {autre}.",
+   "court": "Counting on the other",
+   "o": [
+    "Not at all",
+    "A little",
+    "Quite a lot",
+    "Completely"
+   ]
+  },
+  "pv1": {
+   "q": "In ten years, you see yourself with {autre}:",
+   "court": "Seeing yourselves together in ten years",
+   "o": [
+    "Yes, without a doubt",
+    "Yes, I think so",
+    "I don't know",
+    "I don't think so"
+   ]
+  },
+  "pv2": {
+   "q": "In the last few months, the thought of leaving has crossed your mind:",
+   "court": "The thought of leaving",
+   "o": [
+    "Never",
+    "Once or twice",
+    "Often",
+    "Almost every day"
+   ]
+  },
+  "pv3": {
+   "q": "You've put a lot into this relationship (time, plans, a life organized together), and you'd lose it if it ended:",
+   "court": "What you've put into the relationship",
+   "o": [
+    "Completely",
+    "Mostly",
+    "A little",
+    "Not really"
+   ]
+  },
+  "pv4": {
+   "q": "Without {autre}, you think you'd be...",
+   "court": "Life without the other",
+   "o": [
+    "Much less happy",
+    "A bit less happy",
+    "Just as happy",
+    "Happier"
+   ]
+  },
+  "pv5": {
+   "q": "You want your relationship to last:",
+   "court": "Wanting it to last",
+   "o": [
+    "Yes, with all my heart",
+    "Yes",
+    "I'm not sure anymore",
+    "No"
+   ]
+  },
+  "pv6": {
+   "q": "Today, what keeps you in this relationship the most?",
+   "court": "What keeps you here",
+   "o": [
+    "The love I have for {autre}",
+    "The good times we still have",
+    "What we've built together (a home, plans)",
+    "The children",
+    "The hope it'll go back to how it was",
+    "The fear of being alone",
+    "Money or housing",
+    "What others think, family",
+    "Habit"
+   ]
+  },
+  "pp1": {
+   "q": "When you bring up a sensitive subject with {autre}, usually...",
+   "court": "When you bring up a sensitive subject",
+   "o": [
+    "We talk about it, and things move forward",
+    "We talk about it, but nothing changes",
+    "{autre} shuts down or changes the subject",
+    "{autre} gets angry"
+   ]
+  },
+  "pp2": {
+   "q": "What weighs on you, you've already talked about it with {autre}:",
+   "court": "Having already talked about it",
+   "o": [
+    "Yes, and it helped",
+    "Yes, several times, with no result",
+    "I tried, without managing to",
+    "Never"
+   ]
+  },
+  "pp3": {
+   "q": "The subject you'd most like to talk about first with {autre}:",
+   "court": "The subject to bring up first",
+   "o": [
+    "The time we spend together",
+    "Tenderness and desire",
+    "The way we listen to each other",
+    "The way we argue",
+    "Sharing chores and the mental load",
+    "Trust",
+    "Our plans and our future",
+    "Each person's space (friends, family, time for yourself)",
+    "I don't know yet"
+   ]
+  }
+ },
+ "rapport": {
+  "surtitre": "My Relationship Check-Up",
+  "couverture": {
+   "avec": "with {{autre}}",
+   "sous": "Your personal report. Nobody but you sees it.",
+   "etat": "Your relationship today",
+   "date": "Report of {{date}}",
+   "confidentiel": "Confidential, for you only"
+  },
+  "chapitres": {
+   "securite": "Your safety first",
+   "essentiel": "The essentials",
+   "climat": "How you're doing",
+   "besoins": "Your needs",
+   "disputes": "Your arguments",
+   "equilibre": "Who does what",
+   "attachement": "The way you love",
+   "retient": "What keeps you here",
+   "plan": "Your plan",
+   "deux": "And as a couple?",
+   "methode": "How this report is made"
+  },
+  "ouvertures": {
+   "securite": "Before anything else, what you said about your safety.",
+   "essentiel": "Where you stand, on one page.",
+   "climat": "What you live with {{autre}} day to day.",
+   "besoins": "What matters to you, and how much of it you have.",
+   "disputes": "Not how many: how they go.",
+   "equilibre": "How everyday life is shared, and what it costs you.",
+   "attachement": "What goes on inside you when you love.",
+   "retient": "What ties you to this relationship, and what pulls you away.",
+   "plan": "Three subjects, and a way to start each one.",
+   "deux": "What the assessment for two would tell you on top of this.",
+   "methode": "Where the questions and the calculations come from."
+  },
+  "etats": {
+   "epanouie": {
+    "titre": "A thriving relationship",
+    "texte": "You're happy with {{autre}}, you feel listened to, and your arguments don't leave marks. That doesn't happen by itself: this report shows you what works, so you can keep it."
+   },
+   "solide": {
+    "titre": "A solid relationship, with some tension",
+    "texte": "The core holds: you're fairly happy with {{autre}}. But some things weigh on you, and now is a good time to talk about them, before they take up more room."
+   },
+   "fragile": {
+    "titre": "A fragile relationship",
+    "texte": "Your answers say things aren't going well right now, whether it's the mood between you, your arguments or important needs that aren't met. It doesn't mean it's over. It means it won't fix itself without talking about it."
+   },
+   "securite": {
+    "titre": "Your safety first",
+    "texte": "Some of your answers talk about fear, control or violence. Before any question about the relationship, your safety comes first. Trained people can listen to you, for free and without pushing you into anything."
+   }
+  },
+  "motifs": {
+   "refuse": "You're doing this check-up without {{autre}}, who didn't want to take part. This report gives you something to move forward with on your side.",
+   "nose": "You didn't dare suggest this check-up to {{autre}}. This report is for you first, and it also helps you find the words.",
+   "clair": "You wanted to see clearly for yourself first. Here's what your answers say.",
+   "partir": "You're wondering whether you should stay. This report won't decide for you, but the chapter \"What keeps you here\" helps you see more clearly.",
+   "parler": "You want to prepare an important conversation. The chapter \"Your plan\" gives you three subjects and a way to start each one.",
+   "curieux": "You wanted to know where you stand. Here it is, straight."
+  },
+  "essentiel": {
+   "intro": "Your 50 answers, summed up in a few figures. The details are in the chapters that follow.",
+   "climat": "How you're doing",
+   "signaux": "Signs to look at",
+   "manques": "Important needs not met",
+   "attachement": "The way you love",
+   "profil": "What keeps you here",
+   "planTitre": "Where to start",
+   "planSecurite": "Three things to do for yourself",
+   "refusUn": "You chose not to answer one question about your safety. That's your right. If the answer scares you, the numbers below are free and anonymous.",
+   "refusN": "You chose not to answer {{n}} questions about your safety. That's your right. If the answers scare you, the numbers below are free and anonymous.",
+   "vigilance": "Some of your answers talk about fear, control or humiliation. The chapter \"Your arguments\" comes back to it. If you need to talk about it, these numbers are free and anonymous."
+  },
+  "bandesClimat": {
+   "bon": "A good climate",
+   "mitige": "A mixed climate",
+   "difficile": "A difficult climate"
+  },
+  "climat": {
+   "intro": "Seven questions about what you live with {{autre}}. The higher the score, the better you're doing.",
+   "bon": "You feel good with {{autre}}: listened to, supported, free to be yourself. That's the best base there is.",
+   "mitige": "Some things are going well, others less so. The answers marked \"Worth a look\" are the ones to start with.",
+   "difficile": "You don't feel good in your relationship right now. The answers marked \"Worth a look\" show where it hurts most.",
+   "marques": [
+    "Fine",
+    "Fairly good",
+    "Worth a look",
+    "Worth a look"
+   ],
+   "nouvellesTitre": "Good news counts too",
+   "nouvelles": "The way {{autre}} receives your good news matters more than people think. Psychologist Shelly Gable showed that couples who really celebrate each other's good news are more satisfied, and not only on special days. You answered \"{{reponse}}\": it's something to put on the table.",
+   "admirationTitre": "Admiration, the thing that protects",
+   "admiration": "According to John Gottman's research, admiration is what best protects a couple from contempt. When it wears thin, the little digs take up more room. It can be grown: notice what the other does well, and say it out loud."
+  },
+  "besoins": {
+   "intro": "Ten things that matter in a relationship. The ones you chose as the most important are marked.",
+   "niveaux": [
+    "Met",
+    "Mostly met",
+    "Missing",
+    "Badly missing"
+   ],
+   "important": "Important to you",
+   "manquesTitre": "Your important needs that aren't met",
+   "manques0": "None of the needs you chose as the most important is missing. That's a real strength.",
+   "noms": {
+    "ecoute": "Being listened to",
+    "soutien": "Being supported",
+    "reconnaissance": "Feeling appreciated",
+    "tendresse": "Tenderness",
+    "desir": "Feeling desired",
+    "temps": "Time together",
+    "liberte": "Freedom",
+    "projets": "Plans together",
+    "confiance": "Trust",
+    "rire": "Laughing together"
+   },
+   "textes": {
+    "ecoute": "Being listened to means feeling that what you say interests the other, even when there's nothing to fix.",
+    "soutien": "When things are bad, knowing you can count on the other changes everything. That's often where a couple grows closer, or drifts apart.",
+    "reconnaissance": "Feeling appreciated for what you do every day and for who you are. A \"thank you\" said often weighs more than a big gesture now and then.",
+    "tendresse": "Cuddles and gestures with no ulterior motive. When they're missing, distance creeps in quietly.",
+    "desir": "Feeling desired means feeling the other still finds you attractive. It matters to a lot of people, and it's rarely talked about.",
+    "temps": "Time just for the two of you, without kids or screens. Couples who keep some every week more often say they're very happy (University of Virginia).",
+    "liberte": "Keeping time for yourself, your friends, your activities. A couple that gives each person room to breathe holds up better than one that smothers.",
+    "projets": "Knowing you're heading the same way: a home, a trip, children or not. Without shared plans, you live side by side more than together.",
+    "confiance": "Being able to take the other at their word. Damaged trust can be repaired, but slowly, and never without talking about it.",
+    "rire": "Laughing together is often the first sign things are fine, and the first thing to go when they're less fine."
+   }
+  },
+  "disputes": {
+   "intro": "Psychologist John Gottman followed thousands of couples for years. The ones who split up don't necessarily argue more than the others: they argue in a certain way, with criticism of the person, contempt, defensiveness and silence.",
+   "score": "Your arguments",
+   "signauxTitre": "What damages your arguments",
+   "aucun": "None of these signs in your answers: your arguments stay arguments, and you know how to make up. That's rarer than people think, and it's worth protecting.",
+   "aide": "What helps",
+   "reponsesTitre": "Your answers",
+   "securiteTitre": "Not to be set aside",
+   "fort": "Strong sign",
+   "moyen": "Keep an eye on it"
+  },
+  "signaux": {
+   "critique": {
+    "titre": "Criticism aimed at the person",
+    "texte": "\"You always...\", \"you never...\": criticism aimed at the person puts the other on the defensive before they've even understood the problem.",
+    "aide": "Talk about the fact, not the person, and say what you need: \"When you come home without telling me, I worry. I'd like a message.\""
+   },
+   "mepris": {
+    "titre": "Contempt",
+    "texte": "Mocking, being sarcastic, rolling your eyes. For Gottman, it's the heaviest of the four signs, the one that most often comes before a breakup, because it tells the other \"I'm better than you\".",
+    "aide": "The antidote is admiration: notice what the other does well, and tell them. It seems small, and yet it's what changes the mood the most."
+   },
+   "defense": {
+    "titre": "Defensiveness",
+    "texte": "Justifying yourself or firing back a complaint is human. But when it's the first reflex, the other feels they're never heard.",
+    "aide": "Take your share, even a small one: \"That's true, I should have told you.\" The argument cools down at once."
+   },
+   "fermeture": {
+    "titre": "The wall of silence",
+    "texte": "No longer answering, leaving the room, acting as if the other isn't there. Often it's because you're overwhelmed. For the other, it's the hardest thing to live with.",
+    "aide": "Take a real break, at least twenty minutes, and say when you'll pick it up again: \"I need to calm down, let's talk about it at 9.\""
+   },
+   "reparation": {
+    "titre": "Making up is hard",
+    "texte": "Every couple argues. The ones that last know how to make up, with a joke, a gesture, a \"sorry\". When that's missing, every argument leaves a mark.",
+    "aide": "Reach out early, even clumsily, and accept it when the other reaches out."
+   },
+   "frequentes": {
+    "titre": "Frequent arguments",
+    "texte": "Arguing often isn't serious in itself. But when it's almost every day, tiredness sets in and nothing gets settled anymore.",
+    "aide": "Find the subject that comes back the most, and give it a real moment, calmly, rather than settling it in passing."
+   },
+   "garde": {
+    "titre": "You keep it to yourself",
+    "texte": "When something bothers you, you keep it to yourself. It avoids arguments in the moment, but it builds up, and it often comes out all at once.",
+    "aide": "Say it early, small, calmly: \"Something's been on my mind, can we talk about it tonight?\""
+   },
+   "admiration": {
+    "titre": "Admiration has worn thin",
+    "texte": "You answered that you don't really admire {{autre}} anymore. It's often the first thing to go when a relationship wears out, and it leaves room for contempt.",
+    "aide": "Remember what you liked at the start, and look for what {{autre}} still does well today."
+   },
+   "peur": {
+    "titre": "Fear",
+    "texte": "You said you're afraid of how {{autre}} will react. Being afraid of your partner isn't a disagreement like any other: it's a sign to take seriously.",
+    "aide": "Talk about it with someone you trust, or with a helpline. You don't have to justify yourself."
+   },
+   "controle": {
+    "titre": "Control",
+    "texte": "Your phone, your money, when you go out, who you see: when the other controls what you do, your freedom shrinks, often little by little, without you noticing.",
+    "aide": "Write down what happens, for yourself, and talk about it with someone outside the relationship."
+   },
+   "humiliation": {
+    "titre": "Humiliation",
+    "texte": "Being put down, humiliated or insulted, even rarely, is nothing like an ordinary argument.",
+    "aide": "You don't have to earn respect: it's owed to you. Talking about it with someone you trust helps you see it more clearly."
+   },
+   "isolement": {
+    "titre": "Isolation",
+    "texte": "You see the people close to you less because of {{autre}}. It's one of the most common signs of control in a relationship, because you end up alone with the other.",
+    "aide": "Get back in touch with someone you trust, even with a simple message."
+   },
+   "violence": {
+    "titre": "Violence and threats",
+    "texte": "Being pushed, hit or threatened, seeing things broken during an argument: this is violence, even once. It isn't your fault.",
+    "aide": "You can call a helpline, free and anonymous. If you're in danger, call the emergency services."
+   },
+   "contrainte": {
+    "titre": "Pressured sex",
+    "texte": "Having sex or intimate contact without wanting to, because you feel you have to, is violence, even in a relationship, even once.",
+    "aide": "You can talk about it with a helpline, for free and without giving your name."
+   }
+  },
+  "securite": {
+   "intro": "You answered six questions about your safety. Here's what your answers say, without judgment.",
+   "pasFaute": "It isn't your fault. Nobody deserves to be afraid at home.",
+   "numerosTitre": "Who to call",
+   "numeros": [
+    {
+     "nom": "0808 2000 247",
+     "detail": "UK: National Domestic Abuse Helpline, free and confidential, 24 hours a day."
+    },
+    {
+     "nom": "1-800-799-7233",
+     "detail": "US: National Domestic Violence Hotline, free and confidential, 24/7. You can also text START to 88788."
+    },
+    {
+     "nom": "999 or 911",
+     "detail": "Emergency services if you're in immediate danger. In the UK, if you can't speak, call 999 and press 55."
+    }
+   ],
+   "apres": "You can also talk about it with your doctor, who is bound by confidentiality."
+  },
+  "equilibre": {
+   "intro": "Who takes care of what day to day, according to you, and how you feel about it.",
+   "penche": {
+    "moi": "You carry most of the practical side and the mental load.",
+    "autre": "{{autre}} carries most of the practical side and the mental load.",
+    "egal": "The practical side and the mental load are roughly shared."
+   },
+   "charge": "Keeping track of everything (appointments, bills, what's running out) is invisible work. When only one person carries it, tiredness and resentment set in, even if the tasks themselves are shared.",
+   "pese": "You said this way of sharing weighs on you: it's a subject to bring up, calmly, with a list in front of you rather than with complaints.",
+   "vaBien": "This way of sharing suits you: that's precious, a lot of couples argue about it.",
+   "bouts": {
+    "moi": "Me",
+    "autre": "{{autre}}"
+   },
+   "premierPas": {
+    "moi": "After an argument, it's mostly you who makes the first move.",
+    "autre": "After an argument, it's mostly {{autre}} who makes the first move.",
+    "egal": "After an argument, the first move comes from either of you."
+   }
+  },
+  "attachement": {
+   "intro": "Your attachment style says how you live closeness with {{autre}}: the need for reassurance on one side, the need for distance on the other. Six sentences aren't enough to define you, and this style shifts with relationships and over time.",
+   "axes": {
+    "anxiete": "Need for reassurance",
+    "evitement": "Need for distance"
+   },
+   "faible": "low",
+   "fort": "high",
+   "vous": "You",
+   "quadrants": {
+    "secure": "Secure",
+    "anxieux": "Anxious",
+    "evitant": "Avoidant",
+    "craintif": "Fearful"
+   },
+   "pasEtiquette": "It isn't a label for life. Attachment changes with relationships and over time, and you can work on it, on your own or with a psychologist.",
+   "source": "The four styles come from the work of Kim Bartholomew (1991). The sentences are written for your relationship with {{autre}}, as in Chris Fraley's questionnaire (2011)."
+  },
+  "styles": {
+   "secure": {
+    "titre": "Secure attachment",
+    "texte": "You're comfortable with closeness, and you don't live in fear of being abandoned. You can count on {{autre}} without losing yourself. It's a solid base to get through hard times.",
+    "aide": "What helps: keep saying what you feel, including when everything is fine."
+   },
+   "anxieux": {
+    "titre": "Anxious attachment",
+    "texte": "You need reassurance about {{autre}}'s feelings, and a silence or an unanswered message can quickly worry you. It doesn't mean you love too much: your inner alarm just goes off more easily.",
+    "aide": "What helps: say what you need rather than looking for it in the details (\"when you don't answer, I worry, can you send me a quick message?\"), and find reassurance elsewhere too, with your friends and your own plans."
+   },
+   "evitant": {
+    "titre": "Avoidant attachment",
+    "texte": "You value your independence, and showing what you feel deep down doesn't come naturally. When things are hard, you'd rather handle it on your own. To {{autre}}, it can look like distance.",
+    "aide": "What helps: share a little more than usual, even one sentence (\"I'm tired tonight, it's nothing to do with you\"), and let {{autre}} help you now and then."
+   },
+   "craintif": {
+    "titre": "Fearful attachment",
+    "texte": "You need reassurance and you're also afraid of getting too close. It's a hard mix to live with: you want closeness, and it worries you when it comes.",
+    "aide": "What helps: move forward in small steps, put words on what you feel (\"I want us to be close, and it scares me\"), and if it's heavy, talk about it with a psychologist."
+   }
+  },
+  "retient": {
+   "intro": "Psychologist Caryl Rusbult showed that people don't stay in a relationship only because they're happy in it. They also stay for what they've put into it, and because they imagine life without the other would be worse. Here's your balance.",
+   "tient": "What keeps you here",
+   "eloigne": "What pulls you away",
+   "mesures": {
+    "satisfaction": "What you live today",
+    "investissement": "What you've put into the relationship",
+    "alternatives": "Life without {{autre}} seems better to you",
+    "partir": "The thought of leaving",
+    "engagement": "Your wish for it to last"
+   },
+   "resultat": "All in all",
+   "choisisTitre": "What you chose",
+   "jamaisVerdict": "This report won't tell you to stay or to leave. Nobody can decide that for you. These questions are here to help you see clearly.",
+   "questionsTitre": "Questions to ask yourself",
+   "questionsDoute": [
+    "If nothing changed for a year, would that be OK with you?",
+    "What would need to change for you to want to stay? Have you talked about it with {{autre}}?",
+    "Are you staying for {{autre}}, or for what you've built together?",
+    "The last time you felt good with {{autre}}, when was it? What were you doing?",
+    "What would you say to a friend who told you the same thing?",
+    "Are you more afraid of leaving, or do you want to stay?",
+    "If you left, what would you miss the most? And what wouldn't you miss at all?"
+   ],
+   "questionsBien": [
+    "What does you good in this relationship, that you could say to {{autre}} more often?",
+    "What do you want to live together in the next two or three years?",
+    "What could pull you apart one day, and how would you see it coming?",
+    "Which little ritual of yours would you like to keep, whatever happens?"
+   ],
+   "securite": "Before asking yourself these questions, think about your safety first. A decision is easier to make once you have people around you, with the help of a helpline or a professional.",
+   "noms": {
+    "amour": "The love you have for {{autre}}",
+    "moments": "The good times you still have",
+    "construit": "What you've built together",
+    "enfants": "The children",
+    "espoir": "The hope it'll go back to how it was",
+    "seul": "The fear of being alone",
+    "argent": "Money or housing",
+    "regard": "What others think, family",
+    "habitude": "Habit"
+   }
+  },
+  "profils": {
+   "epanoui": {
+    "titre": "Committed, and doing well",
+    "texte": "You're happy with {{autre}} and you want it to last. You stay because you want to, not because you have to."
+   },
+   "attache": {
+    "titre": "Held by what you've built",
+    "texte": "You're not happy right now, and what keeps you here is mostly what you've built or what you'd lose by leaving. It happens a lot, and it's worth looking at honestly: you can stay for good reasons, as long as you know which ones."
+   },
+   "hesitant": {
+    "titre": "Torn",
+    "texte": "Part of you is attached to {{autre}}, another part has doubts. It's often the moment a relationship changes, one way or the other."
+   },
+   "eloigne": {
+    "titre": "Pulling away",
+    "texte": "Your answers say you're drifting away: the thought of leaving keeps coming back, or you no longer see a future with {{autre}}. This report doesn't tell you what to do, but it's worth listening to yourself."
+   }
+  },
+  "plan": {
+   "intro": "Three subjects, chosen from your answers. For each one: why it matters, a way to start, and what's better avoided.",
+   "pourquoi": "Why",
+   "ouvrir": "To start",
+   "eviter": "To avoid",
+   "choisi": "The subject you chose",
+   "numero": "Conversation {{n}}",
+   "avantTitre": "Before you start",
+   "moment": "Pick a calm moment: not in the middle of an argument, and not right before sleep.",
+   "reactions": [
+    "When you bring up a sensitive subject, {{autre}} talks about it and things move forward: that's a real strength, lean on it.",
+    "You talk about it, but nothing changes. Try ending each conversation with one specific thing to try for two weeks, then check in together.",
+    "{{autre}} shuts down or changes the subject. Give notice (\"I'd like us to talk about something this weekend\"), keep the conversation short, or write down what you want to say first.",
+    "{{autre}} gets angry. Pick a moment when you're both calm, and if that anger scares you, talk about it first with someone you trust or a couples counselor rather than raising it on your own."
+   ],
+   "deja": [
+    "You've already talked about it, and it helped: what worked once can work again.",
+    "You've talked about it several times, with no result. When a conversation goes round in circles, it's often the way you talk about it that's stuck, more than the subject. A couples counselor can help you get out of the loop, even if you go alone at first.",
+    "You tried, without managing to. Writing down what you want to say first, in three sentences, often helps you get past it.",
+    "You've never talked about it. Start with what you miss, not with what {{autre}} does wrong: people listen more easily to a request than to a complaint."
+   ],
+   "securiteTitre": "Three things to do for yourself",
+   "securiteActions": [
+    {
+     "titre": "Talk to someone you trust",
+     "texte": "A friend, someone in your family, your doctor. You don't have to tell everything: \"things aren't OK at home\" is enough to start."
+    },
+    {
+     "titre": "Call a helpline",
+     "texte": "It's free, anonymous and with no commitment. Someone listens and helps you see clearly, without pushing you into anything. The numbers are at the start of this report."
+    },
+    {
+     "titre": "Don't face what scares you alone",
+     "texte": "If {{autre}}'s reaction scares you, don't bring these subjects up one-on-one. Prepare first with a helpline or a professional."
+    }
+   ]
+  },
+  "sujets": {
+   "mepris": {
+    "titre": "Getting out of contempt",
+    "pourquoi": "Contempt is the sign that most often comes before a breakup. It doesn't go away by itself, but it fades when admiration comes back.",
+    "ouvrir": "\"I've noticed we throw digs at each other, me too. I'd like us to stop, I don't like how we talk to each other.\"",
+    "eviter": "Listing the other's jabs. Start with your own."
+   },
+   "fermeture": {
+    "titre": "Breaking the wall of silence",
+    "pourquoi": "When one shuts down, the other pushes, and the first shuts down even more. You end up feeling alone together.",
+    "ouvrir": "\"When things get heated, I feel like we cut ourselves off from each other. What if we allowed ourselves to take a break, and pick it up later?\"",
+    "eviter": "Chasing someone who has shut down. Suggest a time to pick it up again instead."
+   },
+   "critique": {
+    "titre": "Talking about the problem, not the person",
+    "pourquoi": "Criticism aimed at the person (\"you always...\") puts the other on the defensive. Criticism aimed at a fact leaves a chance to solve the problem.",
+    "ouvrir": "\"I'd like us to change the way we criticize each other. I'll try to say what bothers me without saying you're like this or like that.\"",
+    "eviter": "\"Always\" and \"never\": they're rarely true, and they're all the other remembers."
+   },
+   "reparation": {
+    "titre": "Making up faster",
+    "pourquoi": "Couples who last don't argue less than others, they make up faster. A joke, a gesture, a \"sorry\" is often enough.",
+    "ouvrir": "\"After our arguments, we stay upset for a long time. How do you think we could make up faster?\"",
+    "eviter": "Waiting for the other to make the first move every time."
+   },
+   "frequentes": {
+    "titre": "Arguing less often",
+    "pourquoi": "When arguments come back almost every day, it's often the same subject coming back in different forms.",
+    "ouvrir": "\"We argue a lot at the moment, and I think it's often about the same thing. Do you see what it is?\"",
+    "eviter": "Settling the real issue in the middle of an argument. Take a proper moment, calmly."
+   },
+   "defense": {
+    "titre": "Taking your share",
+    "pourquoi": "Defending yourself is a reflex. But when each person justifies themselves, nobody listens, and the argument goes round in circles.",
+    "ouvrir": "\"I've noticed I often get defensive when you criticize me. I'm going to try to hear you out.\"",
+    "eviter": "Answering a complaint with another complaint."
+   },
+   "garde": {
+    "titre": "Saying what bothers you",
+    "pourquoi": "What you keep to yourself doesn't disappear. It builds up, and it comes out all at once, often over a detail.",
+    "ouvrir": "\"There are things I don't tell you to avoid arguments. I'd like to talk to you about them, calmly, one at a time.\"",
+    "eviter": "Saying everything at once after months of silence."
+   },
+   "ecoute": {
+    "titre": "Feeling listened to",
+    "pourquoi": "Feeling listened to is one of the needs that matter most in a relationship. When it's missing, you end up not telling anything anymore.",
+    "ouvrir": "\"Sometimes I need you to listen without giving me a solution. Just to be there.\"",
+    "eviter": "Throwing it in the middle of a conversation (\"you never listen to me\"). Ask for what you need instead, calmly."
+   },
+   "soutien": {
+    "titre": "Being supported when things are bad",
+    "pourquoi": "It's in hard times that you find out what you can expect from the other. Feeling alone at that moment leaves marks.",
+    "ouvrir": "\"When things aren't going well for me, I need to feel you're there. Last time, I missed that.\"",
+    "eviter": "Waiting for the other to guess. Say what helps you: listening, a hug, a hand."
+   },
+   "reconnaissance": {
+    "titre": "Feeling appreciated",
+    "pourquoi": "Feeling appreciated for what you do and who you are protects a couple from wearing out. When you stop hearing it, you give less.",
+    "ouvrir": "\"I need to hear from time to time that what I do matters to you. And I'll try to tell you too.\"",
+    "eviter": "Keeping score of who does the most."
+   },
+   "nouvelles": {
+    "titre": "Sharing good news",
+    "pourquoi": "The way you receive the other's good news matters as much as support in bad times (Shelly Gable).",
+    "ouvrir": "\"When I tell you something that makes me happy, I'd like us to enjoy it together, even for two minutes.\"",
+    "eviter": "Taking it as a whim: it's a real way of feeling close."
+   },
+   "confiance": {
+    "titre": "Rebuilding trust",
+    "pourquoi": "Trust can be repaired, but slowly, with actions that hold over time, and never without talking about it.",
+    "ouvrir": "\"I find it hard to trust you right now, and I don't like it. I'd like us to talk about it, to understand what could help me.\"",
+    "eviter": "Snooping or checking up: it damages trust on both sides."
+   },
+   "soi": {
+    "titre": "Being yourself with {{autre}}",
+    "pourquoi": "Not feeling free to be yourself means playing a role at home. In the long run, you lose yourself in it.",
+    "ouvrir": "\"I feel like I'm watching everything I say with you. I'd like to feel more at ease, and understand why I don't.\"",
+    "eviter": "Presenting it as a complaint. Talk about what you feel."
+   },
+   "liberte": {
+    "titre": "Keeping room to breathe",
+    "pourquoi": "A couple holds up better when each person keeps time for themselves, their friends and their activities.",
+    "ouvrir": "\"I'd like a bit more time for myself, without it meaning I'm drifting away from you.\"",
+    "eviter": "Taking it in secret. Saying it reassures."
+   },
+   "admiration": {
+    "titre": "Finding admiration again",
+    "pourquoi": "Admiration is what best protects a couple from contempt. It wears thin when you only look at what's wrong.",
+    "ouvrir": "This one starts with you: for a week, write down each day one thing {{autre}} does well, and say at least one of them out loud.",
+    "eviter": "Waiting for admiration to come back on its own."
+   },
+   "tendresse": {
+    "titre": "More tenderness",
+    "pourquoi": "Tender gestures with no ulterior motive keep the bond alive. When they're missing, distance creeps in quietly.",
+    "ouvrir": "\"I miss cuddles, just like that, with nothing behind them. It would do me good.\"",
+    "eviter": "Making it a complaint. Just ask."
+   },
+   "desir": {
+    "titre": "Feeling desired",
+    "pourquoi": "Feeling desired matters to a lot of people, and it's one of the subjects people talk about least.",
+    "ouvrir": "\"I need to feel that you still find me attractive. I'd like us to talk about it, without pressure.\"",
+    "eviter": "Talking about it in bed, when things aren't going the way you'd like."
+   },
+   "temps": {
+    "titre": "Time together",
+    "pourquoi": "Couples who keep a moment for themselves every week more often say they're very happy (University of Virginia).",
+    "ouvrir": "\"What if we kept one evening a week just for us, no screens?\"",
+    "eviter": "Waiting until you have the time. You make time, you don't find it."
+   },
+   "rire": {
+    "titre": "Laughing together",
+    "pourquoi": "Laughing together is often the first sign things are fine, and the first thing to go when they're less fine.",
+    "ouvrir": "\"I miss us having a laugh together. Could we do something we used to love at the start?\"",
+    "eviter": "Making it a serious subject. Just suggest something."
+   },
+   "projets": {
+    "titre": "Your plans together",
+    "pourquoi": "Knowing where you're going together gives meaning to everyday life. Without shared plans, you live side by side more than together.",
+    "ouvrir": "\"I'd like us to talk about what we want for the next few years, you and me. Not to decide right away, just to know.\"",
+    "eviter": "Turning up with a plan that's already decided."
+   },
+   "partage": {
+    "titre": "Sharing everyday life",
+    "pourquoi": "When only one person carries the practical side and keeps track of everything, tiredness and resentment set in, even out of love.",
+    "ouvrir": "\"I feel like I'm the one who thinks of everything, and it wears me out. Could we write down everything that needs doing, and split it?\"",
+    "eviter": "Listing what the other doesn't do."
+   },
+   "rituels": {
+    "titre": "Keeping your rituals",
+    "pourquoi": "Couples who last have small rituals: a coffee in the morning, a message during the day, an evening of their own. They're what holds when life speeds up.",
+    "ouvrir": "\"I like our little habits. Shall we keep one just for us, whatever happens?\"",
+    "eviter": "Letting them disappear when life gets busy."
+   },
+   "nouveaute": {
+    "titre": "Doing new things",
+    "pourquoi": "Doing something new together brings you closer, even when everything is fine (Arthur Aron).",
+    "ouvrir": "\"What if we tried something we've never done, a weekend, an activity?\"",
+    "eviter": "Waiting for the perfect occasion."
+   },
+   "gratitude": {
+    "titre": "Saying thank you",
+    "pourquoi": "Thanking each other for small things keeps the bond alive. It's simple, and it gets lost quickly.",
+    "ouvrir": "A specific thank you, every day, for something small {{autre}} did: \"Thanks for thinking of...\"",
+    "eviter": "Assuming the other already knows."
+   }
+  },
+  "deux": {
+   "texte": "The assessment for two compares your answers topic by topic: you find out where you agree without ever having said so, and where each of you thought the other felt the same.",
+   "motifs": {
+    "refuse": "{{autre}} didn't want to take part. If that changes one day, the assessment for two will show you {{autre}}'s answers next to yours.",
+    "nose": "You didn't dare suggest it. This report can help you find the words, and the assessment for two is done on separate phones, without seeing the other's answers before the end."
+   },
+   "points": [
+    "100 questions, each on your own phone, at your own pace",
+    "Your answers side by side, topic by topic",
+    "The topics that bring you together, the ones that pull you apart, and how to talk about them"
+   ],
+   "lien": "quiz-couple.com/en/relationship-assessment/",
+   "lienTexte": "To take it:"
+  },
+  "methode": {
+   "intro": "The questions are based on published research in couples psychology, written in our own words. The calculations are simple: each answer has a value, and each chapter takes the average of its questions.",
+   "sources": [
+    "John Gottman and Robert Levenson: the four ways of arguing that predict a breakup (criticism of the person, contempt, defensiveness, stonewalling) and repair.",
+    "Shelly Gable (2004): how people respond to their partner's good news.",
+    "Caryl Rusbult (1980, 1983) and the review by Benjamin Le and Christopher Agnew (2003): satisfaction, investment and alternatives, what makes people stay.",
+    "Kim Bartholomew and Leonard Horowitz (1991), Kelly Brennan, Catherine Clark and Phillip Shaver (1998), Chris Fraley (2011): attachment in two dimensions.",
+    "The intimate partner violence screening questionnaires used by doctors, for the part on safety.",
+    "The National Marriage Project at the University of Virginia (2012) for time together, Arthur Aron (2000) for shared novelty."
+   ],
+   "avertissement": "This report is a tool to see clearly, not a diagnosis. It doesn't replace a psychologist, a couples counselor or a doctor, and it doesn't predict the future of your relationship: it says what your answers say today.",
+   "confidentialite": "Your answers are only used for this report. Nobody but you sees it, and nothing has been sent to {{autre}}."
+  },
+  "pied": "My Relationship Check-Up · confidential"
+ }
+}

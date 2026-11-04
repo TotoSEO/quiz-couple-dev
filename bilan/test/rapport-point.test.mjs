@@ -92,3 +92,20 @@ test('la balance : ce qui retient, ce qui éloigne, et l\'envie que ça dure à 
   const resultat = html.slice(html.indexOf('rpt-resultat'), html.indexOf('rpt-resultat') + 1200);
   assert.ok(resultat.includes(esc(TP.rapport.retient.mesures.engagement)));
 });
+
+test('une ligne numérotée garde son texte en un seul élément, prénom compris', () => {
+  // Les lignes de .rap-conseils sont des grilles : un prénom (span.rpt-nom)
+  // posé seul y prenait la colonne du numéro et se coupait lettre par lettre
+  // (« Maximilian-Alexander Ostermann », 4 novembre 2026).
+  for (const lang of LANGUES.filter((l) => fs.existsSync(fichier(l)))) {
+    const TP = lire(lang);
+    for (const { nom, d } of cas(lang)) {
+      const { html } = rapportPointHtml(d, TP, { format: 'pdf' });
+      for (const liste of html.match(/<ol class="rap-conseils[^"]*">[\s\S]*?<\/ol>/g) || []) {
+        for (const li of liste.match(/<li>[\s\S]*?<\/li>/g) || []) {
+          assert.match(li, /^<li><span>[\s\S]*<\/span><\/li>$/, `${lang} ${nom} : ${li.slice(0, 80)}`);
+        }
+      }
+    }
+  }
+});

@@ -1,6 +1,6 @@
 {
   "title": "Terms of sale",
-  "majLe": "Last updated: 22 October 2026",
+  "majLe": "Last updated: 4 November 2026",
   "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
   "liens": {
     "contact": "contact page",
@@ -22,15 +22,15 @@
     {
       "titre": "1. What is sold",
       "p": [
-        "The relationship assessment is a questionnaire that two partners each answer separately, or that one person answers alone, also saying what they think their partner would answer (solo mode). Answering the questions is free; no result is given without a purchase.",
-        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document, downloaded from the personal link sent by email, and the same version available on the assessment page.",
+        "The relationship assessment is a questionnaire that two partners each answer separately. It also exists for one person on their own, under the name \"My Relationship Check-Up\" (solo mode): that person answers about their own relationship, without their partner taking part. Answering the questions is free; no result is given without a purchase.",
+        "What is sold is the report. For two: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). On your own: a report on the relationship as seen by the person who answered (state of the relationship, climate, needs, signs in arguments and about safety, sharing of everyday life, attachment style, what keeps them in the relationship, plan to talk about it). The report is digital content: a PDF document, downloaded from the personal link sent by email, and the same version available on the assessment page.",
         "The assessment is for adults only. The report is an ordinary PDF file that opens in any PDF reader, on a phone or a computer; the same version can be read on the assessment page. The terms that apply to a purchase are those online at the time of payment."
       ]
     },
     {
       "titre": "2. The price",
       "p": [
-        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both. In solo mode, the report is only provided to the person who answered.",
+        "The report of the assessment for two costs {{prix}}, VAT not applicable. A single payment, made by either partner, unlocks the report for both. The report of My Relationship Check-Up (solo mode) costs {{prixPoint}}, VAT not applicable, and is only provided to the person who answered; a solo assessment started before 4 November 2026 keeps the price shown when it was started. It's a one-off payment, with no subscription.",
         "The price is shown on the assessment page before the first question, and again before payment.",
         "A discount may be offered for a limited time. It is then shown on the assessment page, with the usual price crossed out, and applied automatically on the payment page: the amount paid is the one shown on the payment page before you confirm.",
         "A different price may apply depending on the region of the device used, for example in Latin America. It is shown before payment, and the amount paid is the one shown on the payment page before you confirm."
