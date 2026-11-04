@@ -865,7 +865,9 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   // décrire le test sans transformer la page en annuaire de 244 titres.
   const CAP = 60;
   const showOptions = !NO_OPTION_TYPES.has(quizType);
-  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  // La sixième lettre : le « moment à soi » de six questions des langages
+  // de l'amour.
+  const optLetters = ['a', 'b', 'c', 'd', 'e', 'f'];
   const items = [];
   // Vrai seulement si la table contenait encore des questions au moment où le
   // plafond est tombé. Le comparer au plafond ne suffit pas : un réservoir qui

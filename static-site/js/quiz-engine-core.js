@@ -6770,6 +6770,13 @@ var QuizEngine = (function() {
     this.axes = config.axes || PROFILE_AXES_DEFAUT;
     this.axisLabels = config.axisLabels || { secure: 'Sécure', anxious: 'Anxieux', avoidant: 'Évitant' };
     this.classifier = typeof config.classify === 'function' ? config.classify : null;
+    // Réponses comptées à part, sans barre : le moment à soi des langages de
+    // l'amour. Choisies au moins « seuil » fois, elles ajoutent une carte au
+    // résultat (voir renderResults).
+    this.nuances = config.nuances || [];
+    // Classement complet des axes, pour nommer le second sous le titre.
+    this.classement = typeof config.classement === 'function' ? config.classement : null;
+    this.rangLabels = config.rangLabels || null;
     this.dureeMeta = config.dureeMeta || null;
     this.introTitle = config.introTitle || tg('attachment.introTitle', 'Quel est votre style d\'attachement ?');
     this.resultLabel = config.resultLabel || tg('attachment.yourStyle', 'Votre style d\'attachement');
@@ -6796,7 +6803,20 @@ var QuizEngine = (function() {
   ProfileQuiz.prototype.tallyVierge = function() {
     var t = {};
     for (var i = 0; i < this.axes.length; i++) t[this.axes[i].id] = 0;
+    for (var j = 0; j < this.nuances.length; j++) t[this.nuances[j].id] = 0;
     return t;
+  };
+
+  // Les réponses données, question par question : une typologie qui doit
+  // départager deux axes à égalité y regarde ce qui a été choisi aux
+  // questions qu'elle juge décisives.
+  ProfileQuiz.prototype.contexte = function() {
+    var reponses = [];
+    var n = Math.min(this.nbPosees(), this.questions.length);
+    for (var i = 0; i < n; i++) {
+      reponses.push({ q: this.questions[i].id, axe: this.answers[i] || null });
+    }
+    return { reponses: reponses };
   };
 
   // Quel axe marque cette réponse. La plupart des typologies rattachent une
@@ -6853,7 +6873,7 @@ var QuizEngine = (function() {
     // Shuffle display order so users can't pattern-pick a fixed letter; the
     // category mapping keys off the option id, so order never affects scoring.
     var shown = shuffleArray(q.options);
-    var letters = ['A', 'B', 'C', 'D', 'E'];
+    var letters = ['A', 'B', 'C', 'D', 'E', 'F'];
     shown.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
@@ -6941,7 +6961,7 @@ var QuizEngine = (function() {
 
   ProfileQuiz.prototype.classify = function() {
     var n = this.nbPosees();
-    if (this.classifier) return this.classifier(this.tally, n);
+    if (this.classifier) return this.classifier(this.tally, n, this.contexte());
     var s = this.tally.secure, anx = this.tally.anxious, av = this.tally.avoidant;
     if (s >= Math.ceil(n * 0.45)) return 'secure';
     // Both insecure axes substantial → disorganized (fearful-avoidant)
@@ -6970,7 +6990,30 @@ var QuizEngine = (function() {
 
     wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '🔗'));
     wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', this.resultLabel));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-5 quiz-reveal-enter', esc(profile.title || key)));
+    var titre = el('h2', 'text-2xl font-bold mb-5 quiz-reveal-enter', esc(profile.title || key));
+    wrap.appendChild(titre);
+
+    // Le second du classement, sous le titre : « langage secondaire », ou
+    // « à égalité avec » quand il a autant de réponses que le premier et
+    // n'a perdu qu'au départage. Rien quand le second est à égalité avec le
+    // troisième : le nommer serait tirer au sort.
+    if (this.classement && this.rangLabels) {
+      var rang = this.classement(this.tally, n, this.contexte());
+      var suite = [];
+      for (var r = 0; r < rang.length; r++) { if (rang[r] !== key) suite.push(rang[r]); }
+      var second = suite[0] || null;
+      var nPremier = this.tally[key] || 0;
+      var nSecond = second ? (this.tally[second] || 0) : 0;
+      var nTroisieme = suite[1] ? (this.tally[suite[1]] || 0) : 0;
+      var modele = nSecond === nPremier ? this.rangLabels.egal : this.rangLabels.second;
+      if (second && nSecond > 0 && nSecond > nTroisieme && modele) {
+        var ligne = el('p', 'text-sm text-muted-foreground mb-5 quiz-reveal-enter');
+        ligne.innerHTML = esc(modele).replace('{{axe}}',
+          '<strong class="text-foreground">' + esc(this.axisLabels[second] || second) + '</strong>');
+        titre.className = 'text-2xl font-bold mb-2 quiz-reveal-enter';
+        wrap.appendChild(ligne);
+      }
+    }
 
     // ── Axis breakdown bars ──
     var breakdown = el('div', 'profile-breakdown max-w-md mx-auto mb-6');
@@ -6995,6 +7038,18 @@ var QuizEngine = (function() {
       var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
       advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(profile.advice);
       wrap.appendChild(advice);
+    }
+
+    // Une carte par nuance choisie assez souvent, avec le nombre de fois.
+    for (var iNu = 0; iNu < this.nuances.length; iNu++) {
+      var nuance = this.nuances[iNu];
+      var fois = this.tally[nuance.id] || 0;
+      if (fois < (nuance.seuil || 2) || !nuance.titre) continue;
+      var carteNu = el('div', 'text-sm text-foreground bg-secondary/5 border border-secondary/30 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      carteNu.setAttribute('data-nuance', nuance.id);
+      carteNu.innerHTML = '<strong class="block mb-2">' + (nuance.icone ? esc(nuance.icone) + ' ' : '') + esc(nuance.titre) + '</strong>' +
+        esc(String(nuance.texte || '').replace('{{n}}', fois));
+      wrap.appendChild(carteNu);
     }
 
     renderActionButtons(wrap, {

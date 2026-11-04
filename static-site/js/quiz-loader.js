@@ -299,14 +299,16 @@
     // quinze, puis propose le resultat ou la suite. Les deux modes tirent dans
     // le meme lot de trente et partagent la meme table : ce qui change est le
     // rang auquel on s'arrete, pas ce qu'on mesure.
-    // Aucun desequilibre a craindre du tirage : chaque question propose les
-    // cinq langages en options, quinze questions les proposent donc quinze
-    // fois chacun, quelles que soient celles qui sortent.
+    // Depuis le 4 novembre 2026, les questions se posent dans l'ordre du
+    // fichier : deux blocs de quinze, chacun equilibre (chaque langage y a
+    // douze occasions) et construit pour alterner les formats, situation,
+    // duel, ce qui blesse. La version courte pose le premier bloc entier,
+    // jamais quinze questions tirees au hasard dans les trente.
     'langage-amour':  { modesGrand: true, modes: [
       { id: 'court',   emoji: '💗', prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30, limite: 15,
-        quizType: 'langage-amour', typologie: 'langageAmour' },
+        quizType: 'langage-amour', typologie: 'langageAmour', dansLOrdre: true },
       { id: 'complet', emoji: '💞', prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30,
-        quizType: 'langage-amour', typologie: 'langageAmour' }
+        quizType: 'langage-amour', typologie: 'langageAmour', dansLOrdre: true }
     ] },
 
     // ── Personnalite amoureuse (typologie a quatre axes) ──
@@ -1302,7 +1304,9 @@
         continue;
       }
 
-      var optLetters = ['a', 'b', 'c', 'd', 'e'];
+      // La sixieme lettre sert aux langages de l'amour, dont six situations
+      // proposent « un moment a soi » en plus des cinq langages.
+      var optLetters = ['a', 'b', 'c', 'd', 'e', 'f'];
 
       // Option discovery: prefer NATIVE options (no FR fallback) so a non-FR
       // quiz never inherits FR-only options it doesn't actually have (e.g. FR
@@ -2545,52 +2549,117 @@
 
     // Les cinq langages de Gary Chapman. Pas de profil composite ici : le
     // langage le plus choisi est le résultat, les cinq barres montrent le
-    // reste du profil.
-    langageAmour: {
-      icone: '💕',
-      // Quel langage marque quelle lettre. Le sens des lettres tourne d'une
-      // question a l'autre : cinq permutations qui se repetent tous les cinq
-      // rangs, pour que chaque langage soit propose autant de fois a chaque
-      // position et qu'on ne puisse pas repondre « toujours a » sans lire.
-      // C'est donc une fonction, pas une table figee. Elle vit ici plutot que
-      // dans la configuration parce que les deux formats de la page la
-      // partagent : ils mesurent la meme chose, ils s'arretent seulement a des
-      // rangs differents.
-      carte: (function() {
-        var LANGS = ['words', 'acts', 'gifts', 'time', 'touch'];
-        var PERMS = [
-          [0, 1, 2, 3, 4], // words, acts,  gifts, time,  touch
-          [3, 4, 0, 1, 2], // time,  touch, words, acts,  gifts
-          [1, 2, 3, 4, 0], // acts,  gifts, time,  touch, words
-          [4, 0, 1, 3, 2], // touch, words, acts,  time,  gifts
-          [2, 3, 4, 0, 1]  // gifts, time,  touch, words, acts
-        ];
-        return function(optId, questionId) {
-          var col = ['a', 'b', 'c', 'd', 'e'].indexOf(optId);
-          if (col < 0) return null;
-          return LANGS[PERMS[(questionId - 1) % 5][col]];
-        };
-      })(),
-      axes: [
-        { id: 'words', color: '#6366f1', defaut: 'Paroles valorisantes' },
-        { id: 'acts',  color: '#10b981', defaut: 'Services rendus' },
-        { id: 'gifts', color: '#f59e0b', defaut: 'Cadeaux' },
-        { id: 'time',  color: '#3b82f6', defaut: 'Moments de qualité' },
-        { id: 'touch', color: '#ec4899', defaut: 'Toucher physique' }
-      ],
-      profils: ['words', 'acts', 'gifts', 'time', 'touch'],
-      // Les textes de résultat de ce test sont rangés sous r_<clé>_… et non
-      // sous pf_<clé>_… comme les deux typologies précédentes.
-      cleProfil: 'r_',
-      classify: function(t) {
-        var ordre = ['words', 'acts', 'gifts', 'time', 'touch'];
-        var tete = ordre[0];
-        for (var i = 1; i < ordre.length; i++) {
-          if ((t[ordre[i]] || 0) > (t[tete] || 0)) tete = ordre[i];
+    // reste du profil, et la ligne sous le titre nomme le langage secondaire.
+    //
+    // Questionnaire revu le 4 novembre 2026, après des retours comme
+    // « questions trop répétitives et faciles à catégoriser » et « il manque
+    // des réponses où l'un des deux veut un moment seul(e) ». Avant, les
+    // trente questions avaient toutes la même forme (cinq réponses, une par
+    // langage, toujours écrites avec les mêmes mots) et cinq d'entre elles
+    // parlaient de fatigue ou de stress. Désormais, deux blocs de quinze,
+    // posés dans l'ordre du fichier, et chacun équilibré : sept situations
+    // concrètes, cinq duels à deux réponses (les dix duels couvrent toutes
+    // les paires de langages, chaque bloc la moitié), deux questions sur ce
+    // qui blesse ou ce qui manque, une sur ce qu'on fait soi-même pour
+    // montrer son amour. Chaque langage a douze occasions par bloc : la
+    // version courte, qui pose le premier, mesure les cinq à parts égales.
+    langageAmour: (function() {
+      var LANGS = ['words', 'acts', 'gifts', 'time', 'touch'];
+      // Quel langage marque quelle lettre, question par question. Une seule
+      // table pour les six langues : chaque traduction range ses réponses
+      // dans l'ordre de ces lettres. L'affichage les mélange, si bien que la
+      // position d'une réponse à l'écran ne dit rien de son langage.
+      // « space » est le moment à soi, proposé dans six situations : ce n'est
+      // pas un langage, il ne compte dans aucune barre (voir « nuances »).
+      var CARTE = {
+        1: 'time touch words acts gifts space',
+        2: 'acts words',
+        3: 'gifts time acts touch words',
+        4: 'touch time acts gifts words space',
+        5: 'words acts gifts time touch',
+        6: 'gifts acts',
+        7: 'acts touch time gifts words',
+        8: 'words gifts touch acts time',
+        9: 'time gifts',
+        10: 'words touch time acts gifts space',
+        11: 'time words touch gifts acts',
+        12: 'touch time',
+        13: 'touch acts words gifts time',
+        14: 'time words acts touch gifts',
+        15: 'words touch',
+        16: 'acts time words touch gifts space',
+        17: 'gifts words',
+        18: 'words acts gifts time touch',
+        19: 'acts touch words time gifts',
+        20: 'touch gifts',
+        21: 'time gifts acts touch words',
+        22: 'gifts words time acts touch',
+        23: 'acts touch',
+        24: 'words time acts touch gifts space',
+        25: 'acts time words touch gifts',
+        26: 'time acts',
+        27: 'words touch gifts time acts',
+        28: 'touch words time acts gifts space',
+        29: 'words time',
+        30: 'touch acts gifts time words'
+      };
+      var TABLE = {};
+      Object.keys(CARTE).forEach(function(n) { TABLE[n] = CARTE[n].split(' '); });
+      // Ce qui blesserait, ce qui ferait douter, la phrase qui ferait mal, ce
+      // qui manque quand l'autre est loin : Chapman y voit le meilleur indice
+      // du langage principal. Ces quatre questions départagent deux langages
+      // à égalité, puis le duel qui les a opposés s'il a été posé. Avant, une
+      // égalité revenait toujours au premier de la liste, les paroles.
+      var DECISIVES = [5, 14, 19, 28];
+      function classement(t, n, ctx) {
+        var dec = {}, duels = {};
+        var reps = (ctx && ctx.reponses) || [];
+        for (var i = 0; i < reps.length; i++) {
+          var r = reps[i];
+          if (!r || !r.axe) continue;
+          if (DECISIVES.indexOf(r.q) !== -1) dec[r.axe] = (dec[r.axe] || 0) + 1;
+          var paire = TABLE[r.q];
+          if (paire && paire.length === 2) duels[paire.slice().sort().join('|')] = r.axe;
         }
-        return tete;
+        return LANGS.slice().sort(function(a, b) {
+          var d = (t[b] || 0) - (t[a] || 0);
+          if (d) return d;
+          d = (dec[b] || 0) - (dec[a] || 0);
+          if (d) return d;
+          var gagnant = duels[[a, b].sort().join('|')];
+          if (gagnant === a) return -1;
+          if (gagnant === b) return 1;
+          return LANGS.indexOf(a) - LANGS.indexOf(b);
+        });
       }
-    }
+      return {
+        icone: '💕',
+        // Une fonction plutôt qu'une table figée : les deux formats de la
+        // page la partagent, ils mesurent la même chose et s'arrêtent
+        // seulement à des rangs différents.
+        carte: function(optId, questionId) {
+          var l = TABLE[questionId];
+          var col = (typeof optId === 'string' && optId.length === 1) ? 'abcdef'.indexOf(optId) : -1;
+          return (l && col >= 0 && l[col]) || null;
+        },
+        axes: [
+          { id: 'words', color: '#6366f1', defaut: 'Paroles valorisantes' },
+          { id: 'acts',  color: '#10b981', defaut: 'Services rendus' },
+          { id: 'gifts', color: '#f59e0b', defaut: 'Cadeaux' },
+          { id: 'time',  color: '#3b82f6', defaut: 'Moments de qualité' },
+          { id: 'touch', color: '#ec4899', defaut: 'Toucher physique' }
+        ],
+        // Choisi deux fois au moins, le moment à soi ajoute une carte au
+        // résultat (textes nuance_space_t et nuance_space_d de gd.json).
+        nuances: [{ id: 'space', seuil: 2, icone: '🌿' }],
+        profils: LANGS.slice(),
+        // Les textes de résultat de ce test sont rangés sous r_<clé>_… et non
+        // sous pf_<clé>_… comme les deux typologies précédentes.
+        cleProfil: 'r_',
+        classement: classement,
+        classify: function(t, n, ctx) { return classement(t, n, ctx)[0]; }
+      };
+    })()
   };
 
   // Test âme sœur : un indice, un verdict tiré de la forme du profil, et une
@@ -3094,6 +3163,28 @@
       axisLabels: axisLabels
     };
     if (typo.classify) opts.classify = typo.classify;
+    function lu(cle) {
+      var plein = cfg.prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, '');
+      return (v && v !== plein) ? v : '';
+    }
+    // Les réponses qui ne sont pas un axe (le moment à soi des langages de
+    // l'amour) : comptées à part, sans barre, et dites dans une carte du
+    // résultat quand elles reviennent assez souvent.
+    var nuances = (typo.nuances || []).map(function(nu) {
+      return {
+        id: nu.id, seuil: nu.seuil || 2, icone: nu.icone || '',
+        titre: lu('nuance_' + nu.id + '_t'),
+        texte: lu('nuance_' + nu.id + '_d')
+      };
+    }).filter(function(nu) { return nu.titre && nu.texte; });
+    if (nuances.length) opts.nuances = nuances;
+    // Le classement complet, pour nommer le langage secondaire sous le titre
+    // (ou celui qui fait jeu égal avec le premier).
+    if (typo.classement) {
+      opts.classement = typo.classement;
+      opts.rangLabels = { second: lu('secondLabel'), egal: lu('egalLabel') };
+    }
     // Intitulés propres au quiz, sinon ceux du test d'attachement.
     var intro = QuizEngine.tgd(cfg.prefix + '.introTitle', '');
     var etiquette = QuizEngine.tgd(cfg.prefix + '.linkLabel', '');
