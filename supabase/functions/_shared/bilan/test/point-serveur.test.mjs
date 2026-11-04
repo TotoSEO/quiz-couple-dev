@@ -233,6 +233,9 @@ test('le rappel du point, un jour après, avec ses propres mots', async () => {
 test('la page compte le départ du point, la carte des célibataires', async () => {
   const { appel, stockage } = monter();
   const n = (ev, cle) => stockage.compteurs.filter((x) => x.evenement === ev && (cle === undefined || x.cle === cle)).length;
+  // Le départ du point ne recompte pas le départ, déjà compté au premier
+  // écran de création.
+  await appel({ action: 'vue', quoi: 'depart', mode: 'solo' });
   await appel({ action: 'vue', quoi: 'depart', mode: 'solo', formule: 'point' });
   assert.equal(n('depart'), 1);
   assert.equal(n('depart_solo'), 1);

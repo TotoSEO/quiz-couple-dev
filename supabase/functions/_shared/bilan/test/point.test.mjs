@@ -163,6 +163,16 @@ test('l\'ordre des chapitres suit ce que la personne veut savoir en premier', ()
   assert.equal(C.analyserPoint(reponses(0, { pd2: 1 })).chapitres[1], 'disputes');
 });
 
+test('les chapitres du sommaire sont ceux du rapport', () => {
+  for (const pd2 of [0, 1, 2, 3]) {
+    const sans = C.analyserPoint(reponses(0, { pd2 }));
+    assert.deepEqual(C.chapitresPoint(C.POINT_PRIORITES[pd2], false), sans.chapitres);
+    const alerte = C.analyserPoint(reponses(0, { pd2, ps5: 2 }));
+    assert.equal(alerte.securite.niveau, 'alerte');
+    assert.deepEqual(C.chapitresPoint(C.POINT_PRIORITES[pd2], true), alerte.chapitres);
+  }
+});
+
 test('l\'aperçu gratuit ne dit que des chiffres', () => {
   const ap = C.apercuPoint(reponses(1, { px3: 2, pb0: 1, pc2: 3 }));
   assert.deepEqual(Object.keys(ap).sort(), ['attachement', 'climat', 'etat', 'manques', 'priorite', 'refus', 'securite', 'signaux']);

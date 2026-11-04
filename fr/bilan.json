@@ -31,7 +31,7 @@
       "modeDuo": "À deux",
       "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
       "modeSolo": "Seul(e)",
-      "modeSoloAide": "Vous répondez pour vous, et sur les sujets qui comptent le plus, vous dites aussi ce que votre partenaire répondrait. Votre partenaire n'est pas prévenu(e) et ne voit rien.",
+      "modeSoloAide": "Le point sur ma relation : 50 questions sur ce que vous vivez dans votre couple, pour vous seul(e). Votre partenaire n'est pas prévenu(e) et ne voit rien.",
       "prenomsTitre": "Vos deux prénoms",
       "moi": "Votre prénom",
       "autre": "Le prénom de votre partenaire",
@@ -704,7 +704,8 @@
         "apportNote": "50 questions sur ce que vous vivez, environ 12 minutes. Vous pouvez faire une pause et reprendre plus tard.",
         "accordAide": "Vos réponses, y compris sur votre intimité et votre sécurité, ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
         "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prixPoint}} : vous le débloquez quand vous avez fini.",
-        "creer": "Commencer mon point"
+        "creer": "Commencer mon point",
+        "soloNote": "Vous faites le point seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport."
       },
       "domaine": {
         "nb": "{{n}} questions, environ {{min}} min",
@@ -745,7 +746,7 @@
           "Trois choses à faire pour vous, et qui appeler"
         ],
         "securiteTitre": "Votre sécurité d'abord",
-        "securite": "Certaines de vos réponses parlent de peur, de contrôle ou de violence. Ce n'est pas de votre faute, et vous n'êtes pas seul(e) : ces numéros sont gratuits et anonymes.",
+        "alerte": "Certaines de vos réponses parlent de peur, de contrôle ou de violence. Ce n'est pas de votre faute, et vous n'êtes pas seul(e) : ces numéros sont gratuits et anonymes.",
         "vigilance": "Certaines de vos réponses parlent de peur, de contrôle ou d'humiliation. Si vous avez besoin d'en parler, ces numéros sont gratuits et anonymes.",
         "numeros": [
           "3919 : Violences Femmes Info, gratuit, anonyme, 24 h sur 24",

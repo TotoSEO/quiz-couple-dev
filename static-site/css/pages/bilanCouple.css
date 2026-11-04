@@ -738,3 +738,56 @@ body.bilan-focus .related-tests-section, body.bilan-focus .pqx-section { display
   .bilan-colle { left: 50%; right: auto; bottom: 1rem; width: min(34rem, calc(100% - 2rem)); transform: translateX(-50%);
     padding: .6rem .7rem .6rem 1.1rem; border: 1px solid hsl(var(--border)); border-radius: 1rem; box-shadow: 0 18px 40px -18px hsl(var(--foreground) / .45); }
 }
+
+/* ── Le point sur ma relation (seul(e), depuis le 4 novembre 2026) ───────
+   bilan.js, FORMULE 'point' : les cases à cocher de « ce qui compte le
+   plus » et « ce qui vous retient » (un carré au lieu du rond), les numéros
+   d'aide sous les questions de sécurité, et l'écran « votre point est prêt » :
+   l'état de la relation en pastille, quatre tuiles (deux sur deux sur
+   téléphone), les numéros en premier quand les réponses parlent de violence,
+   et ce que le rapport dit en plus, sous un cadenas. Aplats, sans dégradé. */
+.bilan-option-case { flex: none; position: relative; width: 1.3rem; height: 1.3rem; border-radius: .35rem; border: 2px solid hsl(var(--ink)); background: hsl(var(--card)); }
+.bilan-option--case.choisie .bilan-option-case { border-color: hsl(var(--primary)); background: hsl(var(--primary)); }
+.bilan-option--case.choisie .bilan-option-case::after {
+  content: ''; position: absolute; left: .34rem; top: .1rem; width: .32rem; height: .62rem;
+  border: solid hsl(var(--card)); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+}
+.bilan-q-secu { margin: .9rem 0 0; padding: .6rem .8rem; border-radius: .75rem; background: hsl(var(--muted) / .55); font-size: .84rem; line-height: 1.45; }
+
+.bilan-scene .bilan-pret-etat { display: grid; justify-items: center; gap: .1rem; margin: .2rem auto .7rem; padding: .6rem 1rem .65rem; max-width: 22rem;
+  border-radius: 1rem; text-align: center; background: hsl(var(--secondary) / .08); border: 2px solid hsl(var(--secondary) / .25); }
+.bilan-scene .bilan-pret-etat-lib { margin: 0; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.bilan-scene .bilan-pret-etat-titre { margin: 0; font-family: var(--blp-titre); font-weight: 600; font-size: 1.3rem; line-height: 1.2; color: hsl(var(--foreground)); overflow-wrap: break-word; }
+.bilan-scene .bilan-pret-etat--epanouie { background: #e3f2ea; border-color: #b6dcc7; }
+.bilan-scene .bilan-pret-etat--solide { background: #fbf0d3; border-color: #ecd593; }
+.bilan-scene .bilan-pret-etat--fragile, .bilan-scene .bilan-pret-etat--securite { background: #f8e1e1; border-color: #eab6b7; }
+.dark .bilan-scene .bilan-pret-etat--epanouie { background: hsl(152 40% 30% / .3); border-color: hsl(152 40% 45% / .5); }
+.dark .bilan-scene .bilan-pret-etat--solide { background: hsl(42 70% 40% / .26); border-color: hsl(42 70% 50% / .45); }
+.dark .bilan-scene .bilan-pret-etat--fragile, .dark .bilan-scene .bilan-pret-etat--securite { background: hsl(359 50% 40% / .28); border-color: hsl(359 50% 55% / .45); }
+
+.bilan-scene .bilan-tuiles--point { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 560px) { .bilan-scene .bilan-tuiles--point { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.bilan-scene .bilan-tuiles--point .bilan-tuile { align-content: center; min-height: 4.6rem; }
+.bilan-scene .bilan-tuile-pc { font-size: .55em; }
+.bilan-scene .bilan-tuile--climat { background: #ece6f6; color: #57398c; }
+.bilan-scene .bilan-tuile--signaux { background: #f8e1e1; color: #9c2b2d; }
+.bilan-scene .bilan-tuile--manques { background: #fbf0d3; color: #7a5506; }
+.bilan-scene .bilan-tuile--attachement { background: #fbe4ed; color: #9b2f5c; }
+.bilan-scene .bilan-tuile--attachement .bilan-tuile-n { font-size: 1.02rem; line-height: 1.2; overflow-wrap: anywhere; hyphens: auto; }
+.dark .bilan-scene .bilan-tuile--climat { background: hsl(270 40% 40% / .32); color: #cdb8f0; }
+.dark .bilan-scene .bilan-tuile--signaux { background: hsl(359 50% 40% / .32); color: #f3a9aa; }
+.dark .bilan-scene .bilan-tuile--manques { background: hsl(42 70% 40% / .3); color: #f2d28a; }
+.dark .bilan-scene .bilan-tuile--attachement { background: hsl(335 50% 40% / .32); color: #f3b0cb; }
+
+.bilan-scene .bilan-pret-secu { margin: .2rem 0 .9rem; padding: .85rem 1rem .9rem; border-radius: 1rem; background: #f8e1e1; color: #6e1d1f; border: 2px solid #eab6b7; font-size: .9rem; line-height: 1.45; }
+.dark .bilan-scene .bilan-pret-secu { background: hsl(359 50% 40% / .28); color: #f6c9ca; border-color: hsl(359 50% 55% / .45); }
+.bilan-scene .bilan-pret-secu p { margin: 0 0 .5rem; }
+.bilan-scene .bilan-pret-secu-titre { font-family: var(--blp-titre); font-weight: 600; font-size: 1.1rem; }
+.bilan-scene .bilan-pret-numeros { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; font-weight: 700; }
+
+.bilan-scene .bilan-verrou { background: hsl(var(--muted) / .5); }
+.bilan-scene .bilan-verrou .bilan-pret-quoi { margin: 0 0 .7rem; }
+.bilan-scene .bilan-verrou-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.bilan-scene .bilan-verrou-liste li { display: grid; grid-template-columns: 1.1rem minmax(0, 1fr); gap: .55rem; align-items: start; font-size: .9rem; line-height: 1.42; overflow-wrap: break-word; hyphens: auto; }
+.bilan-scene .bilan-verrou-liste svg { width: 1.05rem; height: 1.05rem; margin-top: .12rem; color: hsl(var(--secondary-texte)); }
+.bilan-scene .bilan-couv--point::after { display: none; }

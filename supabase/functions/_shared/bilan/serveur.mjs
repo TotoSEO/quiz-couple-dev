@@ -445,6 +445,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, cour
     else if (quoi === 'invitation_vue') cle = corps.cle === 'qr' ? 'qr' : '';
     else if (quoi === 'offre_vue') cle = C.zoneValide(corps.cle);
     else if (quoi === 'celib_carte_vue' || quoi === 'celib_carte_clic') cle = typeof corps.cle === 'string' && PAGE_SITE.test(corps.cle) ? corps.cle : 'autre';
+    // Le départ du point : la page a déjà compté le départ (et le départ
+    // seul(e)) au premier écran de création ; le formulaire du point, qui
+    // s'ouvre après « Où en êtes-vous ? », ne compte que depart_point.
+    if (corps.formule === 'point' && quoi === 'depart') {
+      await compter('depart_point', cle);
+      return ok({ compte: true });
+    }
     await compter(quoi, cle);
     if (corps.mode === 'solo' && quoi !== 'vue' && quoi !== 'statut_solo' && !quoi.startsWith('celib_')) await compter(quoi + '_solo', cle);
     if (corps.formule === 'point' && ETAPES_POINT.includes(quoi)) await compter(quoi + '_point', cle);

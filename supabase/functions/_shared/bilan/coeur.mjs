@@ -1172,14 +1172,7 @@ export function analyserPoint(reponses) {
   const planMode = securite.niveau === 'alerte' ? 'securite' : 'conversations';
 
   // L'ordre des chapitres suit ce que la personne veut savoir en premier.
-  const ORDRES = {
-    etat: ['essentiel', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient', 'plan'],
-    probleme: ['essentiel', 'disputes', 'besoins', 'climat', 'equilibre', 'attachement', 'retient', 'plan'],
-    decision: ['essentiel', 'retient', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'plan'],
-    parler: ['essentiel', 'plan', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient'],
-  };
-  const chapitres = (securite.niveau === 'alerte' ? ['securite'] : [])
-    .concat(ORDRES[priorite], securite.niveau === 'alerte' ? [] : ['deux'], ['methode']);
+  const chapitres = chapitresPoint(priorite, securite.niveau === 'alerte');
 
   return {
     motif, priorite, duree, choix,
@@ -1188,6 +1181,21 @@ export function analyserPoint(reponses) {
     general, etat, plan: { mode: planMode, sujets: plan, reaction: v('pp1'), deja: v('pp2') },
     chapitres,
   };
+}
+
+// Les chapitres du rapport du point, dans l'ordre : celui que la personne
+// veut lire en premier (pd2, POINT_PRIORITES) juste après l'essentiel, la
+// sécurité d'abord en cas d'alerte, et alors pas de chapitre « à deux ».
+// Partagé par le rapport et par le sommaire de l'écran « rapport prêt ».
+const ORDRES_POINT = {
+  etat: ['essentiel', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient', 'plan'],
+  probleme: ['essentiel', 'disputes', 'besoins', 'climat', 'equilibre', 'attachement', 'retient', 'plan'],
+  decision: ['essentiel', 'retient', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'plan'],
+  parler: ['essentiel', 'plan', 'climat', 'besoins', 'disputes', 'equilibre', 'attachement', 'retient'],
+};
+export function chapitresPoint(priorite, alerte) {
+  return (alerte ? ['securite'] : [])
+    .concat(ORDRES_POINT[priorite] || ORDRES_POINT.etat, alerte ? [] : ['deux'], ['methode']);
 }
 
 // Ce que l'écran « rapport prêt » montre avant le paiement : des chiffres,

@@ -2156,6 +2156,12 @@ function copyTranslationData() {
     if (bilanQuestions) {
       fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(bilanQuestions), 'utf-8');
     }
+    // Le point sur ma relation (le seul(e) depuis le 4 novembre 2026) : ses
+    // questions et les textes de son rapport, chargés quand on en ouvre un.
+    const bilanPoint = completeParFrancais('bilan-point.json');
+    if (bilanPoint) {
+      fs.writeFileSync(path.join(dataDir, `bilan-point-${lang}.json`), JSON.stringify(bilanPoint), 'utf-8');
+    }
 
     // Les 200 destinations du test « où partir en vacances ? » ne se
     // chargent que quand quelqu'un lance le questionnaire.
@@ -2305,6 +2311,22 @@ async function copyJs() {
     fs.writeFileSync(path.join(destDir, 'bilan-rapport.js'),
       `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapport = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
     console.log(`[js] bilan-rapport.js construit (${noms.length} noms exportés)`);
+  }
+  // Le gabarit du point sur ma relation : le calcul sur window.QCBilanCoeur,
+  // les outils du rapport sur window.QCBilanRapport (chargés avant lui par la
+  // page), et lui sous window.QCBilanRapportPoint, chargé à la demande.
+  const pointSrc = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport-point.mjs');
+  if (fs.existsSync(pointSrc)) {
+    const src = fs.readFileSync(pointSrc, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src
+      .replace(/^import \* as C from '\.\/coeur\.mjs';$/m, 'var C = window.QCBilanCoeur;')
+      .replace(/^import \* as R from '\.\/rapport\.mjs';$/m, 'var R = window.QCBilanRapport;')
+      .replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] rapport-point.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport-point.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapportPoint = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-rapport-point.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
