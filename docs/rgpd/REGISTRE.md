@@ -38,7 +38,8 @@ du site. Pas de délégué à la protection des données (non obligatoire).
   - les prénoms et, s'il est donné, le genre ;
   - la situation du couple ;
   - les réponses aux cent questions, dont des données sensibles (article 9) ;
-  - en seul(e), ce que la personne imagine des réponses de l'autre ;
+  - en seul(e), ancienne formule, ce que la personne imagine des réponses de l'autre ;
+  - en seul(e) depuis le 4 novembre 2026, « Le point sur ma relation » (`bilans.formule = 'point'`) : cinquante réponses sur sa propre relation, dont six sur la sécurité (peur, contrôle, humiliation, isolement, violences ou menaces, relations sexuelles forcées), sans situation ni supposition sur l'autre ; dès qu'une réponse de sécurité donne un signal, plus aucun e-mail non demandé (`rappels_off`) ;
   - une adresse e-mail par personne ;
   - une empreinte salée de l'adresse IP ;
   - les empreintes des liens personnels.
@@ -48,7 +49,7 @@ du site. Pas de délégué à la protection des données (non obligatoire).
   - 60 jours après la dernière réponse sans paiement ;
   - six mois après le paiement, PDF et adresses compris (`bilan_menage`, pg_cron chaque nuit) ;
   - suppression immédiate possible depuis le rapport.
-  - Seuls des compteurs anonymes restent (`bilan_compteurs`).
+  - Seuls des compteurs anonymes restent (`bilan_compteurs`), y compris, pour le point, les réponses du départ (motif, priorité, durée) et ce que dit le rapport (état, attachement, engagement, niveau de sécurité), comptés par jour sans rien qui permette de retrouver l'évaluation.
 - **Sécurité** :
   - table fermée à la clé publique ;
   - liens tirés au hasard, gardés en empreinte ;
@@ -184,6 +185,7 @@ célibataire ne crée pas d'évaluation : il répond à une petite enquête.
   - l'adresse et la date de l'accord sont effacées 30 jours après l'e-mail de l'annonce ;
   - la réponse entière, adresse comprise, est effacée un an après la dernière réponse (`maj_le`).
 - **Qui la voit** : l'onglet Évaluation de l'admin montre les comptes et les idées, jamais une adresse (`get_bilan_celib`).
+- **La carte des tests célibataires** (4 novembre 2026, `js/celib-bientot.js`) : la même enquête, à l'écran de résultat des seize tests célibataires. La réponse garde en plus la page du test (`source`) et la situation choisie (`situation` : jamais en couple, rupture de moins d'un an, histoires qui se répètent, autre). Les vues et les clics de la carte ne sont que des compteurs par page et par jour (`celib_carte_vue`, `celib_carte_clic`) ; l'appareil garde trente jours la date de sa réponse (`qc-celib-repondu`, localStorage) pour ne plus montrer la carte, et une marque par page dans sessionStorage pour ne compter qu'une vue et un clic. Mêmes durées, même case pour l'adresse (16 ans en néerlandais, 15 ailleurs).
 
 ## Ce qui reste à faire
 

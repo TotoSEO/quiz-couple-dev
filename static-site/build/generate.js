@@ -161,8 +161,20 @@ const BILAN_CONST = (() => {
     const m = src.match(new RegExp('export const ' + nom + " = '([^']*)';"));
     return m ? m[1] : '';
   };
+  // Une liste de mots écrite sur une ligne : export const X = ['a', 'b'];
+  const lisListe = (nom) => {
+    const m = src.match(new RegExp('export const ' + nom + ' = \\[([^\\]]*)\\];'));
+    return m ? [...m[1].matchAll(/'([a-z]+)'/g)].map((x) => x[1]) : [];
+  };
   return {
     prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0),
+    // « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026),
+    // sans réduction.
+    prixPoint: lis('PRIX_POINT_CENTIMES', 490),
+    // Le sondage des célibataires (carte des tests célibataires) : les sujets
+    // et les situations que l'action `celib` accepte.
+    sujetsCelib: lisListe('SUJETS_CELIB'),
+    situationsCelib: lisListe('SITUATIONS_CELIB'),
     promo: { code: lisTexte('PROMO_CODE'), stripe: lisTexte('PROMO_STRIPE'), pourcent: lis('PROMO_POURCENT', 0), fin: lisTexte('PROMO_FIN') },
   };
 })();
@@ -206,6 +218,8 @@ function formatPrix(centimes, lang) {
 const prixBilanCentimes = () => (BILAN_PROMO ? BILAN_PROMO.prix : BILAN_CONST.prix);
 function prixBilan(lang) { return formatPrix(prixBilanCentimes(), lang); }
 function prixBilanBase(lang) { return formatPrix(BILAN_CONST.prix, lang); }
+// Le prix du point sur ma relation, jamais réduit.
+function prixBilanPoint(lang) { return formatPrix(BILAN_CONST.prixPoint, lang); }
 // La réduction affichée : pastille (« -20 % en ce moment »), prix habituel
 // barré et prix réduit, textes `promoBilan` de common.json. `html` est le
 // prix barré suivi du nouveau, avec ce qu'en lit un lecteur d'écran ;
@@ -253,6 +267,35 @@ function bandeauPromoPour(routeKey, articleMeta, lang) {
   if (!bilanOuvertPour(lang) || !BILAN_PROMO) return false;
   if (articleMeta) return !!entreeArticle(articleMeta, lang);
   return !PAGES_SANS_BANDEAU.has(routeKey);
+}
+
+// La carte « le bilan célibataire arrive bientôt » (celib-bientot.js,
+// 4 novembre 2026) : à l'écran de résultat des tests célibataires
+// (FAMILLES_NAV.celib), elle demande la situation et les sujets qui
+// intéresseraient, et l'adresse si on veut être prévenu. Seulement là où
+// l'évaluation est ouverte : la politique de confidentialité ne décrit le
+// sondage qu'avec elle. Ses textes sont ceux du sondage de l'évaluation
+// (app.celib de {lang}/bilan.json, `carte` pour ce qui lui est propre) ; elle
+// ne se pose pas sous les verdicts de CELIB_SANS_CARTE (le premier verdict de
+// « dois-je me remettre avec mon ex » parle de peur et de violence, comme les
+// produits, qui n'y sont pas non plus).
+const CELIB_SANS_CARTE = { testRemettreEx: ['gd:remettreEx.r1_t'] };
+const CLES_CARTE_CELIB = ['question', 'sujets', 'autre', 'email', 'consentement', 'emailAide', 'confidentialite',
+  'envoyer', 'choixManque', 'consentManque', 'merciTitre', 'merci', 'merciEmail', 'carte'];
+function carteCelibPour(routeKey, lang, t) {
+  if (!FAMILLES_NAV.celib.includes(routeKey) || !bilanOuvertPour(lang)) return null;
+  const celib = t('bilan:app.celib', null);
+  if (!celib || !celib.carte || !celib.sujets) return null;
+  const textes = {};
+  for (const k of CLES_CARTE_CELIB) if (celib[k] != null) textes[k] = celib[k];
+  return {
+    page: routeKey,
+    t: textes,
+    sujets: BILAN_CONST.sujetsCelib,
+    situations: BILAN_CONST.situationsCelib,
+    graves: (CELIB_SANS_CARTE[routeKey] || []).map((k) => t(k, '')).filter(Boolean),
+    confidentialite: getLocalizedUrl('privacy', lang),
+  };
 }
 
 // Les familles du menu, du pied de page, de l'accueil et du plan du site dans
@@ -1591,15 +1634,23 @@ async function generatePage(routeKey, lang) {
     // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
     // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
     captureId: CAPTURE_PAGES[routeKey] || null,
+    // La carte « le bilan célibataire arrive bientôt » (celib-bientot.js) des
+    // tests célibataires : l'id de la page, ses textes, les verdicts sans carte.
+    carteCelib: carteCelibPour(routeKey, lang, t),
     // L'admin calcule le taux de capture (onglet Leads) : il lui faut, pour
     // chaque source de la porte, les chemins de la page dans les cinq langues.
     capturePages: routeKey === 'admin' ? CAPTURE_PAGES : null,
+    // La carte « bilan célibataire » page par page (onglet Évaluation) : les
+    // tests célibataires et leur nom dans le menu.
+    celibPagesAdmin: routeKey === 'admin' ? FAMILLES_NAV.celib.map((cle) => ({ cle, nom: t('common:nav.' + cle, cle) })) : null,
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),
     bandeauPromo: bandeauPromoPour(routeKey, null, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
+    bilanPrixPoint: prixBilanPoint(lang),
+    bilanPrixPointCentimes: BILAN_CONST.prixPoint,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2149,6 +2200,12 @@ function copyTranslationData() {
     if (bilanQuestions) {
       fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(bilanQuestions), 'utf-8');
     }
+    // Le point sur ma relation (le seul(e) depuis le 4 novembre 2026) : ses
+    // questions et les textes de son rapport, chargés quand on en ouvre un.
+    const bilanPoint = completeParFrancais('bilan-point.json');
+    if (bilanPoint) {
+      fs.writeFileSync(path.join(dataDir, `bilan-point-${lang}.json`), JSON.stringify(bilanPoint), 'utf-8');
+    }
 
     // Les 200 destinations du test « où partir en vacances ? » ne se
     // chargent que quand quelqu'un lance le questionnaire.
@@ -2298,6 +2355,22 @@ async function copyJs() {
     fs.writeFileSync(path.join(destDir, 'bilan-rapport.js'),
       `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapport = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
     console.log(`[js] bilan-rapport.js construit (${noms.length} noms exportés)`);
+  }
+  // Le gabarit du point sur ma relation : le calcul sur window.QCBilanCoeur,
+  // les outils du rapport sur window.QCBilanRapport (chargés avant lui par la
+  // page), et lui sous window.QCBilanRapportPoint, chargé à la demande.
+  const pointSrc = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport-point.mjs');
+  if (fs.existsSync(pointSrc)) {
+    const src = fs.readFileSync(pointSrc, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src
+      .replace(/^import \* as C from '\.\/coeur\.mjs';$/m, 'var C = window.QCBilanCoeur;')
+      .replace(/^import \* as R from '\.\/rapport\.mjs';$/m, 'var R = window.QCBilanRapport;')
+      .replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] rapport-point.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport-point.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapportPoint = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-rapport-point.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
@@ -2613,6 +2686,8 @@ async function generateBlogArticle(articleMeta, lang) {
     bandeauPromo: bandeauPromoPour('article', articleMeta, lang),
     moyensPaiement: MOYENS_PAIEMENT,
     bilanPrixCentimes: prixBilanCentimes(),
+    bilanPrixPoint: prixBilanPoint(lang),
+    bilanPrixPointCentimes: BILAN_CONST.prixPoint,
     bilanGarantie: BILAN_CONST.garantie,
     vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
@@ -2724,6 +2799,8 @@ async function generate404Pages() {
       bandeauPromo: bandeauPromoPour('404', null, lang),
       moyensPaiement: MOYENS_PAIEMENT,
       bilanPrixCentimes: prixBilanCentimes(),
+      bilanPrixPoint: prixBilanPoint(lang),
+      bilanPrixPointCentimes: BILAN_CONST.prixPoint,
       bilanGarantie: BILAN_CONST.garantie,
       vendeur: VENDEUR,
       saisonDesQuiz: SAISON_DES_QUIZ,

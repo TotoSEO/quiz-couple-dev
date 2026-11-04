@@ -8,20 +8,33 @@ import http from 'node:http';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { couple } from '../exemples.mjs';
+import { couple, point } from '../exemples.mjs';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
 const ID = '11111111-2222-4333-8444-555555555555';
 const MORT = '99999999-2222-4333-8444-555555555555';
 
-function fausseBase() {
-  const d = couple({ lang: 'de' });
-  const ligne = {
-    id: ID, lang: 'de', situation: d.situation, paye_le: '2026-10-18T10:00:00Z',
-    a_prenom: d.a.prenom, a_genre: 'f', a_reponses: d.a.reponses, a_nn: d.a.nn, a_fini: '2026-10-18T09:00:00Z',
-    b_prenom: d.b.prenom, b_genre: 'h', b_reponses: d.b.reponses, b_nn: d.b.nn, b_fini: '2026-10-18T09:30:00Z',
-    rapport_statut: 'a_faire', rapport_essais: 0, rapport_chemin: null, envois: [],
-  };
+// `formule: 'point'` : le point sur ma relation (seul(e), depuis le
+// 4 novembre 2026), une ligne comme la base la garde.
+function fausseBase({ formule } = {}) {
+  let ligne;
+  if (formule === 'point') {
+    const d = point({ lang: 'de', biais: 0.5 });
+    ligne = {
+      id: ID, lang: 'de', mode: 'solo', formule: 'point', situation: {}, paye_le: '2026-11-04T10:00:00Z',
+      a_prenom: d.a.prenom, a_genre: 'f', a_reponses: d.a.reponses, a_nn: [], a_percu: null, a_fini: '2026-11-04T09:00:00Z',
+      b_prenom: d.b.prenom, b_genre: 'h', b_reponses: null, b_nn: null, b_fini: null,
+      rapport_statut: 'a_faire', rapport_essais: 0, rapport_chemin: null, envois: [],
+    };
+  } else {
+    const d = couple({ lang: 'de' });
+    ligne = {
+      id: ID, lang: 'de', situation: d.situation, paye_le: '2026-10-18T10:00:00Z',
+      a_prenom: d.a.prenom, a_genre: 'f', a_reponses: d.a.reponses, a_nn: d.a.nn, a_fini: '2026-10-18T09:00:00Z',
+      b_prenom: d.b.prenom, b_genre: 'h', b_reponses: d.b.reponses, b_nn: d.b.nn, b_fini: '2026-10-18T09:30:00Z',
+      rapport_statut: 'a_faire', rapport_essais: 0, rapport_chemin: null, envois: [],
+    };
+  }
   const fichiers = new Map([[MORT + '/vieux.pdf', Buffer.from('%PDF')]]);
   const journal = [];
   const serveur = http.createServer(async (req, res) => {
@@ -97,6 +110,23 @@ test('un rapport à faire devient un PDF rangé, envoyé, et le stockage est net
     const second = await lancerFabrique(b.serveur.address().port);
     assert.equal(second.code, 0);
     assert.match(second.sortie, /0 rapport\(s\) à faire/);
+  } finally {
+    b.serveur.close();
+  }
+});
+
+test('le point sur ma relation devient son propre PDF, rangé et envoyé', { timeout: 60000 }, async () => {
+  const b = fausseBase({ formule: 'point' });
+  await new Promise((ok) => b.serveur.listen(0, '127.0.0.1', ok));
+  try {
+    const { code, sortie } = await lancerFabrique(b.serveur.address().port);
+    assert.equal(code, 0, sortie);
+    assert.equal(b.ligne.rapport_statut, 'pret', sortie);
+    // Le point fait une douzaine de pages, jamais les trente du rapport à deux.
+    assert.ok(b.ligne.rapport_pages >= 8 && b.ligne.rapport_pages <= 16, String(b.ligne.rapport_pages));
+    const pdf = b.fichiers.get(b.ligne.rapport_chemin);
+    assert.equal(pdf.subarray(0, 4).toString(), '%PDF');
+    assert.match(sortie, /envoyé à 2 adresse/);
   } finally {
     b.serveur.close();
   }

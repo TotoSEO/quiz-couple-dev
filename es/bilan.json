@@ -31,7 +31,7 @@
       "modeDuo": "En pareja",
       "modeDuoAide": "Cada uno responde por su lado, en su teléfono, sin ver las respuestas del otro. El informe compara vuestras dos series de respuestas.",
       "modeSolo": "A solas",
-      "modeSoloAide": "Respondes por ti y, en los temas que más cuentan, dices también lo que respondería tu pareja. Tu pareja no se entera y no ve nada.",
+      "modeSoloAide": "Mi relación, en claro: 50 preguntas sobre lo que vives en tu pareja, solo para ti. Tu pareja no recibe ningún aviso y no ve nada.",
       "prenomsTitre": "Vuestros dos nombres",
       "moi": "Tu nombre",
       "autre": "El nombre de tu pareja",
@@ -691,7 +691,99 @@
       "merci": "Tus respuestas nos ayudarán a elegir qué incluirá la evaluación para solteros.",
       "merciEmail": "Te escribiremos a {{email}} el día que salga. Mientras tanto, tus respuestas nos ayudarán a elegir qué incluirá.",
       "testsTitre": "Mientras tanto, nuestros tests para solteros son gratis:",
-      "fermer": "Cerrar"
+      "fermer": "Cerrar",
+      "carte": {
+        "etiquette": "Muy pronto",
+        "titre": "Pronto llega la evaluación para solteros",
+        "texte": "Estamos preparando una evaluación para solteros, como la que ya ofrecemos a las parejas. ¡Antes de escribirla, nos gustaría saber qué te sería útil a ti!",
+        "situationQuestion": "Para empezar, ¿cuál de estas frases se parece más a ti?",
+        "situations": {
+          "jamais": "Nunca he tenido pareja",
+          "rupture": "Tuve una ruptura hace menos de un año",
+          "repete": "Mis historias suelen terminar de la misma manera",
+          "autre": "Ninguna de estas"
+        },
+        "emailFaux": "Este correo no parece válido.",
+        "erreur": "No ha funcionado. Vuelve a intentarlo en un momento.",
+        "envoi": "Enviando…",
+        "suggestion": "¿Querías decir {{domaine}}?"
+      }
+    },
+    "point": {
+      "accueil": {
+        "seul": "Mi relación, en claro",
+        "violence": "Solo tú verás este informe. Si tienes miedo de tu pareja, en España el 016 atiende gratis y de forma confidencial, las 24 horas."
+      },
+      "creation": {
+        "apportTitre": "Lo que te da este balance",
+        "apport": [
+          "Dónde estás con {{autre}}: el clima entre vosotros, tus necesidades, vuestras discusiones",
+          "Las señales a mirar, y lo que ayuda en cada una",
+          "Tu forma de querer, lo que te retiene, y tres conversaciones para avanzar"
+        ],
+        "apportNote": "50 preguntas sobre lo que vives, unos 12 minutos. Puedes hacer una pausa y seguir más tarde.",
+        "accordAide": "Tus respuestas, también sobre tu intimidad y tu seguridad, solo sirven para este informe, que solo verás tú. El balance se guarda 60 días después de tu última respuesta si no pagas, seis meses después del pago, y puedes borrarlo cuando quieras. Sin crear cuenta.",
+        "prixRappel": "Las preguntas son gratis. El informe cuesta {{prixPoint}}: lo desbloqueas cuando terminas.",
+        "creer": "Empezar mi balance",
+        "soloNote": "Haces el balance a solas: {{autre}} no recibe ningún aviso, no se le envía nada, y solo tú verás el informe."
+      },
+      "domaine": {
+        "nb": "{{n}} preguntas, unos {{min}} min",
+        "nbUn": "Una pregunta"
+      },
+      "question": {
+        "plusieurs": "Hasta {{max}} respuestas",
+        "valider": "Confirmar",
+        "choixManque": "Elige al menos una respuesta.",
+        "tropDeChoix": "{{max}} respuestas como máximo.",
+        "securiteAide": "Si temes por tu seguridad: en España, el 016 atiende gratis, las 24 horas, y por WhatsApp en el 600 000 016. Si estás en peligro inmediato: 112."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, tu balance está listo",
+        "etat": "Tu relación hoy",
+        "tuiles": {
+          "climat": "Cómo estás",
+          "signauxUn": "señal a mirar",
+          "signauxN": "señales a mirar",
+          "signaux0": "ninguna señal a mirar",
+          "manquesUn": "necesidad importante que falta",
+          "manquesN": "necesidades importantes que faltan",
+          "manques0": "no falta ninguna necesidad importante",
+          "attachement": "Tu forma de querer"
+        },
+        "accroche": "El informe te explica lo que tus respuestas dicen de tu relación con {{autre}}, y por dónde empezar.",
+        "verrouTitre": "Lo que descubres al desbloquear el informe",
+        "verrou": [
+          "El nombre de cada señal, y lo que ayuda",
+          "Tus necesidades una por una, y tu forma de querer explicada",
+          "Lo que te retiene en esta relación, y las preguntas que hacerte",
+          "Tres conversaciones que tener, con la primera frase de cada una"
+        ],
+        "verrouSecurite": [
+          "Lo que dicen tus respuestas sobre tu seguridad, sin juzgar",
+          "El nombre de cada señal, y lo que ayuda",
+          "Tus necesidades una por una, y tu forma de querer explicada",
+          "Tres cosas que hacer por ti, y a quién llamar"
+        ],
+        "securiteTitre": "Tu seguridad primero",
+        "alerte": "Algunas de tus respuestas hablan de miedo, de control o de violencia. No es culpa tuya, y no estás {solo|sola|solo/a}: estos números son gratuitos y confidenciales.",
+        "vigilance": "Algunas de tus respuestas hablan de miedo, de control o de humillación. Si necesitas hablarlo, estos números son gratuitos y confidenciales.",
+        "numeros": [
+          "016: atención a víctimas de violencia de género en España, gratis, las 24 horas",
+          "600 000 016: el mismo servicio por WhatsApp",
+          "112: si estás en peligro inmediato (fuera de Europa, el número de emergencias de tu país)"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "Un solo pago, sin suscripción. {{autre}} no recibe ningún aviso.",
+        "comparaison": "Lo que cuesta un café en una terraza.",
+        "bouton": "Desbloquear mi balance · {{prixPoint}}",
+        "immediat": "El informe se abre aquí en cuanto pagas, y el enlace del PDF te llega por correo."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "Este informe sigue disponible en esta página durante seis meses, solo para ti."
+        }
+      }
     }
   },
   "lp": {
@@ -700,7 +792,7 @@
     "sousTitre": "20 minutos cada uno en el teléfono, y un informe que os muestra en qué estáis de acuerdo y de qué tenéis que hablar.",
     "cta": "Empezar la evaluación",
     "soloQuestion": "¿Tu pareja no quiere participar?",
-    "soloLien": "Hazla a solas",
+    "soloLien": "Haz un balance a solas",
     "preuve": "{{nom}}, miles de visitantes cada día",
     "paiements": "Pago seguro con Stripe",
     "visuel": {
@@ -793,7 +885,7 @@
     "facons": {
       "citation": "Una sesión con un consejero de pareja cuesta entre 50 y 90 €. Empezar por la evaluación completa de Quiz Couple es EL buen primer paso.",
       "titre": "En pareja, o a solas",
-      "intro": "Si tu pareja no tiene ganas de hablar del tema, puedes hacerla por tu lado. Mismo precio, mismo informe.",
+      "intro": "Si tu pareja no tiene ganas de hablarlo, haz un balance por tu lado: 50 preguntas sobre lo que vives, y un informe solo para ti.",
       "duo": {
         "titre": "En pareja",
         "sous": "Cada uno en su teléfono",
@@ -804,13 +896,14 @@
         "cta": "Empezar en pareja"
       },
       "solo": {
-        "titre": "A solas",
-        "sous": "Sin avisar a tu pareja",
+        "titre": "Mi relación, en claro",
+        "sous": "A solas, sin avisar a tu pareja",
         "points": [
-          "Respondes por ti, y en lugar de tu pareja en los temas clave",
-          "El informe te muestra también lo que no sabes de tu pareja"
+          "50 preguntas sobre lo que vives, unos 12 minutos",
+          "Dónde estás, tus señales, tu forma de querer y un plan para hablarlo",
+          "{{prixPoint}}, un solo pago"
         ],
-        "cta": "Empezar a solas"
+        "cta": "Hacer el balance a solas"
       }
     },
     "demo": {
@@ -839,7 +932,7 @@
         "100 preguntas sobre doce áreas",
         "El informe completo, en línea y en PDF",
         "Los temas por los que empezar, con pistas para hablarlo",
-        "El mismo informe, en pareja o a solas"
+        "¿A solas? Mi relación, en claro, {{prixPoint}}"
       ],
       "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta un mensaje."
     },
@@ -885,7 +978,7 @@
         "Después de unos años juntos",
         "Cuando notáis que algo ha cambiado entre vosotros"
       ],
-      "solo": "Y si tu pareja no tiene ganas, puedes hacerla a solas: respondes por ti y, en los temas que más cuentan, dices lo que crees que respondería tu pareja."
+      "solo": "Y si tu pareja no tiene ganas, haz un balance a solas: 50 preguntas sobre lo que vives, y un informe solo para ti, por {{prixPoint}}."
     },
     "faq": {
       "titre": "Preguntas frecuentes",
@@ -903,8 +996,8 @@
           "a": "Porque el resultado es el informe: vuestras respuestas comparadas tema por tema, con pistas para hablarlo. Las preguntas son gratis, y solo pagáis al final, si queréis el informe."
         },
         {
-          "q": "Si la hago a solas, ¿se enterará mi pareja?",
-          "a": "No. No se le envía nada, y solo tú ves el informe. Respondes por ti y, en los temas que más cuentan, en su lugar, o «no lo sé»."
+          "q": "¿Y si hago el balance a solas?",
+          "a": "No se le envía nada a tu pareja, y solo tú ves el informe. El balance a solas no compara nada: 50 preguntas sobre lo que vives, y un informe sobre tu relación vista por ti (dónde estás, tus señales, tu forma de querer, lo que te retiene, un plan para hablarlo), por {{prixPoint}}."
         },
         {
           "q": "¿Y si no vivimos juntos o no tenemos hijos?",

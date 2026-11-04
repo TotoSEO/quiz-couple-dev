@@ -3,8 +3,9 @@
 // (25 octobre 2026, Thomas : « est-ce que tu arrives à accéder aux données de
 // l'onglet évaluation pour analyser ? ») : get_bilan_tableau,
 // get_bilan_celib (« Où en êtes-vous ? » au départ seul(e) et l'enquête des
-// célibataires, 25 octobre 2026) et get_emails_tableau, les mêmes lectures
-// que l'admin, écrites au journal.
+// célibataires, 25 octobre 2026), get_bilan_point (« Le point sur ma
+// relation » et la carte des tests célibataires, 4 novembre 2026) et
+// get_emails_tableau, les mêmes lectures que l'admin, écrites au journal.
 // Lecture seule. Rien de personnel : l'adresse des évaluations payées en
 // attente du partenaire (attente[].email) est retirée, une adresse tapée dans
 // une idée de célibataire aussi, et get_emails_tableau ne rend que des
@@ -284,6 +285,19 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.log(JSON.stringify(celib, null, 1));
   } catch (e) {
     console.log(`\nSeul(e), les célibataires : ${e.message}`);
+  }
+  // « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 :
+  // son entonnoir jour par jour, puis ses comptes par clé (réponses du
+  // départ, ce que dit le rapport, parties, erreurs) et la carte des tests
+  // célibataires page par page. Que des comptes.
+  try {
+    const point = await base.rpc('get_bilan_point', { p_jours: jours });
+    const { serie: seriePoint, ...restePoint } = point || {};
+    console.log(`\nLe point sur ma relation, ${jours} derniers jours (get_bilan_point), jour par jour :`);
+    for (const l of serieCompacte(seriePoint)) console.log('  ' + l);
+    console.log(JSON.stringify(restePoint, null, 1));
+  } catch (e) {
+    console.log(`\nLe point sur ma relation : ${e.message}`);
   }
   try {
     const emails = await base.rpc('get_emails_tableau', { p_jours: jours });

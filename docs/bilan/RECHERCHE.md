@@ -421,3 +421,101 @@ les codes (con6), l'écart de salaire (tra6) et l'aide à la famille (arg8,
 formulations en « il arrive que » : elles décrivent une fréquence, pas une
 faute.
 
+
+## Le point sur ma relation (4 novembre 2026)
+
+Le seul(e) refait (CONCEPTION.md, section du 4 novembre 2026) : cinquante
+questions sur ce que la personne vit dans sa relation, sans rien à comparer
+avec l'autre. Les questions sont dans `POINT_PARTIES` de `coeur.mjs`, les
+calculs dans `analyserPoint`. Comme pour l'évaluation à deux, les sources ne
+sont citées ni sur le site ni dans le rapport ; le rapport a seulement une
+page « méthode » qui dit sur quels travaux il s'appuie, sans titre d'article.
+
+### Ce que la page et le rapport ont le droit de dire
+
+- Les questions s'appuient sur la recherche en psychologie du couple : la
+  façon de réagir aux bonnes nouvelles de l'autre, les attitudes de dispute
+  les plus liées à l'usure d'un couple, l'attachement, et ce qui fait qu'on
+  reste dans une relation (satisfaction, investissement, alternatives).
+- Le style d'attachement est un repère pour cette relation, pas une étiquette
+  pour la vie : la recherche le mesure aussi relation par relation.
+- Ce qu'ils ne disent jamais : que le point est « validé scientifiquement »,
+  qu'il pose un diagnostic, qu'il prédit une séparation, ou qu'il remplace un
+  professionnel. La partie sur la sécurité repère des signaux et donne les
+  numéros d'aide du pays ; elle ne dit jamais à quelqu'un qu'il ou elle est
+  victime de violences, et ne lui dit jamais quoi faire de sa relation.
+
+### Partie par partie
+
+- **Comment vous allez** (le climat) : être écouté(e), soutenu(e),
+  apprécié(e), libre d'être soi, l'admiration. La réaction de l'autre à une
+  bonne nouvelle vient des travaux sur la « capitalisation » : Gable, Reis,
+  Impett et Asher (2004), *What do you do when things go right? The
+  intrapersonal and interpersonal benefits of sharing positive events*,
+  Journal of Personality and Social Psychology, 87(2), 228-245 (une réponse
+  enthousiaste et intéressée va avec une relation plus satisfaisante ; une
+  réponse qui écrase ou ignore, avec le contraire). Se sentir compris(e) :
+  le modèle de l'intimité de Reis et Shaver (1988), *Intimacy as an
+  interpersonal process*, dans le Handbook of Personal Relationships.
+- **Vos besoins** : dix besoins, chacun lu sur sa question, et les quatre
+  qui comptent le plus pour la personne. La satisfaction des besoins dans le
+  couple va avec le bien-être et la satisfaction de la relation : La Guardia,
+  Ryan, Couchman et Deci (2000), JPSP, 79(3), 367-384 ; Patrick, Knee,
+  Canevello et Lonsbary (2007), *The role of need fulfillment in
+  relationship functioning and well-being*, JPSP, 92(3), 434-457. Un besoin
+  important qui n'est pas comblé pèse plus qu'un besoin secondaire : c'est
+  pour ça que le choix `pb0` est demandé.
+- **Vos disputes** : les reproches qui visent la personne, le mépris, la
+  défense et la fermeture (les « quatre cavaliers ») et la réconciliation :
+  Gottman (1994), *What Predicts Divorce?*, Lawrence Erlbaum ; Gottman et
+  Levenson (2000), *The timing of divorce*, Journal of Marriage and Family,
+  62(3), 737-745 (le mépris, le signal le plus lourd) ; Gottman, Coan,
+  Carrere et Swanson (1998), *Predicting marital happiness and stability
+  from newlywed interactions*, Journal of Marriage and the Family, 60(1),
+  5-22 (la façon de commencer une discussion difficile). Les « antidotes »
+  du rapport (commencer en douceur, parler de soi, prendre sa part, faire une
+  pause) sont ceux de Gottman et Silver (1999), *The Seven Principles for
+  Making Marriage Work*.
+- **Votre sécurité** : la peur, le contrôle, l'humiliation, l'isolement, les
+  violences ou menaces, les relations sexuelles forcées. Les questions
+  reprennent ce que mesurent les questionnaires courts de repérage utilisés
+  en médecine générale : HITS (Sherin et al., 1998, *HITS: a short domestic
+  violence screening tool for use in a family practice setting*, Family
+  Medicine, 30(7), 508-512 : blesser, insulter, menacer, crier) et WAST
+  (Brown et al., 1996, *Development of the Woman Abuse Screening Tool for use
+  in family practice*, Family Medicine, 28(6), 422-428). Le contrôle et
+  l'isolement viennent du « contrôle coercitif » : Stark (2007), *Coercive
+  Control: How Men Entrap Women in Personal Life*, Oxford University Press.
+  Les questions sont écrites sans genre : elles valent pour tout le monde.
+  Le seuil d'alerte est bas exprès (une seule réponse sur les violences ou
+  les relations forcées suffit) : un faux signal coûte quelques numéros
+  d'aide en tête du rapport, un signal manqué coûte beaucoup plus.
+- **Qui fait quoi** : l'organisation concrète, penser à tout (la part
+  « cognitive » du travail domestique : Daminger, 2019, *The cognitive
+  dimension of household labor*, American Sociological Review, 84(4),
+  609-633), le premier pas après une dispute, et la façon dont le partage est
+  vécu. La satisfaction dépend surtout de l'équité perçue, pas d'un partage à
+  la minute près : Lennon et Rosenfield (1994), *Relative fairness and the
+  division of housework*, American Journal of Sociology, 100(2), 506-531.
+- **Votre façon d'aimer** : trois phrases d'anxiété et trois d'évitement,
+  écrites pour cette relation, sur le modèle de l'ECR-RS : Fraley, Heffernan,
+  Vicary et Brumbaugh (2011), *The Experiences in Close
+  Relationships-Relationship Structures questionnaire*, Psychological
+  Assessment, 23(3), 615-625. Les quatre styles (sécure, anxieux, évitant,
+  craintif) sont ceux de Bartholomew et Horowitz (1991), *Attachment styles
+  among young adults: A test of a four-category model*, JPSP, 61(2),
+  226-244. Six phrases ne font pas une mesure clinique : le rapport parle de
+  tendance.
+- **Ce qui vous retient** : satisfaction, investissement, qualité des
+  alternatives et engagement, le modèle de l'investissement de Rusbult :
+  Rusbult, Martz et Agnew (1998), *The Investment Model Scale*, Personal
+  Relationships, 5(4), 357-391 ; Le et Agnew (2003), *Commitment and its
+  theorized determinants: A meta-analysis of the Investment Model*, Personal
+  Relationships, 10(1), 37-57 (les trois facteurs expliquent une grande part
+  de l'engagement, et l'engagement va avec le fait de rester). D'où les
+  quatre profils : on peut rester par envie, ou parce qu'on a beaucoup
+  construit alors qu'on n'est pas heureux(se). Le rapport pose la question,
+  il ne tranche pas.
+- **Pour en parler** : la réaction de l'autre quand on aborde un sujet
+  sensible et ce qui a déjà été essayé changent la première phrase proposée
+  pour chaque conversation (commencer en douceur, Gottman et al. 1998).

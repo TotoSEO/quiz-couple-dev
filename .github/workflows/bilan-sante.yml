@@ -65,9 +65,11 @@ jobs:
       # paiements réels, clé révoquée), et rien dans l'admin ne le distingue
       # d'un client qui ne clique pas. La sonde crée une évaluation à deux,
       # répond à tout pour la première personne, demande le paiement comme la
-      # page, vérifie l'adresse checkout.stripe.com et supprime l'évaluation.
-      # Elle laisse sa trace dans les compteurs du jour (créée, finie, paiement
-      # ouvert, source « sonde »), jamais une vente.
+      # page, vérifie l'adresse checkout.stripe.com et supprime l'évaluation ;
+      # puis la même chose avec « Le point sur ma relation » (le seul(e)
+      # depuis le 4 novembre 2026), dont la page Stripe doit demander 4,90 €.
+      # Elle laisse sa trace dans les compteurs du jour (créées, finies,
+      # paiements ouverts, source « sonde »), jamais une vente.
       - name: Le paiement s'ouvre (évaluation fictive, supprimée ensuite)
         run: node supabase/functions/_shared/bilan/sonde-vente.mjs "https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/bilan"
 

@@ -31,7 +31,7 @@
       "modeDuo": "À deux",
       "modeDuoAide": "Chacun répond de son côté, sur son téléphone, sans voir les réponses de l'autre. Le rapport compare vos deux séries de réponses.",
       "modeSolo": "Seul(e)",
-      "modeSoloAide": "Vous répondez pour vous, et sur les sujets qui comptent le plus, vous dites aussi ce que votre partenaire répondrait. Votre partenaire n'est pas prévenu(e) et ne voit rien.",
+      "modeSoloAide": "Le point sur ma relation : 50 questions sur ce que vous vivez dans votre couple, pour vous seul(e). Votre partenaire n'est pas prévenu(e) et ne voit rien.",
       "prenomsTitre": "Vos deux prénoms",
       "moi": "Votre prénom",
       "autre": "Le prénom de votre partenaire",
@@ -687,7 +687,99 @@
       "merci": "Vos réponses vont nous aider à choisir ce que contiendra l'évaluation pour célibataires.",
       "merciEmail": "On vous écrit à {{email}} le jour où elle sort. D'ici là, vos réponses vont nous aider à choisir ce qu'elle contiendra.",
       "testsTitre": "En attendant, nos tests pour célibataires sont gratuits :",
-      "fermer": "Fermer"
+      "fermer": "Fermer",
+      "carte": {
+        "etiquette": "Bientôt",
+        "titre": "Le bilan célibataire arrive bientôt",
+        "texte": "On prépare une évaluation pour les célibataires, comme celle qu'on propose déjà aux couples. Avant de l'écrire, on aimerait savoir ce qui vous serait utile !",
+        "situationQuestion": "Pour commencer, laquelle de ces phrases vous ressemble le plus ?",
+        "situations": {
+          "jamais": "Je n'ai jamais été en couple",
+          "rupture": "J'ai vécu une rupture il y a moins d'un an",
+          "repete": "Mes histoires finissent souvent de la même façon",
+          "autre": "Aucune de ces phrases"
+        },
+        "emailFaux": "Cette adresse ne semble pas valide.",
+        "erreur": "Ça n'a pas marché, réessayez dans un instant.",
+        "envoi": "Envoi…",
+        "suggestion": "Vouliez-vous dire {{domaine}} ?"
+      }
+    },
+    "point": {
+      "accueil": {
+        "seul": "Le point sur ma relation",
+        "violence": "Vous seul(e) verrez ce rapport. Si vous avez peur de votre partenaire, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+      },
+      "creation": {
+        "apportTitre": "Ce que le point vous apporte",
+        "apport": [
+          "Où vous en êtes avec {{autre}} : votre climat, vos besoins, vos disputes",
+          "Les signaux à regarder, et ce qui aide pour chacun",
+          "Votre façon d'aimer, ce qui vous retient, et trois conversations pour avancer"
+        ],
+        "apportNote": "50 questions sur ce que vous vivez, environ 12 minutes. Vous pouvez faire une pause et reprendre plus tard.",
+        "accordAide": "Vos réponses, y compris sur votre intimité et votre sécurité, ne servent qu'à ce rapport, que vous seul(e) verrez. L'évaluation est gardée 60 jours après votre dernière réponse sans paiement, six mois après le paiement, et vous pouvez la supprimer à tout moment. Pas de compte à créer.",
+        "prixRappel": "Les questions sont gratuites. Le rapport coûte {{prixPoint}} : vous le débloquez quand vous avez fini.",
+        "creer": "Commencer mon point",
+        "soloNote": "Vous faites le point seul(e) : {{autre}} n'est pas prévenu(e), rien ne lui est envoyé, et vous seul(e) verrez le rapport."
+      },
+      "domaine": {
+        "nb": "{{n}} questions, environ {{min}} min",
+        "nbUn": "Une question"
+      },
+      "question": {
+        "plusieurs": "Jusqu'à {{max}} réponses",
+        "valider": "Valider",
+        "choixManque": "Choisissez au moins une réponse.",
+        "tropDeChoix": "{{max}} réponses au plus.",
+        "securiteAide": "Si vous avez peur pour votre sécurité : 3919, gratuit et anonyme, 24 h sur 24. En cas de danger immédiat : 17 ou 112."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, votre point est prêt",
+        "etat": "Votre relation aujourd'hui",
+        "tuiles": {
+          "climat": "Comment vous allez",
+          "signauxUn": "signal à regarder",
+          "signauxN": "signaux à regarder",
+          "signaux0": "aucun signal à regarder",
+          "manquesUn": "besoin important en manque",
+          "manquesN": "besoins importants en manque",
+          "manques0": "aucun besoin important en manque",
+          "attachement": "Votre façon d'aimer"
+        },
+        "accroche": "Le rapport vous explique ce que vos réponses disent de votre relation avec {{autre}}, et par où commencer.",
+        "verrouTitre": "Ce que vous découvrez en débloquant le rapport",
+        "verrou": [
+          "Le nom de chaque signal, et ce qui aide",
+          "Vos besoins un par un, et votre façon d'aimer expliquée",
+          "Ce qui vous retient dans cette relation, et les questions à vous poser",
+          "Trois conversations à avoir, avec la première phrase de chacune"
+        ],
+        "verrouSecurite": [
+          "Ce que vos réponses disent de votre sécurité, sans jugement",
+          "Le nom de chaque signal, et ce qui aide",
+          "Vos besoins un par un, et votre façon d'aimer expliquée",
+          "Trois choses à faire pour vous, et qui appeler"
+        ],
+        "securiteTitre": "Votre sécurité d'abord",
+        "alerte": "Certaines de vos réponses parlent de peur, de contrôle ou de violence. Ce n'est pas de votre faute, et vous n'êtes pas seul(e) : ces numéros sont gratuits et anonymes.",
+        "vigilance": "Certaines de vos réponses parlent de peur, de contrôle ou d'humiliation. Si vous avez besoin d'en parler, ces numéros sont gratuits et anonymes.",
+        "numeros": [
+          "3919 : Violences Femmes Info, gratuit, anonyme, 24 h sur 24",
+          "17 ou 112 : en cas de danger immédiat",
+          "114 : par SMS, si vous ne pouvez pas parler"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "Un seul paiement, sans abonnement. {{autre}} n'est pas prévenu(e).",
+        "comparaison": "Le prix d'un café en terrasse.",
+        "bouton": "Débloquer mon point · {{prixPoint}}",
+        "immediat": "Le rapport s'ouvre ici dès le paiement, et le lien du PDF part par e-mail."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "Ce rapport reste disponible six mois sur cette page, pour vous seul(e)."
+        }
+      }
     }
   },
   "lp": {
@@ -696,7 +788,7 @@
     "sousTitre": "20 minutes chacun sur votre téléphone, et un rapport qui vous montre où vous êtes d'accord et de quoi il faut parler.",
     "cta": "Commencer l'évaluation",
     "soloQuestion": "Votre partenaire ne veut pas participer ?",
-    "soloLien": "Faites-la seul(e)",
+    "soloLien": "Faites le point seul(e)",
     "preuve": "{{nom}}, des milliers de visiteurs chaque jour",
     "paiements": "Paiement sécurisé par Stripe",
     "visuel": {
@@ -789,7 +881,7 @@
     "facons": {
       "citation": "Une séance chez un conseiller conjugal coûte entre 50 et 90 €. Commencer par l'évaluation complète de Quiz Couple, c'est LA bonne première étape.",
       "titre": "À deux, ou seul(e)",
-      "intro": "Si l'autre n'a pas envie d'en parler, vous pouvez la faire de votre côté. Même prix, même rapport.",
+      "intro": "Si l'autre n'a pas envie d'en parler, faites le point de votre côté : 50 questions sur ce que vous vivez, et un rapport rien que pour vous.",
       "duo": {
         "titre": "À deux",
         "sous": "Chacun sur son téléphone",
@@ -800,13 +892,14 @@
         "cta": "Commencer à deux"
       },
       "solo": {
-        "titre": "Seul(e)",
-        "sous": "Sans prévenir votre partenaire",
+        "titre": "Le point sur ma relation",
+        "sous": "Seul(e), sans prévenir votre partenaire",
         "points": [
-          "Vous répondez pour vous, et à la place de l'autre sur les sujets clés",
-          "Le rapport vous montre aussi ce que vous ignorez de votre partenaire"
+          "50 questions sur ce que vous vivez, environ 12 minutes",
+          "Votre état, vos signaux, votre façon d'aimer et un plan pour en parler",
+          "{{prixPoint}}, en une fois"
         ],
-        "cta": "Commencer seul(e)"
+        "cta": "Faire le point seul(e)"
       }
     },
     "demo": {
@@ -835,7 +928,7 @@
         "100 questions sur douze domaines",
         "Le rapport complet, en ligne et en PDF",
         "Les sujets par lesquels commencer, avec de quoi en parler",
-        "Le même rapport, à deux ou seul(e)"
+        "Seul(e) ? Le point sur ma relation, {{prixPoint}}"
       ],
       "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message suffit."
     },
@@ -881,7 +974,7 @@
         "Après quelques années ensemble",
         "Quand vous sentez que quelque chose a changé entre vous"
       ],
-      "solo": "Et si votre partenaire n'en a pas envie, vous pouvez le faire seul(e) : vous répondez pour vous et, sur les sujets qui comptent le plus, vous dites ce que l'autre répondrait d'après vous."
+      "solo": "Et si votre partenaire n'en a pas envie, faites le point seul(e) : 50 questions sur ce que vous vivez, et un rapport rien que pour vous, pour {{prixPoint}}."
     },
     "faq": {
       "titre": "Questions fréquentes",
@@ -899,8 +992,8 @@
           "a": "Parce que le résultat, c'est le rapport : vos réponses comparées sujet par sujet, avec de quoi en parler. Les questions sont gratuites, et vous ne payez qu'à la fin, si vous voulez le rapport."
         },
         {
-          "q": "Si je la fais seul(e), mon ou ma partenaire sera-t-il prévenu(e) ?",
-          "a": "Non. Rien ne lui est envoyé, et vous seul(e) voyez le rapport. Vous répondez pour vous, et sur les sujets qui comptent le plus, à sa place, ou « je ne sais pas »."
+          "q": "Et si je fais le point seul(e) ?",
+          "a": "Rien n'est envoyé à votre partenaire, et vous seul(e) voyez le rapport. Le point seul(e) ne compare rien : 50 questions sur ce que vous vivez, et un rapport sur votre relation vue par vous (votre état, vos signaux, votre façon d'aimer, ce qui vous retient, un plan pour en parler), pour {{prixPoint}}."
         },
         {
           "q": "Et si on ne vit pas ensemble, ou si on n'a pas d'enfants ?",

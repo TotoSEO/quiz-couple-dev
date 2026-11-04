@@ -46,8 +46,12 @@
   const promo = (typeof bilanPromo !== 'undefined' && bilanPromo) ? bilanPromo : null;
   const marque = (html) => (promo ? promo.marque(html) : html);
   const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
-  // {{prix}} et {{jours}} dans les textes de la page.
-  const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
+  // Le prix du point sur ma relation (le seul(e) depuis le 4 novembre 2026),
+  // jamais réduit : PRIX_POINT_CENTIMES de coeur.mjs.
+  const prixPoint = typeof bilanPrixPoint !== 'undefined' ? bilanPrixPoint : '4,90 €';
+  const prixPointCentimes = typeof bilanPrixPointCentimes !== 'undefined' ? bilanPrixPointCentimes : 490;
+  // {{prix}}, {{prixPoint}} et {{jours}} dans les textes de la page.
+  const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{prixPoint\}\}/g, prixPoint).replace(/\{\{jours\}\}/g, jours);
   const L = (k, d) => t(ns + ':lp.' + k, d === undefined ? '' : d);
   // Le français colle « ? ! : ; » et l'ouverture des guillemets à leur mot par
   // une espace insécable, comme ins() de bilan.js (jusqu'au 25 octobre 2026,
@@ -76,7 +80,11 @@
     url: canonical,
     image: imageBilan,
     about: { '@type': 'Thing', name: t(ns + ':jsonLd.about', '') },
-    offers: Object.assign({ '@type': 'Offer', price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' }, promo && promo.fin ? { priceValidUntil: promo.fin } : {}),
+    // Deux offres : l'évaluation à deux, et le point sur ma relation (seul(e)).
+    offers: [
+      Object.assign({ '@type': 'Offer', name: t('quizzes:bilanCouple.shortTitle', pageTitle), price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' }, promo && promo.fin ? { priceValidUntil: promo.fin } : {}),
+      { '@type': 'Offer', name: t(ns + ':lp.facons.solo.titre', ''), price: (prixPointCentimes / 100).toFixed(2), priceCurrency: 'EUR' },
+    ].filter((o) => o.name),
     author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
     publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } }
   };
@@ -108,6 +116,9 @@
     prix,
     // Le même prix en centimes : l'écran « rapport prêt » le partage en deux.
     prixCentimes: typeof bilanPrixCentimes !== 'undefined' ? bilanPrixCentimes : null,
+    // Le point sur ma relation (le seul(e)) : son prix, jamais réduit.
+    prixPoint,
+    prixPointCentimes,
     garantie: jours,
     // L'offre de l'application montre la même réduction, si le serveur
     // confirme qu'il l'appliquera (bilan.js, promoAffichee).

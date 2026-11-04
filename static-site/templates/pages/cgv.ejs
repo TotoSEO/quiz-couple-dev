@@ -13,6 +13,8 @@
   const vars = {
     nom: escapeHtml(v.nom || ''),
     prix,
+    // Le point sur ma relation (le seul(e) depuis le 4 novembre 2026).
+    prixPoint: typeof bilanPrixPoint !== 'undefined' ? bilanPrixPoint : '',
     jours,
     email: '<a class="text-primary hover:underline" href="mailto:' + (v.email || '') + '">' + (v.email || '') + '</a>',
     contact: lien('contact', t('cgv:liens.contact', 'contact')),

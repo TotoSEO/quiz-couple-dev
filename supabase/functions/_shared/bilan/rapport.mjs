@@ -54,18 +54,20 @@ export const TEINTES = {
   fin: 'encre', suite: 'nuit',
 };
 
-function esc(s) {
+export function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-// {{cle}} → valeur (textes de l'interface).
-function remplir2(texte, vars) {
+// {{cle}} → valeur (textes de l'interface). Exportée, comme esc, insecables,
+// dateLongue, nombreFormate, tailleCouverture et anneau : le rapport du point
+// sur ma relation s'en sert (rapport-point.mjs).
+export function remplir2(texte, vars) {
   return String(texte == null ? '' : texte).replace(/\{\{(\w+)\}\}/g, (m, k) => (vars && vars[k] != null ? String(vars[k]) : ''));
 }
 
 // La ponctuation haute collée à son mot, en français : espace fine
 // insécable devant ? ! ; et insécable devant : et dans les guillemets.
-function insecables(s, lang) {
+export function insecables(s, lang) {
   if (lang !== 'fr') return String(s);
   return String(s)
     .replace(/ ([?!;])/g, ' $1')
@@ -81,11 +83,11 @@ export function couleurs(ga, gb) {
   return ['rose', 'violet'];
 }
 
-function nombreFormate(n, lang) {
+export function nombreFormate(n, lang) {
   try { return new Intl.NumberFormat(LOCALES[lang] || 'fr-FR').format(n); } catch (e) { return String(n); }
 }
 
-function dateLongue(iso, lang) {
+export function dateLongue(iso, lang) {
   const d = iso ? new Date(iso) : new Date();
   try {
     return d.toLocaleDateString(LOCALES[lang] || 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Paris' });
@@ -95,7 +97,7 @@ function dateLongue(iso, lang) {
 }
 
 // La taille des prénoms sur la couverture, selon le plus long.
-function tailleCouverture(a, b) {
+export function tailleCouverture(a, b) {
   const n = Math.max(String(a).length, String(b || '').length);
   if (n <= 9) return 'xl';
   if (n <= 14) return 'l';
@@ -126,7 +128,7 @@ export function partsCent(valeurs) {
 // l'attribut, pour que l'écran et le PDF partagent la même palette.
 
 // Un anneau de score : la piste, l'arc, le chiffre au centre.
-function anneau(valeur, classe, libelle) {
+export function anneau(valeur, classe, libelle) {
   const r = 52;
   const tour = 2 * Math.PI * r;
   const plein = pct(valeur) / 100 * tour;

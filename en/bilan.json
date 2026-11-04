@@ -31,7 +31,7 @@
       "modeDuo": "Together",
       "modeDuoAide": "You each answer on your own phone, without seeing the other's answers. The report compares your two sets of answers.",
       "modeSolo": "On your own",
-      "modeSoloAide": "You answer for yourself, and on the topics that matter most, you also say what your partner would answer. Your partner isn't told and sees nothing.",
+      "modeSoloAide": "My Relationship Check-Up: 50 questions about what you're living in your relationship, just for you. Your partner isn't told and sees nothing.",
       "prenomsTitre": "Your two first names",
       "moi": "Your first name",
       "autre": "Your partner's first name",
@@ -687,7 +687,99 @@
       "merci": "Your answers will help us choose what goes into the assessment for singles.",
       "merciEmail": "We'll write to {{email}} the day it comes out. Until then, your answers will help us choose what goes into it.",
       "testsTitre": "In the meantime, our tests for singles are free:",
-      "fermer": "Close"
+      "fermer": "Close",
+      "carte": {
+        "etiquette": "Coming soon",
+        "titre": "The singles assessment is coming soon",
+        "texte": "We're building an assessment for singles, like the one we already offer couples. Before we write it, we'd love to know what would help you!",
+        "situationQuestion": "To start, which of these sounds most like you?",
+        "situations": {
+          "jamais": "I've never been in a relationship",
+          "rupture": "I went through a breakup less than a year ago",
+          "repete": "My relationships tend to end the same way",
+          "autre": "None of these"
+        },
+        "emailFaux": "That email address doesn't look right.",
+        "erreur": "That didn't work. Please try again in a moment.",
+        "envoi": "Sending…",
+        "suggestion": "Did you mean {{domaine}}?"
+      }
+    },
+    "point": {
+      "accueil": {
+        "seul": "My Relationship Check-Up",
+        "violence": "Only you will see this report. If you're afraid of your partner, a domestic abuse helpline can talk with you, free and anonymously."
+      },
+      "creation": {
+        "apportTitre": "What the check-up gives you",
+        "apport": [
+          "Where you stand with {{autre}}: the mood between you, your needs, your arguments",
+          "The signs to look at, and what helps with each one",
+          "The way you love, what keeps you here, and three conversations to move forward"
+        ],
+        "apportNote": "50 questions about what you're living, about 12 minutes. You can take a break and come back later.",
+        "accordAide": "Your answers, including about your intimacy and your safety, are only used for this report, which only you will see. The check-up is kept 60 days after your last answer if you don't pay, six months after payment, and you can delete it at any time. No account to create.",
+        "prixRappel": "The questions are free. The report costs {{prixPoint}}: you unlock it when you've finished.",
+        "creer": "Start my check-up",
+        "soloNote": "You're doing the check-up on your own: {{autre}} isn't told, nothing is sent to them, and only you will see the report."
+      },
+      "domaine": {
+        "nb": "{{n}} questions, about {{min}} min",
+        "nbUn": "One question"
+      },
+      "question": {
+        "plusieurs": "Up to {{max}} answers",
+        "valider": "Confirm",
+        "choixManque": "Choose at least one answer.",
+        "tropDeChoix": "{{max}} answers at most.",
+        "securiteAide": "If you're afraid for your safety: in the UK, 0808 2000 247, free, 24 hours a day; in the US, 1-800-799-7233. If you're in immediate danger: 999 or 911."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, your check-up is ready",
+        "etat": "Your relationship today",
+        "tuiles": {
+          "climat": "How you're doing",
+          "signauxUn": "sign to look at",
+          "signauxN": "signs to look at",
+          "signaux0": "no sign to look at",
+          "manquesUn": "important need not met",
+          "manquesN": "important needs not met",
+          "manques0": "no important need unmet",
+          "attachement": "The way you love"
+        },
+        "accroche": "The report explains what your answers say about your relationship with {{autre}}, and where to start.",
+        "verrouTitre": "What you'll find when you unlock the report",
+        "verrou": [
+          "The name of each sign, and what helps",
+          "Your needs one by one, and the way you love explained",
+          "What keeps you in this relationship, and the questions to ask yourself",
+          "Three conversations to have, with the first sentence of each"
+        ],
+        "verrouSecurite": [
+          "What your answers say about your safety, without judgment",
+          "The name of each sign, and what helps",
+          "Your needs one by one, and the way you love explained",
+          "Three things to do for yourself, and who to call"
+        ],
+        "securiteTitre": "Your safety first",
+        "alerte": "Some of your answers talk about fear, control or violence. It isn't your fault, and you're not alone: these numbers are free and confidential.",
+        "vigilance": "Some of your answers talk about fear, control or humiliation. If you need to talk about it, these numbers are free and confidential.",
+        "numeros": [
+          "UK: 0808 2000 247, National Domestic Abuse Helpline, free, 24 hours a day",
+          "US: 1-800-799-7233, National Domestic Violence Hotline, or text START to 88788",
+          "999 or 911: if you're in immediate danger"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "One payment, no subscription. {{autre}} isn't told.",
+        "comparaison": "The price of a coffee.",
+        "bouton": "Unlock my check-up · {{prixPoint}}",
+        "immediat": "The report opens here as soon as you've paid, and the link to the PDF is sent by email."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "This report stays available on this page for six months, for you only."
+        }
+      }
     }
   },
   "lp": {
@@ -696,7 +788,7 @@
     "sousTitre": "20 minutes each on your phone, and a report that shows you where you agree and what you need to talk about.",
     "cta": "Start the assessment",
     "soloQuestion": "Your partner doesn't want to take part?",
-    "soloLien": "Take it on your own",
+    "soloLien": "Do a check-up on your own",
     "preuve": "{{nom}}: thousands of visitors every day",
     "paiements": "Secure payment via Stripe",
     "visuel": {
@@ -789,7 +881,7 @@
     "facons": {
       "citation": "A session with a relationship counsellor costs between £50 and £90. Starting with Quiz Couple's full assessment is THE right first step.",
       "titre": "Together, or on your own",
-      "intro": "If your partner doesn't feel like talking about it, you can do it on your side. Same price, same report.",
+      "intro": "If your partner doesn't want to talk about it, do a check-up on your side: 50 questions about what you're living, and a report just for you.",
       "duo": {
         "titre": "Together",
         "sous": "Each on your own phone",
@@ -800,13 +892,14 @@
         "cta": "Start together"
       },
       "solo": {
-        "titre": "On your own",
-        "sous": "Without telling your partner",
+        "titre": "My Relationship Check-Up",
+        "sous": "On your own, without telling your partner",
         "points": [
-          "You answer for yourself, and in your partner's place on the key topics",
-          "The report also shows you what you don't know about your partner"
+          "50 questions about what you're living, about 12 minutes",
+          "Where you stand, your signs, the way you love and a plan to talk about it",
+          "{{prixPoint}}, one payment"
         ],
-        "cta": "Start on your own"
+        "cta": "Do the check-up on my own"
       }
     },
     "demo": {
@@ -835,7 +928,7 @@
         "100 questions across twelve areas",
         "The full report, online and as a PDF",
         "The topics to start with, and ways to talk about them",
-        "The same report, together or on your own"
+        "On your own? My Relationship Check-Up, {{prixPoint}}"
       ],
       "garantie": "Satisfied or refunded within {{jours}} days: one message is enough."
     },
@@ -881,7 +974,7 @@
         "After a few years together",
         "When you feel something has changed between you"
       ],
-      "solo": "And if your partner doesn't feel like it, you can do it on your own: you answer for yourself and, on the topics that matter most, you say what you think your partner would answer."
+      "solo": "And if your partner doesn't want to, do a check-up on your own: 50 questions about what you're living, and a report just for you, for {{prixPoint}}."
     },
     "faq": {
       "titre": "Frequently asked questions",
@@ -899,8 +992,8 @@
           "a": "Because the result is the report: your answers compared topic by topic, with ways to talk about them. The questions are free, and you only pay at the end, if you want the report."
         },
         {
-          "q": "If I do it on my own, will my partner be told?",
-          "a": "No. Nothing is sent to them, and only you see the report. You answer for yourself and, on the topics that matter most, in their place, or \"I don't know\"."
+          "q": "What if I do the check-up on my own?",
+          "a": "Nothing is sent to your partner, and only you see the report. The check-up on your own doesn't compare anything: 50 questions about what you're living, and a report on your relationship as you see it (where you stand, your signs, the way you love, what keeps you here, a plan to talk about it), for {{prixPoint}}."
         },
         {
           "q": "What if we don't live together, or don't have children?",

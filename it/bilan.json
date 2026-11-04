@@ -31,7 +31,7 @@
       "modeDuo": "In due",
       "modeDuoAide": "Ciascuno risponde per conto suo, sul proprio telefono, senza vedere le risposte dell'altro. Il report confronta le vostre due serie di risposte.",
       "modeSolo": "Da solo/a",
-      "modeSoloAide": "Rispondi per te e, sugli argomenti che contano di più, dici anche cosa risponderebbe il tuo partner. Il tuo partner non viene avvisato e non vede niente.",
+      "modeSoloAide": "Il punto sulla mia relazione: 50 domande su quello che vivi nella tua coppia, solo per te. Il tuo partner non viene avvisato e non vede niente.",
       "prenomsTitre": "I vostri due nomi",
       "moi": "Il tuo nome",
       "autre": "Il nome del tuo partner",
@@ -691,7 +691,98 @@
       "merci": "Le tue risposte ci aiuteranno a scegliere cosa conterrà la valutazione per single.",
       "merciEmail": "Ti scriveremo a {{email}} il giorno in cui esce. Nel frattempo, le tue risposte ci aiuteranno a scegliere cosa conterrà.",
       "testsTitre": "Nel frattempo, i nostri test per single sono gratuiti:",
-      "fermer": "Chiudi"
+      "fermer": "Chiudi",
+      "carte": {
+        "etiquette": "Presto",
+        "titre": "Presto arriva la valutazione per single",
+        "texte": "Stiamo preparando una valutazione per single, come quella che proponiamo già alle coppie. Prima di scriverla, vorremmo sapere cosa ti sarebbe utile!",
+        "situationQuestion": "Per cominciare, quale di queste frasi ti somiglia di più?",
+        "situations": {
+          "jamais": "Non sono mai stato/a in coppia",
+          "rupture": "Ho vissuto una rottura meno di un anno fa",
+          "repete": "Le mie storie finiscono spesso allo stesso modo",
+          "autre": "Nessuna di queste"
+        },
+        "emailFaux": "Questo indirizzo non sembra valido.",
+        "erreur": "Non ha funzionato. Riprova tra un attimo.",
+        "envoi": "Invio…",
+        "suggestion": "Intendevi {{domaine}}?"
+      }
+    },
+    "point": {
+      "accueil": {
+        "seul": "Il punto sulla mia relazione",
+        "violence": "Solo tu vedrai questo report. Se hai paura del tuo partner, in Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24."
+      },
+      "creation": {
+        "apportTitre": "Cosa ti dà il punto",
+        "apport": [
+          "A che punto sei con {{autre}}: il clima tra voi, i tuoi bisogni, i vostri litigi",
+          "I segnali da guardare, e cosa aiuta per ognuno",
+          "Il tuo modo di amare, cosa ti trattiene, e tre conversazioni per andare avanti"
+        ],
+        "apportNote": "50 domande su quello che vivi, circa 12 minuti. Puoi fare una pausa e riprendere più tardi.",
+        "accordAide": "Le tue risposte, anche sulla tua intimità e sulla tua sicurezza, servono solo a questo report, che vedrai solo tu. Il punto viene conservato 60 giorni dopo la tua ultima risposta se non paghi, sei mesi dopo il pagamento, e puoi cancellarlo in qualsiasi momento. Nessun account da creare.",
+        "prixRappel": "Le domande sono gratis. Il report costa {{prixPoint}}: lo sblocchi quando hai finito.",
+        "creer": "Inizia il mio punto",
+        "soloNote": "Fai il punto da solo/a: {{autre}} non viene avvisato/a e non riceve niente, e il report lo vedrai solo tu."
+      },
+      "domaine": {
+        "nb": "{{n}} domande, circa {{min}} min",
+        "nbUn": "Una domanda"
+      },
+      "question": {
+        "plusieurs": "Fino a {{max}} risposte",
+        "valider": "Conferma",
+        "choixManque": "Scegli almeno una risposta.",
+        "tropDeChoix": "Al massimo {{max}} risposte.",
+        "securiteAide": "Se hai paura per la tua sicurezza: il 1522 risponde gratis, 24 ore su 24, anche in modo anonimo. Se sei in pericolo immediato: 112."
+      },
+      "paywall": {
+        "pretTitre": "{{moi}}, il tuo punto è pronto",
+        "etat": "La tua relazione oggi",
+        "tuiles": {
+          "climat": "Come stai",
+          "signauxUn": "segnale da guardare",
+          "signauxN": "segnali da guardare",
+          "signaux0": "nessun segnale da guardare",
+          "manquesUn": "bisogno importante che manca",
+          "manquesN": "bisogni importanti che mancano",
+          "manques0": "nessun bisogno importante manca",
+          "attachement": "Il tuo modo di amare"
+        },
+        "accroche": "Il report ti spiega cosa dicono le tue risposte della tua relazione con {{autre}}, e da dove cominciare.",
+        "verrouTitre": "Cosa scopri sbloccando il report",
+        "verrou": [
+          "Il nome di ogni segnale, e cosa aiuta",
+          "I tuoi bisogni uno per uno, e il tuo modo di amare spiegato",
+          "Cosa ti trattiene in questa relazione, e le domande da farti",
+          "Tre conversazioni da fare, con la prima frase di ognuna"
+        ],
+        "verrouSecurite": [
+          "Cosa dicono le tue risposte sulla tua sicurezza, senza giudizio",
+          "Il nome di ogni segnale, e cosa aiuta",
+          "I tuoi bisogni uno per uno, e il tuo modo di amare spiegato",
+          "Tre cose da fare per te, e chi chiamare"
+        ],
+        "securiteTitre": "Prima la tua sicurezza",
+        "alerte": "Alcune delle tue risposte parlano di paura, di controllo o di violenza. Non è colpa tua, e non sei {solo|sola|solo/a}: questi numeri sono gratuiti e riservati.",
+        "vigilance": "Alcune delle tue risposte parlano di paura, di controllo o di umiliazione. Se hai bisogno di parlarne, questi numeri sono gratuiti e riservati.",
+        "numeros": [
+          "1522: numero antiviolenza e stalking, gratuito, 24 ore su 24, anche in chat sull'app 1522",
+          "112: se sei in pericolo immediato"
+        ],
+        "prix": "{{prixPoint}}",
+        "prixAide": "Un solo pagamento, senza abbonamento. {{autre}} non viene avvisato/a.",
+        "comparaison": "Il prezzo di un caffè al bar.",
+        "bouton": "Sblocca il mio punto · {{prixPoint}}",
+        "immediat": "Il report si apre qui appena paghi, e il link del PDF ti arriva per e-mail."
+      },
+      "rapport": {
+        "ecran": {
+          "garde": "Questo report resta disponibile su questa pagina per sei mesi, solo per te."
+        }
+      }
     }
   },
   "lp": {
@@ -700,7 +791,7 @@
     "sousTitre": "20 minuti a testa sul telefono, e un report che vi mostra su cosa siete d'accordo e di cosa dovete parlare.",
     "cta": "Iniziare la valutazione",
     "soloQuestion": "Il tuo partner non vuole partecipare?",
-    "soloLien": "Falla da solo/a",
+    "soloLien": "Fai il punto da solo/a",
     "preuve": "{{nom}}, migliaia di visitatori ogni giorno",
     "paiements": "Pagamento sicuro con Stripe",
     "visuel": {
@@ -793,7 +884,7 @@
     "facons": {
       "citation": "Una seduta da un consulente di coppia costa tra 60 e 100 €. Cominciare dalla valutazione completa di Quiz Couple è IL primo passo giusto.",
       "titre": "In due, o da soli",
-      "intro": "Se l'altro non ha voglia di parlarne, puoi farla per conto tuo. Stesso prezzo, stesso report.",
+      "intro": "Se il tuo partner non ha voglia di parlarne, fai il punto dalla tua parte: 50 domande su quello che vivi, e un report solo per te.",
       "duo": {
         "titre": "In due",
         "sous": "Ciascuno sul proprio telefono",
@@ -804,13 +895,14 @@
         "cta": "Iniziare in due"
       },
       "solo": {
-        "titre": "Da solo/a",
-        "sous": "Senza avvisare il tuo partner",
+        "titre": "Il punto sulla mia relazione",
+        "sous": "Da solo/a, senza avvisare il tuo partner",
         "points": [
-          "Rispondi per te, e al posto del tuo partner sugli argomenti chiave",
-          "Il report ti mostra anche quello che non sai del tuo partner"
+          "50 domande su quello che vivi, circa 12 minuti",
+          "A che punto sei, i tuoi segnali, il tuo modo di amare e un piano per parlarne",
+          "{{prixPoint}}, una volta sola"
         ],
-        "cta": "Iniziare da solo/a"
+        "cta": "Fare il punto da solo/a"
       }
     },
     "demo": {
@@ -839,7 +931,7 @@
         "100 domande su dodici aree",
         "Il report completo, online e in PDF",
         "Gli argomenti da cui partire, con spunti per parlarne",
-        "Lo stesso report, in due o da soli"
+        "Da solo/a? Il punto sulla mia relazione, {{prixPoint}}"
       ],
       "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
     },
@@ -885,7 +977,7 @@
         "Dopo qualche anno insieme",
         "Quando sentite che qualcosa è cambiato tra voi"
       ],
-      "solo": "E se il tuo partner non ne ha voglia, puoi farlo da solo o da sola: rispondi per te e, sugli argomenti che contano di più, dici cosa pensi che risponderebbe l'altro."
+      "solo": "E se il tuo partner non ne ha voglia, fai il punto da solo/a: 50 domande su quello che vivi, e un report solo per te, a {{prixPoint}}."
     },
     "faq": {
       "titre": "Domande frequenti",
@@ -903,8 +995,8 @@
           "a": "Perché il risultato è il report: le vostre risposte confrontate argomento per argomento, con spunti per parlarne. Le domande sono gratuite, e pagate solo alla fine, se volete il report."
         },
         {
-          "q": "Se la faccio da solo/a, il mio partner verrà avvisato?",
-          "a": "No. Non gli viene inviato niente, e solo tu vedi il report. Rispondi per te e, sugli argomenti che contano di più, al suo posto, oppure «non lo so»."
+          "q": "E se faccio il punto da solo/a?",
+          "a": "Al tuo partner non viene mandato niente, e il report lo vedi solo tu. Il punto da solo/a non confronta niente: 50 domande su quello che vivi, e un report sulla tua relazione vista da te (a che punto sei, i tuoi segnali, il tuo modo di amare, cosa ti trattiene, un piano per parlarne), a {{prixPoint}}."
         },
         {
           "q": "E se non viviamo insieme o non abbiamo figli?",

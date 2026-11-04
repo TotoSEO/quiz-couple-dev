@@ -92,6 +92,33 @@ export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat 
   };
 }
 
+// Un point sur ma relation (le seul(e) depuis le 4 novembre 2026), inventé :
+// `biais` de 0 (tout va bien) à 1 (tout va mal), et ce qu'on veut forcer
+// (`autres`, des réponses données telles quelles).
+export function point({ lang, graine = 23, biais = 0.3, prenoms, genres = ['f', 'h'], autres = {} }) {
+  const r = hasard(graine);
+  const rep = {};
+  for (const id of C.POINT_ORDRE) {
+    const q = C.POINT_INDEX[id].q;
+    if (q.type === 'plusieurs') {
+      let v = 0;
+      const k = 1 + Math.floor(r() * q.max);
+      while (C.bitsDe(v, [...Array(q.n).keys()]).length < k) v |= 1 << Math.floor(r() * q.n);
+      rep[id] = v;
+    } else if (q.type === 'info') rep[id] = Math.floor(r() * q.n);
+    else if (q.type === 'qui') rep[id] = Math.max(0, Math.min(4, Math.round(1 + r() * 2.4)));
+    else if (C.POINT_INDEX[id].partie === 'securite') rep[id] = 0;
+    else rep[id] = Math.max(0, Math.min(3, Math.round(biais * 3 + (r() - 0.5) * 2)));
+  }
+  Object.assign(rep, autres);
+  const p = prenoms || PRENOMS[lang] || PRENOMS.fr;
+  return {
+    lang, mode: 'solo', formule: 'point', situation: {}, finiLe: '2026-11-04T19:30:00Z',
+    a: { prenom: p[0], genre: genres[0], reponses: rep },
+    b: { prenom: p[1], genre: genres[1] },
+  };
+}
+
 export function jeuxDEssai(lang) {
   return [
     { nom: 'equilibre', d: couple({ lang }) },
@@ -100,6 +127,10 @@ export function jeuxDEssai(lang) {
     { nom: 'eloignes', d: couple({ lang, graine: 5, pareil: 0.05, voisin: 0.1, climat: 0.1, genres: ['f', 'f'] }) },
     { nom: 'solo', d: couple({ lang, graine: 17, solo: true, inconnu: 0.15, genres: ['h', 'f'] }) },
     { nom: 'solo-ombre', d: couple({ lang, graine: 19, solo: true, partout: true, inconnu: 0.45, pareil: 0.35, voisin: 0.25, climat: 0.5, prenoms: LONGS, genres: [null, null] }) },
+    { nom: 'point-bien', d: point({ lang, graine: 29, biais: 0.08, autres: { pd2: 0, pp3: 8 } }) },
+    { nom: 'point-tensions', d: point({ lang, graine: 31, biais: 0.4, genres: ['h', 'f'], autres: { pd2: 3, pp1: 2, pp2: 1 } }) },
+    { nom: 'point-fragile', d: point({ lang, graine: 37, biais: 0.7, autres: { pd1: 3, pd2: 2, px3: 3, ps3: 1, ps5: 4 } }) },
+    { nom: 'point-secu', d: point({ lang, graine: 41, biais: 0.6, prenoms: LONGS, genres: [null, null], autres: { pd1: 1, ps1: 2, ps2: 2, ps5: 1, ps6: 4 } }) },
   ];
 }
 

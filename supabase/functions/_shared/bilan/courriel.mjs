@@ -51,6 +51,153 @@ const PREFIXE_FICHIER = {
   nl: 'relatiecheck',
 };
 
+// « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026) : ce qui
+// change, pour une évaluation de cette formule, dans l'e-mail du rapport
+// (`rapport`), le rappel et la reprise (`rappel`), la ligne et la phrase d'un
+// lien personnel (`ligne`, `intro`), et le nom du fichier PDF (`fichier`).
+// Le reste vient des textes du seul(e).
+const TEXTES_POINT = {
+  fr: {
+    fichier: 'le-point-sur-ma-relation',
+    ligne: '{a}, le point sur ma relation',
+    intro: 'Voici le lien pour reprendre le point sur votre relation, là où vous en étiez.',
+    rapport: {
+      sujet: 'Le point sur votre relation : votre rapport, {a}',
+      phrase: 'Votre point sur votre relation est terminé. Téléchargez le rapport en PDF, ou lisez-le en ligne.',
+      puces: ['**Lisez-le au calme**, à votre rythme', '**Par où commencer ?** Par « L\'essentiel », puis « Votre plan »', '**Votre lien est personnel** : il marche six mois, sur n\'importe quel appareil'],
+      note: 'Ce rapport contient vos réponses sur votre relation : il n\'est destiné qu\'à vous.',
+    },
+    rappel: {
+      sujetRelance: 'Le point sur votre relation vous attend',
+      avantRelance: 'Vos réponses sont gardées, le rapport n\'attend plus que vous.',
+      titreRelance: 'Votre rapport vous attend',
+      p1Relance: 'Vous avez répondu aux 50 questions, et votre rapport est prêt.',
+      citation: 'Le plus long est fait. Il ne reste que la lecture !',
+      bouton: 'Voir mon rapport',
+      puces: ['**L\'état de votre relation**, et ce qui pèse', '**Les signaux à regarder**, et ce qui aide', '**Votre façon d\'aimer**, et ce qui vous retient', '**Trois conversations**, et comment les commencer'],
+      sujetRepriseMoi: 'Le point sur votre relation vous attend',
+      titreRepriseMoi: 'Votre point vous attend',
+      p1RepriseDebut: 'Vos 50 questions vous attendent : vous pouvez commencer quand vous voulez, à votre rythme.',
+    },
+  },
+  en: {
+    fichier: 'my-relationship-check-up',
+    ligne: '{a}, my relationship check-up',
+    intro: 'Here is the link to pick up your relationship check-up, right where you left off.',
+    rapport: {
+      sujet: 'Your relationship check-up: your report, {a}',
+      phrase: 'Your relationship check-up is complete. Download the report as a PDF, or read it online.',
+      puces: ['**Read it somewhere quiet**, at your own pace', '**Where to start?** With "The essentials", then "Your plan"', '**Your link is personal**: it works for six months, on any device'],
+      note: 'This report contains your answers about your relationship: it is meant for you alone.',
+    },
+    rappel: {
+      sujetRelance: 'Your relationship check-up is waiting for you',
+      avantRelance: 'Your answers are saved: the report is just waiting for you.',
+      titreRelance: 'Your report is waiting',
+      p1Relance: 'You answered the 50 questions, and your report is ready.',
+      citation: 'The longest part is done. Now all that\'s left is to read it!',
+      bouton: 'See my report',
+      puces: ['**Where your relationship stands**, and what weighs on it', '**The signs to watch**, and what helps', '**The way you love**, and what keeps you there', '**Three conversations**, and how to start them'],
+      sujetRepriseMoi: 'Your relationship check-up is waiting for you',
+      titreRepriseMoi: 'Your check-up is waiting',
+      p1RepriseDebut: 'Your 50 questions are waiting: start whenever you like, at your own pace.',
+    },
+  },
+  es: {
+    fichier: 'mi-relacion-en-claro',
+    ligne: '{a}, Mi relación, en claro',
+    intro: 'Aquí tienes el enlace para seguir con «Mi relación, en claro», justo donde lo dejaste.',
+    rapport: {
+      sujet: 'Mi relación, en claro: tu informe, {a}',
+      phrase: 'Has terminado «Mi relación, en claro». Descarga el informe en PDF, o léelo en línea.',
+      puces: ['**Léelo con calma**, a tu ritmo', '**¿Por dónde empezar?** Por «Lo esencial», y luego «Tu plan»', '**Tu enlace es personal**: funciona seis meses, en cualquier dispositivo'],
+      note: 'Este informe contiene tus respuestas sobre tu relación: es solo para ti.',
+    },
+    rappel: {
+      sujetRelance: 'Tu informe sobre tu relación te espera',
+      avantRelance: 'Tus respuestas están guardadas, el informe solo espera a que lo abras.',
+      titreRelance: 'Tu informe te espera',
+      p1Relance: 'Respondiste a las 50 preguntas, y tu informe está listo.',
+      citation: 'Lo más largo ya está hecho. ¡Solo queda leerlo!',
+      bouton: 'Ver mi informe',
+      puces: ['**Cómo está tu relación**, y lo que pesa', '**Las señales a vigilar**, y lo que ayuda', '**Tu forma de amar**, y lo que te retiene', '**Tres conversaciones**, y cómo empezarlas'],
+      sujetRepriseMoi: 'Tus preguntas sobre tu relación te esperan',
+      titreRepriseMoi: 'Tus preguntas te esperan',
+      p1RepriseDebut: 'Tus 50 preguntas te esperan: puedes empezar cuando quieras, a tu ritmo.',
+    },
+  },
+  de: {
+    fichier: 'wo-steht-meine-beziehung',
+    ligne: '{a}, Wo steht meine Beziehung?',
+    intro: 'Hier ist der Link, um mit „Wo steht meine Beziehung?“ genau da weiterzumachen, wo du aufgehört hast.',
+    rapport: {
+      sujet: 'Wo steht meine Beziehung? Dein Bericht, {a}',
+      phrase: 'Du bist fertig. Lade deinen Bericht als PDF herunter oder lies ihn online.',
+      puces: ['**Lies ihn in Ruhe**, in deinem Tempo', '**Wo anfangen?** Mit „Das Wichtigste“, dann „Dein Plan“', '**Dein Link ist persönlich**: Er funktioniert sechs Monate lang, auf jedem Gerät'],
+      note: 'Dieser Bericht enthält deine Antworten zu deiner Beziehung: Er ist nur für dich bestimmt.',
+    },
+    rappel: {
+      sujetRelance: 'Dein Bericht zu deiner Beziehung wartet auf dich',
+      avantRelance: 'Deine Antworten sind gespeichert, der Bericht wartet nur noch auf dich.',
+      titreRelance: 'Dein Bericht wartet',
+      p1Relance: 'Du hast die 50 Fragen beantwortet, und dein Bericht ist fertig.',
+      citation: 'Das Längste ist geschafft. Jetzt fehlt nur noch das Lesen!',
+      bouton: 'Meinen Bericht ansehen',
+      puces: ['**Wo deine Beziehung steht**, und was sie belastet', '**Die Warnsignale**, und was hilft', '**Wie du liebst**, und was dich hält', '**Drei Gespräche**, und wie du sie anfängst'],
+      sujetRepriseMoi: 'Deine Fragen zu deiner Beziehung warten auf dich',
+      titreRepriseMoi: 'Deine Fragen warten',
+      p1RepriseDebut: 'Deine 50 Fragen warten auf dich: Fang an, wann du willst, in deinem Tempo.',
+    },
+  },
+  it: {
+    fichier: 'il-punto-sulla-mia-relazione',
+    ligne: '{a}, il punto sulla mia relazione',
+    intro: 'Ecco il link per riprendere il punto sulla tua relazione, da dove avevi lasciato.',
+    rapport: {
+      sujet: 'Il punto sulla tua relazione: il tuo report, {a}',
+      phrase: 'Hai finito il punto sulla tua relazione. Scarica il report in PDF, o leggilo online.',
+      puces: ['**Leggilo con calma**, con i tuoi tempi', '**Da dove cominciare?** Da «L\'essenziale», poi «Il tuo piano»', '**Il tuo link è personale**: funziona sei mesi, su qualsiasi dispositivo'],
+      note: 'Questo report contiene le tue risposte sulla tua relazione: è destinato solo a te.',
+    },
+    rappel: {
+      sujetRelance: 'Il punto sulla tua relazione ti aspetta',
+      avantRelance: 'Le tue risposte sono salvate, il report aspetta solo te.',
+      titreRelance: 'Il tuo report ti aspetta',
+      p1Relance: 'Hai risposto alle 50 domande, e il tuo report è pronto.',
+      citation: 'La parte più lunga è fatta. Ora resta solo da leggerlo!',
+      bouton: 'Vedere il mio report',
+      puces: ['**Come sta la tua relazione**, e cosa pesa', '**I segnali da guardare**, e cosa aiuta', '**Il tuo modo di amare**, e cosa ti trattiene', '**Tre conversazioni**, e come cominciarle'],
+      sujetRepriseMoi: 'Il punto sulla tua relazione ti aspetta',
+      titreRepriseMoi: 'Le tue domande ti aspettano',
+      p1RepriseDebut: 'Le tue 50 domande ti aspettano: puoi cominciare quando vuoi, con i tuoi tempi.',
+    },
+  },
+  nl: {
+    fichier: 'waar-staat-mijn-relatie',
+    ligne: '{a}, Waar staat mijn relatie?',
+    intro: 'Hier is de link om verder te gaan met ‘Waar staat mijn relatie?’, precies waar je gebleven was.',
+    rapport: {
+      sujet: 'Waar staat je relatie? Je rapport, {a}',
+      phrase: 'Je bent klaar. Download je rapport als pdf, of lees het online.',
+      puces: ['**Lees het in alle rust**, in je eigen tempo', '**Waar begin je?** Bij ‘Het belangrijkste’, daarna ‘Je plan’', '**Je link is persoonlijk**: hij werkt zes maanden, op elk apparaat'],
+      note: 'Dit rapport bevat je antwoorden over je relatie: het is alleen voor jou bedoeld.',
+    },
+    rappel: {
+      sujetRelance: 'Je rapport over je relatie wacht op je',
+      avantRelance: 'Je antwoorden zijn bewaard, het rapport wacht alleen nog op jou.',
+      titreRelance: 'Je rapport wacht op je',
+      p1Relance: 'Je hebt de 50 vragen beantwoord, en je rapport is klaar.',
+      citation: 'Het langste deel is gedaan. Nu hoef je het alleen nog te lezen!',
+      bouton: 'Bekijk mijn rapport',
+      puces: ['**Hoe je relatie ervoor staat**, en wat zwaar weegt', '**De signalen om op te letten**, en wat helpt', '**Hoe je liefhebt**, en wat je vasthoudt', '**Drie gesprekken**, en hoe je ze begint'],
+      sujetRepriseMoi: 'Je vragen over je relatie wachten op je',
+      titreRepriseMoi: 'Je vragen wachten op je',
+      p1RepriseDebut: 'Je 50 vragen wachten op je: begin wanneer je wilt, in je eigen tempo.',
+    },
+  },
+};
+const textesPoint = (lang) => TEXTES_POINT[lang] || TEXTES_POINT.fr;
+
 // Les conditions générales de vente, par langue : le lien part dans l'e-mail du
 // rapport, avec la confirmation de la renonciation à la rétractation.
 export const CGV = {
@@ -356,10 +503,12 @@ export function masquerEmail(e) {
 
 // Un nom de fichier sans accent ni espace :
 // evaluation-de-couple-lea-et-thomas.pdf, ou evaluation-de-couple-lea.pdf
-// pour une évaluation faite seule.
-export function nomFichier(lang, a, b, mode) {
+// pour une évaluation faite seule, le-point-sur-ma-relation-lea.pdf pour un
+// point sur ma relation.
+export function nomFichier(lang, a, b, mode, formule) {
   const propre = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
     .toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 20) || 'x';
+  if (formule === 'point') return `${textesPoint(lang).fichier}-${propre(a)}.pdf`;
   const prefixe = PREFIXE_FICHIER[lang] || PREFIXE_FICHIER.fr;
   if (mode === 'solo') return `${prefixe}-${propre(a)}.pdf`;
   const et = { fr: 'et', en: 'and', es: 'y', de: 'und', it: 'e', nl: 'en' }[lang] || 'et';
@@ -376,11 +525,13 @@ export function nomFichier(lang, a, b, mode) {
 // lire en ligne. Le contenu sensible ne passe plus par le prestataire d'envoi
 // et ne reste plus dans les boîtes de réception. Le nombre de pages ne s'écrit
 // plus (23 octobre 2026 : nulle part).
-export function messageRapport({ lang, a, b, mode, url, moi }) {
+export function messageRapport({ lang, a, b, mode, formule, url, moi }) {
   const t = TEXTES[lang] || TEXTES.fr;
   const c = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
-  const solo = mode === 'solo';
-  const pick = (cle) => (solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
+  const solo = mode === 'solo' || formule === 'point';
+  // Le point sur ma relation : ses propres textes, ceux du seul(e) sinon.
+  const tp = formule === 'point' ? textesPoint(lang).rapport : null;
+  const pick = (cle) => (tp && tp[cle] !== undefined ? tp[cle] : solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
   const v = { a, b };
   const enLigne = url || (SITE + (PAGES[lang] || PAGES.fr));
   const lien = url ? url + '&pdf=1' : enLigne;
@@ -427,7 +578,7 @@ export function messageLien({ lang, liens, rotation }) {
   const t = TEXTES_LIEN[lang] || TEXTES_LIEN.fr;
   const c = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
   const l = Array.isArray(liens) ? liens : [];
-  const libelle = (x) => remplir(x.mode === 'solo' ? t.ligneSolo : t.ligne, { a: x.a, b: x.b });
+  const libelle = (x) => remplir(x.formule === 'point' ? textesPoint(lang).ligne : x.mode === 'solo' ? t.ligneSolo : t.ligne, { a: x.a, b: x.b });
   const prenoms = [...new Set(l.map((x) => x.a).filter(Boolean))];
   const commun = {
     lang,
@@ -444,7 +595,8 @@ export function messageLien({ lang, liens, rotation }) {
     };
   } else if (l.length === 1) {
     m = {
-      sujet: t.sujet, avant: t.avant, titre: t.titre, phrase: remplir(t.intro, { a: l[0].a, b: l[0].b }), puces: t.puces,
+      sujet: t.sujet, avant: t.avant, titre: t.titre,
+      phrase: remplir(l[0].formule === 'point' ? textesPoint(lang).intro : t.intro, { a: l[0].a, b: l[0].b }), puces: t.puces,
       bouton: t.bouton, url: l[0].url, brut: true, note: rotation ? t.nouveau : null,
     };
   } else {
@@ -834,8 +986,9 @@ export function prixEcrit(centimes, lang) {
 // 2026), arrondie à cinq minutes ; une évaluation seul(e) ajoute ce que
 // l'autre répondrait sur 34 à 38 questions (C.percuDemande, depuis le
 // 25 octobre 2026 ; avant, sur toutes) : environ 1,36 écran par question.
-export function minutesRestantes(reste, solo) {
-  const m = Math.max(0, Number(reste) || 0) * (solo ? 0.27 : 0.2);
+// Le point sur ma relation : environ douze minutes pour ses 50 questions.
+export function minutesRestantes(reste, solo, point) {
+  const m = Math.max(0, Number(reste) || 0) * (point ? 0.24 : solo ? 0.27 : 0.2);
   return Math.max(5, Math.round(m / 5) * 5);
 }
 
@@ -847,8 +1000,11 @@ export function minutesRestantes(reste, solo) {
 function messageRappel(quoi, o) {
   const { lang, mode, moi, autre, url, arret, prix, prixBase, promo } = o;
   const t = TEXTES_RAPPEL[lang] || TEXTES_RAPPEL.fr;
-  const solo = mode === 'solo';
-  const pick = (cle) => (solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
+  const point = o.formule === 'point';
+  const solo = mode === 'solo' || point;
+  // Le point sur ma relation : ses propres textes, ceux du seul(e) sinon.
+  const tp = point ? textesPoint(lang).rappel : null;
+  const pick = (cle) => (tp && tp[cle] !== undefined ? tp[cle] : solo && t[cle + 'Solo'] ? t[cle + 'Solo'] : t[cle]);
   const prog = o.progression || { repondu: 0, total: 0 };
   // Sans situation, le nombre de questions n'est pas encore connu : cent.
   const reste = Math.max(0, (prog.total || 100) - (prog.repondu || 0));
@@ -858,7 +1014,7 @@ function messageRappel(quoi, o) {
     moi, autre,
     prix: prixEcrit(prix, lang), prixBase: prixEcrit(prixBase, lang), prixChacun: prixEcrit(Math.round((Number(prix) || 0) / 2), lang),
     pourcent,
-    repondu: prog.repondu || 0, total: prog.total || 0, minutes: minutesRestantes(reste, solo),
+    repondu: prog.repondu || 0, total: prog.total || 0, minutes: minutesRestantes(reste, solo, point),
   };
   const r = (s) => remplir(s, v);
   const commun = { lang, bonjour: r(t.bonjour), alt: t.alt, signature: t.signature, pied: t.pied, arret: t.arret, arretUrl: arret, url };
@@ -875,7 +1031,7 @@ function messageRappel(quoi, o) {
       avant: r(pret ? t.avantPret : pick('avantRelance')),
       titre: r(pret ? t.titrePret : pick('titreRelance')),
       phrase: r(pret ? t.p1Pret : pick('p1Relance')),
-      puces: (solo ? t.pucesSolo : t.puces).map(r),
+      puces: (tp ? tp.puces : solo ? t.pucesSolo : t.puces).map(r),
       citation: pret ? null : r(pick('citation')),
       ticket,
       bouton: r(pick('bouton')),
@@ -897,10 +1053,10 @@ function messageRappel(quoi, o) {
   } else {
     const debut = (prog.repondu || 0) < 2 || !prog.total;
     m = {
-      sujet: r(t.sujetRepriseMoi),
-      avant: r(t.avantRepriseMoi),
-      titre: r(t.titreRepriseMoi),
-      phrase: r(debut ? t.p1RepriseDebut : t.p1RepriseMoi),
+      sujet: r(pick('sujetRepriseMoi')),
+      avant: r(pick('avantRepriseMoi')),
+      titre: r(pick('titreRepriseMoi')),
+      phrase: r(debut ? pick('p1RepriseDebut') : pick('p1RepriseMoi')),
       barre: debut ? null : { pct: Math.max(4, Math.min(96, Math.round(100 * prog.repondu / prog.total))), texte: prog.repondu + ' / ' + prog.total },
       puces: [t.temps, solo ? t.rienAutre : o.autreFini ? t.autreFini : t.autreEnCours, t.gratuit].map(r),
       bouton: r(debut ? t.boutonRepriseDebut : t.boutonRepriseMoi),

@@ -1,6 +1,6 @@
 {
   "title": "Conditions générales de vente",
-  "majLe": "Dernière mise à jour : 22 octobre 2026",
+  "majLe": "Dernière mise à jour : 4 novembre 2026",
   "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} sur quiz-couple.com. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
   "liens": {
     "contact": "page contact",
@@ -22,15 +22,15 @@
     {
       "titre": "1. Ce qui est vendu",
       "p": [
-        "L'évaluation de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté, ou auquel une seule personne répond en indiquant aussi ce que son ou sa partenaire répondrait d'après elle (mode seul(e)). Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
-        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF, à télécharger depuis le lien personnel envoyé par e-mail, et la même version consultable sur la page de l'évaluation.",
+        "L'évaluation de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté. Elle existe aussi pour une personne seule, sous le nom « Le point sur ma relation » (mode seul(e)) : elle y répond sur sa propre relation, sans que son ou sa partenaire participe. Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
+        "Ce qui est vendu, c'est le rapport. À deux : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Seul(e) : un rapport sur la relation vue par la personne qui a répondu (état de la relation, climat, besoins, signaux dans les disputes et pour la sécurité, partage du quotidien, style d'attachement, ce qui la retient, plan pour en parler). Le rapport est un contenu numérique : un document PDF, à télécharger depuis le lien personnel envoyé par e-mail, et la même version consultable sur la page de l'évaluation.",
         "L'évaluation est réservée aux personnes majeures. Le rapport est un fichier PDF ordinaire, lisible avec n'importe quel lecteur de PDF, sur téléphone comme sur ordinateur ; la même version se lit sur la page de l'évaluation. Les conditions qui s'appliquent à un achat sont celles en ligne au moment du paiement."
       ]
     },
     {
       "titre": "2. Le prix",
       "p": [
-        "Le rapport complet coûte {{prix}}, TVA non applicable. C'est un paiement unique, sans abonnement. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux. En mode seul(e), le rapport n'est fourni qu'à la personne qui a répondu.",
+        "Le rapport de l'évaluation à deux coûte {{prix}}, TVA non applicable. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux. Le rapport du point sur ma relation (mode seul(e)) coûte {{prixPoint}}, TVA non applicable, et n'est fourni qu'à la personne qui a répondu ; une évaluation seul(e) commencée avant le 4 novembre 2026 garde le prix affiché quand elle a été commencée. C'est un paiement unique, sans abonnement.",
         "Le prix est affiché sur la page de l'évaluation avant la première question, et à nouveau avant le paiement.",
         "Une réduction peut être proposée pour une durée limitée. Elle est alors affichée sur la page de l'évaluation, avec le prix habituel barré, et appliquée automatiquement sur la page de paiement : le montant payé est celui qu'affiche la page de paiement avant la validation.",
         "Un prix différent peut s'appliquer selon la région de l'appareil utilisé, par exemple en Amérique latine. Il est affiché avant le paiement, et le montant payé est celui qu'affiche la page de paiement avant la validation."

@@ -15,6 +15,15 @@
    solo, les textes de l'interface qui existent sous `solo.<chemin>` dans
    {lang}/bilan.json (app.solo) l'emportent sur `<chemin>`.
 
+   Depuis le 4 novembre 2026, seul(e) veut dire « le point sur ma relation »
+   (formule 'point', FORMULE) : une cinquantaine de questions sur ce que la
+   personne vit, sans rien prêter à l'autre, un rapport à elle
+   (window.QCBilanRapportPoint, depuis rapport-point.mjs, chargé à la
+   demande), 4,90 €. Ses questions et les textes de son rapport arrivent de
+   /js/data/bilan-point-<lang>.json (QP) ; les textes de l'interface sous
+   `point.<chemin>` (app.point) l'emportent sur `solo.<chemin>`. Un seul(e)
+   commencé avant (sans formule) se finit comme avant.
+
    Chacun accède au bilan par son lien personnel (#b=<id>&t=<clé>), que la
    page range aussi dans localStorage (qc-bilans) pour reprendre sans lien sur
    le même appareil. La partie # n'est jamais envoyée à un serveur web ; la
@@ -38,6 +47,8 @@
   var verifAttente = null;  // la vérification de l'écran d'attente, s'il est affiché
   var S = null;   // la session de réponses en cours
   var MODE = 'duo';  // 'duo' ou 'solo' : la façon de faire l'évaluation affichée
+  var FORMULE = null;  // 'point' pour le point sur ma relation, sinon null
+  var QP = null;  // les questions et les textes du rapport du point
   var modeDemande = null;  // le mode demandé par le bouton de la page ou le lien suivi (arrivee)
   var pdfDemande = false;  // le lien de l'e-mail du rapport demande le PDF tout de suite
 
@@ -51,9 +62,14 @@
     }
     return o;
   }
-  // En solo, un texte écrit sous `solo.<chemin>` l'emporte.
+  // En solo, un texte écrit sous `solo.<chemin>` l'emporte ; pour le point,
+  // un texte écrit sous `point.<chemin>` l'emporte sur les deux.
   function tr(chemin, defaut) {
     var v;
+    if (FORMULE === 'point') {
+      v = lireTexte(T.point, chemin);
+      if (v != null) return v;
+    }
     if (MODE === 'solo') {
       v = lireTexte(T.solo, chemin);
       if (v != null) return v;
@@ -97,6 +113,9 @@
   // prix et de la réduction, avec le prix affiché ailleurs (CFG.prix) barré
   // devant. `regionOffre` : celui de l'offre affichée, pour le bouton.
   var regionOffre = null;
+  // Le prix que la page écrit dans ses textes : celui de l'évaluation, ou
+  // celui du point (CFG.prixPoint).
+  function prixPage() { return (FORMULE === 'point' ? CFG.prixPoint : CFG.prix) || ''; }
   function prixRegion(etat) {
     if (!etat || !etat.region || !(etat.prix > 0) || etat.paye) return null;
     var ecrit = prixEcrit(etat.prix);
@@ -105,15 +124,16 @@
       centimes: etat.prix,
       prix: ecrit,
       badge: remplir(tr('paywall.region.' + etat.region, ''), {}),
-      html: '<span class="prix-promo"><span class="prix-promo-avant"><span class="sr-only">' + x('paywall.region.avant') + ' </span><s>' + esc(CFG.prix || '') + '</s></span> ' +
+      html: '<span class="prix-promo"><span class="prix-promo-avant"><span class="sr-only">' + x('paywall.region.avant') + ' </span><s>' + esc(prixPage()) + '</s></span> ' +
         '<span class="prix-promo-apres"><span class="sr-only">' + x('paywall.region.apres') + ' </span>' + esc(ecrit) + '</span></span>',
     };
   }
-  // Un texte de l'offre déjà échappé, écrit avec CFG.prix : le prix de la
-  // région à sa place, avec le prix barré devant (`barre`) ou seul (bouton).
+  // Un texte de l'offre déjà échappé, écrit avec le prix de la page : le
+  // prix de la région à sa place, avec le prix barré devant (`barre`) ou
+  // seul (bouton).
   function avecRegion(html, r, barre) {
-    if (!r || !CFG.prix) return html;
-    return String(html).split(esc(CFG.prix)).join(barre ? r.html : esc(r.prix));
+    if (!r || !prixPage()) return html;
+    return String(html).split(esc(prixPage())).join(barre ? r.html : esc(r.prix));
   }
   function texteBoutonPayer() { return avecRegion(x('paywall.bouton'), regionOffre); }
   function nombre(n) {
@@ -444,6 +464,26 @@
   function preparer() {
     return pret || (pret = charger().catch(function (e) { pret = null; throw e; }));
   }
+  // Le point sur ma relation : ses questions et les textes de son rapport
+  // (près de 50 Ko), chargés seulement quand on en ouvre un.
+  var pretPoint = null;
+  function preparerPoint() {
+    return pretPoint || (pretPoint = preparer().then(function () {
+      return fetch('/js/data/bilan-point-' + LANG + '.json' + (window.__QCV ? '?v=' + window.__QCV : ''));
+    }).then(function (r) {
+      if (!r.ok) throw new Error('point');
+      return r.json();
+    }).then(function (j) { QP = j; }).catch(function (e) { pretPoint = null; throw e; }));
+  }
+  // Le gabarit de son rapport, seulement pour l'afficher.
+  function scriptRapportPoint() {
+    if (window.QCBilanRapportPoint) return Promise.resolve();
+    return new Promise(function (ok, ko) {
+      chargerScript('/js/bilan-rapport-point.js', function (err) {
+        if (err || !window.QCBilanRapportPoint) ko(err || new Error('rapport-point')); else ok();
+      });
+    });
+  }
 
   function demarrer() {
     var hash = new URLSearchParams(location.hash.replace(/^#/, ''));
@@ -494,7 +534,7 @@
       if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirLien(id, jeton, arret, parQr); });
       var e = r.json;
       if (e.invite) return rejoindre(e, jeton, parQr);
-      var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', moi: e.moi.prenom, autre: e.autre.prenom };
+      var entree = { id: id, jeton: jeton, role: e.role, mode: e.mode || 'duo', formule: e.formule || null, moi: e.moi.prenom, autre: e.autre.prenom };
       var ancienne = lireListe().filter(function (x) { return x.id === id && x.role === e.role; })[0];
       if (ancienne && ancienne.invitation) entree.invitation = ancienne.invitation;
       garder(entree);
@@ -517,15 +557,23 @@
   // Où mener quelqu'un selon l'état du bilan.
   function suiteEtat(entree, etat) {
     MODE = etat.mode === 'solo' ? 'solo' : 'duo';
+    FORMULE = etat.formule === 'point' ? 'point' : null;
     entree.mode = MODE;
-    var prog = C.progression(etat.situation, etat.moi.reponses, MODE === 'solo' ? (etat.moi.percu || {}) : undefined);
+    entree.formule = FORMULE;
+    var prog = FORMULE === 'point' ? C.progressionPoint(etat.moi.reponses)
+      : C.progression(etat.situation, etat.moi.reponses, MODE === 'solo' ? (etat.moi.percu || {}) : undefined);
     majEntree(entree.id, entree.role, {
-      mode: MODE, moi: etat.moi.prenom, autre: etat.autre.prenom,
+      mode: MODE, formule: FORMULE, moi: etat.moi.prenom, autre: etat.autre.prenom,
       repondu: prog.repondu,
       total: prog.total,
       statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
+    if (FORMULE === 'point') {
+      chargement();
+      return preparerPoint().then(function () { commencerPoint(entree, etat); })
+        .catch(function () { messageErreur('reseau', function () { suiteEtat(entree, etat); }); });
+    }
     if (etat.moi.fini) return attente(entree, etat);
     commencerSession(entree, etat);
   }
@@ -546,6 +594,7 @@
   function accueil() {
     S = null;
     MODE = 'duo';
+    FORMULE = null;
     if (!C || !Q) {
       chargement();
       return preparer().then(accueil).catch(function () { messageErreur('reseau'); });
@@ -560,7 +609,7 @@
         : '';
       return '<li class="bilan-reprise">' +
         '<div><strong>' + x('accueil.avec', { autre: e.autre || '' }) + '</strong>' +
-        (e.mode === 'solo' ? ' <span class="bilan-reprise-mode">' + x('accueil.seul') + '</span>' : '') +
+        (e.mode === 'solo' ? ' <span class="bilan-reprise-mode">' + (e.formule === 'point' ? esc(ins(lireTexte(T.point, 'accueil.seul') || '')) : x('accueil.seul')) + '</span>' : '') +
         (statut ? '<span class="bilan-reprise-statut">' + statut + '</span>' : '') + '</div>' +
         '<div class="bilan-reprise-actions">' +
         bouton('reprendre', e.statut === 'resultat' ? x('accueil.voir') : x('accueil.reprendre'), 'btn-cta btn-gradient btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
@@ -658,6 +707,9 @@
     // n'apparaît qu'une fois la réponse donnée, et un célibataire voit à la
     // place ce qu'on lui prépare (panneauCelib).
     var statut = solo ? brouillon.statut : 'couple';
+    // Seul(e) et en couple (ou « c'est compliqué ») : le point sur ma relation
+    // depuis le 4 novembre 2026, ses textes l'emportent (tr).
+    FORMULE = solo && statut && statut !== 'celib' ? 'point' : null;
     var aideAutre = tr('creation.autreAide', '');
     var corps = '<h2 class="bilan-titre">' + x('creation.modeTitre') + '</h2>' + champMode(brouillon.mode) +
       (solo ? '<h3 class="bilan-sous-titre bilan-sous-titre--espace">' + x('creation.statutTitre') + '</h3>' + champStatut(statut) : '');
@@ -690,6 +742,9 @@
     corps += blocRetrouver();
     afficher(carte(corps, 'bilan-creation' + (solo ? ' bilan-creation--solo' : '')));
     compterVue('depart', { mode: brouillon.mode });
+    // Le formulaire du point, compté à part (depart_point) : le départ l'est
+    // déjà au premier écran.
+    if (FORMULE === 'point') compterVue('depart', { mode: 'solo', formule: 'point' });
     var champ = racine.querySelector('input[type="text"]');
     if (champ && !brouillon.moi && !modeDemande) champ.focus({ preventScroll: true });
     // Les phrases sous les cases nomment le partenaire dès qu'on l'écrit.
@@ -703,7 +758,7 @@
       var p = document.getElementById('bilan-erreur');
       p.textContent = ins(remplir(tr(cle, ''), {}));
       p.hidden = false;
-      if (cause) compterVue('depart_erreur', { mode: brouillon.mode, cle: cause });
+      if (cause) compterVue('depart_erreur', { mode: brouillon.mode, cle: cause, formule: FORMULE });
     }
     // Ce qui est à l'écran passe dans le brouillon : rien n'est perdu quand
     // on change de façon de faire ou de réponse à « Où en êtes-vous ? ».
@@ -757,15 +812,16 @@
         // « consentement » comptées à part).
         if (!brouillon.consent) return erreur('creation.accordManque', 'accord');
         b.disabled = true;
+        var formule = FORMULE === 'point' ? 'point' : undefined;
         appel('creer', {
-          lang: LANG, mode: brouillon.mode, src: source(),
+          lang: LANG, mode: brouillon.mode, formule: formule, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
           consentement: true, majeur: true,
         }).then(function (r) {
           b.disabled = false;
           if (r.statut !== 200) return erreur(r.json.erreur === 'trop' ? 'erreurs.trop' : 'erreurs.serveur');
-          var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
+          var entree = { id: r.json.id, jeton: r.json.jeton, mode: brouillon.mode, formule: formule || null, invitation: r.json.invitation || null, invitationVue: true, role: 'a', moi: brouillon.moi, autre: brouillon.autre, statut: 'encours' };
           garder(entree);
           brouillon = null;
           // Seul(e) : personne à inviter, la situation puis les questions.
@@ -1356,6 +1412,199 @@
     }
   }
 
+  // ── Le point sur ma relation : les questions ────────────────────────────
+  // Neuf parties (C.POINT_PARTIES), une cinquantaine de questions sur ce que
+  // la personne vit, sans perception ni situation : une réponse chacune, des
+  // cases à cocher pour « ce qui compte le plus » et « ce qui vous retient »
+  // (un nombre en bits, `max` au plus), et « Je préfère ne pas répondre »
+  // sur les deux questions de violence (`refus`, la valeur n). Les numéros
+  // d'aide sont sous chaque question de la partie « sécurité ».
+
+  var SECONDES_POINT = 14;
+  function qPoint(id) { return (QP && QP.questions && QP.questions[id]) || {}; }
+  function partiePoint(id) { return (QP && QP.parties && QP.parties[id]) || {}; }
+  // Un texte tel que le lit la personne : accordé à son genre, le prénom de
+  // l'autre à la place de {autre}.
+  function lit(texte) { return C.remplir(C.accorder(String(texte || ''), S.moi.genre), { autre: S.autre.prenom }); }
+
+  function commencerPoint(entree, etat, revoir) {
+    MODE = 'solo';
+    FORMULE = 'point';
+    S = {
+      entree: entree,
+      id: entree.id, jeton: entree.jeton, role: etat.role,
+      mode: 'solo', formule: 'point',
+      situation: {},
+      moi: etat.moi, autre: etat.autre,
+      reponses: JSON.parse(JSON.stringify(etat.moi.reponses || {})),
+      percu: null,
+      nn: [],
+      introsVues: {},
+      revoir: !!revoir,
+      phase: 'moi',
+      coches: null,
+      envoi: { enCours: false, sale: false, fini: false, attente: [] },
+    };
+    S.liste = C.POINT_ORDRE.map(function (id) { return { id: id, domaine: C.POINT_INDEX[id].partie }; });
+    S.index = revoir ? 0 : premierSansReponsePoint();
+    suivantePoint();
+  }
+
+  function premierSansReponsePoint() {
+    for (var i = 0; i < S.liste.length; i++) if (!C.valeurPointValide(S.liste[i].id, S.reponses[S.liste[i].id])) return i;
+    return S.liste.length;
+  }
+
+  function suivantePoint() {
+    if (S.index >= S.liste.length) return terminer();
+    var item = S.liste[S.index];
+    var debut = S.index === 0 || S.liste[S.index - 1].domaine !== item.domaine;
+    if (debut && !S.introsVues[item.domaine]) return introPartie(item.domaine);
+    questionPoint();
+  }
+
+  // Hors relecture, ce qui est déjà répondu se saute (après un retour en
+  // arrière).
+  function avancerPoint() {
+    S.index++;
+    if (!S.revoir) {
+      while (S.index < S.liste.length && C.valeurPointValide(S.liste[S.index].id, S.reponses[S.liste[S.index].id])) S.index++;
+    }
+    S.coches = null;
+    suivantePoint();
+  }
+
+  function introPartie(p) {
+    var parties = C.POINT_PARTIES.map(function (x) { return x.id; });
+    var n = parties.indexOf(p) + 1;
+    var nb = S.liste.filter(function (q) { return q.domaine === p; }).length;
+    var min = Math.max(1, Math.round(nb * SECONDES_POINT / 60));
+    var P = partiePoint(p);
+    var points = parties.map(function (d, i) {
+      var cls = i < n - 1 ? ' fait' : i === n - 1 ? ' actuel' : '';
+      return '<span class="bilan-point' + cls + '" title="' + esc(partiePoint(d).titre || d) + '"></span>';
+    }).join('');
+    afficher(carte(
+      '<p class="bilan-etape">' + x('domaine.partie', { n: n, total: parties.length }) + '</p>' +
+      '<div class="bilan-points" aria-hidden="true">' + points + '</div>' +
+      '<h2 class="bilan-titre">' + esc(ins(P.titre || p)) + '</h2>' +
+      '<p class="bilan-texte">' + esc(ins(lit(P.intro))) + '</p>' +
+      (p === 'securite' ? '<p class="bilan-note bilan-q-secu">' + x('question.securiteAide') + '</p>' : '') +
+      '<p class="bilan-pastille-info">' + (nb === 1 ? x('domaine.nbUn') : x('domaine.nb', { n: nb, min: min })) + '</p>' +
+      '<div class="bilan-actions">' + bouton('go', x('domaine.go')) + bouton('pause', x('domaine.pause'), 'btn-outline') + '</div>',
+      'bilan-domaine-intro'));
+    ACTIONS = {
+      go: function () { S.introsVues[p] = true; suivantePoint(); },
+      pause: function () { pause(); },
+    };
+  }
+
+  function questionPoint() {
+    var item = S.liste[S.index];
+    var id = item.id;
+    var q = C.POINT_INDEX[id].q;
+    var t = qPoint(id);
+    var multi = q.type === 'plusieurs';
+    var v = S.reponses[id];
+    var libelles = (q.type === 'qui' ? (QP.qui || []) : (t.o || [])).map(lit);
+    var total = S.liste.length;
+    var pct = Math.round(S.index / total * 100);
+    var rond = '<span class="bilan-option-rond" aria-hidden="true"></span>';
+    if (multi && S.coches === null) S.coches = Number.isInteger(v) ? v : 0;
+    var nbCoches = function () { var n = 0, m = S.coches || 0; while (m) { n += m & 1; m >>>= 1; } return n; };
+    var options = libelles.map(function (o, i) {
+      if (multi) {
+        var coche = !!((S.coches >> i) & 1);
+        return '<button type="button" class="bilan-option bilan-option--case' + (coche ? ' choisie' : '') + '" role="checkbox" aria-checked="' + coche + '" data-action="cocher" data-v="' + i + '">' +
+          '<span class="bilan-option-case" aria-hidden="true"></span><span>' + esc(ins(o)) + '</span></button>';
+      }
+      var choisie = v === i;
+      return '<button type="button" class="bilan-option' + (choisie ? ' choisie' : '') + '" role="radio" aria-checked="' + choisie + '" data-action="choisir" data-v="' + i + '">' +
+        rond + '<span>' + esc(ins(o)) + '</span></button>';
+    }).join('');
+    if (q.refus) {
+      var refus = v === q.n;
+      options += '<button type="button" class="bilan-option bilan-option--inconnu' + (refus ? ' choisie' : '') + '" role="radio" aria-checked="' + refus + '" data-action="choisir" data-v="' + q.n + '">' +
+        rond + '<span>' + esc(ins(lit(QP.refus))) + '</span></button>';
+    }
+    var repondu = multi ? nbCoches() > 0 : Number.isInteger(v);
+    var avecSuivante = multi || S.revoir || Number.isInteger(v);
+    var secu = C.POINT_INDEX[id].partie === 'securite';
+    afficher(carte(
+      '<div class="bilan-q-tete"><span class="bilan-q-domaine">' + esc(ins(partiePoint(item.domaine).titre || '')) + '</span>' +
+      '<span>' + x('question.progression', { n: S.index + 1, total: total }) + '</span></div>' +
+      '<div class="bilan-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+      '<h2 class="bilan-q-texte">' + esc(ins(lit(t.q))) + '</h2>' +
+      (multi ? '<p class="bilan-note bilan-q-aide">' + x('question.plusieurs', { max: q.max }) + '</p>' : '') +
+      '<div class="bilan-options" role="' + (multi ? 'group' : 'radiogroup') + '">' + options + '</div>' +
+      (multi ? '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' : '') +
+      (secu ? '<p class="bilan-note bilan-q-secu">' + x('question.securiteAide') + '</p>' : '') +
+      '<div class="bilan-q-pied">' +
+      (S.index > 0 ? bouton('precedente', '← ' + x('question.precedente'), 'btn-outline btn-sm') : '<span></span>') +
+      '<span class="bilan-envoi" id="bilan-envoi" aria-live="polite"></span>' +
+      (avecSuivante ? bouton('suivanteQ', (multi ? x('question.valider') : x('question.suivante')) + ' →', 'btn-cta btn-gradient btn-sm', repondu ? '' : ' disabled') : '<span></span>') +
+      '</div>' +
+      '<div class="bilan-q-bas">' + bouton('pause', x('question.pause'), 'btn-link') + '</div>',
+      'bilan-question bilan-question--point'), true);
+    garderEnVue();
+    etatEnvoi();
+    var erreurMulti = function (cle, vars) {
+      var p = document.getElementById('bilan-erreur');
+      if (!p) return;
+      p.textContent = ins(remplir(tr(cle, ''), vars || {}));
+      p.hidden = !cle;
+    };
+    ACTIONS = {
+      choisir: function (b) {
+        var val = +b.getAttribute('data-v');
+        S.reponses[id] = val;
+        sauver(false);
+        if (S.revoir) { questionPoint(); return; }
+        racine.querySelectorAll('.bilan-option').forEach(function (o) {
+          var oui = o === b;
+          o.classList.toggle('choisie', oui);
+          o.setAttribute('aria-checked', String(oui));
+        });
+        var session = S;
+        setTimeout(function () {
+          if (S === session && S.liste[S.index] && S.liste[S.index].id === id && racine.querySelector('.bilan-question--point')) avancerPoint();
+        }, 220);
+      },
+      cocher: function (b) {
+        var i = +b.getAttribute('data-v');
+        var bit = 1 << i;
+        if (!(S.coches & bit) && nbCoches() >= q.max) return erreurMulti('question.tropDeChoix', { max: q.max });
+        S.coches ^= bit;
+        var oui = !!(S.coches & bit);
+        b.classList.toggle('choisie', oui);
+        b.setAttribute('aria-checked', String(oui));
+        erreurMulti('');
+        var suite = racine.querySelector('[data-action="suivanteQ"]');
+        if (suite) suite.disabled = nbCoches() === 0;
+      },
+      suivanteQ: function () {
+        if (multi) {
+          if (!nbCoches()) return erreurMulti('question.choixManque');
+          S.reponses[id] = S.coches;
+          sauver(false);
+          return avancerPoint();
+        }
+        if (Number.isInteger(S.reponses[id])) avancerPoint();
+      },
+      precedente: function () {
+        if (multi && nbCoches()) S.reponses[id] = S.coches;
+        S.index = Math.max(0, S.index - 1);
+        S.coches = null;
+        S.introsVues[S.liste[S.index].domaine] = true;
+        questionPoint();
+      },
+      pause: function () {
+        if (multi && nbCoches()) { S.reponses[id] = S.coches; S.coches = null; }
+        pause(function () { questionPoint(); });
+      },
+    };
+  }
+
   // ── Enregistrement ──────────────────────────────────────────────────────
   // Chaque réponse part tout de suite ; si un envoi est en cours, la suivante
   // attend et part avec tout ce qui a changé entre-temps (la page envoie
@@ -1433,7 +1682,8 @@
   function pause(reprise) {
     var session = S;
     sauver(false);
-    var p = C.progression(session.situation, session.reponses, session.percu || undefined);
+    var p = session.formule === 'point' ? C.progressionPoint(session.reponses)
+      : C.progression(session.situation, session.reponses, session.percu || undefined);
     afficher(carte(
       duo('dort', 'repos', 76, session.moi.genre, session.autre.genre) +
       '<h2 class="bilan-titre">' + x('pause.titre') + '</h2>' +
@@ -1443,7 +1693,7 @@
       bouton('copierMoi', x('invitation.copierMonLien'), 'btn-outline') + '</div>' +
       blocLien(session.moi && session.moi.email), 'bilan-pause'));
     ACTIONS = {
-      reprendre: function () { S = session; if (reprise) reprise(); else suivante(); },
+      reprendre: function () { S = session; if (reprise) reprise(); else if (session.formule === 'point') suivantePoint(); else suivante(); },
       copierMoi: function (b) { copier(lienPersonnel(session.id, session.jeton), b); },
       envoyerLien: function (b) { envoyerLien(b, session.id, session.jeton); },
     };
@@ -1451,6 +1701,7 @@
 
   function terminer() {
     var session = S;
+    if (session.formule === 'point') return terminerPoint(session);
     // L'adresse où envoyer le rapport, demandée ici du 21 au 25 octobre
     // 2026, obligatoire au départ du 25 au 27 octobre, facultative au départ
     // depuis : sans elle, le serveur ne marque pas fini, et qui ne l'a pas
@@ -1479,6 +1730,24 @@
     });
   }
 
+  // Le point : l'adresse si elle manque, puis « fini » ; le rapport attend
+  // alors son paiement (ouvrirResultat, l'écran « prêt »).
+  function terminerPoint(session) {
+    if (!session.moi.email || session.moi.rappel === false) return ecranEmail(session);
+    afficher(carte('<p class="bilan-centre">' + x('chargement') + '</p>', 'bilan-chargement'), true);
+    sauver(true, function (r) {
+      if (r.statut === 409) return ouvrirResultat(session.entree);
+      var etat = r.json.etat;
+      if ((etat && etat.verrouille) || r.json.fini) return ouvrirResultat(session.entree);
+      if (r.json.emailManque) { S = session; session.moi.email = null; return ecranEmail(session); }
+      // Il manque une réponse : on la pose.
+      S = session;
+      S.index = premierSansReponsePoint();
+      S.coches = null;
+      suivantePoint();
+    });
+  }
+
   // Toutes les réponses sont là : l'adresse où partira le rapport, juste
   // avant l'offre (le départ ne la demande plus depuis le 2 novembre 2026 ;
   // une évaluation créée entre le 25 octobre et ce jour-là peut déjà l'avoir).
@@ -1494,7 +1763,7 @@
       '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
       '<div class="bilan-actions">' + bouton('valider', x('fin.bouton')) + '</div>' +
       '<div class="bilan-q-bas">' + bouton('precedente', '← ' + x('fin.revenir'), 'btn-link') + '</div>', 'bilan-fin-email'));
-    compterVue('email_vue', { mode: session.mode, id: session.id, cle: session.role });
+    compterVue('email_vue', { mode: session.mode, id: session.id, cle: session.role, formule: session.formule });
     surveillerEmail();
     var champ = document.getElementById('bilan-email');
     function erreur(cle) {
@@ -1526,6 +1795,11 @@
       precedente: function () {
         S = session;
         S.index = Math.max(0, S.liste.length - 1);
+        if (S.formule === 'point') {
+          S.coches = null;
+          S.introsVues[S.liste[S.index].domaine] = true;
+          return questionPoint();
+        }
         S.phase = S.mode === 'solo' && percuDemandee(S.liste[S.index].id) ? 'autre' : 'moi';
         S.introsVues[S.liste[S.index].domaine] = true;
         afficherQuestion();
@@ -1636,6 +1910,7 @@
     var r = prixRegion(etat);
     var c = r ? r.centimes : (CFG.prixCentimes || etat.prix || 0);
     var deux = MODE !== 'solo' && c > 0;
+    var comparaison = FORMULE === 'point' ? tr('paywall.comparaison', '') : '';
     var pastille = r ? r.badge : promo ? promo.badge : '';
     var html = '<div class="bilan-prix' + (deux ? ' bilan-prix--deux' : '') + '">' +
       (pastille ? '<p class="bilan-prix-pastille"><span class="promo-pastille">' + esc(pastille) + '</span></p>' : '');
@@ -1653,6 +1928,7 @@
       '<p class="bilan-prix-montant">' + (deux ? '<span class="bilan-prix-egal" aria-hidden="true">=</span> ' : '') +
       (r ? avecRegion(x('paywall.prix'), r, true) : avecPromo(x('paywall.prix'), !!promo)) + '</p>' +
       (promo && !r ? '<p class="bilan-note bilan-prix-code">' + esc(promo.code) + '</p>' : '') +
+      (comparaison ? '<p class="bilan-note bilan-prix-cine">' + x('paywall.comparaison') + '</p>' : '') +
       '<p class="bilan-note">' + x('paywall.prixAide', { autre: etat.autre.prenom }) + '</p></div>' +
       '<p class="bilan-note bilan-centre bilan-prix-conseiller">' + x('paywall.conseiller') + '</p>';
   }
@@ -1677,7 +1953,7 @@
   var obsColle = null;
   function barreColle(promo, r) {
     return '<div class="bilan-colle" id="bilan-colle" hidden><span class="bilan-colle-texte"><span class="bilan-colle-nom">' + x('paywall.colle') + '</span>' +
-      '<span class="bilan-colle-prix">' + (r ? r.html : promo ? promo.html : esc(CFG.prix || '')) + '</span></span>' +
+      '<span class="bilan-colle-prix">' + (r ? r.html : promo ? promo.html : esc(prixPage())) + '</span></span>' +
       bouton('versAchat', x('paywall.colleBouton'), 'btn-cta btn-gradient btn-sm') + '</div>';
   }
   function surveillerColle() {
@@ -1699,6 +1975,7 @@
   // Le sommaire du rapport et sa couverture à leurs prénoms : les chapitres
   // de rapport.mjs (chapitresListe), dans le même ordre.
   function sommaire(etat) {
+    if (FORMULE === 'point') return sommairePoint(etat);
     var cles = ['synthese', 'carte', 'conversations', 'bloquants'].concat(MODE === 'solo' ? ['ombre'] : [])
       .concat(['climat', 'signaux', 'roles', 'domaines', 'fin', 'suite']);
     var couv = '<div class="bilan-couv" aria-hidden="true"><p class="bilan-couv-de">' + x('rapport.couverture.de') + '</p>' +
@@ -1738,7 +2015,7 @@
     var suite = sommaire(etat) +
       (etat.moi.email ? '<details class="bilan-email-autre bilan-offre-email"><summary>' + x('paywall.emailAutre') + '</summary>' + champEmail(etat.moi.email, 'bilan-email-paie') + '</details>' : '') +
       '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>';
-    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + barreColle(promo, r);
+    if (pret) return carte(tete + achat, 'bilan-offre bilan-offre--pret') + carte(suite, 'bilan-offre-suite') + (etat.sansColle ? '' : barreColle(promo, r));
     return carte('<details class="bilan-offre-plie"><summary><span class="bilan-offre-plie-titre">' + x('paywall.plie') + '</span>' +
       '<span class="bilan-offre-plie-prix">' + (r ? avecRegion(x('paywall.prix'), r, true) : avecPromo(x('paywall.prix'), !!promo)) + '</span></summary>' +
       '<p class="bilan-offre-intro">' + x('paywall.introAttente', { autre: autre }) + '</p>' + achat + suite + '</details>', 'bilan-offre bilan-offre--attente');
@@ -1754,7 +2031,7 @@
         var email = champ ? (champ.value || '').trim() : '';
         if (email && !emailValide(email)) { if (champ) champ.focus(); return montre('paywall.emailFaux'); }
         if (!document.getElementById('bilan-renonce').checked) {
-          compterVue('case_manquante', { mode: mode, id: entree.id });
+          compterVue('case_manquante', { mode: mode, id: entree.id, formule: FORMULE });
           return montre('paywall.renonciationManque');
         }
         err.hidden = true;
@@ -1898,6 +2175,8 @@
   // Les deux ont fini, rien n'est payé : un seul écran, l'offre.
   function aDebloquer(entree, res, message) {
     MODE = res.mode === 'solo' ? 'solo' : 'duo';
+    FORMULE = res.formule === 'point' ? 'point' : null;
+    if (FORMULE === 'point') return aDebloquerPoint(entree, res, message);
     var moi = res.role === 'a' ? res.a : res.b;
     var autre = res.role === 'a' ? res.b : res.a;
     var etat = {
@@ -1914,6 +2193,91 @@
     compterVue('offre_vue', { mode: MODE, id: entree.id, cle: res.region || '' });
     ACTIONS = actionsOffre(entree, MODE);
     surveillerColle();
+  }
+
+  // ── Le point : l'écran « votre point est prêt » ─────────────────────────
+  // Ce qui est gratuit (C.apercuPoint, rien d'autre ne quitte le serveur) :
+  // l'état de la relation, le climat, combien de signaux et de besoins en
+  // manque, le style d'attachement, et, si les réponses parlent de peur ou
+  // de violence, les numéros d'aide en premier. Le nom des signaux, les
+  // besoins un par un, le plan et le reste sont dans le rapport.
+  function blocApercuPoint(ap, moi, autre) {
+    var acc = function (t) { return esc(ins(C.remplir(C.accorder(String(t || ''), moi.genre), { autre: autre.prenom }))); };
+    var etatTitre = lireTexte(QP && QP.rapport, 'etats.' + ap.etat + '.titre');
+    var style = lireTexte(QP && QP.rapport, 'styles.' + ap.attachement + '.titre');
+    var secu = '';
+    if (ap.securite === 'alerte' || ap.securite === 'vigilance') {
+      var numeros = tr('paywall.numeros', []);
+      secu = '<div class="bilan-pret-secu" role="note">' +
+        (ap.securite === 'alerte' ? '<p class="bilan-pret-secu-titre">' + x('paywall.securiteTitre') + '</p>' : '') +
+        '<p>' + x(ap.securite === 'alerte' ? 'paywall.alerte' : 'paywall.vigilance') + '</p>' +
+        (Array.isArray(numeros) && numeros.length ? '<ul class="bilan-pret-numeros">' + numeros.map(function (n) { return '<li>' + esc(ins(n)) + '</li>'; }).join('') + '</ul>' : '') +
+        '</div>';
+    }
+    var nb = function (n, cle) { return x('paywall.tuiles.' + cle + (n === 0 ? '0' : n === 1 ? 'Un' : 'N')); };
+    var tuiles = [
+      ['climat', esc(nombre(ap.climat)) + '<span class="bilan-tuile-pc">' + (LANG === 'nl' ? '%' : '\u00a0%') + '</span>', x('paywall.tuiles.climat')],
+      ['signaux', esc(nombre(ap.signaux)), nb(ap.signaux, 'signaux')],
+      ['manques', esc(nombre(ap.manques)), nb(ap.manques, 'manques')],
+      ['attachement', acc(style), x('paywall.tuiles.attachement')],
+    ];
+    // En cas d'alerte, l'encadré de sécurité dit déjà l'état (« Votre
+    // sécurité d'abord ») : la pastille ne le répète pas.
+    return secu +
+      (ap.etat === 'securite' ? '' : '<div class="bilan-pret-etat bilan-pret-etat--' + esc(ap.etat) + '"><p class="bilan-pret-etat-lib">' + x('paywall.etat') + '</p>' +
+      '<p class="bilan-pret-etat-titre">' + acc(etatTitre) + '</p></div>') +
+      '<div class="bilan-tuiles bilan-tuiles--point">' + tuiles.map(function (t) {
+        return '<div class="bilan-tuile bilan-tuile--' + t[0] + '"><span class="bilan-tuile-n">' + t[1] + '</span><span class="bilan-tuile-l">' + t[2] + '</span></div>';
+      }).join('') + '</div>';
+  }
+  // Ce que le rapport dit en plus, sous un cadenas.
+  function blocVerrou(ap, autre) {
+    var liste = tr(ap && ap.securite === 'alerte' ? 'paywall.verrouSecurite' : 'paywall.verrou', []);
+    return '<div class="bilan-inclus bilan-verrou"><p class="bilan-pret-quoi">' + x('paywall.accroche', { autre: autre }) + '</p>' +
+      '<h3 class="bilan-inclus-titre">' + x('paywall.verrouTitre') + '</h3>' +
+      '<ul class="bilan-verrou-liste">' + (Array.isArray(liste) ? liste : []).map(function (t) {
+        return '<li>' + CADENAS + '<span>' + esc(ins(remplir(t, { autre: autre }))) + '</span></li>';
+      }).join('') + '</ul></div>';
+  }
+  // Le sommaire : la couverture à son prénom et les chapitres, dans l'ordre
+  // du rapport (C.chapitresPoint).
+  var apercuOffre = null;
+  function sommairePoint(etat) {
+    var ap = apercuOffre || {};
+    var cles = C.chapitresPoint(ap.priorite || 'etat', ap.securite === 'alerte');
+    var titre = function (k) { return esc(ins(C.accorder(String(lireTexte(QP && QP.rapport, 'chapitres.' + k) || k), etat.moi.genre))); };
+    var couv = '<div class="bilan-couv bilan-couv--point" aria-hidden="true"><p class="bilan-couv-de">' + esc(ins(lireTexte(QP && QP.rapport, 'surtitre') || '')) + '</p>' +
+      '<p class="bilan-couv-noms">' + esc(etat.moi.prenom) + '</p>' +
+      '<p class="bilan-couv-marque">Quiz Couple</p></div>';
+    return '<h3 class="bilan-sous-titre">' + x('paywall.sommaire') + '</h3><div class="bilan-sommaire">' + couv +
+      '<ol class="bilan-sommaire-liste">' + cles.map(function (k, i) {
+        return '<li><span class="bilan-sommaire-num">' + (i < 9 ? '0' : '') + (i + 1) + '</span><span>' + titre(k) + '</span></li>';
+      }).join('') + '</ol></div>';
+  }
+  function aDebloquerPoint(entree, res, message) {
+    chargement();
+    preparerPoint().then(function () {
+      var moi = res.a;
+      var autre = res.b;
+      var ap = apercuOffre = res.apercu || null;
+      var alerte = !!(ap && ap.securite === 'alerte');
+      var etat = {
+        paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest, promo: null, prix: res.prix, region: res.region || null,
+        moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
+        // Pas de barre collée qui pousse à payer quand les réponses parlent
+        // de violence : les numéros d'aide passent d'abord.
+        sansColle: alerte,
+      };
+      afficher(
+        (message ? carte('<p class="bilan-alerte bilan-alerte--doux">' + message + '</p>') : '') +
+        offre(etat, true,
+          '<p class="bilan-pret-sur">' + esc(ins(lireTexte(QP && QP.rapport, 'surtitre') || '')) + '</p>' +
+          '<h2 class="bilan-titre bilan-pret-titre">' + x('paywall.pretTitre', { moi: moi.prenom }) + '</h2>' +
+          (ap ? blocApercuPoint(ap, moi, autre) + blocVerrou(ap, autre.prenom) : '')));
+      compterVue('offre_vue', { mode: 'solo', id: entree.id, cle: res.region || '', formule: 'point' });
+      ACTIONS = actionsOffre(entree, 'solo');
+      surveillerColle();
+    }).catch(function () { messageErreur('reseau', function () { aDebloquerPoint(entree, res, message); }); });
   }
 
   function retourPaiement(id, session) {
@@ -1953,7 +2317,22 @@
 
   function rapport(entree, res, message) {
     MODE = res.mode === 'solo' ? 'solo' : 'duo';
+    FORMULE = res.formule === 'point' ? 'point' : null;
     feuilleRapport();
+    if (FORMULE === 'point') {
+      // Le gabarit du point et ses textes arrivent à la demande.
+      chargement();
+      Promise.all([preparerPoint(), scriptRapportPoint()]).then(function () {
+        var corps;
+        try {
+          corps = window.QCBilanRapportPoint.rapportPointHtml(res, QP, { format: 'ecran' }).html;
+        } catch (e) {
+          return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
+        }
+        afficherRapport(entree, res, message, corps);
+      }).catch(function () { messageErreur('reseau', function () { ouvrirResultat(entree, message); }); });
+      return;
+    }
     var R = window.QCBilanRapport;
     if (!R) return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
     var corps;
@@ -1962,6 +2341,11 @@
     } catch (e) {
       return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
     }
+    afficherRapport(entree, res, message, corps);
+  }
+
+  // Autour du rapport : le PDF, l'adresse où il part, et la suppression.
+  function afficherRapport(entree, res, message, corps) {
     var r = res.rapport || {};
     var etatPdf = r.pret ? '' : '<p class="bilan-note" id="bilan-pdf-etat">' + x(r.statut === 'erreur' ? 'rapport.ecran.pdfErreur' : 'rapport.ecran.pdfPrepa') + '</p>';
     var etatEmail = { rapport: r, moi: { email: res.moiEmail || null } };
@@ -2083,7 +2467,8 @@
   // `cle` la cause d'une erreur du départ, `id` limite à une évaluation.
   function compterVue(quoi, o) {
     o = o || {};
-    var cle = 'qc-bilan-' + quoi + (o.cle ? '-' + o.cle : '') + (o.id ? '-' + o.id : '');
+    var point = o.formule === 'point';
+    var cle = 'qc-bilan-' + quoi + (point ? '-point' : '') + (o.cle ? '-' + o.cle : '') + (o.id ? '-' + o.id : '');
     try {
       if (sessionStorage.getItem(cle)) return;
       sessionStorage.setItem(cle, '1');
@@ -2093,6 +2478,7 @@
     var corps = { quoi: quoi, src: source() };
     if (o.mode === 'solo' || o.mode === 'duo') corps.mode = o.mode;
     if (o.cle) corps.cle = o.cle;
+    if (point) corps.formule = 'point';
     appel('vue', corps).catch(function () {});
   }
 

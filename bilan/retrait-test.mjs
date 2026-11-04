@@ -23,7 +23,7 @@
 // SUPABASE_SERVICE_ROLE_KEY en local. Rien de personnel n'est écrit au journal.
 
 import { createHash } from 'node:crypto';
-import { etapes } from '../supabase/functions/_shared/bilan/coeur.mjs';
+import { etapes, partiesPoint, analyserPoint, POINT_MOTIFS, POINT_PRIORITES, POINT_DUREES } from '../supabase/functions/_shared/bilan/coeur.mjs';
 
 const BUCKET = 'bilan-rapports';
 const fmt = (options) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', ...options });
@@ -38,15 +38,20 @@ const vide = (o) => !o || (typeof o === 'object' && !Object.keys(o).length);
 export function retraitsPour(ligne) {
   const s = ligne.src || 'direct';
   const solo = ligne.mode === 'solo';
+  // « Le point sur ma relation » (4 novembre 2026) : ses compteurs `_point`
+  // en plus, ses parties au lieu des domaines.
+  const point = ligne.formule === 'point';
   const surs = [];
   const ajoute = (liste, quand, evenement, cle = '', montant = 0) => {
     if (quand) liste.push({ jour: jourParis(quand), evenement, cle, n: 1, montant });
   };
   ajoute(surs, ligne.cree_le, 'cree', s);
   if (solo) ajoute(surs, ligne.cree_le, 'cree_solo', s);
+  if (point) ajoute(surs, ligne.cree_le, 'cree_point', s);
   if (!solo) ajoute(surs, ligne.b_consent, 'rejoint', s);
   ajoute(surs, ligne.a_fini, 'fini_a', s);
   if (solo) ajoute(surs, ligne.a_fini, 'fini_a_solo', s);
+  if (point) ajoute(surs, ligne.a_fini, 'fini_point', s);
   if (!solo) ajoute(surs, ligne.b_fini, 'fini_b', s);
   const finis = [ligne.a_fini, solo ? null : ligne.b_fini].filter(Boolean).sort();
   if (finis.length) ajoute(surs, finis[0], 'premier_fini', s);
@@ -54,9 +59,21 @@ export function retraitsPour(ligne) {
   else if (ligne.a_fini && ligne.b_fini) ajoute(surs, finis[finis.length - 1], 'deux_finis', s);
   ajoute(surs, ligne.renonciation_le, 'paiement_ouvert', s);
   if (solo) ajoute(surs, ligne.renonciation_le, 'paiement_ouvert_solo', s);
+  if (point) ajoute(surs, ligne.renonciation_le, 'paiement_ouvert_point', s);
   const montant = Number(ligne.paiement_montant) || 0;
   ajoute(surs, ligne.paye_le, 'paye', s, montant);
   if (solo) ajoute(surs, ligne.paye_le, 'paye_solo', s, montant);
+  if (point) ajoute(surs, ligne.paye_le, 'paye_point', s, montant);
+  // Ce que dit le rapport du point, compté par la fonction à la fin des
+  // réponses, le jour de a_fini.
+  if (point && ligne.a_fini && !vide(ligne.a_reponses)) {
+    const an = analyserPoint(ligne.a_reponses);
+    ajoute(surs, ligne.a_fini, 'point_etat', an.etat);
+    ajoute(surs, ligne.a_fini, 'point_attachement', an.attachement.style);
+    ajoute(surs, ligne.a_fini, 'point_engagement', an.engagement.profil);
+    ajoute(surs, ligne.a_fini, 'point_securite', an.securite.niveau);
+    if (an.securite.refus) ajoute(surs, ligne.a_fini, 'point_securite', 'refus');
+  }
   ajoute(surs, ligne.rembourse_le, 'rembourse', s, montant);
   if (ligne.rapport_statut === 'pret') ajoute(surs, ligne.rapport_maj, 'rapport_pret');
   for (const e of Array.isArray(ligne.envois) ? ligne.envois : []) ajoute(surs, e && e.le, e && e.ok ? 'envoi_ok' : 'envoi_echec');
@@ -80,6 +97,18 @@ export function retraitsPour(ligne) {
     if (vide(rep)) continue;
     memeJour.push({ evenement: 'commence_' + r, cle: s });
     if (solo) memeJour.push({ evenement: 'commence_a_solo', cle: s });
+    if (point) {
+      // Le point : la première réponse, les parties entrées et finies, et les
+      // trois réponses du départ, comptées à leur première réponse.
+      memeJour.push({ evenement: 'commence_point', cle: s });
+      const parties = partiesPoint(rep);
+      for (const p of parties.entrees) memeJour.push({ evenement: 'point_partie_entree', cle: p });
+      for (const p of parties.finies) memeJour.push({ evenement: 'point_partie_finie', cle: p });
+      for (const [id, evenement, liste] of [['pd1', 'point_motif', POINT_MOTIFS], ['pd2', 'point_priorite', POINT_PRIORITES], ['pd3', 'point_duree', POINT_DUREES]]) {
+        if (Number.isInteger(rep[id]) && liste[rep[id]]) memeJour.push({ evenement, cle: liste[rep[id]] });
+      }
+      continue;
+    }
     const { entres, finis: faits } = etapes(situ, rep);
     for (const d of entres) memeJour.push({ evenement: 'domaine_entre', cle: d });
     for (const d of faits) memeJour.push({ evenement: 'domaine_fini', cle: d });
@@ -136,7 +165,7 @@ async function connexion(env = process.env) {
   return { appel };
 }
 
-const COLONNES = 'id,mode,lang,src,cree_le,b_consent,a_fini,b_fini,renonciation_le,paye_le,rembourse_le,paiement_montant,'
+const COLONNES = 'id,mode,formule,lang,src,cree_le,b_consent,a_fini,b_fini,renonciation_le,paye_le,rembourse_le,paiement_montant,'
   + 'rapport_statut,rapport_maj,rapport_chemin,envois,pret_mail_le,relance_le,a_reprise_le,b_reprise_le,situation,a_reponses,b_reponses';
 
 // L'empreinte SHA-256 d'une adresse en minuscules : « lister » signale les
@@ -145,11 +174,11 @@ const COLONNES = 'id,mode,lang,src,cree_le,b_consent,a_fini,b_fini,renonciation_
 export const empreinte = (email) => createHash('sha256').update(String(email || '').trim().toLowerCase()).digest('hex');
 
 async function lister(db, empreintes) {
-  const lignes = await db.appel(`/rest/v1/bilans?select=id,mode,lang,src,cree_le,paye_le,rembourse_le,paiement_montant,rapport_statut,a_email,b_email,paiement_email&paye_le=not.is.null&order=paye_le.asc`);
+  const lignes = await db.appel(`/rest/v1/bilans?select=id,mode,formule,lang,src,cree_le,paye_le,rembourse_le,paiement_montant,rapport_statut,a_email,b_email,paiement_email&paye_le=not.is.null&order=paye_le.asc`);
   console.log(`${lignes.length} évaluation(s) payée(s), de la plus ancienne à la plus récente :`);
   for (const l of lignes) {
     const marquee = [l.a_email, l.b_email, l.paiement_email].some((e) => e && empreintes.includes(empreinte(e)));
-    console.log(`  ${l.id.slice(0, 8)} · ${l.mode} · ${l.lang} · source ${l.src || 'direct'} · créée ${heureParis(l.cree_le)} · payée ${heureParis(l.paye_le)}`
+    console.log(`  ${l.id.slice(0, 8)} · ${l.formule === 'point' ? 'point' : l.mode} · ${l.lang} · source ${l.src || 'direct'} · créée ${heureParis(l.cree_le)} · payée ${heureParis(l.paye_le)}`
       + ` · ${((Number(l.paiement_montant) || 0) / 100).toFixed(2)} € · PDF ${l.rapport_statut || '-'}${l.rembourse_le ? ' · remboursée' : ''}`
       + (marquee ? ' · ★ adresse donnée' : ''));
   }
