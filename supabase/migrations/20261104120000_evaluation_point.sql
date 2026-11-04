@@ -217,8 +217,10 @@ BEGIN
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'depart_point'), 0)::integer AS departs,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'cree_point'), 0)::integer AS crees,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'commence_point'), 0)::integer AS commences,
+      COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'email_vue_point'), 0)::integer AS emails_vus,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'fini_point'), 0)::integer AS finis,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'offre_vue_point'), 0)::integer AS offres_vues,
+      COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'case_manquante_point'), 0)::integer AS cases_manquantes,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'paiement_ouvert_point'), 0)::integer AS paiements_ouverts,
       COALESCE(sum(c.n) FILTER (WHERE c.evenement = 'paye_point'), 0)::integer AS payes,
       COALESCE(sum(c.montant) FILTER (WHERE c.evenement = 'paye_point'), 0)::integer AS revenu

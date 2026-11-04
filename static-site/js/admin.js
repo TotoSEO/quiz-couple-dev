@@ -699,7 +699,8 @@
       distance_par_test: chargeSalonParPage(),
       instagram_clics: statsRpc('get_instagram_clics'),
       bilan: statsRpc('get_bilan_tableau', { p_jours: n }),
-      bilan_celibataires: statsRpc('get_bilan_celib', { p_jours: n })
+      bilan_celibataires: statsRpc('get_bilan_celib', { p_jours: n }),
+      bilan_point: statsRpc('get_bilan_point', { p_jours: n })
     };
     var cles = Object.keys(lots);
     Promise.all(cles.map(function (k) {
@@ -711,7 +712,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres), depuis le 25 octobre 2026, sans aucune adresse. Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : visites et pages vues par jour, sources des visites, sur la période. distance_par_test : parties à distance arrivées au résultat, par test, depuis le 7 septembre 2026 (fins = téléphones arrivés au résultat, deux par partie ; departs n\'est plus alimenté depuis le 20 octobre 2026). instagram_clics : clics vers Instagram depuis le site. bilan : l\'évaluation de couple payante (visites de sa page, entonnoir, ventes en centimes, sources, domaines). bilan_celibataires : au départ seul(e), les réponses à « Où en êtes-vous ? » (statuts, comptées une fois par visite) et ce que les célibataires voudraient dans une évaluation pour eux (interets, autres, et depuis le 4 novembre 2026 sources et situations : d\'où vient la réponse, l\'évaluation ou la carte d\'un test célibataire), depuis le 25 octobre 2026, sans aucune adresse. bilan_point : « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026 (serie : formulaires ouverts, créés, commencés, écrans de l\'adresse, finis, écrans « prêt », clics sans la case, pages Stripe ouvertes, payés, revenu en centimes ; cles : les réponses du départ (point_motif, point_priorite, point_duree), ce que dit le rapport (point_etat, point_attachement, point_engagement, point_securite), les parties entrées et finies, les erreurs du départ, et les vues et clics de la carte des tests célibataires ; carte_celib : la carte page par page, avec les réponses et les adresses venues d\'elle). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -912,7 +913,9 @@
       body: JSON.stringify({
         action: 'apercu_paiement',
         lang: document.getElementById('apercu-stripe-lang').value,
-        mode: document.getElementById('apercu-stripe-mode').value,
+        // « point » : le seul(e) depuis le 4 novembre 2026 (formule point).
+        mode: document.getElementById('apercu-stripe-mode').value === 'duo' ? 'duo' : 'solo',
+        formule: document.getElementById('apercu-stripe-mode').value === 'point' ? 'point' : undefined,
         // Une fonction d'avant le 27 octobre 2026 l'ignore : prix habituel.
         zone: (document.getElementById('apercu-stripe-zone') || {}).value || undefined
       })
@@ -1023,6 +1026,24 @@
       var reponses = Number(d.reponses) || 0;
       html += '<p class="bil-fait-l">Ce qui intéresserait les célibataires : ' + nombreBilan(reponses) + ' réponse' + (reponses > 1 ? 's' : '') +
         ' sur la période, ' + nombreBilan(d.avec_email) + ' avec une adresse · ' + nombreBilan(d.liste_attente) + ' adresse' + (Number(d.liste_attente) > 1 ? 's' : '') + ' en liste d\'attente, toutes périodes</p>';
+      // D'où viennent les réponses (4 novembre 2026) : le départ seul(e) de
+      // l'évaluation, ou la carte d'un test célibataire ; et la situation
+      // choisie sur la carte.
+      var sources = d.sources || {};
+      var deLaCarte = Object.keys(sources).filter(function (k) { return k !== 'evaluation'; }).reduce(function (a, k) { return a + (Number(sources[k]) || 0); }, 0);
+      if (reponses) {
+        html += '<p class="bil-note-etapes">' + nombreBilan(sources.evaluation) + ' venue' + (Number(sources.evaluation) > 1 ? 's' : '') + ' du départ seul(e) de l\'évaluation, ' +
+          nombreBilan(deLaCarte) + ' de la carte des tests célibataires (détail par test plus bas).</p>';
+      }
+      var situations = d.situations || {};
+      var SITUATIONS_ADMIN = [['jamais', 'Jamais été en couple'], ['rupture', 'Rupture il y a moins d\'un an'], ['repete', 'Des histoires qui se répètent'], ['autre', 'Aucune de ces situations']];
+      var totSit = SITUATIONS_ADMIN.reduce(function (a, s) { return a + (Number(situations[s[0]]) || 0); }, 0);
+      if (totSit) {
+        html += '<p class="bil-fait-l">Leur situation (carte des tests célibataires)</p>' + SITUATIONS_ADMIN.map(function (s) {
+          return ligneEtapeBilan(s[1], '', Number(situations[s[0]]) || 0, totSit, totSit, 'var(--adm-s-vues)');
+        }).join('');
+        html += '<p class="bil-fait-l">Ce qui les intéresserait</p>';
+      }
       var interets = d.interets || [];
       html += reponses && interets.length
         ? interets.map(function (i) {
@@ -1040,6 +1061,128 @@
       el.innerHTML = '<p class="text-center text-muted-foreground py-6">Ces chiffres ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261025140000 est-elle appliquée, et admin-stats déployée avec get_bilan_celib ?</p>';
     });
   }
+  // « Le point sur ma relation », le seul(e) depuis le 4 novembre 2026
+  // (get_bilan_point par admin-stats, migration 20261104120000) : son
+  // entonnoir, les parties où l'on s'arrête, les trois réponses du départ et
+  // ce que dit le rapport, comptés une fois par évaluation ; et la carte
+  // « bilan célibataire » des tests célibataires, page par page. Sa propre
+  // lecture : si la fonction manque, le reste de l'onglet s'affiche quand même.
+  var POINT_PARTIES_ADMIN = [
+    ['depart', 'Pour commencer'], ['climat', 'Comment vous allez'], ['besoins', 'Ce dont vous avez besoin'],
+    ['disputes', 'Vos disputes'], ['securite', 'Vous sentir en sécurité'], ['equilibre', 'Qui fait quoi'],
+    ['attachement', 'Votre façon d\'aimer'], ['avenir', 'Ce qui vous retient'], ['parler', 'Pour en parler']
+  ];
+  var POINT_LIBELLES = {
+    point_motif: { titre: 'Pourquoi seul(e) (première question)', cles: { refuse: 'Son ou sa partenaire ne veut pas', nose: 'N\'ose pas le lui proposer', clair: 'Y voir clair pour soi d\'abord', partir: 'Se demande s\'il faut rester', parler: 'Préparer une conversation importante', curieux: 'Par curiosité' } },
+    point_priorite: { titre: 'Ce qu\'ils cherchent', cles: { etat: 'Où j\'en suis', probleme: 'Ce qui ne va pas, et pourquoi', decision: 'Rester ou partir', parler: 'Comment en parler' } },
+    point_duree: { titre: 'Ensemble depuis', cles: { moins1: 'Moins d\'un an', un3: 'Un à trois ans', trois10: 'Trois à dix ans', plus10: 'Plus de dix ans' } },
+    point_etat: { titre: 'État de la relation (rapport)', cles: { epanouie: 'Épanouie', solide: 'Solide', fragile: 'Fragile', securite: 'Sécurité d\'abord' } },
+    point_attachement: { titre: 'Attachement (rapport)', cles: { secure: 'Sécure', anxieux: 'Anxieux', evitant: 'Évitant', craintif: 'Craintif' } },
+    point_engagement: { titre: 'Engagement (rapport)', cles: { epanoui: 'Engagé(e), et bien', attache: 'Retenu(e) par ce qui est construit', hesitant: 'Partagé(e)', eloigne: 'Prend de la distance' } },
+    point_securite: { titre: 'Sécurité (rapport)', cles: { aucune: 'Rien de signalé', vigilance: 'Vigilance', alerte: 'Alerte : les numéros d\'aide ouvrent le rapport' } }
+  };
+  var CELIB_PAGES_ADMIN = (typeof window !== 'undefined' && Array.isArray(window.__QC_CELIB_PAGES)) ? window.__QC_CELIB_PAGES : [];
+  function nomPageCelib(cle) {
+    for (var i = 0; i < CELIB_PAGES_ADMIN.length; i++) if (CELIB_PAGES_ADMIN[i].cle === cle) return CELIB_PAGES_ADMIN[i].nom;
+    return cle;
+  }
+  // Une répartition (les clés d'un événement du point) : chaque barre en part
+  // du total de l'événement.
+  function repartitionPoint(cles, ev) {
+    var lib = POINT_LIBELLES[ev];
+    var parCle = (cles && cles[ev]) || {};
+    var total = Object.keys(lib.cles).reduce(function (a, k) { return a + (Number(parCle[k]) || 0); }, 0);
+    var html = '<div class="bil-colonne"><h3 class="bil-colonne-titre">' + esc(lib.titre) + '</h3>';
+    if (!total) return html + '<p class="bil-vide">Rien sur la période.</p></div>';
+    html += Object.keys(lib.cles).map(function (k) {
+      return ligneEtapeBilan(lib.cles[k], '', Number(parCle[k]) || 0, total, total, k === 'alerte' || k === 'securite' ? 'var(--adm-bad, #c43d3f)' : 'var(--adm-s-lances)');
+    }).join('');
+    if (ev === 'point_securite' && Number(parCle.refus)) {
+      html += '<p class="bil-note-etapes">Dont ' + nombreBilan(parCle.refus) + ' qui ont préféré ne pas répondre à une question de cette partie.</p>';
+    }
+    return html + '</div>';
+  }
+  function loadBilanPoint() {
+    var el = document.getElementById('admin-bilan-point');
+    var carte = document.getElementById('admin-bilan-carte-celib');
+    if (!el && !carte) return;
+    [el, carte].forEach(function (x) { if (x) x.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
+    statsRpc('get_bilan_point', { p_jours: bilanJours }).then(function (d) {
+      if (!d || typeof d !== 'object' || !Array.isArray(d.serie)) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      var t = {};
+      ['departs', 'crees', 'commences', 'emails_vus', 'finis', 'offres_vues', 'cases_manquantes', 'paiements_ouverts', 'payes', 'revenu']
+        .forEach(function (k) { t[k] = d.serie.reduce(function (a, j) { return a + (Number(j[k]) || 0); }, 0); });
+      var cles = d.cles || {};
+      if (el) {
+        var faits = [
+          [t.crees, 'évaluation' + (t.crees > 1 ? 's' : '') + ' créée' + (t.crees > 1 ? 's' : ''), partBilan(t.crees, t.departs) + ' des formulaires'],
+          [t.finis, 'au bout de leurs réponses', partBilan(t.finis, t.crees) + ' des créées'],
+          [t.payes, 'vente' + (t.payes > 1 ? 's' : '') + ' · ' + eurosBilan(t.revenu), partBilan(t.payes, t.finis) + ' des finies'],
+          [t.paiements_ouverts, 'page' + (t.paiements_ouverts > 1 ? 's' : '') + ' Stripe ouverte' + (t.paiements_ouverts > 1 ? 's' : ''), partBilan(t.paiements_ouverts, t.offres_vues) + ' des écrans « prêt »']
+        ];
+        var html = '<div class="bil-faits">' + faits.map(function (f) {
+          return '<div class="bil-fait"><div class="bil-fait-n">' + nombreBilan(f[0]) + ' <small>' + esc(f[2]) + '</small></div><div class="bil-fait-l">' + esc(f[1]) + '</div></div>';
+        }).join('') + '</div>';
+        var couleurs = ['var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+        var etapes = [
+          ['Formulaire ouvert', 'après « Où en êtes-vous ? » : en couple, ou c\'est compliqué', t.departs],
+          ['Évaluation créée', 'prénoms, genres et la case validés', t.crees],
+          ['A commencé', 'sa première réponse', t.commences],
+          ['Écran de l\'adresse', 'toutes les questions répondues', t.emails_vus],
+          ['A fini', 'ses réponses et son adresse', t.finis],
+          ['Écran « prêt » vu', 'les chiffres gratuits et le prix', t.offres_vues],
+          ['Page Stripe ouverte', '', t.paiements_ouverts],
+          ['Rapport payé', 'paiement confirmé par Stripe', t.payes]
+        ];
+        // Les parties, dans l'ordre des questions : entrées (au moins une
+        // réponse) et finies (toutes).
+        var entrees = cles.point_partie_entree || {}, finies = cles.point_partie_finie || {};
+        var lignesParties = POINT_PARTIES_ADMIN.map(function (p) {
+          var e = Number(entrees[p[0]]) || 0, f = Number(finies[p[0]]) || 0;
+          var perte = e ? Math.round(((e - f) / e) * 100) : 0;
+          return '<tr><td class="bil-gauche">' + esc(p[1]) + '</td><td>' + nombreBilan(e) + '</td><td>' + nombreBilan(f) + '</td>' +
+            '<td class="' + (perte >= 20 ? 'bil-alerte' : '') + '">' + (e ? perte + ' %' : '—') + '</td></tr>';
+        }).join('');
+        var erreurs = cles.depart_erreur_point || {};
+        var listeErreurs = Object.keys(erreurs).filter(function (k) { return Number(erreurs[k]); });
+        var notes = [
+          'Erreurs sur le formulaire de départ : ' + (listeErreurs.length ? listeErreurs.map(function (k) { return nombreBilan(erreurs[k]) + ' ' + (CAUSES_DEPART_BILAN[k] || k); }).join(', ') : 'aucune'),
+          'Clics sur « Débloquer » sans la case cochée : ' + nombreBilan(t.cases_manquantes),
+          'Depuis l\'ouverture : ' + nombreBilan(d.total_payes) + ' vente' + (Number(d.total_payes) > 1 ? 's' : '') + ', ' + eurosBilan(d.total_revenu)
+        ];
+        html += '<div class="bil-colonnes">' + colonneEtapesBilan('L\'entonnoir', etapes, couleurs) +
+          '<div class="bil-colonne"><h3 class="bil-colonne-titre">Où ils s\'arrêtent</h3>' +
+          '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Partie</th><th>Entrés</th><th>Finis</th><th>Perte</th></tr></thead><tbody>' + lignesParties + '</tbody></table></div></div></div>' +
+          '<ul class="bil-faits-etapes">' + notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>' +
+          '<p class="bil-fait-l">Leurs réponses au départ, et ce que dit leur rapport</p>' +
+          '<div class="bil-colonnes">' + ['point_motif', 'point_priorite', 'point_duree', 'point_etat', 'point_attachement', 'point_engagement', 'point_securite']
+            .map(function (ev) { return repartitionPoint(cles, ev); }).join('') + '</div>';
+        el.innerHTML = html;
+      }
+      if (carte) {
+        var parPage = {};
+        (d.carte_celib || []).forEach(function (x) { parPage[x.page] = x; });
+        var pages = CELIB_PAGES_ADMIN.map(function (p) { return p.cle; });
+        Object.keys(parPage).forEach(function (k) { if (pages.indexOf(k) < 0) pages.push(k); });
+        var lignes = pages.map(function (k) {
+          var x = parPage[k] || {};
+          return { cle: k, vues: Number(x.vues) || 0, clics: Number(x.clics) || 0, reponses: Number(x.reponses) || 0, emails: Number(x.emails) || 0 };
+        }).sort(function (a, b) { return b.vues - a.vues || b.reponses - a.reponses || String(nomPageCelib(a.cle)).localeCompare(String(nomPageCelib(b.cle)), 'fr'); });
+        var tot = lignes.reduce(function (a, l) { a.vues += l.vues; a.clics += l.clics; a.reponses += l.reponses; a.emails += l.emails; return a; }, { vues: 0, clics: 0, reponses: 0, emails: 0 });
+        var ligne = function (nom, l, classe) {
+          return '<tr' + (classe ? ' class="' + classe + '"' : '') + '><td class="bil-gauche">' + esc(nom) + '</td><td>' + nombreBilan(l.vues) + '</td><td>' + nombreBilan(l.clics) + '</td><td class="adm-petit">' + partBilan(l.clics, l.vues) + '</td>' +
+            '<td>' + nombreBilan(l.reponses) + '</td><td class="adm-petit">' + partBilan(l.reponses, l.vues) + '</td><td>' + nombreBilan(l.emails) + '</td></tr>';
+        };
+        carte.innerHTML = tot.vues || tot.reponses
+          ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Test</th><th>Vues</th><th>Clics</th><th>% vues</th><th>Réponses</th><th>% vues</th><th>Adresses</th></tr></thead><tbody>' +
+            lignes.map(function (l) { return ligne(nomPageCelib(l.cle), l); }).join('') + ligne('Total', tot, 'adm-table-total') + '</tbody></table></div>'
+          : '<p class="bil-vide">La carte n\'a encore été vue sur aucun test célibataire pendant la période.</p>';
+      }
+    }).catch(function (e) {
+      var msg = '<p class="text-center text-muted-foreground py-6">Ces chiffres ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261104120000 est-elle appliquée, et admin-stats déployée avec get_bilan_point ?</p>';
+      [el, carte].forEach(function (x) { if (x) x.innerHTML = msg; });
+    });
+  }
   function loadBilan() {
     var ids = ['admin-bilan-entonnoir', 'admin-bilan-domaines', 'admin-bilan-sources', 'admin-bilan-delais', 'admin-bilan-attente', 'admin-bilan-list'];
     ids.forEach(function (id) { var e = document.getElementById(id); if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
@@ -1050,6 +1193,7 @@
     });
     drawChart(document.getElementById('admin-bilan-chart'), [], { loading: true });
     loadBilanCelib();
+    loadBilanPoint();
     statsRpc('get_bilan_tableau', { p_jours: bilanJours }).then(function (d) {
       if (!d || typeof d !== 'object' || !Array.isArray(d.serie)) {
         throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');

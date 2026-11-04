@@ -433,6 +433,17 @@
             </div>
           </div>
 
+          <%# « Le point sur ma relation » (le seul(e) depuis le 4 novembre 2026) : get_bilan_point par admin-stats, sa propre lecture (loadBilanPoint, admin.js). %>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">Le point sur ma relation</h2>
+                <%- aide(`Le seul(e) depuis le 4 novembre 2026 : une cinquantaine de questions sur ce que la personne vit dans son couple, un rapport rien que pour elle, 4,90 € (1,99 € en Amérique latine), sans réduction. Ses étapes sont comptées à part, sur la période : le formulaire ouvert après « Où en êtes-vous ? », l'évaluation créée, la première réponse, l'écran de l'adresse, la fin, l'écran « prêt », la page Stripe et le paiement. Les trois réponses du départ (pourquoi seul(e), ce qu'on cherche, depuis quand) et ce que dit le rapport (état de la relation, attachement, engagement, sécurité) sont comptés une fois par évaluation, sans rien qui permette de la retrouver. Les évaluations seul(e) commencées avant gardent l'ancienne formule et restent dans la colonne Seul(e) de l'entonnoir.`) %>
+              </div>
+            </div>
+            <div id="admin-bilan-point" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div class="stats-panel-titre">
@@ -441,6 +452,16 @@
               </div>
             </div>
             <div id="admin-bilan-celib" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div class="stats-panel-titre">
+                <h2 class="stats-panel-title">La carte « bilan célibataire » des tests célibataires</h2>
+                <%- aide(`Depuis le 4 novembre 2026, à l'écran de résultat des seize tests célibataires, une carte annonce l'évaluation pour célibataires, demande la situation (jamais en couple, rupture de moins d'un an, histoires qui se répètent, autre), puis les sujets et, si on veut, l'adresse. Vues : la moitié de la carte à l'écran ; clics : une situation choisie ; une fois par page et par onglet, sans vos passages ni les robots. Réponses et adresses : celles envoyées depuis la carte de cette page, sur la période. Une personne qui a répondu ne revoit plus la carte pendant trente jours.`) %>
+              </div>
+            </div>
+            <div id="admin-bilan-carte-celib" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
           </div>
 
           <div class="stats-panel">
@@ -474,9 +495,11 @@
               <option value="it">Italien</option>
               <option value="nl">Néerlandais</option>
             </select>
+            <%# « point » : le seul(e) depuis le 4 novembre 2026 (formule point, 4,90 €) ; « solo » : l'ancien seul(e), que gardent les évaluations commencées avant. %>
             <select id="apercu-stripe-mode" aria-label="Façon de faire l'évaluation">
               <option value="duo">À deux</option>
-              <option value="solo">Seul(e)</option>
+              <option value="point">Le point sur ma relation (seul(e))</option>
+              <option value="solo">Seul(e), ancienne formule</option>
             </select>
             <%# Le prix de l'Amérique latine (PRIX_REGIONS de coeur.mjs, 27 octobre 2026). %>
             <select id="apercu-stripe-zone" aria-label="Prix demandé">
@@ -947,6 +970,10 @@
        _chemins[id] = (languages || ['fr']).map((l) => getLocalizedPath(cle, l)).filter(Boolean);
      }); %>
 <script>window.__QC_CAPTURE_CHEMINS=<%- JSON.stringify(_chemins) %>;</script>
+<% } %>
+<%# Les tests célibataires (FAMILLES_NAV.celib) et leur nom dans le menu : la carte « bilan célibataire » page par page. %>
+<% if (typeof celibPagesAdmin !== 'undefined' && celibPagesAdmin) { %>
+<script>window.__QC_CELIB_PAGES=<%- JSON.stringify(celibPagesAdmin).replace(/</g, '\\u003c') %>;</script>
 <% } %>
 <script src="/js/admin-ui.js" defer></script>
 <script src="/js/admin.js" defer></script>

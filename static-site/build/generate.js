@@ -1640,6 +1640,9 @@ async function generatePage(routeKey, lang) {
     // L'admin calcule le taux de capture (onglet Leads) : il lui faut, pour
     // chaque source de la porte, les chemins de la page dans les cinq langues.
     capturePages: routeKey === 'admin' ? CAPTURE_PAGES : null,
+    // La carte « bilan célibataire » page par page (onglet Évaluation) : les
+    // tests célibataires et leur nom dans le menu.
+    celibPagesAdmin: routeKey === 'admin' ? FAMILLES_NAV.celib.map((cle) => ({ cle, nom: t('common:nav.' + cle, cle) })) : null,
     bilanPrix: prixBilan(lang),
     bilanPrixBase: prixBilanBase(lang),
     bilanPromo: promoBilanPour(lang),

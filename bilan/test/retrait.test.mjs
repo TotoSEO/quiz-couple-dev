@@ -57,3 +57,44 @@ test('l\'empreinte d\'une adresse ne dépend ni de la casse ni des espaces', () 
   assert.equal(empreinte(' Lea@Exemple.FR '), empreinte('lea@exemple.fr'));
   assert.match(empreinte('lea@exemple.fr'), /^[0-9a-f]{64}$/);
 });
+
+test('un point sur ma relation fait dans la journée : ses compteurs _point, ses parties et ce que dit le rapport, sans domaine', async () => {
+  const { jeuxDEssai } = await import('../exemples.mjs');
+  const { analyserPoint, POINT_MOTIFS } = await import('../../supabase/functions/_shared/bilan/coeur.mjs');
+  const exemple = jeuxDEssai('fr').find((j) => j.nom === 'point-tensions');
+  const reponses = exemple.d.a.reponses;
+  const ligne = {
+    mode: 'solo', formule: 'point', src: 'accueil', situation: {}, a_reponses: reponses,
+    cree_le: '2026-11-04T08:00:00Z', a_fini: '2026-11-04T08:20:00Z', renonciation_le: '2026-11-04T08:21:00Z',
+    paye_le: '2026-11-04T08:22:00Z', paiement_montant: 490,
+  };
+  const r = retraitsPour(ligne);
+  assert.equal(r.unJour, true);
+  const plan = ev(regrouper(r.surs.concat(r.memeJour)));
+  const an = analyserPoint(reponses);
+  for (const attendu of [
+    '2026-11-04 cree[accueil] 1', '2026-11-04 cree_solo[accueil] 1', '2026-11-04 cree_point[accueil] 1',
+    '2026-11-04 fini_a[accueil] 1', '2026-11-04 fini_point[accueil] 1', '2026-11-04 paiement_ouvert_point[accueil] 1',
+    '2026-11-04 paye[accueil] 1 490', '2026-11-04 paye_solo[accueil] 1 490', '2026-11-04 paye_point[accueil] 1 490',
+    '2026-11-04 commence_point[accueil] 1', '2026-11-04 point_partie_entree[depart] 1', '2026-11-04 point_partie_finie[parler] 1',
+    `2026-11-04 point_motif[${POINT_MOTIFS[reponses.pd1]}] 1`,
+    `2026-11-04 point_etat[${an.etat}] 1`, `2026-11-04 point_attachement[${an.attachement.style}] 1`,
+    `2026-11-04 point_engagement[${an.engagement.profil}] 1`, `2026-11-04 point_securite[${an.securite.niveau}] 1`,
+  ]) assert.ok(plan.includes(attendu), attendu + ' dans ' + plan.join(' | '));
+  assert.ok(!plan.some((x) => /domaine_|situation/.test(x)), 'ni domaine ni situation pour un point');
+});
+
+test('un point étalé sur deux jours : les comptes sans date restent, ce que dit le rapport part à son jour', async () => {
+  const { jeuxDEssai } = await import('../exemples.mjs');
+  const reponses = jeuxDEssai('fr').find((j) => j.nom === 'point-bien').d.a.reponses;
+  const r = retraitsPour({
+    mode: 'solo', formule: 'point', src: 'direct', situation: {}, a_reponses: reponses,
+    cree_le: '2026-11-04T20:00:00Z', a_fini: '2026-11-05T09:00:00Z',
+  });
+  assert.equal(r.unJour, false);
+  const plan = ev(regrouper(r.surs));
+  assert.ok(plan.includes('2026-11-04 cree_point[direct] 1'));
+  assert.ok(plan.includes('2026-11-05 fini_point[direct] 1'));
+  assert.ok(plan.some((x) => x.startsWith('2026-11-05 point_etat[')), 'l\'état du rapport, au jour de la fin');
+  assert.ok(!plan.some((x) => /commence_point|point_partie|point_motif/.test(x)), 'pas de compte sans date');
+});
