@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-04T03:13:58.594Z",
+  "genere_le": "2026-11-05T03:15:22.387Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-04",
+  "aujourdhui": "2026-11-05",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": null
   },
-  "reserve_jours": 148,
+  "reserve_jours": 147,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -804,7 +804,7 @@
       "creneau": "soir",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: couple edition",
       "erreur": null
     },
@@ -858,7 +858,7 @@
       "creneau": "soir",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -3624,7 +3624,7 @@
       "creneau": "soir"
     },
     "tu-preferes": {
-      "jour": "2026-11-04",
+      "jour": "2026-11-05",
       "creneau": "soir"
     },
     "phrase": null,
@@ -4698,18 +4698,36 @@
       "jour": "2026-10-27",
       "creneau": "soir",
       "theme": null
+    },
+    {
+      "variante_id": "4a48e47c-0343-40cc-a72d-9d5cd8385184",
+      "releve": "j7",
+      "vues": 1716,
+      "portee": 1316,
+      "likes": 22,
+      "commentaires": 0,
+      "partages": 49,
+      "enregistrements": 15,
+      "releve_le": "2026-11-05T03:15:21.682049+00:00",
+      "publie_le": "2026-10-28T16:30:12.623+00:00",
+      "categorie": "tu-preferes",
+      "format": "reel",
+      "gabarit": "tu-preferes",
+      "jour": "2026-10-28",
+      "creneau": "soir",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "tu-preferes",
-      "posts": 12,
-      "vues_mediane": 2589,
-      "vues_moyenne": 13276,
+      "posts": 13,
+      "vues_mediane": 2502,
+      "vues_moyenne": 12387,
       "vues_max": 74587,
-      "partages": 5329,
-      "enregistrements": 2092,
-      "likes": 2182,
+      "partages": 5378,
+      "enregistrements": 2107,
+      "likes": 2204,
       "commentaires": 4
     },
     {
