@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-11-04T03:14:02.466Z",
+  "genere_le": "2026-11-05T03:15:26.601Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-11-04",
+  "aujourdhui": "2026-11-05",
   "melange": {
     "midi": {
       "1": null,
@@ -28,7 +28,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 148,
+  "reserve_jours": 147,
   "a_remplir": [],
   "a_corriger": [],
   "hors_grille": [],
@@ -741,7 +741,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -795,7 +795,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2891,7 +2891,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-11-05",
+      "jour": "2026-11-06",
       "creneau": "matin"
     },
     "mipaps-statique": null,
@@ -3762,18 +3762,36 @@
       "jour": "2026-10-27",
       "creneau": "matin",
       "theme": null
+    },
+    {
+      "variante_id": "9f4d08f7-1cfe-42e7-ab1a-e7cbd4c74e03",
+      "releve": "j7",
+      "vues": 1442,
+      "portee": 1148,
+      "likes": 60,
+      "commentaires": 0,
+      "partages": 3,
+      "enregistrements": 2,
+      "releve_le": "2026-11-04T10:50:52.002922+00:00",
+      "publie_le": "2026-10-28T06:30:10.376+00:00",
+      "categorie": "mipaps-anime",
+      "format": "reel",
+      "gabarit": "mipaps-reel",
+      "jour": "2026-10-28",
+      "creneau": "matin",
+      "theme": null
     }
   ],
   "statistiques_par_categorie": [
     {
       "categorie": "mipaps-anime",
-      "posts": 18,
-      "vues_mediane": 811,
-      "vues_moyenne": 1176,
+      "posts": 19,
+      "vues_mediane": 912,
+      "vues_moyenne": 1190,
       "vues_max": 3437,
-      "partages": 120,
-      "enregistrements": 28,
-      "likes": 647,
+      "partages": 123,
+      "enregistrements": 30,
+      "likes": 707,
       "commentaires": 0
     },
     {
