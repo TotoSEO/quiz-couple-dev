@@ -430,6 +430,56 @@
       </div>
       <% } %>
 
+      <%/* Listes « à éviter » puis « à faire » (sectionN.dontTitle, dontNTitle/dontNText,
+          doTitle, doNTitle/doNText), dessinées comme dans les gabarits du test toxique
+          ou du karmique : jusqu'au 6 novembre 2026, quiz-generic ne les affichait pas,
+          et la section 5 du test d'infidélité annonçait des conseils qu'on ne voyait jamais. */%>
+      <% const listeConseils = function (pre) {
+          const l = [];
+          for (let i = 1; i <= 6; i++) {
+            const ti = tryKeys('section' + s + '.' + pre + i + 'Title', 'seo.section' + s + '.' + pre + i + 'Title', 'seo.s' + s + '.' + pre + i + 'Title');
+            if (ti) l.push({ titre: ti, texte: tryKeys('section' + s + '.' + pre + i + 'Text', 'seo.section' + s + '.' + pre + i + 'Text', 'seo.s' + s + '.' + pre + i + 'Text') });
+          }
+          return l;
+        };
+        const aEviter = listeConseils('dont'), aFaire = listeConseils('do');
+        if (aEviter.length || aFaire.length) { %>
+      <div class="space-y-8 mt-8">
+        <% if (aEviter.length) { %>
+        <div>
+          <h3 class="text-xl font-semibold mb-4"><%= tryKeys('section' + s + '.dontTitle', 'seo.section' + s + '.dontTitle', 'seo.s' + s + '.dontTitle') %></h3>
+          <div class="space-y-4">
+            <% aEviter.forEach(function (c) { %>
+            <div class="flex items-start gap-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+              <span class="text-destructive font-bold" aria-hidden="true">&#10007;</span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= c.titre %></h4>
+                <% if (c.texte) { %><p class="text-muted-foreground"><%- c.texte %></p><% } %>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <% } %>
+        <% if (aFaire.length) { %>
+        <div>
+          <h3 class="text-xl font-semibold mb-4"><%= tryKeys('section' + s + '.doTitle', 'seo.section' + s + '.doTitle', 'seo.s' + s + '.doTitle') %></h3>
+          <div class="space-y-4">
+            <% aFaire.forEach(function (c, ci) { %>
+            <div class="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 font-bold flex-shrink-0" style="color: hsl(var(--primary-texte))" aria-hidden="true"><%= ci + 1 %></span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= c.titre %></h4>
+                <% if (c.texte) { %><p class="text-muted-foreground"><%- c.texte %></p><% } %>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+
       <%/* Subsections (h3) */%>
       <% for (let sub = 1; sub <= 8; sub++) {
         const subTitle = getSubTitle(s, sub);
