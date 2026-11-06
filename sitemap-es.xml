@@ -406,6 +406,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/es/diferencia-de-edad-pareja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/difference-d-age-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/age-gap-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/diferencia-de-edad-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/altersunterschied-beziehung/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/differenza-di-eta-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/leeftijdsverschil-berekenen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/difference-d-age-couple/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/es/evaluacion-de-pareja/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/evaluation-de-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/relationship-assessment/"/>
@@ -427,7 +440,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/compatibilita-amorosa-segni-cinesi/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/chinese-sterrenbeelden-liefde/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/compatibilite-amoureuse-signes-chinois/"/>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
