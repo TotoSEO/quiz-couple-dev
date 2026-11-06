@@ -4,16 +4,17 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'love-bombing-segnali',
   title: "Love bombing: come capire se è amore o manipolazione",
-  metaTitle: "Love bombing: i segnali e il test che chiarisce tutto",
-  metaDescription: "È perfetto, troppo in fretta, troppo intenso. Amore sincero o love bombing? Le 3 fasi del ciclo, i segnali concreti e il test del limite.",
+  metaTitle: "Love bombing: i segnali e le 3 fasi per riconoscerlo",
+  metaDescription: "È perfetto, troppo in fretta, troppo intenso. Amore sincero o love bombing? Le 3 fasi del ciclo, i segnali concreti e il limite che chiarisce tutto.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "Mazzo di rose chiare fuori misura, lasciato solo sulla soglia di una porta in pieno sole",
   publishedAt: '2026-08-02',
+  modifiedAt: '2026-11-06',
   author: AUTHORS['thomas'],
   excerpt: "Il love bombing non sembra manipolazione. Sembra l'inizio di storia più bello della tua vita. Ed è esattamente questo a renderlo efficace.",
   introduction: `<p>Hai appena conosciuto qualcuno e va tutto molto in fretta. Messaggi dalla mattina alla sera. Complimenti che ti fanno girare la testa. Un "credo che tu sia la persona della mia vita" dopo tre settimane. Le tue amiche ti dicono che è meraviglioso. E tu, da qualche parte, senti un piccolo scarto che non riesci a definire.</p>
 <p><strong>Il love bombing non sembra manipolazione. Sembra l'inizio di storia più bello della tua vita.</strong> Ed è proprio questo a renderlo così efficace, ed è il motivo per cui la domanda "mi ama davvero o mi sta manipolando?" è così difficile da sciogliere dall'interno.</p>
-<p>Questo articolo non si limiterà a darti un elenco di segnali. Elenchi di segnali ne trovi ovunque, e il problema è che un inizio di relazione appassionato spunta più o meno le stesse caselle. Quello che ti daremo è soprattutto l'unico test che separa davvero le due cose.</p>`,
+<p>Il problema è che un inizio di relazione appassionato spunta più o meno le stesse caselle di un love bombing. La differenza si vede soprattutto in un momento preciso: quando metti un limite.</p>`,
   quickSummary: [
     "Il love bombing è una fase di corteggiamento massiccio e accelerato, pensata per creare attaccamento prima che tu abbia avuto il tempo di valutare la persona.",
     "Segue un ciclo in tre tempi: idealizzazione, svalutazione, poi rifiuto o ritorno in grande stile.",
@@ -88,7 +89,7 @@ const article: BlogArticleData = {
     {
       id: 'il-test-del-limite',
       title: "Love bombing o vero colpo di fulmine? Il test del limite",
-      content: `<p>Ecco il punto che la maggior parte degli articoli evita. Un inizio di relazione sinceramente appassionato e un love bombing producono, sul momento, osservazioni quasi identiche. Tanti messaggi, tanti complimenti, tanto desiderio. <strong>L'intensità non dimostra niente.</strong> Né in un senso né nell'altro.</p>
+      content: `<p>Sul momento, <a href="/it/test-love-bombing/">una passione sincera e un love bombing</a> si somigliano moltissimo: tanti messaggi, tanti complimenti, tanto desiderio. <strong>L'intensità non dimostra niente.</strong> Né in un senso né nell'altro.</p>
 <p>Ciò che distingue i due è quello che succede quando non sei disponibile.</p>`,
       subsections: [
         {

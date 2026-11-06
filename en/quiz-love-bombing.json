@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "A test to take alone",
+    "title": "Is this person love bombing you? Take the 20-question test",
+    "titleHighlight": "love bombing",
+    "description": "Texts from morning to night, an \"I love you\" after ten days, plans from the first month... Falling hard or being manipulated? Twenty concrete situations, from the start of the relationship to today, and each answer weighs according to what it says.",
+    "subtitle": "Twenty questions, five minutes, free and no sign-up",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How does the love bombing test work?",
+    "intro": "Love bombing means showering someone with attention, compliments and promises right at the start of a relationship, much faster than the relationship justifies. The problem is that from the inside, it feels like the best start you could dream of!",
+    "p1": "The test asks you twenty questions about concrete situations: the first texts, the first \"I love you\", what happens when you say no, what this person says about your friends, and what has changed since the beginning. Each time, you have four answers, from \"nothing to report\" to \"that's exactly it\".",
+    "p2": "The questions follow the order of a relationship: the start first, then your limits and the people close to you, and finally what came after. Love bombing rarely shows in a single situation, it's the whole picture that draws the pattern. You can take the test about a relationship that's just starting, one that's ongoing or one that's over, and it works the same for a man or a woman.",
+    "p3": "The test is anonymous, and your answers stay in your browser. You can take it again in a few weeks to see if things are moving."
+  },
+  "section2": {
+    "title": "Love bombing or falling hard: what the test looks at",
+    "p1": "At first, falling hard for someone and love bombing look very much alike: in both cases it's fast, it's intense, and you feel unique. The main difference is the reaction to a limit. Someone who's sincerely in love is disappointed when you say no to a weekend, then moves on. Someone who's love bombing pushes, sulks or makes you feel guilty, because your no breaks the pace they're setting for you.",
+    "p2": "That's why the test doesn't stop at the start. Love bombing follows <a href=\"/en/blog/love-bombing-signs/\">a three-stage cycle</a>: first idealisation, where you're the perfect person, then devaluation, where compliments give way to criticism, and finally rejection or the big comeback, with a new wave of love as soon as you pull away. The last questions look at exactly what happened after.",
+    "p3": "When the control is already in place, when you're afraid of how this person will react or barely see the people close to you any more, it's closer to <a href=\"/en/coercive-control-test/\">coercive control</a>, and the result will tell you. And if it's this person's behaviour in general that bothers you, the <a href=\"/en/red-flag-test/\">signs that should worry you</a> aren't limited to love bombing."
+  },
+  "section3": {
+    "title": "Why the questions don't all carry the same weight",
+    "p1": "Getting lots of texts and being afraid of someone's reaction are not the same thing at all. An early \"I love you\" can be clumsy, a no that's never respected is a real problem. So each question weighs 2 to 8 points depending on what it says, and the heaviest ones are about your limits, the people close to you and fear.",
+    "p2": "The total is 100 points. Some answers even count on their own: if you say you're often afraid of how this person will react, the result can't drop below the last level, even if everything else looks calm. And if this person has already made you choose between your loved ones and the relationship, the result won't drop below \"Love bombing very likely\".",
+    "p3": "The result reads on five levels, each with what it means and what to do next:",
+    "headerScore": "Score",
+    "headerLevel": "Level",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 12",
+    "row1Level": "An intense start, no love bombing",
+    "row1Analysis": "Lots of love, and your limits are respected.",
+    "row2Score": "13 to 27",
+    "row2Level": "A few signs to keep an eye on",
+    "row2Analysis": "A fast pace, nothing harmful for now.",
+    "row3Score": "28 to 45",
+    "row3Level": "This looks like love bombing",
+    "row3Analysis": "A lot, very fast, and it jams when you slow down.",
+    "row4Score": "46 to 65",
+    "row4Level": "Love bombing very likely",
+    "row4Analysis": "Saying no has a price, and your loved ones drift away.",
+    "row5Score": "66 to 100",
+    "row5Level": "Love bombing and control",
+    "row5Analysis": "Control or fear: don't stay alone with it."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask",
+    "faq1Q": "Is love bombing always deliberate?",
+    "faq1A": "Not always. Some people do it in a calculated way, to hook someone fast and get the upper hand. Others do it because they're terrified of being abandoned and put everything on the table from day one. For you, it doesn't change much: in both cases, what matters is whether your limits are respected. The test looks at what this person does, not at what's going on in their head.",
+    "faq2Q": "Where does the term \"love bombing\" come from?",
+    "faq2A": "The term was coined in the 1970s by members of the Unification Church in the United States, to describe the way they welcomed new recruits: surrounding them with affection and attention so they'd get attached to the group. It then moved into relationships, with the same idea. In 2017, a team at the University of Arkansas published the first study on the subject, with 484 students aged 18 to 30. It describes love bombing as excessive communication at the start of a relationship to gain power and control, and links it to narcissistic traits, insecure attachment, lower self-esteem and heavier use of texting and social media.",
+    "faq3Q": "This person has been very affectionate from the start. Is that love bombing?",
+    "faq3A": "Not necessarily, which is why the test mostly asks about what surrounds the attention. Someone affectionate who lets you set your pace, finds it normal that you see your friends and never throws their gifts back at you is nothing to worry about. Love bombing starts when attention becomes a debt and something is expected from you in return.",
+    "faq4Q": "Are my answers saved?",
+    "faq4A": "No. Your answers stay in your browser, nothing is sent and nobody sees them. There's no account and no email address to give, and you can retake the test as many times as you like.",
+    "faq5Q": "My result is high. What do I do?",
+    "faq5A": "First, reread the questions where you picked the last answer: those are the ones that made the score. Then talk to someone who's known you for a long time, a friend, a brother, a colleague, someone who sees your relationship from the outside. And if you're afraid of how this person will react, don't stay alone with it: in the UK, the National Domestic Abuse Helpline (0808 2000 247) is free and open 24 hours a day; in the US, call the National Domestic Violence Hotline on 1-800-799-7233.",
+    "faq6Q": "What if I'm the one doing the love bombing?",
+    "faq6A": "The test is written from the side of the person receiving the attention, but you can read it the other way round too. If you recognise yourself in the questions about texts, plans and the reaction to a no, ask yourself what makes you rush so much. Most of the time it's the fear that the other person will leave, and that's something you can work on, on your own or with a therapist."
+  },
+  "jsonLd": {
+    "about": "recognising love bombing in a relationship"
+  }
+}

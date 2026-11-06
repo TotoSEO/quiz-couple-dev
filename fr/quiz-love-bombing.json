@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Test à faire seul(e)",
+    "title": "Cette personne vous fait-elle du love bombing ? Le test en 20 questions",
+    "titleHighlight": "love bombing",
+    "description": "Des messages du matin au soir, un « je t'aime » au bout de dix jours, des projets dès le premier mois... Coup de foudre ou manipulation ? Vingt situations concrètes, du début de l'histoire jusqu'à aujourd'hui, et chaque réponse pèse selon ce qu'elle dit.",
+    "subtitle": "Vingt questions, cinq minutes, gratuit et sans inscription",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment fonctionne le test love bombing ?",
+    "intro": "Le love bombing, c'est le fait de couvrir quelqu'un d'attention, de compliments et de promesses dès le début d'une histoire, bien plus vite que la relation ne le justifie. En anglais, ça veut dire « bombardement d'amour ». Et le problème, c'est que vu de l'intérieur, ça ressemble au plus beau début d'histoire possible !",
+    "p1": "Le test vous pose vingt questions sur des situations concrètes : les premiers messages, le premier « je t'aime », ce qui se passe quand vous dites non, ce que cette personne dit de vos amis, et ce qui a changé depuis le début. À chaque fois, vous avez quatre réponses, de « rien à signaler » à « c'est exactement ça ».",
+    "p2": "Les questions suivent l'ordre d'une histoire : d'abord le début, ensuite vos limites et vos proches, et enfin la suite. Le love bombing se voit rarement sur une seule situation, c'est l'ensemble qui dessine le schéma. Vous pouvez faire le test sur une histoire qui commence, une histoire en cours ou une histoire finie, et il marche pareil pour un homme ou pour une femme.",
+    "p3": "Le test est anonyme, et vos réponses restent dans votre navigateur. Vous pouvez le refaire dans quelques semaines pour voir si les choses bougent."
+  },
+  "section2": {
+    "title": "Love bombing ou coup de foudre : ce que le test regarde",
+    "p1": "Au début, un coup de foudre et un love bombing se ressemblent énormément : dans les deux cas, ça va vite, c'est intense, et on se sent unique. La principale différence, c'est la réaction à une limite. Quelqu'un de sincèrement amoureux est déçu quand vous dites non à un week-end, puis passe à autre chose. Quelqu'un qui fait du love bombing insiste, boude ou vous fait culpabiliser, parce que votre non casse le rythme qu'il vous impose.",
+    "p2": "C'est pour ça que le test ne s'arrête pas au début de l'histoire. Le love bombing suit <a href=\"/blog/love-bombing/\">un cycle en trois temps</a> : d'abord l'idéalisation, où vous êtes la personne parfaite, puis la dévalorisation, où les compliments laissent la place aux reproches, et enfin le rejet ou le retour en force, avec une nouvelle vague d'amour dès que vous prenez vos distances. Les dernières questions regardent justement ce qui s'est passé après.",
+    "p3": "Quand le contrôle est déjà installé, que vous avez peur de sa réaction ou que vous ne voyez presque plus vos proches, on parle plutôt d'<a href=\"/test-emprise-psychologique/\">une emprise</a>, et le résultat vous le dira. Et si c'est surtout le comportement de cette personne en général qui vous fait tiquer, les <a href=\"/test-red-flag/\">signaux qui devraient vous alerter</a> ne se limitent pas au love bombing."
+  },
+  "section3": {
+    "title": "Pourquoi les questions n'ont pas toutes le même poids",
+    "p1": "Recevoir beaucoup de messages et avoir peur de la réaction de quelqu'un, ce n'est pas du tout la même chose. Un « je t'aime » qui arrive tôt peut être maladroit, un non qui n'est jamais respecté est un vrai problème. Chaque question pèse donc de 2 à 8 points selon ce qu'elle dit, et les plus lourdes parlent de vos limites, de vos proches et de la peur.",
+    "p2": "Le total fait 100 points. Certaines réponses comptent même toutes seules : si vous dites avoir souvent peur de sa réaction, le résultat ne pourra pas descendre sous le dernier palier, même si le reste paraît calme. Et si cette personne vous a déjà fait choisir entre vos proches et elle, le résultat ne descend pas sous « Love bombing très probable ».",
+    "p3": "Le résultat se lit sur cinq paliers, avec à chaque fois ce que ça veut dire et quoi faire ensuite :",
+    "headerScore": "Score",
+    "headerLevel": "Palier",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "0 à 12",
+    "row1Level": "Un début intense, sans love bombing",
+    "row1Analysis": "Beaucoup d'amour, et vos limites sont respectées.",
+    "row2Score": "13 à 27",
+    "row2Level": "Quelques signaux à garder à l'œil",
+    "row2Analysis": "Un rythme rapide, rien qui abîme pour l'instant.",
+    "row3Score": "28 à 45",
+    "row3Level": "Ça ressemble à du love bombing",
+    "row3Analysis": "Beaucoup, très vite, et ça coince quand vous ralentissez.",
+    "row4Score": "46 à 65",
+    "row4Level": "Love bombing très probable",
+    "row4Analysis": "Dire non a un prix, et vos proches s'éloignent.",
+    "row5Score": "66 à 100",
+    "row5Level": "Love bombing et emprise",
+    "row5Analysis": "Du contrôle ou de la peur : ne restez pas seul(e)."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Le love bombing, c'est forcément fait exprès ?",
+    "faq1A": "Pas toujours. Certaines personnes le font de façon calculée, pour attacher quelqu'un vite et prendre le dessus. D'autres le font parce qu'elles ont très peur d'être abandonnées et qu'elles mettent tout sur la table dès le début. Pour vous, ça ne change pas grand-chose : dans les deux cas, ce qui compte, c'est que vos limites soient respectées. Le test regarde ce que cette personne fait, pas ce qu'elle a dans la tête.",
+    "faq2Q": "D'où vient l'expression « love bombing » ?",
+    "faq2A": "Le mot a été inventé dans les années 1970 par des membres de l'Église de l'Unification, aux États-Unis, pour décrire leur façon d'accueillir les nouvelles recrues : les entourer d'affection et d'attention pour qu'elles s'attachent au groupe. Il est ensuite passé au couple, avec la même idée. En 2017, une équipe de l'université de l'Arkansas a publié la première étude sur le sujet, auprès de 484 étudiants de 18 à 30 ans. Elle décrit le love bombing comme une communication excessive au début d'une relation, pour prendre du pouvoir et du contrôle, et le relie à des traits narcissiques, à un attachement insécure, à une moins bonne estime de soi et à un usage plus intense des SMS et des réseaux sociaux.",
+    "faq3Q": "Cette personne est très démonstrative depuis le début. C'est du love bombing ?",
+    "faq3A": "Pas forcément, et c'est pour ça que le test pose surtout des questions sur ce qui entoure l'attention. Quelqu'un de démonstratif qui vous laisse votre rythme, qui trouve normal que vous voyiez vos amis et qui ne vous reproche jamais ses cadeaux n'a rien d'inquiétant. Le love bombing commence quand l'attention devient une dette, et qu'on attend quelque chose de vous en échange.",
+    "faq4Q": "Mes réponses sont-elles enregistrées ?",
+    "faq4A": "Non. Vos réponses restent dans votre navigateur, rien n'est envoyé et personne ne les voit. Il n'y a ni compte ni adresse e-mail à donner, et vous pouvez refaire le test autant de fois que vous voulez.",
+    "faq5Q": "Le résultat est élevé. Je fais quoi ?",
+    "faq5A": "D'abord, relisez les questions où vous avez choisi la dernière réponse : ce sont elles qui ont fait le score. Ensuite, parlez-en à quelqu'un qui vous connaît depuis longtemps, une amie, un frère, une collègue, bref, quelqu'un qui voit votre histoire de l'extérieur. Et si vous avez peur de sa réaction, ne restez pas seul(e) avec ça : en France, le 3919 écoute gratuitement, sans trace sur la facture.",
+    "faq6Q": "Et si c'est moi qui fais du love bombing ?",
+    "faq6A": "Le test est écrit du côté de la personne qui reçoit l'attention, mais il se lit aussi à l'envers. Si vous vous reconnaissez dans les questions sur les messages, les projets et la réaction à un non, demandez-vous ce qui vous presse autant. La plupart du temps, c'est la peur que l'autre parte, et c'est quelque chose qui se travaille, seul(e) ou avec un psy."
+  },
+  "jsonLd": {
+    "about": "reconnaître le love bombing dans une relation"
+  }
+}

@@ -4,16 +4,17 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'love-bombing-anzeichen',
   title: "Love Bombing: Wie du echte Liebe von Manipulation unterscheidest",
-  metaTitle: "Love Bombing: Die Anzeichen und der Test, der Klarheit bringt",
-  metaDescription: "Er ist perfekt, zu schnell, zu viel. Echte Liebe oder Love Bombing? Die 3 Phasen des Zyklus, die konkreten Anzeichen und der Grenzen-Test.",
+  metaTitle: "Love Bombing: Anzeichen und die 3 Phasen erkennen",
+  metaDescription: "Er ist perfekt, zu schnell, zu viel. Echte Liebe oder Love Bombing? Die 3 Phasen des Zyklus, die konkreten Anzeichen und die Grenze, die Klarheit bringt.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "Überdimensionierter Strauß blasser Rosen, allein auf einer sonnigen Türschwelle",
   publishedAt: '2026-08-02',
+  modifiedAt: '2026-11-06',
   author: AUTHORS['thomas'],
   excerpt: "Love Bombing sieht nicht nach Manipulation aus. Es sieht nach dem schönsten Anfang deines Lebens aus. Genau das macht es so wirksam.",
   introduction: `<p>Du hast gerade jemanden kennengelernt und alles geht sehr schnell. Nachrichten von morgens bis abends. Komplimente, die dir den Kopf verdrehen. Ein „ich glaube, du bist die Richtige" nach drei Wochen. Deine Freundinnen sagen, das sei wunderschön. Und irgendwo in dir spürst du eine kleine Unstimmigkeit, die du nicht benennen kannst.</p>
 <p><strong>Love Bombing sieht nicht nach Manipulation aus. Es sieht nach dem schönsten Anfang deines Lebens aus.</strong> Genau das macht es so wirksam, und deshalb ist die Frage „liebt er mich wirklich oder manipuliert er mich?" von innen heraus so schwer zu beantworten.</p>
-<p>Dieser Artikel gibt dir nicht einfach eine Liste von Anzeichen. Solche Listen findest du überall, und das Problem ist: Ein wirklich leidenschaftlicher Beziehungsanfang erfüllt ungefähr dieselben Punkte. Wir geben dir vor allem den einen Test, der die beiden Dinge wirklich trennt.</p>`,
+<p>Das Problem ist: Ein wirklich leidenschaftlicher Beziehungsanfang erfüllt ungefähr dieselben Punkte wie Love Bombing. Der Unterschied zeigt sich vor allem in einem bestimmten Moment: wenn du eine Grenze setzt.</p>`,
   quickSummary: [
     "Love Bombing ist eine Phase massiver, beschleunigter Umwerbung, die Bindung erzeugen soll, bevor du Zeit hattest, die Person einzuschätzen.",
     "Es folgt einem Zyklus in drei Schritten: Idealisierung, Abwertung, dann Verstoßung oder eine wuchtige Rückkehr.",
@@ -88,7 +89,7 @@ const article: BlogArticleData = {
     {
       id: 'der-grenzen-test',
       title: "Love Bombing oder echte Verliebtheit? Der Grenzen-Test",
-      content: `<p>Hier ist der Punkt, um den die meisten Artikel herumgehen. Ein aufrichtig leidenschaftlicher Anfang und ein Love Bombing erzeugen im Moment fast identische Beobachtungen. Viele Nachrichten, viele Komplimente, viel Verlangen. <strong>Intensität beweist nichts.</strong> Weder in die eine noch in die andere Richtung.</p>
+      content: `<p>Im ersten Moment sehen sich <a href="/de/love-bombing-test/">echte Leidenschaft und Love Bombing</a> zum Verwechseln ähnlich: viele Nachrichten, viele Komplimente, viel Verlangen. <strong>Intensität beweist nichts.</strong> Weder in die eine noch in die andere Richtung.</p>
 <p>Was die beiden unterscheidet, ist das, was passiert, wenn du nicht verfügbar bist.</p>`,
       subsections: [
         {

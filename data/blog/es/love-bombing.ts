@@ -4,16 +4,17 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'love-bombing-senales',
   title: "Love bombing: cómo saber si es amor o manipulación",
-  metaTitle: "Love bombing: las señales y la prueba que lo aclara",
-  metaDescription: "Es perfecto, demasiado rápido, demasiado intenso. ¿Amor sincero o love bombing? Las 3 fases del ciclo, las señales concretas y la prueba del límite.",
+  metaTitle: "Love bombing: las señales y las 3 fases para reconocerlo",
+  metaDescription: "Es perfecto, demasiado rápido, demasiado intenso. ¿Amor sincero o love bombing? Las 3 fases del ciclo, las señales concretas y el límite que lo aclara.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "Ramo desmesurado de rosas pálidas, solo en el umbral de una puerta a pleno sol",
   publishedAt: '2026-08-02',
+  modifiedAt: '2026-11-06',
   author: AUTHORS['thomas'],
   excerpt: "El love bombing no parece manipulación. Parece el comienzo más bonito de tu vida. Justamente por eso funciona tan bien.",
   introduction: `<p>Acabas de conocer a alguien y todo va muy rápido. Mensajes de la mañana a la noche. Cumplidos que te dan vértigo. Un "creo que eres la persona de mi vida" a las tres semanas. Tus amigas te dicen que es precioso. Y tú, en algún rincón, sientes un pequeño desajuste que no consigues nombrar.</p>
 <p><strong>El love bombing no parece manipulación. Parece el comienzo más bonito de tu vida.</strong> Y eso es exactamente lo que lo hace tan eficaz, y por lo que la pregunta "¿me quiere de verdad o me está manipulando?" resulta tan difícil de resolver desde dentro.</p>
-<p>Este artículo no se va a limitar a darte una lista de señales. Listas de señales las encuentras en todas partes, y el problema es que un comienzo de relación apasionado marca prácticamente las mismas casillas. Lo que vamos a darte es la única prueba que separa de verdad las dos cosas.</p>`,
+<p>El problema es que un comienzo de relación apasionado marca prácticamente las mismas casillas que un love bombing. La diferencia se ve sobre todo en un momento concreto: cuando pones un límite.</p>`,
   quickSummary: [
     "El love bombing es una fase de seducción masiva y acelerada, destinada a crear apego antes de que hayas tenido tiempo de evaluar a la persona.",
     "Sigue un ciclo de tres tiempos: idealización, devaluación y después rechazo o regreso por todo lo alto.",
@@ -88,7 +89,7 @@ const article: BlogArticleData = {
     {
       id: 'la-prueba-del-limite',
       title: "¿Love bombing o flechazo auténtico? La prueba del límite",
-      content: `<p>Aquí está el punto que la mayoría de artículos esquiva. Un comienzo de relación sinceramente apasionado y un love bombing producen, en el momento, observaciones casi idénticas. Muchos mensajes, muchos cumplidos, muchas ganas. <strong>La intensidad no demuestra nada.</strong> Ni en un sentido ni en el otro.</p>
+      content: `<p>En el momento, <a href="/es/test-love-bombing/">una pasión sincera y un love bombing</a> se parecen muchísimo: muchos mensajes, muchos cumplidos, muchas ganas. <strong>La intensidad no demuestra nada.</strong> Ni en un sentido ni en el otro.</p>
 <p>Lo que diferencia a los dos es lo que ocurre cuando no estás disponible.</p>`,
       subsections: [
         {

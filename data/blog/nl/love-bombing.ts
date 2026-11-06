@@ -4,16 +4,17 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'love-bombing-signalen',
   title: "Love bombing: hoe weet je of het liefde is of manipulatie?",
-  metaTitle: "Love bombing: de signalen en de test die het verschil maakt",
-  metaDescription: "Love bombing signalen: hij is perfect, te snel, te heftig. De 3 fases van de cyclus, de concrete tekenen en de grenstest die het verschil laat zien.",
+  metaTitle: "Love bombing: de signalen en de 3 fases herkennen",
+  metaDescription: "Love bombing signalen: hij is perfect, te snel, te heftig. De 3 fases van de cyclus, de concrete tekenen en de grens die het verschil laat zien.",
   featuredImage: '/blog/love-bombing.webp',
   featuredImageAlt: "Een veel te grote bos lichtroze rozen, alleen op een drempel in de volle zon",
   publishedAt: '2026-08-02',
+  modifiedAt: '2026-11-06',
   author: AUTHORS['thomas'],
   excerpt: "Love bombing lijkt niet op manipulatie. Het lijkt op het mooiste begin van een liefdesverhaal dat je ooit hebt meegemaakt. Precies daarom werkt het zo goed.",
   introduction: `<p>Je hebt net iemand leren kennen en alles gaat heel snel. Berichtjes van 's ochtends tot 's avonds. Complimenten waar je duizelig van wordt. Een “ik denk dat jij de persoon van mijn leven bent” na drie weken. Je vriendinnen vinden het prachtig. Jij voelt ergens een klein schuurtje dat je niet goed kunt benoemen.</p>
 <p><strong>Love bombing lijkt niet op manipulatie. Het lijkt op het mooiste begin van een liefdesverhaal dat je ooit hebt meegemaakt.</strong> Precies daarom werkt het zo goed, en daarom is de vraag “houdt hij echt van me of manipuleert hij me?” van binnenuit zo moeilijk te beantwoorden.</p>
-<p>Een lijst met signalen helpt je maar half, want een gepassioneerd begin van een relatie vinkt ongeveer dezelfde vakjes aan. Hieronder vind je de signalen, maar vooral de enige test die de twee echt uit elkaar houdt.</p>`,
+<p>Het probleem is dat een gepassioneerd begin van een relatie ongeveer dezelfde vakjes aanvinkt als love bombing. Het verschil zie je vooral op één moment: als je een grens stelt.</p>`,
   quickSummary: [
     "Love bombing is een fase van massale, versnelde verleiding, bedoeld om een band te scheppen voordat je de tijd hebt gehad om de persoon in te schatten.",
     "Het volgt een cyclus in drie stappen: idealiseren, afwaarderen, en dan afwijzen of met volle kracht terugkomen.",
@@ -88,7 +89,7 @@ const article: BlogArticleData = {
     {
       id: 'de-grenstest',
       title: "Love bombing of echte liefde op het eerste gezicht? De grenstest",
-      content: `<p>Dit is het belangrijkste punt. Een oprecht gepassioneerd begin en love bombing leveren op het moment zelf bijna dezelfde waarnemingen op. Veel berichtjes, veel complimenten, veel zin in elkaar. <strong>Intensiteit bewijst niets.</strong> In geen van beide richtingen.</p>
+      content: `<p>Op het moment zelf lijken <a href="/nl/love-bombing-test/">oprechte passie en love bombing</a> enorm op elkaar: veel berichtjes, veel complimenten, veel zin in elkaar. <strong>Intensiteit bewijst niets.</strong> In geen van beide richtingen.</p>
 <p>Wat het verschil maakt, is wat er gebeurt als jij niet beschikbaar bent.</p>`,
       subsections: [
         {

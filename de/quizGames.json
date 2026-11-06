@@ -327,6 +327,7 @@
     "testDistance": "Fernbeziehung-Test",
     "testToxic": "Toxisch-Test",
     "testRedFlag": "Red-Flag-Test",
+    "testLoveBombing": "Love-Bombing-Test",
     "testCoupleSain": "Gesunde Beziehung Test",
     "testMariage": "Heirats-Test",
     "testDivorce": "Scheidungs-Test",
@@ -807,5 +808,10 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte danach, was diese Person tut, nicht danach, was sie sagt, dass sie tun wird.",
     "disclaimer": "Dieser Test klebt niemandem ein Etikett auf. Er zählt Verhaltensweisen, und er gewichtet die stärker, die zählen: Angst, Kontrolle, ein Nein, das nicht gehört wird. Deine Antworten werden nicht gespeichert."
+  },
+  "love-bombing": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte danach, was diese Person tut, nicht danach, was sie verspricht.",
+    "disclaimer": "Der Test spricht von „dieser Person“, egal ob Mann oder Frau: Love Bombing gibt es in beide Richtungen. Er klebt niemandem ein Etikett auf, er schaut auf Verhalten und gewichtet das stärker, was am meisten zählt: ein Nein, das nicht gehört wird, Abstand zu den Menschen, die dir nahestehen, Angst. Deine Antworten werden nicht gespeichert."
   }
 }

@@ -2350,6 +2350,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
     { type: 'test', key: 'red-flag', icon: '🚩', route: 'testRedFlag' },
+    { type: 'test', key: 'love-bombing', icon: '💐', route: 'testLoveBombing' },
     { type: 'test', key: 'fin-couple', icon: '🪢', route: 'testFinCouple' },
     { type: 'test', key: 'amour-amitie', icon: '🧭', route: 'testAmourAmitie' },
     { type: 'test', key: 'crush', icon: '💘', route: 'testCrush' },
@@ -2472,6 +2473,9 @@ var QuizEngine = (function() {
     // Le red flag appelle la relation telle qu'elle est, puis l'autre face du
     // doute, puis la question de rester.
     'red-flag':        ['testToxic', 'testEstCeLeBon', 'testFinCouple'],
+    // Un debut trop parfait appelle les signaux en general, puis l'emprise
+    // quand le controle s'est installe, puis la relation telle qu'elle est.
+    'love-bombing':    ['testRedFlag', 'testEmprise', 'testToxic'],
     'pervers':         ['testToxic', 'testJalousie', 'testDivorce'],
     'divorce':         ['testFinCouple', 'testAmourHabitude', 'testToxic'],
     'fin-couple':      ['testCouche', 'testToxic', 'testDivorce'],
@@ -2532,7 +2536,7 @@ var QuizEngine = (function() {
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.
     'aime-encore':     ['testFinCouple', 'testAmourHabitude', 'testCouple'],
     // L'emprise appelle le regard sur la relation, puis sur l'autre.
-    'emprise':         ['testToxic', 'testPervers', 'testDependance'],
+    'emprise':         ['testToxic', 'testPervers', 'testLoveBombing'],
     'personnalite':    ['testLangageAmour', 'testAttachement', 'testCouple'],
     'langage-amour':   ['testPersonnalite', 'testAttachement', 'testCouple'],
     'attachement':     ['testPersonnalite', 'testLangageAmour', 'testConfiance'],

@@ -670,6 +670,27 @@
         planchers: [{ q: 9, o: 'd', palier: 9 }, { q: 10, o: 'd', palier: 8 }, { q: 4, o: 'd', palier: 8 }, { q: 13, o: 'd', palier: 7 }, { q: 5, o: 'd', palier: 6 }, { q: 6, o: 'd', palier: 6 }, { q: 17, o: 'd', palier: 6 }] }
     ] },
 
+    // ── Test love bombing (6 novembre 2026) ──
+    // Une seule serie sur « cette personne », homme ou femme : le love
+    // bombing se fait dans les deux sens et les questions ne changent pas
+    // avec le genre. Vingt situations dans l'ordre d'une histoire (le debut,
+    // les limites, les proches, puis la suite du cycle), d'ou dansLOrdre.
+    // Bareme explicite dans gd.json : chaque question pese de 2 a 8 selon ce
+    // qu'elle dit (ce qu'en disent les proches : 2 ; les mots d'ame soeur,
+    // les cadeaux, l'idealisation, les ex : 3 ; le premier « je t'aime » et
+    // les messages : 5 ; la culpabilite, l'escalade, les projets presses : 6 ;
+    // les proches qu'on fait choisir et l'intensite qui s'effondre : 7 ; la
+    // reaction a un non et la peur : 8), 100 points. « Parfois » partout fait
+    // 21 points (quelques signaux), « souvent » partout 61 (tres probable).
+    // Les planchers : avoir souvent peur de sa reaction (q19 d) vaut a lui
+    // seul le dernier palier, en avoir peur parfois (q19 c) et avoir du
+    // choisir entre ses proches et la relation (q11 d) l'avant-dernier, un
+    // non qui se paie (q8 d) et la personne du debut qu'on court rattraper
+    // (q14 d) le troisieme.
+    'love-bombing':   { prefix: 'loveBombing', engine: 'solo', totalQ: 20, pool: 20, quizType: 'love-bombing', ascending: true, ptsExplicites: true, dansLOrdre: true,
+                        paliers: [12, 27, 45, 65],
+                        planchers: [{ q: 19, o: 'd', palier: 5 }, { q: 19, o: 'c', palier: 4 }, { q: 11, o: 'd', palier: 4 }, { q: 8, o: 'd', palier: 3 }, { q: 14, o: 'd', palier: 3 }] },
+
     'ex':             { modes: [
       { id: 'homme', emoji: '👨', prefix: 'exH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' },
       { id: 'femme', emoji: '👩', prefix: 'exF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' }

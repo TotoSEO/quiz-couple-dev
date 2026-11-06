@@ -326,6 +326,7 @@
     "testDistance": "Test Distance",
     "testToxic": "Test Toxique",
     "testRedFlag": "Test red flag",
+    "testLoveBombing": "Test love bombing",
     "testCoupleSain": "Test de couple Sain",
     "testMariage": "Test Mariage",
     "testDivorce": "Test Divorce",
@@ -808,5 +809,10 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez sur ce que cette personne fait, pas sur ce qu'elle dit qu'elle fera.",
     "disclaimer": "Ce test ne colle une étiquette sur personne. Il compte des comportements, et il pèse plus lourd ceux qui comptent : la peur, le contrôle, le non qu'on n'entend pas. Vos réponses ne sont pas enregistrées."
+  },
+  "love-bombing": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur ce que cette personne fait, pas sur ce qu'elle promet.",
+    "disclaimer": "Le test parle de « cette personne », qu'il s'agisse d'un homme ou d'une femme : le love bombing se fait dans les deux sens. Il ne colle d'étiquette sur personne, il regarde des comportements, et il donne plus de poids à ceux qui pèsent le plus : un non qui n'est pas entendu, l'éloignement de vos proches, la peur. Vos réponses ne sont pas enregistrées."
   }
 }

@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Ein Test, den du allein machst",
+    "title": "Macht diese Person Love Bombing mit dir? Der Test in 20 Fragen",
+    "titleHighlight": "Love Bombing",
+    "description": "Nachrichten von morgens bis abends, ein „Ich liebe dich“ nach zehn Tagen, Zukunftspläne schon im ersten Monat ... Verliebtheit oder Manipulation? Zwanzig konkrete Situationen, vom Anfang der Beziehung bis heute, und jede Antwort zählt so viel, wie sie aussagt.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, kostenlos und ohne Anmeldung",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "Wie funktioniert der Love Bombing Test?",
+    "intro": "Love Bombing heißt, jemanden ganz am Anfang einer Beziehung mit Aufmerksamkeit, Komplimenten und Versprechen zu überschütten, viel schneller, als die Beziehung es hergibt. Wörtlich bedeutet es „Liebesbombardement“. Und das Problem ist: Von innen fühlt es sich an wie der schönste Anfang überhaupt!",
+    "p1": "Der Test stellt dir zwanzig Fragen zu konkreten Situationen: die ersten Nachrichten, das erste „Ich liebe dich“, was passiert, wenn du Nein sagst, was diese Person über deine Freunde sagt und was sich seit dem Anfang verändert hat. Bei jeder Frage hast du vier Antworten, von „nichts Auffälliges“ bis „genau so ist es“.",
+    "p2": "Die Fragen folgen dem Ablauf einer Beziehung: zuerst der Anfang, dann deine Grenzen und die Menschen, die dir nahestehen, und zum Schluss, was danach kam. Love Bombing erkennt man selten an einer einzigen Situation, erst das Gesamtbild zeigt das Muster. Du kannst den Test für eine Beziehung machen, die gerade anfängt, die noch läuft oder die schon vorbei ist, und er funktioniert genauso für einen Mann wie für eine Frau.",
+    "p3": "Der Test ist anonym, und deine Antworten bleiben in deinem Browser. Du kannst ihn in ein paar Wochen wiederholen, um zu sehen, ob sich etwas bewegt."
+  },
+  "section2": {
+    "title": "Love Bombing oder Verliebtheit: Darauf schaut der Test",
+    "p1": "Am Anfang sehen sich Verliebtheit und Love Bombing sehr ähnlich: In beiden Fällen geht alles schnell, es ist intensiv, und du fühlst dich einzigartig. Der wichtigste Unterschied ist die Reaktion auf eine Grenze. Wer ehrlich verliebt ist, ist enttäuscht, wenn du ein Wochenende absagst, und dann ist es gut. Wer Love Bombing betreibt, drängt, schmollt oder macht dir ein schlechtes Gewissen, weil dein Nein das Tempo stört, das er oder sie dir vorgibt.",
+    "p2": "Deshalb hört der Test nicht beim Anfang auf. Love Bombing folgt <a href=\"/de/blog/love-bombing-anzeichen/\">einem Kreislauf in drei Phasen</a>: zuerst die Idealisierung, in der du der perfekte Mensch bist, dann die Abwertung, in der die Komplimente Vorwürfen Platz machen, und schließlich die Zurückweisung oder das große Comeback, mit einer neuen Welle Liebe, sobald du auf Abstand gehst. Die letzten Fragen schauen genau darauf, was danach passiert ist.",
+    "p3": "Wenn die Kontrolle schon da ist, wenn du Angst vor ihrer Reaktion hast oder die Menschen, die dir nahestehen, kaum noch siehst, spricht man eher von <a href=\"/de/psychische-kontrolle-beziehung-test/\">einer kontrollierenden Beziehung</a>, und das Ergebnis sagt es dir. Und wenn dich eher das Verhalten dieser Person ganz allgemein stutzig macht: <a href=\"/de/red-flag-test/\">Signale, die dich warnen sollten</a>, gibt es nicht nur beim Love Bombing."
+  },
+  "section3": {
+    "title": "Warum nicht alle Fragen gleich viel zählen",
+    "p1": "Viele Nachrichten zu bekommen und Angst vor der Reaktion eines Menschen zu haben, ist überhaupt nicht dasselbe. Ein frühes „Ich liebe dich“ kann ungeschickt sein, ein Nein, das nie respektiert wird, ist ein echtes Problem. Deshalb zählt jede Frage 2 bis 8 Punkte, je nachdem, was sie aussagt, und am schwersten wiegen die Fragen zu deinen Grenzen, zu den Menschen, die dir nahestehen, und zur Angst.",
+    "p2": "Insgesamt gibt es 100 Punkte. Manche Antworten zählen sogar für sich allein: Wenn du sagst, dass du oft Angst vor ihrer Reaktion hast, kann das Ergebnis nicht unter die letzte Stufe fallen, auch wenn der Rest ruhig wirkt. Und wenn diese Person dich schon zwischen deinen Liebsten und der Beziehung hat wählen lassen, fällt das Ergebnis nicht unter „Sehr wahrscheinlich Love Bombing“.",
+    "p3": "Das Ergebnis hat fünf Stufen, jeweils mit dem, was es bedeutet, und dem, was du als Nächstes tun kannst:",
+    "headerScore": "Punkte",
+    "headerLevel": "Stufe",
+    "headerAnalysis": "Was es bedeutet",
+    "row1Score": "0 bis 12",
+    "row1Level": "Ein intensiver Anfang, kein Love Bombing",
+    "row1Analysis": "Viel Liebe, und deine Grenzen werden respektiert.",
+    "row2Score": "13 bis 27",
+    "row2Level": "Ein paar Signale im Blick behalten",
+    "row2Analysis": "Ein schnelles Tempo, aber nichts, was dir schadet.",
+    "row3Score": "28 bis 45",
+    "row3Level": "Das sieht nach Love Bombing aus",
+    "row3Analysis": "Viel, sehr schnell, und es hakt, wenn du bremst.",
+    "row4Score": "46 bis 65",
+    "row4Level": "Sehr wahrscheinlich Love Bombing",
+    "row4Analysis": "Ein Nein hat seinen Preis, und deine Liebsten rücken weg.",
+    "row5Score": "66 bis 100",
+    "row5Level": "Love Bombing und Kontrolle",
+    "row5Analysis": "Kontrolle oder Angst: Bleib damit nicht allein."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt",
+    "faq1Q": "Ist Love Bombing immer Absicht?",
+    "faq1A": "Nicht immer. Manche machen es berechnend, um jemanden schnell an sich zu binden und die Oberhand zu bekommen. Andere machen es, weil sie große Angst haben, verlassen zu werden, und gleich am Anfang alles auf den Tisch legen. Für dich ändert das wenig: In beiden Fällen zählt, ob deine Grenzen respektiert werden. Der Test schaut darauf, was diese Person tut, nicht darauf, was in ihrem Kopf vorgeht.",
+    "faq2Q": "Woher kommt der Begriff „Love Bombing“?",
+    "faq2A": "Geprägt haben ihn in den 1970er-Jahren Mitglieder der Vereinigungskirche in den USA, um zu beschreiben, wie sie neue Mitglieder empfingen: mit so viel Zuneigung und Aufmerksamkeit, dass sie sich an die Gruppe banden. Später wurde der Begriff auf Beziehungen übertragen, mit derselben Idee. 2017 veröffentlichte ein Team der University of Arkansas die erste Studie dazu, mit 484 Studierenden zwischen 18 und 30 Jahren. Sie beschreibt Love Bombing als übermäßige Kommunikation am Anfang einer Beziehung, um Macht und Kontrolle zu gewinnen, und bringt es mit narzisstischen Zügen, unsicherer Bindung, geringerem Selbstwert und einer intensiveren Nutzung von Textnachrichten und sozialen Medien in Verbindung.",
+    "faq3Q": "Diese Person ist von Anfang an sehr liebevoll. Ist das Love Bombing?",
+    "faq3A": "Nicht unbedingt, und deshalb fragt der Test vor allem nach dem, was die Aufmerksamkeit begleitet. Wer liebevoll ist, dir dein Tempo lässt, es normal findet, dass du deine Freunde triffst, und dir nie die eigenen Geschenke vorhält, ist kein Grund zur Sorge. Love Bombing beginnt, wenn Aufmerksamkeit zur Schuld wird und man dafür etwas von dir erwartet.",
+    "faq4Q": "Werden meine Antworten gespeichert?",
+    "faq4A": "Nein. Deine Antworten bleiben in deinem Browser, nichts wird gesendet, und niemand sieht sie. Du brauchst weder ein Konto noch eine E-Mail-Adresse, und du kannst den Test so oft wiederholen, wie du willst.",
+    "faq5Q": "Mein Ergebnis ist hoch. Was jetzt?",
+    "faq5A": "Lies zuerst noch einmal die Fragen, bei denen du die letzte Antwort gewählt hast: Sie haben das Ergebnis gemacht. Dann sprich mit jemandem, der dich schon lange kennt, einer Freundin, einem Bruder, einer Kollegin, also mit jemandem, der deine Beziehung von außen sieht. Und wenn du Angst vor ihrer Reaktion hast, bleib damit nicht allein: Das Hilfetelefon Gewalt gegen Frauen ist unter 116 016 kostenlos und anonym erreichbar, das Hilfetelefon Gewalt an Männern unter 0800 123 99 00.",
+    "faq6Q": "Und wenn ich selbst Love Bombing mache?",
+    "faq6A": "Der Test ist aus der Sicht der Person geschrieben, die die Aufmerksamkeit bekommt, aber man kann ihn auch andersherum lesen. Wenn du dich in den Fragen zu den Nachrichten, den Plänen und der Reaktion auf ein Nein wiedererkennst, frag dich, was dich so drängt. Meistens ist es die Angst, dass der andere geht, und daran kann man arbeiten, allein oder mit therapeutischer Hilfe."
+  },
+  "jsonLd": {
+    "about": "Love Bombing in einer Beziehung erkennen"
+  }
+}
