@@ -97,10 +97,16 @@
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
     "p3": "I quattordici giochi di questa pagina si giocano online, gratis, su un solo telefono, tranne il gioco da serata, dove ogni coppia gioca sul proprio. Niente da creare, niente da installare, niente da preparare.",
-    "p4": "E a seconda della stagione, <a href=\"/it/quiz-speciali-per-coppie/\">i quiz che cambiano con il calendario</a> aggiungono qualche serata a parte: per Halloween, chi di voi due <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">muore per primo in un film horror</a> oppure <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">quale duo di supercattivi formate</a>."
+    "p4": "E a seconda della stagione, <a href=\"/it/quiz-speciali-per-coppie/\">i quiz che cambiano con il calendario</a> aggiungono qualche serata a parte: per Halloween, chi di voi due <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">muore per primo in un film horror</a> oppure <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">quale duo di supercattivi formate</a>.",
+    "plus": [
+      {
+        "titre": "Giochi di coppia senza materiale, basta un telefono",
+        "texte": "<p>Niente carte da comprare, niente tabellone da tirare fuori: a parte il gioco da serata, tutto sta in un solo telefono, e quasi tutti i giochi si fanno ad alta voce. Così funzionano dove non avete niente a portata di mano: in auto, in treno, in fila o al ristorante. Uno legge, l'altro risponde, e vi passate il telefono.</p><p>In auto, scegliete quelli che si giocano senza guardare lo schermo, come scegliere tra due opzioni o dire chi dei due fa cosa: chi siede accanto legge, chi guida risponde, e nessuno toglie gli occhi dalla strada!</p>"
+      }
+    ]
   },
   "section2": {
-    "title": "Quale gioco scegliere a seconda del momento",
+    "title": "Quale gioco scegliere a seconda del momento: in auto, a casa o a distanza",
     "intro": "È questa la vera domanda. E la risposta dipende molto meno dai vostri gusti che dal momento che state vivendo.",
     "headerMoment": "Il momento",
     "headerJeu": "Il gioco",

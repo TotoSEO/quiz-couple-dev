@@ -97,10 +97,16 @@
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
     "p3": "Los catorce juegos de esta página se juegan online, gratis, en un solo móvil, salvo el juego de fiesta, donde cada pareja juega en el suyo. Nada que crear, nada que instalar, nada que preparar.",
-    "p4": "Y según la temporada, <a href=\"/es/quiz-especiales-para-parejas/\">los quiz que cambian con el calendario</a> añaden algunas noches aparte: para Halloween, quién de los dos <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">muere primero en una película de terror</a> o <a href=\"/es/quiz-que-duo-de-supervillanos-formais/\">qué dúo de supervillanos formáis</a>."
+    "p4": "Y según la temporada, <a href=\"/es/quiz-especiales-para-parejas/\">los quiz que cambian con el calendario</a> añaden algunas noches aparte: para Halloween, quién de los dos <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">muere primero en una película de terror</a> o <a href=\"/es/quiz-que-duo-de-supervillanos-formais/\">qué dúo de supervillanos formáis</a>.",
+    "plus": [
+      {
+        "titre": "Juegos para dos sin material, solo un móvil",
+        "texte": "<p>Ni cartas que comprar ni tablero que sacar: salvo el juego de fiesta, todo cabe en un solo móvil, y la mayoría de los juegos se juegan en voz alta. Así que funcionan donde no tenéis nada a mano: en el coche, en el tren, en una cola o en un restaurante. Uno lee, el otro responde, y os vais pasando el móvil.</p><p>En el coche, elegid los que se juegan sin mirar la pantalla, como elegir entre dos opciones o decir cuál de los dos hace qué: el copiloto lee, el conductor responde, ¡y nadie aparta la vista de la carretera!</p>"
+      }
+    ]
   },
   "section2": {
-    "title": "Qué juego elegir según el momento",
+    "title": "Qué juego elegir según el momento: en el coche, en casa o a distancia",
     "intro": "Esa es la pregunta de verdad. Y la respuesta depende mucho menos de vuestros gustos que del momento que estáis viviendo.",
     "headerMoment": "El momento",
     "headerJeu": "El juego",

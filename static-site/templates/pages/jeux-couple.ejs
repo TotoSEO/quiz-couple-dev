@@ -165,6 +165,7 @@
         <p><%- t(ns + ':section1.p3', '') %></p>
         <% const s1p4 = t(ns + ':section1.p4', ''); if (s1p4) { %><p><%- s1p4 %></p><% } %>
       </div>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'section1.plus' }) %>
     </section>
 
     <section class="mb-16">

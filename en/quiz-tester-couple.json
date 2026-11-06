@@ -66,7 +66,13 @@
     "row7Analysis": "Things get stuck in the same place across several answers: open the heaviest subject, calmly",
     "row8Score": "0-19%",
     "row8Level": "Worth talking about",
-    "row8Analysis": "A lot to talk about: a real conversation on a good day, and some help if needed"
+    "row8Analysis": "A lot to talk about: a real conversation on a good day, and some help if needed",
+    "plus": [
+      {
+        "titre": "Will we last?",
+        "texte": "<p>No test can tell you that, and this one can't either. A score is a snapshot of your answers today, not a forecast for ten years from now.</p><p>What research does know well is what wears a relationship down over time. In psychologist John Gottman's work, the sign that most often comes before a breakup is contempt: rolling your eyes when the other person talks, the little digs, the tone that makes them feel beneath you. He also noticed that couples who last are quick to patch things up after a clash, with a kind word, a joke or a hand on the arm.</p><p>So if your answers get stuck on communication or respect, that's where to look first.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Mistakes to avoid when taking a compatibility test",

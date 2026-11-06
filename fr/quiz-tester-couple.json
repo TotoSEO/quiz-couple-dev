@@ -66,7 +66,13 @@
     "row7Analysis": "Ça coince au même endroit sur plusieurs réponses : ouvrez le sujet qui pèse le plus, au calme",
     "row8Score": "0-19 %",
     "row8Level": "À en parler",
-    "row8Analysis": "Beaucoup de choses à se dire : une vraie conversation, un jour où ça va, et de l'aide si besoin"
+    "row8Analysis": "Beaucoup de choses à se dire : une vraie conversation, un jour où ça va, et de l'aide si besoin",
+    "plus": [
+      {
+        "titre": "Notre couple va-t-il durer ?",
+        "texte": "<p>Aucun test ne peut le dire, celui-ci non plus. Un score, c'est une photo de vos réponses aujourd'hui, pas une prédiction pour dans dix ans.</p><p>Ce que la recherche connaît bien, en revanche, c'est ce qui use un couple sur la durée. Dans les travaux du psychologue John Gottman, le signe qui annonce le plus souvent une séparation, c'est le mépris : les yeux au ciel quand l'autre parle, les petites piques, le ton qui lui fait sentir qu'il est en dessous. Il a aussi remarqué que les couples qui tiennent savent vite recoller les morceaux après un accrochage, avec un mot gentil, une blague ou une main posée sur le bras.</p><p>Du coup, si vos réponses coincent sur la communication ou le respect, c'est là qu'il faut regarder en premier.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Les erreurs à éviter quand on fait un test de couple",
