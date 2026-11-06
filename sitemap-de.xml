@@ -94,6 +94,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/de/love-bombing-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-love-bombing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-bombing-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-love-bombing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/love-bombing-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-love-bombing/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://quiz-couple.com/nl/love-bombing-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-love-bombing/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/de/narzisstischer-partner-test/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-pervers-narcissique/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/narcissistic-partner-test/"/>
