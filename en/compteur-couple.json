@@ -135,7 +135,7 @@
     },
     {
       "an": 4,
-      "nom": "linen anniversary"
+      "nom": "fruit and flowers anniversary"
     },
     {
       "an": 5,
@@ -210,8 +210,28 @@
       "nom": "golden anniversary"
     },
     {
+      "an": 55,
+      "nom": "emerald anniversary"
+    },
+    {
       "an": 60,
       "nom": "diamond anniversary"
+    },
+    {
+      "an": 65,
+      "nom": "blue sapphire anniversary"
+    },
+    {
+      "an": 70,
+      "nom": "platinum anniversary"
+    },
+    {
+      "an": 75,
+      "nom": "diamond and gold anniversary"
+    },
+    {
+      "an": 80,
+      "nom": "oak anniversary"
     }
   ],
   "resultat": {
@@ -320,7 +340,7 @@
   },
   "section5": {
     "title": "Anniversary names: what each year together is called",
-    "p1": "In English-speaking countries, each anniversary has a traditional material, from paper in the first year to gold at fifty. The list was originally for weddings, but couples now use it for every anniversary, married or not. The counter shows the name that goes with your next anniversary. Here is the full list, with <a href=\"/en/love-language-test-couple/\">a gift or gesture idea</a> for each year:",
+    "p1": "In English-speaking countries, <a href=\"/en/wedding-anniversaries-by-year/\">each anniversary has a traditional material</a>, from paper in the first year to gold at fifty. The list was originally for weddings, but couples now use it for every anniversary, married or not. The counter shows the name that goes with your next anniversary. Here are the best-known ones, with <a href=\"/en/love-language-test-couple/\">a gift or gesture idea</a> for each one:",
     "tableHeaders": [
       "Year",
       "The anniversary",
@@ -344,8 +364,8 @@
       ],
       [
         "4",
-        "Linen anniversary",
-        "New table linen and a dinner cooked together."
+        "Fruit and flowers anniversary",
+        "A bunch of flowers and a picnic with fruit from the market."
       ],
       [
         "5",

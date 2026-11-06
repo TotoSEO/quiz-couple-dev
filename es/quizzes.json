@@ -489,6 +489,12 @@
     "description": "Escribid la fecha en que empezó todo y el contador os dice cuántos días lleváis juntos, la duración exacta y las próximas fechas que celebrar.",
     "metaDescription": "Contador de tiempo en pareja gratis: calcula cuántos días lleváis juntos, la duración exacta en años, meses y días, y las próximas fechas que celebrar."
   },
+  "nocesMariage": {
+    "title": "Aniversarios de boda: el nombre de cada año, de 1 a 80",
+    "shortTitle": "Aniversarios de boda",
+    "description": "Poned la fecha de vuestra boda y la herramienta os dice qué bodas celebráis, cuándo caen las siguientes y la lista completa de 1 a 80 años.",
+    "metaDescription": "Aniversarios de boda año por año: la lista completa de 1 a 80 años (papel, algodón, plata, oro...) y un cálculo gratis para saber qué bodas celebráis."
+  },
   "testDureeCelibat": {
     "title": "¿Cuánto tiempo voy a estar soltero? Test online",
     "shortTitle": "¿Cuánto tiempo seguiré soltero?",

@@ -489,6 +489,12 @@
     "description": "Gebt den Tag ein, an dem alles begann, und der Zähler sagt euch, wie viele Tage ihr zusammen seid, die genaue Dauer und die nächsten Daten zum Feiern.",
     "metaDescription": "Beziehungsdauer-Zähler: Wie lange sind wir zusammen? Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer und die nächsten Jahrestage."
   },
+  "nocesMariage": {
+    "title": "Hochzeitstage: alle Namen von 1 bis 80 Jahren, mit Rechner",
+    "shortTitle": "Hochzeitstage",
+    "description": "Gebt euer Hochzeitsdatum ein und seht, welchen Hochzeitstag ihr gerade feiert, wann die nächsten kommen, und die ganze Liste von 1 bis 80 Jahren.",
+    "metaDescription": "Hochzeitstage im Überblick: alle Namen von 1 bis 80 Jahren (Papierhochzeit, Silberne, Goldene...) und ein kostenloser Rechner für euren Hochzeitstag."
+  },
   "testDureeCelibat": {
     "title": "Wie lange bleibe ich noch Single? Online-Test",
     "shortTitle": "Wie lange bleibe ich noch Single?",

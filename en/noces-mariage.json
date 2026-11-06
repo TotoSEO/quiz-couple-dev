@@ -1,0 +1,282 @@
+{
+  "hero": {
+    "badge": "Free tool",
+    "title": "Wedding anniversary names: which one are you celebrating this year?",
+    "highlight": "Wedding anniversary names",
+    "description": "Enter your wedding date and the tool tells you <strong>which anniversary you are celebrating right now</strong>, and when the next ones fall, with the number of days left. Just below, the full list, from paper (1 year) to oak (80 years).",
+    "subtitle": "No sign-up. The date stays on your phone, nothing is sent anywhere."
+  },
+  "form": {
+    "titre": "Your anniversaries",
+    "dateTitre": "Your wedding day",
+    "dateAide": "The date on your marriage certificate, or the day of the ceremony if that's the one you celebrate. Not married? Use the day your story began: plenty of couples count their anniversaries that way.",
+    "jour": "Day",
+    "moisLabel": "Month",
+    "annee": "Year",
+    "mois": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "moisDate": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "joursSemaine": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "dateAffichee": "{{mois}} {{j}}, {{a}}",
+    "dateAvecJour": "{{js}}, {{date}}",
+    "lancer": "Show our anniversaries",
+    "aide": "The date is saved in this browser: come back to the page and your anniversaries show up on their own.",
+    "erreurVide": "Choose the day, month and year of your wedding.",
+    "erreur": "This date doesn't exist. Check the day and the month."
+  },
+  "unites": {
+    "jour": [
+      "day",
+      "days"
+    ],
+    "mois": [
+      "month",
+      "months"
+    ],
+    "an": [
+      "year",
+      "years"
+    ]
+  },
+  "et": " and ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "today",
+    "demain": "tomorrow",
+    "dans": "in {{n}} days",
+    "ilya": "{{n}} days ago"
+  },
+  "resultat": {
+    "depuis": "Married on {{date}}",
+    "duree": "{{duree}} married",
+    "jourJ": "It's the big day: congratulations!",
+    "avant": "Wedding {{dans}}, on {{date}}",
+    "actuelleTitre": "Your last anniversary on the list",
+    "actuelleDetail": "Reached on {{date}}, at {{ans}} married.",
+    "aujourdhuiTitre": "It's today!",
+    "aujourdhuiDetail": "{{ans}} married today, {{date}}. Happy anniversary!",
+    "premiereTitre": "Your first anniversary",
+    "premiereDetail": "At {{ans}} married, on {{date}}, {{dans}}.",
+    "ook": "In the UK: {{ook}}",
+    "titreSuivantes": "Your next anniversaries",
+    "finListe": "You've passed the oak anniversary, the last one on the list, at 80 years married. Hats off!",
+    "lienBouton": "Copy the link to our anniversaries",
+    "lienCopie": "Link copied! It keeps your wedding date.",
+    "modifier": "Change the date",
+    "avis": "Leave a review"
+  },
+  "suite": {
+    "titre": "And in days, how long is that?",
+    "texte": "Anniversaries only come once a year. The relationship duration counter counts your days together and gives you other dates to celebrate: round months, 1,000 days, 10,000 hours...",
+    "bouton": "Count our days together"
+  },
+  "table": {
+    "annees": "Years married",
+    "noces": "Traditional name",
+    "ook": "UK, if different"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "paper anniversary",
+      "ook": "cotton or paper"
+    },
+    {
+      "an": 2,
+      "nom": "cotton anniversary",
+      "ook": "paper or cotton"
+    },
+    {
+      "an": 3,
+      "nom": "leather anniversary"
+    },
+    {
+      "an": 4,
+      "nom": "fruit and flowers anniversary",
+      "ook": "linen or silk"
+    },
+    {
+      "an": 5,
+      "nom": "wood anniversary"
+    },
+    {
+      "an": 6,
+      "nom": "iron anniversary",
+      "ook": "sugar"
+    },
+    {
+      "an": 7,
+      "nom": "wool anniversary"
+    },
+    {
+      "an": 8,
+      "nom": "bronze anniversary",
+      "ook": "bronze or salt"
+    },
+    {
+      "an": 9,
+      "nom": "pottery anniversary",
+      "ook": "copper"
+    },
+    {
+      "an": 10,
+      "nom": "tin anniversary"
+    },
+    {
+      "an": 11,
+      "nom": "steel anniversary"
+    },
+    {
+      "an": 12,
+      "nom": "silk anniversary",
+      "ook": "silk and fine linen"
+    },
+    {
+      "an": 13,
+      "nom": "lace anniversary"
+    },
+    {
+      "an": 14,
+      "nom": "ivory anniversary"
+    },
+    {
+      "an": 15,
+      "nom": "crystal anniversary"
+    },
+    {
+      "an": 20,
+      "nom": "china anniversary"
+    },
+    {
+      "an": 25,
+      "nom": "silver anniversary",
+      "phare": true
+    },
+    {
+      "an": 30,
+      "nom": "pearl anniversary"
+    },
+    {
+      "an": 35,
+      "nom": "coral anniversary"
+    },
+    {
+      "an": 40,
+      "nom": "ruby anniversary"
+    },
+    {
+      "an": 45,
+      "nom": "sapphire anniversary"
+    },
+    {
+      "an": 50,
+      "nom": "golden anniversary",
+      "phare": true
+    },
+    {
+      "an": 55,
+      "nom": "emerald anniversary"
+    },
+    {
+      "an": 60,
+      "nom": "diamond anniversary",
+      "phare": true
+    },
+    {
+      "an": 65,
+      "nom": "blue sapphire anniversary"
+    },
+    {
+      "an": 70,
+      "nom": "platinum anniversary"
+    },
+    {
+      "an": 75,
+      "nom": "diamond and gold anniversary"
+    },
+    {
+      "an": 80,
+      "nom": "oak anniversary"
+    }
+  ],
+  "section1": {
+    "title": "What are wedding anniversary names?",
+    "p1": "Each wedding anniversary has a traditional name, usually a material. The first year is paper, the second is cotton, the fifth is wood, and so on up to the golden anniversary at 50 and the diamond anniversary at 60. So when people say a couple is celebrating their tin anniversary, it means they've been married for 10 years.",
+    "p2": "Look at the list and you'll quickly see a logic: the first years get materials that wear out, like paper or cotton, and the longer the marriage lasts, the stronger or more precious they get, all the way to gold and diamond. It isn't perfect, though: silk and lace come right after steel.",
+    "p3": "Not married? Plenty of couples use the anniversary names anyway, counting from the day they got together. And if you'd rather think in days than in years, you can also <a href=\"/en/relationship-counter/\">count your days together</a>: day 1,000 comes a few months before your third anniversary!"
+  },
+  "section2": {
+    "title": "Wedding anniversaries by year, from 1 to 80",
+    "p1": "Here are the traditional anniversary names, year by year, as they're used in the United States. In the UK, a few years have a different name, and you'll find it in the last column. After 15 years, the list only goes in steps of five.",
+    "p2": "The ones people really celebrate are the silver (25 years), golden (50 years) and diamond (60 years) anniversaries, in bold in the table. The others are mostly a handy source of gift ideas, even if <a href=\"/en/love-language-test-couple/\">the way your partner feels loved</a> matters more than the material of the year. And if you come across another list somewhere, don't be surprised by the differences: in France, for example, the first year is cotton, not paper."
+  },
+  "section3": {
+    "title": "How to celebrate your wedding anniversary",
+    "p1": "Most couples start from the material of the year: a wooden frame for the wood anniversary, a pair of crystal glasses for the 15th, a piece of jewelry for the silver one. It's a good place to start when you're short on ideas, but nothing says you have to stick to it. Here's what usually works well:",
+    "points": [
+      "<strong>Play with the material:</strong> a letter or a book for the paper anniversary, a picnic on a big blanket for the cotton one. The wink counts more than the price.",
+      "<strong>Relive a moment from the start:</strong> the restaurant of your first date, the place where one of you proposed, the song from your first dance.",
+      "<strong>Look back on your years together:</strong> where were you ten years ago, what was your best trip, what has the other changed in you... To turn it into a game over dinner, find out <a href=\"/en/who-knows-partner-best-quiz/\">which of you knows the other by heart</a>.",
+      "<strong>For the big ones, bring people together:</strong> silver and golden anniversaries are often celebrated with family and friends, sometimes with a vow renewal."
+    ],
+    "p2": "And if the date falls on a weeknight with nothing planned, a quiet dinner at home with your phones away from the table is already a lovely way to mark the day."
+  },
+  "section4": {
+    "title": "Where do anniversary names come from?",
+    "p1": "Silver and golden anniversaries are an old custom. Linking 25 years of marriage with silver and 50 years with gold has been documented in German-speaking countries since the 1500s.",
+    "p2": "The names for every other year came much later. In 1937, the American National Retail Jeweler Association (today Jewelers of America) published an expanded list of anniversary gifts, one for each year.",
+    "p3": "None of this is official, which is why lists differ a little from one book to another, and a lot from one country to another. In France, the first year is cotton and the second leather, and in Germany and the Netherlands couples even celebrate after twelve and a half years."
+  },
+  "faq": {
+    "title": "Your questions about wedding anniversaries",
+    "q1": "What is the 10th wedding anniversary called?",
+    "a1": "It's the tin anniversary, and in the US aluminum is sometimes given too. Then come steel (11 years), silk (12 years) and lace (13 years).",
+    "q2": "What are the 25th, 30th and 40th anniversaries called?",
+    "a2": "25 years is the silver anniversary, 30 years the pearl anniversary and 40 years the ruby anniversary. In between, 35 years is the coral anniversary.",
+    "q3": "What is the 50th wedding anniversary called?",
+    "a3": "The golden anniversary. Along with the silver one, it's the oldest name on the list. Next come the emerald anniversary at 55 and the diamond anniversary at 60.",
+    "q4": "Can you celebrate anniversary names without being married?",
+    "a4": "Of course. Lots of couples count them from the day they got together. The tool works the same way: enter the date that matters to you both.",
+    "q5": "Is the list the same in every country?",
+    "a5": "No. Silver, gold and diamond are the same almost everywhere, but the other years change. Even the US and the UK don't agree on everything: the 6th anniversary is iron in the US and sugar in the UK.",
+    "q6": "Why does the list stop at 80 years?",
+    "a6": "Because very few couples get there! The traditional list ends with the oak anniversary at 80, and by then, every year together is a celebration in itself."
+  },
+  "jsonLd": {
+    "name": "Wedding anniversary calculator",
+    "about": "Traditional wedding anniversary names from 1 to 80 years, and the dates of the next ones"
+  }
+}

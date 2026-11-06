@@ -210,8 +210,28 @@
       "nom": "gouden bruiloft"
     },
     {
+      "an": 55,
+      "nom": "smaragden bruiloft"
+    },
+    {
       "an": 60,
       "nom": "diamanten bruiloft"
+    },
+    {
+      "an": 65,
+      "nom": "briljanten bruiloft"
+    },
+    {
+      "an": 70,
+      "nom": "platina bruiloft"
+    },
+    {
+      "an": 75,
+      "nom": "albasten bruiloft"
+    },
+    {
+      "an": 80,
+      "nom": "eiken bruiloft"
     }
   ],
   "resultat": {
@@ -320,7 +340,7 @@
   },
   "section5": {
     "title": "De bruiloften: de naam van elk jaar samen",
-    "p1": "Elk jubileum heeft een eigen naam, meestal een materiaal: van de katoenen bruiloft na één jaar tot de gouden bruiloft na vijftig jaar. Oorspronkelijk was die lijst er alleen voor getrouwde stellen, maar tegenwoordig gebruiken koppels hem voor elk jubileum, getrouwd of niet. De teller laat de naam zien die bij jullie volgende jubileum hoort. Hier is de hele lijst, met een idee voor <a href=\"/nl/liefdestaal-test/\">een cadeau of een kleine attentie</a> voor elk jaar:",
+    "p1": "<a href=\"/nl/trouwdagen/\">Elk jubileum heeft een eigen naam</a>, meestal een materiaal: van de katoenen bruiloft na één jaar tot de gouden bruiloft na vijftig jaar. Oorspronkelijk was die lijst er alleen voor getrouwde stellen, maar tegenwoordig gebruiken koppels hem voor elk jubileum, getrouwd of niet. De teller laat de naam zien die bij jullie volgende jubileum hoort. Hier de bekendste, met voor elke bruiloft een idee voor <a href=\"/nl/liefdestaal-test/\">een cadeau of een kleine attentie</a>:",
     "tableHeaders": [
       "Jaar",
       "De bruiloft",
@@ -386,6 +406,11 @@
         "12",
         "Linnen bruiloft",
         "Linnen beddengoed en een lange zondagochtend in bed."
+      ],
+      [
+        "12½",
+        "Koperen bruiloft",
+        "Iets van koper, of een etentje in het restaurant van jullie eerste date."
       ],
       [
         "13",

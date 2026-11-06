@@ -489,6 +489,12 @@
     "description": "Enter the day it all started and see how many days you have been together, the exact length, and the next dates worth celebrating.",
     "metaDescription": "Free relationship duration counter: enter your start date and see your days together, the exact time, your next anniversaries and day milestones to celebrate."
   },
+  "nocesMariage": {
+    "title": "Wedding Anniversaries by Year: Every Name from 1 to 80",
+    "shortTitle": "Wedding anniversaries by year",
+    "description": "Enter your wedding date and see which anniversary you are celebrating, when the next ones fall, and the full list from year 1 to 80.",
+    "metaDescription": "Wedding anniversaries by year: the traditional name of every anniversary from 1 to 80 years (paper, tin, silver, gold...) and a free calculator for yours."
+  },
   "testDureeCelibat": {
     "title": "How long will I be single? Online test",
     "shortTitle": "How long will I stay single?",

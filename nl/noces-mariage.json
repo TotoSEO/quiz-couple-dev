@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "badge": "Gratis tool",
+    "title": "Trouwdagen: welke bruiloft vieren jullie dit jaar?",
+    "highlight": "Trouwdagen",
+    "description": "Vul jullie trouwdatum in en de tool laat zien <strong>welke bruiloft jullie nu vieren</strong> en wanneer de volgende komen, met het aantal dagen dat nog rest. Daaronder de hele lijst met trouwdagen, van de katoenen bruiloft (1 jaar) tot de eiken bruiloft (80 jaar).",
+    "subtitle": "Zonder account. De datum blijft op je telefoon, er wordt niets verstuurd."
+  },
+  "form": {
+    "titre": "Jullie trouwdagen",
+    "dateTitre": "De dag van jullie bruiloft",
+    "dateAide": "De datum van het gemeentehuis, of die van de ceremonie als jullie die vieren. Niet getrouwd? Neem de dag waarop jullie verhaal begon: veel stellen tellen hun jubilea zo.",
+    "jour": "Dag",
+    "moisLabel": "Maand",
+    "annee": "Jaar",
+    "mois": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "moisDate": [
+      "januari",
+      "februari",
+      "maart",
+      "april",
+      "mei",
+      "juni",
+      "juli",
+      "augustus",
+      "september",
+      "oktober",
+      "november",
+      "december"
+    ],
+    "joursSemaine": [
+      "zondag",
+      "maandag",
+      "dinsdag",
+      "woensdag",
+      "donderdag",
+      "vrijdag",
+      "zaterdag"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "lancer": "Laat onze trouwdagen zien",
+    "aide": "De datum wordt in deze browser bewaard: kom je terug op de pagina, dan staan jullie trouwdagen er meteen.",
+    "erreurVide": "Kies de dag, de maand en het jaar van jullie bruiloft.",
+    "erreur": "Deze datum bestaat niet. Kijk de dag en de maand nog even na."
+  },
+  "unites": {
+    "jour": [
+      "dag",
+      "dagen"
+    ],
+    "mois": [
+      "maand",
+      "maanden"
+    ],
+    "an": [
+      "jaar",
+      "jaar"
+    ]
+  },
+  "et": " en ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "vandaag",
+    "demain": "morgen",
+    "dans": "over {{n}} dagen",
+    "ilya": "{{n}} dagen geleden"
+  },
+  "resultat": {
+    "depuis": "Getrouwd op {{date}}",
+    "duree": "{{duree}} getrouwd",
+    "jourJ": "Het is de grote dag: gefeliciteerd!",
+    "avant": "Bruiloft {{dans}}, op {{date}}",
+    "actuelleTitre": "Jullie laatste trouwdag op de lijst",
+    "actuelleDetail": "Bereikt op {{date}}, na {{ans}} huwelijk.",
+    "aujourdhuiTitre": "Het is vandaag!",
+    "aujourdhuiDetail": "Vandaag, {{date}}, zijn jullie {{ans}} getrouwd. Gefeliciteerd!",
+    "premiereTitre": "Jullie eerste trouwdag",
+    "premiereDetail": "Na {{ans}} huwelijk, op {{date}}, {{dans}}.",
+    "ook": "Op andere lijsten: {{ook}}",
+    "titreSuivantes": "Jullie volgende trouwdagen",
+    "finListe": "Jullie zijn de eiken bruiloft voorbij, de laatste op de lijst, na 80 jaar huwelijk. Petje af!",
+    "lienBouton": "Link naar onze trouwdagen kopiëren",
+    "lienCopie": "Link gekopieerd! Jullie trouwdatum zit erin.",
+    "modifier": "Datum wijzigen",
+    "avis": "Laat een review achter"
+  },
+  "suite": {
+    "titre": "En hoeveel dagen is dat?",
+    "texte": "Een trouwdag komt maar één keer per jaar. De relatieteller telt jullie dagen samen en geeft jullie andere data om te vieren: ronde maanden, 1.000 dagen, 10.000 uur...",
+    "bouton": "Onze dagen samen tellen"
+  },
+  "table": {
+    "annees": "Jaar getrouwd",
+    "noces": "De bruiloft",
+    "ook": "Op andere lijsten"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "katoenen bruiloft",
+      "ook": "papier"
+    },
+    {
+      "an": 2,
+      "nom": "papieren bruiloft",
+      "ook": "karton, leer of katoen"
+    },
+    {
+      "an": 2.5,
+      "nom": "aluminium bruiloft"
+    },
+    {
+      "an": 3,
+      "nom": "leren bruiloft",
+      "ook": "tarwe"
+    },
+    {
+      "an": 4,
+      "nom": "zijden bruiloft",
+      "ook": "bloemen, fruit, leer of was"
+    },
+    {
+      "an": 5,
+      "nom": "houten bruiloft",
+      "ook": "blik of plastic"
+    },
+    {
+      "an": 6,
+      "nom": "ijzeren bruiloft",
+      "ook": "gips of suiker"
+    },
+    {
+      "an": 6.25,
+      "nom": "blikken bruiloft",
+      "ook": "tin"
+    },
+    {
+      "an": 7,
+      "nom": "wollen bruiloft",
+      "ook": "brons, koper of nikkel"
+    },
+    {
+      "an": 8,
+      "nom": "bronzen bruiloft",
+      "ook": "aardewerk of blik"
+    },
+    {
+      "an": 9,
+      "nom": "aardewerken bruiloft",
+      "ook": "ijzer of vlechtwerk"
+    },
+    {
+      "an": 10,
+      "nom": "tinnen bruiloft",
+      "ook": "kristal, staal of roos"
+    },
+    {
+      "an": 11,
+      "nom": "stalen bruiloft",
+      "ook": "koraal"
+    },
+    {
+      "an": 12,
+      "nom": "linnen bruiloft",
+      "ook": "zijde"
+    },
+    {
+      "an": 12.5,
+      "nom": "koperen bruiloft",
+      "phare": true
+    },
+    {
+      "an": 13,
+      "nom": "kanten bruiloft",
+      "ook": "lelie, meiklokje of vermiljoen"
+    },
+    {
+      "an": 14,
+      "nom": "ivoren bruiloft",
+      "ook": "lood"
+    },
+    {
+      "an": 15,
+      "nom": "kristallen bruiloft",
+      "ook": "porselein"
+    },
+    {
+      "an": 20,
+      "nom": "porseleinen bruiloft",
+      "ook": "kristal of verzilverd"
+    },
+    {
+      "an": 25,
+      "nom": "zilveren bruiloft",
+      "phare": true
+    },
+    {
+      "an": 30,
+      "nom": "parelen bruiloft",
+      "ook": "ivoor of parelmoer"
+    },
+    {
+      "an": 35,
+      "nom": "koralen bruiloft",
+      "ook": "robijn"
+    },
+    {
+      "an": 37.5,
+      "nom": "verguld zilveren bruiloft",
+      "ook": "aluminium"
+    },
+    {
+      "an": 40,
+      "nom": "robijnen bruiloft",
+      "ook": "smaragd of doublé",
+      "phare": true
+    },
+    {
+      "an": 45,
+      "nom": "saffieren bruiloft",
+      "ook": "verguld zilver of vermiljoen",
+      "phare": true
+    },
+    {
+      "an": 50,
+      "nom": "gouden bruiloft",
+      "phare": true
+    },
+    {
+      "an": 55,
+      "nom": "smaragden bruiloft",
+      "ook": "orchidee of witgoud"
+    },
+    {
+      "an": 60,
+      "nom": "diamanten bruiloft",
+      "phare": true
+    },
+    {
+      "an": 65,
+      "nom": "briljanten bruiloft",
+      "ook": "ijzer of palissander",
+      "phare": true
+    },
+    {
+      "an": 70,
+      "nom": "platina bruiloft",
+      "ook": "bloedkoraal of briljant",
+      "phare": true
+    },
+    {
+      "an": 75,
+      "nom": "albasten bruiloft",
+      "ook": "diamant, kroonjuwelen of platina",
+      "phare": true
+    },
+    {
+      "an": 80,
+      "nom": "eiken bruiloft",
+      "phare": true
+    }
+  ],
+  "section1": {
+    "title": "Wat betekenen de namen van de trouwdagen?",
+    "p1": "Elke trouwdag heeft een eigen naam, meestal die van een materiaal. Na één jaar vier je de katoenen bruiloft, na vijf jaar de houten, en zo verder tot de gouden bruiloft na 50 jaar en de diamanten na 60 jaar. Hoor je dat een stel de koperen bruiloft viert, dan zijn ze dus twaalfenhalf jaar getrouwd.",
+    "p2": "Kijk je naar de lijst, dan zie je meteen een logica: de eerste jaren krijgen materialen die snel slijten, zoals katoen of papier, en hoe langer het huwelijk duurt, hoe steviger of kostbaarder ze worden, tot goud en diamant. Helemaal klopt het niet: na het staal van 11 jaar komen het linnen en het kant.",
+    "p3": "Niet getrouwd? Veel stellen gebruiken de namen toch, gerekend vanaf de dag dat ze samen zijn. En als je liever in dagen denkt dan in jaren, kun je ook <a href=\"/nl/hoe-lang-zijn-we-samen/\">jullie dagen samen tellen</a>: dag 1.000 valt een paar maanden voor de leren bruiloft!"
+  },
+  "section2": {
+    "title": "Alle trouwdagen op een rij, van 1 tot 80 jaar",
+    "p1": "Hier de namen van de trouwdagen, jaar voor jaar. Eén vaste lijst bestaat niet: voor veel jaren zijn er meerdere namen in omloop, en die staan in de laatste kolom. Een paar trouwdagen vallen tussen twee jaren in, zoals de koperen bruiloft na twaalfenhalf jaar.",
+    "p2": "Vetgedrukt staan de trouwdagen die het vaakst gevierd worden, zoals de koperen (12½ jaar), de zilveren (25 jaar) en de gouden bruiloft (50 jaar). De andere zijn vooral handig voor een cadeau-idee, ook al telt <a href=\"/nl/liefdestaal-test/\">hoe de ander zich geliefd voelt</a> meer dan het materiaal van het jaar. En kom je ergens een andere lijst tegen, kijk dan niet op van de verschillen: in de Verenigde Staten is het eerste jaar bijvoorbeeld het papier, niet het katoen."
+  },
+  "section3": {
+    "title": "Hoe vier je jullie trouwdag?",
+    "p1": "De meeste stellen gaan uit van het materiaal van het jaar: een houten fotolijst voor de houten bruiloft, twee kristallen glazen voor de kristallen, een sieraad voor de zilveren. Dat is een goed begin als je geen inspiratie hebt, maar niemand verplicht je eraan vast te houden. Dit werkt meestal goed:",
+    "points": [
+      "<strong>Speel met het materiaal:</strong> een brief of een boek voor de papieren bruiloft, een picknick op een groot kleed voor de katoenen. De knipoog telt meer dan de prijs.",
+      "<strong>Beleef een moment van het begin opnieuw:</strong> het restaurant van jullie eerste date, de plek van het aanzoek, het nummer van de openingsdans.",
+      "<strong>Kijk terug op jullie jaren samen:</strong> waar waren jullie tien jaar geleden, wat was jullie mooiste reis, wat heeft de ander aan jou veranderd... Als spelletje bij het eten ontdekken jullie <a href=\"/nl/hoe-goed-ken-je-je-partner/\">wie de ander door en door kent</a>.",
+      "<strong>Haal voor de grote jubilea iedereen bij elkaar:</strong> een zilveren of gouden bruiloft vier je vaak met familie en vrienden, soms met het hernieuwen van de huwelijksbeloften."
+    ],
+    "p2": "En valt de dag midden in de week, zonder plannen? Een rustig etentje thuis, met de telefoons ver van tafel, is dan al een hele mooie trouwdag."
+  },
+  "section4": {
+    "title": "Waar komen de namen van de trouwdagen vandaan?",
+    "p1": "De zilveren en de gouden bruiloft zijn de oudste namen van de lijst. In de Duitstalige landen wordt 25 jaar huwelijk al sinds de zestiende eeuw met zilver verbonden, en 50 jaar met goud.",
+    "p2": "De namen voor elk jaar kwamen veel later. In de Verenigde Staten bracht een vereniging van juweliers in 1937 bijvoorbeeld een lange lijst met cadeaus uit, één voor elk jubileum.",
+    "p3": "Officieel is er niets aan, en daarom verschillen de lijsten een beetje van boek tot boek, en flink van land tot land. In Frankrijk is het eerste jaar het katoen, net als hier, en het tweede het leer, en in Duitsland heet de bruiloft na twaalfenhalf jaar de Petersilienhochzeit, de peterseliebruiloft."
+  },
+  "faq": {
+    "title": "Jullie vragen over trouwdagen",
+    "q1": "Welke trouwdag vier je na 10 jaar huwelijk?",
+    "a1": "Na tien jaar vier je de tinnen bruiloft. Daarna komen de stalen (11 jaar), de linnen (12 jaar) en na twaalfenhalf jaar de koperen bruiloft, een van de bekendste.",
+    "q2": "Hoe heten 25, 30 en 40 jaar getrouwd?",
+    "a2": "Na 25 jaar is het de zilveren bruiloft, na 30 jaar de parelen en na 40 jaar de robijnen bruiloft. Daartussen ligt na 35 jaar de koralen bruiloft.",
+    "q3": "Wat komt er na de gouden bruiloft?",
+    "a3": "Na 50 jaar de gouden bruiloft, dan de smaragden na 55, de diamanten na 60, de briljanten na 65 en de platina bruiloft na 70 jaar.",
+    "q4": "Kun je trouwdagen vieren zonder getrouwd te zijn?",
+    "a4": "Zeker. Veel stellen tellen vanaf de dag dat ze samen zijn. De tool werkt hetzelfde: vul gewoon de datum in die voor jullie allebei telt.",
+    "q5": "Is de lijst in elk land hetzelfde?",
+    "a5": "Nee. Zilver, goud en diamant zijn bijna overal hetzelfde, maar de andere jaren verschillen. In de Verenigde Staten is het eerste jaar bijvoorbeeld het papier, niet het katoen.",
+    "q6": "Waarom stopt de lijst bij 80 jaar?",
+    "a6": "Omdat bijna geen enkel stel zo ver komt! De lijst eindigt met de eiken bruiloft na 80 jaar, en dan is elk jaar samen al een feest op zich."
+  },
+  "jsonLd": {
+    "name": "Trouwdagen berekenen",
+    "about": "Namen van de trouwdagen van 1 tot 80 jaar en de data van de volgende"
+  }
+}

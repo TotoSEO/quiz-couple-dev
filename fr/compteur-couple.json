@@ -182,36 +182,264 @@
       "nom": "noces de cristal"
     },
     {
+      "an": 16,
+      "nom": "noces de saphir"
+    },
+    {
+      "an": 17,
+      "nom": "noces de rose"
+    },
+    {
+      "an": 18,
+      "nom": "noces de turquoise"
+    },
+    {
+      "an": 19,
+      "nom": "noces de cretonne"
+    },
+    {
       "an": 20,
       "nom": "noces de porcelaine"
+    },
+    {
+      "an": 21,
+      "nom": "noces d'opale"
+    },
+    {
+      "an": 22,
+      "nom": "noces de bronze"
+    },
+    {
+      "an": 23,
+      "nom": "noces de béryl"
+    },
+    {
+      "an": 24,
+      "nom": "noces de satin"
     },
     {
       "an": 25,
       "nom": "noces d'argent"
     },
     {
+      "an": 26,
+      "nom": "noces de jade"
+    },
+    {
+      "an": 27,
+      "nom": "noces d'acajou"
+    },
+    {
+      "an": 28,
+      "nom": "noces de nickel"
+    },
+    {
+      "an": 29,
+      "nom": "noces de velours"
+    },
+    {
       "an": 30,
       "nom": "noces de perle"
+    },
+    {
+      "an": 31,
+      "nom": "noces de basane"
+    },
+    {
+      "an": 32,
+      "nom": "noces de cuivre"
+    },
+    {
+      "an": 33,
+      "nom": "noces de porphyre"
+    },
+    {
+      "an": 34,
+      "nom": "noces d'ambre"
     },
     {
       "an": 35,
       "nom": "noces de rubis"
     },
     {
+      "an": 36,
+      "nom": "noces de mousseline"
+    },
+    {
+      "an": 37,
+      "nom": "noces de papier"
+    },
+    {
+      "an": 38,
+      "nom": "noces de mercure"
+    },
+    {
+      "an": 39,
+      "nom": "noces de crêpe"
+    },
+    {
       "an": 40,
       "nom": "noces d'émeraude"
+    },
+    {
+      "an": 41,
+      "nom": "noces de fer"
+    },
+    {
+      "an": 42,
+      "nom": "noces de nacre"
+    },
+    {
+      "an": 43,
+      "nom": "noces de flanelle"
+    },
+    {
+      "an": 44,
+      "nom": "noces de topaze"
     },
     {
       "an": 45,
       "nom": "noces de vermeil"
     },
     {
+      "an": 46,
+      "nom": "noces de lavande"
+    },
+    {
+      "an": 47,
+      "nom": "noces de cachemire"
+    },
+    {
+      "an": 48,
+      "nom": "noces d'améthyste"
+    },
+    {
+      "an": 49,
+      "nom": "noces de cèdre"
+    },
+    {
       "an": 50,
       "nom": "noces d'or"
     },
     {
+      "an": 51,
+      "nom": "noces de camélia"
+    },
+    {
+      "an": 52,
+      "nom": "noces de tourmaline"
+    },
+    {
+      "an": 53,
+      "nom": "noces de merisier"
+    },
+    {
+      "an": 54,
+      "nom": "noces de zibeline"
+    },
+    {
+      "an": 55,
+      "nom": "noces d'orchidée"
+    },
+    {
+      "an": 56,
+      "nom": "noces de buis"
+    },
+    {
+      "an": 57,
+      "nom": "noces d'azalée"
+    },
+    {
+      "an": 58,
+      "nom": "noces d'érable"
+    },
+    {
+      "an": 59,
+      "nom": "noces d'olivier"
+    },
+    {
       "an": 60,
       "nom": "noces de diamant"
+    },
+    {
+      "an": 61,
+      "nom": "noces de platane"
+    },
+    {
+      "an": 62,
+      "nom": "noces d'ivoire"
+    },
+    {
+      "an": 63,
+      "nom": "noces de lilas"
+    },
+    {
+      "an": 64,
+      "nom": "noces d'astrakan"
+    },
+    {
+      "an": 65,
+      "nom": "noces de palissandre"
+    },
+    {
+      "an": 66,
+      "nom": "noces de jasmin"
+    },
+    {
+      "an": 67,
+      "nom": "noces de chinchilla"
+    },
+    {
+      "an": 68,
+      "nom": "noces de granit"
+    },
+    {
+      "an": 69,
+      "nom": "noces de mélèze"
+    },
+    {
+      "an": 70,
+      "nom": "noces de platine"
+    },
+    {
+      "an": 71,
+      "nom": "noces d'ocre"
+    },
+    {
+      "an": 72,
+      "nom": "noces de titane"
+    },
+    {
+      "an": 73,
+      "nom": "noces de fonte"
+    },
+    {
+      "an": 74,
+      "nom": "noces de sienne"
+    },
+    {
+      "an": 75,
+      "nom": "noces d'albâtre"
+    },
+    {
+      "an": 76,
+      "nom": "noces de zinc"
+    },
+    {
+      "an": 77,
+      "nom": "noces de silice"
+    },
+    {
+      "an": 78,
+      "nom": "noces d'ébène"
+    },
+    {
+      "an": 79,
+      "nom": "noces de bambou"
+    },
+    {
+      "an": 80,
+      "nom": "noces de chêne"
     }
   ],
   "resultat": {
@@ -320,7 +548,7 @@
   },
   "section5": {
     "title": "Les noces : le nom de chaque année ensemble",
-    "p1": "En France, chaque anniversaire porte un nom de matière, du coton de la première année aux noces d'or des cinquante ans. À l'origine, la liste était réservée au mariage, mais les couples s'en servent aujourd'hui pour tous les anniversaires, mariés ou pas. Le compteur affiche le nom qui correspond à votre prochain anniversaire. Voici la liste complète, avec <a href=\"/test-langage-amour-couple/\">une idée de cadeau ou d'attention</a> pour chaque année :",
+    "p1": "En France, <a href=\"/noces-de-mariage/\">chaque anniversaire porte un nom de matière</a>, du coton de la première année aux noces d'or des cinquante ans. À l'origine, la liste était réservée au mariage, mais les couples s'en servent aujourd'hui pour tous les anniversaires, mariés ou pas. Le compteur affiche le nom qui correspond à votre prochain anniversaire. Voici les plus connues, avec <a href=\"/test-langage-amour-couple/\">une idée de cadeau ou d'attention</a> pour chacune :",
     "tableHeaders": [
       "Année",
       "Les noces",

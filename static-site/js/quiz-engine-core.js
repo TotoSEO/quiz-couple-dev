@@ -2367,6 +2367,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'date-naissance', icon: '📅', route: 'testDateNaissance' },
     { type: 'test', key: 'signes-chinois', icon: '🐉', route: 'testSignesChinois' },
     { type: 'test', key: 'compteur-couple', icon: '📆', route: 'compteurCouple' },
+    { type: 'test', key: 'noces-mariage', icon: '💍', route: 'nocesMariage' },
     { type: 'test', key: 'dependance', icon: '⚓', route: 'testDependance' },
     { type: 'test', key: 'jalousie1', icon: '🫣', route: 'testJalousie' },
     { type: 'test', key: 'jalousie2', icon: '🫣', route: 'testJalousie' },

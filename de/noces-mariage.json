@@ -1,0 +1,397 @@
+{
+  "hero": {
+    "badge": "Kostenloses Tool",
+    "title": "Hochzeitstage und ihre Namen: Welchen feiert ihr dieses Jahr?",
+    "highlight": "Hochzeitstage",
+    "description": "Gebt euer Hochzeitsdatum ein, und das Tool zeigt euch, <strong>welchen Hochzeitstag ihr gerade feiert</strong> und wann die nächsten kommen, mit den Tagen, die noch fehlen. Direkt darunter die ganze Liste, von der Papierhochzeit (1 Jahr) bis zur Eichenhochzeit (80 Jahre).",
+    "subtitle": "Ohne Anmeldung. Das Datum bleibt auf eurem Handy, nichts wird verschickt."
+  },
+  "form": {
+    "titre": "Eure Hochzeitstage",
+    "dateTitre": "Der Tag eurer Hochzeit",
+    "dateAide": "Das Datum vom Standesamt, oder das der Feier, wenn ihr das feiert. Nicht verheiratet? Nehmt den Tag, an dem eure Geschichte angefangen hat: Viele Paare zählen ihre Jahrestage so.",
+    "jour": "Tag",
+    "moisLabel": "Monat",
+    "annee": "Jahr",
+    "mois": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "moisDate": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "joursSemaine": [
+      "Sonntag",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag"
+    ],
+    "dateAffichee": "{{j}}. {{mois}} {{a}}",
+    "dateAvecJour": "{{js}}, {{date}}",
+    "lancer": "Unsere Hochzeitstage zeigen",
+    "aide": "Das Datum wird in diesem Browser gespeichert: Wenn ihr wiederkommt, erscheinen eure Hochzeitstage von allein.",
+    "erreurVide": "Wählt Tag, Monat und Jahr eurer Hochzeit.",
+    "erreur": "Dieses Datum gibt es nicht. Prüft Tag und Monat."
+  },
+  "unites": {
+    "jour": [
+      "Tag",
+      "Tage"
+    ],
+    "mois": [
+      "Monat",
+      "Monate"
+    ],
+    "an": [
+      "Jahr",
+      "Jahre"
+    ]
+  },
+  "et": " und ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "heute",
+    "demain": "morgen",
+    "dans": "in {{n}} Tagen",
+    "ilya": "vor {{n}} Tagen"
+  },
+  "resultat": {
+    "depuis": "Verheiratet seit dem {{date}}",
+    "duree": "{{duree}} verheiratet",
+    "jourJ": "Heute ist der große Tag: Herzlichen Glückwunsch!",
+    "avant": "Hochzeit {{dans}}, am {{date}}",
+    "actuelleTitre": "Zuletzt erreicht",
+    "actuelleDetail": "Am {{date}}, wart ihr {{ans}} verheiratet.",
+    "aujourdhuiTitre": "Heute ist es so weit!",
+    "aujourdhuiDetail": "Heute, am {{date}}, seid ihr {{ans}} verheiratet. Alles Gute zum Hochzeitstag!",
+    "premiereTitre": "Euer erster Hochzeitstag",
+    "premiereDetail": "Am {{date}}, {{dans}}: Dann seid ihr {{ans}} verheiratet.",
+    "ook": "Regional auch: {{ook}}",
+    "titreSuivantes": "Eure nächsten Hochzeitstage",
+    "finListe": "Ihr habt die Eichenhochzeit hinter euch, die letzte auf der Liste, nach 80 Jahren Ehe. Hut ab!",
+    "lienBouton": "Link zu unseren Hochzeitstagen kopieren",
+    "lienCopie": "Link kopiert! Er enthält euer Hochzeitsdatum.",
+    "modifier": "Datum ändern",
+    "avis": "Bewertung abgeben"
+  },
+  "suite": {
+    "titre": "Und wie viele Tage sind das?",
+    "texte": "Hochzeitstage gibt es nur einmal im Jahr. Der Beziehungsdauer-Zähler zählt eure gemeinsamen Tage und gibt euch andere Daten zum Feiern: runde Monate, 1.000 Tage, 10.000 Stunden...",
+    "bouton": "Unsere gemeinsamen Tage zählen"
+  },
+  "table": {
+    "annees": "Ehejahre",
+    "noces": "Name",
+    "ook": "Regional auch"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "Papierhochzeit",
+      "ook": "Baumwollene Hochzeit"
+    },
+    {
+      "an": 2,
+      "nom": "Baumwollhochzeit",
+      "ook": "Lederne Hochzeit, Papierene Hochzeit"
+    },
+    {
+      "an": 3,
+      "nom": "Lederhochzeit",
+      "ook": "Weizenhochzeit, Tannenhochzeit, Freundschaftshochzeit"
+    },
+    {
+      "an": 4,
+      "nom": "Seidenhochzeit",
+      "ook": "Bernsteinhochzeit"
+    },
+    {
+      "an": 5,
+      "nom": "Holzhochzeit",
+      "ook": "Fleißhochzeit, Veilchenhochzeit"
+    },
+    {
+      "an": 6,
+      "nom": "Zuckerhochzeit",
+      "ook": "Eiserne Hochzeit, Zinnerne Hochzeit"
+    },
+    {
+      "an": 6.25,
+      "nom": "Hammelhochzeit",
+      "ook": "Zinnerne Hochzeit"
+    },
+    {
+      "an": 6.5,
+      "nom": "Zinnerne Hochzeit",
+      "ook": "Zinnhochzeit"
+    },
+    {
+      "an": 7,
+      "nom": "Kupferhochzeit",
+      "ook": "Wollene Hochzeit, Messinghochzeit"
+    },
+    {
+      "an": 8,
+      "nom": "Blechhochzeit",
+      "ook": "Bronzene Hochzeit, Salzhochzeit, Klatschmohnhochzeit"
+    },
+    {
+      "an": 9,
+      "nom": "Keramikhochzeit",
+      "ook": "Gläserne Hochzeit, Wasserhochzeit"
+    },
+    {
+      "an": 10,
+      "nom": "Rosenhochzeit",
+      "ook": "Hölzerne Hochzeit"
+    },
+    {
+      "an": 11,
+      "nom": "Stählerne Hochzeit",
+      "ook": "Korallenhochzeit, Fastnachtshochzeit"
+    },
+    {
+      "an": 12,
+      "nom": "Nickelhochzeit"
+    },
+    {
+      "an": 12.5,
+      "nom": "Petersilienhochzeit"
+    },
+    {
+      "an": 13,
+      "nom": "Veilchenhochzeit",
+      "ook": "Maiglöckchenhochzeit, Spitzenhochzeit"
+    },
+    {
+      "an": 14,
+      "nom": "Elfenbeinhochzeit",
+      "ook": "Achathochzeit, Blaue Hochzeit"
+    },
+    {
+      "an": 15,
+      "nom": "Kristallhochzeit",
+      "ook": "Gläserne Hochzeit, Lumpenhochzeit"
+    },
+    {
+      "an": 16,
+      "nom": "Saphirhochzeit"
+    },
+    {
+      "an": 19,
+      "nom": "Perlmutterhochzeit",
+      "ook": "Cretonnehochzeit"
+    },
+    {
+      "an": 20,
+      "nom": "Porzellanhochzeit",
+      "ook": "Dornenhochzeit, Chrysanthemenhochzeit"
+    },
+    {
+      "an": 25,
+      "nom": "Silberne Hochzeit",
+      "ook": "Silberhochzeit",
+      "phare": true
+    },
+    {
+      "an": 26,
+      "nom": "Jadehochzeit",
+      "ook": "Eichenhochzeit"
+    },
+    {
+      "an": 27,
+      "nom": "Jutehochzeit"
+    },
+    {
+      "an": 29,
+      "nom": "Samthochzeit"
+    },
+    {
+      "an": 30,
+      "nom": "Perlenhochzeit",
+      "ook": "Landsknechthochzeit"
+    },
+    {
+      "an": 31,
+      "nom": "Lindenhochzeit",
+      "ook": "Basanehochzeit"
+    },
+    {
+      "an": 33,
+      "nom": "Zinnhochzeit"
+    },
+    {
+      "an": 33.3333,
+      "nom": "Knoblauchhochzeit"
+    },
+    {
+      "an": 34,
+      "nom": "Bernsteinhochzeit"
+    },
+    {
+      "an": 35,
+      "nom": "Leinenhochzeit",
+      "ook": "Korallenhochzeit"
+    },
+    {
+      "an": 37.5,
+      "nom": "Aluminiumhochzeit"
+    },
+    {
+      "an": 39,
+      "nom": "Sonnenhochzeit",
+      "ook": "Krepphochzeit"
+    },
+    {
+      "an": 40,
+      "nom": "Rubinhochzeit",
+      "ook": "Granathochzeit, Smaragdhochzeit"
+    },
+    {
+      "an": 41,
+      "nom": "Birkenhochzeit"
+    },
+    {
+      "an": 44,
+      "nom": "Sternenhochzeit"
+    },
+    {
+      "an": 45,
+      "nom": "Messinghochzeit"
+    },
+    {
+      "an": 50,
+      "nom": "Goldene Hochzeit",
+      "phare": true
+    },
+    {
+      "an": 51,
+      "nom": "Weidenhochzeit"
+    },
+    {
+      "an": 55,
+      "nom": "Platinhochzeit",
+      "ook": "Juwelenhochzeit"
+    },
+    {
+      "an": 56,
+      "nom": "Asternhochzeit"
+    },
+    {
+      "an": 57,
+      "nom": "Jadehochzeit"
+    },
+    {
+      "an": 58,
+      "nom": "Engelshochzeit"
+    },
+    {
+      "an": 59,
+      "nom": "Gezeitenhochzeit"
+    },
+    {
+      "an": 60,
+      "nom": "Diamantene Hochzeit",
+      "phare": true
+    },
+    {
+      "an": 65,
+      "nom": "Eiserne Hochzeit",
+      "phare": true
+    },
+    {
+      "an": 67.5,
+      "nom": "Steinerne Hochzeit"
+    },
+    {
+      "an": 70,
+      "nom": "Gnadenhochzeit",
+      "ook": "Eiserne Hochzeit",
+      "phare": true
+    },
+    {
+      "an": 72.5,
+      "nom": "Juwelenhochzeit"
+    },
+    {
+      "an": 75,
+      "nom": "Kronjuwelenhochzeit",
+      "ook": "Alabasterhochzeit, Diamantene Hochzeit"
+    },
+    {
+      "an": 80,
+      "nom": "Eichenhochzeit"
+    }
+  ],
+  "section1": {
+    "title": "Was bedeuten die Namen der Hochzeitstage?",
+    "p1": "Jeder Hochzeitstag hat einen eigenen Namen, meistens nach einem Material. Nach einem Jahr feiert man die Papierhochzeit, nach fünf die Holzhochzeit, und so weiter bis zur Goldenen Hochzeit nach 50 Jahren und zur Diamantenen nach 60. Hört man also, dass ein Paar Rosenhochzeit feiert, heißt das: Die beiden sind seit 10 Jahren verheiratet.",
+    "p2": "Schaut man sich die Liste an, sieht man schnell eine Logik: Am Anfang stehen Materialien, die schnell kaputtgehen, wie Papier oder Baumwolle, und je länger die Ehe hält, desto fester oder wertvoller werden sie, bis zu Gold und Diamant. Ganz geht die Rechnung allerdings nicht auf: Die Blechhochzeit kommt nach acht Jahren, erst nach der Kupferhochzeit.",
+    "p3": "Nicht verheiratet? Viele Paare feiern die Namen trotzdem, gezählt ab dem Tag, an dem sie zusammengekommen sind. Und wenn ihr lieber in Tagen als in Jahren rechnet, könnt ihr auch <a href=\"/de/beziehungszaehler/\">eure gemeinsamen Tage zählen</a>: Der 1.000. Tag kommt ein paar Monate vor der Lederhochzeit!"
+  },
+  "section2": {
+    "title": "Alle Hochzeitstage von 1 bis 80 Jahren",
+    "p1": "Hier die Namen der Hochzeitstage, wie man sie in Deutschland und Österreich findet. Eine einheitliche Liste gibt es nicht: Je nach Region hat dasselbe Jahr mehrere Namen, die bekanntesten davon stehen in der letzten Spalte. Und ein paar Hochzeitstage fallen zwischen zwei Jahre, wie die Petersilienhochzeit nach zwölfeinhalb Jahren.",
+    "p2": "Gefeiert werden vor allem die Silberne (25 Jahre), die Goldene (50 Jahre) und die Diamantene Hochzeit (60 Jahre), dazu die Eiserne nach 65 und die Gnadenhochzeit nach 70 Jahren, in der Tabelle fett gedruckt. Die anderen sind eher eine gute Quelle für Geschenkideen, auch wenn <a href=\"/de/liebessprache-test-paar/\">wie sich der andere geliebt fühlt</a> mehr zählt als das Material des Jahres. Und wenn ihr woanders eine andere Liste findet, wundert euch nicht über die Unterschiede: In Frankreich zum Beispiel steht das erste Jahr für Baumwolle, nicht für Papier."
+  },
+  "section3": {
+    "title": "Ideen, um euren Hochzeitstag zu feiern",
+    "p1": "Die meisten Paare gehen vom Material des Jahres aus: ein Bilderrahmen aus Holz zur Holzhochzeit, Rosen zur Rosenhochzeit, ein Schmuckstück zur Silbernen. Das ist ein guter Anfang, wenn einem nichts einfällt, aber niemand muss sich daran halten. Das hier klappt meistens gut:",
+    "points": [
+      "<strong>Mit dem Material spielen:</strong> zur Papierhochzeit ein Brief oder ein Buch, zur Baumwollhochzeit ein Picknick auf einer großen Decke. Das Augenzwinkern zählt mehr als der Preis.",
+      "<strong>Einen Moment vom Anfang wiederholen:</strong> das Restaurant vom ersten Date, den Ort des Antrags, das Lied vom ersten Tanz.",
+      "<strong>Auf eure Jahre zurückschauen:</strong> wo wart ihr vor zehn Jahren, was war eure schönste Reise, was hat der andere an euch verändert... Als Spiel beim Abendessen findet ihr heraus, <a href=\"/de/wer-kennt-partner-besser-quiz/\">wer den anderen in- und auswendig kennt</a>.",
+      "<strong>Für die großen Jubiläen alle zusammenholen:</strong> Silberne und Goldene Hochzeit feiert man oft mit Familie und Freunden, manchmal mit einer Erneuerung des Eheversprechens."
+    ],
+    "p2": "Und wenn der Tag mitten in die Woche fällt und nichts geplant ist: Ein ruhiges Abendessen zu Hause, die Handys weit weg vom Tisch, ist schon ein sehr schöner Hochzeitstag."
+  },
+  "section4": {
+    "title": "Woher kommen die Namen der Hochzeitstage?",
+    "p1": "Die drei ältesten und bekanntesten Namen sind die Silberne, die Goldene und die Diamantene Hochzeit. Die Goldene Hochzeit ist schon um 1600 belegt.",
+    "p2": "Die halben Jahre kamen im 19. Jahrhundert dazu, durch Halbieren: Aus 25 Jahren wurden zwölfeinhalb, die Petersilienhochzeit, daraus sechseinviertel, und dazu kamen siebenunddreißigeinhalb Jahre, die Aluminiumhochzeit.",
+    "p3": "Offiziell ist davon nichts, und je nach Region heißen die Jahre anders. Die Gesellschaft für deutsche Sprache merkt sogar an, dass bei vielen Namen die Geschäftsinteressen des Blumen- und Schmuckhandels nicht zu übersehen sind. In Frankreich ist das erste Jahr übrigens die Baumwolle und das zweite das Leder, und in den USA ist es, wie bei uns, das Papier."
+  },
+  "faq": {
+    "title": "Eure Fragen zu den Hochzeitstagen",
+    "q1": "Welcher Hochzeitstag ist nach 10 Jahren?",
+    "a1": "Die Rosenhochzeit, regional auch Hölzerne Hochzeit genannt. Danach kommen die Stählerne Hochzeit (11 Jahre), die Nickelhochzeit (12 Jahre) und nach zwölfeinhalb Jahren die Petersilienhochzeit.",
+    "q2": "Wie heißen der 25., der 30. und der 40. Hochzeitstag?",
+    "a2": "Nach 25 Jahren feiert man die Silberne Hochzeit, nach 30 die Perlenhochzeit und nach 40 die Rubinhochzeit. Dazwischen liegt nach 35 Jahren die Leinenhochzeit.",
+    "q3": "Was kommt nach der Goldenen Hochzeit?",
+    "a3": "Nach 50 Jahren die Goldene Hochzeit, dann die Platinhochzeit nach 55, die Diamantene nach 60, die Eiserne nach 65 und die Gnadenhochzeit nach 70 Jahren.",
+    "q4": "Kann man Hochzeitstage feiern, ohne verheiratet zu sein?",
+    "a4": "Klar. Viele Paare zählen ab dem Tag, an dem sie zusammengekommen sind. Das Tool funktioniert genauso: Gebt einfach das Datum ein, das für euch beide zählt.",
+    "q5": "Ist die Liste in jedem Land gleich?",
+    "a5": "Nein. Silber, Gold und Diamant sind fast überall gleich, aber die anderen Jahre ändern sich. In den USA zum Beispiel steht der zehnte Hochzeitstag für Zinn, nicht für Rosen.",
+    "q6": "Warum endet die Liste bei 80 Jahren?",
+    "a6": "Weil kaum ein Paar so weit kommt! Nach der Eichenhochzeit gibt es noch ein paar Namen, bis zur Himmelshochzeit nach 100 Jahren, aber dann ist jedes gemeinsame Jahr schon ein Fest für sich."
+  },
+  "jsonLd": {
+    "name": "Hochzeitstage-Rechner",
+    "about": "Namen der Hochzeitstage von 1 bis 80 Jahren und Daten der nächsten Hochzeitstage"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "hero": {
+    "badge": "Strumento gratuito",
+    "title": "Anniversari di matrimonio: che nozze festeggiate quest'anno?",
+    "highlight": "Anniversari di matrimonio",
+    "description": "Inserite la data del vostro matrimonio e lo strumento vi dice <strong>che nozze festeggiate adesso</strong> e quando arrivano le prossime, con i giorni che mancano. Subito sotto, la lista completa, dalle nozze di carta (1 anno) a quelle di quercia (80 anni).",
+    "subtitle": "Nessuna registrazione. La data resta sul vostro telefono, non viene inviato niente."
+  },
+  "form": {
+    "titre": "Le vostre nozze",
+    "dateTitre": "Il giorno del vostro matrimonio",
+    "dateAide": "La data del comune o quella della cerimonia, se è quella che festeggiate. Non siete sposati? Mettete il giorno in cui è cominciata la vostra storia: molte coppie contano così i loro anniversari.",
+    "jour": "Giorno",
+    "moisLabel": "Mese",
+    "annee": "Anno",
+    "mois": [
+      "Gennaio",
+      "Febbraio",
+      "Marzo",
+      "Aprile",
+      "Maggio",
+      "Giugno",
+      "Luglio",
+      "Agosto",
+      "Settembre",
+      "Ottobre",
+      "Novembre",
+      "Dicembre"
+    ],
+    "moisDate": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ],
+    "joursSemaine": [
+      "domenica",
+      "lunedì",
+      "martedì",
+      "mercoledì",
+      "giovedì",
+      "venerdì",
+      "sabato"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "dateAvecJour": "{{js}} {{date}}",
+    "lancer": "Vedere le nostre nozze",
+    "aide": "La data resta salvata in questo browser: tornando sulla pagina, le vostre nozze compaiono da sole.",
+    "erreurVide": "Scegliete il giorno, il mese e l'anno del vostro matrimonio.",
+    "erreur": "Questa data non esiste. Controllate il giorno e il mese."
+  },
+  "unites": {
+    "jour": [
+      "giorno",
+      "giorni"
+    ],
+    "mois": [
+      "mese",
+      "mesi"
+    ],
+    "an": [
+      "anno",
+      "anni"
+    ]
+  },
+  "et": " e ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "oggi",
+    "demain": "domani",
+    "dans": "tra {{n}} giorni",
+    "ilya": "{{n}} giorni fa"
+  },
+  "resultat": {
+    "depuis": "Il vostro matrimonio: {{date}}",
+    "duree": "{{duree}} di matrimonio",
+    "jourJ": "È il grande giorno: congratulazioni!",
+    "avant": "Matrimonio {{dans}}, {{date}}",
+    "actuelleTitre": "Le vostre ultime nozze",
+    "actuelleDetail": "Raggiunte {{date}}, a {{ans}} di matrimonio.",
+    "aujourdhuiTitre": "È oggi!",
+    "aujourdhuiDetail": "{{ans}} di matrimonio oggi, {{date}}. Buon anniversario!",
+    "premiereTitre": "Le vostre prime nozze",
+    "premiereDetail": "A {{ans}} di matrimonio, {{date}}, {{dans}}.",
+    "ook": "Dette anche {{ook}}",
+    "anglo": "In Italia questo anniversario non ha un nome tradizionale: è quello della tradizione anglosassone.",
+    "titreSuivantes": "Le vostre prossime nozze",
+    "finListe": "Avete superato le nozze di quercia, le ultime della lista, a 80 anni di matrimonio. Complimenti!",
+    "lienBouton": "Copia il link delle nostre nozze",
+    "lienCopie": "Link copiato! Contiene la data del vostro matrimonio.",
+    "modifier": "Cambia la data",
+    "avis": "Lascia una recensione"
+  },
+  "suite": {
+    "titre": "E in giorni, quanto fa?",
+    "texte": "Le nozze arrivano una volta l'anno. Il contatore della durata di coppia conta i vostri giorni insieme e vi dà altre date da festeggiare: i mesi tondi, i 1.000 giorni, le 10.000 ore...",
+    "bouton": "Contare i nostri giorni insieme"
+  },
+  "table": {
+    "annees": "Anni di matrimonio",
+    "noces": "Le nozze",
+    "ook": "Dette anche",
+    "angloTitre": "Nome della tradizione anglosassone"
+  },
+  "liste": [
+    {
+      "an": 1,
+      "nom": "nozze di carta"
+    },
+    {
+      "an": 2,
+      "nom": "nozze di cotone",
+      "anglo": true
+    },
+    {
+      "an": 3,
+      "nom": "nozze di cuoio",
+      "anglo": true
+    },
+    {
+      "an": 4,
+      "nom": "nozze di lino",
+      "anglo": true
+    },
+    {
+      "an": 5,
+      "nom": "nozze di legno"
+    },
+    {
+      "an": 6,
+      "nom": "nozze di ferro",
+      "anglo": true
+    },
+    {
+      "an": 7,
+      "nom": "nozze di lana",
+      "anglo": true
+    },
+    {
+      "an": 8,
+      "nom": "nozze di bronzo",
+      "anglo": true
+    },
+    {
+      "an": 9,
+      "nom": "nozze di ceramica",
+      "anglo": true
+    },
+    {
+      "an": 10,
+      "nom": "nozze di alluminio",
+      "ook": "nozze di stagno"
+    },
+    {
+      "an": 11,
+      "nom": "nozze di acciaio",
+      "anglo": true
+    },
+    {
+      "an": 12,
+      "nom": "nozze di seta",
+      "anglo": true
+    },
+    {
+      "an": 13,
+      "nom": "nozze di pizzo",
+      "anglo": true
+    },
+    {
+      "an": 14,
+      "nom": "nozze di avorio",
+      "anglo": true
+    },
+    {
+      "an": 15,
+      "nom": "nozze di cristallo"
+    },
+    {
+      "an": 20,
+      "nom": "nozze di porcellana"
+    },
+    {
+      "an": 25,
+      "nom": "nozze d'argento",
+      "phare": true
+    },
+    {
+      "an": 30,
+      "nom": "nozze di perla"
+    },
+    {
+      "an": 35,
+      "nom": "nozze di corallo"
+    },
+    {
+      "an": 40,
+      "nom": "nozze di rubino"
+    },
+    {
+      "an": 45,
+      "nom": "nozze di zaffiro",
+      "anglo": true
+    },
+    {
+      "an": 50,
+      "nom": "nozze d'oro",
+      "phare": true
+    },
+    {
+      "an": 55,
+      "nom": "nozze di smeraldo",
+      "anglo": true
+    },
+    {
+      "an": 60,
+      "nom": "nozze di diamante",
+      "phare": true
+    },
+    {
+      "an": 65,
+      "nom": "nozze di zaffiro blu",
+      "anglo": true
+    },
+    {
+      "an": 70,
+      "nom": "nozze di platino",
+      "anglo": true
+    },
+    {
+      "an": 80,
+      "nom": "nozze di quercia",
+      "anglo": true
+    }
+  ],
+  "section1": {
+    "title": "Cosa sono le nozze di carta, d'argento o d'oro?",
+    "p1": "Ogni anniversario di matrimonio può avere un nome, quasi sempre quello di un materiale. Dopo un anno si festeggiano le nozze di carta, dopo cinque quelle di legno, e così via fino alle nozze d'oro dei 50 anni e a quelle di diamante dei 60. Quando si dice che una coppia festeggia le nozze di porcellana, vuol dire che è sposata da 20 anni.",
+    "p2": "Guardando la lista si vede subito una logica: i primi anni hanno materiali che si consumano, come la carta o il legno, e più il matrimonio dura, più diventano solidi o preziosi, fino all'oro e al diamante. In Italia però la tradizione dà un nome solo ad alcuni anniversari: 1, 5, 10, 15 e 20 anni, poi uno ogni cinque fino a 40, e infine i 50 e i 60 anni.",
+    "p3": "Non siete sposati? Molte coppie usano comunque questi nomi, contando dal giorno in cui si sono messe insieme. E se preferite ragionare in giorni invece che in anni, potete anche <a href=\"/it/contatore-di-coppia/\">contare i vostri giorni insieme</a>: il millesimo giorno arriva qualche mese prima del terzo anniversario!"
+  },
+  "section2": {
+    "title": "Gli anniversari di matrimonio anno per anno",
+    "p1": "Ecco la lista delle nozze, anno per anno. Gli anniversari con un nome tradizionale italiano sono undici: per gli altri anni non c'è una tradizione italiana, e abbiamo messo i nomi della tradizione anglosassone, segnati con un asterisco.",
+    "p2": "Le nozze che si festeggiano di più sono quelle d'argento (25 anni), d'oro (50 anni) e di diamante (60 anni), in grassetto nella tabella. Le altre servono soprattutto a trovare un'idea regalo, anche se <a href=\"/it/test-linguaggio-amore-coppia/\">come l'altro si sente amato</a> conta più del materiale dell'anno. E se trovate un'altra lista altrove, non stupitevi delle differenze: in Francia, per esempio, il primo anno è quello del cotone, non della carta."
+  },
+  "section3": {
+    "title": "Come festeggiare l'anniversario di matrimonio",
+    "p1": "La maggior parte delle coppie parte dal materiale dell'anno: una cornice di legno per le nozze di legno, due bicchieri di cristallo per i 15 anni, un gioiello per le nozze d'argento. È un buon punto di partenza quando mancano le idee, ma niente obbliga a seguirlo. Ecco cosa funziona di solito:",
+    "points": [
+      "<strong>Giocare con il materiale:</strong> una lettera o un libro per le nozze di carta, un servizio da tè e un pomeriggio per inaugurarlo per quelle di porcellana. È il pensiero che conta, non il prezzo.",
+      "<strong>Rifare un momento dei vostri inizi:</strong> il ristorante del primo appuntamento, il posto della proposta, la canzone del primo ballo.",
+      "<strong>Ripercorrere i vostri anni insieme:</strong> dove eravate dieci anni fa, qual è stato il vostro viaggio più bello, cosa ha cambiato l'altro in voi... Per farne un gioco a cena, scoprite <a href=\"/it/quiz-chi-conosce-meglio-partner/\">chi dei due sa tutto dell'altro</a>.",
+      "<strong>Per le nozze più importanti, riunire i vostri cari:</strong> le nozze d'argento e d'oro si festeggiano spesso con la famiglia e gli amici, a volte rinnovando le promesse."
+    ],
+    "p2": "E se la data cade in un giorno feriale senza niente in programma, una cena tranquilla a casa con i telefoni lontani dalla tavola è già un ottimo modo per festeggiare."
+  },
+  "section4": {
+    "title": "Da dove vengono i nomi degli anniversari?",
+    "p1": "Festeggiare le nozze d'argento e d'oro è un'usanza antica. Nei paesi di lingua tedesca, legare i 25 anni di matrimonio all'argento e i 50 all'oro è documentato dal Cinquecento, e la tradizione vuole che agli sposi si regalasse allora una corona d'argento o d'oro.",
+    "p2": "Il nome di ogni anno è arrivato molto dopo, ed è soprattutto una tradizione anglosassone. Negli Stati Uniti, per esempio, nel 1937 un'associazione di gioiellieri ha pubblicato una lista completa di regali, uno per ogni anniversario.",
+    "p3": "Niente di tutto questo è ufficiale, ed è per questo che le liste cambiano un po' da un libro all'altro, e parecchio da un paese all'altro. In Francia il primo anno è quello del cotone e il secondo quello del cuoio, e in Germania e nei Paesi Bassi si festeggiano persino le nozze dei dodici anni e mezzo."
+  },
+  "faq": {
+    "title": "Le vostre domande sugli anniversari di matrimonio",
+    "q1": "Che nozze sono i 10 anni di matrimonio?",
+    "a1": "Le nozze di alluminio, dette anche di stagno. Dopo vengono, nella tradizione anglosassone, le nozze di acciaio (11 anni), di seta (12 anni) e di pizzo (13 anni).",
+    "q2": "Che nozze sono i 25, i 30 e i 40 anni?",
+    "a2": "I 25 anni sono le nozze d'argento, i 30 le nozze di perla e i 40 le nozze di rubino. In mezzo, i 35 anni sono le nozze di corallo.",
+    "q3": "Che nozze sono i 50 anni di matrimonio?",
+    "a3": "Le nozze d'oro. Insieme a quelle d'argento, sono le più antiche della lista. Dieci anni dopo, ai 60 anni, arrivano le nozze di diamante.",
+    "q4": "Si possono festeggiare le nozze senza essere sposati?",
+    "a4": "Certo. Molte coppie le contano dal giorno in cui si sono messe insieme. Lo strumento funziona allo stesso modo: mettete la data che conta per voi due.",
+    "q5": "La lista è la stessa in tutti i paesi?",
+    "a5": "No. Argento, oro e diamante sono quasi uguali dappertutto, ma gli altri anni cambiano. Negli Stati Uniti, per esempio, il primo anniversario è quello della carta, come in Italia, mentre in Francia è quello del cotone.",
+    "q6": "Perché la lista si ferma a 80 anni?",
+    "a6": "Perché pochissime coppie ci arrivano! La lista finisce con le nozze di quercia, a 80 anni, e a quel punto ogni anno insieme è già una festa."
+  },
+  "jsonLd": {
+    "name": "Calcolatore degli anniversari di matrimonio",
+    "about": "Nomi delle nozze anno per anno e date dei prossimi anniversari di matrimonio"
+  }
+}
