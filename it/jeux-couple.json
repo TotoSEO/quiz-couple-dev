@@ -1,13 +1,13 @@
 {
   "hero": {
-    "badge": "14 giochi • Gratis • Senza registrazione",
+    "badge": "15 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Quattordici giochi: tredici che partono su un solo telefono fra voi due, e uno per più coppie, ognuno sul proprio. Senza account e senza installare nulla."
+    "description": "Quindici giochi: quattordici che partono su un solo telefono fra voi due, e uno per più coppie, ognuno sul proprio. Senza account e senza installare nulla."
   },
   "stats": {
-    "jeux": "14",
-    "jeuxLabel": "giochi in due",
+    "jeux": "15",
+    "jeuxLabel": "giochi di coppia",
     "cartes": "520",
     "cartesLabel": "carte, penitenze e dilemmi",
     "compte": "0",
@@ -25,6 +25,11 @@
     "tuPreferesJoueurs": "2 giocatori",
     "tuPreferesDuree": "10 min",
     "tuPreferesContenu": "100 dilemmi",
+    "rapidesNom": "Domande veloci",
+    "rapidesTagline": "3, 2, 1, via! La risposta più veloce si prende il punto",
+    "rapidesContenu": "75 domande da giocare in 10, 20 o 30",
+    "rapidesDuree": "5-15 min",
+    "rapidesJoueurs": "2 giocatori",
     "actionVeriteNom": "Obbligo o verità",
     "actionVeriteTagline": "Cade una carta, verità o obbligo, e non sapete mai quale delle due arriva.",
     "actionVeriteJoueurs": "2 giocatori",
@@ -96,12 +101,12 @@
     "title": "Che cosa cambia un gioco in due in una serata",
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
-    "p3": "I quattordici giochi di questa pagina si giocano online, gratis, su un solo telefono, tranne il gioco da serata, dove ogni coppia gioca sul proprio. Niente da creare, niente da installare, niente da preparare.",
+    "p3": "I quindici giochi di questa pagina si giocano online, gratis, su un solo telefono, tranne il gioco da serata, dove ogni coppia gioca sul proprio. Niente da creare, niente da installare, niente da preparare.",
     "p4": "E a seconda della stagione, <a href=\"/it/quiz-speciali-per-coppie/\">i quiz che cambiano con il calendario</a> aggiungono qualche serata a parte: per Halloween, chi di voi due <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">muore per primo in un film horror</a> oppure <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">quale duo di supercattivi formate</a>.",
     "plus": [
       {
         "titre": "Giochi di coppia senza materiale, basta un telefono",
-        "texte": "<p>Niente carte da comprare, niente tabellone da tirare fuori: a parte il gioco da serata, tutto sta in un solo telefono, e quasi tutti i giochi si fanno ad alta voce. Così funzionano dove non avete niente a portata di mano: in auto, in treno, in fila o al ristorante. Uno legge, l'altro risponde, e vi passate il telefono.</p><p>In auto, scegliete quelli che si giocano senza guardare lo schermo, come scegliere tra due opzioni o dire chi dei due fa cosa: chi siede accanto legge, chi guida risponde, e nessuno toglie gli occhi dalla strada!</p>"
+        "texte": "<p>Niente carte da comprare, niente tabellone da tirare fuori: a parte il gioco da serata, tutto sta in un solo telefono, e quasi tutti i giochi si fanno ad alta voce. Così funzionano dove non avete niente a portata di mano: in auto, in treno, in fila o al ristorante. Uno legge, l'altro risponde, e vi passate il telefono.</p><p>In auto, scegliete quelli che si giocano senza guardare lo schermo, come scegliere tra due opzioni, dire chi dei due fa cosa o <a href=\"/it/domande-veloci-di-coppia/\">vedere chi risponde più in fretta</a>: chi siede accanto legge, chi guida risponde, e nessuno toglie gli occhi dalla strada!</p>"
       }
     ]
   },
@@ -138,7 +143,9 @@
     "row13Moment": "Una serata tra amici, o in due sul divano",
     "row13Pourquoi": "Ogni carta descrive una persona perfetta con un difetto, e ognuno dà il suo nuovo voto da 0 a 10. Si ride delle piccole manie e, già che ci siete, scoprite cosa è inaccettabile per l'altro.",
     "row14Moment": "Una serata con più coppie",
-    "row14Pourquoi": "L'unico gioco della pagina che si fa in più coppie, ognuno sul proprio telefono: un maestro di gioco forma le coppie, ognuno indovina le risposte dell'altro, e nelle manche speciali si vota la coppia più festaiola o quella sempre in ritardo."
+    "row14Pourquoi": "L'unico gioco della pagina che si fa in più coppie, ognuno sul proprio telefono: un maestro di gioco forma le coppie, ognuno indovina le risposte dell'altro, e nelle manche speciali si vota la coppia più festaiola o quella sempre in ritardo.",
+    "row15Moment": "Un aperitivo in due, quando avete voglia di punzecchiarvi",
+    "row15Pourquoi": "Un conto alla rovescia e vince chi risponde per primo: dov'è stato il vostro primo appuntamento, il piatto preferito della tua dolce metà, tre delle sue fissazioni... Tornano i ricordi e si ride!"
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",
@@ -155,7 +162,7 @@
   "faq": {
     "title": "Domande frequenti",
     "q1": "Questi giochi di coppia sono davvero gratis?",
-    "a1": "Sì, tutti e quattordici, dal primo all'ultimo. Nessun account da creare, nessuna versione a pagamento, nessun contenuto sbloccato dopo un pagamento. Aprite la pagina del gioco e giocate.",
+    "a1": "Sì, tutti e quindici, dal primo all'ultimo. Nessun account da creare, nessuna versione a pagamento, nessun contenuto sbloccato dopo un pagamento. Aprite la pagina del gioco e giocate.",
     "q2": "Bisogna scaricare un'applicazione?",
     "a2": "No. Tutto si gioca direttamente nel browser, su telefono come su computer. È anche ciò che permette di avviare una partita in dieci secondi, proprio quando viene voglia.",
     "q3": "Qual è il gioco migliore da fare in coppia a casa?",

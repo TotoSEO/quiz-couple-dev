@@ -251,10 +251,10 @@
     "metaDescription": "Zielsverwant test: 20 vragen, een index en een uitslag die je niet naar de mond praat. Alleen over iemand, samen of als single. Gratis, zonder account."
   },
   "jeuxCouple": {
-    "title": "Spelletjes voor koppels: 13 gratis spellen voor twee",
+    "title": "Spelletjes voor koppels: 14 gratis spellen voor twee",
     "shortTitle": "Spelletjes voor koppels",
-    "description": "Dertien spellen voor twee: hij is een 10 maar, maak de zin af, ja of nee, voor of tegen, wie zou eerder, ik heb nog nooit, wie van ons twee, zou je liever, de dilemma's, waarheid of durven en de 18+-versie, het rad met opdrachten en het bordspel.",
-    "metaDescription": "13 gratis spelletjes voor koppels op één telefoon: ja of nee, voor of tegen, wie van ons twee, zou je liever, waarheid of durven en meer. Zonder account."
+    "description": "Veertien spellen voor twee: snelle vragen, hij is een 10 maar, maak de zin af, ja of nee, voor of tegen, wie zou eerder, ik heb nog nooit, wie van ons twee, zou je liever, de dilemma's, waarheid of durven en de 18+-versie, het rad met opdrachten en het bordspel.",
+    "metaDescription": "14 gratis spelletjes voor koppels op één telefoon: ja of nee, voor of tegen, wie van ons twee, zou je liever, waarheid of durven en meer. Zonder account."
   },
   "jeuGages": {
     "title": "Opdrachten voor koppels: draai aan het rad, 140 opdrachten",
@@ -389,6 +389,13 @@
     "metaTitle": "Wie zou eerder vragen: het spel voor koppels, 108 vragen",
     "metaDescription": "Wie zou eerder vragen voor koppels: een vraag, jullie twee namen, en jullie wijzen aan wie het zou doen. 108 vragen, spellen van 20, 40 of 60, gratis.",
     "description": "Er verschijnt een vraag en jullie wijzen aan wie het zou doen: een van jullie twee, of niemand."
+  },
+  "jeuQuestionsRapides": {
+    "title": "Snelle vragen voor koppels: het spel van 3, 2, 1, nu!",
+    "shortTitle": "Snelle vragen",
+    "metaTitle": "Snelle vragen voor koppels: het spel van 3, 2, 1, nu!",
+    "metaDescription": "Een vraag, een aftelling, en het snelste goede antwoord pakt het punt. 75 snelle vragen voor koppels, in rondes van 10, 20 of 30. Gratis en zonder account.",
+    "description": "Een vraag, 3, 2, 1, nu! Het snelste goede antwoord pakt het punt."
   },
   "jeuOuiNon": {
     "title": "Ja of nee vragen als koppel: 120 situaties, live stemmen",

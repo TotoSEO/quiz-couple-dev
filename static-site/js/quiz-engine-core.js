@@ -2424,6 +2424,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'pour-contre', icon: '👍', route: 'pourContre' },
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
+    { type: 'jeu', key: 'questions-rapides', icon: '⚡', route: 'jeuQuestionsRapides' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
     { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
     { type: 'jeu', key: 'dix-mais', icon: '🔟', route: 'jeuDixMais' },
@@ -2545,7 +2546,7 @@ var QuizEngine = (function() {
     'amoureux':        ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge'],
     'marrant':         ['quizGenant', 'quizMost', 'jeuActionVerite'],
     'genant':          ['quizMarrant', 'jeuActionVerite', 'quizMost'],
-    'knowledge':       ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
+    'knowledge':       ['jeuQuiDeNous', 'jeuQuestionsRapides', 'zamours', 'testCommonPoints', 'quizMost'],
     'most':            ['jeuSoireeCouples', 'jeuActionVerite', 'quizMarrant'],
     'vrai-faux':       ['quizKnowledge', 'zamours', 'quizMarrant', 'jeuDilemmes'],
     'zamours':         ['quizKnowledge', 'jeuQuiDeNous', 'quizMost'],
@@ -2571,11 +2572,12 @@ var QuizEngine = (function() {
     'action-ou-verite': ['jeuActionVeriteHot', 'jeuGages', 'jeuPlateau'],
     'gage-couple':      ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuPlateau'],
     'plateau-couple':   ['jeuActionVerite', 'jeuQuiDeNous', 'jeuDilemmes'],
-    'qui-de-nous-deux': ['quizKnowledge', 'jeuDilemmes', 'zamours', 'quizMost'],
+    'qui-de-nous-deux': ['quizKnowledge', 'jeuQuestionsRapides', 'jeuDilemmes', 'zamours', 'quizMost'],
     'dilemmes':         ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous'],
     'pour-contre':      ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous'],
     'phrases':          ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge'],
     'dix-mais':         ['jeuOuiNon', 'jeuDilemmes', 'quizTuPreferes'],
+    'questions-rapides': ['quizKnowledge', 'jeuQuiDeNous', 'quizTuPreferes'],
   };
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -3057,6 +3059,7 @@ var QuizEngine = (function() {
     'tu-preferes': ['dilemmes'],
     'jamais': ['dilemmes'],
     'qui-pourrait': ['dilemmes'],
+    'questions-rapides': ['quiSaitMieux'],
     'pour-contre': ['dilemmes'],
     'marrant': ['dilemmes'],
     'astro-prenoms': ['astro'],
@@ -12483,6 +12486,433 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ─── Questions rapides : 3, 2, 1, répondez ! ────────────────
+  // L'idée de Thomas (6 novembre 2026) : la question s'affiche avec un compte
+  // à rebours, 3, 2, 1, « Répondez ! », chacun crie sa réponse, et deux
+  // secondes plus tard l'écran demande qui a gagné : l'un, l'autre, égalité
+  // (un point chacun) ou personne (aucun point). Un seul téléphone posé entre
+  // les deux, sans mode à distance : la vitesse se joue en face.
+  //
+  // Comme le qui pourrait, l'écran de jeu est monté une seule fois. Le compte
+  // à rebours et le panneau du gagnant occupent la même case (.rq-zone) et ne
+  // font que s'échanger la visibilité : la carte ne change jamais de hauteur
+  // et les boutons tombent toujours au même endroit sous le pouce. Chaque
+  // question porte un jeton : un minuteur resté d'une question passée
+  // (rejouer, retour au départ) ne touche jamais l'écran suivant.
+  function RapiditeGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'questionsRapides';
+    this.lang = config.lang || 'fr';
+    this.pool = config.questions || [];   // { id, texte, cat }
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.choix = 10;                      // la longueur choisie au départ
+    this.limite = 10;                     // celle de la partie en cours
+    this.questions = [];
+    this.idx = 0;
+    this.points = [0, 0];
+    this.egalites = 0;
+    this.personne = 0;
+    this.dejaVues = {};
+    this.ui = null;
+    this.jeton = 0;
+    // Une seconde par chiffre, puis deux secondes pour crier sa réponse
+    // avant que l'écran demande qui a gagné.
+    this.tempo = { chiffre: 1000, reponse: 2000 };
+    this.quizType = config.quizType || '';
+    this.render();
+  }
+
+  RapiditeGame.prototype.qtg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  RapiditeGame.prototype.joueur = function(i) {
+    return this.noms[i] || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1));
+  };
+
+  RapiditeGame.prototype.calme = function() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  };
+
+  // Le tirage : une file par catégorie, les questions pas encore vues en
+  // premier, puis les files entrelacées dans un ordre tiré à chaque tour.
+  // Une partie de dix questions mélange donc souvenirs, questions sur l'autre
+  // et réflexes, et une catégorie ne revient pas deux fois de suite tant que
+  // les autres ont encore des questions.
+  RapiditeGame.prototype.tirer = function() {
+    var self = this;
+    var files = {}, cats = [];
+    this.pool.forEach(function(q) {
+      if (!files[q.cat]) { files[q.cat] = { neuves: [], vues: [] }; cats.push(q.cat); }
+      files[q.cat][self.dejaVues[q.id] ? 'vues' : 'neuves'].push(q);
+    });
+    var listes = cats.map(function(c) { return shuffleArray(files[c].neuves).concat(shuffleArray(files[c].vues)); });
+    var tirage = [], derniere = -1;
+    for (;;) {
+      var tour = [];
+      for (var i = 0; i < listes.length; i++) if (listes[i].length) tour.push(i);
+      if (!tour.length) break;
+      tour = shuffleArray(tour);
+      if (tour.length > 1 && tour[0] === derniere) { var t = tour[0]; tour[0] = tour[1]; tour[1] = t; }
+      for (var k = 0; k < tour.length; k++) tirage.push(listes[tour[k]].shift());
+      derniere = tour[tour.length - 1];
+    }
+    this.questions = tirage;
+  };
+
+  RapiditeGame.prototype.render = function() {
+    this.jeton++;                         // tout minuteur en cours devient caduc
+    this.container.innerHTML = '';
+    this.ui = null;
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'palier') this.renderPalier();
+    else if (this.phase === 'resultats') this.renderResultats();
+    else this.renderJeu();
+  };
+
+  RapiditeGame.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('rq-nom');
+
+    // Le choix de la longueur reprend le composant du je n'ai jamais.
+    var choixWrap = el('div', 'jnj-longueur');
+    choixWrap.appendChild(el('p', 'jnj-longueur-titre', esc(insecables(this.qtg('longueurTitre', 'Vous jouez en combien de questions ?')))));
+    var boutonsWrap = el('div', 'jnj-longueur-choix');
+    [10, 20, 30].forEach(function(n) {
+      var b = el('button', 'jnj-longueur-btn' + (n === self.choix ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', n === self.choix ? 'true' : 'false');
+      b.innerHTML = '<span class="jnj-longueur-nb">' + n + '</span>' +
+        '<span class="jnj-longueur-unite">' + esc(self.qtg('longueurMot', 'questions')) + '</span>' +
+        '<span class="jnj-longueur-libelle">' + esc(self.qtg('longueur' + n, '')) + '</span>';
+      b.addEventListener('click', function() {
+        self.choix = n;
+        boutonsWrap.querySelectorAll('.jnj-longueur-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+      });
+      boutonsWrap.appendChild(b);
+    });
+    choixWrap.appendChild(boutonsWrap);
+
+    var ecran = ecranDepart({
+      icone: '⚡',
+      titre: this.qtg('setupTitre', 'Questions rapides'),
+      desc: this.qtg('setupDesc', ''),
+      corps: [grille, choixWrap],
+      bouton: this.qtg('commencer', 'C\'est parti !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#rq-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#rq-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.tirer();
+        self.nouvellePartie();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  RapiditeGame.prototype.nouvellePartie = function() {
+    this.limite = Math.min(this.choix, this.questions.length);
+    this.idx = 0;
+    this.points = [0, 0];
+    this.egalites = 0;
+    this.personne = 0;
+    this.phase = 'jeu';
+    this.render();
+  };
+
+  RapiditeGame.prototype.renderJeu = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine rq-jeu quiz-question-enter');
+
+    var barre = el('div', 'quiz-progress-wrapper');
+    barre.innerHTML =
+      '<div class="quiz-progress-header">' +
+        '<span class="quiz-progress-label"></span>' +
+        '<span class="quiz-progress-pct"></span>' +
+      '</div>' +
+      '<div class="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">' +
+        '<div class="quiz-progress-fill"></div>' +
+      '</div>';
+    wrap.appendChild(barre);
+
+    // Le score en direct, aux couleurs des deux personnages.
+    var scores = el('div', 'rq-scores');
+    scores.innerHTML = [0, 1].map(function(j) {
+      return '<span class="rq-score rq-score--' + (j ? 'b' : 'a') + '">' +
+        '<span class="rq-score-nom">' + esc(self.joueur(j)) + '</span>' +
+        '<span class="rq-score-nb">' + self.points[j] + '</span></span>';
+    }).join('');
+    wrap.appendChild(scores);
+
+    var carte = el('div', 'rq-carte');
+    carte.innerHTML =
+      '<p class="rq-cat"></p>' +
+      '<p class="rq-question"></p>' +
+      '<div class="rq-zone" data-etat="compte">' +
+        '<div class="rq-compte" data-vue="chiffre" aria-live="assertive"><span class="rq-signal"></span></div>' +
+        '<div class="rq-panneau">' +
+          '<p class="rq-panneau-titre" aria-live="polite"></p>' +
+          '<div class="rq-choix">' +
+            '<button type="button" class="rq-btn rq-btn--a"><span class="rq-btn-nom">' + esc(this.joueur(0)) + '</span></button>' +
+            '<button type="button" class="rq-btn rq-btn--b"><span class="rq-btn-nom">' + esc(this.joueur(1)) + '</span></button>' +
+          '</div>' +
+          '<div class="rq-autres">' +
+            '<button type="button" class="rq-autre rq-egal"><span class="rq-autre-mot">' + esc(this.qtg('egalite', 'Égalité')) + '</span>' +
+              '<span class="rq-autre-aide">' + esc(this.qtg('egaliteAide', '+1 chacun')) + '</span></button>' +
+            '<button type="button" class="rq-autre rq-personne"><span class="rq-autre-mot">' + esc(this.qtg('personne', 'Personne')) + '</span>' +
+              '<span class="rq-autre-aide">' + esc(this.qtg('personneAide', 'aucun point')) + '</span></button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    wrap.appendChild(carte);
+
+    var boutons = [
+      carte.querySelector('.rq-btn--a'), carte.querySelector('.rq-btn--b'),
+      carte.querySelector('.rq-egal'), carte.querySelector('.rq-personne')
+    ];
+    this.ui = {
+      label: barre.querySelector('.quiz-progress-label'),
+      pct: barre.querySelector('.quiz-progress-pct'),
+      barreRole: barre.querySelector('.quiz-progress-bar'),
+      fill: barre.querySelector('.quiz-progress-fill'),
+      puces: scores.querySelectorAll('.rq-score'),
+      nombres: scores.querySelectorAll('.rq-score-nb'),
+      cat: carte.querySelector('.rq-cat'),
+      question: carte.querySelector('.rq-question'),
+      zone: carte.querySelector('.rq-zone'),
+      compte: carte.querySelector('.rq-compte'),
+      signal: carte.querySelector('.rq-signal'),
+      titre: carte.querySelector('.rq-panneau-titre'),
+      boutons: boutons
+    };
+    // Le compte à rebours et le titre du panneau ne changent que la valeur
+    // de leur nœud de texte, jamais la liste des éléments : la bannière
+    // publicitaire posée au-dessus du moteur (bandeauDuTest, pub.js) se
+    // réajuste à chaque ajout ou retrait d'élément dans le moteur, et un
+    // chiffre remplacé chaque seconde l'aurait fait grandir juste avant
+    // l'apparition des boutons, sous le pouce.
+    this.ui.signalTexte = this.ui.signal.appendChild(document.createTextNode(''));
+    this.ui.titreTexte = this.ui.titre.appendChild(document.createTextNode(''));
+    boutons.forEach(function(b, k) {
+      b.addEventListener('click', function() { self.repondre(k, b); });
+    });
+
+    this.container.appendChild(wrap);
+    this.majQuestion(false);
+    this.lancer();
+  };
+
+  // Ce qui change d'une question à l'autre : la barre, la catégorie et la
+  // question, qui entre avec un petit fondu.
+  RapiditeGame.prototype.majQuestion = function(anime) {
+    var q = this.questions[this.idx];
+    var pct = Math.round((this.idx / this.limite) * 100);
+    this.ui.label.textContent = this.qtg('questionSur', 'Question {{n}} / {{total}}')
+      .replace('{{n}}', this.idx + 1).replace('{{total}}', this.limite);
+    this.ui.pct.textContent = pct + '%';
+    this.ui.fill.style.width = pct + '%';
+    this.ui.barreRole.setAttribute('aria-valuenow', String(pct));
+    var icones = { souvenir: '📍', autre: '👀', reflexe: '⚡' };
+    var cat = this.qtg('cat_' + q.cat, '');
+    this.ui.cat.textContent = cat ? (icones[q.cat] || '⚡') + ' ' + cat : '';
+    this.ui.question.textContent = insecables(q.texte);
+    if (anime && !this.calme() && this.ui.question.animate) {
+      this.ui.question.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'ease-out' });
+      this.ui.cat.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 240 });
+    }
+  };
+
+  // Le compte à rebours d'une question : 3, 2, 1, « Répondez ! », puis le
+  // panneau du gagnant deux secondes plus tard. Un seul élément affiche les
+  // chiffres puis « Répondez ! » : sa forme suit l'attribut data-vue, son
+  // texte change dans son nœud, et l'entrée de chaque étape est animée sans
+  // toucher au DOM. Les boutons restent sourds tant que le panneau est caché.
+  RapiditeGame.prototype.lancer = function() {
+    var self = this;
+    var jeton = ++this.jeton;
+    var ui = this.ui;
+    ui.zone.setAttribute('data-etat', 'compte');
+    ui.titreTexte.data = '';
+    ui.boutons.forEach(function(b) { b.disabled = true; });
+    var etapes = ['3', '2', '1'];
+    var i = 0;
+    function montrer(texte, go) {
+      ui.compte.setAttribute('data-vue', go ? 'go' : 'chiffre');
+      ui.signalTexte.data = texte;
+      if (self.calme() || !ui.signal.animate) return;
+      if (self._anim) { try { self._anim.cancel(); } catch (e) {} }
+      self._anim = go
+        ? ui.signal.animate([{ opacity: 0, transform: 'scale(.6)' }, { opacity: 1, transform: 'none' }],
+            { duration: 450, easing: 'cubic-bezier(.3, 1.4, .6, 1)' })
+        : ui.signal.animate([
+            { opacity: 0, transform: 'scale(1.5)' },
+            { opacity: 1, transform: 'scale(1)', offset: .2 },
+            { opacity: 1, transform: 'scale(1)', offset: .8 },
+            { opacity: .25, transform: 'scale(.86)' }
+          ], { duration: 900, easing: 'cubic-bezier(.2, .8, .3, 1)', fill: 'forwards' });
+    }
+    function suivant() {
+      if (jeton !== self.jeton) return;
+      if (i < etapes.length) {
+        montrer(etapes[i++], false);
+        setTimeout(suivant, self.tempo.chiffre);
+        return;
+      }
+      montrer(insecables(self.qtg('repondez', 'Répondez !')), true);
+      setTimeout(function() {
+        if (jeton !== self.jeton) return;
+        ui.zone.setAttribute('data-etat', 'panneau');
+        ui.titreTexte.data = insecables(self.qtg('quiGagne', 'Qui a gagné ?'));
+        ui.boutons.forEach(function(b) { b.disabled = false; });
+      }, self.tempo.reponse);
+    }
+    suivant();
+  };
+
+  RapiditeGame.prototype.sautille = function(noeud) {
+    if (!noeud || !noeud.animate || this.calme()) return;
+    noeud.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.16)' }, { transform: 'scale(1)' }], { duration: 380, easing: 'ease-out' });
+  };
+
+  // 0 : le premier joueur, 1 : le second, 2 : égalité, 3 : personne.
+  RapiditeGame.prototype.repondre = function(cible, bouton) {
+    var self = this;
+    if (this.ui.zone.getAttribute('data-etat') !== 'panneau') return;
+    if (!answerLock(this, 600)) return;
+    var gagnants = cible === 2 ? [0, 1] : (cible < 2 ? [cible] : []);
+    gagnants.forEach(function(j) {
+      self.points[j]++;
+      self.ui.nombres[j].textContent = self.points[j];
+      self.sautille(self.ui.puces[j]);
+    });
+    if (cible === 2) this.egalites++;
+    if (cible === 3) this.personne++;
+    bouton.classList.add('rq-btn--pris');
+    var jeton = this.jeton;
+    setTimeout(function() {
+      if (jeton !== self.jeton) return;
+      bouton.classList.remove('rq-btn--pris');
+      self.idx++;
+      if (self.idx >= self.limite) {
+        // La rallonge n'a de sens que s'il reste des questions derrière.
+        self.phase = (self.limite < self.questions.length) ? 'palier' : 'resultats';
+        self.render();
+        return;
+      }
+      self.majQuestion(true);
+      self.lancer();
+    }, 450);
+  };
+
+  RapiditeGame.prototype.scoreTexte = function(cle, repli) {
+    return this.qtg(cle, repli)
+      .replace('{{a}}', this.joueur(0)).replace('{{pa}}', this.points[0])
+      .replace('{{b}}', this.joueur(1)).replace('{{pb}}', this.points[1]);
+  };
+
+  RapiditeGame.prototype.renderPalier = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine jnj-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'jnj-palier-icone', '⚡'));
+    wrap.appendChild(el('h2', 'jnj-palier-titre',
+      esc(insecables(this.qtg('palierTitre', 'Déjà {{n}} questions !').replace('{{n}}', this.limite)))));
+    wrap.appendChild(el('p', 'jnj-palier-texte', esc(insecables(this.scoreTexte('palierScore', '')))));
+    wrap.appendChild(el('p', 'jnj-palier-texte', esc(insecables(this.qtg('palierTexte', '')))));
+
+    var choix = el('div', 'jnj-palier-choix');
+    var voir = el('button', 'btn btn-cta btn-lg', esc(this.qtg('palierResultats', 'Voir les résultats')));
+    voir.type = 'button';
+    voir.addEventListener('click', function() { self.phase = 'resultats'; self.render(); });
+    var continuer = el('button', 'btn btn-outline', esc(this.qtg('palierContinuer', 'Continuer avec 10 questions de plus')));
+    continuer.type = 'button';
+    continuer.addEventListener('click', function() {
+      self.limite = Math.min(self.limite + 10, self.questions.length);
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    choix.appendChild(voir);
+    choix.appendChild(continuer);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  RapiditeGame.prototype.renderResultats = function() {
+    var self = this;
+    var a = this.points[0], b = this.points[1];
+    var g = a === b ? -1 : (a > b ? 0 : 1);
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center rq-fin');
+
+    // Le podium : chaque personnage au-dessus de son score, celui qui gagne
+    // saute de joie et l'autre boude ; à égalité, les deux rient.
+    var poses = g === -1 ? ['rire', 'rire'] : (g === 0 ? ['joie', 'boude'] : ['boude', 'joie']);
+    var podium = el('div', 'rq-podium');
+    podium.innerHTML = [0, 1].map(function(j) {
+      var nom = j ? 'violet' : 'rose';
+      var etat = g === -1 ? ' rq-podium-joueur--egal' : (g === j ? ' rq-podium-joueur--gagne' : '');
+      return '<div class="rq-podium-joueur rq-podium-joueur--' + (j ? 'b' : 'a') + etat + '">' +
+        (g === j ? '<span class="rq-couronne" aria-hidden="true">👑</span>' : '') +
+        '<span class="rq-podium-perso">' + mascotteSvg(nom, poses[j], j ? 82 : 76) + '</span>' +
+        '<span class="rq-podium-nom">' + esc(self.joueur(j)) + '</span>' +
+        '<span class="rq-podium-nb">' + self.points[j] + '</span>' +
+        '<span class="rq-podium-mot">' + esc(self.qtg(self.points[j] === 1 ? 'point1' : 'points', 'points')) + '</span>' +
+      '</div>';
+    }).join('');
+
+    var titre = g === -1
+      ? this.qtg('egaliteTitre', 'Égalité parfaite !')
+      : this.qtg('gagneTitre', '{{nom}} gagne la partie !').replace('{{nom}}', this.joueur(g));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 rq-fin-titre', esc(insecables(titre))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-5',
+      esc(this.qtg('resultatsSous', 'Sur {{total}} questions.').replace('{{total}}', this.idx))));
+    wrap.appendChild(podium);
+
+    // La phrase dépend de l'écart, pas seulement du gagnant.
+    var ecart = Math.abs(a - b), cle;
+    if (g === -1) cle = 'phraseEgalite';
+    else if (ecart <= 2) cle = 'phraseSerree';
+    else if (ecart <= 4) cle = 'phraseClaire';
+    else cle = 'phraseNette';
+    var phrase = this.qtg(cle, '');
+    if (g !== -1) phrase = phrase.replace('{{nom}}', this.joueur(g)).replace('{{autre}}', this.joueur(1 - g));
+    var verdict = el('div', 'jnj-verdict');
+    var html = '<p>' + esc(insecables(phrase)) + '</p>';
+    if (this.egalites > 0) {
+      html += '<p>' + esc(insecables(this.qtg(this.egalites === 1 ? 'resultatEgalite1' : 'resultatEgalites', '')
+        .replace('{{n}}', this.egalites))) + '</p>';
+    }
+    if (this.personne > 0) {
+      html += '<p>' + esc(insecables(this.qtg(this.personne === 1 ? 'resultatPersonne1' : 'resultatPersonne', '')
+        .replace('{{n}}', this.personne))) + '</p>';
+    }
+    verdict.innerHTML = html;
+    wrap.appendChild(verdict);
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', esc(insecables(this.qtg('recommencer', 'La revanche !'))));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() {
+      for (var i = 0; i < self.idx; i++) self.dejaVues[self.questions[i].id] = true;
+      self.tirer();
+      self.nouvellePartie();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'fun' },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Jeu « Oui ou non » spécial couple ────────────────────
   // Des situations, un OUI, un NON, et après chaque vote les chiffres de
   // tous les visiteurs, comme sur les dilemmes. Pas de score et pas de fin
@@ -14632,6 +15062,7 @@ var QuizEngine = (function() {
     PourContreGame: PourContreGame,
     JamaisGame: JamaisGame,
     QuiPourraitGame: QuiPourraitGame,
+    RapiditeGame: RapiditeGame,
     OuiNonGame: OuiNonGame,
     PhrasesGame: PhrasesGame,
     DixMaisGame: DixMaisGame,

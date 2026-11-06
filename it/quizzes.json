@@ -251,10 +251,10 @@
     "metaDescription": "Anima gemella o solo una bella storia? 20 domande, un indice e un verdetto che non si limita a lusingare. Test gratuito, da solo o in due, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia online: 13 giochi gratis da fare in due",
+    "title": "Giochi di coppia online: 14 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
-    "description": "Tredici giochi da fare in due: è un 10 ma, le frasi da completare, il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
-    "metaDescription": "13 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
+    "description": "Quattordici giochi da fare in due: le domande veloci, è un 10 ma, le frasi da completare, il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
+    "metaDescription": "14 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: il gioco della ruota, 140 penitenze",
@@ -389,6 +389,13 @@
     "metaTitle": "Chi potrebbe? Gioco di coppia online con 100+ domande",
     "metaDescription": "Una domanda, i vostri due nomi, e voi indicate chi ne sarebbe capace. 108 domande, partite da 20, 40 o 60, gratis e senza registrazione.",
     "description": "Appare una domanda e indicate chi ne sarebbe capace: uno di voi due, o nessuno."
+  },
+  "jeuQuestionsRapides": {
+    "title": "Domande veloci di coppia: il gioco del 3, 2, 1, via!",
+    "shortTitle": "Domande veloci",
+    "metaTitle": "Domande veloci di coppia: il gioco del 3, 2, 1, via!",
+    "metaDescription": "Una domanda, un conto alla rovescia, e la risposta giusta più veloce si prende il punto. 75 domande veloci di coppia, da 10, 20 o 30. Gratis.",
+    "description": "Una domanda, 3, 2, 1, via! La risposta giusta più veloce si prende il punto."
   },
   "jeuOuiNon": {
     "title": "Gioco Sì o No per coppie online - 120 domande",

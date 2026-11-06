@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Spiel zu zweit • 75 Fragen • Kostenlos",
+    "title": "Schnelle Fragen für Paare: Wer zuerst antwortet, holt den Punkt",
+    "titleHighlight": "Schnelle Fragen",
+    "description": "Eine Frage erscheint, 3, 2, 1... los! Die schnellste richtige Antwort holt den Punkt. Gemeinsame Erinnerungen, Fragen über deinen Schatz und Reflexe, auf einem einzigen Handy."
+  },
+  "jsonLd": {
+    "name": "Schnelle Fragen für Paare"
+  },
+  "section1": {
+    "title": "Schnelle Fragen als Paar spielen: die Regeln",
+    "intro": "Schnelle Fragen ist ein Spiel zu zweit, auf einem einzigen Handy, das zwischen euch liegt. Eine Frage erscheint, zum Beispiel „Wo hatten wir unser erstes Date?“, und ein Countdown läuft: 3, 2, 1... Los!",
+    "intro2": "Genau dann ruft ihr beide eure Antwort. Wer zuerst richtig antwortet, holt den Punkt. Antwortet ihr gleichzeitig, ist es unentschieden, und jeder bekommt einen Punkt. Und wenn keiner es weiß, punktet keiner, und es geht mit der nächsten Frage weiter.",
+    "etape1Titre": "Gebt eure zwei Vornamen ein",
+    "etape1Texte": "Sie stehen beim Punktestand und auf den Knöpfen am Ende jeder Frage. Dann wählt ihr ein Spiel mit 10, 20 oder 30 Fragen.",
+    "etape2Titre": "Lest die Frage während des Countdowns",
+    "etape2Texte": "Ihr habt beide drei Sekunden, um sie zu lesen. Vor dem „Los!“ wird nicht geantwortet, sonst zählt der Punkt nicht.",
+    "etape3Titre": "Sagt, wer gewonnen hat",
+    "etape3Texte": "Zwei Sekunden später fragt der Bildschirm, wer schneller war: der eine, der andere, unentschieden oder keiner. Ihr seid die Schiedsrichter, und genau da fängt oft die Diskussion an...",
+    "apres": "Der Punktestand bleibt das ganze Spiel über oben auf dem Bildschirm. Am Ende seht ihr, wer gewonnen hat, wie oft ihr gleichzeitig geantwortet habt und wie viele Fragen offen geblieben sind. Und der Revanche-Knopf startet ein neues Spiel mit Fragen, die ihr noch nicht hattet!"
+  },
+  "section2": {
+    "title": "Die Liste der schnellen Fragen für Paare",
+    "intro": "Die 75 Fragen des Spiels sind in drei Gruppen eingeteilt, und jedes Spiel mischt sie, ihr bekommt also nie zehn Erinnerungen am Stück. Sie sind absichtlich kurz: Eine schnelle Frage muss sich während des Countdowns lesen und mit ein, zwei Wörtern beantworten lassen. Für tiefere Fragen, die <a href=\"/de/fragen-fuer-paare/\">man sich als Paar in Ruhe stellt</a>, braucht es einen anderen Abend.",
+    "souvenirsTitre": "Unsere Erinnerungen",
+    "souvenirsTexte": "Ihr kennt beide die Antwort, und genau deshalb entscheidet die Geschwindigkeit. Daten und „Wer hat was zuerst gemacht“ enden oft in einer Diskussion!",
+    "autreTitre": "Fragen über deinen Schatz",
+    "autreTexte": "Jeder antwortet über den anderen: Lieblingsessen, Schuhgröße, seltsamste Angst... Mit dem Countdown muss <a href=\"/de/wer-kennt-partner-besser-quiz/\">das, was ihr übereinander wisst</a>, in zwei Sekunden raus, ohne Nachdenken.",
+    "reflexesTitre": "Reflexe",
+    "reflexesTexte": "Hier müsst ihr so schnell wie möglich drei Dinge nennen: drei Stärken deines Schatzes, drei Filme, die ihr zusammen geschaut habt, drei Spitznamen, die ihr euch gegeben habt... Wer zuerst bei drei ist, gewinnt.",
+    "apres": "Diese Beispiele stehen Wort für Wort so im Spiel. Den Rest entdeckt ihr beim Spielen!"
+  },
+  "section3": {
+    "title": "Dies oder das: schnelle Fragen mit zwei Möglichkeiten",
+    "intro": "Es gibt noch eine andere Art, schnelle Fragen zu spielen: „Dies oder das“. Man reiht Entscheidungen zwischen zwei Wörtern aneinander, und jeder antwortet sofort, ohne nachzudenken. Das ist so etwas wie der kleine Bruder von „Würdest du eher“, nur dass man zwischen zwei Wörtern wählt statt zwischen <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">zwei Situationen, zwischen denen man sich entscheiden muss</a>. Hier geht es nicht um Schnelligkeit, sondern um den Rhythmus. Lest sie laut vor, eine nach der anderen:",
+    "items": [
+      "Strand oder Berge?",
+      "Kaffee oder Tee?",
+      "Film oder Serie?",
+      "Eher Morgenmensch oder Nachteule?",
+      "Süß oder salzig?",
+      "Katze oder Hund?",
+      "Pizza oder Burger?",
+      "Restaurant oder Essen auf dem Sofa?",
+      "Stadt oder Land?",
+      "Nachricht oder Anruf?",
+      "Sonnenaufgang oder Sonnenuntergang?",
+      "Pauschalreise oder Abenteuer?"
+    ],
+    "apres": "Ihr antwortet beide gleichzeitig und zählt eure gleichen Antworten. Bei zwölf Entscheidungen sind fast immer ein, zwei dabei, die überraschen..."
+  },
+  "section4": {
+    "title": "Ein paar Regeln, damit es lustig bleibt",
+    "intro": "Das Spiel prüft eure Antworten nicht, ihr entscheidet selbst, wer gewonnen hat. Deshalb einigt ihr euch am besten vor der ersten Frage auf drei, vier Regeln:",
+    "resumeTitre": "Die Hausregeln",
+    "resume1": "<strong>Keiner antwortet vor dem „Los!“:</strong> Eine Antwort während des Countdowns zählt nicht.",
+    "resume2": "<strong>Die erste Antwort gilt:</strong> Nachbessern, nachdem man die andere gehört hat, ist nicht erlaubt.",
+    "resume3": "<strong>Im Zweifel ist es unentschieden:</strong> Wenn ihr nicht wisst, wer zuerst gesprochen hat, bekommt jeder seinen Punkt, und weiter geht's.",
+    "resume4": "<strong>Bei Fragen über deinen Schatz entscheidet die Person, um die es geht:</strong> Nur sie weiß, ob ihr Lieblingsessen wirklich Lasagne ist.",
+    "apres": "Ein letzter Tipp: Legt das Handy flach zwischen euch, damit ihr die Frage beide im selben Moment lest."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Was sind schnelle Fragen für Paare?",
+    "a1": "Das sind kurze Fragen, die man mit ein, zwei Wörtern beantwortet, so schnell wie möglich. Für Paare geht es um eure Erinnerungen und um das, was ihr übereinander wisst. Ziel ist es, als Erster die richtige Antwort zu geben.",
+    "q2": "Wie lange dauert ein Spiel?",
+    "a2": "Rechnet mit fünf Minuten für 10 Fragen und einer Viertelstunde für 30. Am Ende könnt ihr zehn Fragen dranhängen, wenn ihr noch nicht aufhören wollt.",
+    "q3": "Kann man auch auf Distanz spielen?",
+    "a3": "Dieses Spiel spielt man von Angesicht zu Angesicht, auf einem einzigen Handy, weil man hören muss, wer zuerst antwortet. Wenn jeder auf seinem eigenen Handy spielen will: Andere Spiele der Seite haben einen Fernmodus, zum Beispiel „Wer von uns beiden“ oder „Ich hab noch nie“.",
+    "q4": "Wer entscheidet, wer gewonnen hat?",
+    "a4": "Ihr! Das Spiel kennt eure Antworten nicht, es zeigt nur die Frage und den Countdown. Nach dem „Los!“ tippt ihr auf den Namen des Schnelleren, auf „Gleichstand“ oder auf „Keiner“.",
+    "q5": "Ändern sich die Fragen von Spiel zu Spiel?",
+    "a5": "Ja. Das Spiel zieht die Fragen zufällig aus den 75, und bei einer Revanche fängt es mit denen an, die ihr noch nicht hattet."
+  }
+}

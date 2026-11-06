@@ -294,6 +294,10 @@
         "texte": "Chacun répond à des questions sur l'autre, et on compte qui le connaît le mieux."
       },
       {
+        "route": "jeuQuestionsRapides",
+        "texte": "Une question, un compte à rebours, et le premier qui donne la bonne réponse marque le point."
+      },
+      {
         "route": "quizTuPreferes",
         "texte": "Deux choix à chaque fois, et on voit si vous êtes d'accord."
       },

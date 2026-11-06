@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Game for two • 75 questions • Free",
+    "title": "Rapid-fire questions for couples: first to answer wins the point",
+    "titleHighlight": "Rapid-fire questions",
+    "description": "A question pops up, 3, 2, 1... go! The fastest right answer wins the point. Shared memories, questions about your partner and quick reflexes, all on one phone."
+  },
+  "jsonLd": {
+    "name": "Rapid-fire questions for couples"
+  },
+  "section1": {
+    "title": "How to play rapid-fire questions as a couple",
+    "intro": "Rapid-fire questions is a game for two, played on a single phone sitting between you. A question shows up, for example “Where did we go on our first date?”, and a countdown starts: 3, 2, 1... Go!",
+    "intro2": "That's when you both shout your answer. Whoever gives the right answer first scores the point. If you answer at the same time, it's a tie and you each get a point. And if neither of you knows, nobody scores and you move on to the next one.",
+    "etape1Titre": "Enter your two names",
+    "etape1Texte": "They're used for the score and for the buttons at the end of each question. Then pick a game of 10, 20 or 30 questions.",
+    "etape2Titre": "Read the question during the countdown",
+    "etape2Texte": "You both get three seconds to read it. No answering before “Go!”, or the point doesn't count.",
+    "etape3Titre": "Say who won",
+    "etape3Texte": "Two seconds later, the screen asks who was faster: one of you, the other, a tie or neither. You're the judges, and that's often where the arguing starts...",
+    "apres": "The score stays at the top of the screen for the whole game. At the end, you see who won, how many times you answered at the same time and how many questions went unanswered. And the rematch button starts a new game with questions you haven't had yet!"
+  },
+  "section2": {
+    "title": "The list of rapid-fire questions for couples",
+    "intro": "The game's 75 questions come in three families, and every game mixes them up, so you'll never get ten memories in a row. They're short on purpose: a rapid-fire question has to be read during the countdown and answered in a word or two. Deeper questions, the kind <a href=\"/en/couple-questions/\">you ask each other when you have time</a>, are for another evening.",
+    "souvenirsTitre": "Shared memories",
+    "souvenirsTexte": "You both know the answer, and that's exactly why it comes down to speed. Dates and “who did what first” questions often end in a debate!",
+    "autreTitre": "Questions about your partner",
+    "autreTexte": "Each of you answers about the other: their favorite food, their shoe size, their weirdest fear... With the countdown, <a href=\"/en/who-knows-partner-best-quiz/\">what you know about each other</a> has to come out in two seconds, no time to think.",
+    "reflexesTitre": "Quick reflexes",
+    "reflexesTexte": "Here you have to name three things as fast as you can: three of your partner's qualities, three movies you've watched together, three nicknames you've given each other... First to three wins.",
+    "apres": "These examples are written word for word as they appear in the game. You'll find the rest by playing!"
+  },
+  "section3": {
+    "title": "This or that: rapid-fire questions with two options",
+    "intro": "There's another way to play rapid-fire questions, known as “this or that”: you fire off choices between two words, and each of you answers right away, without thinking. It's a bit like a quick version of “would you rather”, except you pick between two words instead of <a href=\"/en/would-you-rather-couple-quiz/\">two situations to choose from</a>. This one isn't a race: it's all about the pace. Read them out loud, one after the other:",
+    "items": [
+      "Beach or mountains?",
+      "Coffee or tea?",
+      "Movie or series?",
+      "Morning person or night owl?",
+      "Sweet or salty?",
+      "Cats or dogs?",
+      "Pizza or burgers?",
+      "Restaurant or takeout on the couch?",
+      "City or countryside?",
+      "Text or call?",
+      "Sunrise or sunset?",
+      "Planned trip or wing it?"
+    ],
+    "apres": "You both answer at the same time and count how many answers match. Out of twelve choices, there are almost always one or two that come as a surprise..."
+  },
+  "section4": {
+    "title": "A few rules to keep it fun",
+    "intro": "The game doesn't check your answers, you decide who won. So it's best to agree on three or four rules before the first question:",
+    "resumeTitre": "House rules",
+    "resume1": "<strong>Nobody answers before “Go!”:</strong> an answer shouted during the countdown doesn't count.",
+    "resume2": "<strong>Your first answer is your answer:</strong> no changing it after you've heard the other one.",
+    "resume3": "<strong>When in doubt, it's a tie:</strong> if you can't tell who spoke first, you each take the point and move on.",
+    "resume4": "<strong>For questions about your partner, the person it's about decides:</strong> only they know if their favorite food really is lasagna.",
+    "apres": "One last tip: lay the phone flat between you, so you can both read the question at the same moment."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "What are rapid-fire questions for couples?",
+    "a1": "They're short questions you answer in a word or two, as fast as you can. For couples, they're about your memories and what you know about each other. The goal is to be the first to give the right answer.",
+    "q2": "How long does a game take?",
+    "a2": "About five minutes for 10 questions and fifteen minutes for 30. At the end, you can add ten more questions if you don't feel like stopping.",
+    "q3": "Can we play long distance?",
+    "a3": "This one is played face to face, on a single phone, because you need to hear who answers first. To play on your own phones, other games on the site have a long-distance mode, like “Which one of us” or “Never have I ever”.",
+    "q4": "Who decides who won?",
+    "a4": "You do! The game doesn't know your answers, it shows the question and the countdown. After “Go!”, you tap the name of whoever was faster, “Tie” or “Neither”.",
+    "q5": "Do the questions change from one game to the next?",
+    "a5": "Yes. The game draws questions at random from the 75, and when you play a rematch, it starts with the ones you haven't had yet."
+  }
+}

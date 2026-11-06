@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Spel voor twee • 75 vragen • Gratis",
+    "title": "Snelle vragen voor koppels: wie het eerst antwoordt, pakt het punt",
+    "titleHighlight": "Snelle vragen",
+    "description": "Er verschijnt een vraag, 3, 2, 1... nu! Het snelste goede antwoord wint het punt. Gedeelde herinneringen, vragen over je partner en reflexen, op één telefoon."
+  },
+  "jsonLd": {
+    "name": "Snelle vragen voor koppels"
+  },
+  "section1": {
+    "title": "Snelle vragen spelen als koppel: de regels",
+    "intro": "Snelle vragen is een spel voor twee, op één telefoon die tussen jullie in ligt. Er verschijnt een vraag, bijvoorbeeld ‘Waar was onze eerste date?’, en er begint een aftelling: 3, 2, 1... Nu!",
+    "intro2": "Op dat moment roepen jullie allebei je antwoord. Wie als eerste het goede antwoord geeft, pakt het punt. Antwoorden jullie tegelijk, dan is het gelijkspel en krijgen jullie allebei een punt. En als niemand het weet, scoort niemand en gaan jullie door naar de volgende.",
+    "etape1Titre": "Vul jullie twee namen in",
+    "etape1Texte": "Die staan bij de score en op de knoppen aan het eind van elke vraag. Kies daarna een spel van 10, 20 of 30 vragen.",
+    "etape2Titre": "Lees de vraag tijdens het aftellen",
+    "etape2Texte": "Jullie hebben allebei drie seconden om hem te lezen. Niet antwoorden vóór ‘Nu!’, anders telt het punt niet.",
+    "etape3Titre": "Zeg wie er heeft gewonnen",
+    "etape3Texte": "Twee seconden later vraagt het scherm wie sneller was: de een, de ander, gelijkspel of niemand. Jullie zijn de scheidsrechters, en daar begint vaak de discussie...",
+    "apres": "De score blijft het hele spel bovenaan het scherm staan. Aan het eind zien jullie wie er heeft gewonnen, hoe vaak jullie tegelijk antwoordden en hoeveel vragen onbeantwoord bleven. En de knop voor de revanche start een nieuw spel met vragen die jullie nog niet hebben gehad!"
+  },
+  "section2": {
+    "title": "De lijst met snelle vragen voor koppels",
+    "intro": "De 75 vragen van het spel zijn verdeeld in drie groepen, en elk spel mengt ze, dus je krijgt nooit tien herinneringen achter elkaar. Ze zijn expres kort: een snelle vraag moet je tijdens het aftellen kunnen lezen en met een of twee woorden kunnen beantwoorden. Diepere vragen, die <a href=\"/nl/vragen-voor-koppels/\">je elkaar als koppel op je gemak stelt</a>, zijn voor een andere avond.",
+    "souvenirsTitre": "Onze herinneringen",
+    "souvenirsTexte": "Jullie weten allebei het antwoord, en juist daarom draait het om snelheid. Datums en ‘wie deed wat als eerste’ eindigen vaak in een discussie!",
+    "autreTitre": "Vragen over je partner",
+    "autreTexte": "Ieder antwoordt over de ander: lievelingseten, schoenmaat, raarste angst... Door het aftellen moet <a href=\"/nl/hoe-goed-ken-je-je-partner/\">wat jullie van elkaar weten</a> er binnen twee seconden uit, zonder na te denken.",
+    "reflexesTitre": "Reflexen",
+    "reflexesTexte": "Hier moet je zo snel mogelijk drie dingen noemen: drie goede eigenschappen van je partner, drie films die jullie samen hebben gekeken, drie bijnamen die jullie elkaar hebben gegeven... Wie het eerst bij drie is, wint.",
+    "apres": "Deze voorbeelden staan woord voor woord zo in het spel. De rest ontdekken jullie tijdens het spelen!"
+  },
+  "section3": {
+    "title": "Dit of dat: snelle vragen met twee keuzes",
+    "intro": "Er is nog een andere manier om snelle vragen te spelen: ‘dit of dat’. Je vuurt keuzes tussen twee woorden op elkaar af, en ieder antwoordt meteen, zonder na te denken. Het lijkt een beetje op het kleine broertje van ‘Zou je liever’, alleen kies je tussen twee woorden in plaats van <a href=\"/nl/zou-je-liever-vragen/\">twee situaties waartussen je moet kiezen</a>. Dit is geen wedstrijd: het gaat om het tempo. Lees ze hardop voor, de een na de ander:",
+    "items": [
+      "Strand of bergen?",
+      "Koffie of thee?",
+      "Film of serie?",
+      "Ochtendmens of avondmens?",
+      "Zoet of zout?",
+      "Kat of hond?",
+      "Pizza of hamburger?",
+      "Restaurant of eten op de bank?",
+      "Stad of platteland?",
+      "Appje of bellen?",
+      "Zonsopgang of zonsondergang?",
+      "Georganiseerde reis of op avontuur?"
+    ],
+    "apres": "Jullie antwoorden tegelijk en tellen hoeveel antwoorden hetzelfde zijn. Van de twaalf keuzes zijn er bijna altijd een of twee die verrassen..."
+  },
+  "section4": {
+    "title": "Een paar regels zodat het leuk blijft",
+    "intro": "Het spel controleert jullie antwoorden niet, jullie bepalen zelf wie er heeft gewonnen. Spreek dus voor de eerste vraag drie of vier regels af:",
+    "resumeTitre": "De huisregels",
+    "resume1": "<strong>Niemand antwoordt vóór ‘Nu!’:</strong> een antwoord tijdens het aftellen telt niet.",
+    "resume2": "<strong>Je eerste antwoord geldt:</strong> verbeteren nadat je het antwoord van de ander hebt gehoord, mag niet.",
+    "resume3": "<strong>Bij twijfel is het gelijkspel:</strong> als jullie niet weten wie het eerst sprak, krijgt ieder een punt en gaan jullie verder.",
+    "resume4": "<strong>Bij vragen over je partner beslist degene over wie het gaat:</strong> alleen die weet of het lievelingseten echt lasagne is.",
+    "apres": "Nog een laatste tip: leg de telefoon plat tussen jullie in, zodat jullie de vraag op hetzelfde moment lezen."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Wat zijn snelle vragen voor koppels?",
+    "a1": "Dat zijn korte vragen die je met een of twee woorden beantwoordt, zo snel mogelijk. Voor koppels gaan ze over jullie herinneringen en over wat jullie van elkaar weten. Het doel is als eerste het goede antwoord te geven.",
+    "q2": "Hoe lang duurt een spel?",
+    "a2": "Reken op vijf minuten voor 10 vragen en een kwartier voor 30. Aan het eind kunnen jullie er tien vragen bij doen als jullie nog niet willen stoppen.",
+    "q3": "Kunnen we op afstand spelen?",
+    "a3": "Dit spel speel je tegenover elkaar, op één telefoon, omdat je moet horen wie het eerst antwoordt. Om ieder op de eigen telefoon te spelen, hebben andere spellen op de site een afstandsmodus, zoals ‘Wie van ons twee’ of ‘Ik heb nog nooit’.",
+    "q4": "Wie beslist wie er heeft gewonnen?",
+    "a4": "Jullie! Het spel kent jullie antwoorden niet, het laat alleen de vraag en de aftelling zien. Na ‘Nu!’ tikken jullie op de naam van wie het snelst was, op ‘Gelijkspel’ of op ‘Niemand’.",
+    "q5": "Veranderen de vragen van spel tot spel?",
+    "a5": "Ja. Het spel trekt de vragen willekeurig uit de 75, en bij een revanche begint het met de vragen die jullie nog niet hebben gehad."
+  }
+}

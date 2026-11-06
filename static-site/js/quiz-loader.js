@@ -606,6 +606,12 @@
     // « j'ai eu des frissons une fois », les points vivent dans gd.json.
     // ── Qui pourrait : deux prénoms, une question, on désigne ──
     'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true, distance: true },
+    // ── Questions rapides : 3, 2, 1, répondez ! puis qui a gagné ──
+    // Les catégories vont par tranches d'identifiants dans gd.json : une
+    // question ajoutée se range en prolongeant sa tranche, ou dans une
+    // nouvelle tranche avec son libellé cat_<id>.
+    'questions-rapides': { prefix: 'questionsRapides', engine: 'questions-rapides', totalQ: 0, pool: 0, textOnly: true,
+      categories: [['souvenir', 1, 25], ['autre', 26, 50], ['reflexe', 51, 75]] },
     'oui-non':        { prefix: 'ouiNon', engine: 'oui-non', totalQ: 0, pool: 0, textOnly: true },
 
     // Amoureux de son meilleur ami : deux series selon le genre de l'ami, pour
@@ -1024,6 +1030,29 @@
         return;
       }
       new QuizEngine.QuiPourraitGame(etendre({ container: container, prefix: config.prefix, lang: lang, questions: qpQuestions }, optionsDistance(config)));
+      return;
+    }
+
+    // Questions rapides : même chargement, et chaque question reçoit la
+    // catégorie de sa tranche (souvenir à deux, sur l'autre, réflexe), que
+    // le moteur entrelace au tirage.
+    if (config.engine === 'questions-rapides') {
+      var rqQuestions = [];
+      (config.categories || []).forEach(function(c) {
+        for (var rqi = c[1]; rqi <= c[2]; rqi++) {
+          var cleRq = config.prefix + '.q' + rqi;
+          var texteRq = QuizEngine.tgd(cleRq, null);
+          if (!texteRq || texteRq === cleRq) continue;
+          rqQuestions.push({ id: rqi, texte: texteRq, cat: c[0] });
+        }
+      });
+      if (rqQuestions.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.RapiditeGame({ container: container, prefix: config.prefix, lang: lang, questions: rqQuestions });
       return;
     }
 

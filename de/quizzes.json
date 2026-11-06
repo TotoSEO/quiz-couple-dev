@@ -251,10 +251,10 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele online: 13 kostenlose Spiele für zwei",
+    "title": "Paarspiele online: 14 kostenlose Spiele für zwei",
     "shortTitle": "Paarspiele",
-    "description": "Dreizehn Spiele für zwei: Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer würde eher, Ich hab noch nie, Wer von uns beiden, Würdest du eher, die Dilemma-Fragen, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
-    "metaDescription": "13 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Wer von uns beiden, Würdest du eher, Dilemma-Fragen, Wahrheit oder Pflicht. Ohne Anmeldung."
+    "description": "Vierzehn Spiele für zwei: Schnelle Fragen, Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer würde eher, Ich hab noch nie, Wer von uns beiden, Würdest du eher, die Dilemma-Fragen, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "14 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Wer von uns beiden, Würdest du eher, Dilemma-Fragen, Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -389,6 +389,13 @@
     "metaTitle": "Wer würde eher? Fragen für Paare, das Spiel zu zweit",
     "metaDescription": "Wer würde eher aus einer Laune heraus eine Luxusuhr kaufen? 108 Fragen für Paare, Runden mit 20, 40 oder 60, kostenlos und ohne Anmeldung.",
     "description": "Eine Frage erscheint, ihr zeigt, wer es eher tun würde: einer von euch beiden, oder niemand."
+  },
+  "jeuQuestionsRapides": {
+    "title": "Schnelle Fragen für Paare: das Spiel mit 3, 2, 1, los!",
+    "shortTitle": "Schnelle Fragen",
+    "metaTitle": "Schnelle Fragen für Paare: das Spiel mit 3, 2, 1, los!",
+    "metaDescription": "Eine Frage, ein Countdown, und die schnellste richtige Antwort holt den Punkt. 75 schnelle Fragen für Paare, mit 10, 20 oder 30. Kostenlos, ohne Anmeldung.",
+    "description": "Eine Frage, 3, 2, 1, los! Die schnellste richtige Antwort holt den Punkt."
   },
   "jeuOuiNon": {
     "title": "Ja oder Nein Spiel für Paare online - 120 Fragen",

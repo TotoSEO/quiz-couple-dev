@@ -294,6 +294,10 @@
         "texte": "Cada uno responde preguntas sobre el otro, y se cuenta quién lo conoce mejor."
       },
       {
+        "route": "jeuQuestionsRapides",
+        "texte": "Una pregunta, una cuenta atrás, y quien da primero la respuesta correcta se lleva el punto."
+      },
+      {
         "route": "quizTuPreferes",
         "texte": "Dos opciones cada vez, y se ve si estáis de acuerdo."
       },

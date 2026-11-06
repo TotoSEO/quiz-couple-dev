@@ -294,6 +294,10 @@
         "texte": "Jullie beantwoorden allebei vragen over de ander, en jullie tellen wie de ander het best kent."
       },
       {
+        "route": "jeuQuestionsRapides",
+        "texte": "Een vraag, een aftelling, en wie als eerste het goede antwoord geeft, pakt het punt."
+      },
+      {
         "route": "quizTuPreferes",
         "texte": "Telkens twee keuzes, en jullie zien of jullie het eens zijn."
       },

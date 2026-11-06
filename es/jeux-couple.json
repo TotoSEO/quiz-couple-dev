@@ -1,13 +1,13 @@
 {
   "hero": {
-    "badge": "14 juegos • Gratis • Sin registro",
+    "badge": "15 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Catorce juegos: trece que arrancan en un solo móvil entre los dos, y uno para varias parejas, cada uno en el suyo. Sin cuenta y sin instalar nada."
+    "description": "Quince juegos: catorce que arrancan en un solo móvil entre los dos, y uno para varias parejas, cada uno en el suyo. Sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "14",
-    "jeuxLabel": "juegos para dos",
+    "jeux": "15",
+    "jeuxLabel": "juegos para parejas",
     "cartes": "520",
     "cartesLabel": "cartas, prendas y dilemas",
     "compte": "0",
@@ -25,6 +25,11 @@
     "tuPreferesJoueurs": "2 jugadores",
     "tuPreferesDuree": "10 min",
     "tuPreferesContenu": "100 dilemas",
+    "rapidesNom": "Preguntas rápidas",
+    "rapidesTagline": "3, 2, 1, ¡ya! La respuesta más rápida se lleva el punto",
+    "rapidesContenu": "75 preguntas para jugar en 10, 20 o 30",
+    "rapidesDuree": "5 a 15 min",
+    "rapidesJoueurs": "2 jugadores",
     "actionVeriteNom": "Verdad o reto",
     "actionVeriteTagline": "Cae una carta, verdad o reto, y nunca sabéis cuál de las dos llega.",
     "actionVeriteJoueurs": "2 jugadores",
@@ -96,12 +101,12 @@
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los catorce juegos de esta página se juegan online, gratis, en un solo móvil, salvo el juego de fiesta, donde cada pareja juega en el suyo. Nada que crear, nada que instalar, nada que preparar.",
+    "p3": "Los quince juegos de esta página se juegan online, gratis, en un solo móvil, salvo el juego de fiesta, donde cada pareja juega en el suyo. Nada que crear, nada que instalar, nada que preparar.",
     "p4": "Y según la temporada, <a href=\"/es/quiz-especiales-para-parejas/\">los quiz que cambian con el calendario</a> añaden algunas noches aparte: para Halloween, quién de los dos <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">muere primero en una película de terror</a> o <a href=\"/es/quiz-que-duo-de-supervillanos-formais/\">qué dúo de supervillanos formáis</a>.",
     "plus": [
       {
         "titre": "Juegos para dos sin material, solo un móvil",
-        "texte": "<p>Ni cartas que comprar ni tablero que sacar: salvo el juego de fiesta, todo cabe en un solo móvil, y la mayoría de los juegos se juegan en voz alta. Así que funcionan donde no tenéis nada a mano: en el coche, en el tren, en una cola o en un restaurante. Uno lee, el otro responde, y os vais pasando el móvil.</p><p>En el coche, elegid los que se juegan sin mirar la pantalla, como elegir entre dos opciones o decir cuál de los dos hace qué: el copiloto lee, el conductor responde, ¡y nadie aparta la vista de la carretera!</p>"
+        "texte": "<p>Ni cartas que comprar ni tablero que sacar: salvo el juego de fiesta, todo cabe en un solo móvil, y la mayoría de los juegos se juegan en voz alta. Así que funcionan donde no tenéis nada a mano: en el coche, en el tren, en una cola o en un restaurante. Uno lee, el otro responde, y os vais pasando el móvil.</p><p>En el coche, elegid los que se juegan sin mirar la pantalla, como elegir entre dos opciones, decir cuál de los dos hace qué o <a href=\"/es/preguntas-rapidas-para-parejas/\">ver quién responde más rápido</a>: el copiloto lee, el conductor responde, ¡y nadie aparta la vista de la carretera!</p>"
       }
     ]
   },
@@ -138,7 +143,9 @@
     "row13Moment": "Una noche con amigos, o los dos en el sofá",
     "row13Pourquoi": "Cada carta describe a una persona perfecta con un defecto, y cada uno da su nueva nota del 0 al 10. Os reís de las pequeñas manías y, de paso, descubrís lo que el otro no perdonaría nunca.",
     "row14Moment": "Una noche con varias parejas",
-    "row14Pourquoi": "El único juego de la página que se juega con varias parejas, cada uno en su móvil: un maestro del juego forma las parejas, cada uno adivina las respuestas del otro, y en las rondas especiales se vota a la pareja más fiestera o a la que siempre llega tarde."
+    "row14Pourquoi": "El único juego de la página que se juega con varias parejas, cada uno en su móvil: un maestro del juego forma las parejas, cada uno adivina las respuestas del otro, y en las rondas especiales se vota a la pareja más fiestera o a la que siempre llega tarde.",
+    "row15Moment": "Un aperitivo para dos, cuando os apetece picaros un poco",
+    "row15Pourquoi": "Una cuenta atrás y gana quien responde primero: dónde fue vuestra primera cita, la comida favorita de tu pareja, tres de sus manías... ¡Salen los recuerdos y las bromas!"
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",
@@ -155,7 +162,7 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Estos juegos de pareja son realmente gratis?",
-    "a1": "Sí, los catorce, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
+    "a1": "Sí, los quince, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
     "q2": "¿Hay que descargar una aplicación?",
     "a2": "No. Todo se juega directamente en el navegador, en móvil o en ordenador. Es también lo que permite empezar una partida en diez segundos, justo cuando entran las ganas.",
     "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",
