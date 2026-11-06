@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Gioco in due • 75 domande • Gratis",
+    "title": "Domande veloci di coppia: chi risponde per primo si prende il punto",
+    "titleHighlight": "Domande veloci",
+    "description": "Compare una domanda, 3, 2, 1... via! La risposta giusta più veloce vince il punto. Ricordi di coppia, domande sulla tua dolce metà e riflessi, su un solo telefono."
+  },
+  "jsonLd": {
+    "name": "Domande veloci di coppia"
+  },
+  "section1": {
+    "title": "Il gioco delle domande veloci di coppia: le regole",
+    "intro": "Le domande veloci sono un gioco da fare in due, su un solo telefono appoggiato tra voi. Compare una domanda, per esempio «Dov'è stato il nostro primo appuntamento?», e parte un conto alla rovescia: 3, 2, 1... Via!",
+    "intro2": "In quel momento gridate la vostra risposta tutti e due. Chi dà per primo la risposta giusta si prende il punto. Se rispondete nello stesso momento, è pareggio e ognuno prende un punto. E se nessuno lo sa, nessuno segna e si passa alla prossima.",
+    "etape1Titre": "Scrivete i vostri due nomi",
+    "etape1Texte": "Servono per il punteggio e per i pulsanti alla fine di ogni domanda. Poi scegliete una partita da 10, 20 o 30 domande.",
+    "etape2Titre": "Leggete la domanda durante il conto alla rovescia",
+    "etape2Texte": "Avete tre secondi per leggerla tutti e due. Vietato rispondere prima del «Via!», altrimenti il punto non vale.",
+    "etape3Titre": "Dite chi ha vinto",
+    "etape3Texte": "Due secondi dopo, lo schermo chiede chi è stato più veloce: uno, l'altro, pareggio o nessuno. I giudici siete voi, ed è spesso lì che comincia la discussione...",
+    "apres": "Il punteggio resta in alto sullo schermo per tutta la partita. Alla fine vedete chi ha vinto, quante volte avete risposto nello stesso momento e quante domande sono rimaste senza risposta. E il pulsante della rivincita fa partire un'altra partita con domande che non vi sono ancora capitate!"
+  },
+  "section2": {
+    "title": "La lista delle domande veloci di coppia",
+    "intro": "Le 75 domande del gioco sono divise in tre famiglie, e ogni partita le mescola: non vi capiteranno mai dieci ricordi di fila. Sono brevi apposta, perché una domanda veloce deve leggersi durante il conto alla rovescia e avere una risposta di una o due parole. Le domande più profonde, quelle <a href=\"/it/domande-coppia/\">che ci si fa in coppia con calma</a>, chiedono un'altra serata.",
+    "souvenirsTitre": "I nostri ricordi",
+    "souvenirsTexte": "Conoscete tutti e due la risposta, ed è proprio per questo che vince la velocità. Le date e i «chi ha fatto cosa per primo» finiscono spesso in discussione!",
+    "autreTitre": "Domande sulla tua dolce metà",
+    "autreTexte": "Ognuno risponde sull'altra persona: il suo piatto preferito, il suo numero di scarpe, la sua paura più strana... Con il conto alla rovescia, <a href=\"/it/quiz-chi-conosce-meglio-partner/\">quello che ognuno sa dell'altro</a> deve uscire in due secondi, senza pensarci.",
+    "reflexesTitre": "Riflessi",
+    "reflexesTexte": "Qui bisogna dire tre cose il più in fretta possibile: tre pregi della tua dolce metà, tre film visti insieme, tre soprannomi che vi siete dati... Chi arriva prima a tre, vince.",
+    "apres": "Questi esempi sono scritti parola per parola come nel gioco. Il resto lo scoprirete giocando!"
+  },
+  "section3": {
+    "title": "Domande veloci a due scelte: questo o quello",
+    "intro": "C'è un altro modo di giocare alle domande veloci, il «questo o quello»: si fanno una scelta dopo l'altra tra due parole, e ognuno risponde al volo, senza pensarci. È un po' il fratello minore del «Preferiresti», solo che si sceglie tra due parole invece che tra <a href=\"/it/preferiresti-quiz-coppia/\">due situazioni tra cui decidere</a>. Qui non è una gara: conta il ritmo. Leggetele ad alta voce, una dopo l'altra:",
+    "items": [
+      "Mare o montagna?",
+      "Caffè o tè?",
+      "Film o serie TV?",
+      "Più mattiniero o nottambulo?",
+      "Dolce o salato?",
+      "Gatto o cane?",
+      "Pizza o hamburger?",
+      "Ristorante o cena sul divano?",
+      "Città o campagna?",
+      "Messaggio o chiamata?",
+      "Alba o tramonto?",
+      "Viaggio organizzato o all'avventura?"
+    ],
+    "apres": "Rispondete tutti e due nello stesso momento e contate le risposte uguali. Su dodici scelte, ce n'è quasi sempre una o due che sorprendono..."
+  },
+  "section4": {
+    "title": "Qualche regola perché resti divertente",
+    "intro": "Il gioco non controlla le vostre risposte, siete voi a dire chi ha vinto. Per questo conviene mettersi d'accordo su tre o quattro regole prima della prima domanda:",
+    "resumeTitre": "Le regole di casa",
+    "resume1": "<strong>Nessuno risponde prima del «Via!»:</strong> una risposta data durante il conto alla rovescia non vale.",
+    "resume2": "<strong>Vale la prima risposta:</strong> vietato correggersi dopo aver sentito quella dell'altro.",
+    "resume3": "<strong>Nel dubbio, è pareggio:</strong> se non riuscite a capire chi ha parlato per primo, ognuno prende il suo punto e si va avanti.",
+    "resume4": "<strong>Nelle domande sulla tua dolce metà, decide la persona di cui si parla:</strong> solo lei sa se il suo piatto preferito sono davvero le lasagne.",
+    "apres": "Un ultimo consiglio: appoggiate il telefono in piano tra voi due, così ognuno legge la domanda nello stesso momento."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Cosa sono le domande veloci di coppia?",
+    "a1": "Sono domande brevi a cui si risponde con una o due parole, il più in fretta possibile. In coppia riguardano i vostri ricordi e quello che sapete l'uno dell'altra. Lo scopo è dare per primi la risposta giusta.",
+    "q2": "Quanto dura una partita?",
+    "a2": "Circa cinque minuti per 10 domande e un quarto d'ora per 30. Alla fine potete aggiungere altre dieci domande se non avete voglia di fermarvi.",
+    "q3": "Si può giocare a distanza?",
+    "a3": "Questo si gioca faccia a faccia, su un solo telefono, perché bisogna sentire chi risponde per primo. Per giocare ognuno sul suo telefono, altri giochi del sito hanno la modalità a distanza, come «Chi di noi due» o «Non ho mai».",
+    "q4": "Chi decide chi ha vinto?",
+    "a4": "Voi! Il gioco non conosce le vostre risposte, mostra solo la domanda e il conto alla rovescia. Dopo il «Via!», toccate il nome del più veloce, «Pareggio» o «Nessuno».",
+    "q5": "Le domande cambiano da una partita all'altra?",
+    "a5": "Sì. Il gioco pesca le domande a caso tra le 75, e quando fate la rivincita comincia da quelle che non vi sono ancora capitate."
+  }
+}

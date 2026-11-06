@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Juego para dos • 75 preguntas • Gratis",
+    "title": "Preguntas rápidas para parejas: quien responde primero se lleva el punto",
+    "titleHighlight": "Preguntas rápidas",
+    "description": "Aparece una pregunta, 3, 2, 1... ¡ya! La respuesta correcta más rápida gana el punto. Recuerdos de los dos, preguntas sobre tu pareja y reflejos, en un solo móvil."
+  },
+  "jsonLd": {
+    "name": "Preguntas rápidas para parejas"
+  },
+  "section1": {
+    "title": "El juego de preguntas rápidas en pareja: las reglas",
+    "intro": "Las preguntas rápidas son un juego para dos, en un solo móvil puesto entre vosotros. Aparece una pregunta, por ejemplo «¿Dónde fue nuestra primera cita?», y empieza una cuenta atrás: 3, 2, 1... ¡Ya!",
+    "intro2": "En ese momento, los dos gritáis vuestra respuesta. Quien da primero la respuesta correcta se lleva el punto. Si respondéis a la vez, es empate y cada uno suma un punto. Y si nadie lo sabe, nadie suma y pasáis a la siguiente.",
+    "etape1Titre": "Escribid vuestros dos nombres",
+    "etape1Texte": "Sirven para el marcador y para los botones del final de cada pregunta. Luego elegid una partida de 10, 20 o 30 preguntas.",
+    "etape2Titre": "Leed la pregunta durante la cuenta atrás",
+    "etape2Texte": "Tenéis tres segundos para leerla los dos. Nada de responder antes del «¡Ya!», o el punto no cuenta.",
+    "etape3Titre": "Decid quién ha ganado",
+    "etape3Texte": "Dos segundos después, la pantalla pregunta quién ha sido más rápido: uno, el otro, empate o nadie. Los jueces sois vosotros, y muchas veces ahí empieza el debate...",
+    "apres": "El marcador se queda arriba de la pantalla durante toda la partida. Al final veis quién ha ganado, cuántas veces habéis respondido a la vez y cuántas preguntas se han quedado sin respuesta. ¡Y el botón de la revancha lanza otra partida con preguntas que todavía no os han salido!"
+  },
+  "section2": {
+    "title": "La lista de preguntas rápidas para parejas",
+    "intro": "Las 75 preguntas del juego van en tres familias, y cada partida las mezcla, así que nunca os saldrán diez recuerdos seguidos. Son cortas a propósito: una pregunta rápida tiene que leerse durante la cuenta atrás y responderse con una o dos palabras. Las preguntas más profundas, esas <a href=\"/es/preguntas-pareja/\">que se hacen en pareja con calma</a>, piden otra noche.",
+    "souvenirsTitre": "Nuestros recuerdos",
+    "souvenirsTexte": "Los dos sabéis la respuesta, y justo por eso se juega a la velocidad. ¡Las fechas y los «quién hizo qué primero» suelen acabar en debate!",
+    "autreTitre": "Preguntas sobre tu pareja",
+    "autreTexte": "Cada uno responde sobre el otro: su comida favorita, su número de pie, su miedo más raro... Con la cuenta atrás, <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">lo que cada uno sabe del otro</a> tiene que salir en dos segundos, sin pensar.",
+    "reflexesTitre": "Reflejos",
+    "reflexesTexte": "Aquí hay que decir tres cosas lo más rápido posible: tres virtudes de tu pareja, tres películas que hayáis visto, tres apodos que os hayáis puesto... Quien llega antes a tres, gana.",
+    "apres": "Estos ejemplos están escritos palabra por palabra como en el juego. ¡El resto lo descubriréis jugando!"
+  },
+  "section3": {
+    "title": "Preguntas rápidas con dos opciones: esto o aquello",
+    "intro": "Hay otra forma de jugar a las preguntas rápidas, el «esto o aquello»: se encadenan elecciones entre dos palabras y cada uno responde al momento, sin pensar. Es como el hermano pequeño del «¿Qué prefieres?», solo que se eligen dos palabras en lugar de <a href=\"/es/quiz-preferirias-pareja/\">dos situaciones entre las que decidir</a>. Aquí no es una carrera: lo que cuenta es el ritmo. Leedlas en voz alta, una detrás de otra:",
+    "items": [
+      "¿Playa o montaña?",
+      "¿Café o té?",
+      "¿Película o serie?",
+      "¿Más de mañanas o de noches?",
+      "¿Dulce o salado?",
+      "¿Gatos o perros?",
+      "¿Pizza o hamburguesa?",
+      "¿Restaurante o cena en el sofá?",
+      "¿Ciudad o campo?",
+      "¿Mensaje o llamada?",
+      "¿Amanecer o atardecer?",
+      "¿Viaje organizado o a la aventura?"
+    ],
+    "apres": "Respondéis los dos a la vez y contáis las respuestas iguales. De doce elecciones, casi siempre hay una o dos que sorprenden..."
+  },
+  "section4": {
+    "title": "Unas reglas para que siga siendo divertido",
+    "intro": "El juego no comprueba vuestras respuestas, sois vosotros quienes decidís quién ha ganado. Así que mejor poneos de acuerdo en tres o cuatro reglas antes de la primera pregunta:",
+    "resumeTitre": "Las reglas de la casa",
+    "resume1": "<strong>Nadie responde antes del «¡Ya!»:</strong> una respuesta lanzada durante la cuenta atrás no cuenta.",
+    "resume2": "<strong>La primera respuesta es la que vale:</strong> no se puede corregir después de oír la del otro.",
+    "resume3": "<strong>En caso de duda, empate:</strong> si no sabéis quién ha hablado primero, cada uno suma su punto y seguís.",
+    "resume4": "<strong>En las preguntas sobre tu pareja, decide la persona de la que se habla:</strong> solo ella sabe si su comida favorita es de verdad la lasaña.",
+    "apres": "Un último consejo: dejad el móvil plano entre los dos, para que cada uno lea la pregunta en el mismo momento."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Qué son las preguntas rápidas para parejas?",
+    "a1": "Son preguntas cortas que se responden con una o dos palabras, lo más rápido posible. En pareja, tratan de vuestros recuerdos y de lo que sabéis el uno del otro. El objetivo es ser el primero en dar la respuesta correcta.",
+    "q2": "¿Cuánto dura una partida?",
+    "a2": "Unos cinco minutos para 10 preguntas y un cuarto de hora para 30. Al final, podéis añadir diez preguntas más si no tenéis ganas de parar.",
+    "q3": "¿Se puede jugar a distancia?",
+    "a3": "Este se juega cara a cara, en un solo móvil, porque hay que oír quién responde primero. Para jugar cada uno en su móvil, otros juegos de la web tienen modo a distancia, como «Quién de los dos» o «Yo nunca».",
+    "q4": "¿Quién decide quién ha ganado?",
+    "a4": "¡Vosotros! El juego no conoce vuestras respuestas, solo muestra la pregunta y la cuenta atrás. Después del «¡Ya!», tocáis el nombre del más rápido, «Empate» o «Nadie».",
+    "q5": "¿Cambian las preguntas de una partida a otra?",
+    "a5": "Sí. El juego saca las preguntas al azar entre las 75, y cuando jugáis la revancha, empieza por las que todavía no os han salido."
+  }
+}

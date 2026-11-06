@@ -294,6 +294,10 @@
         "texte": "Jeder beantwortet Fragen über den anderen, und ihr zählt, wer den anderen besser kennt."
       },
       {
+        "route": "jeuQuestionsRapides",
+        "texte": "Eine Frage, ein Countdown, und wer zuerst richtig antwortet, holt den Punkt."
+      },
+      {
         "route": "quizTuPreferes",
         "texte": "Jedes Mal zwei Möglichkeiten, und ihr seht, ob ihr euch einig seid."
       },

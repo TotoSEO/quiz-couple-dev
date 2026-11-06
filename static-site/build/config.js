@@ -146,6 +146,7 @@ export const ROUTE_SLUGS = {
   pourContre: { fr: 'quiz-pour-contre-couple', en: 'for-or-against-couple-game', es: 'juego-a-favor-o-en-contra-pareja', de: 'dafuer-oder-dagegen-paarspiel', it: 'gioco-pro-o-contro-coppia', nl: 'voor-of-tegen-stellingen' },
   jeuJamais: { fr: 'je-nai-jamais-jeu-couple', en: 'never-have-i-ever-couples-game', es: 'yo-nunca-juego-pareja', de: 'ich-hab-noch-nie-paar-spiel', it: 'non-ho-mai-gioco-coppia', nl: 'ik-heb-nog-nooit-vragen' },
   jeuQuiPourrait: { fr: 'qui-pourrait-couple', en: 'who-could-couples-game', es: 'quien-podria-juego-pareja', de: 'wer-koennte-paar-spiel', it: 'chi-potrebbe-gioco-coppia', nl: 'wie-zou-eerder-vragen' },
+  jeuQuestionsRapides: { fr: 'questions-rapides-couple', en: 'rapid-fire-questions-for-couples', es: 'preguntas-rapidas-para-parejas', de: 'schnelle-fragen-fuer-paare', it: 'domande-veloci-di-coppia', nl: 'snelle-vragen-voor-koppels' },
   jeuOuiNon: { fr: 'jeu-oui-non-couple', en: 'yes-or-no-couples-game', es: 'juego-si-o-no-pareja', de: 'ja-oder-nein-paar-spiel', it: 'gioco-si-o-no-coppia', nl: 'ja-of-nee-vragen' },
   jeuPhrases: { fr: 'phrases-a-completer-couple', en: 'finish-the-sentence-couples-game', es: 'frases-para-completar-pareja', de: 'satz-vervollstaendigen-paarspiel', it: 'frasi-da-completare-coppia', nl: 'maak-de-zin-af' },
   jeuDixMais: { fr: 'jeu-c-est-un-10-mais', en: 'hes-a-10-but-game', es: 'juego-es-un-10-pero', de: 'er-ist-eine-10-aber-spiel', it: 'gioco-e-un-10-ma', nl: 'hij-is-een-10-maar' },
@@ -274,6 +275,7 @@ export const QUIZ_FEATURED = {
   testFinCouple:     { file: 'corde-effilochee',           old: null,                  alt: { fr: 'Une corde tendue, effilochée en son centre, dont il ne reste que quelques fils', en: 'A taut rope, frayed at its centre, with only a few threads still holding', es: 'Una cuerda tensa, deshilachada en el centro, de la que solo quedan unos hilos', de: 'Ein gespanntes Seil, in der Mitte ausgefranst, nur noch wenige Fäden halten', it: 'Una corda tesa, sfilacciata al centro, di cui restano solo pochi fili', nl: 'Een gespannen touw, in het midden gerafeld, waarvan nog maar een paar draden over zijn' } },
   pourContre:        { file: 'pour-contre-pouces',       old: null,                  alt: { fr: 'Une balance en laiton sur une table en bois, des pétales de rose sur un plateau et un galet sur l\'autre, pour le jeu pour ou contre en couple', en: 'A brass balance scale on a wooden table, rose petals on one pan and a pebble on the other, for the for or against couple game', es: 'Una balanza de latón sobre una mesa de madera, pétalos de rosa en un platillo y un guijarro en el otro, para el juego a favor o en contra en pareja', de: 'Eine Messingwaage auf einem Holztisch, Rosenblätter in der einen Schale und ein Kieselstein in der anderen, für das Paarspiel dafür oder dagegen', it: 'Una bilancia di ottone su un tavolo di legno, petali di rosa su un piatto e un ciottolo sull\'altro, per il gioco pro o contro in coppia', nl: 'Een koperen weegschaal op een houten tafel, rozenblaadjes in de ene schaal en een kiezelsteen in de andere, voor het spel voor of tegen als koppel' } },
   jeuJamais:          { file: 'candles-blown-out',           old: null,                  alt: { fr: "Une rangée de petites bougies pastel sur un plateau en bois, trois déjà soufflées avec un filet de fumée, les autres encore allumées", en: "A row of small pastel candles on a wooden tray, three already blown out with wisps of smoke, the others still burning", es: "Una fila de pequeñas velas pastel sobre una bandeja de madera, tres ya apagadas con un hilo de humo, las demás aún encendidas", de: "Eine Reihe kleiner Pastellkerzen auf einem Holztablett, drei schon ausgeblasen mit dünnen Rauchfäden, die anderen brennen noch", it: "Una fila di piccole candele pastello su un vassoio di legno, tre già spente con un filo di fumo, le altre ancora accese", nl: 'Een rij kleine pastelkleurige kaarsjes op een houten dienblad, drie al uitgeblazen met een sliertje rook, de andere branden nog' } },
+  jeuQuestionsRapides: { file: 'rapid-buzzer',               old: null,                  alt: { fr: "Deux mains se précipitent vers un gros buzzer rouge posé sur une table en bois, dans un salon éclairé par une lampe", en: "Two hands racing toward a big red buzzer on a wooden table, in a living room lit by a lamp", es: "Dos manos se lanzan hacia un gran pulsador rojo sobre una mesa de madera, en un salón iluminado por una lámpara", de: "Zwei Hände greifen nach einem großen roten Buzzer auf einem Holztisch, in einem von einer Lampe beleuchteten Wohnzimmer", it: "Due mani si lanciano verso un grande pulsante rosso su un tavolo di legno, in un salotto illuminato da una lampada", nl: "Twee handen grijpen naar een grote rode buzzer op een houten tafel, in een woonkamer met een brandende lamp" } },
   jeuQuiPourrait:     { file: 'two-cards-face-off',          old: null,                  alt: { fr: "Deux cartes vierges posées face à face sur une petite table ronde en bois, une verte et une jaune, comme prêtes à être retournées", en: "Two blank cards lying face to face on a small round wooden table, one green and one yellow, as if about to be flipped", es: "Dos cartas en blanco frente a frente sobre una pequeña mesa redonda de madera, una verde y otra amarilla, como a punto de darse la vuelta", de: "Zwei leere Karten liegen sich auf einem kleinen runden Holztisch gegenüber, eine grün und eine gelb, als würden sie gleich umgedreht", it: "Due carte bianche una di fronte all'altra su un tavolino rotondo di legno, una verde e una gialla, come pronte a essere girate", nl: 'Twee lege kaarten tegenover elkaar op een klein rond houten tafeltje, een groene en een gele, alsof ze zo omgedraaid worden' } },
   jeuOuiNon:         { file: 'oui-non-vote',           old: null,                  alt: { fr: 'Deux cartes de vote face à face, une verte pour le oui et une rouge pour le non', en: 'Two voting cards facing each other, a green one for yes and a red one for no', es: 'Dos tarjetas de voto frente a frente, una verde para el sí y una roja para el no', de: 'Zwei Abstimmungskarten einander gegenüber, eine grüne für Ja und eine rote für Nein', it: 'Due carte per votare una di fronte all\'altra, una verde per il sì e una rossa per il no', nl: 'Twee stemkaarten tegenover elkaar, een groene voor ja en een rode voor nee' } },
   jeuPhrases:        { file: 'deux-bulles-phrase',    old: null,                  alt: { fr: 'Deux bulles de conversation, une rose et une violette, qui finissent chacune par trois points de suspension', en: 'Two speech bubbles, one pink and one purple, each ending in three dots', es: 'Dos bocadillos de conversación, uno rosa y otro morado, que terminan con tres puntos suspensivos', de: 'Zwei Sprechblasen, eine rosa und eine violette, die beide mit drei Punkten enden', it: 'Due fumetti, uno rosa e uno viola, che finiscono entrambi con tre puntini', nl: 'Twee tekstballonnen, een roze en een paarse, die allebei eindigen op drie puntjes' } },
@@ -379,6 +381,7 @@ export const ROUTE_CONFIG = {
   pourContre: { template: 'jeu-pour-contre', namespaces: ['jeu-pour-contre', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuJamais: { template: 'jeu-jamais', namespaces: ['jeu-jamais', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuQuiPourrait: { template: 'jeu-qui-pourrait', namespaces: ['jeu-qui-pourrait', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuQuestionsRapides: { template: 'jeu-questions-rapides', namespaces: ['jeu-questions-rapides', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuOuiNon: { template: 'jeu-oui-non', namespaces: ['jeu-oui-non', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuPhrases: { template: 'jeu-phrases', namespaces: ['jeu-phrases', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuDixMais: { template: 'jeu-dix-mais', namespaces: ['jeu-dix-mais', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -503,6 +506,7 @@ export const BILAN_ENTREES = {
   jeuQuiDeNous: { groupe: 'jeu', id: 'qui-de-nous' },
   jeuJamais: { groupe: 'jeu', id: 'jamais' },
   jeuQuiPourrait: { groupe: 'jeu', id: 'qui-pourrait' },
+  jeuQuestionsRapides: { groupe: 'jeu', id: 'questions-rapides' },
   jeuDixMais: { groupe: 'jeu', id: 'dix-mais' },
   jeuSoireeCouples: { groupe: 'jeu', id: 'soiree' },
   jeuOuiNon: { groupe: 'jeu', id: 'oui-non' },
@@ -598,7 +602,7 @@ export function saisonActive(maintenant = new Date()) {
 export const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
   'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
-  'jeuOuiNon', 'jeuPhrases', 'jeuDixMais', 'jeuSoireeCouples',
+  'jeuOuiNon', 'jeuPhrases', 'jeuDixMais', 'jeuSoireeCouples', 'jeuQuestionsRapides',
 ];
 
 // Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
@@ -638,7 +642,7 @@ export const FAMILLES_NAV = {
   jeux: [
     'jeuSoireeCouples',
     'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-    'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
+    'jeuPlateau', 'jeuQuiDeNous', 'jeuQuestionsRapides', 'jeuDilemmes', 'pourContre', 'jeuJamais',
     'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
   ],
   // Les quiz spéciaux de saison (16 octobre 2026, demande de Thomas) : le hub
@@ -2227,6 +2231,7 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuDilemmes:      ['choses-pas-accepter-couple', 'disputes-couple'],
   jeuJamais:        ['questions-intimes-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuQuiPourrait:   ['questions-pour-mieux-se-connaitre-en-couple', 'questions-couple-telephone-message'],
+  jeuQuestionsRapides: ['questions-pour-mieux-se-connaitre-en-couple', 'questions-a-poser-a-son-copain'],
   jeuOuiNon:        ['choses-pas-accepter-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
   jeuPhrases:       ['questions-pour-mieux-se-connaitre-en-couple', 'questions-intimes-couple'],

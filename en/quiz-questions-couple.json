@@ -294,6 +294,10 @@
         "texte": "Each of you answers questions about the other, and you count who knows the other best."
       },
       {
+        "route": "jeuQuestionsRapides",
+        "texte": "A question, a countdown, and whoever gives the right answer first scores the point."
+      },
+      {
         "route": "quizTuPreferes",
         "texte": "Two choices every time, and you find out whether you agree."
       },

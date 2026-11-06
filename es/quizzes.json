@@ -251,10 +251,10 @@
     "metaDescription": "¿Alma gemela o solo una bonita historia? 20 preguntas, un índice y un veredicto que no se limita a halagar. Test gratis, solo o en pareja, sin registro."
   },
   "jeuxCouple": {
-    "title": "Juegos para parejas online: 13 juegos gratis para jugar en pareja",
+    "title": "Juegos para parejas online: 14 juegos gratis para jugar en pareja",
     "shortTitle": "Juegos para parejas",
-    "description": "Trece juegos para jugar en pareja: es un 10 pero, las frases para completar, el sí o no, a favor o en contra, quién podría, yo nunca, quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el tablero.",
-    "metaDescription": "13 juegos para parejas gratis en un solo móvil: sí o no, a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto y la ruleta de prendas. Sin registro."
+    "description": "Catorce juegos para jugar en pareja: las preguntas rápidas, es un 10 pero, las frases para completar, el sí o no, a favor o en contra, quién podría, yo nunca, quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el tablero.",
+    "metaDescription": "14 juegos para parejas gratis en un solo móvil: sí o no, a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto y la ruleta de prendas. Sin registro."
   },
   "jeuGages": {
     "title": "Prendas para parejas: el juego de la ruleta, 140 prendas",
@@ -389,6 +389,13 @@
     "metaTitle": "¿Quién podría? Juego de pareja online con 100+ preguntas",
     "metaDescription": "Una pregunta, vuestros dos nombres, y señaláis quién sería capaz. 108 preguntas, partidas de 20, 40 o 60, gratis y sin registro.",
     "description": "Aparece una pregunta y señaláis quién sería capaz: uno de los dos, o nadie."
+  },
+  "jeuQuestionsRapides": {
+    "title": "Preguntas rápidas para parejas: el juego del 3, 2, 1, ¡ya!",
+    "shortTitle": "Preguntas rápidas",
+    "metaTitle": "Preguntas rápidas para parejas: el juego del 3, 2, 1, ¡ya!",
+    "metaDescription": "Una pregunta, una cuenta atrás y la respuesta correcta más rápida se lleva el punto. 75 preguntas rápidas para parejas, en 10, 20 o 30. Gratis, sin registro.",
+    "description": "Una pregunta, 3, 2, 1, ¡ya! La respuesta correcta más rápida se lleva el punto."
   },
   "jeuOuiNon": {
     "title": "Juego Sí o No para parejas online - 120 preguntas",

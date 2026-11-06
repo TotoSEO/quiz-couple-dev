@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Jeu à deux • 75 questions • Gratuit",
+    "title": "Questions rapides pour couple : le premier qui répond marque le point",
+    "titleHighlight": "Questions rapides",
+    "description": "Une question s'affiche, 3, 2, 1... répondez ! La bonne réponse la plus rapide gagne le point. Des souvenirs à deux, des questions sur l'autre et des réflexes, sur un seul téléphone."
+  },
+  "jsonLd": {
+    "name": "Questions rapides pour couple"
+  },
+  "section1": {
+    "title": "Le jeu de questions rapides en couple : les règles",
+    "intro": "Les questions rapides, c'est un jeu qu'on fait à deux, sur un seul téléphone posé entre vous. Une question s'affiche, par exemple « Où s'est passé notre premier rendez-vous ? », et un compte à rebours démarre : 3, 2, 1... Répondez !",
+    "intro2": "À ce moment-là, vous criez votre réponse tous les deux. Celui ou celle qui donne la bonne réponse en premier marque le point. Si vous répondez en même temps, c'est égalité et chacun prend un point. Et si personne ne sait, personne ne marque, on passe à la suivante.",
+    "etape1Titre": "Entrez vos deux prénoms",
+    "etape1Texte": "Ils servent pour le score et pour les boutons de fin de question. Choisissez ensuite une partie de 10, 20 ou 30 questions.",
+    "etape2Titre": "Lisez la question pendant le compte à rebours",
+    "etape2Texte": "Vous avez trois secondes pour la lire tous les deux. Pas le droit de répondre avant « Répondez ! », sinon le point ne compte pas.",
+    "etape3Titre": "Dites qui a gagné",
+    "etape3Texte": "Deux secondes plus tard, l'écran demande qui a été le plus rapide : l'un, l'autre, égalité ou personne. C'est vous qui jugez, et c'est souvent là que le débat commence...",
+    "apres": "Le score reste affiché en haut de l'écran pendant toute la partie. À la fin, vous voyez qui a gagné, combien de fois vous avez répondu en même temps et combien de questions sont restées sans réponse. Et le bouton de la revanche relance une partie avec des questions que vous n'avez pas encore eues !"
+  },
+  "section2": {
+    "title": "La liste des questions rapides pour couple",
+    "intro": "Les 75 questions du jeu sont rangées en trois familles, et une partie les mélange toujours : vous n'aurez jamais dix souvenirs d'affilée. Elles sont courtes exprès, parce qu'une question rapide doit se lire pendant le compte à rebours et se répondre en un mot ou deux. Les questions plus profondes, celles <a href=\"/questions-couple/\">qu'on se pose en couple</a> en prenant son temps, demandent une autre soirée.",
+    "souvenirsTitre": "Les souvenirs à deux",
+    "souvenirsTexte": "Vous connaissez tous les deux la réponse, et c'est justement pour ça que ça se joue à la vitesse. Les dates et les « qui a fait quoi en premier » finissent souvent en débat !",
+    "autreTitre": "Les questions sur l'autre",
+    "autreTexte": "Chacun répond à propos de l'autre : son plat préféré, sa pointure, sa peur la plus bizarre... Avec le compte à rebours, <a href=\"/quiz-qui-connait-mieux-partenaire/\">ce que chacun sait de l'autre</a> doit sortir en deux secondes, sans réfléchir.",
+    "reflexesTitre": "Les réflexes",
+    "reflexesTexte": "Là, il faut citer trois choses le plus vite possible : trois qualités de l'autre, trois films vus ensemble, trois surnoms que vous vous êtes donnés... Le premier qui arrive à trois a gagné.",
+    "apres": "Ces exemples sont écrits mot pour mot comme dans le jeu. Le reste, vous le découvrirez en jouant !"
+  },
+  "section3": {
+    "title": "Des questions rapides à deux choix",
+    "intro": "Il existe une autre façon de jouer aux questions rapides, connue en anglais sous le nom de « this or that » : on enchaîne des choix entre deux mots, et chacun répond du tac au tac, sans réfléchir. C'est un peu le petit frère du « Tu préfères », sauf qu'on oppose deux mots au lieu de <a href=\"/tu-preferes-couple-quiz/\">deux situations à départager</a>. Ici, ce n'est pas une course : c'est le rythme qui compte. Lisez-les à voix haute, l'un après l'autre :",
+    "items": [
+      "Plage ou montagne ?",
+      "Café ou thé ?",
+      "Film ou série ?",
+      "Plutôt du matin ou du soir ?",
+      "Sucré ou salé ?",
+      "Chat ou chien ?",
+      "Pizza ou burger ?",
+      "Restaurant ou plateau télé ?",
+      "Ville ou campagne ?",
+      "Message ou appel ?",
+      "Lever ou coucher de soleil ?",
+      "Voyage organisé ou à l'aventure ?"
+    ],
+    "apres": "Vous répondez chacun en même temps, et vous comptez vos réponses identiques. Sur douze choix, il y en a presque toujours un ou deux qui surprennent..."
+  },
+  "section4": {
+    "title": "Quelques règles pour que ça reste drôle",
+    "intro": "Le jeu ne vérifie pas vos réponses, c'est vous qui dites qui a gagné. Du coup, mieux vaut se mettre d'accord sur trois ou quatre règles avant la première question :",
+    "resumeTitre": "Les règles de la maison",
+    "resume1": "<strong>Personne ne répond avant « Répondez ! » :</strong> une réponse lancée pendant le compte à rebours ne compte pas.",
+    "resume2": "<strong>La première réponse donnée est la bonne :</strong> pas le droit de corriger après avoir entendu l'autre.",
+    "resume3": "<strong>En cas de doute, c'est égalité :</strong> si vous n'arrivez pas à savoir qui a parlé en premier, chacun prend son point et on avance.",
+    "resume4": "<strong>Pour les questions sur l'autre, c'est la personne concernée qui tranche :</strong> elle seule sait si son plat préféré, c'est bien les lasagnes.",
+    "apres": "Un dernier conseil : posez le téléphone à plat entre vous deux, pour que chacun lise la question en même temps."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "C'est quoi, des questions rapides en couple ?",
+    "a1": "Ce sont des questions courtes, auxquelles on répond en un mot ou deux, le plus vite possible. En couple, elles portent sur vos souvenirs et sur ce que vous savez de l'autre. Le but, c'est d'être le premier à donner la bonne réponse.",
+    "q2": "Combien de temps dure une partie ?",
+    "a2": "Comptez cinq minutes pour 10 questions et un quart d'heure pour 30. À la fin, vous pouvez rajouter dix questions si vous n'avez pas envie de vous arrêter.",
+    "q3": "Peut-on jouer à distance ?",
+    "a3": "Ce jeu-là se joue en face, sur un seul téléphone, parce qu'il faut entendre qui répond en premier. Pour jouer chacun sur son téléphone, d'autres jeux du site ont un mode à distance, comme « Qui de nous deux » ou « Je n'ai jamais ».",
+    "q4": "Qui décide qui a gagné ?",
+    "a4": "Vous ! Le jeu ne connaît pas vos réponses, il affiche la question et le compte à rebours. Après « Répondez ! », c'est vous qui appuyez sur le prénom du plus rapide, sur « Égalité » ou sur « Personne ».",
+    "q5": "Les questions changent-elles d'une partie à l'autre ?",
+    "a5": "Oui. Le jeu tire les questions au hasard parmi les 75, et quand vous faites une revanche, il commence par celles que vous n'avez pas encore eues."
+  }
+}

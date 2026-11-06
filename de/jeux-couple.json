@@ -1,13 +1,13 @@
 {
   "hero": {
-    "badge": "14 Spiele • Kostenlos • Ohne Anmeldung",
+    "badge": "15 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Paarspiele und Beziehungsspiele, sofort spielbar",
     "titleHighlight": "Beziehungsspiele",
-    "description": "Vierzehn Spiele: dreizehn, die auf einem einzigen Handy zwischen euch beiden starten, und eines für mehrere Paare, jeder auf dem eigenen. Ohne Konto und ohne Installation."
+    "description": "Fünfzehn Spiele: vierzehn, die auf einem einzigen Handy zwischen euch beiden starten, und eines für mehrere Paare, jeder auf dem eigenen. Ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "14",
-    "jeuxLabel": "Spiele zu zweit",
+    "jeux": "15",
+    "jeuxLabel": "Paarspiele",
     "cartes": "520",
     "cartesLabel": "Karten, Strafen und Dilemmas",
     "compte": "0",
@@ -25,6 +25,11 @@
     "tuPreferesJoueurs": "2 Spieler",
     "tuPreferesDuree": "10 Min.",
     "tuPreferesContenu": "100 Dilemmas",
+    "rapidesNom": "Schnelle Fragen",
+    "rapidesTagline": "3, 2, 1, los! Die schnellste Antwort holt den Punkt",
+    "rapidesContenu": "75 Fragen, gespielt in Runden mit 10, 20 oder 30",
+    "rapidesDuree": "5 bis 15 Min",
+    "rapidesJoueurs": "2 Spieler",
     "actionVeriteNom": "Wahrheit oder Pflicht",
     "actionVeriteTagline": "Eine Karte fällt, Wahrheit oder Pflicht, und ihr wisst nie, welche davon kommt.",
     "actionVeriteJoueurs": "2 Spieler",
@@ -96,12 +101,12 @@
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die vierzehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy, bis auf das Partyspiel, bei dem jedes Paar auf dem eigenen spielt. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten.",
+    "p3": "Die fünfzehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy, bis auf das Partyspiel, bei dem jedes Paar auf dem eigenen spielt. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten.",
     "p4": "Und je nach Jahreszeit sorgen <a href=\"/de/besondere-paar-quiz/\">die Quiz, die mit dem Kalender wechseln</a>, für ein paar Abende der anderen Art: zu Halloween <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> oder <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">welches Superschurken-Duo ihr bildet</a>.",
     "plus": [
       {
         "titre": "Spiele für Paare ohne Material, nur mit einem Handy",
-        "texte": "<p>Keine Karten zu kaufen, kein Spielbrett aufzubauen: Bis auf das Partyspiel passt alles auf ein einziges Handy, und die meisten Spiele spielt man laut. Deshalb funktionieren sie überall, wo ihr nichts zur Hand habt, im Auto, im Zug, in der Warteschlange oder im Restaurant. Einer liest vor, der andere antwortet, und ihr reicht das Handy hin und her.</p><p>Im Auto nehmt ihr am besten die Spiele, bei denen niemand aufs Display schauen muss, etwa zwischen zwei Möglichkeiten wählen oder sagen, wer von euch beiden was tut: Der Beifahrer liest, der Fahrer antwortet, und niemand nimmt die Augen von der Straße!</p>"
+        "texte": "<p>Keine Karten zu kaufen, kein Spielbrett aufzubauen: Bis auf das Partyspiel passt alles auf ein einziges Handy, und die meisten Spiele spielt man laut. Deshalb funktionieren sie überall, wo ihr nichts zur Hand habt, im Auto, im Zug, in der Warteschlange oder im Restaurant. Einer liest vor, der andere antwortet, und ihr reicht das Handy hin und her.</p><p>Im Auto nehmt ihr am besten die Spiele, bei denen niemand aufs Display schauen muss, etwa zwischen zwei Möglichkeiten wählen, sagen, wer von euch beiden was tut, oder <a href=\"/de/schnelle-fragen-fuer-paare/\">schauen, wer schneller antwortet</a>: Der Beifahrer liest, der Fahrer antwortet, und niemand nimmt die Augen von der Straße!</p>"
       }
     ]
   },
@@ -138,7 +143,9 @@
     "row13Moment": "Ein Abend mit Freunden, oder zu zweit auf dem Sofa",
     "row13Pourquoi": "Jede Karte beschreibt einen perfekten Menschen mit einer Macke, und jeder gibt seine neue Note von 0 bis 10. Man lacht über die kleinen Eigenheiten und erfährt nebenbei, was für den anderen ein No-Go ist.",
     "row14Moment": "Ein Abend mit mehreren Paaren",
-    "row14Pourquoi": "Das einzige Spiel dieser Seite für mehrere Paare, jeder auf dem eigenen Handy: Ein Spielleiter bildet die Paare, jeder errät die Antworten des anderen, und in den Sonderrunden stimmen alle für das Paar ab, das am meisten feiert oder immer zu spät kommt."
+    "row14Pourquoi": "Das einzige Spiel dieser Seite für mehrere Paare, jeder auf dem eigenen Handy: Ein Spielleiter bildet die Paare, jeder errät die Antworten des anderen, und in den Sonderrunden stimmen alle für das Paar ab, das am meisten feiert oder immer zu spät kommt.",
+    "row15Moment": "Ein Drink zu zweit, wenn ihr euch gegenseitig aufziehen wollt",
+    "row15Pourquoi": "Ein Countdown, und wer zuerst antwortet, gewinnt: wo euer erstes Date war, das Lieblingsessen deines Schatzes, drei seiner Marotten... Die Erinnerungen kommen hoch, und es wird gelacht!"
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der funktioniert",
@@ -155,7 +162,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Sind diese Paarspiele wirklich kostenlos?",
-    "a1": "Ja, alle vierzehn, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
+    "a1": "Ja, alle fünfzehn, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
     "q2": "Muss man eine App herunterladen?",
     "a2": "Nein. Alles läuft direkt im Browser, auf dem Handy wie am Rechner. Genau deshalb startet eine Partie in zehn Sekunden, genau dann, wenn die Lust kommt.",
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",
