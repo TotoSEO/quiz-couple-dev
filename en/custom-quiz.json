@@ -8,7 +8,7 @@
     "seo": {
       "s1Title": "Build an online quiz in minutes",
       "s1p1": "Our free quiz maker lets you build your own questionnaire in a few clicks, with no sign-up. Pick a template (points quiz, true or false, or just for fun), add up to 30 questions with a maximum of 4 answers each, and you're done.",
-      "s1p2": "Perfect for testing your friends, challenging your partner or hosting a game night: anyone can play straight from their phone or computer.",
+      "s1p2": "Perfect for testing your friends, <a href=\"/en/who-knows-partner-best-quiz/\">challenging your partner</a> or hosting a game night: anyone can play straight from their phone or computer.",
       "s2Title": "A private quiz, shared with a simple link",
       "s2p1": "Your quiz is private. It only opens with the link you get when you create it, and nobody can find it any other way. Keep that link somewhere, in a note or a chat for example: it's the only way back to your quiz.",
       "s2p2": "Send it to your partner, a friend or a group chat, and everyone can play right away, no account needed. After one week, the quiz is deleted. If you want to keep going, making a new one takes about two minutes!",
@@ -17,7 +17,7 @@
       "s3plus": [
         {
           "titre": "A \"who knows me best\" quiz about you",
-          "texte": "<p>It's the most common use of the creator: a quiz about you, with your own questions, to see who knows you best. Your favourite dish, the city you dream of living in, what makes you laugh the most... You pick the \"points quiz\" template, tick the right answer for each question, and everyone sees their score at the end. For your couple, there's also a ready-made quiz where <a href=\"/en/who-knows-partner-best-quiz/\">each of you guesses the other's answers</a>, if you don't feel like writing the questions.</p>"
+          "texte": "<p>It's the most common use of the creator: a quiz about you, with your own questions, to see who knows you best. Your favourite dish, the city you dream of living in, what makes you laugh the most... You pick the \"points quiz\" template, tick the right answer for each question, and everyone sees their score at the end. For your couple, there's also a ready-made quiz where each of you guesses the other's answers, if you don't feel like writing the questions.</p>"
         },
         {
           "titre": "Making a quiz for your friends",

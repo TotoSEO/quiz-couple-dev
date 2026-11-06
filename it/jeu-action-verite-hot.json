@@ -8,12 +8,12 @@
   "section1": {
     "title": "Domande hot di obbligo o verità, dall'allusivo al molto diretto",
     "p1": "Un <strong class=\"text-foreground\">obbligo o verità piccante</strong> che parte troppo forte non funziona mai. Il primo obbligo mette a disagio, uno dei due si chiude e la serata è finita prima di cominciare. Per questo il mazzo sale gradualmente invece di colpire duro fin da subito.",
-    "p2": "Le carte più morbide restano suggestive: domande che fanno arrossire, sfide che avvicinano, niente che obblighi a scoprirsi. Le più dirette non usano più giri di parole e danno per scontato che sappiate entrambi dove state andando. L'estrazione le mescola, e il diritto di passare vi lascia il controllo.",
+    "p2": "Le carte più morbide restano suggestive: <a href=\"/it/quiz-coppia-piccante/\">domande che fanno arrossire</a>, sfide che avvicinano, niente che obblighi a scoprirsi. Le più dirette non usano più giri di parole e danno per scontato che sappiate entrambi dove state andando. L'estrazione le mescola, e il diritto di passare vi lascia il controllo.",
     "p3": "Cominciate piano, anche se pensate di poter saltare quel passaggio. Le risate delle prime carte fanno di più per il resto della serata di qualunque obbligo lanciato a freddo…"
   },
   "section2": {
     "title": "Come si gioca",
-    "intro": "Le stesse della versione classica, più un punto in più che qui pesa parecchio.",
+    "intro": "Le stesse <a href=\"/it/gioco-obbligo-o-verita-coppia/\">della versione classica</a>, più un punto in più che qui pesa parecchio.",
     "regle1Titre": "Inserite i vostri due nomi",
     "regle1Texte": "Il gioco annuncia a chi tocca a ogni carta, così nessuno deve chiedersi chi gioca.",
     "regle2Titre": "Verità o obbligo, scegliete voi",
@@ -31,7 +31,7 @@
   "faq": {
     "title": "Domande frequenti",
     "q1": "Che differenza c'è con la versione classica?",
-    "a1": "Le carte, semplicemente. La <a href=\"/it/gioco-obbligo-o-verita-coppia/\">versione classica</a> si rivolge a tutte le coppie e si gioca davanti a chiunque. Questa ha un mazzo tutto suo, nettamente più diretto, scritto per un momento in cui siete soli in due.",
+    "a1": "Le carte, semplicemente. La versione classica si rivolge a tutte le coppie e si gioca davanti a chiunque. Questa ha un mazzo tutto suo, nettamente più diretto, scritto per un momento in cui siete soli in due.",
     "q2": "È molto esplicito?",
     "a2": "Va dal suggestivo al molto diretto. Le più morbide chiedono un complimento o un bacio, le più audaci presuppongono un'intimità già consolidata. Non c'è un livello da scegliere: è il diritto di passare a fissare il limite, carta dopo carta.",
     "q3": "Quante carte ci sono?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Cosa può fare un gioco come questo",
-    "p1": "Non trasformerà la vostra vita intima, e nessuno dovrebbe chiederglielo. Quello che fa bene è dare una cornice a una conversazione che molte coppie non hanno mai davvero avuto, la stessa che si può affrontare anche <a href=\"/it/quiz-coppia-piccante/\">con domande piccanti invece che con le prove</a>. Perché è la carta a fare la domanda al posto vostro.",
+    "p1": "Non trasformerà la vostra vita intima, e nessuno dovrebbe chiederglielo. Quello che fa bene è dare una cornice a una conversazione che molte coppie non hanno mai davvero avuto, la stessa che si può affrontare anche con domande piccanti invece che con le prove. Perché è la carta a fare la domanda al posto vostro.",
     "p2": "Il resto lo decidete voi. Ed è giusto così!"
   },
   "jsonLd": {

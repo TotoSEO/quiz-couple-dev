@@ -50,7 +50,7 @@
   },
   "section4": {
     "title": "Beispiele für Situationen aus dem Spiel",
-    "intro": "Hier sind zwanzig der hundertzwanzig Situationen, genau so, wie das Spiel sie stellt. Es gibt sehr Konkretes, Verbindlicheres, und ein paar Themen, die man selten frontal anspricht:",
+    "intro": "Hier sind zwanzig der hundertzwanzig Situationen, genau so, wie das Spiel sie stellt. Es gibt sehr Konkretes, Verbindlicheres, und ein paar <a href=\"/de/pikantes-paar-quiz/\">Themen, die man selten frontal anspricht</a>:",
     "apres": "Die anderen 100 stecken im Spiel und kommen bei jedem Besuch in anderer Reihenfolge. Manche piksen ein bisschen, und ehrlich gesagt gehört das dazu: eine Uneinigkeit über „Einen besten Freund vom anderen Geschlecht haben“ sagt mehr als ein ganzer Abend Belanglosigkeiten. Wenn ein Thema hakt, wischt es nicht beiseite: es könnte der Anfang <a href=\"/de/fragen-fuer-paare/\">eines echten Gesprächs zu zweit</a> sein, und das ist mehr wert als die Runde."
   },
   "faq": {
@@ -64,7 +64,7 @@
     "q4": "Kann man mit Freunden spielen, oder allein?",
     "a4": "Das Spiel ist für ein Paar geschrieben: die Situationen handeln von gemeinsamem Konto, Schwiegereltern oder Intimem. Allein funktioniert es auch, ihr stimmt eure Meinung ab und vergleicht sie mit allen anderen. Unter Freunden werden manche Situationen ins Leere laufen, aber verboten ist es nicht.",
     "q5": "Was passiert nach den 120 Situationen?",
-    "a5": "Nicht viel, und das ist Absicht: es gibt weder Punkte noch Rangliste, das Spiel sagt euch einfach, dass ihr alles gesehen habt. Wenn euch das Format gefällt, laufen die Dilemma-Fragen nach demselben Abstimmungsprinzip, mit <a href=\"/de/dilemmata-fuer-paare/\">unmöglichen Deals</a> statt Situationen."
+    "a5": "Nicht viel, und das ist Absicht: es gibt weder Punkte noch Rangliste, das Spiel sagt euch einfach, dass ihr alles gesehen habt. Wenn euch das Format gefällt, laufen die Dilemma-Fragen nach demselben Abstimmungsprinzip, mit unmöglichen Deals statt Situationen."
   },
   "plus": [
     {
@@ -73,7 +73,7 @@
       "sous": [
         {
           "titre": "Und als heiße Version?",
-          "texte": "<p>Unser Spiel bleibt bei Situationen aus dem Leben zu zweit, ohne pikante Fragen. Für eine heiße Version, die ihr euch für das Ende des Abends aufhebt, hier ein paar zum Anfangen:</p><ul><li>„Hattest du schon mal mitten beim Familienessen Lust auf mich?“</li><li>„Hast du schon mal eine heiße Nachricht aufgehoben, um sie später noch mal zu lesen?“</li><li>„Hättest du Lust, heute Abend ein pikantes Spiel auszuprobieren?“</li><li>„Hast du bei der Arbeit schon mal nicht ganz so brav an mich gedacht?“</li><li>„Würdest du Ja sagen zu einer Nacht im Hotel, nur wir zwei?“</li><li>„Sagen wir uns lieber, was wir wollen, statt es zu erraten?“</li></ul><p>Wenn ihr weitergehen wollt, gibt es <a href=\"/de/pikantes-paar-quiz/\">spicy Fragen, von harmlos bis gewagt</a>, die ihr euch direkt stellen könnt.</p>"
+          "texte": "<p>Unser Spiel bleibt bei Situationen aus dem Leben zu zweit, ohne pikante Fragen. Für eine heiße Version, die ihr euch für das Ende des Abends aufhebt, hier ein paar zum Anfangen:</p><ul><li>„Hattest du schon mal mitten beim Familienessen Lust auf mich?“</li><li>„Hast du schon mal eine heiße Nachricht aufgehoben, um sie später noch mal zu lesen?“</li><li>„Hättest du Lust, heute Abend ein pikantes Spiel auszuprobieren?“</li><li>„Hast du bei der Arbeit schon mal nicht ganz so brav an mich gedacht?“</li><li>„Würdest du Ja sagen zu einer Nacht im Hotel, nur wir zwei?“</li><li>„Sagen wir uns lieber, was wir wollen, statt es zu erraten?“</li></ul>"
         }
       ]
     }

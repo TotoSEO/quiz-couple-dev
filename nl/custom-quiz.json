@@ -8,7 +8,7 @@
     "seo": {
       "s1Title": "Maak een quiz in een paar minuten",
       "s1p1": "Met onze gratis quizmaker bouw je je eigen vragenlijst in een paar klikken, zonder account. Kies een model (een quiz met punten, waar of niet waar, of gewoon voor de lol), voeg tot 30 vragen toe met elk maximaal 4 antwoorden, en klaar.",
-      "s1p2": "Ideaal om je vrienden te testen, je partner uit te dagen of een avondje op gang te brengen: iedereen speelt meteen mee op zijn telefoon of computer.",
+      "s1p2": "Ideaal om je vrienden te testen, <a href=\"/nl/hoe-goed-ken-je-je-partner/\">je partner uit te dagen</a> of een avondje op gang te brengen: iedereen speelt meteen mee op zijn telefoon of computer.",
       "s2Title": "Een privéquiz, gedeeld via een simpele link",
       "s2p1": "Je quiz is privé. Hij gaat alleen open met de link die je krijgt als je hem maakt, en niemand kan hem op een andere manier vinden. Bewaar die link ergens, in een notitie of een chat bijvoorbeeld: het is de enige manier om er later naar terug te gaan.",
       "s2p2": "Stuur hem naar je partner, een vriend of een groep, en iedereen kan meteen spelen, zonder account. Na een week wordt de quiz verwijderd. Wil je hem houden? Dan maak je gewoon een nieuwe, dat kost je twee minuten!",
@@ -17,7 +17,7 @@
       "s3plus": [
         {
           "titre": "Een quiz ‘wie kent mij het best’ over jezelf",
-          "texte": "<p>Dat is de meest gebruikte manier om de quizmaker te gebruiken: een quiz over jezelf, met je eigen vragen, om te zien wie je het best kent. Je lievelingseten, de stad waar je zou willen wonen, waar je het hardst om moet lachen... Je kiest het sjabloon ‘quiz met punten’, vinkt bij elke vraag het goede antwoord aan, en aan het eind ziet iedereen zijn score. Voor jullie als stel is er ook een kant-en-klare quiz waarin <a href=\"/nl/hoe-goed-ken-je-je-partner/\">jullie elkaars antwoorden raden</a>, als je geen zin hebt om zelf vragen te schrijven.</p>"
+          "texte": "<p>Dat is de meest gebruikte manier om de quizmaker te gebruiken: een quiz over jezelf, met je eigen vragen, om te zien wie je het best kent. Je lievelingseten, de stad waar je zou willen wonen, waar je het hardst om moet lachen... Je kiest het sjabloon ‘quiz met punten’, vinkt bij elke vraag het goede antwoord aan, en aan het eind ziet iedereen zijn score. Voor jullie als stel is er ook een kant-en-klare quiz waarin jullie elkaars antwoorden raden, als je geen zin hebt om zelf vragen te schrijven.</p>"
         },
         {
           "titre": "Een quiz voor je vrienden maken",

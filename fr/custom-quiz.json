@@ -8,7 +8,7 @@
     "seo": {
       "s1Title": "Créez un quiz en ligne en quelques minutes",
       "s1p1": "Notre créateur de quiz gratuit vous permet de bâtir votre propre questionnaire en quelques clics, sans inscription. Choisissez un modèle (quiz à points, vrai ou faux, ou juste pour rire), ajoutez jusqu'à 30 questions avec un maximum de 4 réponses chacune, et le tour est joué.",
-      "s1p2": "Idéal pour tester vos amis, défier votre couple ou animer une soirée : chacun peut jouer directement depuis son téléphone ou son ordinateur.",
+      "s1p2": "Idéal pour tester vos amis, <a href=\"/quiz-qui-connait-mieux-partenaire/\">défier votre couple</a> ou animer une soirée : chacun peut jouer directement depuis son téléphone ou son ordinateur.",
       "s2Title": "Un quiz privé, partagé par un simple lien",
       "s2p1": "Votre quiz est privé. Il ne s'ouvre qu'avec le lien que vous recevez à la création, et personne ne peut le trouver autrement. Gardez ce lien quelque part, dans une note ou une conversation par exemple : c'est le seul moyen de revenir dessus.",
       "s2p2": "Envoyez-le à votre moitié, à un ami ou dans un groupe, et tout le monde peut y jouer tout de suite, sans compte. Au bout d'une semaine, le quiz est supprimé. Si vous y tenez, rien ne vous empêche d'en créer un nouveau, ça prend deux minutes !",
@@ -17,7 +17,7 @@
       "s3plus": [
         {
           "titre": "Un quiz « qui me connaît le mieux » sur vous",
-          "texte": "<p>C'est l'usage le plus courant du créateur : un quiz sur vous, avec vos propres questions, pour voir qui vous connaît le mieux. Votre plat préféré, la ville où vous rêvez de vivre, ce qui vous fait le plus rire... Vous prenez le modèle « quiz à points », vous cochez la bonne réponse à chaque question, et chacun voit son score à la fin. Pour votre couple, il existe aussi un quiz tout prêt où <a href=\"/quiz-qui-connait-mieux-partenaire/\">chacun devine les réponses de l'autre</a>, si vous n'avez pas envie d'écrire les questions.</p>"
+          "texte": "<p>C'est l'usage le plus courant du créateur : un quiz sur vous, avec vos propres questions, pour voir qui vous connaît le mieux. Votre plat préféré, la ville où vous rêvez de vivre, ce qui vous fait le plus rire... Vous prenez le modèle « quiz à points », vous cochez la bonne réponse à chaque question, et chacun voit son score à la fin. Pour votre couple, il existe aussi un quiz tout prêt où chacun devine les réponses de l'autre, si vous n'avez pas envie d'écrire les questions.</p>"
         },
         {
           "titre": "Créer un quiz pour ses amis",

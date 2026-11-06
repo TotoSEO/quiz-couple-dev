@@ -22,7 +22,7 @@
     "modeLectureTexte": "Aparece la frase, la completáis en voz alta los dos, y os quedáis en ella el tiempo que queráis. Cuando hayáis terminado de hablar, pulsáis «Siguiente». Es la versión tranquila, sin cuenta atrás y sin puntos.",
     "modeChronoEmoji": "⏱️",
     "modeChronoTitre": "Respondéis a la vez",
-    "modeChronoTexte": "Pulsáis «Empezar la cuenta atrás» y arranca: 3, 2, 1, GO. Al «GO» decís vuestra respuesta los dos en el mismo momento, sin pensarlo. Después el juego os pregunta si era la misma, y va contando vuestras respuestas en común hasta el final.",
+    "modeChronoTexte": "Pulsáis «Empezar la cuenta atrás» y arranca: 3, 2, 1, GO. Al «GO» decís vuestra respuesta los dos en el mismo momento, sin pensarlo. Después el juego os pregunta si era la misma, y va contando vuestras respuestas en común hasta el final. Y si os gusta el modo con cuenta atrás, la misma idea va más lejos con preguntas en las que <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">uno responde por el otro</a>.",
     "apres": "La frase se queda en pantalla todo el turno, cuenta atrás incluida: nadie tiene que acordarse de ella. Y el botón «Siguiente» está siempre ahí, incluso al lado del cronómetro. Si una frase no os dice nada, pasáis a la siguiente."
   },
   "section3": {
@@ -32,9 +32,9 @@
   },
   "section4": {
     "title": "Cuándo sacar este juego",
-    "p1": "El mejor momento es cuando no pasa nada especial: un domingo por la tarde, un viaje en coche, una sala de espera, o esas cenas en las que ya habéis contado el día entero y <a href=\"/es/blog/preguntas-para-conoceros-mejor/\">no sabéis muy bien de qué hablar</a>.",
+    "p1": "El mejor momento es cuando no pasa nada especial: un domingo por la tarde, un viaje en coche, una sala de espera, o esas cenas en las que ya habéis contado el día entero y no sabéis muy bien de qué hablar.",
     "p2": "También funciona a distancia. Uno de los dos abre la página y lee la frase en voz alta en videollamada. Para el modo con cuenta atrás, poned el altavoz: la tenéis que oír los dos.",
-    "p3": "Un último consejo: decid la primera respuesta que se os ocurra. La que se busca durante diez segundos casi siempre tiene menos gracia que la que sale sola. Y si os gusta el modo con cuenta atrás, la misma idea va más lejos con preguntas en las que <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">uno responde por el otro</a>."
+    "p3": "Un último consejo: decid la primera respuesta que se os ocurra. La que se busca durante diez segundos casi siempre tiene menos gracia que la que sale sola."
   },
   "faq": {
     "title": "Preguntas frecuentes",

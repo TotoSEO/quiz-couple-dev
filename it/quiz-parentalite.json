@@ -29,7 +29,7 @@
     "s2Tip": "Esercizio: ognuno scriva le proprie 3 principali preoccupazioni sulla genitorialità, poi confrontatele. Le differenze spesso rivelano le conversazioni più importanti da affrontare.",
     "s3Title": "Come capire se si è pronti a diventare genitori: i veri segnali",
     "s3p1": "Spoiler: il \"momento perfetto\" non esiste. Se aspettate di avere tutto allineato (finanze, carriera, casa, maturità emotiva, luna crescente e Mercurio retrogrado), non ci arriverete mai. Ma ci sono comunque segnali che non mentono.",
-    "s3p2": "Siete probabilmente pronti se la vostra coppia è in una buona dinamica, se riuscite a gestire i conflitti senza distruggervi a vicenda, se la voglia viene da entrambi (e non dalla pressione sociale), e se avete almeno discusso degli argomenti menzionati sopra. Al contrario, se la vostra coppia batte in testa, se sperate che un bambino aggiusti tutto, o se uno di voi non è davvero convinto… aspettate.",
+    "s3p2": "Siete probabilmente pronti se la vostra coppia è in una buona dinamica, se riuscite a <a href=\"/it/test-relazione-tossica/\">gestire i conflitti senza distruggervi a vicenda</a>, se la voglia viene da entrambi (e non dalla pressione sociale), e se avete almeno discusso degli argomenti menzionati sopra. Al contrario, se la vostra coppia batte in testa, se sperate che un bambino aggiusti tutto, o se uno di voi non è davvero convinto… aspettate.",
     "s3p3": "Un test di genitorialità come quello che avete appena fatto non sostituisce un vero lavoro di introspezione (e tanto meno un accompagnamento professionale se necessario). Ma è un buon punto di partenza per aprire il dialogo.",
     "s3Quote": "Essere pronti non significa non avere più paura. Significa avere abbastanza fiducia nella coppia per andare avanti nonostante la paura.",
     "s4Title": "L’errore più comune: non parlare del \"dopo\"",
@@ -45,7 +45,6 @@
     "s6Title": "Rifare il test tra 6 mesi: perché è una buona idea",
     "s6p1": "Il vostro punteggio di oggi è una foto in un istante T. Le vostre risposte evolveranno. Le vostre finanze cambieranno forse, la vostra situazione professionale anche. La vostra coppia attraverserà nuove prove (o al contrario si rafforzerà). Ecco perché vi consigliamo di rifare questo test di genitorialità tra qualche mese.",
     "s6p2": "L’idea non è aspettare il punteggio perfetto. È vedere se le vostre risposte si muovono nella direzione giusta. Se gli argomenti che bloccavano si sbloccano. E soprattutto, se la voglia cresce o si affievolisce, perché entrambe le cose sono valide.",
-    "s6p3": "Nel frattempo, la genitorialità è anche una questione di compatibilità quotidiana. Sapere se avete <a href=\"/it/test-punti-comuni-coppia/\">abbastanza punti in comune</a> per costruire un progetto così grande conta. E se anche il matrimonio fa parte della riflessione, vale la pena verificare che siate <a href=\"/it/test-compatibilita-matrimonio/\">allineati anche su questo fronte</a>.",
     "faqTitle": "Domande frequenti sulla genitorialità e la coppia",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "Un bambino può salvare una coppia in crisi?",
-        "a": "No. È un mito pericoloso. Un bambino amplifica le dinamiche esistenti. Se la vostra coppia va bene, un figlio probabilmente rafforzerà il vostro legame. Se la vostra coppia è in difficoltà, un bambino aggiungerà stress. Prima di pensare a un bambino, verificate che <a href=\"/it/test-relazione-tossica/\">la vostra relazione non abbia tratti tossici</a>."
+        "a": "No. È un mito pericoloso. Un bambino amplifica le dinamiche esistenti. Se la vostra coppia va bene, un figlio probabilmente rafforzerà il vostro legame. Se la vostra coppia è in difficoltà, un bambino aggiungerà stress. Prima di pensare a un bambino, verificate che la vostra relazione non abbia tratti tossici."
       },
       {
         "q": "A che età si è troppo vecchi per avere un figlio?",
@@ -72,6 +71,7 @@
         "q": "Quanto costa un figlio nel primo anno in Italia?",
         "a": "In media, calcolate tra 6.000 e 10.000 € il primo anno, escluse le spese per il nido (che possono facilmente raddoppiare il conto). Le voci più pesanti: pannolini (circa 600-800 €/anno), alimentazione, vestiti, attrezzatura e spese mediche non coperte dal SSN."
       }
-    ]
+    ],
+    "s3p4": "La genitorialità è anche una questione di compatibilità quotidiana. Sapere se avete <a href=\"/it/test-punti-comuni-coppia/\">abbastanza punti in comune</a> per costruire un progetto così grande conta. E se anche il matrimonio fa parte della riflessione, vale la pena verificare che siate <a href=\"/it/test-compatibilita-matrimonio/\">allineati anche su questo fronte</a>."
   }
 }

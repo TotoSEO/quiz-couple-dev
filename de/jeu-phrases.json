@@ -22,7 +22,7 @@
     "modeLectureTexte": "Der Satz erscheint, ihr ergänzt ihn beide laut, und ihr bleibt so lange dabei, wie ihr wollt. Wenn ihr genug darüber geredet habt, tippt ihr auf „Weiter“. Das ist die ruhige Variante, ohne Countdown und ohne Punkte.",
     "modeChronoEmoji": "⏱️",
     "modeChronoTitre": "Ihr antwortet gleichzeitig",
-    "modeChronoTexte": "Ihr tippt auf „Countdown starten“, und er läuft: 3, 2, 1, GO. Beim „GO“ sagt ihr beide eure Antwort im selben Moment, ohne nachzudenken. Danach fragt das Spiel, ob es dasselbe war, und zählt eure gemeinsamen Antworten bis zum Schluss.",
+    "modeChronoTexte": "Ihr tippt auf „Countdown starten“, und er läuft: 3, 2, 1, GO. Beim „GO“ sagt ihr beide eure Antwort im selben Moment, ohne nachzudenken. Danach fragt das Spiel, ob es dasselbe war, und zählt eure gemeinsamen Antworten bis zum Schluss. Und wenn euch der Countdown gefällt, geht dieselbe Idee weiter mit <a href=\"/de/wer-kennt-partner-besser-quiz/\">Fragen, bei denen einer für den anderen antwortet</a>.",
     "apres": "Der Satz bleibt die ganze Runde stehen, auch während des Countdowns: niemand muss ihn im Kopf behalten. Und der Knopf „Weiter“ ist immer da, sogar neben dem Countdown. Wenn euch ein Satz nichts sagt, geht ihr zum nächsten."
   },
   "section3": {
@@ -32,9 +32,9 @@
   },
   "section4": {
     "title": "Wann ihr das Spiel rausholt",
-    "p1": "Der beste Moment ist der, in dem gerade nichts los ist: ein Sonntagabend, eine Autofahrt, ein Wartezimmer, oder diese Abendessen, bei denen der Tag längst durchgesprochen ist und <a href=\"/de/blog/fragen-um-sich-besser-kennenzulernen/\">euch nichts mehr einfällt, worüber ihr reden könntet</a>.",
+    "p1": "Der beste Moment ist der, in dem gerade nichts los ist: ein Sonntagabend, eine Autofahrt, ein Wartezimmer, oder diese Abendessen, bei denen der Tag längst durchgesprochen ist und euch nichts mehr einfällt, worüber ihr reden könntet.",
     "p2": "Auf Distanz geht es auch. Einer von euch öffnet die Seite und liest den Satz im Videoanruf laut vor. Für den Countdown-Modus stellt den Lautsprecher an, ihr müsst ihn beide hören.",
-    "p3": "Noch ein Tipp: sagt die erste Antwort, die euch einfällt. Die, nach der man zehn Sekunden sucht, ist fast immer weniger lustig als die, die von allein kommt. Und wenn euch der Countdown gefällt, geht dieselbe Idee weiter mit <a href=\"/de/wer-kennt-partner-besser-quiz/\">Fragen, bei denen einer für den anderen antwortet</a>."
+    "p3": "Noch ein Tipp: sagt die erste Antwort, die euch einfällt. Die, nach der man zehn Sekunden sucht, ist fast immer weniger lustig als die, die von allein kommt."
   },
   "faq": {
     "title": "Häufige Fragen",

@@ -50,7 +50,7 @@
   },
   "section4": {
     "title": "Voorbeelden van situaties uit het spel",
-    "intro": "Hier zijn twintig van de honderdtwintig situaties, zoals het spel ze stelt. Er zitten heel concrete bij, wat zwaardere, en een paar onderwerpen waar je niet zo snel recht op af durft:",
+    "intro": "Hier zijn twintig van de honderdtwintig situaties, zoals het spel ze stelt. Er zitten heel concrete bij, wat zwaardere, en een paar <a href=\"/nl/ondeugende-quiz/\">onderwerpen die je zelden durft aan te kaarten</a>:",
     "apres": "De andere 100 zitten in het spel, bij elk bezoek in een andere volgorde. Sommige zorgen voor wat wrijving, en eerlijk gezegd is dat ook een beetje de bedoeling: onenigheid over ‘Een beste vriend of vriendin van het andere geslacht hebben’ zegt meer dan een hele avond koetjes en kalfjes. Loopt een onderwerp vast, wuif het dan niet weg: misschien is het het begin van <a href=\"/nl/vragen-voor-koppels/\">een goed gesprek met z'n tweeën</a>, en dat is meer waard dan het spel."
   },
   "faq": {
@@ -64,7 +64,7 @@
     "q4": "Kun je het met vrienden spelen, of alleen?",
     "a4": "Het spel is geschreven voor een koppel: de situaties gaan over een gezamenlijke rekening, de schoonfamilie of intimiteit. Alleen werkt het ook: je stemt je eigen mening en vergelijkt die met die van de anderen. Met vrienden vallen sommige situaties een beetje plat, maar niets houdt je tegen.",
     "q5": "Wat gebeurt er na de 120 situaties?",
-    "a5": "Niet veel, en dat is expres: er is geen score en geen ranglijst, het spel zegt gewoon dat jullie alles gezien hebben. Bevalt het jullie, dan werken de dilemma's met hetzelfde stemsysteem, alleen stemmen jullie daar over <a href=\"/nl/dilemmas-voor-koppels/\">onmogelijke deals met een prijs eraan</a> in plaats van over situaties."
+    "a5": "Niet veel, en dat is expres: er is geen score en geen ranglijst, het spel zegt gewoon dat jullie alles gezien hebben. Bevalt het jullie, dan werken de dilemma's met hetzelfde stemsysteem, alleen stemmen jullie daar over onmogelijke deals met een prijs eraan in plaats van over situaties."
   },
   "plus": [
     {
@@ -73,7 +73,7 @@
       "sous": [
         {
           "titre": "En de pittige versie?",
-          "texte": "<p>Ons spel blijft bij situaties uit het leven als stel, zonder ondeugende vragen. Voor een pittige versie, voor het eind van de avond, hier iets om mee te beginnen:</p><ul><li>“Heb je ooit zin in me gehad midden in een familiediner?”</li><li>“Heb je ooit een ondeugend berichtje bewaard om het later nog eens te lezen?”</li><li>“Zou je vanavond een ondeugend spel willen proberen?”</li><li>“Heb je op je werk ooit niet zo onschuldig aan me gedacht?”</li><li>“Zou je ja zeggen tegen een nacht in een hotel, alleen wij tweeën?”</li><li>“Zeggen we elkaar liever wat we willen dan dat we het raden?”</li></ul><p>Wil je verder gaan, dan zijn er <a href=\"/nl/ondeugende-quiz/\">ondeugende vragen, van lief tot gewaagd</a>, om elkaar recht in de ogen te stellen.</p>"
+          "texte": "<p>Ons spel blijft bij situaties uit het leven als stel, zonder ondeugende vragen. Voor een pittige versie, voor het eind van de avond, hier iets om mee te beginnen:</p><ul><li>“Heb je ooit zin in me gehad midden in een familiediner?”</li><li>“Heb je ooit een ondeugend berichtje bewaard om het later nog eens te lezen?”</li><li>“Zou je vanavond een ondeugend spel willen proberen?”</li><li>“Heb je op je werk ooit niet zo onschuldig aan me gedacht?”</li><li>“Zou je ja zeggen tegen een nacht in een hotel, alleen wij tweeën?”</li><li>“Zeggen we elkaar liever wat we willen dan dat we het raden?”</li></ul>"
         }
       ]
     }

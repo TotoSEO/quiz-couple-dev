@@ -8,12 +8,12 @@
   "section1": {
     "title": "Des questions d'action ou vérité hot, du suggestif au très direct",
     "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui démarre trop fort ne marche jamais. Le premier défi met mal à l'aise, l'un des deux se referme, et la soirée est pliée avant d'avoir commencé. C'est pour ça que ce paquet monte progressivement au lieu de taper fort d'entrée.",
-    "p2": "Les cartes les plus douces restent suggestives : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. Les plus directes, elles, ne prennent plus de gants et supposent que vous savez tous les deux où vous allez. Le tirage les mélange, et c'est le droit de passer qui vous laisse la main.",
+    "p2": "Les cartes les plus douces restent suggestives : <a href=\"/quiz-couple-coquin/\">des questions qui font rougir</a>, des défis qui rapprochent, rien qui oblige à se découvrir. Les plus directes, elles, ne prennent plus de gants et supposent que vous savez tous les deux où vous allez. Le tirage les mélange, et c'est le droit de passer qui vous laisse la main.",
     "p3": "Commencez doucement, même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid…"
   },
   "section2": {
     "title": "Comment ça se joue",
-    "intro": "Les mêmes que la version classique, avec un point de plus qui compte beaucoup ici.",
+    "intro": "Les mêmes que <a href=\"/jeu-action-ou-verite-couple/\">la version classique</a>, avec un point de plus qui compte beaucoup ici.",
     "regle1Titre": "Entrez vos deux prénoms",
     "regle1Texte": "Le jeu annonce à qui c'est le tour à chaque carte, ce qui évite de se demander à chaque fois qui joue.",
     "regle2Titre": "Vérité ou action, c'est vous qui choisissez",
@@ -31,7 +31,7 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Quelle différence avec la version classique ?",
-    "a1": "Les cartes, tout simplement. La <a href=\"/jeu-action-ou-verite-couple/\">version classique</a> s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
+    "a1": "Les cartes, tout simplement. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
     "q2": "C'est très explicite ?",
     "a2": "Ça va du suggestif au très direct. Les plus douces demandent un compliment ou un baiser, les plus osées supposent une intimité déjà installée. Il n'y a pas de niveau à choisir : c'est le droit de passer qui fixe la limite, carte après carte.",
     "q3": "Combien y a-t-il de cartes ?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Ce qu'un jeu comme celui-ci peut faire",
-    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, en revanche, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue, celle qu'on peut aussi aborder <a href=\"/quiz-couple-coquin/\">par des questions coquines</a> plutôt que par des défis. Parce que c'est la carte qui pose la question à votre place.",
+    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, en revanche, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue, celle qu'on peut aussi aborder par des questions coquines plutôt que par des défis. Parce que c'est la carte qui pose la question à votre place.",
     "p2": "Le reste, c'est vous qui le décidez. Et c'est très bien ainsi !"
   },
   "jsonLd": {

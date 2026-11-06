@@ -320,7 +320,7 @@
   },
   "section5": {
     "title": "Les noces : le nom de chaque année ensemble",
-    "p1": "En France, chaque anniversaire porte un nom de matière, du coton de la première année aux noces d'or des cinquante ans. À l'origine, la liste était réservée au mariage, mais les couples s'en servent aujourd'hui pour tous les anniversaires, mariés ou pas. Le compteur affiche le nom qui correspond à votre prochain anniversaire. Voici la liste complète, avec une idée de cadeau ou d'attention pour chaque année :",
+    "p1": "En France, chaque anniversaire porte un nom de matière, du coton de la première année aux noces d'or des cinquante ans. À l'origine, la liste était réservée au mariage, mais les couples s'en servent aujourd'hui pour tous les anniversaires, mariés ou pas. Le compteur affiche le nom qui correspond à votre prochain anniversaire. Voici la liste complète, avec <a href=\"/test-langage-amour-couple/\">une idée de cadeau ou d'attention</a> pour chaque année :",
     "tableHeaders": [
       "Année",
       "Les noces",
@@ -448,7 +448,7 @@
   "section6": {
     "title": "Pourquoi compter les jours fait du bien au couple",
     "p1": "On pourrait croire que compter les jours, c'est un truc de début de relation, quand on en est encore à fêter le premier mois. En réalité, c'est plutôt l'inverse. Au bout de quelques années, les dates se fondent dans le quotidien, et un chiffre qui monte tous les matins rappelle que ce quotidien, justement, ça fait 1 500 jours qu'on le construit. Ce n'est pas rien.",
-    "p2": "Le compteur donne aussi des prétextes. Un mois rond, un cap de jours, c'est une raison de dire « tu sais que ça fait 900 jours aujourd'hui ? » et de faire quelque chose de différent ce soir-là, même tout petit, <a href=\"/test-langage-amour-couple/\">dans le langage que l'autre entend le mieux</a>. Les couples qui tiennent sont rarement ceux qui font de grandes déclarations. Ce sont plutôt ceux qui ont <a href=\"/test-couple-sain/\">des petits gestes réguliers l'un pour l'autre</a>, et une date à fêter tous les cent jours, ça aide à ne pas les oublier.",
+    "p2": "Le compteur donne aussi des prétextes. Un mois rond, un cap de jours, c'est une raison de dire « tu sais que ça fait 900 jours aujourd'hui ? » et de faire quelque chose de différent ce soir-là, même tout petit, dans le langage que l'autre entend le mieux. Les couples qui tiennent sont rarement ceux qui font de grandes déclarations. Ce sont plutôt ceux qui ont des petits gestes réguliers l'un pour l'autre, et une date à fêter tous les cent jours, ça aide à ne pas les oublier.",
     "tip": "Mettez le compteur en favori sur vos deux téléphones, avec le même lien. Celui qui remarque le cap le premier a gagné le droit de choisir le restaurant."
   },
   "faq": {

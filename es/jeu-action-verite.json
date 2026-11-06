@@ -13,7 +13,7 @@
     "plus": [
       {
         "titre": "Preguntas de verdad y retos para parejas",
-        "texte": "<p>Hay verdades tiernas y otras directamente graciosas, y los retos se hacen ahí mismo, entre los dos. Por ejemplo, una verdad puede ser «¿Qué fue lo primero que te gustó de mí?» y un reto «Mírame a los ojos un minuto entero, sin decir nada». No os contamos más, ¡que si no el mazo pierde la gracia! Y para preguntas más atrevidas está <a href=\"/es/verdad-o-reto-picante-pareja/\">la versión picante del juego</a>.</p>"
+        "texte": "<p>Hay <a href=\"/es/preguntas-pareja/\">verdades tiernas</a> y otras directamente graciosas, y los retos se hacen ahí mismo, entre los dos. Por ejemplo, una verdad puede ser «¿Qué fue lo primero que te gustó de mí?» y un reto «Mírame a los ojos un minuto entero, sin decir nada». No os contamos más, ¡que si no el mazo pierde la gracia! Y para preguntas más atrevidas está <a href=\"/es/verdad-o-reto-picante-pareja/\">la versión picante del juego</a>.</p>"
       }
     ]
   },
@@ -43,14 +43,14 @@
     "q3": "¿Cuántos pueden jugar?",
     "a3": "Está pensado para dos, con el turno anunciado en cada carta. Nada impide ir pasando el móvil en un grupo, pero las cartas están escritas para una pareja.",
     "q4": "¿Hay una versión más atrevida?",
-    "a4": "Sí, en una página aparte y con su propio mazo, bastante más directo. Es la <a href=\"/es/verdad-o-reto-picante-pareja/\">versión picante</a>, hecha para las noches en que estáis realmente solos.",
+    "a4": "Sí, en una página aparte y con su propio mazo, bastante más directo. Es la versión picante, hecha para las noches en que estáis realmente solos.",
     "q5": "¿Se puede jugar a distancia?",
     "a5": "Sí, y funciona mejor de lo que parece. Uno abre el juego, lee la carta en voz alta por videollamada y valida por los dos. Las verdades salen perfectas, los retos piden algo de imaginación…"
   },
   "section4": {
     "title": "Por qué este juego sigue funcionando después de tantos años",
     "p1": "Verdad o reto sobrevive generación tras generación por una razón muy simple: te da permiso para hacer una pregunta que nunca habrías hecho por tu cuenta. No preguntas tú, pregunta la carta. Y esa distancia mínima lo cambia absolutamente todo.",
-    "p2": "En pareja suele ser la única forma de abrir ciertos temas sin convertirlos en una conversación solemne. Nadie quiere oír «tenemos que hablar»… pero todo el mundo acepta sacar una carta. Es el mismo principio que <a href=\"/es/preguntas-pareja/\">las preguntas que se hacen las parejas</a> para conocerse mejor, en versión más ligera. Y la noche en que preferís responder los dos a la misma pregunta en vez de sacar cartas, hay con qué contar lo que <a href=\"/es/yo-nunca-juego-pareja/\">cada uno ya se ha atrevido a hacer</a>."
+    "p2": "En pareja suele ser la única forma de abrir ciertos temas sin convertirlos en una conversación solemne. Nadie quiere oír «tenemos que hablar»… pero todo el mundo acepta sacar una carta. Es el mismo principio que las preguntas que se hacen las parejas para conocerse mejor, en versión más ligera."
   },
   "jsonLd": {
     "name": "Juego verdad o reto en pareja"

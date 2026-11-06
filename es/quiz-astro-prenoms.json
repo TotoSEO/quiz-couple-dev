@@ -53,6 +53,10 @@
       {
         "titre": "Las afinidades entre dos nombres",
         "texte": "<p>Una vez reducido cada nombre a su número, el test mira cómo se llevan los dos números. Las mejores afinidades son el 1 con el 3, el 2 con el 6, el 3 con el 6 y el 6 con el 9: 9 sobre 10. Dos nombres que caen en el mismo número tienen 7 sobre 10 (6 para dos 4, 8 para dos números maestros): os entendéis rápido, pero quizá os parecéis demasiado. Las distancias más claras están entre el 3 y el 4, y entre el 4 y el 5: 3 sobre 10, porque al 4 le gustan las reglas y al 3 y al 5 les cuestan.</p><p>Los números maestros tienen sus propios aliados: el 11 se lleva muy bien con el 2 y el 7, y el 22 con el 4 y el 8.</p>"
+      },
+      {
+        "titre": "¿Y la compatibilidad sexual por el nombre?",
+        "texte": "<p>El test no calcula una puntuación aparte para el sexo: el porcentaje habla de cómo os entendéis en general. La astrología, eso sí, tiene su opinión: se dice que los signos de Fuego son más apasionados, los de Tierra más sensuales, y la numerología le atribuye al 5 una gran necesidad de novedad. Sigue siendo un juego, y así hay que tomarlo.</p><p>Para saber si encajáis en la cama, lo más sencillo es <a href=\"/es/test-compatibilidad-sexual/\">comparar lo que queréis, pregunta por pregunta</a>: cada uno responde por su lado sobre el deseo, la ternura o el ritmo, y solo veis las respuestas del otro al final.</p>"
       }
     ]
   },
@@ -67,19 +71,13 @@
     "title": "¿Por qué cruzar ambas lecturas?",
     "p1": "Porque no miran para nada lo mismo. Vuestro signo depende del día en que nacisteis, vuestro nombre lo eligieron vuestros padres, y una cosa no tiene nada que ver con la otra. Dos Leo pueden tener nombres con números opuestos, y una pareja que según los signos lo tiene difícil puede tener dos nombres que encajan muy bien.",
     "p2": "Por eso el resultado muestra tres puntuaciones. Fijaos en Sofía, Libra, y Hugo, Leo: sus signos se llevan bien (80 %), sus nombres mucho menos (40 %), y la puntuación global baja al 64 %. Sin el detalle, no sabríais que son los nombres los que bajan la nota...",
-    "tip": "Una buena puntuación no garantiza una relación fácil, y una puntuación baja no significa que no vaya a funcionar. Mirad más bien cuál de las dos puntuaciones baja el resultado, y hablad de ello."
+    "tip": "Una buena puntuación no garantiza una relación fácil, y una puntuación baja no significa que no vaya a funcionar. Mirad más bien cuál de las dos puntuaciones baja el resultado, y hablad de ello.",
+    "p3": "Si queréis un resultado que parta de vuestra vida en pareja, hacen falta preguntas. Hay un test que os hace veinte preguntas a cada uno sobre el matrimonio, <a href=\"/es/test-compatibilidad-amorosa/\">los hijos, el dinero o las vacaciones</a>, y luego compara vuestras respuestas."
   },
   "section5": {
     "title": "Lo que estos números no pueden decir",
     "p1": "Ni la astrología ni la numerología pueden decir si vuestra relación va a durar. Tomaos el resultado como un juego, y como una excusa para hablar de vuestra forma de ser: «tú eres muy Leo», «¿yo, un 9? Me sorprende», etc.",
-    "p2": "Si queréis un resultado que parta de vuestra vida en pareja, hacen falta preguntas. Hay un test que os hace veinte preguntas a cada uno sobre el matrimonio, <a href=\"/es/test-compatibilidad-amorosa/\">los hijos, el dinero o las vacaciones</a>, y luego compara vuestras respuestas.",
-    "tip": "Hacedlo juntos en el mismo móvil, y luego volved a probar con vuestros apodos: ¡la puntuación de los nombres cambia a menudo!",
-    "plus": [
-      {
-        "titre": "¿Y la compatibilidad sexual por el nombre?",
-        "texte": "<p>Nos lo preguntan a menudo. El test no calcula una puntuación aparte para el sexo: el porcentaje habla de cómo os entendéis en general. La astrología, eso sí, tiene su opinión: se dice que los signos de Fuego son más apasionados, los de Tierra más sensuales, y la numerología le atribuye al 5 una gran necesidad de novedad. Sigue siendo un juego, y así hay que tomarlo.</p><p>Para saber si encajáis en la cama, lo más sencillo es <a href=\"/es/test-compatibilidad-sexual/\">comparar lo que queréis, pregunta por pregunta</a>: cada uno responde por su lado sobre el deseo, la ternura o el ritmo, y solo veis las respuestas del otro al final.</p>"
-      }
-    ]
+    "tip": "Hacedlo juntos en el mismo móvil, y luego volved a probar con vuestros apodos: ¡la puntuación de los nombres cambia a menudo!"
   },
   "faq": {
     "title": "Preguntas frecuentes",

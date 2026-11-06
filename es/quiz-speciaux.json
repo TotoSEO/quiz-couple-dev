@@ -41,14 +41,14 @@
     "p3": "Los guardamos todos aquí, temporada tras temporada. Los de la temporada en curso están arriba de la página; los demás se pueden jugar todo el año, un poco más abajo."
   },
   "section2": {
+    "title": "Y el resto del año",
+    "p1": "Cuando pasa la temporada, <a href=\"/es/juegos-para-parejas/\">los juegos para hacer en pareja</a> todo el año toman el relevo: <a href=\"/es/quiz-preferirias-pareja/\">los dilemas «qué preferirías»</a>, verdad o reto, el tablero, y una decena más. Y para quien quiera <a href=\"/es/test-compatibilidad-pareja/\">una respuesta de verdad sobre su pareja</a>, hay con qué comparar vuestras respuestas sobre lo que importa."
+  },
+  "section3": {
     "title": "Cómo se juega",
     "p1": "Todos estos quiz se juegan igual. Solo/a, respondes y descubres tu resultado. En pareja, el primero responde a toda la serie, pasa el móvil, y el segundo responde a su vez sin ver las respuestas del primero: los dos resultados aparecen al final, uno al lado del otro, con lo que os separa.",
     "p2": "Si no estáis en el mismo sitio, cada quiz tiene un modo a distancia: una persona crea la partida, la otra se une con el código o el código QR, y cada uno responde en su móvil. Veis vuestras dos respuestas después de cada pregunta, y el resultado es el mismo en los dos lados.",
     "p3": "Sin crear ninguna cuenta, sin instalar nada, y sin guardar nada: las respuestas se quedan en vuestros móviles."
-  },
-  "section3": {
-    "title": "Y el resto del año",
-    "p1": "Cuando pasa la temporada, <a href=\"/es/juegos-para-parejas/\">los juegos para hacer en pareja</a> todo el año toman el relevo: <a href=\"/es/quiz-preferirias-pareja/\">los dilemas «qué preferirías»</a>, verdad o reto, el tablero, y una decena más. Y para quien quiera <a href=\"/es/test-compatibilidad-pareja/\">una respuesta de verdad sobre su pareja</a>, hay con qué comparar vuestras respuestas sobre lo que importa."
   },
   "faq": {
     "title": "Preguntas frecuentes",

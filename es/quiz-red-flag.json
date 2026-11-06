@@ -15,6 +15,12 @@
     "p3": "El test es anónimo, y tus respuestas se quedan en tu navegador. Puedes repetirlo las veces que quieras, para la misma persona dentro de seis meses, o para otra."
   },
   "section2": {
+    "title": "Una red flag no es lo mismo que una relación tóxica",
+    "p1": "Una red flag es una señal: algo que debería hacerte frenar y mirar más de cerca, al principio de una historia o a mitad. Una relación tóxica es cuando esas señales se han convertido en el día a día y ya no sabes si exageras. Si estás ahí, si la pregunta ya no es «¿esta persona tiene red flags?» sino «¿lo que vivo es normal?», puede que ya estés en <a href=\"/es/test-relacion-toxica/\">una relación tóxica</a>, y eso se mide de otra manera.",
+    "p2": "Y si lo que te ha traído hasta aquí es un principio demasiado perfecto, las declaraciones desde la primera semana, los mensajes a todas horas, quizá no sea un flechazo sino <a href=\"/es/blog/love-bombing-senales/\">love bombing</a>, y eso se comprueba con una sola frase.",
+    "p3": "Al revés, un resultado bajo no lo responde todo. No ser una red flag no es lo mismo que <a href=\"/es/test-es-la-persona-adecuada/\">ser la persona adecuada</a>, y para eso las preguntas que hay que hacerse son completamente distintas."
+  },
+  "section3": {
     "title": "Por qué las preguntas no pesan todas lo mismo",
     "p1": "Decirle «es su trabajo» a un camarero y levantarte la mano no son dos casillas de la misma lista. Por eso cada pregunta del test tiene su peso, de tres a ocho puntos, según lo que dice. Ser seco con los camareros o hablar mal de todas sus ex vale tres puntos como máximo: son señales conocidas, pero solas no dicen gran cosa. Los celos que miran tu móvil, los enfados, las disculpas que nunca llegan, la gente tuya a la que se aparta valen cinco o seis. Y tres preguntas valen ocho: lo que pasa cuando dices que no, la rabia física, y si tienes miedo de su reacción.",
     "p2": "El total suma 100 puntos. Algunas respuestas cuentan incluso solas: si dices que esta persona ya te ha levantado la mano, el resultado no podrá bajar del último nivel, aunque todo lo demás sea perfecto. Las otras diecinueve respuestas no cambian nada en esa.",
@@ -49,12 +55,6 @@
     "row9Score": "87 a 100",
     "row9Level": "Un peligro",
     "row9Analysis": "Violencia o un miedo real: no te quedes a solas con ello."
-  },
-  "section3": {
-    "title": "Una red flag no es lo mismo que una relación tóxica",
-    "p1": "Una red flag es una señal: algo que debería hacerte frenar y mirar más de cerca, al principio de una historia o a mitad. Una relación tóxica es cuando esas señales se han convertido en el día a día y ya no sabes si exageras. Si estás ahí, si la pregunta ya no es «¿esta persona tiene red flags?» sino «¿lo que vivo es normal?», puede que ya estés en <a href=\"/es/test-relacion-toxica/\">una relación tóxica</a>, y eso se mide de otra manera.",
-    "p2": "Y si lo que te ha traído hasta aquí es un principio demasiado perfecto, las declaraciones desde la primera semana, los mensajes a todas horas, quizá no sea un flechazo sino <a href=\"/es/blog/love-bombing-senales/\">love bombing</a>, y eso se comprueba con una sola frase.",
-    "p3": "Al revés, un resultado bajo no lo responde todo. No ser una red flag no es lo mismo que <a href=\"/es/test-es-la-persona-adecuada/\">ser la persona adecuada</a>, y para eso las preguntas que hay que hacerse son completamente distintas."
   },
   "seo": {
     "faqTitle": "Las preguntas que se hace la gente",

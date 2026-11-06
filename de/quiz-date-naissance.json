@@ -173,11 +173,11 @@
     "title": "Was ein Geburtsdatum über ein Paar sagen kann",
     "p1": "Dieser Test geht von einer einzigen Angabe aus: euren beiden Geburtsdaten. Meistens braucht man ein Geburtsdatum nur, um zum Geburtstag zu gratulieren, aber drei Traditionen lesen darin auch einen Charakter: die Numerologie, die westliche Astrologie und die chinesische Astrologie. Der Test lässt eure beiden Daten durch alle drei laufen.",
     "p2": "Die Numerologie macht daraus eine Zahl, die <strong>Lebenszahl</strong>, die sagt, wie ein Mensch durchs Leben geht. Die westliche Astrologie schaut auf Tag und Monat, um euer Sternzeichen zu finden, und die chinesische Astrologie auf das Jahr, um euer Tier zu finden. Diese drei Lesarten sagen nicht dasselbe, und genau deshalb schauen wir uns alle drei an.",
-    "p3": "Am Ende habt ihr eine Gesamtwertung, eine Wertung für jede der drei Lesarten und Erklärungen, die von euch beiden handeln. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-test/\">einen Fragebogen zu zweit ausfüllt</a>, gibt es auch einen Test mit zwanzig Fragen dazu, wie ihr euer Leben als Paar seht.",
+    "p3": "Am Ende habt ihr eine Gesamtwertung, eine Wertung für jede der drei Lesarten und Erklärungen, die von euch beiden handeln. Wenn ihr lieber <a href=\"/de/liebeskompatibilitaet-test/\">einen Fragebogen zu zweit ausfüllt</a>, gibt es auch einen Test mit zwanzig Fragen dazu, wie ihr euer Leben als Paar seht, einen, der <a href=\"/de/sternzeichen-vornamen-kompatibilitaet/\">von euren Vornamen und Sternzeichen</a> ausgeht, und <a href=\"/de/liebesrechner/\">einen Rechner, der nur eure Vornamen vergleicht</a>.",
     "plus": [
       {
         "titre": "Kann man seine Liebeszukunft am Geburtsdatum ablesen?",
-        "texte": "<p>Diese Frage stellen sich viele, und die ehrliche Antwort ist nein. Ein Geburtsdatum verrät nicht, wen man kennenlernt, wann das passiert oder ob man eines Tages heiratet. Der Test sagt nichts voraus: Er vergleicht zwei Charaktere, so wie diese drei Traditionen sie beschreiben. Nehmt ihn als Spiel und als guten Anlass, über eure Temperamente zu reden.</p>"
+        "texte": "<p>Diese Frage stellen sich viele, und die ehrliche Antwort ist nein. Ein Geburtsdatum verrät nicht, wen man kennenlernt, wann das passiert oder ob man eines Tages heiratet. Der Test sagt nichts voraus: Er vergleicht zwei Charaktere, so wie diese drei Traditionen sie beschreiben. Nehmt ihn als Spiel und als guten Anlass, über eure Temperamente zu reden.</p><p>Viele Menschen landen mit einer anderen Frage im Kopf auf so einer Seite, und es ist keine Frage der Astrologie. Wenn das auf euch zutrifft, passt ein Test besser, der fragt, <a href=\"/de/gesunde-beziehung-test/\">wie ihr im Alltag miteinander umgeht</a>, oder einer, der klärt, <a href=\"/de/liebe-oder-gewohnheit-test/\">was ihr noch füreinander empfindet</a>. Die sprechen über das, was heute zwischen euch passiert, nicht über das, was die Sterne am Tag eurer Geburt sagten.</p>"
       }
     ]
   },
@@ -309,7 +309,6 @@
   "section6": {
     "title": "Und wenn die Wertung niedrig ist?",
     "p1": "Dann passiert nichts Schlimmes! Keines dieser drei Systeme hat je eine Trennung vorhergesagt, und keines hat je verhindert, dass ein Paar dreißig Jahre zusammenbleibt. Eine niedrige Wertung heißt nur, dass eure Temperamente nicht von selbst zusammenpassen und ihr manchmal aussprechen müsst, was andere Paare ohne Worte verstehen.",
-    "p2": "Viele Menschen landen mit einer anderen Frage im Kopf auf so einer Seite, und es ist keine Frage der Astrologie. Wenn das auf euch zutrifft, passt ein Test besser, der fragt, <a href=\"/de/gesunde-beziehung-test/\">wie ihr im Alltag miteinander umgeht</a>, oder einer, der klärt, <a href=\"/de/liebe-oder-gewohnheit-test/\">was ihr noch füreinander empfindet</a>. Die sprechen über das, was heute zwischen euch passiert, nicht über das, was die Sterne am Tag eurer Geburt sagten.",
     "tip": "Macht den Test zu zweit, am selben Bildschirm. Die drei Balken gemeinsam anzuschauen bringt das Gespräch oft von allein in Gang."
   },
   "faq": {
@@ -323,7 +322,7 @@
     "q4": "Bedeutet eine Wertung von 40 %, dass wir uns trennen werden?",
     "a4": "Nein. Diese Zahl misst die Übereinstimmung zweier symbolischer Temperamente, nicht die Stabilität einer Beziehung. Sie kennt weder eure Geschichte noch eure Mühe noch das, was ihr gemeinsam durchgestanden habt. Nehmt sie als Raster, das zeigt, wo Verständnis von selbst entsteht und wo daran gearbeitet wird.",
     "q5": "Worin unterscheidet sich das von eurem Test mit Vorname und Sternzeichen?",
-    "a5": "Dieser hier geht nur von euren Daten aus und verknüpft drei Berechnungen. Der Test <a href=\"/de/sternzeichen-vornamen-kompatibilitaet/\">mit Vornamen und Sternzeichen</a> geht von euren Vornamen aus, gelesen mit der Numerologie der Buchstaben, und von den Sternzeichen, die ihr aus einer Liste wählt. Beide ergänzen sich gut, und zusammen dauern sie fünf Minuten. Und um <a href=\"/de/liebesrechner/\">zwei Vornamen ganz ohne Astrologie zu vergleichen</a>, gibt es noch den Liebesrechner.",
+    "a5": "Dieser hier geht nur von euren Daten aus und verknüpft drei Berechnungen. Der Test mit Vornamen und Sternzeichen geht von euren Vornamen aus, gelesen mit der Numerologie der Buchstaben, und von den Sternzeichen, die ihr aus einer Liste wählt. Beide ergänzen sich gut, und zusammen dauern sie fünf Minuten. Und um zwei Vornamen ganz ohne Astrologie zu vergleichen, gibt es noch den Liebesrechner.",
     "q6": "Werden die Ergebnisse irgendwo gespeichert?",
     "a6": "Nein. Die gesamte Berechnung läuft in eurem Browser, die Daten gehen nirgendwohin und nach dem Schließen der Seite bleibt nichts erhalten. Ihr könnt den Test so oft wiederholen, wie ihr wollt, mit so vielen Daten, wie ihr wollt."
   }

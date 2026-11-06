@@ -13,7 +13,7 @@
     "plus": [
       {
         "titre": "Wahrheitsfragen und Pflichtaufgaben für Paare",
-        "texte": "<p>Manche Wahrheiten sind zärtlich, andere richtig lustig, und die Pflichten erledigt ihr gleich vor Ort, zu zweit. Eine Wahrheit kann zum Beispiel „Was hat dir als Erstes an mir gefallen?“ sein und eine Pflicht „Sieh mir eine ganze Minute in die Augen, ohne etwas zu sagen.“ Mehr verraten wir nicht, sonst verliert der Stapel seinen Reiz! Und für gewagtere Fragen gibt es <a href=\"/de/wahrheit-oder-pflicht-versaut/\">die versaute Variante des Spiels</a>.</p>"
+        "texte": "<p><a href=\"/de/fragen-fuer-paare/\">Manche Wahrheiten sind zärtlich</a>, andere richtig lustig, und die Pflichten erledigt ihr gleich vor Ort, zu zweit. Eine Wahrheit kann zum Beispiel „Was hat dir als Erstes an mir gefallen?“ sein und eine Pflicht „Sieh mir eine ganze Minute in die Augen, ohne etwas zu sagen.“ Mehr verraten wir nicht, sonst verliert der Stapel seinen Reiz! Und für gewagtere Fragen gibt es <a href=\"/de/wahrheit-oder-pflicht-versaut/\">die versaute Variante des Spiels</a>.</p>"
       }
     ]
   },
@@ -43,14 +43,14 @@
     "q3": "Zu wie vielt kann man spielen?",
     "a3": "Es ist für zwei gebaut, mit angesagtem Zug bei jeder Karte. Nichts hindert euch daran, das Handy in einer größeren Runde weiterzureichen, aber die Karten sind für ein Paar geschrieben.",
     "q4": "Gibt es eine gewagtere Version?",
-    "a4": "Ja, auf einer eigenen Seite mit einem deutlich direkteren Stapel. Das ist die <a href=\"/de/wahrheit-oder-pflicht-versaut/\">versaute Variante</a>, gemacht für die Abende, an denen ihr wirklich allein seid.",
+    "a4": "Ja, auf einer eigenen Seite mit einem deutlich direkteren Stapel. Das ist die versaute Variante, gemacht für die Abende, an denen ihr wirklich allein seid.",
     "q5": "Kann man aus der Ferne spielen?",
     "a5": "Ja, und es funktioniert besser, als man denkt. Einer öffnet das Spiel, liest die Karte per Video laut vor und bestätigt für beide. Die Wahrheiten passen perfekt, die Pflichten brauchen etwas Fantasie…"
   },
   "section4": {
     "title": "Warum dieses Spiel nach all den Jahren immer noch funktioniert",
     "p1": "Wahrheit oder Pflicht überlebt Generation für Generation aus einem ganz einfachen Grund: es erlaubt euch eine Frage, die ihr von selbst nie gestellt hättet. Nicht ihr fragt, die Karte fragt. Und dieser winzige Abstand ändert absolut alles.",
-    "p2": "Als Paar ist es oft der einzige Weg, bestimmte Themen anzuschneiden, ohne ein feierliches Gespräch daraus zu machen. Niemand will „wir müssen reden“ hören… aber eine Karte zieht jeder. Es ist dasselbe Prinzip wie bei <a href=\"/de/fragen-fuer-paare/\">den Fragen, die sich Paare stellen</a>, um sich besser kennenzulernen, nur leichter. Und an dem Abend, an dem ihr lieber beide dieselbe Frage beantwortet, statt Karten zu ziehen, gibt es ein Spiel, das <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">zählt, was jeder von euch schon gewagt hat</a>."
+    "p2": "Als Paar ist es oft der einzige Weg, bestimmte Themen anzuschneiden, ohne ein feierliches Gespräch daraus zu machen. Niemand will „wir müssen reden“ hören… aber eine Karte zieht jeder. Es ist dasselbe Prinzip wie bei den Fragen, die sich Paare stellen, um sich besser kennenzulernen, nur leichter."
   },
   "jsonLd": {
     "name": "Spiel Wahrheit oder Pflicht für Paare"

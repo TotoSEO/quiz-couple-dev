@@ -29,7 +29,7 @@
     "s2Tip": "Try this: each of you writes down your 3 biggest concerns about parenthood, then compare them. The gaps often reveal the most important conversations to have.",
     "s3Title": "How to know if you're ready to be parents: the real signs",
     "s3p1": "Spoiler: the \"perfect moment\" doesn't exist. If you wait until everything is aligned (finances, career, housing, emotional maturity, waxing moon, and Mercury in retrograde), you'll never get there. But there are signs that don't lie.",
-    "s3p2": "You're probably ready if your relationship is in a good place, if you can handle conflicts without destroying each other, if the desire comes from both of you (and not from social pressure), and if you've at least discussed the topics mentioned above. Conversely, if your relationship is shaky, if you're hoping a baby will fix everything, or if one of you isn't really on board... wait.",
+    "s3p2": "You're probably ready if your relationship is in a good place, if you can <a href=\"/en/toxic-relationship-test/\">handle conflicts without destroying each other</a>, if the desire comes from both of you (and not from social pressure), and if you've at least discussed the topics mentioned above. Conversely, if your relationship is shaky, if you're hoping a baby will fix everything, or if one of you isn't really on board... wait.",
     "s3p3": "A parenthood readiness test like the one you just took doesn't replace real introspection (and certainly not professional guidance if needed). But it's a good starting point to open the dialogue.",
     "s3Quote": "Being ready doesn't mean having no fear. It means trusting your relationship enough to move forward despite the fear.",
     "s4Title": "The most common mistake: not talking about the \"after\"",
@@ -45,7 +45,6 @@
     "s6Title": "Retaking the test in 6 months: why it's a good idea",
     "s6p1": "Your score today is a snapshot of a specific moment. Your answers will evolve. Your finances may change, your career situation too. Your relationship will face new challenges (or conversely, grow stronger). That's why we recommend retaking this parenthood readiness test in a few months.",
     "s6p2": "The point isn't to wait for a perfect score. It's to see if your answers are moving in the right direction. If the topics that were blocking you are getting unblocked. And above all, if the desire is growing or fading, because both are valid.",
-    "s6p3": "In the meantime, parenthood is also a question of day-to-day compatibility. Knowing whether you have <a href=\"/en/couple-common-points-test/\">enough in common</a> to build a project this big matters. And if marriage is also part of the conversation, it's worth checking that you're <a href=\"/en/marriage-compatibility-test/\">aligned on that question too</a>.",
     "faqTitle": "Frequently asked questions about parenthood and relationships",
     "faq": [
       {
@@ -58,7 +57,7 @@
       },
       {
         "q": "Can a baby save a relationship in crisis?",
-        "a": "No. That's a dangerous myth. A baby amplifies existing dynamics. If your relationship is going well, a child will probably strengthen your bond. If your relationship is struggling, a baby will add stress. Before thinking about a baby, check whether <a href=\"/en/toxic-relationship-test/\">your relationship has toxic traits</a>."
+        "a": "No. That's a dangerous myth. A baby amplifies existing dynamics. If your relationship is going well, a child will probably strengthen your bond. If your relationship is struggling, a baby will add stress. Before thinking about a baby, check whether your relationship has toxic traits."
       },
       {
         "q": "At what age are you too old to have a child?",
@@ -72,6 +71,7 @@
         "q": "How much does a child cost in the first year?",
         "a": "On average, expect to spend between $6,000 and $12,000 in the first year, not including childcare (which can easily double the bill). The biggest expenses: diapers (around $600-$900/year), food, clothing, gear, and out-of-pocket medical costs."
       }
-    ]
+    ],
+    "s3p4": "Parenthood is also a question of day-to-day compatibility. Knowing whether you have <a href=\"/en/couple-common-points-test/\">enough in common</a> to build a project this big matters. And if marriage is also part of the conversation, it's worth checking that you're <a href=\"/en/marriage-compatibility-test/\">aligned on that question too</a>."
   }
 }

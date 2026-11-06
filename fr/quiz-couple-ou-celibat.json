@@ -11,7 +11,8 @@
     "title": "Être fait pour vivre seul, ça existe ?",
     "p1": "Oui, et ce n'est pas une consolation qu'on se donne. Il y a des gens qui vont mieux quand personne ne partage leur logement : ils dorment mieux, travaillent mieux, voient leurs amis plus souvent. Il y en a d'autres pour qui une soirée seul de trop suffit à plomber la semaine. Les deux fonctionnements existent, et aucun des deux n'est un problème à régler !",
     "p2": "Ce qui embrouille tout, c'est qu'on mélange souvent deux choses : aimer sa vie actuelle, et être fait pour elle. On peut être bien seul depuis trois ans et se rendre compte, la première fois qu'on partage un petit-déjeuner, que c'est ça qui manquait. Et on peut rêver du couple pendant des années, et puis, au bout de six mois de vie commune, découvrir qu'on ne supporte pas d'avoir quelqu'un dans la pièce d'à côté le samedi matin…",
-    "p3": "Du coup, la question ne se règle pas en regardant si vous êtes heureux aujourd'hui. Elle se règle en regardant vos réflexes : ce que vous faites d'une bonne nouvelle, le temps qu'il vous faut pour récupérer, ce que ça vous fait de devoir prévenir quand vous rentrez tard."
+    "p3": "Du coup, la question ne se règle pas en regardant si vous êtes heureux aujourd'hui. Elle se règle en regardant vos réflexes : ce que vous faites d'une bonne nouvelle, le temps qu'il vous faut pour récupérer, ce que ça vous fait de devoir prévenir quand vous rentrez tard.",
+    "p4": "Une précision, quand même. Avoir besoin de quelqu'un n'est pas la même chose qu'aller mal dès que l'autre s'éloigne : si c'est ça votre sujet, ce qui se passe <a href=\"/test-dependance-affective/\">quand l'autre ne répond pas</a> se mesure ailleurs. Et si votre façon de vous rapprocher puis de reculer revient à chaque histoire, <a href=\"/test-style-attachement-couple/\">la manière dont vous vous attachez</a> explique souvent plus de choses que ce test."
   },
   "section2": {
     "title": "Les signes qui font pencher d'un côté ou de l'autre",
@@ -29,8 +30,7 @@
     "title": "Comment le test calcule vos deux pourcentages",
     "p1": "Le résultat donne deux parts qui font cent à elles deux : 34 % fait pour vivre seul et 66 % fait pour vivre à deux, par exemple. Les deux chiffres sortent du même calcul, ils ne sont pas mesurés séparément.",
     "p2": "Chaque question a son propre poids, parce que toutes ne disent pas la même chose. Ce que vous ressentez en rentrant dans un logement vide, le temps seul qu'il vous faut, l'endroit où vous vous voyez dans dix ans et ce que vous cherchez aujourd'hui valent huit points chacun. Le rangement en vaut quatre, la façon dont vous prévenez quand vous rentrez tard en vaut trois. Cent un points possibles en tout, et votre part « à deux » est la proportion que vous avez prise.",
-    "p3": "Ensuite, votre score tombe dans une des cinq lectures : bien seul, plutôt seul, entre les deux, plutôt à deux, fait pour la vie à deux. La tranche du milieu n'est pas un résultat raté : elle correspond aux gens qui ont besoin des deux, et qui vivent très bien en couple à condition de le dire.",
-    "p4": "Une précision, quand même. Avoir besoin de quelqu'un n'est pas la même chose qu'aller mal dès que l'autre s'éloigne : si c'est ça votre sujet, ce qui se passe <a href=\"/test-dependance-affective/\">quand l'autre ne répond pas</a> se mesure ailleurs. Et si votre façon de vous rapprocher puis de reculer revient à chaque histoire, <a href=\"/test-style-attachement-couple/\">la manière dont vous vous attachez</a> explique souvent plus de choses que ce test."
+    "p3": "Ensuite, votre score tombe dans une des cinq lectures : bien seul, plutôt seul, entre les deux, plutôt à deux, fait pour la vie à deux. La tranche du milieu n'est pas un résultat raté : elle correspond aux gens qui ont besoin des deux, et qui vivent très bien en couple à condition de le dire."
   },
   "seo": {
     "faqTitle": "Les questions qu'on se pose"

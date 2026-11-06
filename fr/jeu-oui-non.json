@@ -50,7 +50,7 @@
   },
   "section4": {
     "title": "Des exemples de situations du jeu",
-    "intro": "Voici vingt des cent vingt situations, telles que le jeu les pose. Il y a du très concret, du plus engageant, et quelques sujets qu'on n'ose pas toujours lancer de front :",
+    "intro": "Voici vingt des cent vingt situations, telles que le jeu les pose. Il y a du très concret, du plus engageant, et quelques <a href=\"/quiz-couple-coquin/\">sujets qu'on n'ose pas toujours lancer</a> de front :",
     "apres": "Les 100 autres sont dans le jeu, servies dans un ordre différent à chaque visite. Certaines fâchent gentiment, et d'ailleurs c'est un peu le but : un désaccord sur « Avoir un meilleur ami du sexe opposé » en dit plus long qu'une soirée entière de banalités. Si un sujet coince, ne le balayez pas d'un revers de main : c'est peut-être le début d'<a href=\"/questions-couple/\">une vraie conversation à deux</a>, et elle vaut plus que la partie."
   },
   "faq": {
@@ -64,7 +64,7 @@
     "q4": "On peut y jouer entre amis, ou tout seul ?",
     "a4": "Le jeu est écrit pour un couple : les situations parlent de compte commun, de belle-famille ou d'intimité. Tout seul, ça marche aussi, vous votez votre avis et vous le comparez à celui des autres. Entre amis, certaines situations tomberont à plat, mais rien ne l'interdit.",
     "q5": "Que se passe-t-il au bout des 120 situations ?",
-    "a5": "Pas grand-chose, et c'est voulu : il n'y a ni score ni classement, le jeu vous dit simplement que vous avez tout vu. Si le format vous plaît, <a href=\"/dilemmes-couple/\">les dilemmes de couple</a> fonctionnent sur le même principe de votes, avec des marchés impossibles à la place des situations."
+    "a5": "Pas grand-chose, et c'est voulu : il n'y a ni score ni classement, le jeu vous dit simplement que vous avez tout vu. Si le format vous plaît, les dilemmes de couple fonctionnent sur le même principe de votes, avec des marchés impossibles à la place des situations."
   },
   "plus": [
     {
@@ -73,7 +73,7 @@
       "sous": [
         {
           "titre": "Et en version hot ?",
-          "texte": "<p>Notre jeu reste sur des situations de vie à deux, sans questions coquines. Pour une version hot, à garder pour la fin de soirée, voici de quoi commencer :</p><ul><li>« Tu as déjà eu envie de moi en plein repas de famille ? »</li><li>« Tu as déjà gardé un message coquin pour le relire plus tard ? »</li><li>« Tu aimerais qu'on essaie un jeu coquin ce soir ? »</li><li>« Tu as déjà pensé à moi d'une façon pas très sage au travail ? »</li><li>« Tu dirais oui à une nuit à l'hôtel, juste pour nous deux ? »</li><li>« Tu préfères qu'on se dise nos envies plutôt que de les deviner ? »</li></ul><p>Pour aller plus loin, il y a <a href=\"/quiz-couple-coquin/\">des questions coquines, douces ou osées</a>, à se poser en direct.</p>"
+          "texte": "<p>Notre jeu reste sur des situations de vie à deux, sans questions coquines. Pour une version hot, à garder pour la fin de soirée, voici de quoi commencer :</p><ul><li>« Tu as déjà eu envie de moi en plein repas de famille ? »</li><li>« Tu as déjà gardé un message coquin pour le relire plus tard ? »</li><li>« Tu aimerais qu'on essaie un jeu coquin ce soir ? »</li><li>« Tu as déjà pensé à moi d'une façon pas très sage au travail ? »</li><li>« Tu dirais oui à une nuit à l'hôtel, juste pour nous deux ? »</li><li>« Tu préfères qu'on se dise nos envies plutôt que de les deviner ? »</li></ul>"
         }
       ]
     }

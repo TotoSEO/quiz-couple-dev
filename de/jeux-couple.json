@@ -96,7 +96,8 @@
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die vierzehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy, bis auf das Partyspiel, bei dem jedes Paar auf dem eigenen spielt. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
+    "p3": "Die vierzehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy, bis auf das Partyspiel, bei dem jedes Paar auf dem eigenen spielt. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten.",
+    "p4": "Und je nach Jahreszeit sorgen <a href=\"/de/besondere-paar-quiz/\">die Quiz, die mit dem Kalender wechseln</a>, für ein paar Abende der anderen Art: zu Halloween <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> oder <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">welches Superschurken-Duo ihr bildet</a>."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
@@ -162,8 +163,7 @@
     "title": "Ein Spiel repariert nichts, aber es öffnet Türen",
     "p1": "Seien wir ehrlich, was ein Spiel leisten kann. Es klärt keine grundsätzliche Meinungsverschiedenheit und ersetzt kein Gespräch, wenn eines nötig ist. Was es sehr gut kann, ist die Feierlichkeit herausnehmen: die Karte stellt die Frage, nicht ihr. Diese kleine Verschiebung reicht oft schon, um ein Thema zu öffnen.",
     "p2": "Und wenn ihr über einen Abend hinausgehen wollt: unsere Paartests greifen dieselben Themen auf, mit einem Ergebnis am Ende.",
-    "cta": "Unsere Paartests entdecken",
-    "p3": "Und je nach Jahreszeit sorgen <a href=\"/de/besondere-paar-quiz/\">die Quiz, die mit dem Kalender wechseln</a>, für ein paar Abende der anderen Art: zu Halloween <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> oder <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">welches Superschurken-Duo ihr bildet</a>."
+    "cta": "Unsere Paartests entdecken"
   },
   "jsonLd": {
     "name": "Paarspiele"

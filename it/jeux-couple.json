@@ -96,7 +96,8 @@
     "title": "Che cosa cambia un gioco in due in una serata",
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
-    "p3": "I quattordici giochi di questa pagina si giocano online, gratis, su un solo telefono, tranne il gioco da serata, dove ogni coppia gioca sul proprio. Niente da creare, niente da installare, niente da preparare."
+    "p3": "I quattordici giochi di questa pagina si giocano online, gratis, su un solo telefono, tranne il gioco da serata, dove ogni coppia gioca sul proprio. Niente da creare, niente da installare, niente da preparare.",
+    "p4": "E a seconda della stagione, <a href=\"/it/quiz-speciali-per-coppie/\">i quiz che cambiano con il calendario</a> aggiungono qualche serata a parte: per Halloween, chi di voi due <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">muore per primo in un film horror</a> oppure <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">quale duo di supercattivi formate</a>."
   },
   "section2": {
     "title": "Quale gioco scegliere a seconda del momento",
@@ -162,8 +163,7 @@
     "title": "Un gioco non ripara niente, ma apre delle porte",
     "p1": "Siamo onesti su cosa può fare un gioco. Non risolve un disaccordo di fondo e non sostituisce una conversazione quando serve. Quello che fa benissimo, invece, è togliere la solennità: è la carta a fare la domanda, non voi. Quel piccolo spostamento basta spesso a sbloccare un argomento.",
     "p2": "E se volete andare oltre una serata, i nostri test di coppia affrontano gli stessi temi con un risultato finale.",
-    "cta": "Scoprire i nostri test di coppia",
-    "p3": "E a seconda della stagione, <a href=\"/it/quiz-speciali-per-coppie/\">i quiz che cambiano con il calendario</a> aggiungono qualche serata a parte: per Halloween, chi di voi due <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">muore per primo in un film horror</a> oppure <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">quale duo di supercattivi formate</a>."
+    "cta": "Scoprire i nostri test di coppia"
   },
   "jsonLd": {
     "name": "Giochi di coppia"

@@ -173,11 +173,11 @@
     "title": "Che cosa può dire una data di nascita su una coppia",
     "p1": "Questo test parte da un solo dato: le vostre due date di nascita. Di solito una data di nascita serve per fare gli auguri, ma tre tradizioni ci leggono anche un carattere: la numerologia, l'astrologia occidentale e l'astrologia cinese. Il test fa passare le vostre due date da tutte e tre.",
     "p2": "La numerologia ne ricava un numero, il <strong>cammino di vita</strong>, che dice come una persona va avanti nella vita. L'astrologia occidentale guarda il giorno e il mese per trovare il vostro segno, e l'astrologia cinese guarda l'anno per trovare il vostro animale. Queste tre letture non dicono la stessa cosa, ed è proprio per questo che le guardiamo tutte e tre.",
-    "p3": "Alla fine avete un punteggio globale, un punteggio per ognuna delle tre letture e delle spiegazioni che parlano di voi due. Se invece cercate <a href=\"/it/test-compatibilita-amorosa/\">un questionario da compilare in due</a>, c'è anche un test di venti domande sul vostro modo di vedere la vita di coppia.",
+    "p3": "Alla fine avete un punteggio globale, un punteggio per ognuna delle tre letture e delle spiegazioni che parlano di voi due. Se invece cercate <a href=\"/it/test-compatibilita-amorosa/\">un questionario da compilare in due</a>, c'è anche un test di venti domande sul vostro modo di vedere la vita di coppia, un altro che parte <a href=\"/it/segni-zodiacali-nomi-compatibilita/\">dai vostri nomi e dai vostri segni</a>, e <a href=\"/it/calcolatrice-dell-amore/\">un calcolatore che guarda solo i vostri nomi</a>.",
     "plus": [
       {
         "titre": "Si può conoscere il proprio futuro amoroso con la data di nascita?",
-        "texte": "<p>È una domanda che si fanno in tanti, e la risposta onesta è no. Una data di nascita non dice chi si incontrerà, né quando, né se ci si sposerà un giorno. Il test non prevede niente: confronta due caratteri, così come li descrivono queste tre tradizioni. Prendetelo come un gioco, e come una buona occasione per parlare dei vostri temperamenti.</p>"
+        "texte": "<p>È una domanda che si fanno in tanti, e la risposta onesta è no. Una data di nascita non dice chi si incontrerà, né quando, né se ci si sposerà un giorno. Il test non prevede niente: confronta due caratteri, così come li descrivono queste tre tradizioni. Prendetelo come un gioco, e come una buona occasione per parlare dei vostri temperamenti.</p><p>Molte persone arrivano su una pagina del genere con un'altra domanda in testa, e non è una domanda di astrologia. Se è il vostro caso, vi servirà di più un test su <a href=\"/it/test-relazione-sana/\">come vi trattate ogni giorno</a>, o uno che vi aiuti a capire <a href=\"/it/test-amore-o-abitudine/\">cosa provate ancora</a>. Quelli parlano di ciò che succede tra voi oggi, non di ciò che dicevano gli astri il giorno della vostra nascita.</p>"
       }
     ]
   },
@@ -309,7 +309,6 @@
   "section6": {
     "title": "E se il punteggio è basso?",
     "p1": "Non succede niente di grave! Nessuno di questi tre sistemi ha mai previsto una rottura, e nessuno ha mai impedito a una coppia di durare trent'anni. Un punteggio basso vuol dire solo che i vostri due temperamenti non si accordano da soli, e che a volte dovrete dire a parole quello che altre coppie capiscono senza parlare.",
-    "p2": "Molte persone arrivano su una pagina del genere con un'altra domanda in testa, e non è una domanda di astrologia. Se è il vostro caso, vi servirà di più un test su <a href=\"/it/test-relazione-sana/\">come vi trattate ogni giorno</a>, o uno che vi aiuti a capire <a href=\"/it/test-amore-o-abitudine/\">cosa provate ancora</a>. Quelli parlano di ciò che succede tra voi oggi, non di ciò che dicevano gli astri il giorno della vostra nascita.",
     "tip": "Fate il test in due, sullo stesso schermo. Leggere le tre barre insieme è spesso quello che fa partire la conversazione."
   },
   "faq": {
@@ -323,7 +322,7 @@
     "q4": "Un punteggio del 40 % vuol dire che ci lasceremo?",
     "a4": "No. Quella cifra misura un accordo tra due temperamenti simbolici, non la solidità di una relazione. Non conosce la vostra storia, né i vostri sforzi, né ciò che avete attraversato insieme. Prendetela come una griglia di lettura che mostra dove l'intesa è naturale e dove va costruita.",
     "q5": "Che differenza c'è con il vostro test nome e segno zodiacale?",
-    "a5": "Questo parte solo dalle vostre date e incrocia tre calcoli. Il test <a href=\"/it/segni-zodiacali-nomi-compatibilita/\">con i nomi e i segni zodiacali</a> parte dai vostri nomi, letti con la numerologia delle lettere, e dai segni che scegliete da una lista. I due si completano bene, e farli entrambi richiede cinque minuti in tutto. E per <a href=\"/it/calcolatrice-dell-amore/\">confrontare due nomi senza nessuna astrologia</a>, c'è anche la calcolatrice dell'amore.",
+    "a5": "Questo parte solo dalle vostre date e incrocia tre calcoli. Il test con i nomi e i segni zodiacali parte dai vostri nomi, letti con la numerologia delle lettere, e dai segni che scegliete da una lista. I due si completano bene, e farli entrambi richiede cinque minuti in tutto. E per confrontare due nomi senza nessuna astrologia, c'è anche la calcolatrice dell'amore.",
     "q6": "I risultati vengono salvati da qualche parte?",
     "a6": "No. Tutto il calcolo avviene nel vostro browser, le date non vanno da nessuna parte e non resta nulla dopo la chiusura della pagina. Potete rifare il test tutte le volte che volete, con tutte le date che volete."
   }

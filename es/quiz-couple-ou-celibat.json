@@ -11,7 +11,8 @@
     "title": "¿Existe la gente hecha para vivir sola?",
     "p1": "Sí, y no es un premio de consolación. Hay personas que están mejor cuando nadie comparte su casa: duermen mejor, trabajan mejor, ven más a sus amigos. Y hay otras a las que una noche sola de más les hunde la semana entera. Las dos formas de funcionar existen, ¡y ninguna de las dos es un problema que haya que arreglar!",
     "p2": "Lo que lo enreda todo es que se mezclan dos cosas: que te guste tu vida actual y que estés hecho para ella. Puedes llevar tres años bien solo y darte cuenta, el primer día que compartes un desayuno, de que era eso lo que faltaba. Y puedes soñar con la pareja durante años y descubrir, a los seis meses de convivencia, que no soportas tener a alguien en la habitación de al lado un sábado por la mañana…",
-    "p3": "Así que la pregunta no se resuelve mirando si eres feliz hoy. Se resuelve mirando tus reflejos: qué haces con una buena noticia, cuánto tiempo necesitas para recuperarte, qué sientes al tener que avisar cuando llegas tarde."
+    "p3": "Así que la pregunta no se resuelve mirando si eres feliz hoy. Se resuelve mirando tus reflejos: qué haces con una buena noticia, cuánto tiempo necesitas para recuperarte, qué sientes al tener que avisar cuando llegas tarde.",
+    "p4": "Un matiz, eso sí. Necesitar a alguien no es lo mismo que estar mal en cuanto el otro se aleja: si ese es tu tema, <a href=\"/es/test-dependencia-emocional/\">lo que pasa cuando el otro no contesta</a> se mide en otro sitio. Y si tu forma de acercarte y luego echarte atrás vuelve en cada historia, <a href=\"/es/test-estilo-apego/\">la manera en que te vinculas</a> explica a menudo más cosas que este test."
   },
   "section2": {
     "title": "Las señales que inclinan la balanza a un lado o al otro",
@@ -29,8 +30,7 @@
     "title": "Cómo calcula el test tus dos porcentajes",
     "p1": "El resultado da dos partes que juntas suman cien: 34 % hecho para vivir solo y 66 % hecho para vivir en pareja, por ejemplo. Las dos cifras salen del mismo cálculo, no se miden por separado.",
     "p2": "Cada pregunta tiene su propio peso, porque no todas dicen lo mismo. Lo que sientes al llegar a una casa vacía, el tiempo a solas que necesitas, dónde te ves dentro de diez años y lo que buscas hoy valen ocho puntos cada una. El orden vale cuatro, la manera de avisar cuando llegas tarde vale tres. Ciento un puntos posibles en total, y tu parte «en pareja» es la proporción que has sacado.",
-    "p3": "Después tu puntuación cae en una de las cinco lecturas: bien solo, más bien solo, entre las dos, más bien en pareja, hecho para la vida en pareja. La franja del medio no es un resultado fallido: corresponde a la gente que necesita las dos cosas y que vive muy bien en pareja siempre que lo diga.",
-    "p4": "Un matiz, eso sí. Necesitar a alguien no es lo mismo que estar mal en cuanto el otro se aleja: si ese es tu tema, <a href=\"/es/test-dependencia-emocional/\">lo que pasa cuando el otro no contesta</a> se mide en otro sitio. Y si tu forma de acercarte y luego echarte atrás vuelve en cada historia, <a href=\"/es/test-estilo-apego/\">la manera en que te vinculas</a> explica a menudo más cosas que este test."
+    "p3": "Después tu puntuación cae en una de las cinco lecturas: bien solo, más bien solo, entre las dos, más bien en pareja, hecho para la vida en pareja. La franja del medio no es un resultado fallido: corresponde a la gente que necesita las dos cosas y que vive muy bien en pareja siempre que lo diga."
   },
   "seo": {
     "faqTitle": "Las preguntas que nos hacemos"
