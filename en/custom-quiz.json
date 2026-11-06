@@ -13,7 +13,17 @@
       "s2p1": "Your quiz is private. It only opens with the link you get when you create it, and nobody can find it any other way. Keep that link somewhere, in a note or a chat for example: it's the only way back to your quiz.",
       "s2p2": "Send it to your partner, a friend or a group chat, and everyone can play right away, no account needed. After one week, the quiz is deleted. If you want to keep going, making a new one takes about two minutes!",
       "s3Title": "Quizzes for every moment together",
-      "s3p1": "Whether it's to find out if your partner really knows you, for a night with friends or just for laughs, custom quiz creation fits every mood. Let your imagination run wild!"
+      "s3p1": "Whether it's to find out if your partner really knows you, for a night with friends or just for laughs, custom quiz creation fits every mood. Let your imagination run wild!",
+      "s3plus": [
+        {
+          "titre": "A \"who knows me best\" quiz about you",
+          "texte": "<p>It's the most common use of the creator: a quiz about you, with your own questions, to see who knows you best. Your favourite dish, the city you dream of living in, what makes you laugh the most... You pick the \"points quiz\" template, tick the right answer for each question, and everyone sees their score at the end. For your couple, there's also a ready-made quiz where <a href=\"/en/who-knows-partner-best-quiz/\">each of you guesses the other's answers</a>, if you don't feel like writing the questions.</p>"
+        },
+        {
+          "titre": "Making a quiz for your friends",
+          "texte": "<p>The quiz is shared with a simple link, so it works just as well in a group of friends as for your other half. Drop it in the group chat: everyone plays on their own phone, with no account, for a week. For a birthday or a hen party, the true or false template usually gets a lot of laughs.</p>"
+        }
+      ]
     },
     "total_quiz": "quizzes created by the community",
     "total_merci": "Thanks to the Quiz Couple community for keeping this place alive ❤️"

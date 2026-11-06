@@ -529,7 +529,13 @@
     "faq3Q": "¿Podemos volver a jugar con otras preguntas?",
     "faq3A": "¡Sí! Cada sesión selecciona 20 preguntas aleatorias de 80. Podéis volver a jugar tantas veces como queráis.",
     "faq4Q": "¿Se guardan nuestras respuestas?",
-    "faq4A": "Las sesiones expiran automáticamente después de 30 minutos. No se almacenan datos personales de forma permanente."
+    "faq4A": "Las sesiones expiran automáticamente después de 30 minutos. No se almacenan datos personales de forma permanente.",
+    "plus": [
+      {
+        "titre": "Preguntas y temas de conversación para una pareja adolescente",
+        "texte": "<p>El quiz hace sus propias preguntas, pero cuando acabáis de empezar a salir, a veces no se sabe muy bien de qué hablar. Aquí van algunas preguntas que funcionan bien, por mensaje o en persona:</p><ul><li>«¿Qué escuchas sin parar últimamente?»</li><li>«Si mañana pudieras irte a cualquier sitio, ¿adónde irías?»</li><li>«¿Qué es lo último que te ha hecho llorar de risa?»</li><li>«¿Qué es lo que más te estresa del instituto?»</li><li>«¿Cuál es tu mejor recuerdo con tus amigos?»</li><li>«¿Prefieres que quedemos los dos solos o con el grupo?»</li></ul><p>Y cuando ya no sabéis qué deciros, los temas más sencillos siguen siendo los mejores: una serie que veis los dos, un recuerdo de la infancia, qué haríais con mil euros, la vergüenza de la semana... Y un silencio no tiene nada de malo: os vais conociendo poco a poco, y eso lleva tiempo.</p>"
+      }
+    ]
   },
   "jsonLd": {
     "about": "quiz de pareja para adolescentes"

@@ -109,7 +109,9 @@
         "🚨 <strong>Crossing lines</strong>: casinos, off-limits places, lies told together",
         "🤐 <strong>Secrets</strong>: what the other one still doesn't know"
       ],
-      "sub2P1": "The secrets category scores what one of you has hidden from the other. So two couples who've lived roughly the same things can end up with very different scores."
+      "sub2P1": "The secrets category scores what one of you has hidden from the other. So two couples who've lived roughly the same things can end up with very different scores.",
+      "sub3Titre": "A teen version or a hard version of the purity test?",
+      "sub3P1": "Both exist, and the age you give at the start decides. Under 16, you get the all-audiences version, and for a teen couple there's also <a class=\"pu-lien-int\" href=\"{{quizAdo}}\">a quiz about their relationship, made for their age</a>. From 16 up, it's the full version, the hard version if you like: the questions about sex and drugs go a long way, and some of them aren't ones you'd ask in front of everyone!"
     },
     "s5": {
       "titre": "Is a high score bad?",
@@ -135,7 +137,7 @@
     "q5": "Can more than two people play?",
     "a5": "Couple mode is built for two. Nothing stops a whole group from taking the solo mode separately and comparing scores afterwards though: that's the best use of the test when there are several of you.",
     "q6": "What's the minimum age?",
-    "a6": "The test asks your age before it starts. Under 16, it switches to an all-audiences version, which removes the questions about explicit sex and drugs and keeps everything about lies, family, nights out and secrets. For a teen couple, the <a href=\"/en/teen-couple-quiz/\">teen couple quiz</a> is probably a better fit."
+    "a6": "The test asks your age before it starts. Under 16, it switches to an all-audiences version, which removes the questions about explicit sex and drugs and keeps everything about lies, family, nights out and secrets."
   },
   "suite": {
     "titre": "Do this next",

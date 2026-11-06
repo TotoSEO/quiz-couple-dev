@@ -35,7 +35,13 @@
     "title": "Fragen, die zum Nachdenken anregen (und solche, die einfach nur zum Lachen bringen)",
     "p1": "In einem guten „Würdest du eher“ für Paare gibt es zwei Sorten von Fragen. Beide sind nützlich, aber nicht auf dieselbe Weise.",
     "p2": "Die <strong class=\"text-foreground\">leichten Fragen</strong> lockern auf, bringen zum Lachen, geben einen Rhythmus vor. Sie lehren nichts Tiefes, schaffen aber den Rahmen, damit die nächsten richtig ankommen.",
-    "p3": "Die <strong class=\"text-foreground\">Fragen, die kratzen</strong> öffnen etwas. Sie berühren echte Erwartungen, Bedürfnisse, die nicht immer klar ausgesprochen wurden. Die richtige Mischung liegt bei ungefähr 60/40: leicht genug, dass es ein Spiel bleibt, tief genug, dass es sich gelohnt hat."
+    "p3": "Die <strong class=\"text-foreground\">Fragen, die kratzen</strong> öffnen etwas. Sie berühren echte Erwartungen, Bedürfnisse, die nicht immer klar ausgesprochen wurden. Die richtige Mischung liegt bei ungefähr 60/40: leicht genug, dass es ein Spiel bleibt, tief genug, dass es sich gelohnt hat.",
+    "plus": [
+      {
+        "titre": "„Würdest du eher“-Fragen für Paare",
+        "texte": "<p>Zum sanften Einstieg:</p><ul><li>Was wäre dir lieber: eure Streits mit Schere-Stein-Papier klären oder mit einem Münzwurf?</li><li>Was wäre dir lieber: ein riesiges Bett mit je einer Seite oder ein Einzelbett, die ganze Nacht aneinandergedrückt?</li><li>Was wäre dir lieber: zehn Jahre lang jeden Abend abspülen oder nie wieder den Film aussuchen?</li></ul><p>Und um etwas tiefer zu gehen:</p><ul><li>Was wäre dir lieber: dass er/sie dich jeden Morgen neu wählt oder dich ein für alle Mal gewählt hat?</li><li>Was wäre dir lieber: sicher zu wissen, dass ihr zusammen bleibt, aber ohne Leidenschaft, oder zehn leidenschaftliche Jahre ohne jede Garantie?</li><li>Was wäre dir lieber: verzeihen, ohne zu vergessen, oder vergessen, ohne zu verzeihen?</li></ul>"
+      }
+    ]
   },
   "section5": {
     "title": "Warum dieses Quiz als Paar so gut funktioniert",

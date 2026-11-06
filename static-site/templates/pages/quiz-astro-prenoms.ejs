@@ -328,6 +328,7 @@
         <p><%- t(ns + ':section2.p1') %></p>
         <p><%- t(ns + ':section2.p2') %></p>
       </div>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'section2.plus' }) %>
       <% const tip2 = t(ns + ':section2.tip', ''); if (tip2) { %>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
         <p class="text-sm text-muted-foreground"><%- tip2 %></p>
@@ -371,6 +372,7 @@
         <p><%- t(ns + ':section5.p1') %></p>
         <p><%- t(ns + ':section5.p2') %></p>
       </div>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'section5.plus' }) %>
       <% const tip5 = t(ns + ':section5.tip', ''); if (tip5) { %>
       <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
         <p class="text-sm text-muted-foreground"><%- tip5 %></p>

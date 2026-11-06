@@ -4,7 +4,17 @@
       "title": "Moet ik scheiden? Wat je twijfel je al vertelt",
       "p1": "Je hebt deze pagina niet toevallig geopend. Wie ‘moet ik scheiden’ intypt in Google, doet dat niet uit nieuwsgierigheid. Het is omdat er ergens iets niet meer klopt, en de vraag een plek begint in te nemen die je niet meer kunt negeren.",
       "p2": "Je twijfel is op zich al informatie. Ze zegt dat je niet overhaast wilt beslissen. Dat je je relatie, en je leven, serieus neemt. Dat telt.",
-      "p3": "Maar ze kan je ook eindeloos in een ongemakkelijke situatie houden, als je haar nooit eerlijk onder ogen ziet."
+      "p3": "Maar ze kan je ook eindeloos in een ongemakkelijke situatie houden, als je haar nooit eerlijk onder ogen ziet.",
+      "plus": [
+        {
+          "titre": "Moet ik bij hem weggaan, ook als we niet getrouwd zijn?",
+          "texte": "<p>Achter ‘moet ik scheiden’ zit vaak een bredere vraag: blijven of gaan. De test is geschreven voor een getrouwd stel, maar de meeste vragen gelden voor elke lange relatie: de communicatie, de pogingen om het te herstellen, wat de situatie je kost. Ben je niet getrouwd, antwoord dan op dezelfde manier en sla over wat met de procedure te maken heeft.</p>"
+        },
+        {
+          "titre": "Ik hou niet meer van mijn man of vrouw: moet ik scheiden?",
+          "texte": "<p>Niet meer hetzelfde voelen als in het begin betekent niet per se dat het voorbij is. Voor je over scheiden begint, is het de moeite waard om te kijken <a href=\"/nl/hou-ik-nog-van-hem/\">wat er van je gevoelens over is</a> onder de vermoeidheid en de gewoontes. Blijft de twijfel daarna, dan helpt deze test je de rest af te wegen: de communicatie, je gezondheid, wat je wilt voor later.</p>"
+        }
+      ]
     },
     "s2": {
       "title": "Wanneer moet je aan scheiden denken?",

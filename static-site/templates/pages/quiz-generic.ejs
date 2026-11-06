@@ -441,8 +441,28 @@
           if (spText) { %>
         <p class="text-muted-foreground leading-relaxed mb-3"><%- spText %></p>
         <% } } %>
+        <%/* Tableau annoncé par le dernier paragraphe du H3 (seo.sectionN.h3_X_table
+            ou sectionN.subXTable) : { headers: { cle: libellé }, rows: { ligne: { cle: valeur } } },
+            lignes en objet ou en liste, colonnes dans l'ordre des en-têtes. */%>
+        <% const subTable = tryKeys('seo.section' + s + '.h3_' + sub + '_table', 'section' + s + '.sub' + sub + 'Table');
+          if (subTable && subTable.headers && subTable.rows) {
+            const tCols = Object.keys(subTable.headers);
+            const tLignes = Array.isArray(subTable.rows) ? subTable.rows : Object.values(subTable.rows); %>
+        <div class="overflow-x-auto mt-4">
+          <table class="quiz-table">
+            <thead><tr><% tCols.forEach(function (c) { %><th><%= subTable.headers[c] %></th><% }) %></tr></thead>
+            <tbody>
+              <% tLignes.forEach(function (l) { %><tr><% tCols.forEach(function (c, ci) { %><td<%- ci === 0 ? ' class="font-medium"' : '' %>><%= l[c] %></td><% }) %></tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <% } %>
       </div>
       <% } %>
+
+      <%/* H3 ajoutés d'après la Search Console : sectionN.plus, listes permises */%>
+      <%- include('../partials/blocs-plus', { t, ns, cles: ['section' + s + '.plus', 'seo.section' + s + '.plus', 'seo.s' + s + '.plus'] }) %>
 
       <%/* Pillar/card items with icon pictograms */%>
       <% const firstPillar = getPillarTitle(s, 1);

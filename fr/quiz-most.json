@@ -51,7 +51,24 @@
       "Qui garde le plus de secrets ?",
       "Qui est le plus sensible aux compliments ?",
       "Qui est le plus fidèle à ses habitudes ?"
-    ]
+    ],
+    "amisTitle": "Questions « qui est le plus » entre amis",
+    "amisQuestions": [
+      "Qui est le plus en retard aux rendez-vous ?",
+      "Qui serait le premier à annuler une soirée prévue depuis un mois ?",
+      "Qui est le plus capable de se perdre en vacances ?",
+      "Qui envoie le plus de vocaux de trois minutes ?",
+      "Qui raconte toujours la même anecdote en soirée ?"
+    ],
+    "coupleTitle": "Questions « qui est le plus » en couple",
+    "coupleQuestions": [
+      "Qui est le plus câlin le matin ?",
+      "Qui craque le premier quand on se boude ?",
+      "Qui pique le plus la couette ?",
+      "Qui oublie le plus les dates importantes ?",
+      "Qui choisit le film du soir ?"
+    ],
+    "coupleNote": "Vous êtes seulement deux, sans les amis autour ? Il existe un jeu où <a href=\"/qui-de-nous-deux/\">chacun désigne en secret l'un de vous deux</a>, pensé exactement pour ça."
   },
   "tips": {
     "title": "Nos conseils pour un quiz \"Qui est le plus\" réussi",

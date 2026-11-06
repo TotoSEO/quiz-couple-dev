@@ -96,6 +96,14 @@
     "faq2Q": "Comment fonctionne le scoring du test ?",
     "faq2A": "Vous choisissez le mode au départ. En solo, vous répondez ensemble aux 20 questions et vous obtenez un score unique. En duo, chacun répond aux mêmes 20 questions à tour de rôle : un score par personne, plus la moyenne du couple. Le résultat est un pourcentage et non un total de points, parce que chaque question compte selon son importance. Ne pas avoir de projets d'avenir pèse trois fois plus qu'un déséquilibre dans les tâches ménagères, et les 20 questions couvrent toujours les mêmes grands thèmes : communication, confiance, conflits, intimité, autonomie, avenir et bien-être.",
     "faq3Q": "Que faire si nos scores individuels sont très différents ?",
-    "faq3A": "Un écart important entre vos scores indique que vous ne percevez pas votre relation de la même façon. C'est une information précieuse qui mérite d'être discutée ensemble, sans jugement."
+    "faq3A": "Un écart important entre vos scores indique que vous ne percevez pas votre relation de la même façon. C'est une information précieuse qui mérite d'être discutée ensemble, sans jugement.",
+    "s1": {
+      "plus": [
+        {
+          "titre": "« Je ne suis pas heureuse dans mon couple » : ce que le test peut montrer",
+          "texte": "<p>C'est une phrase qu'on se dit parfois sans savoir par où commencer, au féminin comme au masculin. Le test ne vous dira pas quoi faire, mais il aide à mettre des mots sur ce qui coince. Un score bas ne veut pas dire que tout est perdu, il montre surtout qu'il y a des choses à regarder de plus près. Et si ce malaise dure depuis des mois, on a rassemblé les signes qui reviennent <a href=\"/blog/femme-malheureuse-en-couple/\">quand on est malheureuse en couple</a>, et ce qui aide à en sortir.</p>"
+        }
+      ]
+    }
   }
 }

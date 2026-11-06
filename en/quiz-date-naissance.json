@@ -173,7 +173,13 @@
     "title": "What a birth date can tell you about a couple",
     "p1": "This compatibility test starts from one thing only: your two dates of birth. Most of the time, a birth date is just for wishing someone a happy birthday, but three traditions also read a personality in it: numerology, Western astrology and Chinese astrology. The test runs both your dates through all three.",
     "p2": "Numerology turns the date into a number, the <strong>life path</strong>, which says how a person moves through life. Western astrology looks at the day and the month to find your sign, and Chinese astrology looks at the year to find your animal. These three readings don't say the same thing, which is exactly why we look at all three.",
-    "p3": "At the end, you get an overall score, a score for each of the three readings and explanations about the two of you. If you'd rather have <a href=\"/en/love-compatibility-test/\">a questionnaire to fill in together</a>, there's also a twenty-question test about how you each see life as a couple."
+    "p3": "At the end, you get an overall score, a score for each of the three readings and explanations about the two of you. If you'd rather have <a href=\"/en/love-compatibility-test/\">a questionnaire to fill in together</a>, there's also a twenty-question test about how you each see life as a couple.",
+    "plus": [
+      {
+        "titre": "Can your date of birth tell you your love future?",
+        "texte": "<p>It's a question a lot of people ask, and the honest answer is no. A date of birth won't tell you who you'll meet, or when, or whether you'll ever get married. The test doesn't predict anything: it compares two personalities, as these three traditions describe them. Take it as a game, and as a good excuse to talk about your temperaments.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "The life path, the number hidden in your birth date",

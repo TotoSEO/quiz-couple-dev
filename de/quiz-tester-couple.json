@@ -13,7 +13,13 @@
     "title": "Was ist ein Partnertest und wozu dient er?",
     "p1": "Ein <strong>Paartest</strong> ist ein Bewertungsinstrument, das die Kompatibilität und Harmonie zwischen zwei Partnern misst. Im Gegensatz zu einem lockeren Gespräch strukturiert er den Austausch rund um Schlüsselthemen: Kommunikation, Vertrauen, Werte, Lebensziele und Intimität.",
     "p2": "Das Ziel ist nicht, ein endgültiges Urteil zu fällen, sondern einen <strong>objektiven Spiegel eurer Beziehung</strong> zu bieten. Euer Ergebnis hebt eure Stärken hervor und identifiziert Bereiche, in denen eine gemeinsame Anstrengung eure Bindung stärken könnte.",
-    "p3": "Die Fragen bauen auf <strong>konkreten Alltagssituationen</strong> auf, nicht auf abstrakten Konzepten. Das macht die Übung relevant und zugänglich, ob eure Beziehung frisch ist oder Jahre zählt."
+    "p3": "Die Fragen bauen auf <strong>konkreten Alltagssituationen</strong> auf, nicht auf abstrakten Konzepten. Das macht die Übung relevant und zugänglich, ob eure Beziehung frisch ist oder Jahre zählt.",
+    "plus": [
+      {
+        "titre": "Ein Partnertest zu zweit, auch in der Fernbeziehung",
+        "texte": "<p>Der Test wird zu zweit gemacht, aber nicht unbedingt am selben Ort. Auf einem einzigen Handy könnt ihr gemeinsam mit einer Stimme antworten oder abwechselnd, damit jeder sein eigenes Ergebnis bekommt. Und wenn ihr weit voneinander entfernt seid, lässt euch der Fernmodus jeweils auf dem eigenen Handy antworten: Einer erstellt das Spiel, der andere tritt mit einem Code bei, und eure beiden Antworten erscheinen bei jeder Frage nebeneinander.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Die 5 Säulen einer starken Beziehung",

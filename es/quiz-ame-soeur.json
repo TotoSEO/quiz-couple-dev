@@ -16,7 +16,13 @@
     "not2Title": "La persona perfecta",
     "not2Text": "Un alma gemela tiene defectos, y algunos te irritan de verdad. La pregunta no es si existen, sino si puedes hablar de ellos.",
     "not3Title": "La que te completa",
-    "not3Text": "La mitad que falta queda muy bien en las películas. En la vida real, dos personas enteras aguantan mejor que dos mitades agarradas la una a la otra."
+    "not3Text": "La mitad que falta queda muy bien en las películas. En la vida real, dos personas enteras aguantan mejor que dos mitades agarradas la una a la otra.",
+    "plus": [
+      {
+        "titre": "¿Un test de alma gemela por fecha de nacimiento o por nombre?",
+        "texte": "<p>Mucha gente busca un test de alma gemela con la fecha de nacimiento o con los nombres. Este no los usa: mira lo que vives en tu relación. Si aun así quieres la parte astrológica, puedes <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">partir de las dos fechas de nacimiento</a> para una lectura con el camino de vida, el signo y el signo chino, y <a href=\"/es/calculadora-del-amor/\">bastan dos nombres</a> para obtener un porcentaje. Son juegos, y así hay que tomarlos.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Los distintos tipos de alma gemela",

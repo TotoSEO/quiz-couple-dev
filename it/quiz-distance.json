@@ -74,7 +74,7 @@
       },
       {
         "title": "Rituali e creatività relazionale",
-        "text": "Il vincolo crea creatività. Guardare un film «insieme», spedirsi pacchi a sorpresa, cucinare la stessa ricetta in videochiamata… Questi rituali diventano il cemento della vostra coppia."
+        "text": "Il vincolo crea creatività. Guardare un film «insieme», spedirsi pacchi a sorpresa, cucinare la stessa ricetta in videochiamata, fare <a href=\"/it/giochi-di-coppia/\">giochi a due, ognuno sul proprio telefono</a>… Questi rituali diventano il cemento della vostra coppia."
       }
     ]
   },
@@ -199,7 +199,7 @@
     "readyDesc": "Avete le qualità necessarie per gestire la distanza."
   },
   "section10": {
-    "title": "18 domande da farsi in videochiamata",
+    "title": "24 domande da farsi in videochiamata",
     "intro": "Il test qui sopra vi dà un verdetto. Questa lista serve ad altro: tirarla fuori in una sera in cui la chiamata si spegne, quando vi siete già raccontati la giornata e restano venti minuti da riempire. Pescatene una a caso.",
     "sub1Title": "Il quotidiano che non si vede",
     "sub1Text": "<ul><li>Raccontami ieri, ma solo i cinque minuti più banali.</li><li>Cosa non so assolutamente di casa tua?</li><li>Chi hai visto questa settimana che io non conosco?</li><li>Cosa fai la sera quando non ci sentiamo?</li><li>Che abitudine hai preso da quando siamo lontani?</li><li>Cosa ti fa pensare a me in una giornata normale?</li></ul>",
@@ -207,7 +207,11 @@
     "sub2Text": "<ul><li>Cosa ti manca di più, a parte vedermi?</li><li>Qual è il momento più duro della settimana?</li><li>C'è un argomento che eviti di raccontarmi al telefono?</li><li>Cosa ha reso più facile la distanza fra noi?</li><li>In che momento hai dubitato, anche solo per cinque minuti?</li><li>Cosa faccio che ti rassicura senza che io lo sappia?</li></ul>",
     "sub3Title": "Il dopo e i ritrovarsi",
     "sub3Text": "<ul><li>La prima cosa che facciamo quando ci rivediamo: scegli tu.</li><li>Sinceramente, quanto manca prima di stare nella stessa città?</li><li>Cosa ti farebbe dire che non ne vale più la pena?</li><li>Cosa temi del giorno in cui vivremo insieme?</li><li>Quale abitudine da single non vuoi perdere?</li><li>Se uno dovesse trasferirsi per l'altro, chi sarebbe?</li></ul>",
-    "outro": "Una regola perché funzioni: prima si risponde, poi si chiede. Altrimenti uno dei due finisce a fare un colloquio di lavoro."
+    "outro": "Una regola perché funzioni: prima si risponde, poi si chiede. Altrimenti uno dei due finisce a fare un colloquio di lavoro.",
+    "sub4Title": "Domande d'amore da fare alla tua ragazza o al tuo ragazzo a distanza",
+    "sub4Text": "<ul><li>Cosa hai pensato di me la primissima volta?</li><li>Qual è il momento con me a cui ripensi più spesso?</li><li>Cosa fai per sentire meno la mia mancanza quando non ci sono?</li><li>C'è una cosa che ti dico e che vorresti sentire più spesso?</li><li>Se potessi essere lì stasera, cosa faremmo?</li><li>Cosa ti ha fatto capire che ci tenevi a me?</li></ul>",
+    "sub5Title": "Argomenti di conversazione per una coppia a distanza",
+    "sub5Text": "<p>Ci sono anche le sere in cui nessuno dei due ha voglia di rispondere a una domanda. In quel caso è meglio un argomento di cui si può parlare a lungo senza fatica. Alcuni che funzionano bene:</p><ul><li>la serie o il film che state guardando ognuno per conto suo, e cosa ne penserebbe l'altro;</li><li>l'ultima cosa che vi ha fatto ridere oggi, anche se è una sciocchezza;</li><li>un ricordo insieme che ognuno racconta a modo suo (vedrete che le versioni non coincidono mai...);</li><li>il prossimo viaggio: dove, quando e cosa farete la prima sera;</li><li>una persona della vostra vita che l'altro non conosce ancora, e la sua storia;</li><li>cosa mangiate stasera, con tanto di foto.</li></ul><p>E quando non viene in mente niente, un gioco va benissimo per la durata di una chiamata.</p>"
   },
   "jsonLd": {
     "about": "relazione a distanza"

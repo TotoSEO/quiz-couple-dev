@@ -92,7 +92,13 @@
     "sub3Title": "Posez la question de l'échéance en premier",
     "sub3Text": "Avant de parler des sentiments, parlez de la date. C'est plus concret, moins menaçant, et la réponse vous en apprendra souvent plus que n'importe quelle déclaration. Quelqu'un qui veut vous garder cherche une solution ; quelqu'un qui a lâché repousse.",
     "sub4Title": "Acceptez de ne pas tout régler en un appel",
-    "sub4Text": "Ces conversations se font en plusieurs fois. Vouloir une réponse définitive dans les quarante minutes avant que l'autre parte travailler est la meilleure façon d'obtenir une réponse fausse."
+    "sub4Text": "Ces conversations se font en plusieurs fois. Vouloir une réponse définitive dans les quarante minutes avant que l'autre parte travailler est la meilleure façon d'obtenir une réponse fausse.",
+    "plus": [
+      {
+        "titre": "Tester son amour à distance : pourquoi les pièges ne marchent pas",
+        "texte": "<p>Beaucoup de gens cherchent comment tester une fille ou un garçon pour savoir s'il ou elle les aime encore à distance : un faux billet d'avion, un silence de deux jours pour voir s'il ou elle s'inquiète, une jalousie provoquée. Ces pièges donnent rarement la réponse qu'on cherche. Ils montrent comment l'autre réagit à un piège, pas ce qu'il ou elle ressent, et quand la ruse se découvre, c'est la confiance qui en prend un coup.</p><p>Les cinq signaux plus haut font un bien meilleur test, parce qu'ils se lisent sans rien provoquer : qui lance le contact, ce que deviennent vos conversations, s'il existe une date. Et pour le reste, la question posée en visio reste ce qui marche le mieux.</p>"
+      }
+    ]
   },
   "section7": {
     "title": "Quand la distance n'est plus le vrai sujet",

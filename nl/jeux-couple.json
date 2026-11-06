@@ -154,7 +154,7 @@
     "q3": "Wat is het leukste spel om thuis met z'n tweeën te spelen?",
     "a3": "Dat hangt van de avond af! Waarheid of durven is het meest veelzijdig: het begint snel en stopt wanneer jullie willen. Wie van ons twee duurt vijf minuten en zet altijd een gesprek op gang. Zou je liever werkt beter als jullie meer zin hebben om te praten dan om iets te doen. Het bordspel vraagt een flink halfuur, maar het is het enige dat je kunt winnen. Het rad is vooral handig om een weddenschap te beslechten. En de 18+-versie bewaar je voor de momenten dat jullie helemaal met z'n tweeën zijn.",
     "q4": "Kun je het op afstand spelen, ieder bij zichzelf thuis?",
-    "a4": "Ja. Wie van ons twee, wie zou eerder, ik heb nog nooit en hij is een 10, maar hebben een afstandsmodus: een van jullie maakt het spel aan, de ander doet mee met de code, en ieder speelt op de eigen telefoon. Bij de andere spellen opent een van jullie het spel, leest hardop voor in een videogesprek en klikt voor jullie allebei. Waarheden, dilemma's en stemmen werken prima op afstand, voor de opdrachten heb je wat fantasie nodig.",
+    "a4": "Ja. Wie van ons twee, Ik heb nog nooit, Wie zou eerder? en Hij is een 10 maar... hebben een afstandsmodus: een van jullie maakt het spel aan, de ander doet mee met de code, en ieder speelt op de eigen telefoon. Bij de andere spellen opent een van jullie het spel, leest hardop voor in een videogesprek en klikt voor jullie allebei. Waarheden, dilemma's en stemmen werken prima op afstand, voor de opdrachten heb je wat fantasie nodig.",
     "q5": "Zijn deze spellen geschikt voor een koppel dat elkaar net kent?",
     "a5": "Zou je liever, wie van ons twee, het rad met opdrachten en de gewone versie van waarheid of durven wel: die gaan niet uit van een gezamenlijke geschiedenis. Het bordspel ook, al zijn de herinneringsvakjes in het begin wat leeg. De 18+-versie gaat er juist van uit dat jullie elkaar al goed kennen: te vroeg gespeeld zorgt die eerder voor ongemak dan voor plezier."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Spelletjes voor koppels"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Spelletjes voor koppels op afstand, ieder op de eigen telefoon",
+      "texte": "<p>Vier van onze spellen hebben een echte afstandsmodus. Een van jullie maakt het spel aan, de ander doet mee met een code of een QR-code, en ieder antwoordt op het eigen scherm. De twee antwoorden verschijnen naast elkaar zodra jullie allebei geantwoord hebben, en dan heb je meteen iets om over te praten tijdens het gesprek:</p><ul><li><a href=\"/nl/wie-van-ons-twee/\">aanwijzen wie van jullie tweeën</a> altijd te laat is, het jaloerst of het meest uitgeeft;</li><li><a href=\"/nl/ik-heb-nog-nooit-vragen/\">opbiechten wat je al eens gedaan hebt</a>, of niet;</li><li><a href=\"/nl/wie-zou-eerder-vragen/\">zeggen wie van jullie eerder</a> zou gaan parachutespringen of een vlucht zou missen;</li><li><a href=\"/nl/hij-is-een-10-maar/\">een perfect iemand met één minpuntje beoordelen</a>, van 0 tot 10.</li></ul><p>Die modus werkt ook als jullie naast elkaar zitten: dan wordt het een spel met twee telefoons, waarin niemand ziet wat de ander kiest voor het moment van onthulling. De andere spellen op deze pagina werken heel goed via videobellen: een van jullie opent het spel, leest hardop voor en klikt voor jullie allebei.</p><p>En zijn jullie met meerdere stellen, dan speel je <a href=\"/nl/partyspel-voor-koppels/\">het spel voor vier tot tien spelers</a> ook ieder op de eigen telefoon.</p>"
+    }
+  ]
 }

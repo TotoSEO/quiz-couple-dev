@@ -9,7 +9,17 @@
     "title": "¿Por qué sentimos celos en pareja?",
     "p1": "Los celos no aparecen por casualidad. Surgen donde hay algo que perder, y en muchos casos lo primero que dicen es que te importa la otra persona. Pero esa no es la única explicación.",
     "p2": "La mayoría de las veces, los celos en la pareja vienen de dos cosas. La primera es el miedo al abandono, a menudo ligado a algo del pasado: una relación que terminó mal, una traición, a veces algo mucho más antiguo que la relación actual. La segunda es la falta de confianza en uno mismo, no en el otro. «¿Por qué se iba a quedar conmigo si aparece alguien mejor?» Esa pregunta, que no siempre nos hacemos de forma consciente, explica muchas reacciones que le achacamos por error a la otra persona.",
-    "p3": "También hay un tercer factor del que se habla menos: <a href=\"/es/test-estilo-apego/\">el estilo de apego</a>. Las personas con un apego llamado ansioso son más sensibles a las señales de distancia, y toman más fácilmente una situación neutra por una amenaza. Es una forma de funcionar que se formó pronto, y se puede cambiar."
+    "p3": "También hay un tercer factor del que se habla menos: <a href=\"/es/test-estilo-apego/\">el estilo de apego</a>. Las personas con un apego llamado ansioso son más sensibles a las señales de distancia, y toman más fácilmente una situación neutra por una amenaza. Es una forma de funcionar que se formó pronto, y se puede cambiar.",
+    "plus": [
+      {
+        "titre": "Celos multidimensionales: las tres formas de los celos",
+        "texte": "<p>Quienes investigan los celos suelen dividirlos en tres. La escala más conocida, publicada por Pfeiffer y Wong en 1989, se llama precisamente escala de celos multidimensional. Separa los celos en la cabeza (las sospechas, las películas que te montas), los celos que se sienten (la punzada cuando tu pareja habla de alguien) y los celos que pasan a los actos (mirarle el móvil, comprobar dónde está).</p><p>Nuestros dos tests no usan esa escala tal cual, pero sus preguntas tocan las tres. Si tu puntuación sube, fíjate en cuántas de tus respuestas hablan de cosas que haces, no solo de lo que sientes.</p>"
+      },
+      {
+        "titre": "¿Y los celos en la amistad?",
+        "texte": "<p>Estos tests están escritos para una pareja, pero los celos entre amigos también existen, y se reconocen más o menos por las mismas señales: enfadarte con un amigo cuando pasa tiempo con otra persona, sentir que te ha sustituido alguien nuevo del grupo, comprobar a quién ha visto. Y si esa amistad ocupa un lugar que te preocupa, quizá sea <a href=\"/es/blog/dependencia-emocional-en-la-amistad/\">una amistad en la que dependes demasiado del otro</a>.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "¿Son los celos en pareja un problema?",
@@ -59,7 +69,7 @@
     "pillar4Text": "Modificas regularmente tu comportamiento, los comportamientos de control se expanden (localización, mensajes, aislamiento), te sientes culpable de cosas que no has hecho. Si reconoces varias de estas señales, no es una situación que normalizar: es la mecánica de una <a href=\"/es/test-relacion-toxica/\">relación tóxica</a>."
   },
   "section6": {
-    "title": "¿Cuándo se convierten los celos en un problema serio?",
+    "title": "Celos enfermizos: ¿cuándo se convierten en un problema serio?",
     "p1": "Hay señales que indican que los celos han cruzado un umbral. Cuando el miedo a la reacción del otro dicta tus decisiones, ya no son celos ordinarios.",
     "p2": "Pedir ayuda a un profesional, terapeuta o psicólogo, suele ser el camino más rápido para recuperar una relación tranquila.",
     "dontTitle": "Lo que agrava los celos",

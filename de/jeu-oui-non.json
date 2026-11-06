@@ -65,5 +65,17 @@
     "a4": "Das Spiel ist für ein Paar geschrieben: die Situationen handeln von gemeinsamem Konto, Schwiegereltern oder Intimem. Allein funktioniert es auch, ihr stimmt eure Meinung ab und vergleicht sie mit allen anderen. Unter Freunden werden manche Situationen ins Leere laufen, aber verboten ist es nicht.",
     "q5": "Was passiert nach den 120 Situationen?",
     "a5": "Nicht viel, und das ist Absicht: es gibt weder Punkte noch Rangliste, das Spiel sagt euch einfach, dass ihr alles gesehen habt. Wenn euch das Format gefällt, laufen die Dilemma-Fragen nach demselben Abstimmungsprinzip, mit <a href=\"/de/dilemmata-fuer-paare/\">unmöglichen Deals</a> statt Situationen."
-  }
+  },
+  "plus": [
+    {
+      "titre": "Ja oder Nein ohne Diskussion, als Paar oder mit Freunden",
+      "texte": "<p>Das ist eine Variante, die in den sozialen Netzwerken oft auftaucht: Man stellt eine Frage nach der anderen, und jeder antwortet in einer Sekunde mit Ja oder Nein, ohne Begründung und ohne Diskussion. Das ist das Gegenteil von unserem Spiel, bei dem ihr euch Zeit nehmt, darüber zu reden, bevor ihr klickt, aber beides passt sehr gut zusammen. Macht zuerst eine Runde „ohne Diskussion“, jeder für sich und so schnell wie möglich, und nehmt euch dann die Situationen vor, bei denen ihr unterschiedlich geantwortet habt: Da wird das Gespräch spannend.</p><p>Mit Freunden funktioniert es mit leichteren Fragen, zum Beispiel:</p><ul><li>„Hast du schon mal so getan, als wärst du krank, um einen Abend abzusagen?“</li><li>„Könntest du von heute auf morgen für ein Jahr ins Ausland ziehen?“</li><li>„Liest du deine Nachrichten dreimal, bevor du sie abschickst?“</li><li>„Hast du dir schon mal das Profil vom Ex eines Freundes angeschaut?“</li><li>„Würdest du ein ganzes Wochenende ohne Handy durchhalten?“</li><li>„Singst du unter der Dusche?“</li></ul>",
+      "sous": [
+        {
+          "titre": "Und als heiße Version?",
+          "texte": "<p>Unser Spiel bleibt bei Situationen aus dem Leben zu zweit, ohne pikante Fragen. Für eine heiße Version, die ihr euch für das Ende des Abends aufhebt, hier ein paar zum Anfangen:</p><ul><li>„Hattest du schon mal mitten beim Familienessen Lust auf mich?“</li><li>„Hast du schon mal eine heiße Nachricht aufgehoben, um sie später noch mal zu lesen?“</li><li>„Hättest du Lust, heute Abend ein pikantes Spiel auszuprobieren?“</li><li>„Hast du bei der Arbeit schon mal nicht ganz so brav an mich gedacht?“</li><li>„Würdest du Ja sagen zu einer Nacht im Hotel, nur wir zwei?“</li><li>„Sagen wir uns lieber, was wir wollen, statt es zu erraten?“</li></ul><p>Wenn ihr weitergehen wollt, gibt es <a href=\"/de/pikantes-paar-quiz/\">spicy Fragen, von harmlos bis gewagt</a>, die ihr euch direkt stellen könnt.</p>"
+        }
+      ]
+    }
+  ]
 }

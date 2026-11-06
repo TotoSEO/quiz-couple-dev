@@ -65,5 +65,17 @@
     "a4": "Il gioco è scritto per una coppia: le situazioni parlano di conto in comune, di suoceri o di intimità. Da soli funziona lo stesso, votate la vostra opinione e la confrontate con quella degli altri. Tra amici, alcune situazioni cadranno nel vuoto, ma niente lo vieta.",
     "q5": "Cosa succede alla fine delle 120 situazioni?",
     "a5": "Non granché, ed è voluto: non c'è punteggio né classifica, il gioco vi dice semplicemente che avete visto tutto. Se il formato vi piace, <a href=\"/it/dilemmi-di-coppia/\">i dilemmi di coppia</a> funzionano sullo stesso principio dei voti, con patti impossibili al posto delle situazioni."
-  }
+  },
+  "plus": [
+    {
+      "titre": "Sì o no senza pensarci, in coppia o tra amici",
+      "texte": "<p>È una variante che gira molto sui social: si fanno le domande una dopo l'altra, e ognuno risponde sì o no in un secondo, senza giustificarsi né discutere. È il contrario del nostro gioco, in cui vi prendete il tempo di parlarne prima di cliccare, ma le due cose vanno benissimo insieme. Fate prima un giro «senza pensarci», ognuno per conto suo e il più in fretta possibile, poi riprendete le situazioni in cui non avete risposto allo stesso modo: è lì che la conversazione diventa interessante.</p><p>Tra amici funziona con domande più leggere, per esempio:</p><ul><li>«Hai mai finto di stare male per saltare una serata?»</li><li>«Andresti a vivere un anno all'estero da un giorno all'altro?»</li><li>«Rileggi i tuoi messaggi tre volte prima di mandarli?»</li><li>«Hai mai guardato il profilo dell'ex di un amico?»</li><li>«Resisteresti un weekend intero senza telefono?»</li><li>«Canti sotto la doccia?»</li></ul>",
+      "sous": [
+        {
+          "titre": "E in versione hot?",
+          "texte": "<p>Il nostro gioco resta sulle situazioni della vita di coppia, senza domande piccanti. Per una versione hot, da tenere per la fine della serata, ecco da dove cominciare:</p><ul><li>«Hai mai avuto voglia di me nel bel mezzo di un pranzo di famiglia?»</li><li>«Hai mai tenuto un messaggio piccante per rileggerlo dopo?»</li><li>«Ti piacerebbe provare un gioco piccante stasera?»</li><li>«Hai mai pensato a me in modo poco innocente al lavoro?»</li><li>«Diresti di sì a una notte in hotel, solo per noi due?»</li><li>«Preferisci che ci diciamo cosa vogliamo invece di indovinarlo?»</li></ul><p>Per andare oltre, ci sono <a href=\"/it/quiz-coppia-piccante/\">domande piccanti, dalla più dolce alla più audace</a>, da farsi faccia a faccia.</p>"
+        }
+      ]
+    }
+  ]
 }

@@ -51,7 +51,24 @@
       "Wer bewahrt die meisten Geheimnisse?",
       "Wer ist am empfindlichsten für Komplimente?",
       "Wer ist seinen Gewohnheiten am treusten?"
-    ]
+    ],
+    "amisTitle": "„Wer von euch ist …?“-Fragen für Freunde",
+    "amisQuestions": [
+      "Wer kommt immer am spätesten zu Verabredungen?",
+      "Wer würde als Erster einen Abend absagen, der seit einem Monat geplant ist?",
+      "Wer würde sich am ehesten im Urlaub verlaufen?",
+      "Wer schickt die meisten dreiminütigen Sprachnachrichten?",
+      "Wer erzählt auf Partys immer dieselbe Geschichte?"
+    ],
+    "coupleTitle": "„Wer von euch ist …?“-Fragen für Paare",
+    "coupleQuestions": [
+      "Wer ist morgens am verschmustesten?",
+      "Wer gibt als Erster nach, wenn ihr schmollt?",
+      "Wer klaut am meisten die Bettdecke?",
+      "Wer vergisst am häufigsten wichtige Termine?",
+      "Wer sucht abends den Film aus?"
+    ],
+    "coupleNote": "Ihr seid nur zu zweit, ohne Freunde drumherum? Dafür gibt es ein Spiel, in dem <a href=\"/de/wer-von-uns-beiden-paarspiel/\">jeder heimlich auf einen von euch beiden zeigt</a>."
   },
   "tips": {
     "title": "Unsere Tipps für eine gelungene Runde",

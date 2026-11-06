@@ -173,7 +173,13 @@
     "title": "Lo que una fecha de nacimiento puede decir sobre una pareja",
     "p1": "Este test de compatibilidad parte de un solo dato: vuestras dos fechas de nacimiento. Una fecha de nacimiento sirve sobre todo para felicitar un cumpleaños, pero tres tradiciones leen en ella un carácter: la numerología, la astrología occidental y la astrología china. El test pasa vuestras dos fechas por las tres.",
     "p2": "La numerología saca de ella un número, el <strong>camino de vida</strong>, que dice cómo avanza una persona por la vida. La astrología occidental mira el día y el mes para encontrar vuestro signo, y la astrología china mira el año para encontrar vuestro animal. Estas tres lecturas no dicen lo mismo, y justamente por eso miramos las tres.",
-    "p3": "Al final tenéis una puntuación global, una puntuación para cada una de las tres lecturas y explicaciones que hablan de vosotros dos. Si preferís <a href=\"/es/test-compatibilidad-amorosa/\">un cuestionario para rellenar en pareja</a>, también hay un test de veinte preguntas sobre vuestra forma de ver la vida en pareja."
+    "p3": "Al final tenéis una puntuación global, una puntuación para cada una de las tres lecturas y explicaciones que hablan de vosotros dos. Si preferís <a href=\"/es/test-compatibilidad-amorosa/\">un cuestionario para rellenar en pareja</a>, también hay un test de veinte preguntas sobre vuestra forma de ver la vida en pareja.",
+    "plus": [
+      {
+        "titre": "¿Se puede conocer el futuro amoroso con la fecha de nacimiento?",
+        "texte": "<p>Es una pregunta que mucha gente se hace, y la respuesta sincera es que no. Una fecha de nacimiento no dice a quién se va a conocer, ni cuándo, ni si habrá boda algún día. El test no predice nada: compara dos caracteres, tal como los describen estas tres tradiciones. Tomadlo como un juego, y como una buena excusa para hablar de vuestros temperamentos.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "El camino de vida, el número escondido en vuestra fecha de nacimiento",

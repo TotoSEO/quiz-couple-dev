@@ -13,7 +13,17 @@
       "s2p1": "Il tuo quiz è privato. Si apre solo con il link che ricevi al momento della creazione, e nessuno può trovarlo in altro modo. Conserva quel link da qualche parte, in una nota o in una chat per esempio: è l'unico modo per tornare al tuo quiz.",
       "s2p2": "Mandalo al tuo partner, a un amico o in un gruppo, e tutti possono giocare subito, senza account. Dopo una settimana il quiz viene eliminato. Se vuoi continuare, crearne uno nuovo richiede circa due minuti.",
       "s3Title": "Quiz per ogni momento di coppia",
-      "s3p1": "Che sia per scoprire se il partner ti conosce davvero, per una serata tra amici o solo per ridere, la creazione di quiz personalizzati si adatta a ogni voglia. Dai libero sfogo alla fantasia!"
+      "s3p1": "Che sia per scoprire se il partner ti conosce davvero, per una serata tra amici o solo per ridere, la creazione di quiz personalizzati si adatta a ogni voglia. Dai libero sfogo alla fantasia!",
+      "s3plus": [
+        {
+          "titre": "Un quiz \"chi mi conosce meglio\" su di te",
+          "texte": "<p>È l'uso più comune del creatore: un quiz su di te, con le tue domande, per vedere chi ti conosce meglio. Il tuo piatto preferito, la città dove sogni di vivere, quello che ti fa ridere di più... Scegli il modello \"quiz a punti\", segni la risposta giusta a ogni domanda e alla fine ognuno vede il suo punteggio. Per la vostra coppia c'è anche un quiz già pronto in cui <a href=\"/it/quiz-chi-conosce-meglio-partner/\">ognuno indovina le risposte dell'altro</a>, se non avete voglia di scrivere le domande.</p>"
+        },
+        {
+          "titre": "Creare un quiz per gli amici",
+          "texte": "<p>Il quiz si condivide con un semplice link, quindi funziona benissimo in un gruppo di amici come con la tua metà. Mandalo nella chat del gruppo: ognuno gioca sul suo telefono, senza account, per una settimana. Per un compleanno o un addio al nubilato, il modello vero o falso fa spesso ridere parecchio.</p>"
+        }
+      ]
     },
     "total_quiz": "quiz creati dalla community",
     "total_merci": "Grazie alla community di Quiz Couple per tenere vivo il sito ❤️"

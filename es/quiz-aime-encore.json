@@ -77,7 +77,13 @@
   "section6": {
     "title": "¿Y si fueras tú quien ya no quiere?",
     "p1": "A veces la pregunta se da la vuelta. Te preguntas si te sigue queriendo y, en el fondo, ya no estás tan seguro de quererle a él. No es una confesión vergonzosa, es una pregunta honesta, y merece su propia respuesta.",
-    "p2": "Dos tests se ocupan de eso mejor que este: <a href=\"/es/test-estoy-enamorado/\">lo que todavía sientes</a> para los sentimientos, y amor o costumbre para lo que te hace quedarte. Hazlos antes de preguntarle al otro. ¡Se habla mejor cuando uno sabe lo que siente!"
+    "p2": "Dos tests se ocupan de eso mejor que este: <a href=\"/es/test-estoy-enamorado/\">lo que todavía sientes</a> para los sentimientos, y amor o costumbre para lo que te hace quedarte. Hazlos antes de preguntarle al otro. ¡Se habla mejor cuando uno sabe lo que siente!",
+    "plus": [
+      {
+        "titre": "¿Me quiere, o todavía me quiere?",
+        "texte": "<p>La pregunta se escribe a menudo sin el «todavía». Este test está hecho para parejas asentadas, cuando la duda es sobre unos sentimientos que estaban ahí y que parecen alejarse. Si aún no estáis juntos y te preguntas qué siente la otra persona, las señales de <a href=\"/es/test-me-quiere-en-secreto/\">alguien que te quiere sin decirlo</a> no son las mismas, y hay otro test escrito para ese caso.</p>"
+      }
+    ]
   },
   "section7": {
     "title": "Cómo funciona este test",

@@ -11,7 +11,13 @@
     "title": "Come capire se si ama ancora qualcuno?",
     "p1": "La risposta non sta nelle grandi dichiarazioni, sta nei riflessi. Hai voglia di ritrovarlo la sera? I suoi successi ti fanno piacere? Lo difendi quando qualcuno lo critica? Sono cose che non si decidono, ed è proprio per questo che dicono la verità.",
     "p2": "Il problema, quando ci si fa la domanda, è che si cerca di rassicurarsi o di condannarsi in un colpo solo, con un solo segnale. Un desiderio in calo non vuol dire niente da solo: capita a tutte le coppie. Un pensiero per qualcun altro, nemmeno. È l'accumulo che conta, e soprattutto il peso dei segnali gravi: aver pensato di andarsene, a freddo, più volte, non è dello stesso ordine di una sera in cui si preferisce il telefono.",
-    "p3": "Ecco perché il test non conta le risposte, le pesa. E perché non restituisce un «sì» o un «no», ma un livello su otto: fra «lo ami, ed è chiaro» e «non lo ami più» ci sono sei stati intermedi che molte coppie attraversano, e non portano tutti nello stesso posto."
+    "p3": "Ecco perché il test non conta le risposte, le pesa. E perché non restituisce un «sì» o un «no», ma un livello su otto: fra «lo ami, ed è chiaro» e «non lo ami più» ci sono sei stati intermedi che molte coppie attraversano, e non portano tutti nello stesso posto.",
+    "plus": [
+      {
+        "titre": "Lo amo, o lo amo ancora?",
+        "texte": "<p>Tante persone cercano semplicemente «lo amo?». Questo test risponde alla versione con «ancora»: state insieme da un po', e non sai più bene cosa resta. Se la storia è appena cominciata, la domanda è piuttosto se sei <a href=\"/it/test-sono-innamorato/\">innamorato o innamorata, o solo attratto</a>, ed è un altro test, che guarda l'attrazione degli inizi più che l'usura della vita di tutti i giorni.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "I segnali che pesano di più",
@@ -32,7 +38,9 @@
     "p3": "Il tuo totale cade poi in uno degli otto livelli. I confini non sono fasce uguali: i due livelli in basso sono più stretti, perché la differenza fra «quello che resta non è più amore» e «non lo ami più» si gioca su pochi punti, ma non su poche cose. Un punteggio di 45 su 89 non vuol dire «innamorato a metà», vuol dire che qualcosa si è messo in pausa e che la direzione non è ancora presa.",
     "p4": "Una precisazione: questo test non dice niente dei sentimenti dell'altro. Se il tuo dubbio riguarda quello che lui o lei prova per te, <a href=\"/it/mi-ama-ancora-test/\">i segnali che ti ama ancora</a> si leggono altrove. E se il tuo risultato è basso su entrambi i fronti, la domanda successiva non è più quella del sentimento, è quella di <a href=\"/it/test-e-la-fine-della-mia-relazione/\">quello che tiene ancora nella coppia</a>."
   },
-  "seo": { "faqTitle": "Le domande che ci si pone" },
+  "seo": {
+    "faqTitle": "Le domande che ci si pone"
+  },
   "jsonLd": {
     "about": "sentimenti amorosi nella coppia",
     "faq1Q": "Come capire se non si ama più il proprio partner?",

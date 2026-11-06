@@ -51,7 +51,24 @@
       "Who keeps the most secrets?",
       "Who is the most sensitive to compliments?",
       "Who is the most faithful to their habits?"
-    ]
+    ],
+    "amisTitle": "\"Who is the most\" questions for friends",
+    "amisQuestions": [
+      "Who is always the latest to meet up?",
+      "Who would be the first to cancel a night planned a month ago?",
+      "Who is most likely to get lost on holiday?",
+      "Who sends the most three-minute voice notes?",
+      "Who always tells the same story at parties?"
+    ],
+    "coupleTitle": "\"Who is the most\" questions for couples",
+    "coupleQuestions": [
+      "Who is the cuddliest in the morning?",
+      "Who caves first when we're sulking?",
+      "Who steals the duvet the most?",
+      "Who forgets important dates the most?",
+      "Who picks the film at night?"
+    ],
+    "coupleNote": "Just the two of you, with no friends around? There's a game where <a href=\"/en/which-one-of-us-couple-game/\">you each secretly point at one of you</a>, made exactly for that."
   },
   "tips": {
     "title": "Our Tips for a Successful \"Who Is the Most\" Quiz",

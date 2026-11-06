@@ -18,7 +18,13 @@
     "title": "¿Qué es exactamente un quiz divertido para parejas?",
     "p1": "Un <strong class=\"text-foreground\">quiz de pareja divertido</strong> es un juego de preguntas para dos cuyo objetivo no es poner a prueba conocimientos, sino arrancar la conversación. Aparece una pregunta, la leéis en voz alta y respondéis uno detrás del otro. Nada más.",
     "p2": "No hay respuesta correcta ni puntuación. Lo que hace reír es la respuesta en sí: lo que el otro pensaba de ti en la primera cita, el <a href=\"/es/quiz-pareja-vergonzoso/\">momento más vergonzoso</a> que habéis vivido juntos, o qué haría si le tocara la lotería mañana por la mañana.",
-    "p3": "Este formato es particularmente apreciado porque permite hablar de la relación sin pesadez, abordar temas del día a día con humor y reforzar la comunicación en la pareja."
+    "p3": "Este formato es particularmente apreciado porque permite hablar de la relación sin pesadez, abordar temas del día a día con humor y reforzar la comunicación en la pareja.",
+    "plus": [
+      {
+        "titre": "Preguntas graciosas para hacer en pareja",
+        "texte": "<p>Para que os hagáis una idea de lo que sale, aquí va una pregunta de cada una de las seis familias del juego, tal como la hace:</p><ul><li>¿Qué detalle completamente absurdo hizo que te enamoraras?</li><li>¿Alguna vez has fingido que te gustaba algo que cociné? ¿Qué plato?</li><li>¿Cuánto tardo de verdad cuando digo «dos minutos»?</li><li>¿Cuál es nuestra broma privada que nadie más entiende?</li><li>¿Alguna vez has fingido dormir para evitar una conversación?</li><li>Si nos quedáramos tres horas atrapados en un ascensor, ¿cómo acabaría?</li></ul><p>Hay 150 en total. Para listas que leer con calma, de las más ligeras a las más profundas, también hay <a href=\"/es/preguntas-pareja/\">preguntas ordenadas por situación y por tema</a>.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "¿Por qué el quiz divertido para parejas funciona tan bien?",

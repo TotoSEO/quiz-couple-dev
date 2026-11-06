@@ -94,5 +94,21 @@
     "faq3Q": "Ce test pervers narcissique est-il fiable ?",
     "faq3A": "C'est un outil de réflexion et d'auto-évaluation, pas un diagnostic médical. Un score élevé ne prouve rien à lui seul, mais il invite à en parler à un professionnel et à vous protéger.",
     "about": "emprise narcissique"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Manipulateur ou pervers narcissique : ce que ce test repère",
+      "texte": "<p>Beaucoup de gens arrivent ici en cherchant un test de manipulateur plutôt qu'un test de pervers narcissique. La différence est surtout une question de degré : un pervers narcissique manipule toujours, mais une personne qui manipule n'est pas forcément perverse narcissique. On peut mentir, culpabiliser l'autre ou faire du chantage affectif pour obtenir ce qu'on veut, sans chercher à le détruire.</p><p>Le test regarde les deux. Le troisième palier du score parle de manipulation marquée : le déni, la culpabilité retournée, les reproches déguisés en conseils. Le dernier va plus loin, vers l'emprise : l'isolement, le double visage, l'absence d'empathie face à votre peine. C'est là que le tableau ressemble à celui d'un pervers narcissique.</p>",
+      "sous": [
+        {
+          "titre": "Un homme ou une femme pervers narcissique : les mêmes signes ?",
+          "texte": "<p>Oui, pour l'essentiel. Le test marche dans les deux cas, parce qu'il regarde ce que la personne fait, pas son genre : le dénigrement, le chaud et le froid ou l'isolement se retrouvent chez les hommes comme chez les femmes. Ce qui change surtout, c'est le regard des autres. Un homme qui dit que sa compagne le manipule est moins vite cru, et beaucoup mettent des années à mettre un mot dessus.</p><p>Pour des exemples de tous les jours, voyez <a href=\"/blog/femme-perverse-narcissique-signes/\">comment une femme perverse narcissique s'y prend</a> et <a href=\"/blog/homme-pervers-narcissique-signes/\">comment un homme pervers narcissique installe son emprise</a>.</p>"
+        },
+        {
+          "titre": "Et si c'était moi qui manipulais ?",
+          "texte": "<p>Le simple fait de vous poser la question compte : quelqu'un qui manipule de façon installée se voit rarement en tort. Pour vous servir du test dans ce sens, relisez les questions en vous mettant à la place de l'autre. Est-ce que vous niez des choses qu'il ou elle se rappelle très bien ? Est-ce que c'est toujours lui ou elle qui s'excuse, même quand c'est vous qui avez commencé ? Est-ce que vous lui faites sentir que ses amis ne valent pas grand-chose ?</p><p>Si plusieurs réponses vous mettent mal à l'aise, parlez-en à un psychologue. Ces réflexes s'apprennent souvent tôt, et ils se désapprennent aussi.</p>"
+        }
+      ]
+    }
+  ]
 }

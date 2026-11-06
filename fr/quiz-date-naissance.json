@@ -173,7 +173,13 @@
     "title": "Ce qu'une date de naissance peut dire d'un couple",
     "p1": "Ce test de compatibilité part d'une seule information : vos deux dates de naissance. Une date de naissance, on s'en sert surtout pour souhaiter un anniversaire, mais trois traditions y lisent aussi un caractère : la numérologie, l'astrologie occidentale et l'astrologie chinoise. Le test passe vos deux dates dans les trois.",
     "p2": "La numérologie en tire un chiffre, le <strong>chemin de vie</strong>, qui dit comment une personne avance dans la vie. L'astrologie occidentale regarde le jour et le mois pour trouver votre signe, et l'astrologie chinoise regarde l'année pour trouver votre animal. Ces trois lectures ne disent pas la même chose, et c'est justement pour ça qu'on les regarde toutes les trois.",
-    "p3": "À la fin, vous avez un score global, un score pour chacune des trois lectures et des explications qui parlent de vous deux. Si vous cherchez plutôt <a href=\"/test-compatibilite-amoureuse/\">un questionnaire à remplir à deux</a>, il y a aussi un test en vingt questions sur votre façon de voir la vie à deux."
+    "p3": "À la fin, vous avez un score global, un score pour chacune des trois lectures et des explications qui parlent de vous deux. Si vous cherchez plutôt <a href=\"/test-compatibilite-amoureuse/\">un questionnaire à remplir à deux</a>, il y a aussi un test en vingt questions sur votre façon de voir la vie à deux.",
+    "plus": [
+      {
+        "titre": "Peut-on connaître son avenir amoureux avec sa date de naissance ?",
+        "texte": "<p>C'est une question qu'on se pose souvent, et la réponse honnête est non. Une date de naissance ne dit ni qui vous allez rencontrer, ni quand, ni si vous vous marierez un jour. Le test ne prédit rien : il compare deux caractères, tels que ces trois traditions les décrivent. Prenez-le comme un jeu, et comme une bonne occasion de parler de vos tempéraments.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Le chemin de vie, le chiffre caché dans votre date de naissance",

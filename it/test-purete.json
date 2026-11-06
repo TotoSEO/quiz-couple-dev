@@ -109,7 +109,9 @@
         "🚨 <strong>Trasgressione</strong>: casinò, luoghi vietati, bugie a due",
         "🤐 <strong>Segreti</strong>: quello che l'altro ancora non sa"
       ],
-      "sub2P1": "La categoria dei segreti conta quello che uno ha nascosto all'altro. Per questo due coppie che hanno vissuto più o meno le stesse cose possono finire con punteggi molto diversi."
+      "sub2P1": "La categoria dei segreti conta quello che uno ha nascosto all'altro. Per questo due coppie che hanno vissuto più o meno le stesse cose possono finire con punteggi molto diversi.",
+      "sub3Titre": "Un test di purezza per adolescenti, o in versione hard?",
+      "sub3P1": "Esistono tutti e due, ed è l'età indicata all'inizio a decidere. Sotto i 16 anni c'è la versione per tutti, e per una coppia di adolescenti c'è anche <a class=\"pu-lien-int\" href=\"{{quizAdo}}\">un quiz sulla loro relazione, pensato per la loro età</a>. Dai 16 anni in su è la versione completa, la versione hard se volete: le domande su sesso e droghe vanno lontano, e alcune non si fanno davanti a tutti!"
     },
     "s5": {
       "titre": "Un punteggio alto è grave?",
@@ -135,7 +137,7 @@
     "q5": "Si può giocare in più di due?",
     "a5": "La modalità in coppia è pensata per due. Niente impedisce però a un gruppo intero di fare la modalità in solitaria ciascuno per conto proprio e confrontare i punteggi dopo: è anzi l'uso migliore del test quando siete in tanti.",
     "q6": "Da che età?",
-    "a6": "Il test chiede la vostra età prima di iniziare. Sotto i 16 anni passa a una versione per tutti, che toglie le domande sul sesso esplicito e sulle droghe e tiene tutto quello che riguarda le bugie, la famiglia, le serate e i segreti. Per una coppia di adolescenti, il <a href=\"/it/quiz-coppia-adolescenti/\">quiz di coppia per adolescenti</a> è probabilmente più adatto."
+    "a6": "Il test chiede la vostra età prima di iniziare. Sotto i 16 anni passa a una versione per tutti, che toglie le domande sul sesso esplicito e sulle droghe e tiene tutto quello che riguarda le bugie, la famiglia, le serate e i segreti."
   },
   "suite": {
     "titre": "Da fare subito dopo",

@@ -13,7 +13,17 @@
       "s2p1": "Dein Quiz ist privat. Es öffnet sich nur über den Link, den du beim Erstellen bekommst, und niemand findet es auf einem anderen Weg. Bewahre den Link irgendwo auf, in einer Notiz oder einem Chat zum Beispiel: Er ist der einzige Weg zurück zu deinem Quiz.",
       "s2p2": "Schick ihn deinem Partner, einer Freundin oder in eine Gruppe, und alle können sofort mitspielen, ganz ohne Konto. Nach einer Woche wird das Quiz gelöscht. Wenn du weitermachen willst, dauert ein neues etwa zwei Minuten.",
       "s3Title": "Quizze für jeden Moment zu zweit",
-      "s3p1": "Ob um herauszufinden, ob dein Partner dich wirklich kennt, für einen Abend mit Freunden oder einfach zum Lachen: Das Erstellen eigener Quizze passt zu jeder Stimmung. Lass deiner Fantasie freien Lauf!"
+      "s3p1": "Ob um herauszufinden, ob dein Partner dich wirklich kennt, für einen Abend mit Freunden oder einfach zum Lachen: Das Erstellen eigener Quizze passt zu jeder Stimmung. Lass deiner Fantasie freien Lauf!",
+      "s3plus": [
+        {
+          "titre": "Ein „Wer kennt mich am besten“-Quiz über dich",
+          "texte": "<p>Das ist die häufigste Art, den Quiz-Ersteller zu nutzen: ein Quiz über dich, mit deinen eigenen Fragen, um zu sehen, wer dich am besten kennt. Dein Lieblingsessen, die Stadt, in der du gern leben würdest, was dich am meisten zum Lachen bringt ... Du wählst die Vorlage „Punkte-Quiz“, kreuzt bei jeder Frage die richtige Antwort an, und am Ende sieht jeder sein Ergebnis. Für euch als Paar gibt es auch ein fertiges Quiz, bei dem <a href=\"/de/wer-kennt-partner-besser-quiz/\">jeder die Antworten des anderen errät</a>, falls ihr keine Lust habt, selbst Fragen zu schreiben.</p>"
+        },
+        {
+          "titre": "Ein Quiz für deine Freunde erstellen",
+          "texte": "<p>Das Quiz wird per Link geteilt, deshalb funktioniert es in einer Freundesgruppe genauso gut wie für deinen Schatz. Schick es in den Gruppenchat: Jeder spielt auf seinem Handy, ohne Konto, eine Woche lang. Für einen Geburtstag oder einen Junggesellinnenabschied sorgt die Vorlage „Wahr oder falsch“ oft für viele Lacher.</p>"
+        }
+      ]
     },
     "total_quiz": "von der Community erstellte Quiz",
     "total_merci": "Danke an die Quiz-Couple-Community, die diese Seite am Leben hält ❤️"

@@ -139,7 +139,7 @@
       <p class="text-muted-foreground leading-relaxed mb-6"><%= exSub %></p>
       <% } %>
       <div class="space-y-6">
-        <% const exSections = ['classic', 'fun', 'intimate'];
+        <% const exSections = ['classic', 'fun', 'intimate', 'amis', 'couple'];
         for (const key of exSections) {
           const secTitle = t(ns + ':examples.' + key + 'Title', '');
           const secQuestions = t(ns + ':examples.' + key + 'Questions', []);
@@ -151,6 +151,9 @@
             <li><%= q %></li>
             <% } %>
           </ul>
+          <% const exNote = t(ns + ':examples.' + key + 'Note', ''); if (exNote) { %>
+          <p class="text-muted-foreground mt-3"><%- exNote %></p>
+          <% } %>
         </div>
         <% } } %>
       </div>

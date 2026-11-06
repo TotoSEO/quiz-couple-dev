@@ -77,7 +77,7 @@
     ]
   },
   "examples": {
-    "title": "Beispielfragen aus dem \"Wer kennt besser\"-Quiz",
+    "title": "Fragen, um herauszufinden, wie gut ihr euch kennt",
     "subtitle": "Hier ist eine Vorschau der Fragentypen, die euch in diesem Quiz erwarten. Die Themen sind vielfältig, um alle Aspekte eurer Beziehung zu erkunden.",
     "categories": [
       {
@@ -119,6 +119,12 @@
           "Was würde er/sie tun, wenn er/sie im Lotto gewinnt?",
           "Was ist sein/ihr größter Traum?"
         ]
+      }
+    ],
+    "plus": [
+      {
+        "titre": "Und ein „Wer kennt mich am besten“-Quiz nur über dich?",
+        "texte": "<p>Die Fragen in diesem Quiz sind für alle gleich. Wenn du ein Quiz über dich willst, mit deinen eigenen Fragen, das du deinem Partner oder deinen Freunden schickst, um zu sehen, wer dich am besten kennt, kannst du <a href=\"/de/eigenes-quiz-erstellen/\">dein eigenes Quiz schreiben</a> und per Link teilen. Es bleibt privat und verschwindet nach einer Woche.</p>"
       }
     ]
   },

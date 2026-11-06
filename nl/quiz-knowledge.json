@@ -77,7 +77,7 @@
     ]
   },
   "examples": {
-    "title": "Voorbeelden van vragen uit de quiz",
+    "title": "Vragen om te zien hoe goed jullie elkaar kennen",
     "subtitle": "Hier zie je wat voor vragen je in deze quiz tegenkomt. De onderwerpen lopen uiteen, zodat jullie alle kanten van je relatie verkennen.",
     "categories": [
       {
@@ -119,6 +119,12 @@
           "Wat zou hij of zij doen met de hoofdprijs in de loterij?",
           "Wat is zijn of haar grootste droom?"
         ]
+      }
+    ],
+    "plus": [
+      {
+        "titre": "En een quiz ‘wie kent mij het best’ alleen over jou?",
+        "texte": "<p>De vragen in deze quiz zijn voor iedereen hetzelfde. Wil je een quiz over jezelf, met je eigen vragen, om naar je partner of je vrienden te sturen en te zien wie je het best kent, dan kun je <a href=\"/nl/maak-je-eigen-quiz/\">je eigen quiz schrijven</a> en met een link delen. Hij blijft privé en verdwijnt na een week.</p>"
       }
     ]
   },

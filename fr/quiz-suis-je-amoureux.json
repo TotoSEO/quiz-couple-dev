@@ -12,7 +12,7 @@
     "p3": "C'est exactement ce que ce test cherche à départager. Il ne mesure pas l'intensité de ce que vous ressentez, mais sa nature : est-ce que vous aimez cette personne, ou l'image que vous vous en faites ? Est-ce que son absence vous manque, ou est-ce l'attente qui vous excite ? Vingt questions plus tard, vous aurez un score sur 205 et un verdict clair. Si votre doute porte plutôt sur la frontière avec l'amitié, c'est le test <a href=\"/test-amour-ou-amitie/\">amour ou amitié</a> qui la tranche."
   },
   "section2": {
-    "title": "Les 7 signes que vous êtes amoureux",
+    "title": "Les 7 signes que vous êtes amoureux ou amoureuse",
     "intro": "Aucun de ces signes ne suffit tout seul, et le plus révélateur n'est pas celui qu'on croit. Voici ceux que le test évalue, du plus évident au plus décisif.",
     "sign1Title": "Elle occupe vos pensées sans prévenir",
     "sign1Text": "Vous pensez à cette personne plusieurs fois par jour, sans le décider. Son prénom accroche votre attention dans une conversation. C'est le signe le plus connu, mais aussi le moins fiable : une simple attirance produit exactement le même effet.",
@@ -46,7 +46,13 @@
     "row3Analysis": "Le doute n'est plus permis : vous voyez ses défauts et vos sentiments tiennent quand même.",
     "row4Score": "156 à 205 points",
     "row4Level": "Un amour installé",
-    "row4Analysis": "Attachement profond, connaissance réelle de l'autre et envie de son bonheur, même sans vous."
+    "row4Analysis": "Attachement profond, connaissance réelle de l'autre et envie de son bonheur, même sans vous.",
+    "plus": [
+      {
+        "titre": "Le degré de vos sentiments pour lui ou pour elle",
+        "texte": "<p>Beaucoup de gens cherchent un test qui mesure « le degré de leurs sentiments » pour quelqu'un. C'est à peu près ce que fait ce score, avec une nuance : il ne mesure pas la force de ce que vous ressentez, mais sa nature. Les quatre paliers vont de l'affection à l'amour installé, et c'est le palier qui dit où vous en êtes, plus que le nombre de points.</p><p>Si votre histoire ne date que de quelques semaines, <a href=\"/test-amour-ou-crush/\">faire la différence entre un crush et l'amour</a> vous parlera sans doute plus : au tout début, presque tout le monde tombe sur le deuxième palier, et c'est normal.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Amour ou simple attirance : comment faire la différence",

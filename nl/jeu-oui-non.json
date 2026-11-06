@@ -65,5 +65,17 @@
     "a4": "Het spel is geschreven voor een koppel: de situaties gaan over een gezamenlijke rekening, de schoonfamilie of intimiteit. Alleen werkt het ook: je stemt je eigen mening en vergelijkt die met die van de anderen. Met vrienden vallen sommige situaties een beetje plat, maar niets houdt je tegen.",
     "q5": "Wat gebeurt er na de 120 situaties?",
     "a5": "Niet veel, en dat is expres: er is geen score en geen ranglijst, het spel zegt gewoon dat jullie alles gezien hebben. Bevalt het jullie, dan werken de dilemma's met hetzelfde stemsysteem, alleen stemmen jullie daar over <a href=\"/nl/dilemmas-voor-koppels/\">onmogelijke deals met een prijs eraan</a> in plaats van over situaties."
-  }
+  },
+  "plus": [
+    {
+      "titre": "Ja of nee zonder nadenken, als stel of met vrienden",
+      "texte": "<p>Het is een variant die veel rondgaat op sociale media: je vuurt de vragen achter elkaar af, en iedereen antwoordt in een seconde ja of nee, zonder uitleg en zonder discussie. Dat is het omgekeerde van ons spel, waarin je de tijd neemt om erover te praten voor je klikt, maar de twee gaan heel goed samen. Doe eerst een ronde ‘zonder nadenken’, ieder voor zich en zo snel mogelijk, en pak dan de situaties erbij waarop jullie niet hetzelfde antwoordden: daar wordt het gesprek interessant.</p><p>Met vrienden werkt het met lichtere vragen, bijvoorbeeld:</p><ul><li>“Heb je ooit gedaan alsof je ziek was om een avondje af te zeggen?”</li><li>“Zou je van de ene op de andere dag een jaar naar het buitenland verhuizen?”</li><li>“Lees je je berichtjes drie keer na voor je ze verstuurt?”</li><li>“Heb je ooit het profiel van de ex van een vriend bekeken?”</li><li>“Hou je het een heel weekend vol zonder telefoon?”</li><li>“Zing je onder de douche?”</li></ul>",
+      "sous": [
+        {
+          "titre": "En de pittige versie?",
+          "texte": "<p>Ons spel blijft bij situaties uit het leven als stel, zonder ondeugende vragen. Voor een pittige versie, voor het eind van de avond, hier iets om mee te beginnen:</p><ul><li>“Heb je ooit zin in me gehad midden in een familiediner?”</li><li>“Heb je ooit een ondeugend berichtje bewaard om het later nog eens te lezen?”</li><li>“Zou je vanavond een ondeugend spel willen proberen?”</li><li>“Heb je op je werk ooit niet zo onschuldig aan me gedacht?”</li><li>“Zou je ja zeggen tegen een nacht in een hotel, alleen wij tweeën?”</li><li>“Zeggen we elkaar liever wat we willen dan dat we het raden?”</li></ul><p>Wil je verder gaan, dan zijn er <a href=\"/nl/ondeugende-quiz/\">ondeugende vragen, van lief tot gewaagd</a>, om elkaar recht in de ogen te stellen.</p>"
+        }
+      ]
+    }
+  ]
 }

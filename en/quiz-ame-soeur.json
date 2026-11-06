@@ -16,7 +16,13 @@
     "not2Title": "The perfect person",
     "not2Text": "A soulmate has flaws, and some of them really do annoy you. The question is not whether they exist, but whether you can talk about them.",
     "not3Title": "The one who completes you",
-    "not3Text": "The missing half makes for beautiful films. In real life, two whole people hold up better than two halves clinging to each other."
+    "not3Text": "The missing half makes for beautiful films. In real life, two whole people hold up better than two halves clinging to each other.",
+    "plus": [
+      {
+        "titre": "A soulmate test by date of birth or by name?",
+        "texte": "<p>Plenty of people look for a soulmate test using dates of birth or names. This one doesn't use them: it looks at what you live through together. If you still want the astrology side, you can <a href=\"/en/birth-date-love-compatibility/\">start from your two dates of birth</a> for a reading through the life path, the zodiac sign and the Chinese sign, and <a href=\"/en/love-calculator/\">two first names are enough</a> to get a percentage. Those are games, to be taken as such.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "The different kinds of soulmate",

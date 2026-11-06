@@ -9,7 +9,13 @@
     "title": "Ein Wahrheit oder Pflicht, das man spielt, keine Liste zum Scrollen",
     "p1": "<strong class=\"text-foreground\">Wahrheit oder Pflicht für Paare</strong> hat jeder schon mindestens einmal gespielt. Im Zeltlager, auf einer Party, um zwei Uhr nachts auf dem Sofa… Das Problem ist, was man heute online findet: hundert Fragen hintereinander, die man mit dem Daumen durchwischt. Das hält fünf Minuten. Dann liest jemand vor, jemand anderes sucht „eine bessere“, und die Runde ist tot.",
     "p2": "Hier ist es ein echtes Spiel. Wer dran ist, sagt seine Seite an, eine Karte fällt, und ihr seht immer nur eine. Keine Liste, keine Reihenfolge, die ihr schon kennt, keine Chance, die nächste zu erspähen. Und keine Karte kommt wieder, solange der Stapel nicht leer ist.",
-    "p3": "Ein Handy zwischen euch beiden, und los geht's!"
+    "p3": "Ein Handy zwischen euch beiden, und los geht's!",
+    "plus": [
+      {
+        "titre": "Wahrheitsfragen und Pflichtaufgaben für Paare",
+        "texte": "<p>Manche Wahrheiten sind zärtlich, andere richtig lustig, und die Pflichten erledigt ihr gleich vor Ort, zu zweit. Eine Wahrheit kann zum Beispiel „Was hat dir als Erstes an mir gefallen?“ sein und eine Pflicht „Sieh mir eine ganze Minute in die Augen, ohne etwas zu sagen.“ Mehr verraten wir nicht, sonst verliert der Stapel seinen Reiz! Und für gewagtere Fragen gibt es <a href=\"/de/wahrheit-oder-pflicht-versaut/\">die versaute Variante des Spiels</a>.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Die Regeln in vier Punkten",

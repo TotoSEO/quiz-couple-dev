@@ -77,7 +77,17 @@
     "title": "Por qué se confunden tan fácilmente",
     "p1": "Porque la frontera no está donde se busca. Creemos que el amor se reconoce por la intensidad: pienso mucho en esta persona, así que será amor. Solo que también piensas mucho en un amigo que atraviesa una tormenta, y nadie llama a eso pasión. La intensidad no decide nada, y es el mismo callejón sin salida que <a href=\"/es/test-estoy-enamorado/\">preguntarse si uno está enamorado a secas</a>: sin mirar los comportamientos, se dan vueltas en círculo.",
     "p2": "Lo que decide es la exclusividad. La amistad se comparte sin problema: tu mejor amigo puede tener otros mejores amigos y no te quita nada. El día en que la idea de que esta persona se convierta en « la persona » de otro te resulta desagradable, has salido del compartir, y por tanto de la amistad.",
-    "p3": "Y está la comodidad de la palabra. « Amigo » es una palabra sin riesgo: permite conservar a la persona, la complicidad, las noches, sin exponerse nunca a un no. Mucha gente no confunde el amor con la amistad: elige la confusión porque protege. Este test solo retira esa protección durante cinco minutos."
+    "p3": "Y está la comodidad de la palabra. « Amigo » es una palabra sin riesgo: permite conservar a la persona, la complicidad, las noches, sin exponerse nunca a un no. Mucha gente no confunde el amor con la amistad: elige la confusión porque protege. Este test solo retira esa protección durante cinco minutos.",
+    "plus": [
+      {
+        "titre": "La amistad amorosa, entre las dos cosas",
+        "texte": "<p>Ese punto intermedio tiene nombre: la amistad amorosa. Es una amistad con ternura, a veces un poco de celos y ganas de importar más que los demás, sin que nada se diga ni se haga. Puede durar años así, o dar el salto un día. Sus señales son justo las de la mitad de la puntuación: algunas respuestas que se desbordan, sin que las ganas de besarle estén de verdad ahí. Si caes en el tercer nivel, muchas veces es eso.</p>"
+      },
+      {
+        "titre": "Una relación ambigua: ni amigos ni pareja",
+        "texte": "<p>Es el otro caso que nos cuentan a menudo: os veis, os escribís todos los días, quizá ha habido un beso, pero nadie ha dicho nunca qué sois. El test te ayuda a saber lo que sientes tú. Para lo demás, una relación ambigua no se aclara sola: uno de los dos tiene que hacer la pregunta, sin más. Y si primero quieres leer las señales del otro lado, hay un test aparte para las señales de <a href=\"/es/test-me-quiere-en-secreto/\">alguien que te quiere sin decirlo</a>.</p>"
+      }
+    ]
   },
   "section5": {
     "title": "¿Y con la respuesta en la mano?",

@@ -12,7 +12,7 @@
     "p3": "È esattamente ciò che questo test cerca di separare. Non misura l'intensità di ciò che provi, ma la sua natura: ami questa persona o l'immagine che te ne sei fatto? Ti manca la sua presenza o è l'attesa a eccitarti? Venti domande dopo avrai un punteggio su 205 e un verdetto chiaro. Se il tuo dubbio riguarda piuttosto il confine con l'amicizia, è il test <a href=\"/it/test-amore-o-amicizia/\">amore o amicizia</a> a scioglierlo."
   },
   "section2": {
-    "title": "I 7 segni che sei innamorato",
+    "title": "I 7 segni che sei innamorato o innamorata",
     "intro": "Nessun segno basta da solo, e il più rivelatore non è quello che si crede. Ecco quelli che il test valuta, dal più evidente al più decisivo.",
     "sign1Title": "Occupa i tuoi pensieri senza preavviso",
     "sign1Text": "Pensi a questa persona più volte al giorno senza deciderlo. Il suo nome cattura la tua attenzione in qualsiasi conversazione. È il segno più conosciuto, ma anche il meno affidabile: una semplice attrazione produce esattamente lo stesso effetto.",
@@ -46,7 +46,13 @@
     "row3Analysis": "Non c'è più spazio per il dubbio: vedi i suoi difetti e i tuoi sentimenti reggono comunque.",
     "row4Score": "156 a 205 punti",
     "row4Level": "Un amore assestato",
-    "row4Analysis": "Attaccamento profondo, conoscenza reale dell'altro e desiderio della sua felicità, anche senza di te."
+    "row4Analysis": "Attaccamento profondo, conoscenza reale dell'altro e desiderio della sua felicità, anche senza di te.",
+    "plus": [
+      {
+        "titre": "Quanto sono profondi i tuoi sentimenti per lui o per lei",
+        "texte": "<p>Tante persone cercano un test che misuri «il grado dei loro sentimenti» per qualcuno. È più o meno quello che fa questo punteggio, con una sfumatura: non misura la forza di quello che provi, ma la sua natura. I quattro livelli vanno dall'affetto all'amore consolidato, ed è il livello a dirti a che punto sei, più del numero di punti.</p><p>Se la vostra storia ha solo qualche settimana, <a href=\"/it/test-amore-o-cotta/\">distinguere una cotta dall'amore</a> ti dirà probabilmente di più: proprio all'inizio quasi tutti finiscono sul secondo livello, ed è normale.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Amore o semplice attrazione: come distinguerli",

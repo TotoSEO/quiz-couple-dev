@@ -4,7 +4,17 @@
       "title": "Soll ich mich scheiden lassen? Was dein Zögern dir schon verrät",
       "p1": "Du hast diese Seite nicht zufällig geöffnet. Wenn jemand 'soll ich mich scheiden lassen' bei Google eingibt, geschieht das nicht aus abstrakter Neugier. Es ist, weil etwas nicht mehr stimmt, und die Frage beginnt einen Platz einzunehmen, den du nicht mehr ignorieren kannst.",
       "p2": "Das Zögern an sich ist bereits eine Information. Es sagt, dass du nicht überstürzt entscheiden willst. Dass du deine Beziehung, und dein Leben, ernst nimmst. Das zählt.",
-      "p3": "Aber es kann dich auch unbegrenzt in einer unbequemen Situation halten, wenn es nie ehrlich angesprochen wird."
+      "p3": "Aber es kann dich auch unbegrenzt in einer unbequemen Situation halten, wenn es nie ehrlich angesprochen wird.",
+      "plus": [
+        {
+          "titre": "Soll ich ihn verlassen, auch wenn wir nicht verheiratet sind?",
+          "texte": "<p>Hinter „Soll ich mich scheiden lassen?“ steckt oft eine größere Frage: bleiben oder gehen. Der Test ist für ein verheiratetes Paar geschrieben, aber die meisten Fragen passen zu jeder langen Beziehung: die Kommunikation, die Versuche, etwas zu reparieren, was dich die Situation kostet. Wenn du nicht verheiratet bist, antworte genauso und lass weg, was das Verfahren betrifft.</p>"
+        },
+        {
+          "titre": "Ich liebe meinen Mann oder meine Frau nicht mehr: Soll ich mich scheiden lassen?",
+          "texte": "<p>Nicht mehr dasselbe zu fühlen wie am Anfang heißt nicht unbedingt, dass es vorbei ist. Bevor du von Scheidung sprichst, lohnt es sich anzuschauen, <a href=\"/de/liebe-ich-ihn-sie-noch-test/\">was von deinen Gefühlen übrig ist</a>, unter der Müdigkeit und den Gewohnheiten. Wenn der Zweifel danach bleibt, hilft dir dieser Test, den Rest abzuwägen: die Kommunikation, deine Gesundheit, was du für die Zukunft willst.</p>"
+        }
+      ]
     },
     "s2": {
       "title": "Wann sollte man über eine Scheidung nachdenken?",

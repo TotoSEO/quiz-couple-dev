@@ -133,6 +133,7 @@
       <p><%= t(ns + ':seo.s1P2') %></p>
 
       <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'seo.plus', niveau: 2, nu: true }) %>
       <h2><%= t(ns + ':seo.s2Title') %></h2>
       <p><%- t(ns + ':seo.s2P1') %></p>
       <h3><%= t(ns + ':seo.s2Sub1') %></h3>

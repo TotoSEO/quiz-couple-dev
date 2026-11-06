@@ -4,7 +4,17 @@
       "title": "Dovrei divorziare? Cosa la tua esitazione ti sta già dicendo",
       "p1": "Non hai aperto questa pagina per caso. Quando qualcuno cerca \"dovrei divorziare\" su Google, non è per curiosità astratta. È perché qualcosa, da qualche parte, non funziona più, e la domanda inizia a occupare uno spazio che non riesci più a ignorare.",
       "p2": "L'esitazione, di per sé, è già un'informazione. Dice che non vuoi decidere in fretta. Che prendi la tua relazione, e la tua vita, sul serio. Questo conta.",
-      "p3": "Ma può anche tenerti in una situazione scomoda a tempo indeterminato, se non viene mai affrontata onestamente."
+      "p3": "Ma può anche tenerti in una situazione scomoda a tempo indeterminato, se non viene mai affrontata onestamente.",
+      "plus": [
+        {
+          "titre": "Devo lasciarlo, anche se non siamo sposati?",
+          "texte": "<p>Dietro «dovrei divorziare?» c'è spesso una domanda più ampia: restare o andarsene. Il test è scritto per una coppia sposata, ma la maggior parte delle domande vale per qualsiasi relazione lunga: la comunicazione, i tentativi di aggiustare le cose, quello che ti costa la situazione. Se non sei sposato o sposata, rispondi allo stesso modo e lascia da parte quello che riguarda la procedura.</p>"
+        },
+        {
+          "titre": "Non amo più mio marito, o mia moglie: devo divorziare?",
+          "texte": "<p>Non provare più la stessa cosa dell'inizio non vuol dire per forza che sia finita. Prima di parlare di divorzio, vale la pena guardare <a href=\"/it/test-lo-amo-ancora/\">cosa resta dei tuoi sentimenti</a> sotto la stanchezza e le abitudini. Se il dubbio resta anche dopo, questo test ti aiuterà a pesare il resto: la comunicazione, la tua salute, quello che vuoi per il seguito.</p>"
+        }
+      ]
     },
     "s2": {
       "title": "Quando bisogna prendere in considerazione il divorzio?",

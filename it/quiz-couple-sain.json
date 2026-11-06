@@ -96,6 +96,14 @@
     "faq2Q": "Come funziona il punteggio del test?",
     "faq2A": "Scegliete la modalità all'inizio. In solo, rispondete insieme alle 20 domande e ottenete un punteggio unico. In duo, ognuno risponde alle stesse 20 domande a turno: un punteggio a persona, più la media della coppia. Il risultato è una percentuale e non un totale di punti, perché ogni domanda conta in base alla sua importanza. Non avere progetti per il futuro pesa tre volte di più di uno squilibrio nelle faccende domestiche, e le 20 domande coprono sempre gli stessi grandi temi: comunicazione, fiducia, conflitti, intimità, autonomia, futuro e benessere.",
     "faq3Q": "Cosa fare se i nostri punteggi individuali sono molto diversi?",
-    "faq3A": "Una differenza importante indica che non percepite la vostra relazione allo stesso modo. È un'informazione preziosa da discutere insieme."
+    "faq3A": "Una differenza importante indica che non percepite la vostra relazione allo stesso modo. È un'informazione preziosa da discutere insieme.",
+    "s1": {
+      "plus": [
+        {
+          "titre": "«Non sono felice nella mia relazione»: cosa può mostrare il test",
+          "texte": "<p>È una frase che a volte ci si dice senza sapere da dove cominciare. Il test non vi dirà cosa fare, ma aiuta a mettere in parole quello che non va. Un punteggio basso non vuol dire che sia tutto perduto, mostra soprattutto che ci sono cose da guardare più da vicino. E se questo malessere dura da mesi, abbiamo raccolto i segnali che ritornano <a href=\"/it/blog/donna-infelice-in-coppia-segnali/\">quando si è infelici in coppia</a>, e cosa aiuta a uscirne.</p>"
+        }
+      ]
+    }
   }
 }

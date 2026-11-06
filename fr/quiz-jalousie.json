@@ -9,7 +9,17 @@
     "title": "Pourquoi ressent-on de la jalousie dans un couple ?",
     "p1": "La jalousie n'apparaît pas par hasard. Elle s'installe là où on a quelque chose à perdre, et dans beaucoup de cas, elle dit d'abord qu'on tient à l'autre. Mais ce n'est pas la seule explication.",
     "p2": "La plupart du temps, la jalousie dans un couple vient de deux choses. La première, c'est la peur d'être abandonné, souvent liée à une histoire passée : une relation qui s'est mal terminée, une trahison, parfois quelque chose de bien plus ancien que la relation actuelle. La deuxième, c'est le manque de confiance en soi, et pas en l'autre. « Pourquoi il ou elle resterait avec moi si quelqu'un de mieux se présente ? » Cette question, qu'on ne se pose pas toujours consciemment, explique beaucoup de réactions qu'on met à tort sur le dos de l'autre.",
-    "p3": "Il y a aussi un troisième facteur dont on parle moins : <a href=\"/test-style-attachement-couple/\">le style d'attachement</a>. Les personnes qui ont un attachement dit anxieux sont plus sensibles aux signes de distance, et elles prennent plus facilement une situation neutre pour une menace. C'est une façon de fonctionner qui s'est mise en place tôt, et on peut la faire évoluer."
+    "p3": "Il y a aussi un troisième facteur dont on parle moins : <a href=\"/test-style-attachement-couple/\">le style d'attachement</a>. Les personnes qui ont un attachement dit anxieux sont plus sensibles aux signes de distance, et elles prennent plus facilement une situation neutre pour une menace. C'est une façon de fonctionner qui s'est mise en place tôt, et on peut la faire évoluer.",
+    "plus": [
+      {
+        "titre": "Jalousie multidimensionnelle : les trois formes de la jalousie",
+        "texte": "<p>Les chercheurs qui étudient la jalousie la découpent souvent en trois. L'échelle la plus connue, publiée par Pfeiffer et Wong en 1989, s'appelle d'ailleurs l'échelle de jalousie multidimensionnelle. Elle sépare la jalousie dans la tête (les soupçons, les scénarios qu'on se fait), la jalousie qu'on ressent (le pincement quand l'autre parle de quelqu'un) et la jalousie qui passe aux actes (fouiller le téléphone, vérifier où il ou elle est).</p><p>Nos deux tests ne reprennent pas cette échelle telle quelle, mais leurs questions touchent aux trois. Si votre score monte, regardez combien de vos réponses parlent de choses que vous faites, et pas seulement de ce que vous ressentez.</p>"
+      },
+      {
+        "titre": "Et la jalousie en amitié ?",
+        "texte": "<p>Ces tests sont écrits pour un couple, mais la jalousie entre amis existe aussi, et elle se reconnaît à peu près aux mêmes signes : en vouloir à un ami quand il passe du temps avec quelqu'un d'autre, se sentir remplacé par un nouveau venu dans la bande, vérifier qui il a vu. Et quand cette amitié prend une place qui vous inquiète, c'est peut-être <a href=\"/blog/dependance-affective-amitie/\">une amitié où l'on dépend trop de l'autre</a>.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "La jalousie dans un couple, est-ce grave ?",
@@ -59,7 +69,7 @@
     "pillar4Text": "Vous modifiez régulièrement votre comportement, les comportements de contrôle s'étendent (localisation, messages, isolement), vous vous sentez coupable de choses que vous n'avez pas faites. Si vous reconnaissez plusieurs de ces signaux, ce n'est pas une situation à normaliser : c'est la mécanique d'une <a href=\"/test-couple-toxique/\">relation toxique</a>."
   },
   "section6": {
-    "title": "Quand la jalousie devient-elle un problème sérieux ?",
+    "title": "Jalousie maladive : quand devient-elle un problème sérieux ?",
     "p1": "Il y a des signaux qui indiquent que la jalousie a franchi un cap. Quand la peur de la réaction de l'autre dicte vos choix, ce n'est plus de la jalousie ordinaire.",
     "p2": "Se faire aider par un professionnel, thérapeute ou psychologue, est souvent le moyen le plus rapide de retrouver une relation sereine.",
     "dontTitle": "Ce qui aggrave la jalousie",

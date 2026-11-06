@@ -46,7 +46,13 @@
     "row3Analysis": "Zweifel sind kaum mehr möglich: Du siehst seine Fehler und dein Gefühl hält trotzdem.",
     "row4Score": "156 bis 205 Punkte",
     "row4Level": "Eine gefestigte Liebe",
-    "row4Analysis": "Tiefe Bindung, echtes Wissen über den anderen und der Wunsch nach seinem Glück, auch ohne dich."
+    "row4Analysis": "Tiefe Bindung, echtes Wissen über den anderen und der Wunsch nach seinem Glück, auch ohne dich.",
+    "plus": [
+      {
+        "titre": "Wie tief deine Gefühle für ihn oder sie gehen",
+        "texte": "<p>Viele suchen einen Test, der misst, „wie stark ihre Gefühle“ für jemanden sind. Ungefähr das macht dieser Wert, mit einem Unterschied: Er misst nicht, wie heftig du fühlst, sondern welche Art von Gefühl es ist. Die vier Stufen reichen von Zuneigung bis zu gefestigter Liebe, und die Stufe sagt mehr darüber, wo du stehst, als die Punktzahl.</p><p>Wenn eure Geschichte erst ein paar Wochen alt ist, hilft dir <a href=\"/de/liebe-oder-crush-test/\">der Unterschied zwischen einem Crush und Liebe</a> wahrscheinlich mehr: Ganz am Anfang landen fast alle auf der zweiten Stufe, und das ist normal.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Liebe oder bloße Anziehung: der Unterschied",

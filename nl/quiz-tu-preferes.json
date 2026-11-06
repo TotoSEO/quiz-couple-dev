@@ -35,7 +35,13 @@
     "title": "Vragen die aan het denken zetten (en vragen die gewoon aan het lachen maken)",
     "p1": "In een goed zou je liever-spel voor koppels zitten twee soorten vragen. Allebei nuttig, maar niet op dezelfde manier.",
     "p2": "De <strong class=\"text-foreground\">luchtige vragen</strong> zorgen dat jullie je op je gemak voelen, dat jullie lachen en dat er een ritme in komt. Je leert er niets diepgaands van, maar ze zorgen ervoor dat de volgende vragen goed vallen.",
-    "p3": "De <strong class=\"text-foreground\">vragen die schuren</strong> maken iets open. Ze raken aan verwachtingen die er echt zijn, aan behoeften die je niet altijd duidelijk hebt uitgesproken. De goede verhouding is ongeveer 60/40: licht genoeg om een spel te blijven, diep genoeg om het de moeite waard te maken."
+    "p3": "De <strong class=\"text-foreground\">vragen die schuren</strong> maken iets open. Ze raken aan verwachtingen die er echt zijn, aan behoeften die je niet altijd duidelijk hebt uitgesproken. De goede verhouding is ongeveer 60/40: licht genoeg om een spel te blijven, diep genoeg om het de moeite waard te maken.",
+    "plus": [
+      {
+        "titre": "‘Zou je liever’-vragen voor stellen",
+        "texte": "<p>Om rustig te beginnen:</p><ul><li>Zou je liever jullie ruzies beslechten met steen-papier-schaar of met kop of munt?</li><li>Zou je liever een groot bed met ieder een eigen kant, of een eenpersoonsbed waarin jullie de hele nacht tegen elkaar aan liggen?</li><li>Zou je liever tien jaar lang elke avond de afwas doen of nooit meer de film kiezen?</li></ul><p>En om iets dieper te gaan:</p><ul><li>Zou je liever hebben dat je partner jou elke ochtend opnieuw kiest, of dat hij of zij jou één keer voor altijd gekozen heeft?</li><li>Zou je liever zeker weten dat jullie samen eindigen maar zonder passie, of tien jaar passie zonder enige garantie?</li><li>Zou je liever vergeven zonder te vergeten, of vergeten zonder te vergeven?</li></ul>"
+      }
+    ]
   },
   "section5": {
     "title": "Waarom dit spel zo goed werkt als koppel",

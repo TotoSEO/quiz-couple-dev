@@ -96,6 +96,14 @@
     "faq2Q": "How does the test scoring work?",
     "faq2A": "You pick the mode at the start. In solo, you answer the 20 questions together and get a single score. In duo, you each answer the same 20 questions in turn: one score per person, plus the couple's average. The result is a percentage rather than a points total, because each question counts according to its importance. Having no plans for the future weighs three times more than an imbalance in household chores, and the 20 questions always cover the same core themes: communication, trust, conflict, intimacy, independence, the future and wellbeing.",
     "faq3Q": "What if our individual scores are very different?",
-    "faq3A": "A significant gap between your scores indicates that you don't perceive your relationship the same way. This is valuable information worth discussing together, without judgment."
+    "faq3A": "A significant gap between your scores indicates that you don't perceive your relationship the same way. This is valuable information worth discussing together, without judgment.",
+    "s1": {
+      "plus": [
+        {
+          "titre": "“I'm not happy in my relationship”: what the test can show",
+          "texte": "<p>It's something you sometimes say to yourself without knowing where to start. The test won't tell you what to do, but it helps you put words to what isn't working. A low score doesn't mean all is lost, it mostly shows there are things worth looking at more closely. And if this feeling has lasted for months, we've gathered the signs that keep coming back <a href=\"/en/blog/unhappy-woman-in-relationship-signs/\">when you're unhappy in a relationship</a>, and what helps you get out of it.</p>"
+        }
+      ]
+    }
   }
 }

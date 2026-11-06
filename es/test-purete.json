@@ -109,7 +109,9 @@
         "🚨 <strong>Transgresión</strong>: casino, sitios prohibidos, mentiras a dúo",
         "🤐 <strong>Secretos</strong>: lo que el otro sigue sin saber"
       ],
-      "sub2P1": "La categoría de los secretos puntúa lo que uno le ha ocultado al otro. Por eso dos parejas que han vivido más o menos lo mismo pueden acabar con puntuaciones muy distintas."
+      "sub2P1": "La categoría de los secretos puntúa lo que uno le ha ocultado al otro. Por eso dos parejas que han vivido más o menos lo mismo pueden acabar con puntuaciones muy distintas.",
+      "sub3Titre": "¿Un test de pureza para adolescentes, o en versión hard?",
+      "sub3P1": "Existen los dos, y es la edad que indicas al principio la que decide. Por debajo de 16 años tienes la versión para todos los públicos, y para una pareja de adolescentes también hay <a class=\"pu-lien-int\" href=\"{{quizAdo}}\">un quiz sobre su relación, pensado para su edad</a>. A partir de 16, es la versión completa, la versión hard si quieres: las preguntas sobre sexo y drogas van lejos, y ¡algunas no se hacen delante de todo el mundo!"
     },
     "s5": {
       "titre": "¿Una puntuación alta es grave?",
@@ -135,7 +137,7 @@
     "q5": "¿Se puede jugar entre más de dos?",
     "a5": "El modo en pareja está pensado para dos. Nada impide en cambio que todo un grupo haga el modo solo cada uno por su lado y compare las puntuaciones después: es incluso el mejor uso del test cuando sois varios.",
     "q6": "¿A partir de qué edad?",
-    "a6": "El test pregunta tu edad antes de empezar. Por debajo de 16 años pasa a una versión para todos los públicos, que quita las preguntas sobre sexo explícito y drogas y conserva todo lo que tiene que ver con las mentiras, la familia, las fiestas y los secretos. Para una pareja de adolescentes, el <a href=\"/es/quiz-pareja-adolescentes/\">quiz de pareja para adolescentes</a> encaja seguramente mejor."
+    "a6": "El test pregunta tu edad antes de empezar. Por debajo de 16 años pasa a una versión para todos los públicos, que quita las preguntas sobre sexo explícito y drogas y conserva todo lo que tiene que ver con las mentiras, la familia, las fiestas y los secretos."
   },
   "suite": {
     "titre": "Para hacer justo después",

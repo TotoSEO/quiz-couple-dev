@@ -16,7 +16,13 @@
     "not2Title": "La personne parfaite",
     "not2Text": "Une âme sœur a des défauts, et certains vous agacent vraiment. La question n'est pas de savoir s'ils existent, mais si vous pouvez en parler.",
     "not3Title": "Celle qui vous complète",
-    "not3Text": "La moitié manquante, ça fait de beaux films. Dans la vraie vie, deux personnes entières tiennent mieux que deux moitiés accrochées l'une à l'autre."
+    "not3Text": "La moitié manquante, ça fait de beaux films. Dans la vraie vie, deux personnes entières tiennent mieux que deux moitiés accrochées l'une à l'autre.",
+    "plus": [
+      {
+        "titre": "Un test d'âme sœur par date de naissance ou par prénom ?",
+        "texte": "<p>Beaucoup de gens cherchent un test d'âme sœur avec la date de naissance ou avec les prénoms. Celui-ci ne s'en sert pas : il regarde ce que vous vivez ensemble. Si vous voulez quand même le côté astro, on peut <a href=\"/compatibilite-amoureuse-date-de-naissance/\">partir de vos deux dates de naissance</a> pour une lecture par le chemin de vie, le signe et le signe chinois, et <a href=\"/calculatrice-de-l-amour/\">deux prénoms suffisent</a> pour obtenir un pourcentage. Ce sont des jeux, à prendre comme tels.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Les différents types d'âme sœur",

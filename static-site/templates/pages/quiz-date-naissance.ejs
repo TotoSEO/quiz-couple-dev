@@ -195,6 +195,7 @@
         <p><%- t(ns + ':section1.p2') %></p>
         <p><%- t(ns + ':section1.p3') %></p>
       </div>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'section1.plus' }) %>
     </section>
     <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 

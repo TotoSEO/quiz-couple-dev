@@ -109,7 +109,9 @@
         "🚨 <strong>Grenzüberschreitung</strong>: Casino, verbotene Orte, gemeinsame Lügen",
         "🤐 <strong>Geheimnisse</strong>: was die andere Person immer noch nicht weiß"
       ],
-      "sub2P1": "Die Kategorie Geheimnisse zählt, was einer dem anderen verschwiegen hat. Deshalb können zwei Paare, die ungefähr dasselbe erlebt haben, sehr unterschiedliche Punktzahlen bekommen."
+      "sub2P1": "Die Kategorie Geheimnisse zählt, was einer dem anderen verschwiegen hat. Deshalb können zwei Paare, die ungefähr dasselbe erlebt haben, sehr unterschiedliche Punktzahlen bekommen.",
+      "sub3Titre": "Ein Reinheitstest für Teenager oder in der harten Version?",
+      "sub3P1": "Beides gibt es, und das Alter, das ihr am Anfang angebt, entscheidet. Unter 16 Jahren gibt es die Version für alle, und für ein Teenager-Paar gibt es außerdem <a class=\"pu-lien-int\" href=\"{{quizAdo}}\">ein Quiz über ihre Beziehung, passend zu ihrem Alter</a>. Ab 16 ist es die vollständige Version, die harte Version, wenn man so will: Die Fragen zu Sex und Drogen gehen weit, und manche stellt man nicht vor allen!"
     },
     "s5": {
       "titre": "Ist eine hohe Punktzahl schlimm?",
@@ -135,7 +137,7 @@
     "q5": "Kann man zu mehr als zweit spielen?",
     "a5": "Der Paarmodus ist für zwei gedacht. Nichts hindert eine ganze Runde daran, den Solomodus jeder für sich zu machen und die Punktzahlen danach zu vergleichen: das ist sogar die beste Verwendung des Tests, wenn ihr zu mehreren seid.",
     "q6": "Ab welchem Alter?",
-    "a6": "Der Test fragt vor dem Start nach eurem Alter. Unter 16 Jahren wechselt er zu einer Version für alle, die die Fragen zu explizitem Sex und Drogen weglässt und alles behält, was mit Lügen, Familie, Partys und Geheimnissen zu tun hat. Für ein Teenager-Paar passt das <a href=\"/de/teenager-paar-quiz/\">Teenager-Paar-Quiz</a> vermutlich besser."
+    "a6": "Der Test fragt vor dem Start nach eurem Alter. Unter 16 Jahren wechselt er zu einer Version für alle, die die Fragen zu explizitem Sex und Drogen weglässt und alles behält, was mit Lügen, Familie, Partys und Geheimnissen zu tun hat."
   },
   "suite": {
     "titre": "Direkt danach",

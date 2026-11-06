@@ -18,6 +18,24 @@
       "h3_2_p2": "Es gibt keine ideale Beziehungsdauer, um zu beginnen. Es braucht vor allem den gemeinsamen Wunsch, das Spiel mit Wohlwollen zu spielen, ohne Druck oder Verpflichtung, auf alles zu antworten. Das Quiz wird dann zu einem sicheren Raum, in dem sich jeder in seinem eigenen Tempo ausdrücken kann."
     },
     "section2": {
+      "title": "Spicy Fragen für Paare, von harmlos bis heiß",
+      "intro": "Das Quiz stellt seine eigenen Fragen, mit Antworten zur Auswahl. Viele Paare suchen aber auch spicy Fragen, die sie sich direkt stellen können, ohne Bildschirm, abends oder per Nachricht. Hier sind ein Dutzend, von der harmlosesten bis zur gewagtesten. Fangt oben an und geht nur weiter, wenn ihr beide Lust darauf habt.",
+      "plus": [
+        {
+          "titre": "Zum sanften Einstieg",
+          "texte": "<ul><li>„Wann habe ich dich am meisten angezogen?“</li><li>„Was mache ich, ohne es zu merken, das dir gefällt?“</li><li>„Erinnerst du dich an unseren ersten Kuss? Erzähl ihn mir so, wie du ihn erlebt hast.“</li><li>„Kuscheln lieber morgens oder abends?“</li></ul>"
+        },
+        {
+          "titre": "Heiße Fragen, wenn es knistern soll",
+          "texte": "<ul><li>„Was würdest du dir wünschen, dass ich öfter mache?“</li><li>„Gibt es einen Ort, an dem du schon Lust auf mich hattest, ohne es zu sagen?“</li><li>„Was siehst du am liebsten an mir … oder würdest es mir am liebsten ausziehen?“</li><li>„Was bringt dich am schnellsten in Stimmung?“</li></ul>"
+        },
+        {
+          "titre": "Die gewagtesten, wenn ihr beide Lust habt",
+          "texte": "<ul><li>„Eine Fantasie, die du mir noch nie erzählt hast?“</li><li>„Etwas, das du gern ausprobieren würdest, aber nie vorzuschlagen gewagt hast?“</li><li>„Wenn wir eine ganze Nacht ohne Wecker und ohne Pflichten hätten, wie würden wir sie verbringen?“</li><li>„Was du im Bett an mir am liebsten magst, in einem einzigen Wort?“</li></ul><p>Mehr davon? Es gibt eine viel längere Liste <a href=\"/de/blog/intime-fragen-fuer-paare/\">intimer Fragen für deinen Freund</a>, ebenfalls von zärtlich bis gewagt. Und wer lieber Aufgaben als Fragen mag: <a href=\"/de/wahrheit-oder-pflicht-versaut/\">die gewagte Version von Wahrheit oder Pflicht</a> mischt beides.</p>"
+        }
+      ]
+    },
+    "section3": {
       "title": "Warum ein pikantes Paar-Quiz zu zweit machen",
       "intro": "Sich Zeit für ein heißes Paar-Quiz zu nehmen, bedeutet, sich eine Pause vom Alltag zu gönnen. In einer Welt, in der alles schnell geht, sind diese dem Paar gewidmeten Momente wertvoll. Sie ermöglichen es, sich wieder aufeinander zu konzentrieren und der Kommunikation wieder Bedeutung zu geben.",
       "h3_1": "Komplizenschaft im Paar aufbauen",
@@ -30,7 +48,7 @@
       "h3_3_p1": "Wir glauben oft, unseren Partner perfekt zu kennen, aber <a href=\"/de/sexuelle-kompatibilitaet-test/\">Erwartungen und Wünsche</a> entwickeln sich mit der Zeit. Das pikante Paar-Quiz ermöglicht es, ohne Urteil Bilanz zu ziehen, was gefällt, was fasziniert oder was nicht mehr passt.",
       "h3_3_p2": "Es geht weniger darum, 'ideale' Antworten zu finden, als vielmehr darum, <strong>die aktuelle Sicht des anderen zu verstehen</strong>. Dieses gegenseitige Verständnis ist wesentlich für den Aufbau einer ausgewogenen, respektvollen und erfüllenden Beziehung."
     },
-    "section3": {
+    "section4": {
       "title": "Wie funktioniert ein heißes Paar-Quiz",
       "intro": "Die Funktionsweise eines heißen Paar-Quiz ist bewusst einfach. Diese Einfachheit macht es für alle zugänglich und an jedes Paar anpassbar. Es gibt keine universellen Regeln, aber einige gemeinsame Prinzipien, die ein angenehmes Erlebnis gewährleisten.",
       "h3_1": "Das Prinzip der Auswahlfragen",
@@ -41,9 +59,38 @@
       "h3_2_p2": "Die Wahl hängt hauptsächlich von der Persönlichkeit der Partner ab. Manche werden die Energie eines mündlichen Quiz schätzen, andere bevorzugen den Komfort eines schriftlichen Formats, das es ermöglicht, bestimmte Fragen später erneut aufzugreifen.",
       "h3_3": "Wann und wo ein pikantes Paar-Quiz machen",
       "h3_3_p1": "Es gibt keinen perfekten Zeitpunkt, aber bestimmte Bedingungen erleichtern das Erlebnis. Eine ruhige Umgebung ohne Ablenkungen ist ideal, um sich auf den Austausch zu konzentrieren. Das Quiz kann in einen Abend zu zweit, ein ruhiges Wochenende oder sogar einen improvisierten Moment integriert werden.",
-      "h3_3_p2": "Das Wesentliche ist, einen Rahmen zu wählen, in dem sich jeder wohl fühlt, frei zu sprechen, ohne unterbrochen zu werden."
+      "h3_3_p2": "Das Wesentliche ist, einen Rahmen zu wählen, in dem sich jeder wohl fühlt, frei zu sprechen, ohne unterbrochen zu werden.",
+      "h3_1_table": {
+        "headers": {
+          "type": "Fragentyp",
+          "objective": "Hauptziel",
+          "example": "Beispielthema"
+        },
+        "rows": {
+          "light": {
+            "type": "Leichte Frage",
+            "objective": "Atmosphäre entspannen",
+            "example": "Paargewohnheiten"
+          },
+          "introspective": {
+            "type": "Introspektive Frage",
+            "objective": "Reflexion fördern",
+            "example": "Beziehungserwartungen"
+          },
+          "suggestive": {
+            "type": "Suggestive Frage",
+            "objective": "Neugier wecken",
+            "example": "Vorlieben und Wünsche"
+          },
+          "open": {
+            "type": "Offene Frage",
+            "objective": "Austausch fördern",
+            "example": "Sicht auf die Beziehung"
+          }
+        }
+      }
     },
-    "section4": {
+    "section5": {
       "title": "Beispiele für Themen in einem pikanten Paar-Quiz",
       "intro": "Der Reichtum eines heißen Paar-Quiz liegt in der Vielfalt der behandelten Themen. Diese Themen ermöglichen es, verschiedene Facetten der Beziehung zu erkunden, ohne jemals die Diskussion zu erzwingen.",
       "h3_1": "Vorlieben und Gewohnheiten im Paar",
@@ -53,7 +100,7 @@
       "h3_3": "Fantasien und Neugier",
       "h3_3_p1": "Mit Feingefühl behandelt, ermöglicht dieses Thema, über Neugier, Vorstellungen und Wünsche zu sprechen, ohne in explizite Beschreibungen einzusteigen. Das Ziel ist nicht aufzuzwingen, sondern <strong>Ideen zu teilen</strong>, besser zu verstehen, was den anderen fasziniert oder inspiriert, und dabei seine Grenzen zu respektieren."
     },
-    "section5": {
+    "section6": {
       "title": "Heißes Paar-Quiz: Regeln und Grenzen setzen",
       "intro": "Damit das Erlebnis positiv bleibt, ist es wichtig, einige einfache Regeln festzulegen. Diese Regeln schränken das Spiel nicht ein, sie machen es sicher.",
       "h3_1": "Die Bedeutung der Zustimmung",
@@ -62,75 +109,6 @@
       "h3_2_p1": "Das pikante Paar-Quiz ist kein Test. Es ist völlig akzeptabel, eine Pause zu machen, das Thema zu wechseln oder ganz aufzuhören, wenn sich einer der beiden nicht mehr wohl fühlt. Diese Möglichkeit, Stopp zu sagen, stärkt das gegenseitige Vertrauen.",
       "h3_3": "Das Quiz an euer Paar anpassen",
       "h3_3_p1": "Jedes Paar ist einzigartig. Die Fragen, das Tempo und die Dauer des Quiz anzupassen, respektiert die Empfindsamkeit jedes Einzelnen. Es ist oft besser, die Qualität des Austauschs über die Anzahl der Fragen zu stellen."
-    },
-    "section6": {
-      "title": "Pikantes Paar-Quiz für einen aufregenden Abend",
-      "intro": "Zum richtigen Zeitpunkt eingesetzt, kann das heiße Paar-Quiz einen gewöhnlichen Abend in einen unvergesslichen Moment verwandeln. Es geht nicht darum, daraus ein außergewöhnliches Ereignis zu machen, sondern es natürlich in das Paarleben zu integrieren.",
-      "h3_1": "Ideal für einen Abend zu zweit",
-      "h3_1_p1": "An einem ruhigen Abend schafft das Quiz eine Atmosphäre, die tiefe Gespräche fördert. Es ermöglicht, sich nach einem vollen Tag wieder zu verbinden und einen besonderen Moment zu teilen, fernab von Bildschirmen und äußeren Ablenkungen.",
-      "h3_2": "Heißes Paar-Quiz auf Distanz",
-      "h3_2_p1": "Auch auf Distanz bleibt das Quiz ein hervorragendes Mittel, die Komplizenschaft aufrechtzuerhalten. Per Nachricht, Anruf oder Videoanruf bietet es trotz der Entfernung einen Raum für intimen Austausch.",
-      "h3_3": "Das Quiz mit einem Spiel oder einer leichten Aufgabe verbinden",
-      "h3_3_p1": "In einigen Fällen kann das Quiz mit kleinen symbolischen Aufgaben oder leichten Herausforderungen ergänzt werden, immer im Geist von Respekt und Wohlwollen. Die Idee ist nicht zu zwingen, sondern eine zusätzliche spielerische Note hinzuzufügen.",
-      "h3_3_p2": "Hier ein Beispiel möglicher Formate je nach Kontext:"
-    },
-    "table": {
-      "headers": {
-        "type": "Fragentyp",
-        "objective": "Hauptziel",
-        "example": "Beispielthema"
-      },
-      "rows": {
-        "light": {
-          "type": "Leichte Frage",
-          "objective": "Atmosphäre entspannen",
-          "example": "Paargewohnheiten"
-        },
-        "introspective": {
-          "type": "Introspektive Frage",
-          "objective": "Reflexion fördern",
-          "example": "Beziehungserwartungen"
-        },
-        "suggestive": {
-          "type": "Suggestive Frage",
-          "objective": "Neugier wecken",
-          "example": "Vorlieben und Wünsche"
-        },
-        "open": {
-          "type": "Offene Frage",
-          "objective": "Austausch fördern",
-          "example": "Sicht auf die Beziehung"
-        }
-      }
-    },
-    "table2": {
-      "headers": {
-        "context": "Kontext",
-        "format": "Empfohlenes Format",
-        "benefit": "Hauptvorteil"
-      },
-      "rows": {
-        "evening": {
-          "context": "Abend zu zweit",
-          "format": "Mündliches Quiz",
-          "benefit": "Spontaneität"
-        },
-        "distance": {
-          "context": "Fernbeziehung",
-          "format": "Schriftliches Quiz",
-          "benefit": "Kontinuität"
-        },
-        "weekend": {
-          "context": "Entspanntes Wochenende",
-          "format": "Gemischt",
-          "benefit": "Eintauchen"
-        },
-        "dialogue": {
-          "context": "Dialog wiederaufnehmen",
-          "format": "Offene Fragen",
-          "benefit": "Kommunikation"
-        }
-      }
     },
     "faq": {
       "title": "FAQ zu heißen Paar-Quiz",
@@ -149,6 +127,46 @@
       "q4": {
         "question": "Was ist der Unterschied zu einem klassischen Quiz?",
         "answer": "Ein klassisches Paar-Quiz interessiert sich hauptsächlich für faktische oder lustige Elemente: Geschmäcker, gemeinsame Erinnerungen, Alltagsgewohnheiten. Das heiße Paar-Quiz geht tiefer in die emotionale und beziehungsmäßige Intimität mit Wünschen, Grenzen und Neugierden."
+      }
+    },
+    "section7": {
+      "title": "Pikantes Paar-Quiz für einen aufregenden Abend",
+      "intro": "Zum richtigen Zeitpunkt eingesetzt, kann das heiße Paar-Quiz einen gewöhnlichen Abend in einen unvergesslichen Moment verwandeln. Es geht nicht darum, daraus ein außergewöhnliches Ereignis zu machen, sondern es natürlich in das Paarleben zu integrieren.",
+      "h3_1": "Ideal für einen Abend zu zweit",
+      "h3_1_p1": "An einem ruhigen Abend schafft das Quiz eine Atmosphäre, die tiefe Gespräche fördert. Es ermöglicht, sich nach einem vollen Tag wieder zu verbinden und einen besonderen Moment zu teilen, fernab von Bildschirmen und äußeren Ablenkungen.",
+      "h3_2": "Heißes Paar-Quiz auf Distanz",
+      "h3_2_p1": "Auch auf Distanz bleibt das Quiz ein hervorragendes Mittel, die Komplizenschaft aufrechtzuerhalten. Per Nachricht, Anruf oder Videoanruf bietet es trotz der Entfernung einen Raum für intimen Austausch.",
+      "h3_3": "Das Quiz mit einem Spiel oder einer leichten Aufgabe verbinden",
+      "h3_3_p1": "In einigen Fällen kann das Quiz mit kleinen symbolischen Aufgaben oder leichten Herausforderungen ergänzt werden, immer im Geist von Respekt und Wohlwollen. Die Idee ist nicht zu zwingen, sondern eine zusätzliche spielerische Note hinzuzufügen.",
+      "h3_3_p2": "Hier ein Beispiel möglicher Formate je nach Kontext:",
+      "h3_3_table": {
+        "headers": {
+          "context": "Kontext",
+          "format": "Empfohlenes Format",
+          "benefit": "Hauptvorteil"
+        },
+        "rows": {
+          "evening": {
+            "context": "Abend zu zweit",
+            "format": "Mündliches Quiz",
+            "benefit": "Spontaneität"
+          },
+          "distance": {
+            "context": "Fernbeziehung",
+            "format": "Schriftliches Quiz",
+            "benefit": "Kontinuität"
+          },
+          "weekend": {
+            "context": "Entspanntes Wochenende",
+            "format": "Gemischt",
+            "benefit": "Eintauchen"
+          },
+          "dialogue": {
+            "context": "Dialog wiederaufnehmen",
+            "format": "Offene Fragen",
+            "benefit": "Kommunikation"
+          }
+        }
       }
     }
   }

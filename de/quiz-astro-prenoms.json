@@ -48,7 +48,13 @@
     "title": "Die Numerologie der Vornamen, Buchstabe für Buchstabe",
     "p1": "In der Numerologie ist jeder Buchstabe eine Zahl von 1 bis 9 wert. A ist 1, B ist 2, und so weiter bis I, das 9 ist. Danach geht es mit J wieder bei 1 los, und noch einmal mit S. Das ist die sogenannte „pythagoreische“ Tabelle, die am häufigsten benutzt wird. Man zählt die Buchstaben des Vornamens zusammen, dann die Ziffern der Summe, bis nur noch eine übrig bleibt. Ein Beispiel: Mia ist M = 4, I = 9 und A = 1, also 14, und 1 + 4 = 5. Ben ist B = 2, E = 5 und N = 5, also 12, und 1 + 2 = 3. Mia trägt die 5 und Ben die 3.",
     "p2": "Es gibt eine Ausnahme: Ergibt die Summe 11 oder 22, hört man dort auf. Das sind die „Meisterzahlen“. Jede Zahl hat ihren Ruf: Die 1 entscheidet, die 2 sucht Harmonie, die 5 braucht Freiheit, die 9 denkt an andere, und so weiter. Danach vergleicht der Test eure beiden Zahlen mit einer Kompatibilitätstabelle. Eine 3 und eine 6 verstehen sich zum Beispiel sehr gut, eine 4 und eine 5 deutlich weniger.",
-    "tip": "Die Rechnung nimmt die Buchstaben so, wie ihr sie schreibt, ohne Umlautpunkte und Akzente. „Jörg“ und „Jorg“ ergeben also dieselbe Zahl, „Lukas“ und „Lucas“ aber nicht (1 und 11). Und kennt ihr ein Sternzeichen noch nicht, <a href=\"/de/liebesrechner/\">reichen auch zwei Vornamen</a>: Der Liebesrechner gibt dann ganz ohne Astrologie einen Prozentwert aus."
+    "tip": "Die Rechnung nimmt die Buchstaben so, wie ihr sie schreibt, ohne Umlautpunkte und Akzente. „Jörg“ und „Jorg“ ergeben also dieselbe Zahl, „Lukas“ und „Lucas“ aber nicht (1 und 11). Und kennt ihr ein Sternzeichen noch nicht, <a href=\"/de/liebesrechner/\">reichen auch zwei Vornamen</a>: Der Liebesrechner gibt dann ganz ohne Astrologie einen Prozentwert aus.",
+    "plus": [
+      {
+        "titre": "Welche Vornamen zusammenpassen",
+        "texte": "<p>Sobald jeder Name auf seine Zahl gebracht ist, schaut der Test, wie sich die beiden Zahlen vertragen. Am besten passen die 1 und die 3, die 2 und die 6, die 3 und die 6 und die 6 und die 9: 9 von 10. Zwei Namen mit derselben Zahl bekommen 7 von 10 (6 bei zwei Vieren, 8 bei zwei Meisterzahlen): Man versteht sich schnell, ist sich aber vielleicht ein bisschen zu ähnlich. Am weitesten auseinander liegen die 3 und die 4 sowie die 4 und die 5: 3 von 10, weil die 4 Regeln mag und sowohl die 3 als auch die 5 damit wenig anfangen können.</p><p>Die Meisterzahlen haben ihre eigenen Verbündeten: Die 11 versteht sich sehr gut mit der 2 und der 7, die 22 mit der 4 und der 8.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Die Sternzeichen und ihre vier Elemente",
@@ -67,7 +73,13 @@
     "title": "Was diese Zahlen nicht sagen können",
     "p1": "Weder die Astrologie noch die Numerologie können sagen, ob eure Beziehung hält. Nehmt das Ergebnis als Spiel, und als Anlass, über eure Charaktere zu reden: „Du bist so ein typischer Löwe“, „Ich, eine 9? Das überrascht mich“, und so weiter.",
     "p2": "Wenn ihr ein Ergebnis wollt, das von eurem Alltag als Paar ausgeht, braucht es Fragen. Es gibt einen Test, der jedem von euch zwanzig Fragen zu <a href=\"/de/liebeskompatibilitaet-test/\">Heirat, Kindern, Geld oder Urlaub</a> stellt und dann eure Antworten vergleicht.",
-    "tip": "Macht ihn zu zweit am selben Handy und probiert es danach mit euren Spitznamen: Der Wert der Vornamen ändert sich oft!"
+    "tip": "Macht ihn zu zweit am selben Handy und probiert es danach mit euren Spitznamen: Der Wert der Vornamen ändert sich oft!",
+    "plus": [
+      {
+        "titre": "Und die sexuelle Kompatibilität nach Namen?",
+        "texte": "<p>Das werden wir oft gefragt. Der Test berechnet keinen eigenen Wert für Sex: Der Prozentwert sagt, wie gut ihr euch insgesamt versteht. Die Astrologie hat dazu allerdings eine Meinung: Feuerzeichen gelten als leidenschaftlicher, Erdzeichen als sinnlicher, und die Numerologie schreibt der 5 einen großen Hunger nach Neuem zu. Das bleibt ein Spiel, und so sollte man es auch nehmen.</p><p>Ob ihr im Bett zusammenpasst, findet ihr am einfachsten heraus, wenn ihr <a href=\"/de/sexuelle-kompatibilitaet-test/\">eure Wünsche Frage für Frage vergleicht</a>: Jeder antwortet für sich zu Lust, Zärtlichkeit oder Rhythmus, und die Antworten des anderen seht ihr erst am Ende.</p>"
+      }
+    ]
   },
   "faq": {
     "title": "Häufig gestellte Fragen",

@@ -11,7 +11,13 @@
     "title": "Comment savoir si on aime encore quelqu'un ?",
     "p1": "La réponse ne se trouve pas dans les grandes déclarations, elle se trouve dans les réflexes. Est-ce que vous avez envie de le ou la retrouver le soir ? Est-ce que ses réussites vous font plaisir ? Est-ce que vous le ou la défendez quand quelqu'un le ou la critique ? Ce sont des choses qu'on ne décide pas, et c'est justement pour ça qu'elles disent la vérité.",
     "p2": "Le problème, quand on se pose la question, c'est qu'on cherche à se rassurer ou à se condamner d'un coup, avec un seul signe. Un désir en baisse ne veut rien dire tout seul : ça arrive à tous les couples. Une pensée pour quelqu'un d'autre non plus. C'est l'accumulation qui compte, et surtout le poids des signes lourds : avoir pensé à partir, à froid, plusieurs fois, n'est pas du même ordre qu'une soirée où on préfère son téléphone.",
-    "p3": "Voilà pourquoi le test ne compte pas les réponses, il les pèse. Et pourquoi il ne rend pas un « oui » ou un « non », mais un palier sur huit : entre « vous l'aimez, et c'est net » et « vous ne l'aimez plus », il y a six états intermédiaires que beaucoup de couples traversent, et qui ne mènent pas tous au même endroit."
+    "p3": "Voilà pourquoi le test ne compte pas les réponses, il les pèse. Et pourquoi il ne rend pas un « oui » ou un « non », mais un palier sur huit : entre « vous l'aimez, et c'est net » et « vous ne l'aimez plus », il y a six états intermédiaires que beaucoup de couples traversent, et qui ne mènent pas tous au même endroit.",
+    "plus": [
+      {
+        "titre": "Est-ce que je l'aime, ou est-ce que je l'aime encore ?",
+        "texte": "<p>Beaucoup de gens cherchent simplement « est-ce que je l'aime ». Ce test répond à la version avec « encore » : vous êtes ensemble depuis un moment, et vous ne savez plus très bien ce qu'il reste. Si l'histoire commence à peine, la question est plutôt de savoir si vous êtes <a href=\"/test-suis-je-amoureux/\">amoureux, ou seulement attiré(e)</a>, et c'est un autre test, qui regarde l'attirance des débuts plutôt que l'usure du quotidien.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "Les signes qui pèsent le plus",

@@ -77,7 +77,13 @@
   "section6": {
     "title": "E se fossi tu a non amare più?",
     "p1": "A volte la domanda si rovescia. Ci si chiede se lui ci ama ancora e, in fondo, non si è più tanto sicuri di amarlo. Non è una confessione vergognosa, è una domanda onesta, e merita la sua risposta.",
-    "p2": "Due test se ne occupano meglio di questo: <a href=\"/it/test-sono-innamorato/\">quello che provi ancora</a> per i sentimenti, e amore o abitudine per quello che ti fa restare. Falli prima di porre la domanda all'altro. Si parla meglio quando si sa cosa si prova!"
+    "p2": "Due test se ne occupano meglio di questo: <a href=\"/it/test-sono-innamorato/\">quello che provi ancora</a> per i sentimenti, e amore o abitudine per quello che ti fa restare. Falli prima di porre la domanda all'altro. Si parla meglio quando si sa cosa si prova!",
+    "plus": [
+      {
+        "titre": "Mi ama, o mi ama ancora?",
+        "texte": "<p>La domanda si scrive spesso senza l'«ancora». Questo test è fatto per le coppie già consolidate, quando il dubbio riguarda sentimenti che c'erano e che sembrano allontanarsi. Se non state ancora insieme e ti chiedi cosa prova l'altra persona, <a href=\"/it/mi-ama-in-segreto-test/\">i segnali di chi ti ama senza dirlo</a> non sono gli stessi, e c'è un altro test scritto per quel caso.</p>"
+      }
+    ]
   },
   "section7": {
     "title": "Come funziona questo test",

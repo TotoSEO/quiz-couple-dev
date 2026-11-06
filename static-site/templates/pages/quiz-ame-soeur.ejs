@@ -122,6 +122,7 @@
         </div>
         <% } %>
       </div>
+      <%- include('../partials/blocs-plus', { t, ns, cles: 'section1.plus' }) %>
     </section>
     <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 

@@ -12,7 +12,7 @@
     "p3": "Eso es justo lo que intenta separar este test. No mide la intensidad de lo que sientes, sino su naturaleza: ¿quieres a esa persona o a la imagen que te has hecho de ella? ¿Echas de menos su presencia o es la espera lo que te excita? Veinte preguntas después tendrás una puntuación sobre 205 y un veredicto claro. Si tu duda va más bien sobre la frontera con la amistad, es el test <a href=\"/es/test-amor-o-amistad/\">amor o amistad</a> el que la zanja."
   },
   "section2": {
-    "title": "Las 7 señales de que estás enamorado",
+    "title": "Las 7 señales de que estás enamorado o enamorada",
     "intro": "Ninguna señal basta por sí sola, y la más reveladora no es la que uno cree. Estas son las que evalúa el test, de la más evidente a la más decisiva.",
     "sign1Title": "Ocupa tus pensamientos sin avisar",
     "sign1Text": "Piensas en esa persona varias veces al día sin decidirlo. Su nombre engancha tu atención en cualquier conversación. Es la señal más conocida, pero también la menos fiable: una simple atracción produce exactamente el mismo efecto.",
@@ -46,7 +46,13 @@
     "row3Analysis": "Ya no cabe la duda: ves sus defectos y tus sentimientos aguantan igualmente.",
     "row4Score": "156 a 205 puntos",
     "row4Level": "Un amor asentado",
-    "row4Analysis": "Apego profundo, conocimiento real del otro y deseo de su felicidad, incluso sin ti."
+    "row4Analysis": "Apego profundo, conocimiento real del otro y deseo de su felicidad, incluso sin ti.",
+    "plus": [
+      {
+        "titre": "El grado de tus sentimientos por él o por ella",
+        "texte": "<p>Mucha gente busca un test que mida «el grado de sus sentimientos» por alguien. Es más o menos lo que hace esta puntuación, con un matiz: no mide la fuerza de lo que sientes, sino su naturaleza. Los cuatro niveles van del cariño al amor asentado, y es el nivel el que dice dónde estás, más que el número de puntos.</p><p>Si vuestra historia solo tiene unas semanas, <a href=\"/es/test-amor-o-crush/\">distinguir un crush del amor</a> te dirá seguramente más: al principio del todo, casi todo el mundo cae en el segundo nivel, y es normal.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Amor o simple atracción: cómo distinguirlos",

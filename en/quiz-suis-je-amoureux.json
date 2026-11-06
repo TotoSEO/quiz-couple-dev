@@ -46,7 +46,13 @@
     "row3Analysis": "There is no more room for doubt: you see their flaws and your feelings hold anyway.",
     "row4Score": "156 to 205 points",
     "row4Level": "A settled love",
-    "row4Analysis": "Deep attachment, real knowledge of the other and a wish for their happiness, even without you."
+    "row4Analysis": "Deep attachment, real knowledge of the other and a wish for their happiness, even without you.",
+    "plus": [
+      {
+        "titre": "How deep your feelings for him or her go",
+        "texte": "<p>A lot of people look for a test that measures \"how strong their feelings are\" for someone. That's roughly what this score does, with one difference: it doesn't measure how intense your feelings are, but what kind they are. The four levels go from affection to settled love, and the level tells you where you stand more than the number of points does.</p><p>If your story is only a few weeks old, <a href=\"/en/love-or-crush-test/\">telling a crush apart from love</a> will probably speak to you more: right at the start, almost everyone lands on the second level, and that's normal.</p>"
+      }
+    ]
   },
   "section4": {
     "title": "Love or plain attraction: telling them apart",

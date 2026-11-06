@@ -13,7 +13,17 @@
       "s2p1": "Tu quiz es privado. Solo se abre con el enlace que recibes al crearlo, y nadie puede encontrarlo de otra manera. Guarda ese enlace en algún sitio, en una nota o en un chat por ejemplo: es la única forma de volver a tu quiz.",
       "s2p2": "Envíaselo a tu pareja, a un amigo o a un grupo, y todos pueden jugar al momento, sin cuenta. Al cabo de una semana, el quiz se elimina. Si quieres seguir, crear uno nuevo lleva unos dos minutos.",
       "s3Title": "Quiz para todos los momentos en pareja",
-      "s3p1": "Ya sea para saber si tu pareja te conoce de verdad, para una noche con amigos o solo para reír, la creación de quiz personalizado se adapta a todos los gustos. ¡Deja volar tu imaginación!"
+      "s3p1": "Ya sea para saber si tu pareja te conoce de verdad, para una noche con amigos o solo para reír, la creación de quiz personalizado se adapta a todos los gustos. ¡Deja volar tu imaginación!",
+      "s3plus": [
+        {
+          "titre": "Un quiz de \"quién me conoce mejor\" sobre ti",
+          "texte": "<p>Es el uso más habitual del creador: un quiz sobre ti, con tus propias preguntas, para ver quién te conoce mejor. Tu plato favorito, la ciudad en la que sueñas vivir, lo que más te hace reír... Eliges el modelo \"quiz de puntos\", marcas la respuesta correcta en cada pregunta y cada uno ve su puntuación al final. Para vuestra pareja también hay un quiz ya hecho en el que <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">cada uno adivina las respuestas del otro</a>, si no os apetece escribir las preguntas.</p>"
+        },
+        {
+          "titre": "Crear un quiz para tus amigos",
+          "texte": "<p>El quiz se comparte con un simple enlace, así que funciona igual de bien en un grupo de amigos que con tu pareja. Mándalo al chat del grupo: cada uno juega en su móvil, sin cuenta, durante una semana. Para un cumpleaños o una despedida de soltera, el modelo verdadero o falso suele dar muchas risas.</p>"
+        }
+      ]
     },
     "total_quiz": "quiz creados por la comunidad",
     "total_merci": "Gracias a la comunidad de Quiz Couple por mantener vivo el sitio ❤️"

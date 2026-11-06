@@ -48,7 +48,13 @@
     "title": "La numerología de los nombres, letra por letra",
     "p1": "En numerología, cada letra vale un número del 1 al 9. La A vale 1, la B vale 2, y así hasta la I, que vale 9. Luego se vuelve a empezar por el 1 con la J, y otra vez con la S. Es la tabla llamada «pitagórica», la más usada. Se suman las letras del nombre y luego las cifras del total, hasta quedarse con una sola. Por ejemplo: Ana es A = 1, N = 5 y A = 1, o sea 7. Leo es L = 3, E = 5 y O = 6, o sea 14, y 1 + 4 = 5. Ana lleva el 7 y Leo el 5.",
     "p2": "Hay una excepción: cuando el total da 11 o 22, se para ahí. Son los «números maestros». Cada número tiene su fama: el 1 decide, el 2 busca la armonía, el 5 necesita libertad, el 9 piensa en los demás, etc. Después, el test compara vuestros dos números con una tabla de compatibilidad. Un 3 y un 6, por ejemplo, se llevan muy bien, mientras que un 4 y un 5, mucho menos.",
-    "tip": "El cálculo toma las letras tal como las escribes, sin las tildes. «Lucía» y «Lucia» dan el mismo número, pero «Cristina» y «Christina» no (3 y 11). Y si todavía no sabes su signo, <a href=\"/es/calculadora-del-amor/\">con dos nombres basta</a> para la calculadora del amor, que da un porcentaje sin nada de astrología."
+    "tip": "El cálculo toma las letras tal como las escribes, sin las tildes. «Lucía» y «Lucia» dan el mismo número, pero «Cristina» y «Christina» no (3 y 11). Y si todavía no sabes su signo, <a href=\"/es/calculadora-del-amor/\">con dos nombres basta</a> para la calculadora del amor, que da un porcentaje sin nada de astrología.",
+    "plus": [
+      {
+        "titre": "Las afinidades entre dos nombres",
+        "texte": "<p>Una vez reducido cada nombre a su número, el test mira cómo se llevan los dos números. Las mejores afinidades son el 1 con el 3, el 2 con el 6, el 3 con el 6 y el 6 con el 9: 9 sobre 10. Dos nombres que caen en el mismo número tienen 7 sobre 10 (6 para dos 4, 8 para dos números maestros): os entendéis rápido, pero quizá os parecéis demasiado. Las distancias más claras están entre el 3 y el 4, y entre el 4 y el 5: 3 sobre 10, porque al 4 le gustan las reglas y al 3 y al 5 les cuestan.</p><p>Los números maestros tienen sus propios aliados: el 11 se lleva muy bien con el 2 y el 7, y el 22 con el 4 y el 8.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Los signos del zodiaco y sus cuatro elementos",
@@ -67,7 +73,13 @@
     "title": "Lo que estos números no pueden decir",
     "p1": "Ni la astrología ni la numerología pueden decir si vuestra relación va a durar. Tomaos el resultado como un juego, y como una excusa para hablar de vuestra forma de ser: «tú eres muy Leo», «¿yo, un 9? Me sorprende», etc.",
     "p2": "Si queréis un resultado que parta de vuestra vida en pareja, hacen falta preguntas. Hay un test que os hace veinte preguntas a cada uno sobre <a href=\"/es/test-compatibilidad-amorosa/\">el matrimonio, los hijos, el dinero o las vacaciones</a>, y luego compara vuestras respuestas.",
-    "tip": "Hacedlo juntos en el mismo móvil, y luego volved a probar con vuestros apodos: ¡la puntuación de los nombres cambia a menudo!"
+    "tip": "Hacedlo juntos en el mismo móvil, y luego volved a probar con vuestros apodos: ¡la puntuación de los nombres cambia a menudo!",
+    "plus": [
+      {
+        "titre": "¿Y la compatibilidad sexual por el nombre?",
+        "texte": "<p>Nos lo preguntan a menudo. El test no calcula una puntuación aparte para el sexo: el porcentaje habla de cómo os entendéis en general. La astrología, eso sí, tiene su opinión: se dice que los signos de Fuego son más apasionados, los de Tierra más sensuales, y la numerología le atribuye al 5 una gran necesidad de novedad. Sigue siendo un juego, y así hay que tomarlo.</p><p>Para saber si encajáis en la cama, lo más sencillo es <a href=\"/es/test-compatibilidad-sexual/\">comparar lo que queréis, pregunta por pregunta</a>: cada uno responde por su lado sobre el deseo, la ternura o el ritmo, y solo veis las respuestas del otro al final.</p>"
+      }
+    ]
   },
   "faq": {
     "title": "Preguntas frecuentes",

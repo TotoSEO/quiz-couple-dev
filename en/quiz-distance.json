@@ -74,7 +74,7 @@
       },
       {
         "title": "Rituals and relationship creativity",
-        "text": "Constraint creates creativity. Watching a movie \"together\", sending surprise packages, cooking the same recipe on video call... These rituals become the glue of your couple."
+        "text": "Constraint creates creativity. Watching a movie \"together\", sending surprise packages, cooking the same recipe on video call, playing <a href=\"/en/couple-games/\">games for two, each on your own phone</a>... These rituals become the glue of your couple."
       }
     ]
   },
@@ -199,7 +199,7 @@
     "readyDesc": "You have the qualities needed to manage the distance."
   },
   "section10": {
-    "title": "18 questions to ask each other on a video call",
+    "title": "24 questions to ask each other on a video call",
     "intro": "The test above gives you a verdict. This list is for something else: pulling it out on a night when the call is running out of steam, when you've already covered your day and there are twenty minutes left to fill. Pick one at random.",
     "sub1Title": "The everyday you never get to see",
     "sub1Text": "<ul><li>Describe yesterday to me, but only the five most ordinary minutes of it.</li><li>What do I have absolutely no idea about in your flat?</li><li>Who have you seen this week that I've never met?</li><li>What do you do in the evenings when we're not on a call?</li><li>What habit have you picked up since we've been apart?</li><li>What makes you think of me on an ordinary day?</li></ul>",
@@ -207,7 +207,11 @@
     "sub2Text": "<ul><li>What do you miss most, apart from actually seeing me?</li><li>Which moment of the week is the hardest?</li><li>Is there a subject you avoid bringing up on the phone?</li><li>What has the distance made easier between us?</li><li>When did you doubt this, even for five minutes?</li><li>What do I do that reassures you without me realising it?</li></ul>",
     "sub3Title": "What comes after",
     "sub3Text": "<ul><li>The first thing we do when we see each other again: you choose.</li><li>Honestly, how much longer before we're in the same city?</li><li>What would make you say this isn't worth it any more?</li><li>What are you dreading about the day we live together?</li><li>Which single-person habit are you not willing to give up?</li><li>If one of us had to move for the other, who would it be?</li></ul>",
-    "outro": "One rule if you want this to work: answer first, ask second. Otherwise one of you ends up sitting through a job interview."
+    "outro": "One rule if you want this to work: answer first, ask second. Otherwise one of you ends up sitting through a job interview.",
+    "sub4Title": "Love questions to ask your girlfriend or boyfriend long distance",
+    "sub4Text": "<ul><li>What did you think of me the very first time?</li><li>Which moment with me do you think back to most often?</li><li>What do you do to miss me a little less when I'm not there?</li><li>What's something I say that you'd like to hear more often?</li><li>If I could be there tonight, what would we do?</li><li>What made you realise you cared about me?</li></ul>",
+    "sub5Title": "Conversation topics for a long-distance couple",
+    "sub5Text": "<p>There are also evenings when neither of you feels like answering a question. On those nights, a topic you can talk about for ages without effort works better. A few that work well:</p><ul><li>the series or film you're each watching on your own, and what the other would make of it;</li><li>the last thing that made you laugh today, even if it's silly;</li><li>a memory you share that each of you tells your own way (you'll see the versions never match...);</li><li>the next visit: where, when, and what you'll do on the first evening;</li><li>someone in your life the other hasn't met yet, and their story;</li><li>what you're having for dinner tonight, photo included.</li></ul><p>And when nothing comes, a game does the job nicely for one call.</p>"
   },
   "jsonLd": {
     "about": "long distance relationship"

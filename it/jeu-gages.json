@@ -66,5 +66,17 @@
   },
   "jsonLd": {
     "name": "La ruota delle penitenze di coppia"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Idee di penitenze da fare in coppia",
+      "texte": "<p>La ruota estrae a sorte tra 140 penitenze. Se volete un'idea subito, eccone alcune così come le dà, quasi una per famiglia:</p><ul><li>Un bacio sul collo, senza avvisare.</li><li>Due minuti di massaggio alle spalle, in silenzio.</li><li>Canta il ritornello di una canzone d'amore, in piedi.</li><li>Racconta il momento in cui hai capito che era una cosa seria.</li><li>Parla con l'accento che vuoi fino al prossimo giro.</li><li>Rifate una vostra foto di almeno un anno fa.</li><li>Tre complimenti sinceri, senza ripetere una sola parola.</li><li>Scrivi un pensiero dolce su un foglio e daglielo senza leggerlo ad alta voce.</li></ul><p>Sono scritte per essere date al proprio ragazzo come alla propria ragazza: nessuna dà per scontato chi fa cosa nella coppia.</p>",
+      "sous": [
+        {
+          "titre": "Penitenze da fare a distanza",
+          "texte": "<p>Al telefono o in videochiamata la ruota funziona lo stesso: uno la gira e legge la penitenza, l'altro la fa davanti alla telecamera. Quelle che funzionano meglio a distanza:</p><ul><li>Canta il ritornello di una canzone d'amore, in piedi, con la telecamera accesa.</li><li>Parla con l'accento che vuoi fino alla fine della chiamata.</li><li>Tre complimenti sinceri, senza ripetere una sola parola.</li><li>Racconta il momento in cui hai capito che era una cosa seria.</li><li>Mostra l'ultima foto del tuo telefono e raccontala.</li><li>Manda il selfie più brutto possibile, senza filtri.</li></ul>"
+        }
+      ]
+    }
+  ]
 }

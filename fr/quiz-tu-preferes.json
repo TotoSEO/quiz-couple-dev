@@ -35,7 +35,13 @@
     "title": "Les questions qui font réfléchir (et celles qui font juste rire)",
     "p1": "Il y a deux catégories de questions dans un bon tu préfères pour couple. Les deux sont utiles, mais pas de la même façon.",
     "p2": "Les <strong class=\"text-foreground\">questions légères</strong> servent à mettre à l'aise, à rire, à installer un rythme. Elles n'apprennent rien de profond, mais elles créent le contexte pour que les suivantes tombent bien.",
-    "p3": "Les <strong class=\"text-foreground\">questions qui grattent</strong> ouvrent quelque chose. Elles touchent à des attentes réelles, à des besoins qu'on n'a pas toujours formulés clairement. Le bon dosage, c'est à peu près 60/40 : assez de légèreté pour que ça reste un jeu, assez de profondeur pour que ça vaille le coup d'y avoir joué."
+    "p3": "Les <strong class=\"text-foreground\">questions qui grattent</strong> ouvrent quelque chose. Elles touchent à des attentes réelles, à des besoins qu'on n'a pas toujours formulés clairement. Le bon dosage, c'est à peu près 60/40 : assez de légèreté pour que ça reste un jeu, assez de profondeur pour que ça vaille le coup d'y avoir joué.",
+    "plus": [
+      {
+        "titre": "Des questions « tu préfères » à poser en couple",
+        "texte": "<p>Pour démarrer en douceur :</p><ul><li>Tu préfères que vos disputes se règlent au pierre-feuille-ciseaux ou à pile ou face ?</li><li>Tu préfères un grand lit chacun de son côté ou un lit une place collés toute la nuit ?</li><li>Tu préfères faire la vaisselle tous les soirs pendant dix ans ou ne plus jamais choisir le film ?</li></ul><p>Et pour gratter un peu plus :</p><ul><li>Tu préfères qu'il/elle te choisisse tous les matins ou qu'il/elle t'ait choisi(e) une fois pour toutes ?</li><li>Tu préfères savoir que vous finirez ensemble mais sans passion ou vivre dix ans de passion sans aucune garantie ?</li><li>Tu préfères pardonner sans oublier ou oublier sans pardonner ?</li></ul>"
+      }
+    ]
   },
   "section5": {
     "title": "Pourquoi ce quiz marche aussi bien en couple",

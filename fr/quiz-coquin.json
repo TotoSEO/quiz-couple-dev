@@ -18,6 +18,24 @@
       "h3_2_p2": "Aucune durée de relation idéale pour se lancer. Il faut surtout une envie partagée de jouer le jeu avec bienveillance, sans pression et sans obligation de répondre à tout. Le jeu devient alors un espace sûr, où chacun avance à son rythme."
     },
     "section2": {
+      "title": "Des questions coquines à poser en couple, des plus douces aux plus hot",
+      "intro": "Le quiz pose ses propres questions, avec des réponses au choix. Mais beaucoup de couples cherchent aussi des questions coquines à se poser directement, sans écran, le soir ou par message. En voici une douzaine, rangées de la plus douce à la plus osée. Commencez par le haut, et ne passez à la suite que si vous en avez envie tous les deux.",
+      "plus": [
+        {
+          "titre": "Pour commencer en douceur",
+          "texte": "<ul><li>« À quel moment est-ce que je t'ai le plus attiré(e) ? »</li><li>« Qu'est-ce que je fais sans m'en rendre compte et qui te plaît ? »</li><li>« Tu te souviens de notre premier baiser ? Raconte-le-moi comme toi tu l'as vécu. »</li><li>« Plutôt câlin le matin ou le soir ? »</li></ul>"
+        },
+        {
+          "titre": "Des questions hot, pour faire monter la température",
+          "texte": "<ul><li>« Qu'est-ce que tu aimerais que je fasse plus souvent ? »</li><li>« Un endroit où tu as déjà eu envie de moi, sans me le dire ? »</li><li>« Le vêtement que tu préfères me voir porter... ou me voir enlever ? »</li><li>« Qu'est-ce qui te met dans l'ambiance le plus vite ? »</li></ul>"
+        },
+        {
+          "titre": "Les plus osées, si vous êtes partants tous les deux",
+          "texte": "<ul><li>« Un fantasme que tu ne m'as encore jamais raconté ? »</li><li>« Quelque chose que tu as envie d'essayer, mais que tu n'as jamais osé proposer ? »</li><li>« Si on avait une nuit entière sans réveil ni obligation, on la passerait comment ? »</li><li>« Ce que tu préfères chez moi au lit, en un seul mot ? »</li></ul><p>Pour en trouver d'autres, il existe une liste bien plus longue de <a href=\"/blog/questions-intimes-couple/\">questions intimes pour son copain</a>, rangée elle aussi de la plus tendre à la plus osée. Et si vous préférez les défis aux questions, <a href=\"/action-ou-verite-coquin/\">la version osée de l'action ou vérité</a> mélange les deux.</p>"
+        }
+      ]
+    },
+    "section3": {
       "title": "Pourquoi faire un quiz coquin à deux",
       "intro": "Prendre le temps d'y jouer, c'est déjà s'offrir une pause hors du quotidien. Quand tout va vite, ces moments rien qu'à deux deviennent précieux. On se recentre l'un sur l'autre, on redonne sa place à la communication.",
       "h3_1": "Créer de la complicité dans le couple",
@@ -30,7 +48,7 @@
       "h3_3_p1": "On pense souvent connaître l'autre par cœur. Sauf que <a href=\"/test-compatibilite-sexuelle/\">les attentes et les désirs</a>, eux, évoluent avec le temps. Ce genre de jeu offre justement l'occasion de faire le point, sans jugement, sur ce qui plaît, ce qui intrigue ou ce qui ne colle plus.",
       "h3_3_p2": "L'idée n'est pas de trouver les « bonnes » réponses, mais de <strong>comprendre la vision actuelle de l'autre</strong>. Et cette compréhension mutuelle, c'est un peu le socle d'une relation équilibrée et épanouie."
     },
-    "section3": {
+    "section4": {
       "title": "Comment fonctionne un quiz coquin",
       "intro": "Le fonctionnement est volontairement simple, et c'est cette simplicité qui le rend accessible à tous. Pas de règle universelle ici. Juste quelques principes communs qui suffisent à passer un bon moment, quel que soit le couple.",
       "h3_1": "Le principe des questions à choix",
@@ -41,9 +59,38 @@
       "h3_2_p2": "Tout dépend surtout du tempérament de chacun. Certains adoreront l'énergie du face-à-face, d'autres préféreront le confort de l'écrit, qui permet de revenir sur une question plus tard.",
       "h3_3": "Quand et où faire un quiz coquin en couple",
       "h3_3_p1": "Il n'y a pas de moment parfait, mais certaines conditions aident. Un endroit calme, sans distraction, reste idéal pour se concentrer sur l'échange. Ça se glisse aussi bien dans une soirée à deux qu'un week-end tranquille, ou même un moment totalement improvisé.",
-      "h3_3_p2": "Le principal, c'est de choisir un cadre où chacun se sent à l'aise, libre de parler sans être coupé."
+      "h3_3_p2": "Le principal, c'est de choisir un cadre où chacun se sent à l'aise, libre de parler sans être coupé.",
+      "h3_1_table": {
+        "headers": {
+          "type": "Type de question",
+          "objective": "Objectif principal",
+          "example": "Exemple de thème abordé"
+        },
+        "rows": {
+          "light": {
+            "type": "Question légère",
+            "objective": "Détendre l'atmosphère",
+            "example": "Habitudes du couple"
+          },
+          "introspective": {
+            "type": "Question introspective",
+            "objective": "Favoriser la réflexion",
+            "example": "Attentes relationnelles"
+          },
+          "suggestive": {
+            "type": "Question suggestive",
+            "objective": "Stimuler la curiosité",
+            "example": "Préférences et envies"
+          },
+          "open": {
+            "type": "Question ouverte",
+            "objective": "Encourager l'échange",
+            "example": "Vision du couple"
+          }
+        }
+      }
     },
-    "section4": {
+    "section5": {
       "title": "Les thèmes qu'aborde un quiz coquin",
       "intro": "Toute la richesse du jeu tient à la variété des thèmes. Chacun ouvre une facette différente de la relation, sans jamais forcer la discussion.",
       "h3_1": "Préférences et habitudes dans le couple",
@@ -53,7 +100,7 @@
       "h3_3": "Fantasmes et curiosités",
       "h3_3_p1": "Abordé avec délicatesse, ce thème laisse la place aux curiosités, aux imaginaires et aux envies, sans jamais tomber dans l'explicite. Rien à imposer ici : juste <strong>partager des idées</strong>, comprendre ce qui intrigue ou inspire l'autre, et toujours respecter ses limites."
     },
-    "section5": {
+    "section6": {
       "title": "Quiz coquin : les règles et limites à poser",
       "intro": "Pour que le moment reste agréable, mieux vaut poser quelques règles simples au départ. Elles ne brident pas le jeu. Elles le sécurisent, tout simplement.",
       "h3_1": "L'importance du consentement",
@@ -62,75 +109,6 @@
       "h3_2_p1": "Ce n'est pas un examen. On a parfaitement le droit de faire une pause, de changer de sujet, voire de tout arrêter si l'un des deux ne le sent plus. C'est même cette liberté de dire stop qui renforce la confiance mutuelle.",
       "h3_3": "Adapter le quiz à son couple",
       "h3_3_p1": "Chaque couple est différent. En ajustant les questions, le rythme et la durée, on respecte la sensibilité de chacun. Et bien souvent, la qualité de l'échange compte davantage que le nombre de questions posées."
-    },
-    "section6": {
-      "title": "Un quiz coquin pour pimenter la soirée",
-      "intro": "Sorti au bon moment, ce petit jeu transforme une soirée banale en souvenir. Pas besoin d'en faire un grand événement : l'idée, c'est plutôt de le glisser naturellement dans la vie du couple.",
-      "h3_1": "Idéal pour une soirée à deux",
-      "h3_1_p1": "Un soir tranquille, il installe tout de suite une ambiance qui appelle les vraies discussions. On se reconnecte après une journée chargée, on partage un moment à part, loin des écrans et du reste.",
-      "h3_2": "Un quiz à distance, ça marche aussi",
-      "h3_2_p1": "Même à distance, le jeu reste un super moyen d'entretenir la complicité. Par message, au téléphone ou en visio, il ouvre un espace d'échange intime malgré les kilomètres.",
-      "h3_3": "Associer le quiz à un jeu ou un gage léger",
-      "h3_3_p1": "Rien n'empêche d'y ajouter de petits gages symboliques ou des défis légers, toujours dans le respect et la bienveillance. Le but n'est pas de contraindre, juste d'apporter une touche ludique en plus.",
-      "h3_3_p2": "Voici quelques formats possibles selon le contexte :"
-    },
-    "table": {
-      "headers": {
-        "type": "Type de question",
-        "objective": "Objectif principal",
-        "example": "Exemple de thème abordé"
-      },
-      "rows": {
-        "light": {
-          "type": "Question légère",
-          "objective": "Détendre l'atmosphère",
-          "example": "Habitudes du couple"
-        },
-        "introspective": {
-          "type": "Question introspective",
-          "objective": "Favoriser la réflexion",
-          "example": "Attentes relationnelles"
-        },
-        "suggestive": {
-          "type": "Question suggestive",
-          "objective": "Stimuler la curiosité",
-          "example": "Préférences et envies"
-        },
-        "open": {
-          "type": "Question ouverte",
-          "objective": "Encourager l'échange",
-          "example": "Vision du couple"
-        }
-      }
-    },
-    "table2": {
-      "headers": {
-        "context": "Contexte",
-        "format": "Format conseillé",
-        "benefit": "Bénéfice principal"
-      },
-      "rows": {
-        "evening": {
-          "context": "Soirée à deux",
-          "format": "Quiz oral",
-          "benefit": "Spontanéité"
-        },
-        "distance": {
-          "context": "Couple à distance",
-          "format": "Quiz écrit",
-          "benefit": "Continuité"
-        },
-        "weekend": {
-          "context": "Week-end détente",
-          "format": "Mixte",
-          "benefit": "Immersion"
-        },
-        "dialogue": {
-          "context": "Reprise de dialogue",
-          "format": "Questions ouvertes",
-          "benefit": "Communication"
-        }
-      }
     },
     "faq": {
       "title": "FAQ autour des quiz de couple hot",
@@ -149,6 +127,46 @@
       "q4": {
         "question": "Quelle est la différence avec un quiz classique ?",
         "answer": "Un quiz de couple classique reste sur le factuel et l'amusant : les goûts, les souvenirs, les habitudes du quotidien. La version hot, elle, s'aventure du côté de l'intimité émotionnelle, avec les désirs, les limites et les petites curiosités de chacun."
+      }
+    },
+    "section7": {
+      "title": "Un quiz coquin pour pimenter la soirée",
+      "intro": "Sorti au bon moment, ce petit jeu transforme une soirée banale en souvenir. Pas besoin d'en faire un grand événement : l'idée, c'est plutôt de le glisser naturellement dans la vie du couple.",
+      "h3_1": "Idéal pour une soirée à deux",
+      "h3_1_p1": "Un soir tranquille, il installe tout de suite une ambiance qui appelle les vraies discussions. On se reconnecte après une journée chargée, on partage un moment à part, loin des écrans et du reste.",
+      "h3_2": "Un quiz à distance, ça marche aussi",
+      "h3_2_p1": "Même à distance, le jeu reste un super moyen d'entretenir la complicité. Par message, au téléphone ou en visio, il ouvre un espace d'échange intime malgré les kilomètres.",
+      "h3_3": "Associer le quiz à un jeu ou un gage léger",
+      "h3_3_p1": "Rien n'empêche d'y ajouter de petits gages symboliques ou des défis légers, toujours dans le respect et la bienveillance. Le but n'est pas de contraindre, juste d'apporter une touche ludique en plus.",
+      "h3_3_p2": "Voici quelques formats possibles selon le contexte :",
+      "h3_3_table": {
+        "headers": {
+          "context": "Contexte",
+          "format": "Format conseillé",
+          "benefit": "Bénéfice principal"
+        },
+        "rows": {
+          "evening": {
+            "context": "Soirée à deux",
+            "format": "Quiz oral",
+            "benefit": "Spontanéité"
+          },
+          "distance": {
+            "context": "Couple à distance",
+            "format": "Quiz écrit",
+            "benefit": "Continuité"
+          },
+          "weekend": {
+            "context": "Week-end détente",
+            "format": "Mixte",
+            "benefit": "Immersion"
+          },
+          "dialogue": {
+            "context": "Reprise de dialogue",
+            "format": "Questions ouvertes",
+            "benefit": "Communication"
+          }
+        }
       }
     }
   }

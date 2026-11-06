@@ -18,7 +18,13 @@
     "title": "Was genau ist ein lustiges Paar-Quiz?",
     "p1": "Ein <strong class=\"text-foreground\">lustiges Paar-Quiz</strong> ist ein Fragespiel zu zweit, das kein Wissen abfragt, sondern ein Gespräch in Gang bringt. Eine Frage erscheint, ihr lest sie laut vor und antwortet nacheinander. Mehr ist es nicht.",
     "p2": "Es gibt keine richtige Antwort und keine Punkte. Zum Lachen bringt euch die Antwort selbst: was der andere beim ersten Date wirklich von dir dachte, der <a href=\"/de/peinliches-paar-quiz/\">peinlichste Moment</a>, den ihr zusammen erlebt habt, oder was er morgen früh mit einem Lottogewinn anstellen würde.",
-    "p3": "Dieses Format ist besonders beliebt, weil es erlaubt, über die Beziehung ohne Schwere zu sprechen, Alltagsthemen mit Humor anzugehen und die Kommunikation in der Beziehung zu stärken."
+    "p3": "Dieses Format ist besonders beliebt, weil es erlaubt, über die Beziehung ohne Schwere zu sprechen, Alltagsthemen mit Humor anzugehen und die Kommunikation in der Beziehung zu stärken.",
+    "plus": [
+      {
+        "titre": "Lustige Fragen für Paare",
+        "texte": "<p>Damit ihr seht, was so kommt, hier eine Frage aus jeder der sechs Familien des Spiels, genau so, wie es sie stellt:</p><ul><li>Welches völlig alberne Detail hat dich umgehauen?</li><li>Hast du je so getan, als schmecke dir etwas, das ich gekocht habe? Was?</li><li>Wie lange brauche ich wirklich, wenn ich „zwei Minuten“ sage?</li><li>Was ist unser Insider-Witz, den sonst niemand versteht?</li><li>Hast du schon mal geschlafen gespielt, um einem Gespräch zu entgehen?</li><li>Wenn wir drei Stunden im Aufzug feststecken würden, wie liefe das ab?</li></ul><p>Insgesamt sind es 150. Für Listen zum Durchlesen, von leicht bis tiefgründig, gibt es außerdem <a href=\"/de/fragen-fuer-paare/\">Fragen, sortiert nach Situation und Thema</a>.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Warum funktioniert das lustige Paar-Quiz so gut?",

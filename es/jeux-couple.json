@@ -154,7 +154,7 @@
     "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",
     "a3": "¡Depende de la noche! Verdad o reto es el más versátil: arranca rápido y se para cuando queréis. Quién de los dos cabe en cinco minutos y abre conversación siempre. Preferirías funciona mejor cuando apetece hablar más que hacer. El tablero pide media hora de verdad, pero es el único que se gana. La ruleta sirve sobre todo para zanjar una apuesta. Y la versión picante, para los momentos en que estáis solos los dos.",
     "q4": "¿Se puede jugar a distancia, cada uno en su casa?",
-    "a4": "Sí. Uno abre el juego, lee en voz alta por videollamada y valida por los dos. Las verdades, los dilemas y los votos funcionan perfectamente a distancia; los retos piden algo de imaginación.",
+    "a4": "Sí. Quién de los dos, Yo nunca, ¿Quién podría? y Es un 10, pero... tienen modo a distancia: uno crea la partida, el otro se une con el código y cada uno juega en su móvil. En los demás, uno abre el juego, lee en voz alta por videollamada y valida por los dos. Las verdades, los dilemas y los votos funcionan muy bien a distancia; los retos piden algo de imaginación.",
     "q5": "¿Estos juegos valen para una pareja que acaba de conocerse?",
     "a5": "Preferirías, quién de los dos, la ruleta de prendas y la versión clásica de verdad o reto, sí: ninguno da por hecha una historia en común. El tablero también, aunque sus casillas de recuerdo quedarán algo flojas al principio. La versión picante sí da por hecho que ya os conocéis bien: lanzada demasiado pronto incomoda más de lo que divierte."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Juegos para parejas"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Juegos de pareja a distancia, cada uno en su móvil",
+      "texte": "<p>Cuatro de nuestros juegos tienen un modo a distancia de verdad. Uno de los dos crea la partida, el otro se une con un código o un código QR, y cada uno responde en su propia pantalla. Las dos respuestas aparecen una al lado de la otra cuando habéis contestado los dos, así que tenéis tema para la llamada:</p><ul><li><a href=\"/es/quien-de-los-dos-pareja/\">señalar quién de los dos</a> llega siempre tarde, es más celoso o gasta más;</li><li><a href=\"/es/yo-nunca-juego-pareja/\">confesar lo que ya habéis hecho</a>, o no;</li><li><a href=\"/es/quien-podria-juego-pareja/\">decir quién de los dos sería capaz</a> de tirarse en paracaídas o de perder un avión;</li><li><a href=\"/es/juego-es-un-10-pero/\">puntuar a una persona perfecta</a>, con un defecto, de 0 a 10.</li></ul><p>Este modo también sirve cuando estáis sentados uno al lado del otro: se convierte en un juego con dos móviles, en el que nadie ve lo que elige el otro antes de la revelación. Los demás juegos de la página funcionan muy bien por videollamada: uno abre el juego, lee en voz alta y valida por los dos.</p><p>Y si sois varias parejas, <a href=\"/es/juego-de-fiesta-para-parejas/\">el juego pensado para cuatro a diez jugadores</a> también se juega en el móvil de cada uno.</p>"
+    }
+  ]
 }

@@ -36,5 +36,10 @@
     "faq3A": "Yes, 100% free and no registration required. Your answers are not saved, you can retake the quiz as many times as you want.",
     "faq4Q": "What does our score mean?",
     "faq4A": "The score counts the questions where you picked the same answer without discussing it. A low score says very little about your relationship; mostly it says you have things to tell each other."
+  },
+  "section1": {
+    "title": "A question-and-answer game about your love story",
+    "p1": "This love quiz is a question-and-answer game for two: twenty questions about your story, drawn from thirty each time you play, with four possible answers. For example “If we were animals, we would be…”, “How do you comfort the other when things are hard?” or “Which moment made you realise you loved me?”",
+    "p2": "Start a new game and some of the questions change, so you can play again another evening without landing on exactly the same ones!"
   }
 }

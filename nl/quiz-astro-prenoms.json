@@ -48,7 +48,13 @@
     "title": "De numerologie van namen, letter voor letter",
     "p1": "In de numerologie is elke letter een getal van 1 tot 9 waard. A is 1, B is 2, en zo verder tot de I, die 9 is. Bij de J begin je weer bij 1, en bij de S nog een keer. Dat is de tabel die ze ‘van Pythagoras’ noemen, de bekendste. Je telt de letters van de naam bij elkaar op, en dan de cijfers van het totaal, tot er één overblijft. Bijvoorbeeld: Lotte is L = 3, O = 6, T = 2, T = 2 en E = 5, samen 18, en 1 + 8 = 9. Tom is T = 2, O = 6 en M = 4, samen 12, en 1 + 2 = 3. Lotte heeft dus de 9 en Tom de 3.",
     "p2": "Er is één uitzondering: kom je op 11 of 22 uit, dan stop je daar. Dat zijn de ‘meestergetallen’, zoals Daan: 4 + 1 + 1 + 5 = 11. Elk getal heeft zijn eigen reputatie: de 1 beslist, de 2 zoekt harmonie, de 5 heeft vrijheid nodig, de 9 denkt aan anderen, enzovoort. De test legt jullie twee getallen daarna naast een tabel met matches. Een 3 en een 6 kunnen het bijvoorbeeld heel goed met elkaar vinden, een 4 en een 5 veel minder.",
-    "tip": "De berekening neemt de letters zoals je ze typt, zonder accenten. ‘Chloë’ en ‘Chloe’ geven dus hetzelfde getal, maar ‘Thijs’ en ‘Tijs’ niet (3 en 4). En ken je het sterrenbeeld van de ander nog niet? Voor de liefdestest zijn <a href=\"/nl/liefdestest/\">twee namen genoeg</a>: die geeft een percentage zonder astrologie."
+    "tip": "De berekening neemt de letters zoals je ze typt, zonder accenten. ‘Chloë’ en ‘Chloe’ geven dus hetzelfde getal, maar ‘Thijs’ en ‘Tijs’ niet (3 en 4). En ken je het sterrenbeeld van de ander nog niet? Voor de liefdestest zijn <a href=\"/nl/liefdestest/\">twee namen genoeg</a>: die geeft een percentage zonder astrologie.",
+    "plus": [
+      {
+        "titre": "Welke namen bij elkaar passen",
+        "texte": "<p>Zodra elke naam tot zijn getal is teruggebracht, kijkt de test hoe de twee getallen met elkaar overweg kunnen. De beste combinaties zijn de 1 met de 3, de 2 met de 6, de 3 met de 6 en de 6 met de 9: 9 op 10. Twee namen met hetzelfde getal krijgen 7 op 10 (6 bij twee keer 4, 8 bij twee meestergetallen): jullie begrijpen elkaar snel, maar lijken misschien iets te veel op elkaar. Het verst uit elkaar liggen de 3 en de 4, en de 4 en de 5: 3 op 10, omdat de 4 van regels houdt en zowel de 3 als de 5 daar slecht tegen kunnen.</p><p>De meestergetallen hebben hun eigen bondgenoten: de 11 kan het heel goed vinden met de 2 en de 7, de 22 met de 4 en de 8.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "De sterrenbeelden en hun vier elementen",
@@ -67,7 +73,13 @@
     "title": "Wat deze getallen niet kunnen zeggen",
     "p1": "Astrologie noch numerologie kan zeggen of jullie relatie standhoudt. Zie het resultaat als een spelletje, en als een kans om over jullie karakters te praten: “jij bent echt een Leeuw”, “ik, een 9? Dat verbaast me”, enzovoort.",
     "p2": "Wil je een resultaat dat uitgaat van jullie leven samen, dan moeten jullie vragen beantwoorden. Er is een test die jullie elk twintig vragen stelt over <a href=\"/nl/passen-we-bij-elkaar/\">trouwen, kinderen, geld of vakanties</a>, en daarna jullie antwoorden vergelijkt.",
-    "tip": "Doe hem met z'n tweeën op dezelfde telefoon, en probeer het daarna nog eens met jullie bijnamen: de score van de namen verandert vaak!"
+    "tip": "Doe hem met z'n tweeën op dezelfde telefoon, en probeer het daarna nog eens met jullie bijnamen: de score van de namen verandert vaak!",
+    "plus": [
+      {
+        "titre": "En seksuele compatibiliteit op naam?",
+        "texte": "<p>Dat wordt ons vaak gevraagd. De test berekent geen aparte score voor seks: het percentage gaat over hoe goed jullie in het algemeen met elkaar overweg kunnen. De astrologie heeft er wel een mening over: vuurtekens zouden hartstochtelijker zijn, aardetekens sensueler, en de numerologie dicht de 5 een grote behoefte aan iets nieuws toe. Het blijft een spel, en zo moet je het ook zien.</p><p>Wil je weten of jullie in bed bij elkaar passen, dan is het simpelst om <a href=\"/nl/seksuele-compatibiliteit-test/\">jullie verlangens vraag voor vraag te vergelijken</a>: ieder antwoordt voor zichzelf over verlangen, tederheid of ritme, en de antwoorden van de ander zie je pas aan het eind.</p>"
+      }
+    ]
   },
   "faq": {
     "title": "Veelgestelde vragen",

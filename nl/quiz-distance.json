@@ -74,7 +74,7 @@
       },
       {
         "title": "Rituelen en creativiteit",
-        "text": "Beperkingen maken creatief. ‘Samen’ een film kijken, elkaar verrassingspakketjes sturen, hetzelfde recept koken via videobellen... Die rituelen worden het cement van jullie relatie."
+        "text": "Beperkingen maken creatief. ‘Samen’ een film kijken, elkaar verrassingspakketjes sturen, hetzelfde recept koken via videobellen, <a href=\"/nl/spelletjes-voor-koppels/\">spelletjes spelen, ieder op zijn eigen telefoon</a>... Die rituelen worden het cement van jullie relatie."
       }
     ]
   },
@@ -199,7 +199,7 @@
     "readyDesc": "Jullie hebben wat nodig is om de afstand aan te kunnen."
   },
   "section10": {
-    "title": "18 vragen om elkaar te stellen tijdens het videobellen",
+    "title": "24 vragen om elkaar te stellen tijdens het videobellen",
     "intro": "De test hierboven geeft je een uitslag. Deze lijst is voor iets anders: om tevoorschijn te halen op een avond dat het gesprek stilvalt, als jullie je dag al hebben verteld en er nog twintig minuten te gaan zijn. Kies er zomaar een.",
     "sub1Title": "Het dagelijks leven dat je niet ziet",
     "sub1Text": "<ul><li>Beschrijf je dag van gisteren, maar alleen de vijf saaiste minuten.</li><li>Wat weet ik helemaal niet over jouw huis?</li><li>Wie heb je deze week gezien die ik niet ken?</li><li>Wat doe je 's avonds als we niet bellen?</li><li>Welke gewoonte heb je opgepikt sinds we ver van elkaar wonen?</li><li>Waardoor moet je op een gewone dag aan mij denken?</li></ul>",
@@ -207,7 +207,11 @@
     "sub2Text": "<ul><li>Wat mis je het meest, behalve mij zien?</li><li>Welk moment van de week is het zwaarst?</li><li>Is er iets waar je het aan de telefoon liever niet over hebt?</li><li>Wat is er tussen ons makkelijker geworden door de afstand?</li><li>Wanneer heb je getwijfeld, al was het maar vijf minuten?</li><li>Wat doe ik dat jou geruststelt zonder dat ik het weet?</li></ul>",
     "sub3Title": "Daarna, en het weerzien",
     "sub3Text": "<ul><li>Het eerste wat we doen als we elkaar weer zien, mag jij kiezen.</li><li>Hoe lang nog, eerlijk, voordat we in dezelfde stad wonen?</li><li>Wanneer zou je zeggen dat het de moeite niet meer waard is?</li><li>Waar zie je tegen op als we straks samenwonen?</li><li>Welke gewoonte uit je singleleven wil je niet kwijt?</li><li>Als een van ons voor de ander zou moeten verhuizen, wie zou dat zijn?</li></ul>",
-    "outro": "Eén regel als je wilt dat het werkt: eerst zelf antwoorden, dan pas vragen. Anders zit een van jullie ineens in een sollicitatiegesprek."
+    "outro": "Eén regel als je wilt dat het werkt: eerst zelf antwoorden, dan pas vragen. Anders zit een van jullie ineens in een sollicitatiegesprek.",
+    "sub4Title": "Liefdesvragen voor je vriendin of vriend op afstand",
+    "sub4Text": "<ul><li>Wat dacht je van mij, de allereerste keer?</li><li>Aan welk moment met mij denk je het vaakst terug?</li><li>Wat doe je om me minder te missen als ik er niet ben?</li><li>Wat zeg ik dat je vaker zou willen horen?</li><li>Als ik er vanavond kon zijn, wat zouden we dan doen?</li><li>Waaraan merkte je dat je om me gaf?</li></ul>",
+    "sub5Title": "Gespreksonderwerpen voor een stel op afstand",
+    "sub5Text": "<p>Er zijn ook avonden waarop geen van jullie zin heeft om een vraag te beantwoorden. Dan werkt een onderwerp waar je zonder moeite lang over kunt praten beter. Een paar die goed werken:</p><ul><li>de serie of film die jullie allebei apart kijken, en wat de ander ervan zou vinden;</li><li>het laatste waar je vandaag om moest lachen, ook als het onzin is;</li><li>een herinnering van jullie samen die ieder op zijn eigen manier vertelt (je zult zien dat de versies nooit hetzelfde zijn...);</li><li>het volgende bezoek: waar, wanneer en wat jullie de eerste avond doen;</li><li>iemand uit je omgeving die de ander nog niet kent, en zijn of haar verhaal;</li><li>wat er vanavond op tafel staat, met foto erbij.</li></ul><p>En als er niks komt, doet een spelletje het prima voor één gesprek.</p>"
   },
   "jsonLd": {
     "about": "lange afstandsrelatie"

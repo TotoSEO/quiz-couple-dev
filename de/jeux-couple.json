@@ -154,7 +154,7 @@
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",
     "a3": "Kommt auf den Abend an! Wahrheit oder Pflicht ist am vielseitigsten: schnell gestartet, jederzeit beendet. Wer von uns beiden passt in fünf Minuten und bringt jedes Mal ein Gespräch in Gang. Würdest du eher funktioniert besser, wenn ihr eher reden als machen wollt. Das Brettspiel braucht eine echte halbe Stunde, ist dafür das einzige, das man gewinnen kann. Das Rad dient vor allem dazu, eine Wette zu entscheiden. Und die versaute Variante hebt ihr euch für die Momente auf, in denen ihr allein seid.",
     "q4": "Kann man aus der Ferne spielen, jeder bei sich?",
-    "a4": "Ja. Einer öffnet das Spiel, liest per Video laut vor und bestätigt für beide. Wahrheiten, Dilemmata und Abstimmungen funktionieren aus der Ferne einwandfrei, die Pflichten brauchen etwas Fantasie.",
+    "a4": "Ja. Wer von uns beiden, Ich hab noch nie, Wer würde eher? und Er ist eine 10, aber... haben einen Fernmodus: Einer erstellt das Spiel, der andere tritt mit dem Code bei, und jeder spielt auf seinem Handy. Bei den anderen öffnet einer das Spiel, liest per Video laut vor und bestätigt für beide. Wahrheiten, Dilemmata und Abstimmungen funktionieren aus der Ferne sehr gut, die Pflichten brauchen etwas Fantasie.",
     "q5": "Eignen sich diese Spiele für ein Paar, das sich gerade erst kennengelernt hat?",
     "a5": "Würdest du eher, Wer von uns beiden, das Pfänderrad und die klassische Variante von Wahrheit oder Pflicht: ja, keines davon setzt eine gemeinsame Geschichte voraus. Das Brettspiel auch, auch wenn seine Erinnerungsfelder am Anfang etwas dünn ausfallen. Die versaute Variante geht dagegen davon aus, dass ihr euch schon gut kennt: zu früh gespielt ist sie eher unangenehm als lustig."
   },
@@ -167,5 +167,11 @@
   },
   "jsonLd": {
     "name": "Paarspiele"
-  }
+  },
+  "plus": [
+    {
+      "titre": "Spiele für Paare in der Fernbeziehung, jeder auf seinem Handy",
+      "texte": "<p>Vier unserer Spiele haben einen echten Fernmodus. Einer von euch erstellt das Spiel, der andere tritt mit einem Code oder QR-Code bei, und jeder antwortet auf seinem eigenen Bildschirm. Beide Antworten erscheinen nebeneinander, sobald ihr beide geantwortet habt, und schon habt ihr Gesprächsstoff für den Anruf:</p><ul><li><a href=\"/de/wer-von-uns-beiden-paarspiel/\">zeigen, wer von euch beiden</a> immer zu spät kommt, am eifersüchtigsten ist oder am meisten Geld ausgibt;</li><li><a href=\"/de/ich-hab-noch-nie-paar-spiel/\">gestehen, was ihr schon gemacht habt</a>, oder auch nicht;</li><li><a href=\"/de/wer-koennte-paar-spiel/\">sagen, wer von euch eher</a> Fallschirm springen oder einen Flug verpassen würde;</li><li><a href=\"/de/er-ist-eine-10-aber-spiel/\">einen perfekten Menschen mit einem Makel bewerten</a>, von 0 bis 10.</li></ul><p>Der Modus funktioniert auch, wenn ihr nebeneinander sitzt: Dann wird daraus ein Spiel mit zwei Handys, bei dem keiner sieht, was der andere wählt, bevor aufgedeckt wird. Die anderen Spiele auf dieser Seite klappen sehr gut per Videoanruf: Einer öffnet das Spiel, liest laut vor und bestätigt für beide.</p><p>Und wenn ihr mehrere Paare seid, wird <a href=\"/de/partyspiel-fuer-paare/\">das Spiel für vier bis zehn Spieler</a> ebenfalls auf dem Handy von jedem gespielt.</p>"
+    }
+  ]
 }

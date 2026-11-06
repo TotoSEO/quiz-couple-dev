@@ -51,7 +51,24 @@
       "¿Quién guarda más secretos?",
       "¿Quién es el más sensible a los cumplidos?",
       "¿Quién es el más fiel a sus hábitos?"
-    ]
+    ],
+    "amisTitle": "Preguntas de \"quién es el más\" entre amigos",
+    "amisQuestions": [
+      "¿Quién llega siempre el último a las quedadas?",
+      "¿Quién sería el primero en cancelar un plan hecho hace un mes?",
+      "¿Quién es más capaz de perderse en vacaciones?",
+      "¿Quién manda más audios de tres minutos?",
+      "¿Quién cuenta siempre la misma anécdota en las fiestas?"
+    ],
+    "coupleTitle": "Preguntas de \"quién es el más\" en pareja",
+    "coupleQuestions": [
+      "¿Quién es más mimoso por la mañana?",
+      "¿Quién cede primero cuando estamos enfadados?",
+      "¿Quién se queda con más manta?",
+      "¿Quién olvida más las fechas importantes?",
+      "¿Quién elige la película por la noche?"
+    ],
+    "coupleNote": "¿Solo sois dos, sin amigos alrededor? Hay un juego en el que cada uno <a href=\"/es/quien-de-los-dos-pareja/\">señala en secreto a uno de los dos</a>, pensado justo para eso."
   },
   "tips": {
     "title": "Nuestros consejos para un quiz \"Quién es el más\" exitoso",

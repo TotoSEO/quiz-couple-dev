@@ -13,7 +13,13 @@
     "title": "Wat is een relatietest en wat heb je eraan?",
     "p1": "Een <strong>relatietest</strong> is een vragenlijst die laat zien hoe goed twee partners bij elkaar passen en hoe ze samen functioneren. Anders dan bij een gewoon gesprek gaan de vragen over vaste onderwerpen: hoe jullie met elkaar praten, vertrouwen, waarden, plannen voor later en intimiteit.",
     "p2": "Het doel is geen definitief oordeel. De test houdt jullie <strong>een eerlijke spiegel</strong> voor: de score laat zien wat goed gaat en waar jullie samen nog iets kunnen verbeteren.",
-    "p3": "De vragen gaan over <strong>concrete situaties uit het dagelijks leven</strong>, niet over abstracte begrippen. Daardoor werkt de test voor elk koppel, net samen of al jaren bij elkaar."
+    "p3": "De vragen gaan over <strong>concrete situaties uit het dagelijks leven</strong>, niet over abstracte begrippen. Daardoor werkt de test voor elk koppel, net samen of al jaren bij elkaar.",
+    "plus": [
+      {
+        "titre": "Een relatietest om samen te doen, ook op afstand",
+        "texte": "<p>De test doe je met z'n tweeën, maar niet per se op dezelfde plek. Op één telefoon kunnen jullie samen met één stem antwoorden, of om de beurt zodat ieder een eigen score krijgt. En zitten jullie ver uit elkaar, dan laat de afstandsmodus jullie allebei op de eigen telefoon antwoorden: een van jullie maakt het spel aan, de ander doet mee met een code, en jullie twee antwoorden verschijnen bij elke vraag naast elkaar.</p>"
+      }
+    ]
   },
   "section2": {
     "title": "De 5 pijlers van een stevige relatie",

@@ -18,7 +18,13 @@
     "title": "Cos'è esattamente un quiz divertente per coppie?",
     "p1": "Un <strong class=\"text-foreground\">quiz di coppia divertente</strong> è un gioco di domande in due il cui scopo non è mettere alla prova le conoscenze, ma far partire la conversazione. Appare una domanda, la leggete ad alta voce e rispondete uno dopo l'altro. Tutto qui.",
     "p2": "Non c'è risposta giusta né punteggio. A far ridere è la risposta stessa: cosa pensava davvero di te al primo appuntamento, il <a href=\"/it/quiz-coppia-imbarazzante/\">momento più imbarazzante</a> che avete vissuto insieme, o cosa farebbe se vincesse alla lotteria domani mattina.",
-    "p3": "Questo formato è particolarmente apprezzato perché permette di parlare della relazione senza pesantezza, di affrontare temi quotidiani con umorismo e di rafforzare la comunicazione nella coppia."
+    "p3": "Questo formato è particolarmente apprezzato perché permette di parlare della relazione senza pesantezza, di affrontare temi quotidiani con umorismo e di rafforzare la comunicazione nella coppia.",
+    "plus": [
+      {
+        "titre": "Domande divertenti da fare in coppia",
+        "texte": "<p>Per darvi un'idea di cosa esce, ecco una domanda per ognuna delle sei famiglie del gioco, così come la fa:</p><ul><li>Qual è il dettaglio completamente assurdo che ti ha fatto innamorare?</li><li>Hai mai finto che ti piacesse un piatto che ho cucinato? Quale?</li><li>Quanto ci metto davvero quando dico «due minuti»?</li><li>Qual è la nostra battuta privata che nessun altro capisce?</li><li>Hai mai finto di dormire per evitare una discussione?</li><li>Se restassimo bloccati tre ore in ascensore, come andrebbe a finire?</li></ul><p>In tutto sono 150. Per elenchi da leggere con calma, dalle più leggere alle più profonde, ci sono anche <a href=\"/it/domande-coppia/\">domande ordinate per situazione e per tema</a>.</p>"
+      }
+    ]
   },
   "section3": {
     "title": "Perché il quiz divertente per coppie funziona così bene?",
